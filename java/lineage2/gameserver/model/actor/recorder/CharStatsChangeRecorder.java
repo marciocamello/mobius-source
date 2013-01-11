@@ -1,0 +1,128 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package lineage2.gameserver.model.actor.recorder;
+
+import gnu.trove.list.array.TIntArrayList;
+import lineage2.gameserver.model.Creature;
+import lineage2.gameserver.model.base.TeamType;
+
+public class CharStatsChangeRecorder<T extends Creature>
+{
+	public static final int BROADCAST_CHAR_INFO = 1 << 0;
+	public static final int SEND_CHAR_INFO = 1 << 1;
+	public static final int SEND_STATUS_INFO = 1 << 2;
+	protected final T _activeChar;
+	protected int _level;
+	protected int _accuracy;
+	protected int _attackSpeed;
+	protected int _castSpeed;
+	protected int _criticalHit;
+	protected int _evasion;
+	protected int _magicAttack;
+	protected int _magicDefence;
+	protected int _maxHp;
+	protected int _maxMp;
+	protected int _physicAttack;
+	protected int _physicDefence;
+	protected int _runSpeed;
+	protected TeamType _team;
+	protected int _changes;
+	protected TIntArrayList _abnormalEffects = new TIntArrayList();
+	
+	public CharStatsChangeRecorder(T actor)
+	{
+		this._activeChar = actor;
+	}
+	
+	protected int set(int flag, int oldValue, int newValue)
+	{
+		if (oldValue != newValue)
+		{
+			_changes |= flag;
+		}
+		return newValue;
+	}
+	
+	protected long set(int flag, long oldValue, long newValue)
+	{
+		if (oldValue != newValue)
+		{
+			_changes |= flag;
+		}
+		return newValue;
+	}
+	
+	protected String set(int flag, String oldValue, String newValue)
+	{
+		if (!oldValue.equals(newValue))
+		{
+			_changes |= flag;
+		}
+		return newValue;
+	}
+	
+	protected <E extends Enum<E>> E set(int flag, E oldValue, E newValue)
+	{
+		if (oldValue != newValue)
+		{
+			_changes |= flag;
+		}
+		return newValue;
+	}
+	
+	protected TIntArrayList set(int flag, TIntArrayList oldValue, TIntArrayList newValue)
+	{
+		if ((oldValue.size() != newValue.size()) || !newValue.containsAll(oldValue))
+		{
+			_changes |= flag;
+			oldValue.clear();
+			oldValue.addAll(newValue);
+		}
+		return oldValue;
+	}
+	
+	protected void refreshStats()
+	{
+		_accuracy = set(SEND_CHAR_INFO, _accuracy, _activeChar.getAccuracy());
+		_attackSpeed = set(BROADCAST_CHAR_INFO, _attackSpeed, _activeChar.getPAtkSpd());
+		_castSpeed = set(BROADCAST_CHAR_INFO, _castSpeed, _activeChar.getMAtkSpd());
+		_criticalHit = set(SEND_CHAR_INFO, _criticalHit, _activeChar.getCriticalHit(null, null));
+		_evasion = set(SEND_CHAR_INFO, _evasion, _activeChar.getEvasionRate(null));
+		_runSpeed = set(BROADCAST_CHAR_INFO, _runSpeed, _activeChar.getRunSpeed());
+		_physicAttack = set(SEND_CHAR_INFO, _physicAttack, _activeChar.getPAtk(null));
+		_physicDefence = set(SEND_CHAR_INFO, _physicDefence, _activeChar.getPDef(null));
+		_magicAttack = set(SEND_CHAR_INFO, _magicAttack, _activeChar.getMAtk(null, null));
+		_magicDefence = set(SEND_CHAR_INFO, _magicDefence, _activeChar.getMDef(null, null));
+		_maxHp = set(SEND_STATUS_INFO, _maxHp, _activeChar.getMaxHp());
+		_maxMp = set(SEND_STATUS_INFO, _maxMp, _activeChar.getMaxMp());
+		_level = set(SEND_CHAR_INFO, _level, _activeChar.getLevel());
+		_team = set(BROADCAST_CHAR_INFO, _team, _activeChar.getTeam());
+	}
+	
+	public final void sendChanges()
+	{
+		refreshStats();
+		onSendChanges();
+		_changes = 0;
+	}
+	
+	protected void onSendChanges()
+	{
+		if ((_changes & SEND_STATUS_INFO) == SEND_STATUS_INFO)
+		{
+			_activeChar.broadcastStatusUpdate();
+		}
+	}
+}

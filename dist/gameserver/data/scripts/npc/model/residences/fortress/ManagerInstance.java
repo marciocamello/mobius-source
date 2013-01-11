@@ -1,0 +1,139 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package npc.model.residences.fortress;
+
+import lineage2.gameserver.data.xml.holder.EventHolder;
+import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.entity.events.EventType;
+import lineage2.gameserver.model.entity.events.impl.DominionSiegeRunnerEvent;
+import lineage2.gameserver.model.entity.residence.Fortress;
+import lineage2.gameserver.model.entity.residence.Residence;
+import lineage2.gameserver.model.pledge.Clan;
+import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
+import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
+import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.templates.npc.NpcTemplate;
+import lineage2.gameserver.utils.HtmlUtils;
+import npc.model.residences.ResidenceManager;
+
+public class ManagerInstance extends ResidenceManager
+{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final long REWARD_CYCLE = 6 * 60 * 60;
+	
+	public ManagerInstance(int objectId, NpcTemplate template)
+	{
+		super(objectId, template);
+	}
+	
+	@Override
+	protected void setDialogs()
+	{
+		_mainDialog = "residence2/fortress/fortress_steward001.htm";
+		_failDialog = "residence2/fortress/fortress_steward002.htm";
+		_siegeDialog = "residence2/fortress/fortress_steward018.htm";
+	}
+	
+	@Override
+	public void onBypassFeedback(Player player, String command)
+	{
+		if (!canBypassCheck(player, this))
+		{
+			return;
+		}
+		if (command.equalsIgnoreCase("receive_report"))
+		{
+			int ownedTime = (int) ((System.currentTimeMillis() - getFortress().getOwnDate().getTimeInMillis()) / 60000L);
+			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+			Fortress fortress = getFortress();
+			if (fortress.getContractState() == Fortress.CONTRACT_WITH_CASTLE)
+			{
+				html.setFile("residence2/fortress/fortress_steward022.htm");
+				html.replace("%castle_name%", HtmlUtils.htmlResidenceName(getFortress().getCastleId()));
+				html.replaceNpcString("%contract%", NpcString.CONTRACT_STATE);
+				long leftTime = (REWARD_CYCLE - (3600 - fortress.getCycleDelay()) - (fortress.getPaidCycle() * 3600)) / 60;
+				html.replace("%rent_cost%", String.valueOf(Fortress.CASTLE_FEE));
+				html.replace("%next_hour%", String.valueOf(leftTime / 60));
+				html.replace("%next_min%", String.valueOf(leftTime % 60));
+			}
+			else
+			{
+				html.setFile("residence2/fortress/fortress_steward023.htm");
+			}
+			html.replaceNpcString("%time_remained%", NpcString.S1HOUR_S2MINUTE, ownedTime / 60, ownedTime % 60);
+			player.sendPacket(html);
+		}
+		else
+		{
+			super.onBypassFeedback(player, command);
+		}
+	}
+	
+	@Override
+	protected int getCond(Player player)
+	{
+		DominionSiegeRunnerEvent runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 1);
+		Residence residence = getResidence();
+		Clan residenceOwner = residence.getOwner();
+		if ((residenceOwner != null) && (player.getClan() == residenceOwner))
+		{
+			if (residence.getSiegeEvent().isInProgress() || runnerEvent.isInProgress())
+			{
+				return COND_SIEGE;
+			}
+			return COND_OWNER;
+		}
+		return COND_FAIL;
+	}
+	
+	@Override
+	protected Residence getResidence()
+	{
+		return getFortress();
+	}
+	
+	@Override
+	public L2GameServerPacket decoPacket()
+	{
+		return null;
+	}
+	
+	@Override
+	protected int getPrivUseFunctions()
+	{
+		return Clan.CP_CS_USE_FUNCTIONS;
+	}
+	
+	@Override
+	protected int getPrivSetFunctions()
+	{
+		return Clan.CP_CS_SET_FUNCTIONS;
+	}
+	
+	@Override
+	protected int getPrivDismiss()
+	{
+		return Clan.CP_CS_DISMISS;
+	}
+	
+	@Override
+	protected int getPrivDoors()
+	{
+		return Clan.CP_CS_ENTRY_EXIT;
+	}
+}

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+
+<list>
+    <etcitem id="33700" name="Returning hero exclusive - Unidentified Dragon Slayer">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33701" name="Returning hero exclusive - Unidentified Soul Bow">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33702" name="Returning hero exclusive - Unidentified Elysian">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33703" name="Returning hero exclusive - Unidentified Flaming Dragon Skull">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33704" name="Returning hero exclusive - Unidentified Branch of the Mother Tree">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33705" name="Returning hero exclusive - Unidentified Doom Crusher">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33706" name="Returning hero exclusive - Unidentified Tallum Glaive">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33707" name="Returning hero exclusive - Unidentified Dragon Grinder">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33708" name="Returning hero exclusive - Unidentified Tallum Blade*Damascus">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33709" name="Returning hero exclusive - Unidentified Helm of Nightmare">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33710" name="Returning hero exclusive - Unidentified Shield of Nightmare">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33711" name="Returning hero exclusive - Unidentified Boots of Nightmare">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33712" name="Returning hero exclusive - Unidentified Robe of Nightmare">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33713" name="Returning hero exclusive - Unidentified Leather Armor of Nightmare">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33714" name="Returning hero exclusive - Unidentified Gauntlet of Nightmare">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33715" name="Returning hero exclusive - Unidentified Armor of Nightmare">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33716" name="Returning hero exclusive - Unidentified Dynasty Bow">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33748" name="Small Kukurin Pouch">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33749" name="Big Kukurin Pouch">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33764" name="Legacy Trickster Crossbow">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33766" name="Elixir of Blessing">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="5"/>
+        <set name="stackable" value="true"/>
+        <set name="dropable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="OTHER"/>
+		<cond msgId="1508">
+            <not>
+                <player olympiad="true"/>
+            </not>
+        </cond>
+    </etcitem>
+    <etcitem id="33774" name="Soulshot: No Grade">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33775" name="Soulshot (D-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33776" name="Soulshot (C-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33777" name="Soulshot (B-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33778" name="Soulshot (A-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33779" name="Soulshot (S-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33780" name="Soulshot (R-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33781" name="Spiritshot: No Grade">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33782" name="Spiritshot (D-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33783" name="Spiritshot (C-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33784" name="Spiritshot (B-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33785" name="Spiritshot (A-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33786" name="Spiritshot (S-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33787" name="Spiritshot (R-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33788" name="Blessed Spiritshot: No Grade">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33789" name="Blessed Spiritshot (D-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33790" name="Blessed Spiritshot (C-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33791" name="Blessed Spiritshot (B-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33792" name="Blessed Spiritshot (A-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33793" name="Blessed Spiritshot (S-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33794" name="Blessed Spiritshot (R-Grade)">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33795" name="Return Party Cake 3-Sheet Pack">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33796" name="Returning Hero's Gift Box">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33798" name="Greeting of Light">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="33799" name="Fragment of Light">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+</list>

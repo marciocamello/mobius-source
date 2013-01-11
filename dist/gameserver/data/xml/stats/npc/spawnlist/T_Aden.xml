@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<list>
+	<spawns name="Aden">
+		<spawn npcId="33466" x="149062" y="29135" z="-2248" heading="40707" /><!-- Сафарин (Торговец Волшебными Красками) -->
+	</spawns>
+</list>

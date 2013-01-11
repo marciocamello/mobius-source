@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- S-84 Armor -->
+<!-- Created with Notepad :D -->
+<!-- © 2009 by Graf -->
+
+<list maintainEnchantment="true" applyTaxes="true">
+    <config keepenchanted="true"/>
+    <!-- Vesper Breastplate -->
+    <item id="1">
+        <ingredient id="57" count="47500000"/>
+        <production id="13432" count="1"/>
+    </item>
+
+    <item id="2">
+        <ingredient id="57" count="30300000"/>
+        <production id="13438" count="1"/>
+    </item>
+
+    <item id="3">
+        <ingredient id="57" count="19300500"/>
+        <production id="13137" count="1"/>
+    </item>
+
+    <item id="4">
+        <ingredient id="57" count="19800300"/>
+        <production id="13439" count="1"/>
+    </item>
+
+    <item id="5">
+        <ingredient id="57" count="19800300"/>
+        <production id="13440" count="1"/>
+    </item>
+
+    <!-- Vesper Leather Breastplate -->
+    <item id="6">
+        <ingredient id="57" count="47500000"/>
+        <production id="13433" count="1"/>
+    </item>
+
+    <item id="7">
+        <ingredient id="57" count="30300000"/>
+        <production id="13441" count="1"/>
+    </item>
+
+    <item id="8">
+        <ingredient id="57" count="19300500"/>
+        <production id="13138" count="1"/>
+    </item>
+
+    <item id="9">
+        <ingredient id="57" count="19800300"/>
+        <production id="13442" count="1"/>
+    </item>
+
+    <item id="10">
+        <ingredient id="57" count="19800300"/>
+        <production id="13443" count="1"/>
+    </item>
+
+    <!-- Vesper Tunic -->
+    <item id="11">
+        <ingredient id="57" count="47500000"/>
+        <production id="13434" count="1"/>
+    </item>
+
+    <item id="12">
+        <ingredient id="57" count="30300000"/>
+        <production id="13444" count="1"/>
+    </item>
+
+    <item id="13">
+        <ingredient id="57" count="20300500"/>
+        <production id="13139" count="1"/>
+    </item>
+
+    <item id="14">
+        <ingredient id="57" count="20800300"/>
+        <production id="13445" count="1"/>
+    </item>
+
+    <item id="15">
+        <ingredient id="57" count="20800300"/>
+        <production id="13446" count="1"/>
+    </item>
+
+    <!-- Vesper Noble Breastplate -->
+    <item id="16">
+        <ingredient id="10639" count="1"/>
+        <production id="13435" count="1"/>
+        <production id="13448" count="1"/>
+        <production id="13140" count="1"/>
+        <production id="13449" count="1"/>
+        <production id="13450" count="1"/>
+    </item>
+
+    <!-- Vesper Noble Leather Breastplate -->
+    <item id="17">
+        <ingredient id="10639" count="1"/>
+        <production id="13436" count="1"/>
+        <production id="13451" count="1"/>
+        <production id="13141" count="1"/>
+        <production id="13452" count="1"/>
+        <production id="13453" count="1"/>
+    </item>
+
+    <!-- Vesper Noble Tunic -->
+    <item id="18">
+        <ingredient id="10639" count="1"/>
+        <production id="13437" count="1"/>
+        <production id="13454" count="1"/>
+        <production id="13142" count="1"/>
+        <production id="13455" count="1"/>
+        <production id="13456" count="1"/>
+    </item>
+
+    <!-- Vesper Shield -->
+    <item id="19">
+        <ingredient id="57" count="16600500"/>
+        <production id="13471" count="1"/>
+    </item>
+
+    <item id="20">
+        <ingredient id="10639" count="2"/>
+        <production id="12813" count="1"/>
+    </item>
+
+    <!-- Vorpal Helmet -->
+    <item id="21">
+        <ingredient id="57" count="20940000"/>
+        <production id="15589" count="1"/>
+    </item>
+
+    <!-- Vorpal Leather Helmet -->
+    <item id="22">
+        <ingredient id="57" count="20940000"/>
+        <production id="15590" count="1"/>
+    </item>
+
+    <!-- Vorpal Circlet -->
+    <item id="23">
+        <ingredient id="57" count="20940000"/>
+        <production id="15591" count="1"/>
+    </item>
+
+    <!-- Vorpal Cuirass -->
+    <item id="24">
+        <ingredient id="57" count="55840000"/>
+        <production id="15592" count="1"/>
+    </item>
+
+    <!-- Vorpal Hauberk -->
+    <item id="25">
+        <ingredient id="57" count="41880000"/>
+        <production id="15593" count="1"/>
+    </item>
+
+    <!-- Vorpal Tunic -->
+    <item id="26">
+        <ingredient id="57" count="41880000"/>
+        <production id="15594" count="1"/>
+    </item>
+
+    <!-- Vorpal Gaiter -->
+    <item id="27">
+        <ingredient id="57" count="34900000"/>
+        <production id="15595" count="1"/>
+    </item>
+
+    <!-- Vorpal Leather Legging -->
+    <item id="28">
+        <ingredient id="57" count="26175000"/>
+        <production id="15596" count="1"/>
+    </item>
+
+    <!-- Vorpal Hose -->
+    <item id="29">
+        <ingredient id="57" count="26175000"/>
+        <production id="15597" count="1"/>
+    </item>
+
+    <!-- Vorpal Gauntlet -->
+    <item id="30">
+        <ingredient id="57" count="13960000"/>
+        <production id="15598" count="1"/>
+    </item>
+
+    <!-- Vorpal Leather Gloves -->
+    <item id="31">
+        <ingredient id="57" count="13960000"/>
+        <production id="15599" count="1"/>
+    </item>
+
+    <!-- Vorpal Gloves -->
+    <item id="32">
+        <ingredient id="57" count="13960000"/>
+        <production id="15600" count="1"/>
+    </item>
+
+    <!-- Vorpal Boots -->
+    <item id="33">
+        <ingredient id="57" count="13960000"/>
+        <production id="15601" count="1"/>
+    </item>
+
+    <!-- Vorpal Leather Boots -->
+    <item id="34">
+        <ingredient id="57" count="13960000"/>
+        <production id="15602" count="1"/>
+    </item>
+
+    <!-- Vorpal Shoes -->
+    <item id="35">
+        <ingredient id="57" count="13960000"/>
+        <production id="15603" count="1"/>
+    </item>
+
+    <!-- Vorpal Shield -->
+    <item id="36">
+        <ingredient id="57" count="14658000"/>
+        <production id="15604" count="1"/>
+    </item>
+
+    <!-- Vorpal Sigil -->
+    <item id="37">
+        <ingredient id="10639" count="3"/>
+        <production id="15605" count="1"/>
+    </item>
+
+
+    <!-- Elegia Helmet -->
+    <item id="38">
+        <ingredient id="57" count="25107000"/>
+        <production id="15572" count="1"/>
+    </item>
+
+    <!-- Elegia Leather Helmet -->
+    <item id="39">
+        <ingredient id="57" count="25107000"/>
+        <production id="15573" count="1"/>
+    </item>
+
+    <!-- Elegia Circlet -->
+    <item id="30">
+        <ingredient id="57" count="25107000"/>
+        <production id="15574" count="1"/>
+    </item>
+
+    <!-- Elegia Cuirass -->
+    <item id="31">
+        <ingredient id="57" count="66953000"/>
+        <production id="15575" count="1"/>
+    </item>
+
+    <!-- Elegia Hauberk -->
+    <item id="32">
+        <ingredient id="57" count="50215000"/>
+        <production id="15576" count="1"/>
+    </item>
+
+    <!-- Elegia Tunic -->
+    <item id="33">
+        <ingredient id="57" count="50215000"/>
+        <production id="15577" count="1"/>
+    </item>
+
+    <!-- Elegia Gaiter -->
+    <item id="34">
+        <ingredient id="57" count="41846000"/>
+        <production id="15578" count="1"/>
+    </item>
+
+    <!-- Elegia Leather Legging -->
+    <item id="35">
+        <ingredient id="57" count="31384000"/>
+        <production id="15579" count="1"/>
+    </item>
+
+    <!-- Elegia Hose -->
+    <item id="36">
+        <ingredient id="57" count="31384000"/>
+        <production id="15580" count="1"/>
+    </item>
+
+    <!-- Elegia Gauntlet -->
+    <item id="37">
+        <ingredient id="57" count="16738000"/>
+        <production id="15581" count="1"/>
+    </item>
+
+    <!-- Elegia Leather Gloves -->
+    <item id="38">
+        <ingredient id="57" count="16738000"/>
+        <production id="15582" count="1"/>
+    </item>
+
+    <!-- Elegia Gloves -->
+    <item id="39">
+        <ingredient id="57" count="16738000"/>
+        <production id="15583" count="1"/>
+    </item>
+
+    <!-- Elegia Boots -->
+    <item id="40">
+        <ingredient id="57" count="16738000"/>
+        <production id="15584" count="1"/>
+    </item>
+
+    <!-- Elegia Leather Boots -->
+    <item id="41">
+        <ingredient id="57" count="16738000"/>
+        <production id="15585" count="1"/>
+    </item>
+
+    <!-- Elegia Shoes -->
+    <item id="42">
+        <ingredient id="57" count="16738000"/>
+        <production id="15586" count="1"/>
+    </item>
+
+    <!-- Elegia Shield -->
+    <item id="43">
+        <ingredient id="57" count="17575000"/>
+        <production id="15587" count="1"/>
+    </item>
+
+    <!-- Elegia Sigil -->
+    <item id="44">
+        <ingredient id="10639" count="3"/>
+        <production id="15588" count="1"/>
+    </item>
+
+
+    <!-- Moirai Helmet -->
+    <item id="45">
+        <ingredient id="57" count="12627000"/>
+        <production id="15606" count="1"/>
+    </item>
+
+    <!-- Moirai Leather Helmet -->
+    <item id="46">
+        <ingredient id="57" count="12627000"/>
+        <production id="15607" count="1"/>
+    </item>
+
+    <!-- Moirai Circlet -->
+    <item id="47">
+        <ingredient id="57" count="12627000"/>
+        <production id="15608" count="1"/>
+    </item>
+
+    <!-- Moirai Cuirass -->
+    <item id="48">
+        <ingredient id="57" count="33673000"/>
+        <production id="15609" count="1"/>
+    </item>
+
+    <!-- Moirai Hauberk -->
+    <item id="49">
+        <ingredient id="57" count="25255000"/>
+        <production id="15610" count="1"/>
+    </item>
+
+    <!-- Moirai Tunic -->
+    <item id="50">
+        <ingredient id="57" count="25255000"/>
+        <production id="15611" count="1"/>
+    </item>
+
+    <!-- Moirai Gaiter -->
+    <item id="51">
+        <ingredient id="57" count="33673000"/>
+        <production id="15612" count="1"/>
+    </item>
+
+    <!-- Moirai Leather Legging -->
+    <item id="52">
+        <ingredient id="57" count="15784000"/>
+        <production id="15613" count="1"/>
+    </item>
+
+    <!-- Moirai Hose -->
+    <item id="53">
+        <ingredient id="57" count="15784000"/>
+        <production id="15614" count="1"/>
+    </item>
+
+    <!-- Moirai Gauntlet -->
+    <item id="54">
+        <ingredient id="57" count="8418000"/>
+        <production id="15615" count="1"/>
+    </item>
+
+    <!-- Moirai Leather Gloves -->
+    <item id="55">
+        <ingredient id="57" count="8418000"/>
+        <production id="15616" count="1"/>
+    </item>
+
+    <!-- Moirai Gloves -->
+    <item id="56">
+        <ingredient id="57" count="8418000"/>
+        <production id="15617" count="1"/>
+    </item>
+
+    <!-- Moirai Boots -->
+    <item id="57">
+        <ingredient id="57" count="8418000"/>
+        <production id="15618" count="1"/>
+    </item>
+
+    <!-- Moirai Leather Boots -->
+    <item id="58">
+        <ingredient id="57" count="8418000"/>
+        <production id="15619" count="1"/>
+    </item>
+
+    <!-- Moirai Shoes -->
+    <item id="59">
+        <ingredient id="57" count="8418000"/>
+        <production id="15620" count="1"/>
+    </item>
+
+    <!-- Moirai Shield -->
+    <item id="60">
+        <ingredient id="57" count="8839000"/>
+        <production id="15621" count="1"/>
+    </item>
+
+    <!-- Moirai Sigil -->
+    <item id="61">
+        <ingredient id="10639" count="3"/>
+        <production id="15622" count="1"/>
+    </item>
+
+</list>

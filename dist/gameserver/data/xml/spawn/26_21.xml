@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<list>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="208072" y="117832" zmin="-1320" zmax="-1390"/>
+            <add x="208312" y="118728" zmin="-1320" zmax="-1390"/>
+            <add x="209144" y="118232" zmin="-1320" zmax="-1390"/>
+            <add x="209640" y="117752" zmin="-1320" zmax="-1390"/>
+        </territory>
+        <npc id="22948"/>
+		<!-- Разведчик Сада день  -->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="210472" y="118584" zmin="-1320" zmax="-1390"/>
+            <add x="210712" y="118280" zmin="-1320" zmax="-1390"/>
+            <add x="209864" y="120200" zmin="-1320" zmax="-1390"/>
+            <add x="209160" y="120376" zmin="-1320" zmax="-1390"/>
+            <add x="208136" y="119576" zmin="-1320" zmax="-1390"/>
+        </territory>
+        <npc id="22948"/>
+        <!--Разведчик Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="210984" y="119128" zmin="-1320" zmax="-1390"/>
+            <add x="210088" y="118120" zmin="-1320" zmax="-1390"/>
+            <add x="209304" y="118040" zmin="-1320" zmax="-1390"/>
+            <add x="208200" y="118136" zmin="-1320" zmax="-1390"/>
+            <add x="208152" y="118968" zmin="-1320" zmax="-1390"/>
+        </territory>
+        <npc id="22956"/>
+        <!--Военачальник Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="208840" y="119960" zmin="-1320" zmax="-1390"/>
+            <add x="209800" y="119656" zmin="-1320" zmax="-1390"/>
+            <add x="209928" y="120680" zmin="-1320" zmax="-1390"/>
+            <add x="209096" y="119400" zmin="-1320" zmax="-1390"/>
+            <add x="208920" y="118024" zmin="-1320" zmax="-1390"/>
+        </territory>
+        <npc id="22956"/>
+        <!--Военачальник Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="208936" y="120888" zmin="-1320" zmax="-1390"/>
+            <add x="210024" y="120840" zmin="-1320" zmax="-1390"/>
+            <add x="210824" y="119992" zmin="-1320" zmax="-1390"/>
+            <add x="209912" y="119000" zmin="-1320" zmax="-1390"/>
+            <add x="209352" y="119032" zmin="-1320" zmax="-1390"/>
+        </territory>
+        <npc id="22957"/>
+        <!--Воин Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="210824" y="119944" zmin="-1320" zmax="-1390"/>
+            <add x="211192" y="120808" zmin="-1320" zmax="-1390"/>
+            <add x="210024" y="120696" zmin="-1320" zmax="-1390"/>
+            <add x="208280" y="119656" zmin="-1320" zmax="-1390"/>
+        </territory>
+        <npc id="22950"/>
+        <!--Садовник Внешнего Сада-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="219448" y="119064" zmin="-1740" zmax="-1790"/>
+            <add x="218744" y="120152" zmin="-1740" zmax="-1790"/>
+            <add x="217832" y="119944" zmin="-1740" zmax="-1790"/>
+            <add x="216888" y="118552" zmin="-1740" zmax="-1790"/>
+        </territory>
+        <npc id="22948"/>
+		<!-- Разведчик Сада день  -->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="216568" y="120024" zmin="-1740" zmax="-1790"/>
+            <add x="216728" y="120984" zmin="-1740" zmax="-1790"/>
+            <add x="216232" y="120344" zmin="-1740" zmax="-1790"/>
+            <add x="217496" y="118024" zmin="-1740" zmax="-1790"/>
+            <add x="217960" y="118488" zmin="-1740" zmax="-1790"/>
+        </territory>
+        <npc id="22948"/>
+        <!--Разведчик Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="217336" y="119256" zmin="-1740" zmax="-1790"/>
+            <add x="217848" y="120232" zmin="-1740" zmax="-1790"/>
+            <add x="216312" y="120680" zmin="-1740" zmax="-1790"/>
+            <add x="216584" y="119464" zmin="-1740" zmax="-1790"/>
+            <add x="217272" y="119240" zmin="-1740" zmax="-1790"/>
+        </territory>
+        <npc id="22956"/>
+        <!--Военачальник Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="208840" y="119960" zmin="-1740" zmax="-1790"/>
+            <add x="209800" y="119656" zmin="-1740" zmax="-1790"/>
+            <add x="209928" y="120680" zmin="-1740" zmax="-1790"/>
+            <add x="209096" y="119400" zmin="-1740" zmax="-1790"/>
+            <add x="208920" y="118024" zmin="-1740" zmax="-1790"/>
+        </territory>
+        <npc id="22956"/>
+        <!--Военачальник Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="217880" y="120120" zmin="-1740" zmax="-1790"/>
+            <add x="219272" y="120776" zmin="-1740" zmax="-1790"/>
+            <add x="219496" y="119608" zmin="-1740" zmax="-1790"/>
+            <add x="219496" y="117784" zmin="-1740" zmax="-1790"/>
+            <add x="218312" y="117640" zmin="-1740" zmax="-1790"/>
+        </territory>
+        <npc id="22957"/>
+        <!--Воин Сада день -->
+    </spawn>
+    <spawn count="10" respawn="16" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="217000" y="117704" zmin="-1740" zmax="-1790"/>
+            <add x="216312" y="118120" zmin="-1740" zmax="-1790"/>
+            <add x="216152" y="117528" zmin="-1740" zmax="-1790"/>
+            <add x="217192" y="119416" zmin="-1740" zmax="-1790"/>
+            <add x="218520" y="120152" zmin="-1740" zmax="-1790"/>
+        </territory>
+        <npc id="22957"/>
+        <!--Воин Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="219192" y="120376" zmin="-1740" zmax="-1790"/>
+            <add x="219064" y="119016" zmin="-1740" zmax="-1790"/>
+            <add x="218376" y="118632" zmin="-1740" zmax="-1790"/>
+            <add x="218376" y="119448" zmin="-1740" zmax="-1790"/>
+        </territory>
+        <npc id="22950"/>
+        <!--Садовник Внешнего Сада-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="217080" y="119992" zmin="-1740" zmax="-1790"/>
+            <add x="216792" y="119512" zmin="-1740" zmax="-1790"/>
+            <add x="210024" y="120696" zmin="-1740" zmax="-1790"/>
+            <add x="216936" y="118632" zmin="-1740" zmax="-1790"/>
+        </territory>
+        <npc id="22950"/>
+        <!--Садовник Внешнего Сада-->
+    </spawn>
+	<!-- От сюда начинаеться центр сада!!!!!!! -->
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="212712" y="115368" zmin="-890" zmax="-921"/>
+            <add x="212280" y="114600" zmin="-890" zmax="-921"/>
+            <add x="213656" y="114280" zmin="-890" zmax="-921"/>
+            <add x="214248" y="114008" zmin="-890" zmax="-921"/>
+        </territory>
+        <npc id="22948"/>
+		<!-- Разведчик Сада день  -->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="214648" y="114040" zmin="-890" zmax="-921"/>
+            <add x="214664" y="115464" zmin="-890" zmax="-921"/>
+            <add x="214104" y="116824" zmin="-890" zmax="-921"/>
+            <add x="213256" y="116408" zmin="-890" zmax="-921"/>
+            <add x="212792" y="115912" zmin="-890" zmax="-921"/>
+        </territory>
+        <npc id="22948"/>
+        <!--Разведчик Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="212136" y="114520" zmin="-890" zmax="-921"/>
+            <add x="212632" y="113880" zmin="-890" zmax="-921"/>
+            <add x="213688" y="114216" zmin="-890" zmax="-921"/>
+            <add x="214904" y="114648" zmin="-890" zmax="-921"/>
+            <add x="215080" y="115944" zmin="-890" zmax="-921"/>
+        </territory>
+        <npc id="22956"/>
+        <!--Военачальник Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="214216" y="114296" zmin="-890" zmax="-921"/>
+            <add x="214392" y="115640" zmin="-890" zmax="-921"/>
+            <add x="214200" y="116680" zmin="-890" zmax="-921"/>
+			<add x="213496" y="114424" zmin="-890" zmax="-921"/>
+            <add x="215032" y="114744" zmin="-890" zmax="-921"/>
+        </territory>
+        <npc id="22957"/>
+        <!--Воин Сада день -->
+    </spawn>
+    <spawn count="7" respawn="16" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="215032" y="114744" zmin="-890" zmax="-921"/>
+            <add x="213848" y="116152" zmin="-890" zmax="-921"/>
+            <add x="213352" y="115928" zmin="-890" zmax="-921"/>
+            <add x="212888" y="115224" zmin="-890" zmax="-921"/>
+            <add x="213016" y="114936" zmin="-890" zmax="-921"/>
+        </territory>
+        <npc id="22957"/>
+        <!--Воин Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="214408" y="115368" zmin="-890" zmax="-921"/>
+            <add x="212168" y="115416" zmin="-890" zmax="-921"/>
+            <add x="211768" y="116152" zmin="-890" zmax="-921"/>
+            <add x="214568" y="115384" zmin="-890" zmax="-921"/>
+        </territory>
+        <npc id="22950"/>
+        <!--Садовник Внешнего Сада-->
+    </spawn>
+	    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="214968" y="114248" zmin="-890" zmax="-921"/>
+            <add x="212664" y="114856" zmin="-890" zmax="-921"/>
+            <add x="211912" y="115784" zmin="-890" zmax="-921"/>
+            <add x="213128" y="116120" zmin="-890" zmax="-921"/>
+        </territory>
+        <npc id="22948"/>
+		<!-- Разведчик Сада день  -->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="213976" y="117032" zmin="-890" zmax="-921"/>
+            <add x="213672" y="117288" zmin="-890" zmax="-921"/>
+            <add x="214504" y="115512" zmin="-890" zmax="-921"/>
+            <add x="215480" y="115080" zmin="-890" zmax="-921"/>
+            <add x="215720" y="116008" zmin="-890" zmax="-921"/>
+        </territory>
+        <npc id="22948"/>
+        <!--Разведчик Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="214968" y="116152" zmin="-890" zmax="-921"/>
+            <add x="214440" y="115960" zmin="-890" zmax="-921"/>
+            <add x="212296" y="115784" zmin="-890" zmax="-921"/>
+            <add x="211704" y="114456" zmin="-890" zmax="-921"/>
+            <add x="213416" y="114568" zmin="-890" zmax="-921"/>
+        </territory>
+        <npc id="22956"/>
+        <!--Военачальник Сада день-->
+    </spawn>
+	<spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="219096" y="111144" zmin="-1326" zmax="-1375"/>
+            <add x="217960" y="110840" zmin="-1326" zmax="-1375"/>
+            <add x="214240" y="110104" zmin="-1326" zmax="-1375"/>
+            <add x="216296" y="109608" zmin="-1326" zmax="-1375"/>
+        </territory>
+        <npc id="22948"/>
+		<!-- Разведчик Сада день  -->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="216152" y="110584" zmin="-1326" zmax="-1375"/>
+            <add x="216520" y="111528" zmin="-1326" zmax="-1375"/>
+            <add x="217496" y="112040" zmin="-1326" zmax="-1375"/>
+            <add x="217784" y="112904" zmin="-1326" zmax="-1375"/>
+            <add x="218488" y="112904" zmin="-1326" zmax="-1375"/>
+        </territory>
+        <npc id="22948"/>
+        <!--Разведчик Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="218296" y="111064" zmin="-1326" zmax="-1375"/>
+            <add x="218312" y="109864" zmin="-1326" zmax="-1375"/>
+            <add x="219384" y="109768" zmin="-1326" zmax="-1375"/>
+            <add x="217496" y="110776" zmin="-1326" zmax="-1375"/>
+            <add x="216472" y="111432" zmin="-1326" zmax="-1375"/>
+        </territory>
+        <npc id="22956"/>
+        <!--Военачальник Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="216088" y="111272" zmin="-1326" zmax="-1375"/>
+            <add x="217224" y="110136" zmin="-1326" zmax="-1375"/>
+            <add x="218056" y="110712" zmin="-1326" zmax="-1375"/>
+			<add x="217992" y="111336" zmin="-1326" zmax="-1375"/>
+            <add x="217976" y="112024" zmin="-1326" zmax="-1375"/>
+        </territory>
+        <npc id="22957"/>
+        <!--Воин Сада день -->
+    </spawn>
+    <spawn count="10" respawn="16" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="218936" y="112856" zmin="-1326" zmax="-1375"/>
+            <add x="219416" y="112312" zmin="-1326" zmax="-1375"/>
+            <add x="219624" y="111320" zmin="-1326" zmax="-1375"/>
+            <add x="219064" y="110056" zmin="-1326" zmax="-1375"/>
+            <add x="218312" y="110152" zmin="-1326" zmax="-1375"/>
+        </territory>
+        <npc id="22957"/>
+        <!--Воин Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="217592" y="110872" zmin="-1326" zmax="-1375"/>
+            <add x="217960" y="111640" zmin="-1326" zmax="-1375"/>
+            <add x="218168" y="112280" zmin="-1326" zmax="-1375"/>
+            <add x="217080" y="112392" zmin="-1326" zmax="-1375"/>
+        </territory>
+        <npc id="22950"/>
+        <!--Садовник Внешнего Сада-->
+    </spawn>
+	    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="215992" y="112056" zmin="-1326" zmax="-1375"/>
+            <add x="216408" y="111400" zmin="-1326" zmax="-1375"/>
+            <add x="217048" y="110520" zmin="-1326" zmax="-1375"/>
+            <add x="217848" y="110392" zmin="-1326" zmax="-1375"/>
+        </territory>
+        <npc id="22948"/>
+		<!-- Разведчик Сада день  -->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="218056" y="110936" zmin="-1326" zmax="-1375"/>
+            <add x="213672" y="117288" zmin="-1326" zmax="-1375"/>
+            <add x="214504" y="115512" zmin="-1326" zmax="-1375"/>
+            <add x="217848" y="111528" zmin="-1326" zmax="-1375"/>
+            <add x="217880" y="112120" zmin="-1326" zmax="-1375"/>
+        </territory>
+        <npc id="22948"/>
+        <!--Разведчик Сада день-->
+    </spawn>
+    <spawn count="10" respawn="60" respawn_random="0" period_of_day="none">
+        <territory>
+            <add x="217032" y="112824" zmin="-1326" zmax="-1375"/>
+            <add x="216088" y="112792" zmin="-1326" zmax="-1375"/>
+            <add x="215960" y="111576" zmin="-1326" zmax="-1375"/>
+            <add x="216936" y="110936" zmin="-1326" zmax="-1375"/>
+            <add x="217608" y="109928" zmin="-1326" zmax="-1375"/>
+        </territory>
+        <npc id="22956"/>
+        <!--Военачальник Сада день-->
+    </spawn>
+</list>

@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+
+<list>
+    <etcitem id="18200" name="Unidentified Seraph Shoes">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18201" name="Unidentified Seraph Sigil">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18202" name="Unidentified Seraph Necklace">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18203" name="Unidentified Seraph Earring">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18204" name="Unidentified Seraph Ring">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18205" name="Unidentified Amaranthine Shaper">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18206" name="Unidentified Amaranthine Cutter">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18207" name="Unidentified Amaranthine Slasher">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18208" name="Unidentified Amaranthine Avenger">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18209" name="Unidentified Amaranthine Fighter">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18210" name="Unidentified Amaranthine Stormer">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18211" name="Unidentified Amaranthine Thrower">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18212" name="Unidentified Amaranthine Shooter">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18213" name="Unidentified Amaranthine Buster">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18214" name="Unidentified Amaranthine Caster">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18215" name="Unidentified Amaranthine Retributer">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18216" name="Unidentified Amaranthine Dual Sword">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18217" name="Unidentified Amaranthine Dual Dagger">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18218" name="Unidentified Amaranthine Dual Blunt Weapon">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18219" name="Unidentified Eternal Helmet">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18220" name="Unidentified Eternal Breastplate">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18221" name="Unidentified Eternal Gaiters">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18222" name="Unidentified Eternal Gauntlet">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18223" name="Unidentified Eternal Boots">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18224" name="Unidentified Eternal Shield">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18225" name="Unidentified Eternal Leather Helmet">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18226" name="Unidentified Eternal Leather Armor">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18227" name="Unidentified Eternal Leather Leggings">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18228" name="Unidentified Eternal Leather Gloves">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18229" name="Unidentified Eternal Leather Boots">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18230" name="Unidentified Eternal Circlet">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18231" name="Unidentified Eternal Tunic">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18232" name="Unidentified Eternal Stockings">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18233" name="Unidentified Eternal Gloves">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18234" name="Unidentified Eternal Shoes">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18235" name="Unidentified Eternal Sigil">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18236" name="Unidentified Eternal Necklace">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18237" name="Unidentified Eternal Earring">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18238" name="Unidentified Eternal Ring">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18239" name="Unidentified Celestial Shaper">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18240" name="Unidentified Celestial Cutter">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18241" name="Unidentified Celestial Slasher">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18242" name="Unidentified Celestial Avenger">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18243" name="Unidentified Celestial Fighter">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18244" name="Unidentified Celestial Stormer">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18245" name="Unidentified Celestial Thrower">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18246" name="Unidentified Celestial Shooter">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18247" name="Unidentified Celestial Buster">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18248" name="Unidentified Celestial Caster">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18249" name="Unidentified Celestial Retributer">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18250" name="Unidentified Celestial Dual Sword">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18251" name="Unidentified Celestial Dual Dagger">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18252" name="Unidentified Celestial Dual Blunt Weapon">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18253" name="Unidentified Celestial Helmet">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18254" name="Unidentified Celestial Breastplate">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18255" name="Unidentified Celestial Gaiters">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18256" name="Unidentified Celestial Gauntlet">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18257" name="Unidentified Celestial Boots">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18258" name="Unidentified Celestial Shield">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18259" name="Unidentified Celestial Leather Helmet">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18260" name="Unidentified Celestial Leather Armor">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18261" name="Unidentified Celestial Leather Leggings">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18262" name="Unidentified Celestial Leather Gloves">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18263" name="Unidentified Celestial Leather Boots">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18264" name="Unidentified Celestial Circlet">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18265" name="Unidentified Celestial Tunic">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18266" name="Unidentified Celestial Stockings">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18267" name="Unidentified Celestial Gloves">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18268" name="Unidentified Celestial Shoes">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18269" name="Unidentified Celestial Sigil">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18270" name="Unidentified Celestial Necklace">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18271" name="Unidentified Celestial Earring">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+    <etcitem id="18272" name="Unidentified Celestial Ring">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="false"/>
+        <set name="type" value="OTHER"/>
+	</etcitem>
+</list>

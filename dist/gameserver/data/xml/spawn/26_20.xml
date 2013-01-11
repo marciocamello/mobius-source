@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+
+<list>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="205697" y="87590" z="-1024" h="64697" />
+		<npc id="32905" /><!--Loewmus-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206628" y="86984" z="-1024" h="9955" />
+		<npc id="33587" /><!--Mentor Guide-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="204969" y="88280" z="-1000" h="7592" />
+		<npc id="30154" /><!--Asterios-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="204997" y="88138" z="-1000" h="4347" />
+		<npc id="30361" /><!--Rizraell-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="204961" y="88381" z="-1000" h="62719" />
+		<npc id="30223" /><!--Arujien-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="204980" y="88166" z="-1000" h="6321" />
+		<npc id="31358" /><!--Kasiel-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206832" y="90068" z="-1008" h="51088" />
+		<npc id="32894" /><!--Izael-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206750" y="90071" z="-1008" h="51357" />
+		<npc id="32908" /><!--Un Magnier-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206688" y="89716" z="-1104" h="52820" />
+		<npc id="32908" /><!--Un Magnier-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="205296" y="88528" z="-1024" h="3040" />
+		<npc id="32907" /><!--Un Dinaer-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="205360" y="88192" z="-1024" h="2468" />
+		<npc id="32908" /><!--Un Magnier-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208097" y="84374" z="-1136" h="21804" />
+		<npc id="33564" /><!--Hermuncus' Servant-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207938" y="87487" z="-1048" h="41162" />
+		<npc id="32902" /><!--Kitt-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207551" y="86773" z="-1000" h="43163" />
+		<npc id="32900" /><!--Mumu-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207488" y="86496" z="-1000" h="10472" />
+		<npc id="32912" /><!--Sookie-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208176" y="87360" z="-1024" h="30140" />
+		<npc id="32896" /><!--Naomi Kasheron-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208162" y="87299" z="-1024" h="26404" />
+		<npc id="32895" /><!--Noeti Mimilead-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207728" y="87008" z="-1024" h="20788" />
+		<npc id="32908" /><!--Un Magnier-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207168" y="86872" z="-1024" h="17880" />
+		<npc id="32907" /><!--Un Dinaer-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208101" y="88905" z="-1104" h="17548" />
+		<npc id="32903" /><!--Mr. Kay-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207968" y="88855" z="-1112" h="51436" />
+		<npc id="32901" /><!--Cas-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207702" y="88728" z="-1120" h="4210" />
+		<npc id="32921" /><!--Fairy Citizen-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208486" y="89741" z="-1024" h="41517" />
+		<npc id="33534" /><!--Jasnin-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207085" y="88723" z="-1128" h="0" />
+		<npc id="33137" /><!--Ant under Foot-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207088" y="88720" z="-1128" h="0" />
+		<npc id="33137" /><!--Ant under Foot-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208188" y="90084" z="-1024" h="45032" />
+		<npc id="33514" /><!--Anthony-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208300" y="90005" z="-1024" h="41547" />
+		<npc id="33521" /><!--Lykus-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208334" y="89729" z="-1024" h="40070" />
+		<npc id="32898" /><!--Kantarubis-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208281" y="89851" z="-1024" h="41057" />
+		<npc id="32897" /><!--Alco-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206898" y="90107" z="-1008" h="52515" />
+		<npc id="32907" /><!--Un Dinaer-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207104" y="89808" z="-1104" h="51764" />
+		<npc id="32907" /><!--Un Dinaer-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208871" y="89231" z="-1024" h="34160" />
+		<npc id="32908" /><!--Un Magnier-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208944" y="88880" z="-1024" h="35332" />
+		<npc id="32907" /><!--Un Dinaer-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207971" y="89426" z="-1104" h="22294" />
+		<npc id="32903" /><!--Mr. Kay-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207872" y="88198" z="-1112" h="41166" />
+		<npc id="32901" /><!--Cas-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206247" y="91671" z="-544" h="1884" />
+		<npc id="32908" /><!--Un Magnier-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206274" y="91452" z="-544" h="1724" />
+		<npc id="32908" /><!--Un Magnier-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206772" y="91777" z="-544" h="34512" />
+		<npc id="32908" /><!--Un Magnier-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206807" y="91560" z="-544" h="34728" />
+		<npc id="32908" /><!--Un Magnier-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206194" y="91883" z="-544" h="1580" />
+		<npc id="32908" /><!--Un Magnier-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206324" y="92057" z="-544" h="54604" />
+		<npc id="32906" /><!--Mystery Cat-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206738" y="91988" z="-544" h="35104" />
+		<npc id="32908" /><!--Un Magnier-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206552" y="92107" z="-544" h="46352" />
+		<npc id="32904" /><!--Loewyna-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206433" y="92096" z="-544" h="51168" />
+		<npc id="32893" /><!--Slaski-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208124" y="90119" z="-1024" h="43992" />
+		<npc id="32899" /><!--Hamrun-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="211049" y="89489" z="-1144" h="0" />
+		<npc id="33089" /><!--Teleport Device-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="205524" y="88098" z="-1024" h="19407" />
+		<npc id="32902" /><!--Kitt-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207937" y="88330" z="-1112" h="13727" />
+		<npc id="32901" /><!--Cas-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206062" y="87433" z="-1024" h="57089" />
+		<npc id="32902" /><!--Kitt-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="199055" y="86196" z="-192" h="45368" />
+		<npc id="33568" /><!--Hermuncus' Servant-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="206582" y="89325" z="-1120" h="42166" />
+		<npc id="32901" /><!--Cas-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207540" y="87630" z="-1104" h="39506" />
+		<npc id="32903" /><!--Mr. Kay-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208561" y="88220" z="-1032" h="9842" />
+		<npc id="32902" /><!--Kitt-->
+	</spawn>
+</list>

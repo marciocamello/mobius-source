@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Add chooseTracks, split it with ",". When it will reach loc with selection it will stop in that place. -->
+<!-- When you reach last id, for example there are 1,2,3,5. When you reach 3 to 5 you wont go it will stop. -->
+<!-- You can create selections above 999, because if track is under 1000, then you must increase maxNum. -->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="StatuesLocations.xsd">
+	<!-- Talking Island Start -->
+	<location category="0" x="-114112" y="251296" z="-1653" heading="32927" />
+	<location category="2" x="-114112" y="251488" z="-1622" heading="32927" />
+	<location category="3" x="-114673" y="251296" z="-1650" heading="124" />
+	<location category="5" x="-114673" y="251680" z="-1604" heading="124" />
+	<location category="11" x="-114673" y="251488" z="-1622" heading="124" />
+	<location category="12" x="-114673" y="251872" z="-1570" heading="124" />
+	<location category="20" x="-114112" y="251872" z="-1570" heading="32927" />
+	<location category="1000" x="-114112" y="251680" z="-1604" heading="32927" />
+	<!-- Talking Island End -->
+	<!-- Giran Start -->
+	<location category="0" x="82247" y="148611" z="-3380" heading="1245" />
+	<location category="1" x="81443" y="148411" z="-3380" heading="36061" />
+	<location category="2" x="82123" y="148130" z="-3380" heading="52266" />
+	<location category="3" x="82123" y="148130" z="-3380" heading="52266" />
+	<location category="5" x="82403" y="148810" z="-3380" heading="3039" />
+	<location category="11" x="82404" y="148412" z="-3380" heading="60982" />
+	<location category="12" x="82122" y="149091" z="-3380" heading="12414" />
+	<location category="20" x="81923" y="148287" z="-3380" heading="49153" />
+	<location category="1000" x="81600" y="148610" z="-3380" heading="32767" />
+	<location category="1002" x="81725" y="148130" z="-3380" heading="46169" />
+	<location category="2004" x="81724" y="149091" z="-3380" heading="20021" />
+	<location category="2005" x="81443" y="148809" z="-3380" heading="27931" />
+	<!-- Giran End -->
+	<!-- Museum Start -->
+	<location category="0" x="-115562" y="244297" z="-7910" heading="4463" />
+	<location category="1" x="-114179" y="245523" z="-7910" heading="43216" />
+	<location category="2" x="-115434" y="244058" z="-7910" heading="7263" />
+	<location category="3" x="-114381" y="243710" z="-7910" heading="19400" />
+	<location category="5" x="-113988" y="244045" z="-7910" heading="25335" />
+	<location category="11" x="-114189" y="243842" z="-7910" heading="21641" />
+	<location category="12" x="-113854" y="244297" z="-7910" heading="28133" />
+	<location category="18" x="-115435" y="245325" z="-7910" heading="57339" />
+	<location category="19" x="-115557" y="245074" z="-7910" heading="59411" />
+	<location category="20" x="-115035" y="243700" z="-7910" heading="13261" />
+	<location category="1000" x="-114371" y="245671" z="-7910" heading="45433" />
+	<location category="1002" x="-115036" y="245631" z="-7910" heading="53066" />
+	<location category="2001" x="-115235" y="245523" z="-7910" heading="54981" />
+	<location category="2002" x="-115221" y="243849" z="-7910" heading="10339" />
+	<location category="2004" x="-113859" y="245071" z="-7910" heading="37563" />
+	<location category="2005" x="-113977" y="245329" z="-7910" heading="40264" />
+	<!-- Museum End -->
+</list>

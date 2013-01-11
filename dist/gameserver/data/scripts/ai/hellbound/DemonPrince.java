@@ -1,0 +1,59 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package ai.hellbound;
+
+import lineage2.gameserver.ai.Fighter;
+import lineage2.gameserver.model.Creature;
+import lineage2.gameserver.model.Skill;
+import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.tables.SkillTable;
+import lineage2.gameserver.utils.Location;
+
+public class DemonPrince extends Fighter
+{
+	private static final int ULTIMATE_DEFENSE_SKILL_ID = 5044;
+	private static final Skill ULTIMATE_DEFENSE_SKILL = SkillTable.getInstance().getInfo(ULTIMATE_DEFENSE_SKILL_ID, 3);
+	private static final int TELEPORTATION_CUBIC_ID = 32375;
+	private static final Location CUBIC_POSITION = new Location(-22144, 278744, -8239, 0);
+	private boolean _notUsedUltimateDefense = true;
+	
+	public DemonPrince(NpcInstance actor)
+	{
+		super(actor);
+	}
+	
+	@Override
+	protected void onEvtAttacked(Creature attacker, int damage)
+	{
+		NpcInstance actor = getActor();
+		if (_notUsedUltimateDefense && (actor.getCurrentHpPercents() < 10))
+		{
+			_notUsedUltimateDefense = false;
+			clearTasks();
+			addTaskBuff(actor, ULTIMATE_DEFENSE_SKILL);
+		}
+		super.onEvtAttacked(attacker, damage);
+	}
+	
+	@Override
+	protected void onEvtDead(Creature killer)
+	{
+		NpcInstance actor = getActor();
+		_notUsedUltimateDefense = true;
+		actor.getReflection().setReenterTime(System.currentTimeMillis());
+		actor.getReflection().addSpawnWithoutRespawn(TELEPORTATION_CUBIC_ID, CUBIC_POSITION, 0);
+		super.onEvtDead(killer);
+	}
+}

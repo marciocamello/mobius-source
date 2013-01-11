@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+
+<list>
+    <etcitem id="34700" name="Giant's Enchant Scroll Box">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="34701" name="Giant's Bind Removing Scroll Box">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="34703" name="Hero's Treasure Box">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="34704" name="Giant's Treasure Box">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="34702" name="Treasure Chest">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="34700" name="Чёт хз такое">
+        <!--Done By Darvin (c)Java-Team-->
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="34765" name="Remnant Ashes">
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="durability" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="QUEST"/>
+    </etcitem>
+    <etcitem id="34766" name="Succubus Essence">
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="durability" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="QUEST"/>
+    </etcitem>
+    <etcitem id="34767" name="Gerkenshtein's report">
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="durability" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+    </etcitem>
+    <etcitem id="34768" name="Dimensional Fragment">
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="class" value="OTHER"/>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="durability" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="QUEST"/>
+    </etcitem>
+</list>
