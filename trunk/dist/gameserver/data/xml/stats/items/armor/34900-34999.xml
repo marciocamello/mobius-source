@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "item.dtd">
+<list>
+    <armor id="34935" name="Star Agathion Bracelet - Hye-jin Jang">        <!--Done By Darvin (c)Java-Team-->
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="icon.bracelet_tersi_agathion"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="RIGHT_BRACELET"/>
+        </equip>
+        <set name="ex_type" value="BRACELET"/>
+    </armor>
+    <armor id="34936" name="Star Agathion Bracelet - Hyuk Jang">        <!--Done By Darvin (c)Java-Team-->
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="icon.bracelet_tersi_agathion"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="RIGHT_BRACELET"/>
+        </equip>
+        <set name="ex_type" value="BRACELET"/>
+    </armor>
+    <armor id="34937" name="Star Agathion Bracelet - Soo-ro Kim">        <!--Done By Darvin (c)Java-Team-->
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="icon.bracelet_tersi_agathion"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="RIGHT_BRACELET"/>
+        </equip>
+        <set name="ex_type" value="BRACELET"/>
+    </armor>
+    <armor id="34938" name="Star Agathion Bracelet - Jae-bum Park">        <!--Done By Darvin (c)Java-Team-->
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="icon.bracelet_tersi_agathion"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="RIGHT_BRACELET"/>
+        </equip>
+        <set name="ex_type" value="BRACELET"/>
+    </armor>
+    <armor id="34939" name="Star Agathion Bracelet - Shin-young Kim">        <!--Done By Darvin (c)Java-Team-->
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="icon.bracelet_tersi_agathion"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="RIGHT_BRACELET"/>
+        </equip>
+        <set name="ex_type" value="BRACELET"/>
+    </armor>
+    <armor id="34984" name="Talisman of Infinity">        <!--Done By Darvin (c)Java-Team-->
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="TALISMAN"/>
+        </equip>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+    </armor>
+    <armor id="34985" name="Talisman of Destruction">        <!--Done By Darvin (c)Java-Team-->
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="TALISMAN"/>
+        </equip>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+    </armor>
+    <armor id="34986" name="Talisman of Annihilation">        <!--Done By Darvin (c)Java-Team-->
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="TALISMAN"/>
+        </equip>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+    </armor>
+    <armor id="34987" name="Talisman of Hellfire">        <!--Done By Darvin (c)Java-Team-->
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="BranchSys.br_rudolf_food_red_i00"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="TALISMAN"/>
+        </equip>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+    </armor>
+    <armor id="34988" name="Talisman of Desire">        <!--Done By Darvin (c)Java-Team-->
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="BranchSys.br_rudolf_food_blue_i00"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="TALISMAN"/>
+        </equip>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+    </armor>
+    <armor id="34989" name="Talisman of Longing">        <!--Done By Darvin (c)Java-Team-->
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="BranchSys.br_rudolf_food_purple_i00"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="TALISMAN"/>
+        </equip>
+        <set name="ex_type" value="OTHER_ITEMS"/>
+    </armor>
+</list>

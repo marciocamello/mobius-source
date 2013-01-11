@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<list>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207544" y="112632" z="-2072" h="16383" />
+		<npc id="33090" />
+	</spawn>
+	<spawn count="7" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208008" y="113128" z="-2076" h="36736" />
+		<point x="208664" y="113704" z="-2090" h="9672" />
+		<point x="207448" y="114552" z="-2076" h="35323" />
+		<point x="207032" y="115512" z="-2079" h="12554" />
+		<point x="205992" y="115704" z="-2008" h="26298" />
+		<point x="208840" y="111016" z="-2094" h="0" />
+		<point x="210312" y="111848" z="-2117" h="14661" />
+		<npc id="22947" />
+	</spawn>
+	<spawn count="7" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="207912" y="112968" z="-2084" h="39479" />
+		<point x="208696" y="113928" z="-2102" h="14903" />
+		<point x="207208" y="114520" z="-2035" h="32767" />
+		<point x="206792" y="115384" z="-2050" h="37878" />
+		<point x="206056" y="115976" z="-2044" h="13973" />
+		<point x="208952" y="110840" z="-2073" h="55063" />
+		<point x="210152" y="112072" z="-2113" h="22853" />
+		<npc id="23161" />
+	</spawn>
+	<spawn count="7" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208088" y="112904" z="-2081" h="61898" />
+		<point x="208552" y="113896" z="-2103" h="35048" />
+		<point x="207256" y="114216" z="-2020" h="16383" />
+		<point x="206808" y="115048" z="-2055" h="49648" />
+		<point x="205784" y="116184" z="-2050" h="25958" />
+		<point x="209288" y="111080" z="-2090" h="6469" />
+		<point x="209816" y="111992" z="-2105" h="35206" />
+		<npc id="22949" />
+	</spawn>
+	<spawn count="7" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208200" y="112856" z="-2078" h="60699" />
+		<point x="208456" y="113768" z="-2096" h="51707" />
+		<point x="207560" y="114184" z="-2067" h="63255" />
+		<point x="207016" y="115160" z="-2060" h="5151" />
+		<point x="205688" y="115944" z="-2012" h="45183" />
+		<point x="209144" y="111448" z="-2111" h="20274" />
+		<point x="209640" y="111832" z="-2084" h="40463" />
+		<npc id="22948" />
+	</spawn>
+</list>

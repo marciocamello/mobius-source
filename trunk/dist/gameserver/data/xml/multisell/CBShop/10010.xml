@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Vesper Jewels -->
+<!-- Created with Notepad :D -->
+<!-- © 2009 by Graf -->
+
+<list maintainEnchantment="true" applyTaxes="true">
+<config keepenchanted="true" />
+  <!-- Vesper Necklace -->
+  <item id="1">
+    <ingredient id="57" count="18700000"/>
+    <production id="14164" count="1"/>
+  </item>
+
+  <!-- Vesper Earring -->
+  <item id="2">
+    <ingredient id="57" count="11450000"/>
+    <production id="14163" count="1"/>
+  </item>
+
+  <!-- Vesper Ring -->
+  <item id="3">
+    <ingredient id="57" count="22350500"/>
+    <production id="15719" count="1"/>
+  </item>
+  
+  <item id="4">
+    <ingredient id="57" count="30350500"/>
+    <production id="15719" count="1"/>
+  </item>
+  
+  <!-- elegia Ring -->
+  <item id="5">
+    <ingredient id="57" count="11350500"/>
+    <production id="15717" count="1"/>
+  </item>
+  <item id="6">
+    <ingredient id="57" count="20350500"/>
+    <production id="15718" count="1"/>
+  </item>
+  
+</list>

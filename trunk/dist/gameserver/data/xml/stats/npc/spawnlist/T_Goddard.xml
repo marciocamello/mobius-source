@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<list>
+	<spawns name="Goddard">
+		<spawn npcId="33499" x="149029" y="-57724" z="-2968" heading="65502" /><!-- Роифина (Торговец Волшебными Красками) -->
+	</spawns>
+</list>

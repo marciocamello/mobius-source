@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+
+<list>
+    <weapon id="19703" name="Blessed Eternal Shield" add_name="Attack Type / Heavy">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="icon" value="icon.weapon_akra_i00"/>
+        <set name="weight" value="1130"/>
+        <equip>
+            <slot id="LEFT_HAND"/>
+        </equip>
+        <set name="type" value="NONE"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="crystal_count" value="3562"/>
+        <for>
+            <enchant stat="pAtk" order="0x0C" value="0"/>
+            <enchant stat="mAtk" order="0x0C" value="0"/>
+        </for>
+    </weapon>
+    <weapon id="19719" name="Blessed Celestial Shield" add_name="Attack Type / Heavy">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="icon" value="icon.weapon_vesper_verteidiger_i01"/>
+        <set name="weight" value="1130"/>
+        <equip>
+            <slot id="LEFT_HAND"/>
+        </equip>
+        <set name="type" value="NONE"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="crystal_count" value="3562"/>
+        <for>
+            <enchant stat="pAtk" order="0x0C" value="0"/>
+            <enchant stat="mAtk" order="0x0C" value="0"/>
+        </for>
+    </weapon>
+    <weapon id="19735" name="Immortal Shield" add_name="Defense Type / Heavy">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="icon" value="icon.weapon_sacon_i00"/>
+        <set name="weight" value="1130"/>
+        <equip>
+            <slot id="LEFT_HAND"/>
+        </equip>
+        <set name="type" value="NONE"/>
+        <set name="crystal_type" value="R"/>
+        <set name="crystal_count" value="3562"/>
+        <for>
+            <add stat="pDef" order="0x10" value="415"/>
+            <enchant stat="pDef" order="0x0C" value="0"/>
+        </for>
+    </weapon>
+    <weapon id="19751" name="Twilight Shield" add_name="Defense Type / Heavy">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="icon" value="icon.kratere_i00"/>
+        <set name="weight" value="1130"/>
+        <equip>
+            <slot id="LEFT_HAND"/>
+        </equip>
+        <set name="type" value="NONE"/>
+        <set name="crystal_type" value="R"/>
+        <set name="crystal_count" value="3562"/>
+        <for>
+            <add stat="pDef" order="0x10" value="458"/>
+            <enchant stat="pDef" order="0x0C" value="0"/>
+        </for>
+    </weapon>
+    <weapon id="19767" name="Seraph Shield" add_name="Defense Type / Heavy">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="icon" value="icon.beranka_i00"/>
+        <set name="weight" value="1130"/>
+        <equip>
+            <slot id="LEFT_HAND"/>
+        </equip>
+        <set name="type" value="NONE"/>
+        <set name="crystal_type" value="R95"/>
+        <set name="crystal_count" value="3562"/>
+        <for>
+            <add stat="pDef" order="0x10" value="505"/>
+            <enchant stat="pDef" order="0x0C" value="0"/>
+        </for>
+    </weapon>
+    <weapon id="19783" name="Eternal Shield" add_name="Defense Type / Heavy">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="icon" value="icon.weapon_akra_i00"/>
+        <set name="weight" value="1130"/>
+        <equip>
+            <slot id="LEFT_HAND"/>
+        </equip>
+        <set name="type" value="NONE"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="crystal_count" value="3562"/>
+        <for>
+            <add stat="pDef" order="0x10" value="526"/>
+            <enchant stat="pDef" order="0x0C" value="0"/>
+        </for>
+    </weapon>
+    <weapon id="19799" name="Bound Immortal Shield" add_name="Defense Type / Heavy">
+        <!--Done By Darvin (c)Java - Team 2012-->
+        <set name="icon" value="icon.weapon_sacon_i00"/>
+        <set name="weight" value="1130"/>
+        <equip>
+            <slot id="LEFT_HAND"/>
+        </equip>
+        <set name="type" value="NONE"/>
+        <set name="crystal_type" value="R"/>
+        <set name="crystal_count" value="3562"/>
+        <for>
+            <enchant stat="pAtk" order="0x0C" value="0"/>
+            <enchant stat="mAtk" order="0x0C" value="0"/>
+        </for>
+    </weapon>
+</list>

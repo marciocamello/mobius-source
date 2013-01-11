@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="9206" levels="1" name="Быстрый Бег">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect count="1" name="Buff" stackType="Hourglass" time="30" val="0" displayId="9206" >
+			<mul order="0x30" stat="runSpd" val="1.5" />
+			</effect>
+		</for>	
+	</skill>
+	<skill id="9209" levels="1" name="Кукуру">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="TRANSFORMATION" />
+		<set name="isReuseDelayPermanent" val="true" />
+		<set name="addSkills" val="619;1" />
+		<set name="npcId" val="33200" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect count="1" name="Transformation" time="60" val="137" >		
+				<add order="0x40" stat="runSpd" val="50" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="9210" levels="1" name="Слезть с животного">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="alterSkillId" val="9212" />
+<set name="alterIconTime" val="5" />
+	</skill>
+	<skill id="9224" levels="1" name="Escape - Talking Island Village" >
+		<set name="magicType" val="SPECIAL" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="townId" val="1" />
+		<set name="itemConsumeId" val="32226" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="isHandler" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="RECALL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<cond msgId="1509">
+			<not>
+				<player olympiad="true" />
+			</not>
+		</cond>
+	</skill>
+	<skill id="9227" levels="1" name="Mentor's Poem of Horn">
+		<!--
+			Increases P. Atk. by 17%, P. Def, by 15%, M. Atk. by 79%, and M. Def. by 30%.
+		-->
+        <set name="magicLevel" val="1"/>
+		<set name="mpConsume1" val="0"/>
+		<set name="isPreservedOnDeath" val="true"/>
+		<set name="isSelfDispellable" val="false"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="CONT"/>
+        <set name="operateType" val="OP_TOGGLE"/>
+        <for>
+            <effect count="0x7fffffff" name="Mentoring" time="99999999" val="0" stackType="MagicDefUp;pAtk;pDef;mAtk">
+                <mul order="0x30" stat="mAtk" val="1.79"/>
+                <mul order="0x30" stat="pAtk" val="1.17"/>
+                <mul order="0x30" stat="pDef" val="1.15"/>
+                <mul order="0x30" stat="mDef" val="1.3"/>
+            </effect>
+        </for>
+    </skill>
+	<skill id="9228" levels="1" name="Mentor's Poem of Drum">
+		<!--
+			Increases Max MP by 20%, HP recovery bonus by 20%, M. Crit. Atk. Rate by 2,
+			critical rate during a normal physical attack by 20%, P. Atk. by 10%,
+			P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%,
+			Casting Spd. by 20%, resistance to debuff by 10%, and P. Def upon evading a critical attack.
+			Decreases Spd. by 15%, and for party members equipped with melee weapons that receive more
+			than ordinary damage attacks, critical power increases during an ordinary attack.
+		-->
+        <set name="magicLevel" val="1"/>
+		<set name="mpConsume1" val="0"/>
+		<set name="isPreservedOnDeath" val="true"/>
+		<set name="isSelfDispellable" val="false"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="CONT"/>
+        <set name="operateType" val="OP_TOGGLE"/>
+        <for>
+            <effect count="0x7fffffff" name="Mentoring" time="99999999" val="0" stackOrder="3" stackType="ancient">
+                <mul order="0x30" stat="maxMp" val="1.2"/>
+				<mul order="0x30" stat="regHp" val="1.2"/>
+				<add order="0x40" stat="mCritRate" val="2"/>
+				<mul order="0x40" stat="rCrit" val="1.3"/>
+				<mul order="0x30" stat="pAtk" val="1.1"/>
+				<mul order="0x30" stat="pDef" val="1.2"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.2"/>
+				<mul order="0x30" stat="mAtk" val="1.2"/>
+				<mul order="0x30" stat="mDef" val="1.2"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.2"/>
+				<add order="0x40" stat="debuffResist" val="10"/>
+				<mul order="0x30" stat="runSpd" val="0.85"/>
+            </effect>
+        </for>
+    </skill>
+	<skill id="9229" levels="1" name="Mentor's Poem of Lute">
+		<!--
+			Increases Atk. Spd. by 34% and Casting Spd. by 31%. Change of applying Vampiric Rage effect by 9%.
+		-->
+        <set name="magicLevel" val="1"/>
+		<set name="mpConsume1" val="0"/>
+		<set name="isPreservedOnDeath" val="true"/>
+		<set name="isSelfDispellable" val="false"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="CONT"/>
+        <set name="operateType" val="OP_TOGGLE"/>
+        <for>
+            <effect count="0x7fffffff" name="Mentoring" time="99999999" val="0" stackOrder="11" stackType="vampRage;pAtkSpeedUp;mAtkSpeedUp">
+                <mul order="0x30" stat="pAtkSpd" val="1.34"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.31"/>
+				<add order="0x40" stat="absorbDam" val="9"/>
+            </effect>
+        </for>
+    </skill>
+	<skill id="9230" levels="1" name="Mentor's Poem of Organ">
+		<!--
+			Increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%.
+		-->
+        <set name="magicLevel" val="1"/>
+		<set name="mpConsume1" val="0"/>
+		<set name="isPreservedOnDeath" val="true"/>
+		<set name="isSelfDispellable" val="false"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="CONT"/>
+        <set name="operateType" val="OP_TOGGLE"/>
+        <for>
+            <effect count="0x7fffffff" name="Mentoring" time="99999999" val="0" stackOrder="11" stackType="hp_up;hpregen;mp_up">
+				<mul order="0x30" stat="maxHp" val="1.37"/>
+				<mul order="0x30" stat="maxMp" val="1.37"/>
+				<mul order="0x30" stat="maxCp" val="1.37"/>
+				<mul order="0x30" stat="regHp" val="1.2"/>
+            </effect>
+        </for>
+    </skill>
+	<skill id="9231" levels="1" name="Mentor's Poem of Guitar">
+		<!--
+			Increases P. Crit. Rate by 32%, P. Crit. damage by 35%, and M. Crit. Rate by 20.
+			Decreases MP consumption for physical skills by 20%, magical skills by 10%, and enchant skills by 20%.
+		-->
+        <set name="magicLevel" val="1"/>
+		<set name="mpConsume1" val="0"/>
+		<set name="isPreservedOnDeath" val="true"/>
+		<set name="isSelfDispellable" val="false"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="CONT"/>
+        <set name="operateType" val="OP_TOGGLE"/>
+        <for>
+            <effect count="0x7fffffff" name="Mentoring" time="99999999" val="0" stackOrder="11" stackType="impulse;rCrit;cAtk">
+				<mul order="0x40" stat="rCrit" val="1.32"/>
+				<mul order="0x40" stat="cAtk" val="1.35"/>
+				<add order="0x40" stat="mCritRate" val="20"/>
+				<mul order="0x30" stat="mpConsum" val="0.9"/>
+                <mul order="0x30" stat="mpConsumePhysical" val="0.8"/>
+            </effect>
+        </for>
+    </skill>
+	<skill id="9232" levels="1" name="Mentor's Poem of Harp">
+		<!--
+			Increases physical accuracy by 5, physical and magic evasion by 5, and Spd. by 34. Decreases received critical damage by 30%.
+		-->
+        <set name="magicLevel" val="1"/>
+		<set name="mpConsume1" val="0"/>
+		<set name="isPreservedOnDeath" val="true"/>
+		<set name="isSelfDispellable" val="false"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="CONT"/>
+        <set name="operateType" val="OP_TOGGLE"/>
+        <for>
+            <effect count="0x7fffffff" name="Mentoring" time="99999999" val="0" stackOrder="11" stackType="accuracyUp;SpeedUp;Poem_Arfa;rEvas;CoP">
+				<add order="0x40" stat="accCombat" val="5"/>
+				<add order="0x40" stat="pSkillEvasion" val="5"/>
+                <add order="0x40" stat="mSkillEvasion" val="5"/>
+				<add order="0x40" stat="runSpd" val="34"/>
+				<mul order="0x30" stat="critDamRcpt" val="0.7"/>
+            </effect>
+        </for>
+    </skill>
+	<skill id="9233" levels="1" name="Mentor’s Guidance">
+        <!--
+                Description: Acquired Experience Points increase by 200% for Mentee.
+				Created by Cain.				
+          -->
+        <table name="#power">2.0</table>
+        <set name="icon" val="br_cashtex.skill.br_cash_rune_of_exp_buff_1"/>
+        <set name="magicLevel" val="1"/>
+		<set name="mpConsume1" val="0"/>
+		<set name="isPreservedOnDeath" val="true"/>
+		<set name="isSelfDispellable" val="false"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="CONT"/>
+        <set name="operateType" val="OP_TOGGLE"/>
+        <for>
+			<effect count="0x7fffffff" name="Mentoring" time="99999999" val="0">
+				<add order="0x40" stat="ExpMultiplier" val="#power"/>
+			</effect>	
+        </for>
+    </skill>
+	<skill id="9256" levels="1" name="Mentee's Appreciation">
+        <!--
+                Description: Acquired Experience Points increase by 10% for Mentor.
+				Created by Cain.
+          -->
+        <table name="#power">0.1</table>
+        <set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00"/>
+        <set name="magicLevel" val="1"/>
+		<set name="mpConsume1" val="0"/>
+		<set name="isPreservedOnDeath" val="true"/>
+		<set name="isSelfDispellable" val="false"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="CONT"/>
+        <set name="operateType" val="OP_TOGGLE"/>
+        <for>
+			<effect count="0x7fffffff" name="Mentoring" time="99999999" val="0">
+				<add order="0x40" stat="ExpMultiplier" val="#power"/>
+			</effect>
+        </for>
+    </skill>
+</list>
