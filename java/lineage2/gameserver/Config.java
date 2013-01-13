@@ -68,7 +68,6 @@ public class Config
 	public static final String OLYMPIAD = "config/olympiad.ini";
 	public static final String DEVELOP_FILE = "config/develop.ini";
 	public static final String EXT_FILE = "config/ext.ini";
-	public static final String LICENSE_FILE = "config/License.ini";
 	public static final String TOP_FILE = "config/Tops.ini";
 	public static final String PAYMENT_CONFIG_FILE = "config/payment.ini";
 	public static final String OLYMPIAD_DATA_FILE = "config/olympiad.ini";
@@ -77,7 +76,6 @@ public class Config
 	public static final String GM_ACCESS_FILES_DIR = "config/xml/GMAccess.d/";
 	public static final String COMMUNITY_CONFIGURATION_FILE = "config/CommunityBoard.ini";
 	public static int HTM_CACHE_MODE;
-	public static String LICENSE_KEY;
 	public static int[] PORTS_GAME;
 	public static String GAMESERVER_HOSTNAME;
 	public static String DATABASE_DRIVER;
@@ -158,7 +156,6 @@ public class Config
 	public static int PLAYER_AI_MAX_THREAD;
 	public static int THREAD_P_PATHFIND;
 	public static boolean ENABLE_RUNNABLE_STATS;
-	public static String USER_NAME;
 	public static boolean L2_TOP_MANAGER_ENABLED;
 	public static int L2_TOP_MANAGER_INTERVAL;
 	public static String L2_TOP_WEB_ADDRESS;
@@ -990,7 +987,6 @@ public class Config
 		WEAR_DELAY = serverSettings.getProperty("WearDelay", 5);
 		GARBAGE_COLLECTOR_INTERVAL = serverSettings.getProperty("GarbageCollectorInterval", 30) * 60000;
 		HTM_CACHE_MODE = serverSettings.getProperty("HtmCacheMode", HtmCache.LAZY);
-		LICENSE_KEY = serverSettings.getProperty("LicenseKey", "");
 		SERVER_SIDE_NPC_TITLE_ETC = serverSettings.getProperty("ServerSideNpcTitleEtc", false);
 		ALLOW_PACKET_FAIL = serverSettings.getProperty("AllowPacketFail", false);
 		Random ppc = new Random();
@@ -1162,12 +1158,6 @@ public class Config
 		CASTLE_VALIDATION_DATE.set(Calendar.MINUTE, 0);
 		CASTLE_VALIDATION_DATE.set(Calendar.SECOND, 0);
 		CASTLE_VALIDATION_DATE.set(Calendar.MILLISECOND, 0);
-	}
-	
-	public static void loadGameLicense()
-	{
-		ExProperties licSettings = load(LICENSE_FILE);
-		USER_NAME = licSettings.getProperty("UserName", "test");
 	}
 	
 	public static void loadTopSettings()
@@ -1848,7 +1838,6 @@ public class Config
 		loadTelnetConfig();
 		loadResidenceConfig();
 		loadOtherConfig();
-		loadGameLicense();
 		loadTopSettings();
 		loadPaymentConfig();
 		loadSpoilConfig();
