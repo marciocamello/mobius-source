@@ -83,10 +83,12 @@ public class RequestAquireSkill extends L2GameClientPacket
 		{
 			case NORMAL:
 				learnSimpleNextLevel(player, skillLearn, skill);
+				/*
 				if (trainer != null)
 				{
 					trainer.showSkillList(player);
 				}
+				*/
 				break;
 			case TRANSFORMATION:
 				learnSimpleNextLevel(player, skillLearn, skill);
