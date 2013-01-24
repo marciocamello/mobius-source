@@ -58,7 +58,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private static Skill[] adminSkills;
 	
 	@Override
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
 		if (!activeChar.getPlayerAccess().CanEditChar)

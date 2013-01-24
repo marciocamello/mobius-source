@@ -27,7 +27,7 @@ public class AdminGlobalEvent extends ScriptAdminCommand
 	}
 	
 	@Override
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands c = (Commands) comm;
 		switch (c)

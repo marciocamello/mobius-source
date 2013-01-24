@@ -37,7 +37,7 @@ public class AdminMammon implements IAdminCommandHandler
 	List<Integer> npcIds = new ArrayList<Integer>();
 	
 	@Override
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
 		npcIds.clear();

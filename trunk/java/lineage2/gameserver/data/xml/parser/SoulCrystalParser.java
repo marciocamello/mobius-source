@@ -53,7 +53,7 @@ public final class SoulCrystalParser extends AbstractFileParser<SoulCrystalHolde
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{
-		for (Iterator iterator = rootElement.elementIterator("crystal"); iterator.hasNext();)
+		for (Iterator<?> iterator = rootElement.elementIterator("crystal"); iterator.hasNext();)
 		{
 			Element element = (Element) iterator.next();
 			int itemId = Integer.parseInt(element.attributeValue("item_id"));

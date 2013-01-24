@@ -34,11 +34,11 @@ import org.apache.commons.pool.impl.GenericObjectPool;
 public class BasicDataSource implements DataSource
 {
 	private final PoolingDataSource _source;
-	private final ObjectPool _connectionPool;
+	private final ObjectPool<?> _connectionPool;
 	
 	public BasicDataSource(String driver, String connectURI, String uname, String passwd, int maxActive, int maxIdle, int idleTimeOut, int idleTestPeriod, boolean poolPreparedStatements)
 	{
-		GenericObjectPool connectionPool = new GenericObjectPool(null);
+		GenericObjectPool<?> connectionPool = new GenericObjectPool<>(null);
 		connectionPool.setMaxActive(maxActive);
 		connectionPool.setMaxIdle(maxIdle);
 		connectionPool.setMinIdle(1);
@@ -49,10 +49,10 @@ public class BasicDataSource implements DataSource
 		connectionPool.setTimeBetweenEvictionRunsMillis(idleTestPeriod * 1000L);
 		connectionPool.setNumTestsPerEvictionRun(maxActive);
 		connectionPool.setMinEvictableIdleTimeMillis(idleTimeOut * 1000L);
-		GenericKeyedObjectPoolFactory statementPoolFactory = null;
+		GenericKeyedObjectPoolFactory<?, ?> statementPoolFactory = null;
 		if (poolPreparedStatements)
 		{
-			statementPoolFactory = new GenericKeyedObjectPoolFactory(null, -1, GenericObjectPool.WHEN_EXHAUSTED_FAIL, 0L, 1, GenericKeyedObjectPool.DEFAULT_MAX_TOTAL);
+			statementPoolFactory = new GenericKeyedObjectPoolFactory<>(null, -1, GenericObjectPool.WHEN_EXHAUSTED_FAIL, 0L, 1, GenericKeyedObjectPool.DEFAULT_MAX_TOTAL);
 		}
 		Properties connectionProperties = new Properties();
 		connectionProperties.put("user", uname);

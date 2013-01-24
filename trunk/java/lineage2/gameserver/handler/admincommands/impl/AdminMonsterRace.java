@@ -37,7 +37,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	protected static int state = -1;
 	
 	@Override
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
 		if (fullString.equalsIgnoreCase("admin_mons"))

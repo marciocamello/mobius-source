@@ -123,7 +123,7 @@ public class Config
 			SAXReader reader = new SAXReader(true);
 			Document document = reader.read(new File(SERVER_NAMES_FILE));
 			Element root = document.getRootElement();
-			for (Iterator itr = root.elementIterator(); itr.hasNext();)
+			for (Iterator<?> itr = root.elementIterator(); itr.hasNext();)
 			{
 				Element node = (Element) itr.next();
 				if (node.getName().equalsIgnoreCase("server"))

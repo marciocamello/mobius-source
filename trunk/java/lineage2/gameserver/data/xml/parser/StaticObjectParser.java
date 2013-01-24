@@ -54,7 +54,7 @@ public final class StaticObjectParser extends AbstractFileParser<StaticObjectHol
 	@Override
 	protected void readData(Element rootElement)
 	{
-		for (Iterator iterator = rootElement.elementIterator(); iterator.hasNext();)
+		for (Iterator<?> iterator = rootElement.elementIterator(); iterator.hasNext();)
 		{
 			Element staticObjectElement = (Element) iterator.next();
 			StatsSet set = new StatsSet();

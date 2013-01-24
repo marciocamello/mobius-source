@@ -68,7 +68,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	}
 	
 	private static final int POOL_SIZE = Integer.parseInt(System.getProperty("lazyarraylist.poolsize", "-1"));
-	private static final ObjectPool POOL = new GenericObjectPool(new PoolableLazyArrayListFactory(), POOL_SIZE, GenericObjectPool.WHEN_EXHAUSTED_GROW, 0L, -1);
+	private static final ObjectPool<Object> POOL = new GenericObjectPool<>(new PoolableLazyArrayListFactory(), POOL_SIZE, GenericObjectPool.WHEN_EXHAUSTED_GROW, 0L, -1);
 	
 	public static <E> LazyArrayList<E> newInstance()
 	{

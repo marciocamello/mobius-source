@@ -80,6 +80,7 @@ public class Repair extends Functions implements IVoicedCommandHandler
 			}
 			Connection con = null;
 			PreparedStatement statement = null;
+			PreparedStatement statement2 = null;
 			ResultSet rs = null;
 			try
 			{
@@ -101,10 +102,10 @@ public class Repair extends Functions implements IVoicedCommandHandler
 				}
 				else
 				{
-					statement = con.prepareStatement("UPDATE characters SET x=0, y=0, z=0 WHERE obj_Id=?");
-					statement.setInt(1, objId);
-					statement.execute();
-					DbUtils.close(statement);
+					statement2 = con.prepareStatement("UPDATE characters SET x=0, y=0, z=0 WHERE obj_Id=?");
+					statement2.setInt(1, objId);
+					statement2.execute();
+					DbUtils.close(statement2);
 					Collection<ItemInstance> items = ItemsDAO.getInstance().getItemsByOwnerIdAndLoc(objId, ItemLocation.PAPERDOLL);
 					for (ItemInstance item : items)
 					{

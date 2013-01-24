@@ -149,7 +149,7 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 	{
 		_runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 1);
 		super.initEvent();
-		SiegeEvent castleSiegeEvent = getResidence().getCastle().getSiegeEvent();
+		SiegeEvent<?, ?> castleSiegeEvent = getResidence().getCastle().getSiegeEvent();
 		addObjects("mass_gatekeeper", castleSiegeEvent.getObjects("mass_gatekeeper"));
 		addObjects(CastleSiegeEvent.CONTROL_TOWERS, castleSiegeEvent.getObjects(CastleSiegeEvent.CONTROL_TOWERS));
 		List<DoorObject> doorObjects = getObjects(DOORS);

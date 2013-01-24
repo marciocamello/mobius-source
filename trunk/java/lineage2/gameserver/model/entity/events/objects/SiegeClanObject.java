@@ -114,7 +114,7 @@ public class SiegeClanObject implements Serializable
 		getClan().broadcastToOnlineMembers(packet);
 	}
 	
-	public void setEvent(boolean start, SiegeEvent event)
+	public void setEvent(boolean start, SiegeEvent<?, ?> event)
 	{
 		if (start)
 		{

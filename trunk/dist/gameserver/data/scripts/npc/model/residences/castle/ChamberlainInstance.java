@@ -482,7 +482,7 @@ public class ChamberlainInstance extends ResidenceManager
 				return;
 			}
 			player.getClan().getWarehouse().destroyItemByItemId(ItemTemplate.ITEM_ID_ADENA, price);
-			targetDoorObject.setUpgradeValue(castle.<SiegeEvent> getSiegeEvent(), upgradeHp);
+			targetDoorObject.setUpgradeValue(castle.<SiegeEvent<?, ?>> getSiegeEvent(), upgradeHp);
 			CastleDoorUpgradeDAO.getInstance().insert(door.getDoorId(), upgradeHp);
 		}
 		else if (actualCommand.equalsIgnoreCase("report"))

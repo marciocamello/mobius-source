@@ -54,7 +54,7 @@ public final class BoatHolder extends AbstractHolder
 		try
 		{
 			Class<?> cl = Class.forName("lineage2.gameserver.model.entity.boat." + clazz);
-			Constructor constructor = cl.getConstructor(Integer.TYPE, CharTemplate.class);
+			Constructor<?> constructor = cl.getConstructor(Integer.TYPE, CharTemplate.class);
 			Boat boat = (Boat) constructor.newInstance(IdFactory.getInstance().getNextId(), TEMPLATE);
 			boat.setName(name);
 			addBoat(boat);

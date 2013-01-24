@@ -117,7 +117,7 @@ public abstract class Residence implements JdbcEntity
 	}
 	
 	@SuppressWarnings("unchecked")
-	public <E extends SiegeEvent> E getSiegeEvent()
+	public <E extends SiegeEvent<?, ?>> E getSiegeEvent()
 	{
 		return (E) _siegeEvent;
 	}

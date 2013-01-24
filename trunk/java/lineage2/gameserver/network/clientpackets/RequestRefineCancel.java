@@ -167,6 +167,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 				{
 					return 14160000;
 				}
+				return 1530000;
 			default:
 				return -1;
 		}

@@ -99,7 +99,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 	@SuppressWarnings("unchecked")
 	protected void readData(Element rootElement) throws Exception
 	{
-		for (Iterator iterator = rootElement.elementIterator("event"); iterator.hasNext();)
+		for (Iterator<?> iterator = rootElement.elementIterator("event"); iterator.hasNext();)
 		{
 			Element eventElement = (Element) iterator.next();
 			int id = Integer.parseInt(eventElement.attributeValue("id"));
@@ -120,7 +120,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 			MultiValueSet<String> set = new MultiValueSet<>();
 			set.set("id", id);
 			set.set("name", name);
-			for (Iterator parameterIterator = eventElement.elementIterator("parameter"); parameterIterator.hasNext();)
+			for (Iterator<?> parameterIterator = eventElement.elementIterator("parameter"); parameterIterator.hasNext();)
 			{
 				Element parameterElement = (Element) parameterIterator.next();
 				set.set(parameterElement.attributeValue("name"), parameterElement.attributeValue("value"));
@@ -132,7 +132,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 			Element onTime = eventElement.element("on_time");
 			if (onTime != null)
 			{
-				for (Iterator onTimeIterator = onTime.elementIterator("on"); onTimeIterator.hasNext();)
+				for (Iterator<?> onTimeIterator = onTime.elementIterator("on"); onTimeIterator.hasNext();)
 				{
 					Element on = (Element) onTimeIterator.next();
 					int time = Integer.parseInt(on.attributeValue("time"));
@@ -140,7 +140,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 					event.addOnTimeActions(time, actions);
 				}
 			}
-			for (Iterator objectIterator = eventElement.elementIterator("objects"); objectIterator.hasNext();)
+			for (Iterator<?> objectIterator = eventElement.elementIterator("objects"); objectIterator.hasNext();)
 			{
 				Element objectElement = (Element) objectIterator.next();
 				String objectsName = objectElement.attributeValue("name");
@@ -158,7 +158,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 			return Collections.emptyList();
 		}
 		List<Serializable> objects = new ArrayList<>(2);
-		for (Iterator objectsIterator = element.elementIterator(); objectsIterator.hasNext();)
+		for (Iterator<?> objectsIterator = element.elementIterator(); objectsIterator.hasNext();)
 		{
 			Element objectsElement = (Element) objectsIterator.next();
 			final String nodeName = objectsElement.getName();
@@ -207,7 +207,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 				int z = Integer.parseInt(objectsElement.attributeValue("z"));
 				int hp = Integer.parseInt(objectsElement.attributeValue("hp"));
 				Set<String> set = Collections.emptySet();
-				for (Iterator oIterator = objectsElement.elementIterator(); oIterator.hasNext();)
+				for (Iterator<?> oIterator = objectsElement.elementIterator(); oIterator.hasNext();)
 				{
 					Element sub = (Element) oIterator.next();
 					if (set.isEmpty())
@@ -246,7 +246,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 		}
 		IfElseAction lastIf = null;
 		List<EventAction> actions = new ArrayList<>(0);
-		for (Iterator iterator = element.elementIterator(); iterator.hasNext();)
+		for (Iterator<?> iterator = element.elementIterator(); iterator.hasNext();)
 		{
 			Element actionElement = (Element) iterator.next();
 			if (actionElement.getName().equalsIgnoreCase("start"))

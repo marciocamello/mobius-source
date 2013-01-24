@@ -195,6 +195,7 @@ public class RaidBossInstance extends MonsterInstance
 		super.onDeath(killer);
 	}
 	
+	@SuppressWarnings("unchecked")
 	private void calcRaidPointsReward(int totalPoints)
 	{
 		Map<Object, Object[]> participants = new HashMap<>();

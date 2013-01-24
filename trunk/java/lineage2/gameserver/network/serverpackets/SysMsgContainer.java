@@ -206,7 +206,7 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 	
 	public static abstract class IArgument
 	{
-		void write(SysMsgContainer m)
+		void write(SysMsgContainer<?> m)
 		{
 			m.writeD(getType().ordinal());
 			writeData(m);
@@ -214,7 +214,7 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		
 		abstract Types getType();
 		
-		abstract void writeData(SysMsgContainer message);
+		abstract void writeData(SysMsgContainer<?> message);
 	}
 	
 	public static class IntegerArgument extends IArgument
@@ -227,7 +227,7 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 		
 		@Override
-		public void writeData(SysMsgContainer message)
+		public void writeData(SysMsgContainer<?> message)
 		{
 			message.writeD(_data);
 		}
@@ -285,7 +285,7 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 		
 		@Override
-		void writeData(SysMsgContainer message)
+		void writeData(SysMsgContainer<?> message)
 		{
 			message.writeD(_itemId);
 			message.writeD(_augmentationId);
@@ -358,7 +358,7 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 		
 		@Override
-		void writeData(SysMsgContainer message)
+		void writeData(SysMsgContainer<?> message)
 		{
 			message.writeQ(_data);
 		}
@@ -380,7 +380,7 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 		
 		@Override
-		void writeData(SysMsgContainer message)
+		void writeData(SysMsgContainer<?> message)
 		{
 			message.writeS(_data);
 		}
@@ -404,7 +404,7 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 		
 		@Override
-		void writeData(SysMsgContainer message)
+		void writeData(SysMsgContainer<?> message)
 		{
 			message.writeD(_skillId);
 			message.writeD(_skillLevel);
@@ -431,7 +431,7 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 		
 		@Override
-		void writeData(SysMsgContainer message)
+		void writeData(SysMsgContainer<?> message)
 		{
 			message.writeD(_x);
 			message.writeD(_y);

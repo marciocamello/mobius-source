@@ -60,15 +60,15 @@ public final class ShuttleTemplateParser extends AbstractFileParser<ShuttleTempl
 			Element shuttleElement = iterator.next();
 			int shuttleId = Integer.parseInt(shuttleElement.attributeValue("id"));
 			ShuttleTemplate template = new ShuttleTemplate(shuttleId);
-			for (Iterator doorsIterator = shuttleElement.elementIterator("doors"); doorsIterator.hasNext();)
+			for (Iterator<?> doorsIterator = shuttleElement.elementIterator("doors"); doorsIterator.hasNext();)
 			{
 				Element doorsElement = (Element) doorsIterator.next();
-				for (Iterator doorIterator = doorsElement.elementIterator("door"); doorIterator.hasNext();)
+				for (Iterator<?> doorIterator = doorsElement.elementIterator("door"); doorIterator.hasNext();)
 				{
 					Element doorElement = (Element) doorIterator.next();
 					int doorId = Integer.parseInt(doorElement.attributeValue("id"));
 					StatsSet set = new StatsSet();
-					for (Iterator setIterator = doorElement.elementIterator("set"); setIterator.hasNext();)
+					for (Iterator<?> setIterator = doorElement.elementIterator("set"); setIterator.hasNext();)
 					{
 						Element setElement = (Element) setIterator.next();
 						set.set(setElement.attributeValue("name"), setElement.attributeValue("value"));

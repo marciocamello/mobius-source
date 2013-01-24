@@ -103,7 +103,7 @@ public class CastleMassTeleporterInstance extends NpcInstance
 	
 	private boolean isAllTowersDead()
 	{
-		SiegeEvent siegeEvent = getEvent(SiegeEvent.class);
+		SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
 		if ((siegeEvent == null) || !siegeEvent.isInProgress())
 		{
 			return false;

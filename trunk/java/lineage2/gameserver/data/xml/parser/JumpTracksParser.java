@@ -62,12 +62,12 @@ public final class JumpTracksParser extends AbstractFileParser<JumpTracksHolder>
 			int trackId = Integer.parseInt(trackElement.attributeValue("id"));
 			Location startLoc = Location.parse(trackElement);
 			JumpTrack jumpTrack = new JumpTrack(trackId, startLoc);
-			for (Iterator wayIterator = trackElement.elementIterator("way"); wayIterator.hasNext();)
+			for (Iterator<?> wayIterator = trackElement.elementIterator("way"); wayIterator.hasNext();)
 			{
 				Element wayElement = (Element) wayIterator.next();
 				int wayId = Integer.parseInt(wayElement.attributeValue("id"));
 				JumpWay jumpWay = new JumpWay(wayId);
-				for (Iterator pointIterator = wayElement.elementIterator("point"); pointIterator.hasNext();)
+				for (Iterator<?> pointIterator = wayElement.elementIterator("point"); pointIterator.hasNext();)
 				{
 					Element pointElement = (Element) pointIterator.next();
 					Location pointLoc = Location.parse(pointElement);

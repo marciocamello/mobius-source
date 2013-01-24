@@ -30,13 +30,13 @@ public class JoinedIterator<E> implements Iterator<E>
 	}
 	
 	@SuppressWarnings("unchecked")
-	public JoinedIterator(Iterator... iterators)
+	public JoinedIterator(Iterator<?>... iterators)
 	{
 		if (iterators == null)
 		{
 			throw new NullPointerException("Unexpected NULL iterators argument");
 		}
-		_iterators = iterators;
+		_iterators = (Iterator<E>[]) iterators;
 	}
 	
 	@Override
