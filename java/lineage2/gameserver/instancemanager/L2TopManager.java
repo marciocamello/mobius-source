@@ -185,6 +185,7 @@ public class L2TopManager
 				}
 				line = in.readLine();
 			}
+			in.close();
 		}
 		catch (Exception e)
 		{

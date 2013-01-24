@@ -51,6 +51,7 @@ public class Version
 			setVersionNumber(attrs);
 			setBuildNumber(attrs);
 			setVendor(attrs);
+			jarFile.close();
 		}
 		catch (IOException e)
 		{

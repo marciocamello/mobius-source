@@ -82,7 +82,7 @@ public class SummonSiegeFlag extends Skill
 					player.sendPacket(SystemMsg.YOU_CANNOT_SET_UP_A_BASE_HERE, new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 					return false;
 				}
-				SiegeEvent siegeEvent = activeChar.getEvent(SiegeEvent.class);
+				SiegeEvent<?, ?> siegeEvent = activeChar.getEvent(SiegeEvent.class);
 				if (siegeEvent == null)
 				{
 					player.sendPacket(SystemMsg.YOU_CANNOT_SET_UP_A_BASE_HERE, new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
@@ -127,7 +127,7 @@ public class SummonSiegeFlag extends Skill
 		{
 			return;
 		}
-		SiegeEvent siegeEvent = activeChar.getEvent(SiegeEvent.class);
+		SiegeEvent<?, ?> siegeEvent = activeChar.getEvent(SiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;

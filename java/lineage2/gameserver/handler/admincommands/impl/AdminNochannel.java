@@ -31,7 +31,7 @@ public class AdminNochannel implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
 		if (!activeChar.getPlayerAccess().CanBanChat)

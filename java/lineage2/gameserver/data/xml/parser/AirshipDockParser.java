@@ -58,7 +58,7 @@ public final class AirshipDockParser extends AbstractFileParser<AirshipDockHolde
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{
-		for (Iterator iterator = rootElement.elementIterator(); iterator.hasNext();)
+		for (Iterator<?> iterator = rootElement.elementIterator(); iterator.hasNext();)
 		{
 			Element dockElement = (Element) iterator.next();
 			int id = Integer.parseInt(dockElement.attributeValue("id"));
@@ -70,7 +70,7 @@ public final class AirshipDockParser extends AbstractFileParser<AirshipDockHolde
 				point.setSpeed2(-1);
 			}
 			List<AirshipDock.AirshipPlatform> platformList = new ArrayList<>(2);
-			for (Iterator platformIterator = dockElement.elementIterator("platform"); platformIterator.hasNext();)
+			for (Iterator<?> platformIterator = dockElement.elementIterator("platform"); platformIterator.hasNext();)
 			{
 				Element platformElement = (Element) platformIterator.next();
 				SceneMovie movie = SceneMovie.valueOf(platformElement.attributeValue("movie"));
@@ -92,7 +92,7 @@ public final class AirshipDockParser extends AbstractFileParser<AirshipDockHolde
 			return Collections.emptyList();
 		}
 		List<BoatPoint> list = new ArrayList<>(5);
-		for (Iterator iterator = listElement.elementIterator(); iterator.hasNext();)
+		for (Iterator<?> iterator = listElement.elementIterator(); iterator.hasNext();)
 		{
 			list.add(BoatPoint.parse((Element) iterator.next()));
 		}

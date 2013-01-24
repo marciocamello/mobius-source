@@ -154,7 +154,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 		{
 			return false;
 		}
-		SiegeEvent siegeEvent = getEvent(SiegeEvent.class);
+		SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
 		switch (getDoorType())
 		{
 			case WALL:

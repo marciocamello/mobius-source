@@ -56,7 +56,7 @@ public class AdminBan implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
 		StringTokenizer st = new StringTokenizer(fullString);
@@ -286,7 +286,7 @@ public class AdminBan implements IAdminCommandHandler
 	private static String tradeToString(Player targ, int trade)
 	{
 		String ret;
-		Collection list;
+		Collection<?> list;
 		switch (trade)
 		{
 			case Player.STORE_PRIVATE_BUY:

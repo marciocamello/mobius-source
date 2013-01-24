@@ -37,7 +37,7 @@ public class AdminPledge implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		@SuppressWarnings("unused")
 		Commands command = (Commands) comm;

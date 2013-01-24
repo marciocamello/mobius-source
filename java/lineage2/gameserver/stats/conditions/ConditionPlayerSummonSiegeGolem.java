@@ -44,7 +44,7 @@ public class ConditionPlayerSummonSiegeGolem extends Condition
 		{
 			return false;
 		}
-		SiegeEvent event = player.getEvent(SiegeEvent.class);
+		SiegeEvent<?, ?> event = player.getEvent(SiegeEvent.class);
 		if (event == null)
 		{
 			return false;

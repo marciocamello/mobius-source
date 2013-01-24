@@ -125,6 +125,7 @@ public final class AutoBan
 		}
 		Connection con = null;
 		PreparedStatement statement = null;
+		PreparedStatement statement2 = null;
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -169,9 +170,10 @@ public final class AutoBan
 			}
 			else
 			{
-				statement = con.prepareStatement("DELETE FROM bans WHERE obj_id=?");
-				statement.setInt(1, obj_id);
-				statement.execute();
+				statement2 = con.prepareStatement("DELETE FROM bans WHERE obj_id=?");
+				statement2.setInt(1, obj_id);
+				statement2.execute();
+				statement2.close();
 			}
 		}
 		catch (Exception e)

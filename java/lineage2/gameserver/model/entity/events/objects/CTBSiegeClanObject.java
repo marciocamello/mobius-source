@@ -55,7 +55,7 @@ public class CTBSiegeClanObject extends SiegeClanObject
 	}
 	
 	@Override
-	public void setEvent(boolean start, SiegeEvent event)
+	public void setEvent(boolean start, SiegeEvent<?, ?> event)
 	{
 		for (int i : getPlayers())
 		{

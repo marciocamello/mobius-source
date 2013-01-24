@@ -25,7 +25,7 @@ public class AdminGm implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
 		if (Boolean.TRUE)

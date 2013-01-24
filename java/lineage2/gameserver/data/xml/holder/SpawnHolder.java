@@ -53,7 +53,7 @@ public final class SpawnHolder extends AbstractHolder
 	public int size()
 	{
 		int i = 0;
-		for (List l : _spawns.values())
+		for (List<?> l : _spawns.values())
 		{
 			i += l.size();
 		}

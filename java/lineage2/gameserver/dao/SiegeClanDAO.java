@@ -64,7 +64,7 @@ public class SiegeClanDAO
 				int clanId = rset.getInt("clan_id");
 				long param = rset.getLong("param");
 				long date = rset.getLong("date");
-				SiegeClanObject object = residence.<SiegeEvent> getSiegeEvent().newSiegeClan(name, clanId, param, date);
+				SiegeClanObject object = residence.<SiegeEvent<?, ?>> getSiegeEvent().newSiegeClan(name, clanId, param, date);
 				if (object != null)
 				{
 					siegeClans.add(object);

@@ -57,7 +57,7 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 	private static List<String> quotes = new ArrayList<>();
 	
 	@Override
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		if (!activeChar.getPlayerAccess().IsEventGm)
 		{

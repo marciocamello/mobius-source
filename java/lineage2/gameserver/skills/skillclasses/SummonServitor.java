@@ -94,6 +94,7 @@ public class SummonServitor extends Skill
 					player.sendPacket(SystemMsg.AN_AGATHION_HAS_ALREADY_BEEN_SUMMONED);
 					return false;
 				}
+				break;
 			case TREE:
 				if (player.isMounted())
 				{
@@ -179,7 +180,7 @@ public class SummonServitor extends Skill
 				summon.setCurrentHpMp(summon.getMaxHp(), summon.getMaxMp(), false);
 				if (_summonType == SummonType.SIEGE_SUMMON)
 				{
-					SiegeEvent siegeEvent = activeChar.getEvent(SiegeEvent.class);
+					SiegeEvent<?, ?> siegeEvent = activeChar.getEvent(SiegeEvent.class);
 					siegeEvent.addSiegeSummon(summon);
 				}
 				break;

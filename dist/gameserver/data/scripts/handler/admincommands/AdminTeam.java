@@ -28,7 +28,7 @@ public class AdminTeam extends ScriptAdminCommand
 	}
 	
 	@Override
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		TeamType team = TeamType.NONE;
 		if (wordList.length >= 2)

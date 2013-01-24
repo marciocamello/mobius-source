@@ -433,6 +433,7 @@ public class Util
 				break;
 			case 23:
 				result = 101;
+				break;
 			case 4:
 			case 7:
 			case 10:

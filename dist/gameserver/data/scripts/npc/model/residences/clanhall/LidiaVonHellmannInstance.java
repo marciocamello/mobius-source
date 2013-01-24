@@ -42,7 +42,7 @@ public class LidiaVonHellmannInstance extends SiegeGuardInstance
 	@Override
 	public void onDeath(Creature killer)
 	{
-		SiegeEvent siegeEvent = getEvent(SiegeEvent.class);
+		SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;

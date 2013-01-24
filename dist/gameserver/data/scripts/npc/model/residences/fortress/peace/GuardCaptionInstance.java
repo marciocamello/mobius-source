@@ -75,7 +75,7 @@ public class GuardCaptionInstance extends FacilityManagerInstance
 				List<DoorObject> doorObjects = fortress.getSiegeEvent().getObjects(FortressSiegeEvent.UPGRADEABLE_DOORS);
 				for (DoorObject d : doorObjects)
 				{
-					d.setUpgradeValue(fortress.<SiegeEvent> getSiegeEvent(), d.getDoor().getMaxHp() * fortress.getFacilityLevel(Fortress.DOOR_UPGRADE));
+					d.setUpgradeValue(fortress.<SiegeEvent<?, ?>> getSiegeEvent(), d.getDoor().getMaxHp() * fortress.getFacilityLevel(Fortress.DOOR_UPGRADE));
 				}
 			}
 		}

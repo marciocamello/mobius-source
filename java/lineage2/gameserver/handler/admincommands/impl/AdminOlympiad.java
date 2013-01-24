@@ -41,7 +41,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 	}
 	
 	@Override
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
 		switch (command)

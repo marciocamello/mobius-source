@@ -18,7 +18,7 @@ import lineage2.gameserver.model.Player;
 
 public interface IAdminCommandHandler
 {
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar);
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar);
 	
 	public Enum[] getAdminCommandEnum();
 }

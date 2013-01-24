@@ -42,7 +42,7 @@ public class AdminClientSupport extends ScriptAdminCommand
 	}
 	
 	@Override
-	public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player player)
+	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player player)
 	{
 		Commands c = (Commands) comm;
 		GameObject target = player.getTarget();

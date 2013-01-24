@@ -779,6 +779,7 @@ public class RequestActionUse extends L2GameClientPacket
 					activeChar.sendActionFailed();
 					return;
 				}
+				break;
 			case SERVITOR_GROUP_ACTION:
 				if (servitors.isEmpty())
 				{

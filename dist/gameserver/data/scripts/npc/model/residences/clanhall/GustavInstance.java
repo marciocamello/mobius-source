@@ -106,7 +106,7 @@ public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 				_teleportTask.cancel(false);
 				_teleportTask = null;
 			}
-			SiegeEvent siegeEvent = getEvent(SiegeEvent.class);
+			SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
 			if (siegeEvent == null)
 			{
 				return;
