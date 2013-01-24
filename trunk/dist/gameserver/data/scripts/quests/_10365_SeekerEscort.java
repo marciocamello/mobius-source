@@ -84,7 +84,7 @@ public class _10365_SeekerEscort extends Quest implements ScriptFile
 			htmltext = "";
 			spawnseeker(st);
 		}
-		if (event.equalsIgnoreCase("qet_rev"))
+		if (event.equalsIgnoreCase("quest_rev"))
 		{
 			htmltext = "1-2.htm";
 			st.getPlayer().addExpAndSp(120000, 20000);

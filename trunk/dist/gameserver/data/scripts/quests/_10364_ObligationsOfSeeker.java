@@ -73,7 +73,7 @@ public class _10364_ObligationsOfSeeker extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			htmltext = "0-3.htm";
 		}
-		if (event.equalsIgnoreCase("qet_rev"))
+		if (event.equalsIgnoreCase("quest_rev"))
 		{
 			st.takeAllItems(papper);
 			htmltext = "2-4.htm";
