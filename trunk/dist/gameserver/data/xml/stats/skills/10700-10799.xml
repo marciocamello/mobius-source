@@ -1125,9 +1125,9 @@
             <effect count="1" name="DamOverTime" time="1" val="30000"/>
         </for>
     </skill>
-    <skill id="10787" levels="8" name="Summon Hawk">
+    <skill id="10787" levels="8" name="Summon Thunder Hawk">
         <!-- Fixed by Evil_dnk -->
-        <table name="#itemConsumeCount">1 2 3 4 5 6 7 8</table>
+        <!-- Spirit Ore requirement fix by vegax (L2Mobius) -->
         <table name="#lifeTime">3600 3600 3600 3600 3600 3600 3600 3600</table>
         <table name="#magicLevel">85 86 87 88 89 90 91 92</table>
         <table name="#mpConsume2">123 127 132 136 140 145 149 154</table>
@@ -1136,8 +1136,6 @@
         <set name="hitTime" val="3000"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="lifeTime" val="#lifeTime"/>
-        <set name="itemConsumeId" val="3031"/>
-        <set name="itemConsumeCount" val="#itemConsumeCount"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="SUMMON"/>
 		<set name="relationSkillsId" val="115"/>
