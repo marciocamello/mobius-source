@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "item.dtd">
 <list>
+	<armor id="34925" name="Cloak of Light">
+		<set name="icon" value="icon.amor_goodness_cloak"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="50"/>
+			<add stat="mDef" order="0x10" value="40"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	</armor>
+	<armor id="34926" name="Cloak of Darkness">
+		<set name="icon" value="icon.amor_evilness_cloak"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="50"/>
+			<add stat="mDef" order="0x10" value="40"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	</armor>
     <armor id="34935" name="Star Agathion Bracelet - Hye-jin Jang">        <!--Done By Darvin (c)Java-Team-->
         <set name="crystal_type" value="NONE"/>
         <set name="icon" value="icon.bracelet_tersi_agathion"/>

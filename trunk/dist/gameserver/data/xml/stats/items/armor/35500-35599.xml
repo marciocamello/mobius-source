@@ -12,7 +12,7 @@
             <slot id="RIGHT_EAR"/>
             <slot id="LEFT_EAR"/>
         </equip>
-        <set name="ex_type" value="EARRING"/>
+        <set name="ex_type" value="RING"/>
         <skills>
             <skill id="8870" level="1"/>
         </skills>

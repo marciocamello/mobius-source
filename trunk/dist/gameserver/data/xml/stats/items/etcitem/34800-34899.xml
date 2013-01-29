@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+
+<list>
+	<etcitem id="34800" name="Dark Crystal" add_name="Event">
+        <set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_unholy_crystal_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="34801" name="Holy Crystal" add_name="Event">
+        <set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_holy_crystal_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="34811" name="Soulshot Box" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34812" name="Blessed Spiritshot Box" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34813" name="Stone Pack" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34814" name="Crystal Pack" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34815" name="Коробка со Свитками Модификации Доспехов - S" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34816" name="Коробка со Свитками Модификации Доспехов - R" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34817" name="Коробка со Свитками Модификации Оружия - S" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34818" name="Коробка со Свитками Модификации Оружия - R" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34819" name="Сундук с Кольцом Большой Тыквы" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34820" name="Сундук с Серьгой Большой Тыквы" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34821" name="Сундук с Ожерельем Большой Тыквы" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34822" name="Сундук с Аксессуарами Большой Тыквы" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34823" name="Сундук с Редким Кристаллом Души - Ранг R" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34824" name="Сундук с Редким Кристаллом Души - Ранг R95" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34825" name="Сундук с Редким Кристаллом Души - Ранг R99" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34826" name="Сундук с Талисманом" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34827" name="Коробка Эликсиров - Ранг S" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34828" name="Коробка Эликсиров - Ранг R" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34829" name="Коробка со Свитком Благословения - Ранг R" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34830" name="Упаковка: Комплект Усиления (R) ">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34835" name="Упаковка: Афроамериканский Парик">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34836" name="Упаковка: Афроамериканский Парик 7 дн.">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34837" name="Магическая Веревка - Ранг R">
+		<set name="icon" value="icon.etc_braided_hemp_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<!-- <etcitem id="34838" name="Компактная Упаковка: Заряды Души - Ранг R">
+		<set name="type" value="EXTRACTABLE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="weight" value="200"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+		<capsuled_items>
+			<capsuled_item id="17754" min_count="300" max_count="300" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="34839" name="Компактная Упаковка: Заряды Духа - Ранг R">
+		<set name="type" value="EXTRACTABLE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="weight" value="200"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+		<capsuled_items>
+			<capsuled_item id="19441" min_count="300" max_count="300" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>
+	<etcitem id="34840" name="Компактная Упаковка: Благословенные Заряды Духа - Ранг R">
+		<set name="type" value="EXTRACTABLE"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+		<set name="weight" value="200"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+		<capsuled_items>
+			<capsuled_item id="19442" min_count="300" max_count="300" chance="100.0"/>
+		</capsuled_items>
+	</etcitem>-->
+	<etcitem id="34841" name="Рецепт - Компактная Упаковка: Заряды Души Ранг R (100%)">
+		<set name="price" value="1350000"/>
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="RECIPE"/>
+	</etcitem>
+	<etcitem id="34842" name="Рецепт - Компактная Упаковка: Заряды Духа Ранг R (100%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="RECIPE"/>
+	</etcitem>
+	<etcitem id="34843" name="Рецепт - Компактная Упаковка: Благословенные Заряды Духа Ранг R (100%)">
+		<set name="price" value="1350000"/>
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="RECIPE"/>
+	</etcitem>
+	<etcitem id="34844" name="Настойка Сомнения">
+		<set name="icon" value=""/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34845" name="Настойка Сомнения">
+		<set name="icon" value=""/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34846" name="Подарок Барда">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34847" name="Медовый Напиток Мафр - 2 часа">
+		<set name="icon" value="icon.etc_hot_spring_nectar_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34849" name="Кувшин с Чудодейственной Энергией">
+		<set name="icon" value="icon.etc_warrior_set_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="HERB"/>
+		<set name="handler" value="Skills"/>
+		<skills>
+			<skill id="9404" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="34850" name="Кувшин с Чудодейственной Магией">
+		<set name="icon" value="icon.etc_magic_set_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="HERB"/>
+		<set name="handler" value="Skills"/>
+		<skills>
+			<skill id="9405" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="34851" name="Фрагмент Кубика Доспехов - R">
+		<set name="icon" value="Branchsys2.icon.event_cubic_a_piece_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34852" name="Фрагмент Кубика Оружия - R">
+		<set name="icon" value="Branchsys2.icon.event_cubic_w_piece_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34853" name="Сверкающий Фрагмент Кубика Доспехов – R">
+		<set name="icon" value="Branchsys2.icon.shine_cubic_a_piece_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34854" name="Сверкающий Фрагмент Кубика Оружия – R">
+		<set name="icon" value="Branchsys2.icon.shine_cubic_w_piece_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34855" name="Сундук Реаны">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34856" name="Музыкальный Кристалл: Тема - Любовь" add_name="Кампания">
+		<set name="icon" value="icon.etc_echo_crystal_i02"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34857" name="Музыкальный Кристалл: Тема - Фестиваль" add_name="Кампания">
+		<set name="icon" value="icon.etc_echo_crystal_i04"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34858" name="Музыкальный Кристалл: Тема - Праздник" add_name="Кампания">
+		<set name="icon" value="icon.etc_echo_crystal_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34859" name="Улучшенный Браслет Истхины">
+		<set name="icon" value="icon.istina_bangel"/>
+		<set name="weight" value="150"/>
+		<set name="crystal_type" value="R"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34860" name="Улучшенный Браслет Октависа">
+		<set name="icon" value="icon.octavis_bangel"/>
+		<set name="weight" value="150"/>
+		<set name="crystal_type" value="R"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<!--<etcitem id="34861" name="Мешочек с Усилителем и Материалами - R">
+		<set name="icon" value="icon.etc_pouch_gold_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="EXTRACTABLE"/>
+		<capsuled_items>
+			<capsuled_item id="22561" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="22560" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="9552" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="9553" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="9554" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="9555" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="9556" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="9557" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="19514" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="19515" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="19516" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="19517" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="19518" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="19519" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="19520" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="19521" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="19308" min_count="1" max_count="1" chance="5.0"/>
+			<capsuled_item id="19307" min_count="1" max_count="1" chance="5.0"/>
+		</capsuled_items>
+	</etcitem>-->
+	<etcitem id="34862" name="Бумага от Яркого Украшения ">
+		<set name="icon" value="icon.etc_plan_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34863" name="Зараженное Яйцо Дракона">
+		<set name="icon" value="icon.etc_ev_triol_egg"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34864" name="Очищенные Маленькие Яйца Дракона">
+		<set name="icon" value="icon.etc_ev_small_egg"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34865" name="Очищенные Большие Яйца Дракона">
+		<set name="icon" value="icon.etc_ev_big_egg"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34866" name="Скорлупа">
+		<set name="icon" value="icon.etc_ev_broken_egg"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34867" name="Подарок Дракона">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34868" name="Сверкающий Подарок Дракона">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34870" name="Упаковка: Сертификат Подопечного">
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34879" name="Плохая Магическая Заколка - Ранг R">
+		<set name="icon" value="icon.etc_rune_clip_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34880" name="Нормальная Магическая Заколка - Ранг R">
+		<set name="icon" value="icon.etc_rune_clip_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34881" name="Хорошая Магическая Заколка - Ранг R">
+		<set name="icon" value="icon.etc_rune_clip_i01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34882" name="Совершенная Магическая Заколка - Ранг R">
+		<set name="icon" value="icon.etc_rune_clip_i02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34883" name="Бутыль с Душой Истхины">
+		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i00"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34884" name="Бутыль с Душой Октависа">
+		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i06"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34885" name="Упаковка: Диадема Землетрясения (60 дней)">
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34886" name="Фрагмент Пророчества">
+		<set name="icon" value="icon.etc_jewel_red_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34887" name="Бутылка для Воды из Источника">
+		<set name="icon" value="icon.etc_hot_spring_glass_bottle_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34888" name="Бутылка с Водой из Источника">
+		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i05"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34889" name="Толстая Кожа">
+		<set name="icon" value="icon.etc_leather_brown_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34890" name="Лопатка ">
+		<set name="icon" value="icon.etc_trowel_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34891" name="Сила Огня">
+		<set name="icon" value="icon.etc_bead_red_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34892" name="Твердый артефакт, заключающий в себе силу воды.">
+		<set name="icon" value="icon.etc_hard_fossil_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34893" name="Семя Лекарственного Растения Помощи">
+		<set name="icon" value="icon.etc_coda_seed_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34894" name="Следы Лекарственного Растения">
+		<set name="icon" value="icon.etc_powder_orange_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34895" name="Флаг Клана">
+		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+ 	<etcitem id="34898" name="Доказательство Жизни">
+		<set name="icon" value="icon.etc_fire_rune_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34899" name="Ключ Тьмы">
+		<set name="icon" value="icon.etc_dark_key_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+</list>
