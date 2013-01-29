@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="2700" levels="1" name="Giran Dwarf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dwarf mercenary.
-		-->
+    <!-- Transforms into a Dwarf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -27,11 +23,7 @@
 		</for>
 	</skill>
 	<skill id="2701" levels="1" name="Giran Kamael Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael mercenary.
-		-->
+    <!-- Transforms into a Kamael mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -52,12 +44,8 @@
 			<effect count="1" name="Transformation" time="1800" val="15" />
 		</for>
 	</skill>
-	<skill id="2702" levels="1" name="Giran Royal Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Royal Guard Captain.
-		-->
+	<skill id="2702" levels="1" name="Giran Knight Mercenary" >
+    <!-- Transforms into a Knight Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -78,12 +66,8 @@
 			<effect count="1" name="Transformation" time="1800" val="16" />
 		</for>
 	</skill>
-	<skill id="2703" levels="1" name="Giran Archer Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Archer Captain.
-		-->
+	<skill id="2703" levels="1" name="Giran Archer Mercenary" >
+    <!-- Transforms into an Archer Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -104,12 +88,8 @@
 			<effect count="1" name="Transformation" time="1800" val="17" />
 		</for>
 	</skill>
-	<skill id="2704" levels="1" name="Giran Magic Leader" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Magic Leader.
-		-->
+	<skill id="2704" levels="1" name="Giran Wizard Mercenary" >
+    <!-- Transforms into a Wizard Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -130,12 +110,8 @@
 			<effect count="1" name="Transformation" time="1800" val="18" />
 		</for>
 	</skill>
-	<skill id="2705" levels="1" name="Giran Kamael Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael guard captain.
-		-->
+	<skill id="2705" levels="1" name="Giran Kamael Captain Mercenary" >
+    <!-- Transforms into a Kamael guard captain. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -156,12 +132,8 @@
 			<effect count="1" name="Transformation" time="1800" val="19" />
 		</for>
 	</skill>
-	<skill id="2706" levels="1" name="Giran Knight of Dawn" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Knight of Dawn.
-		-->
+	<skill id="2706" levels="1" name="Giran Knight Captain Mercenary" >
+    <!-- Transforms into a Knight Captain Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -182,12 +154,8 @@
 			<effect count="1" name="Transformation" time="1800" val="20" />
 		</for>
 	</skill>
-	<skill id="2707" levels="1" name="Giran Fortress Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Fortress Captain.
-		-->
+	<skill id="2707" levels="1" name="Giran Commander Mercenary" >
+    <!-- Transforms into a Commander Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -209,11 +177,7 @@
 		</for>
 	</skill>
 	<skill id="2708" levels="1" name="Oren Human Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a human mercenary.
-		-->
+    <!-- Transforms into a human mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -235,11 +199,7 @@
 		</for>
 	</skill>
 	<skill id="2709" levels="1" name="Oren Elf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Elf mercenary.
-		-->
+    <!-- Transforms into an Elf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -261,11 +221,7 @@
 		</for>
 	</skill>
 	<skill id="2710" levels="1" name="Oren Dark Elf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dark Elf mercenary.
-		-->
+    <!-- Transforms into a Dark Elf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -287,11 +243,7 @@
 		</for>
 	</skill>
 	<skill id="2711" levels="1" name="Oren Orc Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Orc mercenary.
-		-->
+    <!-- Transforms into an Orc mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -313,11 +265,7 @@
 		</for>
 	</skill>
 	<skill id="2712" levels="1" name="Oren Dwarf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dwarf mercenary.
-		-->
+    <!-- Transforms into a Dwarf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -339,11 +287,7 @@
 		</for>
 	</skill>
 	<skill id="2713" levels="1" name="Oren Kamael Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael mercenary.
-		-->
+    <!-- Transforms into a Kamael mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -364,12 +308,8 @@
 			<effect count="1" name="Transformation" time="1800" val="15" />
 		</for>
 	</skill>
-	<skill id="2714" levels="1" name="Oren Royal Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Royal Guard Captain.
-		-->
+	<skill id="2714" levels="1" name="Oren Knight Mercenary" >
+    <!-- Transforms into a Knight Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -390,12 +330,8 @@
 			<effect count="1" name="Transformation" time="1800" val="16" />
 		</for>
 	</skill>
-	<skill id="2715" levels="1" name="Oren Archer Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Archer Captain.
-		-->
+	<skill id="2715" levels="1" name="Oren Archer Mercenary" >
+    <!-- Transforms into an Archer Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -416,12 +352,8 @@
 			<effect count="1" name="Transformation" time="1800" val="17" />
 		</for>
 	</skill>
-	<skill id="2716" levels="1" name="Oren Magic Leader" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Magic Leader.
-		-->
+	<skill id="2716" levels="1" name="Oren Wizard Mercenary" >
+    <!-- Transforms into a Wizard Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -442,12 +374,8 @@
 			<effect count="1" name="Transformation" time="1800" val="18" />
 		</for>
 	</skill>
-	<skill id="2717" levels="1" name="Oren Kamael Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael guard captain.
-		-->
+	<skill id="2717" levels="1" name="Oren Kamael Captain Mercenary" >
+    <!-- Transforms into a Kamael guard captain. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -468,12 +396,8 @@
 			<effect count="1" name="Transformation" time="1800" val="19" />
 		</for>
 	</skill>
-	<skill id="2718" levels="1" name="Oren Knight of Dawn" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Knight of Dawn.
-		-->
+	<skill id="2718" levels="1" name="Oren Knight Captain Mercenary" >
+    <!-- Transforms into a Knight Captain Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -494,12 +418,8 @@
 			<effect count="1" name="Transformation" time="1800" val="20" />
 		</for>
 	</skill>
-	<skill id="2719" levels="1" name="Oren Fortress Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Fortress Captain.
-		-->
+	<skill id="2719" levels="1" name="Oren Commander Mercenary" >
+    <!-- Transforms into a Commander Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -521,11 +441,7 @@
 		</for>
 	</skill>
 	<skill id="2720" levels="1" name="Aden Human Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a human mercenary.
-		-->
+    <!-- Transforms into a human mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -547,11 +463,7 @@
 		</for>
 	</skill>
 	<skill id="2721" levels="1" name="Aden Elf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Elf mercenary.
-		-->
+    <!-- Transforms into an Elf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -573,11 +485,7 @@
 		</for>
 	</skill>
 	<skill id="2722" levels="1" name="Aden Dark Elf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dark Elf mercenary.
-		-->
+    <!-- Transforms into a Dark Elf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -599,11 +507,7 @@
 		</for>
 	</skill>
 	<skill id="2723" levels="1" name="Aden Orc Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Orc mercenary.
-		-->
+    <!-- Transforms into an Orc mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -625,11 +529,7 @@
 		</for>
 	</skill>
 	<skill id="2724" levels="1" name="Aden Dwarf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dwarf mercenary.
-		-->
+    <!-- Transforms into a Dwarf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -651,11 +551,7 @@
 		</for>
 	</skill>
 	<skill id="2725" levels="1" name="Aden Kamael Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael mercenary.
-		-->
+    <!-- Transforms into a Kamael mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -676,12 +572,8 @@
 			<effect count="1" name="Transformation" time="1800" val="15" />
 		</for>
 	</skill>
-	<skill id="2726" levels="1" name="Aden Royal Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Royal Guard Captain.
-		-->
+	<skill id="2726" levels="1" name="Aden Knight Mercenary" >
+    <!-- Transforms into a Knight Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -702,12 +594,8 @@
 			<effect count="1" name="Transformation" time="1800" val="16" />
 		</for>
 	</skill>
-	<skill id="2727" levels="1" name="Aden Archer Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Archer Captain.
-		-->
+	<skill id="2727" levels="1" name="Aden Archer Mercenary" >
+    <!-- Transforms into an Archer Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -728,12 +616,8 @@
 			<effect count="1" name="Transformation" time="1800" val="17" />
 		</for>
 	</skill>
-	<skill id="2728" levels="1" name="Aden Magic Leader" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Magic Leader.
-		-->
+	<skill id="2728" levels="1" name="Aden Wizard Mercenary" >
+    <!-- Transforms into a Wizard Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -754,12 +638,8 @@
 			<effect count="1" name="Transformation" time="1800" val="18" />
 		</for>
 	</skill>
-	<skill id="2729" levels="1" name="Aden Kamael Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael guard captain.
-		-->
+	<skill id="2729" levels="1" name="Aden Kamael Captain Mercenary" >
+    <!-- Transforms into a Kamael guard captain. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -780,12 +660,8 @@
 			<effect count="1" name="Transformation" time="1800" val="19" />
 		</for>
 	</skill>
-	<skill id="2730" levels="1" name="Aden Knight of Dawn" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Knight of Dawn.
-		-->
+	<skill id="2730" levels="1" name="Aden Knight Captain Mercenary" >
+    <!-- Transforms into a Knight Captain Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -806,12 +682,8 @@
 			<effect count="1" name="Transformation" time="1800" val="20" />
 		</for>
 	</skill>
-	<skill id="2731" levels="1" name="Aden Fortress Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Fortress Captain.
-		-->
+	<skill id="2731" levels="1" name="Aden Commander Mercenary" >
+    <!-- Transforms into a Commander Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -833,11 +705,7 @@
 		</for>
 	</skill>
 	<skill id="2732" levels="1" name="Innadril Human Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a human mercenary.
-		-->
+    <!-- Transforms into a human mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -859,11 +727,7 @@
 		</for>
 	</skill>
 	<skill id="2733" levels="1" name="Innadril Elf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Elf mercenary.
-		-->
+    <!-- Transforms into an Elf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -885,11 +749,7 @@
 		</for>
 	</skill>
 	<skill id="2734" levels="1" name="Innadril Dark Elf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dark Elf mercenary.
-		-->
+    <!-- Transforms into a Dark Elf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -911,11 +771,7 @@
 		</for>
 	</skill>
 	<skill id="2735" levels="1" name="Innadril Orc Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Orc mercenary.
-		-->
+    <!-- Transforms into an Orc mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -937,11 +793,7 @@
 		</for>
 	</skill>
 	<skill id="2736" levels="1" name="Innadril Dwarf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dwarf mercenary.
-		-->
+    <!-- Transforms into a Dwarf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -963,11 +815,7 @@
 		</for>
 	</skill>
 	<skill id="2737" levels="1" name="Innadril Kamael Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael mercenary.
-		-->
+    <!-- Transforms into a Kamael mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -988,12 +836,8 @@
 			<effect count="1" name="Transformation" time="1800" val="15" />
 		</for>
 	</skill>
-	<skill id="2738" levels="1" name="Innadril Royal Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Royal Guard Captain.
-		-->
+	<skill id="2738" levels="1" name="Innadril Knight Mercenary" >
+    <!-- Transforms into a Knight Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1014,12 +858,8 @@
 			<effect count="1" name="Transformation" time="1800" val="16" />
 		</for>
 	</skill>
-	<skill id="2739" levels="1" name="Innadril Archer Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Archer Captain.
-		-->
+	<skill id="2739" levels="1" name="Innadril Archer Mercenary" >
+    <!-- Transforms into an Archer Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1040,12 +880,8 @@
 			<effect count="1" name="Transformation" time="1800" val="17" />
 		</for>
 	</skill>
-	<skill id="2740" levels="1" name="Innadril Magic Leader" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Magic Leader.
-		-->
+	<skill id="2740" levels="1" name="Innadril Wizard Mercenary" >
+    <!-- Transforms into a Wizard Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1066,12 +902,8 @@
 			<effect count="1" name="Transformation" time="1800" val="18" />
 		</for>
 	</skill>
-	<skill id="2741" levels="1" name="Innadril Kamael Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael guard captain.
-		-->
+	<skill id="2741" levels="1" name="Innadril Kamael Captain Mercenary" >
+    <!-- Transforms into a Kamael guard captain. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1092,12 +924,8 @@
 			<effect count="1" name="Transformation" time="1800" val="19" />
 		</for>
 	</skill>
-	<skill id="2742" levels="1" name="Innadril Knight of Dawn" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Knight of Dawn.
-		-->
+	<skill id="2742" levels="1" name="Innadril Knight Captain Mercenary" >
+    <!-- Transforms into a Knight Captain Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1118,12 +946,8 @@
 			<effect count="1" name="Transformation" time="1800" val="20" />
 		</for>
 	</skill>
-	<skill id="2743" levels="1" name="Innadril Fortress Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Fortress Captain.
-		-->
+	<skill id="2743" levels="1" name="Innadril Commander Mercenary" >
+    <!-- Transforms into a Commander Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1145,11 +969,7 @@
 		</for>
 	</skill>
 	<skill id="2744" levels="1" name="Goddard Human Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a human mercenary.
-		-->
+    <!-- Transforms into a human mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1171,11 +991,7 @@
 		</for>
 	</skill>
 	<skill id="2745" levels="1" name="Goddard Elf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Elf mercenary.
-		-->
+    <!-- Transforms into an Elf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1197,11 +1013,7 @@
 		</for>
 	</skill>
 	<skill id="2746" levels="1" name="Goddard Dark Elf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dark Elf mercenary.
-		-->
+    <!-- Transforms into a Dark Elf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1223,11 +1035,7 @@
 		</for>
 	</skill>
 	<skill id="2747" levels="1" name="Goddard Orc Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Orc mercenary.
-		-->
+    <!-- Transforms into an Orc mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1249,11 +1057,7 @@
 		</for>
 	</skill>
 	<skill id="2748" levels="1" name="Goddard Dwarf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dwarf mercenary.
-		-->
+    <!-- Transforms into a Dwarf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1275,11 +1079,7 @@
 		</for>
 	</skill>
 	<skill id="2749" levels="1" name="Goddard Kamael Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael mercenary.
-		-->
+    <!-- Transforms into a Kamael mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1300,12 +1100,8 @@
 			<effect count="1" name="Transformation" time="1800" val="15" />
 		</for>
 	</skill>
-	<skill id="2750" levels="1" name="Goddard Royal Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Royal Guard Captain.
-		-->
+	<skill id="2750" levels="1" name="Goddard Knight Mercenary" >
+    <!-- Transforms into a Knight Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1326,12 +1122,8 @@
 			<effect count="1" name="Transformation" time="1800" val="16" />
 		</for>
 	</skill>
-	<skill id="2751" levels="1" name="Goddard Archer Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Archer Captain.
-		-->
+	<skill id="2751" levels="1" name="Goddard Archer Mercenary" >
+    <!-- Transforms into an Archer Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1352,12 +1144,8 @@
 			<effect count="1" name="Transformation" time="1800" val="17" />
 		</for>
 	</skill>
-	<skill id="2752" levels="1" name="Goddard Magic Leader" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Magic Leader.
-		-->
+	<skill id="2752" levels="1" name="Goddard Wizard Mercenary" >
+    <!-- Transforms into a Wizard Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1378,12 +1166,8 @@
 			<effect count="1" name="Transformation" time="1800" val="18" />
 		</for>
 	</skill>
-	<skill id="2753" levels="1" name="Goddard Kamael Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael guard captain.
-		-->
+	<skill id="2753" levels="1" name="Goddard Kamael Captain Mercenary" >
+    <!-- Transforms into a Kamael guard captain. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1404,12 +1188,8 @@
 			<effect count="1" name="Transformation" time="1800" val="19" />
 		</for>
 	</skill>
-	<skill id="2754" levels="1" name="Goddard Knight of Dawn" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Knight of Dawn.
-		-->
+	<skill id="2754" levels="1" name="Goddard Knight Captain Mercenary" >
+    <!-- Transforms into a Knight Captain Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1430,12 +1210,8 @@
 			<effect count="1" name="Transformation" time="1800" val="20" />
 		</for>
 	</skill>
-	<skill id="2755" levels="1" name="Goddard Fortress Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Fortress Captain.
-		-->
+	<skill id="2755" levels="1" name="Goddard Commander Mercenary" >
+    <!-- Transforms into a Commander Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1457,11 +1233,7 @@
 		</for>
 	</skill>
 	<skill id="2756" levels="1" name="Rune Human Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a human mercenary.
-		-->
+    <!-- Transforms into a human mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1483,11 +1255,7 @@
 		</for>
 	</skill>
 	<skill id="2757" levels="1" name="Rune Elf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Elf mercenary.
-		-->
+    <!-- Transforms into an Elf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1509,11 +1277,7 @@
 		</for>
 	</skill>
 	<skill id="2758" levels="1" name="Rune Dark Elf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dark Elf mercenary.
-		-->
+    <!-- Transforms into a Dark Elf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1535,11 +1299,7 @@
 		</for>
 	</skill>
 	<skill id="2759" levels="1" name="Rune Orc Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Orc mercenary.
-		-->
+    <!-- Transforms into an Orc mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1561,11 +1321,7 @@
 		</for>
 	</skill>
 	<skill id="2760" levels="1" name="Rune Dwarf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dwarf mercenary.
-		-->
+    <!-- Transforms into a Dwarf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1587,11 +1343,7 @@
 		</for>
 	</skill>
 	<skill id="2761" levels="1" name="Rune Kamael Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael mercenary.
-		-->
+    <!-- Transforms into a Kamael mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1612,12 +1364,8 @@
 			<effect count="1" name="Transformation" time="1800" val="15" />
 		</for>
 	</skill>
-	<skill id="2762" levels="1" name="Rune Royal Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Royal Guard Captain.
-		-->
+	<skill id="2762" levels="1" name="Rune Knight Mercenary" >
+    <!-- Transforms into a Knight Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1638,12 +1386,8 @@
 			<effect count="1" name="Transformation" time="1800" val="16" />
 		</for>
 	</skill>
-	<skill id="2763" levels="1" name="Rune Archer Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Archer Captain.
-		-->
+	<skill id="2763" levels="1" name="Rune Archer Mercenary" >
+    <!-- Transforms into an Archer Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1664,12 +1408,8 @@
 			<effect count="1" name="Transformation" time="1800" val="17" />
 		</for>
 	</skill>
-	<skill id="2764" levels="1" name="Rune Magic Leader" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Magic Leader.
-		-->
+	<skill id="2764" levels="1" name="Rune Wizard Mercenary" >
+    <!-- Transforms into a Wizard Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1690,12 +1430,8 @@
 			<effect count="1" name="Transformation" time="1800" val="18" />
 		</for>
 	</skill>
-	<skill id="2765" levels="1" name="Rune Kamael Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael guard captain.
-		-->
+	<skill id="2765" levels="1" name="Rune Kamael Captain Mercenary" >
+    <!-- Transforms into a Kamael guard captain. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1716,12 +1452,8 @@
 			<effect count="1" name="Transformation" time="1800" val="19" />
 		</for>
 	</skill>
-	<skill id="2766" levels="1" name="Rune Knight of Dawn" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Knight of Dawn.
-		-->
+	<skill id="2766" levels="1" name="Rune Knight Captain Mercenary" >
+    <!-- Transforms into a Knight Captain Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1742,12 +1474,8 @@
 			<effect count="1" name="Transformation" time="1800" val="20" />
 		</for>
 	</skill>
-	<skill id="2767" levels="1" name="Rune Fortress Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Fortress Captain.
-		-->
+	<skill id="2767" levels="1" name="Rune Commander Mercenary" >
+    <!-- Transforms into a Commander Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1769,11 +1497,7 @@
 		</for>
 	</skill>
 	<skill id="2768" levels="1" name="Schuttgart Human Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a human mercenary.
-		-->
+    <!-- Transforms into a human mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1795,11 +1519,7 @@
 		</for>
 	</skill>
 	<skill id="2769" levels="1" name="Schuttgart Elf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Elf mercenary.
-		-->
+    <!-- Transforms into an Elf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1821,11 +1541,7 @@
 		</for>
 	</skill>
 	<skill id="2770" levels="1" name="Schuttgart Dark Elf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dark Elf mercenary.
-		-->
+    <!-- Transforms into a Dark Elf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1847,11 +1563,7 @@
 		</for>
 	</skill>
 	<skill id="2771" levels="1" name="Schuttgart Orc Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Orc mercenary.
-		-->
+    <!-- Transforms into an Orc mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1873,11 +1585,7 @@
 		</for>
 	</skill>
 	<skill id="2772" levels="1" name="Schuttgart Dwarf Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Dwarf mercenary.
-		-->
+    <!-- Transforms into a Dwarf mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1899,11 +1607,7 @@
 		</for>
 	</skill>
 	<skill id="2773" levels="1" name="Schuttgart Kamael Mercenary" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael mercenary.
-		-->
+    <!-- Transforms into a Kamael mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1924,12 +1628,8 @@
 			<effect count="1" name="Transformation" time="1800" val="15" />
 		</for>
 	</skill>
-	<skill id="2774" levels="1" name="Schuttgart Royal Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Royal Guard Captain.
-		-->
+	<skill id="2774" levels="1" name="Schuttgart Knight Mercenary" >
+    <!-- Transforms into a Knight Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1950,12 +1650,8 @@
 			<effect count="1" name="Transformation" time="1800" val="16" />
 		</for>
 	</skill>
-	<skill id="2775" levels="1" name="Schuttgart Archer Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into an Archer Captain.
-		-->
+	<skill id="2775" levels="1" name="Schuttgart Archer Mercenary" >
+    <!-- Transforms into an Archer Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1976,12 +1672,8 @@
 			<effect count="1" name="Transformation" time="1800" val="17" />
 		</for>
 	</skill>
-	<skill id="2776" levels="1" name="Schuttgart Magic Leader" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Magic Leader.
-		-->
+	<skill id="2776" levels="1" name="Schuttgart Wizard Mercenary" >
+    <!-- Transforms into a Wizard Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -2002,12 +1694,8 @@
 			<effect count="1" name="Transformation" time="1800" val="18" />
 		</for>
 	</skill>
-	<skill id="2777" levels="1" name="Schuttgart Kamael Guard Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Kamael guard captain.
-		-->
+	<skill id="2777" levels="1" name="Schuttgart Kamael Captain Mercenary" >
+    <!-- Transforms into a Kamael guard captain. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -2028,12 +1716,8 @@
 			<effect count="1" name="Transformation" time="1800" val="19" />
 		</for>
 	</skill>
-	<skill id="2778" levels="1" name="Schuttgart Knight of Dawn" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Knight of Dawn.
-		-->
+	<skill id="2778" levels="1" name="Schuttgart Knight Captain Mercenary" >
+    <!-- Transforms into a Knight Captain Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -2054,12 +1738,8 @@
 			<effect count="1" name="Transformation" time="1800" val="20" />
 		</for>
 	</skill>
-	<skill id="2779" levels="1" name="Schuttgart Fortress Captain" >
-		<!--
-		      Last modify: 24.05.2009
-
-		      Description: Transforms into a Fortress Captain.
-		-->
+	<skill id="2779" levels="1" name="Schuttgart Commander Mercenary" >
+    <!-- Transforms into a Commander Mercenary. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -2081,11 +1761,7 @@
 		</for>
 	</skill>
 	<skill id="2780" levels="1" name="Magician's Will" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="81" />
@@ -2096,11 +1772,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2781" levels="1" name="Silent Mind" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="81" />
@@ -2111,11 +1783,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2782" levels="1" name="Turn Stone" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="81" />
@@ -2126,11 +1794,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2783" levels="1" name="Lucky Strike" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="81" />
@@ -2141,11 +1805,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2784" levels="1" name="Eye for Eye" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="81" />
@@ -2156,11 +1816,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2785" levels="1" name="Curse of Desparion" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="81" />
@@ -2171,11 +1827,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2786" levels="1" name="Counter Critical" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="81" />
@@ -2186,11 +1838,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2787" levels="1" name="Onslaught of Pa'agrio" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="81" />
@@ -2201,11 +1849,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2788" levels="1" name="Great Fury" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="81" />
@@ -2216,11 +1860,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2789" levels="1" name="Final Flying Form" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="840" />
@@ -2231,11 +1871,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2790" levels="1" name="Aura Bird - Falcon" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="841" />
@@ -2246,11 +1882,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2791" levels="1" name="Aura Bird - Owl" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="842" />
@@ -2261,11 +1893,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2792" levels="2" name="Stone of Stamina" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -2277,6 +1905,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2793" levels="2" name="Stone of Mana" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -2297,11 +1926,7 @@
 		</cond>
 	</skill>
 	<skill id="2794" levels="2" name="Stone of Recovery" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -2313,11 +1938,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2795" levels="1" name="Stone of Destruction" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: P. Atk. is temporarily increased.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- P. Atk. is temporarily increased. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.stone_1_i00" />
 		<set name="magicLevel" val="80" />
@@ -2327,11 +1948,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2796" levels="1" name="Stone of Invincibility" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: P. Def. is temporarily increased.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- P. Def. is temporarily increased. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.stone_2_i00" />
 		<set name="magicLevel" val="80" />
@@ -2341,11 +1958,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2797" levels="1" name="Stone of Great Speed" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Atk. Spd. and Casting Spd. are increased.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Atk. Spd. and Casting Spd. are increased. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.stone_3_i00" />
 		<set name="magicLevel" val="80" />
@@ -2356,11 +1969,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2798" levels="1" name="Stone of Speed" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Speed is temporarily increased. Effect 2.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Speed is temporarily increased. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.stone_8_i00" />
 		<set name="magicLevel" val="80" />
@@ -2370,11 +1979,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2799" levels="1" name="Stone of Concentration" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Critical attack rate is temporarily increased. Effect 2.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Critical attack rate is temporarily increased. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.stone_7_i00" />
 		<set name="magicLevel" val="80" />

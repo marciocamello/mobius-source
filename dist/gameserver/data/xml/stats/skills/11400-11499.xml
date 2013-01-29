@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="11497" levels="1" name="Уникальное Умение Призывателя - Пассивное">
-		<!--
-			Уровень: 1; Описание: a,
-		-->
+	<skill id="11497" levels="1" name="Summoner - Individual Passive">
 		<set name="icon" val="icon.skill0217" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="11498" levels="1" name="Уникальное Умение Призывателя">
-		<!--
-		Предположительно яраость пета и тригес скила виликое владение призывом	Уровень: 1; Описание: В течение 5 сек. увеличивает Физ. Атк., Маг. Атк., шанс Крит. Атк., силу Крит. Атк. на 10%.
-		-->
+	<skill id="11498" levels="1" name="Summoner - Individual">
+    <!-- For 5 seconds, increases P. Atk., M. Atk., Critical rate, and critical damage by 10%. -->
 		<set name="icon" val="icon.skill1543" />
 		<set name="magicLvl" val="85"/>
 		<set name="target" val="TARGET_PET" />
@@ -29,17 +24,14 @@
             </effect>
 		</for>
 	</skill>
-	<skill id="11499" levels="1" name="Сковывающая Атака Призывателя">
-		<!--
-			Уровень: 1; Описание: Наносит по врагу мощный удар.
-		-->
+	<skill id="11499" levels="1" name="">
+    <!-- Inflicts a powerful blow on the target. -->
 		<set name="icon" val="icon.skill10317" />
         <set name="castRange" val="900"/>
         <set name="magicLvl" val="85"/>
         <set name="mpConsume" val="71"/>
         <set name="reuseDelay" val="10000"/>
         <set name="hitTime" val="2000"/>
-		<!-- Сила с потолка -->
         <set name="power" val="22465"/>
         <set name="magicType" val="MAGIC"/>
 		<set name="target" val="TARGET_ONE" />

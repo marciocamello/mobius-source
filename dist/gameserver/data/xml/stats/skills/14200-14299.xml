@@ -1,145 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="14200" levels="1" name="Благословение Сада">
-		<!--
-			Уровень: 1; Описание: Увеличена Мощность крит. Удара на 4%.
-		-->
+	<skill id="14200" levels="1" name="Blessing of Garden">
+    <!-- Critical P. Atk. is increased by 40%. -->
 		<set name="icon" val="icon.skill1253" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14201" levels="1" name="Неуязвимость Афроса">
-		<!--
-			Уровень: 1; Описание: Неуязвимы.
-		-->
+	<skill id="14201" levels="1" name="Apherus Invincibility">
+    <!-- Invincible status. -->
 		<set name="icon" val="icon.skill0442" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14202" levels="1" name="Яд Сада">
-		<!--
-			Уровень: 1; Описание: Отравлены.
-		-->
+	<skill id="14202" levels="1" name="Garden Malice">
+    <!-- Poison status. -->
 		<set name="icon" val="icon.skill1168" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14203" levels="1" name="Удержание">
-		<!--
-			Уровень: 1; Описание: Обездвижены.
-		-->
+	<skill id="14203" levels="1" name="Hold">
+    <!-- Hold status. -->
 		<set name="icon" val="icon.skill4047" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14204" levels="1" name="Удержание">
-		<!--
-			Уровень: 1; Описание: Обездвижены.
-		-->
+	<skill id="14204" levels="1" name="Hold">
+    <!-- Hold status. -->
 		<set name="icon" val="icon.skill4047" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14205" levels="1" name="Клятва Преданности">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14205" levels="1" name="Oath of Loyalty">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14206" levels="2" name="Эволюция Рачиха">
-		<!--
-			Уровень: 1; Описание: Увеличивает Физ. Атк. Эволюции Рачиха на 1%
-			Уровень: 2; Описание: Увеличивает Физ. Атк. Эволюции Рачиха на 3%
-		-->
+	<skill id="14206" levels="2" name="Rachiq Evolution">
+    <!-- Rachiq Evaluation P. Atk. 100% increased. -->
 		<set name="icon" val="icon.skill1068" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14207" levels="1" name="Притягивание">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14207" levels="1" name="Pull Up">
+    <!-- none -->
 		<set name="icon" val="icon.skill0003" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14208" levels="1" name="Кольцо Звука">
-		<!--
-			Уровень: 1; Описание: Отталкивание.
-		-->
+	<skill id="14208" levels="1" name="Reverberation of Shock">
+    <!-- Knock back. -->
 		<set name="icon" val="icon.skill0003" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14209" levels="1" name="Паралич Подземного Жука">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14209" levels="1" name="Millipede Paralysis">
+    <!-- none -->
 		<set name="icon" val="icon.skill0279" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14210" levels="1" name="Демонстрация Исчезновения Траджана">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14210" levels="1" name="Teredor Hiding Presentation">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14211" levels="1" name="Демонстрация Появления Траджана">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14211" levels="1" name="Teredor Appearance Presentation">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14212" levels="1" name="Проявление Силы">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14212" levels="1" name="Manifestation of Authority">
+    <!-- none -->
 		<set name="icon" val="icon.skill14289" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14213" levels="1" name="Проявление Силы">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14213" levels="1" name="Manifestation of Authority">
+    <!-- none -->
 		<set name="icon" val="icon.skill14289" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14214" levels="1" name="Проявление Силы">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14214" levels="1" name="Manifestation of Authority">
+    <!-- none -->
 		<set name="icon" val="icon.skill14289" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14215" levels="1" name="Щит Отражения">
-		<!--
-			Уровень: 1; Описание: Возвращается 6% урона.
-		-->
+	<skill id="14215" levels="1" name="Barrier of Reflection">
+    <!-- Reflects 600% of damage. -->
 		<set name="icon" val="icon.skill0086" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
@@ -154,26 +121,22 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14216" levels="1" name="Печать Энергии">
-		<!--
-			Уровень: 1; Описание: Скованы.
-		-->
+	<skill id="14216" levels="1" name="Energy Seal">
+    <!-- Yoke status. -->
 		<set name="icon" val="icon.skill14216" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14217" levels="1" name="Состояние Удержания">
-		<!--
-			Уровень: 1; Описание: Обездвижены.
-		-->
+	<skill id="14217" levels="1" name="Yoke Status">
+    <!-- Instantly immobilized. -->
 		<set name="icon" val="icon.skill1042" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14218" levels="1" name="Знак Истины">
-		<!-- 14218	1	Знак Истины	Вы получили Знак Истины. Будет трудно управлять Истиной дальше. -->
+	<skill id="14218" levels="1" name="Istina's Mark">
+    <!-- Istina's Mark is received. Handling Istina any further will be difficult. -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2000" />
 		<set name="castRange" val="200" />
@@ -186,8 +149,8 @@
 			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="istina_mark" />
 		</for>
 	</skill>
-	<skill id="14219" levels="1" name="Удар Смерти">
-		<!-- 14219	1	Удар Смерти	none -->
+	<skill id="14219" levels="1" name="Death Blow">
+    <!-- none -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2000" />
 		<set name="castRange" val="500" />
@@ -200,8 +163,8 @@
 			<effect name="Debuff" val="0" abnormalTime="1" abnormalLvl="1" abnormalType="istina_death_blow" />
 		</for>
 	</skill>
-	<skill id="14220" levels="1" name="Неистовство">
-		<!-- 14220	1	Неистовство	Неистовство -->
+	<skill id="14220" levels="1" name="Flood">
+    <!-- Flood -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="2000" />
@@ -218,8 +181,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14221" levels="1" name="Выброс Кислоты">
-		<!-- 14221	1	Выброс Кислоты	none -->
+	<skill id="14221" levels="1" name="Acid Eruption">
+    <!-- none -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="target" val="TARGET_AURA" />
@@ -227,8 +190,8 @@
 		<set name="power" val="13000" />
 		<set name="coolTime" val="200"/>
 	</skill>
-	<skill id="14222" levels="1" name="Выброс Кислоты">
-		<!-- 14222	1	Выброс Кислоты	none -->
+	<skill id="14222" levels="1" name="Acid Eruption">
+    <!-- none -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="target" val="TARGET_AURA" />
@@ -237,8 +200,8 @@
 		<set name="power" val="15000" />
 		<set name="coolTime" val="200"/>
 	</skill>
-	<skill id="14223" levels="1" name="Выброс Кислоты">
-		<!-- 14223	1	Выброс Кислоты	none -->
+	<skill id="14223" levels="1" name="Acid Eruption">
+    <!-- none -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
 		<set name="target" val="TARGET_AURA" />
@@ -247,409 +210,309 @@
 		<set name="power" val="20000" />
 		<set name="coolTime" val="200"/>
 	</skill>
-	<skill id="14224" levels="1" name="Устройство Управления Энергией">
-		<!--
-			Уровень: 1; Описание: Управление Энергией
-		-->
+	<skill id="14224" levels="1" name="Energy Control Device">
+    <!-- Energy Control -->
 		<set name="icon" val="icon.skill14216" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14225" levels="8" name="1-й уровень управления">
-		<!--
-			Уровень: 1; Описание: 1-й уровень управления
-			Уровень: 2; Описание: 2-й уровень управления
-			Уровень: 3; Описание: 3-й уровень управления
-			Уровень: 4; Описание: 4-й уровень управления
-			Уровень: 5; Описание: 5-й уровень управления
-			Уровень: 6; Описание: 6-й уровень управления
-			Уровень: 7; Описание: 7-й уровень управления
-			Уровень: 8; Описание: 8-й уровень управления
-		-->
+	<skill id="14225" levels="8" name="Control Stage 1">
+    <!-- Control Stage 1 -->
 		<set name="icon" val="icon.skill14225_1" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14226" levels="1" name="Отмена Неистовства">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14226" levels="1" name="Flood Cancel">
+    <!-- none -->
 		<set name="icon" val="icon.skill14226" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14227" levels="1" name="Предельное Восстановление">
-		<!--
-			Уровень: 1; Описание: HP Истхины быстро восстанавливается.
-		-->
+	<skill id="14227" levels="1" name="Regeneration of Limit">
+    <!-- Istina's life force is quickly regenerated. -->
 		<set name="icon" val="icon.skill1229" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14228" levels="1" name="Энергия Восстановления. Уровень 1">
-		<!--
-			Уровень: 1; Описание: Энергия Восстановления
-		-->
+	<skill id="14228" levels="1" name="Energy Regeneration Stage 1">
+    <!-- Energy Regeneration -->
 		<set name="icon" val="icon.skill1229" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14229" levels="1" name="Энергия Восстановления. Уровень 2">
-		<!--
-			Уровень: 1; Описание: Энергия Восстановления
-		-->
+	<skill id="14229" levels="1" name="Energy Regeneration Stage 2">
+    <!-- Energy Regeneration -->
 		<set name="icon" val="icon.skill1229" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14230" levels="1" name="Энергия Восстановления. Уровень 3">
-		<!--
-			Уровень: 1; Описание: Энергия Восстановления
-		-->
+	<skill id="14230" levels="1" name="Energy Regeneration Stage 3">
+    <!-- Energy Regeneration -->
 		<set name="icon" val="icon.skill1229" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14231" levels="1" name="Бешенство Создания">
-		<!--
-			Уровень: 1; Описание: Оглушены.
-		-->
+	<skill id="14231" levels="1" name="Creation's Rage">
+    <!-- Stun status. -->
 		<set name="icon" val="icon.skill0048" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14232" levels="1" name="Оковы Шипов">
-		<!--
-			Уровень: 1; Описание: Скорость уменьшена на 5%.
-		-->
+	<skill id="14232" levels="1" name="Yoke of Thorns">
+    <!-- Speed is decreased by 50%. -->
 		<set name="icon" val="icon.skill0127" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14233" levels="1" name="Взрывная Волна">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14233" levels="1" name="Shock Wave">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14234" levels="1" name="Заражение Разума">
-		<!--
-			Уровень: 1; Описание: Макс. HP/MP уменьшены на 5%.
-		-->
+	<skill id="14234" levels="1" name="Mind Contamination">
+    <!-- Max HP and Max MP are decreased by 50%. -->
 		<set name="icon" val="icon.skill1045" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14235" levels="1" name="Кража Магвена">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14235" levels="1" name="Maguen Steal">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14236" levels="1" name="Абсолютное Принуждение">
-		<!--
-			Уровень: 1; Описание: Состояние вынужденного наблюдения за Такраканом.
-		-->
+	<skill id="14236" levels="1" name="Ultimate Forcefulness">
+    <!-- Looking at Taklacan with forcefulness. -->
 		<set name="icon" val="icon.skill0018" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14237" levels="1" name="Колебание Земли">
-		<!--
-			Уровень: 1; Описание: HP непрерывно уменьшаются из-за вибрации, проникнувшей внутрь тела.
-		-->
+	<skill id="14237" levels="1" name="Earth Vibration">
+    <!-- Vibration spreads through the body to decrease HP continuously. -->
 		<set name="icon" val="icon.skill0096" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14238" levels="1" name="Звуковой Меч">
-		<!--
-			Уровень: 1; Описание: Блокированы Физ .и Маг. умения.
-		-->
+	<skill id="14238" levels="1" name="Sound Blade">
+    <!-- Physical and magic skills are blocked. -->
 		<set name="icon" val="icon.skill1336" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14239" levels="1" name="Звуковая Тюрьма">
-		<!--
-			Уровень: 1; Описание: Обездвижены.
-		-->
+	<skill id="14239" levels="1" name="Sound Prison">
+    <!-- Hold status. -->
 		<set name="icon" val="icon.skill4047" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14240" levels="1" name="Выделение Яда">
-		<!--
-			Уровень: 1; Описание: Отравлены.
-		-->
+	<skill id="14240" levels="1" name="Poison Eruption">
+    <!-- Poison status. -->
 		<set name="icon" val="icon.skill4035" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14241" levels="1" name="Ядовитый Туман">
-		<!--
-			Уровень: 1; Описание: Отравлены.
-		-->
+	<skill id="14241" levels="1" name="Poison Fog">
+    <!-- Poison status. -->
 		<set name="icon" val="icon.skill4035" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14242" levels="1" name="Всеобъемлющее Проклятие">
-		<!--
-			Уровень: 1; Описание: Растлевающая Тьма снижает HP.
-		-->
+	<skill id="14242" levels="1" name="Wide Area Curse">
+    <!-- HP is decreased by the decaying darkness. -->
 		<set name="icon" val="icon.skill1107" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14243" levels="1" name="Власть Героя">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14243" levels="1" name="Octavis's Influence">
+    <!-- none -->
 		<set name="icon" val="icon.skill0024" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14244" levels="1" name="Передача Статуса">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14244" levels="1" name="Region Status Metastasis">
+    <!-- none -->
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14245" levels="1" name="Сгнившая Сеть">
-		<!--
-			Уровень: 1; Описание: Оглушены.
-		-->
+	<skill id="14245" levels="1" name="Rotten Net">
+    <!-- Shock status. -->
 		<set name="icon" val="icon.skill14245" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14246" levels="1" name="Разрушение Земли">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14246" levels="1" name="Earth Demolition">
+    <!-- none -->
 		<set name="icon" val="icon.skill0096" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14247" levels="1" name="Черный Вихрь">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14247" levels="1" name="Black Vortex">
+    <!-- none -->
 		<set name="icon" val="icon.skill0054" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14248" levels="1" name="Энергичная Атака">
-		<!--
-			Уровень: 1; Описание: Оглушены.
-		-->
+	<skill id="14248" levels="1" name="Leap Attack">
+    <!-- Shock status. -->
 		<set name="icon" val="icon.skill0793" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14249" levels="1" name="Вой Восстановления">
-		<!--
-			Уровень: 1; Описание: Неистовство
-		-->
+	<skill id="14249" levels="1" name="Recovery Howl">
+    <!-- Flood -->
 		<set name="icon" val="icon.skill0918" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14250" levels="1" name="Прикосновение Смерти">
-		<!--
-			Уровень: 1; Описание: Оглушены.
-		-->
+	<skill id="14250" levels="1" name="Touch of Death">
+    <!-- Shock status. -->
 		<set name="icon" val="icon.skill0260" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14251" levels="1" name="Искажение Смерти">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14251" levels="1" name="Death Rap">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14252" levels="1" name="Руки Ада">
-		<!--
-			Уровень: 1; Описание: Вас затягивает.
-		-->
+	<skill id="14252" levels="1" name="Hands of Hell">
+    <!-- Pulled away. -->
 		<set name="icon" val="icon.skill0003" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14253" levels="1" name="Хватка Ада">
-		<!--
-			Уровень: 1; Описание: Отравлены.
-		-->
+	<skill id="14253" levels="1" name="Drag to Hell">
+    <!-- Poison status. -->
 		<set name="icon" val="icon.skill1168" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14254" levels="1" name="Вспышка Света">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14254" levels="1" name="Flash">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14255" levels="1" name="Огромная Вспышка Света">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14255" levels="1" name="Large Flash">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14256" levels="2" name="Сильный Порез">
-		<!--
-			Уровень: 1; Описание: a,none
-			Уровень: 2; Описание: a,none
-		-->
+	<skill id="14256" levels="2" name="Powerful Cutting">
+    <!-- none -->
 		<set name="icon" val="icon.skill0003" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14257" levels="2" name="Круговой Порез">
-		<!--
-			Уровень: 1; Описание: a,none
-			Уровень: 2; Описание: a,none
-		-->
+	<skill id="14257" levels="2" name="Nearby Cutting">
+    <!-- none -->
 		<set name="icon" val="icon.skill0003" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14258" levels="2" name="Обезглавливание">
-		<!--
-			Уровень: 1; Описание: a,none
-			Уровень: 2; Описание: a,none
-		-->
+	<skill id="14258" levels="2" name="Scalp">
+    <!-- none -->
 		<set name="icon" val="icon.skill0003" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14259" levels="2" name="Двойной Порез">
-		<!--
-			Уровень: 1; Описание: a,none
-			Уровень: 2; Описание: a,none
-		-->
+	<skill id="14259" levels="2" name="Double Cutting">
+    <!-- none -->
 		<set name="icon" val="icon.skill0003" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14260" levels="2" name="Поглощение Жизни">
-		<!--
-			Уровень: 1; Описание: a,none
-			Уровень: 2; Описание: a,none
-		-->
+	<skill id="14260" levels="2" name="Life Force Absorb">
+    <!-- none -->
 		<set name="icon" val="icon.skill1147" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14261" levels="2" name="Сгусток Крови">
-		<!--
-			Уровень: 1; Описание: a,none
-			Уровень: 2; Описание: a,none
-		-->
+	<skill id="14261" levels="2" name="Coagulated Blood">
+    <!-- none -->
 		<set name="icon" val="icon.skill1275" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14262" levels="2" name="Огненное Копье">
-		<!--
-			Уровень: 1; Описание: a,none
-			Уровень: 2; Описание: a,none
-		-->
+	<skill id="14262" levels="2" name="Flame Hurl">
+    <!-- none -->
 		<set name="icon" val="icon.skill1230" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14263" levels="2" name="Электрическая Атака">
-		<!--
-			Уровень: 1; Описание: a,none
-			Уровень: 2; Описание: Оглушены.
-		-->
+	<skill id="14263" levels="2" name="Electric Attack">
+    <!-- none -->
 		<set name="icon" val="icon.skill1275" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14264" levels="1" name="Ядовитое Облако">
-		<!--
-			Уровень: 1; Описание: Отравлены.
-		-->
+	<skill id="14264" levels="1" name="Poison Cloud">
+    <!-- Poison status. -->
 		<set name="icon" val="icon.skill1167" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14265" levels="1" name="Воскрешение">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14265" levels="1" name="Resurrection">
+    <!-- none -->
 		<set name="icon" val="icon.skill1016" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14266" levels="1" name="Сковывание">
-		<!--
-			Уровень: 1; Описание: Обездвижены.
-		-->
+	<skill id="14266" levels="1" name="Yoke">
+    <!-- Hold status. -->
 		<set name="icon" val="icon.skill1201" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14267" levels="2" name="Прокалывание">
+	<skill id="14267" levels="2" name="Hole Punch">
+    <!-- none -->
         <set name="castRange" val="30"/>
         <set name="power" val="65447"/>
         <set name="coolTime" val="200"/>
@@ -664,188 +527,148 @@
         <set name="skillType" val="PDAM"/>
         <set name="target" val="TARGET_ONE"/>
     </skill>
-	<skill id="14268" levels="1" name="Страх и Хаос">
-		<!--
-			Уровень: 1; Описание: В состоянии страха.
-		-->
+	<skill id="14268" levels="1" name="Shock and Terror">
+    <!-- Fear status. -->
 		<set name="icon" val="icon.skill1092" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14269" levels="1" name="Удар по Ноге">
-		<!--
-			Уровень: 1; Описание: Обездвижены.
-		-->
+	<skill id="14269" levels="1" name="Foot Strike">
+    <!-- Hold status. -->
 		<set name="icon" val="icon.skill1201" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14270" levels="1" name="Ужасный Вертящийся Нож">
-		<!--
-			Уровень: 1; Описание: В состоянии страха.
-		-->
+	<skill id="14270" levels="1" name="Spinning Blade of Fear">
+    <!-- Fear status. -->
 		<set name="icon" val="icon.skill1092" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14271" levels="1" name="Вертящийся Нож">
-		<!--
-			Уровень: 1; Описание: Обездвижены.
-		-->
+	<skill id="14271" levels="1" name="Spinning Blade">
+    <!-- Hold status. -->
 		<set name="icon" val="icon.skill1201" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14272" levels="1" name="Мощный Удар">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14272" levels="1" name="Powerful Blow">
+    <!-- none -->
 		<set name="icon" val="icon.skill0003" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14273" levels="1" name="Беспорядочный Натиск">
-		<!--
-			Уровень: 1; Описание: Вас оттолкнули.
-		-->
+	<skill id="14273" levels="1" name="Indiscriminate Rush">
+    <!-- Knock back. -->
 		<set name="icon" val="icon.skill0494" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14274" levels="1" name="Механический Выстрел">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14274" levels="1" name="Mechanic Shot">
+    <!-- none -->
 		<set name="icon" val="icon.skill1275" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14275" levels="1" name="Размах">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14275" levels="1" name="Swing">
+    <!-- none -->
 		<set name="icon" val="icon.skill0245" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14276" levels="1" name="Ремонт Атома">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14276" levels="1" name="Particle Repair">
+    <!-- none -->
 		<set name="icon" val="icon.skill0045" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14277" levels="1" name="Появление Орбиса">
-		<!--
-			Уровень: 1; Описание: Растлевающая Тьма
-		-->
+	<skill id="14277" levels="1" name="Orbis Spawn">
+    <!-- Decaying darkness. -->
 		<set name="icon" val="icon.skill11273" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14278" levels="1" name="Исчезновение Орбиса">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14278" levels="1" name="Orbis De-spawn">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14279" levels="1" name="Октавис: Власть">
-		<!--
-			Уровень: 1; Описание: Октавис: Власть
-		-->
+	<skill id="14279" levels="1" name="Octavis's Influence">
+    <!-- Octavis's influence. -->
 		<set name="icon" val="icon.skill14279" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14280" levels="1" name="Октавис: Власть">
-		<!--
-			Уровень: 1; Описание: Октавис: Власть
-		-->
+	<skill id="14280" levels="1" name="Octavis's Influence">
+    <!-- Octavis's influence. -->
 		<set name="icon" val="icon.skill14279" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14281" levels="1" name="Октавис: Власть">
-		<!--
-			Уровень: 1; Описание: Октавис: Власть
-		-->
+	<skill id="14281" levels="1" name="Octavis's Influence">
+    <!-- Octavis's influence. -->
 		<set name="icon" val="icon.skill14279" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14282" levels="1" name="Октавис: Подчинение">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14282" levels="1" name="Octavis's Obedience">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14283" levels="1" name="Подключение Голема">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14283" levels="1" name="Golem Connection">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14284" levels="1" name="Отключение Голема">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14284" levels="1" name="Golem Connection Break">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14285" levels="1" name="Октавис: Дождь Стрел">
-		<!--
-			Уровень: 1; Описание: Дождь стрел Октависа. Бросает копье на землю, нанося мощный урон.
-		-->
+	<skill id="14285" levels="1" name="Octavis's Arrow Shaft">
+    <!-- Octavis's arrow shaft. Throw a spear on the floor to inflict powerful attack damage. -->
 		<set name="icon" val="icon.skill0507" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14286" levels="1" name="Телепорт">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14286" levels="1" name="Teleport">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14287" levels="1" name="Усиление">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="14287" levels="1" name="Enhance">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14288" levels="1" name="Демонстрация Агатиона – Магмельд">
-		<!-- 14288	1	Демонстрация Агатиона – Магмельд	Можно увидеть ласку призванной элементали. -->
+	<skill id="14288" levels="1" name="Agathion Cute Trick - Magmeld">
+    <!-- You can see the summoned spirit's cute tricks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="magicLevel" val="85" />
@@ -859,9 +682,8 @@
 			<player agathion="16080"/>
 		</cond>
 	</skill>
-	<skill id="14289" levels="2" name="Проявление Силы">
-		<!-- 14289	1	Проявление Силы	Уменьшает Скорость Атк./Скорость/Скорость магии/макс. HP/макс. Mp. А также забирает HP каждую секунду. -->
-		<!-- 14289	2	Проявление Силы	Уменьшает Скорость Атк./Скорость/Скорость магии/макс. HP/макс. Mp. А также забирает HP каждую секунду. -->
+	<skill id="14289" levels="2" name="Manifestation of Authority">
+    <!-- Atk Spd, Speed, Casting Spd, Max HP, Max MP decreased; HP consumed every second. -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="7000" />
 		<set name="magicType" val="MAGIC"/>
@@ -880,55 +702,29 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14291" levels="1" name="Самозащита">
-		<!--
-			Уровень: 1; Описание: Вас нельзя выбрать целью.
-		-->
+	<skill id="14291" levels="1" name="Self Defense">
+    <!-- Cannot be targeted. -->
 		<set name="icon" val="icon.skill0445" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14292" levels="7" name="Удар">
-		<!--
-			Уровень: 1; Описание: a,none
-			Уровень: 2; Описание: a,none
-			Уровень: 3; Описание: a,none
-			Уровень: 4; Описание: a,none
-			Уровень: 5; Описание: a,none
-			Уровень: 6; Описание: a,none
-			Уровень: 7; Описание: a,none
-		-->
+	<skill id="14292" levels="7" name="Strike">
+    <!-- none -->
 		<set name="icon" val="icon.skill0003" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14293" levels="7" name="Массовый Удар">
-		<!--
-			Уровень: 1; Описание: a,none
-			Уровень: 2; Описание: a,none
-			Уровень: 3; Описание: a,none
-			Уровень: 4; Описание: a,none
-			Уровень: 5; Описание: a,none
-			Уровень: 6; Описание: a,none
-			Уровень: 7; Описание: a,none
-		-->
+	<skill id="14293" levels="7" name="Range Strike">
+    <!-- none -->
 		<set name="icon" val="icon.skill0036" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14294" levels="7" name="Оглушающий Удар">
-		<!--
-			Уровень: 1; Описание: Оглушенное состояние.
-			Уровень: 2; Описание: Оглушенное состояние.
-			Уровень: 3; Описание: Оглушенное состояние.
-			Уровень: 4; Описание: Оглушенное состояние.
-			Уровень: 5; Описание: Оглушенное состояние.
-			Уровень: 6; Описание: Оглушенное состояние.
-			Уровень: 7; Описание: Оглушенное состояние.
-		-->
+	<skill id="14294" levels="7" name="Shock Strike">
+    <!-- Shock status. -->
         <table name="#mpConsume">186 186 197 212 232 244 255</table>
         <table name="#magicLevel">85</table>
         <table name="#reuseDelay">120000</table>
@@ -946,65 +742,32 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="effectRange" val="400"/>
         <for>
-            <effect name="Stun" abnormalTime="4" val="0" effectPower="135" effectType="STUN" abnormalLvl="1"
-                    abnormalType="stun"/>
+            <effect name="Stun" abnormalTime="4" val="0" effectPower="135" effectType="STUN" abnormalLvl="1" abnormalType="stun"/>
         </for>
     </skill>
-	<skill id="14295" levels="7" name="Массовый Оглушающий удар">
-		<!--
-			Уровень: 1; Описание: Оглушенное состояние.
-			Уровень: 2; Описание: Оглушенное состояние.
-			Уровень: 3; Описание: Оглушенное состояние.
-			Уровень: 4; Описание: Оглушенное состояние.
-			Уровень: 5; Описание: Оглушенное состояние.
-			Уровень: 6; Описание: Оглушенное состояние.
-			Уровень: 7; Описание: Оглушенное состояние.
-		-->
+	<skill id="14295" levels="7" name="Range Shock Strike">
+    <!-- Shock status. -->
 		<set name="icon" val="icon.skill0048" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14296" levels="7" name="Стрельба">
-		<!--
-			Уровень: 1; Описание: a,none
-			Уровень: 2; Описание: a,none
-			Уровень: 3; Описание: a,none
-			Уровень: 4; Описание: a,none
-			Уровень: 5; Описание: a,none
-			Уровень: 6; Описание: a,none
-			Уровень: 7; Описание: a,none
-		-->
+	<skill id="14296" levels="7" name="Shoot">
+    <!-- none -->
 		<set name="icon" val="icon.skill0056" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14297" levels="7" name="Оглушающая Стрельба">
-		<!--
-			Уровень: 1; Описание: Оглушенное состояние.
-			Уровень: 2; Описание: Оглушенное состояние.
-			Уровень: 3; Описание: Оглушенное состояние.
-			Уровень: 4; Описание: Оглушенное состояние.
-			Уровень: 5; Описание: Оглушенное состояние.
-			Уровень: 6; Описание: Оглушенное состояние.
-			Уровень: 7; Описание: Оглушенное состояние.
-		-->
+	<skill id="14297" levels="7" name="Shock Shot">
+    <!-- Shock status. -->
 		<set name="icon" val="icon.skill0101" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="14298" levels="6" name="Заколоть">
-		<!--
-			Уровень: 1; Описание: Кровотечение. Снижена Скорость.
-			Уровень: 2; Описание: Кровотечение. Снижена Скорость.
-			Уровень: 3; Описание: Кровотечение. Снижена Скорость.
-			Уровень: 4; Описание: Кровотечение. Снижена Скорость.
-			Уровень: 5; Описание: Кровотечение. Снижена Скорость.
-			Уровень: 6; Описание: Кровотечение. Снижена Скорость.
-			Уровень: 7; Описание: Кровотечение. Снижена Скорость.
-		-->
+	<skill id="14298" levels="6" name="Stab">
+    <!-- Bleed. Speed is decreased. -->
         <table name="#effectPoint">119 154 237 279 311 323 333</table>
         <table name="#abnormal_lv">3 4 5 6 7 8</table>
         <table name="#power">25 34 44 54 62 67</table>
@@ -1028,8 +791,7 @@
         <set name="trait" val="BLEED"/>
         <set name="saveVs" val="CON"/>
         <for>
-            <effect abnormal="bleeding" count="20" name="Bleed" stackType="Bleed" stackOrder="#abnormal_lv" time="1"
-                    val="#power">
+            <effect abnormal="bleeding" count="20" name="Bleed" stackType="Bleed" stackOrder="#abnormal_lv" time="1" val="#power">
                 <mul order="0x30" stat="runSpd" val="0.8"/>
             </effect>
             <effect count="1" name="Heal" time="0" val="#hpsap" applyOnCaster="true">
@@ -1037,12 +799,8 @@
             </effect>
         </for>
     </skill>
-	<skill id="14299" levels="3" name="Сжигание Святой Магией">
-		<!--
-			Уровень: 1; Описание: a,none
-			Уровень: 2; Описание: a,none
-			Уровень: 3; Описание: a,none
-		-->
+	<skill id="14299" levels="3" name="Divinity Burn">
+    <!-- none -->
 		<set name="icon" val="icon.skill1265" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="11241" levels="1" name="Черная Дыра">
+	<skill id="11241" levels="1" name="Shadow Snare">
+    <!-- Drags enemies around a target toward it. -->
 		<table name="#activateRate">100</table>
 		<set name="coolTime" val="733" />
 		<set name="reuseDelay" val="17000" />
@@ -16,7 +17,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="nextAction" val="attack" />
 	</skill>
-    <skill id="11242" levels="1" name="Прореха в Пространстве">
+    <skill id="11242" levels="1" name="Shadow Snare Zone">
+    <!-- Drags enemies around a target toward it. -->
        <table name="#power">126 130 140 146</table>
 		<table name="#magicLevel">85 86 87 88</table>
 		<table name="#mpConsume2">61 63 65</table>
@@ -38,7 +40,8 @@
 		<set name="target" val="TARGET_AURA"/>
 		<for />
    </skill>
-    <skill id="11245" levels="1" name="Образец ">
+    <skill id="11245" levels="1" name="Sampling">
+    <!-- Momentarily incurs damage. All speeds are decreased. -->
 		<table name="#power">126</table>
 		<table name="#magicLevel">85</table>
 		<table name="#mpConsume2">52</table>
@@ -60,7 +63,8 @@
 		<set name="target" val="TARGET_AURA"/>
 		<for />
 	</skill>
-    <skill id="11247" levels="1" name="Волшебник - Сковывающая Атака">
+    <skill id="11247" levels="1" name="">
+    <!-- Inflicts a powerful blow on the target. -->
         <table name="#effectPoint">655</table>
         <table name="#magicLevel">85</table>
         <table name="#time">9</table>
@@ -83,7 +87,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11248" levels="1" name="Волшебник - Опрокидывающая Атака">
+    <skill id="11248" levels="1" name="">
+    <!-- Inflicts a powerful blow on the target. -->
         <table name="#effectPoint">655</table>
         <table name="#magicLevel">85</table>
         <table name="#time">9</table>
@@ -106,7 +111,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11249" levels="1" name="Волшебник - Сковывающая Атака">
+    <skill id="11249" levels="1" name="">
+    <!-- Inflicts a powerful blow on the target. -->
         <table name="#effectPoint">655</table>
         <table name="#magicLevel">85</table>
         <table name="#time">9</table>
@@ -129,7 +135,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11250" levels="1" name="Волшебник - Опрокидывающая Атака">
+    <skill id="11250" levels="1" name="">
+    <!-- Inflicts a powerful blow on the target. -->
         <table name="#effectPoint">655</table>
         <table name="#magicLevel">85</table>
         <table name="#time">9</table>
@@ -152,7 +159,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11251" levels="1" name="Великое Владение Оружием">
+    <skill id="11251" levels="1" name="Superior Weapon Mastery">
+    <!-- Increases INT by 2, P. Atk. by 82.9, M. Atk. by 103.7, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your INT. -->
 		<table name="#pAtk">82</table>
 		<table name="#mAtk">103</table>
 		<set name="magicLevel" val="85" />
@@ -177,7 +185,8 @@
 			<mul order="0x30" stat="regMp" val="1.2"/>				
 		</for>
    </skill>
-    <skill id="11252" levels="1" name="Великое Владение Магической Броней">
+    <skill id="11252" levels="1" name="Superior Robe Mastery">
+    <!-- INT + 2.  Max HP + 4151, P. Def. + 135 and Casting Spd. + 5% when equipped with a Robe. -->
 		<table name="#pDef">135</table>
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -198,7 +207,8 @@
 			</add>
 		</for>
    </skill>
-    <skill id="11253" levels="1" name="Великое Владение Магией">
+    <skill id="11253" levels="1" name="Superior Magic Mastery">
+    <!-- Increases INT by 2, M. Def. by 139, and resistance to magic attacks by 35%. Increases Max MP by 313 and HP/MP recovery bonus. Decreases magic skill cooldown by 25%. -->
 		<table name="#mDef">139</table>
 		<table name="#maxMp">313</table>
 		<set name="magicLevel" val="85" />
@@ -221,7 +231,8 @@
 			<mul order="0x30" stat="regMp" val="1.2"/>
 		</for>
    </skill>
-	<skill id="11254" levels="4" name="Великое Владение Призывом">
+	<skill id="11254" levels="4" name="Superior Summon Mastery">
+    <!-- INT + 2. You can use up to 6 summon points, and when you receive damage your servitor's battle skills are increased. -->
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#summonPointCount">6 7 8 9</table>
         <set name="magicLevel" val="#magicLevel"/>
@@ -234,7 +245,8 @@
             <add order="0x40" stat="INT" val="2"/>
         </for>
     </skill>
-	<skill id="11255" levels="1" name="Великое Владение Духом">
+	<skill id="11255" levels="1" name="Superior Spirit Mastery">
+    <!-- INT + 2 and resistance to Hold/Sleep/Bleed/Mental attacks/Poison + 30. -->
 		<table name="#vuln">30</table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -250,6 +262,7 @@
 			</for>
    </skill>
     <skill id="11256" levels="8" name="Summon Armored Bear">
+    <!-- Summons a fearless Armored Bear from the fairy dimension. Consumes 3 summon points. -->
         <table name="#lifeTime">3600 3600 3600 3600 3600 3600 3600 3600</table>
         <table name="#magicLevel">85 86 87 88 89 90 91 92</table>
         <table name="#mpConsume2">351 361 376 391 406 421 436 456</table>
@@ -263,7 +276,6 @@
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="SUMMON"/>
         <set name="operateType" val="OP_ACTIVE"/>
-        <!-- Summon-specific -->
         <table name="#npcIds">14947 14948 14949 14950 14951 14952 14953 14971</table>
         <set name="npcId" val="#npcIds"/>
         <enchant1 levels="10" name="Power">
@@ -271,7 +283,8 @@
         </enchant1>
         <for/>
     </skill>
-    <skill id="11257" levels="8" name="Призыв Саблезубого Кугуара">
+    <skill id="11257" levels="8" name="Summon Saber Tooth Cougar">
+    <!-- Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. -->
         <table name="#lifeTime">3600 3600 3600 3600 3600 3600 3600 3600</table>
         <table name="#magicLevel">85 86 87 88 89 90 91 92</table>
         <table name="#mpConsume2">351 361 376 391 406 421 436 456</table>
@@ -285,7 +298,6 @@
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="SUMMON"/>
         <set name="operateType" val="OP_ACTIVE"/>
-        <!-- Summon-specific -->
         <table name="#npcIds">14954 14955 14956 14957 14958 14959 14960 14972</table>
         <set name="npcId" val="#npcIds"/>
         <enchant1 levels="10" name="Power">
@@ -293,7 +305,8 @@
         </enchant1>
         <for/>
     </skill>
-    <skill id="11258" levels="8" name="Призыв Жнеца Смерти">
+    <skill id="11258" levels="8" name="Summon Soul Reaper">
+    <!-- Summons a nefarious Soul Reaper from the demonic dimension. Consumes 2 summon points. -->
         <table name="#lifeTime">3600 3600 3600 3600 3600 3600 3600 3600</table>
         <table name="#magicLevel">85 86 87 88 89 90 91 92</table>
         <table name="#mpConsume2">351 361 376 391 406 421 436 456</table>
@@ -309,9 +322,7 @@
         <set name="hitTime" val="4000"/>
         <set name="skillType" val="SUMMON"/>
         <set name="isMagic" val="true"/>
-
         <set name="operateType" val="OP_ACTIVE"/>
-        <!-- Summon-specific -->
         <table name="#npcIds">14961 14962 14963 14964 14965 14966 14967 14973</table>
         <set name="npcId" val="#npcIds"/>
         <enchant1 levels="10" name="Power">
@@ -319,7 +330,8 @@
         </enchant1>
         <for/>
     </skill>
-    <skill id="11259" levels="8" name="Знак Слабости">
+    <skill id="11259" levels="8" name="Mark of Weakness">
+    <!-- Weakens the target for 10 seconds. Decreases 269 HP per second and decreases resistance to debuffs by 5%. -->
 		<table name="#DOT">269 272 276 280 283 287 290 294</table>
 		<table name="#magicLevel">85 86 87 88 89 90 91 92</table>
 		<table name="#mpConsume2">65</table>
@@ -359,7 +371,8 @@
 			<effect count="10" name="DamOverTime" time="1" val="#DOT" stackOrder="7" stackType="poison" abnormal="poison"/>
 		</for>
    </skill>
-    <skill id="11260" levels="5" name="Знак Пустоты">
+    <skill id="11260" levels="5" name="Mark of Void">
+    <!-- Carves a mark linked to the void dimension on the target. For 4 seconds, decreases HP by 336 every second and absorbs some of the damage inflicted as HP/MP for yourself and your servitor(s). -->
 		<table name="#DOT">335 343 350 356 363</table>
 		<table name="#magicLevel">85 86 87 88 89</table>
 		<table name="#mpConsume2">65</table>
@@ -400,7 +413,8 @@
 			<effect abnormal="bleeding" count="4" name="Bleed" stackType="Bleed" time="2" val="#DOT" />
 		</for>
    </skill>
-    <skill id="11261" levels="6" name="Знак Чумы">
+    <skill id="11261" levels="6" name="Mark of Plague">
+    <!-- Inflicts a plague from the cursed dimension on the target. For 15 seconds, decreases HP by 370 every second and decreases the power of incoming Heals. -->
        <table name="#DOT">370 375 382 389 397 404</table>
 		<table name="#magicLevel">85 86 87 88 89 90</table>
 		<table name="#mpConsume2">65</table>
@@ -428,7 +442,6 @@
         </enchant1>
         <enchant2 levels="10" name="Chance">
             <table name="#DOT">406 409 411 414 416 419 421 423 426 428</table>
-            <!-- <table name="#activateRate">53 56 59 62 65 68 71 74 77 80</table> --> <!-- TODO: Сделать activateRate в скилле-->
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant2>
         <enchant3 levels="10" name="Recycle">
@@ -440,7 +453,8 @@
 			<effect count="15" name="DamOverTime" time="1" val="#DOT" stackOrder="7" stackType="poison" abnormal="poison"/>
 		</for>
    </skill>
-    <skill id="11262" levels="6" name="Знак Хитрости">
+    <skill id="11262" levels="6" name="Mark of Trick">
+    <!-- Carves a mark linked to the dupery dimension on the target. For 5 seconds, decreases HP by 303 every second and causes the use of skills to fail. -->
        <table name="#DOT">303 305 311 317 322 328</table>
 		<table name="#magicLevel">85 86 87 88 89 90</table>
 		<table name="#mpConsume2">65</table>
@@ -478,7 +492,8 @@
 			<effect name="Mute" time="5" val="0" stackOrder="1" stackType="silence"/>
 		</for>
    </skill>
-    <skill id="11263" levels="7" name="Созвать">
+    <skill id="11263" levels="7" name="Invoke">
+    <!-- Calls forth the fist of a Giant from the outer world to inflict powerful damage on the target and nearby enemies with 147 power. -->
 		<table name="#power">308 332 357 382 407 432 457</table>
 		<table name="#magicLevel">85 86 87 88 89 90 91</table>
 		<table name="#mpConsume2">227 230 235 240 247 255 270</table>
@@ -558,7 +573,8 @@
         </enchant9>
 		<for />
 	</skill>
-    <skill id="11264" levels="4" name="Жажда">	
+    <skill id="11264" levels="4" name="Strong Will">	
+    <!-- Consumes HP to regenerate MP by 200. Also cancels all debuffs. -->
 		<table name="#hpConsume">209 280 318 366</table>		
 		<table name="#effectPoint">379 495 549 611</table>
 		<table name="#magicLevel">85 86 87 88</table>
@@ -578,7 +594,8 @@
 			<effect count="#count" name="CombatPointHealOverTime" time="0" val="#power2" />
 		</for>
 	</skill>
-    <skill id="11265" levels="1" name="Призыв Соратника">
+    <skill id="11265" levels="1" name="Summon Team Mate">
+    <!-- Summons the selected party member to your location. -->
 		<table name="#mpConsume2">70</table>
 		<set name="reuseDelay" val="60000" />
 		<set name="hitTime" val="1390" />
@@ -592,7 +609,8 @@
 		<set name="isReuseDelayPermanent" val="true" />
 		<for />
 	</skill>
-    <skill id="11266" levels="1" name="Призыв Врат Смерти">
+    <skill id="11266" levels="1" name="Summon Death Gate">
+    <!-- Summons a Death Gate. The summoned Death Gate continuously inflicts damage and Hold on nearby enemies. -->
        <table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#activateRate">80</table>
 		<set name="element" val="earth" />
@@ -617,7 +635,8 @@
 			<effect count="1" name="KnockDown" stackOrder="-1" stackType="KnockDown" time="3" val="0" chance="#activateRate" />	
 		</for>
    </skill>
-    <skill id="11267" levels="3" name="Дух Набиаропа">
+    <skill id="11267" levels="3" name="Spirit of Nabiarov">
+    <!-- Transform into Nabiarov and use his powerful skills for 5 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<table name="#magicLevel">85 86 87</table>
 		<table name="#npc">14926 14926 14926</table>
@@ -635,8 +654,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="11268" levels="8" name="Вызвать Карающий Куб">
-	<!-- Кубик -->
+    <skill id="11268" levels="8" name="Summon Avenging Cubic">
+    <!-- Summons an Avenging cubic. The summoned cubic cancels the summoner's debuffs. Additionally, it cancels the buffs of the summoner's target and inflicts Hold. -->
         <table name="#magicLevel">85 86 87 89 92 93 95 98</table>
         <set name="magicLevel" val="#magicLevel"/>
 		<set name="magicType" val="MAGIC" />
@@ -658,7 +677,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="11269" levels="3" name="Разделение Маны">
+    <skill id="11269" levels="3" name="Mana Sharing">
+    <!-- Consumes your MP to recover other party members' MP. -->
 	    <table name="#pwr">1510 1490 1460</table>
         <table name="#magicLevel">85 86 87</table>
 		<set name="reuseDelay" val="120000" />
@@ -671,7 +691,8 @@
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE"/>
    </skill>
-    <skill id="11270" levels="4" name="Избавление от Боли">
+    <skill id="11270" levels="4" name="Ultimate Transfer Pain">
+    <!-- Transfers 70% of the damage received to your first summoned servitor. MP is continuously consumed according to your level. -->
 		<table name="#magicLevel">85 86 87 88</table>
 		<table name="#Trans-per">70 72 74 75</table> 
 		<set name="magicLevel" val="#magicLevel"/>
@@ -685,7 +706,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="11271" levels="8" name="Снятие Знака">
+    <skill id="11271" levels="8" name="Mark Retriever">
+    <!-- Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from the target. Inflicts damage according to the number of retrieved marks. -->
 		<table name="#magicLevel">85 86 87 88 89</table>
 		<table name="#mpConsume2">70 75 80 85 88 90 95 99</table>
         <table name="#powerPvP">0</table>
@@ -749,7 +771,8 @@
         </enchant9>
 		<for />
 	</skill>
-    <skill id="11272" levels="1" name="Перемена Мест">
+    <skill id="11272" levels="1" name="Replace">
+    <!-- Switches locations with the target servitor. -->
 	   <set name="magicLevel" val="97" />
        <set name="operateType" val="OP_ACTIVE" />
        <set name="skillType" val="REPLACE" />
@@ -757,7 +780,8 @@
 	   <set name="skillRadius" val="600" />
        <for/>
    </skill>
-    <skill id="11273" levels="5" name="Изгнание">
+    <skill id="11273" levels="5" name="Exile">
+    <!-- Banishes the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases by 353 per second. -->
 		<table name="#effectPoint">828 877 921 958 987</table>
 		<table name="#magicLevel">85 86 87 88 89</table>
 		<table name="#power">355 365 375 385 395</table>
@@ -796,7 +820,8 @@
 			<effect count="1" name="Debuff" time="10" val="0" />
 		</for>
 	</skill>
-    <skill id="11274" levels="4" name="Призыв Барьера">
+    <skill id="11274" levels="4" name="Summon Barrier">
+    <!-- Receives energy from a servitor to become invincible and increase HP Recovery Bonus. Can only be used while a servitor is present. -->
 		<table name="#mpConsume2">70 78 86 89</table>
         <table name="#magicLevel">85 90 95 99</table>
         <table name="#time">10</table>
@@ -824,21 +849,21 @@
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant3>
         <for>
-            <effect abnormal="invul2" count="1" name="Invulnerable" stackOrder="-1" stackType="Invulnerable"
-                    time="#time" val="0" cancelOnAction="true">
+            <effect abnormal="invul2" count="1" name="Invulnerable" stackOrder="-1" stackType="Invulnerable" time="#time" val="0" cancelOnAction="true">
                 <mul order="0x30" stat="regHp" val="1.2"/>
             </effect>
         </for>
    </skill>
-    <skill id="11275" levels="2" name="Сияние Знака">
-       <!--!-->
+    <skill id="11275" levels="2" name="Mark Flare">
+    <!-- Inflicts powerful magic damage on the target. -->
        <set name="operateType" val="OP_PASSIVE" />
        <set name="skillType" val="NOTDONE" />
        <set name="target" val="TARGET_SELF" />
        <for>
        </for>
    </skill>
-    <skill id="11276" levels="3" name="Пространственные Оковы">
+    <skill id="11276" levels="3" name="Dimensional Binding">
+    <!-- Raises the target in the air and binds it to another dimension. -->
 		<table name="#magicLevel">85 86 87</table>
 		<table name="#activateRate">60</table>
 		<table name="#mpConsume2">90</table>
@@ -866,15 +891,16 @@
 			<effect count="1" name="Debuff" time="10" val="0" />
 		</for>
 	</skill>
-    <skill id="11277" levels="1" name="Величие">
-       <!--!-->
+    <skill id="11277" levels="1" name="Sense of Royalty">
+    <!-- Servitor's wrath. -->
        <set name="operateType" val="OP_PASSIVE" />
        <set name="skillType" val="NOTDONE" />
        <set name="target" val="TARGET_SELF" />
        <for>
        </for>
    </skill>
-    <skill id="11278" levels="9" name="Медвежьи Когти">
+    <skill id="11278" levels="9" name="Bear Claw">
+    <!-- Provokes the enemy and inflicts damage. -->
         <table name="#magicLevel">85 86 87 88 89 90 91 92 93</table>
         <table name="#power">7850 7900 7950 8000 8050 8100 8150 8200 8250</table>
         <table name="#mpConsume2">67 70 75 80 85 88 90 95 99</table>
@@ -894,13 +920,13 @@
         <enchant1 levels="10" name="Power">
             <table name="#power">8250 8350 8450 8550 8650 8750 8850 8950 9050</table>
             <table name="#magicLevel">93 93 94 94 95 95 96 97 98 99</table>
-            <!--TODO от балды-->
         </enchant1>
         <for>
             <effect count="1" name="Aggression" time="3" val="0"/>
         </for>
     </skill>
-    <skill id="11279" levels="9" name="Медвежий Гнев">
+    <skill id="11279" levels="9" name="Bear Tumbling">
+    <!-- Rolls over at the same spot to give a shock to the ground and temporarily stops nearby targets from moving. -->
         <table name="#mpConsume2">332 337 349 360 372 384 396 408 414</table>
         <table name="#val">3</table>
         <table name="#effectPoint">9064 9161 9254 9343 9427 9507 9581 9650 9715</table>
@@ -918,13 +944,13 @@
         <enchant1 levels="10" name="Power">
             <table name="#effectPoint">9564 9861 10504 12403 13427 14507 14881 15650 16715</table>
             <table name="#magicLevel">93 93 94 94 95 95 96 97 98 99</table>
-            <!--TODO от балды-->
         </enchant1>
         <for>
             <effect count="5" name="Aggression" time="#val" val="0"/>
         </for>
     </skill>
-    <skill id="11280" levels="9" name="Клык Кугуара">
+    <skill id="11280" levels="9" name="Cougar Bite">
+    <!-- Bites the target to inflict damage. -->
         <table name="#magicLevel">85 86 87 88 89 90 91 92 93</table>
         <table name="#power">7850 7900 7950 8000 8050 8100 8150 8200 8250</table>
         <table name="#mpConsume2">79 81 84 86 89 92 95 98 99</table>
@@ -943,10 +969,10 @@
         <enchant1 levels="10" name="Power">
             <table name="#power">8250 8350 8450 8550 8650 8750 8850 8950 9050</table>
             <table name="#magicLevel">93 93 94 94 95 95 96 97 98 99</table>
-            <!--TODO от балды-->
         </enchant1>
     </skill>
-    <skill id="11281" levels="9" name="Прыжок Кугуара">
+    <skill id="11281" levels="9" name="Cougar Jumping Attack">
+    <!-- Jumps to inflict damage on the targets within a certain range, and decreases Speed by 50%. Can be used when below 200 grids. -->
         <table name="#pwr">194 197 204 210 217 224 231 238 242</table>
         <table name="#magicLevel">85 86 87 88 89 90 91</table>
         <table name="#mpConsume2">111 114 118 122 126 130 134</table>
@@ -970,13 +996,13 @@
         <enchant1 levels="10" name="Power">
             <table name="#pwr">242 245 247 250 252 254 256 258 260</table>
             <table name="#magicLevel">93 93 94 94 95 95 96 97 98 99</table>
-            <!--TODO от балды-->
         </enchant1>
         <effect name="Debuff" time="10" val="0" stackOrder="3" stackType="speed_down">
             <mul order="0x30" stat="runSpd" val="0.5"/>
         </effect>
     </skill>
-    <skill id="11282" levels="9" name="Прикосновение Жнеца">
+    <skill id="11282" levels="9" name="Reaper Touch">
+    <!-- Inflicts damage on the enemy and absorbs 20% of damage as HP. -->
         <table name="#effectPoint">611 617 624 630 635 641 646 650 655</table>
         <table name="#absorbPart">0.2</table>
         <table name="#elementPower">0</table>
@@ -1011,7 +1037,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11283" levels="9" name="Сила Жнеца">
+    <skill id="11283" levels="9" name="Reaper Power">
+    <!-- Creates a death space near the enemy to inflict damage. -->
         <set name="icon" val="icon.skill1171"/>
         <table name="#mpConsume2">218 222 231 241 250 260 270 281 286</table>
         <table name="#effectPoint">227 243 268 285 313 331</table>
@@ -1032,31 +1059,32 @@
             <table name="#power">122 122 123 124 124 125 125 126 127 127</table>
         </enchant1>
     </skill>
-    <skill id="11284" levels="4" name="Удар Набиаропа">
-       <!--!-->
+    <skill id="11284" levels="4" name="Naviarope Smash">
+    <!-- Inflicts a powerful attack on the target. -->
        <set name="operateType" val="OP_PASSIVE" />
        <set name="skillType" val="NOTDONE" />
        <set name="target" val="TARGET_SELF" />
        <for>
        </for>
    </skill>
-    <skill id="11285" levels="4" name="Сила Набиаропа">
-       <!--!-->
+    <skill id="11285" levels="4" name="Naviarope Power">
+    <!-- Uses the authority of Naviarope to inflict powerful damage on nearby targets. -->
        <set name="operateType" val="OP_PASSIVE" />
        <set name="skillType" val="NOTDONE" />
        <set name="target" val="TARGET_SELF" />
        <for>
        </for>
    </skill>
-    <skill id="11286" levels="1" name="Искусство Насильного Призыва">
-       <!--!-->
+    <skill id="11286" levels="1" name="Forceful Summon">
+    <!-- (not used) All servitors being summoned within a short period of time are doubled. -->
        <set name="operateType" val="OP_PASSIVE" />
        <set name="skillType" val="NOTDONE" />
        <set name="target" val="TARGET_SELF" />
        <for>
        </for>
    </skill>
-    <skill id="11287" levels="1" name="Великое Сопротивление">
+    <skill id="11287" levels="1" name="Superior Resistance">
+    <!-- INT + 2, M. Def. + 199, and resistance to Fire/Water/Wind/Earth + 20. When receiving damage, there is a chance of M. Def. and resistance to attributes momentarily increasing. -->
 		<set name="magicLevel" val="85" />
         <table name="#vuln">20</table>
         <table name="#mDef">199</table>
@@ -1077,7 +1105,8 @@
 			<add order="0x40" stat="mDef" val="#mDef" />
 		</for>
    </skill>
-    <skill id="11288" levels="3" name="Последнее Разделение Судьбы">
+    <skill id="11288" levels="3" name="Ultimate Servitor Share">
+    <!-- Shares the following with your servitor(s): 60% of P. Atk. and P. Def., 30% of M. Atk. and M. Def., 15% of Max HP and MP, 30% of Critical Rate, 10% of Atk. Spd. and 3% of Casting Spd. for 30 minutes. -->
 		<table name="#magicLevel">85 90 95</table>
         <table name="#atk">1.6 1.65 1.7</table>
 		<table name="#mpConsume2">77</table>
@@ -1104,31 +1133,32 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="11289" levels="1" name="Корни Врат">
-       <!--!-->
+    <skill id="11289" levels="1" name="Gate Root">
+    <!-- Temporarily stops nearby enemies from moving. -->
        <set name="operateType" val="OP_PASSIVE" />
        <set name="skillType" val="NOTDONE" />
        <set name="target" val="TARGET_SELF" />
        <for>
        </for>
    </skill>
-    <skill id="11290" levels="1" name="Призыв Хордлинга">
-       <!--!-->
+    <skill id="11290" levels="1" name="Summon Hodling">
+    <!-- Summons Hodling. -->
        <set name="operateType" val="OP_PASSIVE" />
        <set name="skillType" val="NOTDONE" />
        <set name="target" val="TARGET_SELF" />
        <for>
        </for>
    </skill>
-    <skill id="11291" levels="1" name="Вихрь Врат">
-       <!--!-->
+    <skill id="11291" levels="1" name="Gate Vortex">
+    <!-- Inflicts magic damage on nearby enemies. -->
        <set name="operateType" val="OP_PASSIVE" />
        <set name="skillType" val="NOTDONE" />
        <set name="target" val="TARGET_SELF" />
        <for>
        </for>
    </skill>
-    <skill id="11292" levels="8" name="Искупление Куба">
+    <skill id="11292" levels="8" name="Cubic Cleanse">
+    <!-- Cancels the user's de-buff. -->
         <table name="#magicLevel">85 86 87 89 92 93 95 98</table>
         <set name="magicLevel" val="#magicLevel"/>
        <set name="magicType" val="MAGIC" />
@@ -1149,7 +1179,8 @@
 			</effect>
 		</for>
    </skill>
-    <skill id="11293" levels="8" name="Отмена Куба">
+    <skill id="11293" levels="8" name="Cubic Cancellation">
+    <!-- Cancels the enemy's buff. -->
        <table name="#magicLevel">85 86 87 89 92 93 95 98</table>
         <set name="magicLevel" val="#magicLevel"/>
        <set name="magicType" val="MAGIC" />
@@ -1170,15 +1201,16 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="11294" levels="8" name="Корень Куба">
-       <!--!-->
+    <skill id="11294" levels="8" name="Cubic Root">
+    <!-- Temporarily stops the enemy from moving. -->
        <set name="operateType" val="OP_PASSIVE" />
        <set name="skillType" val="NOTDONE" />
        <set name="target" val="TARGET_SELF" />
        <for>
        </for>
    </skill>
-    <skill id="11295" levels="1" name="Великое Владение Легкой Броней">
+    <skill id="11295" levels="1" name="Superior Light Armor Mastery">
+    <!-- INT + 2. Max HP + 4151 and P. Def. + 132 when equipped with a Light Armor. -->
 		<set name="magicLevel" val="85" />
         <table name="#pDef">132</table>
 		<set name="target" val="TARGET_SELF" />
@@ -1194,10 +1226,10 @@
 			<add order="0x40" stat="pDef" val="#pDef" >
 				<using armor="Light"/>
 			</add>
-			
 		</for>
    </skill>
-    <skill id="11296" levels="6" name="Массовое Изгнание">
+    <skill id="11296" levels="6" name="Mass Exile">
+    <!-- Banishes the target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 282 per second. -->
 		<table name="#magicLevel">85 86 87</table>
 		<table name="#activateRate">60</table>
 		<table name="#mpConsume2">120 125 130 135 138 140</table>
@@ -1217,7 +1249,8 @@
 			<effect count="1" name="Debuff" time="10" val="0" />
 		</for>
 	</skill>
-    <skill id="11297" levels="4" name="Благословение Гиганта">
+    <skill id="11297" levels="4" name="Blessing of the Giants">
+    <!-- For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to debuffs by 10%. Decreases received Critical Damage by 30% and speed by 15%. -->
 		<table name="#magicLevel">85 86 87 88</table>
 		<table name="#mpConsume2">70 75 80 85</table>
         <table name="#time">1800</table>
@@ -1255,7 +1288,8 @@
 			</effect>
 		</for>
    </skill>
-	<skill id="11298" levels="8" name="Огонь Знака">
+	<skill id="11298" levels="8" name="Mark of Fire">
+    <!-- Carves a burning mark on the target to inflict damage with 168 power. -->
 		<table name="#mAtk">168 170 175 180 185 189 194 199</table>
 		<table name="#effectPoint">566 582 597 611 624 635 646 655</table>
 		<table name="#magicLevel">85 86 87 88 89 90 91 92</table>
@@ -1279,7 +1313,8 @@
 			<effect count="1" name="Debuff" stackOrder="4"  stackType="Debuff" time="30" val="0" />
 		</for>
 	</skill>
-    <skill id="11299" levels="1" name="Баланс Жизни Слуги">
+    <skill id="11299" levels="1" name="Servitor Balance Life">
+    <!-- Equalizes your HP with summoned servitors' HP. -->
 		<set name="mpConsume" val="63" />
 		<set name="power" val="1000" />
 		<set name="target" val="TARGET_PET"/>

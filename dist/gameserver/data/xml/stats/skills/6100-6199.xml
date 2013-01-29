@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="6100" levels="3" name="Turkey's Choice - Scissors" >
-		<!--  Done by n0nam3
-		      Description: Turkey's Choice - Scissors.
-		-->
+    <!-- Turkey's Choice - Scissors. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -13,11 +11,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6103" levels="5" name="Showdown with the Turkey - 1 Win" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: 1st win.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- 1st win. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.xmas_pcwin1_i00" />
 		<set name="magicLevel" val="1" />
@@ -26,11 +20,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6104" levels="1" name="Event Cancel" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Reset score.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Reset score. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -39,10 +29,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6105" levels="1" name="Turkey's Mistake" >
-		<!--  
-			  Done by n0nam3
-		      Description: "The stupid turkey's mistake. For 1 hour, increases Max HP by 10%, Max MP by 10%, Max CP by 10%, moving speed by 15%, P. Atk. by 10%, M. Atk. by 15%, critical rate by 5, critical impact by 15%, and the rate of Prominent Damage occurring through damage magic by 2."
-		-->
+    <!-- The stupid turkey's mistake. For 1 hour, increases Max HP by 10%, Max MP by 10%, Max CP by 10%, Speed by 15%, P. Atk. by 10%, M. Atk. by 15%, Critical Rate by 5, Critical Damage by 15%, and the chance of prominent damage occurring through magic damage by 2. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.turkey_buff_i00" />
 		<set name="magicLevel" val="1" />
@@ -66,11 +53,7 @@
 		</for>
 	</skill>
 	<skill id="6106" levels="1" name="Winter Holiday Festival" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Christmas festival. For 1 hour, increases Max HP by 5%, Max MP by 5%, Max CP by 5%, moving speed by 10, P. Atk. by 8%, and M. Atk. by 10%."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Holiday festival. For 1 hour, increases Max HP by 5%, Max MP by 5%, Max CP by 5%, Speed by 10, P. Atk. by 8%, and M. Atk. by 10%. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.xmas_miracle_i00" />
 		<set name="magicLevel" val="1" />
@@ -79,11 +62,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6107" levels="1" name="Winter Holiday Blessing - Gludio" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Christmas Blessing - Registered in Gludio territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Holiday Blessing - Registered in Gludio territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill5762" />
 		<set name="magicLevel" val="1" />
@@ -92,11 +71,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6108" levels="1" name="Winter Holiday Blessing - Dion" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Christmas Blessing - Registered in Dion territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Holiday Blessing - Registered in Dion territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill5762" />
 		<set name="magicLevel" val="1" />
@@ -105,11 +80,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6109" levels="1" name="Winter Holiday Blessing - Giran" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Christmas Blessing - Registered in Giran territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Holiday Blessing - Registered in Giran territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill5762" />
 		<set name="magicLevel" val="1" />
@@ -118,11 +89,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6110" levels="1" name="Winter Holiday Blessing - Oren" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Christmas Blessing - Registered in Oren territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Holiday Blessing - Registered in Oren territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill5762" />
 		<set name="magicLevel" val="1" />
@@ -131,11 +98,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6111" levels="1" name="Winter Holiday Blessing - Aden" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Christmas Blessing - Registered in Aden territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Holiday Blessing - Registered in Aden territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill5762" />
 		<set name="magicLevel" val="1" />
@@ -144,11 +107,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6112" levels="1" name="Winter Holiday Blessing - Innadril" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Christmas Blessing - Registered in Innadril territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Holiday Blessing - Registered in Innadril territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill5762" />
 		<set name="magicLevel" val="1" />
@@ -157,11 +116,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6113" levels="1" name="Winter Holiday Blessing - Goddard" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Christmas Blessing - Registered in Goddard territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Holiday Blessing - Registered in Goddard territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill5762" />
 		<set name="magicLevel" val="1" />
@@ -170,11 +125,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6114" levels="1" name="Winter Holiday Blessing - Rune" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Christmas Blessing - Registered in Rune territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Holiday Blessing - Registered in Rune territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill5762" />
 		<set name="magicLevel" val="1" />
@@ -183,11 +134,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6115" levels="1" name="Winter Holiday Blessing - Schuttgart" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Christmas Blessing - Registered in Schuttgart territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Holiday Blessing - Registered in Schuttgart territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill5762" />
 		<set name="magicLevel" val="1" />
@@ -196,9 +143,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6116" levels="1" name="Attack Turkey" >
-		<!--  Done by n0nam3
-		      Description: Attacks the Turkey
-		-->
+    <!-- Attacks the Turkey -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -208,11 +153,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6117" levels="3" name="Choice - Scissors" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: You have selected Scissors. You cannot move for 30 seconds.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- You have selected Scissors. You cannot move for 30 seconds. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.xmas_gawi_i00" />
 		<set name="magicLevel" val="1" />
@@ -222,11 +163,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6120" levels="1" name="Santa Claus' Reward" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Santa Claus' reward. For 1 hour, increases Max HP by 10%, Max MP by 10%, Max CP by 10%, moving speed by 15%, P. Atk. by 10%, M. Atk. by 15%, critical rate by 5, critical impact by 15%, and the rate of Prominent Damage occurring through damage magic by 2."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Santa Claus' reward. For 1 hour, increases Max HP by 10%, Max MP by 10%, Max CP by 10%, Speed by 15%, P. Atk. by 10%, M. Atk. by 15%, Critical Rate by 5, Critical Damage by 15%, and the chance of prominent damage occurring through magic damage by 2. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="magicLevel" val="1" />
@@ -235,11 +172,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6121" levels="1" name="Agathion's New Year's Gift 1" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="1000" />
@@ -251,11 +184,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6122" levels="1" name="Agathion's New Year's Gift 2" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="1000" />
@@ -267,11 +196,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6123" levels="1" name="Agathion's New Year's Wish" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Agathion's New Year's Wish - Energy is maintained and not consumed.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Agathion's New Year's Wish - Vitality is maintained and not consumed. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="coolTime" val="1000" />
@@ -281,12 +206,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="6124" levels="1" name="Agathion Cute Trick - Saerom" >
-		<!--
-
-		      Last modify: 19.01.2010
-		      Description: Able to see the summoned spirit perform cute tricks.
-		-->
+	<skill id="6124" levels="1" name="Agathion Cute Trick - Neolithica" >
+    <!-- You can see the summoned spirit's cute tricks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="magicLevel" val="55" />
@@ -301,6 +222,7 @@
 		</cond>
 	</skill>
 	<skill id="6125" levels="1" name="Paralysis" >
+    <!-- A temporary paralysis which prevents movement. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="magicLevel" val="40" />
@@ -313,6 +235,7 @@
 		</for>
 	</skill>
 	<skill id="6126" levels="1" name="Paralysis" >
+    <!-- A temporary paralysis which prevents movement. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="magicLevel" val="40" />
@@ -325,11 +248,7 @@
 		</for>
 	</skill>
 	<skill id="6127" levels="1" name="Anti-limit" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_NONE" />
@@ -337,11 +256,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6128" levels="1" name="Presentation - Cow Rage" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="76" />
 		<set name="hitTime" val="3000" />
@@ -351,11 +266,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6129" levels="1" name="Shock" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: A state of instant paralysis caused by the shock
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- A state of instant paralysis caused by the shock -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill0092" />
 		<set name="coolTime" val="800" />
@@ -371,11 +282,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="6130" levels="1" name="Curse of the Mutant Animal" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Curse of the Mutant Animal: Temporarily in shock and unable to move.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Curse of the Mutant Animal: Temporarily in shock and unable to move. -->
 		<set name="levelModifier" val="1" />
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill0092" />
@@ -393,12 +300,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="6131" levels="1" name="Decrease Spd" >
-		<!--
-
-			Last modify:	06.01.2010
-
-			Description: Curse of the Mutant Animal: Moving speed is decreased momentarily. Effect 1.
-		-->
+    <!-- Curse of the Mutant Animal: Speed is decreased momentarily. Effect 1. -->
 		<set name="levelModifier" val="2" />
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1160" />
@@ -421,11 +323,7 @@
 		</for>
 	</skill>
 	<skill id="6132" levels="1" name="Decrease Atk. Spd" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Curse of the Mutant Animal: Atk. Spd. is decreased momentarily. Effect 1.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Curse of the Mutant Animal: Atk. Spd. is decreased momentarily. Effect 1. -->
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill4038" />
@@ -442,11 +340,7 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="6133" levels="1" name="Effect of Doubt" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Head is enlarged.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Head is enlarged. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill2513" />
 		<set name="magicLevel" val="95" />
@@ -457,11 +351,7 @@
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6134" levels="1" name="Curse of the Mutant Animal" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Curse of the Mutant Animal: Atk. Spd. and moving speed are decreased momentarily. Effect 1.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Curse of the Mutant Animal: Atk. Spd. and Speed are decreased momentarily. Effect 1. -->
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill4038" />
@@ -477,12 +367,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="saveVs" val="MEN" />
 	</skill>
-	<skill id="6135" levels="1" name="Cow Basic Attack" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Curse of the Mutant Animal: Temporarily in shock and unable to move.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="6135" levels="1" name="Mutant Curse" >
+    <!-- Curse of the Mutant Animal: Temporarily in shock and unable to move. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill0092" />
 		<set name="coolTime" val="2000" />
@@ -498,11 +384,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="6136" levels="1" name="Agathion Cute Trick - Juju" >
-		<!--
-
-		      Last modify: 19.01.2010
-		      Description: Able to see the summoned spirit perform cute tricks.
-		-->
+    <!-- You can see the summoned spirit's cute tricks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="reuseDelay" val="10000" />
@@ -518,11 +400,7 @@
 		</cond>
 	</skill>
 	<skill id="6137" levels="1" name="Agathion Juju - Effect of Doubt" >
-		<!--
-
-		      Last modify: 19.01.2010
-		      Description: Makes the head enlarge.
-		-->
+    <!-- Makes the head enlarge. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill2513" />
 		<set name="reuseDelay" val="10000" />
@@ -541,11 +419,7 @@
 		</for>
 	</skill>
 	<skill id="6138" levels="1" name="Agathion Juju - Large Firework" >
-		<!--
-
-		      Last modify: 19.01.2010
-		      Description: Can set off large firecrackers.
-		-->
+    <!-- Can set off large firecrackers. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="reuseDelay" val="20000" />
@@ -560,11 +434,7 @@
 		</cond>
 	</skill>
 	<skill id="6139" levels="1" name="Fake Tears" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "For 10 minutes, weapon appearances change through the effect of the ""Fake Tears"" that were scattered by ""Pierre Baguette."" But, weapons don't change their abilities."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 30-6-2009  11:35
-		-->
+    <!-- For 10 minutes, weapon appearances change through the effect of the "Fake Tears" that were scattered by "Pierre Baguette." But, weapons don't change their abilities. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_water_of_silen_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -576,31 +446,21 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6140" levels="3" name="Bog Stride" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6141" levels="1" name="Swamp's Wish" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="6142" levels="3" name="Tar Spite" >
-          <!--
-               Description: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 60% and P. Def. and evasion are decreased 20%.
-          -->
+	<skill id="6142" levels="3" name="Tar Trap" >
+    <!-- You are covered in hot and sticky tar. Your Speed is decreased by 30% for 5 minutes. P. Def. and evasion are decreased by 10%. -->
 		<table name="#runSpd">0.7 0.4 0.1</table>
 		<table name="#pDef">0.9 0.8 0.7</table>
 		<table name="#rEvas">0.9 0.8 0.7</table>
@@ -626,79 +486,49 @@
 		</for>
 	</skill>
 	<skill id="6143" levels="1" name="Ancient Beam" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6144" levels="1" name="Ancient Beam" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="6145" levels="1" name="Earthworm's Evil Aura" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+	<skill id="6145" levels="1" name="Earth Wyrm's Evil Aura" >
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6146" levels="1" name="Forfeiture of Will" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6147" levels="1" name="Kasha's Divine Protection" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6148" levels="1" name="Altar's Curse" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- You have been weakened by the Altar's Curse. You probably can't fight in this condition. -->
 		<set name="icon" val="icon.skill1064" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6149" levels="1" name="Kasha's Betrayal" >
-		<!--
-
-			Last modify:	12.12.2009
-
-			Description:
-			Kasha's Betrayal. For 15 minutes, decreases P. Atk./P. Def./moving speed by 50%.
-		-->
+    <!-- Kasha's Betrayal. For 15 minutes, decreases P. Atk./P. Def./Speed by 50%. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="target" val="TARGET_ONE" />
@@ -714,6 +544,7 @@
 		</for>
 	</skill>
 	<skill id="6150" levels="4" name="Kasha's Curse" >
+    <!-- Kasha's Curse. Atk. Spd. increases. -->
 		<table name="#pAtkSpd"> 1.05 1.1 1.15 1.2 </table>
 		<table name="#stackOrder"> 1 2 3 4 </table>
 		<set name="icon" val="icon.skill6151_1" />
@@ -729,6 +560,7 @@
 		</for>
 	</skill>
 	<skill id="6151" levels="4" name="Kasha's Curse" >
+    <!-- Kasha's Curse. Atk. Spd. increases and P. Def. decreases. -->
 		<table name="#pAtkSpd"> 1.05 1.1 1.15 1.2 </table>
 		<table name="#stackOrder"> 1 2 3 4 </table>
 		<set name="icon" val="icon.skill6151_1" />
@@ -744,6 +576,7 @@
 		</for>
 	</skill>
 	<skill id="6152" levels="4" name="Kasha's Yearning" >
+    <!-- Kasha's Yearning. P. Atk. increases. -->
 		<table name="#pAtk"> 1.05 1.1 1.15 1.2 </table>
 		<table name="#stackOrder"> 1 2 3 4 </table>
 		<set name="icon" val="icon.skill6152_1" />
@@ -759,6 +592,7 @@
 		</for>
 	</skill>
 	<skill id="6153" levels="4" name="Kasha's Yearning" >
+    <!-- Kasha's Yearning. P. Atk. increases and P. Def. decreases. -->
 		<table name="#pAtk"> 1.05 1.1 1.15 1.2 </table>
 		<table name="#stackOrder"> 1 2 3 4 </table>
 		<set name="icon" val="icon.skill6152_1" />
@@ -774,6 +608,7 @@
 		</for>
 	</skill>
 	<skill id="6154" levels="4" name="Kasha's Despair" >
+    <!-- Kasha's Despair. Critical rate increases. -->
 		<table name="#rCrit"> 200 300 400 500 </table>
 		<table name="#stackOrder"> 1 2 3 4 </table>
 		<set name="icon" val="icon.skill6154_1" />
@@ -790,6 +625,7 @@
 		</for>
 	</skill>
 	<skill id="6155" levels="4" name="Kasha's Despair" >
+    <!-- Kasha's Despair. Critical rate increases and P. Def. decreases. -->
 		<table name="#rCrit"> 200 300 400 500 </table>
 		<table name="#stackOrder"> 1 2 3 4 </table>
 		<set name="icon" val="icon.skill6154_1" />
@@ -806,22 +642,14 @@
 		</for>
 	</skill>
 	<skill id="6166" levels="1" name="Hold" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Temporarily immobilized by the hold. -->
 		<set name="icon" val="icon.skill4047" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6167" levels="12" name="Shock" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: A state of instant paralysis caused by the shock
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- A state of instant paralysis caused by the shock -->
 		<table name="#mpConsume2">13 20 28 38 50 61 71 76 80 83 84 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="levelModifier" val="1" />
@@ -838,11 +666,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="6168" levels="12" name="Shock" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: A state of instant paralysis caused by the shock
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- A state of instant paralysis caused by the shock -->
 		<table name="#mpConsume2">13 20 28 38 50 61 71 76 80 83 84 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="levelModifier" val="1" />
@@ -859,10 +683,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="6169" levels="1" name="Shyeed's Fury" >
-        <!-- 
-              Description: Shyeed's cries continue to be heard. Nearby monsters seem to get stronger.
-              for PC
-        -->
+    <!-- Shyeed's cries continue to be heard. Nearby monsters seem to get stronger. -->
 		<set name="icon" val="icon.skill6169" />
 		<set name="magicLevel" val="83" />
 		<set name="target" val="TARGET_ONE" />
@@ -873,10 +694,7 @@
         </for>
     </skill>
 	<skill id="6170" levels="1" name="Shyeed's Fury" >
-        <!-- 
-              Description: Shyeed's cries continue to be heard. Nearby monsters seem to get stronger.
-              for Monsters
-        -->
+    <!-- none -->
 		<set name="icon" val="icon.skill6169" />
 		<set name="magicLevel" val="83" />
 		<set name="target" val="TARGET_ONE" />
@@ -894,10 +712,7 @@
         </for>
     </skill>
 	<skill id="6171" levels="1" name="Full Authority" >
-        <!-- 
-              author: n0nam3, pchayka
-              Description: It feels like something will escape the mouth. The predecessor's strength is full. Overall abilities are increased.
-        -->
+    <!-- It feels like something will escape the mouth. The predecessor's strength is full. Overall abilities are increased. -->
 		<set name="icon" val="icon.skill6171" />
 		<set name="magicLevel" val="83" />
 		<set name="target" val="TARGET_ONE" />
@@ -915,11 +730,7 @@
         </for>
     </skill>
 	<skill id="6172" levels="1" name="Presentation - Tyranno" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="hitTime" val="2500" />
@@ -928,11 +739,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6173" levels="1" name="Presentation - Memorial Service for Repose" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -943,11 +750,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6174" levels="1" name="Presentation - Incense for Relic" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -957,11 +760,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6175" levels="1" name="Presentation - High Ranking Dawn Priest's Prayer" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -972,11 +771,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6176" levels="1" name="Presentation - Dawn's Seal Stone" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -986,11 +781,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6177" levels="1" name="Presentation - Anakim's Message" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -1001,11 +792,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6178" levels="1" name="Presentation - Ultimate Seal Motion1" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -1015,11 +802,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6179" levels="1" name="Presentation - Ultimate Seal Motion2" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -1029,11 +812,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6180" levels="1" name="Presentation - Lilith Presentation1" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -1044,11 +823,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6181" levels="1" name="Presentation - Lilith Presentation2" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -1058,11 +833,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6182" levels="1" name="Presentation - Lilith Presentation3" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -1072,11 +843,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6183" levels="1" name="Presentation - Lilith Presentation4" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -1086,11 +853,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6184" levels="1" name="Presentation - Anakim's Presentation1" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -1100,11 +863,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6185" levels="1" name="Presentation - Anakim's Presentation2" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -1114,11 +873,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6186" levels="1" name="Presentation - Anakim's Presentation3" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -1128,9 +883,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6187" levels="1" name="Presentation - Lilith Battle" >
-		<!-- @pchayka
-			 Battle skill for lilith SSQ
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="1000" />
@@ -1143,6 +896,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6188" levels="1" name="Presentation - Lilith's Steward Battle1" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="1000" />
@@ -1155,6 +909,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6189" levels="1" name="Presentation - Lilith's Steward Battle2" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="1000" />
@@ -1168,6 +923,7 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6190" levels="1" name="Presentation - Lilith's Bodyguards Battle1" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="1000" />
@@ -1181,9 +937,7 @@
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6191" levels="1" name="Presentation - Anakim Battle" >
-		<!-- @pchayka
-			 Battle skill for anakim SSQ
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="1000" />
@@ -1196,6 +950,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6192" levels="1" name="Presentation - Anakim's Guardian Battle1" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="8000" />
@@ -1209,6 +964,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6193" levels="1" name="Presentation - Anakim's Guardian Battle2" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="8000" />
@@ -1222,6 +978,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6194" levels="1" name="Presentation - Anakim's Guard Battle" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="8000" />
@@ -1235,6 +992,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6195" levels="1" name="Presentation - Anakim's Executor Battle" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="8000" />
@@ -1248,11 +1006,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6196" levels="1" name="Agathion Oink Oink's Ability" >
-		<!--
-
-		      Last modify: 19.01.2010
-		      Description: Agathion Oink Oink's Ability - Energy is maintained and not consumed.
-		-->
+    <!-- Agathion Oink Oink's Ability - Vitality is maintained and not consumed. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="coolTime" val="1000" />
@@ -1270,11 +1024,7 @@
 		</for>
 	</skill>
 	<skill id="6197" levels="1" name="Agathion Cute Trick - Oink Oink" >
-		<!--
-
-		      Last modify: 30.12.2009
-		      Description: Able to see the summoned spirit perform cute tricks.
-		-->
+    <!-- You can see the summoned spirit's cute tricks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="magicLevel" val="55" />
@@ -1289,11 +1039,7 @@
 		</cond>
 	</skill>
 	<skill id="6198" levels="1" name="Agathion Cute Trick - Light of the Dawn" >
-		<!--
-
-		      Last modify: 30.12.2009
-		      Description: Able to see the summoned spirit perform cute tricks.
-		-->
+    <!-- You can see the summoned spirit's cute tricks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="magicLevel" val="55" />
@@ -1308,11 +1054,7 @@
 		</cond>
 	</skill>
 	<skill id="6199" levels="7" name="Tail Strike" >
-		<!--
-
-		      Last modify: 22.02.2010
-		      Description: Tail Strike
-		-->
+    <!-- Tail Strike -->
 		<table name="#mpConsume2">109 121 131 142 151 159 165</table>
 		<table name="#magicLevel">55 60 65 70 75 80 85</table>
 		<table name="#power">1832 2272 2751 3252 3752 4224 4640</table>

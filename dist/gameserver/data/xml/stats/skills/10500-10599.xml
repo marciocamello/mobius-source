@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-    <skill id="10501" levels="1" name="Великое Владение Кинжалом">
-        <!--
-          Увеличивает СИЛ на 2, Физ. Атк. на 344 при использовании кинжала.
-          Дает шанс обнулить или увеличить в два раза время перезарядки умений.
-          Зависит от СИЛ.
-          Увеличивает Скор. Атк. на 25%, вероятность смертельного удара на 5%.
-          Дает шанс обнулить или увеличить в два раза время перезарядки умений. Зависит от СИЛ.
-      -->
+    <skill id="10501" levels="1" name="Superior Dagger Mastery">
+    <!-- STR + 2 and P. Atk. + 344 when a dagger is equipped. Increases Atk. Spd. + 25% and vital spot attack success rate + 5%. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your STR. -->
         <table name="#pAtk">344</table>
         <set name="magicLevel" val="85"/>
         <set name="operateType" val="OP_PASSIVE"/>
@@ -28,10 +22,8 @@
             <mul order="0x30" stat="blowRate" val="1.05"/>
         </for>
     </skill>
-    <skill id="10502" levels="1" name="Великое Владение Парными Кинжалами">
-        <!--
-          Увеличивает СИЛ на 2, Физ. Атк. на 344 при использовании парных кинжалов.
-      -->
+    <skill id="10502" levels="1" name="Superior Dual Dagger Mastery">
+    <!-- STR + 2 and P. Atk. + 344 when using a dual dagger. -->
         <table name="#pAtk">344</table>
         <set name="magicLevel" val="85"/>
         <set name="operateType" val="OP_PASSIVE"/>
@@ -50,12 +42,8 @@
             </add>
         </for>
     </skill>
-    <skill id="10503" levels="1" name="Великое Владение Легкой Броней">
-        <!--
-          Увеличивает СИЛ на 2.
-          При использовании легких доспехов Физ. Защ. +89, Уклонение +15, шанс вражеской Крит. Атк. -35%.
-          При уклонении с вероятностью в 10% персонаж получает эффект Силы Убийства, который увеличивает Скор. Атк. и шанс смертельного удара.
-      -->
+    <skill id="10503" levels="1" name="Superior Light Armor Mastery">
+    <!-- STR + 2. Max HP + 4880, P. Def. + 89 and P. Evasion + 20 when equipped with a Light Armor. Chance of receiving Critical Damage - 35%. Spd. and P. Skill's Critical Rate changes depending on DEX. Upon Evasion, 10% chance of triggering Assassin's Reflex which increases Atk. Spd. -->
         <table name="#pDef">89</table>
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_SELF"/>
@@ -83,13 +71,8 @@
             </add>
         </for>
     </skill>
-    <skill id="10504" levels="1" name="Великое Движение">
-        <!--
-          Увеличивает СИЛ на 2.
-          Если персонаж сидит - увеличивает бонус восстановления HP на 7, бонус восстановления MP на 3.7.
-          Во время бега Уклонение + 7, бонус восстановления HP на 6.3, бонус восстановления MP на 2.6, Скорость на 17.
-          Дополнительно при HP ниже 30% Уклонение + 17.
-      -->
+    <skill id="10504" levels="1" name="Superior Movement">
+    <!-- STR + 2. While sitting, increases HP Recovery Bonus by 7 and MP recovery bonus by 3.7. While running, increases P. Evasion by 7, HP Recovery Bonus by 6.3, MP recovery bonus by 2.6, and speed by 17. Also increases P. Evasion by 17 when HP is below 30%. -->
         <table name="#regHps">7</table>
         <table name="#regMps">3.7</table>
         <table name="#regHpr">6.3</table>
@@ -131,11 +114,8 @@
             </add>
         </for>
     </skill>
-    <skill id="10505" levels="1" name="Великое Владение Критическим Ударом">
-        <!--
-          Увеличивает СИЛ на 2, силу Крит. Атк. на 539, шанс Крит. Атк. на 60%.
-          Увеличивает эффективность Владения Умениями на 1000%.
-      -->
+    <skill id="10505" levels="1" name="Superior Critical Mastery">
+    <!-- STR + 2, P. Critical Damage + 539 and P. Critical Rate + 60%. + 1000% chance of triggering skill mastery. -->
         <set name="magicLevel" val="85"/>
         <table name="#cAtk">539</table>
         <set name="target" val="TARGET_SELF"/>
@@ -152,10 +132,8 @@
 			<mul order="0x30" stat="rCrit" val="1.6" />
         </for>
     </skill>
-    <skill id="10506" levels="1" name="Великое Владение Духом">
-        <!--
-          Увеличивает СИЛ на 2, сопротивление удержанию, усыплению, кровотечению, ментальным атакам, яду на 30.
-      -->
+    <skill id="10506" levels="1" name="Superior Spirit Mastery">
+    <!-- STR + 2 and resistance to Hold/Sleep/Bleed/Mind/Poison attacks + 30. -->
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
@@ -170,11 +148,8 @@
             <add order="0x40" stat="poisonResist" val="30"/>
         </for>
     </skill>
-    <skill id="10507" levels="1" name="Час Смерти">
-        <!--
-          Физ. Атк. +200.
-          Дополнительно при использовании Теневой Вспышки получает эффект Выгодной Позиции и увеличивает Физ. Атк./шанс Крит. Атк./силу Крит. Атк./шанс смертельного удара.
-      -->
+    <skill id="10507" levels="1" name="Death Clock">
+    <!-- P. Atk. + 200. Also, when using Shadow Flash, triggers the Blind Spot effect that increases P. Atk., Critical Rate, Critical Damage, and vital spot attack success rate. -->
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
@@ -183,13 +158,8 @@
             <add order="0x40" stat="pAtk" val="200"/>
         </for>
     </skill>
-    <skill id="10508" levels="8" name="Кровавый Шаг">
-        <!--
-          Бьет врага в спину и наносит дополнительный урон. Мощность 18329.
-          Вызывает кровотечение. Сверхудар. Крит. Удар.
-          С определенной вероятностью снимает у противника половину HP.
-          Требуется кинжал/парные кинжалы.
-      -->
+    <skill id="10508" levels="8" name="Blood Stab">
+    <!-- Inflicts a vital spot attack with 18329 power added to P. Atk., striking the enemy's unprotected back. Inflicts Bleed. Over-hit. Critical. Half-kill. Can be used while equipped with a dagger/dual dagger. -->
         <table name="#magicLevel">85 86 87 88 89 90 91 92</table>
         <table name="#power">18329 18976 20271 21566 22862 24157 25452 26747</table>
         <table name="#powerPvP">0</table>
@@ -252,12 +222,8 @@
         </enchant8>
         <enchant9 levels="10" name="Recycle"/>
     </skill>
-    <skill id="10509" levels="8" name="Разбивание Сердца">
-        <!--
-          Наносит дополнительный урон. Мощность 19404.
-          Увеличивает Скорость на 40. Сверхудар. Крит. Удар.
-          С определенной вероятностью снимает у противника половину HP. Требуется кинжал/парные кинжалы.
-      -->
+    <skill id="10509" levels="8" name="Heart Breaker">
+    <!-- Stabs the target's heart with P. Atk. increased by 19404 to inflict a powerful vital spot attack. Increases Speed by 40 and Evasion by 5. Over-hit. Critical. Half-kill. Can be used while equipped with a dagger/dual dagger. -->
         <table name="#magicLevel">85 86 87 88 89 90 91 92</table>
         <table name="#power">19404 20075 21419 22762 24105 25449 26792 28136</table>
         <table name="#powerPvP">0</table>
@@ -321,12 +287,8 @@
 			<table name="#reuseDelay">4900 4700 4500 4000 3500 3000 2500 2000 1500 1000</table>
 		</enchant9>
     </skill>
-    <skill id="10510" levels="8" name="Цепной Удар">
-        <!--
-          Наносит удар в кровоточащую рану и причиняет дополнительный урон. Мощность 20653.
-          Можно применить только против врагов с кровотечением. Сверхудар. Крит. Удар.
-          С определенной вероятностью снимает у противника половину HP. Требуется кинжал/парные кинжалы.
-      -->
+    <skill id="10510" levels="8" name="Chain Blow">
+    <!-- Increases P. Atk. By 20653. Over-hit. Critical. Half-kill. Can be used while equipped with a dagger/dual dagger. -->
         <table name="#magicLevel">85 87 89 91 93 95 97 99</table>
         <table name="#power">20653 22081 23509 24938 26366 27795 29223 30651</table>
         <table name="#powerPvP">0</table>
@@ -382,12 +344,8 @@
         </enchant8>
         <enchant9 levels="10" name="Recycle"/>
     </skill>
-    <skill id="10511" levels="4" name="Удар с Разворота">
-        <!--
-          Наносит дополнительный урон, проводя смертельную атаку. Мощность 21933.
-          Возможен Смертельный Удар. Сверхудар. Крит. удар.
-          С определенной вероятностью снимает у противника половину HP. Требуется кинжал/парные кинжалы.
-      -->
+    <skill id="10511" levels="4" name="Reverse">
+    <!-- Attempts a vital spot attack with P. Atk. Increased by 21933. Over-hit. Critical. Half-kill. Can be used while equipped with a dagger/dual dagger. -->
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#power">32480 29466 25699 21933</table>
         <set name="magicLevel" val="#magicLevel"/>
@@ -409,11 +367,8 @@
             <using kind="Dagger,Dual Dagger"/>
         </cond>
     </skill>
-    <skill id="10512" levels="8" name="Взрывающееся Оружие">
-        <!--
-          Атакует взрывающимся оружием и наносит дополнительный урон врагам перед собой. Мощность 11903.
-          Требуется кинжал/парные кинжалы. Сверхудар. Крит. удар.
-      -->
+    <skill id="10512" levels="8" name="Dagger Explosion">
+    <!-- Detonates a blade to attack frontal enemies with 11903 power added to P. Atk. Can be used while equipped with a dagger/dual dagger. Over-hit. Critical. -->
         <table name="#power">11903 12313 13135 13957 14779 15601 16423 17244</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <table name="#powerPvP">0</table>
@@ -465,11 +420,8 @@
         </enchant8>
         <enchant9 levels="10" name="Recycle"/>
     </skill>
-    <skill id="10513" levels="7" name="Кровавый Дождь">
-        <!--
-          Обрушивает на землю дождь из клинков и наносит дополнительный урон врагам вокруг персонажа. Мощность 13649.
-          Требуется кинжал/парные кинжалы. Сверхудар. Крит. удар.
-      -->
+    <skill id="10513" levels="7" name="Razor Rain">
+    <!-- Calls down a rain of blades to attack nearby enemies with 13649 power added to P. Atk. Can be used while equipped with a dagger/dual dagger. Over-hit. Critical. -->
         <table name="#power">13649 14529 15409 16289 17169 18049 18929</table>
         <table name="#magicLevel">85 86 87 88 89 90 91</table>
         <table name="#powerPvP">0</table>
@@ -522,11 +474,8 @@
         </enchant8>
         <enchant9 levels="10" name="Recycle"/>
     </skill>
-    <skill id="10514" levels="5" name="Темный Паралич">
-        <!--
-          Силы тьмы завладевают телом, и через 10 сек. оно становится каменным.
-          После полного отвердения тела наступает паралич длительностью 5 сек.
-      -->
+    <skill id="10514" levels="5" name="Dark Paralysis">
+    <!-- Seals an enemy with the power of darkness. Causes the enemy's body to go completely rigid for 10 seconds and causes paralysis for 5 seconds. -->
         <table name="#magicLevel">85 88 97 94 98</table>
         <table name="#activateRate">50</table>
 		<table name="#mpConsume2">38 42 44 48 54</table>
@@ -560,7 +509,8 @@
             <effect count="1" name="AddSkills" time="5" val="0"/>
         </for>
     </skill>
-    <skill id="10515" levels="6" name="Паралич">
+    <skill id="10515" levels="6" name="Paralyzed">
+    <!-- Your body is paralyzed. -->
         <table name="#magicLevel">85 86 87 88 89 90</table>
         <set name="magicType" val="SPECIAL" />
 		<set name="hitCancelTime" val="500" />
@@ -572,10 +522,8 @@
 			<effect count="1" name="Paralyze" stackOrder="1" stackType="paralyze" time="5" val="0" />
 		</for>
     </skill>
-    <skill id="10516" levels="6" name="Погоня за Тенью">
-        <!--
-          Перемещает за спину противника, сбрасывает цель врага и оглушает его.
-      -->
+    <skill id="10516" levels="6" name="Shadow Chase">
+    <!-- Moves behind an enemy, cancels his target, and inflicts Stun. -->
         <table name="#magicLevel">85 87 90 93 96 99</table>
         <table name="#activateRate">50</table>
 		<table name="#mpConsume2">38 42 44 48 54 58</table>
@@ -610,18 +558,13 @@
 		</enchant4>
         <for>
             <effect name="Stun" time="3" val="0" stackOrder="1" stackType="stun" effectPower="40" effectType="STUN"/>
-            <effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="3" val="0"
-                    isReflectable="false">
+            <effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="3" val="0" isReflectable="false">
                 <def name="doStopTarget" val="true"/>
             </effect>
         </for>
     </skill>
-    <skill id="10517" levels="1" name="Скрытие Тени">
-        <!--
-          Позволяет стать невидимым, отменяет все отрицательные эффекты и удержание.
-          Монстры перестают быть агрессивными по отношению к персонажу.
-          В невидимом состоянии Скорость уменьшается на 20%, но увеличивается бонус восстановления HP.
-      -->
+    <skill id="10517" levels="1" name="Shadow Hide">
+    <!-- You go into Hide state, cancel debuffs and Hold effects on you, increase HP Recovery Bonus, and eliminate enemy enmity toward you. -->
         <table name="#time">30</table>
 		<table name="#mpConsume2">38</table>
 		<table name="#runSpd">0</table>
@@ -650,18 +593,15 @@
 			<table name="#reuseDelay">175000 170000 165000 160000 150000 140000 135000 130000 125000 120000</table>
 		</enchant4>
         <for>
-            <effect count="1" abnormal="shadow" name="Invisible" stackOrder="-1" stackType="Invisible" time="#time"
-                    val="0" cancelOnAction="true">
+            <effect count="1" abnormal="shadow" name="Invisible" stackOrder="-1" stackType="Invisible" time="#time" val="0" cancelOnAction="true">
                 <mul order="0x30" stat="runSpd" val="0.8"/>
                 <mul order="0x30" stat="regHp" val="1.1"/>
                 <add order="0x40" stat="runSpd" val="#runSpd"/>
             </effect>
         </for>
     </skill>
-    <skill id="10518" levels="1" name="Сила Убийства">
-        <!--
-          В течение 10 сек. увеличивает Скор. Атк. на 20%, шанс смертельного удара на 10%.
-      -->
+    <skill id="10518" levels="1" name="Assassin's Reflex">
+    <!-- Atk. Spd. + 20% for 10 seconds. -->
         <set name="magicLevel" val="85"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="target" val="TARGET_SELF"/>
@@ -674,11 +614,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10520" levels="4" name="Максимальное Уклонение">
-        <!--
-          В течение 30 сек. Уклонение + 60, шанс уклонения от Физ. Атк. и умений на 40% и устойчивость к отрицательным эффектам.
-          С вероятностью 40% сбрасывает цель врага при получении урона.
-      -->
+    <skill id="10520" levels="4" name="Final Ultimate Evasion">
+    <!-- For 30 seconds, increases P. Evasion by 60, M. Evasion by 60, M. Def. by 20%, P. Skill Evasion Rate by 60% and resistance to debuffs. Has a 40% chance of canceling the enemy's targeting when attacked. -->
         <table name="#magicLevel">85 90 95 99</table>
         <table name="#rEvas">60 65 70 75</table>
         <table name="#time">30</table>
@@ -699,7 +636,6 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
         <for>
-            <!--<effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="0" val="0" chance="40" />-->
             <effect count="1" name="Buff" time="#time" val="0">
                 <add order="0x40" stat="cancelTarget" val="50"/>
                 <mul order="0x30" stat="pSkillEvasion" val="1.4"/>
@@ -710,10 +646,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10522" levels="6" name="Отравленная Зона">
-        <!--
-          Отравляет врагов вокруг и снижает их Физ. Атк., Скорость, Защиту Щитом на 15 сек.
-      -->
+    <skill id="10522" levels="6" name="Poison Zone">
+    <!-- Sprays poison onto nearby targets for 15 seconds. Decreases P. Atk., Speed, Shield Def., P. Def., and M. Def. Inflicts Poison. -->
         <table name="#magicLevel">85 87 90 93 96 99</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_AREA"/>
@@ -731,10 +665,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10523" levels="6" name="Смертоносное Облако">
-        <!--
-          Врага окутывает облако ядовитого газа. Снижает Скорость, Физ. Атк., Защиту Щитом противника, каждую секунду отнимет у него 687 HP.
-      -->
+    <skill id="10523" levels="6" name="Poisoned">
+    <!-- Poisoned by a toxin cloud. Decreases Speed, P. Atk., Shield Def., P. Def., and M. Def. Decreases HP by 687 per second. -->
         <table name="#magicLevel">85 86 87 88 89 90</table>
         <table name="#abnormal_lv">3 4 5 6 7 8</table>
         <set name="magicLevel" val="#magicLevel"/>
@@ -753,10 +685,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10524" levels="3" name="Ответный Урон">
-        <!--
-          В течение 10 сек. уклоняется от физических умений и возвращает врагу наносимый урон.
-      -->
+    <skill id="10524" levels="3" name="Evasive Counterstrike">
+    <!-- For 10 seconds, evades physical skill attacks and reflects part of the damage received. -->
         <table name="#reflectDam">90 95 100</table>
         <table name="#magicLevel">91 95 99</table>
         <table name="#time">10</table>
@@ -777,10 +707,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10525" levels="4" name="Рывок Тени">
-        <!--
-          В течение 15 сек. увеличивает Скорость на 40, Уклонение +10, бонус восстановления HP на 10.
-      -->
+    <skill id="10525" levels="4" name="Shadow Dash">
+    <!-- For 15 seconds, increases Speed by 66, P. Evasion by 4, and HP Recovery Bonus by 10. -->
         <table name="#magicLevel">85 90 95 99</table>
         <table name="#runSpd">40 45 54 66</table>
         <table name="#time">15</table>
@@ -802,10 +730,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10526" levels="6" name="Шалость">
-        <!--
-          Запутывает противника и не дает ему атаковать цель с наивысшим показателем агрессивности. Также уменьшает Скорость на 30%.
-      -->
+    <skill id="10526" levels="6" name="Mischief">
+    <!-- Inflicts confusion on the target to stop him from attacking the target with the highest hostility. Decreases speed - 30%. -->
         <table name="#magicLevel">85 86 87 88 89 90</table>
         <set name="relationSkillsId" val="106;2;15;12"/>
         <set name="magicLevel" val="#magicLevel"/>
@@ -830,10 +756,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10527" levels="1" name="Массовая Уловка">
-        <!--
-          Сбивает цель у всех окружающих врагов, снижает желание атаковать и не дает им выбрать противника в течение 3 сек.
-       -->
+    <skill id="10527" levels="1" name="Mass Trick">
+    <!-- Cancels the target of frontal enemies. Eliminates their aggression and prevent them from targeting anything for 3 seconds. -->
         <table name="#effectPoint">3000</table>
         <table name="#magicLevel">85</table>
         <table name="#mpConsume2">92</table>
@@ -855,11 +779,11 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
         <for>
-            <effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="5" val="0"
-                    chance="#activateRate"/>
+            <effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="5" val="0" chance="#activateRate"/>
         </for>
     </skill>
-    <skill id="10528" levels="1" name="Притвориться Мертвым - Тень">
+    <skill id="10528" levels="1" name="Shadow Fake Death">
+    <!-- Acts dead to stop monsters from attacking. Cannot be targeted until you get back up. 20 MP is consumed per second. -->
         <table name="#mpConsume2">71</table>
         <set name="reuseDelay" val="300000"/>
         <set name="mpConsume2" val="#mpConsume2"/>
@@ -873,10 +797,8 @@
             <effect count="0x7fffffff" name="FakeDeath" time="5" val="10"/>
         </for>
     </skill>
-    <skill id="10529" levels="1" name="Теневая Вспышка">
-        <!--
-          Перемещает за спину противника, сбрасывает цель врага и оглушает его. Дополнительно увеличивает урон от Крит. Атк
-       -->
+    <skill id="10529" levels="1" name="Shadow Flash">
+    <!-- Moves behind the enemy, cancels his target, and inflicts Stun. Additionally increases Critical Damage on the target. -->
         <table name="#magicLevel">85</table>
         <table name="#mpConsume2">70</table>
         <set name="reuseDelay" val="300000"/>
@@ -897,10 +819,8 @@
             <add order="0x40" stat="cAtkStatic" val="40"/>
         </for>
     </skill>
-    <skill id="10530" levels="1" name="Выгодная Позиция">
-        <!--
-          Увеличивает Физ. Атк./шанс Крит. Атк./силу Крит. Атк./шанс смертельного удара.
-       -->
+    <skill id="10530" levels="1" name="Blind Spot">
+    <!-- Increases P. Atk., Critical Rate, Critical Damage and vital spot attack success rate. -->
         <table name="#mpConsume2">60 62 64 66 68 70 75 79</table>
         <set name="reuseDelay" val="1000"/>
         <set name="hitTime" val="800"/>
@@ -917,16 +837,8 @@
             <mul order="0x30" stat="blowRate" val="1.1"/>
         </for>
     </skill>
-    <!--
-         Они явно что то курили когда делали описание...
-         TODO: разобрарся что это вообще за хня
-      -->
-    <skill id="10531" levels="2" name="Ангел Смерти">
-        <!--
-          Мгновенное действие.
-          Скорость +30, Физ. Уклонение +40, Уклонение от умений +40, шанс Крит. Атк. +40%, устойчивость к отрицательным эффектам +80%.
-          Также накладывает на врага эффект Парализующего Яда. Требуется кинжал/парные кинжалы.
-       -->
+    <skill id="10531" levels="2" name="Angel of Death">
+    <!-- Momentarily increases Speed by 30, P. Evasion by 40, skill Evasion by 75, Critical Rate by 40%, and resistance to debuffs by 80%. Casts Crippling Poison on enemies attacking you. Requires a dagger/dual dagger to be equipped. -->
         <table name="#runSpd">30 34</table>
         <table name="#rEvas">40 45</table>
         <table name="#rCrit">40 45</table>
@@ -972,7 +884,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10532" levels="4" name="Иллюзия Тени">
+    <skill id="10532" levels="4" name="Clone Attack">
+    <!-- Melt into a target's shadow and summons clones to attack it. Can be used while equipped with a dagger/dual dagger. -->
         <table name="#npcId">13073 13074 13075 13076</table>
         <table name="#mpConsume2">60 62 64 66</table>
         <table name="#magicLevel">85 86 88 92</table>
@@ -990,11 +903,11 @@
             <using kind="Dagger,Dual Dagger"/>
         </cond>
         <for>
-            <effect count="1" abnormal="shadow" name="Invisible" stackOrder="-1" stackType="Invisible" time="30" val="0"
-                    cancelOnAction="true"/>
+            <effect count="1" abnormal="shadow" name="Invisible" stackOrder="-1" stackType="Invisible" time="30" val="0" cancelOnAction="true"/>
         </for>
     </skill>
-    <skill id="10534" levels="1" name="Poison Frogs">
+    <skill id="10534" levels="1" name="Toad Poison">
+    <!-- During normal attacks, there is a chance of inflicting Poison on the enemy and blocking the use of magic skills. -->
         <table name="#effectPoint">655</table>
         <table name="#abnormal_time">10</table>
         <table name="#magicLevel">85</table>
@@ -1020,7 +933,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10535" levels="4" name="Яд Скорпиона">
+    <skill id="10535" levels="4" name="Scorpion Poison">
+    <!-- During normal attacks, there is a chance of inflicting Poison on the enemy and increasing Critical Damage received as well as their chance of receiving a Critical Attack. -->
         <table name="#magicLevel">85 90 95 99</table>
         <table name="#poisonLevels">1 2 3 4</table>
         <table name="#mpConsume2">30 32 34 36</table>
@@ -1044,7 +958,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10537" levels="2" name="Блокирующая Магия">
+    <skill id="10537" levels="2" name="Block Magic">
+    <!-- Poisoned. Spd. Is decreased and M. Skills are disabled momentarily. -->
         <table name="#effectPoint">646 655</table>
         <table name="#magicLevel">85 86</table>
         <table name="#activateRate">50</table>
@@ -1065,7 +980,8 @@
             <effect count="1" name="Mute" stackOrder="-1" stackType="Mute" time="60" val="0"/>
         </for>
     </skill>
-    <skill id="10538" levels="4" name="Слабость - Критический урон">
+    <skill id="10538" levels="4" name="Weakness Critical">
+    <!-- Inflicted with Poison. Critical Damage received is increased by 35% momentarily. Chance of receiving a critical attack is increased by 10%. -->
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#rCrit">1.35 1.36 1.37 1.38</table>
         <table name="#critChanceRcpt">0.9 0.89 0.88 0.87</table>
@@ -1086,7 +1002,8 @@
             <mul order="0x30" stat="critChanceRcpt" val="#critChanceRcpt"/>
         </for>
     </skill>
-    <skill id="10539" levels="8" name="Dagger">
+    <skill id="10539" levels="8" name="Throw Dagger">
+    <!-- Attacks the enemy by throwing a dagger with 7396 Power added to P. Atk. and decreases Speed by 80% for 10 seconds. Requires a dagger/dual dagger to be equipped. Over-hit. -->
         <table name="#magicLevel">85 86 87 88 89 90</table>
         <table name="#power">7396 7647 8149 8652 9154 9657 10159 10662</table>
         <table name="#mpConsume2">60 62 64 66 68 70 75 79</table>
@@ -1119,13 +1036,13 @@
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant3>
         <for>
-            <effect name="Debuff" time="10" val="0" effectPower="40" effectType="DEBUFF" stackOrder="4"
-                    stackType="speed_down">
+            <effect name="Debuff" time="10" val="0" effectPower="40" effectType="DEBUFF" stackOrder="4" stackType="speed_down">
                 <mul order="0x30" stat="runSpd" val="0.2"/>
             </effect>
         </for>
     </skill>
-    <skill id="10540" levels="5" name="Sand Eyes">
+    <skill id="10540" levels="5" name="Throw Sand">
+    <!-- Hurls poisonous sand at the enemy. For 5 seconds, greatly decreases P. accuracy and lures the enemy to you. Requires a dagger/dual dagger to be equipped. -->
         <table name="#magicLevel">85 86 87 88 89</table>
         <table name="#mpConsume2">30 32 34 36 38</table>
         <table name="#activateRate">50</table>
@@ -1163,7 +1080,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10541" levels="6" name="Venomous Spines">
+    <skill id="10541" levels="6" name="Throw Poison Needle">
+    <!-- Throws a poison needle to cancel the enemy's skill casting. Requires a dagger/dual dagger to be equipped. -->
         <table name="#magicLevel">85 86 87 88 89 90</table>
         <table name="#mpConsume2">60 62 64 66 68 70</table>
         <set name="reuseDelay" val="15000"/>
@@ -1187,10 +1105,8 @@
             <effect count="1" name="MuteAll" time="5" val="0"/>
         </for>
     </skill>
-    <skill id="10542" levels="3" name="Maximum Critical Damage">
-        <!--| 10542	1	Максимальный Критический Урон	В течение 20 сек. увеличивает силу Крит. Атк. на 609. Также уменьшает шанс Крит. Атк. стоящих впереди врагов на 30%, но увеличивает шанс Крит. Атк. стоящих сбоку врагов на 30% и врагов, стоящих сзади, на 60%. После Крит. Атк. с вероятностью 50% позволяет получить 2-й уровень усиления Крит. Атк. |-->
-		<!--| 10542	2	Максимальный Критический Урон	В течение 20 сек. увеличивает силу Крит. Атк. на 609. Также уменьшает урон/шанс Крит. Атк. стоящих впереди врагов на 35%, но увеличивает урон/шанс Крит. Атк. стоящих сбоку врагов на 35% и врагов, стоящих сзади, на 65%. После Крит. Атк. с вероятностью 50% позволяет получить 3-й уровень усиления Крит. Атк. |-->
-		<!--| 10542	3	Максимальный Критический Урон	В течение 20 сек. увеличивает силу Крит. Атк. на 609. Также уменьшает урон/шанс Крит. Атк. стоящих впереди врагов на 40%, но увеличивает урон/шанс Крит. Атк. стоящих сбоку врагов на 40% и врагов, стоящих сзади, на 70%. |-->
+    <skill id="10542" levels="3" name="Maximum Critical">
+    <!-- Increases Critical Attack Power by 609 and Vital Spot Attack Rate by 10% for 20 seconds. Increases frontal Critical Rate by 30%, side Critical Rate by 30%, and rear Critical Rate by 60%. During a critical attack, 50% has a chance of triggering Maximum Critical level 2. -->
 		<table name="#mpConsume2"> 38 0 0 </table>
 		<table name="#triggeredLevel"> 2 3 0 </table>
 		<table name="#abnormalLvl"> 2 3 4 </table>
@@ -1214,7 +1130,8 @@
 			</effect>
         </for>
     </skill>
-    <skill id="10543" levels="1" name="Silent Gait">
+    <skill id="10543" levels="1" name="Silent Step">
+    <!-- Allows you to move unnoticed by most monsters. Decreases P. Def. by 20% and increases Speed by 20%. MP is consumed continuously. -->
         <table name="#mpConsume2">60</table>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="85"/>
@@ -1229,7 +1146,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10544" levels="4" name="Отмена Выбранной Цели">
+    <skill id="10544" levels="4" name="Cancel target">
+    <!-- none -->
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">60 62 64 66</table>
         <set name="reuseDelay" val="5000"/>
@@ -1245,7 +1163,8 @@
         <set name="cancelTarget" val="70"/>
         <for/>
     </skill>
-    <skill id="10545" levels="4" name="Dark Paralysis">
+    <skill id="10545" levels="4" name="Crippling Poison">
+    <!-- Causes the body to gradually become rigid for 4 seconds. Once fully rigid, paralysis lasts for 5 seconds. -->
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">60 62 64 66</table>
         <set name="reuseDelay" val="120000"/>
@@ -1267,8 +1186,8 @@
             <effect count="1" name="AddSkills" time="5" val="0"/>
         </for>
     </skill>
-    <skill id="10546" levels="4" name="Апперкот">
-        <!-- Доделать. Сбивает с ног, а не станит -->
+    <skill id="10546" levels="4" name="Uppercut">
+    <!-- Delivers a powerful blow to Knock Down the target for 2 seconds. Can be used while equipped with a dagger/dual dagger. -->
         <table name="#effectPoint">655 655 655 655</table>
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">60 62 64 66</table>
@@ -1306,13 +1225,15 @@
             <effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="2" val="0"/>
         </for>
     </skill>
-    <skill id="10547" levels="1" name="Атака Тени">
+    <skill id="10547" levels="1" name="Shadow Attack">
+    <!-- Not in use. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="10548" levels="8" name="Deception">
+    <skill id="10548" levels="8" name="Plunder">
+    <!-- Steals an item from the enemy. -->
         <table name="#magicLevel">85 87 89 91 93 95 97 99</table>
         <table name="#mpConsume2">38 39 40 42 43 45 46 47</table>
         <table name="#activateRate">50</table>
@@ -1333,8 +1254,8 @@
             <effect name="Disarm" time="5" val="0" stackOrder="1" stackType="disarm"/>
         </for>
     </skill>
-    <skill id="10549" levels="5" name="Poke">
-        <!-- Доделать. Сбивает с ног, а не станит -->
+    <skill id="10549" levels="5" name="Kick">
+    <!-- Powerfully Knock Back the target with a kick. -->
         <table name="#magicLevel">85 86 87 88 89</table>
         <table name="#mpConsume2">60 62 64 66 68</table>
         <set name="reuseDelay" val="60000"/>
@@ -1366,7 +1287,8 @@
             <effect count="1" name="KnockBack" stackOrder="-1" stackType="KnockBack" time="5" val="0"/>
         </for>
     </skill>
-    <skill id="10550" levels="4" name="Удар Иллюзии">
+    <skill id="10550" levels="4" name="Illusion Strike">
+    <!-- Inflicts a powerful vital spot attack and decreases speed by 23% for 7 seconds. -->
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">60 62 64 66</table>
         <set name="reuseDelay" val="4000"/>
@@ -1388,7 +1310,8 @@
             <mul order="0x30" stat="runSpd" val="0.77"/>
         </for>
     </skill>
-    <skill id="10551" levels="4" name="Уловка Иллюзии">
+    <skill id="10551" levels="4" name="Illusion Trick">
+    <!-- Cancels the enemy's target and stops him from targeting for 1 second. -->
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">60 62 64 66</table>
         <set name="reuseDelay" val="4000"/>
@@ -1404,7 +1327,8 @@
         <set name="cancelTarget" val="70"/>
         <for/>
     </skill>
-    <skill id="10552" levels="1" name="Great Resistance">
+    <skill id="10552" levels="1" name="Superior Resistance">
+    <!-- STR + 2, M. Def. + 199, and resistance to Fire/Water/Wind/Earth + 20. When receiving damage, M. Def. and resistance to all attributes momentarily increase. -->
         <table name="#magicLevel">85</table>
         <table name="#mDef">199</table>
         <table name="#defenceFire">20</table>
@@ -1433,7 +1357,8 @@
             <add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
         </for>
     </skill>
-    <skill id="10553" levels="8" name="Удар Шторма">
+    <skill id="10553" levels="8" name="Dagger Storm">
+    <!-- Attack nearby enemies with 6871 Power added to P. Atk. Over-hit. -->
         <table name="#power">6871 7012 7300 7599 7909 8232 8568 8917</table>
         <table name="#magicLevel">85 86 87 88 89 90 91 92</table>
         <table name="#elementPower">0</table>
@@ -1455,10 +1380,8 @@
         <set name="soulBoost" val="true"/>
         <for/>
     </skill>
-    <skill id="10554" levels="1" name="Deceptive Maneuver">
-        <!-- тут ппц Заставляет врага повернуться спиной.
-      Оглушает на 3 сек. Монстры перестают быть агрессивными по отношению к персонажу.
-      Придя в себя, противник не может двигаться в течение 5 сек	-->
+    <skill id="10554" levels="1" name="Power Bluff">
+    <!-- Reveals the enemy's back and for 3 seconds, Stuns and stops him from targeting. Increases the enemy's aggression toward you. After Stun ends, the enemy cannot move for 5 seconds. Requires a dagger/dual dagger to be equipped. -->
         <table name="#activateRate">40</table>
         <table name="#magicLevel">85</table>
         <table name="#effectPoint">333</table>
@@ -1485,14 +1408,13 @@
             <using kind="Dagger,Dual Dagger"/>
         </cond>
         <for>
-            <effect count="1" name="Bluff" stackOrder="-1" stackType="Bluff" time="0" val="0" chance="80"
-                    isReflectable="false"/>
+            <effect count="1" name="Bluff" stackOrder="-1" stackType="Bluff" time="0" val="0" chance="80" isReflectable="false"/>
             <effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
-            <effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="0" val="0" chance="80"
-                    isReflectable="false"/>
+            <effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="0" val="0" chance="80" isReflectable="false"/>
         </for>
     </skill>
-    <skill id="10555" levels="1" name="Корни Лжи">
+    <skill id="10555" levels="1" name="Impaired">
+    <!-- Cannot move for 5 seconds. -->
         <table name="#mpConsume2">60</table>
         <set name="reuseDelay" val="10000"/>
         <set name="hitTime" val="1200"/>
@@ -1508,7 +1430,8 @@
             <effect count="1" name="Root" stackOrder="-1" stackType="Root" time="5" val="0"/>
         </for>
     </skill>
-    <skill id="10556" levels="1" name="Скрытие Иллюзии">
+    <skill id="10556" levels="1" name="Illusion Hide">
+    <!-- Becomes hidden momentarily. -->
         <table name="#mpConsume2">60</table>
         <set name="reuseDelay" val="10000"/>
         <set name="mpConsume2" val="#mpConsume2"/>
@@ -1517,8 +1440,7 @@
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for>
-            <effect count="1" abnormal="shadow" name="Invisible" stackOrder="-1" stackType="Invisible" time="10" val="0"
-                    cancelOnAction="true"/>
+            <effect count="1" abnormal="shadow" name="Invisible" stackOrder="-1" stackType="Invisible" time="10" val="0" cancelOnAction="true"/>
         </for>
     </skill>
 </list>

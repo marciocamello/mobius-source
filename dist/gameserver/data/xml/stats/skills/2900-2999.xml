@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="2900" levels="1" name="Ancient Herb - Slayer" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: "Possessed by those spirits who existed during the beginning of the world, this herb allows you to strike down your enemies with the strength of a bull."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- Possessed by those spirits who existed during the beginning of the world, this herb allows you to strike down your enemies with the strength of a bull. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -17,11 +13,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2901" levels="1" name="Ancient Herb - Immortal" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: "Possessed by those spirits who existed during the beginning of the world, this herb makes you temporarily impervious to your enemy's attacks." none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- Possessed by those spirits who existed during the beginning of the world, this herb makes you temporarily impervious to your enemy's attacks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -33,11 +25,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2902" levels="1" name="Ancient Herb - Terminator" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: "Possessed by those spirits who existed during the beginning of the world, this herb allows you to cast as fast as the wind."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- Possessed by those spirits who existed during the beginning of the world, this herb allows you to cast as fast as the wind. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -49,11 +37,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2903" levels="1" name="Ancient Herb - Guide" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: "Possessed by those spirits who existed during the beginning of the world, this herb allows you to move faster than any beast on the plains."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- Possessed by those spirits who existed during the beginning of the world, this herb allows you to move faster than any beast on the plains. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -65,11 +49,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2904" levels="1" name="Guardian Spirit's Divine Protection" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -81,10 +61,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2905" levels="1" name="Growth Accelerator" >
-		<!--  
-			Author: n0nam3
-			Date: 21-05-2010
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -110,11 +87,7 @@
 		</cond>
 	</skill>
 	<skill id="2906" levels="1" name="Incubation Accelerator" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -125,12 +98,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2907" levels="5" name="Battlefield Use Secret Medicine of Life none" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2907" levels="5" name="Battleground Use Secret Medicine of Life" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="600000" />
@@ -139,12 +108,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2908" levels="5" name="Battlefield Use Secret Medicine of Mind none" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2908" levels="5" name="Battleground Use Secret Medicine of Mind" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="600000" />
@@ -153,12 +118,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2909" levels="5" name="Battlefield Use Secret Medicine of Will none" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2909" levels="5" name="Battleground Use Secret Medicine of Will" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="600000" />
@@ -168,11 +129,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2910" levels="1" name="Skull Key of Pain" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -181,11 +138,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2911" levels="1" name="Skull Key of Erosion" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -194,11 +147,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2912" levels="1" name="Skull Key of the Heart" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -206,12 +155,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2913" levels="1" name="Soul Extraction none" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2913" levels="1" name="Soul Extraction" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="60000" />
@@ -222,12 +167,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2914" levels="2" name="Equipment Set 10/30 Day Pack" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2914" levels="2" name="Equipment Set 10 Day Pack" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="reuseDelay" val="10000" />
@@ -237,11 +178,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2915" levels="1" name="Clear Five-Colored Crystal" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="10000" />
@@ -252,12 +189,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2916" levels="1" name="Feed for Enriched Enhanced Pets none" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2916" levels="1" name="Feed for Enriched Enhanced Pets" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -271,11 +204,7 @@
 		</cond>
 	</skill>
 	<skill id="2917" levels="1" name="Big Staccato Silk Cocoon" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -284,11 +213,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2918" levels="1" name="Small Staccato Silk Cocoon" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -297,11 +222,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2919" levels="1" name="Ancient Parchment" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -309,12 +230,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2920" levels="1" name="Titan's Ancient Book" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2920" levels="1" name="Lesser Giant's Ancient Book" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -323,11 +240,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2921" levels="1" name="Gludio Supply Box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -336,11 +249,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2922" levels="1" name="Dion supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -349,11 +258,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2923" levels="1" name="Giran supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -362,11 +267,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2924" levels="1" name="Oren supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -375,11 +276,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2925" levels="1" name="Aden supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -387,12 +284,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2926" levels="1" name="Innadril supply box - magic pin none" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2926" levels="1" name="Innadril supply box - magic pin" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -401,11 +294,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2927" levels="1" name="Goddard supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -414,11 +303,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2928" levels="1" name="Rune supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -427,11 +312,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2929" levels="1" name="Schuttgart supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -439,12 +320,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2930" levels="1" name="Gludio supply box - magic pouch none" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2930" levels="1" name="Gludio supply box - magic pouch" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -453,11 +330,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2931" levels="1" name="Dion supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -466,11 +339,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2932" levels="1" name="Giran supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -479,11 +348,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2933" levels="1" name="Oren supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -492,11 +357,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2934" levels="1" name="Aden supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -505,11 +366,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2935" levels="1" name="Innadril supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -518,11 +375,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2936" levels="1" name="Goddard supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -531,11 +384,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2937" levels="1" name="Rune supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -544,11 +393,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2938" levels="1" name="Schuttgart supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -557,11 +402,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2939" levels="1" name="Gludio supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -570,11 +411,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2940" levels="1" name="Dion supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -582,12 +419,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2941" levels="1" name="Giran supply box - belt none" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2941" levels="1" name="Giran supply box - belt" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -596,11 +429,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2942" levels="1" name="Oren supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -609,11 +438,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2943" levels="1" name="Aden supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -622,11 +447,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2944" levels="1" name="Innadril supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -635,11 +456,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2945" levels="1" name="Goddard supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -648,11 +465,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2946" levels="1" name="Rune supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -661,11 +474,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2947" levels="1" name="Schuttgart supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -674,11 +483,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2948" levels="1" name="Gludio Supply Box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -687,11 +492,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2949" levels="1" name="Dion supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -700,11 +501,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2950" levels="1" name="Giran supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -713,11 +510,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2951" levels="1" name="Oren supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -726,11 +519,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2952" levels="1" name="Aden supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -738,12 +527,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2953" levels="1" name="Innadril supply box - magic pin none" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2953" levels="1" name="Innadril supply box - magic pin" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -752,11 +537,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2954" levels="1" name="Goddard supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -765,11 +546,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2955" levels="1" name="Rune supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -778,11 +555,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2956" levels="1" name="Schuttgart supply box - magic pin" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -790,12 +563,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2957" levels="1" name="Gludio supply box - magic pouch none" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2957" levels="1" name="Gludio supply box - magic pouch" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -804,11 +573,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2958" levels="1" name="Dion supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -817,11 +582,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2959" levels="1" name="Giran supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -830,11 +591,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2960" levels="1" name="Oren supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -843,11 +600,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2961" levels="1" name="Aden supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -856,11 +609,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2962" levels="1" name="Innadril supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -869,11 +618,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2963" levels="1" name="Goddard supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -882,11 +627,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2964" levels="1" name="Rune supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -895,11 +636,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2965" levels="1" name="Schuttgart supply box - magic pouch" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -908,11 +645,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2966" levels="1" name="Gludio supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -921,11 +654,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2967" levels="1" name="Dion supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -933,12 +662,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2968" levels="1" name="Giran supply box - belt none" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2968" levels="1" name="Giran supply box - belt" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -947,11 +672,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2969" levels="1" name="Oren supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -960,11 +681,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2970" levels="1" name="Aden supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -973,11 +690,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2971" levels="1" name="Innadril supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -986,11 +699,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2972" levels="1" name="Goddard supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -999,11 +708,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2973" levels="1" name="Rune supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1012,11 +717,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2974" levels="1" name="Schuttgart supply box - belt" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1025,11 +726,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2975" levels="1" name="Gludio supply box - magic rune clip" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1038,11 +735,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2976" levels="1" name="Dion supply box - magic rune clip" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1051,11 +744,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2977" levels="1" name="Giran supply box - magic rune clip" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1064,11 +753,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2978" levels="1" name="Oren supply box - magic rune clip" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1077,11 +762,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2979" levels="1" name="Aden supply box - magic rune clip" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1090,11 +771,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2980" levels="1" name="Innadril supply box - magic rune clip" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1103,11 +780,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2981" levels="1" name="Goddard supply box - magic rune clip" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1116,11 +789,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2982" levels="1" name="Rune supply box - magic rune clip" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1128,12 +797,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2983" levels="1" name="Schuttgart supply box - magic rune clip none" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2983" levels="1" name="Schuttgart supply box - magic rune clip" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1142,11 +807,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2984" levels="1" name="Gludio supply box - magic ornament" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1155,11 +816,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2985" levels="1" name="Dion supply box - magic ornament" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1168,11 +825,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2986" levels="1" name="Giran supply box - magic ornament" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1181,11 +834,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2987" levels="1" name="Oren supply box - magic ornament" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1194,11 +843,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2988" levels="1" name="Aden supply box - magic ornament" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1207,11 +852,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2989" levels="1" name="Innadril supply box - magic ornament" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1220,11 +861,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2990" levels="1" name="Goddard supply box - magic ornament" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1233,11 +870,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2991" levels="1" name="Rune supply box - magic ornament" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1246,11 +879,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2992" levels="1" name="Schuttgart supply box - magic ornament" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1259,11 +888,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2993" levels="1" name="Ancient herb - Deceiver" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: You incur the wrath of the spirits who existed in the chaos of the beginning of the world by taking the ancient herb without permission.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- You incur the wrath of the spirits who existed in the chaos of the beginning of the world by taking the ancient herb without permission. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -1274,23 +899,15 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2994" levels="1" name="Disguised Half - Aqua Elf" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: Disguised as a half aqua elf in alluring dress. none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+    <!-- Disguised as a half aqua elf in alluring dress. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2995" levels="1" name="PC room private weapon strengthening order sheet - D grade" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2995" levels="1" name="PC room private weapon strengthening order sheet (D-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1298,12 +915,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2996" levels="1" name="PC room private weapon strengthening order sheet - C grade" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2996" levels="1" name="PC room private weapon strengthening order sheet (C-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1311,12 +924,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2997" levels="1" name="PC room private weapon strengthening order sheet - B grade" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2997" levels="1" name="PC room private weapon strengthening order sheet (B-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1324,12 +933,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2998" levels="1" name="PC room private weapon strengthening order sheet - A grade" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2998" levels="1" name="PC room private weapon strengthening order sheet (A-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1337,12 +942,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2999" levels="1" name="PC room private weapon strengthening order sheet - S grade" >
-		<!--  Automatically generated from The Gracia Plus client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 21-05-2010 17:19
-		-->
+	<skill id="2999" levels="1" name="PC room private weapon strengthening order sheet (S-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />

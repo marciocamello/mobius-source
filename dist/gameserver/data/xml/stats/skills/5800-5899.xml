@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="5800" levels="1" name="Self-Destruction" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
 		<set name="magicLevel" val="85" />
@@ -16,11 +12,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5801" levels="1" name="Drake Breath" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="5;12" />
 		<set name="icon" val="icon.skill0000" />
@@ -36,11 +28,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5802" levels="1" name="Stun" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Temporarily renders target unable to act.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Temporarily renders target unable to act. -->
 		<set name="levelModifier" val="1" />
 		<set name="affectLimit" val="5;12" />
 		<set name="icon" val="icon.skill0100" />
@@ -57,9 +45,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5803" levels="3" name="Green Chili" >
-		<!--  Done by n0nam3
-		      Description: none
-		-->
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58</table>
 		<table name="#mpConsume1">14 15 15</table>
 		<table name="#magicLevel">75 78 80</table>
@@ -80,10 +66,7 @@
 		<set name="effectRange" val="1400"/>
 	</skill>
 	<skill id="5804" levels="3" name="Fireball" >
-		<!--
-
-			Last modify:	03.08.2009
-		-->
+    <!-- none -->
 		<table name="#mpConsume2">52 55 58</table>
 		<table name="#mpConsume1">13 14 15</table>
 		<table name="#magicLevel">70 75 80</table>
@@ -104,9 +87,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5805" levels="1" name="Air Assault" >
-		<!--  Done by n0nam3
-		      Description: none
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="1000" />
@@ -124,9 +105,7 @@
 		<set name="effectRange" val="1100"/>
 	</skill>
 	<skill id="5806" levels="1" name="High Wave Beam" >
-		<!--  Done by n0nam3
-		      Description: none
-		-->
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1000" />
@@ -143,9 +122,7 @@
 		<set name="effectRange" val="1400"/>
 	</skill>
 	<skill id="5807" levels="1" name="Self-destruction" >
-		<!--  Done by n0nam3
-		      Description: none
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
 		<set name="power" val="2500" />
@@ -157,10 +134,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="5808" levels="1" name="Burst Flame" >
-		<!--
-
-			Last modify:	03.08.2009
-		-->
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="4000" />
@@ -181,11 +155,7 @@
 		</for>
 	</skill>
 	<skill id="5809" levels="1" name="Dark Blood" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="4000" />
@@ -204,12 +174,7 @@
 		<set name="effectRange" val="1400"/>
 	</skill>
 	<skill id="5810" levels="1" name="Decrease Spd." >
-		<!--
-
-			Last modify:	06.01.2010
-
-			Description: Temporarily decreases Spd. Effect 3.
-		-->
+    <!-- Temporarily decreases Spd. Effect 3. -->
 		<set name="levelModifier" val="2" />
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="5;12" />
@@ -233,9 +198,7 @@
 		</for>
 	</skill>
 	<skill id="5811" levels="1" name="Sonic Bomb" >
-		<!--  Done by n0nam3
-		      Description: none
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="4000" />
 		<set name="power" val="3542" />
@@ -250,6 +213,7 @@
 		<set name="effectRange" val="1400"/>
 	</skill>
 	<skill id="5812" levels="1" name="Fire Breath" >
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="5;12" />
 		<set name="icon" val="icon.skill0000" />
@@ -268,9 +232,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5813" levels="1" name="Sand Ball" >
-		<!--  Done by n0nam3
-		      Description: none
-		-->
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1000" />
@@ -287,9 +249,7 @@
 		<set name="effectRange" val="1400"/>
 	</skill>
 	<skill id="5814" levels="3" name="Self-Destruction" >
-		<!--  Done by n0nam3
-		      Description: none
-		-->
+    <!-- none -->
 		<table name="#mpConsume2">142 151 159</table>
 		<table name="#magicLevel">70 75 80</table>
 		<set name="icon" val="icon.skill0000" />
@@ -305,11 +265,7 @@
 		<set name="effectRange" val="1250"/>
 	</skill>
 	<skill id="5815" levels="1" name="Presentation - Mercenary Troops Shout" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -319,11 +275,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5816" levels="1" name="Presentation - Female Priest Transformation" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -333,11 +285,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5817" levels="1" name="Presentation - Dragon Shout" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="hitTime" val="3000" />
@@ -346,11 +294,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5818" levels="1" name="Presentation - Repentance" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -360,11 +304,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5819" levels="1" name="Presentation - Victory" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -374,11 +314,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5820" levels="1" name="Presentation - Removal" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -388,11 +324,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5821" levels="1" name="Presentation - Female Priest Exit" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -402,11 +334,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5822" levels="1" name="Drake Bait" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="600000" />
 		<set name="magicLevel" val="85" />
@@ -416,10 +344,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5823" levels="1" name="Presentation - District1 Boss Defeat" >
-		<!--
-			Comment: Используется босом при псевдосмерти
-		-->
+	<skill id="5823" levels="1" name="Boss Defeat" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -428,10 +354,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5824" levels="1" name="Presentation - District1 Boss Arise" >
-		<!--
-			Comment: Используется босом при оживании
-		-->
+	<skill id="5824" levels="1" name="Boss Arise" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -441,11 +365,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5825" levels="1" name="Presentation - Algraia Exit" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="hitTime" val="5330" />
@@ -454,6 +374,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5826" levels="3" name="Fire Breath" >
+    <!-- none -->
 		<table name="#mpConsume2">59 60 60</table>
 		<table name="#magicLevel">83 84 85</table>
 		<table name="#power">41 52 63</table>
@@ -475,6 +396,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5827" levels="6" name="Fireball" >
+    <!-- none -->
 		<table name="#mpConsume2">55 56 58 58 59 60</table>
 		<table name="#mpConsume1">14 14 15 15 15 15</table>
 		<table name="#magicLevel">75 77 79 81 83 85</table>
@@ -496,6 +418,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5828" levels="6" name="Unholy Flare" >
+    <!-- none -->
 		<table name="#mpConsume2">55 56 58 58 59 60</table>
 		<table name="#mpConsume1">14 14 15 15 15 15</table>
 		<table name="#magicLevel">75 77 79 81 83 85</table>
@@ -516,6 +439,7 @@
 		<set name="element" val="unholy" />
 	</skill>
 	<skill id="5829" levels="6" name="Fire Flare" >
+    <!-- none -->
 		<table name="#mpConsume2">55 56 58 58 59 60</table>
 		<table name="#mpConsume1">14 14 15 15 15 15</table>
 		<table name="#magicLevel">75 77 79 81 83 85</table>
@@ -536,6 +460,7 @@
 		<set name="element" val="fire" />
 	</skill>
 	<skill id="5830" levels="1" name="Polearm Thrust" >
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
 		<set name="power" val="2400" />
@@ -549,10 +474,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5831" levels="1" name="Polearm Swing" >
-		<!--
-		      Last modify: 01.02.2010
-		      Description: HP is decreased momentarily from bleeding. Effect 9.
-		-->
+    <!-- HP is decreased momentarily from bleeding. Effect 9. -->
 		<table name="#power">150</table>
 		<set name="icon" val="icon.skill0096" />
 		<set name="reuseDelay" val="2000" />
@@ -572,6 +494,7 @@
 		</for>
 	</skill>
 	<skill id="5832" levels="1" name="Hate Aura" >
+    <!-- Your mark is fixed. -->
 		<set name="levelModifier" val="2" />
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill0018" />
@@ -591,10 +514,7 @@
 		</for>
 	</skill>
 	<skill id="5833" levels="1" name="Shield" >
-		<!--
-		      Last modify: 11.01.2010
-		      Description: Increases defense power temporarily. Effect 3.
-		-->
+    <!-- Increases defense power temporarily. Effect 3. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill1040" />
@@ -614,10 +534,7 @@
 		</for>
 	</skill>
 	<skill id="5834" levels="1" name="Magic Barrier" >
-		<!--
-		      Last modify: 09.01.2010
-		      Description: Temporarily increases magic resistance. Effect 3.
-		-->
+    <!-- Temporarily increases magic resistance. Effect 3. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill1036" />
@@ -637,6 +554,7 @@
 		</for>
 	</skill>
 	<skill id="5835" levels="1" name="Major Heal" >
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="3000" />
@@ -652,6 +570,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5836" levels="1" name="Greater Heal" >
+    <!-- Recovers party member's HP and increases HP recovery bonus in an instant. Power 1. Effect 5. -->
 		<table name="#power2">100</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="10;10" />
@@ -671,6 +590,7 @@
 		</for>
 	</skill>
 	<skill id="5837" levels="1" name="Double Throwing Javelin" >
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
 		<set name="power" val="4870" />
@@ -685,6 +605,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5838" levels="1" name="Throwing Javelin" >
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
 		<set name="power" val="3500" />
@@ -699,10 +620,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5839" levels="1" name="Breath" >
-		<!--
-
-			Comment: Used by boss Tiat
-		-->
+    <!-- none -->
 		<set name="affectLimit" val="5;15" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -719,10 +637,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5840" levels="1" name="Fire Breath" >
-		<!--
-
-			Comment: Used by boss Tiat
-		-->
+    <!-- none -->
 		<set name="affectLimit" val="5;15" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -739,9 +654,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5841" levels="1" name="Multi Defense" >
-		<!--
-			Comment: Used by boss Tiat
-		-->
+    <!-- P. Def. and magic resistance are increased. -->
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -761,9 +674,7 @@
 		</for>
 	</skill>
 	<skill id="5842" levels="1" name="Spinning Slasher" >
-		<!--
-			Comment: Used by boss Tiat
-		-->
+    <!-- none -->
 		<set name="affectLimit" val="6;12" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="733" />
@@ -779,10 +690,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5843" levels="1" name="Terror" >
-		<!--
-
-			Comment: Used by boss Tiat
-		-->
+    <!-- Temporarily inflicted with Fear and moves regardless of volition. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill1092" />
@@ -802,12 +710,9 @@
 		<for>
 			<effect count="5" name="Fear" stackOrder="-1" stackType="Fear" time="3" val="0" />
 		</for>
-
 	</skill>
 	<skill id="5844" levels="1" name="Thunder Storm" >
-		<!--  
-			Comment: Used by boss Tiat
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="2000" />
 		<set name="magicLevel" val="85" />
@@ -821,12 +726,8 @@
 		<set name="power" val="834" />
 		<set name="skillRadius" val="400" />
 	</skill>
-	<skill id="5845" levels="12" name="NPC Trigger Bleed" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="5845" levels="12" name="Trigger Bleed" >
+    <!-- none -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="#magicLevel" />
@@ -835,10 +736,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5846" levels="12" name="Bleed" >
-		<!--
-		      Last modify: 05.07.2010
-		      Description: HP is decreased momentarily from bleeding. Effect 2.
-		-->
+    <!-- HP is decreased momentarily from bleeding. Effect 2. -->
 		<table name="#stackOrder">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="levelModifier" val="2" />
@@ -860,11 +758,7 @@
 		</for>
 	</skill>
 	<skill id="5847" levels="1" name="Flip Nearby Blocks" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -876,11 +770,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5848" levels="1" name="Block Trigger Slow" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_NONE" />
@@ -888,12 +778,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5849" levels="1" name="Decrease Speed" >
-		<!--
-			Done by:	n0nam3
-			Last modify:	10.08.2010
-
-			Description: Speed is decreased.
-		-->
+    <!-- Speed is decreased. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill1160" />
 		<set name="magicLevel" val="80" />
@@ -914,11 +799,7 @@
 		</for>
 	</skill>
 	<skill id="5850" levels="1" name="Block Trigger Stun" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_NONE" />
@@ -926,6 +807,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5851" levels="1" name="Shock" >
+    <!-- A state of instant paralysis caused by the shock -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="power" val="80" />
@@ -946,6 +828,7 @@
 		</for>
 	</skill>
 	<skill id="5852" levels="1" name="Flip Block" >
+    <!-- Flips blocks. -->
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="reuseDelay" val="2000" />
 		<set name="magicLevel" val="80" />
@@ -958,6 +841,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5853" levels="1" name="Flip Block" >
+    <!-- Flips blocks. -->
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="reuseDelay" val="2000" />
 		<set name="magicLevel" val="80" />
@@ -970,12 +854,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5854" levels="1" name="Decrease Speed" >
-		<!--
-
-			Last modify:	06.01.2010
-
-			Description: Speed is decreased.
-		-->
+    <!-- Speed is decreased. -->
 		<set name="icon" val="icon.skill1160" />
 		<set name="magicLevel" val="80" />
 		<set name="castRange" val="600" />
@@ -991,11 +870,7 @@
 		</for>
 	</skill>
 	<skill id="5855" levels="2" name="Shock" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: A state of instant paralysis caused by the shock
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- A state of instant paralysis caused by the shock -->
 		<table name="#mpConsume2">0 165</table>
 		<table name="#hitCancelTime">0 500</table>
 		<table name="#castRange">600 40</table>
@@ -1019,10 +894,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5856" levels="1" name="Transform Tow" >
-		<!--
-		      Last modify: 08.01.2010
-		      Description: Transforms into a Tow.
-		-->
+    <!-- Transforms into a Tow. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="target" val="TARGET_SELF" />
@@ -1036,10 +908,7 @@
 		</for>
 	</skill>
 	<skill id="5857" levels="1" name="Transform Lure Tow" >
-		<!--
-		      Last modify: 08.01.2010
-		      Description: Transforms into a Lure Tow.
-		-->
+    <!-- Transforms into a Lure Tow. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="target" val="TARGET_SELF" />
@@ -1053,10 +922,7 @@
 		</for>
 	</skill>
 	<skill id="5858" levels="1" name="Transform Heavy Tow" >
-		<!--
-		      Last modify: 08.01.2010
-		      Description: Transforms into a Heavy Tow.
-		-->
+    <!-- Transforms into a Heavy Tow. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="target" val="TARGET_SELF" />
@@ -1070,10 +936,7 @@
 		</for>
 	</skill>
 	<skill id="5859" levels="1" name="Transform Wing Tow" >
-		<!--
-		      Last modify: 08.01.2010
-		      Description: Transforms into a Wim Tow.
-		-->
+    <!-- Transforms into a Wim Tow. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="target" val="TARGET_SELF" />
@@ -1087,6 +950,7 @@
 		</for>
 	</skill>
 	<skill id="5860" levels="1" name="Wrath of Valakas" >
+    <!-- Magic skills are blocked, temporarily decreasing speed. Destruction of the Body is activated, inflicting major damage on the stamina of nearby party members after 10 seconds. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill5860" />
 		<set name="castRange" val="1000" />
@@ -1106,6 +970,7 @@
 		</for>
 	</skill>
 	<skill id="5861" levels="1" name="Authority of Valakas" >
+    <!-- Magic skills are blocked, temporarily decreasing speed. Destruction of the Mind is activated, inflicting major damage on the minds of nearby party members after 10 seconds. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill5861" />
 		<set name="castRange" val="1000" />
@@ -1125,6 +990,7 @@
 		</for>
 	</skill>
 	<skill id="5862" levels="1" name="Destruction of the Body" >
+    <!-- none -->
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -1139,6 +1005,7 @@
 		</for>	
 	</skill>
 	<skill id="5863" levels="1" name="Destruction of the Soul" >
+    <!-- none -->
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -1153,6 +1020,7 @@
 		</for>
 	</skill>
 	<skill id="5864" levels="1" name="Decrease Valakas Defense" >
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="4000" />
@@ -1172,6 +1040,7 @@
 		</for>
 	</skill>
 	<skill id="5865" levels="1" name="Wide-bodied Valakas" >
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="4000" />
@@ -1191,11 +1060,7 @@
 		</for>
 	</skill>
 	<skill id="5866" levels="10" name="Soul Worm" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Current MP, Max MP, and MP Regeneration are decreased due to damage to the mind, and HP is temporarily decreased due to poison. Effect 8."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
 		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
@@ -1209,11 +1074,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5867" levels="10" name="Soul Worm" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Current MP, Max MP, and MP Regeneration are decreased due to damage to the mind, and HP is temporarily decreased due to poison. Effect 8."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
 		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
@@ -1227,11 +1088,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5868" levels="10" name="Soul Worm" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Current MP, Max MP, and MP Regeneration are decreased due to damage to the mind, and HP is temporarily decreased due to poison. Effect 8."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
 		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
@@ -1246,11 +1103,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5869" levels="10" name="Soul Worm" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "Current MP, Max MP, and MP Regeneration are decreased due to damage to the mind, and HP is temporarily decreased due to poison. Effect 8."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
 		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
@@ -1264,11 +1117,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5870" levels="10" name="Flash Worm" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "P. Def., Max HP, and HP Regeneration are decreased due to damage to the body, and HP is temporarily decreased due to bleeding. Effect 8."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Physical blow is received. P. Def., Max HP, and HP regeneration bonus are decreased. Inflicted with bleed and HP is temporarily decreased. Effect 8. -->
 		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill0096" />
@@ -1280,11 +1129,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5871" levels="10" name="Flash Worm" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "P. Def., Max HP, and HP Regeneration are decreased due to damage to the body, and HP is temporarily decreased due to bleeding. Effect 8."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Physical blow is received. P. Def., Max HP, and HP regeneration bonus are decreased. Inflicted with bleed and HP is temporarily decreased. Effect 8. -->
 		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="levelModifier" val="2" />
 		<set name="affectLimit" val="5;15" />
@@ -1297,11 +1142,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5872" levels="10" name="Flash Worm" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: "P. Def., Max HP, and HP Regeneration are decreased due to damage to the body, and HP is temporarily decreased due to bleeding. Effect 8."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Physical blow is received. P. Def., Max HP, and HP regeneration bonus are decreased. Inflicted with bleed and HP is temporarily decreased. Effect 8. -->
 		<table name="#magicLevel">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="levelModifier" val="2" />
 		<set name="affectLimit" val="10;10" />
@@ -1314,11 +1155,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5873" levels="5" name="Death Worm" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Life force is being sapped out by the Leech of Darkness.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Life force is being sapped out by the Leech of Darkness. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill5873" />
 		<set name="magicLevel" val="85" />
@@ -1328,11 +1165,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5874" levels="5" name="Death Worm" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Life force is being sapped out by the Leech of Darkness.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Life force is being sapped out by the Leech of Darkness. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill5873" />
 		<set name="magicLevel" val="85" />
@@ -1342,11 +1175,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5875" levels="5" name="Death Worm" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Life force is being sapped out by the Leech of Darkness.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Life force is being sapped out by the Leech of Darkness. -->
 		<table name="#affectLimit">0;0 10;10 10;10 10;10 10;10</table>
 		<set name="levelModifier" val="2" />
 		<set name="affectLimit" val="#affectLimit" />
@@ -1358,11 +1187,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5876" levels="1" name="Begrudged Haunting" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: The grudge of those who didn't die. Can die by lethal malice after 5 minutes.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- The grudge of those who didn't die. Can die by lethal malice after 5 minutes. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill5876" />
 		<set name="magicLevel" val="85" />
@@ -1376,11 +1201,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5877" levels="4" name="Chant of Worm Waking" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<table name="#magicLevel">78 80 83 85</table>
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1000" />
@@ -1393,12 +1214,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5878" levels="1" name="Cruel Puncture" >
-		<!--
-
-			Last modify: 18.04.2010
-			Description: Life force is lost and Casting Spd. is decreased.
-			Comment: Эффект с потолка
-		-->
+    <!-- Life force is lost and Casting Spd. is decreased. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill1386" />
 		<set name="reuseDelay" val="1000" />
@@ -1420,12 +1236,7 @@
 		</for>
 	</skill>
 	<skill id="5879" levels="1" name="Cruel Expunge" >
-		<!--
-
-			Last modify: 18.04.2010
-			Description: HP is decreased momentarily from bleeding. Effect 9.
-			Comment: Эффект с потолка
-		-->
+    <!-- HP is decreased momentarily from bleeding. Effect 9. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="reuseDelay" val="1000" />
@@ -1443,14 +1254,10 @@
 			<effect abnormal="bleeding" count="10" name="Bleed" stackType="Bleed" stackOrder="9" time="3" val="200">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
-
 		</for>
 	</skill>
 	<skill id="5880" levels="2" name="Vicious Mutilation" >
-		<!--
-		      Last modify: 08.01.2010
-		      Description: Speed is decreased.
-		-->
+    <!-- Speed is decreased. -->
 		<table name="#runSpd">0.8 0.7</table>
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill1160" />
@@ -1471,10 +1278,7 @@
 		</for>
 	</skill>
 	<skill id="5881" levels="2" name="Vicious Mutilation" >
-		<!--
-		      Last modify: 08.01.2010
-		      Description: P. Def., Evasion, and Speed are decreased.
-		-->
+    <!-- P. Def., Evasion, and Speed are decreased. -->
 		<table name="#Decreased">0.8 0.7</table>
 		<table name="#rEvas">3 4</table>
 		<set name="levelModifier" val="1" />
@@ -1498,10 +1302,7 @@
 		</for>
 	</skill>
 	<skill id="5882" levels="2" name="Weakened Pommel" >
-		<!--
-		      Last modify: 08.01.2010
-		      Description: A state of instant paralysis caused by the shock.
-		-->
+    <!-- A state of instant paralysis caused by the shock -->
 		<table name="#mpConsume2">79 82</table>
 		<table name="#magicLevel">79 83</table>
 		<set name="levelModifier" val="1" />
@@ -1522,12 +1323,7 @@
 		</for>
 	</skill>
 	<skill id="5883" levels="1" name="Meggling Injury" >
-		<!--
-
-			Last modify: 18.04.2010
-			Description: HP is decreased momentarily from bleeding. Effect 9.
-			Comment: Эффект с потолка
-		-->
+    <!-- HP is decreased momentarily from bleeding. Effect 9. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="reuseDelay" val="1000" />
@@ -1545,15 +1341,10 @@
 			<effect abnormal="bleeding" count="10" name="Bleed" stackType="Bleed" stackOrder="9" time="3" val="200">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
-
 		</for>
 	</skill>
 	<skill id="5884" levels="2" name="Weakened Sweep" >
-		<!--
-
-			Last modify: 18.04.2010
-			Description: Equipment are removed. Unable to use weapons while the effect lasts.
-		-->
+    <!-- Equipment are removed. Unable to use weapons while the effect lasts. -->
 		<table name="#power">2319 18664</table>
 		<set name="levelModifier" val="1" />
 		<set name="affectLimit" val="5;15" />
@@ -1575,10 +1366,7 @@
 		</for>
 	</skill>
 	<skill id="5885" levels="2" name="Weakened Sweep" >
-		<!--
-		      Last modify: 19.04.2010
-		      Description: A state of instant paralysis caused by the shock.
-		-->
+    <!-- A state of instant paralysis caused by the shock -->
 		<table name="#power">2319 18664</table>
 		<set name="levelModifier" val="1" />
 		<set name="affectLimit" val="5;15" />
@@ -1601,10 +1389,7 @@
 		</for>
 	</skill>
 	<skill id="5886" levels="1" name="Ground Shaker" >
-		<!--
-		      Last modify: 19.04.2010
-		      Description: Evasion and Speed are decreased.
-		-->
+    <!-- Evasion and Speed are decreased. -->
 		<set name="levelModifier" val="1" />
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill1160" />
@@ -1627,10 +1412,7 @@
 		</for>
 	</skill>
 	<skill id="5887" levels="1" name="Howl from Beyond" >
-		<!--
-		      Last modify: 09.01.2010
-		      Description: P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Rate, and Critical Impact are greatly decreased.
-		-->
+    <!-- P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Rate, and Critical Impact are greatly decreased. -->
 		<set name="levelModifier" val="2" />
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill1337" />
@@ -1656,11 +1438,7 @@
 		</for>
 	</skill>
 	<skill id="5888" levels="2" name="Earth Shaker" >
-		<!--
-
-			Last modify: 19.04.2010
-			Description: Temporarily cannot move due to shock and has lost the target.
-		-->
+    <!-- Temporarily cannot move due to shock and has lost the target. -->
 		<table name="#mpConsume2">82 83</table>
 		<table name="#magicLevel">83 85</table>
 		<table name="#power">1000 1500</table>
@@ -1685,12 +1463,7 @@
 		</for>
 	</skill>
 	<skill id="5889" levels="3" name="Tainted Shackle" >
-		<!--
-
-			Last modify: 18.04.2010
-			Description: Cannot act because the target is locked.
-			Comment: Эффект с потолка
-		-->
+    <!-- Cannot act because the target is locked. -->
 		<table name="#runSpd">0.8 0.6 0.4</table>
 		<table name="#mpConsume2">70 72 73</table>
 		<table name="#magicLevel">76 79 81</table>
@@ -1713,13 +1486,7 @@
 		</for>
 	</skill>
 	<skill id="5890" levels="3" name="Tainted Mass Shackle" >
-		<!--
-
-			Last modify: 18.04.2010
-			Description: Cannot act because the target is locked.
-			Comment: Эффект с потолка
-			pchayka: А зря, это простой массовый рут
-		-->
+    <!-- Cannot move because the target is locked. -->
 		<table name="#mpConsume2">82 82 83</table>
 		<table name="#magicLevel">83 84 85</table>
 		<set name="levelModifier" val="2" />
@@ -1741,11 +1508,7 @@
 		</for>
 	</skill>
 	<skill id="5891" levels="1" name="Threatening Bellow" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1000" />
 		<set name="magicLevel" val="83" />
@@ -1758,10 +1521,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5892" levels="2" name="Cunning Coercion" >
-		<!--
-			Last modify: 19.04.2010
-			Description: Makes the enemy show his back, removes its desire for attack, and cancels its target state. Temporarily inflicts mental shock on the enemy.
-		-->
+    <!-- Makes the enemy show his back, removes its desire for attack, and cancels its target state. Temporarily inflicts mental shock on the enemy. -->
 		<table name="#activateRate">40 50</table>
 		<table name="#hitTime">1000 11468</table>
 		<table name="#magicLevel">80 85</table>
@@ -1787,6 +1547,7 @@
 		</for>
 	</skill>
 	<skill id="5893" levels="1" name="Ritual of Cannibalism" >
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1000" />
 		<set name="power" val="125" />
@@ -1801,11 +1562,7 @@
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5894" levels="1" name="Mark of Despair" >
-		<!--
-
-			Last modify: 18.04.2010
-			Description: Significantly decreases P. Def., M. Def., evasion and HP. HP Recovery is limited, but P. Atk., M. Atk., Atk. Spd., Accuracy, critical damage and critical attack rate are increased.
-		-->
+    <!-- Significantly decreases P. Def., M. Def., evasion and HP. HP Recovery is limited, but P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Damage and critical attack rate are increased. -->
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1337" />
@@ -1836,10 +1593,7 @@
 		</for>
 	</skill>
 	<skill id="5895" levels="1" name="Mark of Cowardice" >
-		<!--
-		      Last modify: 19.04.2010
-		      Description: Significantly decreases HP, P. Def., M. Def. and evasion. The use of attack actions and skills and HP Recovery are limited, but movement speed is slightly increased.
-		-->
+    <!-- Significantly decreases HP, P. Def., M. Def. and evasion. The use of attack actions and skills and HP Recovery are limited, but movement speed is slightly increased. -->
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1337" />
@@ -1866,6 +1620,7 @@
 		</for>
 	</skill>
 	<skill id="5896" levels="2" name="Soulless" >
+    <!-- none -->
 		<table name="#hitTime">2000 22936</table>
 		<table name="#power">100 110</table>
 		<set name="magicType" val="MAGIC" />
@@ -1882,11 +1637,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5897" levels="1" name="Spike of Anger" >
-		<!--
-		      Last modify: 08.01.2010
-		      Description: P. Def., M. Def., Evasion, and Speed are decreased.
-		-->
+	<skill id="5897" levels="1" name="Spike of Anchor" >
+    <!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1164" />
@@ -1910,11 +1662,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5898" levels="2" name="Blast of Anger" >
-		<!--
-		      Last modify: 08.01.2010
-		      Description: P. Def., M. Def., Evasion, and Speed are decreased.
-		-->
+	<skill id="5898" levels="2" name="Blast of Anchor" >
+    <!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
 		<table name="#Decreased">0.8 0.7</table>
 		<table name="#rEvas">3 4</table>
 		<table name="#mpConsume2">110 120</table>
@@ -1944,6 +1693,7 @@
 		</for>
 	</skill>
 	<skill id="5899" levels="2" name="Burst of Pain" >
+    <!-- none -->
 		<table name="#hitTime">2000 22936</table>
 		<table name="#power">125 150</table>
 		<set name="magicType" val="MAGIC" />

@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="8300" levels="1" name="Dynasty Sickle" >
-		<!--
-			Last modify:	26.08.2009
-
-			Description:
-			Increases resistance to damage magic by 2% and resistance to Dark attribute by 2.
-		-->
+	<skill id="8300" levels="1" name="Dynasty Sigil" >
+    <!-- none -->
 		<set name="icon" val="icon.dynasty_sigil_i01" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -18,10 +13,7 @@
 		</for>
 	</skill>
 	<skill id="8301" levels="1" name="Vesper Heavy Armor Set for Adults" >
-		<!--
-		      Last modify: 21.04.2009
-		      Description: Increases Str+2, Dex-2, P. Atk./P. Def. 5.57%, Max HP 531, and resistance to sleep/hold attacks by 70% when equipped. Decreases damage received during PvP and decreases all the attacker's speeds with a fixed rate.
-		-->
+    <!-- Increases P. Atk./P. Def. by 5.57%, Max HP by 531, and Resistance to sleep/hold attacks by 70%. Decreases damage received during PVP and enemy's speed. -->
 		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -46,10 +38,7 @@
 		</for>
 	</skill>
 	<skill id="8302" levels="1" name="Vesper Noble Heavy Armor Set for Adults" >
-		<!--
-		      Last modify: 21.04.2009
-		      Description: Increases Str+2, Dex-2, P. Atk./P. Def. 5.57%, Max HP 531, and resistance to sleep/hold attacks by 70% when equipped. It opens Cloak Slot. Decreases damage received during PvP and decreases all the attacker's speeds with a fixed rate.
-		-->
+    <!-- When equipped, increases P. Atk./P. Def. by 5.57%, Max HP by 540, Resistance to sleep/hold by 70%, Accuracy by 4, Speed by 5, and M. Def by 1%. Decreases damage received during PVP and decreases all Speeds of the attacker by a certain rate when under attack. Can equip a cloak. -->
 		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -78,10 +67,7 @@
 		</for>
 	</skill>
 	<skill id="8303" levels="1" name="Vesper Light Armor Set for Adults" >
-		<!--
-		      Last modify: 21.04.2009
-		      Description: Increases Str+1, Con-2, Dex+1, P. Atk./Atk. Spd./MP Recovery Rate by 5.57%, and Maximum MP by 347.4. Decreases damage received during PvP, and blows away the opponent's target with a fixed rate when being attacked.
-		-->
+    <!-- Increases P. Atk. by 5.57%, Atk. Spd./MP Recovery by 5% and Max MP by 347. Decreases damage received during PVP and has a chance of canceling the enemy attacker's target. -->
 		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -106,10 +92,7 @@
 		</for>
 	</skill>
 	<skill id="8304" levels="1" name="Vesper Noble Light Armor Set for Adults" >
-		<!--
-		      Last modify: 21.04.2009
-		      Description: Increases Str+1, Con-2, Dex+1, P. Atk./Atk. Spd./MP Recovery Rate by 5.57%, and Maximum MP by 347.4. It opens Cloak Slot. Decreases damage received during PvP, and blows away the opponent's target with a fixed rate when being attacked.
-		-->
+    <!-- When equipped, increases P. Atk. by 5.57%, Atk. Spd./MP Recovery by 5%, Max MP by 354, Evasion by 3, Critical Damage by 172, and Resistance to Paralysis by 50%. Decreases damage received during PVP and cancels the attacker's target by a certain rate when under attack. Can equip a cloak. -->
 		<set name="icon" val="icon.armor_t95_u_i01" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -138,10 +121,7 @@
 		</for>
 	</skill>
 	<skill id="8305" levels="1" name="Vesper Robe Set for Adults" >
-		<!--
-		      Last modify: 21.04.2009
-		      Description: Increases Int+1, Men-2, Wit+1, M. Atk. 8.47%, Casting Speed 15%, MP Recovery Rate 5.57%, and resistance to Stun Attacks by 50%, and decreases the damage to be cancelled by magic by 30 when equipped. Decreases damage received during PvP, and decreases critical rate and critical damage with a fixed rate when being attacked.
-		-->
+    <!-- Increases M. Atk. by 8.47%, Casting Spd. by 15%, MP Recovery by 5% and Resistance to stun attacks by 50%. Decreases magic canceling damage by 30. Decreases damage received during PVP, as well as enemies' critical hit rate and Critical Damage. -->
 		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -167,10 +147,7 @@
 		</for>
 	</skill>
 	<skill id="8306" levels="1" name="Vesper Noble Robe Set for Adults" >
-		<!--
-		      Last modify: 21.04.2009
-		      Description: Increases Int+1, Men-2, Wit+1, M. Atk. 8.47%, Casting Speed 15%, MP Recovery Rate 5.57%, and resistance to Stun Attacks by 50%, and decreases the damage to be cancelled by magic by 30 when equipped. It opens Cloak Slot. Decreases damage received during PvP, and decreases critical rate and critical damage with a fixed rate when being attacked.
-		-->
+    <!-- When equipped, increases M. Atk. by 8.47%, Casting Spd. by 15%, MP Recovery by 5%, Resistance to stun by 50%, and Speed by 7. Decreases magic cancelling damage by 30 and MP consumption for magic skills by 3%. Decreases damage received during PVP, Critical Rate received when attack at a fixed rate, and the damage incurred on a critical attack. Can equip a cloak. -->
 		<set name="icon" val="icon.armor_t96_u_i01" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -199,11 +176,7 @@
 		</for>
 	</skill>
 	<skill id="8307" levels="1" name="Boing Hammer's Effect of Doubt" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Enlarges the target's head during a general attack.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Has a chance to increase the size of the target's head during a general attack. -->
 		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -214,11 +187,8 @@
 		</triggers>
 		<for />
 	</skill>
-	<skill id="8308" levels="1" name="Red Talisman - Guardian of the Territory" >
-		<!--
-		      Last modify: 26.06.2009
-		      Description: Immediately recovers 1200 CP and increases Max CP to 1200.
-		-->
+	<skill id="8308" levels="1" name="Red Talisman of Territory Guardian" >
+    <!-- Immediately recovers 1200 CP and increases Max CP to 1200. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="reuseDelay" val="360000" />
@@ -240,11 +210,8 @@
 			<effect count="1" name="CombatPointHealOverTime" time="0" val="100" />
 		</for>
 	</skill>
-	<skill id="8309" levels="1" name="Red Talisman - Territory Convoy" >
-		<!--
-		      Last modify: 26.06.2009
-		      Description: Immediately recovers 800 CP and increases Max CP to 800.
-		-->
+	<skill id="8309" levels="1" name="Red Talisman of Territory Convoy" >
+    <!-- Immediately recovers 800 CP and increases Max CP to 800. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="reuseDelay" val="360000" />
@@ -267,12 +234,7 @@
 		</for>
 	</skill>
 	<skill id="8310" levels="1" name="Arcana Sigil" >
-		<!--
-			Last modify:	26.08.2009
-
-			Description:
-			Increases resistance to damage magic by 2% and decreases magic canceling damage by 13.
-		-->
+    <!-- Increases M. Def by 2% and decreases magic canceling damage by 13. -->
 		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -284,12 +246,7 @@
 		</for>
 	</skill>
 	<skill id="8311" levels="1" name="Dynasty Sigil" >
-		<!--
-			Last modify:	26.08.2009
-
-			Description:
-			Increases resistance to damage magic by 2% and resistance to Dark attribute by 2.
-		-->
+    <!-- Increases M. Def by 2% and Resistance to Dark by 2. -->
 		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -300,12 +257,8 @@
 			<add order="0x40" stat="defenceUnholy" val="2" />
 		</for>
 	</skill>
-	<skill id="8312" levels="2" name="Special Ability Cheap Shot" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: MP consumption is decreased.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="8312" levels="2" name="Special Ability: Cheap Shot" >
+    <!-- Decreases MP consumption. -->
 		<table name="#magicLevel">80 84</table>
 		<set name="icon" val="icon.skill0198" />
 		<set name="magicLevel" val="#magicLevel" />
@@ -314,20 +267,6 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8313" levels="9" name="Earring of Protection - Gludio" >
-		<!--
-		      Last modify: 01.07.2010
-
-		      Description:
-		      1 lvl - Earring of Protection - Gludio, Stun Attack +15%, Bleed Defense +15%, Water Power Defense +8.
-		      2 lvl - Earring of Protection - Dion, Hold Attack +15%, Poison Defense +15%, Divine Power Defense +8.
-		      3 lvl - Earring of Protection - Giran, Bleed Attack +15%, Paralysis Defense +15%, Wind Power Defense +8.
-		      4 lvl - Earring of Protection - Oren, Paralysis attack +15%, hold defense +15%, darkness defense +8.
-		      5 lvl - Earring of Protection - Aden, Mind Attack +15%, Stun Defense +15%, Earth Power Defense +8.
-		      6 lvl - Earring of Protection - Innadril, Sleep Attack +15%, Stun Defense +15%, Water Power Defense +8.
-		      7 lvl - Earring of Protection - Goddard, Stun Attack +15%, Sleep Defense +15%, Fire Power Defense +8.
-		      8 lvl - Earring of Protection - Rune, Poison Attack +15%, Hold Defense +15%, Fire Power Defense +8.
-		      9 lvl - Earring of Protection - Schuttgart, Hold Attack +15%, Fear Defense +15%, Wind Power Defense +8.
-		-->
 		<table name="#bleedResist">15 0 0 0 0 0 0 0 0</table>
 		<table name="#stunPower">15 0 0 0 0 0 15 0 0</table>
 		<table name="#poisonResist">0 15 0 0 0 0 0 0 0</table>
@@ -375,11 +314,8 @@
 			<add order="0x40" stat="defenceHoly" val="#holyRcpt" />
 		</for>
 	</skill>
-	<skill id="8314" levels="1" name="Release Seal on Agathion - Saerom" >
-		<!--
-			Last modify: 21.04.2009
-			Description: Summon an Agathion.
-		-->
+	<skill id="8314" levels="1" name="Release Agathion's Seal - Neolithica" >
+    <!-- Removes the Agathion's seal. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="magicLevel" val="85" />
@@ -393,11 +329,7 @@
 		<set name="summonType" val="agathion" />
 	</skill>
 	<skill id="8315" levels="1" name="Santa Claus' Blessed Weapon" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Santa Claus' Blessed Weapon
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLevel" val="10" />
 		<set name="target" val="TARGET_NONE" />
@@ -405,11 +337,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8316" levels="1" name="Santa Claus' Blessed Weapon" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Santa Claus' Blessed Weapon
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLevel" val="20" />
 		<set name="target" val="TARGET_NONE" />
@@ -417,11 +345,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8317" levels="1" name="Santa Claus' Blessed Weapon" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Santa Claus' Blessed Weapon
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLevel" val="30" />
 		<set name="target" val="TARGET_NONE" />
@@ -429,11 +353,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8318" levels="1" name="Santa Claus' Blessed Weapon" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Santa Claus' Blessed Weapon
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLevel" val="40" />
 		<set name="target" val="TARGET_NONE" />
@@ -441,11 +361,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8319" levels="1" name="Santa Claus' Blessed Weapon" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Santa Claus' Blessed Weapon
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLevel" val="50" />
 		<set name="target" val="TARGET_NONE" />
@@ -453,11 +369,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8320" levels="1" name="Santa Claus' Blessed Weapon" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Santa Claus' Blessed Weapon
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_NONE" />
@@ -465,11 +377,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8321" levels="1" name="Santa Claus' Blessed Weapon" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Santa Claus' Blessed Weapon
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLevel" val="70" />
 		<set name="target" val="TARGET_NONE" />
@@ -477,11 +385,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8322" levels="1" name="Santa Claus' Blessed Weapon" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Santa Claus' Blessed Weapon
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Santa Claus' Blessed Weapon -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_NONE" />
@@ -489,11 +393,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8323" levels="1" name="Notifier" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Notifies about the Agathion's New Year's gift resupply time.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- Notifies about the Agathion's New Year's gift resupply time. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill5239" />
 		<set name="reuseDelay" val="15000" />
@@ -503,11 +403,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8324" levels="1" name="Warrior's Shirt" >
-		<!--
-			Last modify:	08.07.2009
-
-			Description: The maximum CP is increased.
-		-->
+    <!-- Increases Max CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -518,11 +414,7 @@
 		</for>
 	</skill>
 	<skill id="8325" levels="1" name="Wild Rose Pig Candy" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Head is enlarged.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 30-6-2009  11:35
-		-->
+    <!-- Head is enlarged. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_pig_candy_i00" />
 		<set name="reuseDelay" val="20000" />
@@ -533,22 +425,15 @@
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="8326" levels="1" name="Wild Rose Pig Candy" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: Moving speed increases by 20.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 30-6-2009  11:35
-		-->
+    <!-- Increases Speed by 20. -->
 		<set name="icon" val="icon.etc_pig_candy_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8327" levels="1" name="Release Seal on Agathion - Juju" >
-		<!--
-			Last modify: 31.10.2009
-			Description: Summon an Agathion.
-		-->
+	<skill id="8327" levels="1" name="Release Agathion's Seal - Juju" >
+    <!-- Removes the Agathion's seal. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="magicLevel" val="85" />
@@ -561,11 +446,8 @@
 		<set name="npcId" val="16064" />
 		<set name="summonType" val="agathion" />
 	</skill>
-	<skill id="8328" levels="1" name="Release Seal on Agathion - Oink oink" >
-		<!--
-			Last modify:	11.01.2010
-			Description:	Removes the seal on the Agathion.
-		-->
+	<skill id="8328" levels="1" name="Release Agathion's Seal - Oink oink" >
+    <!-- Removes the Agathion's seal. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="magicLevel" val="85" />
@@ -579,7 +461,7 @@
 		<set name="summonType" val="agathion" />
 	</skill>
 	<skill id="8329" levels="1" name="Summon Friend" >
-		<!-- Description: Summons your friend. -->
+    <!-- Summons your friend. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="reuseDelay" val="3600000" />
@@ -590,11 +472,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="8330" levels="1" name="Release Seal on Agathion - Dawn" >
-		<!--
-			Last modify:	11.01.2010
-			Description:	Removes the seal on the Agathion.
-		-->
+	<skill id="8330" levels="1" name="Release Agathion's Seal - Dawn" >
+    <!-- Removes the Agathion's seal. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="magicLevel" val="85" />
@@ -607,10 +486,8 @@
 		<set name="npcId" val="16066" />
 		<set name="summonType" val="agathion" />
 	</skill>
-	<skill id="8331" levels="1" name="Blue Talisman - Buff Cancel" >
-		<!--
-			Description: Cancels the buffs of nearby enemies by using the power of the talisman.
-		-->
+	<skill id="8331" levels="1" name="Blue Talisman of Buff Cancel" >
+    <!-- Cancels the buffs of nearby enemies by with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="affectLimit" val="5;5" />
 		<set name="icon" val="icon.etc_talisman_i01" />
@@ -635,10 +512,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="8332" levels="1" name="Blue Talisman - Buff Steal" >
-		<!--
-			Description: Steals the enemy's abnormal status using the talisman's power.
-		-->
+	<skill id="8332" levels="1" name="Blue Talisman of Buff Steal" >
+    <!-- Steals the enemy's abnormal status using the talisman's power. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="reuseDelay" val="360000" />
@@ -656,8 +531,8 @@
 		<set name="referenceItemId" val="14811" />
 		<set name="referenceItemMpConsume" val="6" />
 	</skill>
-	<skill id="8333" levels="1" name="Red Talisman - Territory Guard" >
-		<!-- Description: Increases maximum CP 1500 and recovers CP by the increased amount using the power of the talisman. -->
+	<skill id="8333" levels="1" name="Red Talisman of Territory Guard" >
+    <!-- Increases Max CP 1500 and recovers CP by the increased amount with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="reuseDelay" val="300000" />
@@ -678,8 +553,8 @@
 			<effect count="1" name="CombatPointHealOverTime" time="0" val="1500" />
 		</for>
 	</skill>
-	<skill id="8334" levels="1" name="Blue Talisman - Lord's Divine Protection" >
-		<!-- Description: Damage received during PVP is decreased 75% using the power of the talisman. -->
+	<skill id="8334" levels="1" name="Blue Talisman of Lord's Divine Protection" >
+    <!-- Decreases damage received during PVP by 75% with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="reuseDelay" val="360000" />
@@ -700,8 +575,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="8335" levels="1" name="White Talisman - Attribute Resistance">
-		<!-- For 10 seconds, increases resistance to all attributes by 15 using the power of the talisman. -->
+	<skill id="8335" levels="1" name="White Talisman of Attribute Resistance">
+    <!-- For 10 seconds, increases Resistance to all attributes by 15 with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="reuseDelay" val="360000" />
@@ -728,7 +603,7 @@
 		</for>
 	</skill>
 	<skill id="8336" levels="1" name="Guardian's Strider Mount" >
-		<!-- Description: Mounts a Guardian's Strider. -->
+    <!-- Mounts a Guardian's Strider. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="target" val="TARGET_NONE" />
@@ -736,7 +611,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8337" levels="1" name="Weight Up" >
-		<!-- Description: Increases the weight limit by 5000. -->
+    <!-- Increases Weight Limit by 5000. -->
 		<set name="icon" val="icon.skill3238" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -746,10 +621,8 @@
 			<add order="0x40" stat="maxLoad" val="5000" />
 		</for>
 	</skill>
-	<skill id="8338" levels="4" name="Low-grade Magic Rune Clip Iron Belt" >
-		<!--
-			Description: Increases HP regeneration when the belt is equipped.
-		-->
+	<skill id="8338" levels="4" name="Low-Grade Magic Rune Clip Iron Belt" >
+    <!-- Increases HP regeneration when the belt is equipped. -->
 		<table name="#rate">0.4 1 1.4 2</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLevel" val="1" />
@@ -760,10 +633,8 @@
 			<add order="0x40" stat="regHp" val="#rate" />
 		</for>
 	</skill>
-	<skill id="8339" levels="4" name="Low-grade Magic Rune Clip Mithril Belt" >
-		<!--
-			Description: Increases HP regeneration when the belt is equipped.
-		-->
+	<skill id="8339" levels="4" name="Low-Grade Magic Rune Clip Mithril Belt" >
+    <!-- Increases HP regeneration when the belt is equipped. -->
 		<table name="#rate">0.78 1.95 2.73 3.9</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLevel" val="1" />
@@ -774,10 +645,8 @@
 			<add order="0x40" stat="regHp" val="#rate" />
 		</for>
 	</skill>
-	<skill id="8340" levels="4" name="Low-grade Magic Rune Clip Iron Belt" >
-		<!--
-			Description: Increases MP regeneration when the belt is equipped.
-		-->
+	<skill id="8340" levels="4" name="Low-Grade Magic Rune Clip Iron Belt" >
+    <!-- Increases MP regeneration when the belt is equipped. -->
 		<table name="#rate">0.14 0.35 0.49 0.7</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLevel" val="1" />
@@ -788,10 +657,8 @@
 			<add order="0x40" stat="regMp" val="#rate" />
 		</for>
 	</skill>
-	<skill id="8341" levels="4" name="Low-grade Magic Rune Clip Mithril Belt" >
-		<!--
-			Description: Increases MP regeneration when the belt is equipped.
-		-->
+	<skill id="8341" levels="4" name="Low-Grade Magic Rune Clip Mithril Belt" >
+    <!-- Increases MP regeneration when the belt is equipped. -->
 		<table name="#rate">0.3 0.75 1.05 1.5</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLevel" val="1" />
@@ -802,10 +669,8 @@
 			<add order="0x40" stat="regMp" val="#rate" />
 		</for>
 	</skill>
-	<skill id="8342" levels="4" name="Low-grade Magic Ornament Iron Belt" >
-		<!--
-			Description: Ordinary damage is increase during PVP when the belt is equipped.
-		-->
+	<skill id="8342" levels="4" name="Low-Grade Magic Ornament Iron Belt" >
+    <!-- Increases ordinary damage during PVP when the belt is equipped. -->
 		<table name="#pvpDam">1.006 1.015 1.021 1.03</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLevel" val="1" />
@@ -816,10 +681,8 @@
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="#pvpDam" />
 		</for>
 	</skill>
-	<skill id="8343" levels="4" name="Low-grade Magic Ornament Iron Belt" >
-		<!--
-			Description: Skill/magic damage is increased during PVP when the belt is equipped.
-		-->
+	<skill id="8343" levels="4" name="Low-Grade Magic Ornament Iron Belt" >
+    <!-- Increases skill/magic damage during PVP when the belt is equipped. -->
 		<table name="#pvpDam">1.006 1.015 1.021 1.03</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLevel" val="1" />
@@ -831,10 +694,8 @@
             <mul order="0x30" stat="pvpMagicSkillDmgBonus" val="#pvpDam" />
 		</for>
 	</skill>
-	<skill id="8344" levels="4" name="Low-grade Magic Ornament Iron Belt" >
-		<!--
-			Description: Received damage is decreased during PVP when the belt is equipped.
-		-->
+	<skill id="8344" levels="4" name="Low-Grade Magic Ornament Iron Belt" >
+    <!-- Decreases damage received during PVP when the belt is equipped. -->
 		<table name="#PvPDefence">1.006 1.015 1.021 1.03</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLevel" val="1" />
@@ -847,10 +708,8 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="#PvPDefence" />
 		</for>
 	</skill>
-	<skill id="8345" levels="4" name="Low-grade Magic Ornament Mithril Belt" >
-		<!--
-			Description: Ordinary damage is increase during PVP when the belt is equipped.
-		-->
+	<skill id="8345" levels="4" name="Low-Grade Magic Ornament Mithril Belt" >
+    <!-- Increases ordinary damage during PVP when the belt is equipped. -->
 		<table name="#pvpDam">1.01 1.025 1.035 1.05</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLevel" val="1" />
@@ -861,10 +720,8 @@
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="#pvpDam" />
 		</for>
 	</skill>
-	<skill id="8346" levels="4" name="Low-grade Magic Ornament Mithril Belt" >
-		<!--
-			Description: Skill/magic damage is increased during PVP when the belt is equipped.
-		-->
+	<skill id="8346" levels="4" name="Low-Grade Magic Ornament Mithril Belt" >
+    <!-- Increases skill/magic damage during PVP when the belt is equipped. -->
 		<table name="#pvpDam">1.01 1.025 1.035 1.05</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLevel" val="1" />
@@ -876,10 +733,8 @@
             <mul order="0x30" stat="pvpMagicSkillDmgBonus" val="#pvpDam" />
 		</for>
 	</skill>
-	<skill id="8347" levels="4" name="Low-grade Magic Ornament Mithril Belt" >
-		<!--
-			Description: Received damage is decreased during PVP when the belt is equipped.
-		-->
+	<skill id="8347" levels="4" name="Low-Grade Magic Ornament Mithril Belt" >
+    <!-- Decreases damage received during PVP when the belt is equipped. -->
 		<table name="#PvPDefence">1.012 1.03 1.042 1.06</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLevel" val="1" />
@@ -893,10 +748,7 @@
 		</for>
 	</skill>
 	<skill id="8348" levels="2" name="Royal Guard Earring - Gludio" >
-		<!--
-		      Increases resistance to Bleed by 15%, effectiveness of Shock attacks by 15% and Water resistance by 8.
-		      Increases Max CP by 5%, resistance to Bleed attacks by 15%, effectiveness of Shock attacks by 15% and Water resistance by 10.
-		-->
+    <!-- Increases Resistance to Bleed by 15%, effectiveness of Shock attacks by 15% and Resistance to Water by 8. -->
 		<table name="#maxCp">1 1.05</table>
 		<table name="#waterRcpt">8 10</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
@@ -912,10 +764,7 @@
 		</for>
 	</skill>
 	<skill id="8349" levels="2" name="Royal Guard Earring - Dion" >
-		<!--
-		      Increases resistance to Poison attacks by 15%, effectiveness of Hold attacks by 15% and Divine resistance by 8.
-		      Increases Max CP by 5%, resistance to Posion attacks by 15%, effectiveness of Hold attacks by 15% and Divine resistance by 10.
-		-->
+    <!-- Increases Resistance to Poison attacks by 15%, effectiveness of Hold attacks by 15% and Resistance to Holy by 8. -->
 		<table name="#maxCp">1 1.05</table>
 		<table name="#holyRcpt">8 10</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
@@ -931,10 +780,7 @@
 		</for>
 	</skill>
 	<skill id="8350" levels="2" name="Royal Guard Earring - Giran" >
-		<!--
-		      Increases resistance to Paralysis attacks by 15%, effectiveness of Bleed attacks by 15% and Wind resistance by 8.	none	none
-		      Increases Max CP by 5%, resistance to Paralysis attacks by 15%, effectiveness of Bleed attacks by 15% and Wind resistance by 10.
-		-->
+    <!-- Increases Resistance to Paralysis attacks by 15%, effectiveness of Bleed attacks by 15% and Resistance to Wind by 8. -->
 		<table name="#maxCp">1 1.05</table>
 		<table name="#windRcpt">8 10</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
@@ -950,10 +796,7 @@
 		</for>
 	</skill>
 	<skill id="8351" levels="2" name="Royal Guard Earring - Oren" >
-		<!--
-		      Increases resistance to Hold attacks by 15%, effectiveness of Paralysis attacks by 15% and Darkness resistance by 8.
-		      Increases Max CP by 5%, resistance to Hold attacks by 15%, effectiveness of Paralysis attacks by 15% and Darkness resistance by 10.
-		-->
+    <!-- Increases Resistance to Hold attacks by 15%, effectiveness of Paralysis attacks by 15% and Resistance to Dark by 8. -->
 		<table name="#maxCp">1 1.05</table>
 		<table name="#unholyRcpt">8 10</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
@@ -969,10 +812,7 @@
 		</for>
 	</skill>
 	<skill id="8352" levels="2" name="Royal Guard Earring - Aden" >
-		<!--
-		      Increases resistance to Shock attacks by 15%, effectiveness of Mental attacks by 15% and Earth resistance by 8.
-		      Increases Max CP by 5% and resistance to Shock attacks by 15%, bonus for Abnormal Mind attacks by 15% and Earth resistance by 10.
-		-->
+    <!-- Increases Resistance to Shock attacks by 15%, effectiveness of Mental attacks by 15% and Resistance to Earth by 8. -->
 		<table name="#maxCp">1 1.05</table>
 		<table name="#earthRcpt">8 10</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
@@ -988,10 +828,7 @@
 		</for>
 	</skill>
 	<skill id="8353" levels="2" name="Royal Guard Earring - Innadril" >
-		<!--
-		      Increases resistance to Shock attacks by 15%, effectiveness of Sleep attacks by 15% and Water resistance by 8.
-		      Increases Max CP by 5% and resistance to Shock by 15%, effectiveness of Sleep attacks by 15% and Water resistance by 10.
-		-->
+    <!-- Increases Resistance to Shock attacks by 15%, effectiveness of Sleep attacks by 15% and Resistance to Water by 8. -->
 		<table name="#maxCp">1 1.05</table>
 		<table name="#waterRcpt">8 10</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
@@ -1007,10 +844,7 @@
 		</for>
 	</skill>
 	<skill id="8354" levels="2" name="Royal Guard Earring - Goddard" >
-		<!--
-		      Increases resistance to Sleep by 15%, effectiveness of Shock attacks by 15% and Fire resistance by 8.
-		      Increases Max CP by 5% and resistance to Sleep attacks by 15%, effectiveness of Shock attacks by 15% and Fire resistance by 10.
-		-->
+    <!-- Increases Resistance to Sleep by 15%, effectiveness of Shock attacks by 15% and Resistance to Fire by 8. -->
 		<table name="#maxCp">1 1.05</table>
 		<table name="#fireRcpt">8 10</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
@@ -1026,10 +860,7 @@
 		</for>
 	</skill>
 	<skill id="8355" levels="2" name="Royal Guard Earring - Rune" >
-		<!--
-		      Increases resistance to Hold by 15%, effectiveness of Poison attacks by 15% and Fire resistance by 8.
-		      Increases Max CP by 5%, resistance to Hold by 15%, effectiveness of Poison attacks by 15% and Fire resistance by 10.
-		-->
+    <!-- Increases Resistance to Hold by 15%, effectiveness of Poison attacks by 15% and Resistance to Fire by 8. -->
 		<table name="#maxCp">1 1.05</table>
 		<table name="#fireRcpt">8 10</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
@@ -1045,10 +876,7 @@
 		</for>
 	</skill>
 	<skill id="8356" levels="2" name="Royal Guard Earring - Schuttgart" >
-		<!--
-		      Increases resistance to mental attacks by 15%, effectiveness of Hold attacks by 15% and Wind resistance by 8.
-		      Increases Max CP by 5%, resistance to mental attacks by 15%, effectiveness of Hold attacks by 15% and Wind resistance by 10.
-		-->
+    <!-- Increases Resistance to mental attacks by 15%, effectiveness of Hold attacks by 15% and Resistance to Wind by 8. -->
 		<table name="#maxCp">1 1.05</table>
 		<table name="#windRcpt">8 10</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
@@ -1064,10 +892,7 @@
 		</for>
 	</skill>
 	<skill id="8357" levels="1" name="Einhasad's Strike" >
-		<!--  Last modify: 16.06.2010
-			  @pchayka
-		      Description: "Einhasad's sword bestowed by Emperor Shunaiman of Elmore-Aden. WIth the pride of being chosen, he can fiercely attack the enemies on the front line."
-		-->
+    <!-- Einhasad's sword bestowed by Emperor Shunaiman of Elmore-Aden. With the pride of being chosen, he can fiercely attack the enemies on the front line. -->
 		<set name="affectLimit" val="5;15" />
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="coolTime" val="700" />
@@ -1087,12 +912,8 @@
 			<player instance_zone="112" />
 		</cond>
 	</skill>
-	<skill id="8358" levels="1" name="Remove the seal of an Agathion - Towbat" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: Removes seal of Agathion.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+	<skill id="8358" levels="1" name="Release Agathion's Seal - Towbat" >
+    <!-- Removes the Agathion's seal. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="magicLevel" val="85" />
@@ -1102,11 +923,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8359" levels="1" name="Notifier" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: It is time to return the Proof of Time and Space that the Agathion gave you.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-12-2009  19:13
-		-->
+    <!-- It is time to return the Proof of Time and Space that the Agathion gave you. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill5239" />
 		<set name="reuseDelay" val="15000" />
@@ -1115,12 +932,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="8360" levels="1" name="Energy Maintenance Effect" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: Energy is maintained for 30 minutes when acquiring Exp.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+	<skill id="8360" levels="1" name="Vitality Maintenance Effect" >
+    <!-- Maintains Vitality for 30 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="reuseDelay" val="82800000" />
@@ -1129,11 +942,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8361" levels="1" name="Sixth Anniversary Party Earring" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: Increases resistance to shock/mind attack by 20% and shock/mind attack bonus by 20%. Recovers 4% of the damage to the enemy as your HP. Excludes damage caused by skills and long-range attack.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- Increases Resistance to shock/mind attack by 20% and shock/mind attack bonus by 20%. Recovers 4% of the damage to the enemy as your HP with a certain probability. -->
 		<set name="icon" val="icon.event_six_party_earing_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_NONE" />
@@ -1141,6 +950,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8362" levels="1" name="Beast Training - Release">
+    <!-- Release a beast. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill8362" />
 		<set name="reuseDelay" val="1000" />
@@ -1156,6 +966,7 @@
 		<set name="target" val="TARGET_FEEDABLE_BEAST" />
 	</skill>
 	<skill id="8363" levels="1" name="Beast Training - Accompany">
+    <!-- Order a beast to accompany. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill8363" />
 		<set name="reuseDelay" val="1000" />
@@ -1169,6 +980,7 @@
 		<set name="useSS" val="false" />
 	</skill>
 	<skill id="8364" levels="1" name="Beast Training - Use Special Ability">
+    <!-- Order a beast to use special ability. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill8364" />
 		<set name="reuseDelay" val="1000" />
@@ -1182,11 +994,7 @@
 		<set name="useSS" val="false" />
 	</skill>
 	<skill id="8365" levels="1" name="Dynasty Tunic" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "Increases Magic Speed/Max. MP/Resistance to Darkness Attribute, and decreases MP Consumption/magic cancel rate against damage."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- Increases Casting Spd./Max MP/Resistance to Dark, and decreases MP Consumption/magic cancel rate against damage. -->
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -1194,35 +1002,23 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8366" levels="1" name="Dynasty Jewel Leather Armor" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: Increases P. Atk./Max. HP/Critical Rate/Resistance to Darkness Attribute/Critical Damage.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- Increases P. Atk./Max HP/Critical Rate/Resistance to Dark/Critical Damage. -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8367" levels="1" name="Dynasty Jewel Leather Mail" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "Increases P. Atk./Max. HP/Resistance to Darkness Attribute, and decreases MP consumption."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+	<skill id="8367" levels="1" name="Dynasty Jewel Leather Armor" >
+    <!-- Increases P. Atk./Max HP/Resistance to Dark, and decreases MP consumption. -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8368" levels="1" name="Dynasty Jewel Leather Mail" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "Increases Magic Speed/Max. MP/Resistance to Darkness Attribute, and decreases MP Consumption/magic cancel rate against damage."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+	<skill id="8368" levels="1" name="Dynasty Jewel Leather Armor" >
+    <!-- Increases Casting Spd./Max MP/Resistance to Dark, and decreases MP Consumption/magic cancel rate against damage. -->
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -1230,11 +1026,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8369" levels="1" name="Halloween Pumpkin Card" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: Showed the Halloween Pumpkin Card.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- Showed the Halloween Pumpkin Card. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.ev_jack_ghost_i00" />
 		<set name="reuseDelay" val="3000" />
@@ -1245,11 +1037,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8370" levels="1" name="Rotten Pumpkin Card" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: Showed the Rotten Pumpkin Card.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- Showed the Rotten Pumpkin Card. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.ev_rotten_jack_ghost_i00" />
 		<set name="reuseDelay" val="3000" />
@@ -1260,6 +1048,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8371" levels="1" name="Transform Halloween Pumpkin" >
+    <!-- Transforms into a pumpkin ghost. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="reuseDelay" val="3000" />
@@ -1274,11 +1063,7 @@
 		</for>
 	</skill>
 	<skill id="8372" levels="1" name="Super Strong Giant's Mask" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, P. Atk. by 5%, and earth tolerance by 5."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, P. Atk. by 5%, and Resistance to Earth by 5. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.ev_frankenstein_mask_i00" />
 		<set name="reuseDelay" val="7200000" />
@@ -1295,11 +1080,7 @@
 		</cond>
 	</skill>
 	<skill id="8373" levels="1" name="Silent Scream's Mask" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Critical rate by 5%, and wind tolerance by 5."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Critical rate by 5%, and Resistance to Wind by 5. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.ev_scream_mask_i00" />
 		<set name="reuseDelay" val="7200000" />
@@ -1316,11 +1097,7 @@
 		</cond>
 	</skill>
 	<skill id="8374" levels="1" name="Wrathful Spirit's Mask" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, moving speed by 5%, and fire tolerance by 5."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Speed by 5%, and Resistance to Fire by 5. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.ev_doccabi_mask_i00" />
 		<set name="reuseDelay" val="7200000" />
@@ -1337,11 +1114,7 @@
 		</cond>
 	</skill>
 	<skill id="8375" levels="1" name="Unrotten Corpse's Mask" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, skill's MP consumption by 5%, and darkness tolerance by 5."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, skill's MP consumption by 5%, and Resistance to Dark by 5. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.ev_mummy_mask_i00" />
 		<set name="reuseDelay" val="7200000" />
@@ -1358,11 +1131,7 @@
 		</cond>
 	</skill>
 	<skill id="8376" levels="1" name="Planet X235 Alien Mask's Effect" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, damage magic's Prominent Damage occurrence by 2, and water tolerance by 5."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- Mask's effect: for 60 minutes, increases Max HP and Max MP by 10%, magic damage's Prominent Damage occurrence by 2, and Resistance to Water by 5. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.ev_alien_mask_i00" />
 		<set name="reuseDelay" val="7200000" />
@@ -1379,11 +1148,7 @@
 		</cond>
 	</skill>
 	<skill id="8377" levels="1" name="Golden Jack O'Lantern Mask's Effect" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "Mask's effect. For 60 minutes, increases Max HP and Max MP by 20%, moving speed by 10%, and resistance to debuffs by 10%."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 20%, Speed by 10%, and Resistance to debuffs by 10%. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.ev_golden_jack0_mask_i00" />
 		<set name="reuseDelay" val="82800000" />
@@ -1400,6 +1165,7 @@
 		</cond>
 	</skill>
 	<skill id="8378" levels="1" name="Beast Training - Release All">
+    <!-- Release all beasts. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill8378" />
 		<set name="reuseDelay" val="1000" />
@@ -1413,10 +1179,7 @@
 		<set name="useSS" val="false" />
 	</skill>
 	<skill id="8379" levels="2" name="Royal Guard Ring - Gludio" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases earth type defense by 12;15.
-		-->
+    <!-- Increases Resistance to Earth by 12. -->
 		<table name="#elementDef">12 15</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="magicLevel" val="80" />
@@ -1428,10 +1191,7 @@
 		</for>
 	</skill>
 	<skill id="8380" levels="2" name="Royal Guard Ring - Dion" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases water type defense by 12;15.
-		-->
+    <!-- Increases Resistance to water by 12. -->
 		<table name="#elementDef">12 15</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="magicLevel" val="80" />
@@ -1443,10 +1203,7 @@
 		</for>
 	</skill>
 	<skill id="8381" levels="2" name="Royal Guard Ring - Giran" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases fire type defense by 12;15.
-		-->
+    <!-- Increases Resistance to fire by 12. -->
 		<table name="#elementDef">12 15</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="magicLevel" val="80" />
@@ -1458,10 +1215,7 @@
 		</for>
 	</skill>
 	<skill id="8382" levels="2" name="Royal Guard Ring - Oren" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases earth type defense by 12;15.
-		-->
+    <!-- Increases Resistance to Earth by 12. -->
 		<table name="#elementDef">12 15</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="magicLevel" val="80" />
@@ -1473,10 +1227,7 @@
 		</for>
 	</skill>
 	<skill id="8383" levels="2" name="Royal Guard Ring - Aden" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases divinity type defense by 12;15.
-		-->
+    <!-- Increases Resistance to Holy by 12. -->
 		<table name="#elementDef">12 15</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="magicLevel" val="80" />
@@ -1488,10 +1239,7 @@
 		</for>
 	</skill>
 	<skill id="8384" levels="2" name="Royal Guard Ring - Innadril" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases divinity type defense by 12;15.
-		-->
+    <!-- Increases Resistance to Holy by 12. -->
 		<table name="#elementDef">12 15</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="magicLevel" val="80" />
@@ -1503,10 +1251,7 @@
 		</for>
 	</skill>
 	<skill id="8385" levels="2" name="Royal Guard Ring - Goddard" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases darkness type defense by 12;15.
-		-->
+    <!-- Increases Resistance to Dark by 12. -->
 		<table name="#elementDef">12 15</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="magicLevel" val="80" />
@@ -1518,10 +1263,7 @@
 		</for>
 	</skill>
 	<skill id="8386" levels="2" name="Royal Guard Ring - Rune" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases wind type defense by 12;15.
-		-->
+    <!-- Increases Resistance to wind by 12. -->
 		<table name="#elementDef">12 15</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="magicLevel" val="80" />
@@ -1533,10 +1275,7 @@
 		</for>
 	</skill>
 	<skill id="8387" levels="2" name="Royal Guard Ring - Schuttgart" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases darkness type defense by 12;15.
-		-->
+    <!-- Increases Resistance to Dark by 12. -->
 		<table name="#elementDef">12 15</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="magicLevel" val="80" />
@@ -1548,10 +1287,7 @@
 		</for>
 	</skill>
 	<skill id="8388" levels="2" name="Royal Guard Necklace - Gludio" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases water type defense by 26;30.
-		-->
+    <!-- Increases Resistance to water by 26. -->
 		<table name="#elementDef">26 30</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="magicLevel" val="80" />
@@ -1563,10 +1299,7 @@
 		</for>
 	</skill>
 	<skill id="8389" levels="2" name="Royal Guard Necklace - Dion" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases divinity type defense by 26;30.
-		-->
+    <!-- Increases Resistance to Holy by 26. -->
 		<table name="#elementDef">26 30</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="magicLevel" val="80" />
@@ -1578,10 +1311,7 @@
 		</for>
 	</skill>
 	<skill id="8390" levels="2" name="Royal Guard Necklace - Giran" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases wind type defense by 26;30.
-		-->
+    <!-- Increases Resistance to wind by 26. -->
 		<table name="#elementDef">26 30</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="magicLevel" val="80" />
@@ -1593,10 +1323,7 @@
 		</for>
 	</skill>
 	<skill id="8391" levels="2" name="Royal Guard Necklace - Oren" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases darkness type defense by 26;30.
-		-->
+    <!-- Increases Resistance to Dark by 26. -->
 		<table name="#elementDef">26 30</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="magicLevel" val="80" />
@@ -1608,10 +1335,7 @@
 		</for>
 	</skill>
 	<skill id="8392" levels="2" name="Royal Guard Necklace - Aden" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases earth type defense by 26;30.
-		-->
+    <!-- Increases Resistance to Earth by 26. -->
 		<table name="#elementDef">26 30</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="magicLevel" val="80" />
@@ -1623,10 +1347,7 @@
 		</for>
 	</skill>
 	<skill id="8393" levels="2" name="Royal Guard Necklace - Innadril" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases water type defense by 26;30.
-		-->
+    <!-- Increases Resistance to water by 26. -->
 		<table name="#elementDef">26 30</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="magicLevel" val="80" />
@@ -1638,10 +1359,7 @@
 		</for>
 	</skill>
 	<skill id="8394" levels="2" name="Royal Guard Necklace - Goddard" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases fire type defense by 26;30.
-		-->
+    <!-- Increases Resistance to fire by 26. -->
 		<table name="#elementDef">26 30</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="magicLevel" val="80" />
@@ -1653,10 +1371,7 @@
 		</for>
 	</skill>
 	<skill id="8395" levels="2" name="Royal Guard Necklace - Rune" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases fire type defense by 26;30.
-		-->
+    <!-- Increases Resistance to fire by 26. -->
 		<table name="#elementDef">26 30</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="magicLevel" val="80" />
@@ -1668,10 +1383,7 @@
 		</for>
 	</skill>
 	<skill id="8396" levels="2" name="Royal Guard Necklace - Schuttgart" >
-		<!--
-		      Last modify: 17.02.2010
-		      Description: Increases wind type defense by 26;30.
-		-->
+    <!-- Increases Resistance to wind by 26. -->
 		<table name="#elementDef">26 30</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="magicLevel" val="80" />
@@ -1682,7 +1394,8 @@
 			<add order="0x40" stat="defenceWind" val="#elementDef" />
 		</for>
 	</skill>
-	<skill id="8397" levels="1" name="Moirai Armor Set">
+	<skill id="8397" levels="1" name="Moirai Heavy Armor Set">
+    <!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, M. Def by 2%, Resistance to Stun by 50% and Resistance to Fire/Water/Wind/Earth attack by 3. Cloak equip possible. STR+2. CON-2 -->
 		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="magicLevel" val="82" />
 		<set name="target" val="TARGET_SELF" />
@@ -1703,6 +1416,7 @@
 		</for>
 	</skill>
 	<skill id="8398" levels="1" name="Moirai Leather Armor Set">
+    <!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Moving Spd. by 3%, Resistance to Hold Atk. by 50% and Resistance to Fire/Water/Wind/Earth attack by 3. Cloak equip possible. DEX+2, CON-2 -->
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="magicLevel" val="82" />
 		<set name="target" val="TARGET_SELF" />
@@ -1723,6 +1437,7 @@
 		</for>
 	</skill>
 	<skill id="8399" levels="1" name="Moirai Robe Set">
+    <!-- Increases M. Atk. by 8.11%, Casting Spd. by 15%, Resistance to Paralysis Atk. by 50% and Resistance to Fire/Water/Wind/Earth attack by 5. Cloak equip possible. WIT+2, MEN-2 -->
 		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="magicLevel" val="82" />
 		<set name="target" val="TARGET_SELF" />

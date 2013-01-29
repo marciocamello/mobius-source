@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="23300" levels="1" name="Ghost Piercing">
+    <!-- Envelops with a specter to inflict 300 dark damage every second for 10 seconds. -->
 		<set name="icon" val="icon.skill0773" />
 		<set name="magicLevel" val="83" />
 		<set name="target" val="TARGET_ONE" />
@@ -10,84 +11,57 @@
 			<effect count="10" name="DamOverTime" time="1" val="300" />
 		</for>
 	</skill>
-	<skill id="23301" levels="1" name="Dimensional Door A" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+	<skill id="23301" levels="1" name="Dimensional Gate A" >
+    <!-- Summons a dimensional door that moves the PC to the Dimensional Gate B. -->
 		<set name="icon" val="icon.skill1050" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="23302" levels="1" name="Dimensional Door B" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+	<skill id="23302" levels="1" name="Dimensional Gate B" >
+    <!-- Summons a dimensional door that moves the PC to the Dimensional Gate A. -->
 		<set name="icon" val="icon.skill1050" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23303" levels="1" name="Move" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23304" levels="1" name="Move" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23305" levels="1" name="Zinenze Agathion - Yunbokhwan" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Restores all HP/MP/CP and becomes invincible for 5 seconds. But can only be used when HP is below 30%. -->
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23306" levels="1" name="Zinenze Agathion Cute Trick" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Able to see the summoned Zinenze perform cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23307" levels="1" name="Enze Agathion Cute Trick" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Able to see the summoned Enze perform cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="23308" levels="1" name="Totem of Body">
+	<skill id="23308" levels="1" name="Totem's Energy - Body">
+    <!-- Increases HP Recovery Bonus by 30% and decreases damage from the topography by 80% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="BranchSys2.icon.totem_of_body" />
 		<set name="reuseDelay" val="2000" />
@@ -103,7 +77,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23309" levels="1" name="Totem of Spirit">
+	<skill id="23309" levels="1" name="Totem's Energy - Spirit">
+    <!-- Increases MP Recovery Bonus by 30% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="BranchSys2.icon.totem_of_mind" />
 		<set name="reuseDelay" val="2000" />
@@ -118,7 +93,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23310" levels="1" name="Totem of Courage">
+	<skill id="23310" levels="1" name="Totem's Energy - Courage">
+    <!-- Increases P. Def. by 15% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="BranchSys2.icon.totem_of_bravery" />
 		<set name="reuseDelay" val="2000" />
@@ -133,7 +109,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23311" levels="1" name="Totem of Fortitude">
+	<skill id="23311" levels="1" name="Totem's Energy - Fortitude">
+    <!-- Increases M. Def. by 25% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="BranchSys2.icon.totem_of_fortitude" />
 		<set name="reuseDelay" val="2000" />
@@ -149,6 +126,7 @@
 		</for>
 	</skill>
 	<skill id="23312" levels="1" name="Fall of the Dragon">
+    <!-- Gift to commemorate the great feats of the warriors who eradicated the reckless dragon. Additional XP is acquired by 100% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="BranchSys2.icon.the_fall_of_dragon" />
 		<set name="magicLevel" val="85" />
@@ -160,75 +138,49 @@
 		</for>
 	</skill>
 	<skill id="23313" levels="5" name="Action Prohibit Immunity" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Increases Resistance to action-inhibiting attacks by 20%. -->
 		<set name="icon" val="icon.skill0386" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23314" levels="5" name="Control Prohibit Immunity" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Increases Resistance to control-inhibiting attacks by 20%. -->
 		<set name="icon" val="icon.skill0388" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23315" levels="5" name="Paralysis Immunity Enhance" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Increases Resistance to paralysis attacks by 20%. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23316" levels="5" name="Petrification Immunity Enhance" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Increases Resistance to petrification attacks by 20%. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23317" levels="5" name="Fear Immunity Enhance" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Increases Resistance to fear attacks by 20%. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23318" levels="1" name="Cat the Ranger Boots" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Recovers the master's HP by 10%. For 1 minute(s), receives power from Cat the Ranger to increase the master's Resistance to debuff attacks by 80%, Resistance to buff canceling attacks by 40%, Speed by 10%, P. Def. by 20%, and M. Def. by 20%. Does not receive preemptive attacks from monsters. Cooldown 10 minutes. -->
 		<set name="icon" val="BranchSys2.icon.action5016" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23319" levels="1" name="Blood Seeker">
-		<!--
-		    Кровоточащая рана, уменьшающая HP.
-		-->
+    <!-- HP is decreased momentarily from bleeding. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="5000" />
@@ -240,14 +192,11 @@
 		<set name="saveVs" val="CON" />
 		<set name="isTrigger" val="true" />
 		<for>
-				<!-- Эффект и время с потолка -->
 			<effect abnormal="bleeding" count="20" name="Bleed" stackType="Bleed" stackOrder="1" time="1" val="75"/>
 		</for>
 	</skill>
 	<skill id="23320" levels="1" name="Greedy Throat">
-		<!--
-		    Кровоточащая рана, уменьшающая HP.
-		-->
+    <!-- HP is decreased momentarily from bleeding. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="5000" />
@@ -259,14 +208,11 @@
 		<set name="saveVs" val="CON" />
 		<set name="isTrigger" val="true" />
 		<for>
-				<!-- Эффект и время с потолка -->
 			<effect abnormal="bleeding" count="20" name="Bleed" stackType="Bleed" stackOrder="1" time="1" val="75"/>
 		</for>
 	</skill>
 	<skill id="23321" levels="1" name="Draconic Evolver">
-		<!--
-		    Цель теряет разум от страха и спасается бегством.
-		-->
+    <!-- Temporarily inflicted with fear and moves regardless of your own volition. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="5000" />
@@ -278,14 +224,11 @@
 		<set name="saveVs" val="MEN" />
 		<set name="isTrigger" val="true" />
 		<for>
-				<!-- Эффект и время с потолка -->
 			<effect count="8" name="Fear" stackOrder="-1" stackType="Fear" time="2" val="0" />
 		</for>
 	</skill>
 	<skill id="23322" levels="1" name="Demonic Desire">
-		<!--
-		    Физ. Защ. мгновенно понижена.
-		-->
+    <!-- P. Def. is temporarily decreased. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="5000" />
@@ -297,16 +240,13 @@
 		<set name="saveVs" val="MEN" />
 		<set name="isTrigger" val="true" />
 		<for>
-				<!-- Эффект и время с потолка -->
 			<effect count="1" name="Debuff" time="15" val="0">
 				<mul order="0x30" stat="pDef" val="0.8" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="23323" levels="1" name="Fury of Darkness">
-		<!--
-		    Мгновенно понижает Физ. Защ. и повергает в шок, от чего невозможно двигаться.
-		-->
+    <!-- Temporarily, P. Def. is decreased and you cannot move due to shock. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i00" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="5000" />
@@ -318,16 +258,13 @@
 		<set name="saveVs" val="CON" />
 		<set name="isTrigger" val="true" />
 		<for>
-				<!-- Эффект и время с потолка -->
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="5" val="0" chance="30" >
 				<mul order="0x30" stat="pDef" val="0.8" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="23324" levels="1" name="Jet Black Typhoon">
-		<!--
-		    Мгновенно увеличивает Скор. Маг. и атаку ветром.
-		-->
+    <!-- Temporarily, Casting Spd. and wind type P. Atk. are increased. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i00" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="10000" />
@@ -337,7 +274,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isTrigger" val="true" />
 		<for>
-				<!-- Время с потолка -->
 			<effect count="1" name="Buff" time="15" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="1.15" />
 				<add order="0x60" stat="attackWind" val="30" />
@@ -345,176 +281,112 @@
 		</for>
 	</skill>
 	<skill id="23325" levels="1" name="Enlarge - Luckpy" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23326" levels="1" name="Reduce - Luckpy" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23327" levels="1" name="Boss Test - Weaken" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- A skill to test a boss mob - Weaken -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23328" levels="1" name="Boss Test - Strengthen" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- A skill to test a boss mob - Strengthen -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23329" levels="1" name="Lantern Agathion's Gift1" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23330" levels="1" name="Lantern Agathion's Gift2" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23331" levels="1" name="Lantern Agathion's Gift3" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23332" levels="1" name="Lantern Agathion's Gift4" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23333" levels="1" name="Agathion's New Year's Wish" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Through the power of the Lantern Agathion, Vitality is maintained and not consumed. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23334" levels="1" name="Lantern Agathion Cute Trick" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Able to see the summoned Lantern's perform cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23335" levels="1" name="Agathion's New Year's Wish" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Energy is maintained and not consumed through the Juju Agathion's strength. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23336" levels="1" name="Juju Agathion Cute Trick" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- You can see the summoned Juju's cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23337" levels="1" name="Juju Agathion's Gift 1" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23338" levels="1" name="Juju Agathion's Gift 2" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23339" levels="1" name="Juju Agathion's Gift 3" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="23340" levels="1" name="Juju Agathion's Gift 4" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />

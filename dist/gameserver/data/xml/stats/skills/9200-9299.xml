@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="9206" levels="1" name="Быстрый Бег">
+	<skill id="9206" levels="1" name="Fast Run">
+    <!-- For 30 seconds, your mount runs at maximum speed. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -10,7 +11,8 @@
 			</effect>
 		</for>	
 	</skill>
-	<skill id="9209" levels="1" name="Кукуру">
+	<skill id="9209" levels="1" name="Kookaru">
+    <!-- Mounts a Kookaru. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="TRANSFORMATION" />
 		<set name="isReuseDelayPermanent" val="true" />
@@ -23,7 +25,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9210" levels="1" name="Слезть с животного">
+	<skill id="9210" levels="1" name="Dismount">
+    <!-- Dismounts from a ridable mount. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -31,6 +34,7 @@
 <set name="alterIconTime" val="5" />
 	</skill>
 	<skill id="9224" levels="1" name="Escape - Talking Island Village" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="townId" val="1" />
@@ -47,9 +51,7 @@
 		</cond>
 	</skill>
 	<skill id="9227" levels="1" name="Mentor's Poem of Horn">
-		<!--
-			Increases P. Atk. by 17%, P. Def, by 15%, M. Atk. by 79%, and M. Def. by 30%.
-		-->
+    <!-- With the help of your mentor, increases P. Atk. by 17%, P. Def. by 15%, M. Atk. by 79%, and M. Def. by 30%. This buff is only applied while your mentor is logged in. -->
         <set name="magicLevel" val="1"/>
 		<set name="mpConsume1" val="0"/>
 		<set name="isPreservedOnDeath" val="true"/>
@@ -67,14 +69,7 @@
         </for>
     </skill>
 	<skill id="9228" levels="1" name="Mentor's Poem of Drum">
-		<!--
-			Increases Max MP by 20%, HP recovery bonus by 20%, M. Crit. Atk. Rate by 2,
-			critical rate during a normal physical attack by 20%, P. Atk. by 10%,
-			P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%,
-			Casting Spd. by 20%, resistance to debuff by 10%, and P. Def upon evading a critical attack.
-			Decreases Spd. by 15%, and for party members equipped with melee weapons that receive more
-			than ordinary damage attacks, critical power increases during an ordinary attack.
-		-->
+    <!-- With the help of your mentor, increases Max MP by 20%, HP recovery bonus by 20%, attack M. Critical Rate by 2, critical rate during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, resistance to de-buff by 10%, and P. Def. upon evading a critical attack. Decreases speed by 15%, and for party members equipped with melee weapons that receive more than ordinary damage attacks, critical power increases during an ordinary attack. This buff is only applied while your mentor is logged in. -->
         <set name="magicLevel" val="1"/>
 		<set name="mpConsume1" val="0"/>
 		<set name="isPreservedOnDeath" val="true"/>
@@ -100,9 +95,7 @@
         </for>
     </skill>
 	<skill id="9229" levels="1" name="Mentor's Poem of Lute">
-		<!--
-			Increases Atk. Spd. by 34% and Casting Spd. by 31%. Change of applying Vampiric Rage effect by 9%.
-		-->
+    <!-- With the help of your mentor, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. This buff is only applied while your mentor is logged in. -->
         <set name="magicLevel" val="1"/>
 		<set name="mpConsume1" val="0"/>
 		<set name="isPreservedOnDeath" val="true"/>
@@ -119,9 +112,7 @@
         </for>
     </skill>
 	<skill id="9230" levels="1" name="Mentor's Poem of Organ">
-		<!--
-			Increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%.
-		-->
+    <!-- With the help of your mentor, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. This buff is only applied while your mentor is logged in. -->
         <set name="magicLevel" val="1"/>
 		<set name="mpConsume1" val="0"/>
 		<set name="isPreservedOnDeath" val="true"/>
@@ -139,10 +130,7 @@
         </for>
     </skill>
 	<skill id="9231" levels="1" name="Mentor's Poem of Guitar">
-		<!--
-			Increases P. Crit. Rate by 32%, P. Crit. damage by 35%, and M. Crit. Rate by 20.
-			Decreases MP consumption for physical skills by 20%, magical skills by 10%, and enchant skills by 20%.
-		-->
+    <!-- With the help of your mentor, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. This buff is only applied while your mentor is logged in. -->
         <set name="magicLevel" val="1"/>
 		<set name="mpConsume1" val="0"/>
 		<set name="isPreservedOnDeath" val="true"/>
@@ -161,9 +149,7 @@
         </for>
     </skill>
 	<skill id="9232" levels="1" name="Mentor's Poem of Harp">
-		<!--
-			Increases physical accuracy by 5, physical and magic evasion by 5, and Spd. by 34. Decreases received critical damage by 30%.
-		-->
+    <!-- With the help of your mentor, increases physical accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. This buff is only applied while your mentor is logged in. -->
         <set name="magicLevel" val="1"/>
 		<set name="mpConsume1" val="0"/>
 		<set name="isPreservedOnDeath" val="true"/>
@@ -181,11 +167,8 @@
             </effect>
         </for>
     </skill>
-	<skill id="9233" levels="1" name="Mentor’s Guidance">
-        <!--
-                Description: Acquired Experience Points increase by 200% for Mentee.
-				Created by Cain.				
-          -->
+	<skill id="9233" levels="1" name="Mentor's Guidance">
+    <!-- With the help of your mentor, increases acquired XP and SP by 200%. This buff is only applied while your mentor is logged in. -->
         <table name="#power">2.0</table>
         <set name="icon" val="br_cashtex.skill.br_cash_rune_of_exp_buff_1"/>
         <set name="magicLevel" val="1"/>
@@ -202,10 +185,7 @@
         </for>
     </skill>
 	<skill id="9256" levels="1" name="Mentee's Appreciation">
-        <!--
-                Description: Acquired Experience Points increase by 10% for Mentor.
-				Created by Cain.
-          -->
+    <!-- In appreciation of your help your acquired XP and SP increases by 10%.  This buff is only applied while your mentee(s) is logged in. -->
         <table name="#power">0.1</table>
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00"/>
         <set name="magicLevel" val="1"/>

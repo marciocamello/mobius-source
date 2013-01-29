@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="2001" levels="1" name="Red Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="1" />
@@ -15,7 +16,8 @@
 			<effect count="5" name="HealOverTime" stackOrder="1" stackType="HpRecoverCast" time="3" val="25.6" />
 		</for>
 	</skill>
-	<skill id="2002" levels="1" name="Healing drug">
+	<skill id="2002" levels="1" name="Healing Drug">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="1" />
@@ -32,6 +34,7 @@
 		</for>
 	</skill>
 	<skill id="2003" levels="1" name="Squash Seed">
+    <!-- none -->
 		<table name="#mot">1.5</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -49,6 +52,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2004" levels="1" name="Large Squash Seed">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="10000" />
@@ -60,6 +64,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2005" levels="1" name="Nectar">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1000" />
@@ -73,6 +78,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2006" levels="1" name="Scroll: Enchant Weapon (Grade A)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -82,6 +88,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2007" levels="1" name="Scroll: Enchant Armor (Grade A)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -91,6 +98,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2008" levels="1" name="Item - Beast Spirit Shot">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -100,6 +108,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2009" levels="1" name="Item - Beast Blessed Spirit Shot">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -108,7 +117,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isHandler" val="true" />
 	</skill>
-	<skill id="2010" levels="1" name="Endeavor potion">
+	<skill id="2010" levels="1" name="Endeavor Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -126,6 +136,7 @@
 		</for>
 	</skill>
 	<skill id="2011" levels="1" name="Haste Potion">
+    <!-- Increases Speed. Effect 1. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_potion_green_i00" />
 		<set name="magicLevel" val="1" />
@@ -143,6 +154,7 @@
 		</for>
 	</skill>
 	<skill id="2012" levels="1" name="Potion of Alacrity">
+    <!-- Temporarily increases Atk. Spd. Effect 1. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="magicLevel" val="1" />
@@ -159,7 +171,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2013" levels="1" name="Scroll of escape">
+	<skill id="2013" levels="1" name="Scroll of Escape">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -172,7 +185,8 @@
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2014" levels="1" name="Scroll of resurrection">
+	<skill id="2014" levels="1" name="Scroll of Resurrection">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -189,6 +203,7 @@
 		<set name="canPet" val="true" />
 	</skill>
 	<skill id="2015" levels="1" name="Scroll: Enchant Weapon (Grade B)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -198,6 +213,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2016" levels="1" name="Scroll: Enchant Armor (Grade B)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -207,6 +223,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2017" levels="1" name="Scroll: Enchant Weapon (Grade C)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -216,6 +233,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2018" levels="1" name="Scroll: Enchant Armor (Grade C)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -225,6 +243,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2019" levels="1" name="Scroll: Enchant Weapon (Grade D)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -234,6 +253,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2020" levels="1" name="Scroll: Enchant Armor (Grade D)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -243,6 +263,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2021" levels="1" name="Scroll: Enchant Weapon (Grade S)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -252,6 +273,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2022" levels="1" name="Scroll: Enchant Armor (Grade S)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -261,6 +283,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2023" levels="1" name="Star Shard">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="700" />
@@ -273,6 +296,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2024" levels="1" name="Firework">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1500" />
@@ -285,6 +309,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2025" levels="1" name="Large Firework">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="3000" />
@@ -297,6 +322,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2026" levels="1" name="Scroll: Enchant Weapon (Grade S)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -306,6 +332,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2027" levels="1" name="Scroll: Enchant Weapon (Grade A)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -315,6 +342,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2028" levels="1" name="Scroll: Enchant Weapon (Grade B)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -324,6 +352,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2029" levels="1" name="Scroll: Enchant Weapon (Grade C)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -333,6 +362,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2030" levels="1" name="Scroll: Enchant Weapon (Grade D)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -341,7 +371,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isHandler" val="true" />
 	</skill>
-	<skill id="2031" levels="1" name="Lesser healing potion">
+	<skill id="2031" levels="1" name="Lesser Healing Potion">
+    <!-- Sharp increase in HP recovery bonus. Effect 1. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="power" val="1" />
@@ -357,7 +388,8 @@
 			<effect count="5" name="HealOverTime" stackOrder="1" stackType="HpRecoverCast" time="3" val="25.6" />
 		</for>
 	</skill>
-	<skill id="2032" levels="1" name="Healing potion">
+	<skill id="2032" levels="1" name="Healing Potion">
+    <!-- Sharp increase in HP recovery bonus. Effect 2. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
 		<set name="power" val="2" />
@@ -374,6 +406,7 @@
 		</for>
 	</skill>
 	<skill id="2033" levels="1" name="Item - Beast Soul Shot">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -391,6 +424,7 @@
 		</for>
 	</skill>
 	<skill id="2034" levels="1" name="Greater Haste Potion">
+    <!-- Increases Speed. Effect 2. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="magicLevel" val="1" />
@@ -408,6 +442,7 @@
 		</for>
 	</skill>
 	<skill id="2035" levels="1" name="Greater Swift Attack Potion">
+    <!-- Increases Atk. Spd. Effect 2. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="magicLevel" val="1" />
@@ -424,7 +459,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2036" levels="2" name="Blessed scroll of escape">
+	<skill id="2036" levels="2" name="Blessed Scroll of Escape">
+    <!-- none -->
 		<table name="#itemConsumeId">1538 3958</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -437,7 +473,8 @@
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2037" levels="1" name="Greater healing potion">
+	<skill id="2037" levels="1" name="Greater Healing Potion">
+    <!-- Sharp increase in HP recovery bonus. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="power" val="3" />
@@ -453,7 +490,8 @@
 			<effect count="5" name="HealOverTime" stackOrder="19" stackType="HpRecoverCast" time="3" val="150" />
 		</for>
 	</skill>
-	<skill id="2038" levels="1" name="Quick healing potion">
+	<skill id="2038" levels="1" name="Quick Healing Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="435" />
@@ -467,6 +505,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2039" levels="1" name="Soulshot: No Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -476,6 +515,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2040" levels="1" name="Scroll of Escape: Clan Hall">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -490,6 +530,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2041" levels="1" name="Scroll of Escape: Castle">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -504,6 +545,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2042" levels="1" name="Antidote">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -517,6 +559,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2043" levels="1" name="Greater Antidote">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -530,6 +573,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2044" levels="1" name="Bandage">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -542,7 +586,8 @@
 		<set name="negateEffects" val="Bleed:3" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2045" levels="1" name="Emergency dressing">
+	<skill id="2045" levels="1" name="Emergency Dressing">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -555,7 +600,8 @@
 		<set name="negateEffects" val="Bleed:7" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2046" levels="1" name="Wolves' necklace">
+	<skill id="2046" levels="1" name="Summon Pet">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -566,6 +612,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2047" levels="1" name="Spiritshot: No Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -574,7 +621,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isHandler" val="true" />
 	</skill>
-	<skill id="2048" levels="1" name="Wolves' food">
+	<skill id="2048" levels="1" name="Wolves' Food">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -583,7 +631,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isHandler" val="true" />
 	</skill>
-	<skill id="2049" levels="1" name="Blessed scroll of resurrection">
+	<skill id="2049" levels="1" name="Blessed Scroll of Resurrection">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="100" />
@@ -600,6 +649,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2050" levels="1" name="Scroll of Guidance">
+    <!-- Increases Accuracy. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="magicLevel" val="1" />
@@ -618,6 +668,7 @@
 		</for>
 	</skill>
 	<skill id="2051" levels="1" name="Scroll of Death Whisper">
+    <!-- Increases the impact of a critical attack. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="magicLevel" val="1" />
@@ -636,6 +687,7 @@
 		</for>
 	</skill>
 	<skill id="2052" levels="1" name="Scroll of Focus">
+    <!-- Increases critical attack rate. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="magicLevel" val="1" />
@@ -654,6 +706,7 @@
 		</for>
 	</skill>
 	<skill id="2053" levels="1" name="Scroll of Greater Acumen">
+    <!-- Increases Casting Spd. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="magicLevel" val="1" />
@@ -672,6 +725,7 @@
 		</for>
 	</skill>
 	<skill id="2054" levels="1" name="Scroll of Haste">
+    <!-- Increases Atk. Spd. Effect 2. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="magicLevel" val="1" />
@@ -690,6 +744,7 @@
 		</for>
 	</skill>
 	<skill id="2055" levels="1" name="Scroll of Agility">
+    <!-- Increases Evasion. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="magicLevel" val="1" />
@@ -708,6 +763,7 @@
 		</for>
 	</skill>
 	<skill id="2056" levels="1" name="Scroll of Mystic Empower">
+    <!-- Increases M. Atk. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="magicLevel" val="1" />
@@ -726,6 +782,7 @@
 		</for>
 	</skill>
 	<skill id="2057" levels="1" name="Scroll of Might">
+    <!-- Increases P. Atk. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="magicLevel" val="1" />
@@ -744,6 +801,7 @@
 		</for>
 	</skill>
 	<skill id="2058" levels="1" name="Scroll of Wind Walk">
+    <!-- Increases Speed. Effect 2. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="magicLevel" val="1" />
@@ -762,6 +820,7 @@
 		</for>
 	</skill>
 	<skill id="2059" levels="1" name="Scroll of Shield">
+    <!-- Increases P. Def. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="magicLevel" val="1" />
@@ -780,6 +839,7 @@
 		</for>
 	</skill>
 	<skill id="2060" levels="1" name="Healing Medicine">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -793,6 +853,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2061" levels="1" name="Blessed Spiritshot: No Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -802,6 +863,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2062" levels="1" name="Blessed Scroll of Resurrection">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="100" />
@@ -818,6 +880,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2063" levels="1" name="Hatchling Food">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -827,6 +890,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2064" levels="1" name="Scroll of Mana Regeneration">
+    <!-- Sharp increase in MP recovery bonus. Effect 4. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="magicLevel" val="1" />
@@ -845,6 +909,7 @@
 		</for>
 	</skill>
 	<skill id="2065" levels="8" name="Box Key">
+    <!-- none -->
 		<table name="#itemConsumeId">6665 6666 6667 6668 6669 6670 6671 6672</table>
 		<table name="#magicLevel">1 10 20 30 40 50 60 70</table>
 		<table name="#unlockPower">19 29 39 49 59 69 79 89</table>
@@ -864,6 +929,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2066" levels="1" name="Item - Theme Sound Crystal">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -876,6 +942,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2067" levels="1" name="Item - Theme Sound Crystal">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -888,6 +955,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2068" levels="1" name="Item - Race Sound Crystal">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -900,6 +968,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2069" levels="1" name="Item - Race Sound Crystal">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -912,6 +981,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2070" levels="1" name="Item - Race Sound Crystal">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -924,6 +994,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2071" levels="1" name="Item - Race Sound Crystal">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -936,6 +1007,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2072" levels="1" name="Item - Race Sound Crystal">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -948,6 +1020,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2073" levels="2" name="Item - Theme Sound Crystal">
+    <!-- none -->
 		<table name="#itemConsumeId">4416 7061</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -962,11 +1035,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2074" levels="1" name="Potion of Critical Escape">
-		<!--
-			Last modify:	04.05.2009
-
-			Description: Misdirects enemy attack and slows Speed of user.
-		-->
+    <!-- Misdirects enemy attack and slows Speed of user. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="affectLimit" val="9;10" />
 		<set name="icon" val="icon.etc_potion_red_i00" />
@@ -989,9 +1058,7 @@
 		</for>
 	</skill>
 	<skill id="2075" levels="1" name="Decrease Hate Scroll">
-		<!--
-			Last modify:	04.05.2009
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1005,11 +1072,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2076" levels="1" name="Bless of Eva">
-		<!--
-			Last modify:	04.05.2009
-
-			Description: Increase lung capacity. Effect 1.
-		-->
+    <!-- Increase lung capacity. Effect 1. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_bless_of_eva_i00" />
 		<set name="magicLevel" val="1" />
@@ -1026,11 +1089,7 @@
 		</for>
 	</skill>
 	<skill id="2077" levels="1" name="Potion of Revenge">
-		<!--
-			Last modify:	04.05.2009
-
-			Description: Lowers user's P. Def. and reflects a certain amount of damage back to the enemy, excluding damage from skill use or remote attacks. Effect 3.
-		-->
+    <!-- Lowers user's P. Def. and reflects a certain amount of damage back to the enemy. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="magicLevel" val="1" />
@@ -1048,6 +1107,7 @@
 		</for>
 	</skill>
 	<skill id="2078" levels="1" name="Compressed Package of Soulshots: No Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1061,7 +1121,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2079" levels="1" name="Compressed Package of Soulshots: D-grade">
+	<skill id="2079" levels="1" name="Compressed Package of Soulshots: D-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1075,7 +1136,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2080" levels="1" name="Compressed Package of Soulshots: C-grade">
+	<skill id="2080" levels="1" name="Compressed Package of Soulshots: C-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1089,7 +1151,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2081" levels="1" name="Compressed Package of Soulshots: B-grade">
+	<skill id="2081" levels="1" name="Compressed Package of Soulshots: B-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1103,7 +1166,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2082" levels="1" name="Compressed Package of Soulshots: A-grade">
+	<skill id="2082" levels="1" name="Compressed Package of Soulshots: A-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1117,7 +1181,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2083" levels="1" name="Compressed Package of Soulshots: S-grade">
+	<skill id="2083" levels="1" name="Compressed Package of Soulshots: S-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1132,6 +1197,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2084" levels="1" name="Compressed Package of Spiritshots: No Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1145,7 +1211,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2085" levels="1" name="Compressed Package of Spiritshots: D-grade">
+	<skill id="2085" levels="1" name="Compressed Package of Spiritshots: D-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1159,7 +1226,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2086" levels="1" name="Compressed Package of Spiritshots: C-grade">
+	<skill id="2086" levels="1" name="Compressed Package of Spiritshots: C-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1173,7 +1241,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2087" levels="1" name="Compressed Package of Spiritshots: B-grade">
+	<skill id="2087" levels="1" name="Compressed Package of Spiritshots: B-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1187,7 +1256,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2088" levels="1" name="Compressed Package of Spiritshots: A-grade">
+	<skill id="2088" levels="1" name="Compressed Package of Spiritshots: A-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1201,7 +1271,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2089" levels="1" name="Compressed Package of Spiritshots: S-grade">
+	<skill id="2089" levels="1" name="Compressed Package of Spiritshots: S-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1216,6 +1287,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2090" levels="1" name="Compressed Package of Blessed Spiritshots: No Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1229,7 +1301,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2091" levels="1" name="Compressed Package of Blessed Spiritshots: D-grade">
+	<skill id="2091" levels="1" name="Compressed Package of Blessed Spiritshots: D-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1243,7 +1316,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2092" levels="1" name="Compressed Package of Blessed Spiritshots: C-grade">
+	<skill id="2092" levels="1" name="Compressed Package of Blessed Spiritshots: C-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1257,7 +1331,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2093" levels="1" name="Compressed Package of Blessed Spiritshots: B-grade">
+	<skill id="2093" levels="1" name="Compressed Package of Blessed Spiritshots: B-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1271,7 +1346,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2094" levels="1" name="Compressed Package of Blessed Spiritshots: A-grade">
+	<skill id="2094" levels="1" name="Compressed Package of Blessed Spiritshots: A-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1285,7 +1361,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="2095" levels="1" name="Compressed Package of Blessed Spiritshots: S-grade">
+	<skill id="2095" levels="1" name="Compressed Package of Blessed Spiritshots: S-Grade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1300,6 +1377,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2096" levels="1" name="Soul Crystal">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="3000" />
@@ -1315,6 +1393,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2097" levels="3" name="Sowing">
+    <!-- none -->
 		<table name="#mpConsume2">4 6 8</table>
 		<table name="#magicLevel">10 20 30</table>
 		<set name="magicType" val="SPECIAL" />
@@ -1332,6 +1411,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="2098" levels="1" name="Harvesting">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1000" />
@@ -1346,6 +1426,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2099" levels="1" name="Escape: 5 minutes">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />

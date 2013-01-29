@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="26000" levels="1" name="Small fortuna box" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26000" levels="1" name="Small Fortuna Box" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -13,12 +9,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26001" levels="1" name="Middle fortuna box" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26001" levels="1" name="Middle Fortuna Box" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -26,12 +18,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26002" levels="1" name="Large fortuna box" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26002" levels="1" name="Large Fortuna Box" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -39,12 +27,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26003" levels="1" name="Small fortuna cube" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26003" levels="1" name="Small Fortuna Cube" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -52,12 +36,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26004" levels="1" name="Middle fortuna cube" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26004" levels="1" name="Middle Fortuna Cube" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -65,12 +45,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26005" levels="1" name="Large fortuna cube" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26005" levels="1" name="Large Fortuna Cube" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -78,12 +54,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26006" levels="1" name="Weapon Enchant Scroll - D Grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26006" levels="1" name="Weapon Enchant Scroll (D-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -91,12 +63,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26007" levels="1" name="Weapon Enchant Scroll - C Grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26007" levels="1" name="Weapon Enchant Scroll (C-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -104,12 +72,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26008" levels="1" name="Weapon Enchant Scroll - B Grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26008" levels="1" name="Weapon Enchant Scroll (B-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -117,12 +81,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26009" levels="1" name="Weapon Enchant Scroll - A Grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26009" levels="1" name="Weapon Enchant Scroll (A-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -130,12 +90,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26010" levels="1" name="Armor Enchant Scroll - D Grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26010" levels="1" name="Armor Enchant Scroll (D-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -143,12 +99,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26011" levels="1" name="Armor Enchant Scroll - C Grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26011" levels="1" name="Armor Enchant Scroll (C-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -156,12 +108,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26012" levels="1" name="Armor Enchant Scroll - B Grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26012" levels="1" name="Armor Enchant Scroll (B-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -169,12 +117,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26013" levels="1" name="Armor Enchant Scroll - A Grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26013" levels="1" name="Armor Enchant Scroll (A-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -182,12 +126,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26014" levels="1" name="Ancient Weapon Enchant Crystal - B grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26014" levels="1" name="Ancient Weapon Enchant Crystal (B-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -195,12 +135,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26015" levels="1" name="Ancient Weapon Enchant Crystal - A grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26015" levels="1" name="Ancient Weapon Enchant Crystal (A-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -208,12 +144,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26016" levels="1" name="Ancient Weapon Enchant Crystal - B grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26016" levels="1" name="Ancient Weapon Enchant Crystal (B-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -221,12 +153,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26017" levels="1" name="Ancient Armor Enchant Crystal - B grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26017" levels="1" name="Ancient Armor Enchant Crystal (B-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -234,12 +162,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26018" levels="1" name="Divine Weapon Enchant Crystal - B grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26018" levels="1" name="Holy Weapon Enchant Crystal (B-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -247,12 +171,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26019" levels="1" name="Divine Weapon Enchant Crystal - A grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26019" levels="1" name="Holy Weapon Enchant Crystal (A-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -260,12 +180,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26020" levels="1" name="Divine Armor Enchant Crystal - B grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26020" levels="1" name="Divine Armor Enchant Crystal (B-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -273,12 +189,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26021" levels="1" name="Divine Armor Enchant Crystal - A grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26021" levels="1" name="Divine Armor Enchant Crystal (A-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -286,11 +198,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26022" levels="1" name="High grade potion which improves attack speed" >
-		<!--
-		      Last modify: 26.10.2009
-		      Description: State in which Attack Speed has increased. Effect 2.
-		-->
+	<skill id="26022" levels="1" name="High grade potion which improves Atk. Spd." >
+    <!-- Increases Atk. Spd. by 33% for 20 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_adv_swift_attack_potion_i00" />
 		<set name="itemConsumeId" val="22022" />
@@ -311,11 +220,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26023" levels="1" name="High grade potion which improves moving speed" >
-		<!--
-		      Last modify: 26.10.2009
-		      Description: State in which Moving Speed has increased. Effect 2.
-		-->
+	<skill id="26023" levels="1" name="High Grade Speed Improving Potion" >
+    <!-- Increases Speed by 33 for 20 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_adv_quick_step_potion_i00" />
 		<set name="itemConsumeId" val="22023" />
@@ -336,7 +242,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26024" levels="1" name="Quick Healing Potion" >
+	<skill id="26024" levels="1" name="Temporary Healing Potion" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="435" />
@@ -355,6 +262,7 @@
 		</cond>
 	</skill>
 	<skill id="26025" levels="1" name="Powerful Healing Potion" >
+    <!-- Increases HP Regeneration by 50 for 15 seconds. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_greater_healing_potion_i00" />
 		<set name="power" val="3" />
@@ -374,7 +282,8 @@
 			<effect count="5" name="HealOverTime" stackOrder="19" stackType="HpRecoverCast" time="3" val="150" />
 		</for>
 	</skill>
-	<skill id="26026" levels="1" name="High-grade Healing Potion" >
+	<skill id="26026" levels="1" name="High-Grade Healing Potion" >
+    <!-- Increases HP Regeneration by 24 for 15 seconds. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_healing_potion_i00" />
 		<set name="power" val="2" />
@@ -394,7 +303,8 @@
 			<effect count="5" name="HealOverTime" stackOrder="5" stackType="HpRecoverCast" time="3" val="72" />
 		</for>
 	</skill>
-	<skill id="26027" levels="6" name="Secret medicine of Will" >
+	<skill id="26027" levels="6" name="Secret Medicine of Will (D-Grade)" >
+    <!-- none -->
 		<table name="#itemConsumeId">0 22027 22028 22029 22030 22031</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 84</table>
@@ -423,7 +333,8 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="26028" levels="6" name="Secret medicine of Life" >
+	<skill id="26028" levels="6" name="Secret Medicine of Life (D-Grade)" >
+    <!-- none -->
 		<table name="#itemConsumeId">0 22032 22033 22034 22035 22036</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 84</table>
@@ -453,6 +364,7 @@
 		</cond>
 	</skill>
 	<skill id="26029" levels="1" name="Potion of Will" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="50" />
@@ -470,7 +382,8 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="26030" levels="1" name="Healing medicine for Mana" >
+	<skill id="26030" levels="1" name="Healing Medicine for Mana" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="600000" />
@@ -490,9 +403,7 @@
 		</cond>
 	</skill>
 	<skill id="26031" levels="1" name="Wind Walk Scroll" >
-		<!--
-		      Description: Increases moving speed by 33 for 60 minutes.
-		-->
+    <!-- Increases Speed by 33 for 1 hour. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="hitTime" val="4000" />
@@ -515,9 +426,7 @@
 		</for>
 	</skill>
 	<skill id="26032" levels="1" name="Haste Scroll" >
-		<!--
-		      Description: Increases Atk. Spd. by 33% for 60 minutes.
-		-->
+    <!-- Increases Atk. Spd. by 33% for 1 hour. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_haste_i00" />
 		<set name="hitTime" val="4000" />
@@ -540,9 +449,7 @@
 		</for>
 	</skill>
 	<skill id="26033" levels="1" name="Might Scroll" >
-		<!--
-		      Description: Increases P. Atk. by 15% for 60 minutes.
-		-->
+    <!-- Increases P. Atk. by 15% for 1 hour. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_might_i00" />
 		<set name="hitTime" val="4000" />
@@ -565,9 +472,7 @@
 		</for>
 	</skill>
 	<skill id="26034" levels="1" name="Shield Scroll" >
-		<!--
-		      Description: Increases P. Def. by 15% for 60 minutes.
-		-->
+    <!-- Increases P. Def. by 15% for 1 hour. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_shield_i00" />
 		<set name="hitTime" val="4000" />
@@ -590,9 +495,7 @@
 		</for>
 	</skill>
 	<skill id="26035" levels="1" name="Death Whisper Scroll" >
-		<!--
-		      Description: Increases the power of critical attacks by 35% for 60 minutes.
-		-->
+    <!-- Increases Critical P. Atk. by 35% for 1 hour. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_death_whisper_i00" />
 		<set name="hitTime" val="4000" />
@@ -615,9 +518,7 @@
 		</for>
 	</skill>
 	<skill id="26036" levels="1" name="Guidance Scroll" >
-		<!--
-		      Description: Increases accuracy by 4.
-		-->
+    <!-- Increases accuracy by 4 for 1 hour. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_guidance_i00" />
 		<set name="hitTime" val="4000" />
@@ -640,9 +541,7 @@
 		</for>
 	</skill>
 	<skill id="26037" levels="1" name="Empower Scroll" >
-		<!--
-		      Description: Increases M. Atk. by 75%.
-		-->
+    <!-- Increases M. Atk. by 75% for 1 hour. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_empower_i00" />
 		<set name="hitTime" val="4000" />
@@ -664,10 +563,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26038" levels="1" name="Grater Acumen Scroll" >
-		<!--
-		      Description: Increases Casting Spd. by 30% for 60 minutes.
-		-->
+	<skill id="26038" levels="1" name="Greater Acumen Scroll" >
+    <!-- Increases Casting Spd. by 30% for 1 hour. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_greater_acumen_i00" />
 		<set name="hitTime" val="4000" />
@@ -690,9 +587,7 @@
 		</for>
 	</skill>
 	<skill id="26039" levels="1" name="Vampiric Rage Scroll" >
-		<!--
-		      Description: 9% of the standard short-range physical damage inflicted on the enemy is recovered as HP for 60 minutes.
-		-->
+    <!-- For 1 hour, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_vampiric_rage_i00" />
 		<set name="hitTime" val="4000" />
@@ -714,10 +609,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26040" levels="1" name="Bless the Body Scroll" >
-		<!--
-		      Description: Increases Max HP by 35%.
-		-->
+	<skill id="26040" levels="1" name="Blessed Body Scroll" >
+    <!-- Increases Max HP by 35% for 1 hour. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_bless_the_body_i00" />
 		<set name="hitTime" val="4000" />
@@ -740,9 +633,7 @@
 		</for>
 	</skill>
 	<skill id="26041" levels="1" name="Berserker Spirit Scroll" >
-		<!--
-		      Description: Decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8.
-		-->
+    <!-- Decreases party members' P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 hour. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_berserker_spirit_i00" />
 		<set name="hitTime" val="4000" />
@@ -772,9 +663,7 @@
 		</for>
 	</skill>
 	<skill id="26042" levels="1" name="Magic Barrier Scroll" >
-		<!--
-		      Description: Increases magic resistance by 30%.
-		-->
+    <!-- Increases magic resistance by 30% for 1 hour. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_magic_barrier_i00" />
 		<set name="hitTime" val="4000" />
@@ -796,10 +685,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26043" levels="1" name="Bless the Soul Scroll" >
-		<!--
-		      Description: Increases Max MP by 35%.
-		-->
+	<skill id="26043" levels="1" name="Blessed Soul Scroll" >
+    <!-- Increases Max MP by 35% for 1 hour. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_bless_the_soul_i00" />
 		<set name="hitTime" val="4000" />
@@ -822,9 +709,7 @@
 		</for>
 	</skill>
 	<skill id="26044" levels="1" name="Clarity Scroll" >
-		<!--
-		      Description: Decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%.
-		-->
+    <!-- For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. Consumes 3 Spirit Ore. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_clarity_i00" />
 		<set name="hitTime" val="4000" />
@@ -849,9 +734,7 @@
 		</for>
 	</skill>
 	<skill id="26045" levels="1" name="Wild Magic Scroll" >
-		<!--
-		      Description: Increases the rate of causing exceptional damage by the Damage Magic by 2.
-		-->
+    <!-- For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wild_magic_i00" />
 		<set name="hitTime" val="4000" />
@@ -873,10 +756,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26046" levels="5" name="Rune of Experience Points 1st Phase" >
-		<!--
-		      Description: Acquired Experience Points increase by 10%.
-		-->
+	<skill id="26046" levels="5" name="Rune of XP 10%" >
+    <!-- Acquired XP increases by 10%. -->
 		<table name="#power">0.1 0.2 0.3 0.4 0.5</table>
 		<set name="icon" val="br_cashtex.skill.br_cash_rune_of_exp_buff_1" />
 		<set name="magicLevel" val="1" />
@@ -887,10 +768,8 @@
 			<add order="0x40" stat="ExpMultiplier" val="#power" />
 		</for>
 	</skill>
-	<skill id="26047" levels="5" name="Rune of SP 1st Phase" >
-		<!--
-		      Description: Acquired SP increase by 10%.
-		-->
+	<skill id="26047" levels="5" name="Rune of SP 10%" >
+    <!-- Acquired SP increases by 10%. -->
 		<table name="#power">0.1 0.2 0.3 0.4 0.5</table>
 		<set name="icon" val="br_cashtex.skill.br_cash_rune_of_sp_buff_1" />
 		<set name="magicLevel" val="1" />
@@ -901,10 +780,8 @@
 			<add order="0x40" stat="SpMultiplier" val="#power" />
 		</for>
 	</skill>
-	<skill id="26048" levels="5" name="Rune of Crystal Form 1st Phase" >
-		<!--
-		      Description: One's Grade Penalty decreases by 1 level.
-		-->
+	<skill id="26048" levels="5" name="Rune of Crystal Form Level 1" >
+    <!-- The user's grade penalty decreases by 1 level. -->
 		<table name="#power">1 2 3 4 5</table>
 		<set name="icon" val="br_cashtex.skill.br_cash_rune_of_rp_buff_1" />
 		<set name="magicLevel" val="1" />
@@ -916,9 +793,7 @@
 		</for>
 	</skill>
 	<skill id="26049" levels="1" name="Rune of Feather" >
-		<!--
-		      Description: One's Weight Limit increases by 20%
-		-->
+    <!-- The user's Weight Limit increases by 20%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -928,12 +803,8 @@
 			<mul order="0x30" stat="maxLoad" val="1.2" />
 		</for>
 	</skill>
-	<skill id="26050" levels="1" name="Blessed Spiritshot - D grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26050" levels="1" name="Blessed Spiritshot (D-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -941,12 +812,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26051" levels="1" name="Blessed Spiritshot - C grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26051" levels="1" name="Blessed Spiritshot (C-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -954,12 +821,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26052" levels="1" name="Blessed Spiritshot - B grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26052" levels="1" name="Blessed Spiritshot (B-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -967,12 +830,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26053" levels="1" name="Blessed Spiritshot - A grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26053" levels="1" name="Blessed Spiritshot (A-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -980,12 +839,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26054" levels="1" name="Blessed Spiritshot - S grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26054" levels="1" name="Blessed Spiritshot (S-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -993,12 +848,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26055" levels="1" name="Spiritshot - D grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26055" levels="1" name="Spiritshot (D-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1006,12 +857,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26056" levels="1" name="Spiritshot - C grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26056" levels="1" name="Spiritshot (C-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1019,12 +866,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26057" levels="1" name="Spiritshot -  B grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26057" levels="1" name="Spiritshot (B-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1032,12 +875,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26058" levels="1" name="Spiritshot - A grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26058" levels="1" name="Spiritshot (A-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1045,12 +884,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26059" levels="1" name="Spiritshot - S grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26059" levels="1" name="Spiritshot (S-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1058,12 +893,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26060" levels="1" name="Soulshot - D grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26060" levels="1" name="Soulshot (D-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1071,12 +902,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26061" levels="1" name="Soulshot - C grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26061" levels="1" name="Soulshot (C-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1084,12 +911,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26062" levels="1" name="Soulshot -  B grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26062" levels="1" name="Soulshot (B-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1097,12 +920,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26063" levels="1" name="Soulshot - A grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26063" levels="1" name="Soulshot (A-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1110,12 +929,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26064" levels="1" name="Soulshot - S grade" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26064" levels="1" name="Soulshot (S-Grade)" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1123,12 +938,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26065" levels="1" name="A Scroll Bundle of Fighter" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26065" levels="1" name="Fighter's Scroll Bundle" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1141,12 +952,8 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="26066" levels="1" name="A Scroll Bundle of Mage" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+	<skill id="26066" levels="1" name="Mage's Scroll Bundle" >
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1160,11 +967,7 @@
 		</cond>
 	</skill>
 	<skill id="26067" levels="5" name="Bone Quiver" >
-		<!--  Automatically generated from The Gracia Final client files.
-		      Description: none
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 16-4-2009  22:35
-		-->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1172,11 +975,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="26068" levels="10" name="Blessed Spiritshot Pack - D grade" >
-		<!--  
-		      Last modify: 02.11.2009
-		      Description: Blessed Spiritshot Pack 1-5, Blessed Spiritshot Large Pack 6-10, Item Mall.
-		-->
+	<skill id="26068" levels="10" name="Blessed Spiritshot Pack (D-Grade)" >
+    <!-- none -->
 		<table name="#itemConsumeId">22094 22095 22096 22097 22098 22109 22110 22111 22112 22113</table>
 		<table name="#SummonItemId">22072 22073 22074 22075 22076 22072 22073 22074 22075 22076</table>
 		<table name="#SummonMinCount">5000 5000 5000 5000 5000 10000 10000 10000 10000 10000</table>
@@ -1193,11 +993,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="26069" levels="10" name="Spiritshot Pack - D grade" >
-		<!--  
-		      Last modify: 02.11.2009
-		      Description: Spiritshot Pack 1-5, Spiritshot Large Pack 6-10, Item Mall.
-		-->
+	<skill id="26069" levels="10" name="Spiritshot Pack (D-Grade)" >
+    <!-- none -->
 		<table name="#itemConsumeId">22099 22100 22101 22102 22103 22114 22115 22116 22117 22118</table>
 		<table name="#SummonItemId">22077 22078 22079 22080 22081 22077 22078 22079 22080 22081</table>
 		<table name="#SummonMinCount">5000 5000 5000 5000 5000 10000 10000 10000 10000 10000</table>
@@ -1214,11 +1011,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="26070" levels="10" name="Soulshot Pack - D grade" >
-		<!--  
-		      Last modify: 02.11.2009
-		      Description: Soulshot Pack 1-5, Soulshot Large Pack 6-10, Item Mall.
-		-->
+	<skill id="26070" levels="10" name="Soulshot Pack (D-Grade)" >
+    <!-- none -->
 		<table name="#itemConsumeId">22104 22105 22106 22107 22108 22119 22120 22121 22122 22123</table>
 		<table name="#SummonItemId">22082 22083 22084 22085 22086 22082 22083 22084 22085 22086</table>
 		<table name="#SummonMinCount">5000 5000 5000 5000 5000 10000 10000 10000 10000 10000</table>
@@ -1235,11 +1029,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="altUse" val="true" />
 	</skill>
-	<skill id="26071" levels="17" name="Wrapped daisy hairpin" >
-		<!--  
-		      Last modify: 03.11.2009
-		      Description: Hair accessory's.
-		-->
+	<skill id="26071" levels="17" name="Wrapped Daisy Hairpin" >
+    <!-- none -->
 		<table name="#itemConsumeId">22124 22125 22126 22127 22128 22129 22130 22131 22132 22133 22134 22135 22136 22137 22138 22139 22140</table>
 		<table name="#SummonItemId">22156 22157 22158 22159 22160 22161 22162 22163 22164 22165 22166 22167 22168 22169 22170 22171 22172</table>
 		<set name="magicType" val="SPECIAL" />
@@ -1256,10 +1047,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="26072" levels="3" name="Wrapped Pet Exchange Ticket - Buffalo" >
-		<!--  
-		      Last modify: 03.11.2009
-		      Description: Pet Exchange Ticket's.
-		-->
+    <!-- none -->
 		<table name="#itemConsumeId">22141 22142 22143</table>
 		<table name="#SummonItemId">7583 7584 7585</table>
 		<set name="magicType" val="SPECIAL" />
@@ -1276,10 +1064,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="26073" levels="5" name="Bone Bolt Container" >
-		<!--  .
-		      Last modify: 03.11.2009
-		      Description: Bolt Container's.
-		-->
+    <!-- none -->
 		<table name="#itemConsumeId">22149 22150 22151 22152 22153</table>
 		<table name="#SummonItemId">22144 22145 22146 22147 22148</table>
 		<table name="#SummonMinCount">10000 10000 10000 10000 10000</table>

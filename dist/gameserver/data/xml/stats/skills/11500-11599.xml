@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="11501" levels="1" name="Великое Владение Парным Оружием">
-	<!-- 
-		При использовании парных мечей и дробящего оружия Физ. Атк. +235, Маг. Атк. на 104, Скор. Атк. на 10%. 
-		Также с определенной вероятностью при каждой атаке увеличивает эффективность умений и шанс Крит. Атк.
-		Дает шанс обнулить или увеличить в два раза время перезарядки умений. Зависит от СИЛ.
-	 -->
+	<skill id="11501" levels="1" name="Superior Dual Weapon Mastery">
+    <!-- When a Dual sword or Dual Blunt Weapon is equipped, increases P. Atk. by 235, M. Atk. by 104, and Atk. Spd. by 10%. There is a chance of increasing physical skill power and Critical Rate when attacking. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your STR. -->
 		<table name="#pAtk">235</table>
 		<table name="#mAtk">104</table>
 		<set name="target" val="TARGET_SELF" />
@@ -29,10 +25,8 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="11502" levels="1" name="Великое Владение Магической Броней">
-	<!-- 
-		Физ. Защ. +91 при использовании магических доспехов.
-	-->
+	<skill id="11502" levels="1" name="Superior Robe Mastery">
+    <!-- Max HP + 4636 and P. Def. + 91 when equipped with with a Robe. -->
 		<table name="#pDef">91</table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -48,10 +42,8 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="11503" levels="1" name="Великое Владение Легкой Броней">
-	<!-- 
-		Физ. Защ. +73, бонус восстановления MP +25% при использовании легких доспехов.
-	-->
+	<skill id="11503" levels="1" name="Superior Light Armor Mastery">
+    <!-- Max HP + 4634, P. Def. + 73 and MP Recovery Bonus + 25% when equipped with a Light Armor. -->
 		<table name="#pDef">73</table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -70,10 +62,8 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="11504" levels="1" name="Великое Владение Тяжелой Броней">
-	<!-- 
-		Физ. Защ. +73 при использовании тяжелых доспехов
-	-->
+	<skill id="11504" levels="1" name="Superior Heavy Armor Mastery">
+    <!-- Max HP + 4636 and P. Def. + 73 when equipped with a Heavy Armor. -->
 		<table name="#pDef">73</table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -89,11 +79,8 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="11505" levels="1" name="Великая Антимагия">
-	<!-- 
-		Увеличивает Маг. Защ. на 139, сопротивление Маг. Атк. на 35%. 
-		Также с определенной вероятностью при получении урона увеличивает Маг. Защ. и сопротивление стихиям.
-	-->
+	<skill id="11505" levels="1" name="Superior Anti Magic">
+    <!-- M. Def. + 139 and resistance to magic attack + 35%. When receiving damage, there is a chance of increasing M. Def. and attributes resistance for 10 seconds. -->
 		<table name="#mDef">139</table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -108,10 +95,8 @@
 			<add order="0x40" stat="magicResist" val="35" />
 		</for>
 	</skill>
-	<skill id="11506" levels="1" name="Великое Усиление Тела">
-	<!-- 
-		Увеличивает СИЛ на 2 и макс. HP на 366.
-	-->
+	<skill id="11506" levels="1" name="Superior HP Boost">
+    <!-- STR + 2 and increases Max HP by 366. -->
 		<table name="#maxHp">366</table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -126,10 +111,8 @@
 			<add order="0x40" stat="maxHp" val="#maxHp" />
 		</for>
 	</skill>	
-	<skill id="11507" levels="1" name="Великое Увеличение Маны">
-	<!-- 
-		Увеличивает СИЛ на 2 и макс. MP на 313.
-	-->
+	<skill id="11507" levels="1" name="Superior MP Boost">
+    <!-- STR + 2 and increases Max MP by 313. -->
 		<table name="#maxMp">313</table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -144,10 +127,8 @@
 			<add order="0x40" stat="maxMp" val="#maxMp" />
 		</for>
 	</skill>
-	<skill id="11508" levels="6" name="Атакующий Стремительный Бросок">
-	<!-- 
-		Бросается к врагу и оглушает на 1 сек. Требуются меч/дробящее оружие/парные мечи/парное дробящее оружие.
-	-->
+	<skill id="11508" levels="6" name="Assault Rush">
+    <!-- Rushes the enemy to inflict Stun for 1 second. Can be used while a sword, dual sword, or dual blunt weapon is equipped. -->
 		<table name="#magicLevel">85 87 90 93 96 99</table>		
 		<table name="#mpConsume2">70</table>
 		<table name="#elementPower">0</table>
@@ -169,13 +150,8 @@
 			<effect name="Stun" time="1" val="0" stackOrder="1" stackType="stun" />
 		</for>
 	</skill>
-
-	<skill id="11509" levels="8" name="Атака Штурмом">
-	<!-- 
-		Атакует врага и наносит дополнительный урон. Мощность 8268. 
-		Также в течение 5 сек. уменьшает Физ. Защ. и Маг. Защ. на 30%, Уклонение на 10. 
-		Ослабляет отрицательнные эффекты в PvP на 10%. Требуются мечи/дробящее оружие/парные мечи/парное дробящее оружие. Сверхудар. Крит. Удар.
-	-->
+	<skill id="11509" levels="8" name="Crippling Attack">
+    <!-- Attacks the enemy with P. Atk. increased by 8268. For 10 seconds, decreases P. Def. and M. Def. by 30% (40% during PvP) and P. Evasion by 10. Debuff power on both sides decrease by 10% during PvP.  Can be used while a dagger, dual sword, or dual blunt weapon is equipped. Over-hit. Critical. -->
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#power">8268 8556 9134 9711 10288 10866 11443 12020</table>
 		<table name="#powerPvP">0</table>
@@ -237,7 +213,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11510" levels="8" name="Меч Тени">
+	<skill id="11510" levels="8" name="Shadow Blade">
+    <!-- Attacks the target with P. Atk. Increased by 9133. For 10 seconds, decreases P. Atk. and M. Atk. by 30% (40% during PvP). Debuff power on both sides decrease by 10% during PvP.  Can be used while a dagger, dual sword, or dual blunt weapon is equipped. Over-hit. Critical. -->
 		<table name="#power">9133 9769 10404 11040 11675 12311 12946 13582</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#powerPvP">0</table>
@@ -297,7 +274,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11511" levels="8" name="Смертельный Удар">
+	<skill id="11511" levels="8" name="Death Strike">
+    <!-- Attacks the target with 14326 Power added to P. Atk. Can be used while a dagger, dual sword, or dual blunt weapon is equipped. Over-hit. Critical. -->
 		<table name="#power">14326 14819 15803 16788 17773 18758 19743 20727</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#effectPoint">52 54 57 64 67 70 79 83 86 96 100 104 111 115 119 128 132 136 145 150 154 164 169 173</table>
@@ -352,7 +330,8 @@
         </enchant8>
         <enchant9 levels="10" name="Recycle"/>
 	</skill>
-	<skill id="11513" levels="8" name="Пылающая Ярость">
+	<skill id="11513" levels="8" name="Mass Crippling Attack">
+    <!-- Attacks the target and nearby enemies with P. Atk. increased by 10263. For 10 seconds, decreases the target's P. Def. and M. Def. by 30% (40% during PvP) and P. Evasion by 10. Debuff power on both sides decrease by 10% during PvP.  Can be used while a dagger, dual sword, or dual blunt weapon is equipped. Over-hit. Critical. -->
 		<table name="#power">10263 10616 11322 12027 12733 13438 14144 14849</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#powerPvP">0</table>
@@ -414,7 +393,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11514" levels="8" name="Сокрушительный Шторм">
+	<skill id="11514" levels="8" name="Mass Shadow Blade">
+    <!-- Attacks the target and nearby enemies with P. Atk. Increased by 11722. For 10 seconds, decreases P. Atk. and M. Atk. by 30% (40% during PvP). Debuff power on both sides decrease by 10% during PvP. Can be used while a dagger, dual sword, or dual blunt weapon is equipped. Over-hit. Critical. -->
 		<table name="#power">11722 12525 13327 14130 14933 15736 16539 17342</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#powerPvP">0</table>
@@ -475,19 +455,21 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11515" levels="1" name="Взрыв Хаоса" >
+	<skill id="11515" levels="1" name="Confusion Bomber" >
+    <!-- Curses the target with darkness. For 5 seconds, decreases Speed and Atk. Spd. by 5%. After 5 seconds, detonates the target to inflict damage nearby. Can be used while a dagger, dual sword, or dual blunt weapon is equipped. -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_SELF" />
 			<for />
 	</skill>
-	<skill id="11516" levels="1" name="Взрыв Проклятья" >
+	<skill id="11516" levels="1" name="Curse Explosion" >
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_SELF" />
 			<for />
 	</skill>
-	<skill id="11517" levels="4" name="Поэма Рога">
+	<skill id="11517" levels="4" name="Horn Melody">
+    <!-- Increases all party members' P. Atk. by 17%, P. Def. by 15%, M. Atk. by 79%, and M. Def. by 30% for 30 minutes. -->
 		<table name="#pAtk">1.17 1.19 1.21 1.23</table>
 		<table name="#mAtk">1.79 1.83 1.87 1.91</table>
 		<table name="#time">1800</table>
@@ -519,7 +501,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11518" levels="4" name="Поэма Барабана">
+	<skill id="11518" levels="4" name="Drum Melody">
+    <!-- Increases party member's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, resistance to debuffs by 10%, P. Def. upon evading a critical attack, and decreases Speed by 15% for 30 minutes. Party members equipped with a melee weapon, a bow or crossbow who receive damage have a chance to increase Critical Damage during a normal attack. -->
 		<table name="#spd">0.85 0.9 0.95 1.0</table>
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">170</table>
@@ -558,7 +541,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11519" levels="4" name="Поэма Органа">
+	<skill id="11519" levels="4" name="Pipe Organ Melody">
+    <!-- Increases party members' Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP Recovery Bonus by 20% for 30 minutes. -->
 		<table name="#vuln">1.37 1.39 1.41 1.43</table>
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">170</table>
@@ -589,7 +573,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11520" levels="4" name="Поэма Гитары">
+	<skill id="11520" levels="4" name="Guitar Melody">
+    <!-- Increases party members' P. Critical Rate by 32%, P. Critical Damage by 35%, M. Critical Rate by 20 and decreases MP Consumption for physical skills by 20% and magic skills by 10% for 30 minutes. Also decreases MP Consumption for Iss Enchanter's buff skills by 20%. -->
 		<table name="#vuln">32 34 36 38</table>
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">170</table>
@@ -621,7 +606,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11521" levels="4" name="Поэма Арфы">
+	<skill id="11521" levels="4" name="Harp Melody">
+    <!-- Increases party members' P. Accuracy by 5, P. and M. Evasion by 5, Speed by 34 and decreases received Critical Damage by 30% for 30 minutes. -->
 		<table name="#time">1800</table>
 		<table name="#vuln">5 6 7 8</table>
 		<table name="#vuln2">34 35 36 37</table>
@@ -653,7 +639,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11522" levels="4" name="Поэма Лютни">
+	<skill id="11522" levels="4" name="Lute Melody">
+    <!-- Increases party members' Atk. Spd. by 34% and Casting Spd. by 31% for 30 minutes. Also there is a chance of triggering a 9% Vampiric Rage effect during a normal attack. -->
 		<table name="#time">1800</table>
 		<table name="#vuln1">1.34 1.35 1.36 1.37</table>
 		<table name="#vuln2">1.31 1.32 1.33 1.34</table>
@@ -684,7 +671,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11523" levels="1" name="Гармония Стража">
+	<skill id="11523" levels="1" name="Knight's Harmony">
+    <!-- Increases the selected party member's P. Atk. by 12%, P. Def. by 45%, shield defense rate by 30%, shield P. Def. by 50%, P. Critical Damage by 35% and P. Critical Rate by 100% for 30 minutes. -->
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="2000" />
@@ -715,7 +703,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11524" levels="1" name="Гармония Берсерка">
+	<skill id="11524" levels="1" name="Warrior's Harmony">
+    <!-- Increases the selected party member's P. Atk. by 35%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8%, P. Critical Damage by 35%, P. Critical Rate by 100, Speed and decreases M. Def. by 16%, P. Def. by 8%, and P. Evasion by 4 for 30 minutes. -->
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="2000" />
@@ -750,7 +739,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11525" levels="1" name="Гармония Мага">
+	<skill id="11525" levels="1" name="Wizard's Harmony">
+    <!-- Increases the selected party member's P. Atk. by 8%, M. Atk. by 40%, Atk. Spd. and Casting Spd. by 8%, M. Def. by 14%, M. Critical Rate by 100%, MP recovery bonus by 20%, Speed by 8 and decreases P. Def. by 8%, P. Evasion by 4, MP Consumption of magic skill by 15%, MP Consumption of physical skill by 5%, and skill cooldown by 20% for 30 minutes. -->
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="2000" />
@@ -788,11 +778,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11529" levels="1" name="Соната Битвы">
-	<!--
-		На 5 мин. для членов группы: Скор. Атк. +15%, Скор. Маг. +30%, макс. HP +30%, бонус восстановления MP +20%. 
-		Расход MP для магии -10%, уменьшает шанс отмены колдовства. 
-	-->
+	<skill id="11529" levels="1" name="Prevailing Sonata">
+    <!-- Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 35%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes. -->
 		<table name="#time">300</table>
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="2000" />
@@ -823,11 +810,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11530" levels="1" name="Соната Движения">
-	<!--
-		На 5 мин. для членов группы: Физ. Атк. +8%, Маг. Атк. +16%, Скор. Атк. и Скор. Маг. +8%. Физ. Защ. -3%, Маг. Защ. -11%, Уклонение -4. 
-		Дополнительно с определенным шансом накладывает 8% эффекта Гнева Вампира и отражает на врага 10% получаемого урона. 
-	-->
+	<skill id="11530" levels="1" name="Daring Sonata">
+    <!-- Increases party members' P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4 for 5 minutes. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
 		<table name="#time">300</table>
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="2000" />
@@ -860,11 +844,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11532" levels="1" name="Соната Расслабления">
-	<!--
-		Для членов группы: Бонус восстановления HP +20%, Точность +4, Уклонение +3, Скорость +20. 
-		Расход MP для умений +20%, скорость перезарядки умений +10%. Время действия: 5 мин. 
-	-->
+	<skill id="11532" levels="1" name="Refreshing Sonata">
+    <!-- Increases party members' HP Recovery Bonus by 20%, P. Accuracy by 4, P. Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill cooldown by 10% for 5 minutes. -->
 		<table name="#time">300</table>
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="2000" />
@@ -897,7 +878,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11533" levels="1" name="Реквием Крови">
+	<skill id="11533" levels="1" name="Blood Requiem">
+    <!-- Bestows an 80% Vampiric Rage effect on party members. -->
 		<set name="magicLevel" val="97" />
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="2000" />
@@ -916,7 +898,8 @@
 			<effect name="Buff" time="15" val="0" stackOrder="4" stackType="impulse" />
 		</for>
 	</skill>
-	<skill id="11534" levels="5" name="Руки Ангела">
+	<skill id="11534" levels="5" name="Angel's Touch">
+    <!-- For 7 seconds, renders the selected target immune to debuffs. -->
 		<table name="#magicLevel">87 90 93 96 99</table>
 		<table name="#time">7 9 11 13 15</table>
 		<table name="#mpConsume2">170</table>
@@ -932,7 +915,8 @@
 			<effect count="1" name="DebuffImmunity" time="#time" val="0" />
 		</for>
 	</skill>
-	<skill id="11536" levels="6" name="Высшее Снятие Благословения">
+	<skill id="11536" levels="6" name="Divine Cancel">
+    <!-- Cancels up to two of the target's buffs. -->
 		<table name="#magicLevel">85 86 89 92 95 98</table>
 		<table name="#activateRate">95</table>
 		<table name="#mpConsume2">170</table>
@@ -966,7 +950,8 @@
         </enchant3>
 		<for />
 	</skill>
-	<skill id="11537" levels="7" name="Искажение">
+	<skill id="11537" levels="7" name="Transform">
+    <!-- Transforms the target into a harmless creature and decrease its Speed by 20% for 15 seconds. The effect is canceled if the transformed target is attacked. -->
 		<table name="#magicLevel">85 86 88 91 94 97 99</table>		
 		<table name="#spd">0.8 0.7 0.6 0.5 0.4 0.3 0.2</table>
 		<table name="#activateRate">85</table>
@@ -987,7 +972,8 @@
 			<effect count="1" name="MuteAll" time="15" val="0" />		
 		</for>
 	</skill>
-	<skill id="11538" levels="4" name="Гигантские Корни - Массовое">
+	<skill id="11538" levels="4" name="Mass Giant Root">
+    <!-- Inflicts Hold on nearby enemies for 15 seconds. -->
 		<table name="#magicLevel">85 87 95 97</table>
 		<table name="#activateRate">80 83 87 90</table>
 		<table name="#mpConsume2">660</table>
@@ -1021,10 +1007,8 @@
 			<effect count="1" name="Root" stackOrder="-1" stackType="Root" time="15" val="0" />
 		</for>
 	</skill>
-	<skill id="11539" levels="8" name="Превращение в Камень">
-	<!--
-		На 15 сек. превращает врага в камень.
-	-->
+	<skill id="11539" levels="8" name="Petrify">
+    <!-- Petrifies the target for 15 seconds. -->
 		<table name="#runSpd">0</table>
 		<set name="magicLevel" val="85" />
 		<set name="power" val="300" />
@@ -1041,7 +1025,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11540" levels="4" name="Милая Хрюшка">
+	<skill id="11540" levels="4" name="Quick Escape">
+    <!-- Transforms yourself into a cute pig for 15 seconds. Increases P. Def. and M. Def. by 3000, and increases Speed by 30%. -->
 		<table name="#mDef">3000 3500 4000 4500</table>
 		<table name="#spd">1.3 1.4 1.5 1.6</table>
 		<table name="#time">9 11 13 15</table>
@@ -1077,7 +1062,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11541" levels="1" name="Одинокий Камень">
+	<skill id="11541" levels="1" name="Polymorph">
+    <!-- Transforms yourself into a stone for 15 seconds to eliminate nearby enemies' aggression and keep them from targeting you. Speed is greatly decreased while transformed. -->
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="60000" />
 		<set name="hitTime" val="1500" />	
@@ -1094,7 +1080,8 @@
 			<effect name="Petrification" time="15" val="0" stackOrder="1" stackType="turn_stone" />
 		</for>
 	</skill>
-	<skill id="11543" levels="3" name="Реорганизация">
+	<skill id="11543" levels="3" name="Disperse">
+    <!-- For 30 seconds, transforms yourself and nearby party members into harmless creatures. Increases P. Def. and M. Def. by 2000 and Speed by 44. Decreases P. Atk. and M. Atk. by 80%. -->
 		<table name="#Def">2000 3000 4000</table>
 		<table name="#Time">30</table>
 		<table name="#mpConsume2">370</table>
@@ -1129,7 +1116,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11544" levels="1" name="Рапсодия Битвы">
+	<skill id="11544" levels="1" name="Battle Rhapsody">
+    <!-- For 30 seconds, doubles all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. -->
 		<table name="#mpConsume2">970</table>
 		<set name="reuseDelay" val="600000" />
 		<set name="hitTime" val="2000" />		
@@ -1153,7 +1141,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11545" levels="1" name="Ноктюрн Безумия">
+	<skill id="11545" levels="1" name="Crazy Nocturne">
+    <!-- For 10 seconds, decreases party members' physical and magic skill cooldown by 50%. -->
 		<table name="#mpConsume2">1070</table>
 		<set name="reuseDelay" val="600000" />
 		<set name="hitTime" val="2000" />		
@@ -1176,7 +1165,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11546" levels="1" name="Симфония Соблазна">
+	<skill id="11546" levels="1" name="Chaos Symphony">
+    <!-- Inflicts 13629 damage on the target and nearby enemies. Decreases P. Atk., P. Def., M. Atk., M. Def., and Speed by 50% for 10 seconds. Can be used while a dagger, dual sword, or dual blunt weapon is equipped. Over-hit. Critical. -->
 		<table name="#mpConsume2">1010</table>
 		<set name="reuseDelay" val="600000" />
 		<set name="hitTime" val="2000" />		
@@ -1205,7 +1195,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11547" levels="1" name="Великое Восстановление HP">
+	<skill id="11547" levels="1" name="Superior HP Recovery">
+    <!-- STR + 2 and increases HP Recovery Bonus by 2.8. -->
         <table name="#regHp">2.8</table>
         <table name="#magicLevel">85</table>
 		<set name="target" val="TARGET_SELF" />
@@ -1222,7 +1213,8 @@
 			<add order="0x10" stat="regHp" val="2.8" />
 		</for>
 	</skill>
-	<skill id="11548" levels="1" name="Великая Перезарядка">
+	<skill id="11548" levels="1" name="Superior Quick Recovery">
+    <!-- STR + 2 and decreases the cooldown for magic skills by 25%. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLevel" val="85" />
@@ -1233,7 +1225,8 @@
 			<mul order="0x30" stat="mReuse" val="0.75" />
 		</for>
 	</skill>
-	<skill id="11549" levels="1" name="Великое Воровство Маны">
+	<skill id="11549" levels="1" name="Superior Mana Steal">
+    <!-- There is a chance of recovering MP during a normal attack when equipped with a dagger, dual sword, or dual blunt weapon. -->
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1243,7 +1236,8 @@
 			<trigger id="11550" level="1" type="ATTACK" chance="5" />
 		</triggers>		
 	</skill>	
-	<skill id="11550" levels="1" name="Воровство маны">
+	<skill id="11550" levels="1" name="Superior Mana Steal">
+    <!-- none -->
 		<set name="reuseDelay" val="10000" />
 		<set name="power" val="150" />
 		<set name="magicLevel" val="85" />
@@ -1251,7 +1245,8 @@
 		<set name="skillType" val="MANAHEAL" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="11551" levels="1" name="Великое Сопротивление Стихиям">
+	<skill id="11551" levels="1" name="Superior Mental Resistance">
+    <!-- STR + 2 and resistance to Hold/Sleep/Mind/Poison/Bleed attacks + 30. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLevel" val="85" />
@@ -1266,7 +1261,8 @@
 			<add order="0x40" stat="poisonResist" val="30" />
 		</for>
 	</skill>
-	<skill id="11552" levels="1" name="Великая Фокусировка Разума">
+	<skill id="11552" levels="1" name="Superior Divine Lore">
+    <!-- MP Consumption for skills is decreased by 6%. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLevel" val="85" />
@@ -1276,7 +1272,8 @@
 			<mul order="0x30" stat="mpConsum" val="0.94" />
 		</for>
 	</skill>
-	<skill id="11553" levels="1" name="Grand Focus Mind">
+	<skill id="11553" levels="1" name="Superior Focus Mind">
+    <!-- STR + 2 and increases MP recovery bonus by 8.4. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLevel" val="85" />
@@ -1287,7 +1284,8 @@
 			<add order="0x40" stat="regMp" val="8.4" />
 		</for>
 	</skill>
-	<skill id="11554" levels="1" name="Великое Шестое Чувство">
+	<skill id="11554" levels="1" name="Superior Sixth Sense">
+    <!-- STR + 2 and when HP is below 30%, increases P. Evasion by 17. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLevel" val="85" />
@@ -1299,7 +1297,8 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="11555" levels="1" name="Великое Быстрое Чтение Заклинаний">
+	<skill id="11555" levels="1" name="Superior Fast Spell Casting">
+    <!-- Increases Casting Spd. by 15%. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLevel" val="85" />
@@ -1309,7 +1308,8 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.15" />
 		</for>
 	</skill>
-	<skill id="11557" levels="1" name="Последнее Наказание">
+	<skill id="11557" levels="1" name="Ultimate Scourge">
+    <!-- Blocks nearby enemies' HP natural recovery for 2 minutes. -->
 		<table name="#activateRate">50</table>
 		<table name="#mpConsume2">470</table>
 		<set name="reuseDelay" val="120000" />
@@ -1338,7 +1338,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11558" levels="1" name="Последнее Забвение">
+	<skill id="11558" levels="1" name="Ultimate Oblivion">
+    <!-- Cancels nearby enemies' targets. -->
 		<table name="#activateRate">50</table>
 		<table name="#mpConsume2">470</table>
 		<set name="reuseDelay" val="120000" />
@@ -1361,7 +1362,8 @@
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant2>
 	</skill>
-	<skill id="11559" levels="1" name="Рассеянность">
+	<skill id="11559" levels="1" name="Ultimate Suspension">
+    <!-- Increases nearby enemies' physical/magic skill cooldown by 200% for 2 minutes. -->
 		<table name="#activateRate">95</table>
 		<table name="#mpConsume2">470</table>
 		<set name="reuseDelay" val="120000" />
@@ -1389,7 +1391,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11560" levels="2" name="Непобедимость">
+	<skill id="11560" levels="2" name="Celestial Aegis">
+    <!-- Renders all party members invincible for 30 seconds. -->
 		<table name="#mpConsume2">670 720</table>
 		<table name="#magicLevel">85 99</table>
 		<set name="reuseDelay" val="1800000" />
@@ -1406,7 +1409,8 @@
 			<effect abnormal="invul2" count="1" name="Invulnerable" stackOrder="-1" stackType="Invulnerable" time="30" val="0" cancelOnAction="true" />
 		</for>
 	</skill>
-	<skill id="11561" levels="4" name="Гигантские Корни">
+	<skill id="11561" levels="4" name="Giant Root">
+    <!-- Inflicts Hold on the enemy for 15 seconds. -->
 		<table name="#magicLevel">85 87 95 97</table>
 		<table name="#activateRate">80 83 87 95</table>
 		<table name="#mpConsume2">170</table>
@@ -1435,7 +1439,8 @@
 			<effect count="1" name="Root" stackOrder="-1" stackType="Root" time="15" val="0" />
 		</for>
 	</skill>
-	<skill id="11562" levels="1" name="Движение Зла">
+	<skill id="11562" levels="1" name="Devil's Movement">
+    <!-- Prevents aggressive monsters from attacking party members for 2 minutes. The effect is canceled if any party member initiates an attack. -->
 		<table name="#mpConsume2">70</table>
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="2500" />	
@@ -1455,7 +1460,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11563" levels="1" name="Быстрое Возвращение">	
+	<skill id="11563" levels="1" name="Quick Return">	
+    <!-- Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
 		<table name="#mpConsume2">70</table>
 		<set name="reuseDelay" val="75000" />
 		<set name="hitTime" val="2500" />	
@@ -1466,7 +1472,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="relationSkillsId" val="1050" />
 	</skill>
-	<skill id="11564" levels="1" name="Воскрешение Ангела">
+	<skill id="11564" levels="1" name="Angel's Resurrection">
+    <!-- Resurrects a dead target and restores 40% of the XP lost. -->
 		<table name="#mpConsume2">70</table>
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="3000" />		
@@ -1480,7 +1487,8 @@
 		<set name="canPet" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="11565" levels="1" name="Сопротивление Стихиям">
+	<skill id="11565" levels="1" name="Elemental Protection">
+    <!-- Increases party members' resistance to Fire, Water, Wind and Earth by 30 for 30 minutes. -->
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
 		<set name="reuseDelay" val="2000" />
@@ -1510,7 +1518,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11566" levels="1" name="Сопротивление Божественному">
+	<skill id="11566" levels="1" name="Divine Protection">
+    <!-- Increases party members' resistance to Holy and Dark by 30, and resistance to Poison and Bleed by 50% for 30 minutes. -->
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">70</table>
 		<set name="reuseDelay" val="2000" />
@@ -1542,7 +1551,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11567" levels="1" name="Сопротивление Психическим Атакам">
+	<skill id="11567" levels="1" name="Mental Protection">
+    <!-- Increases party members' resistance to Hold/Sleep/Mental Attacks by 50, resistance to buff canceling attacks by 30 and resistance to debuffs by 20 for 30 minutes. -->
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">70</table>
 		<set name="reuseDelay" val="2000" />
@@ -1573,10 +1583,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11570" levels="1" name="Поэма Усиления">
-	<!--
-		По очереди восстанавливает HP цели и до 10 находящихся рядом персонажей. Первому персонажу восстанавливает 35% HP, у остальных количество восстановленных HP снижается. 
-	-->
+	<skill id="11570" levels="1" name="Healing Melody">
+    <!-- Heals the target and the 10 most injured allies around the target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. -->
 		<set name="magicLvl" val="85"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="effectPoint" val="398"/>
@@ -1589,7 +1597,8 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="relationSkillsId" val="1229;1488;58;1553" />
 	</skill>
-	<skill id="11571" levels="1" name="Поэма Восстановления">	
+	<skill id="11571" levels="1" name="Recovery Melody">	
+    <!-- Restores the selected target's CP by 1000. -->
 		<table name="#mpConsume2">120</table>
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="5000" />		

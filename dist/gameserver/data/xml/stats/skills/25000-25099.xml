@@ -10,7 +10,6 @@
         <set name="skillType" val="MPHOT"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="altUse" val="true"/>
-        -
         <for>
             <effect count="5" name="HealOverTime" stackOrder="1" stackType="HpRecoverCast" time="3" val="25.6"/>
             <effect count="5" name="HealOverTime" stackOrder="1" stackType="MpRecoverCast" time="3" val="25.6"/>

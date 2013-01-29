@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="4800" levels="1" name="Raid Boss - Level 53">
-		<!--
-			Description: A powerful, mutant Monster Eye. Some scholars believe it has achieved the final stage of Monster Eye evolution. It is incredibly intelligent and arrogant. Years ago it ran away from Argos, the father of all Monster Eyes, to the south. It thinks and schemes, and plots to   steal Argos's power someday. It believes that it grows stronger by eating the brains of other intelligent living beings, and so it feeds often.
-		-->
+    <!-- A powerful, mutant Monster Eye. Some scholars believe it has achieved the final stage of Monster Eye evolution. It is incredibly intelligent and arrogant. Years ago it ran away from Argos, the father of all Monster Eyes, to the south. It thinks and schemes, and plots to  steal Argos's power someday. It believes that it grows stronger by eating the brains of other intelligent living beings, and so it feeds often. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -11,9 +9,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4801" levels="1" name="Raid Boss - Level 58">
-		<!--
-			Description: The loyal guardian who protects the Garden of Eva, the resting place of the goddess Eva. Many seasons have passed since Eva's last visit, but he remains to protect the Garden against savages who might wish to despoil the holy goddess's resting place.
-		-->
+    <!-- The loyal guardian who protects the Garden of Ev the resting place of the goddess Eva. Many seasons have passed since Eva's last visit, but he remains to protect the Garden against savages who might wish to despoil the holy goddess's resting place. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -21,9 +17,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4802" levels="1" name="Raid Boss - Level 70">
-		<!--
-			Description: Reaper is the page of the Goddess of Death, Shilen. Reaper is in charge of collecting the countless souls who wander about on earth, and bringing them to the underground world of Shilen.His loyalty to Shilen is absolute, and he stays close to the Seal of Shilen in order to serve the goddess better. He diligently carries out his duty while waiting for the day of the goddess's resurrection.
-		-->
+    <!-- Reaper is the page of the Goddess of Death, Shilen. Reaper is in charge of collecting the countless souls who wander about on earth, and bringing them to the underground world of Shilen. His loyalty to Shilen is absolute, and he stays close to the Seal of Shilen in order to serve the goddess better. He diligently carries out his duty while waiting for the day of the goddess's resurrection. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -31,9 +25,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4803" levels="1" name="Raid Boss - Level 28">
-		<!--
-			Description: A servant of the Knight Barion, he gained the body of a devil through the dark magic of the Devil Kernon. He has only a growing anger towards General Karte, who made him a devil, and Karte's loyal officer, Barion. What he doesn't know is that this hatred is magical, inflamed  by the schemes of the Devil Kernon.
-		-->
+    <!-- A servant of the Knight Barion, he gained the body of a devil through the dark magic of the Devil Kernon. He has only a growing anger towards General Karte, who made him a devil, and Karte's loyal officer, Barion. What he doesn't know is that this hatred is magical, inflamed by the schemes of the Devil Kernon. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -41,9 +33,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4804" levels="1" name="Raid Boss - Level 35">
-		<!--
-			Description: Lord of Marsh Stakatos ruled by Devil Rahha. He is directly under mental control of Rahha, and cultivates the Stakato Army for Rahha. He is the powerful rival of Queen Jeruna of Marsh Stakatos living in the Cruma Marshlands.
-		-->
+    <!-- The Lord of Marsh Stakatos is under the mental domination of the Devil Rahha. He strengthens the Stakato Army for Rahha. He is the bitter rival of Queen Jeruna of Marsh Stakatos, who lives in the Cruma Marshlands. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -51,9 +41,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4805" levels="1" name="Raid Boss - Level 47">
-		<!--
-			Description: Knight of Elmoreden who is the commander of the research squad investigating the Tower of Insolence by the command of General Karte. Like the general, he has an immortal body. As the right arm of General Karte, he is a brave knight who can even go to Hell if ordered. He received the powerful secret from Devil Rahha, and has been watching out and investigating Tirak who participated in the research squad given Rahha's warning.
-		-->
+    <!-- The Knight of Elmoreden, the Commander of the soldiers studying the Tower of Insolence, under order of General Karte. As the right arm of General Karte, he is a brave knight willing to go to Hell if ordered, for like the general, he has an immortal body. He received his secret powers from the Devil Rahh who also warned him to watch Tirak closely. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -61,9 +49,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4806" levels="1" name="Raid Boss - Level 49">
-		<!--
-			Description: General of Elmoreden who earned the immortal body based on a contract with Devil Kernon. With a rigid personality, he was opposed to the constructing of the Tower of Insolence, for which he was saved from Einhasad's rage. However, he's been suffering from losing his lord and country, and despises people in this world who betrayed his lord and built their own kingdom. As a loyal servant of the empire, he yearns for the day when he may get to appear in front of his king and serve him again.
-		-->
+    <!-- A General of Elmoreden who obtained an immortal body through a pact with the Devil Kernon. Stubborn to a fault, he opposed the construction of the Tower of Insolence. His stance spared him of Einhasad's rage. However, he has lost his king and country. He despises those who betrayed his king and built their own kingdom. As a loyal servant of the empire, he yearns for the day when he may once again find and serve his true king. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -71,9 +57,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4807" levels="1" name="Raid Boss - Level 51">
-		<!--
-			Description: The Devil Kernon's confidant, he is a feisty and vicious devil. He overpowers his enemies with his immense strength and gigantic body. Currently, he is studying the inside of the Tower of Insolence at Kernon's command. A simple devil warrior, he believes that if he serves his superiors loyally, he will benefit from their promotions.
-		-->
+    <!-- The Devil Kernon's confidant, he is a feisty and vicious devil. He overpowers his enemies with his immense strength and gigantic body. Currently, he is studying the inside of the Tower of Insolence at Kernon's command. A simple devil warrior, he believes that if he serves his superiors loyally, he will benefit from their promotions. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -81,9 +65,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4808" levels="1" name="Raid Boss - Level 65">
-		<!--
-			Description: The staff of Death Lord Hallate with smart intelligence and beautiful appearance. Currently, she is working as Devil Kernon's subordinate in charge of Tower of Insolence. She is Hallate's confidant and lover. Sensing Devil Kernon's intention of betrayal, she is quietly monitoring him.
-		-->
+    <!-- An assistant to the Death Lord Hallate, she is smart and beautiful. Currently, she works as Devil Kernon's servant, in charge of Tower of Insolence. Yet in truth she is Hallate's confidant and lover. She senses the Devil Kernon's schemes of betrayal, and thus quietly watches him. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -91,9 +73,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4809" levels="1" name="Raid Boss - Level 75">
-		<!--
-			Description: As Death Lord Hallate's subordinate, he is collecting information related to the secrets hidden in the Tower of Insolence. He is waiting for the position of Death Lord Hallate exhausted from the battle against Baium. He has the contract with General Karte of Elmoreden to use him.
-		-->
+    <!-- A servant of the Death Lord Hallate, he collects the secrets hidden in the Tower of Insolence. He aspires to take over Death Lord Hallate's position, for Hallate is exhausted from battling against Baium. He has offered his services to General Karte of Elmoreden. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -101,9 +81,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4810" levels="1" name="Raid Boss - Level 45">
-		<!--
-			Description: Pet of the genius mystic Sartune of Elmoreden who was sealed due to jealousy over his superior achievements. Living up to the reputation of Sartune's pet, it has superior intelligence and excessive playfulness, and is ruining the rural roads by controlling a large number of inferiors.
-		-->
+    <!-- The pet of the brilliant mystic, Sartune of Elmoreden, who was imprisoned due to the jealousy and envy of his rivals. It lives up to Sartune's reputation, and is tremendously smart and playful to the point of cruelty. It causes havoc throughout the back roads through its many minions. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -111,9 +89,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4811" levels="1" name="Raid Boss - Level 24">
-		<!--
-			Description: Tragic lady who turned into a Succubus because of a mystic's curse. She loved a prince of the Gludio Waldner family, but committed a murder after being tricked by Dark Mage, and became Succubus upon his curse. Now, she sucks on energy of tourists traveling in Gludio, and prolongs her life day by day.
-		-->
+    <!-- A tragic lady transformed into a succubus through a Mystic's curse. She loved a prince of the Waltner family of Gludio, but was tricked into murdering him. Now, she feeds on the energy of travelers in Gludio, delaying her death day by day. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -121,9 +97,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4812" levels="1" name="Raid Boss - Level 35">
-		<!--
-			Description: Timak Orc Leader praised as the great soul by his subordinate Orcs due to his bravery and wisdom. Lamenting that his inferiors of the tribe whom he used to be proud of are losing bravery and honor and gradually turning into savages, he left the tribe and retired. He is going crazy because he hates himself for not being able to do anything to stop the collapse of the tribe that he loves.
-		-->
+    <!-- A Turek Orc leader praised for his powerful soul, bravery, and wisdom. He has retired from the field, and lives in a secluded corner of the Orc Barracks giving counsel to those who seek his advice. Normally reserved, when roused he does not shy away from battle. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -131,9 +105,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4813" levels="1" name="Raid Boss - Level 40">
-		<!--
-			Description: Lizardman mystic ruling Delu Lizardmen with superior insight and wisdom. He is known to have learned directly under Hardin. In the beginning, he considered peaceful co-existence with humans, but became angry at the stupidity of humans blindly treating them as hostile despite his continuous efforts. Now, he became a violent being who slays all the intruders in his tribe's territory.
-		-->
+    <!-- The Lizardman mystic who rules over the Delu Lizardmen with his mighty insight and wisdom. He is said to have studied directly under Hardin. In his youth, he counseled peace with the humans, but they were blindly hostile despite his peaceful efforts. He has grown angry over the years at the human stupidity, and has declared war on any and all intruders to his tribe's territory. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -141,9 +113,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4814" levels="1" name="Raid Boss - Level 52">
-		<!--
-			Description: Red Flag Leader of the Oel Mahum watching for an opportunity to take over the Bandit Stronghold. He is greatly proud of being an Oel Mahum. Although he is smart, hearty and brave, his power is somewhat weak because he is young. He is still growing his power. He boasts that he will build a kingdom of Oel Mahum as soon as he takes over the stronghold.
-		-->
+    <!-- The leader of the Red Flag of the Oel Mahum, who waits for his opportunity to take over the Bandit Stronghold. He is tremendously proud of being an Oel Mahum. Although smart, hearty and brave, he is still young and is still growing into his power. He boasts that one day he will build a kingdom of Oel Mahums. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -151,9 +121,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4815" levels="1" name="Raid Boss - Level 55">
-		<!--
-			Description: Treant Guardian protecting the outskirts of the forest at command of Enchanted Forest Queen Timiniel. He hates intruders disrupting peace in the forest, and never forgives anyone who violates the Forest Law. With the power given by Queen Timiniel, he summons Sylphs and Unicorns, and protects the Enchanted Forest.
-		-->
+    <!-- Timitran Guardian who watches over the outer area of Fairy Forest under the command of Queen Timidiel. It hates intruders who disrupt the order of the forest, and it cannot forgive anyone who breaks the laws of the forest. With the power received from Queen Timidiel, it calls Sylph and Unicorn, and it protects Fairy Forest together with them. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -161,9 +129,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4816" levels="1" name="Raid Boss - Level 69">
-		<!--
-			Description: Creature of Land Dragon Antharas. By its creator, it was entrusted with the duty to protect the Dragon Dungeon, and eliminate uninvited guests who try to wake up the Land Dragon from a deep sleep. Due to his body stained with the blood of intruders killed over the years, he is called Bloody Priest Rudelto.
-		-->
+    <!-- A creature of the Land Dragon Antharas, entrusted to protect the Dragon Dungeon, and slay any trespassers who might wake the Land Dragon from his deep slumber. His body is stained with the blood of the many intruders he has killed, and so he is called Bloody Priest Rudelto. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -171,9 +137,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4817" levels="1" name="Raid Boss - Level 25">
-		<!--
-			Description: Unfortunate princess who was turned into a giant toad because of Evil Dark Mage Vijay's curse. Princess Molrang was the daughter of Unification King Raul with her beauty known across the kingdom, and Dark Mage Vijay cursed her because he could not have her even though he loved her, which is one of the often-told tales.
-		-->
+    <!-- An unfortunate princess who was turned into a giant toad by the curse of the evil mage Vijay. Princess Molrang was the daughter of the Unification King, Raoul. Her beauty was famed throughout the kingdom. The stories say that the Dark Mage Vijay cursed her because she refused his love. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -181,9 +145,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4818" levels="1" name="Raid Boss - Level 30">
-		<!--
-			Description: Leader of the most famous bandits in Gludio. After declaring that he will steal the most beautiful, never-changing and valuable thing in the world, he is trying to steal the heart of Poesia who is famous for her beauty. He is very romantic and possesses a vigorous personality.
-		-->
+    <!-- The leader of the most famous bandits in Gludio. He once declared he would steal the most beautiful, immortal, and valuable object in the world, and some say he has been trying to steal the heart of beautiful Poesia ever since. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -191,9 +153,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4819" levels="1" name="Raid Boss - Level 39">
-		<!--
-			Description: Leader of Cat Gang consisting of Servitors abandoned by their owners. They are known for attacking fresh fish just caught in the sea, and the Fishermen and Fish Traders' Association has offered a lot of money for them. Many hunters went out to catch Cat Gang, but they could not kill the gang members and ultimately gave up the reward because of their cute looks.
-		-->
+    <!-- The leader of a gang of cats, all pets long abandoned by their masters. They are known for snatching fresh fish from the very nets of the Fishermen, and the Fish Traders' Association has offered a great bounty for them. Many hunters have tried to catch the cats, but ultimately gave up their chase because the cats were too cute. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -201,9 +161,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4820" levels="1" name="Raid Boss - Level 44">
-		<!--
-			Description: Taik Orc Chief Ranger who came down from the mountain to search for Deserter Bec who killed his colleague. Although he is treated as a ruffian or garbage chasing after a deserter among his tribe, he takes pride in his work and considers himself as someone who does necessary work for his tribe.
-		-->
+    <!-- Taik Orc Chief Ranger who came down from the mountain to search for Bec, deserter, who killed his fellow soldier. Although he is treated as a ruffian or garbage chasing after a deserter among his tribe, he takes pride in his work and considers himself as someone who does necessary work for his tribe. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -211,9 +169,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4821" levels="1" name="Raid Boss - Level 43">
-		<!--
-			Description: The latest version of Mechanical Golem that the Black Anvil Guild is desperately looking for. It recklessly ran because of a defective component that an artisan installed during the production by mistake. It partially destroyed the workshop, crushed many Dwarven Artisans who were trying to block it from running, and escaped the town. It is still wandering about in the woods without any destination, and attacking tourists passing by.
-		-->
+    <!-- The mechanical golem that the Black Anvil Guild is desperately looking for. It is the most advanced golem design. It animated and ran amok because the artisan accidentally installed a defective component. It partially destroyed the workshop, crushed many Dwarven Artisans who tried to restrain it, and escaped the town. It wanders the woods aimlessly, and attacks any who come nearby. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -221,9 +177,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4822" levels="1" name="Raid Boss - Level 59">
-		<!--
-			Description: With its soul taken away by an evil mystic's experiment, this beast turned into a killing machine. The mystic that took its soul was eventually killed by this wild boar. It is looking for a strong entity that can rest its soul at peace.
-		-->
+    <!-- A wild boar that had its soul stolen by an evil mystic's experiment, transforming the beast into a killing machine. It eventually killed the mystic, but this could not give it peace. It searches for a powerful entity that can finally give its soul rest. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -231,9 +185,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4823" levels="1" name="Raid Boss - Level 70">
-		<!--
-			Description: Expelled Heltor Silenos Leader. He is a fanatic of Baium, and believes that Baium must be resurrected to wipe out all other tribes holding the flow of the continent at present through Baium's power. Due to his extreme arguments, he was expelled from his tribe. However, he is still promoting the plan to resurrect Baium around the Tower of Insolence along with his followers after failing to give up on his idea.
-		-->
+    <!-- The banished leader of Heltor Silenos. A fanatic follower of Baium, he believes that Baium must be resurrected and will then wipe out all other tribes throughout the continent. Alone in his belief, he and his minions search the Tower of Insolence for a way to resurrect Baium. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -241,9 +193,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4824" levels="1" name="Raid Boss - Level 29">
-		<!--
-			Description: Ghost of an Elf who loved the forest, nature and animals. Lamenting that nature became devastated and that lovable and innocent animals were killed through a countless number of meaningless wars, the elf stepped forward to protect them, but was murdered and eventually became a ghost. Protected by large boars that love him, he guards against strangers who might bring about a war again.
-		-->
+    <!-- The ghost of an Elf who loved all the forest, and vowed to protect nature and her animals from senseless war. The Elf was eventually slain while performing his duty, and returned as a ghost. He is aided and protected by a herd of wild boar that are loyal to him. He is wary of strangers who might bring war to the forest. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -251,9 +201,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4825" levels="1" name="Raid Boss - Level 35">
-		<!--
-			Description: Summoner Sejarr's Servitor dispatched from the Ivory Tower to block Devil Beleth. Sejarr cast the powerful dark magic to seal Beleth, but died of Beleth's reflective reaction. However, Phantom who was the only one that did not disappear among Sejarr's Servitors left. It was polluted by the dark magic of Beleth and the Ivory Tower, and reconciled with the Wasteland. Although he thinks his owner's death was unjust, he shows strong hostility towards other mystics.
-		-->
+    <!-- A servant of Summoner Sejarr, dispatched from the Ivory Tower to block the Devil Beleth. Sejarr used dark magic to imprison Beleth, but was killed by the devil's reflexive powers. Phantom alone survived of Sejarr's servitors, but was corrupted by the dark magic of Beleth and the Ivory Tower and reconciled with the Wasteland. Although he thinks his owner's death was unjust, he distrust other mystics. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -261,9 +209,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4826" levels="1" name="Raid Boss - Level 44">
-		<!--
-			Description: A monster plant grown on the poison in the Sea of Spores. It follows the Ruler of Sea of Spores, Orfen. It was given a task to kill invading humans by Orfen. Many of mystics who came from the Ivory Tower to check the magic force field preventing spores from spreading have been sacrificed by Rotting Tree.
-		-->
+    <!-- A monster plant that has grown by absorbing the poison in the Sea of Spores. It is a follower of Orfen, the Ruler of the Sea of Spores. It was given a task by Orfen to kill trespassing humans. Ivory Tower mystics are sent to tend to the magic force field that prevents spores from spreading, but many have been slain by the Rotting Tree. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -271,9 +217,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4827" levels="1" name="Raid Boss - Level 45">
-		<!--
-			Description: Silenos sacrificed in an experiment of the Ivory Tower's mystics. Due to the experiment, Shacram gained unnatural power, but his appearance was so disfigured that he could not return to his tribe. He moved to a deserted valley in the south with rugged mountain paths and a few people from the north of Oren, is hiding out. He extremely hates being exposed to other people, feels miserable about meeting his tribe again, and despises the mystics of the Ivory Tower who made him like this.
-		-->
+    <!-- A Silenos who was a victim of an experiment gone awry, conducted by the Ivory Tower's mystics. Shacram gained supernatural power, but his appearance was so disfigured that he could not return to his tribe. He moved to Oren where he hides in a deserted valley in the south, where rugged mountain paths discourage most from ever setting foot in the region. He harbors a deep hatred towards the mystics of the Ivory Tower who made him like this. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -281,9 +225,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4828" levels="1" name="Raid Boss - Level 55">
-		<!--
-			Description: Powerful Shaman greatly respected by Lizardmen. Currently, he is hiding out in a corner of the plains. He resents that humans continue to take away Lizardmen's territory where they've lived since ancient times. He also hates humans attacking Lizardmen that live in peace.
-		-->
+    <!-- A powerful sorcerer who is greatly respected by the Lizardmen. Currently, he is hiding in a distant corner of the plains. He resents how humans continue to encroach upon the Lizardmen's territory, where Lizardmen have lived in peace since ancient times. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -291,9 +233,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4829" levels="1" name="Raid Boss - Level 60">
-		<!--
-			Description: Originally, he was a Shaman of the village, but looked the other way due to threats after witnessing Elmore invaders put poison in the well. Watching the villagers die one by one, he realized what he'd done and became crazy. He still appears around the well, and recklessly attacks anyone who comes close, thinking that they are Elmore soldiers.
-		-->
+    <!-- A shaman of the village, she witnessed Elmore invaders poisoning the well and looked the other way in fear of her life. But when she saw the villagers die one by one, she realized what she had done and lost her mind. She still wanders near the cursed well, and recklessly attacks anyone who comes close, thinking that they are Elmore soldiers. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -301,9 +241,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4830" levels="1" name="Raid Boss - Level 74">
-		<!--
-			Description: Witch of a heretical religion who serves Antharas and sacrifices herself. She uses the dark magic on herself and obtains the body of a powerful evil spirit. By using her Servitors, she attacks invaders interfering with Antharas' sleep. Through a life of slaughter repeated for a long time, she's now become a perfect evil spirit that enjoys eating human hearts with warm blood.
-		-->
+    <!-- An evil witch of a heretical religion who serves Antharas and sacrifices humans in her rituals. By using Dark Arts on herself, she was able to transform her body into that of a powerful evil spirit. She and her minions will attack any invaders who disrupt Antharas's sleep. Through a lifetime of slaughter, she has transformed into a powerful creature of evil. Now, she enjoys eating human hearts still pumping with warm blood. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -311,9 +249,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4831" levels="1" name="Raid Boss - Level 30">
-		<!--
-			Description: An evil heathen serving Beleth who came from Devil's Isle. He is trying to cause horror and violence and make betrayal and conspiracies grow in the Gludio Territory. This horror is the source of devils' power. All the serial murders, theft and arson that recently happened in Gludio are the work of Meana.
-		-->
+    <!-- An evil heathen serving Beleth who came from Devil's Isle. She is trying to spread fear in Gludio, and turn the people towards violence and betrayal. Fear and horror are the source of this devil's power. The recent serial murders, and the rash of theft and arson plaguing Gludio are the work of Meana. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -321,9 +257,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4832" levels="1" name="Raid Boss - Level 40">
-		<!--
-			Description: A life form created by Icarus who is one of Hardin's disciples full of curiosity and playfulness during an experiment. Currently, Icarus has released it to test its behaviors and reactions on purpose, but it causes a nuisance to people.
-		-->
+    <!-- A life form created by Icarus, who is one of Hardin's disciples. Currently, Icarus has released it to test its behaviors and reactions, and it appears curious and playful, although others find it a nuisance. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -331,9 +265,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4833" levels="1" name="Raid Boss - Level 35">
-		<!--
-			Description: Executioner who kept the Execution Ground during the Peasant Riot, and executed a countless number of innocent farmers. While brutally killing the family who came to see him at the command of Duke Ashton at that time, he was murdered instead. Due to the crimes he committed when he was alive, he was cursed not to rest in peace, and has been endlessly wandering about in the Execution Ground.
-		-->
+    <!-- The Executioner who held the Execution Grounds during the Peasant Riot, and executed countless innocent farmers at the command of Duke Ashton. Eventually, he was murdered for his actions. Due to the crimes he committed when alive, he was cursed never to rest in peace, and endlessly wanders in the Execution Grounds. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -341,9 +273,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4834" levels="1" name="Raid Boss - Level 50">
-		<!--
-			Description: Messenger dispatched to Aden by Fairy Queen Timiniel in order to demand countermeasures on invaders of the Enchanted Forest. As one of the powerful warriors guarding the Fairy Queen, he has superior bravery and courage and is not afraid of anything.
-		-->
+    <!-- A messenger dispatched to Aden by Fairy Queen Timiniel in order to demand a response to those who have invaded the Enchanted Forest. One of the fearless warriors who guards the Fairy Queen. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -351,9 +281,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4835" levels="1" name="Raid Boss - Level 56">
-		<!--
-			Description: Grecia's Oel Mahum Great Noble who could not return to his country after losing in the Aden-Grecia War. He got lost while he was searching inside of the Cruma Tower with the troops that marched up to the tower during the war, and accidentally got to have a few Titans as his subordinates inside of the tower. When he finally escaped from the tower, the war was already over, and he was left with an enormous reward on his head and a few subordinates. Presently, he is desperately trying to flee to the Elmore Kingdom in order to survive.
-		-->
+    <!-- Gracia's Great Noble who was not able to return to his country after losing in the Aden-Gracia War. During the war, he became lost inside of Cruma Tower with his troops. While inside the tower he had the opportunity to recruit a few Lesser Giants to his cause. When he finally escaped from the tower, the war was already over. The only thing he was left with was a few loyal servants and an enormous bounty on his head. Presently, he is desperately trying to flee to Elmore Kingdom to preserve his life. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -361,9 +289,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4836" levels="1" name="Raid Boss - Level 65">
-		<!--
-			Description: A gigantic tiger of  legend that rules Anghel Waterfall. Originally, it used to be a holy god-like creature guiding angels in the heavens, but bit its owner to death and ran away to the earth. Currently, it is hiding out in Anghel Waterfall. Despairing of its downgraded position and miserable life, it has become violent and devours any tourist or reckless adventurers passing by.
-		-->
+    <!-- A gigantic tiger of legend that rules the Anghel Waterfall. Originally, it was a sacred and divine creature who guided angels in the heavens, but it mauled its master and ran away to the earth. It despairs of its now miserable life, and has grown violent. It devours any traveler or reckless adventurers who passes by. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -371,9 +297,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4837" levels="1" name="Raid Boss - Level 79">
-		<!--
-			Description: As one of Elmoreden's 4 Kings, the powerful and gigantic Minotaur used to be a servant of Baium, but he is now under Death Lord Hallate. To carry out a promise of long long ago, he is locked inside the top floor in the Tower of Insolence, waiting for the resurrection of Baium. Having equally matched battles with Fire of Wrath Shuriel, the leader of angels, he is watching for the influence of angels and the Platinum Tribe.
-		-->
+    <!-- As one of Elmoreden's Four Great Kings, the powerful and gigantic Minotaur used to be a servant of Baium. But to fulfill an old promise, he serves Death Lord Hallate. He waits, locked inside the top floor of the Tower of Insolence, for the resurrection of Baium. Equally matched in warfare with the angel's leader Shuriel, the Fire of Wrath, he holds the line against the advancement of angels and the Platinum tribe. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -381,9 +305,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4838" levels="1" name="Raid Boss - Level 24">
-		<!--
-			Description: Langk Lizardman Matriarch serving Evil Spirit Bifrons. Thanks to the power of Evil Spirits and spells, she obtained strong power, and has captured and slaughtered priests traveling on the south road and those who call themselves the Disciples of God at the command of Bifrons. Recently, she is devoting herself to expanding the tribe's power to the north in line of confusion in the Gludio Territory.
-		-->
+    <!-- The chieftess of the Langk Lizardmen, she serves the evil spirit Bifrons in exchange for great power. At the command of Bifrons, she captured and slaughtered priests and the Disciples of God traveling on the south road. Recently, she has begun devoting herself to expanding the tribe's power in the north by taking advantage of the chaos in Gludio. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -391,9 +313,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4839" levels="1" name="Raid Boss - Level 33">
-		<!--
-			Description: Great Seer leading Vuku Orcs. He has more power than Chief Driko, and is held in high esteem as a god-like being. He feels sorry for his tribe wandering about in the human world and getting disdainful treatment at present. He is trying to take the tribe and return to the northern area which is the land of Orcs.
-		-->
+    <!-- The Great Seer who leads the Vuku Orcs. He has more power than Chief Driko, and is held in high esteem as a divine being. He laments that his tribe is forced to wander through the hostile human realm. He hopes to take the tribe back to the northern homeland of the Orcs. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -401,9 +321,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4840" levels="1" name="Raid Boss - Level 50">
-		<!--
-			Description: Convict Mercenaries' Captain from Grecia called Lord of Slaughter. As a powerful rival and colleague of Bloody Lord Nurka, he is greatly trusted by innumerous Convicts. Given his superb diplomatic skills, he has established friendship with many Great Nobles and high-ranking officials. As much as these nobles are using his tribe, the Convicts, he is setting up a plan to go back to his homeland, Grecia by using them back.
-		-->
+    <!-- The Captain of the Convict Mercenaries from Graci he is called the Lord of Slaughter. He is a powerful rival of the Bloody Lord Nurka. Given his superb diplomatic skills, he has established ties of friendship with many great nobles and high ranking officials. These nobles make frequent use of his troops, the Convicts, and in turn he uses the nobles to set up his plan to return to his homeland, Gracia. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -411,9 +329,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4841" levels="1" name="Raid Boss - Level 40">
-		<!--
-			Description: Old Chief who has led Leto Lizardmen for the last tens of years. Despite his old age, he's survived thanks to his strong body and quick wit. After realizing that his tribe cannot take back their homeland if they directly fought against the powerful Aden Kingdom, he is watching for an opportunity. By using the coming confusion of the kingdom, he is trying to secure the territory of  Leto Lizardmen.
-		-->
+    <!-- The Old Chief who has led Leto Lizardmen for the last several decades. In spite of his old age, he has survived thanks to his strength and quick wits. He knows that his tribe cannot take their homeland back in a direct fight against the Kingdom of Aden, so he watches for an opportunity to strike. He hopes to use the coming confusion to secure the territory of the Leto Lizardmen. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -421,9 +337,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4842" levels="1" name="Raid Boss - Level 55">
-		<!--
-			Description: A woman who entered into a contract with Devil Beleth for power. Thanks to Beleth's teaching, she gained the power of a powerful mystic. She is searching for Beleth's historical site supposedly hidden somewhere underground of the south Gludio Wasteland, and preparing for a secret ritual to resurrect him.
-		-->
+    <!-- A woman who bargained with the Devil Beleth for power. Thanks to Beleth's teaching, she gained the power of a powerful mystic. Now, she searches for Beleth's historical site supposedly hidden somewhere underground in the south Gludio Wasteland, and prepares a secret ritual to resurrect him. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -431,9 +345,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4843" levels="1" name="Raid Boss - Level 65">
-		<!--
-			Description: A type of mental control device created by the ancient giants' civilization. This was a device that giants made to rule other intelligent life forms, but it is conversely controlling the giants degenerated as slaves after the giants' civilization collapsed. Similar to Core in the Cruma Tower, it is a life form with artificial intelligence that can control all the degenerated servants nearby.
-		-->
+    <!-- A type of mental control device created by the ancient giants' civilization. This was a device the giants made to rule other intelligent beings, but was turned against them to control the giants as slaves after their civilization collapsed. Similar to Core in the Cruma Tower, it is a life form with artificial intelligence that can control all the slaves nearby. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -441,9 +353,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4844" levels="1" name="Raid Boss - Level 78">
-		<!--
-			Description: Van Leader of angels that punished Baium and broke down the Tower of Insolence. He is actively participating in blocking devils that smashed through the upper floors of the Tower of Insolence. Leading Kel Mahums of the Platinum Tribe, he is still at war against devils for the seal of the Tower of Insolence. He is called Fire of Wrath because his sword of judgment does not have any hesitation, compassion or mercy at all.
-		-->
+    <!-- The leader of the vanguard of angels that punished Baium and broke down the Tower of Insolence. He actively works to hold back the devils that smashed through the upper floors of the Tower of Insolence. He guides Kel Mahums of the Platinum Tribe into war against the devils for control of the Tower of Insolence. He is called the Fire of Wrath for he wields the sword of judgment without hesitation, compassion or mercy. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -451,9 +361,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4845" levels="1" name="Raid Boss - Level 21">
-		<!--
-			Description: Evil Spirit worshiped by Langk Lizardmen like a god in the south of Gludio. He looks like a snake and has ruled the spiritual world of Lizardmen for hundreds of years. Resenting his cursed body and the Gods in the heaven who created it, he tries to slaughter all the messengers of the Gods discovered on earth. He is very violent and has burning ambitions to destroying the entire area of Gludio someday by controlling Langk Lizardmen.
-		-->
+    <!-- An Evil Spirit worshipped like a god by the Langk Lizardmen who live in the south of Gludio. He looks like a snake and has ruled the spiritual world of the lizardmen for hundreds of years. However, he resents the cursed body the gods in the heaven created for him, and he tries to slaughter the messengers of the gods in retribution. He is very violent and burns to destroy the entire area of Gludio one day through the Langk Lizardmen. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -461,9 +369,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4846" levels="1" name="Raid Boss - Level 25">
-		<!--
-			Description: Knight who used to govern a peaceful town, which is now called Ruins of Agony, before the Grecia War. Called Sir Grindel in his lifetime, he was captured and as a prisoner was brutally tortured to death after losing a battle against the Grecian Army. Perpetrators of Beleth hiding in the town used his body discarded in the middle of the town, resurrected him and made his soul fall. Having lost his royal knight qualities sacrificing himself for the town, he has turned into a devil that tries to spread his pain to all the other life forms, and wanders about in the Ruins of Agony.
-		-->
+    <!-- A knight who used to govern a peaceful town before the Gracian War, today it is called the Ruins of Agony. Called Sir Grindel in his lifetime, he was captured and brutally tortured to death after losing a battle against the Gracian Army. Underlings of Beleth hiding in the town stole his body and resurrected him, making his soul corrupted. Having lost his knightly honor and sense of self-sacrifice, now he has turned into a devil and tries to spread his pain to all he encounters in his endless wanders through the Ruins of Agony. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -471,9 +377,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4847" levels="1" name="Raid Boss - Level 35">
-		<!--
-			Description: A low-level devil mistakenly summoned by Shaman King Selu due to a summoning accident. Due to the forced summoning, he lost the way to return to his original place. Concealing his identity, he attacks tourists passing by and collects their souls to grow the power to return.
-		-->
+    <!-- A low level devil mistakenly summoned by Shaman King Selu. Due to the forced summoning, he lost the way to return to his original place. Concealing his identity, he attacks travelers passing by and collects their souls in order to gain the power to return. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -481,9 +385,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4848" levels="1" name="Raid Boss - Level 40">
-		<!--
-			Description: Crazy Chief who governed the Selu Orc Tribe. He has a certain degree of magic skills, but overestimates his ability so that he can call himself Shaman King. While experimenting several dangerous spells, he became crazy after his dangerous summoning failed. After leaving the hometown of the tribe, he has been ceaselessly wandering about along with his crazy subordinates, and attacking and murdering all the tourists.
-		-->
+    <!-- Once the ruler of the Selu Orc tribe, he went mad after a dangerous experimental summoning spell he created failed disastrously. Calling himself the Shaman King, he left the tribe's village and, with a group of equally insane followers, preys on hapless travelers. He has some magical skills, but habitually overestimates his ability. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -491,9 +393,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4849" levels="1" name="Raid Boss - Level 48">
-		<!--
-			Description: A foolish man who could not suppress his powerful yearning to learn the unknown knowledge that humans cannot attain, and tried to learn the dragons' magic by visiting Land Dragon Antharas alone. However, Antharas turned the man into a monster for waking him up. Due to his ugly appearance, the man hates anything beautiful. He curses Antharas with his mouth, but has cowered away from the Land Dragon because he is afraid of the dragon.
-		-->
+    <!-- A foolish man who could not suppress his powerful yearning to learn the forbidden knowledge that humans cannot attain, and tried to learn the dragons' magic by visiting Land Dragon Antharas alone. Antharas turned the man into a monster for disturbing his rest. Now a hideous creature, the man hates anything beautiful. He curses Antharas in private, but is truly terrified of the dragon. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -501,9 +401,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4850" levels="1" name="Raid Boss - Level 54">
-		<!--
-			Description: A unicorn aimlessly drifting along after losing its nest since the Era of Myths that ended upon rage against Einhasad's Titan. The unicorns are searching for their lost homeland. The leader of the unicorns has lost its group while roaming about from place to place, and been alienated. Although it is still desperately looking for its group, hundreds of years have passed since it parted ways from its group. Being alone, it still has not adapted itself to the human world.
-		-->
+    <!-- A unicorn aimlessly drifting after losing its home long ago. It has wandered since the Era of Myths ended with Einhasad's rage against the Lesser Giants. The leader of the unicorns lost its herd while roaming the world. Although it is still desperately looking for its fellow unicorns, hundreds of years have passed since it parted ways from them. Wandering alone, it still has not adapted itself to the human world. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -511,9 +409,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4851" levels="1" name="Raid Boss - Level 60">
-		<!--
-			Description: A failed weapon created by mystics of the Ivory Tower for fear of Devil Beleth's resurrection. Although he was modeled after a Titan's looks, he didn't even follow the creator's command, acted in his own way and eventually escaped the tower. While looking for a life form similar to himself for a long time, he discovered and investigated relics of the ancient Giants, and concluded that he was the only true Titan that survived the disaster in the past. He is dreaming about his revenge on the Gods who made the Titans fall.
-		-->
+    <!-- A failed weapon created by mystics of the Ivory Tower, frightened of the Devil Beleth's eventual resurrection. Although modeled after a Lesser Giant, he did not follow his creator's commands, and eventually escaped the tower. He searched for a creature similar to himself for years, investigating relics of the ancient Giants, and concluded that he was the only true Lesser Giant that survived the disaster in the past. He dreams of revenge on the gods who made the Lesser Giants fall. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -521,9 +417,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4852" levels="1" name="Raid Boss - Level 70">
-		<!--
-			Description: Drake that used to be a guardian of  Aden Territory since ancient times, but turned into a devil of revenge after losing his child to a greedy hunter. Getting out of the Dragon Valley where he used to live, he has wandered about in territories near Aden Castle, and killed innumerous civilians. He also killed all the priests who came to calm his rage down, becoming the horror of all Aden residents. All of his good work done by Imperial command has been erased in history, and he is now called the Disaster of Aden only.
-		-->
+    <!-- A drake that used to be a guardian of Aden in ancient times, but turned into a devil of revenge after losing his child to a greedy hunter. He has left Dragon Valley to roam the territories near Aden Castle, and killed countless villagers. He also killed the priests who came to calm his rage. All of his good deeds have been erased from the chronicles by Imperial command, and he is now called the Disaster of Aden. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -531,9 +425,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4853" levels="1" name="Raid Boss - Level 25">
-		<!--
-			Description: Handiwork of darkness created by evil necromancers to contain their desire. It has been known that he has a close relationship with the moon. Although many research squads were dispatched by mystics of the Ivory Tower to understand his true significance, all those people surrendered to Ikuntai's evil power and went to the side of evil. The record shows that no more research was done after then.
-		-->
+    <!-- A handiwork of darkness created by evil necromancers to contain their desire. It is known that he has a close relationship with the moon. Although many researchers were dispatched from the Ivory Tower to learn his true purpose, all of them succumbed to Ikuntai's dark power and joined the side of evil. The Ivory Tower has since forbidden any further study of Ikuntai. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -541,9 +433,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4854" levels="1" name="Raid Boss - Level 30">
-		<!--
-			Description: Bloody Lord Nurka's obedient servant and veteran known to have been missing at war. As an overly proud Oel Mahum, he ignores and torments the lower-level tribe, Ol Mahums. Due to his weakness, he is not respected as much as Nurka is although he has more war achievements. According to a rumor, he is secretly plotting another conspiracy with Nurka, but nothing has been reported.
-		-->
+    <!-- A bloodthirsty Lord and a veteran warrior known for his great battle victories. According to recent rumors, he is conspiring to overthrow his master. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -551,9 +441,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4855" levels="1" name="Raid Boss - Level 38">
-		<!--
-			Description: Convict Mercenary Captain wandering about to get secrets of the Cruma Tower. After listening to a bard singing a song called Seven Secrets of Cruma Tower, he's decided to officially become a knight of King by attaining the ancient weapon which is the third secret out of seven. Since Gatekeepers of the Ivory Tower have rejected his teleport as the Convict Tribe is banned from the tower, he still has not entered the tower, but has been circling around it.
-		-->
+    <!-- The Convict Mercenary Captain searches for the secrets of the Cruma Tower. After listening to a bard singing a song called Seven Secrets of Cruma Tower, he has decided to officially become a knight of the king by attaining the ancient weapon, which is the third secret of the song. Since Gatekeepers of the Ivory Tower have rejected his teleport as the Convict Tribe is banned from the tower, he still has not entered the tower, but has been circling around it. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -561,9 +449,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4856" levels="1" name="Raid Boss - Level 45">
-		<!--
-			Description: Brave and great Tiger King. Despite his beast look, he rules the Silenos as his subordinates thanks to his divine nature and bravery. Originally, he was one of the Evil Spirits that Shilen created, but he has learned not to hate the Gods and endeavored to live up to his position as Tiger King after accumulating wisdom over the course of time. Among the Silenos Tribe, he accompanies Shamans as his inferiors.
-		-->
+    <!-- The brave and great Tiger King. Despite his beastly looks, he rules the Silenos thanks to his divine nature and bravery. Originally, he was one of the Evil Spirits that Shilen created, but he has learned not to hate the gods and endeavored to live up to his position as Tiger King after accumulating wisdom over the years. Among the Silenos Tribe, he is accompanied by loyal shamans. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -571,9 +457,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4857" levels="1" name="Raid Boss - Level 55">
-		<!--
-			Description: Dark Elf Witch who got her power through a contract with Demon Kurikups while living on Devil's Isle. Originally, she was a witch who wanted to live peacefully with humans, but began hating humans after failing to overcome prejudice and misunderstanding she received from the human world.
-		-->
+    <!-- A female succubus who is known to have received the special favor of Antharas and obtained the power of the Land Dragon. Although it is not clear how she earned Antharas's favor, she clearly possesses the fatal beauty that can lead adventurers coming to dragon valley to their death. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -581,9 +465,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4858" levels="1" name="Raid Boss - Level 60">
-		<!--
-			Description: Titan called in by Great Pirate Zaken through using the giant's legacy discovered in Cruma. Since Zaken doesn't trust his inferiors as he was murdered by his inferiors for money before, Titan is in charge of guarding the treasures instead.
-		-->
+    <!-- Another subordinate of Glaki. Like Glaki, he also guards the statue of the giants but he does not consider this work a sacred duty. According to legend, the Statue of the Giants can resurrect an incomplete body of a giant to regain a complete body. It is said that the reason he is guarding the statue is to earn the trust of Glaki but to fulfill his secret ambition to obtain a perfect and powerful body. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -591,9 +473,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4859" levels="1" name="Raid Boss - Level 59">
-		<!--
-			Description: A devil and Beleth's inferior living on Devil's Isle. After Beleth disappeared from the world, this devil stopped his activities on his own and has been taking a long vacation. When the pirates occupied Devil's Isle and became noisy, he woke up and regretted that he didn't wipe out the pirates from  Devil's Isle before Zaken became immortal. He is waiting for his owner, Beleth, to come back again and give him commands.
-		-->
+    <!-- A devil and Beleth's servant living on Devil's Isle. After Beleth disappeared from the world, this devil stopped his own activities and has been taking a long vacation. When the pirates occupied Devil's Isle and became raucous, he woke up and regretted that he didn't wipe out the pirates from Devil's Isle before Zaken became immortal. He is waiting for his master, Beleth, to return. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -601,9 +481,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4860" levels="1" name="Raid Boss - Level 35">
-		<!--
-			Description: Tasaba Lizardman Captain living in the field of Innadril. At the command of the Water Dragon, Tasaba Lizardmen serving the Water Dragon Fafurion live in the field and keep the Land of Holy Water. He laments that the world is in the era of humans, and misses the past. Every time a full moon comes, he conducts a holy ritual dedicated to the Water Dragon.
-		-->
+    <!-- The Tasaba Lizardman Captain lives in the field of Innadril. At the command of the Water Dragon, Tasaba Lizardmen serving the Water Dragon Fafurion live in the field and keep the Land of Holy Water. He laments that the world is in the era of humans, and misses the past. Every time a full moon comes, he conducts a holy ritual dedicated to the Water Dragon. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -611,9 +489,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4861" levels="1" name="Raid Boss - Level 30">
-		<!--
-			Description: A beast living in the Innadril Territory as one of the Evil Spirits born from Shilen's pain. He hates Eva who became the Goddess of Water instead of Shilen, and calls her a fake. He still thinks that the true Goddess of Water is Shilen only. He sneaked into Innadril where Eva's religion was widely spread, causing confusion among those who follow the Goddess of Water and is threatening them.
-		-->
+    <!-- A beast living in the Innadril Territory as one of the Evil Spirits born from Shilen's pain. He hates Eva who became the Goddess of Water instead of Shilen, and calls her a fake. He still thinks that the true Goddess of water is Shilen. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -621,9 +497,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4862" levels="1" name="Raid Boss - Level 34">
-		<!--
-			Description: Servitor of Wiseman Cronos living in the Hunters Village. To get ingredients for the wonder drug of happiness that Cronos is making, he came to Innadril. After being sucked into watching the world for a while, Mumu forgot why he came here, and didn't return to Cronos because he was afraid of being scolded.
-		-->
+    <!-- He sneaked into Innadril where Eva's religion was widely practiced, and caused confusion by threatening the Goddess of Water's followers. The servant of Elder Cronos lives in the Hunters' Village. In order to obtain ingredients for the wonder drug of happiness that Cronos is making, he came to Innadril. After losing himself in daydreams of the world, Mumu forgot why he came here, and hasn't returned to Cronos because he is afraid of being scolded. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -631,9 +505,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4863" levels="1" name="Raid Boss - Level 43">
-		<!--
-			Description: A Crokian protecting the Land of Innadril since the ancient times. He is the native Crokian that has lived here before humans and Elves came to Innadril, and believes that Innadril has holy power unlike other territories. Watching the humans endlessly expand in the continent, he firmly decides to protect his ancestors' land from them.
-		-->
+    <!-- A Crokian who has protected the land of Innadril since the ancient times. He lived here before humans and elves came to Innadril, and believes that Innadril has holy grounds unique to itself. He has watched the humans endlessly expand over the years, and firmly believes he must protect his ancestors' lands. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -641,9 +513,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4864" levels="1" name="Raid Boss - Level 40">
-		<!--
-			Description: Evil Spirit born from Goddess Shilen's despair, curse and rage. Although he participated in the war with the Gods on the side of Goddess Shilen during the Era of Myths, he was greatly injured in the battle, and has been hiding out under the protection of Water Dragon Fafurion. Lately, he temporarily showed up in the world for propagation. He is Fafurion's subordinate, waiting for the day when Shilen and Evil Spirits dominate the world again.
-		-->
+    <!-- An Evil Spirit born from Goddess Shilen's despair, woe, and rage. Although he fought in the war with the gods on the side of Shilen during the Era of Myths, he was greatly injured in the battle, and has been hiding under the protection of the Water Dragon Fafuion. Lately, he has been rumored to propagate Shilen's return. He serves Fafurion, waiting for the day when Shilen and Evil Spirits dominate the world again. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -651,9 +521,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4865" levels="1" name="Raid Boss - Level 36">
-		<!--
-			Description: Crokian Chief who rules Alligator Island. As a native Crokian who has lived in Innadril before humans and Elves came, he hates outsiders to protect his territory and tribe. Although he is not happy about Ateka of the snake family living on the same island, he cannot do anything about it because he is afraid of Water Dragon Fafurion. He is dreaming about the day when the Crokians can rule Innadril again with their own power.
-		-->
+    <!-- Crokian Chief who rules Alligator Island. As a native Crokian who has lived in Innadril before humans and elves came, he hates outsiders and tries to protect his territory and tribe from them. Although he is not happy about the Water Couatl Ateka living on the same island, he cannot do anything about it because he is afraid of Water Dragon Fafurion. He dreams about the day when Crokians can rule Innadril again. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -661,9 +529,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4866" levels="1" name="Raid Boss - Level 40">
-		<!--
-			Description: As Water Dragon Fafurion's inferior, this is the Evil Spirit that knocked down innumerous disciples of the Gods while being called Sika of Storm during the war of the Gods in the beginning. He is a superior warrior and interesting storyteller at the same time. Currently, he is in charge of touring the world and telling stories at the command of Fafurion.
-		-->
+    <!-- As Water Dragon Fafurion's lieutenant, this Evil Spirit defeated countless disciples of the gods. Known as Sika of Storm during the War of the Gods, he is a veteran warrior and an engaging storyteller. Currently, he travels the world and tells stories at the command of Fafurion. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -671,9 +537,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4867" levels="1" name="Raid Boss - Level 50">
-		<!--
-			Description: She was a beautiful lady of a respectable family since her birth, but turned into Medusa after making Einhasad angry due to her excessive arrogance. After failing to accept her ugly looks and lost past, she became a brutal monster that takes her anger out on people near her. She even turned her fianc? who couldn't forget about her into stone and broke it down. She is not a beautiful lady anymore, but a monster.
-		-->
+    <!-- She was a beautiful lady of a respectable family from her birth, but she angered Einhasad by her arrogance and was turned into a Medusa. She could not adjust to her new state and became a brutal monster that takes her anger out on people near her. She even turned her fiancé who remained true to her into stone, and then smashed him to pieces. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -681,9 +545,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4868" levels="1" name="Raid Boss - Level 73">
-		<!--
-			Description: Leader of devils trying to occupy the Tower of Insolence. To obtain the secret knowledge hidden in the Tower of Insolence and use it as a bridgehead to expand the power of devils, he is aiming at the Tower of Insolence. To break a seal of the Tower of Insolence, he spent too much power, and became weak at the moment. He has a hostile relationship with angels protecting the Tower of Insolence at the command of Einhasad and the Platinum Tribe working for the angels. He has 3 loyal subordinates: Kernon, Rahha and Verfa.
-		-->
+    <!-- The leader of the devils trying to occupy the Tower of Insolence. He strives to obtain the secret knowledge hidden in the Tower of Insolence and use it as a bridgehead to expand the power of devils. But he expended too much power trying to break a seal of the Tower, and is now weak. He is enemies with the angels and the Platinum tribe protecting the Tower of Insolence at the command of Einhasad. He has three loyal subordinates: Kernon, Rahh and Verfa. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -691,9 +553,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4869" levels="1" name="Raid Boss - Level 35">
-		<!--
-			Description: Mercenary hired by a lord during the Dion Peasants' Riot. He was told that he could get eternal life if he collected souls and dedicated them to Shilen, and slaughtered a countless number of innocent peasants. Fed up with his brutality, Duke Ashton finally executed him. Even after his death, his desire to get eternal life still remains and he comes back to life again as an Undead. Presently, he is wandering about near Dion Castle and killing innocent people.
-		-->
+    <!-- A mercenary hired by a lord during the Dion Peasant Riot. He was once told that he could achieve eternal life if he collected souls and dedicated them to Shilen, so he slaughtered countless innocent peasants. Disgusted with his brutality, Duke Ashton finally executed him. Even after his death, his desire to gain eternal life was still strong, and he came back to life again as one of the Undead. Presently, he lurks near Dion Castle and kills innocent people. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -701,9 +561,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4870" levels="1" name="Raid Boss - Level 62">
-		<!--
-			Description: Oel Mahum Lord who owned a Bandit Stronghold once. Fed up with the repeated competition, he came out of the stronghold along with his inferior seers and prefects, and is looking to take back the stronghold.
-		-->
+    <!-- The Oel Mahum Lord who once owned the Bandit Stronghold. Tired of the constant fighting for territory, he abandoned the stronghold along with his loyal seers and prefects, and is observing the competition for the Bandit Stronghold as a spectator. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -711,9 +569,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4871" levels="1" name="Raid Boss - Level 75">
-		<!--
-			Description: Inferior of Wind Dragon Lindvior. While fighting against the Gods with other dragons during the War of the Gods, he hid in  Oren Forest and fell asleep after getting severely injured. Lately, he woke up after feeling the power of Shilen coming out of the Tower of Insolence. He is slightly smaller than a general drake, but his quick movement makes others confuse him with the Wind Dragon.
-		-->
+    <!-- The Storm Dragon Lindvior's underling. During the war against the gods, it fought together with the other dragons against the gods. After receiving a grave injury, it went deep into the woods and fell asleep. It recently awakened after feeling the power of Shilen flowing out from the Tower of Insolence. It is a bit smaller than a regular Drake, but because of its swift movements, it is sometimes mistaken for the Wind Dragon itself. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -721,9 +577,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4872" levels="1" name="Raid Boss - Level 57">
-		<!--
-			Description: Seer who served Chertuba of Great Soul. He was also a hero who led the Timak Orcs and built the Timak Outpost of today when he was young. Thanks to the power of totems, he has a far longer life than general Timak Orcs. After old Chertuba went mad, he is practically running all the Timak Orcs at present.
-		-->
+    <!-- In his youth, he became a hero of the Timak Orcs after leading them to build the Timak Outpost. Granted a greatly extended lifespan by the power of totems, he is now the leader of all Timak Orcs. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -731,9 +585,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4873" levels="1" name="Raid Boss - Level 69">
-		<!--
-			Description: Commander in charge of the castle destroyed during the war between Elmore and Aden. He made a mistake by letting his Elmore friend come inside the castle during the war. After losing the castle and his people because of the poison that his friend put in the well, he was too mortified to forget the betrayal, and became a ghost wandering about near the destroyed castle.
-		-->
+    <!-- Through his neglect, this notorious commander helped cause the destruction of his garrison during the war between Elmore and Aden. He unwisely opened the gates to an old Elmorian friend, who abused his trust by poisoning the castle's well. Many of the soldiers and their families died, and Elmore's army easily overran the depleted force. Distraught at his failure, Andras fell on his sword. It is said that his ghost still wanders the castle's ruins. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -741,9 +593,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4874" levels="1" name="Raid Boss - Level 60">
-		<!--
-			Description: Leader of Weird Drake. He is the oldest Weird Drake who has discouraged so many hunters. It is not exaggeration to say that the history of Hunters Village is connected to fights against him. He has fought and murdered so many hunters and despises all hunters.
-		-->
+    <!-- The leader of the Weird Drakes, this ancient creature has slain uncounted numbers of hunters. The bloody history of Hunters Village is largely the result of his ravages. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -751,9 +601,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4875" levels="1" name="Raid Boss - Level 72">
-		<!--
-			Description: Vanor Silenos Chief. The owner of the Plains of Glory in the east of Aden. During the years of Unification King Raul, he had a peace treaty with humans, and enjoyed a bucolic life. But, in the time of war disturbances, he has raised his sword and prepared for war by gathering the Vanor Silenos Tribe. Considering the tribe's characteristics to love peace and hate fights, he may not be harmful, but a rumor says that Unification King Raul proposed the peace treaty in a hurry because he was afraid of Kandra's swordsmanship.
-		-->
+    <!-- The Vanor Silenos Chief, he rules the Plains of Glory east of Aden. During the Unification in the reign of King Raoul, Kandra agreed to a peace treaty with the humans. As war clouds have gathered, though, he has again taken steps to ready the Vanor Silenos Tribe for battle. Rumor has it that King Raoul proposed the original peace treaty because he feared Kandra's renowned swordsmanship. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -761,9 +609,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4876" levels="1" name="Raid Boss - Level 59">
-		<!--
-			Description: Monster Dragon known to have come out of Goddess Shilen's nightmare. However, it is one of the Spirits of Darkness rather than a monster directly born to Shilen. It is more like a Shadow summoned by necromancers. While living on earth, it took the form of a dragon which living things were most afraid of.
-		-->
+    <!-- This dragon guards the southeastern shore of the river in the Forest of Mirrors. Once a ghost in the Forest, he begged the Shaman Isir to restore his life. Resurrected as a dragon, he was ordered by Isir to prevent any outsiders from crossing the river and penetrating the Forest. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -771,9 +617,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4877" levels="1" name="Raid Boss - Level 55">
-		<!--
-			Description: Harit Lizardmen's best warrior. Being quiet and reliable, he is a perfectionist who never gives up on his task and carries it out to the end. After being entrusted with the duty to guard the Holy Land, he has protected Harit Lizardmen's holy land, Anghel Waterfall, fighting off so many monsters and devils.
-		-->
+    <!-- The Harit Lizardmen's best warrior, Tamish is a quiet, reliable perfectionist who never gives up on his task until it has been completed. Entrusted with guarding Anghel Waterfall, he has admirably protected the Harit Lizardmen's Holy Land against all manner of monsters and devils. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -781,9 +625,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4878" levels="1" name="Raid Boss - Level 75">
-		<!--
-			Description: Lesser Titan discovered in the Giants Cave. Due to his superior combat power, some scholars were questioning if it is not a Lesser Titan at all, but a real Titan. They named him Last Lesser Giant Olkuth.
-		-->
+    <!-- Discovered in the Giants' Cave, some scholars speculate that given his combat prowess, this Lesser Giant is actually a real Giant. Hedging their bets, they named him the Last Lesser Giant Olkuth. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -791,9 +633,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4879" levels="1" name="Raid Boss - Level 78">
-		<!--
-			Description: The one that protects the Divine Statue of Giants which is the Relic of Giants deep inside of the Giants Cave. No one knows what the statue means or why it is desperately protected.
-		-->
+    <!-- He protects the Divine Statue of Giants, an ancient relic of the Giants located deep inside the Giants' Cave. No one knows what the statue means or why it is so fiercely guarded. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -801,9 +641,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4880" levels="1" name="Raid Boss - Level 72">
-		<!--
-			Description: Commander of the Undead wandering about on the battlefields of the past. He was a general who led an army called Death Blade in the past and slaughtered anything visible. Owing to the petition of the nobles who were afraid of his madness, he was demoted, and later killed with his army in a battle in which he was used as bait. However, even death could not stop his madness for slaughter. He called upon the magic of darkness, and resurrected himself and his army as the Undead. He still threatens the Frontier Post with a shiny blade that never gets rusty.
-		-->
+    <!-- Once the commander of the infamous Death Agent Army that ravaged the land, terrorizing friends and foes alike, he was eventually demoted at the request of several prominent nobles. He was later killed in battle when his army was sacrificed as bait. Not even death could end his bloodlust, however. Calling upon the magic of Darkness, he and his army were resurrected as undead soldiers. Now the Commander of the Undead, he roams old battlegrounds and threatens the Border Outpost with a gleaming, rust-proof blade. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -811,9 +649,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4881" levels="1" name="Raid Boss - Level 75">
-		<!--
-			Description: Plant-shaped Monster emerging near the Tower of Insolence. A giant tree growing near the Tower of Insolence mutated due to the energy of the seal flowing from the tower and Death Lord Hallate's power of darkness, and became an enormous monster. It sucks the energy of the seal from the upper stream connected to Oren Castle, and attacks adventurers headed for the Tower of Insolence at command of Hallate.
-		-->
+    <!-- This plant-shaped monster is found near the Blazing Swamp. According to one theory, Palatanos is the result of a failed experiment. After Ipos arose from purgatory, his influence and magic were not the equal of Hallate, and he was unable to create the same kind of powerful underlings. Too proud to ask Hallate for help, however, he tried honing his skills on relatively simple monsters. Despite Palatanos' strange origin and appearance, he can still be a potentially dangerous adversary. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -821,9 +657,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4882" levels="1" name="Raid Boss - Level 70">
-		<!--
-			Description: Queen of Falibati protecting the Seal of Shilen. She is one of the monsters that Shilen gave birth to during the war of the Gods, and her authority nearly equals that of Death Lords. She summons the dead and devils to rule them as her servants, and even employs the low-level devil, Succubus, as her maid. According to Shilen's Priest Hisilrome who is also a Falibati, Themis is a piece of Shilen, the queen of Evil Spirits, who came down to this land.
-		-->
+    <!-- The Queen of the Falibati protects the Seal of Shilen. According to Shilen's Priest Hisilrome, who is also a Falibati, Themis is a living piece of the Queen of Evil Spirits, Shilen. Themis is one of the monsters birthed by Shilen during the War of the Gods, and as a result her authority nearly equals that of the Death Lords. Capable of summoning and ruling over both dead and devils, she employs the low-level devil, Succubus, as her maid. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -831,9 +665,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4883" levels="1" name="Raid Boss - Level 65">
-		<!--
-			Description: Leader of Ancient Gargoyles who were the first born Gargoyles. During the war of the Gods, he led Ancient Gargoyles and fought against the Gods on the side of Shilen, but lost. Now, he is hiding out on the Forsaken Plains. He is sharpening his blade of revenge, waiting for Shilen, Mother of Evil Spirits, to be resurrected.
-		-->
+    <!-- The leader of the Ancient Gargoyles, he led them in the service of Shilen against the gods during the War of the Gods. After their defeat, he fled to the Forsaken Plains. There he hides, sharpening his blade of vengeance and waiting for Shilen, Mother of Evil Spirits, to return. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -841,9 +673,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4884" levels="1" name="Raid Boss - Level 60">
-		<!--
-			Description: High Prefect of Taik Orcs who occupied the Cemetery to attack Aden Castle, and turned it into his outpost. He has tried an all-out surprise attack by leading a small number of elite soldiers and the supply troops, but cannot do anything due to complicated interests of other monsters who already built a nest. He hates humans who killed Orcs and destroyed their kingdom in the past.
-		-->
+    <!-- This High Prefect of the Taik Orcs occupied the Cemetery in preparation for an attack on Aden Castle. He has attempted an unsuccessful surprise attack using only a small number of elite soldiers and the supply troops, but has been hampered by having to deal with the complicated interests of other monsters who had already built a nest in the region. His hatred of humans is deep, personal and deadly. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -851,9 +681,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4885" levels="1" name="Raid Boss - Level 55">
-		<!--
-			Description: Executioner that killed the crew members who didn't obey under the leadership of Great Pirate Zaken. Ironically, it was also him that decapitated Zaken during the riot. After coming back to life as an Undead due to the Captain's Curse, he swore not to disobey the Captain's command, and has protected Zaken's treasures at the Tunnel of Pirates.
-		-->
+    <!-- This executioner once served the great Pirate Zaken, even putting to death Zaken's rebellious crew members. Ironically, he later decapitated Zaken himself during the riot. Following his resurrection as an undead because of Zaken's curse, he swore to never again disobey his captain's commands. He now guards Zaken's treasure in the Pirate Tunnel. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -861,9 +689,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4886" levels="1" name="Raid Boss - Level 45">
-		<!--
-			Description: Iron Giant supposedly made by Devil Beleth. With the power to think by himself, he is a Golem made to manage other Golems. Due to Beleth's caprice, he was sealed on standby. While a long period of time had gone by, he has been worshiped as an idol by low-level Orcs who gathered near him. Currently, he is on the move after concluding that he's become the God of Orcs.
-		-->
+    <!-- This Iron Giant was supposedly made by Devil Beleth. Given the power of artificial intelligence, he is a Golem designed to manage other Golems. Due to Beleth's caprice, however, he was sealed up and put on standby. During his inactivity, he began to be worshipped as an idol by low-level Orcs who gathered near him. Now re-activated, he believes that he has become the God of Orcs. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -871,9 +697,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4887" levels="1" name="Raid Boss - Level 67">
-		<!--
-			Description: Brother of Falibati Queen Themis. He was sent to Maruk for the price of Themis' running devils. Due to the contract with Antharas, he is in charge of summoning other Maruk devils at Dragon Valley. However, he is jealous of Themis for having a deep relationship with the world of darkness because he is not a resident of the world of darkness where Maruks belong.
-		-->
+    <!-- Like most monsters in the Blazing Swamp, Sekina also became a devil after receiving the power of Hallate. She is loyal to Kernon, who is currently in the Tower of Insolence, and is currently carrying out a secret mission on his orders in the Blazing Swamp area. The exact nature of the mission is unknown. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -881,9 +705,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4888" levels="1" name="Raid Boss - Level 75">
-		<!--
-			Description: A girl buried alive after being captured during the war despite being a daughter of a noble family in the Elmore Kingdom. Due to her powerful spirit created by the fear of slowly dying, she summoned a devil and entered into a contract. Through the contract, she obtained the power to resurrect the buried girls as Bloody Queens. She hates her parents who gave her up and those who buried her.
-		-->
+    <!-- Despite being a daughter of a noble family in Elmore Kingdom, she was one of the girls buried alive after being captured during the war. As she lay dying, her terror allowed her to summon a devil. She entered into a demonic contract which gave her the power to resurrect the other buried girls as Blood Queens. She hates her parents for allowing her capture as well as those who buried her. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -891,9 +713,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4889" levels="1" name="Raid Boss - Level 70">
-		<!--
-			Description: King of Beasts who was captured alive for Emperor's entertainment during the golden years of Elmoreden and waited for the day of death in Coliseum. When the kingdom fell apart, mystics who were afraid of his grudge and escape sealed him underground of the Coliseum, but he escaped later when the seal weakened. The superhuman power coming from his gigantic arms can shatter any rock into pieces, and he can rule all the beasts as his subordinates.
-		-->
+    <!-- During the golden years of Elmoreden, this King of Beasts was captured and brought to the Coliseum as a spectacle to entertain the Emperor and his court. When the empire fell, he was sealed beneath the Coliseum by mystics afraid of his vengeance, but late escaped. His gigantic arms can shatter rocks, and he is able to rule all beasts. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -901,9 +721,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4890" levels="1" name="Raid Boss - Level 28">
-		<!--
-			Description: Commander of all Ol Mahum tribes that occupy the Fortress of Resistance. With the superior cleverness and bravery, he commands other Ol Mahums within the territory. He has the blood of Ol Mahum Commander which was made through the biological manipulation and improvement during the Era of Titans, and can directly command the minds of other Ol Mahums.
-		-->
+    <!-- The commander of the Ol Mahum tribes that occupy the old Fortress of Resistance, he also he commands other Ol Mahums within the territory through his superior cleverness and bravery. He is a descendant of the Ol Mahum Commander created through biological manipulation during the Era of Lesser Giants, and like his ancestor can directly command the minds of other Ol Mahums. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -911,9 +729,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4891" levels="1" name="Raid Boss - Level 50">
-		<!--
-			Description: Combative Golem of Titan made to prevent anyone from invading the Cruma Tower or to prepare for another war of the Gods in the future. So far, it is waiting for the sally order from Titans that may never come in the basement of the Cruma Tower along with a few bio weapons.
-		-->
+    <!-- This menacing golem was created by the Lesser Giants to defend Cruma Tower during their war with the Gods. It waits patiently in the Tower's lowest level for orders from its Lesser Giant masters - orders that will never come. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -921,9 +737,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4892" levels="1" name="Raid Boss - Level 75">
-		<!--
-			Description: Powerful Death Lord that came up from Purgatory upon request from Death Lord Hallate. Unlike Hallate who spent most of his power on breaking the seal of the Tower of Insolence, he has reserved most of the power from Purgatory. Rather than taking direct actions, he enjoys causing confusion through conspiracies and plots. Currently, he is observing the situation near Aden Castle. He seems to have some kind of relationship with the upper-class nobles of Aden Kingdom.
-		-->
+    <!-- This powerful Death Lord rose up from Purgatory at the behest of Death Lord Hallate. Unlike Hallate, who exhausted most of his power breaking the seal of the Tower of Insolence, Ipos has preserved most of his. He prefers conspiracies and subtle plots to direct action and is currently keenly interested in the situation near Aden Castle. He seems to have some kind of relationship with several high-ranking nobles in Aden Kingdom. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -931,9 +745,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4893" levels="1" name="Raid Boss - Level 50">
-		<!--
-			Description: Queen of Elves who was wise enough to decide to teach humans magic. After the war with Orcs, she was murdered because of the humans' betrayal, but resurrected by Lilith. She then became the ruler of the Catacomb. She was knocked down by Anakim who invaded the Catacomb, but came back to life thanks to the power of Seal Stone as the Seven Signs Seal was broken. She's lost most of her rationality, and fought only to protect the Seal Stone, waiting for the time of rest.
-		-->
+    <!-- This Queen of the Elves first decided to teach humans magic. Later betrayed by those humans, she was murdered following the war with the Orcs. Resurrected by Lilith, she became the ruler of the Catacomb. She was slain during Anakim's invasion of the Catacomb, but again came back to life - this time thanks to the power of Seal Stone. The repeated trauma has made her mentally unstable, and her sole purpose now is the protection of the Seal Stone. She longs for eternal rest. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -941,9 +753,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4894" levels="1" name="Raid Boss - Level 55">
-		<!--
-			Description: Convict Soldier sent by Einhasad for his daughter, Anakim, after watching her struggle at the battle with Lilim. The most brave Convict at the time was called in and given the golden armor with the strong power. He may be the beginning of the Platinum Tribe of today. He always assisted Anakim by her side during the battles, but eventually got killed by a heathen in the Catacomb. When the Seal of the Seven Signs was broken, he woke up again after feeling the power of Einhasad that was sleeping in the Seal Stone.
-		-->
+    <!-- This brave Convict Soldier was dispatched by Einhasad to help her daughter, Anakim, after watching her struggle at the battle with Lilim. He was given powerful golden armor and may be the ancestor of today's Platinum Tribe. He valiantly protected Anakim during many battles before finally being slain in the Catacomb of the Apostate. When the Seal of the Seven Signs was broken, he was resurrected thanks to the power of Einhasad released in the Seal Stone. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -951,9 +761,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4895" levels="1" name="Raid Boss - Level 70">
-		<!--
-			Description: King of Bloody Lords summoned by Marilion. After predicting Nephilim military power to attack, Marilion prayed to Shilen and summoned the king. By killing so many Nephilim, he gave a big blow to the Army of Light. Eventually, he was driven back by Anakim who personally came to fight along with her inferiors, Nephilim, and ran away to the Necropolis.
-		-->
+    <!-- The King of Bloody Lords, he was summoned by Marilion to help fend off an impending Nephilim attack. Terrifying in battle, he slew many Nephilim and dealt a grievous blow to the Army of Light. He was finally driven back by Anakim, who personally came to fight alongside the Nephilim, and fled to the Necropolis. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -961,9 +769,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4896" levels="1" name="Raid Boss - Level 75">
-		<!--
-			Description: Powerful Death Lord that came up from Purgatory upon the request of Death Lord Hallate. Unlike Hallate who spent most of his power on breaking the seal of the Tower of Insolence, he has reserved most of his power from Purgatory. Unlike Death Lord Ipos, he does not have a relationship with humans, or acts alone without listening to Hallate. Finding pleasure out of slaughtering and massacring, he lives on the Killing Ground at present, and spreads the spirit of purgatory and death.
-		-->
+    <!-- A powerful death lord who came up from Purgatory at the request of Death Lord Hallant. Unlike Hallant, who exhausted its power in order to break the seal on the Tower of Insolence, it has kept most of its power from Purgatory. Unlike Death Lord Ipos, it doesn't make relationships with humans, and it acts alone without heeding the words of Hallant. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -971,9 +777,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4897" levels="1" name="Raid Boss - Level 80">
-		<!--
-			Description: Owner of Necropolis called Holy Mother of Darkness waiting for Shilen`s resurrection. She used to be First Titan`s oracle who served the Goddess of Water Shilen. After Shilen`s fall, she was ordered to prepare for Shilen`s resurrection and left on earth when the goddess hid herself inside of death created by the goddess. She received a new body, secretly instigated humans and Elves, caused so many wars, and resurrected those who died at the battlefields to make her soldiers. She is Shilen`s loyal servant who would do anything to resurrect Shilen.
-		-->
+    <!-- Known as the Holy Mother of Darkness, Lilith rules Necropolis and awaits Shilen's resurrection. She began serving Shilen as the First Titan's oracle, when Shilen was still the Goddess of Water. After Shilen's fall, she was left behind and ordered to prepare for the goddess's resurrection. Armed with a new, powerful body, Lilith has secretly instigated many conflicts between humans and Elves. She resurrects those who died in battle to serve as her undead army. Completely loyal to Shilen, she will do anything to hasten her return. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -981,9 +785,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4898" levels="1" name="Raid Boss - Level 80">
-		<!--
-			Description: Angel that showed up before the first emperor Shunaiman to overcome the crisis of Shilen`s children. She is called Flame of Holy Flame or Einhasad`s Messenger. As the Leader of Light that descended on the ground, she led Nephilim and jumped into Necropolis to dislodge Lilim led by Lilith, but got sealed with Lilith. She looks like a beautiful and innocent girl, and is the mortal enemy of Lilith.
-		-->
+    <!-- This Angel appeared to Emperor Shunaiman during the Crisis of Shilen's Children. Called the Sacred Flame or Einhasad's Messenger, she led the Forces of Light in an attack on Necropolis to dislodge Lilim and Lilith. Accidentally sealed in with Lilith, she remains her eternal enemy. Despite her power, she looks like a beautiful and innocent young girl. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -991,9 +793,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4899" levels="1" name="Raid Boss - Level 20">
-		<!--
-			Description: Immortal Warrior created by Dark Elves to turn the war situation upside down. In the beginning of the war between Elves and Dark Elves, Dark Elves were cornered, but raised the knocked-down warriors again by testing the power of Dark Magic that they newly obtained. Farakelsus was one of the warriors raised again at the time, and became a monster that murdered innumerous Elves during the war. Although he was a brave Elven Knight once, he is left only with a thirst for blood of living things now.
-		-->
+    <!-- This immortal creature was created by Dark Elven dark magic. During the early days of the war between the Elves and Dark Elves, the Dark Elves found themselves on the defensive. Experimenting with the power of Dark Arts they had embraced, they resurrected a number of slain warriors. Once a brave elven knight, Ferkel became of those revived warriors turned into bloodthirsty undead beasts. He slaughtered countless fellow Elves during the war and even now thirsts for the blood of living beings. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />

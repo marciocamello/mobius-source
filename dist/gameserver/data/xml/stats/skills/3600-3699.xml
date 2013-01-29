@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="3600" levels="10" name="Special Ability: Anger">
-		<!--
-		  
-		    Description:
-		    1. Decreases the character's Maximum HP but increases P. Atk. Allows the character to attack multiple opponents.
-		    2. Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-		    3. Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-		    4. Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-		    5. Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-		    6. Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-		    7. Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
-		    8. Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
-		    9. Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
-		   10. Decreases MaxHP and increases P. Atk. Enables the character to attack multiple opponents. Increases damage inflicted during PvP.
-		-->
+    <!-- Decreases Max HP and increases P. Atk. Enables the character to attack multiple opponents. -->
 		<table name="#val">20.44 22.64 24.77 26.78 28.59 30.12 31.30 39.00 45.00 78.12</table>
 		<table name="#pvpDam">1.00 1.00 1.00 1.00 1.00 1.00 1.05 1.05 1.05 1.05</table>
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 75 80</table>
@@ -33,20 +20,7 @@
 		</for>
 	</skill>
 	<skill id="3601" levels="10" name="Special Ability: Haste">
-		<!--
-		  
-		    Description:
-		    1. Increases Atk.Spd., and enables the character to attack multiple opponents.
-		    2. Increases Atk.Spd., and enables the character to attack multiple opponents.
-		    3. Increases Atk.Spd., and enables the character to attack multiple opponents.
-		    4. Increases Atk.Spd., and enables the character to attack multiple opponents.
-		    5. Increases Atk.Spd., and enables the character to attack multiple opponents.
-		    6. Increases Atk.Spd., and enables the character to attack multiple opponents.
-		    7. Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-		    8. Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-		    9. Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-		   10. Increases Atk. Spd. and allows user to attack multiple enemies. Increases damage inflicted during PvP.
-		-->
+    <!-- Increases Atk. Spd. Enables the character to attack multiple opponents. -->
 		<table name="#val">1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 1.11</table>
 		<table name="#pvpDam">1.00 1.05 1.00 1.00 1.00 1.05 1.05 1.05 1.05 1.05</table>
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 75 84</table>
@@ -64,20 +38,7 @@
 		</for>
 	</skill>
 	<skill id="3602" levels="10" name="Special Ability: Guidance">
-		<!--
-		  
-		    Description:
-		    1. Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-		    2. Increases Accuracy, and enables the character to attack multiple opponents.
-		    3. Increases Accuracy, and enables the character to attack multiple opponents.
-		    4. Increases Accuracy, and enables the character to attack multiple opponents.
-		    5. Increases Accuracy, and enables the character to attack multiple opponents.
-		    6. Increases Accuracy, and enables the character to attack multiple opponents.
-		    7. Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-		    8. Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-		    9. Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-		   10. Increases accuracy and allows user to attack multiple enemies. Increases damage inflicted during PvP.
-		-->
+    <!-- Increases Accuracy. Enables the character to attack multiple opponents. -->
 		<table name="#val">6.88 6.07 5.72 5.37 5.02 4.68 4.34 3.95 5.27 7.5</table>
 		<table name="#pvpDam">1.05 1.00 1.00 1.00 1.00 1.00 1.05 1.05 1.05 1.05</table>
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 75 84</table>
@@ -95,6 +56,7 @@
 		</for>
 	</skill>
 	<skill id="3603" levels="10" name="Demon Sword Zariche">
+    <!-- The Demon Bremmnon used this mystical sword to slaughter his enemies. The more blood the sword sheds, the more powerful it becomes. -->
 		<table name="#maxCp">12 13 14 15 17 19 21 23 25 27</table>
 		<table name="#pAtk">3 4.5 6 7.5 9 10.5 11 11.5 12 12.5</table>
 		<table name="#mAtk">3 3.25 3.50 3.75 4 4.25 4.50 5 5.50 5.75</table>
@@ -122,6 +84,7 @@
 		</for>
 	</skill>
 	<skill id="3604" levels="1" name="Frintezza's Necklace">
+    <!-- Increases Resistance to dark/poison/bleed/paralysis/shock/sleep attacks, and increases poison/bleed/paralysis/shock/sleep attack bonus. Decreases skill re-use time. Reflects some of the damage received back to the enemy. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -145,6 +108,7 @@
 		</for>
 	</skill>
 	<skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
+    <!-- Increases Atk. Spd. and damage of general attacks by 5%. -->
 		<set name="icon" val="icon.armor_t1001_ul_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -156,6 +120,7 @@
 		</for>
 	</skill>
 	<skill id="3606" levels="1" name="Clan Oath Light Armor Set">
+    <!-- Increases Atk. Spd. and Critical Damage by 5%. -->
 		<set name="icon" val="icon.armor_t1002_ul_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -167,6 +132,7 @@
 		</for>
 	</skill>
 	<skill id="3607" levels="1" name="Clan Oath Robe Set">
+    <!-- Increases MP Recovery Rate and Casting Spd. By 5% -->
 		<set name="icon" val="icon.armor_t1003_ul_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -178,13 +144,7 @@
 		</for>
 	</skill>
 	<skill id="3608" levels="2" name="Apella Heavy Armor Set">
-		<!--
-			Description:
-			Lvl1: Increases Max. CP/CP Recovery Power, and decreases Experience penalty when killed by a skilled player. When being attacked, magic resistance is increased, and Critical damage hitting rate is decreased.
-			      Maximum CP +1035, CP recovery speed is increased by 40%. There is a 10% probability that magic defense power is increased by 5% and critical damage is decreased by 3 if the damage inflicted by PC is more than 50.
-			Lvl2: Increases Max. CP/CP Recovery power, and decreases Experience penalty when killed by MP consumption of skills and a player .  When being attacked, magic resistance and Critical rate are increased, and Critical damage hitting rate is decreased.
-			      Maximum CP +1116, CP recovery speed is increased by 40%, and when the PC receives more than 50 damage, there is a 10% probability that magic defense power is increased by 5%, the critical damage is decreased by 3, and the critical strike probability is increased by 2.621
-		-->
+    <!-- Increases Max CP/CP recovery bonus, and decreases the skill player's death XP penalty. Increases one's own M. Def. when under attack. Decreases Critical Damage success rate. -->
 		<table name="#maxCP">1035 1116</table>
 		<table name="#expLost">0.9 0.8</table>
 		<table name="#triggerLevel">1 2</table>
@@ -207,13 +167,7 @@
 		</for>
 	</skill>
 	<skill id="3609" levels="2" name="Apella Light Armor Set">
-		<!--
-			Description:
-			Lvl1: Increases Max. CP/CP Recovery Power, and decreases Experience penalty when killed by a player. When being attacked, Evasion is increased, and received Critical damage is decreased.
-			      Maximum CP +1035, CP recover speed is increased by 40%. There is a 10% probability that evasion is increased by 2 and critical damage is decreased by 86 if the damage inflicted by PC is more than 50.
-			Lvl2: Increases Max. CP/CP Recovery power, and decreases Experience penalty when killed by MP consumption of skills and a player .  When being attacked, evasion and attack speed are increased, and received Critical damage is decreased.
-			      Maximum CP +1116, CP recovery speed is increased by 40%, and when the PC receives more than 50 damage, there is a 10% probability that evasion is increased by 2 and critical damage is decreased by 86. Increased Atk. Spd. by 2.5%.\0	a,	a,	0	0	6	a,When all set items are enchanted by 6 or higher, M. Def. and Evasion will increase.
-		-->
+    <!-- Increases Max CP/CP recovery bonus, and decreases the player's death XP penalty. Increases Evasion when under attack. Decreases received Critical Damage. -->
 		<table name="#maxCP">1035 1116</table>
 		<table name="#expLost">0.9 0.8</table>
 		<table name="#triggerLevel">1 2</table>
@@ -236,13 +190,7 @@
 		</for>
 	</skill>
 	<skill id="3610" levels="2" name="Apella Robe Set">
-		<!--
-			Description:
-			Lvl1: Increases Max. CP/CP Recovery Power, and decreases Experience penalty when killed by a player. When being attacked, evasion and defense power are increased.
-			      Maximum CP +1035, CP recovery speed is increased by 40%. There is a 10% probability that Speed is increased by 10 and defense power is increased by 5% if the damage inflicted by PC is more than 50.
-			Lvl2: Increases Max. CP/CP Recovery power, and decreases Experience penalty when killed by MP consumption of skills and a player . When being attacked, Speed, defense power and magic power are increased.
-			      Maximum CP +1116, CP recovery speed is increased by 40%. Has a 10% chance to increase Speed by 10, increase P. Def. by 5% and increase M. Atk. by 6 if the damage inflicted by a PC is more than 50.
-		-->
+    <!-- Increases Max CP/CP recovery bonus, and decreases the player's death XP penalty. Increases Speed and P. Def. when under attack. -->
 		<table name="#maxCP">1035 1116</table>
 		<table name="#expLost">0.9 0.8</table>
 		<table name="#triggerLevel">1 2</table>
@@ -264,7 +212,8 @@
 			<mul order="0x30" stat="regCp" val="1.40" />
 		</for>
 	</skill>
-	<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
+	<skill id="3611" levels="1" name="Enchant Heavy Armor (D Grade)">
+    <!-- Strengthens a set item to increase P. Def. and MP Recovery Bonus. -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -275,7 +224,8 @@
 			<add order="0x40" stat="regMp" val="2" />
 		</for>
 	</skill>
-	<skill id="3612" levels="1" name="Enchant Light Armor (Grade D)">
+	<skill id="3612" levels="1" name="Enchant Light Armor (D Grade)">
+    <!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -286,7 +236,8 @@
 			<add order="0x40" stat="rEvas" val="2" />
 		</for>
 	</skill>
-	<skill id="3613" levels="1" name="Enchant Robe (Grade D)">
+	<skill id="3613" levels="1" name="Enchant Robe (D Grade)">
+    <!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -297,7 +248,8 @@
 			<mul order="0x30" stat="maxLoad" val="1.30" />
 		</for>
 	</skill>
-	<skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">
+	<skill id="3614" levels="1" name="Enchant Heavy Armor (C Grade)">
+    <!-- Strengthens a set item to increase P. Def. and MP Recovery Bonus. -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -308,7 +260,8 @@
 			<add order="0x40" stat="regMp" val="2" />
 		</for>
 	</skill>
-	<skill id="3615" levels="1" name="Enchant Light Armor (Grade C)">
+	<skill id="3615" levels="1" name="Enchant Light Armor (C Grade)">
+    <!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -319,7 +272,8 @@
 			<add order="0x40" stat="rEvas" val="2" />
 		</for>
 	</skill>
-	<skill id="3616" levels="1" name="Enchant Robe (Grade C)">
+	<skill id="3616" levels="1" name="Enchant Robe (C Grade)">
+    <!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -330,7 +284,8 @@
 			<mul order="0x30" stat="maxLoad" val="1.30" />
 		</for>
 	</skill>
-	<skill id="3617" levels="1" name="Enchant Heavy Armor (Grade B)">
+	<skill id="3617" levels="1" name="Enchant Heavy Armor (B Grade)">
+    <!-- Strengthens a set item to increase P. Def. and MP Recovery Bonus. -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -341,7 +296,8 @@
 			<add order="0x40" stat="regMp" val="2" />
 		</for>
 	</skill>
-	<skill id="3618" levels="1" name="Enchant Light Armor (Grade B)">
+	<skill id="3618" levels="1" name="Enchant Light Armor (B Grade)">
+    <!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -352,7 +308,8 @@
 			<add order="0x40" stat="rEvas" val="2" />
 		</for>
 	</skill>
-	<skill id="3619" levels="1" name="Enchant Robe (Grade B)">
+	<skill id="3619" levels="1" name="Enchant Robe (B Grade)">
+    <!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -363,7 +320,8 @@
 			<mul order="0x30" stat="maxLoad" val="1.30" />
 		</for>
 	</skill>
-	<skill id="3620" levels="1" name="Enchant Heavy Armor (Grade A)">
+	<skill id="3620" levels="1" name="Enchant Heavy Armor (A Grade)">
+    <!-- Strengthens a set item to increase P. Def. and MP Recovery Bonus. -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -374,7 +332,8 @@
 			<add order="0x40" stat="regMp" val="2" />
 		</for>
 	</skill>
-	<skill id="3621" levels="1" name="Enchant Light Armor (Grade A)">
+	<skill id="3621" levels="1" name="Enchant Light Armor (A Grade)">
+    <!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -385,7 +344,8 @@
 			<add order="0x40" stat="rEvas" val="2" />
 		</for>
 	</skill>
-	<skill id="3622" levels="1" name="Enchant Robe (Grade A)">
+	<skill id="3622" levels="1" name="Enchant Robe (A Grade)">
+    <!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -396,7 +356,8 @@
 			<mul order="0x30" stat="maxLoad" val="1.30" />
 		</for>
 	</skill>
-	<skill id="3623" levels="1" name="Enchant Heavy Armor (Grade S)">
+	<skill id="3623" levels="1" name="Enchant Heavy Armor (S Grade)">
+    <!-- Strengthens a set item to increase P. Def. and MP Recovery Bonus. -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -407,7 +368,8 @@
 			<add order="0x40" stat="regMp" val="2" />
 		</for>
 	</skill>
-	<skill id="3624" levels="1" name="Enchant Light Armor (Grade S)">
+	<skill id="3624" levels="1" name="Enchant Light Armor (S Grade)">
+    <!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -418,7 +380,8 @@
 			<add order="0x40" stat="rEvas" val="2" />
 		</for>
 	</skill>
-	<skill id="3625" levels="1" name="Enchant Robe (Grade S)">
+	<skill id="3625" levels="1" name="Enchant Robe (S Grade)">
+    <!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -430,11 +393,7 @@
 		</for>
 	</skill>
 	<skill id="3626" levels="1" name="Kabokula">
-		<!--
-			author: n0nam3
-			Description:
-			Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
-		-->
+    <!-- Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.weapon_seize_mace_i00" />
 		<set name="reuseDelay" val="1000" />
@@ -471,11 +430,7 @@
 		</cond>
 	</skill>
 	<skill id="3627" levels="1" name="Tapirawa">
-		<!--
-			author: n0nam3
-			Description:
-			Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
-		-->
+    <!-- Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.weapon_seize_mace_i00" />
 		<set name="reuseDelay" val="1000" />
@@ -515,11 +470,7 @@
 		</cond>
 	</skill>
 	<skill id="3628" levels="1" name="Shabonoba">
-		<!--
-			author: n0nam3
-			Description:
-			Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
-		-->
+    <!-- Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.weapon_seize_mace_i00" />
 		<set name="reuseDelay" val="1000" />
@@ -554,11 +505,7 @@
 		</cond>
 	</skill>
 	<skill id="3629" levels="10" name="Blood Sword Akamanah">
-		<!--
-			Needs to be finished - below is a copy of 3603 Demon Sword Zariche
-			Description:
-			Lvl 1-10 - A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade dies over and over again when it touches the air, and it craves blood to forge it anew. It becomes stronger every time it is supplied with blood.
-		-->
+    <!-- A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade dies over and over again when it touches the air, and it craves blood to forge it anew. It becomes stronger every time it is supplied with blood. -->
 		<table name="#maxCp">12 13 14 15 17 19 21 23 25 27</table>
 		<table name="#pAtk">3 4.5 6 7.5 9 10.5 11 11.5 12 12.5</table>
 		<table name="#mAtk">3 3.25 3.50 3.75 4 4.25 4.50 5 5.50 5.75</table>
@@ -586,9 +533,7 @@
 		</for>
 	</skill>
 	<skill id="3630" levels="1" name="Void Burst">
-		<!--
-			Description: Discharges cursed energy to attack nearby enemies.
-		-->
+    <!-- Discharges cursed energy to attack nearby enemies. -->
 		<set name="affectLimit" val="6;12" />
 		<set name="icon" val="icon.skill3630" />
 		<set name="reuseDelay" val="60000" />
@@ -604,9 +549,7 @@
 		<set name="shieldignore" val="true" />
 	</skill>
 	<skill id="3631" levels="1" name="Void Flow">
-		<!--
-			Description: Emits cursed energy to strike a distant enemy.
-		-->
+    <!-- Emits cursed energy to strike a distant enemy. -->
 		<set name="affectLimit" val="6;12" />
 		<set name="icon" val="icon.skill3631" />
 		<set name="reuseDelay" val="60000" />
@@ -622,11 +565,7 @@
 		<set name="shieldignore" val="true" />
 	</skill>
 	<skill id="3632" levels="1" name="Clan Gate">
-		<!--
-			Done by n0nam3
-			Description:
-			Active: Creates a gate that summons clan members. You cannot move while this skill is active.
-		-->
+    <!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
 		<set name="icon" val="icon.accessory_crown_i00" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="magicLevel" val="60" />
@@ -647,12 +586,7 @@
 		</for>
 	</skill>
 	<skill id="3633" levels="2" name="Residential Shock Immunity">
-		<!--
-		    Last modify: 15.09.2009
-			Description:
-			Lvl 1 - Active: Momentarily increases resistance to shock attacks.
-			Lvl 2 - Active: Momentarily gives complete resistance to shock attacks.
-		-->
+    <!-- Active: Momentarily increases Resistance to shock attacks. -->
 		<table name="#res">80 MAX</table>
 		<table name="#stack">80 100</table>
 		<set name="icon" val="icon.accessory_pledge_cap1_i05" />
@@ -669,10 +603,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3634" levels="1" name="Special Ability Infinity Sword">
-		<!--
-			Description: "Increases Critical attack probability/power, Maximum HP/Maximum CP and damage inflicted during PvP, and it reflects debuff attacks back to attack the enemy."
-		-->
+	<skill id="3634" levels="1" name="Special Ability: Infinity Sword">
+    <!-- Increases critical rate/damage, Max HP, and Max CP. Inflicts additional damage during PVP. Reflects debuff attack back on enemy. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i00" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -685,16 +617,13 @@
 			<mul val='1.50' order='0x30' stat='maxCp' />
 			<add val="10" order="0x40" stat="reflectPhysicDebuff" />
 			<add val="10" order="0x40" stat="reflectMagicDebuff" />
-			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.1" />
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.1" />
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.1" />
 		</for>
 	</skill>
-	<skill id="3635" levels="1" name="Special Ability Infinity Shooter">
-		<!--
-			Description: "Decreases the enemy's moving speed during Critical. Maximum HP/Maximum CP and damage inflicted during PvP are increased. Reuse time is short, and MP consumption is decreased by a fixed rate."
-		-->
+	<skill id="3635" levels="1" name="Special Ability: Infinity Shooter">
+    <!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PVP. The skill re-use time is short. Has a chance to decrease MP consumption. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i00" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -707,17 +636,13 @@
 			<add val="10" order="0x40" stat="reflectMagicDebuff" />
 			<mul val="0.88" order="0x30" stat="mpConsumePhysical" />
 			<mul val="0.83" order="0x50" stat="atkReuse" />
-			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.1" />
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.1" />
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.1" />
 		</for>
 	</skill>
 	<skill id="3636" levels="1" name="Dynasty Platinum Plate">
-		<!--
-			Shield Master
-			Str-2, Con+2, P. Def. +6.6%, Max HP +492, Heal Capacity +4%, Dark Resistance +8, Stun Resistance +15.
-		-->
+    <!-- Increases P. Def./Max HP/effectiveness of HP recovery magic/Resistance to Shock. -->
 		<set name="icon" val="icon.armor_t91_uk_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -735,10 +660,7 @@
 		</for>
 	</skill>
 	<skill id="3637" levels="1" name="Dynasty Platinum Plate">
-		<!--
-			Weapon Master
-			Con-2, Str+2, P. Atk. +6.6%, Max HP +492. Darkness Resistance +8, Critical Damage +282, Critical Rate +2.95% Increase.
-		-->
+    <!-- Increases P. Atk/Max HP/Critical Rate/Resistance to Dark/Critical Damage. -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -756,12 +678,7 @@
 		</for>
 	</skill>
 	<skill id="3638" levels="1" name="Dynasty Platinum Plate">
-		<!--
-		    Last modify: 05.06.2010
-			Bard
-			Con-2, Str+2, P. Def. +6.6%, Max HP +492. Dark Resistance +8, MP Consumption -6% Decrease for Song and Dance Skills.
-			Description: Increases P. Def./Max. HP/Resistance to Darkness Attribute, and decreases MP consumption when using Song/Dance.
-		-->
+    <!-- Increases P. Def./Max HP/Resistance to Dark, and decreases MP consumption when using Song/Dance. -->
 		<set name="icon" val="icon.armor_t91_uke_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -778,11 +695,7 @@
 		</for>
 	</skill>
 	<skill id="3639" levels="1" name="Dynasty Platinum Plate">
-		<!--
-		    Last modify: 05.06.2010
-			Force Master
-			Con-2, Str+1, Physical Attack Power +6.6%, Maximum HP +492 effect. Darkness Resistance +8 Increase, MP Consumption -6% Decrease for Active Skills.
-		-->
+    <!-- Increases P. Atk./Max HP/Resistance to Dark, and decreases MP consumption. -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -798,11 +711,8 @@
 			<add order="0x10" stat="openCloakSlot" val="1" />
 		</for>
 	</skill>
-	<skill id="3640" levels="1" name="Dynasty Jewel Leather Mail">
-		<!--
-			Dagger Master
-			Con-2, Dex+2, Evasion +5.3, Max HP +492. Dark Resistance +8, Hold Resistance +15, Atk. Spd. +3.24%.
-		-->
+	<skill id="3640" levels="1" name="Dynasty Jewel Leather Armor">
+    <!-- Increases Evasion, Max HP, Atk. Spd., and Resistance to Hold. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -819,11 +729,8 @@
 			<add order="0x10" stat="openCloakSlot" val="1" />
 		</for>
 	</skill>
-	<skill id="3641" levels="1" name="Dynasty Jewel Leather Mail">
-		<!--
-			Bow Master
-			Con-2, Dex+2, Accuracy +5.3, Max MP +321. Dark Resistance +8, Atk. Spd. +3.24%, MP Recovery +6.6%.
-		-->
+	<skill id="3641" levels="1" name="Dynasty Jewel Leather Armor">
+    <!-- Increases Accuracy/Max MP/Atk. Spd./MP Recovery Rate/Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -840,11 +747,8 @@
 			<add order="0x10" stat="openCloakSlot" val="1" />
 		</for>
 	</skill>
-	<skill id="3642" levels="1" name="Dynasty Jewel Leather Mail">
-		<!--
-			Force Master
-			Con-2, Str+1, Dex+1, P. Atk. +6.6%, Max HP +492. Dark Resistance +8, MP Consumption -6%.
-		-->
+	<skill id="3642" levels="1" name="Dynasty Jewel Leather Armor">
+    <!-- Increases P. Atk./Max HP/Resistance to Dark, and decreases MP consumption. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -861,11 +765,8 @@
 			<add order="0x10" stat="openCloakSlot" val="1" />
 		</for>
 	</skill>
-	<skill id="3643" levels="1" name="Dynasty Jewel Leather Mail">
-		<!--
-			Weapon Master
-			Con-2, Str+1, DEX +1, Physical Attack Power +6.6%, Maximum HP +492 effect. Darkness Resistance +8, Critical Damage +282, Critical Rate +2.95% Increase.
-		-->
+	<skill id="3643" levels="1" name="Dynasty Jewel Leather Armor">
+    <!-- Increases P. Atk/Max HP/Critical Rate/Critical Damage/Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -883,11 +784,8 @@
 			<add order="0x10" stat="openCloakSlot" val="1" />
 		</for>
 	</skill>
-	<skill id="3644" levels="1" name="Dynasty Jewel Leather Mail">
-		<!--
-			Enchanter
-			Int-1, Men+2, Wit-1, Casting Spd. +15%, Max MP +321. Dark Resistance +8, MP Consumption -6%, Magic Cancel Rate -15.
-		-->
+	<skill id="3644" levels="1" name="Dynasty Jewel Leather Armor">
+    <!-- Increases P. Atk., P. Def, Max HP, Atk. Speed and Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -905,10 +803,7 @@
 		</for>
 	</skill>
 	<skill id="3645" levels="1" name="Dynasty Silver Satin Tunic">
-		<!--
-			Healer
-			Int-2, Men+2, Casting Spd. +15%, Max MP +321. Dark Resistance +8, Heal Capacity +22, Magic Cancel Rate -15.
-		-->
+    <!-- Increases Casting Spd./Max MP/Heal Power/Resistance to Dark, and decreases magic cancel rate against damage. -->
 		<set name="icon" val="icon.armor_t93_uh_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -926,10 +821,7 @@
 		</for>
 	</skill>
 	<skill id="3646" levels="1" name="Dynasty Silver Satin Tunic">
-		<!--
-			Enchanter
-			Int-2, Men+2, Casting Spd. +15%, Max MP +321. Dark Resistance +8, MP Consumption -6%, Magic Cancel Rate -15.
-		-->
+    <!-- Increases Casting Spd./Max MP/Resistance to Dark, and decreases MP Consumption/magic cancel rate against damage. -->
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -947,10 +839,7 @@
 		</for>
 	</skill>
 	<skill id="3647" levels="1" name="Dynasty Silver Satin Tunic">
-		<!--
-			Summoner
-			Int-2, Men+2, Casting Spd. +15%, Max MP +321. Dark Resistance +8, P. Atk. +3.3%, P. Def. +3.3%.
-		-->
+    <!-- Increases Casting Spd./Max MP/P. Atk./P. Def./Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t93_us_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -968,10 +857,7 @@
 		</for>
 	</skill>
 	<skill id="3648" levels="1" name="Dynasty Silver Satin Tunic">
-		<!--
-			Wizard
-			Int+1, Wit+1, Men-2, Casting Spd. +15%, Max MP +321. Dark Resistance +8, M. Atk. 6.6%.
-		-->
+    <!-- Increases Casting Spd./Max MP/M. Atk./Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t93_uw_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -989,9 +875,7 @@
 		</for>
 	</skill>
 	<skill id="3649" levels="1" name="Beleth's Ring">
-		<!--
-			Description: A ring which Beleth ordered Tully to make. Magic Resistance +12% , Mental attack power +10, Mental attack resistance +10, Max. MP +21, Dark Resistance +15.
-		-->
+    <!-- Increases Resistance to Magic, Mental Attack Bonus, Resistance to Mental Attack, Max MP, and Darkness. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -1007,9 +891,7 @@
 		</for>
 	</skill>
 	<skill id="3650" levels="1" name="PvP Weapon - CP Drain">
-		<!--
-		      Description: Recovers CP with a fixed rate when attacking.
-		-->
+    <!-- Has a chance to recover CP when attacking. -->
 		<set name="icon" val="icon.skill1306" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1025,9 +907,7 @@
 		</triggers>
 	</skill>
 	<skill id="3651" levels="1" name="PvP Weapon - Cancel">
-		<!--
-		      Description: Cancels 1 or more of the opponent's enhanced conditions with a fixed rate when attacking.
-		-->
+    <!-- Has a chance to cancel 1 or more of the opponent's enhanced conditions when attacking. -->
 		<set name="icon" val="icon.skill1056" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1043,9 +923,7 @@
 		</triggers>	
 	</skill>
 	<skill id="3652" levels="1" name="PvP Weapon - Ignore Shield Defense">
-		<!--
-		      Description: Decreases the opponent's shield defense with a fixed rate when attacking.
-		-->
+    <!-- Has a chance to decrease the opponent's shield defense when attacking. -->
 		<set name="icon" val="icon.skill1304" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1061,9 +939,7 @@
 		</triggers>	
 	</skill>
 	<skill id="3653" levels="1" name="PvP Weapon - Attack Chance">
-		<!-- 
-		     Description: Inflicts additional damage with a fixed rate when attacking.
-		-->
+    <!-- Has a chance to inflict additional damage when attacking. -->
 		<set name="icon" val="icon.skill0005" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1079,9 +955,7 @@
 		</triggers>	
 	</skill>
 	<skill id="3654" levels="1" name="PvP Weapon - Casting">
-		<!--
-		      Description: Increases Casting Spd. when being attacked.
-		-->
+    <!-- Increases Casting Spd. when under attack. -->
 		<set name="icon" val="icon.skill0228" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1097,9 +971,7 @@
 		</triggers>	
 	</skill>
 	<skill id="3655" levels="1" name="PvP Weapon - Rapid Fire">
-		<!--
-		      Description: Has a chance to increase bow/crossbow attack speed when attacking.
-		-->
+    <!-- Has a chance to increase bow/crossbow Atk. Spd. when attacking. -->
 		<set name="icon" val="icon.skill0413" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1115,9 +987,7 @@
 		</triggers>	
 	</skill>
 	<skill id="3656" levels="1" name="PvP Weapon - Decrease Range">
-		<!--
-		      Description: Decreases bow/crossbow range with a fixed rate when attacking.
-		-->
+    <!-- Has a chance to decrease bow/crossbow range when attacking. -->
 		<set name="icon" val="icon.skill0486" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1133,9 +1003,7 @@
 		</triggers>	
 	</skill>
 	<skill id="3657" levels="1" name="PvP Weapon - Decrease Resist">
-		<!--
-		      Description: Decreases attribute resistance with a fixed rate when attacking.
-		-->
+    <!-- Has a chance to decrease attribute resistance when attacking. -->
 		<set name="icon" val="icon.skill0756" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1151,9 +1019,7 @@
 		</triggers>	
 	</skill>
 	<skill id="3658" levels="1" name="PvP Shield - Reflect Damage">
-		<!--
-		      Description: Reflects the enemy's attack with a fixed rate when being attacked.
-		-->
+    <!-- Has a chance to reflect the enemy's attack when under attack. -->
 		<set name="icon" val="icon.skill0086" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1169,9 +1035,7 @@
 		</triggers>	
 	</skill>
 	<skill id="3659" levels="1" name="PvP Armor - Damage Down">
-		<!--
-		      Description: Decreases damage incurred when being attacked.
-		-->
+    <!-- Decreases damage incurred when under attack. -->
 		<set name="icon" val="icon.skill1040" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1187,9 +1051,7 @@
 		</triggers>	
 	</skill>
 	<skill id="3660" levels="1" name="PvP Armor - Critical Down">
-		<!--
-		      Description: Decreases critical rate and critical damage when being attacked.
-		-->
+    <!-- Decreases critical rate and Critical Damage when under attack. -->
 		<set name="icon" val="icon.skill1242" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1205,9 +1067,7 @@
 		</triggers>	
 	</skill>
 	<skill id="3661" levels="1" name="PvP Armor - Heal">
-		<!--
-		      Description: Adds an effect when Major Heal is used upon a player.
-		-->
+    <!-- Adds an effect when Major Heal is used upon a player. -->
 		<set name="icon" val="icon.skill1011" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1223,9 +1083,7 @@
 		</triggers>	
 	</skill>
 	<skill id="3662" levels="1" name="PvP Armor - Speed Down">
-		<!--
-		      Description: Decreases all of the target's speeds when being attacked.
-		-->
+    <!-- Decreases all of the target's speeds when under attack. -->
 		<set name="icon" val="icon.skill1160" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1241,9 +1099,7 @@
 		</triggers>	
 	</skill>
 	<skill id="3663" levels="1" name="PvP Armor - Mirage">
-		<!--
-		      Description: Blows away the opponent's target with a fixed rate when being attacked.
-		-->
+    <!-- Has a chance to blow away the opponent's target when under attack. -->
 		<set name="icon" val="icon.skill0445" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1258,10 +1114,8 @@
 			</trigger>
 		</triggers>	
 	</skill>
-	<skill id="3664" levels="1" name="Red Talisman - Max. CP">
-		<!--
-		      Description: Increases maximum CP and continuously recovers CP with the power of the talisman.
-		-->
+	<skill id="3664" levels="1" name="Red Talisman of Max CP">
+    <!-- Increases Max CP and continuously recovers CP with the power of the talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="reuseDelay" val="360000" />
@@ -1282,10 +1136,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3665" levels="2" name="Red Talisman - CP Regeneration">
-		<!--
-		      Description: Drastically increases CP regeneration with the power of the talisman.
-		-->
+	<skill id="3665" levels="2" name="Red Talisman of CP Regeneration">
+    <!-- Drastically increases CP regeneration with the power of the talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="reuseDelay" val="360000" />
@@ -1306,10 +1158,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3666" levels="1" name="Yellow Talisman - Increase Force">
-		<!--
-		      Description:Increases your own Force Level through the power of the Talisman.
-		-->
+	<skill id="3666" levels="1" name="Yellow Talisman of Increase Momentum">
+    <!-- Increases your own Momentum Level through the power of the Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLevel" val="1" />
 		<set name="effectPoint" val="200" />
@@ -1326,10 +1176,8 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="3667" levels="1" name="Yellow Talisman - Damage Transition">
-		<!--
-			Description: Transfers some of one's own damage to the servitor with the power of the talisman.
-		-->
+	<skill id="3667" levels="1" name="Yellow Talisman of Damage Transition">
+    <!-- Transfers some of one's own damage to the servitor with the power of the talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLevel" val="40" />
 		<set name="target" val="TARGET_SELF" />
@@ -1340,9 +1188,7 @@
 		</for>
 	</skill>
 	<skill id="3668" levels="1" name="Zubei's Leather Gaiters">
-		<!--
-		      Description: A Masterwork Item that increases Evasion.
-		-->
+    <!-- Increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_l_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1353,9 +1199,7 @@
 		</for>
 	</skill>
 	<skill id="3669" levels="1" name="Zubei's Leather Shirt">
-		<!--
-		      Description: A Masterwork Item that increases Evasion.
-		-->
+    <!-- Increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_u_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1366,9 +1210,7 @@
 		</for>
 	</skill>
 	<skill id="3670" levels="1" name="Zubei's Gauntlet">
-		<!--
-		      Description: A Masterwork Item that increases Evasion.
-		-->
+    <!-- Increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_g_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1379,9 +1221,7 @@
 		</for>
 	</skill>
 	<skill id="3671" levels="1" name="Zubei's Boots">
-		<!--
-		      Description: A Masterwork Item that increases Evasion.
-		-->
+    <!-- Increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_b_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1392,9 +1232,7 @@
 		</for>
 	</skill>
 	<skill id="3672" levels="1" name="Zubei's Gaiters">
-		<!--
-		      Description: Masterwork Item that increases P. Def. and HP
-		-->
+    <!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t64_l_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1406,9 +1244,7 @@
 		</for>
 	</skill>
 	<skill id="3673" levels="1" name="Zubei's Gauntlet">
-		<!--
-		      Description: A Masterwork Item that increases P. Def. and Max HP.
-		-->
+    <!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1420,9 +1256,7 @@
 		</for>
 	</skill>
 	<skill id="3674" levels="1" name="Zubei's Boots">
-		<!--
-		      Description: A Masterwork Item that increases P. Def. and Max HP.
-		-->
+    <!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1434,9 +1268,7 @@
 		</for>
 	</skill>
 	<skill id="3675" levels="1" name="Zubei's Helmet">
-		<!--
-		      Description: A Masterwork Item that increases P. Def. and Max HP.
-		-->
+    <!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1448,9 +1280,7 @@
 		</for>
 	</skill>
 	<skill id="3676" levels="1" name="Zubei's Breastplate">
-		<!--
-		      Description: A Masterwork Item that increases P. Def. and Max HP.
-		-->
+    <!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t64_u_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1462,9 +1292,7 @@
 		</for>
 	</skill>
 	<skill id="3677" levels="1" name="Tunic of Zubei">
-		<!--
-		      Description: A Masterwork Item that increases M. Atk.
-		-->
+    <!-- Increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_u_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1476,9 +1304,7 @@
 		</for>
 	</skill>
 	<skill id="3678" levels="1" name="Stockings of Zubei">
-		<!--
-		      Description: A Masterwork Item that increases M. Atk.
-		-->
+    <!-- Increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_l_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1490,9 +1316,7 @@
 		</for>
 	</skill>
 	<skill id="3679" levels="1" name="Zubei's Gauntlet">
-		<!--
-		      Description: A Masterwork Item that increases M. Atk.
-		-->
+    <!-- Increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_g_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1504,9 +1328,7 @@
 		</for>
 	</skill>
 	<skill id="3680" levels="1" name="Zubei's Boots">
-		<!--
-		      Description: A Masterwork Item that increases M. Atk.
-		-->
+    <!-- Increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_b_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1518,9 +1340,7 @@
 		</for>
 	</skill>
 	<skill id="3681" levels="1" name="Zubei's Shield">
-		<!--
-		      Description: M. Def. is increased.
-		-->
+    <!-- Increases M. Def. -->
 		<set name="icon" val="icon.shield_shrnoens_shield_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1531,9 +1351,7 @@
 		</for>
 	</skill>
 	<skill id="3682" levels="1" name="Avadon Gloves">
-		<!--
-		      Description: A Masterwork Item that increases Max HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1544,9 +1362,7 @@
 		</for>
 	</skill>
 	<skill id="3683" levels="1" name="Avadon Boots">
-		<!--
-		      Description: A Masterwork Item that increases Max HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1557,9 +1373,7 @@
 		</for>
 	</skill>
 	<skill id="3684" levels="1" name="Avadon Circlet">
-		<!--
-		      Description: A Masterwork Item that increases Max HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1570,9 +1384,7 @@
 		</for>
 	</skill>
 	<skill id="3685" levels="1" name="Avadon Gaiters">
-		<!--
-		      Description: A Masterwork Item that increases Max HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.armor_t66_l_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1583,9 +1395,7 @@
 		</for>
 	</skill>
 	<skill id="3686" levels="1" name="Avadon Breastplate">
-		<!--
-		      Description: A Masterwork Item that increases Max HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.armor_t66_u_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1596,9 +1406,7 @@
 		</for>
 	</skill>
 	<skill id="3687" levels="1" name="Avadon Shield">
-		<!--
-		      Description: M. Def. is increased.
-		-->
+    <!-- Increases M. Def. -->
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1609,9 +1417,7 @@
 		</for>
 	</skill>
 	<skill id="3688" levels="1" name="Avadon Circlet">
-		<!--
-		      Description: Magic P. Def./weight limit is increased.
-		-->
+    <!-- Increases M. Def. and weight limit. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1623,9 +1429,7 @@
 		</for>
 	</skill>
 	<skill id="3689" levels="1" name="Avadon Gloves">
-		<!--
-		      Description: A Masterwork Item that increases M. Def. and decreases weight limit.
-		-->
+    <!-- Increases M. Def. and weight limit. -->
 		<set name="icon" val="icon.armor_t67_g_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1637,9 +1441,7 @@
 		</for>
 	</skill>
 	<skill id="3690" levels="1" name="Avadon Leather Armor">
-		<!--
-		      Description: A Masterwork Item that increases M. Def. and decreases weight limit.
-		-->
+    <!-- Increases M. Def. and weight limit. -->
 		<set name="icon" val="icon.armor_t67_ul_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1651,9 +1453,7 @@
 		</for>
 	</skill>
 	<skill id="3691" levels="1" name="Avadon Boots">
-		<!--
-		      Description: A Masterwork Item that increases M. Def. and decreases weight limit.
-		-->
+    <!-- Increases M. Def. and weight limit. -->
 		<set name="icon" val="icon.armor_t67_b_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1665,9 +1465,7 @@
 		</for>
 	</skill>
 	<skill id="3692" levels="1" name="Avadon Circlet">
-		<!--
-		      Description: Rare item that increases physical P. Def.
-		-->
+    <!-- Increases P. Def. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1679,9 +1477,7 @@
 		</for>
 	</skill>
 	<skill id="3693" levels="1" name="Avadon Gloves">
-		<!--
-		      Description: A Masterwork Item that increases physical defense.
-		-->
+    <!-- Increases P. Def. -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1693,9 +1489,7 @@
 		</for>
 	</skill>
 	<skill id="3694" levels="1" name="Avadon Robe">
-		<!--
-		      Description: A Masterwork Item that increases P. Def. and Casting Spd.
-		-->
+    <!-- Increases P. Def. and Casting Spd. -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1707,9 +1501,7 @@
 		</for>
 	</skill>
 	<skill id="3695" levels="1" name="Avadon Boots">
-		<!--
-		      Description: A Masterwork Item that increases physical defense.
-		-->
+    <!-- Increases P. Def. -->
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -1721,9 +1513,7 @@
 		</for>
 	</skill>
 	<skill id="3696" levels="1" name="Doom Gloves">
-		<!--
-		      Description: A Masterwork Item that increases Max HP. and increased Breath Gauge.
-		-->
+    <!-- Increases Max HP and lung capacity. -->
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="magicLevel" val="61" />
 		<set name="target" val="TARGET_SELF" />
@@ -1735,9 +1525,7 @@
 		</for>
 	</skill>
 	<skill id="3697" levels="1" name="Doom Boots">
-		<!--
-		      Description: A Masterwork Item that increases Max HP. and increased Breath Gauge.
-		-->
+    <!-- Increases Max HP and lung capacity. -->
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="magicLevel" val="61" />
 		<set name="target" val="TARGET_SELF" />
@@ -1749,9 +1537,7 @@
 		</for>
 	</skill>
 	<skill id="3698" levels="1" name="Doom Plate Armor">
-		<!--
-		      Description: A Masterwork Item that increases Max HP and increased Breath Gauge.
-		-->
+    <!-- Increases Max HP and lung capacity. -->
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="magicLevel" val="61" />
 		<set name="target" val="TARGET_SELF" />
@@ -1763,9 +1549,7 @@
 		</for>
 	</skill>
 	<skill id="3699" levels="1" name="Doom Helmet">
-		<!--
-		      Description: Maximum HP/lung capacity is increased.
-		-->
+    <!-- Increases Max HP and lung capacity. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLevel" val="61" />
 		<set name="target" val="TARGET_SELF" />
