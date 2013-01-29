@@ -72,7 +72,7 @@ public class _10365_SeekerEscort extends Quest implements ScriptFile
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
-			st.setCond(1);
+			st.setCond(2); // Autocomplete tempfix {normal is setCond(1)}
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-3.htm";
 			spawnseeker(st);
@@ -82,7 +82,7 @@ public class _10365_SeekerEscort extends Quest implements ScriptFile
 			htmltext = "";
 			spawnseeker(st);
 		}
-		if (event.equalsIgnoreCase("quest_rev"))
+		if (event.equalsIgnoreCase("qet_rev")) // Russian emu QuestEvent. DO NOT EDIT THIS LINE!
 		{
 			htmltext = "1-2.htm";
 			st.getPlayer().addExpAndSp(120000, 20000);
