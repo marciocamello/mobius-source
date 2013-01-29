@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="1400" levels="10" name="Turn Undead">
-		<!--
-			Last modify:	22.06.2009
-
-			Description:
-			Strikes fear into undead for 20 seconds, causing them to flee. Consumes 3-5 Runestones. Lethal Strike is possible.
-		-->
+    <!-- Strikes fear into undead for 20 seconds, causing them to flee. Consumes 3 Spirit Ore. Lethal Strike is possible. -->
 		<table name="#Consume">3 3 4 4 4 4 5 5 5 5</table>
 		<table name="#lethal2">30</table>
 		<table name="#time">20</table>
@@ -61,6 +56,7 @@
 		</for>
 	</skill>
 	<skill id="1401" levels="11" name="Major Heal">
+    <!-- Restores the target's HP by 690 Power. Consumes 1 Spirit Ore. -->
 		<table name="#mpConsume2">48 51 52 53 55 57 59 61 62 64 64</table>
 		<table name="#mpConsume1">12 13 13 14 14 15 15 16 16 16 16</table>
 		<table name="#magicLevel">56 58 60 62 64 66 68 70 72 74 75</table>
@@ -91,6 +87,7 @@
 		</enchant2>
 	</skill>
 	<skill id="1402" levels="5" name="Major Group Heal">
+    <!-- Restores all party members' HP by 902 Power. Consumes 4 Spirit Ore. -->
 		<table name="#cureBleed">0</table>
 		<table name="#curePoison">0</table>
 		<table name="#curePower">0</table>
@@ -140,10 +137,7 @@
 		</for>
 	</skill>
 	<skill id="1403" levels="1" name="Summon Friend">
-		<!--.
-			Description: Summons party members to your location. The player being summoned must possess a Summoning Crystal.
-			Summoning Crystall потребляется у призываемого, после подтверждения. Хардкодед.
-		-->
+    <!-- Teleports a party member to one's current location. Requires a Summon Crystal on the target. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1403" />
 		<set name="reuseDelay" val="150000" />
@@ -158,10 +152,7 @@
 		<set name="castRange" val="32767" />
 	</skill>
 	<skill id="1404" levels="1" name="Word of Invitation">
-		<!--.
-			Description: Summons party members to your location. The player being summoned must possess a Summoning Crystal. Consumes 3 Spirit Ore.
-			Summoning Crystall потребляется у призываемого, после подтверждения. Хардкодед.
-		-->
+    <!-- Teleports a party member to one's current location. Consumes 3 Spirit Ore. Requires a Summon Crystal on the target. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1404" />
 		<set name="reuseDelay" val="900000" />
@@ -179,6 +170,7 @@
 		<set name="castRange" val="32767" />
 	</skill>
 	<skill id="1405" levels="4" name="Divine Inspiration">
+    <!-- Increases the number of buffs an individual can receive by 1. -->
 		<table name="#add">1 2 3 4</table>
 		<table name="#magicLevel">52 61 76 76</table>
 		<set name="icon" val="icon.skill1405" />
@@ -191,6 +183,7 @@
 		</for>
 	</skill>
 	<skill id="1406" levels="1" name="Summon Feline King">
+    <!-- Summons Feline King. Requires 4 Spirit Ore(s). -->
 		<table name="#npcId">14836</table>
 		<table name="#mpConsume2">115</table>
 		<table name="#magicLevel">79</table>
@@ -210,7 +203,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SUMMON" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<!-- Summon-specific -->
 		<set name="npcId" val="#npcId" />
 		<enchant1 levels="15" name="Power">
 			<table name="#npcId">14871 14872 14873 14874 14875 14876 14877 14878 14879 14880 14881 14882 14883 14884 14885</table>
@@ -219,6 +211,7 @@
 		</enchant1>
 	</skill>
 	<skill id="1407" levels="1" name="Summon Magnus the Unicorn">
+    <!-- Summons Magnus the Unicorn. Requires 4 Spirit Ore(s). -->
 		<table name="#npcId">14837</table>
 		<table name="#mpConsume2">115</table>
 		<table name="#magicLevel">79</table>
@@ -238,7 +231,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SUMMON" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<!-- Summon-specific -->
 		<set name="npcId" val="#npcId" />
 		<enchant1 levels="15" name="Power">
 			<table name="#npcId">14886 14887 14888 14889 14890 14891 14892 14893 14894 14895 14896 14897 14898 14899 14900</table>
@@ -247,6 +239,7 @@
 		</enchant1>
 	</skill>
 	<skill id="1408" levels="1" name="Summon Spectral Lord">
+    <!-- Summons a Spectral Lord. Requires 4 Spirit Ore(s). -->
 		<table name="#npcId">14838</table>
 		<table name="#mpConsume2">115</table>
 		<table name="#magicLevel">79</table>
@@ -266,7 +259,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SUMMON" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<!-- Summon-specific -->
 		<set name="npcId" val="#npcId" />
 		<enchant1 levels="15" name="Power">
 			<table name="#npcId">14901 14902 14903 14904 14905 14906 14907 14908 14909 14910 14911 14912 14913 14914 14915</table>
@@ -275,10 +267,7 @@
 		</enchant1>
 	</skill>
 	<skill id="1409" levels="1" name="Cleanse">
-		<!--
-			Description:
-			Cancels your target's debuffs. Consumes 1 Einhasad Holy Water.
-		-->
+    <!-- Cancels the target's de-buffs. Consumes 1 Einhasad's Divine Water. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1409" />
 		<set name="reuseDelay" val="8000" />
@@ -302,9 +291,7 @@
 		</for>
 	</skill>
 	<skill id="1410" levels="1" name="Salvation">
-		<!--
-			Description: Revives target from death and restores them to full health, retaining all buff/debuff effects except for Noblesse Blessing and Lucky Charm.  Consumes 2 Einhasad Holy Water.
-		-->
+    <!-- Maintains buffs and de-buffs even after death. The Blessing of Noblesse and the Amulet of Luck disappear, however. Consumes 2 Einhasad's Divine Water. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1410" />
 		<set name="reuseDelay" val="3600000" />
@@ -325,9 +312,7 @@
 		</for>
 	</skill>
 	<skill id="1411" levels="1" name="Mystic Immunity">
-		<!--
-			Description: Makes a target temporarily immune to debuffs.
-		-->
+    <!-- Makes one invincible to various debuffs for a certain period of time. Usable only on party members. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1411" />
 		<set name="reuseDelay" val="150000" />
@@ -345,9 +330,7 @@
 		</for>
 	</skill>
 	<skill id="1412" levels="1" name="Spell Turning">
-		<!--
-			Description: Cancels a nearby target's magic casting.
-		-->
+    <!-- Disrupts a nearby target's casting, disrupting their spell. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1412" />
 		<set name="reuseDelay" val="30000" />
@@ -367,21 +350,7 @@
 		</for>
 	</skill>
 	<skill id="1413" levels="1" name="Magnus' Chant">
-		<!--
-			Last modify: 	09.06.2009
-
-			For 5 minutes, a powerful spirit acts to
-			increase Max MP of all party members by 15%,
-			MP recovery bonus by 1.5 when wearing light or heavy armor,
-			MP recovery bonus by 4 when wearing a robe,
-			M. Def. by 30%,
-			M. Atk. by 30%,
-			Casting Spd. by 20%,
-			resistance to fire, water, wind and earth damage by 10,
-			resistance to de-buff attacks by 25,
-			and resistance to buff-canceling attacks by 40.
-			Consumes 40 Runestones.
-		-->
+    <!-- For 5 minutes, a powerful spirit acts to increase Max MP of all party members by 15%, MP Recovery Bonus by 1.5 when equipped with light or heavy armor, MP Recovery Bonus by 4 when equipped with a robe, M. Def. by 30%, M. Atk. by 30%, Casting Spd. by 20%, Resistance to Fire, Water, Wind and Earth damage by 10, Resistance to de-buff attacks by 25, and Resistance to buff-canceling attacks by 40. Consumes 40 Spirit Ore. -->
 		<table name="#abnormal_time">300</table>
 		<table name="#mpConsume2">229</table>
 		<table name="#mpConsume1">58</table>
@@ -434,26 +403,7 @@
 		</for>
 	</skill>
 	<skill id="1414" levels="1" name="Victory of Pa'agrio">
-		<!--
-			Last modify:	07.06.2009
-
-			Description:
-			For 5 minutes, a powerful spirit acts to increase
-			Max CP of nearby clan members by 20%,
-			CP recovery bonus by 20%,
-			Max MP by 20%,
-			critical attack rate by 20%,
-			the power of Prominent Damage through damage magic by 20%,
-			P. Atk. by 10%,
-			P. Def. by 20%,
-			Atk. Spd. by 20%,
-			M. Atk. by 20%,
-			M. Def. by 20%,
-			Casting Spd. by 20%,
-			and resistance to de-buff by 10%.
-			Decreases movement speed by 20%.
-			Consumes 40 Runestones.
-		-->
+    <!-- For 5 minutes, a powerful spirit acts to increase nearby clan members' Max CP by 20%, CP recovery bonus by 20%, Max MP by 20%, Critical Rate by 20%, the power of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buff by 10%. Decreases Speed by 20%. Consumes 40 Spirit Ore. -->
 		<table name="#abnormal_time">300</table>
 		<table name="#speed">0.8</table>
 		<table name="#mpConsume2">227</table>
@@ -506,12 +456,7 @@
 		</for>
 	</skill>
 	<skill id="1415" levels="1" name="Pa'agrio's Emblem">
-		<!--
-			Last modify:	30.09.2008
-
-			Description:
-			For 5 minutes, increases nearby clan members' resistance to buff-canceling attacks by 30% and resistance to de-buff attacks by 20%.
-		-->
+    <!-- For 5 minutes, increases nearby clan members' Resistance to buff-canceling attacks by 30% and Resistance to de-buff attacks by 20%. -->
 		<table name="#abnormal_time">300</table>
 		<table name="#mpConsume2">227</table>
 		<table name="#mpConsume1">57</table>
@@ -546,7 +491,7 @@
 		</for>
 	</skill>
 	<skill id="1416" levels="1" name="Pa'agrio's Fist">
-		<!-- эффект точно, остальное с потолка -->
+    <!-- Regenerates nearby clan members' CP by 800 and increases Max CP by 800 for 5 minutes. Consumes 20 Spirit Ore. -->
 		<table name="#mpConsume2">227</table>
 		<table name="#mpConsume1">57</table>
 		<table name="#magicLevel">79</table>
@@ -585,10 +530,7 @@
 		</for>
 	</skill>
 	<skill id="1417" levels="5" name="Aura Flash">
-		<!--
-			Enchant #1: +Power
-			Enchant #2: +Chance
-		-->
+    <!-- Inflicts non-attribute damage on nearby enemies with 49 Power added to M. Atk. Consumes 2 Spirit Ore. Cancel target. -->
 		<table name="#ore">2 2 3 3 4</table>
 		<table name="#removeTarget">20 25 30 35 40</table>
 		<table name="#mpConsume2">43 46 49 52 55</table>
@@ -623,12 +565,7 @@
 		</for>
 	</skill>
 	<skill id="1418" levels="1" name="Celestial Shield">
-		<!--
-			Last modify:	22.02.2008
-
-			Description:
-			Harness divine power to render your target temporarily invincible.
-		-->
+    <!-- Protects the target with holy power, making it invincible for 10 seconds. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1418" />
 		<set name="reuseDelay" val="600000" />
@@ -650,11 +587,7 @@
 		</for>
 	</skill>
 	<skill id="1419" levels="1" name="Volcano">
-		<!--
-			Last modify:	24.04.2009
-
-			Description: Continuously inflicts powerful fire damage. User cannot move while casting, and there is additional MP consumption each time the effect occurs. Consumes 1 Magic Symbol.
-		-->
+    <!-- Continuously inflicts powerful Fire damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="15;25" />
 		<set name="icon" val="icon.skill1419" />
@@ -686,11 +619,7 @@
 		</for>
 	</skill>
 	<skill id="1420" levels="1" name="Cyclone">
-		<!--
-			Last modify:	24.04.2009
-
-			Description: Continuously inflicts powerful wind damage. User cannot move while casting, and there is additional MP consumption each time the effect occurs. Consumes 1 Magic Symbol.
-		-->
+    <!-- Continuously inflicts powerful Wind damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="15;25" />
 		<set name="icon" val="icon.skill1420" />
@@ -722,11 +651,7 @@
 		</for>
 	</skill>
 	<skill id="1421" levels="1" name="Raging Waves">
-		<!--
-			Last modify:	24.04.2009
-
-			Description: Continuously inflicts powerful water damage. User cannot move while casting, and there is additional MP consumption each time the effect occurs. Consumes 1 Magic Symbol.
-		-->
+    <!-- Continuously inflicts powerful Water damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="15;25" />
 		<set name="icon" val="icon.skill1421" />
@@ -758,11 +683,7 @@
 		</for>
 	</skill>
 	<skill id="1422" levels="1" name="Day of Doom">
-		<!--
-			Last modify:	24.04.2009
-
-			Description: Creates a seal that casts a powerful curse that decreases all the abilities of nearby enemies. The seal's effect disappears upon leaving the area. Consumes 1 Magic Symbol.
-		-->
+    <!-- Creates a seal that casts a powerful curse that decreases all the abilities of nearby enemies. The seal's effect disappears upon leaving the area. Consumes 1 Magic Symbol. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1422" />
 		<set name="reuseDelay" val="1800000" />
@@ -792,11 +713,7 @@
 		</for>
 	</skill>
 	<skill id="1423" levels="1" name="Gehenna">
-		<!--
-			Last modify:	24.04.2009
-
-			Description: Continuously inflicts powerful Dark damage. User cannot move while casting, and there is additional MP consumption each time the effect occurs. Consumes 1 Magic Symbol.
-		-->
+    <!-- Continuously inflicts powerful dark damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="15;25" />
 		<set name="icon" val="icon.skill1423" />
@@ -828,11 +745,7 @@
 		</for>
 	</skill>
 	<skill id="1424" levels="1" name="Anti-Summoning Field">
-		<!--
-			Last modify:	24.04.2009
-
-			Description: Creates a seal that periodically banishes a servitor to another dimension. All servitors in the area are affected. Consumes 1 Magic Symbol.
-		-->
+    <!-- Decreases all speeds of nearby enemies, gives speed-increasing buffs, and creates a seal that periodically banishes a servitor to another dimension. All characters and servitors in the area are affected. Consumes 1 Magic Symbol. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1424" />
 		<set name="reuseDelay" val="1800000" />
@@ -861,9 +774,7 @@
 		</for>
 	</skill>
 	<skill id="1425" levels="1" name="Purification Field">
-		<!--
-			Description:  Remove all debuff of nearby clan members. Consumes 1 Magic Symbol.
-		-->
+    <!-- Cancel all the de-buffs of nearby clan members. Consumes 1 Magic Symbol. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1425" />
 		<set name="reuseDelay" val="1200000" />
@@ -892,11 +803,7 @@
 		</for>
 	</skill>
 	<skill id="1426" levels="1" name="Miracle">
-		<!--
-			Last modify:	22.02.2009
-
-			Description:  Fully restore nearby clan members' HP. Level 2 or higher Spell Force required. Consumes 1 Magic Symbol.
-		-->
+    <!-- Fully recovers HP of nearby clan members. Consumes 1 Magic Symbol. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1426" />
 		<set name="reuseDelay" val="3600000" />
@@ -921,11 +828,7 @@
 		</for>
 	</skill>
 	<skill id="1427" levels="1" name="Flames of Invincibility">
-		<!--
-			Last modify:	01.06.2009
-
-			Description:  Bestow a blessing of flame on nearby clan members to make them invincible. Level 2 or higher Spell Force required. Consumes 1 Magic Symbol.
-		-->
+    <!-- Calls down a blessing of flames on nearby clan members to make them invincible. Consumes 1 Magic Symbol. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1427" />
 		<set name="reuseDelay" val="1800000" />
@@ -950,12 +853,7 @@
 		</for>
 	</skill>
 	<skill id="1428" levels="1" name="Mass Recharge">
-		<!--
-			Last modify:	14.05.2009
-
-			Description:
-			Greatly regenerates MP of party members. Can be used when Spell Force is level 3 or higher. Consumes 1 Magic Symbol.
-		-->
+    <!-- Recovers MP for all party members. Consumes 1 Magic Symbol. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1428" />
 		<set name="reuseDelay" val="3600000" />
@@ -978,11 +876,7 @@
 		</cond>
 	</skill>
 	<skill id="1429" levels="1" name="Gate Chant">
-		<!--
-
-			Description:
-			Summons a party member. Consumes 4 Summon Crystals.
-		-->
+    <!-- Summons a party member. Consumes 4 Summon Crystals. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1429" />
 		<set name="reuseDelay" val="600000" />
@@ -1002,12 +896,7 @@
 		<set name="castRange" val="32767" />
 	</skill>
 	<skill id="1430" levels="5" name="Invocation">
-		<!--
-			Last modify:	24.04.2009
-
-			Description:
-			Meditate to increase MP regeneration. Your body is immobilized and your P. Def. decreased while meditating. The effect is canceled if you are attacked.
-		-->
+    <!-- Decreases P. Def. by 90% and recovers 54 MP every second for 30 seconds. The status is canceled when damage is incurred. -->
 		<table name="#regMp">27 30 34 37 42</table>
 		<table name="#mpConsume2">21 22 24 26 27</table>
 		<table name="#mpConsume1">6 6 6 7 7</table>
@@ -1032,18 +921,7 @@
 		</for>
 	</skill>
 	<skill id="1431" levels="6" name="Fallen Arrow">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	04.12.2007
-
-			Description:
-			Release an arrow infused with darkness. Consumes 1 soul. Power 13.
-			Release an arrow infused with darkness. Consumes 1 soul. Power 14.
-			Release an arrow infused with darkness. Consumes 1 soul. Power 16.
-			Release an arrow infused with darkness. Consumes 1 soul. Power 18.
-			Release an arrow infused with darkness. Consumes 1 soul. Power 20.
-			Release an arrow infused with darkness. Consumes 1 soul. Power 22.
-		-->
+    <!-- Supplements the user's M. Atk. with 13 Power to fire an arrow that inflicts dark damage. Increases Power upon the consumption of up to 5 souls. -->
 		<table name="#effectPoint">26 28 32 36 40 44</table>
 		<table name="#mpConsume2">7 7 8 11 12 12</table>
 		<table name="#mpConsume1">2 2 2 3 3 3</table>
@@ -1067,14 +945,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="1432" levels="2" name="Increase Power">
-		<!--
-			Need correct:	Уточнить, должен ли стековаться этот эффект с Might
-			Last modify:	11.12.2007
-
-			Description:
-			Increase Power	Temporarily increase your P Atk. Effect 1.
-			Increase Power	Temporarily increase your P Atk. Effect 2.
-		-->
+    <!-- Increases the user's P. Atk. by 8% for 20 minutes. -->
 		<table name="#pAtk">1.08 1.12</table>
 		<table name="#abnormal">1 2</table>
 		<table name="#mpConsume2">10 20</table>
@@ -1098,11 +969,7 @@
 		</for>
 	</skill>
 	<skill id="1433" levels="10" name="Abyssal Blaze">
-		<!--
-			Last modify:	29.12.2007
-
-			Description: Disperses a materialized soul. Consumes 1 soul.
-		-->
+    <!-- Inflicts dark damage on the enemy with 24 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<table name="#effectPoint">40 42 46 50 52 56 60 64 70 74</table>
 		<table name="#mpConsume2">12 13 13 14 15 16 17 18 19 20</table>
 		<table name="#mpConsume1">3 4 4 4 4 4 5 5 5 5</table>
@@ -1126,13 +993,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="1434" levels="4" name="Dark Explosion">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	04.12.2007
-
-			Description:
-			Detonates a soul to damage nearby enemies. Consumes 1 Soul.
-		-->
+    <!-- Inflicts dark damage on nearby enemies with 16 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<table name="#mpConsume2">22 26 29 33</table>
 		<table name="#mpConsume1">6 7 8 9</table>
 		<table name="#magicLevel">24 28 32 36</table>
@@ -1156,22 +1017,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="1435" levels="10" name="Death Mark">
-		<!--
-			Last modify:	07.08.2008
-
-			Description:
-			Level 1: Stigmatize target with darkness. Consumes 1 Soul. Effect 1.
-			Level 2: Stigmatize target with darkness. Consumes 1 Soul. Effect 2.
-			Level 3: Stigmatize target with darkness. Consumes 2 soul. Effect 3.
-			Level 4: Stigmatize target with darkness. Consumes 2 soul. Effect 4.
-			Level 5: Stigmatize target with darkness. Consumes 2 soul. Effect 5.
-			Level 6: Stigmatize target with darkness. Consumes 2 soul. Effect 6.
-			Level 7: Stigmatize target with darkness. Consumes 2 soul. Effect 7.
-			Level 8: Stigmatize target with darkness. Consumes 2 soul. Effect 8.
-			Level 9: Stigmatize target with darkness. Consumes 2 soul. Effect 9.
-			Level 10: Stigmatize target with darkness. Consumes 2 soul. Effect 10.
-			......
-		-->
+    <!-- Marks the enemy with a Death Mark. For 30 seconds, decreases P. Def. and M. Def. by 20% and consumes 24 HP per second. -->
 		<table name="#dmg">24 32 41 41 50 50 58 58 63 63</table>
 		<table name="#activateRate">70 70 70 70 70 70 70 70 70 70</table>
 		<table name="#def">0.8 0.8 0.77</table>
@@ -1213,13 +1059,7 @@
 		</for>
 	</skill>
 	<skill id="1436" levels="30" name="Soul of Pain">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	05.02.2010
-
-			Description:
-			Unleash soul to attack an enemy. Target state is removed with chance. Consumes 1 soul.
-		-->
+    <!-- Supplements the user's M. Atk. with 50 Power to inflict dark damage on the enemy. Increases Power upon the consumption of up to 5 souls. Target cancel is possible. -->
 		<table name="#elementPower">20</table>
 		<table name="#powerPvP">0</table>
 		<table name="#mpConsume2">22 23 24 24 26 26 28 28 30 30 32 32 34 34 35 36 36 37 38 38 39 39 40 41 41 42 42 43 43 44</table>
@@ -1267,13 +1107,7 @@
 		</for>
 	</skill>
 	<skill id="1437" levels="26" name="Dark Flame">
-		<!--
-			Need correct:	reuseDelay, time, activateRate
-			Last modify:	15.05.2009
-
-			Description:
-			Unleash soul to attack enemies in front to cause fear.
-		-->
+    <!-- Inflicts dark damage on the enemies in front with 42 Power added to M. Atk. For 5 seconds, decreases Speed by 30%. Increases Power upon the consumption of up to 5 souls. -->
 		<table name="#activateRate">40</table>
 		<table name="#elementPower">20</table>
 		<table name="#unholy">0</table>
@@ -1331,13 +1165,7 @@
 		</for>
 	</skill>
 	<skill id="1438" levels="9" name="Annihilation Circle">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	20.05.2009
-
-			Description:
-			User's M. Atk. is supplemented by 82-108 Power to inflict Dark damage on an enemy's location. Power is increased upon consumption of up to 5 souls.
-		-->
+    <!-- Supplements the user's M. Atk. with 82 Power to inflict dark damage on the enemy's location. Increases Power upon the consumption of up to 5 souls. -->
 		<table name="#elementPower">20</table>
 		<table name="#powerPvP">0</table>
 		<table name="#mpConsume2">55 58 60 62 64 66 68 69 71</table>
@@ -1383,12 +1211,7 @@
 		</enchant4>
 	</skill>
 	<skill id="1439" levels="5" name="Curse of Divinity">
-		<!--
-			Last modify:	14.02.2008
-
-			Description:
-			Inflict damage according to number of abnormal state of enemy. Consumes 2 soul. Power 96-108.
-		-->
+    <!-- Inflicts non-attribute damage on the enemy with 96 Power added to M. Atk. Power changes depending on the target's altered state condition. -->
 		<table name="#mpConsume2">49 51 52 53 55</table>
 		<table name="#mpConsume1">13 13 13 14 14</table>
 		<table name="#magicLevel">66 68 70 72 74</table>
@@ -1411,9 +1234,7 @@
 		<set name="skillRadius" val="900" />
 	</skill>
 	<skill id="1440" levels="5" name="Steal Divinity">
-		<!--
-			Description: Steals abnormal state of enemy.
-		-->
+    <!-- Steals up to 3 of the enemy's abnormal statuses. Cannot steal buffs from monsters. -->
 		<table name="#stealCount">3 4 5 6 7</table>
 		<table name="#mpConsume2">40 44 48 51 53</table>
 		<table name="#mpConsume1">10 11 12 13 14</table>
@@ -1437,6 +1258,7 @@
 		<set name="isReuseDelayPermanent" val="true" />
 	</skill>
 	<skill id="1441" levels="3" name="Soul to Empower">
+    <!-- Increases the user's M. Atk. by 55% for 20 minutes. -->
 		<table name="#Tab-mAtk">1.55 1.65 1.75</table>
 		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#mpConsume2">30 40 60</table>
@@ -1460,9 +1282,7 @@
 		</for>
 	</skill>
 	<skill id="1442" levels="3" name="Protection from Darkness">
-		<!--
-			Description: Temporarily increase your target's resistance to dark attacks. Consumes 2 souls. Effect 1.
-		-->
+    <!-- Increases the target's Resistance to Dark by 15 for 20 minutes. -->
 		<table name="#Res">15 23 30</table>
 		<table name="#order">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
@@ -1497,9 +1317,7 @@
 		</for>
 	</skill>
 	<skill id="1443" levels="1" name="Dark Weapon">
-		<!--
-			Description: Temporarily bestow a dark elemental. Consumes 2 souls. This can be used on any party member.
-		-->
+    <!-- Increases the target's Dark attack level by 20 for 20 minutes. Can be used on party members. -->
 		<table name="#abnormal_time">1200</table>
 		<table name="#attackUnholy">20</table>
 		<table name="#magicLevel">46</table>
@@ -1531,13 +1349,7 @@
 		</for>
 	</skill>
 	<skill id="1444" levels="1" name="Pride of Kamael">
-		<!--
-			Need correct:	blowRate
-			Last modify:	11.12.2007
-
-			Description:
-			When using a Kamael-exclusive weapon, P. Atk., M. Atk. and lethal attack success rate are increased by 10% for 3 minutes. May be applied to Kamael party members.
-		-->
+    <!-- When using a Kamael-exclusive weapon, P. Atk., M. Atk. and lethal attack rate are increased by 10% for 3 minutes. May be applied to Kamael party members. -->
 		<table name="#pAtk">1.1</table>
 		<table name="#mAtk">1.1</table>
 		<table name="#blowRate">1.1</table>
@@ -1588,16 +1400,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1445" levels="18" name="Surrender to the Unholy">
-		<!--
-			Last modify:	16.05.2009
-
-			Description:
-			1. For 30 seconds, decreases the enemy's resistance to Dark attacks by 25 and increases resistance to divine attacks by 12.
-			2. For 30 seconds, decreases the enemy's resistance to Dark attacks by 25 and increases resistance to divine attacks by 12.
-			3. For 30 seconds, decreases the enemy's resistance to Dark attacks by 25 and increases resistance to divine attacks by 12.
-			4. For 30 seconds, decreases the enemy's resistance to Dark attacks by 30 and increases resistance to divine attacks by 15.
-		-->
+	<skill id="1445" levels="18" name="Surrender to Dark">
+    <!-- For 30 seconds, decreases the enemy's Resistance to Dark by 25 and increases Resistance to Holy by 12. -->
 		<table name="#unholy">25 25 25 30</table>
 		<table name="#holy">12 12 12 15</table>
 		<table name="#effectPoint">243 285 331 379 418 457 495 532 549 566 582 597 611 624 635 646 655</table>
@@ -1643,11 +1447,7 @@
 		</for>
 	</skill>
 	<skill id="1446" levels="11" name="Shadow Bind">
-		<!--
-			Last modify: 27.06.2009
-
-			Description: Imprisons an enemy's shadow, holding them for 30 seconds.
-		-->
+    <!-- Catches the enemy's shadow and inflicts hold for 15 seconds. -->
 		<table name="#activaRate">80</table>
 		<table name="#abnormal_time">30</table>
 		<table name="#effectPoint">549 566 582 597 611 624 635 646 658 672 696</table>
@@ -1682,11 +1482,7 @@
 		</for>
 	</skill>
 	<skill id="1447" levels="9" name="Voice Bind">
-		<!--
-			Last modify: 27.06.2009
-
-			Description: Seals an enemy's voice, blocking their ability to cast magic for 20 seconds.
-		-->
+    <!-- Seals the enemy's voice, blocking their ability to cast magic for 20 seconds. -->
 		<table name="#activaRate">80</table>
 		<table name="#abnormal_time">20</table>
 		<table name="#effectPoint">582 597 611 624 635 646 658 672 696</table>
@@ -1722,12 +1518,7 @@
 		</for>
 	</skill>
 	<skill id="1448" levels="1" name="Blink">
-		<!--
-			Last modify:	02.08.2009
-
-			Description:
-			Supplements user's P. Atk. with 1 Power, stunning nearby enemies for 2 seconds and teleporting them to the rear. Power is increased upon consumption of up to 5 souls.
-		-->
+    <!-- Supplements the user's P. Atk. with 1 Power, stunning nearby enemies for 2 seconds and teleporting them to the rear. Increases Power upon the consumption of up to 5 souls. -->
 		<table name="#flyRadius">-400</table>
 		<table name="#mpConsume2">50</table>
 		<table name="#mpConsume1">50</table>
@@ -1768,12 +1559,7 @@
 		</for>
 	</skill>
 	<skill id="1449" levels="1" name="Transfer Soul">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	19.12.2007
-
-			Description: Transfer a soul to the target. Only possible when the target is a Kamael. Consumes 1 Soul.
-		-->
+    <!-- Transfer a soul to the target. Only possible when the target is a Kamael. Consumes 1 Soul. -->
 		<set name="icon" val="icon.skill1449" />
 		<set name="magicLevel" val="24" />
 		<set name="castRange" val="400" />
@@ -1791,9 +1577,7 @@
 		</cond>
 	</skill>
 	<skill id="1450" levels="1" name="Chain Lightning">
-		<!--
-		  Description: Supplements user's M. Atk. with 200 Power to hurl thunderbolts that inflict non-attribute damage on an area. Power is increased upon consumption of up to 5 souls.
-		-->
+    <!-- Supplements the user's M. Atk. with 200 Power to hurl thunderbolts that inflict non-attribute damage on an area. Increases Power upon the consumption of up to 5 souls. -->
 		<table name="#powerPvP">0</table>
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
@@ -1840,12 +1624,7 @@
 		</enchant4>
 	</skill>
 	<skill id="1451" levels="1" name="Fire Vortex Buster">
-		<!--
-			Last modify:	15.05.2009
-
-			Description:
-			Detonates a Fire Vortex that inflicts fire damage on the enemy with 195 Power added to user's M. Atk.
-		-->
+    <!-- Detonates a Fire Vortex that inflicts Fire damage on the enemy with 195 Power added to user's M. Atk. -->
 		<table name="#elementPower">0</table>
 		<table name="#mpConsume2">86</table>
 		<table name="#mpConsume1">22</table>
@@ -1893,10 +1672,7 @@
 		</for>
 	</skill>
 	<skill id="1452" levels="1" name="Count of Fire">
-		<!--
-			Description:
-			Uses the power of fire to burn an enemy for 10 seconds, inflicting damage of 173 HP per second.
-		-->
+    <!-- Uses the power of Fire to burn the enemy for 10 seconds, inflicting damage of 173 HP per second. -->
 		<table name="#power">173</table>
 		<table name="#fire">0</table>
 		<table name="#mpConsume2">87</table>
@@ -1938,12 +1714,7 @@
 		</for>
 	</skill>
 	<skill id="1453" levels="1" name="Ice Vortex Crusher">
-		<!--
-			Last modify:	15.05.2009
-
-			Description:
-			Creates an Ice Vortex that inflicts water damage on the enemy with 195 Power added to user's M. Atk.
-		-->
+    <!-- Creates an Ice Vortex that inflicts Water damage on the enemy with 195 Power added to user's M. Atk. -->
 		<table name="#elementPower">0</table>
 		<table name="#mpConsume2">86</table>
 		<table name="#mpConsume1">22</table>
@@ -1991,12 +1762,7 @@
 		</for>
 	</skill>
 	<skill id="1454" levels="1" name="Diamond Dust">
-		<!--
-			Last modify:	22.12.2008
-
-			Description:
-			Summons a bitter ice storm that inflicts water damage on the enemy with 70 Power added to user's M. Atk. Decreases nearby enemies' movement speed by 40% for 15 seconds.
-		-->
+    <!-- Summons a bitter ice storm that inflicts Water damage on the enemy with 70 Power added to user's M. Atk. Decreases nearby enemies' Speed by 40% for 15 seconds. -->
 		<table name="#runSpd">.6</table>
 		<table name="#water">20</table>
 		<table name="#mpConsume2">87</table>
@@ -2042,10 +1808,7 @@
 		</for>
 	</skill>
 	<skill id="1455" levels="1" name="Throne of Ice">
-		<!--
-			Description:
-			Summons a blast of icy air that freezes the enemy for 10 seconds, causing 173 HP of damage per second.
-		-->
+    <!-- Summons a blast of icy air that freezes the enemy for 10 seconds, causing loss of 173 HP per second. -->
 		<table name="#power">173</table>
 		<table name="#water">0</table>
 		<table name="#mpConsume2">87</table>
@@ -2086,12 +1849,7 @@
 		</for>
 	</skill>
 	<skill id="1456" levels="1" name="Wind Vortex Slug">
-		<!--
-			Last modify:	15.05.2009
-
-			Description:
-			Creates a powerful Wind Vortex that inflicts wind damage on the enemy with 195 Power added to user's M. Atk.
-		-->
+    <!-- Creates a powerful Wind Vortex that inflicts Wind damage on the enemy with 195 Power added to user's M. Atk. -->
 		<table name="#elementPower">0</table>
 		<table name="#mpConsume2">86</table>
 		<table name="#mpConsume1">22</table>
@@ -2139,13 +1897,7 @@
 		</for>
 	</skill>
 	<skill id="1457" levels="1" name="Empowering Echo">
-		<!--
-			Last modify:	01.12.2008
-			Need correct:	reuseDelay
-
-			Description:
-			For 20 minutes, increases user's magic MP consumption by 35% and M. Atk. by 25%.
-		-->
+    <!-- For 20 minutes, increases the user's magic MP Consumption by 35% and M. Atk. by 25%. -->
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">116</table>
 		<table name="#mpConsume1">29</table>
@@ -2178,12 +1930,7 @@
 		</for>
 	</skill>
 	<skill id="1458" levels="1" name="Throne of Wind">
-		<!--
-			Last modify:	15.05.2009
-
-			Description:
-			Uses the power of a storm to weaken the enemy for 10 seconds and to cause 173 HP of damage per second.
-		-->
+    <!-- Uses the power of a storm to weaken the enemy for 10 seconds, causing loss of 173 HP per second. -->
 		<table name="#power">173</table>
 		<table name="#wind">0</table>
 		<table name="#mpConsume2">87</table>
@@ -2224,10 +1971,7 @@
 		</for>
 	</skill>
 	<skill id="1459" levels="1" name="Divine Power">
-		<!--
-			Last modify:	21.02.2010
-			Increases user's recovery M. Atk. with 1000 Power for 15 seconds.
-		-->
+    <!-- Increases the power of recovery magic with 1000 Power for 15 seconds. -->
 		<table name="#power">1000</table>
 		<table name="#mpConsume2">87</table>
 		<table name="#mpConsume1">22</table>
@@ -2262,9 +2006,7 @@
 		</for>
 	</skill>
 	<skill id="1460" levels="1" name="Mana Gain">
-		<!--
-			Description: For 20 minutes, increases the recharge power received by the target by 85.
-		-->
+    <!-- For 20 minutes, increases the recharge power received by the target by 85. -->
 		<table name="#ManaHeal-eff">85</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">144</table>
@@ -2301,11 +2043,7 @@
 		</for>
 	</skill>
 	<skill id="1461" levels="1" name="Chant of Protection">
-		<!--
-			Need correct: reuseDelay
-			Description: For 10 minutes, decreases the critical damage received by a party member by 30%.
-			Last modify:	25.11.2008
-		-->
+    <!-- For 20 minutes, decreases Critical Damage received by a party member by 30%. -->
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">231</table>
 		<table name="#mpConsume1">58</table>
@@ -2338,9 +2076,7 @@
 		</for>
 	</skill>
 	<skill id="1462" levels="1" name="Seal of Blockade">
-		<!--
-			Description: Inflicts non-attribute damage on the enemy using 80 Power added to user's M. Atk. and blocks ordinary attacks for 10 seconds.
-		-->
+    <!-- Inflicts non-attribute damage on the enemy using 80 Power added to user's M. Atk. and blocks ordinary attacks for 10 seconds. -->
 		<table name="#activateRate">80</table>
 		<table name="#mpConsume2">87</table>
 		<table name="#mpConsume1">22</table>
@@ -2377,9 +2113,7 @@
 		</for>
 	</skill>
 	<skill id="1463" levels="1" name="Fire Weapon">
-		<!--
-			Description: Adds fire damage to a physical attack.
-		-->
+    <!-- Adds Fire damage to a P. Atk. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1463" />
 		<set name="reuseDelay" val="2000" />
@@ -2394,9 +2128,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="1464" levels="1" name="Ice Weapon">
-		<!--
-			Description: Adds water damage to a physical attack.
-		-->
+    <!-- Adds Water damage to a P. Atk. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1464" />
 		<set name="reuseDelay" val="2000" />
@@ -2411,9 +2143,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="1465" levels="1" name="Wind Weapon">
-		<!--
-			Description: Adds wind damage to a physical attack.
-		-->
+    <!-- Adds Wind damage to a P. Atk. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1465" />
 		<set name="reuseDelay" val="2000" />
@@ -2428,9 +2158,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="1466" levels="1" name="Earth Weapon">
-		<!--
-			Description: Bestows the earth elemental to a physical attack.
-		-->
+    <!-- Bestows the Earth elemental to a P. Atk. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1466" />
 		<set name="reuseDelay" val="2000" />
@@ -2445,12 +2173,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="1467" levels="1" name="Meteor">
-		<!--
-			Last modify:	07.02.2009
-
-			Description:
-			Crashes meteors down to inflict continuous fire damage near the enemy with Power 117.
-		-->
+    <!-- Crashes down meteors to inflict continuous fire damage near the enemy with 117 Power. For 10 seconds, inflicts continuous fire damage. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill1467" />
@@ -2472,12 +2195,7 @@
 		</for>
 	</skill>
 	<skill id="1468" levels="1" name="Star Fall">
-		<!--
-			Last modify:	07.02.2009
-
-			Description:
-			Crashes meteors down to inflict continuous non-attribute damage near the enemy with Power 117.
-		-->
+    <!-- Crashes down meteors to inflict continuous non-attribute damage near the enemy with 117 Power. For 10 seconds, inflicts continuous non-attribute damage. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill1468" />
@@ -2498,12 +2216,7 @@
 		</for>
 	</skill>
 	<skill id="1469" levels="1" name="Leopold">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	20.05.2009.
-
-			Description: Summons the devastating cannon Leopold to fire upon an enemy, supplementing user's M. Atk. with 224 Power. Power is increased upon consumption of up to 5 souls.
-		-->
+    <!-- Summons the devastating cannon Leopold to Fire upon the enemy, supplementing user's M. Atk. with 224 Power. Increases Power upon the consumption of up to 5 souls. -->
 		<table name="#elementPower">0</table>
 		<table name="#powerPvP">0</table>
 		<table name="#mpConsume2">84</table>
@@ -2548,12 +2261,7 @@
 		</enchant4>
 	</skill>
 	<skill id="1470" levels="1" name="Prahnah">
-		<!--
-			Need correct: reuseDelay
-			Last modify: 27.06.2009
-
-			Description: Increases the M. Def. of all party members by 3000 for 30 seconds.
-		-->
+    <!-- Increases M. Def. of all party members by 3000 for 30 seconds. -->
 		<table name="#mDef">3000</table>
 		<table name="#abnormal_time">30</table>
 		<table name="#abnormal_time">30</table>
@@ -2598,12 +2306,7 @@
 		</for>
 	</skill>
 	<skill id="1471" levels="1" name="Death Beam">
-		<!--
-			Last modify:	25.08.2008
-
-			Description:
-			Attacks enemies in front of you. Power 138.
-		-->
+    <!-- Attacks enemies in front of you. Power 138. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="5;12" />
 		<set name="icon" val="icon.skill1471" />
@@ -2620,12 +2323,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="1472" levels="1" name="Soul Sucking">
-		<!--
-			Last modify:	24.01.2009
-
-			Description:
-			Absorbs your enemy"s soul over time.
-		-->
+    <!-- Absorbs your enemy's soul over time. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1472" />
 		<set name="reuseDelay" val="300000" />
@@ -2643,13 +2341,7 @@
 		</for>
 	</skill>
 	<skill id="1473" levels="1" name="Change Weapon">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	04.12.2007
-
-			Description:
-			Changes a general weapon to a Kamael exclusive weapon. The weapon can be reverted back to a general weapon.
-		-->
+    <!-- Changes a general weapon to a Kamael exclusive weapon. The weapon can be reverted back to a general weapon. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1473" />
 		<set name="reuseDelay" val="15000" />
@@ -2664,6 +2356,7 @@
 		<set name="isReuseDelayPermanent" val="true" />
 	</skill>
 	<skill id="1474" levels="1" name="Abyssal Power">
+    <!-- Increases M. Atk. by 10%. -->
 		<table name="#mAtk">1.1</table>
 		<table name="#magicLevel">43</table>
 		<set name="icon" val="icon.skill1474" />
@@ -2680,14 +2373,7 @@
 		</for>
 	</skill>
 	<skill id="1475" levels="3" name="Erase Mark">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	19.12.2007
-
-			Level 1: Cures the death mark for up to Effect 3.
-			Level 2: Cures death mark up to Effect 7.
-			Level 3: Cures the death mark for up to Effect 10.
-		-->
+    <!-- Removes minor Death Mark. -->
 		<table name="#power">3 7 10</table>
 		<table name="#mpConsume2">12 23 35</table>
 		<table name="#mpConsume1">3 6 9</table>
@@ -2708,11 +2394,7 @@
 		<set name="negatePower" val="#power" />
 	</skill>
 	<skill id="1476" levels="3" name="Appetite for Destruction">
-		<!--
-			Last modify:	15.05.2009
-
-			Description: For 15 seconds, awakens a party member's destructive instincts and increases P. Atk., critical attack rate and critical damage by 30%,40%,50.
-		-->
+    <!-- For 15 seconds, awakens a party member's destructive instincts and increases P. Atk., Critical Rate and Critical Damage by 30%. -->
 		<table name="#pAtk">1.3 1.4 1.5</table>
 		<table name="#cAtk">1.3 1.4 1.5</table>
 		<table name="#rCrit">30 40 50</table>
@@ -2756,11 +2438,7 @@
 		</for>
 	</skill>
 	<skill id="1477" levels="3" name="Vampiric Impulse">
-		<!--
-			Last modify:	15.05.2009
-
-			Description: For 15 seconds, stirs up the bloodsucking urge and gives all party members the ability to recover as HP 60-80% of the standard short-range physical damage inflicted on the enemy.
-		-->
+    <!-- For 15 seconds, stirs up the blood-siphoning urge and gives all party members the ability to recover as HP 60% of the damage inflicted on the enemy with a certain probability. -->
 		<table name="#absorbDam">60 70 80</table>
 		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">15</table>
@@ -2800,13 +2478,7 @@
 		</for>
 	</skill>
 	<skill id="1478" levels="2" name="Protection Instinct">
-		<!--
-			Last modify:	15.05.2009
-
-			Description:
-			1. Stirs up the defense instinct to increase M. Atk. by 1200 and M. Def. by 900 for 15 seconds.
-			2. Stirs up the defense instinct to increase M. Atk. by 1800 and M. Def. by 1350 for 15 seconds.
-		-->
+    <!-- Stirs up the defense instinct to increase P. Def. by 1200 and M. Def. by 900 for 15 seconds. -->
 		<table name="#pDef">1200 1800</table>
 		<table name="#mDef">900 1350</table>
 		<table name="#abnormal_time">15</table>
@@ -2848,11 +2520,7 @@
 		</for>
 	</skill>
 	<skill id="1479" levels="3" name="Magic Impulse">
-		<!--
-			Last modify:	15.05.2009
-
-			Description: Draws a magic urge from a party member. Instantly increases M. Atk,Cast Speed,and Magic critical rate.
-		-->
+    <!-- Stirs up the magic urge to increase M. Atk. by 75%, Casting Spd. by 15%, and the chance of prominent magic damage by 100% for 15 seconds. -->
 		<table name="#Tab-mAtk">1.75 1.85 1.95</table>
 		<table name="#mCrit">3 6 9</table>
 		<table name="#abnormal_lv">1 2 3</table>
@@ -2895,11 +2563,7 @@
 		</for>
 	</skill>
 	<skill id="1480" levels="1" name="Soul Harmony">
-		<!--
-			Last modify:	15.05.2009
-
-			Description: Empathizes with the souls of party members for 15 seconds to recover 200 MP per second, decrease P. Def. by 90%, and become unable to act. Consumes 20 Souls.
-		-->
+    <!-- Empathizes with the souls of party members for 15 seconds to recover 200 MP per second, decrease P. Def. by 90%, and become unable to act. -->
 		<table name="#abnormal_time">15</table>
 		<table name="#mpConsume2">104</table>
 		<table name="#mpConsume1">26</table>
@@ -2940,9 +2604,7 @@
 		</for>
 	</skill>
 	<skill id="1481" levels="7" name="Oblivion">
-		<!--
-			Description: When damage is received by the curse of Forsaken on an enemy, there is a chance that the target will be lost. Consumes 2 soul.
-		-->
+    <!-- For 1 minute, inflicts the curse of forgetfulness on the enemy and makes him forget the target at a certain rate when damage is received. -->
 		<table name="#effectPoint">190 204 219 234 248 262 275</table>
 		<table name="#activateRate">80</table>
 		<table name="#time">60</table>
@@ -2987,9 +2649,7 @@
 		</for>
 	</skill>
 	<skill id="1482" levels="4" name="Weak Constitution">
-		<!--
-			Description: When damage is received by the curse of Weakness on an enemy, there is a chance that the target will faint. Consumes 3 soul.
-		-->
+    <!-- For 1 minute, inflicts the curse of weakness on the enemy and makes him faint at a certain rate when damage is received. -->
 		<table name="#effectPoint">234 248 262 275</table>
 		<table name="#activateRate">80</table>
 		<table name="#time">60</table>
@@ -3034,10 +2694,7 @@
 		</for>
 	</skill>
 	<skill id="1483" levels="7" name="Thin Skin">
-		<!--
-			Chances, reuse and effect need fix
-			Description: Casts curse to weaken the enemy's skin so that they are wounded when damaged. Consumes 2 soul.
-		-->
+    <!-- For 1 minute, inflicts a curse that weakens the enemy's skin and causes injuries to appear when damage is received. -->
 		<table name="#effectPoint">190 204 219 234 248 262 275</table>
 		<table name="#activateRate">80</table>
 		<table name="#time">60</table>
@@ -3083,9 +2740,7 @@
 		</for>
 	</skill>
 	<skill id="1484" levels="4" name="Enervation">
-		<!--
-			May cause the enemy to forfeit their desire to decrease your attack speed/speed/Casting Spd. when damaged.
-		-->
+    <!-- For 1 minute, makes the enemy lose his ambition, and decreases Atk. Spd./Speed/Casting Spd. at a certain rate when damage is received. -->
 		<table name="#activateRate">80</table>
 		<table name="#time">60</table>
 		<table name="#mpConsume2">44 48 51 53</table>
@@ -3128,9 +2783,7 @@
 		</for>
 	</skill>
 	<skill id="1485" levels="3" name="Spite">
-		<!--
-			Description: Casts a curse to hold a grudge against a target so that an enemy receives higher critical damage by chance when damaged. Consumes 3 soul.
-		-->
+    <!-- For 1 minute, inflicts a curse that causes malice in the target that is attacking the enemy and causes great Critical Damage at a certain rate when damage is received. -->
 		<table name="#activateRate">80</table>
 		<table name="#time">60</table>
 		<table name="#triggerLevel">1 2 3</table>
@@ -3173,10 +2826,7 @@
 		</for>
 	</skill>
 	<skill id="1486" levels="4" name="Mental Impoverish">
-		<!-- 
-			Reuse and effect need fix
-			Description: Impoverishes an enemy"s mind, potentially eliminating their MP when damaged. Consumes 2 soul.
-		-->
+    <!-- For 1 minute, causes mental impoverishment on the enemy and causes MP to disappear at a certain rate when damage is received. -->
 		<table name="#effectPoint">190 204 219 234</table>
 		<table name="#activateRate">80</table>
 		<table name="#time">60</table>
@@ -3222,13 +2872,7 @@
 		</for>
 	</skill>
 	<skill id="1487" levels="8" name="Restoration">
-		<!--
-			Need correct:	reuseDelay, #effectPoint
-			Last modify:	15.05.2009
-
-			Description:
-			Restoration	Continually recover HP. Consumes 1 soul.
-		-->
+    <!-- Restores 15 HP per second for 15 seconds. -->
 		<table name="#hot">15 18 22 25 27 29 30 32</table>
 		<table name="#abnormal_lv">2 3 4 4 5 5 6 6</table>
 		<table name="#effectPoint">204 243 285 331 379 418 457 495</table>
@@ -3264,14 +2908,7 @@
 		</for>
 	</skill>
 	<skill id="1488" levels="3" name="Restoration Impact">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	24.11.2007
-
-			Restoration Impact   Recovers 10% of maximum HP by catalysis under restoration. Restoration will disappear. Consumes 3 soul.
-			Restoration Impact   Recovers 15% of maximum HP by catalysis under restoration. Restoration will disappear. Consumes 3 soul.
-			Restoration Impact   Recovers 20% of maximum HP by catalysis under restoration. Restoration will disappear. Consumes 3 soul.
-		-->
+    <!-- Recovers 10 percent of Max HP by catalysis under restoration. Restoration will disappear. -->
 		<table name="#effectPoint">418 457 495</table>
 		<table name="#mpConsume2">18 22 26</table>
 		<table name="#mpConsume1">5 6 7</table>
@@ -3303,11 +2940,7 @@
 		</for>
 	</skill>
 	<skill id="1489" levels="1" name="Summoner Ability - Resist Attribute">
-		<!--
-			Last modify:	03.01.2009
-
-			Description: Increases the tolerance to elemental attacks.
-		-->
+    <!-- Increases the Resistance to elemental attacks. -->
 		<set name="icon" val="icon.skill0433" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -3321,10 +2954,7 @@
 		</for>
 	</skill>
 	<skill id="1490" levels="1" name="Healer Ability - Heal">
-		<!--
-			Description:
-			Recovers HP with a fixed rate when being attacked.
-		-->
+    <!-- Has a chance to recover HP while being attacked. -->
 		<set name="icon" val="icon.skill1011" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -3337,10 +2967,7 @@
 		</triggers>
 	</skill>
 	<skill id="1491" levels="1" name="Summoner Ability - Spirit">
-		<!--
-			Description:
-			An effect that causes souls to be possessed with a fixed rate is generated when being attacked.
-		-->
+    <!-- Has a chance to channel the soul of an ancient spirit when being attacked. -->
 		<set name="icon" val="icon.skill1349" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -3353,10 +2980,7 @@
 		</triggers>
 	</skill>
 	<skill id="1492" levels="1" name="Flame Armor">
-		<!--
-			Description:
-			Enclose body with burning barrier. Increase resistance to fire attacks and burns enemy.
-		-->
+    <!-- Engulfs the user with a protective coat of fire. For 20 minutes, increases Resistance to fire attacks by 60 and causes burn damage on the attacking enemy. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1492" />
 		<set name="reuseDelay" val="2000" />
@@ -3380,10 +3004,7 @@
 		</for>
 	</skill>
 	<skill id="1493" levels="1" name="Frost Armor">
-		<!--
-			Description:
-			Enclose body with glacier barrier. Increase resistance to water attacks and slow down the enemy.
-		-->
+    <!-- Engulfs the user with a protective glacier barrier. For 20 minutes, increases Resistance to water attacks by 60 and slows down the attacking enemy. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1493" />
 		<set name="reuseDelay" val="2000" />
@@ -3407,10 +3028,7 @@
 		</for>
 	</skill>
 	<skill id="1494" levels="1" name="Hurricane Armor">
-		<!--
-			Description:
-			Enclose body with storm barrier. Increase resistance to wind attacks and slow down Atk. Spd. of enemy.
-		-->
+    <!-- Engulfs the body with a storm barrier. For 20 minutes, increases Resistance to wind attacks by 60 and slows down the attacking enemy's Atk. Spd. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1494" />
 		<set name="reuseDelay" val="2000" />
@@ -3434,9 +3052,7 @@
 		</for>
 	</skill>
 	<skill id="1495" levels="1" name="Vampiric Mist">
-		<!--
-			Description: Scatters a fog of death to inflict darkness damage on nearby enemies with 117 power added to magic power. Absorbs 40% as HP. For 30 seconds, decreases moving speed/P. Atk./Atk. Spd. by 50% and accuracy by 12.
-		-->
+    <!-- Scatters a fog of death to inflict dark damage on nearby enemies with 117 Power added to M. Atk. Absorbs 20% of the damage as HP. For 10 seconds, decreases Speed/P. Atk./Atk. Spd. by 50% and Accuracy by 12. -->
 		<set name="levelModifier" val="2" />
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="10;10" />
@@ -3468,9 +3084,7 @@
 		</for>
 	</skill>
 	<skill id="1496" levels="1" name="Servitor Barrier">
-		<!--
-			Description: Temporarily makes the servitor invincible. Consumes 5 Spirit Ore.
-		-->
+    <!-- Temporarily makes the servitor invincible. Consumes 5 Spirit Ore. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1496" />
 		<set name="reuseDelay" val="300000" />
@@ -3490,9 +3104,7 @@
 		</for>
 	</skill>
 	<skill id="1497" levels="1" name="Excessive Loyalty">
-		<!--
-			Description: When the master incurs damage, the servitor's battle skills are increased.
-		-->
+    <!-- When the master incurs damage, the servitor's battle skills are increased. -->
 		<set name="icon" val="icon.skill1497" />
 		<set name="magicLevel" val="81" />
 		<set name="target" val="TARGET_SELF" />
@@ -3505,6 +3117,7 @@
 		</triggers>
 	</skill>
 	<skill id="1498" levels="1" name="Mutual Response">
+    <!-- Creates chance to regenerate servitor's HP and MP when attacking. -->
 		<set name="icon" val="icon.skill1498" />
 		<set name="magicLevel" val="81" />
 		<set name="target" val="TARGET_SELF" />
@@ -3517,12 +3130,7 @@
 		</triggers>
 	</skill>
 	<skill id="1499" levels="1" name="Improved Combat">
-		<!--
-			Last modify:	22.07.2008
-
-			Description:
-			Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. Effect 1.
-		-->
+    <!-- Combines P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 minutes, increases P. Atk. by 15% and P. Def. by 15%. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1499" />
 		<set name="reuseDelay" val="2000" />

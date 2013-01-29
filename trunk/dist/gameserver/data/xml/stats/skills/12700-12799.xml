@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>	
-	<skill id="12799" levels="1" name="Коробка с вознаграждением Героев за олимпиаду">
-		<!--
-			Уровень: 1; Описание: a,none
-		-->
+	<skill id="12799" levels="1" name="Awakened Hero's Olympiad Reward Box">
+    <!-- none -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />

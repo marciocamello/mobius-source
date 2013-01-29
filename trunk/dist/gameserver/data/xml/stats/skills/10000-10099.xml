@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-    <skill id="10001" levels="1" name="Великое Владение Мечом/Дробящим Оружием">
-        <!--
-          Увеличивает СИЛ на 2, Физ. Атк. на 205 при использовании меча/дробящего оружия.
-          Дополнительно Увеличивает агрессию монстров монстров на 60% от нанесенного урона мечом/дубиной.
-          Дает шанс обнулить или увеличить в два раза время перезарядки умений. Зависит от СИЛ.
-      -->
+    <skill id="10001" levels="1" name="Superior Sword/Blunt Weapon Mastery">
+    <!-- STR + 2, P. Atk. + 205 when a Sword or Blunt weapon is equipped. Increases aggression toward yourself by 60% when attacking with a Sword or Blunt weapon. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your STR. -->
         <table name="#pAtk">205</table>
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_SELF"/>
@@ -27,13 +23,8 @@
             </add>
         </for>
     </skill>
-    <skill id="10002" levels="1" name="Великое Владение Тяжелой Броней">
-        <!--
-          Увеличивает СИЛ на 2.
-          При использовании тяжелых доспехов Физ. Защ. +315, бонус восстановления MP +8.4, сила вражеской Крит. Атк. -35%.
-          10% полученного урона возвращает врагу.
-          Если HP ниже 30%, дополнительно Физ. Защ. +280, Уклонение +17.
-      -->
+    <skill id="10002" levels="1" name="Superior Heavy Armor Mastery">
+    <!-- STR + 2. Max HP + 6883 and P. Def. + 315 when equipped with a Heavy Armor. MP Recovery Bonus + 8.4 and Critical Damage received - 35%. Reflects 10% of incurred damage back to the attacker. When HP falls below 30%, P. Def. + 280 and Evasion + 17. -->
         <table name="#pDef">315</table>
         <table name="#pDefBonus">280</table>
         <set name="magicLevel" val="85"/>
@@ -73,12 +64,8 @@
             </add>
         </for>
     </skill>
-    <skill id="10003" levels="1" name="Великое Владение Щитом">
-        <!--
-          Увеличивает СИЛ на 2.
-          Также повышает шанс блока щитом на 100%.
-          При удачном блоке Защита Щитом увеличивается на 80% и дополнительно на 209.
-      -->
+    <skill id="10003" levels="1" name="Superior Shield Mastery">
+    <!-- STR + 2 and Shield defense becomes possible in all directions. Shield defense success rate + 100%. When Shield defense succeeds, Shield P. Def. + 80% and an additional + 209. -->
         <set name="magicLevel" val="85"/>
         <table name="#sDef">209</table>
         <set name="operateType" val="OP_PASSIVE"/>
@@ -97,11 +84,8 @@
             <add order="0x40" stat="sDef" val="#sDef"/>
         </for>
     </skill>
-    <skill id="10004" levels="1" name="Великое Магическое Сопротивление">
-        <!--
-          Увеличивает СИЛ на 2, Маг. Защ. на 158 и шанс отмены Маг. Атк. на 25%.
-          Сопротивление Маг. Атк. и стихиям увеличивается с опеределенной вероятностью при получении урона.
-      -->
+    <skill id="10004" levels="1" name="Superior Magic Resistance">
+    <!-- STR + 2 and M. Def. + 158. Attack magic resistance rate + 25%. When receiving damage, there is a chance of M. Def. and resistance to attributes momentarily increasing. -->
         <table name="#mDef">158</table>
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_SELF"/>
@@ -122,11 +106,8 @@
             <mul order="0x30" stat="concentration" val="0.75"/>
         </for>
     </skill>
-    <skill id="10005" levels="1" name="Великое Сопротивление Отрицательным Эффектам">
-        <!--
-          Увеличивает СИЛ на 2, устойчивость к удержанию, сну, ментальным атакам, яду, кровотечению и оглушению на 20.
-          Также с определенной вероятностью отражает на врага злые чары
-      -->
+    <skill id="10005" levels="1" name="Superior Mind Resistance">
+    <!-- STR + 2. Resistance + 20 to Hold, Sleep, Paralysis, Mental attacks, Poison, Bleed, and Stun. In addition, there is a chance of reflecting debuffs back to the attacker. -->
  		<table name="#vuln">20</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" val="#magicLevel" />
@@ -149,11 +130,8 @@
 			<add order="0x40" stat="reflectMagicDebuff" val="5" />
 		</for>
     </skill>
-    <skill id="10006" levels="1" name="Последняя капля">
-        <!--
-          Увеличивает СИЛ на 2.
-          С определенной вероятностью увеличивает Физ. Атк. умений и Физ. Защ., если персонаж получает урон.
-      -->
+    <skill id="10006" levels="1" name="Last Patience">
+    <!-- STR + 2. When receiving damage, there is a chance of increasing Physical Skill Power and Shield P. Def. -->
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
@@ -168,10 +146,8 @@
             <add order="0x10" stat="STR" val="2"/>
         </for>
     </skill>
-    <skill id="10007" levels="3" name="Последняя капля">
-        <!--
-          В течение 9 сек. увеличивает Защиту Щитом/эффективность умений на 25%.
-      -->
+    <skill id="10007" levels="3" name="Last Patience">
+    <!-- For 9 seconds, Shield P. Def./Skill Power + 25%. -->
         <table name="#power">1.25 1.3 1.35</table>
         <set name="reuseDelay" val="8000"/>
         <set name="magicLevel" val="85"/>
@@ -185,12 +161,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10008" levels="8" name="Заряд Щита">
-        <!--
-          Атакует врага щитом. Мощность 10821.
-          Требуется щит.
-          Также уменьшает Физ. Защ. на 10%, Физ. Уклонение -2, увеличивает силу Крит. Атк. на 10%.
-      -->
+    <skill id="10008" levels="8" name="Shield Charge">
+    <!-- Uses a shield to attack the selected target with 10821 power added to P. Atk. and also P. Def. - 10%, P. Evasion - 2, and P. Critical Damage + 10%. Can be used while a shield is equipped. -->
 		<table name="#mpConsume">53 54 56 58 59 61 63 65</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#Power">10821 11196 11948 12700 13452 14204 14956 15708</table>
@@ -267,13 +239,8 @@
 		    </effect>
 		</for>
     </skill>
-    <skill id="10009" levels="8" name="Страшный Суд">
-        <!--
-          Атакует врага и наносит дополнительный урон.
-          Мощность 13673.
-          Уменьшает Скорость на 10%.
-          Требуется меч/дробящее оружие. Сверхудар. Крит. удар.
-      -->
+    <skill id="10009" levels="8" name="Last Judgment">
+    <!-- Attacks the selected target with 13673 power added to P. Atk, and Speed - 30%. Can be used while a sword/blunt weapon is equipped. Over-hit. Critical. -->
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <table name="#Power">13673 14145 15089 16034 16978 17923 18867 19812</table>
         <table name="#powerPvP">0</table>
@@ -329,13 +296,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10010" levels="8" name="Кара Правосудия">
-        <!--
-          Атакует врага и наносит дополнительный урон.
-          Мощность 17476. Физ./Маг. Атк. -20%.
-          Ограничивает использование магических умений.
-          Требуется меч/дробящее оружие. Сверхудар. Крит. удар.
-      -->
+    <skill id="10010" levels="8" name="Justice Punishment">
+    <!-- Attacks the selected target with 17476 power added to P. Atk, and P. Atk./M. Atk. - 20%. Can be used while a sword/blunt weapon is equipped. Over-hit. Critical. -->
         <table name="#Power">17476 18677 19878 21079 22280 23481 24683 25884</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <table name="#element">none</table>
@@ -391,13 +353,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10011" levels="5" name="Импульс Щита">
-        <!--
-          Атакует врагов перед собой и наносит дополнительный урон.
-          Мощность 9870.
-          Оглушает на 1 сек.
-          Требуется щит.
-      -->
+    <skill id="10011" levels="5" name="Shield Impact">
+    <!-- Attacks the target with P. Atk. Increased by 9870, and Stuns for 5 seconds. Can be used while a shield is equipped. -->
         <table name="#magicLevel">85 88 91 94 97</table>
         <table name="#Power">9870 10901 10933 12965 13997</table>
         <table name="#activateRate">50</table>
@@ -420,12 +377,8 @@
             <effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="2" val="0"/>
         </for>
     </skill>
-    <skill id="10012" levels="7" name="Волна Щита">
-        <!--
-          Атакует врагов перед собой и наносит дополнительный урон.
-          Мощность 10174.
-          Оглушает на 9 сек. Требуется щит.
-      -->
+    <skill id="10012" levels="7" name="Shield Wave">
+    <!-- Attacks nearby targets with P. Atk. increased by 10174, and Stuns for 9 seconds. Can be used while a shield is equipped. -->
         <table name="#Power">10174 10833 11492 12150 12809 13468 14126</table>		
 		<table name="#activateRate">50</table>
 		<set name="weaponsAllowed" val="2"/>
@@ -462,13 +415,8 @@
 			<effect name="Stun" time="9" val="0" effectPower="600" effectType="STUN" />
 		</for>
     </skill>
-    <skill id="10013" levels="8" name="Мощный Клинок">
-        <!--
-          Атакует врагов перед собой и наносит дополнительный урон.
-          Мощность 10314.
-          Требуется меч/дробящее оружие/парные мечи.
-          Сверхудар. Крит. удар.
-      -->
+    <skill id="10013" levels="8" name="Gust Blade">
+    <!-- Attacks nearby targets with P. Atk. increased by 10314. Can be used while a sword/blunt weapon is equipped. Over-hit. Critical. -->
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <table name="#Power">10314 11026 11738 12450 13162 13874 14586 15298</table>
         <table name="#powerPvP">0</table>
@@ -519,12 +467,8 @@
         </enchant8>
         <enchant9 levels="10" name="Recycle"/>
     </skill>
-    <skill id="10014" levels="8" name="Цепь Галактики">
-        <!--
-          Атакует врагов вокруг персонажа и наносит дополнительный урон.
-          Мощность 14300.
-          Также уменьшает эффективность восстанавливающих HP умений на 90%.
-      -->
+    <skill id="10014" levels="8" name="Chain Galaxy">
+    <!-- Attacks nearby targets with 14300 power added to P. Atk. Healing power received - 90%. -->
         <table name="#power">14300 14789 15769 16748 17727 18707 19686 20666</table>
         <table name="#powerPvP">0</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -574,10 +518,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10015" levels="6" name="Цепной Удар">
-        <!--
-          Притягивает к персонажу выбранную цель. Требуется щит.
-      -->
+    <skill id="10015" levels="6" name="Chain Strike">
+    <!-- Drags the selected target to the user's location and makes him/her attack the user. Requires a shield to be equipped. -->
         <table name="#magicLevel">85 87 90 93 96 99</table>
         <table name="#activateRate">60 65 70 75 80 85</table>
 		<table name="#power">1630</table>
@@ -605,10 +547,8 @@
 			<effect count="1" name="TargetToMe" time="1" val="0" chance="#activateRate"/>
         </for>
     </skill>
-    <skill id="10016" levels="6" name="Цепная Гидра">
-        <!--
-          Притягивает цель и врагов вокруг цели. Требуется щит.
-      -->
+    <skill id="10016" levels="6" name="Chain Hydra">
+    <!-- Drags the selected target and enemies near the target to the user's location and makes them attack the user. Requires a shield to be equipped. -->
         <table name="#magicLevel">89 91 93 95 97 99</table>
 		<table name="#activateRate">60 65 70 75 80 85</table>
 		<table name="#radius">600</table>
@@ -636,7 +576,8 @@
 			<effect count="1" name="TargetToMe" time="1" val="0" chance="#activateRate"/>
         </for>
     </skill>
-    <skill id="10017" levels="4" name="Максимальная Защита">
+    <skill id="10017" levels="4" name="Final Ultimate Defense">
+    <!-- For 30 seconds, P. Def. + 4000 and M. Def. + 4000. Damage received is capped at 300 and 40% of it is reflected back to the attacker. Additionally, +80% resistance to buff canceling attacks. -->
 		<table name="#mpConsume">58 63 68 72</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pDef">4000 6000 8000 10000</table>
@@ -674,10 +615,8 @@
             </effect>
 		</for>
     </skill>
-    <skill id="10018" levels="2" name="Благородная Жертва">
-        <!--
-          В течение 10 секунд персонаж получает 60% урона вместо отмеченного члена группы.
-      -->
+    <skill id="10018" levels="2" name="Noble Sacrifice">
+    <!-- For 10 seconds, receives 60% of the damage inflicted to the party member. -->
  		<table name="#mpConsume">60 65</table>
 		<table name="#magicLevel">91 96</table>
 		<table name="#val">60 90</table>
@@ -711,11 +650,8 @@
 			</effect>
 		</for>
     </skill>
-    <skill id="10019" levels="2" name="Защита Веры">
-        <!--
-          В течение 15 секунд Физ. Защ. +5000, Маг. Защ. +5000, устойчивость к отрицательным эффектам на 50% для всех членов группы.
-          Также персонаж получает 90% урона вместо членов группы.
-      -->
+    <skill id="10019" levels="2" name="Protection of Faith">
+    <!-- For 15 seconds, all party members' P. Def. + 5000, M. Def. + 5000, and resistance to debuff + 50%. Receives 90% of the damage inflicted to each party member. -->
         <table name="#mpConsume2">156 160</table>
         <table name="#mDef">5000 10000</table>
         <table name="#debuf">50 70</table>
@@ -744,17 +680,14 @@
         </enchant3>
         <for>
             <effect count="1" name="Buff" time="15" val="0">
-                <!-- TODO: -->
                 <add order="0x40" stat="debuffResist" val="#debuf"/>
                 <add order="0x40" stat="mDef" val="#mDef"/>
                 <add order="0x40" stat="pDef" val="#mDef"/>
             </effect>
         </for>
     </skill>
-    <skill id="10020" levels="4" name="Фокусировка Щита">
-        <!--
-              Физ. Защ. +350, Защита Щитом +700, Шанс Блока Щитом +35%. Расходует MP во время действия.
-          -->
+    <skill id="10020" levels="4" name="Focus Shield">
+    <!-- P. Def. + 350, shield P. Def. + 700, and shield defense + 35%. MP is continuously consumed. -->
         <table name="#mana">1</table>
         <table name="#pDef">350 400 450 500</table>
         <table name="#sDef">700 800 900 1000</table>
@@ -772,10 +705,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10021" levels="4" name="Шипованный Щит">
-        <!--
-В течение 10 секунд позволят отразить 50% урона. Требуется щит. 
-Шанс 50% отразить атакующую магию и направить ее обратно на врага.     -->
+    <skill id="10021" levels="4" name="Spike Shield">
+    <!-- For 10 seconds, reflects 10% of melee damage received back to the attacker. Additionally, there is a 50% chance of reflecting magic damage back to the attacker. Can be used while a shield is equipped. -->
  		<table name="#mpConsume">20 21 23 24</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#ref">35 40 45 50</table>
@@ -809,10 +740,8 @@
 			</effect>
 		</for>
     </skill>
-    <skill id="10022" levels="1" name="Отрицание Смерти">
-        <!--
-          В течение 10 секунд HP не падает ниже 1.
-      -->
+    <skill id="10022" levels="1" name="Ignore Death">
+    <!-- For 10 seconds, HP does not decrease below 1. -->
 		<table name="#magicLevel">97</table>
 		<table name="#reuseDelay">1800000</table>
 		<table name="#mpConsume">38</table>
@@ -844,10 +773,8 @@
 			<effect name="DeathImmunity" time="#time" val="0" />
 		</for>
     </skill>
-    <skill id="10023" levels="2" name="Атака Короля">
-        <!--
-          Призывает Льва Света и наносит большой урон врагам впереди и вокруг персонажа. Мощность 60000. Требуется щит. Сверхудар.
-      -->
+    <skill id="10023" levels="2" name="King of Beasts">
+    <!-- Summons the King of Beasts to attack nearby and frontal targets with 60000 power added to P. Atk. Over-hit. -->
 		<table name="#mpConsume">136 142</table>
 		<table name="#magicLevel">95 98</table>
 		<table name="#pwr">60000 70000</table>
@@ -883,13 +810,8 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
     </skill>
-    <skill id="10024" levels="1" name="Жертвенность">
-        <!--Fixed by Darvin
-          Персонаж притягивает члена группы к себе
-          и в течение 15 секунд получает 90% урона вместо него.
-      TODO  Если умение наносит больше 10 ед. урона, то персонаж получает только 10 ед. урона.
-          Требуется щит.
-      -->
+    <skill id="10024" levels="1" name="Party Rescue">
+    <!-- Drags all party members to oneself, and for 15 seconds receives 90% of the damage inflicted to all party members. Additionally, all damage received is capped at 10. -->
 		<table name="#heal">0</table>
 		<table name="#mpConsume2">96</table>
 		<set name="mpConsume2" val="#mpConsume2" />
@@ -923,12 +845,8 @@
 			</effect>
         </for>
     </skill>
-    <skill id="10025" levels="4" name="Клятва Рыцаря">
-        <!--
-          На 1 мин. увеличивает Физ./Маг. Защ. на 50%, Скорость на 10.
-          При использовании меча/дубины увеличивает Точность на 4, Скор. Атк. на 10%.
-          Дополнительно увеличивает шанс Крит. Атк. на 30 при использовании меча и силу Крит. Атк. при использовании дубины на 30%.
-      -->
+    <skill id="10025" levels="4" name="Knight Frenzy">
+    <!-- For 1 minute(s), P. Def. and M. Def. + 50%, Speed + 10, Accuracy + 4 and Atk. Spd. + 10% when equipped with a sword/blunt weapon. Additionally, Critical Rate + 30 when equipped with a sword, and Critical Damage + 30% when equipped with a blunt weapon. -->
         <table name="#magicLevel">85 90 95 99</table>
         <table name="#Def">1.5 1.7 2 2.2</table>
         <table name="#Spd">10 20 25 30</table>
@@ -967,10 +885,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10026" levels="6" name="Великая Ненависть">
-        <!--
-          Провоцирует выбранного противника, заставляя его сменить цель и атаковать персонажа.
-      -->
+    <skill id="10026" levels="6" name="Superior Aggression">
+    <!-- Provokes the selected target into attacking you. -->
         <table name="#magicLevel">85 87 90 93 96 99</table>
         <table name="#effectPoint">9937 10000 10070 10130 10200 10270</table>
         <set name="effectPoint" val="#effectPoint"/>
@@ -987,10 +903,8 @@
             <effect count="1" name="Aggression" time="3" val="0"/>
         </for>
     </skill>
-    <skill id="10027" levels="5" name="Великая Аура Ненавести">
-        <!--
-          Провоцирует врагов вокруг персонажа и заставляет сменить цель и атаковать персонажа.
-      -->
+    <skill id="10027" levels="5" name="Superior Aggression Aura">
+    <!-- Provokes nearby enemies into attacking you. -->
         <table name="#magicLevel">85 88 91 94 97</table>
         <table name="#effectPoint">6349 6402 6452 6499 6542</table>
         <set name="effectPoint" val="#effectPoint"/>
@@ -1005,13 +919,8 @@
             <effect count="1" name="Aggression" time="3" val="0"/>
         </for>
     </skill>
-    <skill id="10028" levels="1" name="Аура Гнева">
-
-        <!-- No_Target
-          При использовании меча/дубины увеличивает Физ. Атк. на 10%, Скор. Атк. на 10%, Скорость на 10.
-          Можно использовать только одну ауру.
-          Члены группы также будут получать эффект только от одной ауры.
-      -->
+    <skill id="10028" levels="1" name="Rage Aura">
+    <!-- When a sword or blunt weapon is equipped, P. Atk. and Atk. Spd. + 10% and Speed + 10. Decreases nearby enemies' P. Atk. and Atk. Spd. by 20%. Only one Sigel Knight's Aura can be active at any time. -->
         <table name="#magicLevel">85</table>
         <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
@@ -1038,10 +947,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10029" levels="1" name="Аура Гнева">
-        <!--No_Target
-          Уменьшает Физ. Атк. и Скор. Атк. на 20%.
-      -->
+    <skill id="10029" levels="1" name="Rage Aura">
+    <!-- When a sword or blunt weapon is equipped, increases aggression power. Additionally, increases party members' P. Atk. and Atk. Spd. by 5% and decreases skill MP Consumption by 20%. Only one Sigel Knight's Aura can be active at any time. -->
         <table name="#amount">0.8</table>
         <table name="#magicLevel">85</table>
         <set name="magicLevel" val="#magicLevel"/>
@@ -1059,13 +966,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10030" levels="1" name="Аура Вызова">
-        <!--
-          Увеличивает Физ. Атк. и Скор. Атк. членов группы на 5%.
-          Также увеличивает агрессивность монстров при использовании меча/дубины и уменьшает расход MP на 20%.
-          Можно использовать только одну ауру.
-          Члены группы также будут получать эффект только от одной ауры.
-      -->
+    <skill id="10030" levels="1" name="Challenge Aura">
+    <!-- When a sword or blunt weapon is equipped, increases aggression power. Additionally, increases party members' P. Atk. and Atk. Spd. by 5% and decreases skill MP Consumption by 20%. Only one Sigel Knight's Aura can be active at any time. -->
         <table name="#magicLevel">85</table>
         <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
@@ -1083,7 +985,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10031" levels="1" name="Аура Вызова">
+    <skill id="10031" levels="1" name="Challenge Aura">
+    <!-- P. Atk. and Atk. Spd. + 5%, and skill MP Consumption - 20%. -->
         <table name="#magicLevel">85</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
@@ -1091,8 +994,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillRadius" val="1000"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelPartyAura"
-                    stackOrder="1">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelPartyAura" stackOrder="1">
                 <def name="auraSkillId" val="10030"/>
                 <mul order="0x30" stat="pAtk" val="1.05"/>
                 <mul order="0x30" stat="pAtkSpd" val="1.05"/>
@@ -1100,14 +1002,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10032" levels="1" name="Аура Стали">
-        <!--
-          Физ. Атк. +5%, Скор. Атк. на 5%.
-          При использовании тяжелых доспехов Физ. Защ. +215,
-          Защиту Щитом на 50%, шанс блока щитом на 100%, устойчивость к атакам луком/арбалетом на 20%
-          и уменьшает силу вражеской Крит. Атк. на 15%.
-          Можно использовать только одну ауру. Члены группы также будут получать эффект только от одной ауры.
-      -->
+    <skill id="10032" levels="1" name="Iron Aura">
+    <!-- P. Atk. and Atk. Spd. + 5%. P. Def. + 215, shield P. Def. + 50%, shield defense rate + 100% when equipped with heavy armor. Resistance to bow/crossbows + 20%. Damage from critical attack - 15%. Only one Sigel Knight's Aura can be active at any time. -->
         <table name="#magicLevel">85</table>
         <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
@@ -1142,12 +1038,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10033" levels="1" name="Аура Стали">
-        <!--
-          Физ. Атк. +5%, Скор. Атк. на 5%. При использовании тяжелых доспехов Физ. Защ. +215, Защиту Щитом на 50%, 
-		  шанс блока щитом на 100%, устойчивость к атакам луком/арбалетом на 20% и уменьшает силу вражеской Крит. Атк. на 15%. 
-		  Можно использовать только одну ауру. Члены группы также будут получать эффект только от одной ауры..
-      -->
+    <skill id="10033" levels="1" name="Iron Aura">
+    <!-- P. Atk. and Atk. Spd. + 5%, P. Def. + 10%, resistance to bow/crossbows + 20%. Instant heal effect + 10%. -->
         <table name="#magicLevel">85</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
@@ -1155,8 +1047,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillRadius" val="1000"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelPartyAura"
-                    stackOrder="1">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelPartyAura" stackOrder="1">
                 <def name="auraSkillId" val="10032"/>
 				<mul order="0x30" stat="pAtk" val="1.05"/>
                 <mul order="0x30" stat="pAtkSpd" val="1.05"/>
@@ -1181,11 +1072,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10034" levels="1" name="Аура Сопротивления">
-        <!--
-          Физ. Атк. +5%, Скор. Атк. на 5%, Маг. Защ. на 10% и сопротивление стихиям на 20.
-          Можно использовать только одну ауру. Члены группы также будут получать эффект только от одной ауры.
-      -->
+    <skill id="10034" levels="1" name="Resistance Aura">
+    <!-- P. Atk. and Atk. Spd. + 5%, M. Def. + 10%, resistance to Fire/Water/Wind/Earth + 20. Only one Sigel Knight's Aura can be active at any time. -->
         <table name="#magicLevel">85</table>
         <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
@@ -1209,10 +1097,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10035" levels="1" name="Аура Сопротивления">
-        <!--
-          Увеличивает Физ. Атк. на 5%, Скор. Атк. на 5%, Маг. Защ. на 10% и сопротивление стихиям на 20.
-      -->
+    <skill id="10035" levels="1" name="Resistance Aura">
+    <!-- P. Atk. and Atk. Spd. + 5%, M. Def. + 10%, resistance to Fire/Water/Wind/Earth + 20. -->
         <table name="#magicLevel">85</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
@@ -1220,8 +1106,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillRadius" val="1000"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelPartyAura"
-                    stackOrder="1">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelPartyAura" stackOrder="1">
                 <def name="auraSkillId" val="10034"/>
 				<mul order="0x30" stat="pAtk" val="1.05"/>
                 <mul order="0x30" stat="pAtkSpd" val="1.05"/>
@@ -1235,12 +1120,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10036" levels="1" name="Аура Выносливости">
-        <!--
-          Физ. Атк. +5%, Скор. Атк. на 5%. Также увеличивает устойчивость к удержанию и отрицательным эффектам.
-          Дополнительно увеличивает эффективность восстанавливающих HP умений и бонус восстановления HP.
-          Можно использовать только одну ауру. Члены группы также будут получать эффект только от одной ауры.
-      -->
+    <skill id="10036" levels="1" name="Recovery Aura">
+    <!-- P. Atk. and Atk. Spd. + 5%. Increases resistance to P. Mez and debuffs by 20. Additionally, Healing effects are increased by 10%. Only one Sigel Knight's Aura can be active at any time. -->
         <table name="#magicLevel">85</table>
         <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
@@ -1254,7 +1135,6 @@
                 <def name="forceSkillId" val="10037"/>
 				<mul order="0x30" stat="pAtk" val="1.05"/>
                 <mul order="0x30" stat="pAtkSpd" val="1.05"/>
-                <!-- TODO: Дальше значения с потолка -->
                 <mul order="0x40" stat="rootResist" val="1.15"/>
                 <mul order="0x40" stat="debuffResist" val="1.15"/>
                 <sub order="0x40" stat="hpEff" val="1.15"/>
@@ -1262,12 +1142,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10037" levels="1" name="Аура Выносливости">
-        <!--
-          Увеличивает Физ. Атк. на 5%, Скор. Атк. на 5%.
-          Также увеличивает устойчивость к удержанию и отрицательным эффектам.
-          Дополнительно увеличивает эффективность восстанавливающих HP умений и бонус восстановления HP.
-      -->
+    <skill id="10037" levels="1" name="Recovery Aura">
+    <!-- P. Atk. and Atk. Spd. + 5%. Increases resistance to P. Mez and debuffs by 20. Additionally, Healing effects are increased by 10%. -->
         <table name="#magicLevel">85</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
@@ -1275,12 +1151,10 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillRadius" val="1000"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelPartyAura"
-                    stackOrder="1">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelPartyAura" stackOrder="1">
                 <def name="auraSkillId" val="10036"/>
                 <mul order="0x30" stat="pAtk" val="1.05"/>
                 <mul order="0x30" stat="pAtkSpd" val="1.05"/>
-                <!-- TODO: Дальше значения с потолка -->
                 <mul order="0x40" stat="rootResist" val="1.15"/>
                 <mul order="0x40" stat="debuffResist" val="1.15"/>
                 <sub order="0x40" stat="hpEff" val="1.15"/>
@@ -1288,12 +1162,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10038" levels="1" name="Аура Духа">
-        <!--
-          Физ. Атк. +5%, Скор. Атк. +5%. Также увеличивает устойчивость к удержанию и отрицательным эффектам.
-          Дополнительно увеличивает восстановление MP и бонус восстановления MP от Подпитки.
-          Можно использовать только одну ауру. Члены группы также будут получать эффект только от одной ауры.
-      -->
+    <skill id="10038" levels="1" name="Spirit Aura">
+    <!-- P. Atk. and Atk. Spd. + 5%. Increases resistance to M. Mez and debuffs by 20. Additionally, MP recovery effects are increased by 10%. Only one Sigel Knight's Aura can be active at any time. -->
         <table name="#magicLevel">85</table>
         <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
@@ -1314,7 +1184,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10039" levels="1" name="Аура Духа">
+    <skill id="10039" levels="1" name="Spirit Aura">
+    <!-- P. Atk. and Atk. Spd. + 5%. Increases resistance to M. Mez and debuffs by 20. Additionally, MP recovery effects are increased by 10%. -->
         <table name="#magicLevel">85</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
@@ -1322,8 +1193,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillRadius" val="1000"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelPartyAura"
-                    stackOrder="1">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelPartyAura" stackOrder="1">
                 <def name="auraSkillId" val="10038"/>
 				<mul order="0x30" stat="pAtk" val="1.05"/>
                 <mul order="0x30" stat="pAtkSpd" val="1.05"/>
@@ -1334,7 +1204,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10040" levels="6" name="Призывает Золотого Льва">
+    <skill id="10040" levels="6" name="Summon Golden Lion">
+    <!-- Summons a golden lion to fight alongside you. -->
         <table name="#npcIds">14936 14937 14938 14939 14974 14975</table>
         <set name="reuseDelay" val="30000"/>
         <set name="mpConsume2" val="154"/>
@@ -1347,19 +1218,19 @@
 		<set name="isMagic" val="true"/>
         <set name="magicLevel" val="81"/>
         <set name="operateType" val="OP_ACTIVE"/>
-        <!-- Summon-specific -->
         <set name="npcId" val="#npcIds"/>
         <enchant1 levels="10" name="power01">
          	<table name="#npcIds">14976 14977 14978 14979 14980 14981 14982 14983 14984 14985</table>
         </enchant1>
     </skill>
-    <skill id="10041" levels="4" name="Призыв Куба Отчаяния">
-        <!-- Summon-КУБИК -->
+    <skill id="10041" levels="4" name="Summon Cubic of Despair">
+    <!-- none -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
     </skill>
-    <skill id="10042" levels="3" name="Призыв Куба Жизни">
+    <skill id="10042" levels="3" name="Summon Cubic of Life">
+    <!-- none -->
         <table name="#magicLevel">94 97 99</table>
         <set name="magicLevel" val="#magicLevel"/>
         <table name="#heal">3 6 10</table>
@@ -1373,10 +1244,8 @@
             <effect count="1" name="HealPercent" time="0" val="#heal"/>
         </for>
     </skill>
-    <skill id="10043" levels="8" name="Призыв Куба Рыцаря">
-        <!--
-          Призывает Куб Рыцаря. Куб снимает злые чары, наложенные на персонажа.
-      -->
+    <skill id="10043" levels="8" name="Summon Knight Cubic">
+    <!-- Summons a Knight Cubic. The summoned cubic removes debuffs from you. -->
 		<table name="#mpConsume">96 98 101 105 108 111 115 118</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#cubicLevel">1 2 3 4 5 6 7 8</table>
@@ -1399,10 +1268,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10044" levels="1" name="Великое Владение Стихиями">
-        <!--
-          Увеличивает СИЛ на 2, сопротивление стихиям на 20.
-      -->
+    <skill id="10044" levels="1" name="Superior Elemental Mastery">
+    <!-- STR + 2 and resistance to all attributes + 20. -->
         <table name="#element">20</table>
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_ONE"/>
@@ -1422,12 +1289,8 @@
             <add order="0x40" stat="defenceUnholy" val="#element"/>
         </for>
     </skill>
-
-    <skill id="10045" levels="3" name="Заряд Щита">
-        <!--
-          Атакует щитом. Наносит 11196 ед. дополнительного урона.
-          Уменьшает Физ. Защ. на 10%, Уклонение на 2 и увеличивает силу Крит. Атк. на 10%.
-      -->
+    <skill id="10045" levels="3" name="Shield Charge II">
+    <!-- Strikes with the shield. Attacks the target with 11196 power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
         <table name="#Power">11196 11196 11196</table>
         <table name="#rCrit">10 20 30</table>
         <table name="#pDef">0.9 0.8 0.7</table>
@@ -1452,7 +1315,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10046" levels="3" name="Заряд Щита">
+    <skill id="10046" levels="3" name="Shield Charge III">
+    <!-- Strikes with the shield. Attacks the target with 11948 power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
         <table name="#Power">11948 11948 11948</table>
         <table name="#rCrit">10 20 30</table>
         <table name="#pDef">10 20 30</table>
@@ -1477,7 +1341,8 @@
             <sub order="0x40" stat="rEvas" val="#rEvas"/>
         </for>
     </skill>
-    <skill id="10047" levels="3" name="Заряд Щита">
+    <skill id="10047" levels="3" name="Shield Charge IV">
+    <!-- Strikes with the shield. Attacks the target with 12700 power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
         <table name="#Power">12700 12700 12700</table>
         <table name="#rCrit">10 20 30</table>
         <table name="#pDef">10 20 30</table>
@@ -1502,7 +1367,8 @@
             <sub order="0x40" stat="rEvas" val="#rEvas"/>
         </for>
     </skill>
-    <skill id="10048" levels="3" name="Заряд Щита">
+    <skill id="10048" levels="3" name="Shield Charge V">
+    <!-- Strikes with the shield. Attacks the target with 13452 power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
         <table name="#Power">13452 13452 13452</table>
         <table name="#rCrit">10 20 30</table>
         <table name="#pDef">10 20 30</table>
@@ -1527,7 +1393,8 @@
             <sub order="0x40" stat="rEvas" val="#rEvas"/>
         </for>
     </skill>
-    <skill id="10049" levels="3" name="Заряд Щита">
+    <skill id="10049" levels="3" name="Shield Charge VI">
+    <!-- Strikes with the shield. Attacks the target with 14204 power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
         <table name="#Power">14204 14204 14204</table>
         <table name="#rCrit">10 20 30</table>
         <table name="#pDef">10 20 30</table>
@@ -1552,7 +1419,8 @@
             <sub order="0x40" stat="rEvas" val="#rEvas"/>
         </for>
     </skill>
-    <skill id="10050" levels="3" name="Заряд Щита">
+    <skill id="10050" levels="3" name="Shield Charge VII">
+    <!-- Strikes with the shield. Attacks the target with 14956 power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
         <table name="#Power">14956 14956 14956</table>
         <table name="#rCrit">10 20 30</table>
         <table name="#pDef">10 20 30</table>
@@ -1577,7 +1445,8 @@
             <sub order="0x40" stat="rEvas" val="#rEvas"/>
         </for>
     </skill>
-    <skill id="10051" levels="6" name="Львиный Рев">
+    <skill id="10051" levels="6" name="Lion Roar">
+    <!-- Attack the enemies and block the physical skills. -->
         <table name="#magicLevel">85 86 87 88 89 90</table>
         <table name="#activateRate">50 52 54 56 58 60</table>
         <table name="#Power">14956 14956 14956</table>
@@ -1601,7 +1470,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10052" levels="6" name="Когти Льва">
+    <skill id="10052" levels="6" name="Lion Claw">
+    <!-- Flourishes claws to attack enemies at the front. -->
         <table name="#magicLevel">85 86 87 88 89 90</table>
         <table name="#power">9503 9702 9896 10084 10266 10440</table>
         <set name="power" val="#power"/>
@@ -1612,7 +1482,8 @@
         <set name="nextAction" val="attack"/>
         <for/>
     </skill>
-    <skill id="10053" levels="6" name="Бросок Льва">
+    <skill id="10053" levels="6" name="Lion Rush">
+    <!-- Dashes to the enemy to inflict damage and shock. -->
         <table name="#power">88 94 101 115 123 131</table>
         <table name="#effectPoint">145 150 154 164 169 173</table>
         <table name="#magicLevel">85 86 87 88 89 90</table>
@@ -1631,7 +1502,8 @@
             <effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
         </for>
     </skill>
-    <skill id="10054" levels="6" name="Львиное Пламя">
+    <skill id="10054" levels="6" name="Lion Flame">
+    <!-- Spews flames at the enemy to inflict damage. -->
         <table name="#effectPoint">227 243 268 285 313 331</table>
         <table name="#power">129 132 135 138 142 144</table>
         <table name="#magicLevel">85 86 87 88 89 90</table>
@@ -1645,13 +1517,14 @@
         <set name="shieldignore" val="true"/>
         <for/>
     </skill>
-    <skill id="10055" levels="1" name="Атака Куба">
-        <!-- Уменьшает Физ. Атк. Эффект 3. Тригет скил -->
+    <skill id="10055" levels="1" name="Cubic Attack">
+    <!-- P. Atk. is temporarily decreased. Effect 3. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
     </skill>
-    <skill id="10056" levels="8" name="Защита Куба">
+    <skill id="10056" levels="8" name="Cubic Protection">
+    <!-- none -->
         <table name="#time">0 3 6 6 6 6 6 6</table>
         <table name="#magicLevel">85 87 89 90 92 94 97 99</table>
         <table name="#mDef">0 0 0 500 500 500 500 500</table>
@@ -1679,13 +1552,14 @@
             </effect>
         </for>
     </skill>
-    <skill id="10057" levels="1" name="Проклятие Куба">
-        <!-- Отравляет и понижает HP. Эффект 5. Тригет скил -->
+    <skill id="10057" levels="1" name="Cubic Curse">
+    <!-- Inflicted with poison and HP is temporarily decreased. Effect 5. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
     </skill>
-    <skill id="10058" levels="1" name="Благословение Защиты">
+    <skill id="10058" levels="1" name="Blessing of Protection">
+    <!-- M. Def. and resistance to all attributes are momentarily increased. -->
         <set name="magicType" val="SPECIAL"/>
         <set name="reuseDelay" val="30000"/>
         <set name="magicLevel" val="85"/>
@@ -1707,7 +1581,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="10059" levels="3" name="Заряд Щита">
+    <skill id="10059" levels="3" name="Shield Charge VII">
+    <!-- Strikes with the shield. Attacks the target with 15708 power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
         <table name="#Power">15708 15708 15708</table>
         <table name="#rCrit">10 20 30</table>
         <table name="#pDef">10 20 30</table>
@@ -1731,7 +1606,8 @@
             <sub order="0x40" stat="rEvas" val="#rEvas"/>
         </for>
     </skill>
-    <skill id="10060" levels="1" name="Яростная Атака">
+    <skill id="10060" levels="1" name="Aggression Attack">
+    <!-- Provokes. -->
         <set name="coolTime" val="200"/>
         <set name="reuseDelay" val="6000"/>
         <set name="power" val="3928"/>
@@ -1748,8 +1624,8 @@
             <effect count="1" name="Aggression" time="3" val="0"/>
         </for>
     </skill>
-    <skill id="10061" levels="1" name="Мастер Призыва">
-        <!-- Исправить Уменьшает Физ. Защ. в качестве платы за призыв Льва. -->
+    <skill id="10061" levels="1" name="Price of Summoning">
+    <!-- P. Def. is intentionally decreased as price for summoning a lion. -->
         <set name="magicType" val="SPECIAL"/>
         <set name="magicLevel" val="86"/>
         <set name="target" val="TARGET_SELF"/>

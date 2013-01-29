@@ -1,69 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="8500" levels="1" name="Pink Talisman - CON">
+	<skill id="8500" levels="1" name="Pink Talisman of CON">
+    <!-- Increases when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8501" levels="1" name="Pink Talisman - INT">
+	<skill id="8501" levels="1" name="Pink Talisman of INT">
+    <!-- Increases INT when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8502" levels="1" name="Pink Talisman - WIT">
+	<skill id="8502" levels="1" name="Pink Talisman of WIT">
+    <!-- Increases WIT when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8503" levels="1" name="Pink Talisman - MEN">
+	<skill id="8503" levels="1" name="Pink Talisman of MEN">
+    <!-- Increases MEN when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8504" levels="1" name="Pink Talisman - Stun Resist">
+	<skill id="8504" levels="1" name="Pink Talisman of Stun Resistance">
+    <!-- Increases Resistance to Shock when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8505" levels="1" name="Pink Talisman - Sleep Resist">
+	<skill id="8505" levels="1" name="Pink Talisman of Sleep Resistance">
+    <!-- Increases Resistance to Sleep when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8506" levels="1" name="Pink Talisman - Hold Resist">
+	<skill id="8506" levels="1" name="Pink Talisman of Hold Resistance">
+    <!-- Increases Resistance to Hold when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8507" levels="1" name="Pink Talisman - Paralyze Resist">
+	<skill id="8507" levels="1" name="Pink Talisman of Paralyze Resistance">
+    <!-- Increases Resistance to Paralysis when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8508" levels="1" name="Pink Talisman - All STAT">
+	<skill id="8508" levels="1" name="Pink Talisman of All STAT">
+    <!-- Increases all stats when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_event_i02" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8509" levels="1" name="High Angel Circlet">
+	<skill id="8509" levels="1" name="Blessed Escape">
+    <!-- Able to perform the High Angel Circlet power every hour -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.accessory_highangel_circlet_i00" />
 		<set name="reuseDelay" val="3600000" />
@@ -74,6 +84,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8510" levels="1" name="Summon Friend">
+    <!-- Summons your friend. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="reuseDelay" val="3600000" />
@@ -85,121 +96,77 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8511" levels="1" name="Blessing of Victory" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Increases Speed by 2%. -->
 		<set name="icon" val="BranchSys2.icon.br_worldcup_hair_i02" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8512" levels="1" name="National Representative Warrior's Tenacity" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- When used, you can obtain at random one 3-, 7-, 10-, 30-day, or unlimited National Representative Warrior's accessory set. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked. -->
 		<set name="icon" val="BranchSys2.icon.br_spirit_of_brave_i00" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8513" levels="1" name="National Representative Spell of Blessing" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- When used, you can obtain at random a Blessed Scroll of Escape or a B~S grade Blessed Weapon/Armor Strengthening Scroll. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked. -->
 		<set name="icon" val="BranchSys2.icon.br_spell_of_blessing_i00" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8514" levels="1" name="National Representative Energy of Victory" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- When used, you can obtain at random one Nevit's Hourglass 1~4 hours and Nevit's Voice. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked. -->
 		<set name="icon" val="BranchSys2.icon.br_obsession_of_winning_i00" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="8515" levels="1" name="Release Seal on Agathion - Ball Trapping Gnosian" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+	<skill id="8515" levels="1" name="Release Agathion's Seal - Ball Trapping Gnosian" >
+    <!-- Removes the Agathion's seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="8516" levels="1" name="Release Seal on Agathion - Ball Trapping Orodriel" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+	<skill id="8516" levels="1" name="Release Agathion's Seal - Ball Trapping Orodriel" >
+    <!-- Removes the Agathion's seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="8517" levels="1" name="Release Seal on Agathion - Penalty Kick" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+	<skill id="8517" levels="1" name="Release Agathion's Seal - Penalty Kick" >
+    <!-- Removes the Agathion's seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8518" levels="1" name="Notifier" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Informs you of the re-supply time of the gift given by the Agathion. -->
 		<set name="icon" val="icon.skill5239" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8519" levels="1" name="Notifier" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Informs you of the re-supply time of the gift given by the Agathion. -->
 		<set name="icon" val="icon.skill5239" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8520" levels="1" name="Notifier" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Informs you of the re-supply time of the gift given by the Agathion. -->
 		<set name="icon" val="icon.skill5239" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="8521" levels="1" name="Release Seal on Agathion - Antharas" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+	<skill id="8521" levels="1" name="Release Agathion's Seal - Antharas" >
+    <!-- Removes the Agathion's seal. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="magicLevel" val="85" />
@@ -217,62 +184,43 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="8522" levels="1" name="Release Seal on Agathion - Nevit's Messenger Kanna" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+	<skill id="8522" levels="1" name="Release Agathion's Seal - Nevit's Messenger Kanna" >
+    <!-- Removes the Agathion's seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="8523" levels="1" name="Release Seal on Agathion - Guardian of the Dawn Kallesin" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+	<skill id="8523" levels="1" name="Release Agathion's Seal - Guardian of the Dawn Kallesin" >
+    <!-- Removes the Agathion's seal. -->
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8524" levels="1" name="Hero's Holy Attack" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Divine attack is increased by 250. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8525" levels="1" name="Hero's Holy Attack" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Increases holy attack by 250. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="8526" levels="1" name="Shiny Bracelet" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- 3 Talisman can be equipped. -->
 		<set name="icon" val="icon.accessory_shiny_bracelet" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="8527" levels="1" name="Призвать Агатиона - Фея Магмельд">
+	<skill id="8527" levels="1" name="Release Agathion's Seal - Magmeld Fairy">
+    <!-- Removes the Agathion's seal. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="magicLevel" val="75" />

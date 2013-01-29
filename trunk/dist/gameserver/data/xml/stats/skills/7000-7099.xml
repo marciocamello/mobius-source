@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="7000" levels="1" name="NPC Default">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -8,6 +9,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7001" levels="1" name="Dispel Buff">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="99" />
 		<set name="castRange" val="400" />
@@ -16,6 +18,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7002" levels="1" name="Dispel Debuff">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="99" />
 		<set name="castRange" val="400" />
@@ -24,6 +27,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7003" levels="1" name="Dispel All">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="99" />
 		<set name="castRange" val="400" />
@@ -32,9 +36,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7004" levels="2" name="Dispel Petrification">
-		<!--
-			Description: Cures petrification with the effect of 2 or less.
-		-->
+    <!-- Cures petrification with the effect of 2 or less. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="10000" />
@@ -44,9 +46,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7005" levels="4" name="Greater Chant of Vampire">
-		<!--
-			Description: Temporarily allows party members to partially restore HP using damage inflicted upon the enemy. Excludes damage from skill or range attack. Effect 4.
-		-->
+    <!-- Temporarily allows party members to partially restore HP using damage inflicted upon the enemy with a certain probability. Effect 4. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="20000" />
@@ -61,9 +61,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7006" levels="13" name="The Love of Pa'agrio">
-		<!--
-			Description: Greatly enhances alliance members' HP restoration.  Effect 6.
-		-->
+    <!-- In an instant, sharply increases target's allies HP recovery bonus. Effect 6. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="20000" />
@@ -78,9 +76,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7007" levels="4" name="Greater Seal of Flame">
-		<!--
-			Description: A protective ring of fire that continuously reduces HP of surrounding enemies and their alliance members. Effect 8.
-		-->
+    <!-- A protective ring of fire that continuously reduces HP of surrounding enemies and their alliance members. Effect 8. -->
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
@@ -96,227 +92,148 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="saveVs" val="MEN" />
 	</skill>
-	<skill id="7008" levels="1" name="not_used" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+	<skill id="7008" levels="1" name="Feather of Blessing" >
+    <!-- Once the Feather of Blessing is used, it cannot be re-used for 5 minutes. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7009" levels="1" name="not_used" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7010" levels="1" name="not_used" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7011" levels="1" name="not_used" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7012" levels="1" name="not_used" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7013" levels="1" name="not_used" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7014" levels="1" name="Test - Critical Damage Up" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Increases received Critical Damage -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7015" levels="1" name="Test - Critical Damage Down" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Decreases received Critical Damage -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7016" levels="1" name="Test - Critical Damage Up" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Increases received Critical Damage -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7017" levels="1" name="Test - Critical Damage Down" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Decreases received Critical Damage -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7018" levels="1" name="Test - Critical Rate Up" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Increases received Critical Damage -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7019" levels="1" name="Test - Critical Rate Down" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Decreases received Critical Damage -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7020" levels="1" name="Test - Critical Rate Up" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Increases received Critical Damage -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7021" levels="1" name="Test - Critical Rate Down" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Decreases received Critical Damage -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7022" levels="1" name="Test - Find Hidden Door" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- Look for hidden door. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7023" levels="1" name="not_used" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7024" levels="1" name="not_used" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7025" levels="1" name="not_used" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7026" levels="1" name="not_used" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7027" levels="1" name="not_used" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="7028" levels="1" name="For Stationary NPCs">
+	<skill id="7028" levels="1" name="Stationary NPCs">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_NONE" />
@@ -329,6 +246,7 @@
 		</cond>
 	</skill>
 	<skill id="7029" levels="4" name="Super Haste">
+    <!-- Speed is increased. -->
 		<table name="#Tab-runSpd">2 3 3 3.5</table>
 		<table name="#Tab-pAtk">1 1 1 2</table>
 		<table name="#Tab-mAtkSpd">2 3 3 3.2</table>
@@ -352,6 +270,7 @@
 		</for>
 	</skill>
 	<skill id="7030" levels="1" name="Summon King Bugbear">
+    <!-- none -->
 		<table name="#itemConsumeCount">8</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
@@ -366,12 +285,12 @@
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="skillType" val="SUMMON" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<!-- Summon-specific -->
 		<table name="#npcIds">20150</table>
 		<set name="npcId" val="#npcIds" />
 		<set name="expPenalty" val="0.3" />
 	</skill>
 	<skill id="7031" levels="1" name="Summon Skeleton Royal Guard">
+    <!-- none -->
 		<table name="#itemConsumeCount">8</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
@@ -386,12 +305,12 @@
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="skillType" val="SUMMON" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<!-- Summon-specific -->
 		<table name="#npcIds">20622</table>
 		<set name="npcId" val="#npcIds" />
 		<set name="expPenalty" val="0.3" />
 	</skill>
 	<skill id="7032" levels="1" name="Summon Hunter Gargoyle">
+    <!-- none -->
 		<table name="#itemConsumeCount">8</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
@@ -406,12 +325,12 @@
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="skillType" val="SUMMON" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<!-- Summon-specific -->
 		<table name="#npcIds">20241</table>
 		<set name="npcId" val="#npcIds" />
 		<set name="expPenalty" val="0.3" />
 	</skill>
 	<skill id="7033" levels="1" name="not_used">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -419,6 +338,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="7034" levels="1" name="not_used">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -426,10 +346,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="7035" levels="1" name="not_used">
-		<!--
-			Description:
-			This aerial attack inflicts damage on a target inside the Outer Castle.
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -437,10 +354,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="7036" levels="1" name="not_used">
-		<!--
-			Description:
-			Valakas Use Skill
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -448,10 +362,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="7037" levels="1" name="not_used">
-		<!--
-			Description:
-			Tyrannosaurus Use Skill
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -459,6 +370,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="7038" levels="1" name="not_used">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -466,6 +378,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="7039" levels="1" name="not_used">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -473,6 +386,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="7040" levels="1" name="not_used">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -480,6 +394,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="7041" levels="1" name="Master's Blessing - Focus">
+    <!-- The GM is always by your side. Increases Critical attack rate by 30% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLevel" val="52" />
@@ -498,6 +413,7 @@
 		</for>
 	</skill>
 	<skill id="7042" levels="1" name="Master's Blessing - Death Whisper">
+    <!-- The GM is always by your side. Increases Critical P. Atk. by 35% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1242" />
 		<set name="magicLevel" val="56" />
@@ -516,6 +432,7 @@
 		</for>
 	</skill>
 	<skill id="7043" levels="1" name="Master's Blessing - Haste">
+    <!-- The GM is always by your side. Increases Atk. Spd. by 33% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLevel" val="52" />
@@ -534,6 +451,7 @@
 		</for>
 	</skill>
 	<skill id="7044" levels="1" name="Master's Blessing - Guidance">
+    <!-- The GM is always by your side. Increases accuracy by 4 for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1240" />
 		<set name="magicLevel" val="56" />
@@ -552,6 +470,7 @@
 		</for>
 	</skill>
 	<skill id="7045" levels="1" name="Master's Blessing - Blessed Body">
+    <!-- The GM is always by your side. Increases Max HP by 35% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1045" />
 		<set name="magicLevel" val="72" />
@@ -570,6 +489,7 @@
 		</for>
 	</skill>
 	<skill id="7046" levels="1" name="Master's Blessing - Blessed Soul">
+    <!-- The GM is always by your side. Increases Max MP by 35% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1048" />
 		<set name="magicLevel" val="70" />
@@ -588,6 +508,7 @@
 		</for>
 	</skill>
 	<skill id="7047" levels="1" name="Master's Blessing - Agility">
+    <!-- The GM is always by your side. Increase Evasion by 4 for 1 hour. -->
 		<table name="#Tab-rEvas">4</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1087" />
@@ -607,6 +528,7 @@
 		</for>
 	</skill>
 	<skill id="7048" levels="1" name="Master's Blessing - Acumen">
+    <!-- The GM is always by your side. Increases Casting Spd. by 30% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1085" />
 		<set name="magicLevel" val="48" />
@@ -625,6 +547,7 @@
 		</for>
 	</skill>
 	<skill id="7049" levels="1" name="Master's Blessing - Decrease Weight">
+    <!-- The GM is always by your side. Increases the weight penalty interval by 9000 for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1257" />
 		<set name="magicLevel" val="52" />
@@ -643,6 +566,7 @@
 		</for>
 	</skill>
 	<skill id="7050" levels="1" name="Master's Blessing - Might">
+    <!-- The GM is always by your side. Increases P. Atk. by 15% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1068" />
 		<set name="magicLevel" val="40" />
@@ -661,6 +585,7 @@
 		</for>
 	</skill>
 	<skill id="7051" levels="1" name="Master's Blessing - Shield">
+    <!-- The GM is always by your side. Increases P. Def. by 15% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1040" />
 		<set name="magicLevel" val="44" />
@@ -679,6 +604,7 @@
 		</for>
 	</skill>
 	<skill id="7052" levels="1" name="Master's Blessing - Magic Barrier">
+    <!-- The GM is always by your side. Increases M. Def. by 30% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1036" />
 		<set name="magicLevel" val="52" />
@@ -697,6 +623,7 @@
 		</for>
 	</skill>
 	<skill id="7053" levels="1" name="Master's Blessing - Vampiric Rage">
+    <!-- The GM is always by your side. For 1 hour, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<table name="#Tab-absorbDam">9</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1268" />
@@ -716,6 +643,7 @@
 		</for>
 	</skill>
 	<skill id="7054" levels="1" name="Master's Blessing - Empower">
+    <!-- The GM is always by your side. Increases M. Atk. by 75% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1059" />
 		<set name="magicLevel" val="52" />
@@ -734,6 +662,7 @@
 		</for>
 	</skill>
 	<skill id="7055" levels="1" name="Master's Blessing - Wind Walk">
+    <!-- The GM is always by your side. Increases Speed by 33 for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1204" />
 		<set name="magicLevel" val="30" />
@@ -752,6 +681,7 @@
 		</for>
 	</skill>
 	<skill id="7056" levels="1" name="Master's Blessing - Berserker Spirit">
+    <!-- The GM is always by your side. For 1 hour, decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1062" />
 		<set name="magicLevel" val="52" />
@@ -777,6 +707,7 @@
 		</for>
 	</skill>
 	<skill id="7057" levels="1" name="Master's Blessing - Greater Might">
+    <!-- The GM is always by your side. Increases P. Atk. by 10% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1388" />
 		<set name="magicLevel" val="74" />
@@ -795,6 +726,7 @@
 		</for>
 	</skill>
 	<skill id="7058" levels="1" name="Master's Blessing - Greater Shield">
+    <!-- The GM is always by your side. Increases P. Def. by 15% for 1 hour. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1389" />
 		<set name="magicLevel" val="74" />
@@ -813,6 +745,7 @@
 		</for>
 	</skill>
 	<skill id="7059" levels="1" name="Master's Blessing - Wild Magic">
+    <!-- The GM is always by your side. For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1303" />
 		<set name="magicLevel" val="70" />
@@ -831,6 +764,7 @@
 		</for>
 	</skill>
 	<skill id="7060" levels="1" name="Master's Blessing - Clarity">
+    <!-- The GM is always by your side. For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1397" />
 		<set name="magicLevel" val="74" />
@@ -851,6 +785,7 @@
 		</for>
 	</skill>
 	<skill id="7061" levels="1" name="Master's Blessing - Prophecy of Water">
+    <!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buffs by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1355" />
 		<set name="magicLevel" val="78" />
@@ -881,6 +816,7 @@
 		</for>
 	</skill>
 	<skill id="7062" levels="1" name="Master's Blessing - Prophecy of Fire">
+    <!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max MP by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buffs by 10%. Decreases Speed by 20%. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1356" />
 		<set name="magicLevel" val="78" />
@@ -910,6 +846,7 @@
 		</for>
 	</skill>
 	<skill id="7063" levels="1" name="Master's Blessing - Prophecy of Wind">
+    <!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buff by 10%. Decreases Speed by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1357" />
 		<set name="magicLevel" val="78" />
@@ -937,6 +874,7 @@
 		</for>
 	</skill>
 	<skill id="7064" levels="1" name="Master's Blessing - Chant of Victory">
+    <!-- The GM is always by your side. Recovers HP by 20%, and for 1 hour, receives help from a great spirit to increase Max HP by 20%, the chance of prominent damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Resistance to de-buffs by 10%, and accuracy by 4. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1363" />
 		<set name="magicLevel" val="78" />
@@ -967,9 +905,7 @@
 		</for>
 	</skill>
 	<skill id="7065" levels="1" name="Test - Charge">
-		<!--
-			Description: Charges into an enemy.
-		-->
+    <!-- Charges into the enemy. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="200" />
 		<set name="magicLevel" val="75" />
@@ -982,9 +918,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7066" levels="1" name="Test Stun Charge">
-		<!--
-			Description: Charges into enemy and stuns.
-		-->
+    <!-- Charges into enemy and stuns. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="200" />
@@ -1000,9 +934,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="7067" levels="1" name="Test Range Charge">
-		<!--
-			Description: Charges into enemy and causes bleeding
-		-->
+    <!-- Charges into enemy and causes bleeding -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="200" />
@@ -1018,9 +950,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="7068" levels="1" name="Test Steal Abnormal State">
-		<!--
-			Description: Steals enemy's abnormal state.
-		-->
+    <!-- Steals enemy's abnormal state. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="200" />
@@ -1035,9 +965,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7069" levels="1" name="Test Abnormal State DD">
-		<!--
-			Description: Inflicts damage according to the enemy's number of abnormal states.
-		-->
+    <!-- Inflicts damage according to the enemy's number of abnormal states. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="200" />
@@ -1052,9 +980,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7070" levels="1" name="Test - Soul Eating Passive">
-		<!--
-			Description: Absorbs soul.
-		-->
+    <!-- Absorbs soul. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_NONE" />
@@ -1067,9 +993,7 @@
 		</cond>
 	</skill>
 	<skill id="7071" levels="1" name="Test - Soul Transfer">
-		<!--
-			Description: Transfers soul to party member.
-		-->
+    <!-- Transfers soul to party member. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1000" />
 		<set name="magicLevel" val="75" />
@@ -1082,9 +1006,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7072" levels="1" name="Test - Basic Trap">
-		<!--
-			Description: Summons trap.
-		-->
+    <!-- Summons trap. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="30000" />
 		<set name="magicLevel" val="20" />
@@ -1097,9 +1019,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7073" levels="1" name="Test - Find Trap">
-		<!--
-			Description: Locates trap.
-		-->
+    <!-- Locates trap. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="30000" />
 		<set name="magicLevel" val="20" />
@@ -1112,9 +1032,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7074" levels="1" name="Test - Cancel Trap">
-		<!--
-			Description: Cancels trap.
-		-->
+    <!-- Cancels trap. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="30000" />
 		<set name="magicLevel" val="20" />
@@ -1128,9 +1046,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7075" levels="1" name="Test - Distance DD">
-		<!--
-			Description: DD damage changes by distance.
-		-->
+    <!-- Magic damage changes by distance. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="6000" />
@@ -1145,9 +1061,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7076" levels="1" name="Test - Delay Debuff">
-		<!--
-			Description: Bleeds for 20 seconds and stuns.
-		-->
+    <!-- Bleeds for 20 seconds and stuns. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="720" />
@@ -1162,9 +1076,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="7077" levels="1" name="Test - Delay Debuff - Call">
-		<!--
-			Description: Currently stunned.
-		-->
+    <!-- Currently stunned. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="70" />
 		<set name="target" val="TARGET_NONE" />
@@ -1173,9 +1085,7 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="7078" levels="1" name="Test - Blink">
-		<!--
-			Description: Stuns
-		-->
+    <!-- Stuns -->
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="5;12" />
@@ -1194,9 +1104,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="7079" levels="1" name="Test - Party Damage Absorb">
-		<!--
-			Description: Transfers party damage to tanker.
-		-->
+    <!-- Transfers party damage to tanker. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="75" />
 		<set name="hitTime" val="2500" />
@@ -1207,9 +1115,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7080" levels="1" name="Test - General Attack Prohibited">
-		<!--
-			Description: Cannot perform general attack.
-		-->
+    <!-- Cannot perform general attack. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="70" />
 		<set name="castRange" val="600" />
@@ -1222,9 +1128,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="7081" levels="1" name="Effect Test - Land Shot">
-		<!--
-			Description: Shoots toward ground.
-		-->
+    <!-- Shoots toward ground. -->
 		<set name="affectLimit" val="5;12" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="800" />
@@ -1239,9 +1143,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7082" levels="1" name="Effect Test - Chain Lightning">
-		<!--
-			Description: Chain Lightning
-		-->
+    <!-- Chain Lightning -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="5;12" />
 		<set name="icon" val="icon.skill0000" />
@@ -1257,9 +1159,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7083" levels="1" name="Test - Trap Skill">
-		<!--
-			Description: Trap Range Skill
-		-->
+    <!-- Trap Range Skill -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="6;12" />
 		<set name="icon" val="icon.skill0000" />
@@ -1270,9 +1170,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7084" levels="1" name="Test - Trap Skill">
-		<!--
-			Description: Trap Range Skill
-		-->
+    <!-- Trap Range Skill -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="6;12" />
 		<set name="icon" val="icon.skill0000" />
@@ -1286,6 +1184,7 @@
 		</for>
 	</skill>
 	<skill id="7085" levels="1" name="Self-Destruct Explosion">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -1305,6 +1204,7 @@
 		</for>
 	</skill>
 	<skill id="7086" levels="1" name="Last Stand_test">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_NONE" />
@@ -1312,6 +1212,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7087" levels="1" name="Chain Magic - Dark Explosion_test">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -1325,11 +1226,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7088" levels="1" name="Master's Blessing - Improve Combat" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 minutes, increases P. Atk. by 15% and P. Def. by 15%."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 1 hour, increases P. Atk. by 15% and P. Def. by 15%. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1499" />
 		<set name="reuseDelay" val="2000" />
@@ -1344,11 +1241,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7089" levels="1" name="Master's Blessing - Improve Magic" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "The GM is always by your side. Combine magic power increase and magic resistance increase to have more advanced magic ability increase effect. For 40 minutes, increases M. Atk. by 75% and M. Def. by 30%."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- The GM is always by your side. Combine M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 hour, increases M. Atk. by 75% and M. Def. by 30%. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1500" />
 		<set name="reuseDelay" val="2000" />
@@ -1363,11 +1256,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7090" levels="1" name="Master's Blessing - Improve Condition" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 40 minutes, increases Max HP by 35% and Max MP by 35%."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 1 hour, increases Max HP by 35% and Max MP by 35%. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1501" />
 		<set name="reuseDelay" val="2000" />
@@ -1382,11 +1271,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7091" levels="1" name="Master's Blessing - Improve Critical" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "The GM is always by your side. Combine critical rate increase and critical power increase to have more advanced critical increase effect. For 40 minutes, increases critical rate by 30% and critical power by 35%."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- The GM is always by your side. Combine Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour, increases Critical Rate by 30% and Critical Damage by 35%. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1502" />
 		<set name="reuseDelay" val="2000" />
@@ -1401,11 +1286,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7092" levels="1" name="Master's Blessing - Improve Shield Defense" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "The GM is always by your side. Combine shield Def. rate increase and shield P. Def. increase to have more advanced shield ability increase effect. For 40 minutes, increases shield defense rate by 30% and shield P. Def. by 50%."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- The GM is always by your side. Combine shield Def. rate increase and shield P. Def. increase to have more advanced shield ability increase effect. For 1 hour, increases shield defense rate by 30% and shield P. Def. by 50%. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1503" />
 		<set name="reuseDelay" val="2000" />
@@ -1420,11 +1301,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7093" levels="1" name="Master's Blessing - Improve Movement" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: "The GM is always by your side. Combine Spd. increase and Evasion increase to have more advanced movement increase effect. For 40 minutes, increases moving speed by 33 and evasion by 4."
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- The GM is always by your side. Combine Spd. increase and Evasion increase to have more advanced movement increase effect. For 1 hour, increases Speed by 33 and evasion by 4. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1504" />
 		<set name="reuseDelay" val="2000" />
@@ -1439,11 +1316,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7094" levels="1" name="Master's Blessing - Sharpen Edge" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5% and critical rate by 20% for 10 minutes.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5% and Critical Rate by 20% for 1 hour. -->
 		<set name="icon" val="icon.skill0825" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="2000" />
@@ -1457,11 +1330,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7095" levels="1" name="Master's Blessing - Face Harden" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: The GM is always by your side. Enhances the armor surface to increase P. Def. by 10% for 10 minutes.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- The GM is always by your side. Enhances the armor surface to increase P. Def. by 10% for 1 hour. -->
 		<set name="icon" val="icon.skill0828" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="2000" />
@@ -1475,11 +1344,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="7096" levels="1" name="Master's Blessing - Blessing of Noblesse" >
-		<!--  Automatically generated from The Gracia Epilogue client files.
-		      Description: The GM is always by your side. The target's buff/de-buff doesn't disappear at death but is maintained. But the Blessing of Noblesse and the Amulet of Luck disappear.
-		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		      created 15-2-2010  12:29
-		-->
+    <!-- The GM is always by your side. The target's buff/de-buff doesn't disappear at death but is maintained. But the Blessing of Noblesse and the Amulet of Luck disappear. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1323" />
 		<set name="reuseDelay" val="2000" />

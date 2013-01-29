@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="2200" levels="3" name="Item - Jade Treasue Box">
+	<skill id="2200" levels="3" name="Item - Jade Treasure Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -8,7 +9,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2201" levels="3" name="Item - Blue Treasue Box">
+	<skill id="2201" levels="3" name="Item - Blue Treasure Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -16,7 +18,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2202" levels="3" name="Item - Yellow Treasue Box">
+	<skill id="2202" levels="3" name="Item - Yellow Treasure Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -24,7 +27,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2203" levels="3" name="Item - Orange Treasue Box">
+	<skill id="2203" levels="3" name="Item - Orange Treasure Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -32,7 +36,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2204" levels="3" name="Item - Violet Treasue Box">
+	<skill id="2204" levels="3" name="Item - Violet Treasure Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -40,7 +45,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2205" levels="3" name="Item - Red Treasue Box">
+	<skill id="2205" levels="3" name="Item - Red Treasure Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -48,7 +54,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2206" levels="3" name="Item - White Treasue Box">
+	<skill id="2206" levels="3" name="Item - White Treasure Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -56,7 +63,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2207" levels="3" name="Item - Black Treasue Box">
+	<skill id="2207" levels="3" name="Item - Black Treasure Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -64,7 +72,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2208" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2208" levels="1" name="Blessed Scroll: Enchant Armor (S Grade)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -72,7 +81,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2209" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2209" levels="1" name="Blessed Scroll: Enchant Armor (S Grade)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -80,7 +90,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2210" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2210" levels="1" name="Blessed Scroll: Enchant Armor (S Grade)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -88,7 +99,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2211" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2211" levels="1" name="Blessed Scroll: Enchant Armor (S Grade)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -96,7 +108,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2212" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2212" levels="1" name="Blessed Scroll: Enchant Armor (S Grade)">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -105,6 +118,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2213" levels="22" name="Escape - Talking Island Village">
+    <!-- none -->
 		<table name="#itemConsumeId">7117 7118 7119 7120 7121 7122 7123 7124 7125 7126 7127 7128 7129 7130 7131 7132 7133 7134 7135 7618 7619 9716</table>
 		<table name="#townId">1 2 3 4 5 7 6 8 19 9 9 13 10 10 12 11 15 14 16 15 15 17</table>
 		<set name="magicType" val="SPECIAL" />
@@ -121,6 +135,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2214" levels="10" name="Scroll of Escape to Talking Island">
+    <!-- none -->
 		<table name="#itemConsumeId">7554 7555 7556 7557 7558 9647 32226 0 0 7559</table>
 		<table name="#townId">1 2 3 4 5 17 1 0 0 9</table>
 		<set name="magicType" val="SPECIAL" />
@@ -137,6 +152,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2215" levels="4" name="Item - Quest Special Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -145,6 +161,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2216" levels="4" name="Item - Quest Special Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -153,6 +170,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2217" levels="5" name="Item - Quest Treasure Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -161,6 +179,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2218" levels="3" name="Item - Quest Sac">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -169,6 +188,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2219" levels="2" name="Item - Quest Sac">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -177,6 +197,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2220" levels="9" name="Item - Easy Green Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -185,6 +206,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2221" levels="9" name="Item - Easy Jade Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -193,6 +215,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2222" levels="9" name="Item - Easy Blue Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -201,6 +224,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2223" levels="9" name="Item - Easy Yellow Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -209,6 +233,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2224" levels="9" name="Item - Easy Orange Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -217,6 +242,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2225" levels="9" name="Item - Easy Violet Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -225,6 +251,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2226" levels="9" name="Item - Easy Red Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -233,6 +260,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2227" levels="9" name="Item - Easy White Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -241,6 +269,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2228" levels="9" name="Item - Easy Black Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -249,6 +278,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2229" levels="8" name="Treasure Chest Key - 1">
+    <!-- none -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 80</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -261,6 +291,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2230" levels="1" name="Item - Theme Sound Crystal">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -273,9 +304,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2231" levels="1" name="Amulet: Protection of Valakas">
-		<!--
-			Amulet: Protection of Valakas. Increases one's resistance to attack when Valakas' attacks with its front claws.
-		-->
+    <!-- Amulet: Protection of Valakas. Increases one's Resistance to attack when Valakas' attacks with its front claws. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_blesscharm_ward_val_i00" />
 		<set name="reuseDelay" val="1000" />
@@ -301,9 +330,7 @@
 		</for>
 	</skill>
 	<skill id="2232" levels="1" name="Amulet: Slay Valakas">
-		<!--
-			Amulet: Slay Valakas. Increases ones P.Atk. when fighting against Valakas.
-		-->
+    <!-- Amulet: Slay Valakas. Increases one's P. Atk. when fighting against Valakas. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_blesscharm_slay_val_i00" />
 		<set name="reuseDelay" val="1000" />
@@ -329,6 +356,7 @@
 		</for>
 	</skill>
 	<skill id="2233" levels="2" name="Amulet: Flames of Valakas">
+    <!-- none -->
 		<table name="#itemConsumeId">6653 6654</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -346,9 +374,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2234" levels="1" name="Soul Breaking Arrow">
-		<!--
-			Done by n0nam3
-		-->
+    <!-- Temporarily stuns and immobilizes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_destory_soul_arrow_i00" />
 		<set name="reuseDelay" val="30000" />
@@ -372,6 +398,7 @@
 		</cond>
 	</skill>
 	<skill id="2235" levels="1" name="Anteroom Door Key">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="3000" />
@@ -383,6 +410,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2236" levels="1" name="Chapel Door Key">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="3000" />
@@ -394,6 +422,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2237" levels="1" name="Key of Darkness">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="3000" />
@@ -405,6 +434,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2238" levels="1" name="Room of Splendor Key">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="3000" />
@@ -416,6 +446,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2239" levels="1" name="Petrifaction Scroll">
+    <!-- Turns target to stone. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.ect_piece_of_paper_white_i00" />
 		<set name="magicLevel" val="99" />
@@ -425,6 +456,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2240" levels="1" name="Hot Spring Nectar">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="itemConsumeId" val="8030" />
 		<set name="itemConsumeCount" val="1" />
@@ -442,6 +474,7 @@
 		</cond>
 	</skill>
 	<skill id="2241" levels="1" name="Hot Spring Mineral Water">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="itemConsumeId" val="8031" />
 		<set name="itemConsumeCount" val="1" />
@@ -459,6 +492,7 @@
 		</cond>
 	</skill>
 	<skill id="2242" levels="1" name="Hot Spring Fountain Water">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="itemConsumeId" val="8032" />
 		<set name="itemConsumeCount" val="1" />
@@ -476,6 +510,7 @@
 		</cond>
 	</skill>
 	<skill id="2243" levels="1" name="Hot Spring Sulfur">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="itemConsumeId" val="8033" />
 		<set name="itemConsumeCount" val="1" />
@@ -493,7 +528,7 @@
 		</cond>
 	</skill>
 	<skill id="2244" levels="1" name="Herb of Life">
-		<!-- Deprecated -->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -505,7 +540,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2245" levels="1" name="Herb of Mana">
-		<!-- Deprecated -->
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -517,6 +552,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2246" levels="1" name="Herb of Power">
+    <!-- Herb increases P. Atk. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_herb_red_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -535,6 +571,7 @@
 		</for>
 	</skill>
 	<skill id="2247" levels="1" name="Herb of Magic">
+    <!-- Herb increases M. Atk. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_herb_blue_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -553,10 +590,7 @@
 		</for>
 	</skill>
 	<skill id="2248" levels="1" name="Bless of Fire">
-		<!--
-			Description:
-			Causes normal physical attacks to become fire attacks.
-		-->
+    <!-- Causes normal physical attacks to become fire attacks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
 		<set name="reuseDelay" val="10000" />
@@ -573,10 +607,7 @@
 		</for>
 	</skill>
 	<skill id="2249" levels="1" name="Bless of Water">
-		<!--
-			Description:
-			Causes normal physical attacks to become water attacks.
-		-->
+    <!-- Causes normal physical attacks to become water attacks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_water_crystal_i00" />
 		<set name="reuseDelay" val="10000" />
@@ -593,10 +624,7 @@
 		</for>
 	</skill>
 	<skill id="2250" levels="1" name="Bless of Wind">
-		<!--
-			Description:
-			Causes normal physical attacks to become wind attacks.
-		-->
+    <!-- Causes normal physical attacks to become wind attacks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
 		<set name="reuseDelay" val="10000" />
@@ -613,10 +641,7 @@
 		</for>
 	</skill>
 	<skill id="2251" levels="1" name="Bless of Earth">
-		<!--
-			Description:
-			Causes normal physical attacks to become earth attacks.
-		-->
+    <!-- Causes normal physical attacks to become earth attacks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
 		<set name="reuseDelay" val="10000" />
@@ -633,10 +658,7 @@
 		</for>
 	</skill>
 	<skill id="2252" levels="1" name="Bless of Darkness">
-		<!--
-			Description:
-			Causes normal physical attacks to become dark attacks.
-		-->
+    <!-- Causes normal physical attacks to become dark attacks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
 		<set name="reuseDelay" val="10000" />
@@ -652,11 +674,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2253" levels="1" name="Bless of Holyness">
-		<!--
-			Description:
-			Causes normal physical attacks to become holy attacks.
-		-->
+	<skill id="2253" levels="1" name="Bless of Holy">
+    <!-- Causes normal physical attacks to become holy attacks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
 		<set name="reuseDelay" val="10000" />
@@ -673,11 +692,7 @@
 		</for>
 	</skill>
 	<skill id="2254" levels="3" name="Crystal of Fire">
-		<!--
-			FIXME: В данном варианте реализации снимает и бафф и дебафф.
-			Description:
-			Eliminates vulnerability to fire attacks.
-		-->
+    <!-- none -->
 		<table name="#magicLevel">20 40 70</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -696,11 +711,7 @@
 		</for>
 	</skill>
 	<skill id="2255" levels="3" name="Crystal of Water">
-		<!--
-			FIXME: В данном варианте реализации снимает и бафф и дебафф.
-			Description:
-			Eliminates vulnerability to water attacks.
-		-->
+    <!-- none -->
 		<table name="#magicLevel">20 40 70</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -719,11 +730,7 @@
 		</for>
 	</skill>
 	<skill id="2256" levels="3" name="Crystal of Wind">
-		<!--
-			FIXME: В данном варианте реализации снимает и бафф и дебафф.
-			Description:
-			Eliminates vulnerability to wind attacks.
-		-->
+    <!-- none -->
 		<table name="#magicLevel">20 40 70</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -742,11 +749,7 @@
 		</for>
 	</skill>
 	<skill id="2257" levels="3" name="Crystal of Earth">
-		<!--
-			FIXME: В данном варианте реализации снимает и бафф и дебафф.
-			Description:
-			Eliminates vulnerability to earth attacks.
-		-->
+    <!-- none -->
 		<table name="#magicLevel">20 40 70</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -765,11 +768,7 @@
 		</for>
 	</skill>
 	<skill id="2258" levels="3" name="Crystal of Darkness">
-		<!--
-			FIXME: В данном варианте реализации снимает и бафф и дебафф.
-			Description:
-			Eliminates vulnerability to darkness attacks.
-		-->
+    <!-- none -->
 		<table name="#magicLevel">20 40 70</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -787,12 +786,8 @@
 			<set order="0x80" stat="defenceUnholy" val="0" />
 		</for>
 	</skill>
-	<skill id="2259" levels="3" name="Crystal of Holyness">
-		<!--
-			FIXME: В данном варианте реализации снимает и бафф и дебафф.
-			Description:
-			Eliminates vulnerability to holy attacks.
-		-->
+	<skill id="2259" levels="3" name="Crystal of Holy">
+    <!-- none -->
 		<table name="#magicLevel">20 40 70</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -811,6 +806,7 @@
 		</for>
 	</skill>
 	<skill id="2260" levels="1" name="Key of Riddles">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -819,6 +815,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2261" levels="9" name="Item - Hard Green Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -827,6 +824,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2262" levels="9" name="Item - Hard Jade Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -835,6 +833,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2263" levels="9" name="Item - Hard Blue Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -843,6 +842,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2264" levels="9" name="Item - Hard Yellow Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -851,6 +851,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2265" levels="9" name="Item - Hard Orange Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -859,6 +860,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2266" levels="9" name="Item - Hard Violet Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -867,6 +869,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2267" levels="9" name="Item - Hard Red Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -875,6 +878,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2268" levels="9" name="Item - Hard White Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -883,6 +887,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2269" levels="9" name="Item - Hard Black Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -891,6 +896,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2270" levels="9" name="Item - Adventurer Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -899,6 +905,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2271" levels="1" name="Item - Hot Spring Fish">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -907,6 +914,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2272" levels="1" name="Item - Fight Song Crystal">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -919,6 +927,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2273" levels="1" name="Item - Red Devil Support Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -926,7 +935,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="2274" levels="9" name="Fisherman's Potion – Green">
+	<skill id="2274" levels="9" name="u,Fisherman's Potion – Green">
+    <!-- u,Fisherman's Potion – Green. Fishing Mastery Level is now reduced. You can now catch green fish. -->
 		<table name="#level">3 6 9 12 15 18 21 24 27</table>
 		<table name="#id">8193 8194 8195 8196 8197 8198 8199 8200 8201</table>
 		<table name="#power">2 5 8 11 14 17 20 23</table>
@@ -949,6 +959,7 @@
 		</for>
 	</skill>
 	<skill id="2275" levels="1" name="Fisherman's Recovery Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_oblivion_black_i00" />
 		<set name="magicLevel" val="1" />
@@ -961,6 +972,7 @@
 		<set name="negateSkill" val="2274" />
 	</skill>
 	<skill id="2276" levels="1" name="Dewdrop of Destruction">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
@@ -971,6 +983,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2277" levels="6" name="Event Gift Box">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -979,6 +992,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2278" levels="3" name="Herb of Life">
+    <!-- none -->
 		<table name="#power">15 25 100</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -995,6 +1009,7 @@
 		<set name="isHideUseMessage" val="true" />
 	</skill>
 	<skill id="2279" levels="3" name="Herb of Mana">
+    <!-- none -->
 		<table name="#power">12 18 100</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
@@ -1011,6 +1026,7 @@
 		<set name="isHideUseMessage" val="true" />
 	</skill>
 	<skill id="2280" levels="1" name="Herb of Power">
+    <!-- Temporarily increases P. Atk. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_herb_red_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -1030,6 +1046,7 @@
 		</for>
 	</skill>
 	<skill id="2281" levels="1" name="Herb of Magic">
+    <!-- Temporarily increases M. Atk. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_herb_blue_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -1049,6 +1066,7 @@
 		</for>
 	</skill>
 	<skill id="2282" levels="1" name="Herb of Atk. Spd.">
+    <!-- Temporarily increases Atk. Spd. Effect 2. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="BranchSys2.icon.etc_attack_sp_herb_i01" />
 		<set name="reuseDelay" val="2000" />
@@ -1068,6 +1086,7 @@
 		</for>
 	</skill>
 	<skill id="2283" levels="1" name="Herb of Casting Spd.">
+    <!-- Temporarily increases Casting Spd. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_magic_sp_herb_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -1087,6 +1106,7 @@
 		</for>
 	</skill>
 	<skill id="2284" levels="1" name="Herb of Critical Attack">
+    <!-- Temporarily increases critical attack rate. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_critical_herb_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -1106,6 +1126,7 @@
 		</for>
 	</skill>
 	<skill id="2285" levels="1" name="Herb of Speed">
+    <!-- Temporarily increases Speed. Effect 2. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="BranchSys2.icon.etc_move_herb_i01" />
 		<set name="reuseDelay" val="2000" />
@@ -1125,6 +1146,7 @@
 		</for>
 	</skill>
 	<skill id="2286" levels="6" name="Scroll: Recovery (No Grade)">
+    <!-- none -->
 		<table name="#itemConsumeId">8594 8595 8596 8597 8598 8599</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 85</table>
@@ -1145,6 +1167,7 @@
 		</cond>
 	</skill>
 	<skill id="2287" levels="6" name="Elixir of Life (No Grade)">
+    <!-- none -->
 		<table name="#itemConsumeId">8622 8623 8624 8625 8626 8627</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 84</table>
@@ -1169,6 +1192,7 @@
 		</cond>
 	</skill>
 	<skill id="2288" levels="6" name="Elixir of Mental Strength (No Grade)">
+    <!-- none -->
 		<table name="#itemConsumeId">8628 8629 8630 8631 8632 8633</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 84</table>
@@ -1193,6 +1217,7 @@
 		</cond>
 	</skill>
 	<skill id="2289" levels="6" name="Elixir of CP (No Grade)">
+    <!-- none -->
 		<table name="#itemConsumeId">8634 8635 8636 8637 8638 8639</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 84</table>
@@ -1217,6 +1242,7 @@
 		</cond>
 	</skill>
 	<skill id="2290" levels="1" name="Coffer of Shadows">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1225,6 +1251,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2291" levels="1" name="Facelifting Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1234,6 +1261,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2292" levels="1" name="Facelifting Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1243,6 +1271,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2293" levels="1" name="Facelifting Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1252,6 +1281,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2294" levels="1" name="Dye Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1261,6 +1291,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2295" levels="1" name="Dye Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1270,6 +1301,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2296" levels="1" name="Dye Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1279,6 +1311,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2297" levels="1" name="Dye Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1288,6 +1321,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2298" levels="1" name="Hair Style Change Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1297,6 +1331,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2299" levels="1" name="Hair Style Change Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />

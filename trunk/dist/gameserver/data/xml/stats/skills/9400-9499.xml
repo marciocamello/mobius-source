@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-    <skill id="9404" levels="1" name="Herb of Mysterious Power">
-        <!--Herb of Mysterious Power P. Atk. is increased by 100% for 1 minute 30 seconds-->
+    <skill id="9404" levels="1" name="Mysterious Herb of Power">
+    <!-- P. Atk. is increased by 100% for 1 minute 30 seconds. -->
         <set name="magicType" val="SPECIAL"/>
         <set name="reuseDelay" val="2000"/>
         <set name="magicLevel" val="40"/>
@@ -19,8 +19,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="9404" levels="1" name="Herb with Mysterious Magic Power">
-        <!--Herb with Mysterious Magic Power M. Atk. is increased by 400% for 1 minute 30 seconds-->
+    <skill id="9404" levels="1" name="Mysterious Herb of Power">
+    <!-- P. Atk. is increased by 100% for 1 minute 30 seconds. -->
         <set name="magicType" val="SPECIAL"/>
         <set name="reuseDelay" val="2000"/>
         <set name="magicLevel" val="40"/>
@@ -38,5 +38,4 @@
             </effect>
         </for>
     </skill>
-
 </list>

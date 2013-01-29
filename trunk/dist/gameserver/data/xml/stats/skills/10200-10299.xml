@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="10245" levels="1" name="Уникальное Умение Волшебника - Пассивное">
+	<skill id="10245" levels="1" name="Wizard - Individual Passive">
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -9,7 +9,8 @@
 			<mul order="0x30" stat="runSpd" val="1.3" />
 		</for>
 	</skill>
-	<skill id="10246" levels="1" name="Уникальное Умение Волшебника">
+	<skill id="10246" levels="1" name="Wizard - Individual">
+    <!-- Atk. Spd. + 30% for 5 seconds. -->
 		<table name="#spd">1.3</table>
 		<table name="#effectPoint">438</table>
 		<table name="#magicLevel">85</table>
@@ -26,7 +27,7 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10247" levels="1" name="Уникальное Умение Рыцаря - Пассивное">
+    <skill id="10247" levels="1" name="Knight - Individual Passive">
 		<table name="#spd">1.03</table>
 		<table name="#effectPoint">438</table>
 		<table name="#magicLevel">85</table>
@@ -39,7 +40,8 @@
 			<mul order="0x30" stat="runSpd" val="#spd" />
 		</for>
 	</skill>
-    <skill id="10248" levels="1" name="Уникальное Умение Рыцаря">
+    <skill id="10248" levels="1" name="Knight - Individual">
+    <!-- Atk. Spd. + 30% for 5 seconds. -->
 		<table name="#spd">1.3</table>
 		<table name="#effectPoint">438</table>
 		<table name="#magicLevel">85</table>
@@ -56,7 +58,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10249" levels="1" name="Обездвиживающая Атака Рыцаря">
+    <skill id="10249" levels="1" name="">
+    <!-- Inflicts a powerful blow on the target. -->
 		<table name="#effectPoint">655</table>
 		<table name="#magicLevel">85</table>
 		<table name="#time">9</table>
@@ -87,7 +90,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10250" levels="1" name="Оглушающая Атака Рыцаря">
+    <skill id="10250" levels="1" name="">
+    <!-- Inflicts a powerful blow on the target. -->
 		<table name="#effectPoint">655</table>
 		<table name="#magicLevel">85</table>
 		<table name="#time">9</table>
@@ -118,15 +122,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10251" levels="1" name="Великое Владение Оружием">
-	<!--
-		СИЛ +2, Скор. Атк. +25%. 
-		При использовании меча/дробящего оружия/копья Физ. Атк. +376, Точность +3. 
-		Увеличивает количество атакуемых врагов при использовании копья. 
-		После Физ. Атк. с вероятностью 50% получает силовую энергию. 
-		Дает шанс обнулить или увеличить в два раза время перезарядки умений. 
-		Зависит от СИЛ.
-	-->
+    <skill id="10251" levels="1" name="Superior Weapon Mastery">
+    <!-- STR + 2, Atk. Spd. + 25%, P. Atk. + 376 and P. Accuracy + 3 when a sword, blunt, or spear weapon is equipped. Increases the number of possible targets during a spear attack. 50% chance of triggering Lightning Force during a critical attack. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your STR. -->
 		<table name="#pAtk">376</table>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -150,10 +147,8 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10252" levels="1" name="Великое Владение Парным Оружием">
-	<!--
-		Увеличивает СИЛ на 2. При использовании парных мечей/парного дробящего оружия/кастетов Физ. Атк. +376, Точность на 3.
-	-->
+	<skill id="10252" levels="1" name="Superior Dual Weapon Mastery">
+    <!-- STR + 2, P. Accuracy + 3 and P. Atk. + 376 when using a dual sword, dual blunt weapon, or fist weapon. -->
 		<table name="#pAtk">376</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -173,10 +168,8 @@
 			</add>
 		</for>
 	</skill>
-    <skill id="10253" levels="1" name="Великое Владение Тяжелой Броней">
-	<!--
-		Увеличивает СИЛ на 2, при использовании тяжелых доспехов Физ. Защ. +104.
-	-->
+    <skill id="10253" levels="1" name="Superior Heavy Armor Mastery">
+    <!-- STR + 2. Max HP + 5386 and P. Def. + 104 when equipped with a Heavy armor. -->
 		<table name="#pDef">104</table>
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -193,11 +186,8 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10254" levels="1" name="Великое Владение Легкой Броней">
-	<!--
-		Увеличивает СИЛ на 2. 
-		При использовании легких доспехов Физ. Защ. +89, Физ. Точность +3, Физ. Уклонение +6, Скорость +10, шанс вражеской Крит. Атк. -5%.
-	-->
+	<skill id="10254" levels="1" name="Superior Light Armor Mastery">
+    <!-- STR + 2. Max HP + 5368, P. Def. + 89, P. Accuracy + 3, P. Evasion + 6, and Spd. + 10 when equipped with a Light armor. Chance of receiving a critical attack - 5%. -->
   		<table name="#pDef">89</table>
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -226,12 +216,8 @@
 			</mul>
 		</for>
 	</skill>
-    <skill id="10255" levels="1" name="Великое Владение Силой">
-	<!--
-		Поглощает Силовую Энергию цели. 
-		Вероятность поглощения составляет 20% при обычной Физ. Атк. и 40% при Крит. Атк. 
-		Позволяет поглощать Силовую Энергию максимум 10-го уровня.
-	-->
+    <skill id="10255" levels="1" name="Superior Momentum Mastery">
+    <!-- Absorbs Momentum by 20% during a normal physical attack and 40% during a critical attack. Can absorb up to 10 Momentum levels. -->
 		<table name="#effectPoint">655</table>
 		<table name="#power">108</table>
 		<table name="#magicLevel">85</table>
@@ -248,12 +234,8 @@
 		<set name="absorbAbs" val="0" />
 		<for />
 	</skill>
-    <skill id="10256" levels="1" name="Великое Владение HP">
-	<!--
-		Увеличивает СИЛ на 2. 
-		Также увеличивает макс. HP на 606, макс. CP на 296, бонус восстановления HP на 7.3, если персонаж сидит - на 7, бонус восстановления MP на 3.7. 
-		Дополнительно, если HP ниже 30%, то Физ. Атк. +172.
-	-->
+    <skill id="10256" levels="1" name="Superior HP Mastery">
+    <!-- STR + 2, Max HP + 606, Max CP + 296 and HP Recovery Bonus + 7.3. While sitting, HP Recovery Bonus + 7 and MP recovery bonus + 3.7. When HP falls below 30%, P. Atk. + 172. -->
 		<table name="#maxHp">606</table>
 		<table name="#maxCp">296</table>
 		<table name="#regHp">7.3</table>
@@ -289,10 +271,8 @@
 			</add>
 		</for>
 	</skill>
-    <skill id="10257" levels="1" name="Великое Владение Духом">
-	<!--
-		Увеличивает СИЛ на 2, сопротивление удержанию, усыплению, кровотечению, ментальным атакам, яду на 30.
-	-->
+    <skill id="10257" levels="1" name="Superior Spirit Mastery">
+    <!-- STR + 2 and resistance to Hold/Sleep/Bleed/Mind/Poison attacks + 30. -->
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="relationSkillsId" val="329;328;195" /> 
@@ -307,13 +287,8 @@
 			<add order="0x40" stat="poisonResist" val="30" />
 		</for>
 	</skill>
-    <skill id="10258" levels="8" name="Разрушение Брони">
-	<!--
-		Атакует врагов, наносит дополнительный урон и снижает Физ. Защ. Мощность 11159. 
-		Вытягивает из противника Силовую Энергию. 
-		Требуется меч/дробящее оружие/древковое оружие/кастет/парное дробящее оружие/парные мечи. 
-		Сверхудар. Крит. Удар.
-	-->
+    <skill id="10258" levels="8" name="Armor Destruction">
+    <!-- Attacks the target with 11159 power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. Over-hit. Critical. -->
 		<table name="#Power">11159 11936 12714 13941 14269 15046 15824 16601</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#powerPvP">0</table>
@@ -373,15 +348,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10260" levels="8" name="Мегаудар">
-	<!--
-		Атакует врага и наносит дополнительный урон. Мощность 15303. 
-		Урон, наносимый врагу, увеличивается вместе с количеством использованной Силовой Энергии. 
-		При использовании максимум 5 уровней Силовой Энергии урон увеличивается на 30%, когда же Силовая Энергия не используется - уменьшается на 20%. 
-		Требуется меч/дробящее оружие/древковое оружие/кастет/парное дробящее оружие/парные мечи. 
-		Сверхудар. Крит. Удар.
-		Игнорирует Защиту Щитом.
-	-->
+    <skill id="10260" levels="8" name="Mega Strike">
+    <!-- Attacks the target with 15303 Power added to P. Atk. and increases damage when using Momentum. Damage is increased by 6% for each level of Momentum used up to 5. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. Over-hit. Critical. Ignores shield defense. -->
 		<table name="#power">15303 15831 16889 17947 19005 20063 21121 22179</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#powerPvP">0</table>
@@ -449,14 +417,8 @@
 			<table name="#reuseDelay">6500 6000 5500 5000 4500 4000 3500 3000 2500 2000</table>
 		</enchant9>
 	</skill>
-    <skill id="10262" levels="6" name="Мощный Бомбардир">
-	<!--
-		Атакует врага, наносит дополнительный урон. Мощность 20483. 
-		Также сшибает врага с ног на 2 сек. 
-		Урон, наносимый врагу, увеличивается вместе с количеством использованной Силовой Энергии. 
-		При использовании максимум 5 уровней Силовой Энергии урон увеличивается на 30%, когда же Силовая Энергия не используется - уменьшается на 20%. Требуется меч/дробящее оружие/древковое оружие/кастет/парное дробящее оружие/парные мечи.
-		Сверхудар. Крит. Удар. Игнорирует Защиту Щитом.
-	-->
+    <skill id="10262" levels="6" name="Power Bomber">
+    <!-- Inflicts a powerful strike on the target with 20483 power added to P. Atk. and Knock Down the target for 2 seconds, and increases damage when using Momentum. Damage is increased by 6% for each level of Momentum used up to 5. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. Critical. Ignores shield defense. -->
 		<table name="#power">20483 22595 24708 26821 28934 30343</table>
 		<table name="#powerPvP">0</table>
 		<table name="#magicLevel">85 88 91 94 97 99</table>
@@ -516,12 +478,8 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="3" val="0" />
 		</for>
 	</skill>
-    <skill id="10263" levels="8" name="Источник Урагана">
-	<!--
-		Атакует врага и наносит дополнительный урон. Мощность 551. 
-		Поглощает Силовую Энергию цели. 
-		Требуется меч/дробящее оружие/древковое оружие/кастет/парное дробящее оружие/парные мечи.
-	-->
+    <skill id="10263" levels="8" name="Hurricane Blaster">
+    <!-- Attacks the target with 551 power and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. -->
 		<table name="#Power">551 566 598 630 662 693 725 757</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#element">none</table>
@@ -575,15 +533,8 @@
 		</enchant8>
 		<enchant9 levels="10" name="Recycle"/>
 	</skill>
-    <skill id="10265" levels="8" name="Взрыв Энергии">
-	<!--
-		Атакует врага, наносит дополнительный урон. Мощность 11557.
-		Также оглушает противника на 2 сек. и заставляет его сменить цель. 
-		При использовании меча/дробящего оружия/кастета Мощность уменьшается на 10%,
-		при использовании копья Мощность увеличивается на 50%.
-		Требуется меч/дробящее оружие/древковое оружие/кастет/парное дробящее оружие/парные мечи. 
-		Сверхудар. Крит. Удар.
-	-->
+    <skill id="10265" levels="8" name="Eruption">
+    <!-- Attacks nearby enemies with 11557 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. Over-hit. Critical. -->
 		<table name="#Power">11557 11956 12754 13553 14351 15150 15948 16747</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#element">none</table>
@@ -639,11 +590,8 @@
 			<effect name="Stun" time="2" val="0" effectPower="65" effectType="STUN" stackOrder="1" stackType="stun" />
 		</for>
 	</skill>
-    <skill id="10266" levels="8" name="Удар Гиганта">
-	<!--
-		Сильный удар кулаком по земле, оглушающий врагов вокруг на 3 сек. 
-		Требуется меч/дробящее оружие/древковое оружие/кастет/парное дробящее оружие/парные мечи
-	-->
+    <skill id="10266" levels="8" name="Giant Punch">
+    <!-- Strikes down at the ground with a fist to Knock Down nearby enemies for 3 seconds. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. -->
 		<table name="#mpConsume2">76 79 81 84 87 90 92 95</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#reuseDelay">120000</table>
@@ -679,11 +627,8 @@
 			<effect name="Stun" time="3" val="0" stackOrder="1" stackType="stun" />
 		</for>
 	</skill>
-    <skill id="10267" levels="6" name="Бросок Урагана">
-	<!--
-		Бросается к врагу, атакует плечом и оглушает на 3 сек. 
-		Требуется меч/дробящее оружие/древковое оружие/кастет/парное дробящее оружие/парные мечи.
-	-->
+    <skill id="10267" levels="6" name="Hurricane Rush">
+    <!-- Shoulder charge the target to Stun it for 3 seconds. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. -->
 		<table name="#mpConsume2">38 39 41 43 44 47</table>
 		<table name="#magicLevel">85 87 90 93 96 99</table>
 		<table name="#reuseDelay">15000</table>
@@ -731,10 +676,8 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
 	</skill>
-    <skill id="10268" levels="6" name="Громовые Раскаты">
-	<!--
-		Использует энергию ветра. Понижает HP врагов вокруг.
-	-->
+    <skill id="10268" levels="6" name="Rolling Thunder">
+    <!-- Becomes enveloped with the energy of a whirlwind. Continuously decreases HP of nearby enemies. When used, the user's MP is continuously decreased. -->
 		<table name="#mp">1</table>
         <table name="#level"> 1 2 3 4 5 6 </table>
 		<table name="#magicLevel">85 87 90 93 96 99</table>		
@@ -751,14 +694,8 @@
 				</effect>
 			</for>
 	</skill>
-    <skill id="10269" levels="7" name="Атака в Прыжке">
-	<!--
-		Атакует врагов в прыжке, наносит дополнительный урон. Мощность 10508. 
-		Также в течение 5 сек. уменьшает Скорость на 70%.
-		Использует до 5 уровней Силовой Энергии.
-		Урон, наносимый врагу, увеличивается вместе с количеством израсходованной энергии. 
-		Требуется меч/дробящее оружие/древковое оружие/кастет/парное дробящее оружие/парные мечи.
-	-->
+    <skill id="10269" levels="7" name="Jump Attack">
+    <!-- Jumps to attack frontal enemies with 10508 power added to P. Atk. and decreases their Speed by 70% for 5 seconds. The more Momentum used the more damage inflicted, up to a maximum of 5 Momentum levels. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. Over-hit. Critical. -->
 		<table name="#pwr">10508 11190 11872 12554 13236 13918 14600</table>
 		<table name="#magicLevel">87 89 91 93 95 97 99</table>
 		<set name="relationSkillsId" val="793" /> 
@@ -793,10 +730,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10270" levels="1" name="Последняя Энергия">
-	<!--
-		Мгновенно восстанавливает 35% макс. HP и 15% макс. CP. В течение 2 мин. увеличивает макс. HP на 35%, макс. CP на 15%.
-	-->
+    <skill id="10270" levels="1" name="Second Wind">
+    <!-- Immediately recovers Max HP by 35% and Max CP by 15% and for 2 minutes, increases Max HP by 35% and Max CP by 15%. -->
 		<set name="relationSkillsId" val="1561;121;20006;441" /> 
 		<set name="magicLevel" val="93" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -811,10 +746,8 @@
 			<effect count="1" name="HealCPPercent" time="0" val="15" />
 		</for>
 	</skill>
-    <skill id="10271" levels="2" name="Мощная Провокация">
-	<!--
-		Разъяряет противника и в течение 10 сек. увеличивает Физ. Атк./Скор. Атк., но уменьшает Физ. Защ.
-	-->
+    <skill id="10271" levels="2" name="Power Provoke">
+    <!-- Provokes nearby enemies. Raises their P. Atk. and Atk. Spd. for 10 seconds but lower their P. Def. -->
 		<table name="#effectPoint">2384 2684</table>
 		<table name="#magicLevel">97 99</table>
 		<table name="#activateRate">75</table>
@@ -839,10 +772,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10273" levels="4" name="Обезоруживание">
-	<!--
-		В течение 5 сек. обезоруживает врагов вокруг и уменьшает Физ./Маг. Защ. на 10%
-	-->
+    <skill id="10273" levels="4" name="Lightning Disarm">
+    <!-- Disarms nearby enemies for 5 seconds. Lowers P. Atk. and M. Atk. by 10%. -->
 		<table name="#Def">0.9 0.85 0.8 0.75</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#activateRate">75</table>
@@ -866,13 +797,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10274" levels="4" name="Берсерк">
-	<!--
-		Делает персонажа практически непобедимым. 
-		Увеличивает устойчивость к злым чарам/Скорость/Физ. Атк./Физ. Точность/Физ. Защ./Скор. Атк./силу Крит. Атк.
-		Восстанавливает 20% HP после смерти цели. При HP ниже 60%: Физ. Атк. +10%, шанс Крит. Атк. +100. 
-		При HP ниже 30%: Физ. Атк. +30%, шанс Крит. Атк. +300. Доступно при HP ниже 60%.
-	-->
+    <skill id="10274" levels="4" name="Berserker Rage">
+    <!-- You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When the target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. When HP falls below 30%, increases P. Atk. by 30% and Critical Rate by an additional 300. Can be used when HP is below 60%. -->
 		<table name="#magicLevel">85 90 95 99</table>
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="target" val="TARGET_SELF" />
@@ -913,11 +839,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10275" levels="1" name="Удар Вечности">
-	<!--
-		Атакует врага мощным ударом и наносит дополнительный урон. Мощность 34026. 
-		Требуется меч/дробящее оружие/древковое оружие/кастет/парное дробящее оружие/парные мечи. Сверхудар. Крит. Удар.
-	-->
+    <skill id="10275" levels="1" name="Infinity Strike">
+    <!-- Inflicts a powerful attack on the target with 34026 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. Over-hit. Critical. -->
     	<table name="#power">34026</table>
     	<table name="#powerPvP">0</table>
     	<set name="magicLevel" val="99" />
@@ -938,10 +861,8 @@
 		</enchant2>
 		<enchant3 levels="10" name="Recycle"/>
 	</skill>
-    <skill id="10276" levels="1" name="Сила Природы">
-	<!--
-		Мгновенно увеличивает Силовую Энергию до предела.
-	-->
+    <skill id="10276" levels="1" name="Force of Nature">
+    <!-- Immediately increases Momentum to its maximum level. -->
 		<table name="#charges">10</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" val="#magicLevel" />
@@ -968,10 +889,8 @@
 			<effect count="1" name="CombatPointHealOverTime" time="0" val="#healCp" />
 		</for>
 	</skill>
-	<skill id="10277" levels="4" name="Последний Крик">
-	<!--
-		В течение 2 мин. Физ. Атк. +20%, урон от умений на 10%. Дополнительно увеличивает урон от умений и Физ. Атк. при PVP на 5%.
-	-->
+	<skill id="10277" levels="4" name="Final Cry">
+    <!-- Increases P. Atk. + 20% and skill damage + 10% for 2 minutes. Increases general/skill attack damage + 5% during PVP. -->
 		<table name="#time">120</table>
 		<table name="#pAtk">1.2 1.22 1.26 1.33</table>
 		<table name="#magicLevel">85 86 87 88</table>
@@ -994,10 +913,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10278" levels="8" name="Ослабление Гнева">
-	<!--
-		Уменьшает агрессивность врагов по отношению к персонажу.
-	-->
+    <skill id="10278" levels="8" name="Reduce Anger">
+    <!-- Decreases the aggression of nearby enemies toward the caster. -->
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="activateRate" val="90" /> 
@@ -1011,10 +928,8 @@
 			<effect count="3" name="UnAggro" stackOrder="1" stackType="UnAggro" time="120" val="0" />
 		</for>
 	</skill>
-    <skill id="10279" levels="1" name="Барьер Великана">
-	<!--
-		Снимает с персонажа злые чары. Также в течение 10 сек. защищает от обычных атак, атак умениями и злых чар. Дополнительно увеличивает Скорость на 30%. Доступно при HP ниже 20%.
-	-->
+    <skill id="10279" levels="1" name="Giant Barrier">
+    <!-- Removes all debuffs and for 10 seconds, becomes invincible against attacks, skills, and debuffs. Increases Speed + 30%. Can be used when HP is below 20%. -->
 		<table name="#time">10</table>
 		<set name="magicLevel" val="91" />
 		<set name="target" val="TARGET_SELF" />
@@ -1037,10 +952,8 @@
 			<effect name="Petrification" time="10" val="0" />
 		</for>
 	</skill>
-    <skill id="10280" levels="1" name="Заряд Энергии">
-	<!--
-		Повышает энергию за счет HP. Доступно максимум до 10-го уровня.
-	-->
+    <skill id="10280" levels="1" name="Momentum Charge">
+    <!-- Continuously consumes HP to produce Momentum. Possible up to stage 10. -->
         <set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="OP_TOGGLE" />
@@ -1051,12 +964,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10281" levels="2" name="Ударная Волна">
-	<!--
-		Атакует врага ударной волной и наносит дополнительный урон. Мощность 21958. 
-		Требуется меч/дробящее оружие/древковое оружие/кастет/парное дробящее оружие/парные мечи.
-		Сверхудар. Крит. Удар.
-	-->
+    <skill id="10281" levels="2" name="Sonic Star">
+    <!-- Attack nearby enemies at the speed of light with 21958 power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. Over-hit. Critical. -->
 		<table name="#pwr">21958 23344</table>
 		<table name="#powerPvP">0</table>
 		<table name="#magicLevel">95 96</table>
@@ -1078,16 +987,16 @@
 		</enchant2>
 		<enchant3 levels="10" name="Recycle"/>
 	</skill>
-    <skill id="10283" levels="1" name="Добавление Энергии">
-       <!-- Походу вот этот скилл помоему связан со скилом 10281 -->
+    <skill id="10283" levels="1" name="Increase Momentum">
+    <!-- none -->
        <set name="operateType" val="OP_PASSIVE" />
        <set name="skillType" val="NOTDONE" />
        <set name="target" val="TARGET_SELF" />
        <for>
        </for>
 	</skill>
-    <skill id="10284" levels="3" name="Сила Энергии">
-       <!--  По сути верно но нада проверять! -->
+    <skill id="10284" levels="3" name="Lightning Force">
+    <!-- You are imbued with Rage. Atk. Spd. + 10% when equipped with a fist weapon. P. Atk. + 10% when equipped with a sword/blunt/dual sword/spear weapon. 20% chance of raising Lightning Force to level 2 during a critical attack. -->
 		<table name="#pAtkSpd">1.10 1.12 1.15</table>
 		<table name="#pAtk">1.10 1.15 1.20</table>
 		<table name="#chance">20 10 0</table>
@@ -1118,7 +1027,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10285" levels="1" name="Поглощение HP">
+    <skill id="10285" levels="1" name="HP Absorb">
+    <!-- Recovers HP by 20%. -->
 		<table name="#effectPoint">313</table>
 		<table name="#heal">20</table>
 		<table name="#magicLevel">85</table>
@@ -1132,11 +1042,8 @@
 			<effect count="1" name="HealPercent" time="0" val="#heal" />
 		</for>
 	</skill>
-    <skill id="10286" levels="1" name="Великое Сопротивление">
-	<!--
-		Увеличивает СИЛ на 2, Маг. Защ. на 199, сопротивление четырем стихиям на 20. 
-		С определенной вероятностью после получения урона увеличивает Маг. Защ. и сопротивление стихиям.
-	-->
+    <skill id="10286" levels="1" name="Superior Resistance">
+    <!-- STR + 2, M. Def. + 199, and resistance to Fire/Water/Wind/Earth + 20. When receiving damage, there is a chance of M. Def. and attributes resistance increasing. -->
 		<table name="#mDef">199</table>
 		<table name="#vuln">20</table>
 		<table name="#magicLevel">85</table>
@@ -1158,8 +1065,8 @@
 			<add order="0x40" stat="defenceEarth" val="20" />
 		</for>
 	</skill>
-    <skill id="10287" levels="6" name="Громовые Раскаты">
-		<!-- Каждую секунду уменьшает HP на 225. -->
+    <skill id="10287" levels="6" name="Rolling Thunder">
+    <!-- HP decreases by 225 per second. -->
         <table name="#magicLevel">89 91 93 95 97 99</table>
         <table name="#dot">675 684 696 705 714 726</table>
         <table name="#abnormalLvl">1 2 3 4 5 6</table>
@@ -1173,12 +1080,8 @@
 			<effect abnormal="poison" count="5" name="Poison" stackOrder="#abnormalLvl" time="3" val="#dot" />
 		</for>
 	</skill>
-	<skill id="10288" levels="8" name="Ураганный Шторм">
-	<!--
-		Атакует противника и наносит дополнительный урон врагам вокруг цели. Мощность 11557. 
-		При использовании меча/дробящего оружия/кастета Мощность уменьшается на 10%, при использовании копья Мощность увеличивается на 50%. 
-		Требуется меч/дробящее оружие/древковое оружие/кастет/парное дробящее оружие/парные мечи. Сверхудар. Крит. Удар.
-	-->
+	<skill id="10288" levels="8" name="Hurricane Storm">
+    <!-- Attacks the target and nearby enemies with 11557 Power added to P. Atk. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. Over-hit. Critical. -->
 		<table name="#pwr">11557 11956 12754 13553 14351 15150 15948 16747</table>
 		<table name="#magicLevel">85 86 87 88 89 90 91 92</table>
 		<set name="nextAction" val="attack" />
@@ -1195,11 +1098,8 @@
 			</not>
 		</cond>
 	</skill>
-    <skill id="10289" levels="4" name="Копье Доблести">
-	<!--
-		В течение 60 сек. увеличивает эффективность умений на 30%. 
-		Дополнительно увеличивает урон от умений и Физ. Атк. на 5% при PVP.
-	-->
+    <skill id="10289" levels="4" name="Boost">
+    <!-- Increases skills' effect by 30% for 60 seconds and normal/skill attack damage by 5% during PVP. -->
 		<set name="aggroPoints" val="597" />
 		<set name="magicLevel" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1213,15 +1113,16 @@
 			</effect>
 		</for>
 	</skill>
-       <skill id="10290" levels="8" name="Меч Урагана">
-       <!-- Тестовое умение надо что нить придумать -->
+       <skill id="10290" levels="8" name="Hurricane Slasher">
+    <!-- Attacks around the enemy with 11557 Power added to P. Atk. Decreases power - 10% when equipped with a sword/blunt/fist weapon. Increases power + 50% when equipped with a spear. Requires a dagger, blunt, spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. Critical. -->
        <set name="operateType" val="OP_PASSIVE" />
        <set name="skillType" val="NOTDONE" />
        <set name="target" val="TARGET_SELF" />
        <for>
        </for>
 	</skill>
-   <skill id="10291" levels="1" name="Рев Медведя">
+   <skill id="10291" levels="1" name="Feral Bear Cry">
+    <!-- Shouts loudly to invoke the power of the Bear. For 5 minutes, increases your P. Atk. and P.Critical Damage by 30%. -->
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1234,7 +1135,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10292" levels="1" name="Вопль Огра">
+    <skill id="10292" levels="1" name="Feral Ogre Cry">
+    <!-- Shouts loudly to invoke the power of the Ogre. For 5 minutes, increases your P. Atk., P. Def. And M. Def. by 35% and P. Critical Damage and Max HP by 10%. -->
 		<set name="relationSkillsId" val="822;109" /> 
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -1251,7 +1153,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10293" levels="1" name="Рычание Пумы">
+    <skill id="10293" levels="1" name="Feral Puma Cry">
+    <!-- Shouts loudly to invoke the power of the Puma. For 5 minutes, increases your P. Accuracy by 10 and Atk. Spd. by 20%, and decreases Critical Damage received by 40%. -->
 		<set name="magicLevel" val="85" />
 		<set name="relationSkillsId" val="824;282" /> 
 		<set name="target" val="TARGET_SELF" />
@@ -1265,7 +1168,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10294" levels="1" name="Визг Кролика">
+    <skill id="10294" levels="1" name="Feral Rabbit Cry">
+    <!-- Shouts loudly to invoke the power of the Rabbit. For 5 minutes, increases your Atk. Spd. by 30%, Speed by 35% and P. Evasion by 15. -->
 		<set name="relationSkillsId" val="451;298;823" /> 
 		<set name="aggroPoints" val="582" />
 		<set name="magicLevel" val="85" />
@@ -1280,7 +1184,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10295" levels="1" name="Клич Ястреба">
+    <skill id="10295" levels="1" name="Hawk Cry">
+    <!-- Shouts loudly to invoke the power of the Hawk. For 5 minutes, increases your P. Accuracy by 8, Critical Rate by 120 and Critical Damage by 30%. -->
 		<set name="relationSkillsId" val="425" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -1294,7 +1199,8 @@
 			</effect>
 		</for>
 	</skill>
-      <skill id="10296" levels="1" name="Дух Охотника">
+      <skill id="10296" levels="1" name="Spirit of the Hunter">
+    <!-- For 20 minutes, increases P. Atk. toward insects, plants and animals by 45%. -->
 		<table name="#Power">1.45</table>
 		<table name="#Time">600</table>
 		<set name="relationSkillsId" val="359;87;104" /> 
@@ -1313,7 +1219,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10297" levels="1" name="Дух Убийцы">
+    <skill id="10297" levels="1" name="Spirit of the Slayer">
+    <!-- For 20 minutes, Increases P. Atk. toward monsters, magic creatures, giants, and dragons by 45%. -->
 		<table name="#Power">1.45</table>
 		<table name="#Time">600</table>
 		<set name="effectPoint" val="669" />
@@ -1335,7 +1242,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10298" levels="1" name="Возрождение Силы">
+    <skill id="10298" levels="1" name="Power Revival">
+    <!-- Recovers all of your HP. -->
 		<set name="magicLevel" val="85" />
 		<set name="aggroPoints" val="100" />
 		<set name="relationSkillsId" val="181;833" /> 
@@ -1344,7 +1252,8 @@
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-    <skill id="10299" levels="1" name="Копье Шока">
+    <skill id="10299" levels="1" name="Shock Spear">
+    <!-- Inflicted with stun and unable to move for 3 seconds. -->
 	      	<set name="magicLevel" val="85" />
        	<set name="operateType" val="OP_ACTIVE" />
        	<set name="skillType" val="BUFF" />

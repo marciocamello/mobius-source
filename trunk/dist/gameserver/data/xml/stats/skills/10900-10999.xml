@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-    <skill id="10997" levels="1" name="Уникальное Умение Лучника - Пассивное" > 
+    <skill id="10997" levels="1" name="Archer - Individual Passive" > 
         <table name="#magicLevel">85</table>
 		<set name="reuseDelay" val="8000" />
 		<set name="magicLevel" val="#magicLevel" />
@@ -14,7 +14,8 @@
 			</effect>
 		</for>	
     </skill>
-	<skill id="10998" levels="1" name="Уникальное Умение Лучника"> 
+	<skill id="10998" levels="1" name="Archer - Individual"> 
+    <!-- Atk. Spd. + 30% for 5 seconds. -->
        	<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -26,7 +27,8 @@
 		</triggers>
 		<for />
 	</skill>
-	<skill id="10999" levels="1" name="Обездвиживающая Атака Лучника">
+	<skill id="10999" levels="1" name="">
+    <!-- Attacks long-range enemies. Hurls arrows like rain near the target to inflict damage with 19158 damage added to P. Atk. Bow/crossbow required. Over-hit. -->
 		<table name="#power">19158</table>
 		<table name="#element">none</table> 
        	<table name="#mpConsume2">60</table>

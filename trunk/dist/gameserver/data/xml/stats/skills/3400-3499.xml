@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="3400" levels="1" name="Traits Strengthen Earring">
-		<!-- 
-			Description: Increases the power of abnormal mental state attacks.
-		-->
+    <!-- Increases the power of mental attacks. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -14,9 +12,7 @@
 		</for>
 	</skill>
 	<skill id="3401" levels="1" name="Dynasty Resistance Necklace">
-		<!--
-			Description: Increases resistance to abnormal mental state attacks.
-		-->
+    <!-- Increases Resistance to mental attacks. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -27,9 +23,7 @@
 		</for>
 	</skill>
 	<skill id="3402" levels="1" name="Dynasty Resistance Ring">
-		<!--
-			Description: Increases resistance to abnormal mental state attacks.
-		-->
+    <!-- Increases Resistance to mental attacks. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -40,9 +34,7 @@
 		</for>
 	</skill>
 	<skill id="3403" levels="1" name="Dynasty Resistance Earring">
-		<!--
-			Description: Increases resistance to abnormal mental state attacks.
-		-->
+    <!-- Increases Resistance to mental attacks. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -52,10 +44,8 @@
 			<add order="0x40" stat="mentalResist" val="6" />
 		</for>
 	</skill>
-	<skill id="3404" levels="1" name="Mystery Effect">
-		<!--
-			Description: Enlarges the user's head.
-		-->
+	<skill id="3404" levels="1" name="Mysterious Effect">
+    <!-- Enlarges the user's head. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1800000" />
@@ -66,9 +56,7 @@
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="3405" levels="1" name="Large Firecracker Effect">
-		<!--
-			Description: Shoots out large firecrackers.
-		-->
+    <!-- Shoots out large firecrackers. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1200000" />
@@ -78,9 +66,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="3406" levels="1" name="Weight Decrease Ring">
-		<!--
-			Description: Decreases weight penalty.
-		-->
+    <!-- Decreases weight penalty. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -93,9 +79,7 @@
 		</cond>
 	</skill>
 	<skill id="3407" levels="1" name="Stealth Ring">
-		<!--
-			Description: Decreases the sound of your own steps to avoid receiving the first strike.
-		-->
+    <!-- Decreases the sound of your own steps to avoid receiving the first strike. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="600000" />
@@ -105,6 +89,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="3408" levels="1" name="Blessed Ring of Escape">
+    <!-- Allows the use of Blessed Escape every 1 minute. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="60000" />
@@ -120,6 +105,7 @@
 		</cond>
 	</skill>
 	<skill id="3409" levels="1" name="Blessed Ring of Resurrection">
+    <!-- Allows the use of Blessed Resurrection every 5 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="300000" />
@@ -137,9 +123,7 @@
 		</cond>
 	</skill>
 	<skill id="3410" levels="1" name="Blue Talisman of Reflection">
-		<!--
-			Description: This Talisman redirects part of the damage received back onto the enemy.
-		-->
+    <!-- Reflects a portion of physical melee damage received back onto the enemy when using a Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="reuseDelay" val="360000" />
@@ -160,9 +144,7 @@
 		</for>
 	</skill>
 	<skill id="3411" levels="1" name="Special Ability: Focus">
-		<!--
-			Increases Max HP by 10%, and critical rate. Increases damage inflicted during PvP.
-		-->
+    <!-- Increases Max HP by 10%, and critical rate. Inflicts additional damage during PVP. -->
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -176,11 +158,8 @@
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3412" levels="1" name="Dynasty Breast Plate">
-		<!--
-			Type Armor: Dynasty Breast Plate
-			Con-1, Str+1, P. Def +4.6%, MaxHP +418. Darkness Resistance +6
-		-->
+	<skill id="3412" levels="1" name="Dynasty Breastplate">
+    <!-- Increases P. Def., Max HP, and Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -196,10 +175,7 @@
 		</for>
 	</skill>
 	<skill id="3413" levels="1" name="Dynasty Leather Armor">
-		<!--
-			Type Armor: Dynasty Leather Armor
-			Con-1, Dex+1, Accuracy +1.72, Evasion +1.72, MaxHP +418. Darkness Resistance +6
-		-->
+    <!-- Increases P. Atk./Evasion Rate/Max HP/Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -216,10 +192,7 @@
 		</for>
 	</skill>
 	<skill id="3414" levels="1" name="Dynasty Leather Armor">
-		<!--
-			Type Armor: Dynasty Leather Armor - Force Master
-			Str+1, Dex+1,Con-2, P. Atk. +5.4%, Max HP +492 Effect. Dark resistance +8. Decreased MP consumption for active skill
-		-->
+    <!-- Increases P. Atk./Max HP/Resistance to Dark, and decreases MP consumption. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -237,10 +210,7 @@
 		</for>
 	</skill>
 	<skill id="3415" levels="1" name="Dynasty Leather Armor">
-		<!--
-			Type Armor: Dynasty Leather Armor - Weapon Master
-			Con-2, Str+1, DEX +1, P. Atk +5.4%, MaxHP +492. Dark Resistance +8, Critical Damage Chance.
-		-->
+    <!-- Increases P. Atk/Max HP/Critical Rate/Critical Damage/Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -259,10 +229,7 @@
 		</for>
 	</skill>
 	<skill id="3416" levels="1" name="Dynasty Tunic">
-		<!--
-			Type Armor: Dynasty Tunic
-			Int-1, Men+1, Casting Spd. +12%, Max MP +257. Darkness Resistance +6
-		-->
+    <!-- Increases Casting Spd./ Max MP/Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -278,6 +245,7 @@
 		</for>
 	</skill>
 	<skill id="3417" levels="1" name="Equipped with Shield">
+    <!-- Shield Defense Rate is increased. -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -288,9 +256,7 @@
 		</for>
 	</skill>
 	<skill id="3418" levels="1" name="Active Skill: Transform Pig">
-		<!--
-			Description: Transform into a cute pig for 5 minutes.
-		-->
+    <!-- Transform into a cute pig for 5 minutes. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="600000" />
 		<set name="magicLevel" val="1" />
@@ -299,9 +265,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="3419" levels="1" name="Magic Immunity">
-		<!--
-			Description: Increases M. Def. when equipped with a shirt
-		-->
+    <!-- Increases M. Def. when equipped with a shirt -->
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -314,10 +278,7 @@
 		</cond>
 	</skill>
 	<skill id="3420" levels="1" name="Dynasty Leather Armor">
-		<!--
-			Type Armor: Dynasty Leather Armor - Summoner
-			Str-2, Con+2, increase Atk. Spd., MaxHP +492. Dark Resistance +8, increase P. Atk., P. Def.
-		-->
+    <!-- Increases P. Atk., P. Def, Max HP, Atk. Speed and Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -335,9 +296,7 @@
 		</for>
 	</skill>
 	<skill id="3421" levels="1" name="Wolf Mount">
-		<!--
-			Description: Climb onto your Wolf's back.
-		-->
+    <!-- Climb onto your Wolf's back. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0083" />
 		<set name="magicLevel" val="1" />
@@ -352,9 +311,7 @@
 		</cond>
 	</skill>
 	<skill id="3422" levels="1" name="Wolf Dismount">
-		<!--
-			Description: Climb off of your Wolf's back.
-		-->
+    <!-- Climb off of your Wolf's back. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0083" />
 		<set name="magicLevel" val="1" />
@@ -368,10 +325,8 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="3423" levels="1" name="Little Angel Agathion - Summon (or Release)">
-		<!--			Last modify:	25.05.2008
-			Description: Summon an Agathion.
-		-->
+	<skill id="3423" levels="1" name="Release Agathion's Seal - Little Angel Agathion">
+    <!-- Removes the Agathion's seal. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="magicLevel" val="85" />
@@ -384,10 +339,8 @@
 		<set name="npcId" val="16031" />
 		<set name="summonType" val="agathion" />
 	</skill>
-	<skill id="3424" levels="1" name="Little Devil Agathion - Summon (or Release)">
-		<!--			Last modify:	25.05.2008
-			Description: Summon an Agathion.
-		-->
+	<skill id="3424" levels="1" name="Release Agathion's Seal - Little Devil Agathion">
+    <!-- Removes the Agathion's seal. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="magicLevel" val="85" />
@@ -400,10 +353,8 @@
 		<set name="npcId" val="16032" />
 		<set name="summonType" val="agathion" />
 	</skill>
-	<skill id="3425" levels="1" name="Rudolph Agathion - Summon (or Release)">
-		<!--			Last modify:	25.05.2008
-			Description: Summon an Agathion.
-		-->
+	<skill id="3425" levels="1" name="Release Agathion's Seal - Rudolph Agathion">
+    <!-- Removes the Agathion's seal. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="magicLevel" val="85" />
@@ -417,9 +368,7 @@
 		<set name="summonType" val="agathion" />
 	</skill>
 	<skill id="3426" levels="1" name="Maximum Ability">
-		<!--
-			Description: A critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
-		-->
+    <!-- A critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_PARTY" />
@@ -430,9 +379,7 @@
 		</triggers>
 	</skill>
 	<skill id="3427" levels="1" name="Special Ability: Infinity Rapier">
-		<!--
-			Description: Decreases the enemy's P. Def. on a critical attack. Increases Max HP, Max MP, Max CP, and damage inflicted during PvP. Reflects some of the damage received back to the enemy (does not include damage from skill or ranged attacks). In addition, when a critical hit occurs during a general attack, there is a chance that the capacity of a party member's skills will be maximized.
-		-->
+    <!-- Decreases the enemy's P. Def. on a critical attack. Increases Max HP, Max MP, Max CP. Inflicts additional damage during PVP. Reflects some of the damage received back to the enemy. In addition, when a critical hit occurs during a regular attack, there is a chance that the capacity of a party member's skills will be maximized. -->
 		<set name="icon" val="icon.weapon_infinity_rapier_i00" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -446,16 +393,13 @@
 			<mul val="1.30" order="0x30" stat="maxMp" />
 			<mul val="1.50" order="0x30" stat="maxCp" />
 			<add val="9" order="0x40" stat="reflectDam" />
-			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.1" />
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.1" />
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.1" />
 		</for>
 	</skill>
-	<skill id="3428" levels="1" name="Blue Talisman - Explosion">
-		<!--
-			Description: Increases the attacking power/speed momentarily with power of Talisman.
-		-->
+	<skill id="3428" levels="1" name="Blue Talisman of Explosion">
+    <!-- Increases the attacking power/speed momentarily with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="reuseDelay" val="600000" />
@@ -477,10 +421,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3429" levels="1" name="Red Talisman - Life Force">
-		<!--
-			Description: Regenerate HP and MP completely with power of Talisman.
-		-->
+	<skill id="3429" levels="1" name="Red Talisman of Life Force">
+    <!-- Regenerate HP and MP completely with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="reuseDelay" val="1800000" />
@@ -498,10 +440,8 @@
 			<effect count="1" name="ManaHealPercent" time="0" val="100" />
 		</for>
 	</skill>
-	<skill id="3430" levels="1" name="White Talisman - Darkness">
-		<!--
-			Description: Greatly increases the tolerance to darkness attribute with power of Talisman.
-		-->
+	<skill id="3430" levels="1" name="White Talisman of Darkness">
+    <!-- Greatly increases Resistance to Dark with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="reuseDelay" val="600000" />
@@ -522,10 +462,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3431" levels="1" name="White Talisman - Storm">
-		<!--
-			Description: Greatly increases the tolerance to wind attribute with power of Talisman.
-		-->
+	<skill id="3431" levels="1" name="White Talisman of Storm">
+    <!-- Greatly increases Resistance to wind with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="reuseDelay" val="600000" />
@@ -546,10 +484,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3432" levels="1" name="White Talisman - Water">
-		<!--
-			Description: Greatly increases the tolerance to the water attribute with power of Talisman.
-		-->
+	<skill id="3432" levels="1" name="White Talisman of Water">
+    <!-- Greatly increases Resistance to water with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="reuseDelay" val="600000" />
@@ -570,10 +506,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3433" levels="1" name="White Talisman - Fire">
-		<!--
-			Description: Greatly increases the tolerance to fire attribute with power of Talisman.
-		-->
+	<skill id="3433" levels="1" name="White Talisman of Fire">
+    <!-- Greatly increases Resistance to fire with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="reuseDelay" val="600000" />
@@ -594,10 +528,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3434" levels="1" name="White Talisman - Earth">
-		<!--
-			Description: Greatly increases the tolerance to the earth attribute with power of Talisman.
-		-->
+	<skill id="3434" levels="1" name="White Talisman of Earth">
+    <!-- Greatly increases Resistance to earth with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="reuseDelay" val="600000" />
@@ -618,10 +550,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3435" levels="1" name="White Talisman - Light">
-		<!--
-			Description: Greatly increases the tolerance to the holy attribute with power of Talisman.
-		-->
+	<skill id="3435" levels="1" name="White Talisman of Light">
+    <!-- Greatly increases Resistance to Holy with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="reuseDelay" val="600000" />
@@ -642,10 +572,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3436" levels="1" name="Blue Talisman - Self destruction">
-		<!--
-			Description: Greatly damage the environment exploding the power of Talisman.
-		-->
+	<skill id="3436" levels="1" name="Blue Talisman of Self destruction">
+    <!-- Greatly damage the environment exploding the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="affectLimit" val="6;12" />
 		<set name="icon" val="icon.etc_talisman_i01" />
@@ -660,10 +588,8 @@
 		<set name="referenceItemId" val="10423" />
 		<set name="referenceItemMpConsume" val="1" />
 	</skill>
-	<skill id="3437" levels="1" name="Blue Talisman - Magic Explosive Power">
-		<!--
-			Description: Magic attacking attribute/magic critical probability is increased momentarily by talisman's power.
-		-->
+	<skill id="3437" levels="1" name="Blue Talisman of Magic Explosive Power">
+    <!-- Increases M. Atk. and M. Critical Rate with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="reuseDelay" val="600000" />
@@ -684,10 +610,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3438" levels="1" name="Blue Talisman - Great Healing">
-		<!--
-			Description: Increases the power of HP regeneration magic with power of Talisman.
-		-->
+	<skill id="3438" levels="1" name="Blue Talisman of Great Healing">
+    <!-- Increases the power of HP regeneration magic with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="reuseDelay" val="600000" />
@@ -708,9 +632,7 @@
 		</for>
 	</skill>
 	<skill id="3439" levels="1" name="Silk Shirt">
-		<!--
-			Description: Increases maximum HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="49" />
 		<set name="target" val="TARGET_SELF" />
@@ -721,9 +643,7 @@
 		</for>
 	</skill>
 	<skill id="3440" levels="1" name="Silk Shirt">
-		<!--
-			Description: Increases Maximum MP.
-		-->
+    <!-- Increases Max MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="49" />
 		<set name="target" val="TARGET_SELF" />
@@ -734,9 +654,7 @@
 		</for>
 	</skill>
 	<skill id="3441" levels="1" name="Silk Shirt">
-		<!--
-			Description: The maximum CP is increased.
-		-->
+    <!-- Increases Max CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="49" />
 		<set name="target" val="TARGET_SELF" />
@@ -747,9 +665,7 @@
 		</for>
 	</skill>
 	<skill id="3442" levels="1" name="Silk Shirt">
-		<!--
-			Description: Increases maximum HP/MP.
-		-->
+    <!-- Increases Max HP/MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="49" />
 		<set name="target" val="TARGET_SELF" />
@@ -761,9 +677,7 @@
 		</for>
 	</skill>
 	<skill id="3443" levels="1" name="Silk Shirt">
-		<!--
-			Description: Increases maximum HP/CP.
-		-->
+    <!-- Increases Max HP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="49" />
 		<set name="target" val="TARGET_SELF" />
@@ -775,9 +689,7 @@
 		</for>
 	</skill>
 	<skill id="3444" levels="1" name="Silk Shirt">
-		<!--
-			Description: Increases maximum MP/CP.
-		-->
+    <!-- Increases Max MP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="49" />
 		<set name="target" val="TARGET_SELF" />
@@ -789,9 +701,7 @@
 		</for>
 	</skill>
 	<skill id="3445" levels="1" name="Thin Leather Shirt">
-		<!--
-			Description: Increases maximum HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -802,9 +712,7 @@
 		</for>
 	</skill>
 	<skill id="3446" levels="1" name="Thin Leather Shirt">
-		<!--
-			Description: Increases Maximum MP.
-		-->
+    <!-- Increases Max MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -815,9 +723,7 @@
 		</for>
 	</skill>
 	<skill id="3447" levels="1" name="Thin Leather Shirt">
-		<!--
-			Description: The maximum CP is increased.
-		-->
+    <!-- Increases Max CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -828,9 +734,7 @@
 		</for>
 	</skill>
 	<skill id="3448" levels="1" name="Thin Leather Shirt">
-		<!--
-			Description: Increases maximum HP/MP.
-		-->
+    <!-- Increases Max HP/MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -842,9 +746,7 @@
 		</for>
 	</skill>
 	<skill id="3449" levels="1" name="Thin Leather Shirt">
-		<!--
-			Description: Increases maximum HP/CP.
-		-->
+    <!-- Increases Max HP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -856,9 +758,7 @@
 		</for>
 	</skill>
 	<skill id="3450" levels="1" name="Thin Leather Shirt">
-		<!--
-			Description: Increases maximum MP/CP.
-		-->
+    <!-- Increases Max MP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="58" />
 		<set name="target" val="TARGET_SELF" />
@@ -870,9 +770,7 @@
 		</for>
 	</skill>
 	<skill id="3451" levels="1" name="Scale Shirt">
-		<!--
-			Description: Increases maximum HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="64" />
 		<set name="target" val="TARGET_SELF" />
@@ -883,9 +781,7 @@
 		</for>
 	</skill>
 	<skill id="3452" levels="1" name="Scale Shirt">
-		<!--
-			Description: Increases Maximum MP.
-		-->
+    <!-- Increases Max MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="64" />
 		<set name="target" val="TARGET_SELF" />
@@ -896,9 +792,7 @@
 		</for>
 	</skill>
 	<skill id="3453" levels="1" name="Scale Shirt">
-		<!--
-			Description: The maximum CP is increased.
-		-->
+    <!-- Increases Max CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="64" />
 		<set name="target" val="TARGET_SELF" />
@@ -909,9 +803,7 @@
 		</for>
 	</skill>
 	<skill id="3454" levels="1" name="Scale Shirt">
-		<!--
-			Description: Increases maximum HP/MP.
-		-->
+    <!-- Increases Max HP/MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="64" />
 		<set name="target" val="TARGET_SELF" />
@@ -923,9 +815,7 @@
 		</for>
 	</skill>
 	<skill id="3455" levels="1" name="Scale Shirt">
-		<!--
-			Description: Increases maximum HP/CP.
-		-->
+    <!-- Increases Max HP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="64" />
 		<set name="target" val="TARGET_SELF" />
@@ -937,9 +827,7 @@
 		</for>
 	</skill>
 	<skill id="3456" levels="1" name="Scale Shirt">
-		<!--
-			Description: Increases maximum MP/CP.
-		-->
+    <!-- Increases Max MP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="64" />
 		<set name="target" val="TARGET_SELF" />
@@ -951,9 +839,7 @@
 		</for>
 	</skill>
 	<skill id="3457" levels="1" name="Mithril Shirt">
-		<!--
-			Description: Increases maximum HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -964,9 +850,7 @@
 		</for>
 	</skill>
 	<skill id="3458" levels="1" name="Mithril Shirt">
-		<!--
-			Description: Increases Maximum MP.
-		-->
+    <!-- Increases Max MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -977,9 +861,7 @@
 		</for>
 	</skill>
 	<skill id="3459" levels="1" name="Mithril Shirt">
-		<!--
-			Description: The maximum CP is increased.
-		-->
+    <!-- Increases Max CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -990,9 +872,7 @@
 		</for>
 	</skill>
 	<skill id="3460" levels="1" name="Mithril Shirt">
-		<!--
-			Description: Increases maximum HP/MP.
-		-->
+    <!-- Increases Max HP/MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -1004,9 +884,7 @@
 		</for>
 	</skill>
 	<skill id="3461" levels="1" name="Mithril Shirt">
-		<!--
-			Description: Increases maximum HP/CP.
-		-->
+    <!-- Increases Max HP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -1018,9 +896,7 @@
 		</for>
 	</skill>
 	<skill id="3462" levels="1" name="Mithril Shirt">
-		<!--
-			Description: Increases maximum MP/CP.
-		-->
+    <!-- Increases Max MP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -1032,9 +908,7 @@
 		</for>
 	</skill>
 	<skill id="3463" levels="1" name="Striped Silk Shirt">
-		<!--
-			Description: Increases maximum HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1045,9 +919,7 @@
 		</for>
 	</skill>
 	<skill id="3464" levels="1" name="Striped Silk Shirt">
-		<!--
-			Description: Increases Maximum MP.
-		-->
+    <!-- Increases Max MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1058,9 +930,7 @@
 		</for>
 	</skill>
 	<skill id="3465" levels="1" name="Striped Silk Shirt">
-		<!--
-			Description: The maximum CP is increased.
-		-->
+    <!-- Increases Max CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1071,9 +941,7 @@
 		</for>
 	</skill>
 	<skill id="3466" levels="1" name="Striped Silk Shirt">
-		<!--
-			Description: Increases maximum HP/MP.
-		-->
+    <!-- Increases Max HP/MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1085,9 +953,7 @@
 		</for>
 	</skill>
 	<skill id="3467" levels="1" name="Striped Silk Shirt">
-		<!--
-			Description: Increases maximum HP/CP.
-		-->
+    <!-- Increases Max HP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1099,9 +965,7 @@
 		</for>
 	</skill>
 	<skill id="3468" levels="1" name="Striped Silk Shirt">
-		<!--
-			Description: Increases maximum MP/CP.
-		-->
+    <!-- Increases Max MP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1113,9 +977,7 @@
 		</for>
 	</skill>
 	<skill id="3469" levels="1" name="Thin Stripe Leather Shirt">
-		<!--
-			Description: Increases maximum HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="61" />
 		<set name="target" val="TARGET_SELF" />
@@ -1126,9 +988,7 @@
 		</for>
 	</skill>
 	<skill id="3470" levels="1" name="Thin Stripe Leather Shirt">
-		<!--
-			Description: Increases Maximum MP.
-		-->
+    <!-- Increases Max MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="61" />
 		<set name="target" val="TARGET_SELF" />
@@ -1139,9 +999,7 @@
 		</for>
 	</skill>
 	<skill id="3471" levels="1" name="Thin Stripe Leather Shirt">
-		<!--
-			Description: The maximum CP is increased.
-		-->
+    <!-- Increases Max CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="61" />
 		<set name="target" val="TARGET_SELF" />
@@ -1152,9 +1010,7 @@
 		</for>
 	</skill>
 	<skill id="3472" levels="1" name="Thin Stripe Leather Shirt">
-		<!--
-			Description: Increases maximum HP/MP.
-		-->
+    <!-- Increases Max HP/MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="61" />
 		<set name="target" val="TARGET_SELF" />
@@ -1166,9 +1022,7 @@
 		</for>
 	</skill>
 	<skill id="3473" levels="1" name="Thin Stripe Leather Shirt">
-		<!--
-			Description: Increases maximum HP/CP.
-		-->
+    <!-- Increases Max HP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="61" />
 		<set name="target" val="TARGET_SELF" />
@@ -1180,9 +1034,7 @@
 		</for>
 	</skill>
 	<skill id="3474" levels="1" name="Thin Stripe Leather Shirt">
-		<!--
-			Description: Increases maximum MP/CP.
-		-->
+    <!-- Increases Max MP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="61" />
 		<set name="target" val="TARGET_SELF" />
@@ -1194,9 +1046,7 @@
 		</for>
 	</skill>
 	<skill id="3475" levels="1" name="Striped Scale Shirt">
-		<!--
-			Description: Increases maximum HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="67" />
 		<set name="target" val="TARGET_SELF" />
@@ -1207,9 +1057,7 @@
 		</for>
 	</skill>
 	<skill id="3476" levels="1" name="Striped Scale Shirt">
-		<!--
-			Description: Increases Maximum MP.
-		-->
+    <!-- Increases Max MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="67" />
 		<set name="target" val="TARGET_SELF" />
@@ -1220,9 +1068,7 @@
 		</for>
 	</skill>
 	<skill id="3477" levels="1" name="Striped Scale Shirt">
-		<!--
-			Description: The maximum CP is increased.
-		-->
+    <!-- Increases Max CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="67" />
 		<set name="target" val="TARGET_SELF" />
@@ -1233,9 +1079,7 @@
 		</for>
 	</skill>
 	<skill id="3478" levels="1" name="Striped Scale Shirt">
-		<!--
-			Description: Increases maximum HP/MP.
-		-->
+    <!-- Increases Max HP/MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="67" />
 		<set name="target" val="TARGET_SELF" />
@@ -1247,9 +1091,7 @@
 		</for>
 	</skill>
 	<skill id="3479" levels="1" name="Striped Scale Shirt">
-		<!--
-			Description: Increases maximum HP/CP.
-		-->
+    <!-- Increases Max HP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="67" />
 		<set name="target" val="TARGET_SELF" />
@@ -1261,9 +1103,7 @@
 		</for>
 	</skill>
 	<skill id="3480" levels="1" name="Striped Scale Shirt">
-		<!--
-			Description: Increases maximum MP/CP.
-		-->
+    <!-- Increases Max MP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="67" />
 		<set name="target" val="TARGET_SELF" />
@@ -1275,9 +1115,7 @@
 		</for>
 	</skill>
 	<skill id="3481" levels="1" name="Striped Mithril Shirt">
-		<!--
-			Description: Increases maximum HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1288,9 +1126,7 @@
 		</for>
 	</skill>
 	<skill id="3482" levels="1" name="Striped Mithril Shirt">
-		<!--
-			Description: Increases Maximum MP.
-		-->
+    <!-- Increases Max MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1301,9 +1137,7 @@
 		</for>
 	</skill>
 	<skill id="3483" levels="1" name="Striped Mithril Shirt">
-		<!--
-			Description: The maximum CP is increased.
-		-->
+    <!-- Increases Max CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1314,9 +1148,7 @@
 		</for>
 	</skill>
 	<skill id="3484" levels="1" name="Striped Mithril Shirt">
-		<!--
-			Description: Increases maximum HP/MP.
-		-->
+    <!-- Increases Max HP/MP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1328,9 +1160,7 @@
 		</for>
 	</skill>
 	<skill id="3485" levels="1" name="Striped Mithril Shirt">
-		<!--
-			Description: Increases maximum HP/CP.
-		-->
+    <!-- Increases Max HP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1342,9 +1172,7 @@
 		</for>
 	</skill>
 	<skill id="3486" levels="1" name="Striped Mithril Shirt">
-		<!--
-			Description: Increases maximum MP/CP.
-		-->
+    <!-- Increases Max MP/CP. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="80" />
 		<set name="target" val="TARGET_SELF" />
@@ -1356,12 +1184,7 @@
 		</for>
 	</skill>
 	<skill id="3487" levels="1" name="Blue Talisman of Power">
-		<!--
-			Last modify:	28.03.2009
-			Need correct:	pAtk
-
-			Description: Increase P. Atk with power of Talisman.
-		-->
+    <!-- Increases P. Atk with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="reuseDelay" val="360000" />
@@ -1383,12 +1206,7 @@
 		</for>
 	</skill>
 	<skill id="3488" levels="1" name="Blue Talisman of Protection">
-		<!--
-			Last modify:	28.03.2009
-			Need correct:	sDef
-
-			Description: Increase Shield P. Def with power of Talisman.
-		-->
+    <!-- Increases Shield Defense with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="reuseDelay" val="360000" />
@@ -1410,12 +1228,7 @@
 		</for>
 	</skill>
 	<skill id="3489" levels="1" name="Yellow Talisman of Arcane Power">
-		<!--
-			Last modify:	28.03.2009
-			Need correct:	mAtk
-
-			Description: Increase M. Atk power when equipped with Talisman.
-		-->
+    <!-- Increases M. Atk. when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1426,12 +1239,7 @@
 		</for>
 	</skill>
 	<skill id="3490" levels="1" name="Yellow Talisman of Defense">
-		<!--
-			Last modify:	28.03.2009
-			Need correct:	pDef
-
-			Description: Increase P. Def when equipped with Talisman.
-		-->
+    <!-- Increases P. Def when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1442,11 +1250,7 @@
 		</for>
 	</skill>
 	<skill id="3491" levels="1" name="Yellow Talisman of Evasion">
-		<!--
-			Last modify:	28.03.2009
-
-			Description: Increase Evasion when equipped with Talisman.
-		-->
+    <!-- Increases Evasion when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1457,9 +1261,7 @@
 		</for>
 	</skill>
 	<skill id="3492" levels="1" name="Yellow Talisman of Speed">
-		<!--
-			Description: Increases the Speed when equipped with Talisman.
-		-->
+    <!-- Increases Speed when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1470,12 +1272,7 @@
 		</for>
 	</skill>
 	<skill id="3493" levels="1" name="Yellow Talisman of Regeneration">
-		<!--
-			Need correct:	regHp
-			Last modify:	28.03.2009
-
-			Description: Increases HP regeneration when equipped with Talisman.
-		-->
+    <!-- Increases HP Recovery Bonus when a talisman is equipped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1486,12 +1283,7 @@
 		</for>
 	</skill>
 	<skill id="3494" levels="1" name="Yellow Talisman of CP Regeneration">
-		<!--
-			Need correct:	regCp
-			Last modify:	28.03.2009
-
-			Description: Increases CP regeneration when equipped with Talisman.
-		-->
+    <!-- Increases CP recovery bonus when a talisman is equipped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1502,12 +1294,7 @@
 		</for>
 	</skill>
 	<skill id="3495" levels="1" name="Yellow Talisman of Healing">
-		<!--
-			Need correct:	healPower
-			Last modify:	28.03.2009
-
-			Description: Increases power of HP regeneration magic when equipped with Talisman.
-		-->
+    <!-- Increases power of HP regeneration magic when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1518,11 +1305,7 @@
 		</for>
 	</skill>
 	<skill id="3496" levels="1" name="Red Talisman of Recovery">
-		<!--
-			Last modify:	28.03.2009
-
-			Description: Recover HP/CP with power of Talisman.
-		-->
+    <!-- Recover HP/CP with the power of Talisman. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="reuseDelay" val="300000" />
@@ -1543,9 +1326,7 @@
 		</for>
 	</skill>
 	<skill id="3497" levels="1" name="Yellow Talisman of MP Regeneration">
-		<!--
-			Description: Increases MP regeneration when equipped with Talisman.
-		-->
+    <!-- Increases MP Recovery Bonus when a talisman is equipped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -1555,10 +1336,8 @@
 			<add order="0x60" stat="regMp" val="1" />
 		</for>
 	</skill>
-	<skill id="3498" levels="1" name="Special Ability Light">
-		<!--
-			Description: Weight Gauge is increased.
-		-->
+	<skill id="3498" levels="1" name="Special Ability: Light">
+    <!-- Increases Weight Gauge. -->
 		<set name="icon" val="icon.skill0150" />
 		<set name="magicLevel" val="46" />
 		<set name="target" val="TARGET_SELF" />
@@ -1569,9 +1348,7 @@
 		</for>
 	</skill>
 	<skill id="3499" levels="1" name="Transform Dispel">
-		<!--
-			Description: Cancels transformation.
-		-->
+    <!-- Cancels transformation. -->
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="magicLevel" val="56" />
 		<set name="hitTime" val="2500" />

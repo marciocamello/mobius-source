@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="5000" levels="1" name="Alfred - Super Strike">
+	<skill id="5000" levels="1" name="Alfred Strike">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="10000000" />
 		<set name="magicLevel" val="76" />
@@ -12,7 +13,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="effectRange" val="1500" />
 	</skill>
-	<skill id="5001" levels="1" name="Alfred - Life Drain">
+	<skill id="5001" levels="1" name="Alfred Life Drain">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="111" />
 		<set name="magicLevel" val="76" />
@@ -26,7 +28,8 @@
 		<set name="absorbPart" val="0.8" />
 		<set name="effectRange" val="1500" />
 	</skill>
-	<skill id="5002" levels="1" name="Giselle - Vampiric Rage">
+	<skill id="5002" levels="1" name="Giselle Vampiric Rage">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="8000" />
 		<set name="magicLevel" val="76" />
@@ -42,7 +45,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5003" levels="1" name="Giselle - Tempest">
+	<skill id="5003" levels="1" name="Giselle Tempest">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="15000" />
 		<set name="power" val="111" />
@@ -59,11 +63,7 @@
 		<set name="effectRange" val="1000" />
 	</skill>
 	<skill id="5004" levels="1" name="Dimensional Stun">
-		<!--
-			Last modify:	13.01.2010
-
-			Description: Shocks and instantly immobilizes.
-		-->
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<set name="icon" val="icon.skill0100" />
 		<set name="magicLevel" val="85" />
 		<set name="hitTime" val="5800" />
@@ -79,10 +79,8 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0" />
 		</for>
 	</skill>
-	<skill id="5005" levels="1" name="Frintezza's Ghost Summoning">
-		<!--
-			Description: Frintezza is in temporary state of paralysis.
-		-->
+	<skill id="5005" levels="1" name="Frintessa Pose">
+    <!-- Frintezza is in temporary state of paralysis. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -91,10 +89,8 @@
 		<set name="skillType" val="HARDCODED" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5006" levels="1" name="Frintezza's Melody">
-		<!--
-			Description: A general performance.
-		-->
+	<skill id="5006" levels="1" name="Frintessa Music">
+    <!-- A general performance. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -104,15 +100,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5007" levels="5" name="Frintezza's Healing Rhapsody">
-		<!--
-			Description:
-			Lvl 1: Frintezza's Healing Rhapsody (Music to soothe the soul.).
-			Lvl 2: Frintezza's Rampaging Opus (A Consecutive Dash + Portrait Replay Performance).
-			Lvl 3: Frintezza's Power Concerto (A powerful tune affecting Attack/Speed.).
-			Lvl 4: Frintezza's Plagued Concerto (A triumphant ballad of Heal Suppressing.).
-			Lvl 5: Frintezza's Psycho Symphony (Two Can Dance + Cancel Performance.).
-		-->
+	<skill id="5007" levels="5" name="Frintessa Heal Music">
+    <!-- Music to soothe the soul. -->
 		<table name="#hitCancelTime">32000 32000 32000 31000 35000</table>
 		<table name="#hitTime">32000 32000 32000 31000 35000</table>
 		<set name="magicType" val="SPECIAL" />
@@ -124,17 +113,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5008" levels="5" name="Frintezza's Concert Hall Melody">
-		<!--
-			Last modify:	12.01.2010
-
-			Description:
-			Lvl 1: Frintezza's Concert Hall Melody (Music that makes you feel oh so good inside).
-			Lvl 2: Frintezza's Rampaging Opus en masse (Consecutive Dash + Portrait Replay Performance).
-			Lvl 3: Frintezza Power Encore (Attack/Speed Performance).
-			Lvl 4: Mournful Chorale Prelude (Instantly decreases the effect of HP regeneration magic).
-			Lvl 5: Hypnotic Mazurka (Instantly immobilizes the target by making it dance involuntarily).
-		-->
+	<skill id="5008" levels="5" name="Frintessa Heal Music">
+    <!-- Music to soothe the soul. -->
 		<table name="#lvl1">3 0 0 0 0</table>
 		<table name="#lvl2">0 1 0 0 0</table>
 		<table name="#lvl3">0 0 1 0 0</table>
@@ -171,12 +151,8 @@
 			<effect count="#lvl5" abnormal="dancestun" name="Stun" stackOrder="-1" stackType="Stun" time="15" val="0" />
 		</for>
 	</skill>
-	<skill id="5009" levels="1" name="Frintezza's Ghostly Fighter">
-		<!--
-			Last modify:	20.01.2010
-
-			Description: A portrait ghost that can make physical attacks.
-		-->
+	<skill id="5009" levels="1" name="Frintessa Ghost Fighter">
+    <!-- A portrait ghost that can make physical attacks. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="10000" />
 		<set name="magicLevel" val="85" />
@@ -187,12 +163,8 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5010" levels="1" name="Frintezza's Ghostly Mage">
-		<!--
-			Last modify:	20.01.2010
-
-			Description: A portrait ghost that can make magical attacks.
-		-->
+	<skill id="5010" levels="1" name="Frintessa Ghost Mage">
+    <!-- A portrait ghost that can make magical attacks. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="1000" />
@@ -204,12 +176,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5011" levels="1" name="Frintezza's Bomber Ghost">
-		<!--
-			Last modify:	20.01.2010
-
-			Description: A portrait ghost who can create a suicide explosion.
-		-->
+	<skill id="5011" levels="1" name="Frintessa Ghost Bomb">
+    <!-- A portrait ghost who can create a suicide explosion. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="1500" />
 		<set name="magicLevel" val="85" />
@@ -224,11 +192,7 @@
 		</cond>
 	</skill>
 	<skill id="5012" levels="1" name="Breath of Scarlet">
-		<!--
-			Last modify:	20.01.2010
-
-			Description: Instantly immobilizes.
-		-->
+    <!-- Instantly immobilizes. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill5012" />
 		<set name="magicLevel" val="85" />
@@ -244,12 +208,8 @@
 			<effect count="1" name="Root" stackOrder="-1" stackType="Root" time="30" val="0" />
 		</for>
 	</skill>
-	<skill id="5013" levels="1" name="Frintezza Ghost Drain">
-		<!--
-			Last modify:	20.01.2010
-
-			Description: Portrait ghost drains HP.
-		-->
+	<skill id="5013" levels="1" name="Frintessa Energy Drain">
+    <!-- Portrait ghost drains HP. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="1000" />
@@ -258,15 +218,10 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<!-- Drain-specific: absorb 90% from target's damage -->
 		<set name="absorbPart" val="0.1" />
 	</skill>
-	<skill id="5014" levels="3" name="Frintezza's Daemon Attack">
-		<!--
-			Last modify:	20.01.2010
-
-			Description: Frintezza's Daemon Attack
-		-->
+	<skill id="5014" levels="3" name="Frintessa Demon Attack">
+    <!-- Demon 1 general attack. -->
 		<table name="#magicLevel">85 85 90</table>
 		<table name="#power">15835 19096 16176</table>
 		<set name="icon" val="icon.skill0000" />
@@ -281,12 +236,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="unholy" />
 	</skill>
-	<skill id="5015" levels="6" name="Frintezza's Daemon Charge">
-		<!--
-			Last modify:	20.01.2010
-
-			Description: Demon 1-3 charge.
-		-->
+	<skill id="5015" levels="6" name="Frintessa Charge">
+    <!-- Demon 1 charge. -->
 		<table name="#radius">300 400 500 600 700 800</table>
 		<table name="#power">48671 52970 68074 48671 52970 68074</table>
 		<table name="#coolTime">0 0 0 1500 1500 1500</table>
@@ -306,9 +257,7 @@
 		<set name="element" val="unholy" />
 	</skill>
 	<skill id="5016" levels="1" name="Yoke of Scarlet">
-		<!--
-			Description: Instantly immobilizes.
-		-->
+    <!-- Instantly immobilizes. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill5016" />
 		<set name="coolTime" val="1000" />
@@ -329,12 +278,8 @@
 			<effect abnormal="floatroot" count="1" name="Paralyze" stackOrder="-1" stackType="paralyze" time="20" val="0" />
 		</for>
 	</skill>
-	<skill id="5017" levels="1" name="Frintezza's Daemon Morph">
-		<!--
-			Last modify:	19.01.2010
-
-			Description: Demon 1 metamorphosis.
-		-->
+	<skill id="5017" levels="1" name="Demon">
+    <!-- Demon Transformation -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="1000" />
@@ -356,10 +301,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5018" levels="2" name="Frintezza's Daemon Field">
-		<!--
-			Description: Demon 2-3 magic field.
-		-->
+	<skill id="5018" levels="2" name="Frintessa Demon Field">
+    <!-- Demon 2 magic field. -->
 		<table name="#power">607 754</table>
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="1000" />
@@ -374,12 +317,8 @@
 		<set name="element" val="unholy" />
 		<set name="isReuseDelayPermanent" val="true" />
 	</skill>
-	<skill id="5019" levels="1" name="Frintezza's Daemon Drain">
-		<!--
-			Last modify:	20.01.2010
-
-			Description: Demon 3 HP drain range.
-		-->
+	<skill id="5019" levels="1" name="Frintessa Demon Energy Drain">
+    <!-- Demon 3 HP drain range. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="4000" />
 		<set name="power" val="32864" />
@@ -391,14 +330,11 @@
 		<set name="skillRadius" val="500" />
 		<set name="skillType" val="DRAIN" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<!-- Drain-specific: absorb 90% from target's damage -->
 		<set name="absorbPart" val="0.1" />
 		<set name="isReuseDelayPermanent" val="true" />
 	</skill>
 	<skill id="5020" levels="1" name="Forced Action">
-		<!--
-			Description: Crumples to the ground because of unknown power.
-		-->
+    <!-- Crumples to the ground because of unknown power. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="5000" />
 		<set name="magicLevel" val="1" />
@@ -410,9 +346,7 @@
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="5021" levels="12" name="Inspiration of Einhasad">
-		<!--
-			Description: Makes holy attacks.
-		-->
+    <!-- Makes holy attacks. -->
 		<table name="#mpConsume2">10 16 21 28 36 44 52 55 58 60 61 62</table>
 		<table name="#mpConsume1">3 4 6 7 9 11 13 14 15 15 16 16</table>
 		<set name="levelModifier" val="1" />
@@ -431,6 +365,7 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="5022" levels="12" name="Decrease Speed">
+    <!-- Instantly reduces Speed. Effect 1. -->
 		<table name="#spd">0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="levelModifier" val="2" />
@@ -449,9 +384,7 @@
 		</for>
 	</skill>
 	<skill id="5023" levels="12" name="Hold">
-		<!--
-			Description: Temporarily holds and immobilizes target.
-		-->
+    <!-- Temporarily holds and immobilizes target. -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="levelModifier" val="2" />
 		<set name="magicType" val="MAGIC" />
@@ -464,10 +397,7 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="5024" levels="12" name="Decrease Atk. Spd.">
-		<!--
-			Description: Instantly reduces Atk. Spd.
-			Effect 1 2 2 3 3 3 3 3 3 3 3 3
-		-->
+    <!-- Instantly reduces Atk. Spd. Effect 1. -->
 		<table name="#Tab-pAtkSpd">0.9 0.7 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#power">1 3 5 6 7 8 9 10 11 12 13 14</table>
@@ -487,9 +417,7 @@
 		</for>
 	</skill>
 	<skill id="5025" levels="1" name="Raid Boss - Level 30">
-		<!--
-			Description: His exploits are famous among Wererats. After assigning the South to the Sukar Wererats, he and a group of followers journeyed north in search of wealth. Unlike other Wererats, he possesses an enterprising spirit and began plundering the tombs of Orc tribal chiefs. Chased away by vengeful spirits, now he and his band rob unwary travelers passing through the region.
-		-->
+    <!-- His exploits are famous among Wererats. After assigning the South to the Sukar Wererats, he and a group of followers journeyed north in search of wealth. Unlike other Wererats, he possesses an enterprising spirit and began plundering the tombs of Orc tribal chiefs. Chased away by vengeful spirits, now he and his band rob unwary travelers passing through the region. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -502,9 +430,7 @@
 		</cond>
 	</skill>
 	<skill id="5026" levels="1" name="Raid Boss - Level 39">
-		<!--
-			Description: Once a human magician with an almost Dwarven interest in machinery,he heard about Titan Age Sky Wagon Relic and theorized that a combination of Dwarven skills and magic could reproduce the flying wagon. He died without succeeding in his goal, but his spirit still wanders the area.
-		-->
+    <!-- Once a human magician with an almost Dwarven interest in machinery, he heard about Lesser Giant Age Sky Wagon Relic and theorized that a combination of Dwarven skills and magic could reproduce the flying wagon. He died without succeeding in his goal, but his spirit still wanders the area. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -517,9 +443,7 @@
 		</cond>
 	</skill>
 	<skill id="5027" levels="1" name="Raid Boss - Level 37">
-		<!--
-			Description: This villain preys on adventurers who travel between the Dwarven Village and the Town of Schuttgart. He summoned all the northern Goblin powers to create a great bandit force and rule over them, but he made a serious mistake by stealing tribute intended for Schuttgart. Hearing rumors that the lord was preparing an army to clear out the bandits, he and his followers fled to the mountains.
-		-->
+    <!-- This villain preys on adventurers who travel between the Dwarven Village and the Town of Schuttgart. He summoned all the northern Goblin powers to create a great bandit force and rule over them, but he made a serious mistake by stealing tribute intended for Schuttgart. Hearing rumors that the lord was preparing an army to clear out the bandits, he and his followers fled to the mountains. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -532,9 +456,7 @@
 		</cond>
 	</skill>
 	<skill id="5028" levels="1" name="Raid Boss - Level 53">
-		<!--
-			Description: Once a shaman who worshipped Pa'agrio, he is now consumed by evil and bent on manipulating the powers of the spirit-being Tasha to conquer the world. His growing horde of followers include Ragna Orcs, evil spirits and insects.
-		-->
+    <!-- Originally worshiped Pa'agrio, but he is a shaman who tries to rule Orcs and Elmoaden by using the evil power of Kasha. They are extending their territory by using evil spirits, insects and Ragna Orcs who follow them. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -547,9 +469,7 @@
 		</cond>
 	</skill>
 	<skill id="5029" levels="1" name="Raid Boss - Level 52">
-		<!--
-			Description: This powerful Chaos Golem was made from Starstones gathered from the Ruins of Pavel by the mad scientist Dr. Chaos, who styles himself the Emperor of Evil. Once a Golem Maestro, Dr. Chaos was expelled from the Black Anvil Guild for trying to steal the blueprint from the elders. He swore revenge on the Black Anvil Guild, conquering the Ruins of Pavel with the Horrifying Golem Army he created. He views all outsiders as assassins sent by the Guild and will attack immediately. His ultimate goal is "world domination."
-		-->
+    <!-- u,This powerful Chaos Golem was made from Starstones gathered from the Ruins of Pavel by the mad scientist Dr. Chaos, who styles himself the Emperor of Evil. Once a Golem Maestro, Dr. Chaos was expelled from the Black Anvil Guild for trying to steal the blueprint from the elders. He swore revenge on the Black Anvil Guild, conquering the Ruins of Pavel with the Horrifying Golem Army he created. He views all outsiders as assassins sent by the Guild and will attack immediately. His ultimate goal is “world domination.” -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -562,9 +482,7 @@
 		</cond>
 	</skill>
 	<skill id="5030" levels="1" name="Raid Boss - Level 59">
-		<!--
-			Description: This captain secretly loved the Princess Melissa. Saddened by her disappearance, he set out to learn her fate. Finding her transformed into the Ice Queen, Freya, he was turned into a Gargoyle and now protects the Frozen Labyrinth from interlopers.
-		-->
+    <!-- This captain secretly loved the Princess Felicia. Saddened by her disappearance, he set out to learn her fate. Finding her transformed into the Ice Queen, Frey he was turned into a Gargoyle and now protects the Frozen Labyrinth from interlopers. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -577,9 +495,7 @@
 		</cond>
 	</skill>
 	<skill id="5031" levels="1" name="Raid Boss - Level 80">
-		<!--
-			Description: This Queen of Spike Stakatos conducts breeding experiments using top-ranking Spike Stakatos. She knows that her life running out and is desperately trying to grow a new Stakato queen in her nest, despite the low chances for success. Nursing her power, she dreams of a resurgence of her weakened race.
-		-->
+    <!-- This Queen of Spike Stakatos conducts breeding experiments using top-ranking Spike Stakatos. She knows that her life running out and is desperately trying to grow a new Stakato queen in her nest, despite the low chances for success. Nursing her power, she dreams of a resurgence of her weakened race. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -592,9 +508,7 @@
 		</cond>
 	</skill>
 	<skill id="5032" levels="1" name="Raid Boss - Level 80">
-		<!--
-			Description: Although he appears human, he is actually a high-ranking Angel who directly interacts with Einhasad and worships the Grail. Recently an ancient religious document found in the Tower of Insolence provided proof that the Grail is hidden in the Monastery of Silence. Since then, adherents of the Pagan Temple have frequently tried to steal it, but none has avoided the judgment of the Ruler of Splendor.
-		-->
+    <!-- Although he appears human, he is actually a high-ranking Angel who directly interacts with Einhasad and worships the Grail. Recently an ancient religious document found in the Tower of Insolence provided proof that the Grail is hidden in the Monastery of Silence. Since then, adherents of the Pagan Temple have frequently tried to steal it, but none has avoided the judgment of the Lord of Splendor. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -607,9 +521,7 @@
 		</cond>
 	</skill>
 	<skill id="5033" levels="1" name="Raid Boss - Level 80">
-		<!--
-			Description: This aristocrat of Rune secretly worships Triol, even conducting the occasional bloody worship ceremony in the Temple. Despite his claims of nobility, much of his background is still unknown.
-		-->
+    <!-- This aristocrat of Rune secretly worships Triol, even conducting the occasional bloody worship ceremony in the Temple. Despite her claims of nobility, much of her background is still unknown. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -622,9 +534,7 @@
 		</cond>
 	</skill>
 	<skill id="5034" levels="1" name="Raid Boss - Level 73">
-		<!--
-			Description: This Golem was originally a follower of Argos during the war between Giants and Humans. He remained with his master after Argos's imprisonment by Einhasad into the cliff wall. He has devolved to the point that he no longer resembles a Titan and isn't sure why he is still there. Even Daimon the White-Eyed cannot harm him in the Wall of Argos.
-		-->
+    <!-- This Golem was originally a follower of Argos during the war between Giants and Humans. He remained with his master after Argos's imprisonment by Einhasad into the cliff wall. He has devolved to the point that he no longer resembles a Lesser Giant and isn't sure why he is still there. Even Daimon the White-Eyed cannot harm him in the Wall of Argos. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -637,9 +547,7 @@
 		</cond>
 	</skill>
 	<skill id="5035" levels="1" name="Raid Boss - Level 76">
-		<!--
-			Description: The result of one of Hardin's magical experiments, he is rather monstrous in appearance, spewing lava from all over his body. Despite his looks, he was in fact a very submissive Golem who followed Hardin like a father. He went mad from the feeling of abandonment after Hardin left the Blazing Swamp. When King Astaire attacked Aden Castle, some of the soldiers of Elmore were caught in the Blazing Swamp, and there they first saw this giant covered in lava.
-		-->
+    <!-- Artificial creature made from Hardin's magic experiment. Although it has the body of a monster erupting lava all over, it used to be an obedient golem that followed Hardin like a father. It went crazy after Hardin left this Swamp of Flames with the thought that it was deserted. When King Astaire invaded Aden Kingdom, some Elmore soldiers trapped in the Swamp of Flames witnessed a giant covered with lava. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -652,9 +560,7 @@
 		</cond>
 	</skill>
 	<skill id="5036" levels="1" name="Raid Boss - Level 60">
-		<!--
-			Description: The Ice Fairy who came to Freya after Princess Melissa was turned, she oversees everything in the Frozen Labyrinth on behalf of Freya. She has watched the movements of the Zinnia Guild ever since the Order of Canna Knights disappeared.
-		-->
+    <!-- The Ice Fairy who came to Freya after Princess Felicia was turned, she oversees everything in the Frozen Labyrinth on behalf of Freya. She has watched the movements of the Zinnia Guild ever since the Order of Canna Knights disappeared. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -667,10 +573,7 @@
 		</cond>
 	</skill>
 	<skill id="5037" levels="3" name="Decrease Casting Spd">
-		<!--
-			Description: Instantly reduces Casting Speed.
-			Comment: Used in zone debuff at Isle of Prayer.
-		-->
+    <!-- Instantly reduces Casting Speed. Effect 1. -->
 		<table name="#Tab-mAtkSpd">0.85 0.75 0.7</table>
 		<table name="#abnormal_lv">1 2 3</table>
 		<set name="levelModifier" val="1" />
@@ -686,7 +589,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5038" levels="16" name="Summon PVP Penalty">
+	<skill id="5038" levels="16" name="Servitor PvP Penalty">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<table name="#penalty">0.98 0.96 0.94 0.92 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 0.74 0.72 0.7 0.5</table>
@@ -704,7 +608,8 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="#penalty" />
 		</for>
 	</skill>
-	<skill id="5039" levels="1" name="NPC - Ultra Bomb">
+	<skill id="5039" levels="1" name="Ultra Bomb">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="3000" />
@@ -713,7 +618,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5040" levels="12" name="NPC - Healing Potion">
+	<skill id="5040" levels="12" name="Healing Potion">
+    <!-- none -->
 		<table name="#mpConsume2">1 1 1 1 1 1 1 193 201 207 209 209</table>
 		<table name="#mpConsume1">1 1 1 1 1 1 1 49 51 52 53 53</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -734,6 +640,7 @@
 		</for>
 	</skill>
 	<skill id="5041" levels="6" name="Charm of Courage">
+    <!-- If you die on the battleground during a castle siege/fortress siege/clan hall siege, you can resurrect from the same stop. -->
 		<table name="#itemConsumeId">8515 8516 8517 8518 8519 8520</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 90</table>
@@ -766,7 +673,8 @@
 			<effect count="1" name="CharmOfCourage" time="1200" val="0" displayId="-1" />
 		</for>
 	</skill>
-	<skill id="5042" levels="12" name="NPC Dispel Bomb">
+	<skill id="5042" levels="12" name="Bomb Dispell">
+    <!-- none -->
 		<table name="#mpConsume2">19 30 42 57 74 91 106 114 119 124 126 128</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -776,7 +684,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5043" levels="12" name="NPC Super Sonic Blaster">
+	<skill id="5043" levels="12" name="Super Sonic Blaster">
+    <!-- none -->
 		<table name="#mpConsume2">7 10 14 19 25 31 36 38 40 42 42 43</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -792,7 +701,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="criticalRate" val="10" />
 	</skill>
-	<skill id="5044" levels="3" name="NPC Ultimate Defense">
+	<skill id="5044" levels="3" name="Ultimate Defense">
+    <!-- Increases P. Def., M. Def., and resistance to buff canceling attacks. Becomes immobile. -->
 		<table name="#pDef">1800 3600 7200</table>
 		<table name="#mDef">1350 2700 5400</table>
 		<table name="#mpConsume2">10 21 0</table>
@@ -815,7 +725,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5045" levels="12" name="Castle Power Strike">
+	<skill id="5045" levels="12" name="Power Strike">
+    <!-- none -->
 		<table name="#mpConsume2">19 22 25 28 31 33 36 38 40 42 42 43</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
 		<table name="#power">40 42 45 56 71 75 81 88 94 107 112 125</table>
@@ -832,7 +743,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="nextAction" val="attack" />
 	</skill>
-	<skill id="5046" levels="12" name="Castle Power Shot">
+	<skill id="5046" levels="12" name="Power Shot">
+    <!-- none -->
 		<table name="#mpConsume2">19 22 25 28 31 33 36 38 40 42 42 43</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
 		<table name="#power">65 71 78 102 112 132 158 172 187 239 258 279</table>
@@ -849,7 +761,8 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5047" levels="12" name="Castle Spinning Slash">
+	<skill id="5047" levels="12" name="Whirlwind">
+    <!-- none -->
 		<table name="#mpConsume2">19 22 25 28 31 33 36 38 40 42 42 43</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
 		<table name="#power">56 145 319 517 822 1236 1726 1976 2312 2420 2587 2717</table>
@@ -865,7 +778,8 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5048" levels="12" name="Castle Burst Shot">
+	<skill id="5048" levels="12" name="Burst Shot">
+    <!-- none -->
 		<table name="#mpConsume2">19 22 25 28 31 33 36 38 40 42 42 43</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
 		<table name="#power">450 470 491 512 534 557 581 606 631 657 684 711</table>
@@ -884,7 +798,8 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5049" levels="12" name="Castle Blow">
+	<skill id="5049" levels="12" name="Mortal Blow">
+    <!-- none -->
 		<table name="#mpConsume2">19 22 25 28 31 33 36 38 40 42 42 43</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -897,7 +812,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5050" levels="12" name="Castle DD Fire">
+	<skill id="5050" levels="12" name="Blaze">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -917,7 +833,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5051" levels="12" name="Castle Self AE Fire">
+	<skill id="5051" levels="12" name="Blazing Circle">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -935,7 +852,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5052" levels="12" name="Castle Long AE Fire">
+	<skill id="5052" levels="12" name="Flame Strike">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -954,7 +872,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5053" levels="12" name="Castle DD Water">
+	<skill id="5053" levels="12" name="Hydro Blast">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -974,7 +893,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5054" levels="12" name="Castle Self AE Water">
+	<skill id="5054" levels="12" name="Aqua Splash">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -992,7 +912,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5055" levels="12" name="Castle Long AE Water">
+	<skill id="5055" levels="12" name="Aqua Splash">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -1011,7 +932,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5056" levels="12" name="Castle DD Wind">
+	<skill id="5056" levels="12" name="Hurricane">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -1031,7 +953,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5057" levels="12" name="Castle Self AE Wind">
+	<skill id="5057" levels="12" name="Tempest">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -1046,23 +969,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5058" levels="12" name="Castle Long AE Wind">
-		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
-		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
-		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill0000" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="castRange" val="1500" />
-		<set name="hitTime" val="4000" />
-		<set name="hitCancelTime" val="500" />
-		<set name="mpConsume1" val="#mpConsume1" />
-		<set name="mpConsume2" val="#mpConsume2" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
-	</skill>
-	<skill id="5059" levels="12" name="Castle DD Earth">
+	<skill id="5058" levels="12" name="Tempest">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -1078,22 +986,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5060" levels="12" name="Castle Self AE Earth">
-		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
-		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
-		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill0000" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="hitTime" val="4000" />
-		<set name="hitCancelTime" val="500" />
-		<set name="mpConsume1" val="#mpConsume1" />
-		<set name="mpConsume2" val="#mpConsume2" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
-	</skill>
-	<skill id="5061" levels="12" name="Castle Long AE Earth">
+	<skill id="5059" levels="12" name="Rock Strike">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -1109,7 +1003,24 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5062" levels="12" name="Castle DD Holy">
+	<skill id="5060" levels="12" name="Earthquake">
+    <!-- none -->
+		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
+		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
+		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<set name="magicType" val="MAGIC" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="hitTime" val="4000" />
+		<set name="hitCancelTime" val="500" />
+		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="5061" levels="12" name="Earthquake">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -1125,22 +1036,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5063" levels="12" name="Castle Self AE Holy">
-		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
-		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
-		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill0000" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="hitTime" val="4000" />
-		<set name="hitCancelTime" val="500" />
-		<set name="mpConsume1" val="#mpConsume1" />
-		<set name="mpConsume2" val="#mpConsume2" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
-	</skill>
-	<skill id="5064" levels="12" name="Castle Long AE Holy">
+	<skill id="5062" levels="12" name="Holy Strike">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -1156,7 +1053,41 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5065" levels="12" name="Castle DD Unholy">
+	<skill id="5063" levels="12" name="Holy Circle">
+    <!-- none -->
+		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
+		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
+		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<set name="magicType" val="MAGIC" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="hitTime" val="4000" />
+		<set name="hitCancelTime" val="500" />
+		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="5064" levels="12" name="Holy Blast">
+    <!-- none -->
+		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
+		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
+		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<set name="magicType" val="MAGIC" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="castRange" val="1500" />
+		<set name="hitTime" val="4000" />
+		<set name="hitCancelTime" val="500" />
+		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="5065" levels="12" name="Unholy Strike">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -1177,7 +1108,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="effectRange" val="2100" />
 	</skill>
-	<skill id="5066" levels="12" name="Castle Self AE Unholy">
+	<skill id="5066" levels="12" name="Unholy Circle">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -1192,7 +1124,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5067" levels="12" name="Castle Long AE Unholy">
+	<skill id="5067" levels="12" name="Unholy Blast">
+    <!-- none -->
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -1209,6 +1142,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5068" levels="12" name="Decrease Speed">
+    <!-- Instantly reduces Speed. Effect 3. -->
 		<table name="#spd">0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
@@ -1235,9 +1169,7 @@
 		</for>
 	</skill>
 	<skill id="5069" levels="12" name="Decrease Atk. Spd.">
-		<!--
-			Description: Instantly reduces Atk. Spd.
-		-->
+    <!-- Instantly reduces Atk. Spd. Effect 3. -->
 		<table name="#spd">0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
@@ -1264,9 +1196,7 @@
 		</for>
 	</skill>
 	<skill id="5070" levels="12" name="Decrease Casting Spd">
-		<!--
-			Description: Instantly reduces Casting Spd.
-		-->
+    <!-- Instantly reduces Casting Spd. Effect 3. -->
 		<table name="#spd">0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
@@ -1293,9 +1223,7 @@
 		</for>
 	</skill>
 	<skill id="5071" levels="12" name="Decrease P. Atk.">
-		<!--
-			Description: Instantly reduces P. Atk.
-		-->
+    <!-- Instantly reduces P. Atk. Effect 3. -->
 		<table name="#Tab-pAtk">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
@@ -1322,9 +1250,7 @@
 		</for>
 	</skill>
 	<skill id="5072" levels="12" name="Decrease M. Atk.">
-		<!--
-			Description: Instantly reduces M. Atk.
-		-->
+    <!-- Instantly reduces M. Atk. Effect 3. -->
 		<table name="#Tab-mAtk">0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77</table>
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
@@ -1350,7 +1276,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5073" levels="12" name="Quest Trap -  Power Shot">
+	<skill id="5073" levels="12" name="Power Shot">
+    <!-- none -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="#magicLevel" />
@@ -1362,9 +1289,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5074" levels="1" name="The Victor of War">
-		<!--
-			Description: Maximum CP is increased.
-		-->
+    <!-- Maximum CP is increased. -->
 		<set name="icon" val="icon.skill5074" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -1377,9 +1302,7 @@
 		</cond>
 	</skill>
 	<skill id="5075" levels="1" name="The Vanquished of War">
-		<!--
-			Description: Maximum CP is decreased.
-		-->
+    <!-- Maximum CP is decreased. -->
 		<set name="icon" val="icon.skill5075" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -1392,6 +1315,7 @@
 		</cond>
 	</skill>
 	<skill id="5076" levels="15" name="Death Penalty">
+    <!-- Combat ability is decreased due to death. Effect 1. -->
 		<table name="#pAtk">0.958 0.907 0.856 0.805 0.754 0.703 0.652 0.601 0.550 0.499 0.448 0.397 0.356 0.305 0.254</table>
 		<table name="#mAtk">0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285</table>
 		<table name="#pDef">0.969 0.942 0.915 0.888 0.861 0.834 0.807 0.780 0.753 0.726 0.699 0.672 0.645 0.618 0.591</table>
@@ -1422,7 +1346,8 @@
 			<mul order="0x30" stat="accCombat" val="#accCombat" />
 		</for>
 	</skill>
-	<skill id="5077" levels="1" name="NPC Remove Death Penalty">
+	<skill id="5077" levels="1" name="Remove Death Penalty">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1432,7 +1357,8 @@
 		<set name="skillType" val="DEATH_PENALTY" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5078" levels="1" name="Frintezza Critical Power">
+	<skill id="5078" levels="1" name="Frintessa Critical Damage">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -1444,7 +1370,8 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5079" levels="1" name="NPC Focused Haste">
+	<skill id="5079" levels="1" name="Haste Focus">
+    <!-- none -->
 		<set name="icon" val="icon.skill0100" />
 		<set name="reuseDelay" val="20000" />
 		<set name="magicLevel" val="85" />
@@ -1456,7 +1383,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5080" levels="1" name="NPC Mighty Haste">
+	<skill id="5080" levels="1" name="Haste Might">
+    <!-- none -->
 		<table name="#Tab-pAtk">1.15</table>
 		<table name="#Tab-pAtkSpd">1.15</table>
 		<set name="icon" val="icon.skill0100" />
@@ -1477,9 +1405,7 @@
 		</for>
 	</skill>
 	<skill id="5081" levels="4" name="Silence">
-		<!--
-			Description: Blocks the ability to use physical skills.
-		-->
+    <!-- Blocks the ability to use physical skills. -->
 		<table name="#actRate">35 40 45 50</table>
 		<table name="#mpConsume2">60 60 60 5</table>
 		<table name="#power">568 873 1013 1162</table>
@@ -1499,7 +1425,8 @@
 			<effect count="1" name="MutePhisycal" time="30" val="0" />
 		</for>
 	</skill>
-	<skill id="5082" levels="4" name="NPC Spinning, Slashing Trick">
+	<skill id="5082" levels="4" name="Whirlwind">
+    <!-- none -->
 		<table name="#mpConsume2">60 60 60 5</table>
 		<table name="#power">5686 8732 10131 11622</table>
 		<set name="icon" val="icon.skill0000" />
@@ -1515,6 +1442,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5083" levels="4" name="Stun">
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#mpConsume2">93 93 93 5</table>
 		<table name="#power">568 873 1013 1162</table>
 		<set name="levelModifier" val="1" />
@@ -1535,7 +1463,8 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0" />
 		</for>
 	</skill>
-	<skill id="5084" levels="4" name="NPC Blinding Blow">
+	<skill id="5084" levels="4" name="Blinding Blow">
+    <!-- none -->
 		<table name="#power">2751 2850 2950 3050</table>
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="720" />
@@ -1558,6 +1487,7 @@
 		</for>
 	</skill>
 	<skill id="5085" levels="1" name="Anesthesia">
+    <!-- Temporarily stunned and immobilized. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill5085" />
 		<set name="power" val="80" />
@@ -1580,6 +1510,7 @@
 		</for>
 	</skill>
 	<skill id="5086" levels="1" name="Deadly Poison">
+    <!-- Infected with poison and gradually losing HP. If HP falls to 0, death will ensue. -->
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill5086" />
@@ -1603,6 +1534,7 @@
 		</for>
 	</skill>
 	<skill id="5087" levels="2" name="Berserk">
+    <!-- none -->
 		<table name="#Berserk"> 3 4 </table>
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -1618,6 +1550,7 @@
 		</for>
 	</skill>
 	<skill id="5088" levels="1" name="Signal">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="2000" />
 		<set name="magicLevel" val="85" />
@@ -1629,6 +1562,7 @@
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
 	<skill id="5089" levels="1" name="Representation - Enter the Sailren Nest Quest">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="castRange" val="600" />
@@ -1638,6 +1572,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5090" levels="1" name="Sailren Production">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="hitTime" val="1000" />
@@ -1645,7 +1580,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5091" levels="1" name="Sailren Production 2">
+	<skill id="5091" levels="1" name="Sailren Production">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="hitTime" val="1000" />
@@ -1654,6 +1590,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5092" levels="1" name="Antharas Terror">
+    <!-- Temporarily overcome with fear and mindlessly fleeing. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill4108" />
 		<set name="coolTime" val="2700" />
@@ -1673,6 +1610,7 @@
 		</for>
 	</skill>
 	<skill id="5093" levels="1" name="Antharas Meteor">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="6000" />
@@ -1688,7 +1626,8 @@
 		<set name="skillRadius" val="1100" />
 		<set name="element" val="earth" />
 	</skill>
-	<skill id="5094" levels="1" name="Antharas Subordinate Suicide">
+	<skill id="5094" levels="1" name="Antharas Self-destruction">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="1000" />
 		<set name="magicLevel" val="85" />
@@ -1700,7 +1639,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isSuicideAttack" val="true" />
 	</skill>
-	<skill id="5095" levels="1" name="Antharas Subordinate Melee Attack">
+	<skill id="5095" levels="1" name="Antharas Strike">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="20215" />
 		<set name="magicLevel" val="85" />
@@ -1712,7 +1652,8 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5096" levels="1" name="Antharas Subordinate Remote Attack">
+	<skill id="5096" levels="1" name="Antharas Power Shot">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="48254" />
 		<set name="magicLevel" val="85" />
@@ -1725,7 +1666,8 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5097" levels="1" name="Antharas Subordinate Suicide (Narrow Range)">
+	<skill id="5097" levels="1" name="Antharas Self-destruction">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="2000" />
 		<set name="magicLevel" val="85" />
@@ -1738,6 +1680,7 @@
 		<set name="isSuicideAttack" val="true" />
 	</skill>
 	<skill id="5098" levels="2" name="Capture Penalty">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1000" />
 		<set name="magicLevel" val="85" />
@@ -1746,6 +1689,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5099" levels="1" name="Cancel Capture A">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />

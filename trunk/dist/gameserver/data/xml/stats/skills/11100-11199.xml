@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="11142" levels="3" name="Болевой Шок">
+	<skill id="11142" levels="3" name="Damaged Area">
+    <!-- Momentarily incurs damage. All speeds are decreased. -->
 		<table name="#power">126 130 140 146</table>
 		<table name="#magicLevel">85 86 87 88</table>
 		<table name="#mpConsume2">61 63 65</table>
@@ -22,7 +23,8 @@
 		<set name="target" val="TARGET_AURA"/>
 		<for />
 	</skill>
-	<skill id="11143" levels="3" name="Болевой Шок">
+	<skill id="11143" levels="3" name="Damaged Area">
+    <!-- Momentarily incurs damage. All speeds are decreased. -->
 		<table name="#power">126 130 140 146</table>
 		<table name="#magicLevel">85 86 87 88</table>
 		<table name="#mpConsume2">61 63 65</table>
@@ -44,7 +46,8 @@
 		<set name="target" val="TARGET_AURA"/>
 		<for />
 	</skill>
-	<skill id="11174" levels="3" name="Прореха в Пространстве">
+	<skill id="11174" levels="3" name="Shadow Snare Zone">
+    <!-- Drags enemies around a target toward it. -->
 		<table name="#mpConsume2">123 127 132 136 140 144</table>
 		<table name="#magicLevel">89 91 93 95 97 99</table>
 		<set name="mpConsume2" val="#mpConsume2" />
@@ -63,7 +66,8 @@
 			<effect count="1" name="TargetToMe" time="1" val="0"/>
 		</for>
 	</skill>
-	<skill id="11175" levels="3" name="Прореха в Пространстве">
+	<skill id="11175" levels="3" name="Shadow Snare Zone">
+    <!-- Drags enemies around a target toward it. -->
 		<table name="#mpConsume2">123 127 132 136 140 144</table>
 		<table name="#magicLevel">89 91 93 95 97 99</table>
 		<set name="mpConsume2" val="#mpConsume2" />
@@ -82,7 +86,8 @@
 			<effect count="1" name="TargetToMe" time="1" val="0"/>
 		</for>
 	</skill>
-	<skill id="11179" levels="1" name="Состояние Удержания">
+	<skill id="11179" levels="1" name="Yoke Status">
+    <!-- Raised into the air and instantly immobilized. -->
         <table name="#magicLevel">85</table>
         <table name="#mpConsume2">65</table>
         <set name="reuseDelay" val="6000"/>
@@ -106,7 +111,8 @@
             <effect name="Paralyze" time="10" val="0" abnormal="floatroot" stackType="paralyze" stackOrder="1"/>
         </for>
 	</skill>
-	<skill id="11180" levels="1" name="Состояние Удержания">
+	<skill id="11180" levels="1" name="Yoke Status">
+    <!-- Raised into the air and instantly immobilized. -->
         <table name="#magicLevel">85</table>
         <table name="#mpConsume2">65</table>
         <set name="reuseDelay" val="6000"/>
@@ -130,7 +136,8 @@
             <effect name="Paralyze" time="10" val="0" abnormal="floatroot" stackType="paralyze" stackOrder="1"/>
         </for>
 	</skill>
-	<skill id="11181" levels="1" name="Состояние Удержания">
+	<skill id="11181" levels="1" name="Yoke Status">
+    <!-- Raised into the air and instantly immobilized. -->
         <table name="#magicLevel">85</table>
         <table name="#mpConsume2">65</table>
         <set name="reuseDelay" val="6000"/>
@@ -154,7 +161,8 @@
             <effect name="Paralyze" time="10" val="0" abnormal="floatroot" stackType="paralyze" stackOrder="1"/>
         </for>
 	</skill>
-	<skill id="11182" levels="1" name="Состояние Удержания">
+	<skill id="11182" levels="1" name="Yoke Status">
+    <!-- Raised into the air and instantly immobilized. -->
         <table name="#magicLevel">85</table>
         <table name="#mpConsume2">65</table>
         <set name="reuseDelay" val="6000"/>
@@ -178,7 +186,8 @@
             <effect name="Paralyze" time="10" val="0" abnormal="floatroot" stackType="paralyze" stackOrder="1"/>
         </for>
 	</skill>
-	<skill id="11183" levels="1" name="Sigil Mastery">
+	<skill id="11183" levels="1" name="Superior Quick Recovery">
+    <!-- INT + 2 and decreases cooldown for skills by 25%. -->
 		<set name="magicLevel" val="85" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -194,7 +203,8 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="11184" levels="1" name="Великий Колдовской Рык">
+	<skill id="11184" levels="1" name="Superior Arcane Lore">
+    <!-- INT + 2 and increases resistance to Fire/Water/Wind/Earth by 20 and M. Def. by 5%. -->
 		<set name="magicLvl" val="85"/>
         <set name="operateType" val="OP_PASSIVE"/>
         <set name="skillType" val="BUFF"/>
@@ -209,7 +219,8 @@
 			<add order="0x40" stat="defenceEarth" val="20" />
 		</for>
 	</skill>
-	<skill id="11185" levels="1" name="Advanced Surge Mana">
+	<skill id="11185" levels="1" name="Superior Mana Boost">
+    <!-- INT + 2 and increases Max MP by 313. -->
         <table name="#maxMp">313</table>
         <table name="#magicLevel">85</table>
 		<set name="magicLevel" val="#magicLevel" />
@@ -226,7 +237,8 @@
 			<add order="0x40" stat="maxMp" val="#maxMp" />
 		</for>
 	</skill>
-	<skill id="11186" levels="1" name="Advanced Recovery">
+	<skill id="11186" levels="1" name="Superior Fast MP Recovery">
+    <!-- INT + 2 and increases MP Recovery Bonus by 3.6. -->
         <table name="#regMp">3.6</table>
         <table name="#magicLevel">85</table>
         <set name="magicLevel" val="#magicLevel"/>
@@ -243,7 +255,8 @@
 			<mul order="0x30" stat="regMp" val="#regMp" />
 		</for>
 	</skill>
-	<skill id="11187" levels="1" name="Великий Свет Разума">
+	<skill id="11187" levels="1" name="Superior Clear Mind">
+    <!-- INT + 2, increases MP Recovery Bonus by 5.1 while standing and by 6.5 while walking. -->
         <table name="#regMp">5.1</table>
         <table name="#regMp2">6.5</table>
 		<table name="#magicLevel">85</table>

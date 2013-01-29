@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-   	<skill id="8800" levels="1" name="Совершенное Кольцо Гвардейца- Иннадрил.">
-		<!-- Darvin Увеличивает защиту оружия от Света на 15-->
+   	<skill id="8800" levels="1" name="Top-Grade Guard Ring - Innadril">
+    <!-- Increases Resistance to Holy by 15. -->
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_PASSIVE"/>
@@ -9,8 +9,8 @@
             <add order="0x40" stat="defenceHoly" val="15"/>
         </for>
 	</skill>
-	<skill id="8801" levels="1" name="Совершенное Кольцо Гвардейца- Годард">
-		<!-- Darvin Увеличивает защиту оружия от Тьмы на 15-->
+	<skill id="8801" levels="1" name="Top-Grade Guard Ring - Goddard">
+    <!-- Increases Resistance to Dark by 15. -->
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_PASSIVE"/>
@@ -18,8 +18,8 @@
             <add order="0x40" stat="defenceUnholy" val="15"/>
         </for>
 	</skill>
-	<skill id="8802" levels="1" name="Совершенное Кольцо Гвардейца- Иннадрил">
-		<!-- Darvin Увеличивает защиту оружия от ветра на 15-->
+	<skill id="8802" levels="1" name="Top-Grade Guard Ring - Rune">
+    <!-- Increases Resistance to wind by 15. -->
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_PASSIVE"/>
@@ -27,8 +27,8 @@
             <add order="0x40" stat="defenceWind" val="15"/>
         </for>
 	</skill>
-	<skill id="8803" levels="1" name="Совершенное Кольцо Гвардейца- Шутгарт">
-		<!-- Darvin Увеличивает защиту оружия от тьмы на 15-->
+	<skill id="8803" levels="1" name="Top-Grade Guard Ring - Schuttgart">
+    <!-- Increases Resistance to Dark by 15. -->
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_PASSIVE"/>
@@ -36,11 +36,8 @@
             <add order="0x40" stat="defenceUnholy" val="15"/>
         </for>
 	</skill>
-	<skill id="8870" levels="1" name="Кольцо Таути">
-        <!-- Атака огнем/тьмой +25, MP +38, сила Крит. Атк. +15%, мощность умений +5%,
-      наносимый урон в PvP +5%, сопротивления параличу/оковам/изгнанию +10,
-      сопротивление отражению урона +5, сопротивления вампиризму +5; получаемый урон в PvP -5%,
-      шанс Крит. Атк. при использовании дробящего оружия +54. -->
+	<skill id="8870" levels="1" name="Tauti's Ring">
+    <!-- Increases Critical Damage by 15%, Skill Attack by 5%, damage inflicted during PvP by 5%, resistance to Paralysis/Yoke/Exile by 10, resistance to Damage Reflect by 5, resistance to HP Drain by 5, and decreases damage received during PvP by 5%. Increases Critical by 54 when equipped with a blunt. -->
         <set name="magicLevel" val="99"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>

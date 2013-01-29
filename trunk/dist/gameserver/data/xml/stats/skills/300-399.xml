@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="301" levels="5" name="Summon Big Boom">
+    <!-- Summons a self-destructing Big Boom. Requires 3 D-grade crystals. Takes away 30% of acquired XP. -->
 		<table name="#itemConsumeCount">3 3 4 4 5</table>
 		<table name="#itemConsumeCountInTime">5</table>
 		<table name="#mpConsume2">74 82 88 94 100</table>
@@ -18,7 +19,6 @@
 		<set name="itemConsumeCountInTime" val="#itemConsumeCountInTime" />
 		<set name="skillType" val="SUMMON" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<!-- Summon-specific -->
 		<table name="#npcIds">14702 14703 14704 14705 14706</table>
 		<table name="#expPenalty">0.3</table>
 		<set name="npcId" val="#npcIds" />
@@ -30,6 +30,7 @@
 		</enchant1>
 	</skill>
 	<skill id="302" levels="9" name="Spoil Festival">
+    <!-- Causes Spoil around the enemy. -->
 		<table name="#effectPoint">268 341 408 467 523 582 611 635 655</table>
 		<table name="#Tab-pAtkSpd">1</table>
 		<table name="#activateRate">80</table>
@@ -84,10 +85,7 @@
 		</for>
 	</skill>
 	<skill id="303" levels="4" name="Soul of Sagittarius">
-		<!--
-			Enchant #1: -HP consumption
-			Enchant #2: +pDef
-		-->
+    <!-- Increases the user's Max MP by 10% for 20 minutes. -->
 		<table name="#mp">1.10 1.15 1.20 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25</table>
 		<table name="#effectPoint">438 549 597 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635 635</table>
 		<table name="#abnormal_lv">1 2 3 4</table>
@@ -115,6 +113,7 @@
 		</for>
 	</skill>
 	<skill id="304" levels="1" name="Song of Vitality">
+    <!-- Increases Max HP of all party members by 30% for 2 minutes. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<table name="#effectPoint">611</table>
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
@@ -146,6 +145,7 @@
 		</for>
 	</skill>
 	<skill id="305" levels="1" name="Song of Vengeance">
+    <!-- For 2 minutes, gives a party member the ability to transfer 20% of received damage back to the enemy. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<table name="#effectPoint">655</table>
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
@@ -177,6 +177,7 @@
 		</for>
 	</skill>
 	<skill id="306" levels="1" name="Song of Flame Guard">
+    <!-- Increases party members' Resistance to Fire by 30 for 2 minutes. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<table name="#effectPoint">582</table>
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
@@ -208,6 +209,7 @@
 		</for>
 	</skill>
 	<skill id="307" levels="1" name="Dance of Aqua Guard">
+    <!-- Increases party members' Resistance to Water by 30 for 2 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. Requires a dual sword. -->
 		<table name="#effectPoint">635</table>
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
@@ -240,6 +242,7 @@
 		</for>
 	</skill>
 	<skill id="308" levels="1" name="Song of Storm Guard">
+    <!-- Increases party members' Resistance to Wind by 30 for 2 minutes. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<table name="#effectPoint">635</table>
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
@@ -271,11 +274,7 @@
 		</for>
 	</skill>
 	<skill id="309" levels="1" name="Dance of Earth Guard">
-		<!--
-			Last modify:	29.02.2008
-
-			Description: Temporarily increase your party members' resistance to earth attacks. Continuous dancing consumes additional MP. An equipped dual-sword is required to use this skill.
-		-->
+    <!-- Increases party members' Resistance to Earth by 30 for 2 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. Requires a dual sword. -->
 		<table name="#effectPoint">582</table>
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
@@ -308,6 +307,7 @@
 		</for>
 	</skill>
 	<skill id="310" levels="1" name="Dance of the Vampire">
+    <!-- For 2 minutes, gives all party members the ability to recover as HP 8% of any standard melee damage inflicted on the enemy. Additionally increases MP Consumption when dancing while song/dance is in effect. Requires a dual sword. -->
 		<table name="#effectPoint">655</table>
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
@@ -340,6 +340,7 @@
 		</for>
 	</skill>
 	<skill id="311" levels="1" name="Dance of Protection">
+    <!-- For 2 minutes, gives all party members the ability to decrease by 30 any environment-related damage received. Additionally increases MP Consumption when dancing while song/dance is in effect. Requires a dual sword. -->
 		<table name="#effectPoint">611</table>
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
@@ -372,6 +373,7 @@
 		</for>
 	</skill>
 	<skill id="312" levels="20" name="Vicious Stance">
+    <!-- Increases Critical Damages by 35. Continuously consumes MP proportionately to the user's level. -->
 		<table name="#mp">0.4</table>
 		<table name="#crit">35 48 64 84 109 139 166 196 229 266 306 349 379 410 443 475 509 542 576 609</table>
 		<table name="#mpConsume1">4 5 5 6 7 7 8 9 9 10 10 11 11 12 12 13 13 13 14 14</table>
@@ -398,6 +400,7 @@
 		</for>
 	</skill>
 	<skill id="313" levels="8" name="Snipe">
+    <!-- For 2 minutes, increases the user's Accuracy by 3, P. Atk. by 124, range by 50, and Critical Rate by 20% when using a bow. Movement is impossible while skill is being used. Requires a bow. -->
 		<table name="#effectPoint">566 582 597 611 624 635 646 655</table>
 		<table name="#pAtk">124 134 145 155 166 177 188 199</table>
 		<table name="#accCombat">3 3 4 4 5 5 6 6</table>
@@ -443,6 +446,7 @@
 		</for>
 	</skill>
 	<skill id="314" levels="16" name="Fatal Counter">
+    <!-- Supplements the user's P. Atk. by 2908 Power to fire an agony-inducing arrow at a target. The power of the attack increases as the enemy's HP decreases. Requires a bow. Over-hit is possible. -->
 		<table name="#effectPoint">567 575 583 591 599 607 614 621 627 634 640 646 651 656 661 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665 665</table>
 		<table name="#powerPvP">0</table>
 		<table name="#elementPower">0</table>
@@ -505,6 +509,7 @@
 		</for>
 	</skill>
 	<skill id="315" levels="16" name="Crush of Doom">
+    <!-- Attacks the target with 4558 Power added to P. Atk. Requires a two-handed sword/two-handed blunt weapon to be equipped. Ignores Shield Defense. Over-hit and critical hit are possible. -->
 		<table name="#effectPoint">425 431 438 444 449 455 460 466 471 475 480 484 488 492 496 499</table>
 		<table name="#powerPvP">0</table>
 		<table name="#elementPower">0</table>
@@ -566,6 +571,7 @@
 		</enchant7>
 	</skill>
 	<skill id="316" levels="1" name="Aegis">
+    <!-- Enables Shield Defense in all directions. -->
 		<set name="icon" val="icon.skill0316" />
 		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_SELF" />
@@ -576,9 +582,7 @@
 		</for>
 	</skill>
 	<skill id="317" levels="5" name="Focus Attack">
-		<!--
-			Last modify:	17.02.2010
-		-->
+    <!-- When using a spear, allows user to attack a single enemy with increases in Accuracy of 2 and Critical Damage of 10%. -->
 		<table name="#cAtk">1.10 1.15 1.20 1.25 1.30</table>
 		<table name="#Accuracy">2 3 4 5 6</table>
 		<table name="#mpConsume1">18 22 27 31 34</table>
@@ -603,9 +607,7 @@
 		</for>
 	</skill>
 	<skill id="318" levels="1" name="Aegis Stance">
-		<!--
-			Enchant #1: -Cost
-		-->
+    <!-- Enables Shield Defense from all directions and decreases Shield Defense by 30%. -->
 		<table name="#sDef">0.70</table>
 		<table name="#magicLevel">46</table>
 		<set name="icon" val="icon.skill0318" />
@@ -626,6 +628,7 @@
 		</for>
 	</skill>
 	<skill id="319" levels="2" name="Agile Movement">
+    <!-- Increases Accuracy by 2 and Speed by 5 when equipped with light armor. -->
 		<table name="#Accuracy">2 3</table>
 		<table name="#Speed">5 10</table>
 		<table name="#magicLevel">20 40</table>
@@ -652,6 +655,7 @@
 		</for>
 	</skill>
 	<skill id="320" levels="10" name="Wrath">
+    <!-- A powerful spear thrust weakens nearby enemies' CP by 7%. Requires a polearm. -->
 		<table name="#effectPoint">307 311 314 317 320 323 326 328 331 333</table>
 		<table name="#mpConsume2">66 67 68 69 70 71 72 73 74 75</table>
 		<table name="#magicLevel">65 66 67 68 69 70 71 72 73 74</table>
@@ -681,6 +685,7 @@
 		</enchant2>
 	</skill>
 	<skill id="321" levels="10" name="Blinding Blow">
+    <!-- Attacks the target's vital points with 2751 Power added to P. Atk. and turns his/her back to you. Increases Speed by 40. Requires a dagger. Over-hit and Half-kill are possible. -->
 		<table name="#effectPoint">307 311 314 317 320 323 326 328 331 333</table>
 		<table name="#mpConsume2">63 64 65 66 67 68 69 70 71 72</table>
 		<table name="#magicLevel">65 66 67 68 69 70 71 72 73 74</table>
@@ -721,6 +726,7 @@
 		</for>
 	</skill>
 	<skill id="322" levels="6" name="Shield Fortress">
+    <!-- Shield Defense. increases by 446. Continuously consumes MP proportionately to the user's level. -->
 		<table name="#mpConsumeTick">0.4</table>
 		<table name="#ShieldDefRate">446 469 491 514 537 560</table>
 		<table name="#mpConsume1">12 13 13 13 14 14</table>
@@ -746,7 +752,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="323" levels="1" name="Quiver of Arrow: Grade A">
+	<skill id="323" levels="1" name="Quiver of Arrow: A Grade">
+    <!-- Summons between 700 and 2800 Mithril arrows. Consumes 1 A-Grade Crystal. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0323" />
 		<set name="reuseDelay" val="600000" />
@@ -763,7 +770,8 @@
 		<set name="SummonMinCount" val="700" />
 		<set name="SummonMaxCount" val="2800" />
 	</skill>
-	<skill id="324" levels="1" name="Quiver of Arrow: Grade S">
+	<skill id="324" levels="1" name="Quiver of Arrow: S Grade">
+    <!-- Summons between 900 and 3600 arrows of light. Consumes 1 S-Grade Crystal. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0324" />
 		<set name="reuseDelay" val="600000" />
@@ -781,6 +789,7 @@
 		<set name="SummonMaxCount" val="3600" />
 	</skill>
 	<skill id="325" levels="1" name="Strider Siege Assault">
+    <!-- Uses 15005 Power to attack a castle's gate. Can be used while mounted on a Strider. Consumes 5 Spirit Ore. -->
 		<set name="icon" val="icon.skill0325" />
 		<set name="coolTime" val="720" />
 		<set name="reuseDelay" val="1000" />
@@ -802,6 +811,7 @@
 		</cond>
 	</skill>
 	<skill id="326" levels="1" name="Build Advanced Headquarters">
+    <!-- Constructs a high quality encampment that possesses double HP of a standard encampment and assist clan member recovery and battle additions during castle sieges. Consumes 300 C-Grade Gemstones. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0326" />
 		<set name="reuseDelay" val="3600000" />
@@ -818,6 +828,7 @@
 		<set name="advancedMultiplier" val="2" />
 	</skill>
 	<skill id="327" levels="1" name="Wyvern Aegis">
+    <!-- For 9 seconds, increases P. Def. by 7000, M. Def. by 6000 and Resistance to buff-canceling attacks by 100%. Can be used while mounted on a Wyvern. Consumes 20 Spirit Ore. -->
 		<set name="icon" val="icon.skill0327" />
 		<set name="reuseDelay" val="600000" />
 		<set name="hitTime" val="1000" />
@@ -840,6 +851,7 @@
 		</for>
 	</skill>
 	<skill id="328" levels="1" name="Wisdom">
+    <!-- Increases Resistance to Hold, Sleep and Mental attacks by 20. -->
 		<table name="#rootResist">20</table>
 		<table name="#sleepResist">20</table>
 		<table name="#mentalResist">20</table>
@@ -868,6 +880,7 @@
 		</for>
 	</skill>
 	<skill id="329" levels="1" name="Health">
+    <!-- Increases Resistance to poison and Bleed attacks by 20. -->
 		<table name="#poisonResist">20</table>
 		<table name="#bleedResist">20</table>
 		<table name="#magicLevel">76</table>
@@ -890,7 +903,7 @@
 		</for>
 	</skill>
 	<skill id="330" levels="1" name="Skill Mastery">
-		<!-- Реализован в коде -->
+    <!-- Depending on user's STR, the cooldown resets or the duration doubles. -->
 		<set name="icon" val="icon.skill0330" />
 		<set name="magicLevel" val="77" />
 		<set name="target" val="TARGET_NONE" />
@@ -898,7 +911,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="331" levels="1" name="Skill Mastery">
-		<!-- Реализован в коде -->
+    <!-- Depending on user's INT, the cooldown resets or the duration doubles. -->
 		<set name="icon" val="icon.skill0330" />
 		<set name="magicLevel" val="77" />
 		<set name="target" val="TARGET_NONE" />
@@ -906,6 +919,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="332" levels="1" name="Extra Inventory">
+    <!-- Increases inventory slots by 1. -->
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLevel" val="76" />
 		<set name="target" val="TARGET_SELF" />
@@ -916,6 +930,7 @@
 		</for>
 	</skill>
 	<skill id="333" levels="1" name="Extra Sales Slots">
+    <!-- Increases private store transaction slots by 1. -->
 		<set name="icon" val="icon.skill0333" />
 		<set name="magicLevel" val="76" />
 		<set name="target" val="TARGET_SELF" />
@@ -926,6 +941,7 @@
 		</for>
 	</skill>
 	<skill id="334" levels="1" name="Focus Skill Mastery">
+    <!-- Increases Skill Mastery skill rate by 100%. Continuously consumes MP proportionately to the user's level. -->
 		<set name="icon" val="icon.skill0334" />
 		<set name="magicLevel" val="78" />
 		<set name="mpConsume1" val="36" />
@@ -939,6 +955,7 @@
 		</for>
 	</skill>
 	<skill id="335" levels="1" name="Fortitude">
+    <!-- Increases Resistance to Paralysis and Stun attacks by 30. Continuously consumes MP proportionately to the user's level. -->
 		<table name="#stunResist">30</table>
 		<table name="#paralyzeResist">30</table>
 		<table name="#magicLevel">76</table>
@@ -964,9 +981,7 @@
 		</for>
 	</skill>
 	<skill id="336" levels="1" name="Arcane Wisdom">
-		<!--
-			Description: Maximizes magic efficiency by decreasing MP consumption by 30% and Casting Spd. by 10%. 50 HP is consumed per second.
-		-->
+    <!-- Maximizes magic efficiency by decreasing MP Consumption by 30% and Casting Spd. by 10%. 50 HP is consumed per second. -->
 		<table name="#mpConsum">.7</table>
 		<table name="#magicLevel">78</table>
 		<set name="icon" val="icon.skill0336" />
@@ -987,10 +1002,7 @@
 		</for>
 	</skill>
 	<skill id="337" levels="1" name="Arcane Power">
-		<!--
-			Enchant #1: +Power
-			Last editor: 19.06.2008
-		-->
+    <!-- Maximizes magic efficiency by increasing M. Atk. by 30% and MP Consumption by 10%. Every second, 50 HP is consumed. -->
 		<table name="#power">1.3</table>
 		<table name="#magicLevel">78</table>
 		<set name="icon" val="icon.skill0337" />
@@ -1011,6 +1023,7 @@
 		</for>
 	</skill>
 	<skill id="338" levels="1" name="Arcane Agility">
+    <!-- Maximizes magic efficiency by increasing Casting Spd. by 20% and magic MP Consumption by 10%, and by decreasing magic cooldown by 10%. 50 HP is consumed per second. -->
 		<table name="#mAtkSpd">1.2</table>
 		<table name="#mReuse">.9</table>
 		<table name="#magicLevel">78</table>
@@ -1037,6 +1050,7 @@
 		</for>
 	</skill>
 	<skill id="339" levels="1" name="Parry Stance">
+    <!-- Blocks an attack using a weapon. Increases P. Def. by 25% and M. Def. by 25%. Decreases Speed by 10%, Atk. Spd. by 20%, and Accuracy by 4. Continuously consumes MP proportionately to the user's level. -->
 		<table name="#Def">1.25</table>
 		<table name="#magicLevel">78</table>
 		<set name="icon" val="icon.skill0339" />
@@ -1060,6 +1074,7 @@
 		</for>
 	</skill>
 	<skill id="340" levels="1" name="Riposte Stance">
+    <!-- Parries and returns an attack using a weapon. Returns 30% of received damage back to the enemy, and reflects buff/de-buff with 30% probability. Decreases Speed by 10%, Atk. Spd. by 20%, and Accuracy by 4. Continuously consumes MP proportionately to the user's level. -->
 		<set name="icon" val="icon.skill0340" />
 		<set name="magicLevel" val="77" />
 		<set name="mpConsume1" val="35" />
@@ -1078,6 +1093,7 @@
 		</for>
 	</skill>
 	<skill id="341" levels="1" name="Touch of Life">
+    <!-- Gives a divine blessing by sacrificing oneself. Restores HP by 50%, and for 2 minutes, increases Resistance to buff cancel attacks by 100%, Resistance to de-buff attacks by 30%, and the Healing power received by 30%. Restores 50 HP every second. -->
 		<table name="#time">120</table>
 		<table name="#hpConsume">1215</table>
 		<table name="#magicLevel">78</table>
@@ -1114,11 +1130,7 @@
 		</for>
 	</skill>
 	<skill id="342" levels="1" name="Touch of Death">
-		<!--
-			Last modify:	28.12.2009
-
-			Cancels up to 5 buffs with 25% probability and consumes 90% CP.For 2 minutes, decreases Max CP by 90% and the power of received HP recovery magic by 30%. Increases susceptibility to de-buff by 30%.
-		-->
+    <!-- Sacrifices oneself to pronounce an Dark curse on the enemy. Cancels up to 5 buffs with 25% probability and consumes 90% CP. For 2 minutes, decreases Max CP by 90% and the Healing power received by 30%. Increases susceptibility to de-buff by 30%. -->
 		<table name="#activateRate">80</table>
 		<table name="#hpConsume">669</table>
 		<table name="#magicLevel">78</table>
@@ -1160,6 +1172,7 @@
 		</for>
 	</skill>
 	<skill id="343" levels="1" name="Lethal Shot">
+    <!-- Shoots an arrow that is aimed at a vital spot. Attacks the enemy with 7698 Power added to P. Atk. Requires a bow. Over-hit, Half-Kill, and Critical are possible. -->
 		<table name="#powerPvP">0</table>
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
@@ -1221,6 +1234,7 @@
 		</enchant7>
 	</skill>
 	<skill id="344" levels="1" name="Lethal Blow">
+    <!-- Attacks the target's vital points with 5773 Power added to P. Atk. Requires a dagger. Over-hit and Half-kill are possible. -->
 		<table name="#powerPvP">0</table>
 		<table name="#lethal1">10</table>
 		<table name="#elementPower">0</table>
@@ -1285,6 +1299,7 @@
 		</enchant7>
 	</skill>
 	<skill id="345" levels="1" name="Sonic Rage">
+    <!-- Attacks the enemy with a devastating momentum burst. Requires a dual sword. Possible up to stage 8. Over-hit and critical hit are possible. -->
 		<set name="icon" val="icon.skill0345" />
 		<set name="power" val="8" />
 		<set name="magicLevel" val="78" />
@@ -1305,6 +1320,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="346" levels="1" name="Raging Force">
+    <!-- Attacks the enemy with a devastating burst of wind energy. Requires a fist weapon. Possible up to stage 8. Over-hit and critical hit are possible. -->
 		<set name="icon" val="icon.skill0346" />
 		<set name="power" val="8" />
 		<set name="magicLevel" val="78" />
@@ -1325,6 +1341,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="347" levels="1" name="Earthquake">
+    <!-- Supplements the user's P. Atk. with 4848 Power in an Earth-shattering spear thrust. Requires a polearm. Over-hit and critical hit are possible. Ignores Shield Defense. Target may be canceled. -->
 		<table name="#mpConsume2">78</table>
 		<table name="#hpConsume">340</table>
 		<table name="#magicLevel">78</table>
@@ -1370,6 +1387,7 @@
 		</for>
 	</skill>
 	<skill id="348" levels="1" name="Spoil Crush">
+    <!-- Causes a change inside the monster while attacking the enemy and permits use of the Sweeper skill. Requires a sword or blunt weapon to be equipped. Over-hit and Critical are possible. -->
 		<set name="icon" val="icon.skill0348" />
 		<set name="coolTime" val="100" />
 		<set name="reuseDelay" val="3000" />
@@ -1390,6 +1408,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="349" levels="1" name="Song of Renewal">
+    <!-- For 2 minutes, decreases all party members' MP Consumption for physical/magic/song/dance skill by 5% and physical/magical skill cooldown by 20%. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
 		<table name="#magicLevel">77</table>
@@ -1424,6 +1443,7 @@
 		</for>
 	</skill>
 	<skill id="350" levels="1" name="Physical Mirror">
+    <!-- For 5 minutes, reflects physical buffs/de-buffs with 30% probability and magic buffs/de-buffs with 10% probability. Requires a shield. -->
 		<set name="icon" val="icon.skill0350" />
 		<set name="reuseDelay" val="150000" />
 		<set name="magicLevel" val="78" />
@@ -1443,6 +1463,7 @@
 		</for>
 	</skill>
 	<skill id="351" levels="1" name="Magical Mirror">
+    <!-- For 5 minutes, reflects physical buffs/de-buffs with 10% probability and magic buffs/de-buffs with 30% probability. Requires a shield. -->
 		<set name="icon" val="icon.skill0351" />
 		<set name="reuseDelay" val="150000" />
 		<set name="magicLevel" val="78" />
@@ -1462,6 +1483,7 @@
 		</for>
 	</skill>
 	<skill id="352" levels="1" name="Shield Bash">
+    <!-- Hits the enemy with user's shield, stunning them for 2 seconds. Requires a shield. Target cancel is possible. -->
 		<table name="#activateRate">80</table>
 		<table name="#water">0</table>
 		<table name="#fire">0</table>
@@ -1522,6 +1544,7 @@
 		</for>
 	</skill>
 	<skill id="353" levels="1" name="Shield Slam">
+    <!-- Stuns the enemy with a shield, blocking the enemy's physical skills for 1 minute. Requires a shield. Target cancel is possible. -->
 		<table name="#activateRate">40</table>
 		<table name="#Holy">0</table>
 		<table name="#Dark">0</table>
@@ -1564,6 +1587,7 @@
 		</for>
 	</skill>
 	<skill id="354" levels="1" name="Hamstring Shot">
+    <!-- Supplements the user's P. Atk. with 1973 Power to decrease the enemy's Speed by 30% for 1 minute. Requires a bow. Over-hit and critical hit are possible. -->
 		<table name="#activateRate">40</table>
 		<table name="#magicLevel">77</table>
 		<table name="#power">1973</table>
@@ -1600,13 +1624,7 @@
 		</for>
 	</skill>
 	<skill id="355" levels="1" name="Focus Death">
-		<!--
-			Last modify:	11.04.2009
-
-			For 2 minutes, decreases user's critical attack rate by 30% and frontal critical damage by 30%.
-			 Increases the probability of deadly attack by 60% and rear critical damage by 90%. Requires a dagger.
-			Уменьшает шансы Крит. Атк. на 30%, Крит. Урон спереди на 30% и увеличивает вероятность успеха при использовании навыков Смертельных Ударов на 60%, Крит. Урон сзади на 90% в течение 2 минут. Требуется кинжал.
-		-->
+    <!-- For 2 minutes, decreases user's Critical Rate by 30% and frontal Critical Damage by 30%. Increases the probability of deadly attack by 60% and rear Critical Damage by 90%. Requires a dagger. -->
 		<table name="#blowRate">1.6</table>
 		<table name="#cAtk1">0.7</table>
 		<table name="#cAtk2">1.9</table>
@@ -1647,6 +1665,7 @@
 		</for>
 	</skill>
 	<skill id="356" levels="1" name="Focus Chance">
+    <!-- For 2 minutes, decreases frontal Critical Rate by 30%. Increases Critical Rate by 30% and rear Critical Rate by 60%. Requires a dagger. -->
 		<table name="#side">1.3</table>
 		<table name="#back">1.6</table>
 		<table name="#magicLevel">78</table>
@@ -1686,11 +1705,7 @@
 		</for>
 	</skill>
 	<skill id="357" levels="1" name="Focus Power">
-		<!--
-			For 2 minutes, increases frontal critical attack damage by 30%, side critical attack damage by 30% and rear critical attack damage by 60%. Requires a dagger.
-			Уменьшает урон Крит. Атк. спереди на 30% и увеличивает урон Крит. Атк. сбоку на 30%, урон Крит. Атк. сзади на 60% в течение 2 минут.
-
-		-->
+    <!-- For 2 minutes, decreases frontal Critical Damage by 30%. Increases side Critical Damage by 30% and rear Critical Damage by 60%. Requires a dagger. -->
 		<table name="#side">1.3</table>
 		<table name="#back">1.6</table>
 		<table name="#magicLevel">78</table>
@@ -1730,10 +1745,7 @@
 		</for>
 	</skill>
 	<skill id="358" levels="1" name="Bluff">
-		<!--
-			Description:
-			Tricks the enemy to show its back. Removes the enemy's desire to attack and cancels one's own target status. Instantly throws the enemy into a state of shock. An equipped dagger weapon is required to use this skill.
-		-->
+    <!-- Deceives the enemy into turning his back, losing his urge to attack and becoming stunned for 9 seconds. Requires a dagger. Target cancel is possible. -->
 		<table name="#activateRate">40</table>
 		<table name="#magicLevel">77</table>
 		<set name="levelModifier" val="1" />
@@ -1763,6 +1775,7 @@
 		</for>
 	</skill>
 	<skill id="359" levels="1" name="Eye of Hunter">
+    <!-- Increases P. Atk. toward insects, plants and animals by 30% for 10 minutes. -->
 		<table name="#Power">1.3</table>
 		<table name="#Time">600</table>
 		<table name="#magicLevel">77</table>
@@ -1798,6 +1811,7 @@
 		</for>
 	</skill>
 	<skill id="360" levels="1" name="Eye of Slayer">
+    <!-- Increases P. Atk. toward monsters, magic creatures, Giants and Dragons by 30% for 10 minutes. -->
 		<table name="#Power">1.3</table>
 		<table name="#Time">600</table>
 		<table name="#magicLevel">78</table>
@@ -1836,6 +1850,7 @@
 		</for>
 	</skill>
 	<skill id="361" levels="1" name="Shock Blast">
+    <!-- Supplement's user's P. Atk. with 2486 Power to create a powerful shock wave that stuns the enemy for 8 seconds and decreases their P. Def. by 30% and M. Def. by 30%. Requires a polearm. Over-hit and critical hit are possible. Ignores Shield Defense. Target cancel is possible. -->
 		<table name="#activateRate">40</table>
 		<table name="#mpConsume2">53</table>
 		<table name="#hpConsume">507</table>
@@ -1886,6 +1901,7 @@
 		</for>
 	</skill>
 	<skill id="362" levels="1" name="Armor Crush">
+    <!-- Supplements the user's P. Atk. with 3077 Power to stun the enemy for 8 seconds and decrease their P. Def. by 30% and M. Def. by 30%. Requires a sword, blunt weapon, two-handed sword or two-handed blunt weapon. Over-hit and critical hit are possible. Ignores Shield Defense. -->
 		<table name="#activateRate">40</table>
 		<table name="#mpConsume2">35</table>
 		<table name="#hpConsume">338</table>
@@ -1934,6 +1950,7 @@
 		</for>
 	</skill>
 	<skill id="363" levels="1" name="Song of Meditation">
+    <!-- For 2 minutes, increases all party members' MP Recovery Bonus by 20%, and decreases MP Consumption for magic skills by 10%. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
 		<table name="#magicLevel">77</table>
@@ -1965,6 +1982,7 @@
 		</for>
 	</skill>
 	<skill id="364" levels="1" name="Song of Champion">
+    <!-- For 2 minutes, decreases all party members' MP Consumption by 20% and cooldown by 10% for physical/sing/dance skill use. The MP Consumption increases additionally when singing while sing/dance effect lasts. -->
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
 		<table name="#magicLevel">78</table>
@@ -1996,7 +2014,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="365" levels="1" name="Siren's Dance">
+	<skill id="365" levels="1" name="Dance of Siren">
+    <!-- For 2 minutes, increases all party members' magic damage by 100%. Additionally increases MP Consumption when dancing while song/dance is in effect. Requires a dual sword. -->
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
 		<table name="#magicLevel">78</table>
@@ -2028,6 +2047,7 @@
 		</for>
 	</skill>
 	<skill id="366" levels="1" name="Dance of Shadows">
+    <!-- For 2 minutes, decreases all party members' Speed by 50% and prevents them from being pre-emptively attacked by monsters. The effect will be canceled if any party memember launches an attack. Additionally increases MP Consumption when dancing while song/dance is in effect. Requires a dual sword. -->
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
 		<table name="#magicLevel">77</table>
@@ -2059,6 +2079,7 @@
 		</for>
 	</skill>
 	<skill id="367" levels="1" name="Dance of Medusa">
+    <!-- Dances to stir up the illusion of Medusa. Petrifies nearby enemies for 10 seconds. Requires a dual sword. -->
 		<table name="#activateRate">40</table>
 		<table name="#time">10</table>
 		<table name="#magicLevel">77</table>
@@ -2096,9 +2117,7 @@
 		</for>
 	</skill>
 	<skill id="368" levels="1" name="Vengeance">
-		<!--
-			Last modify:	20.05.2009
-		-->
+    <!-- Provokes nearby enemies to switch targets and attack through Power 7987. For 30 seconds, increases P. Def. by 5400, M. Def. by 4050, and Resistance to buff-canceling attacks by 80%, and becomes unable to move. Requires a shield. -->
 		<table name="#runSpd">0</table>
 		<table name="#magicLevel">77</table>
 		<table name="#power">7987</table>
@@ -2141,6 +2160,7 @@
 		</for>
 	</skill>
 	<skill id="369" levels="1" name="Evade Shot">
+    <!-- Attacks the enemy with 2020 Power added to P. Atk. and increases Evasion by 6. Requires a bow. Over-hit is possible. -->
 		<table name="#rEvas">6</table>
 		<table name="#powerPvP">0</table>
 		<table name="#elementPower">0</table>
@@ -2207,7 +2227,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="370" levels="5" name="Clan Vitality">
+	<skill id="370" levels="5" name="Clan Body">
+    <!-- Increases clan members' Max HP by 3%. It only affects those who are of an Heir rank or higher. -->
 		<table name="#maxHp">1.03 1.05 1.06 1.07 1.08</table>
 		<set name="icon" val="icon.skill0370" />
 		<set name="magicLevel" val="1" />
@@ -2221,6 +2242,7 @@
 		</for>
 	</skill>
 	<skill id="371" levels="5" name="Clan Spirituality">
+    <!-- Increases clan members' Max CP by 6%. It only affects those who are of a Elder rank or higher. -->
 		<table name="#maxCp">1.06 1.10 1.12 1.14 1.16</table>
 		<set name="icon" val="icon.skill0371" />
 		<set name="magicLevel" val="1" />
@@ -2233,7 +2255,8 @@
 			<mul order="0x30" stat="maxCp" val="#maxCp" />
 		</for>
 	</skill>
-	<skill id="372" levels="5" name="Clan Essence">
+	<skill id="372" levels="5" name="Clan Soul">
+    <!-- Increases clan members' Max MP by 3%. It only affects those who are of a Elder rank or higher. -->
 		<table name="#maxMp">1.03 1.05 1.06 1.07 1.08</table>
 		<set name="icon" val="icon.skill0372" />
 		<set name="magicLevel" val="1" />
@@ -2246,7 +2269,8 @@
 			<mul order="0x30" stat="maxMp" val="#maxMp" />
 		</for>
 	</skill>
-	<skill id="373" levels="5" name="Clan Lifeblood">
+	<skill id="373" levels="5" name="Clan Regeneration">
+    <!-- Increases clan members' HP regeneration by 3%. It only affects those who are of an Heir rank or higher. -->
 		<table name="#regHp">1.03 1.05 1.06 1.07 1.08</table>
 		<set name="icon" val="icon.skill0373" />
 		<set name="magicLevel" val="1" />
@@ -2260,6 +2284,7 @@
 		</for>
 	</skill>
 	<skill id="374" levels="5" name="Clan Morale">
+    <!-- Increases clan members' CP regeneration by 6%. It only affects those who are of an Elder rank or higher. -->
 		<table name="#regCp">1.06 1.10 1.12 1.14 1.16</table>
 		<set name="icon" val="icon.skill0374" />
 		<set name="magicLevel" val="1" />
@@ -2273,6 +2298,7 @@
 		</for>
 	</skill>
 	<skill id="375" levels="5" name="Clan Clarity">
+    <!-- Increases clan members' MP regeneration by 3%. It only affects those who are of a Elder rank or higher. -->
 		<table name="#regMp">1.03 1.05 1.06 1.07 1.08</table>
 		<set name="icon" val="icon.skill0375" />
 		<set name="magicLevel" val="1" />
@@ -2286,6 +2312,7 @@
 		</for>
 	</skill>
 	<skill id="376" levels="5" name="Clan Might">
+    <!-- Increases clan members' P. Atk. by 3%. It only affects those who are of a Knight rank or higher. -->
 		<table name="#patak">1.03 1.05 1.06 1.07 1.08</table>
 		<set name="icon" val="icon.skill0376" />
 		<set name="magicLevel" val="1" />
@@ -2298,7 +2325,8 @@
 			<mul order="0x30" stat="pAtk" val="#patak" />
 		</for>
 	</skill>
-	<skill id="377" levels="5" name="Clan Aegis">
+	<skill id="377" levels="5" name="Clan Shield">
+    <!-- Increases clan members' P. Def. by 3%. It only affects those who are of a Knight rank or higher. -->
 		<table name="#pdef">1.03 1.05 1.06 1.07 1.08</table>
 		<set name="icon" val="icon.skill0377" />
 		<set name="magicLevel" val="1" />
@@ -2311,7 +2339,8 @@
 			<mul order="0x30" stat="pDef" val="#pdef" />
 		</for>
 	</skill>
-	<skill id="378" levels="5" name="Clan Empowerment">
+	<skill id="378" levels="5" name="Clan Empower">
+    <!-- Increases clan members' M. Atk by 6%. It only affects those who are of a Elder rank or higher. -->
 		<table name="#matak">1.06 1.10 1.12 1.14 1.16</table>
 		<set name="icon" val="icon.skill0378" />
 		<set name="magicLevel" val="1" />
@@ -2324,7 +2353,8 @@
 			<mul order="0x30" stat="mAtk" val="#matak" />
 		</for>
 	</skill>
-	<skill id="379" levels="5" name="Clan Magic Protection">
+	<skill id="379" levels="5" name="Clan M. Def.">
+    <!-- Increases clan members' M. Def by 6%. It only affects those who are of an Heir rank or higher. -->
 		<table name="#mdef">1.06 1.10 1.12 1.14 1.16</table>
 		<set name="icon" val="icon.skill0379" />
 		<set name="magicLevel" val="1" />
@@ -2338,6 +2368,7 @@
 		</for>
 	</skill>
 	<skill id="380" levels="3" name="Clan Guidance">
+    <!-- Increases clan members' Accuracy by 1. It only affects those who are of a Knight rank or higher. -->
 		<table name="#accCombat">1 2 3</table>
 		<set name="icon" val="icon.skill0380" />
 		<set name="magicLevel" val="1" />
@@ -2351,6 +2382,7 @@
 		</for>
 	</skill>
 	<skill id="381" levels="3" name="Clan Agility">
+    <!-- Increases clan members' Evasion by 1. It only affects those who are of a Elder rank or higher. -->
 		<table name="#rEvas">1 2 3</table>
 		<set name="icon" val="icon.skill0381" />
 		<set name="magicLevel" val="1" />
@@ -2363,7 +2395,8 @@
 			<add order="0x40" stat="rEvas" val="#rEvas" />
 		</for>
 	</skill>
-	<skill id="382" levels="3" name="Clan Withstand-Attack">
+	<skill id="382" levels="3" name="Clan Shield Defense">
+    <!-- Increases clan members' Shield Defense by 12%. It only affects those who are of a Elder rank or higher. -->
 		<table name="#rShld">1.12 1.20 1.24</table>
 		<set name="icon" val="icon.skill0382" />
 		<set name="magicLevel" val="1" />
@@ -2376,7 +2409,8 @@
 			<mul order="0x30" stat="rShld" val="#rShld" />
 		</for>
 	</skill>
-	<skill id="383" levels="3" name="Clan Shield Boost">
+	<skill id="383" levels="3" name="Clan Shield Block">
+    <!-- Increases clan members' Shield Defense by 24%. It only affects those who are of a Elder rank or higher. -->
 		<table name="#sDef">1.24 1.40 1.48</table>
 		<set name="icon" val="icon.skill0383" />
 		<set name="magicLevel" val="1" />
@@ -2390,6 +2424,7 @@
 		</for>
 	</skill>
 	<skill id="384" levels="3" name="Clan Cyclonic Resistance">
+    <!-- Increases clan members' Resistance to Water/Wind attacks by 3. It only affects those who are of a Elder rank or higher. -->
 		<table name="#resist">3 5 6</table>
 		<set name="icon" val="icon.skill0384" />
 		<set name="magicLevel" val="1" />
@@ -2404,6 +2439,7 @@
 		</for>
 	</skill>
 	<skill id="385" levels="3" name="Clan Magmatic Resistance">
+    <!-- Increases clan members' Resistance to Fire/Earth attacks by 3. It only affects those who are of a Elder rank or higher. -->
 		<table name="#resist">3 5 6</table>
 		<set name="icon" val="icon.skill0385" />
 		<set name="magicLevel" val="1" />
@@ -2417,7 +2453,8 @@
 			<add order="0x40" stat="defenceEarth" val="#resist" />
 		</for>
 	</skill>
-	<skill id="386" levels="3" name="Clan Fortitude">
+	<skill id="386" levels="3" name="Clan Resist Shock">
+    <!-- Increases clan members' Resistance to Stun attacks by 12. It only affects those who are of a Elder rank or higher. -->
 		<table name="#resist">12 20 24</table>
 		<set name="icon" val="icon.skill0386" />
 		<set name="magicLevel" val="1" />
@@ -2430,7 +2467,8 @@
 			<add order="0x40" stat="stunResist" val="#resist" />
 		</for>
 	</skill>
-	<skill id="387" levels="3" name="Clan Freedom">
+	<skill id="387" levels="3" name="Clan Resist Hold">
+    <!-- Increases clan members' Resistance to Hold attacks by 12. It only affects those who are of a Elder rank or higher. -->
 		<table name="#resist">12 20 24</table>
 		<set name="icon" val="icon.skill0387" />
 		<set name="magicLevel" val="1" />
@@ -2443,7 +2481,8 @@
 			<add order="0x40" stat="rootResist" val="#resist" />
 		</for>
 	</skill>
-	<skill id="388" levels="3" name="Clan Vigilance">
+	<skill id="388" levels="3" name="Clan Resist Sleep">
+    <!-- Increases clan members' Resistance to Sleep attacks by 12. It only affects those who are of a Knight rank or higher. -->
 		<table name="#resist">12 20 24</table>
 		<set name="icon" val="icon.skill0388" />
 		<set name="magicLevel" val="1" />
@@ -2456,7 +2495,8 @@
 			<add order="0x40" stat="sleepResist" val="#resist" />
 		</for>
 	</skill>
-	<skill id="389" levels="3" name="Clan March">
+	<skill id="389" levels="3" name="Clan Wind Walk">
+    <!-- Increases clan members' Speed by 3. It only affects those who are of a Elder rank or higher. -->
 		<table name="#Tab-runSpd">3 5 6</table>
 		<set name="icon" val="icon.skill0389" />
 		<set name="magicLevel" val="1" />
@@ -2470,7 +2510,7 @@
 		</for>
 	</skill>
 	<skill id="390" levels="3" name="Clan Luck">
-		<!-- Decreases Exp. loss and the chance of other death penalties when killed by a monster or player. It only effects those who are of an Heir class or higher. -->
+    <!-- When killed by PC, the XP decrease rate and item drop rate are 30%. When killed by an ordinary monster, the XP decrease rate and item drop rate decrease to 12%. This effect applies to those who are heir rank or higher. -->
 		<set name="icon" val="icon.skill0390" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -2484,8 +2524,7 @@
 		</for>
 	</skill>
 	<skill id="391" levels="1" name="Clan Imperium">
-		<!-- Gives authority to open up a command channel. Only affects Wise Man class and above. -->
-		<!-- Нужен только как флаг для создания comand channel-а. -->
+    <!-- Grants the privilege of Command Channel formation. It only effects Sage / Elder class and above. -->
 		<set name="icon" val="icon.skill0391" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -2495,45 +2534,25 @@
 		<set name="isCommon" val="true" />
 	</skill>
 	<skill id="392" levels="1" name="none" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="393" levels="1" name="none" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="394" levels="1" name="none" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="395" levels="1" name="Heroic Miracle">
-		<!--
-			Last modify:	02.05.2009
-
-			Description:
-			For 30 seconds, increases user's P. Def. by 5400, M. Def. by 4050, resistance to buff-canceling attacks by 80, and movement speed by 5. Consumes 40 Soul Ores.
-		-->
+    <!-- For 30 seconds, increases P. Def. by 5400, M. Def. by 4050, Resistance to buff-canceling attacks by 80, and Speed by 5. Consumes 40 Soul Ore. -->
 		<set name="icon" val="icon.skill0395" />
 		<set name="reuseDelay" val="900000" />
 		<set name="power" val="80" />
@@ -2563,12 +2582,7 @@
 		</for>
 	</skill>
 	<skill id="396" levels="1" name="Heroic Berserker">
-		<!--
-			Last modify:	02.05.2009
-
-			Description:
-			For 2 minutes, increases user's accuracy by 8, P. Atk. by 500, M. Atk. by 500, Atk. Spd. by 100, Casting Spd. by 100, movement speed by 20, resistance to buff-canceling attacks by 80, and the effect of received HP recovery magic by 100%. Bestows complete resistance to de-buff attacks. Decreases P. Def. by 25%, M. Def. by 25%, and evasion by 8. Consumes 40 Soul Ores.
-		-->
+    <!-- For 2 minutes, increases the user's Accuracy by 8, P. Atk. by 500, M. Atk. by 500, Atk. Spd. by 100, Casting Spd. by 100, Speed by 20, Resistance to buff-canceling attacks by 80, and the effect of received HP recovery magic by 100%. Bestows complete Resistance to de-buff attacks. Decreases P. Def. by 25%, M. Def. by 25%, and Evasion by 8. Consumes 40 Soul Ore. -->
 		<set name="icon" val="icon.skill0396" />
 		<set name="reuseDelay" val="900000" />
 		<set name="hitTime" val="1000" />
@@ -2605,33 +2619,18 @@
 		</for>
 	</skill>
 	<skill id="397" levels="1" name="none" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="398" levels="1" name="none" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="399" levels="1" name="none" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />

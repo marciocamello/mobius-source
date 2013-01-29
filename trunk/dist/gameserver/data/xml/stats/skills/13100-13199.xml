@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list>	
-	<skill id="13132" levels="4" name=" Легкие Доспехи Ада (усил.)" >
-	<!-- ССИЛ +2, ВЫН -1, Физ. Атк. +180, Скор. Атк. +15%,
-	сопротивление удержанию +7, HP +487, сила Крит. Атк. +242,
-	сопротивление стихиям +10, расход MP для умений -10%. -->	
+	<skill id="13132" levels="4" name="Set Effect - Twilight Light Armor 2 Piece (strong)" >
+    <!-- STR +2, CON -1, P. Atk. 180. P. Atk. Spd. + 15%. -->
 		<table name="#Res">0 7 7 7</table>	
 		<table name="#maxHp">0 0 487 487</table>
 		<table name="#cAtk">0 0 0 242</table>
@@ -26,9 +24,8 @@
 			<add order="0x40" stat="defenceEarth" val="#def" />
 		</for>
 	</skill>	
-	
-	<skill id="13138" levels="1" name="Талисман Увеличения Неистовой Силы" >
-		<!-- Когда экипирован Талисман, скорость Физ. Атак. увеличивается на 2% -->
+	<skill id="13138" levels="1" name="Atk. Spd. increasing talisman" >
+    <!-- Increases P. Atk. Spd. by 2% when equipped with Talisman. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -36,9 +33,8 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.02" />
 		</for>
 	</skill>	
-
-	<skill id="13139" levels="1" name="Талисман Увеличения Атаки" >
-		<!-- Когда экипирован Талисман, Физ. Атак. Увеличивается на 2%. -->
+	<skill id="13139" levels="1" name="P. Atk. increasing talisman" >
+    <!-- Increases P. Atk. by 2% when equipped with Talisman. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -46,9 +42,8 @@
 			<mul order="0x30" stat="pAtk" val="1.02" />
 		</for>
 	</skill>	
-
-	<skill id="13140" levels="1" name="Талисман Увеличения Защиты" >
-		<!-- Когда экипирован Талисман,Физ. Защита увеличивается на 3%. -->
+	<skill id="13140" levels="1" name="P. Def. increasing talisman" >
+    <!-- Increases P. Def. by 3% when equipped with Talisman. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -56,9 +51,8 @@
 			<mul order="0x30" stat="pDef" val="1.03" />
 		</for>
 	</skill>
-
-	<skill id="13141" levels="1" name="Талисман Увеличения Скоростной Магии" >
-		<!-- Когда экипирован Талисман, скорость Маг. увеличивается на 2%. -->
+	<skill id="13141" levels="1" name="Casting Spd. increasing talisman" >
+    <!-- Increases Casting Spd. by 2 with the power of Talisman. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -66,9 +60,8 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.02" />
 		</for>
 	</skill>	
-
-	<skill id="13142" levels="4" name="Талисман Увеличения Магической Защиты" >
-		<!-- Когда экипирован Талисман, Маг. Защ. Увеличивается на 3%. -->
+	<skill id="13142" levels="4" name="M. Def. increasing talisman" >
+    <!-- Increases M. Def. by 3% when equipped with Talisman. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -76,9 +69,8 @@
 			<mul order="0x30" stat="mDef" val="1.03" />
 		</for>
 	</skill>	
-
-	<skill id="13143" levels="4" name="Талисман Увеличения Магической Атаки" >
-		<!-- Когда экипирован Талисман, Маг. Атак. Увеличивается на 2%. -->
+	<skill id="13143" levels="4" name="M. Atk. increasing talisman" >
+    <!-- Increases M. Atk. by 2% when equipped with Talisman. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -86,11 +78,8 @@
 			<mul order="0x30" stat="mAtk" val="1.02" />
 		</for>
 	</skill>	
-	
 	<skill id="13146" levels="1" name="Special Ability: Infinity Shaper">
-		<!--
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. И Скор. Маг. Увеличивает силу Крит. Атк. 
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Increases Critical Rate. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -109,9 +98,7 @@
 		</for>
 	</skill>
 	<skill id="13147" levels="1" name="Special Ability: Infinity Cutter">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. И Скор. Маг. Увеличивает силу Крит. Атк.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Increases Critical Rate. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -130,9 +117,7 @@
 		</for>
 	</skill>
 	<skill id="13148" levels="1" name="Special Ability: Infinity Slasher">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. И Скор. Маг. Увеличивает силу Крит. Атк.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Increases Critical Rate. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -151,9 +136,7 @@
 		</for>
 	</skill>
 	<skill id="13149" levels="1" name="Special Ability: Infinity Avenger">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. И Скор. Маг. Увеличивает силу Крит. Атк.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Increases Critical Rate. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -172,9 +155,7 @@
 		</for>
 	</skill>
 	<skill id="13150" levels="1" name="Special Ability: Infinity Fighter">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. И Скор. Маг. Увеличивает силу Крит. Атк.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Increases Critical Rate. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -193,9 +174,7 @@
 		</for>
 	</skill>
 	<skill id="13151" levels="1" name="Special Ability: Infinity Stormer">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. И Скор. Маг. Увеличивает силу Крит. Атк.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Increases Critical Rate. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -214,9 +193,7 @@
 		</for>
 	</skill>
 	<skill id="13152" levels="1" name="Special Ability: Infinity Thrower">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. И Скор. Маг. Увеличивает силу Крит. Атк.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Increases Critical Rate. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -235,9 +212,7 @@
 		</for>
 	</skill>
 	<skill id="13153" levels="1" name="Special Ability: Infinity Shooter">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. И Скор. Маг. Увеличивает силу Крит. Атк.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Increases Critical Rate. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -256,9 +231,7 @@
 		</for>
 	</skill>
 	<skill id="13154" levels="1" name="Special Ability: Infinity Buster">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. и Скор. Маг. Добавляет эффект Проницательности.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Acumen is added. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -278,9 +251,7 @@
 		</for>
 	</skill>
 	<skill id="13155" levels="1" name="Special Ability: Infinity Caster">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. и Скор. Маг. Добавляет эффект Проницательности.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Acumen is added. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -300,9 +271,7 @@
 		</for>
 	</skill>
 	<skill id="13156" levels="1" name="Special Ability: Infinity Retributer">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. и Скор. Маг. Добавляет эффект Проницательности.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Acumen is added. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -322,9 +291,7 @@
 		</for>
 	</skill>	
 	<skill id="13157" levels="1" name="Special Ability: Infinity Dual Sword">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. И Скор. Маг. Увеличивает силу Крит. Атк.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Increases Critical Rate. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -343,9 +310,7 @@
 		</for>
 	</skill>
 	<skill id="13158" levels="1" name="Special Ability: Infinity Dual Dagger">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. И Скор. Маг. Увеличивает силу Крит. Атк.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Increases Critical Rate. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -364,9 +329,7 @@
 		</for>
 	</skill>	
 	<skill id="13159" levels="1" name="Special Ability: Infinity Dual Blunt Weapon">
-		<!-- 
-			Макс. HP/ MP/ CP/ PVP наносит дополнительный урон, увеличивает Скор. Атк. И Скор. Маг. Увеличивает силу Крит. Атк.
-		-->
+    <!-- Increases Max HP / Max MP / Max CP, and damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Increases Critical Rate. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="5300" levels="9" name="NPC(party) - Physical Range Long Range Attack - Dark">
+	<skill id="5300" levels="9" name="Burst Shot">
+    <!-- none -->
 		<table name="#mpConsume2">227 234 240 246 250 252 254 256 259</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -18,9 +19,7 @@
 		<set name="element" val="unholy" />
 	</skill>
 	<skill id="5301" levels="9" name="Stun">
-		<!--
-			Description: Temporarily gets thrown into a state of shock and immobilized.
-		-->
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<set name="levelModifier" val="2" />
@@ -41,9 +40,7 @@
 		</for>
 	</skill>
 	<skill id="5302" levels="9" name="Poison">
-		<!--
-			Description: Condition causing target to instantly decrease HP by poison. Effect 8.
-		-->
+    <!-- A toxin that gradually reduces HP. Effect 8. -->
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -65,9 +62,7 @@
 		</for>
 	</skill>
 	<skill id="5303" levels="9" name="Bleed">
-		<!--
-			Description: Condition causing target to instantly decrease HP by bleeding. Effect 8.
-		-->
+    <!-- Inflicts a wound that reduces HP. Effect 8. -->
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -89,9 +84,7 @@
 		</for>
 	</skill>
 	<skill id="5304" levels="9" name="Paralysis">
-		<!--
-			Description: A temporary paralysis which prevents movement.
-		-->
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<set name="levelModifier" val="2" />
@@ -112,10 +105,7 @@
 		</for>
 	</skill>
 	<skill id="5305" levels="9" name="Poison">
-		<!--
-			Last modify:	12.05.10
-			Comment:	AOE нюк с эффектом очень мощного яда у химер - 6 тиков по 1500.
-		-->
+    <!-- A toxin that gradually reduces HP. Effect 8. -->
 		<table name="#effectPoint">100 100 100 100 100 100 100 100 100</table>
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -139,9 +129,7 @@
 		</for>
 	</skill>
 	<skill id="5306" levels="9" name="Paralysis">
-		<!--
-			Description: A temporary paralysis which prevents movement.
-		-->
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<set name="levelModifier" val="2" />
@@ -162,9 +150,7 @@
 		</for>
 	</skill>
 	<skill id="5307" levels="9" name="Stun">
-		<!--
-			Description: Temporarily gets thrown into a state of shock and immobilized.
-		-->
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<set name="levelModifier" val="2" />
@@ -185,9 +171,7 @@
 		</for>
 	</skill>
 	<skill id="5308" levels="9" name="Poison">
-		<!--
-			Description: Condition causing target to instantly decrease HP by poison. Effect 8.
-		-->
+    <!-- A toxin that gradually reduces HP. Effect 8. -->
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -209,9 +193,7 @@
 		</for>
 	</skill>
 	<skill id="5309" levels="9" name="Bleed">
-		<!--
-			Description: Condition causing target to instantly decrease HP by bleeding. Effect 8.
-		-->
+    <!-- Inflicts a wound that reduces HP. Effect 8. -->
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -232,7 +214,8 @@
 			<effect abnormal="bleeding" count="10" name="Bleed" stackType="Bleed" stackOrder="#stackOrder" time="3" val="0" />
 		</for>
 	</skill>
-	<skill id="5310" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
+	<skill id="5310" levels="9" name="Aura Burn">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -251,7 +234,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5311" levels="9" name="NPC(party) - Magic Close Range Range DD - less powerful">
+	<skill id="5311" levels="9" name="Aura Flare">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -269,7 +253,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5312" levels="9" name="NPC(party) -Magic Single Long Range DD - Fire">
+	<skill id="5312" levels="9" name="Blaze">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -288,7 +273,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="fire" />
 	</skill>
-	<skill id="5313" levels="9" name="NPC(party) -Magic Range Long Range DD - Fire">
+	<skill id="5313" levels="9" name="Flame Strike">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -307,7 +293,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="fire" />
 	</skill>
-	<skill id="5314" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire">
+	<skill id="5314" levels="9" name="Blazing Circle">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -326,7 +313,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="fire" />
 	</skill>
-	<skill id="5315" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction)">
+	<skill id="5315" levels="9" name="Blazing Circle">
+    <!-- none -->
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">152 168 185 202 210 216 222 226 229</table>
 		<set name="magicType" val="MAGIC" />
@@ -340,7 +328,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="fire" />
 	</skill>
-	<skill id="5316" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
+	<skill id="5316" levels="9" name="Hydro Blast">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -359,7 +348,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="water" />
 	</skill>
-	<skill id="5317" levels="9" name="NPC(party) -Magic Range Long Range DD - Water">
+	<skill id="5317" levels="9" name="Mass Hydro Blast">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -378,7 +368,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="water" />
 	</skill>
-	<skill id="5318" levels="9" name="NPC(party) -Magic Range Close Range DD - Water">
+	<skill id="5318" levels="9" name="Frost Wall">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -397,7 +388,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="water" />
 	</skill>
-	<skill id="5319" levels="9" name="NPC(party) -Magic Single Long Range DD - Wind">
+	<skill id="5319" levels="9" name="Hurricane">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -416,7 +408,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="wind" />
 	</skill>
-	<skill id="5320" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
+	<skill id="5320" levels="9" name="Tempest">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -435,7 +428,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="wind" />
 	</skill>
-	<skill id="5321" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
+	<skill id="5321" levels="9" name="Tempest">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -454,7 +448,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="wind" />
 	</skill>
-	<skill id="5322" levels="9" name="NPC(party) -Magic Single Long Range DD - Earth">
+	<skill id="5322" levels="9" name="Rock Strike">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -473,7 +468,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="earth" />
 	</skill>
-	<skill id="5323" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
+	<skill id="5323" levels="9" name="Earthquake">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -492,7 +488,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="earth" />
 	</skill>
-	<skill id="5324" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
+	<skill id="5324" levels="9" name="Earthquake">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -511,7 +508,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="earth" />
 	</skill>
-	<skill id="5325" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
+	<skill id="5325" levels="9" name="Holy Strike">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -530,7 +528,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5326" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+	<skill id="5326" levels="9" name="Holy Blast">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -549,7 +548,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5327" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+	<skill id="5327" levels="9" name="Holy Circle">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -568,7 +568,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5328" levels="9" name="NPC(party) -Magic Single Long Range DD - Dark">
+	<skill id="5328" levels="9" name="Unholy Strike">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -587,7 +588,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="unholy" />
 	</skill>
-	<skill id="5329" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+	<skill id="5329" levels="9" name="Unholy Blast">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -606,7 +608,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5330" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+	<skill id="5330" levels="9" name="Unholy Circle">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -625,7 +628,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5331" levels="9" name="NPC HP Drain">
+	<skill id="5331" levels="9" name="Drain Health">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -644,9 +648,9 @@
 		<set name="skillType" val="DRAIN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="absorbPart" val="0.2" />
-		<!-- absorbs 20% of damage -->
 	</skill>
-	<skill id="5332" levels="9" name="NPC MP Burn">
+	<skill id="5332" levels="9" name="Mana Burn">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -665,9 +669,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5333" levels="9" name="Poison">
-		<!--
-			Description: Condition causing target to instantly decrease HP by poison. Effect 8.
-		-->
+    <!-- A toxin that gradually reduces HP. Effect 8. -->
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
@@ -691,7 +693,8 @@
 			<effect abnormal="poison" count="10" name="Poison" stackOrder="#stackOrder" time="3" val="0" />
 		</for>
 	</skill>
-	<skill id="5334" levels="9" name="NPC(party) - Physical Single Close Range Attack">
+	<skill id="5334" levels="9" name="Power Strike">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">12000 13000 14000 15000 16000 17000 18000 19000 20000</table>
@@ -706,7 +709,8 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5335" levels="9" name="NPC(party) - Physical Single Long Range Attack">
+	<skill id="5335" levels="9" name="Power Shot">
+    <!-- none -->
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -721,7 +725,8 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5336" levels="9" name="NPC(party) - Physical Range Close Range Attack">
+	<skill id="5336" levels="9" name="Whirlwind">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -737,7 +742,8 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5337" levels="9" name="NPC(party) - Physical Range Long Range Attack">
+	<skill id="5337" levels="9" name="Burst Shot">
+    <!-- none -->
 		<table name="#mpConsume2">227 234 240 246 250 252 254 256 259</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -754,7 +760,8 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5338" levels="9" name="NPC(party) - Physical Single Close Range Attack - Fire">
+	<skill id="5338" levels="9" name="Power Strike">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -770,7 +777,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="fire" />
 	</skill>
-	<skill id="5339" levels="9" name="NPC(party) - Physical Single Long Range Attack - Fire">
+	<skill id="5339" levels="9" name="Power Shot">
+    <!-- none -->
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -786,7 +794,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="fire" />
 	</skill>
-	<skill id="5340" levels="9" name="NPC(party) - Physical Range Close Range Attack - Fire">
+	<skill id="5340" levels="9" name="Whirlwind">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -802,7 +811,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="fire" />
 	</skill>
-	<skill id="5341" levels="9" name="NPC(party) - Physical Range Long Range Attack - Fire">
+	<skill id="5341" levels="9" name="Burst Shot">
+    <!-- none -->
 		<table name="#mpConsume2">227 234 240 246 250 252 254 256 259</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -819,7 +829,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="fire" />
 	</skill>
-	<skill id="5342" levels="9" name="NPC(party) - Physical Single Close Range Attack - Water">
+	<skill id="5342" levels="9" name="Power Strike">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -835,7 +846,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="water" />
 	</skill>
-	<skill id="5343" levels="9" name="NPC(party) - Physical Single Long Range Attack - Water">
+	<skill id="5343" levels="9" name="Power Shot">
+    <!-- none -->
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -851,7 +863,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="water" />
 	</skill>
-	<skill id="5344" levels="9" name="NPC(party) - Physical Range Close Range Attack - Water">
+	<skill id="5344" levels="9" name="Whirlwind">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -867,7 +880,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="water" />
 	</skill>
-	<skill id="5345" levels="9" name="NPC(party) - Physical Range Long Range Attack - Water">
+	<skill id="5345" levels="9" name="Burst Shot">
+    <!-- none -->
 		<table name="#mpConsume2">227 234 240 246 250 252 254 256 259</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -884,7 +898,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="water" />
 	</skill>
-	<skill id="5346" levels="9" name="NPC(party) - Physical Single Close Range Attack - Wind">
+	<skill id="5346" levels="9" name="Power Strike">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -900,7 +915,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="wind" />
 	</skill>
-	<skill id="5347" levels="9" name="NPC(party) - Physical Single Long Range Attack - Wind">
+	<skill id="5347" levels="9" name="Power Shot">
+    <!-- none -->
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -916,7 +932,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="wind" />
 	</skill>
-	<skill id="5348" levels="9" name="NPC(party) - Physical Range Close Range Attack - Wind">
+	<skill id="5348" levels="9" name="Whirlwind">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -932,7 +949,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="wind" />
 	</skill>
-	<skill id="5349" levels="9" name="NPC(party) - Physical Range Long Range Attack - Wind">
+	<skill id="5349" levels="9" name="Burst Shot">
+    <!-- none -->
 		<table name="#mpConsume2">227 234 240 246 250 252 254 256 259</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -949,7 +967,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="wind" />
 	</skill>
-	<skill id="5350" levels="9" name="NPC(party) - Physical Single Close Range Attack - Earth">
+	<skill id="5350" levels="9" name="Power Strike">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -965,7 +984,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="earth" />
 	</skill>
-	<skill id="5351" levels="9" name="NPC(party) - Physical Single Long Range Attack - Earth">
+	<skill id="5351" levels="9" name="Power Shot">
+    <!-- none -->
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -981,7 +1001,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="earth" />
 	</skill>
-	<skill id="5352" levels="9" name="NPC(party) - Physical Range Close Range Attack - Earth">
+	<skill id="5352" levels="9" name="Whirlwind">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -997,7 +1018,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="earth" />
 	</skill>
-	<skill id="5353" levels="9" name="NPC(party) - Physical Range Long Range Attack - Earth">
+	<skill id="5353" levels="9" name="Burst Shot">
+    <!-- none -->
 		<table name="#mpConsume2">227 234 240 246 250 252 254 256 259</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1014,7 +1036,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="earth" />
 	</skill>
-	<skill id="5354" levels="9" name="NPC(party) - Physical Single Close Range Attack - Holy">
+	<skill id="5354" levels="9" name="Power Strike">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1030,7 +1053,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5355" levels="9" name="NPC(party) - Physical Single Long Range Attack - Holy">
+	<skill id="5355" levels="9" name="Power Shot">
+    <!-- none -->
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1046,7 +1070,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5356" levels="9" name="NPC(party) - Physical Range Close Range Attack - Holy">
+	<skill id="5356" levels="9" name="Whirlwind">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1062,7 +1087,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5357" levels="9" name="NPC(party) - Physical Range Long Range Attack - Holy">
+	<skill id="5357" levels="9" name="Burst Shot">
+    <!-- none -->
 		<table name="#mpConsume2">227 234 240 246 250 252 254 256 259</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1079,7 +1105,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5358" levels="9" name="NPC(party) - Physical Single Close Range Attack - Dark">
+	<skill id="5358" levels="9" name="Power Strike">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1095,7 +1122,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="unholy" />
 	</skill>
-	<skill id="5359" levels="9" name="NPC(party) - Physical Single Long Range Attack - Dark">
+	<skill id="5359" levels="9" name="Power Shot">
+    <!-- none -->
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1111,7 +1139,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="unholy" />
 	</skill>
-	<skill id="5360" levels="9" name="NPC(party) - Physical Range Close Range Attack - Dark">
+	<skill id="5360" levels="9" name="Whirlwind">
+    <!-- none -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1127,7 +1156,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="unholy" />
 	</skill>
-	<skill id="5361" levels="9" name="NPC(party) - Physical Range Long Range Attack - Dark">
+	<skill id="5361" levels="9" name="Burst Shot">
+    <!-- none -->
 		<table name="#mpConsume2">227 234 240 246 250 252 254 256 259</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1145,9 +1175,7 @@
 		<set name="element" val="unholy" />
 	</skill>
 	<skill id="5362" levels="9" name="Stun">
-		<!--
-			Description: Temporarily gets thrown into a state of shock and immobilized.
-		-->
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<set name="levelModifier" val="2" />
@@ -1168,9 +1196,7 @@
 		</for>
 	</skill>
 	<skill id="5363" levels="9" name="Poison">
-		<!--
-			Description: Condition causing target to instantly decrease HP by poison. Effect 8.
-		-->
+    <!-- A toxin that gradually reduces HP. Effect 8. -->
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1192,9 +1218,7 @@
 		</for>
 	</skill>
 	<skill id="5364" levels="9" name="Bleed">
-		<!--
-			Description: Condition causing target to instantly decrease HP by bleeding. Effect 8.
-		-->
+    <!-- Inflicts a wound that reduces HP. Effect 8. -->
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1216,9 +1240,7 @@
 		</for>
 	</skill>
 	<skill id="5365" levels="9" name="Paralysis">
-		<!--
-			Description: A temporary paralysis which prevents movement.
-		-->
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#activateRate">30 31 33 35 37 39 41 43 45</table>
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1240,9 +1262,7 @@
 		</for>
 	</skill>
 	<skill id="5366" levels="9" name="Poison">
-		<!--
-			Description: Condition causing target to instantly decrease HP by poison. Effect 8.
-		-->
+    <!-- A toxin that gradually reduces HP. Effect 8. -->
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1264,10 +1284,7 @@
 		</for>
 	</skill>
 	<skill id="5367" levels="9" name="Paralysis">
-		<!--
-			Description: A temporary paralysis which prevents movement.
-			Comment: AOE нюк с эффектом паралича, имеет очень высокий шанс прохождения, испольует Celtus
-		-->
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">60 65 70 75 80 85 90 95 100</table>
@@ -1293,9 +1310,7 @@
 		</for>
 	</skill>
 	<skill id="5368" levels="9" name="Stun">
-		<!--
-			Description: Temporarily gets thrown into a state of shock and immobilized.
-		-->
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<set name="levelModifier" val="2" />
@@ -1316,9 +1331,7 @@
 		</for>
 	</skill>
 	<skill id="5369" levels="9" name="Poison">
-		<!--
-			Description: Condition causing target to instantly decrease HP by poison. Effect 8.
-		-->
+    <!-- A toxin that gradually reduces HP. Effect 8. -->
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1340,9 +1353,7 @@
 		</for>
 	</skill>
 	<skill id="5370" levels="9" name="Bleed">
-		<!--
-			Description: Condition causing target to instantly decrease HP by bleeding. Effect 8.
-		-->
+    <!-- Inflicts a wound that reduces HP. Effect 8. -->
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1363,7 +1374,8 @@
 			<effect abnormal="bleeding" count="10" name="Bleed" stackType="Bleed" stackOrder="#stackOrder" time="3" val="0" />
 		</for>
 	</skill>
-	<skill id="5371" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
+	<skill id="5371" levels="9" name="Aura Burn">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1382,7 +1394,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5372" levels="9" name="NPC(party) - Magic Close Range Range DD - less powerful">
+	<skill id="5372" levels="9" name="Aura Flare">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1400,7 +1413,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5373" levels="9" name="NPC(party) -Magic Single Long Range DD - Fire">
+	<skill id="5373" levels="9" name="Blaze">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1419,7 +1433,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="fire" />
 	</skill>
-	<skill id="5374" levels="9" name="NPC(party) -Magic Range Long Range DD - Fire">
+	<skill id="5374" levels="9" name="Flame Strike">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1438,7 +1453,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="fire" />
 	</skill>
-	<skill id="5375" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire">
+	<skill id="5375" levels="9" name="Blazing Circle">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1456,7 +1472,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="fire" />
 	</skill>
-	<skill id="5376" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction)">
+	<skill id="5376" levels="9" name="Blazing Circle">
+    <!-- none -->
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">152 168 185 202 210 216 222 226 229</table>
 		<set name="magicType" val="MAGIC" />
@@ -1469,7 +1486,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="fire" />
 	</skill>
-	<skill id="5377" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
+	<skill id="5377" levels="9" name="Hydro Blast">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1488,7 +1506,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="water" />
 	</skill>
-	<skill id="5378" levels="9" name="NPC(party) -Magic Range Long Range DD - Water">
+	<skill id="5378" levels="9" name="Mass Hydro Blast">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1507,7 +1526,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="water" />
 	</skill>
-	<skill id="5379" levels="9" name="NPC(party) -Magic Range Close Range DD - Water">
+	<skill id="5379" levels="9" name="Frost Wall">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1525,7 +1545,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="water" />
 	</skill>
-	<skill id="5380" levels="9" name="NPC(party) -Magic Single Long Range DD - Wind">
+	<skill id="5380" levels="9" name="Hurricane">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1544,7 +1565,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="wind" />
 	</skill>
-	<skill id="5381" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
+	<skill id="5381" levels="9" name="Tempest">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1563,7 +1585,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="wind" />
 	</skill>
-	<skill id="5382" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
+	<skill id="5382" levels="9" name="Tempest">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1581,7 +1604,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="wind" />
 	</skill>
-	<skill id="5383" levels="9" name="NPC(party) -Magic Single Long Range DD - Earth">
+	<skill id="5383" levels="9" name="Rock Strike">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1600,7 +1624,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="earth" />
 	</skill>
-	<skill id="5384" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
+	<skill id="5384" levels="9" name="Earthquake">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1619,7 +1644,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="earth" />
 	</skill>
-	<skill id="5385" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
+	<skill id="5385" levels="9" name="Earthquake">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1637,7 +1663,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="earth" />
 	</skill>
-	<skill id="5386" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
+	<skill id="5386" levels="9" name="Holy Strike">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1656,7 +1683,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5387" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+	<skill id="5387" levels="9" name="Holy Blast">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1675,7 +1703,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5388" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+	<skill id="5388" levels="9" name="Holy Circle">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1693,7 +1722,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5389" levels="9" name="NPC(party) -Magic Single Long Range DD - Dark">
+	<skill id="5389" levels="9" name="Unholy Strike">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1712,7 +1742,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="unholy" />
 	</skill>
-	<skill id="5390" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+	<skill id="5390" levels="9" name="Unholy Blast">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1731,7 +1762,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5391" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+	<skill id="5391" levels="9" name="Unholy Circle">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1749,7 +1781,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="holy" />
 	</skill>
-	<skill id="5392" levels="9" name="NPC HP Drain">
+	<skill id="5392" levels="9" name="Drain Health">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1768,9 +1801,9 @@
 		<set name="skillType" val="DRAIN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="absorbPart" val="0.2" />
-		<!-- absorbs 20% of damage -->
 	</skill>
-	<skill id="5393" levels="9" name="NPC MP Burn">
+	<skill id="5393" levels="9" name="Mana Burn">
+    <!-- none -->
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1789,6 +1822,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5394" levels="9" name="Poison">
+    <!-- A toxin that gradually reduces HP. Effect 8. -->
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
@@ -1812,7 +1846,8 @@
 			<effect abnormal="poison" count="10" name="Poison" stackOrder="#stackOrder" time="3" val="0" />
 		</for>
 	</skill>
-	<skill id="5395" levels="3" name="NPC Clan Buff - Super Might Haste">
+	<skill id="5395" levels="3" name="Super Might Haste">
+    <!-- none -->
 		<table name="#mpConsume2">23 42 78</table>
 		<table name="#mpConsume1">6 11 20</table>
 		<table name="#magicLevel">20 40 70</table>
@@ -1828,7 +1863,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5396" levels="1" name="NPC - Spell Stance">
+	<skill id="5396" levels="1" name="Spell Force">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="77" />
@@ -1839,7 +1875,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5397" levels="3" name="NPC - Spell Force">
+	<skill id="5397" levels="3" name="Spell Force">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0427" />
 		<set name="magicLevel" val="77" />
@@ -1847,7 +1884,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5398" levels="1" name="NPC - Combination Force">
+	<skill id="5398" levels="1" name="Final Burn">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="99" />
@@ -1861,11 +1899,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5399" levels="1" name="Heat of Desert">
-		<!--
-			Last modify:	18.02.2009
-
-			Description: Condition causing target to decrease HP by heat of desert.
-		-->
+    <!-- Condition causing target to decrease HP by heat of desert. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill1230" />
 		<set name="magicLevel" val="1" />

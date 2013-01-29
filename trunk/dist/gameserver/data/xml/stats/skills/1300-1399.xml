@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="1300" levels="3" name="Servitor Cure">
+    <!-- Cures servitor of minor bleeding or poisoning. -->
 		<table name="#mpConsume2">28 35 44</table>
 		<table name="#mpConsume1">7 9 11</table>
 		<table name="#magicLevel">40 48 60</table>
@@ -21,6 +22,7 @@
 		<set name="negateEffects" val="Poison:#power;Bleed:#power" />
 	</skill>
 	<skill id="1301" levels="1" name="Servitor Blessing">
+    <!-- Frees servitor of Hold, paralysis and decreased Atk. Spd. or movement effects. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1301" />
 		<set name="reuseDelay" val="4000" />
@@ -37,10 +39,7 @@
 		<set name="negateStackType" val="RunSpeedDown;pAtkSpdDown" />
 	</skill>
 	<skill id="1303" levels="2" name="Wild Magic">
-		<!--
-			Enchant #1: +Time
-			Enchant #2: -MP consumption
-		-->
+    <!-- For 20 minutes, increases by 1 the damage rate of magic. -->
 		<table name="#mCrit">1 2</table>
 		<table name="#stack">1 2</table>
 		<table name="#abnormal_time">1200</table>
@@ -75,10 +74,7 @@
 		</for>
 	</skill>
 	<skill id="1304" levels="3" name="Advanced Block">
-		<!--
-			Enchant #1: +Time
-			Enchant #2: -MP consumption
-		-->
+    <!-- Increases Shield Defense by 30% for 20 minutes. -->
 		<table name="#Tab-sDef">1.3 1.4 1.5</table>
 		<table name="#stack">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
@@ -113,6 +109,7 @@
 		</for>
 	</skill>
 	<skill id="1305" levels="5" name="The Honor of Pa'agrio">
+    <!-- Restores CP of nearby clan members by 616 Power. -->
 		<table name="#mpConsume2">171 177 182 186 191</table>
 		<table name="#mpConsume1">43 45 46 47 48</table>
 		<table name="#magicLevel">66 68 70 72 74</table>
@@ -142,10 +139,7 @@
 		</enchant2>
 	</skill>
 	<skill id="1306" levels="6" name="Ritual of Life">
-		<!--
-			Enchant #1: +Power
-			Enchant #2: -MP consumption
-		-->
+    <!-- Restores CP by 745 Power. -->
 		<table name="#mpConsume2">83 86 89 91 93 96</table>
 		<table name="#mpConsume1">21 22 23 23 24 24</table>
 		<table name="#magicLevel">64 66 68 70 72 74</table>
@@ -174,10 +168,7 @@
 		</enchant2>
 	</skill>
 	<skill id="1307" levels="3" name="Prayer">
-		<!--
-			Enchant #1: +Time
-			Enchant #2:  -MP consumption
-		-->
+    <!-- Increases the power of HP recovery magic received by all party members by 8% for 20 minutes. -->
 		<table name="#hpEff">8 10 12</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">195 207 217</table>
@@ -213,10 +204,7 @@
 		</for>
 	</skill>
 	<skill id="1308" levels="3" name="Chant of Predator">
-		<!--
-			Enchant #1: +Time
-			Enchant #2: -MP consumption
-		-->
+    <!-- Increases Critical Rate of all party members by 20% for 20 minutes. -->
 		<table name="#rCrit">20 25 30</table>
 		<table name="#power">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
@@ -251,10 +239,7 @@
 		</for>
 	</skill>
 	<skill id="1309" levels="3" name="Chant of Eagle">
-		<!--
-			Enchant #1: +Time
-			Enchant #2: -MP consumption
-		-->
+    <!-- Increases Accuracy of all party members by 2 for 20 minutes. -->
 		<table name="#stackOrder">1 2 3</table>
 		<table name="#Tab-accCombat">2 3 4</table>
 		<table name="#abnormal_time">1200</table>
@@ -289,10 +274,7 @@
 		</for>
 	</skill>
 	<skill id="1310" levels="4" name="Chant of Vampire">
-		<!--
-			Enchant #1: +Time
-			Enchant #2: -MP consumption
-		-->
+    <!-- For 20 minutes, gives all party members the ability to recover as HP 6% of any damage infliected on the enemy with a certain probability. -->
 		<table name="#Tab-absorbDam">6 7 8 9</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">123 170 195 217</table>
@@ -325,11 +307,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1311" levels="6" name="Body Of Avatar">
-		<!--
-			Enchant #1: +Time
-			Enchant #2: -MP consumption
-		-->
+	<skill id="1311" levels="6" name="Body of Avatar">
+    <!-- Restores HP of all party members by 10% and increases Max HP by 10% for 20 minutes. -->
 		<table name="#power">10 15 20 25 30 35</table>
 		<table name="#Tab-maxHp">1.1 1.15 1.2 1.25 1.3 1.35</table>
 		<table name="#stack">1 2 3 4 5 6</table>
@@ -366,6 +345,7 @@
 		</for>
 	</skill>
 	<skill id="1312" levels="1" name="Fishing">
+    <!-- Tries to catch fish at a fishing spot. One must be equipped with a fishing rod and a bait or lure to use this skill. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill1312" />
 		<set name="magicLevel" val="1" />
@@ -377,7 +357,8 @@
 		<set name="isCommon" val="true" />
 		<set name="isFishingSkill" val="true" />
 	</skill>
-	<skill id="1313" levels="27" name="Тянуть">
+	<skill id="1313" levels="27" name="Pumping">
+    <!-- Pump the fishing line. Use it when the fish is tired. -->
 		<table name="#power">19 28 38 50 55 60 65 70 86 92 97 103 109 115 136 143 149 156 187 195 202 245 253 262 271 312 321</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill1313" />
@@ -392,7 +373,8 @@
 		<set name="isCommon" val="true" />
 		<set name="isFishingSkill" val="true" />
 	</skill>
-	<skill id="1314" levels="27" name="Подсечь">
+	<skill id="1314" levels="27" name="Reeling">
+    <!-- Reel the fishing line. Use it when the fish is fighting hard. -->
 		<table name="#power">19 28 38 50 55 60 65 70 86 92 97 103 109 115 136 143 149 156 187 195 202 245 253 262 271 312 321</table>
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill1314" />
@@ -408,6 +390,7 @@
 		<set name="isFishingSkill" val="true" />
 	</skill>
 	<skill id="1315" levels="27" name="Fishing Expertise">
+    <!-- Expertise skill for fishing. -->
 		<set name="icon" val="icon.skill1315" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -415,7 +398,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isCommon" val="true" />
 	</skill>
-	<skill id="1316" levels="1" name="Fishing Expertise -C-Grade">
+	<skill id="1316" levels="1" name="Fishing Expertise: C Grade">
+    <!-- C-Grade Expertise skill for fishing. -->
 		<set name="icon" val="icon.skill1316" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -423,7 +407,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isCommon" val="true" />
 	</skill>
-	<skill id="1317" levels="1" name="Fishing Expertise -B-Grade">
+	<skill id="1317" levels="1" name="Fishing Expertise: B Grade">
+    <!-- B-Grade Expertise skill for fishing. -->
 		<set name="icon" val="icon.skill1317" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -431,7 +416,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isCommon" val="true" />
 	</skill>
-	<skill id="1318" levels="1" name="Fishing Expertise -A-Grade">
+	<skill id="1318" levels="1" name="Fishing Expertise: A Grade">
+    <!-- A-Grade Expertise skill for fishing. -->
 		<set name="icon" val="icon.skill1318" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -439,7 +425,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isCommon" val="true" />
 	</skill>
-	<skill id="1319" levels="1" name="Fishing Expertise -S-Grade">
+	<skill id="1319" levels="1" name="Fishing Expertise: S Grade">
+    <!-- S-Grade Expertise skill for fishing. -->
 		<set name="icon" val="icon.skill1319" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -448,6 +435,7 @@
 		<set name="isCommon" val="true" />
 	</skill>
 	<skill id="1320" levels="9" name="Create Common Item">
+    <!-- Creates level 1 common items. -->
 		<table name="#magicLevel">5 20 28 36 43 49 55 62 70</table>
 		<set name="icon" val="icon.skill0172" />
 		<set name="magicLevel" val="#magicLevel" />
@@ -459,6 +447,7 @@
 		</for>
 	</skill>
 	<skill id="1321" levels="1" name="Dwarven Craft">
+    <!-- Can read Dwarven recipe books. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0172" />
 		<set name="magicLevel" val="1" />
@@ -468,6 +457,7 @@
 		<set name="isDwarven" val="true" />
 	</skill>
 	<skill id="1322" levels="1" name="Common Craft">
+    <!-- Can read common recipe books. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0172" />
 		<set name="magicLevel" val="1" />
@@ -477,6 +467,7 @@
 		<set name="isDwarven" val="false" />
 	</skill>
 	<skill id="1323" levels="1" name="Noblesse Blessing">
+    <!-- Maintains target's buff/de-buff condition even following death and resurrection. The Blessing of Noblesse and the Amulet of Luck disappear, however. Consumes 5 Spirit Ore. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1323" />
 		<set name="reuseDelay" val="2000" />
@@ -496,6 +487,7 @@
 		</for>
 	</skill>
 	<skill id="1324" levels="1" name="Summon CP Potion">
+    <!-- Summons 20 high quality Combat Spirit Potions. Consumes 50 Soul Ore. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1324" />
 		<set name="reuseDelay" val="600000" />
@@ -511,6 +503,7 @@
 		<set name="SummonMinCount" val="20" />
 	</skill>
 	<skill id="1325" levels="1" name="Fortune of Noblesse">
+    <!-- Allows a party member to avoid negative after-death effects after being killed by a boss or raid monster. Consumes 4 A-Grade Lucky Amulets. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1325" />
 		<set name="reuseDelay" val="5000" />
@@ -529,9 +522,7 @@
 		</for>
 	</skill>
 	<skill id="1326" levels="1" name="Harmony of Noblesse">
-		<!-- Auto parser
-			Level 1: Advances to the front line of a battlefield, for 15 seconds increasing P. Def. by 3000, movement speed by 25%, resistance to buff-canceling attacks by 80% and resistance to bow/crossbow attacks by 80%; and decreasing CP by 20%. Can only be used on the battlefield.
-		-->
+    <!-- Advances to the frontline of the battleground. For 15 seconds, increases P. Def. by 3000, Speed by 25%, Resistance to buff canceling attacks by 80%, Resistance to bow attacks by 10, and Resistance to crossbow attacks by 6. Decreases CP by 20%. Can only be used on the battleground when CP is above 50%. Consumes 5 Spirit Ore. Maximum fighting spirit and HP are limited. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1326" />
 		<set name="reuseDelay" val="900000" />
@@ -566,9 +557,7 @@
 		</for>
 	</skill>
 	<skill id="1327" levels="1" name="Symphony of Noblesse">
-		<!-- Auto parser
-			Level 1: Advances to the front line of a battlefield, for 15 seconds increasing M. Def. by 4500, movement speed by 25%, resistance to buff-canceling attacks by 80% and resistance to bow/crossbow attacks by 80%; and decreasing CP by 20%. Can only be used on the battlefield.
-		-->
+    <!-- Advances to the frontline of the battleground. For 15 seconds, increases M. Def. by 4500, Speed by 25%, Resistance to buff canceling attacks by 80%, Resistance to bow attacks by 10, and Resistance to crossbow attacks by 6. Decreases CP by 20%. Can only be used on the battleground when CP is above 50%. Consumes 5 Spirit Ore. Maximum fighting spirit and HP are limited. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1327" />
 		<set name="reuseDelay" val="900000" />
@@ -603,6 +592,7 @@
 		</for>
 	</skill>
 	<skill id="1328" levels="8" name="Mass Summon Storm Cubic">
+    <!-- Summons Storm Cubic for party members. Storm Cubic uses magic that damages a targeted enemy. Requires 16 Spirit Ore. -->
 		<table name="#itemConsumeCount">16 20 26 29 36 39 42 46</table>
 		<table name="#cubicLevel">1 2 3 4 5 6 7 8</table>
 		<table name="#mpConsume2">111 130 150 170 183 195 207 217</table>
@@ -636,6 +626,7 @@
 		</for>
 	</skill>
 	<skill id="1329" levels="9" name="Mass Summon Aqua Cubic">
+    <!-- Summons Aqua Cubic for party members. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Requires 7 Spirit Ore. -->
 		<table name="#itemConsumeCount">7 10 10 13 13 16 20 20 23</table>
 		<table name="#cubicLevel">1 2 3 4 5 6 7 8 9</table>
 		<table name="#mpConsume2">111 123 137 150 163 183 195 207 217</table>
@@ -669,6 +660,7 @@
 		</for>
 	</skill>
 	<skill id="1330" levels="8" name="Mass Summon Phantom Cubic">
+    <!-- Summons Phantom Cubic for party members. A Phantom Cubic uses magic that decreases the target's P. Atk., P. Def., and Atk. Spd. Requires 7 Spirit Ore. -->
 		<table name="#itemConsumeCount">7 10 13 13 16 20 20 23</table>
 		<table name="#cubicLevel">1 2 3 4 5 6 7 8</table>
 		<table name="#mpConsume2">111 130 150 170 183 195 207 217</table>
@@ -702,9 +694,7 @@
 		</for>
 	</skill>
 	<skill id="1331" levels="10" name="Summon Feline Queen">
-		<!--
-			Enchant #1: +power of the servitor
-		-->
+    <!-- Summons Feline Queen. Requires 1 Spirit Ore(s). -->
 		<table name="#itemConsumeCount">1 1 2 2 4 1 1 4 1 2</table>
 		<table name="#itemConsumeCountInTime">2 2 2 2 2 4 4 4 6 6</table>
 		<table name="#npcIds">14251 14252 14253 14254 14255 14256 14257 14258 14259 14260</table>
@@ -735,10 +725,8 @@
 			<table name="#mpConsume2">109</table>
 		</enchant1>
 	</skill>
-	<skill id="1332" levels="10" name="Summon Unicorn Seraphim">
-		<!--
-			Enchant #1: +power of the servitor
-		-->
+	<skill id="1332" levels="10" name="Summon Seraphim the Unicorn">
+    <!-- Summons Seraphim the Unicorn. Requires 1 Spirit Ore(s). -->
 		<table name="#itemConsumeCount">1 1 2 2 4 1 1 4 1 2</table>
 		<table name="#itemConsumeCountInTime">2 2 2 2 2 4 4 4 6 6</table>
 		<table name="#npcIds">14435 14436 14437 14438 14439 14440 14441 14442 14443 14444</table>
@@ -770,9 +758,7 @@
 		</enchant1>
 	</skill>
 	<skill id="1333" levels="10" name="Summon Nightshade">
-		<!--
-			Enchant #1: +power of the servitor
-		-->
+    <!-- Summons a Nightshade. Requires 1 Spirit Ore(s). -->
 		<table name="#itemConsumeCount">1 1 2 2 4 1 1 4 1 2</table>
 		<table name="#itemConsumeCountInTime">2 2 2 2 2 4 4 4 6 6</table>
 		<table name="#npcIds">14619 14620 14621 14622 14623 14624 14625 14626 14627 14628</table>
@@ -804,9 +790,7 @@
 		</enchant1>
 	</skill>
 	<skill id="1334" levels="7" name="Summon Cursed Man">
-		<!--
-			Enchant #1: +power of the servitor
-		-->
+    <!-- Summons a Cursed Man. Requires 3 Spirit Ore(s). -->
 		<table name="#itemConsumeCount">3 5 12 1 2 3 4</table>
 		<table name="#itemConsumeCountInTime">1 1 1 2 2 2 2</table>
 		<table name="#npcIds">14074 14075 14076 14077 14078 14079 14080</table>
@@ -836,6 +820,7 @@
 		</enchant1>
 	</skill>
 	<skill id="1335" levels="1" name="Balance Life">
+    <!-- Equalizes HP of all party members. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1335" />
 		<set name="reuseDelay" val="30000" />
@@ -850,6 +835,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="1336" levels="1" name="Curse of Doom">
+    <!-- Blocks all the enemy's physical and magical skills for 1 minute. -->
 		<table name="#activateRate">50</table>
 		<table name="#time">60</table>
 		<table name="#mpConsume2">56</table>
@@ -886,6 +872,7 @@
 		</for>
 	</skill>
 	<skill id="1337" levels="1" name="Curse of Abyss">
+    <!-- For 30 seconds, decreases the enemy's Speed by 10%, P. Def. by 30%, Evasion by 6, M. Atk. by 30%, Casting Spd. by 20% and magic damage by 30%. -->
 		<table name="#activateRate">70</table>
 		<table name="#time">30</table>
 		<table name="#mpConsume2">57</table>
@@ -929,6 +916,7 @@
 		</for>
 	</skill>
 	<skill id="1338" levels="1" name="Arcane Chaos">
+    <!-- For 30 seconds, decreases Resistance to the enemy's buff-canceling attacks by 30%, Resistance to de-buff attacks by 30% and drains 24 MP every second. Increases physical skill MP Consumption by 10% and magic skill MP Consumption by 30%. -->
 		<table name="#activateRate">40</table>
 		<table name="#time">30</table>
 		<table name="#mpConsume2">57</table>
@@ -970,11 +958,7 @@
 		</for>
 	</skill>
 	<skill id="1339" levels="1" name="Fire Vortex">
-		<!--
-			Last modify: 06.05.2009
-			Summons a dimensional vortex that inflicts fire damage on the enemy, supplementing user's magical power with 140 Power.
-			For 30 seconds, decreases movement speed by 10%, Atk. Spd. by 30%, Casting Spd. by 10%, and resistance to fire by 20. Consumes 12 MP every second. Over-hit is possible.
-		-->
+    <!-- Summons a dimensional vortex that inflicts Fire damage on the enemy, supplementing user's M. Atk. with 140 Power. For 30 seconds, decreases Speed by 10%, Atk. Spd. by 30%, Casting Spd. by 10%, and Resistance to Fire by 20. Consumes 12 MP every second. Over-hit is possible. -->
 		<table name="#activateRate">80</table>
 		<table name="#elementPower">0</table>
 		<table name="#mpConsume2">84</table>
@@ -1027,11 +1011,7 @@
 		</for>
 	</skill>
 	<skill id="1340" levels="1" name="Ice Vortex">
-		<!--
-			Last modify: 06.05.2009
-			Summons a dimensional vortex that inflicts water damage on the enemy, supplementing user's magical power with 140 Power.
-			For 30 seconds, decreases movement speed by 10%, Atk. Spd. by 30%, Casting Spd. by 10%, and resistance to water by 20. Consumes 12 MP every second. Over-hit is possible.
-		-->
+    <!-- Stirs up a vortex connecting to the dimension of Water and inflicts Water damage on the enemy with 140 Power added to M. Atk. For 30 seconds, decreases Speed by 30%, Atk. Spd. by 10%, Casting Spd. by 10%, and resistance against Water by 20. Consumes 12 MP every second. Over-hit is possible. -->
 		<table name="#activateRate">80</table>
 		<table name="#elementPower">0</table>
 		<table name="#mpConsume2">84</table>
@@ -1084,11 +1064,7 @@
 		</for>
 	</skill>
 	<skill id="1341" levels="1" name="Wind Vortex">
-		<!--
-			Last modify: 06.05.2009
-			Stirs up a vortex connecting to the dimension of wind and inflicts wind damage on the enemy with 140 power added to magic power.
-			For 30 seconds, decreases moving speed by 10%, Atk. Spd. by 10%, Casting Spd. by 30%, and tolerance against wind by 20. Consumes 12 MP every second. Over-hit.
-		-->
+    <!-- Stirs up a vortex connecting to the dimension of Wind and inflicts Wind damage on the enemy with 140 Power added to M. Atk. For 30 seconds, decreases Speed by 10%, Atk. Spd. by 10%, Casting Spd. by 30%, and resistance against Wind by 20. Consumes 12 MP every second. Over-hit is possible. -->
 		<table name="#activateRate">80</table>
 		<table name="#elementPower">0</table>
 		<table name="#mpConsume2">84</table>
@@ -1141,9 +1117,7 @@
 		</for>
 	</skill>
 	<skill id="1342" levels="1" name="Light Vortex">
-		<!--
-			Last modify: 06.05.2009
-		-->
+    <!-- Summons a dimensional vortex that inflicts holy damage on the enemy, supplementing user's M. Atk. with 139 Power. For 30 seconds, decreases Accuracy by 6 and Resistance to holy damage by 30. Consumes 12 MP every second. -->
 		<table name="#activateRate">80</table>
 		<table name="#elementPower">0</table>
 		<table name="#mpConsume2">84</table>
@@ -1193,9 +1167,7 @@
 		</for>
 	</skill>
 	<skill id="1343" levels="1" name="Dark Vortex">
-		<!--
-			Last modify: 06.05.2009
-		-->
+    <!-- Stirs up a vortex connecting to the dimension of darkness and inflicts dark damage on the enemy with 139 Power added to M. Atk. Absorbs 25% as HP. For 30 seconds, decreases Accuracy by 6 and Resistance to Dark by 30. Consumes 12 MP every second. -->
 		<table name="#activateRate">80</table>
 		<table name="#elementPower">0</table>
 		<table name="#mpConsume2">84</table>
@@ -1247,6 +1219,7 @@
 		</for>
 	</skill>
 	<skill id="1344" levels="1" name="Mass Warrior Bane">
+    <!-- Removes any buffs of nearby enemies that increase Atk. Spd. Or Speed. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill1344" />
@@ -1272,6 +1245,7 @@
 		</for>
 	</skill>
 	<skill id="1345" levels="1" name="Mass Mage Bane">
+    <!-- Removes any buffs of nearby enemies that increase M. Atk. or Casting Spd. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill1345" />
@@ -1297,12 +1271,7 @@
 		</for>
 	</skill>
 	<skill id="1346" levels="1" name="Warrior Servitor">
-		<!--
-			Last modify:	09.06.2009
-
-			Description:
-			For 5 minutes, causes the servitor to be possessed with the spirit of an ancient warrior. Increases Max HP by 20%, HP recovery bonus by 20%, P. Def. by 20%, accuracy by 4, P. Atk. by 10%, Atk. Spd. by 20%, and resistance to de-buff attacks by 10. Decreases movement speed by 10%. Consumes 10 Runestones.
-		-->
+    <!-- For 5 minutes, causes the servitor to be possessed with the spirit of an ancient warrior. Increases Max HP by 20%, HP Recovery Bonus by 20%, P. Def. by 20%, Accuracy by 4, P. Atk. by 10%, Atk. Spd. by 20%, and Resistance to de-buff attacks by 10. Decreases Speed by 10%. Consumes 10 Spirit Ore. -->
 		<table name="#abnormal_time">300</table>
 		<table name="#mpConsume2">56</table>
 		<table name="#mpConsume1">14</table>
@@ -1344,12 +1313,7 @@
 		</for>
 	</skill>
 	<skill id="1347" levels="1" name="Wizard Servitor">
-		<!--
-			Last modify:	09.06.2009
-
-			Description:
-			For 5 minutes, causes the servitor to be possessed with the spirit of an ancient wizard. Increases MP recovery bonus by 20%, M. Def. by 20%, M. Atk. by 20%, Casting Spd. by 20%, damage magic critical attack rate by 2, and resistance to de-buff attacks by 10. Decreases movement speed by 20%. Consumes 10 Runestones.
-		-->
+    <!-- For 5 minutes, causes the servitor to be possessed with the spirit of an ancient wizard. Increases MP Recovery Bonus by 20%, M. Def. by 20%, M. Atk. by 20%, Casting Spd. by 20%, magic damage by 2, and Resistance to de-buff attacks by 10. Decreases Speed by 20%. Consumes 10 Spirit Ore. -->
 		<table name="#abnormal_time">300</table>
 		<table name="#mpConsume2">56</table>
 		<table name="#mpConsume1">14</table>
@@ -1391,12 +1355,7 @@
 		</for>
 	</skill>
 	<skill id="1348" levels="1" name="Assassin Servitor">
-		<!--
-			Last modify:	09.06.2009
-
-			Description:
-			For 5 minutes, causes the servitor to be possessed with the spirit of an ancient assassin. Increases accuracy by 4, evasion by 4, Atk. Spd. by 20%, the critical rate occurring in the rear by 20%, the critical damage occurring in the rear by 20%, and resistance to de-buff attacks by 10. Allows servitor to recover 5% of standard short-range physical damage inflicted on the enemy as HP. Consumes 10 Runestones.
-		-->
+    <!-- For 5 minutes, causes the servitor to be possessed with the spirit of an ancient assassin. Increases Accuracy by 4, Evasion by 4, Atk. Spd. by 20%, Critical Rate occurring in the rear by 20%, Critical Damage occurring in the rear by 20%, and Resistance to de-buff attacks by 10. Allows servitor to recover 5% of physical damage inflicted on the enemy as HP with a certain probability. Consumes 10 Spirit Ore. -->
 		<table name="#abnormal_time">300</table>
 		<table name="#mpConsume2">56</table>
 		<table name="#mpConsume1">14</table>
@@ -1447,12 +1406,7 @@
 		</for>
 	</skill>
 	<skill id="1349" levels="1" name="Final Servitor">
-		<!--
-			Last modify:	09.06.2009
-
-			Description:
-			For 5 minutes, causes the servitor to be possessed with the spirit of an ancient hero. Immediately increases Max HP by 20%, accuracy by 4, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, critical rate by 20%, critical damage by 20%, M. Def. by 20%, M. Atk. by 20%, Casting Spd. by 20%, and resistance to de-buff attacks by 20. Decreases moving speed by 20%. Consumes 20 Runestones.
-		-->
+    <!-- For 5 minutes, causes the servitor to be possessed with the spirit of an ancient hero. Immediately increases Max HP by 20%, Accuracy by 4, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, Critical Rate by 20%, Critical Damage by 20%, M. Def. by 20%, M. Atk. by 20%, Casting Spd. by 20%, and Resistance to de-buff attacks by 20. Decreases Speed by 20%. Consumes 20 Spirit Ore. -->
 		<table name="#abnormal_time">300</table>
 		<table name="#mpConsume2">57</table>
 		<table name="#mpConsume1">15</table>
@@ -1499,6 +1453,7 @@
 		</for>
 	</skill>
 	<skill id="1350" levels="1" name="Warrior Bane">
+    <!-- Removes buffs that increase Atk. Spd. and Speed from the enemy. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1350" />
 		<set name="reuseDelay" val="3000" />
@@ -1524,6 +1479,7 @@
 		</for>
 	</skill>
 	<skill id="1351" levels="1" name="Mage Bane">
+    <!-- Removes buffs that increase M. Atk. and Casting Spd. from the enemy. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1351" />
 		<set name="reuseDelay" val="3000" />
@@ -1549,6 +1505,7 @@
 		</for>
 	</skill>
 	<skill id="1352" levels="1" name="Elemental Protection">
+    <!-- For 20 minutes, increases Resistance to Fire, Water, Wind and Earth attacks. -->
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">56</table>
 		<table name="#mpConsume1">14</table>
@@ -1585,6 +1542,7 @@
 		</for>
 	</skill>
 	<skill id="1353" levels="1" name="Divine Protection">
+    <!-- For 20 minutes, increases Resistance to Dark by 30 and Resistance to Holy by 20. -->
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">56</table>
 		<table name="#mpConsume1">14</table>
@@ -1618,6 +1576,7 @@
 		</for>
 	</skill>
 	<skill id="1354" levels="1" name="Arcane Protection">
+    <!-- For 20 minutes, increases Resistance to buff-canceling attacks by 30 and Resistance to de-buff attacks by 20. -->
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">56</table>
 		<table name="#mpConsume1">14</table>
@@ -1651,24 +1610,7 @@
 		</for>
 	</skill>
 	<skill id="1355" levels="1" name="Prophecy of Water">
-		<!--
-			Last modify: 27.06.2009
-
-			Description:
-			For 5 minutes, a powerful spirit acts to increase the damage caused by the targeted party member's
-			damage magic by 20%,
-			MP recovery bonus by 20%,
-			P. Atk. by 10%,
-			P. Def. by 20%,
-			Atk. Spd. by 20%,
-			M. Atk. by 20%,
-			M. Def. by 20%,
-			Casting Spd. by 20%,
-			and resistance to de-buffs by 10%.
-			Decreases movement speed by 20%
-			and MP consumption for skill use by 5%.
-			Consumes 10 Runestones.
-		-->
+    <!-- For 5 minutes, a powerful spirit acts to increase the damage caused by the targeted party member's magic damage by 2, MP Recovery Bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buffs by 10%. Decreases Speed by 20% and MP Consumption for skill use by 5%. Consumes 10 Spirit Ore. -->
 		<table name="#speed">0.8</table>
 		<table name="#abnormal_time">300</table>
 		<table name="#mpConsume2">57</table>
@@ -1721,24 +1663,7 @@
 		</for>
 	</skill>
 	<skill id="1356" levels="1" name="Prophecy of Fire">
-		<!--
-			Last modify: 27.06.2009
-
-			Description:
-			For 5 minutes, a powerful spirit acts to increase a party member's
-			Max MP by 20%,
-			HP recovery bonus by 20%,
-			damage magic critical attack rate by 2,
-			the power of critical attacks by 20%,
-			P. Atk. by 10%,
-			P. Def. by 20%,
-			Atk. Spd. by 20%,
-			M. Atk. by 20%,
-			M. Def. by 20%,
-			Casting Spd. by 20%,
-			and resistance to de-buffs by 10%.
-			Decreases movement speed by 20%. Consumes 10 Runestones.
-		-->
+    <!-- For 5 minutes, a powerful spirit acts to increase a party member's Max MP by 20%, HP Recovery Bonus by 20%, magic damage by 2, Critical Damages by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buffs by 10%. Decreases Speed by 20%. Consumes 10 Spirit Ore. -->
 		<table name="#speed">0.8</table>
 		<table name="#abnormal_time">300</table>
 		<table name="#mpConsume2">57</table>
@@ -1789,24 +1714,7 @@
 		</for>
 	</skill>
 	<skill id="1357" levels="1" name="Prophecy of Wind">
-		<!--
-			Last modify: 27.06.2009
-
-			For 5 minutes, a powerful spirit acts to
-			increase a party member's Max HP by 20%,
-			rate of critical attack by 20%,
-			damage magic critical attack rate by 20%, FIXME здесь судя по patch notes - mCritDamage
-			P. Atk. by 10%,
-			P. Def. by 20%,
-			Atk. Spd. by 20%,
-			M. Atk. by 20%,
-			M. Def. by 20%,
-			Casting Spd. by 20%,
-			and resistance to de-buff by 10%.
-			Decreases movement speed by 20%.
-			Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy.
-			Consumes 10 Runestones.
-		-->
+    <!-- For 5 minutes, a powerful spirit acts to increase a party member's Max HP by 20%, Critical Rate by 20%, magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buff by 10%. Decreases Speed by 20%. Recovers 5% of physical damage inflicted on the enemy as HP with a certain probability. Consumes 10 Spirit Ore. -->
 		<table name="#speed">0.8</table>
 		<table name="#abnormal_time">300</table>
 		<table name="#mpConsume2">57</table>
@@ -1857,6 +1765,7 @@
 		</for>
 	</skill>
 	<skill id="1358" levels="1" name="Block Shield">
+    <!-- Cancels a buff that increases the enemy's P. Def. For 2 minutes, decreases P. Def. by 10% and prevents him from receiving P. Def.-increasing buffs. -->
 		<table name="#activateRate">80</table>
 		<table name="#time">120</table>
 		<table name="#mpConsume2">56</table>
@@ -1896,6 +1805,7 @@
 		</for>
 	</skill>
 	<skill id="1359" levels="1" name="Block Wind Walk">
+    <!-- Cancels a buff that increases the enemy's Speed. For 2 minutes, decreases Speed by 10% and prevents him from receiving Speed-increasing buffs. -->
 		<table name="#activateRate">80</table>
 		<table name="#time">120</table>
 		<table name="#mpConsume2">56</table>
@@ -1935,6 +1845,7 @@
 		</for>
 	</skill>
 	<skill id="1360" levels="1" name="Mass Block Shield">
+    <!-- Cancels buffs that increase nearby enemies' P. Def. For 2 minutes, decreases P. Def. by 10% and prevents them from receiving P. Def.-increasing buffs. -->
 		<table name="#activateRate">40</table>
 		<table name="#mpConsume2">84</table>
 		<table name="#mpConsume1">21</table>
@@ -1975,6 +1886,7 @@
 		</for>
 	</skill>
 	<skill id="1361" levels="1" name="Mass Block Wind Walk">
+    <!-- Cancels buffs that increase nearby enemies' Speed. For 2 minutes, decreases Speed by 10% and prevents them from receiving Speed-increasing buffs. -->
 		<table name="#activateRate">40</table>
 		<table name="#mpConsume2">85</table>
 		<table name="#mpConsume1">22</table>
@@ -2015,6 +1927,7 @@
 		</for>
 	</skill>
 	<skill id="1362" levels="1" name="Chant of Spirit">
+    <!-- For 20 minutes, increases all party members' Resistance to buff-canceling attacks by 30 and Resistance to de-buff attacks by 20. -->
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">224</table>
 		<table name="#mpConsume1">56</table>
@@ -2048,28 +1961,7 @@
 		</for>
 	</skill>
 	<skill id="1363" levels="1" name="Chant of Victory">
-		<!--
-			Last modify: 	11.05.2009
-
-			Comment: Судя по тестам в клиенте опечатка, данный скилл дает крит дамаг, а не шанс крита.
-
-			Decription:
-			Recovers all party members' HP by 20%,
-			and for 5 minutes,
-			receives help from a great spirit to increase Max HP by 20%,
-			damage magic critical attack rate by 20%,
-			critical attack rate by 20%,
-			P. Atk. by 10%,
-			P. Def. by 20%,
-			Atk. Spd. by 20%,
-			M. Atk. by 20%,
-			M. Def. by 20%,
-			Casting Spd. by 20%,
-			resistance to de-buffs by 10%,
-			and accuracy by 4.
-			Decreases movement speed by 20%.
-			Consumes 40 Runestones.
-		-->
+    <!-- Recovers all party members' HP by 20%, and for 5 minutes, receives help from a great spirit to increase Max HP by 20%, the chance of prominent magic damage by 2, Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Resistance to de-buffs by 10%, and Accuracy by 4. Decreases Speed by 20%. Consumes 40 Spirit Ore. -->
 		<table name="#abnormal_time">300</table>
 		<table name="#speed">0.8</table>
 		<table name="#mpConsume2">227</table>
@@ -2122,11 +2014,7 @@
 		</for>
 	</skill>
 	<skill id="1364" levels="1" name="Eye of Pa'agrio">
-		<!--
-			Last modify: 	11.05.2009
-			Description: For 20 minutes, increases nearby clan members' accuracy by 4 and decreases the rate of being hit by a critical attack by 30%.
-			Version: Gracia Final
-		-->
+    <!-- For 20 minutes, increases nearby clan members' Accuracy by 4 and decreases the rate of being hit by a critical attack by 30%. -->
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">224</table>
 		<table name="#mpConsume1">56</table>
@@ -2161,10 +2049,7 @@
 		</for>
 	</skill>
 	<skill id="1365" levels="1" name="Soul of Pa'agrio">
-		<!--
-			Last modify:	11.05.2009
-			Version: Gracia Final
-		-->
+    <!-- For 20 minutes, increases nearby clan members' M. Atk. by 75% and M. Def. by 30%. -->
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">224</table>
 		<table name="#mpConsume1">56</table>
@@ -2199,6 +2084,7 @@
 		</for>
 	</skill>
 	<skill id="1366" levels="1" name="Seal of Despair">
+    <!-- For 30 seconds, decreases nearby enemies' Accuracy by 6, P. Atk. by 10%, Critical Rate by 30%, Critical Damage by 30%, Speed by 20%, M. Def. by 30%, and Atk. Spd. by 30%. -->
 		<table name="#activateRate">40</table>
 		<table name="#mpConsume2">85</table>
 		<table name="#mpConsume1">22</table>
@@ -2244,6 +2130,7 @@
 		</for>
 	</skill>
 	<skill id="1367" levels="1" name="Seal of Disease">
+    <!-- Decreases the effect of HP recovery magic received by the enemy clan member by 50% for 2 minutes. -->
 		<table name="#activateRate">40</table>
 		<table name="#mpConsume2">84</table>
 		<table name="#mpConsume1">21</table>
@@ -2282,6 +2169,7 @@
 		</for>
 	</skill>
 	<skill id="1368" levels="8" name="Expand Dwarven Craft">
+    <!-- Increases the number of recipes that can be recorded in Dwarven-only recipe books. -->
 		<table name="#values">6 12 18 24 30 36 42 48</table>
 		<table name="#magicLevel">10 20 28 36 43 49 55 62</table>
 		<set name="icon" val="icon.skill1368" />
@@ -2295,6 +2183,7 @@
 		</for>
 	</skill>
 	<skill id="1369" levels="8" name="Expand Common Craft">
+    <!-- Increases the number of recipes that can be recorded in common recipe books. -->
 		<table name="#values">6 12 18 24 30 36 42 48</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 80</table>
 		<set name="icon" val="icon.skill1369" />
@@ -2308,6 +2197,7 @@
 		</for>
 	</skill>
 	<skill id="1370" levels="8" name="Expand Trade">
+    <!-- Increases the number of items that can be bought and sold at private stores. -->
 		<table name="#values">1 2 3 4 5 6 7 8</table>
 		<table name="#magicLevel">40 55 65 1 1 1 1 1</table>
 		<set name="icon" val="icon.skill1370" />
@@ -2321,6 +2211,7 @@
 		</for>
 	</skill>
 	<skill id="1371" levels="8" name="Expand Storage">
+    <!-- Increases the number of items that can be stored in private warehouses and freight. -->
 		<table name="#values">6 12 18 24 30 36 42 48</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 80</table>
 		<set name="icon" val="icon.skill0333" />
@@ -2334,6 +2225,7 @@
 		</for>
 	</skill>
 	<skill id="1372" levels="8" name="Expand Inventory">
+    <!-- Increases the number of items an individual can possess. -->
 		<table name="#values">6 12 18 24 30 36 42 48</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 80</table>
 		<set name="icon" val="icon.skill0332" />
@@ -2347,6 +2239,7 @@
 		</for>
 	</skill>
 	<skill id="1373" levels="1" name="Strider Mastery">
+    <!-- While mounted on a Strider, increases P. Atk. by 25% and M. Atk. by 25%. -->
 		<set name="icon" val="icon.skill1373" />
 		<set name="magicLevel" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -2363,12 +2256,7 @@
 		</for>
 	</skill>
 	<skill id="1374" levels="1" name="Heroic Valor">
-		<!--
-			Last modify: 06.05.2009
-
-			Description:
-			For 2 minutes, increases nearby clan members' P. Atk. by 250, P. Def. by 500, and resistance to buff-canceling attacks by 40. Consumes 80 Spirit Ores.
-		-->
+    <!-- For 2 minutes, increases nearby clan members' P. Atk. by 250, P. Def. by 500, and Resistance to buff-canceling attacks by 40. Consumes 80 Spirit Ore. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1374" />
 		<set name="reuseDelay" val="900000" />
@@ -2400,12 +2288,7 @@
 		</for>
 	</skill>
 	<skill id="1375" levels="1" name="Heroic Grandeur">
-		<!--
-			Last modify: 06.05.2009
-
-			Description:
-			For 1 minute, decreases nearby enemies' P. Def. by 50%, M. Def. by 50, evasion by 16, and shield defense rate by 50%. Increases damage to be canceled by magic by 100, and blocks all physical/magic skills. Consumes 80 Spirit Ores.
-		-->
+    <!-- For 1 minute, decreases nearby enemies' P. Def. by 50%, M. Def. by 50, Evasion by 16, and Shield Defense by 50%. Increases damage to be canceled by magic by 100, and blocks all physical/magic skills. Consumes 80 Spirit Ore. -->
 		<set name="levelModifier" val="2" />
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1375" />
@@ -2442,6 +2325,7 @@
 		</for>
 	</skill>
 	<skill id="1376" levels="1" name="Heroic Dread">
+    <!-- For 30 seconds, instills nearby enemies with fear and causes them to flee with Speed increased by 66. Consumes 80 Spirit Ore. -->
 		<set name="levelModifier" val="2" />
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1376" />
@@ -2474,44 +2358,25 @@
 		</for>
 	</skill>
 	<skill id="1377" levels="1" name="none" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="1378" levels="1" name="none" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="1379" levels="1" name="none" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="1380" levels="10" name="Betray">
-		<!--
-			Last modify:	18.06.2009
-
-			Description: Cause's enemy servitor to attack its master. Consumes 3-5 Runestones.
-		-->
+    <!-- Cause's enemy servitor to attack its master. Consumes 3 Spirit Ore. -->
 		<table name="#itemConsumeCount">3 3 3 3 4 4 4 5 5 5</table>
 		<table name="#mpConsume2">41 43 44 46 48 49 51 52 53 55</table>
 		<table name="#mpConsume1">11 11 11 12 12 13 13 13 14 14</table>
@@ -2539,10 +2404,7 @@
 		</for>
 	</skill>
 	<skill id="1381" levels="5" name="Mass Fear">
-		<!--
-			Enchant #1: -MP consumption
-			Enchant #2: +Chance
-		-->
+    <!-- Frightens nearby enemies into fleeing for 5 seconds. -->
 		<table name="#activateRate">8 9 11 13 15</table>
 		<table name="#mpConsume2">64 69 74 78 82</table>
 		<table name="#mpConsume1">16 18 19 20 21</table>
@@ -2580,10 +2442,7 @@
 		</for>
 	</skill>
 	<skill id="1382" levels="5" name="Mass Gloom">
-		<!--
-			Enchant #1: -MP consumption
-			Enchant #2: +Chance
-		-->
+    <!-- Inflicts dark damage near the enemy with 33 Power added to M. Atk. For 30 seconds, decreases the enemies' M. Def. by 15% and Resistance to all attributes by 5. -->
 		<table name="#itemConsumeCount">4 4 4 5</table>
 		<table name="#activateRate">40</table>
 		<table name="#mpConsume2">64 69 74 78 82</table>
@@ -2634,6 +2493,7 @@
 		</for>
 	</skill>
 	<skill id="1383" levels="5" name="Mass Surrender to Fire">
+    <!-- Affects enemies near the servitor for 30 seconds. Decreases Resistance to Fire by 30 and increases Resistance to Water by 15. Consumes 2 Spirit Ore. -->
 		<table name="#fireRes">30</table>
 		<table name="#itemConsumeCount">2 2 2 3 3</table>
 		<table name="#activateRate">50</table>
@@ -2681,6 +2541,7 @@
 		</for>
 	</skill>
 	<skill id="1384" levels="5" name="Mass Surrender to Water">
+    <!-- Affects enemies near the servitor for 30 seconds. Decreases Resistance to Water by 30 and increases Resistance to Fire by 15. Consumes 2 Spirit Ore. -->
 		<table name="#waterRes">30</table>
 		<table name="#itemConsumeCount">2 2 2 3 3</table>
 		<table name="#activateRate">50</table>
@@ -2728,6 +2589,7 @@
 		</for>
 	</skill>
 	<skill id="1385" levels="5" name="Mass Surrender to Wind">
+    <!-- Affects enemies near the servitor for 30 seconds. Decreases Resistance to Wind by 30 and increases Resistance to Earth by 15. Consumes 2 Spirit Ore. -->
 		<table name="#windRes">30</table>
 		<table name="#itemConsumeCount">2 2 2 3 3</table>
 		<table name="#activateRate">50</table>
@@ -2775,6 +2637,7 @@
 		</for>
 	</skill>
 	<skill id="1386" levels="10" name="Arcane Disruption">
+    <!-- Decreases the enemy's Casting Spd. by 23% for 30 seconds. -->
 		<table name="#power">0.77</table>
 		<table name="#activateRate">70</table>
 		<table name="#time">30</table>
@@ -2817,15 +2680,14 @@
 		</for>
 	</skill>
 	<skill id="1387" levels="3" name="Summon Cursed Bones">
-		<!-- 
-            Deprecated in High Five 
-		--> 
+    <!-- Summons between 25 and 100 Cursed Bones. Consumes 40 Spirit Ore. -->
 		<set name="icon" val="icon.skill1387" />
 		<set name="target" val="TARGET_NONE" /> 
 		<set name="skillType" val="NOTDONE" /> 
 		<set name="operateType" val="OP_PASSIVE" /> 
 	</skill>
 	<skill id="1388" levels="3" name="Greater Might">
+    <!-- Increases P. Atk. by 4% for 20 minutes. Consumes 1 Spirit Ore. -->
 		<table name="#pAtk">1.04 1.07 1.10</table>
 		<table name="#spiritOre">1 2 3</table>
 		<table name="#order">1 2 3</table>
@@ -2863,6 +2725,7 @@
 		</for>
 	</skill>
 	<skill id="1389" levels="3" name="Greater Shield">
+    <!-- Increases P. Def. by 5% for 20 minutes. Consumes 1 Spirit Ore. -->
 		<table name="#pDef">1.05 1.10 1.15</table>
 		<table name="#spiritOre">1 2 3</table>
 		<table name="#order">1 2 3</table>
@@ -2900,6 +2763,7 @@
 		</for>
 	</skill>
 	<skill id="1390" levels="3" name="War Chant">
+    <!-- Increases P. Atk. of all party members by 4% for 20 minutes. Consumes 4 Spirit Ore. -->
 		<table name="#pAtk">1.04 1.07 1.10</table>
 		<table name="#spiritOre">4 8 12</table>
 		<table name="#order">1 2 3</table>
@@ -2937,6 +2801,7 @@
 		</for>
 	</skill>
 	<skill id="1391" levels="3" name="Earth Chant">
+    <!-- Increases P. Def. of all party members by 5% for 20 minutes. Consumes 4 Spirit Ore. -->
 		<table name="#pDef">1.05 1.10 1.15</table>
 		<table name="#spiritOre">4 8 12</table>
 		<table name="#order">1 2 3</table>
@@ -2973,7 +2838,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1392" levels="3" name="Holy Resistance">
+	<skill id="1392" levels="3" name="Resist Holy">
+    <!-- Increases Resistance to Holy by 15 for 20 minutes. -->
 		<table name="#Res">15 23 30</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">43 49 55</table>
@@ -3012,7 +2878,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1393" levels="3" name="Unholy Resistance">
+	<skill id="1393" levels="3" name="Resist Dark">
+    <!-- Increases Resistance to Dark by 15 for 20 minutes. -->
 		<table name="#Res">15 23 30</table>
 		<table name="#order">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
@@ -3053,10 +2920,7 @@
 		</for>
 	</skill>
 	<skill id="1394" levels="10" name="Trance">
-		<!--
-			Enchant #1: -MP consumption
-			Enchant #2: +Chance
-		-->
+    <!-- Causes the enemy to sleep for 15 seconds. -->
 		<table name="#activateRate">80</table>
 		<table name="#time">15</table>
 		<table name="#mpConsume2">21 22 22 23 24 25 26 26 27 28</table>
@@ -3091,9 +2955,7 @@
 		</for>
 	</skill>
 	<skill id="1395" levels="10" name="Erase">
-		<!--
-			Enchant #1: -MP consumption
-		-->
+    <!-- Banishes the enemy's servitor to another dimension. Consumes 3 Spirit Ore. -->
 		<table name="#itemConsumeCount">3 3 3 3 4 4 4 5</table>
 		<table name="#Rate">10 15 20 25 30 35 40 45 50 55</table>
 		<table name="#mpConsume2">41 43 44 46 48 49 51 52 53 55</table>
@@ -3123,10 +2985,7 @@
 		</enchant1>
 	</skill>
 	<skill id="1396" levels="10" name="Magical Backfire">
-		<!--
-			Enchant #1: -MP consumption
-			Enchant #2: +Chance
-		-->
+    <!-- Increases the enemy's skill MP Consumption by 200% for 1 minute. -->
 		<table name="#mpConsumeRate">3</table>
 		<table name="#activateRate">80</table>
 		<table name="#regMp">2</table>
@@ -3170,6 +3029,7 @@
 		</for>
 	</skill>
 	<skill id="1397" levels="3" name="Clarity">
+    <!-- For 20 minutes, decreases physical skill MP Consumption by 10%, magic skill MP Consumption by 4%, and song/dance skill MP Consumption by 10%. Consumes 1 Spirit Ore. -->
 		<table name="#mpConsumePhysical">0.9 0.85 0.8</table>
 		<table name="#mpConsum">0.96 0.93 0.9</table>
 		<table name="#mpDanceConsume">0.9 0.85 0.8</table>
@@ -3218,12 +3078,7 @@
 		</for>
 	</skill>
 	<skill id="1398" levels="10" name="Mana Burn">
-		<!--
-			Last modify:	01.10.2008
-
-			Enchant #1: +Power
-			Enchant #2: -MP consumption
-		-->
+    <!-- Supplements the user's M. Atk. with 117 Power to consume the enemy's MP. -->
 		<table name="#mpConsume2">61 64 66 69 71 74 76 78 80 82</table>
 		<table name="#mpConsume1">16 16 17 18 18 19 19 20 20 21</table>
 		<table name="#magicLevel">56 58 60 62 64 66 68 70 72 74</table>
@@ -3252,12 +3107,7 @@
 		</enchant2>
 	</skill>
 	<skill id="1399" levels="5" name="Mana Storm">
-		<!--
-			Last modify:	01.10.2008
-
-			Enchant #1: +Power
-			Enchant #2: -MP consumption
-		-->
+    <!-- Supplements the user's M. Atk. with 62 Power to consume nearby enemies' MP. -->
 		<table name="#mpConsume2">96 103 110 117 122</table>
 		<table name="#mpConsume1">24 26 28 30 31</table>
 		<table name="#magicLevel">58 62 66 70 74</table>

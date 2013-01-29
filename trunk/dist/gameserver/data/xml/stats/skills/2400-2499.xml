@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="2400" levels="1" name="Red Coral Treasure Chest Key">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="3000" />
@@ -11,10 +12,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2401" levels="1" name="Lesser Battlefield Mana Potion">
-		<!--
-			Need correct:   reuseDelay, power
-		-->
+	<skill id="2401" levels="1" name="Lesser Battleground Mana Potion">
+    <!-- Recovers MP. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="600000" />
@@ -32,10 +31,8 @@
 			<zone type="SIEGE" />
 		</cond>
 	</skill>
-	<skill id="2402" levels="1" name="Lesser Battlefield CP Potion">
-		<!--
-			Need correct:   reuseDelay, power
-		-->
+	<skill id="2402" levels="1" name="Lesser Battleground CP Potion">
+    <!-- Recovers CP. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="600000" />
@@ -54,6 +51,7 @@
 		</cond>
 	</skill>
 	<skill id="2403" levels="1" name="Spring CP Potion">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="600000" />
@@ -68,9 +66,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="2404" levels="1" name="Might">
-		<!--
-			Temporarily increases P. Atk. Effect 2.
-		-->
+    <!-- Temporarily increases P. Atk. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="20" />
@@ -86,9 +82,7 @@
 		</for>
 	</skill>
 	<skill id="2405" levels="1" name="Shield">
-		<!--
-			Temporarily increases P. Def. Effect 2.
-		-->
+    <!-- Temporarily increases P. Def. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="25" />
@@ -104,9 +98,7 @@
 		</for>
 	</skill>
 	<skill id="2406" levels="1" name="Wind Walk">
-		<!--
-			Temporarily increases Speed. Effect 2.
-		-->
+    <!-- Temporarily increases Speed. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="30" />
@@ -122,9 +114,7 @@
 		</for>
 	</skill>
 	<skill id="2407" levels="1" name="Focus">
-		<!--
-			Temporarily increases the success rate of critical attacks. Effect 2.
-		-->
+    <!-- Temporarily increases the success rate of critical attacks. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="44" />
@@ -140,9 +130,7 @@
 		</for>
 	</skill>
 	<skill id="2408" levels="1" name="Death Whisper">
-		<!--
-			Temporarily increases critical attack power. Effect 2.
-		-->
+    <!-- Temporarily increases critical P. Atk. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="48" />
@@ -158,9 +146,7 @@
 		</for>
 	</skill>
 	<skill id="2409" levels="1" name="Guidance">
-		<!--
-			Temporarily increases Accuracy. Effect 2.
-		-->
+    <!-- Temporarily increases Accuracy. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="48" />
@@ -176,9 +162,7 @@
 		</for>
 	</skill>
 	<skill id="2410" levels="1" name="Bless Shield">
-		<!--
-			Temporarily increases Shield Defense Rate. Effect 2.
-		-->
+    <!-- Temporarily increases Shield Defense Rate. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="48" />
@@ -194,9 +178,7 @@
 		</for>
 	</skill>
 	<skill id="2411" levels="1" name="Blessed Body">
-		<!--
-			Temporarily increases maximum HP. Effect 3.
-		-->
+    <!-- Temporarily increases maximum HP. Effect 3. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="52" />
@@ -212,9 +194,7 @@
 		</for>
 	</skill>
 	<skill id="2412" levels="1" name="Haste">
-		<!--
-			Temporarily increases Attack Speed. Effect 1.
-		-->
+    <!-- Temporarily increases Atk. Spd. Effect 1. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="44" />
@@ -229,9 +209,7 @@
 		</for>
 	</skill>
 	<skill id="2413" levels="1" name="Vampiric Rage">
-		<!--
-			Temporarily bestows the ability to recover HP with some damage redirected to an enemy. It does not include damage from skill or ranged attacks. Effect 2.
-		-->
+    <!-- Temporarily bestows the ability to recover HP using some of the damage inflicted on the enemy with a certain probability. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="44" />
@@ -247,9 +225,7 @@
 		</for>
 	</skill>
 	<skill id="2414" levels="1" name="Berserker Spirit">
-		<!--
-			Temporarily decreases P. Def./magic resistance/evasion and increases P. Atk/M Atk/attack speed/cast speed/speed. Effect 1.
-		-->
+    <!-- Temporarily decreases P. Def./magic resistance/evasion and increases P. Atk/M Atk/Atk. Spd./cast speed/speed. Effect 1. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="35" />
@@ -272,9 +248,7 @@
 		</for>
 	</skill>
 	<skill id="2415" levels="1" name="Magic Barrier">
-		<!--
-			Temporarily increases magic resistance. Effect 2.
-		-->
+    <!-- Temporarily increases magic resistance. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="44" />
@@ -290,9 +264,7 @@
 		</for>
 	</skill>
 	<skill id="2416" levels="1" name="Blessed Soul">
-		<!--
-			Temporarily increases maximum MP. Effect 3.
-		-->
+    <!-- Temporarily increases maximum MP. Effect 3. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="52" />
@@ -308,9 +280,7 @@
 		</for>
 	</skill>
 	<skill id="2417" levels="1" name="Empower">
-		<!--
-			Temporarily increases magic power. Effect 2.
-		-->
+    <!-- Temporarily increases M. Atk. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="44" />
@@ -326,9 +296,7 @@
 		</for>
 	</skill>
 	<skill id="2418" levels="1" name="Acumen">
-		<!--
-			Temporarily increases cast speed. Effect 2.
-		-->
+    <!-- Temporarily increases cast speed. Effect 2. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="35" />
@@ -344,9 +312,7 @@
 		</for>
 	</skill>
 	<skill id="2419" levels="1" name="Clarity">
-		<!--
-			Temporarily decreases skill consumption MP of target. Effect 1.
-		-->
+    <!-- Temporarily decreases skill consumption MP of target. Effect 1. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="magicLevel" val="58" />
@@ -363,7 +329,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2420" levels="1" name="White Seed of Evil LUmp">
+	<skill id="2420" levels="1" name="White Seed of Evil Lump">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -371,7 +338,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2421" levels="1" name="Black Seed of Evil LUmp">
+	<skill id="2421" levels="1" name="Black Seed of Evil Lump">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -380,6 +348,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2422" levels="1" name="1st Place Treasure Sack">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -388,6 +357,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2423" levels="2" name="2nd Place Treasure Sack">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -396,6 +366,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2424" levels="3" name="3rd Place Treasure Sack">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -404,6 +375,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2425" levels="4" name="4th Place Treasure Sack">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -412,6 +384,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2426" levels="5" name="5th Place Treasure sack">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -420,6 +393,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2427" levels="6" name="6th Place Treasure Sack">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -427,13 +401,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2428" levels="1" name="Scroll of Transformation  - Rabbit">
-		<!--
-			Last modify: 11.03.2009
-
-			Description: Transform into a cute bunny.
-			Item 10274 description: A scroll that transforms you into a rabbit for 10 minutes. Locates treasure when used on Fantasy Island. It will have no effect if used while a pet or servitor is summoned or while in a transformed state.
-		-->
+	<skill id="2428" levels="1" name="Scroll of Transformation - Rabbit">
+    <!-- Transform into a cute bunny. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0298" />
 		<set name="itemConsumeId" val="10274" />
@@ -448,10 +417,7 @@
 		</for>
 	</skill>
 	<skill id="2429" levels="1" name="Haste Juice">
-		<!--
-			Last modify:	08.08.2008
-			Description: Increases the drinker's Atk. Spd. Effect 2.
-		-->
+    <!-- Increases Atk. Spd. by 33% for 60 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
 		<set name="magicLevel" val="1" />
@@ -470,10 +436,7 @@
 		</for>
 	</skill>
 	<skill id="2430" levels="1" name="Accuracy Juice">
-		<!--
-			Last modify:	08.08.2008
-			Description: Increases the drinker's Accuracy. Effect 3.
-		-->
+    <!-- Increases accuracy by 4 for 60 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
 		<set name="magicLevel" val="1" />
@@ -491,11 +454,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2431" levels="1" name="Critical Power Juice">
-		<!--
-			Last modify:	08.08.2008
-			Description: Increases the drinker's Critical Attack Power. Effect 3.
-		-->
+	<skill id="2431" levels="1" name="Critical Damage Juice">
+    <!-- Increases Critical P. Atk. by 35% for 60 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
 		<set name="magicLevel" val="1" />
@@ -514,10 +474,7 @@
 		</for>
 	</skill>
 	<skill id="2432" levels="1" name="Critical Attack Juice">
-		<!--
-			Last modify:	08.08.2008
-			Description: Increases the drinker's Critical Attack Rate. Effect 3.
-		-->
+    <!-- Increases Critical attack rate by 30% for 60 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i03" />
 		<set name="magicLevel" val="1" />
@@ -536,10 +493,7 @@
 		</for>
 	</skill>
 	<skill id="2433" levels="1" name="Casting Speed Juice">
-		<!--
-			Last modify:	08.08.2008
-			Description: Increases the drinker's Casting Spd. Effect 3.
-		-->
+    <!-- Increases Casting Spd. by 30% for 60 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
 		<set name="magicLevel" val="1" />
@@ -558,10 +512,7 @@
 		</for>
 	</skill>
 	<skill id="2434" levels="1" name="Evasion Juice">
-		<!--
-			Last modify:	08.08.2008
-			Description: Increases the drinker's Evasion. Effect 3.
-		-->
+    <!-- Increases evasion by 4 for 60 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
 		<set name="magicLevel" val="1" />
@@ -580,10 +531,7 @@
 		</for>
 	</skill>
 	<skill id="2435" levels="1" name="Magic Power Juice">
-		<!--
-			Last modify:	08.08.2008
-			Description: Increases the drinker's M. Atk. Effect 3.
-		-->
+    <!-- Increases M. Atk. by 75% for 60 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
 		<set name="magicLevel" val="1" />
@@ -602,10 +550,7 @@
 		</for>
 	</skill>
 	<skill id="2436" levels="1" name="Power Juice">
-		<!--
-			Last modify:	08.08.2008
-			Description: Increases the drinker's P. Atk. Effect 3.
-		-->
+    <!-- Increases P. Atk. by 15% for 60 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
 		<set name="magicLevel" val="1" />
@@ -624,10 +569,7 @@
 		</for>
 	</skill>
 	<skill id="2437" levels="1" name="Speed Juice">
-		<!--
-			Last modify:	08.08.2008
-			Description: Increases the drinker's Movement Speed. Effect 2.
-		-->
+    <!-- Increases Speed by 60 for 33 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i08" />
 		<set name="magicLevel" val="1" />
@@ -646,10 +588,7 @@
 		</for>
 	</skill>
 	<skill id="2438" levels="1" name="Defense Juice">
-		<!--
-			Last modify:	08.08.2008
-			Description: Increases the drinker's P. Def. Effect 3.
-		-->
+    <!-- Increases P. Def. by 15% for 60 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
 		<set name="magicLevel" val="1" />
@@ -668,10 +607,7 @@
 		</for>
 	</skill>
 	<skill id="2439" levels="1" name="MP Consumption Juice">
-		<!--
-			Last modify:	08.08.2008
-			Description: Decreases the drinker's MP consumption on skill use. Effect 1.
-		-->
+    <!-- For 60 minutes, it decreases physical skill MP consumption by 10%, magic skill's MP consumption by 4%, and song/dance skill's MP consumption by 10%. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
 		<set name="magicLevel" val="1" />
@@ -692,6 +628,7 @@
 		</for>
 	</skill>
 	<skill id="2440" levels="1" name="Ancient Tome of the Demon">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -700,6 +637,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2441" levels="1" name="Protection of Rune">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -710,6 +648,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2442" levels="1" name="Protection of Elemental">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -720,6 +659,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2443" levels="1" name="Protection of Alignment">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -730,6 +670,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2444" levels="1" name="Fighter's Will">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -740,6 +681,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2445" levels="1" name="Archer's Will">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -750,6 +692,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2446" levels="1" name="Anti-magic Armor">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -760,6 +703,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2447" levels="1" name="Seed of Revenge">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -770,6 +714,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2448" levels="1" name="Hell Scream">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -779,7 +724,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2449" levels="1" name="Song of Wind Strom">
+	<skill id="2449" levels="1" name="Song of Wind Storm">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -789,7 +735,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2450" levels="1" name="Blade Storm">
+	<skill id="2450" levels="1" name="Dance of Blade Storm">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -800,6 +747,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2451" levels="1" name="Sixth Sense">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -810,6 +758,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2452" levels="1" name="Expose Weak Point">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -820,6 +769,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2453" levels="1" name="Exciting Adventure">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -830,6 +780,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2454" levels="1" name="Wind Riding">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -840,6 +791,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2455" levels="1" name="Ghost Walking">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -850,6 +802,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2456" levels="1" name="Flame Hawk">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -859,7 +812,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2457" levels="1" name="Rain of Arrow">
+	<skill id="2457" levels="1" name="Arrow Rain">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -870,6 +824,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2458" levels="1" name="Ghost Piercing">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -879,7 +834,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2459" levels="1" name="Dread Pook">
+	<skill id="2459" levels="1" name="Dread Pool">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -890,6 +846,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2460" levels="1" name="Weapon Blockade">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -899,7 +856,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2461" levels="1" name="Post of Destruction">
+	<skill id="2461" levels="1" name="Force of Destruction">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -910,6 +868,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2462" levels="1" name="Demolition Impact">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -920,6 +879,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2463" levels="1" name="Golem Armor">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -930,6 +890,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2464" levels="1" name="Flame Armor">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -940,6 +901,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2465" levels="1" name="Frost Armor">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -950,6 +912,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2466" levels="1" name="Hurricane Armor">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -960,6 +923,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2467" levels="1" name="Vampiric Mist">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -970,6 +934,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2468" levels="1" name="Servitor Barrier">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -979,7 +944,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2469" levels="1" name="Excessive Royalty">
+	<skill id="2469" levels="1" name="Excessive Loyalty">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -990,6 +956,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2470" levels="1" name="Mutual Response">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1000,6 +967,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2471" levels="1" name="Improve Combat">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1010,6 +978,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2472" levels="1" name="Improve Magic">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1020,6 +989,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2473" levels="1" name="Improve Condition">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1030,6 +1000,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2474" levels="1" name="Improve Critical">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1040,6 +1011,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2475" levels="1" name="Improve Shield Defense">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1050,6 +1022,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2476" levels="1" name="Improve Movement">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1060,6 +1033,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2477" levels="1" name="Sublime Self-sacrifice">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1070,6 +1044,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2478" levels="1" name="Blessing of Eva">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1079,7 +1054,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2479" levels="1" name="Loard of Vampire">
+	<skill id="2479" levels="1" name="Lord of Vampire">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1089,7 +1065,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2480" levels="1" name="Throne Route">
+	<skill id="2480" levels="1" name="Thorn Root">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1100,6 +1077,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2481" levels="1" name="Seal of Limit">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1110,6 +1088,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2482" levels="1" name="Spirit of Phoenix">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1120,6 +1099,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2483" levels="1" name="Eva's Will">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1130,6 +1110,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2484" levels="1" name="Pain of Shillien">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1140,6 +1121,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2485" levels="1" name="Herb of Life">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -1151,6 +1133,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2486" levels="1" name="Herb of Mana">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -1162,6 +1145,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2487" levels="1" name="Item - Special Sound Crystal">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1170,6 +1154,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2488" levels="1" name="Wild Shot">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1179,7 +1164,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2489" levels="1" name="Lightning Stuns">
+	<skill id="2489" levels="1" name="Lightning Shock">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1190,6 +1176,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2490" levels="1" name="Magic Defense Toolkit for beginners">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1198,6 +1185,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2491" levels="1" name="Transform Zaken">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1208,6 +1196,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2492" levels="1" name="Transform Anakim">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1218,6 +1207,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2493" levels="1" name="Transform Venom">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1228,6 +1218,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2494" levels="1" name="Transform Gordon">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1238,6 +1229,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2495" levels="1" name="Transform Ranku">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1247,7 +1239,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="2496" levels="1" name="Transform Kietch">
+	<skill id="2496" levels="1" name="Transform Kechi">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1258,6 +1251,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2497" levels="1" name="Transform Demon Prince">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1268,6 +1262,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2498" levels="1" name="Bottle of Empty Soul">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1284,6 +1279,7 @@
 		<set name="altUse" val="true" />
 	</skill>
 	<skill id="2499" levels="1" name="Bottle of Full Soul">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />

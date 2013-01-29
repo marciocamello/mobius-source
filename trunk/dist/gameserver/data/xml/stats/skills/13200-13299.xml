@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-    <skill id="13240" levels="1" name="Рубашка Бессмертия HP">
+    <skill id="13240" levels="1" name="Immortal Shirt">
+    <!-- Increases Max HP by 301. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -9,7 +10,8 @@
 			<add order="0x60" stat="maxHp" val="301" />
 		</for>
     </skill>
-    <skill id="13241" levels="1" name="Рубашка Бессмертия MP">
+    <skill id="13241" levels="1" name="Immortal Shirt">
+    <!-- Increases Max MP by 148. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -18,7 +20,8 @@
 			<add order="0x60" stat="maxMp" val="148" />
 		</for>
     </skill>
-	<skill id="13242" levels="1" name="Рубашка Бессмертия CP">
+	<skill id="13242" levels="1" name="Immortal Shirt">
+    <!-- Increases Max CP by 811. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -27,7 +30,8 @@
 			<add order="0x60" stat="maxCp" val="811" />
 		</for>
     </skill>	
-	<skill id="13243" levels="1" name="Рубашка АДА HP">
+	<skill id="13243" levels="1" name="Twilight Shirt">
+    <!-- Increases Max HP by 316. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -36,7 +40,8 @@
 			<add order="0x60" stat="maxHp" val="316" />
 		</for>
 	</skill>
-	<skill id="13244" levels="1" name="Рубашка АДА MP">
+	<skill id="13244" levels="1" name="Twilight Shirt">
+    <!-- Increases Max MP by 162. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -45,7 +50,8 @@
 			<add order="0x60" stat="maxMp" val="162" />
 		</for>
 	</skill>
-	<skill id="13245" levels="1" name="Рубашка АДА CP">
+	<skill id="13245" levels="1" name="Twilight Shirt">
+    <!-- Increases Max CP by 851. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -54,7 +60,8 @@
 			<add order="0x60" stat="maxCp" val="851" />
 		</for>
 	</skill>
-	<skill id="13246" levels="1" name="Рубашка Кадейры HP">
+	<skill id="13246" levels="1" name="Seraph Shirt">
+    <!-- Increases Max HP by 332. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -63,7 +70,8 @@
 			<add order="0x60" stat="maxHp" val="332" />
 		</for>
 	</skill>
-	<skill id="13247" levels="1" name="Рубашка Кадейры MP">
+	<skill id="13247" levels="1" name="Seraph Shirt">
+    <!-- Increases Max MP by 176. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -72,7 +80,8 @@
 			<add order="0x60" stat="maxMp" val="176" />
 		</for>
 	</skill>
-	<skill id="13248" levels="1" name="Рубашка Кадейры CP">
+	<skill id="13248" levels="1" name="Seraph Shirt">
+    <!-- Increases Max CP by 894. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -81,7 +90,8 @@
 			<add order="0x60" stat="maxCp" val="894" />
 		</for>
 	</skill>
-	<skill id="13249" levels="1" name="Рубашка Айдиоса HP">
+	<skill id="13249" levels="1" name="Eternal Shirt">
+    <!-- Increases Max HP by 339. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -90,7 +100,8 @@
 			<add order="0x60" stat="maxHp" val="339" />
 		</for>
 	</skill>
-	<skill id="13250" levels="1" name="Рубашка Айдиоса MP">
+	<skill id="13250" levels="1" name="Eternal Shirt">
+    <!-- Increases Max MP by 182. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -99,7 +110,8 @@
 			<add order="0x60" stat="maxMp" val="182" />
 		</for>
 	</skill>
-	<skill id="13251" levels="1" name="Рубашка Айдиоса CP">
+	<skill id="13251" levels="1" name="Eternal Shirt">
+    <!-- Increases Max CP by 912. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -108,7 +120,8 @@
 			<add order="0x60" stat="maxCp" val="912" />
 		</for>
 	</skill>	
-	<skill id="13252" levels="3" name="Особое Свойство - Одноручный Меч">
+	<skill id="13252" levels="3" name="One-handed Sword Special Ability">
+    <!-- Accuracy + 2 and P. Critical Rate + 27. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -118,7 +131,8 @@
 			<add order="0x40" stat="rCrit" val="27" />
 		</for>
 	</skill>
-	<skill id="13253" levels="3" name="Особое Свойство - Одноручное Дробящее">
+	<skill id="13253" levels="3" name="One-handed Blunt Special Ability">
+    <!-- Accuracy + 3 and P. Critical Damage + 338. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -128,7 +142,8 @@
 			<add order="0x40" stat="rCrit" val="338" />
 		</for>
 	</skill>
-	<skill id="13254" levels="3" name="Особое Свойство - Одноручное Дробящее">
+	<skill id="13254" levels="3" name="One-handed Blunt Special Ability">
+    <!-- Accuracy + 3 and P. Critical Damage + 338. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -138,7 +153,8 @@
 			<add order="0x40" stat="rCrit" val="338" />
 		</for>
 	</skill>
-	<skill id="13255" levels="3" name="Особое Свойство - Одноручное Дробящее">
+	<skill id="13255" levels="3" name="One-handed Blunt Special Ability">
+    <!-- Accuracy + 3 and P. Critical Damage + 338. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -148,7 +164,8 @@
 			<add order="0x40" stat="rCrit" val="338" />
 		</for>
 	</skill>
-	<skill id="13256" levels="3" name="Особое Свойство - Одноручное Дробящее">
+	<skill id="13256" levels="3" name="One-handed Blunt Special Ability">
+    <!-- Accuracy + 3 and P. Critical Damage + 338. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -158,7 +175,8 @@
 			<add order="0x40" stat="rCrit" val="338" />
 		</for>
 	</skill>
-	<skill id="13257" levels="3" name="Особое Свойство - Одноручное Дробящее">
+	<skill id="13257" levels="3" name="One-handed Blunt Special Ability">
+    <!-- Accuracy + 3 and P. Critical Damage + 338. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -168,7 +186,8 @@
 			<add order="0x40" stat="rCrit" val="338" />
 		</for>
 	</skill>
-	<skill id="13258" levels="3" name="Особое Свойство - Двуручный Меч">
+	<skill id="13258" levels="3" name="Two-handed Sword Special Ability">
+    <!-- P. Atk. + 96. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -177,7 +196,8 @@
 			<add order="0x40" stat="pAtk" val="96" />
 		</for>
 	</skill>
-	<skill id="13259" levels="3" name="Особое Свойство - Двуручный Меч">
+	<skill id="13259" levels="3" name="Two-handed Sword Special Ability">
+    <!-- P. Atk. + 96. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -186,7 +206,8 @@
 			<add order="0x40" stat="pAtk" val="96" />
 		</for>
 	</skill>
-	<skill id="13260" levels="3" name="Особое Свойство - Двуручный Меч">
+	<skill id="13260" levels="3" name="Two-handed Sword Special Ability">
+    <!-- P. Atk. + 96. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -195,7 +216,8 @@
 			<add order="0x40" stat="pAtk" val="96" />
 		</for>
 	</skill>
-	<skill id="13261" levels="3" name="Особое Свойство - Двуручный Меч">
+	<skill id="13261" levels="3" name="Two-handed Sword Special Ability">
+    <!-- P. Atk. + 96. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -204,7 +226,8 @@
 			<add order="0x40" stat="pAtk" val="96" />
 		</for>
 	</skill>
-	<skill id="13262" levels="3" name="Особое Свойство - Двуручный Меч">
+	<skill id="13262" levels="3" name="Two-handed Sword Special Ability">
+    <!-- P. Atk. + 96. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -213,7 +236,8 @@
 			<add order="0x40" stat="pAtk" val="96" />
 		</for>
 	</skill>
-	<skill id="13263" levels="3" name="Особое Свойство - Древковое">
+	<skill id="13263" levels="3" name="Spear Special Ability">
+    <!-- Increases the number of enemies that can be attacked at the same time. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -222,7 +246,8 @@
 			<add order="0x40" stat="poleTargetCount" val="5"/>
 		</for>
 	</skill>
-	<skill id="13264" levels="3" name="Особое Свойство - Кастет">
+	<skill id="13264" levels="3" name="fist Weapon Special Ability">
+    <!-- P. Atk. + 18 and P. Atk. Spd. + 3.4%. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -232,7 +257,8 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.304" />
 		</for>
 	</skill>
-	<skill id="13265" levels="3" name="Особое Свойство - Кастет">
+	<skill id="13265" levels="3" name="fist Weapon Special Ability">
+    <!-- P. Atk. + 18 and P. Atk. Spd. + 3.4%. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -242,7 +268,8 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.304" />
 		</for>
 	</skill>
-	<skill id="13266" levels="3" name="Особое Свойство - Кастет">
+	<skill id="13266" levels="3" name="fist Weapon Special Ability">
+    <!-- P. Atk. + 18 and P. Atk. Spd. + 3.4%. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -252,7 +279,8 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.304" />
 		</for>
 	</skill>
-	<skill id="13267" levels="3" name="Особое Свойство - Кастет">
+	<skill id="13267" levels="3" name="fist Weapon Special Ability">
+    <!-- P. Atk. + 18 and P. Atk. Spd. + 3.4%. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -262,7 +290,8 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.304" />
 		</for>
 	</skill>
-	<skill id="13268" levels="3" name="Особое Свойство - Кастет">
+	<skill id="13268" levels="3" name="fist Weapon Special Ability">
+    <!-- P. Atk. + 18 and P. Atk. Spd. + 3.4%. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -272,7 +301,8 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.304" />
 		</for>
 	</skill>
-	<skill id="13269" levels="3" name="Особое Свойство - Парные Дубины">
+	<skill id="13269" levels="3" name="Dual Blunt Weapon Special Ability">
+    <!-- P. Atk. + 54 and Skill P. Atk. + 118. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -282,7 +312,8 @@
             <add order="0x40" stat="PhysSkillDmgStatic" val="118"/>
 		</for>
 	</skill>
-	<skill id="13270" levels="3" name="Особое Свойство - Парные Дубины">
+	<skill id="13270" levels="3" name="Dual Blunt Weapon Special Ability">
+    <!-- P. Atk. + 54 and Skill P. Atk. + 118. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -292,7 +323,8 @@
 			<add order="0x40" stat="PhysSkillDmgStatic" val="118"/>
 		</for>
 	</skill>
-	<skill id="13271" levels="3" name="Особое Свойство - Парные Дубины">
+	<skill id="13271" levels="3" name="Dual Blunt Weapon Special Ability">
+    <!-- P. Atk. + 54 and Skill P. Atk. + 118. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -302,7 +334,8 @@
 			<add order="0x40" stat="PhysSkillDmgStatic" val="118"/>
 		</for>
 	</skill>
-	<skill id="13272" levels="3" name="Особое Свойство - Парные Дубины">
+	<skill id="13272" levels="3" name="Dual Blunt Weapon Special Ability">
+    <!-- P. Atk. + 54 and Skill P. Atk. + 118. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -312,7 +345,8 @@
 			<add order="0x40" stat="PhysSkillDmgStatic" val="118"/>
 		</for>
 	</skill>
-	<skill id="13273" levels="3" name="Особое Свойство - Парные Дубины">
+	<skill id="13273" levels="3" name="Dual Blunt Weapon Special Ability">
+    <!-- P. Atk. + 54 and Skill P. Atk. + 118. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -322,7 +356,8 @@
 			<add order="0x40" stat="PhysSkillDmgStatic" val="118"/>
 		</for>
 	</skill>
-	<skill id="13274" levels="3" name="Особое Свойство - Парные Мечи">
+	<skill id="13274" levels="3" name="Dual Sword Special Ability">
+    <!-- P. Atk. + 18 and P. Critical Rate + 27. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -332,7 +367,8 @@
 			<add order="0x30" stat="rCrit" val="27" />
 		</for>
 	</skill>
-	<skill id="13275" levels="3" name="Особое Свойство - Парные Мечи">
+	<skill id="13275" levels="3" name="Dual Sword Special Ability">
+    <!-- P. Atk. + 18 and P. Critical Rate + 27. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -342,7 +378,8 @@
 			<add order="0x30" stat="rCrit" val="27" />
 		</for>
 	</skill>
-	<skill id="13276" levels="3" name="Особое Свойство - Парные Мечи">
+	<skill id="13276" levels="3" name="Dual Sword Special Ability">
+    <!-- P. Atk. + 18 and P. Critical Rate + 27. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -352,7 +389,8 @@
 			<add order="0x30" stat="rCrit" val="27" />
 		</for>
 	</skill>
-	<skill id="13277" levels="3" name="Особое Свойство - Парные Мечи">
+	<skill id="13277" levels="3" name="Dual Sword Special Ability">
+    <!-- P. Atk. + 18 and P. Critical Rate + 27. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -362,7 +400,8 @@
 			<add order="0x30" stat="rCrit" val="27" />
 		</for>
 	</skill>
-	<skill id="13278" levels="3" name="Особое Свойство - Парные Мечи">
+	<skill id="13278" levels="3" name="Dual Sword Special Ability">
+    <!-- P. Atk. + 18 and P. Critical Rate + 27. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -372,7 +411,8 @@
 			<add order="0x30" stat="rCrit" val="27" />
 		</for>
 	</skill>
-	<skill id="13279" levels="3" name="Особое Свойство - Парные Кинжалы">
+	<skill id="13279" levels="3" name="Dagger Special Ability">
+    <!-- P. Critical Damage + 844. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -381,7 +421,8 @@
 			<add order="0x40" stat="cAtkStatic" val="844" />
 		</for>
 	</skill>
-	<skill id="13280" levels="3" name="Особое Свойство - Парные Кинжалы">
+	<skill id="13280" levels="3" name="Dagger Special Ability">
+    <!-- P. Critical Damage + 844. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -390,7 +431,8 @@
 			<add order="0x40" stat="cAtkStatic" val="844" />
 		</for>
 	</skill>
-	<skill id="13281" levels="3" name="Особое Свойство - Парные Кинжалы">
+	<skill id="13281" levels="3" name="Dagger Special Ability">
+    <!-- P. Critical Damage + 844. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -399,7 +441,8 @@
 			<add order="0x40" stat="cAtkStatic" val="844" />
 		</for>
 	</skill>
-	<skill id="13282" levels="3" name="Особое Свойство - Парные Кинжалы">
+	<skill id="13282" levels="3" name="Dagger Special Ability">
+    <!-- P. Critical Damage + 844. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -408,7 +451,8 @@
 			<add order="0x40" stat="cAtkStatic" val="844" />
 		</for>
 	</skill>
-	<skill id="13283" levels="3" name="Особое Свойство - Парные Кинжалы">
+	<skill id="13283" levels="3" name="Dagger Special Ability">
+    <!-- P. Critical Damage + 844. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -417,7 +461,8 @@
 			<add order="0x40" stat="cAtkStatic" val="844" />
 		</for>
 	</skill>
-	<skill id="13284" levels="3" name="Особое Свойство - Парные Кинжалы и Мечи">
+	<skill id="13284" levels="3" name="Dual Dagger Special Ability">
+    <!-- P. Atk. + 18 and P. Critical Damage + 506. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -427,7 +472,8 @@
 			<add order="0x40" stat="cAtkStatic" val="506" />
 		</for>
 	</skill>
-	<skill id="13285" levels="3" name="Особое Свойство - Парные Кинжалы и Мечи">
+	<skill id="13285" levels="3" name="Dual Dagger Special Ability">
+    <!-- P. Atk. + 18 and P. Critical Damage + 506. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -437,7 +483,8 @@
 			<add order="0x40" stat="cAtkStatic" val="506" />
 		</for>
 	</skill>
-	<skill id="13286" levels="3" name="Особое Свойство - Парные Кинжалы и Мечи">
+	<skill id="13286" levels="3" name="Dual Dagger Special Ability">
+    <!-- P. Atk. + 18 and P. Critical Damage + 506. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -447,7 +494,8 @@
 			<add order="0x40" stat="cAtkStatic" val="506" />
 		</for>
 	</skill>
-	<skill id="13287" levels="3" name="Особое Свойство - Парные Кинжалы и Мечи">
+	<skill id="13287" levels="3" name="Dual Dagger Special Ability">
+    <!-- P. Atk. + 18 and P. Critical Damage + 506. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -457,7 +505,8 @@
 			<add order="0x40" stat="cAtkStatic" val="506" />
 		</for>
 	</skill>
-	<skill id="13288" levels="3" name="Особое Свойство - Парные Кинжалы и Мечи">
+	<skill id="13288" levels="3" name="Dual Dagger Special Ability">
+    <!-- P. Atk. + 18 and P. Critical Damage + 506. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -467,11 +516,8 @@
 			<add order="0x40" stat="cAtkStatic" val="506" />
 		</for>
 	</skill>
-	<skill id="13289" levels="3" name="Особое Свойство - Лук">
-	<!-- 
-		По сути атака физ умениями. Смотрим описание лука 17973 при заточке на +4
-		Атака умениями +338.
-	-->
+	<skill id="13289" levels="3" name="Bow Special Ability">
+    <!-- P. Skill Atk. + 338. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -480,7 +526,8 @@
             <add order="0x40" stat="PhysSkillDmgStatic" val="338"/>
 		</for>
 	</skill>
-	<skill id="13290" levels="3" name="Особое Свойство - Лук">
+	<skill id="13290" levels="3" name="Bow Special Ability">
+    <!-- P. Skill Atk. + 338. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -489,7 +536,8 @@
              <add order="0x40" stat="PhysSkillDmgStatic" val="338"/>
 		</for>
 	</skill>
-	<skill id="13291" levels="3" name="Особое Свойство - Лук">
+	<skill id="13291" levels="3" name="Bow Special Ability">
+    <!-- P. Skill Atk. + 338. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -498,7 +546,8 @@
              <add order="0x40" stat="PhysSkillDmgStatic" val="338"/>
 		</for>
 	</skill>
-	<skill id="13292" levels="3" name="Особое Свойство - Лук">
+	<skill id="13292" levels="3" name="Bow Special Ability">
+    <!-- P. Skill Atk. + 338. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -507,7 +556,8 @@
             <add order="0x40" stat="PhysSkillDmgStatic" val="338"/>
 		</for>
 	</skill>
-	<skill id="13293" levels="3" name="Особое Свойство - Лук">
+	<skill id="13293" levels="3" name="Bow Special Ability">
+    <!-- P. Skill Atk. + 338. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -516,7 +566,8 @@
             <add order="0x40" stat="PhysSkillDmgStatic" val="338"/>
 		</for>
 	</skill>
-	<skill id="13294" levels="3" name="Особое Свойство - Арбалет">
+	<skill id="13294" levels="3" name="Crossbow Special Ability">
+    <!-- P. Atk. Spd. + 3.1%. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -525,7 +576,8 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.304" />
 		</for>
 	</skill>
-	<skill id="13295" levels="3" name="Особое Свойство - Магический Меч">
+	<skill id="13295" levels="3" name="Magic Sword Special Ability">
+    <!-- M. Critical Rate + 1 and Magic Accuracy + 1. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -534,40 +586,40 @@
 			<mul order="0x30" stat="mCritRate" val="1.02" />
 		</for>
 	</skill>
-	<skill id="13296" levels="3" name="Особое Свойство - Одноручная Магическая Дубина">
+	<skill id="13296" levels="3" name="Magic One-handed Blunt Special Ability">
+    <!-- Magic Critical Damage + 381 and Magic Accuracy + 1. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<!--<add order="0x40" stat="mCritDamage" val="381" />-->
 		</for>
 	</skill>
-	<skill id="13297" levels="3" name="Особое Свойство - Одноручная Магическая Дубина">
+	<skill id="13297" levels="3" name="Magic One-handed Blunt Special Ability">
+    <!-- Magic Critical Damage + 381 and Magic Accuracy + 1. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-		<!--<add order="0x40" stat="mCritDamage" val="381" />-->
 		</for>
 	</skill>
-	<skill id="13298" levels="3" name="Особое Свойство - Одноручная Магическая Дубина">
+	<skill id="13298" levels="3" name="Magic One-handed Blunt Special Ability">
+    <!-- Magic Critical Damage + 381 and Magic Accuracy + 1. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<!--<add order="0x40" stat="mCritDamage" val="381" />-->
 		</for>
 	</skill>
-	<skill id="13299" levels="3" name="Особое Свойство - Одноручная Магическая Дубина">
+	<skill id="13299" levels="3" name="Magic One-handed Blunt Special Ability">
+    <!-- Magic Critical Damage + 381 and Magic Accuracy + 1. -->
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<!--<add order="0x40" stat="mCritDamage" val="381" />-->
 		</for>
 	</skill>
 </list>

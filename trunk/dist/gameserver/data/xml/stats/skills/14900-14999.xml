@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
     <skill id="14975" levels="1" name="Mysterious Combat Buff">
-        <!--For 5 minutes, increases Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, and MP recovery bonus by 20%, and decreases MP Consumption for magic skill by 10% and the magic cancel rate.-->
+    <!-- For 5 minutes, increases Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, and MP recovery bonus by 20%, and decreases MP Consumption for magic skill by 10% and the magic cancel rate. -->
         <set name="magicType" val="SPECIAL"/>
         <set name="reuseDelay" val="2000"/>
         <set name="magicLevel" val="40"/>
@@ -25,7 +25,7 @@
         </for>
     </skill>
     <skill id="14976" levels="1" name="Mysterious Speed Buff">
-        <!--For 5 minutes, increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8%, and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received-->
+    <!-- For 5 minutes, increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8%, and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
         <set name="magicType" val="SPECIAL"/>
         <set name="reuseDelay" val="2000"/>
         <set name="magicLevel" val="40"/>
@@ -53,7 +53,7 @@
         </for>
     </skill>
     <skill id="14977" levels="1" name="Mysterious Focus Buff">
-        <!--For 5 minutes, increases HP Recovery Bonus by 20%, P. Accuracy by 4, P. Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill re-use time by 10%-->
+    <!-- For 5 minutes, increases HP Recovery Bonus by 20%, P. Accuracy by 4, P. Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill re-use time by 10%. -->
         <set name="magicType" val="SPECIAL"/>
         <set name="reuseDelay" val="2000"/>
         <set name="magicLevel" val="40"/>

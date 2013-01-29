@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="5400" levels="1" name="Presentation - Solar Spark">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="30000" />
@@ -13,10 +14,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5401" levels="1" name="Stun">
-		<!--
-			Description:
-			You are stunned and temporarily prohibited from movement.
-		-->
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<set name="icon" val="icon.skill0100" />
 		<set name="magicLevel" val="85" />
 		<set name="hitTime" val="5800" />
@@ -32,9 +30,7 @@
 		</for>
 	</skill>
 	<skill id="5402" levels="1" name="Presentation - Balor 2">
-		<!--
-			Description: Balor - Magic Skill1
-		-->
+    <!-- Balor - Magic Skill1 -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="500" />
 		<set name="magicLevel" val="85" />
@@ -44,9 +40,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5403" levels="1" name="Presentation - Balor 3">
-		<!--
-			Description: Balor - Magic Skill2
-		-->
+    <!-- Balor - Magic Skill2 -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="500" />
 		<set name="magicLevel" val="85" />
@@ -56,9 +50,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5404" levels="1" name="Presentation - Balor 4">
-		<!--
-			Description: Balor - Instant Cast Skill
-		-->
+    <!-- Balor - Instant Cast Skill -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="500" />
 		<set name="magicLevel" val="85" />
@@ -69,9 +61,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5405" levels="1" name="Presentation - Demonic 1">
-		<!--
-			Description: Demonic - General Long Range Magic Skill
-		-->
+    <!-- Demonic - General Long Range Magic Skill -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="castRange" val="600" />
@@ -81,6 +71,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5406" levels="1" name="Presentation - Demonic 2">
+    <!-- None -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -91,9 +82,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5407" levels="1" name="Presentation - Crystalline Golem 1">
-		<!--
-			Description: Crystaline-Instant Cast Skill
-		-->
+    <!-- Crystalline-Instant Cast Skill -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="hitTime" val="2000" />
@@ -102,9 +91,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5408" levels="1" name="Presentation - Crystalline Golem 2">
-		<!--
-			Description: Crystaline-General Long Range Magic Skill
-		-->
+    <!-- Crystalline-General Long Range Magic Skill -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -115,9 +102,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5409" levels="1" name="Presentation - Crystalline Golem 3">
-		<!--
-			Description: Crystaline Golem
-		-->
+    <!-- Crystalline Golem -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -128,9 +113,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5410" levels="1" name="Presentation - Balor 10">
-		<!--
-			Description: Balor Social.
-		-->
+    <!-- Balor Social. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="hitTime" val="17000" />
@@ -139,6 +122,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5411" levels="1" name="Presentation - Balor 11">
+    <!-- None -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="castRange" val="600" />
@@ -148,6 +132,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5412" levels="1" name="Presentation - Balor 12">
+    <!-- None -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1000" />
 		<set name="magicLevel" val="85" />
@@ -158,9 +143,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5413" levels="1" name="Performing Agathion - Beast Farm">
-		<!--
-			Description: See a summoned Agathion perform tricks.
-		-->
+    <!-- See a summoned Agathion perform tricks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="power" val="150" />
@@ -173,9 +156,7 @@
 		<set name="isReuseDelayPermanent" val="true" />
 	</skill>
 	<skill id="5414" levels="1" name="Performing Agathion - Rainbow Clan Hall">
-		<!--
-			Description: See a summoned Agathion perform tricks.
-		-->
+    <!-- See a summoned Agathion perform tricks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="power" val="150" />
@@ -188,9 +169,7 @@
 		<set name="isReuseDelayPermanent" val="true" />
 	</skill>
 	<skill id="5415" levels="1" name="Performing Agathion - Castle">
-		<!--
-			Description: See a summoned Agathion perform tricks.
-		-->
+    <!-- See a summoned Agathion perform tricks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="power" val="150" />
@@ -203,6 +182,7 @@
 		<set name="isReuseDelayPermanent" val="true" />
 	</skill>
 	<skill id="5416" levels="1" name="Dark Cloud Mansion">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="hitCancelTime" val="500" />
@@ -211,9 +191,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5417" levels="1" name="Invincible">
-		<!--
-			Description: "Invincible against general attack and skill, buff/de-buff."
-		-->
+    <!-- Invincible against general attack and skill, buff/de-buff. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_NONE" />
@@ -222,12 +200,7 @@
 		<set name="cancelable" val="false" />
 	</skill>
 	<skill id="5418" levels="1" name="Invincible">
-		<!--
-			Last modify:	22.05.2009
-
-			Description:
-			Invincible against general attack and skill, buff/de-buff.
-		-->
+    <!-- Invincible against general attack and skill, buff/de-buff. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -239,9 +212,7 @@
 		</for>
 	</skill>
 	<skill id="5419" levels="1" name="Invincible Blow">
-		<!--
-			Description: Crystaline Golem
-		-->
+    <!-- Crystalline Golem -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -252,12 +223,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5420" levels="1" name="Invincible">
-		<!--
-			Last modify:	20.05.2009
-
-			Description:
-			Invincible against general attack and skill, buff/de-buff.
-		-->
+    <!-- Invincible against general attack and skill, buff/de-buff. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -269,9 +235,7 @@
 		</for>
 	</skill>
 	<skill id="5422" levels="12" name="Flame">
-		<!--
-			Description: Body is on fire. HP continually decreases.
-		-->
+    <!-- Body is on fire. HP continually decreases. -->
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="MAGIC" />
@@ -283,6 +247,7 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="5423" levels="12" name="Poison">
+    <!-- A toxin that gradually reduces HP. -->
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#val">40 105 285 455 665 895 1115 1255 1445 1590 1620 1770</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -306,9 +271,7 @@
 		</for>
 	</skill>
 	<skill id="5424" levels="12" name="Bleed">
-		<!--
-			Description: Condition causing target to instantly decrease HP by bleeding. Effect 2.
-		-->
+    <!-- Inflicts a wound that reduces HP. Effect 2. -->
 		<table name="#stackOrder">2 3 4 5 6 7 8 8 9 9 10 10</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="levelModifier" val="1" />
@@ -326,10 +289,7 @@
 		</for>
 	</skill>
 	<skill id="5425" levels="1" name="Iron Shield">
-		<!--
-			Description:
-			Condition causing target to increase shield defense power.
-		-->
+    <!-- Condition causing target to increase shield defense power. -->
 		<set name="icon" val="icon.skill0527" />
 		<set name="reuseDelay" val="10000" />
 		<set name="magicLevel" val="79" />
@@ -343,9 +303,7 @@
 		</for>
 	</skill>
 	<skill id="5426" levels="1" name="Counter Chance">
-		<!--
-			Description: Condition causing target to decrease skill casting speed and MP consumption.
-		-->
+    <!-- Condition causing target to decrease skill casting speed and MP consumption. -->
 		<set name="icon" val="icon.skill0532" />
 		<set name="reuseDelay" val="10000" />
 		<set name="magicLevel" val="79" />
@@ -362,9 +320,7 @@
 		</for>
 	</skill>
 	<skill id="5427" levels="1" name="Counter Rapid Shot">
-		<!--
-			Description: Condition causing target to increase bow attack speed.
-		-->
+    <!-- Bow/Crossbow Atk. Spd. has been increased. -->
 		<set name="icon" val="icon.skill0533" />
 		<set name="reuseDelay" val="10000" />
 		<set name="magicLevel" val="79" />
@@ -383,9 +339,7 @@
 		</for>
 	</skill>
 	<skill id="5428" levels="1" name="Counter Dash">
-		<!--
-			Description: Condition causing target to increase speed.
-		-->
+    <!-- Condition causing target to increase speed. -->
 		<set name="icon" val="icon.skill0534" />
 		<set name="reuseDelay" val="10000" />
 		<set name="magicLevel" val="79" />
@@ -402,6 +356,7 @@
 		</for>
 	</skill>
 	<skill id="5429" levels="1" name="Counter Mind">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="power" val="49" />
@@ -412,6 +367,7 @@
 		<set name="weaponsAllowed" val="32" />
 	</skill>
 	<skill id="5430" levels="1" name="Spoil Bomb">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0537" />
 		<set name="magicLevel" val="79" />
@@ -420,9 +376,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5431" levels="1" name="Slow">
-		<!--
-			Description: Condition causing target to temporarily decrease attack speed and casting speed.
-		-->
+    <!-- Condition causing target to temporarily decrease Atk. Spd. and casting speed. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="8000" />
@@ -435,6 +389,7 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="5432" levels="2" name="Weapon Supply">
+    <!-- none -->
 		<table name="#power">1.2 1.5</table>
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="76" />
@@ -449,6 +404,7 @@
 		</for>
 	</skill>
 	<skill id="5433" levels="1" name="Presentation - Gathering of Evil Power">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="castRange" val="400" />
@@ -457,9 +413,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5434" levels="1" name="Gust">
-		<!--
-			Description: Instantly immobilized by gust.
-		-->
+    <!-- Instantly immobilized by gust. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="coolTime" val="720" />
@@ -473,9 +427,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="5435" levels="1" name="Gust">
-		<!--
-			Description:	Instantly immobilized by gust.
-		-->
+    <!-- Instantly immobilized by gust. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="coolTime" val="720" />
@@ -494,9 +446,7 @@
 		</for>
 	</skill>
 	<skill id="5436" levels="1" name="Increase Recovery Rate">
-		<!--
-			Description: Condition causing target to increase recovery rate of HP and MP.
-		-->
+    <!-- HP and MP recovery bonus are increased. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="20" />
 		<set name="target" val="TARGET_NONE" />
@@ -504,9 +454,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5437" levels="2" name="Dissonance">
-		<!--
-			Description: A dissonance of body and soul that causes a condition rendering you unable to control your body.
-		-->
+    <!-- A dissonance of body and soul that causes a condition rendering you unable to control your body. -->
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -518,7 +466,8 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5438" levels="9" name="NPC party 30 Clan Heal">
+	<skill id="5438" levels="9" name="Heal">
+    <!-- none -->
 		<table name="#mpConsume2">20 35 53 73 96 117 136 145 151</table>
 		<table name="#mpConsume1">5 9 14 19 24 30 34 37 38</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -538,7 +487,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="displayId" val="1027" />
 	</skill>
-	<skill id="5439" levels="9" name="NPC party 60 Clan Heal">
+	<skill id="5439" levels="9" name="Heal">
+    <!-- none -->
 		<table name="#mpConsume2">20 35 53 73 96 117 136 145 151</table>
 		<table name="#mpConsume1">5 9 14 19 24 30 34 37 38</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -558,7 +508,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="displayId" val="1219" />
 	</skill>
-	<skill id="5440" levels="1" name="Presentation - Trap Activate">
+	<skill id="5440" levels="1" name="Trap">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="hitTime" val="3000" />
@@ -566,7 +517,8 @@
 		<set name="skillType" val="HARDCODED" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5441" levels="1" name="Presentation - Tears Mirror Image">
+	<skill id="5441" levels="1" name="Mirror Image">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
 		<set name="hitTime" val="3000" />
@@ -575,12 +527,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5442" levels="4" name="Bite Attack">
-		<!--
-			Last modify:	19.02.2009
-			Need correct:	#power
-
-			Description: Bite ferociously with sharp teeth.
-		-->
+    <!-- Bite ferociously with sharp teeth. -->
 		<table name="#mpConsume2">55 61 66 71</table>
 		<table name="#magicLevel">55 60 65 70</table>
 		<table name="#power">1091 1576 2077 2238</table>
@@ -598,11 +545,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="5443" levels="4" name="Cry of the Wolf">
-		<!--
-			Last modify:	19.02.2009
-
-			Description: Dominate nearby enemies with a mighty roar.
-		-->
+    <!-- Dominate nearby enemies with a mighty roar. -->
 		<table name="#effectPoint">200 400 600 800</table>
 		<table name="#mpConsume2">55 61 66 71</table>
 		<table name="#magicLevel">55 60 65 70</table>
@@ -628,11 +571,7 @@
 		</for>
 	</skill>
 	<skill id="5444" levels="2" name="Maul">
-		<!--
-			Last modify:	19.02.2009
-
-			Description: Attacks with fore-claws to create wound. Power 1. Effect 3.
-		-->
+    <!-- Attacks with fore-claws to create wound. Power 1. Effect 3. -->
 		<table name="#mpConsume2">66 71</table>
 		<table name="#magicLevel">65 70</table>
 		<set name="levelModifier" val="1" />
@@ -656,11 +595,7 @@
 		</for>
 	</skill>
 	<skill id="5445" levels="1" name="Awakening">
-		<!--
-			Last modify:	19.02.2009
-
-			Description: Brings out the instinct of the wolf.
-		-->
+    <!-- Brings out the instinct of the wolf. -->
 		<set name="icon" val="icon.action105" />
 		<set name="reuseDelay" val="600000" />
 		<set name="magicLevel" val="70" />
@@ -683,9 +618,7 @@
 		</for>
 	</skill>
 	<skill id="5446" levels="45" name="Soul Expansion">
-		<!--
-			Description: Soul increased to level 1-45.
-		-->
+    <!-- Soul increased to level 1. -->
 		<set name="icon" val="icon.skill5446_1" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -698,9 +631,7 @@
 		</cond>
 	</skill>
 	<skill id="5447" levels="7" name="Paralysis">
-		<!--
-			Description: A temporary paralysis which prevents movement.
-		-->
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLevel">62 64 66 68 70 72 74</table>
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="SPECIAL" />
@@ -717,7 +648,8 @@
 			<effect count="1" name="Paralyze" stackOrder="-1" stackType="paralyze" time="10" val="0" />
 		</for>
 	</skill>
-	<skill id="5448" levels="1" name="Obilivion">
+	<skill id="5448" levels="1" name="Oblivion">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="79" />
 		<set name="target" val="TARGET_SELF" />
@@ -730,9 +662,7 @@
 		</for>
 	</skill>
 	<skill id="5449" levels="1" name="Weak Constitution">
-		<!--
-			Description: Temporarily gets thrown into a state of shock and immobilized.
-		-->
+    <!-- You are stunned and temporarily prohibited from movement. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="79" />
 		<set name="target" val="TARGET_SELF" />
@@ -744,9 +674,7 @@
 		</for>
 	</skill>
 	<skill id="5450" levels="7" name="Tin Skin">
-		<!--
-			Description: Instantly decreases HP due to Bleed Attack. Effect 4 - 8
-		-->
+    <!-- Instantly decreases HP due to Bleed Attack. Effect 4. -->
 		<table name="#dmg">30 60 90 150 250 350</table>
 		<table name="#magicLevel">46 52 58 62 66 70 74</table>
 		<set name="levelModifier" val="1" />
@@ -761,9 +689,7 @@
 		</for>
 	</skill>
 	<skill id="5451" levels="1" name="Enervation">
-		<!--
-			Description: Decreases attack and magic speed.
-		-->
+    <!-- Decreases attack and Casting Spd. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="79" />
 		<set name="target" val="TARGET_SELF" />
@@ -779,9 +705,7 @@
 		</for>
 	</skill>
 	<skill id="5452" levels="3" name="Spite">
-		<!--
-			Description: Greatly increases the amount of critical damage received
-		-->
+    <!-- Greatly increases the amount of Critical Damage received -->
 		<table name="#cDam">1.4 1.5 1.6</table>
 		<table name="#level">1 2 3</table>
 		<table name="#magicLevel">66 70 74</table>
@@ -798,6 +722,7 @@
 		</for>
 	</skill>
 	<skill id="5453" levels="4" name="Mental Impoverish">
+    <!-- none -->
 		<table name="#level">1 2 3 4</table>
 		<table name="#magicLevel">68 70 72 74</table>
 		<table name="#power">50 100 150 200</table>
@@ -813,9 +738,7 @@
 		</for>
 	</skill>
 	<skill id="5454" levels="1" name="Shadow Bind">
-		<!--
-			Description: Immobilized.
-		-->
+    <!-- Immobilized. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="77" />
@@ -824,9 +747,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5455" levels="1" name="Voice Bind">
-		<!--
-			Description: Silenced.
-		-->
+    <!-- Silenced. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="77" />
@@ -835,9 +756,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5456" levels="1" name="Stubborn Resistance">
-		<!--
-			Description: Condition causing target to instantly slow down Atk. Speed and Speed due to stubborn resistance.
-		-->
+    <!-- Condition causing target to instantly slow down Atk. Speed and Speed due to stubborn resistance. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="90" />
 		<set name="castRange" val="900" />
@@ -858,7 +777,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5457" levels="1" name="NPC Full Recover">
+	<skill id="5457" levels="1" name="Complete Recovery">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="99" />
@@ -868,9 +788,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5458" levels="1" name="Performing Agathion - Fortress">
-		<!--
-			Description: See a summoned Agathion perform tricks.
-		-->
+    <!-- See a summoned Agathion perform tricks. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="magicLevel" val="85" />
@@ -882,9 +800,7 @@
 		<set name="useSS" val="false" />
 	</skill>
 	<skill id="5459" levels="1" name="Paralysis">
-		<!--
-			Description: A temporary paralysis that prevents movement.
-		-->
+    <!-- A temporary paralysis that prevents movement. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="magicLevel" val="99" />
@@ -899,9 +815,7 @@
 		</for>
 	</skill>
 	<skill id="5460" levels="1" name="Fear">
-		<!--
-			Description: Causes a temporary fear so strong that a target flees mindlessly.
-		-->
+    <!-- Causes a temporary fear so strong that a target flees mindlessly. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill1092" />
 		<set name="magicLevel" val="99" />
@@ -911,7 +825,8 @@
 		<set name="trait" val="DERANGEMENT" />
 		<set name="saveVs" val="MEN" />
 	</skill>
-	<skill id="5461" levels="12" name="Castle Gunner Shot">
+	<skill id="5461" levels="12" name="Power Shot">
+    <!-- none -->
 		<table name="#effectPoint">100 100 100 100 100 100 100 100 100 100 100 100</table>
 		<table name="#mpConsume2">19 22 25 28 31 33 36 38 40 42 42 43</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -932,9 +847,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5462" levels="1" name="Fire Attacks">
-		<!--
-			Description: Strong against the element of fire
-		-->
+    <!-- Strong against the element of fire. -->
 		<set name="icon" val="icon.skill4279_new" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -942,9 +855,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5463" levels="1" name="Water Attacks">
-		<!--
-			Description: Strong against the element of water
-		-->
+    <!-- Strong against the element of water. -->
 		<set name="icon" val="icon.skill4280_new" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -952,9 +863,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5464" levels="1" name="Wind Attacks">
-		<!--
-			Description: Strong against the element of wind
-		-->
+    <!-- Strong against the element of wind. -->
 		<set name="icon" val="icon.skill4281_new" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -962,9 +871,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5465" levels="1" name="Earth Attacks">
-		<!--
-			Description: Strong against the element of earth
-		-->
+    <!-- Strong against the element of earth. -->
 		<set name="icon" val="icon.skill4282_new" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -972,9 +879,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5466" levels="1" name="Holy Attacks">
-		<!--
-			Description: Strong against the holy elemental
-		-->
+    <!-- Strong against the holy elemental. -->
 		<set name="icon" val="icon.skill4275_new" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -982,19 +887,15 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5467" levels="1" name="Dark Attacks">
-		<!--
-			Description: Strong against the dark elemental
-		-->
+    <!-- Strong against the dark elemental. -->
 		<set name="icon" val="icon.skill4336_new" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="5468" levels="12" name="Castle Gunner Fire">
-		<!--
-			Last modify:	10.02.2009
-		-->
+	<skill id="5468" levels="12" name="Fire Shot">
+    <!-- none -->
 		<table name="#effectPoint">100 100 100 100 100 100 100 100 100 100 100 100</table>
 		<table name="#mpConsume2">19 22 25 28 31 33 36 38 40 42 42 43</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
@@ -1015,9 +916,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5469" levels="1" name="Raid Boss - Level 22">
-		<!--
-			Description: "Past the secure entrance to this large cavern waits Mother Nornil, the ruler of Nornil's Garden."
-		-->
+    <!-- Past the secure entrance to this large cavern waits Mother Nornil, the ruler of Nornil's Garden. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1025,9 +924,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5470" levels="1" name="Raid Boss - Level 81">
-		<!--
-			Description: "This cruel, soulless woman handled much of Beleth's dirty work. Her wickedness became even more pronounced after Kechi, the object of her affection, aspired unsuccessfully to become Chief Guard."
-		-->
+    <!-- This cruel, soulless woman handled much of Beleth's dirty work. Her wickedness became even more pronounced after Kechi, the object of her affection, aspired unsuccessfully to become Chief Guard. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1035,9 +932,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5471" levels="1" name="Raid Boss - Level 82">
-		<!--
-			Description: "Kechi aspired to be the Chief Guard of the Crystal Caverns, but Beleth bypassed him in favor of Barler. Furious at the slight, Kechi plots his revenge."
-		-->
+    <!-- Kechi aspired to be the Chief Guard of the Crystal Caverns, but Beleth bypassed him in favor of Barler. Furious at the slight, Kechi plots his revenge. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1045,59 +940,47 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5472" levels="1" name="Raid Boss - Level 83">
-		<!--
-			Description: "Originally a handmaiden for Parme within the order of Fafurion, her mind was infected by the seed of evil scattered by Beleth, and she is under his control."
-		-->
+    <!-- Originally a handmaiden for Parme within the order of Fafurion, her mind was infected by the seed of evil scattered by Beleth, and she is under his control. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HARDCODED" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="5473" levels="1" name="Raid Boss - Level 83">
-		<!--
-			Description: This once-noble soul was originally a powerful seer able to communicate directly with the divine; now only his overwhelming hatred against Beleth remains.
-		-->
+	<skill id="5473" levels="1" name="Raid Boss - Level 81">
+    <!-- This once-noble soul was originally a powerful seer able to communicate directly with the divine; now only his overwhelming hatred against Beleth remains. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HARDCODED" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="5474" levels="1" name="Raid Boss - Level 84">
-		<!--
-			Description: "This supernatural wind tore through ancient Hellbound, filled with evil spirits and possessing a malicious will of its own."
-		-->
+	<skill id="5474" levels="1" name="Raid Boss - Level 81">
+    <!-- This supernatural wind tore through ancient Hellbound, filled with evil spirits and possessing a malicious will of its own. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HARDCODED" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="5475" levels="1" name="Raid Boss - Level 85">
-		<!--
-			Description: "This high-level Demon general, royalty even to the infernal, was ordered by  Darion to capture the Tower of Infinitum."
-		-->
+	<skill id="5475" levels="1" name="Raid Boss - Level 83">
+    <!-- This high-level Demon general, royalty even to the infernal, was ordered by Darion to capture the Tower of Infinitum. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HARDCODED" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="5476" levels="1" name="Raid Boss - Level 85">
-		<!--
-			Description: "Along with Darion, this Demon was involved in the alliance against Beleth and was particularly involved in Beleth's invasion of the mainland."
-		-->
+	<skill id="5476" levels="1" name="Raid Boss - Level 83">
+    <!-- Along with Darion, this Demon was involved in the alliance against Beleth and was particularly involved in Beleth's invasion of the mainland. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HARDCODED" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="5477" levels="1" name="Raid Boss - Level 86">
-		<!--
-			Description: "Beleth's right hand, he designed the Iron Castle and created a number of powerful magical tools for his master. Because of his long association with the Demon, his soul has been irretrievably corrupted. "
-		-->
+	<skill id="5477" levels="1" name="Raid Boss - Level 83">
+    <!-- Beleth's right hand, he designed the Iron Castle and created a number of powerful magical tools for his master. Because of his long association with the Demon, his soul has been irretrievably corrupted. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1105,9 +988,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5478" levels="1" name="Raid Boss - Level 83">
-		<!--
-			Description: "The Chief Guard of the Crystal Caverns, selected because of his strength and power. It is his responsibility to keep an eye on the imprisoned Parme as well as represent all the Demons on the island."
-		-->
+    <!-- The Chief Guard of the Crystal Caverns, selected because of his strength and power. It is his responsibility to keep an eye on the imprisoned Parme as well as represent all the Demons on the island. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1115,10 +996,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5479" levels="1" name="Boss Petrification Resistance">
-		<!--
-			Last modify: 12.07.2008
-			Description: Resist against Petrification.
-		-->
+    <!-- Resist against Petrification. -->
 		<set name="icon" val="icon.skill5479" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1129,6 +1007,7 @@
 		</for>
 	</skill>
 	<skill id="5480" levels="1" name="Balor Invincible Removal">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -1139,24 +1018,21 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5481" levels="1" name="Transform Penalty">
-		<!--
-			Description: You cannot be transformed while under this effect.
-		-->
+    <!-- You cannot be transformed while under this effect. -->
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5482" levels="1" name="Transform Penalty">
-		<!--
-			Description: You cannot be transformed while under this effect.
-		-->
+    <!-- You cannot be transformed while under this effect. -->
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5483" levels="1" name="Counter Aggression">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="76" />
 		<set name="target" val="TARGET_NONE" />
@@ -1164,9 +1040,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5484" levels="1" name="Endurance Defense Up">
-		<!--
-			Description: Increases P. Def. Effect 1.
-		-->
+    <!-- Increases P. Def. Effect 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="76" />
 		<set name="target" val="TARGET_NONE" />
@@ -1174,9 +1048,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5485" levels="1" name="Endurance Defense Up">
-		<!--
-			Description: Increases P. Def. Effect 1.
-		-->
+    <!-- Magic resistance is increased. Effect 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="76" />
 		<set name="target" val="TARGET_NONE" />
@@ -1184,9 +1056,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5486" levels="1" name="Endurance Offense Up">
-		<!--
-			Description: Increases P. Atk. Effect 1.
-		-->
+    <!-- P. Atk. is increased. Effect 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="76" />
 		<set name="target" val="TARGET_NONE" />
@@ -1194,6 +1064,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5487" levels="1" name="Counter Delete Aggression">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="76" />
 		<set name="castRange" val="600" />
@@ -1201,10 +1072,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="5488" levels="1" name="Counter Critical Power Up">
-		<!--
-			Description: Increases critical attack power. Effect 1.
-		-->
+	<skill id="5488" levels="1" name="Counter Critical Damage Up">
+    <!-- Increases critical P. Atk. Effect 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="76" />
 		<set name="target" val="TARGET_NONE" />
@@ -1212,9 +1081,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5489" levels="1" name="Counter Critical Rate Up">
-		<!--
-			Description: Increases critical attack rate. Effect 1.
-		-->
+    <!-- Increases critical attack rate. Effect 1. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="76" />
 		<set name="target" val="TARGET_NONE" />
@@ -1222,9 +1089,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5490" levels="1" name="Weakened Life">
-		<!--
-			Description: You have been infected by a fatal poison.
-		-->
+    <!-- You have been infected by a fatal poison. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
@@ -1232,13 +1097,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5491" levels="1" name="Decrease Bow/Crossbow Atk. Spd.">
-		<!--
-			Need correct:	effect multiplier
-			Last modify:	20.01.2008
-			Comment: В режиме трансформации лук становится melee оружием.
-
-			Description: Decreases attack speed when equipped with bow/crossbow while transformed.
-		-->
+    <!-- Decreases Atk. Spd. when equipped with bow/crossbow while transformed. -->
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1256,7 +1115,8 @@
 			</set>
 		</for>
 	</skill>
-	<skill id="5492" levels="12" name="NPC CrossBow Attack">
+	<skill id="5492" levels="12" name="Power Shot">
+    <!-- none -->
 		<table name="#rate">1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 1.13</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">25 40 56 76 99 121 142 151 159 165 168 170</table>
@@ -1278,6 +1138,7 @@
 		</for>
 	</skill>
 	<skill id="5493" levels="1" name="Naia Production">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1000" />
@@ -1290,8 +1151,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5494" levels="1" name="Gust">
-		<!--
-		-->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="86" />
 		<set name="target" val="TARGET_ONE" />
@@ -1301,9 +1161,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5495" levels="1" name="Bleed">
-		<!--
-			Description: HP decreases temporarily by bleeding. Effect 10.
-		-->
+    <!-- Inflicts a wound that reduces HP. Effect 10. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="power" val="2616" />
@@ -1321,6 +1179,7 @@
 		</for>
 	</skill>
 	<skill id="5496" levels="1" name="Dark Fireball">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="460" />
@@ -1335,9 +1194,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5497" levels="1" name="Horn of Rising Darkness">
-		<!--
-			Description: Cannot move and HP decreases temporarily due to the stun and bleeding. Effect 1.
-		-->
+    <!-- Cannot move and HP decreases temporarily due to the stun and bleeding. Effect 1. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="power" val="2319" />
@@ -1354,6 +1211,7 @@
 		</for>
 	</skill>
 	<skill id="5498" levels="1" name="Self-Destruct">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -1365,6 +1223,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5499" levels="1" name="Dark Lightening">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="200" />

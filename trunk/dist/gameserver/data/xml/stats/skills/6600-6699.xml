@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="6600" levels="28" name="NPC earth attack">
+	<skill id="6600" levels="28" name="Earth Attack">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -13,7 +14,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6601" levels="28" name="NPC earth attack">
+	<skill id="6601" levels="28" name="Earth Attack">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -26,7 +28,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6602" levels="28" name="NPC earth attack">
+	<skill id="6602" levels="28" name="Earth Attack">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -39,7 +42,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6603" levels="28" name="NPC earth shot">
+	<skill id="6603" levels="28" name="Earth Shot">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -53,7 +57,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6604" levels="28" name="NPC earth shot">
+	<skill id="6604" levels="28" name="Earth Shot">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -67,7 +72,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6605" levels="28" name="NPC earth shot">
+	<skill id="6605" levels="28" name="Earth Shot">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -81,7 +87,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6606" levels="28" name="NPC earth shot">
+	<skill id="6606" levels="28" name="Earth Shot">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -95,7 +102,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6607" levels="28" name="NPC earth shot">
+	<skill id="6607" levels="28" name="Earth Shot">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -109,7 +117,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6608" levels="28" name="NPC earth shot">
+	<skill id="6608" levels="28" name="Earth Shot">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -123,7 +132,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6609" levels="29" name="NPC earth magic">
+	<skill id="6609" levels="29" name="Earth Magic">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -137,7 +147,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6610" levels="29" name="NPC earth magic">
+	<skill id="6610" levels="29" name="Earth Magic">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -151,7 +162,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6611" levels="29" name="NPC earth magic">
+	<skill id="6611" levels="29" name="Earth Magic">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -165,7 +177,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6612" levels="29" name="NPC earth magic">
+	<skill id="6612" levels="29" name="Earth Magic">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -179,7 +192,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6613" levels="29" name="NPC earth magic">
+	<skill id="6613" levels="29" name="Earth Magic">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -193,7 +207,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6614" levels="29" name="NPC earth magic">
+	<skill id="6614" levels="29" name="Earth Magic">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -207,7 +222,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6615" levels="29" name="NPC earth magic">
+	<skill id="6615" levels="29" name="Earth Magic">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -220,7 +236,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6616" levels="29" name="NPC earth magic">
+	<skill id="6616" levels="29" name="Earth Magic">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -233,7 +250,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6617" levels="29" name="NPC earth magic">
+	<skill id="6617" levels="29" name="Earth Magic">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 64 68 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -247,10 +265,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6618" levels="7" name="Maguen Strike">
-		<!-- 
-		Moving Spd. Is decreased by 50% for 10 seconds. 
-		Done by : Deazer
-		-->
+    <!-- Speed. Is decreased by 50% for 10 seconds. -->
 		<table name="#mpConsume2">109 121 131 142 151 159 165</table>
 		<table name="#magicLevel">55 60 65 70 75 80 85</table>
 		<table name="#power">1832 2272 2751 3252 3752 4224 4640</table>
@@ -275,10 +290,7 @@
 		</for>
 	</skill>
 	<skill id="6619" levels="7" name="Maguen Power Strike">
-		<!-- 
-		Moving Spd. Is decreased by 90% for 10 seconds. 
-		Done by : Deazer
-		-->
+    <!-- Speed. Is decreased by 90% for 10 seconds. -->
 		<table name="#mpConsume2">109 121 131 142 151 159 165</table>
 		<table name="#magicLevel">55 60 65 70 75 80 85</table>
 		<table name="#power">1832 2272 2751 3252 3752 4224 4640</table>
@@ -303,6 +315,7 @@
 		</for>
 	</skill>
 	<skill id="6620" levels="7" name="Maguen Plasma">
+    <!-- P. Atk. and M. Atk. are increased. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -317,6 +330,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6621" levels="1" name="Maguen Plasma">
+    <!-- P. Atk. and M. Atk. are increased. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -331,7 +345,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6622" levels="1" name="Shock">
-		<!-- Momentarily causes shock, which stuns the enemy for 20 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
+    <!-- Momentarily causes shock, which stuns the enemy for 20 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="magicLevel" val="84" />
@@ -344,6 +358,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="6623" levels="1" name="Fungus Hub">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="84" />
@@ -355,7 +370,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6624" levels="1" name="Shock">
-		<!-- Momentarily causes shock, which stuns the enemy for 9 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
+    <!-- Momentarily causes shock, which stuns the enemy for 9 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="magicLevel" val="84" />
@@ -368,6 +383,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="6625" levels="1" name="Energy of Life">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -380,18 +396,21 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6626" levels="1" name="Energy of Life's Power">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6627" levels="1" name="Energy of Life's Highest Power">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6628" levels="1" name="Energy of Mana">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="2000" />
@@ -404,18 +423,21 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6629" levels="1" name="Energy of Mana's Power">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6630" levels="1" name="Energy of Mana's Highest Power">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6631" levels="1" name="Energy of Power">
+    <!-- Increases P. Atk. temporarily. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_herb_red_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -428,6 +450,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6632" levels="1" name="Energy of Enchant">
+    <!-- Increases M. Atk. temporarily. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_herb_blue_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -439,7 +462,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6633" levels="1" name="Energy of Attack Speed\">
+	<skill id="6633" levels="1" name="Energy of Atk. Spd.">
+    <!-- Increases Speed. temporarily. Effect 2. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_attack_sp_herb_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -452,6 +476,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6634" levels="1" name="Energy of Casting Speed">
+    <!-- Increases Casting Spd. temporarily. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_magic_sp_herb_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -463,7 +488,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6635" levels="1" name="Energy of Crt Rate\">
+	<skill id="6635" levels="1" name="Energy of Crt Rate">
+    <!-- Increases Critical attack rate temporarily. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_critical_herb_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -475,7 +501,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6636" levels="1" name="Energy of Moving Speed">
+	<skill id="6636" levels="1" name="Energy of Speed">
+    <!-- Increases Speed. temporarily. Effect 2. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_move_herb_i00" />
 		<set name="reuseDelay" val="2000" />
@@ -488,6 +515,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6637" levels="1" name="Vampiric Aura">
+    <!-- Uses damage inflicted upon the enemy to temporarily restore HP with a certain probability.  Effect 4. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill6637" />
 		<set name="reuseDelay" val="2000" />
@@ -500,6 +528,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6638" levels="1" name="Aura of Mystery">
+    <!-- You've got a big head. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill2513" />
 		<set name="reuseDelay" val="2000" />
@@ -512,6 +541,7 @@
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6639" levels="1" name="Bane of Auras - Damage">
+    <!-- Increases Critical P. Atk. temporarily. Effect 3. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill2514" />
 		<set name="reuseDelay" val="2000" />
@@ -523,7 +553,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6640" levels="1" name="Energizing Aura">
+	<skill id="6640" levels="1" name="Vitalizing Aura">
+    <!-- Recovers Vitality upon acquiring XP. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skilltransform4" />
 		<set name="reuseDelay" val="2000" />
@@ -535,6 +566,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6641" levels="1" name="Holy Ball">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="500" />
@@ -551,6 +583,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6642" levels="1" name="Dash">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="5000" />
 		<set name="magicLevel" val="85" />
@@ -563,6 +596,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6643" levels="1" name="Holy Strike">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="5000" />
 		<set name="power" val="2319" />
@@ -576,6 +610,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6644" levels="1" name="Ice Queen Freya">
+    <!-- Once known as friendly and kind, Princess Felicia was the darling of the kingdom.. until she was betrayed and exiled for crimes she did not commit. Through the trickery of those rebels who would see her kingdom fall, Felicia was touched by the power of ice and was henceforth known as Freya. Fueled by hatred, she now maliciously wields the power of ice in hopes of destroying the land she once called home. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -583,6 +618,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6645" levels="1" name="Cooker Invincibility On">
+    <!-- Invincible against standard targets and skills and buffs/de-buffs. -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="hitCancelTime" val="500" />
@@ -591,6 +627,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6646" levels="1" name="Cooker Invincibility Off">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="hitCancelTime" val="500" />
@@ -599,6 +636,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6647" levels="1" name="Presentation - Ice Knight">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_NONE" />
@@ -606,6 +644,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6648" levels="1" name="Komodo Heal">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="84" />
@@ -617,6 +656,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6649" levels="1" name="Treykan Transformation">
+    <!-- Transforms you into a fearsome Treykan. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="castRange" val="2000" />
@@ -647,6 +687,7 @@
 		</for>
 	</skill>
 	<skill id="6650" levels="1" name="Tacrakahn's Alienation">
+    <!-- All actions are sealed by Tacrakahn's special ability. Impossible to dispel. -->
 		<set name="icon" val="icon.skill4111" />
 		<set name="castRange" val="1500" />
 		<set name="target" val="TARGET_ONE" />
@@ -657,6 +698,7 @@
 		</for>
 	</skill>
 	<skill id="6651" levels="1" name="Dopagen's Alienation">
+    <!-- All actions are sealed by Dopagen's special ability. Impossible to dispel. -->
 		<set name="icon" val="icon.skill4111" />
 		<set name="castRange" val="1500" />
 		<set name="target" val="TARGET_ONE" />
@@ -666,21 +708,24 @@
 			<effect count="1" name="MuteAll" time="60" val="0" />
 		</for>
 	</skill>
-	<skill id="6652" levels="1" name="Level 85 Raid Boss">
+	<skill id="6652" levels="1" name="Raid Boss - Level 89">
+    <!-- Head of the Bistakon, a race that is one of Istina's numerous descendants. He became the head of the race through physical strength and superior power. They are enemies with the Cokrakon and Reptilikon races, maintaining the balance of power. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6653" levels="1" name="Level 85 Raid Boss">
+	<skill id="6653" levels="1" name="Raid Boss - Level 89">
+    <!-- Head of the Leptilikon, a race that is one of Istina's numerous descendants. He boasts perfect defense, but is weak against Treykan. They are enemies with the Cokrakon and Bistakon races, maintaining the balance of power. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6654" levels="1" name="Level 85 Raid Boss">
+	<skill id="6654" levels="1" name="Raid Boss - Level 89">
+    <!-- Head of the Cokrakon, a race that is one of Istina's numerous descendants. He has exceptional intelligence among his race. They are enemies with the Bistakon and Leptilikon races, maintaining the balance of power. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -688,6 +733,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6655" levels="1" name="Tarsque Carapace">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -700,6 +746,7 @@
 		</for>
 	</skill>
 	<skill id="6656" levels="1" name="Lavasaurus Firstborn Attack">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="13544" />
 		<set name="magicLevel" val="85" />
@@ -713,6 +760,7 @@
 		<set name="element" val="fire" />
 	</skill>
 	<skill id="6657" levels="1" name="Lavasaurus Firstborn Heal">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="power" val="100" />
@@ -727,6 +775,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="6658" levels="1" name="Level 84 Raid Boss">
+    <!-- Raid Boss Darnel -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -734,6 +783,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6659" levels="1" name="Level 84 Raid Boss">
+    <!-- Raid Boss Kechi -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -741,6 +791,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6660" levels="1" name="Level 84 Raid Boss">
+    <!-- Raid Boss Tears -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -748,6 +799,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6661" levels="1" name="Level 85 Raid Boss">
+    <!-- Ice warrior created by blowing life into Freya's crystal fragment. It has no understanding of self and only obeys the commands of its master Freya. It will even walk into death if it is her will. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -755,10 +807,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6662" levels="2" name="Pillar of Frozen">
-		<!--
-			All actions are prohibited for 7 seconds, and you lose 115 HP per second.
-			All actions are prohibited for 15 seconds, and you lose 115 HP per second.
-		-->
+    <!-- All actions are prohibited for 7 seconds, and you lose 115 HP per second. -->
 		<table name="#time">7 15</table>
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="SPECIAL" />
@@ -775,6 +824,7 @@
 		</for>
 	</skill>
 	<skill id="6663" levels="1" name="Level 76 Raid Boss">
+    <!-- Powerful gigantic golem created by Dr. Kaos using the Pael ruins star stone. Dr. Chaos was once the Golem Maestro for all guilds, but he tried to steal the Leader's Blueprints. Was assigned to obtaining revenge for the Black Anvil Guild, and he led the golem army that he made to Pavel's Ruins. When an outsider is found, in order to punish himself, consider it troops from the Black Anvil Guild, and just attack. His ultimate goal is world domination. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
@@ -782,13 +832,15 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6664" levels="1" name="Level 84 Raid Boss">
+    <!-- Though it appears human, it is actually an archangel who speaks directly with Einhasad. The ancient religious text discovered at the Tower of Insolence gave evidence that the grail was hidden somewhere in the Monastery of Silence. Afterward, extensive searches for the grail took place in the Temple of Bishop, but no one could escape the judgment of the Master of Splendor. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6665" levels="1" name="NPC Hate">
+	<skill id="6665" levels="1" name="Aggression">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="castRange" val="900" />
@@ -797,7 +849,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6666" levels="1" name="Feral Shield">
-		<!-- Increases P. Def. by 18% by 5 minutes. -->
+    <!-- Increases P. Def. by 18% by 5 minutes. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1040" />
 		<set name="reuseDelay" val="90000" />
@@ -817,7 +869,7 @@
 		</for>
 	</skill>
 	<skill id="6667" levels="1" name="Feral Wind Walk">
-		<!-- Increases Moving Spd. by 33 for 5 minutes. -->
+    <!-- Increases Speed. by 33 for 5 minutes. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1204" />
 		<set name="reuseDelay" val="90000" />
@@ -837,7 +889,7 @@
 		</for>
 	</skill>
 	<skill id="6668" levels="1" name="Feral Death Whisper">
-		<!-- Increases critical attack power by 35% for 5 minutes. -->
+    <!-- Increases critical P. Atk. by 35% for 5 minutes. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1242" />
 		<set name="reuseDelay" val="90000" />
@@ -857,7 +909,7 @@
 		</for>
 	</skill>
 	<skill id="6669" levels="1" name="Feral Body Bless">
-		<!-- Increases Max HP by 35% for 5 minutes. -->
+    <!-- Increases Max HP by 35% for 5 minutes. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1045" />
 		<set name="reuseDelay" val="90000" />
@@ -877,7 +929,7 @@
 		</for>
 	</skill>
 	<skill id="6670" levels="1" name="Feral Vampiric Rage">
-		<!-- For 5 minutes, 9% of the standard short-range physical damage inflicted on the enemy is converted to HP for you. -->
+    <!-- For 5 minutes, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1268" />
 		<set name="reuseDelay" val="90000" />
@@ -897,7 +949,7 @@
 		</for>
 	</skill>
 	<skill id="6671" levels="1" name="Feral Berserker Spirit">
-		<!-- Decreases P. Def. by 8%, M. Def. by 16%, Evasion by 4 and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Moving Spd. by 8 for 5 minutes. -->
+    <!-- Decreases P. Def. by 8%, M. Def. by 16%, Evasion by 4 and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed. by 8 for 5 minutes. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1062" />
 		<set name="reuseDelay" val="90000" />
@@ -924,7 +976,7 @@
 		</for>
 	</skill>
 	<skill id="6672" levels="1" name="Feral Bless Shield">
-		<!-- Increases Shield defense rate by 5% for 30 minutes. -->
+    <!-- Increases Shield defense rate by 5% for 30 minutes. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1243" />
 		<set name="reuseDelay" val="90000" />
@@ -944,6 +996,7 @@
 		</for>
 	</skill>
 	<skill id="6673" levels="1" name="Presentation - Attain Noblesse">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
@@ -954,7 +1007,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6674" levels="1" name="Energy of Range Increment">
-		<!-- Bow/Crossbow range is temporarily increased by 50. -->
+    <!-- Bow/Crossbow range is temporarily increased by 50. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.etc_magic_sp_herb_i00" />
 		<set name="magicLevel" val="52" />
@@ -965,6 +1018,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6675" levels="1" name="Lavasaurus Firstborn Attack">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="85" />
 		<set name="hitCancelTime" val="500" />
@@ -974,6 +1028,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6676" levels="1" name="Magician's Perversity">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="500" />
 		<set name="power" val="450" />
@@ -988,6 +1043,7 @@
 		<set name="castRange" val="600" />
 	</skill>
 	<skill id="6677" levels="1" name="Hold">
+    <!-- You are temporarily unable to move. -->
 		<set name="levelModifier" val="2" />
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill4047" />
@@ -1003,6 +1059,7 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="6678" levels="1" name="Hold Cancel">
+    <!-- none -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="8000" />
@@ -1015,6 +1072,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6679" levels="1" name="Summoner's Strike">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="500" />
 		<set name="power" val="350" />
@@ -1029,6 +1087,7 @@
 		<set name="castRange" val="600" />
 	</skill>
 	<skill id="6680" levels="1" name="Faint Plus">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="500" />
 		<set name="magicLevel" val="83" />
@@ -1040,7 +1099,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6681" levels="1" name="Maguen Speed Walk">
-		<!-- Moving Spd. increases by 40 for 20 minutes. -->
+    <!-- Speed. increases by 40 for 20 minutes. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1204" />
 		<set name="reuseDelay" val="2000" />
@@ -1060,7 +1119,7 @@
 		</for>
 	</skill>
 	<skill id="6682" levels="1" name="Elite Maguen Speed Walk">
-		<!-- Moving Spd. increases by 45 for 20 minutes. -->
+    <!-- Speed. increases by 45 for 20 minutes. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill1204" />
 		<set name="reuseDelay" val="2000" />
@@ -1080,6 +1139,7 @@
 		</for>
 	</skill>
 	<skill id="6683" levels="1" name="Maguen Recall">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1092,7 +1152,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isHandler" val="true" />
 	</skill>
-	<skill id="6684" levels="1" name="Maguen Recall">
+	<skill id="6684" levels="1" name="Maguen Party Recall">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1107,6 +1168,7 @@
 		<set name="isHandler" val="true" />
 	</skill>
 	<skill id="6685" levels="1" name="Santa Claus's Gift">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="coolTime" val="1000" />
@@ -1117,7 +1179,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6686" levels="1" name="Sacred Protector Cancel">
+	<skill id="6686" levels="1" name="Holy Protector Cancel">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="83" />
 		<set name="hitCancelTime" val="500" />
@@ -1129,6 +1192,7 @@
 		<set name="isOffensive" val="true" />
 	</skill>
 	<skill id="6687" levels="1" name="Patience">
+    <!-- Skill P. Atk. is increased. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0983" />
 		<set name="magicLevel" val="60" />
@@ -1144,7 +1208,7 @@
 		</for>
 	</skill>
 	<skill id="6688" levels="1" name="Soup of Failure">
-		<!-- Atk. Spd. increases by 20% and HP decreases 0.5% per second for 3 minutes. -->
+    <!-- Atk. Spd. increases by 20% and HP decreases 0.5% per second for 3 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="reuseDelay" val="1000" />
@@ -1156,6 +1220,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6689" levels="1" name="Absorb HP MP">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="83" />
 		<set name="castRange" val="600" />
@@ -1174,6 +1239,7 @@
 		</for>
 	</skill>
 	<skill id="6690" levels="1" name="Hold">
+    <!-- You are temporarily unable to move. -->
 		<set name="icon" val="icon.skill1201" />
 		<set name="magicLevel" val="83" />
 		<set name="castRange" val="800" />
@@ -1190,7 +1256,8 @@
 			<effect count="1" name="Root" stackOrder="-1" stackType="Root" time="30" val="0" />
 		</for>
 	</skill>
-	<skill id="6691" levels="1" name="Dualsword Deadly Move">
+	<skill id="6691" levels="1" name="Dual Sword Deadly Move">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="83" />
 		<set name="castRange" val="50" />
@@ -1203,7 +1270,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for />
 	</skill>
-	<skill id="6692" levels="1" name="Dualsword Range Deadly Move">
+	<skill id="6692" levels="1" name="Dual Sword Range Deadly Move">
+    <!-- none -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="83" />
 		<set name="hitTime" val="1500" />
@@ -1216,7 +1284,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for />
 	</skill>
-	<skill id="6693" levels="12" name="NPC Strike">
+	<skill id="6693" levels="12" name="Power Strike">
+    <!-- none -->
 		<table name="#mpConsume2">13 20 28 38 50 61 71 76 80 83 84 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="icon" val="icon.skill0000" />
@@ -1230,7 +1299,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6694" levels="12" name="BOSS Strike">
+	<skill id="6694" levels="12" name="Power Strike">
+    <!-- none -->
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<set name="icon" val="icon.skill0000" />
@@ -1243,7 +1313,8 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="6695" levels="12" name="BOSS Spinning Slasher">
+	<skill id="6695" levels="12" name="Whirlwind">
+    <!-- none -->
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<set name="icon" val="icon.skill0000" />
@@ -1257,6 +1328,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6696" levels="1" name="Presentation - Quest Done">
+    <!-- none -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0000" />
 		<set name="magicLevel" val="1" />
@@ -1267,6 +1339,7 @@
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6697" levels="1" name="Eternal Blizzard">
+    <!-- none -->
 		<set name="icon" val="icon.skill6274" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="7000" />
@@ -1279,7 +1352,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6698" levels="1" name="Pillar of Frozen - Eternal Ice">
-		<!-- Actions prohibited for 15 seconds. HP decreases by 115 and MP decreases by 5% per second. -->
+    <!-- Actions prohibited for 15 seconds. HP decreases by 115 and MP decreases by 5% per second. -->
 		<set name="levelModifier" val="1" />
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill6274" />
@@ -1289,11 +1362,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="6699" levels="1" name="Ball Trapping Gnosian Agathion Cute Trick" >
-		<!--  Automatically generated from The High Five: Part 4.5 client files.
-		  Description: none
-		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-		  created 07-7-2011  19:19
-		-->
+    <!-- You can see the summoned spirit's cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="10800" levels="1" name="Grand Hawk-Eye Mastery">
+	<skill id="10800" levels="1" name="Superior Elemental Resistance">
+    <!-- STR + 2 and resistance to Fire/Water/Wind/Earth + 20. -->
 		<table name="#vul">20</table>
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
@@ -19,7 +20,8 @@
 				<add order="0x40" stat="defenceEarth" val="#vul" />
 		</for>
 	</skill>
-	<skill id="10801" levels="5" name="Targeting">
+	<skill id="10801" levels="5" name="Bullseye">
+    <!-- Decreases the target's resistance to bow/crossbow by 40% and M. Def. by 5%. -->
 		<table name="#magicLevel">85 87 92 95 98</table>
 		<table name="#mDef">0.95 0.9 0.85 0.80 0.75</table>
 		<table name="#Tab-bowRcpt">40 45 50 55 60</table> 
@@ -43,7 +45,8 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10802" levels="1" name="Сосредоточенное Нацеливание" >  
+    <skill id="10802" levels="1" name="Mass Bullseye" >  
+    <!-- Decreases the target's and nearby enemies resistance to bow/crossbow attacks by 60% and M. Def. by 25%. After a set amount of time, the target explodes incurring great damage. -->
        	<table name="#mpConsume2">100</table>
 		<set name="reuseDelay" val="180000" />
 		<set name="hitTime" val="500" />
@@ -63,19 +66,22 @@
 		</effect>
 		</for>
 	</skill>
-    <skill id="10803" levels="1" name="Предсказанная Гибель" > 
+    <skill id="10803" levels="1" name="Time Bomb" > 
+    <!-- Boom! -->
         <set name="target" val="TARGET_NONE" /> 
         <set name="skillType" val="NOTDONE" /> 
         <set name="operateType" val="OP_ACTIVE" /> 
         <for /> 
     </skill>
-    <skill id="10804" levels="1" name="Предсказанная Гибель" > 
+    <skill id="10804" levels="1" name="Bullseye" > 
+    <!-- Boom! -->
         <set name="target" val="TARGET_NONE" /> 
         <set name="skillType" val="NOTDONE" /> 
         <set name="operateType" val="OP_ACTIVE" /> 
         <for /> 
     </skill>
-	<skill id="10805" levels="4" name="Молниеносность">
+	<skill id="10805" levels="4" name="Quick Charge">
+    <!-- Quickly moves 500 units of distance forward. -->
 		<table name="#magicLevel">89 92 95 99</table>
 		<table name="#flyRadius">500 600 700 800</table>	 
        	<table name="#mpConsume2">42 44 46 48</table>
@@ -91,7 +97,8 @@
 		<set name="flyType" val="DUMMY" />
 		<set name="flyRadius" val="#flyRadius" />
 	</skill>
-	<skill id="10806" levels="1" name="Ice Trap">
+	<skill id="10806" levels="1" name="Frost Trap">
+    <!-- Decreases Speed, Atk. Spd. and Casting Spd. -->
 		<set name="magicLevel" val="85" />
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -104,7 +111,8 @@
 		<set name="trapNpcId" val="13037" />
 		<set name="summonType" val="trap" />
 	</skill>
-	<skill id="10807" levels="1" name="Гравитационная Ловушка">
+	<skill id="10807" levels="1" name="Gravity Trap">
+    <!-- Inflicted with Hold and unable to move. -->
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SUMMON" />
@@ -116,13 +124,15 @@
 		<set name="summonType" val="trap" />
 		<for />
 	</skill>
-    <skill id="10808" levels="1" name="Предсказанная Гибель" > 
+    <skill id="10808" levels="1" name="Decoy Provocation" > 
+    <!-- Decoy's provocation. Cannot change the target. -->
         <set name="target" val="TARGET_NONE" /> 
         <set name="skillType" val="NOTDONE" /> 
         <set name="operateType" val="OP_ACTIVE" /> 
         <for /> 
     </skill>
-	<skill id="10809" levels="1" name="Выживание"> 
+	<skill id="10809" levels="1" name="Survival Movement"> 
+    <!-- P. Evasion + 15. Disappears after 4 strikes. -->
        	<table name="#mpConsume2">54</table>
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="500" />

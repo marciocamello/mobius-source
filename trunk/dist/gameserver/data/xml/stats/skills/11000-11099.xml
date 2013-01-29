@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-    <skill id="11000" levels="1" name="Обездвиживающая Атака Лучника">
+    <skill id="11000" levels="1" name="">
+    <!-- Attacks long-range enemies. Hurls arrows like rain near the target to inflict damage with 19158 damage added to P. Atk. Bow/crossbow required. Over-hit. -->
         <table name="#power">19158</table>
         <table name="#element">none</table>
         <table name="#mpConsume2">57</table>
@@ -25,12 +26,8 @@
         </cond>
         <for/>
     </skill>
-    <!-- Волшебник Фео -->
-    <skill id="11001" levels="1" name="Великое Владение Оружием">
-        <!--
-          Физ. Атк. +83, Маг. Атк. +104, Скор. Маг. +23%. Дает шанс обнулить или увеличить в два раза время перезарядки умений.
-          Зависит от ИНТ.
-       -->
+    <skill id="11001" levels="1" name="Superior Weapon Mastery">
+    <!-- P. Atk. + 83, M. Atk. + 104, and Casting Spd. + 23%. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your INT. -->
         <table name="#pAtk">83</table>
         <table name="#mAtk">104</table>
         <set name="magicLevel" val="85"/>
@@ -48,10 +45,8 @@
             <mul order="0x30" stat="mAtkSpd" val="1.23"/>
         </for>
     </skill>
-    <skill id="11002" levels="1" name="Великое Владение Магической Броней">
-        <!--
-          Физ. Защ. +72 при использовании магических доспехов
-      -->
+    <skill id="11002" levels="1" name="Superior Robe Mastery">
+    <!-- Max HP + 4447, P. Def. + 72 and M. Def. + 300 when equipped with a Robe. -->
         <table name="#pDef">72</table>
         <set name="armorAllowed" val="Robe"/>
         <set name="target" val="TARGET_SELF"/>
@@ -68,13 +63,8 @@
             </add>
         </for>
     </skill>
-    <skill id="11003" levels="1" name="Великая Антимагия">
-        <!--
-          Увеличивает ИНТ на 2.
-          Увеличивает Маг. Защ. на 139, сопротивление Маг. Атк. на 35%.
-          Также в течение 10 сек. после получения урона увеличивает Маг. Защ. и сопротивление стихиям.
-      -->
-        <!-- TODO: Добавить Тригет скил хз пока не нашёл какой. -->
+    <skill id="11003" levels="1" name="Superior Anti Magic">
+    <!-- INT + 2, M. Def. + 139, resistance to magic attack + 35%. When receiving damage, there is a chance of increasing M. Def. and attributes resistance for 10 seconds. -->
         <table name="#mDef">139</table>
         <set name="target" val="TARGET_SELF"/>
         <set name="magicLevel" val="85"/>
@@ -90,10 +80,8 @@
             <add order="0x40" stat="magicResist" val="35"/>
         </for>
     </skill>
-    <skill id="11004" levels="1" name="Великое Владение Символами">
-        <!--
-          Увеличивает Маг. Атк. на 5%, бонус восстановления MP +20% при использовании Символа.
-      -->
+    <skill id="11004" levels="1" name="Superior Sigil Mastery">
+    <!-- When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery Bonus by 20%. -->
         <set name="target" val="TARGET_SELF"/>
         <set name="magicLevel" val="85"/>
         <set name="relationSkillsId" val="925"/>
@@ -108,11 +96,8 @@
             </mul>
         </for>
     </skill>
-    <skill id="11005" levels="1" name="Великий Мастер Магии">
-        <!--
-          Увеличивает ИНТ на 2.
-          Также увеличивает Маг. Атк., Скор. Маг., шанс Крит. Атк. магией на 6% и уменьшает расход MP на 6%.
-      -->
+    <skill id="11005" levels="1" name="Superior Wizard Mastery">
+    <!-- INT + 2 and increases M. Atk., Casting Spd., and M. Critical Rate by + 6%. Decreases skill MP Consumption by 6%. -->
         <set name="magicLevel" val="85"/>
         <set name="operateType" val="OP_PASSIVE"/>
         <set name="relationSkillsId" val="832;212;228;626;285"/>
@@ -127,10 +112,8 @@
             <mul order="0x30" stat="mpDanceConsume" val="0.6"/>
         </for>
     </skill>
-    <skill id="11006" levels="1" name="Великое Сопротивление Стихиям">
-        <!--
-          Увеличивает ИНТ на 2, сопротивление удержанию, усыплению, кровотечению, ментальным атакам, яду на 30.
-      -->
+    <skill id="11006" levels="1" name="Superior Mental Resistance">
+    <!-- INT + 2 and resistance to hold/sleep/mind/poison/bleed attacks + 30. -->
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="relationSkillsId" val="329;328"/>
@@ -144,7 +127,8 @@
             <add order="0x40" stat="poisonResist" val="30"/>
         </for>
     </skill>
-    <skill id="11007" levels="1" name="Истинный Огонь">
+    <skill id="11007" levels="1" name="Fire Stance">
+    <!-- Bestows the property of Fire to magic spells cast. -->
         <table name="#mp">0.01</table>
         <table name="#mpConsume2">30</table>
         <set name="reuseDelay" val="2000"/>
@@ -154,13 +138,13 @@
         <set name="skillType" val="CONT"/>
         <set name="operateType" val="OP_TOGGLE"/>
         <for>
-            <effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="isaElement" time="5"
-                    val="#mp">
+            <effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="isaElement" time="5" val="#mp">
                 <add order="0x40" stat="attackFire" val="20"/>
             </effect>
         </for>
     </skill>
-    <skill id="11008" levels="1" name="Истинная Вода">
+    <skill id="11008" levels="1" name="Water Stance">
+    <!-- Bestows the property of Water to magic spells cast. -->
         <table name="#mp">0.01</table>
         <table name="#mpConsume2">40</table>
         <set name="reuseDelay" val="2000"/>
@@ -170,13 +154,13 @@
         <set name="skillType" val="CONT"/>
         <set name="operateType" val="OP_TOGGLE"/>
         <for>
-            <effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="isaElement" time="5"
-                    val="#mp">
+            <effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="isaElement" time="5" val="#mp">
                 <add order="0x40" stat="attackWater" val="20"/>
             </effect>
         </for>
     </skill>
-    <skill id="11009" levels="1" name="Истинный Ветер">
+    <skill id="11009" levels="1" name="Wind Stance">
+    <!-- Bestows the property of Wind to magic spells cast. -->
         <table name="#mp">0.01</table>
         <table name="#mpConsume2">30</table>
         <set name="reuseDelay" val="2000"/>
@@ -186,13 +170,13 @@
         <set name="skillType" val="CONT"/>
         <set name="operateType" val="OP_TOGGLE"/>
         <for>
-            <effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="isaElement" time="5"
-                    val="#mp">
+            <effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="isaElement" time="5" val="#mp">
                 <add order="0x40" stat="attackWind" val="20"/>
             </effect>
         </for>
     </skill>
-    <skill id="11010" levels="1" name="Истинная Земля">
+    <skill id="11010" levels="1" name="Earth Stance">
+    <!-- Bestows the property of Earth to magic spells cast. -->
         <table name="#mp">0.01</table>
         <table name="#mpConsume2">20</table>
         <set name="reuseDelay" val="2000"/>
@@ -202,18 +186,13 @@
         <set name="skillType" val="CONT"/>
         <set name="operateType" val="OP_TOGGLE"/>
         <for>
-            <effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="isaElement" time="5"
-                    val="#mp">
+            <effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="isaElement" time="5" val="#mp">
                 <add order="0x40" stat="attackEarth" val="20"/>
             </effect>
         </for>
     </skill>
-    <skill id="11011" levels="8" name="Шип Стихии">
-        <!--
-          Атакует врага силой 4 стихий. Мощность 121. Уменьшает сопротивление врага атакующей стихии. Сверхудар.
-          Этот скил не должен юзатся без активированой ауры
-      -->
-        <!-- TODO: При использовании двойного колдовства используются умения 4х стихий -->
+    <skill id="11011" levels="8" name="Elemental Spike">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 121 power added to attribute damage. In addition, decreases the target's attribute resistance according to the Elemental Stance used. Over-hit. -->
 		<table name="#powerPvP">0</table>
 		<table name="#pwr">121 122 126 129 133 136 140 143</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table> 
@@ -242,7 +221,8 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
     </skill>
-    <skill id="11012" levels="8" name="Шип Стихии (Огонь)">
+    <skill id="11012" levels="8" name="Elemental Spike (fire)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 121 power added to attribute damage. In addition, decreases the target's attribute resistance according to the Elemental Stance used. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">121 122 126 129 133 136 140 143</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -267,7 +247,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11013" levels="8" name="Шип Стихии (Вода)">
+    <skill id="11013" levels="8" name="Elemental Spike (water)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 121 power added to attribute damage. In addition, decreases the target's attribute resistance according to the Elemental Stance used. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">121 122 126 129 133 136 140 143</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -292,7 +273,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11014" levels="8" name="Шип Стихии (Ветер)">
+    <skill id="11014" levels="8" name="Elemental Spike (wind)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 121 power added to attribute damage. In addition, decreases the target's attribute resistance according to the Elemental Stance used. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">121 122 126 129 133 136 140 143</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -317,7 +299,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11015" levels="8" name="Шип Стихии (Земля)">
+    <skill id="11015" levels="8" name="Elemental Spike (earth)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 121 power added to attribute damage. In addition, decreases the target's attribute resistance according to the Elemental Stance used. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">121 122 126 129 133 136 140 143</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -342,10 +325,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11016" levels="8" name="Шип Стихии (4 сихии)">
-        <!--
-          Возможно это комбо
-      -->
+    <skill id="11016" levels="8" name="Elemental Spike (4 attributes)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 121 power added to attribute damage. In addition, decreases the target's attribute resistance according to the Elemental Stance used. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">121 122 126 129 133 136 140 143</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -364,13 +345,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11017" levels="8" name="Стихийное Разрушение">
-        <!--
-          Атакует врага силой 4 стихий. Мощность 144.
-          Также придает дополнительный эффект: магия огня - страх, магия воды - снижение Скорости, магия ветра - отбрасывание цели, магия земли - удержание, Двойной Бросок - оглушение.
-          Сверхудар.
-          Этот скил НЕ юзаем
-      -->
+    <skill id="11017" levels="8" name="Elemental Crash">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 144 power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">121 122 126 129 133 136 140 143</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -402,7 +378,8 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
     </skill>
-    <skill id="11018" levels="8" name="Стихийное Разрушение (Огонь)">
+    <skill id="11018" levels="8" name="Elemental Crash (fire)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 144 power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">121 122 126 129 133 136 140 143</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -421,7 +398,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11019" levels="8" name="Стихийное Разрушение (Вода)">
+    <skill id="11019" levels="8" name="Elemental Crash (water)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 144 power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">121 122 126 129 133 136 140 143</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -440,7 +418,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11020" levels="8" name="Стихийное Разрушение (Ветер)">
+    <skill id="11020" levels="8" name="Elemental Crash (wind)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 144 power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">121 122 126 129 133 136 140 143</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -459,7 +438,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11021" levels="8" name="Стихийное Разрушение (Земля)">
+    <skill id="11021" levels="8" name="Elemental Crash (earth)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 144 power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">121 122 126 129 133 136 140 143</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -478,8 +458,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11022" levels="8" name="Стихийное Разрушение (4 стихии)">
-        <!-- Комбо скил -->
+    <skill id="11022" levels="8" name="Elemental Crash (4 attributes)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 144 power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">121 122 126 129 133 136 140 143</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -498,11 +478,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11023" levels="8" name="Буйство Стихии">
-        <!--
-          Атакует врага силой 4 стихий. Сверхудар. Мощность 356.
-          Данный скил не должен юзатся
-      -->
+    <skill id="11023" levels="8" name="Elemental Destruction">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 356 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <table name="#pwr">356 367 377 387 397 407 418 428</table>
@@ -521,7 +498,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11024" levels="8" name="Буйство Стихии (Огонь)">
+    <skill id="11024" levels="8" name="Elemental Destruction (fire)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 356 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <table name="#pwr">356 367 377 387 397 407 418 428</table>
@@ -540,7 +518,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11025" levels="8" name="Буйство Стихии (Вода)">
+    <skill id="11025" levels="8" name="Elemental Destruction (water)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 356 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <table name="#pwr">356 367 377 387 397 407 418 428</table>
@@ -559,7 +538,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11026" levels="8" name="Буйство Стихии (Ветер)">
+    <skill id="11026" levels="8" name="Elemental Destruction (wind)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 356 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <table name="#pwr">356 367 377 387 397 407 418 428</table>
@@ -578,7 +558,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11027" levels="8" name="Буйство Стихии (Земля)">
+    <skill id="11027" levels="8" name="Elemental Destruction (earth)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 356 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <table name="#pwr">356 367 377 387 397 407 418 428</table>
@@ -597,8 +578,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11028" levels="1" name="Буйство Стихии (4 стихии)">
-        <!-- Комбо скил -->
+    <skill id="11028" levels="1" name="Elemental Destruction (4 attributes)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target with 356 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <table name="#pwr">356 367 377 387 397 407 418 428</table>
@@ -617,10 +598,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11029" levels="5" name="Дыхание Смерти">
-        <!--
-          В течение 15 сек. каждую секунду понижает HP цели на 480.
-      -->
+    <skill id="11029" levels="5" name="Death Breath">
+    <!-- Decreases the target's HP by 480 per second for 15 seconds. -->
         <table name="#dmg">480 494 509 523 537</table>
         <table name="#magicLevel">85 88 91 94 97</table>
         <table name="#power">8 9 10 11 12</table>
@@ -643,11 +622,8 @@
             <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
         </for>
     </skill>
-    <skill id="11030" levels="4" name="Лорд Смерти">
-        <!--
-          В течение 10 сек. атакует врага и каждую секунду наносит 25 ед. урона. 100% получаемого целью урона переводит в HP.
-          WTF?
-      -->
+    <skill id="11030" levels="4" name="Death Siphon">
+    <!-- For 10 seconds, drains the target's life with 25 power per second. Absorbs 100% of the damage inflicted as HP. -->
         <table name="#dot">25 50 75 100</table>
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">49 50 51 52</table>
@@ -663,10 +639,10 @@
 		<set name="absorbPart" val="1" />
         <for>
             <effect count="15" name="DamOverTime" time="1" val="#dot"/>
-            
         </for>
     </skill>
-    <skill id="11032" levels="4" name="Рев Смерти">
+    <skill id="11032" levels="4" name="Death Howl">
+    <!-- Attacks nearby enemies with 143 power and knock them back. Over-hit. -->
         <table name="#power">126 130 140 146</table>
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">245 246 247 248</table>
@@ -685,7 +661,8 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11033" levels="3" name="Giant fist">
+    <skill id="11033" levels="3" name="Damaged Area">
+    <!-- Momentarily incurs damage. All speeds are decreased. -->
         <table name="#power">130 140 146</table>
         <table name="#magicLevel">85 87 88</table>
         <table name="#mpConsume2">50 51 52</table>
@@ -696,8 +673,6 @@
         <set name="flyRadius" val="280"/>
         <set name="flyType" val="THROW_HORIZONTAL"/>
         <set name="isDebuff" val="true"/>
-
-
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="power" val="#power"/>
         <set name="skillRadius" val="350"/>
@@ -707,11 +682,8 @@
         <set name="target" val="TARGET_AURA"/>
         <for/>
     </skill>
-    <skill id="11034" levels="8" name="Стихийная Волна">
-        <!--
-          Атакует цель и врагов вокруг нее силой 4 стихий, нанося стихийный урон. Сверхудар. Мощность 191.
-          Этот скил не должен юзатся без ауры!
-      -->
+    <skill id="11034" levels="8" name="Elemental Blast">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target and surrounding enemies with 191 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">191 194 199 205 210 216 221 227</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -732,7 +704,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11035" levels="8" name="Стихийная Волна (Огонь)">
+    <skill id="11035" levels="8" name="Elemental Blast (fire)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target and surrounding enemies with 191 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">191 194 199 205 210 216 221 227</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -753,7 +726,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11036" levels="8" name="Стихийная Волна (Вода)">
+    <skill id="11036" levels="8" name="Elemental Blast (water)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target and surrounding enemies with 191 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">191 194 199 205 210 216 221 227</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -774,7 +748,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11037" levels="8" name="Стихийная Волна (Ветер)">
+    <skill id="11037" levels="8" name="Elemental Blast (wind)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target and surrounding enemies with 191 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">191 194 199 205 210 216 221 227</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -795,7 +770,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11038" levels="8" name="Стихийная Волна (Земля)">
+    <skill id="11038" levels="8" name="Elemental Blast (earth)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target and surrounding enemies with 191 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">191 194 199 205 210 216 221 227</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -816,8 +792,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11039" levels="8" name="Стихийная Волна (4 стихии)">
-        <!-- А это уже КОМБО скил -->
+    <skill id="11039" levels="8" name="Elemental Blast (4 attributes)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target and surrounding enemies with 191 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">191 194 199 205 210 216 221 227</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -838,11 +814,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11040" levels="8" name="Последний Стихийный Шторм">
-        <!--
-          Атакует цель и врагов вокруг нее силой 4 стихий, нанося стихийный урон. Сверхудар. Мощность 238.
-          Этот скил не должен юзатся без ауры
-      -->
+    <skill id="11040" levels="8" name="Elemental Storm">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target and surrounding enemies with 238 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">238 245 252 259 265 272 279 286</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -863,7 +836,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11041" levels="8" name="Последний Стихийный Шторм (Огонь)">
+    <skill id="11041" levels="8" name="Elemental Storm (Fire)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target and surrounding enemies with 238 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">238 245 252 259 265 272 279 286</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -884,7 +858,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11042" levels="8" name="Последний Стихийный Шторм (Вода)">
+    <skill id="11042" levels="8" name="Elemental Storm (water)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target and surrounding enemies with 238 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">238 245 252 259 265 272 279 286</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -905,7 +880,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11043" levels="8" name="Последний Стихийный Шторм (Ветер)">
+    <skill id="11043" levels="8" name="Elemental Storm (wind)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target and surrounding enemies with 238 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">238 245 252 259 265 272 279 286</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -926,7 +902,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11044" levels="8" name="Последний Стихийный Шторм (Земля)">
+    <skill id="11044" levels="8" name="Elemental Storm (earth)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target and surrounding enemies with 238 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">238 245 252 259 265 272 279 286</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -947,8 +924,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11045" levels="8" name="Последний Стихийный Шторм (4 стихии)">
-        <!-- А это уже комбо скил -->
+    <skill id="11045" levels="8" name="Elemental Storm (4 attributes)">
+    <!-- Inflicts a magic attack imbued with elemental properties on the target and surrounding enemies with 238 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#pwr">238 245 252 259 265 272 279 286</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -969,7 +946,8 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11046" levels="2" name="Soul Magician">
+    <skill id="11046" levels="2" name="Wizard Spirit">
+    <!-- For 30 seconds, increases M. Atk. by 20%, M. Critical Rate by 50%, P. Def. and M. Def. by 20%, and Evasion by 2. Decreases MP Consumption for magic skills by 50%. When attacked, there is a chance  of inflicting magic damage on the enemy. -->
         <table name="#mAtk">1.2 1.3</table>
         <table name="#Crt">1.5 1.6</table>
         <table name="#magicLevel">85 86</table>
@@ -1006,7 +984,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11047" levels="6" name="Путь Зла">
+    <skill id="11047" levels="6" name="Devil's Curse">
+    <!-- Attacks the target with 143 power. For 15 seconds, decreases the target's M. Atk., Casting Spd., P. Critical Rate, M. Critical Rate, P. Def., M. Def., and Speed by 10%. Also  decreases P. Evasion by 6. -->
         <table name="#pwr">140 146 156 160 165 170</table>
         <table name="#magicLevel">85 86 87 88 89 90</table>
         <table name="#mpConsume2">47 48 49 50 51 52</table>
@@ -1052,7 +1031,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11048" levels="6" name="Wide variations in the Devil">
+    <skill id="11048" levels="6" name="Mass Devil's Curse">
+    <!-- Attacks the target and surrounding enemies with 114 power. Absorbs 25% of the damage inflicted as HP. Additionally, for 10 seconds, decreases the target's P. Def., M. Atk., Casting Spd., M. Def., P. Critical Rate, M. Critical Rate, and Speed by 8%. Also decreases accuracy by 12. -->
         <table name="#pwr">114 116 121 126 131 136</table>
         <table name="#magicLevel">85 86 87 88 89 90</table>
         <table name="#mpConsume2">47 48 49 50 51 52</table>
@@ -1102,7 +1082,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11049" levels="2" name="Свет Очищения">
+    <skill id="11049" levels="2" name="Ignore Divinity">
+    <!-- Cancels one of the target's buffs. -->
         <table name="#effectPoint">633 644</table>
         <table name="#negateCount">1 2</table>
         <table name="#magicLevel">85 86</table>
@@ -1138,7 +1119,8 @@
         </enchant3>
         <for/>
     </skill>
-    <skill id="11050" levels="4" name="Hellbaund">
+    <skill id="11050" levels="4" name="Hell Binding">
+    <!-- Lifts and holds the target into the air. -->
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">47 48 49 50</table>
         <set name="reuseDelay" val="120000"/>
@@ -1164,7 +1146,8 @@
             <effect name="Paralyze" time="10" val="0" abnormal="floatroot" stackType="paralyze" stackOrder="1"/>
         </for>
     </skill>
-    <skill id="11051" levels="4" name="Адские Оковы">
+    <skill id="11051" levels="4" name="Hell Binding">
+    <!-- Lifts and holds the target into the air. -->
         <table name="#magicLevel">85 86 87 88</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="isDebuff" val="true"/>
@@ -1183,7 +1166,8 @@
             <effect name="Paralyze" time="10" val="0" abnormal="floatroot" stackType="paralyze" stackOrder="1"/>
         </for>
     </skill>
-    <skill id="11052" levels="4" name="Mass Hellbaund">
+    <skill id="11052" levels="4" name="Mass Hell Binding">
+    <!-- Lifts and holds the target and nearby enemies into the air for 8 seconds, and inflicts 100 damage per second. -->
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">247 248 249 250</table>
         <set name="reuseDelay" val="300000"/>
@@ -1209,7 +1193,8 @@
             <effect abnormal="bleeding" count="20" name="Bleed" stackType="Bleed" time="10" val="100"/>
         </for>
     </skill>
-    <skill id="11053" levels="4" name="Адские Оковы - Массовое">
+    <skill id="11053" levels="4" name="Mass Hell Binding">
+    <!-- Lifts and holds the target and nearby enemies into the air for 8 seconds, and inflicts 100 damage per second. -->
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">247 248 249 250</table>
         <set name="reuseDelay" val="300000"/>
@@ -1234,7 +1219,8 @@
             <effect abnormal="bleeding" count="20" name="Bleed" stackType="Bleed" time="10" val="100"/>
         </for>
     </skill>
-    <skill id="11054" levels="1" name="Состояние Удержания">
+    <skill id="11054" levels="1" name="Yoke Status">
+    <!-- Raised into the air and instantly immobilized. -->
         <table name="#magicLevel">85</table>
         <table name="#mpConsume2">247</table>
         <set name="reuseDelay" val="10000"/>
@@ -1258,7 +1244,8 @@
             <effect name="Paralyze" time="10" val="0" abnormal="floatroot" stackType="paralyze" stackOrder="1"/>
         </for>
     </skill>
-    <skill id="11055" levels="7" name="Смертельный Страх">
+    <skill id="11055" levels="7" name="Death Fear">
+    <!-- For 10 seconds, inflicts Fear on the target and decreases Speed by 40%. -->
 		<table name="#spd">0.6 0.55 0.5 0.45 0.4 0.35 0.3</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume1">14 14 15 15 16 17 17</table>
@@ -1303,7 +1290,8 @@
 			</effect>
 		</for>
     </skill>
-    <skill id="11056" levels="8" name="Mass Eye of Death">
+    <skill id="11056" levels="8" name="Mass Death Fear">
+    <!-- For 10 seconds, inflicts Fear on the target and nearby enemies and decreases Speed by 25%. -->
         <table name="#spd">0.75 0.7 0.65 0.6 0.55 0.5 0.45 0.4</table>
         <table name="#magicLevel">85 86 87 88 89 90 91</table>
         <table name="#mpConsume2">247 248 249 250 251 255 256 258</table>
@@ -1341,7 +1329,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11057" levels="6" name="Последняя Вспышка">
+    <skill id="11057" levels="6" name="Magical Evasion">
+    <!-- Attacks nearby enemies with 121 power. Inflicts Stun, cancels enemies' targets, and teleports your avatar to the back. -->
 		<table name="#pwr">121 124 129 135 140 145</table>
 		<table name="#mpConsume1">14 14 15 16 17 18</table>
 		<table name="#mpConsume2">56 58 62 66 70 74</table>
@@ -1391,7 +1380,8 @@
 			<effect name="Stun" time="5" val="0" effectPower="99" effectType="STUN" stackOrder="1" stackType="stun" />
 		</for>
     </skill>
-    <skill id="11058" levels="3" name="Черная Дыра">
+    <skill id="11058" levels="3" name="Shadow Snare">
+    <!-- Drags enemies around a target toward it. -->
 		<table name="#mpConsume1">47 50 53</table>
 		<table name="#mpConsume2">191 202 214</table>
 		<table name="#magicLevel">94 94 97</table>
@@ -1419,7 +1409,8 @@
             <effect name="Symbol" time="1" count="1" />
         </for>
 	</skill>
-    <skill id="11059" levels="1" name="Прореха в Пространстве">
+    <skill id="11059" levels="1" name="Shadow Snare Zone">
+    <!-- Drags enemies around a target toward it. -->
         <table name="#mpConsume2">123 127 132 136 140 144</table>
         <table name="#magicLevel">89 91 93 95 97 99</table>
         <set name="mpConsume2" val="#mpConsume2"/>
@@ -1438,7 +1429,8 @@
             <effect count="1" name="TargetToOwner" time="1" val="0"/>
         </for>
     </skill>
-    <skill id="11062" levels="4" name="Wind Wanderer">
+    <skill id="11062" levels="4" name="Air Rider">
+    <!-- Increases Speed by 60 for 15 seconds. The effect disappears when attacked. -->
         <table name="#mpInitialConsume">6 10 14 18</table>
         <table name="#runSpd">60 70 80 90</table>
         <table name="#aggroPoints">331 457 587 712</table>
@@ -1473,13 +1465,15 @@
             </effect>
         </for>
     </skill>
-    <skill id="11063" levels="1" name="Снять Парящее Состояние">
+    <skill id="11063" levels="1" name="Floating Blow">
+    <!-- none -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11064" levels="8" name="Advanced Body To Mind">
+    <skill id="11064" levels="8" name="Ultimate Body To Mind">
+    <!-- Sacrifices 384 HP to recover 400 MP. -->
         <table name="#aggroPoints">243 379 495 549 611 725 847 985</table>
         <table name="#HP">384 388 396 404 412 420 428 436</table>
         <table name="#MP">400 412 436 450 474 499 523 647</table>
@@ -1499,7 +1493,8 @@
         <set name="aggroPoints" val="#aggroPoints"/>
         <for/>
     </skill>
-    <skill id="11065" levels="1" name="Неожиданное Препятствие">
+    <skill id="11065" levels="1" name="Arcane Barrier">
+    <!-- For 20 seconds, 20% of the damage received will be applied to MP instead of HP. When attacked, reflects 10% the damage. When MP reaches 0, the skill effect is removed. -->
   		<set name="aggroPoints" val="204" />
   		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="true" />
@@ -1518,7 +1513,8 @@
 			</effect>
         </for>
     </skill>
-    <skill id="11066" levels="1" name="Wave of Death">
+    <skill id="11066" levels="1" name="Unleash Hell">
+    <!-- Inflicts magic damage on the target with 126 power. Also inflicts Fear and Burns. Over-hit. -->
         <table name="#mpConsume2">452</table>
         <set name="reuseDelay" val="600000"/>
         <set name="hitTime" val="6700"/>
@@ -1534,14 +1530,14 @@
         <set name="isDebuff" val="true"/>
         <set name="elementPower" val="100"/>
         <set name="skillType" val="MDAM"/>
-
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillRadius" val="500"/>
         <for>
             <effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="10" val="0"/>
         </for>
     </skill>
-    <skill id="11067" levels="1" name="The Gates of Hell">
+    <skill id="11067" levels="1" name="Death Mass Unleash Hell">
+    <!-- Inflicts magic damage on the target and nearby enemies with 126 power. Also inflicts Fear and Burns. Over-hit. -->
         <table name="#mpConsume2">1652</table>
         <set name="reuseDelay" val="600000"/>
         <set name="hitTime" val="6750"/>
@@ -1553,14 +1549,14 @@
         <set name="power" val="956"/>
         <set name="target" val="TARGET_AREA"/>
         <set name="skillType" val="MDAM"/>
-
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillRadius" val="900"/>
         <for>
             <effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="10" val="0"/>
         </for>
     </skill>
-    <skill id="11068" levels="4" name="Double Castr">
+    <skill id="11068" levels="4" name="Double Casting">
+    <!-- For 30 seconds, you can cast elemental spells with both hands. Decreases MP Consumption by 50% and magic skill cooldown by 5%. Eliminates magic cancel during magic use. -->
         <table name="#mpInitialConsume">6 10 14 18</table>
         <table name="#aggroPoints">331 457 587 701</table>
         <table name="#consume">0.5 0.4 0.3 0.2</table>
@@ -1575,7 +1571,6 @@
         <set name="mpInitialConsume" val="#mpInitialConsume"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
-
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="aggroPoints" val="#aggroPoints"/>
         <for>
@@ -1585,10 +1580,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11072" levels="1" name="Огонь - Удар Стихии">
-        <!--
-          При использовании магии огня понижает устойчивость врага атакам огнем.
-      -->
+    <skill id="11072" levels="1" name="Fire - Elemental Spike">
+    <!-- The target's Fire resistance is decreased. -->
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_ONE"/>
         <set name="skillType" val="DEBUFF"/>
@@ -1599,7 +1592,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11073" levels="1" name="Вода - Удар Стихии">
+    <skill id="11073" levels="1" name="Water - Elemental Spike">
+    <!-- The target's Water resistance is decreased. -->
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_ONE"/>
         <set name="skillType" val="DEBUFF"/>
@@ -1610,7 +1604,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11074" levels="1" name="Ветер - Удар Стихии">
+    <skill id="11074" levels="1" name="Wind - Elemental Spike">
+    <!-- The target's Wind resistance is decreased. -->
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_ONE"/>
         <set name="skillType" val="DEBUFF"/>
@@ -1621,7 +1616,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11075" levels="1" name="Земля - Удар Стихии">
+    <skill id="11075" levels="1" name="Earth - Elemental Spike">
+    <!-- The target's Earth resistance is decreased. -->
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_ONE"/>
         <set name="skillType" val="DEBUFF"/>
@@ -1632,7 +1628,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11076" levels="1" name="Земля - Удар Стихии">
+    <skill id="11076" levels="1" name="Double Casting - Elemental Spike">
+    <!-- The target's Fire/Water/Wind/Earth resistances are decreased. -->
         <table name="#earth">10</table>
         <table name="#activateRate">80</table>
         <table name="#abnormal_time">30</table>
@@ -1653,7 +1650,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11077" levels="3" name="Ослабление Сопротивления Огню">
+    <skill id="11077" levels="3" name="Decrease Fire Resistance">
+    <!-- Decreases Fire resistance by 20 for 3 seconds. -->
         <table name="#fire">20 50 100</table>
         <table name="#activateRate">80</table>
         <table name="#abnormal_time">3 3 10</table>
@@ -1675,7 +1673,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11078" levels="1" name="Ослабление Сопротивления Вода">
+    <skill id="11078" levels="1" name="Decrease Water Resistance">
+    <!-- Decreases Water resistance by 20 for 3 seconds. -->
         <table name="#water">20 50 100</table>
         <table name="#activateRate">80</table>
         <table name="#abnormal_time">3 3 10</table>
@@ -1697,7 +1696,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11079" levels="1" name="Ослабление Сопротивления Ветер">
+    <skill id="11079" levels="1" name="Decrease Wind Resistance">
+    <!-- Decreases Wind resistance by 20 for 3 seconds. -->
         <table name="#wind">20 50 100</table>
         <table name="#activateRate">80</table>
         <table name="#abnormal_time">3 3 10</table>
@@ -1719,7 +1719,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11080" levels="3" name="Ослабление Сопротивления Земле">
+    <skill id="11080" levels="3" name="Decrease Earth Resistance">
+    <!-- Decreases Earth resistance by 20 for 3 seconds. -->
         <table name="#earth">20 50 100</table>
         <table name="#activateRate">80</table>
         <table name="#abnormal_time">3 3 10</table>
@@ -1741,7 +1742,8 @@
             </effect>
         </for>
     </skill>
-    <skill id="11081" levels="1" name="Ослабление сопротивления 4-м Стихиям">
+    <skill id="11081" levels="1" name="Decrease Fire/Water/Wind/Earth Resistances">
+    <!-- Decreases Fire/Water/Wind/Earth resistances by 20 for 3 seconds. -->
         <table name="#Vul">20 50 100</table>
         <table name="#activateRate">80</table>
         <table name="#abnormal_time">3 3 10</table>
@@ -1766,73 +1768,85 @@
             </effect>
         </for>
     </skill>
-    <skill id="11082" levels="1" name="Огонь - Стихийное Разрушение">
+    <skill id="11082" levels="1" name="Fire - Elemental Crash">
+    <!-- The target is inflicted with Fear. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11083" levels="1" name="Вода - Стихийное Разрушение">
+    <skill id="11083" levels="1" name="Water - Elemental Crash">
+    <!-- The target's Speed is reduced. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11084" levels="1" name="Ветер - Стихийное Разрушение">
+    <skill id="11084" levels="1" name="Wind - Elemental Crash">
+    <!-- The target is Knocked Back. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11085" levels="1" name="Земля - Стихийное Разрушение">
+    <skill id="11085" levels="1" name="Earth - Elemental Crash">
+    <!-- The target is inflicted with Hold. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11086" levels="1" name="DC - Стихийное Разрушение">
+    <skill id="11086" levels="1" name="Double Casting - Elemental Crash">
+    <!-- The target is inflicted with Stun. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11087" levels="1" name="Стихийное Разрушение (Огонь)">
+    <skill id="11087" levels="1" name="Elemental Crash (fire)">
+    <!-- Inflicts fear and hold on the target. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11088" levels="1" name="Стихийное Разрушение (Вода)">
+    <skill id="11088" levels="1" name="Elemental Crash (water)">
+    <!-- Decreases the target's Speed. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11089" levels="1" name="Стихийное Разрушение (Ветер)">
+    <skill id="11089" levels="1" name="Elemental Crash (wind)">
+    <!-- Knock Back the target. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11090" levels="1" name="Стихийное Разрушение (Земля)">
+    <skill id="11090" levels="1" name="Elemental Crash (earth)">
+    <!-- Inflicts hold on the target. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11091" levels="1" name="Стихийное Разрушение (4 стихии)">
+    <skill id="11091" levels="1" name="Elemental Crash (4 attributes)">
+    <!-- Inflicts stun on the target. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11092" levels="1" name="Болевой Шок">
+    <skill id="11092" levels="1" name="Damaged Area">
+    <!-- Momentarily incurs damage. All speeds are decreased. -->
         <set name="target" val="TARGET_NONE"/>
         <set name="skillType" val="NOTDONE"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for/>
     </skill>
-    <skill id="11093" levels="1" name="Самоочищение">
+    <skill id="11093" levels="1" name="Crystal Form">
+    <!-- Cancels Poison/Bleed/Hold/Stun effect. Becomes invincible for 3 seconds and rapidly recovers HP and MP. -->
         <table name="#mpConsume2">72</table>
         <set name="reuseDelay" val="120000"/>
         <set name="hitTime" val="500"/>
@@ -1846,14 +1860,14 @@
         <set name="dispelType" val="negative"/>
         <set name="negateCount" val="5"/>
         <for>
-            <effect abnormal="invul1" count="1" name="Invulnerable" stackOrder="-1" stackType="Invulnerable" time="3"
-                    val="0" cancelOnAction="false">
+            <effect abnormal="invul1" count="1" name="Invulnerable" stackOrder="-1" stackType="Invulnerable" time="3" val="0" cancelOnAction="false">
                 <mul order="0x30" stat="regHp" val="13"/>
                 <mul order="0x30" stat="regMp" val="13"/>
             </effect>
         </for>
     </skill>
-    <skill id="11094" levels="6" name="Последний Прыжок">
+    <skill id="11094" levels="6" name="Magical Charge">
+    <!-- Attacks nearby enemies with 121 power. Inflicts Stun, cancels enemies' targets and teleports your avatar to the front. -->
 		<table name="#pwr">121 124 129 135 140 145</table>
 		<table name="#mpConsume1">14 14 15 16 17 18</table>
 		<table name="#mpConsume2">56 58 62 66 70 74</table>
@@ -1900,7 +1914,8 @@
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" effectType="DEBUFF" />
 		</for>
     </skill>
-    <skill id="11095" levels="1" name="Seal of Suspension">
+    <skill id="11095" levels="1" name="Devil's Sway">
+    <!-- Resets the duration of the target's paralysis, hold, silence, sleep, shock, fear, petrification, and disarm. -->
         <table name="#mpConsume2">192</table>
         <set name="reuseDelay" val="300000"/>
         <set name="hitTime" val="3000"/>

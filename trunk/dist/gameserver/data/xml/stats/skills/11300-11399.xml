@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="11301" levels="8" name="Пространственный Шторм">
+	<skill id="11301" levels="8" name="Dimension Storm">
+    <!-- Attack nearby enemies with 152 Power added to M. Atk. -->
 		<table name="#power">152 154 157 161 165 169 173 177</table>
 		<table name="#magicLevel">85 86 87 88 89 90 91 92</table>
 		<table name="#mpConsume2">70</table>
@@ -22,7 +23,8 @@
 		<set name="soulBoost" val="true" />
 		<for />
 	</skill>
-	<skill id="11302" levels="8" name="Основное Лечение Слуги">
+	<skill id="11302" levels="8" name="Servitor Major Heal">
+    <!-- Heals the servitor with 1488 Power. -->
 		<table name="#effectPoint">711 722 733 743 753 763 772 780</table>
 		<table name="#power">1488 1495 1507 1519 1532 1544 1557 1570</table>
 		<table name="#magicLevel">85 86 87 88 89 90 91 92</table>
@@ -40,7 +42,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for />
 	</skill>
-	<skill id="11303" levels="1" name="Магический Щит Слуги - Массовое">
+	<skill id="11303" levels="1" name="Mass Servitor Magic Barrier">
+    <!-- Increases M. Def. of all servitors by 30% for 30 minutes. -->
 		<table name="#Tab-mDef">1.3</table>
 		<table name="#effectPoint">495</table>
 		<table name="#abnormal_lv">1</table>
@@ -62,7 +65,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11304" levels="1" name="Ускорение Слуги - Массовое">
+	<skill id="11304" levels="1" name="Mass Servitor Haste">
+    <!-- Increases Atk. Spd. of all servitors by 34% for 30 minutes. -->
 		<table name="#Tab-pAtkSpd">41.34</table>
 		<table name="#effectPoint">495</table>
 		<table name="#abnormal_lv">1</table>
@@ -84,7 +88,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11305" levels="1" name="Щит Слуги - Массовое">
+	<skill id="11305" levels="1" name="Mass Servitor Shield">
+    <!-- Increases all servitors' P. Def. by 15% for 30 minutes. -->
 		<table name="#Tab-pDef">1.15</table>
 		<table name="#effectPoint">532</table>
 		<table name="#abnormal_lv">1</table>
@@ -106,7 +111,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11306" levels="1" name="Воодушевление Слуги - Массовое">
+	<skill id="11306" levels="1" name="Mass Servitor Empower">
+    <!-- Increases all servitors' M. Atk. by 79% for 30 minutes. -->
 		<table name="#Tab-mAtk">1.79</table>
 		<table name="#effectPoint">495</table>
 		<table name="#abnormal_lv">1</table>
@@ -128,7 +134,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11307" levels="1" name="Могущество Слуги - Массовое">
+	<skill id="11307" levels="1" name="Mass Servitor Might">
+    <!-- Increases all servitors' P. Atk. by 17% for 30 minutes. -->
 		<table name="#pAtk">1.17</table>
 		<table name="#effectPoint">495</table>
 		<table name="#abnormal_lv">1</table>
@@ -150,7 +157,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11308" levels="1" name="Ускорение Передвижения Слуги - Массовое">
+	<skill id="11308" levels="1" name="Mass Servitor Wind Walk">
+    <!-- Increases Speed of all servitors by 34% for 30 minutes. -->
 		<table name="#runSpd">1.34</table>
 		<table name="#effectPoint">495</table>
 		<table name="#abnormal_lv">1</table>
@@ -172,7 +180,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11309" levels="1" name="Благословение Слуги - Массовое">
+	<skill id="11309" levels="1" name="Mass Servitor Cleanse">
+    <!-- Cancel all servitors' debuffs. -->
 		<table name="#mpConsume2">70</table>
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="3500" />
@@ -187,7 +196,8 @@
 		<set name="negateStackType" val="RunSpeedDown;pAtkSpdDown" />
 		<for />
 	</skill>
-		<skill id="11310" levels="1" name="Абсолютная Защита Слуги - Массовое">
+		<skill id="11310" levels="1" name="Mass Servitor Ultimate Defense">
+    <!-- Increases all servitor's P. Def. by 4680 and M. Def. by 4212 for 60 seconds. -->
 		<set name="magicLevel" val="85" />
 		<table name="#pDef">4680</table>
 		<table name="#mDef">4212</table>
@@ -210,7 +220,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11311" levels="3" name="Удар Набиаропа">
+	<skill id="11311" levels="3" name="Naviarope Strike">
+    <!-- Inflicts a powerful blow. -->
 		<table name="#power">4848 5098 5348</table>
 		<set name="effectPoint" val="679" />
 		<table name="#magicLevel">85 86 87</table>
@@ -234,7 +245,8 @@
 		<set name="element" val="#element" />
 		<for />
 	</skill>
-	<skill id="11312" levels="3" name="Пламя Набиаропа">
+	<skill id="11312" levels="3" name="Naviarope Flame">
+    <!-- Inflicts a powerful long-range attack. -->
 		<table name="#power">4848 5098 5348</table>
 		<set name="effectPoint" val="679" />
 		<table name="#magicLevel">85 86 87</table>
@@ -259,7 +271,8 @@
 		<set name="element" val="#element" />
 		<for />
 	</skill>
-	<skill id="11313" levels="3" name="Взрыв Набиаропа">
+	<skill id="11313" levels="3" name="Naviarope Explosion">
+    <!-- Inflicts a powerful blow to nearby enemies. -->
 		<table name="#power">484 509 534</table>
 		<set name="effectPoint" val="679" />
 		<table name="#magicLevel">85 86 87</table>
@@ -283,7 +296,8 @@
 		<set name="element" val="#element" />
 		<for />
 	</skill>
-	<skill id="11314" levels="3" name="Взрыв Останков">
+	<skill id="11314" levels="3" name="Corpse Blast">
+    <!-- Detonates a corpse to inflict damage on nearby enemies. -->
 		<table name="#power">358 361 364</table>
 		<table name="#mpConsume2">70</table>
 		<set name="reuseDelay" val="5000" />
@@ -300,7 +314,8 @@
 		<set name="skillRadius" val="200" />
 		<for />
 	</skill>
-	<skill id="11315" levels="1" name="Призыв Защиты">
+	<skill id="11315" levels="1" name="Summon Defense">
+    <!-- Increases resistance to bow/crossbows + 50 and M. Def + 50%. -->
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -312,8 +327,8 @@
 			<mul order="0x30" stat="mDef" val="1.5" />
 		</for>
 	</skill>
-	<skill id="11316" levels="1" name="Призыв Духовного Выстрела">
-	<!-- Пока так -->
+	<skill id="11316" levels="1" name="Summon Soulshots">
+    <!-- Summons 1900 Beast Soulshots with 80% probability and 380 Blessed Beast Spiritshots with 20% probability. Consumes 1 Crystal (R-Grade). -->
 		<table name="#magicLevel">85</table>
 		<table name="#SummonMinCount">1900</table>
 		<table name="#SummonMaxCount">1900</table>
@@ -332,8 +347,8 @@
 		<set name="SummonMinCount" val="#SummonMinCount" />
 		<set name="SummonMaxCount" val="#SummonMaxCount" />
 	</skill>
-	<skill id="11317" levels="8" name="Групповое Лечение Слуг">
-	<!-- Пока так -->
+	<skill id="11317" levels="8" name="Servitor Group Heal">
+    <!-- Restores all servitors' HP by 1191. Not Used. -->
 		<table name="#effectPoint">711 722 733 743 753 763 772 780</table>
 		<table name="#power">1191 1191 1191 1191 1191 1191</table>
 		<table name="#magicLevel">85 86 87 88 89 90 91 92</table>

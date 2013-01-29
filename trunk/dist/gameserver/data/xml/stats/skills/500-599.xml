@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="500" levels="2" name="True Berserker">
+    <!-- Decreases P. Def. by 10% and Evasion by 2. Increases P. Atk. and Atk. Spd. by 5% and Accuracy by 2. Continuously consumes MP proportionately to the user's level. -->
 		<table name="#mp">0.2</table>
 		<table name="#pAtk">1.05 1.08</table>
 		<table name="#pAtkSpd">1.05 1.08</table>
@@ -32,10 +33,7 @@
 		</for>
 	</skill>
 	<skill id="501" levels="12" name="Violent Temper">
-		<!--
-			Last modify:	14.05.2009
-			Description: Temporarily reduces the enemy's P. Def and casting speed. Consumes 1 soul.
-		-->
+    <!-- Decreases the enemy's P. Def. by 23% and Casting Spd. by 15% for 30 seconds. -->
 		<table name="#effectPoint">190 204 219 234 248 262 275 283 291 299 306 312 328</table>
 		<table name="#activateRate">80</table>
 		<table name="#time">30</table>
@@ -72,11 +70,7 @@
 		</for>
 	</skill>
 	<skill id="502" levels="5" name="Life to Soul">
-		<!--
-			Last modify:	15.12.2009
-
-			Description: Cannibalizes your own life to increase your soul.
-		-->
+    <!-- Cannibalizes your own life to increase your soul by 1. -->
 		<table name="#souls">1 2 3 4 5</table>
 		<table name="#hpConsume">193 237 279 311 328</table>
 		<table name="#magicLevel">40 49 58 66 72</table>
@@ -101,13 +95,7 @@
 		</enchant2>
 	</skill>
 	<skill id="503" levels="3" name="Scorn">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	15.12.2007
-
-			Description:
-			Provokes enemies in front of you. Consumes 1 soul.
-		-->
+    <!-- Provokes the enemies to the front with 1630 Power. -->
 		<table name="#effectPoint">1630 2089 2384</table>
 		<table name="#mpConsume2">21 28 33</table>
 		<table name="#magicLevel">43 55 64</table>
@@ -128,13 +116,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="504" levels="37" name="Triple Thrust">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	20.05.2009
-
-			Description:
-			Makes three quick stabs. Consumes 1 soul. An equipped rapier is required to use this skill.
-		-->
+    <!-- Supplements the user's P. Atk. by 620 Power in a blindingly quick triple jab. Increases Power upon the consumption of up to 5 souls. Requires a short sword. Over-hit is possible. -->
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#powerPvP">0</table>
@@ -196,14 +178,7 @@
 		</enchant7>
 	</skill>
 	<skill id="505" levels="28" name="Shining Edge">
-		<!--
-			Last modify:	20.05.2009
-
-			Description:
-			1...28 A flashing attack at your enemy's vital organs. Consumes 2 soul. An equipped rapier is required to use this skill. Power 1853...5479
-			29...58 Enchant 1: +1...30 Power
-			59...88 Enchant 1: +1...30 Cost
-		-->
+    <!-- Attacks the target's vital points with 1853 Power added to P. Atk. Increases Power upon the consumption of up to 5 souls. Requires a short sword. Over-hit is possible. -->
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#powerPvP">0</table>
@@ -267,13 +242,7 @@
 		</enchant7>
 	</skill>
 	<skill id="506" levels="4" name="Checkmate">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	20.05.2009
-
-			Description:
-			Inflict massive damage to a target marked with the brand of darkness. Consumes 2 soul. An equipped rapier is required to use this skill.
-		-->
+    <!-- Supplements the user's P. Atk. by 2388 Power to attack enemies bearing a Death Mark. Increases Power upon the consumption of up to 5 souls. Requires a short sword. Ignores Shield Defense. Critical hit is possible. -->
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#powerPvP">0</table>
@@ -323,13 +292,7 @@
 		</enchant4>
 	</skill>
 	<skill id="507" levels="37" name="Twin Shot">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	20.05.2009
-
-			Description:
-			Fire 2 back-to-back bolts. Consumes 1 soul. A critical hit is possible. A crossbow has to be equipped to use this skill. Over-hit is possible.
-		-->
+    <!-- Fires 2 powerful bolts with 984 Power added to P. Atk. Increases Power upon the consumption of up to 5 souls. Requires a crossbow. Over-hit and Critical are possible. -->
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#powerPvP">0</table>
@@ -391,13 +354,7 @@
 		</enchant7>
 	</skill>
 	<skill id="508" levels="31" name="Rising Shot">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	20.05.2009
-
-			Description:
-			Shoot a bolt that rises from the ground. Consumes 3 souls. A  crossbow has to be equipped to use this skill.
-		-->
+    <!-- Fires a soaring bolt at the enemy's position with 350 Power added to P. Atk. Increases Power upon the consumption of up to 5 souls. Requires a crossbow. Over-hit is possible. -->
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#powerPvP">0</table>
@@ -459,13 +416,7 @@
 		</enchant7>
 	</skill>
 	<skill id="509" levels="34" name="Bleeding Shot">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	19.12.2007
-
-			Description:
-			Shoots a sharp bolt that causes the enemy to bleed. Requires a crossbow. Consumes 5 Souls and a Special Bolt. Over-hit is possible. Power 530.
-		-->
+    <!-- Supplements the user's P. Atk. with 530 Power to fire a specially crafted bolt at the enemy, causing 44 HP of bleeding damage per second for up to 20 seconds. Increases Power upon the consumption of up to 5 souls. Requires a crossbow. Consumes 1 Special Bolt. Over-hit is possible. -->
 		<table name="#abnormal_lv">7 8 8 8 8 9 9 9 9 9 9 9 9 9 9 9 9 10 10 10 10 10 10 10 10 10 10 10 10 11</table>
 		<table name="#Tab-activateRate">50</table>
 		<table name="#mpConsume2">56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109</table>
@@ -511,12 +462,7 @@
 		</for>
 	</skill>
 	<skill id="510" levels="5" name="Deadly Roulette">
-		<!--
-			Last modify:     05.06.2010
-
-			Description:
-			Can be used when HP is below 10 percent. Lethal strike is possible. Requires a crossbow. Consumes 1 Special Bolt.
-		-->
+    <!-- Initiates a deadly game of chance. Requires a crossbow. Consumes 1 Special Bolt. Can be used when HP is under 10%. Lethal Strike is possible. -->
 		<table name="#chance">30 35 40 45 50</table>
 		<table name="#mpConsume2">100 103 106 109 112</table>
 		<table name="#magicLevel">66 68 70 72 74</table>
@@ -554,11 +500,7 @@
 		</enchant2>
 	</skill>
 	<skill id="511" levels="1" name="Temptation">
-		<!--
-			Last modify:	07.12.2007
-
-			Description: Quietly lures an enemy. Consumes 1 soul.
-		-->
+    <!-- Quietly lures the enemy. -->
 		<set name="icon" val="icon.skill0511" />
 		<set name="reuseDelay" val="3000" />
 		<set name="magicLevel" val="52" />
@@ -575,7 +517,7 @@
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="512" levels="10" name="Create Bio Potion">
-		<!-- Description: Create a potion that instantly replenishes 5% of health when used. Consumes 1 soul. -->
+    <!-- Create a potion that instantly replenishes 5 percent of health when used. Consumes 1 Soul. -->
 		<table name="#magicLevel">20 28 36 43 49 55 60 64 68 72</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0512" />
@@ -588,11 +530,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="513" levels="1" name="Create Dark Seed">
-		<!--
-			Last modify:	19.01.2009
-
-			Description: Transform a soul into a seed of darkness. Consumes 1 soul.
-		-->
+    <!-- Transform a soul into a seed of darkness. Consumes 1 Soul. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0513" />
 		<set name="reuseDelay" val="150000" />
@@ -609,12 +547,7 @@
 		<set name="soulsConsume" val="1" />
 	</skill>
 	<skill id="514" levels="9" name="Fire Trap">
-		<!--
-			Need correct:	reuseDelay, #dmg
-			Last modify:	12.02.2008
-
-			Description:	Summon a trap that damages a single target. Consumes 2 soul.
-		-->
+    <!-- Summon a trap that damages a single target. -->
 		<table name="#skill">1 2 3 4 5 6 7 8 9</table>
 		<table name="#reuseDelay">45000</table>
 		<table name="#magicLevel">28 36 43 49 55 60 64 68 72</table>
@@ -642,12 +575,7 @@
 		</enchant2>
 	</skill>
 	<skill id="515" levels="6" name="Poison Trap">
-		<!--
-			Need correct:	reuseDelay, #dmg
-			Last modify:	12.02.2008
-
-			Description:	Summon a trap that sprays poison around. Consumes 2 souls.
-		-->
+    <!-- Summon a trap that sprays poison around. -->
 		<table name="#skill">1 2 3 4 5 6</table>
 		<table name="#reuseDelay">45000</table>
 		<table name="#magicLevel">49 55 60 64 68 72</table>
@@ -675,12 +603,7 @@
 		</enchant2>
 	</skill>
 	<skill id="516" levels="6" name="Slow Trap">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	12.02.2008
-
-			Description:	Summon a trap that slows down nearby enemies. Consumes 2 souls.
-		-->
+    <!-- Summons a trap that slows nearby enemies. -->
 		<table name="#skill">1 2 3 4 5 6</table>
 		<table name="#reuseDelay">45000</table>
 		<table name="#magicLevel">52 58 62 66 70 74</table>
@@ -708,13 +631,7 @@
 		</enchant2>
 	</skill>
 	<skill id="517" levels="5" name="Flash Trap">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	12.02.2008
-
-			Description:	Summon a trap that instantly puts a nearby target
-			into shock with intense light. Consumes 2 souls.
-		-->
+    <!-- Summons a trap that stuns nearby targets with a blindingly strong flash of light. -->
 		<table name="#skill">1 2 3 4 5</table>
 		<table name="#reuseDelay">45000</table>
 		<table name="#magicLevel">55 60 64 68 72</table>
@@ -742,12 +659,7 @@
 		</enchant2>
 	</skill>
 	<skill id="518" levels="8" name="Binding Trap">
-		<!--
-			Need correct:	reuseDelay, #dmg
-			Last modify:	12.02.2008
-
-			Description:	Summon a trap to ensnare the enemy. Consumes 2 souls.
-		-->
+    <!-- Summon a trap to ensnare the enemy. -->
 		<table name="#skill">1 2 3 4 5 6 7 8</table>
 		<table name="#reuseDelay">45000</table>
 		<table name="#magicLevel">40 46 52 58 62 66 70 74</table>
@@ -774,12 +686,8 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 	</skill>
-	<skill id="519" levels="1" name="Quiver of Bolts: A-Grade">
-		<!--
-			Last modify:	17.04.2009
-
-			Description: Summons Mithril Bolts. Minimum 700, maximum 2800 bolts are summoned. Consumes 1 Crystal: A-Grade.
-		-->
+	<skill id="519" levels="1" name="Quiver of Bolts: A Grade">
+    <!-- Summons between 700 and 2800 Mithril bolts. Consumes 1 A-Grade Crystal. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0519" />
 		<set name="reuseDelay" val="600000" />
@@ -796,12 +704,8 @@
 		<set name="SummonMinCount" val="700" />
 		<set name="SummonMaxCount" val="2800" />
 	</skill>
-	<skill id="520" levels="1" name="Quiver of Bolts: S-Grade">
-		<!--
-			Last modify:	17.04.2009
-
-			Description: Summons Shining Bolts. Minimum 900, maximum 3600 bolts are summoned. Consumes 1 Crystal: S-Grade.
-		-->
+	<skill id="520" levels="1" name="Quiver of Bolts: S Grade">
+    <!-- Summons between 900 and 3600 bolts of light. Consumes 1 S-Grade Crystal. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0520" />
 		<set name="reuseDelay" val="600000" />
@@ -819,12 +723,7 @@
 		<set name="SummonMaxCount" val="3600" />
 	</skill>
 	<skill id="521" levels="8" name="Sharpshooting">
-		<!--
-			Last modify:	18.03.2009
-
-			Description:
-			Temporarily increases Accuracy, P. Atk., range of attack, and critical attack rate when a crossbow is equipped. Immobilized while in effect. Consumes 2 soul. A crossbow must be equipped to use this skill.
-		-->
+    <!-- For 2 minutes, increases the user's P. Atk. by 124, Critical Rate by 20%, Accuracy by 3, and range by 50. User cannot move while skill is in effect. Requires a crossbow. -->
 		<table name="#effectPoint">566 582 597 611 624 635 646 655</table>
 		<table name="#pAtk">124 134 145 155 166 177 188 199</table>
 		<table name="#accCombat">3 3 4 4 5 5 6 6</table>
@@ -871,12 +770,7 @@
 		</for>
 	</skill>
 	<skill id="522" levels="4" name="Real Target">
-		<!--
-			Last modify: 27.06.2009
-
-			Description:
-			Temporarily decreases resistance to bow/crossbow attacks. Consumes 1 soul.
-		-->
+    <!-- Decreases Resistance to bow attacks by 12% and Resistance to crossbow attacks by 16% for 30 seconds. -->
 		<table name="#bowWpnVuln">12 16 20 24</table>
 		<table name="#crossbowWpnVuln">16 24 32 40</table>
 		<table name="#pDef">1</table>
@@ -925,15 +819,7 @@
 		</for>
 	</skill>
 	<skill id="523" levels="7" name="Imbue Dark Seed">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	18.03.2009
-
-			Description:
-			Sow a dark seed into the body of an enemy.
-			The seed will grow within body, eating up health and eventually paralyzing the enemy when it is fully grown.
-			Consumes 1 Dark Seed.
-		-->
+    <!-- Plants a Seed of Darkness in the enemy's body. For 20 seconds, 76 HP is consumed per second. Once fully grown, the seed paralyzes the host body. -->
 		<table name="#dmg">154 154 154 154 166 166 166</table>
 		<table name="#magicLevel">62 64 66 68 70 72 74</table>
 		<set name="levelModifier" val="2" />
@@ -958,9 +844,7 @@
 		</for>
 	</skill>
 	<skill id="524" levels="1" name="Cure Dark Seed">
-		<!--
-			Eliminates the seed of darkness. Consumes 1 soul.
-		-->
+    <!-- Eliminates the affliction caused by a dark seed. -->
 		<set name="icon" val="icon.skill0524" />
 		<set name="reuseDelay" val="1000" />
 		<set name="magicLevel" val="64" />
@@ -973,12 +857,7 @@
 		<set name="negateSkill" val="523" />
 	</skill>
 	<skill id="525" levels="6" name="Decoy">
-		<!--
-			Last modify:	23.05.2009
-
-			Description:
-			Summon a mirror image that distracts the enemy. Consumes 4 soul.
-		-->
+    <!-- Summon a mirror image that distracts the enemy. -->
 		<table name="#npcId">13071 13072 13073 13074 13075 13076</table>
 		<table name="#reuseDelay">600000</table>
 		<table name="#mpConsume2">60 75 88 98 104 109</table>
@@ -1012,12 +891,7 @@
 		</enchant3>
 	</skill>
 	<skill id="526" levels="1" name="Enuma Elish">
-		<!--
-			Last modify: 27.06.2009
-
-			Description:
-			Unleash the power of the Sword of Creation,slashing everything in the sky and on the earth. Consumes 5 Souls. Over-hit is possible. Power 6060.
-		-->
+    <!-- Supplements the user's P. Atk. with 6060 Power while using the mighty Sword of Creation. Increases Power upon the consumption of up to 5 souls. Over-hit is possible. -->
 		<table name="#powerPvP">0</table>
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
@@ -1063,13 +937,7 @@
 		</enchant4>
 	</skill>
 	<skill id="527" levels="1" name="Iron Shield">
-		<!--
-			Need correct:	sDef
-			Last modify:	31.01.2009
-
-			Description:
-			Increases shield defense power with a certain chance when attacked.
-		-->
+    <!-- Increases Shield Defense with a certain chance when attacked. -->
 		<set name="icon" val="icon.skill0527" />
 		<set name="reuseDelay" val="150000" />
 		<set name="magicLevel" val="79" />
@@ -1091,9 +959,7 @@
 		</for>
 	</skill>
 	<skill id="528" levels="1" name="Shield of Faith">
-		<!--
-			Description: Use the Shield of Conviction on party members. Maximizes P. Def. and magic resistance for effective party members and absorbs most of the damage they will receive for the duration of the spell.
-		-->
+    <!-- For 15 seconds, increases party members' P. Def. by 3600 and M. Def. by 2700, and absorbs 90% of any damage received by a party member. -->
 		<table name="#Tab-pDef">3600</table>
 		<table name="#Tab-mDef">2700</table>
 		<table name="#abnormal_time">15</table>
@@ -1131,9 +997,7 @@
 		</for>
 	</skill>
 	<skill id="529" levels="1" name="Song of Elemental">
-		<!--
-			Description: Increases four-elemental resistance of a party member.
-		-->
+    <!-- Increases all party members' Resistance to Fire, Water, Wind and Earth attacks by 30 for 2 minutes. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<table name="#time">120</table>
 		<table name="#mpConsume2">54</table>
 		<table name="#magicLevel">79</table>
@@ -1167,9 +1031,7 @@
 		</for>
 	</skill>
 	<skill id="530" levels="1" name="Dance of Alignment">
-		<!--
-			Description: Increases 2 characteristic resistances of a party member.
-		-->
+    <!-- Increases all party members' Resistance to Holy or Dark attacks by 30 for 2 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. Requires a dual sword. -->
 		<table name="#time">120</table>
 		<table name="#mpConsume2">54</table>
 		<table name="#magicLevel">79</table>
@@ -1202,13 +1064,7 @@
 		</for>
 	</skill>
 	<skill id="531" levels="1" name="Critical Wound">
-		<!--
-			Need correct:	time, activateRate
-			Last modify:	13.03.2008
-
-			Description:
-			Increases the critical damage a target receives. A dagger needs to be equipped to use this skill. Effect 1.
-		-->
+    <!-- Increases Critical Damage by 30%. Requires a dagger. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill0531" />
 		<set name="reuseDelay" val="8000" />
@@ -1231,9 +1087,7 @@
 		</for>
 	</skill>
 	<skill id="532" levels="1" name="Counter Chance">
-		<!--
-			Description: When attacked, user's skill Casting Spd. is decreased by 15% and MP consumption is decreased by 5% for 1 minute.
-		-->
+    <!-- When attacked, user's skill Casting Spd. is decreased by 15% and MP Consumption is decreased by 5% for 1 minute. -->
 		<set name="icon" val="icon.skill0532" />
 		<set name="magicLevel" val="79" />
 		<set name="target" val="TARGET_SELF" />
@@ -1246,10 +1100,7 @@
 		</triggers>
 	</skill>
 	<skill id="533" levels="1" name="Counter Rapid Shot">
-		<!--
-			Description:
-			When attacked, party members' bow Atk. Spd. Is increased by 15% for 1 minute.
-		-->
+    <!-- When attacked, party members' bow Atk. Spd. Is increased by 15% for 1 minute. -->
 		<set name="icon" val="icon.skill0533" />
 		<set name="magicLevel" val="79" />
 		<set name="target" val="TARGET_SELF" />
@@ -1262,10 +1113,7 @@
 		</triggers>
 	</skill>
 	<skill id="534" levels="1" name="Counter Dash">
-		<!--
-			Description:
-			When attacked, party members' movement speed is increased by 40 for 1 minute.
-		-->
+    <!-- When attacked, party members' Increases Speed by 40 for 1 minute. -->
 		<set name="icon" val="icon.skill0534" />
 		<set name="magicLevel" val="79" />
 		<set name="target" val="TARGET_SELF" />
@@ -1278,10 +1126,7 @@
 		</triggers>
 	</skill>
 	<skill id="535" levels="1" name="Counter Mind">
-		<!-- 
-			Description:
-			When attacked, user's MP is recovered at a certain rate.
-		 -->
+    <!-- When attacked, user's MP is recovered at a certain rate. -->
 		<set name="icon" val="icon.skill0535" />
 		<set name="magicLevel" val="79" />
 		<set name="target" val="TARGET_SELF" />
@@ -1294,11 +1139,7 @@
 		</triggers>
 	</skill>
 	<skill id="536" levels="1" name="Over the Body">
-		<!--
-			Last modify:	30.04.2009
-
-			Description: Expends spirit points so that for 60 seconds, Max HP is increased by 35%, HP recovery bonus is increased by 15%, P. Atk. is increased by 25%, P. Def. is increased by 30%, Atk. Spd. is increased by 10%, and movement speed is increased 10%. Can be used when CP is more than 80%.
-		-->
+    <!-- Expends spirit points so that for 60 seconds, Increases Max HP by 35%, HP Recovery Bonus by 15%, P. Atk. by 25%, P. Def. by 30%, Atk. Spd. 10%, and Speed by 10%. Can be used when CP is more than 80%. -->
 		<set name="icon" val="icon.skill0536" />
 		<set name="reuseDelay" val="900000" />
 		<set name="magicLevel" val="79" />
@@ -1326,11 +1167,7 @@
 		</for>
 	</skill>
 	<skill id="537" levels="1" name="Spoil Bomb">
-		<!--
-			Last modify: 07.10.2008
-
-			Description: Puts enemies near the target into a spoil state, exploding and inflicting damage after a set time.
-		-->
+    <!-- Puts nearby enemies into a spoil state, exploding and inflicting damage after a set time. -->
 		<set name="levelModifier" val="1" />
 		<set name="affectLimit" val="6;12" />
 		<set name="icon" val="icon.skill0537" />
@@ -1350,12 +1187,7 @@
 		</for>
 	</skill>
 	<skill id="538" levels="1" name="Final Form">
-		<!--
-			Need correct:	reuseDelay, time
-			Last modify:	15.09.2008
-
-			Description: Transform into a final battle form. Consumes 20 soul.
-		-->
+    <!-- Transform into a final battle form. Consumes 20 soul. -->
 		<set name="icon" val="icon.skill0538" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="2500" />
@@ -1388,7 +1220,7 @@
 		</for>
 	</skill>
 	<skill id="539" levels="1" name="Nail Attack">
-		<!-- Description: A demonic clawed combo attack. Power 2583. -->
+    <!-- A demonic clawed combo attack. Power 2583. -->
 		<set name="icon" val="icon.skill0539" />
 		<set name="coolTime" val="720" />
 		<set name="reuseDelay" val="3000" />
@@ -1403,12 +1235,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="540" levels="1" name="Wing Assault">
-		<!--
-			Last modify:	09.05.2009
-
-			Description:
-			Charges with wing spread, striking everything around the charge target.
-		-->
+    <!-- Charges with outspread wings. Strikes around the attacking target. Power 2067. -->
 		<set name="affectLimit" val="5;12" />
 		<set name="icon" val="icon.skill0540" />
 		<set name="coolTime" val="200" />
@@ -1426,11 +1253,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="541" levels="1" name="Transform Grail Apostle">
-		<!--
-			Last modify:	22.01.2008
-
-			Description: Transform into a Grail Apostle.
-		-->
+    <!-- Transform into a Grail Apostle. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1460,11 +1283,7 @@
 		</for>
 	</skill>
 	<skill id="542" levels="1" name="Transform Grail Apostle">
-		<!--
-			Last modify:	22.01.2008
-
-			Description: Transform into a Grail Apostle.
-		-->
+    <!-- Transform into a Grail Apostle. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1494,11 +1313,7 @@
 		</for>
 	</skill>
 	<skill id="543" levels="1" name="Transform Grail Apostle">
-		<!--
-			Last modify:	22.01.2008
-
-			Description: Transform into a Grail Apostle.
-		-->
+    <!-- Transform into a Grail Apostle. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="reuseDelay" val="14400000" />
@@ -1528,11 +1343,7 @@
 		</for>
 	</skill>
 	<skill id="544" levels="1" name="Transform Unicorn">
-		<!--
-			Last modify:	22.01.2008
-
-			Description: Transform into a Unicorn.
-		-->
+    <!-- Transform into a Unicorn. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1562,11 +1373,7 @@
 		</for>
 	</skill>
 	<skill id="545" levels="1" name="Transform Unicorn">
-		<!--
-			Last modify:	22.01.2008
-
-			Description: Transform into a Unicorn.
-		-->
+    <!-- Transform into a Unicorn. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1596,11 +1403,7 @@
 		</for>
 	</skill>
 	<skill id="546" levels="1" name="Transform Unicorn">
-		<!--
-			Last modify:	22.01.2008
-
-			Description: Transform into a Unicorn.
-		-->
+    <!-- Transform into a Unicorn. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="reuseDelay" val="14400000" />
@@ -1630,11 +1433,7 @@
 		</for>
 	</skill>
 	<skill id="547" levels="1" name="Transform Lilim Knight">
-		<!--
-			Last modify:	23.01.2008
-
-			Description: Transform into a Lilim Knight.
-		-->
+    <!-- Transform into a Lilim Knight. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1664,11 +1463,7 @@
 		</for>
 	</skill>
 	<skill id="548" levels="1" name="Transform Lilim Knight">
-		<!--
-			Last modify:	23.01.2008
-
-			Description: Transform into a Lilim Knight.
-		-->
+    <!-- Transform into a Lilim Knight. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1698,11 +1493,7 @@
 		</for>
 	</skill>
 	<skill id="549" levels="1" name="Transform Lilim Knight">
-		<!--
-			Last modify:	23.01.2008
-
-			Description: Transform into a Lilim Knight.
-		-->
+    <!-- Transform into a Lilim Knight. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="reuseDelay" val="14400000" />
@@ -1732,11 +1523,7 @@
 		</for>
 	</skill>
 	<skill id="550" levels="1" name="Transform Golem Guardian">
-		<!--
-			Last modify:	23.01.2008
-
-			Description: Transform into a Golem Guardian.
-		-->
+    <!-- Transform into a Golem Guardian. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1766,11 +1553,7 @@
 		</for>
 	</skill>
 	<skill id="551" levels="1" name="Transform Golem Guardian">
-		<!--
-			Last modify:	23.01.2008
-
-			Description: Transform into a Golem Guardian.
-		-->
+    <!-- Transform into a Golem Guardian. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1800,11 +1583,7 @@
 		</for>
 	</skill>
 	<skill id="552" levels="1" name="Transform Golem Guardian">
-		<!--
-			Last modify:	23.01.2008
-
-			Description: Transform into a Golem Guardian.
-		-->
+    <!-- Transform into a Golem Guardian. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="reuseDelay" val="14400000" />
@@ -1834,11 +1613,7 @@
 		</for>
 	</skill>
 	<skill id="553" levels="1" name="Transform Inferno Drake">
-		<!--
-			Last modify:	25.01.2008
-
-			Description: Transform into a Inferno Drake.
-		-->
+    <!-- Transform into a Inferno Drake. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1868,11 +1643,7 @@
 		</for>
 	</skill>
 	<skill id="554" levels="1" name="Transform Inferno Drake">
-		<!--
-			Last modify:	25.01.2008
-
-			Description: Transform into a Inferno Drake.
-		-->
+    <!-- Transform into a Inferno Drake. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1902,11 +1673,7 @@
 		</for>
 	</skill>
 	<skill id="555" levels="1" name="Transform Inferno Drake">
-		<!--
-			Last modify:	25.01.2008
-
-			Description: Transform into a Inferno Drake.
-		-->
+    <!-- Transform into a Inferno Drake. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="reuseDelay" val="14400000" />
@@ -1936,11 +1703,7 @@
 		</for>
 	</skill>
 	<skill id="556" levels="1" name="Transform Dragon Bomber">
-		<!--
-			Last modify:	25.01.2008
-
-			Description: Transform into a Dragon Bomber.
-		-->
+    <!-- Transform into a Dragon Bomber. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1970,11 +1733,7 @@
 		</for>
 	</skill>
 	<skill id="557" levels="1" name="Transform Dragon Bomber">
-		<!--
-			Last modify:	25.01.2008
-
-			Description: Transform into a Dragon Bomber.
-		-->
+    <!-- Transform into a Dragon Bomber. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="reuseDelay" val="14400000" />
@@ -2004,11 +1763,7 @@
 		</for>
 	</skill>
 	<skill id="558" levels="1" name="Transform Dragon Bomber">
-		<!--
-			Last modify:	25.01.2008
-
-			Description: Transform into a Dragon Bomber.
-		-->
+    <!-- Transform into a Dragon Bomber. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="reuseDelay" val="14400000" />
@@ -2038,11 +1793,7 @@
 		</for>
 	</skill>
 	<skill id="559" levels="4" name="Spear">
-		<!--
-			Last modify:	22.01.2008
-
-			Description: A strong spear thrust that has a chance of causing bleeding.
-		-->
+    <!-- A strong polearm thrust that has a chance of causing the enemy to bleed. Over-hit is possible. Power 900. Effect 6. -->
 		<table name="#effectPoint">275 279 284 288</table>
 		<table name="#abnormal_lv">6 6 7 7</table>
 		<table name="#mpConsume2">61 63 67 70</table>
@@ -2071,12 +1822,7 @@
 		</for>
 	</skill>
 	<skill id="560" levels="4" name="Power Slash">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	22.01.2008
-
-			Description: A powerful frontal attack that involves swinging a spear to assault enemies.
-		-->
+    <!-- A powerful frontal attack that involves swinging a polearm to assault enemies. Over-hit is possible. Power 1250. -->
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
 		<table name="#power">1250 1406 1568 1733</table>
@@ -2093,13 +1839,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="561" levels="4" name="Bless of Angel">
-		<!--
-			Need correct:	reuseDelay, effectPoint
-			Last modify:	22.01.2008
-
-			Description: A divine blessing that increases the P.Atk. of all party members.
-			Comment: like Dance of Warrior: Doesnt stack with Warrior Dance and has same mp consumption rules as Dances/Songs!
-		-->
+    <!-- A divine blessing that increases P. Atk. of all party members. -->
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
 		<set name="icon" val="icon.skill_transform_buff" />
@@ -2120,13 +1860,7 @@
 		</for>
 	</skill>
 	<skill id="562" levels="4" name="Wind of Angel">
-		<!--
-			Need correct:	reuseDelay, effectPoint
-			Last modify:	22.01.2008
-
-			Description: A divine wind that increases the Evasion of all party members.
-			Comment: like Evasion Song(song of water): Doesnt stack with Evasion Song and has same mp consumption rules as Dances/Songs!
-		-->
+    <!-- A divine Wind that increases Evasion of all party members. -->
 		<table name="#effectPoint">549 655 655 655</table>
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
@@ -2148,12 +1882,7 @@
 		</for>
 	</skill>
 	<skill id="563" levels="4" name="Horn of Doom">
-		<!--
-			Need correct:	reuseDelay, overHit
-			Last modify:	22.01.2008
-
-			Description: Uses the horn to charge the enemy with a powerful ram attack.
-		-->
+    <!-- Uses a horn to charge the enemy with a powerful ram attack. Over-hit is possible. Power 1250. -->
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
 		<table name="#power">1250 1406 1568 1733</table>
@@ -2172,13 +1901,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="564" levels="4" name="Gravity Control">
-		<!--
-			Need correct:	reuseDelay, effect, power
-			Last modify:	22.01.2008
-
-			Description: Uses the horn to decrease speed and attack speed of nearby enemies.
-			Comment: like the SWS aoe debuff(psycho symphony)
-		-->
+    <!-- Uses the horn to decrease speed and Atk. Spd. of nearby enemies. -->
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
 		<table name="#power">308 332 357 382</table>
@@ -2206,12 +1929,7 @@
 		</for>
 	</skill>
 	<skill id="565" levels="4" name="Horn Assault">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	22.01.2008
-
-			Description: Releases the energy of the horn to attack a distant enemy.
-		-->
+    <!-- Releases the energy of a horn to attack a distant enemy. Over-hit is possible. Power 938. -->
 		<table name="#mpConsume1">50 56 62 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
 		<table name="#power">938 1055 1176 1300</table>
@@ -2229,14 +1947,8 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="567" levels="4" name="Light of Heal">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	22.01.2008
-
-			Description: Draws from the force of light to bestow the ability of recovery.
-			Comment: like Major Heal
-		-->
+	<skill id="567" levels="4" name="Light Heal">
+    <!-- Draws from the force of light to bestow the ability of recovery. Power 690. -->
 		<table name="#mpConsume2">64 72 80 90</table>
 		<table name="#mpConsume1">16 18 20 23</table>
 		<table name="#magicLevel">60 63 66 69</table>
@@ -2256,12 +1968,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="568" levels="4" name="Attack Buster">
-		<!--
-			Need correct:	reuseDelay, effectPoint
-			Last modify:	23.01.2008
-
-			Description: Detonates an energy charge to attack the enemy. Level 2 Energy charge is required.
-		-->
+    <!-- Detonates a Momentum charge to attack the enemy. Level 2 Momentum charge is required. Power 1250. -->
 		<table name="#effectPoint">372 381 389 398</table>
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
@@ -2282,15 +1989,9 @@
 		<set name="chargeBoost" val="true" />
 		<set name="num_charges" val="2" />
 		<set name="charge_skill_id" val="570" />
-		<!-- Attack Rage is the charger -->
 	</skill>
 	<skill id="569" levels="4" name="Attack Storm">
-		<!--
-			Need correct:	reuseDelay, effectPoint
-			Last modify:	23.01.2008
-
-			Description: Unleash a magical attack on distant enemies. Level 3 Energy charge is required.
-		-->
+    <!-- Unleash a magical attack on distant enemies. Level 3 Momentum charge is required. Power 625. -->
 		<table name="#effectPoint">172 181 189 198</table>
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
@@ -2312,15 +2013,9 @@
 		<set name="chargeBoost" val="true" />
 		<set name="num_charges" val="3" />
 		<set name="charge_skill_id" val="570" />
-		<!-- Attack Rage is the charger -->
 	</skill>
 	<skill id="570" levels="4" name="Attack Rage">
-		<!--
-			Last modify:	23.01.2008
-
-			Description: Gathers force while attacking an enemy. Critical hit is possible. Can be charged up to Level 1...4.
-			Comment: Like Sonic Rage skill from Duelist (charger for skills: 568, 569)
-		-->
+    <!-- Gathers force while attacking the enemy. Can be charged up to Level 1. Critical hit is possible. Over-hit is possible. -->
 		<table name="#charges">1 2 3 4</table>
 		<table name="#magicLevel">60 63 66 69</table>
 		<set name="icon" val="icon.skill_transform_etc" />
@@ -2342,12 +2037,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="571" levels="4" name="Poison Dust">
-		<!--
-			Need correct:	reuseDelay
-			Last modify:	23.01.2008
-
-			Description: Sprays a poisonous powder all over nearby enemies. Effect 6;6,7;7.
-		-->
+    <!-- Sprays a poisonous powder all over nearby enemies. Effect 6. -->
 		<table name="#effectPoint">532 532 597 597</table>
 		<table name="#mpConsume2">18 21 23 26</table>
 		<table name="#mpConsume1">5 6 6 7</table>
@@ -2377,12 +2067,7 @@
 		</for>
 	</skill>
 	<skill id="572" levels="4" name="Double Slasher">
-		<!--
-			Need correct:	reuseDelay, effectPoint
-			Last modify:	23.01.2008
-
-			Description: Discharges a solid beam of sonic force towards a distant target.
-		-->
+    <!-- Attacks a distant enemy by using Momentum. Over-hit is possible. Power 938. -->
 		<table name="#effectPoint">172 181 189 198</table>
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
@@ -2402,12 +2087,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="573" levels="4" name="Earthquake">
-		<!--
-			Need correct:	reuseDelay, effectPoint
-			Last modify:	23.01.2008
-
-			Description: Shocks the ground to stun nearby enemies.
-		-->
+    <!-- Makes the Earth shake and stuns nearby enemies. Over-hit is possible. Power 625. -->
 		<table name="#effectPoint">172 181 189 198</table>
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
@@ -2437,12 +2117,7 @@
 		</for>
 	</skill>
 	<skill id="574" levels="4" name="Bomb Installation">
-		<!--
-			Need correct:	reuseDelay, dmg, npcId
-			Last modify:	23.01.2008
-
-			Description: Installs a bomb in the ground.
-		-->
+    <!-- Installs a bomb in the ground. -->
 		<table name="#magicLevel">60 63 66 69</table>
 		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="reuseDelay" val="30000" />
@@ -2460,12 +2135,7 @@
 		<set name="summonType" val="trap" />
 	</skill>
 	<skill id="575" levels="4" name="Steel Cutter">
-		<!--
-			Need correct:	reuseDelay, effectPoint
-			Last modify:	23.01.2008
-
-			Description: Attacks with a sharp steel blade.
-		-->
+    <!-- Attacks with a sharp steel blade. Over-hit is possible. Power 1250. -->
 		<table name="#effectPoint">172 181 189 198</table>
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
@@ -2485,13 +2155,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="576" levels="4" name="Paw Strike">
-		<!--
-			Need correct:	reuseDelay, #effectPoint
-			Last modify:	25.01.2008
-
-			Description: Inflict a powerful attack with your forefeet.
-
-		-->
+    <!-- Inflict a powerful attack with your forefeet. Over-hit is possible. Power 1250. -->
 		<table name="#effectPoint">172 181 189 198</table>
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
@@ -2511,12 +2175,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="577" levels="4" name="Fire Breath">
-		<!--
-			Need correct:	#effectPoint, reuseDelay
-			Last modify:	25.01.2008
-
-			Description: Gushes out a fire attack that attacks enemies in front of you.
-		-->
+    <!-- Spouts out a Fire attack that strikes enemies in front of you. Over-hit is possible. Power 875. -->
 		<table name="#effectPoint">172 181 189 198</table>
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
@@ -2540,12 +2199,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="578" levels="4" name="Blaze Quake">
-		<!--
-			Need correct:	reuseDelay, #effectPoint, #dmg
-			Last modify:	23.05.2009
-
-			Description: Inflict a burning fire attack on nearby enemies.
-		-->
+    <!-- Inflict a burning Fire attack on nearby enemies. Over-hit is possible. Power 625. Effect 6. -->
 		<table name="#effectPoint">172 181 189 198</table>
 		<table name="#dmg">44 60 78 92</table>
 		<table name="#mpConsume2">61 63 67 70</table>
@@ -2575,11 +2229,7 @@
 		</for>
 	</skill>
 	<skill id="579" levels="4" name="Fire Armor">
-		<!--
-			Last modify:	23.03.2008
-
-			Description: An intense flame ignites and protects the body. Immobilized while in effect.
-		-->
+    <!-- An intense flame ignites and protects the body. Immobilized while in effect. -->
 		<table name="#effectPoint">204 438 438 438</table>
 		<table name="#pDef">1000 1100 1200 1400</table>
 		<table name="#mDef">800 900 1000 1200</table>
@@ -2604,12 +2254,7 @@
 		</for>
 	</skill>
 	<skill id="580" levels="4" name="Death Blow">
-		<!--
-			Need correct:	power, effectPoint, reuseDelay
-			Last modify:	25.01.2008
-
-			Description: Inflicts deadly blow. Lethal Strike is possible.
-		-->
+    <!-- Inflicts a deadly blow. Lethal Strike is possible. Over-hit is possible. -->
 		<table name="#effectPoint">272 281 289 298</table>
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
@@ -2633,12 +2278,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="581" levels="4" name="Sand Cloud">
-		<!--
-			Need correct:	#rate, reuseDelay, activateRate
-			Last modify:	25.01.2008
-
-			Description: Uses blinding sand to decrease nearby enemies' accuracy.
-		-->
+    <!-- Uses blinding sand to decrease nearby enemies' Accuracy. -->
 		<table name="#rate">5 6 7 8</table>
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
@@ -2663,12 +2303,7 @@
 		</for>
 	</skill>
 	<skill id="582" levels="4" name="Scope Bleed">
-		<!--
-			Need correct:	#bleedpower, #effectPoint, reuseDelay, activateRate, skillRadius
-			Last modify:	25.01.2008
-
-			Description: A deadly frontal attack puts enemies in a bleeding state.
-		-->
+    <!-- Attacks nearby enemies with a lethal blow and causes them to bleed. Over-hit is possible. Power 875. Effect 6. -->
 		<table name="#effectPoint">307 311 314 317</table>
 		<table name="#abnormal_lv">7 7 8 8</table>
 		<table name="#mpConsume2">61 63 67 70</table>
@@ -2699,11 +2334,7 @@
 		</for>
 	</skill>
 	<skill id="583" levels="4" name="Assimilation">
-		<!--
-			Last modify:	25.01.2008
-
-			Description: Blend in with enemies to avoid their notice.
-		-->
+    <!-- Blend in with enemies to avoid their notice. If you attack in this state, the entire party becomes exposed. -->
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
 		<set name="icon" val="icon.skill_transform_etc" />
@@ -2726,11 +2357,7 @@
 		</for>
 	</skill>
 	<skill id="584" levels="1" name="Power Claw">
-		<!--
-			Last modify:	10.12.2007
-
-			Description: Attacks the enemy with powerful claws. Power 1008.
-		-->
+    <!-- Attacks the enemy with powerful claws. Over-hit is possible. Power 1008. -->
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="coolTime" val="720" />
 		<set name="reuseDelay" val="3000" />
@@ -2745,11 +2372,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="585" levels="1" name="Fast Moving">
-		<!--
-			Last modify:	25.03.2009
-
-			Description: Temporarily but substantial increase to Speed.
-		-->
+    <!-- Temporary but substantial increase to Speed. -->
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="reuseDelay" val="30000" />
 		<set name="magicLevel" val="55" />
@@ -2767,11 +2390,7 @@
 		</for>
 	</skill>
 	<skill id="586" levels="2" name="Rolling Attack">
-		<!--
-			Last modify:	25.03.2009
-
-			Description: Quickly swings your spear around, attacking nearby enemies. Power 840;984.
-		-->
+    <!-- Quickly swings your polearm around, attacking nearby enemies. Over-hit is possible. Power 840. -->
 		<table name="#mpConsume2">54 58</table>
 		<table name="#magicLevel">59 63</table>
 		<table name="#power">840 984</table>
@@ -2791,11 +2410,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="587" levels="2" name="Earth Storm">
-		<!--
-			Last modify:	22.01.2008
-
-			Description: Inflict a powerful ground-piercing attack. Power 1200;1406.
-		-->
+    <!-- Create a vortex of Earth that physically attacks your target. Over-hit is possible. Power 1200. -->
 		<table name="#mpConsume2">54 58</table>
 		<table name="#magicLevel">59 63</table>
 		<table name="#power">1200 1406</table>
@@ -2814,11 +2429,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="588" levels="2" name="Curse of Darkness">
-		<!--
-			Last modify:	10.12.2007
-
-			Description: Casts powerful curse on your enemy.
-		-->
+    <!-- Casts a powerful curse on your enemy. -->
 		<table name="#power">208 300</table>
 		<table name="#runSpd">42 58</table>
 		<table name="#mpConsume2">54 58</table>
@@ -2841,11 +2452,7 @@
 		</for>
 	</skill>
 	<skill id="589" levels="2" name="Darkness Energy Drain">
-		<!--
-			Last modify:	10.12.2007
-
-			Description: Absorbs energy from corpses to recover HP.
-		-->
+    <!-- Absorbs energy from corpses to recover HP. -->
 		<table name="#drain">360 399</table>
 		<table name="#mpConsume2">54 58</table>
 		<table name="#magicLevel">59 63</table>
@@ -2864,11 +2471,7 @@
 		<set name="absorbAbs" val="#drain" />
 	</skill>
 	<skill id="590" levels="1" name="Residence Body">
-		<!--
-			Last modify:	03.05.2009
-
-			Description: The Max HP of clan members in residence increases by 222.
-		-->
+    <!-- The Max HP of clan members in residence increases by 222. -->
 		<set name="icon" val="icon.skill0370" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -2879,11 +2482,7 @@
 		</for>
 	</skill>
 	<skill id="591" levels="1" name="Residence Spirit">
-		<!--
-			Last modify:	03.05.2009
-
-			Description: The Max CP of clan members in residence increases by 444.
-		-->
+    <!-- The Max CP of clan members in residence increases by 444. -->
 		<set name="icon" val="icon.skill0371" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -2894,11 +2493,7 @@
 		</for>
 	</skill>
 	<skill id="592" levels="1" name="Residence Soul">
-		<!--
-			Last modify:	03.05.2009
-
-			Description: The Max MP of clan members in residence increases by 168.
-		-->
+    <!-- The Max MP of clan members in residence increases by 168. -->
 		<set name="icon" val="icon.skill0372" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -2909,11 +2504,7 @@
 		</for>
 	</skill>
 	<skill id="593" levels="1" name="Residence Health">
-		<!--
-			Last modify:	03.05.2009
-
-			Description: The HP recovery bonus of clan members in residence increases by 1.09.
-		-->
+    <!-- The HP Recovery Bonus of clan members in residence increases by 1.09. -->
 		<set name="icon" val="icon.skill0373" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -2924,11 +2515,7 @@
 		</for>
 	</skill>
 	<skill id="594" levels="1" name="Residence Moral">
-		<!--
-			Last modify:	03.05.2009
-
-			Description: The CP recovery bonus of clan members in residence increases by 1.09.
-		-->
+    <!-- CP recovery bonus of clan members in residence increases by 1.09. -->
 		<set name="icon" val="icon.skill0374" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -2939,11 +2526,7 @@
 		</for>
 	</skill>
 	<skill id="595" levels="1" name="Residence Clarity">
-		<!--
-			Last modify:	03.05.2009
-
-			Description: The MP recovery bonus of clan members in residence increases by 0.47.
-		-->
+    <!-- The MP Recovery Bonus of clan members in residence increases by 0.47. -->
 		<set name="icon" val="icon.skill0375" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -2954,11 +2537,7 @@
 		</for>
 	</skill>
 	<skill id="596" levels="1" name="Residence Might">
-		<!--
-			Last modify:	03.05.2009
-
-			Description: The P. Atk. of clan members in residence increases by 34.6.
-		-->
+    <!-- P. Atk. of clan members in residence increases by 34.6. -->
 		<set name="icon" val="icon.skill0376" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -2969,11 +2548,7 @@
 		</for>
 	</skill>
 	<skill id="597" levels="1" name="Residence Shield">
-		<!--
-			Last modify:	03.05.2009
-
-			Description: The P. Def. of clan members in residence increases by 54.7.
-		-->
+    <!-- P. Def. of clan members in residence increases by 54.7. -->
 		<set name="icon" val="icon.skill0377" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -2984,11 +2559,7 @@
 		</for>
 	</skill>
 	<skill id="598" levels="1" name="Residence Empower">
-		<!--
-			Last modify:	03.05.2009
-
-			Description: The M. Atk. of clan members in residence increases by 40.4.
-		-->
+    <!-- M. Atk. of clan members in residence increases by 40.4. -->
 		<set name="icon" val="icon.skill0378" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -2999,11 +2570,7 @@
 		</for>
 	</skill>
 	<skill id="599" levels="1" name="Residence Magic Barrier">
-		<!--
-			Last modify:	07.12.2008
-
-			Description: The M. Def. of clan members in residence increases by 44.
-		-->
+    <!-- The M. Def. of clan members in residence increases by 44. -->
 		<set name="icon" val="icon.skill0379" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />

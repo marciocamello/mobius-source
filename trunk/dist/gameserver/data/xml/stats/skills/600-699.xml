@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="600" levels="1" name="Residence Guidance">
-		<!--
-			Last modify:	03.05.2009
-
-			Description:
-			The accuracy of clan members in residence increases by 4.
-		-->
+    <!-- Accuracy of clan members in residence increases by 4. -->
 		<set name="icon" val="icon.skill0380" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -18,12 +13,7 @@
 		</for>
 	</skill>
 	<skill id="601" levels="1" name="Residence Agility">
-		<!--
-			Last modify:	03.05.2009
-
-			Description:
-			The evasion of clan members in residence increases by 4.
-		-->
+    <!-- Evasion of clan members in residence increases by 4. -->
 		<set name="icon" val="icon.skill0381" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -35,12 +25,7 @@
 		</for>
 	</skill>
 	<skill id="602" levels="1" name="Residence Shield Block">
-		<!--
-			Last modify:	03.05.2009
-
-			Description:
-			The shield defense rate of clan members in residence increases by 5.47.
-		-->
+    <!-- Shield Defense of clan members in residence increases by 54.7. -->
 		<set name="icon" val="icon.skill0382" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -52,12 +37,7 @@
 		</for>
 	</skill>
 	<skill id="603" levels="1" name="Residence Shield Defense">
-		<!--
-			Last modify:	03.05.2009
-
-			Description:
-			The shield P. Def. of clan members in residence increases by 225.
-		-->
+    <!-- Shield Defense. of clan members in residence increases by 225. -->
 		<set name="icon" val="icon.skill0383" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -69,12 +49,7 @@
 		</for>
 	</skill>
 	<skill id="604" levels="1" name="Residence Resist Typhoon">
-		<!--
-			Last modify:	21.07.2008
-
-			Description:
-			Resistance to water and wind attacks of clan members in residence increases by 10.
-		-->
+    <!-- Resistance to Water and Wind attacks of clan members in residence increases by 10. -->
 		<set name="icon" val="icon.skill0384" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -87,12 +62,7 @@
 		</for>
 	</skill>
 	<skill id="605" levels="1" name="Residence Resist Lava">
-		<!--
-			Last modify:	21.07.2008
-
-			Description:
-			Resistance to fire and earth attacks of clan members in residence increases by 10.
-		-->
+    <!-- Resistance to Fire and Earth attacks of clan members in residence increases by 10. -->
 		<set name="icon" val="icon.skill0385" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -105,12 +75,7 @@
 		</for>
 	</skill>
 	<skill id="606" levels="1" name="Residence Fortitude">
-		<!--
-			Last modify:	03.05.2009
-
-			Description:
-			Resistance to stun attacks of clan members in residence increases by 10.
-		-->
+    <!-- Resistance to Stun attacks of clan members in residence increases by 10. -->
 		<set name="icon" val="icon.skill0386" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -122,12 +87,7 @@
 		</for>
 	</skill>
 	<skill id="607" levels="1" name="Residence Freedom">
-		<!--
-			Last modify:	03.05.2009
-
-			Description:
-			Resistance to hold attacks of clan members in residence increases by 10.
-		-->
+    <!-- Resistance to Hold attacks of clan members in residence increases by 10. -->
 		<set name="icon" val="icon.skill0387" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -139,12 +99,7 @@
 		</for>
 	</skill>
 	<skill id="608" levels="1" name="Residence Vigilance">
-		<!--
-			Last modify:	03.05.2009
-
-			Description:
-			Resistance to sleep attacks of clan members in residence increases by 10.
-		-->
+    <!-- Resistance to Sleep attacks of clan members in residence increases by 10. -->
 		<set name="icon" val="icon.skill0388" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -156,12 +111,7 @@
 		</for>
 	</skill>
 	<skill id="609" levels="1" name="Residence Movement">
-		<!--
-			Last modify:	03.05.2009
-
-			Description:
-			The movement speed of clan members in residence increases by 6.
-		-->
+    <!-- The Speed of clan members in residence increases by 6. -->
 		<set name="icon" val="icon.skill0389" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -173,12 +123,7 @@
 		</for>
 	</skill>
 	<skill id="610" levels="1" name="Residence Death Fortune">
-		<!--
-			Last modify:	21.07.2008
-
-			Description:
-			When a clan member within the residence is killed by PK/ordinary monster, the Exp. points consumption rate and the probability of incurring a death after-effect are decreased.
-		-->
+    <!-- When a clan member within the residence is killed by PK/ordinary monster, the item drop rate and XP decrease rate are decreased. -->
 		<set name="icon" val="icon.skill0390" />
 		<set name="magicLevel" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -190,14 +135,7 @@
 		</for>
 	</skill>
 	<skill id="611" levels="3" name="Fire Squad">
-		<!--
-			Last modify: 03.05.2009
-
-			Description:
-			1. The corresponding troops' P. Atk. increase by 17.3.
-			2. The corresponding troops' P. Atk. increase by 17.3 and critical rate increase by 15.
-			3. The corresponding troops' P. Atk. increase by 17.3, critical rate increase by 15, and critical damage increase by 100.
-		-->
+    <!-- The corresponding troops' P. Atk. increase by 17.3. -->
 		<table name="#pAtk">17.3 17.3 17.3</table>
 		<table name="#rCrit">0 15 15</table>
 		<table name="#cAtk">1 1 1.10</table>
@@ -218,14 +156,7 @@
 		</for>
 	</skill>
 	<skill id="612" levels="3" name="Water Squad">
-		<!--
-			Last modify: 03.05.2009
-
-			Description:
-			1. The corresponding troops' P. Def. increase by 27.3.
-			2. The corresponding troops' P. Def. increase by 27.3 and M. Def. increase by 17.6.
-			3. The corresponding troops' P. Def. increase by 27.3, M. Def. increase by 17.6, and shield P. Def. increase by 6%.
-		-->
+    <!-- The corresponding troops' P. Def. increase by 27.3. -->
 		<table name="#pDef">27.3 27.3 27.3</table>
 		<table name="#mDef">0 17.6 17.6</table>
 		<table name="#sDef">1 1 1.06</table>
@@ -246,14 +177,7 @@
 		</for>
 	</skill>
 	<skill id="613" levels="3" name="Wind Squad">
-		<!--
-			Last modify: 03.05.2009
-
-			Description:
-			1. The corresponding troops' accuracy increase by 2.
-			2. The corresponding troops' accuracy increase by 2 and evasion increase by 2.
-			3. The corresponding troops' accuracy increase by 2, evasion increase by 2, and movement speed increase by 3.
-		-->
+    <!-- The corresponding troops' Accuracy increase by 2. -->
 		<table name="#acc">2 2 2</table>
 		<table name="#evas">0 2 2</table>
 		<table name="#rSpd">0 0 3</table>
@@ -274,14 +198,7 @@
 		</for>
 	</skill>
 	<skill id="614" levels="3" name="Earth Squad">
-		<!--
-			Last modify: 03.05.2009
-
-			Description:
-			1. The corresponding troops' M. Def. increase by 17.
-			2. The corresponding troops' M. Def. increase by 31.1.
-			3. The corresponding troops' M. Def. increase by 44.
-		-->
+    <!-- The corresponding troops' M. Def. increase by 17. -->
 		<table name="#mDef">17 31.1 44</table>
 		<set name="icon" val="icon.skill1466" />
 		<set name="magicLevel" val="1" />
@@ -297,15 +214,8 @@
 			<add order="0x40" val="#mDef" stat="mDef" />
 		</for>
 	</skill>
-	<skill id="615" levels="3" name="Holy Squad">
-		<!--
-			Last modify: 03.05.2009
-
-			Description:
-			1. The corresponding troops' heal power increase by 20.
-			2. The corresponding troops' heal power increase by 20 and Max MP increase by 30%.
-			3. The corresponding troops' heal power increase by 20, Max MP increase by 30%, and MP consumption decreases by 5%.
-		-->
+	<skill id="615" levels="3" name="Divine Squad">
+    <!-- The corresponding troops' heal power increase by 20. -->
 		<table name="#regHp">1.2 1.2 1.2</table>
 		<table name="#maxMp">1 1.3 1.3</table>
 		<table name="#mpConsum">1 1 0.95</table>
@@ -326,14 +236,7 @@
 		</for>
 	</skill>
 	<skill id="616" levels="3" name="Dark Squad">
-		<!--
-			Last modify: 03.05.2009
-
-			Description:
-			1. The corresponding troops' M. Atk. increase by 7.17.
-			2. The corresponding troops' M. Atk. increase by 19.32.
-			3. The corresponding troops' M. Atk. increase by 19.32 and magic critical damage rate increases by 1%.
-		-->
+    <!-- The corresponding troops' M. Atk. increase by 7.17. -->
 		<table name="#mAtk">7.17 19.32 19.32</table>
 		<table name="#mCrit">0 0 1</table>
 		<set name="icon" val="icon.skill1443" />
@@ -352,11 +255,7 @@
 		</for>
 	</skill>
 	<skill id="617" levels="1" name="Transform Onyx Beast">
-		<!--
-			Last modify:	20.01.2008
-
-			Description: Transform into an Onyx Beast.
-		-->
+    <!-- Transform into an Onyx Beast. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -385,11 +284,7 @@
 		</for>
 	</skill>
 	<skill id="618" levels="1" name="Transform Death Blader">
-		<!--
-			Last modify:	20.01.2008
-
-			Description: Transform into a Death Blader.
-		-->
+    <!-- Transform into a Death Blader. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -418,11 +313,7 @@
 		</for>
 	</skill>
 	<skill id="619" levels="1" name="Transform Dispel">
-		<!--
-			Last modify:	09.12.2007
-
-			Description: Cancels transform.
-		-->
+    <!-- Cancels transformation. -->
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="magicLevel" val="56" />
 		<set name="hitTime" val="2500" />
@@ -434,12 +325,8 @@
 			<effect count="1" name="Transformation" time="0" val="0" />
 		</for>
 	</skill>
-	<skill id="620" levels="1" name="Quiver of Bolts - Grade B">
-		<!--
-			Last modify:	07.12.2007
-
-			Description: Summons Silver Bolts. Minimum 700, maximum 2800 bolts are summoned. Consumes 1 Crystal: B-Grade.
-		-->
+	<skill id="620" levels="1" name="Quiver of Bolts: B Grade">
+    <!-- Summons between 700 and 2800 silver bolts. Consumes 1 B-Grade Crystal. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0620" />
 		<set name="reuseDelay" val="600000" />
@@ -457,11 +344,7 @@
 		<set name="SummonMaxCount" val="2800" />
 	</skill>
 	<skill id="621" levels="1" name="Create Special Bolt">
-		<!--
-			Last modify:	18.03.2009
-
-			Description: Creates a bolt to be used with a special skill.
-		-->
+    <!-- Creates a bolt to be used with a special skill. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0621" />
 		<set name="reuseDelay" val="150000" />
@@ -477,13 +360,7 @@
 		<set name="SummonMaxCount" val="1" />
 	</skill>
 	<skill id="622" levels="2" name="Ultimate Escape">
-		<!--
-			Last modify: 	10.05.2009
-
-			Description:
-				Increases user's evasion by 20 and movement speed by 33 for 20 seconds.
-				Increases user's evasion by 35, movement speed by 66 and P. Atk. skill evasion rate by 25% for 20 seconds.
-		-->
+    <!-- Increases the user's Evasion by 20 and Speed by 33 for 20 seconds. -->
 		<table name="#rEvas">20 35</table>
 		<table name="#runSpd">33 66</table>
 		<table name="#pSkillEvasion">0 25</table>
@@ -507,9 +384,7 @@
 		</for>
 	</skill>
 	<skill id="623" levels="1" name="Find Trap">
-		<!--
-			Description: Detects traps below Level 78.
-		-->
+    <!-- Detects traps below Level 78. -->
 		<set name="icon" val="icon.skill0470" />
 		<set name="reuseDelay" val="3000" />
 		<set name="magicLevel" val="74" />
@@ -521,9 +396,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="624" levels="1" name="Remove Trap">
-		<!--
-			Description: Disarms traps below Level 78.
-		-->
+    <!-- Disarms traps below Level 78. -->
 		<set name="icon" val="icon.skill0471" />
 		<set name="reuseDelay" val="8000" />
 		<set name="magicLevel" val="74" />
@@ -536,12 +409,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="625" levels="1" name="Soul Gathering">
-		<!--
-			Last modify:	23.03.2008
-
-			Description:
-			Gathers in nearby souls. Up to 8 souls can be absorbed at once. Consumes 10 Spirit Ores.
-		-->
+    <!-- Gathers in nearby souls. Up to 8 souls can be absorbed at once. Consumes 10 Spirit Ore. -->
 		<table name="#hpConsume">200</table>
 		<table name="#magicLevel">46</table>
 		<table name="#reuseDelay">1800000</table>
@@ -568,10 +436,7 @@
 		</enchant2>
 	</skill>
 	<skill id="626" levels="4" name="Critical Sense">
-		<!--
-			Increase critical rate and critical attack power.
-			07/03/2008
-		-->
+    <!-- Increases Critical Rate by 10% and Critical Damage by 111. -->
 		<table name="#cAtkStatic">111 177 253 317</table>
 		<table name="#rCrit">10 15 20 25</table>
 		<table name="#magicLevel">43 52 60 66</table>
@@ -594,12 +459,7 @@
 		</for>
 	</skill>
 	<skill id="627" levels="40" name="Soul Shock">
-		<!--
-			Need correct:	reuseDelay
-			Last modify: 03.05.2009
-
-			Description: Fires a close-range shot that causes your target to panic. An equipped bow or crossbow is required to use this skill. Overhit available. Consumes 1 Soul.
-		-->
+    <!-- Attacks the enemy with 344 Power added to P. Atk. and causes fear for 3 seconds. Requires a crossbow. Over-hit is possible. Consumes 5 Souls. -->
 		<table name="#Tab-activateRate">40</table>
 		<table name="#Count">3</table>
 		<table name="#mpConsume2">48 49 51 52 54 56 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109</table>
@@ -647,10 +507,7 @@
 		</for>
 	</skill>
 	<skill id="628" levels="1" name="Warp">
-		<!--
-			Last modify: 14.07.2008
-			Description: Teleports you to the battlefront. Consumes 1 Soul.
-		-->
+    <!-- Teleports you to the battlefront. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill0484" />
 		<set name="coolTime" val="200" />
@@ -667,10 +524,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="629" levels="1" name="Rabbit Magic Eye">
-		<!--
-			Last modify: 09.06.2010
-			Description: Clear your mind and search your soul to find the hidden treasure box. (Only for event RabbitsToRiches)
-		-->
+    <!-- Clear your mind and search your soul to find the hidden treasure box. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="affectLimit" val="6;12" />
 		<set name="icon" val="icon.skill0629" />
@@ -687,10 +541,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="630" levels="1" name="Rabbit Tornado">
-		<!--
-			Last modify: 09.06.2010
-			Description: Opens a treasure box with a spinning kick. (Only for event RabbitsToRiches)
-		-->
+    <!-- Opens a treasure box with a spinning kick. -->
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skill0027" />
 		<set name="reuseDelay" val="60000" />
@@ -706,12 +557,7 @@
 		</cond>
 	</skill>
 	<skill id="631" levels="6" name="Emergent Ability - Attack">
-		<!--
-			Last modify:	08.09.2009
-
-			Description:	Increases P. Atk.
-			DS: значения неправильные, исправить позже
-		-->
+    <!-- Increases P. Atk. -->
 		<table name="#pAtk">10 20 28 35 42 49</table>
 		<table name="#magicLevel">60 75 80 80 80 80</table>
 		<set name="icon" val="icon.skill0141" />
@@ -724,12 +570,7 @@
 		</for>
 	</skill>
 	<skill id="632" levels="6" name="Emergent Ability - Defense">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:	Increases P. Def.
-			DS: значения неправильные, исправить позже
-		-->
+    <!-- Increases P. Def. -->
 		<table name="#pDef">10 20 30 40 50 60</table>
 		<table name="#magicLevel">60 75 80 80 80 80</table>
 		<set name="icon" val="icon.skill0142" />
@@ -742,11 +583,7 @@
 		</for>
 	</skill>
 	<skill id="633" levels="6" name="Emergent Ability - Empower">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:	Increases M. Atk.
-		-->
+    <!-- Increases M. Atk. -->
 		<table name="#mAtk">10.5 20.1 28.7 36.3 43 47.8</table>
 		<table name="#magicLevel">60 75 80 80 80 80</table>
 		<set name="icon" val="icon.skill0249" />
@@ -759,11 +596,7 @@
 		</for>
 	</skill>
 	<skill id="634" levels="6" name="Emergent Ability - Magic Defense">
-		<!--
-			Last modify:	31.01.2009
-
-			Description:	Increases M. Def.
-		-->
+    <!-- Increases M. Def. -->
 		<table name="#mDef">15.1 30.2 45.4 60.5 75.6 90.7</table>
 		<table name="#magicLevel">60 75 80 80 80 80</table>
 		<set name="icon" val="icon.skill0146" />
@@ -776,6 +609,7 @@
 		</for>
 	</skill>
 	<skill id="635" levels="3" name="Not In Use">
+    <!-- none -->
 		<table name="#magicLevel">60 75 80</table>
 		<set name="icon" val="icon.skill0635" />
 		<set name="magicLevel" val="#magicLevel" />
@@ -789,6 +623,7 @@
 		</cond>
 	</skill>
 	<skill id="636" levels="3" name="Not In Use">
+    <!-- none -->
 		<table name="#magicLevel">60 75 80</table>
 		<set name="icon" val="icon.skill0636" />
 		<set name="magicLevel" val="#magicLevel" />
@@ -802,11 +637,7 @@
 		</cond>
 	</skill>
 	<skill id="637" levels="1" name="Master Ability - Attack">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:	Increases P. Atk.
-		-->
+    <!-- Increases P. Atk. -->
 		<set name="icon" val="icon.skill1068" />
 		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_SELF" />
@@ -817,11 +648,7 @@
 		</for>
 	</skill>
 	<skill id="638" levels="1" name="Master Ability - Empower">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:	Increases M. Atk.
-		-->
+    <!-- Increases M. Atk. -->
 		<set name="icon" val="icon.skill1059" />
 		<set name="magicLevel" val="60" />
 		<set name="target" val="TARGET_SELF" />
@@ -832,11 +659,7 @@
 		</for>
 	</skill>
 	<skill id="639" levels="1" name="Master Ability - Casting">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:	Spell Casting Spd. increases.
-		-->
+    <!-- Increases Casting Spd. -->
 		<set name="icon" val="icon.skill1085" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -847,12 +670,7 @@
 		</for>
 	</skill>
 	<skill id="640" levels="1" name="Master Ability - Focus">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:
-			Critical rate increases.
-		-->
+    <!-- Increases Critical Rate. -->
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -863,11 +681,7 @@
 		</for>
 	</skill>
 	<skill id="641" levels="1" name="Knight Ability - Boost HP">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:	Increases Max. HP.
-		-->
+    <!-- Increases Max HP. -->
 		<set name="icon" val="icon.skill0211" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -878,11 +692,7 @@
 		</for>
 	</skill>
 	<skill id="642" levels="1" name="Enchanter Ability - Boost Mana">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:	Increases Max. MP.
-		-->
+    <!-- Increases Max MP. -->
 		<set name="icon" val="icon.skill0213" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -893,11 +703,7 @@
 		</for>
 	</skill>
 	<skill id="643" levels="1" name="Summoner Ability - Boost HP/MP">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:	Increases Max. HP and Max. MP.
-		-->
+    <!-- Increases Max HP and Max MP. -->
 		<set name="icon" val="icon.skill0211" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -909,12 +715,7 @@
 		</for>
 	</skill>
 	<skill id="644" levels="1" name="Rogue Ability - Evasion">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:
-			Increase Evasion.
-		-->
+    <!-- Increase Evasion. -->
 		<set name="icon" val="icon.skill1087" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -925,11 +726,7 @@
 		</for>
 	</skill>
 	<skill id="645" levels="1" name="Rogue Ability - Long Shot">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:	Increases bow range.
-		-->
+    <!-- Increases bow range. -->
 		<set name="icon" val="icon.skill0113" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -942,11 +739,7 @@
 		</for>
 	</skill>
 	<skill id="646" levels="1" name="Wizard Ability - Mana Gain">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:	Increases the recovery rate of MP.
-		-->
+    <!-- Increases the recovery rate of MP. -->
 		<set name="icon" val="icon.skill0285" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -957,11 +750,7 @@
 		</for>
 	</skill>
 	<skill id="647" levels="1" name="Enchanter Ability - Mana Recovery">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:	Increases MP regeneration.
-		-->
+    <!-- Increases MP regeneration. -->
 		<set name="icon" val="icon.skill0229" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -972,12 +761,7 @@
 		</for>
 	</skill>
 	<skill id="648" levels="1" name="Healer Ability - Prayer">
-		<!--
-			Last modify:	03.02.2009
-
-			Description:
-			The effect of receiving HP recovery magic increases. Effect 1.
-		-->
+    <!-- The effect of receiving HP recovery magic increases. Effect 1. -->
 		<set name="icon" val="icon.skill1307" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -988,12 +772,7 @@
 		</for>
 	</skill>
 	<skill id="650" levels="1" name="Warrior Ability - Resist Trait">
-		<!--
-			Last modify:	31.01.2009
-
-			Description:
-			Increases the tolerance to paralysis/hold/sleep/shock/buff cancel attack.
-		-->
+    <!-- Increases the Resistance to Paralysis/Hold/Sleep/shock/buff cancel attack. -->
 		<set name="icon" val="icon.skill0287" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -1008,10 +787,7 @@
 		</for>
 	</skill>
 	<skill id="651" levels="1" name="Warrior Ability - Haste">
-		<!--
-			Description:
-			An instant raise of Atk. Spd. effect is made with a fixed rate when attacking.
-		-->
+    <!-- Has a chance to increase Atk. Spd. while attacking. Excludes damage caused by a skill or ranged attack. -->
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -1022,10 +798,7 @@
 		</triggers>
 	</skill>
 	<skill id="652" levels="1" name="Knight Ability - Defense">
-		<!--
-			Description:
-			An instant raise of P. Def./Magic Resistance increase effect is activated by a fixed rate when being attacked.
-		-->
+    <!-- Has a chance to increase P. Def./M. Def. while being attacked. -->
 		<set name="icon" val="icon.skill0110" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -1038,10 +811,7 @@
 		</triggers>
 	</skill>
 	<skill id="653" levels="1" name="Rogue Ability - Critical Chance">
-		<!--
-			Description:
-			An instant raise of Critical rate effect is made with a fixed rate when attacking.
-		-->
+    <!-- Has a chance to increase Critical Rate while attacking. -->
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -1052,10 +822,7 @@
 		</triggers>
 	</skill>
 	<skill id="654" levels="1" name="Wizard Ability - Mana Steal">
-		<!--
-			Description:
-			Recovers MP with a fixed rate when attacking.
-		-->
+    <!-- Has a chance to recover MP while attacking. -->
 		<set name="icon" val="icon.skill1398" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -1066,10 +833,7 @@
 		</triggers>
 	</skill>
 	<skill id="655" levels="1" name="Enchanter Ability - Barrier">
-		<!--
-			Description:
-			Invincible effect is created with an instant overcoat when being attacked.
-		-->
+    <!-- Has a chance to grant invincibility while being attacked. -->
 		<set name="icon" val="icon.skill1418" />
 		<set name="magicLevel" val="75" />
 		<set name="target" val="TARGET_SELF" />
@@ -1082,11 +846,7 @@
 		</triggers>
 	</skill>
 	<skill id="656" levels="3" name="Transform Divine Warrior">
-		<!--
-			Last modify:	15.09.2008
-
-			Description:	Transform to Divine Warrior.
-		-->
+    <!-- Transforms you into a Divine Warrior. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -1112,11 +872,7 @@
 		</for>
 	</skill>
 	<skill id="657" levels="3" name="Transform Divine Knight">
-		<!--
-			Last modify:	25.08.2008
-
-			Description:	Transform to Divine Knight.
-		-->
+    <!-- Transforms you into a Divine Knight. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -1142,11 +898,7 @@
 		</for>
 	</skill>
 	<skill id="658" levels="3" name="Transform Divine Rogue">
-		<!--
-			Last modify:	25.08.2008
-
-			Description:	Transform to Divine Rogue.
-		-->
+    <!-- Transforms you into a Divine Rogue. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -1172,11 +924,7 @@
 		</for>
 	</skill>
 	<skill id="659" levels="3" name="Transform Divine Wizard">
-		<!--
-			Last modify:	25.08.2008
-
-			Description:	Transform to Divine Wizard.
-		-->
+    <!-- Transforms you into a Divine Wizard. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -1202,11 +950,7 @@
 		</for>
 	</skill>
 	<skill id="660" levels="3" name="Transform Divine Summoner">
-		<!--
-			Last modify:	13.09.2008
-
-			Description:	Transform to Divine Summoner.
-		-->
+    <!-- Transforms you into a Divine Summoner. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -1232,11 +976,7 @@
 		</for>
 	</skill>
 	<skill id="661" levels="3" name="Transform Divine Healer">
-		<!--
-			Last modify:	25.08.2008
-
-			Description:	Transform to Divine Healer.
-		-->
+    <!-- Transforms you into a Divine Healer. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -1262,11 +1002,7 @@
 		</for>
 	</skill>
 	<skill id="662" levels="3" name="Transform Divine Enchanter">
-		<!--
-			Last modify:	25.08.2008
-
-			Description:	Transform to Divine Enchanter.
-		-->
+    <!-- Transforms you into a Divine Enchanter. -->
 		<table name="#reuseDelay">14400000 7200000 3600000</table>
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -1292,11 +1028,7 @@
 		</for>
 	</skill>
 	<skill id="663" levels="1" name="Transform Zaken">
-		<!--
-			Last modify: 14.07.2008
-
-			Description: Transform to Zaken.
-		-->
+    <!-- Transforms you into Zaken. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1326,11 +1058,7 @@
 		</for>
 	</skill>
 	<skill id="664" levels="1" name="Transform Anakim">
-		<!--
-			Last modify: 14.07.2008
-
-			Description: Transform to Anakim.
-		-->
+    <!-- Transforms you into Anakin. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1360,11 +1088,7 @@
 		</for>
 	</skill>
 	<skill id="665" levels="1" name="Transform Venom">
-		<!--
-			Last modify: 5.07.2008
-
-			Description: Transform to Benom.
-		-->
+    <!-- Transforms you into Venom. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1394,11 +1118,7 @@
 		</for>
 	</skill>
 	<skill id="666" levels="1" name="Transform Gordon">
-		<!--
-			Last modify: 5.07.2008
-
-			Description: Transform to Gordon.
-		-->
+    <!-- Transforms you into Gordon. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1428,11 +1148,7 @@
 		</for>
 	</skill>
 	<skill id="667" levels="1" name="Transform Ranku">
-		<!--
-			Last modify: 5.07.2008
-
-			Description: Transform to Ranku.
-		-->
+    <!-- Transforms you into Ranku. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1462,11 +1178,7 @@
 		</for>
 	</skill>
 	<skill id="668" levels="1" name="Transform Kechi">
-		<!--
-			Last modify: 5.07.2008
-
-			Description: Transform to Kechi.
-		-->
+    <!-- Transforms you into Kechi. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1496,11 +1208,7 @@
 		</for>
 	</skill>
 	<skill id="669" levels="1" name="Transform Demon Prince">
-		<!--
-			Last modify: 5.07.2008
-
-			Description: Transform to Demon Prince.
-		-->
+    <!-- Transforms you into a Demon Prince. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1530,11 +1238,7 @@
 		</for>
 	</skill>
 	<skill id="670" levels="1" name="Transform Heretic">
-		<!--
-			Last modify: 5.07.2008
-
-			Description: Transform to Heretic.
-		-->
+    <!-- Transforms you into a Heretic. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1563,12 +1267,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="671" levels="1" name="Transform Vale Master">
-		<!--
-			Last modify: 5.07.2008
-
-			Description: Transform to Vale Master.
-		-->
+	<skill id="671" levels="1" name="Transform Veil Master">
+    <!-- Transforms you into a Veil Master. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1598,11 +1298,7 @@
 		</for>
 	</skill>
 	<skill id="672" levels="1" name="Transform Saber Tooth Tiger">
-		<!--
-			Last modify: 5.07.2008
-
-			Description: Transform to Saber Tooth Tiger.
-		-->
+    <!-- Transforms you into a Saber Tooth Tiger. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1632,11 +1328,7 @@
 		</for>
 	</skill>
 	<skill id="673" levels="1" name="Transform Oel Mahum">
-		<!--
-			Last modify: 5.07.2008
-
-			Description: Transform to Oel Mahum.
-		-->
+    <!-- Transforms you into Oel Mahum. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1666,11 +1358,7 @@
 		</for>
 	</skill>
 	<skill id="674" levels="1" name="Transform Doll Blader">
-		<!--
-			Last modify: 5.07.2008
-
-			Description: Transform to Doll Blader.
-		-->
+    <!-- Transforms you into a Doll Blader. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="reuseDelay" val="14400000" />
@@ -1700,9 +1388,7 @@
 		</for>
 	</skill>
 	<skill id="675" levels="1" name="Divine Warrior Cross Slash">
-		<!--
-			Description: Flourishes the sword strongly. Critical enabled. Power 2904.
-		-->
+    <!-- Attacks the enemy with 2904 Power added to P. Atk. Over-hit and Critical are possible. -->
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="coolTime" val="167" />
 		<set name="reuseDelay" val="3000" />
@@ -1720,9 +1406,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="676" levels="1" name="Divine Warrior Sonic Blaster">
-		<!--
-			Description: Strikes the enemy a blow in a distance using sword energy. Critical enabled. Power 2323.
-		-->
+    <!-- Hurls Momentum to attack the enemy with 2323 Power added to P. Atk. Over-hit and Critical are possible. -->
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="reuseDelay" val="3000" />
 		<set name="power" val="2323" />
@@ -1740,9 +1424,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="677" levels="1" name="Divine Warrior Transfixion of Earth">
-		<!--
-			Description: Attacks nearby enemies strongly by cutting with a downward blow. Ignore shield defense. Over-hit is available. Power 2323.
-		-->
+    <!-- Cuts with a downward blow to attack nearby enemies with 2323 Power added to P. Atk. Ignores Shield Defense. Over-hit is possible. -->
 		<set name="affectLimit" val="6;12" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="coolTime" val="733" />
@@ -1761,11 +1443,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="678" levels="1" name="Divine Warrior War Cry">
-		<!--
-			Last modify: 03.05.2009
-
-			Description: Increases one's own P. Atk. by 25% for 1 minutes.
-		-->
+    <!-- Increases P. Atk. by 25% for 1 minute. -->
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="reuseDelay" val="45000" />
 		<set name="magicLevel" val="80" />
@@ -1782,11 +1460,7 @@
 		</for>
 	</skill>
 	<skill id="679" levels="1" name="Sacrifice Warrior">
-		<!--
-			Last modify: 03.05.2009
-
-			Description: Sacrifices oneself to increase the P. Atk. of all party members by 20% for 30 seconds. Available only when HP is under 30%.
-		-->
+    <!-- Sacrifices oneself to increase P. Atk. of all party members by 20% for 30 seconds. Available only when HP is under 30%. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="reuseDelay" val="1800000" />
@@ -1812,9 +1486,7 @@
 		</for>
 	</skill>
 	<skill id="680" levels="1" name="Divine Knight Hate">
-		<!--
-			Description: Provokes your opponent into attacking. Power 6752.
-		-->
+    <!-- Provokes the enemy to attack with 6752 Power. -->
 		<set name="levelModifier" val="2" />
 		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="coolTime" val="200" />
@@ -1833,9 +1505,7 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="681" levels="1" name="Divine Knight Hate Aura">
-		<!--
-			Description: Stimulates the attacking desire of the enemies nearby. Power 6752.
-		-->
+    <!-- Provokes nearby enemies to attack by 6752 Power. -->
 		<set name="levelModifier" val="2" />
 		<set name="affectLimit" val="10;10" />
 		<set name="icon" val="icon.skill_transform_etc" />
@@ -1854,9 +1524,7 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="682" levels="1" name="Divine Knight Stun Attack">
-		<!--
-			Description: Cause damage and shock together at the same time. Make the enemies shocked momentarily. Over-hit is available. Power 1162.
-		-->
+    <!-- Cause damage and shock together at the same time. Make the enemies shocked momentarily. Over-hit is possible. Power 1162. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="coolTime" val="720" />
@@ -1880,9 +1548,7 @@
 		</for>
 	</skill>
 	<skill id="683" levels="1" name="Divine Knight Thunder Storm">
-		<!--
-			Description: Inflicts shock and damage to the enemies nearby at the same time. Instantly makes nearby enemies shocked. Ignore shield defense. Over-hit is available. Power 775.
-		-->
+    <!-- Inflicts shock and damage to the enemies nearby at the same time. Instantly makes nearby enemies shocked. Ignores Shield Defense. Over-hit is possible. Power 775. -->
 		<set name="levelModifier" val="1" />
 		<set name="affectLimit" val="6;12" />
 		<set name="icon" val="icon.skill_transform_debuff" />
@@ -1907,9 +1573,7 @@
 		</for>
 	</skill>
 	<skill id="684" levels="1" name="Divine Knight Ultimate Defense">
-		<!--
-			Description: "Instantly and drastically increases tolerance to P. Def./M. Def, buff cancel attacks. The player cannot move while the effect lasts. Effect 2."
-		-->
+    <!-- Instantly and drastically increases Resistance to P. Def./M. Def., buff cancel attacks. The player cannot move while the effect lasts. Effect 2. -->
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="reuseDelay" val="900000" />
 		<set name="magicLevel" val="80" />
@@ -1929,9 +1593,7 @@
 		</for>
 	</skill>
 	<skill id="685" levels="1" name="Sacrifice Knight">
-		<!--
-			Description: Increases the P. Def. of the party members by sacrificing yourself. Available only when HP is under 30 percent.
-		-->
+    <!-- Increases P. Def. of the party members by sacrificing yourself. Available only when HP is under 30 percent. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="reuseDelay" val="1800000" />
@@ -1957,9 +1619,7 @@
 		</for>
 	</skill>
 	<skill id="686" levels="1" name="Divine Rogue Stun Shot">
-		<!--
-			Description: Shoots arrows that inflict both damage and shock to the enemy in order to cancel target state. Puts an enemy into shock momentarily. Over-hit possible. Power 2323.
-		-->
+    <!-- Shoots arrows that inflict both damage and shock to the enemy in order to cancel target state. Momentarily stuns target. Over-hit is possible. Power 2323. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="coolTime" val="1000" />
@@ -1983,9 +1643,7 @@
 		</for>
 	</skill>
 	<skill id="687" levels="1" name="Divine Rogue Double Shot">
-		<!--
-			Description: Shoots 2 arrows continuously. Critical enabled. Over-hit possible. Power 6195.
-		-->
+    <!-- Shoots 2 arrows continuously. Critical hit is possible. Over-hit is possible. Power 6195. -->
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="coolTime" val="1000" />
 		<set name="reuseDelay" val="3000" />
@@ -2002,9 +1660,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="688" levels="1" name="Divine Rogue Bleed Attack">
-		<!--
-			Description: Causes injury by deadly attacks. Instantly causes the enemies to bleed. Over-hit is available. Power 1549. Effect 3.
-		-->
+    <!-- Causes injury by deadly attacks. Instantly causes the enemies to bleed. Over-hit is possible. Power 1549. Effect 3. -->
 		<set name="levelModifier" val="1" />
 		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="coolTime" val="720" />
@@ -2029,9 +1685,7 @@
 		</for>
 	</skill>
 	<skill id="689" levels="1" name="Divine Rogue Deadly Blow">
-		<!--
-			Description: Attempts a potentially deadly attack. Lethal Strike is possible. Over-hit is possible. Power 6969.
-		-->
+    <!-- Attacks the target's vital points. CP Siphon. Over-hit is possible. Power 6969. -->
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="coolTime" val="720" />
 		<set name="reuseDelay" val="3000" />
@@ -2050,9 +1704,7 @@
 		<set name="nextAction" val="attack" />
 	</skill>
 	<skill id="690" levels="1" name="Divine Rogue Agility">
-		<!--
-			Description: Temporarily increase Evasion. Effect 3.
-		-->
+    <!-- Temporarily increase Evasion by 4. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="reuseDelay" val="2000" />
@@ -2073,9 +1725,7 @@
 		</for>
 	</skill>
 	<skill id="691" levels="1" name="Sacrifice Rogue">
-		<!--
-			Description: Increase party member's Evasion by sacrificing yourself. Available only when HP is under 30 percent.
-		-->
+    <!-- Increase party member's Evasion by sacrificing yourself. Available only when HP is under 30 percent. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="reuseDelay" val="1800000" />
@@ -2100,10 +1750,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="692" levels="1" name="Divine Wizard Holy Flare">
-		<!--
-			Description: Attacks a contacted target with non-attribute attack. Temporarily decreases your magic attack power during PvP. Power 102.
-		-->
+	<skill id="692" levels="1" name="Divine Wizard Divine Flare">
+    <!-- Attacks a contacted target with non-attribute attack. Temporarily decreases your M. Atk. during PVP. Power 102. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="reuseDelay" val="1000" />
@@ -2123,10 +1771,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="693" levels="1" name="Divine Wizard Holy Strike">
-		<!--
-			Description: Unleashes divine attack. Over-hit is available. Power 128.
-		-->
+	<skill id="693" levels="1" name="Divine Wizard Divine Strike">
+    <!-- Unleashes holy attack. Over-hit is possible. Power 128. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="reuseDelay" val="8000" />
@@ -2144,10 +1790,8 @@
 		<set name="element" val="holy" />
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="694" levels="1" name="Divine Wizard Holy Curtain">
-		<!--
-			Description: Attack a large number of enemies with divine rainstorm. Power 64.
-		-->
+	<skill id="694" levels="1" name="Divine Wizard Divine Curtain">
+    <!-- Attack a large number of enemies with divine rainstorm. Power 64. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="5;12" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
@@ -2166,10 +1810,8 @@
 		<set name="element" val="holy" />
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="695" levels="1" name="Divine Wizard Holy Cloud">
-		<!--
-			Description: Instantly bring divine clouds making nearby enemies sleep. Decrease probability of additional sleep state while effects last.
-		-->
+	<skill id="695" levels="1" name="Divine Wizard Divine Cloud">
+    <!-- Instantly bring divine clouds making nearby enemies Sleep. Decrease probability of additional Sleep state while effects last. -->
 		<set name="levelModifier" val="2" />
 		<set name="magicType" val="MAGIC" />
 		<set name="affectLimit" val="9;10" />
@@ -2191,10 +1833,8 @@
 			<effect count="1" name="Sleep" stackOrder="-1" stackType="Sleep" time="30" val="0" />
 		</for>
 	</skill>
-	<skill id="696" levels="1" name="Divine Wizard Surrender to Holy">
-		<!--
-			Description: Instantly decrease resistance to divine attacks, and increase resistance to darkness attacks. Effect 3.
-		-->
+	<skill id="696" levels="1" name="Divine Wizard Surrender to Divine">
+    <!-- Instantly decrease Resistance to Holy, and increase Resistance to Dark. Effect 3. -->
 		<set name="levelModifier" val="2" />
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill_transform_debuff" />
@@ -2220,9 +1860,7 @@
 		</for>
 	</skill>
 	<skill id="697" levels="1" name="Sacrifice Wizard">
-		<!--
-			Description: Increase party member's magic power by sacrificing yourself. Usable only when MP is under 10 percent.
-		-->
+    <!-- Increase party member's M. Atk. by sacrificing yourself. Usable only when MP is under 10 percent. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="reuseDelay" val="1800000" />
@@ -2248,9 +1886,7 @@
 		</for>
 	</skill>
 	<skill id="698" levels="1" name="Divine Healer Major Heal">
-		<!--
-			Description: Regenerate the target's HP immediately. Power 946.
-		-->
+    <!-- Restores HP by 946 power. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="reuseDelay" val="1000" />
@@ -2266,9 +1902,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="699" levels="1" name="Divine Healer Battle Heal">
-		<!--
-			Description: Quickly recovers HP. Power 826.
-		-->
+    <!-- Restores HP by 826 power. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="reuseDelay" val="1000" />

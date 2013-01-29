@@ -1,16 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list>	
-	<skill id="19001" levels="1" name="Проверка - Кровопускание">
+	<skill id="19001" levels="1" name="Test Bleed">
+    <!-- Race confirm -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>	
-	<skill id="19002" levels="1" name="Якорь">
+	<skill id="19002" levels="1" name="Anger">
+    <!-- Action prevent item skill confirm -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="19003" levels="5" name="Сопротивление Клана">
+	<skill id="19003" levels="5" name="Clan Resistance Hall">
+    <!-- Increases clan members' resistance to holy/dark attacks by 3. Applies after the elder stage. -->
 		<table name="#Def">3 4 5 6 7</table>
 		<set name="isClanSkill" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -23,7 +26,8 @@
 			<add order="0x40" stat="defenceUnholy" val="#Def" />
 		</for>
 	</skill>
-	<skill id="19004" levels="5" name="Защита от Эффектов Клана">
+	<skill id="19004" levels="5" name="Clan De-Buff Control">
+    <!-- Increases clan members' resistance to de-buff by 3%. Applies after the elder stage. -->
 		<table name="#Def">3 4 5 6 7</table>
 		<set name="isClanSkill" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -35,7 +39,8 @@
 			<add order="0x40" stat="debuffResist" val="#Def" />
 		</for>
 	</skill>
-	<skill id="19005" levels="5" name="Контроль Мышц Клана">
+	<skill id="19005" levels="5" name="Clan Muzzle Control">
+    <!-- Increases clan members' resistance to paralysis by 12. Applies after the elder stage. -->
 		<table name="#Def">12 13 14 15 16</table>
 		<set name="isClanSkill" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -47,7 +52,8 @@
 			<add order="0x40" stat="paralyzeResist" val="#Def" />
 		</for>
 	</skill>
-	<skill id="19006" levels="5" name="Контроль Разума Клана">
+	<skill id="19006" levels="5" name="Clan Mental Control">
+    <!-- Increases clan members' resistance to mental attacks by 12. Applies after the elder stage. -->
 		<table name="#Def">12 13 14 15 16</table>
 		<set name="isClanSkill" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -59,7 +65,8 @@
 			<add order="0x40" stat="mentalResist" val="#Def" />
 		</for>
 	</skill>
-	<skill id="19007" levels="1" name="Призыв Клана">
+	<skill id="19007" levels="1" name="Clan Summon">
+    <!-- Summons a clan member. Consumes 10 Soul Ores. Consumes 900 Individual Fame. Applies after the viscount stage. -->
 		<set name="isClanSkill" val="true" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="hitTime" val="15000" />
@@ -73,13 +80,15 @@
         <set name="itemConsumeId" val="1785"/>
         <set name="itemConsumeCount" val="10"/>
 	</skill>	
-	<skill id="19008" levels="1" name="Защитник Клана">
+	<skill id="19008" levels="1" name="Clan Guardian">
+    <!-- Summons the clan guardian for 3 minutes. It recovers HP/MP/CP by 500 power for all clan members within the range. Consumes 100 Soul Ores. Consumes 1000 Clan Fame. Applies after the distinguished king stage. Can only be used on the battlefield. -->
 	    <set name="isClanSkill" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="19009" levels="5" name="Обновление Клана">
+	<skill id="19009" levels="5" name="Clan Advent">
+    <!-- Increases clan members' P. Atk., P. Def., M. Atk., and M. Def. by 1% and HP/MP recovery bonus by 1 when the clan leader logs in. Stage 1 effect is applied at the time of the clan leader's login and the level increases every 10 minutes up to level 5. -->
 		<set name="isClanSkill" val="true" />
 		<table name="#px"> 1.02 1.03 1.04 1.05 1.06 </table>
 		<table name="#reg"> 1 2 3 4 5 </table>
@@ -96,7 +105,8 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19010" levels="1" name="Копия Клана">
+	<skill id="19010" levels="1" name="Clan Copy">
+    <!-- Summons a copy of yourself to cause confusion among the enemy. Consumes 50 Soul Ores. Consumes 1500 Individual Fame. Applies after the marquis stage. -->
 		<set name="isClanSkill" val="true" />
 		<table name="#mpConsume2">65</table>
 		<set name="reuseDelay" val="14400000" />
@@ -106,7 +116,8 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="minPledgeClass" val="10" /> <!-- Маркиз -->
 	</skill>	
-	<skill id="19011" levels="1" name="Легенда Клана">
+	<skill id="19011" levels="1" name="Clan Legend">
+    <!-- Increases P. Atk. and P. Def. when HP is below 30%. Applies after the lord stage. -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isClanSkill" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -120,12 +131,14 @@
 			</add>
 		</for>
 	</skill>	
-	<skill id="19012" levels="1" name="Скрыть Клан">
+	<skill id="19012" levels="1" name="Clan Hide">
+    <!-- Hides nearby clan members. Decreases Speed by 50% when hidden. Consumes 150 Soulstones. Consumes 1000 Clan Fame. Applies after the lord stage. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="19013" levels="1" name="Очищение Клана">
+	<skill id="19013" levels="1" name="Clan Un-debuff">
+    <!-- Cancels all de-buffs of nearby clan members. Consumes 50 Soul Ores. Consumes 1500 Individual Fame. Applies after the marquis stage. -->
 		<set name="isClanSkill" val="true" />
 		<table name="#mpConsume2">65</table>
 		<set name="reuseDelay" val="3600000" />
@@ -145,7 +158,8 @@
             </effect>
         </for>
 	</skill>
-	<skill id="19014" levels="1" name="Предельная Защита Клана">
+	<skill id="19014" levels="1" name="Clan Defense">
+    <!-- Makes nearby clan members invincible. Consumes 50 Soul Ores. Consumes 1000 Clan Fame. Applies after the distinguished king stage. -->
 		<set name="isClanSkill" val="true" />
 		<table name="#mpConsume2">65</table>
 		<set name="reuseDelay" val="14400000" />
@@ -161,7 +175,8 @@
 			<effect count="1" name="Invulnerable" abnormal="invul2" stackOrder="-1" stackType="invul" time="30" val="0" />
 		</for>
 	</skill>
-	<skill id="19015" levels="1" name="Дружба Клана">
+	<skill id="19015" levels="1" name="Clan Friendly">
+    <!-- Increases nearby clan members' P. Critical Rate by 3% and M. Critical Rate by 20. Consumes 100 Soul Ores. Consumes 3500 Individual Fame. Applies after the marquis stage. -->
 		<set name="isClanSkill" val="true" />
 		<table name="#mpConsume2">65</table>
 		<set name="reuseDelay" val="3600000" />
@@ -181,7 +196,8 @@
 			</effect>
 		</for>
 	</skill>	
-	<skill id="19016" levels="1" name="Границы Клана">
+	<skill id="19016" levels="1" name="Clan Boundary">
+    <!-- Increases nearby clan members' P. Atk. by 3% and P. Def. by 3%. Consumes 100 Soul Ores. Consumes 3000 Individual Fame. Applies after the count stage. -->
 		<set name="isClanSkill" val="true" />
 		<table name="#mpConsume2">65</table>
 		<set name="reuseDelay" val="3600000" />
@@ -201,7 +217,8 @@
 			</effect>
 		</for>
 	</skill>	
-	<skill id="19017" levels="1" name="Узники Клана">
+	<skill id="19017" levels="1" name="Clan Prison">
+    <!-- For 60 seconds, decreases Speed of nearby enemies by 23% and stops them from escaping. Consumes 50 Soul Ores. Consumes 3000 Individual Fame. Applies after the duke stage. -->
 		<set name="isClanSkill" val="true" />
 		<table name="#mpConsume2">65</table>
 		<set name="reuseDelay" val="3600000" />
@@ -220,12 +237,14 @@
 			</effect>
 		</for>
 	</skill>	
-	<skill id="19018" levels="1" name="Иксион">
+	<skill id="19018" levels="1" name="Clan Guardian Recovery">
+    <!-- Restores HP/MP/CP. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
-	<skill id="19074" levels="1" name="Защитник Клана">
+	<skill id="19074" levels="1" name="Academy Precept">
+    <!-- For 60 minutes, increases academy members' P. Atk. by 10%, M. Atk. by 10%, Critical Rate by 10%, and M. Critical Rate by 10%. -->
 		<set name="isClanSkill" val="true" />
 		<table name="#mpConsume2">100</table>
 		<set name="reuseDelay" val="43200000" />
@@ -238,57 +257,68 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="minPledgeClass" val="5" /> <!-- Король -->
 	</skill>	
-	<skill id="19075" levels="1" name="Отношения Клана">
+	<skill id="19075" levels="1" name="Clan Relation">
+    <!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>		
-	<skill id="19076" levels="1" name="Награда Академии Клана">
+	<skill id="19076" levels="1" name="Clan Academy Reward">
+    <!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>	
-	<skill id="19080" levels="1" name="Сигель Иксион">
+	<skill id="19080" levels="1" name="Sigel Ixion">
+    <!-- Transforms into Ixion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>		
-	<skill id="19081" levels="1" name="Иксион Тира">
+	<skill id="19081" levels="1" name="Tyrr Ixion">
+    <!-- Transforms into Ixion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>	
-	<skill id="19082" levels="1" name="Иксион Одала">
+	<skill id="19082" levels="1" name="Othell Ixion">
+    <!-- Transforms into Ixion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>		
-	<skill id="19083" levels="1" name="Иксион Эура">
+	<skill id="19083" levels="1" name="Yul Ixion">
+    <!-- Transforms into Ixion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>	
-	<skill id="19084" levels="1" name="Иксион Фео">
+	<skill id="19084" levels="1" name="Feoh Ixion">
+    <!-- Transforms into Ixion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>		
-	<skill id="19085" levels="1" name="Иксион Иса">
+	<skill id="19085" levels="1" name="Iss Ixion">
+    <!-- Transforms into Ixion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>	
-	<skill id="19086" levels="1" name="Иксион Веньо">
+	<skill id="19086" levels="1" name="Wynn Ixion">
+    <!-- Transforms into Ixion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>		
-	<skill id="19087" levels="1" name="Альгиз Иксион">
+	<skill id="19087" levels="1" name="Aeore Ixion">
+    <!-- Transforms into Ixion. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>	
-	<skill id="19088" levels="4" name="Призвать Осадного Голема">
+	<skill id="19088" levels="4" name="Summon Siege Golem">
+    <!-- Summons a siege weapon. Requires 400 R-grade crystals. Automatically acquired by dwarves at level 85. -->
 		<table name="#npcId">15054 15055 15056 15057</table>
 		<set name="mpConsume2" val="530" />
 		<set name="itemConsumeId" val="17371" />
@@ -298,11 +328,11 @@
 		<set name="hitTime" val="180000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<!-- Summon-specific -->
 		  <set name="lifeTime" val="1200000" />
 		<set name="npcId" val="#npcId" />
 	 </skill>		
-	<skill id="19089" levels="4" name="Призвать Стального Вепря">
+	<skill id="19089" levels="4" name="Summon Wild Hog Cannon">
+    <!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it cannot move, and it can inflict long-range attacks. Switching modes takes 30 seconds. Requires 600 R-grade crystals. Automatically acquired by dwarves at level 85. -->
 		  <table name="#npcId">15058 15059 15060 15061</table>
 		  <set name="mpConsume2" val="530" />
 		  <set name="itemConsumeId" val="17371" />
@@ -312,11 +342,11 @@
 		  <set name="hitTime" val="180000" />
 		  <set name="skillType" val="SUMMON" />
 		  <set name="operateType" val="OP_ACTIVE" />
-		  <!-- Summon-specific -->
 		  <set name="lifeTime" val="1200000" />
 		  <set name="npcId" val="#npcId" />
 	</skill>		
-	<skill id="19090" levels="4" name="Призвать Стального Вепря">
+	<skill id="19090" levels="4" name="Summon Swoop Cannon">
+    <!-- Summons a Swoop Cannon. Requires 500 R-grade crystals. Automatically acquired by dwarves at level 85. -->
 		  <table name="#npcId">15062 15063 15064 15065</table>
 		  <set name="mpConsume2" val="530" />
 		  <set name="itemConsumeCount" val="500" />
@@ -326,41 +356,47 @@
 		  <set name="hitTime" val="180000" />
 		  <set name="skillType" val="SUMMON" />
 		  <set name="operateType" val="OP_ACTIVE" />
-		  <!-- Summon-specific -->
 		  <set name="lifeTime" val="1200000" />
 		  <set name="npcId" val="#npcId" />
 	</skill>
-	<skill id="19092" levels="1" name="Массовое Возвращение">
+	<skill id="19092" levels="1" name="Mass Return">
+    <!-- Teleports party members to a nearby village to safe area. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>		
-	<skill id="19093" levels="1" name="Колчан Стрел с Дополнительным  Зарядом">
+	<skill id="19093" levels="1" name="Added Blow Quiver">
+    <!-- Chance of inflicting damage again upon shooting. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>	
-	<skill id="19094" levels="1" name="Колчан Стрел с Усиленной Разрушительной Силой">
+	<skill id="19094" levels="1" name="Increased Damage Quiver">
+    <!-- Great damage occurs if critical occurs while shooting. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>		
-	<skill id="19095" levels="1" name="Колчан Стрел с Увеличенной Вредоносностью">
+	<skill id="19095" levels="1" name="Added Bleed Quiver">
+    <!-- Chance of inflicting bleed if critical occurs while shooting. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>	
-	<skill id="19096" levels="1" name="Дополнительный Удар">
+	<skill id="19096" levels="1" name="Added Target">
+    <!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>		
-	<skill id="19097" levels="1" name="Высший Критический Удар">
+	<skill id="19097" levels="1" name="Critical Target">
+    <!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>		
-	<skill id="19098" levels="1" name="Пускание Крови">
+	<skill id="19098" levels="1" name="Bleed Target">
+    <!-- Consumes 100 HP per second for 15 seconds. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
