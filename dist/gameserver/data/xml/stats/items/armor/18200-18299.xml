@@ -281,6 +281,9 @@
         <set name="icon" value="icon.r85_talisman_hp_up_passive"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
+		<skills>
+			<skill id="8624" level="1"/>
+		</skills>
         <equip>
             <slot id="TALISMAN"/>
         </equip>
@@ -295,6 +298,9 @@
         <set name="icon" value="icon.r85_talisman_hp_up_passive"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
+		<skills>
+			<skill id="8625" level="1"/>
+		</skills>
         <equip>
             <slot id="TALISMAN"/>
         </equip>
@@ -309,6 +315,9 @@
         <set name="icon" value="icon.r85_talisman_hp_up_passive"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
+		<skills>
+			<skill id="8626" level="1"/>
+		</skills>
         <equip>
             <slot id="TALISMAN"/>
         </equip>
@@ -323,6 +332,9 @@
         <set name="icon" value="icon.r85_talisman_hp_up_passive"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
+		<skills>
+			<skill id="8627" level="1"/>
+		</skills>
         <equip>
             <slot id="TALISMAN"/>
         </equip>
@@ -337,6 +349,9 @@
         <set name="icon" value="icon.r85_talisman_mp_up_passive"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
+		<skills>
+			<skill id="8628" level="1"/>
+		</skills>
         <equip>
             <slot id="TALISMAN"/>
         </equip>
@@ -351,6 +366,9 @@
         <set name="icon" value="icon.r85_talisman_mp_up_passive"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
+		<skills>
+			<skill id="8629" level="1"/>
+		</skills>
         <equip>
             <slot id="TALISMAN"/>
         </equip>
@@ -365,6 +383,9 @@
         <set name="icon" value="icon.r85_talisman_mp_up_passive"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
+		<skills>
+			<skill id="8630" level="1"/>
+		</skills>
         <equip>
             <slot id="TALISMAN"/>
         </equip>
@@ -379,6 +400,9 @@
         <set name="icon" value="icon.r85_talisman_mp_up_passive"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
+		<skills>
+			<skill id="8631" level="1"/>
+		</skills>
         <equip>
             <slot id="TALISMAN"/>
         </equip>
@@ -393,6 +417,9 @@
         <set name="icon" value="icon.r85_talisman_cp_up_passive"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
+		<skills>
+			<skill id="8632" level="1"/>
+		</skills>
         <equip>
             <slot id="TALISMAN"/>
         </equip>
@@ -407,6 +434,9 @@
         <set name="icon" value="icon.r85_talisman_cp_up_passive"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
+		<skills>
+			<skill id="8633" level="1"/>
+		</skills>
         <equip>
             <slot id="TALISMAN"/>
         </equip>
@@ -421,6 +451,9 @@
         <set name="icon" value="icon.r85_talisman_cp_up_passive"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
+		<skills>
+			<skill id="8634" level="1"/>
+		</skills>
         <equip>
             <slot id="TALISMAN"/>
         </equip>
