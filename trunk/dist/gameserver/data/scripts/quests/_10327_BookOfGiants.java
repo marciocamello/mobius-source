@@ -75,7 +75,7 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onSkillUse(NpcInstance npc, Skill skill, QuestState st)
+	public String onAttack(NpcInstance npc, QuestState st) // Fix for Dwarves (no active skill until lv10)
 	{
 		int npcId = npc.getNpcId();
 		Functions.npcSayToPlayer(Tairen, st.getPlayer(), NpcString.ENOUGH_OF_THIS_COME_AT_ME, ChatType.NPC_SAY);
