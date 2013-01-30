@@ -62,7 +62,7 @@ public class PowerfulDeviceInstance extends NpcInstance
 			htmlMessage.setFile("default/" + getNpcId() + "-5.htm");
 			player.sendPacket(htmlMessage);
 		}
-		else if (command.equalsIgnoreCase("Awaken2_" + _NPC.get(getNpcId())))
+		else if (command.equalsIgnoreCase("Awaken2"))
 		{
 			player.setVar("AwakenPrepared", "true", -1);
 			AwakingManager.getInstance().SendReqToAwaking(player);
