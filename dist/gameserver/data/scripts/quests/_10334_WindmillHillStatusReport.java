@@ -20,7 +20,7 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.ScriptFile;
 
-public class _10334_WindmillHilStatusReport extends Quest implements ScriptFile
+public class _10334_WindmillHillStatusReport extends Quest implements ScriptFile
 {
 	private static final int batis = 30332;
 	private static final int shnain = 33508;
@@ -43,7 +43,7 @@ public class _10334_WindmillHilStatusReport extends Quest implements ScriptFile
 	{
 	}
 	
-	public _10334_WindmillHilStatusReport()
+	public _10334_WindmillHillStatusReport()
 	{
 		super(false);
 		addStartNpc(shnain);
