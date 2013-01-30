@@ -464,7 +464,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="STUN" />
 		<set name="flyType" val="THROW_HORIZONTAL" />
-		<set name="flyRadius" val="500" />
+		<set name="flyRadius" val="-500" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="trait" val="SHOCK" />
 		<set name="saveVs" val="CON" />

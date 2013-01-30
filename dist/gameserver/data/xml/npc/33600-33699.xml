@@ -402,8 +402,8 @@
         </attributes>
     </npc>
     <npc id="33609" name="Адольф" title="Начальник Авангарда Адена">
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
+        <set name="aggroRange" value="500"/>
+        <set name="ai_type" value="FollowNpc"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="40"/>

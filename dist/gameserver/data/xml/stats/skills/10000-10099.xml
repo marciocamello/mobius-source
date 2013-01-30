@@ -781,7 +781,7 @@
 		<table name="#reuseDelay">600000</table>
 		<table name="#powerPvP">0</table>
 		<set name="weaponsAllowed" val="2"/>
-		<set name="flyRadius" val="50"/>
+		<set name="flyRadius" val="-50"/>
         <set name="flyType" val="THROW_UP"/>
 		<set name="coolTime" val="200" />
 		<set name="effectRange" val="300" />

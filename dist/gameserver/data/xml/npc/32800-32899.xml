@@ -4087,8 +4087,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="32894" name="пзшаэль" title="Спутник Эспины">
-		<!--Need TODO-->
+	<npc id="32894" name="Izael" title="">
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
 		<set name="basePAtkSpd" value="253"/>

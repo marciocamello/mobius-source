@@ -46,10 +46,12 @@
 		<set name="element" val="#element" />
 		<set name="elementPower" val="#elementPower" />
 		<set name="flyType" val="THROW_HORIZONTAL" />
+        <set name="flyRadius" val="-200"/>
 		<set name="magicType" val="MAGIC" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE"/>
+		<set name="castRange" val="600" />
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>	
 		<set name="relationSkillsId" val="1028" />
