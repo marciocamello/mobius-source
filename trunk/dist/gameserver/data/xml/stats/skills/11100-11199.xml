@@ -11,7 +11,7 @@
 		<set name="castRange" val="800" />
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="coolTime" val="3000"/>
-		<set name="flyRadius" val="280"/>
+		<set name="flyRadius" val="-280"/>
 		<set name="flyType" val="THROW_HORIZONTAL" />
 		<set name="isDebuff" val="true"/>		
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -34,7 +34,7 @@
 		<set name="castRange" val="800" />
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="coolTime" val="3000"/>
-		<set name="flyRadius" val="280"/>
+		<set name="flyRadius" val="-280"/>
 		<set name="flyType" val="THROW_HORIZONTAL" />
 		<set name="isDebuff" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -98,7 +98,7 @@
         <set name="isDebuff" val="true"/>
         <set name="magicType" val="MAGIC"/>
         <set name="lvlDepend" val="2"/>
-        <set name="flyRadius" val="90"/>
+        <set name="flyRadius" val="-90"/>
         <set name="flyType" val="THROW_HORIZONTAL"/>
         <set name="mpInitialConsume" val="22"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -123,7 +123,7 @@
         <set name="isDebuff" val="true"/>
         <set name="magicType" val="MAGIC"/>
         <set name="lvlDepend" val="2"/>
-        <set name="flyRadius" val="90"/>
+        <set name="flyRadius" val="-90"/>
         <set name="flyType" val="THROW_HORIZONTAL"/>
         <set name="mpInitialConsume" val="22"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -148,7 +148,7 @@
         <set name="isDebuff" val="true"/>
         <set name="magicType" val="MAGIC"/>
         <set name="lvlDepend" val="2"/>
-        <set name="flyRadius" val="90"/>
+        <set name="flyRadius" val="-90"/>
         <set name="flyType" val="THROW_HORIZONTAL"/>
         <set name="mpInitialConsume" val="22"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -173,7 +173,7 @@
         <set name="isDebuff" val="true"/>
         <set name="magicType" val="MAGIC"/>
         <set name="lvlDepend" val="2"/>
-        <set name="flyRadius" val="90"/>
+        <set name="flyRadius" val="-90"/>
         <set name="flyType" val="THROW_HORIZONTAL"/>
         <set name="mpInitialConsume" val="22"/>
         <set name="operateType" val="OP_ACTIVE"/>

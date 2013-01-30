@@ -28,7 +28,7 @@
 		<set name="castRange" val="800" />
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="coolTime" val="3000"/>
-		<set name="flyRadius" val="280"/>
+		<set name="flyRadius" val="-280"/>
 		<set name="flyType" val="THROW_HORIZONTAL" />
 		<set name="isDebuff" val="true"/>		
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -51,7 +51,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="coolTime" val="3000"/>
-		<set name="flyRadius" val="280"/>
+		<set name="flyRadius" val="-280"/>
 		<set name="flyType" val="THROW_HORIZONTAL" />
 		<set name="isDebuff" val="true"/>		
 		<set name="operateType" val="OP_ACTIVE"/>

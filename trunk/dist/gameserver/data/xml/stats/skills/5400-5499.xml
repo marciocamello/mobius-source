@@ -1157,7 +1157,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="flyType" val="THROW_UP" />
-		<set name="flyRadius" val="500" />
+		<set name="flyRadius" val="-500" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5495" levels="1" name="Bleed">

@@ -441,17 +441,16 @@
 	</skill>
 	<skill id="11774" levels="4" name="Summon Tree of Life">
     <!-- Summons a Tree of Life. The summoned tree heals nearby party members for 30 seconds. Can also cast a debuff canceling blessing. -->
-		<table name="#itemConsumeCount">5 6 7 8</table>
 		<table name="#skill">1 2 3 4</table>
 		<table name="#magicLevel">85 86 89 92</table>
+        <table name="#mpConsume2">185 205 225 243</table>
+        <set name="mpConsume2" val="#mpConsume2"/>
 		<set name="lifeTime" val="30" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="summonType" val="TREE" />
-		<set name="itemConsumeId" val="3031"/>
-        <set name="itemConsumeCount" val="#itemConsumeCount"/>
 		<set name="isMagic" val="true" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -471,20 +470,21 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for />
 	</skill>
-	<skill id="11776" levels="4" name="Summon Lumi">		
+	<skill id="11776" levels="4" name="Summon Lumi">
     <!-- Summons a Spirit of Light. -->
+        <table name="#lifeTime">3600 3600 3600 3600</table>
 		<table name="#magicLevel">85 86 89 92</table>
-		<set name="summonTotalLifeTime" val="3600000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTimeLostActive" val="1000" />
+        <table name="#mpConsume2">96 106 117 127</table>
+        <set name="lifeTime" val="#lifeTime"/>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SUMMON" />
-		<set name="summonType" val="PET" />
+        <set name="summonPoint" val="3"/>
+        <set name="summonType" val="MULTI_SERVITOR"/>
 		<set name="isMagic" val="true" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="npcId" val="14925" />
-		<set name="relationSkillsId" val="1359;1358;1361;1360" /> 
+		<set name="npcId" val="14944" />
+		<set name="relationSkillsId" val="1359;1358;1361;1360" />
 	</skill>
 	<skill id="11777" levels="5" name="Mark of Lumi">
     <!-- A mark appears that decreases the target's P. Def. and M. Def. by 10% and consumes 113 HP every second for 60 seconds. -->

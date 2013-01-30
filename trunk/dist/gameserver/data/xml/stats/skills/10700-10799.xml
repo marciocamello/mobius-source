@@ -299,6 +299,7 @@
         <set name="castRange" val="1100"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="flyType" val="THROW_HORIZONTAL"/>
+        <set name="flyRadius" val="-200"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="relationSkillsId" val="19;507"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -357,6 +358,7 @@
         <set name="elementPower" val="#elementPower"/>
         <set name="element" val="#element"/>
         <set name="flyType" val="THROW_HORIZONTAL"/>
+        <set name="flyRadius" val="-200"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="overHit" val="true"/>
@@ -625,6 +627,7 @@
         <set name="element" val="#element"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="flyType" val="THROW_HORIZONTAL"/>
+        <set name="flyRadius" val="-200"/>
         <set name="relationSkillsId" val="990"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="overHit" val="true"/>
