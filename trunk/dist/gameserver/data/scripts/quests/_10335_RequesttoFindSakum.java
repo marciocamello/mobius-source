@@ -58,7 +58,7 @@ public class _10335_RequesttoFindSakum extends Quest implements ScriptFile
 		addKillNpcWithLog(2, skelet_item, 15, skelet);
 		addKillNpcWithLog(2, zombie_item, 15, zombie);
 		addLevelCheck(23, 40);
-		addQuestCompletedCheck(_10334_WindmillHilStatusReport.class);
+		addQuestCompletedCheck(_10334_WindmillHillStatusReport.class);
 	}
 	
 	@Override
