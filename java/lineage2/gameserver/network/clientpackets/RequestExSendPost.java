@@ -169,10 +169,9 @@ public class RequestExSendPost extends L2GameClientPacket
 		}
 		if (_body.length() == 0)
 		{
-			activeChar.sendMessage("Введите тек�?т �?ообщени�?");
+			activeChar.sendMessage("Enter the body message!");
 			return;
 		}
-		activeChar.sendMessage("_body=" + _body);
 		if (activeChar.getName().equalsIgnoreCase(_recieverName))
 		{
 			activeChar.sendPacket(Msg.YOU_CANNOT_SEND_A_MAIL_TO_YOURSELF);
