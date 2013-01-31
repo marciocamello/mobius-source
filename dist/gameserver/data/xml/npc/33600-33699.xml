@@ -355,7 +355,7 @@
     </npc>
     <npc id="33608" name="Адольф" title="Начальник Авангарда Адена">
         <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
+        <set name="ai_type" value="FollowNpc"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="40"/>
@@ -378,9 +378,9 @@
         <set name="baseShldDef" value="0"/>
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
-        <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="baseWalkSpd" value="120"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -427,8 +427,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -451,7 +451,7 @@
     </npc>
     <npc id="33610" name="Бартон" title="Авангард Адена">
         <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
+        <set name="ai_type" value="Fighter"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="40"/>
@@ -474,9 +474,9 @@
         <set name="baseShldDef" value="0"/>
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
-        <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="baseWalkSpd" value="120"/>
+		<set name="collision_height" value="30.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -499,7 +499,7 @@
     </npc>
     <npc id="33611" name="Бартон" title="Авангард Адена">
         <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
+        <set name="ai_type" value="FollowNpc"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="40"/>
@@ -522,9 +522,9 @@
         <set name="baseShldDef" value="0"/>
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
-        <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="baseWalkSpd" value="120"/>
+		<set name="collision_height" value="30.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -547,7 +547,7 @@
     </npc>
     <npc id="33612" name="Хаюк" title="Авангард Адена">
         <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
+        <set name="ai_type" value="Fighter"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="40"/>
@@ -570,9 +570,9 @@
         <set name="baseShldDef" value="0"/>
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
-        <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="baseWalkSpd" value="120"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -619,8 +619,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -643,7 +643,7 @@
     </npc>
     <npc id="33614" name="Элийя" title="Авангард Адена">
         <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
+        <set name="ai_type" value="Fighter"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="40"/>
@@ -666,9 +666,9 @@
         <set name="baseShldDef" value="0"/>
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
-        <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="baseWalkSpd" value="120"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -715,8 +715,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -739,7 +739,7 @@
     </npc>
     <npc id="33616" name="Элис" title="Авангард Адена">
         <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
+        <set name="ai_type" value="Fighter"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="40"/>
@@ -762,9 +762,9 @@
         <set name="baseShldDef" value="0"/>
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
-        <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="baseWalkSpd" value="120"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -811,8 +811,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -859,8 +859,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="7.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -907,8 +907,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -955,8 +955,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1003,8 +1003,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="30.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1051,8 +1051,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="30.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1099,8 +1099,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1147,8 +1147,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1195,8 +1195,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1243,8 +1243,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1291,8 +1291,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1339,8 +1339,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1387,8 +1387,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="7.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1435,8 +1435,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1483,8 +1483,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1531,8 +1531,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="30.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1579,8 +1579,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="30.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1627,8 +1627,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1675,8 +1675,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1723,8 +1723,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1771,8 +1771,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1819,8 +1819,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1867,8 +1867,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1915,8 +1915,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="7.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1963,8 +1963,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2007,8 +2007,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2051,8 +2051,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2095,8 +2095,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2139,8 +2139,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2183,8 +2183,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2227,15 +2227,15 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="21.3"/>
-        <set name="collision_radius" value="8.0"/>
+		<set name="collision_height" value="23.5"/>
+		<set name="collision_radius" value="8.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
+        <set name="type" value="KartiaManager"/>
         <attributes>
             <defence attribute="fire" value="20"/>
             <defence attribute="water" value="20"/>
@@ -3181,15 +3181,60 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-	<npc id="33669" name="" title="">
-        <!--Need TODO-->
+	<npc id="33669" name="Sizrak" title="">
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
         <set name="basePAtkSpd" value="253"/>
         <set name="baseRunSpd" value="120"/>
         <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
+        <set name="collision_height" value="40.0"/>
+        <set name="collision_radius" value="15.0"/>
+        <set name="aggroRange" value="0"/>
+        <set name="ai_type" value="CharacterAI"/>
+        <set name="baseAtkRange" value="40"/>
+        <set name="baseCON" value="43"/>
+        <set name="baseCritRate" value="40"/>
+        <set name="baseDEX" value="30"/>
+        <set name="baseHpRate" value="1"/>
+        <set name="baseHpReg" value="7.5"/>
+        <set name="baseINT" value="21"/>
+        <set name="baseMAtk" value="780"/>
+        <set name="baseMDef" value="382"/>
+        <set name="baseMEN" value="20"/>
+        <set name="baseMpMax" value="1345.8"/>
+        <set name="baseMpReg" value="2.7"/>
+        <set name="basePAtk" value="1303"/>
+        <set name="basePDef" value="471"/>
+        <set name="baseSTR" value="40"/>
+        <set name="baseShldDef" value="0"/>
+        <set name="baseShldRate" value="0"/>
+        <set name="baseWIT" value="20"/>
+        <set name="castle_id" value="1"/>
+        <set name="level" value="70"/>
+        <set name="rewardExp" value="0"/>
+        <set name="rewardRp" value="0"/>
+        <set name="rewardSp" value="0"/>
+        <set name="shots" value="NONE"/>
+        <set name="texture" value=""/>
+        <set name="type" value="Sizrak"/>
+        <skills/>
+        <attributes>
+            <defence attribute="fire" value="150"/>
+            <defence attribute="water" value="150"/>
+            <defence attribute="wind" value="150"/>
+            <defence attribute="earth" value="150"/>
+            <defence attribute="holy" value="150"/>
+            <defence attribute="unholy" value="150"/>
+        </attributes>
+    </npc>
+	<npc id="33674" name="Transportation Assistant" title="Sizrak's Comrade">
+        <set name="baseHpMax" value="2444.468"/>
+        <set name="baseMAtkSpd" value="500"/>
+        <set name="basePAtkSpd" value="253"/>
+        <set name="baseRunSpd" value="120"/>
+        <set name="baseWalkSpd" value="50"/>
+        <set name="collision_height" value="40.0"/>
+        <set name="collision_radius" value="15.0"/>
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3228,15 +3273,63 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="33674" name="" title="">
-        <!--Need TODO-->
+	<npc id="33675" name="Finaria" title="">
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
         <set name="basePAtkSpd" value="253"/>
         <set name="baseRunSpd" value="120"/>
         <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
+        <set name="collision_height" value="37.0"/>
+        <set name="collision_radius" value="10.0"/>
+        <set name="aggroRange" value="0"/>
+        <set name="ai_type" value="CharacterAI"/>
+        <set name="baseAtkRange" value="40"/>
+        <set name="baseCON" value="43"/>
+        <set name="baseCritRate" value="40"/>
+        <set name="baseDEX" value="30"/>
+        <set name="baseHpRate" value="1"/>
+        <set name="baseHpReg" value="7.5"/>
+        <set name="baseINT" value="21"/>
+        <set name="baseMAtk" value="780"/>
+        <set name="baseMDef" value="382"/>
+        <set name="baseMEN" value="20"/>
+        <set name="baseMpMax" value="1345.8"/>
+        <set name="baseMpReg" value="2.7"/>
+        <set name="basePAtk" value="1303"/>
+        <set name="basePDef" value="471"/>
+        <set name="baseSTR" value="40"/>
+        <set name="baseShldDef" value="0"/>
+        <set name="baseShldRate" value="0"/>
+        <set name="baseWIT" value="20"/>
+        <set name="castle_id" value="1"/>
+        <set name="level" value="70"/>
+        <set name="rewardExp" value="0"/>
+        <set name="rewardRp" value="0"/>
+        <set name="rewardSp" value="0"/>
+        <set name="shots" value="NONE"/>
+        <set name="texture" value=""/>
+        <set name="type" value="Npc"/>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+		<skills>
+			<!--Dwarves-->
+			<skill id="4416" level="18"/>
+		</skills>
+	</npc>
+	<npc id="33676" name="Communications Assistant" title="Sizrak's Comrade">
+        <set name="baseHpMax" value="2444.468"/>
+        <set name="baseMAtkSpd" value="500"/>
+        <set name="basePAtkSpd" value="253"/>
+        <set name="baseRunSpd" value="120"/>
+        <set name="baseWalkSpd" value="50"/>
+        <set name="collision_height" value="40.0"/>
+        <set name="collision_radius" value="15.0"/>
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3275,15 +3368,14 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="33676" name="" title="">
-        <!--Need TODO-->
+    <npc id="33677" name="Aku's Minion" title="">
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
         <set name="basePAtkSpd" value="253"/>
         <set name="baseRunSpd" value="120"/>
         <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
+        <set name="collision_height" value="40.0"/>
+        <set name="collision_radius" value="15.0"/>
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3322,15 +3414,14 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33677" name="" title="">
-        <!--Need TODO-->
+    <npc id="33678" name="Teleport Device" title="">
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
         <set name="basePAtkSpd" value="253"/>
         <set name="baseRunSpd" value="120"/>
         <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
+        <set name="collision_height" value="240.0"/>
+        <set name="collision_radius" value="88.0"/>
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3358,7 +3449,7 @@
         <set name="rewardSp" value="0"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
+        <set name="type" value="TeleportDevice"/>
         <skills/>
         <attributes>
             <defence attribute="fire" value="150"/>
@@ -3369,15 +3460,163 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="33681" name="" title="">
-        <!--Need TODO-->
+	<npc id="33679" name="Zofan" title="Revolutionary">
+		<set name="collision_radius" value="20.0"/>
+		<set name="collision_height" value="40.0"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
+		<set name="ai_type" value="ZofanRevolutionary"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="621600000"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2025740"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="98"/>
+		<set name="baseCON" value="87"/>
+		<set name="baseDEX" value="83"/>
+		<set name="baseINT" value="11"/>
+		<set name="baseWIT" value="115"/>
+		<set name="baseMEN" value="5"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="186"/>
+		<set name="baseWalkSpd" value="50"/>
+		<attributes>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
+		</attributes>
+		<skills>
+			<skill id="4410" level="13"/>
+			<skill id="4411" level="13"/>
+			<skill id="4413" level="9"/>
+			<skill id="4414" level="1"/>
+			<skill id="4416" level="6"/>
+			<skill id="5462" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34992" min="9" max="27" chance="20.73" />
+				<reward item_id="34991" min="28" max="84" chance="6.772" />
+				<reward item_id="34990" min="20" max="60" chance="3.768" />
+				<reward item_id="19299" min="1" max="1" chance="0.5" />
+				<reward item_id="35352" min="1" max="1" chance="0.5" />
+				<reward item_id="35348" min="1" max="1" chance="0.5" />
+				<reward item_id="35329" min="1" max="1" chance="0.5" />
+				<reward item_id="19273" min="1" max="1" chance="0.5" />
+				<reward item_id="19295" min="1" max="1" chance="0.5" />
+				<reward item_id="19434" min="1" max="1" chance="0.01" />
+				<reward item_id="19430" min="1" max="1" chance="0.01" />
+				<reward item_id="19411" min="1" max="1" chance="0.005" />
+				<reward item_id="35453" min="1" max="1" chance="0.005" />
+				<reward item_id="35472" min="1" max="1" chance="0.01" />
+				<reward item_id="35476" min="1" max="1" chance="0.01" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19295" min="1" max="1" chance="1" />
+			<reward item_id="19299" min="1" max="1" chance="1" />
+			<reward item_id="19273" min="1" max="1" chance="0.5" />
+		</rewardlist>
+	</npc>
+	<npc id="33680" name="Zofan" title="Revolutioner">
+		<set name="collision_radius" value="14.0"/>
+		<set name="collision_height" value="37.0"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="621600000"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2025740"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="98"/>
+		<set name="baseCON" value="87"/>
+		<set name="baseDEX" value="83"/>
+		<set name="baseINT" value="11"/>
+		<set name="baseWIT" value="115"/>
+		<set name="baseMEN" value="5"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="186"/>
+		<set name="baseWalkSpd" value="50"/>
+		<attributes>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
+		</attributes>
+		<skills>
+			<skill id="4411" level="13"/>
+			<skill id="4413" level="9"/>
+			<skill id="4414" level="1"/>
+			<skill id="4416" level="6"/>
+			<skill id="5462" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34992" min="9" max="27" chance="20.73" />
+				<reward item_id="34991" min="28" max="84" chance="6.772" />
+				<reward item_id="34990" min="20" max="60" chance="3.768" />
+				<reward item_id="19299" min="1" max="1" chance="0.5" />
+				<reward item_id="35352" min="1" max="1" chance="0.5" />
+				<reward item_id="35348" min="1" max="1" chance="0.5" />
+				<reward item_id="35329" min="1" max="1" chance="0.5" />
+				<reward item_id="19273" min="1" max="1" chance="0.5" />
+				<reward item_id="19295" min="1" max="1" chance="0.5" />
+				<reward item_id="19434" min="1" max="1" chance="0.01" />
+				<reward item_id="19430" min="1" max="1" chance="0.01" />
+				<reward item_id="19411" min="1" max="1" chance="0.005" />
+				<reward item_id="35453" min="1" max="1" chance="0.005" />
+				<reward item_id="35472" min="1" max="1" chance="0.01" />
+				<reward item_id="35476" min="1" max="1" chance="0.01" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19295" min="1" max="1" chance="1" />
+			<reward item_id="19299" min="1" max="1" chance="1" />
+			<reward item_id="19273" min="1" max="1" chance="0.5" />
+		</rewardlist>
+	</npc>
+	<npc id="33681" name="Fergason" title="">
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
         <set name="basePAtkSpd" value="253"/>
         <set name="baseRunSpd" value="120"/>
         <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
+        <set name="collision_height" value="19.0"/>
+        <set name="collision_radius" value="9.0"/>
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>

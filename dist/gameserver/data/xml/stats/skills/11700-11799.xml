@@ -36,7 +36,7 @@
 			</effect>
 		</for>
 	</skill>
-	 <skill id="11753" levels="3" name="Sustain"> 
+	<skill id="11753" levels="3" name="Sustain"> 
     <!-- For 10 seconds, increases Healing power by 50. If triggered again, the effect will increase. -->
 		<table name="#hpEff">50 100 200</table>
 		<table name="#magicLevel">85 88 92</table>
@@ -55,13 +55,16 @@
 				<add order="0x40" stat="hpEff" val="#hpEff" />
 			</effect>
 		</for>
-       </skill> 
+	</skill> 
 	<skill id="11754" levels="5" name="Fairy of Life">
     <!-- Summons a fairy that follows and periodically heals the target for 60 seconds. More heals will be triggered when receiving damage. -->
 		<table name="#magicLevel">85 86 89 92 95</table>
-		<set name="summonTotalLifeTime" val="3600000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTimeLostActive" val="1000" />
+        <table name="#mpConsume2">43 46 48 52 55</table>
+        <table name="#lifeTime">60 60 60 60 60</table>
+        <set name="lifeTime" val="#lifeTime"/>
+		<set name="magicType" val="SPECIAL" />
+		<set name="isMagic" val="true" />
+		<set name="hitTime" val="3000" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SUMMON" />
 		<set name="summonType" val="PET" />
@@ -70,7 +73,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="npcId" val="16081" />
 		<set name="relationSkillsId" val="1531" />
-		<for />
 	</skill>
 	<skill id="11755" levels="8" name="Radiant Heal">
     <!-- Heals the target with 1488 power. If HP is full, CP is restored. -->
@@ -478,8 +480,7 @@
         <set name="lifeTime" val="#lifeTime"/>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SUMMON" />
-        <set name="summonPoint" val="3"/>
-        <set name="summonType" val="MULTI_SERVITOR"/>
+        <set name="summonType" val="SERVITOR"/>
 		<set name="isMagic" val="true" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="OP_ACTIVE" />

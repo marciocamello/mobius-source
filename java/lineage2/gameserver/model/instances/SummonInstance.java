@@ -221,6 +221,7 @@ public class SummonInstance extends Summon
 			_disappearTask.cancel(false);
 			_disappearTask = null;
 		}
+		getPlayer().getSummonList().removeSummon(this);
 	}
 	
 	/**

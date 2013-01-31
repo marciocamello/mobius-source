@@ -29,60 +29,21 @@ import lineage2.gameserver.taskmanager.EffectTaskManager;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
-public class TreeInstance extends NpcInstance
+public class AgathionInstance extends NpcInstance
 {
-	/**
-	 * Field serialVersionUID. (value is -3990686488577795700)
-	 */
 	private static final long serialVersionUID = -3990686488577795700L;
-	/**
-	 * Field _owner.
-	 */
 	private final Player _owner;
-	/**
-	 * Field _skill.
-	 */
 	final Skill _skill;
-	/**
-	 * Field _lifetimeCountdown.
-	 */
 	private final int _lifetimeCountdown;
-	/**
-	 * Field _targetTask.
-	 */
 	private ScheduledFuture<?> _targetTask;
-	/**
-	 * Field _destroyTask.
-	 */
 	private ScheduledFuture<?> _destroyTask;
 	
-	/**
-	 * Constructor for TreeInstance.
-	 * @param objectId int
-	 * @param template NpcTemplate
-	 * @param owner Player
-	 * @param lifetime int
-	 * @param skill Skill
-	 */
-	public TreeInstance(int objectId, NpcTemplate template, Player owner, int lifetime, Skill skill)
+	public AgathionInstance(int objectId, NpcTemplate template, Player owner, int lifetime, Skill skill)
 	{
 		this(objectId, template, owner, lifetime, skill, owner.getLoc());
 	}
 	
-	/**
-	 * Constructor for TreeInstance.
-	 * @param objectId int
-	 * @param template NpcTemplate
-	 * @param owner Player
-	 * @param lifetime int
-	 * @param skill Skill
-	 * @param loc Location
-	 */
-	public TreeInstance(int objectId, NpcTemplate template, Player owner, int lifetime, Skill skill, Location loc)
+	public AgathionInstance(int objectId, NpcTemplate template, Player owner, int lifetime, Skill skill, Location loc)
 	{
 		super(objectId, template);
 		_owner = owner;
@@ -94,52 +55,52 @@ public class TreeInstance extends NpcInstance
 		setHeading(owner.getHeading());
 	}
 	
-	/**
-	 * Method getOwner.
-	 * @return Player
-	 */
 	public Player getOwner()
 	{
 		return _owner;
 	}
 	
-	/**
-	 * @author Mobius
-	 */
-	private static class CastTask extends RunnableImpl
+	private class RemoveAgathion extends RunnableImpl
 	{
-		/**
-		 * Field _trapRef.
-		 */
-		private final HardReference<NpcInstance> _trapRef;
+
+		Player _p;
 		
-		/**
-		 * Constructor for CastTask.
-		 * @param trap TreeInstance
-		 */
-		public CastTask(TreeInstance trap)
+		public RemoveAgathion(Player player)
 		{
-			_trapRef = trap.getRef();
+			_p = player;
 		}
-		
-		/**
-		 * Method runImpl.
-		 */
+
 		@Override
 		public void runImpl()
 		{
-			TreeInstance tree = (TreeInstance) _trapRef.get();
-			if (tree == null)
+			_p.setAgathion(0);
+		}
+	}
+	
+	private static class CastTask extends RunnableImpl
+	{
+		private final HardReference<NpcInstance> _agatRef;
+		
+		public CastTask(AgathionInstance agat)
+		{
+			_agatRef = agat.getRef();
+		}
+		
+		@Override
+		public void runImpl()
+		{
+			AgathionInstance agat = (AgathionInstance) _agatRef.get();
+			if (agat == null)
 			{
 				return;
 			}
-			Player owner = tree.getOwner();
+			Player owner = agat.getOwner();
 			if (owner == null)
 			{
 				return;
 			}
 			List<Creature> targets = new ArrayList<>(10);
-			for (Player target : World.getAroundPlayers(tree, 600, 200))
+			for (Player target : World.getAroundPlayers(agat, 600, 200))
 			{
 				if (targets.size() > 10)
 				{
@@ -148,32 +109,27 @@ public class TreeInstance extends NpcInstance
 				if (target == owner)
 				{
 					targets.add(target);
-					tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), 0, 0));
+					agat.broadcastPacket(new MagicSkillUse(agat, target, agat._skill.getId(), agat._skill.getLevel(), 0, 0));
 				}
 				if ((target.getParty() != null) && (owner.getParty() == target.getParty()))
 				{
 					targets.add(target);
-					tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), 0, 0));
+					agat.broadcastPacket(new MagicSkillUse(agat, target, agat._skill.getId(), agat._skill.getLevel(), 0, 0));
 				}
 			}
-			tree.callSkill(tree._skill, targets, true);
+			agat.callSkill(agat._skill, targets, true);
 		}
 	}
 	
-	/**
-	 * Method onSpawn.
-	 */
 	@Override
 	protected void onSpawn()
 	{
 		super.onSpawn();
+		EffectTaskManager.getInstance().schedule(new RemoveAgathion(_owner), _lifetimeCountdown);
 		_destroyTask = ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(this), _lifetimeCountdown);
 		_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new CastTask(this), 1000L, 5000L);
 	}
 	
-	/**
-	 * Method onDelete.
-	 */
 	@Override
 	protected void onDelete()
 	{
@@ -195,73 +151,40 @@ public class TreeInstance extends NpcInstance
 		super.onDelete();
 	}
 	
-	/**
-	 * Method hasRandomAnimation.
-	 * @return boolean
-	 */
 	@Override
 	public boolean hasRandomAnimation()
 	{
 		return false;
 	}
 	
-	/**
-	 * Method isFearImmune.
-	 * @return boolean
-	 */
 	@Override
 	public boolean isFearImmune()
 	{
 		return true;
 	}
 	
-	/**
-	 * Method isParalyzeImmune.
-	 * @return boolean
-	 */
 	@Override
 	public boolean isParalyzeImmune()
 	{
 		return true;
 	}
 	
-	/**
-	 * Method isLethalImmune.
-	 * @return boolean
-	 */
 	@Override
 	public boolean isLethalImmune()
 	{
 		return true;
 	}
 	
-	/**
-	 * Method showChatWindow.
-	 * @param player Player
-	 * @param val int
-	 * @param arg Object[]
-	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 	}
 	
-	/**
-	 * Method showChatWindow.
-	 * @param player Player
-	 * @param filename String
-	 * @param replace Object[]
-	 */
 	@Override
 	public void showChatWindow(Player player, String filename, Object... replace)
 	{
 	}
 	
-	/**
-	 * Method onBypassFeedback.
-	 * @param player Player
-	 * @param command String
-	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

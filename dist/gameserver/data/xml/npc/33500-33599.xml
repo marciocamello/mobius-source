@@ -84,7 +84,17 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+            <set name="TargetEnabled" value="false"/>
+            <set name="showTitle" value="false"/>
+			<set name="showName" value="false" />
+		</ai_params>
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+			<skill id="14625" level="1" />
+			<skill id="14736" level="1" />
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1305,7 +1315,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="CommissionAuctioneer"/>
 		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1352,7 +1362,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="CommissionAuctioneer"/>
 		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1399,7 +1409,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="CommissionAuctioneer"/>
 		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1492,7 +1502,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="CommissionAuctioneer"/>
 		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1539,7 +1549,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="CommissionAuctioneer"/>
 		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1586,7 +1596,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="CommissionAuctioneer"/>
 		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1633,7 +1643,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="CommissionAuctioneer"/>
 		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2352,7 +2362,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="CommissionAuctioneer"/>
 		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2399,7 +2409,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="CommissionAuctioneer"/>
 		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2645,7 +2655,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+            <set name="TargetEnabled" value="false"/>
+            <set name="showTitle" value="false"/>
+			<set name="showName" value="false" />
+		</ai_params>
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+			<skill id="14625" level="1" />
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
