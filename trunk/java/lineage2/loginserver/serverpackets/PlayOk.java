@@ -14,16 +14,30 @@ package lineage2.loginserver.serverpackets;
 
 import lineage2.loginserver.SessionKey;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class PlayOk extends L2LoginServerPacket
 {
+	/**
+	 * Field _playOk2. Field _playOk1.
+	 */
 	private final int _playOk1, _playOk2;
 	
+	/**
+	 * Constructor for PlayOk.
+	 * @param sessionKey SessionKey
+	 */
 	public PlayOk(SessionKey sessionKey)
 	{
 		_playOk1 = sessionKey.playOkID1;
 		_playOk2 = sessionKey.playOkID2;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

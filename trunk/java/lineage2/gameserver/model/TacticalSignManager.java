@@ -16,8 +16,18 @@ import java.util.Map;
 
 import lineage2.gameserver.network.serverpackets.ExTacticalSign;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TacticalSignManager
 {
+	/**
+	 * Method setTacticalSign.
+	 * @param player Player
+	 * @param target GameObject
+	 * @param signId int
+	 */
 	public static void setTacticalSign(Player player, GameObject target, int signId)
 	{
 		if ((player.getTarget() == null) || (player.getParty() == null))
@@ -31,6 +41,11 @@ public class TacticalSignManager
 		}
 	}
 	
+	/**
+	 * Method getTargetOnTacticalSign.
+	 * @param player Player
+	 * @param signId int
+	 */
 	public static void getTargetOnTacticalSign(Player player, int signId)
 	{
 		if (player.getParty() != null)
@@ -40,6 +55,12 @@ public class TacticalSignManager
 		}
 	}
 	
+	/**
+	 * Method getSignOnTarget.
+	 * @param target GameObject
+	 * @param party Party
+	 * @return int
+	 */
 	public static int getSignOnTarget(GameObject target, Party party)
 	{
 		if (party != null)
@@ -55,6 +76,12 @@ public class TacticalSignManager
 		return 0;
 	}
 	
+	/**
+	 * Method getTargetOnSign.
+	 * @param signId int
+	 * @param party Party
+	 * @return GameObject
+	 */
 	public static GameObject getTargetOnSign(int signId, Party party)
 	{
 		return party != null ? party.getTacticalSignsList().get(signId) : null;

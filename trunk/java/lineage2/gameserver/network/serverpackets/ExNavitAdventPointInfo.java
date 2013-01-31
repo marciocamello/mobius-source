@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExNavitAdventPointInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _points.
+	 */
 	private final int _points;
 	
+	/**
+	 * Constructor for ExNavitAdventPointInfo.
+	 * @param points int
+	 */
 	public ExNavitAdventPointInfo(int points)
 	{
 		_points = points;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -18,19 +18,36 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import bosses.SailrenManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class SairlenGatekeeperInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field GAZKH. (value is 8784)
+	 */
 	private static final int GAZKH = 8784;
 	
+	/**
+	 * Constructor for SairlenGatekeeperInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SairlenGatekeeperInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

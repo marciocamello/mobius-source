@@ -16,15 +16,29 @@ import java.util.List;
 
 import lineage2.gameserver.model.items.TradeItem;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExResponseCommissionItemList extends L2GameServerPacket
 {
+	/**
+	 * Field items.
+	 */
 	private final List<TradeItem> items;
 	
+	/**
+	 * Constructor for ExResponseCommissionItemList.
+	 * @param items List<TradeItem>
+	 */
 	public ExResponseCommissionItemList(List<TradeItem> items)
 	{
 		this.items = items;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

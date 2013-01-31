@@ -20,16 +20,47 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.HtmlUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HeroDiary
 {
+	/**
+	 * Field SIMPLE_FORMAT.
+	 */
 	private static final SimpleDateFormat SIMPLE_FORMAT = new SimpleDateFormat("HH:** dd.MM.yyyy");
+	/**
+	 * Field ACTION_RAID_KILLED. (value is 1)
+	 */
 	public static final int ACTION_RAID_KILLED = 1;
+	/**
+	 * Field ACTION_HERO_GAINED. (value is 2)
+	 */
 	public static final int ACTION_HERO_GAINED = 2;
+	/**
+	 * Field ACTION_CASTLE_TAKEN. (value is 3)
+	 */
 	public static final int ACTION_CASTLE_TAKEN = 3;
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _time.
+	 */
 	private final long _time;
+	/**
+	 * Field _param.
+	 */
 	private final int _param;
 	
+	/**
+	 * Constructor for HeroDiary.
+	 * @param id int
+	 * @param time long
+	 * @param param int
+	 */
 	public HeroDiary(int id, long time, int param)
 	{
 		_id = id;
@@ -37,6 +68,11 @@ public class HeroDiary
 		_param = param;
 	}
 	
+	/**
+	 * Method toString.
+	 * @param player Player
+	 * @return Map.Entry<String,String>
+	 */
 	public Map.Entry<String, String> toString(Player player)
 	{
 		CustomMessage message = null;

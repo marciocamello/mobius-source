@@ -17,11 +17,24 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ManaRegen extends Functions
 {
+	/**
+	 * Field ADENA. (value is 57)
+	 */
 	private static final int ADENA = 57;
+	/**
+	 * Field PRICE. (value is 5)
+	 */
 	private static final long PRICE = 5;
 	
+	/**
+	 * Method DoManaRegen.
+	 */
 	public void DoManaRegen()
 	{
 		Player player = getSelf();

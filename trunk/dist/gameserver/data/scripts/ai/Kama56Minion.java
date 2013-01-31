@@ -16,14 +16,27 @@ import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Kama56Minion extends Fighter
 {
+	/**
+	 * Constructor for Kama56Minion.
+	 * @param actor NpcInstance
+	 */
 	public Kama56Minion(NpcInstance actor)
 	{
 		super(actor);
 		actor.setIsInvul(true);
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param attacker Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
@@ -34,6 +47,11 @@ public class Kama56Minion extends Fighter
 		super.onEvtAggression(attacker, aggro);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

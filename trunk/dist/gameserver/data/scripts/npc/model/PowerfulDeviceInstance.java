@@ -20,11 +20,26 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PowerfulDeviceInstance extends NpcInstance
 {
+	/**
+	 * Field serialVersionUID. (value is -1632474353838420887)
+	 */
 	private static final long serialVersionUID = -1632474353838420887L;
+	/**
+	 * Field _NPC.
+	 */
 	private static TIntIntHashMap _NPC = new TIntIntHashMap(8);
 	
+	/**
+	 * Constructor for PowerfulDeviceInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public PowerfulDeviceInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -39,6 +54,11 @@ public class PowerfulDeviceInstance extends NpcInstance
 		_NPC.put(33404, 146);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -69,6 +89,12 @@ public class PowerfulDeviceInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param replace Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... replace)
 	{

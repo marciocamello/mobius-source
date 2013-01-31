@@ -15,13 +15,26 @@ package lineage2.gameserver.skills.effects;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectConsumeSoulsOverTime extends Effect
 {
+	/**
+	 * Constructor for EffectConsumeSoulsOverTime.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectConsumeSoulsOverTime(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

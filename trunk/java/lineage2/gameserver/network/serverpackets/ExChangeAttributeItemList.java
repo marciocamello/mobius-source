@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.items.ItemInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExChangeAttributeItemList extends L2GameServerPacket
 {
+	/**
+	 * Field _itemsList.
+	 */
 	private final ItemInfo[] _itemsList;
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
 	
+	/**
+	 * Constructor for ExChangeAttributeItemList.
+	 * @param itemId int
+	 * @param itemsList ItemInfo[]
+	 */
 	public ExChangeAttributeItemList(int itemId, ItemInfo[] itemsList)
 	{
 		_itemId = itemId;
 		_itemsList = itemsList;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

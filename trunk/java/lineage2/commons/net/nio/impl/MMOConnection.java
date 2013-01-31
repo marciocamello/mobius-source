@@ -24,23 +24,75 @@ import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MMOConnection<T extends MMOClient>
 {
+	/**
+	 * Field _selectorThread.
+	 */
 	private final SelectorThread<T> _selectorThread;
+	/**
+	 * Field _selectionKey.
+	 */
 	private final SelectionKey _selectionKey;
+	/**
+	 * Field _socket.
+	 */
 	private final Socket _socket;
+	/**
+	 * Field _writableByteChannel.
+	 */
 	private final WritableByteChannel _writableByteChannel;
+	/**
+	 * Field _readableByteChannel.
+	 */
 	private final ReadableByteChannel _readableByteChannel;
+	/**
+	 * Field _sendQueue.
+	 */
 	private final Queue<SendablePacket<T>> _sendQueue;
+	/**
+	 * Field _recvQueue.
+	 */
 	private final Queue<ReceivablePacket<T>> _recvQueue;
+	/**
+	 * Field _client.
+	 */
 	private T _client;
+	/**
+	 * Field _secondaryWriteBuffer. Field _primaryWriteBuffer. Field _readBuffer.
+	 */
 	private ByteBuffer _readBuffer, _primaryWriteBuffer, _secondaryWriteBuffer;
+	/**
+	 * Field _pendingClose.
+	 */
 	private boolean _pendingClose;
+	/**
+	 * Field _pendingCloseTime.
+	 */
 	private long _pendingCloseTime;
+	/**
+	 * Field _closed.
+	 */
 	private boolean _closed;
+	/**
+	 * Field _pendingWriteTime.
+	 */
 	private long _pendingWriteTime;
+	/**
+	 * Field _isPengingWrite.
+	 */
 	private final AtomicBoolean _isPengingWrite = new AtomicBoolean();
 	
+	/**
+	 * Constructor for MMOConnection.
+	 * @param selectorThread SelectorThread<T>
+	 * @param socket Socket
+	 * @param key SelectionKey
+	 */
 	public MMOConnection(SelectorThread<T> selectorThread, Socket socket, SelectionKey key)
 	{
 		_selectorThread = selectorThread;
@@ -52,16 +104,28 @@ public class MMOConnection<T extends MMOClient>
 		_recvQueue = new MMOExecutableQueue<>(selectorThread.getExecutor());
 	}
 	
+	/**
+	 * Method setClient.
+	 * @param client T
+	 */
 	protected void setClient(T client)
 	{
 		_client = client;
 	}
 	
+	/**
+	 * Method getClient.
+	 * @return T
+	 */
 	public T getClient()
 	{
 		return _client;
 	}
 	
+	/**
+	 * Method recvPacket.
+	 * @param rp ReceivablePacket<T>
+	 */
 	public void recvPacket(ReceivablePacket<T> rp)
 	{
 		if (rp == null)
@@ -75,6 +139,10 @@ public class MMOConnection<T extends MMOClient>
 		_recvQueue.add(rp);
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param sp SendablePacket<T>
+	 */
 	public void sendPacket(SendablePacket<T> sp)
 	{
 		if (sp == null)
@@ -92,6 +160,10 @@ public class MMOConnection<T extends MMOClient>
 		scheduleWriteInterest();
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param args SendablePacket<T>[]
+	 */
 	@SuppressWarnings("unchecked")
 	public void sendPacket(SendablePacket<T>... args)
 	{
@@ -116,6 +188,10 @@ public class MMOConnection<T extends MMOClient>
 		scheduleWriteInterest();
 	}
 	
+	/**
+	 * Method sendPackets.
+	 * @param args List<? extends SendablePacket<T>>
+	 */
 	public void sendPackets(List<? extends SendablePacket<T>> args)
 	{
 		if ((args == null) || args.isEmpty())
@@ -140,11 +216,18 @@ public class MMOConnection<T extends MMOClient>
 		scheduleWriteInterest();
 	}
 	
+	/**
+	 * Method getSelectionKey.
+	 * @return SelectionKey
+	 */
 	protected SelectionKey getSelectionKey()
 	{
 		return _selectionKey;
 	}
 	
+	/**
+	 * Method disableReadInterest.
+	 */
 	protected void disableReadInterest()
 	{
 		try
@@ -156,6 +239,9 @@ public class MMOConnection<T extends MMOClient>
 		}
 	}
 	
+	/**
+	 * Method scheduleWriteInterest.
+	 */
 	protected void scheduleWriteInterest()
 	{
 		try
@@ -170,6 +256,9 @@ public class MMOConnection<T extends MMOClient>
 		}
 	}
 	
+	/**
+	 * Method disableWriteInterest.
+	 */
 	protected void disableWriteInterest()
 	{
 		try
@@ -184,6 +273,9 @@ public class MMOConnection<T extends MMOClient>
 		}
 	}
 	
+	/**
+	 * Method enableWriteInterest.
+	 */
 	protected void enableWriteInterest()
 	{
 		if (_isPengingWrite.compareAndSet(true, false))
@@ -192,41 +284,73 @@ public class MMOConnection<T extends MMOClient>
 		}
 	}
 	
+	/**
+	 * Method isPendingWrite.
+	 * @return boolean
+	 */
 	protected boolean isPendingWrite()
 	{
 		return _isPengingWrite.get();
 	}
 	
+	/**
+	 * Method getPendingWriteTime.
+	 * @return long
+	 */
 	public long getPendingWriteTime()
 	{
 		return _pendingWriteTime;
 	}
 	
+	/**
+	 * Method getSocket.
+	 * @return Socket
+	 */
 	public Socket getSocket()
 	{
 		return _socket;
 	}
 	
+	/**
+	 * Method getWritableChannel.
+	 * @return WritableByteChannel
+	 */
 	public WritableByteChannel getWritableChannel()
 	{
 		return _writableByteChannel;
 	}
 	
+	/**
+	 * Method getReadableByteChannel.
+	 * @return ReadableByteChannel
+	 */
 	public ReadableByteChannel getReadableByteChannel()
 	{
 		return _readableByteChannel;
 	}
 	
+	/**
+	 * Method getSendQueue.
+	 * @return Queue<SendablePacket<T>>
+	 */
 	protected Queue<SendablePacket<T>> getSendQueue()
 	{
 		return _sendQueue;
 	}
 	
+	/**
+	 * Method getRecvQueue.
+	 * @return Queue<ReceivablePacket<T>>
+	 */
 	protected Queue<ReceivablePacket<T>> getRecvQueue()
 	{
 		return _recvQueue;
 	}
 	
+	/**
+	 * Method createWriteBuffer.
+	 * @param buf ByteBuffer
+	 */
 	protected void createWriteBuffer(ByteBuffer buf)
 	{
 		if (_primaryWriteBuffer == null)
@@ -259,11 +383,19 @@ public class MMOConnection<T extends MMOClient>
 		}
 	}
 	
+	/**
+	 * Method hasPendingWriteBuffer.
+	 * @return boolean
+	 */
 	protected boolean hasPendingWriteBuffer()
 	{
 		return _primaryWriteBuffer != null;
 	}
 	
+	/**
+	 * Method movePendingWriteBufferTo.
+	 * @param dest ByteBuffer
+	 */
 	protected void movePendingWriteBufferTo(ByteBuffer dest)
 	{
 		_primaryWriteBuffer.flip();
@@ -273,37 +405,64 @@ public class MMOConnection<T extends MMOClient>
 		_secondaryWriteBuffer = null;
 	}
 	
+	/**
+	 * Method setReadBuffer.
+	 * @param buf ByteBuffer
+	 */
 	protected void setReadBuffer(ByteBuffer buf)
 	{
 		_readBuffer = buf;
 	}
 	
+	/**
+	 * Method getReadBuffer.
+	 * @return ByteBuffer
+	 */
 	public ByteBuffer getReadBuffer()
 	{
 		return _readBuffer;
 	}
 	
+	/**
+	 * Method isClosed.
+	 * @return boolean
+	 */
 	public boolean isClosed()
 	{
 		return _pendingClose || _closed;
 	}
 	
+	/**
+	 * Method isPengingClose.
+	 * @return boolean
+	 */
 	public boolean isPengingClose()
 	{
 		return _pendingClose;
 	}
 	
+	/**
+	 * Method getPendingCloseTime.
+	 * @return long
+	 */
 	public long getPendingCloseTime()
 	{
 		return _pendingCloseTime;
 	}
 	
+	/**
+	 * Method close.
+	 * @throws IOException
+	 */
 	protected void close() throws IOException
 	{
 		_closed = true;
 		_socket.close();
 	}
 	
+	/**
+	 * Method closeNow.
+	 */
 	protected void closeNow()
 	{
 		synchronized (this)
@@ -320,6 +479,10 @@ public class MMOConnection<T extends MMOClient>
 		disableWriteInterest();
 	}
 	
+	/**
+	 * Method close.
+	 * @param sp SendablePacket<T>
+	 */
 	public void close(SendablePacket<T> sp)
 	{
 		synchronized (this)
@@ -336,6 +499,9 @@ public class MMOConnection<T extends MMOClient>
 		disableReadInterest();
 	}
 	
+	/**
+	 * Method closeLater.
+	 */
 	protected void closeLater()
 	{
 		synchronized (this)
@@ -349,6 +515,9 @@ public class MMOConnection<T extends MMOClient>
 		}
 	}
 	
+	/**
+	 * Method releaseBuffers.
+	 */
 	protected void releaseBuffers()
 	{
 		if (_primaryWriteBuffer != null)
@@ -368,22 +537,35 @@ public class MMOConnection<T extends MMOClient>
 		}
 	}
 	
+	/**
+	 * Method clearQueues.
+	 */
 	protected void clearQueues()
 	{
 		_sendQueue.clear();
 		_recvQueue.clear();
 	}
 	
+	/**
+	 * Method onDisconnection.
+	 */
 	protected void onDisconnection()
 	{
 		getClient().onDisconnection();
 	}
 	
+	/**
+	 * Method onForcedDisconnection.
+	 */
 	protected void onForcedDisconnection()
 	{
 		getClient().onForcedDisconnection();
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{

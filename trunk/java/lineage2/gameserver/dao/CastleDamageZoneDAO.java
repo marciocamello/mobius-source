@@ -26,19 +26,47 @@ import lineage2.gameserver.model.entity.residence.Residence;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleDamageZoneDAO
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final CastleDamageZoneDAO _instance = new CastleDamageZoneDAO();
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CastleDoorUpgradeDAO.class);
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT zone FROM castle_damage_zones WHERE residence_id=?"")
+	 */
 	public static final String SELECT_SQL_QUERY = "SELECT zone FROM castle_damage_zones WHERE residence_id=?";
+	/**
+	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO castle_damage_zones (residence_id, zone) VALUES (?,?)"")
+	 */
 	public static final String INSERT_SQL_QUERY = "INSERT INTO castle_damage_zones (residence_id, zone) VALUES (?,?)";
+	/**
+	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM castle_damage_zones WHERE residence_id=?"")
+	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM castle_damage_zones WHERE residence_id=?";
 	
+	/**
+	 * Method getInstance.
+	 * @return CastleDamageZoneDAO
+	 */
 	public static CastleDamageZoneDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method load.
+	 * @param r Residence
+	 * @return List<String>
+	 */
 	public List<String> load(Residence r)
 	{
 		List<String> set = Collections.emptyList();
@@ -68,6 +96,11 @@ public class CastleDamageZoneDAO
 		return set;
 	}
 	
+	/**
+	 * Method insert.
+	 * @param residence Residence
+	 * @param name String
+	 */
 	public void insert(Residence residence, String name)
 	{
 		Connection con = null;
@@ -90,6 +123,10 @@ public class CastleDamageZoneDAO
 		}
 	}
 	
+	/**
+	 * Method delete.
+	 * @param residence Residence
+	 */
 	public void delete(Residence residence)
 	{
 		Connection con = null;

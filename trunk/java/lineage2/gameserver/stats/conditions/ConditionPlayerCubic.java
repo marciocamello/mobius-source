@@ -17,15 +17,31 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionPlayerCubic extends Condition
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
 	
+	/**
+	 * Constructor for ConditionPlayerCubic.
+	 * @param id int
+	 */
 	public ConditionPlayerCubic(int id)
 	{
 		_id = id;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

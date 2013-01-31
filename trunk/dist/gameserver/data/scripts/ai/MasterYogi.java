@@ -19,23 +19,48 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MasterYogi extends DefaultAI
 {
+	/**
+	 * Field wait_timeout1.
+	 */
 	private long wait_timeout1 = 0;
+	/**
+	 * Field wait_timeout2.
+	 */
 	private long wait_timeout2 = 0;
+	/**
+	 * Field range.
+	 */
 	private int range = 0;
 	
+	/**
+	 * Constructor for MasterYogi.
+	 * @param actor NpcInstance
+	 */
 	public MasterYogi(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -82,11 +107,21 @@ public class MasterYogi extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

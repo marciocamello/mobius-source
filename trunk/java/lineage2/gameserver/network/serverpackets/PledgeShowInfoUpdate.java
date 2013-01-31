@@ -17,15 +17,41 @@ import lineage2.gameserver.model.pledge.Clan;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeShowInfoUpdate extends L2GameServerPacket
 {
+	/**
+	 * Field ally_id. Field crest_id. Field clan_rep. Field clan_rank. Field clan_level. Field clan_id.
+	 */
 	private final int clan_id, clan_level, clan_rank, clan_rep, crest_id, ally_id;
+	/**
+	 * Field ally_crest.
+	 */
 	private int ally_crest;
+	/**
+	 * Field atwar.
+	 */
 	private final int atwar;
+	/**
+	 * Field _territorySide.
+	 */
 	private final int _territorySide;
+	/**
+	 * Field ally_name.
+	 */
 	private String ally_name = StringUtils.EMPTY;
+	/**
+	 * Field HasFortress. Field HasHideout. Field HasCastle.
+	 */
 	private final int HasCastle, HasHideout, HasFortress;
 	
+	/**
+	 * Constructor for PledgeShowInfoUpdate.
+	 * @param clan Clan
+	 */
 	public PledgeShowInfoUpdate(final Clan clan)
 	{
 		clan_id = clan.getClanId();
@@ -47,6 +73,9 @@ public class PledgeShowInfoUpdate extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

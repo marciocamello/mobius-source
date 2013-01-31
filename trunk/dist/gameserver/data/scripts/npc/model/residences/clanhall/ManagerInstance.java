@@ -20,6 +20,10 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import npc.model.residences.ResidenceManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ManagerInstance extends ResidenceManager
 {
 	/**
@@ -27,17 +31,30 @@ public class ManagerInstance extends ResidenceManager
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for ManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method getResidence.
+	 * @return Residence
+	 */
 	@Override
 	protected Residence getResidence()
 	{
 		return getClanHall();
 	}
 	
+	/**
+	 * Method decoPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket decoPacket()
 	{
@@ -49,24 +66,40 @@ public class ManagerInstance extends ResidenceManager
 		return null;
 	}
 	
+	/**
+	 * Method getPrivUseFunctions.
+	 * @return int
+	 */
 	@Override
 	protected int getPrivUseFunctions()
 	{
 		return Clan.CP_CH_USE_FUNCTIONS;
 	}
 	
+	/**
+	 * Method getPrivSetFunctions.
+	 * @return int
+	 */
 	@Override
 	protected int getPrivSetFunctions()
 	{
 		return Clan.CP_CH_SET_FUNCTIONS;
 	}
 	
+	/**
+	 * Method getPrivDismiss.
+	 * @return int
+	 */
 	@Override
 	protected int getPrivDismiss()
 	{
 		return Clan.CP_CH_DISMISS;
 	}
 	
+	/**
+	 * Method getPrivDoors.
+	 * @return int
+	 */
 	@Override
 	protected int getPrivDoors()
 	{

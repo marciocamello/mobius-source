@@ -12,18 +12,38 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RestartResponse extends L2GameServerPacket
 {
+	/**
+	 * Field FAIL. Field OK.
+	 */
 	public static final RestartResponse OK = new RestartResponse(1), FAIL = new RestartResponse(0);
+	/**
+	 * Field _message.
+	 */
 	private final String _message;
+	/**
+	 * Field _param.
+	 */
 	private final int _param;
 	
+	/**
+	 * Constructor for RestartResponse.
+	 * @param param int
+	 */
 	public RestartResponse(int param)
 	{
 		_message = "bye";
 		_param = param;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

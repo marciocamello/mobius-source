@@ -16,11 +16,29 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.boat.Boat;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExMoveToTargetInAirShip extends L2GameServerPacket
 {
+	/**
+	 * Field _dist. Field target_id. Field boat_id. Field char_id.
+	 */
 	private final int char_id, boat_id, target_id, _dist;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for ExMoveToTargetInAirShip.
+	 * @param cha Player
+	 * @param boat Boat
+	 * @param targetId int
+	 * @param dist int
+	 * @param origin Location
+	 */
 	public ExMoveToTargetInAirShip(Player cha, Boat boat, int targetId, int dist, Location origin)
 	{
 		char_id = cha.getObjectId();
@@ -30,6 +48,9 @@ public class ExMoveToTargetInAirShip extends L2GameServerPacket
 		_loc = origin;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

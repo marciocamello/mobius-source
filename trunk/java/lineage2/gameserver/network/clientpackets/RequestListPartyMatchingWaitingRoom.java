@@ -15,10 +15,20 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExListPartyMatchingWaitingRoom;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestListPartyMatchingWaitingRoom extends L2GameClientPacket
 {
+	/**
+	 * Field _classes. Field _page. Field _maxLevel. Field _minLevel.
+	 */
 	private int _minLevel, _maxLevel, _page, _classes[];
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -37,6 +47,9 @@ public class RequestListPartyMatchingWaitingRoom extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

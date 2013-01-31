@@ -28,6 +28,10 @@ import lineage2.gameserver.network.serverpackets.VehicleStart;
 import lineage2.gameserver.templates.CharTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Vehicle extends Boat
 {
 	/**
@@ -35,59 +39,107 @@ public class Vehicle extends Boat
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for Vehicle.
+	 * @param objectId int
+	 * @param template CharTemplate
+	 */
 	public Vehicle(int objectId, CharTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method startPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket startPacket()
 	{
 		return new VehicleStart(this);
 	}
 	
+	/**
+	 * Method validateLocationPacket.
+	 * @param player Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket validateLocationPacket(Player player)
 	{
 		return new ValidateLocationInVehicle(player);
 	}
 	
+	/**
+	 * Method checkLocationPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket checkLocationPacket()
 	{
 		return new VehicleCheckLocation(this);
 	}
 	
+	/**
+	 * Method infoPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket infoPacket()
 	{
 		return new VehicleInfo(this);
 	}
 	
+	/**
+	 * Method movePacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket movePacket()
 	{
 		return new VehicleDeparture(this);
 	}
 	
+	/**
+	 * Method inMovePacket.
+	 * @param player Player
+	 * @param src Location
+	 * @param desc Location
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket inMovePacket(Player player, Location src, Location desc)
 	{
 		return new MoveToLocationInVehicle(player, this, src, desc);
 	}
 	
+	/**
+	 * Method stopMovePacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket stopMovePacket()
 	{
 		return new StopMove(this);
 	}
 	
+	/**
+	 * Method inStopMovePacket.
+	 * @param player Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket inStopMovePacket(Player player)
 	{
 		return new StopMoveToLocationInVehicle(player);
 	}
 	
+	/**
+	 * Method getOnPacket.
+	 * @param playable Playable
+	 * @param location Location
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket getOnPacket(Playable playable, Location location)
 	{
@@ -98,6 +150,12 @@ public class Vehicle extends Boat
 		return new GetOnVehicle(playable, this, location);
 	}
 	
+	/**
+	 * Method getOffPacket.
+	 * @param playable Playable
+	 * @param location Location
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket getOffPacket(Playable playable, Location location)
 	{
@@ -108,11 +166,18 @@ public class Vehicle extends Boat
 		return new GetOffVehicle(playable, this, location);
 	}
 	
+	/**
+	 * Method oustPlayers.
+	 */
 	@Override
 	public void oustPlayers()
 	{
 	}
 	
+	/**
+	 * Method isVehicle.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isVehicle()
 	{

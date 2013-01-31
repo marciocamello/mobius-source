@@ -15,17 +15,37 @@ package lineage2.gameserver.model.entity.events.actions;
 import lineage2.gameserver.model.entity.events.EventAction;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SpawnDespawnAction implements EventAction
 {
+	/**
+	 * Field _spawn.
+	 */
 	private final boolean _spawn;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
 	
+	/**
+	 * Constructor for SpawnDespawnAction.
+	 * @param name String
+	 * @param spawn boolean
+	 */
 	public SpawnDespawnAction(String name, boolean spawn)
 	{
 		_spawn = spawn;
 		_name = name;
 	}
 	
+	/**
+	 * Method call.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.EventAction#call(GlobalEvent)
+	 */
 	@Override
 	public void call(GlobalEvent event)
 	{

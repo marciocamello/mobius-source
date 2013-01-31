@@ -15,16 +15,29 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPartyLootModification extends L2GameClientPacket
 {
+	/**
+	 * Field _mode.
+	 */
 	private byte _mode;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_mode = (byte) readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

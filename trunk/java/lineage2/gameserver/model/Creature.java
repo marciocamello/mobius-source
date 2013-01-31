@@ -127,6 +127,10 @@ import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Creature extends GameObject
 {
 	/**
@@ -134,10 +138,24 @@ public abstract class Creature extends GameObject
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * @author Mobius
+	 */
 	public class MoveNextTask extends RunnableImpl
 	{
+		/**
+		 * Field donedist.
+		 */
+		/**
+		 * Field alldist.
+		 */
 		private double alldist, donedist;
 		
+		/**
+		 * Method setDist.
+		 * @param dist double
+		 * @return MoveNextTask
+		 */
 		public MoveNextTask setDist(double dist)
 		{
 			alldist = dist;
@@ -145,6 +163,9 @@ public abstract class Creature extends GameObject
 			return this;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -275,35 +296,125 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Creature.class);
+	/**
+	 * Field HEADINGS_IN_PI. (value is 10430.378350470453)
+	 */
 	public static final double HEADINGS_IN_PI = 10430.378350470452724949566316381;
+	/**
+	 * Field INTERACTION_DISTANCE. (value is 200)
+	 */
 	public static final int INTERACTION_DISTANCE = 200;
+	/**
+	 * Field _castingSkill.
+	 */
 	private Skill _castingSkill;
+	/**
+	 * Field _castInterruptTime.
+	 */
 	private long _castInterruptTime;
+	/**
+	 * Field _animationEndTime.
+	 */
 	private long _animationEndTime;
+	/**
+	 * Field _scheduledCastCount.
+	 */
 	public int _scheduledCastCount;
+	/**
+	 * Field _scheduledCastInterval.
+	 */
 	public int _scheduledCastInterval;
+	/**
+	 * Field _skillTask.
+	 */
 	public Future<?> _skillTask;
+	/**
+	 * Field _skillLaunchedTask.
+	 */
 	public Future<?> _skillLaunchedTask;
+	/**
+	 * Field _skillDoubleTask.
+	 */
 	public Future<?> _skillDoubleTask;
+	/**
+	 * Field _skillDoubleLaunchedTask.
+	 */
 	public Future<?> _skillDoubleLaunchedTask;
+	/**
+	 * Field _stanceTask.
+	 */
 	private Future<?> _stanceTask;
+	/**
+	 * Field _stanceTaskRunnable.
+	 */
 	private Runnable _stanceTaskRunnable;
+	/**
+	 * Field _stanceEndTime.
+	 */
 	private long _stanceEndTime;
+	/**
+	 * Field CLIENT_BAR_SIZE. (value is 352)
+	 */
 	public final static int CLIENT_BAR_SIZE = 352;
+	/**
+	 * Field _lastCpBarUpdate.
+	 */
 	private int _lastCpBarUpdate = -1;
+	/**
+	 * Field _lastHpBarUpdate.
+	 */
 	private int _lastHpBarUpdate = -1;
+	/**
+	 * Field _lastMpBarUpdate.
+	 */
 	private int _lastMpBarUpdate = -1;
+	/**
+	 * Field _currentCp.
+	 */
 	protected double _currentCp = 0;
+	/**
+	 * Field _currentHp.
+	 */
 	protected double _currentHp = 1;
+	/**
+	 * Field _currentMp.
+	 */
 	protected double _currentMp = 1;
+	/**
+	 * Field _abnormalEffects.
+	 */
 	private int _abnormalEffects;
+	/**
+	 * Field _abnormalEffects2.
+	 */
 	private int _abnormalEffects2;
+	/**
+	 * Field _abnormalEffects3.
+	 */
 	private int _abnormalEffects3;
+	/**
+	 * Field _isAttackAborted.
+	 */
 	protected boolean _isAttackAborted;
+	/**
+	 * Field _attackEndTime.
+	 */
 	protected long _attackEndTime;
+	/**
+	 * Field _attackReuseEndTime.
+	 */
 	protected long _attackReuseEndTime;
+	/**
+	 * Field _poleAttackCount.
+	 */
 	private int _poleAttackCount = 0;
+	/**
+	 * Field POLE_VAMPIRIC_MOD.
+	 */
 	private static final double[] POLE_VAMPIRIC_MOD =
 	{
 		1,
@@ -313,92 +424,338 @@ public abstract class Creature extends GameObject
 		0.2,
 		0.01
 	};
+	/**
+	 * Field _skills.
+	 */
 	protected final Map<Integer, Skill> _skills = new ConcurrentSkipListMap<>();
+	/**
+	 * Field _triggers.
+	 */
 	protected Map<TriggerType, Set<TriggerInfo>> _triggers;
+	/**
+	 * Field _skillReuses.
+	 */
 	protected final IntObjectMap<TimeStamp> _skillReuses = new CHashIntObjectMap<>();
+	/**
+	 * Field _effectList.
+	 */
 	protected volatile EffectList _effectList;
+	/**
+	 * Field _statsRecorder.
+	 */
 	protected volatile CharStatsChangeRecorder<? extends Creature> _statsRecorder;
+	/**
+	 * Field _blockedStats.
+	 */
 	private List<Stats> _blockedStats;
+	/**
+	 * Field isDead.
+	 */
 	protected AtomicBoolean isDead = new AtomicBoolean();
+	/**
+	 * Field isTeleporting.
+	 */
 	protected AtomicBoolean isTeleporting = new AtomicBoolean();
+	/**
+	 * Field _skillMastery.
+	 */
 	private Map<Integer, Integer> _skillMastery;
+	/**
+	 * Field _isInvul.
+	 */
 	protected boolean _isInvul;
+	/**
+	 * Field _fakeDeath.
+	 */
 	private boolean _fakeDeath;
+	/**
+	 * Field _isBlessedByNoblesse.
+	 */
 	private boolean _isBlessedByNoblesse;
+	/**
+	 * Field _isSalvation.
+	 */
 	private boolean _isSalvation;
+	/**
+	 * Field _meditated.
+	 */
 	private boolean _meditated;
+	/**
+	 * Field _lockedTarget.
+	 */
 	private boolean _lockedTarget;
+	/**
+	 * Field _blocked.
+	 */
 	private boolean _blocked;
+	/**
+	 * Field _afraid.
+	 */
 	private final AtomicState _afraid = new AtomicState();
+	/**
+	 * Field _muted.
+	 */
 	private final AtomicState _muted = new AtomicState();
+	/**
+	 * Field _pmuted.
+	 */
 	private final AtomicState _pmuted = new AtomicState();
+	/**
+	 * Field _amuted.
+	 */
 	private final AtomicState _amuted = new AtomicState();
+	/**
+	 * Field _paralyzed.
+	 */
 	private final AtomicState _paralyzed = new AtomicState();
+	/**
+	 * Field _rooted.
+	 */
 	private final AtomicState _rooted = new AtomicState();
+	/**
+	 * Field _sleeping.
+	 */
 	private final AtomicState _sleeping = new AtomicState();
+	/**
+	 * Field _stunned.
+	 */
 	private final AtomicState _stunned = new AtomicState();
+	/**
+	 * Field _immobilized.
+	 */
 	private final AtomicState _immobilized = new AtomicState();
+	/**
+	 * Field _confused.
+	 */
 	private final AtomicState _confused = new AtomicState();
+	/**
+	 * Field _frozen.
+	 */
 	private final AtomicState _frozen = new AtomicState();
+	/**
+	 * Field _healBlocked.
+	 */
 	private final AtomicState _healBlocked = new AtomicState();
+	/**
+	 * Field _damageBlocked.
+	 */
 	private final AtomicState _damageBlocked = new AtomicState();
+	/**
+	 * Field _buffImmunity.
+	 */
 	private final AtomicState _buffImmunity = new AtomicState();
+	/**
+	 * Field _debuffImmunity.
+	 */
 	private final AtomicState _debuffImmunity = new AtomicState();
+	/**
+	 * Field _effectImmunity.
+	 */
 	private final AtomicState _effectImmunity = new AtomicState();
+	/**
+	 * Field _weaponEquipBlocked.
+	 */
 	private final AtomicState _weaponEquipBlocked = new AtomicState();
+	/**
+	 * Field _flying.
+	 */
 	private boolean _flying;
+	/**
+	 * Field _running.
+	 */
 	private boolean _running;
+	/**
+	 * Field isMoving.
+	 */
 	public boolean isMoving;
+	/**
+	 * Field isFollow.
+	 */
 	public boolean isFollow;
+	/**
+	 * Field moveLock.
+	 */
 	final Lock moveLock = new ReentrantLock();
+	/**
+	 * Field _moveTask.
+	 */
 	Future<?> _moveTask;
+	/**
+	 * Field _moveTaskRunnable.
+	 */
 	private MoveNextTask _moveTaskRunnable;
+	/**
+	 * Field moveList.
+	 */
 	List<Location> moveList;
+	/**
+	 * Field destination.
+	 */
 	private Location destination;
+	/**
+	 * Field movingDestTempPos.
+	 */
 	final Location movingDestTempPos = new Location();
+	/**
+	 * Field _offset.
+	 */
 	int _offset;
+	/**
+	 * Field _forestalling.
+	 */
 	boolean _forestalling;
+	/**
+	 * Field target.
+	 */
 	private volatile HardReference<? extends GameObject> target = HardReferences.emptyRef();
+	/**
+	 * Field castingTarget.
+	 */
 	private volatile HardReference<? extends Creature> castingTarget = HardReferences.emptyRef();
+	/**
+	 * Field followTarget.
+	 */
 	private volatile HardReference<? extends Creature> followTarget = HardReferences.emptyRef();
+	/**
+	 * Field _aggressionTarget.
+	 */
 	private volatile HardReference<? extends Creature> _aggressionTarget = HardReferences.emptyRef();
+	/**
+	 * Field _targetRecorder.
+	 */
 	private final List<List<Location>> _targetRecorder = new ArrayList<>();
+	/**
+	 * Field _followTimestamp.
+	 */
 	long _followTimestamp;
+	/**
+	 * Field _startMoveTime.
+	 */
 	long _startMoveTime;
+	/**
+	 * Field _previousSpeed.
+	 */
 	int _previousSpeed = 0;
+	/**
+	 * Field _heading.
+	 */
 	private int _heading;
+	/**
+	 * Field _calculators.
+	 */
 	private final Calculator[] _calculators;
+	/**
+	 * Field _template.
+	 */
 	protected CharTemplate _template;
+	/**
+	 * Field _ai.
+	 */
 	protected volatile CharacterAI _ai;
+	/**
+	 * Field _name.
+	 */
 	protected String _name;
+	/**
+	 * Field _title.
+	 */
 	protected String _title;
+	/**
+	 * Field _team.
+	 */
 	protected TeamType _team = TeamType.NONE;
+	/**
+	 * Field _isRegenerating.
+	 */
 	private boolean _isRegenerating;
+	/**
+	 * Field regenLock.
+	 */
 	final Lock regenLock = new ReentrantLock();
+	/**
+	 * Field _regenTask.
+	 */
 	private Future<?> _regenTask;
+	/**
+	 * Field _regenTaskRunnable.
+	 */
 	private Runnable _regenTaskRunnable;
+	/**
+	 * Field _isEnabledDoubleCast.
+	 */
 	public boolean _isEnabledDoubleCast = false;
+	/**
+	 * Field _zones.
+	 */
 	private final List<Zone> _zones = new LazyArrayList<>();
+	/**
+	 * Field zonesLock.
+	 */
 	private final ReadWriteLock zonesLock = new ReentrantReadWriteLock();
+	/**
+	 * Field zonesRead.
+	 */
 	private final Lock zonesRead = zonesLock.readLock();
+	/**
+	 * Field zonesWrite.
+	 */
 	private final Lock zonesWrite = zonesLock.writeLock();
+	/**
+	 * Field listeners.
+	 */
 	protected volatile CharListenerList listeners;
+	/**
+	 * Field _deathImmune.
+	 */
 	protected boolean _deathImmune = false;
+	/**
+	 * Field _statusListeners.
+	 */
 	private List<Player> _statusListeners;
+	/**
+	 * Field statusListenersLock.
+	 */
 	private final Lock statusListenersLock = new ReentrantLock();
+	/**
+	 * Field _walkerRoutesTemplate.
+	 */
 	protected WalkerRouteTemplate _walkerRoutesTemplate = null;
+	/**
+	 * Field _storedId.
+	 */
 	protected Long _storedId;
 	
+	/**
+	 * Method getStoredId.
+	 * @return Long
+	 */
 	public final Long getStoredId()
 	{
 		return _storedId;
 	}
 	
+	/**
+	 * Field reference.
+	 */
 	protected HardReference<? extends Creature> reference;
+	/**
+	 * Field _transformationId.
+	 */
 	private int _transformationId;
+	/**
+	 * Field _transformationTemplate.
+	 */
 	private int _transformationTemplate;
+	/**
+	 * Field _transformationName.
+	 */
 	private String _transformationName;
 	
+	/**
+	 * Constructor for Creature.
+	 * @param objectId int
+	 * @param template CharTemplate
+	 */
 	public Creature(int objectId, CharTemplate template)
 	{
 		super(objectId);
@@ -409,17 +766,30 @@ public abstract class Creature extends GameObject
 		_storedId = GameObjectsStorage.put(this);
 	}
 	
+	/**
+	 * Method getRef.
+	 * @return HardReference<? extends Creature>
+	 */
 	@Override
 	public HardReference<? extends Creature> getRef()
 	{
 		return reference;
 	}
 	
+	/**
+	 * Method isAttackAborted.
+	 * @return boolean
+	 */
 	public boolean isAttackAborted()
 	{
 		return _isAttackAborted;
 	}
 	
+	/**
+	 * Method abortAttack.
+	 * @param force boolean
+	 * @param message boolean
+	 */
 	public final void abortAttack(boolean force, boolean message)
 	{
 		if (isAttackingNow())
@@ -438,6 +808,11 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method abortCast.
+	 * @param force boolean
+	 * @param message boolean
+	 */
 	public final void abortCast(boolean force, boolean message)
 	{
 		if (isCastingNow() && (force || canAbortCast()))
@@ -486,11 +861,22 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method canAbortCast.
+	 * @return boolean
+	 */
 	public final boolean canAbortCast()
 	{
 		return _castInterruptTime > System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method absorbAndReflect.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @param damage double
+	 * @return boolean
+	 */
 	public boolean absorbAndReflect(Creature target, Skill skill, double damage)
 	{
 		if (target.isDead())
@@ -567,6 +953,12 @@ public abstract class Creature extends GameObject
 		return false;
 	}
 	
+	/**
+	 * Method absorbToEffector.
+	 * @param attacker Creature
+	 * @param damage double
+	 * @return double
+	 */
 	public double absorbToEffector(Creature attacker, double damage)
 	{
 		double transferToEffectorDam = calcStat(Stats.TRANSFER_TO_EFFECTOR_DAMAGE_PERCENT, 0.);
@@ -602,6 +994,12 @@ public abstract class Creature extends GameObject
 		return damage;
 	}
 	
+	/**
+	 * Method absorbToMp.
+	 * @param attacker Creature
+	 * @param damage double
+	 * @return double
+	 */
 	public double absorbToMp(Creature attacker, double damage)
 	{
 		double transferToMpDamPercent = calcStat(Stats.TRANSFER_TO_MP_DAMAGE_PERCENT, 0.);
@@ -626,6 +1024,12 @@ public abstract class Creature extends GameObject
 		return damage;
 	}
 	
+	/**
+	 * Method absorbToSummon.
+	 * @param attacker Creature
+	 * @param damage double
+	 * @return double
+	 */
 	public double absorbToSummon(Creature attacker, double damage)
 	{
 		if (!isPlayer())
@@ -665,6 +1069,10 @@ public abstract class Creature extends GameObject
 		return damage;
 	}
 	
+	/**
+	 * Method addBlockStats.
+	 * @param stats List<Stats>
+	 */
 	public void addBlockStats(List<Stats> stats)
 	{
 		if (_blockedStats == null)
@@ -674,6 +1082,11 @@ public abstract class Creature extends GameObject
 		_blockedStats.addAll(stats);
 	}
 	
+	/**
+	 * Method addSkill.
+	 * @param newSkill Skill
+	 * @return Skill
+	 */
 	public Skill addSkill(Skill newSkill)
 	{
 		if (newSkill == null)
@@ -696,11 +1109,19 @@ public abstract class Creature extends GameObject
 		return oldSkill;
 	}
 	
+	/**
+	 * Method getCalculators.
+	 * @return Calculator[]
+	 */
 	public Calculator[] getCalculators()
 	{
 		return _calculators;
 	}
 	
+	/**
+	 * Method addStatFunc.
+	 * @param f Func
+	 */
 	public final void addStatFunc(Func f)
 	{
 		if (f == null)
@@ -718,6 +1139,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method addStatFuncs.
+	 * @param funcs Func[]
+	 */
 	public final void addStatFuncs(Func[] funcs)
 	{
 		for (Func f : funcs)
@@ -726,6 +1151,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method removeStatFunc.
+	 * @param f Func
+	 */
 	public final void removeStatFunc(Func f)
 	{
 		if (f == null)
@@ -742,6 +1171,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method removeStatFuncs.
+	 * @param funcs Func[]
+	 */
 	public final void removeStatFuncs(Func[] funcs)
 	{
 		for (Func f : funcs)
@@ -750,6 +1183,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method removeStatsOwner.
+	 * @param owner Object
+	 */
 	public final void removeStatsOwner(Object owner)
 	{
 		synchronized (_calculators)
@@ -764,6 +1201,11 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method altOnMagicUseTimer.
+	 * @param aimingTarget Creature
+	 * @param skill Skill
+	 */
 	public void altOnMagicUseTimer(Creature aimingTarget, Skill skill)
 	{
 		if (isAlikeDead())
@@ -794,6 +1236,11 @@ public abstract class Creature extends GameObject
 		callSkill(skill, targets, false);
 	}
 	
+	/**
+	 * Method altUseSkill.
+	 * @param skill Skill
+	 * @param target Creature
+	 */
 	public void altUseSkill(Skill skill, Creature target)
 	{
 		if (skill == null)
@@ -885,22 +1332,38 @@ public abstract class Creature extends GameObject
 		ThreadPoolManager.getInstance().schedule(new AltMagicUseTask(this, target, skill), skill.getHitTime());
 	}
 	
+	/**
+	 * Method sendReuseMessage.
+	 * @param skill Skill
+	 */
 	public void sendReuseMessage(Skill skill)
 	{
 	}
 	
+	/**
+	 * Method broadcastPacket.
+	 * @param packets L2GameServerPacket[]
+	 */
 	public void broadcastPacket(L2GameServerPacket... packets)
 	{
 		sendPacket(packets);
 		broadcastPacketToOthers(packets);
 	}
 	
+	/**
+	 * Method broadcastPacket.
+	 * @param packets List<L2GameServerPacket>
+	 */
 	public void broadcastPacket(List<L2GameServerPacket> packets)
 	{
 		sendPacket(packets);
 		broadcastPacketToOthers(packets);
 	}
 	
+	/**
+	 * Method broadcastPacketToOthers.
+	 * @param packets L2GameServerPacket[]
+	 */
 	public void broadcastPacketToOthers(L2GameServerPacket... packets)
 	{
 		if (!isVisible() || (packets.length == 0))
@@ -916,6 +1379,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method broadcastPacketToOthers.
+	 * @param packets List<L2GameServerPacket>
+	 */
 	public void broadcastPacketToOthers(List<L2GameServerPacket> packets)
 	{
 		if (!isVisible() || packets.isEmpty())
@@ -931,6 +1398,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method broadcastToStatusListeners.
+	 * @param packets L2GameServerPacket[]
+	 */
 	public void broadcastToStatusListeners(L2GameServerPacket... packets)
 	{
 		if (!isVisible() || (packets.length == 0))
@@ -957,6 +1428,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method addStatusListener.
+	 * @param cha Player
+	 */
 	public void addStatusListener(Player cha)
 	{
 		if (cha == this)
@@ -981,6 +1456,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method removeStatusListener.
+	 * @param cha Creature
+	 */
 	public void removeStatusListener(Creature cha)
 	{
 		statusListenersLock.lock();
@@ -998,6 +1477,9 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method clearStatusListeners.
+	 */
 	public void clearStatusListeners()
 	{
 		statusListenersLock.lock();
@@ -1015,6 +1497,11 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method makeStatusUpdate.
+	 * @param fields int[]
+	 * @return StatusUpdate
+	 */
 	public StatusUpdate makeStatusUpdate(int... fields)
 	{
 		StatusUpdate su = new StatusUpdate(getObjectId());
@@ -1051,6 +1538,11 @@ public abstract class Creature extends GameObject
 		return su;
 	}
 	
+	/**
+	 * Method makeHPStatusUpdate.
+	 * @param _attakerId int
+	 * @return StatusUpdate
+	 */
 	public StatusUpdate makeHPStatusUpdate(int _attakerId)
 	{
 		StatusUpdate su = new StatusUpdate(getObjectId(), _attakerId);
@@ -1060,6 +1552,9 @@ public abstract class Creature extends GameObject
 		return su;
 	}
 	
+	/**
+	 * Method broadcastStatusUpdate.
+	 */
 	public void broadcastStatusUpdate()
 	{
 		if (!needStatusUpdate())
@@ -1070,6 +1565,10 @@ public abstract class Creature extends GameObject
 		broadcastToStatusListeners(su);
 	}
 	
+	/**
+	 * Method broadcastHPStatusUpdate.
+	 * @param _id int
+	 */
 	public void broadcastHPStatusUpdate(int _id)
 	{
 		if (!needStatusUpdate())
@@ -1080,16 +1579,36 @@ public abstract class Creature extends GameObject
 		broadcastToStatusListeners(su);
 	}
 	
+	/**
+	 * Method calcHeading.
+	 * @param x_dest int
+	 * @param y_dest int
+	 * @return int
+	 */
 	public int calcHeading(int x_dest, int y_dest)
 	{
 		return (int) (Math.atan2(getY() - y_dest, getX() - x_dest) * HEADINGS_IN_PI) + 32768;
 	}
 	
+	/**
+	 * Method calcStat.
+	 * @param stat Stats
+	 * @param init double
+	 * @return double
+	 */
 	public final double calcStat(Stats stat, double init)
 	{
 		return calcStat(stat, init, null, null);
 	}
 	
+	/**
+	 * Method calcStat.
+	 * @param stat Stats
+	 * @param init double
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return double
+	 */
 	public final double calcStat(Stats stat, double init, Creature target, Skill skill)
 	{
 		int id = stat.ordinal();
@@ -1107,6 +1626,13 @@ public abstract class Creature extends GameObject
 		return env.value;
 	}
 	
+	/**
+	 * Method calcStat.
+	 * @param stat Stats
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return double
+	 */
 	public final double calcStat(Stats stat, Creature target, Skill skill)
 	{
 		Env env = new Env(this, target, skill);
@@ -1120,11 +1646,21 @@ public abstract class Creature extends GameObject
 		return env.value;
 	}
 	
+	/**
+	 * Method calculateAttackDelay.
+	 * @return int
+	 */
 	public int calculateAttackDelay()
 	{
 		return Formulas.calcPAtkSpd(getPAtkSpd());
 	}
 	
+	/**
+	 * Method callSkill.
+	 * @param skill Skill
+	 * @param targets List<Creature>
+	 * @param useActionSkills boolean
+	 */
 	public void callSkill(Skill skill, List<Creature> targets, boolean useActionSkills)
 	{
 		try
@@ -1228,6 +1764,14 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method useTriggers.
+	 * @param target GameObject
+	 * @param type TriggerType
+	 * @param ex Skill
+	 * @param owner Skill
+	 * @param damage double
+	 */
 	public void useTriggers(GameObject target, TriggerType type, Skill ex, Skill owner, double damage)
 	{
 		if (_triggers == null)
@@ -1247,6 +1791,14 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method useTriggerSkill.
+	 * @param target GameObject
+	 * @param targets List<Creature>
+	 * @param trigger TriggerInfo
+	 * @param owner Skill
+	 * @param damage double
+	 */
 	public void useTriggerSkill(GameObject target, List<Creature> targets, TriggerInfo trigger, Skill owner, double damage)
 	{
 		Skill skill = trigger.getSkill();
@@ -1289,11 +1841,22 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method checkBlockedStat.
+	 * @param stat Stats
+	 * @return boolean
+	 */
 	public boolean checkBlockedStat(Stats stat)
 	{
 		return (_blockedStats != null) && _blockedStats.contains(stat);
 	}
 	
+	/**
+	 * Method checkReflectSkill.
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @return boolean
+	 */
 	public boolean checkReflectSkill(Creature attacker, Skill skill)
 	{
 		if (!skill.isReflectable())
@@ -1317,6 +1880,12 @@ public abstract class Creature extends GameObject
 		return false;
 	}
 	
+	/**
+	 * Method doCounterAttack.
+	 * @param skill Skill
+	 * @param attacker Creature
+	 * @param blow boolean
+	 */
 	public void doCounterAttack(Skill skill, Creature attacker, boolean blow)
 	{
 		if (isDead())
@@ -1350,13 +1919,27 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method disableSkill.
+	 * @param skill Skill
+	 * @param delay long
+	 */
 	public void disableSkill(Skill skill, long delay)
 	{
 		_skillReuses.put(skill.hashCode(), new TimeStamp(skill, delay));
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	public abstract boolean isAutoAttackable(Creature attacker);
 	
+	/**
+	 * Method doAttack.
+	 * @param target Creature
+	 */
 	public void doAttack(Creature target)
 	{
 		if ((target == null) || isAMuted() || isAttackingNow() || isAlikeDead() || target.isAlikeDead() || !isInRange(target, 2000) || (isPlayer() && getPlayer().isInMountTransform()))
@@ -1418,6 +2001,15 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method doAttackHitSimple.
+	 * @param attack Attack
+	 * @param target Creature
+	 * @param multiplier double
+	 * @param unchargeSS boolean
+	 * @param sAtk int
+	 * @param notify boolean
+	 */
 	private void doAttackHitSimple(Attack attack, Creature target, double multiplier, boolean unchargeSS, int sAtk, boolean notify)
 	{
 		int damage1 = 0, reflectableDamage1 = 0;
@@ -1436,6 +2028,12 @@ public abstract class Creature extends GameObject
 		attack.addHit(target, damage1, miss1, crit1, shld1);
 	}
 	
+	/**
+	 * Method doAttackHitByBow.
+	 * @param attack Attack
+	 * @param target Creature
+	 * @param sAtk int
+	 */
 	private void doAttackHitByBow(Attack attack, Creature target, int sAtk)
 	{
 		WeaponTemplate activeWeapon = getActiveWeaponItem();
@@ -1462,6 +2060,12 @@ public abstract class Creature extends GameObject
 		attack.addHit(target, damage2, miss1, crit1, shld1);
 	}
 	
+	/**
+	 * Method doAttackHitByDual.
+	 * @param attack Attack
+	 * @param target Creature
+	 * @param sAtk int
+	 */
 	private void doAttackHitByDual(Attack attack, Creature target, int sAtk)
 	{
 		int damage1 = 0;
@@ -1495,6 +2099,12 @@ public abstract class Creature extends GameObject
 		attack.addHit(target, damage2, miss2, crit2, shld2);
 	}
 	
+	/**
+	 * Method doAttackHitByPole.
+	 * @param attack Attack
+	 * @param target Creature
+	 * @param sAtk int
+	 */
 	private void doAttackHitByPole(Attack attack, Creature target, int sAtk)
 	{
 		int angle = (int) calcStat(Stats.POLE_ATTACK_ANGLE, 90, target, null);
@@ -1541,11 +2151,21 @@ public abstract class Creature extends GameObject
 		doAttackHitSimple(attack, target, 1., true, sAtk, true);
 	}
 	
+	/**
+	 * Method getAnimationEndTime.
+	 * @return long
+	 */
 	public long getAnimationEndTime()
 	{
 		return _animationEndTime;
 	}
 	
+	/**
+	 * Method doCast.
+	 * @param skill Skill
+	 * @param target Creature
+	 * @param forceUse boolean
+	 */
 	public void doCast(Skill skill, Creature target, boolean forceUse)
 	{
 		if (skill == null)
@@ -1679,8 +2299,17 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Field _flyLoc.
+	 */
 	private Location _flyLoc;
 	
+	/**
+	 * Method getFlyLocation.
+	 * @param target GameObject
+	 * @param skill Skill
+	 * @return Location
+	 */
 	public Location getFlyLocation(GameObject target, Skill skill)
 	{
 		if ((target != null) && (target != this))
@@ -1730,6 +2359,10 @@ public abstract class Creature extends GameObject
 		return GeoEngine.moveCheck(getX(), getY(), getZ(), getX() + x1, getY() + y1, getGeoIndex());
 	}
 	
+	/**
+	 * Method doDie.
+	 * @param killer Creature
+	 */
 	public final void doDie(Creature killer)
 	{
 		if (!isDead.compareAndSet(false, true))
@@ -1739,6 +2372,10 @@ public abstract class Creature extends GameObject
 		onDeath(killer);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	protected void onDeath(Creature killer)
 	{
 		if (killer != null)
@@ -1798,196 +2435,359 @@ public abstract class Creature extends GameObject
 		broadcastStatusUpdate();
 	}
 	
+	/**
+	 * Method onRevive.
+	 */
 	protected void onRevive()
 	{
 	}
 	
+	/**
+	 * Method enableSkill.
+	 * @param skill Skill
+	 */
 	public void enableSkill(Skill skill)
 	{
 		_skillReuses.remove(skill.hashCode());
 	}
 	
+	/**
+	 * Method getAbnormalEffect.
+	 * @return int
+	 */
 	public int getAbnormalEffect()
 	{
 		return _abnormalEffects;
 	}
 	
+	/**
+	 * Method getAbnormalEffect2.
+	 * @return int
+	 */
 	public int getAbnormalEffect2()
 	{
 		return _abnormalEffects2;
 	}
 	
+	/**
+	 * Method getAbnormalEffect3.
+	 * @return int
+	 */
 	public int getAbnormalEffect3()
 	{
 		return _abnormalEffects3;
 	}
 	
+	/**
+	 * Method getAccuracy.
+	 * @return int
+	 */
 	public int getAccuracy()
 	{
 		return (int) calcStat(Stats.ACCURACY_COMBAT, 0, null, null);
 	}
 	
+	/**
+	 * Method getMAccuracy.
+	 * @return int
+	 */
 	public int getMAccuracy()
 	{
 		return (int) calcStat(Stats.MACCURACY_COMBAT, 0, null, null);
 	}
 	
+	/**
+	 * Method getAllSkills.
+	 * @return Collection<Skill>
+	 */
 	public Collection<Skill> getAllSkills()
 	{
 		return _skills.values();
 	}
 	
+	/**
+	 * Method getAllSkillsArray.
+	 * @return Skill[]
+	 */
 	public final Skill[] getAllSkillsArray()
 	{
 		Collection<Skill> vals = _skills.values();
 		return vals.toArray(new Skill[vals.size()]);
 	}
 	
+	/**
+	 * Method getAttackSpeedMultiplier.
+	 * @return double
+	 */
 	public final double getAttackSpeedMultiplier()
 	{
 		return (1.1 * getPAtkSpd()) / getTemplate().getBasePAtkSpd();
 	}
 	
+	/**
+	 * Method getBuffLimit.
+	 * @return int
+	 */
 	public int getBuffLimit()
 	{
 		return (int) calcStat(Stats.BUFF_LIMIT, Config.ALT_BUFF_LIMIT, null, null);
 	}
 	
+	/**
+	 * Method getCastingSkill.
+	 * @return Skill
+	 */
 	public Skill getCastingSkill()
 	{
 		return _castingSkill;
 	}
 	
+	/**
+	 * Method getCriticalHit.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return int
+	 */
 	public int getCriticalHit(Creature target, Skill skill)
 	{
 		return (int) calcStat(Stats.CRITICAL_BASE, _template.getBaseCritRate(), target, skill);
 	}
 	
+	/**
+	 * Method getMagicCriticalRate.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return double
+	 */
 	public double getMagicCriticalRate(Creature target, Skill skill)
 	{
 		return calcStat(Stats.MCRITICAL_RATE, target, skill);
 	}
 	
+	/**
+	 * Method getCurrentCp.
+	 * @return double
+	 */
 	public final double getCurrentCp()
 	{
 		return _currentCp;
 	}
 	
+	/**
+	 * Method getCurrentCpRatio.
+	 * @return double
+	 */
 	public final double getCurrentCpRatio()
 	{
 		return getCurrentCp() / getMaxCp();
 	}
 	
+	/**
+	 * Method getCurrentCpPercents.
+	 * @return double
+	 */
 	public final double getCurrentCpPercents()
 	{
 		return getCurrentCpRatio() * 100.;
 	}
 	
+	/**
+	 * Method isCurrentCpFull.
+	 * @return boolean
+	 */
 	public final boolean isCurrentCpFull()
 	{
 		return getCurrentCp() >= getMaxCp();
 	}
 	
+	/**
+	 * Method isCurrentCpZero.
+	 * @return boolean
+	 */
 	public final boolean isCurrentCpZero()
 	{
 		return getCurrentCp() < 1;
 	}
 	
+	/**
+	 * Method getCurrentHp.
+	 * @return double
+	 */
 	public final double getCurrentHp()
 	{
 		return _currentHp;
 	}
 	
+	/**
+	 * Method getCurrentHpRatio.
+	 * @return double
+	 */
 	public final double getCurrentHpRatio()
 	{
 		return getCurrentHp() / getMaxHp();
 	}
 	
+	/**
+	 * Method getCurrentHpPercents.
+	 * @return double
+	 */
 	public final double getCurrentHpPercents()
 	{
 		return getCurrentHpRatio() * 100.;
 	}
 	
+	/**
+	 * Method isCurrentHpFull.
+	 * @return boolean
+	 */
 	public final boolean isCurrentHpFull()
 	{
 		return getCurrentHp() >= getMaxHp();
 	}
 	
+	/**
+	 * Method isCurrentHpZero.
+	 * @return boolean
+	 */
 	public final boolean isCurrentHpZero()
 	{
 		return getCurrentHp() < 1;
 	}
 	
+	/**
+	 * Method getCurrentMp.
+	 * @return double
+	 */
 	public final double getCurrentMp()
 	{
 		return _currentMp;
 	}
 	
+	/**
+	 * Method getCurrentMpRatio.
+	 * @return double
+	 */
 	public final double getCurrentMpRatio()
 	{
 		return getCurrentMp() / getMaxMp();
 	}
 	
+	/**
+	 * Method getCurrentMpPercents.
+	 * @return double
+	 */
 	public final double getCurrentMpPercents()
 	{
 		return getCurrentMpRatio() * 100.;
 	}
 	
+	/**
+	 * Method isCurrentMpFull.
+	 * @return boolean
+	 */
 	public final boolean isCurrentMpFull()
 	{
 		return getCurrentMp() >= getMaxMp();
 	}
 	
+	/**
+	 * Method isCurrentMpZero.
+	 * @return boolean
+	 */
 	public final boolean isCurrentMpZero()
 	{
 		return getCurrentMp() < 1;
 	}
 	
+	/**
+	 * Method getDestination.
+	 * @return Location
+	 */
 	public Location getDestination()
 	{
 		return destination;
 	}
 	
+	/**
+	 * Method getDEX.
+	 * @return int
+	 */
 	public int getDEX()
 	{
 		return (int) calcStat(Stats.STAT_DEX, _template.getBaseAttr().getDEX(), null, null);
 	}
 	
+	/**
+	 * Method getCON.
+	 * @return int
+	 */
 	public int getCON()
 	{
 		return (int) calcStat(Stats.STAT_CON, _template.getBaseAttr().getCON(), null, null);
 	}
 	
+	/**
+	 * Method getINT.
+	 * @return int
+	 */
 	public int getINT()
 	{
 		return (int) calcStat(Stats.STAT_INT, _template.getBaseAttr().getINT(), null, null);
 	}
 	
+	/**
+	 * Method getMEN.
+	 * @return int
+	 */
 	public int getMEN()
 	{
 		return (int) calcStat(Stats.STAT_MEN, _template.getBaseAttr().getMEN(), null, null);
 	}
 	
+	/**
+	 * Method getSTR.
+	 * @return int
+	 */
 	public int getSTR()
 	{
 		return (int) calcStat(Stats.STAT_STR, _template.getBaseAttr().getSTR(), null, null);
 	}
 	
+	/**
+	 * Method getEvasionRate.
+	 * @param target Creature
+	 * @return int
+	 */
 	public int getEvasionRate(Creature target)
 	{
 		return (int) calcStat(Stats.EVASION_RATE, 0, target, null);
 	}
 	
+	/**
+	 * Method getMEvasionRate.
+	 * @param target Creature
+	 * @return int
+	 */
 	public int getMEvasionRate(Creature target)
 	{
 		return (int) calcStat(Stats.MEVASION_RATE, 0, target, null);
 	}
 	
+	/**
+	 * Method getWIT.
+	 * @return int
+	 */
 	public int getWIT()
 	{
 		return (int) calcStat(Stats.STAT_WIT, _template.getBaseAttr().getWIT(), null, null);
 	}
 	
+	/**
+	 * Method getAroundCharacters.
+	 * @param radius int
+	 * @param height int
+	 * @return List<Creature>
+	 */
 	public List<Creature> getAroundCharacters(int radius, int height)
 	{
 		if (!isVisible())
@@ -1997,6 +2797,12 @@ public abstract class Creature extends GameObject
 		return World.getAroundCharacters(this, radius, height);
 	}
 	
+	/**
+	 * Method getAroundNpc.
+	 * @param range int
+	 * @param height int
+	 * @return List<NpcInstance>
+	 */
 	public List<NpcInstance> getAroundNpc(int range, int height)
 	{
 		if (!isVisible())
@@ -2006,16 +2812,31 @@ public abstract class Creature extends GameObject
 		return World.getAroundNpc(this, range, height);
 	}
 	
+	/**
+	 * Method knowsObject.
+	 * @param obj GameObject
+	 * @return boolean
+	 */
 	public boolean knowsObject(GameObject obj)
 	{
 		return World.getAroundObjectById(this, obj.getObjectId()) != null;
 	}
 	
+	/**
+	 * Method getKnownSkill.
+	 * @param skillId int
+	 * @return Skill
+	 */
 	public final Skill getKnownSkill(int skillId)
 	{
 		return _skills.get(skillId);
 	}
 	
+	/**
+	 * Method getMagicalAttackRange.
+	 * @param skill Skill
+	 * @return int
+	 */
 	public final int getMagicalAttackRange(Skill skill)
 	{
 		if (skill != null)
@@ -2025,6 +2846,12 @@ public abstract class Creature extends GameObject
 		return getTemplate().getBaseAtkRange();
 	}
 	
+	/**
+	 * Method getMAtk.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return int
+	 */
 	public int getMAtk(Creature target, Skill skill)
 	{
 		if ((skill != null) && (skill.getMatak() > 0))
@@ -2034,31 +2861,58 @@ public abstract class Creature extends GameObject
 		return (int) calcStat(Stats.MAGIC_ATTACK, _template.getBaseMAtk(), target, skill);
 	}
 	
+	/**
+	 * Method getMAtkSpd.
+	 * @return int
+	 */
 	public int getMAtkSpd()
 	{
 		return (int) (calcStat(Stats.MAGIC_ATTACK_SPEED, _template.getBaseMAtkSpd(), null, null));
 	}
 	
+	/**
+	 * Method getMaxCp.
+	 * @return int
+	 */
 	public int getMaxCp()
 	{
 		return (int) calcStat(Stats.MAX_CP, _template.getBaseCpMax(), null, null);
 	}
 	
+	/**
+	 * Method getMaxHp.
+	 * @return int
+	 */
 	public int getMaxHp()
 	{
 		return (int) calcStat(Stats.MAX_HP, _template.getBaseHpMax(), null, null);
 	}
 	
+	/**
+	 * Method getMaxMp.
+	 * @return int
+	 */
 	public int getMaxMp()
 	{
 		return (int) calcStat(Stats.MAX_MP, _template.getBaseMpMax(), null, null);
 	}
 	
+	/**
+	 * Method getMDef.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return int
+	 */
 	public int getMDef(Creature target, Skill skill)
 	{
 		return Math.max((int) calcStat(Stats.MAGIC_DEFENCE, _template.getBaseMDef(), target, skill), 1);
 	}
 	
+	/**
+	 * Method getMinDistance.
+	 * @param obj GameObject
+	 * @return double
+	 */
 	public double getMinDistance(GameObject obj)
 	{
 		double distance = getTemplate().getCollisionRadius();
@@ -2069,11 +2923,19 @@ public abstract class Creature extends GameObject
 		return distance;
 	}
 	
+	/**
+	 * Method getMovementSpeedMultiplier.
+	 * @return double
+	 */
 	public double getMovementSpeedMultiplier()
 	{
 		return (getRunSpeed() * 1.) / _template.getBaseRunSpd();
 	}
 	
+	/**
+	 * Method getMoveSpeed.
+	 * @return int
+	 */
 	@Override
 	public int getMoveSpeed()
 	{
@@ -2084,6 +2946,10 @@ public abstract class Creature extends GameObject
 		return getWalkSpeed();
 	}
 	
+	/**
+	 * Method getRunSpeed.
+	 * @return int
+	 */
 	public int getRunSpeed()
 	{
 		if (isInWater())
@@ -2093,6 +2959,10 @@ public abstract class Creature extends GameObject
 		return getSpeed(_template.getBaseRunSpd());
 	}
 	
+	/**
+	 * Method getWalkSpeed.
+	 * @return int
+	 */
 	public int getWalkSpeed()
 	{
 		if (isInWater())
@@ -2102,52 +2972,96 @@ public abstract class Creature extends GameObject
 		return getSpeed(_template.getBaseWalkSpd());
 	}
 	
+	/**
+	 * Method getSwimRunSpeed.
+	 * @return int
+	 */
 	public int getSwimRunSpeed()
 	{
 		return getSpeed(_template.getBaseWaterRunSpd());
 	}
 	
+	/**
+	 * Method getSwimWalkSpeed.
+	 * @return int
+	 */
 	public int getSwimWalkSpeed()
 	{
 		return getSpeed(_template.getBaseWaterWalkSpd());
 	}
 	
+	/**
+	 * Method relativeSpeed.
+	 * @param target GameObject
+	 * @return double
+	 */
 	public double relativeSpeed(GameObject target)
 	{
 		return getMoveSpeed() - (target.getMoveSpeed() * Math.cos(headingToRadians(getHeading()) - headingToRadians(target.getHeading())));
 	}
 	
+	/**
+	 * Method getSpeed.
+	 * @param baseSpeed double
+	 * @return int
+	 */
 	public int getSpeed(double baseSpeed)
 	{
 		return (int) calcStat(Stats.RUN_SPEED, baseSpeed, null, null);
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	@Override
 	public String getName()
 	{
 		return StringUtils.defaultString(_name);
 	}
 	
+	/**
+	 * Method getPAtk.
+	 * @param target Creature
+	 * @return int
+	 */
 	public int getPAtk(Creature target)
 	{
 		return (int) calcStat(Stats.POWER_ATTACK, _template.getBasePAtk(), target, null);
 	}
 	
+	/**
+	 * Method getPAtkSpd.
+	 * @return int
+	 */
 	public int getPAtkSpd()
 	{
 		return (int) calcStat(Stats.POWER_ATTACK_SPEED, _template.getBasePAtkSpd(), null, null);
 	}
 	
+	/**
+	 * Method getPDef.
+	 * @param target Creature
+	 * @return int
+	 */
 	public int getPDef(Creature target)
 	{
 		return (int) calcStat(Stats.POWER_DEFENCE, _template.getBasePDef(), target, null);
 	}
 	
+	/**
+	 * Method getPhysicalAttackRange.
+	 * @return int
+	 */
 	public final int getPhysicalAttackRange()
 	{
 		return (int) calcStat(Stats.POWER_ATTACK_RANGE, getTemplate().getBaseAtkRange(), null, null);
 	}
 	
+	/**
+	 * Method getRandomDamage.
+	 * @return int
+	 */
 	public int getRandomDamage()
 	{
 		WeaponTemplate weaponItem = getActiveWeaponItem();
@@ -2158,11 +3072,20 @@ public abstract class Creature extends GameObject
 		return weaponItem.getRandomDamage();
 	}
 	
+	/**
+	 * Method getReuseModifier.
+	 * @param target Creature
+	 * @return double
+	 */
 	public double getReuseModifier(Creature target)
 	{
 		return calcStat(Stats.ATK_REUSE, 1, target, null);
 	}
 	
+	/**
+	 * Method getShldDef.
+	 * @return int
+	 */
 	public final int getShldDef()
 	{
 		if (isPlayer())
@@ -2172,6 +3095,11 @@ public abstract class Creature extends GameObject
 		return (int) calcStat(Stats.SHIELD_DEFENCE, _template.getBaseShldDef(), null, null);
 	}
 	
+	/**
+	 * Method getSkillDisplayLevel.
+	 * @param skillId Integer
+	 * @return int
+	 */
 	public final int getSkillDisplayLevel(Integer skillId)
 	{
 		Skill skill = _skills.get(skillId);
@@ -2182,6 +3110,11 @@ public abstract class Creature extends GameObject
 		return skill.getDisplayLevel();
 	}
 	
+	/**
+	 * Method getSkillLevel.
+	 * @param skillId Integer
+	 * @return int
+	 */
 	public final int getSkillLevel(Integer skillId)
 	{
 		switch (skillId)
@@ -2195,6 +3128,12 @@ public abstract class Creature extends GameObject
 		return getSkillLevel(skillId, -1);
 	}
 	
+	/**
+	 * Method getSkillLevel.
+	 * @param skillId Integer
+	 * @param def int
+	 * @return int
+	 */
 	public final int getSkillLevel(Integer skillId, int def)
 	{
 		Skill skill = _skills.get(skillId);
@@ -2205,6 +3144,11 @@ public abstract class Creature extends GameObject
 		return skill.getLevel();
 	}
 	
+	/**
+	 * Method getSkillMastery.
+	 * @param skillId Integer
+	 * @return int
+	 */
 	public int getSkillMastery(Integer skillId)
 	{
 		if (_skillMastery == null)
@@ -2215,6 +3159,10 @@ public abstract class Creature extends GameObject
 		return val == null ? 0 : val.intValue();
 	}
 	
+	/**
+	 * Method removeSkillMastery.
+	 * @param skillId Integer
+	 */
 	public void removeSkillMastery(Integer skillId)
 	{
 		if (_skillMastery != null)
@@ -2223,103 +3171,185 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method getSwimSpeed.
+	 * @return int
+	 */
 	public int getSwimSpeed()
 	{
 		return (int) calcStat(Stats.RUN_SPEED, Config.SWIMING_SPEED, null, null);
 	}
 	
+	/**
+	 * Method getTarget.
+	 * @return GameObject
+	 */
 	public GameObject getTarget()
 	{
 		return target.get();
 	}
 	
+	/**
+	 * Method getTargetId.
+	 * @return int
+	 */
 	public final int getTargetId()
 	{
 		GameObject target = getTarget();
 		return target == null ? -1 : target.getObjectId();
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @return CharTemplate
+	 */
 	public CharTemplate getTemplate()
 	{
 		return _template;
 	}
 	
+	/**
+	 * Method getTitle.
+	 * @return String
+	 */
 	public String getTitle()
 	{
 		return StringUtils.defaultString(_title);
 	}
 	
+	/**
+	 * Method headingToRadians.
+	 * @param heading int
+	 * @return double
+	 */
 	public double headingToRadians(int heading)
 	{
 		return (heading - 32768) / HEADINGS_IN_PI;
 	}
 	
+	/**
+	 * Method isAlikeDead.
+	 * @return boolean
+	 */
 	public boolean isAlikeDead()
 	{
 		return _fakeDeath || isDead();
 	}
 	
+	/**
+	 * Method isAttackingNow.
+	 * @return boolean
+	 */
 	public final boolean isAttackingNow()
 	{
 		return _attackEndTime > System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method isBlessedByNoblesse.
+	 * @return boolean
+	 */
 	public final boolean isBlessedByNoblesse()
 	{
 		return _isBlessedByNoblesse;
 	}
 	
+	/**
+	 * Method isSalvation.
+	 * @return boolean
+	 */
 	public final boolean isSalvation()
 	{
 		return _isSalvation;
 	}
 	
+	/**
+	 * Method isEffectImmune.
+	 * @return boolean
+	 */
 	public boolean isEffectImmune()
 	{
 		return _effectImmunity.get();
 	}
 	
+	/**
+	 * Method isBuffImmune.
+	 * @return boolean
+	 */
 	public boolean isBuffImmune()
 	{
 		return _buffImmunity.get();
 	}
 	
+	/**
+	 * Method isDebuffImmune.
+	 * @return boolean
+	 */
 	public boolean isDebuffImmune()
 	{
 		return _debuffImmunity.get();
 	}
 	
+	/**
+	 * Method isDead.
+	 * @return boolean
+	 */
 	public boolean isDead()
 	{
 		return (_currentHp < 0.5) || isDead.get();
 	}
 	
+	/**
+	 * Method isFlying.
+	 * @return boolean
+	 */
 	@Override
 	public final boolean isFlying()
 	{
 		return _flying;
 	}
 	
+	/**
+	 * Method isInCombat.
+	 * @return boolean
+	 */
 	public final boolean isInCombat()
 	{
 		return System.currentTimeMillis() < _stanceEndTime;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	public boolean isInvul()
 	{
 		return _isInvul;
 	}
 	
+	/**
+	 * Method isMageClass.
+	 * @return boolean
+	 */
 	public boolean isMageClass()
 	{
 		return getTemplate().getBaseMAtk() > 3;
 	}
 	
+	/**
+	 * Method isRunning.
+	 * @return boolean
+	 */
 	public final boolean isRunning()
 	{
 		return _running;
 	}
 	
+	/**
+	 * Method isSkillDisabled.
+	 * @param skill Skill
+	 * @return boolean
+	 */
 	public boolean isSkillDisabled(Skill skill)
 	{
 		TimeStamp sts = _skillReuses.get(skill.hashCode());
@@ -2335,11 +3365,20 @@ public abstract class Creature extends GameObject
 		return false;
 	}
 	
+	/**
+	 * Method isTeleporting.
+	 * @return boolean
+	 */
 	public final boolean isTeleporting()
 	{
 		return isTeleporting.get();
 	}
 	
+	/**
+	 * Method getIntersectionPoint.
+	 * @param target Creature
+	 * @return Location
+	 */
 	public Location getIntersectionPoint(Creature target)
 	{
 		if (!PositionUtils.isFacing(this, target, 90))
@@ -2352,6 +3391,12 @@ public abstract class Creature extends GameObject
 		return new Location((int) (target.getX() - (range * Math.sin(radian))), (int) (target.getY() + (range * Math.cos(radian))), target.getZ());
 	}
 	
+	/**
+	 * Method applyOffset.
+	 * @param point Location
+	 * @param offset int
+	 * @return Location
+	 */
 	public Location applyOffset(Location point, int offset)
 	{
 		if (offset <= 0)
@@ -2381,6 +3426,12 @@ public abstract class Creature extends GameObject
 		return point;
 	}
 	
+	/**
+	 * Method applyOffset.
+	 * @param points List<Location>
+	 * @param offset int
+	 * @return List<Location>
+	 */
 	public List<Location> applyOffset(List<Location> points, int offset)
 	{
 		offset = offset >> 4;
@@ -2411,6 +3462,11 @@ public abstract class Creature extends GameObject
 		return points;
 	}
 	
+	/**
+	 * Method setSimplePath.
+	 * @param dest Location
+	 * @return boolean
+	 */
 	private boolean setSimplePath(Location dest)
 	{
 		List<Location> moveList = GeoMove.constructMoveList(getLoc(), dest);
@@ -2423,11 +3479,31 @@ public abstract class Creature extends GameObject
 		return true;
 	}
 	
+	/**
+	 * Method buildPathTo.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param offset int
+	 * @param pathFind boolean
+	 * @return boolean
+	 */
 	private boolean buildPathTo(int x, int y, int z, int offset, boolean pathFind)
 	{
 		return buildPathTo(x, y, z, offset, null, false, pathFind);
 	}
 	
+	/**
+	 * Method buildPathTo.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param offset int
+	 * @param follow Creature
+	 * @param forestalling boolean
+	 * @param pathFind boolean
+	 * @return boolean
+	 */
 	boolean buildPathTo(int x, int y, int z, int offset, Creature follow, boolean forestalling, boolean pathFind)
 	{
 		int geoIndex = getGeoIndex();
@@ -2541,21 +3617,44 @@ public abstract class Creature extends GameObject
 		return false;
 	}
 	
+	/**
+	 * Method getFollowTarget.
+	 * @return Creature
+	 */
 	public Creature getFollowTarget()
 	{
 		return followTarget.get();
 	}
 	
+	/**
+	 * Method setFollowTarget.
+	 * @param target Creature
+	 */
 	public void setFollowTarget(Creature target)
 	{
 		followTarget = target == null ? HardReferences.<Creature> emptyRef() : target.getRef();
 	}
 	
+	/**
+	 * Method followToCharacter.
+	 * @param target Creature
+	 * @param offset int
+	 * @param forestalling boolean
+	 * @return boolean
+	 */
 	public boolean followToCharacter(Creature target, int offset, boolean forestalling)
 	{
 		return followToCharacter(target.getLoc(), target, offset, forestalling);
 	}
 	
+	/**
+	 * Method followToCharacter.
+	 * @param loc Location
+	 * @param target Creature
+	 * @param offset int
+	 * @param forestalling boolean
+	 * @return boolean
+	 */
 	public boolean followToCharacter(Location loc, Creature target, int offset, boolean forestalling)
 	{
 		moveLock.lock();
@@ -2599,11 +3698,27 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method moveToLocation.
+	 * @param loc Location
+	 * @param offset int
+	 * @param pathfinding boolean
+	 * @return boolean
+	 */
 	public boolean moveToLocation(Location loc, int offset, boolean pathfinding)
 	{
 		return moveToLocation(loc.x, loc.y, loc.z, offset, pathfinding);
 	}
 	
+	/**
+	 * Method moveToLocation.
+	 * @param x_dest int
+	 * @param y_dest int
+	 * @param z_dest int
+	 * @param offset int
+	 * @param pathfinding boolean
+	 * @return boolean
+	 */
 	public boolean moveToLocation(int x_dest, int y_dest, int z_dest, int offset, boolean pathfinding)
 	{
 		moveLock.lock();
@@ -2647,6 +3762,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method moveNext.
+	 * @param firstMove boolean
+	 */
 	void moveNext(boolean firstMove)
 	{
 		if (!isMoving || isMovementDisabled())
@@ -2693,27 +3812,46 @@ public abstract class Creature extends GameObject
 		_moveTask = ThreadPoolManager.getInstance().schedule(_moveTaskRunnable.setDist(distance), getMoveTickInterval());
 	}
 	
+	/**
+	 * Method getMoveTickInterval.
+	 * @return int
+	 */
 	public int getMoveTickInterval()
 	{
 		return (isPlayer() ? 16000 : 32000) / Math.max(getMoveSpeed(), 1);
 	}
 	
+	/**
+	 * Method broadcastMove.
+	 */
 	private void broadcastMove()
 	{
 		validateLocation(isPlayer() ? 2 : 1);
 		broadcastPacket(movePacket());
 	}
 	
+	/**
+	 * Method stopMove.
+	 */
 	public void stopMove()
 	{
 		stopMove(true, true);
 	}
 	
+	/**
+	 * Method stopMove.
+	 * @param validate boolean
+	 */
 	public void stopMove(boolean validate)
 	{
 		stopMove(true, validate);
 	}
 	
+	/**
+	 * Method stopMove.
+	 * @param stop boolean
+	 * @param validate boolean
+	 */
 	public void stopMove(boolean stop, boolean validate)
 	{
 		if (!isMoving)
@@ -2752,6 +3890,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method getWaterZ.
+	 * @return int
+	 */
 	public int getWaterZ()
 	{
 		if (!isInWater())
@@ -2782,16 +3924,27 @@ public abstract class Creature extends GameObject
 		return waterZ;
 	}
 	
+	/**
+	 * Method stopMovePacket.
+	 * @return L2GameServerPacket
+	 */
 	protected L2GameServerPacket stopMovePacket()
 	{
 		return new StopMove(this);
 	}
 	
+	/**
+	 * Method movePacket.
+	 * @return L2GameServerPacket
+	 */
 	public L2GameServerPacket movePacket()
 	{
 		return new CharMoveToLocation(this);
 	}
 	
+	/**
+	 * Method updateZones.
+	 */
 	public void updateZones()
 	{
 		if (isInObserverMode())
@@ -2861,6 +4014,11 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method onUpdateZones.
+	 * @param leaving List<Zone>
+	 * @param entering List<Zone>
+	 */
 	protected void onUpdateZones(List<Zone> leaving, List<Zone> entering)
 	{
 		Zone zone;
@@ -2882,21 +4040,38 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method isInZonePeace.
+	 * @return boolean
+	 */
 	public boolean isInZonePeace()
 	{
 		return isInZone(ZoneType.peace_zone) && !isInZoneBattle();
 	}
 	
+	/**
+	 * Method isInZoneBattle.
+	 * @return boolean
+	 */
 	public boolean isInZoneBattle()
 	{
 		return isInZone(ZoneType.battle_zone);
 	}
 	
+	/**
+	 * Method isInWater.
+	 * @return boolean
+	 */
 	public boolean isInWater()
 	{
 		return isInZone(ZoneType.water) && !(isInBoat() || isBoat() || isFlying());
 	}
 	
+	/**
+	 * Method isInZone.
+	 * @param type ZoneType
+	 * @return boolean
+	 */
 	public boolean isInZone(ZoneType type)
 	{
 		zonesRead.lock();
@@ -2919,6 +4094,11 @@ public abstract class Creature extends GameObject
 		return false;
 	}
 	
+	/**
+	 * Method isInZone.
+	 * @param name String
+	 * @return boolean
+	 */
 	public boolean isInZone(String name)
 	{
 		zonesRead.lock();
@@ -2941,6 +4121,11 @@ public abstract class Creature extends GameObject
 		return false;
 	}
 	
+	/**
+	 * Method isInZone.
+	 * @param zone Zone
+	 * @return boolean
+	 */
 	public boolean isInZone(Zone zone)
 	{
 		zonesRead.lock();
@@ -2954,6 +4139,11 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method getZone.
+	 * @param type ZoneType
+	 * @return Zone
+	 */
 	public Zone getZone(ZoneType type)
 	{
 		zonesRead.lock();
@@ -2976,6 +4166,10 @@ public abstract class Creature extends GameObject
 		return null;
 	}
 	
+	/**
+	 * Method getRestartPoint.
+	 * @return Location
+	 */
 	public Location getRestartPoint()
 	{
 		zonesRead.lock();
@@ -3002,6 +4196,10 @@ public abstract class Creature extends GameObject
 		return null;
 	}
 	
+	/**
+	 * Method getPKRestartPoint.
+	 * @return Location
+	 */
 	public Location getPKRestartPoint()
 	{
 		zonesRead.lock();
@@ -3028,6 +4226,11 @@ public abstract class Creature extends GameObject
 		return null;
 	}
 	
+	/**
+	 * Method getGeoZ.
+	 * @param loc Location
+	 * @return int
+	 */
 	@Override
 	public int getGeoZ(Location loc)
 	{
@@ -3038,6 +4241,10 @@ public abstract class Creature extends GameObject
 		return super.getGeoZ(loc);
 	}
 	
+	/**
+	 * Method needStatusUpdate.
+	 * @return boolean
+	 */
 	protected boolean needStatusUpdate()
 	{
 		if (!isVisible())
@@ -3070,6 +4277,11 @@ public abstract class Creature extends GameObject
 		return result;
 	}
 	
+	/**
+	 * Method onForcedAttack.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onForcedAttack(Player player, boolean shift)
 	{
@@ -3082,6 +4294,17 @@ public abstract class Creature extends GameObject
 		player.getAI().Attack(this, true, shift);
 	}
 	
+	/**
+	 * Method onHitTimer.
+	 * @param target Creature
+	 * @param damage int
+	 * @param reflectableDamage int
+	 * @param crit boolean
+	 * @param miss boolean
+	 * @param soulshot boolean
+	 * @param shld boolean
+	 * @param unchargeSS boolean
+	 */
 	public void onHitTimer(Creature target, int damage, int reflectableDamage, boolean crit, boolean miss, boolean soulshot, boolean shld, boolean unchargeSS)
 	{
 		if (isAlikeDead())
@@ -3147,6 +4370,12 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method onMagicUseTimer.
+	 * @param aimingTarget Creature
+	 * @param skill Skill
+	 * @param forceUse boolean
+	 */
 	public void onMagicUseTimer(Creature aimingTarget, Skill skill, boolean forceUse)
 	{
 		if (skill == null)
@@ -3277,6 +4506,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method onCastEndTime.
+	 * @param success boolean
+	 */
 	public void onCastEndTime(boolean success)
 	{
 		finishFly();
@@ -3289,6 +4522,9 @@ public abstract class Creature extends GameObject
 		getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING, skillId, success);
 	}
 	
+	/**
+	 * Method clearCastVars.
+	 */
 	public void clearCastVars()
 	{
 		_animationEndTime = 0;
@@ -3302,6 +4538,9 @@ public abstract class Creature extends GameObject
 		_flyLoc = null;
 	}
 	
+	/**
+	 * Method finishFly.
+	 */
 	private void finishFly()
 	{
 		Location flyLoc = _flyLoc;
@@ -3313,6 +4552,20 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method reduceCurrentHp.
+	 * @param damage double
+	 * @param reflectableDamage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 * @param canReflect boolean
+	 * @param transferDamage boolean
+	 * @param isDot boolean
+	 * @param sendMessage boolean
+	 */
 	public void reduceCurrentHp(double damage, double reflectableDamage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp, boolean canReflect, boolean transferDamage, boolean isDot, boolean sendMessage)
 	{
 		if ((attacker == null) || isDead() || (attacker.isDead() && !isDot))
@@ -3365,6 +4618,15 @@ public abstract class Creature extends GameObject
 		onReduceCurrentHp(damage, attacker, skill, awake, standUp, directHp);
 	}
 	
+	/**
+	 * Method onReduceCurrentHp.
+	 * @param damage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 */
 	protected void onReduceCurrentHp(final double damage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp)
 	{
 		if (awake && isSleeping())
@@ -3399,6 +4661,11 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method reduceCurrentMp.
+	 * @param i double
+	 * @param attacker Creature
+	 */
 	public void reduceCurrentMp(double i, Creature attacker)
 	{
 		if ((attacker != null) && (attacker != this))
@@ -3444,6 +4711,9 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method removeAllSkills.
+	 */
 	public void removeAllSkills()
 	{
 		for (Skill s : getAllSkillsArray())
@@ -3452,6 +4722,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method removeBlockStats.
+	 * @param stats List<Stats>
+	 */
 	public void removeBlockStats(List<Stats> stats)
 	{
 		if (_blockedStats != null)
@@ -3464,6 +4738,11 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method removeSkill.
+	 * @param skill Skill
+	 * @return Skill
+	 */
 	public Skill removeSkill(Skill skill)
 	{
 		if (skill == null)
@@ -3473,6 +4752,11 @@ public abstract class Creature extends GameObject
 		return removeSkillById(skill.getId());
 	}
 	
+	/**
+	 * Method removeSkillById.
+	 * @param id Integer
+	 * @return Skill
+	 */
 	public Skill removeSkillById(Integer id)
 	{
 		Skill oldSkill = _skills.remove(id);
@@ -3513,6 +4797,10 @@ public abstract class Creature extends GameObject
 		return oldSkill;
 	}
 	
+	/**
+	 * Method addTriggers.
+	 * @param f StatTemplate
+	 */
 	public void addTriggers(StatTemplate f)
 	{
 		if (f.getTriggerList().isEmpty())
@@ -3525,6 +4813,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method addTrigger.
+	 * @param t TriggerInfo
+	 */
 	public void addTrigger(TriggerInfo t)
 	{
 		if (_triggers == null)
@@ -3544,6 +4836,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method removeTriggers.
+	 * @param f StatTemplate
+	 */
 	public void removeTriggers(StatTemplate f)
 	{
 		if ((_triggers == null) || f.getTriggerList().isEmpty())
@@ -3556,6 +4852,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method removeTrigger.
+	 * @param t TriggerInfo
+	 */
 	public void removeTrigger(TriggerInfo t)
 	{
 		if (_triggers == null)
@@ -3570,16 +4870,27 @@ public abstract class Creature extends GameObject
 		hs.remove(t);
 	}
 	
+	/**
+	 * Method sendActionFailed.
+	 */
 	public void sendActionFailed()
 	{
 		sendPacket(ActionFail.STATIC);
 	}
 	
+	/**
+	 * Method hasAI.
+	 * @return boolean
+	 */
 	public boolean hasAI()
 	{
 		return _ai != null;
 	}
 	
+	/**
+	 * Method getAI.
+	 * @return CharacterAI
+	 */
 	public CharacterAI getAI()
 	{
 		if (_ai == null)
@@ -3595,6 +4906,10 @@ public abstract class Creature extends GameObject
 		return _ai;
 	}
 	
+	/**
+	 * Method setAI.
+	 * @param newAI CharacterAI
+	 */
 	public void setAI(CharacterAI newAI)
 	{
 		if (newAI == null)
@@ -3617,6 +4932,13 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method setCurrentHp.
+	 * @param newHp double
+	 * @param canRessurect boolean
+	 * @param sendInfo boolean
+	 * @param _attakerId int
+	 */
 	public final void setCurrentHp(double newHp, boolean canRessurect, boolean sendInfo, int _attakerId)
 	{
 		int maxHp = getMaxHp();
@@ -3647,16 +4969,32 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method setCurrentHp.
+	 * @param newHp double
+	 * @param canRessurect boolean
+	 */
 	public final void setCurrentHp(double newHp, boolean canRessurect)
 	{
 		setCurrentHp(newHp, canRessurect, true, 0);
 	}
 	
+	/**
+	 * Method setCurrentHp.
+	 * @param newHp double
+	 * @param canRessurect boolean
+	 * @param _attakerObjId int
+	 */
 	public final void setCurrentHp(double newHp, boolean canRessurect, int _attakerObjId)
 	{
 		setCurrentHp(newHp, canRessurect, true, _attakerObjId);
 	}
 	
+	/**
+	 * Method setCurrentMp.
+	 * @param newMp double
+	 * @param sendInfo boolean
+	 */
 	public final void setCurrentMp(double newMp, boolean sendInfo)
 	{
 		int maxMp = getMaxMp();
@@ -3681,11 +5019,20 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method setCurrentMp.
+	 * @param newMp double
+	 */
 	public final void setCurrentMp(double newMp)
 	{
 		setCurrentMp(newMp, true);
 	}
 	
+	/**
+	 * Method setCurrentCp.
+	 * @param newCp double
+	 * @param sendInfo boolean
+	 */
 	public final void setCurrentCp(double newCp, boolean sendInfo)
 	{
 		if (!isPlayer())
@@ -3714,11 +5061,21 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method setCurrentCp.
+	 * @param newCp double
+	 */
 	public final void setCurrentCp(double newCp)
 	{
 		setCurrentCp(newCp, true);
 	}
 	
+	/**
+	 * Method setCurrentHpMp.
+	 * @param newHp double
+	 * @param newMp double
+	 * @param canRessurect boolean
+	 */
 	public void setCurrentHpMp(double newHp, double newMp, boolean canRessurect)
 	{
 		int maxHp = getMaxHp();
@@ -3749,42 +5106,75 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method setCurrentHpMp.
+	 * @param newHp double
+	 * @param newMp double
+	 */
 	public void setCurrentHpMp(double newHp, double newMp)
 	{
 		setCurrentHpMp(newHp, newMp, false);
 	}
 	
+	/**
+	 * Method setFlying.
+	 * @param mode boolean
+	 */
 	public final void setFlying(boolean mode)
 	{
 		_flying = mode;
 	}
 	
+	/**
+	 * Method getHeading.
+	 * @return int
+	 */
 	@Override
 	public final int getHeading()
 	{
 		return _heading;
 	}
 	
+	/**
+	 * Method setHeading.
+	 * @param heading int
+	 */
 	public void setHeading(int heading)
 	{
 		_heading = heading;
 	}
 	
+	/**
+	 * Method setIsTeleporting.
+	 * @param value boolean
+	 */
 	public final void setIsTeleporting(boolean value)
 	{
 		isTeleporting.compareAndSet(!value, value);
 	}
 	
+	/**
+	 * Method setName.
+	 * @param name String
+	 */
 	public final void setName(String name)
 	{
 		_name = name;
 	}
 	
+	/**
+	 * Method getCastingTarget.
+	 * @return Creature
+	 */
 	public Creature getCastingTarget()
 	{
 		return castingTarget.get();
 	}
 	
+	/**
+	 * Method setCastingTarget.
+	 * @param target Creature
+	 */
 	public void setCastingTarget(Creature target)
 	{
 		if (target == null)
@@ -3797,6 +5187,9 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method setRunning.
+	 */
 	public final void setRunning()
 	{
 		if (!_running)
@@ -3806,6 +5199,11 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method setSkillMastery.
+	 * @param skill Integer
+	 * @param mastery int
+	 */
 	public void setSkillMastery(Integer skill, int mastery)
 	{
 		if (_skillMastery == null)
@@ -3815,6 +5213,10 @@ public abstract class Creature extends GameObject
 		_skillMastery.put(skill, mastery);
 	}
 	
+	/**
+	 * Method setAggressionTarget.
+	 * @param target Creature
+	 */
 	public void setAggressionTarget(Creature target)
 	{
 		if (target == null)
@@ -3827,11 +5229,19 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method getAggressionTarget.
+	 * @return Creature
+	 */
 	public Creature getAggressionTarget()
 	{
 		return _aggressionTarget.get();
 	}
 	
+	/**
+	 * Method setTarget.
+	 * @param object GameObject
+	 */
 	public void setTarget(GameObject object)
 	{
 		if ((object != null) && !object.isVisible())
@@ -3848,11 +5258,18 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method setTitle.
+	 * @param title String
+	 */
 	public void setTitle(String title)
 	{
 		_title = title;
 	}
 	
+	/**
+	 * Method setWalking.
+	 */
 	public void setWalking()
 	{
 		if (_running)
@@ -3862,6 +5279,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method startAbnormalEffect.
+	 * @param ae AbnormalEffect
+	 */
 	public void startAbnormalEffect(AbnormalEffect ae)
 	{
 		if (ae == AbnormalEffect.NULL)
@@ -3885,11 +5306,17 @@ public abstract class Creature extends GameObject
 		sendChanges();
 	}
 	
+	/**
+	 * Method startAttackStanceTask.
+	 */
 	public void startAttackStanceTask()
 	{
 		startAttackStanceTask0();
 	}
 	
+	/**
+	 * Method startAttackStanceTask0.
+	 */
 	protected void startAttackStanceTask0()
 	{
 		if (isInCombat())
@@ -3907,6 +5334,9 @@ public abstract class Creature extends GameObject
 		_stanceTask = LazyPrecisionTaskManager.getInstance().scheduleAtFixedRate(_stanceTaskRunnable == null ? _stanceTaskRunnable = new AttackStanceTask() : _stanceTaskRunnable, 1000L, 1000L);
 	}
 	
+	/**
+	 * Method stopAttackStanceTask.
+	 */
 	public void stopAttackStanceTask()
 	{
 		_stanceEndTime = 0L;
@@ -3919,13 +5349,22 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class AttackStanceTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for AttackStanceTask.
+		 */
 		public AttackStanceTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -3936,6 +5375,9 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method stopRegeneration.
+	 */
 	protected void stopRegeneration()
 	{
 		regenLock.lock();
@@ -3957,6 +5399,9 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method startRegeneration.
+	 */
 	protected void startRegeneration()
 	{
 		if (!isVisible() || isDead() || (getRegenTick() == 0L))
@@ -3982,18 +5427,32 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method getRegenTick.
+	 * @return long
+	 */
 	public long getRegenTick()
 	{
 		return 3000L;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class RegenTask implements Runnable
 	{
+		/**
+		 * Constructor for RegenTask.
+		 */
 		public RegenTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -4060,6 +5519,10 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method stopAbnormalEffect.
+	 * @param ae AbnormalEffect
+	 */
 	public void stopAbnormalEffect(AbnormalEffect ae)
 	{
 		if (ae.isSpecial())
@@ -4077,241 +5540,431 @@ public abstract class Creature extends GameObject
 		sendChanges();
 	}
 	
+	/**
+	 * Method block.
+	 */
 	public void block()
 	{
 		_blocked = true;
 	}
 	
+	/**
+	 * Method unblock.
+	 */
 	public void unblock()
 	{
 		_blocked = false;
 	}
 	
+	/**
+	 * Method startConfused.
+	 * @return boolean
+	 */
 	public boolean startConfused()
 	{
 		return _confused.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopConfused.
+	 * @return boolean
+	 */
 	public boolean stopConfused()
 	{
 		return _confused.setAndGet(false);
 	}
 	
+	/**
+	 * Method startFear.
+	 * @return boolean
+	 */
 	public boolean startFear()
 	{
 		return _afraid.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopFear.
+	 * @return boolean
+	 */
 	public boolean stopFear()
 	{
 		return _afraid.setAndGet(false);
 	}
 	
+	/**
+	 * Method startMuted.
+	 * @return boolean
+	 */
 	public boolean startMuted()
 	{
 		return _muted.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopMuted.
+	 * @return boolean
+	 */
 	public boolean stopMuted()
 	{
 		return _muted.setAndGet(false);
 	}
 	
+	/**
+	 * Method startPMuted.
+	 * @return boolean
+	 */
 	public boolean startPMuted()
 	{
 		return _pmuted.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopPMuted.
+	 * @return boolean
+	 */
 	public boolean stopPMuted()
 	{
 		return _pmuted.setAndGet(false);
 	}
 	
+	/**
+	 * Method startAMuted.
+	 * @return boolean
+	 */
 	public boolean startAMuted()
 	{
 		return _amuted.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopAMuted.
+	 * @return boolean
+	 */
 	public boolean stopAMuted()
 	{
 		return _amuted.setAndGet(false);
 	}
 	
+	/**
+	 * Method startRooted.
+	 * @return boolean
+	 */
 	public boolean startRooted()
 	{
 		return _rooted.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopRooted.
+	 * @return boolean
+	 */
 	public boolean stopRooted()
 	{
 		return _rooted.setAndGet(false);
 	}
 	
+	/**
+	 * Method startSleeping.
+	 * @return boolean
+	 */
 	public boolean startSleeping()
 	{
 		return _sleeping.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopSleeping.
+	 * @return boolean
+	 */
 	public boolean stopSleeping()
 	{
 		return _sleeping.setAndGet(false);
 	}
 	
+	/**
+	 * Method startStunning.
+	 * @return boolean
+	 */
 	public boolean startStunning()
 	{
 		return _stunned.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopStunning.
+	 * @return boolean
+	 */
 	public boolean stopStunning()
 	{
 		return _stunned.setAndGet(false);
 	}
 	
+	/**
+	 * Method startParalyzed.
+	 * @return boolean
+	 */
 	public boolean startParalyzed()
 	{
 		return _paralyzed.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopParalyzed.
+	 * @return boolean
+	 */
 	public boolean stopParalyzed()
 	{
 		return _paralyzed.setAndGet(false);
 	}
 	
+	/**
+	 * Method startImmobilized.
+	 * @return boolean
+	 */
 	public boolean startImmobilized()
 	{
 		return _immobilized.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopImmobilized.
+	 * @return boolean
+	 */
 	public boolean stopImmobilized()
 	{
 		return _immobilized.setAndGet(false);
 	}
 	
+	/**
+	 * Method startHealBlocked.
+	 * @return boolean
+	 */
 	public boolean startHealBlocked()
 	{
 		return _healBlocked.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopHealBlocked.
+	 * @return boolean
+	 */
 	public boolean stopHealBlocked()
 	{
 		return _healBlocked.setAndGet(false);
 	}
 	
+	/**
+	 * Method startDamageBlocked.
+	 * @return boolean
+	 */
 	public boolean startDamageBlocked()
 	{
 		return _damageBlocked.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopDamageBlocked.
+	 * @return boolean
+	 */
 	public boolean stopDamageBlocked()
 	{
 		return _damageBlocked.setAndGet(false);
 	}
 	
+	/**
+	 * Method startBuffImmunity.
+	 * @return boolean
+	 */
 	public boolean startBuffImmunity()
 	{
 		return _buffImmunity.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopBuffImmunity.
+	 * @return boolean
+	 */
 	public boolean stopBuffImmunity()
 	{
 		return _buffImmunity.setAndGet(false);
 	}
 	
+	/**
+	 * Method startDebuffImmunity.
+	 * @return boolean
+	 */
 	public boolean startDebuffImmunity()
 	{
 		return _debuffImmunity.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopDebuffImmunity.
+	 * @return boolean
+	 */
 	public boolean stopDebuffImmunity()
 	{
 		return _debuffImmunity.setAndGet(false);
 	}
 	
+	/**
+	 * Method startEffectImmunity.
+	 * @return boolean
+	 */
 	public boolean startEffectImmunity()
 	{
 		return _effectImmunity.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopEffectImmunity.
+	 * @return boolean
+	 */
 	public boolean stopEffectImmunity()
 	{
 		return _effectImmunity.setAndGet(false);
 	}
 	
+	/**
+	 * Method startWeaponEquipBlocked.
+	 * @return boolean
+	 */
 	public boolean startWeaponEquipBlocked()
 	{
 		return _weaponEquipBlocked.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopWeaponEquipBlocked.
+	 * @return boolean
+	 */
 	public boolean stopWeaponEquipBlocked()
 	{
 		return _weaponEquipBlocked.getAndSet(false);
 	}
 	
+	/**
+	 * Method startFrozen.
+	 * @return boolean
+	 */
 	public boolean startFrozen()
 	{
 		return _frozen.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopFrozen.
+	 * @return boolean
+	 */
 	public boolean stopFrozen()
 	{
 		return _frozen.setAndGet(false);
 	}
 	
+	/**
+	 * Method setFakeDeath.
+	 * @param value boolean
+	 */
 	public void setFakeDeath(boolean value)
 	{
 		_fakeDeath = value;
 	}
 	
+	/**
+	 * Method breakFakeDeath.
+	 */
 	public void breakFakeDeath()
 	{
 		getEffectList().stopAllSkillEffects(EffectType.FakeDeath);
 	}
 	
+	/**
+	 * Method setMeditated.
+	 * @param value boolean
+	 */
 	public void setMeditated(boolean value)
 	{
 		_meditated = value;
 	}
 	
+	/**
+	 * Method setIsBlessedByNoblesse.
+	 * @param value boolean
+	 */
 	public final void setIsBlessedByNoblesse(boolean value)
 	{
 		_isBlessedByNoblesse = value;
 	}
 	
+	/**
+	 * Method setIsSalvation.
+	 * @param value boolean
+	 */
 	public final void setIsSalvation(boolean value)
 	{
 		_isSalvation = value;
 	}
 	
+	/**
+	 * Method setIsInvul.
+	 * @param value boolean
+	 */
 	public void setIsInvul(boolean value)
 	{
 		_isInvul = value;
 	}
 	
+	/**
+	 * Method setLockedTarget.
+	 * @param value boolean
+	 */
 	public void setLockedTarget(boolean value)
 	{
 		_lockedTarget = value;
 	}
 	
+	/**
+	 * Method isConfused.
+	 * @return boolean
+	 */
 	public boolean isConfused()
 	{
 		return _confused.get();
 	}
 	
+	/**
+	 * Method isFakeDeath.
+	 * @return boolean
+	 */
 	public boolean isFakeDeath()
 	{
 		return _fakeDeath;
 	}
 	
+	/**
+	 * Method isAfraid.
+	 * @return boolean
+	 */
 	public boolean isAfraid()
 	{
 		return _afraid.get();
 	}
 	
+	/**
+	 * Method isBlocked.
+	 * @return boolean
+	 */
 	public boolean isBlocked()
 	{
 		return _blocked;
 	}
 	
+	/**
+	 * Method isMuted.
+	 * @param skill Skill
+	 * @return boolean
+	 */
 	public boolean isMuted(Skill skill)
 	{
 		if ((skill == null) || skill.isNotAffectedByMute())
@@ -4321,126 +5974,229 @@ public abstract class Creature extends GameObject
 		return (isMMuted() && skill.isMagic()) || (isPMuted() && !skill.isMagic());
 	}
 	
+	/**
+	 * Method isPMuted.
+	 * @return boolean
+	 */
 	public boolean isPMuted()
 	{
 		return _pmuted.get();
 	}
 	
+	/**
+	 * Method isMMuted.
+	 * @return boolean
+	 */
 	public boolean isMMuted()
 	{
 		return _muted.get();
 	}
 	
+	/**
+	 * Method isAMuted.
+	 * @return boolean
+	 */
 	public boolean isAMuted()
 	{
 		return _amuted.get();
 	}
 	
+	/**
+	 * Method isRooted.
+	 * @return boolean
+	 */
 	public boolean isRooted()
 	{
 		return _rooted.get();
 	}
 	
+	/**
+	 * Method isSleeping.
+	 * @return boolean
+	 */
 	public boolean isSleeping()
 	{
 		return _sleeping.get();
 	}
 	
+	/**
+	 * Method isStunned.
+	 * @return boolean
+	 */
 	public boolean isStunned()
 	{
 		return _stunned.get();
 	}
 	
+	/**
+	 * Method isMeditated.
+	 * @return boolean
+	 */
 	public boolean isMeditated()
 	{
 		return _meditated;
 	}
 	
+	/**
+	 * Method isWeaponEquipBlocked.
+	 * @return boolean
+	 */
 	public boolean isWeaponEquipBlocked()
 	{
 		return _weaponEquipBlocked.get();
 	}
 	
+	/**
+	 * Method isParalyzed.
+	 * @return boolean
+	 */
 	public boolean isParalyzed()
 	{
 		return _paralyzed.get();
 	}
 	
+	/**
+	 * Method isFrozen.
+	 * @return boolean
+	 */
 	public boolean isFrozen()
 	{
 		return _frozen.get();
 	}
 	
+	/**
+	 * Method isImmobilized.
+	 * @return boolean
+	 */
 	public boolean isImmobilized()
 	{
 		return _immobilized.get() || (getRunSpeed() < 1);
 	}
 	
+	/**
+	 * Method isHealBlocked.
+	 * @return boolean
+	 */
 	public boolean isHealBlocked()
 	{
 		return isAlikeDead() || _healBlocked.get();
 	}
 	
+	/**
+	 * Method isDamageBlocked.
+	 * @return boolean
+	 */
 	public boolean isDamageBlocked()
 	{
 		return isInvul() || _damageBlocked.get();
 	}
 	
+	/**
+	 * Method isCastingNow.
+	 * @return boolean
+	 */
 	public boolean isCastingNow()
 	{
 		return _skillTask != null;
 	}
 	
+	/**
+	 * Method isDoubleCastingNow.
+	 * @return boolean
+	 */
 	public boolean isDoubleCastingNow()
 	{
 		return _skillDoubleTask != null;
 	}
 	
+	/**
+	 * Method isLockedTarget.
+	 * @return boolean
+	 */
 	public boolean isLockedTarget()
 	{
 		return _lockedTarget;
 	}
 	
+	/**
+	 * Method isMovementDisabled.
+	 * @return boolean
+	 */
 	public boolean isMovementDisabled()
 	{
 		return isBlocked() || isRooted() || isImmobilized() || isAlikeDead() || isStunned() || isSleeping() || isParalyzed() || isAttackingNow() || isCastingNow() || isFrozen();
 	}
 	
+	/**
+	 * Method isActionsDisabled.
+	 * @return boolean
+	 */
 	public boolean isActionsDisabled()
 	{
 		return isBlocked() || isAlikeDead() || isStunned() || isSleeping() || isParalyzed() || isAttackingNow() || isCastingNow() || isFrozen();
 	}
 	
+	/**
+	 * Method isAttackingDisabled.
+	 * @return boolean
+	 */
 	public final boolean isAttackingDisabled()
 	{
 		return _attackReuseEndTime > System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method isOutOfControl.
+	 * @return boolean
+	 */
 	public boolean isOutOfControl()
 	{
 		return isBlocked() || isConfused() || isAfraid();
 	}
 	
+	/**
+	 * Method teleToLocation.
+	 * @param loc Location
+	 */
 	public void teleToLocation(Location loc)
 	{
 		teleToLocation(loc.x, loc.y, loc.z, getReflection());
 	}
 	
+	/**
+	 * Method teleToLocation.
+	 * @param loc Location
+	 * @param refId int
+	 */
 	public void teleToLocation(Location loc, int refId)
 	{
 		teleToLocation(loc.x, loc.y, loc.z, refId);
 	}
 	
+	/**
+	 * Method teleToLocation.
+	 * @param loc Location
+	 * @param r Reflection
+	 */
 	public void teleToLocation(Location loc, Reflection r)
 	{
 		teleToLocation(loc.x, loc.y, loc.z, r);
 	}
 	
+	/**
+	 * Method teleToLocation.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 */
 	public void teleToLocation(int x, int y, int z)
 	{
 		teleToLocation(x, y, z, getReflection());
 	}
 	
+	/**
+	 * Method checkAndRemoveInvisible.
+	 */
 	public void checkAndRemoveInvisible()
 	{
 		InvisibleType invisibleType = getInvisibleType();
@@ -4450,6 +6206,13 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method teleToLocation.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param refId int
+	 */
 	public void teleToLocation(int x, int y, int z, int refId)
 	{
 		Reflection r = ReflectionManager.getInstance().get(refId);
@@ -4460,6 +6223,13 @@ public abstract class Creature extends GameObject
 		teleToLocation(x, y, z, r);
 	}
 	
+	/**
+	 * Method teleToLocation.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param r Reflection
+	 */
 	public void teleToLocation(int x, int y, int z, Reflection r)
 	{
 		if (!isTeleporting.compareAndSet(false, true))
@@ -4500,21 +6270,37 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method onTeleported.
+	 * @return boolean
+	 */
 	public boolean onTeleported()
 	{
 		return isTeleporting.compareAndSet(true, false);
 	}
 	
+	/**
+	 * Method sendMessage.
+	 * @param message CustomMessage
+	 */
 	public void sendMessage(CustomMessage message)
 	{
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		return getClass().getSimpleName() + "[" + getObjectId() + "]";
 	}
 	
+	/**
+	 * Method getEffectList.
+	 * @return EffectList
+	 */
 	public EffectList getEffectList()
 	{
 		if (_effectList == null)
@@ -4530,6 +6316,11 @@ public abstract class Creature extends GameObject
 		return _effectList;
 	}
 	
+	/**
+	 * Method paralizeOnAttack.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	public boolean paralizeOnAttack(Creature attacker)
 	{
 		int max_attacker_level = 0xFFFF;
@@ -4553,6 +6344,9 @@ public abstract class Creature extends GameObject
 		return false;
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
@@ -4561,155 +6355,293 @@ public abstract class Creature extends GameObject
 		super.onDelete();
 	}
 	
+	/**
+	 * Method addExpAndSp.
+	 * @param exp long
+	 * @param sp long
+	 */
 	public void addExpAndSp(long exp, long sp)
 	{
 	}
 	
+	/**
+	 * Method broadcastCharInfo.
+	 */
 	public void broadcastCharInfo()
 	{
 	}
 	
+	/**
+	 * Method checkHpMessages.
+	 * @param currentHp double
+	 * @param newHp double
+	 */
 	public void checkHpMessages(double currentHp, double newHp)
 	{
 	}
 	
+	/**
+	 * Method checkPvP.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return boolean
+	 */
 	public boolean checkPvP(Creature target, Skill skill)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method consumeItem.
+	 * @param itemConsumeId int
+	 * @param itemCount long
+	 * @return boolean
+	 */
 	public boolean consumeItem(int itemConsumeId, long itemCount)
 	{
 		return true;
 	}
 	
+	/**
+	 * Method consumeItemMp.
+	 * @param itemId int
+	 * @param mp int
+	 * @return boolean
+	 */
 	public boolean consumeItemMp(int itemId, int mp)
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isFearImmune.
+	 * @return boolean
+	 */
 	public boolean isFearImmune()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isLethalImmune.
+	 * @return boolean
+	 */
 	public boolean isLethalImmune()
 	{
 		return getMaxHp() >= 50000;
 	}
 	
+	/**
+	 * Method getChargedSoulShot.
+	 * @return boolean
+	 */
 	public boolean getChargedSoulShot()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getChargedSpiritShot.
+	 * @return int
+	 */
 	public int getChargedSpiritShot()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getIncreasedForce.
+	 * @return int
+	 */
 	public int getIncreasedForce()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getConsumedSouls.
+	 * @return int
+	 */
 	public int getConsumedSouls()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getAgathionEnergy.
+	 * @return int
+	 */
 	public int getAgathionEnergy()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method setAgathionEnergy.
+	 * @param val int
+	 */
 	public void setAgathionEnergy(int val)
 	{
 	}
 	
+	/**
+	 * Method getKarma.
+	 * @return int
+	 */
 	public int getKarma()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getLevelMod.
+	 * @return double
+	 */
 	public double getLevelMod()
 	{
 		return 1;
 	}
 	
+	/**
+	 * Method getNpcId.
+	 * @return int
+	 */
 	public int getNpcId()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getPvpFlag.
+	 * @return int
+	 */
 	public int getPvpFlag()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method setTeam.
+	 * @param t TeamType
+	 */
 	public void setTeam(TeamType t)
 	{
 		_team = t;
 		sendChanges();
 	}
 	
+	/**
+	 * Method getTeam.
+	 * @return TeamType
+	 */
 	public TeamType getTeam()
 	{
 		return _team;
 	}
 	
+	/**
+	 * Method isUndead.
+	 * @return boolean
+	 */
 	public boolean isUndead()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isParalyzeImmune.
+	 * @return boolean
+	 */
 	public boolean isParalyzeImmune()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method reduceArrowCount.
+	 */
 	public void reduceArrowCount()
 	{
 	}
 	
+	/**
+	 * Method sendChanges.
+	 */
 	public void sendChanges()
 	{
 		getStatsRecorder().sendChanges();
 	}
 	
+	/**
+	 * Method sendMessage.
+	 * @param message String
+	 */
 	public void sendMessage(String message)
 	{
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param mov IStaticPacket
+	 */
 	public void sendPacket(IStaticPacket mov)
 	{
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param mov IStaticPacket[]
+	 */
 	public void sendPacket(IStaticPacket... mov)
 	{
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param mov List<? extends IStaticPacket>
+	 */
 	public void sendPacket(List<? extends IStaticPacket> mov)
 	{
 	}
 	
+	/**
+	 * Method setIncreasedForce.
+	 * @param i int
+	 */
 	public void setIncreasedForce(int i)
 	{
 	}
 	
+	/**
+	 * Method setConsumedSouls.
+	 * @param i int
+	 * @param monster NpcInstance
+	 */
 	public void setConsumedSouls(int i, NpcInstance monster)
 	{
 	}
 	
+	/**
+	 * Method startPvPFlag.
+	 * @param target Creature
+	 */
 	public void startPvPFlag(Creature target)
 	{
 	}
 	
+	/**
+	 * Method unChargeShots.
+	 * @param spirit boolean
+	 * @return boolean
+	 */
 	public boolean unChargeShots(boolean spirit)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method updateEffectIcons.
+	 */
 	public void updateEffectIcons()
 	{
 		Effect[] effects = getEffectList().getAllFirstEffects();
@@ -4725,6 +6657,9 @@ public abstract class Creature extends GameObject
 		broadcastToStatusListeners(packet);
 	}
 	
+	/**
+	 * Method refreshHpMpCp.
+	 */
 	protected void refreshHpMpCp()
 	{
 		final int maxHp = getMaxHp();
@@ -4748,92 +6683,169 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method updateStats.
+	 */
 	public void updateStats()
 	{
 		refreshHpMpCp();
 		sendChanges();
 	}
 	
+	/**
+	 * Method setOverhitAttacker.
+	 * @param attacker Creature
+	 */
 	public void setOverhitAttacker(Creature attacker)
 	{
 	}
 	
+	/**
+	 * Method setOverhitDamage.
+	 * @param damage double
+	 */
 	public void setOverhitDamage(double damage)
 	{
 	}
 	
+	/**
+	 * Method isCursedWeaponEquipped.
+	 * @return boolean
+	 */
 	public boolean isCursedWeaponEquipped()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isHero.
+	 * @return boolean
+	 */
 	public boolean isHero()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getAccessLevel.
+	 * @return int
+	 */
 	public int getAccessLevel()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getClan.
+	 * @return Clan
+	 */
 	public Clan getClan()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getRateAdena.
+	 * @return double
+	 */
 	public double getRateAdena()
 	{
 		return 1.;
 	}
 	
+	/**
+	 * Method getRateItems.
+	 * @return double
+	 */
 	public double getRateItems()
 	{
 		return 1.;
 	}
 	
+	/**
+	 * Method getRateExp.
+	 * @return double
+	 */
 	public double getRateExp()
 	{
 		return 1.;
 	}
 	
+	/**
+	 * Method getRateSp.
+	 * @return double
+	 */
 	public double getRateSp()
 	{
 		return 1.;
 	}
 	
+	/**
+	 * Method getRateSpoil.
+	 * @return double
+	 */
 	public double getRateSpoil()
 	{
 		return 1.;
 	}
 	
+	/**
+	 * Method getFormId.
+	 * @return int
+	 */
 	public int getFormId()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method isNameAbove.
+	 * @return boolean
+	 */
 	public boolean isNameAbove()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method setLoc.
+	 * @param loc Location
+	 */
 	@Override
 	public void setLoc(Location loc)
 	{
 		setXYZ(loc.x, loc.y, loc.z);
 	}
 	
+	/**
+	 * Method setLoc.
+	 * @param loc Location
+	 * @param MoveTask boolean
+	 */
 	public void setLoc(Location loc, boolean MoveTask)
 	{
 		setXYZ(loc.x, loc.y, loc.z, MoveTask);
 	}
 	
+	/**
+	 * Method setXYZ.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 */
 	@Override
 	public void setXYZ(int x, int y, int z)
 	{
 		setXYZ(x, y, z, false);
 	}
 	
+	/**
+	 * Method setXYZ.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param MoveTask boolean
+	 */
 	public void setXYZ(int x, int y, int z, boolean MoveTask)
 	{
 		if (!MoveTask)
@@ -4852,6 +6864,9 @@ public abstract class Creature extends GameObject
 		updateZones();
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -4860,6 +6875,10 @@ public abstract class Creature extends GameObject
 		updateZones();
 	}
 	
+	/**
+	 * Method spawnMe.
+	 * @param loc Location
+	 */
 	@Override
 	public void spawnMe(Location loc)
 	{
@@ -4870,6 +6889,9 @@ public abstract class Creature extends GameObject
 		super.spawnMe(loc);
 	}
 	
+	/**
+	 * Method onDespawn.
+	 */
 	@Override
 	protected void onDespawn()
 	{
@@ -4885,6 +6907,9 @@ public abstract class Creature extends GameObject
 		super.onDespawn();
 	}
 	
+	/**
+	 * Method doDecay.
+	 */
 	public final void doDecay()
 	{
 		if (!isDead())
@@ -4894,11 +6919,18 @@ public abstract class Creature extends GameObject
 		onDecay();
 	}
 	
+	/**
+	 * Method onDecay.
+	 */
 	protected void onDecay()
 	{
 		decayMe();
 	}
 	
+	/**
+	 * Method validateLocation.
+	 * @param broadcast int
+	 */
 	public void validateLocation(int broadcast)
 	{
 		L2GameServerPacket sp = new ValidateLocation(this);
@@ -4916,8 +6948,15 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Field _unActiveSkills.
+	 */
 	private final TIntHashSet _unActiveSkills = new TIntHashSet();
 	
+	/**
+	 * Method addUnActiveSkill.
+	 * @param skill Skill
+	 */
 	public void addUnActiveSkill(Skill skill)
 	{
 		if ((skill == null) || isUnActiveSkill(skill.getId()))
@@ -4929,6 +6968,10 @@ public abstract class Creature extends GameObject
 		_unActiveSkills.add(skill.getId());
 	}
 	
+	/**
+	 * Method removeUnActiveSkill.
+	 * @param skill Skill
+	 */
 	public void removeUnActiveSkill(Skill skill)
 	{
 		if ((skill == null) || !isUnActiveSkill(skill.getId()))
@@ -4940,21 +6983,50 @@ public abstract class Creature extends GameObject
 		_unActiveSkills.remove(skill.getId());
 	}
 	
+	/**
+	 * Method isUnActiveSkill.
+	 * @param id int
+	 * @return boolean
+	 */
 	public boolean isUnActiveSkill(int id)
 	{
 		return _unActiveSkills.contains(id);
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public abstract int getLevel();
 	
+	/**
+	 * Method getActiveWeaponInstance.
+	 * @return ItemInstance
+	 */
 	public abstract ItemInstance getActiveWeaponInstance();
 	
+	/**
+	 * Method getActiveWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	public abstract WeaponTemplate getActiveWeaponItem();
 	
+	/**
+	 * Method getSecondaryWeaponInstance.
+	 * @return ItemInstance
+	 */
 	public abstract ItemInstance getSecondaryWeaponInstance();
 	
+	/**
+	 * Method getSecondaryWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	public abstract WeaponTemplate getSecondaryWeaponItem();
 	
+	/**
+	 * Method getListeners.
+	 * @return CharListenerList
+	 */
 	public CharListenerList getListeners()
 	{
 		if (listeners == null)
@@ -4970,16 +7042,30 @@ public abstract class Creature extends GameObject
 		return listeners;
 	}
 	
+	/**
+	 * Method addListener.
+	 * @param listener T
+	 * @return boolean
+	 */
 	public <T extends Listener<Creature>> boolean addListener(T listener)
 	{
 		return getListeners().add(listener);
 	}
 	
+	/**
+	 * Method removeListener.
+	 * @param listener T
+	 * @return boolean
+	 */
 	public <T extends Listener<Creature>> boolean removeListener(T listener)
 	{
 		return getListeners().remove(listener);
 	}
 	
+	/**
+	 * Method getStatsRecorder.
+	 * @return CharStatsChangeRecorder<? extends Creature>
+	 */
 	public CharStatsChangeRecorder<? extends Creature> getStatsRecorder()
 	{
 		if (_statsRecorder == null)
@@ -4995,12 +7081,25 @@ public abstract class Creature extends GameObject
 		return _statsRecorder;
 	}
 	
+	/**
+	 * Method isCreature.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isCreature()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method displayGiveDamageMessage.
+	 * @param target Creature
+	 * @param damage int
+	 * @param crit boolean
+	 * @param miss boolean
+	 * @param shld boolean
+	 * @param magic boolean
+	 */
 	public void displayGiveDamageMessage(Creature target, int damage, boolean crit, boolean miss, boolean shld, boolean magic)
 	{
 		if (miss && target.isPlayer() && !target.isDamageBlocked())
@@ -5009,122 +7108,217 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
+	/**
+	 * Method displayReceiveDamageMessage.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	public void displayReceiveDamageMessage(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method getSkillReuses.
+	 * @return Collection<TimeStamp>
+	 */
 	public Collection<TimeStamp> getSkillReuses()
 	{
 		return _skillReuses.values();
 	}
 	
+	/**
+	 * Method getSkillReuse.
+	 * @param skill Skill
+	 * @return TimeStamp
+	 */
 	public TimeStamp getSkillReuse(Skill skill)
 	{
 		return _skillReuses.get(skill.hashCode());
 	}
 	
+	/**
+	 * Method isInFlyingTransform.
+	 * @return boolean
+	 */
 	public boolean isInFlyingTransform()
 	{
 		return (_transformationId == 8) || (_transformationId == 9) || (_transformationId == 260);
 	}
 	
+	/**
+	 * Method isInMountTransform.
+	 * @return boolean
+	 */
 	public boolean isInMountTransform()
 	{
 		return (_transformationId == 106) || (_transformationId == 109) || (_transformationId == 110) || (_transformationId == 20001);
 	}
 	
+	/**
+	 * Method setTransformation.
+	 * @param id int
+	 */
 	public void setTransformation(int id)
 	{
 		_transformationId = id;
 	}
 	
+	/**
+	 * Method getTransformation.
+	 * @return int
+	 */
 	public int getTransformation()
 	{
 		return _transformationId;
 	}
 	
+	/**
+	 * Method getTransformationName.
+	 * @return String
+	 */
 	public String getTransformationName()
 	{
 		return _transformationName;
 	}
 	
+	/**
+	 * Method setTransformationName.
+	 * @param name String
+	 */
 	public void setTransformationName(String name)
 	{
 		_transformationName = name;
 	}
 	
+	/**
+	 * Method setTransformationTemplate.
+	 * @param template int
+	 */
 	public void setTransformationTemplate(int template)
 	{
 		_transformationTemplate = template;
 	}
 	
+	/**
+	 * Method getTransformationTemplate.
+	 * @return int
+	 */
 	public int getTransformationTemplate()
 	{
 		return _transformationTemplate;
 	}
 	
+	/**
+	 * Method getHpRegen.
+	 * @return double
+	 */
 	public double getHpRegen()
 	{
 		return calcStat(Stats.REGENERATE_HP_RATE, getTemplate().getBaseHpReg());
 	}
 	
+	/**
+	 * Method getMpRegen.
+	 * @return double
+	 */
 	public double getMpRegen()
 	{
 		return calcStat(Stats.REGENERATE_MP_RATE, getTemplate().getBaseMpReg());
 	}
 	
+	/**
+	 * Method getCpRegen.
+	 * @return double
+	 */
 	public double getCpRegen()
 	{
 		return 0.0D;
 	}
 	
+	/**
+	 * Method getColRadius.
+	 * @return double
+	 */
 	@Override
 	public double getColRadius()
 	{
 		return getTemplate().getCollisionRadius();
 	}
 	
+	/**
+	 * Method getColHeight.
+	 * @return double
+	 */
 	@Override
 	public double getColHeight()
 	{
 		return getTemplate().getCollisionHeight();
 	}
 	
+	/**
+	 * Method addDeathImmunity.
+	 */
 	public void addDeathImmunity()
 	{
 		_deathImmune = true;
 	}
 	
+	/**
+	 * Method removeDeathImmunity.
+	 */
 	public void removeDeathImmunity()
 	{
 		_deathImmune = false;
 	}
 	
+	/**
+	 * Method isDeathImmune.
+	 * @return boolean
+	 */
 	public boolean isDeathImmune()
 	{
 		return _deathImmune;
 	}
 	
+	/**
+	 * Method setWalkerRouteTemplate.
+	 * @param template WalkerRouteTemplate
+	 */
 	public void setWalkerRouteTemplate(WalkerRouteTemplate template)
 	{
 		_walkerRoutesTemplate = template;
 	}
 	
+	/**
+	 * Method getWalkerRouteTemplate.
+	 * @return WalkerRouteTemplate
+	 */
 	public WalkerRouteTemplate getWalkerRouteTemplate()
 	{
 		return _walkerRoutesTemplate;
 	}
 	
+	/**
+	 * Method setIsEnabledDoubleCast.
+	 * @param doubleCast boolean
+	 */
 	public void setIsEnabledDoubleCast(boolean doubleCast)
 	{
 		_isEnabledDoubleCast = doubleCast;
 	}
 	
+	/**
+	 * Method IsEnabledDoubleCast.
+	 * @return boolean
+	 */
 	public boolean IsEnabledDoubleCast()
 	{
 		return _isEnabledDoubleCast;
 	}
 	
+	/**
+	 * Method startKnockDown.
+	 */
 	public final void startKnockDown()
 	{
 		AbnormalStatusUpdate mi = new AbnormalStatusUpdate();
@@ -5139,6 +7333,10 @@ public abstract class Creature extends GameObject
 		sendPacket(mi);
 	}
 	
+	/**
+	 * Method stopKnockDown.
+	 * @param removeEffects boolean
+	 */
 	public final void stopKnockDown(boolean removeEffects)
 	{
 		AbnormalStatusUpdate mi = new AbnormalStatusUpdate();
@@ -5153,11 +7351,19 @@ public abstract class Creature extends GameObject
 		sendPacket(mi);
 	}
 	
+	/**
+	 * Method getDefaultMaxHp.
+	 * @return double
+	 */
 	public double getDefaultMaxHp()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getDefaultMaxMp.
+	 * @return double
+	 */
 	public double getDefaultMaxMp()
 	{
 		return 0;

@@ -15,27 +15,82 @@ package lineage2.gameserver.model.instances;
 import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class L2StatueInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _face. Field _hairColor. Field _hairStyle. Field _sex. Field _socialFrame. Field _socialId. Field _recordId.
+	 */
 	private final int _recordId, _socialId, _socialFrame, _sex, _hairStyle, _hairColor, _face;
+	/**
+	 * Field _necklace.
+	 */
 	private int _necklace = 0;
+	/**
+	 * Field _head.
+	 */
 	private int _head = 0;
+	/**
+	 * Field _classId.
+	 */
 	private int _classId = 0;
+	/**
+	 * Field _rHand.
+	 */
 	private int _rHand = 0;
+	/**
+	 * Field _lHand.
+	 */
 	private int _lHand = 0;
+	/**
+	 * Field _gloves.
+	 */
 	private int _gloves = 0;
+	/**
+	 * Field _chest.
+	 */
 	private int _chest = 0;
+	/**
+	 * Field _pants.
+	 */
 	private int _pants = 0;
+	/**
+	 * Field _boots.
+	 */
 	private int _boots = 0;
+	/**
+	 * Field _cloak.
+	 */
 	private int _cloak = 0;
+	/**
+	 * Field _hair1.
+	 */
 	private int _hair1 = 0;
+	/**
+	 * Field _hair2.
+	 */
 	private int _hair2 = 0;
+	/**
+	 * Field _race.
+	 */
 	private int _race = 0;
 	
+	/**
+	 * Constructor for L2StatueInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param playerObjId int
+	 * @param loc int[]
+	 * @param items int[]
+	 * @param appearance int[]
+	 */
 	public L2StatueInstance(int objectId, NpcTemplate template, int playerObjId, int loc[], int items[], int appearance[])
 	{
 		super(objectId, template);
@@ -68,101 +123,181 @@ public class L2StatueInstance extends NpcInstance
 		spawnMe();
 	}
 	
+	/**
+	 * Method getRecordId.
+	 * @return int
+	 */
 	public int getRecordId()
 	{
 		return _recordId;
 	}
 	
+	/**
+	 * Method getSocialId.
+	 * @return int
+	 */
 	public int getSocialId()
 	{
 		return _socialId;
 	}
 	
+	/**
+	 * Method getSocialFrame.
+	 * @return int
+	 */
 	public int getSocialFrame()
 	{
 		return _socialFrame;
 	}
 	
+	/**
+	 * Method getClassId.
+	 * @return int
+	 */
 	public int getClassId()
 	{
 		return _classId;
 	}
 	
+	/**
+	 * Method getRace.
+	 * @return int
+	 */
 	public int getRace()
 	{
 		return _race;
 	}
 	
+	/**
+	 * Method getSex.
+	 * @return int
+	 */
 	public int getSex()
 	{
 		return _sex;
 	}
 	
+	/**
+	 * Method getHairStyle.
+	 * @return int
+	 */
 	public int getHairStyle()
 	{
 		return _hairStyle;
 	}
 	
+	/**
+	 * Method getHairColor.
+	 * @return int
+	 */
 	public int getHairColor()
 	{
 		return _hairColor;
 	}
 	
+	/**
+	 * Method getFace.
+	 * @return int
+	 */
 	public int getFace()
 	{
 		return _face;
 	}
 	
+	/**
+	 * Method getNecklace.
+	 * @return int
+	 */
 	public int getNecklace()
 	{
 		return _necklace;
 	}
 	
+	/**
+	 * Method getHead.
+	 * @return int
+	 */
 	public int getHead()
 	{
 		return _head;
 	}
 	
+	/**
+	 * Method getRHand.
+	 * @return int
+	 */
 	public int getRHand()
 	{
 		return _rHand;
 	}
 	
+	/**
+	 * Method getLHand.
+	 * @return int
+	 */
 	public int getLHand()
 	{
 		return _lHand;
 	}
 	
+	/**
+	 * Method getGloves.
+	 * @return int
+	 */
 	public int getGloves()
 	{
 		return _gloves;
 	}
 	
+	/**
+	 * Method getChest.
+	 * @return int
+	 */
 	public int getChest()
 	{
 		return _chest;
 	}
 	
+	/**
+	 * Method getPants.
+	 * @return int
+	 */
 	public int getPants()
 	{
 		return _pants;
 	}
 	
+	/**
+	 * Method getBoots.
+	 * @return int
+	 */
 	public int getBoots()
 	{
 		return _boots;
 	}
 	
+	/**
+	 * Method getCloak.
+	 * @return int
+	 */
 	public int getCloak()
 	{
 		return _cloak;
 	}
 	
+	/**
+	 * Method getHair1.
+	 * @return int
+	 */
 	public int getHair1()
 	{
 		return _hair1;
 	}
 	
+	/**
+	 * Method getHair2.
+	 * @return int
+	 */
 	public int getHair2()
 	{
 		return _hair2;

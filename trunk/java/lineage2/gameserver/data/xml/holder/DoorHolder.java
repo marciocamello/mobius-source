@@ -18,37 +18,71 @@ import lineage2.gameserver.templates.DoorTemplate;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class DoorHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final DoorHolder _instance = new DoorHolder();
+	/**
+	 * Field _doors.
+	 */
 	private final IntObjectMap<DoorTemplate> _doors = new HashIntObjectMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return DoorHolder
+	 */
 	public static DoorHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addTemplate.
+	 * @param door DoorTemplate
+	 */
 	public void addTemplate(DoorTemplate door)
 	{
 		_doors.put(door.getNpcId(), door);
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @param doorId int
+	 * @return DoorTemplate
+	 */
 	public DoorTemplate getTemplate(int doorId)
 	{
 		return _doors.get(doorId);
 	}
 	
+	/**
+	 * Method getDoors.
+	 * @return IntObjectMap<DoorTemplate>
+	 */
 	public IntObjectMap<DoorTemplate> getDoors()
 	{
 		return _doors;
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _doors.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

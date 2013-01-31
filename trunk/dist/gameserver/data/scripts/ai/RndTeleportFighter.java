@@ -23,15 +23,30 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.templates.spawn.SpawnRange;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RndTeleportFighter extends Fighter
 {
+	/**
+	 * Field _lastTeleport.
+	 */
 	private long _lastTeleport;
 	
+	/**
+	 * Constructor for RndTeleportFighter.
+	 * @param actor NpcInstance
+	 */
 	public RndTeleportFighter(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method maybeMoveToHome.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean maybeMoveToHome()
 	{

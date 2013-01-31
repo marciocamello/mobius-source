@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExResponseShowContents extends L2GameServerPacket
 {
+	/**
+	 * Field _contents.
+	 */
 	private final String _contents;
 	
+	/**
+	 * Constructor for ExResponseShowContents.
+	 * @param contents String
+	 */
 	public ExResponseShowContents(String contents)
 	{
 		_contents = contents;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

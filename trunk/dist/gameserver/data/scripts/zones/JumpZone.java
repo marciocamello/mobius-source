@@ -22,11 +22,25 @@ import lineage2.gameserver.network.serverpackets.ExNotifyFlyMoveStart;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class JumpZone implements ScriptFile
 {
+	/**
+	 * Field zoneTask.
+	 */
 	private static ScheduledFuture<?> zoneTask;
+	/**
+	 * Field jumpZones.
+	 */
 	static List<Zone> jumpZones;
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -34,6 +48,10 @@ public class JumpZone implements ScriptFile
 		zoneTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new ZoneTask(), 1000L, 1000L);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -41,18 +59,32 @@ public class JumpZone implements ScriptFile
 		jumpZones.clear();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ZoneTask implements Runnable
 	{
+		/**
+		 * Constructor for ZoneTask.
+		 */
 		public ZoneTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{

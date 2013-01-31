@@ -29,13 +29,33 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EnchantHPBonusTable
 {
+	/**
+	 * Field _log.
+	 */
 	private static Logger _log = LoggerFactory.getLogger(EnchantHPBonusTable.class);
+	/**
+	 * Field _armorHPBonus.
+	 */
 	private final TIntObjectHashMap<Integer[]> _armorHPBonus = new TIntObjectHashMap<>();
+	/**
+	 * Field _onepieceFactor.
+	 */
 	private int _onepieceFactor = 100;
+	/**
+	 * Field _instance.
+	 */
 	private static EnchantHPBonusTable _instance = new EnchantHPBonusTable();
 	
+	/**
+	 * Method getInstance.
+	 * @return EnchantHPBonusTable
+	 */
 	public static EnchantHPBonusTable getInstance()
 	{
 		if (_instance == null)
@@ -45,11 +65,17 @@ public class EnchantHPBonusTable
 		return _instance;
 	}
 	
+	/**
+	 * Method reload.
+	 */
 	public void reload()
 	{
 		_instance = new EnchantHPBonusTable();
 	}
 	
+	/**
+	 * Constructor for EnchantHPBonusTable.
+	 */
 	private EnchantHPBonusTable()
 	{
 		try
@@ -120,6 +146,11 @@ public class EnchantHPBonusTable
 		}
 	}
 	
+	/**
+	 * Method getHPBonus.
+	 * @param item ItemInstance
+	 * @return int
+	 */
 	public final int getHPBonus(ItemInstance item)
 	{
 		final Integer[] values;

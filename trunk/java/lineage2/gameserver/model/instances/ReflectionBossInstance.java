@@ -15,19 +15,35 @@ package lineage2.gameserver.model.instances;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ReflectionBossInstance extends RaidBossInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field COLLAPSE_AFTER_DEATH_TIME. (value is 5)
+	 */
 	private final static int COLLAPSE_AFTER_DEATH_TIME = 5;
 	
+	/**
+	 * Constructor for ReflectionBossInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ReflectionBossInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -36,6 +52,9 @@ public class ReflectionBossInstance extends RaidBossInstance
 		clearReflection();
 	}
 	
+	/**
+	 * Method clearReflection.
+	 */
 	protected void clearReflection()
 	{
 		getReflection().clearReflection(COLLAPSE_AFTER_DEATH_TIME, true);

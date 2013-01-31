@@ -18,10 +18,23 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BlacksmithMammon extends DefaultAI
 {
+	/**
+	 * Field _chatVar.
+	 */
 	private long _chatVar = 0;
+	/**
+	 * Field chatDelay.
+	 */
 	private static final long chatDelay = 30 * 60 * 1000L;
+	/**
+	 * Field mamonText.
+	 */
 	private static final NpcString[] mamonText =
 	{
 		NpcString.RULERS_OF_THE_SEAL_I_BRING_YOU_WONDROUS_GIFTS,
@@ -29,11 +42,19 @@ public class BlacksmithMammon extends DefaultAI
 		NpcString.IVE_BEEN_SO_BUSY_LATELY_IN_ADDITION_TO_PLANNING_MY_TRIP
 	};
 	
+	/**
+	 * Constructor for BlacksmithMammon.
+	 * @param actor NpcInstance
+	 */
 	public BlacksmithMammon(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -50,6 +71,10 @@ public class BlacksmithMammon extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{

@@ -17,19 +17,37 @@ import lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Debug implements IVoicedCommandHandler
 {
+	/**
+	 * Field _commandList.
+	 */
 	private final String[] _commandList = new String[]
 	{
 		"debug"
 	};
 	
+	/**
+	 * Method getVoicedCommandList.
+	 * @return String[] * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
+	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{
 		return _commandList;
 	}
 	
+	/**
+	 * Method useVoicedCommand.
+	 * @param command String
+	 * @param player Player
+	 * @param args String
+	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player player, String args)
 	{

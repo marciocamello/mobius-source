@@ -15,12 +15,31 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExBaseAttributeCancelResult extends L2GameServerPacket
 {
+	/**
+	 * Field _result.
+	 */
 	private final boolean _result;
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _element.
+	 */
 	private final Element _element;
 	
+	/**
+	 * Constructor for ExBaseAttributeCancelResult.
+	 * @param result boolean
+	 * @param item ItemInstance
+	 * @param element Element
+	 */
 	public ExBaseAttributeCancelResult(boolean result, ItemInstance item, Element element)
 	{
 		_result = result;
@@ -28,6 +47,9 @@ public class ExBaseAttributeCancelResult extends L2GameServerPacket
 		_element = element;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

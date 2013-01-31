@@ -25,17 +25,34 @@ import lineage2.gameserver.handler.usercommands.impl.OlympiadStat;
 import lineage2.gameserver.handler.usercommands.impl.PartyInfo;
 import lineage2.gameserver.handler.usercommands.impl.Time;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class UserCommandHandler extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final UserCommandHandler _instance = new UserCommandHandler();
 	
+	/**
+	 * Method getInstance.
+	 * @return UserCommandHandler
+	 */
 	public static UserCommandHandler getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _datatable.
+	 */
 	private final TIntObjectHashMap<IUserCommandHandler> _datatable = new TIntObjectHashMap<>();
 	
+	/**
+	 * Constructor for UserCommandHandler.
+	 */
 	private UserCommandHandler()
 	{
 		registerUserCommandHandler(new ClanWarsList());
@@ -50,6 +67,10 @@ public class UserCommandHandler extends AbstractHolder
 		registerUserCommandHandler(new Time());
 	}
 	
+	/**
+	 * Method registerUserCommandHandler.
+	 * @param handler IUserCommandHandler
+	 */
 	public void registerUserCommandHandler(IUserCommandHandler handler)
 	{
 		int[] ids = handler.getUserCommandList();
@@ -59,17 +80,29 @@ public class UserCommandHandler extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method getUserCommandHandler.
+	 * @param userCommand int
+	 * @return IUserCommandHandler
+	 */
 	public IUserCommandHandler getUserCommandHandler(int userCommand)
 	{
 		return _datatable.get(userCommand);
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _datatable.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

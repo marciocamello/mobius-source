@@ -12,17 +12,37 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExDominionChannelSet extends L2GameServerPacket
 {
+	/**
+	 * Field ACTIVE.
+	 */
 	public static final L2GameServerPacket ACTIVE = new ExDominionChannelSet(1);
+	/**
+	 * Field DEACTIVE.
+	 */
 	public static final L2GameServerPacket DEACTIVE = new ExDominionChannelSet(0);
+	/**
+	 * Field _active.
+	 */
 	private final int _active;
 	
+	/**
+	 * Constructor for ExDominionChannelSet.
+	 * @param active int
+	 */
 	public ExDominionChannelSet(int active)
 	{
 		_active = active;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

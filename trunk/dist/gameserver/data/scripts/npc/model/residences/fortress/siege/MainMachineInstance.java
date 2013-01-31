@@ -24,19 +24,34 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MainMachineInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _powerUnits.
+	 */
 	private int _powerUnits = 3;
 	
+	/**
+	 * Constructor for MainMachineInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MainMachineInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	public void onSpawn()
 	{
@@ -49,6 +64,11 @@ public class MainMachineInstance extends NpcInstance
 		siegeEvent.barrackAction(3, false);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -73,6 +93,10 @@ public class MainMachineInstance extends NpcInstance
 		siegeEvent.checkBarracks();
 	}
 	
+	/**
+	 * Method powerOff.
+	 * @param powerUnit PowerControlUnitInstance
+	 */
 	public void powerOff(PowerControlUnitInstance powerUnit)
 	{
 		FortressSiegeEvent event = getEvent(FortressSiegeEvent.class);
@@ -105,6 +129,12 @@ public class MainMachineInstance extends NpcInstance
 		Functions.npcShout(this, msg);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{

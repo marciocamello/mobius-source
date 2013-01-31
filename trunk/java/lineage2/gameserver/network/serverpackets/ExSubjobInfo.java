@@ -17,12 +17,30 @@ import java.util.Collection;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExSubjobInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _subClasses.
+	 */
 	private final Collection<SubClass> _subClasses;
+	/**
+	 * Field _classId. Field _raceId.
+	 */
 	private final int _raceId, _classId;
+	/**
+	 * Field _openStatus.
+	 */
 	private final boolean _openStatus;
 	
+	/**
+	 * Constructor for ExSubjobInfo.
+	 * @param player Player
+	 * @param openStatus boolean
+	 */
 	public ExSubjobInfo(Player player, boolean openStatus)
 	{
 		_openStatus = openStatus;
@@ -31,6 +49,9 @@ public class ExSubjobInfo extends L2GameServerPacket
 		_subClasses = player.getSubClassList().values();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

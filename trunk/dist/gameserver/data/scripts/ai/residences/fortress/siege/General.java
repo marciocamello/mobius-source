@@ -25,14 +25,27 @@ import lineage2.gameserver.tables.SkillTable;
 import npc.model.residences.SiegeGuardInstance;
 import ai.residences.SiegeGuardFighter;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class General extends SiegeGuardFighter
 {
+	/**
+	 * Constructor for General.
+	 * @param actor NpcInstance
+	 */
 	public General(NpcInstance actor)
 	{
 		super(actor);
 		actor.addListener(FortressSiegeEvent.RESTORE_BARRACKS_LISTENER);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param dam int
+	 */
 	@Override
 	public void onEvtAttacked(Creature attacker, int dam)
 	{
@@ -44,6 +57,9 @@ public class General extends SiegeGuardFighter
 		}
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	public void onEvtSpawn()
 	{
@@ -61,6 +77,10 @@ public class General extends SiegeGuardFighter
 		siegeEvent.barrackAction(4, false);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onEvtDead(Creature killer)
 	{

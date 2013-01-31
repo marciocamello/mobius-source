@@ -24,11 +24,25 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Heal extends Skill
 {
+	/**
+	 * Field _ignoreHpEff.
+	 */
 	private final boolean _ignoreHpEff;
+	/**
+	 * Field _staticPower.
+	 */
 	private final boolean _staticPower;
 	
+	/**
+	 * Constructor for Heal.
+	 * @param set StatsSet
+	 */
 	public Heal(StatsSet set)
 	{
 		super(set);
@@ -36,6 +50,15 @@ public class Heal extends Skill
 		_staticPower = set.getBool("staticPower", isHandler());
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -46,6 +69,11 @@ public class Heal extends Skill
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

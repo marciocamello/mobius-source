@@ -14,11 +14,25 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.pledge.Clan;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeInfo extends L2GameServerPacket
 {
+	/**
+	 * Field clan_id.
+	 */
 	private final int clan_id;
+	/**
+	 * Field ally_name. Field clan_name.
+	 */
 	private final String clan_name, ally_name;
 	
+	/**
+	 * Constructor for PledgeInfo.
+	 * @param clan Clan
+	 */
 	public PledgeInfo(Clan clan)
 	{
 		clan_id = clan.getClanId();
@@ -26,6 +40,9 @@ public class PledgeInfo extends L2GameServerPacket
 		ally_name = clan.getAlliance() == null ? "" : clan.getAlliance().getAllyName();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

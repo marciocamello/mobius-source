@@ -18,6 +18,10 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import npc.model.residences.SiegeGuardInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class _34BossMinionInstance extends SiegeGuardInstance implements _34SiegeGuard
 {
 	/**
@@ -25,17 +29,29 @@ public abstract class _34BossMinionInstance extends SiegeGuardInstance implement
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for _34BossMinionInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public _34BossMinionInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onDeath(Creature killer)
 	{
 		setCurrentHp(1, true);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	public void onSpawn()
 	{
@@ -43,8 +59,16 @@ public abstract class _34BossMinionInstance extends SiegeGuardInstance implement
 		Functions.npcShout(this, spawnChatSay());
 	}
 	
+	/**
+	 * Method spawnChatSay.
+	 * @return NpcString
+	 */
 	public abstract NpcString spawnChatSay();
 	
+	/**
+	 * Method teleChatSay.
+	 * @return NpcString * @see npc.model.residences.clanhall._34SiegeGuard#teleChatSay()
+	 */
 	@Override
 	public abstract NpcString teleChatSay();
 }

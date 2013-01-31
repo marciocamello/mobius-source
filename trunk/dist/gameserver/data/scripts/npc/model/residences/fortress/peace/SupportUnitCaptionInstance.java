@@ -19,21 +19,44 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SupportUnitCaptionInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field COND_ALL_FALSE. (value is 0)
+	 */
 	protected static final int COND_ALL_FALSE = 0;
+	/**
+	 * Field COND_BUSY_BECAUSE_OF_SIEGE. (value is 1)
+	 */
 	protected static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;
+	/**
+	 * Field COND_OWNER. (value is 2)
+	 */
 	protected static final int COND_OWNER = 2;
 	
+	/**
+	 * Constructor for SupportUnitCaptionInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SupportUnitCaptionInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -57,6 +80,12 @@ public class SupportUnitCaptionInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -86,6 +115,11 @@ public class SupportUnitCaptionInstance extends NpcInstance
 		player.sendPacket(html);
 	}
 	
+	/**
+	 * Method validateCondition.
+	 * @param player Player
+	 * @return int
+	 */
 	protected int validateCondition(Player player)
 	{
 		if (player.isGM())

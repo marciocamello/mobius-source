@@ -15,15 +15,29 @@ package ai.dragonvalley;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DragonRaid extends Fighter
 {
+	/**
+	 * Field lastAttackTime.
+	 */
 	private long lastAttackTime = 0;
 	
+	/**
+	 * Constructor for DragonRaid.
+	 * @param actor NpcInstance
+	 */
 	public DragonRaid(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -31,6 +45,10 @@ public class DragonRaid extends Fighter
 		lastAttackTime = System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

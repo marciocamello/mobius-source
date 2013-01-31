@@ -20,22 +20,46 @@ import lineage2.gameserver.ThreadPoolManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class ActionWrapper extends RunnableImpl
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ActionWrapper.class);
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _scheduledFuture.
+	 */
 	private Future<?> _scheduledFuture;
 	
+	/**
+	 * Constructor for ActionWrapper.
+	 * @param name String
+	 */
 	public ActionWrapper(String name)
 	{
 		_name = name;
 	}
 	
+	/**
+	 * Method schedule.
+	 * @param time long
+	 */
 	public void schedule(long time)
 	{
 		_scheduledFuture = ThreadPoolManager.getInstance().schedule(this, time);
 	}
 	
+	/**
+	 * Method cancel.
+	 */
 	public void cancel()
 	{
 		if (_scheduledFuture != null)
@@ -45,8 +69,15 @@ public abstract class ActionWrapper extends RunnableImpl
 		}
 	}
 	
+	/**
+	 * Method runImpl0.
+	 * @throws Exception
+	 */
 	public abstract void runImpl0() throws Exception;
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{
@@ -65,6 +96,10 @@ public abstract class ActionWrapper extends RunnableImpl
 		}
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;

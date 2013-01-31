@@ -16,15 +16,29 @@ import lineage2.gameserver.data.xml.holder.ProductHolder;
 import lineage2.gameserver.model.ProductItem;
 import lineage2.gameserver.model.ProductItemComponent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExBR_ProductInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _productId.
+	 */
 	private final ProductItem _productId;
 	
+	/**
+	 * Constructor for ExBR_ProductInfo.
+	 * @param id int
+	 */
 	public ExBR_ProductInfo(int id)
 	{
 		_productId = ProductHolder.getInstance().getProduct(id);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

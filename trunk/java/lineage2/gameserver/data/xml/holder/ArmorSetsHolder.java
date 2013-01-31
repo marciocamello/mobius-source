@@ -16,16 +16,34 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.ArmorSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ArmorSetsHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final ArmorSetsHolder _instance = new ArmorSetsHolder();
+	/**
+	 * Field _armorSets.
+	 */
 	private final TIntObjectHashMap<ArmorSet> _armorSets = new TIntObjectHashMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return ArmorSetsHolder
+	 */
 	public static ArmorSetsHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addArmorSet.
+	 * @param armorset ArmorSet
+	 */
 	public void addArmorSet(ArmorSet armorset)
 	{
 		for (int id : armorset.getChestIds())
@@ -54,17 +72,29 @@ public final class ArmorSetsHolder extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method getArmorSet.
+	 * @param id int
+	 * @return ArmorSet
+	 */
 	public ArmorSet getArmorSet(int id)
 	{
 		return _armorSets.get(id);
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _armorSets.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

@@ -19,15 +19,32 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KukuruInstance extends NpcInstance
 {
+	/**
+	 * Field serialVersionUID. (value is 2769307524084003609)
+	 */
 	private static final long serialVersionUID = 2769307524084003609L;
 	
+	/**
+	 * Constructor for KukuruInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public KukuruInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

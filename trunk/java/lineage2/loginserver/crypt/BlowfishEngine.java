@@ -14,8 +14,15 @@ package lineage2.loginserver.crypt;
 
 import java.io.IOException;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BlowfishEngine
 {
+	/**
+	 * Field KS3. Field KS2. Field KS1. Field KS0. Field KP.
+	 */
 	private final static int[] KP =
 	{
 		0x243F6A88,
@@ -1069,15 +1076,42 @@ public class BlowfishEngine
 		0x578FDFE3,
 		0x3AC372E6
 	};
+	/**
+	 * Field ROUNDS. (value is 16)
+	 */
 	private static final int ROUNDS = 16;
+	/**
+	 * Field BLOCK_SIZE. (value is 8)
+	 */
 	private static final int BLOCK_SIZE = 8;
+	/**
+	 * Field SBOX_SK. (value is 256)
+	 */
 	private static final int SBOX_SK = 256;
+	/**
+	 * Field P_SZ.
+	 */
 	private static final int P_SZ = ROUNDS + 2;
+	/**
+	 * Field S3. Field S2. Field S1. Field S0.
+	 */
 	private final int[] S0, S1, S2, S3;
+	/**
+	 * Field P.
+	 */
 	private final int[] P;
+	/**
+	 * Field encrypting.
+	 */
 	private boolean encrypting = false;
+	/**
+	 * Field workingKey.
+	 */
 	private byte[] workingKey = null;
 	
+	/**
+	 * Constructor for BlowfishEngine.
+	 */
 	public BlowfishEngine()
 	{
 		S0 = new int[SBOX_SK];
@@ -1087,6 +1121,11 @@ public class BlowfishEngine
 		P = new int[P_SZ];
 	}
 	
+	/**
+	 * Method init.
+	 * @param pEncrypting boolean
+	 * @param key byte[]
+	 */
 	public void init(boolean pEncrypting, byte[] key)
 	{
 		encrypting = pEncrypting;
@@ -1094,11 +1133,23 @@ public class BlowfishEngine
 		setKey(workingKey);
 	}
 	
+	/**
+	 * Method getAlgorithmName.
+	 * @return String
+	 */
 	public String getAlgorithmName()
 	{
 		return "Blowfish";
 	}
 	
+	/**
+	 * Method processBlock.
+	 * @param in byte[]
+	 * @param inOff int
+	 * @param out byte[]
+	 * @param outOff int
+	 * @return int * @throws IOException
+	 */
 	public final int processBlock(byte[] in, int inOff, byte[] out, int outOff) throws IOException
 	{
 		if (workingKey == null)
@@ -1124,20 +1175,38 @@ public class BlowfishEngine
 		return BLOCK_SIZE;
 	}
 	
+	/**
+	 * Method reset.
+	 */
 	public void reset()
 	{
 	}
 	
+	/**
+	 * Method getBlockSize.
+	 * @return int
+	 */
 	public int getBlockSize()
 	{
 		return BLOCK_SIZE;
 	}
 	
+	/**
+	 * Method F.
+	 * @param x int
+	 * @return int
+	 */
 	private int F(int x)
 	{
 		return ((S0[(x >>> 24)] + S1[(x >>> 16) & 0xff]) ^ S2[(x >>> 8) & 0xff]) + S3[x & 0xff];
 	}
 	
+	/**
+	 * Method processTable.
+	 * @param xl int
+	 * @param xr int
+	 * @param table int[]
+	 */
 	private void processTable(int xl, int xr, int[] table)
 	{
 		int size = table.length;
@@ -1157,6 +1226,10 @@ public class BlowfishEngine
 		}
 	}
 	
+	/**
+	 * Method setKey.
+	 * @param key byte[]
+	 */
 	private void setKey(byte[] key)
 	{
 		System.arraycopy(KS0, 0, S0, 0, SBOX_SK);
@@ -1186,6 +1259,13 @@ public class BlowfishEngine
 		processTable(S2[SBOX_SK - 2], S2[SBOX_SK - 1], S3);
 	}
 	
+	/**
+	 * Method encryptBlock.
+	 * @param src byte[]
+	 * @param srcIndex int
+	 * @param dst byte[]
+	 * @param dstIndex int
+	 */
 	private void encryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex)
 	{
 		int xl = BytesTo32bits(src, srcIndex);
@@ -1201,6 +1281,13 @@ public class BlowfishEngine
 		Bits32ToBytes(xl, dst, dstIndex + 4);
 	}
 	
+	/**
+	 * Method decryptBlock.
+	 * @param src byte[]
+	 * @param srcIndex int
+	 * @param dst byte[]
+	 * @param dstIndex int
+	 */
 	private void decryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex)
 	{
 		int xl = BytesTo32bits(src, srcIndex);
@@ -1216,11 +1303,23 @@ public class BlowfishEngine
 		Bits32ToBytes(xl, dst, dstIndex + 4);
 	}
 	
+	/**
+	 * Method BytesTo32bits.
+	 * @param b byte[]
+	 * @param i int
+	 * @return int
+	 */
 	private int BytesTo32bits(byte[] b, int i)
 	{
 		return ((b[i + 3] & 0xff) << 24) | ((b[i + 2] & 0xff) << 16) | ((b[i + 1] & 0xff) << 8) | (b[i] & 0xff);
 	}
 	
+	/**
+	 * Method Bits32ToBytes.
+	 * @param in int
+	 * @param b byte[]
+	 * @param offset int
+	 */
 	private void Bits32ToBytes(int in, byte[] b, int offset)
 	{
 		b[offset] = (byte) in;

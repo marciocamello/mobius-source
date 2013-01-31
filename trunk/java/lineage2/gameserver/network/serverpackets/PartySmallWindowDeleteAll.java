@@ -12,10 +12,20 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PartySmallWindowDeleteAll extends L2GameServerPacket
 {
+	/**
+	 * Field STATIC.
+	 */
 	public static final L2GameServerPacket STATIC = new PartySmallWindowDeleteAll();
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

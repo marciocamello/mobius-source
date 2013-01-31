@@ -24,17 +24,37 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SpawnExObject implements SpawnableObject
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SpawnExObject.class);
+	/**
+	 * Field _spawns.
+	 */
 	private final List<Spawner> _spawns;
+	/**
+	 * Field _spawned.
+	 */
 	private boolean _spawned;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
 	
+	/**
+	 * Constructor for SpawnExObject.
+	 * @param name String
+	 */
 	public SpawnExObject(String name)
 	{
 		_name = name;
@@ -45,6 +65,11 @@ public class SpawnExObject implements SpawnableObject
 		}
 	}
 	
+	/**
+	 * Method spawnObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#spawnObject(GlobalEvent)
+	 */
 	@Override
 	public void spawnObject(GlobalEvent event)
 	{
@@ -71,6 +96,11 @@ public class SpawnExObject implements SpawnableObject
 		}
 	}
 	
+	/**
+	 * Method despawnObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#despawnObject(GlobalEvent)
+	 */
 	@Override
 	public void despawnObject(GlobalEvent event)
 	{
@@ -86,6 +116,11 @@ public class SpawnExObject implements SpawnableObject
 		}
 	}
 	
+	/**
+	 * Method refreshObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#refreshObject(GlobalEvent)
+	 */
 	@Override
 	public void refreshObject(GlobalEvent event)
 	{
@@ -102,11 +137,19 @@ public class SpawnExObject implements SpawnableObject
 		}
 	}
 	
+	/**
+	 * Method getSpawns.
+	 * @return List<Spawner>
+	 */
 	public List<Spawner> getSpawns()
 	{
 		return _spawns;
 	}
 	
+	/**
+	 * Method getAllSpawned.
+	 * @return List<NpcInstance>
+	 */
 	public List<NpcInstance> getAllSpawned()
 	{
 		List<NpcInstance> npcs = new ArrayList<>();
@@ -117,12 +160,20 @@ public class SpawnExObject implements SpawnableObject
 		return npcs.isEmpty() ? Collections.<NpcInstance> emptyList() : npcs;
 	}
 	
+	/**
+	 * Method getFirstSpawned.
+	 * @return NpcInstance
+	 */
 	public NpcInstance getFirstSpawned()
 	{
 		List<NpcInstance> npcs = getAllSpawned();
 		return npcs.size() > 0 ? npcs.get(0) : null;
 	}
 	
+	/**
+	 * Method isSpawned.
+	 * @return boolean
+	 */
 	public boolean isSpawned()
 	{
 		return _spawned;

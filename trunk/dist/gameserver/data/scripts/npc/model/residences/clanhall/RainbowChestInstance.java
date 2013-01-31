@@ -19,38 +19,121 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RainbowChestInstance extends MonsterInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field ItemA. (value is 8035)
+	 */
 	private static final int ItemA = 8035;
+	/**
+	 * Field ItemB. (value is 8036)
+	 */
 	private static final int ItemB = 8036;
+	/**
+	 * Field ItemC. (value is 8037)
+	 */
 	private static final int ItemC = 8037;
+	/**
+	 * Field ItemD. (value is 8038)
+	 */
 	private static final int ItemD = 8038;
+	/**
+	 * Field ItemE. (value is 8039)
+	 */
 	private static final int ItemE = 8039;
+	/**
+	 * Field ItemF. (value is 8040)
+	 */
 	private static final int ItemF = 8040;
+	/**
+	 * Field ItemG. (value is 8041)
+	 */
 	private static final int ItemG = 8041;
+	/**
+	 * Field ItemH. (value is 8042)
+	 */
 	private static final int ItemH = 8042;
+	/**
+	 * Field ItemI. (value is 8043)
+	 */
 	private static final int ItemI = 8043;
+	/**
+	 * Field ItemK. (value is 8045)
+	 */
 	private static final int ItemK = 8045;
+	/**
+	 * Field ItemL. (value is 8046)
+	 */
 	private static final int ItemL = 8046;
+	/**
+	 * Field ItemN. (value is 8047)
+	 */
 	private static final int ItemN = 8047;
+	/**
+	 * Field ItemO. (value is 8048)
+	 */
 	private static final int ItemO = 8048;
+	/**
+	 * Field ItemP. (value is 8049)
+	 */
 	private static final int ItemP = 8049;
+	/**
+	 * Field ItemR. (value is 8050)
+	 */
 	private static final int ItemR = 8050;
+	/**
+	 * Field ItemS. (value is 8051)
+	 */
 	private static final int ItemS = 8051;
+	/**
+	 * Field ItemT. (value is 8052)
+	 */
 	private static final int ItemT = 8052;
+	/**
+	 * Field ItemU. (value is 8053)
+	 */
 	private static final int ItemU = 8053;
+	/**
+	 * Field ItemW. (value is 8054)
+	 */
 	private static final int ItemW = 8054;
+	/**
+	 * Field ItemY. (value is 8055)
+	 */
 	private static final int ItemY = 8055;
 	
+	/**
+	 * Constructor for RainbowChestInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public RainbowChestInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method reduceCurrentHp.
+	 * @param damage double
+	 * @param reflectableDamage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 * @param canReflect boolean
+	 * @param transferDamage boolean
+	 * @param isDot boolean
+	 * @param sendMessage boolean
+	 */
 	@Override
 	public void reduceCurrentHp(double damage, double reflectableDamage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp, boolean canReflect, boolean transferDamage, boolean isDot, boolean sendMessage)
 	{
@@ -61,6 +144,10 @@ public class RainbowChestInstance extends MonsterInstance
 		super.reduceCurrentHp(getMaxHp() * 0.2, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param k Creature
+	 */
 	@Override
 	public void onDeath(Creature k)
 	{

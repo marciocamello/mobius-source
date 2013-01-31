@@ -18,14 +18,36 @@ import lineage2.loginserver.accounts.SessionManager.Session;
 import lineage2.loginserver.gameservercon.ReceivablePacket;
 import lineage2.loginserver.gameservercon.lspackets.PlayerAuthResponse;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PlayerAuthRequest extends ReceivablePacket
 {
+	/**
+	 * Field account.
+	 */
 	private String account;
+	/**
+	 * Field playOkId1.
+	 */
 	private int playOkId1;
+	/**
+	 * Field playOkId2.
+	 */
 	private int playOkId2;
+	/**
+	 * Field loginOkId1.
+	 */
 	private int loginOkId1;
+	/**
+	 * Field loginOkId2.
+	 */
 	private int loginOkId2;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -36,6 +58,9 @@ public class PlayerAuthRequest extends ReceivablePacket
 		loginOkId2 = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -18,14 +18,37 @@ import lineage2.gameserver.taskmanager.Task;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CampaignTask extends RunnableImpl
 {
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(CampaignTask.class);
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _progress.
+	 */
 	private final int _progress;
+	/**
+	 * Field _totalProgress.
+	 */
 	private final int _totalProgress;
 	
+	/**
+	 * Constructor for CampaignTask.
+	 * @param id int
+	 * @param progress int
+	 * @param totalProgress int
+	 * @param time long
+	 */
 	public CampaignTask(int id, int progress, int totalProgress, long time)
 	{
 		_id = id;
@@ -33,28 +56,50 @@ public class CampaignTask extends RunnableImpl
 		_totalProgress = totalProgress;
 	}
 	
+	/**
+	 * Field _task.
+	 */
 	Task _task;
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getCurrentProgress.
+	 * @return int
+	 */
 	public int getCurrentProgress()
 	{
 		return _progress;
 	}
 	
+	/**
+	 * Method getTask.
+	 * @return Task
+	 */
 	public Task getTask()
 	{
 		return _task;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{
 	}
 	
+	/**
+	 * Method getTotalProgress.
+	 * @return int
+	 */
 	public int getTotalProgress()
 	{
 		return _totalProgress;

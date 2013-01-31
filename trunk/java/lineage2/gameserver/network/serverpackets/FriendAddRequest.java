@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FriendAddRequest extends L2GameServerPacket
 {
+	/**
+	 * Field _requestorName.
+	 */
 	private final String _requestorName;
 	
+	/**
+	 * Constructor for FriendAddRequest.
+	 * @param requestorName String
+	 */
 	public FriendAddRequest(String requestorName)
 	{
 		_requestorName = requestorName;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

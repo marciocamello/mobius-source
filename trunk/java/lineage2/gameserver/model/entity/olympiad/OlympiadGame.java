@@ -46,21 +46,67 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OlympiadGame
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadGame.class);
+	/**
+	 * Field MAX_POINTS_LOOSE. (value is 10)
+	 */
 	public static final int MAX_POINTS_LOOSE = 10;
+	/**
+	 * Field validated.
+	 */
 	public boolean validated = false;
+	/**
+	 * Field _winner.
+	 */
 	private int _winner = 0;
+	/**
+	 * Field _state.
+	 */
 	private int _state = 0;
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _reflection.
+	 */
 	private final Reflection _reflection;
+	/**
+	 * Field _type.
+	 */
 	private final CompType _type;
+	/**
+	 * Field _team1.
+	 */
 	private final OlympiadTeam _team1;
+	/**
+	 * Field _team2.
+	 */
 	private final OlympiadTeam _team2;
+	/**
+	 * Field _spectators.
+	 */
 	private final List<Player> _spectators = new CopyOnWriteArrayList<>();
+	/**
+	 * Field _startTime.
+	 */
 	private long _startTime;
 	
+	/**
+	 * Constructor for OlympiadGame.
+	 * @param id int
+	 * @param type CompType
+	 * @param opponents List<Integer>
+	 */
 	public OlympiadGame(int id, CompType type, List<Integer> opponents)
 	{
 		_type = type;
@@ -81,6 +127,11 @@ public class OlympiadGame
 		Log.add("Olympiad System: Game - " + id + ": " + _team1.getName() + " Vs " + _team2.getName(), "olympiad");
 	}
 	
+	/**
+	 * Method getBufferSpawnGroup.
+	 * @param instancedZoneId int
+	 * @return String
+	 */
 	private String getBufferSpawnGroup(int instancedZoneId)
 	{
 		String bufferGroup = null;
@@ -102,6 +153,9 @@ public class OlympiadGame
 		return bufferGroup;
 	}
 	
+	/**
+	 * Method addBuffers.
+	 */
 	public void addBuffers()
 	{
 		if (!_type.hasBuffer())
@@ -114,11 +168,17 @@ public class OlympiadGame
 		}
 	}
 	
+	/**
+	 * Method deleteBuffers.
+	 */
 	public void deleteBuffers()
 	{
 		_reflection.despawnByGroup(getBufferSpawnGroup(_reflection.getInstancedZoneId()));
 	}
 	
+	/**
+	 * Method managerShout.
+	 */
 	public void managerShout()
 	{
 		for (NpcInstance npc : Olympiad.getNpcs())
@@ -139,24 +199,36 @@ public class OlympiadGame
 		}
 	}
 	
+	/**
+	 * Method portPlayersToArena.
+	 */
 	public void portPlayersToArena()
 	{
 		_team1.portPlayersToArena();
 		_team2.portPlayersToArena();
 	}
 	
+	/**
+	 * Method preparePlayers.
+	 */
 	public void preparePlayers()
 	{
 		_team1.preparePlayers();
 		_team2.preparePlayers();
 	}
 	
+	/**
+	 * Method portPlayersBack.
+	 */
 	public void portPlayersBack()
 	{
 		_team1.portPlayersBack();
 		_team2.portPlayersBack();
 	}
 	
+	/**
+	 * Method collapse.
+	 */
 	public void collapse()
 	{
 		portPlayersBack();
@@ -164,6 +236,10 @@ public class OlympiadGame
 		_reflection.collapse();
 	}
 	
+	/**
+	 * Method validateWinner.
+	 * @param aborted boolean
+	 */
 	public void validateWinner(boolean aborted)
 	{
 		int state = _state;
@@ -224,6 +300,11 @@ public class OlympiadGame
 		broadcastPacket(new SystemMessage2(SystemMsg.YOU_WILL_BE_MOVED_BACK_TO_TOWN_IN_S1_SECONDS).addInteger(20), true, true);
 	}
 	
+	/**
+	 * Method winGame.
+	 * @param winnerTeam OlympiadTeam
+	 * @param looseTeam OlympiadTeam
+	 */
 	public void winGame(OlympiadTeam winnerTeam, OlympiadTeam looseTeam)
 	{
 		ExReceiveOlympiad.MatchResult packet = new ExReceiveOlympiad.MatchResult(false, winnerTeam.getName());
@@ -283,6 +364,9 @@ public class OlympiadGame
 		Log.add("Olympiad Result: " + winnerTeam.getName() + " vs " + looseTeam.getName() + " ... (" + (int) winnerTeam.getDamage() + " vs " + (int) looseTeam.getDamage() + ") " + winnerTeam.getName() + " win " + pointDiff + " points", "olympiad");
 	}
 	
+	/**
+	 * Method tie.
+	 */
 	public void tie()
 	{
 		TeamMember[] teamMembers1 = _team1.getMembers().toArray(new TeamMember[_team1.getMembers().size()]);
@@ -330,6 +414,12 @@ public class OlympiadGame
 		Log.add("Olympiad Result: " + _team1.getName() + " vs " + _team2.getName() + " ... tie", "olympiad");
 	}
 	
+	/**
+	 * Method transferPoints.
+	 * @param from StatsSet
+	 * @param to StatsSet
+	 * @return int
+	 */
 	private int transferPoints(StatsSet from, StatsSet to)
 	{
 		int fromPoints = from.getInteger(Olympiad.POINTS);
@@ -349,6 +439,9 @@ public class OlympiadGame
 		return pointDiff;
 	}
 	
+	/**
+	 * Method openDoors.
+	 */
 	public void openDoors()
 	{
 		for (DoorInstance door : _reflection.getDoors())
@@ -357,36 +450,64 @@ public class OlympiadGame
 		}
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getReflection.
+	 * @return Reflection
+	 */
 	public Reflection getReflection()
 	{
 		return _reflection;
 	}
 	
+	/**
+	 * Method isRegistered.
+	 * @param objId int
+	 * @return boolean
+	 */
 	public boolean isRegistered(int objId)
 	{
 		return _team1.contains(objId) || _team2.contains(objId);
 	}
 	
+	/**
+	 * Method getSpectators.
+	 * @return List<Player>
+	 */
 	public List<Player> getSpectators()
 	{
 		return _spectators;
 	}
 	
+	/**
+	 * Method addSpectator.
+	 * @param spec Player
+	 */
 	public void addSpectator(Player spec)
 	{
 		_spectators.add(spec);
 	}
 	
+	/**
+	 * Method removeSpectator.
+	 * @param spec Player
+	 */
 	public void removeSpectator(Player spec)
 	{
 		_spectators.remove(spec);
 	}
 	
+	/**
+	 * Method clearSpectators.
+	 */
 	public void clearSpectators()
 	{
 		for (Player pc : _spectators)
@@ -399,6 +520,12 @@ public class OlympiadGame
 		_spectators.clear();
 	}
 	
+	/**
+	 * Method broadcastInfo.
+	 * @param sender Player
+	 * @param receiver Player
+	 * @param onlyToSpectators boolean
+	 */
 	public void broadcastInfo(Player sender, Player receiver, boolean onlyToSpectators)
 	{
 		if (sender != null)
@@ -441,6 +568,9 @@ public class OlympiadGame
 		}
 	}
 	
+	/**
+	 * Method broadcastRelation.
+	 */
 	public void broadcastRelation()
 	{
 		for (Player player : _team1.getPlayers())
@@ -453,6 +583,12 @@ public class OlympiadGame
 		}
 	}
 	
+	/**
+	 * Method broadcastPacket.
+	 * @param packet L2GameServerPacket
+	 * @param toTeams boolean
+	 * @param toSpectators boolean
+	 */
 	public void broadcastPacket(L2GameServerPacket packet, boolean toTeams, boolean toSpectators)
 	{
 		if (toTeams)
@@ -472,6 +608,12 @@ public class OlympiadGame
 		}
 	}
 	
+	/**
+	 * Method broadcastPacket.
+	 * @param packet IStaticPacket
+	 * @param toTeams boolean
+	 * @param toSpectators boolean
+	 */
 	public void broadcastPacket(IStaticPacket packet, boolean toTeams, boolean toSpectators)
 	{
 		if (toTeams)
@@ -491,6 +633,10 @@ public class OlympiadGame
 		}
 	}
 	
+	/**
+	 * Method getAllPlayers.
+	 * @return List<Player>
+	 */
 	public List<Player> getAllPlayers()
 	{
 		List<Player> result = new ArrayList<>();
@@ -515,11 +661,19 @@ public class OlympiadGame
 		return result;
 	}
 	
+	/**
+	 * Method setWinner.
+	 * @param val int
+	 */
 	public void setWinner(int val)
 	{
 		_winner = val;
 	}
 	
+	/**
+	 * Method getWinnerTeam.
+	 * @return OlympiadTeam
+	 */
 	public OlympiadTeam getWinnerTeam()
 	{
 		if (_winner == 1)
@@ -533,6 +687,10 @@ public class OlympiadGame
 		return null;
 	}
 	
+	/**
+	 * Method setState.
+	 * @param val int
+	 */
 	public void setState(int val)
 	{
 		_state = val;
@@ -542,16 +700,30 @@ public class OlympiadGame
 		}
 	}
 	
+	/**
+	 * Method getState.
+	 * @return int
+	 */
 	public int getState()
 	{
 		return _state;
 	}
 	
+	/**
+	 * Method getTeamMembers.
+	 * @param player Player
+	 * @return List<Player>
+	 */
 	public List<Player> getTeamMembers(Player player)
 	{
 		return player.getOlympiadSide() == 1 ? _team1.getPlayers() : _team2.getPlayers();
 	}
 	
+	/**
+	 * Method addDamage.
+	 * @param player Player
+	 * @param damage double
+	 */
 	public void addDamage(Player player, double damage)
 	{
 		if (player.getOlympiadSide() == 1)
@@ -564,24 +736,48 @@ public class OlympiadGame
 		}
 	}
 	
+	/**
+	 * Method doDie.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean doDie(Player player)
 	{
 		return player.getOlympiadSide() == 1 ? _team1.doDie(player) : _team2.doDie(player);
 	}
 	
+	/**
+	 * Method checkPlayersOnline.
+	 * @return boolean
+	 */
 	public boolean checkPlayersOnline()
 	{
 		return _team1.checkPlayers() && _team2.checkPlayers();
 	}
 	
+	/**
+	 * Method logoutPlayer.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean logoutPlayer(Player player)
 	{
 		return (player != null) && (player.getOlympiadSide() == 1 ? _team1.logout(player) : _team2.logout(player));
 	}
 	
+	/**
+	 * Field _task.
+	 */
 	OlympiadGameTask _task;
+	/**
+	 * Field _shedule.
+	 */
 	ScheduledFuture<?> _shedule;
 	
+	/**
+	 * Method sheduleTask.
+	 * @param task OlympiadGameTask
+	 */
 	public synchronized void sheduleTask(OlympiadGameTask task)
 	{
 		if (_shedule != null)
@@ -592,11 +788,19 @@ public class OlympiadGame
 		_shedule = task.shedule();
 	}
 	
+	/**
+	 * Method getTask.
+	 * @return OlympiadGameTask
+	 */
 	public OlympiadGameTask getTask()
 	{
 		return _task;
 	}
 	
+	/**
+	 * Method getStatus.
+	 * @return BattleStatus
+	 */
 	public BattleStatus getStatus()
 	{
 		if (_task != null)
@@ -606,6 +810,11 @@ public class OlympiadGame
 		return BattleStatus.Begining;
 	}
 	
+	/**
+	 * Method endGame.
+	 * @param time long
+	 * @param aborted boolean
+	 */
 	public void endGame(long time, boolean aborted)
 	{
 		try
@@ -619,16 +828,28 @@ public class OlympiadGame
 		sheduleTask(new OlympiadGameTask(this, BattleStatus.Ending, 0, time));
 	}
 	
+	/**
+	 * Method getType.
+	 * @return CompType
+	 */
 	public CompType getType()
 	{
 		return _type;
 	}
 	
+	/**
+	 * Method getTeamName1.
+	 * @return String
+	 */
 	public String getTeamName1()
 	{
 		return _team1.getName();
 	}
 	
+	/**
+	 * Method getTeamName2.
+	 * @return String
+	 */
 	public String getTeamName2()
 	{
 		return _team2.getName();

@@ -16,13 +16,25 @@ import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CorpsRuin extends DefaultAI
 {
+	/**
+	 * Constructor for CorpsRuin.
+	 * @param actor NpcInstance
+	 */
 	public CorpsRuin(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

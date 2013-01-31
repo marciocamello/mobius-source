@@ -18,8 +18,15 @@ import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.entity.residence.Residence;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExSendManorList extends L2GameServerPacket
 {
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

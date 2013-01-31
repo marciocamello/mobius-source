@@ -31,15 +31,40 @@ import lineage2.gameserver.templates.player.PlayerTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharacterCreate extends L2GameClientPacket
 {
+	/**
+	 * Field _name.
+	 */
 	private String _name;
+	/**
+	 * Field _sex.
+	 */
 	private int _sex;
+	/**
+	 * Field _classId.
+	 */
 	private int _classId;
+	/**
+	 * Field _hairStyle.
+	 */
 	private int _hairStyle;
+	/**
+	 * Field _hairColor.
+	 */
 	private int _hairColor;
+	/**
+	 * Field _face.
+	 */
 	private int _face;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -58,6 +83,9 @@ public class CharacterCreate extends L2GameClientPacket
 		_face = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -92,6 +120,11 @@ public class CharacterCreate extends L2GameClientPacket
 		initNewChar(getClient(), newChar);
 	}
 	
+	/**
+	 * Method initNewChar.
+	 * @param client GameClient
+	 * @param newChar Player
+	 */
 	private void initNewChar(GameClient client, Player newChar)
 	{
 		PlayerTemplate template = newChar.getTemplate();
@@ -171,6 +204,10 @@ public class CharacterCreate extends L2GameClientPacket
 		client.setCharSelection(CharacterSelectionInfo.loadCharacterSelectInfo(client.getLogin()));
 	}
 	
+	/**
+	 * Method startTutorialQuest.
+	 * @param player Player
+	 */
 	public static void startTutorialQuest(Player player)
 	{
 		Quest q = QuestManager.getQuest(255);

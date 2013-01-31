@@ -16,11 +16,28 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.boat.Boat;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MoveToLocationInVehicle extends L2GameServerPacket
 {
+	/**
+	 * Field _boatObjectId. Field _playerObjectId.
+	 */
 	private final int _playerObjectId, _boatObjectId;
+	/**
+	 * Field _destination. Field _origin.
+	 */
 	private final Location _origin, _destination;
 	
+	/**
+	 * Constructor for MoveToLocationInVehicle.
+	 * @param cha Player
+	 * @param boat Boat
+	 * @param origin Location
+	 * @param destination Location
+	 */
 	public MoveToLocationInVehicle(Player cha, Boat boat, Location origin, Location destination)
 	{
 		_playerObjectId = cha.getObjectId();
@@ -29,6 +46,9 @@ public class MoveToLocationInVehicle extends L2GameServerPacket
 		_destination = destination;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -19,10 +19,20 @@ import lineage2.gameserver.model.Skill.SkillType;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.skills.EffectType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestDispel extends L2GameClientPacket
 {
+	/**
+	 * Field _level. Field _id. Field _objectId.
+	 */
 	private int _objectId, _id, _level;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -31,6 +41,9 @@ public class RequestDispel extends L2GameClientPacket
 		_level = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

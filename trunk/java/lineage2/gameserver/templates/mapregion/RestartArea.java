@@ -17,23 +17,46 @@ import java.util.Map;
 import lineage2.gameserver.model.Territory;
 import lineage2.gameserver.model.base.Race;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RestartArea implements RegionData
 {
+	/**
+	 * Field _territory.
+	 */
 	private final Territory _territory;
+	/**
+	 * Field _restarts.
+	 */
 	private final Map<Race, RestartPoint> _restarts;
 	
+	/**
+	 * Constructor for RestartArea.
+	 * @param territory Territory
+	 * @param restarts Map<Race,RestartPoint>
+	 */
 	public RestartArea(Territory territory, Map<Race, RestartPoint> restarts)
 	{
 		_territory = territory;
 		_restarts = restarts;
 	}
 	
+	/**
+	 * Method getTerritory.
+	 * @return Territory * @see lineage2.gameserver.templates.mapregion.RegionData#getTerritory()
+	 */
 	@Override
 	public Territory getTerritory()
 	{
 		return _territory;
 	}
 	
+	/**
+	 * Method getRestartPoint.
+	 * @return Map<Race,RestartPoint>
+	 */
 	public Map<Race, RestartPoint> getRestartPoint()
 	{
 		return _restarts;

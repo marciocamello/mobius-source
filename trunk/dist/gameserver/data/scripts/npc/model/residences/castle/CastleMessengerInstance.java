@@ -18,6 +18,10 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.CastleSiegeInfo;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleMessengerInstance extends NpcInstance
 {
 	/**
@@ -25,11 +29,22 @@ public class CastleMessengerInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for CastleMessengerInstance.
+	 * @param objectID int
+	 * @param template NpcTemplate
+	 */
 	public CastleMessengerInstance(int objectID, NpcTemplate template)
 	{
 		super(objectID, template);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{

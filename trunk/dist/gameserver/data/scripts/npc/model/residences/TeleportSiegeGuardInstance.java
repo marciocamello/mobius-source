@@ -15,6 +15,10 @@ package npc.model.residences;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeleportSiegeGuardInstance extends SiegeGuardInstance
 {
 	/**
@@ -22,11 +26,21 @@ public class TeleportSiegeGuardInstance extends SiegeGuardInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for TeleportSiegeGuardInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public TeleportSiegeGuardInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

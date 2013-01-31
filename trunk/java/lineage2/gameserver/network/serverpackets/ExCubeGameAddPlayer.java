@@ -14,12 +14,30 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCubeGameAddPlayer extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _isRedTeam.
+	 */
 	boolean _isRedTeam;
 	
+	/**
+	 * Constructor for ExCubeGameAddPlayer.
+	 * @param player Player
+	 * @param isRedTeam boolean
+	 */
 	public ExCubeGameAddPlayer(Player player, boolean isRedTeam)
 	{
 		_objectId = player.getObjectId();
@@ -27,6 +45,9 @@ public class ExCubeGameAddPlayer extends L2GameServerPacket
 		_isRedTeam = isRedTeam;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

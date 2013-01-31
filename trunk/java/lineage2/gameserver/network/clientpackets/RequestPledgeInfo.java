@@ -17,16 +17,29 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.PledgeInfo;
 import lineage2.gameserver.tables.ClanTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPledgeInfo extends L2GameClientPacket
 {
+	/**
+	 * Field _clanId.
+	 */
 	private int _clanId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_clanId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

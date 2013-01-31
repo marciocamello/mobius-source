@@ -25,9 +25,19 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MonsterTrap implements ScriptFile
 {
+	/**
+	 * Field _zoneListener.
+	 */
 	private static ZoneListener _zoneListener;
+	/**
+	 * Field zones.
+	 */
 	private static String[] zones =
 	{
 		"[hellbound_trap1]",
@@ -42,6 +52,10 @@ public class MonsterTrap implements ScriptFile
 		"[SoD_trap_right_back]"
 	};
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -53,23 +67,43 @@ public class MonsterTrap implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Constructor for ZoneListener.
+		 */
 		public ZoneListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -130,21 +164,40 @@ public class MonsterTrap implements ScriptFile
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class UnSpawnTask extends RunnableImpl
 	{
+		/**
+		 * Field spawn.
+		 */
 		private final SimpleSpawner spawn;
 		
+		/**
+		 * Constructor for UnSpawnTask.
+		 * @param spawn SimpleSpawner
+		 */
 		public UnSpawnTask(SimpleSpawner spawn)
 		{
 			this.spawn = spawn;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

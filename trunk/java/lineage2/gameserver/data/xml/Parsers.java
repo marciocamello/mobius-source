@@ -53,8 +53,15 @@ import lineage2.gameserver.tables.CustomSpawnTable;
 import lineage2.gameserver.tables.FishTable;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Parsers
 {
+	/**
+	 * Method parseAll.
+	 */
 	public static void parseAll()
 	{
 		HtmCache.getInstance().reload();

@@ -16,15 +16,29 @@ import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HekatonPrime extends Fighter
 {
+	/**
+	 * Field _lastTimeAttacked.
+	 */
 	private long _lastTimeAttacked;
 	
+	/**
+	 * Constructor for HekatonPrime.
+	 * @param actor NpcInstance
+	 */
 	public HekatonPrime(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -32,6 +46,10 @@ public class HekatonPrime extends Fighter
 		_lastTimeAttacked = System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -47,6 +65,11 @@ public class HekatonPrime extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

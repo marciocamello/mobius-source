@@ -20,16 +20,36 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HealPercent extends Skill
 {
+	/**
+	 * Field _ignoreHpEff.
+	 */
 	private final boolean _ignoreHpEff;
 	
+	/**
+	 * Constructor for HealPercent.
+	 * @param set StatsSet
+	 */
 	public HealPercent(StatsSet set)
 	{
 		super(set);
 		_ignoreHpEff = set.getBool("ignoreHpEff", true);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -40,6 +60,11 @@ public class HealPercent extends Skill
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

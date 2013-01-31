@@ -12,24 +12,56 @@
  */
 package lineage2.gameserver.network.serverpackets.components;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum SysString
 {
+	/**
+	 * Field PASSENGER_BOAT_INFO.
+	 */
 	PASSENGER_BOAT_INFO(801),
+	/**
+	 * Field PREVIOUS.
+	 */
 	PREVIOUS(1037),
+	/**
+	 * Field NEXT.
+	 */
 	NEXT(1038);
+	/**
+	 * Field VALUES.
+	 */
 	private static final SysString[] VALUES = values();
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
 	
+	/**
+	 * Constructor for SysString.
+	 * @param i int
+	 */
 	SysString(int i)
 	{
 		_id = i;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method valueOf2.
+	 * @param id String
+	 * @return SysString
+	 */
 	public static SysString valueOf2(String id)
 	{
 		for (SysString m : VALUES)
@@ -42,6 +74,11 @@ public enum SysString
 		return null;
 	}
 	
+	/**
+	 * Method valueOf.
+	 * @param id int
+	 * @return SysString
+	 */
 	public static SysString valueOf(int id)
 	{
 		for (SysString m : VALUES)

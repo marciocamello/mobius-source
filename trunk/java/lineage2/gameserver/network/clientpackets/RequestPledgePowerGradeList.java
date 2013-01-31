@@ -17,13 +17,23 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.RankPrivs;
 import lineage2.gameserver.network.serverpackets.PledgePowerGradeList;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPledgePowerGradeList extends L2GameClientPacket
 {
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

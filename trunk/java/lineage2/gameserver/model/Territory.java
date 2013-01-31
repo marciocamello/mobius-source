@@ -22,17 +22,41 @@ import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.templates.spawn.SpawnRange;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Territory implements Shape, SpawnRange
 {
+	/**
+	 * Field max.
+	 */
 	protected final Point3D max = new Point3D();
+	/**
+	 * Field min.
+	 */
 	protected final Point3D min = new Point3D();
+	/**
+	 * Field include.
+	 */
 	private final List<Shape> include = new ArrayList<>(1);
+	/**
+	 * Field exclude.
+	 */
 	private final List<Shape> exclude = new ArrayList<>(1);
 	
+	/**
+	 * Constructor for Territory.
+	 */
 	public Territory()
 	{
 	}
 	
+	/**
+	 * Method add.
+	 * @param shape Shape
+	 * @return Territory
+	 */
 	public Territory add(Shape shape)
 	{
 		if (include.isEmpty())
@@ -57,22 +81,41 @@ public class Territory implements Shape, SpawnRange
 		return this;
 	}
 	
+	/**
+	 * Method addBanned.
+	 * @param shape Shape
+	 * @return Territory
+	 */
 	public Territory addBanned(Shape shape)
 	{
 		exclude.add(shape);
 		return this;
 	}
 	
+	/**
+	 * Method getTerritories.
+	 * @return List<Shape>
+	 */
 	public List<Shape> getTerritories()
 	{
 		return include;
 	}
 	
+	/**
+	 * Method getBannedTerritories.
+	 * @return List<Shape>
+	 */
 	public List<Shape> getBannedTerritories()
 	{
 		return exclude;
 	}
 	
+	/**
+	 * Method isInside.
+	 * @param x int
+	 * @param y int
+	 * @return boolean * @see lineage2.commons.geometry.Shape#isInside(int, int)
+	 */
 	@Override
 	public boolean isInside(int x, int y)
 	{
@@ -88,6 +131,13 @@ public class Territory implements Shape, SpawnRange
 		return false;
 	}
 	
+	/**
+	 * Method isInside.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return boolean * @see lineage2.commons.geometry.Shape#isInside(int, int, int)
+	 */
 	@Override
 	public boolean isInside(int x, int y, int z)
 	{
@@ -107,6 +157,12 @@ public class Territory implements Shape, SpawnRange
 		return false;
 	}
 	
+	/**
+	 * Method isExcluded.
+	 * @param x int
+	 * @param y int
+	 * @return boolean
+	 */
 	public boolean isExcluded(int x, int y)
 	{
 		Shape shape;
@@ -121,6 +177,13 @@ public class Territory implements Shape, SpawnRange
 		return false;
 	}
 	
+	/**
+	 * Method isExcluded.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return boolean
+	 */
 	public boolean isExcluded(int x, int y, int z)
 	{
 		Shape shape;
@@ -135,47 +198,82 @@ public class Territory implements Shape, SpawnRange
 		return false;
 	}
 	
+	/**
+	 * Method getXmax.
+	 * @return int * @see lineage2.commons.geometry.Shape#getXmax()
+	 */
 	@Override
 	public int getXmax()
 	{
 		return max.x;
 	}
 	
+	/**
+	 * Method getXmin.
+	 * @return int * @see lineage2.commons.geometry.Shape#getXmin()
+	 */
 	@Override
 	public int getXmin()
 	{
 		return min.x;
 	}
 	
+	/**
+	 * Method getYmax.
+	 * @return int * @see lineage2.commons.geometry.Shape#getYmax()
+	 */
 	@Override
 	public int getYmax()
 	{
 		return max.y;
 	}
 	
+	/**
+	 * Method getYmin.
+	 * @return int * @see lineage2.commons.geometry.Shape#getYmin()
+	 */
 	@Override
 	public int getYmin()
 	{
 		return min.y;
 	}
 	
+	/**
+	 * Method getZmax.
+	 * @return int * @see lineage2.commons.geometry.Shape#getZmax()
+	 */
 	@Override
 	public int getZmax()
 	{
 		return max.z;
 	}
 	
+	/**
+	 * Method getZmin.
+	 * @return int * @see lineage2.commons.geometry.Shape#getZmin()
+	 */
 	@Override
 	public int getZmin()
 	{
 		return min.z;
 	}
 	
+	/**
+	 * Method getRandomLoc.
+	 * @param territory Territory
+	 * @return Location
+	 */
 	public static Location getRandomLoc(Territory territory)
 	{
 		return getRandomLoc(territory, 0);
 	}
 	
+	/**
+	 * Method getRandomLoc.
+	 * @param territory Territory
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location getRandomLoc(Territory territory, int geoIndex)
 	{
 		Location pos = new Location();
@@ -220,6 +318,11 @@ public class Territory implements Shape, SpawnRange
 		return pos;
 	}
 	
+	/**
+	 * Method getRandomLoc.
+	 * @param geoIndex int
+	 * @return Location * @see lineage2.gameserver.templates.spawn.SpawnRange#getRandomLoc(int)
+	 */
 	@Override
 	public Location getRandomLoc(int geoIndex)
 	{

@@ -16,13 +16,24 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Summon;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SummonAI extends PlayableAI
 {
+	/**
+	 * Constructor for SummonAI.
+	 * @param actor Summon
+	 */
 	public SummonAI(Summon actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 */
 	@Override
 	protected void thinkActive()
 	{
@@ -42,6 +53,10 @@ public class SummonAI extends PlayableAI
 		super.thinkActive();
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 * @param checkRange boolean
+	 */
 	@Override
 	protected void thinkAttack(boolean checkRange)
 	{
@@ -53,6 +68,11 @@ public class SummonAI extends PlayableAI
 		super.thinkAttack(checkRange);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -64,6 +84,10 @@ public class SummonAI extends PlayableAI
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return Summon
+	 */
 	@Override
 	public Summon getActor()
 	{

@@ -33,15 +33,29 @@ import lineage2.gameserver.templates.spawn.SpawnTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SpawnManager
 {
+	/**
+	 * @author Mobius
+	 */
 	private class Listeners implements OnDayNightChangeListener
 	{
+		/**
+		 * Constructor for Listeners.
+		 */
 		public Listeners()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onDay.
+		 * @see lineage2.gameserver.listener.game.OnDayNightChangeListener#onDay()
+		 */
 		@Override
 		public void onDay()
 		{
@@ -49,6 +63,10 @@ public class SpawnManager
 			spawn(PeriodOfDay.DAY.name());
 		}
 		
+		/**
+		 * Method onNight.
+		 * @see lineage2.gameserver.listener.game.OnDayNightChangeListener#onNight()
+		 */
 		@Override
 		public void onNight()
 		{
@@ -57,16 +75,35 @@ public class SpawnManager
 		}
 	}
 	
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SpawnManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static SpawnManager _instance = new SpawnManager();
+	/**
+	 * Field _spawns.
+	 */
 	private final Map<String, List<Spawner>> _spawns = new ConcurrentHashMap<>();
+	/**
+	 * Field _listeners.
+	 */
 	private final Listeners _listeners = new Listeners();
 	
+	/**
+	 * Method getInstance.
+	 * @return SpawnManager
+	 */
 	public static SpawnManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for SpawnManager.
+	 */
 	private SpawnManager()
 	{
 		for (Map.Entry<String, List<SpawnTemplate>> entry : SpawnHolder.getInstance().getSpawns().entrySet())
@@ -76,6 +113,12 @@ public class SpawnManager
 		GameTimeController.getInstance().addListener(_listeners);
 	}
 	
+	/**
+	 * Method fillSpawn.
+	 * @param group String
+	 * @param templateList List<SpawnTemplate>
+	 * @return List<Spawner>
+	 */
 	public List<Spawner> fillSpawn(String group, List<SpawnTemplate> templateList)
 	{
 		if (Config.DONTLOADSPAWN)
@@ -111,6 +154,9 @@ public class SpawnManager
 		return spawnerList;
 	}
 	
+	/**
+	 * Method spawnAll.
+	 */
 	public void spawnAll()
 	{
 		spawn(PeriodOfDay.NONE.name());
@@ -124,6 +170,10 @@ public class SpawnManager
 		}
 	}
 	
+	/**
+	 * Method spawn.
+	 * @param group String
+	 */
 	public void spawn(String group)
 	{
 		List<Spawner> spawnerList = _spawns.get(group);
@@ -143,6 +193,10 @@ public class SpawnManager
 		_log.info("SpawnManager: spawned " + npcSpawnCount + " npc; spawns: " + spawnerList.size() + "; group: " + group);
 	}
 	
+	/**
+	 * Method despawn.
+	 * @param group String
+	 */
 	public void despawn(String group)
 	{
 		List<Spawner> spawnerList = _spawns.get(group);
@@ -156,12 +210,20 @@ public class SpawnManager
 		}
 	}
 	
+	/**
+	 * Method getSpawners.
+	 * @param group String
+	 * @return List<Spawner>
+	 */
 	public List<Spawner> getSpawners(String group)
 	{
 		List<Spawner> list = _spawns.get(group);
 		return list == null ? Collections.<Spawner> emptyList() : list;
 	}
 	
+	/**
+	 * Method reloadAll.
+	 */
 	public void reloadAll()
 	{
 		RaidBossSpawnManager.getInstance().cleanUp();

@@ -23,12 +23,29 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Transformation extends Skill
 {
+	/**
+	 * Field useSummon.
+	 */
 	public final boolean useSummon;
+	/**
+	 * Field isDisguise.
+	 */
 	public final boolean isDisguise;
+	/**
+	 * Field transformationName.
+	 */
 	public final String transformationName;
 	
+	/**
+	 * Constructor for Transformation.
+	 * @param set StatsSet
+	 */
 	public Transformation(StatsSet set)
 	{
 		super(set);
@@ -37,6 +54,15 @@ public class Transformation extends Skill
 		transformationName = set.getString("transformationName", null);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(final Creature activeChar, final Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -88,6 +114,11 @@ public class Transformation extends Skill
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

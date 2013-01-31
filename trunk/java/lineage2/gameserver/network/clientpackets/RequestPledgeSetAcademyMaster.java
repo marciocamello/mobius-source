@@ -20,12 +20,28 @@ import lineage2.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 {
+	/**
+	 * Field _mode.
+	 */
 	private int _mode;
+	/**
+	 * Field _sponsorName.
+	 */
 	private String _sponsorName;
+	/**
+	 * Field _apprenticeName.
+	 */
 	private String _apprenticeName;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -34,6 +50,9 @@ public class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 		_apprenticeName = readS(16);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

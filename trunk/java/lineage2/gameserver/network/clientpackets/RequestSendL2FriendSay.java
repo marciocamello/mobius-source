@@ -18,11 +18,24 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.L2FriendSay;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestSendL2FriendSay extends L2GameClientPacket
 {
+	/**
+	 * Field _message.
+	 */
 	private String _message;
+	/**
+	 * Field _reciever.
+	 */
 	private String _reciever;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -30,6 +43,9 @@ public class RequestSendL2FriendSay extends L2GameClientPacket
 		_reciever = readS(16);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

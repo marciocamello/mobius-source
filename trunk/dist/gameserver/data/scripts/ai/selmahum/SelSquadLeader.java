@@ -21,27 +21,60 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SelSquadLeader extends Fighter
 {
+	/**
+	 * Field isBusy.
+	 */
 	private boolean isBusy;
+	/**
+	 * Field isImmobilized.
+	 */
 	private boolean isImmobilized;
+	/**
+	 * Field busyTimeout.
+	 */
 	private long busyTimeout = 0;
+	/**
+	 * Field idleTimeout.
+	 */
 	private long idleTimeout = 0;
+	/**
+	 * Field phrase.
+	 */
 	private static final NpcString[] phrase =
 	{
 		NpcString.COME_AND_EAT,
 		NpcString.LOOKS_DELICIOUS,
 		NpcString.LETS_GO_EAT
 	};
+	/**
+	 * Field NPC_ID_FIRE.
+	 */
 	private static int NPC_ID_FIRE = 18927;
+	/**
+	 * Field NPC_ID_FIRE_FEED.
+	 */
 	private static int NPC_ID_FIRE_FEED = 18933;
 	
+	/**
+	 * Constructor for SelSquadLeader.
+	 * @param actor NpcInstance
+	 */
 	public SelSquadLeader(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = 6000;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -95,6 +128,9 @@ public class SelSquadLeader extends Fighter
 		return super.thinkActive();
 	}
 	
+	/**
+	 * Method wakeUp.
+	 */
 	private void wakeUp()
 	{
 		NpcInstance actor = getActor();
@@ -114,6 +150,9 @@ public class SelSquadLeader extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
@@ -128,6 +167,9 @@ public class SelSquadLeader extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onIntentionActive.
+	 */
 	@Override
 	protected void onIntentionActive()
 	{
@@ -135,6 +177,10 @@ public class SelSquadLeader extends Fighter
 		super.onIntentionActive();
 	}
 	
+	/**
+	 * Method onIntentionAttack.
+	 * @param target Creature
+	 */
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
@@ -142,12 +188,21 @@ public class SelSquadLeader extends Fighter
 		super.onIntentionAttack(target);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method returnHome.
+	 * @param clearAggro boolean
+	 * @param teleport boolean
+	 */
 	@Override
 	protected void returnHome(boolean clearAggro, boolean teleport)
 	{

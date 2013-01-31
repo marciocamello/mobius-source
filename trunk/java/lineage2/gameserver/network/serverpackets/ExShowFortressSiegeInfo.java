@@ -15,12 +15,29 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.entity.events.impl.FortressSiegeEvent;
 import lineage2.gameserver.model.entity.residence.Fortress;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowFortressSiegeInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _fortressId.
+	 */
 	private final int _fortressId;
+	/**
+	 * Field _commandersMax.
+	 */
 	private final int _commandersMax;
+	/**
+	 * Field _commandersCurrent.
+	 */
 	private int _commandersCurrent;
 	
+	/**
+	 * Constructor for ExShowFortressSiegeInfo.
+	 * @param fortress Fortress
+	 */
 	public ExShowFortressSiegeInfo(Fortress fortress)
 	{
 		_fortressId = fortress.getId();
@@ -38,6 +55,9 @@ public class ExShowFortressSiegeInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

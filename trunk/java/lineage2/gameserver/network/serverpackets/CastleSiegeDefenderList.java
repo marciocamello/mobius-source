@@ -25,15 +25,41 @@ import lineage2.gameserver.model.pledge.Clan;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleSiegeDefenderList extends L2GameServerPacket
 {
+	/**
+	 * Field OWNER.
+	 */
 	public static int OWNER = 1;
+	/**
+	 * Field WAITING.
+	 */
 	public static int WAITING = 2;
+	/**
+	 * Field ACCEPTED.
+	 */
 	public static int ACCEPTED = 3;
+	/**
+	 * Field REFUSE.
+	 */
 	public static int REFUSE = 4;
+	/**
+	 * Field _registrationValid. Field _id.
+	 */
 	private final int _id, _registrationValid;
+	/**
+	 * Field _defenderClans.
+	 */
 	private List<DefenderClan> _defenderClans = Collections.emptyList();
 	
+	/**
+	 * Constructor for CastleSiegeDefenderList.
+	 * @param castle Castle
+	 */
 	public CastleSiegeDefenderList(Castle castle)
 	{
 		_id = castle.getId();
@@ -60,6 +86,9 @@ public class CastleSiegeDefenderList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -96,12 +125,30 @@ public class CastleSiegeDefenderList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class DefenderClan
 	{
+		/**
+		 * Field _clan.
+		 */
 		final Clan _clan;
+		/**
+		 * Field _type.
+		 */
 		final int _type;
+		/**
+		 * Field _time.
+		 */
 		final int _time;
 		
+		/**
+		 * Constructor for DefenderClan.
+		 * @param clan Clan
+		 * @param type int
+		 * @param time int
+		 */
 		public DefenderClan(Clan clan, int type, int time)
 		{
 			_clan = clan;

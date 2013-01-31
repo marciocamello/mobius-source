@@ -15,13 +15,35 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GMViewItemList extends L2GameServerPacket
 {
+	/**
+	 * Field _size.
+	 */
 	private final int _size;
+	/**
+	 * Field _items.
+	 */
 	private final ItemInstance[] _items;
+	/**
+	 * Field _limit.
+	 */
 	private final int _limit;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
 	
+	/**
+	 * Constructor for GMViewItemList.
+	 * @param cha Player
+	 * @param items ItemInstance[]
+	 * @param size int
+	 */
 	public GMViewItemList(Player cha, ItemInstance[] items, int size)
 	{
 		_size = size;
@@ -30,6 +52,9 @@ public class GMViewItemList extends L2GameServerPacket
 		_limit = cha.getInventoryLimit();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

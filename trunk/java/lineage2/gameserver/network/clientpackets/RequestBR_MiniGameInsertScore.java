@@ -16,16 +16,29 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.instancemanager.games.MiniGameScoreManager;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestBR_MiniGameInsertScore extends L2GameClientPacket
 {
+	/**
+	 * Field _score.
+	 */
 	private int _score;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_score = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -20,36 +20,72 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EdwinFollower extends DefaultAI
 {
+	/**
+	 * Field EDWIN_ID. (value is 32072)
+	 */
 	private static final int EDWIN_ID = 32072;
+	/**
+	 * Field DRIFT_DISTANCE. (value is 200)
+	 */
 	private static final int DRIFT_DISTANCE = 200;
+	/**
+	 * Field _wait_timeout.
+	 */
 	private long _wait_timeout = 0;
+	/**
+	 * Field _edwinRef.
+	 */
 	private HardReference<? extends Creature> _edwinRef = HardReferences.emptyRef();
 	
+	/**
+	 * Constructor for EdwinFollower.
+	 * @param actor NpcInstance
+	 */
 	public EdwinFollower(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method randomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomAnimation()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -82,11 +118,21 @@ public class EdwinFollower extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

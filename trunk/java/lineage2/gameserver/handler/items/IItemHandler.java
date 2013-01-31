@@ -20,8 +20,15 @@ import lineage2.gameserver.utils.Log;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IItemHandler
 {
+	/**
+	 * Field NULL.
+	 */
 	public static final IItemHandler NULL = new IItemHandler()
 	{
 		@Override
@@ -63,11 +70,35 @@ public interface IItemHandler
 		}
 	};
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl);
 	
+	/**
+	 * Method dropItem.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param count long
+	 * @param loc Location
+	 */
 	public void dropItem(Player player, ItemInstance item, long count, Location loc);
 	
+	/**
+	 * Method pickupItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	public boolean pickupItem(Playable playable, ItemInstance item);
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[]
+	 */
 	public int[] getItemIds();
 }

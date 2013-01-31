@@ -19,20 +19,40 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import quests._111_ElrokianHuntersProof;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AsamahInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field ElrokianTrap. (value is 8763)
+	 */
 	private static final int ElrokianTrap = 8763;
+	/**
+	 * Field TrapStone. (value is 8764)
+	 */
 	private static final int TrapStone = 8764;
 	
+	/**
+	 * Constructor for AsamahInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public AsamahInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

@@ -18,25 +18,55 @@ import java.sql.SQLException;
 import lineage2.commons.dbcp.BasicDataSource;
 import lineage2.gameserver.Config;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DatabaseFactory extends BasicDataSource
 {
+	/**
+	 * Field _instance.
+	 */
 	private static DatabaseFactory _instance = new DatabaseFactory();
 	
+	/**
+	 * Method getInstance.
+	 * @return DatabaseFactory
+	 */
 	public static DatabaseFactory getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for DatabaseFactory.
+	 */
 	public DatabaseFactory()
 	{
 		super(Config.DATABASE_DRIVER, Config.DATABASE_URL, Config.DATABASE_LOGIN, Config.DATABASE_PASSWORD, Config.DATABASE_MAX_CONNECTIONS, Config.DATABASE_MAX_CONNECTIONS, Config.DATABASE_MAX_IDLE_TIMEOUT, Config.DATABASE_IDLE_TEST_PERIOD, false);
 	}
 	
+	/**
+	 * Constructor for DatabaseFactory.
+	 * @param driver String
+	 * @param url String
+	 * @param login String
+	 * @param pass String
+	 * @param maxconn int
+	 * @param maxIdle int
+	 * @param idleTime int
+	 * @param idleTest int
+	 * @param prepared boolean
+	 */
 	public DatabaseFactory(String driver, String url, String login, String pass, int maxconn, int maxIdle, int idleTime, int idleTest, boolean prepared)
 	{
 		super(driver, url, login, pass, maxconn, maxIdle, idleTime, idleTest, prepared);
 	}
 	
+	/**
+	 * Method getConnection.
+	 * @return Connection * @throws SQLException * @see javax.sql.DataSource#getConnection()
+	 */
 	@Override
 	public Connection getConnection() throws SQLException
 	{

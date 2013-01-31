@@ -14,12 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EtcStatusUpdate extends L2GameServerPacket
 {
+	/**
+	 * Field DangerArea. Field MessageRefusal. Field WeightPenalty. Field IncreasedForce.
+	 */
 	private final int IncreasedForce, WeightPenalty, MessageRefusal, DangerArea;
+	/**
+	 * Field CharmOfCourage. Field weaponExpertisePenalty. Field armorExpertisePenalty.
+	 */
 	private final int armorExpertisePenalty, weaponExpertisePenalty, CharmOfCourage;
+	/**
+	 * Field ConsumedSouls.
+	 */
 	private final int ConsumedSouls;
 	
+	/**
+	 * Constructor for EtcStatusUpdate.
+	 * @param player Player
+	 */
 	public EtcStatusUpdate(Player player)
 	{
 		IncreasedForce = player.getIncreasedForce();
@@ -32,6 +49,9 @@ public class EtcStatusUpdate extends L2GameServerPacket
 		ConsumedSouls = player.getConsumedSouls();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

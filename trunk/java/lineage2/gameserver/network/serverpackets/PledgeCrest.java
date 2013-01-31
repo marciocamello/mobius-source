@@ -12,12 +12,30 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeCrest extends L2GameServerPacket
 {
+	/**
+	 * Field _crestId.
+	 */
 	private final int _crestId;
+	/**
+	 * Field _crestSize.
+	 */
 	private final int _crestSize;
+	/**
+	 * Field _data.
+	 */
 	private final byte[] _data;
 	
+	/**
+	 * Constructor for PledgeCrest.
+	 * @param crestId int
+	 * @param data byte[]
+	 */
 	public PledgeCrest(int crestId, byte[] data)
 	{
 		_crestId = crestId;
@@ -25,6 +43,9 @@ public class PledgeCrest extends L2GameServerPacket
 		_crestSize = _data.length;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

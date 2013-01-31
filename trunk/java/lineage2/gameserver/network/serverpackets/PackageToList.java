@@ -17,15 +17,29 @@ import java.util.Map;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PackageToList extends L2GameServerPacket
 {
+	/**
+	 * Field _characters.
+	 */
 	private Map<Integer, String> _characters = Collections.emptyMap();
 	
+	/**
+	 * Constructor for PackageToList.
+	 * @param player Player
+	 */
 	public PackageToList(Player player)
 	{
 		_characters = player.getAccountChars();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

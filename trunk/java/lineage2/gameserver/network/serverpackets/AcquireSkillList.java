@@ -17,20 +17,60 @@ import java.util.List;
 
 import lineage2.gameserver.model.base.AcquireType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AcquireSkillList extends L2GameServerPacket
 {
+	/**
+	 * Field _type.
+	 */
 	private final AcquireType _type;
+	/**
+	 * Field _skills.
+	 */
 	private final List<Skill> _skills;
 	
+	/**
+	 * @author Mobius
+	 */
 	class Skill
 	{
+		/**
+		 * Field id.
+		 */
 		public int id;
+		/**
+		 * Field nextLevel.
+		 */
 		public int nextLevel;
+		/**
+		 * Field maxLevel.
+		 */
 		public int maxLevel;
+		/**
+		 * Field cost.
+		 */
 		public int cost;
+		/**
+		 * Field requirements.
+		 */
 		public int requirements;
+		/**
+		 * Field subUnit.
+		 */
 		public int subUnit;
 		
+		/**
+		 * Constructor for Skill.
+		 * @param id int
+		 * @param nextLevel int
+		 * @param maxLevel int
+		 * @param cost int
+		 * @param requirements int
+		 * @param subUnit int
+		 */
 		Skill(int id, int nextLevel, int maxLevel, int cost, int requirements, int subUnit)
 		{
 			this.id = id;
@@ -42,22 +82,47 @@ public class AcquireSkillList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Constructor for AcquireSkillList.
+	 * @param type AcquireType
+	 * @param size int
+	 */
 	public AcquireSkillList(AcquireType type, int size)
 	{
 		_skills = new ArrayList<>(size);
 		_type = type;
 	}
 	
+	/**
+	 * Method addSkill.
+	 * @param id int
+	 * @param nextLevel int
+	 * @param maxLevel int
+	 * @param Cost int
+	 * @param requirements int
+	 * @param subUnit int
+	 */
 	public void addSkill(int id, int nextLevel, int maxLevel, int Cost, int requirements, int subUnit)
 	{
 		_skills.add(new Skill(id, nextLevel, maxLevel, Cost, requirements, subUnit));
 	}
 	
+	/**
+	 * Method addSkill.
+	 * @param id int
+	 * @param nextLevel int
+	 * @param maxLevel int
+	 * @param Cost int
+	 * @param requirements int
+	 */
 	public void addSkill(int id, int nextLevel, int maxLevel, int Cost, int requirements)
 	{
 		_skills.add(new Skill(id, nextLevel, maxLevel, Cost, requirements, 0));
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

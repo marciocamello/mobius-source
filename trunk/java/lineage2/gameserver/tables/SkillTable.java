@@ -30,20 +30,49 @@ import lineage2.gameserver.skills.SkillsEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SkillTable
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SkillTable.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final SkillTable _instance = new SkillTable();
+	/**
+	 * Field identifySkills.
+	 */
 	public Map<Integer, Integer> identifySkills = new HashMap<>();
+	/**
+	 * Field _skills.
+	 */
 	private Map<Integer, Skill> _skills;
+	/**
+	 * Field _maxLevelsTable.
+	 */
 	private TIntIntHashMap _maxLevelsTable;
+	/**
+	 * Field _baseLevelsTable.
+	 */
 	private TIntIntHashMap _baseLevelsTable;
 	
+	/**
+	 * Method getInstance.
+	 * @return SkillTable
+	 */
 	public static final SkillTable getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method load.
+	 */
 	public void load()
 	{
 		_skills = SkillsEngine.getInstance().loadAllSkills();
@@ -51,36 +80,69 @@ public class SkillTable
 		loadAlfaData();
 	}
 	
+	/**
+	 * Method reload.
+	 */
 	public void reload()
 	{
 		load();
 	}
 	
+	/**
+	 * Method getInfo.
+	 * @param skillId int
+	 * @param level int
+	 * @return Skill
+	 */
 	public Skill getInfo(int skillId, int level)
 	{
 		return _skills.get(getSkillHashCode(skillId, level));
 	}
 	
+	/**
+	 * Method getMaxLevel.
+	 * @param skillId int
+	 * @return int
+	 */
 	public int getMaxLevel(int skillId)
 	{
 		return _maxLevelsTable.get(skillId);
 	}
 	
+	/**
+	 * Method getBaseLevel.
+	 * @param skillId int
+	 * @return int
+	 */
 	public int getBaseLevel(int skillId)
 	{
 		return _baseLevelsTable.get(skillId);
 	}
 	
+	/**
+	 * Method getSkillHashCode.
+	 * @param skill Skill
+	 * @return int
+	 */
 	public static int getSkillHashCode(Skill skill)
 	{
 		return SkillTable.getSkillHashCode(skill.getId(), skill.getLevel());
 	}
 	
+	/**
+	 * Method getSkillHashCode.
+	 * @param skillId int
+	 * @param skillLevel int
+	 * @return int
+	 */
 	public static int getSkillHashCode(int skillId, int skillLevel)
 	{
 		return (skillId * 1000) + skillLevel;
 	}
 	
+	/**
+	 * Method makeLevelsTable.
+	 */
 	private void makeLevelsTable()
 	{
 		_maxLevelsTable = new TIntIntHashMap();
@@ -101,6 +163,9 @@ public class SkillTable
 		}
 	}
 	
+	/**
+	 * Method loadAlfaData.
+	 */
 	public void loadAlfaData()
 	{
 		LineNumberReader lnr = null;
@@ -112,7 +177,7 @@ public class SkillTable
 			loop:
 			while ((line = lnr.readLine()) != null)
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				if ((line.trim().length() == 0) || ((line.length() > 0) && (line.charAt(0) == '#')))
 				{
 					continue;
 				}
@@ -213,6 +278,11 @@ public class SkillTable
 		_log.info("Load ASC skills...");
 	}
 	
+	/**
+	 * Method getInt.
+	 * @param name String
+	 * @return int
+	 */
 	private static int getInt(String name)
 	{
 		String[] args = name.split("=", -1);

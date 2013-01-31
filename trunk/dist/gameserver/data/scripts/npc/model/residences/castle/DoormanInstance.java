@@ -21,14 +21,26 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DoormanInstance extends npc.model.residences.DoormanInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _locs.
+	 */
 	private final Location[] _locs = new Location[2];
 	
+	/**
+	 * Constructor for DoormanInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public DoormanInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -42,6 +54,11 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 		}
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -98,6 +115,12 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -116,6 +139,11 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 	
+	/**
+	 * Method getCond.
+	 * @param player Player
+	 * @return int
+	 */
 	@Override
 	protected int getCond(Player player)
 	{
@@ -132,12 +160,20 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 		return COND_FAIL;
 	}
 	
+	/**
+	 * Method getOpenPriv.
+	 * @return int
+	 */
 	@Override
 	public int getOpenPriv()
 	{
 		return Clan.CP_CS_ENTRY_EXIT;
 	}
 	
+	/**
+	 * Method getResidence.
+	 * @return Residence
+	 */
 	@Override
 	public Residence getResidence()
 	{

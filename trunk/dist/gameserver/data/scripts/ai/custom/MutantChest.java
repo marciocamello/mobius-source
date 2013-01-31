@@ -18,21 +18,33 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MutantChest extends Fighter
 {
+	/**
+	 * Constructor for MutantChest.
+	 * @param actor NpcInstance
+	 */
 	public MutantChest(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
 		NpcInstance actor = getActor();
 		if (Rnd.chance(30))
 		{
-			Functions.npcSay(actor, "Враги! Всюду враги! Все сюда, враги здесь!");
+			Functions.npcSay(actor, "Враги! В�?�?ду враги! В�?е �?�?да, враги зде�?�?!");
 		}
 		actor.deleteMe();
 	}

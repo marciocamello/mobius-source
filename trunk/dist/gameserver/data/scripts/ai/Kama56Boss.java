@@ -27,16 +27,34 @@ import lineage2.gameserver.model.instances.MinionInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Kama56Boss extends Fighter
 {
+	/**
+	 * Field _nextOrderTime.
+	 */
 	private long _nextOrderTime = 0;
+	/**
+	 * Field _lastMinionsTargetRef.
+	 */
 	private HardReference<Player> _lastMinionsTargetRef = HardReferences.emptyRef();
 	
+	/**
+	 * Constructor for Kama56Boss.
+	 * @param actor NpcInstance
+	 */
 	public Kama56Boss(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method sendOrderToMinions.
+	 * @param actor NpcInstance
+	 */
 	private void sendOrderToMinions(NpcInstance actor)
 	{
 		if (!actor.isInCombat())
@@ -58,7 +76,7 @@ public class Kama56Boss extends Fighter
 			{
 				for (MinionInstance m : ml.getAliveMinions())
 				{
-					if (m.getAI().getAttackTarget() != old_target)
+					if (!m.getAI().getAttackTarget().equals(old_target))
 					{
 						m.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, old_target, 10000000);
 					}
@@ -96,6 +114,9 @@ public class Kama56Boss extends Fighter
 		}
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{

@@ -23,32 +23,58 @@ import lineage2.gameserver.templates.StatsSet;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class StaticObjectParser extends AbstractFileParser<StaticObjectHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static StaticObjectParser _instance = new StaticObjectParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return StaticObjectParser
+	 */
 	public static StaticObjectParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for StaticObjectParser.
+	 */
 	private StaticObjectParser()
 	{
 		super(StaticObjectHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/other/staticobjects.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "staticobjects.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 */
 	@Override
 	protected void readData(Element rootElement)
 	{

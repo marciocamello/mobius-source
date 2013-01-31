@@ -17,14 +17,38 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.stats.funcs.Func;
 import lineage2.gameserver.stats.funcs.FuncOwner;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class Calculator
 {
+	/**
+	 * Field _functions.
+	 */
 	private Func[] _functions;
+	/**
+	 * Field _base.
+	 */
 	private double _base;
+	/**
+	 * Field _last.
+	 */
 	private double _last;
+	/**
+	 * Field _stat.
+	 */
 	public final Stats _stat;
+	/**
+	 * Field _character.
+	 */
 	public final Creature _character;
 	
+	/**
+	 * Constructor for Calculator.
+	 * @param stat Stats
+	 * @param character Creature
+	 */
 	public Calculator(Stats stat, Creature character)
 	{
 		_stat = stat;
@@ -32,17 +56,29 @@ public final class Calculator
 		_functions = Func.EMPTY_FUNC_ARRAY;
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	public int size()
 	{
 		return _functions.length;
 	}
 	
+	/**
+	 * Method addFunc.
+	 * @param f Func
+	 */
 	public void addFunc(Func f)
 	{
 		_functions = ArrayUtils.add(_functions, f);
 		ArrayUtils.eqSort(_functions);
 	}
 	
+	/**
+	 * Method removeFunc.
+	 * @param f Func
+	 */
 	public void removeFunc(Func f)
 	{
 		_functions = ArrayUtils.remove(_functions, f);
@@ -56,6 +92,10 @@ public final class Calculator
 		}
 	}
 	
+	/**
+	 * Method removeOwner.
+	 * @param owner Object
+	 */
 	public void removeOwner(Object owner)
 	{
 		Func[] tmp = _functions;
@@ -68,6 +108,10 @@ public final class Calculator
 		}
 	}
 	
+	/**
+	 * Method calc.
+	 * @param env Env
+	 */
 	public void calc(Env env)
 	{
 		Func[] funcs = _functions;
@@ -105,16 +149,28 @@ public final class Calculator
 		}
 	}
 	
+	/**
+	 * Method getFunctions.
+	 * @return Func[]
+	 */
 	public Func[] getFunctions()
 	{
 		return _functions;
 	}
 	
+	/**
+	 * Method getBase.
+	 * @return double
+	 */
 	public double getBase()
 	{
 		return _base;
 	}
 	
+	/**
+	 * Method getLast.
+	 * @return double
+	 */
 	public double getLast()
 	{
 		return _last;

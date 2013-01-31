@@ -18,20 +18,40 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import bosses.ValakasManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ValakasGatekeeperInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field FLOATING_STONE. (value is 7267)
+	 */
 	private static final int FLOATING_STONE = 7267;
+	/**
+	 * Field TELEPORT_POSITION1.
+	 */
 	private static final Location TELEPORT_POSITION1 = new Location(183831, -115457, -3296);
 	
+	/**
+	 * Constructor for ValakasGatekeeperInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ValakasGatekeeperInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

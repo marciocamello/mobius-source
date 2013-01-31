@@ -35,43 +35,137 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class ArenaTemplate extends Functions
 {
+	/**
+	 * Field _managerId.
+	 */
 	protected int _managerId;
+	/**
+	 * Field _className.
+	 */
 	protected String _className;
+	/**
+	 * Field _chatName.
+	 */
 	protected String _chatName;
+	/**
+	 * Field _creatorId.
+	 */
 	protected Long _creatorId;
+	/**
+	 * Field _status.
+	 */
 	protected int _status = 0;
+	/**
+	 * Field _battleType.
+	 */
 	protected int _battleType = 1;
+	/**
+	 * Field _team1exp.
+	 */
 	protected int _team1exp = 0;
+	/**
+	 * Field _team2exp.
+	 */
 	protected int _team2exp = 0;
+	/**
+	 * Field _price.
+	 */
 	protected int _price = 10000;
+	/**
+	 * Field _team1count.
+	 */
 	protected int _team1count = 1;
+	/**
+	 * Field _team2count.
+	 */
 	protected int _team2count = 1;
+	/**
+	 * Field _team1min.
+	 */
 	protected int _team1min = 1;
+	/**
+	 * Field _team1max.
+	 */
 	protected int _team1max = 85;
+	/**
+	 * Field _team2min.
+	 */
 	protected int _team2min = 1;
+	/**
+	 * Field _team2max.
+	 */
 	protected int _team2max = 85;
+	/**
+	 * Field _timeToStart.
+	 */
 	protected int _timeToStart = 10;
+	/**
+	 * Field _timeOutTask.
+	 */
 	protected boolean _timeOutTask;
+	/**
+	 * Field _team1points.
+	 */
 	protected List<Location> _team1points;
+	/**
+	 * Field _team2points.
+	 */
 	protected List<Location> _team2points;
+	/**
+	 * Field _team1list.
+	 */
 	protected List<Long> _team1list;
+	/**
+	 * Field _team2list.
+	 */
 	protected List<Long> _team2list;
+	/**
+	 * Field _team1live.
+	 */
 	protected List<Long> _team1live;
+	/**
+	 * Field _team2live.
+	 */
 	protected List<Long> _team2live;
+	/**
+	 * Field _expToReturn.
+	 */
 	protected Map<Integer, Integer> _expToReturn;
+	/**
+	 * Field _classToReturn.
+	 */
 	protected Map<Integer, Integer> _classToReturn;
+	/**
+	 * Field _zone.
+	 */
 	protected Zone _zone;
+	/**
+	 * Field _zoneListener.
+	 */
 	protected ZoneListener _zoneListener;
 	
+	/**
+	 * Method onLoad.
+	 */
 	protected abstract void onLoad();
 	
+	/**
+	 * Method onReload.
+	 */
 	protected abstract void onReload();
 	
+	/**
+	 * Method template_stop.
+	 */
 	public void template_stop()
 	{
-		say("Бой прерван по техническим причинам, ставки возвращены");
+		say("Бой прерван по техниче�?ким причинам, �?тавки возвращены");
 		if (_battleType == 1)
 		{
 			returnAdenaToTeams();
@@ -86,11 +180,15 @@ public abstract class ArenaTemplate extends Functions
 		_timeOutTask = false;
 	}
 	
+	/**
+	 * Method template_create1.
+	 * @param player Player
+	 */
 	public void template_create1(Player player)
 	{
 		if (_status > 0)
 		{
-			show("Дождитесь окончания боя", player);
+			show("Дождите�?�? окончани�? бо�?", player);
 		}
 		else
 		{
@@ -98,11 +196,15 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method template_create2.
+	 * @param player Player
+	 */
 	public void template_create2(Player player)
 	{
 		if (_status > 0)
 		{
-			show("Дождитесь окончания боя", player);
+			show("Дождите�?�? окончани�? бо�?", player);
 		}
 		else
 		{
@@ -110,11 +212,15 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method template_register.
+	 * @param player Player
+	 */
 	public void template_register(Player player)
 	{
 		if (_status > 1)
 		{
-			show("Дождитесь окончания боя", player);
+			show("Дождите�?�? окончани�? бо�?", player);
 		}
 		else
 		{
@@ -122,6 +228,11 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method template_check1.
+	 * @param player Player
+	 * @param var String[]
+	 */
 	public void template_check1(Player player, String[] var)
 	{
 		if (player.isDead())
@@ -130,12 +241,12 @@ public abstract class ArenaTemplate extends Functions
 		}
 		if (var.length != 8)
 		{
-			show("Некорректные данные", player);
+			show("�?екорректные данные", player);
 			return;
 		}
 		if (_status > 0)
 		{
-			show("Дождитесь окончания боя", player);
+			show("Дождите�?�? окончани�? бо�?", player);
 			return;
 		}
 		try
@@ -151,32 +262,32 @@ public abstract class ArenaTemplate extends Functions
 		}
 		catch (Exception e)
 		{
-			show("Некорректные данные", player);
+			show("�?екорректные данные", player);
 			return;
 		}
 		if ((_price < 10000) || (_price > 100000000))
 		{
-			show("Неправильная ставка", player);
+			show("�?еправил�?на�? �?тавка", player);
 			return;
 		}
 		if ((_team1count < 1) || (_team1count > 5) || (_team2count < 1) || (_team2count > 5))
 		{
-			show("Неправильный размер команды", player);
+			show("�?еправил�?ный размер команды", player);
 			return;
 		}
 		if ((_team1min < 1) || (_team1min > 85) || (_team2min < 1) || (_team2min > 85) || (_team1max < 1) || (_team1max > 85) || (_team2max < 1) || (_team2max > 85) || (_team1min > _team1max) || (_team2min > _team2max))
 		{
-			show("Неправильный уровень", player);
+			show("�?еправил�?ный уровен�?", player);
 			return;
 		}
 		if ((player.getLevel() < _team1min) || (player.getLevel() > _team1max))
 		{
-			show("Неправильный уровень", player);
+			show("�?еправил�?ный уровен�?", player);
 			return;
 		}
 		if ((_timeToStart < 1) || (_timeToStart > 10))
 		{
-			show("Неправильное время", player);
+			show("�?еправил�?ное врем�?", player);
 			return;
 		}
 		if (player.getAdena() < _price)
@@ -193,15 +304,20 @@ public abstract class ArenaTemplate extends Functions
 		_team1live.clear();
 		_team2live.clear();
 		_team1list.add(player.getStoredId());
-		say(player.getName() + " создал бой " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, ставка " + _price + "а, начало через " + _timeToStart + " мин");
+		say(player.getName() + " �?оздал бой " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, �?тавка " + _price + "а, начало через " + _timeToStart + " мин");
 		executeTask("events.arena." + _className, "announce", new Object[0], 60000);
 	}
 	
+	/**
+	 * Method template_check2.
+	 * @param player Player
+	 * @param var String[]
+	 */
 	public void template_check2(Player player, String[] var)
 	{
 		if (!Config.ALT_ARENA_EXP)
 		{
-			show("Эта опция недоступна", player);
+			show("Эта опци�? недо�?тупна", player);
 			return;
 		}
 		if (player.isDead())
@@ -210,12 +326,12 @@ public abstract class ArenaTemplate extends Functions
 		}
 		if (var.length != 7)
 		{
-			show("Некорректные данные", player);
+			show("�?екорректные данные", player);
 			return;
 		}
 		if (_status > 0)
 		{
-			show("Дождитесь окончания боя", player);
+			show("Дождите�?�? окончани�? бо�?", player);
 			return;
 		}
 		try
@@ -230,32 +346,32 @@ public abstract class ArenaTemplate extends Functions
 		}
 		catch (Exception e)
 		{
-			show("Некорректные данные", player);
+			show("�?екорректные данные", player);
 			return;
 		}
 		if ((_team1count < 1) || (_team1count > 5) || (_team2count < 1) || (_team2count > 5))
 		{
-			show("Неправильный размер команды", player);
+			show("�?еправил�?ный размер команды", player);
 			return;
 		}
 		if ((_team1min < 1) || (_team1min > 82) || (_team2min < 1) || (_team2min > 82) || (_team1max < 1) || (_team1max > 82) || (_team2max < 1) || (_team2max > 82) || (_team1min > _team1max) || (_team2min > _team2max))
 		{
-			show("Неправильный уровень", player);
+			show("�?еправил�?ный уровен�?", player);
 			return;
 		}
 		if (((player.getLevel() - _team1min) > 10) || ((_team1max - player.getLevel()) > 10) || ((player.getLevel() - _team2min) > 10) || ((_team2max - player.getLevel()) > 10))
 		{
-			show("Разница в уровнях не может быть более 10", player);
+			show("Разница в уровн�?х не может быт�? более 10", player);
 			return;
 		}
 		if ((player.getLevel() < _team1min) || (player.getLevel() > _team1max))
 		{
-			show("Неправильный уровень", player);
+			show("�?еправил�?ный уровен�?", player);
 			return;
 		}
 		if ((_timeToStart < 1) || (_timeToStart > 10))
 		{
-			show("Неправильное время", player);
+			show("�?еправил�?ное врем�?", player);
 			return;
 		}
 		_battleType = 2;
@@ -271,10 +387,15 @@ public abstract class ArenaTemplate extends Functions
 		_team1live.clear();
 		_team2live.clear();
 		_team1list.add(player.getStoredId());
-		say(player.getName() + " создал бой " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, ставка " + "опыт, начало через " + _timeToStart + " мин");
+		say(player.getName() + " �?оздал бой " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, �?тавка " + "опыт, начало через " + _timeToStart + " мин");
 		executeTask("events.arena." + _className, "announce", new Object[0], 60000);
 	}
 	
+	/**
+	 * Method template_register_check.
+	 * @param player Player
+	 * @param var String[]
+	 */
 	public void template_register_check(Player player, String[] var)
 	{
 		if (player.isDead())
@@ -283,12 +404,12 @@ public abstract class ArenaTemplate extends Functions
 		}
 		if (_status > 1)
 		{
-			show("Дождитесь окончания боя", player);
+			show("Дождите�?�? окончани�? бо�?", player);
 			return;
 		}
 		if (var.length != 1)
 		{
-			show("Некорректные данные", player);
+			show("�?екорректные данные", player);
 			return;
 		}
 		int _regTeam;
@@ -298,17 +419,17 @@ public abstract class ArenaTemplate extends Functions
 		}
 		catch (Exception e)
 		{
-			show("Некорректные данные", player);
+			show("�?екорректные данные", player);
 			return;
 		}
 		if ((_regTeam != 1) && (_regTeam != 2))
 		{
-			show("Неправильный номер команды, введите 1 или 2", player);
+			show("�?еправил�?ный номер команды, введите 1 или 2", player);
 			return;
 		}
 		if (_team1list.contains(player.getStoredId()) || _team2list.contains(player.getStoredId()))
 		{
-			show("Вы уже зарегистрированы", player);
+			show("Вы уже зареги�?трированы", player);
 			return;
 		}
 		if ((_battleType == 1) && (player.getAdena() < _price))
@@ -320,12 +441,12 @@ public abstract class ArenaTemplate extends Functions
 		{
 			if ((player.getLevel() < _team1min) || (player.getLevel() > _team1max))
 			{
-				show("Вы не подходите по уровню", player);
+				show("Вы не подходите по уровн�?", player);
 				return;
 			}
 			if (_team1list.size() >= _team1count)
 			{
-				show("Команда 1 переполнена", player);
+				show("�?оманда 1 переполнена", player);
 				return;
 			}
 			if (_battleType == 1)
@@ -337,10 +458,10 @@ public abstract class ArenaTemplate extends Functions
 				removeExp(player, 1);
 			}
 			_team1list.add(player.getStoredId());
-			say(player.getName() + " зарегистрировался за 1 команду");
+			say(player.getName() + " зареги�?трировал�?�? за 1 команду");
 			if ((_team1list.size() >= _team1count) && (_team2list.size() >= _team2count))
 			{
-				say("Команды готовы, старт через 1 минуту.");
+				say("�?оманды готовы, �?тарт через 1 минуту.");
 				_timeToStart = 1;
 			}
 		}
@@ -348,12 +469,12 @@ public abstract class ArenaTemplate extends Functions
 		{
 			if ((player.getLevel() < _team2min) || (player.getLevel() > _team2max))
 			{
-				show("Вы не подходите по уровню", player);
+				show("Вы не подходите по уровн�?", player);
 				return;
 			}
 			if (_team2list.size() >= _team2count)
 			{
-				show("Команда 2 переполнена", player);
+				show("�?оманда 2 переполнена", player);
 				return;
 			}
 			if (_battleType == 1)
@@ -365,15 +486,18 @@ public abstract class ArenaTemplate extends Functions
 				removeExp(player, 2);
 			}
 			_team2list.add(player.getStoredId());
-			say(player.getName() + " зарегистрировался за 2 команду");
+			say(player.getName() + " зареги�?трировал�?�? за 2 команду");
 			if ((_team1list.size() >= _team1count) && (_team2list.size() >= _team2count))
 			{
-				say("Команды готовы, старт через 1 минуту.");
+				say("�?оманды готовы, �?тарт через 1 минуту.");
 				_timeToStart = 1;
 			}
 		}
 	}
 	
+	/**
+	 * Method template_announce.
+	 */
 	public void template_announce()
 	{
 		Player creator = GameObjectsStorage.getAsPlayer(_creatorId);
@@ -384,17 +508,17 @@ public abstract class ArenaTemplate extends Functions
 		if (_timeToStart > 1)
 		{
 			_timeToStart--;
-			say(creator.getName() + " создал бой " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, ставка " + (_battleType == 1 ? _price + "а" : "опыт") + ", начало через " + _timeToStart + " мин");
+			say(creator.getName() + " �?оздал бой " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, �?тавка " + (_battleType == 1 ? _price + "а" : "опыт") + ", начало через " + _timeToStart + " мин");
 			executeTask("events.arena." + _className, "announce", new Object[0], 60000);
 		}
 		else if (_team2list.size() > 0)
 		{
-			say("Подготовка к бою");
+			say("�?одготовка к бо�?");
 			executeTask("events.arena." + _className, "prepare", new Object[0], 5000);
 		}
 		else
 		{
-			say("Бой не состоялся, нет противников");
+			say("Бой не �?о�?то�?л�?�?, нет противников");
 			_status = 0;
 			if (_battleType == 1)
 			{
@@ -408,6 +532,9 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method template_prepare.
+	 */
 	public void template_prepare()
 	{
 		if (_status != 1)
@@ -436,10 +563,13 @@ public abstract class ArenaTemplate extends Functions
 		clearArena();
 		paralyzeTeams();
 		teleportTeamsToArena();
-		say("Бой начнется через 15 секунд");
+		say("Бой начнет�?�? через 15 �?екунд");
 		executeTask("events.arena." + _className, "start", new Object[0], 15000);
 	}
 	
+	/**
+	 * Method template_start.
+	 */
 	public void template_start()
 	{
 		if (_status != 2)
@@ -457,6 +587,9 @@ public abstract class ArenaTemplate extends Functions
 		_timeOutTask = true;
 	}
 	
+	/**
+	 * Method clearArena.
+	 */
 	public void clearArena()
 	{
 		for (Creature cha : _zone.getObjects())
@@ -468,6 +601,10 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method checkTeams.
+	 * @return boolean
+	 */
 	public boolean checkTeams()
 	{
 		if (_team1live.isEmpty())
@@ -483,6 +620,9 @@ public abstract class ArenaTemplate extends Functions
 		return true;
 	}
 	
+	/**
+	 * Method paralyzeTeams.
+	 */
 	public void paralyzeTeams()
 	{
 		Skill revengeSkill = SkillTable.getInstance().getInfo(Skill.SKILL_RAID_CURSE, 1);
@@ -498,6 +638,9 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method unParalyzeTeams.
+	 */
 	public void unParalyzeTeams()
 	{
 		for (Player player : getPlayers(_team1list))
@@ -510,6 +653,9 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method teleportTeamsToArena.
+	 */
 	public void teleportTeamsToArena()
 	{
 		Integer n = 0;
@@ -528,6 +674,11 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method playerHasLost.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean playerHasLost(Player player)
 	{
 		_team1live.remove(player.getStoredId());
@@ -538,11 +689,15 @@ public abstract class ArenaTemplate extends Functions
 		return !checkTeams();
 	}
 	
+	/**
+	 * Method teamHasLost.
+	 * @param team_id Integer
+	 */
 	public void teamHasLost(Integer team_id)
 	{
 		if (team_id == 1)
 		{
-			say("Команда 2 победила");
+			say("�?оманда 2 победила");
 			if (_battleType == 1)
 			{
 				payAdenaToTeam(2);
@@ -554,7 +709,7 @@ public abstract class ArenaTemplate extends Functions
 		}
 		else
 		{
-			say("Команда 1 победила");
+			say("�?оманда 1 победила");
 			if (_battleType == 1)
 			{
 				payAdenaToTeam(1);
@@ -570,11 +725,14 @@ public abstract class ArenaTemplate extends Functions
 		_timeOutTask = false;
 	}
 	
+	/**
+	 * Method template_timeOut.
+	 */
 	public void template_timeOut()
 	{
 		if (_timeOutTask && (_status == 3))
 		{
-			say("Время истекло, ничья!");
+			say("Врем�? и�?текло, нич�?�?!");
 			if (_battleType == 1)
 			{
 				returnAdenaToTeams();
@@ -590,6 +748,10 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method payAdenaToTeam.
+	 * @param team_id Integer
+	 */
 	public void payAdenaToTeam(Integer team_id)
 	{
 		if (team_id == 1)
@@ -608,6 +770,10 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method payExpToTeam.
+	 * @param team_id Integer
+	 */
 	public void payExpToTeam(Integer team_id)
 	{
 		if (team_id == 1)
@@ -628,6 +794,9 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method returnAdenaToTeams.
+	 */
 	public void returnAdenaToTeams()
 	{
 		for (Player player : getPlayers(_team1list))
@@ -640,6 +809,9 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method returnExpToTeams.
+	 */
 	public void returnExpToTeams()
 	{
 		for (Player player : getPlayers(_team1list))
@@ -652,6 +824,9 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method clearTeams.
+	 */
 	public void clearTeams()
 	{
 		for (Player player : getPlayers(_team1list))
@@ -668,6 +843,11 @@ public abstract class ArenaTemplate extends Functions
 		_team2live.clear();
 	}
 	
+	/**
+	 * Method removeExp.
+	 * @param player Player
+	 * @param team int
+	 */
 	public void removeExp(Player player, int team)
 	{
 		int lostExp = Math.round(((Experience.LEVEL[player.getLevel() + 1] - Experience.LEVEL[player.getLevel()]) * 4) / 100);
@@ -684,6 +864,10 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method returnExp.
+	 * @param player Player
+	 */
 	public void returnExp(Player player)
 	{
 		int addExp = _expToReturn.get(player.getObjectId());
@@ -694,6 +878,11 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method addExp.
+	 * @param player Player
+	 * @param exp int
+	 */
 	public void addExp(Player player, int exp)
 	{
 		int classId = _classToReturn.get(player.getObjectId());
@@ -703,6 +892,11 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param self Creature
+	 * @param killer Creature
+	 */
 	protected void onDeath(Creature self, Creature killer)
 	{
 		if ((_status >= 2) && self.isPlayer() && (_team1list.contains(self.getStoredId()) || _team2list.contains(self.getStoredId())))
@@ -714,7 +908,7 @@ public abstract class ArenaTemplate extends Functions
 				say(kplayer.getName() + " убил " + player.getName());
 				if ((player.getTeam() == kplayer.getTeam()) || (!_team1list.contains(kplayer.getStoredId()) && !_team2list.contains(kplayer.getStoredId())))
 				{
-					say("Нарушение правил, игрок " + kplayer.getName() + " оштрафован на " + _price);
+					say("�?ару�?ение правил, игрок " + kplayer.getName() + " о�?трафован на " + _price);
 					kplayer.reduceAdena(_price, true);
 				}
 				playerHasLost(player);
@@ -727,6 +921,10 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method onPlayerExit.
+	 * @param player Player
+	 */
 	protected void onPlayerExit(Player player)
 	{
 		if ((player != null) && (_status > 0) && (_team1list.contains(player.getStoredId()) || _team2list.contains(player.getStoredId())))
@@ -735,10 +933,10 @@ public abstract class ArenaTemplate extends Functions
 			{
 				case 1:
 					removePlayer(player);
-					say(player.getName() + " дисквалифицирован");
+					say(player.getName() + " ди�?квалифицирован");
 					if (player.getStoredId() == _creatorId)
 					{
-						say("Бой прерван, ставки возвращены");
+						say("Бой прерван, �?тавки возвращены");
 						if (_battleType == 1)
 						{
 							returnAdenaToTeams();
@@ -755,18 +953,22 @@ public abstract class ArenaTemplate extends Functions
 					break;
 				case 2:
 					removePlayer(player);
-					say(player.getName() + " дисквалифицирован");
+					say(player.getName() + " ди�?квалифицирован");
 					checkTeams();
 					break;
 				case 3:
 					removePlayer(player);
-					say(player.getName() + " дисквалифицирован");
+					say(player.getName() + " ди�?квалифицирован");
 					checkTeams();
 					break;
 			}
 		}
 	}
 	
+	/**
+	 * Method onTeleport.
+	 * @param player Player
+	 */
 	protected void onTeleport(Player player)
 	{
 		if ((_status > 1) && player.isInZone(_zone))
@@ -775,8 +977,16 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -787,6 +997,12 @@ public abstract class ArenaTemplate extends Functions
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
@@ -803,11 +1019,25 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class TeleportTask extends RunnableImpl
 	{
+		/**
+		 * Field loc.
+		 */
 		Location loc;
+		/**
+		 * Field target.
+		 */
 		Creature target;
 		
+		/**
+		 * Constructor for TeleportTask.
+		 * @param target Creature
+		 * @param loc Location
+		 */
 		public TeleportTask(Creature target, Location loc)
 		{
 			this.target = target;
@@ -815,6 +1045,9 @@ public abstract class ArenaTemplate extends Functions
 			target.block();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -823,6 +1056,10 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method removePlayer.
+	 * @param player Player
+	 */
 	private void removePlayer(Player player)
 	{
 		if (player != null)
@@ -835,6 +1072,11 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
+	/**
+	 * Method getPlayers.
+	 * @param list List<Long>
+	 * @return List<Player>
+	 */
 	private List<Player> getPlayers(List<Long> list)
 	{
 		List<Player> result = new ArrayList<>();
@@ -849,6 +1091,10 @@ public abstract class ArenaTemplate extends Functions
 		return result;
 	}
 	
+	/**
+	 * Method say.
+	 * @param text String
+	 */
 	public void say(String text)
 	{
 		Say2 cs = new Say2(0, ChatType.SHOUT, "Arena", text);

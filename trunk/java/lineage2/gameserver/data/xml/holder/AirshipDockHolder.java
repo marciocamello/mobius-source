@@ -16,32 +16,62 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.AirshipDock;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class AirshipDockHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final AirshipDockHolder _instance = new AirshipDockHolder();
+	/**
+	 * Field _docks.
+	 */
 	private final TIntObjectHashMap<AirshipDock> _docks = new TIntObjectHashMap<>(4);
 	
+	/**
+	 * Method getInstance.
+	 * @return AirshipDockHolder
+	 */
 	public static AirshipDockHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addDock.
+	 * @param dock AirshipDock
+	 */
 	public void addDock(AirshipDock dock)
 	{
 		_docks.put(dock.getId(), dock);
 	}
 	
+	/**
+	 * Method getDock.
+	 * @param dock int
+	 * @return AirshipDock
+	 */
 	public AirshipDock getDock(int dock)
 	{
 		return _docks.get(dock);
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _docks.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

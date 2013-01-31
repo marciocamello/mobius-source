@@ -20,12 +20,31 @@ import lineage2.gameserver.model.entity.events.EventAction;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PlaySoundAction implements EventAction
 {
+	/**
+	 * Field _range.
+	 */
 	private final int _range;
+	/**
+	 * Field _sound.
+	 */
 	private final String _sound;
+	/**
+	 * Field _type.
+	 */
 	private final PlaySound.Type _type;
 	
+	/**
+	 * Constructor for PlaySoundAction.
+	 * @param range int
+	 * @param s String
+	 * @param type PlaySound.Type
+	 */
 	public PlaySoundAction(int range, String s, PlaySound.Type type)
 	{
 		_range = range;
@@ -33,6 +52,11 @@ public class PlaySoundAction implements EventAction
 		_type = type;
 	}
 	
+	/**
+	 * Method call.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.EventAction#call(GlobalEvent)
+	 */
 	@Override
 	public void call(GlobalEvent event)
 	{

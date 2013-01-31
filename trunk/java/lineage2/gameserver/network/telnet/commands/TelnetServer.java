@@ -25,10 +25,20 @@ import lineage2.gameserver.network.telnet.TelnetCommandHolder;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TelnetServer implements TelnetCommandHolder
 {
+	/**
+	 * Field _commands.
+	 */
 	private final Set<TelnetCommand> _commands = new LinkedHashSet<>();
 	
+	/**
+	 * Constructor for TelnetServer.
+	 */
 	public TelnetServer()
 	{
 		_commands.add(new TelnetCommand("version", "ver")
@@ -174,6 +184,10 @@ public class TelnetServer implements TelnetCommandHolder
 		});
 	}
 	
+	/**
+	 * Method getCommands.
+	 * @return Set<TelnetCommand> * @see lineage2.gameserver.network.telnet.TelnetCommandHolder#getCommands()
+	 */
 	@Override
 	public Set<TelnetCommand> getCommands()
 	{

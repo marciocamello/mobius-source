@@ -17,8 +17,15 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LuxorAgathion extends Functions
 {
+	/**
+	 * Field INGRIDIENTS.
+	 */
 	private static final int[][] INGRIDIENTS =
 	{
 		{
@@ -50,9 +57,21 @@ public class LuxorAgathion extends Functions
 			7500000
 		}
 	};
+	/**
+	 * Field OldAgathion. (value is 10408)
+	 */
 	private static final int OldAgathion = 10408;
+	/**
+	 * Field ShadowPurpleVikingCirclet. (value is 10315)
+	 */
 	private static final int ShadowPurpleVikingCirclet = 10315;
+	/**
+	 * Field ShadowGoldenVikingCirclet. (value is 10321)
+	 */
 	private static final int ShadowGoldenVikingCirclet = 10321;
+	/**
+	 * Field ANGEL_BRACELET_IDS.
+	 */
 	private static int[] ANGEL_BRACELET_IDS = new int[]
 	{
 		10320,
@@ -61,6 +80,9 @@ public class LuxorAgathion extends Functions
 		10318,
 		10319
 	};
+	/**
+	 * Field DEVIL_BRACELET_IDS.
+	 */
 	private static int[] DEVIL_BRACELET_IDS = new int[]
 	{
 		10326,
@@ -69,19 +91,36 @@ public class LuxorAgathion extends Functions
 		10324,
 		10325
 	};
+	/**
+	 * Field SUCCESS_RATE.
+	 */
 	private static int SUCCESS_RATE = 60;
+	/**
+	 * Field RARE_RATE.
+	 */
 	private static int RARE_RATE = 5;
 	
+	/**
+	 * Method angelAgathion.
+	 */
 	public void angelAgathion()
 	{
 		agathion(ANGEL_BRACELET_IDS, 1);
 	}
 	
+	/**
+	 * Method devilAgathion.
+	 */
 	public void devilAgathion()
 	{
 		agathion(DEVIL_BRACELET_IDS, 2);
 	}
 	
+	/**
+	 * Method agathion.
+	 * @param braceletes int[]
+	 * @param type int
+	 */
 	private void agathion(int braceletes[], int type)
 	{
 		Player player = getSelf();

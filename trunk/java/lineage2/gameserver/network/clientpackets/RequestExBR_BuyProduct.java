@@ -21,11 +21,24 @@ import lineage2.gameserver.network.serverpackets.ExBR_BuyProduct;
 import lineage2.gameserver.network.serverpackets.ExBR_GamePoint;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExBR_BuyProduct extends L2GameClientPacket
 {
+	/**
+	 * Field _productId.
+	 */
 	private int _productId;
+	/**
+	 * Field _count.
+	 */
 	private int _count;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -33,6 +46,9 @@ public class RequestExBR_BuyProduct extends L2GameClientPacket
 		_count = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

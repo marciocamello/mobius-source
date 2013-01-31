@@ -27,6 +27,10 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import ai.residences.fortress.siege.MercenaryCaption;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MercenaryCaptionInstance extends MonsterInstance
 {
 	/**
@@ -34,13 +38,25 @@ public class MercenaryCaptionInstance extends MonsterInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DoorDeathListener implements OnDeathListener
 	{
+		/**
+		 * Constructor for DoorDeathListener.
+		 */
 		public DoorDeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param door Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature door, Creature killer)
 		{
@@ -63,14 +79,25 @@ public class MercenaryCaptionInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * Field _doorDeathListener.
+	 */
 	private final DoorDeathListener _doorDeathListener = new DoorDeathListener();
 	
+	/**
+	 * Constructor for MercenaryCaptionInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MercenaryCaptionInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		setHasChatWindow(false);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	public void onSpawn()
 	{
@@ -84,12 +111,22 @@ public class MercenaryCaptionInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature attacker)
 	{
 		return isAutoAttackable(attacker);
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
@@ -106,6 +143,10 @@ public class MercenaryCaptionInstance extends MonsterInstance
 		return true;
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onDeath(Creature killer)
 	{
@@ -113,6 +154,9 @@ public class MercenaryCaptionInstance extends MonsterInstance
 		Functions.npcShout(this, NpcString.THE_GODS_HAVE_FORSAKEN_US__RETREAT);
 	}
 	
+	/**
+	 * Method onDecay.
+	 */
 	@Override
 	public void onDecay()
 	{

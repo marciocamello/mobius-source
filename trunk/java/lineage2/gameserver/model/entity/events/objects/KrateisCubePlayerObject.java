@@ -25,6 +25,10 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KrateisCubePlayerObject implements Serializable, Comparable<KrateisCubePlayerObject>
 {
 	/**
@@ -32,14 +36,26 @@ public class KrateisCubePlayerObject implements Serializable, Comparable<Krateis
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class RessurectTask extends RunnableImpl
 	{
+		/**
+		 * Field _seconds.
+		 */
 		private int _seconds = 10;
 		
+		/**
+		 * Constructor for RessurectTask.
+		 */
 		public RessurectTask()
 		{
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -60,58 +76,112 @@ public class KrateisCubePlayerObject implements Serializable, Comparable<Krateis
 		}
 	}
 	
+	/**
+	 * Field _player.
+	 */
 	final Player _player;
+	/**
+	 * Field _registrationTime.
+	 */
 	private final long _registrationTime;
+	/**
+	 * Field _showRank.
+	 */
 	private boolean _showRank;
+	/**
+	 * Field _points.
+	 */
 	private int _points;
+	/**
+	 * Field _ressurectTask.
+	 */
 	Future<?> _ressurectTask;
 	
+	/**
+	 * Constructor for KrateisCubePlayerObject.
+	 * @param player Player
+	 */
 	public KrateisCubePlayerObject(Player player)
 	{
 		_player = player;
 		_registrationTime = System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _player.getName();
 	}
 	
+	/**
+	 * Method isShowRank.
+	 * @return boolean
+	 */
 	public boolean isShowRank()
 	{
 		return _showRank;
 	}
 	
+	/**
+	 * Method getPoints.
+	 * @return int
+	 */
 	public int getPoints()
 	{
 		return _points;
 	}
 	
+	/**
+	 * Method setPoints.
+	 * @param points int
+	 */
 	public void setPoints(int points)
 	{
 		_points = points;
 	}
 	
+	/**
+	 * Method setShowRank.
+	 * @param showRank boolean
+	 */
 	public void setShowRank(boolean showRank)
 	{
 		_showRank = showRank;
 	}
 	
+	/**
+	 * Method getRegistrationTime.
+	 * @return long
+	 */
 	public long getRegistrationTime()
 	{
 		return _registrationTime;
 	}
 	
+	/**
+	 * Method getObjectId.
+	 * @return int
+	 */
 	public int getObjectId()
 	{
 		return _player.getObjectId();
 	}
 	
+	/**
+	 * Method getPlayer.
+	 * @return Player
+	 */
 	public Player getPlayer()
 	{
 		return _player;
 	}
 	
+	/**
+	 * Method startRessurectTask.
+	 */
 	public void startRessurectTask()
 	{
 		if (_ressurectTask != null)
@@ -121,6 +191,9 @@ public class KrateisCubePlayerObject implements Serializable, Comparable<Krateis
 		_ressurectTask = ThreadPoolManager.getInstance().schedule(new RessurectTask(), 1000L);
 	}
 	
+	/**
+	 * Method stopRessurectTask.
+	 */
 	public void stopRessurectTask()
 	{
 		if (_ressurectTask != null)
@@ -130,6 +203,11 @@ public class KrateisCubePlayerObject implements Serializable, Comparable<Krateis
 		}
 	}
 	
+	/**
+	 * Method compareTo.
+	 * @param o KrateisCubePlayerObject
+	 * @return int
+	 */
 	@Override
 	public int compareTo(KrateisCubePlayerObject o)
 	{

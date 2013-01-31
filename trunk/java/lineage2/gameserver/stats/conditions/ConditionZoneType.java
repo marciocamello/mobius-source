@@ -15,15 +15,31 @@ package lineage2.gameserver.stats.conditions;
 import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionZoneType extends Condition
 {
+	/**
+	 * Field _zoneType.
+	 */
 	private final ZoneType _zoneType;
 	
+	/**
+	 * Constructor for ConditionZoneType.
+	 * @param zoneType String
+	 */
 	public ConditionZoneType(String zoneType)
 	{
 		_zoneType = ZoneType.valueOf(zoneType);
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

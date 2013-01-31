@@ -12,17 +12,37 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SendTradeDone extends L2GameServerPacket
 {
+	/**
+	 * Field SUCCESS.
+	 */
 	public static final L2GameServerPacket SUCCESS = new SendTradeDone(1);
+	/**
+	 * Field FAIL.
+	 */
 	public static final L2GameServerPacket FAIL = new SendTradeDone(0);
+	/**
+	 * Field _response.
+	 */
 	private final int _response;
 	
+	/**
+	 * Constructor for SendTradeDone.
+	 * @param num int
+	 */
 	private SendTradeDone(int num)
 	{
 		_response = num;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

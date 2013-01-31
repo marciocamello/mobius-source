@@ -15,8 +15,16 @@ package ai.hellbound;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OutpostGuards extends Fighter
 {
+	/**
+	 * Constructor for OutpostGuards.
+	 * @param actor NpcInstance
+	 */
 	public OutpostGuards(NpcInstance actor)
 	{
 		super(actor);

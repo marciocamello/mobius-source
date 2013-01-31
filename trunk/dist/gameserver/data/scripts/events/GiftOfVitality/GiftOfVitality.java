@@ -29,13 +29,35 @@ import lineage2.gameserver.tables.SkillTable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GiftOfVitality extends Functions implements ScriptFile
 {
+	/**
+	 * Field EVENT_NAME. (value is ""GiftOfVitality"")
+	 */
 	private static final String EVENT_NAME = "GiftOfVitality";
+	/**
+	 * Field REUSE_HOURS. (value is 24)
+	 */
 	private static final int REUSE_HOURS = 24;
+	/**
+	 * Field EVENT_MANAGER_ID. (value is 109)
+	 */
 	private static final int EVENT_MANAGER_ID = 109;
+	/**
+	 * Field _spawns.
+	 */
 	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(GiftOfVitality.class);
+	/**
+	 * Field _mageBuff.
+	 */
 	private final static int[][] _mageBuff = new int[][]
 	{
 		{
@@ -67,6 +89,9 @@ public class GiftOfVitality extends Functions implements ScriptFile
 			1
 		},
 	};
+	/**
+	 * Field _warrBuff.
+	 */
 	private final static int[][] _warrBuff = new int[][]
 	{
 		{
@@ -99,13 +124,28 @@ public class GiftOfVitality extends Functions implements ScriptFile
 		},
 	};
 	
+	/**
+	 * @author Mobius
+	 */
 	public enum BuffType
 	{
+		/**
+		 * Field PLAYER.
+		 */
 		PLAYER,
+		/**
+		 * Field SUMMON.
+		 */
 		SUMMON,
+		/**
+		 * Field VITALITY.
+		 */
 		VITALITY,
 	}
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	private void spawnEventManagers()
 	{
 		final int EVENT_MANAGERS[][] =
@@ -216,16 +256,26 @@ public class GiftOfVitality extends Functions implements ScriptFile
 		SpawnNPCs(EVENT_MANAGER_ID, EVENT_MANAGERS, _spawns);
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return IsActive(EVENT_NAME);
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -246,6 +296,9 @@ public class GiftOfVitality extends Functions implements ScriptFile
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -266,6 +319,10 @@ public class GiftOfVitality extends Functions implements ScriptFile
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -280,18 +337,30 @@ public class GiftOfVitality extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method buffMe.
+	 * @param type BuffType
+	 */
 	private void buffMe(BuffType type)
 	{
 		if ((getSelf() == null) || (getNpc() == null) || (getSelf().getPlayer() == null))
@@ -348,16 +417,25 @@ public class GiftOfVitality extends Functions implements ScriptFile
 		show("scripts/events/GiftOfVitality/" + htmltext, getSelf().getPlayer());
 	}
 	
+	/**
+	 * Method buffVitality.
+	 */
 	public void buffVitality()
 	{
 		buffMe(BuffType.VITALITY);
 	}
 	
+	/**
+	 * Method buffSummon.
+	 */
 	public void buffSummon()
 	{
 		buffMe(BuffType.SUMMON);
 	}
 	
+	/**
+	 * Method buffPlayer.
+	 */
 	public void buffPlayer()
 	{
 		buffMe(BuffType.PLAYER);

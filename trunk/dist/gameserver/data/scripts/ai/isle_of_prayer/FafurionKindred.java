@@ -31,24 +31,62 @@ import lineage2.gameserver.stats.funcs.FuncTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FafurionKindred extends Fighter
 {
+	/**
+	 * Field DETRACTOR1. (value is 22270)
+	 */
 	private static final int DETRACTOR1 = 22270;
+	/**
+	 * Field DETRACTOR2. (value is 22271)
+	 */
 	private static final int DETRACTOR2 = 22271;
+	/**
+	 * Field Spirit_of_the_Lake. (value is 2368)
+	 */
 	private static final int Spirit_of_the_Lake = 2368;
+	/**
+	 * Field Water_Dragon_Scale. (value is 9691)
+	 */
 	private static final int Water_Dragon_Scale = 9691;
+	/**
+	 * Field Water_Dragon_Claw. (value is 9700)
+	 */
 	private static final int Water_Dragon_Claw = 9700;
+	/**
+	 * Field poisonTask.
+	 */
 	ScheduledFuture<?> poisonTask;
+	/**
+	 * Field despawnTask.
+	 */
 	ScheduledFuture<?> despawnTask;
+	/**
+	 * Field spawns.
+	 */
 	List<SimpleSpawner> spawns = new ArrayList<>();
+	/**
+	 * Field ft.
+	 */
 	private static final FuncTemplate ft = new FuncTemplate(null, "Mul", Stats.HEAL_EFFECTIVNESS, 0x90, 0);
 	
+	/**
+	 * Constructor for FafurionKindred.
+	 * @param actor NpcInstance
+	 */
 	public FafurionKindred(NpcInstance actor)
 	{
 		super(actor);
 		actor.addStatFunc(ft.getFunc(this));
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -62,6 +100,10 @@ public class FafurionKindred extends Fighter
 		despawnTask = ThreadPoolManager.getInstance().schedule(new DeSpawnTask(), 300000);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -69,6 +111,11 @@ public class FafurionKindred extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method onEvtSeeSpell.
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
@@ -84,12 +131,19 @@ public class FafurionKindred extends Fighter
 		actor.getAggroList().remove(caster, true);
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method cleanUp.
+	 */
 	void cleanUp()
 	{
 		if (poisonTask != null)
@@ -109,15 +163,28 @@ public class FafurionKindred extends Fighter
 		spawns.clear();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SpawnTask extends RunnableImpl
 	{
+		/**
+		 * Field _id.
+		 */
 		private final int _id;
 		
+		/**
+		 * Constructor for SpawnTask.
+		 * @param id int
+		 */
 		public SpawnTask(int id)
 		{
 			_id = id;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -130,13 +197,22 @@ public class FafurionKindred extends Fighter
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class PoisonTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for PoisonTask.
+		 */
 		public PoisonTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -145,13 +221,22 @@ public class FafurionKindred extends Fighter
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DeSpawnTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for DeSpawnTask.
+		 */
 		public DeSpawnTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -166,6 +251,12 @@ public class FafurionKindred extends Fighter
 		}
 	}
 	
+	/**
+	 * Method dropItem.
+	 * @param actor NpcInstance
+	 * @param id int
+	 * @param count int
+	 */
 	void dropItem(NpcInstance actor, int id, int count)
 	{
 		ItemInstance item = ItemFunctions.createItem(id);

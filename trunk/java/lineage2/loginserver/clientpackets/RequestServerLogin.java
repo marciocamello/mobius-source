@@ -20,12 +20,28 @@ import lineage2.loginserver.gameservercon.GameServer;
 import lineage2.loginserver.serverpackets.LoginFail.LoginFailReason;
 import lineage2.loginserver.serverpackets.PlayOk;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestServerLogin extends L2LoginClientPacket
 {
+	/**
+	 * Field _loginOkID1.
+	 */
 	private int _loginOkID1;
+	/**
+	 * Field _loginOkID2.
+	 */
 	private int _loginOkID2;
+	/**
+	 * Field _serverId.
+	 */
 	private int _serverId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -34,6 +50,9 @@ public class RequestServerLogin extends L2LoginClientPacket
 		_serverId = readC();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

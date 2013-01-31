@@ -12,9 +12,22 @@
  */
 package lineage2.gameserver.templates.item.support;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum FishGrade
 {
+	/**
+	 * Field EASY.
+	 */
 	EASY,
+	/**
+	 * Field NORMAL.
+	 */
 	NORMAL,
+	/**
+	 * Field HARD.
+	 */
 	HARD
 }

@@ -20,17 +20,50 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.SubUnit;
 import lineage2.gameserver.model.pledge.UnitMember;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeShowMemberListAll extends L2GameServerPacket
 {
+	/**
+	 * Field _reputation. Field _rank. Field _level. Field _clanCrestId. Field _clanObjectId.
+	 */
 	private final int _clanObjectId, _clanCrestId, _level, _rank, _reputation;
+	/**
+	 * Field _allianceObjectId.
+	 */
 	private int _allianceObjectId;
+	/**
+	 * Field _allianceCrestId.
+	 */
 	private int _allianceCrestId;
+	/**
+	 * Field _atClanWar. Field _hasFortress. Field _hasClanHall. Field _hasCastle.
+	 */
 	private final int _hasCastle, _hasClanHall, _hasFortress, _atClanWar;
+	/**
+	 * Field _leaderName. Field _unitName.
+	 */
 	private final String _unitName, _leaderName;
+	/**
+	 * Field _allianceName.
+	 */
 	private String _allianceName;
+	/**
+	 * Field _territorySide. Field _pledgeType.
+	 */
 	private final int _pledgeType, _territorySide;
+	/**
+	 * Field _members.
+	 */
 	private final List<PledgePacketMember> _members;
 	
+	/**
+	 * Constructor for PledgeShowMemberListAll.
+	 * @param clan Clan
+	 * @param sub SubUnit
+	 */
 	public PledgeShowMemberListAll(Clan clan, final SubUnit sub)
 	{
 		_pledgeType = sub.getType();
@@ -60,6 +93,9 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -97,16 +133,44 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class PledgePacketMember
 	{
+		/**
+		 * Field _name.
+		 */
 		final String _name;
+		/**
+		 * Field _level.
+		 */
 		final int _level;
+		/**
+		 * Field _classId.
+		 */
 		final int _classId;
+		/**
+		 * Field _sex.
+		 */
 		final int _sex;
+		/**
+		 * Field _race.
+		 */
 		final int _race;
+		/**
+		 * Field _online.
+		 */
 		final int _online;
+		/**
+		 * Field _hasSponsor.
+		 */
 		final boolean _hasSponsor;
 		
+		/**
+		 * Constructor for PledgePacketMember.
+		 * @param m UnitMember
+		 */
 		public PledgePacketMember(UnitMember m)
 		{
 			_name = m.getName();

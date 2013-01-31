@@ -18,10 +18,21 @@ import lineage2.loginserver.L2LoginClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class L2LoginServerPacket extends SendablePacket<L2LoginClient>
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(L2LoginServerPacket.class);
 	
+	/**
+	 * Method write.
+	 * @return boolean
+	 */
 	@Override
 	public final boolean write()
 	{
@@ -37,5 +48,8 @@ public abstract class L2LoginServerPacket extends SendablePacket<L2LoginClient>
 		return false;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	protected abstract void writeImpl();
 }

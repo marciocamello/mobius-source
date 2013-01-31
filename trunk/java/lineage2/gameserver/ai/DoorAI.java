@@ -19,31 +19,60 @@ import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DoorAI extends CharacterAI
 {
+	/**
+	 * Constructor for DoorAI.
+	 * @param actor DoorInstance
+	 */
 	public DoorAI(DoorInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtTwiceClick.
+	 * @param player Player
+	 */
 	public void onEvtTwiceClick(Player player)
 	{
 	}
 	
+	/**
+	 * Method onEvtOpen.
+	 * @param player Player
+	 */
 	public void onEvtOpen(Player player)
 	{
 	}
 	
+	/**
+	 * Method onEvtClose.
+	 * @param player Player
+	 */
 	public void onEvtClose(Player player)
 	{
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return DoorInstance
+	 */
 	@Override
 	public DoorInstance getActor()
 	{
 		return (DoorInstance) super.getActor();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

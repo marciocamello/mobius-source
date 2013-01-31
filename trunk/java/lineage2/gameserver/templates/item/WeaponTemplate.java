@@ -16,42 +16,145 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class WeaponTemplate extends ItemTemplate
 {
+	/**
+	 * Field _soulShotCount.
+	 */
 	private final int _soulShotCount;
+	/**
+	 * Field _spiritShotCount.
+	 */
 	private final int _spiritShotCount;
+	/**
+	 * Field _kamaelConvert.
+	 */
 	private final int _kamaelConvert;
+	/**
+	 * Field _rndDam.
+	 */
 	private final int _rndDam;
+	/**
+	 * Field _atkReuse.
+	 */
 	private final int _atkReuse;
+	/**
+	 * Field _mpConsume.
+	 */
 	private final int _mpConsume;
+	/**
+	 * Field _critical.
+	 */
 	private int _critical;
 	
+	/**
+	 * @author Mobius
+	 */
 	public enum WeaponType implements ItemType
 	{
+		/**
+		 * Field NONE.
+		 */
 		NONE(1, "Shield", null),
+		/**
+		 * Field SWORD.
+		 */
 		SWORD(2, "Sword", Stats.SWORD_WPN_VULNERABILITY),
+		/**
+		 * Field BLUNT.
+		 */
 		BLUNT(3, "Blunt", Stats.BLUNT_WPN_VULNERABILITY),
+		/**
+		 * Field DAGGER.
+		 */
 		DAGGER(4, "Dagger", Stats.DAGGER_WPN_VULNERABILITY),
+		/**
+		 * Field BOW.
+		 */
 		BOW(5, "Bow", Stats.BOW_WPN_VULNERABILITY),
+		/**
+		 * Field POLE.
+		 */
 		POLE(6, "Pole", Stats.POLE_WPN_VULNERABILITY),
+		/**
+		 * Field ETC.
+		 */
 		ETC(7, "Etc", null),
+		/**
+		 * Field FIST.
+		 */
 		FIST(8, "Fist", Stats.FIST_WPN_VULNERABILITY),
+		/**
+		 * Field DUAL.
+		 */
 		DUAL(9, "Dual Sword", Stats.DUAL_WPN_VULNERABILITY),
+		/**
+		 * Field DUALFIST.
+		 */
 		DUALFIST(10, "Dual Fist", Stats.FIST_WPN_VULNERABILITY),
+		/**
+		 * Field BIGSWORD.
+		 */
 		BIGSWORD(11, "Big Sword", Stats.SWORD_WPN_VULNERABILITY),
+		/**
+		 * Field PET.
+		 */
 		PET(12, "Pet", Stats.FIST_WPN_VULNERABILITY),
+		/**
+		 * Field ROD.
+		 */
 		ROD(13, "Rod", null),
+		/**
+		 * Field BIGBLUNT.
+		 */
 		BIGBLUNT(14, "Big Blunt", Stats.BLUNT_WPN_VULNERABILITY),
+		/**
+		 * Field CROSSBOW.
+		 */
 		CROSSBOW(15, "Crossbow", Stats.CROSSBOW_WPN_VULNERABILITY),
+		/**
+		 * Field RAPIER.
+		 */
 		RAPIER(16, "Rapier", Stats.DAGGER_WPN_VULNERABILITY),
+		/**
+		 * Field ANCIENTSWORD.
+		 */
 		ANCIENTSWORD(17, "Ancient Sword", Stats.SWORD_WPN_VULNERABILITY),
+		/**
+		 * Field DUALDAGGER.
+		 */
 		DUALDAGGER(18, "Dual Dagger", Stats.DAGGER_WPN_VULNERABILITY),
+		/**
+		 * Field DUALBLUNT.
+		 */
 		DUALBLUNT(19, "Dual Blunt", null);
+		/**
+		 * Field VALUES.
+		 */
 		public final static WeaponType[] VALUES = values();
+		/**
+		 * Field _mask.
+		 */
 		private final long _mask;
+		/**
+		 * Field _name.
+		 */
 		private final String _name;
+		/**
+		 * Field _defence.
+		 */
 		private final Stats _defence;
 		
+		/**
+		 * Constructor for WeaponType.
+		 * @param id int
+		 * @param name String
+		 * @param defence Stats
+		 */
 		private WeaponType(int id, String name, Stats defence)
 		{
 			_mask = 1L << id;
@@ -59,17 +162,29 @@ public final class WeaponTemplate extends ItemTemplate
 			_defence = defence;
 		}
 		
+		/**
+		 * Method mask.
+		 * @return long * @see lineage2.gameserver.templates.item.ItemType#mask()
+		 */
 		@Override
 		public long mask()
 		{
 			return _mask;
 		}
 		
+		/**
+		 * Method getDefence.
+		 * @return Stats
+		 */
 		public Stats getDefence()
 		{
 			return _defence;
 		}
 		
+		/**
+		 * Method toString.
+		 * @return String
+		 */
 		@Override
 		public String toString()
 		{
@@ -77,6 +192,10 @@ public final class WeaponTemplate extends ItemTemplate
 		}
 	}
 	
+	/**
+	 * Constructor for WeaponTemplate.
+	 * @param set StatsSet
+	 */
 	public WeaponTemplate(StatsSet set)
 	{
 		super(set);
@@ -120,48 +239,84 @@ public final class WeaponTemplate extends ItemTemplate
 		}
 	}
 	
+	/**
+	 * Method getItemType.
+	 * @return WeaponType
+	 */
 	@Override
 	public WeaponType getItemType()
 	{
 		return (WeaponType) type;
 	}
 	
+	/**
+	 * Method getItemMask.
+	 * @return long
+	 */
 	@Override
 	public long getItemMask()
 	{
 		return getItemType().mask();
 	}
 	
+	/**
+	 * Method getSoulShotCount.
+	 * @return int
+	 */
 	public int getSoulShotCount()
 	{
 		return _soulShotCount;
 	}
 	
+	/**
+	 * Method getSpiritShotCount.
+	 * @return int
+	 */
 	public int getSpiritShotCount()
 	{
 		return _spiritShotCount;
 	}
 	
+	/**
+	 * Method getCritical.
+	 * @return int
+	 */
 	public int getCritical()
 	{
 		return _critical;
 	}
 	
+	/**
+	 * Method getRandomDamage.
+	 * @return int
+	 */
 	public int getRandomDamage()
 	{
 		return _rndDam;
 	}
 	
+	/**
+	 * Method getAttackReuseDelay.
+	 * @return int
+	 */
 	public int getAttackReuseDelay()
 	{
 		return _atkReuse;
 	}
 	
+	/**
+	 * Method getMpConsume.
+	 * @return int
+	 */
 	public int getMpConsume()
 	{
 		return _mpConsume;
 	}
 	
+	/**
+	 * Method getAttackRange.
+	 * @return int
+	 */
 	public int getAttackRange()
 	{
 		switch (getItemType())
@@ -177,6 +332,10 @@ public final class WeaponTemplate extends ItemTemplate
 		}
 	}
 	
+	/**
+	 * Method attachFunc.
+	 * @param f FuncTemplate
+	 */
 	@Override
 	public void attachFunc(FuncTemplate f)
 	{
@@ -187,6 +346,10 @@ public final class WeaponTemplate extends ItemTemplate
 		super.attachFunc(f);
 	}
 	
+	/**
+	 * Method getKamaelConvert.
+	 * @return int
+	 */
 	public int getKamaelConvert()
 	{
 		return _kamaelConvert;

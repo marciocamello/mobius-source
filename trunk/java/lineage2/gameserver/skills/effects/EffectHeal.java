@@ -17,16 +17,32 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectHeal extends Effect
 {
+	/**
+	 * Field _ignoreHpEff.
+	 */
 	private final boolean _ignoreHpEff;
 	
+	/**
+	 * Constructor for EffectHeal.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectHeal(Env env, EffectTemplate template)
 	{
 		super(env, template);
 		_ignoreHpEff = template.getParam().getBool("ignoreHpEff", false);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
@@ -37,6 +53,9 @@ public class EffectHeal extends Effect
 		return super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -55,6 +74,10 @@ public class EffectHeal extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

@@ -15,17 +15,37 @@ package lineage2.loginserver.serverpackets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class GGAuth extends L2LoginServerPacket
 {
+	/**
+	 * Field _log.
+	 */
 	static Logger _log = LoggerFactory.getLogger(GGAuth.class);
+	/**
+	 * Field SKIP_GG_AUTH_REQUEST.
+	 */
 	public static int SKIP_GG_AUTH_REQUEST = 0x0b;
+	/**
+	 * Field _response.
+	 */
 	private final int _response;
 	
+	/**
+	 * Constructor for GGAuth.
+	 * @param response int
+	 */
 	public GGAuth(int response)
 	{
 		_response = response;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

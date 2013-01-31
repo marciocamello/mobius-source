@@ -20,8 +20,15 @@ import lineage2.gameserver.instancemanager.naia.NaiaCoreManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NaiaSpore extends Fighter
 {
+	/**
+	 * Field epidosIndex.
+	 */
 	private static Map<Integer, Integer> epidosIndex = new HashMap<>();
 	static
 	{
@@ -31,11 +38,19 @@ public class NaiaSpore extends Fighter
 		epidosIndex.put(4, 0);
 	}
 	
+	/**
+	 * Constructor for NaiaSpore.
+	 * @param actor NpcInstance
+	 */
 	public NaiaSpore(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -73,6 +88,10 @@ public class NaiaSpore extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method isBossSpawnCondMet.
+	 * @return int
+	 */
 	private int isBossSpawnCondMet()
 	{
 		for (int i = 1; i < 5; i++)

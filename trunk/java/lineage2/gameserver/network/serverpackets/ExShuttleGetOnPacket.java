@@ -16,11 +16,27 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.entity.boat.Shuttle;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShuttleGetOnPacket extends L2GameServerPacket
 {
+	/**
+	 * Field _shuttleId. Field _playerObjectId.
+	 */
 	private final int _playerObjectId, _shuttleId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for ExShuttleGetOnPacket.
+	 * @param cha Playable
+	 * @param shuttle Shuttle
+	 * @param loc Location
+	 */
 	public ExShuttleGetOnPacket(Playable cha, Shuttle shuttle, Location loc)
 	{
 		_playerObjectId = cha.getObjectId();
@@ -28,6 +44,9 @@ public class ExShuttleGetOnPacket extends L2GameServerPacket
 		_loc = loc;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

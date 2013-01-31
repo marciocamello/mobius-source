@@ -17,16 +17,30 @@ import lineage2.gameserver.ai.Mystic;
 import lineage2.gameserver.listener.game.OnDayNightChangeListener;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NightAgressionMystic extends Mystic
 {
+	/**
+	 * Constructor for NightAgressionMystic.
+	 * @param actor NpcInstance
+	 */
 	public NightAgressionMystic(NpcInstance actor)
 	{
 		super(actor);
 		GameTimeController.getInstance().addListener(new NightAgressionDayNightListener());
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class NightAgressionDayNightListener implements OnDayNightChangeListener
 	{
+		/**
+		 * Constructor for NightAgressionDayNightListener.
+		 */
 		NightAgressionDayNightListener()
 		{
 			if (GameTimeController.getInstance().isNowNight())
@@ -39,12 +53,20 @@ public class NightAgressionMystic extends Mystic
 			}
 		}
 		
+		/**
+		 * Method onDay.
+		 * @see lineage2.gameserver.listener.game.OnDayNightChangeListener#onDay()
+		 */
 		@Override
 		public void onDay()
 		{
 			getActor().setAggroRange(0);
 		}
 		
+		/**
+		 * Method onNight.
+		 * @see lineage2.gameserver.listener.game.OnDayNightChangeListener#onNight()
+		 */
 		@Override
 		public void onNight()
 		{

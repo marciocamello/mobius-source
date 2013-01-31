@@ -20,26 +20,62 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DeathPenalty
 {
+	/**
+	 * Field _skillId. (value is 14571)
+	 */
 	private static final int _skillId = 14571;
+	/**
+	 * Field _fortuneOfNobleseSkillId. (value is 1325)
+	 */
 	private static final int _fortuneOfNobleseSkillId = 1325;
+	/**
+	 * Field _charmOfLuckSkillId. (value is 2168)
+	 */
 	private static final int _charmOfLuckSkillId = 2168;
+	/**
+	 * Field _playerRef.
+	 */
 	private final HardReference<Player> _playerRef;
+	/**
+	 * Field _level.
+	 */
 	private int _level;
+	/**
+	 * Field _hasCharmOfLuck.
+	 */
 	private boolean _hasCharmOfLuck;
 	
+	/**
+	 * Constructor for DeathPenalty.
+	 * @param player Player
+	 * @param level int
+	 */
 	public DeathPenalty(Player player, int level)
 	{
 		_playerRef = player.getRef();
 		_level = level;
 	}
 	
+	/**
+	 * Method getPlayer.
+	 * @return Player
+	 */
 	public Player getPlayer()
 	{
 		return _playerRef.get();
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @param player Player
+	 * @return int
+	 */
 	public int getLevel(Player player)
 	{
 		if (_level > 5)
@@ -53,6 +89,11 @@ public class DeathPenalty
 		return Config.ALLOW_DEATH_PENALTY_C5 ? _level : 0;
 	}
 	
+	/**
+	 * Method getLevelOnSaveDB.
+	 * @param player Player
+	 * @return int
+	 */
 	public int getLevelOnSaveDB(Player player)
 	{
 		if ((player.getEffectList().getEffectsBySkillId(_skillId) != null) && (_level != 0))
@@ -70,6 +111,10 @@ public class DeathPenalty
 		return 0;
 	}
 	
+	/**
+	 * Method notifyDead.
+	 * @param killer Creature
+	 */
 	public void notifyDead(Creature killer)
 	{
 		if (!Config.ALLOW_DEATH_PENALTY_C5)
@@ -101,6 +146,10 @@ public class DeathPenalty
 		}
 	}
 	
+	/**
+	 * Method restore.
+	 * @param player Player
+	 */
 	public void restore(Player player)
 	{
 		if (player.getEffectList().getEffectsBySkillId(_skillId) != null)
@@ -131,6 +180,9 @@ public class DeathPenalty
 		player.updateStats();
 	}
 	
+	/**
+	 * Method addLevel.
+	 */
 	public void addLevel()
 	{
 		Player player = getPlayer();
@@ -152,6 +204,10 @@ public class DeathPenalty
 		_level++;
 	}
 	
+	/**
+	 * Method castEffect.
+	 * @param player Player
+	 */
 	public void castEffect(Player player)
 	{
 		if (getLevel(player) > 0)
@@ -167,6 +223,9 @@ public class DeathPenalty
 		}
 	}
 	
+	/**
+	 * Method reduceLevel.
+	 */
 	public void reduceLevel()
 	{
 		Player player = getPlayer();
@@ -199,6 +258,9 @@ public class DeathPenalty
 		player.updateStats();
 	}
 	
+	/**
+	 * Method checkCharmOfLuck.
+	 */
 	public void checkCharmOfLuck()
 	{
 		Player player = getPlayer();

@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExChangeToAwakenedClass extends L2GameServerPacket
 {
+	/**
+	 * Field classId.
+	 */
 	private final int classId;
 	
+	/**
+	 * Constructor for ExChangeToAwakenedClass.
+	 * @param classId int
+	 */
 	public ExChangeToAwakenedClass(int classId)
 	{
 		this.classId = classId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -37,22 +37,44 @@ import lineage2.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class heart extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(heart.class);
+	/**
+	 * Field _active.
+	 */
 	private static boolean _active = false;
+	/**
+	 * Field _spawns.
+	 */
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
+	/**
+	 * Field Guesses.
+	 */
 	private static final Map<Integer, Integer> Guesses = new HashMap<>();
+	/**
+	 * Field links_ru. Field links_en.
+	 */
 	private static String links_en = "", links_ru = "";
+	/**
+	 * Field variants.
+	 */
 	private static final String[][] variants =
 	{
 		{
 			"Rock",
-			"Камень"
+			"�?амен�?"
 		},
 		{
 			"Scissors",
-			"Ножницы"
+			"�?ожницы"
 		},
 		{
 			"Paper",
@@ -76,7 +98,13 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 			});
 		}
 	}
+	/**
+	 * Field EVENT_MANAGER_ID. (value is 31227)
+	 */
 	private static final int EVENT_MANAGER_ID = 31227;
+	/**
+	 * Field hearts.
+	 */
 	private static final int[] hearts =
 	{
 		4209,
@@ -89,6 +117,9 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		4216,
 		4217
 	};
+	/**
+	 * Field potions.
+	 */
 	private static final int[] potions =
 	{
 		1374,
@@ -96,6 +127,9 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		6036,
 		1539
 	};
+	/**
+	 * Field scrolls.
+	 */
 	private static final int[] scrolls =
 	{
 		3926,
@@ -110,6 +144,9 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		3935
 	};
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -131,6 +168,9 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -152,6 +192,9 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method letsplay.
+	 */
 	public void letsplay()
 	{
 		Player player = getSelf();
@@ -170,6 +213,10 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		}
 	}
 	
+	/**
+	 * Method play.
+	 * @param var String[]
+	 */
 	public void play(String[] var)
 	{
 		Player player = getSelf();
@@ -233,6 +280,11 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		zeroGuesses(player);
 	}
 	
+	/**
+	 * Method reward.
+	 * @param player Player
+	 * @param guesses int
+	 */
 	private void reward(Player player, int guesses)
 	{
 		switch (guesses)
@@ -274,17 +326,34 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		}
 	}
 	
+	/**
+	 * Method fillvars.
+	 * @param s String
+	 * @param var_player int
+	 * @param var_cat int ye * @return Stringr
+	 * @return String
+	 */
 	private String fillvars(String s, int var_player, int var_cat, Player player)
 	{
 		boolean rus = false;
 		return link(s.replaceFirst("Player", player.getName()).replaceFirst("%var_payer%", variants[var_player][rus ? 1 : 0]).replaceFirst("%var_cat%", variants[var_cat][rus ? 1 : 0]), rus);
 	}
 	
+	/**
+	 * Method link.
+	 * @param s String ea * @return Stringn
+	 * @return String
+	 */
 	private String link(String s, boolean rus)
 	{
 		return s.replaceFirst("%links%", rus ? links_ru : links_en);
 	}
 	
+	/**
+	 * Method playerWins.
+	 * @param var_player int nt * @return boolean
+	 * @return boolean
+	 */
 	private boolean playerWins(int var_player, int var_cat)
 	{
 		if (var_player == 0)
@@ -302,11 +371,19 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		return false;
 	}
 	
+	/**
+	 * Method getGuesses. Pl * @return intayer
+	 * @return int
+	 */
 	private int getGuesses(Player player)
 	{
 		return Guesses.containsKey(player.getObjectId()) ? Guesses.get(player.getObjectId()) : 0;
 	}
 	
+	/**
+	 * Method incGuesses.
+	 * @param player Player
+	 */
 	private void incGuesses(Player player)
 	{
 		int val = 1;
@@ -317,6 +394,10 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		Guesses.put(player.getObjectId(), val);
 	}
 	
+	/**
+	 * Method zeroGuesses.
+	 * @param player Player
+	 */
 	private void zeroGuesses(Player player)
 	{
 		if (Guesses.containsKey(player.getObjectId()))
@@ -325,6 +406,10 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		}
 	}
 	
+	/**
+	 * Method takeHeartsSet.
+	 * @param player Player
+	 */
 	private void takeHeartsSet(Player player)
 	{
 		for (int heart_id : hearts)
@@ -333,6 +418,10 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		}
 	}
 	
+	/**
+	 * Method haveAllHearts. er * @return boolean
+	 * @return boolean
+	 */
 	private boolean haveAllHearts(Player player)
 	{
 		for (int heart_id : hearts)
@@ -345,6 +434,11 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		return true;
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @pth * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature cha, Creature killer)
 	{
@@ -354,6 +448,9 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		}
 	}
 	
+	/**
+	 * Method onPlayerEnter. #o * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)nPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -363,11 +460,18 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		}
 	}
 	
+	/**
+	 * e. * @return boolean
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return IsActive("heart");
 	}
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	private void spawnEventManagers()
 	{
 		final int EVENT_MANAGERS[][] =
@@ -430,11 +534,17 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		SpawnNPCs(EVENT_MANAGER_ID, EVENT_MANAGERS, _spawns);
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
 	}
 	
+	/*
+	 * ts * @see lineage2.gameserver.scripts.ScriptFile#onLoad().ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -451,12 +561,18 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		}
 	}
 	
+	/**
+	 * .S * @see lineage2.gameserver.scripts.ScriptFile#onReload()criptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * cr * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()iptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

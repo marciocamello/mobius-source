@@ -29,20 +29,36 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RainbowGourdInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _winner.
+	 */
 	CMGSiegeClanObject _winner;
 	
+	/**
+	 * Constructor for RainbowGourdInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public RainbowGourdInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		setHasChatWindow(false);
 	}
 	
+	/**
+	 * Method doDecrease.
+	 * @param character Creature
+	 */
 	public void doDecrease(Creature character)
 	{
 		if (isDead())
@@ -52,6 +68,9 @@ public class RainbowGourdInstance extends NpcInstance
 		reduceCurrentHp(getMaxHp() * 0.2, 0, character, null, false, false, false, false, false, false, false);
 	}
 	
+	/**
+	 * Method doHeal.
+	 */
 	public void doHeal()
 	{
 		if (isDead())
@@ -61,6 +80,10 @@ public class RainbowGourdInstance extends NpcInstance
 		setCurrentHp(getCurrentHp() + (getMaxHp() * 0.2), false);
 	}
 	
+	/**
+	 * Method doSwitch.
+	 * @param npc RainbowGourdInstance
+	 */
 	public void doSwitch(RainbowGourdInstance npc)
 	{
 		if (isDead() || npc.isDead())
@@ -72,6 +95,10 @@ public class RainbowGourdInstance extends NpcInstance
 		npc.setCurrentHp(currentHp, false);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onDeath(Creature killer)
 	{
@@ -103,6 +130,9 @@ public class RainbowGourdInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method onDecay.
+	 */
 	@Override
 	public void onDecay()
 	{
@@ -141,18 +171,32 @@ public class RainbowGourdInstance extends NpcInstance
 		}, 10000L);
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param c Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature c)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param c Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature c)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{

@@ -20,19 +20,47 @@ import lineage2.gameserver.model.instances.residences.clanhall.CTBBossInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CTBTeamObject implements SpawnableObject
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _siegeClan.
+	 */
 	private CTBSiegeClanObject _siegeClan;
+	/**
+	 * Field _mobTemplate.
+	 */
 	private final NpcTemplate _mobTemplate;
+	/**
+	 * Field _flagTemplate.
+	 */
 	private final NpcTemplate _flagTemplate;
+	/**
+	 * Field _flagLoc.
+	 */
 	private final Location _flagLoc;
+	/**
+	 * Field _flag.
+	 */
 	private NpcInstance _flag;
+	/**
+	 * Field _mob.
+	 */
 	private CTBBossInstance _mob;
 	
+	/**
+	 * Constructor for CTBTeamObject.
+	 * @param mobTemplate int
+	 * @param flagTemplate int
+	 * @param flagLoc Location
+	 */
 	public CTBTeamObject(int mobTemplate, int flagTemplate, Location flagLoc)
 	{
 		_mobTemplate = NpcHolder.getInstance().getTemplate(mobTemplate);
@@ -40,6 +68,11 @@ public class CTBTeamObject implements SpawnableObject
 		_flagLoc = flagLoc;
 	}
 	
+	/**
+	 * Method spawnObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#spawnObject(GlobalEvent)
+	 */
 	@Override
 	public void spawnObject(GlobalEvent event)
 	{
@@ -69,6 +102,11 @@ public class CTBTeamObject implements SpawnableObject
 		}
 	}
 	
+	/**
+	 * Method despawnObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#despawnObject(GlobalEvent)
+	 */
 	@Override
 	public void despawnObject(GlobalEvent event)
 	{
@@ -85,26 +123,47 @@ public class CTBTeamObject implements SpawnableObject
 		_siegeClan = null;
 	}
 	
+	/**
+	 * Method refreshObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#refreshObject(GlobalEvent)
+	 */
 	@Override
 	public void refreshObject(GlobalEvent event)
 	{
 	}
 	
+	/**
+	 * Method getSiegeClan.
+	 * @return CTBSiegeClanObject
+	 */
 	public CTBSiegeClanObject getSiegeClan()
 	{
 		return _siegeClan;
 	}
 	
+	/**
+	 * Method setSiegeClan.
+	 * @param siegeClan CTBSiegeClanObject
+	 */
 	public void setSiegeClan(CTBSiegeClanObject siegeClan)
 	{
 		_siegeClan = siegeClan;
 	}
 	
+	/**
+	 * Method isParticle.
+	 * @return boolean
+	 */
 	public boolean isParticle()
 	{
 		return (_flag != null) && (_mob != null);
 	}
 	
+	/**
+	 * Method getFlag.
+	 * @return NpcInstance
+	 */
 	public NpcInstance getFlag()
 	{
 		return _flag;

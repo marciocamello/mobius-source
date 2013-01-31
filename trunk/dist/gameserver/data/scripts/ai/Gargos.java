@@ -17,21 +17,40 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Gargos extends Fighter
 {
+	/**
+	 * Field _lastFire.
+	 */
 	private long _lastFire;
 	
+	/**
+	 * Constructor for Gargos.
+	 * @param actor NpcInstance
+	 */
 	public Gargos(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
 		return super.thinkActive() || thinkFire();
 	}
 	
+	/**
+	 * Method thinkFire.
+	 * @return boolean
+	 */
 	protected boolean thinkFire()
 	{
 		if ((System.currentTimeMillis() - _lastFire) > 60000L)

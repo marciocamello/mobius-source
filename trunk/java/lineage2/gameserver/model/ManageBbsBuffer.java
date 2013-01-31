@@ -18,23 +18,49 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ManageBbsBuffer
 {
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(ManageBbsBuffer.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final ManageBbsBuffer _instance = new ManageBbsBuffer();
+	/**
+	 * Field listScheme.
+	 */
 	private final List<SBufferScheme> listScheme;
 	
+	/**
+	 * Constructor for ManageBbsBuffer.
+	 */
 	public ManageBbsBuffer()
 	{
 		listScheme = new ArrayList<>();
 	}
 	
+	/**
+	 * Method getInstance.
+	 * @return ManageBbsBuffer
+	 */
 	public static ManageBbsBuffer getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method getScheme.
+	 * @param id int
+	 * @param obj_id int
+	 * @return SBufferScheme
+	 */
 	public static SBufferScheme getScheme(int id, int obj_id)
 	{
 		for (SBufferScheme scheme : getInstance().listScheme)
@@ -47,6 +73,11 @@ public class ManageBbsBuffer
 		return null;
 	}
 	
+	/**
+	 * Method getAutoIncrement.
+	 * @param ain int
+	 * @return int
+	 */
 	public static int getAutoIncrement(int ain)
 	{
 		int count = 0;
@@ -64,6 +95,11 @@ public class ManageBbsBuffer
 		return getAutoIncrement(ain + 1);
 	}
 	
+	/**
+	 * Method StringToInt.
+	 * @param list String
+	 * @return List<Integer>
+	 */
 	public static List<Integer> StringToInt(String list)
 	{
 		List<Integer> skills_id = new ArrayList<>();
@@ -75,21 +111,35 @@ public class ManageBbsBuffer
 		return skills_id;
 	}
 	
+	/**
+	 * Method IntToString.
+	 * @param id List<Integer>
+	 * @return String
+	 */
 	public static String IntToString(List<Integer> id)
 	{
 		String buff_list = "";
 		for (int i = 0; i < id.size(); i++)
 		{
-			buff_list = buff_list + new StringBuilder().append(id.get(i)).append(";").toString();
+			buff_list = buff_list + new StringBuilder().append(id.get(i)).append(';').toString();
 		}
 		return buff_list;
 	}
 	
+	/**
+	 * Method getSchemeList.
+	 * @return List<SBufferScheme>
+	 */
 	public static List<SBufferScheme> getSchemeList()
 	{
 		return getInstance().listScheme;
 	}
 	
+	/**
+	 * Method getCountOnePlayer.
+	 * @param obj_id int
+	 * @return int
+	 */
 	public static int getCountOnePlayer(int obj_id)
 	{
 		int count = 0;
@@ -103,11 +153,17 @@ public class ManageBbsBuffer
 		return count;
 	}
 	
+	/**
+	 * Method existName.
+	 * @param obj_id int
+	 * @param name String
+	 * @return boolean
+	 */
 	public static boolean existName(int obj_id, String name)
 	{
 		for (SBufferScheme scheme : getInstance().listScheme)
 		{
-			if ((obj_id == scheme.obj_id) && (name == scheme.name))
+			if ((obj_id == scheme.obj_id) && (name.equals(scheme.name)))
 			{
 				return true;
 			}
@@ -115,6 +171,11 @@ public class ManageBbsBuffer
 		return false;
 	}
 	
+	/**
+	 * Method getSchemePlayer.
+	 * @param obj_id int
+	 * @return List<SBufferScheme>
+	 */
 	public static List<SBufferScheme> getSchemePlayer(int obj_id)
 	{
 		List<SBufferScheme> list = new ArrayList<>();
@@ -128,13 +189,31 @@ public class ManageBbsBuffer
 		return list;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class SBufferScheme
 	{
+		/**
+		 * Field id.
+		 */
 		public int id;
+		/**
+		 * Field obj_id.
+		 */
 		public int obj_id;
+		/**
+		 * Field name.
+		 */
 		public String name;
+		/**
+		 * Field skills_id.
+		 */
 		public List<Integer> skills_id;
 		
+		/**
+		 * Constructor for SBufferScheme.
+		 */
 		public SBufferScheme()
 		{
 			id = 0;

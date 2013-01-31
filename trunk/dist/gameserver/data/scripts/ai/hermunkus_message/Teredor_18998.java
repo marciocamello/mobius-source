@@ -19,15 +19,29 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Teredor_18998 extends DefaultAI
 {
+	/**
+	 * Field SKILL_ID. (value is 16021)
+	 */
 	private static final int SKILL_ID = 16021;
 	
+	/**
+	 * Constructor for Teredor_18998.
+	 * @param actor NpcInstance
+	 */
 	public Teredor_18998(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -35,6 +49,12 @@ public class Teredor_18998 extends DefaultAI
 		addTimer(1, 2500);
 	}
 	
+	/**
+	 * Method onEvtTimer.
+	 * @param timer_id int
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtTimer(int timer_id, Object arg1, Object arg2)
 	{
@@ -57,6 +77,11 @@ public class Teredor_18998 extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtFinishCasting.
+	 * @param skill_id int
+	 * @param success boolean
+	 */
 	@Override
 	protected void onEvtFinishCasting(int skill_id, boolean success)
 	{

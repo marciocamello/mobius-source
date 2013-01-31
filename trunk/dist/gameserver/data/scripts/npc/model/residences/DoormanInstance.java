@@ -20,20 +20,50 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class DoormanInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field COND_OWNER. (value is 0)
+	 */
 	protected static final int COND_OWNER = 0;
+	/**
+	 * Field COND_SIEGE. (value is 1)
+	 */
 	protected static final int COND_SIEGE = 1;
+	/**
+	 * Field COND_FAIL. (value is 2)
+	 */
 	protected static final int COND_FAIL = 2;
+	/**
+	 * Field _siegeDialog.
+	 */
 	protected String _siegeDialog;
+	/**
+	 * Field _mainDialog.
+	 */
 	protected String _mainDialog;
+	/**
+	 * Field _failDialog.
+	 */
 	protected String _failDialog;
+	/**
+	 * Field _doors.
+	 */
 	protected int[] _doors;
 	
+	/**
+	 * Constructor for DoormanInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public DoormanInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -41,6 +71,9 @@ public abstract class DoormanInstance extends NpcInstance
 		_doors = template.getAIParams().getIntegerArray("doors");
 	}
 	
+	/**
+	 * Method setDialogs.
+	 */
 	public void setDialogs()
 	{
 		_siegeDialog = getTemplate().getAIParams().getString("siege_dialog");
@@ -48,6 +81,11 @@ public abstract class DoormanInstance extends NpcInstance
 		_failDialog = getTemplate().getAIParams().getString("fail_dialog");
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -83,6 +121,12 @@ public abstract class DoormanInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -103,6 +147,11 @@ public abstract class DoormanInstance extends NpcInstance
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 	
+	/**
+	 * Method getCond.
+	 * @param player Player
+	 * @return int
+	 */
 	protected int getCond(Player player)
 	{
 		Residence residence = getResidence();
@@ -118,7 +167,15 @@ public abstract class DoormanInstance extends NpcInstance
 		return COND_FAIL;
 	}
 	
+	/**
+	 * Method getOpenPriv.
+	 * @return int
+	 */
 	public abstract int getOpenPriv();
 	
+	/**
+	 * Method getResidence.
+	 * @return Residence
+	 */
 	public abstract Residence getResidence();
 }

@@ -15,12 +15,29 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExDominionWarStart extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _territoryId.
+	 */
 	private final int _territoryId;
+	/**
+	 * Field _isDisguised.
+	 */
 	private final boolean _isDisguised;
 	
+	/**
+	 * Constructor for ExDominionWarStart.
+	 * @param player Player
+	 */
 	public ExDominionWarStart(Player player)
 	{
 		_objectId = player.getObjectId();
@@ -29,6 +46,9 @@ public class ExDominionWarStart extends L2GameServerPacket
 		_isDisguised = siegeEvent.getObjects(DominionSiegeEvent.DISGUISE_PLAYERS).contains(_objectId);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

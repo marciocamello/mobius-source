@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExWaitWaitingSubStituteInfo extends L2GameServerPacket
 {
+	/**
+	 * Field turnOn.
+	 */
 	boolean turnOn;
 	
+	/**
+	 * Constructor for ExWaitWaitingSubStituteInfo.
+	 * @param _turnOn boolean
+	 */
 	public ExWaitWaitingSubStituteInfo(boolean _turnOn)
 	{
 		turnOn = _turnOn;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -18,16 +18,29 @@ import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExReplySentPost;
 import lineage2.gameserver.network.serverpackets.ExShowSentPostList;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExRequestSentPost extends L2GameClientPacket
 {
+	/**
+	 * Field postId.
+	 */
 	private int postId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		postId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

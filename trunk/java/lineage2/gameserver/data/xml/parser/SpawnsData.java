@@ -30,39 +30,74 @@ import org.dom4j.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class SpawnsData extends AbstractDirParser<SpawnHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final SpawnsData _instance = new SpawnsData();
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SpawnsData.class);
 	
+	/**
+	 * Method getInstance.
+	 * @return SpawnsData
+	 */
 	public static SpawnsData getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for SpawnsData.
+	 */
 	protected SpawnsData()
 	{
 		super(SpawnHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/stats/npc/spawnlist/");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "spawn.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{
@@ -121,6 +156,12 @@ public final class SpawnsData extends AbstractDirParser<SpawnHolder>
 		}
 	}
 	
+	/**
+	 * Method parsePolygon0.
+	 * @param name String
+	 * @param e Element
+	 * @return Polygon
+	 */
 	@SuppressWarnings("unused")
 	private Polygon parsePolygon0(String name, Element e)
 	{

@@ -12,6 +12,10 @@
  */
 package lineage2.gameserver.model.entity.events.impl;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OlympiadPlayerVsPlayerEvent
 {
 }

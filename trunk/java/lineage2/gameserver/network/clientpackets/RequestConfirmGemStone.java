@@ -19,13 +19,32 @@ import lineage2.gameserver.model.items.etcitems.LifeStoneInfo;
 import lineage2.gameserver.model.items.etcitems.LifeStoneManager;
 import lineage2.gameserver.network.serverpackets.ExPutCommissionResultForVariationMake;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestConfirmGemStone extends AbstractRefinePacket
 {
+	/**
+	 * Field _targetItemObjId.
+	 */
 	private int _targetItemObjId;
+	/**
+	 * Field _refinerItemObjId.
+	 */
 	private int _refinerItemObjId;
+	/**
+	 * Field _gemstoneItemObjId.
+	 */
 	private int _gemstoneItemObjId;
+	/**
+	 * Field _gemstoneCount.
+	 */
 	private long _gemstoneCount;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -35,6 +54,9 @@ public class RequestConfirmGemStone extends AbstractRefinePacket
 		_gemstoneCount = readQ();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

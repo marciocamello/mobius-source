@@ -21,8 +21,15 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BlessedSpiritShot extends ScriptItemHandler
 {
+	/**
+	 * Field _itemIds.
+	 */
 	private static final int[] _itemIds =
 	{
 		3947,
@@ -39,6 +46,9 @@ public class BlessedSpiritShot extends ScriptItemHandler
 		19442,
 		33794
 	};
+	/**
+	 * Field _skillIds.
+	 */
 	private static final int[] _skillIds =
 	{
 		2061,
@@ -50,6 +60,13 @@ public class BlessedSpiritShot extends ScriptItemHandler
 		9195
 	};
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -118,6 +135,10 @@ public class BlessedSpiritShot extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public final int[] getItemIds()
 	{

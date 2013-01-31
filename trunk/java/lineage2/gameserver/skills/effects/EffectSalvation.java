@@ -15,25 +15,44 @@ package lineage2.gameserver.skills.effects;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectSalvation extends Effect
 {
+	/**
+	 * Constructor for EffectSalvation.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectSalvation(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
 		return getEffected().isPlayer() && super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
 		getEffected().setIsSalvation(true);
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -41,6 +60,10 @@ public final class EffectSalvation extends Effect
 		getEffected().setIsSalvation(false);
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

@@ -19,12 +19,29 @@ import lineage2.gameserver.model.CommandChannel;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExMultiPartyCommandChannelInfo extends L2GameServerPacket
 {
+	/**
+	 * Field ChannelLeaderName.
+	 */
 	private final String ChannelLeaderName;
+	/**
+	 * Field MemberCount.
+	 */
 	private final int MemberCount;
+	/**
+	 * Field parties.
+	 */
 	private final List<ChannelPartyInfo> parties;
 	
+	/**
+	 * Constructor for ExMultiPartyCommandChannelInfo.
+	 * @param channel CommandChannel
+	 */
 	public ExMultiPartyCommandChannelInfo(CommandChannel channel)
 	{
 		ChannelLeaderName = channel.getChannelLeader().getName();
@@ -40,6 +57,9 @@ public class ExMultiPartyCommandChannelInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -56,11 +76,29 @@ public class ExMultiPartyCommandChannelInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class ChannelPartyInfo
 	{
+		/**
+		 * Field Leader_name.
+		 */
 		public String Leader_name;
+		/**
+		 * Field MemberCount.
+		 */
+		/**
+		 * Field Leader_obj_id.
+		 */
 		public int Leader_obj_id, MemberCount;
 		
+		/**
+		 * Constructor for ChannelPartyInfo.
+		 * @param _Leader_name String
+		 * @param _Leader_obj_id int
+		 * @param _MemberCount int
+		 */
 		public ChannelPartyInfo(String _Leader_name, int _Leader_obj_id, int _MemberCount)
 		{
 			Leader_name = _Leader_name;

@@ -14,11 +14,24 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestShortCutDel extends L2GameClientPacket
 {
+	/**
+	 * Field _slot.
+	 */
 	private int _slot;
+	/**
+	 * Field _page.
+	 */
 	private int _page;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -27,6 +40,9 @@ public class RequestShortCutDel extends L2GameClientPacket
 		_page = id / 12;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

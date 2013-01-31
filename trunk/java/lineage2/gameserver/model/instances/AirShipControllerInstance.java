@@ -20,6 +20,10 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AirShipControllerInstance extends NpcInstance
 {
 	/**
@@ -27,11 +31,21 @@ public class AirShipControllerInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for AirShipControllerInstance.
+	 * @param objectID int
+	 * @param template NpcTemplate
+	 */
 	public AirShipControllerInstance(int objectID, NpcTemplate template)
 	{
 		super(objectID, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -67,6 +81,10 @@ public class AirShipControllerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getDockedAirShip.
+	 * @return Boat
+	 */
 	protected Boat getDockedAirShip()
 	{
 		for (Creature cha : World.getAroundCharacters(this, 1000, 500))
@@ -79,6 +97,11 @@ public class AirShipControllerInstance extends NpcInstance
 		return null;
 	}
 	
+	/**
+	 * Method canBoard.
+	 * @param player Player
+	 * @return SystemMsg
+	 */
 	private static SystemMsg canBoard(Player player)
 	{
 		if (player.getTransformation() != 0)

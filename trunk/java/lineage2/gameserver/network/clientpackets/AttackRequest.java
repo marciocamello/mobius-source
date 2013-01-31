@@ -15,17 +15,39 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AttackRequest extends L2GameClientPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
+	/**
+	 * Field _originX.
+	 */
 	@SuppressWarnings("unused")
 	private int _originX;
+	/**
+	 * Field _originY.
+	 */
 	@SuppressWarnings("unused")
 	private int _originY;
+	/**
+	 * Field _originZ.
+	 */
 	@SuppressWarnings("unused")
 	private int _originZ;
+	/**
+	 * Field _attackId.
+	 */
 	private int _attackId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -36,6 +58,9 @@ public class AttackRequest extends L2GameClientPacket
 		_attackId = readC();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

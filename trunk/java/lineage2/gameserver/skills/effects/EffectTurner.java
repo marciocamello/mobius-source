@@ -18,13 +18,25 @@ import lineage2.gameserver.network.serverpackets.StartRotating;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectTurner extends Effect
 {
+	/**
+	 * Constructor for EffectTurner.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectTurner(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -36,6 +48,9 @@ public class EffectTurner extends Effect
 		getEffected().startStunning();
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -43,6 +58,10 @@ public class EffectTurner extends Effect
 		getEffected().stopStunning();
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

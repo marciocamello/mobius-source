@@ -49,23 +49,51 @@ import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Playable extends Creature
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _isSilentMoving.
+	 */
 	private final AtomicState _isSilentMoving = new AtomicState();
+	/**
+	 * Field _isPendingRevive.
+	 */
 	private boolean _isPendingRevive;
+	/**
+	 * Field questLock.
+	 */
 	protected final ReadWriteLock questLock = new ReentrantReadWriteLock();
+	/**
+	 * Field questRead.
+	 */
 	protected final Lock questRead = questLock.readLock();
+	/**
+	 * Field questWrite.
+	 */
 	protected final Lock questWrite = questLock.writeLock();
 	
+	/**
+	 * Constructor for Playable.
+	 * @param objectId int
+	 * @param template CharTemplate
+	 */
 	public Playable(int objectId, CharTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method getRef.
+	 * @return HardReference<? extends Playable>
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public HardReference<? extends Playable> getRef()
@@ -73,13 +101,33 @@ public abstract class Playable extends Creature
 		return (HardReference<? extends Playable>) super.getRef();
 	}
 	
+	/**
+	 * Method getInventory.
+	 * @return Inventory
+	 */
 	public abstract Inventory getInventory();
 	
+	/**
+	 * Method getWearedMask.
+	 * @return long
+	 */
 	public abstract long getWearedMask();
 	
+	/**
+	 * Field _boat.
+	 */
 	private Boat _boat;
+	/**
+	 * Field _inBoatPosition.
+	 */
 	private Location _inBoatPosition;
 	
+	/**
+	 * Method checkPvP.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkPvP(final Creature target, Skill skill)
 	{
@@ -142,6 +190,11 @@ public abstract class Playable extends Creature
 		return false;
 	}
 	
+	/**
+	 * Method checkTarget.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	public boolean checkTarget(Creature target)
 	{
 		Player player = getPlayer();
@@ -202,6 +255,10 @@ public abstract class Playable extends Creature
 		return true;
 	}
 	
+	/**
+	 * Method doAttack.
+	 * @param target Creature
+	 */
 	@Override
 	public void doAttack(Creature target)
 	{
@@ -262,6 +319,12 @@ public abstract class Playable extends Creature
 		super.doAttack(target);
 	}
 	
+	/**
+	 * Method doCast.
+	 * @param skill Skill
+	 * @param target Creature
+	 * @param forceUse boolean
+	 */
 	@Override
 	public void doCast(final Skill skill, final Creature target, boolean forceUse)
 	{
@@ -287,6 +350,20 @@ public abstract class Playable extends Creature
 		super.doCast(skill, target, forceUse);
 	}
 	
+	/**
+	 * Method reduceCurrentHp.
+	 * @param damage double
+	 * @param reflectableDamage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 * @param canReflect boolean
+	 * @param transferDamage boolean
+	 * @param isDot boolean
+	 * @param sendMessage boolean
+	 */
 	@Override
 	public void reduceCurrentHp(double damage, double reflectableDamage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp, boolean canReflect, boolean transferDamage, boolean isDot, boolean sendMessage)
 	{
@@ -338,12 +415,21 @@ public abstract class Playable extends Creature
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 	
+	/**
+	 * Method getPAtkSpd.
+	 * @return int
+	 */
 	@Override
 	public int getPAtkSpd()
 	{
 		return Math.max((int) calcStat(Stats.POWER_ATTACK_SPEED, calcStat(Stats.ATK_BASE, _template.getBasePAtkSpd(), null, null), null, null), 1);
 	}
 	
+	/**
+	 * Method getPAtk.
+	 * @param target Creature
+	 * @return int
+	 */
 	@Override
 	public int getPAtk(final Creature target)
 	{
@@ -351,6 +437,12 @@ public abstract class Playable extends Creature
 		return (int) calcStat(Stats.POWER_ATTACK, init, target, null);
 	}
 	
+	/**
+	 * Method getMAtk.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return int
+	 */
 	@Override
 	public int getMAtk(final Creature target, final Skill skill)
 	{
@@ -362,18 +454,35 @@ public abstract class Playable extends Creature
 		return (int) calcStat(Stats.MAGIC_ATTACK, init, target, skill);
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature attacker)
 	{
 		return isCtrlAttackable(attacker, true, false);
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		return isCtrlAttackable(attacker, false, false);
 	}
 	
+	/**
+	 * Method isCtrlAttackable.
+	 * @param attacker Creature
+	 * @param force boolean
+	 * @param witchCtrl boolean
+	 * @return boolean
+	 */
 	public boolean isCtrlAttackable(Creature attacker, boolean force, boolean witchCtrl)
 	{
 		Player player = getPlayer();
@@ -471,6 +580,10 @@ public abstract class Playable extends Creature
 		return true;
 	}
 	
+	/**
+	 * Method getKarma.
+	 * @return int
+	 */
 	@Override
 	public int getKarma()
 	{
@@ -478,6 +591,12 @@ public abstract class Playable extends Creature
 		return player == null ? 0 : player.getKarma();
 	}
 	
+	/**
+	 * Method callSkill.
+	 * @param skill Skill
+	 * @param targets List<Creature>
+	 * @param useActionSkills boolean
+	 */
 	@Override
 	public void callSkill(Skill skill, List<Creature> targets, boolean useActionSkills)
 	{
@@ -556,6 +675,10 @@ public abstract class Playable extends Creature
 		super.callSkill(skill, targets, useActionSkills);
 	}
 	
+	/**
+	 * Method broadcastPickUpMsg.
+	 * @param item ItemInstance
+	 */
 	public void broadcastPickUpMsg(ItemInstance item)
 	{
 		Player player = getPlayer();
@@ -581,22 +704,37 @@ public abstract class Playable extends Creature
 		}
 	}
 	
+	/**
+	 * Method paralizeMe.
+	 * @param effector Creature
+	 */
 	public void paralizeMe(Creature effector)
 	{
 		Skill revengeSkill = SkillTable.getInstance().getInfo(Skill.SKILL_RAID_CURSE, 1);
 		revengeSkill.getEffects(effector, this, false, false);
 	}
 	
+	/**
+	 * Method setPendingRevive.
+	 * @param value boolean
+	 */
 	public final void setPendingRevive(boolean value)
 	{
 		_isPendingRevive = value;
 	}
 	
+	/**
+	 * Method isPendingRevive.
+	 * @return boolean
+	 */
 	public boolean isPendingRevive()
 	{
 		return _isPendingRevive;
 	}
 	
+	/**
+	 * Method doRevive.
+	 */
 	public void doRevive()
 	{
 		if (!isTeleporting())
@@ -637,117 +775,211 @@ public abstract class Playable extends Creature
 		}
 	}
 	
+	/**
+	 * Method doPickupItem.
+	 * @param object GameObject
+	 */
 	public abstract void doPickupItem(GameObject object);
 	
+	/**
+	 * Method sitDown.
+	 * @param throne StaticObjectInstance
+	 */
 	public void sitDown(StaticObjectInstance throne)
 	{
 	}
 	
+	/**
+	 * Method standUp.
+	 */
 	public void standUp()
 	{
 	}
 	
+	/**
+	 * Field _nonAggroTime.
+	 */
 	private long _nonAggroTime;
 	
+	/**
+	 * Method getNonAggroTime.
+	 * @return long
+	 */
 	public long getNonAggroTime()
 	{
 		return _nonAggroTime;
 	}
 	
+	/**
+	 * Method setNonAggroTime.
+	 * @param time long
+	 */
 	public void setNonAggroTime(long time)
 	{
 		_nonAggroTime = time;
 	}
 	
+	/**
+	 * Method startSilentMoving.
+	 * @return boolean
+	 */
 	public boolean startSilentMoving()
 	{
 		return _isSilentMoving.getAndSet(true);
 	}
 	
+	/**
+	 * Method stopSilentMoving.
+	 * @return boolean
+	 */
 	public boolean stopSilentMoving()
 	{
 		return _isSilentMoving.setAndGet(false);
 	}
 	
+	/**
+	 * Method isSilentMoving.
+	 * @return boolean
+	 */
 	public boolean isSilentMoving()
 	{
 		return _isSilentMoving.get();
 	}
 	
+	/**
+	 * Method isInCombatZone.
+	 * @return boolean
+	 */
 	public boolean isInCombatZone()
 	{
 		return isInZoneBattle();
 	}
 	
+	/**
+	 * Method isInPeaceZone.
+	 * @return boolean
+	 */
 	public boolean isInPeaceZone()
 	{
 		return isInZonePeace();
 	}
 	
+	/**
+	 * Method isInZoneBattle.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInZoneBattle()
 	{
 		return super.isInZoneBattle();
 	}
 	
+	/**
+	 * Method isOnSiegeField.
+	 * @return boolean
+	 */
 	public boolean isOnSiegeField()
 	{
 		return isInZone(ZoneType.SIEGE);
 	}
 	
+	/**
+	 * Method isInSSQZone.
+	 * @return boolean
+	 */
 	public boolean isInSSQZone()
 	{
 		return isInZone(ZoneType.ssq_zone);
 	}
 	
+	/**
+	 * Method isInDangerArea.
+	 * @return boolean
+	 */
 	public boolean isInDangerArea()
 	{
 		return isInZone(ZoneType.damage) || isInZone(ZoneType.swamp) || isInZone(ZoneType.poison) || isInZone(ZoneType.instant_skill);
 	}
 	
+	/**
+	 * Method getMaxLoad.
+	 * @return int
+	 */
 	public int getMaxLoad()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getInventoryLimit.
+	 * @return int
+	 */
 	public int getInventoryLimit()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method isPlayable.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isPlayable()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isInBoat.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInBoat()
 	{
 		return _boat != null;
 	}
 	
+	/**
+	 * Method isInShuttle.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInShuttle()
 	{
 		return (_boat != null) && _boat.isShuttle();
 	}
 	
+	/**
+	 * Method getBoat.
+	 * @return Boat
+	 */
 	public Boat getBoat()
 	{
 		return _boat;
 	}
 	
+	/**
+	 * Method setBoat.
+	 * @param boat Boat
+	 */
 	public void setBoat(Boat boat)
 	{
 		_boat = boat;
 	}
 	
+	/**
+	 * Method getInBoatPosition.
+	 * @return Location
+	 */
 	public Location getInBoatPosition()
 	{
 		return _inBoatPosition;
 	}
 	
+	/**
+	 * Method setInBoatPosition.
+	 * @param loc Location
+	 */
 	public void setInBoatPosition(Location loc)
 	{
 		_inBoatPosition = loc;

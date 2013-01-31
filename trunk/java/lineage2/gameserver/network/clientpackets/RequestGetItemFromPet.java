@@ -22,15 +22,34 @@ import lineage2.gameserver.model.items.PetInventory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestGetItemFromPet extends L2GameClientPacket
 {
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(RequestGetItemFromPet.class);
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
+	/**
+	 * Field _amount.
+	 */
 	private long _amount;
+	/**
+	 * Field _unknown.
+	 */
 	@SuppressWarnings("unused")
 	private int _unknown;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -39,6 +58,9 @@ public class RequestGetItemFromPet extends L2GameClientPacket
 		_unknown = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

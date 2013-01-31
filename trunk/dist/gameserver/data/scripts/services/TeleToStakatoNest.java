@@ -20,8 +20,15 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 import quests._240_ImTheOnlyOneYouCanTrust;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeleToStakatoNest extends Functions
 {
+	/**
+	 * Field teleports.
+	 */
 	private final static Location[] teleports =
 	{
 		new Location(80456, -52322, -5640),
@@ -31,6 +38,9 @@ public class TeleToStakatoNest extends Functions
 		new Location(87682, -43291, -4128)
 	};
 	
+	/**
+	 * Method list.
+	 */
 	public void list()
 	{
 		Player player = getSelf();
@@ -48,6 +58,10 @@ public class TeleToStakatoNest extends Functions
 		show("scripts/services/TeleToStakatoNest.htm", player);
 	}
 	
+	/**
+	 * Method teleTo.
+	 * @param args String[]
+	 */
 	public void teleTo(String[] args)
 	{
 		Player player = getSelf();

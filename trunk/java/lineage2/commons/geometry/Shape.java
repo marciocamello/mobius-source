@@ -12,21 +12,62 @@
  */
 package lineage2.commons.geometry;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface Shape
 {
+	/**
+	 * Method isInside.
+	 * @param x int
+	 * @param y int
+	 * @return boolean
+	 */
 	public boolean isInside(int x, int y);
 	
+	/**
+	 * Method isInside.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return boolean
+	 */
 	public boolean isInside(int x, int y, int z);
 	
+	/**
+	 * Method getXmax.
+	 * @return int
+	 */
 	public int getXmax();
 	
+	/**
+	 * Method getXmin.
+	 * @return int
+	 */
 	public int getXmin();
 	
+	/**
+	 * Method getYmax.
+	 * @return int
+	 */
 	public int getYmax();
 	
+	/**
+	 * Method getYmin.
+	 * @return int
+	 */
 	public int getYmin();
 	
+	/**
+	 * Method getZmax.
+	 * @return int
+	 */
 	public int getZmax();
 	
+	/**
+	 * Method getZmin.
+	 * @return int
+	 */
 	public int getZmin();
 }

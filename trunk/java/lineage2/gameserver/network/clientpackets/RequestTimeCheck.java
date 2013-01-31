@@ -12,11 +12,21 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestTimeCheck extends L2GameClientPacket
 {
+	/**
+	 * Field unk2. Field unk.
+	 */
 	@SuppressWarnings("unused")
 	private int unk, unk2;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -24,6 +34,9 @@ public class RequestTimeCheck extends L2GameClientPacket
 		unk2 = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

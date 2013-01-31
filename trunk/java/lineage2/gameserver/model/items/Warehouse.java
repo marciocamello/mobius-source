@@ -23,28 +23,69 @@ import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.ItemTemplate.ItemClass;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Warehouse extends ItemContainer
 {
+	/**
+	 * Field _itemsDAO.
+	 */
 	private static final ItemsDAO _itemsDAO = ItemsDAO.getInstance();
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum WarehouseType
 	{
+		/**
+		 * Field NONE.
+		 */
 		NONE,
+		/**
+		 * Field PRIVATE.
+		 */
 		PRIVATE,
+		/**
+		 * Field CLAN.
+		 */
 		CLAN,
+		/**
+		 * Field CASTLE.
+		 */
 		CASTLE,
+		/**
+		 * Field FREIGHT.
+		 */
 		FREIGHT
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class ItemClassComparator implements Comparator<ItemInstance>
 	{
+		/**
+		 * Field instance.
+		 */
 		private static final Comparator<ItemInstance> instance = new ItemClassComparator();
 		
+		/**
+		 * Method getInstance.
+		 * @return Comparator<ItemInstance>
+		 */
 		public static Comparator<ItemInstance> getInstance()
 		{
 			return instance;
 		}
 		
+		/**
+		 * Method compare.
+		 * @param o1 ItemInstance
+		 * @param o2 ItemInstance
+		 * @return int
+		 */
 		@Override
 		public int compare(ItemInstance o1, ItemInstance o2)
 		{
@@ -69,20 +110,40 @@ public abstract class Warehouse extends ItemContainer
 		}
 	}
 	
+	/**
+	 * Field _ownerId.
+	 */
 	protected final int _ownerId;
 	
+	/**
+	 * Constructor for Warehouse.
+	 * @param ownerId int
+	 */
 	protected Warehouse(int ownerId)
 	{
 		_ownerId = ownerId;
 	}
 	
+	/**
+	 * Method getOwnerId.
+	 * @return int
+	 */
 	public int getOwnerId()
 	{
 		return _ownerId;
 	}
 	
+	/**
+	 * Method getItemLocation.
+	 * @return ItemLocation
+	 */
 	public abstract ItemLocation getItemLocation();
 	
+	/**
+	 * Method getItems.
+	 * @param itemClass ItemClass
+	 * @return ItemInstance[]
+	 */
 	public ItemInstance[] getItems(ItemClass itemClass)
 	{
 		List<ItemInstance> result = new ArrayList<>();
@@ -106,11 +167,19 @@ public abstract class Warehouse extends ItemContainer
 		return result.toArray(new ItemInstance[result.size()]);
 	}
 	
+	/**
+	 * Method getCountOfAdena.
+	 * @return long
+	 */
 	public long getCountOfAdena()
 	{
 		return getCountOf(ItemTemplate.ITEM_ID_ADENA);
 	}
 	
+	/**
+	 * Method onAddItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onAddItem(ItemInstance item)
 	{
@@ -128,6 +197,10 @@ public abstract class Warehouse extends ItemContainer
 		}
 	}
 	
+	/**
+	 * Method onModifyItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onModifyItem(ItemInstance item)
 	{
@@ -135,12 +208,20 @@ public abstract class Warehouse extends ItemContainer
 		item.update();
 	}
 	
+	/**
+	 * Method onRemoveItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onRemoveItem(ItemInstance item)
 	{
 		item.setLocData(-1);
 	}
 	
+	/**
+	 * Method onDestroyItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onDestroyItem(ItemInstance item)
 	{
@@ -148,6 +229,9 @@ public abstract class Warehouse extends ItemContainer
 		item.delete();
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	public void restore()
 	{
 		final int ownerId = getOwnerId();

@@ -26,20 +26,62 @@ import lineage2.gameserver.model.pledge.Clan;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowDominionRegistry extends L2GameServerPacket
 {
+	/**
+	 * Field _dominionId.
+	 */
 	private final int _dominionId;
+	/**
+	 * Field _ownerClanName.
+	 */
 	private final String _ownerClanName;
+	/**
+	 * Field _ownerLeaderName.
+	 */
 	private final String _ownerLeaderName;
+	/**
+	 * Field _ownerAllyName.
+	 */
 	private final String _ownerAllyName;
+	/**
+	 * Field _clanReq.
+	 */
 	private final int _clanReq;
+	/**
+	 * Field _mercReq.
+	 */
 	private final int _mercReq;
+	/**
+	 * Field _warTime.
+	 */
 	private final int _warTime;
+	/**
+	 * Field _currentTime.
+	 */
 	private final int _currentTime;
+	/**
+	 * Field _registeredAsPlayer.
+	 */
 	private final boolean _registeredAsPlayer;
+	/**
+	 * Field _registeredAsClan.
+	 */
 	private final boolean _registeredAsClan;
+	/**
+	 * Field _flags.
+	 */
 	private List<TerritoryFlagsInfo> _flags = Collections.emptyList();
 	
+	/**
+	 * Constructor for ExShowDominionRegistry.
+	 * @param activeChar Player
+	 * @param dominion Dominion
+	 */
 	public ExShowDominionRegistry(Player activeChar, Dominion dominion)
 	{
 		_dominionId = dominion.getId();
@@ -63,6 +105,9 @@ public class ExShowDominionRegistry extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -90,11 +135,25 @@ public class ExShowDominionRegistry extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class TerritoryFlagsInfo
 	{
+		/**
+		 * Field id.
+		 */
 		public int id;
+		/**
+		 * Field flags.
+		 */
 		public int[] flags;
 		
+		/**
+		 * Constructor for TerritoryFlagsInfo.
+		 * @param id_ int
+		 * @param flags_ int[]
+		 */
 		public TerritoryFlagsInfo(int id_, int[] flags_)
 		{
 			id = id_;

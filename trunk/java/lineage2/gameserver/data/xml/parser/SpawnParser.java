@@ -31,38 +31,70 @@ import lineage2.gameserver.utils.Location;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class SpawnParser extends AbstractDirParser<SpawnHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final SpawnParser _instance = new SpawnParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return SpawnParser
+	 */
 	public static SpawnParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for SpawnParser.
+	 */
 	protected SpawnParser()
 	{
 		super(SpawnHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/spawn/");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "spawn.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{
@@ -149,6 +181,12 @@ public final class SpawnParser extends AbstractDirParser<SpawnHolder>
 		}
 	}
 	
+	/**
+	 * Method parseTerritory.
+	 * @param name String
+	 * @param e Element
+	 * @return Territory
+	 */
 	private Territory parseTerritory(String name, Element e)
 	{
 		Territory t = new Territory();
@@ -160,6 +198,12 @@ public final class SpawnParser extends AbstractDirParser<SpawnHolder>
 		return t;
 	}
 	
+	/**
+	 * Method parsePolygon0.
+	 * @param name String
+	 * @param e Element
+	 * @return Polygon
+	 */
 	private Polygon parsePolygon0(String name, Element e)
 	{
 		Polygon temp = new Polygon();

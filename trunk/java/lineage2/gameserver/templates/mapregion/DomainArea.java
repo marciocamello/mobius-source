@@ -14,22 +14,45 @@ package lineage2.gameserver.templates.mapregion;
 
 import lineage2.gameserver.model.Territory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DomainArea implements RegionData
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _territory.
+	 */
 	private final Territory _territory;
 	
+	/**
+	 * Constructor for DomainArea.
+	 * @param id int
+	 * @param territory Territory
+	 */
 	public DomainArea(int id, Territory territory)
 	{
 		_id = id;
 		_territory = territory;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getTerritory.
+	 * @return Territory * @see lineage2.gameserver.templates.mapregion.RegionData#getTerritory()
+	 */
 	@Override
 	public Territory getTerritory()
 	{

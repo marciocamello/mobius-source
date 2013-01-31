@@ -20,12 +20,28 @@ import lineage2.gameserver.model.matching.CCMatchingRoom;
 import lineage2.gameserver.network.serverpackets.ListPartyWaiting;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPartyMatchConfig extends L2GameClientPacket
 {
+	/**
+	 * Field _page.
+	 */
 	private int _page;
+	/**
+	 * Field _region.
+	 */
 	private int _region;
+	/**
+	 * Field _allLevels.
+	 */
 	private int _allLevels;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -34,6 +50,9 @@ public class RequestPartyMatchConfig extends L2GameClientPacket
 		_allLevels = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

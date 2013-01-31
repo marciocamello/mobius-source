@@ -17,13 +17,25 @@ import lineage2.gameserver.instancemanager.naia.NaiaCoreManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Epidos extends Fighter
 {
+	/**
+	 * Constructor for Epidos.
+	 * @param actor NpcInstance
+	 */
 	public Epidos(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

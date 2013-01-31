@@ -17,16 +17,31 @@ import lineage2.gameserver.network.serverpackets.ExRegenMax;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectHealOverTime extends Effect
 {
+	/**
+	 * Field _ignoreHpEff.
+	 */
 	private final boolean _ignoreHpEff;
 	
+	/**
+	 * Constructor for EffectHealOverTime.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectHealOverTime(Env env, EffectTemplate template)
 	{
 		super(env, template);
 		_ignoreHpEff = template.getParam().getBool("ignoreHpEff", false);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -37,6 +52,10 @@ public class EffectHealOverTime extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

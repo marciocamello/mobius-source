@@ -18,32 +18,54 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Thomas extends Fighter
 {
+	/**
+	 * Field _lastSay.
+	 */
 	private long _lastSay;
+	/**
+	 * Field _stay.
+	 */
 	private static final String[] _stay =
 	{
-		"Ха...Ха... Вы пришли спасти снеговика?",
-		"Так просто я вам его не отдам!",
-		"Чтобы спасти вашего снеговика, вам придется убить меня!",
-		"Ха...Ха... Вы думаете это так просто?"
-	};
-	private static final String[] _attacked =
-	{
-		"Вы должны все умереть!",
-		"Снеговик мой и не будет у вас Нового Года!",
-		"Я вас всех убью!",
-		"Что так слабо бьете? Мало каши ели? Ха... Ха...",
-		"И это называется герои?",
-		"Не видать вам снеговика!",
-		"Только древнее оружие способно победить меня!"
+		"Ха...Ха... Вы при�?ли �?па�?ти �?неговика?",
+		"Так про�?то �? вам его не отдам!",
+		"Чтобы �?па�?ти ва�?его �?неговика, вам придет�?�? убит�? мен�?!",
+		"Ха...Ха... Вы думаете �?то так про�?то?"
 	};
 	
+	/**
+	 * Field _attacked.
+	 */
+	private static final String[] _attacked =
+	{
+		"Вы должны в�?е умерет�?!",
+		"Снеговик мой и не будет у ва�? �?ового Года!",
+		"Я ва�? в�?ех уб�?�?!",
+		"Что так �?лабо б�?ете? �?��ло ка�?и ели? Ха... Ха...",
+		"�? �?то называет�?�? герои?",
+		"�?е видат�? вам �?неговика!",
+		"Тол�?ко древнее оружие �?по�?обно победит�? мен�?!"
+	};
+	
+	/**
+	 * Constructor for Thomas.
+	 * @param actor NpcInstance
+	 */
 	public Thomas(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -60,6 +82,11 @@ public class Thomas extends Fighter
 		return super.thinkActive();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

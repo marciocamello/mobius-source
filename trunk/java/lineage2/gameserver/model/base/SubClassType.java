@@ -12,10 +12,26 @@
  */
 package lineage2.gameserver.model.base;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum SubClassType
 {
+	/**
+	 * Field BASE_CLASS.
+	 */
 	BASE_CLASS,
+	/**
+	 * Field DOUBLE_SUBCLASS.
+	 */
 	DOUBLE_SUBCLASS,
+	/**
+	 * Field SUBCLASS.
+	 */
 	SUBCLASS;
+	/**
+	 * Field VALUES.
+	 */
 	public static final SubClassType[] VALUES = values();
 }

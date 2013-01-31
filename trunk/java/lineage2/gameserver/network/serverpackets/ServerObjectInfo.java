@@ -16,16 +16,46 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.StatueInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ServerObjectInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _activeChar.
+	 */
 	private final NpcInstance _activeChar;
+	/**
+	 * Field _heading. Field _z. Field _y. Field _x.
+	 */
 	private final int _x, _y, _z, _heading;
+	/**
+	 * Field _idTemplate.
+	 */
 	private int _idTemplate;
+	/**
+	 * Field _isAttackable.
+	 */
 	private boolean _isAttackable;
+	/**
+	 * Field _collisionRadius. Field _collisionHeight.
+	 */
 	private double _collisionHeight, _collisionRadius;
+	/**
+	 * Field _name.
+	 */
 	private String _name;
+	/**
+	 * Field _type.
+	 */
 	private int _type;
 	
+	/**
+	 * Constructor for ServerObjectInfo.
+	 * @param activeChar NpcInstance
+	 * @param actor Creature
+	 */
 	public ServerObjectInfo(NpcInstance activeChar, Creature actor)
 	{
 		_activeChar = activeChar;
@@ -50,6 +80,9 @@ public class ServerObjectInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -15,15 +15,31 @@ package lineage2.gameserver.stats.conditions;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionPlayerAgathion extends Condition
 {
+	/**
+	 * Field _agathionId.
+	 */
 	private final int _agathionId;
 	
+	/**
+	 * Constructor for ConditionPlayerAgathion.
+	 * @param agathionId int
+	 */
 	public ConditionPlayerAgathion(int agathionId)
 	{
 		_agathionId = agathionId;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

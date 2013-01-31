@@ -14,11 +14,25 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExVoteSystemInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _bonusPercent. Field _time. Field _givingRec. Field _receivedRec.
+	 */
 	private final int _receivedRec, _givingRec, _time, _bonusPercent;
+	/**
+	 * Field _showTimer.
+	 */
 	private final boolean _showTimer;
 	
+	/**
+	 * Constructor for ExVoteSystemInfo.
+	 * @param player Player
+	 */
 	public ExVoteSystemInfo(Player player)
 	{
 		_receivedRec = player.getRecomLeft();
@@ -28,6 +42,9 @@ public class ExVoteSystemInfo extends L2GameServerPacket
 		_showTimer = !player.isRecomTimerActive() || player.isHourglassEffected();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

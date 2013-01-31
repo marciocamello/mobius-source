@@ -14,7 +14,14 @@ package lineage2.gameserver.listener.game;
 
 import lineage2.gameserver.listener.GameListener;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnShutdownListener extends GameListener
 {
+	/**
+	 * Method onShutdown.
+	 */
 	public void onShutdown();
 }

@@ -16,19 +16,35 @@ import lineage2.gameserver.handler.usercommands.IUserCommandHandler;
 import lineage2.gameserver.handler.usercommands.UserCommandHandler;
 import lineage2.gameserver.scripts.ScriptFile;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class ScriptUserCommand implements IUserCommandHandler, ScriptFile
 {
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 		UserCommandHandler.getInstance().registerUserCommandHandler(this);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

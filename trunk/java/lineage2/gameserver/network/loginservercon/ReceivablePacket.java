@@ -17,22 +17,41 @@ import java.nio.ByteBuffer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class ReceivablePacket extends lineage2.commons.net.nio.ReceivablePacket<LoginServerCommunication>
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ReceivablePacket.class);
 	
+	/**
+	 * Method getClient.
+	 * @return LoginServerCommunication
+	 */
 	@Override
 	public LoginServerCommunication getClient()
 	{
 		return LoginServerCommunication.getInstance();
 	}
 	
+	/**
+	 * Method getByteBuffer.
+	 * @return ByteBuffer
+	 */
 	@Override
 	protected ByteBuffer getByteBuffer()
 	{
 		return getClient().getReadBuffer();
 	}
 	
+	/**
+	 * Method read.
+	 * @return boolean
+	 */
 	@Override
 	public final boolean read()
 	{
@@ -47,6 +66,10 @@ public abstract class ReceivablePacket extends lineage2.commons.net.nio.Receivab
 		return true;
 	}
 	
+	/**
+	 * Method run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public final void run()
 	{
@@ -60,10 +83,20 @@ public abstract class ReceivablePacket extends lineage2.commons.net.nio.Receivab
 		}
 	}
 	
+	/**
+	 * Method readImpl.
+	 */
 	protected abstract void readImpl();
 	
+	/**
+	 * Method runImpl.
+	 */
 	protected abstract void runImpl();
 	
+	/**
+	 * Method sendPacket.
+	 * @param sp SendablePacket
+	 */
 	protected void sendPacket(SendablePacket sp)
 	{
 		getClient().sendPacket(sp);

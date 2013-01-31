@@ -19,16 +19,29 @@ import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.ReceivablePacket;
 import lineage2.gameserver.network.serverpackets.ServerClose;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KickPlayer extends ReceivablePacket
 {
+	/**
+	 * Field account.
+	 */
 	String account;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	public void readImpl()
 	{
 		account = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

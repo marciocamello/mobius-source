@@ -16,31 +16,60 @@ import lineage2.gameserver.data.xml.holder.StaticObjectHolder;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.instances.StaticObjectInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StaticObjectObject implements SpawnableObject
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _uid.
+	 */
 	private final int _uid;
+	/**
+	 * Field _instance.
+	 */
 	private StaticObjectInstance _instance;
 	
+	/**
+	 * Constructor for StaticObjectObject.
+	 * @param id int
+	 */
 	public StaticObjectObject(int id)
 	{
 		_uid = id;
 	}
 	
+	/**
+	 * Method spawnObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#spawnObject(GlobalEvent)
+	 */
 	@Override
 	public void spawnObject(GlobalEvent event)
 	{
 		_instance = StaticObjectHolder.getInstance().getObject(_uid);
 	}
 	
+	/**
+	 * Method despawnObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#despawnObject(GlobalEvent)
+	 */
 	@Override
 	public void despawnObject(GlobalEvent event)
 	{
 	}
 	
+	/**
+	 * Method refreshObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#refreshObject(GlobalEvent)
+	 */
 	@Override
 	public void refreshObject(GlobalEvent event)
 	{
@@ -54,12 +83,20 @@ public class StaticObjectObject implements SpawnableObject
 		}
 	}
 	
+	/**
+	 * Method setMeshIndex.
+	 * @param id int
+	 */
 	public void setMeshIndex(int id)
 	{
 		_instance.setMeshIndex(id);
 		_instance.broadcastInfo(false);
 	}
 	
+	/**
+	 * Method getUId.
+	 * @return int
+	 */
 	public int getUId()
 	{
 		return _uid;

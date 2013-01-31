@@ -14,8 +14,15 @@ package lineage2.gameserver.model.base;
 
 import lineage2.gameserver.Config;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Experience
 {
+	/**
+	 * Field LEVEL.
+	 */
 	public final static long LEVEL[] =
 	{
 		-1L,
@@ -121,21 +128,40 @@ public class Experience
 		1801666675991L
 	};
 	
+	/**
+	 * Method penaltyModifier.
+	 * @param count long
+	 * @param percents double
+	 * @return double
+	 */
 	public static double penaltyModifier(long count, double percents)
 	{
 		return Math.max(1. - ((count * percents) / 100), 0);
 	}
 	
+	/**
+	 * Method getMaxLevel.
+	 * @return int
+	 */
 	public static int getMaxLevel()
 	{
 		return Config.ALT_MAX_LEVEL;
 	}
 	
+	/**
+	 * Method getMaxSubLevel.
+	 * @return int
+	 */
 	public static int getMaxSubLevel()
 	{
 		return Config.ALT_MAX_SUB_LEVEL;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @param thisExp long
+	 * @return int
+	 */
 	public static int getLevel(long thisExp)
 	{
 		int level = 0;
@@ -150,6 +176,11 @@ public class Experience
 		return level;
 	}
 	
+	/**
+	 * Method getExpForLevel.
+	 * @param lvl int
+	 * @return long
+	 */
 	public static long getExpForLevel(int lvl)
 	{
 		if (lvl >= Experience.LEVEL.length)
@@ -159,11 +190,21 @@ public class Experience
 		return Experience.LEVEL[lvl];
 	}
 	
+	/**
+	 * Method getExpPercent.
+	 * @param level int
+	 * @param exp long
+	 * @return double
+	 */
 	public static double getExpPercent(int level, long exp)
 	{
 		return ((exp - getExpForLevel(level)) / ((getExpForLevel(level + 1) - getExpForLevel(level)) / 100.0D)) * 0.01D;
 	}
 	
+	/**
+	 * Method getMaxDualLevel.
+	 * @return int
+	 */
 	public static int getMaxDualLevel()
 	{
 		return Config.ALT_MAX_DUAL_SUB_LEVEL;

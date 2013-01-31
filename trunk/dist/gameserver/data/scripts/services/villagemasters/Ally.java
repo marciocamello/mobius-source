@@ -16,8 +16,15 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.VillageMasterInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Ally extends Functions
 {
+	/**
+	 * Method CheckCreateAlly.
+	 */
 	public void CheckCreateAlly()
 	{
 		if ((getNpc() == null) || (getSelf() == null))
@@ -33,6 +40,9 @@ public class Ally extends Functions
 		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/" + htmltext);
 	}
 	
+	/**
+	 * Method CheckDissolveAlly.
+	 */
 	public void CheckDissolveAlly()
 	{
 		if ((getNpc() == null) || (getSelf() == null))

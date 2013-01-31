@@ -25,26 +25,90 @@ import lineage2.loginserver.gameservercon.GameServer;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ServerList extends L2LoginServerPacket
 {
+	/**
+	 * Field _servers.
+	 */
 	private final List<ServerData> _servers = new ArrayList<>();
+	/**
+	 * Field _lastServer.
+	 */
 	private final int _lastServer;
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class ServerData
 	{
+		/**
+		 * Field serverId.
+		 */
 		int serverId;
+		/**
+		 * Field ip.
+		 */
 		InetAddress ip;
+		/**
+		 * Field port.
+		 */
 		int port;
+		/**
+		 * Field online.
+		 */
 		int online;
+		/**
+		 * Field maxPlayers.
+		 */
 		int maxPlayers;
+		/**
+		 * Field status.
+		 */
 		boolean status;
+		/**
+		 * Field pvp.
+		 */
 		boolean pvp;
+		/**
+		 * Field brackets.
+		 */
 		boolean brackets;
+		/**
+		 * Field type.
+		 */
 		int type;
+		/**
+		 * Field ageLimit.
+		 */
 		int ageLimit;
+		/**
+		 * Field playerSize.
+		 */
 		int playerSize;
+		/**
+		 * Field deleteChars.
+		 */
 		int[] deleteChars;
 		
+		/**
+		 * Constructor for ServerData.
+		 * @param serverId int
+		 * @param ip InetAddress
+		 * @param port int
+		 * @param pvp boolean
+		 * @param brackets boolean
+		 * @param type int
+		 * @param online int
+		 * @param maxPlayers int
+		 * @param status boolean
+		 * @param size int
+		 * @param ageLimit int
+		 * @param d int[]
+		 */
 		ServerData(int serverId, InetAddress ip, int port, boolean pvp, boolean brackets, int type, int online, int maxPlayers, boolean status, int size, int ageLimit, int[] d)
 		{
 			this.serverId = serverId;
@@ -62,6 +126,10 @@ public final class ServerList extends L2LoginServerPacket
 		}
 	}
 	
+	/**
+	 * Constructor for ServerList.
+	 * @param account Account
+	 */
 	public ServerList(Account account)
 	{
 		_lastServer = account.getLastServer();
@@ -81,6 +149,9 @@ public final class ServerList extends L2LoginServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

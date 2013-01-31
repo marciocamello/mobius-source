@@ -24,32 +24,59 @@ import lineage2.gameserver.templates.Henna;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class HennaParser extends AbstractFileParser<HennaHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final HennaParser _instance = new HennaParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return HennaParser
+	 */
 	public static HennaParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for HennaParser.
+	 */
 	protected HennaParser()
 	{
 		super(HennaHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/other/hennas.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "hennas.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

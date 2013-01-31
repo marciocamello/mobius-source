@@ -16,16 +16,32 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectManaHealOverTime extends Effect
 {
+	/**
+	 * Field _ignoreMpEff.
+	 */
 	private final boolean _ignoreMpEff;
 	
+	/**
+	 * Constructor for EffectManaHealOverTime.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectManaHealOverTime(Env env, EffectTemplate template)
 	{
 		super(env, template);
 		_ignoreMpEff = template.getParam().getBool("ignoreMpEff", false);
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

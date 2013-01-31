@@ -12,17 +12,34 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExVariationCancelResult extends L2GameServerPacket
 {
+	/**
+	 * Field _closeWindow.
+	 */
 	private final int _closeWindow;
+	/**
+	 * Field _unk1.
+	 */
 	private final int _unk1;
 	
+	/**
+	 * Constructor for ExVariationCancelResult.
+	 * @param result int
+	 */
 	public ExVariationCancelResult(int result)
 	{
 		_closeWindow = 1;
 		_unk1 = result;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

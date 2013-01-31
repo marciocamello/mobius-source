@@ -35,24 +35,76 @@ import lineage2.gameserver.utils.AutoBan;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminBan implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_ban.
+		 */
 		admin_ban,
+		/**
+		 * Field admin_unban.
+		 */
 		admin_unban,
+		/**
+		 * Field admin_cban.
+		 */
 		admin_cban,
+		/**
+		 * Field admin_chatban.
+		 */
 		admin_chatban,
+		/**
+		 * Field admin_chatunban.
+		 */
 		admin_chatunban,
+		/**
+		 * Field admin_accban.
+		 */
 		admin_accban,
+		/**
+		 * Field admin_accunban.
+		 */
 		admin_accunban,
+		/**
+		 * Field admin_trade_ban.
+		 */
 		admin_trade_ban,
+		/**
+		 * Field admin_trade_unban.
+		 */
 		admin_trade_unban,
+		/**
+		 * Field admin_jail.
+		 */
 		admin_jail,
+		/**
+		 * Field admin_unjail.
+		 */
 		admin_unjail,
+		/**
+		 * Field admin_permaban.
+		 */
 		admin_permaban
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -239,6 +291,12 @@ public class AdminBan implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method tradeBan.
+	 * @param st StringTokenizer
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	private boolean tradeBan(StringTokenizer st, Player activeChar)
 	{
 		if ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer())
@@ -255,7 +313,7 @@ public class AdminBan implements IAdminCommandHandler
 			time = (days * 24 * 60 * 60 * 1000L) + System.currentTimeMillis();
 		}
 		targ.setVar("tradeBan", String.valueOf(time), -1);
-		String msg = activeChar.getName() + " заблокировал торговлю персонажу " + targ.getName() + (days == -1 ? " на бессрочный период." : " на " + days + " дней.");
+		String msg = activeChar.getName() + " заблокировал торговл�? пер�?онажу " + targ.getName() + (days == -1 ? " на бе�?�?рочный период." : " на " + days + " дней.");
 		Log.add(targ.getName() + ":" + days + tradeToString(targ, targ.getPrivateStoreType()), "tradeBan", activeChar);
 		if (targ.isInOfflineMode())
 		{
@@ -280,6 +338,12 @@ public class AdminBan implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method tradeToString.
+	 * @param targ Player
+	 * @param trade int
+	 * @return String
+	 */
 	@SuppressWarnings("unchecked")
 	private static String tradeToString(Player targ, int trade)
 	{
@@ -329,6 +393,12 @@ public class AdminBan implements IAdminCommandHandler
 		}
 	}
 	
+	/**
+	 * Method tradeUnban.
+	 * @param st StringTokenizer
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	private boolean tradeUnban(StringTokenizer st, Player activeChar)
 	{
 		if ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer())
@@ -339,16 +409,22 @@ public class AdminBan implements IAdminCommandHandler
 		targ.unsetVar("tradeBan");
 		if (Config.BANCHAT_ANNOUNCE_FOR_ALL_WORLD)
 		{
-			Announcements.getInstance().announceToAll(activeChar + " разблокировал торговлю персонажу " + targ + ".");
+			Announcements.getInstance().announceToAll(activeChar + " разблокировал торговл�? пер�?онажу " + targ + ".");
 		}
 		else
 		{
-			Announcements.shout(activeChar, activeChar + " разблокировал торговлю персонажу " + targ + ".", ChatType.CRITICAL_ANNOUNCE);
+			Announcements.shout(activeChar, activeChar + " разблокировал торговл�? пер�?онажу " + targ + ".", ChatType.CRITICAL_ANNOUNCE);
 		}
-		Log.add(activeChar + " разблокировал торговлю персонажу " + targ + ".", "tradeBan", activeChar);
+		Log.add(activeChar + " разблокировал торговл�? пер�?онажу " + targ + ".", "tradeBan", activeChar);
 		return true;
 	}
 	
+	/**
+	 * Method ban.
+	 * @param st StringTokenizer
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	private boolean ban(StringTokenizer st, Player activeChar)
 	{
 		try
@@ -385,7 +461,12 @@ public class AdminBan implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Can't find char: " + player);
+				activeChar.sendMessage("Can't find char: " + /**
+				 * Method getAdminCommandEnum.
+				 * @return Enum[]
+				 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+				 */
+				player);
 			}
 		}
 		catch (Exception e)

@@ -15,15 +15,29 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetItemList extends L2GameServerPacket
 {
+	/**
+	 * Field items.
+	 */
 	private final ItemInstance[] items;
 	
+	/**
+	 * Constructor for PetItemList.
+	 * @param cha PetInstance
+	 */
 	public PetItemList(PetInstance cha)
 	{
 		items = cha.getInventory().getItems();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -25,17 +25,44 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.manor.CropProcure;
 import lineage2.gameserver.templates.manor.SeedProduction;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("unused")
 public class AdminManor implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_manor.
+		 */
 		admin_manor,
+		/**
+		 * Field admin_manor_reset.
+		 */
 		admin_manor_reset,
+		/**
+		 * Field admin_manor_save.
+		 */
 		admin_manor_save,
+		/**
+		 * Field admin_manor_disable.
+		 */
 		admin_manor_disable
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -109,12 +136,20 @@ public class AdminManor implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}
 	
+	/**
+	 * Method showMainPage.
+	 * @param activeChar Player
+	 */
 	private void showMainPage(Player activeChar)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);

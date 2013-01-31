@@ -19,18 +19,53 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TotemSummon extends DefaultAI
 {
+	/**
+	 * Field TotemofBody. (value is 143)
+	 */
 	private static final int TotemofBody = 143;
+	/**
+	 * Field TotemofSpirit. (value is 144)
+	 */
 	private static final int TotemofSpirit = 144;
+	/**
+	 * Field TotemofBravery. (value is 145)
+	 */
 	private static final int TotemofBravery = 145;
+	/**
+	 * Field TotemofFortitude. (value is 146)
+	 */
 	private static final int TotemofFortitude = 146;
+	/**
+	 * Field TotemofBodyBuff. (value is 23308)
+	 */
 	private static final int TotemofBodyBuff = 23308;
+	/**
+	 * Field TotemofSpiritBuff. (value is 23309)
+	 */
 	private static final int TotemofSpiritBuff = 23309;
+	/**
+	 * Field TotemofBraveryBuff. (value is 23310)
+	 */
 	private static final int TotemofBraveryBuff = 23310;
+	/**
+	 * Field TotemofFortitudeBuff. (value is 23311)
+	 */
 	private static final int TotemofFortitudeBuff = 23311;
+	/**
+	 * Field _timer.
+	 */
 	private long _timer = 0;
 	
+	/**
+	 * Constructor for TotemSummon.
+	 * @param actor NpcInstance
+	 */
 	public TotemSummon(NpcInstance actor)
 	{
 		super(actor);
@@ -38,6 +73,9 @@ public class TotemSummon extends DefaultAI
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -55,6 +93,10 @@ public class TotemSummon extends DefaultAI
 		}, 30 * 60 * 1000L);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -72,6 +114,11 @@ public class TotemSummon extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method getBuffId.
+	 * @param npcId int
+	 * @return int
+	 */
 	private int getBuffId(int npcId)
 	{
 		int buffId = 0;

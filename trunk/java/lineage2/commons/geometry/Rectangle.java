@@ -12,8 +12,19 @@
  */
 package lineage2.commons.geometry;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Rectangle extends AbstractShape
 {
+	/**
+	 * Constructor for Rectangle.
+	 * @param x1 int
+	 * @param y1 int
+	 * @param x2 int
+	 * @param y2 int
+	 */
 	public Rectangle(int x1, int y1, int x2, int y2)
 	{
 		min.x = Math.min(x1, x2);
@@ -22,6 +33,11 @@ public class Rectangle extends AbstractShape
 		max.y = Math.max(y1, y2);
 	}
 	
+	/**
+	 * Method setZmax.
+	 * @param z int
+	 * @return Rectangle
+	 */
 	@Override
 	public Rectangle setZmax(int z)
 	{
@@ -29,6 +45,11 @@ public class Rectangle extends AbstractShape
 		return this;
 	}
 	
+	/**
+	 * Method setZmin.
+	 * @param z int
+	 * @return Rectangle
+	 */
 	@Override
 	public Rectangle setZmin(int z)
 	{
@@ -36,19 +57,29 @@ public class Rectangle extends AbstractShape
 		return this;
 	}
 	
+	/**
+	 * Method isInside.
+	 * @param x int
+	 * @param y int
+	 * @return boolean * @see lineage2.commons.geometry.Shape#isInside(int, int)
+	 */
 	@Override
 	public boolean isInside(int x, int y)
 	{
 		return (x >= min.x) && (x <= max.x) && (y >= min.y) && (y <= max.y);
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		StringBuilder sb = new StringBuilder();
-		sb.append("[");
+		sb.append('[');
 		sb.append(min).append(", ").append(max);
-		sb.append("]");
+		sb.append(']');
 		return sb.toString();
 	}
 }

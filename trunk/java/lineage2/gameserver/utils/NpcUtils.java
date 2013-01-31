@@ -21,38 +21,97 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NpcUtils
 {
+	/**
+	 * Method spawnSingle.
+	 * @param npcId int
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return NpcInstance
+	 */
 	public static NpcInstance spawnSingle(int npcId, int x, int y, int z)
 	{
 		return spawnSingle(npcId, new Location(x, y, z, -1), ReflectionManager.DEFAULT, 0);
 	}
 	
+	/**
+	 * Method spawnSingle.
+	 * @param npcId int
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param despawnTime long
+	 * @return NpcInstance
+	 */
 	public static NpcInstance spawnSingle(int npcId, int x, int y, int z, long despawnTime)
 	{
 		return spawnSingle(npcId, new Location(x, y, z, -1), ReflectionManager.DEFAULT, despawnTime);
 	}
 	
+	/**
+	 * Method spawnSingle.
+	 * @param npcId int
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param h int
+	 * @param despawnTime long
+	 * @return NpcInstance
+	 */
 	public static NpcInstance spawnSingle(int npcId, int x, int y, int z, int h, long despawnTime)
 	{
 		return spawnSingle(npcId, new Location(x, y, z, h), ReflectionManager.DEFAULT, despawnTime);
 	}
 	
+	/**
+	 * Method spawnSingle.
+	 * @param npcId int
+	 * @param loc Location
+	 * @return NpcInstance
+	 */
 	public static NpcInstance spawnSingle(int npcId, Location loc)
 	{
 		return spawnSingle(npcId, loc, ReflectionManager.DEFAULT, 0);
 	}
 	
+	/**
+	 * Method spawnSingle.
+	 * @param npcId int
+	 * @param loc Location
+	 * @param despawnTime long
+	 * @return NpcInstance
+	 */
 	public static NpcInstance spawnSingle(int npcId, Location loc, long despawnTime)
 	{
 		return spawnSingle(npcId, loc, ReflectionManager.DEFAULT, despawnTime);
 	}
 	
+	/**
+	 * Method spawnSingle.
+	 * @param npcId int
+	 * @param loc Location
+	 * @param reflection Reflection
+	 * @return NpcInstance
+	 */
 	public static NpcInstance spawnSingle(int npcId, Location loc, Reflection reflection)
 	{
 		return spawnSingle(npcId, loc, reflection, 0);
 	}
 	
+	/**
+	 * Method spawnSingle.
+	 * @param npcId int
+	 * @param loc Location
+	 * @param reflection Reflection
+	 * @param despawnTime long
+	 * @return NpcInstance
+	 */
 	public static NpcInstance spawnSingle(int npcId, Location loc, Reflection reflection, long despawnTime)
 	{
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);

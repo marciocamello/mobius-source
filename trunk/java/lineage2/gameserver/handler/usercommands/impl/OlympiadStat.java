@@ -20,13 +20,26 @@ import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OlympiadStat implements IUserCommandHandler
 {
+	/**
+	 * Field COMMAND_IDS.
+	 */
 	private static final int[] COMMAND_IDS =
 	{
 		109
 	};
 	
+	/**
+	 * Method useUserCommand.
+	 * @param id int
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
+	 */
 	@Override
 	public boolean useUserCommand(int id, Player activeChar)
 	{
@@ -57,6 +70,10 @@ public class OlympiadStat implements IUserCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getUserCommandList.
+	 * @return int[] * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
+	 */
 	@Override
 	public int[] getUserCommandList()
 	{

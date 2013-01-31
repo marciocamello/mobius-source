@@ -14,9 +14,24 @@ package lineage2.gameserver.handler.voicecommands;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IVoicedCommandHandler
 {
+	/**
+	 * Method useVoicedCommand.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param target String
+	 * @return boolean
+	 */
 	public boolean useVoicedCommand(String command, Player activeChar, String target);
 	
+	/**
+	 * Method getVoicedCommandList.
+	 * @return String[]
+	 */
 	public String[] getVoicedCommandList();
 }

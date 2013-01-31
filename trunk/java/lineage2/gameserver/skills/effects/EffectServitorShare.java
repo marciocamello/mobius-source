@@ -18,15 +18,33 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.Func;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectServitorShare extends Effect
 {
+	/**
+	 * @author Mobius
+	 */
 	public class FuncShare extends Func
 	{
+		/**
+		 * Constructor for FuncShare.
+		 * @param stat Stats
+		 * @param order int
+		 * @param owner Object
+		 * @param value double
+		 */
 		public FuncShare(Stats stat, int order, Object owner, double value)
 		{
 			super(stat, order, owner, value);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -34,11 +52,20 @@ public class EffectServitorShare extends Effect
 		}
 	}
 	
+	/**
+	 * Constructor for EffectServitorShare.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectServitorShare(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method getStatFuncs.
+	 * @return Func[]
+	 */
 	@Override
 	public Func[] getStatFuncs()
 	{
@@ -51,6 +78,10 @@ public class EffectServitorShare extends Effect
 		return funcs;
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean onActionTime()
 	{

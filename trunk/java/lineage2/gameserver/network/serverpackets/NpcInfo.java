@@ -25,27 +25,90 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NpcInfo extends L2GameServerPacket
 {
+	/**
+	 * Field can_writeImpl.
+	 */
 	private boolean can_writeImpl = false;
+	/**
+	 * Field _showSpawnAnimation. Field dead. Field incombat. Field running. Field _npcId. Field _npcObjId.
+	 */
 	private int _npcObjId, _npcId, running, incombat, dead, _showSpawnAnimation;
+	/**
+	 * Field _enchantEffect. Field _lhand. Field _rhand. Field _pAtkSpd. Field _mAtkSpd. Field _walkSpd. Field _runSpd.
+	 */
 	private int _runSpd, _walkSpd, _mAtkSpd, _pAtkSpd, _rhand, _lhand, _enchantEffect;
+	/**
+	 * Field _titleColor. Field _formId. Field ally_crest_id. Field ally_id. Field clan_crest_id. Field clan_id. Field pvp_flag. Field karma.
+	 */
 	private int karma, pvp_flag, clan_id, clan_crest_id, ally_id, ally_crest_id, _formId, _titleColor;
+	/**
+	 * Field _maxCP. Field _CP. Field _maxMP. Field _MP. Field _maxHP. Field _HP.
+	 */
 	private int _HP, _maxHP, _MP, _maxMP, _CP, _maxCP;
+	/**
+	 * Field currentColRadius. Field currentColHeight. Field colRadius. Field colHeight.
+	 */
 	private double colHeight, colRadius, currentColHeight, currentColRadius;
+	/**
+	 * Field isFlying. Field _isNameAbove. Field _isAttackable.
+	 */
 	private boolean _isAttackable, _isNameAbove, isFlying;
+	/**
+	 * Field _loc.
+	 */
 	private Location _loc;
+	/**
+	 * Field _name.
+	 */
 	private String _name = StringUtils.EMPTY;
+	/**
+	 * Field _title.
+	 */
 	private String _title = StringUtils.EMPTY;
+	/**
+	 * Field _showName.
+	 */
 	private boolean _showName;
+	/**
+	 * Field _canTarget.
+	 */
 	private boolean _canTarget;
+	/**
+	 * Field _state.
+	 */
 	private int _state;
+	/**
+	 * Field _nameNpcString.
+	 */
 	private NpcString _nameNpcString = NpcString.NONE;
+	/**
+	 * Field _titleNpcString.
+	 */
 	private NpcString _titleNpcString = NpcString.NONE;
+	/**
+	 * Field _team.
+	 */
 	private TeamType _team;
+	/**
+	 * Field _transformId.
+	 */
 	private int _transformId;
+	/**
+	 * Field _abnormalEffect2. Field _abnormalEffect.
+	 */
 	private int _abnormalEffect, _abnormalEffect2;
 	
+	/**
+	 * Constructor for NpcInfo.
+	 * @param cha NpcInstance
+	 * @param attacker Creature
+	 */
 	public NpcInfo(NpcInstance cha, Creature attacker)
 	{
 		_npcId = cha.getDisplayId() != 0 ? cha.getDisplayId() : cha.getTemplate().npcId;
@@ -53,11 +116,11 @@ public class NpcInfo extends L2GameServerPacket
 		_rhand = cha.getRightHandItem();
 		_lhand = cha.getLeftHandItem();
 		_enchantEffect = 0;
-		if (Config.SERVER_SIDE_NPC_NAME || (cha.getTemplate().displayId != 0) || (cha.getName() != cha.getTemplate().name))
+		if (Config.SERVER_SIDE_NPC_NAME || (cha.getTemplate().displayId != 0) || (!cha.getName().equals(cha.getTemplate().name)))
 		{
 			_name = cha.getName();
 		}
-		if (Config.SERVER_SIDE_NPC_TITLE || (cha.getTemplate().displayId != 0) || (cha.getTitle() != cha.getTemplate().title))
+		if (Config.SERVER_SIDE_NPC_TITLE || (cha.getTemplate().displayId != 0) || (!cha.getTitle().equals(cha.getTemplate().title)))
 		{
 			_title = cha.getTitle();
 			if (Config.SERVER_SIDE_NPC_TITLE_ETC)
@@ -91,6 +154,11 @@ public class NpcInfo extends L2GameServerPacket
 		common(cha);
 	}
 	
+	/**
+	 * Constructor for NpcInfo.
+	 * @param cha Summon
+	 * @param attacker Creature
+	 */
 	public NpcInfo(Summon cha, Creature attacker)
 	{
 		if ((cha.getPlayer() != null) && cha.getPlayer().isInvisible())
@@ -109,6 +177,10 @@ public class NpcInfo extends L2GameServerPacket
 		common(cha);
 	}
 	
+	/**
+	 * Method common.
+	 * @param cha Creature
+	 */
 	private void common(Creature cha)
 	{
 		colHeight = cha.getTemplate().getCollisionHeight();
@@ -142,12 +214,19 @@ public class NpcInfo extends L2GameServerPacket
 		can_writeImpl = true;
 	}
 	
+	/**
+	 * Method update.
+	 * @return NpcInfo
+	 */
 	public NpcInfo update()
 	{
 		_showSpawnAnimation = 1;
 		return this;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

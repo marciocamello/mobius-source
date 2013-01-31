@@ -18,32 +18,62 @@ import lineage2.gameserver.templates.OptionDataTemplate;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class OptionDataHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final OptionDataHolder _instance = new OptionDataHolder();
+	/**
+	 * Field _templates.
+	 */
 	private final IntObjectMap<OptionDataTemplate> _templates = new HashIntObjectMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return OptionDataHolder
+	 */
 	public static OptionDataHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addTemplate.
+	 * @param template OptionDataTemplate
+	 */
 	public void addTemplate(OptionDataTemplate template)
 	{
 		_templates.put(template.getId(), template);
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @param id int
+	 * @return OptionDataTemplate
+	 */
 	public OptionDataTemplate getTemplate(int id)
 	{
 		return _templates.get(id);
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _templates.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

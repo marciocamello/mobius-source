@@ -26,6 +26,10 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.templates.CharTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AirShip extends Boat
 {
 	/**
@@ -33,77 +37,138 @@ public class AirShip extends Boat
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for AirShip.
+	 * @param objectId int
+	 * @param template CharTemplate
+	 */
 	public AirShip(int objectId, CharTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method infoPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket infoPacket()
 	{
 		return new ExAirShipInfo(this);
 	}
 	
+	/**
+	 * Method movePacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket movePacket()
 	{
 		return new ExMoveToLocationAirShip(this);
 	}
 	
+	/**
+	 * Method inMovePacket.
+	 * @param player Player
+	 * @param src Location
+	 * @param desc Location
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket inMovePacket(Player player, Location src, Location desc)
 	{
 		return new ExMoveToLocationInAirShip(player, this, src, desc);
 	}
 	
+	/**
+	 * Method stopMovePacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket stopMovePacket()
 	{
 		return new ExStopMoveAirShip(this);
 	}
 	
+	/**
+	 * Method inStopMovePacket.
+	 * @param player Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket inStopMovePacket(Player player)
 	{
 		return new ExStopMoveInAirShip(player);
 	}
 	
+	/**
+	 * Method startPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket startPacket()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method checkLocationPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket checkLocationPacket()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method validateLocationPacket.
+	 * @param player Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket validateLocationPacket(Player player)
 	{
 		return new ExValidateLocationInAirShip(player);
 	}
 	
+	/**
+	 * Method getOnPacket.
+	 * @param playable Playable
+	 * @param location Location
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket getOnPacket(Playable playable, Location location)
 	{
 		return new ExGetOnAirShip(playable, this, location);
 	}
 	
+	/**
+	 * Method getOffPacket.
+	 * @param playable Playable
+	 * @param location Location
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket getOffPacket(Playable playable, Location location)
 	{
 		return new ExGetOffAirShip(playable, this, location);
 	}
 	
+	/**
+	 * Method isAirShip.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAirShip()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method oustPlayers.
+	 */
 	@Override
 	public void oustPlayers()
 	{

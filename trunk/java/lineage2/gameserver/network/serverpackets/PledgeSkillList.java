@@ -21,11 +21,25 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.SubUnit;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeSkillList extends L2GameServerPacket
 {
+	/**
+	 * Field _allSkills.
+	 */
 	private List<SkillInfo> _allSkills = Collections.emptyList();
+	/**
+	 * Field _unitSkills.
+	 */
 	private final List<UnitSkillInfo> _unitSkills = new ArrayList<>();
 	
+	/**
+	 * Constructor for PledgeSkillList.
+	 * @param clan Clan
+	 */
 	public PledgeSkillList(Clan clan)
 	{
 		Collection<Skill> skills = clan.getSkills();
@@ -43,6 +57,9 @@ public class PledgeSkillList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -62,10 +79,24 @@ public class PledgeSkillList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class SkillInfo
 	{
+		/**
+		 * Field _level.
+		 */
+		/**
+		 * Field _id.
+		 */
 		public int _id, _level;
 		
+		/**
+		 * Constructor for SkillInfo.
+		 * @param id int
+		 * @param level int
+		 */
 		public SkillInfo(int id, int level)
 		{
 			_id = id;
@@ -73,10 +104,22 @@ public class PledgeSkillList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class UnitSkillInfo extends SkillInfo
 	{
+		/**
+		 * Field _type.
+		 */
 		final int _type;
 		
+		/**
+		 * Constructor for UnitSkillInfo.
+		 * @param type int
+		 * @param id int
+		 * @param level int
+		 */
 		public UnitSkillInfo(int type, int id, int level)
 		{
 			super(id, level);

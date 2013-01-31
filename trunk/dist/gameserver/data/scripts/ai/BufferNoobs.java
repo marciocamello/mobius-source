@@ -25,8 +25,15 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BufferNoobs extends DefaultAI
 {
+	/**
+	 * Field BUFFS.
+	 */
 	private static final int[] BUFFS =
 	{
 		4322,
@@ -38,12 +45,20 @@ public class BufferNoobs extends DefaultAI
 		4328
 	};
 	
+	/**
+	 * Constructor for BufferNoobs.
+	 * @param actor NpcInstance
+	 */
 	public BufferNoobs(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ACTIVE_DELAY = 1000;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -71,6 +86,11 @@ public class BufferNoobs extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method checkBuff.
+	 * @param player Player
+	 * @return boolean
+	 */
 	private boolean checkBuff(Player player)
 	{
 		for (int skillId : BUFFS)
@@ -83,6 +103,10 @@ public class BufferNoobs extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{

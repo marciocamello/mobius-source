@@ -12,10 +12,23 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExSubPledgeSkillAdd extends L2GameServerPacket
 {
+	/**
+	 * Field _level. Field _id. Field _type.
+	 */
 	private final int _type, _id, _level;
 	
+	/**
+	 * Constructor for ExSubPledgeSkillAdd.
+	 * @param type int
+	 * @param id int
+	 * @param level int
+	 */
 	public ExSubPledgeSkillAdd(int type, int id, int level)
 	{
 		_type = type;
@@ -23,6 +36,9 @@ public class ExSubPledgeSkillAdd extends L2GameServerPacket
 		_level = level;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

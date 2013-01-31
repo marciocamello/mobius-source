@@ -15,13 +15,26 @@ package lineage2.gameserver.skills.effects;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectHealBlock extends Effect
 {
+	/**
+	 * Constructor for EffectHealBlock.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectHealBlock(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
@@ -32,6 +45,9 @@ public final class EffectHealBlock extends Effect
 		return super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -39,6 +55,9 @@ public final class EffectHealBlock extends Effect
 		_effected.startHealBlocked();
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -46,6 +65,10 @@ public final class EffectHealBlock extends Effect
 		_effected.stopHealBlocked();
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

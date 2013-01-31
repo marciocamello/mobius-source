@@ -19,13 +19,34 @@ import lineage2.gameserver.model.items.etcitems.AttributeStoneInfo;
 import lineage2.gameserver.model.items.etcitems.AttributeStoneManager;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExChooseInventoryAttributeItem extends L2GameServerPacket
 {
+	/**
+	 * Field _attributableItems.
+	 */
 	private final TIntArrayList _attributableItems;
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _stoneLvl.
+	 */
 	private final int _stoneLvl;
+	/**
+	 * Field _att.
+	 */
 	private final int[] _att;
 	
+	/**
+	 * Constructor for ExChooseInventoryAttributeItem.
+	 * @param player Player
+	 * @param item ItemInstance
+	 */
 	public ExChooseInventoryAttributeItem(Player player, ItemInstance item)
 	{
 		_attributableItems = new TIntArrayList();
@@ -44,6 +65,9 @@ public class ExChooseInventoryAttributeItem extends L2GameServerPacket
 		_stoneLvl = asi.getStoneLevel();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

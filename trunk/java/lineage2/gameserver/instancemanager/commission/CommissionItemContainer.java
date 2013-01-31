@@ -18,13 +18,25 @@ import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.model.items.ItemContainer;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CommissionItemContainer extends ItemContainer
 {
+	/**
+	 * Method getItemLocation.
+	 * @return ItemInstance.ItemLocation
+	 */
 	public ItemInstance.ItemLocation getItemLocation()
 	{
 		return ItemInstance.ItemLocation.COMMISSION;
 	}
 	
+	/**
+	 * Method onAddItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onAddItem(ItemInstance item)
 	{
@@ -41,6 +53,10 @@ public class CommissionItemContainer extends ItemContainer
 		}
 	}
 	
+	/**
+	 * Method onModifyItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onModifyItem(ItemInstance item)
 	{
@@ -48,12 +64,20 @@ public class CommissionItemContainer extends ItemContainer
 		item.update();
 	}
 	
+	/**
+	 * Method onRemoveItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onRemoveItem(ItemInstance item)
 	{
 		item.setLocData(-1);
 	}
 	
+	/**
+	 * Method onDestroyItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onDestroyItem(ItemInstance item)
 	{
@@ -61,6 +85,9 @@ public class CommissionItemContainer extends ItemContainer
 		item.delete();
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	public void restore()
 	{
 		writeLock();

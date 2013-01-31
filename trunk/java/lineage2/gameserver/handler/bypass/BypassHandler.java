@@ -12,15 +12,30 @@
  */
 package lineage2.gameserver.handler.bypass;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BypassHandler
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final BypassHandler _instance = new BypassHandler();
 	
+	/**
+	 * Method getInstance.
+	 * @return BypassHandler
+	 */
 	public static BypassHandler getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method registerBypass.
+	 * @param bypass IBypassHandler
+	 */
 	public void registerBypass(IBypassHandler bypass)
 	{
 	}

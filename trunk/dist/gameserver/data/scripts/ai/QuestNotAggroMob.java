@@ -21,19 +21,36 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.QuestEventType;
 import lineage2.gameserver.model.quest.QuestState;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class QuestNotAggroMob extends DefaultAI
 {
+	/**
+	 * Constructor for QuestNotAggroMob.
+	 * @param actor NpcInstance
+	 */
 	public QuestNotAggroMob(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	public boolean thinkActive()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param dam int
+	 */
 	@Override
 	public void onEvtAttacked(Creature attacker, int dam)
 	{
@@ -52,6 +69,11 @@ public class QuestNotAggroMob extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param attacker Creature
+	 * @param d int
+	 */
 	@Override
 	public void onEvtAggression(Creature attacker, int d)
 	{

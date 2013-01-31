@@ -92,13 +92,29 @@ import net.sf.ehcache.CacheManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GameServer
 {
+	/**
+	 * Field LOGIN_SERVER_PROTOCOL. (value is 2)
+	 */
 	public static final int LOGIN_SERVER_PROTOCOL = 2;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameServer.class);
 	
+	/**
+	 * @author Mobius
+	 */
 	public class GameServerListenerList extends ListenerList<GameServer>
 	{
+		/**
+		 * Method onStart.
+		 */
 		public void onStart()
 		{
 			for (Listener<GameServer> listener : getListeners())
@@ -110,6 +126,9 @@ public class GameServer
 			}
 		}
 		
+		/**
+		 * Method onShutdown.
+		 */
 		public void onShutdown()
 		{
 			for (Listener<GameServer> listener : getListeners())
@@ -122,28 +141,62 @@ public class GameServer
 		}
 	}
 	
+	/**
+	 * Field _instance.
+	 */
 	public static GameServer _instance;
+	/**
+	 * Field _selectorThreads.
+	 */
 	private final SelectorThread<GameClient> _selectorThreads[];
+	/**
+	 * Field version.
+	 */
 	private final Version version;
+	/**
+	 * Field statusServer.
+	 */
 	private TelnetServer statusServer;
+	/**
+	 * Field _listeners.
+	 */
 	private final GameServerListenerList _listeners;
+	/**
+	 * Field _serverStarted.
+	 */
 	private final int _serverStarted;
 	
+	/**
+	 * Method getSelectorThreads.
+	 * @return SelectorThread<GameClient>[]
+	 */
 	public SelectorThread<GameClient>[] getSelectorThreads()
 	{
 		return _selectorThreads;
 	}
 	
+	/**
+	 * Method time.
+	 * @return int
+	 */
 	public int time()
 	{
 		return (int) (System.currentTimeMillis() / 1000);
 	}
 	
+	/**
+	 * Method uptime.
+	 * @return int
+	 */
 	public int uptime()
 	{
 		return time() - _serverStarted;
 	}
 	
+	/**
+	 * Constructor for GameServer.
+	 * @throws Exception
+	 */
 	@SuppressWarnings("unchecked")
 	public GameServer() throws Exception
 	{
@@ -285,26 +338,47 @@ public class GameServer
 		_log.info("=================================================");
 	}
 	
+	/**
+	 * Method getListeners.
+	 * @return GameServerListenerList
+	 */
 	public GameServerListenerList getListeners()
 	{
 		return _listeners;
 	}
 	
+	/**
+	 * Method getInstance.
+	 * @return GameServer
+	 */
 	public static GameServer getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addListener.
+	 * @param listener T
+	 * @return boolean
+	 */
 	public <T extends GameListener> boolean addListener(T listener)
 	{
 		return _listeners.add(listener);
 	}
 	
+	/**
+	 * Method removeListener.
+	 * @param listener T
+	 * @return boolean
+	 */
 	public <T extends GameListener> boolean removeListener(T listener)
 	{
 		return _listeners.remove(listener);
 	}
 	
+	/**
+	 * Method checkFreePorts.
+	 */
 	public static void checkFreePorts()
 	{
 		boolean binded = false;
@@ -342,16 +416,29 @@ public class GameServer
 		}
 	}
 	
+	/**
+	 * Method main.
+	 * @param args String[]
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception
 	{
 		new GameServer();
 	}
 	
+	/**
+	 * Method getVersion.
+	 * @return Version
+	 */
 	public Version getVersion()
 	{
 		return version;
 	}
 	
+	/**
+	 * Method getStatusServer.
+	 * @return TelnetServer
+	 */
 	public TelnetServer getStatusServer()
 	{
 		return statusServer;

@@ -37,18 +37,49 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestMultiSellChoose extends L2GameClientPacket
 {
+	/**
+	 * Field _listId.
+	 */
 	private int _listId;
+	/**
+	 * Field _entryId.
+	 */
 	private int _entryId;
+	/**
+	 * Field _amount.
+	 */
 	private long _amount;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ItemData
 	{
+		/**
+		 * Field _id.
+		 */
 		private final int _id;
+		/**
+		 * Field _count.
+		 */
 		private final long _count;
+		/**
+		 * Field _item.
+		 */
 		private final ItemInstance _item;
 		
+		/**
+		 * Constructor for ItemData.
+		 * @param id int
+		 * @param count long
+		 * @param item ItemInstance
+		 */
 		public ItemData(int id, long count, ItemInstance item)
 		{
 			_id = id;
@@ -56,21 +87,38 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 			_item = item;
 		}
 		
+		/**
+		 * Method getId.
+		 * @return int
+		 */
 		public int getId()
 		{
 			return _id;
 		}
 		
+		/**
+		 * Method getCount.
+		 * @return long
+		 */
 		public long getCount()
 		{
 			return _count;
 		}
 		
+		/**
+		 * Method getItem.
+		 * @return ItemInstance
+		 */
 		public ItemInstance getItem()
 		{
 			return _item;
 		}
 		
+		/**
+		 * Method equals.
+		 * @param obj Object
+		 * @return boolean
+		 */
 		@Override
 		public boolean equals(Object obj)
 		{
@@ -85,6 +133,9 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -93,6 +144,9 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 		_amount = readQ();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

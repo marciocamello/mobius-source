@@ -17,8 +17,15 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GreatPowerfulDevice extends DefaultAI
 {
+	/**
+	 * Field MOBS.
+	 */
 	private static final int[] MOBS =
 	{
 		22540,
@@ -27,8 +34,15 @@ public class GreatPowerfulDevice extends DefaultAI
 		22547,
 		22538
 	};
+	/**
+	 * Field OBELISK_LOC.
+	 */
 	private static final Location OBELISK_LOC = new Location(-245825, 217075, -12208);
 	
+	/**
+	 * Constructor for GreatPowerfulDevice.
+	 * @param actor NpcInstance
+	 */
 	public GreatPowerfulDevice(NpcInstance actor)
 	{
 		super(actor);
@@ -36,6 +50,10 @@ public class GreatPowerfulDevice extends DefaultAI
 		actor.startDamageBlocked();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -61,6 +79,11 @@ public class GreatPowerfulDevice extends DefaultAI
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method checkAllDestroyed.
+	 * @param mobId int
+	 * @return boolean
+	 */
 	private boolean checkAllDestroyed(int mobId)
 	{
 		for (NpcInstance n : getActor().getReflection().getNpcs())

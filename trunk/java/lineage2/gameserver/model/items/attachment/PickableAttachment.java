@@ -14,9 +14,22 @@ package lineage2.gameserver.model.items.attachment;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface PickableAttachment extends ItemAttachment
 {
+	/**
+	 * Method canPickUp.
+	 * @param player Player
+	 * @return boolean
+	 */
 	boolean canPickUp(Player player);
 	
+	/**
+	 * Method pickUp.
+	 * @param player Player
+	 */
 	void pickUp(Player player);
 }

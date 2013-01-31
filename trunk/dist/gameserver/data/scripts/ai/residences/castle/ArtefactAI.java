@@ -25,13 +25,26 @@ import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ArtefactAI extends CharacterAI
 {
+	/**
+	 * Constructor for ArtefactAI.
+	 * @param actor NpcInstance
+	 */
 	public ArtefactAI(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param attacker Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
@@ -50,15 +63,28 @@ public class ArtefactAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	class notifyGuard extends RunnableImpl
 	{
+		/**
+		 * Field _playerRef.
+		 */
 		private final HardReference<Player> _playerRef;
 		
+		/**
+		 * Constructor for notifyGuard.
+		 * @param attacker Player
+		 */
 		public notifyGuard(Player attacker)
 		{
 			_playerRef = attacker.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

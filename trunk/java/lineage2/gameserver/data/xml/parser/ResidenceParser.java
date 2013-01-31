@@ -38,38 +38,70 @@ import org.dom4j.Element;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static ResidenceParser _instance = new ResidenceParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return ResidenceParser
+	 */
 	public static ResidenceParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for ResidenceParser.
+	 */
 	private ResidenceParser()
 	{
 		super(ResidenceHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/residences/");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "residence.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{
@@ -248,6 +280,12 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 		}
 	}
 	
+	/**
+	 * Method checkAndGetFunction.
+	 * @param residence Residence
+	 * @param type int
+	 * @return ResidenceFunction
+	 */
 	private ResidenceFunction checkAndGetFunction(Residence residence, int type)
 	{
 		ResidenceFunction function = residence.getFunction(type);

@@ -23,8 +23,15 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Tully extends Fighter
 {
+	/**
+	 * Field locSD.
+	 */
 	private static final Location[] locSD =
 	{
 		new Location(-12524, 273932, -9014, 49151),
@@ -33,6 +40,9 @@ public class Tully extends Fighter
 		new Location(-13773, 275119, -9040, 8428),
 		new Location(-11547, 271772, -9040, -19124),
 	};
+	/**
+	 * Field locFTT.
+	 */
 	private static final Location[] locFTT =
 	{
 		new Location(-10832, 273808, -9040, 0),
@@ -40,14 +50,28 @@ public class Tully extends Fighter
 		new Location(-13824, 275072, -9040, -24644),
 		new Location(-11504, 271952, -9040, 9328),
 	};
+	/**
+	 * Field s.
+	 */
 	private boolean s = false;
+	/**
+	 * Field removable_ghost.
+	 */
 	static NpcInstance removable_ghost = null;
 	
+	/**
+	 * Constructor for Tully.
+	 * @param actor NpcInstance
+	 */
 	public Tully(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -97,12 +121,21 @@ public class Tully extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class UnspawnAndExplode extends RunnableImpl
 	{
+		/**
+		 * Constructor for UnspawnAndExplode.
+		 */
 		public UnspawnAndExplode()
 		{
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

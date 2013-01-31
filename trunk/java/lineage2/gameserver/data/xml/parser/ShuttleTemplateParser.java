@@ -24,32 +24,59 @@ import lineage2.gameserver.templates.StatsSet;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ShuttleTemplateParser extends AbstractFileParser<ShuttleTemplateHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final ShuttleTemplateParser _instance = new ShuttleTemplateParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return ShuttleTemplateParser
+	 */
 	public static ShuttleTemplateParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for ShuttleTemplateParser.
+	 */
 	protected ShuttleTemplateParser()
 	{
 		super(ShuttleTemplateHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/other/shuttle_data.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "shuttle_data.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

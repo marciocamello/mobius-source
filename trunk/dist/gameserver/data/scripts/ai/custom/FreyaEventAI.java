@@ -24,8 +24,15 @@ import lineage2.gameserver.scripts.Functions;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FreyaEventAI extends DefaultAI
 {
+	/**
+	 * Field GIFT_SKILLS.
+	 */
 	private static final int[] GIFT_SKILLS =
 	{
 		9150,
@@ -36,8 +43,17 @@ public class FreyaEventAI extends DefaultAI
 		9155,
 		9156
 	};
+	/**
+	 * Field GIFT_CHANCE. (value is 5)
+	 */
 	private static final int GIFT_CHANCE = 5;
+	/**
+	 * Field FREYA_GIFT. (value is 17138)
+	 */
 	private static final int FREYA_GIFT = 17138;
+	/**
+	 * Field SAY_TEXT.
+	 */
 	private static final NpcString[] SAY_TEXT = new NpcString[]
 	{
 		NpcString.DEAR_S1,
@@ -48,23 +64,40 @@ public class FreyaEventAI extends DefaultAI
 		NpcString.I_AM_ICE_QUEEN_FREYA
 	};
 	
+	/**
+	 * Constructor for FreyaEventAI.
+	 * @param actor NpcInstance
+	 */
 	public FreyaEventAI(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onEvtSeeSpell.
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
@@ -93,11 +126,21 @@ public class FreyaEventAI extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

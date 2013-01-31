@@ -27,24 +27,54 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import bosses.FourSepulchersSpawn;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SepulcherMonsterInstance extends MonsterInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field mysteriousBoxId.
+	 */
 	public int mysteriousBoxId = 0;
+	/**
+	 * Field _victimShout.
+	 */
 	Future<?> _victimShout = null;
+	/**
+	 * Field _victimSpawnKeyBoxTask.
+	 */
 	private Future<?> _victimSpawnKeyBoxTask = null;
+	/**
+	 * Field _changeImmortalTask.
+	 */
 	private Future<?> _changeImmortalTask = null;
+	/**
+	 * Field _onDeadEventTask.
+	 */
 	private Future<?> _onDeadEventTask = null;
+	/**
+	 * Field HALLS_KEY. (value is 7260)
+	 */
 	private final static int HALLS_KEY = 7260;
 	
+	/**
+	 * Constructor for SepulcherMonsterInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SepulcherMonsterInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -111,6 +141,10 @@ public class SepulcherMonsterInstance extends MonsterInstance
 		super.onSpawn();
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -228,6 +262,9 @@ public class SepulcherMonsterInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
@@ -244,15 +281,28 @@ public class SepulcherMonsterInstance extends MonsterInstance
 		super.onDelete();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class VictimShout extends RunnableImpl
 	{
+		/**
+		 * Field _activeChar.
+		 */
 		private final SepulcherMonsterInstance _activeChar;
 		
+		/**
+		 * Constructor for VictimShout.
+		 * @param activeChar SepulcherMonsterInstance
+		 */
 		public VictimShout(SepulcherMonsterInstance activeChar)
 		{
 			_activeChar = activeChar;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -268,15 +318,28 @@ public class SepulcherMonsterInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class VictimSpawnKeyBox extends RunnableImpl
 	{
+		/**
+		 * Field _activeChar.
+		 */
 		private final SepulcherMonsterInstance _activeChar;
 		
+		/**
+		 * Constructor for VictimSpawnKeyBox.
+		 * @param activeChar SepulcherMonsterInstance
+		 */
 		public VictimSpawnKeyBox(SepulcherMonsterInstance activeChar)
 		{
 			_activeChar = activeChar;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -298,15 +361,28 @@ public class SepulcherMonsterInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class OnDeadEvent extends RunnableImpl
 	{
+		/**
+		 * Field _activeChar.
+		 */
 		SepulcherMonsterInstance _activeChar;
 		
+		/**
+		 * Constructor for OnDeadEvent.
+		 * @param activeChar SepulcherMonsterInstance
+		 */
 		public OnDeadEvent(SepulcherMonsterInstance activeChar)
 		{
 			_activeChar = activeChar;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -392,15 +468,28 @@ public class SepulcherMonsterInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ChangeImmortal extends RunnableImpl
 	{
+		/**
+		 * Field activeChar.
+		 */
 		private final SepulcherMonsterInstance activeChar;
 		
+		/**
+		 * Constructor for ChangeImmortal.
+		 * @param mob SepulcherMonsterInstance
+		 */
 		public ChangeImmortal(SepulcherMonsterInstance mob)
 		{
 			activeChar = mob;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -409,6 +498,11 @@ public class SepulcherMonsterInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * Method hasPartyAKey.
+	 * @param player Player
+	 * @return boolean
+	 */
 	private boolean hasPartyAKey(Player player)
 	{
 		for (Player m : player.getParty().getPartyMembers())
@@ -421,6 +515,10 @@ public class SepulcherMonsterInstance extends MonsterInstance
 		return false;
 	}
 	
+	/**
+	 * Method canChampion.
+	 * @return boolean
+	 */
 	@Override
 	public boolean canChampion()
 	{

@@ -19,10 +19,20 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.network.telnet.TelnetCommand;
 import lineage2.gameserver.network.telnet.TelnetCommandHolder;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TelnetConfig implements TelnetCommandHolder
 {
+	/**
+	 * Field _commands.
+	 */
 	private final Set<TelnetCommand> _commands = new LinkedHashSet<>();
 	
+	/**
+	 * Constructor for TelnetConfig.
+	 */
 	public TelnetConfig()
 	{
 		_commands.add(new TelnetCommand("config", "cfg")
@@ -55,6 +65,10 @@ public class TelnetConfig implements TelnetCommandHolder
 		});
 	}
 	
+	/**
+	 * Method getCommands.
+	 * @return Set<TelnetCommand> * @see lineage2.gameserver.network.telnet.TelnetCommandHolder#getCommands()
+	 */
 	@Override
 	public Set<TelnetCommand> getCommands()
 	{

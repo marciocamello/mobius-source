@@ -12,17 +12,41 @@
  */
 package lineage2.commons.geometry;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GeometryUtils
 {
+	/**
+	 * Constructor for GeometryUtils.
+	 */
 	private GeometryUtils()
 	{
 	}
 	
+	/**
+	 * Method checkIfLinesIntersects.
+	 * @param a Point2D
+	 * @param b Point2D
+	 * @param c Point2D
+	 * @param d Point2D
+	 * @return boolean
+	 */
 	public static boolean checkIfLinesIntersects(Point2D a, Point2D b, Point2D c, Point2D d)
 	{
 		return checkIfLinesIntersects(a, b, c, d, null);
 	}
 	
+	/**
+	 * Method checkIfLinesIntersects.
+	 * @param a Point2D
+	 * @param b Point2D
+	 * @param c Point2D
+	 * @param d Point2D
+	 * @param r Point2D
+	 * @return boolean
+	 */
 	public static boolean checkIfLinesIntersects(Point2D a, Point2D b, Point2D c, Point2D d, Point2D r)
 	{
 		double distAB, theCos, theSin, newX, ABpos;
@@ -58,11 +82,28 @@ public class GeometryUtils
 		return true;
 	}
 	
+	/**
+	 * Method checkIfLineSegementsIntersects.
+	 * @param a Point2D
+	 * @param b Point2D
+	 * @param c Point2D
+	 * @param d Point2D
+	 * @return boolean
+	 */
 	public static boolean checkIfLineSegementsIntersects(Point2D a, Point2D b, Point2D c, Point2D d)
 	{
 		return checkIfLineSegementsIntersects(a, b, c, d, null);
 	}
 	
+	/**
+	 * Method checkIfLineSegementsIntersects.
+	 * @param a Point2D
+	 * @param b Point2D
+	 * @param c Point2D
+	 * @param d Point2D
+	 * @param r Point2D
+	 * @return boolean
+	 */
 	public static boolean checkIfLineSegementsIntersects(Point2D a, Point2D b, Point2D c, Point2D d, Point2D r)
 	{
 		double distAB, theCos, theSin, newX, ABpos;

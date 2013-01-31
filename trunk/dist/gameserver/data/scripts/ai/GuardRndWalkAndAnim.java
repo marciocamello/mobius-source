@@ -15,13 +15,25 @@ package ai;
 import lineage2.gameserver.ai.Guard;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GuardRndWalkAndAnim extends Guard
 {
+	/**
+	 * Constructor for GuardRndWalkAndAnim.
+	 * @param actor NpcInstance
+	 */
 	public GuardRndWalkAndAnim(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

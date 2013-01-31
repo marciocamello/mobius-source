@@ -19,12 +19,28 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ItemsAutoDestroy
 {
+	/**
+	 * Field _instance.
+	 */
 	private static ItemsAutoDestroy _instance;
+	/**
+	 * Field _items.
+	 */
 	ConcurrentLinkedQueue<ItemInstance> _items = null;
+	/**
+	 * Field _herbs.
+	 */
 	ConcurrentLinkedQueue<ItemInstance> _herbs = null;
 	
+	/**
+	 * Constructor for ItemsAutoDestroy.
+	 */
 	private ItemsAutoDestroy()
 	{
 		_herbs = new ConcurrentLinkedQueue<>();
@@ -36,6 +52,10 @@ public class ItemsAutoDestroy
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new CheckHerbsForDestroy(), 1000, 1000);
 	}
 	
+	/**
+	 * Method getInstance.
+	 * @return ItemsAutoDestroy
+	 */
 	public static ItemsAutoDestroy getInstance()
 	{
 		if (_instance == null)
@@ -45,20 +65,34 @@ public class ItemsAutoDestroy
 		return _instance;
 	}
 	
+	/**
+	 * Method addItem.
+	 * @param item ItemInstance
+	 */
 	public void addItem(ItemInstance item)
 	{
 		item.setDropTime(System.currentTimeMillis());
 		_items.add(item);
 	}
 	
+	/**
+	 * Method addHerb.
+	 * @param herb ItemInstance
+	 */
 	public void addHerb(ItemInstance herb)
 	{
 		herb.setDropTime(System.currentTimeMillis());
 		_herbs.add(herb);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class CheckItemsForDestroy extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -79,10 +113,19 @@ public class ItemsAutoDestroy
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class CheckHerbsForDestroy extends RunnableImpl
 	{
+		/**
+		 * Field _sleep. (value is 60000)
+		 */
 		static final long _sleep = 60000;
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

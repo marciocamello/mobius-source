@@ -17,36 +17,58 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GvGBoss extends Fighter
 {
+	/**
+	 * Field phrase1.
+	 */
 	boolean phrase1 = false;
+	/**
+	 * Field phrase2.
+	 */
 	boolean phrase2 = false;
+	/**
+	 * Field phrase3.
+	 */
 	boolean phrase3 = false;
 	
+	/**
+	 * Constructor for GvGBoss.
+	 * @param actor NpcInstance
+	 */
 	public GvGBoss(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		NpcInstance actor = getActor();
-		if ((actor.getCurrentHpPercents() < 50) && (phrase1 == false))
+		if ((actor.getCurrentHpPercents() < 50) && (!phrase1))
 		{
 			phrase1 = true;
-			Functions.npcSay(actor, "Вам не удастся похитить сокровища Геральда!");
+			Functions.npcSay(actor, "Вам не уда�?т�?�? похитит�? �?окровища Герал�?да!");
 		}
-		else if ((actor.getCurrentHpPercents() < 30) && (phrase2 == false))
+		else if ((actor.getCurrentHpPercents() < 30) && (!phrase2))
 		{
 			phrase2 = true;
-			Functions.npcSay(actor, "Я тебе череп проломлю!");
+			Functions.npcSay(actor, "Я тебе череп проломл�?!");
 		}
-		else if ((actor.getCurrentHpPercents() < 5) && (phrase3 == false))
+		else if ((actor.getCurrentHpPercents() < 5) && (!phrase3))
 		{
 			phrase3 = true;
-			Functions.npcSay(actor, "Вы все погибнете в страшных муках! Уничтожу!");
+			Functions.npcSay(actor, "Вы в�?е погибнете в �?тра�?ных муках! Уничтожу!");
 		}
 		super.onEvtAttacked(attacker, damage);
 	}

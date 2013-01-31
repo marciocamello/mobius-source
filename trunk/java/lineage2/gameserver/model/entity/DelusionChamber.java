@@ -31,19 +31,59 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DelusionChamber extends Reflection
 {
+	/**
+	 * Field killChamberTask.
+	 */
 	private Future<?> killChamberTask;
+	/**
+	 * Field MILLISECONDS_IN_MINUTE. (value is 60000)
+	 */
 	protected static final int MILLISECONDS_IN_MINUTE = 60000;
+	/**
+	 * Field _roomType.
+	 */
 	protected int _roomType;
+	/**
+	 * Field _choosenRoom.
+	 */
 	protected int _choosenRoom = -1;
+	/**
+	 * Field isBossRoom.
+	 */
 	protected boolean isBossRoom = false;
+	/**
+	 * Field _completedRooms.
+	 */
 	protected List<Integer> _completedRooms = new ArrayList<>();
+	/**
+	 * Field jumps_current.
+	 */
 	protected int jumps_current = 0;
+	/**
+	 * Field _hasJumped.
+	 */
 	protected boolean _hasJumped = false;
+	/**
+	 * Field teleporterTask.
+	 */
 	private Future<?> teleporterTask;
+	/**
+	 * Field spawnTask.
+	 */
 	private Future<?> spawnTask;
 	
+	/**
+	 * Constructor for DelusionChamber.
+	 * @param party Party
+	 * @param type int
+	 * @param room int
+	 */
 	public DelusionChamber(Party party, int type, int room)
 	{
 		super();
@@ -70,6 +110,10 @@ public class DelusionChamber extends Reflection
 		createTeleporterTimer();
 	}
 	
+	/**
+	 * Method createSpawnTimer.
+	 * @param room int
+	 */
 	public void createSpawnTimer(int room)
 	{
 		if (spawnTask != null)
@@ -102,6 +146,9 @@ public class DelusionChamber extends Reflection
 		}, 10000);
 	}
 	
+	/**
+	 * Method createTeleporterTimer.
+	 */
 	protected void createTeleporterTimer()
 	{
 		if (teleporterTask != null)
@@ -128,6 +175,10 @@ public class DelusionChamber extends Reflection
 		}, calcTimeToNextJump());
 	}
 	
+	/**
+	 * Method calcTimeToNextJump.
+	 * @return long
+	 */
 	protected long calcTimeToNextJump()
 	{
 		if (isBossRoom)
@@ -137,11 +188,19 @@ public class DelusionChamber extends Reflection
 		return (8 * MILLISECONDS_IN_MINUTE) + Rnd.get(120000);
 	}
 	
+	/**
+	 * Method getRoomCoord.
+	 * @param room int
+	 * @return Location
+	 */
 	public Location getRoomCoord(int room)
 	{
 		return DelusionChamberManager.getInstance().getRoom(_roomType, room).getTeleportCoords();
 	}
 	
+	/**
+	 * Method createNewKillChamberTimer.
+	 */
 	public synchronized void createNewKillChamberTimer()
 	{
 		if (killChamberTask != null)
@@ -175,11 +234,18 @@ public class DelusionChamber extends Reflection
 		}, 100L);
 	}
 	
+	/**
+	 * Method getType.
+	 * @return int
+	 */
 	public int getType()
 	{
 		return _roomType;
 	}
 	
+	/**
+	 * Method teleportToNextRoom.
+	 */
 	protected void teleportToNextRoom()
 	{
 		_completedRooms.add(_choosenRoom);
@@ -216,6 +282,10 @@ public class DelusionChamber extends Reflection
 		createSpawnTimer(_choosenRoom);
 	}
 	
+	/**
+	 * Method partyMemberExited.
+	 * @param player Player
+	 */
 	public void partyMemberExited(Player player)
 	{
 		if ((getPlayersInside(false) < 2) || (getPlayersInside(true) == 0))
@@ -225,6 +295,11 @@ public class DelusionChamber extends Reflection
 		}
 	}
 	
+	/**
+	 * Method getPlayersInside.
+	 * @param alive boolean
+	 * @return int
+	 */
 	protected int getPlayersInside(boolean alive)
 	{
 		if (_playerCount == 0)
@@ -242,6 +317,11 @@ public class DelusionChamber extends Reflection
 		return sum;
 	}
 	
+	/**
+	 * Method manualExitChamber.
+	 * @param player Player
+	 * @param npc NpcInstance
+	 */
 	public void manualExitChamber(Player player, NpcInstance npc)
 	{
 		if (!player.isInParty() || (player.getParty().getReflection() != this))
@@ -256,6 +336,10 @@ public class DelusionChamber extends Reflection
 		createNewKillChamberTimer();
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	@Override
 	public String getName()
 	{
@@ -263,16 +347,29 @@ public class DelusionChamber extends Reflection
 		return iz.getName();
 	}
 	
+	/**
+	 * Method getManagerId.
+	 * @return int
+	 */
 	protected int getManagerId()
 	{
 		return 32664;
 	}
 	
+	/**
+	 * Method checkBossRoom.
+	 * @param room int
+	 */
 	public void checkBossRoom(int room)
 	{
 		isBossRoom = DelusionChamberManager.getInstance().getRoom(_roomType, room).isBossRoom();
 	}
 	
+	/**
+	 * Method manualTeleport.
+	 * @param player Player
+	 * @param npc NpcInstance
+	 */
 	public void manualTeleport(Player player, NpcInstance npc)
 	{
 		if (!player.isInParty() || !player.getParty().isInReflection() || !(player.getParty().getReflection() instanceof DelusionChamber))

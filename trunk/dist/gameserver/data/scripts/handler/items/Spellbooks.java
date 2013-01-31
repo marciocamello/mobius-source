@@ -28,10 +28,20 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Spellbooks extends ScriptItemHandler
 {
+	/**
+	 * Field _itemIds.
+	 */
 	private int[] _itemIds = null;
 	
+	/**
+	 * Constructor for Spellbooks.
+	 */
 	public Spellbooks()
 	{
 		TIntHashSet list = new TIntHashSet();
@@ -43,6 +53,13 @@ public class Spellbooks extends ScriptItemHandler
 		_itemIds = list.toArray();
 	}
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -109,6 +126,10 @@ public class Spellbooks extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{

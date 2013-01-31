@@ -24,28 +24,63 @@ import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class NpcHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final NpcHolder _instance = new NpcHolder();
+	/**
+	 * Field _npcs.
+	 */
 	private final TIntObjectHashMap<NpcTemplate> _npcs = new TIntObjectHashMap<>(30000);
+	/**
+	 * Field _npcsByLevel.
+	 */
 	private TIntObjectHashMap<List<NpcTemplate>> _npcsByLevel;
+	/**
+	 * Field _allTemplates.
+	 */
 	private NpcTemplate[] _allTemplates;
+	/**
+	 * Field _npcsNames.
+	 */
 	private Map<String, NpcTemplate> _npcsNames;
 	
+	/**
+	 * Method getInstance.
+	 * @return NpcHolder
+	 */
 	public static NpcHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for NpcHolder.
+	 */
 	NpcHolder()
 	{
 	}
 	
+	/**
+	 * Method addTemplate.
+	 * @param template NpcTemplate
+	 */
 	public void addTemplate(NpcTemplate template)
 	{
 		_npcs.put(template.npcId, template);
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @param id int
+	 * @return NpcTemplate
+	 */
 	public NpcTemplate getTemplate(int id)
 	{
 		NpcTemplate npc = ArrayUtils.valid(_allTemplates, id);
@@ -57,21 +92,38 @@ public final class NpcHolder extends AbstractHolder
 		return _allTemplates[id];
 	}
 	
+	/**
+	 * Method getTemplateByName.
+	 * @param name String
+	 * @return NpcTemplate
+	 */
 	public NpcTemplate getTemplateByName(String name)
 	{
 		return _npcsNames.get(name.toLowerCase());
 	}
 	
+	/**
+	 * Method getAllOfLevel.
+	 * @param lvl int
+	 * @return List<NpcTemplate>
+	 */
 	public List<NpcTemplate> getAllOfLevel(int lvl)
 	{
 		return _npcsByLevel.get(lvl);
 	}
 	
+	/**
+	 * Method getAll.
+	 * @return NpcTemplate[]
+	 */
 	public NpcTemplate[] getAll()
 	{
 		return _npcs.values(new NpcTemplate[_npcs.size()]);
 	}
 	
+	/**
+	 * Method buildFastLookupTable.
+	 */
 	private void buildFastLookupTable()
 	{
 		_npcsByLevel = new TIntObjectHashMap<>();
@@ -101,18 +153,28 @@ public final class NpcHolder extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method process.
+	 */
 	@Override
 	protected void process()
 	{
 		buildFastLookupTable();
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _npcs.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

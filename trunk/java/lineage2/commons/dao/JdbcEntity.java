@@ -14,15 +14,36 @@ package lineage2.commons.dao;
 
 import java.io.Serializable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface JdbcEntity extends Serializable
 {
+	/**
+	 * Method setJdbcState.
+	 * @param state JdbcEntityState
+	 */
 	public void setJdbcState(JdbcEntityState state);
 	
+	/**
+	 * Method getJdbcState.
+	 * @return JdbcEntityState
+	 */
 	public JdbcEntityState getJdbcState();
 	
+	/**
+	 * Method save.
+	 */
 	public void save();
 	
+	/**
+	 * Method update.
+	 */
 	public void update();
 	
+	/**
+	 * Method delete.
+	 */
 	public void delete();
 }

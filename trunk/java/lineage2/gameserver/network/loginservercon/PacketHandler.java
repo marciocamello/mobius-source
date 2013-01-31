@@ -25,10 +25,22 @@ import lineage2.gameserver.network.loginservercon.lspackets.PlayerAuthResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PacketHandler
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(PacketHandler.class);
 	
+	/**
+	 * Method handlePacket.
+	 * @param buf ByteBuffer
+	 * @return ReceivablePacket
+	 */
 	public static ReceivablePacket handlePacket(ByteBuffer buf)
 	{
 		ReceivablePacket packet = null;

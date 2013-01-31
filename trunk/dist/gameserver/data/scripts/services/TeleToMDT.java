@@ -17,8 +17,15 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeleToMDT extends Functions
 {
+	/**
+	 * Method toMDT.
+	 */
 	public void toMDT()
 	{
 		Player player = getSelf();
@@ -35,6 +42,9 @@ public class TeleToMDT extends Functions
 		player.teleToLocation(12661, 181687, -3560);
 	}
 	
+	/**
+	 * Method fromMDT.
+	 */
 	public void fromMDT()
 	{
 		Player player = getSelf();
@@ -56,6 +66,9 @@ public class TeleToMDT extends Functions
 		player.teleToLocation(Location.parseLoc(var));
 	}
 	
+	/**
+	 * Method teleOut.
+	 */
 	public void teleOut()
 	{
 		Player player = getSelf();

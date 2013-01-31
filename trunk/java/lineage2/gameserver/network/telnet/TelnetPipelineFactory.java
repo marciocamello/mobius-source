@@ -26,15 +26,30 @@ import org.jboss.netty.handler.codec.frame.Delimiters;
 import org.jboss.netty.handler.codec.string.StringDecoder;
 import org.jboss.netty.handler.codec.string.StringEncoder;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TelnetPipelineFactory implements ChannelPipelineFactory
 {
+	/**
+	 * Field handler.
+	 */
 	private final ChannelHandler handler;
 	
+	/**
+	 * Constructor for TelnetPipelineFactory.
+	 * @param handler ChannelHandler
+	 */
 	public TelnetPipelineFactory(ChannelHandler handler)
 	{
 		this.handler = handler;
 	}
 	
+	/**
+	 * Method getPipeline.
+	 * @return ChannelPipeline * @see org.jboss.netty.channel.ChannelPipelineFactory#getPipeline()
+	 */
 	@Override
 	public ChannelPipeline getPipeline()
 	{

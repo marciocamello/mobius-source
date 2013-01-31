@@ -36,12 +36,29 @@ import lineage2.gameserver.utils.ItemFunctions;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PcInventory extends Inventory
 {
+	/**
+	 * Field _owner.
+	 */
 	private final Player _owner;
+	/**
+	 * Field _lockType.
+	 */
 	private LockType _lockType = LockType.NONE;
+	/**
+	 * Field _lockItems.
+	 */
 	private int[] _lockItems = ArrayUtils.EMPTY_INT_ARRAY;
 	
+	/**
+	 * Constructor for PcInventory.
+	 * @param owner Player
+	 */
 	public PcInventory(Player owner)
 	{
 		super(owner.getObjectId());
@@ -54,24 +71,40 @@ public class PcInventory extends Inventory
 		addListener(AccessoryListener.getInstance());
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return Player
+	 */
 	@Override
 	public Player getActor()
 	{
 		return _owner;
 	}
 	
+	/**
+	 * Method getBaseLocation.
+	 * @return ItemLocation
+	 */
 	@Override
 	protected ItemLocation getBaseLocation()
 	{
 		return ItemLocation.INVENTORY;
 	}
 	
+	/**
+	 * Method getEquipLocation.
+	 * @return ItemLocation
+	 */
 	@Override
 	protected ItemLocation getEquipLocation()
 	{
 		return ItemLocation.PAPERDOLL;
 	}
 	
+	/**
+	 * Method getAdena.
+	 * @return long
+	 */
 	public long getAdena()
 	{
 		ItemInstance _adena = getItemByItemId(57);
@@ -82,16 +115,31 @@ public class PcInventory extends Inventory
 		return _adena.getCount();
 	}
 	
+	/**
+	 * Method addAdena.
+	 * @param amount long
+	 * @return ItemInstance
+	 */
 	public ItemInstance addAdena(long amount)
 	{
 		return addItem(ItemTemplate.ITEM_ID_ADENA, amount);
 	}
 	
+	/**
+	 * Method reduceAdena.
+	 * @param adena long
+	 * @return boolean
+	 */
 	public boolean reduceAdena(long adena)
 	{
 		return destroyItemByItemId(ItemTemplate.ITEM_ID_ADENA, adena);
 	}
 	
+	/**
+	 * Method getPaperdollAugmentationId.
+	 * @param slot int
+	 * @return int
+	 */
 	public int getPaperdollAugmentationId(int slot)
 	{
 		ItemInstance item = _paperdoll[slot];
@@ -102,6 +150,11 @@ public class PcInventory extends Inventory
 		return 0;
 	}
 	
+	/**
+	 * Method getPaperdollItemId.
+	 * @param slot int
+	 * @return int
+	 */
 	@Override
 	public int getPaperdollItemId(int slot)
 	{
@@ -114,12 +167,18 @@ public class PcInventory extends Inventory
 		return itemId;
 	}
 	
+	/**
+	 * Method onRefreshWeight.
+	 */
 	@Override
 	protected void onRefreshWeight()
 	{
 		getActor().refreshOverloaded();
 	}
 	
+	/**
+	 * Method validateItems.
+	 */
 	public void validateItems()
 	{
 		for (ItemInstance item : _paperdoll)
@@ -132,6 +191,9 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Method validateItemsSkills.
+	 */
 	public void validateItemsSkills()
 	{
 		for (ItemInstance item : _paperdoll)
@@ -179,8 +241,14 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Field isRefresh.
+	 */
 	public boolean isRefresh = false;
 	
+	/**
+	 * Method refreshEquip.
+	 */
 	public void refreshEquip()
 	{
 		isRefresh = true;
@@ -201,6 +269,10 @@ public class PcInventory extends Inventory
 		isRefresh = false;
 	}
 	
+	/**
+	 * Method sort.
+	 * @param order int[][]
+	 */
 	public void sort(int[][] order)
 	{
 		boolean needSort = false;
@@ -229,6 +301,9 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Field arrows.
+	 */
 	private static final int[][] arrows =
 	{
 		{
@@ -266,6 +341,11 @@ public class PcInventory extends Inventory
 		},
 	};
 	
+	/**
+	 * Method findArrowForBow.
+	 * @param bow ItemTemplate
+	 * @return ItemInstance
+	 */
 	public ItemInstance findArrowForBow(ItemTemplate bow)
 	{
 		int[] arrowsId = arrows[bow.getCrystalType().externalOrdinal];
@@ -280,6 +360,9 @@ public class PcInventory extends Inventory
 		return null;
 	}
 	
+	/**
+	 * Field bolts.
+	 */
 	private static final int[][] bolts =
 	{
 		{
@@ -317,6 +400,11 @@ public class PcInventory extends Inventory
 		},
 	};
 	
+	/**
+	 * Method findArrowForCrossbow.
+	 * @param xbow ItemTemplate
+	 * @return ItemInstance
+	 */
 	public ItemInstance findArrowForCrossbow(ItemTemplate xbow)
 	{
 		int[] boltsId = bolts[xbow.getCrystalType().externalOrdinal];
@@ -331,6 +419,10 @@ public class PcInventory extends Inventory
 		return null;
 	}
 	
+	/**
+	 * Method findEquippedLure.
+	 * @return ItemInstance
+	 */
 	public ItemInstance findEquippedLure()
 	{
 		ItemInstance res = null;
@@ -358,6 +450,11 @@ public class PcInventory extends Inventory
 		return res;
 	}
 	
+	/**
+	 * Method lockItems.
+	 * @param lock LockType
+	 * @param items int[]
+	 */
 	public void lockItems(LockType lock, int[] items)
 	{
 		if (_lockType != LockType.NONE)
@@ -369,6 +466,9 @@ public class PcInventory extends Inventory
 		getActor().sendItemList(false);
 	}
 	
+	/**
+	 * Method unlock.
+	 */
 	public void unlock()
 	{
 		if (_lockType == LockType.NONE)
@@ -380,6 +480,11 @@ public class PcInventory extends Inventory
 		getActor().sendItemList(false);
 	}
 	
+	/**
+	 * Method isLockedItem.
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	public boolean isLockedItem(ItemInstance item)
 	{
 		switch (_lockType)
@@ -393,16 +498,28 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Method getLockType.
+	 * @return LockType
+	 */
 	public LockType getLockType()
 	{
 		return _lockType;
 	}
 	
+	/**
+	 * Method getLockItems.
+	 * @return int[]
+	 */
 	public int[] getLockItems()
 	{
 		return _lockItems;
 	}
 	
+	/**
+	 * Method onRestoreItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onRestoreItem(ItemInstance item)
 	{
@@ -421,6 +538,10 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Method onAddItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onAddItem(ItemInstance item)
 	{
@@ -439,6 +560,10 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Method onRemoveItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onRemoveItem(ItemInstance item)
 	{
@@ -454,6 +579,11 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Method onEquip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onEquip(int slot, ItemInstance item)
 	{
@@ -464,6 +594,11 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Method onUnequip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onUnequip(int slot, ItemInstance item)
 	{
@@ -474,6 +609,9 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	@Override
 	public void restore()
 	{
@@ -511,6 +649,9 @@ public class PcInventory extends Inventory
 		refreshWeight();
 	}
 	
+	/**
+	 * Method store.
+	 */
 	@Override
 	public void store()
 	{
@@ -525,6 +666,10 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Method sendAddItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void sendAddItem(ItemInstance item)
 	{
@@ -536,6 +681,10 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Method sendModifyItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void sendModifyItem(ItemInstance item)
 	{
@@ -547,16 +696,26 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Method sendRemoveItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void sendRemoveItem(ItemInstance item)
 	{
 		getActor().sendPacket(new InventoryUpdate().addRemovedItem(item));
 	}
 	
+	/**
+	 * Method startTimers.
+	 */
 	public void startTimers()
 	{
 	}
 	
+	/**
+	 * Method stopAllTimers.
+	 */
 	public void stopAllTimers()
 	{
 		for (ItemInstance item : getItems())
@@ -568,15 +727,28 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class ShadowLifeTimeTask extends RunnableImpl
 	{
+		/**
+		 * Field item.
+		 */
 		private final ItemInstance item;
 		
+		/**
+		 * Constructor for ShadowLifeTimeTask.
+		 * @param item ItemInstance
+		 */
 		ShadowLifeTimeTask(ItemInstance item)
 		{
 			this.item = item;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -624,15 +796,28 @@ public class PcInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class LifeTimeTask extends RunnableImpl
 	{
+		/**
+		 * Field item.
+		 */
 		private final ItemInstance item;
 		
+		/**
+		 * Constructor for LifeTimeTask.
+		 * @param item ItemInstance
+		 */
 		LifeTimeTask(ItemInstance item)
 		{
 			this.item = item;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

@@ -26,16 +26,35 @@ import lineage2.gameserver.model.actor.instances.player.Friend;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharacterFriendDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharacterFriendDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final CharacterFriendDAO _instance = new CharacterFriendDAO();
 	
+	/**
+	 * Method getInstance.
+	 * @return CharacterFriendDAO
+	 */
 	public static CharacterFriendDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method select.
+	 * @param owner Player
+	 * @return Map<Integer,Friend>
+	 */
 	public Map<Integer, Friend> select(Player owner)
 	{
 		Map<Integer, Friend> map = new HashMap<>();
@@ -68,6 +87,11 @@ public class CharacterFriendDAO
 		return map;
 	}
 	
+	/**
+	 * Method insert.
+	 * @param owner Player
+	 * @param friend Player
+	 */
 	public void insert(Player owner, Player friend)
 	{
 		Connection con = null;
@@ -90,6 +114,11 @@ public class CharacterFriendDAO
 		}
 	}
 	
+	/**
+	 * Method delete.
+	 * @param owner Player
+	 * @param friend int
+	 */
 	public void delete(Player owner, int friend)
 	{
 		Connection con = null;

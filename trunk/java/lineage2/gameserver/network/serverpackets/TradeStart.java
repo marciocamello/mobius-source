@@ -19,11 +19,26 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInfo;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TradeStart extends L2GameServerPacket
 {
+	/**
+	 * Field _tradelist.
+	 */
 	private final List<ItemInfo> _tradelist = new ArrayList<>();
+	/**
+	 * Field targetId.
+	 */
 	private final int targetId;
 	
+	/**
+	 * Constructor for TradeStart.
+	 * @param player Player
+	 * @param target Player
+	 */
 	public TradeStart(Player player, Player target)
 	{
 		targetId = target.getObjectId();
@@ -37,6 +52,9 @@ public class TradeStart extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

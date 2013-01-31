@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SendTradeRequest extends L2GameServerPacket
 {
+	/**
+	 * Field _senderId.
+	 */
 	private final int _senderId;
 	
+	/**
+	 * Constructor for SendTradeRequest.
+	 * @param senderId int
+	 */
 	public SendTradeRequest(int senderId)
 	{
 		_senderId = senderId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

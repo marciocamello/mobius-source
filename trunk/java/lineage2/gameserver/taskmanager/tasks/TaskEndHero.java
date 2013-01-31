@@ -23,17 +23,35 @@ import lineage2.gameserver.taskmanager.TaskTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TaskEndHero extends Task
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(TaskEndHero.class);
+	/**
+	 * Field NAME. (value is ""TaskEndHero"")
+	 */
 	private static final String NAME = "TaskEndHero";
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	@Override
 	public String getName()
 	{
 		return NAME;
 	}
 	
+	/**
+	 * Method onTimeElapsed.
+	 * @param task ExecutedTask
+	 */
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
@@ -53,6 +71,9 @@ public class TaskEndHero extends Task
 		_log.info("Hero End Global Task: completed.");
 	}
 	
+	/**
+	 * Method initializate.
+	 */
 	@Override
 	public void initializate()
 	{

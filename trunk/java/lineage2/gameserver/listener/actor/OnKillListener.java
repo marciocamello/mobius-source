@@ -15,9 +15,22 @@ package lineage2.gameserver.listener.actor;
 import lineage2.gameserver.listener.CharListener;
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnKillListener extends CharListener
 {
+	/**
+	 * Method onKill.
+	 * @param actor Creature
+	 * @param victim Creature
+	 */
 	public void onKill(Creature actor, Creature victim);
 	
+	/**
+	 * Method ignorePetOrSummon.
+	 * @return boolean
+	 */
 	public boolean ignorePetOrSummon();
 }

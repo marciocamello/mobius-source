@@ -17,15 +17,29 @@ import java.util.List;
 
 import lineage2.gameserver.model.items.CrystallizationItem;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExGetCrystalizingEstimation extends L2GameServerPacket
 {
+	/**
+	 * Field _items.
+	 */
 	private List<CrystallizationItem> _items;
 	
+	/**
+	 * Constructor for ExGetCrystalizingEstimation.
+	 * @param _items List<CrystallizationItem>
+	 */
 	public ExGetCrystalizingEstimation(List<CrystallizationItem> _items)
 	{
 		this._items = _items;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -39,6 +53,10 @@ public class ExGetCrystalizingEstimation extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method addCrystallizationItem.
+	 * @param i CrystallizationItem
+	 */
 	public void addCrystallizationItem(CrystallizationItem i)
 	{
 		if (_items == null)

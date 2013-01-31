@@ -31,15 +31,40 @@ import lineage2.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEnterListener
 {
+	/**
+	 * Field COFFER_PRICE.
+	 */
 	private static int COFFER_PRICE = 50000;
+	/**
+	 * Field COFFER_ID.
+	 */
 	private static int COFFER_ID = 8659;
+	/**
+	 * Field EVENT_MANAGER_ID.
+	 */
 	private static int EVENT_MANAGER_ID = 32091;
+	/**
+	 * Field _spawns.
+	 */
 	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CofferofShadows.class);
+	/**
+	 * Field _active.
+	 */
 	private static boolean _active = false;
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	private void spawnEventManagers()
 	{
 		final int EVENT_MANAGERS[][] =
@@ -114,16 +139,26 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 		SpawnNPCs(EVENT_MANAGER_ID, EVENT_MANAGERS, _spawns);
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return IsActive("CofferofShadows");
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -145,6 +180,9 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -166,6 +204,10 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method buycoffer.
+	 * @param var String[]
+	 */
 	public void buycoffer(String[] var)
 	{
 		Player player = getSelf();
@@ -195,6 +237,9 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 		Functions.addItem(player, COFFER_ID, coffer_count);
 	}
 	
+	/**
+	 * Field buycoffer_counts.
+	 */
 	private static int[] buycoffer_counts =
 	{
 		1,
@@ -203,6 +248,11 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 		50
 	};
 	
+	/**
+	 * Method DialogAppend_32091.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_32091(Integer val)
 	{
 		if (val != 0)
@@ -228,6 +278,10 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 		return append;
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -244,18 +298,31 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{

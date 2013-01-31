@@ -24,36 +24,110 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DoorTemplate extends CharTemplate
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(DoorTemplate.class);
+	/**
+	 * Field DEFAULT_AI_CONSTRUCTOR.
+	 */
 	@SuppressWarnings("unchecked")
 	public static final Constructor<DoorAI> DEFAULT_AI_CONSTRUCTOR = (Constructor<DoorAI>) CharacterAI.class.getConstructors()[0];
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum DoorType
 	{
+		/**
+		 * Field DOOR.
+		 */
 		DOOR,
+		/**
+		 * Field WALL.
+		 */
 		WALL
 	}
 	
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _doorType.
+	 */
 	private final DoorType _doorType;
+	/**
+	 * Field _unlockable.
+	 */
 	private final boolean _unlockable;
+	/**
+	 * Field _isHPVisible.
+	 */
 	private final boolean _isHPVisible;
+	/**
+	 * Field _opened.
+	 */
 	private final boolean _opened;
+	/**
+	 * Field _targetable.
+	 */
 	private final boolean _targetable;
+	/**
+	 * Field _polygon.
+	 */
 	private final Polygon _polygon;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
+	/**
+	 * Field _key.
+	 */
 	private final int _key;
+	/**
+	 * Field _openTime.
+	 */
 	private final int _openTime;
+	/**
+	 * Field _rndTime.
+	 */
 	private final int _rndTime;
+	/**
+	 * Field _closeTime.
+	 */
 	private final int _closeTime;
+	/**
+	 * Field _masterDoor.
+	 */
 	private final int _masterDoor;
+	/**
+	 * Field _aiParams.
+	 */
 	private final StatsSet _aiParams;
+	/**
+	 * Field _classAI.
+	 */
 	private Class<DoorAI> _classAI = DoorAI.class;
+	/**
+	 * Field _constructorAI.
+	 */
 	private Constructor<DoorAI> _constructorAI = DEFAULT_AI_CONSTRUCTOR;
 	
+	/**
+	 * Constructor for DoorTemplate.
+	 * @param set StatsSet
+	 */
 	public DoorTemplate(StatsSet set)
 	{
 		super(set);
@@ -75,6 +149,10 @@ public class DoorTemplate extends CharTemplate
 		setAI(set.getString("ai", "DoorAI"));
 	}
 	
+	/**
+	 * Method setAI.
+	 * @param ai String
+	 */
 	@SuppressWarnings("unchecked")
 	private void setAI(String ai)
 	{
@@ -102,6 +180,11 @@ public class DoorTemplate extends CharTemplate
 		}
 	}
 	
+	/**
+	 * Method getNewAI.
+	 * @param door DoorInstance
+	 * @return CharacterAI
+	 */
 	public CharacterAI getNewAI(DoorInstance door)
 	{
 		try
@@ -115,77 +198,137 @@ public class DoorTemplate extends CharTemplate
 		return new DoorAI(door);
 	}
 	
+	/**
+	 * Method getNpcId.
+	 * @return int
+	 */
 	@Override
 	public int getNpcId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method getDoorType.
+	 * @return DoorType
+	 */
 	public DoorType getDoorType()
 	{
 		return _doorType;
 	}
 	
+	/**
+	 * Method isUnlockable.
+	 * @return boolean
+	 */
 	public boolean isUnlockable()
 	{
 		return _unlockable;
 	}
 	
+	/**
+	 * Method isHPVisible.
+	 * @return boolean
+	 */
 	public boolean isHPVisible()
 	{
 		return _isHPVisible;
 	}
 	
+	/**
+	 * Method getPolygon.
+	 * @return Polygon
+	 */
 	public Polygon getPolygon()
 	{
 		return _polygon;
 	}
 	
+	/**
+	 * Method getKey.
+	 * @return int
+	 */
 	public int getKey()
 	{
 		return _key;
 	}
 	
+	/**
+	 * Method isOpened.
+	 * @return boolean
+	 */
 	public boolean isOpened()
 	{
 		return _opened;
 	}
 	
+	/**
+	 * Method getLoc.
+	 * @return Location
+	 */
 	public Location getLoc()
 	{
 		return _loc;
 	}
 	
+	/**
+	 * Method getOpenTime.
+	 * @return int
+	 */
 	public int getOpenTime()
 	{
 		return _openTime;
 	}
 	
+	/**
+	 * Method getRandomTime.
+	 * @return int
+	 */
 	public int getRandomTime()
 	{
 		return _rndTime;
 	}
 	
+	/**
+	 * Method getCloseTime.
+	 * @return int
+	 */
 	public int getCloseTime()
 	{
 		return _closeTime;
 	}
 	
+	/**
+	 * Method isTargetable.
+	 * @return boolean
+	 */
 	public boolean isTargetable()
 	{
 		return _targetable;
 	}
 	
+	/**
+	 * Method getMasterDoor.
+	 * @return int
+	 */
 	public int getMasterDoor()
 	{
 		return _masterDoor;
 	}
 	
+	/**
+	 * Method getAIParams.
+	 * @return StatsSet
+	 */
 	public StatsSet getAIParams()
 	{
 		return _aiParams;

@@ -20,8 +20,15 @@ import lineage2.gameserver.model.instances.NpcInstance;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Tentacle_19171 extends Fighter
 {
+	/**
+	 * Field ATTACK_IDS.
+	 */
 	private static final int[] ATTACK_IDS =
 	{
 		19191,
@@ -49,12 +56,21 @@ public class Tentacle_19171 extends Fighter
 		19215
 	};
 	
+	/**
+	 * Constructor for Tentacle_19171.
+	 * @param actor NpcInstance
+	 */
 	public Tentacle_19171(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ATTACK_DELAY = 10;
 	}
 	
+	/**
+	 * Method canAttackCharacter.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	protected boolean canAttackCharacter(Creature target)
 	{
@@ -67,6 +83,11 @@ public class Tentacle_19171 extends Fighter
 		return target.isPlayable() || ArrayUtils.contains(ATTACK_IDS, target.getNpcId());
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{
@@ -81,6 +102,10 @@ public class Tentacle_19171 extends Fighter
 		return super.checkAggression(target);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

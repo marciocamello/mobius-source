@@ -14,6 +14,10 @@ package lineage2.gameserver.model.instances;
 
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NpcNotSayInstance extends NpcInstance
 {
 	/**
@@ -21,6 +25,11 @@ public class NpcNotSayInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for NpcNotSayInstance.
+	 * @param objectID int
+	 * @param template NpcTemplate
+	 */
 	public NpcNotSayInstance(final int objectID, final NpcTemplate template)
 	{
 		super(objectID, template);

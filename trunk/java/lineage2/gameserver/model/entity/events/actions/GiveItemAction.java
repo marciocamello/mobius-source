@@ -16,17 +16,37 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.EventAction;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GiveItemAction implements EventAction
 {
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _count.
+	 */
 	private final long _count;
 	
+	/**
+	 * Constructor for GiveItemAction.
+	 * @param itemId int
+	 * @param count long
+	 */
 	public GiveItemAction(int itemId, long count)
 	{
 		_itemId = itemId;
 		_count = count;
 	}
 	
+	/**
+	 * Method call.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.EventAction#call(GlobalEvent)
+	 */
 	@Override
 	public void call(GlobalEvent event)
 	{

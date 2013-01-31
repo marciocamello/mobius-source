@@ -25,15 +25,30 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ColiseumManagerInstance extends ColiseumHelperInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _startHtm.
+	 */
 	private final String _startHtm;
+	/**
+	 * Field _coliseumId.
+	 */
 	private final int _coliseumId;
 	
+	/**
+	 * Constructor for ColiseumManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ColiseumManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -42,6 +57,11 @@ public class ColiseumManagerInstance extends ColiseumHelperInstance
 		_coliseumId = getParameter("coliseum_id", 0);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -97,6 +117,12 @@ public class ColiseumManagerInstance extends ColiseumHelperInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param ar Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... ar)
 	{

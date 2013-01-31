@@ -15,36 +15,125 @@ package lineage2.gameserver.templates;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.player.StatAttributes;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharTemplate
 {
+	/**
+	 * Field EMPTY_ATTRIBUTES.
+	 */
 	private static final int[] EMPTY_ATTRIBUTES = new int[6];
+	/**
+	 * Field _baseAttr.
+	 */
 	private final StatAttributes _baseAttr;
+	/**
+	 * Field _baseAtkRange.
+	 */
 	private final int _baseAtkRange;
+	/**
+	 * Field _baseHpMax.
+	 */
 	private final double _baseHpMax;
+	/**
+	 * Field _baseCpMax.
+	 */
 	private final double _baseCpMax;
+	/**
+	 * Field _baseMpMax.
+	 */
 	private final double _baseMpMax;
+	/**
+	 * Field _baseHpReg.
+	 */
 	private final double _baseHpReg;
+	/**
+	 * Field _baseMpReg.
+	 */
 	private final double _baseMpReg;
+	/**
+	 * Field _baseCpReg.
+	 */
 	private final double _baseCpReg;
+	/**
+	 * Field _basePAtk.
+	 */
 	private final double _basePAtk;
+	/**
+	 * Field _baseMAtk.
+	 */
 	private final double _baseMAtk;
+	/**
+	 * Field _basePDef.
+	 */
 	private final double _basePDef;
+	/**
+	 * Field _baseMDef.
+	 */
 	private final double _baseMDef;
+	/**
+	 * Field _basePAtkSpd.
+	 */
 	private final double _basePAtkSpd;
+	/**
+	 * Field _baseMAtkSpd.
+	 */
 	private final double _baseMAtkSpd;
+	/**
+	 * Field _baseShldDef.
+	 */
 	private final double _baseShldDef;
+	/**
+	 * Field _baseShldRate.
+	 */
 	private final double _baseShldRate;
+	/**
+	 * Field _baseCritRate.
+	 */
 	private final double _baseCritRate;
+	/**
+	 * Field _baseRunSpd.
+	 */
 	private final int _baseRunSpd;
+	/**
+	 * Field _baseWalkSpd.
+	 */
 	private final double _baseWalkSpd;
+	/**
+	 * Field _baseWaterRunSpd.
+	 */
 	private final double _baseWaterRunSpd;
+	/**
+	 * Field _baseWaterWalkSpd.
+	 */
 	private final double _baseWaterWalkSpd;
+	/**
+	 * Field _baseAttributeAttack.
+	 */
 	private final int[] _baseAttributeAttack;
+	/**
+	 * Field _baseAttributeDefence.
+	 */
 	private final int[] _baseAttributeDefence;
+	/**
+	 * Field _collisionRadius.
+	 */
 	private final double _collisionRadius;
+	/**
+	 * Field _collisionHeight.
+	 */
 	private final double _collisionHeight;
+	/**
+	 * Field _baseAttackType.
+	 */
 	private final WeaponTemplate.WeaponType _baseAttackType;
 	
+	/**
+	 * Constructor for CharTemplate.
+	 * @param set StatsSet
+	 */
 	public CharTemplate(StatsSet set)
 	{
 		_baseAttr = new StatAttributes(set.getInteger("baseINT", 0), set.getInteger("baseSTR", 0), set.getInteger("baseCON", 0), set.getInteger("baseMEN", 0), set.getInteger("baseDEX", 0), set.getInteger("baseWIT", 0));
@@ -75,141 +164,253 @@ public class CharTemplate
 		_baseAttackType = WeaponTemplate.WeaponType.valueOf(set.getString("baseAttackType", "FIST").toUpperCase());
 	}
 	
+	/**
+	 * Method getBaseAttr.
+	 * @return StatAttributes
+	 */
 	public StatAttributes getBaseAttr()
 	{
 		return _baseAttr;
 	}
 	
+	/**
+	 * Method getBaseHpMax.
+	 * @return double
+	 */
 	public double getBaseHpMax()
 	{
 		return _baseHpMax;
 	}
 	
+	/**
+	 * Method getBaseCpMax.
+	 * @return double
+	 */
 	public double getBaseCpMax()
 	{
 		return _baseCpMax;
 	}
 	
+	/**
+	 * Method getBaseMpMax.
+	 * @return double
+	 */
 	public double getBaseMpMax()
 	{
 		return _baseMpMax;
 	}
 	
+	/**
+	 * Method getBaseHpReg.
+	 * @return double
+	 */
 	public double getBaseHpReg()
 	{
 		return _baseHpReg;
 	}
 	
+	/**
+	 * Method getBaseMpReg.
+	 * @return double
+	 */
 	public double getBaseMpReg()
 	{
 		return _baseMpReg;
 	}
 	
+	/**
+	 * Method getBaseCpReg.
+	 * @return double
+	 */
 	public double getBaseCpReg()
 	{
 		return _baseCpReg;
 	}
 	
+	/**
+	 * Method getBasePAtk.
+	 * @return double
+	 */
 	public double getBasePAtk()
 	{
 		return _basePAtk;
 	}
 	
+	/**
+	 * Method getBaseMAtk.
+	 * @return double
+	 */
 	public double getBaseMAtk()
 	{
 		return _baseMAtk;
 	}
 	
+	/**
+	 * Method getBasePDef.
+	 * @return double
+	 */
 	public double getBasePDef()
 	{
 		return _basePDef;
 	}
 	
+	/**
+	 * Method getBaseMDef.
+	 * @return double
+	 */
 	public double getBaseMDef()
 	{
 		return _baseMDef;
 	}
 	
+	/**
+	 * Method getBasePAtkSpd.
+	 * @return double
+	 */
 	public double getBasePAtkSpd()
 	{
 		return _basePAtkSpd;
 	}
 	
+	/**
+	 * Method getBaseMAtkSpd.
+	 * @return double
+	 */
 	public double getBaseMAtkSpd()
 	{
 		return _baseMAtkSpd;
 	}
 	
+	/**
+	 * Method getBaseShldDef.
+	 * @return double
+	 */
 	public double getBaseShldDef()
 	{
 		return _baseShldDef;
 	}
 	
+	/**
+	 * Method getBaseAtkRange.
+	 * @return int
+	 */
 	public int getBaseAtkRange()
 	{
 		return _baseAtkRange;
 	}
 	
+	/**
+	 * Method getBaseShldRate.
+	 * @return double
+	 */
 	public double getBaseShldRate()
 	{
 		return _baseShldRate;
 	}
 	
+	/**
+	 * Method getBaseCritRate.
+	 * @return double
+	 */
 	public double getBaseCritRate()
 	{
 		return _baseCritRate;
 	}
 	
+	/**
+	 * Method getBaseRunSpd.
+	 * @return int
+	 */
 	public int getBaseRunSpd()
 	{
 		return _baseRunSpd;
 	}
 	
+	/**
+	 * Method getBaseWalkSpd.
+	 * @return int
+	 */
 	public int getBaseWalkSpd()
 	{
 		return (int) _baseWalkSpd;
 	}
 	
+	/**
+	 * Method getBaseWaterRunSpd.
+	 * @return int
+	 */
 	public int getBaseWaterRunSpd()
 	{
 		return (int) _baseWaterRunSpd;
 	}
 	
+	/**
+	 * Method getBaseWaterWalkSpd.
+	 * @return int
+	 */
 	public int getBaseWaterWalkSpd()
 	{
 		return (int) _baseWaterWalkSpd;
 	}
 	
+	/**
+	 * Method getBaseAttributeAttack.
+	 * @return int[]
+	 */
 	public int[] getBaseAttributeAttack()
 	{
 		return _baseAttributeAttack;
 	}
 	
+	/**
+	 * Method getBaseAttributeDefence.
+	 * @return int[]
+	 */
 	public int[] getBaseAttributeDefence()
 	{
 		return _baseAttributeDefence;
 	}
 	
+	/**
+	 * Method getCollisionRadius.
+	 * @return double
+	 */
 	public double getCollisionRadius()
 	{
 		return _collisionRadius;
 	}
 	
+	/**
+	 * Method getCollisionHeight.
+	 * @return double
+	 */
 	public double getCollisionHeight()
 	{
 		return _collisionHeight;
 	}
 	
+	/**
+	 * Method getBaseAttackType.
+	 * @return WeaponTemplate.WeaponType
+	 */
 	public WeaponTemplate.WeaponType getBaseAttackType()
 	{
 		return _baseAttackType;
 	}
 	
+	/**
+	 * Method getNpcId.
+	 * @return int
+	 */
 	public int getNpcId()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getEmptyStatsSet.
+	 * @return StatsSet
+	 */
 	public static StatsSet getEmptyStatsSet()
 	{
 		StatsSet npcDat = new StatsSet();

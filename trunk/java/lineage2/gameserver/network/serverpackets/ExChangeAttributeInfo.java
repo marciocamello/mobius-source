@@ -12,11 +12,26 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExChangeAttributeInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _attribute.
+	 */
 	private int _attribute = -1;
+	/**
+	 * Field _ObjectIdStone.
+	 */
 	private final int _ObjectIdStone;
 	
+	/**
+	 * Constructor for ExChangeAttributeInfo.
+	 * @param att int
+	 * @param ObjectIdStone int
+	 */
 	public ExChangeAttributeInfo(int att, int ObjectIdStone)
 	{
 		switch (att)
@@ -42,6 +57,9 @@ public class ExChangeAttributeInfo extends L2GameServerPacket
 		_ObjectIdStone = ObjectIdStone;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

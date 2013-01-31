@@ -20,6 +20,10 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class FacilityManagerInstance extends NpcInstance
 {
 	/**
@@ -27,11 +31,24 @@ public abstract class FacilityManagerInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for FacilityManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public FacilityManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method buyFacility.
+	 * @param player Player
+	 * @param type int
+	 * @param lvl int
+	 * @param price long
+	 * @return boolean
+	 */
 	protected boolean buyFacility(Player player, int type, int lvl, long price)
 	{
 		Fortress fortress = getFortress();

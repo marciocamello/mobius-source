@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MagicSkillCanceled extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
 	
+	/**
+	 * Constructor for MagicSkillCanceled.
+	 * @param objectId int
+	 */
 	public MagicSkillCanceled(int objectId)
 	{
 		_objectId = objectId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

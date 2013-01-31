@@ -18,21 +18,40 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SolinaKnight extends Fighter
 {
+	/**
+	 * Field scarecrow.
+	 */
 	private NpcInstance scarecrow = null;
 	
+	/**
+	 * Constructor for SolinaKnight.
+	 * @param actor NpcInstance
+	 */
 	public SolinaKnight(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

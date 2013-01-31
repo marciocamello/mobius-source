@@ -14,14 +14,37 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StopMove extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _x.
+	 */
 	private final int _x;
+	/**
+	 * Field _y.
+	 */
 	private final int _y;
+	/**
+	 * Field _z.
+	 */
 	private final int _z;
+	/**
+	 * Field _heading.
+	 */
 	private final int _heading;
 	
+	/**
+	 * Constructor for StopMove.
+	 * @param cha Creature
+	 */
 	public StopMove(Creature cha)
 	{
 		_objectId = cha.getObjectId();
@@ -31,6 +54,9 @@ public class StopMove extends L2GameServerPacket
 		_heading = cha.getHeading();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

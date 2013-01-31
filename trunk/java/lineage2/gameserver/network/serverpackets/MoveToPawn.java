@@ -14,11 +14,27 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MoveToPawn extends L2GameServerPacket
 {
+	/**
+	 * Field _distance. Field _targetId. Field _chaId.
+	 */
 	private final int _chaId, _targetId, _distance;
+	/**
+	 * Field _tz. Field _ty. Field _tx. Field _z. Field _y. Field _x.
+	 */
 	private final int _x, _y, _z, _tx, _ty, _tz;
 	
+	/**
+	 * Constructor for MoveToPawn.
+	 * @param cha Creature
+	 * @param target Creature
+	 * @param distance int
+	 */
 	public MoveToPawn(Creature cha, Creature target, int distance)
 	{
 		_chaId = cha.getObjectId();
@@ -32,6 +48,9 @@ public class MoveToPawn extends L2GameServerPacket
 		_tz = target.getZ();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

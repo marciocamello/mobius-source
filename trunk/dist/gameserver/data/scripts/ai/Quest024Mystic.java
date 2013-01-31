@@ -21,13 +21,25 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import quests._024_InhabitantsOfTheForestOfTheDead;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Quest024Mystic extends Mystic
 {
+	/**
+	 * Constructor for Quest024Mystic.
+	 * @param actor NpcInstance
+	 */
 	public Quest024Mystic(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

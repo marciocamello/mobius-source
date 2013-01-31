@@ -19,11 +19,24 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.model.items.PetInventory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestGiveItemToPet extends L2GameClientPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
+	/**
+	 * Field _amount.
+	 */
 	private long _amount;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -31,6 +44,9 @@ public class RequestGiveItemToPet extends L2GameClientPacket
 		_amount = readQ();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

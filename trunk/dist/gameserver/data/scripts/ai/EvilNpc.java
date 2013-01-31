@@ -19,23 +19,42 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EvilNpc extends DefaultAI
 {
+	/**
+	 * Field _lastAction.
+	 */
 	private long _lastAction;
+	/**
+	 * Field _txt.
+	 */
 	private static final String[] _txt =
 	{
-		"отстань!",
-		"уймись!",
-		"я тебе отомщу, потом будешь прощения просить!",
-		"у тебя будут неприятности!",
-		"я на тебя пожалуюсь, тебя арестуют!"
+		"от�?тан�?!",
+		"уйми�?�?!",
+		"�? тебе отомщу, потом буде�?�? прощени�? про�?ит�?!",
+		"у теб�? будут н��при�?тно�?ти!",
+		"�? на теб�? пожалу�?�?�?, теб�? аре�?ту�?т!"
 	};
 	
+	/**
+	 * Constructor for EvilNpc.
+	 * @param actor NpcInstance
+	 */
 	public EvilNpc(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

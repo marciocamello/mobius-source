@@ -18,36 +18,68 @@ import java.util.List;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.spawn.WalkerRouteTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class WalkerRoutesHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final WalkerRoutesHolder _instance = new WalkerRoutesHolder();
+	/**
+	 * Field _spawns.
+	 */
 	private final List<WalkerRouteTemplate> _spawns = new ArrayList<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return WalkerRoutesHolder
+	 */
 	public static WalkerRoutesHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for WalkerRoutesHolder.
+	 */
 	protected WalkerRoutesHolder()
 	{
 	}
 	
+	/**
+	 * Method addSpawn.
+	 * @param spawn WalkerRouteTemplate
+	 */
 	public void addSpawn(WalkerRouteTemplate spawn)
 	{
 		_spawns.add(spawn);
 	}
 	
+	/**
+	 * Method getSpawns.
+	 * @return List<WalkerRouteTemplate>
+	 */
 	public List<WalkerRouteTemplate> getSpawns()
 	{
 		return _spawns;
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _spawns.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

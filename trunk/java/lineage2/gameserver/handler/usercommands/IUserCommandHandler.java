@@ -14,9 +14,23 @@ package lineage2.gameserver.handler.usercommands;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IUserCommandHandler
 {
+	/**
+	 * Method useUserCommand.
+	 * @param id int
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	public boolean useUserCommand(int id, Player activeChar);
 	
+	/**
+	 * Method getUserCommandList.
+	 * @return int[]
+	 */
 	public int[] getUserCommandList();
 }

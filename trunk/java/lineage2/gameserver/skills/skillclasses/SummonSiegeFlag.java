@@ -32,19 +32,48 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncMul;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SummonSiegeFlag extends Skill
 {
+	/**
+	 * @author Mobius
+	 */
 	public static enum FlagType
 	{
+		/**
+		 * Field DESTROY.
+		 */
 		DESTROY,
+		/**
+		 * Field NORMAL.
+		 */
 		NORMAL,
+		/**
+		 * Field ADVANCED.
+		 */
 		ADVANCED,
+		/**
+		 * Field OUTPOST.
+		 */
 		OUTPOST
 	}
 	
+	/**
+	 * Field _flagType.
+	 */
 	private final FlagType _flagType;
+	/**
+	 * Field _advancedMult.
+	 */
 	private final double _advancedMult;
 	
+	/**
+	 * Constructor for SummonSiegeFlag.
+	 * @param set StatsSet
+	 */
 	public SummonSiegeFlag(StatsSet set)
 	{
 		super(set);
@@ -52,6 +81,15 @@ public class SummonSiegeFlag extends Skill
 		_advancedMult = set.getDouble("advancedMultiplier", 1.);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -116,6 +154,11 @@ public class SummonSiegeFlag extends Skill
 		return true;
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

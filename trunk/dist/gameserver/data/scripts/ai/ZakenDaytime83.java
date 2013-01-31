@@ -23,8 +23,15 @@ import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ZakenDaytime83 extends Fighter
 {
+	/**
+	 * Field _locations.
+	 */
 	static final Location[] _locations = new Location[]
 	{
 		new Location(55272, 219112, -3496),
@@ -43,16 +50,32 @@ public class ZakenDaytime83 extends Fighter
 		new Location(54248, 220136, -2952),
 		new Location(56296, 220136, -2952)
 	};
+	/**
+	 * Field _teleportSelfTimer.
+	 */
 	private long _teleportSelfTimer = 0L;
+	/**
+	 * Field _teleportSelfReuse.
+	 */
 	private final long _teleportSelfReuse = 120000L;
+	/**
+	 * Field actor.
+	 */
 	final NpcInstance actor = getActor();
 	
+	/**
+	 * Constructor for ZakenDaytime83.
+	 * @param actor NpcInstance
+	 */
 	public ZakenDaytime83(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = Integer.MAX_VALUE / 2;
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
@@ -76,6 +99,10 @@ public class ZakenDaytime83 extends Fighter
 		super.thinkAttack();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -85,6 +112,9 @@ public class ZakenDaytime83 extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method teleportHome.
+	 */
 	@Override
 	protected void teleportHome()
 	{

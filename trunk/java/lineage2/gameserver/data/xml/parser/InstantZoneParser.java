@@ -43,38 +43,70 @@ import org.napile.primitive.Containers;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static InstantZoneParser _instance = new InstantZoneParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return InstantZoneParser
+	 */
 	public static InstantZoneParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for InstantZoneParser.
+	 */
 	public InstantZoneParser()
 	{
 		super(InstantZoneHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/instances/");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "instances.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

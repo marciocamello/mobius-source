@@ -15,14 +15,37 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SpawnItem extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _z. Field _y. Field _x.
+	 */
 	private final int _x, _y, _z;
+	/**
+	 * Field _stackable.
+	 */
 	private final int _stackable;
+	/**
+	 * Field _count.
+	 */
 	private final long _count;
 	
+	/**
+	 * Constructor for SpawnItem.
+	 * @param item ItemInstance
+	 */
 	public SpawnItem(ItemInstance item)
 	{
 		_objectId = item.getObjectId();
@@ -34,6 +57,9 @@ public class SpawnItem extends L2GameServerPacket
 		_count = item.getCount();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -28,10 +28,24 @@ import lineage2.commons.dbutils.DbUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class mysql
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(mysql.class);
 	
+	/**
+	 * Method setEx.
+	 * @param db DatabaseFactory
+	 * @param query String
+	 * @param vars Object[]
+	 * @return boolean
+	 */
 	public static boolean setEx(DatabaseFactory db, String query, Object... vars)
 	{
 		Connection con = null;
@@ -69,6 +83,12 @@ public abstract class mysql
 		return true;
 	}
 	
+	/**
+	 * Method setVars.
+	 * @param statement PreparedStatement
+	 * @param vars Object[]
+	 * @throws SQLException
+	 */
 	public static void setVars(PreparedStatement statement, Object... vars) throws SQLException
 	{
 		Number n;
@@ -97,16 +117,32 @@ public abstract class mysql
 		}
 	}
 	
+	/**
+	 * Method set.
+	 * @param query String
+	 * @param vars Object[]
+	 * @return boolean
+	 */
 	public static boolean set(String query, Object... vars)
 	{
 		return setEx(null, query, vars);
 	}
 	
+	/**
+	 * Method set.
+	 * @param query String
+	 * @return boolean
+	 */
 	public static boolean set(String query)
 	{
 		return setEx(null, query);
 	}
 	
+	/**
+	 * Method get.
+	 * @param query String
+	 * @return Object
+	 */
 	public static Object get(String query)
 	{
 		Object ret = null;
@@ -148,6 +184,11 @@ public abstract class mysql
 		return ret;
 	}
 	
+	/**
+	 * Method getAll.
+	 * @param query String
+	 * @return List<Map<String,Object>>
+	 */
 	public static List<Map<String, Object>> getAll(String query)
 	{
 		List<Map<String, Object>> ret = new ArrayList<>();
@@ -182,6 +223,12 @@ public abstract class mysql
 		return ret;
 	}
 	
+	/**
+	 * Method get_array.
+	 * @param db DatabaseFactory
+	 * @param query String
+	 * @return List<Object>
+	 */
 	public static List<Object> get_array(DatabaseFactory db, String query)
 	{
 		List<Object> ret = new ArrayList<>();
@@ -227,11 +274,23 @@ public abstract class mysql
 		return ret;
 	}
 	
+	/**
+	 * Method get_array.
+	 * @param query String
+	 * @return List<Object>
+	 */
 	public static List<Object> get_array(String query)
 	{
 		return get_array(null, query);
 	}
 	
+	/**
+	 * Method simple_get_int.
+	 * @param ret_field String
+	 * @param table String
+	 * @param where String
+	 * @return int
+	 */
 	public static int simple_get_int(String ret_field, String table, String where)
 	{
 		String query = "SELECT " + ret_field + " FROM `" + table + "` WHERE " + where + " LIMIT 1;";
@@ -261,6 +320,14 @@ public abstract class mysql
 		return res;
 	}
 	
+	/**
+	 * Method simple_get_int_array.
+	 * @param db DatabaseFactory
+	 * @param ret_fields String[]
+	 * @param table String
+	 * @param where String
+	 * @return Integer[][]
+	 */
 	public static Integer[][] simple_get_int_array(DatabaseFactory db, String[] ret_fields, String table, String where)
 	{
 		String fields = null;
@@ -316,6 +383,13 @@ public abstract class mysql
 		return res;
 	}
 	
+	/**
+	 * Method simple_get_int_array.
+	 * @param ret_fields String[]
+	 * @param table String
+	 * @param where String
+	 * @return Integer[][]
+	 */
 	public static Integer[][] simple_get_int_array(String[] ret_fields, String table, String where)
 	{
 		return simple_get_int_array(null, ret_fields, table, where);

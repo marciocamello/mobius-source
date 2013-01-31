@@ -20,16 +20,36 @@ import java.util.Properties;
 
 import org.apache.commons.io.IOUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExProperties extends Properties
 {
+	/**
+	 * Field serialVersionUID. (value is 1)
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field defaultDelimiter. (value is ""[\\s,;]+"")
+	 */
 	public static final String defaultDelimiter = "[\\s,;]+";
 	
+	/**
+	 * Method load.
+	 * @param fileName String
+	 * @throws IOException
+	 */
 	public void load(String fileName) throws IOException
 	{
 		load(new File(fileName));
 	}
 	
+	/**
+	 * Method load.
+	 * @param file File
+	 * @throws IOException
+	 */
 	public void load(File file) throws IOException
 	{
 		InputStream is = null;
@@ -43,6 +63,11 @@ public class ExProperties extends Properties
 		}
 	}
 	
+	/**
+	 * Method parseBoolean.
+	 * @param s String
+	 * @return boolean
+	 */
 	public static boolean parseBoolean(String s)
 	{
 		switch (s.length())
@@ -118,6 +143,12 @@ public class ExProperties extends Properties
 		throw new IllegalArgumentException("For input string: \"" + s + "\"");
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue boolean
+	 * @return boolean
+	 */
 	public boolean getProperty(String name, boolean defaultValue)
 	{
 		boolean val = defaultValue;
@@ -129,6 +160,12 @@ public class ExProperties extends Properties
 		return val;
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue int
+	 * @return int
+	 */
 	public int getProperty(String name, int defaultValue)
 	{
 		int val = defaultValue;
@@ -140,6 +177,12 @@ public class ExProperties extends Properties
 		return val;
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue long
+	 * @return long
+	 */
 	public long getProperty(String name, long defaultValue)
 	{
 		long val = defaultValue;
@@ -151,6 +194,12 @@ public class ExProperties extends Properties
 		return val;
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue double
+	 * @return double
+	 */
 	public double getProperty(String name, double defaultValue)
 	{
 		double val = defaultValue;
@@ -162,11 +211,24 @@ public class ExProperties extends Properties
 		return val;
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue String[]
+	 * @return String[]
+	 */
 	public String[] getProperty(String name, String[] defaultValue)
 	{
 		return getProperty(name, defaultValue, defaultDelimiter);
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue String[]
+	 * @param delimiter String
+	 * @return String[]
+	 */
 	public String[] getProperty(String name, String[] defaultValue, String delimiter)
 	{
 		String[] val = defaultValue;
@@ -178,11 +240,24 @@ public class ExProperties extends Properties
 		return val;
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue boolean[]
+	 * @return boolean[]
+	 */
 	public boolean[] getProperty(String name, boolean[] defaultValue)
 	{
 		return getProperty(name, defaultValue, defaultDelimiter);
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue boolean[]
+	 * @param delimiter String
+	 * @return boolean[]
+	 */
 	public boolean[] getProperty(String name, boolean[] defaultValue, String delimiter)
 	{
 		boolean[] val = defaultValue;
@@ -199,11 +274,24 @@ public class ExProperties extends Properties
 		return val;
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue int[]
+	 * @return int[]
+	 */
 	public int[] getProperty(String name, int[] defaultValue)
 	{
 		return getProperty(name, defaultValue, defaultDelimiter);
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue int[]
+	 * @param delimiter String
+	 * @return int[]
+	 */
 	public int[] getProperty(String name, int[] defaultValue, String delimiter)
 	{
 		int[] val = defaultValue;
@@ -220,11 +308,24 @@ public class ExProperties extends Properties
 		return val;
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue long[]
+	 * @return long[]
+	 */
 	public long[] getProperty(String name, long[] defaultValue)
 	{
 		return getProperty(name, defaultValue, defaultDelimiter);
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue long[]
+	 * @param delimiter String
+	 * @return long[]
+	 */
 	public long[] getProperty(String name, long[] defaultValue, String delimiter)
 	{
 		long[] val = defaultValue;
@@ -241,11 +342,24 @@ public class ExProperties extends Properties
 		return val;
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue double[]
+	 * @return double[]
+	 */
 	public double[] getProperty(String name, double[] defaultValue)
 	{
 		return getProperty(name, defaultValue, defaultDelimiter);
 	}
 	
+	/**
+	 * Method getProperty.
+	 * @param name String
+	 * @param defaultValue double[]
+	 * @param delimiter String
+	 * @return double[]
+	 */
 	public double[] getProperty(String name, double[] defaultValue, String delimiter)
 	{
 		double[] val = defaultValue;

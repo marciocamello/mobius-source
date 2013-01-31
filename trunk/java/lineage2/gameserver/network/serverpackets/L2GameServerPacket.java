@@ -27,10 +27,21 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class L2GameServerPacket extends SendablePacket<GameClient> implements IStaticPacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(L2GameServerPacket.class);
 	
+	/**
+	 * Method write.
+	 * @return boolean
+	 */
 	@Override
 	public final boolean write()
 	{
@@ -46,24 +57,44 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		return false;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	protected abstract void writeImpl();
 	
+	/**
+	 * Method writeEx.
+	 * @param value int
+	 */
 	protected void writeEx(int value)
 	{
 		writeC(0xFE);
 		writeH(value);
 	}
 	
+	/**
+	 * Method writeD.
+	 * @param b boolean
+	 */
 	protected void writeD(boolean b)
 	{
 		writeD(b ? 1 : 0);
 	}
 	
+	/**
+	 * Method writeC.
+	 * @param b boolean
+	 */
 	protected void writeC(boolean b)
 	{
 		writeC(b ? 1 : 0);
 	}
 	
+	/**
+	 * Method writeDD.
+	 * @param values int[]
+	 * @param sendCount boolean
+	 */
 	protected void writeDD(int[] values, boolean sendCount)
 	{
 		if (sendCount)
@@ -76,11 +107,20 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		}
 	}
 	
+	/**
+	 * Method writeItemInfo.
+	 * @param item ItemInstance
+	 */
 	protected void writeItemInfo(ItemInstance item)
 	{
 		writeItemInfo(item, item.getCount());
 	}
 	
+	/**
+	 * Method writeItemInfo.
+	 * @param item ItemInstance
+	 * @param count long
+	 */
 	protected void writeItemInfo(ItemInstance item, long count)
 	{
 		writeD(item.getObjectId());
@@ -111,11 +151,20 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		writeD(0x00);
 	}
 	
+	/**
+	 * Method writeItemInfo.
+	 * @param item ItemInfo
+	 */
 	protected void writeItemInfo(ItemInfo item)
 	{
 		writeItemInfo(item, item.getCount());
 	}
 	
+	/**
+	 * Method writeItemInfo.
+	 * @param item ItemInfo
+	 * @param count long
+	 */
 	protected void writeItemInfo(ItemInfo item, long count)
 	{
 		writeD(item.getObjectId());
@@ -146,6 +195,10 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		writeD(0x00);
 	}
 	
+	/**
+	 * Method writeItemElements.
+	 * @param item MultiSellIngredient
+	 */
 	protected void writeItemElements(MultiSellIngredient item)
 	{
 		if (item.getItemId() <= 0)
@@ -188,6 +241,9 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		}
 	}
 	
+	/**
+	 * Method writeItemElements.
+	 */
 	protected void writeItemElements()
 	{
 		writeH(-1);
@@ -200,11 +256,20 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		writeH(0x00);
 	}
 	
+	/**
+	 * Method getType.
+	 * @return String
+	 */
 	public String getType()
 	{
 		return "[S] " + getClass().getSimpleName();
 	}
 	
+	/**
+	 * Method packet.
+	 * @param player Player
+	 * @return L2GameServerPacket * @see lineage2.gameserver.network.serverpackets.components.IStaticPacket#packet(Player)
+	 */
 	@Override
 	public L2GameServerPacket packet(Player player)
 	{

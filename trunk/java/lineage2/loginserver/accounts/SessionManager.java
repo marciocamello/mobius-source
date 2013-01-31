@@ -26,23 +26,53 @@ import lineage2.loginserver.ThreadPoolManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SessionManager
 {
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(SessionManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final SessionManager _instance = new SessionManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return SessionManager
+	 */
 	public static final SessionManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public final class Session
 	{
+		/**
+		 * Field account.
+		 */
 		final Account account;
+		/**
+		 * Field skey.
+		 */
 		private final SessionKey skey;
+		/**
+		 * Field expireTime.
+		 */
 		private final long expireTime;
 		
+		/**
+		 * Constructor for Session.
+		 * @param account Account
+		 */
 		Session(Account account)
 		{
 			this.account = account;
@@ -50,25 +80,46 @@ public class SessionManager
 			expireTime = System.currentTimeMillis() + Config.LOGIN_TIMEOUT;
 		}
 		
+		/**
+		 * Method getSessionKey.
+		 * @return SessionKey
+		 */
 		public SessionKey getSessionKey()
 		{
 			return skey;
 		}
 		
+		/**
+		 * Method getAccount.
+		 * @return Account
+		 */
 		public Account getAccount()
 		{
 			return account;
 		}
 		
+		/**
+		 * Method getExpireTime.
+		 * @return long
+		 */
 		public long getExpireTime()
 		{
 			return expireTime;
 		}
 	}
 	
+	/**
+	 * Field sessions.
+	 */
 	final Map<SessionKey, Session> sessions = new HashMap<>();
+	/**
+	 * Field lock.
+	 */
 	final Lock lock = new ReentrantLock();
 	
+	/**
+	 * Constructor for SessionManager.
+	 */
 	private SessionManager()
 	{
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new RunnableImpl()
@@ -98,6 +149,11 @@ public class SessionManager
 		}, 30000L, 30000L);
 	}
 	
+	/**
+	 * Method openSession.
+	 * @param account Account
+	 * @return Session
+	 */
 	public Session openSession(Account account)
 	{
 		lock.lock();
@@ -113,6 +169,11 @@ public class SessionManager
 		}
 	}
 	
+	/**
+	 * Method closeSession.
+	 * @param skey SessionKey
+	 * @return Session
+	 */
 	public Session closeSession(SessionKey skey)
 	{
 		lock.lock();
@@ -126,6 +187,11 @@ public class SessionManager
 		}
 	}
 	
+	/**
+	 * Method getSessionByName.
+	 * @param name String
+	 * @return Session
+	 */
 	public Session getSessionByName(String name)
 	{
 		for (Session session : sessions.values())

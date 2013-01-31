@@ -17,10 +17,20 @@ import lineage2.gameserver.model.Player;
 
 import org.apache.commons.lang3.tuple.Pair;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConfirmDlg extends L2GameClientPacket
 {
+	/**
+	 * Field _requestId. Field _answer.
+	 */
 	private int _answer, _requestId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -29,6 +39,9 @@ public class ConfirmDlg extends L2GameClientPacket
 		_requestId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -31,19 +31,45 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanObject>
 {
+	/**
+	 * Field TRYOUT_PART. (value is ""tryout_part"")
+	 */
 	public static final String TRYOUT_PART = "tryout_part";
+	/**
+	 * Field CHALLENGER_RESTART_POINTS. (value is ""challenger_restart_points"")
+	 */
 	public static final String CHALLENGER_RESTART_POINTS = "challenger_restart_points";
+	/**
+	 * Field FIRST_DOORS. (value is ""first_doors"")
+	 */
 	public static final String FIRST_DOORS = "first_doors";
+	/**
+	 * Field SECOND_DOORS. (value is ""second_doors"")
+	 */
 	public static final String SECOND_DOORS = "second_doors";
+	/**
+	 * Field NEXT_STEP. (value is ""next_step"")
+	 */
 	public static final String NEXT_STEP = "next_step";
 	
+	/**
+	 * Constructor for ClanHallTeamBattleEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public ClanHallTeamBattleEvent(MultiValueSet<String> set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -79,12 +105,19 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 		super.startEvent();
 	}
 	
+	/**
+	 * Method nextStep.
+	 */
 	public void nextStep()
 	{
 		broadcastTo(SystemMsg.THE_TRYOUTS_HAVE_BEGUN, ATTACKERS, DEFENDERS);
 		updateParticles(true, ATTACKERS, DEFENDERS);
 	}
 	
+	/**
+	 * Method processStep.
+	 * @param team CTBTeamObject
+	 */
 	public void processStep(CTBTeamObject team)
 	{
 		if (team.getSiegeClan() != null)
@@ -117,6 +150,10 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 		stopEvent(true);
 	}
 	
+	/**
+	 * Method announce.
+	 * @param val int
+	 */
 	@Override
 	public void announce(int val)
 	{
@@ -131,6 +168,10 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 		}
 	}
 	
+	/**
+	 * Method stopEvent.
+	 * @param step boolean
+	 */
 	@Override
 	public void stopEvent(boolean step)
 	{
@@ -156,6 +197,9 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 		_oldOwner = null;
 	}
 	
+	/**
+	 * Method loadSiegeClans.
+	 */
 	@Override
 	public void loadSiegeClans()
 	{
@@ -168,6 +212,14 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 		}
 	}
 	
+	/**
+	 * Method newSiegeClan.
+	 * @param type String
+	 * @param clanId int
+	 * @param i long
+	 * @param date long
+	 * @return CTBSiegeClanObject
+	 */
 	@Override
 	public CTBSiegeClanObject newSiegeClan(String type, int clanId, long i, long date)
 	{
@@ -175,6 +227,11 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 		return clan == null ? null : new CTBSiegeClanObject(type, clan, i, date);
 	}
 	
+	/**
+	 * Method isParticle.
+	 * @param player Player
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParticle(Player player)
 	{
@@ -186,6 +243,12 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 		return (object != null) && object.getPlayers().contains(player.getObjectId());
 	}
 	
+	/**
+	 * Method getRestartLoc.
+	 * @param player Player
+	 * @param type RestartType
+	 * @return Location
+	 */
 	@Override
 	public Location getRestartLoc(Player player, RestartType type)
 	{
@@ -210,6 +273,11 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 		return loc;
 	}
 	
+	/**
+	 * Method action.
+	 * @param name String
+	 * @param start boolean
+	 */
 	@Override
 	public void action(String name, boolean start)
 	{
@@ -223,12 +291,25 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 		}
 	}
 	
+	/**
+	 * Method getUserRelation.
+	 * @param thisPlayer Player
+	 * @param result int
+	 * @return int
+	 */
 	@Override
 	public int getUserRelation(Player thisPlayer, int result)
 	{
 		return result;
 	}
 	
+	/**
+	 * Method getRelation.
+	 * @param thisPlayer Player
+	 * @param targetPlayer Player
+	 * @param result int
+	 * @return int
+	 */
 	@Override
 	public int getRelation(Player thisPlayer, Player targetPlayer, int result)
 	{

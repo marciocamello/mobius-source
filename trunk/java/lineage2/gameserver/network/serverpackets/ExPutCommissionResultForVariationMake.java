@@ -12,11 +12,26 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExPutCommissionResultForVariationMake extends L2GameServerPacket
 {
+	/**
+	 * Field _unk3. Field _unk1. Field _gemstoneObjId.
+	 */
 	private final int _gemstoneObjId, _unk1, _unk3;
+	/**
+	 * Field _unk2. Field _gemstoneCount.
+	 */
 	private final long _gemstoneCount, _unk2;
 	
+	/**
+	 * Constructor for ExPutCommissionResultForVariationMake.
+	 * @param gemstoneObjId int
+	 * @param count long
+	 */
 	public ExPutCommissionResultForVariationMake(int gemstoneObjId, long count)
 	{
 		_gemstoneObjId = gemstoneObjId;
@@ -26,6 +41,9 @@ public class ExPutCommissionResultForVariationMake extends L2GameServerPacket
 		_unk3 = 1;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

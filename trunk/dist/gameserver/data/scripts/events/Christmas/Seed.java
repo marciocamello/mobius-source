@@ -27,17 +27,34 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Seed extends ScriptItemHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	public class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
+		/**
+		 * Field spawnedTree.
+		 */
 		SimpleSpawner spawnedTree = null;
 		
+		/**
+		 * Constructor for DeSpawnScheduleTimerTask.
+		 * @param spawn SimpleSpawner
+		 */
 		public DeSpawnScheduleTimerTask(SimpleSpawner spawn)
 		{
 			spawnedTree = spawn;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -45,18 +62,34 @@ public class Seed extends ScriptItemHandler
 		}
 	}
 	
+	/**
+	 * Field _itemIds.
+	 */
 	private static int[] _itemIds =
 	{
 		5560,
 		5561
 	};
+	/**
+	 * Field _npcIds.
+	 */
 	private static int[] _npcIds =
 	{
 		13006,
 		13007
 	};
+	/**
+	 * Field DESPAWN_TIME. (value is 600000)
+	 */
 	private static final int DESPAWN_TIME = 600000;
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -105,6 +138,10 @@ public class Seed extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{

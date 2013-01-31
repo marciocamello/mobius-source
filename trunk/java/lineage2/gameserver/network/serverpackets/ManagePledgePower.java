@@ -15,10 +15,23 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.RankPrivs;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ManagePledgePower extends L2GameServerPacket
 {
+	/**
+	 * Field privs. Field _clanId. Field _action.
+	 */
 	private final int _action, _clanId, privs;
 	
+	/**
+	 * Constructor for ManagePledgePower.
+	 * @param player Player
+	 * @param action int
+	 * @param rank int
+	 */
 	public ManagePledgePower(Player player, int action, int rank)
 	{
 		_clanId = player.getClanId();
@@ -28,6 +41,9 @@ public class ManagePledgePower extends L2GameServerPacket
 		player.sendPacket(new PledgeReceiveUpdatePower(privs));
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

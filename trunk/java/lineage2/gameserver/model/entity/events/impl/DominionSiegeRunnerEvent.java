@@ -35,15 +35,28 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DominionSiegeRunnerEvent extends GlobalEvent
 {
+	/**
+	 * @author Mobius
+	 */
 	private class BattlefieldChatTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for BattlefieldChatTask.
+		 */
 		public BattlefieldChatTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -63,24 +76,64 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Field REGISTRATION. (value is ""registration"")
+	 */
 	public static final String REGISTRATION = "registration";
+	/**
+	 * Field BATTLEFIELD. (value is ""battlefield"")
+	 */
 	public static final String BATTLEFIELD = "battlefield";
+	/**
+	 * Field _battlefieldChatActive.
+	 */
 	private boolean _battlefieldChatActive;
+	/**
+	 * Field _battlefieldChatFuture.
+	 */
 	Future<?> _battlefieldChatFuture;
+	/**
+	 * Field _battlefieldChatTask.
+	 */
 	private final BattlefieldChatTask _battlefieldChatTask = new BattlefieldChatTask();
+	/**
+	 * Field _startTime.
+	 */
 	private Calendar _startTime = Calendar.getInstance();
+	/**
+	 * Field _isInProgress.
+	 */
 	private boolean _isInProgress;
+	/**
+	 * Field _isRegistrationOver.
+	 */
 	private boolean _isRegistrationOver;
+	/**
+	 * Field _classQuests.
+	 */
 	private final Map<ClassId, Quest> _classQuests = new HashMap<>();
+	/**
+	 * Field _breakQuests.
+	 */
 	private final List<Quest> _breakQuests = new ArrayList<>();
+	/**
+	 * Field _registeredDominions.
+	 */
 	final List<Dominion> _registeredDominions = new ArrayList<>(9);
 	
+	/**
+	 * Constructor for DominionSiegeRunnerEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public DominionSiegeRunnerEvent(MultiValueSet<String> set)
 	{
 		super(set);
 		_startTime.setTimeInMillis(0);
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -136,6 +189,9 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 		broadcastToWorld(SystemMsg.TERRITORY_WAR_HAS_BEGUN);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	@Override
 	public void stopEvent()
 	{
@@ -150,6 +206,10 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 		super.stopEvent();
 	}
 	
+	/**
+	 * Method announce.
+	 * @param val int
+	 */
 	@Override
 	public void announce(int val)
 	{
@@ -186,11 +246,19 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method getSiegeDate.
+	 * @return Calendar
+	 */
 	public Calendar getSiegeDate()
 	{
 		return _startTime;
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onInit boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{
@@ -215,17 +283,28 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method startTimeMillis.
+	 * @return long
+	 */
 	@Override
 	protected long startTimeMillis()
 	{
 		return _startTime.getTimeInMillis();
 	}
 	
+	/**
+	 * Method printInfo.
+	 */
 	@Override
 	protected void printInfo()
 	{
 	}
 	
+	/**
+	 * Method broadcastTo.
+	 * @param packet IStaticPacket
+	 */
 	public void broadcastTo(IStaticPacket packet)
 	{
 		for (Dominion dominion : _registeredDominions)
@@ -234,6 +313,10 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method broadcastTo.
+	 * @param packet L2GameServerPacket
+	 */
 	public void broadcastTo(L2GameServerPacket packet)
 	{
 		for (Dominion dominion : _registeredDominions)
@@ -242,32 +325,56 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method isBattlefieldChatActive.
+	 * @return boolean
+	 */
 	public boolean isBattlefieldChatActive()
 	{
 		return _battlefieldChatActive;
 	}
 	
+	/**
+	 * Method setBattlefieldChatActive.
+	 * @param battlefieldChatActive boolean
+	 */
 	public void setBattlefieldChatActive(boolean battlefieldChatActive)
 	{
 		_battlefieldChatActive = battlefieldChatActive;
 	}
 	
+	/**
+	 * Method isInProgress.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInProgress()
 	{
 		return _isInProgress;
 	}
 	
+	/**
+	 * Method setInProgress.
+	 * @param inProgress boolean
+	 */
 	public void setInProgress(boolean inProgress)
 	{
 		_isInProgress = inProgress;
 	}
 	
+	/**
+	 * Method isRegistrationOver.
+	 * @return boolean
+	 */
 	public boolean isRegistrationOver()
 	{
 		return _isRegistrationOver;
 	}
 	
+	/**
+	 * Method setRegistrationOver.
+	 * @param registrationOver boolean
+	 */
 	public void setRegistrationOver(boolean registrationOver)
 	{
 		_isRegistrationOver = registrationOver;
@@ -281,26 +388,49 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method addClassQuest.
+	 * @param c ClassId
+	 * @param quest Quest
+	 */
 	public void addClassQuest(ClassId c, Quest quest)
 	{
 		_classQuests.put(c, quest);
 	}
 	
+	/**
+	 * Method getClassQuest.
+	 * @param c ClassId
+	 * @return Quest
+	 */
 	public Quest getClassQuest(ClassId c)
 	{
 		return _classQuests.get(c);
 	}
 	
+	/**
+	 * Method addBreakQuest.
+	 * @param q Quest
+	 */
 	public void addBreakQuest(Quest q)
 	{
 		_breakQuests.add(q);
 	}
 	
+	/**
+	 * Method getBreakQuests.
+	 * @return List<Quest>
+	 */
 	public List<Quest> getBreakQuests()
 	{
 		return _breakQuests;
 	}
 	
+	/**
+	 * Method action.
+	 * @param name String
+	 * @param start boolean
+	 */
 	@Override
 	public void action(String name, boolean start)
 	{
@@ -318,6 +448,10 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method registerDominion.
+	 * @param d Dominion
+	 */
 	public synchronized void registerDominion(Dominion d)
 	{
 		if (_registeredDominions.contains(d))
@@ -357,6 +491,10 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 		_registeredDominions.add(d);
 	}
 	
+	/**
+	 * Method unRegisterDominion.
+	 * @param d Dominion
+	 */
 	public synchronized void unRegisterDominion(Dominion d)
 	{
 		if (!_registeredDominions.contains(d))
@@ -374,6 +512,10 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method getRegisteredDominions.
+	 * @return List<Dominion>
+	 */
 	public List<Dominion> getRegisteredDominions()
 	{
 		return _registeredDominions;

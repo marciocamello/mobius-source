@@ -16,15 +16,45 @@ import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Mentee
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _name.
+	 */
 	private String _name;
+	/**
+	 * Field _classId.
+	 */
 	private int _classId;
+	/**
+	 * Field _level.
+	 */
 	private int _level;
+	/**
+	 * Field _isMentor.
+	 */
 	private boolean _isMentor;
+	/**
+	 * Field _playerRef.
+	 */
 	private HardReference<Player> _playerRef = HardReferences.emptyRef();
 	
+	/**
+	 * Constructor for Mentee.
+	 * @param objectId int
+	 * @param name String
+	 * @param classId int
+	 * @param level int
+	 * @param isMentor boolean
+	 */
 	public Mentee(int objectId, String name, int classId, int level, boolean isMentor)
 	{
 		_objectId = objectId;
@@ -34,12 +64,21 @@ public class Mentee
 		_isMentor = isMentor;
 	}
 	
+	/**
+	 * Constructor for Mentee.
+	 * @param player Player
+	 */
 	public Mentee(Player player)
 	{
 		_objectId = player.getObjectId();
 		update(player, true);
 	}
 	
+	/**
+	 * Constructor for Mentee.
+	 * @param player Player
+	 * @param isMentor boolean
+	 */
 	public Mentee(Player player, boolean isMentor)
 	{
 		_objectId = player.getObjectId();
@@ -47,6 +86,11 @@ public class Mentee
 		update(player, true);
 	}
 	
+	/**
+	 * Method update.
+	 * @param player Player
+	 * @param set boolean
+	 */
 	public void update(Player player, boolean set)
 	{
 		_level = player.getLevel();
@@ -55,41 +99,69 @@ public class Mentee
 		_playerRef = set ? player.getRef() : HardReferences.<Player> emptyRef();
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		Player player = getPlayer();
 		return player == null ? _name : player.getName();
 	}
 	
+	/**
+	 * Method getObjectId.
+	 * @return int
+	 */
 	public int getObjectId()
 	{
 		return _objectId;
 	}
 	
+	/**
+	 * Method getClassId.
+	 * @return int
+	 */
 	public int getClassId()
 	{
 		Player player = getPlayer();
 		return player == null ? _classId : player.getActiveClassId();
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		Player player = getPlayer();
 		return player == null ? _level : player.getLevel();
 	}
 	
+	/**
+	 * Method isOnline.
+	 * @return boolean
+	 */
 	public boolean isOnline()
 	{
 		Player player = _playerRef.get();
 		return (player != null) && !player.isInOfflineMode();
 	}
 	
+	/**
+	 * Method getPlayer.
+	 * @return Player
+	 */
 	public Player getPlayer()
 	{
 		Player player = _playerRef.get();
 		return (player != null) && !player.isInOfflineMode() ? player : null;
 	}
 	
+	/**
+	 * Method isMentor.
+	 * @return boolean
+	 */
 	public boolean isMentor()
 	{
 		return _isMentor;

@@ -32,28 +32,91 @@ import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminEffects implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_invis.
+		 */
 		admin_invis,
+		/**
+		 * Field admin_vis.
+		 */
 		admin_vis,
+		/**
+		 * Field admin_offline_vis.
+		 */
 		admin_offline_vis,
+		/**
+		 * Field admin_offline_invis.
+		 */
 		admin_offline_invis,
+		/**
+		 * Field admin_earthquake.
+		 */
 		admin_earthquake,
+		/**
+		 * Field admin_block.
+		 */
 		admin_block,
+		/**
+		 * Field admin_unblock.
+		 */
 		admin_unblock,
+		/**
+		 * Field admin_changename.
+		 */
 		admin_changename,
+		/**
+		 * Field admin_gmspeed.
+		 */
 		admin_gmspeed,
+		/**
+		 * Field admin_invul.
+		 */
 		admin_invul,
+		/**
+		 * Field admin_setinvul.
+		 */
 		admin_setinvul,
+		/**
+		 * Field admin_getinvul.
+		 */
 		admin_getinvul,
+		/**
+		 * Field admin_social.
+		 */
 		admin_social,
+		/**
+		 * Field admin_abnormal.
+		 */
 		admin_abnormal,
+		/**
+		 * Field admin_transform.
+		 */
 		admin_transform,
+		/**
+		 * Field admin_showmovie.
+		 */
 		admin_showmovie
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -344,6 +407,11 @@ public class AdminEffects implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method handleInvul.
+	 * @param activeChar Player
+	 * @param target Player
+	 */
 	private void handleInvul(Player activeChar, Player target)
 	{
 		if (target.isInvul())
@@ -370,6 +438,10 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

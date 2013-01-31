@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExPutEnchantSupportItemResult extends L2GameServerPacket
 {
+	/**
+	 * Field _result.
+	 */
 	private final int _result;
 	
+	/**
+	 * Constructor for ExPutEnchantSupportItemResult.
+	 * @param result int
+	 */
 	public ExPutEnchantSupportItemResult(int result)
 	{
 		_result = result;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

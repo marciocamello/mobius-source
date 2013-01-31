@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MyTargetSelected extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _color.
+	 */
 	private final int _color;
 	
+	/**
+	 * Constructor for MyTargetSelected.
+	 * @param objectId int
+	 * @param color int
+	 */
 	public MyTargetSelected(int objectId, int color)
 	{
 		_objectId = objectId;
 		_color = color;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

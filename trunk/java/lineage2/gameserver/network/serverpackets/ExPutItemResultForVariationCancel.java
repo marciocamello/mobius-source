@@ -15,14 +15,37 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.clientpackets.RequestRefineCancel;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExPutItemResultForVariationCancel extends L2GameServerPacket
 {
+	/**
+	 * Field _itemObjectId.
+	 */
 	private final int _itemObjectId;
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _aug1.
+	 */
 	private final int _aug1;
+	/**
+	 * Field _aug2.
+	 */
 	private final int _aug2;
+	/**
+	 * Field _price.
+	 */
 	private final long _price;
 	
+	/**
+	 * Constructor for ExPutItemResultForVariationCancel.
+	 * @param item ItemInstance
+	 */
 	public ExPutItemResultForVariationCancel(ItemInstance item)
 	{
 		_itemObjectId = item.getObjectId();
@@ -32,6 +55,9 @@ public class ExPutItemResultForVariationCancel extends L2GameServerPacket
 		_price = RequestRefineCancel.getRemovalPrice(item.getTemplate());
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

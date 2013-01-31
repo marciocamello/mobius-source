@@ -12,14 +12,40 @@
  */
 package lineage2.gameserver.network.loginservercon;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SessionKey
 {
+	/**
+	 * Field playOkID1.
+	 */
 	public final int playOkID1;
+	/**
+	 * Field playOkID2.
+	 */
 	public final int playOkID2;
+	/**
+	 * Field loginOkID1.
+	 */
 	public final int loginOkID1;
+	/**
+	 * Field loginOkID2.
+	 */
 	public final int loginOkID2;
+	/**
+	 * Field hashCode.
+	 */
 	private final int hashCode;
 	
+	/**
+	 * Constructor for SessionKey.
+	 * @param loginOK1 int
+	 * @param loginOK2 int
+	 * @param playOK1 int
+	 * @param playOK2 int
+	 */
 	public SessionKey(int loginOK1, int loginOK2, int playOK1, int playOK2)
 	{
 		playOkID1 = playOK1;
@@ -36,6 +62,11 @@ public class SessionKey
 		this.hashCode = hashCode;
 	}
 	
+	/**
+	 * Method equals.
+	 * @param o Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object o)
 	{
@@ -55,15 +86,23 @@ public class SessionKey
 		return false;
 	}
 	
+	/**
+	 * Method hashCode.
+	 * @return int
+	 */
 	@Override
 	public int hashCode()
 	{
 		return hashCode;
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
-		return new StringBuilder().append("[playOkID1: ").append(playOkID1).append(" playOkID2: ").append(playOkID2).append(" loginOkID1: ").append(loginOkID1).append(" loginOkID2: ").append(loginOkID2).append("]").toString();
+		return new StringBuilder().append("[playOkID1: ").append(playOkID1).append(" playOkID2: ").append(playOkID2).append(" loginOkID1: ").append(loginOkID1).append(" loginOkID2: ").append(loginOkID2).append(']').toString();
 	}
 }

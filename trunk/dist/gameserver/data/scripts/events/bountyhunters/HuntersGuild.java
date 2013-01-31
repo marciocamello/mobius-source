@@ -41,15 +41,29 @@ import npc.model.QueenAntLarvaInstance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HuntersGuild extends Functions implements ScriptFile, IVoicedCommandHandler, OnDeathListener
 {
+	/**
+	 * Field _commandList.
+	 */
 	private static final String[] _commandList = new String[]
 	{
 		"gettask",
 		"declinetask"
 	};
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(HuntersGuild.class);
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -62,16 +76,29 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		_log.info("Loaded Event: Bounty Hunters Guild");
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method checkTarget.
+	 * @param npc NpcTemplate
+	 * @return boolean
+	 */
 	private static boolean checkTarget(NpcTemplate npc)
 	{
 		if (!npc.isInstanceOf(MonsterInstance.class))
@@ -121,6 +148,11 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		return true;
 	}
 	
+	/**
+	 * Method getTask.
+	 * @param player Player
+	 * @param id int
+	 */
 	public void getTask(Player player, int id)
 	{
 		if (!Config.EVENT_BOUNTY_HUNTERS_ENABLED)
@@ -209,6 +241,12 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		show(new CustomMessage("scripts.events.bountyhunters.TaskGiven", player).addNumber(mobcount).addString(target.name), player);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature cha, Creature killer)
 	{
@@ -232,6 +270,10 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		}
 	}
 	
+	/**
+	 * Method doReward.
+	 * @param player Player
+	 */
 	private static void doReward(Player player)
 	{
 		if (!Config.EVENT_BOUNTY_HUNTERS_ENABLED)
@@ -257,12 +299,23 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		show(new CustomMessage("scripts.events.bountyhunters.TaskCompleted", player).addNumber(rewardcount).addItemName(rewardid), player);
 	}
 	
+	/**
+	 * Method getVoicedCommandList.
+	 * @return String[] * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
+	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{
 		return _commandList;
 	}
 	
+	/**
+	 * Method useVoicedCommand.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param target String
+	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String target)
 	{

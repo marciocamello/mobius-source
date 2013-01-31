@@ -18,14 +18,33 @@ import lineage2.loginserver.gameservercon.ReceivablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BonusRequest extends ReceivablePacket
 {
+	/**
+	 * Field log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger log = LoggerFactory.getLogger(BonusRequest.class);
+	/**
+	 * Field account.
+	 */
 	private String account;
+	/**
+	 * Field bonus.
+	 */
 	private double bonus;
+	/**
+	 * Field bonusExpire.
+	 */
 	private int bonusExpire;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -34,6 +53,9 @@ public class BonusRequest extends ReceivablePacket
 		bonusExpire = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

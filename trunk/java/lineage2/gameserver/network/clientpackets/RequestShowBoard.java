@@ -19,17 +19,30 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestShowBoard extends L2GameClientPacket
 {
+	/**
+	 * Field _unknown.
+	 */
 	@SuppressWarnings("unused")
 	private int _unknown;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	public void readImpl()
 	{
 		_unknown = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{

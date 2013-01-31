@@ -29,16 +29,43 @@ import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OlympiadTeam
 {
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadManager.class);
+	/**
+	 * Field _game.
+	 */
 	private final OlympiadGame _game;
+	/**
+	 * Field _members.
+	 */
 	private final IntObjectMap<TeamMember> _members;
+	/**
+	 * Field _name.
+	 */
 	private String _name = "";
+	/**
+	 * Field _side.
+	 */
 	private final int _side;
+	/**
+	 * Field _damage.
+	 */
 	private double _damage;
 	
+	/**
+	 * Constructor for OlympiadTeam.
+	 * @param game OlympiadGame
+	 * @param side int
+	 */
 	public OlympiadTeam(OlympiadGame game, int side)
 	{
 		_game = game;
@@ -46,6 +73,10 @@ public class OlympiadTeam
 		_members = new CHashIntObjectMap<>();
 	}
 	
+	/**
+	 * Method addMember.
+	 * @param obj_id int
+	 */
 	public void addMember(int obj_id)
 	{
 		String player_name = "";
@@ -66,6 +97,11 @@ public class OlympiadTeam
 		_name = player_name;
 	}
 	
+	/**
+	 * Method addDamage.
+	 * @param player Player
+	 * @param damage double
+	 */
 	public void addDamage(Player player, double damage)
 	{
 		_damage += damage;
@@ -73,16 +109,27 @@ public class OlympiadTeam
 		member.addDamage(damage);
 	}
 	
+	/**
+	 * Method getDamage.
+	 * @return double
+	 */
 	public double getDamage()
 	{
 		return _damage;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method portPlayersToArena.
+	 */
 	public void portPlayersToArena()
 	{
 		for (TeamMember member : _members.values())
@@ -91,6 +138,9 @@ public class OlympiadTeam
 		}
 	}
 	
+	/**
+	 * Method portPlayersBack.
+	 */
 	public void portPlayersBack()
 	{
 		for (TeamMember member : _members.values())
@@ -99,6 +149,9 @@ public class OlympiadTeam
 		}
 	}
 	
+	/**
+	 * Method preparePlayers.
+	 */
 	public void preparePlayers()
 	{
 		for (TeamMember member : _members.values())
@@ -139,6 +192,9 @@ public class OlympiadTeam
 		}
 	}
 	
+	/**
+	 * Method takePointsForCrash.
+	 */
 	public void takePointsForCrash()
 	{
 		for (TeamMember member : _members.values())
@@ -147,6 +203,10 @@ public class OlympiadTeam
 		}
 	}
 	
+	/**
+	 * Method checkPlayers.
+	 * @return boolean
+	 */
 	public boolean checkPlayers()
 	{
 		for (TeamMember member : _members.values())
@@ -159,6 +219,10 @@ public class OlympiadTeam
 		return false;
 	}
 	
+	/**
+	 * Method isAllDead.
+	 * @return boolean
+	 */
 	public boolean isAllDead()
 	{
 		for (TeamMember member : _members.values())
@@ -171,11 +235,20 @@ public class OlympiadTeam
 		return true;
 	}
 	
+	/**
+	 * Method contains.
+	 * @param objId int
+	 * @return boolean
+	 */
 	public boolean contains(int objId)
 	{
 		return _members.containsKey(objId);
 	}
 	
+	/**
+	 * Method getPlayers.
+	 * @return List<Player>
+	 */
 	public List<Player> getPlayers()
 	{
 		List<Player> players = new ArrayList<>(_members.size());
@@ -190,11 +263,19 @@ public class OlympiadTeam
 		return players;
 	}
 	
+	/**
+	 * Method getMembers.
+	 * @return Collection<TeamMember>
+	 */
 	public Collection<TeamMember> getMembers()
 	{
 		return _members.values();
 	}
 	
+	/**
+	 * Method broadcast.
+	 * @param p L2GameServerPacket
+	 */
 	public void broadcast(L2GameServerPacket p)
 	{
 		for (TeamMember member : _members.values())
@@ -207,6 +288,10 @@ public class OlympiadTeam
 		}
 	}
 	
+	/**
+	 * Method broadcast.
+	 * @param p IStaticPacket
+	 */
 	public void broadcast(IStaticPacket p)
 	{
 		for (TeamMember member : _members.values())
@@ -219,6 +304,9 @@ public class OlympiadTeam
 		}
 	}
 	
+	/**
+	 * Method broadcastInfo.
+	 */
 	public void broadcastInfo()
 	{
 		for (TeamMember member : _members.values())
@@ -231,6 +319,11 @@ public class OlympiadTeam
 		}
 	}
 	
+	/**
+	 * Method logout.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean logout(Player player)
 	{
 		if (player != null)
@@ -247,6 +340,11 @@ public class OlympiadTeam
 		return checkPlayers();
 	}
 	
+	/**
+	 * Method doDie.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean doDie(Player player)
 	{
 		if (player != null)
@@ -263,6 +361,9 @@ public class OlympiadTeam
 		return isAllDead();
 	}
 	
+	/**
+	 * Method saveNobleData.
+	 */
 	public void saveNobleData()
 	{
 		for (TeamMember member : _members.values())

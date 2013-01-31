@@ -45,23 +45,71 @@ import lineage2.gameserver.utils.HtmlUtils;
 import npc.model.residences.fortress.siege.BackupPowerUnitInstance;
 import npc.model.residences.fortress.siege.PowerControlUnitInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminResidence extends ScriptAdminCommand
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_residence_list.
+		 */
 		admin_residence_list,
+		/**
+		 * Field admin_residence.
+		 */
 		admin_residence,
+		/**
+		 * Field admin_set_owner.
+		 */
 		admin_set_owner,
+		/**
+		 * Field admin_set_siege_time.
+		 */
 		admin_set_siege_time,
+		/**
+		 * Field admin_start_dominion_war.
+		 */
 		admin_start_dominion_war,
+		/**
+		 * Field admin_stop_dominion_war.
+		 */
 		admin_stop_dominion_war,
+		/**
+		 * Field admin_set_dominion_time.
+		 */
 		admin_set_dominion_time,
+		/**
+		 * Field admin_quick_siege_start.
+		 */
 		admin_quick_siege_start,
+		/**
+		 * Field admin_quick_siege_stop.
+		 */
 		admin_quick_siege_stop,
+		/**
+		 * Field admin_backup_unit_info.
+		 */
 		admin_backup_unit_info,
+		/**
+		 * Field admin_fortress_spawn_flags.
+		 */
 		admin_fortress_spawn_flags
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -393,6 +441,10 @@ public class AdminResidence extends ScriptAdminCommand
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

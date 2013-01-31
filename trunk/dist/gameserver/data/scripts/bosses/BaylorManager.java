@@ -42,8 +42,18 @@ import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BaylorManager extends Functions implements ScriptFile
 {
+	/**
+	 * Method spawn.
+	 * @param loc Location
+	 * @param npcId int
+	 * @return NpcInstance
+	 */
 	public static NpcInstance spawn(Location loc, int npcId)
 	{
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
@@ -56,13 +66,22 @@ public class BaylorManager extends Functions implements ScriptFile
 		return npc;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class ActivityTimeEnd extends RunnableImpl
 	{
+		/**
+		 * Constructor for ActivityTimeEnd.
+		 */
 		public ActivityTimeEnd()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -70,16 +89,32 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class BaylorSpawn extends RunnableImpl
 	{
+		/**
+		 * Field _npcId.
+		 */
 		private final int _npcId;
+		/**
+		 * Field _pos.
+		 */
 		private final Location _pos = new Location(153569, 142075, -12711, 44732);
 		
+		/**
+		 * Constructor for BaylorSpawn.
+		 * @param npcId int
+		 */
 		public BaylorSpawn(int npcId)
 		{
 			_npcId = npcId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -129,13 +164,22 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class IntervalEnd extends RunnableImpl
 	{
+		/**
+		 * Constructor for IntervalEnd.
+		 */
 		public IntervalEnd()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -144,17 +188,34 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class Social extends RunnableImpl
 	{
+		/**
+		 * Field _action.
+		 */
 		private final int _action;
+		/**
+		 * Field _npc.
+		 */
 		private final NpcInstance _npc;
 		
+		/**
+		 * Constructor for Social.
+		 * @param npc NpcInstance
+		 * @param actionId int
+		 */
 		public Social(NpcInstance npc, int actionId)
 		{
 			_npc = npc;
 			_action = actionId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -162,13 +223,22 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class EndScene extends RunnableImpl
 	{
+		/**
+		 * Constructor for EndScene.
+		 */
 		public EndScene()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -196,10 +266,25 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Field Baylor. (value is 29099)
+	 */
 	private static final int Baylor = 29099;
+	/**
+	 * Field CrystalPrisonGuard. (value is 29100)
+	 */
 	private static final int CrystalPrisonGuard = 29100;
+	/**
+	 * Field Parme. (value is 32271)
+	 */
 	private static final int Parme = 32271;
+	/**
+	 * Field Oracle. (value is 32273)
+	 */
 	private static final int Oracle = 32273;
+	/**
+	 * Field _crystalineLocation.
+	 */
 	static final Location _crystalineLocation[] =
 	{
 		new Location(154404, 140596, -12711, 44732),
@@ -211,6 +296,9 @@ public class BaylorManager extends Functions implements ScriptFile
 		new Location(154439, 143538, -12711, 44732),
 		new Location(155246, 142068, -12711, 44732)
 	};
+	/**
+	 * Field _baylorChestLocation.
+	 */
 	private static final Location _baylorChestLocation[] =
 	{
 		new Location(153763, 142075, -12741, 64792),
@@ -230,6 +318,9 @@ public class BaylorManager extends Functions implements ScriptFile
 		new Location(152907, 141428, -12741, 39590),
 		new Location(154243, 141411, -12741, 55500)
 	};
+	/**
+	 * Field doors.
+	 */
 	static final int[] doors =
 	{
 		24220009,
@@ -241,22 +332,72 @@ public class BaylorManager extends Functions implements ScriptFile
 		24220017,
 		24220019
 	};
+	/**
+	 * Field _crystaline.
+	 */
 	static NpcInstance[] _crystaline = new NpcInstance[8];
+	/**
+	 * Field _baylor.
+	 */
 	static NpcInstance _baylor;
+	/**
+	 * Field _intervalEndTask.
+	 */
 	private static ScheduledFuture<?> _intervalEndTask = null;
+	/**
+	 * Field _activityTimeEndTask.
+	 */
 	static ScheduledFuture<?> _activityTimeEndTask = null;
+	/**
+	 * Field _socialTask.
+	 */
 	static ScheduledFuture<?> _socialTask = null;
+	/**
+	 * Field _endSceneTask.
+	 */
 	static ScheduledFuture<?> _endSceneTask = null;
+	/**
+	 * Field _isAlreadyEnteredOtherParty.
+	 */
 	private static boolean _isAlreadyEnteredOtherParty = false;
+	/**
+	 * Field _state.
+	 */
 	static EpicBossState _state;
+	/**
+	 * Field _zone.
+	 */
 	private static Zone _zone;
+	/**
+	 * Field FWBA_ACTIVITYTIMEOFMOBS.
+	 */
 	private static final int FWBA_ACTIVITYTIMEOFMOBS = 120 * 60000;
+	/**
+	 * Field FWBA_FIXINTERVALOFBAYLORSPAWN.
+	 */
 	private static final int FWBA_FIXINTERVALOFBAYLORSPAWN = 1440 * 60000;
+	/**
+	 * Field FWBA_RANDOMINTERVALOFBAYLORSPAWN.
+	 */
 	private static final int FWBA_RANDOMINTERVALOFBAYLORSPAWN = 1440 * 60000;
+	/**
+	 * Field FWBA_ENABLESINGLEPLAYER. (value is false)
+	 */
 	private static final boolean FWBA_ENABLESINGLEPLAYER = false;
+	/**
+	 * Field Dying.
+	 */
 	static boolean Dying = false;
+	/**
+	 * Field currentReflection.
+	 */
 	static int currentReflection;
 	
+	/**
+	 * Method canIntoBaylorLair.
+	 * @param pc Player
+	 * @return int
+	 */
 	public static int canIntoBaylorLair(Player pc)
 	{
 		if (pc.isGM())
@@ -289,6 +430,9 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method checkAnnihilated.
+	 */
 	synchronized static void checkAnnihilated()
 	{
 		if (isPlayersAnnihilated())
@@ -297,6 +441,10 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method entryToBaylorLair.
+	 * @param pc Player
+	 */
 	public synchronized static void entryToBaylorLair(Player pc)
 	{
 		currentReflection = pc.getReflectionId();
@@ -328,6 +476,10 @@ public class BaylorManager extends Functions implements ScriptFile
 		_isAlreadyEnteredOtherParty = true;
 	}
 	
+	/**
+	 * Method getPlayersInside.
+	 * @return List<Player>
+	 */
 	static List<Player> getPlayersInside()
 	{
 		List<Player> result = new ArrayList<>();
@@ -338,16 +490,27 @@ public class BaylorManager extends Functions implements ScriptFile
 		return result;
 	}
 	
+	/**
+	 * Method getRespawnInterval.
+	 * @return int
+	 */
 	static int getRespawnInterval()
 	{
 		return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * (FWBA_FIXINTERVALOFBAYLORSPAWN + Rnd.get(0, FWBA_RANDOMINTERVALOFBAYLORSPAWN)));
 	}
 	
+	/**
+	 * Method getZone.
+	 * @return Zone
+	 */
 	public static Zone getZone()
 	{
 		return _zone;
 	}
 	
+	/**
+	 * Method init.
+	 */
 	private static void init()
 	{
 		_state = new EpicBossState(Baylor);
@@ -364,6 +527,10 @@ public class BaylorManager extends Functions implements ScriptFile
 		Log.add("BaylorManager : Init BaylorManager.", "bosses");
 	}
 	
+	/**
+	 * Method isPlayersAnnihilated.
+	 * @return boolean
+	 */
 	private static boolean isPlayersAnnihilated()
 	{
 		for (Player pc : getPlayersInside())
@@ -376,6 +543,9 @@ public class BaylorManager extends Functions implements ScriptFile
 		return true;
 	}
 	
+	/**
+	 * Method onBaylorDie.
+	 */
 	static void onBaylorDie()
 	{
 		if (Dying)
@@ -393,15 +563,31 @@ public class BaylorManager extends Functions implements ScriptFile
 		startCollapse();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class BaylorZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Field _instance.
+		 */
 		private static OnZoneEnterLeaveListener _instance = new BaylorZoneListener();
 		
+		/**
+		 * Method getInstance.
+		 * @return OnZoneEnterLeaveListener
+		 */
 		public static OnZoneEnterLeaveListener getInstance()
 		{
 			return _instance;
 		}
 		
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param actor Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature actor)
 		{
@@ -411,6 +597,12 @@ public class BaylorManager extends Functions implements ScriptFile
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param actor Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature actor)
 		{
@@ -421,15 +613,31 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class PlayerDeathListener implements OnDeathListener
 	{
+		/**
+		 * Field _instance.
+		 */
 		private static OnDeathListener _instance = new PlayerDeathListener();
 		
+		/**
+		 * Method getInstance.
+		 * @return OnDeathListener
+		 */
 		public static OnDeathListener getInstance()
 		{
 			return _instance;
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param actor Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature actor, Creature killer)
 		{
@@ -437,15 +645,31 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class BaylorDeathListener implements OnDeathListener
 	{
+		/**
+		 * Field _instance.
+		 */
 		private static OnDeathListener _instance = new BaylorDeathListener();
 		
+		/**
+		 * Method getInstance.
+		 * @return OnDeathListener
+		 */
 		public static OnDeathListener getInstance()
 		{
 			return _instance;
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param actor Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature actor, Creature killer)
 		{
@@ -453,6 +677,9 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method setIntervalEndTask.
+	 */
 	static void setIntervalEndTask()
 	{
 		setUnspawn();
@@ -471,6 +698,9 @@ public class BaylorManager extends Functions implements ScriptFile
 		_intervalEndTask = ThreadPoolManager.getInstance().schedule(new IntervalEnd(), _state.getInterval());
 	}
 	
+	/**
+	 * Method setUnspawn.
+	 */
 	private static void setUnspawn()
 	{
 		if (!_isAlreadyEnteredOtherParty)
@@ -503,6 +733,9 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method startCollapse.
+	 */
 	private static void startCollapse()
 	{
 		if (currentReflection > 0)
@@ -516,18 +749,30 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 		init();
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		setUnspawn();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

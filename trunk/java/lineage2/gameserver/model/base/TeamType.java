@@ -12,11 +12,28 @@
  */
 package lineage2.gameserver.model.base;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum TeamType
 {
+	/**
+	 * Field NONE.
+	 */
 	NONE,
+	/**
+	 * Field BLUE.
+	 */
 	BLUE,
+	/**
+	 * Field RED.
+	 */
 	RED;
+	/**
+	 * Method revert.
+	 * @return TeamType
+	 */
 	public TeamType revert()
 	{
 		return this == BLUE ? RED : this == RED ? BLUE : NONE;

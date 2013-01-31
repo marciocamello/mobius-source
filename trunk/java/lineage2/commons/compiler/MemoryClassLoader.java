@@ -15,11 +15,26 @@ package lineage2.commons.compiler;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MemoryClassLoader extends ClassLoader
 {
+	/**
+	 * Field classes.
+	 */
 	private final Map<String, MemoryByteCode> classes = new HashMap<>();
+	/**
+	 * Field loaded.
+	 */
 	private final Map<String, MemoryByteCode> loaded = new HashMap<>();
 	
+	/**
+	 * Method findClass.
+	 * @param name String
+	 * @return Class<?> * @throws ClassNotFoundException
+	 */
 	@Override
 	protected Class<?> findClass(String name) throws ClassNotFoundException
 	{
@@ -35,22 +50,38 @@ public class MemoryClassLoader extends ClassLoader
 		return defineClass(name, mbc.getBytes(), 0, mbc.getBytes().length);
 	}
 	
+	/**
+	 * Method addClass.
+	 * @param mbc MemoryByteCode
+	 */
 	public void addClass(MemoryByteCode mbc)
 	{
 		classes.put(mbc.getName(), mbc);
 		loaded.put(mbc.getName(), mbc);
 	}
 	
+	/**
+	 * Method getClass.
+	 * @param name String
+	 * @return MemoryByteCode
+	 */
 	public MemoryByteCode getClass(String name)
 	{
 		return classes.get(name);
 	}
 	
+	/**
+	 * Method getLoadedClasses.
+	 * @return String[]
+	 */
 	public String[] getLoadedClasses()
 	{
 		return loaded.keySet().toArray(new String[loaded.size()]);
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	public void clear()
 	{
 		loaded.clear();

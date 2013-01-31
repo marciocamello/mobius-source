@@ -33,6 +33,10 @@ import quests._234_FatesWhisper;
 import quests._235_MimirsElixir;
 import quests._236_SeedsOfChaos;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TerritoryManagerInstance extends NpcInstance
 {
 	/**
@@ -40,11 +44,21 @@ public class TerritoryManagerInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for TerritoryManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public TerritoryManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -159,6 +173,13 @@ public class TerritoryManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{

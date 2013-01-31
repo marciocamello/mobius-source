@@ -19,13 +19,23 @@ import lineage2.gameserver.model.entity.events.impl.DominionSiegeRunnerEvent;
 import lineage2.gameserver.network.serverpackets.ExReplyDominionInfo;
 import lineage2.gameserver.network.serverpackets.ExShowOwnthingPos;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExDominionInfo extends L2GameClientPacket
 {
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

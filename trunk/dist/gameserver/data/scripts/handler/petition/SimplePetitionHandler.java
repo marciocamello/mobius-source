@@ -15,12 +15,26 @@ package handler.petition;
 import lineage2.gameserver.handler.petition.IPetitionHandler;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SimplePetitionHandler implements IPetitionHandler
 {
+	/**
+	 * Constructor for SimplePetitionHandler.
+	 */
 	public SimplePetitionHandler()
 	{
 	}
 	
+	/**
+	 * Method handle.
+	 * @param player Player
+	 * @param id int
+	 * @param txt String
+	 * @see lineage2.gameserver.handler.petition.IPetitionHandler#handle(Player, int, String)
+	 */
 	@Override
 	public void handle(Player player, int id, String txt)
 	{

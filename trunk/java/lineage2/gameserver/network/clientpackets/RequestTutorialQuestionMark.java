@@ -16,16 +16,29 @@ import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.Quest;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestTutorialQuestionMark extends L2GameClientPacket
 {
+	/**
+	 * Field _number.
+	 */
 	int _number = 0;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_number = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

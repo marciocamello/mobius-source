@@ -19,8 +19,15 @@ import lineage2.gameserver.network.serverpackets.RadarControl;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HelpBook extends ScriptItemHandler
 {
+	/**
+	 * Field _itemIds.
+	 */
 	private static final int[] _itemIds =
 	{
 		34767,
@@ -73,6 +80,13 @@ public class HelpBook extends ScriptItemHandler
 		17213
 	};
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -90,6 +104,10 @@ public class HelpBook extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{

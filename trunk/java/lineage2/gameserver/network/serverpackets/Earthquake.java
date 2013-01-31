@@ -14,12 +14,31 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Earthquake extends L2GameServerPacket
 {
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
+	/**
+	 * Field _intensity.
+	 */
 	private final int _intensity;
+	/**
+	 * Field _duration.
+	 */
 	private final int _duration;
 	
+	/**
+	 * Constructor for Earthquake.
+	 * @param loc Location
+	 * @param intensity int
+	 * @param duration int
+	 */
 	public Earthquake(Location loc, int intensity, int duration)
 	{
 		_loc = loc;
@@ -27,6 +46,9 @@ public class Earthquake extends L2GameServerPacket
 		_duration = duration;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

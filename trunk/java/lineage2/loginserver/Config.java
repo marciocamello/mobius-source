@@ -33,53 +33,169 @@ import org.dom4j.io.SAXReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Config
 {
+	/**
+	 * Field _log.
+	 */
 	private final static Logger _log = LoggerFactory.getLogger(Config.class);
+	/**
+	 * Field LOGIN_CONFIGURATION_FILE. (value is ""config/loginserver.ini"")
+	 */
 	public static final String LOGIN_CONFIGURATION_FILE = "config/loginserver.ini";
+	/**
+	 * Field SERVER_NAMES_FILE. (value is ""config/xml/servername.xml"")
+	 */
 	public static final String SERVER_NAMES_FILE = "config/xml/servername.xml";
+	/**
+	 * Field LOGIN_HOST.
+	 */
 	public static String LOGIN_HOST;
+	/**
+	 * Field PORT_LOGIN.
+	 */
 	public static int PORT_LOGIN;
+	/**
+	 * Field GAME_SERVER_LOGIN_HOST.
+	 */
 	public static String GAME_SERVER_LOGIN_HOST;
+	/**
+	 * Field GAME_SERVER_LOGIN_PORT.
+	 */
 	public static int GAME_SERVER_LOGIN_PORT;
+	/**
+	 * Field GAME_SERVER_PING_DELAY.
+	 */
 	public static long GAME_SERVER_PING_DELAY;
+	/**
+	 * Field GAME_SERVER_PING_RETRY.
+	 */
 	public static int GAME_SERVER_PING_RETRY;
+	/**
+	 * Field DATABASE_DRIVER.
+	 */
 	public static String DATABASE_DRIVER;
+	/**
+	 * Field DATABASE_MAX_CONNECTIONS.
+	 */
 	public static int DATABASE_MAX_CONNECTIONS;
+	/**
+	 * Field DATABASE_MAX_IDLE_TIMEOUT.
+	 */
 	public static int DATABASE_MAX_IDLE_TIMEOUT;
+	/**
+	 * Field DATABASE_IDLE_TEST_PERIOD.
+	 */
 	public static int DATABASE_IDLE_TEST_PERIOD;
+	/**
+	 * Field DATABASE_URL.
+	 */
 	public static String DATABASE_URL;
+	/**
+	 * Field DATABASE_LOGIN.
+	 */
 	public static String DATABASE_LOGIN;
+	/**
+	 * Field DATABASE_PASSWORD.
+	 */
 	public static String DATABASE_PASSWORD;
+	/**
+	 * Field DEFAULT_PASSWORD_HASH.
+	 */
 	public static String DEFAULT_PASSWORD_HASH;
+	/**
+	 * Field LEGACY_PASSWORD_HASH.
+	 */
 	public static String LEGACY_PASSWORD_HASH;
+	/**
+	 * Field LOGIN_BLOWFISH_KEYS.
+	 */
 	public static int LOGIN_BLOWFISH_KEYS;
+	/**
+	 * Field LOGIN_RSA_KEYPAIRS.
+	 */
 	public static int LOGIN_RSA_KEYPAIRS;
+	/**
+	 * Field ACCEPT_NEW_GAMESERVER.
+	 */
 	public static boolean ACCEPT_NEW_GAMESERVER;
+	/**
+	 * Field AUTO_CREATE_ACCOUNTS.
+	 */
 	public static boolean AUTO_CREATE_ACCOUNTS;
+	/**
+	 * Field ANAME_TEMPLATE.
+	 */
 	public static String ANAME_TEMPLATE;
+	/**
+	 * Field APASSWD_TEMPLATE.
+	 */
 	public static String APASSWD_TEMPLATE;
+	/**
+	 * Field SERVER_NAMES.
+	 */
 	public static final Map<Integer, String> SERVER_NAMES = new HashMap<>();
+	/**
+	 * Field LOGIN_TIMEOUT.
+	 */
 	public final static long LOGIN_TIMEOUT = 60 * 1000L;
+	/**
+	 * Field LOGIN_TRY_BEFORE_BAN.
+	 */
 	public static int LOGIN_TRY_BEFORE_BAN;
+	/**
+	 * Field LOGIN_TRY_TIMEOUT.
+	 */
 	public static long LOGIN_TRY_TIMEOUT;
+	/**
+	 * Field IP_BAN_TIME.
+	 */
 	public static long IP_BAN_TIME;
+	/**
+	 * Field _keyPairs.
+	 */
 	private static ScrambledKeyPair[] _keyPairs;
+	/**
+	 * Field _blowfishKeys.
+	 */
 	private static byte[][] _blowfishKeys;
+	/**
+	 * Field DEFAULT_CRYPT.
+	 */
 	public static PasswordHash DEFAULT_CRYPT;
+	/**
+	 * Field LEGACY_CRYPT.
+	 */
 	public static PasswordHash[] LEGACY_CRYPT;
+	/**
+	 * Field LOGIN_LOG.
+	 */
 	public static boolean LOGIN_LOG;
 	
+	/**
+	 * Constructor for Config.
+	 */
 	private Config()
 	{
 	}
 	
+	/**
+	 * Method load.
+	 */
 	public static void load()
 	{
 		loadConfiguration();
 		loadServerNames();
 	}
 	
+	/**
+	 * Method initCrypt.
+	 * @throws Throwable
+	 */
 	public static void initCrypt() throws Throwable
 	{
 		DEFAULT_CRYPT = new PasswordHash(Config.DEFAULT_PASSWORD_HASH);
@@ -113,6 +229,9 @@ public class Config
 		_log.info("Stored " + _blowfishKeys.length + " keys for Blowfish communication");
 	}
 	
+	/**
+	 * Method loadServerNames.
+	 */
 	public final static void loadServerNames()
 	{
 		SERVER_NAMES.clear();
@@ -139,6 +258,9 @@ public class Config
 		}
 	}
 	
+	/**
+	 * Method loadConfiguration.
+	 */
 	public static void loadConfiguration()
 	{
 		ExProperties serverSettings = load(LOGIN_CONFIGURATION_FILE);
@@ -169,11 +291,21 @@ public class Config
 		LOGIN_LOG = serverSettings.getProperty("LoginLog", true);
 	}
 	
+	/**
+	 * Method load.
+	 * @param filename String
+	 * @return ExProperties
+	 */
 	public static ExProperties load(String filename)
 	{
 		return load(new File(filename));
 	}
 	
+	/**
+	 * Method load.
+	 * @param file File
+	 * @return ExProperties
+	 */
 	public static ExProperties load(File file)
 	{
 		ExProperties result = new ExProperties();
@@ -188,11 +320,19 @@ public class Config
 		return result;
 	}
 	
+	/**
+	 * Method getScrambledRSAKeyPair.
+	 * @return ScrambledKeyPair
+	 */
 	public static ScrambledKeyPair getScrambledRSAKeyPair()
 	{
 		return _keyPairs[Rnd.get(_keyPairs.length)];
 	}
 	
+	/**
+	 * Method getBlowfishKey.
+	 * @return byte[]
+	 */
 	public static byte[] getBlowfishKey()
 	{
 		return _blowfishKeys[Rnd.get(_blowfishKeys.length)];

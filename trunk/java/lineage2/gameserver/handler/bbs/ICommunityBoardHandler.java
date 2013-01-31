@@ -14,11 +14,34 @@ package lineage2.gameserver.handler.bbs;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface ICommunityBoardHandler
 {
+	/**
+	 * Method getBypassCommands.
+	 * @return String[]
+	 */
 	public String[] getBypassCommands();
 	
+	/**
+	 * Method onBypassCommand.
+	 * @param player Player
+	 * @param bypass String
+	 */
 	public void onBypassCommand(Player player, String bypass);
 	
+	/**
+	 * Method onWriteCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @param arg1 String
+	 * @param arg2 String
+	 * @param arg3 String
+	 * @param arg4 String
+	 * @param arg5 String
+	 */
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5);
 }

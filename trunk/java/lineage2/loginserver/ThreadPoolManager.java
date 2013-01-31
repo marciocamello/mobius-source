@@ -20,19 +20,42 @@ import java.util.concurrent.TimeUnit;
 
 import lineage2.commons.threading.RunnableImpl;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ThreadPoolManager
 {
+	/**
+	 * Field MAX_DELAY.
+	 */
 	private static final long MAX_DELAY = TimeUnit.NANOSECONDS.toMillis(Long.MAX_VALUE - System.nanoTime()) / 2;
+	/**
+	 * Field _instance.
+	 */
 	private static final ThreadPoolManager _instance = new ThreadPoolManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return ThreadPoolManager
+	 */
 	public static final ThreadPoolManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field scheduledExecutor.
+	 */
 	final ScheduledThreadPoolExecutor scheduledExecutor = new ScheduledThreadPoolExecutor(1);
+	/**
+	 * Field executor.
+	 */
 	final ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 5L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
 	
+	/**
+	 * Constructor for ThreadPoolManager.
+	 */
 	private ThreadPoolManager()
 	{
 		scheduleAtFixedRate(new RunnableImpl()
@@ -46,21 +69,43 @@ public class ThreadPoolManager
 		}, 600000L, 600000L);
 	}
 	
+	/**
+	 * Method validate.
+	 * @param delay long
+	 * @return long
+	 */
 	private final long validate(long delay)
 	{
 		return Math.max(0, Math.min(MAX_DELAY, delay));
 	}
 	
+	/**
+	 * Method execute.
+	 * @param r Runnable
+	 */
 	public void execute(Runnable r)
 	{
 		executor.execute(r);
 	}
 	
+	/**
+	 * Method schedule.
+	 * @param r Runnable
+	 * @param delay long
+	 * @return ScheduledFuture<?>
+	 */
 	public ScheduledFuture<?> schedule(Runnable r, long delay)
 	{
 		return scheduledExecutor.schedule(r, validate(delay), TimeUnit.MILLISECONDS);
 	}
 	
+	/**
+	 * Method scheduleAtFixedRate.
+	 * @param r Runnable
+	 * @param initial long
+	 * @param delay long
+	 * @return ScheduledFuture<?>
+	 */
 	public ScheduledFuture<?> scheduleAtFixedRate(Runnable r, long initial, long delay)
 	{
 		return scheduledExecutor.scheduleAtFixedRate(r, validate(initial), validate(delay), TimeUnit.MILLISECONDS);

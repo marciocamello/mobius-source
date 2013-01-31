@@ -19,22 +19,43 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Toma extends DefaultAI
 {
+	/**
+	 * Field _points.
+	 */
 	private final Location[] _points =
 	{
 		new Location(151680, -174891, -1807, 41400),
 		new Location(154153, -220105, -3402),
 		new Location(178834, -184336, -352)
 	};
+	/**
+	 * Field TELEPORT_PERIOD.
+	 */
 	private static long TELEPORT_PERIOD = 30 * 60 * 1000;
+	/**
+	 * Field _lastTeleport.
+	 */
 	private long _lastTeleport = System.currentTimeMillis();
 	
+	/**
+	 * Constructor for Toma.
+	 * @param actor NpcInstance
+	 */
 	public Toma(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -54,6 +75,10 @@ public class Toma extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{

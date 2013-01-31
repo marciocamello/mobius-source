@@ -15,17 +15,34 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.entity.boat.Boat;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class VehicleInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _boatObjectId.
+	 */
 	private final int _boatObjectId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for VehicleInfo.
+	 * @param boat Boat
+	 */
 	public VehicleInfo(Boat boat)
 	{
 		_boatObjectId = boat.getObjectId();
 		_loc = boat.getLoc();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

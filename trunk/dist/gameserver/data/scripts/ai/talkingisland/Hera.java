@@ -15,8 +15,16 @@ package ai.talkingisland;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Hera extends HeraSubAI
 {
+	/**
+	 * Constructor for Hera.
+	 * @param actor NpcInstance
+	 */
 	public Hera(NpcInstance actor)
 	{
 		super(actor);

@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetDelete extends L2GameServerPacket
 {
+	/**
+	 * Field _summonType.
+	 */
 	private final int _summonType;
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
 	
+	/**
+	 * Constructor for PetDelete.
+	 * @param summonType int
+	 * @param objectId int
+	 */
 	public PetDelete(int summonType, int objectId)
 	{
 		_summonType = summonType;
 		_objectId = objectId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

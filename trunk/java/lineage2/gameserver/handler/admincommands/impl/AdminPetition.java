@@ -20,18 +20,51 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 import org.apache.commons.lang3.math.NumberUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminPetition implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_view_petitions.
+		 */
 		admin_view_petitions,
+		/**
+		 * Field admin_view_petition.
+		 */
 		admin_view_petition,
+		/**
+		 * Field admin_accept_petition.
+		 */
 		admin_accept_petition,
+		/**
+		 * Field admin_reject_petition.
+		 */
 		admin_reject_petition,
+		/**
+		 * Field admin_reset_petitions.
+		 */
 		admin_reset_petitions,
+		/**
+		 * Field admin_force_peti.
+		 */
 		admin_force_peti
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -119,6 +152,10 @@ public class AdminPetition implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

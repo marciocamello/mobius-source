@@ -17,13 +17,36 @@ import java.util.Collections;
 
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MagicSkillLaunched extends L2GameServerPacket
 {
+	/**
+	 * Field _casterId.
+	 */
 	private final int _casterId;
+	/**
+	 * Field _skillId.
+	 */
 	private final int _skillId;
+	/**
+	 * Field _skillLevel.
+	 */
 	private final int _skillLevel;
+	/**
+	 * Field _targets.
+	 */
 	private final Collection<Creature> _targets;
 	
+	/**
+	 * Constructor for MagicSkillLaunched.
+	 * @param casterId int
+	 * @param skillId int
+	 * @param skillLevel int
+	 * @param target Creature
+	 */
 	public MagicSkillLaunched(int casterId, int skillId, int skillLevel, Creature target)
 	{
 		_casterId = casterId;
@@ -32,6 +55,13 @@ public class MagicSkillLaunched extends L2GameServerPacket
 		_targets = Collections.singletonList(target);
 	}
 	
+	/**
+	 * Constructor for MagicSkillLaunched.
+	 * @param casterId int
+	 * @param skillId int
+	 * @param skillLevel int
+	 * @param targets Collection<Creature>
+	 */
 	public MagicSkillLaunched(int casterId, int skillId, int skillLevel, Collection<Creature> targets)
 	{
 		_casterId = casterId;
@@ -40,6 +70,9 @@ public class MagicSkillLaunched extends L2GameServerPacket
 		_targets = targets;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShowXMasSeal extends L2GameServerPacket
 {
+	/**
+	 * Field _item.
+	 */
 	private final int _item;
 	
+	/**
+	 * Constructor for ShowXMasSeal.
+	 * @param item int
+	 */
 	public ShowXMasSeal(int item)
 	{
 		_item = item;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

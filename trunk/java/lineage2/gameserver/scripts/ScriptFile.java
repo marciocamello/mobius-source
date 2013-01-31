@@ -12,11 +12,24 @@
  */
 package lineage2.gameserver.scripts;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface ScriptFile
 {
+	/**
+	 * Method onLoad.
+	 */
 	public void onLoad();
 	
+	/**
+	 * Method onReload.
+	 */
 	public void onReload();
 	
+	/**
+	 * Method onShutdown.
+	 */
 	public void onShutdown();
 }

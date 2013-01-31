@@ -15,15 +15,29 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.mail.Mail;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExReplySentPost extends L2GameServerPacket
 {
+	/**
+	 * Field mail.
+	 */
 	private final Mail mail;
 	
+	/**
+	 * Constructor for ExReplySentPost.
+	 * @param mail Mail
+	 */
 	public ExReplySentPost(Mail mail)
 	{
 		this.mail = mail;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

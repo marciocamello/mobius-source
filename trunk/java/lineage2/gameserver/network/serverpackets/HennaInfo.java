@@ -14,12 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HennaInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _hennas.
+	 */
 	private final Henna[] _hennas = new Henna[3];
+	/**
+	 * Field _men. Field _wit. Field _int. Field _dex. Field _con. Field _str.
+	 */
 	private final int _str, _con, _dex, _int, _wit, _men;
+	/**
+	 * Field _count.
+	 */
 	private int _count;
 	
+	/**
+	 * Constructor for HennaInfo.
+	 * @param player Player
+	 */
 	public HennaInfo(Player player)
 	{
 		_count = 0;
@@ -39,6 +56,9 @@ public class HennaInfo extends L2GameServerPacket
 		_men = player.getHennaStatMEN();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -58,11 +78,25 @@ public class HennaInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class Henna
 	{
+		/**
+		 * Field _symbolId.
+		 */
 		final int _symbolId;
+		/**
+		 * Field _valid.
+		 */
 		final boolean _valid;
 		
+		/**
+		 * Constructor for Henna.
+		 * @param sy int
+		 * @param valid boolean
+		 */
 		public Henna(int sy, boolean valid)
 		{
 			_symbolId = sy;

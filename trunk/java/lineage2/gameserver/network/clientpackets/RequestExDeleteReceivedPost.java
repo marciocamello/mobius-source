@@ -21,11 +21,24 @@ import lineage2.gameserver.network.serverpackets.ExShowReceivedPostList;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExDeleteReceivedPost extends L2GameClientPacket
 {
+	/**
+	 * Field _count.
+	 */
 	private int _count;
+	/**
+	 * Field _list.
+	 */
 	private int[] _list;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -42,6 +55,9 @@ public class RequestExDeleteReceivedPost extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -19,13 +19,32 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExMagicSkillUseGround extends L2GameClientPacket
 {
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc = new Location();
+	/**
+	 * Field _skillId.
+	 */
 	private int _skillId;
+	/**
+	 * Field _ctrlPressed.
+	 */
 	private boolean _ctrlPressed;
+	/**
+	 * Field _shiftPressed.
+	 */
 	private boolean _shiftPressed;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -37,6 +56,9 @@ public class RequestExMagicSkillUseGround extends L2GameClientPacket
 		_shiftPressed = readC() != 0;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

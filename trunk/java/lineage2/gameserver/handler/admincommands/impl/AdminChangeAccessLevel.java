@@ -34,19 +34,53 @@ import lineage2.gameserver.utils.Files;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminChangeAccessLevel implements IAdminCommandHandler
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(AdminChangeAccessLevel.class);
 	
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_changelvl.
+		 */
 		admin_changelvl,
+		/**
+		 * Field admin_moders.
+		 */
 		admin_moders,
+		/**
+		 * Field admin_moders_add.
+		 */
 		admin_moders_add,
+		/**
+		 * Field admin_moders_del.
+		 */
 		admin_moders_del,
+		/**
+		 * Field admin_penalty.
+		 */
 		admin_penalty
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -219,11 +253,11 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 				{
 					if (Config.BANCHAT_ANNOUNCE_FOR_ALL_WORLD)
 					{
-						Announcements.getInstance().announceToAll(activeChar + " оштрафовал модератора " + wordList[1] + " на " + count + ", причина: " + reason + ".");
+						Announcements.getInstance().announceToAll(activeChar + " о�?трафовал модератора " + wordList[1] + " на " + count + ", причина: " + reason + ".");
 					}
 					else
 					{
-						Announcements.shout(activeChar, activeChar + " оштрафовал модератора " + wordList[1] + " на " + count + ", причина: " + reason + ".", ChatType.CRITICAL_ANNOUNCE);
+						Announcements.shout(activeChar, activeChar + " о�?трафовал модератора " + wordList[1] + " на " + count + ", причина: " + reason + ".", ChatType.CRITICAL_ANNOUNCE);
 					}
 				}
 				break;
@@ -231,6 +265,10 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method showModersPannel.
+	 * @param activeChar Player
+	 */
 	private static void showModersPannel(Player activeChar)
 	{
 		NpcHtmlMessage reply = new NpcHtmlMessage(5);
@@ -250,7 +288,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 		html += "<table width=285>";
 		for (File f : dir.listFiles())
 		{
-			if (f.isDirectory() || !f.getName().startsWith("m") || !f.getName().endsWith(".xml"))
+			if (f.isDirectory() || ((f.getName().length() == 0) || (f.getName().charAt(0) != 'm')) || !f.getName().endsWith(".xml"))
 			{
 				continue;
 			}
@@ -278,6 +316,11 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 		activeChar.sendPacket(reply);
 	}
 	
+	/**
+	 * Method getPlayerNameByObjId.
+	 * @param oid int
+	 * @return String
+	 */
 	private static String getPlayerNameByObjId(int oid)
 	{
 		String pName = null;
@@ -306,6 +349,11 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 		return pName;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

@@ -19,13 +19,35 @@ import lineage2.gameserver.ThreadPoolManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BloodAltarManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(BloodAltarManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static BloodAltarManager _instance;
+	/**
+	 * Field delay.
+	 */
 	private static final long delay = 30 * 60 * 1000L;
+	/**
+	 * Field bossRespawnTimer.
+	 */
 	static long bossRespawnTimer = 0;
+	/**
+	 * Field bossesSpawned.
+	 */
 	static boolean bossesSpawned = false;
+	/**
+	 * Field bossGroups.
+	 */
 	private static final String[] bossGroups =
 	{
 		"bloodaltar_boss_aden",
@@ -42,6 +64,10 @@ public class BloodAltarManager
 		"bloodaltar_boss_schutgart"
 	};
 	
+	/**
+	 * Method getInstance.
+	 * @return BloodAltarManager
+	 */
 	public static BloodAltarManager getInstance()
 	{
 		if (_instance == null)
@@ -51,6 +77,9 @@ public class BloodAltarManager
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for BloodAltarManager.
+	 */
 	public BloodAltarManager()
 	{
 		_log.info("Blood Altar Manager: Initializing...");
@@ -79,6 +108,10 @@ public class BloodAltarManager
 		}, delay, delay);
 	}
 	
+	/**
+	 * Method manageNpcs.
+	 * @param spawnAlive boolean
+	 */
 	static void manageNpcs(boolean spawnAlive)
 	{
 		if (spawnAlive)
@@ -93,6 +126,10 @@ public class BloodAltarManager
 		}
 	}
 	
+	/**
+	 * Method manageBosses.
+	 * @param spawn boolean
+	 */
 	static void manageBosses(boolean spawn)
 	{
 		if (spawn)

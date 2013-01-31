@@ -22,36 +22,72 @@ import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Clan;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CTBSiegeClanObject extends SiegeClanObject
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _players.
+	 */
 	private final List<Integer> _players = new ArrayList<>();
+	/**
+	 * Field _npcId.
+	 */
 	private long _npcId;
 	
+	/**
+	 * Constructor for CTBSiegeClanObject.
+	 * @param type String
+	 * @param clan Clan
+	 * @param param long
+	 * @param date long
+	 */
 	public CTBSiegeClanObject(String type, Clan clan, long param, long date)
 	{
 		super(type, clan, param, date);
 		_npcId = param;
 	}
 	
+	/**
+	 * Constructor for CTBSiegeClanObject.
+	 * @param type String
+	 * @param clan Clan
+	 * @param param long
+	 */
 	public CTBSiegeClanObject(String type, Clan clan, long param)
 	{
 		this(type, clan, param, System.currentTimeMillis());
 	}
 	
+	/**
+	 * Method select.
+	 * @param r Residence
+	 */
 	public void select(Residence r)
 	{
 		_players.addAll(SiegePlayerDAO.getInstance().select(r, getObjectId()));
 	}
 	
+	/**
+	 * Method getPlayers.
+	 * @return List<Integer>
+	 */
 	public List<Integer> getPlayers()
 	{
 		return _players;
 	}
 	
+	/**
+	 * Method setEvent.
+	 * @param start boolean
+	 * @param event SiegeEvent<?,?>
+	 */
 	@Override
 	public void setEvent(boolean start, SiegeEvent<?, ?> event)
 	{
@@ -73,18 +109,31 @@ public class CTBSiegeClanObject extends SiegeClanObject
 		}
 	}
 	
+	/**
+	 * Method isParticle.
+	 * @param player Player
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParticle(Player player)
 	{
 		return _players.contains(player.getObjectId());
 	}
 	
+	/**
+	 * Method getParam.
+	 * @return long
+	 */
 	@Override
 	public long getParam()
 	{
 		return _npcId;
 	}
 	
+	/**
+	 * Method setParam.
+	 * @param npcId int
+	 */
 	public void setParam(int npcId)
 	{
 		_npcId = npcId;

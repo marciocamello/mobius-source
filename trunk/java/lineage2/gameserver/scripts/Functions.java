@@ -48,11 +48,31 @@ import lineage2.gameserver.utils.MapUtils;
 import lineage2.gameserver.utils.NpcUtils;
 import lineage2.gameserver.utils.Strings;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Functions
 {
+	/**
+	 * Field self.
+	 */
 	public HardReference<Player> self = HardReferences.emptyRef();
+	/**
+	 * Field npc.
+	 */
 	public HardReference<NpcInstance> npc = HardReferences.emptyRef();
 	
+	/**
+	 * Method executeTask.
+	 * @param caller Player
+	 * @param className String
+	 * @param methodName String
+	 * @param args Object[]
+	 * @param variables Map<String,Object>
+	 * @param delay long
+	 * @return ScheduledFuture<?>
+	 */
 	public static ScheduledFuture<?> executeTask(final Player caller, final String className, final String methodName, final Object[] args, final Map<String, Object> variables, long delay)
 	{
 		return ThreadPoolManager.getInstance().schedule(new RunnableImpl()
@@ -65,41 +85,103 @@ public class Functions
 		}, delay);
 	}
 	
+	/**
+	 * Method executeTask.
+	 * @param className String
+	 * @param methodName String
+	 * @param args Object[]
+	 * @param variables Map<String,Object>
+	 * @param delay long
+	 * @return ScheduledFuture<?>
+	 */
 	public static ScheduledFuture<?> executeTask(String className, String methodName, Object[] args, Map<String, Object> variables, long delay)
 	{
 		return executeTask(null, className, methodName, args, variables, delay);
 	}
 	
+	/**
+	 * Method executeTask.
+	 * @param player Player
+	 * @param className String
+	 * @param methodName String
+	 * @param args Object[]
+	 * @param delay long
+	 * @return ScheduledFuture<?>
+	 */
 	public static ScheduledFuture<?> executeTask(Player player, String className, String methodName, Object[] args, long delay)
 	{
 		return executeTask(player, className, methodName, args, null, delay);
 	}
 	
+	/**
+	 * Method executeTask.
+	 * @param className String
+	 * @param methodName String
+	 * @param args Object[]
+	 * @param delay long
+	 * @return ScheduledFuture<?>
+	 */
 	public static ScheduledFuture<?> executeTask(String className, String methodName, Object[] args, long delay)
 	{
 		return executeTask(className, methodName, args, null, delay);
 	}
 	
+	/**
+	 * Method callScripts.
+	 * @param className String
+	 * @param methodName String
+	 * @param args Object[]
+	 * @return Object
+	 */
 	public static Object callScripts(String className, String methodName, Object[] args)
 	{
 		return callScripts(className, methodName, args, null);
 	}
 	
+	/**
+	 * Method callScripts.
+	 * @param className String
+	 * @param methodName String
+	 * @param args Object[]
+	 * @param variables Map<String,Object>
+	 * @return Object
+	 */
 	public static Object callScripts(String className, String methodName, Object[] args, Map<String, Object> variables)
 	{
 		return callScripts(null, className, methodName, args, variables);
 	}
 	
+	/**
+	 * Method callScripts.
+	 * @param player Player
+	 * @param className String
+	 * @param methodName String
+	 * @param args Object[]
+	 * @param variables Map<String,Object>
+	 * @return Object
+	 */
 	public static Object callScripts(Player player, String className, String methodName, Object[] args, Map<String, Object> variables)
 	{
 		return Scripts.getInstance().callScripts(player, className, methodName, args, variables);
 	}
 	
+	/**
+	 * Method show.
+	 * @param text String
+	 * @param self Player
+	 */
 	public void show(String text, Player self)
 	{
 		show(text, self, getNpc());
 	}
 	
+	/**
+	 * Method show.
+	 * @param text String
+	 * @param self Player
+	 * @param npc NpcInstance
+	 * @param arg Object[]
+	 */
 	public static void show(String text, Player self, NpcInstance npc, Object... arg)
 	{
 		if ((text == null) || (self == null))
@@ -125,26 +207,54 @@ public class Functions
 		self.sendPacket(msg);
 	}
 	
+	/**
+	 * Method show.
+	 * @param message CustomMessage
+	 * @param self Player
+	 */
 	public static void show(CustomMessage message, Player self)
 	{
 		show(message.toString(), self, null);
 	}
 	
+	/**
+	 * Method sendMessage.
+	 * @param text String
+	 * @param self Player
+	 */
 	public static void sendMessage(String text, Player self)
 	{
 		self.sendMessage(text);
 	}
 	
+	/**
+	 * Method sendMessage.
+	 * @param message CustomMessage
+	 * @param self Player
+	 */
 	public static void sendMessage(CustomMessage message, Player self)
 	{
 		self.sendMessage(message);
 	}
 	
+	/**
+	 * Method npcSayInRange.
+	 * @param npc NpcInstance
+	 * @param text String
+	 * @param range int
+	 */
 	public static void npcSayInRange(NpcInstance npc, String text, int range)
 	{
 		npcSayInRange(npc, range, NpcString.NONE, text);
 	}
 	
+	/**
+	 * Method npcSayInRange.
+	 * @param npc NpcInstance
+	 * @param range int
+	 * @param fStringId NpcString
+	 * @param params String[]
+	 */
 	public static void npcSayInRange(NpcInstance npc, int range, NpcString fStringId, String... params)
 	{
 		if (npc == null)
@@ -161,16 +271,34 @@ public class Functions
 		}
 	}
 	
+	/**
+	 * Method npcSay.
+	 * @param npc NpcInstance
+	 * @param text String
+	 */
 	public static void npcSay(NpcInstance npc, String text)
 	{
 		npcSayInRange(npc, text, 1500);
 	}
 	
+	/**
+	 * Method npcSay.
+	 * @param npc NpcInstance
+	 * @param npcString NpcString
+	 * @param params String[]
+	 */
 	public static void npcSay(NpcInstance npc, NpcString npcString, String... params)
 	{
 		npcSayInRange(npc, 1500, npcString, params);
 	}
 	
+	/**
+	 * Method npcSayInRangeCustomMessage.
+	 * @param npc NpcInstance
+	 * @param range int
+	 * @param address String
+	 * @param replacements Object[]
+	 */
 	public static void npcSayInRangeCustomMessage(NpcInstance npc, int range, String address, Object... replacements)
 	{
 		if (npc == null)
@@ -186,16 +314,35 @@ public class Functions
 		}
 	}
 	
+	/**
+	 * Method npcSayCustomMessage.
+	 * @param npc NpcInstance
+	 * @param address String
+	 * @param replacements Object[]
+	 */
 	public static void npcSayCustomMessage(NpcInstance npc, String address, Object... replacements)
 	{
 		npcSayInRangeCustomMessage(npc, 1500, address, replacements);
 	}
 	
+	/**
+	 * Method npcSayToPlayer.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 * @param text String
+	 */
 	public static void npcSayToPlayer(NpcInstance npc, Player player, String text)
 	{
 		npcSayToPlayer(npc, player, NpcString.NONE, ChatType.TELL, text);
 	}
 	
+	/**
+	 * Method npcSayToPlayer.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 * @param npcString NpcString
+	 * @param params String[]
+	 */
 	public static void npcSayToPlayer(NpcInstance npc, Player player, NpcString npcString, String... params)
 	{
 		if (npc == null)
@@ -205,6 +352,14 @@ public class Functions
 		npcSayToPlayer(npc, player, npcString, ChatType.TELL, params);
 	}
 	
+	/**
+	 * Method npcSayToPlayer.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 * @param npcString NpcString
+	 * @param chatType ChatType
+	 * @param params String[]
+	 */
 	public static void npcSayToPlayer(NpcInstance npc, Player player, NpcString npcString, ChatType chatType, String... params)
 	{
 		if (npc == null)
@@ -214,11 +369,22 @@ public class Functions
 		player.sendPacket(new NpcSay(npc, chatType, npcString, params));
 	}
 	
+	/**
+	 * Method npcShout.
+	 * @param npc NpcInstance
+	 * @param text String
+	 */
 	public static void npcShout(NpcInstance npc, String text)
 	{
 		npcShout(npc, NpcString.NONE, text);
 	}
 	
+	/**
+	 * Method npcShout.
+	 * @param npc NpcInstance
+	 * @param npcString NpcString
+	 * @param params String[]
+	 */
 	public static void npcShout(NpcInstance npc, NpcString npcString, String... params)
 	{
 		if (npc == null)
@@ -244,6 +410,12 @@ public class Functions
 		}
 	}
 	
+	/**
+	 * Method npcShoutCustomMessage.
+	 * @param npc NpcInstance
+	 * @param address String
+	 * @param replacements Object[]
+	 */
 	public static void npcShoutCustomMessage(NpcInstance npc, String address, Object... replacements)
 	{
 		if (npc == null)
@@ -268,6 +440,14 @@ public class Functions
 		}
 	}
 	
+	/**
+	 * Method npcSay.
+	 * @param npc NpcInstance
+	 * @param address NpcString
+	 * @param type ChatType
+	 * @param range int
+	 * @param replacements String[]
+	 */
 	public static void npcSay(NpcInstance npc, NpcString address, ChatType type, int range, String... replacements)
 	{
 		if (npc == null)
@@ -283,21 +463,46 @@ public class Functions
 		}
 	}
 	
+	/**
+	 * Method addItem.
+	 * @param playable Playable
+	 * @param itemId int
+	 * @param count long
+	 */
 	public static void addItem(Playable playable, int itemId, long count)
 	{
 		ItemFunctions.addItem(playable, itemId, count, true);
 	}
 	
+	/**
+	 * Method getItemCount.
+	 * @param playable Playable
+	 * @param itemId int
+	 * @return long
+	 */
 	public static long getItemCount(Playable playable, int itemId)
 	{
 		return ItemFunctions.getItemCount(playable, itemId);
 	}
 	
+	/**
+	 * Method removeItem.
+	 * @param playable Playable
+	 * @param itemId int
+	 * @param count long
+	 * @return long
+	 */
 	public static long removeItem(Playable playable, int itemId, long count)
 	{
 		return ItemFunctions.removeItem(playable, itemId, count, true);
 	}
 	
+	/**
+	 * Method ride.
+	 * @param player Player
+	 * @param pet int
+	 * @return boolean
+	 */
 	public static boolean ride(Player player, int pet)
 	{
 		if (player.isMounted())
@@ -313,6 +518,10 @@ public class Functions
 		return true;
 	}
 	
+	/**
+	 * Method unRide.
+	 * @param player Player
+	 */
 	public static void unRide(Player player)
 	{
 		if (player.isMounted())
@@ -321,6 +530,11 @@ public class Functions
 		}
 	}
 	
+	/**
+	 * Method unSummonPet.
+	 * @param player Player
+	 * @param onlyPets boolean
+	 */
 	public static void unSummonPet(Player player, boolean onlyPets)
 	{
 		if (onlyPets)
@@ -333,27 +547,54 @@ public class Functions
 		}
 	}
 	
+	/**
+	 * Method spawn.
+	 * @param loc Location
+	 * @param npcId int
+	 * @return NpcInstance
+	 */
 	public static NpcInstance spawn(Location loc, int npcId)
 	{
 		return spawn(loc, npcId, ReflectionManager.DEFAULT);
 	}
 	
+	/**
+	 * Method spawn.
+	 * @param loc Location
+	 * @param npcId int
+	 * @param reflection Reflection
+	 * @return NpcInstance
+	 */
 	@Deprecated
 	public static NpcInstance spawn(Location loc, int npcId, Reflection reflection)
 	{
 		return NpcUtils.spawnSingle(npcId, loc, reflection, 0);
 	}
 	
+	/**
+	 * Method getSelf.
+	 * @return Player
+	 */
 	public Player getSelf()
 	{
 		return self.get();
 	}
 	
+	/**
+	 * Method getNpc.
+	 * @return NpcInstance
+	 */
 	public NpcInstance getNpc()
 	{
 		return npc.get();
 	}
 	
+	/**
+	 * Method SpawnNPCs.
+	 * @param npcId int
+	 * @param locations int[][]
+	 * @param list List<SimpleSpawner>
+	 */
 	public static void SpawnNPCs(int npcId, int[][] locations, List<SimpleSpawner> list)
 	{
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
@@ -377,6 +618,10 @@ public class Functions
 		}
 	}
 	
+	/**
+	 * Method deSpawnNPCs.
+	 * @param list List<SimpleSpawner>
+	 */
 	public static void deSpawnNPCs(List<SimpleSpawner> list)
 	{
 		for (SimpleSpawner sp : list)
@@ -386,11 +631,22 @@ public class Functions
 		list.clear();
 	}
 	
+	/**
+	 * Method IsActive.
+	 * @param name String
+	 * @return boolean
+	 */
 	public static boolean IsActive(String name)
 	{
 		return ServerVariables.getString(name, "off").equalsIgnoreCase("on");
 	}
 	
+	/**
+	 * Method SetActive.
+	 * @param name String
+	 * @param active boolean
+	 * @return boolean
+	 */
 	public static boolean SetActive(String name, boolean active)
 	{
 		if (active == IsActive(name))
@@ -408,11 +664,21 @@ public class Functions
 		return true;
 	}
 	
+	/**
+	 * Method SimpleCheckDrop.
+	 * @param mob Creature
+	 * @param killer Creature
+	 * @return boolean
+	 */
 	public static boolean SimpleCheckDrop(Creature mob, Creature killer)
 	{
 		return (mob != null) && mob.isMonster() && !mob.isRaid() && (killer != null) && (killer.getPlayer() != null) && ((killer.getLevel() - mob.getLevel()) < 9);
 	}
 	
+	/**
+	 * Method isPvPEventStarted.
+	 * @return boolean
+	 */
 	public static boolean isPvPEventStarted()
 	{
 		if ((Boolean) callScripts("events.TvT.TvT", "isRunned", new Object[] {}))
@@ -426,6 +692,11 @@ public class Functions
 		return false;
 	}
 	
+	/**
+	 * Method sendDebugMessage.
+	 * @param player Player
+	 * @param message String
+	 */
 	public static void sendDebugMessage(Player player, String message)
 	{
 		if (!player.isGM())
@@ -435,6 +706,13 @@ public class Functions
 		player.sendMessage(message);
 	}
 	
+	/**
+	 * Method sendSystemMail.
+	 * @param receiver Player
+	 * @param title String
+	 * @param body String
+	 * @param items Map<Integer,Long>
+	 */
 	public static void sendSystemMail(Player receiver, String title, String body, Map<Integer, Long> items)
 	{
 		if ((receiver == null) || !receiver.isOnline())
@@ -472,6 +750,11 @@ public class Functions
 		receiver.sendPacket(Msg.THE_MAIL_HAS_ARRIVED);
 	}
 	
+	/**
+	 * Method GetStringCount.
+	 * @param count long
+	 * @return String
+	 */
 	public static String GetStringCount(long count)
 	{
 		String scount = Long.toString(count);

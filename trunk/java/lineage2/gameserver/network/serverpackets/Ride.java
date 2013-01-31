@@ -15,11 +15,25 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Ride extends L2GameServerPacket
 {
+	/**
+	 * Field _rideClassID. Field _id. Field _mountType.
+	 */
 	private final int _mountType, _id, _rideClassID;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for Ride.
+	 * @param cha Player
+	 */
 	public Ride(Player cha)
 	{
 		_id = cha.getObjectId();
@@ -28,6 +42,9 @@ public class Ride extends L2GameServerPacket
 		_loc = cha.getLoc();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

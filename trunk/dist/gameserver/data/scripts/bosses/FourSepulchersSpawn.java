@@ -39,38 +39,110 @@ import npc.model.SepulcherRaidInstance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FourSepulchersSpawn extends Functions implements ScriptFile
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(FourSepulchersSpawn.class);
+	/**
+	 * Field _shadowSpawns.
+	 */
 	public static Map<Integer, NpcLocation> _shadowSpawns = new HashMap<>();
+	/**
+	 * Field _mysteriousBoxSpawns.
+	 */
 	public static Map<Integer, NpcLocation> _mysteriousBoxSpawns = new HashMap<>();
+	/**
+	 * Field _dukeFinalMobs.
+	 */
 	public static Map<Integer, List<NpcLocation>> _dukeFinalMobs = new HashMap<>();
+	/**
+	 * Field _emperorsGraveNpcs.
+	 */
 	public static Map<Integer, List<NpcLocation>> _emperorsGraveNpcs = new HashMap<>();
+	/**
+	 * Field _magicalMonsters.
+	 */
 	public static Map<Integer, List<NpcLocation>> _magicalMonsters = new HashMap<>();
+	/**
+	 * Field _physicalMonsters.
+	 */
 	public static Map<Integer, List<NpcLocation>> _physicalMonsters = new HashMap<>();
+	/**
+	 * Field _startHallSpawns.
+	 */
 	public static Map<Integer, Location> _startHallSpawns = new HashMap<>();
+	/**
+	 * Field _hallInUse.
+	 */
 	public static Map<Integer, Boolean> _hallInUse = new HashMap<>();
+	/**
+	 * Field _GateKeepers.
+	 */
 	public static List<GateKeeper> _GateKeepers = new ArrayList<>();
+	/**
+	 * Field _keyBoxNpc.
+	 */
 	public static Map<Integer, Integer> _keyBoxNpc = new HashMap<>();
+	/**
+	 * Field _victim.
+	 */
 	public static Map<Integer, Integer> _victim = new HashMap<>();
+	/**
+	 * Field _archonSpawned.
+	 */
 	public static Map<Integer, Boolean> _archonSpawned = new HashMap<>();
+	/**
+	 * Field _dukeMobs.
+	 */
 	public static Map<Integer, List<SepulcherMonsterInstance>> _dukeMobs = new HashMap<>();
+	/**
+	 * Field _viscountMobs.
+	 */
 	public static Map<Integer, List<SepulcherMonsterInstance>> _viscountMobs = new HashMap<>();
+	/**
+	 * Field _managers.
+	 */
 	public static List<SepulcherNpcInstance> _managers;
+	/**
+	 * Field _allMobs.
+	 */
 	public static List<NpcInstance> _allMobs = new ArrayList<>();
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class NpcLocation extends Location
 	{
 		/**
 	 * 
 	 */
 		private static final long serialVersionUID = 1L;
+		/**
+		 * Field npcId.
+		 */
 		public int npcId;
 		
+		/**
+		 * Constructor for NpcLocation.
+		 */
 		public NpcLocation()
 		{
 		}
 		
+		/**
+		 * Constructor for NpcLocation.
+		 * @param x int
+		 * @param y int
+		 * @param z int
+		 * @param heading int
+		 * @param npcId int
+		 */
 		public NpcLocation(int x, int y, int z, int heading, int npcId)
 		{
 			super(x, y, z, heading);
@@ -78,6 +150,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Field _startHallSpawn.
+	 */
 	private static Location[] _startHallSpawn =
 	{
 		new Location(181632, -85587, -7218),
@@ -85,6 +160,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		new Location(173217, -86132, -7218),
 		new Location(175608, -82296, -7218)
 	};
+	/**
+	 * Field _shadowSpawnLoc.
+	 */
 	private static NpcLocation[][] _shadowSpawnLoc =
 	{
 		{
@@ -113,6 +191,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		}
 	};
 	
+	/**
+	 * Method init.
+	 */
 	public static void init()
 	{
 		initFixedInfo();
@@ -125,6 +206,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		spawnManagers();
 	}
 	
+	/**
+	 * Method initFixedInfo.
+	 */
 	private static void initFixedInfo()
 	{
 		_startHallSpawns.put(31921, _startHallSpawn[0]);
@@ -204,6 +288,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		_victim.put(18157, 18165);
 	}
 	
+	/**
+	 * Method initLocationShadowSpawns.
+	 */
 	private static void initLocationShadowSpawns()
 	{
 		int locNo = Rnd.get(4);
@@ -224,6 +311,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method loadEmperorsGraveMonsters.
+	 */
 	private static void loadEmperorsGraveMonsters()
 	{
 		_emperorsGraveNpcs.clear();
@@ -231,6 +321,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		_log.info("FourSepulchersManager: loaded " + count + " Emperor's grave NPC spawns.");
 	}
 	
+	/**
+	 * Method loadDukeMonsters.
+	 */
 	private static void loadDukeMonsters()
 	{
 		_dukeFinalMobs.clear();
@@ -243,6 +336,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		_log.info("FourSepulchersManager: loaded " + count + " Church of duke monsters spawns.");
 	}
 	
+	/**
+	 * Method loadMagicalMonsters.
+	 */
 	private static void loadMagicalMonsters()
 	{
 		_magicalMonsters.clear();
@@ -250,6 +346,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		_log.info("FourSepulchersManager: loaded " + count + " magical monsters spawns.");
 	}
 	
+	/**
+	 * Method loadPhysicalMonsters.
+	 */
 	private static void loadPhysicalMonsters()
 	{
 		_physicalMonsters.clear();
@@ -257,6 +356,12 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		_log.info("FourSepulchersManager: loaded " + count + " physical monsters spawns.");
 	}
 	
+	/**
+	 * Method loadSpawn.
+	 * @param table Map<Integer,List<NpcLocation>>
+	 * @param type int
+	 * @return int
+	 */
 	private static int loadSpawn(Map<Integer, List<NpcLocation>> table, int type)
 	{
 		int count = 0;
@@ -300,6 +405,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		return count;
 	}
 	
+	/**
+	 * Method loadMysteriousBox.
+	 */
 	private static void loadMysteriousBox()
 	{
 		_mysteriousBoxSpawns.clear();
@@ -327,6 +435,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method spawnManagers.
+	 */
 	private static void spawnManagers()
 	{
 		_managers = new ArrayList<>();
@@ -364,6 +475,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method closeAllDoors.
+	 */
 	static void closeAllDoors()
 	{
 		for (GateKeeper gk : _GateKeepers)
@@ -379,6 +493,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method deleteAllMobs.
+	 */
 	public static void deleteAllMobs()
 	{
 		for (NpcInstance mob : _allMobs)
@@ -388,6 +505,10 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		_allMobs.clear();
 	}
 	
+	/**
+	 * Method spawnShadow.
+	 * @param npcId int
+	 */
 	public static void spawnShadow(int npcId)
 	{
 		if (!FourSepulchersManager.isAttackTime())
@@ -407,6 +528,9 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		_allMobs.add(mob);
 	}
 	
+	/**
+	 * Method locationShadowSpawns.
+	 */
 	public static void locationShadowSpawns()
 	{
 		int locNo = Rnd.get(4);
@@ -427,6 +551,10 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method spawnEmperorsGraveNpc.
+	 * @param npcId int
+	 */
 	public static void spawnEmperorsGraveNpc(int npcId)
 	{
 		if (!FourSepulchersManager.isAttackTime())
@@ -455,6 +583,10 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method spawnArchonOfHalisha.
+	 * @param npcId int
+	 */
 	public static void spawnArchonOfHalisha(int npcId)
 	{
 		if (!FourSepulchersManager.isAttackTime())
@@ -482,6 +614,10 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		_archonSpawned.put(npcId, true);
 	}
 	
+	/**
+	 * Method spawnExecutionerOfHalisha.
+	 * @param npc NpcInstance
+	 */
 	public static void spawnExecutionerOfHalisha(NpcInstance npc)
 	{
 		if (!FourSepulchersManager.isAttackTime())
@@ -495,6 +631,10 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		_allMobs.add(npc2);
 	}
 	
+	/**
+	 * Method spawnKeyBox.
+	 * @param npc NpcInstance
+	 */
 	public static void spawnKeyBox(NpcInstance npc)
 	{
 		if (!FourSepulchersManager.isAttackTime())
@@ -508,6 +648,10 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		_allMobs.add(npc2);
 	}
 	
+	/**
+	 * Method spawnMonster.
+	 * @param npcId int
+	 */
 	public static void spawnMonster(int npcId)
 	{
 		if (!FourSepulchersManager.isAttackTime())
@@ -588,6 +732,10 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method spawnMysteriousBox.
+	 * @param npcId int
+	 */
 	public static void spawnMysteriousBox(int npcId)
 	{
 		if (!FourSepulchersManager.isAttackTime())
@@ -605,6 +753,11 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		_allMobs.add(npc);
 	}
 	
+	/**
+	 * Method isDukeMobsAnnihilated.
+	 * @param npcId int
+	 * @return boolean
+	 */
 	public static synchronized boolean isDukeMobsAnnihilated(int npcId)
 	{
 		List<SepulcherMonsterInstance> mobs = _dukeMobs.get(npcId);
@@ -622,6 +775,11 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		return true;
 	}
 	
+	/**
+	 * Method isViscountMobsAnnihilated.
+	 * @param npcId int
+	 * @return boolean
+	 */
 	public static synchronized boolean isViscountMobsAnnihilated(int npcId)
 	{
 		List<SepulcherMonsterInstance> mobs = _viscountMobs.get(npcId);
@@ -639,6 +797,11 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		return true;
 	}
 	
+	/**
+	 * Method isShadowAlive.
+	 * @param id int
+	 * @return boolean
+	 */
 	public static boolean isShadowAlive(int id)
 	{
 		NpcLocation loc = _shadowSpawns.get(id);
@@ -656,6 +819,10 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		return false;
 	}
 	
+	/**
+	 * Method isKeyBoxMobSpawned.
+	 * @return boolean
+	 */
 	public static boolean isKeyBoxMobSpawned()
 	{
 		for (NpcInstance n : _allMobs)
@@ -668,30 +835,60 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		return false;
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class GateKeeper extends Location
 	{
 		/**
 	 * 
 	 */
 		private static final long serialVersionUID = 1L;
+		/**
+		 * Field door.
+		 */
 		public final DoorInstance door;
+		/**
+		 * Field template.
+		 */
 		public final NpcTemplate template;
 		
+		/**
+		 * Constructor for GateKeeper.
+		 * @param npcId int
+		 * @param _x int
+		 * @param _y int
+		 * @param _z int
+		 * @param _h int
+		 * @param doorId int
+		 */
 		public GateKeeper(int npcId, int _x, int _y, int _z, int _h, int doorId)
 		{
 			super(_x, _y, _z, _h);

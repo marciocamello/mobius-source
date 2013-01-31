@@ -16,13 +16,23 @@ import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestWithDrawalParty extends L2GameClientPacket
 {
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -39,13 +49,13 @@ public class RequestWithDrawalParty extends L2GameClientPacket
 		}
 		if (activeChar.isInOlympiadMode())
 		{
-			activeChar.sendMessage("Вы не можете сейчас выйти из группы.");
+			activeChar.sendMessage("Вы не можете �?ейча�? выйти из группы.");
 			return;
 		}
 		Reflection r = activeChar.getParty().getReflection();
 		if ((r != null) && activeChar.isInCombat())
 		{
-			activeChar.sendMessage("Вы не можете сейчас выйти из группы.");
+			activeChar.sendMessage("Вы не можете �?ейча�? выйти из группы.");
 		}
 		else
 		{

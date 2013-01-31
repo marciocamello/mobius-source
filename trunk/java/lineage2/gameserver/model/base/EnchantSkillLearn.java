@@ -15,17 +15,55 @@ package lineage2.gameserver.model.base;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EnchantSkillLearn
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _level.
+	 */
 	private final int _level;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _type.
+	 */
 	private final String _type;
+	/**
+	 * Field _baseLvl.
+	 */
 	private final int _baseLvl;
+	/**
+	 * Field _maxLvl.
+	 */
 	private final int _maxLvl;
+	/**
+	 * Field _minSkillLevel.
+	 */
 	private final int _minSkillLevel;
+	/**
+	 * Field _costMul.
+	 */
 	private final int _costMul;
 	
+	/**
+	 * Constructor for EnchantSkillLearn.
+	 * @param id int
+	 * @param lvl int
+	 * @param name String
+	 * @param type String
+	 * @param minSkillLvl int
+	 * @param baseLvl int
+	 * @param maxLvl int
+	 */
 	public EnchantSkillLearn(int id, int lvl, String name, String type, int minSkillLvl, int baseLvl, int maxLvl)
 	{
 		_id = id;
@@ -38,41 +76,72 @@ public final class EnchantSkillLearn
 		_costMul = _maxLvl == 15 ? 5 : 1;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		return _level;
 	}
 	
+	/**
+	 * Method getBaseLevel.
+	 * @return int
+	 */
 	public int getBaseLevel()
 	{
 		return _baseLvl;
 	}
 	
+	/**
+	 * Method getMinSkillLevel.
+	 * @return int
+	 */
 	public int getMinSkillLevel()
 	{
 		return _minSkillLevel;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method getCostMult.
+	 * @return int
+	 */
 	public int getCostMult()
 	{
 		return _costMul;
 	}
 	
+	/**
+	 * Method getCost.
+	 * @return int[]
+	 */
 	public int[] getCost()
 	{
 		return SkillTable.getInstance().getInfo(_id, 1).isOffensive() ? _priceCombat[_level % 100] : _priceBuff[_level % 100];
 	}
 	
+	/**
+	 * Field _chance.
+	 */
 	private static final int[][] _chance =
 	{
 		{},
@@ -437,6 +506,9 @@ public final class EnchantSkillLearn
 			24
 		},
 	};
+	/**
+	 * Field _chance15.
+	 */
 	private static final int[][] _chance15 =
 	{
 		{},
@@ -621,6 +693,9 @@ public final class EnchantSkillLearn
 			54
 		},
 	};
+	/**
+	 * Field _chance10.
+	 */
 	private static final int[][] _chance10 =
 	{
 		{},
@@ -795,6 +870,9 @@ public final class EnchantSkillLearn
 			54
 		},
 	};
+	/**
+	 * Field _priceBuff.
+	 */
 	private static final int[][] _priceBuff =
 	{
 		{},
@@ -919,6 +997,9 @@ public final class EnchantSkillLearn
 			566426
 		},
 	};
+	/**
+	 * Field _priceCombat.
+	 */
 	private static final int[][] _priceCombat =
 	{
 		{},
@@ -1044,6 +1125,11 @@ public final class EnchantSkillLearn
 		},
 	};
 	
+	/**
+	 * Method getRate.
+	 * @param ply Player
+	 * @return int
+	 */
 	public int getRate(Player ply)
 	{
 		int level = _level % 100;
@@ -1068,16 +1154,28 @@ public final class EnchantSkillLearn
 		return _chance[level][chance];
 	}
 	
+	/**
+	 * Method getMaxLevel.
+	 * @return int
+	 */
 	public int getMaxLevel()
 	{
 		return _maxLvl;
 	}
 	
+	/**
+	 * Method getType.
+	 * @return String
+	 */
 	public String getType()
 	{
 		return _type;
 	}
 	
+	/**
+	 * Method hashCode.
+	 * @return int
+	 */
 	@Override
 	public int hashCode()
 	{
@@ -1088,6 +1186,11 @@ public final class EnchantSkillLearn
 		return result;
 	}
 	
+	/**
+	 * Method equals.
+	 * @param obj Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object obj)
 	{

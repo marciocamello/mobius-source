@@ -23,15 +23,31 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.PositionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectFear extends Effect
 {
+	/**
+	 * Field FEAR_RANGE. (value is 900.0)
+	 */
 	public static final double FEAR_RANGE = 900;
 	
+	/**
+	 * Constructor for EffectFear.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectFear(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
@@ -58,6 +74,9 @@ public final class EffectFear extends Effect
 		return super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -71,6 +90,9 @@ public final class EffectFear extends Effect
 		onActionTime();
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -79,6 +101,10 @@ public final class EffectFear extends Effect
 		_effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

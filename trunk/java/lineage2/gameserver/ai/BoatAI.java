@@ -15,13 +15,24 @@ package lineage2.gameserver.ai;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.entity.boat.Boat;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BoatAI extends CharacterAI
 {
+	/**
+	 * Constructor for BoatAI.
+	 * @param actor Creature
+	 */
 	public BoatAI(Creature actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
@@ -33,6 +44,10 @@ public class BoatAI extends CharacterAI
 		actor.onEvtArrived();
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{

@@ -29,10 +29,20 @@ import lineage2.loginserver.serverpackets.LoginFail.LoginFailReason;
 import lineage2.loginserver.serverpackets.LoginOk;
 import lineage2.loginserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestAuthLogin extends L2LoginClientPacket
 {
+	/**
+	 * Field _raw.
+	 */
 	private final byte[] _raw = new byte[128];
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -47,6 +57,10 @@ public class RequestAuthLogin extends L2LoginClientPacket
 		readC();
 	}
 	
+	/**
+	 * Method runImpl.
+	 * @throws Exception
+	 */
 	@Override
 	protected void runImpl() throws Exception
 	{

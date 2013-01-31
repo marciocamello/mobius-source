@@ -51,19 +51,41 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Wedding implements IVoicedCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static class CoupleAnswerListener implements OnAnswerListener
 	{
+		/**
+		 * Field _playerRef1.
+		 */
 		private final HardReference<Player> _playerRef1;
+		/**
+		 * Field _playerRef2.
+		 */
 		private final HardReference<Player> _playerRef2;
 		
+		/**
+		 * Constructor for CoupleAnswerListener.
+		 * @param player1 Player
+		 * @param player2 Player
+		 */
 		public CoupleAnswerListener(Player player1, Player player2)
 		{
 			_playerRef1 = player1.getRef();
 			_playerRef2 = player2.getRef();
 		}
 		
+		/**
+		 * Method sayYes.
+		 * @see lineage2.gameserver.listener.actor.player.OnAnswerListener#sayYes()
+		 */
 		@Override
 		public void sayYes()
 		{
@@ -76,6 +98,10 @@ public class Wedding implements IVoicedCommandHandler
 			player1.sendMessage(new CustomMessage("lineage2.gameserver.model.L2Player.EngageAnswerYes", player2));
 		}
 		
+		/**
+		 * Method sayNo.
+		 * @see lineage2.gameserver.listener.actor.player.OnAnswerListener#sayNo()
+		 */
 		@Override
 		public void sayNo()
 		{
@@ -88,7 +114,13 @@ public class Wedding implements IVoicedCommandHandler
 		}
 	}
 	
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Wedding.class);
+	/**
+	 * Field _voicedCommands.
+	 */
 	private static String[] _voicedCommands =
 	{
 		"divorce",
@@ -96,6 +128,13 @@ public class Wedding implements IVoicedCommandHandler
 		"gotolove"
 	};
 	
+	/**
+	 * Method useVoicedCommand.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param target String
+	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String target)
 	{
@@ -118,6 +157,11 @@ public class Wedding implements IVoicedCommandHandler
 		return false;
 	}
 	
+	/**
+	 * Method divorce.
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	public boolean divorce(Player activeChar)
 	{
 		if (activeChar.getPartnerId() == 0)
@@ -162,6 +206,11 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method engage.
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	public boolean engage(final Player activeChar)
 	{
 		if (activeChar.getTarget() == null)
@@ -274,6 +323,11 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method goToLove.
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	public boolean goToLove(Player activeChar)
 	{
 		if (!activeChar.isMaried())
@@ -326,17 +380,34 @@ public class Wedding implements IVoicedCommandHandler
 		return true;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class EscapeFinalizer extends RunnableImpl
 	{
+		/**
+		 * Field _activeChar.
+		 */
 		private final Player _activeChar;
+		/**
+		 * Field _loc.
+		 */
 		private final Location _loc;
 		
+		/**
+		 * Constructor for EscapeFinalizer.
+		 * @param activeChar Player
+		 * @param loc Location
+		 */
 		EscapeFinalizer(Player activeChar, Location loc)
 		{
 			_activeChar = activeChar;
 			_loc = loc;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -349,21 +420,34 @@ public class Wedding implements IVoicedCommandHandler
 		}
 	}
 	
+	/**
+	 * Method getVoicedCommandList.
+	 * @return String[] * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
+	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{
 		return _voicedCommands;
 	}
 	
+	/**
+	 * Method onLoad.
+	 */
 	public void onLoad()
 	{
 		VoicedCommandHandler.getInstance().registerVoicedCommandHandler(this);
 	}
 	
+	/**
+	 * Method onReload.
+	 */
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 */
 	public void onShutdown()
 	{
 	}

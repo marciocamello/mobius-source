@@ -31,10 +31,23 @@ import lineage2.loginserver.gameservercon.gspackets.SetAccountInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PacketHandler
 {
+	/**
+	 * Field _log.
+	 */
 	private static Logger _log = LoggerFactory.getLogger(PacketHandler.class);
 	
+	/**
+	 * Method handlePacket.
+	 * @param gs GameServer
+	 * @param buf ByteBuffer
+	 * @return ReceivablePacket
+	 */
 	public static ReceivablePacket handlePacket(GameServer gs, ByteBuffer buf)
 	{
 		ReceivablePacket packet = null;

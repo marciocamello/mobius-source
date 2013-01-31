@@ -25,12 +25,28 @@ import lineage2.gameserver.network.serverpackets.ExReplyRegisterDominion;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExJoinDominionWar extends L2GameClientPacket
 {
+	/**
+	 * Field _dominionId.
+	 */
 	private int _dominionId;
+	/**
+	 * Field _clanRegistration.
+	 */
 	private boolean _clanRegistration;
+	/**
+	 * Field _isRegistration.
+	 */
 	private boolean _isRegistration;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -39,6 +55,9 @@ public class RequestExJoinDominionWar extends L2GameClientPacket
 		_isRegistration = readD() == 1;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

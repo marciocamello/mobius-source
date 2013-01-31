@@ -17,15 +17,41 @@ import lineage2.gameserver.model.entity.boat.AirShip;
 import lineage2.gameserver.model.entity.boat.ClanAirShip;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExAirShipInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _speed2. Field _speed1. Field _objId.
+	 */
 	private final int _objId, _speed1, _speed2;
+	/**
+	 * Field _fuel.
+	 */
 	private int _fuel;
+	/**
+	 * Field _maxFuel.
+	 */
 	private int _maxFuel;
+	/**
+	 * Field _driverObjId.
+	 */
 	private int _driverObjId;
+	/**
+	 * Field _controlKey.
+	 */
 	private int _controlKey;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for ExAirShipInfo.
+	 * @param ship AirShip
+	 */
 	public ExAirShipInfo(AirShip ship)
 	{
 		_objId = ship.getObjectId();
@@ -42,6 +68,9 @@ public class ExAirShipInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

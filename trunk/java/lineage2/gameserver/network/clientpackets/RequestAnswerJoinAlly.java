@@ -18,16 +18,29 @@ import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.model.pledge.Alliance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestAnswerJoinAlly extends L2GameClientPacket
 {
+	/**
+	 * Field _response.
+	 */
 	private int _response;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_response = _buf.remaining() >= 4 ? readD() : 0;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

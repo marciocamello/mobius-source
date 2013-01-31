@@ -16,27 +16,54 @@ import java.math.BigInteger;
 import java.security.KeyPair;
 import java.security.interfaces.RSAPublicKey;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ScrambledKeyPair
 {
+	/**
+	 * Field _pair.
+	 */
 	private final KeyPair _pair;
+	/**
+	 * Field _scrambledModulus.
+	 */
 	private final byte[] _scrambledModulus;
 	
+	/**
+	 * Constructor for ScrambledKeyPair.
+	 * @param pPair KeyPair
+	 */
 	public ScrambledKeyPair(KeyPair pPair)
 	{
 		_pair = pPair;
 		_scrambledModulus = scrambleModulus(((RSAPublicKey) _pair.getPublic()).getModulus());
 	}
 	
+	/**
+	 * Method getKeyPair.
+	 * @return KeyPair
+	 */
 	public KeyPair getKeyPair()
 	{
 		return _pair;
 	}
 	
+	/**
+	 * Method getScrambledModulus.
+	 * @return byte[]
+	 */
 	public byte[] getScrambledModulus()
 	{
 		return _scrambledModulus;
 	}
 	
+	/**
+	 * Method scrambleModulus.
+	 * @param modulus BigInteger
+	 * @return byte[]
+	 */
 	private final static byte[] scrambleModulus(BigInteger modulus)
 	{
 		byte[] scrambledMod = modulus.toByteArray();

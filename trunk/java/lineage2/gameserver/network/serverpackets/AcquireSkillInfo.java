@@ -19,12 +19,30 @@ import java.util.List;
 import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.model.base.AcquireType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AcquireSkillInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _learn.
+	 */
 	private final SkillLearn _learn;
+	/**
+	 * Field _type.
+	 */
 	private final AcquireType _type;
+	/**
+	 * Field _reqs.
+	 */
 	private List<Require> _reqs = Collections.emptyList();
 	
+	/**
+	 * Constructor for AcquireSkillInfo.
+	 * @param type AcquireType
+	 * @param learn SkillLearn
+	 */
 	public AcquireSkillInfo(AcquireType type, SkillLearn learn)
 	{
 		_type = type;
@@ -36,6 +54,9 @@ public class AcquireSkillInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	public void writeImpl()
 	{
@@ -54,13 +75,35 @@ public class AcquireSkillInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class Require
 	{
+		/**
+		 * Field itemId.
+		 */
 		public int itemId;
+		/**
+		 * Field count.
+		 */
 		public long count;
+		/**
+		 * Field type.
+		 */
 		public int type;
+		/**
+		 * Field unk.
+		 */
 		public int unk;
 		
+		/**
+		 * Constructor for Require.
+		 * @param pType int
+		 * @param pItemId int
+		 * @param pCount long
+		 * @param pUnk int
+		 */
 		public Require(int pType, int pItemId, long pCount, int pUnk)
 		{
 			itemId = pItemId;

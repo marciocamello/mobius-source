@@ -16,13 +16,23 @@ import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.ReceivablePacket;
 import lineage2.gameserver.network.loginservercon.gspackets.PingResponse;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PingRequest extends ReceivablePacket
 {
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	public void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

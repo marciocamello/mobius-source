@@ -23,6 +23,10 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WeaverInstance extends MerchantInstance
 {
 	/**
@@ -30,11 +34,21 @@ public class WeaverInstance extends MerchantInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for WeaverInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public WeaverInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -336,6 +350,11 @@ public class WeaverInstance extends MerchantInstance
 		}
 	}
 	
+	/**
+	 * Method informFail.
+	 * @param player Player
+	 * @param itemId int
+	 */
 	private void informFail(Player player, int itemId)
 	{
 		Functions.npcSay(this, NpcString.WHAT_A_PREDICAMENT_MY_ATTEMPTS_WERE_UNSUCCESSUFUL);

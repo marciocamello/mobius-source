@@ -24,6 +24,10 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SystemMessage extends L2GameServerPacket
 {
 	private static final int TYPE_DAMAGE = 16;
@@ -3093,45 +3097,82 @@ public class SystemMessage extends L2GameServerPacket
 	public static final int LOOKING_FOR_A_PLAYER_WHO_WILL_REPLACE_S1 = 3445;
 	public static final int STOPPED_LOOKING_FOR_A_PLAYER_WHO_WILL_REPLACE_S1 = 3446;
 	
+	/**
+	 * Constructor for SystemMessage.
+	 * @param msg SystemMsg
+	 */
 	public SystemMessage(SystemMsg msg)
 	{
 		_messageId = msg.getId();
 	}
 	
+	/**
+	 * Constructor for SystemMessage.
+	 * @param messageId int
+	 */
 	public SystemMessage(int messageId)
 	{
 		_messageId = messageId;
 	}
 	
+	/**
+	 * Constructor for SystemMessage.
+	 * @param msg String
+	 */
 	public SystemMessage(String msg)
 	{
 		this(S1);
 		addString(msg);
 	}
 	
+	/**
+	 * Method obtainItemsByMail.
+	 * @param item ItemInstance
+	 * @return SystemMessage
+	 */
 	public static SystemMessage obtainItemsByMail(ItemInstance item)
 	{
 		return new SystemMessage(SystemMessage.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getItemId()).addNumber(item.getCount());
 	}
 	
+	/**
+	 * Method addString.
+	 * @param text String
+	 * @return SystemMessage
+	 */
 	public SystemMessage addString(String text)
 	{
 		args.add(new Arg(TYPE_TEXT, StringUtils.defaultString(text)));
 		return this;
 	}
 	
+	/**
+	 * Method addNumber.
+	 * @param number int
+	 * @return SystemMessage
+	 */
 	public SystemMessage addNumber(int number)
 	{
 		args.add(new Arg(TYPE_NUMBER, number));
 		return this;
 	}
 	
+	/**
+	 * Method addNumber.
+	 * @param number long
+	 * @return SystemMessage
+	 */
 	public SystemMessage addNumber(long number)
 	{
 		args.add(new Arg(TYPE_LONG, number));
 		return this;
 	}
 	
+	/**
+	 * Method addName.
+	 * @param cha Creature
+	 * @return SystemMessage
+	 */
 	public SystemMessage addName(Creature cha)
 	{
 		if (cha == null)
@@ -3149,30 +3190,56 @@ public class SystemMessage extends L2GameServerPacket
 		return addNpcName(cha.getNpcId());
 	}
 	
+	/**
+	 * Method addDoorName.
+	 * @param id int
+	 * @return SystemMessage
+	 */
 	public SystemMessage addDoorName(int id)
 	{
 		args.add(new Arg(TYPE_DOOR_NAME, new Integer(id)));
 		return this;
 	}
 	
+	/**
+	 * Method addNpcName.
+	 * @param id int
+	 * @return SystemMessage
+	 */
 	public SystemMessage addNpcName(int id)
 	{
 		args.add(new Arg(TYPE_NPC_NAME, new Integer(1000000 + id)));
 		return this;
 	}
 	
+	/**
+	 * Method addItemName.
+	 * @param id int
+	 * @return SystemMessage
+	 */
 	public SystemMessage addItemName(int id)
 	{
 		args.add(new Arg(TYPE_ITEM_NAME, id));
 		return this;
 	}
 	
+	/**
+	 * Method addZoneName.
+	 * @param loc Location
+	 * @return SystemMessage
+	 */
 	public SystemMessage addZoneName(Location loc)
 	{
 		args.add(new Arg(TYPE_ZONE_NAME, loc));
 		return this;
 	}
 	
+	/**
+	 * Method addSkillName.
+	 * @param id int
+	 * @param level int
+	 * @return SystemMessage
+	 */
 	public SystemMessage addSkillName(int id, int level)
 	{
 		args.add(new Arg(TYPE_SKILL_NAME, new int[]
@@ -3183,36 +3250,68 @@ public class SystemMessage extends L2GameServerPacket
 		return this;
 	}
 	
+	/**
+	 * Method addElemntal.
+	 * @param type int
+	 * @return SystemMessage
+	 */
 	public SystemMessage addElemntal(int type)
 	{
 		args.add(new Arg(TYPE_ELEMENT_NAME, type));
 		return this;
 	}
 	
+	/**
+	 * Method addClassName.
+	 * @param id int
+	 * @return SystemMessage
+	 */
 	public SystemMessage addClassName(int id)
 	{
 		args.add(new Arg(TYPE_CLASS_NAME, id));
 		return this;
 	}
 	
+	/**
+	 * Method addSystemString.
+	 * @param type int
+	 * @return SystemMessage
+	 */
 	public SystemMessage addSystemString(int type)
 	{
 		args.add(new Arg(TYPE_SYSTEM_STRING, type));
 		return this;
 	}
 	
+	/**
+	 * Method addInstanceName.
+	 * @param type int
+	 * @return SystemMessage
+	 */
 	public SystemMessage addInstanceName(int type)
 	{
 		args.add(new Arg(TYPE_INSTANCE_NAME, type));
 		return this;
 	}
 	
+	/**
+	 * Method addFortId.
+	 * @param number int
+	 * @return SystemMessage
+	 */
 	public SystemMessage addFortId(int number)
 	{
 		args.add(new Arg(TYPE_CASTLE_NAME, number));
 		return this;
 	}
 	
+	/**
+	 * Method addDamage.
+	 * @param targetid Creature
+	 * @param attakerid Creature
+	 * @param damage int
+	 * @return SystemMessage
+	 */
 	public SystemMessage addDamage(Creature targetid, Creature attakerid, int damage)
 	{
 		args.add(new Arg(TYPE_DAMAGE, new int[]
@@ -3224,6 +3323,9 @@ public class SystemMessage extends L2GameServerPacket
 		return this;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -3298,11 +3400,25 @@ public class SystemMessage extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Arg
 	{
+		/**
+		 * Field type.
+		 */
 		public final int type;
+		/**
+		 * Field obj.
+		 */
 		public final Object obj;
 		
+		/**
+		 * Constructor for Arg.
+		 * @param _type int
+		 * @param _obj Object
+		 */
 		Arg(int _type, Object _obj)
 		{
 			type = _type;

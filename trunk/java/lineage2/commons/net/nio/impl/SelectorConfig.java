@@ -14,15 +14,46 @@ package lineage2.commons.net.nio.impl;
 
 import java.nio.ByteOrder;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SelectorConfig
 {
+	/**
+	 * Field READ_BUFFER_SIZE.
+	 */
 	public int READ_BUFFER_SIZE = 65536;
+	/**
+	 * Field WRITE_BUFFER_SIZE.
+	 */
 	public int WRITE_BUFFER_SIZE = 131072;
+	/**
+	 * Field MAX_SEND_PER_PASS.
+	 */
 	public int MAX_SEND_PER_PASS = 32;
+	/**
+	 * Field SLEEP_TIME.
+	 */
 	public long SLEEP_TIME = 10;
+	/**
+	 * Field INTEREST_DELAY.
+	 */
 	public long INTEREST_DELAY = 30;
+	/**
+	 * Field HEADER_SIZE.
+	 */
 	public int HEADER_SIZE = 2;
+	/**
+	 * Field PACKET_SIZE.
+	 */
 	public int PACKET_SIZE = 32768;
+	/**
+	 * Field HELPER_BUFFER_COUNT.
+	 */
 	public int HELPER_BUFFER_COUNT = 64;
+	/**
+	 * Field BYTE_ORDER.
+	 */
 	public ByteOrder BYTE_ORDER = ByteOrder.LITTLE_ENDIAN;
 }

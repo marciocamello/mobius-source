@@ -17,39 +17,76 @@ import java.nio.ByteBuffer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class SendablePacket extends lineage2.commons.net.nio.SendablePacket<GameServer>
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SendablePacket.class);
+	/**
+	 * Field _gs.
+	 */
 	protected GameServer _gs;
+	/**
+	 * Field _buf.
+	 */
 	protected ByteBuffer _buf;
 	
+	/**
+	 * Method setByteBuffer.
+	 * @param buf ByteBuffer
+	 */
 	protected void setByteBuffer(ByteBuffer buf)
 	{
 		_buf = buf;
 	}
 	
+	/**
+	 * Method getByteBuffer.
+	 * @return ByteBuffer
+	 */
 	@Override
 	protected ByteBuffer getByteBuffer()
 	{
 		return _buf;
 	}
 	
+	/**
+	 * Method setClient.
+	 * @param gs GameServer
+	 */
 	protected void setClient(GameServer gs)
 	{
 		_gs = gs;
 	}
 	
+	/**
+	 * Method getClient.
+	 * @return GameServer
+	 */
 	@Override
 	public GameServer getClient()
 	{
 		return _gs;
 	}
 	
+	/**
+	 * Method getGameServer.
+	 * @return GameServer
+	 */
 	public GameServer getGameServer()
 	{
 		return getClient();
 	}
 	
+	/**
+	 * Method write.
+	 * @return boolean
+	 */
 	@Override
 	public boolean write()
 	{
@@ -64,5 +101,8 @@ public abstract class SendablePacket extends lineage2.commons.net.nio.SendablePa
 		return true;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	protected abstract void writeImpl();
 }

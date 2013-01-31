@@ -32,15 +32,37 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.manor.CropProcure;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("unused")
 public class RequestProcureCrop extends L2GameClientPacket
 {
+	/**
+	 * Field _manorId.
+	 */
 	private int _manorId;
+	/**
+	 * Field _count.
+	 */
 	private int _count;
+	/**
+	 * Field _items.
+	 */
 	private int[] _items;
+	/**
+	 * Field _itemQ.
+	 */
 	private long[] _itemQ;
+	/**
+	 * Field _procureList.
+	 */
 	private List<CropProcure> _procureList = Collections.emptyList();
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -66,6 +88,9 @@ public class RequestProcureCrop extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

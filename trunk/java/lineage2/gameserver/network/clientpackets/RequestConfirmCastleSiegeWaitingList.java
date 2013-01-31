@@ -23,12 +23,28 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.CastleSiegeDefenderList;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestConfirmCastleSiegeWaitingList extends L2GameClientPacket
 {
+	/**
+	 * Field _approved.
+	 */
 	private boolean _approved;
+	/**
+	 * Field _unitId.
+	 */
 	private int _unitId;
+	/**
+	 * Field _clanId.
+	 */
 	private int _clanId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -37,6 +53,9 @@ public class RequestConfirmCastleSiegeWaitingList extends L2GameClientPacket
 		_approved = readD() == 1;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

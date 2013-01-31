@@ -17,11 +17,24 @@ import lineage2.loginserver.SessionKey;
 import lineage2.loginserver.serverpackets.LoginFail.LoginFailReason;
 import lineage2.loginserver.serverpackets.ServerList;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestServerList extends L2LoginClientPacket
 {
+	/**
+	 * Field _loginOkID1.
+	 */
 	private int _loginOkID1;
+	/**
+	 * Field _loginOkID2.
+	 */
 	private int _loginOkID2;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -29,6 +42,9 @@ public class RequestServerList extends L2LoginClientPacket
 		_loginOkID2 = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

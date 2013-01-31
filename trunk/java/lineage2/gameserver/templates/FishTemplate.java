@@ -12,20 +12,71 @@
  */
 package lineage2.gameserver.templates;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FishTemplate
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _level.
+	 */
 	private final int _level;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _HP.
+	 */
 	private final int _HP;
+	/**
+	 * Field _HpRegen.
+	 */
 	private final int _HpRegen;
+	/**
+	 * Field _type.
+	 */
 	private final int _type;
+	/**
+	 * Field _group.
+	 */
 	private final int _group;
+	/**
+	 * Field _fish_guts.
+	 */
 	private final int _fish_guts;
+	/**
+	 * Field _guts_check_time.
+	 */
 	private final int _guts_check_time;
+	/**
+	 * Field _wait_time.
+	 */
 	private final int _wait_time;
+	/**
+	 * Field _combat_time.
+	 */
 	private final int _combat_time;
 	
+	/**
+	 * Constructor for FishTemplate.
+	 * @param id int
+	 * @param lvl int
+	 * @param name String
+	 * @param HP int
+	 * @param HpRegen int
+	 * @param type int
+	 * @param group int
+	 * @param fish_guts int
+	 * @param guts_check_time int
+	 * @param wait_time int
+	 * @param combat_time int
+	 */
 	public FishTemplate(int id, int lvl, String name, int HP, int HpRegen, int type, int group, int fish_guts, int guts_check_time, int wait_time, int combat_time)
 	{
 		_id = id;
@@ -41,56 +92,100 @@ public class FishTemplate
 		_combat_time = combat_time;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		return _level;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method getHP.
+	 * @return int
+	 */
 	public int getHP()
 	{
 		return _HP;
 	}
 	
+	/**
+	 * Method getHpRegen.
+	 * @return int
+	 */
 	public int getHpRegen()
 	{
 		return _HpRegen;
 	}
 	
+	/**
+	 * Method getType.
+	 * @return int
+	 */
 	public int getType()
 	{
 		return _type;
 	}
 	
+	/**
+	 * Method getGroup.
+	 * @return int
+	 */
 	public int getGroup()
 	{
 		return _group;
 	}
 	
+	/**
+	 * Method getFishGuts.
+	 * @return int
+	 */
 	public int getFishGuts()
 	{
 		return _fish_guts;
 	}
 	
+	/**
+	 * Method getGutsCheckTime.
+	 * @return int
+	 */
 	public int getGutsCheckTime()
 	{
 		return _guts_check_time;
 	}
 	
+	/**
+	 * Method getWaitTime.
+	 * @return int
+	 */
 	public int getWaitTime()
 	{
 		return _wait_time;
 	}
 	
+	/**
+	 * Method getCombatTime.
+	 * @return int
+	 */
 	public int getCombatTime()
 	{
 		return _combat_time;

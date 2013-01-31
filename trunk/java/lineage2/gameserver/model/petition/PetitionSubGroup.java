@@ -15,10 +15,22 @@ package lineage2.gameserver.model.petition;
 import lineage2.gameserver.handler.petition.IPetitionHandler;
 import lineage2.gameserver.scripts.Scripts;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetitionSubGroup extends PetitionGroup
 {
+	/**
+	 * Field _handler.
+	 */
 	private final IPetitionHandler _handler;
 	
+	/**
+	 * Constructor for PetitionSubGroup.
+	 * @param id int
+	 * @param handler String
+	 */
 	public PetitionSubGroup(int id, String handler)
 	{
 		super(id);
@@ -33,6 +45,10 @@ public class PetitionSubGroup extends PetitionGroup
 		}
 	}
 	
+	/**
+	 * Method getHandler.
+	 * @return IPetitionHandler
+	 */
 	public IPetitionHandler getHandler()
 	{
 		return _handler;

@@ -29,18 +29,47 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CommandChannel implements PlayerGroup
 {
+	/**
+	 * Field STRATEGY_GUIDE_ID. (value is 8871)
+	 */
 	public static final int STRATEGY_GUIDE_ID = 8871;
+	/**
+	 * Field CLAN_IMPERIUM_ID. (value is 391)
+	 */
 	public static final int CLAN_IMPERIUM_ID = 391;
 	
+	/**
+	 * Field _commandChannelParties.
+	 */
 	private final List<Party> _commandChannelParties = new CopyOnWriteArrayList<>();
+	/**
+	 * Field _commandChannelLeader.
+	 */
 	private Player _commandChannelLeader;
+	/**
+	 * Field _commandChannelLvl.
+	 */
 	private int _commandChannelLvl;
+	/**
+	 * Field _reflection.
+	 */
 	private Reflection _reflection;
 	
+	/**
+	 * Field _matchingRoom.
+	 */
 	private MatchingRoom _matchingRoom;
 	
+	/**
+	 * Constructor for CommandChannel.
+	 * @param leader Player
+	 */
 	public CommandChannel(Player leader)
 	{
 		_commandChannelLeader = leader;
@@ -50,6 +79,10 @@ public class CommandChannel implements PlayerGroup
 		broadCast(ExMPCCOpen.STATIC);
 	}
 	
+	/**
+	 * Method addParty.
+	 * @param party Party
+	 */
 	public void addParty(Party party)
 	{
 		broadCast(new ExMPCCPartyInfoUpdate(party, 1));
@@ -67,6 +100,10 @@ public class CommandChannel implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method removeParty.
+	 * @param party Party
+	 */
 	public void removeParty(Party party)
 	{
 		_commandChannelParties.remove(party);
@@ -99,6 +136,9 @@ public class CommandChannel implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method disbandChannel.
+	 */
 	public void disbandChannel()
 	{
 		broadCast(Msg.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED);
@@ -126,6 +166,10 @@ public class CommandChannel implements PlayerGroup
 		_commandChannelLeader = null;
 	}
 	
+	/**
+	 * Method getMemberCount.
+	 * @return int
+	 */
 	public int getMemberCount()
 	{
 		int count = 0;
@@ -136,6 +180,11 @@ public class CommandChannel implements PlayerGroup
 		return count;
 	}
 	
+	/**
+	 * Method broadCast.
+	 * @param gsp IStaticPacket[]
+	 * @see lineage2.gameserver.model.PlayerGroup#broadCast(IStaticPacket[])
+	 */
 	@Override
 	public void broadCast(IStaticPacket... gsp)
 	{
@@ -145,6 +194,10 @@ public class CommandChannel implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method broadcastToChannelPartyLeaders.
+	 * @param gsp L2GameServerPacket
+	 */
 	public void broadcastToChannelPartyLeaders(L2GameServerPacket gsp)
 	{
 		for (Party party : _commandChannelParties)
@@ -157,11 +210,19 @@ public class CommandChannel implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method getParties.
+	 * @return List<Party>
+	 */
 	public List<Party> getParties()
 	{
 		return _commandChannelParties;
 	}
 	
+	/**
+	 * Method getMembers.
+	 * @return List<Player>
+	 */
 	@Deprecated
 	public List<Player> getMembers()
 	{
@@ -173,6 +234,10 @@ public class CommandChannel implements PlayerGroup
 		return members;
 	}
 	
+	/**
+	 * Method iterator.
+	 * @return Iterator<Player> * @see java.lang.Iterable#iterator()
+	 */
 	@Override
 	public Iterator<Player> iterator()
 	{
@@ -184,22 +249,39 @@ public class CommandChannel implements PlayerGroup
 		return new JoinedIterator<>(iterators);
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		return _commandChannelLvl;
 	}
 	
+	/**
+	 * Method setChannelLeader.
+	 * @param newLeader Player
+	 */
 	public void setChannelLeader(Player newLeader)
 	{
 		_commandChannelLeader = newLeader;
 		broadCast(new SystemMessage(SystemMessage.COMMAND_CHANNEL_AUTHORITY_HAS_BEEN_TRANSFERRED_TO_S1).addString(newLeader.getName()));
 	}
 	
+	/**
+	 * Method getChannelLeader.
+	 * @return Player
+	 */
 	public Player getChannelLeader()
 	{
 		return _commandChannelLeader;
 	}
 	
+	/**
+	 * Method meetRaidWarCondition.
+	 * @param npc NpcFriendInstance
+	 * @return boolean
+	 */
 	public boolean meetRaidWarCondition(NpcFriendInstance npc)
 	{
 		if (!npc.isRaid())
@@ -225,6 +307,9 @@ public class CommandChannel implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method refreshLevel.
+	 */
 	private void refreshLevel()
 	{
 		_commandChannelLvl = 0;
@@ -237,21 +322,38 @@ public class CommandChannel implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method isInReflection.
+	 * @return boolean
+	 */
 	public boolean isInReflection()
 	{
 		return _reflection != null;
 	}
 	
+	/**
+	 * Method setReflection.
+	 * @param reflection Reflection
+	 */
 	public void setReflection(Reflection reflection)
 	{
 		_reflection = reflection;
 	}
 	
+	/**
+	 * Method getReflection.
+	 * @return Reflection
+	 */
 	public Reflection getReflection()
 	{
 		return _reflection;
 	}
 	
+	/**
+	 * Method checkAuthority.
+	 * @param creator Player
+	 * @return boolean
+	 */
 	public static boolean checkAuthority(Player creator)
 	{
 		if ((creator.getClan() == null) || !creator.isInParty() || !creator.getParty().isLeader(creator) || (creator.getPledgeClass() < Player.RANK_BARON))
@@ -273,11 +375,19 @@ public class CommandChannel implements PlayerGroup
 		return true;
 	}
 	
+	/**
+	 * Method getMatchingRoom.
+	 * @return MatchingRoom
+	 */
 	public MatchingRoom getMatchingRoom()
 	{
 		return _matchingRoom;
 	}
 	
+	/**
+	 * Method setMatchingRoom.
+	 * @param matchingRoom MatchingRoom
+	 */
 	public void setMatchingRoom(MatchingRoom matchingRoom)
 	{
 		_matchingRoom = matchingRoom;

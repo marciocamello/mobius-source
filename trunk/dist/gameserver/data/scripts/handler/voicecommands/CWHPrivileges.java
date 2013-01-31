@@ -26,35 +26,65 @@ import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CWHPrivileges implements IVoicedCommandHandler, ScriptFile
 {
+	/**
+	 * Field _commandList.
+	 */
 	private final String[] _commandList = new String[]
 	{
 		"clan"
 	};
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 		VoicedCommandHandler.getInstance().registerVoicedCommandHandler(this);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method getVoicedCommandList.
+	 * @return String[] * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
+	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{
 		return _commandList;
 	}
 	
+	/**
+	 * Method useVoicedCommand.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param args String
+	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String args)
 	{
@@ -121,7 +151,7 @@ public class CWHPrivileges implements IVoicedCommandHandler, ScriptFile
 							sb.append(members.get(i).getObjectId());
 							if (i < (members.size() - 1))
 							{
-								sb.append(",");
+								sb.append(',');
 							}
 						}
 						sb.append(") AND `name`='canWhWithdraw'");

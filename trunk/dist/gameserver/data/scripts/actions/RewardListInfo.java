@@ -32,9 +32,19 @@ import lineage2.gameserver.utils.HtmlUtils;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class RewardListInfo
 {
+	/**
+	 * Field pf.
+	 */
 	private static final NumberFormat pf = NumberFormat.getPercentInstance(Locale.ENGLISH);
+	/**
+	 * Field df.
+	 */
 	private static final NumberFormat df = NumberFormat.getInstance(Locale.ENGLISH);
 	static
 	{
@@ -42,6 +52,11 @@ public abstract class RewardListInfo
 		df.setMinimumFractionDigits(2);
 	}
 	
+	/**
+	 * Method showInfo.
+	 * @param player Player
+	 * @param npc NpcInstance
+	 */
 	public static void showInfo(Player player, NpcInstance npc)
 	{
 		final int diff = npc.calculateLevelDiffForDrop(player.isInParty() ? player.getParty().getLevel() : player.getLevel());
@@ -86,6 +101,14 @@ public abstract class RewardListInfo
 		player.sendPacket(htmlMessage);
 	}
 	
+	/**
+	 * Method ratedGroupedRewardList.
+	 * @param tmp StringBuilder
+	 * @param npc NpcInstance
+	 * @param list RewardList
+	 * @param player Player
+	 * @param mod double
+	 */
 	public static void ratedGroupedRewardList(StringBuilder tmp, NpcInstance npc, RewardList list, Player player, double mod)
 	{
 		tmp.append("<table width=270 border=0>");
@@ -157,6 +180,12 @@ public abstract class RewardListInfo
 		tmp.append("</table>");
 	}
 	
+	/**
+	 * Method notRatedGroupedRewardList.
+	 * @param tmp StringBuilder
+	 * @param list RewardList
+	 * @param mod double
+	 */
 	public static void notRatedGroupedRewardList(StringBuilder tmp, RewardList list, double mod)
 	{
 		tmp.append("<table width=270 border=0>");
@@ -191,6 +220,13 @@ public abstract class RewardListInfo
 		tmp.append("</table>");
 	}
 	
+	/**
+	 * Method notGroupedRewardList.
+	 * @param tmp StringBuilder
+	 * @param list RewardList
+	 * @param rate double
+	 * @param mod double
+	 */
 	public static void notGroupedRewardList(StringBuilder tmp, RewardList list, double rate, double mod)
 	{
 		tmp.append("<table width=270 border=0>");

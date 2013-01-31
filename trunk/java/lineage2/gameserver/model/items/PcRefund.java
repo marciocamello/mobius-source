@@ -15,12 +15,24 @@ package lineage2.gameserver.model.items;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PcRefund extends ItemContainer
 {
+	/**
+	 * Constructor for PcRefund.
+	 * @param player Player
+	 */
 	public PcRefund(Player player)
 	{
 	}
 	
+	/**
+	 * Method onAddItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onAddItem(ItemInstance item)
 	{
@@ -36,16 +48,28 @@ public class PcRefund extends ItemContainer
 		}
 	}
 	
+	/**
+	 * Method onModifyItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onModifyItem(ItemInstance item)
 	{
 	}
 	
+	/**
+	 * Method onRemoveItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onRemoveItem(ItemInstance item)
 	{
 	}
 	
+	/**
+	 * Method onDestroyItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onDestroyItem(ItemInstance item)
 	{
@@ -53,6 +77,9 @@ public class PcRefund extends ItemContainer
 		item.delete();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

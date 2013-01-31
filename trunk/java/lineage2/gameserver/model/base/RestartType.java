@@ -12,14 +12,42 @@
  */
 package lineage2.gameserver.model.base;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum RestartType
 {
+	/**
+	 * Field TO_VILLAGE.
+	 */
 	TO_VILLAGE,
+	/**
+	 * Field TO_CLANHALL.
+	 */
 	TO_CLANHALL,
+	/**
+	 * Field TO_CASTLE.
+	 */
 	TO_CASTLE,
+	/**
+	 * Field TO_FORTRESS.
+	 */
 	TO_FORTRESS,
+	/**
+	 * Field TO_FLAG.
+	 */
 	TO_FLAG,
+	/**
+	 * Field FIXED.
+	 */
 	FIXED,
+	/**
+	 * Field AGATHION.
+	 */
 	AGATHION;
+	/**
+	 * Field VALUES.
+	 */
 	public static final RestartType[] VALUES = values();
 }

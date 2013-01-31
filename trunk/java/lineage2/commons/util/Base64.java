@@ -12,18 +12,55 @@
  */
 package lineage2.commons.util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Base64
 {
+	/**
+	 * Field NO_OPTIONS. (value is 0)
+	 */
 	public final static int NO_OPTIONS = 0;
+	/**
+	 * Field ENCODE. (value is 1)
+	 */
 	public final static int ENCODE = 1;
+	/**
+	 * Field DECODE. (value is 0)
+	 */
 	public final static int DECODE = 0;
+	/**
+	 * Field GZIP. (value is 2)
+	 */
 	public final static int GZIP = 2;
+	/**
+	 * Field DONT_BREAK_LINES. (value is 8)
+	 */
 	public final static int DONT_BREAK_LINES = 8;
+	/**
+	 * Field MAX_LINE_LENGTH. (value is 76)
+	 */
 	private final static int MAX_LINE_LENGTH = 76;
+	/**
+	 * Field EQUALS_SIGN.
+	 */
 	private final static byte EQUALS_SIGN = (byte) '=';
+	/**
+	 * Field NEW_LINE.
+	 */
 	private final static byte NEW_LINE = (byte) '\n';
+	/**
+	 * Field PREFERRED_ENCODING. (value is ""UTF-8"")
+	 */
 	private final static String PREFERRED_ENCODING = "UTF-8";
+	/**
+	 * Field ALPHABET.
+	 */
 	private final static byte[] ALPHABET;
+	/**
+	 * Field _NATIVE_ALPHABET.
+	 */
 	private final static byte[] _NATIVE_ALPHABET =
 	{
 		(byte) 'A',
@@ -104,6 +141,9 @@ public class Base64
 		}
 		ALPHABET = __bytes;
 	}
+	/**
+	 * Field DECODABET.
+	 */
 	final static byte[] DECODABET =
 	{
 		-9,
@@ -234,19 +274,44 @@ public class Base64
 		-9,
 		-9
 	};
+	/**
+	 * Field WHITE_SPACE_ENC. (value is -5)
+	 */
 	private final static byte WHITE_SPACE_ENC = -5;
+	/**
+	 * Field EQUALS_SIGN_ENC. (value is -1)
+	 */
 	private final static byte EQUALS_SIGN_ENC = -1;
 	
+	/**
+	 * Constructor for Base64.
+	 */
 	private Base64()
 	{
 	}
 	
+	/**
+	 * Method encode3to4.
+	 * @param b4 byte[]
+	 * @param threeBytes byte[]
+	 * @param numSigBytes int
+	 * @return byte[]
+	 */
 	static byte[] encode3to4(byte[] b4, byte[] threeBytes, int numSigBytes)
 	{
 		encode3to4(threeBytes, 0, numSigBytes, b4, 0);
 		return b4;
 	}
 	
+	/**
+	 * Method encode3to4.
+	 * @param source byte[]
+	 * @param srcOffset int
+	 * @param numSigBytes int
+	 * @param destination byte[]
+	 * @param destOffset int
+	 * @return byte[]
+	 */
 	static byte[] encode3to4(byte[] source, int srcOffset, int numSigBytes, byte[] destination, int destOffset)
 	{
 		int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) >>> 8) : 0) | (numSigBytes > 1 ? ((source[srcOffset + 1] << 24) >>> 16) : 0) | (numSigBytes > 2 ? ((source[srcOffset + 2] << 24) >>> 24) : 0);
@@ -275,11 +340,22 @@ public class Base64
 		}
 	}
 	
+	/**
+	 * Method encodeObject.
+	 * @param serializableObject java.io.Serializable
+	 * @return String
+	 */
 	public static String encodeObject(java.io.Serializable serializableObject)
 	{
 		return encodeObject(serializableObject, NO_OPTIONS);
 	}
 	
+	/**
+	 * Method encodeObject.
+	 * @param serializableObject java.io.Serializable
+	 * @param options int
+	 * @return String
+	 */
 	public static String encodeObject(java.io.Serializable serializableObject, int options)
 	{
 		java.io.ByteArrayOutputStream baos = null;
@@ -349,21 +425,47 @@ public class Base64
 		}
 	}
 	
+	/**
+	 * Method encodeBytes.
+	 * @param source byte[]
+	 * @return String
+	 */
 	public static String encodeBytes(byte[] source)
 	{
 		return encodeBytes(source, 0, source.length, NO_OPTIONS);
 	}
 	
+	/**
+	 * Method encodeBytes.
+	 * @param source byte[]
+	 * @param options int
+	 * @return String
+	 */
 	public static String encodeBytes(byte[] source, int options)
 	{
 		return encodeBytes(source, 0, source.length, options);
 	}
 	
+	/**
+	 * Method encodeBytes.
+	 * @param source byte[]
+	 * @param off int
+	 * @param len int
+	 * @return String
+	 */
 	public static String encodeBytes(byte[] source, int off, int len)
 	{
 		return encodeBytes(source, off, len, NO_OPTIONS);
 	}
 	
+	/**
+	 * Method encodeBytes.
+	 * @param source byte[]
+	 * @param off int
+	 * @param len int
+	 * @param options int
+	 * @return String
+	 */
 	public static String encodeBytes(byte[] source, int off, int len, int options)
 	{
 		int dontBreakLines = (options & DONT_BREAK_LINES);
@@ -452,6 +554,14 @@ public class Base64
 		}
 	}
 	
+	/**
+	 * Method decode4to3.
+	 * @param source byte[]
+	 * @param srcOffset int
+	 * @param destination byte[]
+	 * @param destOffset int
+	 * @return int
+	 */
 	static int decode4to3(byte[] source, int srcOffset, byte[] destination, int destOffset)
 	{
 		if (source[srcOffset + 2] == EQUALS_SIGN)
@@ -484,6 +594,13 @@ public class Base64
 		}
 	}
 	
+	/**
+	 * Method decode.
+	 * @param source byte[]
+	 * @param off int
+	 * @param len int
+	 * @return byte[]
+	 */
 	public static byte[] decode(byte[] source, int off, int len)
 	{
 		int len34 = (len * 3) / 4;
@@ -524,6 +641,11 @@ public class Base64
 		return out;
 	}
 	
+	/**
+	 * Method decode.
+	 * @param s String
+	 * @return byte[]
+	 */
 	public static byte[] decode(String s)
 	{
 		byte[] bytes;
@@ -589,6 +711,11 @@ public class Base64
 		return bytes;
 	}
 	
+	/**
+	 * Method decodeToObject.
+	 * @param encodedObject String
+	 * @return Object
+	 */
 	public static Object decodeToObject(String encodedObject)
 	{
 		byte[] objBytes = decode(encodedObject);
@@ -629,21 +756,54 @@ public class Base64
 		return obj;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class InputStream extends java.io.FilterInputStream
 	{
+		/**
+		 * Field encode.
+		 */
 		private final boolean encode;
+		/**
+		 * Field position.
+		 */
 		private int position;
+		/**
+		 * Field buffer.
+		 */
 		private final byte[] buffer;
+		/**
+		 * Field bufferLength.
+		 */
 		private final int bufferLength;
+		/**
+		 * Field numSigBytes.
+		 */
 		private int numSigBytes;
+		/**
+		 * Field lineLength.
+		 */
 		private int lineLength;
+		/**
+		 * Field breakLines.
+		 */
 		private final boolean breakLines;
 		
+		/**
+		 * Constructor for InputStream.
+		 * @param _in java.io.InputStream
+		 */
 		public InputStream(java.io.InputStream _in)
 		{
 			this(_in, DECODE);
 		}
 		
+		/**
+		 * Constructor for InputStream.
+		 * @param _in java.io.InputStream
+		 * @param options int
+		 */
 		public InputStream(java.io.InputStream _in, int options)
 		{
 			super(_in);
@@ -655,6 +815,10 @@ public class Base64
 			lineLength = 0;
 		}
 		
+		/**
+		 * Method read.
+		 * @return int * @throws java.io.IOException
+		 */
 		@Override
 		public int read() throws java.io.IOException
 		{
@@ -749,6 +913,13 @@ public class Base64
 			throw new java.io.IOException("Error in Base64 code reading stream.");
 		}
 		
+		/**
+		 * Method read.
+		 * @param dest byte[]
+		 * @param off int
+		 * @param len int
+		 * @return int * @throws java.io.IOException
+		 */
 		@Override
 		public int read(byte[] dest, int off, int len) throws java.io.IOException
 		{
@@ -774,22 +945,58 @@ public class Base64
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class OutputStream extends java.io.FilterOutputStream
 	{
+		/**
+		 * Field encode.
+		 */
 		private final boolean encode;
+		/**
+		 * Field position.
+		 */
 		private int position;
+		/**
+		 * Field buffer.
+		 */
 		private byte[] buffer;
+		/**
+		 * Field bufferLength.
+		 */
 		private final int bufferLength;
+		/**
+		 * Field lineLength.
+		 */
 		private int lineLength;
+		/**
+		 * Field breakLines.
+		 */
 		private final boolean breakLines;
+		/**
+		 * Field b4.
+		 */
 		private final byte[] b4;
+		/**
+		 * Field suspendEncoding.
+		 */
 		private boolean suspendEncoding;
 		
+		/**
+		 * Constructor for OutputStream.
+		 * @param _out java.io.OutputStream
+		 */
 		public OutputStream(java.io.OutputStream _out)
 		{
 			this(_out, ENCODE);
 		}
 		
+		/**
+		 * Constructor for OutputStream.
+		 * @param _out java.io.OutputStream
+		 * @param options int
+		 */
 		public OutputStream(java.io.OutputStream _out, int options)
 		{
 			super(_out);
@@ -803,6 +1010,11 @@ public class Base64
 			b4 = new byte[4];
 		}
 		
+		/**
+		 * Method write.
+		 * @param theByte int
+		 * @throws java.io.IOException
+		 */
 		@Override
 		public void write(int theByte) throws java.io.IOException
 		{
@@ -845,6 +1057,13 @@ public class Base64
 			}
 		}
 		
+		/**
+		 * Method write.
+		 * @param theBytes byte[]
+		 * @param off int
+		 * @param len int
+		 * @throws java.io.IOException
+		 */
 		@Override
 		public void write(byte[] theBytes, int off, int len) throws java.io.IOException
 		{
@@ -859,6 +1078,10 @@ public class Base64
 			}
 		}
 		
+		/**
+		 * Method flushBase64.
+		 * @throws java.io.IOException
+		 */
 		public void flushBase64() throws java.io.IOException
 		{
 			if (position > 0)
@@ -875,6 +1098,10 @@ public class Base64
 			}
 		}
 		
+		/**
+		 * Method close.
+		 * @throws java.io.IOException * @see java.io.Closeable#close()
+		 */
 		@Override
 		public void close() throws java.io.IOException
 		{
@@ -884,12 +1111,19 @@ public class Base64
 			out = null;
 		}
 		
+		/**
+		 * Method suspendEncoding.
+		 * @throws java.io.IOException
+		 */
 		public void suspendEncoding() throws java.io.IOException
 		{
 			flushBase64();
 			suspendEncoding = true;
 		}
 		
+		/**
+		 * Method resumeEncoding.
+		 */
 		public void resumeEncoding()
 		{
 			suspendEncoding = false;

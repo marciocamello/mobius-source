@@ -17,12 +17,27 @@ import java.util.List;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExEventMatchTeamInfo extends L2GameServerPacket
 {
+	/**
+	 * Field loot. Field leader_id.
+	 */
 	@SuppressWarnings("unused")
 	private final int leader_id, loot;
+	/**
+	 * Field members.
+	 */
 	private final List<EventMatchTeamInfo> members = new ArrayList<>();
 	
+	/**
+	 * Constructor for ExEventMatchTeamInfo.
+	 * @param party List<Player>
+	 * @param exclude Player
+	 */
 	public ExEventMatchTeamInfo(List<Player> party, Player exclude)
 	{
 		leader_id = party.get(0).getObjectId();
@@ -36,18 +51,85 @@ public class ExEventMatchTeamInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
 		writeEx(0x1C);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class EventMatchTeamInfo
 	{
+		/**
+		 * Field pet_Name.
+		 */
+		/**
+		 * Field _name.
+		 */
 		public String _name, pet_Name;
+		/**
+		 * Field race_id.
+		 */
+		/**
+		 * Field class_id.
+		 */
+		/**
+		 * Field level.
+		 */
+		/**
+		 * Field maxMp.
+		 */
+		/**
+		 * Field curMp.
+		 */
+		/**
+		 * Field maxHp.
+		 */
+		/**
+		 * Field curHp.
+		 */
+		/**
+		 * Field maxCp.
+		 */
+		/**
+		 * Field curCp.
+		 */
+		/**
+		 * Field _id.
+		 */
 		public int _id, curCp, maxCp, curHp, maxHp, curMp, maxMp, level, class_id, race_id;
+		/**
+		 * Field pet_level.
+		 */
+		/**
+		 * Field pet_maxMp.
+		 */
+		/**
+		 * Field pet_curMp.
+		 */
+		/**
+		 * Field pet_maxHp.
+		 */
+		/**
+		 * Field pet_curHp.
+		 */
+		/**
+		 * Field pet_NpcId.
+		 */
+		/**
+		 * Field pet_id.
+		 */
 		public int pet_id, pet_NpcId, pet_curHp, pet_maxHp, pet_curMp, pet_maxMp, pet_level;
 		
+		/**
+		 * Constructor for EventMatchTeamInfo.
+		 * @param member Player
+		 */
 		public EventMatchTeamInfo(Player member)
 		{
 			_name = member.getName();

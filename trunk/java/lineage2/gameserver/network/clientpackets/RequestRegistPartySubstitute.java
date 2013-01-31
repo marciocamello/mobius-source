@@ -20,16 +20,29 @@ import lineage2.gameserver.network.serverpackets.ExWaitWaitingSubStituteInfo;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestRegistPartySubstitute extends L2GameClientPacket
 {
+	/**
+	 * Field objId.
+	 */
 	int objId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		objId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

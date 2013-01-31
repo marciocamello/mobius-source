@@ -22,16 +22,32 @@ import lineage2.gameserver.stats.Formulas.AttackInfo;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Drain extends Skill
 {
+	/**
+	 * Field _absorbAbs.
+	 */
 	private final double _absorbAbs;
 	
+	/**
+	 * Constructor for Drain.
+	 * @param set StatsSet
+	 */
 	public Drain(StatsSet set)
 	{
 		super(set);
 		_absorbAbs = set.getDouble("absorbAbs", 0.f);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

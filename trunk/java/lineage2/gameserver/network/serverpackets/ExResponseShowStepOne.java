@@ -19,15 +19,29 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.petition.PetitionMainGroup;
 import lineage2.gameserver.utils.Language;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExResponseShowStepOne extends L2GameServerPacket
 {
+	/**
+	 * Field _language.
+	 */
 	private final Language _language;
 	
+	/**
+	 * Constructor for ExResponseShowStepOne.
+	 * @param player Player
+	 */
 	public ExResponseShowStepOne(Player player)
 	{
 		_language = player.getLanguage();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -15,7 +15,16 @@ package lineage2.gameserver.listener.actor;
 import lineage2.gameserver.listener.CharListener;
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnDeathListener extends CharListener
 {
+	/**
+	 * Method onDeath.
+	 * @param actor Creature
+	 * @param killer Creature
+	 */
 	public void onDeath(Creature actor, Creature killer);
 }

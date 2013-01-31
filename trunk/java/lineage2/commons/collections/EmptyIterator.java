@@ -14,32 +14,58 @@ package lineage2.commons.collections;
 
 import java.util.Iterator;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EmptyIterator<E> implements Iterator<E>
 {
+	/**
+	 * Field INSTANCE.
+	 */
 	private static final Iterator INSTANCE = new EmptyIterator();
 	
+	/**
+	 * Method getInstance.
+	 * @return Iterator<E>
+	 */
 	@SuppressWarnings("unchecked")
 	public static <E> Iterator<E> getInstance()
 	{
 		return INSTANCE;
 	}
 	
+	/**
+	 * Constructor for EmptyIterator.
+	 */
 	private EmptyIterator()
 	{
 	}
 	
+	/**
+	 * Method hasNext.
+	 * @return boolean * @see java.util.Iterator#hasNext()
+	 */
 	@Override
 	public boolean hasNext()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method next.
+	 * @return E * @see java.util.Iterator#next()
+	 */
 	@Override
 	public E next()
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method remove.
+	 * @see java.util.Iterator#remove()
+	 */
 	@Override
 	public void remove()
 	{

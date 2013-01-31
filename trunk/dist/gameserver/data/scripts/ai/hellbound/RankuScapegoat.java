@@ -18,15 +18,30 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RankuScapegoat extends DefaultAI
 {
+	/**
+	 * Field Eidolon_ID. (value is 25543)
+	 */
 	private static final int Eidolon_ID = 25543;
 	
+	/**
+	 * Constructor for RankuScapegoat.
+	 * @param actor NpcInstance
+	 */
 	public RankuScapegoat(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -44,6 +59,10 @@ public class RankuScapegoat extends DefaultAI
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method getBoss.
+	 * @return NpcInstance
+	 */
 	private NpcInstance getBoss()
 	{
 		Reflection r = getActor().getReflection();

@@ -15,18 +15,42 @@ package ai;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ZakenAnchor extends DefaultAI
 {
+	/**
+	 * Field DayZaken. (value is 29176)
+	 */
 	private static final int DayZaken = 29176;
+	/**
+	 * Field UltraDayZaken. (value is 29181)
+	 */
 	private static final int UltraDayZaken = 29181;
+	/**
+	 * Field Candle. (value is 32705)
+	 */
 	private static final int Candle = 32705;
+	/**
+	 * Field i.
+	 */
 	private int i = 0;
 	
+	/**
+	 * Constructor for ZakenAnchor.
+	 * @param actor NpcInstance
+	 */
 	public ZakenAnchor(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

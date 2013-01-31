@@ -18,13 +18,25 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectSilentMove extends Effect
 {
+	/**
+	 * Constructor for EffectSilentMove.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectSilentMove(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -35,6 +47,9 @@ public final class EffectSilentMove extends Effect
 		}
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -45,6 +60,10 @@ public final class EffectSilentMove extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

@@ -28,27 +28,59 @@ import lineage2.loginserver.gameservercon.GameServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GameServerManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static Logger _log = LoggerFactory.getLogger(GameServerManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final GameServerManager _instance = new GameServerManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return GameServerManager
+	 */
 	public static final GameServerManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _gameServers.
+	 */
 	private final Map<Integer, GameServer> _gameServers = new TreeMap<>();
+	/**
+	 * Field _lock.
+	 */
 	private final ReadWriteLock _lock = new ReentrantReadWriteLock();
+	/**
+	 * Field _readLock.
+	 */
 	private final Lock _readLock = _lock.readLock();
+	/**
+	 * Field _writeLock.
+	 */
 	private final Lock _writeLock = _lock.writeLock();
 	
+	/**
+	 * Constructor for GameServerManager.
+	 */
 	public GameServerManager()
 	{
 		load();
 		_log.info("Loaded " + _gameServers.size() + " registered GameServer(s).");
 	}
 	
+	/**
+	 * Method load.
+	 */
 	private void load()
 	{
 		Connection con = null;
@@ -77,6 +109,10 @@ public class GameServerManager
 		}
 	}
 	
+	/**
+	 * Method getGameServers.
+	 * @return GameServer[]
+	 */
 	public GameServer[] getGameServers()
 	{
 		_readLock.lock();
@@ -90,6 +126,11 @@ public class GameServerManager
 		}
 	}
 	
+	/**
+	 * Method getGameServerById.
+	 * @param id int
+	 * @return GameServer
+	 */
 	public GameServer getGameServerById(int id)
 	{
 		_readLock.lock();
@@ -103,6 +144,11 @@ public class GameServerManager
 		}
 	}
 	
+	/**
+	 * Method registerGameServer.
+	 * @param gs GameServer
+	 * @return boolean
+	 */
 	public boolean registerGameServer(GameServer gs)
 	{
 		if (!Config.ACCEPT_NEW_GAMESERVER)
@@ -131,6 +177,12 @@ public class GameServerManager
 		return false;
 	}
 	
+	/**
+	 * Method registerGameServer.
+	 * @param id int
+	 * @param gs GameServer
+	 * @return boolean
+	 */
 	public boolean registerGameServer(int id, GameServer gs)
 	{
 		_writeLock.lock();

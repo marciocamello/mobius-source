@@ -21,22 +21,49 @@ import lineage2.gameserver.templates.StatsSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CommunityBoardManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CommunityBoardManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final CommunityBoardManager _instance = new CommunityBoardManager();
+	/**
+	 * Field _handlers.
+	 */
 	private final Map<String, ICommunityBoardHandler> _handlers = new HashMap<>();
+	/**
+	 * Field _properties.
+	 */
 	private final StatsSet _properties = new StatsSet();
 	
+	/**
+	 * Method getInstance.
+	 * @return CommunityBoardManager
+	 */
 	public static CommunityBoardManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for CommunityBoardManager.
+	 */
 	private CommunityBoardManager()
 	{
 	}
 	
+	/**
+	 * Method registerHandler.
+	 * @param commHandler ICommunityBoardHandler
+	 */
 	public void registerHandler(ICommunityBoardHandler commHandler)
 	{
 		for (String bypass : commHandler.getBypassCommands())
@@ -49,6 +76,10 @@ public class CommunityBoardManager
 		}
 	}
 	
+	/**
+	 * Method removeHandler.
+	 * @param handler ICommunityBoardHandler
+	 */
 	public void removeHandler(ICommunityBoardHandler handler)
 	{
 		for (String bypass : handler.getBypassCommands())
@@ -58,6 +89,11 @@ public class CommunityBoardManager
 		_log.info("CommunityBoard: " + handler.getClass().getSimpleName() + " unloaded.");
 	}
 	
+	/**
+	 * Method getCommunityHandler.
+	 * @param bypass String
+	 * @return ICommunityBoardHandler
+	 */
 	public ICommunityBoardHandler getCommunityHandler(String bypass)
 	{
 		if (!Config.COMMUNITYBOARD_ENABLED || _handlers.isEmpty())
@@ -74,16 +110,31 @@ public class CommunityBoardManager
 		return null;
 	}
 	
+	/**
+	 * Method setProperty.
+	 * @param name String
+	 * @param val String
+	 */
 	public void setProperty(String name, String val)
 	{
 		_properties.set(name, val);
 	}
 	
+	/**
+	 * Method setProperty.
+	 * @param name String
+	 * @param val int
+	 */
 	public void setProperty(String name, int val)
 	{
 		_properties.set(name, val);
 	}
 	
+	/**
+	 * Method getIntProperty.
+	 * @param name String
+	 * @return int
+	 */
 	public int getIntProperty(String name)
 	{
 		return _properties.getInteger(name, 0);

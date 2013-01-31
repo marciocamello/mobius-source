@@ -20,16 +20,30 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SealControlDevice extends DefaultAI
 {
+	/**
+	 * Field SHOUT.
+	 */
 	private final boolean SHOUT;
 	
+	/**
+	 * Constructor for SealControlDevice.
+	 * @param actor NpcInstance
+	 */
 	public SealControlDevice(NpcInstance actor)
 	{
 		super(actor);
 		SHOUT = getActor().getParameter("shout", false);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -40,6 +54,12 @@ public class SealControlDevice extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtMenuSelected.
+	 * @param player Player
+	 * @param ask int
+	 * @param reply int
+	 */
 	@Override
 	protected void onEvtMenuSelected(Player player, int ask, int reply)
 	{
@@ -53,6 +73,12 @@ public class SealControlDevice extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtScriptEvent.
+	 * @param event String
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
@@ -62,6 +88,12 @@ public class SealControlDevice extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtTimer.
+	 * @param timerId int
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{

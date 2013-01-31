@@ -36,38 +36,70 @@ import lineage2.gameserver.templates.npc.MinionData;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class NpcParser extends AbstractDirParser<NpcHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final NpcParser _instance = new NpcParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return NpcParser
+	 */
 	public static NpcParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for NpcParser.
+	 */
 	private NpcParser()
 	{
 		super(NpcHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/npc/");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "npc.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement org.dom4j.Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(org.dom4j.Element rootElement) throws Exception
 	{
@@ -283,6 +315,11 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 		}
 	}
 	
+	/**
+	 * Method parseReward.
+	 * @param rewardElement org.dom4j.Element
+	 * @return RewardData
+	 */
 	private RewardData parseReward(org.dom4j.Element rewardElement)
 	{
 		int itemId = Integer.parseInt(rewardElement.attributeValue("item_id"));

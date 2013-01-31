@@ -20,8 +20,15 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExpandCWH extends Functions
 {
+	/**
+	 * Method get.
+	 */
 	public void get()
 	{
 		Player player = getSelf();
@@ -31,7 +38,7 @@ public class ExpandCWH extends Functions
 		}
 		if (!Config.SERVICES_EXPAND_CWH_ENABLED)
 		{
-			show("Сервис отключен.", player);
+			show("Серви�? откл�?чен.", player);
 			return;
 		}
 		if (player.getClan() == null)
@@ -52,6 +59,9 @@ public class ExpandCWH extends Functions
 		{
 			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 		}
+		/**
+		 * Method show.
+		 */
 		show();
 	}
 	
@@ -64,7 +74,7 @@ public class ExpandCWH extends Functions
 		}
 		if (!Config.SERVICES_EXPAND_WAREHOUSE_ENABLED)
 		{
-			show("Сервис отключен.", player);
+			show("Серви�? откл�?чен.", player);
 			return;
 		}
 		if (player.getClan() == null)
@@ -74,12 +84,12 @@ public class ExpandCWH extends Functions
 		}
 		ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.SERVICES_EXPAND_CWH_ITEM);
 		String out = "";
-		out += "<html><body>Расширение кланового склада";
+		out += "<html><body>Ра�?�?ирение кланового �?клада";
 		out += "<br><br><table>";
 		out += "<tr><td>Текущий размер:</td><td>" + (Config.WAREHOUSE_SLOTS_CLAN + player.getClan().getWhBonus()) + "</td></tr>";
-		out += "<tr><td>Стоимость слота:</td><td>" + Config.SERVICES_EXPAND_CWH_PRICE + " " + item.getName() + "</td></tr>";
+		out += "<tr><td>Стоимо�?т�? �?лота:</td><td>" + Config.SERVICES_EXPAND_CWH_PRICE + " " + item.getName() + "</td></tr>";
 		out += "</table><br><br>";
-		out += "<button width=100 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" action=\"bypass -h scripts_services.ExpandCWH:get\" value=\"Расширить\">";
+		out += "<button width=100 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" action=\"bypass -h scripts_services.ExpandCWH:get\" value=\"Ра�?�?ирит�?\">";
 		out += "</body></html>";
 		show(out, player);
 	}

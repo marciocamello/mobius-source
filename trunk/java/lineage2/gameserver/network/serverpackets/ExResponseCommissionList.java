@@ -16,21 +16,56 @@ import java.util.List;
 
 import lineage2.gameserver.instancemanager.commission.CommissionItemInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExResponseCommissionList extends L2GameServerPacket
 {
+	/**
+	 * Field EMPTY_LIST. (value is -2)
+	 */
 	public static final int EMPTY_LIST = -2;
+	/**
+	 * Field PLAYER_REGISTERED_ITEMS. (value is 2)
+	 */
 	public static final int PLAYER_REGISTERED_ITEMS = 2;
+	/**
+	 * Field ALL_ITEMS. (value is 3)
+	 */
 	public static final int ALL_ITEMS = 3;
+	/**
+	 * Field type.
+	 */
 	private final int type;
+	/**
+	 * Field currentTime.
+	 */
 	private int currentTime;
+	/**
+	 * Field part.
+	 */
 	private int part;
+	/**
+	 * Field items.
+	 */
 	private List<CommissionItemInfo> items;
 	
+	/**
+	 * Constructor for ExResponseCommissionList.
+	 * @param type int
+	 */
 	public ExResponseCommissionList(int type)
 	{
 		this.type = type;
 	}
 	
+	/**
+	 * Constructor for ExResponseCommissionList.
+	 * @param type int
+	 * @param part int
+	 * @param items List<CommissionItemInfo>
+	 */
 	public ExResponseCommissionList(int type, int part, List<CommissionItemInfo> items)
 	{
 		this.type = type;
@@ -39,6 +74,9 @@ public class ExResponseCommissionList extends L2GameServerPacket
 		currentTime = (int) (System.currentTimeMillis() / 1000);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

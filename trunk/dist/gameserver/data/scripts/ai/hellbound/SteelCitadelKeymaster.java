@@ -19,16 +19,35 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SteelCitadelKeymaster extends Fighter
 {
+	/**
+	 * Field _firstTimeAttacked.
+	 */
 	private boolean _firstTimeAttacked = true;
+	/**
+	 * Field AMASKARI_ID. (value is 22449)
+	 */
 	private static final int AMASKARI_ID = 22449;
 	
+	/**
+	 * Constructor for SteelCitadelKeymaster.
+	 * @param actor NpcInstance
+	 */
 	public SteelCitadelKeymaster(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -53,6 +72,10 @@ public class SteelCitadelKeymaster extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -60,6 +83,10 @@ public class SteelCitadelKeymaster extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

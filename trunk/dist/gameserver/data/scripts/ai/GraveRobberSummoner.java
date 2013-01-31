@@ -22,8 +22,15 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.Func;
 import lineage2.gameserver.templates.npc.MinionData;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GraveRobberSummoner extends Mystic
 {
+	/**
+	 * Field Servitors.
+	 */
 	private static final int[] Servitors =
 	{
 		22683,
@@ -31,15 +38,31 @@ public class GraveRobberSummoner extends Mystic
 		22685,
 		22686
 	};
+	/**
+	 * Field _lastMinionCount.
+	 */
 	int _lastMinionCount = 1;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class FuncMulMinionCount extends Func
 	{
+		/**
+		 * Constructor for FuncMulMinionCount.
+		 * @param stat Stats
+		 * @param order int
+		 * @param owner Object
+		 */
 		public FuncMulMinionCount(Stats stat, int order, Object owner)
 		{
 			super(stat, order, owner);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -47,6 +70,10 @@ public class GraveRobberSummoner extends Mystic
 		}
 	}
 	
+	/**
+	 * Constructor for GraveRobberSummoner.
+	 * @param actor NpcInstance
+	 */
 	public GraveRobberSummoner(NpcInstance actor)
 	{
 		super(actor);
@@ -54,6 +81,9 @@ public class GraveRobberSummoner extends Mystic
 		actor.addStatFunc(new FuncMulMinionCount(Stats.POWER_DEFENCE, 0x30, actor));
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -63,6 +93,11 @@ public class GraveRobberSummoner extends Mystic
 		_lastMinionCount = Math.max(actor.getMinionList().getAliveMinions().size(), 1);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -75,6 +110,10 @@ public class GraveRobberSummoner extends Mystic
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

@@ -15,7 +15,16 @@ package lineage2.gameserver.listener.actor;
 import lineage2.gameserver.listener.CharListener;
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnAttackHitListener extends CharListener
 {
+	/**
+	 * Method onAttackHit.
+	 * @param actor Creature
+	 * @param attacker Creature
+	 */
 	public void onAttackHit(Creature actor, Creature attacker);
 }

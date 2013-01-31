@@ -26,21 +26,40 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KrateisCubeWatcherBlue extends DefaultAI
 {
+	/**
+	 * Field RESTORE_CHANCE. (value is 60)
+	 */
 	private static final int RESTORE_CHANCE = 60;
 	
+	/**
+	 * Constructor for KrateisCubeWatcherBlue.
+	 * @param actor NpcInstance
+	 */
 	public KrateisCubeWatcherBlue(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ACTIVE_DELAY = 3000;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtThink.
+	 */
 	@Override
 	protected void onEvtThink()
 	{
@@ -76,6 +95,10 @@ public class KrateisCubeWatcherBlue extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onEvtDead(Creature killer)
 	{

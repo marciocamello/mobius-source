@@ -28,17 +28,37 @@ import lineage2.gameserver.taskmanager.actionrunner.tasks.DeleteExpiredMailTask;
 import lineage2.gameserver.taskmanager.actionrunner.tasks.DeleteExpiredVarsTask;
 import lineage2.gameserver.taskmanager.actionrunner.tasks.OlympiadSaveTask;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ActionRunner extends LoggerObject
 {
+	/**
+	 * Field _instance.
+	 */
 	private static ActionRunner _instance = new ActionRunner();
+	/**
+	 * Field _futures.
+	 */
 	private final Map<String, List<ActionWrapper>> _futures = new HashMap<>();
+	/**
+	 * Field _lock.
+	 */
 	private final Lock _lock = new ReentrantLock();
 	
+	/**
+	 * Method getInstance.
+	 * @return ActionRunner
+	 */
 	public static ActionRunner getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for ActionRunner.
+	 */
 	private ActionRunner()
 	{
 		if (Config.ENABLE_OLYMPIAD)
@@ -50,11 +70,20 @@ public class ActionRunner extends LoggerObject
 		register(new CommissionShopExpiredItemsTask());
 	}
 	
+	/**
+	 * Method register.
+	 * @param task AutomaticTask
+	 */
 	public void register(AutomaticTask task)
 	{
 		register(task.reCalcTime(true), task);
 	}
 	
+	/**
+	 * Method register.
+	 * @param time long
+	 * @param wrapper ActionWrapper
+	 */
 	public void register(long time, ActionWrapper wrapper)
 	{
 		if (time == 0)
@@ -70,6 +99,12 @@ public class ActionRunner extends LoggerObject
 		addScheduled(wrapper.getName(), wrapper, time - System.currentTimeMillis());
 	}
 	
+	/**
+	 * Method addScheduled.
+	 * @param name String
+	 * @param r ActionWrapper
+	 * @param diff long
+	 */
 	protected void addScheduled(String name, final ActionWrapper r, long diff)
 	{
 		_lock.lock();
@@ -90,6 +125,11 @@ public class ActionRunner extends LoggerObject
 		}
 	}
 	
+	/**
+	 * Method remove.
+	 * @param name String
+	 * @param f ActionWrapper
+	 */
 	protected void remove(String name, ActionWrapper f)
 	{
 		_lock.lock();
@@ -113,6 +153,10 @@ public class ActionRunner extends LoggerObject
 		}
 	}
 	
+	/**
+	 * Method clear.
+	 * @param name String
+	 */
 	public void clear(String name)
 	{
 		_lock.lock();
@@ -136,6 +180,9 @@ public class ActionRunner extends LoggerObject
 		}
 	}
 	
+	/**
+	 * Method info.
+	 */
 	public void info()
 	{
 		_lock.lock();

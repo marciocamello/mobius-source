@@ -22,13 +22,23 @@ import lineage2.gameserver.network.serverpackets.ExCursedWeaponLocation;
 import lineage2.gameserver.network.serverpackets.ExCursedWeaponLocation.CursedWeaponInfo;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestCursedWeaponLocation extends L2GameClientPacket
 {
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

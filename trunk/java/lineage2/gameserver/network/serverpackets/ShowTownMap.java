@@ -12,12 +12,31 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShowTownMap extends L2GameServerPacket
 {
+	/**
+	 * Field _texture.
+	 */
 	String _texture;
+	/**
+	 * Field _x.
+	 */
 	int _x;
+	/**
+	 * Field _y.
+	 */
 	int _y;
 	
+	/**
+	 * Constructor for ShowTownMap.
+	 * @param texture String
+	 * @param x int
+	 * @param y int
+	 */
 	public ShowTownMap(String texture, int x, int y)
 	{
 		_texture = texture;
@@ -25,6 +44,9 @@ public class ShowTownMap extends L2GameServerPacket
 		_y = y;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

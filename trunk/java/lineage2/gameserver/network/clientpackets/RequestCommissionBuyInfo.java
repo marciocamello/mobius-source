@@ -15,11 +15,24 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.instancemanager.commission.CommissionShopManager;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestCommissionBuyInfo extends L2GameClientPacket
 {
+	/**
+	 * Field auctionId.
+	 */
 	private long auctionId;
+	/**
+	 * Field exItemType.
+	 */
 	private int exItemType;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -27,6 +40,9 @@ public class RequestCommissionBuyInfo extends L2GameClientPacket
 		exItemType = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

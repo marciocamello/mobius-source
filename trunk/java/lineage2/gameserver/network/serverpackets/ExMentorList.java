@@ -20,11 +20,25 @@ import java.util.Map;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.Mentee;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExMentorList extends L2GameServerPacket
 {
+	/**
+	 * Field _list.
+	 */
 	private List<MenteeInfo> _list = Collections.emptyList();
+	/**
+	 * Field _mentor.
+	 */
 	private final int _mentor;
 	
+	/**
+	 * Constructor for ExMentorList.
+	 * @param player Player
+	 */
 	public ExMentorList(Player player)
 	{
 		_mentor = player.getMenteeList().getMentor();
@@ -42,6 +56,9 @@ public class ExMentorList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -58,17 +75,38 @@ public class ExMentorList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class MenteeInfo
 	{
+		/**
+		 * Constructor for MenteeInfo.
+		 */
 		public MenteeInfo()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Field name.
+		 */
 		String name;
+		/**
+		 * Field objectId.
+		 */
 		int objectId;
+		/**
+		 * Field online.
+		 */
 		boolean online;
+		/**
+		 * Field level.
+		 */
 		int level;
+		/**
+		 * Field classId.
+		 */
 		int classId;
 	}
 }

@@ -21,17 +21,34 @@ import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SelChef extends Fighter
 {
+	/**
+	 * Field targetLoc.
+	 */
 	private Location targetLoc;
+	/**
+	 * Field wait_timeout.
+	 */
 	private long wait_timeout = 0;
 	
+	/**
+	 * Constructor for SelChef.
+	 * @param actor NpcInstance
+	 */
 	public SelChef(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = Integer.MAX_VALUE;
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -39,6 +56,10 @@ public class SelChef extends Fighter
 		getActor().getMinionList().spawnMinions();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -64,6 +85,11 @@ public class SelChef extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method findFirePlace.
+	 * @param actor NpcInstance
+	 * @return Location
+	 */
 	private Location findFirePlace(NpcInstance actor)
 	{
 		Location loc = new Location();
@@ -86,12 +112,20 @@ public class SelChef extends Fighter
 		return loc;
 	}
 	
+	/**
+	 * Method maybeMoveToHome.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean maybeMoveToHome()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{

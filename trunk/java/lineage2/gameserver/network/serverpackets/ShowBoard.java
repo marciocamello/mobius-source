@@ -19,14 +19,38 @@ import lineage2.gameserver.model.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShowBoard extends L2GameServerPacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ShowBoard.class);
+	/**
+	 * Field _htmlCode.
+	 */
 	private String _htmlCode;
+	/**
+	 * Field _id.
+	 */
 	private String _id;
+	/**
+	 * Field _arg.
+	 */
 	private List<String> _arg;
+	/**
+	 * Field _addFav.
+	 */
 	private String _addFav = "";
 	
+	/**
+	 * Method separateAndSend.
+	 * @param html String
+	 * @param player Player
+	 */
 	public static void separateAndSend(String html, Player player)
 	{
 		if (html.length() < 8180)
@@ -49,6 +73,12 @@ public class ShowBoard extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Constructor for ShowBoard.
+	 * @param htmlCode String
+	 * @param id String
+	 * @param player Player
+	 */
 	public ShowBoard(String htmlCode, String id, Player player)
 	{
 		if ((htmlCode != null) && (htmlCode.length() > 8192))
@@ -76,6 +106,10 @@ public class ShowBoard extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Constructor for ShowBoard.
+	 * @param arg List<String>
+	 */
 	public ShowBoard(List<String> arg)
 	{
 		_id = "1002";
@@ -83,6 +117,9 @@ public class ShowBoard extends L2GameServerPacket
 		_arg = arg;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

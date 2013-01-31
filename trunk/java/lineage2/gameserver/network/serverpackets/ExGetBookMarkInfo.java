@@ -15,17 +15,34 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.BookMark;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExGetBookMarkInfo extends L2GameServerPacket
 {
+	/**
+	 * Field bookmarksCapacity.
+	 */
 	private final int bookmarksCapacity;
+	/**
+	 * Field bookmarks.
+	 */
 	private final BookMark[] bookmarks;
 	
+	/**
+	 * Constructor for ExGetBookMarkInfo.
+	 * @param player Player
+	 */
 	public ExGetBookMarkInfo(Player player)
 	{
 		bookmarksCapacity = player.bookmarks.getCapacity();
 		bookmarks = player.bookmarks.toArray();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

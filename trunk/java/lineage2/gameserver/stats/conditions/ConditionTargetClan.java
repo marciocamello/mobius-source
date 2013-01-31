@@ -15,15 +15,31 @@ package lineage2.gameserver.stats.conditions;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionTargetClan extends Condition
 {
+	/**
+	 * Field _test.
+	 */
 	private final boolean _test;
 	
+	/**
+	 * Constructor for ConditionTargetClan.
+	 * @param param String
+	 */
 	public ConditionTargetClan(String param)
 	{
 		_test = Boolean.valueOf(param);
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

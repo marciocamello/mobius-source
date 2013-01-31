@@ -14,15 +14,28 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RequestSkillList extends L2GameClientPacket
 {
+	/**
+	 * Field _C__50_REQUESTSKILLLIST. (value is ""[C] 50 RequestSkillList"")
+	 */
 	private static final String _C__50_REQUESTSKILLLIST = "[C] 50 RequestSkillList";
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -33,6 +46,10 @@ public final class RequestSkillList extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method getType.
+	 * @return String
+	 */
 	@Override
 	public String getType()
 	{

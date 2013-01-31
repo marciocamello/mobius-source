@@ -18,10 +18,20 @@ import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AnswerJoinPartyRoom extends L2GameClientPacket
 {
+	/**
+	 * Field _response.
+	 */
 	private int _response;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -35,6 +45,9 @@ public class AnswerJoinPartyRoom extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

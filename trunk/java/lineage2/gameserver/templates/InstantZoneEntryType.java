@@ -23,8 +23,15 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum InstantZoneEntryType
 {
+	/**
+	 * Field SOLO.
+	 */
 	SOLO
 	{
 		@Override
@@ -62,6 +69,9 @@ public enum InstantZoneEntryType
 			return true;
 		}
 	},
+	/**
+	 * Field PARTY.
+	 */
 	PARTY
 	{
 		@Override
@@ -134,6 +144,9 @@ public enum InstantZoneEntryType
 			return true;
 		}
 	},
+	/**
+	 * Field COMMAND_CHANNEL.
+	 */
 	COMMAND_CHANNEL
 	{
 		@Override
@@ -203,10 +216,28 @@ public enum InstantZoneEntryType
 			return true;
 		}
 	};
+	/**
+	 * Method canEnter.
+	 * @param player Player
+	 * @param instancedZone InstantZone
+	 * @return boolean
+	 */
 	public abstract boolean canEnter(Player player, InstantZone instancedZone);
 	
+	/**
+	 * Method canReEnter.
+	 * @param player Player
+	 * @param instancedZone InstantZone
+	 * @return boolean
+	 */
 	public abstract boolean canReEnter(Player player, InstantZone instancedZone);
 	
+	/**
+	 * Method checkPlayer.
+	 * @param player Player
+	 * @param instancedZone InstantZone
+	 * @return SystemMsg
+	 */
 	static SystemMsg checkPlayer(Player player, InstantZone instancedZone)
 	{
 		if (player.getActiveReflection() != null)

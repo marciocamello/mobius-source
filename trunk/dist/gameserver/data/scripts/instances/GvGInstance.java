@@ -50,49 +50,142 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.mutable.MutableInt;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GvGInstance extends Reflection
 {
+	/**
+	 * Field BOX_ID. (value is 18822)
+	 */
 	private final static int BOX_ID = 18822;
+	/**
+	 * Field BOSS_ID. (value is 25655)
+	 */
 	private final static int BOSS_ID = 25655;
+	/**
+	 * Field SCORE_BOX. (value is 20)
+	 */
 	private final static int SCORE_BOX = 20;
+	/**
+	 * Field SCORE_BOSS. (value is 100)
+	 */
 	private final static int SCORE_BOSS = 100;
+	/**
+	 * Field SCORE_KILL. (value is 5)
+	 */
 	private final static int SCORE_KILL = 5;
+	/**
+	 * Field SCORE_DEATH. (value is 3)
+	 */
 	private final static int SCORE_DEATH = 3;
+	/**
+	 * Field eventTime.
+	 */
 	private final int eventTime = 1200;
+	/**
+	 * Field bossSpawnTime.
+	 */
 	private final long bossSpawnTime = 10 * 60 * 1000L;
+	/**
+	 * Field active.
+	 */
 	private boolean active = false;
+	/**
+	 * Field team1.
+	 */
 	Party team1;
+	/**
+	 * Field team2.
+	 */
 	Party team2;
+	/**
+	 * Field bothTeams.
+	 */
 	private final List<HardReference<Player>> bothTeams = new CopyOnWriteArrayList<>();
+	/**
+	 * Field score.
+	 */
 	private final TIntObjectHashMap<MutableInt> score = new TIntObjectHashMap<>();
+	/**
+	 * Field team1Score.
+	 */
 	private int team1Score = 0;
+	/**
+	 * Field team2Score.
+	 */
 	private int team2Score = 0;
+	/**
+	 * Field startTime.
+	 */
 	private long startTime;
+	/**
+	 * Field _bossSpawnTask.
+	 */
 	private ScheduledFuture<?> _bossSpawnTask;
+	/**
+	 * Field _countDownTask.
+	 */
 	private ScheduledFuture<?> _countDownTask;
+	/**
+	 * Field _battleEndTask.
+	 */
 	private ScheduledFuture<?> _battleEndTask;
+	/**
+	 * Field _deathListener.
+	 */
 	private final DeathListener _deathListener = new DeathListener();
+	/**
+	 * Field _teleportListener.
+	 */
 	private final TeleportListener _teleportListener = new TeleportListener();
+	/**
+	 * Field _playerPartyLeaveListener.
+	 */
 	private final PlayerPartyLeaveListener _playerPartyLeaveListener = new PlayerPartyLeaveListener();
+	/**
+	 * Field zonepvp.
+	 */
 	Zone zonepvp;
+	/**
+	 * Field peace1.
+	 */
 	Zone peace1;
+	/**
+	 * Field peace2.
+	 */
 	Zone peace2;
 	
+	/**
+	 * Method setTeam1.
+	 * @param party1 Party
+	 */
 	public void setTeam1(Party party1)
 	{
 		team1 = party1;
 	}
 	
+	/**
+	 * Method setTeam2.
+	 * @param party2 Party
+	 */
 	public void setTeam2(Party party2)
 	{
 		team2 = party2;
 	}
 	
+	/**
+	 * Constructor for GvGInstance.
+	 */
 	public GvGInstance()
 	{
 		super();
 	}
 	
+	/**
+	 * Method start.
+	 */
 	public void start()
 	{
 		zonepvp = getZone("[gvg_battle_zone]");
@@ -153,6 +246,10 @@ public class GvGInstance extends Reflection
 		active = true;
 	}
 	
+	/**
+	 * Method broadCastPacketToBothTeams.
+	 * @param packet L2GameServerPacket
+	 */
 	void broadCastPacketToBothTeams(L2GameServerPacket packet)
 	{
 		for (Player tm : HardReferences.unwrap(bothTeams))
@@ -161,11 +258,20 @@ public class GvGInstance extends Reflection
 		}
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	boolean isActive()
 	{
 		return active;
 	}
 	
+	/**
+	 * Method isRedTeam.
+	 * @param player Player
+	 * @return boolean
+	 */
 	private boolean isRedTeam(Player player)
 	{
 		if (team2.containsMember(player))
@@ -175,6 +281,9 @@ public class GvGInstance extends Reflection
 		return false;
 	}
 	
+	/**
+	 * Method end.
+	 */
 	void end()
 	{
 		active = false;
@@ -207,23 +316,38 @@ public class GvGInstance extends Reflection
 		peace2.setActive(false);
 	}
 	
+	/**
+	 * Method reward.
+	 * @param party Party
+	 */
 	private void reward(Party party)
 	{
 		for (Player member : party.getPartyMembers())
 		{
-			member.sendMessage("Ваша группа выиграла GvG турнир, лидер группы добавлен в рейтинг победителей.");
+			member.sendMessage("Ва�?а группа выиграла GvG турнир, лидер группы добавлен в рейтинг победителей.");
 			member.setFame(member.getFame() + 500, "GvG");
 			Functions.addItem(member, 13067, 30);
 		}
 	}
 	
+	/**
+	 */
 	private class DeathListener implements OnDeathListener
 	{
+		/**
+		 * Constructor for DeathListener.
+		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param self Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -276,13 +400,22 @@ public class GvGInstance extends Reflection
 					{
 						changeScore(2, SCORE_BOSS, 0, false, false, killer.getPlayer());
 					}
-					broadCastPacketToBothTeams(new ExShowScreenMessage("Охранник Сокровищ Геральда погиб от руки " + killer.getName(), 5000, ScreenMessageAlign.MIDDLE_CENTER, true));
+					broadCastPacketToBothTeams(new ExShowScreenMessage("�?хранник Сокровищ Герал�?да погиб от руки " + killer.getName(), 5000, ScreenMessageAlign.MIDDLE_CENTER, true));
 					end();
 				}
 			}
 		}
 	}
 	
+	/**
+	 * Method changeScore.
+	 * @param teamId int
+	 * @param toAdd int
+	 * @param toSub int
+	 * @param subbing boolean
+	 * @param affectAnotherTeam boolean
+	 * @param player Player
+	 */
 	synchronized void changeScore(int teamId, int toAdd, int toSub, boolean subbing, boolean affectAnotherTeam, Player player)
 	{
 		int timeLeft = (int) ((startTime - System.currentTimeMillis()) / 1000);
@@ -350,18 +483,30 @@ public class GvGInstance extends Reflection
 		}
 	}
 	
+	/**
+	 * Method addPlayerScore.
+	 * @param player Player
+	 */
 	void addPlayerScore(Player player)
 	{
 		MutableInt points = score.get(player.getObjectId());
 		points.increment();
 	}
 	
+	/**
+	 * Method getPlayerScore.
+	 * @param player Player
+	 * @return int
+	 */
 	public int getPlayerScore(Player player)
 	{
 		MutableInt points = score.get(player.getObjectId());
 		return points.intValue();
 	}
 	
+	/**
+	 * Method paralyzePlayers.
+	 */
 	public void paralyzePlayers()
 	{
 		for (Player tm : HardReferences.unwrap(bothTeams))
@@ -382,6 +527,9 @@ public class GvGInstance extends Reflection
 		}
 	}
 	
+	/**
+	 * Method unParalyzePlayers.
+	 */
 	public void unParalyzePlayers()
 	{
 		for (Player tm : HardReferences.unwrap(bothTeams))
@@ -391,6 +539,9 @@ public class GvGInstance extends Reflection
 		}
 	}
 	
+	/**
+	 * Method cleanUp.
+	 */
 	void cleanUp()
 	{
 		team1 = null;
@@ -401,6 +552,10 @@ public class GvGInstance extends Reflection
 		score.clear();
 	}
 	
+	/**
+	 * Method resurrectAtBase.
+	 * @param player Player
+	 */
 	public void resurrectAtBase(Player player)
 	{
 		if (player.isDead())
@@ -421,6 +576,11 @@ public class GvGInstance extends Reflection
 		player.teleToLocation(pos, this);
 	}
 	
+	/**
+	 * Method removePlayer.
+	 * @param player Player
+	 * @param legalQuit boolean
+	 */
 	void removePlayer(Player player, boolean legalQuit)
 	{
 		bothTeams.remove(player.getRef());
@@ -436,6 +596,10 @@ public class GvGInstance extends Reflection
 		player.teleToLocation(Location.findPointToStay(GvG.RETURN_LOC, 0, 150, ReflectionManager.DEFAULT.getGeoIndex()), 0);
 	}
 	
+	/**
+	 * Method teamWithdraw.
+	 * @param party Party
+	 */
 	void teamWithdraw(Party party)
 	{
 		if (party == team1)
@@ -456,52 +620,80 @@ public class GvGInstance extends Reflection
 			Player player = team1.getPartyLeader();
 			changeScore(1, 200, 0, false, false, player);
 		}
-		broadCastPacketToBothTeams(new ExShowScreenMessage("Команда соперника покинула поле боя в полном составе. Конец сражения.", 4000, ScreenMessageAlign.MIDDLE_CENTER, true));
+		broadCastPacketToBothTeams(new ExShowScreenMessage("�?оманда �?оперника покинула поле бо�? в полном �?о�?таве. �?онец �?ражени�?.", 4000, ScreenMessageAlign.MIDDLE_CENTER, true));
 		end();
 	}
 	
+	/**
+	 * Method getBlueScore.
+	 * @return int
+	 */
 	private int getBlueScore()
 	{
 		return team1Score;
 	}
 	
+	/**
+	 * Method getRedScore.
+	 * @return int
+	 */
 	private int getRedScore()
 	{
 		return team2Score;
 	}
 	
+	/**
+	 */
 	public class BossSpawn extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
-			broadCastPacketToBothTeams(new ExShowScreenMessage("Появился Охранник Сокровищ Геральда", 5000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			broadCastPacketToBothTeams(new ExShowScreenMessage("�?о�?вил�?�? �?хранник Сокровищ Герал�?да", 5000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			addSpawnWithoutRespawn(BOSS_ID, new Location(147304, 142824, -15864, 32768), 0);
 			openDoor(24220042);
 		}
 	}
 	
+	/**
+	 */
 	public class CountingDown extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
-			broadCastPacketToBothTeams(new ExShowScreenMessage("До конца сражения осталась 1 минута", 4000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			broadCastPacketToBothTeams(new ExShowScreenMessage("До конца �?ражени�? о�?тала�?�? 1 минута", 4000, ScreenMessageAlign.MIDDLE_CENTER, true));
 		}
 	}
 	
+	/**
+	 */
 	public class BattleEnd extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
-			broadCastPacketToBothTeams(new ExShowScreenMessage("Время битвы истекло. Телепортация через 1 минуту.", 4000, ScreenMessageAlign.BOTTOM_RIGHT, true));
+			broadCastPacketToBothTeams(new ExShowScreenMessage("Врем�? битвы и�?текл��. Телепортаци�? через 1 минуту.", 4000, ScreenMessageAlign.BOTTOM_RIGHT, true));
 			end();
 		}
 	}
 	
+	/**
+	 */
 	public class Finish extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -510,6 +702,13 @@ public class GvGInstance extends Reflection
 		}
 	}
 	
+	/**
+	 * Method addSpawnWithoutRespawn.
+	 * @param npcId int
+	 * @param loc Location
+	 * @param randomOffset int
+	 * @return NpcInstance
+	 */
 	@Override
 	public NpcInstance addSpawnWithoutRespawn(int npcId, Location loc, int randomOffset)
 	{
@@ -518,13 +717,27 @@ public class GvGInstance extends Reflection
 		return npc;
 	}
 	
+	/**
+	 */
 	private class TeleportListener implements OnTeleportListener
 	{
+		/**
+		 * Constructor for TeleportListener.
+		 */
 		public TeleportListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onTeleport.
+		 * @param player Player
+		 * @param x int
+		 * @param y int
+		 * @param z int
+		 * @param reflection Reflection
+		 * @see lineage2.gameserver.listener.actor.player.OnTeleportListener#onTeleport(Player, int, int, int, Reflection)
+		 */
 		@Override
 		public void onTeleport(Player player, int x, int y, int z, Reflection reflection)
 		{
@@ -533,17 +746,27 @@ public class GvGInstance extends Reflection
 				return;
 			}
 			removePlayer(player, false);
-			player.sendMessage("Вы досрочно покинули зону битвы и были дисквалифицированы.");
+			player.sendMessage("Вы до�?рочно покинули зону битвы и были ди�?квалифицированы.");
 		}
 	}
 	
+	/**
+	 */
 	private class PlayerPartyLeaveListener implements OnPlayerPartyLeaveListener
 	{
+		/**
+		 * Constructor for PlayerPartyLeaveListener.
+		 */
 		public PlayerPartyLeaveListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onPartyLeave.
+		 * @param player Player
+		 * @see lineage2.gameserver.listener.actor.player.OnPlayerPartyLeaveListener#onPartyLeave(Player)
+		 */
 		@Override
 		public void onPartyLeave(Player player)
 		{

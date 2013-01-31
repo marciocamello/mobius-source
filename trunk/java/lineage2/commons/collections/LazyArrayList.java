@@ -22,42 +22,76 @@ import org.apache.commons.pool.ObjectPool;
 import org.apache.commons.pool.PoolableObjectFactory;
 import org.apache.commons.pool.impl.GenericObjectPool;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("unchecked")
 public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable
 {
+	/**
+	 * Field serialVersionUID. (value is 8683452581122892189)
+	 */
 	private static final long serialVersionUID = 8683452581122892189L;
 	
+	/**
+	 * @author Mobius
+	 */
 	@SuppressWarnings("rawtypes")
 	private static class PoolableLazyArrayListFactory implements PoolableObjectFactory
 	{
+		/**
+		 * Constructor for PoolableLazyArrayListFactory.
+		 */
 		public PoolableLazyArrayListFactory()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method makeObject.
+		 * @return Object * @see org.apache.commons.pool.PoolableObjectFactory#makeObject()
+		 */
 		@Override
 		public Object makeObject()
 		{
 			return new LazyArrayList();
 		}
 		
+		/**
+		 * Method destroyObject.
+		 * @param obj Object
+		 */
 		@Override
 		public void destroyObject(Object obj)
 		{
 			((LazyArrayList) obj).clear();
 		}
 		
+		/**
+		 * Method validateObject.
+		 * @param obj Object
+		 * @return boolean
+		 */
 		@Override
 		public boolean validateObject(Object obj)
 		{
 			return true;
 		}
 		
+		/**
+		 * Method activateObject.
+		 * @param obj Object
+		 */
 		@Override
 		public void activateObject(Object obj)
 		{
 		}
 		
+		/**
+		 * Method passivateObject.
+		 * @param obj Object
+		 */
 		@Override
 		public void passivateObject(Object obj)
 		{
@@ -65,9 +99,19 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		}
 	}
 	
+	/**
+	 * Field POOL_SIZE.
+	 */
 	private static final int POOL_SIZE = Integer.parseInt(System.getProperty("lazyarraylist.poolsize", "-1"));
+	/**
+	 * Field POOL.
+	 */
 	private static final ObjectPool<Object> POOL = new GenericObjectPool<>(new PoolableLazyArrayListFactory(), POOL_SIZE, GenericObjectPool.WHEN_EXHAUSTED_GROW, 0L, -1);
 	
+	/**
+	 * Method newInstance.
+	 * @return LazyArrayList<E>
+	 */
 	public static <E> LazyArrayList<E> newInstance()
 	{
 		try
@@ -81,6 +125,10 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return new LazyArrayList<>();
 	}
 	
+	/**
+	 * Method recycle.
+	 * @param obj LazyArrayList<E>
+	 */
 	public static <E> void recycle(LazyArrayList<E> obj)
 	{
 		try
@@ -93,12 +141,31 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		}
 	}
 	
+	/**
+	 * Field L.
+	 */
 	private static final int L = 1 << 3;
+	/**
+	 * Field H.
+	 */
 	private static final int H = 1 << 10;
+	/**
+	 * Field elementData.
+	 */
 	protected transient Object[] elementData;
+	/**
+	 * Field size.
+	 */
 	protected transient int size = 0;
+	/**
+	 * Field capacity.
+	 */
 	protected transient int capacity = L;
 	
+	/**
+	 * Constructor for LazyArrayList.
+	 * @param initialCapacity int
+	 */
 	public LazyArrayList(int initialCapacity)
 	{
 		if (initialCapacity < H)
@@ -114,11 +181,19 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		}
 	}
 	
+	/**
+	 * Constructor for LazyArrayList.
+	 */
 	public LazyArrayList()
 	{
 		this(8);
 	}
 	
+	/**
+	 * Method add.
+	 * @param element E
+	 * @return boolean * @see java.util.List#add(E)
+	 */
 	@Override
 	public boolean add(E element)
 	{
@@ -127,6 +202,12 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return true;
 	}
 	
+	/**
+	 * Method set.
+	 * @param index int
+	 * @param element E
+	 * @return E * @see java.util.List#set(int, E)
+	 */
 	@Override
 	public E set(int index, E element)
 	{
@@ -139,6 +220,12 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return e;
 	}
 	
+	/**
+	 * Method add.
+	 * @param index int
+	 * @param element E
+	 * @see java.util.List#add(int, E)
+	 */
 	@Override
 	public void add(int index, E element)
 	{
@@ -151,6 +238,12 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		}
 	}
 	
+	/**
+	 * Method addAll.
+	 * @param index int
+	 * @param c Collection<? extends E>
+	 * @return boolean * @see java.util.List#addAll(int, Collection<? extends E>)
+	 */
 	@Override
 	public boolean addAll(int index, Collection<? extends E> c)
 	{
@@ -175,6 +268,10 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return false;
 	}
 	
+	/**
+	 * Method ensureCapacity.
+	 * @param newSize int
+	 */
 	protected void ensureCapacity(int newSize)
 	{
 		if (newSize > capacity)
@@ -206,6 +303,11 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		}
 	}
 	
+	/**
+	 * Method remove.
+	 * @param index int
+	 * @return E * @see java.util.List#remove(int)
+	 */
 	@Override
 	public E remove(int index)
 	{
@@ -221,6 +323,11 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return e;
 	}
 	
+	/**
+	 * Method remove.
+	 * @param o Object
+	 * @return boolean * @see java.util.List#remove(Object)
+	 */
 	@Override
 	public boolean remove(Object o)
 	{
@@ -248,6 +355,11 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return true;
 	}
 	
+	/**
+	 * Method contains.
+	 * @param o Object
+	 * @return boolean * @see java.util.List#contains(Object)
+	 */
 	@Override
 	public boolean contains(Object o)
 	{
@@ -265,6 +377,11 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return false;
 	}
 	
+	/**
+	 * Method indexOf.
+	 * @param o Object
+	 * @return int * @see java.util.List#indexOf(Object)
+	 */
 	@Override
 	public int indexOf(Object o)
 	{
@@ -284,6 +401,11 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return index;
 	}
 	
+	/**
+	 * Method lastIndexOf.
+	 * @param o Object
+	 * @return int * @see java.util.List#lastIndexOf(Object)
+	 */
 	@Override
 	public int lastIndexOf(Object o)
 	{
@@ -302,10 +424,18 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return index;
 	}
 	
+	/**
+	 * Method trim.
+	 */
 	protected void trim()
 	{
 	}
 	
+	/**
+	 * Method get.
+	 * @param index int
+	 * @return E * @see java.util.List#get(int)
+	 */
 	@Override
 	public E get(int index)
 	{
@@ -316,6 +446,10 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return null;
 	}
 	
+	/**
+	 * Method clone.
+	 * @return Object
+	 */
 	@Override
 	public Object clone()
 	{
@@ -329,6 +463,10 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return clone;
 	}
 	
+	/**
+	 * Method clear.
+	 * @see java.util.List#clear()
+	 */
 	@Override
 	public void clear()
 	{
@@ -344,23 +482,40 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		trim();
 	}
 	
+	/**
+	 * Method size.
+	 * @return int * @see java.util.List#size()
+	 */
 	@Override
 	public int size()
 	{
 		return size;
 	}
 	
+	/**
+	 * Method isEmpty.
+	 * @return boolean * @see java.util.List#isEmpty()
+	 */
 	@Override
 	public boolean isEmpty()
 	{
 		return size == 0;
 	}
 	
+	/**
+	 * Method capacity.
+	 * @return int
+	 */
 	public int capacity()
 	{
 		return capacity;
 	}
 	
+	/**
+	 * Method addAll.
+	 * @param c Collection<? extends E>
+	 * @return boolean * @see java.util.List#addAll(Collection<? extends E>)
+	 */
 	@Override
 	public boolean addAll(Collection<? extends E> c)
 	{
@@ -376,6 +531,11 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return true;
 	}
 	
+	/**
+	 * Method containsAll.
+	 * @param c Collection<?>
+	 * @return boolean * @see java.util.List#containsAll(Collection<?>)
+	 */
 	@Override
 	public boolean containsAll(Collection<?> c)
 	{
@@ -398,6 +558,11 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return true;
 	}
 	
+	/**
+	 * Method retainAll.
+	 * @param c Collection<?>
+	 * @return boolean * @see java.util.List#retainAll(Collection<?>)
+	 */
 	@Override
 	public boolean retainAll(Collection<?> c)
 	{
@@ -418,6 +583,11 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return modified;
 	}
 	
+	/**
+	 * Method removeAll.
+	 * @param c Collection<?>
+	 * @return boolean * @see java.util.List#removeAll(Collection<?>)
+	 */
 	@Override
 	public boolean removeAll(Collection<?> c)
 	{
@@ -438,6 +608,10 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return modified;
 	}
 	
+	/**
+	 * Method toArray.
+	 * @return Object[] * @see java.util.List#toArray()
+	 */
 	@Override
 	public Object[] toArray()
 	{
@@ -449,6 +623,11 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return r;
 	}
 	
+	/**
+	 * Method toArray.
+	 * @param a T[]
+	 * @return T[] * @see java.util.List#toArray(T[])
+	 */
 	@Override
 	public <T> T[] toArray(T[] a)
 	{
@@ -464,40 +643,73 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return r;
 	}
 	
+	/**
+	 * Method iterator.
+	 * @return Iterator<E> * @see java.util.List#iterator()
+	 */
 	@Override
 	public Iterator<E> iterator()
 	{
 		return new LazyItr();
 	}
 	
+	/**
+	 * Method listIterator.
+	 * @return ListIterator<E> * @see java.util.List#listIterator()
+	 */
 	@Override
 	public ListIterator<E> listIterator()
 	{
 		return new LazyListItr(0);
 	}
 	
+	/**
+	 * Method listIterator.
+	 * @param index int
+	 * @return ListIterator<E> * @see java.util.List#listIterator(int)
+	 */
 	@Override
 	public ListIterator<E> listIterator(int index)
 	{
 		return new LazyListItr(index);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class LazyItr implements Iterator<E>
 	{
+		/**
+		 * Field cursor.
+		 */
 		int cursor = 0;
+		/**
+		 * Field lastRet.
+		 */
 		int lastRet = -1;
 		
+		/**
+		 * Constructor for LazyItr.
+		 */
 		public LazyItr()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method hasNext.
+		 * @return boolean * @see java.util.Iterator#hasNext()
+		 */
 		@Override
 		public boolean hasNext()
 		{
 			return cursor < size();
 		}
 		
+		/**
+		 * Method next.
+		 * @return E * @see java.util.Iterator#next()
+		 */
 		@Override
 		public E next()
 		{
@@ -506,6 +718,10 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 			return next;
 		}
 		
+		/**
+		 * Method remove.
+		 * @see java.util.Iterator#remove()
+		 */
 		@Override
 		public void remove()
 		{
@@ -522,19 +738,34 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class LazyListItr extends LazyItr implements ListIterator<E>
 	{
+		/**
+		 * Constructor for LazyListItr.
+		 * @param index int
+		 */
 		LazyListItr(int index)
 		{
 			cursor = index;
 		}
 		
+		/**
+		 * Method hasPrevious.
+		 * @return boolean * @see java.util.ListIterator#hasPrevious()
+		 */
 		@Override
 		public boolean hasPrevious()
 		{
 			return cursor > 0;
 		}
 		
+		/**
+		 * Method previous.
+		 * @return E * @see java.util.ListIterator#previous()
+		 */
 		@Override
 		public E previous()
 		{
@@ -544,18 +775,31 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 			return previous;
 		}
 		
+		/**
+		 * Method nextIndex.
+		 * @return int * @see java.util.ListIterator#nextIndex()
+		 */
 		@Override
 		public int nextIndex()
 		{
 			return cursor;
 		}
 		
+		/**
+		 * Method previousIndex.
+		 * @return int * @see java.util.ListIterator#previousIndex()
+		 */
 		@Override
 		public int previousIndex()
 		{
 			return cursor - 1;
 		}
 		
+		/**
+		 * Method set.
+		 * @param e E
+		 * @see java.util.ListIterator#set(E)
+		 */
 		@Override
 		public void set(E e)
 		{
@@ -566,6 +810,11 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 			LazyArrayList.this.set(lastRet, e);
 		}
 		
+		/**
+		 * Method add.
+		 * @param e E
+		 * @see java.util.ListIterator#add(E)
+		 */
 		@Override
 		public void add(E e)
 		{
@@ -574,6 +823,10 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		}
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
@@ -599,6 +852,12 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		return sb.toString();
 	}
 	
+	/**
+	 * Method subList.
+	 * @param fromIndex int
+	 * @param toIndex int
+	 * @return List<E> * @see java.util.List#subList(int, int)
+	 */
 	@Override
 	public List<E> subList(int fromIndex, int toIndex)
 	{

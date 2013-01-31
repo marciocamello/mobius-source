@@ -24,32 +24,59 @@ import lineage2.gameserver.utils.Language;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetitionGroupParser extends AbstractFileParser<PetitionGroupHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static PetitionGroupParser _instance = new PetitionGroupParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return PetitionGroupParser
+	 */
 	public static PetitionGroupParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for PetitionGroupParser.
+	 */
 	private PetitionGroupParser()
 	{
 		super(PetitionGroupHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/other/petition_group.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "petition_group.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

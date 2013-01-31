@@ -14,7 +14,16 @@ package lineage2.gameserver.model.quest.startcondition;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface ICheckStartCondition
 {
+	/**
+	 * Method checkCondition.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean checkCondition(Player player);
 }

@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExChangeNicknameNColor extends L2GameServerPacket
 {
+	/**
+	 * Field _itemObjId.
+	 */
 	private final int _itemObjId;
 	
+	/**
+	 * Constructor for ExChangeNicknameNColor.
+	 * @param itemObjId int
+	 */
 	public ExChangeNicknameNColor(int itemObjId)
 	{
 		_itemObjId = itemObjId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

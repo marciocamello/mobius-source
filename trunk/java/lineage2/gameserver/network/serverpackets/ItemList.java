@@ -15,14 +15,41 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.LockType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ItemList extends L2GameServerPacket
 {
+	/**
+	 * Field _size.
+	 */
 	private final int _size;
+	/**
+	 * Field _items.
+	 */
 	private final ItemInstance[] _items;
+	/**
+	 * Field _showWindow.
+	 */
 	private final boolean _showWindow;
+	/**
+	 * Field _lockType.
+	 */
 	private final LockType _lockType;
+	/**
+	 * Field _lockItems.
+	 */
 	private final int[] _lockItems;
 	
+	/**
+	 * Constructor for ItemList.
+	 * @param size int
+	 * @param items ItemInstance[]
+	 * @param showWindow boolean
+	 * @param lockType LockType
+	 * @param lockItems int[]
+	 */
 	public ItemList(int size, ItemInstance[] items, boolean showWindow, LockType lockType, int[] lockItems)
 	{
 		_size = size;
@@ -32,6 +59,9 @@ public class ItemList extends L2GameServerPacket
 		_lockItems = lockItems;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

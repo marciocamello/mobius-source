@@ -40,20 +40,49 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SummonList implements Iterable<Summon>
 {
+	/**
+	 * Field _owner.
+	 */
 	public Player _owner;
+	/**
+	 * Field _pet.
+	 */
 	private PetInstance _pet;
+	/**
+	 * Field _summonList.
+	 */
 	private final Map<Integer, Summon> _summonList;
+	/**
+	 * Field _log.
+	 */
 	static final Logger _log = LoggerFactory.getLogger(SummonList.class);
+	/**
+	 * Field _usedPoints.
+	 */
 	private int _usedPoints = 0;
 	
+	/**
+	 * Constructor for SummonList.
+	 * @param owner Player
+	 */
 	public SummonList(Player owner)
 	{
 		_owner = owner;
 		_summonList = new HashMap<>(3);
 	}
 	
+	/**
+	 * Method canSummon.
+	 * @param summonType SummonType
+	 * @param summonPoint int
+	 * @return boolean
+	 */
 	public boolean canSummon(SummonType summonType, int summonPoint)
 	{
 		if ((_usedPoints + summonPoint) > _owner.getSummonPointMax())
@@ -90,6 +119,10 @@ public class SummonList implements Iterable<Summon>
 		return true;
 	}
 	
+	/**
+	 * Method addSummon.
+	 * @param summon Summon
+	 */
 	public void addSummon(Summon summon)
 	{
 		if (summon.isServitor())
@@ -108,12 +141,20 @@ public class SummonList implements Iterable<Summon>
 		_owner.autoShot();
 	}
 	
+	/**
+	 * Method unsummonAll.
+	 * @param logout boolean
+	 */
 	public void unsummonAll(boolean logout)
 	{
 		unsummonPet(logout);
 		unsummonAllServitors();
 	}
 	
+	/**
+	 * Method unsummonPet.
+	 * @param logout boolean
+	 */
 	public void unsummonPet(boolean logout)
 	{
 		if (_pet != null)
@@ -128,6 +169,9 @@ public class SummonList implements Iterable<Summon>
 		}
 	}
 	
+	/**
+	 * Method unsummonAllServitors.
+	 */
 	public void unsummonAllServitors()
 	{
 		synchronized (_summonList)
@@ -141,11 +185,19 @@ public class SummonList implements Iterable<Summon>
 		_usedPoints = 0;
 	}
 	
+	/**
+	 * Method getUsedPoints.
+	 * @return int
+	 */
 	public int getUsedPoints()
 	{
 		return _usedPoints;
 	}
 	
+	/**
+	 * Method isInCombat.
+	 * @return boolean
+	 */
 	public boolean isInCombat()
 	{
 		boolean isCombat = false;
@@ -166,6 +218,10 @@ public class SummonList implements Iterable<Summon>
 		return isCombat || ((_pet != null) && _pet.isInCombat());
 	}
 	
+	/**
+	 * Method store.
+	 * @param storeServitors boolean
+	 */
 	public void store(boolean storeServitors)
 	{
 		if (storeServitors)
@@ -190,12 +246,18 @@ public class SummonList implements Iterable<Summon>
 		}
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	public void restore()
 	{
 		restoreServitors();
 		restorePet();
 	}
 	
+	/**
+	 * Method restorePet.
+	 */
 	public void restorePet()
 	{
 		int controlItemId = _owner.getVarInt("petss@");
@@ -235,6 +297,9 @@ public class SummonList implements Iterable<Summon>
 		}
 	}
 	
+	/**
+	 * Method restoreServitors.
+	 */
 	public void restoreServitors()
 	{
 		List<Summon> summons = ServitorsDAO.getInstance().restore(_owner);
@@ -251,6 +316,9 @@ public class SummonList implements Iterable<Summon>
 		}
 	}
 	
+	/**
+	 * Method summonAll.
+	 */
 	public void summonAll()
 	{
 		if (_summonList.size() > 0)
@@ -292,11 +360,19 @@ public class SummonList implements Iterable<Summon>
 		}
 	}
 	
+	/**
+	 * Method getPet.
+	 * @return PetInstance
+	 */
 	public PetInstance getPet()
 	{
 		return _pet;
 	}
 	
+	/**
+	 * Method getFirstServitor.
+	 * @return Summon
+	 */
 	public Summon getFirstServitor()
 	{
 		if (_summonList.size() == 1)
@@ -312,6 +388,10 @@ public class SummonList implements Iterable<Summon>
 		return null;
 	}
 	
+	/**
+	 * Method getSecondServitor.
+	 * @return Summon
+	 */
 	public Summon getSecondServitor()
 	{
 		if (_summonList.size() == 1)
@@ -327,6 +407,10 @@ public class SummonList implements Iterable<Summon>
 		return null;
 	}
 	
+	/**
+	 * Method getServitors.
+	 * @return List<Summon>
+	 */
 	public List<Summon> getServitors()
 	{
 		if (_summonList.size() > 0)
@@ -344,6 +428,11 @@ public class SummonList implements Iterable<Summon>
 		return Collections.emptyList();
 	}
 	
+	/**
+	 * Method contains.
+	 * @param creature Creature
+	 * @return boolean
+	 */
 	public boolean contains(Creature creature)
 	{
 		if (creature == null)
@@ -371,6 +460,10 @@ public class SummonList implements Iterable<Summon>
 		return false;
 	}
 	
+	/**
+	 * Method iterator.
+	 * @return Iterator<Summon> * @see java.lang.Iterable#iterator()
+	 */
 	@Override
 	public Iterator<Summon> iterator()
 	{
@@ -389,6 +482,10 @@ public class SummonList implements Iterable<Summon>
 		return Collections.unmodifiableList(summons).iterator();
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	public int size()
 	{
 		return _summonList.size() + (_pet != null ? 1 : 0);

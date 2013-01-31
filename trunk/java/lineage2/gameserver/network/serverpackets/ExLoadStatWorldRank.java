@@ -16,13 +16,34 @@ import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.instancemanager.MuseumManager;
 import lineage2.gameserver.instancemanager.MuseumManager.Museum;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExLoadStatWorldRank extends L2GameServerPacket
 {
+	/**
+	 * Field _S__FE_100_EXLOADSTATWORLDRANK. (value is ""[S] FE:100 ExLoadStatWorldRank"")
+	 */
 	private static final String _S__FE_100_EXLOADSTATWORLDRANK = "[S] FE:100 ExLoadStatWorldRank";
+	/**
+	 * Field category2. Field category1.
+	 */
 	int category1, category2;
+	/**
+	 * Field mm.
+	 */
 	MuseumManager mm;
+	/**
+	 * Field loadWorldRank.
+	 */
 	boolean loadWorldRank;
 	
+	/**
+	 * Constructor for ExLoadStatWorldRank.
+	 * @param _category1 int
+	 * @param _category2 int
+	 */
 	public ExLoadStatWorldRank(int _category1, int _category2)
 	{
 		mm = MuseumManager.getInstance();
@@ -38,6 +59,9 @@ public class ExLoadStatWorldRank extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -73,6 +97,10 @@ public class ExLoadStatWorldRank extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method getType.
+	 * @return String
+	 */
 	@Override
 	public String getType()
 	{

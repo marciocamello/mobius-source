@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class NpcStringContainer extends L2GameServerPacket
 {
+	/**
+	 * Field _npcString.
+	 */
 	private final NpcString _npcString;
+	/**
+	 * Field _parameters.
+	 */
 	private final String[] _parameters = new String[5];
 	
+	/**
+	 * Constructor for NpcStringContainer.
+	 * @param npcString NpcString
+	 * @param arg String[]
+	 */
 	protected NpcStringContainer(NpcString npcString, String... arg)
 	{
 		_npcString = npcString;
 		System.arraycopy(arg, 0, _parameters, 0, arg.length);
 	}
 	
+	/**
+	 * Method writeElements.
+	 */
 	protected void writeElements()
 	{
 		writeD(_npcString.getId());

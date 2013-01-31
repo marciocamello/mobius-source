@@ -34,26 +34,72 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RaceManagerInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field LANES. (value is 8)
+	 */
 	public static final int LANES = 8;
+	/**
+	 * Field WINDOW_START. (value is 0)
+	 */
 	public static final int WINDOW_START = 0;
+	/**
+	 * Field history.
+	 */
 	@SuppressWarnings("unused")
 	private static List<Race> history;
+	/**
+	 * Field managers.
+	 */
 	private static Set<RaceManagerInstance> managers;
+	/**
+	 * Field _raceNumber.
+	 */
 	static int _raceNumber = 1;
+	/**
+	 * Field SECOND. (value is 1000)
+	 */
 	private final static long SECOND = 1000;
+	/**
+	 * Field MINUTE.
+	 */
 	private final static long MINUTE = 60 * SECOND;
+	/**
+	 * Field minutes.
+	 */
 	private static int minutes = 5;
+	/**
+	 * Field ACCEPTING_BETS. (value is 0)
+	 */
 	private static final int ACCEPTING_BETS = 0;
+	/**
+	 * Field WAITING. (value is 1)
+	 */
 	private static final int WAITING = 1;
+	/**
+	 * Field STARTING_RACE. (value is 2)
+	 */
 	private static final int STARTING_RACE = 2;
+	/**
+	 * Field RACE_END. (value is 3)
+	 */
 	private static final int RACE_END = 3;
+	/**
+	 * Field state.
+	 */
 	private static int state = RACE_END;
+	/**
+	 * Field codes.
+	 */
 	protected static final int[][] codes =
 	{
 		{
@@ -69,8 +115,17 @@ public class RaceManagerInstance extends NpcInstance
 			-1
 		}
 	};
+	/**
+	 * Field notInitialized.
+	 */
 	private static boolean notInitialized = true;
+	/**
+	 * Field packet.
+	 */
 	protected static MonRaceInfo packet;
+	/**
+	 * Field cost.
+	 */
 	protected static int cost[] =
 	{
 		100,
@@ -83,6 +138,11 @@ public class RaceManagerInstance extends NpcInstance
 		100000
 	};
 	
+	/**
+	 * Constructor for RaceManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public RaceManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -117,6 +177,10 @@ public class RaceManagerInstance extends NpcInstance
 		managers.add(this);
 	}
 	
+	/**
+	 * Method removeKnownPlayer.
+	 * @param player Player
+	 */
 	public void removeKnownPlayer(Player player)
 	{
 		for (int i = 0; i < 8; i++)
@@ -125,15 +189,28 @@ public class RaceManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	class Announcement extends RunnableImpl
 	{
+		/**
+		 * Field type.
+		 */
 		private final int type;
 		
+		/**
+		 * Constructor for Announcement.
+		 * @param type int
+		 */
 		public Announcement(int type)
 		{
 			this.type = type;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -141,6 +218,10 @@ public class RaceManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method makeAnnouncement.
+	 * @param type int
+	 */
 	public void makeAnnouncement(int type)
 	{
 		SystemMessage sm = new SystemMessage(type);
@@ -187,6 +268,10 @@ public class RaceManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method broadcast.
+	 * @param pkt L2GameServerPacket
+	 */
 	protected void broadcast(L2GameServerPacket pkt)
 	{
 		for (RaceManagerInstance manager : managers)
@@ -198,11 +283,17 @@ public class RaceManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method sendMonsterInfo.
+	 */
 	public void sendMonsterInfo()
 	{
 		broadcast(packet);
 	}
 	
+	/**
+	 * Method startRace.
+	 */
 	private void startRace()
 	{
 		MonsterRace race = MonsterRace.getInstance();
@@ -225,6 +316,11 @@ public class RaceManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -276,6 +372,10 @@ public class RaceManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showOdds.
+	 * @param player Player
+	 */
 	public void showOdds(Player player)
 	{
 		if (state == ACCEPTING_BETS)
@@ -298,6 +398,10 @@ public class RaceManagerInstance extends NpcInstance
 		player.sendActionFailed();
 	}
 	
+	/**
+	 * Method showMonsterInfo.
+	 * @param player Player
+	 */
 	public void showMonsterInfo(Player player)
 	{
 		int npcId = getTemplate().npcId;
@@ -315,6 +419,11 @@ public class RaceManagerInstance extends NpcInstance
 		player.sendActionFailed();
 	}
 	
+	/**
+	 * Method showBuyTicket.
+	 * @param player Player
+	 * @param val int
+	 */
 	public void showBuyTicket(Player player, int val)
 	{
 		if (state != ACCEPTING_BETS)
@@ -422,27 +531,64 @@ public class RaceManagerInstance extends NpcInstance
 		player.sendActionFailed();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class Race
 	{
+		/**
+		 * Field info.
+		 */
 		private final Info[] info;
 		
+		/**
+		 * Constructor for Race.
+		 * @param info Info[]
+		 */
 		public Race(Info[] info)
 		{
 			this.info = info;
 		}
 		
+		/**
+		 * Method getLaneInfo.
+		 * @param lane int
+		 * @return Info
+		 */
 		public Info getLaneInfo(int lane)
 		{
 			return info[lane];
 		}
 		
+		/**
+		 * @author Mobius
+		 */
 		public class Info
 		{
+			/**
+			 * Field id.
+			 */
 			private final int id;
+			/**
+			 * Field place.
+			 */
 			private final int place;
+			/**
+			 * Field odds.
+			 */
 			private final int odds;
+			/**
+			 * Field payout.
+			 */
 			private final int payout;
 			
+			/**
+			 * Constructor for Info.
+			 * @param id int
+			 * @param place int
+			 * @param odds int
+			 * @param payout int
+			 */
 			public Info(int id, int place, int odds, int payout)
 			{
 				this.id = id;
@@ -451,21 +597,37 @@ public class RaceManagerInstance extends NpcInstance
 				this.payout = payout;
 			}
 			
+			/**
+			 * Method getId.
+			 * @return int
+			 */
 			public int getId()
 			{
 				return id;
 			}
 			
+			/**
+			 * Method getOdds.
+			 * @return int
+			 */
 			public int getOdds()
 			{
 				return odds;
 			}
 			
+			/**
+			 * Method getPayout.
+			 * @return int
+			 */
 			public int getPayout()
 			{
 				return payout;
 			}
 			
+			/**
+			 * Method getPlace.
+			 * @return int
+			 */
 			public int getPlace()
 			{
 				return place;
@@ -473,8 +635,14 @@ public class RaceManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	class RunRace extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -484,8 +652,14 @@ public class RaceManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	class RunEnd extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -500,6 +674,10 @@ public class RaceManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getPacket.
+	 * @return MonRaceInfo
+	 */
 	public MonRaceInfo getPacket()
 	{
 		return packet;

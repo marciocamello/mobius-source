@@ -17,27 +17,53 @@ import lineage2.commons.data.xml.AbstractParser;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ErrorHandlerImpl implements ErrorHandler
 {
+	/**
+	 * Field _parser.
+	 */
 	private final AbstractParser<?> _parser;
 	
+	/**
+	 * Constructor for ErrorHandlerImpl.
+	 * @param parser AbstractParser<?>
+	 */
 	public ErrorHandlerImpl(AbstractParser<?> parser)
 	{
 		_parser = parser;
 	}
 	
+	/**
+	 * Method warning.
+	 * @param exception SAXParseException
+	 * @see org.xml.sax.ErrorHandler#warning(SAXParseException)
+	 */
 	@Override
 	public void warning(SAXParseException exception)
 	{
 		_parser.warn("File: " + _parser.getCurrentFileName() + ":" + exception.getLineNumber() + " warning: " + exception.getMessage());
 	}
 	
+	/**
+	 * Method error.
+	 * @param exception SAXParseException
+	 * @see org.xml.sax.ErrorHandler#error(SAXParseException)
+	 */
 	@Override
 	public void error(SAXParseException exception)
 	{
 		_parser.error("File: " + _parser.getCurrentFileName() + ":" + exception.getLineNumber() + " error: " + exception.getMessage());
 	}
 	
+	/**
+	 * Method fatalError.
+	 * @param exception SAXParseException
+	 * @see org.xml.sax.ErrorHandler#fatalError(SAXParseException)
+	 */
 	@Override
 	public void fatalError(SAXParseException exception)
 	{

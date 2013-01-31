@@ -21,11 +21,26 @@ import lineage2.gameserver.instancemanager.MatchingRoomManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.matching.MatchingRoom;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExPartyRoomMember extends L2GameServerPacket
 {
+	/**
+	 * Field _type.
+	 */
 	private final int _type;
+	/**
+	 * Field _members.
+	 */
 	private List<PartyRoomMemberInfo> _members = Collections.emptyList();
 	
+	/**
+	 * Constructor for ExPartyRoomMember.
+	 * @param room MatchingRoom
+	 * @param activeChar Player
+	 */
 	public ExPartyRoomMember(MatchingRoom room, Player activeChar)
 	{
 		_type = room.getMemberType(activeChar);
@@ -36,6 +51,9 @@ public class ExPartyRoomMember extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -58,12 +76,41 @@ public class ExPartyRoomMember extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class PartyRoomMemberInfo
 	{
+		/**
+		 * Field memberType.
+		 */
+		/**
+		 * Field location.
+		 */
+		/**
+		 * Field level.
+		 */
+		/**
+		 * Field classId.
+		 */
+		/**
+		 * Field objectId.
+		 */
 		public final int objectId, classId, level, location, memberType;
+		/**
+		 * Field name.
+		 */
 		public final String name;
+		/**
+		 * Field instanceReuses.
+		 */
 		public final int[] instanceReuses;
 		
+		/**
+		 * Constructor for PartyRoomMemberInfo.
+		 * @param member Player
+		 * @param type int
+		 */
 		public PartyRoomMemberInfo(Player member, int type)
 		{
 			objectId = member.getObjectId();

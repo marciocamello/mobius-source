@@ -14,19 +14,42 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChangeMoveType extends L2GameServerPacket
 {
+	/**
+	 * Field WALK.
+	 */
 	public static int WALK = 0;
+	/**
+	 * Field RUN.
+	 */
 	public static int RUN = 1;
+	/**
+	 * Field _chaId.
+	 */
 	private final int _chaId;
+	/**
+	 * Field _running.
+	 */
 	private final boolean _running;
 	
+	/**
+	 * Constructor for ChangeMoveType.
+	 * @param cha Creature
+	 */
 	public ChangeMoveType(Creature cha)
 	{
 		_chaId = cha.getObjectId();
 		_running = cha.isRunning();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

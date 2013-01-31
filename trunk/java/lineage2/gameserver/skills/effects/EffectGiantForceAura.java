@@ -25,12 +25,30 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectGiantForceAura extends Effect
 {
+	/**
+	 * Field forceSkillId.
+	 */
 	private final int forceSkillId;
+	/**
+	 * Field auraSkillId.
+	 */
 	private final int auraSkillId;
+	/**
+	 * Field startEffectTask.
+	 */
 	private ScheduledFuture<?> startEffectTask;
 	
+	/**
+	 * Constructor for EffectGiantForceAura.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectGiantForceAura(Env env, EffectTemplate template)
 	{
 		super(env, template);
@@ -38,6 +56,9 @@ public class EffectGiantForceAura extends Effect
 		auraSkillId = template.getParam().getInteger("auraSkillId", -1);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -55,6 +76,9 @@ public class EffectGiantForceAura extends Effect
 		}
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -65,6 +89,9 @@ public class EffectGiantForceAura extends Effect
 		}
 	}
 	
+	/**
+	 * Method updateAura.
+	 */
 	void updateAura()
 	{
 		Player effector = (Player) getEffector();
@@ -84,6 +111,10 @@ public class EffectGiantForceAura extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

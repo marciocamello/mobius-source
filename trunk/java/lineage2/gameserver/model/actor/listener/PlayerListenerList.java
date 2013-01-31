@@ -23,19 +23,34 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PlayerListenerList extends CharListenerList
 {
+	/**
+	 * Constructor for PlayerListenerList.
+	 * @param actor Player
+	 */
 	public PlayerListenerList(Player actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return Player
+	 */
 	@Override
 	public Player getActor()
 	{
 		return (Player) actor;
 	}
 	
+	/**
+	 * Method onEnter.
+	 */
 	public void onEnter()
 	{
 		if (!global.getListeners().isEmpty())
@@ -60,6 +75,9 @@ public class PlayerListenerList extends CharListenerList
 		}
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	public void onExit()
 	{
 		if (!global.getListeners().isEmpty())
@@ -84,6 +102,13 @@ public class PlayerListenerList extends CharListenerList
 		}
 	}
 	
+	/**
+	 * Method onTeleport.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param reflection Reflection
+	 */
 	public void onTeleport(int x, int y, int z, Reflection reflection)
 	{
 		if (!global.getListeners().isEmpty())
@@ -108,6 +133,9 @@ public class PlayerListenerList extends CharListenerList
 		}
 	}
 	
+	/**
+	 * Method onPartyInvite.
+	 */
 	public void onPartyInvite()
 	{
 		if (!global.getListeners().isEmpty())
@@ -132,6 +160,9 @@ public class PlayerListenerList extends CharListenerList
 		}
 	}
 	
+	/**
+	 * Method onPartyLeave.
+	 */
 	public void onPartyLeave()
 	{
 		if (!global.getListeners().isEmpty())
@@ -156,6 +187,11 @@ public class PlayerListenerList extends CharListenerList
 		}
 	}
 	
+	/**
+	 * Method onLevelChange.
+	 * @param oldLvl int
+	 * @param newLvl int
+	 */
 	public void onLevelChange(int oldLvl, int newLvl)
 	{
 		if (!global.getListeners().isEmpty())

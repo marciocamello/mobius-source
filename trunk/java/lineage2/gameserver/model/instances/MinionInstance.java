@@ -16,34 +16,62 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MinionInstance extends MonsterInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _master.
+	 */
 	private MonsterInstance _master;
 	
+	/**
+	 * Constructor for MinionInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MinionInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method setLeader.
+	 * @param leader MonsterInstance
+	 */
 	public void setLeader(MonsterInstance leader)
 	{
 		_master = leader;
 	}
 	
+	/**
+	 * Method getLeader.
+	 * @return MonsterInstance
+	 */
 	public MonsterInstance getLeader()
 	{
 		return _master;
 	}
 	
+	/**
+	 * Method isRaidFighter.
+	 * @return boolean
+	 */
 	public boolean isRaidFighter()
 	{
 		return (getLeader() != null) && getLeader().isRaid();
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -54,6 +82,9 @@ public class MinionInstance extends MonsterInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method onDecay.
+	 */
 	@Override
 	protected void onDecay()
 	{
@@ -61,24 +92,40 @@ public class MinionInstance extends MonsterInstance
 		_spawnAnimation = 2;
 	}
 	
+	/**
+	 * Method isFearImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isFearImmune()
 	{
 		return isRaidFighter();
 	}
 	
+	/**
+	 * Method getSpawnedLoc.
+	 * @return Location
+	 */
 	@Override
 	public Location getSpawnedLoc()
 	{
 		return getLeader() != null ? getLeader().getLoc() : getLoc();
 	}
 	
+	/**
+	 * Method canChampion.
+	 * @return boolean
+	 */
 	@Override
 	public boolean canChampion()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isMinion.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isMinion()
 	{

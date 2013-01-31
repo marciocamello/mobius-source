@@ -14,13 +14,36 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MonRaceInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _unknown1.
+	 */
 	private final int _unknown1;
+	/**
+	 * Field _unknown2.
+	 */
 	private final int _unknown2;
+	/**
+	 * Field _monsters.
+	 */
 	private final NpcInstance[] _monsters;
+	/**
+	 * Field _speeds.
+	 */
 	private final int[][] _speeds;
 	
+	/**
+	 * Constructor for MonRaceInfo.
+	 * @param unknown1 int
+	 * @param unknown2 int
+	 * @param monsters NpcInstance[]
+	 * @param speeds int[][]
+	 */
 	public MonRaceInfo(int unknown1, int unknown2, NpcInstance[] monsters, int[][] speeds)
 	{
 		_unknown1 = unknown1;
@@ -29,6 +52,9 @@ public class MonRaceInfo extends L2GameServerPacket
 		_speeds = speeds;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

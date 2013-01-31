@@ -16,20 +16,61 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.model.instances.StaticObjectInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StaticObject extends L2GameServerPacket
 {
+	/**
+	 * Field _staticObjectId.
+	 */
 	private final int _staticObjectId;
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _type.
+	 */
 	private final int _type;
+	/**
+	 * Field _isTargetable.
+	 */
 	private final int _isTargetable;
+	/**
+	 * Field _meshIndex.
+	 */
 	private final int _meshIndex;
+	/**
+	 * Field _isClosed.
+	 */
 	private final int _isClosed;
+	/**
+	 * Field _isEnemy.
+	 */
 	private final int _isEnemy;
+	/**
+	 * Field _maxHp.
+	 */
 	private final int _maxHp;
+	/**
+	 * Field _currentHp.
+	 */
 	private final int _currentHp;
+	/**
+	 * Field _showHp.
+	 */
 	private final int _showHp;
+	/**
+	 * Field _damageGrade.
+	 */
 	private final int _damageGrade;
 	
+	/**
+	 * Constructor for StaticObject.
+	 * @param obj StaticObjectInstance
+	 */
 	public StaticObject(StaticObjectInstance obj)
 	{
 		_staticObjectId = obj.getUId();
@@ -45,6 +86,11 @@ public class StaticObject extends L2GameServerPacket
 		_damageGrade = 0;
 	}
 	
+	/**
+	 * Constructor for StaticObject.
+	 * @param door DoorInstance
+	 * @param player Player
+	 */
 	public StaticObject(DoorInstance door, Player player)
 	{
 		_staticObjectId = door.getDoorId();
@@ -60,6 +106,9 @@ public class StaticObject extends L2GameServerPacket
 		_damageGrade = door.getDamage();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

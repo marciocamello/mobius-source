@@ -17,15 +17,32 @@ import java.io.File;
 import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SimpleDTDEntityResolver implements EntityResolver
 {
+	/**
+	 * Field _fileName.
+	 */
 	private final String _fileName;
 	
+	/**
+	 * Constructor for SimpleDTDEntityResolver.
+	 * @param f File
+	 */
 	public SimpleDTDEntityResolver(File f)
 	{
 		_fileName = f.getAbsolutePath();
 	}
 	
+	/**
+	 * Method resolveEntity.
+	 * @param publicId String
+	 * @param systemId String
+	 * @return InputSource * @see org.xml.sax.EntityResolver#resolveEntity(String, String)
+	 */
 	@Override
 	public InputSource resolveEntity(String publicId, String systemId)
 	{

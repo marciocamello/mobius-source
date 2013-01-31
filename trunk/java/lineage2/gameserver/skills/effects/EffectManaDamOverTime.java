@@ -17,13 +17,26 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectManaDamOverTime extends Effect
 {
+	/**
+	 * Constructor for EffectManaDamOverTime.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectManaDamOverTime(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

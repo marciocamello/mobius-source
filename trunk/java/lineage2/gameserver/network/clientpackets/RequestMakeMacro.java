@@ -17,10 +17,20 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.Macro;
 import lineage2.gameserver.model.actor.instances.player.Macro.L2MacroCmd;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestMakeMacro extends L2GameClientPacket
 {
+	/**
+	 * Field _macro.
+	 */
 	private Macro _macro;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -47,6 +57,9 @@ public class RequestMakeMacro extends L2GameClientPacket
 		_macro = new Macro(_id, _icon, _name, _desc, _acronym, commands);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

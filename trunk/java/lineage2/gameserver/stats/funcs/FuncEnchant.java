@@ -20,13 +20,28 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.ItemType;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FuncEnchant extends Func
 {
+	/**
+	 * Constructor for FuncEnchant.
+	 * @param stat Stats
+	 * @param order int
+	 * @param owner Object
+	 * @param value double
+	 */
 	public FuncEnchant(Stats stat, int order, Object owner, double value)
 	{
 		super(stat, order, owner);
 	}
 	
+	/**
+	 * Method calc.
+	 * @param env Env
+	 */
 	@Override
 	public void calc(Env env)
 	{

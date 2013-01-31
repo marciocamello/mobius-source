@@ -16,12 +16,29 @@ import lineage2.gameserver.model.Player;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PrivateStoreMsgSell extends L2GameServerPacket
 {
+	/**
+	 * Field _objId.
+	 */
 	private final int _objId;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _pkg.
+	 */
 	private final boolean _pkg;
 	
+	/**
+	 * Constructor for PrivateStoreMsgSell.
+	 * @param player Player
+	 */
 	public PrivateStoreMsgSell(Player player)
 	{
 		_objId = player.getObjectId();
@@ -29,6 +46,9 @@ public class PrivateStoreMsgSell extends L2GameServerPacket
 		_name = StringUtils.defaultString(player.getSellStoreName());
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -15,13 +15,34 @@ package lineage2.gameserver.model;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ProductItemComponent
 {
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _count.
+	 */
 	private final int _count;
+	/**
+	 * Field _weight.
+	 */
 	private final int _weight;
+	/**
+	 * Field _dropable.
+	 */
 	private final boolean _dropable;
 	
+	/**
+	 * Constructor for ProductItemComponent.
+	 * @param item_id int
+	 * @param count int
+	 */
 	public ProductItemComponent(int item_id, int count)
 	{
 		_itemId = item_id;
@@ -39,21 +60,37 @@ public class ProductItemComponent
 		}
 	}
 	
+	/**
+	 * Method getItemId.
+	 * @return int
+	 */
 	public int getItemId()
 	{
 		return _itemId;
 	}
 	
+	/**
+	 * Method getCount.
+	 * @return int
+	 */
 	public int getCount()
 	{
 		return _count;
 	}
 	
+	/**
+	 * Method getWeight.
+	 * @return int
+	 */
 	public int getWeight()
 	{
 		return _weight;
 	}
 	
+	/**
+	 * Method isDropable.
+	 * @return boolean
+	 */
 	public boolean isDropable()
 	{
 		return _dropable;

@@ -18,8 +18,19 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 abstract class SimpleItemHandler extends ScriptItemHandler
 {
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -44,8 +55,22 @@ abstract class SimpleItemHandler extends ScriptItemHandler
 		return useItemImpl(player, item, ctrl);
 	}
 	
+	/**
+	 * Method useItemImpl.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	protected abstract boolean useItemImpl(Player player, ItemInstance item, boolean ctrl);
 	
+	/**
+	 * Method useItem.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param count long
+	 * @return boolean
+	 */
 	public static boolean useItem(Player player, ItemInstance item, long count)
 	{
 		if (player.getInventory().destroyItem(item, count))

@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCallToChangeClass extends L2GameServerPacket
 {
+	/**
+	 * Field classId.
+	 */
 	private final int classId;
+	/**
+	 * Field showMsg.
+	 */
 	private final boolean showMsg;
 	
+	/**
+	 * Constructor for ExCallToChangeClass.
+	 * @param classId int
+	 * @param showMsg boolean
+	 */
 	public ExCallToChangeClass(int classId, boolean showMsg)
 	{
 		this.classId = classId;
 		this.showMsg = showMsg;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

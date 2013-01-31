@@ -14,15 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.entity.events.objects.KrateisCubePlayerObject;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExPVPMatchCCMyRecord extends L2GameServerPacket
 {
+	/**
+	 * Field _points.
+	 */
 	private final int _points;
 	
+	/**
+	 * Constructor for ExPVPMatchCCMyRecord.
+	 * @param player KrateisCubePlayerObject
+	 */
 	public ExPVPMatchCCMyRecord(KrateisCubePlayerObject player)
 	{
 		_points = player.getPoints();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	public void writeImpl()
 	{

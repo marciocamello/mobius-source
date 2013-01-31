@@ -39,14 +39,24 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KashaNegate implements ScriptFile
 {
+	/**
+	 * Field _buffs.
+	 */
 	static int[] _buffs =
 	{
 		6150,
 		6152,
 		6154
 	};
+	/**
+	 * Field ZONES.
+	 */
 	static String[] ZONES =
 	{
 		"[kasha1]",
@@ -58,16 +68,34 @@ public class KashaNegate implements ScriptFile
 		"[kasha7]",
 		"[kasha8]"
 	};
+	/**
+	 * Field mobs.
+	 */
 	static int[] mobs =
 	{
 		18812,
 		18813,
 		18814
 	};
+	/**
+	 * Field _debuff.
+	 */
 	private static int _debuff = 6149;
+	/**
+	 * Field _buffTask.
+	 */
 	private static Future<?> _buffTask;
+	/**
+	 * Field TICK_BUFF_DELAY.
+	 */
 	private static long TICK_BUFF_DELAY = 10000L;
+	/**
+	 * Field _zoneListener.
+	 */
 	private static ZoneListener _zoneListener;
+	/**
+	 * Field KASHARESPAWN.
+	 */
 	static final Map<Integer, Integer> KASHARESPAWN = new HashMap<>();
 	static
 	{
@@ -76,6 +104,10 @@ public class KashaNegate implements ScriptFile
 		KASHARESPAWN.put(18814, 18812);
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -111,6 +143,10 @@ public class KashaNegate implements ScriptFile
 		_buffTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new BuffTask(), TICK_BUFF_DELAY, TICK_BUFF_DELAY);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -126,11 +162,20 @@ public class KashaNegate implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method changeAura.
+	 * @param actor NpcInstance
+	 * @param npcId int
+	 */
 	void changeAura(NpcInstance actor, int npcId)
 	{
 		if (npcId != actor.getDisplayId())
@@ -151,6 +196,10 @@ public class KashaNegate implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method destroyKashaInCamp.
+	 * @param zone Zone
+	 */
 	void destroyKashaInCamp(Zone zone)
 	{
 		boolean _debuffed = false;
@@ -181,6 +230,11 @@ public class KashaNegate implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method broadcastKashaMessage.
+	 * @param message int
+	 * @param zone Zone
+	 */
 	void broadcastKashaMessage(int message, Zone zone)
 	{
 		for (Creature c : zone.getInsidePlayers())
@@ -197,15 +251,28 @@ public class KashaNegate implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class KashaRespawn extends RunnableImpl
 	{
+		/**
+		 * Field _n.
+		 */
 		private final NpcInstance _n;
 		
+		/**
+		 * Constructor for KashaRespawn.
+		 * @param n NpcInstance
+		 */
 		public KashaRespawn(NpcInstance n)
 		{
 			_n = n;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -217,15 +284,28 @@ public class KashaNegate implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class CampDestroyTask extends RunnableImpl
 	{
+		/**
+		 * Field _zone.
+		 */
 		private final Zone _zone;
 		
+		/**
+		 * Constructor for CampDestroyTask.
+		 * @param zone Zone
+		 */
 		public CampDestroyTask(Zone zone)
 		{
 			_zone = zone;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -238,17 +318,34 @@ public class KashaNegate implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class BroadcastMessageTask extends RunnableImpl
 	{
+		/**
+		 * Field _message.
+		 */
 		private final int _message;
+		/**
+		 * Field _zone.
+		 */
 		private final Zone _zone;
 		
+		/**
+		 * Constructor for BroadcastMessageTask.
+		 * @param message int
+		 * @param zone Zone
+		 */
 		public BroadcastMessageTask(int message, Zone zone)
 		{
 			_message = message;
 			_zone = zone;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -263,13 +360,28 @@ public class KashaNegate implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
@@ -283,13 +395,22 @@ public class KashaNegate implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class BuffTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for BuffTask.
+		 */
 		public BuffTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -363,6 +484,11 @@ public class KashaNegate implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method getKasha.
+	 * @param zone Zone
+	 * @return NpcInstance
+	 */
 	NpcInstance getKasha(Zone zone)
 	{
 		List<NpcInstance> mob = new ArrayList<>();
@@ -382,6 +508,13 @@ public class KashaNegate implements ScriptFile
 		return mob.size() > 0 ? mob.get(Rnd.get(mob.size())) : null;
 	}
 	
+	/**
+	 * Method addEffect.
+	 * @param actor NpcInstance
+	 * @param player Creature
+	 * @param skill Skill
+	 * @param animation boolean
+	 */
 	void addEffect(NpcInstance actor, Creature player, Skill skill, boolean animation)
 	{
 		List<Effect> effect = player.getEffectList().getEffectsBySkillId(skill.getId());
@@ -399,6 +532,11 @@ public class KashaNegate implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method getRealNpcId.
+	 * @param npc NpcInstance
+	 * @return int
+	 */
 	int getRealNpcId(NpcInstance npc)
 	{
 		if (npc.getDisplayId() > 0)

@@ -20,11 +20,28 @@ import lineage2.gameserver.instancemanager.MatchingRoomManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.matching.MatchingRoom;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ListPartyWaiting extends L2GameServerPacket
 {
+	/**
+	 * Field _rooms.
+	 */
 	private final Collection<MatchingRoom> _rooms;
+	/**
+	 * Field _fullSize.
+	 */
 	private final int _fullSize;
 	
+	/**
+	 * Constructor for ListPartyWaiting.
+	 * @param region int
+	 * @param allLevels boolean
+	 * @param page int
+	 * @param activeChar Player
+	 */
 	public ListPartyWaiting(int region, boolean allLevels, int page, Player activeChar)
 	{
 		int first = (page - 1) * 64;
@@ -44,6 +61,9 @@ public class ListPartyWaiting extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

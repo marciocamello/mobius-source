@@ -56,12 +56,25 @@ import lineage2.gameserver.utils.ReflectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(TvT.class);
 	
+	/**
+	 * @author Mobius
+	 */
 	public class StartTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -95,24 +108,79 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Field _startTask.
+	 */
 	private static ScheduledFuture<?> _startTask;
+	/**
+	 * Field players_list1.
+	 */
 	private static List<Long> players_list1 = new CopyOnWriteArrayList<>();
+	/**
+	 * Field players_list2.
+	 */
 	private static List<Long> players_list2 = new CopyOnWriteArrayList<>();
+	/**
+	 * Field live_list1.
+	 */
 	static List<Long> live_list1 = new CopyOnWriteArrayList<>();
+	/**
+	 * Field live_list2.
+	 */
 	static List<Long> live_list2 = new CopyOnWriteArrayList<>();
+	/**
+	 * Field _isRegistrationActive.
+	 */
 	private static boolean _isRegistrationActive = false;
+	/**
+	 * Field _status.
+	 */
 	static int _status = 0;
+	/**
+	 * Field _time_to_start.
+	 */
 	private static int _time_to_start;
+	/**
+	 * Field _category.
+	 */
 	private static int _category;
+	/**
+	 * Field _minLevel.
+	 */
 	private static int _minLevel;
+	/**
+	 * Field _maxLevel.
+	 */
 	private static int _maxLevel;
+	/**
+	 * Field _autoContinue.
+	 */
 	private static int _autoContinue = 0;
+	/**
+	 * Field _endTask.
+	 */
 	private static ScheduledFuture<?> _endTask;
+	/**
+	 * Field _zone.
+	 */
 	private static Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
+	/**
+	 * Field _zoneListener.
+	 */
 	private static ZoneListener _zoneListener = new ZoneListener();
+	/**
+	 * Field team1spawn.
+	 */
 	private static Territory team1spawn = new Territory().add(new Polygon().add(149878, 47505).add(150262, 47513).add(150502, 47233).add(150507, 46300).add(150256, 46002).add(149903, 46005).setZmin(-3408).setZmax(-3308));
+	/**
+	 * Field team2spawn.
+	 */
 	private static Territory team2spawn = new Territory().add(new Polygon().add(149027, 46005).add(148686, 46003).add(148448, 46302).add(148449, 47231).add(148712, 47516).add(149014, 47527).setZmin(-3408).setZmax(-3308));
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -123,6 +191,10 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		_log.info("Loaded Event: TvT");
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -134,19 +206,33 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 		onReload();
 	}
 	
+	/**
+	 * Field _active.
+	 */
 	static boolean _active = false;
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return _active;
 	}
 	
+	/**
+	 * Method activateEvent.
+	 */
 	public void activateEvent()
 	{
 		Player player = getSelf();
@@ -172,6 +258,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method deactivateEvent.
+	 */
 	public void deactivateEvent()
 	{
 		Player player = getSelf();
@@ -198,11 +287,20 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method isRunned.
+	 * @return boolean
+	 */
 	public static boolean isRunned()
 	{
 		return _isRegistrationActive || (_status > 0);
 	}
 	
+	/**
+	 * Method getMinLevelForCategory.
+	 * @param category int
+	 * @return int
+	 */
 	public static int getMinLevelForCategory(int category)
 	{
 		switch (category)
@@ -225,6 +323,11 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		return 0;
 	}
 	
+	/**
+	 * Method getMaxLevelForCategory.
+	 * @param category int
+	 * @return int
+	 */
 	public static int getMaxLevelForCategory(int category)
 	{
 		switch (category)
@@ -247,6 +350,11 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		return 0;
 	}
 	
+	/**
+	 * Method getCategory.
+	 * @param level int
+	 * @return int
+	 */
 	public static int getCategory(int level)
 	{
 		if ((level >= 20) && (level <= 29))
@@ -280,6 +388,10 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		return 0;
 	}
 	
+	/**
+	 * Method start.
+	 * @param var String[]
+	 */
 	public void start(String[] var)
 	{
 		Player player = getSelf();
@@ -335,11 +447,19 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		executeTask("events.TvT.TvT", "announce", new Object[0], 60000);
 	}
 	
+	/**
+	 * Method sayToAll.
+	 * @param address String
+	 * @param replacements String[]
+	 */
 	public static void sayToAll(String address, String[] replacements)
 	{
 		Announcements.getInstance().announceByCustomMessage(address, replacements, ChatType.CRITICAL_ANNOUNCE);
 	}
 	
+	/**
+	 * Method question.
+	 */
 	public static void question()
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
@@ -351,6 +471,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method announce.
+	 */
 	public static void announce()
 	{
 		if (players_list1.isEmpty() || players_list2.isEmpty())
@@ -382,6 +505,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method addPlayer.
+	 */
 	public void addPlayer()
 	{
 		Player player = getSelf();
@@ -420,6 +546,12 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method checkPlayer.
+	 * @param player Player
+	 * @param first boolean
+	 * @return boolean
+	 */
 	public static boolean checkPlayer(Player player, boolean first)
 	{
 		if (first && (!_isRegistrationActive || player.isDead()))
@@ -465,6 +597,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		return true;
 	}
 	
+	/**
+	 * Method prepare.
+	 */
 	public static void prepare()
 	{
 		ReflectionUtils.getDoor(24190002).closeMe();
@@ -479,6 +614,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		sayToAll("scripts.events.TvT.AnnounceFinalCountdown", null);
 	}
 	
+	/**
+	 * Method go.
+	 */
 	public static void go()
 	{
 		_status = 2;
@@ -489,6 +627,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		_endTask = executeTask("events.TvT.TvT", "endBattle", new Object[0], 300000);
 	}
 	
+	/**
+	 * Method endBattle.
+	 */
 	public static void endBattle()
 	{
 		ReflectionUtils.getDoor(24190002).openMe();
@@ -530,6 +671,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method end.
+	 */
 	public static void end()
 	{
 		executeTask("events.TvT.TvT", "ressurectPlayers", new Object[0], 1000);
@@ -538,6 +682,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		executeTask("events.TvT.TvT", "autoContinue", new Object[0], 10000);
 	}
 	
+	/**
+	 * Method autoContinue.
+	 */
 	public void autoContinue()
 	{
 		live_list1.clear();
@@ -559,6 +706,12 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method giveItemsToWinner.
+	 * @param team1 boolean
+	 * @param team2 boolean
+	 * @param rate double
+	 */
 	public static void giveItemsToWinner(boolean team1, boolean team2, double rate)
 	{
 		if (team1)
@@ -577,6 +730,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method teleportPlayersToColiseum.
+	 */
 	public static void teleportPlayersToColiseum()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -593,6 +749,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method teleportPlayers.
+	 */
 	public static void teleportPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -605,6 +764,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method paralyzePlayers.
+	 */
 	public static void paralyzePlayers()
 	{
 		Skill revengeSkill = SkillTable.getInstance().getInfo(Skill.SKILL_RAID_CURSE, 1);
@@ -628,6 +790,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method upParalyzePlayers.
+	 */
 	public static void upParalyzePlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -650,6 +815,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method ressurectPlayers.
+	 */
 	public static void ressurectPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -676,6 +844,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method healPlayers.
+	 */
 	public static void healPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -690,6 +861,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method cleanPlayers.
+	 */
 	public static void cleanPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -708,6 +882,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method checkLive.
+	 */
 	public static void checkLive()
 	{
 		List<Long> new_live_list1 = new CopyOnWriteArrayList<>();
@@ -758,6 +935,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method removeAura.
+	 */
 	public static void removeAura()
 	{
 		for (Player player : getPlayers(live_list1))
@@ -770,6 +950,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method clearArena.
+	 */
 	public static void clearArena()
 	{
 		for (GameObject obj : _zone.getObjects())
@@ -785,6 +968,12 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param self Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature self, Creature killer)
 	{
@@ -795,6 +984,15 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method onTeleport.
+	 * @param player Player
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param reflection Reflection
+	 * @see lineage2.gameserver.listener.actor.player.OnTeleportListener#onTeleport(Player, int, int, int, Reflection)
+	 */
 	@Override
 	public void onTeleport(Player player, int x, int y, int z, Reflection reflection)
 	{
@@ -809,6 +1007,11 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method onPlayerExit.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerExitListener#onPlayerExit(Player)
+	 */
 	@Override
 	public void onPlayerExit(Player player)
 	{
@@ -852,13 +1055,25 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Constructor for ZoneListener.
+		 */
 		public ZoneListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -873,6 +1088,12 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
@@ -893,11 +1114,25 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class TeleportTask extends RunnableImpl
 	{
+		/**
+		 * Field loc.
+		 */
 		Location loc;
+		/**
+		 * Field target.
+		 */
 		Creature target;
 		
+		/**
+		 * Constructor for TeleportTask.
+		 * @param target Creature
+		 * @param loc Location
+		 */
 		public TeleportTask(Creature target, Location loc)
 		{
 			this.target = target;
@@ -905,6 +1140,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			target.block();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -913,6 +1151,10 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method loosePlayer.
+	 * @param player Player
+	 */
 	private static void loosePlayer(Player player)
 	{
 		if (player != null)
@@ -924,6 +1166,10 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method removePlayer.
+	 * @param player Player
+	 */
 	private static void removePlayer(Player player)
 	{
 		if (player != null)
@@ -936,6 +1182,11 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		}
 	}
 	
+	/**
+	 * Method getPlayers.
+	 * @param list List<Long>
+	 * @return List<Player>
+	 */
 	private static List<Player> getPlayers(List<Long> list)
 	{
 		List<Player> result = new ArrayList<>();

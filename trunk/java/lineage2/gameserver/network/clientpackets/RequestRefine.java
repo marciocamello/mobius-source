@@ -24,11 +24,24 @@ import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.ShortCutRegister;
 import lineage2.gameserver.tables.AugmentationData;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RequestRefine extends AbstractRefinePacket
 {
+	/**
+	 * Field _gemstoneItemObjId. Field _refinerItemObjId. Field _targetItemObjId.
+	 */
 	private int _targetItemObjId, _refinerItemObjId, _gemstoneItemObjId;
+	/**
+	 * Field _gemstoneCount.
+	 */
 	private long _gemstoneCount;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -38,6 +51,9 @@ public final class RequestRefine extends AbstractRefinePacket
 		_gemstoneCount = readQ();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -76,6 +92,13 @@ public final class RequestRefine extends AbstractRefinePacket
 		}
 	}
 	
+	/**
+	 * Method TryAugmentItem.
+	 * @param player Player
+	 * @param targetItem ItemInstance
+	 * @param lsi LifeStoneInfo
+	 * @return boolean
+	 */
 	boolean TryAugmentItem(Player player, ItemInstance targetItem, LifeStoneInfo lsi)
 	{
 		if (!player.getInventory().destroyItemByObjectId(_gemstoneItemObjId, _gemstoneCount))
@@ -88,7 +111,7 @@ public final class RequestRefine extends AbstractRefinePacket
 		}
 		int augmentation = AugmentationData.getInstance().generateRandomAugmentation(lsi.getLevel(), lsi.getGrade(), targetItem.getTemplate().getBodyPart());
 		boolean equipped = targetItem.isEquipped();
-		if (equipped == true)
+		if (equipped)
 		{
 			player.getInventory().unEquipItem(targetItem);
 		}

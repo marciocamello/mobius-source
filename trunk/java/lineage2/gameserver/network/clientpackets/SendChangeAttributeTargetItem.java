@@ -16,11 +16,24 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExChangeAttributeInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SendChangeAttributeTargetItem extends L2GameClientPacket
 {
+	/**
+	 * Field _crystalItemId.
+	 */
 	public int _crystalItemId;
+	/**
+	 * Field _itemObjId.
+	 */
 	public int _itemObjId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -28,6 +41,9 @@ public class SendChangeAttributeTargetItem extends L2GameClientPacket
 		_itemObjId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

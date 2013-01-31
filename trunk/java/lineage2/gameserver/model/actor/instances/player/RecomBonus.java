@@ -14,8 +14,15 @@ package lineage2.gameserver.model.actor.instances.player;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RecomBonus
 {
+	/**
+	 * Field _recoBonus.
+	 */
 	private static final int[][] _recoBonus =
 	{
 		{
@@ -140,6 +147,11 @@ public final class RecomBonus
 		}
 	};
 	
+	/**
+	 * Method getRecoBonus.
+	 * @param activeChar Player
+	 * @return int
+	 */
 	public static int getRecoBonus(Player activeChar)
 	{
 		if ((activeChar != null) && activeChar.isOnline())
@@ -155,6 +167,11 @@ public final class RecomBonus
 		return 0;
 	}
 	
+	/**
+	 * Method getRecoMultiplier.
+	 * @param activeChar Player
+	 * @return double
+	 */
 	public static double getRecoMultiplier(Player activeChar)
 	{
 		double bonus = getRecoBonus(activeChar);

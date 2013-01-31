@@ -41,12 +41,28 @@ import org.jboss.netty.channel.SimpleChannelUpstreamHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements TelnetCommandHolder
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(TelnetServerHandler.class);
+	/**
+	 * Field COMMAND_ARGS_PATTERN.
+	 */
 	private static final Pattern COMMAND_ARGS_PATTERN = Pattern.compile("\"([^\"]*)\"|([^\\s]+)");
+	/**
+	 * Field _commands.
+	 */
 	final Set<TelnetCommand> _commands = new LinkedHashSet<>();
 	
+	/**
+	 * Constructor for TelnetServerHandler.
+	 */
 	public TelnetServerHandler()
 	{
 		_commands.add(new TelnetCommand("help", "h")
@@ -66,7 +82,7 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 					sb.append("Available commands:\n");
 					for (TelnetCommand cmd : _commands)
 					{
-						sb.append(cmd.getCommand()).append("\n");
+						sb.append(cmd.getCommand()).append('\n');
 					}
 					return sb.toString();
 				}
@@ -88,6 +104,10 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 		addHandler(new TelnetWorld());
 	}
 	
+	/**
+	 * Method addHandler.
+	 * @param handler TelnetCommandHolder
+	 */
 	public void addHandler(TelnetCommandHolder handler)
 	{
 		for (TelnetCommand cmd : handler.getCommands())
@@ -96,12 +116,21 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 		}
 	}
 	
+	/**
+	 * Method getCommands.
+	 * @return Set<TelnetCommand> * @see lineage2.gameserver.network.telnet.TelnetCommandHolder#getCommands()
+	 */
 	@Override
 	public Set<TelnetCommand> getCommands()
 	{
 		return _commands;
 	}
 	
+	/**
+	 * Method getCommand.
+	 * @param command String
+	 * @return TelnetCommand
+	 */
 	TelnetCommand getCommand(String command)
 	{
 		for (TelnetCommand cmd : _commands)
@@ -114,6 +143,12 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 		return null;
 	}
 	
+	/**
+	 * Method tryHandleCommand.
+	 * @param command String
+	 * @param args String[]
+	 * @return String
+	 */
 	private String tryHandleCommand(String command, String[] args)
 	{
 		TelnetCommand cmd = getCommand(command);
@@ -129,6 +164,11 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 		return response;
 	}
 	
+	/**
+	 * Method channelConnected.
+	 * @param ctx ChannelHandlerContext
+	 * @param e ChannelStateEvent
+	 */
 	@Override
 	public void channelConnected(ChannelHandlerContext ctx, ChannelStateEvent e)
 	{
@@ -146,6 +186,11 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 		}
 	}
 	
+	/**
+	 * Method messageReceived.
+	 * @param ctx ChannelHandlerContext
+	 * @param e MessageEvent
+	 */
 	@Override
 	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)
 	{
@@ -201,6 +246,11 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 		}
 	}
 	
+	/**
+	 * Method exceptionCaught.
+	 * @param ctx ChannelHandlerContext
+	 * @param e ExceptionEvent
+	 */
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, ExceptionEvent e)
 	{

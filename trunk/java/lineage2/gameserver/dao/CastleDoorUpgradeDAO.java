@@ -22,19 +22,47 @@ import lineage2.gameserver.database.DatabaseFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleDoorUpgradeDAO
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final CastleDoorUpgradeDAO _instance = new CastleDoorUpgradeDAO();
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CastleDoorUpgradeDAO.class);
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT hp FROM castle_door_upgrade WHERE door_id=?"")
+	 */
 	public static final String SELECT_SQL_QUERY = "SELECT hp FROM castle_door_upgrade WHERE door_id=?";
+	/**
+	 * Field REPLACE_SQL_QUERY. (value is ""REPLACE INTO castle_door_upgrade (door_id, hp) VALUES (?,?)"")
+	 */
 	public static final String REPLACE_SQL_QUERY = "REPLACE INTO castle_door_upgrade (door_id, hp) VALUES (?,?)";
+	/**
+	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM castle_door_upgrade WHERE door_id=?"")
+	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM castle_door_upgrade WHERE door_id=?";
 	
+	/**
+	 * Method getInstance.
+	 * @return CastleDoorUpgradeDAO
+	 */
 	public static CastleDoorUpgradeDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method load.
+	 * @param doorId int
+	 * @return int
+	 */
 	public int load(int doorId)
 	{
 		Connection con = null;
@@ -62,6 +90,11 @@ public class CastleDoorUpgradeDAO
 		return 0;
 	}
 	
+	/**
+	 * Method insert.
+	 * @param uId int
+	 * @param val int
+	 */
 	public void insert(int uId, int val)
 	{
 		Connection con = null;
@@ -84,6 +117,10 @@ public class CastleDoorUpgradeDAO
 		}
 	}
 	
+	/**
+	 * Method delete.
+	 * @param uId int
+	 */
 	public void delete(int uId)
 	{
 		Connection con = null;

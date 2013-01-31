@@ -22,27 +22,52 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ReflectionUtils;
 import quests._10320_LetsGototheCentralSquare;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TalkingIslandMovie implements ScriptFile
 {
+	/**
+	 * Field ZONE_NAME. (value is ""[ti_presentation_video]"")
+	 */
 	private static final String ZONE_NAME = "[ti_presentation_video]";
+	/**
+	 * Field _zoneListener.
+	 */
 	private static ZoneListener _zoneListener;
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 		init();
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method init.
+	 */
 	private void init()
 	{
 		_zoneListener = new ZoneListener();
@@ -53,8 +78,17 @@ public class TalkingIslandMovie implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -77,6 +111,12 @@ public class TalkingIslandMovie implements ScriptFile
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{

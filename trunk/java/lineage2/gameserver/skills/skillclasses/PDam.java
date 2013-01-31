@@ -23,13 +23,33 @@ import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.stats.Formulas.AttackInfo;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PDam extends Skill
 {
+	/**
+	 * Field _onCrit.
+	 */
 	private final boolean _onCrit;
+	/**
+	 * Field _directHp.
+	 */
 	private final boolean _directHp;
+	/**
+	 * Field _turner.
+	 */
 	private final boolean _turner;
+	/**
+	 * Field _blow.
+	 */
 	private final boolean _blow;
 	
+	/**
+	 * Constructor for PDam.
+	 * @param set StatsSet
+	 */
 	public PDam(StatsSet set)
 	{
 		super(set);
@@ -39,6 +59,11 @@ public class PDam extends Skill
 		_blow = set.getBool("blow", false);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

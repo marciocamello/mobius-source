@@ -27,14 +27,36 @@ import lineage2.gameserver.utils.TradeHelper;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPrivateStoreBuy extends L2GameClientPacket
 {
+	/**
+	 * Field _sellerId.
+	 */
 	private int _sellerId;
+	/**
+	 * Field _count.
+	 */
 	private int _count;
+	/**
+	 * Field _items.
+	 */
 	private int[] _items;
+	/**
+	 * Field _itemQ.
+	 */
 	private long[] _itemQ;
+	/**
+	 * Field _itemP.
+	 */
 	private long[] _itemP;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -61,6 +83,9 @@ public class RequestPrivateStoreBuy extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

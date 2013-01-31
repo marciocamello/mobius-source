@@ -37,34 +37,118 @@ import lineage2.gameserver.taskmanager.EffectTaskManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Effect extends RunnableImpl implements Comparable<Effect>, FuncOwner
 {
+	/**
+	 * Field _log.
+	 */
 	protected static final Logger _log = LoggerFactory.getLogger(Effect.class);
+	/**
+	 * Field EMPTY_L2EFFECT_ARRAY.
+	 */
 	public final static Effect[] EMPTY_L2EFFECT_ARRAY = new Effect[0];
+	/**
+	 * Field SUSPENDED.
+	 */
 	public static int SUSPENDED = -1;
+	/**
+	 * Field STARTING.
+	 */
 	public static int STARTING = 0;
+	/**
+	 * Field STARTED.
+	 */
 	public static int STARTED = 1;
+	/**
+	 * Field ACTING.
+	 */
 	public static int ACTING = 2;
+	/**
+	 * Field FINISHING.
+	 */
 	public static int FINISHING = 3;
+	/**
+	 * Field FINISHED.
+	 */
 	public static int FINISHED = 4;
+	/**
+	 * Field _effector.
+	 */
 	protected final Creature _effector;
+	/**
+	 * Field _effected.
+	 */
 	public final Creature _effected;
+	/**
+	 * Field _skill.
+	 */
 	protected final Skill _skill;
+	/**
+	 * Field _displayId.
+	 */
 	protected final int _displayId;
+	/**
+	 * Field _displayLevel.
+	 */
 	protected final int _displayLevel;
+	/**
+	 * Field _value.
+	 */
 	private final double _value;
+	/**
+	 * Field _state.
+	 */
 	private final AtomicInteger _state;
+	/**
+	 * Field _count.
+	 */
 	private int _count;
+	/**
+	 * Field _period.
+	 */
 	private long _period;
+	/**
+	 * Field _startTimeMillis.
+	 */
 	private long _startTimeMillis;
+	/**
+	 * Field _duration.
+	 */
 	private long _duration;
+	/**
+	 * Field _inUse.
+	 */
 	private boolean _inUse = false;
+	/**
+	 * Field _next.
+	 */
 	private Effect _next = null;
+	/**
+	 * Field _active.
+	 */
 	private boolean _active = false;
+	/**
+	 * Field _template.
+	 */
 	protected final EffectTemplate _template;
+	/**
+	 * Field _effectTask.
+	 */
 	private Future<?> _effectTask;
+	/**
+	 * Field _effector_obj.
+	 */
 	private final int _effector_obj;
 	
+	/**
+	 * Constructor for Effect.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	protected Effect(Env env, EffectTemplate template)
 	{
 		_skill = env.skill;
@@ -81,38 +165,66 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		_state = new AtomicInteger(STARTING);
 	}
 	
+	/**
+	 * Method getPeriod.
+	 * @return long
+	 */
 	public long getPeriod()
 	{
 		return _period;
 	}
 	
+	/**
+	 * Method getEffectorObj.
+	 * @return int
+	 */
 	public int getEffectorObj()
 	{
 		return _effector_obj;
 	}
 	
+	/**
+	 * Method setPeriod.
+	 * @param time long
+	 */
 	public void setPeriod(long time)
 	{
 		_period = time;
 		_duration = _period * _count;
 	}
 	
+	/**
+	 * Method getCount.
+	 * @return int
+	 */
 	public int getCount()
 	{
 		return _count;
 	}
 	
+	/**
+	 * Method setCount.
+	 * @param count int
+	 */
 	public void setCount(int count)
 	{
 		_count = count;
 		_duration = _period * _count;
 	}
 	
+	/**
+	 * Method isOneTime.
+	 * @return boolean
+	 */
 	public boolean isOneTime()
 	{
 		return _period == 0;
 	}
 	
+	/**
+	 * Method getStartTime.
+	 * @return long
+	 */
 	public long getStartTime()
 	{
 		if (_startTimeMillis == 0L)
@@ -122,61 +234,111 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		return _startTimeMillis;
 	}
 	
+	/**
+	 * Method getTime.
+	 * @return long
+	 */
 	public long getTime()
 	{
 		return System.currentTimeMillis() - getStartTime();
 	}
 	
+	/**
+	 * Method getDuration.
+	 * @return long
+	 */
 	public long getDuration()
 	{
 		return _duration;
 	}
 	
+	/**
+	 * Method getTimeLeft.
+	 * @return int
+	 */
 	public int getTimeLeft()
 	{
 		return (int) ((getDuration() - getTime()) / 1000L);
 	}
 	
+	/**
+	 * Method isTimeLeft.
+	 * @return boolean
+	 */
 	public boolean isTimeLeft()
 	{
 		return (getDuration() - getTime()) > 0L;
 	}
 	
+	/**
+	 * Method isInUse.
+	 * @return boolean
+	 */
 	public boolean isInUse()
 	{
 		return _inUse;
 	}
 	
+	/**
+	 * Method setInUse.
+	 * @param inUse boolean
+	 */
 	public void setInUse(boolean inUse)
 	{
 		_inUse = inUse;
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	public boolean isActive()
 	{
 		return _active;
 	}
 	
+	/**
+	 * Method setActive.
+	 * @param set boolean
+	 */
 	public void setActive(boolean set)
 	{
 		_active = set;
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @return EffectTemplate
+	 */
 	public EffectTemplate getTemplate()
 	{
 		return _template;
 	}
 	
+	/**
+	 * Method getStackType.
+	 * @return List<String>
+	 */
 	public List<String> getStackType()
 	{
 		return getTemplate()._stackTypes;
 	}
 	
+	/**
+	 * Method checkStackType.
+	 * @param param String
+	 * @return boolean
+	 */
 	public boolean checkStackType(String param)
 	{
 		return getStackType().contains(param);
 	}
 	
+	/**
+	 * Method checkStackType.
+	 * @param param Effect
+	 * @return boolean
+	 */
 	public boolean checkStackType(Effect param)
 	{
 		boolean r = false;
@@ -187,71 +349,136 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		return r;
 	}
 	
+	/**
+	 * Method getStackOrder.
+	 * @return int
+	 */
 	public int getStackOrder()
 	{
 		return getTemplate()._stackOrder;
 	}
 	
+	/**
+	 * Method getSkill.
+	 * @return Skill
+	 */
 	public Skill getSkill()
 	{
 		return _skill;
 	}
 	
+	/**
+	 * Method getEffector.
+	 * @return Creature
+	 */
 	public Creature getEffector()
 	{
 		return _effector;
 	}
 	
+	/**
+	 * Method getEffected.
+	 * @return Creature
+	 */
 	public Creature getEffected()
 	{
 		return _effected;
 	}
 	
+	/**
+	 * Method calc.
+	 * @return double
+	 */
 	public double calc()
 	{
 		return _value;
 	}
 	
+	/**
+	 * Method isEnded.
+	 * @return boolean
+	 */
 	public boolean isEnded()
 	{
 		return isFinished() || isFinishing();
 	}
 	
+	/**
+	 * Method isFinishing.
+	 * @return boolean
+	 */
 	public boolean isFinishing()
 	{
 		return getState() == FINISHING;
 	}
 	
+	/**
+	 * Method isFinished.
+	 * @return boolean
+	 */
 	public boolean isFinished()
 	{
 		return getState() == FINISHED;
 	}
 	
+	/**
+	 * Method getState.
+	 * @return int
+	 */
 	private int getState()
 	{
 		return _state.get();
 	}
 	
+	/**
+	 * Method setState.
+	 * @param oldState int
+	 * @param newState int
+	 * @return boolean
+	 */
 	private boolean setState(int oldState, int newState)
 	{
 		return _state.compareAndSet(oldState, newState);
 	}
 	
+	/**
+	 * Field _listener.
+	 */
 	private ActionDispelListener _listener;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ActionDispelListener implements OnAttackListener, OnMagicUseListener
 	{
+		/**
+		 * Constructor for ActionDispelListener.
+		 */
 		public ActionDispelListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onMagicUse.
+		 * @param actor Creature
+		 * @param skill Skill
+		 * @param target Creature
+		 * @param alt boolean
+		 * @see lineage2.gameserver.listener.actor.OnMagicUseListener#onMagicUse(Creature, Skill, Creature, boolean)
+		 */
 		@Override
 		public void onMagicUse(Creature actor, Skill skill, Creature target, boolean alt)
 		{
 			exit();
 		}
 		
+		/**
+		 * Method onAttack.
+		 * @param actor Creature
+		 * @param target Creature
+		 * @see lineage2.gameserver.listener.actor.OnAttackListener#onAttack(Creature, Creature)
+		 */
 		@Override
 		public void onAttack(Creature actor, Creature target)
 		{
@@ -259,11 +486,18 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		}
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	public boolean checkCondition()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	protected void onStart()
 	{
 		getEffected().addStatFuncs(getStatFuncs());
@@ -294,8 +528,15 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	protected abstract boolean onActionTime();
 	
+	/**
+	 * Method onExit.
+	 */
 	protected void onExit()
 	{
 		getEffected().removeStatsOwner(this);
@@ -330,6 +571,9 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		}
 	}
 	
+	/**
+	 * Method stopEffectTask.
+	 */
 	private void stopEffectTask()
 	{
 		if (_effectTask != null)
@@ -338,6 +582,9 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		}
 	}
 	
+	/**
+	 * Method startEffectTask.
+	 */
 	private void startEffectTask()
 	{
 		if (_effectTask == null)
@@ -347,6 +594,9 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		}
 	}
 	
+	/**
+	 * Method schedule.
+	 */
 	public final void schedule()
 	{
 		Creature effected = getEffected();
@@ -361,6 +611,9 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		getEffected().getEffectList().addEffect(this);
 	}
 	
+	/**
+	 * Method suspend.
+	 */
 	private final void suspend()
 	{
 		if (setState(STARTING, SUSPENDED))
@@ -382,6 +635,9 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		}
 	}
 	
+	/**
+	 * Method start.
+	 */
 	public final void start()
 	{
 		if (setState(STARTING, STARTED))
@@ -399,6 +655,9 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		run();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public final void runImpl()
 	{
@@ -467,6 +726,9 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		}
 	}
 	
+	/**
+	 * Method exit.
+	 */
 	public final void exit()
 	{
 		Effect next = getNext();
@@ -499,6 +761,11 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		}
 	}
 	
+	/**
+	 * Method scheduleNext.
+	 * @param e Effect
+	 * @return boolean
+	 */
 	private boolean scheduleNext(Effect e)
 	{
 		if ((e == null) || e.isEnded())
@@ -514,16 +781,28 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		return true;
 	}
 	
+	/**
+	 * Method getNext.
+	 * @return Effect
+	 */
 	public Effect getNext()
 	{
 		return _next;
 	}
 	
+	/**
+	 * Method removeNext.
+	 */
 	private void removeNext()
 	{
 		_next = null;
 	}
 	
+	/**
+	 * Method maybeScheduleNext.
+	 * @param newEffect Effect
+	 * @return boolean
+	 */
 	public boolean maybeScheduleNext(Effect newEffect)
 	{
 		if (newEffect.getStackOrder() < getStackOrder())
@@ -552,11 +831,19 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		return true;
 	}
 	
+	/**
+	 * Method getStatFuncs.
+	 * @return Func[]
+	 */
 	public Func[] getStatFuncs()
 	{
 		return getTemplate().getStatFuncs(this);
 	}
 	
+	/**
+	 * Method addIcon.
+	 * @param ps IconEffectPacket
+	 */
 	public void addIcon(IconEffectPacket ps)
 	{
 		if (!isActive() || isHidden())
@@ -567,6 +854,11 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		ps.addIconEffect(_displayId, _displayLevel, duration, getEffectorObj());
 	}
 	
+	/**
+	 * Method addOlympiadSpelledIcon.
+	 * @param player Player
+	 * @param os ExOlympiadSpelledInfo
+	 */
 	public void addOlympiadSpelledIcon(Player player, ExOlympiadSpelledInfo os)
 	{
 		if (!isActive() || isHidden())
@@ -578,21 +870,38 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		os.addEffect(_displayId, _displayLevel, duration);
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	protected int getLevel()
 	{
 		return _skill.getLevel();
 	}
 	
+	/**
+	 * Method getEffectType.
+	 * @return EffectType
+	 */
 	public EffectType getEffectType()
 	{
 		return getTemplate()._effectType;
 	}
 	
+	/**
+	 * Method isHidden.
+	 * @return boolean
+	 */
 	public boolean isHidden()
 	{
 		return _displayId < 0;
 	}
 	
+	/**
+	 * Method compareTo.
+	 * @param obj Effect
+	 * @return int
+	 */
 	@Override
 	public int compareTo(Effect obj)
 	{
@@ -603,44 +912,76 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		return 1;
 	}
 	
+	/**
+	 * Method isSaveable.
+	 * @return boolean
+	 */
 	public boolean isSaveable()
 	{
 		return _template.isSaveable(getSkill().isSaveable()) && (getTimeLeft() >= Config.ALT_SAVE_EFFECTS_REMAINING_TIME);
 	}
 	
+	/**
+	 * Method getDisplayId.
+	 * @return int
+	 */
 	public int getDisplayId()
 	{
 		return _displayId;
 	}
 	
+	/**
+	 * Method getDisplayLevel.
+	 * @return int
+	 */
 	public int getDisplayLevel()
 	{
 		return _displayLevel;
 	}
 	
+	/**
+	 * Method isCancelable.
+	 * @return boolean
+	 */
 	public boolean isCancelable()
 	{
 		return _template.isCancelable(getSkill().isCancelable());
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		return "Skill: " + _skill + ", state: " + getState() + ", inUse: " + _inUse + ", active : " + _active;
 	}
 	
+	/**
+	 * Method isFuncEnabled.
+	 * @return boolean * @see lineage2.gameserver.stats.funcs.FuncOwner#isFuncEnabled()
+	 */
 	@Override
 	public boolean isFuncEnabled()
 	{
 		return isInUse();
 	}
 	
+	/**
+	 * Method overrideLimits.
+	 * @return boolean * @see lineage2.gameserver.stats.funcs.FuncOwner#overrideLimits()
+	 */
 	@Override
 	public boolean overrideLimits()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isOffensive.
+	 * @return boolean
+	 */
 	public boolean isOffensive()
 	{
 		return _template.isOffensive(getSkill().isOffensive());

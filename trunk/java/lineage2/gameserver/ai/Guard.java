@@ -17,13 +17,26 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Guard extends Fighter
 {
+	/**
+	 * Constructor for Guard.
+	 * @param actor NpcInstance
+	 */
 	public Guard(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method canAttackCharacter.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean canAttackCharacter(Creature target)
 	{
@@ -36,6 +49,11 @@ public class Guard extends Fighter
 		return target.isMonster() || target.isPlayable();
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{
@@ -68,12 +86,20 @@ public class Guard extends Fighter
 		return super.checkAggression(target);
 	}
 	
+	/**
+	 * Method getMaxAttackTimeout.
+	 * @return int
+	 */
 	@Override
 	public int getMaxAttackTimeout()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

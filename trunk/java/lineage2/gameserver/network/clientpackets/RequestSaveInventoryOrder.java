@@ -14,10 +14,20 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestSaveInventoryOrder extends L2GameClientPacket
 {
+	/**
+	 * Field _items.
+	 */
 	int[][] _items;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -39,6 +49,9 @@ public class RequestSaveInventoryOrder extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

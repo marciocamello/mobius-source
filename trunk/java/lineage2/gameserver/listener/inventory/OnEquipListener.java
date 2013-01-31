@@ -16,9 +16,25 @@ import lineage2.commons.listener.Listener;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnEquipListener extends Listener<Playable>
 {
+	/**
+	 * Method onEquip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 */
 	public void onEquip(int slot, ItemInstance item, Playable actor);
 	
+	/**
+	 * Method onUnequip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 */
 	public void onUnequip(int slot, ItemInstance item, Playable actor);
 }

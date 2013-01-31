@@ -20,13 +20,26 @@ import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Escape implements IUserCommandHandler
 {
+	/**
+	 * Field COMMAND_IDS.
+	 */
 	private static final int[] COMMAND_IDS =
 	{
 		52
 	};
 	
+	/**
+	 * Method useUserCommand.
+	 * @param id int
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
+	 */
 	@Override
 	public boolean useUserCommand(int id, Player activeChar)
 	{
@@ -72,6 +85,10 @@ public class Escape implements IUserCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getUserCommandList.
+	 * @return int[] * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
+	 */
 	@Override
 	public final int[] getUserCommandList()
 	{

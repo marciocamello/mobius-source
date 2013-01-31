@@ -19,13 +19,25 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectCallSkills extends Effect
 {
+	/**
+	 * Constructor for EffectCallSkills.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectCallSkills(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -43,6 +55,10 @@ public class EffectCallSkills extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

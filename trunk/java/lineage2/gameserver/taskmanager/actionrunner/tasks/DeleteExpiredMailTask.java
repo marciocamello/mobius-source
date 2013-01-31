@@ -22,13 +22,23 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DeleteExpiredMailTask extends AutomaticTask
 {
+	/**
+	 * Constructor for DeleteExpiredMailTask.
+	 */
 	public DeleteExpiredMailTask()
 	{
 		super();
 	}
 	
+	/**
+	 * Method doTask.
+	 */
 	@Override
 	public void doTask()
 	{
@@ -65,6 +75,11 @@ public class DeleteExpiredMailTask extends AutomaticTask
 		}
 	}
 	
+	/**
+	 * Method reCalcTime.
+	 * @param start boolean
+	 * @return long
+	 */
 	@Override
 	public long reCalcTime(boolean start)
 	{

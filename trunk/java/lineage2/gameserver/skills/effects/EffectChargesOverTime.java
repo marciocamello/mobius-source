@@ -16,16 +16,32 @@ import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectChargesOverTime extends Effect
 {
+	/**
+	 * Field _maxCharges.
+	 */
 	private final int _maxCharges;
 	
+	/**
+	 * Constructor for EffectChargesOverTime.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectChargesOverTime(Env env, EffectTemplate template)
 	{
 		super(env, template);
 		_maxCharges = getTemplate().getParam().getInteger("maxCharges", 10);
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

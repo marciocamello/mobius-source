@@ -24,16 +24,34 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharacterDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharacterDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static CharacterDAO _instance = new CharacterDAO();
 	
+	/**
+	 * Method getInstance.
+	 * @return CharacterDAO
+	 */
 	public static CharacterDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method deleteCharByObjId.
+	 * @param objid int
+	 */
 	public void deleteCharByObjId(int objid)
 	{
 		if (objid < 0)
@@ -59,6 +77,11 @@ public class CharacterDAO
 		}
 	}
 	
+	/**
+	 * Method insert.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean insert(Player player)
 	{
 		Connection con = null;
@@ -104,6 +127,11 @@ public class CharacterDAO
 		return true;
 	}
 	
+	/**
+	 * Method getObjectIdByName.
+	 * @param name String
+	 * @return int
+	 */
 	public int getObjectIdByName(String name)
 	{
 		int result = 0;
@@ -132,6 +160,11 @@ public class CharacterDAO
 		return result;
 	}
 	
+	/**
+	 * Method getNameByObjectId.
+	 * @param objectId int
+	 * @return String
+	 */
 	public String getNameByObjectId(int objectId)
 	{
 		String result = StringUtils.EMPTY;
@@ -160,6 +193,11 @@ public class CharacterDAO
 		return result;
 	}
 	
+	/**
+	 * Method accountCharNumber.
+	 * @param account String
+	 * @return int
+	 */
 	public int accountCharNumber(String account)
 	{
 		int number = 0;

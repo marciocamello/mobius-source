@@ -27,13 +27,25 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.PositionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Kanabion extends Fighter
 {
+	/**
+	 * Constructor for Kanabion.
+	 * @param actor NpcInstance
+	 */
 	public Kanabion(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -131,12 +143,30 @@ public class Kanabion extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class SpawnNext extends RunnableImpl
 	{
+		/**
+		 * Field _actor.
+		 */
 		private final NpcInstance _actor;
+		/**
+		 * Field _player.
+		 */
 		private final Creature _player;
+		/**
+		 * Field _nextId.
+		 */
 		private final int _nextId;
 		
+		/**
+		 * Constructor for SpawnNext.
+		 * @param actor NpcInstance
+		 * @param player Creature
+		 * @param nextId int
+		 */
 		public SpawnNext(NpcInstance actor, Creature player, int nextId)
 		{
 			_actor = actor;
@@ -144,6 +174,9 @@ public class Kanabion extends Fighter
 			_nextId = nextId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -158,6 +191,11 @@ public class Kanabion extends Fighter
 		}
 	}
 	
+	/**
+	 * Method getNextDoppler.
+	 * @param npcId int
+	 * @return int
+	 */
 	private int getNextDoppler(int npcId)
 	{
 		switch (npcId)
@@ -211,6 +249,11 @@ public class Kanabion extends Fighter
 		}
 	}
 	
+	/**
+	 * Method getNextVoid.
+	 * @param npcId int
+	 * @return int
+	 */
 	private int getNextVoid(int npcId)
 	{
 		switch (npcId)

@@ -12,11 +12,27 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExNeedToChangeName extends L2GameServerPacket
 {
+	/**
+	 * Field _reason. Field _type.
+	 */
 	private final int _type, _reason;
+	/**
+	 * Field _origName.
+	 */
 	private final String _origName;
 	
+	/**
+	 * Constructor for ExNeedToChangeName.
+	 * @param type int
+	 * @param reason int
+	 * @param origName String
+	 */
 	public ExNeedToChangeName(int type, int reason, String origName)
 	{
 		_type = type;
@@ -24,6 +40,9 @@ public class ExNeedToChangeName extends L2GameServerPacket
 		_origName = origName;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

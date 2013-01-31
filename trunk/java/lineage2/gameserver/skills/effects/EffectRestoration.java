@@ -17,11 +17,26 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectRestoration extends Effect
 {
+	/**
+	 * Field itemId.
+	 */
 	private final int itemId;
+	/**
+	 * Field count.
+	 */
 	private final long count;
 	
+	/**
+	 * Constructor for EffectRestoration.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectRestoration(Env env, EffectTemplate template)
 	{
 		super(env, template);
@@ -30,6 +45,9 @@ public class EffectRestoration extends Effect
 		count = Long.parseLong(item.split(":")[1]);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -37,6 +55,10 @@ public class EffectRestoration extends Effect
 		ItemFunctions.addItem((Playable) getEffected(), itemId, count, true);
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean onActionTime()
 	{

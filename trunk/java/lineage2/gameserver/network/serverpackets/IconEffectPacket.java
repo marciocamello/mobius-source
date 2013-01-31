@@ -12,7 +12,18 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IconEffectPacket
 {
+	/**
+	 * Method addIconEffect.
+	 * @param skillId int
+	 * @param level int
+	 * @param duration int
+	 * @param obj int
+	 */
 	void addIconEffect(int skillId, int level, int duration, int obj);
 }

@@ -17,13 +17,31 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminGlobalEvent extends ScriptAdminCommand
 {
+	/**
+	 * @author Mobius
+	 */
 	enum Commands
 	{
+		/**
+		 * Field admin_list_events.
+		 */
 		admin_list_events
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -48,6 +66,10 @@ public class AdminGlobalEvent extends ScriptAdminCommand
 		return false;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

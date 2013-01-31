@@ -14,7 +14,15 @@ package npc.model.residences.clanhall;
 
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface _34SiegeGuard
 {
+	/**
+	 * Method teleChatSay.
+	 * @return NpcString
+	 */
 	NpcString teleChatSay();
 }

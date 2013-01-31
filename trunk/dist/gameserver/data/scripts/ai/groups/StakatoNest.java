@@ -35,8 +35,15 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StakatoNest extends Fighter
 {
+	/**
+	 * Field BIZARRE_COCOON.
+	 */
 	private static final int[] BIZARRE_COCOON =
 	{
 		18793,
@@ -46,25 +53,83 @@ public class StakatoNest extends Fighter
 		18797,
 		18798
 	};
+	/**
+	 * Field CANNIBALISTIC_STAKATO_LEADER. (value is 22625)
+	 */
 	private static final int CANNIBALISTIC_STAKATO_LEADER = 22625;
+	/**
+	 * Field SPIKE_STAKATO_NURSE. (value is 22630)
+	 */
 	private static final int SPIKE_STAKATO_NURSE = 22630;
+	/**
+	 * Field SPIKE_STAKATO_NURSE_CHANGED. (value is 22631)
+	 */
 	private static final int SPIKE_STAKATO_NURSE_CHANGED = 22631;
+	/**
+	 * Field SPIKED_STAKATO_BABY. (value is 22632)
+	 */
 	private static final int SPIKED_STAKATO_BABY = 22632;
+	/**
+	 * Field SPIKED_STAKATO_CAPTAIN. (value is 22629)
+	 */
 	private static final int SPIKED_STAKATO_CAPTAIN = 22629;
+	/**
+	 * Field FEMALE_SPIKED_STAKATO. (value is 22620)
+	 */
 	private static final int FEMALE_SPIKED_STAKATO = 22620;
+	/**
+	 * Field MALE_SPIKED_STAKATO. (value is 22621)
+	 */
 	private static final int MALE_SPIKED_STAKATO = 22621;
+	/**
+	 * Field MALE_SPIKED_STAKATO_2. (value is 22622)
+	 */
 	private static final int MALE_SPIKED_STAKATO_2 = 22622;
+	/**
+	 * Field SPIKED_STAKATO_GUARD. (value is 22619)
+	 */
 	private static final int SPIKED_STAKATO_GUARD = 22619;
+	/**
+	 * Field SKILL_GROWTH_ACCELERATOR. (value is 2905)
+	 */
 	private static final int SKILL_GROWTH_ACCELERATOR = 2905;
+	/**
+	 * Field CANNIBALISTIC_STAKATO_CHIEF. (value is 25667)
+	 */
 	private static final int CANNIBALISTIC_STAKATO_CHIEF = 25667;
+	/**
+	 * Field QUEEN_SHYEED. (value is 25671)
+	 */
 	private static final int QUEEN_SHYEED = 25671;
+	/**
+	 * Field FAIL_COCOON_CHANCE. (value is 8)
+	 */
 	private static final int FAIL_COCOON_CHANCE = 8;
+	/**
+	 * Field ABSORB_MINION_CHANCE. (value is 10)
+	 */
 	private static final int ABSORB_MINION_CHANCE = 10;
+	/**
+	 * Field _zone_mob_buff.
+	 */
 	private static Zone _zone_mob_buff = ReflectionUtils.getZone("[stakato_mob_buff]");
+	/**
+	 * Field _zone_mob_buff_pc_display.
+	 */
 	private static Zone _zone_mob_buff_pc_display = ReflectionUtils.getZone("[stakato_mob_buff_display]");
+	/**
+	 * Field _zone_pc_buff.
+	 */
 	private static Zone _zone_pc_buff = ReflectionUtils.getZone("[stakato_pc_buff]");
+	/**
+	 * Field _debuffed.
+	 */
 	private static boolean _debuffed = false;
 	
+	/**
+	 * Constructor for StakatoNest.
+	 * @param actor NpcInstance
+	 */
 	public StakatoNest(NpcInstance actor)
 	{
 		super(actor);
@@ -75,6 +140,9 @@ public class StakatoNest extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -101,6 +169,11 @@ public class StakatoNest extends Fighter
 		super.onEvtSpawn();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -123,6 +196,10 @@ public class StakatoNest extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -182,6 +259,11 @@ public class StakatoNest extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method onEvtSeeSpell.
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
@@ -214,12 +296,30 @@ public class StakatoNest extends Fighter
 		super.onEvtSeeSpell(skill, caster);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ChangeMonster extends RunnableImpl
 	{
+		/**
+		 * Field _monsterId.
+		 */
 		private final int _monsterId;
+		/**
+		 * Field _killer.
+		 */
 		private final Creature _killer;
+		/**
+		 * Field _npc.
+		 */
 		private final NpcInstance _npc;
 		
+		/**
+		 * Constructor for ChangeMonster.
+		 * @param mobId int
+		 * @param npc NpcInstance
+		 * @param killer Creature
+		 */
 		public ChangeMonster(int mobId, NpcInstance npc, Creature killer)
 		{
 			_monsterId = mobId;
@@ -227,6 +327,9 @@ public class StakatoNest extends Fighter
 			_killer = killer;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -234,6 +337,11 @@ public class StakatoNest extends Fighter
 		}
 	}
 	
+	/**
+	 * Method getAliveMinion.
+	 * @param npc NpcInstance
+	 * @return MinionInstance
+	 */
 	private MinionInstance getAliveMinion(NpcInstance npc)
 	{
 		MinionList ml = npc.getMinionList();
@@ -247,6 +355,12 @@ public class StakatoNest extends Fighter
 		return null;
 	}
 	
+	/**
+	 * Method spawnMonster.
+	 * @param actor NpcInstance
+	 * @param killer Creature
+	 * @param mobId int
+	 */
 	void spawnMonster(NpcInstance actor, Creature killer, int mobId)
 	{
 		try
@@ -267,12 +381,20 @@ public class StakatoNest extends Fighter
 		}
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return ArrayUtils.contains(BIZARRE_COCOON, getActor().getNpcId()) || (getActor().getNpcId() == QUEEN_SHYEED) ? false : true;
 	}
 	
+	/**
+	 * Method randomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomAnimation()
 	{

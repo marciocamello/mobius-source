@@ -18,15 +18,31 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectRelax extends Effect
 {
+	/**
+	 * Field _isWereSitting.
+	 */
 	private boolean _isWereSitting;
 	
+	/**
+	 * Constructor for EffectRelax.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectRelax(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
@@ -43,6 +59,9 @@ public class EffectRelax extends Effect
 		return super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -56,6 +75,9 @@ public class EffectRelax extends Effect
 		player.sitDown(null);
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -66,6 +88,10 @@ public class EffectRelax extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

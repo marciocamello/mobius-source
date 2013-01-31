@@ -54,37 +54,119 @@ import lineage2.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SavingSnowman extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SavingSnowman.class);
+	/**
+	 * Field _spawns.
+	 */
 	static List<SimpleSpawner> _spawns = new ArrayList<>();
+	/**
+	 * Field _snowmanShoutTask.
+	 */
 	private static ScheduledFuture<?> _snowmanShoutTask;
+	/**
+	 * Field _saveTask.
+	 */
 	private static ScheduledFuture<?> _saveTask;
+	/**
+	 * Field _sayTask.
+	 */
 	private static ScheduledFuture<?> _sayTask;
+	/**
+	 * Field _eatTask.
+	 */
 	private static ScheduledFuture<?> _eatTask;
+	/**
+	 * Field _snowmanState.
+	 */
 	public static SnowmanState _snowmanState;
+	/**
+	 * Field _snowman.
+	 */
 	static NpcInstance _snowman;
+	/**
+	 * Field _thomas.
+	 */
 	private static Creature _thomas;
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum SnowmanState
 	{
+		/**
+		 * Field CAPTURED.
+		 */
 		CAPTURED,
+		/**
+		 * Field KILLED.
+		 */
 		KILLED,
+		/**
+		 * Field SAVED.
+		 */
 		SAVED;
 	}
 	
+	/**
+	 * Field INITIAL_SAVE_DELAY.
+	 */
 	private static final int INITIAL_SAVE_DELAY = 10 * 60 * 1000;
+	/**
+	 * Field SAVE_INTERVAL.
+	 */
 	private static final int SAVE_INTERVAL = 60 * 60 * 1000;
+	/**
+	 * Field SNOWMAN_SHOUT_INTERVAL.
+	 */
 	private static final int SNOWMAN_SHOUT_INTERVAL = 1 * 60 * 1000;
+	/**
+	 * Field THOMAS_EAT_DELAY.
+	 */
 	private static final int THOMAS_EAT_DELAY = 10 * 60 * 1000;
+	/**
+	 * Field SATNA_SAY_INTERVAL.
+	 */
 	private static final int SATNA_SAY_INTERVAL = 5 * 60 * 1000;
+	/**
+	 * Field EVENT_MANAGER_ID. (value is 13184)
+	 */
 	private static final int EVENT_MANAGER_ID = 13184;
+	/**
+	 * Field CTREE_ID. (value is 13006)
+	 */
 	private static final int CTREE_ID = 13006;
+	/**
+	 * Field EVENT_REWARDER_ID. (value is 13186)
+	 */
 	private static final int EVENT_REWARDER_ID = 13186;
+	/**
+	 * Field SNOWMAN_ID. (value is 13160)
+	 */
 	private static final int SNOWMAN_ID = 13160;
+	/**
+	 * Field THOMAS_ID. (value is 13183)
+	 */
 	private static final int THOMAS_ID = 13183;
+	/**
+	 * Field SANTA_BUFF_REUSE.
+	 */
 	private static final int SANTA_BUFF_REUSE = 12 * 3600 * 1000;
+	/**
+	 * Field SANTA_LOTTERY_REUSE.
+	 */
 	private static final int SANTA_LOTTERY_REUSE = 3 * 3600 * 1000;
+	/**
+	 * Field WEAPONS.
+	 */
 	private static final int WEAPONS[][] =
 	{
 		{
@@ -168,8 +250,15 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 			20178
 		}
 	};
+	/**
+	 * Field _active.
+	 */
 	static boolean _active = false;
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -189,11 +278,18 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return IsActive("SavingSnowman");
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -229,6 +325,9 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -274,6 +373,9 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	private void spawnEventManagers()
 	{
 		final int EVENT_MANAGERS[][] =
@@ -430,11 +532,18 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		SpawnNPCs(CTREE_ID, CTREES, _spawns);
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -452,12 +561,22 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		_snowmanState = SnowmanState.SAVED;
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature cha, Creature killer)
 	{
@@ -480,6 +599,10 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 * Method spawnRewarder.
+	 * @param rewarded Player
+	 */
 	public static void spawnRewarder(Player rewarded)
 	{
 		for (NpcInstance npc : rewarded.getAroundNpc(1500, 300))
@@ -516,6 +639,11 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		}, 5000);
 	}
 	
+	/**
+	 * Method reward.
+	 * @param rewarder NpcInstance
+	 * @param rewarded Player
+	 */
 	public static void reward(NpcInstance rewarder, Player rewarded)
 	{
 		if (!_active || (rewarder == null) || (rewarded == null))
@@ -530,6 +658,10 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		}, 5000);
 	}
 	
+	/**
+	 * Method removeRewarder.
+	 * @param rewarder NpcInstance
+	 */
 	public static void removeRewarder(NpcInstance rewarder)
 	{
 		if (!_active || (rewarder == null))
@@ -549,6 +681,10 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		}, 2000);
 	}
 	
+	/**
+	 * Method unspawnRewarder.
+	 * @param rewarder NpcInstance
+	 */
 	public static void unspawnRewarder(NpcInstance rewarder)
 	{
 		if (!_active || (rewarder == null))
@@ -558,6 +694,9 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		rewarder.deleteMe();
 	}
 	
+	/**
+	 * Method buff.
+	 */
 	public void buff()
 	{
 		Player player = getSelf();
@@ -590,6 +729,9 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 * Method locateSnowman.
+	 */
 	public void locateSnowman()
 	{
 		Player player = getSelf();
@@ -600,7 +742,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		if (_snowman != null)
 		{
 			player.sendPacket(new RadarControl(2, 2, _snowman.getLoc()), new RadarControl(0, 1, _snowman.getLoc()));
-			player.sendPacket(new SystemMessage(SystemMessage.S2_S1).addZoneName(_snowman.getLoc()).addString("Ищите Снеговика в "));
+			player.sendPacket(new SystemMessage(SystemMessage.S2_S1).addZoneName(_snowman.getLoc()).addString("�?щите Снеговика в "));
 		}
 		else
 		{
@@ -608,6 +750,10 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 * Method coupon.
+	 * @param var String[]
+	 */
 	public void coupon(String[] var)
 	{
 		Player player = getSelf();
@@ -641,6 +787,9 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		player.sendPacket(SystemMessage2.obtainItems(item_id, 1, enchant));
 	}
 	
+	/**
+	 * Method lotery.
+	 */
 	public void lotery()
 	{
 		Player player = getSelf();
@@ -716,6 +865,11 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 * Method DialogAppend_13184.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_13184(Integer val)
 	{
 		if (val != 0)
@@ -725,6 +879,11 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		return " (" + Util.formatAdena(Config.EVENT_SAVING_SNOWMAN_LOTERY_PRICE) + " adena)";
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -734,18 +893,25 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 * Method getRandomSpawnPoint.
+	 * @return Location
+	 */
 	private static Location getRandomSpawnPoint()
 	{
 		return new Location(0, 0, 0);
 	}
 	
+	/**
+	 * Method captureSnowman.
+	 */
 	public void captureSnowman()
 	{
 		Location spawnPoint = getRandomSpawnPoint();
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.SavingSnowman.AnnounceSnowmanCaptured", null, ChatType.CRITICAL_ANNOUNCE);
-			player.sendPacket(new SystemMessage(SystemMessage.S2_S1).addZoneName(spawnPoint).addString("Ищите Снеговика в "));
+			player.sendPacket(new SystemMessage(SystemMessage.S2_S1).addZoneName(spawnPoint).addString("�?щите Снеговика в "));
 			player.sendPacket(new RadarControl(2, 2, spawnPoint), new RadarControl(0, 1, spawnPoint));
 		}
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(SNOWMAN_ID);
@@ -796,6 +962,9 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		_eatTask = executeTask("events.SavingSnowman.SavingSnowman", "eatSnowman", new Object[0], THOMAS_EAT_DELAY);
 	}
 	
+	/**
+	 * Method eatSnowman.
+	 */
 	public static void eatSnowman()
 	{
 		if ((_snowman == null) || (_thomas == null))
@@ -816,6 +985,10 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		_thomas.deleteMe();
 	}
 	
+	/**
+	 * Method freeSnowman.
+	 * @param topDamager Creature
+	 */
 	public static void freeSnowman(Creature topDamager)
 	{
 		if ((_snowman == null) || (topDamager == null) || !topDamager.isPlayable())
@@ -852,8 +1025,13 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		});
 	}
 	
+	/**
+	 */
 	public class SayTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -871,8 +1049,13 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 */
 	public class ShoutTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -884,8 +1067,13 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 */
 	public class SaveTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

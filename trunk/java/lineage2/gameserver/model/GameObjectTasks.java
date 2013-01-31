@@ -24,17 +24,34 @@ import lineage2.gameserver.network.serverpackets.ExVoteSystemInfo;
 import lineage2.gameserver.network.serverpackets.MagicSkillLaunched;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GameObjectTasks
 {
+	/**
+	 * @author Mobius
+	 */
 	public static class DeleteTask extends RunnableImpl
 	{
+		/**
+		 * Field _ref.
+		 */
 		private final HardReference<? extends Creature> _ref;
 		
+		/**
+		 * Constructor for DeleteTask.
+		 * @param c Creature
+		 */
 		public DeleteTask(Creature c)
 		{
 			_ref = c.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -46,15 +63,28 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class SoulConsumeTask extends RunnableImpl
 	{
+		/**
+		 * Field _playerRef.
+		 */
 		private final HardReference<Player> _playerRef;
 		
+		/**
+		 * Constructor for SoulConsumeTask.
+		 * @param player Player
+		 */
 		public SoulConsumeTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -67,15 +97,28 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class PvPFlagTask extends RunnableImpl
 	{
+		/**
+		 * Field _playerRef.
+		 */
 		private final HardReference<Player> _playerRef;
 		
+		/**
+		 * Constructor for PvPFlagTask.
+		 * @param player Player
+		 */
 		public PvPFlagTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -100,15 +143,28 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class HourlyTask extends RunnableImpl
 	{
+		/**
+		 * Field _playerRef.
+		 */
 		private final HardReference<Player> _playerRef;
 		
+		/**
+		 * Constructor for HourlyTask.
+		 * @param player Player
+		 */
 		public HourlyTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -123,15 +179,28 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class RecomBonusTask extends RunnableImpl
 	{
+		/**
+		 * Field _playerRef.
+		 */
 		private final HardReference<Player> _playerRef;
 		
+		/**
+		 * Constructor for RecomBonusTask.
+		 * @param player Player
+		 */
 		public RecomBonusTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -145,15 +214,28 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class WaterTask extends RunnableImpl
 	{
+		/**
+		 * Field _playerRef.
+		 */
 		private final HardReference<Player> _playerRef;
 		
+		/**
+		 * Constructor for WaterTask.
+		 * @param player Player
+		 */
 		public WaterTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -173,15 +255,28 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class KickTask extends RunnableImpl
 	{
+		/**
+		 * Field _playerRef.
+		 */
 		private final HardReference<Player> _playerRef;
 		
+		/**
+		 * Constructor for KickTask.
+		 * @param player Player
+		 */
 		public KickTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -195,15 +290,28 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class UnJailTask extends RunnableImpl
 	{
+		/**
+		 * Field _playerRef.
+		 */
 		private final HardReference<Player> _playerRef;
 		
+		/**
+		 * Constructor for UnJailTask.
+		 * @param player Player
+		 */
 		public UnJailTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -218,15 +326,28 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class EndSitDownTask extends RunnableImpl
 	{
+		/**
+		 * Field _playerRef.
+		 */
 		private final HardReference<Player> _playerRef;
 		
+		/**
+		 * Constructor for EndSitDownTask.
+		 * @param player Player
+		 */
 		public EndSitDownTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -240,15 +361,28 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class EndStandUpTask extends RunnableImpl
 	{
+		/**
+		 * Field _playerRef.
+		 */
 		private final HardReference<Player> _playerRef;
 		
+		/**
+		 * Constructor for EndStandUpTask.
+		 * @param player Player
+		 */
 		public EndStandUpTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -266,11 +400,29 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class AltMagicUseTask extends RunnableImpl
 	{
+		/**
+		 * Field _skill.
+		 */
 		public final Skill _skill;
+		/**
+		 * Field _targetRef.
+		 */
+		/**
+		 * Field _charRef.
+		 */
 		private final HardReference<? extends Creature> _charRef, _targetRef;
 		
+		/**
+		 * Constructor for AltMagicUseTask.
+		 * @param character Creature
+		 * @param target Creature
+		 * @param skill Skill
+		 */
 		public AltMagicUseTask(Creature character, Creature target, Skill skill)
 		{
 			_charRef = character.getRef();
@@ -278,6 +430,9 @@ public class GameObjectTasks
 			_skill = skill;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -290,15 +445,28 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class CastEndTimeTask extends RunnableImpl
 	{
+		/**
+		 * Field _charRef.
+		 */
 		private final HardReference<? extends Creature> _charRef;
 		
+		/**
+		 * Constructor for CastEndTimeTask.
+		 * @param character Creature
+		 */
 		public CastEndTimeTask(Creature character)
 		{
 			_charRef = character.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -311,12 +479,58 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class HitTask extends RunnableImpl
 	{
+		/**
+		 * Field _notify.
+		 */
+		/**
+		 * Field _unchargeSS.
+		 */
+		/**
+		 * Field _soulshot.
+		 */
+		/**
+		 * Field _shld.
+		 */
+		/**
+		 * Field _miss.
+		 */
+		/**
+		 * Field _crit.
+		 */
 		boolean _crit, _miss, _shld, _soulshot, _unchargeSS, _notify;
+		/**
+		 * Field _reflectableDamage.
+		 */
+		/**
+		 * Field _damage.
+		 */
 		int _damage, _reflectableDamage;
+		/**
+		 * Field _targetRef.
+		 */
+		/**
+		 * Field _charRef.
+		 */
 		private final HardReference<? extends Creature> _charRef, _targetRef;
 		
+		/**
+		 * Constructor for HitTask.
+		 * @param cha Creature
+		 * @param target Creature
+		 * @param damage int
+		 * @param reflectableDamage int
+		 * @param crit boolean
+		 * @param miss boolean
+		 * @param soulshot boolean
+		 * @param shld boolean
+		 * @param unchargeSS boolean
+		 * @param notify boolean
+		 */
 		public HitTask(Creature cha, Creature target, int damage, int reflectableDamage, boolean crit, boolean miss, boolean soulshot, boolean shld, boolean unchargeSS, boolean notify)
 		{
 			_charRef = cha.getRef();
@@ -331,6 +545,9 @@ public class GameObjectTasks
 			_notify = notify;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -351,17 +568,34 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class MagicUseTask extends RunnableImpl
 	{
+		/**
+		 * Field _forceUse.
+		 */
 		public boolean _forceUse;
+		/**
+		 * Field _charRef.
+		 */
 		private final HardReference<? extends Creature> _charRef;
 		
+		/**
+		 * Constructor for MagicUseTask.
+		 * @param cha Creature
+		 * @param forceUse boolean
+		 */
 		public MagicUseTask(Creature cha, boolean forceUse)
 		{
 			_charRef = cha.getRef();
 			_forceUse = forceUse;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -381,17 +615,34 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class MagicLaunchedTask extends RunnableImpl
 	{
+		/**
+		 * Field _forceUse.
+		 */
 		public boolean _forceUse;
+		/**
+		 * Field _charRef.
+		 */
 		private final HardReference<? extends Creature> _charRef;
 		
+		/**
+		 * Constructor for MagicLaunchedTask.
+		 * @param cha Creature
+		 * @param forceUse boolean
+		 */
 		public MagicLaunchedTask(Creature cha, boolean forceUse)
 		{
 			_charRef = cha.getRef();
 			_forceUse = forceUse;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -412,13 +663,35 @@ public class GameObjectTasks
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class NotifyAITask extends RunnableImpl
 	{
+		/**
+		 * Field _evt.
+		 */
 		private final CtrlEvent _evt;
+		/**
+		 * Field _agr0.
+		 */
 		private final Object _agr0;
+		/**
+		 * Field _agr1.
+		 */
 		private final Object _agr1;
+		/**
+		 * Field _charRef.
+		 */
 		private final HardReference<? extends Creature> _charRef;
 		
+		/**
+		 * Constructor for NotifyAITask.
+		 * @param cha Creature
+		 * @param evt CtrlEvent
+		 * @param agr0 Object
+		 * @param agr1 Object
+		 */
 		public NotifyAITask(Creature cha, CtrlEvent evt, Object agr0, Object agr1)
 		{
 			_charRef = cha.getRef();
@@ -427,11 +700,19 @@ public class GameObjectTasks
 			_agr1 = agr1;
 		}
 		
+		/**
+		 * Constructor for NotifyAITask.
+		 * @param cha Creature
+		 * @param evt CtrlEvent
+		 */
 		public NotifyAITask(Creature cha, CtrlEvent evt)
 		{
 			this(cha, evt, null, null);
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

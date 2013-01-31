@@ -21,12 +21,30 @@ import lineage2.gameserver.model.items.ItemInfo;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.Warehouse;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PackageSendableList extends L2GameServerPacket
 {
+	/**
+	 * Field _targetObjectId.
+	 */
 	private final int _targetObjectId;
+	/**
+	 * Field _adena.
+	 */
 	private final long _adena;
+	/**
+	 * Field _itemList.
+	 */
 	private final List<ItemInfo> _itemList;
 	
+	/**
+	 * Constructor for PackageSendableList.
+	 * @param objectId int
+	 * @param cha Player
+	 */
 	public PackageSendableList(int objectId, Player cha)
 	{
 		_adena = cha.getAdena();
@@ -43,6 +61,9 @@ public class PackageSendableList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

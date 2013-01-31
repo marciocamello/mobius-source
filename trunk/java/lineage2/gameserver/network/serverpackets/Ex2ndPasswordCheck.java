@@ -12,20 +12,47 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Ex2ndPasswordCheck extends L2GameServerPacket
 {
+	/**
+	 * Field PASSWORD_NEW.
+	 */
 	public static final int PASSWORD_NEW = 0x00;
+	/**
+	 * Field PASSWORD_PROMPT.
+	 */
 	public static final int PASSWORD_PROMPT = 0x01;
+	/**
+	 * Field PASSWORD_OK.
+	 */
 	public static final int PASSWORD_OK = 0x02;
+	/**
+	 * Field _windowType.
+	 */
 	int _windowType;
+	/**
+	 * Field _banTime.
+	 */
 	int _banTime;
 	
+	/**
+	 * Constructor for Ex2ndPasswordCheck.
+	 * @param windowType int
+	 * @param banTime int
+	 */
 	public Ex2ndPasswordCheck(int windowType, int banTime)
 	{
 		_windowType = windowType;
 		_banTime = banTime;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

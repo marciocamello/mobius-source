@@ -22,15 +22,30 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DarionChallenger extends Fighter
 {
+	/**
+	 * Field TeleportCube. (value is 32467)
+	 */
 	private static final int TeleportCube = 32467;
 	
+	/**
+	 * Constructor for DarionChallenger.
+	 * @param actor NpcInstance
+	 */
 	public DarionChallenger(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -52,6 +67,10 @@ public class DarionChallenger extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method checkAllDestroyed.
+	 * @return boolean
+	 */
 	private static boolean checkAllDestroyed()
 	{
 		if (!GameObjectsStorage.getAllByNpcId(25600, true).isEmpty())
@@ -69,12 +88,21 @@ public class DarionChallenger extends Fighter
 		return true;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Unspawn extends RunnableImpl
 	{
+		/**
+		 * Constructor for Unspawn.
+		 */
 		public Unspawn()
 		{
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

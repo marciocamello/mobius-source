@@ -16,8 +16,15 @@ import java.io.IOException;
 
 import lineage2.commons.util.Rnd;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LoginCrypt
 {
+	/**
+	 * Field STATIC_BLOWFISH_KEY.
+	 */
 	private static final byte[] STATIC_BLOWFISH_KEY =
 	{
 		(byte) 0x6b,
@@ -37,22 +44,49 @@ public class LoginCrypt
 		(byte) 0x6c,
 		(byte) 0x6c
 	};
+	/**
+	 * Field _staticCrypt.
+	 */
 	private NewCrypt _staticCrypt;
+	/**
+	 * Field _crypt.
+	 */
 	private NewCrypt _crypt;
+	/**
+	 * Field _static.
+	 */
 	private boolean _static = true;
 	
+	/**
+	 * Method setKey.
+	 * @param key byte[]
+	 */
 	public void setKey(byte[] key)
 	{
 		_staticCrypt = new NewCrypt(STATIC_BLOWFISH_KEY);
 		_crypt = new NewCrypt(key);
 	}
 	
+	/**
+	 * Method decrypt.
+	 * @param raw byte[]
+	 * @param offset int
+	 * @param size int
+	 * @return boolean * @throws IOException
+	 */
 	public boolean decrypt(byte[] raw, final int offset, final int size) throws IOException
 	{
 		_crypt.decrypt(raw, offset, size);
 		return NewCrypt.verifyChecksum(raw, offset, size);
 	}
 	
+	/**
+	 * Method encrypt.
+	 * @param raw byte[]
+	 * @param offset int
+	 * @param size int
+	 * @return int * @throws IOException
+	 */
 	public int encrypt(byte[] raw, final int offset, int size) throws IOException
 	{
 		size += 4;

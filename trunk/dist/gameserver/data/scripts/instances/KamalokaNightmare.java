@@ -30,28 +30,81 @@ import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.utils.Location;
 import npc.model.PathfinderInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KamalokaNightmare extends Reflection
 {
+	/**
+	 * Field PATHFINDER. (value is 32485)
+	 */
 	private static final int PATHFINDER = 32485;
+	/**
+	 * Field RANK_1_MIN_POINTS. (value is 500)
+	 */
 	private static final int RANK_1_MIN_POINTS = 500;
+	/**
+	 * Field RANK_2_MIN_POINTS. (value is 2500)
+	 */
 	private static final int RANK_2_MIN_POINTS = 2500;
+	/**
+	 * Field RANK_3_MIN_POINTS. (value is 4500)
+	 */
 	private static final int RANK_3_MIN_POINTS = 4500;
+	/**
+	 * Field RANK_4_MIN_POINTS. (value is 5500)
+	 */
 	private static final int RANK_4_MIN_POINTS = 5500;
+	/**
+	 * Field RANK_5_MIN_POINTS. (value is 7000)
+	 */
 	private static final int RANK_5_MIN_POINTS = 7000;
+	/**
+	 * Field RANK_6_MIN_POINTS. (value is 9000)
+	 */
 	private static final int RANK_6_MIN_POINTS = 9000;
+	/**
+	 * Field _playerId.
+	 */
 	private final int _playerId;
+	/**
+	 * Field _expireTask.
+	 */
 	private Future<?> _expireTask;
+	/**
+	 * Field killedKanabions.
+	 */
 	private int killedKanabions = 0;
+	/**
+	 * Field killedDoplers.
+	 */
 	private int killedDoplers = 0;
+	/**
+	 * Field killedVoiders.
+	 */
 	private int killedVoiders = 0;
+	/**
+	 * Field delay_after_spawn.
+	 */
 	int delay_after_spawn = 0;
+	/**
+	 * Field is_spawn_possible.
+	 */
 	boolean is_spawn_possible = true;
 	
+	/**
+	 * Constructor for KamalokaNightmare.
+	 * @param player Player
+	 */
 	public KamalokaNightmare(Player player)
 	{
 		_playerId = player.getObjectId();
 	}
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{
@@ -65,6 +118,9 @@ public class KamalokaNightmare extends Reflection
 		}
 	}
 	
+	/**
+	 * Method onCollapse.
+	 */
 	@Override
 	protected void onCollapse()
 	{
@@ -72,6 +128,10 @@ public class KamalokaNightmare extends Reflection
 		stopPathfinderTimer();
 	}
 	
+	/**
+	 * Method addKilledKanabion.
+	 * @param type int
+	 */
 	public void addKilledKanabion(int type)
 	{
 		switch (type)
@@ -88,6 +148,10 @@ public class KamalokaNightmare extends Reflection
 		}
 	}
 	
+	/**
+	 * Method getRank.
+	 * @return int
+	 */
 	public int getRank()
 	{
 		int total = (killedKanabions * 10) + (killedDoplers * 20) + (killedVoiders * 50);
@@ -121,6 +185,10 @@ public class KamalokaNightmare extends Reflection
 		}
 	}
 	
+	/**
+	 * Method startPathfinderTimer.
+	 * @param timeInMillis long
+	 */
 	public void startPathfinderTimer(long timeInMillis)
 	{
 		if (_expireTask != null)
@@ -191,6 +259,9 @@ public class KamalokaNightmare extends Reflection
 		}, timeInMillis);
 	}
 	
+	/**
+	 * Method stopPathfinderTimer.
+	 */
 	public void stopPathfinderTimer()
 	{
 		if (_expireTask != null)
@@ -200,17 +271,29 @@ public class KamalokaNightmare extends Reflection
 		}
 	}
 	
+	/**
+	 * Method getPlayerId.
+	 * @return int
+	 */
 	public int getPlayerId()
 	{
 		return _playerId;
 	}
 	
+	/**
+	 * Method canChampions.
+	 * @return boolean
+	 */
 	@Override
 	public boolean canChampions()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isSpawnPossible.
+	 * @return boolean
+	 */
 	public boolean isSpawnPossible()
 	{
 		return is_spawn_possible;

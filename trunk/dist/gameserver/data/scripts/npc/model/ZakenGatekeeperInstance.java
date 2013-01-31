@@ -21,21 +21,44 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ZakenGatekeeperInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field nightZakenIzId. (value is 114)
+	 */
 	private static final int nightZakenIzId = 114;
+	/**
+	 * Field dayZakenIzId. (value is 133)
+	 */
 	private static final int dayZakenIzId = 133;
+	/**
+	 * Field ultraZakenIzId. (value is 135)
+	 */
 	private static final int ultraZakenIzId = 135;
 	
+	/**
+	 * Constructor for ZakenGatekeeperInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ZakenGatekeeperInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

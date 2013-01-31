@@ -19,13 +19,37 @@ import lineage2.gameserver.model.items.etcitems.LifeStoneInfo;
 import lineage2.gameserver.model.items.etcitems.LifeStoneManager;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class AbstractRefinePacket extends L2GameClientPacket
 {
+	/**
+	 * Field GEMSTONE_D. (value is 2130)
+	 */
 	protected static final int GEMSTONE_D = 2130;
+	/**
+	 * Field GEMSTONE_C. (value is 2131)
+	 */
 	protected static final int GEMSTONE_C = 2131;
+	/**
+	 * Field GEMSTONE_B. (value is 2132)
+	 */
 	protected static final int GEMSTONE_B = 2132;
+	/**
+	 * Field GEMSTONE_A. (value is 2133)
+	 */
 	protected static final int GEMSTONE_A = 2133;
 	
+	/**
+	 * Method isValid.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param refinerItem ItemInstance
+	 * @param gemStones ItemInstance
+	 * @return boolean
+	 */
 	protected static final boolean isValid(Player player, ItemInstance item, ItemInstance refinerItem, ItemInstance gemStones)
 	{
 		if (!isValid(player, item, refinerItem))
@@ -53,6 +77,13 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		return true;
 	}
 	
+	/**
+	 * Method isValid.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param refinerItem ItemInstance
+	 * @return boolean
+	 */
 	protected static final boolean isValid(Player player, ItemInstance item, ItemInstance refinerItem)
 	{
 		if (!isValid(player, item))
@@ -75,6 +106,12 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		return true;
 	}
 	
+	/**
+	 * Method isValid.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	protected static final boolean isValid(Player player, ItemInstance item)
 	{
 		if (!isValid(player))
@@ -92,6 +129,11 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		return true;
 	}
 	
+	/**
+	 * Method isValid.
+	 * @param player Player
+	 * @return boolean
+	 */
 	protected static final boolean isValid(Player player)
 	{
 		if (player.isActionsDisabled())
@@ -113,6 +155,11 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		return true;
 	}
 	
+	/**
+	 * Method getGemStoneId.
+	 * @param grade Grade
+	 * @return int
+	 */
 	protected static final int getGemStoneId(Grade grade)
 	{
 		switch (grade)
@@ -135,6 +182,12 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method getGemStoneCount.
+	 * @param lsGrade LifeStoneGrade
+	 * @param itemGrade Grade
+	 * @return int
+	 */
 	protected static final int getGemStoneCount(LifeStoneGrade lsGrade, Grade itemGrade)
 	{
 		switch (lsGrade)

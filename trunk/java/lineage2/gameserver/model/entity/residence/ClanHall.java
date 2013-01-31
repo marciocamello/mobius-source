@@ -31,22 +31,57 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanHall extends Residence
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ClanHall.class);
+	/**
+	 * Field REWARD_CYCLE. (value is 168)
+	 */
 	private static final int REWARD_CYCLE = 168;
+	/**
+	 * Field _auctionLength.
+	 */
 	private int _auctionLength;
+	/**
+	 * Field _auctionMinBid.
+	 */
 	private long _auctionMinBid;
+	/**
+	 * Field _auctionDescription.
+	 */
 	private String _auctionDescription = StringUtils.EMPTY;
+	/**
+	 * Field _grade.
+	 */
 	private final int _grade;
+	/**
+	 * Field _rentalFee.
+	 */
 	private final long _rentalFee;
+	/**
+	 * Field _minBid.
+	 */
 	private final long _minBid;
+	/**
+	 * Field _deposit.
+	 */
 	private final long _deposit;
 	
+	/**
+	 * Constructor for ClanHall.
+	 * @param set StatsSet
+	 */
 	public ClanHall(StatsSet set)
 	{
 		super(set);
@@ -56,6 +91,9 @@ public class ClanHall extends Residence
 		_deposit = set.getInteger("deposit", 0);
 	}
 	
+	/**
+	 * Method init.
+	 */
 	@Override
 	public void init()
 	{
@@ -70,6 +108,10 @@ public class ClanHall extends Residence
 		}
 	}
 	
+	/**
+	 * Method changeOwner.
+	 * @param clan Clan
+	 */
 	@Override
 	public void changeOwner(Clan clan)
 	{
@@ -89,12 +131,19 @@ public class ClanHall extends Residence
 		}
 	}
 	
+	/**
+	 * Method getType.
+	 * @return ResidenceType
+	 */
 	@Override
 	public ResidenceType getType()
 	{
 		return ResidenceType.ClanHall;
 	}
 	
+	/**
+	 * Method loadData.
+	 */
 	@Override
 	protected void loadData()
 	{
@@ -102,6 +151,10 @@ public class ClanHall extends Residence
 		ClanHallDAO.getInstance().select(this);
 	}
 	
+	/**
+	 * Method updateOwnerInDB.
+	 * @param clan Clan
+	 */
 	private void updateOwnerInDB(Clan clan)
 	{
 		_owner = clan;
@@ -139,62 +192,109 @@ public class ClanHall extends Residence
 		}
 	}
 	
+	/**
+	 * Method getGrade.
+	 * @return int
+	 */
 	public int getGrade()
 	{
 		return _grade;
 	}
 	
+	/**
+	 * Method update.
+	 * @see lineage2.commons.dao.JdbcEntity#update()
+	 */
 	@Override
 	public void update()
 	{
 		ClanHallDAO.getInstance().update(this);
 	}
 	
+	/**
+	 * Method getAuctionLength.
+	 * @return int
+	 */
 	public int getAuctionLength()
 	{
 		return _auctionLength;
 	}
 	
+	/**
+	 * Method setAuctionLength.
+	 * @param auctionLength int
+	 */
 	public void setAuctionLength(int auctionLength)
 	{
 		_auctionLength = auctionLength;
 	}
 	
+	/**
+	 * Method getAuctionDescription.
+	 * @return String
+	 */
 	public String getAuctionDescription()
 	{
 		return _auctionDescription;
 	}
 	
+	/**
+	 * Method setAuctionDescription.
+	 * @param auctionDescription String
+	 */
 	public void setAuctionDescription(String auctionDescription)
 	{
 		_auctionDescription = auctionDescription == null ? StringUtils.EMPTY : auctionDescription;
 	}
 	
+	/**
+	 * Method getAuctionMinBid.
+	 * @return long
+	 */
 	public long getAuctionMinBid()
 	{
 		return _auctionMinBid;
 	}
 	
+	/**
+	 * Method setAuctionMinBid.
+	 * @param auctionMinBid long
+	 */
 	public void setAuctionMinBid(long auctionMinBid)
 	{
 		_auctionMinBid = auctionMinBid;
 	}
 	
+	/**
+	 * Method getRentalFee.
+	 * @return long
+	 */
 	public long getRentalFee()
 	{
 		return _rentalFee;
 	}
 	
+	/**
+	 * Method getBaseMinBid.
+	 * @return long
+	 */
 	public long getBaseMinBid()
 	{
 		return _minBid;
 	}
 	
+	/**
+	 * Method getDeposit.
+	 * @return long
+	 */
 	public long getDeposit()
 	{
 		return _deposit;
 	}
 	
+	/**
+	 * Method chanceCycle.
+	 */
 	@Override
 	public void chanceCycle()
 	{

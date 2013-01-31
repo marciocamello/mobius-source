@@ -17,13 +17,25 @@ package lineage2.gameserver.skills.effects;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectBlessNoblesse extends Effect
 {
+	/**
+	 * Constructor for EffectBlessNoblesse.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectBlessNoblesse(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -31,6 +43,9 @@ public final class EffectBlessNoblesse extends Effect
 		getEffected().setIsBlessedByNoblesse(true);
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -38,6 +53,10 @@ public final class EffectBlessNoblesse extends Effect
 		getEffected().setIsBlessedByNoblesse(false);
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

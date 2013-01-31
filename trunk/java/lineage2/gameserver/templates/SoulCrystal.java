@@ -12,13 +12,36 @@
  */
 package lineage2.gameserver.templates;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SoulCrystal
 {
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _level.
+	 */
 	private final int _level;
+	/**
+	 * Field _nextItemId.
+	 */
 	private final int _nextItemId;
+	/**
+	 * Field _cursedNextItemId.
+	 */
 	private final int _cursedNextItemId;
 	
+	/**
+	 * Constructor for SoulCrystal.
+	 * @param itemId int
+	 * @param level int
+	 * @param nextItemId int
+	 * @param cursedNextItemId int
+	 */
 	public SoulCrystal(int itemId, int level, int nextItemId, int cursedNextItemId)
 	{
 		_itemId = itemId;
@@ -27,21 +50,37 @@ public class SoulCrystal
 		_cursedNextItemId = cursedNextItemId;
 	}
 	
+	/**
+	 * Method getItemId.
+	 * @return int
+	 */
 	public int getItemId()
 	{
 		return _itemId;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		return _level;
 	}
 	
+	/**
+	 * Method getNextItemId.
+	 * @return int
+	 */
 	public int getNextItemId()
 	{
 		return _nextItemId;
 	}
 	
+	/**
+	 * Method getCursedNextItemId.
+	 * @return int
+	 */
 	public int getCursedNextItemId()
 	{
 		return _cursedNextItemId;

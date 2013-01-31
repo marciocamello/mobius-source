@@ -25,6 +25,10 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class DelustionGatekeeperInstance extends NpcInstance
 {
 	/**
@@ -32,11 +36,21 @@ public final class DelustionGatekeeperInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for DelustionGatekeeperInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public DelustionGatekeeperInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

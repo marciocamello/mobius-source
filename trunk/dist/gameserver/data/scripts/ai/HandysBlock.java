@@ -28,13 +28,26 @@ import lineage2.gameserver.network.serverpackets.ExCubeGameExtendedChangePoints;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HandysBlock extends DefaultAI
 {
+	/**
+	 * Constructor for HandysBlock.
+	 * @param actor NpcInstance
+	 */
 	public HandysBlock(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSeeSpell.
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
@@ -53,7 +66,7 @@ public class HandysBlock extends DefaultAI
 		{
 			return;
 		}
-		if (player.getTarget() == actor)
+		if (player.getTarget().equals(actor))
 		{
 			if ((skill.getId() == 5852) || (skill.getId() == 5853))
 			{
@@ -85,6 +98,11 @@ public class HandysBlock extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method increaseTeamPointsAndSend.
+	 * @param player Player
+	 * @param eng BlockCheckerEngine
+	 */
 	private void increaseTeamPointsAndSend(Player player, BlockCheckerEngine eng)
 	{
 		int team = eng.getHolder().getPlayerTeam(player);
@@ -97,6 +115,13 @@ public class HandysBlock extends DefaultAI
 		eng.getHolder().broadCastPacketToTeam(secretPoints);
 	}
 	
+	/**
+	 * Method dropItem.
+	 * @param block NpcInstance
+	 * @param id int
+	 * @param eng BlockCheckerEngine
+	 * @param player Player
+	 */
 	private void dropItem(NpcInstance block, int id, BlockCheckerEngine eng, Player player)
 	{
 		ItemInstance drop = ItemFunctions.createItem(id);

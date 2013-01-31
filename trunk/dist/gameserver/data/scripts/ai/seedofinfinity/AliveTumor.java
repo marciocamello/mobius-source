@@ -19,10 +19,23 @@ import lineage2.gameserver.tables.SkillTable;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AliveTumor extends DefaultAI
 {
+	/**
+	 * Field checkTimer.
+	 */
 	private long checkTimer = 0;
+	/**
+	 * Field coffinsCount.
+	 */
 	private int coffinsCount = 0;
+	/**
+	 * Field regenCoffins.
+	 */
 	private static final int[] regenCoffins =
 	{
 		18706,
@@ -30,12 +43,20 @@ public class AliveTumor extends DefaultAI
 		18710
 	};
 	
+	/**
+	 * Constructor for AliveTumor.
+	 * @param actor NpcInstance
+	 */
 	public AliveTumor(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -64,11 +85,21 @@ public class AliveTumor extends DefaultAI
 		return super.thinkActive();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

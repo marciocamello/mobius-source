@@ -17,6 +17,10 @@ import lineage2.gameserver.instancemanager.games.FishingChampionShipManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FishermanInstance extends MerchantInstance
 {
 	/**
@@ -24,11 +28,23 @@ public class FishermanInstance extends MerchantInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for FishermanInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public FishermanInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
@@ -44,6 +60,11 @@ public class FishermanInstance extends MerchantInstance
 		return "fisherman/" + pom + ".htm";
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

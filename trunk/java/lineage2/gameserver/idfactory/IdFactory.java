@@ -26,9 +26,19 @@ import lineage2.gameserver.database.DatabaseFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class IdFactory
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(IdFactory.class);
+	/**
+	 * Field EXTRACT_OBJ_ID_TABLES.
+	 */
 	public static final String[][] EXTRACT_OBJ_ID_TABLES =
 	{
 		{
@@ -60,24 +70,52 @@ public abstract class IdFactory
 			"id"
 		}
 	};
+	/**
+	 * Field FIRST_OID.
+	 */
 	public static final int FIRST_OID = 0x10000000;
+	/**
+	 * Field LAST_OID.
+	 */
 	public static final int LAST_OID = 0x7FFFFFFF;
+	/**
+	 * Field FREE_OBJECT_ID_SIZE.
+	 */
 	public static final int FREE_OBJECT_ID_SIZE = LAST_OID - FIRST_OID;
+	/**
+	 * Field _instance.
+	 */
 	protected static final IdFactory _instance = new BitSetIDFactory();
 	
+	/**
+	 * Method getInstance.
+	 * @return IdFactory
+	 */
 	public static final IdFactory getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field initialized.
+	 */
 	protected boolean initialized;
+	/**
+	 * Field releasedCount.
+	 */
 	protected long releasedCount = 0;
 	
+	/**
+	 * Constructor for IdFactory.
+	 */
 	protected IdFactory()
 	{
 		resetOnlineStatus();
 	}
 	
+	/**
+	 * Method resetOnlineStatus.
+	 */
 	private void resetOnlineStatus()
 	{
 		Connection con = null;
@@ -99,6 +137,10 @@ public abstract class IdFactory
 		}
 	}
 	
+	/**
+	 * Method extractUsedObjectIDTable.
+	 * @return int[] * @throws SQLException
+	 */
 	protected int[] extractUsedObjectIDTable() throws SQLException
 	{
 		TIntArrayList objectIds = new TIntArrayList();
@@ -135,22 +177,42 @@ public abstract class IdFactory
 		return extracted;
 	}
 	
+	/**
+	 * Method isInitialized.
+	 * @return boolean
+	 */
 	public boolean isInitialized()
 	{
 		return initialized;
 	}
 	
+	/**
+	 * Method getNextId.
+	 * @return int
+	 */
 	public abstract int getNextId();
 	
+	/**
+	 * Method releaseId.
+	 * @param id int
+	 */
 	public void releaseId(int id)
 	{
 		releasedCount++;
 	}
 	
+	/**
+	 * Method getReleasedCount.
+	 * @return long
+	 */
 	public long getReleasedCount()
 	{
 		return releasedCount;
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	public abstract int size();
 }

@@ -20,26 +20,46 @@ import lineage2.gameserver.model.instances.NpcInstance;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Soldiers extends Fighter
 {
+	/**
+	 * Field ATTACK_IDS.
+	 */
 	private static final int[] ATTACK_IDS =
 	{
 		19171,
 		19172
 	};
 	
+	/**
+	 * Constructor for Soldiers.
+	 * @param actor NpcInstance
+	 */
 	public Soldiers(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ATTACK_DELAY = 10;
 	}
 	
+	/**
+	 * Method getMaxAttackTimeout.
+	 * @return int
+	 */
 	@Override
 	public int getMaxAttackTimeout()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method canAttackCharacter.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	protected boolean canAttackCharacter(Creature target)
 	{
@@ -52,6 +72,11 @@ public class Soldiers extends Fighter
 		return ArrayUtils.contains(ATTACK_IDS, target.getNpcId());
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{

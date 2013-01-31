@@ -15,7 +15,15 @@ package lineage2.gameserver.listener.actor.player;
 import lineage2.gameserver.listener.PlayerListener;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnPlayerExitListener extends PlayerListener
 {
+	/**
+	 * Method onPlayerExit.
+	 * @param player Player
+	 */
 	public void onPlayerExit(Player player);
 }

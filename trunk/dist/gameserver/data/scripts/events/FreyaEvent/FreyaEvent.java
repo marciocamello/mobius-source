@@ -31,14 +31,39 @@ import lineage2.gameserver.scripts.ScriptFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
+	/**
+	 * Field EVENT_MANAGER_ID. (value is 13296)
+	 */
 	private static final int EVENT_MANAGER_ID = 13296;
+	/**
+	 * Field ADENA. (value is 57)
+	 */
 	private static final int ADENA = 57;
+	/**
+	 * Field GIFT_RECEIVE_DELAY. (value is 20)
+	 */
 	private static final int GIFT_RECEIVE_DELAY = 20;
+	/**
+	 * Field GIFT_ID. (value is 15440)
+	 */
 	private static final int GIFT_ID = 15440;
+	/**
+	 * Field GIFT_PRICE. (value is 1)
+	 */
 	private static final int GIFT_PRICE = 1;
+	/**
+	 * Field DROP_CHANCE. (value is 55)
+	 */
 	private static final int DROP_CHANCE = 55;
+	/**
+	 * Field DROP_LIST.
+	 */
 	private static final int[] DROP_LIST =
 	{
 		17130,
@@ -50,6 +75,9 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		17136,
 		17137
 	};
+	/**
+	 * Field EVENT_MANAGERS.
+	 */
 	private static final int[][] EVENT_MANAGERS =
 	{
 		{
@@ -263,13 +291,35 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 			49999
 		}
 	};
+	/**
+	 * Field _name. (value is ""Freya Celebration"")
+	 */
 	private static final String _name = "Freya Celebration";
+	/**
+	 * Field _msgStarted. (value is ""scripts.events.FreyaEvent.AnnounceEventStarted"")
+	 */
 	private static final String _msgStarted = "scripts.events.FreyaEvent.AnnounceEventStarted";
+	/**
+	 * Field _msgEnded. (value is ""scripts.events.FreyaEvent.AnnounceEventStoped"")
+	 */
 	private static final String _msgEnded = "scripts.events.FreyaEvent.AnnounceEventStoped";
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(FreyaEvent.class);
+	/**
+	 * Field _spawns.
+	 */
 	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	/**
+	 * Field _active.
+	 */
 	private static boolean _active = false;
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -286,33 +336,57 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		}
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	protected static boolean isActive()
 	{
 		return IsActive(_name);
 	}
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	protected void spawnEventManagers()
 	{
 		SpawnNPCs(EVENT_MANAGER_ID, EVENT_MANAGERS, _spawns);
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	protected void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature cha, Creature killer)
 	{
@@ -326,6 +400,9 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		}
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -347,6 +424,9 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -368,6 +448,11 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -377,6 +462,9 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		}
 	}
 	
+	/**
+	 * Method receiveGift.
+	 */
 	public void receiveGift()
 	{
 		Player player = getSelf();

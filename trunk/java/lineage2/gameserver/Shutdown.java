@@ -35,30 +35,72 @@ import lineage2.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Shutdown extends Thread
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Shutdown.class);
+	/**
+	 * Field SHUTDOWN. (value is 0)
+	 */
 	public static final int SHUTDOWN = 0;
+	/**
+	 * Field RESTART. (value is 2)
+	 */
 	public static final int RESTART = 2;
+	/**
+	 * Field NONE. (value is -1)
+	 */
 	public static final int NONE = -1;
+	/**
+	 * Field _instance.
+	 */
 	private static final Shutdown _instance = new Shutdown();
 	
+	/**
+	 * Method getInstance.
+	 * @return Shutdown
+	 */
 	public static final Shutdown getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field counter.
+	 */
 	private Timer counter;
+	/**
+	 * Field shutdownMode.
+	 */
 	int shutdownMode;
+	/**
+	 * Field shutdownCounter.
+	 */
 	int shutdownCounter;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ShutdownCounter extends TimerTask
 	{
+		/**
+		 * Constructor for ShutdownCounter.
+		 */
 		public ShutdownCounter()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -100,6 +142,9 @@ public class Shutdown extends Thread
 		}
 	}
 	
+	/**
+	 * Constructor for Shutdown.
+	 */
 	private Shutdown()
 	{
 		setName(getClass().getSimpleName());
@@ -107,16 +152,29 @@ public class Shutdown extends Thread
 		shutdownMode = NONE;
 	}
 	
+	/**
+	 * Method getSeconds.
+	 * @return int
+	 */
 	public int getSeconds()
 	{
 		return shutdownMode == NONE ? -1 : shutdownCounter;
 	}
 	
+	/**
+	 * Method getMode.
+	 * @return int
+	 */
 	public int getMode()
 	{
 		return shutdownMode;
 	}
 	
+	/**
+	 * Method schedule.
+	 * @param seconds int
+	 * @param shutdownMode int
+	 */
 	public synchronized void schedule(int seconds, int shutdownMode)
 	{
 		if (seconds < 0)
@@ -134,6 +192,11 @@ public class Shutdown extends Thread
 		counter.scheduleAtFixedRate(new ShutdownCounter(), 0, 1000L);
 	}
 	
+	/**
+	 * Method schedule.
+	 * @param time String
+	 * @param shutdownMode int
+	 */
 	public void schedule(String time, int shutdownMode)
 	{
 		SchedulingPattern cronTime;
@@ -149,6 +212,9 @@ public class Shutdown extends Thread
 		schedule(seconds, shutdownMode);
 	}
 	
+	/**
+	 * Method cancel.
+	 */
 	public synchronized void cancel()
 	{
 		shutdownMode = NONE;
@@ -159,6 +225,10 @@ public class Shutdown extends Thread
 		counter = null;
 	}
 	
+	/**
+	 * Method run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public void run()
 	{
@@ -206,6 +276,9 @@ public class Shutdown extends Thread
 		System.out.println("Shutdown finished.");
 	}
 	
+	/**
+	 * Method saveData.
+	 */
 	private void saveData()
 	{
 		if (Config.ENABLE_OLYMPIAD)
@@ -264,6 +337,9 @@ public class Shutdown extends Thread
 		}
 	}
 	
+	/**
+	 * Method disconnectAllPlayers.
+	 */
 	private void disconnectAllPlayers()
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())

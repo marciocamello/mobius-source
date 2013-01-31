@@ -16,11 +16,28 @@ import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.residence.Dominion;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExReplyRegisterDominion extends L2GameServerPacket
 {
+	/**
+	 * Field _playerCount. Field _clanCount. Field _dominionId.
+	 */
 	private final int _dominionId, _clanCount, _playerCount;
+	/**
+	 * Field _asClan. Field _join. Field _success.
+	 */
 	private final boolean _success, _join, _asClan;
 	
+	/**
+	 * Constructor for ExReplyRegisterDominion.
+	 * @param dominion Dominion
+	 * @param success boolean
+	 * @param join boolean
+	 * @param asClan boolean
+	 */
 	public ExReplyRegisterDominion(Dominion dominion, boolean success, boolean join, boolean asClan)
 	{
 		_success = success;
@@ -32,6 +49,9 @@ public class ExReplyRegisterDominion extends L2GameServerPacket
 		_clanCount = siegeEvent.getObjects(SiegeEvent.DEFENDERS).size() + 1;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

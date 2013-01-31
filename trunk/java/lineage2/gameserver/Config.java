@@ -46,6 +46,10 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Config
 {
 	private static final Logger _log = LoggerFactory.getLogger(Config.class);
@@ -793,6 +797,9 @@ public class Config
 	public static int LOGIN_SERVER_SERVER_TYPE;
 	public static int SAFE_ENCHANT_LVL;
 	
+	/**
+	 * Method loadServerConfig.
+	 */
 	public static void loadServerConfig()
 	{
 		ExProperties serverSettings = load(CONFIGURATION_FILE);
@@ -1019,6 +1026,9 @@ public class Config
 		RWHO_FORCE_INC = Integer.parseInt(serverSettings.getProperty("RemoteWhoForceInc", "0"));
 	}
 	
+	/**
+	 * Method loadCommunityConfig.
+	 */
 	public static void loadCommunityConfig()
 	{
 		ExProperties communitySettings = load(COMMUNITY_CONFIGURATION_FILE);
@@ -1113,6 +1123,9 @@ public class Config
 		}
 	}
 	
+	/**
+	 * Method loadTelnetConfig.
+	 */
 	public static void loadTelnetConfig()
 	{
 		ExProperties telnetSettings = load(TELNET_CONFIGURATION_FILE);
@@ -1123,6 +1136,9 @@ public class Config
 		TELNET_PASSWORD = telnetSettings.getProperty("Password", "");
 	}
 	
+	/**
+	 * Method loadResidenceConfig.
+	 */
 	public static void loadResidenceConfig()
 	{
 		ExProperties residenceSettings = load(RESIDENCE_CONFIG_FILE);
@@ -1158,6 +1174,9 @@ public class Config
 		CASTLE_VALIDATION_DATE.set(Calendar.MILLISECOND, 0);
 	}
 	
+	/**
+	 * Method loadTopSettings.
+	 */
 	public static void loadTopSettings()
 	{
 		ExProperties topSettings = load(TOP_FILE);
@@ -1179,6 +1198,9 @@ public class Config
 		MMO_TOP_REWARD_NO_CLAN = topSettings.getProperty("MMOTopRewardNoClan", new int[0]);
 	}
 	
+	/**
+	 * Method loadPaymentConfig.
+	 */
 	public static void loadPaymentConfig()
 	{
 		ExProperties paymentSetting = load(PAYMENT_CONFIG_FILE);
@@ -1193,6 +1215,9 @@ public class Config
 		SMS_PAYMENT_PREFIX = paymentSetting.getProperty("SMSPaymentPrefix", "");
 	}
 	
+	/**
+	 * Method loadOtherConfig.
+	 */
 	public static void loadOtherConfig()
 	{
 		ExProperties otherSettings = load(OTHER_CONFIG_FILE);
@@ -1244,6 +1269,9 @@ public class Config
 		SAFE_ENCHANT_LVL = otherSettings.getProperty("SafeEnchant", 0);
 	}
 	
+	/**
+	 * Method loadSpoilConfig.
+	 */
 	public static void loadSpoilConfig()
 	{
 		ExProperties spoilSettings = load(SPOIL_CONFIG_FILE);
@@ -1265,6 +1293,9 @@ public class Config
 		MANOR_MAINTENANCE_PERIOD = spoilSettings.getProperty("AltManorMaintenancePeriod", 360000);
 	}
 	
+	/**
+	 * Method loadFormulasConfig.
+	 */
 	public static void loadFormulasConfig()
 	{
 		ExProperties formulasSettings = load(FORMULAS_CONFIGURATION_FILE);
@@ -1295,11 +1326,17 @@ public class Config
 		ALT_POLE_DAMAGE_MODIFIER = formulasSettings.getProperty("PoleDamageModifier", 1.0);
 	}
 	
+	/**
+	 * Method loadDevelopSettings.
+	 */
 	public static void loadDevelopSettings()
 	{
 		load(DEVELOP_FILE);
 	}
 	
+	/**
+	 * Method loadExtSettings.
+	 */
 	public static void loadExtSettings()
 	{
 		ExProperties properties = load(EXT_FILE);
@@ -1308,6 +1345,9 @@ public class Config
 		EX_LECTURE_MARK = properties.getProperty("LectureMark", false);
 	}
 	
+	/**
+	 * Method loadAltSettings.
+	 */
 	public static void loadAltSettings()
 	{
 		ExProperties altSettings = load(ALT_SETTINGS_FILE);
@@ -1497,6 +1537,9 @@ public class Config
 		LOAD_GM_SPAWN_CUSTOM = altSettings.getProperty("LoadGmSpawnCustom", false);
 	}
 	
+	/**
+	 * Method loadServicesSettings.
+	 */
 	public static void loadServicesSettings()
 	{
 		ExProperties servicesSettings = load(SERVICES_FILE);
@@ -1644,6 +1687,9 @@ public class Config
 		ALLOW_EVENT_GATEKEEPER = servicesSettings.getProperty("AllowEventGatekeeper", false);
 	}
 	
+	/**
+	 * Method loadPvPSettings.
+	 */
 	public static void loadPvPSettings()
 	{
 		ExProperties pvpSettings = load(PVP_CONFIG_FILE);
@@ -1708,6 +1754,9 @@ public class Config
 		PK_KILLER_NAME_COLOUR = Integer.decode("0x" + pvpSettings.getProperty("PKKillerNameColour", "00FF00"));
 	}
 	
+	/**
+	 * Method loadAISettings.
+	 */
 	public static void loadAISettings()
 	{
 		ExProperties aiSettings = load(AI_CONFIG_FILE);
@@ -1727,6 +1776,9 @@ public class Config
 		MAX_PURSUE_RANGE_RAID = aiSettings.getProperty("MaxPursueRangeRaid", 5000);
 	}
 	
+	/**
+	 * Method loadGeodataSettings.
+	 */
 	public static void loadGeodataSettings()
 	{
 		ExProperties geodataSettings = load(GEODATA_CONFIG_FILE);
@@ -1750,6 +1802,9 @@ public class Config
 		PATHFIND_BUFFERS = geodataSettings.getProperty("PathFindBuffers", "8x96;8x128;8x160;8x192;4x224;4x256;4x288;2x320;2x384;2x352;1x512");
 	}
 	
+	/**
+	 * Method loadEventsSettings.
+	 */
 	public static void loadEventsSettings()
 	{
 		ExProperties eventSettings = load(EVENTS_CONFIG_FILE);
@@ -1793,6 +1848,9 @@ public class Config
 		TMWAVE2 = eventSettings.getProperty("TMWave2", 18855);
 	}
 	
+	/**
+	 * Method loadOlympiadSettings.
+	 */
 	public static void loadOlympiadSettings()
 	{
 		ExProperties olympSettings = load(OLYMPIAD);
@@ -1830,6 +1888,9 @@ public class Config
 		OLYMPIAD_OLDSTYLE_STAT = olympSettings.getProperty("OlympiadOldStyleStat", false);
 	}
 	
+	/**
+	 * Method load.
+	 */
 	public static void load()
 	{
 		loadServerConfig();
@@ -1854,10 +1915,16 @@ public class Config
 		loadGMAccess();
 	}
 	
+	/**
+	 * Constructor for Config.
+	 */
 	private Config()
 	{
 	}
 	
+	/**
+	 * Method abuseLoad.
+	 */
 	public static void abuseLoad()
 	{
 		List<Pattern> tmp = new ArrayList<>();
@@ -1897,6 +1964,9 @@ public class Config
 		}
 	}
 	
+	/**
+	 * Method loadGMAccess.
+	 */
 	public static void loadGMAccess()
 	{
 		gmlist.clear();
@@ -1916,6 +1986,10 @@ public class Config
 		}
 	}
 	
+	/**
+	 * Method loadGMAccess.
+	 * @param file File
+	 */
 	public static void loadGMAccess(File file)
 	{
 		try
@@ -1970,6 +2044,11 @@ public class Config
 		}
 	}
 	
+	/**
+	 * Method getField.
+	 * @param fieldName String
+	 * @return String
+	 */
 	public static String getField(String fieldName)
 	{
 		Field field = FieldUtils.getField(Config.class, fieldName);
@@ -1990,6 +2069,12 @@ public class Config
 		return null;
 	}
 	
+	/**
+	 * Method setField.
+	 * @param fieldName String
+	 * @param value String
+	 * @return boolean
+	 */
 	public static boolean setField(String fieldName, String value)
 	{
 		Field field = FieldUtils.getField(Config.class, fieldName);
@@ -2035,11 +2120,21 @@ public class Config
 		return true;
 	}
 	
+	/**
+	 * Method load.
+	 * @param filename String
+	 * @return ExProperties
+	 */
 	public static ExProperties load(String filename)
 	{
 		return load(new File(filename));
 	}
 	
+	/**
+	 * Method load.
+	 * @param file File
+	 * @return ExProperties
+	 */
 	public static ExProperties load(File file)
 	{
 		ExProperties result = new ExProperties();
@@ -2054,6 +2149,11 @@ public class Config
 		return result;
 	}
 	
+	/**
+	 * Method containsAbuseWord.
+	 * @param s String
+	 * @return boolean
+	 */
 	public static boolean containsAbuseWord(String s)
 	{
 		for (Pattern pattern : ABUSEWORD_LIST)

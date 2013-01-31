@@ -14,17 +14,46 @@ package lineage2.commons.dao;
 
 import java.io.Serializable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface JdbcDAO<K extends Serializable, E extends JdbcEntity>
 {
+	/**
+	 * Method load.
+	 * @param key K
+	 * @return E
+	 */
 	public E load(K key);
 	
+	/**
+	 * Method save.
+	 * @param e E
+	 */
 	public void save(E e);
 	
+	/**
+	 * Method update.
+	 * @param e E
+	 */
 	public void update(E e);
 	
+	/**
+	 * Method saveOrUpdate.
+	 * @param e E
+	 */
 	public void saveOrUpdate(E e);
 	
+	/**
+	 * Method delete.
+	 * @param e E
+	 */
 	public void delete(E e);
 	
+	/**
+	 * Method getStats.
+	 * @return JdbcEntityStats
+	 */
 	public JdbcEntityStats getStats();
 }

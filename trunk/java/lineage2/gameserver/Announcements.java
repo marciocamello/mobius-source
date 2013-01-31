@@ -34,32 +34,63 @@ import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Announcements
 {
+	/**
+	 * @author Mobius
+	 */
 	public class Announce extends RunnableImpl
 	{
+		/**
+		 * Field _task.
+		 */
 		private Future<?> _task;
+		/**
+		 * Field _time.
+		 */
 		private final int _time;
+		/**
+		 * Field _announce.
+		 */
 		private final String _announce;
 		
+		/**
+		 * Constructor for Announce.
+		 * @param t int
+		 * @param announce String
+		 */
 		public Announce(int t, String announce)
 		{
 			_time = t;
 			_announce = announce;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
 			announceToAll(_announce);
 		}
 		
+		/**
+		 * Method showAnnounce.
+		 * @param player Player
+		 */
 		public void showAnnounce(Player player)
 		{
 			Say2 cs = new Say2(0, ChatType.ANNOUNCEMENT, player.getName(), _announce);
 			player.sendPacket(cs);
 		}
 		
+		/**
+		 * Method start.
+		 */
 		public void start()
 		{
 			if (_time > 0)
@@ -68,6 +99,9 @@ public class Announcements
 			}
 		}
 		
+		/**
+		 * Method stop.
+		 */
 		public void stop()
 		{
 			if (_task != null)
@@ -77,37 +111,68 @@ public class Announcements
 			}
 		}
 		
+		/**
+		 * Method getTime.
+		 * @return int
+		 */
 		public int getTime()
 		{
 			return _time;
 		}
 		
+		/**
+		 * Method getAnnounce.
+		 * @return String
+		 */
 		public String getAnnounce()
 		{
 			return _announce;
 		}
 	}
 	
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Announcements.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final Announcements _instance = new Announcements();
 	
+	/**
+	 * Method getInstance.
+	 * @return Announcements
+	 */
 	public static final Announcements getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _announcements.
+	 */
 	private final List<Announce> _announcements = new ArrayList<>();
 	
+	/**
+	 * Constructor for Announcements.
+	 */
 	private Announcements()
 	{
 		loadAnnouncements();
 	}
 	
+	/**
+	 * Method getAnnouncements.
+	 * @return List<Announce>
+	 */
 	public List<Announce> getAnnouncements()
 	{
 		return _announcements;
 	}
 	
+	/**
+	 * Method loadAnnouncements.
+	 */
 	public void loadAnnouncements()
 	{
 		_announcements.clear();
@@ -133,6 +198,10 @@ public class Announcements
 		}
 	}
 	
+	/**
+	 * Method showAnnouncements.
+	 * @param activeChar Player
+	 */
 	public void showAnnouncements(Player activeChar)
 	{
 		for (Announce announce : _announcements)
@@ -141,6 +210,12 @@ public class Announcements
 		}
 	}
 	
+	/**
+	 * Method addAnnouncement.
+	 * @param val int
+	 * @param text String
+	 * @param save boolean
+	 */
 	public void addAnnouncement(int val, String text, boolean save)
 	{
 		Announce announce = new Announce(val, text);
@@ -152,6 +227,10 @@ public class Announcements
 		}
 	}
 	
+	/**
+	 * Method delAnnouncement.
+	 * @param line int
+	 */
 	public void delAnnouncement(int line)
 	{
 		Announce announce = _announcements.remove(line);
@@ -162,6 +241,9 @@ public class Announcements
 		saveToDisk();
 	}
 	
+	/**
+	 * Method saveToDisk.
+	 */
 	private void saveToDisk()
 	{
 		try
@@ -180,11 +262,21 @@ public class Announcements
 		}
 	}
 	
+	/**
+	 * Method announceToAll.
+	 * @param text String
+	 */
 	public void announceToAll(String text)
 	{
 		announceToAll(text, ChatType.ANNOUNCEMENT);
 	}
 	
+	/**
+	 * Method shout.
+	 * @param activeChar Creature
+	 * @param text String
+	 * @param type ChatType
+	 */
 	public static void shout(Creature activeChar, String text, ChatType type)
 	{
 		Say2 cs = new Say2(activeChar.getObjectId(), type, activeChar.getName(), text);
@@ -207,6 +299,11 @@ public class Announcements
 		activeChar.sendPacket(cs);
 	}
 	
+	/**
+	 * Method announceToAll.
+	 * @param text String
+	 * @param type ChatType
+	 */
 	public void announceToAll(String text, ChatType type)
 	{
 		Say2 cs = new Say2(0, type, "", text);
@@ -216,6 +313,11 @@ public class Announcements
 		}
 	}
 	
+	/**
+	 * Method announceByCustomMessage.
+	 * @param address String
+	 * @param replacements String[]
+	 */
 	public void announceByCustomMessage(String address, String[] replacements)
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
@@ -224,6 +326,12 @@ public class Announcements
 		}
 	}
 	
+	/**
+	 * Method announceByCustomMessage.
+	 * @param address String
+	 * @param replacements String[]
+	 * @param type ChatType
+	 */
 	public void announceByCustomMessage(String address, String[] replacements, ChatType type)
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
@@ -232,6 +340,12 @@ public class Announcements
 		}
 	}
 	
+	/**
+	 * Method announceToPlayerByCustomMessage.
+	 * @param player Player
+	 * @param address String
+	 * @param replacements String[]
+	 */
 	public void announceToPlayerByCustomMessage(Player player, String address, String[] replacements)
 	{
 		CustomMessage cm = new CustomMessage(address, player);
@@ -245,6 +359,13 @@ public class Announcements
 		player.sendPacket(new Say2(0, ChatType.ANNOUNCEMENT, "", cm.toString()));
 	}
 	
+	/**
+	 * Method announceToPlayerByCustomMessage.
+	 * @param player Player
+	 * @param address String
+	 * @param replacements String[]
+	 * @param type ChatType
+	 */
 	public void announceToPlayerByCustomMessage(Player player, String address, String[] replacements, ChatType type)
 	{
 		CustomMessage cm = new CustomMessage(address, player);
@@ -258,6 +379,10 @@ public class Announcements
 		player.sendPacket(new Say2(0, type, "", cm.toString()));
 	}
 	
+	/**
+	 * Method announceToAll.
+	 * @param sm SystemMessage
+	 */
 	public void announceToAll(SystemMessage sm)
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())

@@ -17,13 +17,25 @@ import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FloatingGhost extends Fighter
 {
+	/**
+	 * Constructor for FloatingGhost.
+	 * @param actor NpcInstance
+	 */
 	public FloatingGhost(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -36,6 +48,10 @@ public class FloatingGhost extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

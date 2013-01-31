@@ -18,16 +18,31 @@ import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExNpcQuestHtmlMessage extends NpcHtmlMessage
 {
+	/**
+	 * Field _questId.
+	 */
 	private final int _questId;
 	
+	/**
+	 * Constructor for ExNpcQuestHtmlMessage.
+	 * @param npcObjId int
+	 * @param questId int
+	 */
 	public ExNpcQuestHtmlMessage(int npcObjId, int questId)
 	{
 		super(npcObjId);
 		_questId = questId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

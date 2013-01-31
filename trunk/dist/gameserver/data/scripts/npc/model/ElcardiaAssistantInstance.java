@@ -21,12 +21,19 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ElcardiaAssistantInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _elcardiaBuff.
+	 */
 	private final static int[][] _elcardiaBuff = new int[][]
 	{
 		{
@@ -55,11 +62,21 @@ public final class ElcardiaAssistantInstance extends NpcInstance
 		},
 	};
 	
+	/**
+	 * Constructor for ElcardiaAssistantInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ElcardiaAssistantInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

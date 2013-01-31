@@ -24,15 +24,41 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RewardData implements Cloneable
 {
+	/**
+	 * Field _item.
+	 */
 	private final ItemTemplate _item;
+	/**
+	 * Field _notRate.
+	 */
 	private boolean _notRate = false;
+	/**
+	 * Field _mindrop.
+	 */
 	private long _mindrop;
+	/**
+	 * Field _maxdrop.
+	 */
 	private long _maxdrop;
+	/**
+	 * Field _chance.
+	 */
 	private double _chance;
+	/**
+	 * Field _chanceInGroup.
+	 */
 	private double _chanceInGroup;
 	
+	/**
+	 * Constructor for RewardData.
+	 * @param itemId int
+	 */
 	public RewardData(int itemId)
 	{
 		_item = ItemHolder.getInstance().getTemplate(itemId);
@@ -42,6 +68,13 @@ public class RewardData implements Cloneable
 		}
 	}
 	
+	/**
+	 * Constructor for RewardData.
+	 * @param itemId int
+	 * @param min long
+	 * @param max long
+	 * @param chance double
+	 */
 	public RewardData(int itemId, long min, long max, double chance)
 	{
 		this(itemId);
@@ -50,78 +83,139 @@ public class RewardData implements Cloneable
 		_chance = chance;
 	}
 	
+	/**
+	 * Method notRate.
+	 * @return boolean
+	 */
 	public boolean notRate()
 	{
 		return _notRate;
 	}
 	
+	/**
+	 * Method setNotRate.
+	 * @param notRate boolean
+	 */
 	public void setNotRate(boolean notRate)
 	{
 		_notRate = notRate;
 	}
 	
+	/**
+	 * Method getItemId.
+	 * @return int
+	 */
 	public int getItemId()
 	{
 		return _item.getItemId();
 	}
 	
+	/**
+	 * Method getItem.
+	 * @return ItemTemplate
+	 */
 	public ItemTemplate getItem()
 	{
 		return _item;
 	}
 	
+	/**
+	 * Method getMinDrop.
+	 * @return long
+	 */
 	public long getMinDrop()
 	{
 		return _mindrop;
 	}
 	
+	/**
+	 * Method getMaxDrop.
+	 * @return long
+	 */
 	public long getMaxDrop()
 	{
 		return _maxdrop;
 	}
 	
+	/**
+	 * Method getChance.
+	 * @return double
+	 */
 	public double getChance()
 	{
 		return _chance;
 	}
 	
+	/**
+	 * Method setMinDrop.
+	 * @param mindrop long
+	 */
 	public void setMinDrop(long mindrop)
 	{
 		_mindrop = mindrop;
 	}
 	
+	/**
+	 * Method setMaxDrop.
+	 * @param maxdrop long
+	 */
 	public void setMaxDrop(long maxdrop)
 	{
 		_maxdrop = maxdrop;
 	}
 	
+	/**
+	 * Method setChance.
+	 * @param chance double
+	 */
 	public void setChance(double chance)
 	{
 		_chance = chance;
 	}
 	
+	/**
+	 * Method setChanceInGroup.
+	 * @param chance double
+	 */
 	public void setChanceInGroup(double chance)
 	{
 		_chanceInGroup = chance;
 	}
 	
+	/**
+	 * Method getChanceInGroup.
+	 * @return double
+	 */
 	public double getChanceInGroup()
 	{
 		return _chanceInGroup;
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		return "ItemID: " + getItem() + " Min: " + getMinDrop() + " Max: " + getMaxDrop() + " Chance: " + (getChance() / 10000.0) + "%";
 	}
 	
+	/**
+	 * Method clone.
+	 * @return RewardData
+	 */
 	@Override
 	public RewardData clone()
 	{
 		return new RewardData(getItemId(), getMinDrop(), getMaxDrop(), getChance());
 	}
 	
+	/**
+	 * Method equals.
+	 * @param o Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object o)
 	{
@@ -133,6 +227,12 @@ public class RewardData implements Cloneable
 		return false;
 	}
 	
+	/**
+	 * Method roll.
+	 * @param player Player
+	 * @param mod double
+	 * @return List<RewardItem>
+	 */
 	public List<RewardItem> roll(Player player, double mod)
 	{
 		double rate;
@@ -147,6 +247,11 @@ public class RewardData implements Cloneable
 		return roll(rate * mod);
 	}
 	
+	/**
+	 * Method roll.
+	 * @param rate double
+	 * @return List<RewardItem>
+	 */
 	public List<RewardItem> roll(double rate)
 	{
 		double mult = Math.ceil(rate);

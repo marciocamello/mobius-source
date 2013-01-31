@@ -16,7 +16,18 @@ import lineage2.gameserver.listener.CharListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnMagicUseListener extends CharListener
 {
+	/**
+	 * Method onMagicUse.
+	 * @param actor Creature
+	 * @param skill Skill
+	 * @param target Creature
+	 * @param alt boolean
+	 */
 	public void onMagicUse(Creature actor, Skill skill, Creature target, boolean alt);
 }

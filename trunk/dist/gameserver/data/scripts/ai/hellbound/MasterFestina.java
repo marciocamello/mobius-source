@@ -24,15 +24,41 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MasterFestina extends Fighter
 {
+	/**
+	 * Field _zone.
+	 */
 	private static Zone _zone;
+	/**
+	 * Field _mysticSpawnPoints.
+	 */
 	private static Location[] _mysticSpawnPoints;
+	/**
+	 * Field _spiritGuardSpawnPoints.
+	 */
 	private static Location[] _spiritGuardSpawnPoints;
+	/**
+	 * Field FOUNDRY_MYSTIC_ID. (value is 22387)
+	 */
 	private final static int FOUNDRY_MYSTIC_ID = 22387;
+	/**
+	 * Field FOUNDRY_SPIRIT_GUARD_ID. (value is 22389)
+	 */
 	private final static int FOUNDRY_SPIRIT_GUARD_ID = 22389;
+	/**
+	 * Field _lastFactionNotifyTime.
+	 */
 	private long _lastFactionNotifyTime = 0;
 	
+	/**
+	 * Constructor for MasterFestina.
+	 * @param actor NpcInstance
+	 */
 	public MasterFestina(NpcInstance actor)
 	{
 		super(actor);
@@ -69,6 +95,9 @@ public class MasterFestina extends Fighter
 		};
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -93,6 +122,11 @@ public class MasterFestina extends Fighter
 		super.onEvtSpawn();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -111,6 +145,10 @@ public class MasterFestina extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -127,11 +165,17 @@ public class MasterFestina extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method setZoneActive.
+	 */
 	private void setZoneActive()
 	{
 		_zone.setActive(true);
 	}
 	
+	/**
+	 * Method setZoneInactive.
+	 */
 	private void setZoneInactive()
 	{
 		_zone.setActive(false);

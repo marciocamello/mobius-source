@@ -20,27 +20,53 @@ import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ItemInfoCache
 {
+	/**
+	 * Field _instance.
+	 */
 	private final static ItemInfoCache _instance = new ItemInfoCache();
 	
+	/**
+	 * Method getInstance.
+	 * @return ItemInfoCache
+	 */
 	public static ItemInfoCache getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field cache.
+	 */
 	private final Cache cache;
 	
+	/**
+	 * Constructor for ItemInfoCache.
+	 */
 	private ItemInfoCache()
 	{
 		cache = CacheManager.getInstance().getCache(this.getClass().getName());
 	}
 	
+	/**
+	 * Method put.
+	 * @param item ItemInstance
+	 */
 	public void put(ItemInstance item)
 	{
 		cache.put(new Element(item.getObjectId(), new ItemInfo(item)));
 	}
 	
+	/**
+	 * Method get.
+	 * @param objectId int
+	 * @return ItemInfo
+	 */
 	public ItemInfo get(int objectId)
 	{
 		Element element = cache.get(objectId);

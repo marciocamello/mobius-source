@@ -23,14 +23,26 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.utils.Location;
 import npc.model.QueenAntInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class QueenAntNurse extends Priest
 {
+	/**
+	 * Constructor for QueenAntNurse.
+	 * @param actor NpcInstance
+	 */
 	public QueenAntNurse(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = 10000;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -64,6 +76,10 @@ public class QueenAntNurse extends Priest
 		return false;
 	}
 	
+	/**
+	 * Method createNewTask.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean createNewTask()
 	{
@@ -87,12 +103,20 @@ public class QueenAntNurse extends Priest
 		return false;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method moveOrTeleportToLocation.
+	 * @param loc Location
+	 */
 	private void moveOrTeleportToLocation(Location loc)
 	{
 		NpcInstance actor = getActor();
@@ -107,6 +131,10 @@ public class QueenAntNurse extends Priest
 		ThreadPoolManager.getInstance().schedule(new Teleport(loc), 500);
 	}
 	
+	/**
+	 * Method getTopDesireTarget.
+	 * @return Creature
+	 */
 	private Creature getTopDesireTarget()
 	{
 		NpcInstance actor = getActor();
@@ -123,11 +151,21 @@ public class QueenAntNurse extends Priest
 		return queen_ant;
 	}
 	
+	/**
+	 * Method onIntentionAttack.
+	 * @param target Creature
+	 */
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
 	}
 	
+	/**
+	 * Method onEvtClanAttacked.
+	 * @param attacked_member Creature
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtClanAttacked(Creature attacked_member, Creature attacker, int damage)
 	{

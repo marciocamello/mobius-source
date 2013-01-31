@@ -15,6 +15,10 @@ package npc.model.residences.clanhall;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DietrichInstance extends _34BossMinionInstance
 {
 	/**
@@ -22,17 +26,30 @@ public class DietrichInstance extends _34BossMinionInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for DietrichInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public DietrichInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method spawnChatSay.
+	 * @return NpcString
+	 */
 	@Override
 	public NpcString spawnChatSay()
 	{
 		return NpcString.SOLDIERS_OF_GUSTAV_GO_FORTH_AND_DESTROY_THE_INVADERS;
 	}
 	
+	/**
+	 * Method teleChatSay.
+	 * @return NpcString * @see npc.model.residences.clanhall._34SiegeGuard#teleChatSay()
+	 */
 	@Override
 	public NpcString teleChatSay()
 	{

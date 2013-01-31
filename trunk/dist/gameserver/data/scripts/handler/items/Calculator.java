@@ -16,10 +16,24 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ShowCalc;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Calculator extends ScriptItemHandler
 {
+	/**
+	 * Field CALCULATOR. (value is 4393)
+	 */
 	private static final int CALCULATOR = 4393;
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -31,6 +45,10 @@ public class Calculator extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{

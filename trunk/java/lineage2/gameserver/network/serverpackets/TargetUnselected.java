@@ -15,17 +15,34 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TargetUnselected extends L2GameServerPacket
 {
+	/**
+	 * Field _targetId.
+	 */
 	private final int _targetId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for TargetUnselected.
+	 * @param obj GameObject
+	 */
 	public TargetUnselected(GameObject obj)
 	{
 		_targetId = obj.getObjectId();
 		_loc = obj.getLoc();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

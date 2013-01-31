@@ -18,13 +18,32 @@ import lineage2.loginserver.gameservercon.ReceivablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChangeAccessLevel extends ReceivablePacket
 {
+	/**
+	 * Field _log.
+	 */
 	public static final Logger _log = LoggerFactory.getLogger(ChangeAccessLevel.class);
+	/**
+	 * Field account.
+	 */
 	private String account;
+	/**
+	 * Field level.
+	 */
 	private int level;
+	/**
+	 * Field banExpire.
+	 */
 	private int banExpire;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -33,6 +52,9 @@ public class ChangeAccessLevel extends ReceivablePacket
 		banExpire = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

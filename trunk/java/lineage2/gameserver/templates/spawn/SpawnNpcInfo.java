@@ -16,12 +16,31 @@ import lineage2.commons.collections.MultiValueSet;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SpawnNpcInfo
 {
+	/**
+	 * Field _template.
+	 */
 	private final NpcTemplate _template;
+	/**
+	 * Field _max.
+	 */
 	private final int _max;
+	/**
+	 * Field _parameters.
+	 */
 	private final MultiValueSet<String> _parameters;
 	
+	/**
+	 * Constructor for SpawnNpcInfo.
+	 * @param npcId int
+	 * @param max int
+	 * @param set MultiValueSet<String>
+	 */
 	public SpawnNpcInfo(int npcId, int max, MultiValueSet<String> set)
 	{
 		_template = NpcHolder.getInstance().getTemplate(npcId);
@@ -29,16 +48,28 @@ public class SpawnNpcInfo
 		_parameters = set;
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @return NpcTemplate
+	 */
 	public NpcTemplate getTemplate()
 	{
 		return _template;
 	}
 	
+	/**
+	 * Method getMax.
+	 * @return int
+	 */
 	public int getMax()
 	{
 		return _max;
 	}
 	
+	/**
+	 * Method getParameters.
+	 * @return MultiValueSet<String>
+	 */
 	public MultiValueSet<String> getParameters()
 	{
 		return _parameters;

@@ -14,17 +14,37 @@ package lineage2.gameserver.stats.conditions;
 
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionPlayerMinMaxDamage extends Condition
 {
+	/**
+	 * Field _min.
+	 */
 	private final double _min;
+	/**
+	 * Field _max.
+	 */
 	private final double _max;
 	
+	/**
+	 * Constructor for ConditionPlayerMinMaxDamage.
+	 * @param min double
+	 * @param max double
+	 */
 	public ConditionPlayerMinMaxDamage(double min, double max)
 	{
 		_min = min;
 		_max = max;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

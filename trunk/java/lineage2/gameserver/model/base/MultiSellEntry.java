@@ -15,38 +15,80 @@ package lineage2.gameserver.model.base;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MultiSellEntry
 {
+	/**
+	 * Field _entryId.
+	 */
 	private int _entryId;
+	/**
+	 * Field _ingredients.
+	 */
 	private final List<MultiSellIngredient> _ingredients = new ArrayList<>();
+	/**
+	 * Field _production.
+	 */
 	private final List<MultiSellIngredient> _production = new ArrayList<>();
+	/**
+	 * Field _tax.
+	 */
 	private long _tax;
 	
+	/**
+	 * Constructor for MultiSellEntry.
+	 */
 	public MultiSellEntry()
 	{
 	}
 	
+	/**
+	 * Constructor for MultiSellEntry.
+	 * @param id int
+	 */
 	public MultiSellEntry(int id)
 	{
 		_entryId = id;
 	}
 	
+	/**
+	 * Constructor for MultiSellEntry.
+	 * @param id int
+	 * @param product int
+	 * @param prod_count int
+	 * @param enchant int
+	 */
 	public MultiSellEntry(int id, int product, int prod_count, int enchant)
 	{
 		_entryId = id;
 		addProduct(new MultiSellIngredient(product, prod_count, enchant));
 	}
 	
+	/**
+	 * Method setEntryId.
+	 * @param entryId int
+	 */
 	public void setEntryId(int entryId)
 	{
 		_entryId = entryId;
 	}
 	
+	/**
+	 * Method getEntryId.
+	 * @return int
+	 */
 	public int getEntryId()
 	{
 		return _entryId;
 	}
 	
+	/**
+	 * Method addIngredient.
+	 * @param ingredient MultiSellIngredient
+	 */
 	public void addIngredient(MultiSellIngredient ingredient)
 	{
 		if (ingredient.getItemCount() > 0)
@@ -55,37 +97,65 @@ public class MultiSellEntry
 		}
 	}
 	
+	/**
+	 * Method getIngredients.
+	 * @return List<MultiSellIngredient>
+	 */
 	public List<MultiSellIngredient> getIngredients()
 	{
 		return _ingredients;
 	}
 	
+	/**
+	 * Method addProduct.
+	 * @param ingredient MultiSellIngredient
+	 */
 	public void addProduct(MultiSellIngredient ingredient)
 	{
 		_production.add(ingredient);
 	}
 	
+	/**
+	 * Method getProduction.
+	 * @return List<MultiSellIngredient>
+	 */
 	public List<MultiSellIngredient> getProduction()
 	{
 		return _production;
 	}
 	
+	/**
+	 * Method getTax.
+	 * @return long
+	 */
 	public long getTax()
 	{
 		return _tax;
 	}
 	
+	/**
+	 * Method setTax.
+	 * @param tax long
+	 */
 	public void setTax(long tax)
 	{
 		_tax = tax;
 	}
 	
+	/**
+	 * Method hashCode.
+	 * @return int
+	 */
 	@Override
 	public int hashCode()
 	{
 		return _entryId;
 	}
 	
+	/**
+	 * Method clone.
+	 * @return MultiSellEntry
+	 */
 	@Override
 	public MultiSellEntry clone()
 	{

@@ -46,6 +46,10 @@ import lineage2.gameserver.utils.ReflectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Residence implements JdbcEntity
 {
 	/**
@@ -53,8 +57,14 @@ public abstract class Residence implements JdbcEntity
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ResidenceCycleTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -63,36 +73,110 @@ public abstract class Residence implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Residence.class);
+	/**
+	 * Field CYCLE_TIME.
+	 */
 	public static final long CYCLE_TIME = 60 * 60 * 1000L;
+	/**
+	 * Field _id.
+	 */
 	protected final int _id;
+	/**
+	 * Field _name.
+	 */
 	protected final String _name;
+	/**
+	 * Field _owner.
+	 */
 	protected Clan _owner;
+	/**
+	 * Field _zone.
+	 */
 	protected Zone _zone;
+	/**
+	 * Field _functions.
+	 */
 	protected List<ResidenceFunction> _functions = new ArrayList<>();
+	/**
+	 * Field _skills.
+	 */
 	protected List<Skill> _skills = new ArrayList<>();
+	/**
+	 * Field _siegeEvent.
+	 */
 	protected SiegeEvent<?, ?> _siegeEvent;
+	/**
+	 * Field _siegeDate.
+	 */
 	protected Calendar _siegeDate = Calendar.getInstance();
+	/**
+	 * Field _lastSiegeDate.
+	 */
 	protected Calendar _lastSiegeDate = Calendar.getInstance();
+	/**
+	 * Field _ownDate.
+	 */
 	protected Calendar _ownDate = Calendar.getInstance();
+	/**
+	 * Field _cycleTask.
+	 */
 	protected ScheduledFuture<?> _cycleTask;
+	/**
+	 * Field _cycle.
+	 */
 	private int _cycle;
+	/**
+	 * Field _rewardCount.
+	 */
 	private int _rewardCount;
+	/**
+	 * Field _paidCycle.
+	 */
 	private int _paidCycle;
+	/**
+	 * Field _jdbcEntityState.
+	 */
 	protected JdbcEntityState _jdbcEntityState = JdbcEntityState.CREATED;
+	/**
+	 * Field _banishPoints.
+	 */
 	protected List<Location> _banishPoints = new ArrayList<>();
+	/**
+	 * Field _ownerRestartPoints.
+	 */
 	protected List<Location> _ownerRestartPoints = new ArrayList<>();
+	/**
+	 * Field _otherRestartPoints.
+	 */
 	protected List<Location> _otherRestartPoints = new ArrayList<>();
+	/**
+	 * Field _chaosRestartPoints.
+	 */
 	protected List<Location> _chaosRestartPoints = new ArrayList<>();
 	
+	/**
+	 * Constructor for Residence.
+	 * @param set StatsSet
+	 */
 	public Residence(StatsSet set)
 	{
 		_id = set.getInteger("id");
 		_name = set.getString("name");
 	}
 	
+	/**
+	 * Method getType.
+	 * @return ResidenceType
+	 */
 	public abstract ResidenceType getType();
 	
+	/**
+	 * Method init.
+	 */
 	public void init()
 	{
 		initZone();
@@ -103,87 +187,161 @@ public abstract class Residence implements JdbcEntity
 		startCycleTask();
 	}
 	
+	/**
+	 * Method initZone.
+	 */
 	protected void initZone()
 	{
 		_zone = ReflectionUtils.getZone("residence_" + _id);
 		_zone.setParam("residence", this);
 	}
 	
+	/**
+	 * Method initEvent.
+	 */
 	protected void initEvent()
 	{
 		_siegeEvent = EventHolder.getInstance().getEvent(EventType.SIEGE_EVENT, _id);
 	}
 	
+	/**
+	 * Method getSiegeEvent.
+	 * @return E
+	 */
 	@SuppressWarnings("unchecked")
 	public <E extends SiegeEvent<?, ?>> E getSiegeEvent()
 	{
 		return (E) _siegeEvent;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method getOwnerId.
+	 * @return int
+	 */
 	public int getOwnerId()
 	{
 		return _owner == null ? 0 : _owner.getClanId();
 	}
 	
+	/**
+	 * Method getOwner.
+	 * @return Clan
+	 */
 	public Clan getOwner()
 	{
 		return _owner;
 	}
 	
+	/**
+	 * Method getZone.
+	 * @return Zone
+	 */
 	public Zone getZone()
 	{
 		return _zone;
 	}
 	
+	/**
+	 * Method loadData.
+	 */
 	protected abstract void loadData();
 	
+	/**
+	 * Method changeOwner.
+	 * @param clan Clan
+	 */
 	public abstract void changeOwner(Clan clan);
 	
+	/**
+	 * Method getOwnDate.
+	 * @return Calendar
+	 */
 	public Calendar getOwnDate()
 	{
 		return _ownDate;
 	}
 	
+	/**
+	 * Method getSiegeDate.
+	 * @return Calendar
+	 */
 	public Calendar getSiegeDate()
 	{
 		return _siegeDate;
 	}
 	
+	/**
+	 * Method getLastSiegeDate.
+	 * @return Calendar
+	 */
 	public Calendar getLastSiegeDate()
 	{
 		return _lastSiegeDate;
 	}
 	
+	/**
+	 * Method addSkill.
+	 * @param skill Skill
+	 */
 	public void addSkill(Skill skill)
 	{
 		_skills.add(skill);
 	}
 	
+	/**
+	 * Method addFunction.
+	 * @param function ResidenceFunction
+	 */
 	public void addFunction(ResidenceFunction function)
 	{
 		_functions.add(function);
 	}
 	
+	/**
+	 * Method checkIfInZone.
+	 * @param loc Location
+	 * @param ref Reflection
+	 * @return boolean
+	 */
 	public boolean checkIfInZone(Location loc, Reflection ref)
 	{
 		return checkIfInZone(loc.x, loc.y, loc.z, ref);
 	}
 	
+	/**
+	 * Method checkIfInZone.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param ref Reflection
+	 * @return boolean
+	 */
 	public boolean checkIfInZone(int x, int y, int z, Reflection ref)
 	{
 		return (getZone() != null) && getZone().checkIfInZone(x, y, z, ref);
 	}
 	
+	/**
+	 * Method banishForeigner.
+	 */
 	public void banishForeigner()
 	{
 		for (Player player : _zone.getInsidePlayers())
@@ -196,6 +354,9 @@ public abstract class Residence implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method rewardSkills.
+	 */
 	public void rewardSkills()
 	{
 		Clan owner = getOwner();
@@ -209,6 +370,9 @@ public abstract class Residence implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method removeSkills.
+	 */
 	public void removeSkills()
 	{
 		Clan owner = getOwner();
@@ -221,6 +385,9 @@ public abstract class Residence implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method loadFunctions.
+	 */
 	protected void loadFunctions()
 	{
 		Connection con = null;
@@ -252,6 +419,11 @@ public abstract class Residence implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method isFunctionActive.
+	 * @param type int
+	 * @return boolean
+	 */
 	public boolean isFunctionActive(int type)
 	{
 		ResidenceFunction function = getFunction(type);
@@ -262,6 +434,11 @@ public abstract class Residence implements JdbcEntity
 		return false;
 	}
 	
+	/**
+	 * Method getFunction.
+	 * @param type int
+	 * @return ResidenceFunction
+	 */
 	public ResidenceFunction getFunction(int type)
 	{
 		for (int i = 0; i < _functions.size(); i++)
@@ -274,6 +451,12 @@ public abstract class Residence implements JdbcEntity
 		return null;
 	}
 	
+	/**
+	 * Method updateFunctions.
+	 * @param type int
+	 * @param level int
+	 * @return boolean
+	 */
 	public boolean updateFunctions(int type, int level)
 	{
 		Clan clan = getOwner();
@@ -351,6 +534,10 @@ public abstract class Residence implements JdbcEntity
 		return true;
 	}
 	
+	/**
+	 * Method removeFunction.
+	 * @param type int
+	 */
 	public void removeFunction(int type)
 	{
 		Connection con = null;
@@ -373,6 +560,10 @@ public abstract class Residence implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method startAutoTaskForFunction.
+	 * @param function ResidenceFunction
+	 */
 	void startAutoTaskForFunction(ResidenceFunction function)
 	{
 		if (getOwnerId() == 0)
@@ -408,15 +599,28 @@ public abstract class Residence implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class AutoTaskForFunctions extends RunnableImpl
 	{
+		/**
+		 * Field _function.
+		 */
 		ResidenceFunction _function;
 		
+		/**
+		 * Constructor for AutoTaskForFunctions.
+		 * @param function ResidenceFunction
+		 */
 		public AutoTaskForFunctions(ResidenceFunction function)
 		{
 			_function = function;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -424,30 +628,50 @@ public abstract class Residence implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method setJdbcState.
+	 * @param state JdbcEntityState
+	 * @see lineage2.commons.dao.JdbcEntity#setJdbcState(JdbcEntityState)
+	 */
 	@Override
 	public void setJdbcState(JdbcEntityState state)
 	{
 		_jdbcEntityState = state;
 	}
 	
+	/**
+	 * Method getJdbcState.
+	 * @return JdbcEntityState * @see lineage2.commons.dao.JdbcEntity#getJdbcState()
+	 */
 	@Override
 	public JdbcEntityState getJdbcState()
 	{
 		return _jdbcEntityState;
 	}
 	
+	/**
+	 * Method save.
+	 * @see lineage2.commons.dao.JdbcEntity#save()
+	 */
 	@Override
 	public void save()
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method delete.
+	 * @see lineage2.commons.dao.JdbcEntity#delete()
+	 */
 	@Override
 	public void delete()
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method cancelCycleTask.
+	 */
 	public void cancelCycleTask()
 	{
 		_cycle = 0;
@@ -461,6 +685,9 @@ public abstract class Residence implements JdbcEntity
 		setJdbcState(JdbcEntityState.UPDATED);
 	}
 	
+	/**
+	 * Method startCycleTask.
+	 */
 	public void startCycleTask()
 	{
 		if (_owner == null)
@@ -480,37 +707,64 @@ public abstract class Residence implements JdbcEntity
 		_cycleTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new ResidenceCycleTask(), diff, CYCLE_TIME);
 	}
 	
+	/**
+	 * Method chanceCycle.
+	 */
 	public void chanceCycle()
 	{
 		setCycle(getCycle() + 1);
 		setJdbcState(JdbcEntityState.UPDATED);
 	}
 	
+	/**
+	 * Method getSkills.
+	 * @return List<Skill>
+	 */
 	public List<Skill> getSkills()
 	{
 		return _skills;
 	}
 	
+	/**
+	 * Method addBanishPoint.
+	 * @param loc Location
+	 */
 	public void addBanishPoint(Location loc)
 	{
 		_banishPoints.add(loc);
 	}
 	
+	/**
+	 * Method addOwnerRestartPoint.
+	 * @param loc Location
+	 */
 	public void addOwnerRestartPoint(Location loc)
 	{
 		_ownerRestartPoints.add(loc);
 	}
 	
+	/**
+	 * Method addOtherRestartPoint.
+	 * @param loc Location
+	 */
 	public void addOtherRestartPoint(Location loc)
 	{
 		_otherRestartPoints.add(loc);
 	}
 	
+	/**
+	 * Method addChaosRestartPoint.
+	 * @param loc Location
+	 */
 	public void addChaosRestartPoint(Location loc)
 	{
 		_chaosRestartPoints.add(loc);
 	}
 	
+	/**
+	 * Method getBanishPoint.
+	 * @return Location
+	 */
 	public Location getBanishPoint()
 	{
 		if (_banishPoints.isEmpty())
@@ -520,6 +774,10 @@ public abstract class Residence implements JdbcEntity
 		return _banishPoints.get(Rnd.get(_banishPoints.size()));
 	}
 	
+	/**
+	 * Method getOwnerRestartPoint.
+	 * @return Location
+	 */
 	public Location getOwnerRestartPoint()
 	{
 		if (_ownerRestartPoints.isEmpty())
@@ -529,6 +787,10 @@ public abstract class Residence implements JdbcEntity
 		return _ownerRestartPoints.get(Rnd.get(_ownerRestartPoints.size()));
 	}
 	
+	/**
+	 * Method getOtherRestartPoint.
+	 * @return Location
+	 */
 	public Location getOtherRestartPoint()
 	{
 		if (_otherRestartPoints.isEmpty())
@@ -538,6 +800,10 @@ public abstract class Residence implements JdbcEntity
 		return _otherRestartPoints.get(Rnd.get(_otherRestartPoints.size()));
 	}
 	
+	/**
+	 * Method getChaosRestartPoint.
+	 * @return Location
+	 */
 	public Location getChaosRestartPoint()
 	{
 		if (_chaosRestartPoints.isEmpty())
@@ -547,16 +813,29 @@ public abstract class Residence implements JdbcEntity
 		return _chaosRestartPoints.get(Rnd.get(_chaosRestartPoints.size()));
 	}
 	
+	/**
+	 * Method getNotOwnerRestartPoint.
+	 * @param player Player
+	 * @return Location
+	 */
 	public Location getNotOwnerRestartPoint(Player player)
 	{
 		return player.getKarma() < 0 ? getChaosRestartPoint() : getOtherRestartPoint();
 	}
 	
+	/**
+	 * Method getCycle.
+	 * @return int
+	 */
 	public int getCycle()
 	{
 		return _cycle;
 	}
 	
+	/**
+	 * Method getCycleDelay.
+	 * @return long
+	 */
 	public long getCycleDelay()
 	{
 		if (_cycleTask == null)
@@ -566,26 +845,46 @@ public abstract class Residence implements JdbcEntity
 		return _cycleTask.getDelay(TimeUnit.SECONDS);
 	}
 	
+	/**
+	 * Method setCycle.
+	 * @param cycle int
+	 */
 	public void setCycle(int cycle)
 	{
 		_cycle = cycle;
 	}
 	
+	/**
+	 * Method getPaidCycle.
+	 * @return int
+	 */
 	public int getPaidCycle()
 	{
 		return _paidCycle;
 	}
 	
+	/**
+	 * Method setPaidCycle.
+	 * @param paidCycle int
+	 */
 	public void setPaidCycle(int paidCycle)
 	{
 		_paidCycle = paidCycle;
 	}
 	
+	/**
+	 * Method getRewardCount.
+	 * @return int
+	 */
 	public int getRewardCount()
 	{
 		return _rewardCount;
 	}
 	
+	/**
+	 * Method setRewardCount.
+	 * @param rewardCount int
+	 */
 	public void setRewardCount(int rewardCount)
 	{
 		_rewardCount = rewardCount;

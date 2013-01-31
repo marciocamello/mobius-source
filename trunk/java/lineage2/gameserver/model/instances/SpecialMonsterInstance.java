@@ -14,6 +14,10 @@ package lineage2.gameserver.model.instances;
 
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SpecialMonsterInstance extends MonsterInstance
 {
 	/**
@@ -21,11 +25,20 @@ public class SpecialMonsterInstance extends MonsterInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for SpecialMonsterInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SpecialMonsterInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method canChampion.
+	 * @return boolean
+	 */
 	@Override
 	public boolean canChampion()
 	{

@@ -32,15 +32,42 @@ import org.eclipse.jdt.internal.compiler.tool.EclipseFileManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Compiler
 {
+	/**
+	 * Field _log.
+	 */
 	static final Logger _log = LoggerFactory.getLogger(Compiler.class);
+	/**
+	 * Field javac.
+	 */
 	private static final JavaCompiler javac = new EclipseCompiler();
+	/**
+	 * Field listener.
+	 */
 	private final DiagnosticListener<JavaFileObject> listener = new DefaultDiagnosticListener();
+	/**
+	 * Field fileManager.
+	 */
 	private final StandardJavaFileManager fileManager = new EclipseFileManager(Locale.getDefault(), Charset.defaultCharset());
+	/**
+	 * Field memClassLoader.
+	 */
 	private final MemoryClassLoader memClassLoader = new MemoryClassLoader();
+	/**
+	 * Field memFileManager.
+	 */
 	private final MemoryJavaFileManager memFileManager = new MemoryJavaFileManager(fileManager, memClassLoader);
 	
+	/**
+	 * Method compile.
+	 * @param files File[]
+	 * @return boolean
+	 */
 	public boolean compile(File... files)
 	{
 		List<String> options = new ArrayList<>();
@@ -57,23 +84,43 @@ public class Compiler
 		return false;
 	}
 	
+	/**
+	 * Method compile.
+	 * @param files Collection<File>
+	 * @return boolean
+	 */
 	public boolean compile(Collection<File> files)
 	{
 		return compile(files.toArray(new File[files.size()]));
 	}
 	
+	/**
+	 * Method getClassLoader.
+	 * @return MemoryClassLoader
+	 */
 	public MemoryClassLoader getClassLoader()
 	{
 		return memClassLoader;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DefaultDiagnosticListener implements DiagnosticListener<JavaFileObject>
 	{
+		/**
+		 * Constructor for DefaultDiagnosticListener.
+		 */
 		public DefaultDiagnosticListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method report.
+		 * @param diagnostic Diagnostic<? extends JavaFileObject>
+		 * @see javax.tools.DiagnosticListener#report(Diagnostic<? extends JavaFileObject>)
+		 */
 		@Override
 		public void report(Diagnostic<? extends JavaFileObject> diagnostic)
 		{

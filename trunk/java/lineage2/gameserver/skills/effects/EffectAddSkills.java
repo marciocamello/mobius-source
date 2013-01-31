@@ -16,13 +16,25 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Skill.AddedSkill;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectAddSkills extends Effect
 {
+	/**
+	 * Constructor for EffectAddSkills.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectAddSkills(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -33,6 +45,9 @@ public class EffectAddSkills extends Effect
 		}
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -43,6 +58,10 @@ public class EffectAddSkills extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

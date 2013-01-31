@@ -15,6 +15,10 @@ package lineage2.gameserver.listener;
 import lineage2.commons.listener.Listener;
 import lineage2.gameserver.GameServer;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface GameListener extends Listener<GameServer>
 {
 }

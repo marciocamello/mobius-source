@@ -16,13 +16,25 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectHate extends Effect
 {
+	/**
+	 * Constructor for EffectHate.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectHate(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -33,12 +45,20 @@ public class EffectHate extends Effect
 		}
 	}
 	
+	/**
+	 * Method isHidden.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isHidden()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

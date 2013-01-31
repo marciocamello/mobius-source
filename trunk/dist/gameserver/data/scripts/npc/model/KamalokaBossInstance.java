@@ -24,27 +24,50 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KamalokaBossInstance extends LostCaptainInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	static final Logger _log = LoggerFactory.getLogger(KamalokaBossInstance.class);
+	/**
+	 * Field _manaRegen.
+	 */
 	private ScheduledFuture<?> _manaRegen;
 	
+	/**
+	 * Constructor for KamalokaBossInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public KamalokaBossInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		_manaRegen = ThreadPoolManager.getInstance().scheduleAtFixedRate(new ManaRegen(), 20000, 20000);
 	}
 	
+	/**
+	 * Method isRaid.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isRaid()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -56,13 +79,23 @@ public class KamalokaBossInstance extends LostCaptainInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ManaRegen implements Runnable
 	{
+		/**
+		 * Constructor for ManaRegen.
+		 */
 		public ManaRegen()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -93,6 +126,10 @@ public class KamalokaBossInstance extends LostCaptainInstance
 			}
 		}
 		
+		/**
+		 * Method getAddMp.
+		 * @return int
+		 */
 		private int getAddMp()
 		{
 			switch (getLevel())

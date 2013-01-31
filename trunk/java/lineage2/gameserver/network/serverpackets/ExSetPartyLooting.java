@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExSetPartyLooting extends L2GameServerPacket
 {
+	/**
+	 * Field _result.
+	 */
 	private final int _result;
+	/**
+	 * Field _mode.
+	 */
 	private final int _mode;
 	
+	/**
+	 * Constructor for ExSetPartyLooting.
+	 * @param result int
+	 * @param mode int
+	 */
 	public ExSetPartyLooting(int result, int mode)
 	{
 		_result = result;
 		_mode = mode;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

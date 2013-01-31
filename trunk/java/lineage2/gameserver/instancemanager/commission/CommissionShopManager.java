@@ -43,35 +43,75 @@ import lineage2.gameserver.utils.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CommissionShopManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CommissionShopManager.class);
+	/**
+	 * Field MIN_FEE. (value is 10000)
+	 */
 	private static final long MIN_FEE = 10000;
+	/**
+	 * Field REGISTRATION_FEE. (value is 0.01)
+	 */
 	private static final double REGISTRATION_FEE = 0.01;
+	/**
+	 * Field SALE_FEE. (value is 0.5)
+	 */
 	private static final double SALE_FEE = 0.5;
+	/**
+	 * Field container.
+	 */
 	private static final CommissionItemContainer container = new CommissionItemContainer();
+	/**
+	 * Field ourInstance.
+	 */
 	private static CommissionShopManager ourInstance = new CommissionShopManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return CommissionShopManager
+	 */
 	public static CommissionShopManager getInstance()
 	{
 		return ourInstance;
 	}
 	
+	/**
+	 * Constructor for CommissionShopManager.
+	 */
 	private CommissionShopManager()
 	{
 		restore();
 	}
 	
+	/**
+	 * Method getContainer.
+	 * @return CommissionItemContainer
+	 */
 	public CommissionItemContainer getContainer()
 	{
 		return container;
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	private void restore()
 	{
 		container.restore();
 	}
 	
+	/**
+	 * Method showRegistrableItems.
+	 * @param player Player
+	 */
 	public void showRegistrableItems(Player player)
 	{
 		ItemInstance[] items = player.getInventory().getItems();
@@ -86,11 +126,20 @@ public class CommissionShopManager
 		player.sendPacket(new ExResponseCommissionItemList(registrableItems));
 	}
 	
+	/**
+	 * Method showCommission.
+	 * @param player Player
+	 */
 	public void showCommission(Player player)
 	{
 		player.sendPacket(new ExShowCommission());
 	}
 	
+	/**
+	 * Method showCommissionInfo.
+	 * @param player Player
+	 * @param itemObjId int
+	 */
 	public void showCommissionInfo(Player player, int itemObjId)
 	{
 		ItemInstance item = player.getInventory().getItemByObjectId(itemObjId);
@@ -104,6 +153,10 @@ public class CommissionShopManager
 		}
 	}
 	
+	/**
+	 * Method showPlayerRegisteredItems.
+	 * @param player Player
+	 */
 	public void showPlayerRegisteredItems(Player player)
 	{
 		List<CommissionItemInfo> items = CommissionShopDAO.getInstance().getRegisteredItemsFor(player);
@@ -117,6 +170,15 @@ public class CommissionShopManager
 		}
 	}
 	
+	/**
+	 * Method registerItem.
+	 * @param player Player
+	 * @param objectId int
+	 * @param item_name String
+	 * @param price long
+	 * @param count long
+	 * @param sale_days int
+	 */
 	public void registerItem(Player player, int objectId, String item_name, long price, long count, int sale_days)
 	{
 		PcInventory inventory = player.getInventory();
@@ -161,6 +223,15 @@ public class CommissionShopManager
 		showPlayerRegisteredItems(player);
 	}
 	
+	/**
+	 * Method showItems.
+	 * @param listType int
+	 * @param category int
+	 * @param rareType int
+	 * @param grade int
+	 * @param searchName String
+	 * @param player Player
+	 */
 	public void showItems(int listType, int category, int rareType, int grade, String searchName, Player player)
 	{
 		Queue<List<CommissionItemInfo>> list = new ArrayDeque<>();
@@ -205,6 +276,12 @@ public class CommissionShopManager
 		}
 	}
 	
+	/**
+	 * Method showCommissionBuyInfo.
+	 * @param player Player
+	 * @param auctionId long
+	 * @param exItemType int
+	 */
 	public void showCommissionBuyInfo(Player player, long auctionId, int exItemType)
 	{
 		if ((exItemType < 0) || (exItemType > ExItemType.values().length))
@@ -218,6 +295,12 @@ public class CommissionShopManager
 		}
 	}
 	
+	/**
+	 * Method returnBuyItem.
+	 * @param player Player
+	 * @param auctionId long
+	 * @param exItemType int
+	 */
 	public void returnBuyItem(Player player, long auctionId, int exItemType)
 	{
 		CommissionItemInfo itemInfo = CommissionShopDAO.getInstance().getCommissionItemInfo(auctionId, ExItemType.values()[exItemType]);
@@ -256,6 +339,12 @@ public class CommissionShopManager
 		showPlayerRegisteredItems(player);
 	}
 	
+	/**
+	 * Method requestBuyItem.
+	 * @param player Player
+	 * @param auctionId long
+	 * @param exItemType int
+	 */
 	public void requestBuyItem(Player player, long auctionId, int exItemType)
 	{
 		CommissionItemInfo itemInfo = CommissionShopDAO.getInstance().getCommissionItemInfo(auctionId, ExItemType.values()[exItemType]);
@@ -337,6 +426,9 @@ public class CommissionShopManager
 		}
 	}
 	
+	/**
+	 * Method returnExpiredItems.
+	 */
 	public void returnExpiredItems()
 	{
 		container.writeLock();

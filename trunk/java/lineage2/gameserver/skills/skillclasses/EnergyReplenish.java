@@ -23,16 +23,36 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EnergyReplenish extends Skill
 {
+	/**
+	 * Field _addEnergy.
+	 */
 	private final int _addEnergy;
 	
+	/**
+	 * Constructor for EnergyReplenish.
+	 * @param set StatsSet
+	 */
 	public EnergyReplenish(StatsSet set)
 	{
 		super(set);
 		_addEnergy = set.getInteger("addEnergy");
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -54,6 +74,11 @@ public class EnergyReplenish extends Skill
 		return true;
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

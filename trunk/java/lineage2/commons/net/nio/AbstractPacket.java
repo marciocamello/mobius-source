@@ -14,9 +14,21 @@ package lineage2.commons.net.nio;
 
 import java.nio.ByteBuffer;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class AbstractPacket<T>
 {
+	/**
+	 * Method getByteBuffer.
+	 * @return ByteBuffer
+	 */
 	protected abstract ByteBuffer getByteBuffer();
 	
+	/**
+	 * Method getClient.
+	 * @return T
+	 */
 	public abstract T getClient();
 }

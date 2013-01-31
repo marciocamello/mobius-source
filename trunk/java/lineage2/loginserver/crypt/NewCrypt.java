@@ -14,11 +14,25 @@ package lineage2.loginserver.crypt;
 
 import java.io.IOException;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NewCrypt
 {
+	/**
+	 * Field _crypt.
+	 */
 	private final BlowfishEngine _crypt;
+	/**
+	 * Field _decrypt.
+	 */
 	private final BlowfishEngine _decrypt;
 	
+	/**
+	 * Constructor for NewCrypt.
+	 * @param blowfishKey byte[]
+	 */
 	public NewCrypt(byte[] blowfishKey)
 	{
 		_crypt = new BlowfishEngine();
@@ -27,16 +41,32 @@ public class NewCrypt
 		_decrypt.init(false, blowfishKey);
 	}
 	
+	/**
+	 * Constructor for NewCrypt.
+	 * @param key String
+	 */
 	public NewCrypt(String key)
 	{
 		this(key.getBytes());
 	}
 	
+	/**
+	 * Method verifyChecksum.
+	 * @param raw byte[]
+	 * @return boolean
+	 */
 	public static boolean verifyChecksum(byte[] raw)
 	{
 		return NewCrypt.verifyChecksum(raw, 0, raw.length);
 	}
 	
+	/**
+	 * Method verifyChecksum.
+	 * @param raw byte[]
+	 * @param offset int
+	 * @param size int
+	 * @return boolean
+	 */
 	public static boolean verifyChecksum(byte[] raw, final int offset, final int size)
 	{
 		if (((size & 3) != 0) || (size <= 4))
@@ -62,11 +92,21 @@ public class NewCrypt
 		return check == chksum;
 	}
 	
+	/**
+	 * Method appendChecksum.
+	 * @param raw byte[]
+	 */
 	public static void appendChecksum(byte[] raw)
 	{
 		NewCrypt.appendChecksum(raw, 0, raw.length);
 	}
 	
+	/**
+	 * Method appendChecksum.
+	 * @param raw byte[]
+	 * @param offset int
+	 * @param size int
+	 */
 	public static void appendChecksum(byte[] raw, final int offset, final int size)
 	{
 		long chksum = 0;
@@ -91,11 +131,23 @@ public class NewCrypt
 		raw[i + 3] = (byte) ((chksum >> 0x18) & 0xff);
 	}
 	
+	/**
+	 * Method encXORPass.
+	 * @param raw byte[]
+	 * @param key int
+	 */
 	public static void encXORPass(byte[] raw, int key)
 	{
 		NewCrypt.encXORPass(raw, 0, raw.length, key);
 	}
 	
+	/**
+	 * Method encXORPass.
+	 * @param raw byte[]
+	 * @param offset int
+	 * @param size int
+	 * @param key int
+	 */
 	public static void encXORPass(byte[] raw, final int offset, final int size, int key)
 	{
 		int stop = size - 8;
@@ -121,6 +173,11 @@ public class NewCrypt
 		raw[pos] = (byte) ((ecx >> 24) & 0xFF);
 	}
 	
+	/**
+	 * Method decrypt.
+	 * @param raw byte[]
+	 * @return byte[] * @throws IOException
+	 */
 	public byte[] decrypt(byte[] raw) throws IOException
 	{
 		byte[] result = new byte[raw.length];
@@ -132,6 +189,13 @@ public class NewCrypt
 		return result;
 	}
 	
+	/**
+	 * Method decrypt.
+	 * @param raw byte[]
+	 * @param offset int
+	 * @param size int
+	 * @throws IOException
+	 */
 	public void decrypt(byte[] raw, final int offset, final int size) throws IOException
 	{
 		byte[] result = new byte[size];
@@ -143,6 +207,11 @@ public class NewCrypt
 		System.arraycopy(result, 0, raw, offset, size);
 	}
 	
+	/**
+	 * Method crypt.
+	 * @param raw byte[]
+	 * @return byte[] * @throws IOException
+	 */
 	public byte[] crypt(byte[] raw) throws IOException
 	{
 		int count = raw.length / 8;
@@ -154,6 +223,13 @@ public class NewCrypt
 		return result;
 	}
 	
+	/**
+	 * Method crypt.
+	 * @param raw byte[]
+	 * @param offset int
+	 * @param size int
+	 * @throws IOException
+	 */
 	public void crypt(byte[] raw, final int offset, final int size) throws IOException
 	{
 		int count = size / 8;

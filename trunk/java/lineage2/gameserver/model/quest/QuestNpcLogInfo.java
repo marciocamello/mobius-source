@@ -12,12 +12,31 @@
  */
 package lineage2.gameserver.model.quest;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class QuestNpcLogInfo
 {
+	/**
+	 * Field _npcIds.
+	 */
 	private final int[] _npcIds;
+	/**
+	 * Field _varName.
+	 */
 	private final String _varName;
+	/**
+	 * Field _maxCount.
+	 */
 	private final int _maxCount;
 	
+	/**
+	 * Constructor for QuestNpcLogInfo.
+	 * @param npcIds int[]
+	 * @param varName String
+	 * @param maxCount int
+	 */
 	public QuestNpcLogInfo(int[] npcIds, String varName, int maxCount)
 	{
 		_npcIds = npcIds;
@@ -25,16 +44,28 @@ public class QuestNpcLogInfo
 		_maxCount = maxCount;
 	}
 	
+	/**
+	 * Method getNpcIds.
+	 * @return int[]
+	 */
 	public int[] getNpcIds()
 	{
 		return _npcIds;
 	}
 	
+	/**
+	 * Method getVarName.
+	 * @return String
+	 */
 	public String getVarName()
 	{
 		return _varName;
 	}
 	
+	/**
+	 * Method getMaxCount.
+	 * @return int
+	 */
 	public int getMaxCount()
 	{
 		return _maxCount;

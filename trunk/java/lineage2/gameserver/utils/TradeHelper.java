@@ -22,12 +22,25 @@ import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class TradeHelper
 {
+	/**
+	 * Constructor for TradeHelper.
+	 */
 	private TradeHelper()
 	{
 	}
 	
+	/**
+	 * Method checksIfCanOpenStore.
+	 * @param player Player
+	 * @param storeType int
+	 * @return boolean
+	 */
 	public static boolean checksIfCanOpenStore(Player player, int storeType)
 	{
 		if (!player.getPlayerAccess().UseTrade)
@@ -93,6 +106,12 @@ public final class TradeHelper
 		return true;
 	}
 	
+	/**
+	 * Method purchaseItem.
+	 * @param buyer Player
+	 * @param seller Player
+	 * @param item TradeItem
+	 */
 	public final static void purchaseItem(Player buyer, Player seller, TradeItem item)
 	{
 		long price = item.getCount() * item.getOwnersPrice();
@@ -116,6 +135,12 @@ public final class TradeHelper
 		}
 	}
 	
+	/**
+	 * Method getTax.
+	 * @param seller Player
+	 * @param price long
+	 * @return long
+	 */
 	public final static long getTax(Player seller, long price)
 	{
 		long tax = (long) ((price * Config.SERVICES_TRADE_TAX) / 100);
@@ -134,6 +159,10 @@ public final class TradeHelper
 		return tax;
 	}
 	
+	/**
+	 * Method cancelStore.
+	 * @param activeChar Player
+	 */
 	public static void cancelStore(Player activeChar)
 	{
 		activeChar.setPrivateStoreType(Player.STORE_PRIVATE_NONE);

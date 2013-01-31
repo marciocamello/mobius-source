@@ -16,16 +16,29 @@ import lineage2.gameserver.instancemanager.FindPartyManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestAcceptWaitingSubstitute extends L2GameClientPacket
 {
+	/**
+	 * Field willJoin.
+	 */
 	boolean willJoin;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		willJoin = readD() == 1;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

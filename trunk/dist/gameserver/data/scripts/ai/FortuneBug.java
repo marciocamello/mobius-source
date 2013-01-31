@@ -25,24 +25,65 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FortuneBug extends DefaultAI
 {
+	/**
+	 * Field MAX_RADIUS. (value is 500)
+	 */
 	private static final int MAX_RADIUS = 500;
+	/**
+	 * Field ItemName_A. (value is 57)
+	 */
 	private static final int ItemName_A = 57;
+	/**
+	 * Field ItemName_B_1. (value is 1881)
+	 */
 	private static final int ItemName_B_1 = 1881;
+	/**
+	 * Field ItemName_B_2. (value is 1890)
+	 */
 	private static final int ItemName_B_2 = 1890;
+	/**
+	 * Field ItemName_B_3. (value is 1880)
+	 */
 	private static final int ItemName_B_3 = 1880;
+	/**
+	 * Field ItemName_B_4. (value is 729)
+	 */
 	private static final int ItemName_B_4 = 729;
+	/**
+	 * Field s_display_bug_of_fortune1.
+	 */
 	private static final Skill s_display_bug_of_fortune1 = SkillTable.getInstance().getInfo(6045, 1);
+	/**
+	 * Field s_display_jackpot_firework.
+	 */
 	private static final Skill s_display_jackpot_firework = SkillTable.getInstance().getInfo(5778, 1);
+	/**
+	 * Field _nextEat.
+	 */
 	private long _nextEat;
+	/**
+	 * Field i_ai2. Field i_ai1. Field i_ai0.
+	 */
 	private int i_ai0, i_ai1, i_ai2;
 	
+	/**
+	 * Constructor for FortuneBug.
+	 * @param actor NpcInstance
+	 */
 	public FortuneBug(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -51,6 +92,9 @@ public class FortuneBug extends DefaultAI
 		i_ai0 = i_ai1 = i_ai2 = 0;
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
@@ -155,6 +199,10 @@ public class FortuneBug extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -181,6 +229,10 @@ public class FortuneBug extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -243,6 +295,12 @@ public class FortuneBug extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtTimer.
+	 * @param timerId int
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
@@ -282,11 +340,21 @@ public class FortuneBug extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

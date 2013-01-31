@@ -26,6 +26,10 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.WarehouseFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class NpcFriendInstance extends MerchantInstance
 {
 	/**
@@ -33,11 +37,21 @@ public final class NpcFriendInstance extends MerchantInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for NpcFriendInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public NpcFriendInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{
@@ -226,6 +240,11 @@ public final class NpcFriendInstance extends MerchantInstance
 		showChatWindow(player, filename);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

@@ -17,16 +17,46 @@ import gnu.trove.map.hash.TIntLongHashMap;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AntiFlood
 {
+	/**
+	 * Field _recentReceivers.
+	 */
 	private final TIntLongHashMap _recentReceivers = new TIntLongHashMap();
+	/**
+	 * Field _lastSent.
+	 */
 	private long _lastSent = 0L;
+	/**
+	 * Field _lastText.
+	 */
 	private String _lastText = StringUtils.EMPTY;
+	/**
+	 * Field _lastHeroTime.
+	 */
 	private long _lastHeroTime;
+	/**
+	 * Field _lastTradeTime.
+	 */
 	private long _lastTradeTime;
+	/**
+	 * Field _lastShoutTime.
+	 */
 	private long _lastShoutTime;
+	/**
+	 * Field _lastMailTime.
+	 */
 	private long _lastMailTime;
 	
+	/**
+	 * Method canTrade.
+	 * @param text String
+	 * @return boolean
+	 */
 	public boolean canTrade(String text)
 	{
 		long currentMillis = System.currentTimeMillis();
@@ -38,6 +68,11 @@ public class AntiFlood
 		return true;
 	}
 	
+	/**
+	 * Method canShout.
+	 * @param text String
+	 * @return boolean
+	 */
 	public boolean canShout(String text)
 	{
 		long currentMillis = System.currentTimeMillis();
@@ -49,6 +84,11 @@ public class AntiFlood
 		return true;
 	}
 	
+	/**
+	 * Method canHero.
+	 * @param text String
+	 * @return boolean
+	 */
 	public boolean canHero(String text)
 	{
 		long currentMillis = System.currentTimeMillis();
@@ -60,6 +100,10 @@ public class AntiFlood
 		return true;
 	}
 	
+	/**
+	 * Method canMail.
+	 * @return boolean
+	 */
 	public boolean canMail()
 	{
 		long currentMillis = System.currentTimeMillis();
@@ -71,6 +115,12 @@ public class AntiFlood
 		return true;
 	}
 	
+	/**
+	 * Method canTell.
+	 * @param charId int
+	 * @param text String
+	 * @return boolean
+	 */
 	public boolean canTell(int charId, String text)
 	{
 		long currentMillis = System.currentTimeMillis();

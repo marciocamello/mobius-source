@@ -22,13 +22,26 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.QuestEventType;
 import lineage2.gameserver.model.quest.QuestState;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AttackMobNotPlayerFighter extends Fighter
 {
+	/**
+	 * Constructor for AttackMobNotPlayerFighter.
+	 * @param actor NpcInstance
+	 */
 	public AttackMobNotPlayerFighter(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -52,6 +65,11 @@ public class AttackMobNotPlayerFighter extends Fighter
 		onEvtAggression(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param attacker Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{

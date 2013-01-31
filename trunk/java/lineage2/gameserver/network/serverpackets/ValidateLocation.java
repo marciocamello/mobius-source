@@ -15,17 +15,34 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ValidateLocation extends L2GameServerPacket
 {
+	/**
+	 * Field _chaObjId.
+	 */
 	private final int _chaObjId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for ValidateLocation.
+	 * @param cha Creature
+	 */
 	public ValidateLocation(Creature cha)
 	{
 		_chaObjId = cha.getObjectId();
 		_loc = cha.getLoc();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

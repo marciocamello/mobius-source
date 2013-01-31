@@ -20,16 +20,31 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import services.SupportMagic;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Newbie extends DefaultAI
 {
+	/**
+	 * Field lastebuff.
+	 */
 	private long lastebuff = 0;
 	
+	/**
+	 * Constructor for Newbie.
+	 * @param actor NpcInstance
+	 */
 	public Newbie(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ACTIVE_DELAY = 1000;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -46,6 +61,10 @@ public class Newbie extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{

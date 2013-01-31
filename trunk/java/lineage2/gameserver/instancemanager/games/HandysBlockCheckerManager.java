@@ -35,18 +35,43 @@ import lineage2.gameserver.network.serverpackets.ExCubeGameRemovePlayer;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class HandysBlockCheckerManager
 {
+	/**
+	 * Field _arenaPlayers.
+	 */
 	private static ArenaParticipantsHolder[] _arenaPlayers;
+	/**
+	 * Field _arenaVotes.
+	 */
 	private static TIntIntHashMap _arenaVotes = new TIntIntHashMap();
+	/**
+	 * Field _arenaStatus.
+	 */
 	private static Map<Integer, Boolean> _arenaStatus;
+	/**
+	 * Field _registrationPenalty.
+	 */
 	static List<Integer> _registrationPenalty = new ArrayList<>();
 	
+	/**
+	 * Method getArenaVotes.
+	 * @param arenaId int
+	 * @return int
+	 */
 	public synchronized int getArenaVotes(int arenaId)
 	{
 		return _arenaVotes.get(arenaId);
 	}
 	
+	/**
+	 * Method increaseArenaVotes.
+	 * @param arena int
+	 */
 	public synchronized void increaseArenaVotes(int arena)
 	{
 		int newVotes = _arenaVotes.get(arena) + 1;
@@ -70,11 +95,18 @@ public final class HandysBlockCheckerManager
 		}
 	}
 	
+	/**
+	 * Method clearArenaVotes.
+	 * @param arena int
+	 */
 	public synchronized void clearArenaVotes(int arena)
 	{
 		_arenaVotes.put(arena, 0);
 	}
 	
+	/**
+	 * Constructor for HandysBlockCheckerManager.
+	 */
 	HandysBlockCheckerManager()
 	{
 		if (_arenaStatus == null)
@@ -87,11 +119,19 @@ public final class HandysBlockCheckerManager
 		}
 	}
 	
+	/**
+	 * Method getHolder.
+	 * @param arena int
+	 * @return ArenaParticipantsHolder
+	 */
 	public ArenaParticipantsHolder getHolder(int arena)
 	{
 		return _arenaPlayers[arena];
 	}
 	
+	/**
+	 * Method startUpParticipantsQueue.
+	 */
 	public void startUpParticipantsQueue()
 	{
 		_arenaPlayers = new ArenaParticipantsHolder[4];
@@ -101,6 +141,12 @@ public final class HandysBlockCheckerManager
 		}
 	}
 	
+	/**
+	 * Method addPlayerToArena.
+	 * @param player Player
+	 * @param arenaId int
+	 * @return boolean
+	 */
 	public boolean addPlayerToArena(Player player, int arenaId)
 	{
 		ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
@@ -148,6 +194,12 @@ public final class HandysBlockCheckerManager
 		}
 	}
 	
+	/**
+	 * Method removePlayer.
+	 * @param player Player
+	 * @param arenaId int
+	 * @param team int
+	 */
 	public void removePlayer(Player player, int arenaId, int team)
 	{
 		ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
@@ -170,6 +222,12 @@ public final class HandysBlockCheckerManager
 		}
 	}
 	
+	/**
+	 * Method changePlayerToTeam.
+	 * @param player Player
+	 * @param arena int
+	 * @param team int
+	 */
 	public void changePlayerToTeam(Player player, int arena, int team)
 	{
 		ArenaParticipantsHolder holder = _arenaPlayers[arena];
@@ -200,11 +258,20 @@ public final class HandysBlockCheckerManager
 		}
 	}
 	
+	/**
+	 * Method clearPaticipantQueueByArenaId.
+	 * @param arenaId int
+	 */
 	public synchronized void clearPaticipantQueueByArenaId(int arenaId)
 	{
 		_arenaPlayers[arenaId].clearPlayers();
 	}
 	
+	/**
+	 * Method isRegistered.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public static boolean isRegistered(Player player)
 	{
 		for (int i = 0; i < 4; i++)
@@ -217,6 +284,11 @@ public final class HandysBlockCheckerManager
 		return false;
 	}
 	
+	/**
+	 * Method arenaIsBeingUsed.
+	 * @param arenaId int
+	 * @return boolean
+	 */
 	public boolean arenaIsBeingUsed(int arenaId)
 	{
 		if ((arenaId < 0) || (arenaId > 3))
@@ -226,33 +298,70 @@ public final class HandysBlockCheckerManager
 		return _arenaStatus.get(arenaId);
 	}
 	
+	/**
+	 * Method setArenaBeingUsed.
+	 * @param arenaId int
+	 */
 	public void setArenaBeingUsed(int arenaId)
 	{
 		_arenaStatus.put(arenaId, true);
 	}
 	
+	/**
+	 * Method setArenaFree.
+	 * @param arenaId int
+	 */
 	public void setArenaFree(int arenaId)
 	{
 		_arenaStatus.put(arenaId, false);
 	}
 	
+	/**
+	 * Method getInstance.
+	 * @return HandysBlockCheckerManager
+	 */
 	public static HandysBlockCheckerManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class SingletonHolder
 	{
+		/**
+		 * Field _instance.
+		 */
 		static HandysBlockCheckerManager _instance = new HandysBlockCheckerManager();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ArenaParticipantsHolder
 	{
+		/**
+		 * Field _arena.
+		 */
 		int _arena;
+		/**
+		 * Field _redPlayers.
+		 */
 		List<Player> _redPlayers;
+		/**
+		 * Field _bluePlayers.
+		 */
 		List<Player> _bluePlayers;
+		/**
+		 * Field _engine.
+		 */
 		BlockCheckerEngine _engine;
 		
+		/**
+		 * Constructor for ArenaParticipantsHolder.
+		 * @param arena int
+		 */
 		public ArenaParticipantsHolder(int arena)
 		{
 			_arena = arena;
@@ -261,16 +370,28 @@ public final class HandysBlockCheckerManager
 			_engine = new BlockCheckerEngine(this, _arena);
 		}
 		
+		/**
+		 * Method getRedPlayers.
+		 * @return List<Player>
+		 */
 		public List<Player> getRedPlayers()
 		{
 			return _redPlayers;
 		}
 		
+		/**
+		 * Method getBluePlayers.
+		 * @return List<Player>
+		 */
 		public List<Player> getBluePlayers()
 		{
 			return _bluePlayers;
 		}
 		
+		/**
+		 * Method getAllPlayers.
+		 * @return ArrayList<Player>
+		 */
 		public ArrayList<Player> getAllPlayers()
 		{
 			ArrayList<Player> all = new ArrayList<>(12);
@@ -279,6 +400,11 @@ public final class HandysBlockCheckerManager
 			return all;
 		}
 		
+		/**
+		 * Method addPlayer.
+		 * @param player Player
+		 * @param team int
+		 */
 		public void addPlayer(Player player, int team)
 		{
 			if (team == 0)
@@ -291,6 +417,11 @@ public final class HandysBlockCheckerManager
 			}
 		}
 		
+		/**
+		 * Method removePlayer.
+		 * @param player Player
+		 * @param team int
+		 */
 		public void removePlayer(Player player, int team)
 		{
 			if (team == 0)
@@ -303,6 +434,11 @@ public final class HandysBlockCheckerManager
 			}
 		}
 		
+		/**
+		 * Method getPlayerTeam.
+		 * @param player Player
+		 * @return int
+		 */
 		public int getPlayerTeam(Player player)
 		{
 			if (_redPlayers.contains(player))
@@ -319,16 +455,28 @@ public final class HandysBlockCheckerManager
 			}
 		}
 		
+		/**
+		 * Method getRedTeamSize.
+		 * @return int
+		 */
 		public int getRedTeamSize()
 		{
 			return _redPlayers.size();
 		}
 		
+		/**
+		 * Method getBlueTeamSize.
+		 * @return int
+		 */
 		public int getBlueTeamSize()
 		{
 			return _bluePlayers.size();
 		}
 		
+		/**
+		 * Method broadCastPacketToTeam.
+		 * @param packet L2GameServerPacket
+		 */
 		public void broadCastPacketToTeam(L2GameServerPacket packet)
 		{
 			ArrayList<Player> team = new ArrayList<>(12);
@@ -340,22 +488,35 @@ public final class HandysBlockCheckerManager
 			}
 		}
 		
+		/**
+		 * Method clearPlayers.
+		 */
 		public void clearPlayers()
 		{
 			_redPlayers.clear();
 			_bluePlayers.clear();
 		}
 		
+		/**
+		 * Method getEvent.
+		 * @return BlockCheckerEngine
+		 */
 		public BlockCheckerEngine getEvent()
 		{
 			return _engine;
 		}
 		
+		/**
+		 * Method updateEvent.
+		 */
 		public void updateEvent()
 		{
 			_engine.updatePlayersOnStart(this);
 		}
 		
+		/**
+		 * Method checkAndShuffle.
+		 */
 		void checkAndShuffle()
 		{
 			int redSize = _redPlayers.size();
@@ -391,20 +552,37 @@ public final class HandysBlockCheckerManager
 		}
 	}
 	
+	/**
+	 * Method schedulePenaltyRemoval.
+	 * @param objId int
+	 */
 	private void schedulePenaltyRemoval(int objId)
 	{
 		ThreadPoolManager.getInstance().schedule(new PenaltyRemove(objId), 10000);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class PenaltyRemove extends RunnableImpl
 	{
+		/**
+		 * Field objectId.
+		 */
 		Integer objectId;
 		
+		/**
+		 * Constructor for PenaltyRemove.
+		 * @param id Integer
+		 */
 		public PenaltyRemove(Integer id)
 		{
 			objectId = id;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

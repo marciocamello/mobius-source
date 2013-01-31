@@ -21,17 +21,30 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExGetBossRecord;
 import lineage2.gameserver.network.serverpackets.ExGetBossRecord.BossRecordInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestGetBossRecord extends L2GameClientPacket
 {
+	/**
+	 * Field _bossID.
+	 */
 	@SuppressWarnings("unused")
 	private int _bossID;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_bossID = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

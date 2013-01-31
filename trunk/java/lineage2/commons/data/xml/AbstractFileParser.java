@@ -15,17 +15,36 @@ package lineage2.commons.data.xml;
 import java.io.File;
 import java.io.FileInputStream;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class AbstractFileParser<H extends AbstractHolder> extends AbstractParser<H>
 {
+	/**
+	 * Constructor for AbstractFileParser.
+	 * @param holder H
+	 */
 	protected AbstractFileParser(H holder)
 	{
 		super(holder);
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	public abstract File getXMLFile();
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	public abstract String getDTDFileName();
 	
+	/**
+	 * Method parse.
+	 */
 	@Override
 	protected final void parse()
 	{

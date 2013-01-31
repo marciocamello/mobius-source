@@ -25,10 +25,23 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import quests._10365_SeekerEscort;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SeekerEscort extends DefaultAI
 {
+	/**
+	 * Field SAY_INTERVAL. (value is 3000)
+	 */
 	private static final int SAY_INTERVAL = 3000;
+	/**
+	 * Field SAY_RAFF. (value is 50000)
+	 */
 	private static final int SAY_RAFF = 50000;
+	/**
+	 * Field SMP_COORDS.
+	 */
 	private final static int[][] SMP_COORDS =
 	{
 		{
@@ -122,6 +135,9 @@ public class SeekerEscort extends DefaultAI
 			-2950
 		},
 	};
+	/**
+	 * Field SMP_COORDS2.
+	 */
 	private final static int[][] SMP_COORDS2 =
 	{
 		{
@@ -210,11 +226,27 @@ public class SeekerEscort extends DefaultAI
 			-3200
 		},
 	};
+	/**
+	 * Field currentState.
+	 */
 	private int currentState;
+	/**
+	 * Field lastSayTime.
+	 */
 	private long lastSayTime = 0;
+	/**
+	 * Field lastSayTimer.
+	 */
 	private long lastSayTimer = 0;
+	/**
+	 * Field currentState1.
+	 */
 	private int currentState1;
 	
+	/**
+	 * Constructor for SeekerEscort.
+	 * @param actor NpcInstance
+	 */
 	public SeekerEscort(NpcInstance actor)
 	{
 		super(actor);
@@ -224,6 +256,10 @@ public class SeekerEscort extends DefaultAI
 		currentState1 = 0;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -334,6 +370,10 @@ public class SeekerEscort extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

@@ -16,13 +16,25 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.skills.skillclasses.NegateStats;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectBlockStat extends Effect
 {
+	/**
+	 * Constructor for EffectBlockStat.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectBlockStat(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -30,6 +42,9 @@ public class EffectBlockStat extends Effect
 		_effected.addBlockStats(((NegateStats) _skill).getNegateStats());
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -37,6 +52,10 @@ public class EffectBlockStat extends Effect
 		_effected.removeBlockStats(((NegateStats) _skill).getNegateStats());
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

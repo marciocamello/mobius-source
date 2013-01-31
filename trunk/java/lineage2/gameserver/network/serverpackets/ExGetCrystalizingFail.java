@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExGetCrystalizingFail extends L2GameServerPacket
 {
+	/**
+	 * Field reason.
+	 */
 	private final int reason;
 	
+	/**
+	 * Constructor for ExGetCrystalizingFail.
+	 * @param id int
+	 */
 	public ExGetCrystalizingFail(int id)
 	{
 		reason = id;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

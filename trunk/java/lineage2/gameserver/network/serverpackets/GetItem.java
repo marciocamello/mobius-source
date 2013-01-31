@@ -15,11 +15,26 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GetItem extends L2GameServerPacket
 {
+	/**
+	 * Field _itemObjId. Field _playerId.
+	 */
 	private final int _playerId, _itemObjId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for GetItem.
+	 * @param item ItemInstance
+	 * @param playerId int
+	 */
 	public GetItem(ItemInstance item, int playerId)
 	{
 		_itemObjId = item.getObjectId();
@@ -27,6 +42,9 @@ public class GetItem extends L2GameServerPacket
 		_playerId = playerId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

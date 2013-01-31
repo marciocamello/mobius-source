@@ -15,22 +15,50 @@ package lineage2.gameserver.stats.conditions;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionPlayerRiding extends Condition
 {
+	/**
+	 * @author Mobius
+	 */
 	public enum CheckPlayerRiding
 	{
+		/**
+		 * Field NONE.
+		 */
 		NONE,
+		/**
+		 * Field STRIDER.
+		 */
 		STRIDER,
+		/**
+		 * Field WYVERN.
+		 */
 		WYVERN
 	}
 	
+	/**
+	 * Field _riding.
+	 */
 	private final CheckPlayerRiding _riding;
 	
+	/**
+	 * Constructor for ConditionPlayerRiding.
+	 * @param riding CheckPlayerRiding
+	 */
 	public ConditionPlayerRiding(CheckPlayerRiding riding)
 	{
 		_riding = riding;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

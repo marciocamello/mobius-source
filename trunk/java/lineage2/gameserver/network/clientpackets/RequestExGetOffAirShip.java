@@ -12,18 +12,37 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @Deprecated
 public class RequestExGetOffAirShip extends L2GameClientPacket
 {
+	/**
+	 * Field _x.
+	 */
 	@SuppressWarnings("unused")
 	private int _x;
+	/**
+	 * Field _y.
+	 */
 	@SuppressWarnings("unused")
 	private int _y;
+	/**
+	 * Field _z.
+	 */
 	@SuppressWarnings("unused")
 	private int _z;
+	/**
+	 * Field _id.
+	 */
 	@SuppressWarnings("unused")
 	private int _id;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -33,6 +52,9 @@ public class RequestExGetOffAirShip extends L2GameClientPacket
 		_id = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -15,11 +15,25 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExStopMoveInShuttlePacket extends L2GameServerPacket
 {
+	/**
+	 * Field _playerHeading. Field _shuttleId. Field _playerObjectId.
+	 */
 	private final int _playerObjectId, _shuttleId, _playerHeading;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for ExStopMoveInShuttlePacket.
+	 * @param cha Player
+	 */
 	public ExStopMoveInShuttlePacket(Player cha)
 	{
 		_playerObjectId = cha.getObjectId();
@@ -28,6 +42,9 @@ public class ExStopMoveInShuttlePacket extends L2GameServerPacket
 		_playerHeading = cha.getHeading();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

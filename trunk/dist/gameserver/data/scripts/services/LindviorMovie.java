@@ -22,10 +22,21 @@ import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LindviorMovie implements ScriptFile
 {
+	/**
+	 * Field movieDelay.
+	 */
 	private static long movieDelay = 3 * 60 * 60 * 1000L;
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -34,15 +45,28 @@ public class LindviorMovie implements ScriptFile
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new ShowLindviorMovie(zone), movieDelay, movieDelay);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ShowLindviorMovie extends RunnableImpl
 	{
+		/**
+		 * Field _zone.
+		 */
 		Zone _zone;
 		
+		/**
+		 * Constructor for ShowLindviorMovie.
+		 * @param zone Zone
+		 */
 		public ShowLindviorMovie(Zone zone)
 		{
 			_zone = zone;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -60,11 +84,19 @@ public class LindviorMovie implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

@@ -15,17 +15,30 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.HennaUnequipList;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestHennaUnequipList extends L2GameClientPacket
 {
+	/**
+	 * Field _symbolId.
+	 */
 	@SuppressWarnings("unused")
 	private int _symbolId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_symbolId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

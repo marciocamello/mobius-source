@@ -15,19 +15,41 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExBR_LectureMark extends L2GameClientPacket
 {
+	/**
+	 * Field INITIAL_MARK. (value is 1)
+	 */
 	public static final int INITIAL_MARK = 1;
+	/**
+	 * Field EVANGELIST_MARK. (value is 2)
+	 */
 	public static final int EVANGELIST_MARK = 2;
+	/**
+	 * Field OFF_MARK. (value is 3)
+	 */
 	public static final int OFF_MARK = 3;
+	/**
+	 * Field _mark.
+	 */
 	private int _mark;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_mark = readC();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

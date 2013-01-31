@@ -12,18 +12,34 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetitionVote extends L2GameClientPacket
 {
+	/**
+	 * Field _unk1. Field _type.
+	 */
 	@SuppressWarnings("unused")
 	private int _type, _unk1;
+	/**
+	 * Field _petitionText.
+	 */
 	@SuppressWarnings("unused")
 	private String _petitionText;
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
 	}
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{

@@ -23,20 +23,51 @@ import lineage2.gameserver.utils.ItemFunctions;
 import quests._694_BreakThroughTheHallOfSuffering;
 import quests._695_DefendtheHallofSuffering;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TepiosRewardInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field MARK_OF_KEUCEREUS_STAGE_1. (value is 13691)
+	 */
 	private static final int MARK_OF_KEUCEREUS_STAGE_1 = 13691;
+	/**
+	 * Field MARK_OF_KEUCEREUS_STAGE_2. (value is 13692)
+	 */
 	private static final int MARK_OF_KEUCEREUS_STAGE_2 = 13692;
+	/**
+	 * Field SOE. (value is 736)
+	 */
 	private static final int SOE = 736;
+	/**
+	 * Field SUPPLIES1. (value is 13777)
+	 */
 	private static final int SUPPLIES1 = 13777;
+	/**
+	 * Field SUPPLIES2. (value is 13778)
+	 */
 	private static final int SUPPLIES2 = 13778;
+	/**
+	 * Field SUPPLIES3. (value is 13779)
+	 */
 	private static final int SUPPLIES3 = 13779;
+	/**
+	 * Field SUPPLIES4. (value is 13780)
+	 */
 	private static final int SUPPLIES4 = 13780;
+	/**
+	 * Field SUPPLIES5. (value is 13781)
+	 */
 	private static final int SUPPLIES5 = 13781;
+	/**
+	 * Field SUPPLIES6_10.
+	 */
 	private static final int[] SUPPLIES6_10 =
 	{
 		13782,
@@ -45,13 +76,26 @@ public class TepiosRewardInstance extends NpcInstance
 		13785,
 		13786
 	};
+	/**
+	 * Field _gotReward.
+	 */
 	private boolean _gotReward = false;
 	
+	/**
+	 * Constructor for TepiosRewardInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public TepiosRewardInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -133,6 +177,13 @@ public class TepiosRewardInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{

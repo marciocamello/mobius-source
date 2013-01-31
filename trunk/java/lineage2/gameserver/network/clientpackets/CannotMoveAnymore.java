@@ -16,10 +16,20 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CannotMoveAnymore extends L2GameClientPacket
 {
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc = new Location();
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -29,6 +39,9 @@ public class CannotMoveAnymore extends L2GameClientPacket
 		_loc.h = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

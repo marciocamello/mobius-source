@@ -20,8 +20,15 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExpandInventory extends Functions
 {
+	/**
+	 * Method get.
+	 */
 	public void get()
 	{
 		Player player = getSelf();
@@ -31,7 +38,7 @@ public class ExpandInventory extends Functions
 		}
 		if (!Config.SERVICES_EXPAND_INVENTORY_ENABLED)
 		{
-			show("Сервис отключен.", player);
+			show("Серви�? откл�?чен.", player);
 			return;
 		}
 		if (player.getInventoryLimit() >= Config.SERVICES_EXPAND_INVENTORY_MAX)
@@ -53,6 +60,9 @@ public class ExpandInventory extends Functions
 		{
 			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 		}
+		/**
+		 * Method show.
+		 */
 		show();
 	}
 	
@@ -65,18 +75,18 @@ public class ExpandInventory extends Functions
 		}
 		if (!Config.SERVICES_EXPAND_INVENTORY_ENABLED)
 		{
-			show("Сервис отключен.", player);
+			show("Серви�? откл�?чен.", player);
 			return;
 		}
 		ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.SERVICES_EXPAND_INVENTORY_ITEM);
 		String out = "";
-		out += "<html><body>Расширение инвентаря";
+		out += "<html><body>Ра�?�?ирение инвентар�?";
 		out += "<br><br><table>";
 		out += "<tr><td>Текущий размер:</td><td>" + player.getInventoryLimit() + "</td></tr>";
-		out += "<tr><td>Максимальный размер:</td><td>" + Config.SERVICES_EXPAND_INVENTORY_MAX + "</td></tr>";
-		out += "<tr><td>Стоимость слота:</td><td>" + Config.SERVICES_EXPAND_INVENTORY_PRICE + " " + item.getName() + "</td></tr>";
+		out += "<tr><td>�?ак�?имал�?ный размер:</td><td>" + Config.SERVICES_EXPAND_INVENTORY_MAX + "</td></tr>";
+		out += "<tr><td>Стоимо�?т�? �?лота:</td><td>" + Config.SERVICES_EXPAND_INVENTORY_PRICE + " " + item.getName() + "</td></tr>";
 		out += "</table><br><br>";
-		out += "<button width=100 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" action=\"bypass -h scripts_services.ExpandInventory:get\" value=\"Расширить\">";
+		out += "<button width=100 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" action=\"bypass -h scripts_services.ExpandInventory:get\" value=\"Ра�?�?ирит�?\">";
 		out += "</body></html>";
 		show(out, player);
 	}

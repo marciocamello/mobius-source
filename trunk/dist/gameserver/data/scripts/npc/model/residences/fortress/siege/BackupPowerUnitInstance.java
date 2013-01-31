@@ -24,28 +24,72 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BackupPowerUnitInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field LIMIT. (value is 3)
+	 */
 	public static final int LIMIT = 3;
+	/**
+	 * Field COND_NO_ENTERED. (value is 0)
+	 */
 	public static final int COND_NO_ENTERED = 0;
+	/**
+	 * Field COND_ENTERED. (value is 1)
+	 */
 	public static final int COND_ENTERED = 1;
+	/**
+	 * Field COND_ALL_OK. (value is 2)
+	 */
 	public static final int COND_ALL_OK = 2;
+	/**
+	 * Field COND_FAIL. (value is 3)
+	 */
 	public static final int COND_FAIL = 3;
+	/**
+	 * Field COND_TIMEOUT. (value is 4)
+	 */
 	public static final int COND_TIMEOUT = 4;
+	/**
+	 * Field _generated.
+	 */
 	private final int[] _generated = new int[LIMIT];
+	/**
+	 * Field _index.
+	 */
 	private int _index;
+	/**
+	 * Field _tryCount.
+	 */
 	private int _tryCount;
+	/**
+	 * Field _invalidatePeriod.
+	 */
 	private long _invalidatePeriod;
 	
+	/**
+	 * Constructor for BackupPowerUnitInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public BackupPowerUnitInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -81,6 +125,9 @@ public class BackupPowerUnitInstance extends NpcInstance
 		showChatWindow(player, 0);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	public void onSpawn()
 	{
@@ -88,6 +135,12 @@ public class BackupPowerUnitInstance extends NpcInstance
 		generate();
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -122,6 +175,9 @@ public class BackupPowerUnitInstance extends NpcInstance
 		player.sendPacket(message);
 	}
 	
+	/**
+	 * Method generate.
+	 */
 	private void generate()
 	{
 		_invalidatePeriod = 0;
@@ -143,6 +199,10 @@ public class BackupPowerUnitInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getCond.
+	 * @return int
+	 */
 	private int getCond()
 	{
 		if (_invalidatePeriod > System.currentTimeMillis())
@@ -167,6 +227,10 @@ public class BackupPowerUnitInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getGenerated.
+	 * @return int[]
+	 */
 	public int[] getGenerated()
 	{
 		return _generated;

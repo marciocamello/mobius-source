@@ -25,8 +25,15 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class UnidentifiedEquipment extends SimpleItemHandler
 {
+	/**
+	 * Field rewards.
+	 */
 	private static TIntObjectHashMap<double[][]> rewards = new TIntObjectHashMap<>();
 	static
 	{
@@ -12587,6 +12594,13 @@ public class UnidentifiedEquipment extends SimpleItemHandler
 		});
 	}
 	
+	/**
+	 * Method useItemImpl.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
@@ -12613,12 +12627,30 @@ public class UnidentifiedEquipment extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class StartIdent extends RunnableImpl
 	{
+		/**
+		 * Field _player.
+		 */
 		private final Player _player;
+		/**
+		 * Field _rewards.
+		 */
 		private final double[][] _rewards;
+		/**
+		 * Field _itemId.
+		 */
 		private final int _itemId;
 		
+		/**
+		 * Constructor for StartIdent.
+		 * @param player Player
+		 * @param rewards double[][]
+		 * @param itemId int
+		 */
 		StartIdent(Player player, double[][] rewards, int itemId)
 		{
 			_player = player;
@@ -12626,6 +12658,9 @@ public class UnidentifiedEquipment extends SimpleItemHandler
 			_itemId = itemId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -12653,6 +12688,12 @@ public class UnidentifiedEquipment extends SimpleItemHandler
 		}
 	}
 	
+	/**
+	 * Method canBeExtracted.
+	 * @param itemId int
+	 * @param player Player
+	 * @return boolean
+	 */
 	public static boolean canBeExtracted(int itemId, Player player)
 	{
 		if (player == null)
@@ -12667,6 +12708,10 @@ public class UnidentifiedEquipment extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{

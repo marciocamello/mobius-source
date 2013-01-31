@@ -18,24 +18,77 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NpcInfoPoly extends L2GameServerPacket
 {
+	/**
+	 * Field _obj.
+	 */
 	private final Creature _obj;
+	/**
+	 * Field _heading. Field _z. Field _y. Field _x.
+	 */
 	private final int _x, _y, _z, _heading;
+	/**
+	 * Field _npcId.
+	 */
 	private final int _npcId;
+	/**
+	 * Field _isAlikeDead. Field _isInCombat. Field _isRunning. Field _isSummoned.
+	 */
 	private final boolean _isSummoned, _isRunning, _isInCombat, _isAlikeDead;
+	/**
+	 * Field _pAtkSpd. Field _mAtkSpd.
+	 */
 	private final int _mAtkSpd, _pAtkSpd;
+	/**
+	 * Field _swimWalkSpd. Field _swimRunSpd. Field _walkSpd. Field _runSpd.
+	 */
 	private final int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd;
+	/**
+	 * Field _flRunSpd.
+	 */
 	private int _flRunSpd;
+	/**
+	 * Field _flWalkSpd.
+	 */
 	private int _flWalkSpd;
+	/**
+	 * Field _flyRunSpd.
+	 */
 	private int _flyRunSpd;
+	/**
+	 * Field _flyWalkSpd.
+	 */
 	private int _flyWalkSpd;
+	/**
+	 * Field _lhand. Field _rhand.
+	 */
 	private int _rhand, _lhand;
+	/**
+	 * Field _title. Field _name.
+	 */
 	private final String _name, _title;
+	/**
+	 * Field colHeight. Field colRadius.
+	 */
 	private final double colRadius, colHeight;
+	/**
+	 * Field _team.
+	 */
 	private final TeamType _team;
+	/**
+	 * Field _abnormalEffect2. Field _abnormalEffect.
+	 */
 	private final int _abnormalEffect, _abnormalEffect2;
 	
+	/**
+	 * Constructor for NpcInfoPoly.
+	 * @param cha Player
+	 */
 	public NpcInfoPoly(Player cha)
 	{
 		_obj = cha;
@@ -68,6 +121,9 @@ public class NpcInfoPoly extends L2GameServerPacket
 		_team = cha.getTeam();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

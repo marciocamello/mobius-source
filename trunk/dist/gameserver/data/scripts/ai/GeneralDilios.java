@@ -20,10 +20,23 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GeneralDilios extends DefaultAI
 {
+	/**
+	 * Field GUARD_ID. (value is 32619)
+	 */
 	private static final int GUARD_ID = 32619;
+	/**
+	 * Field _wait_timeout.
+	 */
 	private long _wait_timeout = 0;
+	/**
+	 * Field diliosText.
+	 */
 	private static final String[] diliosText =
 	{
 		"Messenger, inform the patrons of the Keucereus Alliance Base! We're gathering brave adventurers to attack Tiat's Mounted Troop that's rooted in the Seed of Destruction.",
@@ -31,12 +44,20 @@ public class GeneralDilios extends DefaultAI
 		"Stabbing three times!"
 	};
 	
+	/**
+	 * Constructor for GeneralDilios.
+	 * @param actor NpcInstance
+	 */
 	public GeneralDilios(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ATTACK_DELAY = 10000;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	public boolean thinkActive()
 	{

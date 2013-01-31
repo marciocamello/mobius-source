@@ -22,15 +22,30 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AwakenedMucrokian extends Fighter
 {
+	/**
+	 * Field mob.
+	 */
 	private NpcInstance mob = null;
 	
+	/**
+	 * Constructor for AwakenedMucrokian.
+	 * @param actor NpcInstance
+	 */
 	public AwakenedMucrokian(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -66,6 +81,11 @@ public class AwakenedMucrokian extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

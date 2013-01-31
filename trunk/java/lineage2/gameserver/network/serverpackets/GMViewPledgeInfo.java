@@ -19,20 +19,61 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GMViewPledgeInfo extends L2GameServerPacket
 {
+	/**
+	 * Field char_name.
+	 */
 	private String char_name;
+	/**
+	 * Field clan_name.
+	 */
 	private final String clan_name;
+	/**
+	 * Field leader_name.
+	 */
 	private final String leader_name;
+	/**
+	 * Field ally_name.
+	 */
 	private String ally_name;
+	/**
+	 * Field clan_level. Field clan_crest_id. Field clan_id.
+	 */
 	private int clan_id, clan_crest_id, clan_level;
+	/**
+	 * Field rank.
+	 */
 	private final int rank;
+	/**
+	 * Field rep.
+	 */
 	private int rep;
+	/**
+	 * Field ally_id.
+	 */
 	private final int ally_id;
+	/**
+	 * Field ally_crest_id.
+	 */
 	private int ally_crest_id;
+	/**
+	 * Field atWar. Field hasFortress. Field hasHideout. Field hasCastle.
+	 */
 	private final int hasCastle, hasHideout, hasFortress, atWar;
+	/**
+	 * Field infos.
+	 */
 	private final List<PledgeMemberInfo> infos = new ArrayList<>();
 	
+	/**
+	 * Constructor for GMViewPledgeInfo.
+	 * @param activeChar Player
+	 */
 	public GMViewPledgeInfo(Player activeChar)
 	{
 		Clan clan = activeChar.getClan();
@@ -74,6 +115,9 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 		atWar = clan.isAtWar();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -111,11 +155,45 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 		infos.clear();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class PledgeMemberInfo
 	{
+		/**
+		 * Field _name.
+		 */
 		public String _name;
+		/**
+		 * Field sponsor.
+		 */
+		/**
+		 * Field race.
+		 */
+		/**
+		 * Field sex.
+		 */
+		/**
+		 * Field online.
+		 */
+		/**
+		 * Field class_id.
+		 */
+		/**
+		 * Field level.
+		 */
 		public int level, class_id, online, sex, race, sponsor;
 		
+		/**
+		 * Constructor for PledgeMemberInfo.
+		 * @param __name String
+		 * @param _level int
+		 * @param _class_id int
+		 * @param _online int
+		 * @param _sex int
+		 * @param _race int
+		 * @param _sponsor int
+		 */
 		public PledgeMemberInfo(String __name, int _level, int _class_id, int _online, int _sex, int _race, int _sponsor)
 		{
 			_name = __name;

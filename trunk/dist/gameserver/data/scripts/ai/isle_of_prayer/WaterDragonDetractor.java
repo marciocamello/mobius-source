@@ -18,16 +18,34 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WaterDragonDetractor extends Fighter
 {
+	/**
+	 * Field SPIRIT_OF_LAKE. (value is 9689)
+	 */
 	private static final int SPIRIT_OF_LAKE = 9689;
+	/**
+	 * Field BLUE_CRYSTAL. (value is 9595)
+	 */
 	private static final int BLUE_CRYSTAL = 9595;
 	
+	/**
+	 * Constructor for WaterDragonDetractor.
+	 * @param actor NpcInstance
+	 */
 	public WaterDragonDetractor(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

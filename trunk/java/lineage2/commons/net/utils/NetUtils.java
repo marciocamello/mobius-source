@@ -12,8 +12,15 @@
  */
 package lineage2.commons.net.utils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NetUtils
 {
+	/**
+	 * Field PRIVATE.
+	 */
 	private final static NetList PRIVATE = new NetList();
 	static
 	{
@@ -24,6 +31,11 @@ public class NetUtils
 		PRIVATE.add(Net.valueOf("169.254.0.0/16"));
 	}
 	
+	/**
+	 * Method isInternalIP.
+	 * @param address String
+	 * @return boolean
+	 */
 	public final static boolean isInternalIP(String address)
 	{
 		return PRIVATE.isInRange(address);

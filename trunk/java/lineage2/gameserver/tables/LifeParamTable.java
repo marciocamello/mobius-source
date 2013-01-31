@@ -29,13 +29,35 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LifeParamTable
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(LifeParamTable.class.getName());
+	/**
+	 * Field CLASSES_COUNT.
+	 */
 	private static final int CLASSES_COUNT = ClassId.VALUES.length;
+	/**
+	 * Field LEVEL_COUNTER.
+	 */
 	private static final int LEVEL_COUNTER = Experience.LEVEL.length;
+	/**
+	 * Field hpTable.
+	 */
 	private static final double[][] hpTable = new double[CLASSES_COUNT][LEVEL_COUNTER];
+	/**
+	 * Field mpTable.
+	 */
 	private static final double[][] mpTable = new double[CLASSES_COUNT][LEVEL_COUNTER];
+	/**
+	 * Field cpTable.
+	 */
 	private static final double[][] cpTable = new double[CLASSES_COUNT][LEVEL_COUNTER];
 	static
 	{
@@ -125,16 +147,31 @@ public class LifeParamTable
 		}
 	}
 	
+	/**
+	 * Method getHp.
+	 * @param player Player
+	 * @return double
+	 */
 	public static double getHp(final Player player)
 	{
 		return hpTable[player.getClassId().getId()][player.getLevel()];
 	}
 	
+	/**
+	 * Method getCp.
+	 * @param player Player
+	 * @return double
+	 */
 	public static double getCp(final Player player)
 	{
 		return cpTable[player.getClassId().getId()][player.getLevel()];
 	}
 	
+	/**
+	 * Method getMp.
+	 * @param player Player
+	 * @return double
+	 */
 	public static double getMp(final Player player)
 	{
 		return mpTable[player.getClassId().getId()][player.getLevel()];

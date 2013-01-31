@@ -22,12 +22,30 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.Warehouse.ItemClassComparator;
 import lineage2.gameserver.model.items.Warehouse.WarehouseType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WareHouseDepositList extends L2GameServerPacket
 {
+	/**
+	 * Field _whtype.
+	 */
 	private final int _whtype;
+	/**
+	 * Field _adena.
+	 */
 	private final long _adena;
+	/**
+	 * Field _itemList.
+	 */
 	private final List<ItemInfo> _itemList;
 	
+	/**
+	 * Constructor for WareHouseDepositList.
+	 * @param cha Player
+	 * @param whtype WarehouseType
+	 */
 	public WareHouseDepositList(Player cha, WarehouseType whtype)
 	{
 		_whtype = whtype.ordinal();
@@ -44,6 +62,9 @@ public class WareHouseDepositList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

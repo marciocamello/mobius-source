@@ -16,15 +16,29 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MatchCleric extends MatchFighter
 {
+	/**
+	 * Field HEAL.
+	 */
 	public static final Skill HEAL = SkillTable.getInstance().getInfo(4056, 6);
 	
+	/**
+	 * Constructor for MatchCleric.
+	 * @param actor NpcInstance
+	 */
 	public MatchCleric(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method heal.
+	 */
 	public void heal()
 	{
 		NpcInstance actor = getActor();

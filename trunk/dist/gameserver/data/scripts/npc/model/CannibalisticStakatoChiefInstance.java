@@ -21,23 +21,39 @@ import lineage2.gameserver.model.instances.RaidBossInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CannibalisticStakatoChiefInstance extends RaidBossInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field ITEMS.
+	 */
 	private static final int ITEMS[] =
 	{
 		14833,
 		14834
 	};
 	
+	/**
+	 * Constructor for CannibalisticStakatoChiefInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public CannibalisticStakatoChiefInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{

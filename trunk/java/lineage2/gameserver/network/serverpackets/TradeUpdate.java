@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.items.ItemInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TradeUpdate extends L2GameServerPacket
 {
+	/**
+	 * Field _item.
+	 */
 	private final ItemInfo _item;
+	/**
+	 * Field _amount.
+	 */
 	private final long _amount;
 	
+	/**
+	 * Constructor for TradeUpdate.
+	 * @param item ItemInfo
+	 * @param amount long
+	 */
 	public TradeUpdate(ItemInfo item, long amount)
 	{
 		_item = item;
 		_amount = amount;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

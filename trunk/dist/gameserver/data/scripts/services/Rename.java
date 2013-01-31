@@ -45,11 +45,21 @@ import lineage2.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Rename extends Functions
 {
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(Rename.class);
 	
+	/**
+	 * Method rename_page.
+	 */
 	public void rename_page()
 	{
 		Player player = getSelf();
@@ -68,6 +78,9 @@ public class Rename extends Functions
 		show(append, player);
 	}
 	
+	/**
+	 * Method changesex_page.
+	 */
 	public void changesex_page()
 	{
 		Player player = getSelf();
@@ -89,6 +102,9 @@ public class Rename extends Functions
 		show(append, player);
 	}
 	
+	/**
+	 * Method separate_page.
+	 */
 	public void separate_page()
 	{
 		Player player = getSelf();
@@ -132,6 +148,10 @@ public class Rename extends Functions
 		show(append, player);
 	}
 	
+	/**
+	 * Method separate.
+	 * @param param String[]
+	 */
 	public void separate(String[] param)
 	{
 		Player player = getSelf();
@@ -214,6 +234,9 @@ public class Rename extends Functions
 		player.logout();
 	}
 	
+	/**
+	 * Method changebase_page.
+	 */
 	public void changebase_page()
 	{
 		Player player = getSelf();
@@ -266,6 +289,10 @@ public class Rename extends Functions
 		show(append, player);
 	}
 	
+	/**
+	 * Method changebase.
+	 * @param param String[]
+	 */
 	public void changebase(String[] param)
 	{
 		Player player = getSelf();
@@ -316,6 +343,10 @@ public class Rename extends Functions
 		player.logout();
 	}
 	
+	/**
+	 * Method rename.
+	 * @param args String[]
+	 */
 	public void rename(String[] args)
 	{
 		Player player = getSelf();
@@ -368,6 +399,9 @@ public class Rename extends Functions
 		show(new CustomMessage("scripts.services.Rename.changedname", player).addString(oldName).addString(name), player);
 	}
 	
+	/**
+	 * Method changesex.
+	 */
 	public void changesex()
 	{
 		Player player = getSelf();
@@ -427,6 +461,9 @@ public class Rename extends Functions
 		}
 	}
 	
+	/**
+	 * Method rename_clan_page.
+	 */
 	public void rename_clan_page()
 	{
 		Player player = getSelf();
@@ -450,6 +487,10 @@ public class Rename extends Functions
 		show(append, player);
 	}
 	
+	/**
+	 * Method rename_clan.
+	 * @param param String[]
+	 */
 	public void rename_clan(String[] param)
 	{
 		Player player = getSelf();

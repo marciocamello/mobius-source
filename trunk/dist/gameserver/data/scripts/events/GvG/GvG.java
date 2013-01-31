@@ -44,34 +44,98 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GvG extends Functions implements ScriptFile
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(GvG.class);
+	/**
+	 * Field TEAM1_LOC.
+	 */
 	public static final Location TEAM1_LOC = new Location(139736, 145832, -15264);
+	/**
+	 * Field TEAM2_LOC.
+	 */
 	public static final Location TEAM2_LOC = new Location(139736, 139832, -15264);
+	/**
+	 * Field RETURN_LOC.
+	 */
 	public static final Location RETURN_LOC = new Location(43816, -48232, -822);
+	/**
+	 * Field everydayStartTime.
+	 */
 	public static final int[] everydayStartTime =
 	{
 		21,
 		30,
 		00
 	};
+	/**
+	 * Field _active.
+	 */
 	private static boolean _active = false;
+	/**
+	 * Field _isRegistrationActive.
+	 */
 	private static boolean _isRegistrationActive = false;
+	/**
+	 * Field _minLevel.
+	 */
 	private static int _minLevel = 80;
+	/**
+	 * Field _maxLevel.
+	 */
 	private static int _maxLevel = 99;
+	/**
+	 * Field _groupsLimit.
+	 */
 	private static int _groupsLimit = 100;
+	/**
+	 * Field _minPartyMembers.
+	 */
 	private static int _minPartyMembers = 6;
+	/**
+	 * Field regActiveTime.
+	 */
 	private static long regActiveTime = 10 * 60 * 1000L;
+	/**
+	 * Field _globalTask.
+	 */
 	private static ScheduledFuture<?> _globalTask;
+	/**
+	 * Field _regTask.
+	 */
 	private static ScheduledFuture<?> _regTask;
+	/**
+	 * Field _countdownTask1.
+	 */
 	private static ScheduledFuture<?> _countdownTask1;
+	/**
+	 * Field _countdownTask2.
+	 */
 	private static ScheduledFuture<?> _countdownTask2;
+	/**
+	 * Field _countdownTask3.
+	 */
 	private static ScheduledFuture<?> _countdownTask3;
+	/**
+	 * Field leaderList.
+	 */
 	private static List<HardReference<Player>> leaderList = new CopyOnWriteArrayList<>();
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class RegTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -79,22 +143,39 @@ public class GvG extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class Countdown extends RunnableImpl
 	{
+		/**
+		 * Field _timer.
+		 */
 		int _timer;
 		
+		/**
+		 * Constructor for Countdown.
+		 * @param timer int
+		 */
 		public Countdown(int timer)
 		{
 			_timer = timer;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
-			Announcements.getInstance().announceToAll("GvG: До конца приема заявок на турнир осталось " + Integer.toString(_timer) + " мин.");
+			Announcements.getInstance().announceToAll("GvG: До конца приема за�?вок на турнир о�?тало�?�? " + Integer.toString(_timer) + " мин.");
 		}
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -102,16 +183,27 @@ public class GvG extends Functions implements ScriptFile
 		initTimer();
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method initTimer.
+	 */
 	private static void initTimer()
 	{
 		long day = 24 * 60 * 60 * 1000L;
@@ -131,8 +223,13 @@ public class GvG extends Functions implements ScriptFile
 		_globalTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Launch(), delay, day);
 	}
 	
+	/**
+	 */
 	public static class Launch extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -140,6 +237,10 @@ public class GvG extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method canBeStarted.
+	 * @return boolean
+	 */
 	private static boolean canBeStarted()
 	{
 		for (Castle c : ResidenceHolder.getInstance().getResidenceList(Castle.class))
@@ -152,11 +253,18 @@ public class GvG extends Functions implements ScriptFile
 		return true;
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return _active;
 	}
 	
+	/**
+	 * Method activateEvent.
+	 */
 	public static void activateEvent()
 	{
 		if (!isActive() && canBeStarted())
@@ -173,13 +281,16 @@ public class GvG extends Functions implements ScriptFile
 			}
 			ServerVariables.set("GvG", "on");
 			_log.info("Event 'GvG' activated.");
-			Announcements.getInstance().announceToAll("Регистрация на GvG турнир началась! Community Board(Alt+B) -> Эвенты -> GvG (регистрация группы, описание)");
-			Announcements.getInstance().announceToAll("Заявки принимаются в течение " + (regActiveTime / 60000) + " минут");
+			Announcements.getInstance().announceToAll("Реги�?траци�? на GvG турнир начала�?�?! Community Board(Alt+B) -> Эвенты -> GvG (реги�?траци�? группы, опи�?ание)");
+			Announcements.getInstance().announceToAll("За�?вки принима�?т�?�? в течение " + (regActiveTime / 60000) + " минут");
 			_active = true;
 			_isRegistrationActive = true;
 		}
 	}
 	
+	/**
+	 * Method deactivateEvent.
+	 */
 	public static void deactivateEvent()
 	{
 		if (isActive())
@@ -194,6 +305,9 @@ public class GvG extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method showStats.
+	 */
 	public void showStats()
 	{
 		Player player = getSelf();
@@ -218,7 +332,7 @@ public class GvG extends Functions implements ScriptFile
 				{
 					continue;
 				}
-				string.append("*").append(leader.getName()).append("*").append(" | group members: ").append(leader.getParty().getMemberCount()).append("\n\n");
+				string.append('*').append(leader.getName()).append('*').append(" | group members: ").append(leader.getParty().getMemberCount()).append("\n\n");
 				i++;
 			}
 			show("There are " + i + " group leaders who registered for the event:\n\n" + string + "\n\n" + refresh + "\n\n" + start, player, null);
@@ -229,6 +343,9 @@ public class GvG extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method startNow.
+	 */
 	public void startNow()
 	{
 		Player player = getSelf();
@@ -244,6 +361,9 @@ public class GvG extends Functions implements ScriptFile
 		prepare();
 	}
 	
+	/**
+	 * Method addGroup.
+	 */
 	public void addGroup()
 	{
 		Player player = getSelf();
@@ -258,60 +378,63 @@ public class GvG extends Functions implements ScriptFile
 		}
 		if (leaderList.contains(player.getRef()))
 		{
-			player.sendMessage("Вы уже зарегистрировались на GvG турнир");
+			player.sendMessage("Вы уже зареги�?трировали�?�? на GvG турнир");
 			return;
 		}
 		if (!player.isInParty())
 		{
-			player.sendMessage("Вы не состоите в группе и не можете подать заявку");
+			player.sendMessage("Вы не �?о�?тоите в группе и не можете подат�? за�?вку");
 			return;
 		}
 		if (!player.getParty().isLeader(player))
 		{
-			player.sendMessage("Только лидер группы может подать заявку");
+			player.sendMessage("Тол�?ко лидер группы может подат�? за�?вку");
 			return;
 		}
 		if (player.getParty().isInCommandChannel())
 		{
-			player.sendMessage("Чтобы участвовать в турнире вы должны покинуть Командный Канал");
+			player.sendMessage("Чтобы уча�?твоват�? в турнире вы должны покинут�? �?омандный �?анал");
 			return;
 		}
 		if (leaderList.size() >= _groupsLimit)
 		{
-			player.sendMessage("Достигнут лимит количества групп для участия в турнире. Заявка отклонена");
+			player.sendMessage("До�?тигнут лимит количе�?тва групп дл�? уча�?ти�? в турнире. За�?вка отклонена");
 			return;
 		}
 		List<Player> party = player.getParty().getPartyMembers();
 		String[] abuseReason =
 		{
-			"не находится в игре",
-			"не находится в группе",
-			"состоит в неполной группе. Минимальное кол-во членов группы - 6.",
-			"не является лидером группы, подававшей заявку",
-			"не соответствует требованиям уровней для турнира",
-			"использует ездовое животное, что противоречит требованиям турнира",
-			"находится в дуэли, что противоречит требованиям турнира",
-			"принимает участие в другом эвенте, что противоречит требованиям турнира",
-			"находится в списке ожидания Олимпиады или принимает участие в ней",
-			"находится в состоянии телепортации, что противоречит требованиям турнира",
-			"находится в Dimensional Rift, что противоречит требованиям турнира",
-			"обладает Проклятым Оружием, что противоречит требованиям турнира",
-			"не находится в мирной зоне",
-			"находится в режиме обозревания",
+			"не находит�?�? в игре",
+			"не находит�?�? в группе",
+			"�?о�?тоит в неполной группе. �?инимал�?ное кол-во членов группы - 6.",
+			"не �?вл�?ет�?�? лидером группы, подавав�?ей за�?вку",
+			"не �?оответ�?твует требовани�?м уровней дл�? турнира",
+			"и�?пол�?зует ездовое животное, что противоречит требовани�?м турнира",
+			"находит�?�? в ду�?ли, что противоречит требовани�?м турнира",
+			"принимает уча�?тие в другом �?венте, что противоречит требовани�?м турнира",
+			"находит�?�? в �?пи�?ке ожидани�? �?лимпиады или принимает уча�?тие в ней",
+			"находит�?�? в �?о�?то�?ни�� телепортации, что противоречит требовани�?м турнира",
+			"находит�?�? в Dimensional Rift, что противоречит требовани�?м турнира",
+			"обладает �?рокл�?тым �?ружием, что противоречит требовани�?м турнира",
+			"не находит�?�? в мирной зоне",
+			"находит�?�? в режиме обозревани�?",
 		};
 		for (Player eachmember : party)
 		{
 			int abuseId = checkPlayer(eachmember, false);
 			if (abuseId != 0)
 			{
-				player.sendMessage("Игрок " + eachmember.getName() + " " + abuseReason[abuseId - 1]);
+				player.sendMessage("�?грок " + eachmember.getName() + " " + abuseReason[abuseId - 1]);
 				return;
 			}
 		}
 		leaderList.add(player.getRef());
-		player.getParty().broadcastMessageToPartyMembers("Ваша группа внесена в список ожидания. Пожалуйста, не регистрируйтесь в других ивентах и не участвуйте в дуэлях до начала турнира. Полный список требований турнира в Community Board (Alt+B)");
+		player.getParty().broadcastMessageToPartyMembers("Ва�?а группа вне�?ена в �?пи�?ок ожидани�?. �?ожалуй�?та, не реги�?трируйте�?�? в других ивентах и не уча�?твуйте в ду�?л�?х до начала турнира. �?олный �?пи�?ок требований турнира в Community Board (Alt+B)");
 	}
 	
+	/**
+	 * Method stopTimers.
+	 */
 	private static void stopTimers()
 	{
 		if (_regTask != null)
@@ -336,6 +459,9 @@ public class GvG extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method prepare.
+	 */
 	static void prepare()
 	{
 		checkPlayers();
@@ -350,13 +476,19 @@ public class GvG extends Functions implements ScriptFile
 		if (leaderList.size() < 2)
 		{
 			leaderList.clear();
-			Announcements.getInstance().announceToAll("GvG: Турнир отменен из-за недостатка участников");
+			Announcements.getInstance().announceToAll("GvG: Турнир отменен из-за недо�?татка уча�?тников");
 			return;
 		}
-		Announcements.getInstance().announceToAll("GvG: Прием заявок завершен. Запуск турнира.");
+		Announcements.getInstance().announceToAll("GvG: �?рием за�?вок завер�?ен. Запу�?к турнира.");
 		start();
 	}
 	
+	/**
+	 * Method checkPlayer.
+	 * @param player Player
+	 * @param doCheckLeadership boolean
+	 * @return int
+	 */
 	private static int checkPlayer(Player player, boolean doCheckLeadership)
 	{
 		if (!player.isOnline())
@@ -414,6 +546,9 @@ public class GvG extends Functions implements ScriptFile
 		return 0;
 	}
 	
+	/**
+	 * Method shuffleGroups.
+	 */
 	private static void shuffleGroups()
 	{
 		if ((leaderList.size() % 2) != 0)
@@ -422,7 +557,7 @@ public class GvG extends Functions implements ScriptFile
 			Player expelled = leaderList.remove(rndindex).get();
 			if (expelled != null)
 			{
-				expelled.sendMessage("При формировании списка участников турнира ваша группа была отсеяна. Приносим извинения, попробуйте в следующий раз.");
+				expelled.sendMessage("�?ри формировании �?пи�?ка уча�?тников турнира ва�?а группа была от�?е�?на. �?рино�?им извинени�?, ��опробуйте в �?леду�?щий раз.");
 			}
 		}
 		for (int i = 0; i < leaderList.size(); i++)
@@ -432,6 +567,9 @@ public class GvG extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method checkPlayers.
+	 */
 	private static void checkPlayers()
 	{
 		for (Player player : HardReferences.unwrap(leaderList))
@@ -445,7 +583,7 @@ public class GvG extends Functions implements ScriptFile
 			{
 				if (checkPlayer(partymember, false) != 0)
 				{
-					player.sendMessage("Ваша группа была дисквалифицирована и снята с участия в турнире так как один или более членов группы нарушил условия участия");
+					player.sendMessage("Ва�?а группа была ди�?квалифицирована и �?н�?та �? уча�?ти�? в турнире так как один или более членов группы нару�?ил у�?лови�? уча�?ти�?");
 					leaderList.remove(player.getRef());
 					break;
 				}
@@ -453,6 +591,10 @@ public class GvG extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method updateWinner.
+	 * @param winner Player
+	 */
 	public static void updateWinner(Player winner)
 	{
 		Connection con = null;
@@ -474,6 +616,9 @@ public class GvG extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method start.
+	 */
 	private static void start()
 	{
 		int instancedZoneId = 504;

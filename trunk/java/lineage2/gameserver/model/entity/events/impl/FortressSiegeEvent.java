@@ -39,15 +39,28 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.TimeUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 {
+	/**
+	 * @author Mobius
+	 */
 	private class EnvoyDespawn extends RunnableImpl
 	{
+		/**
+		 * Constructor for EnvoyDespawn.
+		 */
 		public EnvoyDespawn()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -55,13 +68,24 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class RestoreBarracksListener implements OnSpawnListener
 	{
+		/**
+		 * Constructor for RestoreBarracksListener.
+		 */
 		public RestoreBarracksListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onSpawn.
+		 * @param actor NpcInstance
+		 * @see lineage2.gameserver.listener.actor.npc.OnSpawnListener#onSpawn(NpcInstance)
+		 */
 		@Override
 		public void onSpawn(NpcInstance actor)
 		{
@@ -74,30 +98,92 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Field FLAG_POLE. (value is ""flag_pole"")
+	 */
 	public static final String FLAG_POLE = "flag_pole";
+	/**
+	 * Field COMBAT_FLAGS. (value is ""combat_flags"")
+	 */
 	public static final String COMBAT_FLAGS = "combat_flags";
+	/**
+	 * Field SIEGE_COMMANDERS. (value is ""siege_commanders"")
+	 */
 	public static final String SIEGE_COMMANDERS = "siege_commanders";
+	/**
+	 * Field PEACE_COMMANDERS. (value is ""peace_commanders"")
+	 */
 	public static final String PEACE_COMMANDERS = "peace_commanders";
+	/**
+	 * Field UPGRADEABLE_DOORS. (value is ""upgradeable_doors"")
+	 */
 	public static final String UPGRADEABLE_DOORS = "upgradeable_doors";
+	/**
+	 * Field COMMANDER_DOORS. (value is ""commander_doors"")
+	 */
 	public static final String COMMANDER_DOORS = "commander_doors";
+	/**
+	 * Field ENTER_DOORS. (value is ""enter_doors"")
+	 */
 	public static final String ENTER_DOORS = "enter_doors";
+	/**
+	 * Field MACHINE_DOORS. (value is ""machine_doors"")
+	 */
 	public static final String MACHINE_DOORS = "machine_doors";
+	/**
+	 * Field OUT_POWER_UNITS. (value is ""out_power_units"")
+	 */
 	public static final String OUT_POWER_UNITS = "out_power_units";
+	/**
+	 * Field IN_POWER_UNITS. (value is ""in_power_units"")
+	 */
 	public static final String IN_POWER_UNITS = "in_power_units";
+	/**
+	 * Field GUARDS_LIVE_WITH_C_CENTER. (value is ""guards_live_with_c_center"")
+	 */
 	public static final String GUARDS_LIVE_WITH_C_CENTER = "guards_live_with_c_center";
+	/**
+	 * Field ENVOY. (value is ""envoy"")
+	 */
 	public static final String ENVOY = "envoy";
+	/**
+	 * Field MERCENARY_POINTS. (value is ""mercenary_points"")
+	 */
 	public static final String MERCENARY_POINTS = "mercenary_points";
+	/**
+	 * Field MERCENARY. (value is ""mercenary"")
+	 */
 	public static final String MERCENARY = "mercenary";
+	/**
+	 * Field SIEGE_WAIT_PERIOD.
+	 */
 	public static final long SIEGE_WAIT_PERIOD = 4 * 60 * 60 * 1000L;
+	/**
+	 * Field RESTORE_BARRACKS_LISTENER.
+	 */
 	public static final OnSpawnListener RESTORE_BARRACKS_LISTENER = new RestoreBarracksListener();
+	/**
+	 * Field _envoyTask.
+	 */
 	private Future<?> _envoyTask;
+	/**
+	 * Field _barrackStatus.
+	 */
 	private boolean[] _barrackStatus;
 	
+	/**
+	 * Constructor for FortressSiegeEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public FortressSiegeEvent(MultiValueSet<String> set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method processStep.
+	 * @param newOwnerClan Clan
+	 */
 	@Override
 	public void processStep(Clan newOwnerClan)
 	{
@@ -112,6 +198,9 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method initEvent.
+	 */
 	@Override
 	public void initEvent()
 	{
@@ -132,6 +221,9 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -147,6 +239,10 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		super.startEvent();
 	}
 	
+	/**
+	 * Method stopEvent.
+	 * @param step boolean
+	 */
 	@Override
 	public void stopEvent(boolean step)
 	{
@@ -180,6 +276,10 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		super.stopEvent(step);
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onStart boolean
+	 */
 	@Override
 	public synchronized void reCalcNextTime(boolean onStart)
 	{
@@ -221,6 +321,10 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		getResidence().update();
 	}
 	
+	/**
+	 * Method announce.
+	 * @param val int
+	 */
 	@Override
 	public void announce(int val)
 	{
@@ -237,6 +341,9 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		broadcastTo(msg, ATTACKERS, DEFENDERS);
 	}
 	
+	/**
+	 * Method spawnEnvoy.
+	 */
 	public void spawnEnvoy()
 	{
 		long endTime = getResidence().getOwnDate().getTimeInMillis() + (60 * 60 * 1000L);
@@ -259,6 +366,9 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method despawnEnvoy.
+	 */
 	public void despawnEnvoy()
 	{
 		_envoyTask.cancel(false);
@@ -272,6 +382,10 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method flagPoleUpdate.
+	 * @param dis boolean
+	 */
 	public void flagPoleUpdate(boolean dis)
 	{
 		StaticObjectObject object = getFirstObject(FLAG_POLE);
@@ -281,11 +395,19 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method barrackAction.
+	 * @param id int
+	 * @param val boolean
+	 */
 	public synchronized void barrackAction(int id, boolean val)
 	{
 		_barrackStatus[id] = val;
 	}
 	
+	/**
+	 * Method checkBarracks.
+	 */
 	public synchronized void checkBarracks()
 	{
 		boolean allDead = true;
@@ -316,6 +438,9 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method spawnFlags.
+	 */
 	public void spawnFlags()
 	{
 		doorAction(FortressSiegeEvent.COMMANDER_DOORS, true);
@@ -329,6 +454,11 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		broadcastTo(SystemMsg.ALL_BARRACKS_ARE_OCCUPIED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 	}
 	
+	/**
+	 * Method ifVar.
+	 * @param name String
+	 * @return boolean
+	 */
 	@Override
 	public boolean ifVar(String name)
 	{
@@ -355,11 +485,22 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		return false;
 	}
 	
+	/**
+	 * Method getBarrackStatus.
+	 * @return boolean[]
+	 */
 	public boolean[] getBarrackStatus()
 	{
 		return _barrackStatus;
 	}
 	
+	/**
+	 * Method canRessurect.
+	 * @param resurrectPlayer Player
+	 * @param target Creature
+	 * @param force boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean canRessurect(Player resurrectPlayer, Creature target, boolean force)
 	{
@@ -402,6 +543,10 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		return false;
 	}
 	
+	/**
+	 * Method setRegistrationOver.
+	 * @param b boolean
+	 */
 	@Override
 	public void setRegistrationOver(boolean b)
 	{

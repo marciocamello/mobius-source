@@ -24,12 +24,31 @@ import lineage2.gameserver.model.items.Warehouse.ItemClassComparator;
 import lineage2.gameserver.model.items.Warehouse.WarehouseType;
 import lineage2.gameserver.templates.item.ItemTemplate.ItemClass;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WareHouseWithdrawList extends L2GameServerPacket
 {
+	/**
+	 * Field _adena.
+	 */
 	private long _adena;
+	/**
+	 * Field _itemList.
+	 */
 	private List<ItemInfo> _itemList = new ArrayList<>();
+	/**
+	 * Field _type.
+	 */
 	private int _type;
 	
+	/**
+	 * Constructor for WareHouseWithdrawList.
+	 * @param player Player
+	 * @param type WarehouseType
+	 * @param clss ItemClass
+	 */
 	public WareHouseWithdrawList(Player player, WarehouseType type, ItemClass clss)
 	{
 		_adena = player.getAdena();
@@ -59,6 +78,9 @@ public class WareHouseWithdrawList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

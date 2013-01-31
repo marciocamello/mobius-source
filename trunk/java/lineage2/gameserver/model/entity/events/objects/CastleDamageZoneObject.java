@@ -12,20 +12,36 @@
  */
 package lineage2.gameserver.model.entity.events.objects;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleDamageZoneObject extends ZoneObject
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _price.
+	 */
 	private final long _price;
 	
+	/**
+	 * Constructor for CastleDamageZoneObject.
+	 * @param name String
+	 * @param price long
+	 */
 	public CastleDamageZoneObject(String name, long price)
 	{
 		super(name);
 		_price = price;
 	}
 	
+	/**
+	 * Method getPrice.
+	 * @return long
+	 */
 	public long getPrice()
 	{
 		return _price;

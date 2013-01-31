@@ -23,16 +23,34 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 import quests._288_HandleWithCare;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SeerUgoros extends Mystic
 {
+	/**
+	 * Field _weeds.
+	 */
 	private int _weeds = 0;
+	/**
+	 * Field _skill.
+	 */
 	private static final Skill _skill = SkillTable.getInstance().getInfo(6426, 1);
 	
+	/**
+	 * Constructor for SeerUgoros.
+	 * @param actor NpcInstance
+	 */
 	public SeerUgoros(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -47,6 +65,9 @@ public class SeerUgoros extends Mystic
 		return true;
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
@@ -68,6 +89,10 @@ public class SeerUgoros extends Mystic
 		super.thinkAttack();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

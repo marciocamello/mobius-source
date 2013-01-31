@@ -20,28 +20,65 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EnchantingReward extends Functions implements ScriptFile
 {
+	/**
+	 * Field MASTER_YOGI_STAFF.
+	 */
 	private static int MASTER_YOGI_STAFF = 13539;
+	/**
+	 * Field MASTER_YOGI_SCROLL.
+	 */
 	private static int MASTER_YOGI_SCROLL = 13540;
+	/**
+	 * Field ADENA.
+	 */
 	private static int ADENA = 57;
+	/**
+	 * Field STAFF_PRICE.
+	 */
 	private static int STAFF_PRICE = 1000;
+	/**
+	 * Field TIMED_SCROLL_PRICE.
+	 */
 	private static int TIMED_SCROLL_PRICE = 6000;
+	/**
+	 * Field TIMED_SCROLL_HOURS.
+	 */
 	private static int TIMED_SCROLL_HOURS = 6;
+	/**
+	 * Field ONE_SCROLL_PRICE.
+	 */
 	private static int ONE_SCROLL_PRICE = 77777;
+	/**
+	 * Field TEN_SCROLLS_PRICE.
+	 */
 	private static int TEN_SCROLLS_PRICE = 777770;
+	/**
+	 * Field HAT_SHADOW.
+	 */
 	private static int[] HAT_SHADOW = new int[]
 	{
 		13074,
 		13075,
 		13076
 	};
+	/**
+	 * Field HAT_EVENT.
+	 */
 	private static int[] HAT_EVENT = new int[]
 	{
 		13518,
 		13519,
 		13522
 	};
+	/**
+	 * Field SOUL_CRYSTALL.
+	 */
 	private static int[] SOUL_CRYSTALL = new int[]
 	{
 		9570,
@@ -49,6 +86,9 @@ public class EnchantingReward extends Functions implements ScriptFile
 		9572
 	};
 	
+	/**
+	 * Method buy_staff.
+	 */
 	public void buy_staff()
 	{
 		Player player = getSelf();
@@ -64,6 +104,9 @@ public class EnchantingReward extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method buy_scroll_lim.
+	 */
 	public void buy_scroll_lim()
 	{
 		Player player = getSelf();
@@ -126,6 +169,9 @@ public class EnchantingReward extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method buy_scroll_1.
+	 */
 	public void buy_scroll_1()
 	{
 		Player player = getSelf();
@@ -141,6 +187,9 @@ public class EnchantingReward extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method buy_scroll_10.
+	 */
 	public void buy_scroll_10()
 	{
 		Player player = getSelf();
@@ -156,6 +205,9 @@ public class EnchantingReward extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method receive_reward.
+	 */
 	public void receive_reward()
 	{
 		Player player = getSelf();
@@ -253,16 +305,28 @@ public class EnchantingReward extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

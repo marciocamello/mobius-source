@@ -20,10 +20,21 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MapRegionManager extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static MapRegionManager _instance;
 	
+	/**
+	 * Method getInstance.
+	 * @return MapRegionManager
+	 */
 	public static MapRegionManager getInstance()
 	{
 		if (_instance == null)
@@ -33,22 +44,42 @@ public class MapRegionManager extends AbstractHolder
 		return _instance;
 	}
 	
+	/**
+	 * Field map.
+	 */
 	private final RegionData[][][] map = new RegionData[World.WORLD_SIZE_X][World.WORLD_SIZE_Y][0];
 	
+	/**
+	 * Constructor for MapRegionManager.
+	 */
 	private MapRegionManager()
 	{
 	}
 	
+	/**
+	 * Method regionX.
+	 * @param x int
+	 * @return int
+	 */
 	private int regionX(int x)
 	{
 		return ((x - World.MAP_MIN_X) >> 15);
 	}
 	
+	/**
+	 * Method regionY.
+	 * @param y int
+	 * @return int
+	 */
 	private int regionY(int y)
 	{
 		return ((y - World.MAP_MIN_Y) >> 15);
 	}
 	
+	/**
+	 * Method addRegionData.
+	 * @param rd RegionData
+	 */
 	public void addRegionData(RegionData rd)
 	{
 		for (int x = regionX(rd.getTerritory().getXmin()); x <= regionX(rd.getTerritory().getXmax()); x++)
@@ -60,16 +91,36 @@ public class MapRegionManager extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method getRegionData.
+	 * @param clazz Class<T>
+	 * @param o GameObject
+	 * @return T
+	 */
 	public <T extends RegionData> T getRegionData(Class<T> clazz, GameObject o)
 	{
 		return getRegionData(clazz, o.getX(), o.getY(), o.getZ());
 	}
 	
+	/**
+	 * Method getRegionData.
+	 * @param clazz Class<T>
+	 * @param loc Location
+	 * @return T
+	 */
 	public <T extends RegionData> T getRegionData(Class<T> clazz, Location loc)
 	{
 		return getRegionData(clazz, loc.getX(), loc.getY(), loc.getZ());
 	}
 	
+	/**
+	 * Method getRegionData.
+	 * @param clazz Class<T>
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return T
+	 */
 	@SuppressWarnings("unchecked")
 	public <T extends RegionData> T getRegionData(Class<T> clazz, int x, int y, int z)
 	{
@@ -87,12 +138,19 @@ public class MapRegionManager extends AbstractHolder
 		return null;
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return World.WORLD_SIZE_X * World.WORLD_SIZE_Y;
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

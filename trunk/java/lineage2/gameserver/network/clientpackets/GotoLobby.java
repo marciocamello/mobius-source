@@ -15,13 +15,23 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.network.serverpackets.CharacterSelectionInfo;
 import lineage2.gameserver.network.serverpackets.ExLoginVitalityEffectInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GotoLobby extends L2GameClientPacket
 {
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

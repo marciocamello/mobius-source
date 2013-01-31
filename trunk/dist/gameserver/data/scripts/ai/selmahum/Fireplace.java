@@ -19,16 +19,30 @@ import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.NpcUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Fireplace extends DefaultAI
 {
+	/**
+	 * Field delay.
+	 */
 	private static final long delay = 5 * 60 * 1000L;
 	
+	/**
+	 * Constructor for Fireplace.
+	 * @param actor NpcInstance
+	 */
 	public Fireplace(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -40,8 +54,14 @@ public class Fireplace extends DefaultAI
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Switch(), 10000L, delay);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class Switch extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -61,15 +81,28 @@ public class Fireplace extends DefaultAI
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class DeleteCauldron extends RunnableImpl
 	{
+		/**
+		 * Field _npc.
+		 */
 		NpcInstance _npc;
 		
+		/**
+		 * Constructor for DeleteCauldron.
+		 * @param npc NpcInstance
+		 */
 		public DeleteCauldron(NpcInstance npc)
 		{
 			_npc = npc;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -77,6 +110,10 @@ public class Fireplace extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{

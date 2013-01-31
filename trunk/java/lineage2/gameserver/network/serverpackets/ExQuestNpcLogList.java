@@ -19,11 +19,25 @@ import java.util.List;
 import lineage2.gameserver.model.quest.QuestNpcLogInfo;
 import lineage2.gameserver.model.quest.QuestState;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExQuestNpcLogList extends L2GameServerPacket
 {
+	/**
+	 * Field _questId.
+	 */
 	private int _questId;
+	/**
+	 * Field _logList.
+	 */
 	private List<int[]> _logList = Collections.emptyList();
 	
+	/**
+	 * Constructor for ExQuestNpcLogList.
+	 * @param state QuestState
+	 */
 	public ExQuestNpcLogList(QuestState state)
 	{
 		_questId = state.getQuest().getQuestIntId();
@@ -43,6 +57,9 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

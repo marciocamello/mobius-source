@@ -14,12 +14,30 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class L2Friend extends L2GameServerPacket
 {
+	/**
+	 * Field _online. Field _add.
+	 */
 	private final boolean _add, _online;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _object_id.
+	 */
 	private final int _object_id;
 	
+	/**
+	 * Constructor for L2Friend.
+	 * @param player Player
+	 * @param add boolean
+	 */
 	public L2Friend(Player player, boolean add)
 	{
 		_add = add;
@@ -28,6 +46,13 @@ public class L2Friend extends L2GameServerPacket
 		_online = true;
 	}
 	
+	/**
+	 * Constructor for L2Friend.
+	 * @param name String
+	 * @param add boolean
+	 * @param online boolean
+	 * @param object_id int
+	 */
 	public L2Friend(String name, boolean add, boolean online, int object_id)
 	{
 		_name = name;
@@ -36,6 +61,9 @@ public class L2Friend extends L2GameServerPacket
 		_online = online;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

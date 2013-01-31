@@ -28,12 +28,27 @@ import lineage2.gameserver.stats.funcs.Func;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StatFunctions
 {
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMultRegenResting extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMultRegenResting[] func = new FuncMultRegenResting[Stats.NUM_STATS];
 		
+		/**
+		 * Method getFunc.
+		 * @param stat Stats
+		 * @return Func
+		 */
 		static Func getFunc(Stats stat)
 		{
 			int pos = stat.ordinal();
@@ -44,12 +59,20 @@ public class StatFunctions
 			return func[pos];
 		}
 		
+		/**
+		 * Constructor for FuncMultRegenResting.
+		 * @param stat Stats
+		 */
 		private FuncMultRegenResting(Stats stat)
 		{
 			super(stat, 0x30, null);
 			setCondition(new ConditionPlayerState(CheckPlayerState.RESTING, true));
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -64,10 +87,21 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMultRegenStanding extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMultRegenStanding[] func = new FuncMultRegenStanding[Stats.NUM_STATS];
 		
+		/**
+		 * Method getFunc.
+		 * @param stat Stats
+		 * @return Func
+		 */
 		static Func getFunc(Stats stat)
 		{
 			int pos = stat.ordinal();
@@ -78,12 +112,20 @@ public class StatFunctions
 			return func[pos];
 		}
 		
+		/**
+		 * Constructor for FuncMultRegenStanding.
+		 * @param stat Stats
+		 */
 		private FuncMultRegenStanding(Stats stat)
 		{
 			super(stat, 0x30, null);
 			setCondition(new ConditionPlayerState(CheckPlayerState.STANDING, true));
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -91,10 +133,21 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMultRegenRunning extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMultRegenRunning[] func = new FuncMultRegenRunning[Stats.NUM_STATS];
 		
+		/**
+		 * Method getFunc.
+		 * @param stat Stats
+		 * @return Func
+		 */
 		static Func getFunc(Stats stat)
 		{
 			int pos = stat.ordinal();
@@ -105,12 +158,20 @@ public class StatFunctions
 			return func[pos];
 		}
 		
+		/**
+		 * Constructor for FuncMultRegenRunning.
+		 * @param stat Stats
+		 */
 		private FuncMultRegenRunning(Stats stat)
 		{
 			super(stat, 0x30, null);
 			setCondition(new ConditionPlayerState(CheckPlayerState.RUNNING, true));
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -118,15 +179,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncPAtkMul extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncPAtkMul func = new FuncPAtkMul();
 		
+		/**
+		 * Constructor for FuncPAtkMul.
+		 */
 		private FuncPAtkMul()
 		{
 			super(Stats.POWER_ATTACK, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -134,15 +208,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMAtkMul extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMAtkMul func = new FuncMAtkMul();
 		
+		/**
+		 * Constructor for FuncMAtkMul.
+		 */
 		private FuncMAtkMul()
 		{
 			super(Stats.MAGIC_ATTACK, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -152,15 +239,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncPDefMul extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncPDefMul func = new FuncPDefMul();
 		
+		/**
+		 * Constructor for FuncPDefMul.
+		 */
 		private FuncPDefMul()
 		{
 			super(Stats.POWER_DEFENCE, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -168,15 +268,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMDefMul extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMDefMul func = new FuncMDefMul();
 		
+		/**
+		 * Constructor for FuncMDefMul.
+		 */
 		private FuncMDefMul()
 		{
 			super(Stats.MAGIC_DEFENCE, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -184,15 +297,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncAttackRange extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncAttackRange func = new FuncAttackRange();
 		
+		/**
+		 * Constructor for FuncAttackRange.
+		 */
 		private FuncAttackRange()
 		{
 			super(Stats.POWER_ATTACK_RANGE, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -204,15 +330,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncAccuracyAdd extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncAccuracyAdd func = new FuncAccuracyAdd();
 		
+		/**
+		 * Constructor for FuncAccuracyAdd.
+		 */
 		private FuncAccuracyAdd()
 		{
 			super(Stats.ACCURACY_COMBAT, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -236,15 +375,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncEvasionAdd extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncEvasionAdd func = new FuncEvasionAdd();
 		
+		/**
+		 * Constructor for FuncEvasionAdd.
+		 */
 		private FuncEvasionAdd()
 		{
 			super(Stats.EVASION_RATE, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -260,15 +412,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMCriticalRateMul extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMCriticalRateMul func = new FuncMCriticalRateMul();
 		
+		/**
+		 * Constructor for FuncMCriticalRateMul.
+		 */
 		private FuncMCriticalRateMul()
 		{
 			super(Stats.MCRITICAL_RATE, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -276,15 +441,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncPCriticalRateMul extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncPCriticalRateMul func = new FuncPCriticalRateMul();
 		
+		/**
+		 * Constructor for FuncPCriticalRateMul.
+		 */
 		private FuncPCriticalRateMul()
 		{
 			super(Stats.CRITICAL_BASE, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -296,30 +474,56 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMoveSpeedMul extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMoveSpeedMul func = new FuncMoveSpeedMul();
 		
+		/**
+		 * Constructor for FuncMoveSpeedMul.
+		 */
 		private FuncMoveSpeedMul()
 		{
 			super(Stats.RUN_SPEED, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncPAtkSpeedMul extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncPAtkSpeedMul func = new FuncPAtkSpeedMul();
 		
+		/**
+		 * Constructor for FuncPAtkSpeedMul.
+		 */
 		private FuncPAtkSpeedMul()
 		{
 			super(Stats.POWER_ATTACK_SPEED, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -327,15 +531,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMAtkSpeedMul extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMAtkSpeedMul func = new FuncMAtkSpeedMul();
 		
+		/**
+		 * Constructor for FuncMAtkSpeedMul.
+		 */
 		private FuncMAtkSpeedMul()
 		{
 			super(Stats.MAGIC_ATTACK_SPEED, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -343,15 +560,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncHennaSTR extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncHennaSTR func = new FuncHennaSTR();
 		
+		/**
+		 * Constructor for FuncHennaSTR.
+		 */
 		private FuncHennaSTR()
 		{
 			super(Stats.STAT_STR, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -363,15 +593,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncHennaDEX extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncHennaDEX func = new FuncHennaDEX();
 		
+		/**
+		 * Constructor for FuncHennaDEX.
+		 */
 		private FuncHennaDEX()
 		{
 			super(Stats.STAT_DEX, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -383,15 +626,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncHennaINT extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncHennaINT func = new FuncHennaINT();
 		
+		/**
+		 * Constructor for FuncHennaINT.
+		 */
 		private FuncHennaINT()
 		{
 			super(Stats.STAT_INT, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -403,15 +659,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncHennaMEN extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncHennaMEN func = new FuncHennaMEN();
 		
+		/**
+		 * Constructor for FuncHennaMEN.
+		 */
 		private FuncHennaMEN()
 		{
 			super(Stats.STAT_MEN, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -423,15 +692,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncHennaCON extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncHennaCON func = new FuncHennaCON();
 		
+		/**
+		 * Constructor for FuncHennaCON.
+		 */
 		private FuncHennaCON()
 		{
 			super(Stats.STAT_CON, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -443,15 +725,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncHennaWIT extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncHennaWIT func = new FuncHennaWIT();
 		
+		/**
+		 * Constructor for FuncHennaWIT.
+		 */
 		private FuncHennaWIT()
 		{
 			super(Stats.STAT_WIT, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -463,15 +758,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMaxHpMul extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMaxHpMul func = new FuncMaxHpMul();
 		
+		/**
+		 * Constructor for FuncMaxHpMul.
+		 */
 		private FuncMaxHpMul()
 		{
 			super(Stats.MAX_HP, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -479,15 +787,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMaxCpMul extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMaxCpMul func = new FuncMaxCpMul();
 		
+		/**
+		 * Constructor for FuncMaxCpMul.
+		 */
 		private FuncMaxCpMul()
 		{
 			super(Stats.MAX_CP, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -495,15 +816,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMaxMpMul extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMaxMpMul func = new FuncMaxMpMul();
 		
+		/**
+		 * Constructor for FuncMaxMpMul.
+		 */
 		private FuncMaxMpMul()
 		{
 			super(Stats.MAX_MP, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -511,15 +845,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncPDamageResists extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncPDamageResists func = new FuncPDamageResists();
 		
+		/**
+		 * Constructor for FuncPDamageResists.
+		 */
 		private FuncPDamageResists()
 		{
 			super(Stats.PHYSICAL_DAMAGE, 0x30, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -541,15 +888,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMDamageResists extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMDamageResists func = new FuncMDamageResists();
 		
+		/**
+		 * Constructor for FuncMDamageResists.
+		 */
 		private FuncMDamageResists()
 		{
 			super(Stats.MAGIC_DAMAGE, 0x30, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -562,15 +922,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncInventory extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncInventory func = new FuncInventory();
 		
+		/**
+		 * Constructor for FuncInventory.
+		 */
 		private FuncInventory()
 		{
 			super(Stats.INVENTORY_LIMIT, 0x01, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -592,15 +965,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncWarehouse extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncWarehouse func = new FuncWarehouse();
 		
+		/**
+		 * Constructor for FuncWarehouse.
+		 */
 		private FuncWarehouse()
 		{
 			super(Stats.STORAGE_LIMIT, 0x01, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -617,15 +1003,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncTradeLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncTradeLimit func = new FuncTradeLimit();
 		
+		/**
+		 * Constructor for FuncTradeLimit.
+		 */
 		private FuncTradeLimit()
 		{
 			super(Stats.TRADE_LIMIT, 0x01, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -641,15 +1040,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncSDefInit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncSDefInit();
 		
+		/**
+		 * Constructor for FuncSDefInit.
+		 */
 		private FuncSDefInit()
 		{
 			super(Stats.SHIELD_RATE, 0x01, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -658,15 +1070,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncSDefAll extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncSDefAll func = new FuncSDefAll();
 		
+		/**
+		 * Constructor for FuncSDefAll.
+		 */
 		private FuncSDefAll()
 		{
 			super(Stats.SHIELD_RATE, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -696,15 +1121,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncSDefPlayers extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncSDefPlayers func = new FuncSDefPlayers();
 		
+		/**
+		 * Constructor for FuncSDefPlayers.
+		 */
 		private FuncSDefPlayers()
 		{
 			super(Stats.SHIELD_RATE, 0x20, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -722,15 +1160,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMaxHpLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncMaxHpLimit();
 		
+		/**
+		 * Constructor for FuncMaxHpLimit.
+		 */
 		private FuncMaxHpLimit()
 		{
 			super(Stats.MAX_HP, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -738,15 +1189,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMaxMpLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncMaxMpLimit();
 		
+		/**
+		 * Constructor for FuncMaxMpLimit.
+		 */
 		private FuncMaxMpLimit()
 		{
 			super(Stats.MAX_MP, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -754,15 +1218,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMaxCpLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncMaxCpLimit();
 		
+		/**
+		 * Constructor for FuncMaxCpLimit.
+		 */
 		private FuncMaxCpLimit()
 		{
 			super(Stats.MAX_CP, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -770,15 +1247,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncRunSpdLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncRunSpdLimit();
 		
+		/**
+		 * Constructor for FuncRunSpdLimit.
+		 */
 		private FuncRunSpdLimit()
 		{
 			super(Stats.RUN_SPEED, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -793,15 +1283,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncPDefLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncPDefLimit();
 		
+		/**
+		 * Constructor for FuncPDefLimit.
+		 */
 		private FuncPDefLimit()
 		{
 			super(Stats.POWER_DEFENCE, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -809,15 +1312,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMDefLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncMDefLimit();
 		
+		/**
+		 * Constructor for FuncMDefLimit.
+		 */
 		private FuncMDefLimit()
 		{
 			super(Stats.MAGIC_DEFENCE, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -825,15 +1341,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncPAtkLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncPAtkLimit();
 		
+		/**
+		 * Constructor for FuncPAtkLimit.
+		 */
 		private FuncPAtkLimit()
 		{
 			super(Stats.POWER_ATTACK, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -841,15 +1370,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMAtkLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncMAtkLimit();
 		
+		/**
+		 * Constructor for FuncMAtkLimit.
+		 */
 		private FuncMAtkLimit()
 		{
 			super(Stats.MAGIC_ATTACK, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -857,15 +1399,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncPAtkSpdLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncPAtkSpdLimit();
 		
+		/**
+		 * Constructor for FuncPAtkSpdLimit.
+		 */
 		private FuncPAtkSpdLimit()
 		{
 			super(Stats.POWER_ATTACK_SPEED, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -873,15 +1428,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMAtkSpdLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncMAtkSpdLimit();
 		
+		/**
+		 * Constructor for FuncMAtkSpdLimit.
+		 */
 		private FuncMAtkSpdLimit()
 		{
 			super(Stats.MAGIC_ATTACK_SPEED, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -889,15 +1457,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncCAtkLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncCAtkLimit();
 		
+		/**
+		 * Constructor for FuncCAtkLimit.
+		 */
 		private FuncCAtkLimit()
 		{
 			super(Stats.CRITICAL_DAMAGE, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -905,15 +1486,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncEvasionLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncEvasionLimit();
 		
+		/**
+		 * Constructor for FuncEvasionLimit.
+		 */
 		private FuncEvasionLimit()
 		{
 			super(Stats.EVASION_RATE, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -921,15 +1515,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncAccuracyLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncAccuracyLimit();
 		
+		/**
+		 * Constructor for FuncAccuracyLimit.
+		 */
 		private FuncAccuracyLimit()
 		{
 			super(Stats.ACCURACY_COMBAT, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -937,15 +1544,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncCritLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncCritLimit();
 		
+		/**
+		 * Constructor for FuncCritLimit.
+		 */
 		private FuncCritLimit()
 		{
 			super(Stats.CRITICAL_BASE, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -953,15 +1573,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMCritLimit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func func = new FuncMCritLimit();
 		
+		/**
+		 * Constructor for FuncMCritLimit.
+		 */
 		private FuncMCritLimit()
 		{
 			super(Stats.MCRITICAL_RATE, 0x100, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -969,8 +1602,14 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncAttributeAttackInit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func[] func = new FuncAttributeAttackInit[Element.VALUES.length];
 		static
 		{
@@ -980,19 +1619,35 @@ public class StatFunctions
 			}
 		}
 		
+		/**
+		 * Method getFunc.
+		 * @param element Element
+		 * @return Func
+		 */
 		static Func getFunc(Element element)
 		{
 			return func[element.getId()];
 		}
 		
+		/**
+		 * Field element.
+		 */
 		private final Element element;
 		
+		/**
+		 * Constructor for FuncAttributeAttackInit.
+		 * @param element Element
+		 */
 		private FuncAttributeAttackInit(Element element)
 		{
 			super(element.getAttack(), 0x01, null);
 			this.element = element;
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -1000,8 +1655,14 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncAttributeDefenceInit extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func[] func = new FuncAttributeDefenceInit[Element.VALUES.length];
 		static
 		{
@@ -1011,19 +1672,35 @@ public class StatFunctions
 			}
 		}
 		
+		/**
+		 * Method getFunc.
+		 * @param element Element
+		 * @return Func
+		 */
 		static Func getFunc(Element element)
 		{
 			return func[element.getId()];
 		}
 		
+		/**
+		 * Field element.
+		 */
 		private final Element element;
 		
+		/**
+		 * Constructor for FuncAttributeDefenceInit.
+		 * @param element Element
+		 */
 		private FuncAttributeDefenceInit(Element element)
 		{
 			super(element.getDefence(), 0x01, null);
 			this.element = element;
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -1031,8 +1708,14 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncAttributeAttackSet extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func[] func = new FuncAttributeAttackSet[Element.VALUES.length];
 		static
 		{
@@ -1042,16 +1725,29 @@ public class StatFunctions
 			}
 		}
 		
+		/**
+		 * Method getFunc.
+		 * @param element Element
+		 * @return Func
+		 */
 		static Func getFunc(Element element)
 		{
 			return func[element.getId()];
 		}
 		
+		/**
+		 * Constructor for FuncAttributeAttackSet.
+		 * @param stat Stats
+		 */
 		private FuncAttributeAttackSet(Stats stat)
 		{
 			super(stat, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -1062,8 +1758,14 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncAttributeDefenceSet extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final Func[] func = new FuncAttributeDefenceSet[Element.VALUES.length];
 		static
 		{
@@ -1073,16 +1775,29 @@ public class StatFunctions
 			}
 		}
 		
+		/**
+		 * Method getFunc.
+		 * @param element Element
+		 * @return Func
+		 */
 		static Func getFunc(Element element)
 		{
 			return func[element.getId()];
 		}
 		
+		/**
+		 * Constructor for FuncAttributeDefenceSet.
+		 * @param stat Stats
+		 */
 		private FuncAttributeDefenceSet(Stats stat)
 		{
 			super(stat, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -1093,6 +1808,10 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * Method addPredefinedFuncs.
+	 * @param cha Creature
+	 */
 	public static void addPredefinedFuncs(Creature cha)
 	{
 		if (cha.isPlayer())
@@ -1192,15 +1911,28 @@ public class StatFunctions
 		cha.addStatFunc(FuncAttributeDefenceInit.getFunc(Element.UNHOLY));
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMAccuracyAdd extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMAccuracyAdd func = new FuncMAccuracyAdd();
 		
+		/**
+		 * Constructor for FuncMAccuracyAdd.
+		 */
 		private FuncMAccuracyAdd()
 		{
 			super(Stats.MACCURACY_COMBAT, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -1224,15 +1956,28 @@ public class StatFunctions
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class FuncMEvasionAdd extends Func
 	{
+		/**
+		 * Field func.
+		 */
 		static final FuncMEvasionAdd func = new FuncMEvasionAdd();
 		
+		/**
+		 * Constructor for FuncMEvasionAdd.
+		 */
 		private FuncMEvasionAdd()
 		{
 			super(Stats.MEVASION_RATE, 0x10, null);
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{

@@ -22,32 +22,59 @@ import lineage2.gameserver.templates.SoulCrystal;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class SoulCrystalParser extends AbstractFileParser<SoulCrystalHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final SoulCrystalParser _instance = new SoulCrystalParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return SoulCrystalParser
+	 */
 	public static SoulCrystalParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for SoulCrystalParser.
+	 */
 	private SoulCrystalParser()
 	{
 		super(SoulCrystalHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/other/soul_crystals.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "soul_crystals.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

@@ -15,15 +15,29 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.CharSelectionInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExLoginVitalityEffectInfo extends L2GameServerPacket
 {
+	/**
+	 * Field charInfo.
+	 */
 	private final CharSelectionInfo charInfo;
 	
+	/**
+	 * Constructor for ExLoginVitalityEffectInfo.
+	 * @param charInfo CharSelectionInfo
+	 */
 	public ExLoginVitalityEffectInfo(CharSelectionInfo charInfo)
 	{
 		this.charInfo = charInfo;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

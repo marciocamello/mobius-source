@@ -27,17 +27,40 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.taskmanager.EffectTaskManager;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SymbolInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _owner.
+	 */
 	final Creature _owner;
+	/**
+	 * Field _skill.
+	 */
 	final Skill _skill;
+	/**
+	 * Field _targetTask.
+	 */
 	private ScheduledFuture<?> _targetTask;
+	/**
+	 * Field _destroyTask.
+	 */
 	private ScheduledFuture<?> _destroyTask;
 	
+	/**
+	 * Constructor for SymbolInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param owner Creature
+	 * @param skill Skill
+	 */
 	public SymbolInstance(int objectId, NpcTemplate template, Creature owner, Skill skill)
 	{
 		super(objectId, template);
@@ -48,11 +71,18 @@ public class SymbolInstance extends NpcInstance
 		setTitle(owner.getName());
 	}
 	
+	/**
+	 * Method getOwner.
+	 * @return Creature
+	 */
 	public Creature getOwner()
 	{
 		return _owner;
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -89,6 +119,9 @@ public class SymbolInstance extends NpcInstance
 		}, 1000L, Rnd.get(4000L, 7000L));
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
@@ -105,6 +138,11 @@ public class SymbolInstance extends NpcInstance
 		super.onDelete();
 	}
 	
+	/**
+	 * Method getPAtk.
+	 * @param target Creature
+	 * @return int
+	 */
 	@Override
 	public int getPAtk(Creature target)
 	{
@@ -112,6 +150,12 @@ public class SymbolInstance extends NpcInstance
 		return owner == null ? 0 : owner.getPAtk(target);
 	}
 	
+	/**
+	 * Method getMAtk.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return int
+	 */
 	@Override
 	public int getMAtk(Creature target, Skill skill)
 	{
@@ -119,69 +163,125 @@ public class SymbolInstance extends NpcInstance
 		return owner == null ? 0 : owner.getMAtk(target, skill);
 	}
 	
+	/**
+	 * Method hasRandomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	public boolean hasRandomAnimation()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature attacker)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isFearImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isFearImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isParalyzeImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParalyzeImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isLethalImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isLethalImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param filename String
+	 * @param replace Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, String filename, Object... replace)
 	{
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{
 		player.sendActionFailed();
 	}
 	
+	/**
+	 * Method getClan.
+	 * @return Clan
+	 */
 	@Override
 	public Clan getClan()
 	{

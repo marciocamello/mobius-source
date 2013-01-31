@@ -27,13 +27,29 @@ import lineage2.gameserver.network.serverpackets.TradeOwnAdd;
 import lineage2.gameserver.network.serverpackets.TradeUpdate;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AddTradeItem extends L2GameClientPacket
 {
+	/**
+	 * Field _tradeId.
+	 */
 	@SuppressWarnings("unused")
 	private int _tradeId;
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
+	/**
+	 * Field _amount.
+	 */
 	private long _amount;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -42,6 +58,9 @@ public class AddTradeItem extends L2GameClientPacket
 		_amount = readQ();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

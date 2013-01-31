@@ -14,12 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Summon;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExPartyPetWindowUpdate extends L2GameServerPacket
 {
+	/**
+	 * Field level. Field maxMp. Field curMp. Field maxHp. Field curHp. Field _type. Field npc_id. Field owner_obj_id.
+	 */
 	private final int owner_obj_id, npc_id, _type, curHp, maxHp, curMp, maxMp, level;
+	/**
+	 * Field obj_id.
+	 */
 	private int obj_id = 0;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
 	
+	/**
+	 * Constructor for ExPartyPetWindowUpdate.
+	 * @param summon Summon
+	 */
 	public ExPartyPetWindowUpdate(Summon summon)
 	{
 		obj_id = summon.getObjectId();
@@ -34,6 +51,9 @@ public class ExPartyPetWindowUpdate extends L2GameServerPacket
 		level = summon.getLevel();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -18,26 +18,56 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import lineage2.gameserver.model.quest.Quest;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class QuestManager
 {
+	/**
+	 * Field _questsByName.
+	 */
 	private static Map<String, Quest> _questsByName = new ConcurrentHashMap<>();
+	/**
+	 * Field _questsById.
+	 */
 	private static Map<Integer, Quest> _questsById = new ConcurrentHashMap<>();
 	
+	/**
+	 * Method getQuest.
+	 * @param name String
+	 * @return Quest
+	 */
 	public static Quest getQuest(String name)
 	{
 		return _questsByName.get(name);
 	}
 	
+	/**
+	 * Method getQuest.
+	 * @param quest Class<?>
+	 * @return Quest
+	 */
 	public static Quest getQuest(Class<?> quest)
 	{
 		return getQuest(quest.getSimpleName());
 	}
 	
+	/**
+	 * Method getQuest.
+	 * @param questId int
+	 * @return Quest
+	 */
 	public static Quest getQuest(int questId)
 	{
 		return _questsById.get(questId);
 	}
 	
+	/**
+	 * Method getQuest2.
+	 * @param nameOrId String
+	 * @return Quest
+	 */
 	public static Quest getQuest2(String nameOrId)
 	{
 		if (_questsByName.containsKey(nameOrId))
@@ -55,12 +85,20 @@ public class QuestManager
 		}
 	}
 	
+	/**
+	 * Method addQuest.
+	 * @param newQuest Quest
+	 */
 	public static void addQuest(Quest newQuest)
 	{
 		_questsByName.put(newQuest.getName(), newQuest);
 		_questsById.put(newQuest.getQuestIntId(), newQuest);
 	}
 	
+	/**
+	 * Method getQuests.
+	 * @return Collection<Quest>
+	 */
 	public static Collection<Quest> getQuests()
 	{
 		return _questsByName.values();

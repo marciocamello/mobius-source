@@ -16,15 +16,32 @@ import java.util.Comparator;
 
 import lineage2.gameserver.model.Effect;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectsComparator implements Comparator<Effect>
 {
+	/**
+	 * Field instance.
+	 */
 	private static final EffectsComparator instance = new EffectsComparator();
 	
+	/**
+	 * Method getInstance.
+	 * @return EffectsComparator
+	 */
 	public static final EffectsComparator getInstance()
 	{
 		return instance;
 	}
 	
+	/**
+	 * Method compare.
+	 * @param e1 Effect
+	 * @param e2 Effect
+	 * @return int
+	 */
 	@Override
 	public int compare(Effect e1, Effect e2)
 	{
@@ -87,6 +104,12 @@ public class EffectsComparator implements Comparator<Effect>
 		return compareStartTime(e1, e2);
 	}
 	
+	/**
+	 * Method compareStartTime.
+	 * @param o1 Effect
+	 * @param o2 Effect
+	 * @return int
+	 */
 	private int compareStartTime(Effect o1, Effect o2)
 	{
 		if (o1.getStartTime() > o2.getStartTime())

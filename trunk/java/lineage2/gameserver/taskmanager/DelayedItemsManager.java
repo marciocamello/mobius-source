@@ -33,13 +33,33 @@ import lineage2.gameserver.utils.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DelayedItemsManager extends RunnableImpl
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(DelayedItemsManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static DelayedItemsManager _instance;
+	/**
+	 * Field _lock.
+	 */
 	private static final Object _lock = new Object();
+	/**
+	 * Field last_payment_id.
+	 */
 	private int last_payment_id = 0;
 	
+	/**
+	 * Method getInstance.
+	 * @return DelayedItemsManager
+	 */
 	public static DelayedItemsManager getInstance()
 	{
 		if (_instance == null)
@@ -49,6 +69,9 @@ public class DelayedItemsManager extends RunnableImpl
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for DelayedItemsManager.
+	 */
 	public DelayedItemsManager()
 	{
 		Connection con = null;
@@ -68,6 +91,11 @@ public class DelayedItemsManager extends RunnableImpl
 		ThreadPoolManager.getInstance().schedule(this, 10000L);
 	}
 	
+	/**
+	 * Method get_last_payment_id.
+	 * @param con Connection
+	 * @return int
+	 */
 	private int get_last_payment_id(Connection con)
 	{
 		PreparedStatement st = null;
@@ -93,6 +121,9 @@ public class DelayedItemsManager extends RunnableImpl
 		return result;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{
@@ -133,6 +164,12 @@ public class DelayedItemsManager extends RunnableImpl
 		ThreadPoolManager.getInstance().schedule(this, 10000L);
 	}
 	
+	/**
+	 * Method loadDelayed.
+	 * @param player Player
+	 * @param notify boolean
+	 * @return int
+	 */
 	public int loadDelayed(Player player, boolean notify)
 	{
 		if (player == null)

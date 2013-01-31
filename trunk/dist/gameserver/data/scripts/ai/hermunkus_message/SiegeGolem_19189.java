@@ -31,24 +31,53 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SiegeGolem_19189 extends DefaultAI
 {
+	/**
+	 * Field SKILL_ID. (value is 16024)
+	 */
 	private static final int SKILL_ID = 16024;
+	/**
+	 * Field ATTACK_IDS.
+	 */
 	private static final int[] ATTACK_IDS =
 	{
 		19172,
 		19217
 	};
+	/**
+	 * Field MOVE_LOC.
+	 */
 	private static final Location[] MOVE_LOC =
 	{
 		new Location(116560, -179440, -1144),
 		new Location(116608, -179205, -1176)
 	};
+	/**
+	 * Field lastCastTime.
+	 */
 	private long lastCastTime = 0;
+	/**
+	 * Field diedTeredor.
+	 */
 	private int diedTeredor = 0;
+	/**
+	 * Field currentPoint.
+	 */
 	private int currentPoint = -1;
+	/**
+	 * Field loc.
+	 */
 	private Location loc;
 	
+	/**
+	 * Constructor for SiegeGolem_19189.
+	 * @param actor NpcInstance
+	 */
 	public SiegeGolem_19189(NpcInstance actor)
 	{
 		super(actor);
@@ -56,6 +85,9 @@ public class SiegeGolem_19189 extends DefaultAI
 		AI_TASK_ACTIVE_DELAY = 250;
 	}
 	
+	/**
+	 * Method onEvtThink.
+	 */
 	@Override
 	protected void onEvtThink()
 	{
@@ -79,6 +111,10 @@ public class SiegeGolem_19189 extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -135,6 +171,11 @@ public class SiegeGolem_19189 extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method onEvtFinishCasting.
+	 * @param skill_id int
+	 * @param success boolean
+	 */
 	@Override
 	protected void onEvtFinishCasting(int skill_id, boolean success)
 	{
@@ -144,6 +185,12 @@ public class SiegeGolem_19189 extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtScriptEvent.
+	 * @param event String
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
@@ -154,30 +201,53 @@ public class SiegeGolem_19189 extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method canAttackCharacter.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean canAttackCharacter(Creature target)
 	{
 		return ArrayUtils.contains(ATTACK_IDS, target.getNpcId());
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{
 		return ArrayUtils.contains(ATTACK_IDS, target.getNpcId());
 	}
 	
+	/**
+	 * Method returnHome.
+	 * @param clearAggro boolean
+	 * @param teleport boolean
+	 */
 	@Override
 	protected void returnHome(boolean clearAggro, boolean teleport)
 	{
 		changeIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
 	}
 	
+	/**
+	 * Method maybeMoveToHome.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean maybeMoveToHome()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getMaxAttackTimeout.
+	 * @return int
+	 */
 	@Override
 	public int getMaxAttackTimeout()
 	{

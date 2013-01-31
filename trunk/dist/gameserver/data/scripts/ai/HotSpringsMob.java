@@ -22,19 +22,35 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HotSpringsMob extends Mystic
 {
+	/**
+	 * Field DeBuffs.
+	 */
 	private static final int DeBuffs[] =
 	{
 		4554,
 		4552
 	};
 	
+	/**
+	 * Constructor for HotSpringsMob.
+	 * @param actor NpcInstance
+	 */
 	public HotSpringsMob(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

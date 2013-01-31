@@ -32,38 +32,70 @@ import lineage2.gameserver.utils.Location;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ZoneParser extends AbstractDirParser<ZoneHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final ZoneParser _instance = new ZoneParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return ZoneParser
+	 */
 	public static ZoneParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for ZoneParser.
+	 */
 	protected ZoneParser()
 	{
 		super(ZoneHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/zone/");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "zone.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{
@@ -178,6 +210,11 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 		}
 	}
 	
+	/**
+	 * Method parseRectangle.
+	 * @param n Element
+	 * @return Rectangle * @throws Exception
+	 */
 	public static Rectangle parseRectangle(Element n) throws Exception
 	{
 		int x1, y1, x2, y2, zmin = World.MAP_MIN_Z, zmax = World.MAP_MAX_Z;
@@ -206,6 +243,11 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 		return rectangle;
 	}
 	
+	/**
+	 * Method parsePolygon.
+	 * @param shape Element
+	 * @return Polygon * @throws Exception
+	 */
 	public static Polygon parsePolygon(Element shape) throws Exception
 	{
 		Polygon poly = new Polygon();
@@ -228,6 +270,11 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 		return poly;
 	}
 	
+	/**
+	 * Method parseCircle.
+	 * @param shape Element
+	 * @return Circle * @throws Exception
+	 */
 	public static Circle parseCircle(Element shape) throws Exception
 	{
 		Circle circle;

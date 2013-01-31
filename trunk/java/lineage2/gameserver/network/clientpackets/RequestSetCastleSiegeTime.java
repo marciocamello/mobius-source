@@ -20,10 +20,20 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.CastleSiegeInfo;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestSetCastleSiegeTime extends L2GameClientPacket
 {
+	/**
+	 * Field _time. Field _id.
+	 */
 	private int _id, _time;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -31,6 +41,9 @@ public class RequestSetCastleSiegeTime extends L2GameClientPacket
 		_time = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

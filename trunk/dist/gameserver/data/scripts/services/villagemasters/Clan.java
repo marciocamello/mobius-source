@@ -16,8 +16,15 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.VillageMasterInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Clan extends Functions
 {
+	/**
+	 * Method CheckCreateClan.
+	 */
 	public void CheckCreateClan()
 	{
 		if ((getNpc() == null) || (getSelf() == null))
@@ -41,6 +48,9 @@ public class Clan extends Functions
 		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/" + htmltext);
 	}
 	
+	/**
+	 * Method CheckDissolveClan.
+	 */
 	public void CheckDissolveClan()
 	{
 		if ((getNpc() == null) || (getSelf() == null))

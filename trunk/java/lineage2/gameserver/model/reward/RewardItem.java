@@ -12,12 +12,29 @@
  */
 package lineage2.gameserver.model.reward;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RewardItem
 {
+	/**
+	 * Field itemId.
+	 */
 	public final int itemId;
+	/**
+	 * Field count.
+	 */
 	public long count;
+	/**
+	 * Field isAdena.
+	 */
 	public boolean isAdena;
 	
+	/**
+	 * Constructor for RewardItem.
+	 * @param itemId int
+	 */
 	public RewardItem(int itemId)
 	{
 		this.itemId = itemId;

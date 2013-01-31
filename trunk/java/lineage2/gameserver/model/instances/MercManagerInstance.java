@@ -19,21 +19,44 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class MercManagerInstance extends MerchantInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field COND_ALL_FALSE.
+	 */
 	private static int COND_ALL_FALSE = 0;
+	/**
+	 * Field COND_BUSY_BECAUSE_OF_SIEGE.
+	 */
 	private static int COND_BUSY_BECAUSE_OF_SIEGE = 1;
+	/**
+	 * Field COND_OWNER.
+	 */
 	private static int COND_OWNER = 2;
 	
+	/**
+	 * Constructor for MercManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MercManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -70,6 +93,12 @@ public final class MercManagerInstance extends MerchantInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -86,6 +115,11 @@ public final class MercManagerInstance extends MerchantInstance
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 	
+	/**
+	 * Method validateCondition.
+	 * @param player Player
+	 * @return int
+	 */
 	private int validateCondition(Player player)
 	{
 		if (player.isGM())

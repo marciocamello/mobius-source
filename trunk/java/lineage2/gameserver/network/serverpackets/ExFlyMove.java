@@ -14,15 +14,43 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.templates.jump.JumpPoint;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExFlyMove extends L2GameServerPacket
 {
+	/**
+	 * Field MANY_WAY_TYPE. (value is 0)
+	 */
 	public static final int MANY_WAY_TYPE = 0;
+	/**
+	 * Field ONE_WAY_TYPE. (value is 2)
+	 */
 	public static final int ONE_WAY_TYPE = 2;
+	/**
+	 * Field _objId.
+	 */
 	private final int _objId;
+	/**
+	 * Field _points.
+	 */
 	private final JumpPoint[] _points;
+	/**
+	 * Field _type.
+	 */
 	private int _type;
+	/**
+	 * Field _trackId.
+	 */
 	private final int _trackId;
 	
+	/**
+	 * Constructor for ExFlyMove.
+	 * @param objId int
+	 * @param points JumpPoint[]
+	 * @param trackId int
+	 */
 	public ExFlyMove(int objId, JumpPoint[] points, int trackId)
 	{
 		_objId = objId;
@@ -38,6 +66,9 @@ public class ExFlyMove extends L2GameServerPacket
 		_trackId = trackId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

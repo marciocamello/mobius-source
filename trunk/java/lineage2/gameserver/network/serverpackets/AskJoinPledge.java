@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AskJoinPledge extends L2GameServerPacket
 {
+	/**
+	 * Field _requestorId.
+	 */
 	private final int _requestorId;
+	/**
+	 * Field _pledgeName.
+	 */
 	private final String _pledgeName;
 	
+	/**
+	 * Constructor for AskJoinPledge.
+	 * @param requestorId int
+	 * @param pledgeName String
+	 */
 	public AskJoinPledge(int requestorId, String pledgeName)
 	{
 		_requestorId = requestorId;
 		_pledgeName = pledgeName;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

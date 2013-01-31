@@ -17,16 +17,29 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.RecipeBookItemList;
 import lineage2.gameserver.templates.item.RecipeTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestRecipeItemDelete extends L2GameClientPacket
 {
+	/**
+	 * Field _recipeId.
+	 */
 	private int _recipeId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_recipeId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

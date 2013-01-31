@@ -20,8 +20,15 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OriginalSinWarden extends Fighter
 {
+	/**
+	 * Field servants1.
+	 */
 	private static final int[] servants1 =
 	{
 		22424,
@@ -32,6 +39,9 @@ public class OriginalSinWarden extends Fighter
 		22429,
 		22430
 	};
+	/**
+	 * Field servants2.
+	 */
 	private static final int[] servants2 =
 	{
 		22432,
@@ -42,6 +52,9 @@ public class OriginalSinWarden extends Fighter
 		22437,
 		22438
 	};
+	/**
+	 * Field DarionsFaithfulServants.
+	 */
 	private static final int[] DarionsFaithfulServants =
 	{
 		22405,
@@ -49,11 +62,18 @@ public class OriginalSinWarden extends Fighter
 		22407
 	};
 	
+	/**
+	 * Constructor for OriginalSinWarden.
+	 * @param actor NpcInstance
+	 */
 	public OriginalSinWarden(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -104,6 +124,10 @@ public class OriginalSinWarden extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

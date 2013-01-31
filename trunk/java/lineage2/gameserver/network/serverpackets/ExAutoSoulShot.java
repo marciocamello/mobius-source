@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExAutoSoulShot extends L2GameServerPacket
 {
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _type.
+	 */
 	private final boolean _type;
 	
+	/**
+	 * Constructor for ExAutoSoulShot.
+	 * @param itemId int
+	 * @param type boolean
+	 */
 	public ExAutoSoulShot(int itemId, boolean type)
 	{
 		_itemId = itemId;
 		_type = type;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

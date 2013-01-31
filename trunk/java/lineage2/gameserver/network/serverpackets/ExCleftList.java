@@ -12,15 +12,40 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCleftList extends L2GameServerPacket
 {
+	/**
+	 * Field CleftType_Close. (value is -1)
+	 */
 	public static final int CleftType_Close = -1;
+	/**
+	 * Field CleftType_Total. (value is 0)
+	 */
 	public static final int CleftType_Total = 0;
+	/**
+	 * Field CleftType_Add. (value is 1)
+	 */
 	public static final int CleftType_Add = 1;
+	/**
+	 * Field CleftType_Remove. (value is 2)
+	 */
 	public static final int CleftType_Remove = 2;
+	/**
+	 * Field CleftType_TeamChange. (value is 3)
+	 */
 	public static final int CleftType_TeamChange = 3;
+	/**
+	 * Field CleftType.
+	 */
 	private final int CleftType = 0;
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

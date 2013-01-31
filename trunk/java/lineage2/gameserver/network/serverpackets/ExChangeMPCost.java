@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExChangeMPCost extends L2GameServerPacket
 {
+	/**
+	 * Field unk1.
+	 */
 	private final int unk1;
+	/**
+	 * Field unk2.
+	 */
 	private final double unk2;
 	
+	/**
+	 * Constructor for ExChangeMPCost.
+	 * @param unk1 int
+	 * @param unk2 double
+	 */
 	public ExChangeMPCost(int unk1, double unk2)
 	{
 		this.unk1 = unk1;
 		this.unk2 = unk2;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

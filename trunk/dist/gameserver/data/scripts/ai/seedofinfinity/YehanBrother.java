@@ -21,16 +21,33 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class YehanBrother extends Fighter
 {
+	/**
+	 * Field _spawnTimer.
+	 */
 	private long _spawnTimer = 0;
+	/**
+	 * Field _minions.
+	 */
 	private static final int[] _minions = ArrayUtils.createAscendingArray(22509, 22512);
 	
+	/**
+	 * Constructor for YehanBrother.
+	 * @param actor NpcInstance
+	 */
 	public YehanBrother(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -38,6 +55,10 @@ public class YehanBrother extends Fighter
 		_spawnTimer = System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method getBrother.
+	 * @return NpcInstance
+	 */
 	private NpcInstance getBrother()
 	{
 		NpcInstance actor = getActor();
@@ -60,6 +81,9 @@ public class YehanBrother extends Fighter
 		return null;
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
@@ -82,6 +106,10 @@ public class YehanBrother extends Fighter
 		super.thinkAttack();
 	}
 	
+	/**
+	 * Method removeInvul.
+	 * @param npc NpcInstance
+	 */
 	private void removeInvul(NpcInstance npc)
 	{
 		for (Effect e : npc.getEffectList().getAllEffects())

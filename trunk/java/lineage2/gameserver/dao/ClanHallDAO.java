@@ -24,18 +24,42 @@ import lineage2.gameserver.model.entity.residence.ClanHall;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanHallDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ClanHallDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final ClanHallDAO _instance = new ClanHallDAO();
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT siege_date, own_date, last_siege_date, auction_desc, auction_length, auction_min_bid, cycle, paid_cycle FROM clanhall WHERE id = ?"")
+	 */
 	public static final String SELECT_SQL_QUERY = "SELECT siege_date, own_date, last_siege_date, auction_desc, auction_length, auction_min_bid, cycle, paid_cycle FROM clanhall WHERE id = ?";
+	/**
+	 * Field UPDATE_SQL_QUERY. (value is ""UPDATE clanhall SET siege_date=?, last_siege_date=?, own_date=?, auction_desc=?, auction_length=?, auction_min_bid=?, cycle=?, paid_cycle=? WHERE id=?"")
+	 */
 	public static final String UPDATE_SQL_QUERY = "UPDATE clanhall SET siege_date=?, last_siege_date=?, own_date=?, auction_desc=?, auction_length=?, auction_min_bid=?, cycle=?, paid_cycle=? WHERE id=?";
 	
+	/**
+	 * Method getInstance.
+	 * @return ClanHallDAO
+	 */
 	public static ClanHallDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method select.
+	 * @param clanHall ClanHall
+	 */
 	public void select(ClanHall clanHall)
 	{
 		Connection con = null;
@@ -69,6 +93,10 @@ public class ClanHallDAO
 		}
 	}
 	
+	/**
+	 * Method update.
+	 * @param c ClanHall
+	 */
 	public void update(ClanHall c)
 	{
 		if (!c.getJdbcState().isUpdatable())
@@ -79,6 +107,10 @@ public class ClanHallDAO
 		update0(c);
 	}
 	
+	/**
+	 * Method update0.
+	 * @param c ClanHall
+	 */
 	private void update0(ClanHall c)
 	{
 		Connection con = null;

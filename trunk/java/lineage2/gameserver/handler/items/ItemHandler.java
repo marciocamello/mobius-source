@@ -16,19 +16,37 @@ import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ItemHandler extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final ItemHandler _instance = new ItemHandler();
 	
+	/**
+	 * Method getInstance.
+	 * @return ItemHandler
+	 */
 	public static ItemHandler getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for ItemHandler.
+	 */
 	private ItemHandler()
 	{
 	}
 	
+	/**
+	 * Method registerItemHandler.
+	 * @param handler IItemHandler
+	 */
 	public void registerItemHandler(IItemHandler handler)
 	{
 		int[] ids = handler.getItemIds();
@@ -50,6 +68,10 @@ public class ItemHandler extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method unregisterItemHandler.
+	 * @param handler IItemHandler
+	 */
 	public void unregisterItemHandler(IItemHandler handler)
 	{
 		for (int itemId : handler.getItemIds())
@@ -59,12 +81,19 @@ public class ItemHandler extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

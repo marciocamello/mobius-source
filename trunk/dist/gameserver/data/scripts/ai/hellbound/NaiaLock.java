@@ -20,17 +20,35 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NaiaLock extends Fighter
 {
+	/**
+	 * Field _attacked.
+	 */
 	private static boolean _attacked = false;
+	/**
+	 * Field _entranceactive.
+	 */
 	private static boolean _entranceactive = false;
 	
+	/**
+	 * Constructor for NaiaLock.
+	 * @param actor NpcInstance
+	 */
 	public NaiaLock(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -40,6 +58,9 @@ public class NaiaLock extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -49,12 +70,22 @@ public class NaiaLock extends Fighter
 		Functions.npcShout(actor, "The lock has been put on the Controller device");
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -80,6 +111,10 @@ public class NaiaLock extends Fighter
 		}
 	}
 	
+	/**
+	 * Method isEntranceActive.
+	 * @return boolean
+	 */
 	public static boolean isEntranceActive()
 	{
 		return _entranceactive;

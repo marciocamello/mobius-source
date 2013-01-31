@@ -19,12 +19,25 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Mentoring;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConfirmMenteeAdd extends L2GameClientPacket
 {
+	/**
+	 * Field _answer.
+	 */
 	private int _answer;
+	/**
+	 * Field _mentorName.
+	 */
 	@SuppressWarnings("unused")
 	private String _mentorName;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -32,6 +45,9 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 		_mentorName = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

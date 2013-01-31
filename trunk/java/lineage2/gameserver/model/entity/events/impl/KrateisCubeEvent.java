@@ -45,15 +45,31 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KrateisCubeEvent extends GlobalEvent
 {
+	/**
+	 * @author Mobius
+	 */
 	private class Listeners implements OnKillListener, OnPlayerExitListener, OnTeleportListener
 	{
+		/**
+		 * Constructor for Listeners.
+		 */
 		public Listeners()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onKill.
+		 * @param actor Creature
+		 * @param victim Creature
+		 * @see lineage2.gameserver.listener.actor.OnKillListener#onKill(Creature, Creature)
+		 */
 		@Override
 		public void onKill(Creature actor, Creature victim)
 		{
@@ -78,18 +94,36 @@ public class KrateisCubeEvent extends GlobalEvent
 			looserPlayer.startRessurectTask();
 		}
 		
+		/**
+		 * Method ignorePetOrSummon.
+		 * @return boolean * @see lineage2.gameserver.listener.actor.OnKillListener#ignorePetOrSummon()
+		 */
 		@Override
 		public boolean ignorePetOrSummon()
 		{
 			return true;
 		}
 		
+		/**
+		 * Method onPlayerExit.
+		 * @param player Player
+		 * @see lineage2.gameserver.listener.actor.player.OnPlayerExitListener#onPlayerExit(Player)
+		 */
 		@Override
 		public void onPlayerExit(Player player)
 		{
 			exitCube(player, false);
 		}
 		
+		/**
+		 * Method onTeleport.
+		 * @param player Player
+		 * @param x int
+		 * @param y int
+		 * @param z int
+		 * @param reflection Reflection
+		 * @see lineage2.gameserver.listener.actor.player.OnTeleportListener#onTeleport(Player, int, int, int, Reflection)
+		 */
 		@Override
 		public void onTeleport(Player player, int x, int y, int z, Reflection reflection)
 		{
@@ -116,8 +150,17 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Field DATE_PATTERN.
+	 */
 	private static final SchedulingPattern DATE_PATTERN = new SchedulingPattern("0,30 * * * *");
+	/**
+	 * Field RETURN_LOC.
+	 */
 	private static final Location RETURN_LOC = new Location(-70381, -70937, -1428);
+	/**
+	 * Field SKILL_IDS.
+	 */
 	private static final int[] SKILL_IDS =
 	{
 		1086,
@@ -132,6 +175,9 @@ public class KrateisCubeEvent extends GlobalEvent
 		1062,
 		5739
 	};
+	/**
+	 * Field SKILL_LEVEL.
+	 */
 	private static final int[] SKILL_LEVEL =
 	{
 		2,
@@ -147,20 +193,54 @@ public class KrateisCubeEvent extends GlobalEvent
 		1
 	};
 	
+	/**
+	 * Field PARTICLE_PLAYERS. (value is ""particle_players"")
+	 */
 	public static final String PARTICLE_PLAYERS = "particle_players";
+	/**
+	 * Field REGISTERED_PLAYERS. (value is ""registered_players"")
+	 */
 	public static final String REGISTERED_PLAYERS = "registered_players";
+	/**
+	 * Field WAIT_LOCS. (value is ""wait_locs"")
+	 */
 	public static final String WAIT_LOCS = "wait_locs";
+	/**
+	 * Field TELEPORT_LOCS. (value is ""teleport_locs"")
+	 */
 	public static final String TELEPORT_LOCS = "teleport_locs";
+	/**
+	 * Field PREPARE. (value is ""prepare"")
+	 */
 	public static final String PREPARE = "prepare";
 	
+	/**
+	 * Field _minLevel.
+	 */
 	private final int _minLevel;
+	/**
+	 * Field _maxLevel.
+	 */
 	private final int _maxLevel;
 	
+	/**
+	 * Field _calendar.
+	 */
 	private final Calendar _calendar = Calendar.getInstance();
 	
+	/**
+	 * Field _runnerEvent.
+	 */
 	private KrateisCubeRunnerEvent _runnerEvent;
+	/**
+	 * Field _listeners.
+	 */
 	private final Listeners _listeners = new Listeners();
 	
+	/**
+	 * Constructor for KrateisCubeEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public KrateisCubeEvent(MultiValueSet<String> set)
 	{
 		super(set);
@@ -168,6 +248,9 @@ public class KrateisCubeEvent extends GlobalEvent
 		_maxLevel = set.getInteger("max_level");
 	}
 	
+	/**
+	 * Method initEvent.
+	 */
 	@Override
 	public void initEvent()
 	{
@@ -176,6 +259,9 @@ public class KrateisCubeEvent extends GlobalEvent
 		super.initEvent();
 	}
 	
+	/**
+	 * Method prepare.
+	 */
 	public void prepare()
 	{
 		NpcInstance npc = _runnerEvent.getNpc();
@@ -196,6 +282,9 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -220,6 +309,9 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	@Override
 	public void stopEvent()
 	{
@@ -255,6 +347,10 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method giveEffects.
+	 * @param player Player
+	 */
 	private void giveEffects(Player player)
 	{
 		player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
@@ -270,6 +366,10 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onInit boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{
@@ -280,12 +380,23 @@ public class KrateisCubeEvent extends GlobalEvent
 		registerActions();
 	}
 	
+	/**
+	 * Method startTimeMillis.
+	 * @return long
+	 */
 	@Override
 	protected long startTimeMillis()
 	{
 		return _calendar.getTimeInMillis();
 	}
 	
+	/**
+	 * Method canRessurect.
+	 * @param resurrectPlayer Player
+	 * @param creature Creature
+	 * @param force boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean canRessurect(Player resurrectPlayer, Creature creature, boolean force)
 	{
@@ -293,6 +404,11 @@ public class KrateisCubeEvent extends GlobalEvent
 		return false;
 	}
 	
+	/**
+	 * Method getRegisteredPlayer.
+	 * @param player Player
+	 * @return KrateisCubePlayerObject
+	 */
 	public KrateisCubePlayerObject getRegisteredPlayer(Player player)
 	{
 		List<KrateisCubePlayerObject> registeredPlayers = getObjects(REGISTERED_PLAYERS);
@@ -306,6 +422,11 @@ public class KrateisCubeEvent extends GlobalEvent
 		return null;
 	}
 	
+	/**
+	 * Method getParticlePlayer.
+	 * @param player Player
+	 * @return KrateisCubePlayerObject
+	 */
 	public KrateisCubePlayerObject getParticlePlayer(Player player)
 	{
 		List<KrateisCubePlayerObject> registeredPlayers = getObjects(PARTICLE_PLAYERS);
@@ -319,6 +440,10 @@ public class KrateisCubeEvent extends GlobalEvent
 		return null;
 	}
 	
+	/**
+	 * Method showRank.
+	 * @param player Player
+	 */
 	public void showRank(Player player)
 	{
 		KrateisCubePlayerObject particlePlayer = getParticlePlayer(player);
@@ -332,6 +457,10 @@ public class KrateisCubeEvent extends GlobalEvent
 		player.sendPacket(new ExPVPMatchCCRecord(this));
 	}
 	
+	/**
+	 * Method closeRank.
+	 * @param player Player
+	 */
 	public void closeRank(Player player)
 	{
 		KrateisCubePlayerObject particlePlayer = getParticlePlayer(player);
@@ -343,6 +472,10 @@ public class KrateisCubeEvent extends GlobalEvent
 		particlePlayer.setShowRank(false);
 	}
 	
+	/**
+	 * Method updatePoints.
+	 * @param k KrateisCubePlayerObject
+	 */
 	public void updatePoints(KrateisCubePlayerObject k)
 	{
 		k.getPlayer().sendPacket(new ExPVPMatchCCMyRecord(k));
@@ -359,6 +492,10 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method getSortedPlayers.
+	 * @return KrateisCubePlayerObject[]
+	 */
 	public KrateisCubePlayerObject[] getSortedPlayers()
 	{
 		List<KrateisCubePlayerObject> players = getObjects(PARTICLE_PLAYERS);
@@ -367,6 +504,11 @@ public class KrateisCubeEvent extends GlobalEvent
 		return array;
 	}
 	
+	/**
+	 * Method exitCube.
+	 * @param player Player
+	 * @param teleport boolean
+	 */
 	public void exitCube(Player player, boolean teleport)
 	{
 		KrateisCubePlayerObject krateisCubePlayer = getParticlePlayer(player);
@@ -383,6 +525,10 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method announce.
+	 * @param a int
+	 */
 	@Override
 	public void announce(int a)
 	{
@@ -403,12 +549,21 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method isParticle.
+	 * @param player Player
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParticle(Player player)
 	{
 		return getParticlePlayer(player) != null;
 	}
 	
+	/**
+	 * Method onAddEvent.
+	 * @param o GameObject
+	 */
 	@Override
 	public void onAddEvent(GameObject o)
 	{
@@ -418,6 +573,10 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method onRemoveEvent.
+	 * @param o GameObject
+	 */
 	@Override
 	public void onRemoveEvent(GameObject o)
 	{
@@ -427,6 +586,11 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method action.
+	 * @param name String
+	 * @param start boolean
+	 */
 	@Override
 	public void action(String name, boolean start)
 	{
@@ -440,28 +604,49 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method checkRestartLocs.
+	 * @param player Player
+	 * @param r Map<RestartType,Boolean>
+	 */
 	@Override
 	public void checkRestartLocs(Player player, Map<RestartType, Boolean> r)
 	{
 		r.clear();
 	}
 	
+	/**
+	 * Method getMinLevel.
+	 * @return int
+	 */
 	public int getMinLevel()
 	{
 		return _minLevel;
 	}
 	
+	/**
+	 * Method getMaxLevel.
+	 * @return int
+	 */
 	public int getMaxLevel()
 	{
 		return _maxLevel;
 	}
 	
+	/**
+	 * Method isInProgress.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInProgress()
 	{
 		return _runnerEvent.isInProgress();
 	}
 	
+	/**
+	 * Method isRegistrationOver.
+	 * @return boolean
+	 */
 	public boolean isRegistrationOver()
 	{
 		return _runnerEvent.isRegistrationOver();

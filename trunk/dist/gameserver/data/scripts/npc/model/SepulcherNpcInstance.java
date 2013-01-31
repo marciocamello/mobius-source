@@ -34,22 +34,46 @@ import bosses.FourSepulchersManager;
 import bosses.FourSepulchersSpawn;
 import bosses.FourSepulchersSpawn.GateKeeper;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SepulcherNpcInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _hallGateKeepers.
+	 */
 	protected static Map<Integer, Integer> _hallGateKeepers = new HashMap<>();
+	/**
+	 * Field _spawnMonsterTask. Field _closeTask.
+	 */
 	protected Future<?> _closeTask = null, _spawnMonsterTask = null;
+	/**
+	 * Field HTML_FILE_PATH. (value is ""SepulcherNpc/"")
+	 */
 	private final static String HTML_FILE_PATH = "SepulcherNpc/";
+	/**
+	 * Field HALLS_KEY. (value is 7260)
+	 */
 	private final static int HALLS_KEY = 7260;
 	
+	/**
+	 * Constructor for SepulcherNpcInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SepulcherNpcInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
@@ -66,6 +90,12 @@ public class SepulcherNpcInstance extends NpcInstance
 		super.onDelete();
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -126,6 +156,13 @@ public class SepulcherNpcInstance extends NpcInstance
 		super.showChatWindow(player, val);
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
@@ -141,6 +178,11 @@ public class SepulcherNpcInstance extends NpcInstance
 		return HTML_FILE_PATH + pom + ".htm";
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -188,6 +230,10 @@ public class SepulcherNpcInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method openNextDoor.
+	 * @param npcId int
+	 */
 	public void openNextDoor(int npcId)
 	{
 		GateKeeper gk = FourSepulchersManager.getHallGateKeeper(npcId);
@@ -199,16 +245,32 @@ public class SepulcherNpcInstance extends NpcInstance
 		_closeTask = ThreadPoolManager.getInstance().schedule(new CloseNextDoor(gk), 10000);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class CloseNextDoor extends RunnableImpl
 	{
+		/**
+		 * Field _gk.
+		 */
 		private final GateKeeper _gk;
+		/**
+		 * Field state.
+		 */
 		private int state = 0;
 		
+		/**
+		 * Constructor for CloseNextDoor.
+		 * @param gk GateKeeper
+		 */
 		public CloseNextDoor(GateKeeper gk)
 		{
 			_gk = gk;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -233,15 +295,28 @@ public class SepulcherNpcInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SpawnMonster extends RunnableImpl
 	{
+		/**
+		 * Field _NpcId.
+		 */
 		private final int _NpcId;
 		
+		/**
+		 * Constructor for SpawnMonster.
+		 * @param npcId int
+		 */
 		public SpawnMonster(int npcId)
 		{
 			_NpcId = npcId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -249,6 +324,10 @@ public class SepulcherNpcInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method sayInShout.
+	 * @param msg String
+	 */
 	public void sayInShout(String msg)
 	{
 		if ((msg == null) || msg.isEmpty())
@@ -274,6 +353,11 @@ public class SepulcherNpcInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showHtmlFile.
+	 * @param player Player
+	 * @param file String
+	 */
 	public void showHtmlFile(Player player, String file)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
@@ -282,6 +366,11 @@ public class SepulcherNpcInstance extends NpcInstance
 		player.sendPacket(html);
 	}
 	
+	/**
+	 * Method hasPartyAKey.
+	 * @param player Player
+	 * @return boolean
+	 */
 	private boolean hasPartyAKey(Player player)
 	{
 		for (Player m : player.getParty().getPartyMembers())

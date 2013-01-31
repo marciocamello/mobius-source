@@ -14,16 +14,29 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.Config;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestEx2ndPasswordVerify extends L2GameClientPacket
 {
+	/**
+	 * Field _password.
+	 */
 	private String _password;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_password = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

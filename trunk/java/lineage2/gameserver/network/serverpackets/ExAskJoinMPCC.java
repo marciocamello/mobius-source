@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExAskJoinMPCC extends L2GameServerPacket
 {
+	/**
+	 * Field _requestorName.
+	 */
 	private final String _requestorName;
 	
+	/**
+	 * Constructor for ExAskJoinMPCC.
+	 * @param requestorName String
+	 */
 	public ExAskJoinMPCC(String requestorName)
 	{
 		_requestorName = requestorName;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -24,21 +24,66 @@ import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.base.ClassType;
 import lineage2.gameserver.model.base.Race;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class SubClassInfo
 {
+	/**
+	 * Field MAIN_SUBCLASS_SET.
+	 */
 	private static final Set<ClassId> MAIN_SUBCLASS_SET;
+	/**
+	 * Field MAIN_SUBCLASS_SET1.
+	 */
 	private static final Set<ClassId> MAIN_SUBCLASS_SET1;
+	/**
+	 * Field KAMAEL_SUBCLASS_SET.
+	 */
 	private static final Set<ClassId> KAMAEL_SUBCLASS_SET;
+	/**
+	 * Field BANNED_SUBCLASSES.
+	 */
 	private static final Set<ClassId> BANNED_SUBCLASSES = EnumSet.of(ClassId.OVERLORD, ClassId.WARSMITH);
+	/**
+	 * Field SUBCLASS_SET_1.
+	 */
 	private static final Set<ClassId> SUBCLASS_SET_1 = EnumSet.of(ClassId.DARK_AVENGER, ClassId.PALADIN, ClassId.TEMPLE_KNIGHT, ClassId.SHILLEN_KNIGHT);
+	/**
+	 * Field SUBCLASS_SET_2.
+	 */
 	private static final Set<ClassId> SUBCLASS_SET_2 = EnumSet.of(ClassId.TREASURE_HUNTER, ClassId.ABYSS_WALKER, ClassId.PLAIN_WALKER);
+	/**
+	 * Field SUBCLASS_SET_3.
+	 */
 	private static final Set<ClassId> SUBCLASS_SET_3 = EnumSet.of(ClassId.HAWKEYE, ClassId.SILVER_RANGER, ClassId.PHANTOM_RANGER);
+	/**
+	 * Field SUBCLASS_SET_4.
+	 */
 	private static final Set<ClassId> SUBCLASS_SET_4 = EnumSet.of(ClassId.WARLOCK, ClassId.ELEMENTAL_SUMMONER, ClassId.PHANTOM_SUMMONER);
+	/**
+	 * Field SUBCLASS_SET_5.
+	 */
 	private static final Set<ClassId> SUBCLASS_SET_5 = EnumSet.of(ClassId.SORCERER, ClassId.SPELLSINGER, ClassId.SPELLHOWLER);
+	/**
+	 * Field SUBCLASS_SET_6.
+	 */
 	private static final Set<ClassId> SUBCLASS_SET_6 = EnumSet.of(ClassId.INSPECTOR);
+	/**
+	 * Field SUBCLASS_SET_MAP.
+	 */
 	@SuppressWarnings("rawtypes")
 	private static final EnumMap<ClassId, Set> SUBCLASS_SET_MAP = new EnumMap<>(ClassId.class);
 	
+	/**
+	 * Method getAvailableSubClasses.
+	 * @param player Player
+	 * @param npcRace Race
+	 * @param npcTeachType ClassType
+	 * @param isNew boolean
+	 * @return Set<ClassId>
+	 */
 	public static Set<ClassId> getAvailableSubClasses(Player player, Race npcRace, ClassType npcTeachType, boolean isNew)
 	{
 		Set<ClassId> availSubs = null;
@@ -149,6 +194,12 @@ public final class SubClassInfo
 		return availSubs;
 	}
 	
+	/**
+	 * Method getSet.
+	 * @param race Race
+	 * @param level ClassLevel
+	 * @return EnumSet<ClassId>
+	 */
 	public static EnumSet<ClassId> getSet(Race race, ClassLevel level)
 	{
 		EnumSet<ClassId> allOf = EnumSet.noneOf(ClassId.class);
@@ -162,6 +213,12 @@ public final class SubClassInfo
 		return allOf;
 	}
 	
+	/**
+	 * Method areClassesComportable.
+	 * @param c1 ClassId
+	 * @param c2 ClassId
+	 * @return boolean
+	 */
 	public static boolean areClassesComportable(ClassId c1, ClassId c2)
 	{
 		if (c1.isOfRace(Race.kamael) != c2.isOfRace(Race.kamael))

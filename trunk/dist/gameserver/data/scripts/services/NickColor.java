@@ -19,8 +19,15 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NickColor extends Functions
 {
+	/**
+	 * Method list.
+	 */
 	public void list()
 	{
 		Player player = getSelf();
@@ -29,7 +36,7 @@ public class NickColor extends Functions
 			return;
 		}
 		StringBuilder append = new StringBuilder();
-		append.append("You can change nick color for small price ").append(Config.SERVICES_CHANGE_NICK_COLOR_PRICE).append(" ").append(ItemHolder.getInstance().getTemplate(Config.SERVICES_CHANGE_NICK_COLOR_ITEM).getName()).append(".");
+		append.append("You can change nick color for small price ").append(Config.SERVICES_CHANGE_NICK_COLOR_PRICE).append(' ').append(ItemHolder.getInstance().getTemplate(Config.SERVICES_CHANGE_NICK_COLOR_ITEM).getName()).append('.');
 		append.append("<br>Possible colors:<br>");
 		for (String color : Config.SERVICES_CHANGE_NICK_COLOR_LIST)
 		{
@@ -39,6 +46,10 @@ public class NickColor extends Functions
 		show(append.toString(), player, null);
 	}
 	
+	/**
+	 * Method change.
+	 * @param param String[]
+	 */
 	public void change(String[] param)
 	{
 		Player player = getSelf();

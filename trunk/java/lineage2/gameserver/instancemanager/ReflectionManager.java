@@ -23,24 +23,62 @@ import lineage2.gameserver.data.xml.holder.ZoneHolder;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ReflectionManager
 {
+	/**
+	 * Field DEFAULT.
+	 */
 	public static final Reflection DEFAULT = Reflection.createReflection(0);
+	/**
+	 * Field PARNASSUS.
+	 */
 	public static final Reflection PARNASSUS = Reflection.createReflection(-1);
+	/**
+	 * Field GIRAN_HARBOR.
+	 */
 	public static final Reflection GIRAN_HARBOR = Reflection.createReflection(-2);
+	/**
+	 * Field JAIL.
+	 */
 	public static final Reflection JAIL = Reflection.createReflection(-3);
+	/**
+	 * Field _instance.
+	 */
 	private static final ReflectionManager _instance = new ReflectionManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return ReflectionManager
+	 */
 	public static ReflectionManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _reflections.
+	 */
 	private final TIntObjectHashMap<Reflection> _reflections = new TIntObjectHashMap<>();
+	/**
+	 * Field lock.
+	 */
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
+	/**
+	 * Field readLock.
+	 */
 	private final Lock readLock = lock.readLock();
+	/**
+	 * Field writeLock.
+	 */
 	private final Lock writeLock = lock.writeLock();
 	
+	/**
+	 * Constructor for ReflectionManager.
+	 */
 	private ReflectionManager()
 	{
 		add(DEFAULT);
@@ -51,6 +89,11 @@ public class ReflectionManager
 		JAIL.setCoreLoc(new Location(-114648, -249384, -2984));
 	}
 	
+	/**
+	 * Method get.
+	 * @param id int
+	 * @return Reflection
+	 */
 	public Reflection get(int id)
 	{
 		readLock.lock();
@@ -64,6 +107,11 @@ public class ReflectionManager
 		}
 	}
 	
+	/**
+	 * Method add.
+	 * @param ref Reflection
+	 * @return Reflection
+	 */
 	public Reflection add(Reflection ref)
 	{
 		writeLock.lock();
@@ -77,6 +125,11 @@ public class ReflectionManager
 		}
 	}
 	
+	/**
+	 * Method remove.
+	 * @param ref Reflection
+	 * @return Reflection
+	 */
 	public Reflection remove(Reflection ref)
 	{
 		writeLock.lock();
@@ -90,6 +143,10 @@ public class ReflectionManager
 		}
 	}
 	
+	/**
+	 * Method getAll.
+	 * @return Reflection[]
+	 */
 	public Reflection[] getAll()
 	{
 		readLock.lock();
@@ -103,6 +160,11 @@ public class ReflectionManager
 		}
 	}
 	
+	/**
+	 * Method getCountByIzId.
+	 * @param izId int
+	 * @return int
+	 */
 	public int getCountByIzId(int izId)
 	{
 		readLock.lock();
@@ -124,6 +186,10 @@ public class ReflectionManager
 		}
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	public int size()
 	{
 		return _reflections.size();

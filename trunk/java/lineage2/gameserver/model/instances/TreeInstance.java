@@ -29,20 +29,59 @@ import lineage2.gameserver.taskmanager.EffectTaskManager;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TreeInstance extends NpcInstance
 {
+	/**
+	 * Field serialVersionUID. (value is -3990686488577795700)
+	 */
 	private static final long serialVersionUID = -3990686488577795700L;
+	/**
+	 * Field _owner.
+	 */
 	private final Player _owner;
+	/**
+	 * Field _skill.
+	 */
 	final Skill _skill;
+	/**
+	 * Field _lifetimeCountdown.
+	 */
 	private final int _lifetimeCountdown;
+	/**
+	 * Field _targetTask.
+	 */
 	private ScheduledFuture<?> _targetTask;
+	/**
+	 * Field _destroyTask.
+	 */
 	private ScheduledFuture<?> _destroyTask;
 	
+	/**
+	 * Constructor for TreeInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param owner Player
+	 * @param lifetime int
+	 * @param skill Skill
+	 */
 	public TreeInstance(int objectId, NpcTemplate template, Player owner, int lifetime, Skill skill)
 	{
 		this(objectId, template, owner, lifetime, skill, owner.getLoc());
 	}
 	
+	/**
+	 * Constructor for TreeInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param owner Player
+	 * @param lifetime int
+	 * @param skill Skill
+	 * @param loc Location
+	 */
 	public TreeInstance(int objectId, NpcTemplate template, Player owner, int lifetime, Skill skill, Location loc)
 	{
 		super(objectId, template);
@@ -55,20 +94,37 @@ public class TreeInstance extends NpcInstance
 		setHeading(owner.getHeading());
 	}
 	
+	/**
+	 * Method getOwner.
+	 * @return Player
+	 */
 	public Player getOwner()
 	{
 		return _owner;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class CastTask extends RunnableImpl
 	{
+		/**
+		 * Field _trapRef.
+		 */
 		private final HardReference<NpcInstance> _trapRef;
 		
+		/**
+		 * Constructor for CastTask.
+		 * @param trap TreeInstance
+		 */
 		public CastTask(TreeInstance trap)
 		{
 			_trapRef = trap.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -104,6 +160,9 @@ public class TreeInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -112,6 +171,9 @@ public class TreeInstance extends NpcInstance
 		_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new CastTask(this), 1000L, 5000L);
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
@@ -133,63 +195,115 @@ public class TreeInstance extends NpcInstance
 		super.onDelete();
 	}
 	
+	/**
+	 * Method hasRandomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	public boolean hasRandomAnimation()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature attacker)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isFearImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isFearImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isParalyzeImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParalyzeImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isLethalImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isLethalImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param filename String
+	 * @param replace Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, String filename, Object... replace)
 	{
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{

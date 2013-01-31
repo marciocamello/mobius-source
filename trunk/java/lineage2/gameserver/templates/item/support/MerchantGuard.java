@@ -14,12 +14,32 @@ package lineage2.gameserver.templates.item.support;
 
 import org.napile.primitive.sets.IntSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MerchantGuard
 {
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _npcId.
+	 */
 	private final int _npcId;
+	/**
+	 * Field _max.
+	 */
 	private final int _max;
 	
+	/**
+	 * Constructor for MerchantGuard.
+	 * @param itemId int
+	 * @param npcId int
+	 * @param max int
+	 * @param ssq IntSet
+	 */
 	public MerchantGuard(int itemId, int npcId, int max, IntSet ssq)
 	{
 		_itemId = itemId;
@@ -27,16 +47,28 @@ public class MerchantGuard
 		_max = max;
 	}
 	
+	/**
+	 * Method getItemId.
+	 * @return int
+	 */
 	public int getItemId()
 	{
 		return _itemId;
 	}
 	
+	/**
+	 * Method getNpcId.
+	 * @return int
+	 */
 	public int getNpcId()
 	{
 		return _npcId;
 	}
 	
+	/**
+	 * Method getMax.
+	 * @return int
+	 */
 	public int getMax()
 	{
 		return _max;

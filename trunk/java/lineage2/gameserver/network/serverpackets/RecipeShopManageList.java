@@ -19,14 +19,38 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ManufactureItem;
 import lineage2.gameserver.templates.item.RecipeTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RecipeShopManageList extends L2GameServerPacket
 {
+	/**
+	 * Field createList.
+	 */
 	private final List<ManufactureItem> createList;
+	/**
+	 * Field recipes.
+	 */
 	private Collection<RecipeTemplate> recipes;
+	/**
+	 * Field sellerId.
+	 */
 	private final int sellerId;
+	/**
+	 * Field adena.
+	 */
 	private final long adena;
+	/**
+	 * Field isDwarven.
+	 */
 	private final boolean isDwarven;
 	
+	/**
+	 * Constructor for RecipeShopManageList.
+	 * @param seller Player
+	 * @param isDwarvenCraft boolean
+	 */
 	public RecipeShopManageList(Player seller, boolean isDwarvenCraft)
 	{
 		sellerId = seller.getObjectId();
@@ -50,6 +74,9 @@ public class RecipeShopManageList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeShowMemberListDelete extends L2GameServerPacket
 {
+	/**
+	 * Field _player.
+	 */
 	private final String _player;
 	
+	/**
+	 * Constructor for PledgeShowMemberListDelete.
+	 * @param playerName String
+	 */
 	public PledgeShowMemberListDelete(String playerName)
 	{
 		_player = playerName;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

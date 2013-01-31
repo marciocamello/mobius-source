@@ -14,21 +14,43 @@ package lineage2.commons.data.xml;
 
 import lineage2.commons.logging.LoggerObject;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class AbstractHolder extends LoggerObject
 {
+	/**
+	 * Method log.
+	 */
 	public void log()
 	{
 		info(String.format("loaded %d%s(s) count.", size(), formatOut(getClass().getSimpleName().replace("Holder", "")).toLowerCase()));
 	}
 	
+	/**
+	 * Method process.
+	 */
 	protected void process()
 	{
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	public abstract int size();
 	
+	/**
+	 * Method clear.
+	 */
 	public abstract void clear();
 	
+	/**
+	 * Method formatOut.
+	 * @param st String
+	 * @return String
+	 */
 	private static String formatOut(String st)
 	{
 		char[] chars = st.toCharArray();
@@ -37,7 +59,7 @@ public abstract class AbstractHolder extends LoggerObject
 		{
 			if (Character.isUpperCase(ch))
 			{
-				buf.append(" ");
+				buf.append(' ');
 			}
 			buf.append(Character.toLowerCase(ch));
 		}

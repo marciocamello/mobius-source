@@ -41,28 +41,92 @@ import org.slf4j.LoggerFactory;
 
 import bosses.FourSepulchersSpawn.GateKeeper;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FourSepulchersManager extends Functions implements ScriptFile, OnDeathListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(FourSepulchersManager.class);
+	/**
+	 * Field QUEST_ID. (value is ""_620_FourGoblets"")
+	 */
 	public static final String QUEST_ID = "_620_FourGoblets";
+	/**
+	 * Field _zone.
+	 */
 	private static Zone[] _zone = new Zone[4];
+	/**
+	 * Field ENTRANCE_PASS. (value is 7075)
+	 */
 	private static final int ENTRANCE_PASS = 7075;
+	/**
+	 * Field USED_PASS. (value is 7261)
+	 */
 	private static final int USED_PASS = 7261;
+	/**
+	 * Field CHAPEL_KEY. (value is 7260)
+	 */
 	private static final int CHAPEL_KEY = 7260;
+	/**
+	 * Field ANTIQUE_BROOCH. (value is 7262)
+	 */
 	private static final int ANTIQUE_BROOCH = 7262;
+	/**
+	 * Field _inEntryTime.
+	 */
 	static boolean _inEntryTime = false;
+	/**
+	 * Field _inAttackTime.
+	 */
 	static boolean _inAttackTime = false;
+	/**
+	 * Field _changeCoolDownTimeTask.
+	 */
 	static ScheduledFuture<?> _changeCoolDownTimeTask = null;
+	/**
+	 * Field _changeEntryTimeTask.
+	 */
 	static ScheduledFuture<?> _changeEntryTimeTask = null;
+	/**
+	 * Field _changeWarmUpTimeTask.
+	 */
 	static ScheduledFuture<?> _changeWarmUpTimeTask = null;
+	/**
+	 * Field _changeAttackTimeTask.
+	 */
 	static ScheduledFuture<?> _changeAttackTimeTask = null;
+	/**
+	 * Field _coolDownTimeEnd.
+	 */
 	private static long _coolDownTimeEnd = 0;
+	/**
+	 * Field _entryTimeEnd.
+	 */
 	static long _entryTimeEnd = 0;
+	/**
+	 * Field _warmUpTimeEnd.
+	 */
 	static long _warmUpTimeEnd = 0;
+	/**
+	 * Field _attackTimeEnd.
+	 */
 	static long _attackTimeEnd = 0;
+	/**
+	 * Field _newCycleMin.
+	 */
 	static int _newCycleMin = 55;
+	/**
+	 * Field _firstTimeRun.
+	 */
 	static boolean _firstTimeRun;
 	
+	/**
+	 * Method init.
+	 */
 	public void init()
 	{
 		CharListenerList.addGlobal(this);
@@ -97,6 +161,9 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		timeSelector();
 	}
 	
+	/**
+	 * Method timeSelector.
+	 */
 	private static void timeSelector()
 	{
 		timeCalculator();
@@ -126,6 +193,9 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		}
 	}
 	
+	/**
+	 * Method timeCalculator.
+	 */
 	private static void timeCalculator()
 	{
 		Calendar tmp = Calendar.getInstance();
@@ -140,6 +210,9 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		_attackTimeEnd = _warmUpTimeEnd + (50 * 60000);
 	}
 	
+	/**
+	 * Method cleanUp.
+	 */
 	static void cleanUp()
 	{
 		for (Player player : getPlayersInside())
@@ -163,16 +236,29 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		}
 	}
 	
+	/**
+	 * Method isEntryTime.
+	 * @return boolean
+	 */
 	public static boolean isEntryTime()
 	{
 		return _inEntryTime;
 	}
 	
+	/**
+	 * Method isAttackTime.
+	 * @return boolean
+	 */
 	public static boolean isAttackTime()
 	{
 		return _inAttackTime;
 	}
 	
+	/**
+	 * Method tryEntry.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 */
 	public static synchronized void tryEntry(NpcInstance npc, Player player)
 	{
 		int npcId = npc.getNpcId();
@@ -232,6 +318,11 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		entry(npcId, player);
 	}
 	
+	/**
+	 * Method entry.
+	 * @param npcId int
+	 * @param player Player
+	 */
 	private static void entry(int npcId, Player player)
 	{
 		Location loc = FourSepulchersSpawn._startHallSpawns.get(npcId);
@@ -248,6 +339,12 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		FourSepulchersSpawn._hallInUse.put(npcId, true);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param self Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature self, Creature killer)
 	{
@@ -257,6 +354,10 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		}
 	}
 	
+	/**
+	 * Method checkAnnihilated.
+	 * @param player Player
+	 */
 	public static void checkAnnihilated(final Player player)
 	{
 		if (isPlayersAnnihilated())
@@ -286,6 +387,11 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		}
 	}
 	
+	/**
+	 * Method minuteSelect.
+	 * @param min int
+	 * @return int
+	 */
 	private static int minuteSelect(int min)
 	{
 		switch (min % 5)
@@ -303,6 +409,10 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		}
 	}
 	
+	/**
+	 * Method managerSay.
+	 * @param min int
+	 */
 	public static void managerSay(int min)
 	{
 		if (_inAttackTime)
@@ -338,13 +448,22 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class ManagerSay extends RunnableImpl
 	{
+		/**
+		 * Constructor for ManagerSay.
+		 */
 		public ManagerSay()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -369,13 +488,22 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class ChangeEntryTime extends RunnableImpl
 	{
+		/**
+		 * Constructor for ChangeEntryTime.
+		 */
 		public ChangeEntryTime()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -400,13 +528,22 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class ChangeWarmUpTime extends RunnableImpl
 	{
+		/**
+		 * Constructor for ChangeWarmUpTime.
+		 */
 		public ChangeWarmUpTime()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -430,13 +567,22 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class ChangeAttackTime extends RunnableImpl
 	{
+		/**
+		 * Constructor for ChangeAttackTime.
+		 */
 		public ChangeAttackTime()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -493,13 +639,22 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class ChangeCoolDownTime extends RunnableImpl
 	{
+		/**
+		 * Constructor for ChangeCoolDownTime.
+		 */
 		public ChangeCoolDownTime()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -527,6 +682,11 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		}
 	}
 	
+	/**
+	 * Method getHallGateKeeper.
+	 * @param npcId int
+	 * @return GateKeeper
+	 */
 	public static GateKeeper getHallGateKeeper(int npcId)
 	{
 		for (GateKeeper gk : FourSepulchersSpawn._GateKeepers)
@@ -539,6 +699,13 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		return null;
 	}
 	
+	/**
+	 * Method showHtmlFile.
+	 * @param player Player
+	 * @param file String
+	 * @param npc NpcInstance
+	 * @param member Player
+	 */
 	public static void showHtmlFile(Player player, String file, NpcInstance npc, Player member)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
@@ -550,6 +717,10 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		player.sendPacket(html);
 	}
 	
+	/**
+	 * Method isPlayersAnnihilated.
+	 * @return boolean
+	 */
 	private static boolean isPlayersAnnihilated()
 	{
 		for (Player pc : getPlayersInside())
@@ -562,6 +733,10 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		return true;
 	}
 	
+	/**
+	 * Method getPlayersInside.
+	 * @return List<Player>
+	 */
 	private static List<Player> getPlayersInside()
 	{
 		List<Player> result = new ArrayList<>();
@@ -572,6 +747,11 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		return result;
 	}
 	
+	/**
+	 * Method checkIfInZone.
+	 * @param cha Creature
+	 * @return boolean
+	 */
 	private static boolean checkIfInZone(Creature cha)
 	{
 		for (Zone zone : getZones())
@@ -584,22 +764,38 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		return false;
 	}
 	
+	/**
+	 * Method getZones.
+	 * @return Zone[]
+	 */
 	public static Zone[] getZones()
 	{
 		return _zone;
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 		init();
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

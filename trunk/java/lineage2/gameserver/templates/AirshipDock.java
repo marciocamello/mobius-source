@@ -19,16 +19,46 @@ import lineage2.gameserver.model.entity.events.objects.BoatPoint;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AirshipDock
 {
+	/**
+	 * @author Mobius
+	 */
 	public static class AirshipPlatform
 	{
+		/**
+		 * Field _oustMovie.
+		 */
 		private final SceneMovie _oustMovie;
+		/**
+		 * Field _oustLoc.
+		 */
 		private final Location _oustLoc;
+		/**
+		 * Field _spawnLoc.
+		 */
 		private final Location _spawnLoc;
+		/**
+		 * Field _arrivalPoints.
+		 */
 		private List<BoatPoint> _arrivalPoints = Collections.emptyList();
+		/**
+		 * Field _departPoints.
+		 */
 		private List<BoatPoint> _departPoints = Collections.emptyList();
 		
+		/**
+		 * Constructor for AirshipPlatform.
+		 * @param movie SceneMovie
+		 * @param oustLoc Location
+		 * @param spawnLoc Location
+		 * @param arrival List<BoatPoint>
+		 * @param depart List<BoatPoint>
+		 */
 		public AirshipPlatform(SceneMovie movie, Location oustLoc, Location spawnLoc, List<BoatPoint> arrival, List<BoatPoint> depart)
 		{
 			_oustMovie = movie;
@@ -38,36 +68,71 @@ public class AirshipDock
 			_departPoints = depart;
 		}
 		
+		/**
+		 * Method getOustMovie.
+		 * @return SceneMovie
+		 */
 		public SceneMovie getOustMovie()
 		{
 			return _oustMovie;
 		}
 		
+		/**
+		 * Method getOustLoc.
+		 * @return Location
+		 */
 		public Location getOustLoc()
 		{
 			return _oustLoc;
 		}
 		
+		/**
+		 * Method getSpawnLoc.
+		 * @return Location
+		 */
 		public Location getSpawnLoc()
 		{
 			return _spawnLoc;
 		}
 		
+		/**
+		 * Method getArrivalPoints.
+		 * @return List<BoatPoint>
+		 */
 		public List<BoatPoint> getArrivalPoints()
 		{
 			return _arrivalPoints;
 		}
 		
+		/**
+		 * Method getDepartPoints.
+		 * @return List<BoatPoint>
+		 */
 		public List<BoatPoint> getDepartPoints()
 		{
 			return _departPoints;
 		}
 	}
 	
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _teleportList.
+	 */
 	private List<BoatPoint> _teleportList = Collections.emptyList();
+	/**
+	 * Field _platformList.
+	 */
 	private List<AirshipPlatform> _platformList = Collections.emptyList();
 	
+	/**
+	 * Constructor for AirshipDock.
+	 * @param id int
+	 * @param teleport List<BoatPoint>
+	 * @param platformList List<AirshipPlatform>
+	 */
 	public AirshipDock(int id, List<BoatPoint> teleport, List<AirshipPlatform> platformList)
 	{
 		_id = id;
@@ -75,16 +140,29 @@ public class AirshipDock
 		_platformList = platformList;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getTeleportList.
+	 * @return List<BoatPoint>
+	 */
 	public List<BoatPoint> getTeleportList()
 	{
 		return _teleportList;
 	}
 	
+	/**
+	 * Method getPlatform.
+	 * @param id int
+	 * @return AirshipPlatform
+	 */
 	public AirshipPlatform getPlatform(int id)
 	{
 		return _platformList.get(id);

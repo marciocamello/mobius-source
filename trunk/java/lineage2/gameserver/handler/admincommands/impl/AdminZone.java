@@ -25,17 +25,47 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.templates.mapregion.DomainArea;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminZone implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_zone_check.
+		 */
 		admin_zone_check,
+		/**
+		 * Field admin_region.
+		 */
 		admin_region,
+		/**
+		 * Field admin_pos.
+		 */
 		admin_pos,
+		/**
+		 * Field admin_vis_count.
+		 */
 		admin_vis_count,
+		/**
+		 * Field admin_domain.
+		 */
 		admin_domain
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -100,6 +130,10 @@ public class AdminZone implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

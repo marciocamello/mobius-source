@@ -20,10 +20,23 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OiAriosh extends Fighter
 {
+	/**
+	 * Field MOB. (value is 18556)
+	 */
 	private static final int MOB = 18556;
+	/**
+	 * Field _hpCount.
+	 */
 	private int _hpCount = 0;
+	/**
+	 * Field _hps.
+	 */
 	private static final int[] _hps =
 	{
 		80,
@@ -36,11 +49,20 @@ public class OiAriosh extends Fighter
 		-5
 	};
 	
+	/**
+	 * Constructor for OiAriosh.
+	 * @param actor NpcInstance
+	 */
 	public OiAriosh(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -56,6 +78,10 @@ public class OiAriosh extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method spawnMob.
+	 * @param attacker Creature
+	 */
 	private void spawnMob(Creature attacker)
 	{
 		NpcInstance actor = getActor();
@@ -73,6 +99,10 @@ public class OiAriosh extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

@@ -12,14 +12,27 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCubeGameCloseUI extends L2GameServerPacket
 {
+	/**
+	 * Field _seconds.
+	 */
 	int _seconds;
 	
+	/**
+	 * Constructor for ExCubeGameCloseUI.
+	 */
 	public ExCubeGameCloseUI()
 	{
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

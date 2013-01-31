@@ -17,14 +17,36 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestCommissionList extends L2GameClientPacket
 {
+	/**
+	 * Field listType.
+	 */
 	private int listType;
+	/**
+	 * Field category.
+	 */
 	private int category;
+	/**
+	 * Field rareType.
+	 */
 	private int rareType;
+	/**
+	 * Field itemGrade.
+	 */
 	private int itemGrade;
+	/**
+	 * Field searchName.
+	 */
 	private String searchName;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -35,6 +57,9 @@ public class RequestCommissionList extends L2GameClientPacket
 		searchName = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -14,17 +14,35 @@ package lineage2.gameserver.network.loginservercon.gspackets;
 
 import lineage2.gameserver.network.loginservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Player2ndAuthSetAttempts extends SendablePacket
 {
+	/**
+	 * Field _login.
+	 */
 	private final String _login;
+	/**
+	 * Field _attempts.
+	 */
 	private final int _attempts;
 	
+	/**
+	 * Constructor for Player2ndAuthSetAttempts.
+	 * @param login String
+	 * @param attempts int
+	 */
 	public Player2ndAuthSetAttempts(String login, int attempts)
 	{
 		_login = login;
 		_attempts = attempts;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

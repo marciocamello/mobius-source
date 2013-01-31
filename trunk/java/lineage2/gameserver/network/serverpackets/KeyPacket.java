@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KeyPacket extends L2GameServerPacket
 {
+	/**
+	 * Field _key.
+	 */
 	private final byte[] _key;
 	
+	/**
+	 * Constructor for KeyPacket.
+	 * @param key byte[]
+	 */
 	public KeyPacket(byte[] key)
 	{
 		_key = key;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	public void writeImpl()
 	{

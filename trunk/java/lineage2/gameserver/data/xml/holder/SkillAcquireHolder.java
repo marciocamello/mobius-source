@@ -30,24 +30,65 @@ import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.SubUnit;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class SkillAcquireHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final SkillAcquireHolder _instance = new SkillAcquireHolder();
 	
+	/**
+	 * Method getInstance.
+	 * @return SkillAcquireHolder
+	 */
 	public static SkillAcquireHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _normalSkillTree.
+	 */
 	private static HashMap<Integer, List<SkillLearn>> _normalSkillTree = new HashMap<>();
+	/**
+	 * Field _transferSkillTree.
+	 */
 	private static HashMap<Integer, List<SkillLearn>> _transferSkillTree = new HashMap<>();
+	/**
+	 * Field _fishingSkillTree.
+	 */
 	private static HashMap<Integer, List<SkillLearn>> _fishingSkillTree = new HashMap<>();
+	/**
+	 * Field _transformationSkillTree.
+	 */
 	private static HashMap<Integer, List<SkillLearn>> _transformationSkillTree = new HashMap<>();
+	/**
+	 * Field _certificationSkillTree.
+	 */
 	private static GArray<SkillLearn> _certificationSkillTree = new GArray<>();
+	/**
+	 * Field _collectionSkillTree.
+	 */
 	private static GArray<SkillLearn> _collectionSkillTree = new GArray<>();
+	/**
+	 * Field _pledgeSkillTree.
+	 */
 	private static GArray<SkillLearn> _pledgeSkillTree = new GArray<>();
+	/**
+	 * Field _subUnitSkillTree.
+	 */
 	private static GArray<SkillLearn> _subUnitSkillTree = new GArray<>();
 	
+	/**
+	 * Method getMinLevelForNewSkill.
+	 * @param player Player
+	 * @param type AcquireType
+	 * @return int
+	 */
 	public int getMinLevelForNewSkill(Player player, AcquireType type)
 	{
 		GArray<SkillLearn> skills = new GArray<>();
@@ -96,11 +137,24 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return minlevel;
 	}
 	
+	/**
+	 * Method getAvailableSkills.
+	 * @param player Player
+	 * @param type AcquireType
+	 * @return Collection<SkillLearn>
+	 */
 	public Collection<SkillLearn> getAvailableSkills(Player player, AcquireType type)
 	{
 		return getAvailableSkills(player, type, null);
 	}
 	
+	/**
+	 * Method getAvailableSkills.
+	 * @param player Player
+	 * @param type AcquireType
+	 * @param subUnit SubUnit
+	 * @return Collection<SkillLearn>
+	 */
 	public Collection<SkillLearn> getAvailableSkills(Player player, AcquireType type, SubUnit subUnit)
 	{
 		GArray<SkillLearn> skills = new GArray<>();
@@ -186,6 +240,11 @@ public final class SkillAcquireHolder extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method getAvailableAllSkills.
+	 * @param player Player
+	 * @return Collection<SkillLearn>
+	 */
 	public Collection<SkillLearn> getAvailableAllSkills(Player player)
 	{
 		GArray<SkillLearn> skills = new GArray<>();
@@ -199,6 +258,12 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return getAvaliableAllList(skills, player.getAllSkillsArray(), player.getLevel());
 	}
 	
+	/**
+	 * Method getAvailableAllSkillsForDellet.
+	 * @param player Player
+	 * @param newClassId int
+	 * @return Collection<SkillLearn>
+	 */
 	public Collection<SkillLearn> getAvailableAllSkillsForDellet(Player player, int newClassId)
 	{
 		GArray<SkillLearn> skills = new GArray<>();
@@ -212,6 +277,13 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return getAvaliableAllList(skills, player.getAllSkillsArray(), player.getLevel());
 	}
 	
+	/**
+	 * Method getAvaliableAllList.
+	 * @param skillLearns Collection<SkillLearn>
+	 * @param skills Skill[]
+	 * @param level int
+	 * @return Collection<SkillLearn>
+	 */
 	private Collection<SkillLearn> getAvaliableAllList(Collection<SkillLearn> skillLearns, Skill[] skills, int level)
 	{
 		Set<SkillLearn> skillLearnMap = new HashSet<>();
@@ -249,6 +321,13 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return skillLearnMap;
 	}
 	
+	/**
+	 * Method getAvaliableList.
+	 * @param skillLearns Collection<SkillLearn>
+	 * @param skills Skill[]
+	 * @param level int
+	 * @return Collection<SkillLearn>
+	 */
 	private Collection<SkillLearn> getAvaliableList(final Collection<SkillLearn> skillLearns, Skill[] skills, int level)
 	{
 		Set<SkillLearn> skillLearnMap = new HashSet<>();
@@ -290,6 +369,14 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return skillLearnMap;
 	}
 	
+	/**
+	 * Method getSkillLearn.
+	 * @param player Player
+	 * @param id int
+	 * @param level int
+	 * @param type AcquireType
+	 * @return SkillLearn
+	 */
 	public SkillLearn getSkillLearn(Player player, int id, int level, AcquireType type)
 	{
 		GArray<SkillLearn> skills = new GArray<>();
@@ -342,6 +429,13 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return null;
 	}
 	
+	/**
+	 * Method isSkillPossible.
+	 * @param player Player
+	 * @param skill Skill
+	 * @param type AcquireType
+	 * @return boolean
+	 */
 	public boolean isSkillPossible(Player player, Skill skill, AcquireType type)
 	{
 		Clan clan = null;
@@ -398,6 +492,12 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return isSkillPossible(skills, skill);
 	}
 	
+	/**
+	 * Method isSkillPossible.
+	 * @param skills Collection<SkillLearn>
+	 * @param skill Skill
+	 * @return boolean
+	 */
 	private boolean isSkillPossible(final Collection<SkillLearn> skills, Skill skill)
 	{
 		for (SkillLearn learn : skills)
@@ -410,6 +510,12 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return false;
 	}
 	
+	/**
+	 * Method isSkillPossible.
+	 * @param player Player
+	 * @param skill Skill
+	 * @return boolean
+	 */
 	public boolean isSkillPossible(Player player, Skill skill)
 	{
 		for (AcquireType aq : AcquireType.VALUES)
@@ -423,6 +529,12 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return false;
 	}
 	
+	/**
+	 * Method getSkillLearnListByItemId.
+	 * @param player Player
+	 * @param itemId int
+	 * @return List<SkillLearn>
+	 */
 	public List<SkillLearn> getSkillLearnListByItemId(Player player, int itemId)
 	{
 		List<SkillLearn> learns = _normalSkillTree.get(player.getActiveClassId());
@@ -443,6 +555,10 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return l;
 	}
 	
+	/**
+	 * Method getAllNormalSkillTreeWithForgottenScrolls.
+	 * @return List<SkillLearn>
+	 */
 	public List<SkillLearn> getAllNormalSkillTreeWithForgottenScrolls()
 	{
 		List<SkillLearn> a = new ArrayList<>();
@@ -460,6 +576,10 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return a;
 	}
 	
+	/**
+	 * Method addAllNormalSkillLearns.
+	 * @param map HashMap<Integer,List<SkillLearn>>
+	 */
 	public void addAllNormalSkillLearns(HashMap<Integer, List<SkillLearn>> map)
 	{
 		int classID;
@@ -510,41 +630,75 @@ public final class SkillAcquireHolder extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method addAllFishingLearns.
+	 * @param race int
+	 * @param s List<SkillLearn>
+	 */
 	public void addAllFishingLearns(int race, List<SkillLearn> s)
 	{
 		_fishingSkillTree.put(race, s);
 	}
 	
+	/**
+	 * Method addAllTransferLearns.
+	 * @param classId int
+	 * @param s List<SkillLearn>
+	 */
 	public void addAllTransferLearns(int classId, List<SkillLearn> s)
 	{
 		_transferSkillTree.put(classId, s);
 	}
 	
+	/**
+	 * Method addAllTransformationLearns.
+	 * @param race int
+	 * @param s List<SkillLearn>
+	 */
 	public void addAllTransformationLearns(int race, List<SkillLearn> s)
 	{
 		_transformationSkillTree.put(race, s);
 	}
 	
+	/**
+	 * Method addAllCertificationLearns.
+	 * @param s List<SkillLearn>
+	 */
 	public void addAllCertificationLearns(List<SkillLearn> s)
 	{
 		_certificationSkillTree.addAll(s);
 	}
 	
+	/**
+	 * Method addAllCollectionLearns.
+	 * @param s List<SkillLearn>
+	 */
 	public void addAllCollectionLearns(List<SkillLearn> s)
 	{
 		_collectionSkillTree.addAll(s);
 	}
 	
+	/**
+	 * Method addAllSubUnitLearns.
+	 * @param s List<SkillLearn>
+	 */
 	public void addAllSubUnitLearns(List<SkillLearn> s)
 	{
 		_subUnitSkillTree.addAll(s);
 	}
 	
+	/**
+	 * Method addAllPledgeLearns.
+	 * @param s List<SkillLearn>
+	 */
 	public void addAllPledgeLearns(List<SkillLearn> s)
 	{
 		_pledgeSkillTree.addAll(s);
 	}
 	
+	/**
+	 * Method log.
+	 */
 	@Override
 	public void log()
 	{
@@ -558,6 +712,10 @@ public final class SkillAcquireHolder extends AbstractHolder
 		info("load " + _subUnitSkillTree.size() + " sub unit learns.");
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Deprecated
 	@Override
 	public int size()
@@ -565,6 +723,9 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return 0;
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{
@@ -577,6 +738,11 @@ public final class SkillAcquireHolder extends AbstractHolder
 		_subUnitSkillTree.clear();
 	}
 	
+	/**
+	 * Method sizeHashMap.
+	 * @param a HashMap<Integer,List<SkillLearn>>
+	 * @return int
+	 */
 	private int sizeHashMap(HashMap<Integer, List<SkillLearn>> a)
 	{
 		int i = 0;

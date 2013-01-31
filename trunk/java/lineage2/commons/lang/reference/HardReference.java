@@ -12,9 +12,20 @@
  */
 package lineage2.commons.lang.reference;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface HardReference<T>
 {
+	/**
+	 * Method get.
+	 * @return T
+	 */
 	public T get();
 	
+	/**
+	 * Method clear.
+	 */
 	public void clear();
 }

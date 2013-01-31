@@ -20,18 +20,36 @@ import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
 import java.util.Locale;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class Locator
 {
+	/**
+	 * Constructor for Locator.
+	 */
 	private Locator()
 	{
 	}
 	
+	/**
+	 * Method getClassSource.
+	 * @param c Class<?>
+	 * @return File
+	 */
 	public static File getClassSource(Class<?> c)
 	{
 		String classResource = c.getName().replace('.', '/') + ".class";
 		return getResourceSource(c.getClassLoader(), classResource);
 	}
 	
+	/**
+	 * Method getResourceSource.
+	 * @param c ClassLoader
+	 * @param resource String
+	 * @return File
+	 */
 	public static File getResourceSource(ClassLoader c, String resource)
 	{
 		if (c == null)
@@ -66,6 +84,11 @@ public final class Locator
 		return null;
 	}
 	
+	/**
+	 * Method fromURI.
+	 * @param uri String
+	 * @return String
+	 */
 	public static String fromURI(String uri)
 	{
 		URL url = null;
@@ -97,6 +120,11 @@ public final class Locator
 		return path;
 	}
 	
+	/**
+	 * Method decodeUri.
+	 * @param uri String
+	 * @return String
+	 */
 	private static String decodeUri(String uri)
 	{
 		if (uri.indexOf('%') == -1)
@@ -130,6 +158,10 @@ public final class Locator
 		return path;
 	}
 	
+	/**
+	 * Method getToolsJar.
+	 * @return File
+	 */
 	public static File getToolsJar()
 	{
 		boolean toolsJarAvailable = false;
@@ -167,6 +199,11 @@ public final class Locator
 		return toolsJar;
 	}
 	
+	/**
+	 * Method getLocationURLs.
+	 * @param location File
+	 * @return URL[] * @throws MalformedURLException
+	 */
 	public static URL[] getLocationURLs(File location) throws MalformedURLException
 	{
 		return getLocationURLs(location, new String[]
@@ -175,6 +212,12 @@ public final class Locator
 		});
 	}
 	
+	/**
+	 * Method getLocationURLs.
+	 * @param location File
+	 * @param extensions String[]
+	 * @return URL[] * @throws MalformedURLException
+	 */
 	public static URL[] getLocationURLs(File location, final String[] extensions) throws MalformedURLException
 	{
 		URL[] urls = new URL[0];

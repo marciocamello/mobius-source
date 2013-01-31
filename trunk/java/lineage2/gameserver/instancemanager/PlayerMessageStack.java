@@ -21,11 +21,25 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PlayerMessageStack
 {
+	/**
+	 * Field _instance.
+	 */
 	private static PlayerMessageStack _instance;
+	/**
+	 * Field _stack.
+	 */
 	private final Map<Integer, List<L2GameServerPacket>> _stack = new HashMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return PlayerMessageStack
+	 */
 	public static PlayerMessageStack getInstance()
 	{
 		if (_instance == null)
@@ -35,10 +49,18 @@ public class PlayerMessageStack
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for PlayerMessageStack.
+	 */
 	public PlayerMessageStack()
 	{
 	}
 	
+	/**
+	 * Method mailto.
+	 * @param char_obj_id int
+	 * @param message L2GameServerPacket
+	 */
 	public void mailto(int char_obj_id, L2GameServerPacket message)
 	{
 		Player cha = GameObjectsStorage.getPlayer(char_obj_id);
@@ -63,6 +85,10 @@ public class PlayerMessageStack
 		}
 	}
 	
+	/**
+	 * Method CheckMessages.
+	 * @param cha Player
+	 */
 	public void CheckMessages(Player cha)
 	{
 		List<L2GameServerPacket> messages = null;

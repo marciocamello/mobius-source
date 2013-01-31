@@ -15,15 +15,31 @@ package lineage2.gameserver.model.entity.events.actions;
 import lineage2.gameserver.model.entity.events.EventAction;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AnnounceAction implements EventAction
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
 	
+	/**
+	 * Constructor for AnnounceAction.
+	 * @param id int
+	 */
 	public AnnounceAction(int id)
 	{
 		_id = id;
 	}
 	
+	/**
+	 * Method call.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.EventAction#call(GlobalEvent)
+	 */
 	@Override
 	public void call(GlobalEvent event)
 	{

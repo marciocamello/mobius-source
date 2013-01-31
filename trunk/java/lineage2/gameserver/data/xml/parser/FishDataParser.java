@@ -29,32 +29,59 @@ import lineage2.gameserver.templates.item.support.LureType;
 import org.dom4j.Attribute;
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FishDataParser extends AbstractFileParser<FishDataHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final FishDataParser _instance = new FishDataParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return FishDataParser
+	 */
 	public static FishDataParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for FishDataParser.
+	 */
 	private FishDataParser()
 	{
 		super(FishDataHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/other/fishdata.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "fishdata.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

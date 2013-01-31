@@ -15,11 +15,24 @@ package lineage2.loginserver.gameservercon.gspackets;
 import lineage2.loginserver.accounts.SecondaryPasswordAuth;
 import lineage2.loginserver.gameservercon.ReceivablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Player2ndAuthSetAttempts extends ReceivablePacket
 {
+	/**
+	 * Field _account.
+	 */
 	private String _account;
+	/**
+	 * Field _attempts.
+	 */
 	private int _attempts;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -27,6 +40,9 @@ public class Player2ndAuthSetAttempts extends ReceivablePacket
 		_attempts = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

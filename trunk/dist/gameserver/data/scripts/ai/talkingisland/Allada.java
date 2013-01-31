@@ -15,8 +15,16 @@ package ai.talkingisland;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Allada extends AlladaSubAI
 {
+	/**
+	 * Constructor for Allada.
+	 * @param actor NpcInstance
+	 */
 	public Allada(NpcInstance actor)
 	{
 		super(actor);

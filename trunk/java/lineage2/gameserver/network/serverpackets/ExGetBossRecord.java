@@ -14,12 +14,31 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.List;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExGetBossRecord extends L2GameServerPacket
 {
+	/**
+	 * Field _bossRecordInfo.
+	 */
 	private final List<BossRecordInfo> _bossRecordInfo;
+	/**
+	 * Field _ranking.
+	 */
 	private final int _ranking;
+	/**
+	 * Field _totalPoints.
+	 */
 	private final int _totalPoints;
 	
+	/**
+	 * Constructor for ExGetBossRecord.
+	 * @param ranking int
+	 * @param totalScore int
+	 * @param bossRecordInfo List<BossRecordInfo>
+	 */
 	public ExGetBossRecord(int ranking, int totalScore, List<BossRecordInfo> bossRecordInfo)
 	{
 		_ranking = ranking;
@@ -27,6 +46,9 @@ public class ExGetBossRecord extends L2GameServerPacket
 		_bossRecordInfo = bossRecordInfo;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -42,12 +64,30 @@ public class ExGetBossRecord extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class BossRecordInfo
 	{
+		/**
+		 * Field _bossId.
+		 */
 		public int _bossId;
+		/**
+		 * Field _points.
+		 */
 		public int _points;
+		/**
+		 * Field _unk1.
+		 */
 		public int _unk1;
 		
+		/**
+		 * Constructor for BossRecordInfo.
+		 * @param bossId int
+		 * @param points int
+		 * @param unk1 int
+		 */
 		public BossRecordInfo(int bossId, int points, int unk1)
 		{
 			_bossId = bossId;

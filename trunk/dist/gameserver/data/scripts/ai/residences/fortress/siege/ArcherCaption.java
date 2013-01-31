@@ -24,14 +24,25 @@ import lineage2.gameserver.tables.SkillTable;
 import npc.model.residences.SiegeGuardInstance;
 import ai.residences.SiegeGuardRanger;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ArcherCaption extends SiegeGuardRanger
 {
+	/**
+	 * Constructor for ArcherCaption.
+	 * @param actor NpcInstance
+	 */
 	public ArcherCaption(NpcInstance actor)
 	{
 		super(actor);
 		actor.addListener(FortressSiegeEvent.RESTORE_BARRACKS_LISTENER);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	public void onEvtSpawn()
 	{
@@ -49,6 +60,10 @@ public class ArcherCaption extends SiegeGuardRanger
 		siegeEvent.barrackAction(0, false);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onEvtDead(Creature killer)
 	{

@@ -15,16 +15,29 @@ package lineage2.loginserver.gameservercon.gspackets;
 import lineage2.loginserver.gameservercon.GameServer;
 import lineage2.loginserver.gameservercon.ReceivablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OnlineStatus extends ReceivablePacket
 {
+	/**
+	 * Field _online.
+	 */
 	private boolean _online;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_online = readC() == 1;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

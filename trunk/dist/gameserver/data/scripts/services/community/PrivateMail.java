@@ -36,11 +36,25 @@ import lineage2.gameserver.scripts.ScriptFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PrivateMail extends Functions implements ScriptFile, ICommunityBoardHandler
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(PrivateMail.class);
+	/**
+	 * Field MESSAGE_PER_PAGE. (value is 10)
+	 */
 	private static final int MESSAGE_PER_PAGE = 10;
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -51,6 +65,10 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -60,11 +78,19 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 		}
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method getBypassCommands.
+	 * @return String[] * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#getBypassCommands()
+	 */
 	@Override
 	public String[] getBypassCommands()
 	{
@@ -77,6 +103,12 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 		};
 	}
 	
+	/**
+	 * Method onBypassCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onBypassCommand(Player, String)
+	 */
 	@Override
 	public void onBypassCommand(Player player, String bypass)
 	{
@@ -176,7 +208,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 					StringBuilder goList = new StringBuilder("");
 					for (int i = page > 10 ? page - 10 : 1; i < page; i++)
 					{
-						goList.append("<td><a action=\"bypass _maillist_").append(type).append("_").append(i).append("_").append(byTitle).append("_").append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
+						goList.append("<td><a action=\"bypass _maillist_").append(type).append('_').append(i).append('_').append(byTitle).append('_').append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
 					}
 					html = html.replace("%GO_LIST%", goList.toString());
 				}
@@ -192,7 +224,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 					StringBuilder goList = new StringBuilder("");
 					for (int i = page + 1; i <= ep; i++)
 					{
-						goList.append("<td><a action=\"bypass _maillist_").append(type).append("_").append(i).append("_").append(byTitle).append("_").append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
+						goList.append("<td><a action=\"bypass _maillist_").append(type).append('_').append(i).append('_').append(byTitle).append('_').append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
 					}
 					html = html.replace("%GO_LIST2%", goList.toString());
 				}
@@ -321,6 +353,17 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 		}
 	}
 	
+	/**
+	 * Method onWriteCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @param arg1 String
+	 * @param arg2 String
+	 * @param arg3 String
+	 * @param arg4 String
+	 * @param arg5 String
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)
+	 */
 	@Override
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
@@ -332,6 +375,10 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 		}
 	}
 	
+	/**
+	 * Method OnPlayerEnter.
+	 * @param player Player
+	 */
 	public static void OnPlayerEnter(Player player)
 	{
 		Connection con = null;
@@ -359,6 +406,14 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 		}
 	}
 	
+	/**
+	 * Method getMailList.
+	 * @param player Player
+	 * @param type int
+	 * @param search String
+	 * @param byTitle boolean
+	 * @return List<MailData>
+	 */
 	private static List<MailData> getMailList(Player player, int type, String search, boolean byTitle)
 	{
 		List<MailData> list = new ArrayList<>();
@@ -405,13 +460,35 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 		return list;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class MailData
 	{
+		/**
+		 * Field author.
+		 */
 		public String author;
+		/**
+		 * Field title.
+		 */
 		public String title;
+		/**
+		 * Field postDate.
+		 */
 		public String postDate;
+		/**
+		 * Field messageId.
+		 */
 		public int messageId;
 		
+		/**
+		 * Constructor for MailData.
+		 * @param _author String
+		 * @param _title String
+		 * @param _postDate int
+		 * @param _messageId int
+		 */
 		public MailData(String _author, String _title, int _postDate, int _messageId)
 		{
 			author = _author;

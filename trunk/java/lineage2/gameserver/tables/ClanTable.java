@@ -41,13 +41,33 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanTable
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ClanTable.class);
+	/**
+	 * Field _instance.
+	 */
 	private static ClanTable _instance;
+	/**
+	 * Field _clans.
+	 */
 	private final Map<Integer, Clan> _clans = new ConcurrentHashMap<>();
+	/**
+	 * Field _alliances.
+	 */
 	private final Map<Integer, Alliance> _alliances = new ConcurrentHashMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return ClanTable
+	 */
 	public static ClanTable getInstance()
 	{
 		if (_instance == null)
@@ -57,16 +77,27 @@ public class ClanTable
 		return _instance;
 	}
 	
+	/**
+	 * Method getClans.
+	 * @return Clan[]
+	 */
 	public Clan[] getClans()
 	{
 		return _clans.values().toArray(new Clan[_clans.size()]);
 	}
 	
+	/**
+	 * Method getAlliances.
+	 * @return Alliance[]
+	 */
 	public Alliance[] getAlliances()
 	{
 		return _alliances.values().toArray(new Alliance[_alliances.size()]);
 	}
 	
+	/**
+	 * Constructor for ClanTable.
+	 */
 	private ClanTable()
 	{
 		_instance = this;
@@ -75,6 +106,11 @@ public class ClanTable
 		restoreWars();
 	}
 	
+	/**
+	 * Method getClan.
+	 * @param clanId int
+	 * @return Clan
+	 */
 	public Clan getClan(int clanId)
 	{
 		if (clanId <= 0)
@@ -84,12 +120,22 @@ public class ClanTable
 		return _clans.get(clanId);
 	}
 	
+	/**
+	 * Method getClanName.
+	 * @param clanId int
+	 * @return String
+	 */
 	public String getClanName(int clanId)
 	{
 		Clan c = getClan(clanId);
 		return c != null ? c.getName() : StringUtils.EMPTY;
 	}
 	
+	/**
+	 * Method getClanByCharId.
+	 * @param charId int
+	 * @return Clan
+	 */
 	public Clan getClanByCharId(int charId)
 	{
 		if (charId <= 0)
@@ -106,6 +152,11 @@ public class ClanTable
 		return null;
 	}
 	
+	/**
+	 * Method getAlliance.
+	 * @param allyId int
+	 * @return Alliance
+	 */
 	public Alliance getAlliance(int allyId)
 	{
 		if (allyId <= 0)
@@ -115,6 +166,11 @@ public class ClanTable
 		return _alliances.get(allyId);
 	}
 	
+	/**
+	 * Method getAllianceByCharId.
+	 * @param charId int
+	 * @return Alliance
+	 */
 	public Alliance getAllianceByCharId(int charId)
 	{
 		if (charId <= 0)
@@ -125,6 +181,11 @@ public class ClanTable
 		return charClan == null ? null : charClan.getAlliance();
 	}
 	
+	/**
+	 * Method getClanAndAllianceByCharId.
+	 * @param charId int
+	 * @return Map.Entry<Clan,Alliance>
+	 */
 	public Map.Entry<Clan, Alliance> getClanAndAllianceByCharId(int charId)
 	{
 		Player player = GameObjectsStorage.getPlayer(charId);
@@ -132,6 +193,9 @@ public class ClanTable
 		return new SimpleEntry<>(charClan, charClan == null ? null : charClan.getAlliance());
 	}
 	
+	/**
+	 * Method restoreClans.
+	 */
 	public void restoreClans()
 	{
 		List<Integer> clanIds = new ArrayList<>();
@@ -178,6 +242,9 @@ public class ClanTable
 		}
 	}
 	
+	/**
+	 * Method restoreAllies.
+	 */
 	public void restoreAllies()
 	{
 		List<Integer> allyIds = new ArrayList<>();
@@ -219,6 +286,11 @@ public class ClanTable
 		}
 	}
 	
+	/**
+	 * Method getClanByName.
+	 * @param clanName String
+	 * @return Clan
+	 */
 	public Clan getClanByName(String clanName)
 	{
 		if (!Util.isMatchingRegexp(clanName, Config.CLAN_NAME_TEMPLATE))
@@ -235,6 +307,11 @@ public class ClanTable
 		return null;
 	}
 	
+	/**
+	 * Method getAllyByName.
+	 * @param allyName String
+	 * @return Alliance
+	 */
 	public Alliance getAllyByName(String allyName)
 	{
 		if (!Util.isMatchingRegexp(allyName, Config.ALLY_NAME_TEMPLATE))
@@ -251,6 +328,12 @@ public class ClanTable
 		return null;
 	}
 	
+	/**
+	 * Method createClan.
+	 * @param player Player
+	 * @param clanName String
+	 * @return Clan
+	 */
 	public Clan createClan(Player player, String clanName)
 	{
 		if (getClanByName(clanName) == null)
@@ -272,6 +355,10 @@ public class ClanTable
 		return null;
 	}
 	
+	/**
+	 * Method dissolveClan.
+	 * @param player Player
+	 */
 	public void dissolveClan(Player player)
 	{
 		Clan clan = player.getClan();
@@ -292,6 +379,10 @@ public class ClanTable
 		player.setDeleteClanTime(curtime);
 	}
 	
+	/**
+	 * Method deleteClanFromDb.
+	 * @param clanId int
+	 */
 	public void deleteClanFromDb(int clanId)
 	{
 		long curtime = System.currentTimeMillis();
@@ -331,6 +422,12 @@ public class ClanTable
 		}
 	}
 	
+	/**
+	 * Method createAlliance.
+	 * @param player Player
+	 * @param allyName String
+	 * @return Alliance
+	 */
 	public Alliance createAlliance(Player player, String allyName)
 	{
 		Alliance alliance = null;
@@ -349,6 +446,10 @@ public class ClanTable
 		return alliance;
 	}
 	
+	/**
+	 * Method dissolveAlly.
+	 * @param player Player
+	 */
 	public void dissolveAlly(Player player)
 	{
 		int allyId = player.getAllyId();
@@ -365,6 +466,10 @@ public class ClanTable
 		player.getClan().setDissolvedAlly();
 	}
 	
+	/**
+	 * Method deleteAllyFromDb.
+	 * @param allyId int
+	 */
 	public void deleteAllyFromDb(int allyId)
 	{
 		Connection con = null;
@@ -390,6 +495,11 @@ public class ClanTable
 		}
 	}
 	
+	/**
+	 * Method startClanWar.
+	 * @param clan1 Clan
+	 * @param clan2 Clan
+	 */
 	public void startClanWar(Clan clan1, Clan clan2)
 	{
 		clan1.setEnemyClan(clan2);
@@ -418,6 +528,11 @@ public class ClanTable
 		clan2.broadcastToOnlineMembers(new SystemMessage(SystemMessage.S1_CLAN_HAS_DECLARED_CLAN_WAR).addString(clan1.getName()));
 	}
 	
+	/**
+	 * Method stopClanWar.
+	 * @param clan1 Clan
+	 * @param clan2 Clan
+	 */
 	public void stopClanWar(Clan clan1, Clan clan2)
 	{
 		clan1.deleteEnemyClan(clan2);
@@ -446,6 +561,9 @@ public class ClanTable
 		clan2.broadcastToOnlineMembers(new SystemMessage(SystemMessage.S1_CLAN_HAS_STOPPED_THE_WAR).addString(clan1.getName()));
 	}
 	
+	/**
+	 * Method restoreWars.
+	 */
 	private void restoreWars()
 	{
 		Connection con = null;
@@ -480,6 +598,9 @@ public class ClanTable
 		}
 	}
 	
+	/**
+	 * Method unload.
+	 */
 	public static void unload()
 	{
 		if (_instance != null)

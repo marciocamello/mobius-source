@@ -15,21 +15,42 @@ package lineage2.gameserver.listener.actor.door.impl;
 import lineage2.gameserver.listener.actor.door.OnOpenCloseListener;
 import lineage2.gameserver.model.instances.DoorInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MasterOnOpenCloseListenerImpl implements OnOpenCloseListener
 {
+	/**
+	 * Field _door.
+	 */
 	private final DoorInstance _door;
 	
+	/**
+	 * Constructor for MasterOnOpenCloseListenerImpl.
+	 * @param door DoorInstance
+	 */
 	public MasterOnOpenCloseListenerImpl(DoorInstance door)
 	{
 		_door = door;
 	}
 	
+	/**
+	 * Method onOpen.
+	 * @param doorInstance DoorInstance
+	 * @see lineage2.gameserver.listener.actor.door.OnOpenCloseListener#onOpen(DoorInstance)
+	 */
 	@Override
 	public void onOpen(DoorInstance doorInstance)
 	{
 		_door.openMe();
 	}
 	
+	/**
+	 * Method onClose.
+	 * @param doorInstance DoorInstance
+	 * @see lineage2.gameserver.listener.actor.door.OnOpenCloseListener#onClose(DoorInstance)
+	 */
 	@Override
 	public void onClose(DoorInstance doorInstance)
 	{

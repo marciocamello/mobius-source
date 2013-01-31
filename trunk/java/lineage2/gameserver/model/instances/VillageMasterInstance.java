@@ -42,15 +42,32 @@ import lineage2.gameserver.utils.CertificationFunctions;
 import lineage2.gameserver.utils.SiegeUtils;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class VillageMasterInstance extends NpcInstance
 {
+	/**
+	 * Field serialVersionUID. (value is 5239866251261965991)
+	 */
 	private static final long serialVersionUID = 5239866251261965991L;
 	
+	/**
+	 * Constructor for VillageMasterInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public VillageMasterInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -152,6 +169,13 @@ public final class VillageMasterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
@@ -167,6 +191,11 @@ public final class VillageMasterInstance extends NpcInstance
 		return "villagemaster/" + pom + ".htm";
 	}
 	
+	/**
+	 * Method createClan.
+	 * @param player Player
+	 * @param clanName String
+	 */
 	public void createClan(Player player, String clanName)
 	{
 		if (player.getLevel() < 10)
@@ -206,6 +235,11 @@ public final class VillageMasterInstance extends NpcInstance
 		player.broadcastCharInfo();
 	}
 	
+	/**
+	 * Method setLeader.
+	 * @param leader Player
+	 * @param newLeader String
+	 */
 	public void setLeader(Player leader, String newLeader)
 	{
 		if (!leader.isClanLeader())
@@ -234,6 +268,13 @@ public final class VillageMasterInstance extends NpcInstance
 		setLeader(leader, clan, mainUnit, member);
 	}
 	
+	/**
+	 * Method setLeader.
+	 * @param player Player
+	 * @param clan Clan
+	 * @param unit SubUnit
+	 * @param newLeader UnitMember
+	 */
 	public static void setLeader(Player player, Clan clan, SubUnit unit, UnitMember newLeader)
 	{
 		player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.ClanLeaderWillBeChangedFromS1ToS2", player).addString(clan.getLeaderName()).addString(newLeader.getName()));
@@ -241,6 +282,14 @@ public final class VillageMasterInstance extends NpcInstance
 		clan.broadcastClanStatus(true, true, false);
 	}
 	
+	/**
+	 * Method createSubPledge.
+	 * @param player Player
+	 * @param clanName String
+	 * @param pledgeType int
+	 * @param minClanLvl int
+	 * @param leaderName String
+	 */
 	public void createSubPledge(Player player, String clanName, int pledgeType, int minClanLvl, String leaderName)
 	{
 		UnitMember subLeader = null;
@@ -327,6 +376,12 @@ public final class VillageMasterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method assignSubPledgeLeader.
+	 * @param player Player
+	 * @param clanName String
+	 * @param leaderName String
+	 */
 	public void assignSubPledgeLeader(Player player, String clanName, String leaderName)
 	{
 		Clan clan = player.getClan();
@@ -380,6 +435,10 @@ public final class VillageMasterInstance extends NpcInstance
 		player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.NewSubUnitLeaderHasBeenAssigned", player));
 	}
 	
+	/**
+	 * Method dissolveClan.
+	 * @param player Player
+	 */
 	private void dissolveClan(Player player)
 	{
 		if ((player == null) || (player.getClan() == null))
@@ -418,6 +477,10 @@ public final class VillageMasterInstance extends NpcInstance
 		ClanTable.getInstance().dissolveClan(player);
 	}
 	
+	/**
+	 * Method levelUpClan.
+	 * @param player Player
+	 */
 	public void levelUpClan(Player player)
 	{
 		Clan clan = player.getClan();
@@ -556,6 +619,11 @@ public final class VillageMasterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method createAlly.
+	 * @param player Player
+	 * @param allyName String
+	 */
 	public void createAlly(Player player, String allyName)
 	{
 		if (!player.isClanLeader())
@@ -602,6 +670,10 @@ public final class VillageMasterInstance extends NpcInstance
 		player.sendMessage("Alliance " + allyName + " has been created.");
 	}
 	
+	/**
+	 * Method dissolveAlly.
+	 * @param player Player
+	 */
 	private void dissolveAlly(Player player)
 	{
 		if ((player == null) || (player.getAlliance() == null))

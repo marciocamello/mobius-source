@@ -22,26 +22,54 @@ import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.Henna;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class HennaHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final HennaHolder _instance = new HennaHolder();
+	/**
+	 * Field _hennas.
+	 */
 	private final TIntObjectHashMap<Henna> _hennas = new TIntObjectHashMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return HennaHolder
+	 */
 	public static HennaHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addHenna.
+	 * @param h Henna
+	 */
 	public void addHenna(Henna h)
 	{
 		_hennas.put(h.getSymbolId(), h);
 	}
 	
+	/**
+	 * Method getHenna.
+	 * @param symbolId int
+	 * @return Henna
+	 */
 	public Henna getHenna(int symbolId)
 	{
 		return _hennas.get(symbolId);
 	}
 	
+	/**
+	 * Method generateList.
+	 * @param player Player
+	 * @return List<Henna>
+	 */
 	public List<Henna> generateList(Player player)
 	{
 		List<Henna> list = new ArrayList<>();
@@ -57,12 +85,19 @@ public final class HennaHolder extends AbstractHolder
 		return list;
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _hennas.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

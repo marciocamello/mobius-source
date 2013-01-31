@@ -19,8 +19,15 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EMDam extends Skill
 {
+	/**
+	 * Field TRUE_ELEMENTS.
+	 */
 	private static final int[] TRUE_ELEMENTS =
 	{
 		11007,
@@ -29,11 +36,24 @@ public class EMDam extends Skill
 		11010
 	};
 	
+	/**
+	 * Constructor for EMDam.
+	 * @param set StatsSet
+	 */
 	public EMDam(StatsSet set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -45,13 +65,18 @@ public class EMDam extends Skill
 		{
 			if (activeChar.isPlayer())
 			{
-				activeChar.sendMessage("Необходимо активировать одну из аур...");
+				activeChar.sendMessage("�?еобходимо активироват�? одну из аур...");
 			}
 			return false;
 		}
 		return true;
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

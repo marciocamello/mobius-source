@@ -21,10 +21,21 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TiatCamera extends DefaultAI
 {
+	/**
+	 * Field _players.
+	 */
 	private final List<Player> _players = new ArrayList<>();
 	
+	/**
+	 * Constructor for TiatCamera.
+	 * @param actor NpcInstance
+	 */
 	public TiatCamera(NpcInstance actor)
 	{
 		super(actor);
@@ -32,6 +43,10 @@ public class TiatCamera extends DefaultAI
 		actor.startDamageBlocked();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

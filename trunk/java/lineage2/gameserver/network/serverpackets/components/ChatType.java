@@ -12,30 +12,106 @@
  */
 package lineage2.gameserver.network.serverpackets.components;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum ChatType
 {
+	/**
+	 * Field ALL.
+	 */
 	ALL,
+	/**
+	 * Field SHOUT.
+	 */
 	SHOUT,
+	/**
+	 * Field TELL.
+	 */
 	TELL,
+	/**
+	 * Field PARTY.
+	 */
 	PARTY,
+	/**
+	 * Field CLAN.
+	 */
 	CLAN,
+	/**
+	 * Field GM.
+	 */
 	GM,
+	/**
+	 * Field PETITION_PLAYER.
+	 */
 	PETITION_PLAYER,
+	/**
+	 * Field PETITION_GM.
+	 */
 	PETITION_GM,
+	/**
+	 * Field TRADE.
+	 */
 	TRADE,
+	/**
+	 * Field ALLIANCE.
+	 */
 	ALLIANCE,
+	/**
+	 * Field ANNOUNCEMENT.
+	 */
 	ANNOUNCEMENT,
+	/**
+	 * Field SYSTEM_MESSAGE.
+	 */
 	SYSTEM_MESSAGE,
+	/**
+	 * Field L2FRIEND.
+	 */
 	L2FRIEND,
+	/**
+	 * Field MSNCHAT.
+	 */
 	MSNCHAT,
+	/**
+	 * Field PARTY_ROOM.
+	 */
 	PARTY_ROOM,
+	/**
+	 * Field COMMANDCHANNEL_ALL.
+	 */
 	COMMANDCHANNEL_ALL,
+	/**
+	 * Field COMMANDCHANNEL_COMMANDER.
+	 */
 	COMMANDCHANNEL_COMMANDER,
+	/**
+	 * Field HERO_VOICE.
+	 */
 	HERO_VOICE,
+	/**
+	 * Field CRITICAL_ANNOUNCE.
+	 */
 	CRITICAL_ANNOUNCE,
+	/**
+	 * Field SCREEN_ANNOUNCE.
+	 */
 	SCREEN_ANNOUNCE,
+	/**
+	 * Field BATTLEFIELD.
+	 */
 	BATTLEFIELD,
+	/**
+	 * Field MPCC_ROOM.
+	 */
 	MPCC_ROOM,
+	/**
+	 * Field NPC_SAY.
+	 */
 	NPC_SAY;
+	/**
+	 * Field VALUES.
+	 */
 	public static final ChatType[] VALUES = values();
 }

@@ -24,6 +24,10 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ObservationInstance extends NpcInstance
 {
 	/**
@@ -31,11 +35,21 @@ public final class ObservationInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for ObservationInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ObservationInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -78,6 +92,13 @@ public final class ObservationInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
@@ -93,6 +114,11 @@ public final class ObservationInstance extends NpcInstance
 		return "observation/" + pom + ".htm";
 	}
 	
+	/**
+	 * Method doObserve.
+	 * @param player Player
+	 * @param val String
+	 */
 	private void doObserve(Player player, String val)
 	{
 		StringTokenizer st = new StringTokenizer(val);

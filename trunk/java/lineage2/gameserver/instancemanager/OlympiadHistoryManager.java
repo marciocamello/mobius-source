@@ -30,17 +30,37 @@ import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OlympiadHistoryManager
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final OlympiadHistoryManager _instance = new OlympiadHistoryManager();
+	/**
+	 * Field _historyNew.
+	 */
 	private final IntObjectMap<List<OlympiadHistory>> _historyNew = new CHashIntObjectMap<>();
+	/**
+	 * Field _historyOld.
+	 */
 	private final IntObjectMap<List<OlympiadHistory>> _historyOld = new CHashIntObjectMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return OlympiadHistoryManager
+	 */
 	public static OlympiadHistoryManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for OlympiadHistoryManager.
+	 */
 	OlympiadHistoryManager()
 	{
 		Map<Boolean, List<OlympiadHistory>> historyList = OlympiadHistoryDAO.getInstance().select();
@@ -53,6 +73,9 @@ public class OlympiadHistoryManager
 		}
 	}
 	
+	/**
+	 * Method switchData.
+	 */
 	public void switchData()
 	{
 		_historyOld.clear();
@@ -61,12 +84,21 @@ public class OlympiadHistoryManager
 		OlympiadHistoryDAO.getInstance().switchData();
 	}
 	
+	/**
+	 * Method saveHistory.
+	 * @param history OlympiadHistory
+	 */
 	public void saveHistory(OlympiadHistory history)
 	{
 		addHistory(false, history);
 		OlympiadHistoryDAO.getInstance().insert(history);
 	}
 	
+	/**
+	 * Method addHistory.
+	 * @param old boolean
+	 * @param history OlympiadHistory
+	 */
 	public void addHistory(boolean old, OlympiadHistory history)
 	{
 		IntObjectMap<List<OlympiadHistory>> map = old ? _historyOld : _historyNew;
@@ -74,6 +106,12 @@ public class OlympiadHistoryManager
 		addHistory0(map, history.getObjectId2(), history);
 	}
 	
+	/**
+	 * Method addHistory0.
+	 * @param map IntObjectMap<List<OlympiadHistory>>
+	 * @param objectId int
+	 * @param history OlympiadHistory
+	 */
 	private void addHistory0(IntObjectMap<List<OlympiadHistory>> map, int objectId, OlympiadHistory history)
 	{
 		List<OlympiadHistory> historySet = map.get(objectId);
@@ -84,6 +122,12 @@ public class OlympiadHistoryManager
 		historySet.add(history);
 	}
 	
+	/**
+	 * Method showHistory.
+	 * @param player Player
+	 * @param targetClassId int
+	 * @param page int
+	 */
 	public void showHistory(Player player, int targetClassId, int page)
 	{
 		final int perpage = 15;

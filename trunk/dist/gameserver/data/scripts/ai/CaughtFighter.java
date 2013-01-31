@@ -18,22 +18,43 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CaughtFighter extends Fighter
 {
+	/**
+	 * Field TIME_TO_LIVE. (value is 60000)
+	 */
 	private static final int TIME_TO_LIVE = 60000;
+	/**
+	 * Field TIME_TO_DIE.
+	 */
 	private final long TIME_TO_DIE = System.currentTimeMillis() + TIME_TO_LIVE;
 	
+	/**
+	 * Constructor for CaughtFighter.
+	 * @param actor NpcInstance
+	 */
 	public CaughtFighter(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -44,6 +65,10 @@ public class CaughtFighter extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -54,6 +79,10 @@ public class CaughtFighter extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

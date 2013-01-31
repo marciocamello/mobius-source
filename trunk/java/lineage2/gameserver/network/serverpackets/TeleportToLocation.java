@@ -16,23 +16,48 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeleportToLocation extends L2GameServerPacket
 {
+	/**
+	 * Field _targetId.
+	 */
 	private final int _targetId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for TeleportToLocation.
+	 * @param cha GameObject
+	 * @param loc Location
+	 */
 	public TeleportToLocation(GameObject cha, Location loc)
 	{
 		_targetId = cha.getObjectId();
 		_loc = loc;
 	}
 	
+	/**
+	 * Constructor for TeleportToLocation.
+	 * @param cha GameObject
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 */
 	public TeleportToLocation(GameObject cha, int x, int y, int z)
 	{
 		_targetId = cha.getObjectId();
 		_loc = new Location(x, y, z, cha.getHeading());
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

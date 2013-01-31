@@ -21,14 +21,32 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("unused")
 public class AdminRes implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_res.
+		 */
 		admin_res
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -48,17 +66,30 @@ public class AdminRes implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}
 	
+	/**
+	 * Method handleRes.
+	 * @param activeChar Player
+	 */
 	private void handleRes(Player activeChar)
 	{
 		handleRes(activeChar, null);
 	}
 	
+	/**
+	 * Method handleRes.
+	 * @param activeChar Player
+	 * @param player String
+	 */
 	private void handleRes(Player activeChar, String player)
 	{
 		GameObject obj = activeChar.getTarget();
@@ -102,6 +133,10 @@ public class AdminRes implements IAdminCommandHandler
 		}
 	}
 	
+	/**
+	 * Method handleRes.
+	 * @param target Creature
+	 */
 	private void handleRes(Creature target)
 	{
 		if (!target.isDead())

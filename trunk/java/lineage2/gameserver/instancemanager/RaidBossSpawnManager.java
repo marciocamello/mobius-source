@@ -47,21 +47,55 @@ import lineage2.gameserver.utils.SqlBatch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RaidBossSpawnManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(RaidBossSpawnManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static RaidBossSpawnManager _instance;
+	/**
+	 * Field _spawntable.
+	 */
 	protected static Map<Integer, Spawner> _spawntable = new ConcurrentHashMap<>();
+	/**
+	 * Field _storedInfo.
+	 */
 	protected static Map<Integer, StatsSet> _storedInfo;
+	/**
+	 * Field _points.
+	 */
 	protected static Map<Integer, Map<Integer, Integer>> _points;
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum Status
 	{
+		/**
+		 * Field ALIVE.
+		 */
 		ALIVE,
+		/**
+		 * Field DEAD.
+		 */
 		DEAD,
+		/**
+		 * Field UNDEFINED.
+		 */
 		UNDEFINED
 	}
 	
+	/**
+	 * Constructor for RaidBossSpawnManager.
+	 */
 	private RaidBossSpawnManager()
 	{
 		_instance = this;
@@ -71,6 +105,9 @@ public class RaidBossSpawnManager
 		}
 	}
 	
+	/**
+	 * Method reloadBosses.
+	 */
 	public void reloadBosses()
 	{
 		loadStatus();
@@ -78,6 +115,9 @@ public class RaidBossSpawnManager
 		calculateRanking();
 	}
 	
+	/**
+	 * Method cleanUp.
+	 */
 	public void cleanUp()
 	{
 		updateAllStatusDb();
@@ -87,6 +127,10 @@ public class RaidBossSpawnManager
 		_points.clear();
 	}
 	
+	/**
+	 * Method getInstance.
+	 * @return RaidBossSpawnManager
+	 */
 	public static RaidBossSpawnManager getInstance()
 	{
 		if (_instance == null)
@@ -96,6 +140,9 @@ public class RaidBossSpawnManager
 		return _instance;
 	}
 	
+	/**
+	 * Method loadStatus.
+	 */
 	private void loadStatus()
 	{
 		_storedInfo = new ConcurrentHashMap<>();
@@ -127,6 +174,9 @@ public class RaidBossSpawnManager
 		_log.info("RaidBossSpawnManager: Loaded " + _storedInfo.size() + " Statuses");
 	}
 	
+	/**
+	 * Method updateAllStatusDb.
+	 */
 	private void updateAllStatusDb()
 	{
 		for (int id : _storedInfo.keySet())
@@ -135,6 +185,10 @@ public class RaidBossSpawnManager
 		}
 	}
 	
+	/**
+	 * Method updateStatusDb.
+	 * @param id int
+	 */
 	private void updateStatusDb(int id)
 	{
 		Spawner spawner = _spawntable.get(id);
@@ -186,6 +240,11 @@ public class RaidBossSpawnManager
 		}
 	}
 	
+	/**
+	 * Method addNewSpawn.
+	 * @param npcId int
+	 * @param spawnDat Spawner
+	 */
 	public void addNewSpawn(int npcId, Spawner spawnDat)
 	{
 		if (_spawntable.containsKey(npcId))
@@ -200,6 +259,10 @@ public class RaidBossSpawnManager
 		}
 	}
 	
+	/**
+	 * Method onBossSpawned.
+	 * @param raidboss RaidBossInstance
+	 */
 	public void onBossSpawned(RaidBossInstance raidboss)
 	{
 		int bossId = raidboss.getNpcId();
@@ -216,11 +279,20 @@ public class RaidBossSpawnManager
 		GmListTable.broadcastMessageToGMs("Spawning RaidBoss " + raidboss.getName());
 	}
 	
+	/**
+	 * Method onBossDespawned.
+	 * @param raidboss RaidBossInstance
+	 */
 	public void onBossDespawned(RaidBossInstance raidboss)
 	{
 		updateStatusDb(raidboss.getNpcId());
 	}
 	
+	/**
+	 * Method getRaidBossStatusId.
+	 * @param bossId int
+	 * @return Status
+	 */
 	public Status getRaidBossStatusId(int bossId)
 	{
 		Spawner spawner = _spawntable.get(bossId);
@@ -232,20 +304,41 @@ public class RaidBossSpawnManager
 		return npc == null ? Status.DEAD : Status.ALIVE;
 	}
 	
+	/**
+	 * Method isDefined.
+	 * @param bossId int
+	 * @return boolean
+	 */
 	public boolean isDefined(int bossId)
 	{
 		return _spawntable.containsKey(bossId);
 	}
 	
+	/**
+	 * Method getSpawnTable.
+	 * @return Map<Integer,Spawner>
+	 */
 	public Map<Integer, Spawner> getSpawnTable()
 	{
 		return _spawntable;
 	}
 	
+	/**
+	 * Field KEY_RANK.
+	 */
 	public static final Integer KEY_RANK = new Integer(-1);
+	/**
+	 * Field KEY_TOTAL_POINTS.
+	 */
 	public static final Integer KEY_TOTAL_POINTS = new Integer(0);
+	/**
+	 * Field pointsLock.
+	 */
 	private final Lock pointsLock = new ReentrantLock();
 	
+	/**
+	 * Method restorePointsTable.
+	 */
 	private void restorePointsTable()
 	{
 		pointsLock.lock();
@@ -289,6 +382,9 @@ public class RaidBossSpawnManager
 		pointsLock.unlock();
 	}
 	
+	/**
+	 * Method updatePointsDb.
+	 */
 	public void updatePointsDb()
 	{
 		pointsLock.lock();
@@ -323,9 +419,9 @@ public class RaidBossSpawnManager
 						continue;
 					}
 					sb = new StringBuilder("(");
-					sb.append(pointEntry.getKey()).append(",");
-					sb.append(pointListEntry.getKey()).append(",");
-					sb.append(pointListEntry.getValue()).append(")");
+					sb.append(pointEntry.getKey()).append(',');
+					sb.append(pointListEntry.getKey()).append(',');
+					sb.append(pointListEntry.getValue()).append(')');
 					b.write(sb.toString());
 				}
 			}
@@ -345,6 +441,12 @@ public class RaidBossSpawnManager
 		pointsLock.unlock();
 	}
 	
+	/**
+	 * Method addPoints.
+	 * @param ownerId int
+	 * @param bossId int
+	 * @param points int
+	 */
 	public void addPoints(int ownerId, int bossId, int points)
 	{
 		if ((points <= 0) || (ownerId <= 0) || (bossId <= 0))
@@ -370,6 +472,10 @@ public class RaidBossSpawnManager
 		pointsLock.unlock();
 	}
 	
+	/**
+	 * Method calculateRanking.
+	 * @return TreeMap<Integer,Integer>
+	 */
 	public TreeMap<Integer, Integer> calculateRanking()
 	{
 		TreeMap<Integer, Integer> tmpRanking = new TreeMap<>();
@@ -401,6 +507,9 @@ public class RaidBossSpawnManager
 		return tmpRanking;
 	}
 	
+	/**
+	 * Method distributeRewards.
+	 */
 	public void distributeRewards()
 	{
 		pointsLock.lock();
@@ -480,11 +589,20 @@ public class RaidBossSpawnManager
 		pointsLock.unlock();
 	}
 	
+	/**
+	 * Method getPoints.
+	 * @return Map<Integer,Map<Integer,Integer>>
+	 */
 	public Map<Integer, Map<Integer, Integer>> getPoints()
 	{
 		return _points;
 	}
 	
+	/**
+	 * Method getPointsForOwnerId.
+	 * @param ownerId int
+	 * @return Map<Integer,Integer>
+	 */
 	public Map<Integer, Integer> getPointsForOwnerId(int ownerId)
 	{
 		return _points.get(ownerId);

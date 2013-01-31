@@ -17,16 +17,29 @@ import lineage2.loginserver.L2LoginClient.LoginClientState;
 import lineage2.loginserver.serverpackets.GGAuth;
 import lineage2.loginserver.serverpackets.LoginFail;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AuthGameGuard extends L2LoginClientPacket
 {
+	/**
+	 * Field _sessionId.
+	 */
 	private int _sessionId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_sessionId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

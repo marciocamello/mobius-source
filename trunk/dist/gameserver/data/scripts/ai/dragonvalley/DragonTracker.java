@@ -15,8 +15,16 @@ package ai.dragonvalley;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DragonTracker extends Patrollers
 {
+	/**
+	 * Constructor for DragonTracker.
+	 * @param actor NpcInstance
+	 */
 	public DragonTracker(NpcInstance actor)
 	{
 		super(actor);

@@ -17,25 +17,49 @@ import java.util.Collection;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetitionMainGroup extends PetitionGroup
 {
+	/**
+	 * Field _subGroups.
+	 */
 	private final IntObjectMap<PetitionSubGroup> _subGroups = new HashIntObjectMap<>();
 	
+	/**
+	 * Constructor for PetitionMainGroup.
+	 * @param id int
+	 */
 	public PetitionMainGroup(int id)
 	{
 		super(id);
 	}
 	
+	/**
+	 * Method addSubGroup.
+	 * @param subGroup PetitionSubGroup
+	 */
 	public void addSubGroup(PetitionSubGroup subGroup)
 	{
 		_subGroups.put(subGroup.getId(), subGroup);
 	}
 	
+	/**
+	 * Method getSubGroup.
+	 * @param val int
+	 * @return PetitionSubGroup
+	 */
 	public PetitionSubGroup getSubGroup(int val)
 	{
 		return _subGroups.get(val);
 	}
 	
+	/**
+	 * Method getSubGroups.
+	 * @return Collection<PetitionSubGroup>
+	 */
 	public Collection<PetitionSubGroup> getSubGroups()
 	{
 		return _subGroups.values();

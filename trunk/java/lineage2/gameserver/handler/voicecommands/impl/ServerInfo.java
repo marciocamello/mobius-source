@@ -21,8 +21,15 @@ import lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ServerInfo extends Functions implements IVoicedCommandHandler
 {
+	/**
+	 * Field _commandList.
+	 */
 	private final String[] _commandList = new String[]
 	{
 		"rev",
@@ -30,14 +37,28 @@ public class ServerInfo extends Functions implements IVoicedCommandHandler
 		"date",
 		"time"
 	};
+	/**
+	 * Field DATE_FORMAT.
+	 */
 	private static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 	
+	/**
+	 * Method getVoicedCommandList.
+	 * @return String[] * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
+	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{
 		return _commandList;
 	}
 	
+	/**
+	 * Method useVoicedCommand.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param target String
+	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String target)
 	{

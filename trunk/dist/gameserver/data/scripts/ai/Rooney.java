@@ -19,8 +19,15 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Rooney extends DefaultAI
 {
+	/**
+	 * Field points.
+	 */
 	static final Location[] points =
 	{
 		new Location(184022, -117083, -3342),
@@ -29,14 +36,28 @@ public class Rooney extends DefaultAI
 		new Location(186191, -116465, -1587),
 		new Location(189630, -115611, -1587)
 	};
+	/**
+	 * Field TELEPORT_PERIOD.
+	 */
 	private static final long TELEPORT_PERIOD = 30 * 60 * 1000;
+	/**
+	 * Field _lastTeleport.
+	 */
 	private long _lastTeleport = System.currentTimeMillis();
 	
+	/**
+	 * Constructor for Rooney.
+	 * @param actor NpcInstance
+	 */
 	public Rooney(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@SuppressWarnings("unused")
 	@Override
 	protected boolean thinkActive()
@@ -61,6 +82,10 @@ public class Rooney extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{

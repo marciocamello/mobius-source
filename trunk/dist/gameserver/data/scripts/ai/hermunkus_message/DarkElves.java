@@ -20,8 +20,15 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DarkElves extends DefaultAI
 {
+	/**
+	 * Field TEXT.
+	 */
 	private static NpcString[] TEXT =
 	{
 		NpcString.GAH_SHILEN_WHY_MUST_YOU_MAKE_US_SUFFER,
@@ -35,11 +42,21 @@ public class DarkElves extends DefaultAI
 		NpcString.I_CURSE_OUR_BLOOD_I_DESPISE_WHAT_WE_ARE_SHILEN
 	};
 	
+	/**
+	 * Constructor for DarkElves.
+	 * @param actor NpcInstance
+	 */
 	public DarkElves(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtScriptEvent.
+	 * @param event String
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
@@ -49,6 +66,12 @@ public class DarkElves extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtTimer.
+	 * @param timerId int
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{

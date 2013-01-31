@@ -16,15 +16,29 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DeleteObject extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
 	
+	/**
+	 * Constructor for DeleteObject.
+	 * @param obj GameObject
+	 */
 	public DeleteObject(GameObject obj)
 	{
 		_objectId = obj.getObjectId();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -38,6 +52,10 @@ public class DeleteObject extends L2GameServerPacket
 		writeD(0x01);
 	}
 	
+	/**
+	 * Method getType.
+	 * @return String
+	 */
 	@Override
 	public String getType()
 	{

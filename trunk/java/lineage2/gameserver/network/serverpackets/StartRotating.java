@@ -14,10 +14,24 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StartRotating extends L2GameServerPacket
 {
+	/**
+	 * Field _speed. Field _side. Field _degree. Field _charId.
+	 */
 	private final int _charId, _degree, _side, _speed;
 	
+	/**
+	 * Constructor for StartRotating.
+	 * @param cha Creature
+	 * @param degree int
+	 * @param side int
+	 * @param speed int
+	 */
 	public StartRotating(Creature cha, int degree, int side, int speed)
 	{
 		_charId = cha.getObjectId();
@@ -26,6 +40,9 @@ public class StartRotating extends L2GameServerPacket
 		_speed = speed;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

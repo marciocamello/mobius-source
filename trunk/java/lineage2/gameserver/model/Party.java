@@ -60,30 +60,103 @@ import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Party implements PlayerGroup
 {
+	/**
+	 * Field MAX_SIZE. (value is 7)
+	 */
 	public static final int MAX_SIZE = 7;
+	/**
+	 * Field ITEM_LOOTER. (value is 0)
+	 */
 	public static final int ITEM_LOOTER = 0;
+	/**
+	 * Field ITEM_RANDOM. (value is 1)
+	 */
 	public static final int ITEM_RANDOM = 1;
+	/**
+	 * Field ITEM_RANDOM_SPOIL. (value is 2)
+	 */
 	public static final int ITEM_RANDOM_SPOIL = 2;
+	/**
+	 * Field ITEM_ORDER. (value is 3)
+	 */
 	public static final int ITEM_ORDER = 3;
+	/**
+	 * Field ITEM_ORDER_SPOIL. (value is 4)
+	 */
 	public static final int ITEM_ORDER_SPOIL = 4;
+	/**
+	 * Field _members.
+	 */
 	final List<Player> _members = new CopyOnWriteArrayList<>();
+	/**
+	 * Field _tacticalSigns.
+	 */
 	private static Map<Integer, GameObject> _tacticalSigns = new HashMap<>(4);
+	/**
+	 * Field _partyLvl.
+	 */
 	private int _partyLvl = 0;
+	/**
+	 * Field _itemDistribution.
+	 */
 	private int _itemDistribution = 0;
+	/**
+	 * Field _itemOrder.
+	 */
 	private int _itemOrder = 0;
+	/**
+	 * Field _reflection.
+	 */
 	private Reflection _reflection;
+	/**
+	 * Field _commandChannel.
+	 */
 	private CommandChannel _commandChannel;
+	/**
+	 * Field _rateExp.
+	 */
 	public double _rateExp;
+	/**
+	 * Field _rateSp.
+	 */
 	public double _rateSp;
+	/**
+	 * Field _rateDrop.
+	 */
 	public double _rateDrop;
+	/**
+	 * Field _rateAdena.
+	 */
 	public double _rateAdena;
+	/**
+	 * Field _rateSpoil.
+	 */
 	public double _rateSpoil;
+	/**
+	 * Field positionTask.
+	 */
 	private ScheduledFuture<?> positionTask;
+	/**
+	 * Field _requestChangeLoot.
+	 */
 	private int _requestChangeLoot = -1;
+	/**
+	 * Field _requestChangeLootTimer.
+	 */
 	long _requestChangeLootTimer = 0;
+	/**
+	 * Field _changeLootAnswers.
+	 */
 	private Set<Integer> _changeLootAnswers = null;
+	/**
+	 * Field LOOT_SYSSTRINGS.
+	 */
 	private static final int[] LOOT_SYSSTRINGS =
 	{
 		487,
@@ -92,8 +165,16 @@ public class Party implements PlayerGroup
 		799,
 		800
 	};
+	/**
+	 * Field _checkTask.
+	 */
 	private Future<?> _checkTask = null;
 	
+	/**
+	 * Constructor for Party.
+	 * @param leader Player
+	 * @param itemDistribution int
+	 */
 	public Party(Player leader, int itemDistribution)
 	{
 		_itemDistribution = itemDistribution;
@@ -106,11 +187,21 @@ public class Party implements PlayerGroup
 		_rateSpoil = leader.getBonus().getDropSpoil();
 	}
 	
+	/**
+	 * Method getMemberCount.
+	 * @return int
+	 */
 	public int getMemberCount()
 	{
 		return _members.size();
 	}
 	
+	/**
+	 * Method getMemberCountInRange.
+	 * @param player Player
+	 * @param range int
+	 * @return int
+	 */
 	public int getMemberCountInRange(Player player, int range)
 	{
 		int count = 0;
@@ -124,11 +215,19 @@ public class Party implements PlayerGroup
 		return count;
 	}
 	
+	/**
+	 * Method getPartyMembers.
+	 * @return List<Player>
+	 */
 	public List<Player> getPartyMembers()
 	{
 		return _members;
 	}
 	
+	/**
+	 * Method getPartyMembersObjIds.
+	 * @return List<Integer>
+	 */
 	public List<Integer> getPartyMembersObjIds()
 	{
 		List<Integer> result = new ArrayList<>(_members.size());
@@ -139,6 +238,10 @@ public class Party implements PlayerGroup
 		return result;
 	}
 	
+	/**
+	 * Method getPartyMembersWithPets.
+	 * @return List<Playable>
+	 */
 	public List<Playable> getPartyMembersWithPets()
 	{
 		List<Playable> result = new ArrayList<>();
@@ -153,11 +256,20 @@ public class Party implements PlayerGroup
 		return result;
 	}
 	
+	/**
+	 * Method isLeader.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean isLeader(Player player)
 	{
 		return getPartyLeader() == player;
 	}
 	
+	/**
+	 * Method getPartyLeader.
+	 * @return Player
+	 */
 	public Player getPartyLeader()
 	{
 		synchronized (_members)
@@ -170,6 +282,11 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method broadCast.
+	 * @param msg IStaticPacket[]
+	 * @see lineage2.gameserver.model.PlayerGroup#broadCast(IStaticPacket[])
+	 */
 	@Override
 	public void broadCast(IStaticPacket... msg)
 	{
@@ -179,11 +296,20 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method broadcastMessageToPartyMembers.
+	 * @param msg String
+	 */
 	public void broadcastMessageToPartyMembers(String msg)
 	{
 		broadCast(new SystemMessage(msg));
 	}
 	
+	/**
+	 * Method broadcastToPartyMembers.
+	 * @param exclude Player
+	 * @param msg L2GameServerPacket
+	 */
 	public void broadcastToPartyMembers(Player exclude, L2GameServerPacket msg)
 	{
 		for (Player member : _members)
@@ -195,6 +321,12 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method broadcastToPartyMembersInRange.
+	 * @param player Player
+	 * @param msg L2GameServerPacket
+	 * @param range int
+	 */
 	public void broadcastToPartyMembersInRange(Player player, L2GameServerPacket msg, int range)
 	{
 		for (Player member : _members)
@@ -206,11 +338,21 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method containsMember.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean containsMember(Player player)
 	{
 		return _members.contains(player);
 	}
 	
+	/**
+	 * Method addPartyMember.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean addPartyMember(Player player)
 	{
 		Player leader = getPartyLeader();
@@ -294,6 +436,9 @@ public class Party implements PlayerGroup
 		return true;
 	}
 	
+	/**
+	 * Method dissolveParty.
+	 */
 	public void dissolveParty()
 	{
 		for (Player p : _members)
@@ -310,6 +455,12 @@ public class Party implements PlayerGroup
 		stopUpdatePositionTask();
 	}
 	
+	/**
+	 * Method removePartyMember.
+	 * @param player Player
+	 * @param kick boolean
+	 * @return boolean
+	 */
 	public boolean removePartyMember(Player player, boolean kick)
 	{
 		boolean isLeader = isLeader(player);
@@ -411,6 +562,11 @@ public class Party implements PlayerGroup
 		return true;
 	}
 	
+	/**
+	 * Method changePartyLeader.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean changePartyLeader(Player player)
 	{
 		Player leader = getPartyLeader();
@@ -432,6 +588,9 @@ public class Party implements PlayerGroup
 		return true;
 	}
 	
+	/**
+	 * Method updateLeaderInfo.
+	 */
 	private void updateLeaderInfo()
 	{
 		Player leader = getPartyLeader();
@@ -454,6 +613,11 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method getPlayerByName.
+	 * @param name String
+	 * @return Player
+	 */
 	public Player getPlayerByName(String name)
 	{
 		for (Player member : _members)
@@ -466,6 +630,12 @@ public class Party implements PlayerGroup
 		return null;
 	}
 	
+	/**
+	 * Method distributeItem.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param fromNpc NpcInstance
+	 */
 	public void distributeItem(Player player, ItemInstance item, NpcInstance fromNpc)
 	{
 		switch (item.getItemId())
@@ -479,6 +649,12 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method distributeItem0.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param fromNpc NpcInstance
+	 */
 	private void distributeItem0(Player player, ItemInstance item, NpcInstance fromNpc)
 	{
 		Player target = null;
@@ -554,6 +730,12 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method distributeAdena.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param fromNpc NpcInstance
+	 */
 	private void distributeAdena(Player player, ItemInstance item, NpcInstance fromNpc)
 	{
 		if (player == null)
@@ -595,6 +777,14 @@ public class Party implements PlayerGroup
 		item.pickupMe();
 	}
 	
+	/**
+	 * Method distributeXpAndSp.
+	 * @param xpReward double
+	 * @param spReward double
+	 * @param rewardedMembers List<Player>
+	 * @param lastAttacker Creature
+	 * @param monster MonsterInstance
+	 */
 	public void distributeXpAndSp(double xpReward, double spReward, List<Player> rewardedMembers, Creature lastAttacker, MonsterInstance monster)
 	{
 		recalculatePartyData();
@@ -646,6 +836,9 @@ public class Party implements PlayerGroup
 		recalculatePartyData();
 	}
 	
+	/**
+	 * Method recalculatePartyData.
+	 */
 	public void recalculatePartyData()
 	{
 		_partyLvl = 0;
@@ -683,16 +876,28 @@ public class Party implements PlayerGroup
 		_rateSpoil = Config.RATE_PARTY_MIN ? minRateSpoil : rateSpoil / count;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		return _partyLvl;
 	}
 	
+	/**
+	 * Method getLootDistribution.
+	 * @return int
+	 */
 	public int getLootDistribution()
 	{
 		return _itemDistribution;
 	}
 	
+	/**
+	 * Method isDistributeSpoilLoot.
+	 * @return boolean
+	 */
 	public boolean isDistributeSpoilLoot()
 	{
 		boolean rv = false;
@@ -703,6 +908,10 @@ public class Party implements PlayerGroup
 		return rv;
 	}
 	
+	/**
+	 * Method isInReflection.
+	 * @return boolean
+	 */
 	public boolean isInReflection()
 	{
 		if (_reflection != null)
@@ -716,11 +925,19 @@ public class Party implements PlayerGroup
 		return false;
 	}
 	
+	/**
+	 * Method setReflection.
+	 * @param reflection Reflection
+	 */
 	public void setReflection(Reflection reflection)
 	{
 		_reflection = reflection;
 	}
 	
+	/**
+	 * Method getReflection.
+	 * @return Reflection
+	 */
 	public Reflection getReflection()
 	{
 		if (_reflection != null)
@@ -734,41 +951,77 @@ public class Party implements PlayerGroup
 		return null;
 	}
 	
+	/**
+	 * Method isInCommandChannel.
+	 * @return boolean
+	 */
 	public boolean isInCommandChannel()
 	{
 		return _commandChannel != null;
 	}
 	
+	/**
+	 * Method getCommandChannel.
+	 * @return CommandChannel
+	 */
 	public CommandChannel getCommandChannel()
 	{
 		return _commandChannel;
 	}
 	
+	/**
+	 * Method setCommandChannel.
+	 * @param channel CommandChannel
+	 */
 	public void setCommandChannel(CommandChannel channel)
 	{
 		_commandChannel = channel;
 	}
 	
+	/**
+	 * Method Teleport.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 */
 	public void Teleport(int x, int y, int z)
 	{
 		TeleportParty(getPartyMembers(), new Location(x, y, z));
 	}
 	
+	/**
+	 * Method Teleport.
+	 * @param dest Location
+	 */
 	public void Teleport(Location dest)
 	{
 		TeleportParty(getPartyMembers(), dest);
 	}
 	
+	/**
+	 * Method Teleport.
+	 * @param territory Territory
+	 */
 	public void Teleport(Territory territory)
 	{
 		RandomTeleportParty(getPartyMembers(), territory);
 	}
 	
+	/**
+	 * Method Teleport.
+	 * @param territory Territory
+	 * @param dest Location
+	 */
 	public void Teleport(Territory territory, Location dest)
 	{
 		TeleportParty(getPartyMembers(), territory, dest);
 	}
 	
+	/**
+	 * Method TeleportParty.
+	 * @param members List<Player>
+	 * @param dest Location
+	 */
 	public static void TeleportParty(List<Player> members, Location dest)
 	{
 		for (Player _member : members)
@@ -781,6 +1034,12 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method TeleportParty.
+	 * @param members List<Player>
+	 * @param territory Territory
+	 * @param dest Location
+	 */
 	public static void TeleportParty(List<Player> members, Territory territory, Location dest)
 	{
 		if (!territory.isInside(dest.x, dest.y))
@@ -817,6 +1076,11 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method RandomTeleportParty.
+	 * @param members List<Player>
+	 * @param territory Territory
+	 */
 	public static void RandomTeleportParty(List<Player> members, Territory territory)
 	{
 		for (Player member : members)
@@ -825,6 +1089,9 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method startUpdatePositionTask.
+	 */
 	private void startUpdatePositionTask()
 	{
 		if (positionTask == null)
@@ -833,6 +1100,9 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method stopUpdatePositionTask.
+	 */
 	private void stopUpdatePositionTask()
 	{
 		if (positionTask != null)
@@ -841,13 +1111,22 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class UpdatePositionTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for UpdatePositionTask.
+		 */
 		public UpdatePositionTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -883,6 +1162,10 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method requestLootChange.
+	 * @param type byte
+	 */
 	public void requestLootChange(byte type)
 	{
 		if (_requestChangeLoot != -1)
@@ -907,6 +1190,11 @@ public class Party implements PlayerGroup
 		getPartyLeader().sendPacket(sm);
 	}
 	
+	/**
+	 * Method answerLootChangeRequest.
+	 * @param member Player
+	 * @param answer boolean
+	 */
 	public synchronized void answerLootChangeRequest(Player member, boolean answer)
 	{
 		if (_requestChangeLoot == -1)
@@ -929,6 +1217,10 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method finishLootRequest.
+	 * @param success boolean
+	 */
 	synchronized void finishLootRequest(boolean success)
 	{
 		if (_requestChangeLoot == -1)
@@ -958,13 +1250,22 @@ public class Party implements PlayerGroup
 		_requestChangeLootTimer = 0;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ChangeLootCheck extends RunnableImpl
 	{
+		/**
+		 * Constructor for ChangeLootCheck.
+		 */
 		public ChangeLootCheck()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -975,17 +1276,29 @@ public class Party implements PlayerGroup
 		}
 	}
 	
+	/**
+	 * Method iterator.
+	 * @return Iterator<Player> * @see java.lang.Iterable#iterator()
+	 */
 	@Override
 	public Iterator<Player> iterator()
 	{
 		return _members.iterator();
 	}
 	
+	/**
+	 * Method getTacticalSignsList.
+	 * @return Map<Integer,GameObject>
+	 */
 	public Map<Integer, GameObject> getTacticalSignsList()
 	{
 		return _tacticalSigns;
 	}
 	
+	/**
+	 * Method removeTacticalSigns.
+	 * @param player Player
+	 */
 	public void removeTacticalSigns(Player player)
 	{
 		for (Map.Entry<Integer, GameObject> entry : _tacticalSigns.entrySet())

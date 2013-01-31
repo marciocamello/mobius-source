@@ -20,16 +20,32 @@ import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.stats.Formulas.AttackInfo;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChargeSoul extends Skill
 {
+	/**
+	 * Field _numSouls.
+	 */
 	private final int _numSouls;
 	
+	/**
+	 * Constructor for ChargeSoul.
+	 * @param set StatsSet
+	 */
 	public ChargeSoul(StatsSet set)
 	{
 		super(set);
 		_numSouls = set.getInteger("numSouls", getLevel());
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

@@ -19,12 +19,31 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SummonAnswerListener implements OnAnswerListener
 {
+	/**
+	 * Field _playerRef.
+	 */
 	private final HardReference<Player> _playerRef;
+	/**
+	 * Field _location.
+	 */
 	private final Location _location;
+	/**
+	 * Field _count.
+	 */
 	private final long _count;
 	
+	/**
+	 * Constructor for SummonAnswerListener.
+	 * @param player Player
+	 * @param loc Location
+	 * @param count long
+	 */
 	public SummonAnswerListener(Player player, Location loc, long count)
 	{
 		_playerRef = player.getRef();
@@ -32,6 +51,10 @@ public class SummonAnswerListener implements OnAnswerListener
 		_count = count;
 	}
 	
+	/**
+	 * Method sayYes.
+	 * @see lineage2.gameserver.listener.actor.player.OnAnswerListener#sayYes()
+	 */
 	@Override
 	public void sayYes()
 	{
@@ -61,6 +84,10 @@ public class SummonAnswerListener implements OnAnswerListener
 		}
 	}
 	
+	/**
+	 * Method sayNo.
+	 * @see lineage2.gameserver.listener.actor.player.OnAnswerListener#sayNo()
+	 */
 	@Override
 	public void sayNo()
 	{

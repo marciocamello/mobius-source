@@ -21,49 +21,100 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RewardGroup implements Cloneable
 {
+	/**
+	 * Field _chance.
+	 */
 	private double _chance;
+	/**
+	 * Field _isAdena.
+	 */
 	private boolean _isAdena = false;
+	/**
+	 * Field _notRate.
+	 */
 	private boolean _notRate = false;
+	/**
+	 * Field _items.
+	 */
 	private final List<RewardData> _items = new ArrayList<>();
+	/**
+	 * Field _chanceSum.
+	 */
 	private double _chanceSum;
 	
+	/**
+	 * Constructor for RewardGroup.
+	 * @param chance double
+	 */
 	public RewardGroup(double chance)
 	{
 		setChance(chance);
 	}
 	
+	/**
+	 * Method notRate.
+	 * @return boolean
+	 */
 	public boolean notRate()
 	{
 		return _notRate;
 	}
 	
+	/**
+	 * Method setNotRate.
+	 * @param notRate boolean
+	 */
 	public void setNotRate(boolean notRate)
 	{
 		_notRate = notRate;
 	}
 	
+	/**
+	 * Method getChance.
+	 * @return double
+	 */
 	public double getChance()
 	{
 		return _chance;
 	}
 	
+	/**
+	 * Method setChance.
+	 * @param chance double
+	 */
 	public void setChance(double chance)
 	{
 		_chance = chance;
 	}
 	
+	/**
+	 * Method isAdena.
+	 * @return boolean
+	 */
 	public boolean isAdena()
 	{
 		return _isAdena;
 	}
 	
+	/**
+	 * Method setIsAdena.
+	 * @param isAdena boolean
+	 */
 	public void setIsAdena(boolean isAdena)
 	{
 		_isAdena = isAdena;
 	}
 	
+	/**
+	 * Method addData.
+	 * @param item RewardData
+	 */
 	public void addData(RewardData item)
 	{
 		if (item.getItem().isAdena())
@@ -75,11 +126,19 @@ public class RewardGroup implements Cloneable
 		_items.add(item);
 	}
 	
+	/**
+	 * Method getItems.
+	 * @return List<RewardData>
+	 */
 	public List<RewardData> getItems()
 	{
 		return _items;
 	}
 	
+	/**
+	 * Method clone.
+	 * @return RewardGroup
+	 */
 	@Override
 	public RewardGroup clone()
 	{
@@ -91,6 +150,15 @@ public class RewardGroup implements Cloneable
 		return ret;
 	}
 	
+	/**
+	 * Method roll.
+	 * @param type RewardType
+	 * @param player Player
+	 * @param mod double
+	 * @param isRaid boolean
+	 * @param isSiegeGuard boolean
+	 * @return List<RewardItem>
+	 */
 	public List<RewardItem> roll(RewardType type, Player player, double mod, boolean isRaid, boolean isSiegeGuard)
 	{
 		switch (type)
@@ -119,6 +187,13 @@ public class RewardGroup implements Cloneable
 		}
 	}
 	
+	/**
+	 * Method rollItems.
+	 * @param mod double
+	 * @param baseRate double
+	 * @param playerRate double
+	 * @return List<RewardItem>
+	 */
 	public List<RewardItem> rollItems(double mod, double baseRate, double playerRate)
 	{
 		if (mod <= 0)
@@ -146,6 +221,13 @@ public class RewardGroup implements Cloneable
 		return ret;
 	}
 	
+	/**
+	 * Method rollAdena.
+	 * @param mod double
+	 * @param baseRate double
+	 * @param playerRate double
+	 * @return List<RewardItem>
+	 */
 	private List<RewardItem> rollAdena(double mod, double baseRate, double playerRate)
 	{
 		double chance = _chance;
@@ -172,6 +254,13 @@ public class RewardGroup implements Cloneable
 		return ret;
 	}
 	
+	/**
+	 * Method rollFinal.
+	 * @param items List<RewardData>
+	 * @param ret List<RewardItem>
+	 * @param mult double
+	 * @param chanceSum double
+	 */
 	private void rollFinal(List<RewardData> items, List<RewardItem> ret, double mult, double chanceSum)
 	{
 		int chance = Rnd.get(0, (int) chanceSum);

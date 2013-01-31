@@ -19,10 +19,23 @@ import java.util.concurrent.ThreadPoolExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class LoggingRejectedExecutionHandler implements RejectedExecutionHandler
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(LoggingRejectedExecutionHandler.class);
 	
+	/**
+	 * Method rejectedExecution.
+	 * @param r Runnable
+	 * @param executor ThreadPoolExecutor
+	 * @see java.util.concurrent.RejectedExecutionHandler#rejectedExecution(Runnable, ThreadPoolExecutor)
+	 */
 	@Override
 	public void rejectedExecution(Runnable r, ThreadPoolExecutor executor)
 	{

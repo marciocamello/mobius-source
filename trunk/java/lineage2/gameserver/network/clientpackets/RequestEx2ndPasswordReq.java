@@ -16,12 +16,28 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import lineage2.gameserver.utils.SecondaryPasswordAuth;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestEx2ndPasswordReq extends L2GameClientPacket
 {
+	/**
+	 * Field _changePass.
+	 */
 	private int _changePass;
+	/**
+	 * Field _password.
+	 */
 	private String _password;
+	/**
+	 * Field _newPassword.
+	 */
 	private String _newPassword;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -33,6 +49,9 @@ public class RequestEx2ndPasswordReq extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

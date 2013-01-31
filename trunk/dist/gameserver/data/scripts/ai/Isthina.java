@@ -29,37 +29,129 @@ import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Isthina extends Fighter
 {
+	/**
+	 * Field ISTINA_LIGHT.
+	 */
 	final int ISTINA_LIGHT = 29195;
+	/**
+	 * Field ISTINA_HARD.
+	 */
 	final int ISTINA_HARD = 29196;
+	/**
+	 * Field BARRIER_OF_REFLECTION.
+	 */
 	static final Skill BARRIER_OF_REFLECTION = SkillTable.getInstance().getInfo(14215, 1);
+	/**
+	 * Field FLOOD.
+	 */
 	static final Skill FLOOD = SkillTable.getInstance().getInfo(14220, 1);
+	/**
+	 * Field MANIFESTATION_OF_AUTHORITY.
+	 */
 	static final Skill MANIFESTATION_OF_AUTHORITY = SkillTable.getInstance().getInfo(14289, 1);
+	/**
+	 * Field ACID_ERUPTION1.
+	 */
 	private static final Skill ACID_ERUPTION1 = SkillTable.getInstance().getInfo(14221, 1);
+	/**
+	 * Field ACID_ERUPTION2.
+	 */
 	private static final Skill ACID_ERUPTION2 = SkillTable.getInstance().getInfo(14222, 1);
+	/**
+	 * Field ACID_ERUPTION3.
+	 */
 	private static final Skill ACID_ERUPTION3 = SkillTable.getInstance().getInfo(14223, 1);
+	/**
+	 * Field ACID_ERUPTION1_TIMER.
+	 */
 	private long ACID_ERUPTION1_TIMER = 0;
+	/**
+	 * Field ACID_ERUPTION2_TIMER.
+	 */
 	private long ACID_ERUPTION2_TIMER = 0;
+	/**
+	 * Field ACID_ERUPTION3_TIMER.
+	 */
 	private long ACID_ERUPTION3_TIMER = 0;
+	/**
+	 * Field ACID_ERUPTION1_DELAY.
+	 */
 	private final long ACID_ERUPTION1_DELAY = 60;
+	/**
+	 * Field ACID_ERUPTION2_DELAY.
+	 */
 	private final long ACID_ERUPTION2_DELAY = 60;
+	/**
+	 * Field ACID_ERUPTION3_DELAY.
+	 */
 	private final long ACID_ERUPTION3_DELAY = 60;
+	/**
+	 * Field DEATH_BLOW.
+	 */
 	final int DEATH_BLOW = 14219;
+	/**
+	 * Field ISTINA_MARK.
+	 */
 	final int ISTINA_MARK = 14218;
+	/**
+	 * Field RED_RING.
+	 */
 	final int RED_RING = 14220101;
+	/**
+	 * Field BLUE_RING.
+	 */
 	final int BLUE_RING = 14220102;
+	/**
+	 * Field GREEN_RING.
+	 */
 	final int GREEN_RING = 14220103;
+	/**
+	 * Field RED_RING_LOC.
+	 */
 	final Zone RED_RING_LOC;
+	/**
+	 * Field BLUE_RING_LOC.
+	 */
 	final Zone BLUE_RING_LOC;
+	/**
+	 * Field GREEN_RING_LOC.
+	 */
 	final Zone GREEN_RING_LOC;
+	/**
+	 * Field _effectCheckTask.
+	 */
 	ScheduledFuture<?> _effectCheckTask = null;
+	/**
+	 * Field _authorityLock.
+	 */
 	private boolean _authorityLock = false;
+	/**
+	 * Field _hasFlood.
+	 */
 	private final boolean _hasFlood = false;
+	/**
+	 * Field _hasBarrier.
+	 */
 	private final boolean _hasBarrier = false;
+	/**
+	 * Field _ring.
+	 */
 	int _ring;
+	/**
+	 * Field _zone.
+	 */
 	static Zone _zone;
 	
+	/**
+	 * Constructor for Isthina.
+	 * @param actor NpcInstance
+	 */
 	public Isthina(NpcInstance actor)
 	{
 		super(actor);
@@ -69,12 +161,19 @@ public class Isthina extends Fighter
 		GREEN_RING_LOC = ReflectionManager.getInstance().get(getActor().getReflectionId()).getZone("[Isthina_green_zone]");
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -85,6 +184,9 @@ public class Isthina extends Fighter
 		ACID_ERUPTION3_TIMER += generalReuse + (Rnd.get(1, 20) * 1000L);
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
@@ -175,6 +277,11 @@ public class Isthina extends Fighter
 		super.thinkAttack();
 	}
 	
+	/**
+	 * Method onPercentHpReached.
+	 * @param npc NpcInstance
+	 * @param percent int
+	 */
 	public void onPercentHpReached(NpcInstance npc, int percent)
 	{
 		if (npc.isCastingNow())
@@ -217,6 +324,10 @@ public class Isthina extends Fighter
 		}
 	}
 	
+	/**
+	 * Method authorityField.
+	 * @param npc NpcInstance
+	 */
 	private void authorityField(final NpcInstance npc)
 	{
 		_authorityLock = true;
@@ -242,15 +353,28 @@ public class Isthina extends Fighter
 		ThreadPoolManager.getInstance().schedule(new runAuthorityRing(npc), 10000L);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class EffectCheckTask extends RunnableImpl
 	{
+		/**
+		 * Field _npc.
+		 */
 		private final NpcInstance _npc;
 		
+		/**
+		 * Constructor for EffectCheckTask.
+		 * @param npc NpcInstance
+		 */
 		public EffectCheckTask(NpcInstance npc)
 		{
 			_npc = npc;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@SuppressWarnings("unused")
 		@Override
 		public void runImpl()
@@ -304,15 +428,28 @@ public class Isthina extends Fighter
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class runAuthorityRing extends RunnableImpl
 	{
+		/**
+		 * Field _npc.
+		 */
 		private final NpcInstance _npc;
 		
+		/**
+		 * Constructor for runAuthorityRing.
+		 * @param npc NpcInstance
+		 */
 		runAuthorityRing(NpcInstance npc)
 		{
 			_npc = npc;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

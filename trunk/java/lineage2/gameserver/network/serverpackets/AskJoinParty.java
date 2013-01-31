@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AskJoinParty extends L2GameServerPacket
 {
+	/**
+	 * Field _requestorName.
+	 */
 	private final String _requestorName;
+	/**
+	 * Field _itemDistribution.
+	 */
 	private final int _itemDistribution;
 	
+	/**
+	 * Constructor for AskJoinParty.
+	 * @param requestorName String
+	 * @param itemDistribution int
+	 */
 	public AskJoinParty(String requestorName, int itemDistribution)
 	{
 		_requestorName = requestorName;
 		_itemDistribution = itemDistribution;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

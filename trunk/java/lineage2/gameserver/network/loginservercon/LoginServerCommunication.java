@@ -40,31 +40,90 @@ import lineage2.gameserver.network.loginservercon.gspackets.AuthRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LoginServerCommunication extends Thread
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(LoginServerCommunication.class);
+	/**
+	 * Field instance.
+	 */
 	private static final LoginServerCommunication instance = new LoginServerCommunication();
 	
+	/**
+	 * Method getInstance.
+	 * @return LoginServerCommunication
+	 */
 	public static final LoginServerCommunication getInstance()
 	{
 		return instance;
 	}
 	
+	/**
+	 * Field waitingClients.
+	 */
 	private final Map<String, GameClient> waitingClients = new HashMap<>();
+	/**
+	 * Field authedClients.
+	 */
 	private final Map<String, GameClient> authedClients = new HashMap<>();
+	/**
+	 * Field lock.
+	 */
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
+	/**
+	 * Field readLock.
+	 */
 	private final Lock readLock = lock.readLock();
+	/**
+	 * Field writeLock.
+	 */
 	private final Lock writeLock = lock.writeLock();
+	/**
+	 * Field readBuffer.
+	 */
 	private final ByteBuffer readBuffer = ByteBuffer.allocate(64 * 1024).order(ByteOrder.LITTLE_ENDIAN);
+	/**
+	 * Field writeBuffer.
+	 */
 	private final ByteBuffer writeBuffer = ByteBuffer.allocate(64 * 1024).order(ByteOrder.LITTLE_ENDIAN);
+	/**
+	 * Field sendQueue.
+	 */
 	private final Queue<SendablePacket> sendQueue = new ArrayDeque<>();
+	/**
+	 * Field sendLock.
+	 */
 	private final Lock sendLock = new ReentrantLock();
+	/**
+	 * Field isPengingWrite.
+	 */
 	private final AtomicBoolean isPengingWrite = new AtomicBoolean();
+	/**
+	 * Field key.
+	 */
 	private SelectionKey key;
+	/**
+	 * Field selector.
+	 */
 	private Selector selector;
+	/**
+	 * Field shutdown.
+	 */
 	private boolean shutdown;
+	/**
+	 * Field restart.
+	 */
 	private boolean restart;
 	
+	/**
+	 * Constructor for LoginServerCommunication.
+	 */
 	private LoginServerCommunication()
 	{
 		try
@@ -77,6 +136,10 @@ public class LoginServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method connect.
+	 * @throws IOException
+	 */
 	private void connect() throws IOException
 	{
 		_log.info("Connecting to loginserver on " + Config.GAME_SERVER_LOGIN_HOST + ":" + Config.GAME_SERVER_LOGIN_PORT);
@@ -86,6 +149,10 @@ public class LoginServerCommunication extends Thread
 		channel.connect(new InetSocketAddress(Config.GAME_SERVER_LOGIN_HOST, Config.GAME_SERVER_LOGIN_PORT));
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param packet SendablePacket
+	 */
 	public void sendPacket(SendablePacket packet)
 	{
 		if (isShutdown())
@@ -113,6 +180,10 @@ public class LoginServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method disableWriteInterest.
+	 * @return boolean * @throws CancelledKeyException
+	 */
 	private boolean disableWriteInterest() throws CancelledKeyException
 	{
 		if (isPengingWrite.compareAndSet(true, false))
@@ -123,9 +194,13 @@ public class LoginServerCommunication extends Thread
 		return false;
 	}
 	
+	/**
+	 * Method enableWriteInterest.
+	 * @return boolean * @throws CancelledKeyException
+	 */
 	private boolean enableWriteInterest() throws CancelledKeyException
 	{
-		if (isPengingWrite.getAndSet(true) == false)
+		if (!(isPengingWrite.getAndSet(true)))
 		{
 			key.interestOps(key.interestOps() | SelectionKey.OP_WRITE);
 			return true;
@@ -133,16 +208,28 @@ public class LoginServerCommunication extends Thread
 		return false;
 	}
 	
+	/**
+	 * Method getReadBuffer.
+	 * @return ByteBuffer
+	 */
 	protected ByteBuffer getReadBuffer()
 	{
 		return readBuffer;
 	}
 	
+	/**
+	 * Method getWriteBuffer.
+	 * @return ByteBuffer
+	 */
 	protected ByteBuffer getWriteBuffer()
 	{
 		return writeBuffer;
 	}
 	
+	/**
+	 * Method run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public void run()
 	{
@@ -235,6 +322,11 @@ public class LoginServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method read.
+	 * @param key SelectionKey
+	 * @throws IOException
+	 */
 	private void read(SelectionKey key) throws IOException
 	{
 		SocketChannel channel = (SocketChannel) key.channel();
@@ -255,6 +347,12 @@ public class LoginServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method tryReadPacket.
+	 * @param key SelectionKey
+	 * @param buf ByteBuffer
+	 * @return boolean * @throws IOException
+	 */
 	private boolean tryReadPacket(SelectionKey key, ByteBuffer buf) throws IOException
 	{
 		int pos = buf.position();
@@ -293,6 +391,11 @@ public class LoginServerCommunication extends Thread
 		return false;
 	}
 	
+	/**
+	 * Method write.
+	 * @param key SelectionKey
+	 * @throws IOException
+	 */
 	private void write(SelectionKey key) throws IOException
 	{
 		SocketChannel channel = (SocketChannel) key.channel();
@@ -348,6 +451,11 @@ public class LoginServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method connect.
+	 * @param key SelectionKey
+	 * @throws IOException
+	 */
 	private void connect(SelectionKey key) throws IOException
 	{
 		SocketChannel channel = (SocketChannel) key.channel();
@@ -357,6 +465,9 @@ public class LoginServerCommunication extends Thread
 		sendPacket(new AuthRequest());
 	}
 	
+	/**
+	 * Method close.
+	 */
 	private void close()
 	{
 		restart = !shutdown;
@@ -394,23 +505,38 @@ public class LoginServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method shutdown.
+	 */
 	public void shutdown()
 	{
 		shutdown = true;
 		selector.wakeup();
 	}
 	
+	/**
+	 * Method isShutdown.
+	 * @return boolean
+	 */
 	public boolean isShutdown()
 	{
 		return shutdown || restart;
 	}
 	
+	/**
+	 * Method restart.
+	 */
 	public void restart()
 	{
 		restart = true;
 		selector.wakeup();
 	}
 	
+	/**
+	 * Method addWaitingClient.
+	 * @param client GameClient
+	 * @return GameClient
+	 */
 	public GameClient addWaitingClient(GameClient client)
 	{
 		writeLock.lock();
@@ -424,6 +550,11 @@ public class LoginServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method removeWaitingClient.
+	 * @param account String
+	 * @return GameClient
+	 */
 	public GameClient removeWaitingClient(String account)
 	{
 		writeLock.lock();
@@ -437,6 +568,11 @@ public class LoginServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method addAuthedClient.
+	 * @param client GameClient
+	 * @return GameClient
+	 */
 	public GameClient addAuthedClient(GameClient client)
 	{
 		writeLock.lock();
@@ -450,6 +586,11 @@ public class LoginServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method removeAuthedClient.
+	 * @param login String
+	 * @return GameClient
+	 */
 	public GameClient removeAuthedClient(String login)
 	{
 		writeLock.lock();
@@ -463,6 +604,11 @@ public class LoginServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method getAuthedClient.
+	 * @param login String
+	 * @return GameClient
+	 */
 	public GameClient getAuthedClient(String login)
 	{
 		readLock.lock();
@@ -476,6 +622,11 @@ public class LoginServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method removeClient.
+	 * @param client GameClient
+	 * @return GameClient
+	 */
 	public GameClient removeClient(GameClient client)
 	{
 		writeLock.lock();
@@ -493,6 +644,10 @@ public class LoginServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method getAccounts.
+	 * @return String[]
+	 */
 	public String[] getAccounts()
 	{
 		readLock.lock();

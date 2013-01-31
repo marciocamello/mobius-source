@@ -19,6 +19,10 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SteelCitadelTeleporterInstance extends NpcInstance
 {
 	/**
@@ -26,11 +30,21 @@ public class SteelCitadelTeleporterInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for SteelCitadelTeleporterInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SteelCitadelTeleporterInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -149,6 +163,11 @@ public class SteelCitadelTeleporterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method rangeCheck.
+	 * @param pl Player
+	 * @return boolean
+	 */
 	private boolean rangeCheck(Player pl)
 	{
 		for (Player m : pl.getParty().getPartyMembers())
@@ -161,6 +180,11 @@ public class SteelCitadelTeleporterInstance extends NpcInstance
 		return true;
 	}
 	
+	/**
+	 * Method getIz.
+	 * @param floor int
+	 * @return int
+	 */
 	private int getIz(int floor)
 	{
 		if (floor == 5)
@@ -170,6 +194,11 @@ public class SteelCitadelTeleporterInstance extends NpcInstance
 		return 4;
 	}
 	
+	/**
+	 * Method enterInstance.
+	 * @param player Player
+	 * @param floor int
+	 */
 	private void enterInstance(Player player, int floor)
 	{
 		Reflection r = player.getActiveReflection();

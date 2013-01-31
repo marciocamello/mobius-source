@@ -17,6 +17,10 @@ import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class VenomTeleporterInstance extends NpcInstance
 {
 	/**
@@ -24,11 +28,21 @@ public class VenomTeleporterInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for VenomTeleporterInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public VenomTeleporterInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -43,6 +57,12 @@ public class VenomTeleporterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{

@@ -35,24 +35,76 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 import quests._697_DefendtheHallofErosion;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ErosionHallDefence extends Reflection
 {
+	/**
+	 * Field AliveTumor. (value is 18708)
+	 */
 	private static final int AliveTumor = 18708;
+	/**
+	 * Field DeadTumor. (value is 32535)
+	 */
 	private static final int DeadTumor = 32535;
+	/**
+	 * Field UnstableSeed. (value is 32541)
+	 */
 	private static final int UnstableSeed = 32541;
+	/**
+	 * Field RegenerationCoffin. (value is 18709)
+	 */
 	private static final int RegenerationCoffin = 18709;
+	/**
+	 * Field SoulWagon. (value is 25636)
+	 */
 	private static final int SoulWagon = 25636;
+	/**
+	 * Field zoneEventTriggers.
+	 */
 	private final int[] zoneEventTriggers = ArrayUtils.createAscendingArray(14240001, 14240012);
+	/**
+	 * Field startZoneListener.
+	 */
 	private final ZoneListener startZoneListener = new ZoneListener();
+	/**
+	 * Field conquestBegun.
+	 */
 	boolean conquestBegun = false;
+	/**
+	 * Field deathListener.
+	 */
 	private final DeathListener deathListener = new DeathListener();
+	/**
+	 * Field failureTask. Field aliveTumorSpawnTask. Field coffinSpawnTask. Field agressionTask. Field timerTask.
+	 */
 	private ScheduledFuture<?> timerTask, agressionTask, coffinSpawnTask, aliveTumorSpawnTask, failureTask;
+	/**
+	 * Field startTime.
+	 */
 	long startTime;
+	/**
+	 * Field tumorRespawnTime.
+	 */
 	long tumorRespawnTime;
+	/**
+	 * Field conquestEnded.
+	 */
 	boolean conquestEnded = false;
+	/**
+	 * Field tumorKillCount.
+	 */
 	private int tumorKillCount;
+	/**
+	 * Field soulwagonSpawned.
+	 */
 	private boolean soulwagonSpawned = false;
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{
@@ -62,6 +114,9 @@ public class ErosionHallDefence extends Reflection
 		tumorKillCount = 0;
 	}
 	
+	/**
+	 * Method conquestBegins.
+	 */
 	void conquestBegins()
 	{
 		for (Player p : getPlayers())
@@ -127,8 +182,17 @@ public class ErosionHallDefence extends Reflection
 		timerTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new TimerTask(), 298 * 1000L, 5 * 60 * 1000L);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -139,19 +203,37 @@ public class ErosionHallDefence extends Reflection
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DeathListener implements OnDeathListener
 	{
+		/**
+		 * Constructor for DeathListener.
+		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param self Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -199,13 +281,22 @@ public class ErosionHallDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class TimerTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for TimerTask.
+		 */
 		public TimerTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -224,6 +315,9 @@ public class ErosionHallDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method notifyAttackSeed.
+	 */
 	void notifyAttackSeed()
 	{
 		for (final NpcInstance npc : getNpcs())
@@ -249,16 +343,28 @@ public class ErosionHallDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method notifyCoffinDeath.
+	 */
 	public void notifyCoffinDeath()
 	{
 		tumorRespawnTime -= 5 * 1000L;
 	}
 	
+	/**
+	 * Method spawnCoffin.
+	 * @param tumor NpcInstance
+	 */
 	void spawnCoffin(NpcInstance tumor)
 	{
 		addSpawnWithoutRespawn(RegenerationCoffin, new Location(tumor.getLoc().x, tumor.getLoc().y, tumor.getLoc().z, Location.getRandomHeading()), 250);
 	}
 	
+	/**
+	 * Method getNearestSeed.
+	 * @param mob NpcInstance
+	 * @return NpcInstance
+	 */
 	private NpcInstance getNearestSeed(NpcInstance mob)
 	{
 		for (NpcInstance npc : mob.getAroundNpc(900, 300))
@@ -271,6 +377,9 @@ public class ErosionHallDefence extends Reflection
 		return null;
 	}
 	
+	/**
+	 * Method invokeDeathListener.
+	 */
 	void invokeDeathListener()
 	{
 		for (NpcInstance npc : getNpcs())
@@ -279,6 +388,10 @@ public class ErosionHallDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method conquestConclusion.
+	 * @param win boolean
+	 */
 	void conquestConclusion(boolean win)
 	{
 		if (conquestEnded)
@@ -306,6 +419,10 @@ public class ErosionHallDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method handleTumorHp.
+	 * @param percent double
+	 */
 	void handleTumorHp(double percent)
 	{
 		for (NpcInstance npc : getAllByNpcId(AliveTumor, true))
@@ -314,6 +431,9 @@ public class ErosionHallDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method notifyTumorDeath.
+	 */
 	void notifyTumorDeath()
 	{
 		tumorKillCount++;
@@ -335,6 +455,10 @@ public class ErosionHallDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method rescheduleFailureTask.
+	 * @param time long
+	 */
 	void rescheduleFailureTask(long time)
 	{
 		if (failureTask != null)
@@ -352,6 +476,9 @@ public class ErosionHallDefence extends Reflection
 		}, time);
 	}
 	
+	/**
+	 * Method cancelTimers.
+	 */
 	private void cancelTimers()
 	{
 		if (timerTask != null)
@@ -376,6 +503,10 @@ public class ErosionHallDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -386,6 +517,9 @@ public class ErosionHallDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method onCollapse.
+	 */
 	@Override
 	protected void onCollapse()
 	{

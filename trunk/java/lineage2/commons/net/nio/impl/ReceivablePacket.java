@@ -14,33 +14,63 @@ package lineage2.commons.net.nio.impl;
 
 import java.nio.ByteBuffer;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class ReceivablePacket<T extends MMOClient> extends lineage2.commons.net.nio.ReceivablePacket<T>
 {
+	/**
+	 * Field _client.
+	 */
 	protected T _client;
+	/**
+	 * Field _buf.
+	 */
 	protected ByteBuffer _buf;
 	
+	/**
+	 * Method setByteBuffer.
+	 * @param buf ByteBuffer
+	 */
 	protected void setByteBuffer(ByteBuffer buf)
 	{
 		_buf = buf;
 	}
 	
+	/**
+	 * Method getByteBuffer.
+	 * @return ByteBuffer
+	 */
 	@Override
 	protected ByteBuffer getByteBuffer()
 	{
 		return _buf;
 	}
 	
+	/**
+	 * Method setClient.
+	 * @param client T
+	 */
 	protected void setClient(T client)
 	{
 		_client = client;
 	}
 	
+	/**
+	 * Method getClient.
+	 * @return T
+	 */
 	@Override
 	public T getClient()
 	{
 		return _client;
 	}
 	
+	/**
+	 * Method read.
+	 * @return boolean
+	 */
 	@Override
 	protected abstract boolean read();
 }

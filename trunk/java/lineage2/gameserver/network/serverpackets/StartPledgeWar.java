@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StartPledgeWar extends L2GameServerPacket
 {
+	/**
+	 * Field _pledgeName.
+	 */
 	private final String _pledgeName;
+	/**
+	 * Field _char.
+	 */
 	private final String _char;
 	
+	/**
+	 * Constructor for StartPledgeWar.
+	 * @param pledge String
+	 * @param charName String
+	 */
 	public StartPledgeWar(String pledge, String charName)
 	{
 		_pledgeName = pledge;
 		_char = charName;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

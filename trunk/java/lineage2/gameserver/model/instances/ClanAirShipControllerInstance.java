@@ -26,18 +26,42 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.AirshipDock;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanAirShipControllerInstance extends AirShipControllerInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field ENERGY_STAR_STONE. (value is 13277)
+	 */
 	protected static final int ENERGY_STAR_STONE = 13277;
+	/**
+	 * Field AIRSHIP_SUMMON_LICENSE. (value is 13559)
+	 */
 	protected static final int AIRSHIP_SUMMON_LICENSE = 13559;
+	/**
+	 * Field _dockedShipRef.
+	 */
 	private HardReference<ClanAirShip> _dockedShipRef = HardReferences.emptyRef();
+	/**
+	 * Field _dock.
+	 */
 	private final AirshipDock _dock;
+	/**
+	 * Field _platform.
+	 */
 	private final AirshipDock.AirshipPlatform _platform;
 	
+	/**
+	 * Constructor for ClanAirShipControllerInstance.
+	 * @param objectID int
+	 * @param template NpcTemplate
+	 */
 	public ClanAirShipControllerInstance(int objectID, NpcTemplate template)
 	{
 		super(objectID, template);
@@ -47,6 +71,11 @@ public class ClanAirShipControllerInstance extends AirShipControllerInstance
 		_platform = _dock.getPlatform(platformId);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -132,6 +161,10 @@ public class ClanAirShipControllerInstance extends AirShipControllerInstance
 		}
 	}
 	
+	/**
+	 * Method getDockedAirShip.
+	 * @return ClanAirShip
+	 */
 	@Override
 	protected ClanAirShip getDockedAirShip()
 	{
@@ -143,6 +176,10 @@ public class ClanAirShipControllerInstance extends AirShipControllerInstance
 		return null;
 	}
 	
+	/**
+	 * Method setDockedShip.
+	 * @param dockedShip ClanAirShip
+	 */
 	@SuppressWarnings("unchecked")
 	public void setDockedShip(ClanAirShip dockedShip)
 	{

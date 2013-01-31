@@ -23,19 +23,36 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import bosses.BelethManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class BelethCoffinInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field RING. (value is 10314)
+	 */
 	private static final int RING = 10314;
 	
+	/**
+	 * Constructor for BelethCoffinInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public BelethCoffinInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

@@ -22,11 +22,25 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Continuous extends Skill
 {
+	/**
+	 * Field _lethal1.
+	 */
 	private final int _lethal1;
+	/**
+	 * Field _lethal2.
+	 */
 	private final int _lethal2;
 	
+	/**
+	 * Constructor for Continuous.
+	 * @param set StatsSet
+	 */
 	public Continuous(StatsSet set)
 	{
 		super(set);
@@ -34,6 +48,11 @@ public class Continuous extends Skill
 		_lethal2 = set.getInteger("lethal2", 0);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

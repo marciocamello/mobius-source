@@ -21,17 +21,53 @@ import lineage2.gameserver.stats.conditions.Condition;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class FuncTemplate
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(FuncTemplate.class);
+	/**
+	 * Field EMPTY_ARRAY.
+	 */
 	public static final FuncTemplate[] EMPTY_ARRAY = new FuncTemplate[0];
+	/**
+	 * Field _applyCond.
+	 */
 	public Condition _applyCond;
+	/**
+	 * Field _func.
+	 */
 	public Class<?> _func;
+	/**
+	 * Field _constructor.
+	 */
 	public Constructor<?> _constructor;
+	/**
+	 * Field _stat.
+	 */
 	public Stats _stat;
+	/**
+	 * Field _order.
+	 */
 	public int _order;
+	/**
+	 * Field _value.
+	 */
 	public double _value;
 	
+	/**
+	 * Constructor for FuncTemplate.
+	 * @param applyCond Condition
+	 * @param func String
+	 * @param stat Stats
+	 * @param order int
+	 * @param value double
+	 */
 	public FuncTemplate(Condition applyCond, String func, Stats stat, int order, double value)
 	{
 		_applyCond = applyCond;
@@ -55,6 +91,11 @@ public final class FuncTemplate
 		}
 	}
 	
+	/**
+	 * Method getFunc.
+	 * @param owner Object
+	 * @return Func
+	 */
 	public Func getFunc(Object owner)
 	{
 		try

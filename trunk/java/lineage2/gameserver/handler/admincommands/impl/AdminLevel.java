@@ -21,16 +21,41 @@ import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.tables.PetDataTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminLevel implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_add_level.
+		 */
 		admin_add_level,
+		/**
+		 * Field admin_addLevel.
+		 */
 		admin_addLevel,
+		/**
+		 * Field admin_set_level.
+		 */
 		admin_set_level,
+		/**
+		 * Field admin_setLevel.
+		 */
 		admin_setLevel,
 	}
 	
+	/**
+	 * Method setLevel.
+	 * @param activeChar Player
+	 * @param target GameObject
+	 * @param level int
+	 */
 	private void setLevel(Player activeChar, GameObject target, int level)
 	{
 		if ((target == null) || !(target.isPlayer() || target.isPet()))
@@ -56,6 +81,14 @@ public class AdminLevel implements IAdminCommandHandler
 		}
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -113,6 +146,10 @@ public class AdminLevel implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

@@ -23,22 +23,59 @@ import lineage2.gameserver.model.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Couple
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Couple.class);
+	/**
+	 * Field _id.
+	 */
 	private int _id = 0;
+	/**
+	 * Field _player1Id.
+	 */
 	private int _player1Id = 0;
+	/**
+	 * Field _player2Id.
+	 */
 	private int _player2Id = 0;
+	/**
+	 * Field _maried.
+	 */
 	private boolean _maried = false;
+	/**
+	 * Field _affiancedDate.
+	 */
 	private long _affiancedDate;
+	/**
+	 * Field _weddingDate.
+	 */
 	private long _weddingDate;
+	/**
+	 * Field isChanged.
+	 */
 	private boolean isChanged;
 	
+	/**
+	 * Constructor for Couple.
+	 * @param coupleId int
+	 */
 	public Couple(int coupleId)
 	{
 		_id = coupleId;
 	}
 	
+	/**
+	 * Constructor for Couple.
+	 * @param player1 Player
+	 * @param player2 Player
+	 */
 	public Couple(Player player1, Player player2)
 	{
 		_id = IdFactory.getInstance().getNextId();
@@ -53,6 +90,9 @@ public class Couple
 		player2.setPartnerId(_player1Id);
 	}
 	
+	/**
+	 * Method marry.
+	 */
 	public void marry()
 	{
 		_weddingDate = System.currentTimeMillis();
@@ -60,12 +100,19 @@ public class Couple
 		setChanged(true);
 	}
 	
+	/**
+	 * Method divorce.
+	 */
 	public void divorce()
 	{
 		CoupleManager.getInstance().getCouples().remove(this);
 		CoupleManager.getInstance().getDeletedCouples().add(this);
 	}
 	
+	/**
+	 * Method store.
+	 * @param con Connection
+	 */
 	public void store(Connection con)
 	{
 		PreparedStatement statement = null;
@@ -90,66 +137,118 @@ public class Couple
 		}
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public final int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getPlayer1Id.
+	 * @return int
+	 */
 	public final int getPlayer1Id()
 	{
 		return _player1Id;
 	}
 	
+	/**
+	 * Method getPlayer2Id.
+	 * @return int
+	 */
 	public final int getPlayer2Id()
 	{
 		return _player2Id;
 	}
 	
+	/**
+	 * Method getMaried.
+	 * @return boolean
+	 */
 	public final boolean getMaried()
 	{
 		return _maried;
 	}
 	
+	/**
+	 * Method getAffiancedDate.
+	 * @return long
+	 */
 	public final long getAffiancedDate()
 	{
 		return _affiancedDate;
 	}
 	
+	/**
+	 * Method getWeddingDate.
+	 * @return long
+	 */
 	public final long getWeddingDate()
 	{
 		return _weddingDate;
 	}
 	
+	/**
+	 * Method setPlayer1Id.
+	 * @param _player1Id int
+	 */
 	public void setPlayer1Id(int _player1Id)
 	{
 		this._player1Id = _player1Id;
 	}
 	
+	/**
+	 * Method setPlayer2Id.
+	 * @param _player2Id int
+	 */
 	public void setPlayer2Id(int _player2Id)
 	{
 		this._player2Id = _player2Id;
 	}
 	
+	/**
+	 * Method setMaried.
+	 * @param _maried boolean
+	 */
 	public void setMaried(boolean _maried)
 	{
 		this._maried = _maried;
 	}
 	
+	/**
+	 * Method setAffiancedDate.
+	 * @param _affiancedDate long
+	 */
 	public void setAffiancedDate(long _affiancedDate)
 	{
 		this._affiancedDate = _affiancedDate;
 	}
 	
+	/**
+	 * Method setWeddingDate.
+	 * @param _weddingDate long
+	 */
 	public void setWeddingDate(long _weddingDate)
 	{
 		this._weddingDate = _weddingDate;
 	}
 	
+	/**
+	 * Method isChanged.
+	 * @return boolean
+	 */
 	public boolean isChanged()
 	{
 		return isChanged;
 	}
 	
+	/**
+	 * Method setChanged.
+	 * @param val boolean
+	 */
 	public void setChanged(boolean val)
 	{
 		isChanged = val;

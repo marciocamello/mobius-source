@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TutorialShowQuestionMark extends L2GameServerPacket
 {
+	/**
+	 * Field _number.
+	 */
 	private final int _number;
 	
+	/**
+	 * Constructor for TutorialShowQuestionMark.
+	 * @param number int
+	 */
 	public TutorialShowQuestionMark(int number)
 	{
 		_number = number;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

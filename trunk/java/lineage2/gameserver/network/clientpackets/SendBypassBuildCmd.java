@@ -15,10 +15,20 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.handler.admincommands.AdminCommandHandler;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SendBypassBuildCmd extends L2GameClientPacket
 {
+	/**
+	 * Field _command.
+	 */
 	private String _command;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -29,6 +39,9 @@ public class SendBypassBuildCmd extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

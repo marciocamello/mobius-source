@@ -32,10 +32,20 @@ import lineage2.gameserver.network.telnet.TelnetCommandHolder;
 
 import org.apache.commons.io.FileUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TelnetDebug implements TelnetCommandHolder
 {
+	/**
+	 * Field _commands.
+	 */
 	private final Set<TelnetCommand> _commands = new LinkedHashSet<>();
 	
+	/**
+	 * Constructor for TelnetDebug.
+	 */
 	public TelnetDebug()
 	{
 		_commands.add(new TelnetCommand("dumpnpc", "dnpc")
@@ -76,15 +86,15 @@ public class TelnetDebug implements TelnetCommandHolder
 						}
 					}
 				}
-				sb.append("Total NPCs: ").append(total).append("\n");
-				sb.append("Maximum NPC ID: ").append(maxId).append(" count : ").append(maxCount).append("\n");
+				sb.append("Total NPCs: ").append(total).append('\n');
+				sb.append("Maximum NPC ID: ").append(maxId).append(" count : ").append(maxCount).append('\n');
 				TIntObjectIterator<List<NpcInstance>> itr = npcStats.iterator();
 				while (itr.hasNext())
 				{
 					itr.advance();
 					int id = itr.key();
 					List<NpcInstance> list = itr.value();
-					sb.append("=== ID: ").append(id).append(" ").append(" Count: ").append(list.size()).append(" ===").append("\n");
+					sb.append("=== ID: ").append(id).append(' ').append(" Count: ").append(list.size()).append(" ===").append('\n');
 					for (NpcInstance npc : list)
 					{
 						try
@@ -108,7 +118,7 @@ public class TelnetDebug implements TelnetCommandHolder
 							sb.append(", ");
 							sb.append("spawned: ");
 							sb.append(npc.isVisible());
-							sb.append("\n");
+							sb.append('\n');
 						}
 						catch (Exception e)
 						{
@@ -145,6 +155,10 @@ public class TelnetDebug implements TelnetCommandHolder
 		});
 	}
 	
+	/**
+	 * Method getCommands.
+	 * @return Set<TelnetCommand> * @see lineage2.gameserver.network.telnet.TelnetCommandHolder#getCommands()
+	 */
 	@Override
 	public Set<TelnetCommand> getCommands()
 	{

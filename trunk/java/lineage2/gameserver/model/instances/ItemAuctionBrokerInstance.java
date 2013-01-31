@@ -24,20 +24,41 @@ import lineage2.gameserver.network.serverpackets.ExItemAuctionInfo;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ItemAuctionBrokerInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field fmt.
+	 */
 	private static final SimpleDateFormat fmt = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+	/**
+	 * Field _instance.
+	 */
 	private ItemAuctionInstance _instance;
 	
+	/**
+	 * Constructor for ItemAuctionBrokerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ItemAuctionBrokerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, final int val, Object... arg)
 	{
@@ -45,6 +66,11 @@ public final class ItemAuctionBrokerInstance extends NpcInstance
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public final void onBypassFeedback(Player player, String command)
 	{

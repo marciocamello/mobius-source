@@ -14,81 +14,157 @@ package lineage2.commons.collections;
 
 import java.util.HashMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MultiValueSet<T> extends HashMap<T, Object>
 {
+	/**
+	 * Field serialVersionUID. (value is 8071544899414292397)
+	 */
 	private static final long serialVersionUID = 8071544899414292397L;
 	
+	/**
+	 * Constructor for MultiValueSet.
+	 */
 	public MultiValueSet()
 	{
 		super();
 	}
 	
+	/**
+	 * Constructor for MultiValueSet.
+	 * @param size int
+	 */
 	public MultiValueSet(int size)
 	{
 		super(size);
 	}
 	
+	/**
+	 * Constructor for MultiValueSet.
+	 * @param set MultiValueSet<T>
+	 */
 	public MultiValueSet(MultiValueSet<T> set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method set.
+	 * @param key T
+	 * @param value Object
+	 */
 	public void set(T key, Object value)
 	{
 		put(key, value);
 	}
 	
+	/**
+	 * Method set.
+	 * @param key T
+	 * @param value String
+	 */
 	public void set(T key, String value)
 	{
 		put(key, value);
 	}
 	
+	/**
+	 * Method set.
+	 * @param key T
+	 * @param value boolean
+	 */
 	public void set(T key, boolean value)
 	{
 		put(key, value ? Boolean.TRUE : Boolean.FALSE);
 	}
 	
+	/**
+	 * Method set.
+	 * @param key T
+	 * @param value int
+	 */
 	public void set(T key, int value)
 	{
 		put(key, Integer.valueOf(value));
 	}
 	
+	/**
+	 * Method set.
+	 * @param key T
+	 * @param value int[]
+	 */
 	public void set(T key, int[] value)
 	{
 		put(key, value);
 	}
 	
+	/**
+	 * Method set.
+	 * @param key T
+	 * @param value long
+	 */
 	public void set(T key, long value)
 	{
 		put(key, Long.valueOf(value));
 	}
 	
+	/**
+	 * Method set.
+	 * @param key T
+	 * @param value double
+	 */
 	public void set(T key, double value)
 	{
 		put(key, Double.valueOf(value));
 	}
 	
+	/**
+	 * Method set.
+	 * @param key T
+	 * @param value Enum<?>
+	 */
 	public void set(T key, Enum<?> value)
 	{
 		put(key, value);
 	}
 	
+	/**
+	 * Method unset.
+	 * @param key T
+	 */
 	public void unset(T key)
 	{
 		remove(key);
 	}
 	
+	/**
+	 * Method isSet.
+	 * @param key T
+	 * @return boolean
+	 */
 	public boolean isSet(T key)
 	{
 		return get(key) != null;
 	}
 	
+	/**
+	 * Method clone.
+	 * @return MultiValueSet<T>
+	 */
 	@Override
 	public MultiValueSet<T> clone()
 	{
 		return new MultiValueSet<>(this);
 	}
 	
+	/**
+	 * Method getBool.
+	 * @param key T
+	 * @return boolean
+	 */
 	public boolean getBool(T key)
 	{
 		Object val = get(key);
@@ -107,6 +183,12 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		throw new IllegalArgumentException("Boolean value required, but found: " + val + "!");
 	}
 	
+	/**
+	 * Method getBool.
+	 * @param key T
+	 * @param defaultValue boolean
+	 * @return boolean
+	 */
 	public boolean getBool(T key, boolean defaultValue)
 	{
 		Object val = get(key);
@@ -125,11 +207,22 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		return defaultValue;
 	}
 	
+	/**
+	 * Method getInteger.
+	 * @param key T
+	 * @return int
+	 */
 	public int getInteger(T key)
 	{
 		return getInteger(key, 0);
 	}
 	
+	/**
+	 * Method getInteger.
+	 * @param key T
+	 * @param defaultValue int
+	 * @return int
+	 */
 	public int getInteger(T key, int defaultValue)
 	{
 		Object val = get(key);
@@ -148,6 +241,11 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		return defaultValue;
 	}
 	
+	/**
+	 * Method getIntegerArray.
+	 * @param key T
+	 * @return int[]
+	 */
 	public int[] getIntegerArray(T key)
 	{
 		Object val = get(key);
@@ -176,6 +274,12 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		throw new IllegalArgumentException("Integer array required, but found: " + val + "!");
 	}
 	
+	/**
+	 * Method getIntegerArray.
+	 * @param key T
+	 * @param defaultArray int[]
+	 * @return int[]
+	 */
 	public int[] getIntegerArray(T key, int[] defaultArray)
 	{
 		try
@@ -188,6 +292,11 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		}
 	}
 	
+	/**
+	 * Method getLong.
+	 * @param key T
+	 * @return long
+	 */
 	public long getLong(T key)
 	{
 		Object val = get(key);
@@ -206,6 +315,12 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		throw new IllegalArgumentException("Long value required, but found: " + val + "!");
 	}
 	
+	/**
+	 * Method getLong.
+	 * @param key T
+	 * @param defaultValue long
+	 * @return long
+	 */
 	public long getLong(T key, long defaultValue)
 	{
 		Object val = get(key);
@@ -224,6 +339,11 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		return defaultValue;
 	}
 	
+	/**
+	 * Method getDouble.
+	 * @param key T
+	 * @return double
+	 */
 	public double getDouble(T key)
 	{
 		Object val = get(key);
@@ -242,6 +362,12 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		throw new IllegalArgumentException("Double value required, but found: " + val + "!");
 	}
 	
+	/**
+	 * Method getDouble.
+	 * @param key T
+	 * @param defaultValue double
+	 * @return double
+	 */
 	public double getDouble(T key, double defaultValue)
 	{
 		Object val = get(key);
@@ -260,6 +386,11 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		return defaultValue;
 	}
 	
+	/**
+	 * Method getString.
+	 * @param key T
+	 * @return String
+	 */
 	public String getString(T key)
 	{
 		Object val = get(key);
@@ -270,6 +401,12 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		throw new IllegalArgumentException("String value required, but not specified!");
 	}
 	
+	/**
+	 * Method getString.
+	 * @param key T
+	 * @param defaultValue String
+	 * @return String
+	 */
 	public String getString(T key, String defaultValue)
 	{
 		Object val = get(key);
@@ -280,11 +417,22 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		return defaultValue;
 	}
 	
+	/**
+	 * Method getObject.
+	 * @param key T
+	 * @return Object
+	 */
 	public Object getObject(T key)
 	{
 		return get(key);
 	}
 	
+	/**
+	 * Method getObject.
+	 * @param key T
+	 * @param defaultValue Object
+	 * @return Object
+	 */
 	public Object getObject(T key, Object defaultValue)
 	{
 		Object val = get(key);
@@ -295,6 +443,12 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		return defaultValue;
 	}
 	
+	/**
+	 * Method getEnum.
+	 * @param name T
+	 * @param enumClass Class<E>
+	 * @return E
+	 */
 	@SuppressWarnings("unchecked")
 	public <E extends Enum<E>> E getEnum(T name, Class<E> enumClass)
 	{
@@ -310,6 +464,13 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 		throw new IllegalArgumentException("Enum value of type " + enumClass.getName() + "required, but found: " + val + "!");
 	}
 	
+	/**
+	 * Method getEnum.
+	 * @param name T
+	 * @param enumClass Class<E>
+	 * @param defaultValue E
+	 * @return E
+	 */
 	@SuppressWarnings("unchecked")
 	public <E extends Enum<E>> E getEnum(T name, Class<E> enumClass, E defaultValue)
 	{

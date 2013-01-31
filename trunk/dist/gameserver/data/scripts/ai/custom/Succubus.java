@@ -20,8 +20,15 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Succubus extends Fighter
 {
+	/**
+	 * Field SAY_TEXT.
+	 */
 	private static final NpcString[] SAY_TEXT = new NpcString[]
 	{
 		NpcString.HAHAHA_YOU_DARE_TO_DISRUPT_ME_I_WILL_BE_YOUR_NIGHTMARE_FROM_WHICH_YOU_CAN_NEVER_AWAKEN,
@@ -33,11 +40,20 @@ public class Succubus extends Fighter
 		NpcString.HOW_ALL__THAT_POWER_REMOED
 	};
 	
+	/**
+	 * Constructor for Succubus.
+	 * @param actor NpcInstance
+	 */
 	public Succubus(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -53,6 +69,10 @@ public class Succubus extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

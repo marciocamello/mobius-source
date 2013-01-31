@@ -15,27 +15,54 @@ package lineage2.commons.threading;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RunnableStatsWrapper implements Runnable
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(RunnableStatsWrapper.class);
+	/**
+	 * Field _runnable.
+	 */
 	private final Runnable _runnable;
 	
+	/**
+	 * Constructor for RunnableStatsWrapper.
+	 * @param runnable Runnable
+	 */
 	RunnableStatsWrapper(Runnable runnable)
 	{
 		_runnable = runnable;
 	}
 	
+	/**
+	 * Method wrap.
+	 * @param runnable Runnable
+	 * @return Runnable
+	 */
 	public static Runnable wrap(Runnable runnable)
 	{
 		return new RunnableStatsWrapper(runnable);
 	}
 	
+	/**
+	 * Method run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public void run()
 	{
 		RunnableStatsWrapper.execute(_runnable);
 	}
 	
+	/**
+	 * Method execute.
+	 * @param runnable Runnable
+	 */
 	public static void execute(Runnable runnable)
 	{
 		long begin = System.nanoTime();

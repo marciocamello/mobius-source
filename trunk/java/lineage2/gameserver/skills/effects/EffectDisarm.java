@@ -17,13 +17,26 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectDisarm extends Effect
 {
+	/**
+	 * Constructor for EffectDisarm.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectDisarm(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
@@ -39,6 +52,9 @@ public final class EffectDisarm extends Effect
 		return super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -53,6 +69,9 @@ public final class EffectDisarm extends Effect
 		player.startWeaponEquipBlocked();
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -60,6 +79,10 @@ public final class EffectDisarm extends Effect
 		_effected.stopWeaponEquipBlocked();
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

@@ -32,17 +32,34 @@ import lineage2.gameserver.network.serverpackets.VehicleStart;
 import lineage2.gameserver.templates.ShuttleTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Shuttle extends Boat
 {
+	/**
+	 * @author Mobius
+	 */
 	private static class Docked extends RunnableImpl
 	{
+		/**
+		 * Field _shuttle.
+		 */
 		private final Shuttle _shuttle;
 		
+		/**
+		 * Constructor for Docked.
+		 * @param shuttle Shuttle
+		 */
 		public Docked(Shuttle shuttle)
 		{
 			_shuttle = shuttle;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -55,29 +72,57 @@ public class Shuttle extends Boat
 		}
 	}
 	
+	/**
+	 * Field serialVersionUID. (value is 1)
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _floors.
+	 */
 	private final TIntObjectHashMap<ShuttleWayEvent> _floors = new TIntObjectHashMap<>();
+	/**
+	 * Field _moveBack.
+	 */
 	private boolean _moveBack;
+	/**
+	 * Field _currentWay.
+	 */
 	public int _currentWay;
 	
+	/**
+	 * Constructor for Shuttle.
+	 * @param objectId int
+	 * @param template ShuttleTemplate
+	 */
 	public Shuttle(int objectId, ShuttleTemplate template)
 	{
 		super(objectId, template);
 		setFlying(true);
 	}
 	
+	/**
+	 * Method getBoatId.
+	 * @return int
+	 */
 	@Override
 	public int getBoatId()
 	{
 		return getTemplate().getId();
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @return ShuttleTemplate
+	 */
 	@Override
 	public final ShuttleTemplate getTemplate()
 	{
 		return (ShuttleTemplate) _template;
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	public void onSpawn()
 	{
@@ -86,60 +131,106 @@ public class Shuttle extends Boat
 		getCurrentFloor().reCalcNextTime(false);
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	public void onEvtArrived()
 	{
 		ThreadPoolManager.getInstance().schedule(new Docked(this), 1500L);
 	}
 	
+	/**
+	 * Method infoPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket infoPacket()
 	{
 		return new ExShuttleInfoPacket(this);
 	}
 	
+	/**
+	 * Method movePacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket movePacket()
 	{
 		return new ExShuttleMovePacket(this);
 	}
 	
+	/**
+	 * Method inMovePacket.
+	 * @param player Player
+	 * @param src Location
+	 * @param desc Location
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket inMovePacket(Player player, Location src, Location desc)
 	{
 		return new ExMTLInShuttlePacket(player, this, src, desc);
 	}
 	
+	/**
+	 * Method stopMovePacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket stopMovePacket()
 	{
 		return new StopMove(this);
 	}
 	
+	/**
+	 * Method inStopMovePacket.
+	 * @param player Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket inStopMovePacket(Player player)
 	{
 		return new ExStopMoveInShuttlePacket(player);
 	}
 	
+	/**
+	 * Method startPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket startPacket()
 	{
 		return new VehicleStart(this);
 	}
 	
+	/**
+	 * Method checkLocationPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket checkLocationPacket()
 	{
 		return new VehicleCheckLocation(this);
 	}
 	
+	/**
+	 * Method validateLocationPacket.
+	 * @param player Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket validateLocationPacket(Player player)
 	{
 		return new ExValidateLocationInShuttlePacket(player);
 	}
 	
+	/**
+	 * Method getOnPacket.
+	 * @param playable Playable
+	 * @param location Location
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket getOnPacket(Playable playable, Location location)
 	{
@@ -150,44 +241,77 @@ public class Shuttle extends Boat
 		return new ExShuttleGetOnPacket(playable, this, location);
 	}
 	
+	/**
+	 * Method getOffPacket.
+	 * @param playable Playable
+	 * @param location Location
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket getOffPacket(Playable playable, Location location)
 	{
 		return new ExShuttleGetOffPacket(playable, this, location);
 	}
 	
+	/**
+	 * Method isShuttle.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isShuttle()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method oustPlayers.
+	 */
 	@Override
 	public void oustPlayers()
 	{
 	}
 	
+	/**
+	 * Method trajetEnded.
+	 * @param oust boolean
+	 */
 	@Override
 	public void trajetEnded(boolean oust)
 	{
 	}
 	
+	/**
+	 * Method getReturnLoc.
+	 * @return Location
+	 */
 	@Override
 	public Location getReturnLoc()
 	{
 		return getCurrentFloor().getReturnLoc();
 	}
 	
+	/**
+	 * Method addFloor.
+	 * @param floor ShuttleWayEvent
+	 */
 	public void addFloor(ShuttleWayEvent floor)
 	{
 		_floors.put((floor.getId() % 100), floor);
 	}
 	
+	/**
+	 * Method getCurrentFloor.
+	 * @return ShuttleWayEvent
+	 */
 	public ShuttleWayEvent getCurrentFloor()
 	{
 		return _floors.get(_currentWay);
 	}
 	
+	/**
+	 * Method getNextFloor.
+	 * @return ShuttleWayEvent
+	 */
 	ShuttleWayEvent getNextFloor()
 	{
 		int floors = _floors.size() - 1;

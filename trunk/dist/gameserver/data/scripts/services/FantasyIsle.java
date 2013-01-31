@@ -26,26 +26,87 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FantasyIsle extends Functions implements ScriptFile
 {
+	/**
+	 * Field _startTask.
+	 */
 	private static ScheduledFuture<?> _startTask;
+	/**
+	 * Field _isStarted.
+	 */
 	static boolean _isStarted;
+	/**
+	 * Field MC.
+	 */
 	private static int MC = 32433;
+	/**
+	 * Field singer1.
+	 */
 	private static int singer1 = 32431;
+	/**
+	 * Field singer2.
+	 */
 	private static int singer2 = 32432;
+	/**
+	 * Field circus1.
+	 */
 	private static int circus1 = 32442;
+	/**
+	 * Field circus2.
+	 */
 	private static int circus2 = 32443;
+	/**
+	 * Field circus3.
+	 */
 	private static int circus3 = 32444;
+	/**
+	 * Field circus4.
+	 */
 	private static int circus4 = 32445;
+	/**
+	 * Field circus5.
+	 */
 	private static int circus5 = 32446;
+	/**
+	 * Field individual1.
+	 */
 	private static int individual1 = 32439;
+	/**
+	 * Field individual2.
+	 */
 	private static int individual2 = 32440;
+	/**
+	 * Field individual3.
+	 */
 	private static int individual3 = 32441;
+	/**
+	 * Field showstuff1.
+	 */
 	private static int showstuff1 = 32424;
+	/**
+	 * Field showstuff2.
+	 */
 	private static int showstuff2 = 32425;
+	/**
+	 * Field showstuff3.
+	 */
 	private static int showstuff3 = 32426;
+	/**
+	 * Field showstuff4.
+	 */
 	private static int showstuff4 = 32427;
+	/**
+	 * Field showstuff5.
+	 */
 	private static int showstuff5 = 32428;
+	/**
+	 * Field WALKS.
+	 */
 	private static Map<String, Walk> WALKS = new HashMap<>();
 	static
 	{
@@ -138,6 +199,9 @@ public class FantasyIsle extends Functions implements ScriptFile
 		WALKS.put("24", new Walk(-56730, -56340, -2008, "25", 1800));
 		WALKS.put("27", new Walk(-56702, -56340, -2008, "29", 1800));
 	}
+	/**
+	 * Field TEXT.
+	 */
 	private static String[] TEXT = new String[]
 	{
 		"How come people are not here... We are about to start the show.. Hmm",
@@ -163,6 +227,9 @@ public class FantasyIsle extends Functions implements ScriptFile
 		"Please remember that Fantasy Isle is always planning a lot of great shows for you.",
 		"Well, I wish I could continue all night long, but this is it for today. Thank you."
 	};
+	/**
+	 * Field TALKS.
+	 */
 	private static Map<String, Talk> TALKS = new HashMap<>();
 	static
 	{
@@ -185,12 +252,20 @@ public class FantasyIsle extends Functions implements ScriptFile
 		TALKS.put("26", new Talk(TEXT[21], "27", 5400));
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 		_startTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartTask(), 60000, 60000);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -202,18 +277,32 @@ public class FantasyIsle extends Functions implements ScriptFile
 		_isStarted = false;
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method isStarted.
+	 * @return boolean
+	 */
 	public static boolean isStarted()
 	{
 		return _isStarted;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class StartTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -231,11 +320,26 @@ public class FantasyIsle extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method addSpawn.
+	 * @param npcId int
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param heading int
+	 * @return NpcInstance
+	 */
 	private static NpcInstance addSpawn(int npcId, int x, int y, int z, int heading)
 	{
 		return Functions.spawn(new Location(x, y, z, heading), npcId);
 	}
 	
+	/**
+	 * Method startQuestTimer.
+	 * @param event String
+	 * @param time int
+	 * @param temp_npc NpcInstance
+	 */
 	private static void startQuestTimer(String event, int time, NpcInstance temp_npc)
 	{
 		Map<String, Object> variables = new HashMap<>();
@@ -246,6 +350,9 @@ public class FantasyIsle extends Functions implements ScriptFile
 		}, variables, time);
 	}
 	
+	/**
+	 * Method manualStart.
+	 */
 	public void manualStart()
 	{
 		if (!isStarted())
@@ -255,6 +362,10 @@ public class FantasyIsle extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method start.
+	 * @param event String
+	 */
 	public void start(String event)
 	{
 		NpcInstance temp_npc = getNpc();
@@ -441,11 +552,37 @@ public class FantasyIsle extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class Walk
 	{
+		/**
+		 * Field time.
+		 */
+		/**
+		 * Field z.
+		 */
+		/**
+		 * Field y.
+		 */
+		/**
+		 * Field x.
+		 */
 		public int x, y, z, time;
+		/**
+		 * Field event.
+		 */
 		public String event;
 		
+		/**
+		 * Constructor for Walk.
+		 * @param x int
+		 * @param y int
+		 * @param z int
+		 * @param event String
+		 * @param time int
+		 */
 		public Walk(int x, int y, int z, String event, int time)
 		{
 			this.x = x;
@@ -456,11 +593,29 @@ public class FantasyIsle extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class Talk
 	{
+		/**
+		 * Field time.
+		 */
 		public int time;
+		/**
+		 * Field event.
+		 */
+		/**
+		 * Field text.
+		 */
 		public String text, event;
 		
+		/**
+		 * Constructor for Talk.
+		 * @param text String
+		 * @param event String
+		 * @param time int
+		 */
 		public Talk(String text, String event, int time)
 		{
 			this.text = text;

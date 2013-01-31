@@ -18,8 +18,15 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NihilInvaderChest extends DefaultAI
 {
+	/**
+	 * Field _firstLevelItems.
+	 */
 	private static int[] _firstLevelItems =
 	{
 		4039,
@@ -29,6 +36,9 @@ public class NihilInvaderChest extends DefaultAI
 		4043,
 		4044
 	};
+	/**
+	 * Field _secondLevelItems.
+	 */
 	private static int[] _secondLevelItems =
 	{
 		9628,
@@ -36,12 +46,21 @@ public class NihilInvaderChest extends DefaultAI
 		9630
 	};
 	
+	/**
+	 * Constructor for NihilInvaderChest.
+	 * @param actor NpcInstance
+	 */
 	public NihilInvaderChest(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -74,6 +93,11 @@ public class NihilInvaderChest extends DefaultAI
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

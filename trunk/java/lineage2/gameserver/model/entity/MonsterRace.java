@@ -23,15 +23,40 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MonsterRace
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(MonsterRace.class);
+	/**
+	 * Field monsters.
+	 */
 	private final NpcInstance[] monsters;
+	/**
+	 * Field _instance.
+	 */
 	private static MonsterRace _instance;
+	/**
+	 * Field _constructor.
+	 */
 	private Constructor<?> _constructor;
+	/**
+	 * Field speeds.
+	 */
 	private int[][] speeds;
+	/**
+	 * Field second. Field first.
+	 */
 	private final int[] first, second;
 	
+	/**
+	 * Constructor for MonsterRace.
+	 */
 	private MonsterRace()
 	{
 		monsters = new NpcInstance[8];
@@ -40,6 +65,10 @@ public class MonsterRace
 		second = new int[2];
 	}
 	
+	/**
+	 * Method getInstance.
+	 * @return MonsterRace
+	 */
 	public static MonsterRace getInstance()
 	{
 		if (_instance == null)
@@ -49,6 +78,9 @@ public class MonsterRace
 		return _instance;
 	}
 	
+	/**
+	 * Method newRace.
+	 */
 	public void newRace()
 	{
 		int random = 0;
@@ -78,6 +110,9 @@ public class MonsterRace
 		newSpeeds();
 	}
 	
+	/**
+	 * Method newSpeeds.
+	 */
 	public void newSpeeds()
 	{
 		speeds = new int[8][20];
@@ -114,21 +149,37 @@ public class MonsterRace
 		}
 	}
 	
+	/**
+	 * Method getMonsters.
+	 * @return NpcInstance[]
+	 */
 	public NpcInstance[] getMonsters()
 	{
 		return monsters;
 	}
 	
+	/**
+	 * Method getSpeeds.
+	 * @return int[][]
+	 */
 	public int[][] getSpeeds()
 	{
 		return speeds;
 	}
 	
+	/**
+	 * Method getFirstPlace.
+	 * @return int
+	 */
 	public int getFirstPlace()
 	{
 		return first[0];
 	}
 	
+	/**
+	 * Method getSecondPlace.
+	 * @return int
+	 */
 	public int getSecondPlace()
 	{
 		return second[0];

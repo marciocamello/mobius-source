@@ -22,8 +22,15 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KukuruInstance extends Functions
 {
+	/**
+	 * Method getgokukuru.
+	 */
 	public void getgokukuru()
 	{
 		Player player = getSelf();
@@ -31,6 +38,12 @@ public class KukuruInstance extends Functions
 		gokukuru(npc, player, false);
 	}
 	
+	/**
+	 * Method gokukuru.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 * @param servitor boolean
+	 */
 	public static void gokukuru(NpcInstance npc, Player player, boolean servitor)
 	{
 		List<Creature> target = new ArrayList<>();

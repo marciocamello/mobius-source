@@ -21,13 +21,25 @@ import lineage2.gameserver.network.serverpackets.Revive;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectFakeDeath extends Effect
 {
+	/**
+	 * Constructor for EffectFakeDeath.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectFakeDeath(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -39,6 +51,9 @@ public final class EffectFakeDeath extends Effect
 		player.broadcastCharInfo();
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -51,6 +66,10 @@ public final class EffectFakeDeath extends Effect
 		player.broadcastCharInfo();
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

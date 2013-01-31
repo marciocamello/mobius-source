@@ -20,16 +20,32 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BuffCharger extends Skill
 {
+	/**
+	 * Field _target.
+	 */
 	private final int _target;
 	
+	/**
+	 * Constructor for BuffCharger.
+	 * @param set StatsSet
+	 */
 	public BuffCharger(StatsSet set)
 	{
 		super(set);
 		_target = set.getInteger("targetBuff", 0);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

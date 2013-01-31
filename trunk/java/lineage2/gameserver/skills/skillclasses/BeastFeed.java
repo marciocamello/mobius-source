@@ -22,13 +22,26 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.FeedableBeastInstance;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BeastFeed extends Skill
 {
+	/**
+	 * Constructor for BeastFeed.
+	 * @param set StatsSet
+	 */
 	public BeastFeed(StatsSet set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(final Creature activeChar, List<Creature> targets)
 	{

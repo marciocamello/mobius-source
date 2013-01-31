@@ -27,32 +27,59 @@ import lineage2.gameserver.templates.AirshipDock;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class AirshipDockParser extends AbstractFileParser<AirshipDockHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final AirshipDockParser _instance = new AirshipDockParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return AirshipDockParser
+	 */
 	public static AirshipDockParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for AirshipDockParser.
+	 */
 	protected AirshipDockParser()
 	{
 		super(AirshipDockHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/other/airship_docks.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "airship_docks.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{
@@ -83,6 +110,11 @@ public final class AirshipDockParser extends AbstractFileParser<AirshipDockHolde
 		}
 	}
 	
+	/**
+	 * Method parsePoints.
+	 * @param listElement Element
+	 * @return List<BoatPoint>
+	 */
 	private List<BoatPoint> parsePoints(Element listElement)
 	{
 		if (listElement == null)

@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCubeGameChangeTimeToStart extends L2GameServerPacket
 {
+	/**
+	 * Field _seconds.
+	 */
 	int _seconds;
 	
+	/**
+	 * Constructor for ExCubeGameChangeTimeToStart.
+	 * @param seconds int
+	 */
 	public ExCubeGameChangeTimeToStart(int seconds)
 	{
 		_seconds = seconds;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

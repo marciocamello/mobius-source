@@ -38,6 +38,10 @@ import lineage2.gameserver.utils.SecondaryPasswordAuth;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 {
 	private static final Logger _log = LoggerFactory.getLogger(GameClient.class);
@@ -63,6 +67,10 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 	private SecondaryPasswordAuth _secondaryAuth;
 	private final List<Integer> _charSlotMapping = new ArrayList<>();
 	
+	/**
+	 * Constructor for GameClient.
+	 * @param con MMOConnection<GameClient>
+	 */
 	public GameClient(MMOConnection<GameClient> con)
 	{
 		super(con);
@@ -71,6 +79,9 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		_ip = con.getSocket().getInetAddress().getHostAddress();
 	}
 	
+	/**
+	 * Method onDisconnection.
+	 */
 	@Override
 	protected void onDisconnection()
 	{
@@ -97,16 +108,27 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 	
+	/**
+	 * Method onForcedDisconnection.
+	 */
 	@Override
 	protected void onForcedDisconnection()
 	{
 	}
 	
+	/**
+	 * Method getSecondaryAuth.
+	 * @return SecondaryPasswordAuth
+	 */
 	public SecondaryPasswordAuth getSecondaryAuth()
 	{
 		return _secondaryAuth;
 	}
 	
+	/**
+	 * Method markRestoredChar.
+	 * @param charslot int
+	 */
 	public void markRestoredChar(int charslot)
 	{
 		int objid = getObjectIdForSlot(charslot);
@@ -137,6 +159,10 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 	
+	/**
+	 * Method markToDeleteChar.
+	 * @param charslot int
+	 */
 	public void markToDeleteChar(int charslot)
 	{
 		int objid = getObjectIdForSlot(charslot);
@@ -168,6 +194,10 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 	
+	/**
+	 * Method deleteChar.
+	 * @param charslot int
+	 */
 	public void deleteChar(int charslot)
 	{
 		if (_activeChar != null)
@@ -182,6 +212,11 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		CharacterDAO.getInstance().deleteCharByObjId(objid);
 	}
 	
+	/**
+	 * Method loadCharFromDisk.
+	 * @param charslot int
+	 * @return Player
+	 */
 	public Player loadCharFromDisk(int charslot)
 	{
 		int objectId = getObjectIdForSlot(charslot);
@@ -223,6 +258,11 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		return character;
 	}
 	
+	/**
+	 * Method getObjectIdForSlot.
+	 * @param charslot int
+	 * @return int
+	 */
 	public int getObjectIdForSlot(int charslot)
 	{
 		if ((charslot < 0) || (charslot >= _charSlotMapping.size()))
@@ -233,31 +273,55 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		return _charSlotMapping.get(charslot);
 	}
 	
+	/**
+	 * Method getActiveChar.
+	 * @return Player
+	 */
 	public Player getActiveChar()
 	{
 		return _activeChar;
 	}
 	
+	/**
+	 * Method getSessionKey.
+	 * @return SessionKey
+	 */
 	public SessionKey getSessionKey()
 	{
 		return _sessionKey;
 	}
 	
+	/**
+	 * Method getLogin.
+	 * @return String
+	 */
 	public String getLogin()
 	{
 		return _login;
 	}
 	
+	/**
+	 * Method setSecondaryAuth.
+	 * @param sec SecondaryPasswordAuth
+	 */
 	public void setSecondaryAuth(SecondaryPasswordAuth sec)
 	{
 		_secondaryAuth = sec;
 	}
 	
+	/**
+	 * Method setLoginName.
+	 * @param loginName String
+	 */
 	public void setLoginName(String loginName)
 	{
 		_login = loginName;
 	}
 	
+	/**
+	 * Method setActiveChar.
+	 * @param player Player
+	 */
 	public void setActiveChar(Player player)
 	{
 		_activeChar = player;
@@ -267,11 +331,19 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 	
+	/**
+	 * Method setSessionId.
+	 * @param sessionKey SessionKey
+	 */
 	public void setSessionId(SessionKey sessionKey)
 	{
 		_sessionKey = sessionKey;
 	}
 	
+	/**
+	 * Method setCharSelection.
+	 * @param selectionInfo CharSelectionInfo
+	 */
 	public void setCharSelection(CharSelectionInfo selectionInfo)
 	{
 		_charSlotMapping.clear();
@@ -282,16 +354,30 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 	
+	/**
+	 * Method getRevision.
+	 * @return int
+	 */
 	public int getRevision()
 	{
 		return revision;
 	}
 	
+	/**
+	 * Method setRevision.
+	 * @param revision int
+	 */
 	public void setRevision(int revision)
 	{
 		this.revision = revision;
 	}
 	
+	/**
+	 * Method encrypt.
+	 * @param buf ByteBuffer
+	 * @param size int
+	 * @return boolean
+	 */
 	@Override
 	public boolean encrypt(final ByteBuffer buf, final int size)
 	{
@@ -300,6 +386,12 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		return true;
 	}
 	
+	/**
+	 * Method decrypt.
+	 * @param buf ByteBuffer
+	 * @param size int
+	 * @return boolean
+	 */
 	@Override
 	public boolean decrypt(ByteBuffer buf, int size)
 	{
@@ -307,6 +399,10 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		return ret;
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param gsp L2GameServerPacket
+	 */
 	public void sendPacket(L2GameServerPacket gsp)
 	{
 		if (isConnected())
@@ -315,6 +411,10 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param gsp L2GameServerPacket[]
+	 */
 	public void sendPacket(L2GameServerPacket... gsp)
 	{
 		if (isConnected())
@@ -323,6 +423,10 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 	
+	/**
+	 * Method sendPackets.
+	 * @param gsp List<L2GameServerPacket>
+	 */
 	public void sendPackets(List<L2GameServerPacket> gsp)
 	{
 		if (isConnected())
@@ -331,6 +435,10 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 	
+	/**
+	 * Method close.
+	 * @param gsp L2GameServerPacket
+	 */
 	public void close(L2GameServerPacket gsp)
 	{
 		if (isConnected())
@@ -339,11 +447,19 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 	
+	/**
+	 * Method getIpAddr.
+	 * @return String
+	 */
 	public String getIpAddr()
 	{
 		return _ip;
 	}
 	
+	/**
+	 * Method enableCrypt.
+	 * @return byte[]
+	 */
 	public byte[] enableCrypt()
 	{
 		byte[] key = BlowFishKeygen.getRandomKey();
@@ -351,39 +467,72 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		return key;
 	}
 	
+	/**
+	 * Method getBonus.
+	 * @return double
+	 */
 	public double getBonus()
 	{
 		return _bonus;
 	}
 	
+	/**
+	 * Method getBonusExpire.
+	 * @return int
+	 */
 	public int getBonusExpire()
 	{
 		return _bonusExpire;
 	}
 	
+	/**
+	 * Method setBonus.
+	 * @param bonus double
+	 */
 	public void setBonus(double bonus)
 	{
 		_bonus = bonus;
 	}
 	
+	/**
+	 * Method setBonusExpire.
+	 * @param bonusExpire int
+	 */
 	public void setBonusExpire(int bonusExpire)
 	{
 		_bonusExpire = bonusExpire;
 	}
 	
+	/**
+	 * Method getState.
+	 * @return GameClientState
+	 */
 	public GameClientState getState()
 	{
 		return _state;
 	}
 	
+	/**
+	 * Method setState.
+	 * @param state GameClientState
+	 */
 	public void setState(GameClientState state)
 	{
 		_state = state;
 	}
 	
+	/**
+	 * Field _failedPackets.
+	 */
 	private int _failedPackets = 0;
+	/**
+	 * Field _unknownPackets.
+	 */
 	private int _unknownPackets = 0;
 	
+	/**
+	 * Method onPacketReadFail.
+	 */
 	public void onPacketReadFail()
 	{
 		if (_failedPackets++ >= 10)
@@ -396,6 +545,9 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 	
+	/**
+	 * Method onUnknownPacket.
+	 */
 	public void onUnknownPacket()
 	{
 		if (_unknownPackets++ >= 10)
@@ -408,6 +560,10 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		}
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{

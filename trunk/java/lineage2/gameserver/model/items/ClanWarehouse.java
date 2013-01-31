@@ -15,13 +15,25 @@ package lineage2.gameserver.model.items;
 import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 import lineage2.gameserver.model.pledge.Clan;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ClanWarehouse extends Warehouse
 {
+	/**
+	 * Constructor for ClanWarehouse.
+	 * @param clan Clan
+	 */
 	public ClanWarehouse(Clan clan)
 	{
 		super(clan.getClanId());
 	}
 	
+	/**
+	 * Method getItemLocation.
+	 * @return ItemLocation
+	 */
 	@Override
 	public ItemLocation getItemLocation()
 	{

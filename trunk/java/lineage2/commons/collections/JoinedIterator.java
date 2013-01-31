@@ -15,18 +15,42 @@ package lineage2.commons.collections;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class JoinedIterator<E> implements Iterator<E>
 {
+	/**
+	 * Field _iterators.
+	 */
 	private Iterator<E>[] _iterators;
+	/**
+	 * Field _currentIteratorIndex.
+	 */
 	private int _currentIteratorIndex;
+	/**
+	 * Field _currentIterator.
+	 */
 	private Iterator<E> _currentIterator;
+	/**
+	 * Field _lastUsedIterator.
+	 */
 	private Iterator<E> _lastUsedIterator;
 	
+	/**
+	 * Constructor for JoinedIterator.
+	 * @param iterators List<Iterator<E>>
+	 */
 	public JoinedIterator(List<Iterator<E>> iterators)
 	{
 		this(iterators.toArray(new Iterator[iterators.size()]));
 	}
 	
+	/**
+	 * Constructor for JoinedIterator.
+	 * @param iterators Iterator<?>[]
+	 */
 	@SuppressWarnings("unchecked")
 	public JoinedIterator(Iterator<?>... iterators)
 	{
@@ -37,6 +61,10 @@ public class JoinedIterator<E> implements Iterator<E>
 		_iterators = (Iterator<E>[]) iterators;
 	}
 	
+	/**
+	 * Method hasNext.
+	 * @return boolean * @see java.util.Iterator#hasNext()
+	 */
 	@Override
 	public boolean hasNext()
 	{
@@ -44,6 +72,10 @@ public class JoinedIterator<E> implements Iterator<E>
 		return _currentIterator.hasNext();
 	}
 	
+	/**
+	 * Method next.
+	 * @return E * @see java.util.Iterator#next()
+	 */
 	@Override
 	public E next()
 	{
@@ -51,6 +83,10 @@ public class JoinedIterator<E> implements Iterator<E>
 		return _currentIterator.next();
 	}
 	
+	/**
+	 * Method remove.
+	 * @see java.util.Iterator#remove()
+	 */
 	@Override
 	public void remove()
 	{
@@ -58,6 +94,9 @@ public class JoinedIterator<E> implements Iterator<E>
 		_lastUsedIterator.remove();
 	}
 	
+	/**
+	 * Method updateCurrentIterator.
+	 */
 	protected void updateCurrentIterator()
 	{
 		if (_currentIterator == null)

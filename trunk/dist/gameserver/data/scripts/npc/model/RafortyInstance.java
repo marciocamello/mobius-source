@@ -17,21 +17,44 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RafortyInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field FREYA_NECKLACE. (value is 16025)
+	 */
 	private static final int FREYA_NECKLACE = 16025;
+	/**
+	 * Field BLESSED_FREYA_NECKLACE. (value is 16026)
+	 */
 	private static final int BLESSED_FREYA_NECKLACE = 16026;
+	/**
+	 * Field BOTTLE_OF_FREYAS_SOUL. (value is 16027)
+	 */
 	private static final int BOTTLE_OF_FREYAS_SOUL = 16027;
 	
+	/**
+	 * Constructor for RafortyInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public RafortyInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

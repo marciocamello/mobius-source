@@ -15,13 +15,28 @@ package lineage2.gameserver.stats.funcs;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FuncMul extends Func
 {
+	/**
+	 * Constructor for FuncMul.
+	 * @param stat Stats
+	 * @param order int
+	 * @param owner Object
+	 * @param value double
+	 */
 	public FuncMul(Stats stat, int order, Object owner, double value)
 	{
 		super(stat, order, owner, value);
 	}
 	
+	/**
+	 * Method calc.
+	 * @param env Env
+	 */
 	@Override
 	public void calc(Env env)
 	{

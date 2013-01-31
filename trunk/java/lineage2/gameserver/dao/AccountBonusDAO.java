@@ -22,19 +22,47 @@ import lineage2.gameserver.database.DatabaseFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AccountBonusDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(AccountBonusDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final AccountBonusDAO _instance = new AccountBonusDAO();
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT bonus, bonus_expire FROM account_bonus WHERE account=?"")
+	 */
 	public static final String SELECT_SQL_QUERY = "SELECT bonus, bonus_expire FROM account_bonus WHERE account=?";
+	/**
+	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM account_bonus WHERE account=?"")
+	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM account_bonus WHERE account=?";
+	/**
+	 * Field INSERT_SQL_QUERY. (value is ""REPLACE INTO account_bonus(account, bonus, bonus_expire) VALUES (?,?,?)"")
+	 */
 	public static final String INSERT_SQL_QUERY = "REPLACE INTO account_bonus(account, bonus, bonus_expire) VALUES (?,?,?)";
 	
+	/**
+	 * Method getInstance.
+	 * @return AccountBonusDAO
+	 */
 	public static AccountBonusDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method select.
+	 * @param account String
+	 * @return double[]
+	 */
 	public double[] select(String account)
 	{
 		double bonus = 1.;
@@ -69,6 +97,10 @@ public class AccountBonusDAO
 		};
 	}
 	
+	/**
+	 * Method delete.
+	 * @param account String
+	 */
 	public void delete(String account)
 	{
 		Connection con = null;
@@ -90,6 +122,12 @@ public class AccountBonusDAO
 		}
 	}
 	
+	/**
+	 * Method insert.
+	 * @param account String
+	 * @param bonus double
+	 * @param endTime int
+	 */
 	public void insert(String account, double bonus, int endTime)
 	{
 		Connection con = null;

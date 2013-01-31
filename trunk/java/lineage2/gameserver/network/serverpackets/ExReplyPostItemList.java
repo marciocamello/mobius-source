@@ -19,10 +19,21 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInfo;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExReplyPostItemList extends L2GameServerPacket
 {
+	/**
+	 * Field _itemsList.
+	 */
 	private final List<ItemInfo> _itemsList = new ArrayList<>();
 	
+	/**
+	 * Constructor for ExReplyPostItemList.
+	 * @param activeChar Player
+	 */
 	public ExReplyPostItemList(Player activeChar)
 	{
 		ItemInstance[] items = activeChar.getInventory().getItems();
@@ -35,6 +46,9 @@ public class ExReplyPostItemList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

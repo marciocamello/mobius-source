@@ -33,23 +33,78 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ItemAuction
 {
+	/**
+	 * Field _log.
+	 */
 	private static Logger _log = LoggerFactory.getLogger(ItemAuction.class);
+	/**
+	 * Field ENDING_TIME_EXTEND_5.
+	 */
 	private static long ENDING_TIME_EXTEND_5 = TimeUnit.MILLISECONDS.convert(5, TimeUnit.MINUTES);
+	/**
+	 * Field ENDING_TIME_EXTEND_8.
+	 */
 	private static long ENDING_TIME_EXTEND_8 = TimeUnit.MILLISECONDS.convert(8, TimeUnit.MINUTES);
+	/**
+	 * Field _auctionId.
+	 */
 	private final int _auctionId;
+	/**
+	 * Field _instanceId.
+	 */
 	private final int _instanceId;
+	/**
+	 * Field _startingTime.
+	 */
 	private final long _startingTime;
+	/**
+	 * Field _endingTime.
+	 */
 	private final long _endingTime;
+	/**
+	 * Field _auctionItem.
+	 */
 	private final AuctionItem _auctionItem;
+	/**
+	 * Field _auctionBids.
+	 */
 	private final TIntObjectHashMap<ItemAuctionBid> _auctionBids;
+	/**
+	 * Field _auctionState.
+	 */
 	private ItemAuctionState _auctionState;
+	/**
+	 * Field _scheduledAuctionEndingExtendState.
+	 */
 	private int _scheduledAuctionEndingExtendState;
+	/**
+	 * Field _auctionEndingExtendState.
+	 */
 	private int _auctionEndingExtendState;
+	/**
+	 * Field _highestBid.
+	 */
 	private ItemAuctionBid _highestBid;
+	/**
+	 * Field _lastBidPlayerObjId.
+	 */
 	private int _lastBidPlayerObjId;
 	
+	/**
+	 * Constructor for ItemAuction.
+	 * @param auctionId int
+	 * @param instanceId int
+	 * @param startingTime long
+	 * @param endingTime long
+	 * @param auctionItem AuctionItem
+	 * @param auctionState ItemAuctionState
+	 */
 	public ItemAuction(int auctionId, int instanceId, long startingTime, long endingTime, AuctionItem auctionItem, ItemAuctionState auctionState)
 	{
 		_auctionId = auctionId;
@@ -61,6 +116,10 @@ public class ItemAuction
 		_auctionState = auctionState;
 	}
 	
+	/**
+	 * Method addBid.
+	 * @param bid ItemAuctionBid
+	 */
 	void addBid(ItemAuctionBid bid)
 	{
 		_auctionBids.put(bid.getCharId(), bid);
@@ -70,11 +129,21 @@ public class ItemAuction
 		}
 	}
 	
+	/**
+	 * Method getAuctionState.
+	 * @return ItemAuctionState
+	 */
 	public ItemAuctionState getAuctionState()
 	{
 		return _auctionState;
 	}
 	
+	/**
+	 * Method setAuctionState.
+	 * @param expected ItemAuctionState
+	 * @param wanted ItemAuctionState
+	 * @return boolean
+	 */
 	public synchronized boolean setAuctionState(ItemAuctionState expected, ItemAuctionState wanted)
 	{
 		if (_auctionState != expected)
@@ -86,56 +155,100 @@ public class ItemAuction
 		return true;
 	}
 	
+	/**
+	 * Method getAuctionId.
+	 * @return int
+	 */
 	public int getAuctionId()
 	{
 		return _auctionId;
 	}
 	
+	/**
+	 * Method getInstanceId.
+	 * @return int
+	 */
 	public int getInstanceId()
 	{
 		return _instanceId;
 	}
 	
+	/**
+	 * Method getAuctionItem.
+	 * @return AuctionItem
+	 */
 	public AuctionItem getAuctionItem()
 	{
 		return _auctionItem;
 	}
 	
+	/**
+	 * Method createNewItemInstance.
+	 * @return ItemInstance
+	 */
 	public ItemInstance createNewItemInstance()
 	{
 		return _auctionItem.createNewItemInstance();
 	}
 	
+	/**
+	 * Method getAuctionInitBid.
+	 * @return long
+	 */
 	public long getAuctionInitBid()
 	{
 		return _auctionItem.getAuctionInitBid();
 	}
 	
+	/**
+	 * Method getHighestBid.
+	 * @return ItemAuctionBid
+	 */
 	public ItemAuctionBid getHighestBid()
 	{
 		return _highestBid;
 	}
 	
+	/**
+	 * Method getAuctionEndingExtendState.
+	 * @return int
+	 */
 	public int getAuctionEndingExtendState()
 	{
 		return _auctionEndingExtendState;
 	}
 	
+	/**
+	 * Method getScheduledAuctionEndingExtendState.
+	 * @return int
+	 */
 	public int getScheduledAuctionEndingExtendState()
 	{
 		return _scheduledAuctionEndingExtendState;
 	}
 	
+	/**
+	 * Method setScheduledAuctionEndingExtendState.
+	 * @param state int
+	 */
 	public void setScheduledAuctionEndingExtendState(int state)
 	{
 		_scheduledAuctionEndingExtendState = state;
 	}
 	
+	/**
+	 * Method getStartingTime.
+	 * @return long
+	 */
 	public long getStartingTime()
 	{
 		return _startingTime;
 	}
 	
+	/**
+	 * Method getEndingTime.
+	 * @return long
+	 */
 	public long getEndingTime()
 	{
 		if (_auctionEndingExtendState == 0)
@@ -152,16 +265,27 @@ public class ItemAuction
 		}
 	}
 	
+	/**
+	 * Method getStartingTimeRemaining.
+	 * @return long
+	 */
 	public long getStartingTimeRemaining()
 	{
 		return Math.max(getEndingTime() - System.currentTimeMillis(), 0L);
 	}
 	
+	/**
+	 * Method getFinishingTimeRemaining.
+	 * @return long
+	 */
 	public long getFinishingTimeRemaining()
 	{
 		return Math.max(getEndingTime() - System.currentTimeMillis(), 0L);
 	}
 	
+	/**
+	 * Method store.
+	 */
 	public void store()
 	{
 		Connection con = null;
@@ -190,6 +314,11 @@ public class ItemAuction
 		}
 	}
 	
+	/**
+	 * Method getAndSetLastBidPlayerObjectId.
+	 * @param playerObjId int
+	 * @return int
+	 */
 	public int getAndSetLastBidPlayerObjectId(int playerObjId)
 	{
 		int lastBid = _lastBidPlayerObjId;
@@ -197,6 +326,11 @@ public class ItemAuction
 		return lastBid;
 	}
 	
+	/**
+	 * Method updatePlayerBid.
+	 * @param bid ItemAuctionBid
+	 * @param delete boolean
+	 */
 	public void updatePlayerBid(ItemAuctionBid bid, boolean delete)
 	{
 		Connection con = null;
@@ -231,6 +365,11 @@ public class ItemAuction
 		}
 	}
 	
+	/**
+	 * Method registerBid.
+	 * @param player Player
+	 * @param newBid long
+	 */
 	public void registerBid(Player player, long newBid)
 	{
 		if (player == null)
@@ -301,6 +440,11 @@ public class ItemAuction
 		}
 	}
 	
+	/**
+	 * Method onPlayerBid.
+	 * @param player Player
+	 * @param bid ItemAuctionBid
+	 */
 	private void onPlayerBid(Player player, ItemAuctionBid bid)
 	{
 		if (_highestBid == null)
@@ -331,6 +475,10 @@ public class ItemAuction
 		}
 	}
 	
+	/**
+	 * Method broadcastToAllBidders.
+	 * @param packet L2GameServerPacket
+	 */
 	public void broadcastToAllBidders(L2GameServerPacket packet)
 	{
 		TIntObjectIterator<ItemAuctionBid> itr = _auctionBids.iterator();
@@ -347,6 +495,10 @@ public class ItemAuction
 		}
 	}
 	
+	/**
+	 * Method cancelBid.
+	 * @param player Player
+	 */
 	public void cancelBid(Player player)
 	{
 		if (player == null)
@@ -400,6 +552,12 @@ public class ItemAuction
 		}
 	}
 	
+	/**
+	 * Method reduceItemCount.
+	 * @param player Player
+	 * @param count long
+	 * @return boolean
+	 */
 	private boolean reduceItemCount(Player player, long count)
 	{
 		if (Config.ALT_ITEM_AUCTION_BID_ITEM_ID == 57)
@@ -414,6 +572,11 @@ public class ItemAuction
 		return player.getInventory().destroyItemByItemId(Config.ALT_ITEM_AUCTION_BID_ITEM_ID, count);
 	}
 	
+	/**
+	 * Method increaseItemCount.
+	 * @param player Player
+	 * @param count long
+	 */
 	private void increaseItemCount(Player player, long count)
 	{
 		if (Config.ALT_ITEM_AUCTION_BID_ITEM_ID == 57)
@@ -427,12 +590,22 @@ public class ItemAuction
 		player.sendPacket(SystemMessage2.obtainItems(Config.ALT_ITEM_AUCTION_BID_ITEM_ID, count, 0));
 	}
 	
+	/**
+	 * Method getLastBid.
+	 * @param player Player
+	 * @return long
+	 */
 	public long getLastBid(Player player)
 	{
 		ItemAuctionBid bid = getBidFor(player.getObjectId());
 		return bid != null ? bid.getLastBid() : -1L;
 	}
 	
+	/**
+	 * Method getBidFor.
+	 * @param charId int
+	 * @return ItemAuctionBid
+	 */
 	public ItemAuctionBid getBidFor(int charId)
 	{
 		return _auctionBids.get(charId);

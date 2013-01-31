@@ -28,13 +28,23 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WorkshopGatekeeperInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field doorRecharge.
+	 */
 	private static long doorRecharge = 0;
+	/**
+	 * Field doors.
+	 */
 	private static final IntObjectMap<IntSet> doors = new HashIntObjectMap<>();
 	static
 	{
@@ -105,11 +115,21 @@ public class WorkshopGatekeeperInstance extends NpcInstance
 		doors.put(18461, list);
 	}
 	
+	/**
+	 * Constructor for WorkshopGatekeeperInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public WorkshopGatekeeperInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -149,12 +169,23 @@ public class WorkshopGatekeeperInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		return "default/18445.htm";
 	}
 	
+	/**
+	 * Method openDoor.
+	 * @param npcId int
+	 */
 	private void openDoor(int npcId)
 	{
 		IntSet set = doors.get(npcId);
@@ -169,15 +200,28 @@ public class WorkshopGatekeeperInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DoorClose extends RunnableImpl
 	{
+		/**
+		 * Field _door.
+		 */
 		DoorInstance _door;
 		
+		/**
+		 * Constructor for DoorClose.
+		 * @param door DoorInstance
+		 */
 		public DoorClose(DoorInstance door)
 		{
 			_door = door;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

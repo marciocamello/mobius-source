@@ -18,27 +18,51 @@ import lineage2.gameserver.ai.Mystic;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Ekimus extends Mystic
 {
+	/**
+	 * Field delayTimer.
+	 */
 	private long delayTimer = 0;
 	
+	/**
+	 * Constructor for Ekimus.
+	 * @param actor NpcInstance
+	 */
 	public Ekimus(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method randomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomAnimation()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -50,6 +74,9 @@ public class Ekimus extends Mystic
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
@@ -64,6 +91,10 @@ public class Ekimus extends Mystic
 		super.thinkAttack();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

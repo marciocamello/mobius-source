@@ -16,8 +16,15 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.GameServer;
 import lineage2.gameserver.network.loginservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AuthRequest extends SendablePacket
 {
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

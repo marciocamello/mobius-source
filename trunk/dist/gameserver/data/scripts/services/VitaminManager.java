@@ -16,19 +16,56 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class VitaminManager extends Functions
 {
+	/**
+	 * Field PetCoupon. (value is 13273)
+	 */
 	private static final int PetCoupon = 13273;
+	/**
+	 * Field SpecialPetCoupon. (value is 14065)
+	 */
 	private static final int SpecialPetCoupon = 14065;
+	/**
+	 * Field WeaselNeck. (value is 13017)
+	 */
 	private static final int WeaselNeck = 13017;
+	/**
+	 * Field PrincNeck. (value is 13018)
+	 */
 	private static final int PrincNeck = 13018;
+	/**
+	 * Field BeastNeck. (value is 13019)
+	 */
 	private static final int BeastNeck = 13019;
+	/**
+	 * Field FoxNeck. (value is 13020)
+	 */
 	private static final int FoxNeck = 13020;
+	/**
+	 * Field KnightNeck. (value is 13548)
+	 */
 	private static final int KnightNeck = 13548;
+	/**
+	 * Field SpiritNeck. (value is 13549)
+	 */
 	private static final int SpiritNeck = 13549;
+	/**
+	 * Field OwlNeck. (value is 13550)
+	 */
 	private static final int OwlNeck = 13550;
+	/**
+	 * Field TurtleNeck. (value is 13551)
+	 */
 	private static final int TurtleNeck = 13551;
 	
+	/**
+	 * Method giveWeasel.
+	 */
 	public void giveWeasel()
 	{
 		Player player = getSelf();
@@ -47,6 +84,9 @@ public class VitaminManager extends Functions
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
+	/**
+	 * Method givePrinc.
+	 */
 	public void givePrinc()
 	{
 		Player player = getSelf();
@@ -65,6 +105,9 @@ public class VitaminManager extends Functions
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
+	/**
+	 * Method giveBeast.
+	 */
 	public void giveBeast()
 	{
 		Player player = getSelf();
@@ -83,6 +126,9 @@ public class VitaminManager extends Functions
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
+	/**
+	 * Method giveFox.
+	 */
 	public void giveFox()
 	{
 		Player player = getSelf();
@@ -101,6 +147,9 @@ public class VitaminManager extends Functions
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
+	/**
+	 * Method giveKnight.
+	 */
 	public void giveKnight()
 	{
 		Player player = getSelf();
@@ -119,6 +168,9 @@ public class VitaminManager extends Functions
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
+	/**
+	 * Method giveSpirit.
+	 */
 	public void giveSpirit()
 	{
 		Player player = getSelf();
@@ -137,6 +189,9 @@ public class VitaminManager extends Functions
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
+	/**
+	 * Method giveOwl.
+	 */
 	public void giveOwl()
 	{
 		Player player = getSelf();
@@ -155,6 +210,9 @@ public class VitaminManager extends Functions
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
+	/**
+	 * Method giveTurtle.
+	 */
 	public void giveTurtle()
 	{
 		Player player = getSelf();

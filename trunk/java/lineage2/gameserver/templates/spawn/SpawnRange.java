@@ -14,7 +14,16 @@ package lineage2.gameserver.templates.spawn;
 
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface SpawnRange
 {
+	/**
+	 * Method getRandomLoc.
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	Location getRandomLoc(int geoIndex);
 }

@@ -20,10 +20,21 @@ import java.util.List;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.skills.TimeStamp;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SkillCoolTime extends L2GameServerPacket
 {
+	/**
+	 * Field _list.
+	 */
 	private List<Skill> _list = Collections.emptyList();
 	
+	/**
+	 * Constructor for SkillCoolTime.
+	 * @param player Player
+	 */
 	public SkillCoolTime(Player player)
 	{
 		Collection<TimeStamp> list = player.getSkillReuses();
@@ -48,6 +59,9 @@ public class SkillCoolTime extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -63,16 +77,34 @@ public class SkillCoolTime extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class Skill
 	{
+		/**
+		 * Constructor for Skill.
+		 */
 		public Skill()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Field skillId.
+		 */
 		public int skillId;
+		/**
+		 * Field level.
+		 */
 		public int level;
+		/**
+		 * Field reuseBase.
+		 */
 		public int reuseBase;
+		/**
+		 * Field reuseCurrent.
+		 */
 		public int reuseCurrent;
 	}
 }

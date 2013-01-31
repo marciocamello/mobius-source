@@ -15,12 +15,27 @@ package lineage2.commons.threading;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class RunnableImpl implements Runnable
 {
+	/**
+	 * Field _log.
+	 */
 	public static final Logger _log = LoggerFactory.getLogger(RunnableImpl.class);
 	
+	/**
+	 * Method runImpl.
+	 * @throws Exception
+	 */
 	public abstract void runImpl() throws Exception;
 	
+	/**
+	 * Method run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public final void run()
 	{

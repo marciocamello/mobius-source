@@ -36,31 +36,103 @@ import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Strings;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminReload implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_reload.
+		 */
 		admin_reload,
+		/**
+		 * Field admin_reload_config.
+		 */
 		admin_reload_config,
+		/**
+		 * Field admin_reload_multisell.
+		 */
 		admin_reload_multisell,
+		/**
+		 * Field admin_reload_gmaccess.
+		 */
 		admin_reload_gmaccess,
+		/**
+		 * Field admin_reload_htm.
+		 */
 		admin_reload_htm,
+		/**
+		 * Field admin_reload_qs.
+		 */
 		admin_reload_qs,
+		/**
+		 * Field admin_reload_qs_help.
+		 */
 		admin_reload_qs_help,
+		/**
+		 * Field admin_reload_skills.
+		 */
 		admin_reload_skills,
+		/**
+		 * Field admin_reload_npc.
+		 */
 		admin_reload_npc,
+		/**
+		 * Field admin_reload_spawn.
+		 */
 		admin_reload_spawn,
+		/**
+		 * Field admin_reload_fish.
+		 */
 		admin_reload_fish,
+		/**
+		 * Field admin_reload_abuse.
+		 */
 		admin_reload_abuse,
+		/**
+		 * Field admin_reload_translit.
+		 */
 		admin_reload_translit,
+		/**
+		 * Field admin_reload_shops.
+		 */
 		admin_reload_shops,
+		/**
+		 * Field admin_reload_static.
+		 */
 		admin_reload_static,
+		/**
+		 * Field admin_reload_pets.
+		 */
 		admin_reload_pets,
+		/**
+		 * Field admin_reload_locale.
+		 */
 		admin_reload_locale,
+		/**
+		 * Field admin_reload_nobles.
+		 */
 		admin_reload_nobles,
+		/**
+		 * Field admin_reload_im.
+		 */
 		admin_reload_im
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -237,6 +309,10 @@ public class AdminReload implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method reloadQuestStates.
+	 * @param p Player
+	 */
 	private void reloadQuestStates(Player p)
 	{
 		for (QuestState qs : p.getAllQuestsStates())
@@ -246,6 +322,10 @@ public class AdminReload implements IAdminCommandHandler
 		Quest.restoreQuestStates(p);
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

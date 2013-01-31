@@ -15,21 +15,76 @@ package lineage2.gameserver.templates;
 import gnu.trove.list.array.TIntArrayList;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Henna
 {
+	/**
+	 * Field _symbolId.
+	 */
 	private final int _symbolId;
+	/**
+	 * Field _dyeId.
+	 */
 	private final int _dyeId;
+	/**
+	 * Field _price.
+	 */
 	private final long _price;
+	/**
+	 * Field _drawCount.
+	 */
 	private final long _drawCount;
+	/**
+	 * Field _statINT.
+	 */
 	private final int _statINT;
+	/**
+	 * Field _statSTR.
+	 */
 	private final int _statSTR;
+	/**
+	 * Field _statCON.
+	 */
 	private final int _statCON;
+	/**
+	 * Field _statMEN.
+	 */
 	private final int _statMEN;
+	/**
+	 * Field _statDEX.
+	 */
 	private final int _statDEX;
+	/**
+	 * Field _statWIT.
+	 */
 	private final int _statWIT;
+	/**
+	 * Field _skillId.
+	 */
 	private final int _skillId;
+	/**
+	 * Field _classes.
+	 */
 	private final TIntArrayList _classes;
 	
+	/**
+	 * Constructor for Henna.
+	 * @param symbolId int
+	 * @param dyeId int
+	 * @param price long
+	 * @param drawCount long
+	 * @param wit int
+	 * @param intA int
+	 * @param con int
+	 * @param str int
+	 * @param dex int
+	 * @param men int
+	 * @param skillId int
+	 * @param classes TIntArrayList
+	 */
 	public Henna(int symbolId, int dyeId, long price, long drawCount, int wit, int intA, int con, int str, int dex, int men, int skillId, TIntArrayList classes)
 	{
 		_symbolId = symbolId;
@@ -46,61 +101,110 @@ public class Henna
 		_skillId = skillId;
 	}
 	
+	/**
+	 * Method getSymbolId.
+	 * @return int
+	 */
 	public int getSymbolId()
 	{
 		return _symbolId;
 	}
 	
+	/**
+	 * Method getDyeId.
+	 * @return int
+	 */
 	public int getDyeId()
 	{
 		return _dyeId;
 	}
 	
+	/**
+	 * Method getPrice.
+	 * @return long
+	 */
 	public long getPrice()
 	{
 		return _price;
 	}
 	
+	/**
+	 * Method getStatINT.
+	 * @return int
+	 */
 	public int getStatINT()
 	{
 		return _statINT;
 	}
 	
+	/**
+	 * Method getStatSTR.
+	 * @return int
+	 */
 	public int getStatSTR()
 	{
 		return _statSTR;
 	}
 	
+	/**
+	 * Method getStatCON.
+	 * @return int
+	 */
 	public int getStatCON()
 	{
 		return _statCON;
 	}
 	
+	/**
+	 * Method getStatMEN.
+	 * @return int
+	 */
 	public int getStatMEN()
 	{
 		return _statMEN;
 	}
 	
+	/**
+	 * Method getStatDEX.
+	 * @return int
+	 */
 	public int getStatDEX()
 	{
 		return _statDEX;
 	}
 	
+	/**
+	 * Method getStatWIT.
+	 * @return int
+	 */
 	public int getStatWIT()
 	{
 		return _statWIT;
 	}
 	
+	/**
+	 * Method isForThisClass.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean isForThisClass(Player player)
 	{
 		return _classes.contains(player.getActiveClassId());
 	}
 	
+	/**
+	 * Method getDrawCount.
+	 * @return long
+	 */
 	public long getDrawCount()
 	{
 		return _drawCount;
 	}
 	
+	/**
+	 * Method getSkillId.
+	 * @return int
+	 */
 	public int getSkillId()
 	{
 		return _skillId;

@@ -12,12 +12,31 @@
  */
 package lineage2.gameserver.model.pledge;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RankPrivs
 {
+	/**
+	 * Field _rank.
+	 */
 	private final int _rank;
+	/**
+	 * Field _party.
+	 */
 	private int _party;
+	/**
+	 * Field _privs.
+	 */
 	private int _privs;
 	
+	/**
+	 * Constructor for RankPrivs.
+	 * @param rank int
+	 * @param party int
+	 * @param privs int
+	 */
 	public RankPrivs(int rank, int party, int privs)
 	{
 		_rank = rank;
@@ -25,26 +44,46 @@ public class RankPrivs
 		_privs = privs;
 	}
 	
+	/**
+	 * Method getRank.
+	 * @return int
+	 */
 	public int getRank()
 	{
 		return _rank;
 	}
 	
+	/**
+	 * Method getParty.
+	 * @return int
+	 */
 	public int getParty()
 	{
 		return _party;
 	}
 	
+	/**
+	 * Method setParty.
+	 * @param party int
+	 */
 	public void setParty(int party)
 	{
 		_party = party;
 	}
 	
+	/**
+	 * Method getPrivs.
+	 * @return int
+	 */
 	public int getPrivs()
 	{
 		return _privs;
 	}
 	
+	/**
+	 * Method setPrivs.
+	 * @param privs int
+	 */
 	public void setPrivs(int privs)
 	{
 		_privs = privs;

@@ -26,15 +26,38 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SimpleSpawner extends Spawner
 {
+	/**
+	 * Field serialVersionUID. (value is 1)
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(SimpleSpawner.class);
+	/**
+	 * Field _npcTemplate.
+	 */
 	private final NpcTemplate _npcTemplate;
+	/**
+	 * Field _heading. Field _locz. Field _locy. Field _locx.
+	 */
 	private int _locx, _locy, _locz, _heading;
+	/**
+	 * Field _territory.
+	 */
 	private Territory _territory;
 	
+	/**
+	 * Constructor for SimpleSpawner.
+	 * @param mobTemplate NpcTemplate
+	 */
 	public SimpleSpawner(NpcTemplate mobTemplate)
 	{
 		if (mobTemplate == null)
@@ -45,6 +68,10 @@ public class SimpleSpawner extends Spawner
 		_spawned = new ArrayList<>(1);
 	}
 	
+	/**
+	 * Constructor for SimpleSpawner.
+	 * @param npcId int
+	 */
 	public SimpleSpawner(int npcId)
 	{
 		NpcTemplate mobTemplate = NpcHolder.getInstance().getTemplate(npcId);
@@ -56,52 +83,92 @@ public class SimpleSpawner extends Spawner
 		_spawned = new ArrayList<>(1);
 	}
 	
+	/**
+	 * Method getAmount.
+	 * @return int
+	 */
 	public int getAmount()
 	{
 		return _maximumCount;
 	}
 	
+	/**
+	 * Method getSpawnedCount.
+	 * @return int
+	 */
 	public int getSpawnedCount()
 	{
 		return _currentCount;
 	}
 	
+	/**
+	 * Method getSheduledCount.
+	 * @return int
+	 */
 	public int getSheduledCount()
 	{
 		return _scheduledCount;
 	}
 	
+	/**
+	 * Method getTerritory.
+	 * @return Territory
+	 */
 	public Territory getTerritory()
 	{
 		return _territory;
 	}
 	
+	/**
+	 * Method getLoc.
+	 * @return Location
+	 */
 	public Location getLoc()
 	{
 		return new Location(_locx, _locy, _locz);
 	}
 	
+	/**
+	 * Method getLocx.
+	 * @return int
+	 */
 	public int getLocx()
 	{
 		return _locx;
 	}
 	
+	/**
+	 * Method getLocy.
+	 * @return int
+	 */
 	public int getLocy()
 	{
 		return _locy;
 	}
 	
+	/**
+	 * Method getLocz.
+	 * @return int
+	 */
 	public int getLocz()
 	{
 		return _locz;
 	}
 	
+	/**
+	 * Method getCurrentNpcId.
+	 * @return int
+	 */
 	@Override
 	public int getCurrentNpcId()
 	{
 		return _npcTemplate.getNpcId();
 	}
 	
+	/**
+	 * Method getCurrentSpawnRange.
+	 * @return SpawnRange
+	 */
 	@Override
 	public SpawnRange getCurrentSpawnRange()
 	{
@@ -112,21 +179,36 @@ public class SimpleSpawner extends Spawner
 		return getLoc();
 	}
 	
+	/**
+	 * Method getHeading.
+	 * @return int
+	 */
 	public int getHeading()
 	{
 		return _heading;
 	}
 	
+	/**
+	 * Method restoreAmount.
+	 */
 	public void restoreAmount()
 	{
 		_maximumCount = _referenceCount;
 	}
 	
+	/**
+	 * Method setTerritory.
+	 * @param territory Territory
+	 */
 	public void setTerritory(Territory territory)
 	{
 		_territory = territory;
 	}
 	
+	/**
+	 * Method setLoc.
+	 * @param loc Location
+	 */
 	public void setLoc(Location loc)
 	{
 		_locx = loc.x;
@@ -135,38 +217,70 @@ public class SimpleSpawner extends Spawner
 		_heading = loc.h;
 	}
 	
+	/**
+	 * Method setLocx.
+	 * @param locx int
+	 */
 	public void setLocx(int locx)
 	{
 		_locx = locx;
 	}
 	
+	/**
+	 * Method setLocy.
+	 * @param locy int
+	 */
 	public void setLocy(int locy)
 	{
 		_locy = locy;
 	}
 	
+	/**
+	 * Method setLocz.
+	 * @param locz int
+	 */
 	public void setLocz(int locz)
 	{
 		_locz = locz;
 	}
 	
+	/**
+	 * Method setHeading.
+	 * @param heading int
+	 */
 	public void setHeading(int heading)
 	{
 		_heading = heading;
 	}
 	
+	/**
+	 * Method decreaseCount.
+	 * @param oldNpc NpcInstance
+	 */
 	@Override
 	public void decreaseCount(NpcInstance oldNpc)
 	{
 		decreaseCount0(_npcTemplate, oldNpc, oldNpc.getDeadTime());
 	}
 	
+	/**
+	 * Method doSpawn.
+	 * @param spawn boolean
+	 * @return NpcInstance
+	 */
 	@Override
 	public NpcInstance doSpawn(boolean spawn)
 	{
 		return doSpawn0(_npcTemplate, spawn, StatsSet.EMPTY);
 	}
 	
+	/**
+	 * Method initNpc.
+	 * @param mob NpcInstance
+	 * @param spawn boolean
+	 * @param set MultiValueSet<String>
+	 * @return NpcInstance
+	 */
 	@Override
 	protected NpcInstance initNpc(NpcInstance mob, boolean spawn, MultiValueSet<String> set)
 	{
@@ -184,6 +298,10 @@ public class SimpleSpawner extends Spawner
 		return initNpc0(mob, newLoc, spawn, set);
 	}
 	
+	/**
+	 * Method respawnNpc.
+	 * @param oldNpc NpcInstance
+	 */
 	@Override
 	public void respawnNpc(NpcInstance oldNpc)
 	{
@@ -191,6 +309,10 @@ public class SimpleSpawner extends Spawner
 		initNpc(oldNpc, true, StatsSet.EMPTY);
 	}
 	
+	/**
+	 * Method clone.
+	 * @return SimpleSpawner
+	 */
 	@Override
 	public SimpleSpawner clone()
 	{

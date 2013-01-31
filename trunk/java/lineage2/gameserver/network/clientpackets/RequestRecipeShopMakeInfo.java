@@ -17,11 +17,24 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ManufactureItem;
 import lineage2.gameserver.network.serverpackets.RecipeShopItemInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestRecipeShopMakeInfo extends L2GameClientPacket
 {
+	/**
+	 * Field _manufacturerId.
+	 */
 	private int _manufacturerId;
+	/**
+	 * Field _recipeId.
+	 */
 	private int _recipeId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -29,6 +42,9 @@ public class RequestRecipeShopMakeInfo extends L2GameClientPacket
 		_recipeId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

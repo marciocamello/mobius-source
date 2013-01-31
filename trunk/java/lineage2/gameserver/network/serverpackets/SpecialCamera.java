@@ -12,19 +12,62 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SpecialCamera extends L2GameServerPacket
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _dist.
+	 */
 	private final int _dist;
+	/**
+	 * Field _yaw.
+	 */
 	private final int _yaw;
+	/**
+	 * Field _pitch.
+	 */
 	private final int _pitch;
+	/**
+	 * Field _time.
+	 */
 	private final int _time;
+	/**
+	 * Field _duration.
+	 */
 	private final int _duration;
+	/**
+	 * Field _turn.
+	 */
 	private final int _turn;
+	/**
+	 * Field _rise.
+	 */
 	private final int _rise;
+	/**
+	 * Field _widescreen.
+	 */
 	private final int _widescreen;
+	/**
+	 * Field _unknown.
+	 */
 	private final int _unknown;
 	
+	/**
+	 * Constructor for SpecialCamera.
+	 * @param id int
+	 * @param dist int
+	 * @param yaw int
+	 * @param pitch int
+	 * @param time int
+	 * @param duration int
+	 */
 	public SpecialCamera(int id, int dist, int yaw, int pitch, int time, int duration)
 	{
 		_id = id;
@@ -39,6 +82,19 @@ public class SpecialCamera extends L2GameServerPacket
 		_unknown = 0;
 	}
 	
+	/**
+	 * Constructor for SpecialCamera.
+	 * @param id int
+	 * @param dist int
+	 * @param yaw int
+	 * @param pitch int
+	 * @param time int
+	 * @param duration int
+	 * @param turn int
+	 * @param rise int
+	 * @param widescreen int
+	 * @param unk int
+	 */
 	public SpecialCamera(int id, int dist, int yaw, int pitch, int time, int duration, int turn, int rise, int widescreen, int unk)
 	{
 		_id = id;
@@ -53,6 +109,9 @@ public class SpecialCamera extends L2GameServerPacket
 		_unknown = unk;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

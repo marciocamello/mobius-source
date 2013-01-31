@@ -18,16 +18,29 @@ import lineage2.gameserver.network.serverpackets.ExRegistWaitingSubstituteOk;
 import lineage2.gameserver.network.serverpackets.ExWaitWaitingSubStituteInfo;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RequestRegistWaitingSubstitute extends L2GameClientPacket
 {
+	/**
+	 * Field id.
+	 */
 	int id = 0;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		id = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

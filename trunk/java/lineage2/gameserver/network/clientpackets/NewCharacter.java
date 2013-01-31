@@ -14,13 +14,23 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.network.serverpackets.NewCharacterSuccess;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NewCharacter extends L2GameClientPacket
 {
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

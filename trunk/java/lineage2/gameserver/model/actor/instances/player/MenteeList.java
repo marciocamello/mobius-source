@@ -27,23 +27,49 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MenteeList
 {
+	/**
+	 * Field _menteeList.
+	 */
 	private Map<Integer, Mentee> _menteeList = Collections.emptyMap();
+	/**
+	 * Field _owner.
+	 */
 	private final Player _owner;
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(MenteeList.class);
 	
+	/**
+	 * Constructor for MenteeList.
+	 * @param owner Player
+	 */
 	public MenteeList(Player owner)
 	{
 		_owner = owner;
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	public void restore()
 	{
 		_menteeList = MentoringDAO.getInstance().selectMenteeList(_owner);
 	}
 	
+	/**
+	 * Method remove.
+	 * @param name String
+	 * @param isMentor boolean
+	 * @param notify boolean
+	 */
 	public void remove(String name, boolean isMentor, boolean notify)
 	{
 		if (StringUtils.isEmpty(name))
@@ -62,6 +88,9 @@ public class MenteeList
 		}
 	}
 	
+	/**
+	 * Method notifyUp.
+	 */
 	public void notifyUp()
 	{
 		for (Mentee mentee : _menteeList.values())
@@ -81,6 +110,10 @@ public class MenteeList
 		}
 	}
 	
+	/**
+	 * Method notify.
+	 * @param login boolean
+	 */
 	public void notify(boolean login)
 	{
 		for (Mentee mentee : _menteeList.values())
@@ -108,18 +141,31 @@ public class MenteeList
 		}
 	}
 	
+	/**
+	 * Method addMentee.
+	 * @param menteePlayer Player
+	 */
 	public void addMentee(Player menteePlayer)
 	{
 		_menteeList.put(menteePlayer.getObjectId(), new Mentee(menteePlayer));
 		MentoringDAO.getInstance().insert(_owner, menteePlayer);
 	}
 	
+	/**
+	 * Method addMentor.
+	 * @param mentorPlayer Player
+	 */
 	public void addMentor(Player mentorPlayer)
 	{
 		_menteeList.put(mentorPlayer.getObjectId(), new Mentee(mentorPlayer, true));
 		Mentoring.addMentoringSkills(mentorPlayer);
 	}
 	
+	/**
+	 * Method removeMentee0.
+	 * @param name String
+	 * @return int
+	 */
 	private int removeMentee0(String name)
 	{
 		if (name == null)
@@ -144,6 +190,11 @@ public class MenteeList
 		return 0;
 	}
 	
+	/**
+	 * Method someOneOnline.
+	 * @param login boolean
+	 * @return boolean
+	 */
 	public boolean someOneOnline(boolean login)
 	{
 		for (Mentee mentee : _menteeList.values())
@@ -166,6 +217,10 @@ public class MenteeList
 		return false;
 	}
 	
+	/**
+	 * Method getMentor.
+	 * @return int
+	 */
 	public int getMentor()
 	{
 		for (Map.Entry<Integer, Mentee> entry : _menteeList.entrySet())
@@ -178,11 +233,19 @@ public class MenteeList
 		return 0;
 	}
 	
+	/**
+	 * Method getList.
+	 * @return Map<Integer,Mentee>
+	 */
 	public Map<Integer, Mentee> getList()
 	{
 		return _menteeList;
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{

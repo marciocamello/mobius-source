@@ -26,17 +26,37 @@ import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
 import ai.residences.SiegeGuardMystic;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GiselleVonHellmann extends SiegeGuardMystic
 {
+	/**
+	 * Field DAMAGE_SKILL.
+	 */
 	private static final Skill DAMAGE_SKILL = SkillTable.getInstance().getInfo(5003, 1);
+	/**
+	 * Field ZONE_1.
+	 */
 	private static final Zone ZONE_1 = ReflectionUtils.getZone("lidia_zone1");
+	/**
+	 * Field ZONE_2.
+	 */
 	private static final Zone ZONE_2 = ReflectionUtils.getZone("lidia_zone2");
 	
+	/**
+	 * Constructor for GiselleVonHellmann.
+	 * @param actor NpcInstance
+	 */
 	public GiselleVonHellmann(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	public void onEvtSpawn()
 	{
@@ -46,6 +66,10 @@ public class GiselleVonHellmann extends SiegeGuardMystic
 		Functions.npcShout(getActor(), NpcString.ARISE_MY_FAITHFUL_SERVANTS_YOU_MY_PEOPLE_WHO_HAVE_INHERITED_THE_BLOOD);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onEvtDead(Creature killer)
 	{
@@ -67,6 +91,11 @@ public class GiselleVonHellmann extends SiegeGuardMystic
 		}
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	public void onEvtAttacked(Creature attacker, int damage)
 	{

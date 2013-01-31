@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExRedSky extends L2GameServerPacket
 {
+	/**
+	 * Field _duration.
+	 */
 	private final int _duration;
 	
+	/**
+	 * Constructor for ExRedSky.
+	 * @param duration int
+	 */
 	public ExRedSky(int duration)
 	{
 		_duration = duration;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -25,16 +25,32 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GuardianAltar extends DefaultAI
 {
+	/**
+	 * Field DarkShamanVarangka. (value is 18808)
+	 */
 	private static final int DarkShamanVarangka = 18808;
 	
+	/**
+	 * Constructor for GuardianAltar.
+	 * @param actor NpcInstance
+	 */
 	public GuardianAltar(NpcInstance actor)
 	{
 		super(actor);
 		actor.setIsInvul(true);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -109,6 +125,10 @@ public class GuardianAltar extends DefaultAI
 		return;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

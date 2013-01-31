@@ -20,32 +20,107 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminEnchant implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_seteh.
+		 */
 		admin_seteh,
+		/**
+		 * Field admin_setec.
+		 */
 		admin_setec,
+		/**
+		 * Field admin_seteg.
+		 */
 		admin_seteg,
+		/**
+		 * Field admin_setel.
+		 */
 		admin_setel,
+		/**
+		 * Field admin_seteb.
+		 */
 		admin_seteb,
+		/**
+		 * Field admin_setew.
+		 */
 		admin_setew,
+		/**
+		 * Field admin_setes.
+		 */
 		admin_setes,
+		/**
+		 * Field admin_setle.
+		 */
 		admin_setle,
+		/**
+		 * Field admin_setre.
+		 */
 		admin_setre,
+		/**
+		 * Field admin_setlf.
+		 */
 		admin_setlf,
+		/**
+		 * Field admin_setrf.
+		 */
 		admin_setrf,
+		/**
+		 * Field admin_seten.
+		 */
 		admin_seten,
+		/**
+		 * Field admin_setun.
+		 */
 		admin_setun,
+		/**
+		 * Field admin_setba.
+		 */
 		admin_setba,
+		/**
+		 * Field admin_setha.
+		 */
 		admin_setha,
+		/**
+		 * Field admin_setdha.
+		 */
 		admin_setdha,
+		/**
+		 * Field admin_setlbr.
+		 */
 		admin_setlbr,
+		/**
+		 * Field admin_setrbr.
+		 */
 		admin_setrbr,
+		/**
+		 * Field admin_setbelt.
+		 */
 		admin_setbelt,
+		/**
+		 * Field admin_enchant.
+		 */
 		admin_enchant
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -147,6 +222,12 @@ public class AdminEnchant implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method setEnchant.
+	 * @param activeChar Player
+	 * @param ench int
+	 * @param armorType int
+	 */
 	private void setEnchant(Player activeChar, int ench, int armorType)
 	{
 		GameObject target = activeChar.getTarget();
@@ -175,6 +256,10 @@ public class AdminEnchant implements IAdminCommandHandler
 		}
 	}
 	
+	/**
+	 * Method showMainPage.
+	 * @param activeChar Player
+	 */
 	public void showMainPage(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
@@ -226,6 +311,10 @@ public class AdminEnchant implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

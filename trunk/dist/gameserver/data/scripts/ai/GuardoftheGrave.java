@@ -20,11 +20,25 @@ import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GuardoftheGrave extends Fighter
 {
+	/**
+	 * Field DESPAWN_TIME.
+	 */
 	private static final int DESPAWN_TIME = 2 * 45 * 1000;
+	/**
+	 * Field CHIEFTAINS_TREASURE_CHEST. (value is 18816)
+	 */
 	private static final int CHIEFTAINS_TREASURE_CHEST = 18816;
 	
+	/**
+	 * Constructor for GuardoftheGrave.
+	 * @param actor NpcInstance
+	 */
 	public GuardoftheGrave(NpcInstance actor)
 	{
 		super(actor);
@@ -32,6 +46,9 @@ public class GuardoftheGrave extends Fighter
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -39,6 +56,12 @@ public class GuardoftheGrave extends Fighter
 		ThreadPoolManager.getInstance().schedule(new DeSpawnTask(), DESPAWN_TIME + Rnd.get(1, 30));
 	}
 	
+	/**
+	 * Method checkTarget.
+	 * @param target Creature
+	 * @param range int
+	 * @return boolean
+	 */
 	@Override
 	protected boolean checkTarget(Creature target, int range)
 	{
@@ -51,6 +74,10 @@ public class GuardoftheGrave extends Fighter
 		return super.checkTarget(target, range);
 	}
 	
+	/**
+	 * Method spawnChest.
+	 * @param actor NpcInstance
+	 */
 	protected void spawnChest(NpcInstance actor)
 	{
 		try
@@ -66,13 +93,22 @@ public class GuardoftheGrave extends Fighter
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DeSpawnTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for DeSpawnTask.
+		 */
 		public DeSpawnTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

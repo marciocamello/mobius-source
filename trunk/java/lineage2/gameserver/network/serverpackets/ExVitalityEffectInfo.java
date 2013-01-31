@@ -15,15 +15,29 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExVitalityEffectInfo extends L2GameServerPacket
 {
+	/**
+	 * Field player.
+	 */
 	private final Player player;
 	
+	/**
+	 * Constructor for ExVitalityEffectInfo.
+	 * @param player Player
+	 */
 	public ExVitalityEffectInfo(Player player)
 	{
 		this.player = player;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

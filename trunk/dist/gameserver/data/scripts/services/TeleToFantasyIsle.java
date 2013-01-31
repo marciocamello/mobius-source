@@ -18,8 +18,15 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeleToFantasyIsle extends Functions
 {
+	/**
+	 * Field POINTS.
+	 */
 	public static final Location[] POINTS =
 	{
 		new Location(-60695, -56896, -2032),
@@ -28,6 +35,9 @@ public class TeleToFantasyIsle extends Functions
 		new Location(-59716, -57864, -2032)
 	};
 	
+	/**
+	 * Method toFantasyIsle.
+	 */
 	public void toFantasyIsle()
 	{
 		Player player = getSelf();
@@ -39,6 +49,9 @@ public class TeleToFantasyIsle extends Functions
 		player.teleToLocation(POINTS[Rnd.get(POINTS.length)]);
 	}
 	
+	/**
+	 * Method fromFantasyIsle.
+	 */
 	public void fromFantasyIsle()
 	{
 		Player player = getSelf();
@@ -60,6 +73,9 @@ public class TeleToFantasyIsle extends Functions
 		player.teleToLocation(Location.parseLoc(var));
 	}
 	
+	/**
+	 * Method teleOut.
+	 */
 	public void teleOut()
 	{
 		Player player = getSelf();

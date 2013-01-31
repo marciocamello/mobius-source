@@ -24,15 +24,41 @@ import lineage2.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SoDManager
 {
+	/**
+	 * Field SPAWN_GROUP. (value is ""sod_free"")
+	 */
 	private static final String SPAWN_GROUP = "sod_free";
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SoDManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static SoDManager _instance;
+	/**
+	 * Field SOD_OPEN_TIME.
+	 */
 	private static long SOD_OPEN_TIME = 12 * 60 * 60 * 1000L;
+	/**
+	 * Field _zone.
+	 */
 	private static Zone _zone;
+	/**
+	 * Field _isOpened.
+	 */
 	private static boolean _isOpened = false;
 	
+	/**
+	 * Method getInstance.
+	 * @return SoDManager
+	 */
 	public static SoDManager getInstance()
 	{
 		if (_instance == null)
@@ -42,6 +68,9 @@ public class SoDManager
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for SoDManager.
+	 */
 	public SoDManager()
 	{
 		_log.info("Seed of Destruction Manager: Loaded");
@@ -52,11 +81,18 @@ public class SoDManager
 		}
 	}
 	
+	/**
+	 * Method isAttackStage.
+	 * @return boolean
+	 */
 	public static boolean isAttackStage()
 	{
 		return getOpenedTimeLimit() <= 0;
 	}
 	
+	/**
+	 * Method addTiatKill.
+	 */
 	public static void addTiatKill()
 	{
 		if (!isAttackStage())
@@ -73,26 +109,46 @@ public class SoDManager
 		}
 	}
 	
+	/**
+	 * Method getTiatKills.
+	 * @return int
+	 */
 	public static int getTiatKills()
 	{
 		return ServerVariables.getInt("Tial_kills", 0);
 	}
 	
+	/**
+	 * Method getOpenedTimeLimit.
+	 * @return long
+	 */
 	private static long getOpenedTimeLimit()
 	{
 		return (ServerVariables.getLong("SoD_opened", 0) * 1000L) - System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method getZone.
+	 * @return Zone
+	 */
 	private static Zone getZone()
 	{
 		return _zone;
 	}
 	
+	/**
+	 * Method teleportIntoSeed.
+	 * @param p Player
+	 */
 	public static void teleportIntoSeed(Player p)
 	{
 		p.teleToLocation(new Location(-245800, 220488, -12112));
 	}
 	
+	/**
+	 * Method handleDoors.
+	 * @param doOpen boolean
+	 */
 	public static void handleDoors(boolean doOpen)
 	{
 		for (int i = 12240003; i <= 12240031; i++)
@@ -108,6 +164,10 @@ public class SoDManager
 		}
 	}
 	
+	/**
+	 * Method openSeed.
+	 * @param timelimit long
+	 */
 	public static void openSeed(long timelimit)
 	{
 		if (_isOpened)
@@ -130,6 +190,9 @@ public class SoDManager
 		}, timelimit);
 	}
 	
+	/**
+	 * Method closeSeed.
+	 */
 	public static void closeSeed()
 	{
 		if (!_isOpened)

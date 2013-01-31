@@ -31,12 +31,28 @@ import lineage2.gameserver.network.serverpackets.CastleSiegeAttackerList;
 import lineage2.gameserver.network.serverpackets.CastleSiegeDefenderList;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestJoinCastleSiege extends L2GameClientPacket
 {
+	/**
+	 * Field _id.
+	 */
 	private int _id;
+	/**
+	 * Field _isAttacker.
+	 */
 	private boolean _isAttacker;
+	/**
+	 * Field _isJoining.
+	 */
 	private boolean _isJoining;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -45,6 +61,9 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 		_isJoining = readD() == 1;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -69,6 +88,13 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method registerAtCastle.
+	 * @param player Player
+	 * @param castle Castle
+	 * @param attacker boolean
+	 * @param join boolean
+	 */
 	private static void registerAtCastle(Player player, Castle castle, boolean attacker, boolean join)
 	{
 		CastleSiegeEvent siegeEvent = castle.getSiegeEvent();
@@ -236,7 +262,7 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 			}
 			siegeEvent.removeObject(siegeClan.getType(), siegeClan);
 			SiegeClanDAO.getInstance().delete(castle, siegeClan);
-			if (siegeClan.getType() == SiegeEvent.ATTACKERS)
+			if (siegeClan.getType().equals(SiegeEvent.ATTACKERS))
 			{
 				player.sendPacket(new CastleSiegeAttackerList(castle));
 			}
@@ -247,6 +273,12 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method registerAtClanHall.
+	 * @param player Player
+	 * @param clanHall ClanHall
+	 * @param join boolean
+	 */
 	private static void registerAtClanHall(Player player, ClanHall clanHall, boolean join)
 	{
 		ClanHallSiegeEvent siegeEvent = clanHall.getSiegeEvent();

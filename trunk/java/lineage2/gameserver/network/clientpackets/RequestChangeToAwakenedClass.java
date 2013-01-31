@@ -20,17 +20,33 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.network.serverpackets.ExShowUsmVideo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestChangeToAwakenedClass extends L2GameClientPacket
 {
+	/**
+	 * Field SCROLL_OF_AFTERLIFE. (value is 17600)
+	 */
 	private static final int SCROLL_OF_AFTERLIFE = 17600;
+	/**
+	 * Field change.
+	 */
 	private int change;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		change = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

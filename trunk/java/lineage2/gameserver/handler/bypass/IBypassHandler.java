@@ -15,9 +15,23 @@ package lineage2.gameserver.handler.bypass;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IBypassHandler
 {
+	/**
+	 * Method getBypasses.
+	 * @return String[]
+	 */
 	String[] getBypasses();
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 * @param command String
+	 */
 	void onBypassFeedback(NpcInstance npc, Player player, String command);
 }

@@ -15,52 +15,93 @@ package lineage2.gameserver.model.instances;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BlockInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _isRed.
+	 */
 	private boolean _isRed;
 	
+	/**
+	 * Constructor for BlockInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public BlockInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method isRed.
+	 * @return boolean
+	 */
 	public boolean isRed()
 	{
 		return _isRed;
 	}
 	
+	/**
+	 * Method setRed.
+	 * @param red boolean
+	 */
 	public void setRed(boolean red)
 	{
 		_isRed = red;
 		broadcastCharInfo();
 	}
 	
+	/**
+	 * Method changeColor.
+	 */
 	public void changeColor()
 	{
 		setRed(!_isRed);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 	}
 	
+	/**
+	 * Method isNameAbove.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isNameAbove()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getFormId.
+	 * @return int
+	 */
 	@Override
 	public int getFormId()
 	{
 		return _isRed ? 0x53 : 0;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{

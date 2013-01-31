@@ -14,17 +14,40 @@ package lineage2.loginserver.serverpackets;
 
 import lineage2.loginserver.L2LoginClient;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class Init extends L2LoginServerPacket
 {
+	/**
+	 * Field _sessionId.
+	 */
 	private final int _sessionId;
+	/**
+	 * Field _publicKey.
+	 */
 	private final byte[] _publicKey;
+	/**
+	 * Field _blowfishKey.
+	 */
 	private final byte[] _blowfishKey;
 	
+	/**
+	 * Constructor for Init.
+	 * @param client L2LoginClient
+	 */
 	public Init(L2LoginClient client)
 	{
 		this(client.getScrambledModulus(), client.getBlowfishKey(), client.getSessionId());
 	}
 	
+	/**
+	 * Constructor for Init.
+	 * @param publickey byte[]
+	 * @param blowfishkey byte[]
+	 * @param sessionId int
+	 */
 	public Init(byte[] publickey, byte[] blowfishkey, int sessionId)
 	{
 		_sessionId = sessionId;
@@ -32,6 +55,9 @@ public final class Init extends L2LoginServerPacket
 		_blowfishKey = blowfishkey;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

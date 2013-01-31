@@ -18,12 +18,32 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.conditions.Condition;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TriggerInfo extends Skill.AddedSkill
 {
+	/**
+	 * Field _type.
+	 */
 	private final TriggerType _type;
+	/**
+	 * Field _chance.
+	 */
 	private final double _chance;
+	/**
+	 * Field _conditions.
+	 */
 	private Condition[] _conditions = Condition.EMPTY_ARRAY;
 	
+	/**
+	 * Constructor for TriggerInfo.
+	 * @param id int
+	 * @param level int
+	 * @param type TriggerType
+	 * @param chance double
+	 */
 	public TriggerInfo(int id, int level, TriggerType type, double chance)
 	{
 		super(id, level);
@@ -31,11 +51,24 @@ public class TriggerInfo extends Skill.AddedSkill
 		_chance = chance;
 	}
 	
+	/**
+	 * Method addCondition.
+	 * @param c Condition
+	 */
 	public final void addCondition(Condition c)
 	{
 		_conditions = ArrayUtils.add(_conditions, c);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param actor Creature
+	 * @param target Creature
+	 * @param aimTarget Creature
+	 * @param owner Skill
+	 * @param damage double
+	 * @return boolean
+	 */
 	public boolean checkCondition(Creature actor, Creature target, Creature aimTarget, Skill owner, double damage)
 	{
 		if (getSkill().checkTarget(actor, aimTarget, aimTarget, false, false) != null)
@@ -57,11 +90,19 @@ public class TriggerInfo extends Skill.AddedSkill
 		return true;
 	}
 	
+	/**
+	 * Method getType.
+	 * @return TriggerType
+	 */
 	public TriggerType getType()
 	{
 		return _type;
 	}
 	
+	/**
+	 * Method getChance.
+	 * @return double
+	 */
 	public double getChance()
 	{
 		return _chance;

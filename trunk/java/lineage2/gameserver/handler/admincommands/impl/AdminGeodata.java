@@ -19,20 +19,59 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminGeodata implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_geo_z.
+		 */
 		admin_geo_z,
+		/**
+		 * Field admin_geo_type.
+		 */
 		admin_geo_type,
+		/**
+		 * Field admin_geo_nswe.
+		 */
 		admin_geo_nswe,
+		/**
+		 * Field admin_geo_los.
+		 */
 		admin_geo_los,
+		/**
+		 * Field admin_geo_load.
+		 */
 		admin_geo_load,
+		/**
+		 * Field admin_geo_dump.
+		 */
 		admin_geo_dump,
+		/**
+		 * Field admin_geo_trace.
+		 */
 		admin_geo_trace,
+		/**
+		 * Field admin_geo_map.
+		 */
 		admin_geo_map
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -152,6 +191,10 @@ public class AdminGeodata implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

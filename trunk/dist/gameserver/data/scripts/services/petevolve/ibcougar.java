@@ -21,12 +21,28 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.PetDataTable.L2Pet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ibcougar extends Functions
 {
+	/**
+	 * Field BABY_COUGAR.
+	 */
 	private static final int BABY_COUGAR = PetDataTable.BABY_COUGAR_ID;
+	/**
+	 * Field BABY_COUGAR_CHIME.
+	 */
 	private static final int BABY_COUGAR_CHIME = L2Pet.BABY_COUGAR.getControlItemId();
+	/**
+	 * Field IN_COUGAR_CHIME.
+	 */
 	private static final int IN_COUGAR_CHIME = L2Pet.IMPROVED_BABY_COUGAR.getControlItemId();
 	
+	/**
+	 * Method evolve.
+	 */
 	public void evolve()
 	{
 		Player player = getSelf();

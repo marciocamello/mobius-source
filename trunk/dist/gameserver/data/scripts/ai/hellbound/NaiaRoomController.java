@@ -21,14 +21,26 @@ import lineage2.gameserver.instancemanager.naia.NaiaTowerManager;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NaiaRoomController extends DefaultAI
 {
+	/**
+	 * Constructor for NaiaRoomController.
+	 * @param actor NpcInstance
+	 */
 	public NaiaRoomController(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	public boolean thinkActive()
 	{
@@ -156,13 +168,22 @@ public class NaiaRoomController extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class LastDoorClose extends RunnableImpl
 	{
+		/**
+		 * Constructor for LastDoorClose.
+		 */
 		public LastDoorClose()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

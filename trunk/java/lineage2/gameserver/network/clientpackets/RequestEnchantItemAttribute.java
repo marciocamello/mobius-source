@@ -27,16 +27,29 @@ import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestEnchantItemAttribute extends L2GameClientPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_objectId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -164,7 +177,7 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 				value = 20;
 			}
 			boolean equipped = itemToEnchant.isEquipped();
-			if (equipped == true)
+			if (equipped)
 			{
 				activeChar.getInventory().isRefresh = true;
 				activeChar.getInventory().unEquipItem(itemToEnchant);

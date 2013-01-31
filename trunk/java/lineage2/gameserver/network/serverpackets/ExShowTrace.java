@@ -18,17 +18,46 @@ import java.util.List;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowTrace extends L2GameServerPacket
 {
+	/**
+	 * Field _traces.
+	 */
 	private final List<Trace> _traces = new ArrayList<>();
 	
+	/**
+	 * @author Mobius
+	 */
 	static final class Trace
 	{
+		/**
+		 * Field _x.
+		 */
 		public final int _x;
+		/**
+		 * Field _y.
+		 */
 		public final int _y;
+		/**
+		 * Field _z.
+		 */
 		public final int _z;
+		/**
+		 * Field _time.
+		 */
 		public final int _time;
 		
+		/**
+		 * Constructor for Trace.
+		 * @param x int
+		 * @param y int
+		 * @param z int
+		 * @param time int
+		 */
 		public Trace(int x, int y, int z, int time)
 		{
 			_x = x;
@@ -38,16 +67,41 @@ public class ExShowTrace extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method addTrace.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param time int
+	 */
 	public void addTrace(int x, int y, int z, int time)
 	{
 		_traces.add(new Trace(x, y, z, time));
 	}
 	
+	/**
+	 * Method addLine.
+	 * @param from Location
+	 * @param to Location
+	 * @param step int
+	 * @param time int
+	 */
 	public void addLine(Location from, Location to, int step, int time)
 	{
 		addLine(from.x, from.y, from.z, to.x, to.y, to.z, step, time);
 	}
 	
+	/**
+	 * Method addLine.
+	 * @param from_x int
+	 * @param from_y int
+	 * @param from_z int
+	 * @param to_x int
+	 * @param to_y int
+	 * @param to_z int
+	 * @param step int
+	 * @param time int
+	 */
 	public void addLine(int from_x, int from_y, int from_z, int to_x, int to_y, int to_z, int step, int time)
 	{
 		int x_diff = to_x - from_x;
@@ -70,11 +124,19 @@ public class ExShowTrace extends L2GameServerPacket
 		addTrace(to_x, to_y, to_z, time);
 	}
 	
+	/**
+	 * Method addTrace.
+	 * @param obj GameObject
+	 * @param time int
+	 */
 	public void addTrace(GameObject obj, int time)
 	{
 		this.addTrace(obj.getX(), obj.getY(), obj.getZ(), time);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

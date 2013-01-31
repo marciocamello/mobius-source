@@ -20,10 +20,21 @@ import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 {
+	/**
+	 * Field _items.
+	 */
 	private final List<ItemInstance> _items = new ArrayList<>();
 	
+	/**
+	 * Constructor for ExShowBaseAttributeCancelWindow.
+	 * @param activeChar Player
+	 */
 	public ExShowBaseAttributeCancelWindow(Player activeChar)
 	{
 		for (ItemInstance item : activeChar.getInventory().getItems())
@@ -36,6 +47,9 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -48,6 +62,11 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method getAttributeRemovePrice.
+	 * @param item ItemInstance
+	 * @return long
+	 */
 	public static long getAttributeRemovePrice(ItemInstance item)
 	{
 		switch (item.getCrystalType())

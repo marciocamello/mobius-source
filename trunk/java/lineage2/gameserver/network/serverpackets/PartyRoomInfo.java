@@ -14,16 +14,45 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.matching.MatchingRoom;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PartyRoomInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _minLevel.
+	 */
 	private final int _minLevel;
+	/**
+	 * Field _maxLevel.
+	 */
 	private final int _maxLevel;
+	/**
+	 * Field _lootDist.
+	 */
 	private final int _lootDist;
+	/**
+	 * Field _maxMembers.
+	 */
 	private final int _maxMembers;
+	/**
+	 * Field _location.
+	 */
 	private final int _location;
+	/**
+	 * Field _title.
+	 */
 	private final String _title;
 	
+	/**
+	 * Constructor for PartyRoomInfo.
+	 * @param room MatchingRoom
+	 */
 	public PartyRoomInfo(MatchingRoom room)
 	{
 		_id = room.getId();
@@ -35,6 +64,9 @@ public class PartyRoomInfo extends L2GameServerPacket
 		_title = room.getTopic();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

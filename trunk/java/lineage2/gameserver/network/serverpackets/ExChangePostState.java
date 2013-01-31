@@ -14,12 +14,31 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.mail.Mail;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExChangePostState extends L2GameServerPacket
 {
+	/**
+	 * Field _receivedBoard.
+	 */
 	private final boolean _receivedBoard;
+	/**
+	 * Field _mails.
+	 */
 	private final Mail[] _mails;
+	/**
+	 * Field _changeId.
+	 */
 	private final int _changeId;
 	
+	/**
+	 * Constructor for ExChangePostState.
+	 * @param receivedBoard boolean
+	 * @param type int
+	 * @param n Mail[]
+	 */
 	public ExChangePostState(boolean receivedBoard, int type, Mail... n)
 	{
 		_receivedBoard = receivedBoard;
@@ -27,6 +46,9 @@ public class ExChangePostState extends L2GameServerPacket
 		_changeId = type;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

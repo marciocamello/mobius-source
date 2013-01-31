@@ -61,38 +61,70 @@ import lineage2.gameserver.utils.Location;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EventParser extends AbstractDirParser<EventHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final EventParser _instance = new EventParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return EventParser
+	 */
 	public static EventParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for EventParser.
+	 */
 	protected EventParser()
 	{
 		super(EventHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/events/");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "events.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	protected void readData(Element rootElement) throws Exception
@@ -149,6 +181,11 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 		}
 	}
 	
+	/**
+	 * Method parseObjects.
+	 * @param element Element
+	 * @return List<Serializable>
+	 */
 	private List<Serializable> parseObjects(Element element)
 	{
 		if (element == null)
@@ -236,6 +273,12 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 		return objects;
 	}
 	
+	/**
+	 * Method parseActions.
+	 * @param element Element
+	 * @param time int
+	 * @return List<EventAction>
+	 */
 	private List<EventAction> parseActions(Element element, int time)
 	{
 		if (element == null)

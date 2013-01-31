@@ -21,29 +21,51 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SirraInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field questInstances.
+	 */
 	private static final int[] questInstances =
 	{
 		140,
 		138,
 		141
 	};
+	/**
+	 * Field warInstances.
+	 */
 	private static final int[] warInstances =
 	{
 		139,
 		144
 	};
 	
+	/**
+	 * Constructor for SirraInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SirraInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
@@ -71,6 +93,11 @@ public class SirraInstance extends NpcInstance
 		return htmlpath;
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

@@ -14,10 +14,23 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FinishRotating extends L2GameServerPacket
 {
+	/**
+	 * Field _speed. Field _degree. Field _charId.
+	 */
 	private final int _charId, _degree, _speed;
 	
+	/**
+	 * Constructor for FinishRotating.
+	 * @param player Creature
+	 * @param degree int
+	 * @param speed int
+	 */
 	public FinishRotating(Creature player, int degree, int speed)
 	{
 		_charId = player.getObjectId();
@@ -25,6 +38,9 @@ public class FinishRotating extends L2GameServerPacket
 		_speed = speed;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

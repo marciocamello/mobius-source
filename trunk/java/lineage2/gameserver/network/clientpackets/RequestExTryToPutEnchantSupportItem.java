@@ -18,11 +18,24 @@ import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.network.serverpackets.ExPutEnchantSupportItemResult;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExTryToPutEnchantSupportItem extends L2GameClientPacket
 {
+	/**
+	 * Field _itemId.
+	 */
 	private int _itemId;
+	/**
+	 * Field _catalystId.
+	 */
 	private int _catalystId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -30,6 +43,9 @@ public class RequestExTryToPutEnchantSupportItem extends L2GameClientPacket
 		_itemId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

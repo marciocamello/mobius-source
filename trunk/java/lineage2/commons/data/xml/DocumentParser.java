@@ -27,15 +27,38 @@ import org.w3c.dom.Node;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class DocumentParser
 {
+	/**
+	 * Field _log.
+	 */
 	private final static Logger _log = Logger.getLogger(DocumentParser.class);
+	/**
+	 * Field xmlFilter.
+	 */
 	private static final XMLFilter xmlFilter = new XMLFilter();
+	/**
+	 * Field _currentFile.
+	 */
 	private File _currentFile;
+	/**
+	 * Field _currentDocument.
+	 */
 	private Document _currentDocument;
 	
+	/**
+	 * Method load.
+	 */
 	public abstract void load();
 	
+	/**
+	 * Method parseFile.
+	 * @param f File
+	 */
 	protected void parseFile(File f)
 	{
 		if (!xmlFilter.accept(f))
@@ -64,21 +87,39 @@ public abstract class DocumentParser
 		parseDocument();
 	}
 	
+	/**
+	 * Method getCurrentFile.
+	 * @return File
+	 */
 	public File getCurrentFile()
 	{
 		return _currentFile;
 	}
 	
+	/**
+	 * Method getCurrentDocument.
+	 * @return Document
+	 */
 	protected Document getCurrentDocument()
 	{
 		return _currentDocument;
 	}
 	
+	/**
+	 * Method parseDirectory.
+	 * @param path String
+	 * @return boolean
+	 */
 	protected boolean parseDirectory(String path)
 	{
 		return parseDirectory(new File(path));
 	}
 	
+	/**
+	 * Method parseDirectory.
+	 * @param dir File
+	 * @return boolean
+	 */
 	protected boolean parseDirectory(File dir)
 	{
 		if (!dir.exists())
@@ -94,91 +135,185 @@ public abstract class DocumentParser
 		return true;
 	}
 	
+	/**
+	 * Method parseDocument.
+	 * @param doc Document
+	 */
 	protected void parseDocument(Document doc)
 	{
 	}
 	
+	/**
+	 * Method parseDocument.
+	 */
 	protected abstract void parseDocument();
 	
+	/**
+	 * Method parseInt.
+	 * @param n NamedNodeMap
+	 * @param name String
+	 * @return int
+	 */
 	protected static int parseInt(NamedNodeMap n, String name)
 	{
 		return Integer.parseInt(n.getNamedItem(name).getNodeValue());
 	}
 	
+	/**
+	 * Method parseInteger.
+	 * @param n NamedNodeMap
+	 * @param name String
+	 * @return Integer
+	 */
 	protected static Integer parseInteger(NamedNodeMap n, String name)
 	{
 		return Integer.valueOf(n.getNamedItem(name).getNodeValue());
 	}
 	
+	/**
+	 * Method parseInt.
+	 * @param n Node
+	 * @return int
+	 */
 	protected static int parseInt(Node n)
 	{
 		return Integer.parseInt(n.getNodeValue());
 	}
 	
+	/**
+	 * Method parseInteger.
+	 * @param n Node
+	 * @return Integer
+	 */
 	protected static Integer parseInteger(Node n)
 	{
 		return Integer.valueOf(n.getNodeValue());
 	}
 	
+	/**
+	 * Method parseLong.
+	 * @param n NamedNodeMap
+	 * @param name String
+	 * @return Long
+	 */
 	protected static Long parseLong(NamedNodeMap n, String name)
 	{
 		return Long.valueOf(n.getNamedItem(name).getNodeValue());
 	}
 	
+	/**
+	 * Method parseLong.
+	 * @param n Node
+	 * @return Long
+	 */
 	protected static Long parseLong(Node n)
 	{
 		return Long.valueOf(n.getNodeValue());
 	}
 	
+	/**
+	 * Method parseBoolean.
+	 * @param n NamedNodeMap
+	 * @param name String
+	 * @return boolean
+	 */
 	protected static boolean parseBoolean(NamedNodeMap n, String name)
 	{
 		Node b = n.getNamedItem(name);
 		return (b != null) && (Boolean.parseBoolean(b.getNodeValue()));
 	}
 	
+	/**
+	 * Method parseBoolean.
+	 * @param n Node
+	 * @return boolean
+	 */
 	protected static boolean parseBoolean(Node n)
 	{
 		return Boolean.parseBoolean(n.getNodeValue());
 	}
 	
+	/**
+	 * Method parseByte.
+	 * @param n Node
+	 * @return byte
+	 */
 	protected static byte parseByte(Node n)
 	{
 		return Byte.valueOf(n.getNodeValue()).byteValue();
 	}
 	
+	/**
+	 * Method parseDouble.
+	 * @param n NamedNodeMap
+	 * @param name String
+	 * @return double
+	 */
 	protected static double parseDouble(NamedNodeMap n, String name)
 	{
 		return Double.valueOf(n.getNamedItem(name).getNodeValue()).doubleValue();
 	}
 	
+	/**
+	 * Method parseFloat.
+	 * @param n NamedNodeMap
+	 * @param name String
+	 * @return float
+	 */
 	protected static float parseFloat(NamedNodeMap n, String name)
 	{
 		return Float.valueOf(n.getNamedItem(name).getNodeValue()).floatValue();
 	}
 	
+	/**
+	 * Method parseFloat.
+	 * @param n Node
+	 * @return float
+	 */
 	protected static float parseFloat(Node n)
 	{
 		return Float.valueOf(n.getNodeValue()).floatValue();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class XMLErrorHandler implements ErrorHandler
 	{
+		/**
+		 * Constructor for XMLErrorHandler.
+		 */
 		protected XMLErrorHandler()
 		{
 		}
 		
+		/**
+		 * Method warning.
+		 * @param e SAXParseException
+		 * @throws SAXParseException * @see org.xml.sax.ErrorHandler#warning(SAXParseException)
+		 */
 		@Override
 		public void warning(SAXParseException e) throws SAXParseException
 		{
 			throw e;
 		}
 		
+		/**
+		 * Method error.
+		 * @param e SAXParseException
+		 * @throws SAXParseException * @see org.xml.sax.ErrorHandler#error(SAXParseException)
+		 */
 		@Override
 		public void error(SAXParseException e) throws SAXParseException
 		{
 			throw e;
 		}
 		
+		/**
+		 * Method fatalError.
+		 * @param e SAXParseException
+		 * @throws SAXParseException * @see org.xml.sax.ErrorHandler#fatalError(SAXParseException)
+		 */
 		@Override
 		public void fatalError(SAXParseException e) throws SAXParseException
 		{
@@ -186,12 +321,18 @@ public abstract class DocumentParser
 		}
 	}
 	
+	/**
+	 * Method getAllFileList.
+	 * @param dir File
+	 * @param pathName String
+	 * @return FastList<File>
+	 */
 	public static FastList<File> getAllFileList(File dir, String pathName)
 	{
 		FastList<File> list = new FastList<>();
 		if ((!dir.toString().endsWith("/")) && (!dir.toString().endsWith("\\")))
 		{
-			dir = new File(new StringBuilder().append(dir.toString()).append("/").toString());
+			dir = new File(new StringBuilder().append(dir.toString()).append('/').toString());
 		}
 		if (!dir.exists())
 		{

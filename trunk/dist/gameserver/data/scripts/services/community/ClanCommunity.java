@@ -46,12 +46,29 @@ import lineage2.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanCommunity extends Functions implements ScriptFile, ICommunityBoardHandler
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ClanCommunity.class);
+	/**
+	 * Field CLANS_PER_PAGE. (value is 10)
+	 */
 	private static final int CLANS_PER_PAGE = 10;
+	/**
+	 * Field _listener.
+	 */
 	private final Listener _listener = new Listener();
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -63,6 +80,10 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -72,11 +93,19 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		}
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method getBypassCommands.
+	 * @return String[] * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#getBypassCommands()
+	 */
 	@Override
 	public String[] getBypassCommands()
 	{
@@ -96,6 +125,12 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		};
 	}
 	
+	/**
+	 * Method onBypassCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onBypassCommand(Player, String)
+	 */
 	@Override
 	public void onBypassCommand(Player player, String bypass)
 	{
@@ -147,7 +182,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 				StringBuilder goList = new StringBuilder("");
 				for (int i = page > 10 ? page - 10 : 1; i < page; i++)
 				{
-					goList.append("<td><a action=\"bypass _clbbslist_").append(i).append("_").append(byCL).append("_").append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
+					goList.append("<td><a action=\"bypass _clbbslist_").append(i).append('_').append(byCL).append('_').append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
 				}
 				html = html.replace("%GO_LIST%", goList.toString());
 			}
@@ -163,7 +198,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 				StringBuilder goList = new StringBuilder("");
 				for (int i = page + 1; i <= ep; i++)
 				{
-					goList.append("<td><a action=\"bypass _clbbslist_").append(i).append("_").append(byCL).append("_").append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
+					goList.append("<td><a action=\"bypass _clbbslist_").append(i).append('_').append(byCL).append('_').append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
 				}
 				html = html.replace("%GO_LIST2%", goList.toString());
 			}
@@ -426,6 +461,17 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		}
 	}
 	
+	/**
+	 * Method onWriteCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @param arg1 String
+	 * @param arg2 String
+	 * @param arg3 String
+	 * @param arg4 String
+	 * @param arg5 String
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)
+	 */
 	@Override
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
@@ -618,13 +664,24 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Listener implements OnPlayerEnterListener
 	{
+		/**
+		 * Constructor for Listener.
+		 */
 		public Listener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onPlayerEnter.
+		 * @param player Player
+		 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+		 */
 		@Override
 		public void onPlayerEnter(Player player)
 		{
@@ -671,6 +728,12 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		}
 	}
 	
+	/**
+	 * Method getClanList.
+	 * @param search String
+	 * @param byCL boolean
+	 * @return List<Clan>
+	 */
 	private static List<Clan> getClanList(String search, boolean byCL)
 	{
 		ArrayList<Clan> clanList = new ArrayList<>();
@@ -702,13 +765,25 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		return clanList;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class ClansComparator<T> implements Comparator<T>
 	{
+		/**
+		 * Constructor for ClansComparator.
+		 */
 		public ClansComparator()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method compare.
+		 * @param o1 Object
+		 * @param o2 Object
+		 * @return int
+		 */
 		@Override
 		public int compare(Object o1, Object o2)
 		{

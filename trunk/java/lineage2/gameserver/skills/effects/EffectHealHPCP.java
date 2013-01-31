@@ -18,13 +18,25 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectHealHPCP extends Effect
 {
+	/**
+	 * Constructor for EffectHealHPCP.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectHealHPCP(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -35,6 +47,10 @@ public class EffectHealHPCP extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

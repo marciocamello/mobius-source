@@ -17,13 +17,32 @@ import java.util.List;
 
 import lineage2.gameserver.model.pledge.Clan;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeReceiveWarList extends L2GameServerPacket
 {
+	/**
+	 * Field infos.
+	 */
 	private final List<WarInfo> infos = new ArrayList<>();
+	/**
+	 * Field _updateType.
+	 */
 	private final int _updateType;
+	/**
+	 * Field _page.
+	 */
 	@SuppressWarnings("unused")
 	private final int _page;
 	
+	/**
+	 * Constructor for PledgeReceiveWarList.
+	 * @param clan Clan
+	 * @param type int
+	 * @param page int
+	 */
 	public PledgeReceiveWarList(Clan clan, int type, int page)
 	{
 		_updateType = type;
@@ -39,6 +58,9 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -54,11 +76,29 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class WarInfo
 	{
+		/**
+		 * Field clan_name.
+		 */
 		public String clan_name;
+		/**
+		 * Field unk2.
+		 */
+		/**
+		 * Field unk1.
+		 */
 		public int unk1, unk2;
 		
+		/**
+		 * Constructor for WarInfo.
+		 * @param _clan_name String
+		 * @param _unk1 int
+		 * @param _unk2 int
+		 */
 		public WarInfo(String _clan_name, int _unk1, int _unk2)
 		{
 			clan_name = _clan_name;

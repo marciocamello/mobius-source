@@ -23,12 +23,23 @@ import lineage2.gameserver.network.serverpackets.WareHouseWithdrawList;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ItemTemplate.ItemClass;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class WarehouseFunctions
 {
+	/**
+	 * Constructor for WarehouseFunctions.
+	 */
 	private WarehouseFunctions()
 	{
 	}
 	
+	/**
+	 * Method showFreightWindow.
+	 * @param player Player
+	 */
 	public static void showFreightWindow(Player player)
 	{
 		if (!WarehouseFunctions.canShowWarehouseWithdrawList(player, WarehouseType.FREIGHT))
@@ -40,6 +51,11 @@ public final class WarehouseFunctions
 		player.sendPacket(new WareHouseWithdrawList(player, WarehouseType.FREIGHT, ItemClass.ALL));
 	}
 	
+	/**
+	 * Method showRetrieveWindow.
+	 * @param player Player
+	 * @param val int
+	 */
 	public static void showRetrieveWindow(Player player, int val)
 	{
 		if (!WarehouseFunctions.canShowWarehouseWithdrawList(player, WarehouseType.PRIVATE))
@@ -51,6 +67,10 @@ public final class WarehouseFunctions
 		player.sendPacket(new WareHouseWithdrawList(player, WarehouseType.PRIVATE, ItemClass.values()[val]));
 	}
 	
+	/**
+	 * Method showDepositWindow.
+	 * @param player Player
+	 */
 	public static void showDepositWindow(Player player)
 	{
 		if (!WarehouseFunctions.canShowWarehouseDepositList(player, WarehouseType.PRIVATE))
@@ -62,6 +82,10 @@ public final class WarehouseFunctions
 		player.sendPacket(new WareHouseDepositList(player, WarehouseType.PRIVATE));
 	}
 	
+	/**
+	 * Method showDepositWindowClan.
+	 * @param player Player
+	 */
 	public static void showDepositWindowClan(Player player)
 	{
 		if (!WarehouseFunctions.canShowWarehouseDepositList(player, WarehouseType.CLAN))
@@ -77,6 +101,11 @@ public final class WarehouseFunctions
 		player.sendPacket(new WareHouseDepositList(player, WarehouseType.CLAN));
 	}
 	
+	/**
+	 * Method showWithdrawWindowClan.
+	 * @param player Player
+	 * @param val int
+	 */
 	public static void showWithdrawWindowClan(Player player, int val)
 	{
 		if (!WarehouseFunctions.canShowWarehouseWithdrawList(player, WarehouseType.CLAN))
@@ -88,6 +117,12 @@ public final class WarehouseFunctions
 		player.sendPacket(new WareHouseWithdrawList(player, WarehouseType.CLAN, ItemClass.values()[val]));
 	}
 	
+	/**
+	 * Method canShowWarehouseWithdrawList.
+	 * @param player Player
+	 * @param type WarehouseType
+	 * @return boolean
+	 */
 	public static boolean canShowWarehouseWithdrawList(Player player, WarehouseType type)
 	{
 		if (!player.getPlayerAccess().UseWarehouse)
@@ -136,6 +171,12 @@ public final class WarehouseFunctions
 		return true;
 	}
 	
+	/**
+	 * Method canShowWarehouseDepositList.
+	 * @param player Player
+	 * @param type WarehouseType
+	 * @return boolean
+	 */
 	public static boolean canShowWarehouseDepositList(Player player, WarehouseType type)
 	{
 		if (!player.getPlayerAccess().UseWarehouse)

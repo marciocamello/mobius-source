@@ -15,12 +15,29 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GMViewWarehouseWithdrawList extends L2GameServerPacket
 {
+	/**
+	 * Field _items.
+	 */
 	private final ItemInstance[] _items;
+	/**
+	 * Field _charName.
+	 */
 	private final String _charName;
+	/**
+	 * Field _charAdena.
+	 */
 	private final long _charAdena;
 	
+	/**
+	 * Constructor for GMViewWarehouseWithdrawList.
+	 * @param cha Player
+	 */
 	public GMViewWarehouseWithdrawList(Player cha)
 	{
 		_charName = cha.getName();
@@ -28,6 +45,9 @@ public class GMViewWarehouseWithdrawList extends L2GameServerPacket
 		_items = cha.getWarehouse().getItems();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

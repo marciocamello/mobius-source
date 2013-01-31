@@ -20,22 +20,44 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HeraSubAI extends DefaultAI
 {
+	/**
+	 * Field _points.
+	 */
 	protected Location[] _points;
+	/**
+	 * Field _lastPoint.
+	 */
 	private int _lastPoint = 0;
 	
+	/**
+	 * Constructor for HeraSubAI.
+	 * @param actor NpcInstance
+	 */
 	public HeraSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -46,6 +68,9 @@ public class HeraSubAI extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
@@ -57,6 +82,9 @@ public class HeraSubAI extends DefaultAI
 		super.onEvtArrived();
 	}
 	
+	/**
+	 * Method startMoveTask.
+	 */
 	private void startMoveTask()
 	{
 		_lastPoint++;
@@ -68,6 +96,9 @@ public class HeraSubAI extends DefaultAI
 		doTask();
 	}
 	
+	/**
+	 * Method sayRndMsg.
+	 */
 	private void sayRndMsg()
 	{
 		NpcInstance actor = getActor();
@@ -103,11 +134,21 @@ public class HeraSubAI extends DefaultAI
 		Functions.npcSay(actor, ns);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

@@ -17,13 +17,25 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectCharge extends Effect
 {
+	/**
+	 * Constructor for EffectCharge.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectCharge(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -42,6 +54,10 @@ public final class EffectCharge extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

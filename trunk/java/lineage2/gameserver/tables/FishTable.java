@@ -28,29 +28,58 @@ import lineage2.gameserver.templates.FishTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FishTable
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(FishTable.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final FishTable _instance = new FishTable();
 	
+	/**
+	 * Method getInstance.
+	 * @return FishTable
+	 */
 	public static final FishTable getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _fishes.
+	 */
 	private TIntObjectHashMap<List<FishTemplate>> _fishes;
+	/**
+	 * Field _fishRewards.
+	 */
 	private TIntObjectHashMap<List<RewardData>> _fishRewards;
 	
+	/**
+	 * Constructor for FishTable.
+	 */
 	private FishTable()
 	{
 		load();
 	}
 	
+	/**
+	 * Method reload.
+	 */
 	public void reload()
 	{
 		load();
 	}
 	
+	/**
+	 * Method load.
+	 */
 	private void load()
 	{
 		_fishes = new TIntObjectHashMap<>();
@@ -121,11 +150,22 @@ public class FishTable
 		}
 	}
 	
+	/**
+	 * Method getFishIds.
+	 * @return int[]
+	 */
 	public int[] getFishIds()
 	{
 		return _fishRewards.keys();
 	}
 	
+	/**
+	 * Method getFish.
+	 * @param group int
+	 * @param type int
+	 * @param lvl int
+	 * @return List<FishTemplate>
+	 */
 	public List<FishTemplate> getFish(int group, int type, int lvl)
 	{
 		List<FishTemplate> result = new ArrayList<>();
@@ -154,6 +194,11 @@ public class FishTable
 		return result;
 	}
 	
+	/**
+	 * Method getFishReward.
+	 * @param fishid int
+	 * @return List<RewardData>
+	 */
 	public List<RewardData> getFishReward(int fishid)
 	{
 		List<RewardData> result = _fishRewards.get(fishid);

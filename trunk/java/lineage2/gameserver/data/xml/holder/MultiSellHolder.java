@@ -35,127 +35,253 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MultiSellHolder
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(MultiSellHolder.class);
+	/**
+	 * Field _instance.
+	 */
 	private static MultiSellHolder _instance = new MultiSellHolder();
 	
+	/**
+	 * Method getInstance.
+	 * @return MultiSellHolder
+	 */
 	public static MultiSellHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field NODE_PRODUCTION. (value is ""production"")
+	 */
 	private static final String NODE_PRODUCTION = "production";
+	/**
+	 * Field NODE_INGRIDIENT. (value is ""ingredient"")
+	 */
 	private static final String NODE_INGRIDIENT = "ingredient";
+	/**
+	 * Field entries.
+	 */
 	private final TIntObjectHashMap<MultiSellListContainer> entries = new TIntObjectHashMap<>();
 	
+	/**
+	 * Method getList.
+	 * @param id int
+	 * @return MultiSellListContainer
+	 */
 	public MultiSellListContainer getList(int id)
 	{
 		return entries.get(id);
 	}
 	
+	/**
+	 * Constructor for MultiSellHolder.
+	 */
 	public MultiSellHolder()
 	{
 		parseData();
 	}
 	
+	/**
+	 * Method reload.
+	 */
 	public void reload()
 	{
 		parseData();
 	}
 	
+	/**
+	 * Method parseData.
+	 */
 	private void parseData()
 	{
 		entries.clear();
 		parse();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class MultiSellListContainer
 	{
+		/**
+		 * Field _listId.
+		 */
 		private int _listId;
+		/**
+		 * Field _isnew.
+		 */
 		private boolean _isnew = false;
+		/**
+		 * Field _showall.
+		 */
 		private boolean _showall = true;
+		/**
+		 * Field keep_enchanted.
+		 */
 		private boolean keep_enchanted = false;
+		/**
+		 * Field is_dutyfree.
+		 */
 		private boolean is_dutyfree = false;
+		/**
+		 * Field nokey.
+		 */
 		private boolean nokey = false;
+		/**
+		 * Field entries.
+		 */
 		final List<MultiSellEntry> entries = new ArrayList<>();
 		
+		/**
+		 * Method setListId.
+		 * @param listId int
+		 */
 		public void setListId(int listId)
 		{
 			_listId = listId;
 		}
 		
+		/**
+		 * Method getListId.
+		 * @return int
+		 */
 		public int getListId()
 		{
 			return _listId;
 		}
 		
+		/**
+		 * Method setIsNew.
+		 * @param bool boolean
+		 */
 		public void setIsNew(boolean bool)
 		{
 			_isnew = bool;
 		}
 		
+		/**
+		 * Method isNew.
+		 * @return boolean
+		 */
 		public boolean isNew()
 		{
 			return _isnew;
 		}
 		
+		/**
+		 * Method setShowAll.
+		 * @param bool boolean
+		 */
 		public void setShowAll(boolean bool)
 		{
 			_showall = bool;
 		}
 		
+		/**
+		 * Method isShowAll.
+		 * @return boolean
+		 */
 		public boolean isShowAll()
 		{
 			return _showall;
 		}
 		
+		/**
+		 * Method setNoTax.
+		 * @param bool boolean
+		 */
 		public void setNoTax(boolean bool)
 		{
 			is_dutyfree = bool;
 		}
 		
+		/**
+		 * Method isNoTax.
+		 * @return boolean
+		 */
 		public boolean isNoTax()
 		{
 			return is_dutyfree;
 		}
 		
+		/**
+		 * Method setNoKey.
+		 * @param bool boolean
+		 */
 		public void setNoKey(boolean bool)
 		{
 			nokey = bool;
 		}
 		
+		/**
+		 * Method isNoKey.
+		 * @return boolean
+		 */
 		public boolean isNoKey()
 		{
 			return nokey;
 		}
 		
+		/**
+		 * Method setKeepEnchant.
+		 * @param bool boolean
+		 */
 		public void setKeepEnchant(boolean bool)
 		{
 			keep_enchanted = bool;
 		}
 		
+		/**
+		 * Method isKeepEnchant.
+		 * @return boolean
+		 */
 		public boolean isKeepEnchant()
 		{
 			return keep_enchanted;
 		}
 		
+		/**
+		 * Method addEntry.
+		 * @param e MultiSellEntry
+		 */
 		public void addEntry(MultiSellEntry e)
 		{
 			entries.add(e);
 		}
 		
+		/**
+		 * Method getEntries.
+		 * @return List<MultiSellEntry>
+		 */
 		public List<MultiSellEntry> getEntries()
 		{
 			return entries;
 		}
 		
+		/**
+		 * Method isEmpty.
+		 * @return boolean
+		 */
 		public boolean isEmpty()
 		{
 			return entries.isEmpty();
 		}
 	}
 	
+	/**
+	 * Method hashFiles.
+	 * @param dirname String
+	 * @param hash List<File>
+	 */
 	private void hashFiles(String dirname, List<File> hash)
 	{
 		File dir = new File(Config.DATAPACK_ROOT, "data/xml/" + dirname);
@@ -178,6 +304,11 @@ public class MultiSellHolder
 		}
 	}
 	
+	/**
+	 * Method addMultiSellListContainer.
+	 * @param id int
+	 * @param list MultiSellListContainer
+	 */
 	public void addMultiSellListContainer(int id, MultiSellListContainer list)
 	{
 		if (entries.containsKey(id))
@@ -188,21 +319,40 @@ public class MultiSellHolder
 		entries.put(id, list);
 	}
 	
+	/**
+	 * Method remove.
+	 * @param s String
+	 * @return MultiSellListContainer
+	 */
 	public MultiSellListContainer remove(String s)
 	{
 		return remove(new File(s));
 	}
 	
+	/**
+	 * Method remove.
+	 * @param f File
+	 * @return MultiSellListContainer
+	 */
 	public MultiSellListContainer remove(File f)
 	{
 		return remove(Integer.parseInt(f.getName().replaceAll(".xml", "")));
 	}
 	
+	/**
+	 * Method remove.
+	 * @param id int
+	 * @return MultiSellListContainer
+	 */
 	public MultiSellListContainer remove(int id)
 	{
 		return entries.remove(id);
 	}
 	
+	/**
+	 * Method parseFile.
+	 * @param f File
+	 */
 	public void parseFile(File f)
 	{
 		int id = 0;
@@ -238,6 +388,9 @@ public class MultiSellHolder
 		}
 	}
 	
+	/**
+	 * Method parse.
+	 */
 	private void parse()
 	{
 		List<File> files = new ArrayList<>();
@@ -248,6 +401,12 @@ public class MultiSellHolder
 		}
 	}
 	
+	/**
+	 * Method parseDocument.
+	 * @param doc Document
+	 * @param id int
+	 * @return MultiSellListContainer
+	 */
 	protected MultiSellListContainer parseDocument(Document doc, int id)
 	{
 		MultiSellListContainer list = new MultiSellListContainer();
@@ -281,6 +440,12 @@ public class MultiSellHolder
 		return list;
 	}
 	
+	/**
+	 * Method parseEntry.
+	 * @param n Node
+	 * @param multiSellId int
+	 * @return MultiSellEntry
+	 */
 	protected MultiSellEntry parseEntry(Node n, int multiSellId)
 	{
 		MultiSellEntry entry = new MultiSellEntry();
@@ -394,6 +559,11 @@ public class MultiSellHolder
 		return entry;
 	}
 	
+	/**
+	 * Method parseItemIdAndCount.
+	 * @param s String
+	 * @return long[]
+	 */
 	private static long[] parseItemIdAndCount(String s)
 	{
 		if ((s == null) || s.isEmpty())
@@ -418,6 +588,11 @@ public class MultiSellHolder
 		}
 	}
 	
+	/**
+	 * Method parseEntryFromStr.
+	 * @param s String
+	 * @return MultiSellEntry
+	 */
 	public static MultiSellEntry parseEntryFromStr(String s)
 	{
 		if ((s == null) || s.isEmpty())
@@ -440,6 +615,12 @@ public class MultiSellHolder
 		return entry;
 	}
 	
+	/**
+	 * Method SeparateAndSend.
+	 * @param listId int
+	 * @param player Player
+	 * @param taxRate double
+	 */
 	public void SeparateAndSend(int listId, Player player, double taxRate)
 	{
 		for (int i : Config.ALT_DISABLED_MULTISELL)
@@ -459,6 +640,12 @@ public class MultiSellHolder
 		SeparateAndSend(list, player, taxRate);
 	}
 	
+	/**
+	 * Method SeparateAndSend.
+	 * @param list MultiSellListContainer
+	 * @param player Player
+	 * @param taxRate double
+	 */
 	public void SeparateAndSend(MultiSellListContainer list, Player player, double taxRate)
 	{
 		list = generateMultiSell(list, player, taxRate);
@@ -480,6 +667,13 @@ public class MultiSellHolder
 		player.sendPacket(new MultiSellList(temp, page, 1));
 	}
 	
+	/**
+	 * Method generateMultiSell.
+	 * @param container MultiSellListContainer
+	 * @param player Player
+	 * @param taxRate double
+	 * @return MultiSellListContainer
+	 */
 	private MultiSellListContainer generateMultiSell(MultiSellListContainer container, Player player, double taxRate)
 	{
 		MultiSellListContainer list = new MultiSellListContainer();

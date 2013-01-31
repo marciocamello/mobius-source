@@ -16,13 +16,31 @@ import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminHelpPage implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_showhtml.
+		 */
 		admin_showhtml
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -45,6 +63,11 @@ public class AdminHelpPage implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method showHelpHtml.
+	 * @param targetChar Player
+	 * @param content String
+	 */
 	public static void showHelpHtml(Player targetChar, String content)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -52,6 +75,10 @@ public class AdminHelpPage implements IAdminCommandHandler
 		targetChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

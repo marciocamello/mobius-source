@@ -16,17 +16,49 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.SubUnit;
 import lineage2.gameserver.model.pledge.UnitMember;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeShowMemberListUpdate extends L2GameServerPacket
 {
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _lvl.
+	 */
 	private final int _lvl;
+	/**
+	 * Field _classId.
+	 */
 	private final int _classId;
+	/**
+	 * Field _sex.
+	 */
 	private final int _sex;
+	/**
+	 * Field _isOnline.
+	 */
 	private final int _isOnline;
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _pledgeType.
+	 */
 	private final int _pledgeType;
+	/**
+	 * Field _isApprentice.
+	 */
 	private int _isApprentice;
 	
+	/**
+	 * Constructor for PledgeShowMemberListUpdate.
+	 * @param player Player
+	 */
 	public PledgeShowMemberListUpdate(final Player player)
 	{
 		_name = player.getName();
@@ -44,6 +76,10 @@ public class PledgeShowMemberListUpdate extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Constructor for PledgeShowMemberListUpdate.
+	 * @param cm UnitMember
+	 */
 	public PledgeShowMemberListUpdate(final UnitMember cm)
 	{
 		_name = cm.getName();
@@ -56,6 +92,9 @@ public class PledgeShowMemberListUpdate extends L2GameServerPacket
 		_isApprentice = cm.hasSponsor() ? 1 : 0;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

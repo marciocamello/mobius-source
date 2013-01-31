@@ -17,13 +17,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PrintfFormat
 {
+	/**
+	 * Constructor for PrintfFormat.
+	 * @param fmtArg String
+	 * @throws IllegalArgumentException
+	 */
 	public PrintfFormat(String fmtArg) throws IllegalArgumentException
 	{
 		this(Locale.getDefault(), fmtArg);
 	}
 	
+	/**
+	 * Constructor for PrintfFormat.
+	 * @param locale Locale
+	 * @param fmtArg String
+	 * @throws IllegalArgumentException
+	 */
 	public PrintfFormat(Locale locale, String fmtArg) throws IllegalArgumentException
 	{
 		dfs = new DecimalFormatSymbols(locale);
@@ -108,6 +123,12 @@ public class PrintfFormat
 		}
 	}
 	
+	/**
+	 * Method nonControl.
+	 * @param s String
+	 * @param start int
+	 * @return String
+	 */
 	private String nonControl(String s, int start)
 	{
 		cPos = s.indexOf("%", start);
@@ -118,6 +139,11 @@ public class PrintfFormat
 		return s.substring(start, cPos);
 	}
 	
+	/**
+	 * Method sprintf.
+	 * @param o Object[]
+	 * @return String
+	 */
 	public String sprintf(Object... o)
 	{
 		char c = 0;
@@ -132,7 +158,7 @@ public class PrintfFormat
 			}
 			else if (c == '%')
 			{
-				sb.append("%");
+				sb.append('%');
 			}
 			else
 			{
@@ -208,6 +234,10 @@ public class PrintfFormat
 		return sb.toString();
 	}
 	
+	/**
+	 * Method sprintf.
+	 * @return String
+	 */
 	public String sprintf()
 	{
 		char c = 0;
@@ -221,12 +251,17 @@ public class PrintfFormat
 			}
 			else if (c == '%')
 			{
-				sb.append("%");
+				sb.append('%');
 			}
 		}
 		return sb.toString();
 	}
 	
+	/**
+	 * Method sprintf.
+	 * @param x int
+	 * @return String * @throws IllegalArgumentException
+	 */
 	public String sprintf(int x) throws IllegalArgumentException
 	{
 		char c = 0;
@@ -240,7 +275,7 @@ public class PrintfFormat
 			}
 			else if (c == '%')
 			{
-				sb.append("%");
+				sb.append('%');
 			}
 			else
 			{
@@ -250,6 +285,11 @@ public class PrintfFormat
 		return sb.toString();
 	}
 	
+	/**
+	 * Method sprintf.
+	 * @param x long
+	 * @return String * @throws IllegalArgumentException
+	 */
 	public String sprintf(long x) throws IllegalArgumentException
 	{
 		char c = 0;
@@ -263,7 +303,7 @@ public class PrintfFormat
 			}
 			else if (c == '%')
 			{
-				sb.append("%");
+				sb.append('%');
 			}
 			else
 			{
@@ -273,6 +313,11 @@ public class PrintfFormat
 		return sb.toString();
 	}
 	
+	/**
+	 * Method sprintf.
+	 * @param x double
+	 * @return String * @throws IllegalArgumentException
+	 */
 	public String sprintf(double x) throws IllegalArgumentException
 	{
 		char c = 0;
@@ -286,7 +331,7 @@ public class PrintfFormat
 			}
 			else if (c == '%')
 			{
-				sb.append("%");
+				sb.append('%');
 			}
 			else
 			{
@@ -296,6 +341,11 @@ public class PrintfFormat
 		return sb.toString();
 	}
 	
+	/**
+	 * Method sprintf.
+	 * @param x String
+	 * @return String * @throws IllegalArgumentException
+	 */
 	public String sprintf(String x) throws IllegalArgumentException
 	{
 		char c = 0;
@@ -309,7 +359,7 @@ public class PrintfFormat
 			}
 			else if (c == '%')
 			{
-				sb.append("%");
+				sb.append('%');
 			}
 			else
 			{
@@ -319,6 +369,11 @@ public class PrintfFormat
 		return sb.toString();
 	}
 	
+	/**
+	 * Method sprintf.
+	 * @param x Object
+	 * @return String * @throws IllegalArgumentException
+	 */
 	public String sprintf(Object x) throws IllegalArgumentException
 	{
 		char c = 0;
@@ -332,7 +387,7 @@ public class PrintfFormat
 			}
 			else if (c == '%')
 			{
-				sb.append("%");
+				sb.append('%');
 			}
 			else
 			{
@@ -377,12 +432,23 @@ public class PrintfFormat
 		return sb.toString();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ConversionSpecification
 	{
+		/**
+		 * Constructor for ConversionSpecification.
+		 */
 		ConversionSpecification()
 		{
 		}
 		
+		/**
+		 * Constructor for ConversionSpecification.
+		 * @param fmtArg String
+		 * @throws IllegalArgumentException
+		 */
 		ConversionSpecification(String fmtArg) throws IllegalArgumentException
 		{
 			if (fmtArg == null)
@@ -434,11 +500,19 @@ public class PrintfFormat
 			}
 		}
 		
+		/**
+		 * Method setLiteral.
+		 * @param s String
+		 */
 		void setLiteral(String s)
 		{
 			fmt = s;
 		}
 		
+		/**
+		 * Method getLiteral.
+		 * @return String
+		 */
 		String getLiteral()
 		{
 			StringBuilder sb = new StringBuilder();
@@ -493,16 +567,28 @@ public class PrintfFormat
 			return fmt;
 		}
 		
+		/**
+		 * Method getConversionCharacter.
+		 * @return char
+		 */
 		char getConversionCharacter()
 		{
 			return conversionCharacter;
 		}
 		
+		/**
+		 * Method isVariableFieldWidth.
+		 * @return boolean
+		 */
 		boolean isVariableFieldWidth()
 		{
 			return variableFieldWidth;
 		}
 		
+		/**
+		 * Method setFieldWidthWithArg.
+		 * @param fw int
+		 */
 		void setFieldWidthWithArg(int fw)
 		{
 			if (fw < 0)
@@ -513,17 +599,30 @@ public class PrintfFormat
 			fieldWidth = Math.abs(fw);
 		}
 		
+		/**
+		 * Method isVariablePrecision.
+		 * @return boolean
+		 */
 		boolean isVariablePrecision()
 		{
 			return variablePrecision;
 		}
 		
+		/**
+		 * Method setPrecisionWithArg.
+		 * @param pr int
+		 */
 		void setPrecisionWithArg(int pr)
 		{
 			precisionSet = true;
 			precision = Math.max(pr, 0);
 		}
 		
+		/**
+		 * Method internalsprintf.
+		 * @param s int
+		 * @return String * @throws IllegalArgumentException
+		 */
 		String internalsprintf(int s) throws IllegalArgumentException
 		{
 			String s2 = "";
@@ -583,6 +682,11 @@ public class PrintfFormat
 			return s2;
 		}
 		
+		/**
+		 * Method internalsprintf.
+		 * @param s long
+		 * @return String * @throws IllegalArgumentException
+		 */
 		String internalsprintf(long s) throws IllegalArgumentException
 		{
 			String s2 = "";
@@ -642,6 +746,11 @@ public class PrintfFormat
 			return s2;
 		}
 		
+		/**
+		 * Method internalsprintf.
+		 * @param s double
+		 * @return String * @throws IllegalArgumentException
+		 */
 		String internalsprintf(double s) throws IllegalArgumentException
 		{
 			String s2 = "";
@@ -664,6 +773,11 @@ public class PrintfFormat
 			return s2;
 		}
 		
+		/**
+		 * Method internalsprintf.
+		 * @param s String
+		 * @return String * @throws IllegalArgumentException
+		 */
 		String internalsprintf(String s) throws IllegalArgumentException
 		{
 			String s2 = "";
@@ -678,6 +792,11 @@ public class PrintfFormat
 			return s2;
 		}
 		
+		/**
+		 * Method internalsprintf.
+		 * @param s Object
+		 * @return String
+		 */
 		String internalsprintf(Object s)
 		{
 			String s2 = "";
@@ -692,6 +811,11 @@ public class PrintfFormat
 			return s2;
 		}
 		
+		/**
+		 * Method fFormatDigits.
+		 * @param x double
+		 * @return char[]
+		 */
 		private char[] fFormatDigits(double x)
 		{
 			String sx;
@@ -1023,6 +1147,11 @@ public class PrintfFormat
 			return ca6;
 		}
 		
+		/**
+		 * Method fFormatString.
+		 * @param x double
+		 * @return String
+		 */
 		private String fFormatString(double x)
 		{
 			char[] ca6, ca7;
@@ -1071,6 +1200,12 @@ public class PrintfFormat
 			return new String(ca7);
 		}
 		
+		/**
+		 * Method eFormatDigits.
+		 * @param x double
+		 * @param eChar char
+		 * @return char[]
+		 */
 		private char[] eFormatDigits(double x, char eChar)
 		{
 			char[] ca1, ca2, ca3;
@@ -1490,6 +1625,12 @@ public class PrintfFormat
 			return ca4;
 		}
 		
+		/**
+		 * Method checkForCarry.
+		 * @param ca1 char[]
+		 * @param icarry int
+		 * @return boolean
+		 */
 		private boolean checkForCarry(char[] ca1, int icarry)
 		{
 			boolean carry = false;
@@ -1519,6 +1660,13 @@ public class PrintfFormat
 			return carry;
 		}
 		
+		/**
+		 * Method startSymbolicCarry.
+		 * @param ca char[]
+		 * @param cLast int
+		 * @param cFirst int
+		 * @return boolean
+		 */
 		private boolean startSymbolicCarry(char[] ca, int cLast, int cFirst)
 		{
 			boolean carry = true;
@@ -1563,6 +1711,12 @@ public class PrintfFormat
 			return carry;
 		}
 		
+		/**
+		 * Method eFormatString.
+		 * @param x double
+		 * @param eChar char
+		 * @return String
+		 */
 		private String eFormatString(double x, char eChar)
 		{
 			char[] ca4, ca5;
@@ -1611,6 +1765,12 @@ public class PrintfFormat
 			return new String(ca5);
 		}
 		
+		/**
+		 * Method applyFloatPadding.
+		 * @param ca4 char[]
+		 * @param noDigits boolean
+		 * @return char[]
+		 */
 		private char[] applyFloatPadding(char[] ca4, boolean noDigits)
 		{
 			char[] ca5 = ca4;
@@ -1677,11 +1837,21 @@ public class PrintfFormat
 			return ca5;
 		}
 		
+		/**
+		 * Method printFFormat.
+		 * @param x double
+		 * @return String
+		 */
 		private String printFFormat(double x)
 		{
 			return fFormatString(x);
 		}
 		
+		/**
+		 * Method printEFormat.
+		 * @param x double
+		 * @return String
+		 */
 		private String printEFormat(double x)
 		{
 			if (conversionCharacter == 'e')
@@ -1691,6 +1861,11 @@ public class PrintfFormat
 			return eFormatString(x, 'E');
 		}
 		
+		/**
+		 * Method printGFormat.
+		 * @param x double
+		 * @return String
+		 */
 		private String printGFormat(double x)
 		{
 			String sx, sy, sz, ret;
@@ -1857,21 +2032,41 @@ public class PrintfFormat
 			return new String(ca5);
 		}
 		
+		/**
+		 * Method printDFormat.
+		 * @param x short
+		 * @return String
+		 */
 		private String printDFormat(short x)
 		{
 			return printDFormat(Short.toString(x));
 		}
 		
+		/**
+		 * Method printDFormat.
+		 * @param x long
+		 * @return String
+		 */
 		private String printDFormat(long x)
 		{
 			return printDFormat(Long.toString(x));
 		}
 		
+		/**
+		 * Method printDFormat.
+		 * @param x int
+		 * @return String
+		 */
 		private String printDFormat(int x)
 		{
 			return printDFormat(Integer.toString(x));
 		}
 		
+		/**
+		 * Method printDFormat.
+		 * @param sx String
+		 * @return String
+		 */
 		private String printDFormat(String sx)
 		{
 			int nLeadingZeros = 0;
@@ -2007,6 +2202,11 @@ public class PrintfFormat
 			return new String(ca);
 		}
 		
+		/**
+		 * Method printXFormat.
+		 * @param x short
+		 * @return String
+		 */
 		private String printXFormat(short x)
 		{
 			String sx = null;
@@ -2075,6 +2275,11 @@ public class PrintfFormat
 			return printXFormat(sx);
 		}
 		
+		/**
+		 * Method printXFormat.
+		 * @param x long
+		 * @return String
+		 */
 		private String printXFormat(long x)
 		{
 			String sx = null;
@@ -2167,6 +2372,11 @@ public class PrintfFormat
 			return printXFormat(sx);
 		}
 		
+		/**
+		 * Method printXFormat.
+		 * @param x int
+		 * @return String
+		 */
 		private String printXFormat(int x)
 		{
 			String sx = null;
@@ -2235,6 +2445,11 @@ public class PrintfFormat
 			return printXFormat(sx);
 		}
 		
+		/**
+		 * Method printXFormat.
+		 * @param sx String
+		 * @return String
+		 */
 		private String printXFormat(String sx)
 		{
 			int nLeadingZeros = 0;
@@ -2333,6 +2548,11 @@ public class PrintfFormat
 			return caReturn;
 		}
 		
+		/**
+		 * Method printOFormat.
+		 * @param x short
+		 * @return String
+		 */
 		private String printOFormat(short x)
 		{
 			String sx = null;
@@ -2369,6 +2589,11 @@ public class PrintfFormat
 			return printOFormat(sx);
 		}
 		
+		/**
+		 * Method printOFormat.
+		 * @param x long
+		 * @return String
+		 */
 		private String printOFormat(long x)
 		{
 			String sx = null;
@@ -2453,6 +2678,11 @@ public class PrintfFormat
 			return printOFormat(sx);
 		}
 		
+		/**
+		 * Method printOFormat.
+		 * @param x int
+		 * @return String
+		 */
 		private String printOFormat(int x)
 		{
 			String sx = null;
@@ -2507,6 +2737,11 @@ public class PrintfFormat
 			return printOFormat(sx);
 		}
 		
+		/**
+		 * Method printOFormat.
+		 * @param sx String
+		 * @return String
+		 */
 		private String printOFormat(String sx)
 		{
 			int nLeadingZeros = 0;
@@ -2583,6 +2818,11 @@ public class PrintfFormat
 			return new String(ca);
 		}
 		
+		/**
+		 * Method printCFormat.
+		 * @param x char
+		 * @return String
+		 */
 		private String printCFormat(char x)
 		{
 			int nPrint = 1;
@@ -2612,6 +2852,11 @@ public class PrintfFormat
 			return new String(ca);
 		}
 		
+		/**
+		 * Method printSFormat.
+		 * @param x String
+		 * @return String
+		 */
 		private String printSFormat(String x)
 		{
 			int nPrint = x.length();
@@ -2688,6 +2933,10 @@ public class PrintfFormat
 			return new String(ca);
 		}
 		
+		/**
+		 * Method setConversionCharacter.
+		 * @return boolean
+		 */
 		private boolean setConversionCharacter()
 		{
 			boolean ret = false;
@@ -2705,6 +2954,9 @@ public class PrintfFormat
 			return ret;
 		}
 		
+		/**
+		 * Method setOptionalHL.
+		 */
 		private void setOptionalHL()
 		{
 			optionalh = false;
@@ -2731,6 +2983,9 @@ public class PrintfFormat
 			}
 		}
 		
+		/**
+		 * Method setPrecision.
+		 */
 		private void setPrecision()
 		{
 			int firstPos = pos;
@@ -2769,6 +3024,9 @@ public class PrintfFormat
 			}
 		}
 		
+		/**
+		 * Method setFieldWidth.
+		 */
 		private void setFieldWidth()
 		{
 			int firstPos = pos;
@@ -2806,6 +3064,9 @@ public class PrintfFormat
 			}
 		}
 		
+		/**
+		 * Method setArgPosition.
+		 */
 		private void setArgPosition()
 		{
 			int xPos;
@@ -2827,6 +3088,10 @@ public class PrintfFormat
 			}
 		}
 		
+		/**
+		 * Method setFieldWidthArgPosition.
+		 * @return boolean
+		 */
 		private boolean setFieldWidthArgPosition()
 		{
 			boolean ret = false;
@@ -2851,6 +3116,10 @@ public class PrintfFormat
 			return ret;
 		}
 		
+		/**
+		 * Method setPrecisionArgPosition.
+		 * @return boolean
+		 */
 		private boolean setPrecisionArgPosition()
 		{
 			boolean ret = false;
@@ -2875,36 +3144,63 @@ public class PrintfFormat
 			return ret;
 		}
 		
+		/**
+		 * Method isPositionalSpecification.
+		 * @return boolean
+		 */
 		boolean isPositionalSpecification()
 		{
 			return positionalSpecification;
 		}
 		
+		/**
+		 * Method getArgumentPosition.
+		 * @return int
+		 */
 		int getArgumentPosition()
 		{
 			return argumentPosition;
 		}
 		
+		/**
+		 * Method isPositionalFieldWidth.
+		 * @return boolean
+		 */
 		boolean isPositionalFieldWidth()
 		{
 			return positionalFieldWidth;
 		}
 		
+		/**
+		 * Method getArgumentPositionForFieldWidth.
+		 * @return int
+		 */
 		int getArgumentPositionForFieldWidth()
 		{
 			return argumentPositionForFieldWidth;
 		}
 		
+		/**
+		 * Method isPositionalPrecision.
+		 * @return boolean
+		 */
 		boolean isPositionalPrecision()
 		{
 			return positionalPrecision;
 		}
 		
+		/**
+		 * Method getArgumentPositionForPrecision.
+		 * @return int
+		 */
 		int getArgumentPositionForPrecision()
 		{
 			return argumentPositionForPrecision;
 		}
 		
+		/**
+		 * Method setFlagCharacters.
+		 */
 		private void setFlagCharacters()
 		{
 			thousands = false;
@@ -2955,34 +3251,118 @@ public class PrintfFormat
 			}
 		}
 		
+		/**
+		 * Field thousands.
+		 */
 		private boolean thousands = false;
+		/**
+		 * Field leftJustify.
+		 */
 		private boolean leftJustify = false;
+		/**
+		 * Field leadingSign.
+		 */
 		private boolean leadingSign = false;
+		/**
+		 * Field leadingSpace.
+		 */
 		private boolean leadingSpace = false;
+		/**
+		 * Field alternateForm.
+		 */
 		private boolean alternateForm = false;
+		/**
+		 * Field leadingZeros.
+		 */
 		private boolean leadingZeros = false;
+		/**
+		 * Field variableFieldWidth.
+		 */
 		private boolean variableFieldWidth = false;
+		/**
+		 * Field fieldWidth.
+		 */
 		private int fieldWidth = 0;
+		/**
+		 * Field fieldWidthSet.
+		 */
 		private boolean fieldWidthSet = false;
+		/**
+		 * Field precision.
+		 */
 		private int precision = 0;
+		/**
+		 * Field defaultDigits. (value is 6)
+		 */
 		private final static int defaultDigits = 6;
+		/**
+		 * Field variablePrecision.
+		 */
 		private boolean variablePrecision = false;
+		/**
+		 * Field precisionSet.
+		 */
 		private boolean precisionSet = false;
+		/**
+		 * Field positionalSpecification.
+		 */
 		private boolean positionalSpecification = false;
+		/**
+		 * Field argumentPosition.
+		 */
 		private int argumentPosition = 0;
+		/**
+		 * Field positionalFieldWidth.
+		 */
 		private boolean positionalFieldWidth = false;
+		/**
+		 * Field argumentPositionForFieldWidth.
+		 */
 		private int argumentPositionForFieldWidth = 0;
+		/**
+		 * Field positionalPrecision.
+		 */
 		private boolean positionalPrecision = false;
+		/**
+		 * Field argumentPositionForPrecision.
+		 */
 		private int argumentPositionForPrecision = 0;
+		/**
+		 * Field optionalh.
+		 */
 		private boolean optionalh = false;
+		/**
+		 * Field optionall.
+		 */
 		private boolean optionall = false;
+		/**
+		 * Field optionalL.
+		 */
 		private boolean optionalL = false;
+		/**
+		 * Field conversionCharacter.
+		 */
 		private char conversionCharacter = '\0';
+		/**
+		 * Field pos.
+		 */
 		private int pos = 0;
+		/**
+		 * Field fmt.
+		 */
 		private String fmt;
 	}
 	
+	/**
+	 * Field vFmt.
+	 */
 	private final List<ConversionSpecification> vFmt = new ArrayList<>();
+	/**
+	 * Field cPos.
+	 */
 	private int cPos = 0;
+	/**
+	 * Field dfs.
+	 */
 	DecimalFormatSymbols dfs = null;
 }

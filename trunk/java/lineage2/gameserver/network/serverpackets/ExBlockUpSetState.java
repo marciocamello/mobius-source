@@ -12,10 +12,20 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExBlockUpSetState extends L2GameServerPacket
 {
+	/**
+	 * Field BlockUpStateType.
+	 */
 	private final int BlockUpStateType = 0;
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

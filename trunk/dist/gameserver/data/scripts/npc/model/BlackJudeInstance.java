@@ -18,6 +18,10 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BlackJudeInstance extends NpcInstance
 {
 	/**
@@ -25,11 +29,21 @@ public class BlackJudeInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for BlackJudeInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public BlackJudeInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -73,6 +87,11 @@ public class BlackJudeInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getPrice.
+	 * @param player Player
+	 * @return int
+	 */
 	public int getPrice(Player player)
 	{
 		int playerLvl = player.getLevel();

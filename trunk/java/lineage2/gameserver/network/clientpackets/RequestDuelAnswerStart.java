@@ -21,11 +21,24 @@ import lineage2.gameserver.model.entity.events.impl.DuelEvent;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestDuelAnswerStart extends L2GameClientPacket
 {
+	/**
+	 * Field _response.
+	 */
 	private int _response;
+	/**
+	 * Field _duelType.
+	 */
 	private int _duelType;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -34,6 +47,9 @@ public class RequestDuelAnswerStart extends L2GameClientPacket
 		_response = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

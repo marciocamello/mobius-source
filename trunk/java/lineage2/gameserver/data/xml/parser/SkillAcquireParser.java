@@ -25,38 +25,70 @@ import lineage2.gameserver.model.SkillLearn;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final SkillAcquireParser _instance = new SkillAcquireParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return SkillAcquireParser
+	 */
 	public static SkillAcquireParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for SkillAcquireParser.
+	 */
 	protected SkillAcquireParser()
 	{
 		super(SkillAcquireHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/skill_tree/");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param b File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File b)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "tree.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{
@@ -124,6 +156,11 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 		}
 	}
 	
+	/**
+	 * Method parseSkillLearn.
+	 * @param tree Element
+	 * @return List<SkillLearn>
+	 */
 	private List<SkillLearn> parseSkillLearn(Element tree)
 	{
 		List<SkillLearn> skillLearns = new ArrayList<>();

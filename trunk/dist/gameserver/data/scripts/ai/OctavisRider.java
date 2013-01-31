@@ -17,8 +17,15 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OctavisRider extends DefaultAI
 {
+	/**
+	 * Field _points.
+	 */
 	private final Location[] _points =
 	{
 		new Location(207992, 120904, -10038, 49151),
@@ -30,19 +37,34 @@ public class OctavisRider extends DefaultAI
 		new Location(207528, 119768, -10038),
 		new Location(207992, 120232, -10038)
 	};
+	/**
+	 * Field _lastPoint.
+	 */
 	private int _lastPoint = 0;
 	
+	/**
+	 * Constructor for OctavisRider.
+	 * @param actor NpcInstance
+	 */
 	public OctavisRider(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -53,6 +75,9 @@ public class OctavisRider extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
@@ -60,6 +85,9 @@ public class OctavisRider extends DefaultAI
 		super.onEvtArrived();
 	}
 	
+	/**
+	 * Method startMoveTask.
+	 */
 	private void startMoveTask()
 	{
 		NpcInstance npc = getActor();
@@ -73,11 +101,21 @@ public class OctavisRider extends DefaultAI
 		doTask();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

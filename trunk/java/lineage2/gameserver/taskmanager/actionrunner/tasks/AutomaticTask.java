@@ -15,19 +15,42 @@ package lineage2.gameserver.taskmanager.actionrunner.tasks;
 import lineage2.gameserver.taskmanager.actionrunner.ActionRunner;
 import lineage2.gameserver.taskmanager.actionrunner.ActionWrapper;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class AutomaticTask extends ActionWrapper
 {
+	/**
+	 * Field TASKS. (value is ""automatic_tasks"")
+	 */
 	public static final String TASKS = "automatic_tasks";
 	
+	/**
+	 * Constructor for AutomaticTask.
+	 */
 	public AutomaticTask()
 	{
 		super(TASKS);
 	}
 	
+	/**
+	 * Method doTask.
+	 * @throws Exception
+	 */
 	public abstract void doTask() throws Exception;
 	
+	/**
+	 * Method reCalcTime.
+	 * @param start boolean
+	 * @return long
+	 */
 	public abstract long reCalcTime(boolean start);
 	
+	/**
+	 * Method runImpl0.
+	 * @throws Exception
+	 */
 	@Override
 	public void runImpl0() throws Exception
 	{

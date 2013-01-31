@@ -16,12 +16,29 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.RankPrivs;
 import lineage2.gameserver.model.pledge.UnitMember;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeReceivePowerInfo extends L2GameServerPacket
 {
+	/**
+	 * Field PowerGrade.
+	 */
 	private final int PowerGrade;
+	/**
+	 * Field privs.
+	 */
 	private int privs;
+	/**
+	 * Field member_name.
+	 */
 	private final String member_name;
 	
+	/**
+	 * Constructor for PledgeReceivePowerInfo.
+	 * @param member UnitMember
+	 */
 	public PledgeReceivePowerInfo(UnitMember member)
 	{
 		PowerGrade = member.getPowerGrade();
@@ -44,6 +61,9 @@ public class PledgeReceivePowerInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

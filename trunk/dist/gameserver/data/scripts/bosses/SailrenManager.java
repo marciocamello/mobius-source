@@ -40,17 +40,33 @@ import org.slf4j.LoggerFactory;
 
 import bosses.EpicBossState.State;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SailrenManager extends Functions implements ScriptFile, OnDeathListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SailrenManager.class);
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class ActivityTimeEnd extends RunnableImpl
 	{
+		/**
+		 * Constructor for ActivityTimeEnd.
+		 */
 		public ActivityTimeEnd()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -58,13 +74,22 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class CubeSpawn extends RunnableImpl
 	{
+		/**
+		 * Constructor for CubeSpawn.
+		 */
 		public CubeSpawn()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -72,13 +97,22 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class IntervalEnd extends RunnableImpl
 	{
+		/**
+		 * Constructor for IntervalEnd.
+		 */
 		public IntervalEnd()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -87,17 +121,34 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class Social extends RunnableImpl
 	{
+		/**
+		 * Field _action.
+		 */
 		private final int _action;
+		/**
+		 * Field _npc.
+		 */
 		private final NpcInstance _npc;
 		
+		/**
+		 * Constructor for Social.
+		 * @param npc NpcInstance
+		 * @param actionId int
+		 */
 		public Social(NpcInstance npc, int actionId)
 		{
 			_npc = npc;
 			_action = actionId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -105,13 +156,22 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class onAnnihilated extends RunnableImpl
 	{
+		/**
+		 * Constructor for onAnnihilated.
+		 */
 		public onAnnihilated()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -119,16 +179,32 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class SailrenSpawn extends RunnableImpl
 	{
+		/**
+		 * Field _npcId.
+		 */
 		private final int _npcId;
+		/**
+		 * Field _pos.
+		 */
 		private final Location _pos = new Location(27628, -6109, -1982, 44732);
 		
+		/**
+		 * Constructor for SailrenSpawn.
+		 * @param npcId int
+		 */
 		SailrenSpawn(int npcId)
 		{
 			_npcId = npcId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -211,33 +287,114 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Field _velociraptor.
+	 */
 	static NpcInstance _velociraptor;
+	/**
+	 * Field _pterosaur.
+	 */
 	static NpcInstance _pterosaur;
+	/**
+	 * Field _tyranno.
+	 */
 	static NpcInstance _tyranno;
+	/**
+	 * Field _sailren.
+	 */
 	static NpcInstance _sailren;
+	/**
+	 * Field _teleportCube.
+	 */
 	static NpcInstance _teleportCube;
+	/**
+	 * Field _cubeSpawnTask.
+	 */
 	private static ScheduledFuture<?> _cubeSpawnTask = null;
+	/**
+	 * Field _monsterSpawnTask.
+	 */
 	private static ScheduledFuture<?> _monsterSpawnTask = null;
+	/**
+	 * Field _intervalEndTask.
+	 */
 	private static ScheduledFuture<?> _intervalEndTask = null;
+	/**
+	 * Field _socialTask.
+	 */
 	static ScheduledFuture<?> _socialTask = null;
+	/**
+	 * Field _activityTimeEndTask.
+	 */
 	static ScheduledFuture<?> _activityTimeEndTask = null;
+	/**
+	 * Field _onAnnihilatedTask.
+	 */
 	private static ScheduledFuture<?> _onAnnihilatedTask = null;
+	/**
+	 * Field Sailren. (value is 29065)
+	 */
 	private static final int Sailren = 29065;
+	/**
+	 * Field Velociraptor. (value is 22198)
+	 */
 	private static final int Velociraptor = 22198;
+	/**
+	 * Field Pterosaur. (value is 22199)
+	 */
 	private static final int Pterosaur = 22199;
+	/**
+	 * Field Tyrannosaurus. (value is 22217)
+	 */
 	private static final int Tyrannosaurus = 22217;
+	/**
+	 * Field TeleportCubeId. (value is 31759)
+	 */
 	private static final int TeleportCubeId = 31759;
+	/**
+	 * Field _state.
+	 */
 	static EpicBossState _state;
+	/**
+	 * Field _zone.
+	 */
 	private static Zone _zone;
+	/**
+	 * Field _enter.
+	 */
 	private static Location _enter = new Location(27734, -6938, -1982);
+	/**
+	 * Field FWS_ENABLESINGLEPLAYER. (value is false)
+	 */
 	private static final boolean FWS_ENABLESINGLEPLAYER = Boolean.TRUE;
+	/**
+	 * Field FWS_ACTIVITYTIMEOFMOBS.
+	 */
 	private static final int FWS_ACTIVITYTIMEOFMOBS = 120 * 60000;
+	/**
+	 * Field FWS_FIXINTERVALOFSAILRENSPAWN.
+	 */
 	private static final int FWS_FIXINTERVALOFSAILRENSPAWN = 1 * 24 * 60 * 60000;
+	/**
+	 * Field FWS_RANDOMINTERVALOFSAILRENSPAWN.
+	 */
 	private static final int FWS_RANDOMINTERVALOFSAILRENSPAWN = 1 * 24 * 60 * 60000;
+	/**
+	 * Field FWS_INTERVALOFNEXTMONSTER. (value is 60000)
+	 */
 	private static final int FWS_INTERVALOFNEXTMONSTER = 60000;
+	/**
+	 * Field _isAlreadyEnteredOtherParty.
+	 */
 	private static boolean _isAlreadyEnteredOtherParty = false;
+	/**
+	 * Field Dying.
+	 */
 	private static boolean Dying = false;
 	
+	/**
+	 * Method banishForeigners.
+	 */
 	private static void banishForeigners()
 	{
 		for (Player player : getPlayersInside())
@@ -246,6 +403,9 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method checkAnnihilated.
+	 */
 	private synchronized static void checkAnnihilated()
 	{
 		if ((_onAnnihilatedTask == null) && isPlayersAnnihilated())
@@ -254,21 +414,36 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method getPlayersInside.
+	 * @return List<Player>
+	 */
 	private static List<Player> getPlayersInside()
 	{
 		return getZone().getInsidePlayers();
 	}
 	
+	/**
+	 * Method getRespawnInterval.
+	 * @return int
+	 */
 	static int getRespawnInterval()
 	{
 		return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * (FWS_FIXINTERVALOFSAILRENSPAWN + Rnd.get(0, FWS_RANDOMINTERVALOFSAILRENSPAWN)));
 	}
 	
+	/**
+	 * Method getZone.
+	 * @return Zone
+	 */
 	public static Zone getZone()
 	{
 		return _zone;
 	}
 	
+	/**
+	 * Method init.
+	 */
 	private void init()
 	{
 		CharListenerList.addGlobal(this);
@@ -282,6 +457,10 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		_log.info("SailrenManager: Next spawn date of Sailren is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()) + ".");
 	}
 	
+	/**
+	 * Method isPlayersAnnihilated.
+	 * @return boolean
+	 */
 	private static boolean isPlayersAnnihilated()
 	{
 		for (Player pc : getPlayersInside())
@@ -294,6 +473,12 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		return true;
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param self Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature self, Creature killer)
 	{
@@ -331,6 +516,10 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method onSailrenDie.
+	 * @param killer Creature
+	 */
 	private static void onSailrenDie(Creature killer)
 	{
 		if (Dying)
@@ -345,6 +534,9 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		_cubeSpawnTask = ThreadPoolManager.getInstance().schedule(new CubeSpawn(), 10000);
 	}
 	
+	/**
+	 * Method setIntervalEndTask.
+	 */
 	private static void setIntervalEndTask()
 	{
 		setUnspawn();
@@ -363,6 +555,9 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		_intervalEndTask = ThreadPoolManager.getInstance().schedule(new IntervalEnd(), _state.getInterval());
 	}
 	
+	/**
+	 * Method setUnspawn.
+	 */
 	private static void setUnspawn()
 	{
 		banishForeigners();
@@ -443,6 +638,9 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method sleep.
+	 */
 	static void sleep()
 	{
 		setUnspawn();
@@ -453,6 +651,9 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method setSailrenSpawnTask.
+	 */
 	public synchronized static void setSailrenSpawnTask()
 	{
 		if (_monsterSpawnTask == null)
@@ -461,11 +662,20 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method isEnableEnterToLair.
+	 * @return boolean
+	 */
 	public static boolean isEnableEnterToLair()
 	{
 		return _state.getState() == EpicBossState.State.NOTSPAWN;
 	}
 	
+	/**
+	 * Method canIntoSailrenLair.
+	 * @param pc Player
+	 * @return int
+	 */
 	public static int canIntoSailrenLair(Player pc)
 	{
 		if (!FWS_ENABLESINGLEPLAYER && (pc.getParty() == null))
@@ -494,6 +704,10 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method entryToSailrenLair.
+	 * @param pc Player
+	 */
 	public static void entryToSailrenLair(Player pc)
 	{
 		if (pc.getParty() == null)
@@ -518,18 +732,30 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		_isAlreadyEnteredOtherParty = true;
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 		init();
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		sleep();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

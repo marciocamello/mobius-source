@@ -32,14 +32,26 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OlympiadManagerInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadManagerInstance.class);
 	
+	/**
+	 * Constructor for OlympiadManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public OlympiadManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -49,6 +61,11 @@ public class OlympiadManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -202,6 +219,12 @@ public class OlympiadManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{

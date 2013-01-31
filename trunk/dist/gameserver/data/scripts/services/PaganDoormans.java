@@ -19,12 +19,28 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PaganDoormans extends Functions
 {
+	/**
+	 * Field MainDoorId. (value is 19160001)
+	 */
 	private static final int MainDoorId = 19160001;
+	/**
+	 * Field SecondDoor1Id. (value is 19160011)
+	 */
 	private static final int SecondDoor1Id = 19160011;
+	/**
+	 * Field SecondDoor2Id. (value is 19160010)
+	 */
 	private static final int SecondDoor2Id = 19160010;
 	
+	/**
+	 * Method openMainDoor.
+	 */
 	public void openMainDoor()
 	{
 		Player player = getSelf();
@@ -46,6 +62,9 @@ public class PaganDoormans extends Functions
 		show("default/32034-1.htm", player, npc);
 	}
 	
+	/**
+	 * Method openSecondDoor.
+	 */
 	public void openSecondDoor()
 	{
 		Player player = getSelf();
@@ -68,6 +87,9 @@ public class PaganDoormans extends Functions
 		show("default/32036-1.htm", player, npc);
 	}
 	
+	/**
+	 * Method pressSkull.
+	 */
 	public void pressSkull()
 	{
 		Player player = getSelf();
@@ -84,6 +106,9 @@ public class PaganDoormans extends Functions
 		show("default/32035-1.htm", player, npc);
 	}
 	
+	/**
+	 * Method press2ndSkull.
+	 */
 	public void press2ndSkull()
 	{
 		Player player = getSelf();
@@ -101,6 +126,10 @@ public class PaganDoormans extends Functions
 		show("default/32037-1.htm", player, npc);
 	}
 	
+	/**
+	 * Method openDoor.
+	 * @param doorId int
+	 */
 	private static void openDoor(int doorId)
 	{
 		DoorInstance door = ReflectionUtils.getDoor(doorId);

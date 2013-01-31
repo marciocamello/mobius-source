@@ -18,16 +18,32 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Disablers extends Skill
 {
+	/**
+	 * Field _skillInterrupt.
+	 */
 	private final boolean _skillInterrupt;
 	
+	/**
+	 * Constructor for Disablers.
+	 * @param set StatsSet
+	 */
 	public Disablers(StatsSet set)
 	{
 		super(set);
 		_skillInterrupt = set.getBool("skillInterrupt", false);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

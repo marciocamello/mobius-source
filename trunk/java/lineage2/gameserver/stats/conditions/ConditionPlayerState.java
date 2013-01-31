@@ -15,27 +15,68 @@ package lineage2.gameserver.stats.conditions;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionPlayerState extends Condition
 {
+	/**
+	 * @author Mobius
+	 */
 	public enum CheckPlayerState
 	{
+		/**
+		 * Field RESTING.
+		 */
 		RESTING,
+		/**
+		 * Field MOVING.
+		 */
 		MOVING,
+		/**
+		 * Field RUNNING.
+		 */
 		RUNNING,
+		/**
+		 * Field STANDING.
+		 */
 		STANDING,
+		/**
+		 * Field FLYING.
+		 */
 		FLYING,
+		/**
+		 * Field FLYING_TRANSFORM.
+		 */
 		FLYING_TRANSFORM
 	}
 	
+	/**
+	 * Field _check.
+	 */
 	private final CheckPlayerState _check;
+	/**
+	 * Field _required.
+	 */
 	private final boolean _required;
 	
+	/**
+	 * Constructor for ConditionPlayerState.
+	 * @param check CheckPlayerState
+	 * @param required boolean
+	 */
 	public ConditionPlayerState(CheckPlayerState check, boolean required)
 	{
 		_check = check;
 		_required = required;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

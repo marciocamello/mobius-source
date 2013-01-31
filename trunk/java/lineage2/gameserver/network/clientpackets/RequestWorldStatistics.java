@@ -16,11 +16,24 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExLoadStatUser;
 import lineage2.gameserver.network.serverpackets.ExLoadStatWorldRank;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RequestWorldStatistics extends L2GameClientPacket
 {
+	/**
+	 * Field categoryId.
+	 */
 	int categoryId = 0;
+	/**
+	 * Field categoryId2.
+	 */
 	int categoryId2 = 0;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -28,6 +41,9 @@ public final class RequestWorldStatistics extends L2GameClientPacket
 		categoryId2 = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

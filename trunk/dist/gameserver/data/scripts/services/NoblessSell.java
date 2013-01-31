@@ -24,8 +24,15 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import quests._234_FatesWhisper;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NoblessSell extends Functions
 {
+	/**
+	 * Method get.
+	 */
 	public void get()
 	{
 		Player player = getSelf();
@@ -53,6 +60,9 @@ public class NoblessSell extends Functions
 		}
 	}
 	
+	/**
+	 * Method makeSubQuests.
+	 */
 	public void makeSubQuests()
 	{
 		Player player = getSelf();
@@ -89,6 +99,9 @@ public class NoblessSell extends Functions
 		}
 	}
 	
+	/**
+	 * Method becomeNoble.
+	 */
 	public void becomeNoble()
 	{
 		Player player = getSelf();

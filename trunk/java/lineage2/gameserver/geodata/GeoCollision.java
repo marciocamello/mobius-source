@@ -14,13 +14,33 @@ package lineage2.gameserver.geodata;
 
 import lineage2.commons.geometry.Shape;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface GeoCollision
 {
+	/**
+	 * Method getShape.
+	 * @return Shape
+	 */
 	public Shape getShape();
 	
+	/**
+	 * Method getGeoAround.
+	 * @return byte[][]
+	 */
 	public byte[][] getGeoAround();
 	
+	/**
+	 * Method setGeoAround.
+	 * @param geo byte[][]
+	 */
 	public void setGeoAround(byte[][] geo);
 	
+	/**
+	 * Method isConcrete.
+	 * @return boolean
+	 */
 	public boolean isConcrete();
 }

@@ -14,15 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.pledge.UnitMember;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeReceiveMemberInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _member.
+	 */
 	private final UnitMember _member;
 	
+	/**
+	 * Constructor for PledgeReceiveMemberInfo.
+	 * @param member UnitMember
+	 */
 	public PledgeReceiveMemberInfo(UnitMember member)
 	{
 		_member = member;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

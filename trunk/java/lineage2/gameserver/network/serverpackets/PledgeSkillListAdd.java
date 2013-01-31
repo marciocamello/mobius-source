@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeSkillListAdd extends L2GameServerPacket
 {
+	/**
+	 * Field _skillId.
+	 */
 	private final int _skillId;
+	/**
+	 * Field _skillLevel.
+	 */
 	private final int _skillLevel;
 	
+	/**
+	 * Constructor for PledgeSkillListAdd.
+	 * @param skillId int
+	 * @param skillLevel int
+	 */
 	public PledgeSkillListAdd(int skillId, int skillLevel)
 	{
 		_skillId = skillId;
 		_skillLevel = skillLevel;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -21,32 +21,59 @@ import lineage2.gameserver.data.xml.holder.LevelBonusHolder;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class LevelBonusParser extends AbstractFileParser<LevelBonusHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final LevelBonusParser _instance = new LevelBonusParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return LevelBonusParser
+	 */
 	public static LevelBonusParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for LevelBonusParser.
+	 */
 	private LevelBonusParser()
 	{
 		super(LevelBonusHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/pc_parameters/lvl_bonus_data.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "lvl_bonus_data.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

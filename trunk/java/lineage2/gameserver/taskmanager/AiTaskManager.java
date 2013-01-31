@@ -18,9 +18,19 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AiTaskManager extends SteppingRunnableQueueManager
 {
+	/**
+	 * Field TICK. (value is 250)
+	 */
 	private final static long TICK = 250L;
+	/**
+	 * Field _instances.
+	 */
 	private final static AiTaskManager[] _instances = new AiTaskManager[Config.AI_TASK_MANAGER_COUNT];
 	static
 	{
@@ -29,13 +39,23 @@ public class AiTaskManager extends SteppingRunnableQueueManager
 			_instances[i] = new AiTaskManager();
 		}
 	}
+	/**
+	 * Field randomizer.
+	 */
 	private static int randomizer = 0;
 	
+	/**
+	 * Method getInstance.
+	 * @return AiTaskManager
+	 */
 	public static AiTaskManager getInstance()
 	{
 		return _instances[randomizer++ & (_instances.length - 1)];
 	}
 	
+	/**
+	 * Constructor for AiTaskManager.
+	 */
 	private AiTaskManager()
 	{
 		super(TICK);
@@ -50,6 +70,11 @@ public class AiTaskManager extends SteppingRunnableQueueManager
 		}, 60000L, 60000L);
 	}
 	
+	/**
+	 * Method getStats.
+	 * @param num int
+	 * @return CharSequence
+	 */
 	public CharSequence getStats(int num)
 	{
 		return _instances[num].getStats();

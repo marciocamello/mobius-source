@@ -23,45 +23,98 @@ import lineage2.gameserver.utils.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OlympiadGameTask extends RunnableImpl
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadGameTask.class);
+	/**
+	 * Field _game.
+	 */
 	private final OlympiadGame _game;
+	/**
+	 * Field _status.
+	 */
 	private final BattleStatus _status;
+	/**
+	 * Field _count.
+	 */
 	private int _count;
+	/**
+	 * Field _time.
+	 */
 	private final long _time;
+	/**
+	 * Field _terminated.
+	 */
 	private boolean _terminated = false;
 	
+	/**
+	 * Method isTerminated.
+	 * @return boolean
+	 */
 	public boolean isTerminated()
 	{
 		return _terminated;
 	}
 	
+	/**
+	 * Method getStatus.
+	 * @return BattleStatus
+	 */
 	public BattleStatus getStatus()
 	{
 		return _status;
 	}
 	
+	/**
+	 * Method getCount.
+	 * @return int
+	 */
 	public int getCount()
 	{
 		return _count;
 	}
 	
+	/**
+	 * Method getGame.
+	 * @return OlympiadGame
+	 */
 	public OlympiadGame getGame()
 	{
 		return _game;
 	}
 	
+	/**
+	 * Method getTime.
+	 * @return long
+	 */
 	public long getTime()
 	{
 		return _count;
 	}
 	
+	/**
+	 * Method shedule.
+	 * @return ScheduledFuture<?>
+	 */
 	public ScheduledFuture<?> shedule()
 	{
 		return ThreadPoolManager.getInstance().schedule(this, _time);
 	}
 	
+	/**
+	 * Constructor for OlympiadGameTask.
+	 * @param game OlympiadGame
+	 * @param status BattleStatus
+	 * @param count int
+	 * @param time long
+	 */
 	public OlympiadGameTask(OlympiadGame game, BattleStatus status, int count, long time)
 	{
 		_game = game;
@@ -70,6 +123,9 @@ public class OlympiadGameTask extends RunnableImpl
 		_time = time;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{

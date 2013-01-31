@@ -29,16 +29,36 @@ import lineage2.gameserver.templates.StatsSet;
 
 import org.apache.commons.lang3.tuple.Pair;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Resurrect extends Skill
 {
+	/**
+	 * Field _canPet.
+	 */
 	private final boolean _canPet;
 	
+	/**
+	 * Constructor for Resurrect.
+	 * @param set StatsSet
+	 */
 	public Resurrect(StatsSet set)
 	{
 		super(set);
 		_canPet = set.getBool("canPet", false);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(final Creature activeChar, final Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -121,6 +141,11 @@ public class Resurrect extends Skill
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

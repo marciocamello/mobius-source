@@ -33,22 +33,59 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 import bosses.ValakasManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Valakas extends DefaultAI
 {
+	/**
+	 * Field s_regen. Field s_berserk. Field s_defence_down. Field s_fear. Field s_lava_skin.
+	 */
 	final Skill s_lava_skin = getSkill(4680, 1), s_fear = getSkill(4689, 1), s_defence_down = getSkill(5864, 1), s_berserk = getSkill(5865, 1), s_regen = getSkill(4691, 1);
+	/**
+	 * Field s_breath_high. Field s_breath_low. Field s_meteor. Field s_tail_lash. Field s_tail_stomp_a. Field s_tremple_right. Field s_tremple_left.
+	 */
 	final Skill s_tremple_left = getSkill(4681, 1), s_tremple_right = getSkill(4682, 1), s_tail_stomp_a = getSkill(4685, 1), s_tail_lash = getSkill(4688, 1), s_meteor = getSkill(4690, 1), s_breath_low = getSkill(4683, 1), s_breath_high = getSkill(4684, 1);
+	/**
+	 * Field s_destroy_soul2. Field s_destroy_body2. Field s_destroy_soul. Field s_destroy_body.
+	 */
 	final Skill s_destroy_body = getSkill(5860, 1), s_destroy_soul = getSkill(5861, 1), s_destroy_body2 = getSkill(5862, 1), s_destroy_soul2 = getSkill(5863, 1);
+	/**
+	 * Field defenceDownTimer.
+	 */
 	private long defenceDownTimer = Long.MAX_VALUE;
+	/**
+	 * Field defenceDownReuse.
+	 */
 	private final long defenceDownReuse = 120000L;
+	/**
+	 * Field _attacksIndex. Field _counterAttackIndex. Field _rangedAttacksIndex.
+	 */
 	private double _rangedAttacksIndex, _counterAttackIndex, _attacksIndex;
+	/**
+	 * Field _hpStage.
+	 */
 	private int _hpStage = 0;
+	/**
+	 * Field minions.
+	 */
 	private final List<NpcInstance> minions = new ArrayList<>();
 	
+	/**
+	 * Constructor for Valakas.
+	 * @param actor NpcInstance
+	 */
 	public Valakas(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -73,6 +110,10 @@ public class Valakas extends DefaultAI
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method createNewTask.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean createNewTask()
 	{
@@ -217,6 +258,9 @@ public class Valakas extends DefaultAI
 		return chooseTaskAndTargets(r_skill, target, distance);
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
@@ -231,11 +275,21 @@ public class Valakas extends DefaultAI
 		super.thinkAttack();
 	}
 	
+	/**
+	 * Method getSkill.
+	 * @param id int
+	 * @param level int
+	 * @return Skill
+	 */
 	private Skill getSkill(int id, int level)
 	{
 		return SkillTable.getInstance().getInfo(id, level);
 	}
 	
+	/**
+	 * Method getAliveMinionsCount.
+	 * @return int
+	 */
 	private int getAliveMinionsCount()
 	{
 		int i = 0;
@@ -249,6 +303,10 @@ public class Valakas extends DefaultAI
 		return i;
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

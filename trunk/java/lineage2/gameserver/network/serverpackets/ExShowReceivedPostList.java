@@ -19,16 +19,30 @@ import lineage2.gameserver.dao.MailDAO;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.mail.Mail;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowReceivedPostList extends L2GameServerPacket
 {
+	/**
+	 * Field mails.
+	 */
 	private final List<Mail> mails;
 	
+	/**
+	 * Constructor for ExShowReceivedPostList.
+	 * @param cha Player
+	 */
 	public ExShowReceivedPostList(Player cha)
 	{
 		mails = MailDAO.getInstance().getReceivedMailByOwnerId(cha.getObjectId());
 		CollectionUtils.eqSort(mails);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -25,11 +25,24 @@ import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestEnchantItem extends AbstractEnchantPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
+	/**
+	 * Field _catalystObjId.
+	 */
 	private int _catalystObjId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	public void readImpl()
 	{
@@ -37,6 +50,9 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 		_catalystObjId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{
@@ -98,7 +114,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 				return;
 			}
 			boolean equipped = item.isEquipped();
-			if (equipped == true)
+			if (equipped)
 			{
 				inventory.isRefresh = true;
 				inventory.unEquipItem(item);

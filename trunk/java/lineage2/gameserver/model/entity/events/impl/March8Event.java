@@ -18,16 +18,33 @@ import lineage2.commons.collections.MultiValueSet;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class March8Event extends GlobalEvent
 {
+	/**
+	 * Field _calendar.
+	 */
 	private final Calendar _calendar = Calendar.getInstance();
+	/**
+	 * Field LENGTH.
+	 */
 	private static final long LENGTH = 7 * 24 * 60 * 60 * 1000L;
 	
+	/**
+	 * Constructor for March8Event.
+	 * @param set MultiValueSet<String>
+	 */
 	public March8Event(MultiValueSet<String> set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method initEvent.
+	 */
 	@SuppressWarnings("unused")
 	@Override
 	public void initEvent()
@@ -38,6 +55,9 @@ public class March8Event extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -45,6 +65,9 @@ public class March8Event extends GlobalEvent
 		Announcements.getInstance().announceToAll("Test startEvent");
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	@Override
 	public void stopEvent()
 	{
@@ -52,6 +75,10 @@ public class March8Event extends GlobalEvent
 		Announcements.getInstance().announceToAll("Test stopEvent");
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onInit boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{
@@ -75,6 +102,10 @@ public class March8Event extends GlobalEvent
 		registerActions();
 	}
 	
+	/**
+	 * Method startTimeMillis.
+	 * @return long
+	 */
 	@Override
 	protected long startTimeMillis()
 	{

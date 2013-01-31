@@ -24,18 +24,42 @@ import lineage2.gameserver.model.entity.residence.Dominion;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DominionDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(DominionDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final DominionDAO _instance = new DominionDAO();
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT lord_object_id, wards FROM dominion WHERE id=?"")
+	 */
 	public static final String SELECT_SQL_QUERY = "SELECT lord_object_id, wards FROM dominion WHERE id=?";
+	/**
+	 * Field UPDATE_SQL_QUERY. (value is ""UPDATE dominion SET lord_object_id=?, wards=? WHERE id=?"")
+	 */
 	public static final String UPDATE_SQL_QUERY = "UPDATE dominion SET lord_object_id=?, wards=? WHERE id=?";
 	
+	/**
+	 * Method getInstance.
+	 * @return DominionDAO
+	 */
 	public static DominionDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method select.
+	 * @param dominion Dominion
+	 */
 	public void select(Dominion dominion)
 	{
 		Connection con = null;
@@ -71,6 +95,10 @@ public class DominionDAO
 		}
 	}
 	
+	/**
+	 * Method update.
+	 * @param residence Dominion
+	 */
 	public void update(Dominion residence)
 	{
 		if (!residence.getJdbcState().isUpdatable())
@@ -81,6 +109,10 @@ public class DominionDAO
 		update0(residence);
 	}
 	
+	/**
+	 * Method update0.
+	 * @param dominion Dominion
+	 */
 	private void update0(Dominion dominion)
 	{
 		String wardsString = "";

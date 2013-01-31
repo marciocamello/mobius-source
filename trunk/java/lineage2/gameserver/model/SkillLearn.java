@@ -17,18 +17,61 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class SkillLearn implements Comparable<SkillLearn>
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _level.
+	 */
 	private final int _level;
+	/**
+	 * Field _minLevel.
+	 */
 	private final int _minLevel;
+	/**
+	 * Field _cost.
+	 */
 	private final int _cost;
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _itemCount.
+	 */
 	private final long _itemCount;
+	/**
+	 * Field _clicked.
+	 */
 	private final boolean _clicked;
+	/**
+	 * Field required_items.
+	 */
 	private final Map<Integer, Long> required_items;
+	/**
+	 * Field delete_skills.
+	 */
 	private final List<Integer> delete_skills;
 	
+	/**
+	 * Constructor for SkillLearn.
+	 * @param id int
+	 * @param lvl int
+	 * @param minLvl int
+	 * @param cost int
+	 * @param itemId int
+	 * @param itemCount long
+	 * @param clicked boolean
+	 * @param required_items Map<Integer,Long>
+	 * @param delete_skills List<Integer>
+	 */
 	public SkillLearn(int id, int lvl, int minLvl, int cost, int itemId, long itemCount, boolean clicked, Map<Integer, Long> required_items, List<Integer> delete_skills)
 	{
 		_id = id;
@@ -42,41 +85,74 @@ public final class SkillLearn implements Comparable<SkillLearn>
 		this.delete_skills = delete_skills;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		return _level;
 	}
 	
+	/**
+	 * Method getMinLevel.
+	 * @return int
+	 */
 	public int getMinLevel()
 	{
 		return _minLevel;
 	}
 	
+	/**
+	 * Method getCost.
+	 * @return int
+	 */
 	public int getCost()
 	{
 		return _cost;
 	}
 	
+	/**
+	 * Method getItemId.
+	 * @return int
+	 */
 	public int getItemId()
 	{
 		return _itemId;
 	}
 	
+	/**
+	 * Method getItemCount.
+	 * @return long
+	 */
 	public long getItemCount()
 	{
 		return _itemCount;
 	}
 	
+	/**
+	 * Method isClicked.
+	 * @return boolean
+	 */
 	public boolean isClicked()
 	{
 		return _clicked;
 	}
 	
+	/**
+	 * Method compareTo.
+	 * @param o SkillLearn
+	 * @return int
+	 */
 	@Override
 	public int compareTo(SkillLearn o)
 	{
@@ -87,16 +163,29 @@ public final class SkillLearn implements Comparable<SkillLearn>
 		return getId() - o.getId();
 	}
 	
+	/**
+	 * Method getRequiredItems.
+	 * @return Map<Integer,Long>
+	 */
 	public Map<Integer, Long> getRequiredItems()
 	{
 		return Collections.unmodifiableMap(required_items);
 	}
 	
+	/**
+	 * Method getDeleteSkills.
+	 * @return List<Integer>
+	 */
 	public List<Integer> getDeleteSkills()
 	{
 		return Collections.unmodifiableList(delete_skills);
 	}
 	
+	/**
+	 * Method getRemovedSkillsForPlayer.
+	 * @param player Player
+	 * @return List<Skill>
+	 */
 	public List<Skill> getRemovedSkillsForPlayer(Player player)
 	{
 		List<Skill> skills = new ArrayList<>();

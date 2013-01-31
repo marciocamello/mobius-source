@@ -14,15 +14,28 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCursedWeaponList extends L2GameServerPacket
 {
+	/**
+	 * Field cursedWeapon_ids.
+	 */
 	private final int[] cursedWeapon_ids;
 	
+	/**
+	 * Constructor for ExCursedWeaponList.
+	 */
 	public ExCursedWeaponList()
 	{
 		cursedWeapon_ids = CursedWeaponsManager.getInstance().getCursedWeaponsIds();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

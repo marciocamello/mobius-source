@@ -18,31 +18,55 @@ import lineage2.gameserver.model.entity.Hero;
 import lineage2.gameserver.model.entity.HeroDiary;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BossInstance extends RaidBossInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _teleportedToNest.
+	 */
 	private boolean _teleportedToNest;
 	
+	/**
+	 * Constructor for BossInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public BossInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method isBoss.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isBoss()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isMovementDisabled.
+	 * @return boolean
+	 */
 	@Override
 	public final boolean isMovementDisabled()
 	{
 		return (getNpcId() == 29006) || super.isMovementDisabled();
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -67,16 +91,28 @@ public class BossInstance extends RaidBossInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method setTeleported.
+	 * @param flag boolean
+	 */
 	public void setTeleported(boolean flag)
 	{
 		_teleportedToNest = flag;
 	}
 	
+	/**
+	 * Method isTeleported.
+	 * @return boolean
+	 */
 	public boolean isTeleported()
 	{
 		return _teleportedToNest;
 	}
 	
+	/**
+	 * Method hasRandomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	public boolean hasRandomAnimation()
 	{

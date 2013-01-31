@@ -14,17 +14,35 @@ package lineage2.loginserver.gameservercon.lspackets;
 
 import lineage2.loginserver.gameservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChangePasswordResponse extends SendablePacket
 {
+	/**
+	 * Field _account.
+	 */
 	private final String _account;
+	/**
+	 * Field _hasChanged.
+	 */
 	boolean _hasChanged;
 	
+	/**
+	 * Constructor for ChangePasswordResponse.
+	 * @param account String
+	 * @param hasChanged boolean
+	 */
 	public ChangePasswordResponse(String account, boolean hasChanged)
 	{
 		_account = account;
 		_hasChanged = hasChanged;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

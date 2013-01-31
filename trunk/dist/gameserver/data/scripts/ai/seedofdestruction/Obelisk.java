@@ -21,22 +21,40 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Obelisk extends DefaultAI
 {
+	/**
+	 * Field MOBS.
+	 */
 	private static final int[] MOBS =
 	{
 		22541,
 		22544,
 		22543
 	};
+	/**
+	 * Field _firstTimeAttacked.
+	 */
 	private boolean _firstTimeAttacked = true;
 	
+	/**
+	 * Constructor for Obelisk.
+	 * @param actor NpcInstance
+	 */
 	public Obelisk(NpcInstance actor)
 	{
 		super(actor);
 		actor.block();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -54,6 +72,11 @@ public class Obelisk extends DefaultAI
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

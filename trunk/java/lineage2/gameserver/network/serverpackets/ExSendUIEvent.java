@@ -15,19 +15,57 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExSendUIEvent extends NpcStringContainer
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _isHide.
+	 */
 	private final boolean _isHide;
+	/**
+	 * Field _isIncrease.
+	 */
 	private final boolean _isIncrease;
+	/**
+	 * Field _startTime.
+	 */
 	private final int _startTime;
+	/**
+	 * Field _endTime.
+	 */
 	private final int _endTime;
 	
+	/**
+	 * Constructor for ExSendUIEvent.
+	 * @param player Player
+	 * @param isHide boolean
+	 * @param isIncrease boolean
+	 * @param startTime int
+	 * @param endTime int
+	 * @param params String[]
+	 */
 	public ExSendUIEvent(Player player, boolean isHide, boolean isIncrease, int startTime, int endTime, String... params)
 	{
 		this(player, isHide, isIncrease, startTime, endTime, NpcString.NONE, params);
 	}
 	
+	/**
+	 * Constructor for ExSendUIEvent.
+	 * @param player Player
+	 * @param isHide boolean
+	 * @param isIncrease boolean
+	 * @param startTime int
+	 * @param endTime int
+	 * @param npcString NpcString
+	 * @param params String[]
+	 */
 	public ExSendUIEvent(Player player, boolean isHide, boolean isIncrease, int startTime, int endTime, NpcString npcString, String... params)
 	{
 		super(npcString, params);
@@ -38,6 +76,9 @@ public class ExSendUIEvent extends NpcStringContainer
 		_endTime = endTime;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -12,18 +12,41 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharacterDeleteFail extends L2GameServerPacket
 {
+	/**
+	 * Field REASON_DELETION_FAILED.
+	 */
 	public static int REASON_DELETION_FAILED = 0x01;
+	/**
+	 * Field REASON_YOU_MAY_NOT_DELETE_CLAN_MEMBER.
+	 */
 	public static int REASON_YOU_MAY_NOT_DELETE_CLAN_MEMBER = 0x02;
+	/**
+	 * Field REASON_CLAN_LEADERS_MAY_NOT_BE_DELETED.
+	 */
 	public static int REASON_CLAN_LEADERS_MAY_NOT_BE_DELETED = 0x03;
+	/**
+	 * Field _error.
+	 */
 	int _error;
 	
+	/**
+	 * Constructor for CharacterDeleteFail.
+	 * @param error int
+	 */
 	public CharacterDeleteFail(int error)
 	{
 		_error = error;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

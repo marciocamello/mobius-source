@@ -16,15 +16,31 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.templates.item.ArmorTemplate.ArmorType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionUsingArmor extends Condition
 {
+	/**
+	 * Field _armor.
+	 */
 	private final ArmorType _armor;
 	
+	/**
+	 * Constructor for ConditionUsingArmor.
+	 * @param armor ArmorType
+	 */
 	public ConditionUsingArmor(ArmorType armor)
 	{
 		_armor = armor;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

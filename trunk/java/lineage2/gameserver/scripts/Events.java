@@ -17,8 +17,19 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.scripts.Scripts.ScriptClassAndMethod;
 import lineage2.gameserver.utils.Strings;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class Events
 {
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param obj GameObject
+	 * @param shift boolean
+	 * @return boolean
+	 */
 	public static boolean onAction(Player player, GameObject obj, boolean shift)
 	{
 		if (shift)

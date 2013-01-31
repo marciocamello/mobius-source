@@ -20,16 +20,29 @@ import lineage2.gameserver.network.serverpackets.ExChangePostState;
 import lineage2.gameserver.network.serverpackets.ExReplyReceivedPost;
 import lineage2.gameserver.network.serverpackets.ExShowReceivedPostList;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExRequestReceivedPost extends L2GameClientPacket
 {
+	/**
+	 * Field postId.
+	 */
 	private int postId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		postId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -26,15 +26,30 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AuctionedDoormanInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _doors.
+	 */
 	private final int[] _doors;
+	/**
+	 * Field _elite.
+	 */
 	private final boolean _elite;
 	
+	/**
+	 * Constructor for AuctionedDoormanInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public AuctionedDoormanInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -42,6 +57,11 @@ public class AuctionedDoormanInstance extends NpcInstance
 		_elite = template.getAIParams().getBool("elite", false);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -98,6 +118,12 @@ public class AuctionedDoormanInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{

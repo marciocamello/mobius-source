@@ -26,8 +26,15 @@ import lineage2.gameserver.tables.SkillTable;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ForgeoftheGods extends Fighter
 {
+	/**
+	 * Field RANDOM_SPAWN_MOBS.
+	 */
 	private static final int[] RANDOM_SPAWN_MOBS =
 	{
 		18799,
@@ -36,6 +43,9 @@ public class ForgeoftheGods extends Fighter
 		18802,
 		18803
 	};
+	/**
+	 * Field FOG_MOBS.
+	 */
 	private static final int[] FOG_MOBS =
 	{
 		22634,
@@ -55,10 +65,23 @@ public class ForgeoftheGods extends Fighter
 		22648,
 		22649
 	};
+	/**
+	 * Field TAR_BEETLE. (value is 18804)
+	 */
 	private static final int TAR_BEETLE = 18804;
+	/**
+	 * Field TAR_BEETLE_ACTIVATE_SKILL_CHANGE.
+	 */
 	private static int TAR_BEETLE_ACTIVATE_SKILL_CHANGE = 2;
+	/**
+	 * Field TAR_BEETLE_SEARCH_RADIUS.
+	 */
 	private static int TAR_BEETLE_SEARCH_RADIUS = 500;
 	
+	/**
+	 * Constructor for ForgeoftheGods.
+	 * @param actor NpcInstance
+	 */
 	public ForgeoftheGods(NpcInstance actor)
 	{
 		super(actor);
@@ -74,6 +97,10 @@ public class ForgeoftheGods extends Fighter
 		}
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -95,6 +122,10 @@ public class ForgeoftheGods extends Fighter
 		return true;
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -118,6 +149,11 @@ public class ForgeoftheGods extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -128,6 +164,11 @@ public class ForgeoftheGods extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
@@ -138,6 +179,12 @@ public class ForgeoftheGods extends Fighter
 		super.onEvtAggression(target, aggro);
 	}
 	
+	/**
+	 * Method checkTarget.
+	 * @param target Creature
+	 * @param range int
+	 * @return boolean
+	 */
 	@Override
 	protected boolean checkTarget(Creature target, int range)
 	{
@@ -150,6 +197,10 @@ public class ForgeoftheGods extends Fighter
 		return super.checkTarget(target, range);
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

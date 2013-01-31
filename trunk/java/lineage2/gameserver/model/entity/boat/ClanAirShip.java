@@ -35,23 +35,61 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.AirshipDock;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanAirShip extends AirShip
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field MAINTENANCE_DELAY.
+	 */
 	private static final long MAINTENANCE_DELAY = 60 * 1000L;
+	/**
+	 * Field MAX_FUEL. (value is 600)
+	 */
 	public static final int MAX_FUEL = 600;
+	/**
+	 * Field _currentFuel.
+	 */
 	private int _currentFuel;
+	/**
+	 * Field _dock.
+	 */
 	private AirshipDock _dock;
+	/**
+	 * Field _platform.
+	 */
 	private AirshipDock.AirshipPlatform _platform;
+	/**
+	 * Field _driverRef.
+	 */
 	private HardReference<Player> _driverRef = HardReferences.emptyRef();
+	/**
+	 * Field _controlKey.
+	 */
 	private final GameObject _controlKey = new ControlKeyInstance();
+	/**
+	 * Field _clan.
+	 */
 	private final Clan _clan;
+	/**
+	 * Field _customMove.
+	 */
 	private boolean _customMove;
+	/**
+	 * Field _deleteTask.
+	 */
 	private Future<?> _deleteTask = null;
 	
+	/**
+	 * Constructor for ClanAirShip.
+	 * @param clan Clan
+	 */
 	public ClanAirShip(Clan clan)
 	{
 		super(IdFactory.getInstance().getNextId(), BoatHolder.TEMPLATE);
@@ -61,12 +99,21 @@ public class ClanAirShip extends AirShip
 		_currentFuel = clan.getAirshipFuel();
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	public void onSpawn()
 	{
 		_controlKey.spawnMe(getLoc());
 	}
 	
+	/**
+	 * Method updatePeopleInTheBoat.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 */
 	@Override
 	protected void updatePeopleInTheBoat(int x, int y, int z)
 	{
@@ -74,6 +121,12 @@ public class ClanAirShip extends AirShip
 		_controlKey.setXYZ(x, y, z);
 	}
 	
+	/**
+	 * Method oustPlayer.
+	 * @param player Player
+	 * @param loc Location
+	 * @param teleport boolean
+	 */
 	@Override
 	public void oustPlayer(Player player, Location loc, boolean teleport)
 	{
@@ -84,6 +137,9 @@ public class ClanAirShip extends AirShip
 		super.oustPlayer(player, loc, teleport);
 	}
 	
+	/**
+	 * Method startDepartTask.
+	 */
 	public void startDepartTask()
 	{
 		BoatWayEvent arrivalWay = new BoatWayEvent(this);
@@ -103,6 +159,9 @@ public class ClanAirShip extends AirShip
 		arrivalWay.reCalcNextTime(false);
 	}
 	
+	/**
+	 * Method startArrivalTask.
+	 */
 	public void startArrivalTask()
 	{
 		if (_deleteTask != null)
@@ -118,6 +177,11 @@ public class ClanAirShip extends AirShip
 		deleteMe();
 	}
 	
+	/**
+	 * Method addTeleportPoint.
+	 * @param player Player
+	 * @param id int
+	 */
 	public void addTeleportPoint(Player player, int id)
 	{
 		if (isMoving || !isDocked())
@@ -144,6 +208,10 @@ public class ClanAirShip extends AirShip
 		}
 	}
 	
+	/**
+	 * Method trajetEnded.
+	 * @param oust boolean
+	 */
 	@Override
 	public void trajetEnded(boolean oust)
 	{
@@ -160,6 +228,9 @@ public class ClanAirShip extends AirShip
 		}
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	public void onEvtArrived()
 	{
@@ -169,6 +240,10 @@ public class ClanAirShip extends AirShip
 		}
 	}
 	
+	/**
+	 * Method setDriver.
+	 * @param player Player
+	 */
 	public void setDriver(Player player)
 	{
 		if (player != null)
@@ -258,6 +333,10 @@ public class ClanAirShip extends AirShip
 		broadcastCharInfo();
 	}
 	
+	/**
+	 * Method setCurrentFuel.
+	 * @param fuel int
+	 */
 	public void setCurrentFuel(int fuel)
 	{
 		final int old = _currentFuel;
@@ -283,26 +362,45 @@ public class ClanAirShip extends AirShip
 		broadcastCharInfo();
 	}
 	
+	/**
+	 * Method getCurrentFuel.
+	 * @return int
+	 */
 	public int getCurrentFuel()
 	{
 		return _currentFuel;
 	}
 	
+	/**
+	 * Method getMaxFuel.
+	 * @return int
+	 */
 	public int getMaxFuel()
 	{
 		return MAX_FUEL;
 	}
 	
+	/**
+	 * Method getDriver.
+	 * @return Player
+	 */
 	public Player getDriver()
 	{
 		return _driverRef.get();
 	}
 	
+	/**
+	 * Method getControlKey.
+	 * @return GameObject
+	 */
 	public GameObject getControlKey()
 	{
 		return _controlKey;
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
@@ -314,50 +412,86 @@ public class ClanAirShip extends AirShip
 		super.onDelete();
 	}
 	
+	/**
+	 * Method getReturnLoc.
+	 * @return Location
+	 */
 	@Override
 	public Location getReturnLoc()
 	{
 		return _platform == null ? null : _platform.getOustLoc();
 	}
 	
+	/**
+	 * Method getClan.
+	 * @return Clan
+	 */
 	@Override
 	public Clan getClan()
 	{
 		return _clan;
 	}
 	
+	/**
+	 * Method setDock.
+	 * @param dockId AirshipDock
+	 */
 	public void setDock(AirshipDock dockId)
 	{
 		_dock = dockId;
 	}
 	
+	/**
+	 * Method setPlatform.
+	 * @param platformId AirshipDock.AirshipPlatform
+	 */
 	public void setPlatform(AirshipDock.AirshipPlatform platformId)
 	{
 		_platform = platformId;
 	}
 	
+	/**
+	 * Method getDock.
+	 * @return AirshipDock
+	 */
 	public AirshipDock getDock()
 	{
 		return _dock;
 	}
 	
+	/**
+	 * Method isCustomMove.
+	 * @return boolean
+	 */
 	public boolean isCustomMove()
 	{
 		return _customMove;
 	}
 	
+	/**
+	 * Method isDocked.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isDocked()
 	{
 		return (_dock != null) && !isMoving;
 	}
 	
+	/**
+	 * Method isClanAirShip.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isClanAirShip()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method deletePacketList.
+	 * @return List<L2GameServerPacket>
+	 */
 	@Override
 	public List<L2GameServerPacket> deletePacketList()
 	{
@@ -367,13 +501,22 @@ public class ClanAirShip extends AirShip
 		return list;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class FuelAndDeleteTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for FuelAndDeleteTask.
+		 */
 		public FuelAndDeleteTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

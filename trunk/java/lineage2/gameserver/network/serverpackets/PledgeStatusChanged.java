@@ -14,10 +14,21 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.pledge.Clan;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeStatusChanged extends L2GameServerPacket
 {
+	/**
+	 * Field level. Field clan_id. Field leader_id.
+	 */
 	private final int leader_id, clan_id, level;
 	
+	/**
+	 * Constructor for PledgeStatusChanged.
+	 * @param clan Clan
+	 */
 	public PledgeStatusChanged(Clan clan)
 	{
 		leader_id = clan.getLeaderId();
@@ -25,6 +36,9 @@ public class PledgeStatusChanged extends L2GameServerPacket
 		level = clan.getLevel();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

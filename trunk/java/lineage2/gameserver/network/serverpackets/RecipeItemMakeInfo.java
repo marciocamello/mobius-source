@@ -15,14 +15,39 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.item.RecipeTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RecipeItemMakeInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _isDwarvenRecipe.
+	 */
 	private final boolean _isDwarvenRecipe;
+	/**
+	 * Field _status.
+	 */
 	private final int _status;
+	/**
+	 * Field _curMP.
+	 */
 	private final int _curMP;
+	/**
+	 * Field _maxMP.
+	 */
 	private final int _maxMP;
 	
+	/**
+	 * Constructor for RecipeItemMakeInfo.
+	 * @param player Player
+	 * @param recipeList RecipeTemplate
+	 * @param status int
+	 */
 	public RecipeItemMakeInfo(Player player, RecipeTemplate recipeList, int status)
 	{
 		_id = recipeList.getId();
@@ -32,6 +57,9 @@ public class RecipeItemMakeInfo extends L2GameServerPacket
 		_maxMP = player.getMaxMp();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

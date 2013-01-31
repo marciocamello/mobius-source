@@ -19,15 +19,31 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OutpostCaptain extends Fighter
 {
+	/**
+	 * Field _attacked.
+	 */
 	private boolean _attacked = false;
 	
+	/**
+	 * Constructor for OutpostCaptain.
+	 * @param actor NpcInstance
+	 */
 	public OutpostCaptain(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -49,6 +65,10 @@ public class OutpostCaptain extends Fighter
 		}
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

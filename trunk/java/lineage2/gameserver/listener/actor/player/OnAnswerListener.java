@@ -14,9 +14,19 @@ package lineage2.gameserver.listener.actor.player;
 
 import lineage2.gameserver.listener.PlayerListener;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnAnswerListener extends PlayerListener
 {
+	/**
+	 * Method sayYes.
+	 */
 	void sayYes();
 	
+	/**
+	 * Method sayNo.
+	 */
 	void sayNo();
 }

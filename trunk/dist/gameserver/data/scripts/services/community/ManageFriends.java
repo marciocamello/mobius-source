@@ -29,10 +29,21 @@ import lineage2.gameserver.scripts.ScriptFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ManageFriends.class);
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -43,6 +54,10 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -52,11 +67,19 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method getBypassCommands.
+	 * @return String[] * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#getBypassCommands()
+	 */
 	@Override
 	public String[] getBypassCommands()
 	{
@@ -74,6 +97,12 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 		};
 	}
 	
+	/**
+	 * Method onBypassCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onBypassCommand(Player, String)
+	 */
 	@Override
 	public void onBypassCommand(Player player, String bypass)
 	{
@@ -199,6 +228,17 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 		ShowBoard.separateAndSend(html, player);
 	}
 	
+	/**
+	 * Method onWriteCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @param arg1 String
+	 * @param arg2 String
+	 * @param arg3 String
+	 * @param arg4 String
+	 * @param arg5 String
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)
+	 */
 	@Override
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
@@ -212,6 +252,11 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 		ShowBoard.separateAndSend(html, player);
 	}
 	
+	/**
+	 * Method getFriendList.
+	 * @param player Player
+	 * @return String
+	 */
 	private static String getFriendList(Player player)
 	{
 		StringBuilder friendList = new StringBuilder("");
@@ -223,6 +268,11 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 		return friendList.toString();
 	}
 	
+	/**
+	 * Method getSelectedList.
+	 * @param player Player
+	 * @return String
+	 */
 	private static String getSelectedList(Player player)
 	{
 		String selected = player.getSessionVar("selFriends");
@@ -242,6 +292,11 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 		return selectedList.toString();
 	}
 	
+	/**
+	 * Method getBlockList.
+	 * @param player Player
+	 * @return String
+	 */
 	private static String getBlockList(Player player)
 	{
 		StringBuilder blockList = new StringBuilder("");

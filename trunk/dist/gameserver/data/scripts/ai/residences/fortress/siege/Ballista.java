@@ -21,16 +21,35 @@ import lineage2.gameserver.model.entity.events.impl.FortressSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Ballista extends DefaultAI
 {
+	/**
+	 * Field BALLISTA_BOMB_SKILL_ID. (value is 2342)
+	 */
 	private static final int BALLISTA_BOMB_SKILL_ID = 2342;
+	/**
+	 * Field _bombsUseCounter.
+	 */
 	private int _bombsUseCounter;
 	
+	/**
+	 * Constructor for Ballista.
+	 * @param actor NpcInstance
+	 */
 	public Ballista(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSeeSpell.
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
@@ -53,12 +72,20 @@ public class Ballista extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

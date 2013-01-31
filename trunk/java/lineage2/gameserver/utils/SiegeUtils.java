@@ -17,8 +17,16 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SiegeUtils
 {
+	/**
+	 * Method addSiegeSkills.
+	 * @param character Player
+	 */
 	public static void addSiegeSkills(Player character)
 	{
 		character.addSkill(SkillTable.getInstance().getInfo(246, 1), false);
@@ -34,6 +42,10 @@ public class SiegeUtils
 		}
 	}
 	
+	/**
+	 * Method removeSiegeSkills.
+	 * @param character Player
+	 */
 	public static void removeSiegeSkills(Player character)
 	{
 		character.removeSkill(SkillTable.getInstance().getInfo(246, 1), false);
@@ -46,6 +58,10 @@ public class SiegeUtils
 		}
 	}
 	
+	/**
+	 * Method getCanRide.
+	 * @return boolean
+	 */
 	public static boolean getCanRide()
 	{
 		for (Residence residence : ResidenceHolder.getInstance().getResidences())

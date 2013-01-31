@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExAskJoinPartyRoom extends L2GameServerPacket
 {
+	/**
+	 * Field _charName.
+	 */
 	private final String _charName;
+	/**
+	 * Field _roomName.
+	 */
 	private final String _roomName;
 	
+	/**
+	 * Constructor for ExAskJoinPartyRoom.
+	 * @param charName String
+	 * @param roomName String
+	 */
 	public ExAskJoinPartyRoom(String charName, String roomName)
 	{
 		_charName = charName;
 		_roomName = roomName;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

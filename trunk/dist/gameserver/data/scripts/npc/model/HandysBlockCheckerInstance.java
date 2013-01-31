@@ -24,6 +24,10 @@ import lineage2.gameserver.network.serverpackets.ExCubeGameTeamList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HandysBlockCheckerInstance extends NpcInstance
 {
 	/**
@@ -31,6 +35,11 @@ public class HandysBlockCheckerInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for HandysBlockCheckerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public HandysBlockCheckerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -41,11 +50,29 @@ public class HandysBlockCheckerInstance extends NpcInstance
 		HandysBlockCheckerManager.getInstance().startUpParticipantsQueue();
 	}
 	
+	/**
+	 * Field A_MANAGER_1. (value is 32521)
+	 */
 	private static final int A_MANAGER_1 = 32521;
+	/**
+	 * Field A_MANAGER_2. (value is 32522)
+	 */
 	private static final int A_MANAGER_2 = 32522;
+	/**
+	 * Field A_MANAGER_3. (value is 32523)
+	 */
 	private static final int A_MANAGER_3 = 32523;
+	/**
+	 * Field A_MANAGER_4. (value is 32524)
+	 */
 	private static final int A_MANAGER_4 = 32524;
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -101,6 +128,11 @@ public class HandysBlockCheckerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method eventIsFull.
+	 * @param arena int
+	 * @return boolean
+	 */
 	private boolean eventIsFull(int arena)
 	{
 		if (HandysBlockCheckerManager.getInstance().getHolder(arena).getAllPlayers().size() == 12)

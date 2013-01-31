@@ -14,12 +14,31 @@ package lineage2.gameserver.network.loginservercon.gspackets;
 
 import lineage2.gameserver.network.loginservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BonusRequest extends SendablePacket
 {
+	/**
+	 * Field account.
+	 */
 	private final String account;
+	/**
+	 * Field bonus.
+	 */
 	private final double bonus;
+	/**
+	 * Field bonusExpire.
+	 */
 	private final int bonusExpire;
 	
+	/**
+	 * Constructor for BonusRequest.
+	 * @param account String
+	 * @param bonus double
+	 * @param bonusExpire int
+	 */
 	public BonusRequest(String account, double bonus, int bonusExpire)
 	{
 		this.account = account;
@@ -27,6 +46,9 @@ public class BonusRequest extends SendablePacket
 		this.bonusExpire = bonusExpire;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

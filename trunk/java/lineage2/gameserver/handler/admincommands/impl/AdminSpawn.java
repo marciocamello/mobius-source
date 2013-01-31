@@ -36,23 +36,72 @@ import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.tables.CustomSpawnTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminSpawn implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_show_spawns.
+		 */
 		admin_show_spawns,
+		/**
+		 * Field admin_spawn.
+		 */
 		admin_spawn,
+		/**
+		 * Field admin_spawn_monster.
+		 */
 		admin_spawn_monster,
+		/**
+		 * Field admin_spawn_index.
+		 */
 		admin_spawn_index,
+		/**
+		 * Field admin_spawn1.
+		 */
 		admin_spawn1,
+		/**
+		 * Field admin_setheading.
+		 */
 		admin_setheading,
+		/**
+		 * Field admin_setai.
+		 */
 		admin_setai,
+		/**
+		 * Field admin_setaiparam.
+		 */
 		admin_setaiparam,
+		/**
+		 * Field admin_dumpparams.
+		 */
 		admin_dumpparams,
+		/**
+		 * Field admin_generate_loc.
+		 */
 		admin_generate_loc,
+		/**
+		 * Field admin_dumpspawn.
+		 */
 		admin_dumpspawn
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -310,12 +359,24 @@ public class AdminSpawn implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}
 	
+	/**
+	 * Method spawnMonster.
+	 * @param activeChar Player
+	 * @param monsterId String
+	 * @param respawnTime int
+	 * @param mobCount int
+	 */
 	private void spawnMonster(Player activeChar, String monsterId, int respawnTime, int mobCount)
 	{
 		GameObject target = activeChar.getTarget();

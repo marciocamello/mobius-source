@@ -59,40 +59,142 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Quest
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Quest.class);
+	/**
+	 * Field SOUND_ITEMGET. (value is ""ItemSound.quest_itemget"")
+	 */
 	public static final String SOUND_ITEMGET = "ItemSound.quest_itemget";
+	/**
+	 * Field SOUND_ACCEPT. (value is ""ItemSound.quest_accept"")
+	 */
 	public static final String SOUND_ACCEPT = "ItemSound.quest_accept";
+	/**
+	 * Field SOUND_MIDDLE. (value is ""ItemSound.quest_middle"")
+	 */
 	public static final String SOUND_MIDDLE = "ItemSound.quest_middle";
+	/**
+	 * Field SOUND_FINISH. (value is ""ItemSound.quest_finish"")
+	 */
 	public static final String SOUND_FINISH = "ItemSound.quest_finish";
+	/**
+	 * Field SOUND_GIVEUP. (value is ""ItemSound.quest_giveup"")
+	 */
 	public static final String SOUND_GIVEUP = "ItemSound.quest_giveup";
+	/**
+	 * Field SOUND_TUTORIAL. (value is ""ItemSound.quest_tutorial"")
+	 */
 	public static final String SOUND_TUTORIAL = "ItemSound.quest_tutorial";
+	/**
+	 * Field SOUND_JACKPOT. (value is ""ItemSound.quest_jackpot"")
+	 */
 	public static final String SOUND_JACKPOT = "ItemSound.quest_jackpot";
+	/**
+	 * Field SOUND_HORROR2. (value is ""SkillSound5.horror_02"")
+	 */
 	public static final String SOUND_HORROR2 = "SkillSound5.horror_02";
+	/**
+	 * Field SOUND_BEFORE_BATTLE. (value is ""Itemsound.quest_before_battle"")
+	 */
 	public static final String SOUND_BEFORE_BATTLE = "Itemsound.quest_before_battle";
+	/**
+	 * Field SOUND_FANFARE_MIDDLE. (value is ""ItemSound.quest_fanfare_middle"")
+	 */
 	public static final String SOUND_FANFARE_MIDDLE = "ItemSound.quest_fanfare_middle";
+	/**
+	 * Field SOUND_FANFARE2. (value is ""ItemSound.quest_fanfare_2"")
+	 */
 	public static final String SOUND_FANFARE2 = "ItemSound.quest_fanfare_2";
+	/**
+	 * Field SOUND_BROKEN_KEY. (value is ""ItemSound2.broken_key"")
+	 */
 	public static final String SOUND_BROKEN_KEY = "ItemSound2.broken_key";
+	/**
+	 * Field SOUND_ENCHANT_SUCESS. (value is ""ItemSound3.sys_enchant_sucess"")
+	 */
 	public static final String SOUND_ENCHANT_SUCESS = "ItemSound3.sys_enchant_sucess";
+	/**
+	 * Field SOUND_ENCHANT_FAILED. (value is ""ItemSound3.sys_enchant_failed"")
+	 */
 	public static final String SOUND_ENCHANT_FAILED = "ItemSound3.sys_enchant_failed";
+	/**
+	 * Field SOUND_ED_CHIMES05. (value is ""AmdSound.ed_chimes_05"")
+	 */
 	public static final String SOUND_ED_CHIMES05 = "AmdSound.ed_chimes_05";
+	/**
+	 * Field SOUND_ARMOR_WOOD_3. (value is ""ItemSound.armor_wood_3"")
+	 */
 	public static final String SOUND_ARMOR_WOOD_3 = "ItemSound.armor_wood_3";
+	/**
+	 * Field SOUND_ITEM_DROP_EQUIP_ARMOR_CLOTH. (value is ""ItemSound.item_drop_equip_armor_cloth"")
+	 */
 	public static final String SOUND_ITEM_DROP_EQUIP_ARMOR_CLOTH = "ItemSound.item_drop_equip_armor_cloth";
+	/**
+	 * Field NO_QUEST_DIALOG. (value is ""no-quest"")
+	 */
 	public static final String NO_QUEST_DIALOG = "no-quest";
+	/**
+	 * Field FONT_QUEST_AVAILABLE. (value is ""<font color=\"6699ff\">"")
+	 */
 	private static final String FONT_QUEST_AVAILABLE = "<font color=\"6699ff\">";
+	/**
+	 * Field FONT_QUEST_DONE. (value is ""<font color=\"787878\">"")
+	 */
 	private static final String FONT_QUEST_DONE = "<font color=\"787878\">";
+	/**
+	 * Field FONT_QUEST_NOT_AVAILABLE. (value is ""<font color=\"a62f31\">"")
+	 */
 	private static final String FONT_QUEST_NOT_AVAILABLE = "<font color=\"a62f31\">";
+	/**
+	 * Field TODO_FIND_HTML. (value is ""<font color=\"6699ff\">TODO:<br>
+	 * Find this dialog"")
+	 */
 	protected static final String TODO_FIND_HTML = "<font color=\"6699ff\">TODO:<br>Find this dialog";
+	/**
+	 * Field ADENA_ID. (value is 57)
+	 */
 	public static final int ADENA_ID = 57;
+	/**
+	 * Field PARTY_NONE. (value is 0)
+	 */
 	public static final int PARTY_NONE = 0;
+	/**
+	 * Field PARTY_ONE. (value is 1)
+	 */
 	public static final int PARTY_ONE = 1;
+	/**
+	 * Field PARTY_ALL. (value is 2)
+	 */
 	public static final int PARTY_ALL = 2;
+	/**
+	 * Field _pausedQuestTimers.
+	 */
 	private final Map<Integer, Map<String, QuestTimer>> _pausedQuestTimers = new ConcurrentHashMap<>();
+	/**
+	 * Field _questItems.
+	 */
 	private final TIntHashSet _questItems = new TIntHashSet();
+	/**
+	 * Field _npcLogList.
+	 */
 	private TIntObjectHashMap<List<QuestNpcLogInfo>> _npcLogList = TroveUtils.emptyIntObjectMap();
+	/**
+	 * Field startConditionList.
+	 */
 	private final List<ICheckStartCondition> startConditionList = new ArrayList<>();
 	
+	/**
+	 * Method addQuestItem.
+	 * @param ids int[]
+	 */
 	public void addQuestItem(int... ids)
 	{
 		for (int id : ids)
@@ -110,21 +212,40 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method getItems.
+	 * @return int[]
+	 */
 	public int[] getItems()
 	{
 		return _questItems.toArray();
 	}
 	
+	/**
+	 * Method isQuestItem.
+	 * @param id int
+	 * @return boolean
+	 */
 	public boolean isQuestItem(int id)
 	{
 		return _questItems.contains(id);
 	}
 	
+	/**
+	 * Method updateQuestInDb.
+	 * @param qs QuestState
+	 */
 	public static void updateQuestInDb(QuestState qs)
 	{
 		updateQuestVarInDb(qs, "<state>", qs.getStateName());
 	}
 	
+	/**
+	 * Method updateQuestVarInDb.
+	 * @param qs QuestState
+	 * @param var String
+	 * @param value String
+	 */
 	public static void updateQuestVarInDb(QuestState qs, String var, String value)
 	{
 		Player player = qs.getPlayer();
@@ -154,6 +275,10 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method deleteQuestInDb.
+	 * @param qs QuestState
+	 */
 	public static void deleteQuestInDb(QuestState qs)
 	{
 		Connection con = null;
@@ -176,6 +301,11 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method deleteQuestVarInDb.
+	 * @param qs QuestState
+	 * @param var String
+	 */
 	public static void deleteQuestVarInDb(QuestState qs, String var)
 	{
 		Connection con = null;
@@ -199,6 +329,10 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method restoreQuestStates.
+	 * @param player Player
+	 */
 	public static void restoreQuestStates(Player player)
 	{
 		Connection con = null;
@@ -267,14 +401,40 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Field _name.
+	 */
 	protected final String _name;
+	/**
+	 * Field _party.
+	 */
 	protected final int _party;
+	/**
+	 * Field _questId.
+	 */
 	protected final int _questId;
+	/**
+	 * Field CREATED. (value is 1)
+	 */
 	public final static int CREATED = 1;
+	/**
+	 * Field STARTED. (value is 2)
+	 */
 	public final static int STARTED = 2;
+	/**
+	 * Field COMPLETED. (value is 3)
+	 */
 	public final static int COMPLETED = 3;
+	/**
+	 * Field DELAYED. (value is 4)
+	 */
 	public final static int DELAYED = 4;
 	
+	/**
+	 * Method getStateName.
+	 * @param state int
+	 * @return String
+	 */
 	public static String getStateName(int state)
 	{
 		switch (state)
@@ -291,6 +451,11 @@ public class Quest
 		return "Start";
 	}
 	
+	/**
+	 * Method getStateId.
+	 * @param state String
+	 * @return int
+	 */
 	public static int getStateId(String state)
 	{
 		if (state.equalsIgnoreCase("Start"))
@@ -312,11 +477,19 @@ public class Quest
 		return CREATED;
 	}
 	
+	/**
+	 * Constructor for Quest.
+	 * @param party boolean
+	 */
 	public Quest(boolean party)
 	{
 		this(party ? 1 : 0);
 	}
 	
+	/**
+	 * Constructor for Quest.
+	 * @param party int
+	 */
 	public Quest(int party)
 	{
 		_name = getClass().getSimpleName();
@@ -325,11 +498,20 @@ public class Quest
 		QuestManager.addQuest(this);
 	}
 	
+	/**
+	 * Method getNpcLogList.
+	 * @param cond int
+	 * @return List<QuestNpcLogInfo>
+	 */
 	public List<QuestNpcLogInfo> getNpcLogList(int cond)
 	{
 		return _npcLogList.get(cond);
 	}
 	
+	/**
+	 * Method addAttackId.
+	 * @param attackIds int[]
+	 */
 	public void addAttackId(int... attackIds)
 	{
 		for (int attackId : attackIds)
@@ -338,6 +520,12 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method addEventId.
+	 * @param npcId int
+	 * @param eventType QuestEventType
+	 * @return NpcTemplate
+	 */
 	public NpcTemplate addEventId(int npcId, QuestEventType eventType)
 	{
 		try
@@ -356,6 +544,10 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method addKillId.
+	 * @param killIds int[]
+	 */
 	public void addKillId(int... killIds)
 	{
 		for (int killid : killIds)
@@ -364,6 +556,13 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method addKillNpcWithLog.
+	 * @param cond int
+	 * @param varName String
+	 * @param max int
+	 * @param killIds int[]
+	 */
 	public void addKillNpcWithLog(int cond, String varName, int max, int... killIds)
 	{
 		if (killIds.length == 0)
@@ -383,6 +582,12 @@ public class Quest
 		vars.add(new QuestNpcLogInfo(killIds, varName, max));
 	}
 	
+	/**
+	 * Method updateKill.
+	 * @param npc NpcInstance
+	 * @param st QuestState
+	 * @return boolean
+	 */
 	public boolean updateKill(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
@@ -417,6 +622,10 @@ public class Quest
 		return done;
 	}
 	
+	/**
+	 * Method addKillId.
+	 * @param killIds Collection<Integer>
+	 */
 	public void addKillId(Collection<Integer> killIds)
 	{
 		for (int killid : killIds)
@@ -425,11 +634,20 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method addSkillUseId.
+	 * @param npcId int
+	 * @return NpcTemplate
+	 */
 	public NpcTemplate addSkillUseId(int npcId)
 	{
 		return addEventId(npcId, QuestEventType.MOB_TARGETED_BY_SKILL);
 	}
 	
+	/**
+	 * Method addStartNpc.
+	 * @param npcIds int[]
+	 */
 	public void addStartNpc(int... npcIds)
 	{
 		for (int talkId : npcIds)
@@ -438,12 +656,21 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method addStartNpc.
+	 * @param npcId int
+	 * @return NpcTemplate
+	 */
 	public NpcTemplate addStartNpc(int npcId)
 	{
 		addTalkId(npcId);
 		return addEventId(npcId, QuestEventType.QUEST_START);
 	}
 	
+	/**
+	 * Method addFirstTalkId.
+	 * @param npcIds int[]
+	 */
 	public void addFirstTalkId(int... npcIds)
 	{
 		for (int npcId : npcIds)
@@ -452,6 +679,10 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method addTalkId.
+	 * @param talkIds int[]
+	 */
 	public void addTalkId(int... talkIds)
 	{
 		for (int talkId : talkIds)
@@ -460,6 +691,10 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method addTalkId.
+	 * @param talkIds Collection<Integer>
+	 */
 	public void addTalkId(Collection<Integer> talkIds)
 	{
 		for (int talkId : talkIds)
@@ -468,26 +703,48 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method addLevelCheck.
+	 * @param min int
+	 * @param max int
+	 */
 	public void addLevelCheck(int min, int max)
 	{
 		startConditionList.add(new PlayerLevelCondition(min, max));
 	}
 	
+	/**
+	 * Method addQuestCompletedCheck.
+	 * @param clazz Class<?>
+	 */
 	public void addQuestCompletedCheck(Class<?> clazz)
 	{
 		startConditionList.add(new QuestCompletedCondition(clazz.getSimpleName()));
 	}
 	
+	/**
+	 * Method addClassLevelCheck.
+	 * @param classLevels int[]
+	 */
 	public void addClassLevelCheck(int... classLevels)
 	{
 		startConditionList.add(new ClassLevelCondition(classLevels));
 	}
 	
+	/**
+	 * Method addSubClassCheck.
+	 */
 	public void addSubClassCheck()
 	{
 		startConditionList.add(new SubClassCondition());
 	}
 	
+	/**
+	 * Method getDescr.
+	 * @param player Player
+	 * @param isStartNpc boolean
+	 * @return String
+	 */
 	public String getDescr(Player player, boolean isStartNpc)
 	{
 		if (!isVisible(player))
@@ -514,6 +771,12 @@ public class Quest
 		return font.concat("[").concat(HtmlUtils.htmlNpcString(fStringId)).concat("]</font>");
 	}
 	
+	/**
+	 * Method getDescrState.
+	 * @param player Player
+	 * @param isStartNpc boolean
+	 * @return int
+	 */
 	public final int getDescrState(Player player, boolean isStartNpc)
 	{
 		QuestState qs = player.getQuestState(getName());
@@ -533,21 +796,39 @@ public class Quest
 		return state;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method getQuestIntId.
+	 * @return int
+	 */
 	public int getQuestIntId()
 	{
 		return _questId;
 	}
 	
+	/**
+	 * Method getParty.
+	 * @return int
+	 */
 	public int getParty()
 	{
 		return _party;
 	}
 	
+	/**
+	 * Method newQuestState.
+	 * @param player Player
+	 * @param state int
+	 * @return QuestState
+	 */
 	public QuestState newQuestState(Player player, int state)
 	{
 		QuestState qs = new QuestState(this, player, state);
@@ -555,11 +836,22 @@ public class Quest
 		return qs;
 	}
 	
+	/**
+	 * Method newQuestStateAndNotSave.
+	 * @param player Player
+	 * @param state int
+	 * @return QuestState
+	 */
 	public QuestState newQuestStateAndNotSave(Player player, int state)
 	{
 		return new QuestState(this, player, state);
 	}
 	
+	/**
+	 * Method notifyAttack.
+	 * @param npc NpcInstance
+	 * @param qs QuestState
+	 */
 	public void notifyAttack(NpcInstance npc, QuestState qs)
 	{
 		String res = null;
@@ -575,6 +867,12 @@ public class Quest
 		showResult(npc, qs.getPlayer(), res);
 	}
 	
+	/**
+	 * Method notifyDeath.
+	 * @param killer Creature
+	 * @param victim Creature
+	 * @param qs QuestState
+	 */
 	public void notifyDeath(Creature killer, Creature victim, QuestState qs)
 	{
 		String res = null;
@@ -590,6 +888,12 @@ public class Quest
 		showResult(null, qs.getPlayer(), res);
 	}
 	
+	/**
+	 * Method notifyEvent.
+	 * @param event String
+	 * @param qs QuestState
+	 * @param npc NpcInstance
+	 */
 	public void notifyEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String res = null;
@@ -605,6 +909,11 @@ public class Quest
 		showResult(npc, qs.getPlayer(), res);
 	}
 	
+	/**
+	 * Method notifyKill.
+	 * @param npc NpcInstance
+	 * @param qs QuestState
+	 */
 	public void notifyKill(NpcInstance npc, QuestState qs)
 	{
 		String res = null;
@@ -620,6 +929,11 @@ public class Quest
 		showResult(npc, qs.getPlayer(), res);
 	}
 	
+	/**
+	 * Method notifyKill.
+	 * @param target Player
+	 * @param qs QuestState
+	 */
 	public void notifyKill(Player target, QuestState qs)
 	{
 		String res = null;
@@ -635,6 +949,12 @@ public class Quest
 		showResult(null, qs.getPlayer(), res);
 	}
 	
+	/**
+	 * Method notifyFirstTalk.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 * @return boolean
+	 */
 	public final boolean notifyFirstTalk(NpcInstance npc, Player player)
 	{
 		String res = null;
@@ -650,6 +970,12 @@ public class Quest
 		return showResult(npc, player, res, true);
 	}
 	
+	/**
+	 * Method notifyTalk.
+	 * @param npc NpcInstance
+	 * @param qs QuestState
+	 * @return boolean
+	 */
 	public boolean notifyTalk(NpcInstance npc, QuestState qs)
 	{
 		String res = null;
@@ -665,6 +991,13 @@ public class Quest
 		return showResult(npc, qs.getPlayer(), res);
 	}
 	
+	/**
+	 * Method notifySkillUse.
+	 * @param npc NpcInstance
+	 * @param skill Skill
+	 * @param qs QuestState
+	 * @return boolean
+	 */
 	public boolean notifySkillUse(NpcInstance npc, Skill skill, QuestState qs)
 	{
 		String res = null;
@@ -680,6 +1013,10 @@ public class Quest
 		return showResult(npc, qs.getPlayer(), res);
 	}
 	
+	/**
+	 * Method notifyCreate.
+	 * @param qs QuestState
+	 */
 	public void notifyCreate(QuestState qs)
 	{
 		try
@@ -692,6 +1029,11 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method notifySocialActionUse.
+	 * @param qs QuestState
+	 * @param actionId int
+	 */
 	public void notifySocialActionUse(QuestState qs, int actionId)
 	{
 		try
@@ -704,67 +1046,145 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method onSocialActionUse.
+	 * @param qs QuestState
+	 * @param actionId int
+	 */
 	public void onSocialActionUse(QuestState qs, int actionId)
 	{
 	}
 	
+	/**
+	 * Method onCreate.
+	 * @param qs QuestState
+	 */
 	public void onCreate(QuestState qs)
 	{
 	}
 	
+	/**
+	 * Method onAttack.
+	 * @param npc NpcInstance
+	 * @param qs QuestState
+	 * @return String
+	 */
 	public String onAttack(NpcInstance npc, QuestState qs)
 	{
 		return null;
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 * @param victim Creature
+	 * @param qs QuestState
+	 * @return String
+	 */
 	public String onDeath(Creature killer, Creature victim, QuestState qs)
 	{
 		return null;
 	}
 	
+	/**
+	 * Method onEvent.
+	 * @param event String
+	 * @param qs QuestState
+	 * @param npc NpcInstance
+	 * @return String
+	 */
 	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		return null;
 	}
 	
+	/**
+	 * Method onKill.
+	 * @param npc NpcInstance
+	 * @param qs QuestState
+	 * @return String
+	 */
 	public String onKill(NpcInstance npc, QuestState qs)
 	{
 		return null;
 	}
 	
+	/**
+	 * Method onKill.
+	 * @param killed Player
+	 * @param st QuestState
+	 * @return String
+	 */
 	public String onKill(Player killed, QuestState st)
 	{
 		return null;
 	}
 	
+	/**
+	 * Method onFirstTalk.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 * @return String
+	 */
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		return null;
 	}
 	
+	/**
+	 * Method onTalk.
+	 * @param npc NpcInstance
+	 * @param qs QuestState
+	 * @return String
+	 */
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		return null;
 	}
 	
+	/**
+	 * Method onSkillUse.
+	 * @param npc NpcInstance
+	 * @param skill Skill
+	 * @param qs QuestState
+	 * @return String
+	 */
 	public String onSkillUse(NpcInstance npc, Skill skill, QuestState qs)
 	{
 		return null;
 	}
 	
+	/**
+	 * Method onOlympiadEnd.
+	 * @param og OlympiadGame
+	 * @param qs QuestState
+	 */
 	public void onOlympiadEnd(OlympiadGame og, QuestState qs)
 	{
 	}
 	
+	/**
+	 * Method onAbort.
+	 * @param qs QuestState
+	 */
 	public void onAbort(QuestState qs)
 	{
 	}
 	
+	/**
+	 * Method canAbortByPacket.
+	 * @return boolean
+	 */
 	public boolean canAbortByPacket()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method showError.
+	 * @param player Player
+	 * @param t Throwable
+	 */
 	private void showError(Player player, Throwable t)
 	{
 		_log.error("", t);
@@ -775,11 +1195,24 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method showHtmlFile.
+	 * @param player Player
+	 * @param fileName String
+	 * @param showQuestInfo boolean
+	 */
 	protected void showHtmlFile(Player player, String fileName, boolean showQuestInfo)
 	{
 		showHtmlFile(player, fileName, showQuestInfo, ArrayUtils.EMPTY_OBJECT_ARRAY);
 	}
 	
+	/**
+	 * Method showHtmlFile.
+	 * @param player Player
+	 * @param fileName String
+	 * @param showQuestInfo boolean
+	 * @param arg Object[]
+	 */
 	protected void showHtmlFile(Player player, String fileName, boolean showQuestInfo, Object... arg)
 	{
 		if (player == null)
@@ -799,6 +1232,11 @@ public class Quest
 		player.sendPacket(npcReply);
 	}
 	
+	/**
+	 * Method showSimpleHtmFile.
+	 * @param player Player
+	 * @param fileName String
+	 */
 	protected void showSimpleHtmFile(Player player, String fileName)
 	{
 		if (player == null)
@@ -810,11 +1248,26 @@ public class Quest
 		player.sendPacket(npcReply);
 	}
 	
+	/**
+	 * Method showResult.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 * @param res String
+	 * @return boolean
+	 */
 	private boolean showResult(NpcInstance npc, Player player, String res)
 	{
 		return showResult(npc, player, res, false);
 	}
 	
+	/**
+	 * Method showResult.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 * @param res String
+	 * @param isFirstTalk boolean
+	 * @return boolean
+	 */
 	private boolean showResult(NpcInstance npc, Player player, String res, boolean isFirstTalk)
 	{
 		boolean showQuestInfo = showQuestInfo(player);
@@ -851,6 +1304,11 @@ public class Quest
 		return true;
 	}
 	
+	/**
+	 * Method showQuestInfo.
+	 * @param player Player
+	 * @return boolean
+	 */
 	private boolean showQuestInfo(Player player)
 	{
 		QuestState qs = player.getQuestState(getName());
@@ -865,6 +1323,10 @@ public class Quest
 		return true;
 	}
 	
+	/**
+	 * Method pauseQuestTimers.
+	 * @param qs QuestState
+	 */
 	void pauseQuestTimers(QuestState qs)
 	{
 		if (qs.getTimers().isEmpty())
@@ -879,6 +1341,10 @@ public class Quest
 		_pausedQuestTimers.put(qs.getPlayer().getObjectId(), qs.getTimers());
 	}
 	
+	/**
+	 * Method resumeQuestTimers.
+	 * @param qs QuestState
+	 */
 	void resumeQuestTimers(QuestState qs)
 	{
 		Map<String, QuestTimer> timers = _pausedQuestTimers.remove(qs.getPlayer().getObjectId());
@@ -894,20 +1360,38 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method str.
+	 * @param i long
+	 * @return String
+	 */
 	protected String str(long i)
 	{
 		return String.valueOf(i);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
+		/**
+		 * Field _npc.
+		 */
 		NpcInstance _npc = null;
 		
+		/**
+		 * Constructor for DeSpawnScheduleTimerTask.
+		 * @param npc NpcInstance
+		 */
 		public DeSpawnScheduleTimerTask(NpcInstance npc)
 		{
 			_npc = npc;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -925,11 +1409,30 @@ public class Quest
 		}
 	}
 	
+	/**
+	 * Method addSpawn.
+	 * @param npcId int
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param heading int
+	 * @param randomOffset int
+	 * @param despawnDelay int
+	 * @return NpcInstance
+	 */
 	public NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, int randomOffset, int despawnDelay)
 	{
 		return addSpawn(npcId, new Location(x, y, z, heading), randomOffset, despawnDelay);
 	}
 	
+	/**
+	 * Method addSpawn.
+	 * @param npcId int
+	 * @param loc Location
+	 * @param randomOffset int
+	 * @param despawnDelay int
+	 * @return NpcInstance
+	 */
 	public NpcInstance addSpawn(int npcId, Location loc, int randomOffset, int despawnDelay)
 	{
 		NpcInstance result = Functions.spawn(randomOffset > 50 ? Location.findPointToStay(loc, 0, randomOffset, ReflectionManager.DEFAULT.getGeoIndex()) : loc, npcId);
@@ -940,11 +1443,30 @@ public class Quest
 		return result;
 	}
 	
+	/**
+	 * Method addSpawnToInstance.
+	 * @param npcId int
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param heading int
+	 * @param randomOffset int
+	 * @param refId int
+	 * @return NpcInstance
+	 */
 	public static NpcInstance addSpawnToInstance(int npcId, int x, int y, int z, int heading, int randomOffset, int refId)
 	{
 		return addSpawnToInstance(npcId, new Location(x, y, z, heading), randomOffset, refId);
 	}
 	
+	/**
+	 * Method addSpawnToInstance.
+	 * @param npcId int
+	 * @param loc Location
+	 * @param randomOffset int
+	 * @param refId int
+	 * @return NpcInstance
+	 */
 	public static NpcInstance addSpawnToInstance(int npcId, Location loc, int randomOffset, int refId)
 	{
 		try
@@ -966,11 +1488,21 @@ public class Quest
 		return null;
 	}
 	
+	/**
+	 * Method isVisible.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean isVisible(Player player)
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isAvailableFor.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public final boolean isAvailableFor(Player player)
 	{
 		for (ICheckStartCondition startCondition : startConditionList)

@@ -27,12 +27,28 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.manor.SeedProduction;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestBuySeed extends L2GameClientPacket
 {
+	/**
+	 * Field _manorId. Field _count.
+	 */
 	private int _count, _manorId;
+	/**
+	 * Field _items.
+	 */
 	private int[] _items;
+	/**
+	 * Field _itemQ.
+	 */
 	private long[] _itemQ;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -57,6 +73,9 @@ public class RequestBuySeed extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

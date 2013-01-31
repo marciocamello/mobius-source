@@ -28,17 +28,57 @@ import lineage2.gameserver.model.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GeoOptimizer
 {
+	/**
+	 * Field log.
+	 */
 	static final Logger log = LoggerFactory.getLogger(GeoOptimizer.class);
+	/**
+	 * Field checkSums.
+	 */
 	public static int[][][] checkSums;
+	/**
+	 * Field version. (value is 1)
+	 */
 	private static final byte version = 1;
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class GeoBlocksMatchFinder extends RunnableImpl
 	{
+		/**
+		 * Field maxScanRegions.
+		 */
+		/**
+		 * Field ry.
+		 */
+		/**
+		 * Field rx.
+		 */
+		/**
+		 * Field geoY.
+		 */
+		/**
+		 * Field geoX.
+		 */
 		private final int geoX, geoY, rx, ry, maxScanRegions;
+		/**
+		 * Field fileName.
+		 */
 		private final String fileName;
 		
+		/**
+		 * Constructor for GeoBlocksMatchFinder.
+		 * @param _geoX int
+		 * @param _geoY int
+		 * @param _maxScanRegions int
+		 */
 		public GeoBlocksMatchFinder(int _geoX, int _geoY, int _maxScanRegions)
 		{
 			super();
@@ -50,11 +90,19 @@ public class GeoOptimizer
 			fileName = "geodata/matches/" + rx + "_" + ry + ".matches";
 		}
 		
+		/**
+		 * Method exists.
+		 * @return boolean
+		 */
 		private boolean exists()
 		{
 			return new File(Config.DATAPACK_ROOT, fileName).exists();
 		}
 		
+		/**
+		 * Method saveToFile.
+		 * @param links BlockLink[]
+		 */
 		private void saveToFile(BlockLink[] links)
 		{
 			log.info("Saving matches to: " + fileName);
@@ -84,6 +132,14 @@ public class GeoOptimizer
 			}
 		}
 		
+		/**
+		 * Method calcMatches.
+		 * @param curr_checkSums int[]
+		 * @param mapX int
+		 * @param mapY int
+		 * @param putlinks List<BlockLink>
+		 * @param notready boolean[]
+		 */
 		private void calcMatches(int[] curr_checkSums, int mapX, int mapY, List<BlockLink> putlinks, boolean[] notready)
 		{
 			int[] next_checkSums = checkSums[mapX][mapY];
@@ -113,6 +169,10 @@ public class GeoOptimizer
 			}
 		}
 		
+		/**
+		 * Method gen.
+		 * @return BlockLink[]
+		 */
 		private BlockLink[] gen()
 		{
 			log.info("Searching matches for " + rx + "_" + ry);
@@ -143,6 +203,9 @@ public class GeoOptimizer
 			return links.toArray(new BlockLink[links.size()]);
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -154,12 +217,39 @@ public class GeoOptimizer
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class CheckSumLoader extends RunnableImpl
 	{
+		/**
+		 * Field ry.
+		 */
+		/**
+		 * Field rx.
+		 */
+		/**
+		 * Field geoY.
+		 */
+		/**
+		 * Field geoX.
+		 */
 		private final int geoX, geoY, rx, ry;
+		/**
+		 * Field region.
+		 */
 		private final byte[][][] region;
+		/**
+		 * Field fileName.
+		 */
 		private final String fileName;
 		
+		/**
+		 * Constructor for CheckSumLoader.
+		 * @param _geoX int
+		 * @param _geoY int
+		 * @param _region byte[][][]
+		 */
 		public CheckSumLoader(int _geoX, int _geoY, byte[][][] _region)
 		{
 			super();
@@ -171,6 +261,10 @@ public class GeoOptimizer
 			fileName = "geodata/checksum/" + rx + "_" + ry + ".crc";
 		}
 		
+		/**
+		 * Method loadFromFile.
+		 * @return boolean
+		 */
 		private boolean loadFromFile()
 		{
 			File GeoCrc = new File(Config.DATAPACK_ROOT, fileName);
@@ -204,6 +298,9 @@ public class GeoOptimizer
 			}
 		}
 		
+		/**
+		 * Method saveToFile.
+		 */
 		private void saveToFile()
 		{
 			log.info("Saving checksums to: " + fileName);
@@ -231,6 +328,9 @@ public class GeoOptimizer
 			}
 		}
 		
+		/**
+		 * Method gen.
+		 */
 		private void gen()
 		{
 			log.info("Generating checksums for " + rx + "_" + ry);
@@ -245,6 +345,9 @@ public class GeoOptimizer
 			checkSums[geoX][geoY] = _checkSums;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -256,11 +359,33 @@ public class GeoOptimizer
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class BlockLink
 	{
+		/**
+		 * Field linkBlockIndex.
+		 */
+		/**
+		 * Field blockIndex.
+		 */
 		public final int blockIndex, linkBlockIndex;
+		/**
+		 * Field linkMapY.
+		 */
+		/**
+		 * Field linkMapX.
+		 */
 		public final byte linkMapX, linkMapY;
 		
+		/**
+		 * Constructor for BlockLink.
+		 * @param _blockIndex short
+		 * @param _linkMapX byte
+		 * @param _linkMapY byte
+		 * @param _linkBlockIndex short
+		 */
 		public BlockLink(short _blockIndex, byte _linkMapX, byte _linkMapY, short _linkBlockIndex)
 		{
 			blockIndex = _blockIndex & 0xFFFF;
@@ -269,6 +394,13 @@ public class GeoOptimizer
 			linkBlockIndex = _linkBlockIndex & 0xFFFF;
 		}
 		
+		/**
+		 * Constructor for BlockLink.
+		 * @param _blockIndex int
+		 * @param _linkMapX byte
+		 * @param _linkMapY byte
+		 * @param _linkBlockIndex int
+		 */
 		public BlockLink(int _blockIndex, byte _linkMapX, byte _linkMapY, int _linkBlockIndex)
 		{
 			blockIndex = _blockIndex & 0xFFFF;
@@ -278,6 +410,11 @@ public class GeoOptimizer
 		}
 	}
 	
+	/**
+	 * Method loadBlockMatches.
+	 * @param fileName String
+	 * @return BlockLink[]
+	 */
 	public static BlockLink[] loadBlockMatches(String fileName)
 	{
 		File f = new File(Config.DATAPACK_ROOT, fileName);

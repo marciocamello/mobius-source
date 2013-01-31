@@ -26,14 +26,37 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Recall extends Skill
 {
+	/**
+	 * Field _townId.
+	 */
 	private final int _townId;
+	/**
+	 * Field _clanhall.
+	 */
 	private final boolean _clanhall;
+	/**
+	 * Field _castle.
+	 */
 	private final boolean _castle;
+	/**
+	 * Field _fortress.
+	 */
 	private final boolean _fortress;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for Recall.
+	 * @param set StatsSet
+	 */
 	public Recall(StatsSet set)
 	{
 		super(set);
@@ -52,6 +75,15 @@ public class Recall extends Skill
 		}
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -113,6 +145,11 @@ public class Recall extends Skill
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(final Creature activeChar, List<Creature> targets)
 	{

@@ -20,15 +20,28 @@ import lineage2.gameserver.templates.StatsSet;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExHeroList extends L2GameServerPacket
 {
+	/**
+	 * Field _heroList.
+	 */
 	private final Map<Integer, StatsSet> _heroList;
 	
+	/**
+	 * Constructor for ExHeroList.
+	 */
 	public ExHeroList()
 	{
 		_heroList = Hero.getInstance().getHeroes();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

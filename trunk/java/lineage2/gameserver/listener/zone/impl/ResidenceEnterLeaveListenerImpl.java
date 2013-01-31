@@ -21,10 +21,23 @@ import lineage2.gameserver.model.entity.residence.ResidenceFunction;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncMul;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ResidenceEnterLeaveListenerImpl implements OnZoneEnterLeaveListener
 {
+	/**
+	 * Field STATIC.
+	 */
 	public static final OnZoneEnterLeaveListener STATIC = new ResidenceEnterLeaveListenerImpl();
 	
+	/**
+	 * Method onZoneEnter.
+	 * @param zone Zone
+	 * @param actor Creature
+	 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+	 */
 	@Override
 	public void onZoneEnter(Zone zone, Creature actor)
 	{
@@ -50,6 +63,12 @@ public class ResidenceEnterLeaveListenerImpl implements OnZoneEnterLeaveListener
 		}
 	}
 	
+	/**
+	 * Method onZoneLeave.
+	 * @param zone Zone
+	 * @param actor Creature
+	 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+	 */
 	@Override
 	public void onZoneLeave(Zone zone, Creature actor)
 	{

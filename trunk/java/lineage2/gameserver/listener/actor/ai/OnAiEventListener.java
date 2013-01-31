@@ -16,7 +16,17 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.listener.AiListener;
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnAiEventListener extends AiListener
 {
+	/**
+	 * Method onAiEvent.
+	 * @param actor Creature
+	 * @param evt CtrlEvent
+	 * @param args Object[]
+	 */
 	public void onAiEvent(Creature actor, CtrlEvent evt, Object[] args);
 }

@@ -12,8 +12,15 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExSearchOrc extends L2GameServerPacket
 {
+	/**
+	 * Field _test.
+	 */
 	private final static byte[] _test =
 	{
 		(byte) 0xE4,
@@ -82,6 +89,9 @@ public class ExSearchOrc extends L2GameServerPacket
 		(byte) 0x8A
 	};
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -24,18 +24,42 @@ import lineage2.gameserver.model.entity.residence.Castle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CastleDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final CastleDAO _instance = new CastleDAO();
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT tax_percent, treasury, reward_count, siege_date, last_siege_date, own_date FROM castle WHERE id=? LIMIT 1"")
+	 */
 	public static final String SELECT_SQL_QUERY = "SELECT tax_percent, treasury, reward_count, siege_date, last_siege_date, own_date FROM castle WHERE id=? LIMIT 1";
+	/**
+	 * Field UPDATE_SQL_QUERY. (value is ""UPDATE castle SET tax_percent=?, treasury=?, reward_count=?, siege_date=?, last_siege_date=?, own_date=? WHERE id=?"")
+	 */
 	public static final String UPDATE_SQL_QUERY = "UPDATE castle SET tax_percent=?, treasury=?, reward_count=?, siege_date=?, last_siege_date=?, own_date=? WHERE id=?";
 	
+	/**
+	 * Method getInstance.
+	 * @return CastleDAO
+	 */
 	public static CastleDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method select.
+	 * @param castle Castle
+	 */
 	public void select(Castle castle)
 	{
 		Connection con = null;
@@ -67,6 +91,10 @@ public class CastleDAO
 		}
 	}
 	
+	/**
+	 * Method update.
+	 * @param residence Castle
+	 */
 	public void update(Castle residence)
 	{
 		if (!residence.getJdbcState().isUpdatable())
@@ -77,6 +105,10 @@ public class CastleDAO
 		update0(residence);
 	}
 	
+	/**
+	 * Method update0.
+	 * @param castle Castle
+	 */
 	private void update0(Castle castle)
 	{
 		Connection con = null;

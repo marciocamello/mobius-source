@@ -20,14 +20,36 @@ import lineage2.gameserver.utils.AdminFunctions;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminNochannel implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_nochannel.
+		 */
 		admin_nochannel,
+		/**
+		 * Field admin_nc.
+		 */
 		admin_nc
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -63,7 +85,7 @@ public class AdminNochannel implements IAdminCommandHandler
 				{
 					if (banChatCount >= banChatCountPerDay)
 					{
-						activeChar.sendMessage("В сутки, вы можете выдать не более " + banChatCount + " банов чата.");
+						activeChar.sendMessage("В �?утки, вы можете выдат�? не более " + banChatCount + " банов чата.");
 						return false;
 					}
 				}
@@ -76,10 +98,10 @@ public class AdminNochannel implements IAdminCommandHandler
 					{
 						int add_count = activeChar.getPlayerAccess().BanChatBonusCount * bonus_mod;
 						ItemTemplate item = ItemHolder.getInstance().getTemplate(activeChar.getPlayerAccess().BanChatBonusId);
-						activeChar.sendMessage("Бонус за модерирование: " + add_count + " " + item.getName());
+						activeChar.sendMessage("Бону�? за модерирование: " + add_count + " " + item.getName());
 						if (penaltyCount > 0)
 						{
-							activeChar.sendMessage("Штраф за нарушения: " + penaltyCount + " " + item.getName());
+							activeChar.sendMessage("Штраф за нару�?ени�?: " + penaltyCount + " " + item.getName());
 							activeChar.setVar("penaltyChatCount", "" + Math.max(0, penaltyCount - add_count), -1);
 							add_count -= penaltyCount;
 						}
@@ -126,13 +148,18 @@ public class AdminNochannel implements IAdminCommandHandler
 				{
 					banChatCount++;
 					activeChar.setVar("banChatCount", "" + banChatCount, -1);
-					activeChar.sendMessage("У вас осталось " + (banChatCountPerDay - banChatCount) + " банов чата.");
+					activeChar.sendMessage("У ва�? о�?тало�?�? " + (banChatCountPerDay - banChatCount) + " банов чата.");
 				}
 			}
 		}
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

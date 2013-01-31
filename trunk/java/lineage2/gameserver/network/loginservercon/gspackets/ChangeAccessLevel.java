@@ -14,12 +14,31 @@ package lineage2.gameserver.network.loginservercon.gspackets;
 
 import lineage2.gameserver.network.loginservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChangeAccessLevel extends SendablePacket
 {
+	/**
+	 * Field account.
+	 */
 	private final String account;
+	/**
+	 * Field level.
+	 */
 	private final int level;
+	/**
+	 * Field banExpire.
+	 */
 	private final int banExpire;
 	
+	/**
+	 * Constructor for ChangeAccessLevel.
+	 * @param account String
+	 * @param level int
+	 * @param banExpire int
+	 */
 	public ChangeAccessLevel(String account, int level, int banExpire)
 	{
 		this.account = account;
@@ -27,6 +46,9 @@ public class ChangeAccessLevel extends SendablePacket
 		this.banExpire = banExpire;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

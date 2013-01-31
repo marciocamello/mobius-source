@@ -16,15 +16,42 @@ import lineage2.gameserver.GameTimeController;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharSelected extends L2GameServerPacket
 {
+	/**
+	 * Field class_id. Field race. Field sex. Field clan_id. Field char_id. Field _sessionId.
+	 */
 	private final int _sessionId, char_id, clan_id, sex, race, class_id;
+	/**
+	 * Field _title. Field _name.
+	 */
 	private final String _name, _title;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
+	/**
+	 * Field curMp. Field curHp.
+	 */
 	private final double curHp, curMp;
+	/**
+	 * Field _pk. Field _wit. Field _dex. Field _men. Field _con. Field _str. Field _int. Field karma. Field level. Field _sp.
+	 */
 	private final int _sp, level, karma, _int, _str, _con, _men, _dex, _wit, _pk;
+	/**
+	 * Field _exp.
+	 */
 	private final long _exp;
 	
+	/**
+	 * Constructor for CharSelected.
+	 * @param cha Player
+	 * @param sessionId int
+	 */
 	public CharSelected(final Player cha, final int sessionId)
 	{
 		_sessionId = sessionId;
@@ -51,6 +78,9 @@ public class CharSelected extends L2GameServerPacket
 		_wit = cha.getWIT();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -21,16 +21,47 @@ import java.util.NoSuchElementException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GameObjectArray<E extends GameObject> implements Iterable<E>
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameObjectArray.class);
+	/**
+	 * Field name.
+	 */
 	public final String name;
+	/**
+	 * Field initCapacity. Field resizeStep.
+	 */
 	public final int resizeStep, initCapacity;
+	/**
+	 * Field freeIndexes.
+	 */
 	private final List<Integer> freeIndexes;
+	/**
+	 * Field elementData.
+	 */
 	E[] elementData;
+	/**
+	 * Field size.
+	 */
 	int size = 0;
+	/**
+	 * Field real_size.
+	 */
 	private int real_size = 0;
 	
+	/**
+	 * Constructor for GameObjectArray.
+	 * @param _name String
+	 * @param initialCapacity int
+	 * @param _resizeStep int
+	 */
 	@SuppressWarnings("unchecked")
 	public GameObjectArray(String _name, int initialCapacity, int _resizeStep)
 	{
@@ -49,21 +80,38 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		elementData = (E[]) new GameObject[initialCapacity];
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	public int size()
 	{
 		return size;
 	}
 	
+	/**
+	 * Method getRealSize.
+	 * @return int
+	 */
 	public int getRealSize()
 	{
 		return real_size;
 	}
 	
+	/**
+	 * Method capacity.
+	 * @return int
+	 */
 	public int capacity()
 	{
 		return elementData.length;
 	}
 	
+	/**
+	 * Method add.
+	 * @param e E
+	 * @return int
+	 */
 	public synchronized int add(E e)
 	{
 		Integer freeIndex = null;
@@ -88,6 +136,12 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		return size - 1;
 	}
 	
+	/**
+	 * Method remove.
+	 * @param index int
+	 * @param expectedObjId int
+	 * @return E
+	 */
 	public synchronized E remove(int index, int expectedObjId)
 	{
 		if (index >= size)
@@ -112,11 +166,21 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		return old;
 	}
 	
+	/**
+	 * Method get.
+	 * @param index int
+	 * @return E
+	 */
 	public E get(int index)
 	{
 		return index >= size ? null : elementData[index];
 	}
 	
+	/**
+	 * Method findByObjectId.
+	 * @param objId int
+	 * @return E
+	 */
 	public E findByObjectId(int objId)
 	{
 		if (objId <= 0)
@@ -135,6 +199,11 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		return null;
 	}
 	
+	/**
+	 * Method findByName.
+	 * @param s String
+	 * @return E
+	 */
 	public E findByName(String s)
 	{
 		if (s == null)
@@ -153,6 +222,11 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		return null;
 	}
 	
+	/**
+	 * Method findAllByName.
+	 * @param s String
+	 * @return List<E>
+	 */
 	public List<E> findAllByName(String s)
 	{
 		if (s == null)
@@ -172,11 +246,20 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		return result;
 	}
 	
+	/**
+	 * Method getAll.
+	 * @return List<E>
+	 */
 	public List<E> getAll()
 	{
 		return getAll(new ArrayList<E>(size));
 	}
 	
+	/**
+	 * Method getAll.
+	 * @param list List<E>
+	 * @return List<E>
+	 */
 	public List<E> getAll(List<E> list)
 	{
 		E o;
@@ -191,6 +274,11 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		return list;
 	}
 	
+	/**
+	 * Method indexOf.
+	 * @param o E
+	 * @return int
+	 */
 	private int indexOf(E o)
 	{
 		if (o == null)
@@ -207,11 +295,19 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		return -1;
 	}
 	
+	/**
+	 * Method contains.
+	 * @param o E
+	 * @return boolean
+	 */
 	public boolean contains(E o)
 	{
 		return indexOf(o) > -1;
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@SuppressWarnings("unchecked")
 	public synchronized void clear()
 	{
@@ -220,17 +316,34 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		real_size = 0;
 	}
 	
+	/**
+	 * Method iterator.
+	 * @return Iterator<E> * @see java.lang.Iterable#iterator()
+	 */
 	@Override
 	public Iterator<E> iterator()
 	{
 		return new Itr();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	class Itr implements Iterator<E>
 	{
+		/**
+		 * Field cursor.
+		 */
 		private int cursor = 0;
+		/**
+		 * Field _next.
+		 */
 		private E _next;
 		
+		/**
+		 * Method hasNext.
+		 * @return boolean * @see java.util.Iterator#hasNext()
+		 */
 		@Override
 		public boolean hasNext()
 		{
@@ -244,6 +357,10 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 			return false;
 		}
 		
+		/**
+		 * Method next.
+		 * @return E * @see java.util.Iterator#next()
+		 */
 		@Override
 		public E next()
 		{
@@ -256,6 +373,10 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 			return result;
 		}
 		
+		/**
+		 * Method remove.
+		 * @see java.util.Iterator#remove()
+		 */
 		@Override
 		public void remove()
 		{

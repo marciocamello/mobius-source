@@ -21,10 +21,20 @@ import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.base.Sex;
 import lineage2.gameserver.templates.player.PlayerTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NewCharacterSuccess extends L2GameServerPacket
 {
+	/**
+	 * Field _chars.
+	 */
 	private final List<ClassId> _chars = new ArrayList<>();
 	
+	/**
+	 * Constructor for NewCharacterSuccess.
+	 */
 	public NewCharacterSuccess()
 	{
 		for (ClassId classId : ClassId.VALUES)
@@ -36,6 +46,9 @@ public class NewCharacterSuccess extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

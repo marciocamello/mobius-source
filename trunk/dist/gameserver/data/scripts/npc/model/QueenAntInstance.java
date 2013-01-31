@@ -27,21 +27,43 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class QueenAntInstance extends BossInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field Queen_Ant_Larva. (value is 29002)
+	 */
 	private static final int Queen_Ant_Larva = 29002;
+	/**
+	 * Field _spawns.
+	 */
 	private final List<SimpleSpawner> _spawns = new ArrayList<>();
+	/**
+	 * Field Larva.
+	 */
 	private NpcInstance Larva = null;
 	
+	/**
+	 * Constructor for QueenAntInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public QueenAntInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method getLarva.
+	 * @return NpcInstance
+	 */
 	public NpcInstance getLarva()
 	{
 		if (Larva == null)
@@ -51,12 +73,21 @@ public class QueenAntInstance extends BossInstance
 		return Larva;
 	}
 	
+	/**
+	 * Method getKilledInterval.
+	 * @param minion MinionInstance
+	 * @return int
+	 */
 	@Override
 	protected int getKilledInterval(MinionInstance minion)
 	{
 		return minion.getNpcId() == 29003 ? 10000 : 280000 + Rnd.get(40000);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -66,6 +97,9 @@ public class QueenAntInstance extends BossInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -74,6 +108,12 @@ public class QueenAntInstance extends BossInstance
 		broadcastPacketToOthers(new PlaySound(PlaySound.Type.MUSIC, "BS01_A", 1, 0, getLoc()));
 	}
 	
+	/**
+	 * Method SpawnNPC.
+	 * @param npcId int
+	 * @param loc Location
+	 * @return NpcInstance
+	 */
 	private NpcInstance SpawnNPC(int npcId, Location loc)
 	{
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);

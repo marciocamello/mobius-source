@@ -16,12 +16,31 @@ import lineage2.commons.lang.reference.HardReference;
 import lineage2.gameserver.listener.actor.player.OnAnswerListener;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ReviveAnswerListener implements OnAnswerListener
 {
+	/**
+	 * Field _playerRef.
+	 */
 	private final HardReference<Player> _playerRef;
+	/**
+	 * Field _power.
+	 */
 	private final double _power;
+	/**
+	 * Field _forPet.
+	 */
 	private final boolean _forPet;
 	
+	/**
+	 * Constructor for ReviveAnswerListener.
+	 * @param player Player
+	 * @param power double
+	 * @param forPet boolean
+	 */
 	public ReviveAnswerListener(Player player, double power, boolean forPet)
 	{
 		_playerRef = player.getRef();
@@ -29,6 +48,10 @@ public class ReviveAnswerListener implements OnAnswerListener
 		_power = power;
 	}
 	
+	/**
+	 * Method sayYes.
+	 * @see lineage2.gameserver.listener.actor.player.OnAnswerListener#sayYes()
+	 */
 	@Override
 	public void sayYes()
 	{
@@ -51,16 +74,28 @@ public class ReviveAnswerListener implements OnAnswerListener
 		}
 	}
 	
+	/**
+	 * Method sayNo.
+	 * @see lineage2.gameserver.listener.actor.player.OnAnswerListener#sayNo()
+	 */
 	@Override
 	public void sayNo()
 	{
 	}
 	
+	/**
+	 * Method getPower.
+	 * @return double
+	 */
 	public double getPower()
 	{
 		return _power;
 	}
 	
+	/**
+	 * Method isForPet.
+	 * @return boolean
+	 */
 	public boolean isForPet()
 	{
 		return _forPet;

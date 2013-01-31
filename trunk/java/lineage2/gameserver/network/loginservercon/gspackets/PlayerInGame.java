@@ -14,15 +14,29 @@ package lineage2.gameserver.network.loginservercon.gspackets;
 
 import lineage2.gameserver.network.loginservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PlayerInGame extends SendablePacket
 {
+	/**
+	 * Field account.
+	 */
 	private final String account;
 	
+	/**
+	 * Constructor for PlayerInGame.
+	 * @param account String
+	 */
 	public PlayerInGame(String account)
 	{
 		this.account = account;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

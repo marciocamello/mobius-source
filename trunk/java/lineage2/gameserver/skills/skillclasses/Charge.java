@@ -25,12 +25,29 @@ import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.stats.Formulas.AttackInfo;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Charge extends Skill
 {
+	/**
+	 * Field MAX_CHARGE. (value is 10)
+	 */
 	public static final int MAX_CHARGE = 10;
+	/**
+	 * Field _charges.
+	 */
 	private final int _charges;
+	/**
+	 * Field _fullCharge.
+	 */
 	private final boolean _fullCharge;
 	
+	/**
+	 * Constructor for Charge.
+	 * @param set StatsSet
+	 */
 	public Charge(StatsSet set)
 	{
 		super(set);
@@ -38,6 +55,15 @@ public class Charge extends Skill
 		_fullCharge = set.getBool("fullCharge", false);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(final Creature activeChar, final Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -58,6 +84,11 @@ public class Charge extends Skill
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
@@ -98,6 +129,11 @@ public class Charge extends Skill
 		chargePlayer((Player) activeChar, getId());
 	}
 	
+	/**
+	 * Method chargePlayer.
+	 * @param player Player
+	 * @param skillId Integer
+	 */
 	public void chargePlayer(Player player, Integer skillId)
 	{
 		if (player.getIncreasedForce() >= _charges)

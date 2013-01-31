@@ -15,7 +15,15 @@ package lineage2.gameserver.listener.actor.player;
 import lineage2.gameserver.listener.PlayerListener;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnPlayerPartyInviteListener extends PlayerListener
 {
+	/**
+	 * Method onPartyInvite.
+	 * @param player Player
+	 */
 	public void onPartyInvite(Player player);
 }

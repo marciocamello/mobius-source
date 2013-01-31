@@ -39,25 +39,63 @@ import lineage2.gameserver.utils.Util;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class VoteManager extends Functions implements IVoicedCommandHandler, ScriptFile
 {
+	/**
+	 * @author Mobius
+	 */
 	private static class Vote
 	{
+		/**
+		 * Constructor for Vote.
+		 */
 		public Vote()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Field active.
+		 */
 		public boolean active;
+		/**
+		 * Field name.
+		 */
 		public String name;
+		/**
+		 * Field id.
+		 */
 		public int id;
+		/**
+		 * Field maxPerAccount.
+		 */
 		public int maxPerAccount;
+		/**
+		 * Field variants.
+		 */
 		public TreeMap<Integer, String> variants = new TreeMap<>();
+		/**
+		 * Field results.
+		 */
 		public Map<String, Integer[]> results = new HashMap<>();
 	}
 	
+	/**
+	 * Field VoteList.
+	 */
 	private static Map<Integer, Vote> VoteList = new HashMap<>();
 	
+	/**
+	 * Method vote.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param args String
+	 * @return boolean
+	 */
 	@SuppressWarnings("unchecked")
 	private boolean vote(String command, Player activeChar, String args)
 	{
@@ -153,6 +191,10 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 		return true;
 	}
 	
+	/**
+	 * Method shuffle.
+	 * @param array Entry<Integer,String>[]
+	 */
 	private static void shuffle(Entry<Integer, String>[] array)
 	{
 		int j;
@@ -166,6 +208,9 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 		}
 	}
 	
+	/**
+	 * Method load.
+	 */
 	public static void load()
 	{
 		VoteList.clear();
@@ -235,17 +280,31 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 		}
 	}
 	
+	/**
+	 * Field _commandList.
+	 */
 	private final String[] _commandList = new String[]
 	{
 		"vote"
 	};
 	
+	/**
+	 * Method getVoicedCommandList.
+	 * @return String[] * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
+	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{
 		return _commandList;
 	}
 	
+	/**
+	 * Method useVoicedCommand.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param args String
+	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String args)
 	{
@@ -256,6 +315,10 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 		return false;
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -263,11 +326,19 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 		load();
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

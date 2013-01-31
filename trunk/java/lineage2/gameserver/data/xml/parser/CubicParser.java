@@ -28,32 +28,59 @@ import lineage2.gameserver.templates.CubicTemplate;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class CubicParser extends AbstractFileParser<CubicHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static CubicParser _instance = new CubicParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return CubicParser
+	 */
 	public static CubicParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for CubicParser.
+	 */
 	protected CubicParser()
 	{
 		super(CubicHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/other/cubics.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "cubics.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

@@ -14,18 +14,34 @@ package lineage2.gameserver.model.items;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PcFreight extends Warehouse
 {
+	/**
+	 * Constructor for PcFreight.
+	 * @param player Player
+	 */
 	public PcFreight(Player player)
 	{
 		super(player.getObjectId());
 	}
 	
+	/**
+	 * Constructor for PcFreight.
+	 * @param objectId int
+	 */
 	public PcFreight(int objectId)
 	{
 		super(objectId);
 	}
 	
+	/**
+	 * Method getItemLocation.
+	 * @return ItemInstance.ItemLocation
+	 */
 	@Override
 	public ItemInstance.ItemLocation getItemLocation()
 	{

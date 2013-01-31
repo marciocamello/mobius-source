@@ -20,8 +20,15 @@ import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EssagirWarriors extends DefaultAI
 {
+	/**
+	 * Field SMP_COORDS.
+	 */
 	private final static int[][] SMP_COORDS =
 	{
 		{
@@ -65,10 +72,23 @@ public class EssagirWarriors extends DefaultAI
 			-3068
 		}
 	};
+	/**
+	 * Field SAY_RAFF. (value is 12000)
+	 */
 	private static final int SAY_RAFF = 12000;
+	/**
+	 * Field currentState.
+	 */
 	private int currentState;
+	/**
+	 * Field lastSayTimer.
+	 */
 	private long lastSayTimer = 0;
 	
+	/**
+	 * Constructor for EssagirWarriors.
+	 * @param actor NpcInstance
+	 */
 	public EssagirWarriors(NpcInstance actor)
 	{
 		super(actor);
@@ -76,6 +96,10 @@ public class EssagirWarriors extends DefaultAI
 		lastSayTimer = 0;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -106,12 +130,20 @@ public class EssagirWarriors extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

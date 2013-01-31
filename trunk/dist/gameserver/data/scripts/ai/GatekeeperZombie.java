@@ -20,14 +20,27 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GatekeeperZombie extends Mystic
 {
+	/**
+	 * Constructor for GatekeeperZombie.
+	 * @param actor NpcInstance
+	 */
 	public GatekeeperZombie(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{
@@ -64,6 +77,10 @@ public class GatekeeperZombie extends Mystic
 		return true;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

@@ -29,16 +29,29 @@ import lineage2.gameserver.utils.Log;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExReceivePost extends L2GameClientPacket
 {
+	/**
+	 * Field postId.
+	 */
 	private int postId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		postId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

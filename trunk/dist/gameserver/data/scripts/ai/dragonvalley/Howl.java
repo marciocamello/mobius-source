@@ -15,8 +15,16 @@ package ai.dragonvalley;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Howl extends Patrollers
 {
+	/**
+	 * Constructor for Howl.
+	 * @param actor NpcInstance
+	 */
 	public Howl(NpcInstance actor)
 	{
 		super(actor);

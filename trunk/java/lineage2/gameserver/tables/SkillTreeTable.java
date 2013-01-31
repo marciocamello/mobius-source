@@ -27,22 +27,69 @@ import lineage2.gameserver.model.base.EnchantSkillLearn;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SkillTreeTable
 {
+	/**
+	 * Field NORMAL_ENCHANT_COST_MULTIPLIER. (value is 1)
+	 */
 	public static final int NORMAL_ENCHANT_COST_MULTIPLIER = 1;
+	/**
+	 * Field SAFE_ENCHANT_COST_MULTIPLIER. (value is 5)
+	 */
 	public static final int SAFE_ENCHANT_COST_MULTIPLIER = 5;
+	/**
+	 * Field NORMAL_ENCHANT_BOOK. (value is 6622)
+	 */
 	public static final int NORMAL_ENCHANT_BOOK = 6622;
+	/**
+	 * Field SAFE_ENCHANT_BOOK. (value is 9627)
+	 */
 	public static final int SAFE_ENCHANT_BOOK = 9627;
+	/**
+	 * Field CHANGE_ENCHANT_BOOK. (value is 9626)
+	 */
 	public static final int CHANGE_ENCHANT_BOOK = 9626;
+	/**
+	 * Field UNTRAIN_ENCHANT_BOOK. (value is 9625)
+	 */
 	public static final int UNTRAIN_ENCHANT_BOOK = 9625;
+	/**
+	 * Field NEW_ENCHANT_BOOK. (value is 30297)
+	 */
 	public static final int NEW_ENCHANT_BOOK = 30297;
+	/**
+	 * Field NEW_SAFE_ENCHANT_BOOK. (value is 30298)
+	 */
 	public static final int NEW_SAFE_ENCHANT_BOOK = 30298;
+	/**
+	 * Field NEW_CHANGE_ENCHANT_BOOK. (value is 30299)
+	 */
 	public static final int NEW_CHANGE_ENCHANT_BOOK = 30299;
+	/**
+	 * Field UNTRAIN_NEW_ENCHANT_BOOK. (value is 30300)
+	 */
 	public static final int UNTRAIN_NEW_ENCHANT_BOOK = 30300;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SkillTreeTable.class);
+	/**
+	 * Field _instance.
+	 */
 	private static SkillTreeTable _instance;
+	/**
+	 * Field _enchant.
+	 */
 	public static Map<Integer, List<EnchantSkillLearn>> _enchant = new ConcurrentHashMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return SkillTreeTable
+	 */
 	public static SkillTreeTable getInstance()
 	{
 		if (_instance == null)
@@ -52,11 +99,19 @@ public class SkillTreeTable
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for SkillTreeTable.
+	 */
 	private SkillTreeTable()
 	{
 		_log.info("SkillTreeTable: Loaded " + _enchant.size() + " enchanted skills.");
 	}
 	
+	/**
+	 * Method checkSkill.
+	 * @param player Player
+	 * @param skill Skill
+	 */
 	public static void checkSkill(Player player, Skill skill)
 	{
 		SkillLearn learn = SkillAcquireHolder.getInstance().getSkillLearn(player, skill.getId(), levelWithoutEnchant(skill), AcquireType.NORMAL);
@@ -92,11 +147,21 @@ public class SkillTreeTable
 		}
 	}
 	
+	/**
+	 * Method levelWithoutEnchant.
+	 * @param skill Skill
+	 * @return int
+	 */
 	private static int levelWithoutEnchant(Skill skill)
 	{
 		return skill.getDisplayLevel() > 100 ? skill.getBaseLevel() : skill.getLevel();
 	}
 	
+	/**
+	 * Method getFirstEnchantsForSkill.
+	 * @param skillid int
+	 * @return List<EnchantSkillLearn>
+	 */
 	public static List<EnchantSkillLearn> getFirstEnchantsForSkill(int skillid)
 	{
 		List<EnchantSkillLearn> result = new ArrayList<>();
@@ -115,6 +180,11 @@ public class SkillTreeTable
 		return result;
 	}
 	
+	/**
+	 * Method isEnchantable.
+	 * @param skill Skill
+	 * @return int
+	 */
 	public static int isEnchantable(Skill skill)
 	{
 		List<EnchantSkillLearn> enchants = _enchant.get(skill.getId());
@@ -132,6 +202,12 @@ public class SkillTreeTable
 		return 0;
 	}
 	
+	/**
+	 * Method getEnchantsForChange.
+	 * @param skillid int
+	 * @param level int
+	 * @return List<EnchantSkillLearn>
+	 */
 	public static List<EnchantSkillLearn> getEnchantsForChange(int skillid, int level)
 	{
 		List<EnchantSkillLearn> result = new ArrayList<>();
@@ -150,6 +226,12 @@ public class SkillTreeTable
 		return result;
 	}
 	
+	/**
+	 * Method getSkillEnchant.
+	 * @param skillid int
+	 * @param level int
+	 * @return EnchantSkillLearn
+	 */
 	public static EnchantSkillLearn getSkillEnchant(int skillid, int level)
 	{
 		List<EnchantSkillLearn> enchants = _enchant.get(skillid);
@@ -167,6 +249,13 @@ public class SkillTreeTable
 		return null;
 	}
 	
+	/**
+	 * Method convertEnchantLevel.
+	 * @param baseLevel int
+	 * @param level int
+	 * @param enchantlevels int
+	 * @return int
+	 */
 	public static int convertEnchantLevel(int baseLevel, int level, int enchantlevels)
 	{
 		if (level < 100)
@@ -176,6 +265,9 @@ public class SkillTreeTable
 		return baseLevel + ((((level - (level % 100)) / 100) - 1) * enchantlevels) + (level % 100);
 	}
 	
+	/**
+	 * Method unload.
+	 */
 	public static void unload()
 	{
 		if (_instance != null)

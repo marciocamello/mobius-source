@@ -17,8 +17,17 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.etcitems.EnchantScrollInfo;
 import lineage2.gameserver.model.items.etcitems.EnchantScrollTarget;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class AbstractEnchantPacket extends L2GameClientPacket
 {
+	/**
+	 * Method isValidPlayer.
+	 * @param player Player
+	 * @return boolean
+	 */
 	protected boolean isValidPlayer(Player player)
 	{
 		if (player.isActionsDisabled())
@@ -36,6 +45,12 @@ public abstract class AbstractEnchantPacket extends L2GameClientPacket
 		return true;
 	}
 	
+	/**
+	 * Method checkItem.
+	 * @param item ItemInstance
+	 * @param esi EnchantScrollInfo
+	 * @return boolean
+	 */
 	protected boolean checkItem(ItemInstance item, EnchantScrollInfo esi)
 	{
 		if (item.isStackable())

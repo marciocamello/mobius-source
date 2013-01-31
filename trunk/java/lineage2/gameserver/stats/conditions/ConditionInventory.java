@@ -14,15 +14,31 @@ package lineage2.gameserver.stats.conditions;
 
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class ConditionInventory extends Condition
 {
+	/**
+	 * Field _slot.
+	 */
 	protected final int _slot;
 	
+	/**
+	 * Constructor for ConditionInventory.
+	 * @param slot int
+	 */
 	public ConditionInventory(int slot)
 	{
 		_slot = slot;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected abstract boolean testImpl(Env env);
 }

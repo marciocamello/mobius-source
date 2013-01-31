@@ -23,13 +23,26 @@ import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ManaDam extends Skill
 {
+	/**
+	 * Constructor for ManaDam.
+	 * @param set StatsSet
+	 */
 	public ManaDam(StatsSet set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

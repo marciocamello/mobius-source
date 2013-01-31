@@ -17,11 +17,26 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.LockType;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectLockInventory extends Effect
 {
+	/**
+	 * Field _lockType.
+	 */
 	private final LockType _lockType;
+	/**
+	 * Field _lockItems.
+	 */
 	private final int[] _lockItems;
 	
+	/**
+	 * Constructor for EffectLockInventory.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectLockInventory(Env env, EffectTemplate template)
 	{
 		super(env, template);
@@ -29,6 +44,9 @@ public class EffectLockInventory extends Effect
 		_lockItems = template.getParam().getIntegerArray("lockItems");
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -37,6 +55,9 @@ public class EffectLockInventory extends Effect
 		player.getInventory().lockItems(_lockType, _lockItems);
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -45,6 +66,10 @@ public class EffectLockInventory extends Effect
 		player.getInventory().unlock();
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean onActionTime()
 	{

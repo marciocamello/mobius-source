@@ -12,59 +12,110 @@
  */
 package lineage2.commons.geometry;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class AbstractShape implements Shape
 {
+	/**
+	 * Field max.
+	 */
 	protected final Point3D max = new Point3D();
+	/**
+	 * Field min.
+	 */
 	protected final Point3D min = new Point3D();
 	
+	/**
+	 * Method isInside.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return boolean * @see lineage2.commons.geometry.Shape#isInside(int, int, int)
+	 */
 	@Override
 	public boolean isInside(int x, int y, int z)
 	{
 		return (min.z <= z) && (max.z >= z) && (isInside(x, y));
 	}
 	
+	/**
+	 * Method getXmax.
+	 * @return int * @see lineage2.commons.geometry.Shape#getXmax()
+	 */
 	@Override
 	public int getXmax()
 	{
 		return max.x;
 	}
 	
+	/**
+	 * Method getXmin.
+	 * @return int * @see lineage2.commons.geometry.Shape#getXmin()
+	 */
 	@Override
 	public int getXmin()
 	{
 		return min.x;
 	}
 	
+	/**
+	 * Method getYmax.
+	 * @return int * @see lineage2.commons.geometry.Shape#getYmax()
+	 */
 	@Override
 	public int getYmax()
 	{
 		return max.y;
 	}
 	
+	/**
+	 * Method getYmin.
+	 * @return int * @see lineage2.commons.geometry.Shape#getYmin()
+	 */
 	@Override
 	public int getYmin()
 	{
 		return min.y;
 	}
 	
+	/**
+	 * Method setZmax.
+	 * @param z int
+	 * @return AbstractShape
+	 */
 	public AbstractShape setZmax(int z)
 	{
 		max.z = z;
 		return this;
 	}
 	
+	/**
+	 * Method setZmin.
+	 * @param z int
+	 * @return AbstractShape
+	 */
 	public AbstractShape setZmin(int z)
 	{
 		min.z = z;
 		return this;
 	}
 	
+	/**
+	 * Method getZmax.
+	 * @return int * @see lineage2.commons.geometry.Shape#getZmax()
+	 */
 	@Override
 	public int getZmax()
 	{
 		return max.z;
 	}
 	
+	/**
+	 * Method getZmin.
+	 * @return int * @see lineage2.commons.geometry.Shape#getZmin()
+	 */
 	@Override
 	public int getZmin()
 	{

@@ -22,13 +22,33 @@ import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.model.items.Warehouse.ItemClassComparator;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PrivateStoreManageListBuy extends L2GameServerPacket
 {
+	/**
+	 * Field _buyerId.
+	 */
 	private final int _buyerId;
+	/**
+	 * Field _adena.
+	 */
 	private final long _adena;
+	/**
+	 * Field _buyList0.
+	 */
 	private final List<TradeItem> _buyList0;
+	/**
+	 * Field _buyList.
+	 */
 	private final List<TradeItem> _buyList;
 	
+	/**
+	 * Constructor for PrivateStoreManageListBuy.
+	 * @param buyer Player
+	 */
 	public PrivateStoreManageListBuy(Player buyer)
 	{
 		_buyerId = buyer.getObjectId();
@@ -48,6 +68,9 @@ public class PrivateStoreManageListBuy extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

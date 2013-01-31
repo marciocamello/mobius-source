@@ -30,38 +30,70 @@ import lineage2.gameserver.templates.item.WeaponTemplate;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class WeaponItemParser extends StatParser<ItemHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final WeaponItemParser _instance = new WeaponItemParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return WeaponItemParser
+	 */
 	public static WeaponItemParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for WeaponItemParser.
+	 */
 	protected WeaponItemParser()
 	{
 		super(ItemHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/stats/items/weapon/");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "item.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement org.dom4j.Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(org.dom4j.Element rootElement) throws Exception
 	{
@@ -217,6 +249,11 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 		}
 	}
 	
+	/**
+	 * Method getTableValue.
+	 * @param name String
+	 * @return Object
+	 */
 	@Override
 	protected Object getTableValue(String name)
 	{

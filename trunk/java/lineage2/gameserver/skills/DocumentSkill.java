@@ -33,29 +33,73 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class DocumentSkill extends DocumentBase
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(DocumentSkill.class);
 	
+	/**
+	 * @author Mobius
+	 */
 	public class Skill
 	{
+		/**
+		 * Field id.
+		 */
 		public int id;
+		/**
+		 * Field name.
+		 */
 		public String name;
+		/**
+		 * Field sets.
+		 */
 		public StatsSet[] sets;
+		/**
+		 * Field currentLevel.
+		 */
 		public int currentLevel;
+		/**
+		 * Field skills.
+		 */
 		public List<lineage2.gameserver.model.Skill> skills = new ArrayList<>();
+		/**
+		 * Field currentSkills.
+		 */
 		public List<lineage2.gameserver.model.Skill> currentSkills = new ArrayList<>();
 	}
 	
+	/**
+	 * Field currentSkill.
+	 */
 	private Skill currentSkill;
+	/**
+	 * Field usedTables.
+	 */
 	private final Set<String> usedTables = new HashSet<>();
+	/**
+	 * Field skillsInFile.
+	 */
 	private final List<lineage2.gameserver.model.Skill> skillsInFile = new LinkedList<>();
 	
+	/**
+	 * Constructor for DocumentSkill.
+	 * @param file File
+	 */
 	DocumentSkill(File file)
 	{
 		super(file);
 	}
 	
+	/**
+	 * Method resetTable.
+	 */
 	@Override
 	protected void resetTable()
 	{
@@ -76,16 +120,29 @@ public final class DocumentSkill extends DocumentBase
 		super.resetTable();
 	}
 	
+	/**
+	 * Method setCurrentSkill.
+	 * @param skill Skill
+	 */
 	private void setCurrentSkill(Skill skill)
 	{
 		currentSkill = skill;
 	}
 	
+	/**
+	 * Method getSkills.
+	 * @return List<lineage2.gameserver.model.Skill>
+	 */
 	protected List<lineage2.gameserver.model.Skill> getSkills()
 	{
 		return skillsInFile;
 	}
 	
+	/**
+	 * Method getTableValue.
+	 * @param name String
+	 * @return Object
+	 */
 	@Override
 	protected Object getTableValue(String name)
 	{
@@ -106,6 +163,12 @@ public final class DocumentSkill extends DocumentBase
 		}
 	}
 	
+	/**
+	 * Method getTableValue.
+	 * @param name String
+	 * @param idx int
+	 * @return Object
+	 */
 	@Override
 	protected Object getTableValue(String name, int idx)
 	{
@@ -127,6 +190,10 @@ public final class DocumentSkill extends DocumentBase
 		}
 	}
 	
+	/**
+	 * Method parseDocument.
+	 * @param doc Document
+	 */
 	@Override
 	protected void parseDocument(Document doc)
 	{
@@ -154,6 +221,10 @@ public final class DocumentSkill extends DocumentBase
 		}
 	}
 	
+	/**
+	 * Method parseSkill.
+	 * @param n Node
+	 */
 	protected void parseSkill(Node n)
 	{
 		NamedNodeMap attrs = n.getAttributes();
@@ -317,6 +388,12 @@ public final class DocumentSkill extends DocumentBase
 		}
 	}
 	
+	/**
+	 * Method fillTableToSize.
+	 * @param table Object[]
+	 * @param size int
+	 * @return Object[]
+	 */
 	private Object[] fillTableToSize(Object[] table, int size)
 	{
 		if (table.length < size)
@@ -335,6 +412,9 @@ public final class DocumentSkill extends DocumentBase
 		return table;
 	}
 	
+	/**
+	 * Method makeSkills.
+	 */
 	private void makeSkills()
 	{
 		currentSkill.currentSkills = new ArrayList<>(currentSkill.sets.length);

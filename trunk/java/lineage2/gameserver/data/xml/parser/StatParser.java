@@ -45,13 +45,26 @@ import lineage2.gameserver.templates.item.WeaponTemplate;
 import org.dom4j.Attribute;
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class StatParser<H extends AbstractHolder> extends AbstractDirParser<H>
 {
+	/**
+	 * Constructor for StatParser.
+	 * @param holder H
+	 */
 	protected StatParser(H holder)
 	{
 		super(holder);
 	}
 	
+	/**
+	 * Method parseFirstCond.
+	 * @param sub Element
+	 * @return Condition
+	 */
 	protected Condition parseFirstCond(Element sub)
 	{
 		List<Element> e = sub.elements();
@@ -63,6 +76,11 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		return parseCond(element);
 	}
 	
+	/**
+	 * Method parseCond.
+	 * @param element Element
+	 * @return Condition
+	 */
 	protected Condition parseCond(Element element)
 	{
 		String name = element.getName();
@@ -97,6 +115,11 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		return null;
 	}
 	
+	/**
+	 * Method parseLogicAnd.
+	 * @param n Element
+	 * @return Condition
+	 */
 	protected Condition parseLogicAnd(Element n)
 	{
 		ConditionLogicAnd cond = new ConditionLogicAnd();
@@ -112,6 +135,11 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		return cond;
 	}
 	
+	/**
+	 * Method parseLogicOr.
+	 * @param n Element
+	 * @return Condition
+	 */
 	protected Condition parseLogicOr(Element n)
 	{
 		ConditionLogicOr cond = new ConditionLogicOr();
@@ -127,6 +155,11 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		return cond;
 	}
 	
+	/**
+	 * Method parseLogicNot.
+	 * @param n Element
+	 * @return Condition
+	 */
 	protected Condition parseLogicNot(Element n)
 	{
 		for (Object element : n.elements())
@@ -137,6 +170,11 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		return null;
 	}
 	
+	/**
+	 * Method parseTargetCondition.
+	 * @param element Element
+	 * @return Condition
+	 */
 	protected Condition parseTargetCondition(Element element)
 	{
 		Condition cond = null;
@@ -153,6 +191,11 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		return cond;
 	}
 	
+	/**
+	 * Method parseZoneCondition.
+	 * @param element Element
+	 * @return Condition
+	 */
 	protected Condition parseZoneCondition(Element element)
 	{
 		Condition cond = null;
@@ -169,6 +212,11 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		return cond;
 	}
 	
+	/**
+	 * Method parsePlayerCondition.
+	 * @param element Element
+	 * @return Condition
+	 */
 	protected Condition parsePlayerCondition(Element element)
 	{
 		Condition cond = null;
@@ -207,6 +255,11 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		return cond;
 	}
 	
+	/**
+	 * Method parseUsingCondition.
+	 * @param element Element
+	 * @return Condition
+	 */
 	protected Condition parseUsingCondition(Element element)
 	{
 		Condition cond = null;
@@ -266,6 +319,12 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		return cond;
 	}
 	
+	/**
+	 * Method joinAnd.
+	 * @param cond Condition
+	 * @param c Condition
+	 * @return Condition
+	 */
 	protected Condition joinAnd(Condition cond, Condition c)
 	{
 		if (cond == null)
@@ -283,6 +342,11 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		return and;
 	}
 	
+	/**
+	 * Method parseFor.
+	 * @param forElement Element
+	 * @param template StatTemplate
+	 */
 	protected void parseFor(Element forElement, StatTemplate template)
 	{
 		for (Iterator<Element> iterator = forElement.elementIterator(); iterator.hasNext();)
@@ -316,6 +380,11 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		}
 	}
 	
+	/**
+	 * Method parseTriggers.
+	 * @param f Element
+	 * @param triggerable StatTemplate
+	 */
 	protected void parseTriggers(Element f, StatTemplate triggerable)
 	{
 		for (Iterator<Element> iterator = f.elementIterator(); iterator.hasNext();)
@@ -339,6 +408,12 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		}
 	}
 	
+	/**
+	 * Method attachFunc.
+	 * @param n Element
+	 * @param template StatTemplate
+	 * @param name String
+	 */
 	protected void attachFunc(Element n, StatTemplate template, String name)
 	{
 		Stats stat = Stats.valueOfXml(n.attributeValue("stat"));
@@ -353,6 +428,11 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		template.attachFunc(new FuncTemplate(applyCond, name, stat, ord, val));
 	}
 	
+	/**
+	 * Method parseNumber.
+	 * @param value String
+	 * @return Number
+	 */
 	protected Number parseNumber(String value)
 	{
 		if (value.charAt(0) == '#')
@@ -379,5 +459,10 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		}
 	}
 	
+	/**
+	 * Method getTableValue.
+	 * @param name String
+	 * @return Object
+	 */
 	protected abstract Object getTableValue(String name);
 }

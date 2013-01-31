@@ -15,8 +15,16 @@ package ai.talkingisland;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Rubentis extends RubentisSubAI
 {
+	/**
+	 * Constructor for Rubentis.
+	 * @param actor NpcInstance
+	 */
 	public Rubentis(NpcInstance actor)
 	{
 		super(actor);

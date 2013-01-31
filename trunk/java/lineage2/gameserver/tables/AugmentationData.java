@@ -36,11 +36,25 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AugmentationData
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(AugmentationData.class);
+	/**
+	 * Field _Instance.
+	 */
 	private static AugmentationData _Instance;
 	
+	/**
+	 * Method getInstance.
+	 * @return AugmentationData
+	 */
 	public static AugmentationData getInstance()
 	{
 		if (_Instance == null)
@@ -50,40 +64,142 @@ public class AugmentationData
 		return _Instance;
 	}
 	
+	/**
+	 * Field STAT_BLOCKSIZE. (value is 3640)
+	 */
 	private static final int STAT_BLOCKSIZE = 3640;
+	/**
+	 * Field STAT_SUBBLOCKSIZE. (value is 91)
+	 */
 	private static final int STAT_SUBBLOCKSIZE = 91;
+	/**
+	 * Field STAT_NUM. (value is 13)
+	 */
 	private static final int STAT_NUM = 13;
+	/**
+	 * Field STATS1_MAP.
+	 */
 	private static final byte[] STATS1_MAP = new byte[STAT_SUBBLOCKSIZE];
+	/**
+	 * Field STATS2_MAP.
+	 */
 	private static final byte[] STATS2_MAP = new byte[STAT_SUBBLOCKSIZE];
+	/**
+	 * Field BLUE_START. (value is 14561)
+	 */
 	private static final int BLUE_START = 14561;
+	/**
+	 * Field SKILLS_BLOCKSIZE. (value is 178)
+	 */
 	private static final int SKILLS_BLOCKSIZE = 178;
+	/**
+	 * Field BASESTAT_STR. (value is 16341)
+	 */
 	private static final int BASESTAT_STR = 16341;
+	/**
+	 * Field BASESTAT_MEN. (value is 16344)
+	 */
 	private static final int BASESTAT_MEN = 16344;
+	/**
+	 * Field ACC_START. (value is 16669)
+	 */
 	private static final int ACC_START = 16669;
+	/**
+	 * Field ACC_BLOCKS_NUM. (value is 10)
+	 */
 	private static final int ACC_BLOCKS_NUM = 10;
+	/**
+	 * Field ACC_STAT_SUBBLOCKSIZE. (value is 21)
+	 */
 	private static final int ACC_STAT_SUBBLOCKSIZE = 21;
+	/**
+	 * Field ACC_STAT_NUM. (value is 6)
+	 */
 	private static final int ACC_STAT_NUM = 6;
+	/**
+	 * Field ACC_RING_START.
+	 */
 	private static final int ACC_RING_START = ACC_START;
+	/**
+	 * Field ACC_RING_SKILLS. (value is 18)
+	 */
 	private static final int ACC_RING_SKILLS = 18;
+	/**
+	 * Field ACC_RING_BLOCKSIZE.
+	 */
 	private static final int ACC_RING_BLOCKSIZE = ACC_RING_SKILLS + (4 * ACC_STAT_SUBBLOCKSIZE);
+	/**
+	 * Field ACC_RING_END.
+	 */
 	private static final int ACC_RING_END = (ACC_RING_START + (ACC_BLOCKS_NUM * ACC_RING_BLOCKSIZE)) - 1;
+	/**
+	 * Field ACC_EAR_START.
+	 */
 	private static final int ACC_EAR_START = ACC_RING_END + 1;
+	/**
+	 * Field ACC_EAR_SKILLS. (value is 18)
+	 */
 	private static final int ACC_EAR_SKILLS = 18;
+	/**
+	 * Field ACC_EAR_BLOCKSIZE.
+	 */
 	private static final int ACC_EAR_BLOCKSIZE = ACC_EAR_SKILLS + (4 * ACC_STAT_SUBBLOCKSIZE);
+	/**
+	 * Field ACC_EAR_END.
+	 */
 	private static final int ACC_EAR_END = (ACC_EAR_START + (ACC_BLOCKS_NUM * ACC_EAR_BLOCKSIZE)) - 1;
+	/**
+	 * Field ACC_NECK_START.
+	 */
 	private static final int ACC_NECK_START = ACC_EAR_END + 1;
+	/**
+	 * Field ACC_NECK_SKILLS. (value is 24)
+	 */
 	private static final int ACC_NECK_SKILLS = 24;
+	/**
+	 * Field ACC_NECK_BLOCKSIZE.
+	 */
 	private static final int ACC_NECK_BLOCKSIZE = ACC_NECK_SKILLS + (4 * ACC_STAT_SUBBLOCKSIZE);
+	/**
+	 * Field ACC_STATS1_MAP.
+	 */
 	private static final byte[] ACC_STATS1_MAP = new byte[ACC_STAT_SUBBLOCKSIZE];
+	/**
+	 * Field ACC_STATS2_MAP.
+	 */
 	private static final byte[] ACC_STATS2_MAP = new byte[ACC_STAT_SUBBLOCKSIZE];
+	/**
+	 * Field _augStats.
+	 */
 	private final List<?>[] _augStats = new ArrayList[4];
+	/**
+	 * Field _augAccStats.
+	 */
 	private final List<?>[] _augAccStats = new ArrayList[4];
+	/**
+	 * Field _blueSkills.
+	 */
 	private final List<?>[] _blueSkills = new ArrayList[10];
+	/**
+	 * Field _purpleSkills.
+	 */
 	private final List<?>[] _purpleSkills = new ArrayList[10];
+	/**
+	 * Field _redSkills.
+	 */
 	private final List<?>[] _redSkills = new ArrayList[10];
+	/**
+	 * Field _yellowSkills.
+	 */
 	private final List<?>[] _yellowSkills = new ArrayList[10];
+	/**
+	 * Field _allSkills.
+	 */
 	private final TIntObjectHashMap<TriggerInfo> _allSkills = new TIntObjectHashMap<>();
 	
+	/**
+	 * Constructor for AugmentationData.
+	 */
 	public AugmentationData()
 	{
 		_log.info("Initializing AugmentationData.");
@@ -140,14 +256,38 @@ public class AugmentationData
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class augmentationStat
 	{
+		/**
+		 * Field _stat.
+		 */
 		private final Stats _stat;
+		/**
+		 * Field _singleSize.
+		 */
 		private final int _singleSize;
+		/**
+		 * Field _combinedSize.
+		 */
 		private final int _combinedSize;
+		/**
+		 * Field _singleValues.
+		 */
 		private final double _singleValues[];
+		/**
+		 * Field _combinedValues.
+		 */
 		private final double _combinedValues[];
 		
+		/**
+		 * Constructor for augmentationStat.
+		 * @param stat Stats
+		 * @param sValues double[]
+		 * @param cValues double[]
+		 */
 		public augmentationStat(Stats stat, double sValues[], double cValues[])
 		{
 			_stat = stat;
@@ -157,16 +297,29 @@ public class AugmentationData
 			_combinedValues = cValues;
 		}
 		
+		/**
+		 * Method getSingleStatSize.
+		 * @return int
+		 */
 		public int getSingleStatSize()
 		{
 			return _singleSize;
 		}
 		
+		/**
+		 * Method getCombinedStatSize.
+		 * @return int
+		 */
 		public int getCombinedStatSize()
 		{
 			return _combinedSize;
 		}
 		
+		/**
+		 * Method getSingleStatValue.
+		 * @param i int
+		 * @return double
+		 */
 		public double getSingleStatValue(int i)
 		{
 			if ((i >= _singleSize) || (i < 0))
@@ -176,6 +329,11 @@ public class AugmentationData
 			return _singleValues[i];
 		}
 		
+		/**
+		 * Method getCombinedStatValue.
+		 * @param i int
+		 * @return double
+		 */
 		public double getCombinedStatValue(int i)
 		{
 			if ((i >= _combinedSize) || (i < 0))
@@ -185,12 +343,19 @@ public class AugmentationData
 			return _combinedValues[i];
 		}
 		
+		/**
+		 * Method getStat.
+		 * @return Stats
+		 */
 		public Stats getStat()
 		{
 			return _stat;
 		}
 	}
 	
+	/**
+	 * Method load.
+	 */
 	@SuppressWarnings("unchecked")
 	private final void load()
 	{
@@ -406,6 +571,13 @@ public class AugmentationData
 		}
 	}
 	
+	/**
+	 * Method generateRandomAugmentation.
+	 * @param lifeStoneLevel int
+	 * @param lifeStoneGrade LifeStoneGrade
+	 * @param bodyPart int
+	 * @return int
+	 */
 	public int generateRandomAugmentation(int lifeStoneLevel, LifeStoneGrade lifeStoneGrade, int bodyPart)
 	{
 		int lvl = (lifeStoneLevel - 46) / 3;
@@ -425,6 +597,12 @@ public class AugmentationData
 		}
 	}
 	
+	/**
+	 * Method generateRandomWeaponAugmentation.
+	 * @param lifeStoneLevel int
+	 * @param lifeStoneGrade LifeStoneGrade
+	 * @return int
+	 */
 	private int generateRandomWeaponAugmentation(int lifeStoneLevel, LifeStoneGrade lifeStoneGrade)
 	{
 		int stat12 = 0;
@@ -522,6 +700,12 @@ public class AugmentationData
 		return (stat34 << 16) + stat12;
 	}
 	
+	/**
+	 * Method generateRandomAccessoryAugmentation.
+	 * @param lifeStoneLevel int
+	 * @param bodyPart int
+	 * @return int
+	 */
 	private int generateRandomAccessoryAugmentation(int lifeStoneLevel, int bodyPart)
 	{
 		int stat12 = 0;

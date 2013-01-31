@@ -24,16 +24,29 @@ import lineage2.gameserver.network.serverpackets.ExMentorAdd;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestMenteeAdd extends L2GameClientPacket
 {
+	/**
+	 * Field _newMentee.
+	 */
 	private String _newMentee;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_newMentee = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -18,9 +18,19 @@ import lineage2.gameserver.model.entity.residence.ResidenceFunction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AgitDecoInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(AgitDecoInfo.class);
+	/**
+	 * Field _buff.
+	 */
 	private static int[] _buff =
 	{
 		0,
@@ -43,6 +53,9 @@ public class AgitDecoInfo extends L2GameServerPacket
 		2,
 		2
 	};
+	/**
+	 * Field _itCr8.
+	 */
 	private static int[] _itCr8 =
 	{
 		0,
@@ -50,16 +63,47 @@ public class AgitDecoInfo extends L2GameServerPacket
 		2,
 		2
 	};
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field hp_recovery.
+	 */
 	private final int hp_recovery;
+	/**
+	 * Field mp_recovery.
+	 */
 	private final int mp_recovery;
+	/**
+	 * Field exp_recovery.
+	 */
 	private final int exp_recovery;
+	/**
+	 * Field teleport.
+	 */
 	private final int teleport;
+	/**
+	 * Field curtains.
+	 */
 	private final int curtains;
+	/**
+	 * Field itemCreate.
+	 */
 	private final int itemCreate;
+	/**
+	 * Field support.
+	 */
 	private final int support;
+	/**
+	 * Field platform.
+	 */
 	private final int platform;
 	
+	/**
+	 * Constructor for AgitDecoInfo.
+	 * @param clanHall ClanHall
+	 */
 	public AgitDecoInfo(ClanHall clanHall)
 	{
 		_id = clanHall.getId();
@@ -73,6 +117,9 @@ public class AgitDecoInfo extends L2GameServerPacket
 		platform = clanHall.isFunctionActive(ResidenceFunction.PLATFORM) ? clanHall.getFunction(ResidenceFunction.PLATFORM).getLevel() : 0;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -97,6 +144,11 @@ public class AgitDecoInfo extends L2GameServerPacket
 		writeD(0);
 	}
 	
+	/**
+	 * Method getHpRecovery.
+	 * @param percent int
+	 * @return int
+	 */
 	private static int getHpRecovery(int percent)
 	{
 		switch (percent)
@@ -124,6 +176,11 @@ public class AgitDecoInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method getMpRecovery.
+	 * @param percent int
+	 * @return int
+	 */
 	private static int getMpRecovery(int percent)
 	{
 		switch (percent)
@@ -148,6 +205,11 @@ public class AgitDecoInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method getExpRecovery.
+	 * @param percent int
+	 * @return int
+	 */
 	private static int getExpRecovery(int percent)
 	{
 		switch (percent)

@@ -14,15 +14,46 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.tables.SkillTreeTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 {
+	/**
+	 * Field _unk.
+	 */
 	private final int _unk = 0;
+	/**
+	 * Field _skillId.
+	 */
 	private final int _skillId;
+	/**
+	 * Field _skillLvl.
+	 */
 	private final int _skillLvl;
+	/**
+	 * Field _sp.
+	 */
 	private final int _sp;
+	/**
+	 * Field _chance.
+	 */
 	private final int _chance;
+	/**
+	 * Field _adenaCount. Field _bookId.
+	 */
 	private final int _bookId, _adenaCount;
 	
+	/**
+	 * Constructor for ExEnchantSkillInfoDetail.
+	 * @param skillId int
+	 * @param skillLvl int
+	 * @param sp int
+	 * @param chance int
+	 * @param bookId int
+	 * @param adenaCount int
+	 */
 	public ExEnchantSkillInfoDetail(int skillId, int skillLvl, int sp, int chance, int bookId, int adenaCount)
 	{
 		_skillId = skillId;
@@ -33,6 +64,9 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 		_adenaCount = adenaCount;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -20,18 +20,51 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminCursedWeapons implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_cw_info.
+		 */
 		admin_cw_info,
+		/**
+		 * Field admin_cw_remove.
+		 */
 		admin_cw_remove,
+		/**
+		 * Field admin_cw_goto.
+		 */
 		admin_cw_goto,
+		/**
+		 * Field admin_cw_reload.
+		 */
 		admin_cw_reload,
+		/**
+		 * Field admin_cw_add.
+		 */
 		admin_cw_add,
+		/**
+		 * Field admin_cw_drop.
+		 */
 		admin_cw_drop
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -62,7 +95,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				}
 				if (cw == null)
 				{
-					activeChar.sendMessage("Неизвестный id");
+					activeChar.sendMessage("�?еизве�?тный id");
 					return false;
 				}
 				break;
@@ -152,6 +185,17 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				}
 				break;
 		}
+		/**
+		 * Method getAdminCommandEnum.
+		 * @return Enum[]
+		 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+		 */
+		
+		/**
+		 * Method getAdminCommandEnum.
+		 * @return Enum[]
+		 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+		 */
 		return true;
 	}
 	

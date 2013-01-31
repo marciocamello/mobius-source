@@ -25,8 +25,15 @@ import lineage2.gameserver.stats.funcs.FuncMul;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GilmoreAI extends Fighter
 {
+	/**
+	 * Field points_stage1.
+	 */
 	static final Location[] points_stage1 =
 	{
 		new Location(73195, 118483, -3722),
@@ -37,10 +44,16 @@ public class GilmoreAI extends Fighter
 		new Location(72463, 118401, -3694),
 		new Location(72912, 117895, -3723)
 	};
+	/**
+	 * Field points_stage2.
+	 */
 	static final Location[] points_stage2 =
 	{
 		new Location(73615, 117629, -3765)
 	};
+	/**
+	 * Field text_stage1.
+	 */
 	static final String[] text_stage1 =
 	{
 		"Text1",
@@ -51,28 +64,55 @@ public class GilmoreAI extends Fighter
 		"Text6",
 		"Text7"
 	};
+	/**
+	 * Field text_stage2.
+	 */
 	static final String[] text_stage2 =
 	{
 		"Готовы?",
-		"Начнем, нельзя терять ни минуты!"
+		"�?ачнем, нел�?з�? тер�?т�? ни минуты!"
 	};
+	/**
+	 * Field wait_timeout.
+	 */
 	private long wait_timeout = 0;
+	/**
+	 * Field wait.
+	 */
 	private boolean wait = false;
+	/**
+	 * Field index.
+	 */
 	private int index;
+	/**
+	 * Field step_stage2.
+	 */
 	private int step_stage2 = 1;
 	
+	/**
+	 * Constructor for GilmoreAI.
+	 * @param actor NpcInstance
+	 */
 	public GilmoreAI(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ATTACK_DELAY = 250;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -163,6 +203,10 @@ public class GilmoreAI extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method createNewTask.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean createNewTask()
 	{

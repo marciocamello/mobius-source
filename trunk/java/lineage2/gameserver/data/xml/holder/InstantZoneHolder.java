@@ -24,32 +24,66 @@ import lineage2.gameserver.templates.InstantZone;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class InstantZoneHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final InstantZoneHolder _instance = new InstantZoneHolder();
+	/**
+	 * Field _zones.
+	 */
 	private final IntObjectMap<InstantZone> _zones = new HashIntObjectMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return InstantZoneHolder
+	 */
 	public static InstantZoneHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addInstantZone.
+	 * @param zone InstantZone
+	 */
 	public void addInstantZone(InstantZone zone)
 	{
 		_zones.put(zone.getId(), zone);
 	}
 	
+	/**
+	 * Method getInstantZone.
+	 * @param id int
+	 * @return InstantZone
+	 */
 	public InstantZone getInstantZone(int id)
 	{
 		return _zones.get(id);
 	}
 	
+	/**
+	 * Method getResetReuseById.
+	 * @param id int
+	 * @return SchedulingPattern
+	 */
 	private SchedulingPattern getResetReuseById(int id)
 	{
 		InstantZone zone = getInstantZone(id);
 		return zone == null ? null : zone.getResetReuse();
 	}
 	
+	/**
+	 * Method getMinutesToNextEntrance.
+	 * @param id int
+	 * @param player Player
+	 * @return int
+	 */
 	public int getMinutesToNextEntrance(int id, Player player)
 	{
 		SchedulingPattern resetReuse = getResetReuseById(id);
@@ -85,6 +119,11 @@ public class InstantZoneHolder extends AbstractHolder
 		return (int) Math.max((resetReuse.next(time) - System.currentTimeMillis()) / 60000L, 0);
 	}
 	
+	/**
+	 * Method getSharedReuseInstanceIds.
+	 * @param id int
+	 * @return List<Integer>
+	 */
 	public List<Integer> getSharedReuseInstanceIds(int id)
 	{
 		if (getInstantZone(id).getSharedReuseGroup() < 1)
@@ -102,6 +141,11 @@ public class InstantZoneHolder extends AbstractHolder
 		return sharedInstanceIds;
 	}
 	
+	/**
+	 * Method getSharedReuseInstanceIdsByGroup.
+	 * @param groupId int
+	 * @return List<Integer>
+	 */
 	public List<Integer> getSharedReuseInstanceIdsByGroup(int groupId)
 	{
 		if (groupId < 1)
@@ -119,12 +163,19 @@ public class InstantZoneHolder extends AbstractHolder
 		return sharedInstanceIds;
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _zones.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

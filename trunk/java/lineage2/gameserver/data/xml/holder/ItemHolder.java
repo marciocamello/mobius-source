@@ -18,26 +18,53 @@ import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ItemHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final ItemHolder _instance = new ItemHolder();
+	/**
+	 * Field _items.
+	 */
 	private final TIntObjectHashMap<ItemTemplate> _items = new TIntObjectHashMap<>();
+	/**
+	 * Field _allTemplates.
+	 */
 	private ItemTemplate[] _allTemplates;
 	
+	/**
+	 * Method getInstance.
+	 * @return ItemHolder
+	 */
 	public static ItemHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for ItemHolder.
+	 */
 	private ItemHolder()
 	{
 	}
 	
+	/**
+	 * Method addItem.
+	 * @param template ItemTemplate
+	 */
 	public void addItem(ItemTemplate template)
 	{
 		_items.put(template.getItemId(), template);
 	}
 	
+	/**
+	 * Method buildFastLookupTable.
+	 */
 	private void buildFastLookupTable()
 	{
 		int highestId = 0;
@@ -56,6 +83,11 @@ public final class ItemHolder extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @param id int
+	 * @return ItemTemplate
+	 */
 	public ItemTemplate getTemplate(int id)
 	{
 		ItemTemplate item = ArrayUtils.valid(_allTemplates, id);
@@ -67,23 +99,37 @@ public final class ItemHolder extends AbstractHolder
 		return _allTemplates[id];
 	}
 	
+	/**
+	 * Method getAllTemplates.
+	 * @return ItemTemplate[]
+	 */
 	public ItemTemplate[] getAllTemplates()
 	{
 		return _allTemplates;
 	}
 	
+	/**
+	 * Method process.
+	 */
 	@Override
 	protected void process()
 	{
 		buildFastLookupTable();
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _items.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

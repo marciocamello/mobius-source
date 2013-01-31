@@ -25,38 +25,69 @@ import lineage2.gameserver.utils.Location;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class DoorParser extends AbstractDirParser<DoorHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final DoorParser _instance = new DoorParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return DoorParser
+	 */
 	public static DoorParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for DoorParser.
+	 */
 	protected DoorParser()
 	{
 		super(DoorHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/doors/");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "doors.dtd";
 	}
 	
+	/**
+	 * Method initBaseStats.
+	 * @return StatsSet
+	 */
 	private StatsSet initBaseStats()
 	{
 		StatsSet baseDat = new StatsSet();
@@ -87,6 +118,11 @@ public final class DoorParser extends AbstractDirParser<DoorHolder>
 		return baseDat;
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

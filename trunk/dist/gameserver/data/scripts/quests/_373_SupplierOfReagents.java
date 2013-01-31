@@ -829,7 +829,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 		{
 			htmltext = render_urn(st, null);
 		}
-		else if (event.startsWith("U"))
+		else if (event.length() > 0 && event.charAt(0) == 'U')
 		{
 			String[] s_event = event.split("_");
 			if (s_event[1].equals("M"))
@@ -902,7 +902,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 				}
 			}
 		}
-		else if (event.startsWith("x"))
+		else if (event.length() > 0 && event.charAt(0) == 'x')
 		{
 			String[] s_event = event.split("_");
 			int qty = Integer.valueOf(s_event[1]);

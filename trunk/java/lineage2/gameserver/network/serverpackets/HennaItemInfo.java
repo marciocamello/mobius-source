@@ -15,12 +15,30 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.Henna;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HennaItemInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _men. Field _wit. Field _int. Field _dex. Field _con. Field _str.
+	 */
 	private final int _str, _con, _dex, _int, _wit, _men;
+	/**
+	 * Field _adena.
+	 */
 	private final long _adena;
+	/**
+	 * Field _henna.
+	 */
 	private final Henna _henna;
 	
+	/**
+	 * Constructor for HennaItemInfo.
+	 * @param henna Henna
+	 * @param player Player
+	 */
 	public HennaItemInfo(Henna henna, Player player)
 	{
 		_henna = henna;
@@ -33,6 +51,9 @@ public class HennaItemInfo extends L2GameServerPacket
 		_men = player.getMEN();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

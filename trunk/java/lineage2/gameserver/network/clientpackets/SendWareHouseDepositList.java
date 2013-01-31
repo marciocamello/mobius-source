@@ -28,13 +28,32 @@ import lineage2.gameserver.utils.Log;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SendWareHouseDepositList extends L2GameClientPacket
 {
+	/**
+	 * Field _WAREHOUSE_FEE. (value is 30)
+	 */
 	private static final long _WAREHOUSE_FEE = 30;
+	/**
+	 * Field _count.
+	 */
 	private int _count;
+	/**
+	 * Field _items.
+	 */
 	private int[] _items;
+	/**
+	 * Field _itemQ.
+	 */
 	private long[] _itemQ;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -58,6 +77,9 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -25,13 +25,33 @@ import lineage2.gameserver.model.instances.MinionInstance;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.templates.npc.MinionData;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MinionList
 {
+	/**
+	 * Field _minionData.
+	 */
 	private final Set<MinionData> _minionData;
+	/**
+	 * Field _minions.
+	 */
 	private final Set<MinionInstance> _minions;
+	/**
+	 * Field lock.
+	 */
 	private final Lock lock;
+	/**
+	 * Field _master.
+	 */
 	private final MonsterInstance _master;
 	
+	/**
+	 * Constructor for MinionList.
+	 * @param master MonsterInstance
+	 */
 	public MinionList(MonsterInstance master)
 	{
 		_master = master;
@@ -41,6 +61,11 @@ public class MinionList
 		lock = new ReentrantLock();
 	}
 	
+	/**
+	 * Method addMinion.
+	 * @param m MinionData
+	 * @return boolean
+	 */
 	public boolean addMinion(MinionData m)
 	{
 		lock.lock();
@@ -54,6 +79,11 @@ public class MinionList
 		}
 	}
 	
+	/**
+	 * Method addMinion.
+	 * @param m MinionInstance
+	 * @return boolean
+	 */
 	public boolean addMinion(MinionInstance m)
 	{
 		lock.lock();
@@ -67,6 +97,10 @@ public class MinionList
 		}
 	}
 	
+	/**
+	 * Method hasAliveMinions.
+	 * @return boolean
+	 */
 	public boolean hasAliveMinions()
 	{
 		lock.lock();
@@ -87,11 +121,19 @@ public class MinionList
 		return false;
 	}
 	
+	/**
+	 * Method hasMinions.
+	 * @return boolean
+	 */
 	public boolean hasMinions()
 	{
 		return _minionData.size() > 0;
 	}
 	
+	/**
+	 * Method getAliveMinions.
+	 * @return List<MinionInstance>
+	 */
 	public List<MinionInstance> getAliveMinions()
 	{
 		List<MinionInstance> result = new ArrayList<>(_minions.size());
@@ -113,6 +155,9 @@ public class MinionList
 		return result;
 	}
 	
+	/**
+	 * Method spawnMinions.
+	 */
 	public void spawnMinions()
 	{
 		lock.lock();
@@ -152,6 +197,9 @@ public class MinionList
 		}
 	}
 	
+	/**
+	 * Method unspawnMinions.
+	 */
 	public void unspawnMinions()
 	{
 		lock.lock();
@@ -168,6 +216,9 @@ public class MinionList
 		}
 	}
 	
+	/**
+	 * Method deleteMinions.
+	 */
 	public void deleteMinions()
 	{
 		lock.lock();

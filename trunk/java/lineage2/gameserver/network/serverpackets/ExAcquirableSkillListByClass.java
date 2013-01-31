@@ -20,15 +20,29 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExAcquirableSkillListByClass extends L2GameServerPacket
 {
+	/**
+	 * Field allskills.
+	 */
 	private final Collection<SkillLearn> allskills;
 	
+	/**
+	 * Constructor for ExAcquirableSkillListByClass.
+	 * @param player Player
+	 */
 	public ExAcquirableSkillListByClass(Player player)
 	{
 		allskills = SkillAcquireHolder.getInstance().getAvailableAllSkills(player);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

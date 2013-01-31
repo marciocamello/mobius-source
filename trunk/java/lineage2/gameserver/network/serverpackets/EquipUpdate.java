@@ -15,17 +15,32 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.items.ItemInfo;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @Deprecated
 public class EquipUpdate extends L2GameServerPacket
 {
+	/**
+	 * Field _item.
+	 */
 	private final ItemInfo _item;
 	
+	/**
+	 * Constructor for EquipUpdate.
+	 * @param item ItemInstance
+	 * @param change int
+	 */
 	public EquipUpdate(ItemInstance item, int change)
 	{
 		_item = new ItemInfo(item);
 		_item.setLastChange(change);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

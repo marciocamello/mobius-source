@@ -22,16 +22,33 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.PositionUtils;
 import ai.residences.SiegeGuardFighter;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LidiaVonHellmann extends SiegeGuardFighter
 {
+	/**
+	 * Field DRAIN_SKILL.
+	 */
 	private static final Skill DRAIN_SKILL = SkillTable.getInstance().getInfo(4999, 1);
+	/**
+	 * Field DAMAGE_SKILL.
+	 */
 	private static final Skill DAMAGE_SKILL = SkillTable.getInstance().getInfo(4998, 1);
 	
+	/**
+	 * Constructor for LidiaVonHellmann.
+	 * @param actor NpcInstance
+	 */
 	public LidiaVonHellmann(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	public void onEvtSpawn()
 	{
@@ -39,6 +56,10 @@ public class LidiaVonHellmann extends SiegeGuardFighter
 		Functions.npcShout(getActor(), NpcString.HMM_THOSE_WHO_ARE_NOT_OF_THE_BLOODLINE_ARE_COMING_THIS_WAY_TO_TAKE_OVER_THE_CASTLE__HUMPH__THE_BITTER_GRUDGES_OF_THE_DEAD);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onEvtDead(Creature killer)
 	{
@@ -46,6 +67,11 @@ public class LidiaVonHellmann extends SiegeGuardFighter
 		Functions.npcShout(getActor(), NpcString.GRARR_FOR_THE_NEXT_2_MINUTES_OR_SO_THE_GAME_ARENA_ARE_WILL_BE_CLEANED);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	public void onEvtAttacked(Creature attacker, int damage)
 	{

@@ -17,17 +17,34 @@ import java.util.Collection;
 import lineage2.gameserver.model.entity.boat.Shuttle;
 import lineage2.gameserver.templates.ShuttleTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShuttleInfoPacket extends L2GameServerPacket
 {
+	/**
+	 * Field _shuttle.
+	 */
 	private final Shuttle _shuttle;
+	/**
+	 * Field _doors.
+	 */
 	private final Collection<ShuttleTemplate.ShuttleDoor> _doors;
 	
+	/**
+	 * Constructor for ExShuttleInfoPacket.
+	 * @param shuttle Shuttle
+	 */
 	public ExShuttleInfoPacket(Shuttle shuttle)
 	{
 		_shuttle = shuttle;
 		_doors = shuttle.getTemplate().getDoors();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

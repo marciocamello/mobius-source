@@ -18,6 +18,10 @@ import lineage2.gameserver.network.serverpackets.PackageToList;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.WarehouseFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FreightSenderInstance extends MerchantInstance
 {
 	/**
@@ -25,11 +29,21 @@ public class FreightSenderInstance extends MerchantInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for FreightSenderInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public FreightSenderInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

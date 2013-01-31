@@ -29,15 +29,29 @@ import lineage2.gameserver.network.serverpackets.ClientSetTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GameTimeController
 {
+	/**
+	 * @author Mobius
+	 */
 	private class OnStartListenerImpl implements OnStartListener
 	{
+		/**
+		 * Constructor for OnStartListenerImpl.
+		 */
 		public OnStartListenerImpl()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onStart.
+		 * @see lineage2.gameserver.listener.game.OnStartListener#onStart()
+		 */
 		@Override
 		public void onStart()
 		{
@@ -45,8 +59,14 @@ public class GameTimeController
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class CheckSunState extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -66,8 +86,14 @@ public class GameTimeController
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class GameTimeListenerList extends ListenerList<GameServer>
 	{
+		/**
+		 * Method onDay.
+		 */
 		public void onDay()
 		{
 			for (Listener<GameServer> listener : getListeners())
@@ -79,6 +105,9 @@ public class GameTimeController
 			}
 		}
 		
+		/**
+		 * Method onNight.
+		 */
 		public void onNight()
 		{
 			for (Listener<GameServer> listener : getListeners())
@@ -91,30 +120,58 @@ public class GameTimeController
 		}
 	}
 	
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameTimeController.class);
+	/**
+	 * Field TICKS_PER_SECOND. (value is 10)
+	 */
 	public static final int TICKS_PER_SECOND = 10;
+	/**
+	 * Field MILLIS_IN_TICK.
+	 */
 	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
+	/**
+	 * Field _instance.
+	 */
 	private static final GameTimeController _instance = new GameTimeController();
+	/**
+	 * Field _gameStartTime.
+	 */
 	private final long _gameStartTime;
+	/**
+	 * Field listenerEngine.
+	 */
 	private final GameTimeListenerList listenerEngine = new GameTimeListenerList();
+	/**
+	 * Field _dayChangeNotify.
+	 */
 	final Runnable _dayChangeNotify = new CheckSunState();
 	
+	/**
+	 * Method getInstance.
+	 * @return GameTimeController
+	 */
 	public static final GameTimeController getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for GameTimeController.
+	 */
 	private GameTimeController()
 	{
 		_gameStartTime = getDayStartTime();
 		GameServer.getInstance().addListener(new OnStartListenerImpl());
 		StringBuilder msg = new StringBuilder();
-		msg.append("GameTimeController: initialized.").append(" ");
+		msg.append("GameTimeController: initialized.").append(' ');
 		msg.append("Current time is ");
-		msg.append(getGameHour()).append(":");
+		msg.append(getGameHour()).append(':');
 		if (getGameMin() < 10)
 		{
-			msg.append("0");
+			msg.append('0');
 		}
 		msg.append(getGameMin());
 		msg.append(" in the ");
@@ -126,7 +183,7 @@ public class GameTimeController
 		{
 			msg.append("day");
 		}
-		msg.append(".");
+		msg.append('.');
 		_log.info(msg.toString());
 		long nightStart = 0;
 		long dayStart = 60 * 60 * 1000;
@@ -144,6 +201,10 @@ public class GameTimeController
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(_dayChangeNotify, dayStart, 4 * 60 * 60 * 1000L);
 	}
 	
+	/**
+	 * Method getDayStartTime.
+	 * @return long
+	 */
 	private long getDayStartTime()
 	{
 		Calendar dayStart = Calendar.getInstance();
@@ -155,41 +216,75 @@ public class GameTimeController
 		return dayStart.getTimeInMillis();
 	}
 	
+	/**
+	 * Method isNowNight.
+	 * @return boolean
+	 */
 	public boolean isNowNight()
 	{
 		return getGameHour() < 6;
 	}
 	
+	/**
+	 * Method getGameTime.
+	 * @return int
+	 */
 	public int getGameTime()
 	{
 		return getGameTicks() / MILLIS_IN_TICK;
 	}
 	
+	/**
+	 * Method getGameHour.
+	 * @return int
+	 */
 	public int getGameHour()
 	{
 		return (getGameTime() / 60) % 24;
 	}
 	
+	/**
+	 * Method getGameMin.
+	 * @return int
+	 */
 	public int getGameMin()
 	{
 		return getGameTime() % 60;
 	}
 	
+	/**
+	 * Method getGameTicks.
+	 * @return int
+	 */
 	public int getGameTicks()
 	{
 		return (int) ((System.currentTimeMillis() - _gameStartTime) / MILLIS_IN_TICK);
 	}
 	
+	/**
+	 * Method getListenerEngine.
+	 * @return GameTimeListenerList
+	 */
 	public GameTimeListenerList getListenerEngine()
 	{
 		return listenerEngine;
 	}
 	
+	/**
+	 * Method addListener.
+	 * @param listener T
+	 * @return boolean
+	 */
 	public <T extends GameListener> boolean addListener(T listener)
 	{
 		return listenerEngine.add(listener);
 	}
 	
+	/**
+	 * Method removeListener.
+	 * @param listener T
+	 * @return boolean
+	 */
 	public <T extends GameListener> boolean removeListener(T listener)
 	{
 		return listenerEngine.remove(listener);

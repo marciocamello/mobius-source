@@ -16,16 +16,29 @@ import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.Quest;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestTutorialLinkHtml extends L2GameClientPacket
 {
+	/**
+	 * Field _bypass.
+	 */
 	String _bypass;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_bypass = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

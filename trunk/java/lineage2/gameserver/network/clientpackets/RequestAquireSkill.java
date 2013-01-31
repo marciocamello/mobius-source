@@ -30,11 +30,24 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestAquireSkill extends L2GameClientPacket
 {
+	/**
+	 * Field _type.
+	 */
 	private AcquireType _type;
+	/**
+	 * Field _subUnit. Field _level. Field _id.
+	 */
 	private int _id, _level, _subUnit;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -47,6 +60,9 @@ public class RequestAquireSkill extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -84,11 +100,8 @@ public class RequestAquireSkill extends L2GameClientPacket
 			case NORMAL:
 				learnSimpleNextLevel(player, skillLearn, skill);
 				/*
-				if (trainer != null)
-				{
-					trainer.showSkillList(player);
-				}
-				*/
+				 * if (trainer != null) { trainer.showSkillList(player); }
+				 */
 				break;
 			case TRANSFORMATION:
 				learnSimpleNextLevel(player, skillLearn, skill);
@@ -141,6 +154,12 @@ public class RequestAquireSkill extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method learnSimpleNextLevel.
+	 * @param player Player
+	 * @param skillLearn SkillLearn
+	 * @param skill Skill
+	 */
 	private static void learnSimpleNextLevel(Player player, SkillLearn skillLearn, Skill skill)
 	{
 		final int skillLevel = player.getSkillLevel(skillLearn.getId(), 0);
@@ -151,6 +170,12 @@ public class RequestAquireSkill extends L2GameClientPacket
 		learnSimple(player, skillLearn, skill);
 	}
 	
+	/**
+	 * Method learnSimple.
+	 * @param player Player
+	 * @param skillLearn SkillLearn
+	 * @param skill Skill
+	 */
 	private static void learnSimple(Player player, SkillLearn skillLearn, Skill skill)
 	{
 		if (player.getSp() < skillLearn.getCost())
@@ -175,6 +200,13 @@ public class RequestAquireSkill extends L2GameClientPacket
 		RequestExEnchantSkill.updateSkillShortcuts(player, skill.getId(), skill.getLevel());
 	}
 	
+	/**
+	 * Method learnClanSkill.
+	 * @param player Player
+	 * @param skillLearn SkillLearn
+	 * @param trainer NpcInstance
+	 * @param skill Skill
+	 */
 	private static void learnClanSkill(Player player, SkillLearn skillLearn, NpcInstance trainer, Skill skill)
 	{
 		if (!(trainer instanceof VillageMasterInstance))
@@ -210,6 +242,14 @@ public class RequestAquireSkill extends L2GameClientPacket
 		NpcInstance.showClanSkillList(player);
 	}
 	
+	/**
+	 * Method learnSubUnitSkill.
+	 * @param player Player
+	 * @param skillLearn SkillLearn
+	 * @param trainer NpcInstance
+	 * @param skill Skill
+	 * @param id int
+	 */
 	private static void learnSubUnitSkill(Player player, SkillLearn skillLearn, NpcInstance trainer, Skill skill, int id)
 	{
 		Clan clan = player.getClan();
@@ -259,6 +299,12 @@ public class RequestAquireSkill extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method checkSpellbook.
+	 * @param player Player
+	 * @param skillLearn SkillLearn
+	 * @return boolean
+	 */
 	private static boolean checkSpellbook(Player player, SkillLearn skillLearn)
 	{
 		if (Config.ALT_DISABLE_SPELLBOOKS)

@@ -21,15 +21,39 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.Scripts;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminScripts implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_scripts_reload.
+		 */
 		admin_scripts_reload,
+		/**
+		 * Field admin_sreload.
+		 */
 		admin_sreload,
+		/**
+		 * Field admin_sqreload.
+		 */
 		admin_sqreload
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -123,6 +147,10 @@ public class AdminScripts implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method reloadQuestStates.
+	 * @param p Player
+	 */
 	private void reloadQuestStates(Player p)
 	{
 		for (QuestState qs : p.getAllQuestsStates())
@@ -132,6 +160,10 @@ public class AdminScripts implements IAdminCommandHandler
 		Quest.restoreQuestStates(p);
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

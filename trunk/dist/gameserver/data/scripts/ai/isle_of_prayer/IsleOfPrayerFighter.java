@@ -23,23 +23,48 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class IsleOfPrayerFighter extends Fighter
 {
+	/**
+	 * Field _penaltyMobsNotSpawned.
+	 */
 	private boolean _penaltyMobsNotSpawned = true;
+	/**
+	 * Field PENALTY_MOBS.
+	 */
 	private static final int PENALTY_MOBS[] =
 	{
 		18364,
 		18365,
 		18366
 	};
+	/**
+	 * Field YELLOW_CRYSTAL. (value is 9593)
+	 */
 	private static final int YELLOW_CRYSTAL = 9593;
+	/**
+	 * Field GREEN_CRYSTAL. (value is 9594)
+	 */
 	private static final int GREEN_CRYSTAL = 9594;
 	
+	/**
+	 * Constructor for IsleOfPrayerFighter.
+	 * @param actor NpcInstance
+	 */
 	public IsleOfPrayerFighter(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -64,6 +89,10 @@ public class IsleOfPrayerFighter extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

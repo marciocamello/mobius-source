@@ -17,12 +17,25 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class CollectionUtils
 {
+	/**
+	 * Constructor for CollectionUtils.
+	 */
 	private CollectionUtils()
 	{
 	}
 	
+	/**
+	 * Method eqBrute.
+	 * @param list List<T>
+	 * @param lo int
+	 * @param hi int
+	 */
 	private static <T extends Comparable<T>> void eqBrute(List<T> list, int lo, int hi)
 	{
 		if ((hi - lo) == 1)
@@ -69,6 +82,12 @@ public final class CollectionUtils
 		}
 	}
 	
+	/**
+	 * Method eqSort.
+	 * @param list List<T>
+	 * @param lo0 int
+	 * @param hi0 int
+	 */
 	private static <T extends Comparable<T>> void eqSort(List<T> list, int lo0, int hi0)
 	{
 		int lo = lo0;
@@ -104,11 +123,22 @@ public final class CollectionUtils
 		eqSort(list, hi + 1, hi0);
 	}
 	
+	/**
+	 * Method eqSort.
+	 * @param list List<T>
+	 */
 	public static <T extends Comparable<T>> void eqSort(List<T> list)
 	{
 		eqSort(list, 0, list.size() - 1);
 	}
 	
+	/**
+	 * Method eqBrute.
+	 * @param list List<T>
+	 * @param lo int
+	 * @param hi int
+	 * @param c Comparator<? super T>
+	 */
 	private static <T> void eqBrute(List<T> list, int lo, int hi, Comparator<? super T> c)
 	{
 		if ((hi - lo) == 1)
@@ -155,6 +185,13 @@ public final class CollectionUtils
 		}
 	}
 	
+	/**
+	 * Method eqSort.
+	 * @param list List<T>
+	 * @param lo0 int
+	 * @param hi0 int
+	 * @param c Comparator<? super T>
+	 */
 	private static <T> void eqSort(List<T> list, int lo0, int hi0, Comparator<? super T> c)
 	{
 		int lo = lo0;
@@ -190,11 +227,20 @@ public final class CollectionUtils
 		eqSort(list, hi + 1, hi0, c);
 	}
 	
+	/**
+	 * Method eqSort.
+	 * @param list List<T>
+	 * @param c Comparator<? super T>
+	 */
 	public static <T> void eqSort(List<T> list, Comparator<? super T> c)
 	{
 		eqSort(list, 0, list.size() - 1, c);
 	}
 	
+	/**
+	 * Method insertionSort.
+	 * @param list List<T>
+	 */
 	public static <T extends Comparable<T>> void insertionSort(List<T> list)
 	{
 		for (int i = 1; i < list.size(); i++)
@@ -211,6 +257,11 @@ public final class CollectionUtils
 		}
 	}
 	
+	/**
+	 * Method insertionSort.
+	 * @param list List<T>
+	 * @param c Comparator<? super T>
+	 */
 	public static <T> void insertionSort(List<T> list, Comparator<? super T> c)
 	{
 		for (int i = 1; i < list.size(); i++)
@@ -227,6 +278,11 @@ public final class CollectionUtils
 		}
 	}
 	
+	/**
+	 * Method hashCode.
+	 * @param collection Collection<E>
+	 * @return int
+	 */
 	public static <E> int hashCode(Collection<E> collection)
 	{
 		int hashCode = 1;
@@ -239,6 +295,12 @@ public final class CollectionUtils
 		return hashCode;
 	}
 	
+	/**
+	 * Method safeGet.
+	 * @param list List<E>
+	 * @param index int
+	 * @return E
+	 */
 	public static <E> E safeGet(List<E> list, int index)
 	{
 		return list.size() > index ? list.get(index) : null;

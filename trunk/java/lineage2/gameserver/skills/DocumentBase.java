@@ -91,18 +91,39 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 abstract class DocumentBase
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(DocumentBase.class);
+	/**
+	 * Field file.
+	 */
 	private final File file;
+	/**
+	 * Field tables.
+	 */
 	protected Map<String, Object[]> tables;
 	
+	/**
+	 * Constructor for DocumentBase.
+	 * @param file File
+	 */
 	DocumentBase(File file)
 	{
 		this.file = file;
 		tables = new HashMap<>();
 	}
 	
+	/**
+	 * Method parse.
+	 * @return Document
+	 */
 	Document parse()
 	{
 		Document doc;
@@ -130,22 +151,50 @@ abstract class DocumentBase
 		return doc;
 	}
 	
+	/**
+	 * Method parseDocument.
+	 * @param doc Document
+	 */
 	protected abstract void parseDocument(Document doc);
 	
+	/**
+	 * Method getTableValue.
+	 * @param name String
+	 * @return Object
+	 */
 	protected abstract Object getTableValue(String name);
 	
+	/**
+	 * Method getTableValue.
+	 * @param name String
+	 * @param idx int
+	 * @return Object
+	 */
 	protected abstract Object getTableValue(String name, int idx);
 	
+	/**
+	 * Method resetTable.
+	 */
 	protected void resetTable()
 	{
 		tables = new HashMap<>();
 	}
 	
+	/**
+	 * Method setTable.
+	 * @param name String
+	 * @param table Object[]
+	 */
 	protected void setTable(String name, Object[] table)
 	{
 		tables.put(name, table);
 	}
 	
+	/**
+	 * Method parseTemplate.
+	 * @param n Node
+	 * @param template StatTemplate
+	 */
 	protected void parseTemplate(Node n, StatTemplate template)
 	{
 		n = n.getFirstChild();
@@ -206,6 +255,11 @@ abstract class DocumentBase
 		}
 	}
 	
+	/**
+	 * Method parseTrigger.
+	 * @param n Node
+	 * @param template StatTemplate
+	 */
 	protected void parseTrigger(Node n, StatTemplate template)
 	{
 		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
@@ -231,6 +285,12 @@ abstract class DocumentBase
 		}
 	}
 	
+	/**
+	 * Method attachFunc.
+	 * @param n Node
+	 * @param template StatTemplate
+	 * @param name String
+	 */
 	protected void attachFunc(Node n, StatTemplate template, String name)
 	{
 		Stats stat = Stats.valueOfXml(n.getAttributes().getNamedItem("stat").getNodeValue());
@@ -245,6 +305,11 @@ abstract class DocumentBase
 		template.attachFunc(new FuncTemplate(applyCond, name, stat, ord, val));
 	}
 	
+	/**
+	 * Method attachEffect.
+	 * @param n Node
+	 * @param template Object
+	 */
 	protected void attachEffect(Node n, Object template)
 	{
 		NamedNodeMap attrs = n.getAttributes();
@@ -339,6 +404,11 @@ abstract class DocumentBase
 		}
 	}
 	
+	/**
+	 * Method parseCondition.
+	 * @param n Node
+	 * @return Condition
+	 */
 	protected Condition parseCondition(Node n)
 	{
 		while ((n != null) && (n.getNodeType() != Node.ELEMENT_NODE))
@@ -388,6 +458,11 @@ abstract class DocumentBase
 		return null;
 	}
 	
+	/**
+	 * Method parseLogicAnd.
+	 * @param n Node
+	 * @return Condition
+	 */
 	protected Condition parseLogicAnd(Node n)
 	{
 		ConditionLogicAnd cond = new ConditionLogicAnd();
@@ -405,6 +480,11 @@ abstract class DocumentBase
 		return cond;
 	}
 	
+	/**
+	 * Method parseLogicOr.
+	 * @param n Node
+	 * @return Condition
+	 */
 	protected Condition parseLogicOr(Node n)
 	{
 		ConditionLogicOr cond = new ConditionLogicOr();
@@ -422,6 +502,11 @@ abstract class DocumentBase
 		return cond;
 	}
 	
+	/**
+	 * Method parseLogicNot.
+	 * @param n Node
+	 * @return Condition
+	 */
 	protected Condition parseLogicNot(Node n)
 	{
 		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
@@ -435,6 +520,11 @@ abstract class DocumentBase
 		return null;
 	}
 	
+	/**
+	 * Method parsePlayerCondition.
+	 * @param n Node
+	 * @return Condition
+	 */
 	protected Condition parsePlayerCondition(Node n)
 	{
 		Condition cond = null;
@@ -586,6 +676,11 @@ abstract class DocumentBase
 		return cond;
 	}
 	
+	/**
+	 * Method parseTargetCondition.
+	 * @param n Node
+	 * @return Condition
+	 */
 	protected Condition parseTargetCondition(Node n)
 	{
 		Condition cond = null;
@@ -693,6 +788,11 @@ abstract class DocumentBase
 		return cond;
 	}
 	
+	/**
+	 * Method parseUsingCondition.
+	 * @param n Node
+	 * @return Condition
+	 */
 	protected Condition parseUsingCondition(Node n)
 	{
 		Condition cond = null;
@@ -762,6 +862,11 @@ abstract class DocumentBase
 		return cond;
 	}
 	
+	/**
+	 * Method parseHasCondition.
+	 * @param n Node
+	 * @return Condition
+	 */
 	protected Condition parseHasCondition(Node n)
 	{
 		Condition cond = null;
@@ -790,6 +895,11 @@ abstract class DocumentBase
 		return cond;
 	}
 	
+	/**
+	 * Method parseGameCondition.
+	 * @param n Node
+	 * @return Condition
+	 */
 	protected Condition parseGameCondition(Node n)
 	{
 		Condition cond = null;
@@ -810,6 +920,11 @@ abstract class DocumentBase
 		return cond;
 	}
 	
+	/**
+	 * Method parseZoneCondition.
+	 * @param n Node
+	 * @return Condition
+	 */
 	protected Condition parseZoneCondition(Node n)
 	{
 		Condition cond = null;
@@ -829,6 +944,11 @@ abstract class DocumentBase
 		return cond;
 	}
 	
+	/**
+	 * Method parseTable.
+	 * @param n Node
+	 * @return Object[]
+	 */
 	protected Object[] parseTable(Node n)
 	{
 		NamedNodeMap attrs = n.getAttributes();
@@ -848,6 +968,12 @@ abstract class DocumentBase
 		return res;
 	}
 	
+	/**
+	 * Method parseBeanSet.
+	 * @param n Node
+	 * @param set StatsSet
+	 * @param level int
+	 */
 	protected void parseBeanSet(Node n, StatsSet set, int level)
 	{
 		try
@@ -887,6 +1013,11 @@ abstract class DocumentBase
 		}
 	}
 	
+	/**
+	 * Method parseNumber.
+	 * @param value String
+	 * @return Number
+	 */
 	protected Number parseNumber(String value)
 	{
 		if (value.charAt(0) == '#')
@@ -921,6 +1052,12 @@ abstract class DocumentBase
 		}
 	}
 	
+	/**
+	 * Method joinAnd.
+	 * @param cond Condition
+	 * @param c Condition
+	 * @return Condition
+	 */
 	protected Condition joinAnd(Condition cond, Condition c)
 	{
 		if (cond == null)

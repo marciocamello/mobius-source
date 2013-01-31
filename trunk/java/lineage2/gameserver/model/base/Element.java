@@ -16,20 +16,63 @@ import java.util.Arrays;
 
 import lineage2.gameserver.stats.Stats;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum Element
 {
+	/**
+	 * Field FIRE.
+	 */
 	FIRE(0, Stats.ATTACK_FIRE, Stats.DEFENCE_FIRE),
+	/**
+	 * Field WATER.
+	 */
 	WATER(1, Stats.ATTACK_WATER, Stats.DEFENCE_WATER),
+	/**
+	 * Field WIND.
+	 */
 	WIND(2, Stats.ATTACK_WIND, Stats.DEFENCE_WIND),
+	/**
+	 * Field EARTH.
+	 */
 	EARTH(3, Stats.ATTACK_EARTH, Stats.DEFENCE_EARTH),
+	/**
+	 * Field HOLY.
+	 */
 	HOLY(4, Stats.ATTACK_HOLY, Stats.DEFENCE_HOLY),
+	/**
+	 * Field UNHOLY.
+	 */
 	UNHOLY(5, Stats.ATTACK_UNHOLY, Stats.DEFENCE_UNHOLY),
+	/**
+	 * Field NONE.
+	 */
 	NONE(-2, null, null);
+	/**
+	 * Field VALUES.
+	 */
 	public final static Element[] VALUES = Arrays.copyOf(values(), 6);
+	/**
+	 * Field id.
+	 */
 	private final int id;
+	/**
+	 * Field attack.
+	 */
 	private final Stats attack;
+	/**
+	 * Field defence.
+	 */
 	private final Stats defence;
 	
+	/**
+	 * Constructor for Element.
+	 * @param id int
+	 * @param attack Stats
+	 * @param defence Stats
+	 */
 	private Element(int id, Stats attack, Stats defence)
 	{
 		this.id = id;
@@ -37,21 +80,38 @@ public enum Element
 		this.defence = defence;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return id;
 	}
 	
+	/**
+	 * Method getAttack.
+	 * @return Stats
+	 */
 	public Stats getAttack()
 	{
 		return attack;
 	}
 	
+	/**
+	 * Method getDefence.
+	 * @return Stats
+	 */
 	public Stats getDefence()
 	{
 		return defence;
 	}
 	
+	/**
+	 * Method getElementById.
+	 * @param id int
+	 * @return Element
+	 */
 	public static Element getElementById(int id)
 	{
 		for (Element e : VALUES)
@@ -64,6 +124,11 @@ public enum Element
 		return NONE;
 	}
 	
+	/**
+	 * Method getReverseElement.
+	 * @param element Element
+	 * @return Element
+	 */
 	public static Element getReverseElement(Element element)
 	{
 		switch (element)
@@ -84,6 +149,11 @@ public enum Element
 		return NONE;
 	}
 	
+	/**
+	 * Method getElementByName.
+	 * @param name String
+	 * @return Element
+	 */
 	public static Element getElementByName(String name)
 	{
 		for (Element e : VALUES)

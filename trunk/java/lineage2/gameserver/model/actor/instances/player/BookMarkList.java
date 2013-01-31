@@ -33,8 +33,15 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BookMarkList
 {
+	/**
+	 * Field FORBIDDEN_ZONES.
+	 */
 	public static final ZoneType[] FORBIDDEN_ZONES = new ZoneType[]
 	{
 		ZoneType.RESIDENCE,
@@ -44,11 +51,28 @@ public class BookMarkList
 		ZoneType.no_restart,
 		ZoneType.no_summon,
 	};
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(BookMarkList.class);
+	/**
+	 * Field owner.
+	 */
 	private final Player owner;
+	/**
+	 * Field elementData.
+	 */
 	private final List<BookMark> elementData;
+	/**
+	 * Field capacity.
+	 */
 	private int capacity;
 	
+	/**
+	 * Constructor for BookMarkList.
+	 * @param owner Player
+	 * @param acapacity int
+	 */
 	public BookMarkList(Player owner, int acapacity)
 	{
 		this.owner = owner;
@@ -56,26 +80,45 @@ public class BookMarkList
 		capacity = acapacity;
 	}
 	
+	/**
+	 * Method setCapacity.
+	 * @param val int
+	 */
 	public synchronized void setCapacity(int val)
 	{
 		capacity = val;
 	}
 	
+	/**
+	 * Method getCapacity.
+	 * @return int
+	 */
 	public int getCapacity()
 	{
 		return capacity;
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	public void clear()
 	{
 		elementData.clear();
 	}
 	
+	/**
+	 * Method toArray.
+	 * @return BookMark[]
+	 */
 	public BookMark[] toArray()
 	{
 		return elementData.toArray(new BookMark[elementData.size()]);
 	}
 	
+	/**
+	 * Method incCapacity.
+	 * @return int
+	 */
 	public int incCapacity()
 	{
 		capacity++;
@@ -83,6 +126,11 @@ public class BookMarkList
 		return getCapacity();
 	}
 	
+	/**
+	 * Method add.
+	 * @param e BookMark
+	 * @return boolean
+	 */
 	public synchronized boolean add(BookMark e)
 	{
 		if (elementData.size() >= getCapacity())
@@ -92,6 +140,11 @@ public class BookMarkList
 		return elementData.add(e);
 	}
 	
+	/**
+	 * Method get.
+	 * @param slot int
+	 * @return BookMark
+	 */
 	public BookMark get(int slot)
 	{
 		if ((slot < 1) || (slot > elementData.size()))
@@ -101,6 +154,10 @@ public class BookMarkList
 		return elementData.get(slot - 1);
 	}
 	
+	/**
+	 * Method remove.
+	 * @param slot int
+	 */
 	public void remove(int slot)
 	{
 		if ((slot < 1) || (slot > elementData.size()))
@@ -110,6 +167,11 @@ public class BookMarkList
 		elementData.remove(slot - 1);
 	}
 	
+	/**
+	 * Method tryTeleport.
+	 * @param slot int
+	 * @return boolean
+	 */
 	public boolean tryTeleport(int slot)
 	{
 		if (!checkFirstConditions(owner) || !checkTeleportConditions(owner))
@@ -134,16 +196,40 @@ public class BookMarkList
 		return true;
 	}
 	
+	/**
+	 * Method add.
+	 * @param aname String
+	 * @param aacronym String
+	 * @param aiconId int
+	 * @return boolean
+	 */
 	public boolean add(String aname, String aacronym, int aiconId)
 	{
 		return add(aname, aacronym, aiconId, true);
 	}
 	
+	/**
+	 * Method add.
+	 * @param aname String
+	 * @param aacronym String
+	 * @param aiconId int
+	 * @param takeFlag boolean
+	 * @return boolean
+	 */
 	public boolean add(String aname, String aacronym, int aiconId, boolean takeFlag)
 	{
 		return (owner != null) && add(owner.getLoc(), aname, aacronym, aiconId, takeFlag);
 	}
 	
+	/**
+	 * Method add.
+	 * @param loc Location
+	 * @param aname String
+	 * @param aacronym String
+	 * @param aiconId int
+	 * @param takeFlag boolean
+	 * @return boolean
+	 */
 	public boolean add(Location loc, String aname, String aacronym, int aiconId, boolean takeFlag)
 	{
 		if (!checkFirstConditions(owner) || !checkTeleportLocation(owner, loc))
@@ -167,6 +253,9 @@ public class BookMarkList
 		return true;
 	}
 	
+	/**
+	 * Method store.
+	 */
 	public void store()
 	{
 		Connection con = null;
@@ -203,6 +292,9 @@ public class BookMarkList
 		}
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	public synchronized void restore()
 	{
 		if (getCapacity() == 0)
@@ -234,6 +326,11 @@ public class BookMarkList
 		}
 	}
 	
+	/**
+	 * Method checkFirstConditions.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public static boolean checkFirstConditions(Player player)
 	{
 		if (player == null)
@@ -283,6 +380,11 @@ public class BookMarkList
 		return true;
 	}
 	
+	/**
+	 * Method checkTeleportConditions.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public static boolean checkTeleportConditions(Player player)
 	{
 		if (player == null)
@@ -307,11 +409,25 @@ public class BookMarkList
 		return true;
 	}
 	
+	/**
+	 * Method checkTeleportLocation.
+	 * @param player Player
+	 * @param loc Location
+	 * @return boolean
+	 */
 	public static boolean checkTeleportLocation(Player player, Location loc)
 	{
 		return checkTeleportLocation(player, loc.x, loc.y, loc.z);
 	}
 	
+	/**
+	 * Method checkTeleportLocation.
+	 * @param player Player
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return boolean
+	 */
 	public static boolean checkTeleportLocation(Player player, int x, int y, int z)
 	{
 		if (player == null)

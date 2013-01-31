@@ -14,28 +14,82 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExSetCompassZoneCode extends L2GameServerPacket
 {
+	/**
+	 * Field ZONE_ALTERED. (value is 8)
+	 */
 	public static final int ZONE_ALTERED = 8;
+	/**
+	 * Field ZONE_ALTERED2. (value is 9)
+	 */
 	public static final int ZONE_ALTERED2 = 9;
+	/**
+	 * Field ZONE_REMINDER. (value is 10)
+	 */
 	public static final int ZONE_REMINDER = 10;
+	/**
+	 * Field ZONE_SIEGE. (value is 11)
+	 */
 	public static final int ZONE_SIEGE = 11;
+	/**
+	 * Field ZONE_PEACE. (value is 12)
+	 */
 	public static final int ZONE_PEACE = 12;
+	/**
+	 * Field ZONE_SSQ. (value is 13)
+	 */
 	public static final int ZONE_SSQ = 13;
+	/**
+	 * Field ZONE_PVP. (value is 14)
+	 */
 	public static final int ZONE_PVP = 14;
+	/**
+	 * Field ZONE_GENERAL_FIELD. (value is 15)
+	 */
 	public static final int ZONE_GENERAL_FIELD = 15;
+	/**
+	 * Field ZONE_PVP_FLAG.
+	 */
 	public static final int ZONE_PVP_FLAG = 1 << ExSetCompassZoneCode.ZONE_PVP;
+	/**
+	 * Field ZONE_ALTERED_FLAG.
+	 */
 	public static final int ZONE_ALTERED_FLAG = 1 << ExSetCompassZoneCode.ZONE_ALTERED;
+	/**
+	 * Field ZONE_SIEGE_FLAG.
+	 */
 	public static final int ZONE_SIEGE_FLAG = 1 << ExSetCompassZoneCode.ZONE_SIEGE;
+	/**
+	 * Field ZONE_PEACE_FLAG.
+	 */
 	public static final int ZONE_PEACE_FLAG = 1 << ExSetCompassZoneCode.ZONE_PEACE;
+	/**
+	 * Field ZONE_SSQ_FLAG.
+	 */
 	public static final int ZONE_SSQ_FLAG = 1 << ExSetCompassZoneCode.ZONE_SSQ;
+	/**
+	 * Field _zone.
+	 */
 	private final int _zone;
 	
+	/**
+	 * Constructor for ExSetCompassZoneCode.
+	 * @param player Player
+	 */
 	public ExSetCompassZoneCode(Player player)
 	{
 		this(player.getZoneMask());
 	}
 	
+	/**
+	 * Constructor for ExSetCompassZoneCode.
+	 * @param zoneMask int
+	 */
 	public ExSetCompassZoneCode(int zoneMask)
 	{
 		if ((zoneMask & ZONE_ALTERED_FLAG) == ZONE_ALTERED_FLAG)
@@ -64,6 +118,9 @@ public class ExSetCompassZoneCode extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

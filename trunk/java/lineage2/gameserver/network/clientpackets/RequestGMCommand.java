@@ -24,11 +24,24 @@ import lineage2.gameserver.network.serverpackets.GMViewQuestInfo;
 import lineage2.gameserver.network.serverpackets.GMViewSkillInfo;
 import lineage2.gameserver.network.serverpackets.GMViewWarehouseWithdrawList;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestGMCommand extends L2GameClientPacket
 {
+	/**
+	 * Field _targetName.
+	 */
 	private String _targetName;
+	/**
+	 * Field _command.
+	 */
 	private int _command;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -36,6 +49,9 @@ public class RequestGMCommand extends L2GameClientPacket
 		_command = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

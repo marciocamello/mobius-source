@@ -40,18 +40,55 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FreyaHard extends Reflection
 {
+	/**
+	 * Field FreyaThrone. (value is 29177)
+	 */
 	private static final int FreyaThrone = 29177;
+	/**
+	 * Field FreyaStandHard. (value is 29180)
+	 */
 	private static final int FreyaStandHard = 29180;
+	/**
+	 * Field IceKnightHard. (value is 18856)
+	 */
 	private static final int IceKnightHard = 18856;
+	/**
+	 * Field IceKnightLeaderHard. (value is 25700)
+	 */
 	private static final int IceKnightLeaderHard = 25700;
+	/**
+	 * Field IceCastleBreath. (value is 18854)
+	 */
 	private static final int IceCastleBreath = 18854;
+	/**
+	 * Field Glacier. (value is 18853)
+	 */
 	private static final int Glacier = 18853;
+	/**
+	 * Field IceCastleController. (value is 18932)
+	 */
 	private static final int IceCastleController = 18932;
+	/**
+	 * Field Sirra. (value is 32762)
+	 */
 	private static final int Sirra = 32762;
+	/**
+	 * Field Jinia. (value is 18850)
+	 */
 	private static final int Jinia = 18850;
+	/**
+	 * Field Kegor. (value is 18851)
+	 */
 	private static final int Kegor = 18851;
+	/**
+	 * Field _eventTriggers.
+	 */
 	private static final int[] _eventTriggers =
 	{
 		23140202,
@@ -62,25 +99,70 @@ public class FreyaHard extends Reflection
 		23140214,
 		23140216
 	};
+	/**
+	 * Field pcbuff2. Field pcbuff. Field attackUp. Field damagezone.
+	 */
 	private Zone damagezone, attackUp, pcbuff, pcbuff2;
+	/**
+	 * Field firstStageGuardSpawn.
+	 */
 	ScheduledFuture<?> firstStageGuardSpawn;
+	/**
+	 * Field secondStageGuardSpawn.
+	 */
 	ScheduledFuture<?> secondStageGuardSpawn;
+	/**
+	 * Field thirdStageGuardSpawn.
+	 */
 	ScheduledFuture<?> thirdStageGuardSpawn;
+	/**
+	 * Field _epicZoneListener.
+	 */
 	private final ZoneListener _epicZoneListener = new ZoneListener();
+	/**
+	 * Field _landingZoneListener.
+	 */
 	private final ZoneListenerL _landingZoneListener = new ZoneListenerL();
+	/**
+	 * Field _deathListener.
+	 */
 	final DeathListener _deathListener = new DeathListener();
+	/**
+	 * Field _currentHpListener.
+	 */
 	final CurrentHpListener _currentHpListener = new CurrentHpListener();
+	/**
+	 * Field _entryLocked.
+	 */
 	boolean _entryLocked = false;
+	/**
+	 * Field _startLaunched.
+	 */
 	boolean _startLaunched = false;
+	/**
+	 * Field _freyaSlayed.
+	 */
 	boolean _freyaSlayed = false;
+	/**
+	 * Field raidplayers.
+	 */
 	final AtomicInteger raidplayers = new AtomicInteger();
+	/**
+	 * Field centralRoom.
+	 */
 	static Territory centralRoom = new Territory().add(new Polygon().add(114264, -113672).add(113640, -114344).add(113640, -115240).add(114264, -115912).add(115176, -115912).add(115800, -115272).add(115800, -114328).add(115192, -113672).setZmax(-11225).setZmin(-11225));
 	
+	/**
+	 * Constructor for FreyaHard.
+	 */
 	public FreyaHard()
 	{
 		super();
 	}
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{
@@ -92,6 +174,11 @@ public class FreyaHard extends Reflection
 		getZone("[freya_landing_room_epic]").addListener(_landingZoneListener);
 	}
 	
+	/**
+	 * Method manageDamageZone.
+	 * @param level int
+	 * @param disable boolean
+	 */
 	void manageDamageZone(int level, boolean disable)
 	{
 		if (disable)
@@ -131,6 +218,10 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * Method manageAttackUpZone.
+	 * @param disable boolean
+	 */
 	void manageAttackUpZone(boolean disable)
 	{
 		if ((attackUp != null) && disable)
@@ -144,6 +235,10 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * Method managePcBuffZone.
+	 * @param disable boolean
+	 */
 	void managePcBuffZone(boolean disable)
 	{
 		if ((pcbuff != null) && (pcbuff2 != null) && disable)
@@ -162,6 +257,10 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * Method manageCastleController.
+	 * @param state int
+	 */
 	void manageCastleController(int state)
 	{
 		for (NpcInstance n : getNpcs())
@@ -173,6 +272,10 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * Method manageStorm.
+	 * @param active boolean
+	 */
 	void manageStorm(boolean active)
 	{
 		for (Player p : getPlayers())
@@ -184,13 +287,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class StartHardFreya extends RunnableImpl
 	{
+		/**
+		 * Constructor for StartHardFreya.
+		 */
 		public StartHardFreya()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -204,13 +316,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class PreStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for PreStage.
+		 */
 		public PreStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -227,13 +348,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class FirstStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for FirstStage.
+		 */
 		public FirstStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -248,10 +378,32 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class GuardSpawnTask extends RunnableImpl
 	{
+		/**
+		 * Field _breathMax.
+		 */
+		/**
+		 * Field _breathMin.
+		 */
+		/**
+		 * Field _knightsMax.
+		 */
+		/**
+		 * Field _knightsMin.
+		 */
+		/**
+		 * Field _mode.
+		 */
 		int _mode, _knightsMin, _knightsMax, _breathMin, _breathMax;
 		
+		/**
+		 * Constructor for GuardSpawnTask.
+		 * @param mode int
+		 */
 		public GuardSpawnTask(int mode)
 		{
 			_mode = mode;
@@ -261,6 +413,9 @@ public class FreyaHard extends Reflection
 			}
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -311,13 +466,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class PreSecondStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for PreSecondStage.
+		 */
 		public PreSecondStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -337,13 +501,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class TimerToSecondStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for TimerToSecondStage.
+		 */
 		public TimerToSecondStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -355,13 +528,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SecondStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for SecondStage.
+		 */
 		public SecondStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -376,13 +558,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class KnightCaptainSpawnMovie extends RunnableImpl
 	{
+		/**
+		 * Constructor for KnightCaptainSpawnMovie.
+		 */
 		public KnightCaptainSpawnMovie()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -398,13 +589,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class KnightCaptainSpawn extends RunnableImpl
 	{
+		/**
+		 * Constructor for KnightCaptainSpawn.
+		 */
 		public KnightCaptainSpawn()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -418,13 +618,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class PreThirdStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for PreThirdStage.
+		 */
 		public PreThirdStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -444,13 +653,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class PreThirdStageM extends RunnableImpl
 	{
+		/**
+		 * Constructor for PreThirdStageM.
+		 */
 		public PreThirdStageM()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -462,13 +680,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ThirdStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for ThirdStage.
+		 */
 		public ThirdStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -488,13 +715,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class PreForthStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for PreForthStage.
+		 */
 		public PreForthStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -511,13 +747,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ForthStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for ForthStage.
+		 */
 		public ForthStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -536,13 +781,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class FreyaDeathStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for FreyaDeathStage.
+		 */
 		public FreyaDeathStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -563,13 +817,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ConclusionMovie extends RunnableImpl
 	{
+		/**
+		 * Constructor for ConclusionMovie.
+		 */
 		public ConclusionMovie()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -581,13 +844,22 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class InstanceConclusion extends RunnableImpl
 	{
+		/**
+		 * Constructor for InstanceConclusion.
+		 */
 		public InstanceConclusion()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -600,13 +872,25 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DeathListener implements OnDeathListener
 	{
+		/**
+		 * Constructor for DeathListener.
+		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param self Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -626,8 +910,19 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class CurrentHpListener implements OnCurrentHpDamageListener
 	{
+		/**
+		 * Method onCurrentHpDamage.
+		 * @param actor Creature
+		 * @param damage double
+		 * @param attacker Creature
+		 * @param skill Skill
+		 * @see lineage2.gameserver.listener.actor.OnCurrentHpDamageListener#onCurrentHpDamage(Creature, double, Creature, Skill)
+		 */
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
 		{
@@ -646,8 +941,17 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -667,6 +971,12 @@ public class FreyaHard extends Reflection
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
@@ -679,8 +989,17 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListenerL implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -690,17 +1009,31 @@ public class FreyaHard extends Reflection
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 		}
 	}
 	
+	/**
+	 * Method checkstartCond.
+	 * @param raidplayers int
+	 * @return boolean
+	 */
 	boolean checkstartCond(int raidplayers)
 	{
 		return !((raidplayers < getInstancedZone().getMinParty()) || _startLaunched);
 	}
 	
+	/**
+	 * Method doCleanup.
+	 */
 	void doCleanup()
 	{
 		if (firstStageGuardSpawn != null)
@@ -717,6 +1050,9 @@ public class FreyaHard extends Reflection
 		}
 	}
 	
+	/**
+	 * Method onCollapse.
+	 */
 	@Override
 	protected void onCollapse()
 	{

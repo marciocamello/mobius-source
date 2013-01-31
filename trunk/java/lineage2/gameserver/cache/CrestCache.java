@@ -29,34 +29,90 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CrestCache
 {
+	/**
+	 * Field ALLY_CREST_SIZE. (value is 192)
+	 */
 	public static final int ALLY_CREST_SIZE = 192;
+	/**
+	 * Field CREST_SIZE. (value is 256)
+	 */
 	public static final int CREST_SIZE = 256;
+	/**
+	 * Field LARGE_CREST_SIZE. (value is 2176)
+	 */
 	public static final int LARGE_CREST_SIZE = 2176;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CrestCache.class);
+	/**
+	 * Field _instance.
+	 */
 	private final static CrestCache _instance = new CrestCache();
 	
+	/**
+	 * Method getInstance.
+	 * @return CrestCache
+	 */
 	public final static CrestCache getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _pledgeCrestId.
+	 */
 	private final TIntIntHashMap _pledgeCrestId = new TIntIntHashMap();
+	/**
+	 * Field _pledgeCrestLargeId.
+	 */
 	private final TIntIntHashMap _pledgeCrestLargeId = new TIntIntHashMap();
+	/**
+	 * Field _allyCrestId.
+	 */
 	private final TIntIntHashMap _allyCrestId = new TIntIntHashMap();
+	/**
+	 * Field _pledgeCrest.
+	 */
 	private final TIntObjectHashMap<byte[]> _pledgeCrest = new TIntObjectHashMap<>();
+	/**
+	 * Field _pledgeCrestLarge.
+	 */
 	private final TIntObjectHashMap<byte[]> _pledgeCrestLarge = new TIntObjectHashMap<>();
+	/**
+	 * Field _allyCrest.
+	 */
 	private final TIntObjectHashMap<byte[]> _allyCrest = new TIntObjectHashMap<>();
+	/**
+	 * Field lock.
+	 */
 	private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
+	/**
+	 * Field readLock.
+	 */
 	private final Lock readLock = lock.readLock();
+	/**
+	 * Field writeLock.
+	 */
 	private final Lock writeLock = lock.writeLock();
 	
+	/**
+	 * Constructor for CrestCache.
+	 */
 	private CrestCache()
 	{
 		load();
 	}
 	
+	/**
+	 * Method load.
+	 */
 	public void load()
 	{
 		int count = 0;
@@ -115,11 +171,22 @@ public class CrestCache
 		_log.info("CrestCache: Loaded " + count + " crests");
 	}
 	
+	/**
+	 * Method getCrestId.
+	 * @param pledgeId int
+	 * @param crest byte[]
+	 * @return int
+	 */
 	private static int getCrestId(int pledgeId, byte[] crest)
 	{
 		return Math.abs(new HashCodeBuilder(15, 87).append(pledgeId).append(crest).toHashCode());
 	}
 	
+	/**
+	 * Method getPledgeCrest.
+	 * @param crestId int
+	 * @return byte[]
+	 */
 	public byte[] getPledgeCrest(int crestId)
 	{
 		byte[] crest = null;
@@ -135,6 +202,11 @@ public class CrestCache
 		return crest;
 	}
 	
+	/**
+	 * Method getPledgeCrestLarge.
+	 * @param crestId int
+	 * @return byte[]
+	 */
 	public byte[] getPledgeCrestLarge(int crestId)
 	{
 		byte[] crest = null;
@@ -150,6 +222,11 @@ public class CrestCache
 		return crest;
 	}
 	
+	/**
+	 * Method getAllyCrest.
+	 * @param crestId int
+	 * @return byte[]
+	 */
 	public byte[] getAllyCrest(int crestId)
 	{
 		byte[] crest = null;
@@ -165,6 +242,11 @@ public class CrestCache
 		return crest;
 	}
 	
+	/**
+	 * Method getPledgeCrestId.
+	 * @param pledgeId int
+	 * @return int
+	 */
 	public int getPledgeCrestId(int pledgeId)
 	{
 		int crestId = 0;
@@ -180,6 +262,11 @@ public class CrestCache
 		return crestId;
 	}
 	
+	/**
+	 * Method getPledgeCrestLargeId.
+	 * @param pledgeId int
+	 * @return int
+	 */
 	public int getPledgeCrestLargeId(int pledgeId)
 	{
 		int crestId = 0;
@@ -195,6 +282,11 @@ public class CrestCache
 		return crestId;
 	}
 	
+	/**
+	 * Method getAllyCrestId.
+	 * @param pledgeId int
+	 * @return int
+	 */
 	public int getAllyCrestId(int pledgeId)
 	{
 		int crestId = 0;
@@ -210,6 +302,10 @@ public class CrestCache
 		return crestId;
 	}
 	
+	/**
+	 * Method removePledgeCrest.
+	 * @param pledgeId int
+	 */
 	public void removePledgeCrest(int pledgeId)
 	{
 		writeLock.lock();
@@ -241,6 +337,10 @@ public class CrestCache
 		}
 	}
 	
+	/**
+	 * Method removePledgeCrestLarge.
+	 * @param pledgeId int
+	 */
 	public void removePledgeCrestLarge(int pledgeId)
 	{
 		writeLock.lock();
@@ -272,6 +372,10 @@ public class CrestCache
 		}
 	}
 	
+	/**
+	 * Method removeAllyCrest.
+	 * @param pledgeId int
+	 */
 	public void removeAllyCrest(int pledgeId)
 	{
 		writeLock.lock();
@@ -303,6 +407,12 @@ public class CrestCache
 		}
 	}
 	
+	/**
+	 * Method savePledgeCrest.
+	 * @param pledgeId int
+	 * @param crest byte[]
+	 * @return int
+	 */
 	public int savePledgeCrest(int pledgeId, byte[] crest)
 	{
 		int crestId = getCrestId(pledgeId, crest);
@@ -337,6 +447,12 @@ public class CrestCache
 		return crestId;
 	}
 	
+	/**
+	 * Method savePledgeCrestLarge.
+	 * @param pledgeId int
+	 * @param crest byte[]
+	 * @return int
+	 */
 	public int savePledgeCrestLarge(int pledgeId, byte[] crest)
 	{
 		int crestId = getCrestId(pledgeId, crest);
@@ -371,6 +487,12 @@ public class CrestCache
 		return crestId;
 	}
 	
+	/**
+	 * Method saveAllyCrest.
+	 * @param pledgeId int
+	 * @param crest byte[]
+	 * @return int
+	 */
 	public int saveAllyCrest(int pledgeId, byte[] crest)
 	{
 		int crestId = getCrestId(pledgeId, crest);

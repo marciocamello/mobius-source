@@ -31,16 +31,34 @@ import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.templates.StaticObjectTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StaticObjectInstance extends GameObject
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field reference.
+	 */
 	private final HardReference<StaticObjectInstance> reference;
+	/**
+	 * Field _template.
+	 */
 	private final StaticObjectTemplate _template;
+	/**
+	 * Field _meshIndex.
+	 */
 	private int _meshIndex;
 	
+	/**
+	 * Constructor for StaticObjectInstance.
+	 * @param objectId int
+	 * @param template StaticObjectTemplate
+	 */
 	public StaticObjectInstance(int objectId, StaticObjectTemplate template)
 	{
 		super(objectId);
@@ -48,22 +66,39 @@ public class StaticObjectInstance extends GameObject
 		reference = new L2Reference<>(this);
 	}
 	
+	/**
+	 * Method getRef.
+	 * @return HardReference<StaticObjectInstance>
+	 */
 	@Override
 	public HardReference<StaticObjectInstance> getRef()
 	{
 		return reference;
 	}
 	
+	/**
+	 * Method getUId.
+	 * @return int
+	 */
 	public int getUId()
 	{
 		return _template.getUId();
 	}
 	
+	/**
+	 * Method getType.
+	 * @return int
+	 */
 	public int getType()
 	{
 		return _template.getType();
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{
@@ -98,18 +133,33 @@ public class StaticObjectInstance extends GameObject
 		}
 	}
 	
+	/**
+	 * Method addPacketList.
+	 * @param forPlayer Player
+	 * @param dropper Creature
+	 * @return List<L2GameServerPacket>
+	 */
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{
 		return Collections.<L2GameServerPacket> singletonList(new StaticObject(this));
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature attacker)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method broadcastInfo.
+	 * @param force boolean
+	 */
 	public void broadcastInfo(boolean force)
 	{
 		StaticObject p = new StaticObject(this);
@@ -119,17 +169,30 @@ public class StaticObjectInstance extends GameObject
 		}
 	}
 	
+	/**
+	 * Method getGeoZ.
+	 * @param loc Location
+	 * @return int
+	 */
 	@Override
 	public int getGeoZ(Location loc)
 	{
 		return loc.z;
 	}
 	
+	/**
+	 * Method getMeshIndex.
+	 * @return int
+	 */
 	public int getMeshIndex()
 	{
 		return _meshIndex;
 	}
 	
+	/**
+	 * Method setMeshIndex.
+	 * @param meshIndex int
+	 */
 	public void setMeshIndex(int meshIndex)
 	{
 		_meshIndex = meshIndex;

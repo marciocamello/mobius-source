@@ -17,6 +17,10 @@ import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AuctionedManagerInstance extends ManagerInstance
 {
 	/**
@@ -24,11 +28,19 @@ public class AuctionedManagerInstance extends ManagerInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for AuctionedManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public AuctionedManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method setDialogs.
+	 */
 	@Override
 	protected void setDialogs()
 	{
@@ -36,6 +48,11 @@ public class AuctionedManagerInstance extends ManagerInstance
 		_failDialog = getTemplate().getAIParams().getString("fail_dialog", "residence2/clanhall/black002.htm");
 	}
 	
+	/**
+	 * Method getCond.
+	 * @param player Player
+	 * @return int
+	 */
 	@Override
 	protected int getCond(Player player)
 	{

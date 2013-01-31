@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CameraMode extends L2GameServerPacket
 {
+	/**
+	 * Field _mode.
+	 */
 	int _mode;
 	
+	/**
+	 * Constructor for CameraMode.
+	 * @param mode int
+	 */
 	public CameraMode(int mode)
 	{
 		_mode = mode;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

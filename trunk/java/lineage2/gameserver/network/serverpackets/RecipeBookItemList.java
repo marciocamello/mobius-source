@@ -17,12 +17,30 @@ import java.util.Collection;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.item.RecipeTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RecipeBookItemList extends L2GameServerPacket
 {
+	/**
+	 * Field _recipes.
+	 */
 	private Collection<RecipeTemplate> _recipes;
+	/**
+	 * Field _isDwarvenCraft.
+	 */
 	private final boolean _isDwarvenCraft;
+	/**
+	 * Field _currentMp.
+	 */
 	private final int _currentMp;
 	
+	/**
+	 * Constructor for RecipeBookItemList.
+	 * @param player Player
+	 * @param isDwarvenCraft boolean
+	 */
 	public RecipeBookItemList(Player player, boolean isDwarvenCraft)
 	{
 		_isDwarvenCraft = isDwarvenCraft;
@@ -37,6 +55,9 @@ public class RecipeBookItemList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

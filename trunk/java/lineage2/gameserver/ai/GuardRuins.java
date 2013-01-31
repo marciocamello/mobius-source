@@ -17,13 +17,25 @@ import java.util.List;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GuardRuins extends Fighter
 {
+	/**
+	 * Constructor for GuardRuins.
+	 * @param actor NpcInstance
+	 */
 	public GuardRuins(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -46,6 +58,11 @@ public class GuardRuins extends Fighter
 		return true;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

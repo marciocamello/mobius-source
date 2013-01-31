@@ -14,14 +14,26 @@ package lineage2.commons.net.nio.impl;
 
 import java.nio.ByteBuffer;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class SendablePacket<T extends MMOClient> extends lineage2.commons.net.nio.SendablePacket<T>
 {
+	/**
+	 * Method getByteBuffer.
+	 * @return ByteBuffer
+	 */
 	@Override
 	protected ByteBuffer getByteBuffer()
 	{
 		return ((SelectorThread) Thread.currentThread()).getWriteBuffer();
 	}
 	
+	/**
+	 * Method getClient.
+	 * @return T
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public T getClient()
@@ -29,6 +41,10 @@ public abstract class SendablePacket<T extends MMOClient> extends lineage2.commo
 		return (T) ((SelectorThread) Thread.currentThread()).getWriteClient();
 	}
 	
+	/**
+	 * Method write.
+	 * @return boolean
+	 */
 	@Override
 	protected abstract boolean write();
 }

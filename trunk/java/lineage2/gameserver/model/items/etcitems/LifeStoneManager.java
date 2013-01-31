@@ -26,11 +26,24 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LifeStoneManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(LifeStoneManager.class);
+	/**
+	 * Field _stones.
+	 */
 	private static TIntObjectHashMap<LifeStoneInfo> _stones = new TIntObjectHashMap<>();
 	
+	/**
+	 * Method load.
+	 */
 	public static void load()
 	{
 		_log.info("LifeStoneManager: Loading stone data...");
@@ -91,6 +104,11 @@ public class LifeStoneManager
 		_log.info("LifeStoneManager: Loaded " + _stones.size() + " stone data...");
 	}
 	
+	/**
+	 * Method getStoneInfo.
+	 * @param itemId int
+	 * @return LifeStoneInfo
+	 */
 	public static LifeStoneInfo getStoneInfo(int itemId)
 	{
 		return _stones.get(itemId);

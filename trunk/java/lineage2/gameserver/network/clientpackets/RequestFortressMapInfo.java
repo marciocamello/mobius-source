@@ -17,16 +17,29 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.network.serverpackets.ExShowFortressMapInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestFortressMapInfo extends L2GameClientPacket
 {
+	/**
+	 * Field _fortressId.
+	 */
 	private int _fortressId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_fortressId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

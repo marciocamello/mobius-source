@@ -14,17 +14,46 @@ package lineage2.gameserver.model.actor.instances.player;
 
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BookMark
 {
+	/**
+	 * Field z. Field y. Field x.
+	 */
 	public final int x, y, z;
+	/**
+	 * Field icon.
+	 */
 	private int icon;
+	/**
+	 * Field acronym. Field name.
+	 */
 	private String name, acronym;
 	
+	/**
+	 * Constructor for BookMark.
+	 * @param loc Location
+	 * @param aicon int
+	 * @param aname String
+	 * @param aacronym String
+	 */
 	public BookMark(Location loc, int aicon, String aname, String aacronym)
 	{
 		this(loc.x, loc.y, loc.z, aicon, aname, aacronym);
 	}
 	
+	/**
+	 * Constructor for BookMark.
+	 * @param _x int
+	 * @param _y int
+	 * @param _z int
+	 * @param aicon int
+	 * @param aname String
+	 * @param aacronym String
+	 */
 	public BookMark(int _x, int _y, int _z, int aicon, String aname, String aacronym)
 	{
 		x = _x;
@@ -35,34 +64,61 @@ public class BookMark
 		setAcronym(aacronym);
 	}
 	
+	/**
+	 * Method setIcon.
+	 * @param val int
+	 * @return BookMark
+	 */
 	public BookMark setIcon(int val)
 	{
 		icon = val;
 		return this;
 	}
 	
+	/**
+	 * Method getIcon.
+	 * @return int
+	 */
 	public int getIcon()
 	{
 		return icon;
 	}
 	
+	/**
+	 * Method setName.
+	 * @param val String
+	 * @return BookMark
+	 */
 	public BookMark setName(String val)
 	{
 		name = val.length() > 32 ? val.substring(0, 32) : val;
 		return this;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return name;
 	}
 	
+	/**
+	 * Method setAcronym.
+	 * @param val String
+	 * @return BookMark
+	 */
 	public BookMark setAcronym(String val)
 	{
 		acronym = val.length() > 4 ? val.substring(0, 4) : val;
 		return this;
 	}
 	
+	/**
+	 * Method getAcronym.
+	 * @return String
+	 */
 	public String getAcronym()
 	{
 		return acronym;

@@ -18,10 +18,21 @@ import lineage2.loginserver.L2LoginClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class L2LoginClientPacket extends ReceivablePacket<L2LoginClient>
 {
+	/**
+	 * Field _log.
+	 */
 	private static Logger _log = LoggerFactory.getLogger(L2LoginClientPacket.class);
 	
+	/**
+	 * Method read.
+	 * @return boolean
+	 */
 	@Override
 	protected final boolean read()
 	{
@@ -37,6 +48,10 @@ public abstract class L2LoginClientPacket extends ReceivablePacket<L2LoginClient
 		}
 	}
 	
+	/**
+	 * Method run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public void run()
 	{
@@ -50,7 +65,14 @@ public abstract class L2LoginClientPacket extends ReceivablePacket<L2LoginClient
 		}
 	}
 	
+	/**
+	 * Method readImpl.
+	 */
 	protected abstract void readImpl();
 	
+	/**
+	 * Method runImpl.
+	 * @throws Exception
+	 */
 	protected abstract void runImpl() throws Exception;
 }

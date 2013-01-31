@@ -18,11 +18,24 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GrandIsleofPrayerRace extends Functions
 {
+	/**
+	 * Field RACE_STAMP. (value is 10013)
+	 */
 	private static final int RACE_STAMP = 10013;
+	/**
+	 * Field SECRET_KEY. (value is 9694)
+	 */
 	private static final int SECRET_KEY = 9694;
 	
+	/**
+	 * Method startRace.
+	 */
 	public void startRace()
 	{
 		Skill skill = SkillTable.getInstance().getInfo(Skill.SKILL_EVENT_TIMER, 1);
@@ -37,6 +50,11 @@ public class GrandIsleofPrayerRace extends Functions
 		show("defautl/32349-2.htm", player, npc);
 	}
 	
+	/**
+	 * Method DialogAppend_32349.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_32349(Integer val)
 	{
 		Player player = getSelf();

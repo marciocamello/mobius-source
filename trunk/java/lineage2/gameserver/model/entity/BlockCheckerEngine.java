@@ -53,18 +53,55 @@ import lineage2.gameserver.utils.ReflectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class BlockCheckerEngine
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(BlockCheckerEngine.class);
+	/**
+	 * Field _holder.
+	 */
 	HandysBlockCheckerManager.ArenaParticipantsHolder _holder;
+	/**
+	 * Field _redTeamPoints.
+	 */
 	final Map<Player, Integer> _redTeamPoints = new ConcurrentHashMap<>();
+	/**
+	 * Field _blueTeamPoints.
+	 */
 	final Map<Player, Integer> _blueTeamPoints = new ConcurrentHashMap<>();
+	/**
+	 * Field _redPoints.
+	 */
 	int _redPoints = 15;
+	/**
+	 * Field _bluePoints.
+	 */
 	int _bluePoints = 15;
+	/**
+	 * Field _arena.
+	 */
 	int _arena = -1;
+	/**
+	 * Field _spawns.
+	 */
 	final List<SimpleSpawner> _spawns = new CopyOnWriteArrayList<>();
+	/**
+	 * Field _isRedWinner.
+	 */
 	boolean _isRedWinner;
+	/**
+	 * Field _startedTime.
+	 */
 	long _startedTime;
+	/**
+	 * Field _arenaCoordinates.
+	 */
 	static final int[][] _arenaCoordinates =
 	{
 		{
@@ -100,13 +137,37 @@ public final class BlockCheckerEngine
 			-62391
 		}
 	};
+	/**
+	 * Field _zCoord. (value is -2405)
+	 */
 	private static final int _zCoord = -2405;
+	/**
+	 * Field _girlNpc.
+	 */
 	NpcInstance _girlNpc;
+	/**
+	 * Field _drops.
+	 */
 	final List<ItemInstance> _drops = new ArrayList<>();
+	/**
+	 * Field DEFAULT_ARENA. (value is -1)
+	 */
 	private static final byte DEFAULT_ARENA = -1;
+	/**
+	 * Field _isStarted.
+	 */
 	boolean _isStarted = false;
+	/**
+	 * Field _task.
+	 */
 	ScheduledFuture<?> _task;
+	/**
+	 * Field _abnormalEnd.
+	 */
 	boolean _abnormalEnd = false;
+	/**
+	 * Field zoneNames.
+	 */
 	final String[] zoneNames =
 	{
 		"[block_checker_1]",
@@ -115,6 +176,11 @@ public final class BlockCheckerEngine
 		"[block_checker_4]"
 	};
 	
+	/**
+	 * Constructor for BlockCheckerEngine.
+	 * @param holder HandysBlockCheckerManager.ArenaParticipantsHolder
+	 * @param arena int
+	 */
 	public BlockCheckerEngine(HandysBlockCheckerManager.ArenaParticipantsHolder holder, int arena)
 	{
 		_holder = holder;
@@ -132,26 +198,46 @@ public final class BlockCheckerEngine
 		}
 	}
 	
+	/**
+	 * Method updatePlayersOnStart.
+	 * @param holder ArenaParticipantsHolder
+	 */
 	public void updatePlayersOnStart(ArenaParticipantsHolder holder)
 	{
 		_holder = holder;
 	}
 	
+	/**
+	 * Method getHolder.
+	 * @return ArenaParticipantsHolder
+	 */
 	public ArenaParticipantsHolder getHolder()
 	{
 		return _holder;
 	}
 	
+	/**
+	 * Method getArena.
+	 * @return int
+	 */
 	public int getArena()
 	{
 		return _arena;
 	}
 	
+	/**
+	 * Method getStarterTime.
+	 * @return long
+	 */
 	public long getStarterTime()
 	{
 		return _startedTime;
 	}
 	
+	/**
+	 * Method getRedPoints.
+	 * @return int
+	 */
 	public int getRedPoints()
 	{
 		synchronized (this)
@@ -160,6 +246,10 @@ public final class BlockCheckerEngine
 		}
 	}
 	
+	/**
+	 * Method getBluePoints.
+	 * @return int
+	 */
 	public int getBluePoints()
 	{
 		synchronized (this)
@@ -168,6 +258,12 @@ public final class BlockCheckerEngine
 		}
 	}
 	
+	/**
+	 * Method getPlayerPoints.
+	 * @param player Player
+	 * @param isRed boolean
+	 * @return int
+	 */
 	public int getPlayerPoints(Player player, boolean isRed)
 	{
 		if (!_redTeamPoints.containsKey(player) && !_blueTeamPoints.containsKey(player))
@@ -181,6 +277,11 @@ public final class BlockCheckerEngine
 		return _blueTeamPoints.get(player);
 	}
 	
+	/**
+	 * Method increasePlayerPoints.
+	 * @param player Player
+	 * @param team int
+	 */
 	public synchronized void increasePlayerPoints(Player player, int team)
 	{
 		if (player == null)
@@ -203,6 +304,10 @@ public final class BlockCheckerEngine
 		}
 	}
 	
+	/**
+	 * Method addNewDrop.
+	 * @param item ItemInstance
+	 */
 	public void addNewDrop(ItemInstance item)
 	{
 		if (item != null)
@@ -211,11 +316,19 @@ public final class BlockCheckerEngine
 		}
 	}
 	
+	/**
+	 * Method isStarted.
+	 * @return boolean
+	 */
 	public boolean isStarted()
 	{
 		return _isStarted;
 	}
 	
+	/**
+	 * Method broadcastRelationChanged.
+	 * @param plr Player
+	 */
 	void broadcastRelationChanged(Player plr)
 	{
 		for (Player p : _holder.getAllPlayers())
@@ -224,6 +337,9 @@ public final class BlockCheckerEngine
 		}
 	}
 	
+	/**
+	 * Method endEventAbnormally.
+	 */
 	public void endEventAbnormally()
 	{
 		try
@@ -245,6 +361,10 @@ public final class BlockCheckerEngine
 		}
 	}
 	
+	/**
+	 * Method clearArena.
+	 * @param zoneName String
+	 */
 	public void clearArena(String zoneName)
 	{
 		Zone zone = ReflectionUtils.getZone(zoneName);
@@ -264,11 +384,29 @@ public final class BlockCheckerEngine
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class StartEvent extends RunnableImpl
 	{
+		/**
+		 * Field _transformationBlue.
+		 */
+		/**
+		 * Field _transformationRed.
+		 */
+		/**
+		 * Field _freeze.
+		 */
 		private final Skill _freeze, _transformationRed, _transformationBlue;
+		/**
+		 * Field _closeUserInterface.
+		 */
 		private final ExCubeGameCloseUI _closeUserInterface = new ExCubeGameCloseUI();
 		
+		/**
+		 * Constructor for StartEvent.
+		 */
 		public StartEvent()
 		{
 			_freeze = SkillTable.getInstance().getInfo(6034, 1);
@@ -276,6 +414,9 @@ public final class BlockCheckerEngine
 			_transformationBlue = SkillTable.getInstance().getInfo(6036, 1);
 		}
 		
+		/**
+		 * Method setUpPlayers.
+		 */
 		private void setUpPlayers()
 		{
 			HandysBlockCheckerManager.getInstance().setArenaBeingUsed(_arena);
@@ -331,6 +472,9 @@ public final class BlockCheckerEngine
 			}
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -351,17 +495,34 @@ public final class BlockCheckerEngine
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	class SpawnRound extends RunnableImpl
 	{
+		/**
+		 * Field _numOfBoxes.
+		 */
 		int _numOfBoxes;
+		/**
+		 * Field _round.
+		 */
 		int _round;
 		
+		/**
+		 * Constructor for SpawnRound.
+		 * @param numberOfBoxes int
+		 * @param round int
+		 */
 		SpawnRound(int numberOfBoxes, int round)
 		{
 			_numOfBoxes = numberOfBoxes;
 			_round = round;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -445,10 +606,19 @@ public final class BlockCheckerEngine
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	class CountDown extends RunnableImpl
 	{
+		/**
+		 * Field seconds.
+		 */
 		private int seconds = 5;
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -481,8 +651,14 @@ public final class BlockCheckerEngine
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	class EndEvent extends RunnableImpl
 	{
+		/**
+		 * Method clearMe.
+		 */
 		private void clearMe()
 		{
 			HandysBlockCheckerManager.getInstance().clearPaticipantQueueByArenaId(_arena);
@@ -518,6 +694,9 @@ public final class BlockCheckerEngine
 			_drops.clear();
 		}
 		
+		/**
+		 * Method rewardPlayers.
+		 */
 		private void rewardPlayers()
 		{
 			if (_redPoints == _bluePoints)
@@ -546,12 +725,22 @@ public final class BlockCheckerEngine
 			}
 		}
 		
+		/**
+		 * Method addRewardItemWithMessage.
+		 * @param id int
+		 * @param count long
+		 * @param player Player
+		 */
 		private void addRewardItemWithMessage(int id, long count, Player player)
 		{
 			player.getInventory().addItem(id, (long) (count * Config.ALT_RATE_COINS_REWARD_BLOCK_CHECKER));
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S2_S1).addItemName(id).addNumber(count));
 		}
 		
+		/**
+		 * Method rewardAsWinner.
+		 * @param isRed boolean
+		 */
 		private void rewardAsWinner(boolean isRed)
 		{
 			Map<Player, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
@@ -598,6 +787,10 @@ public final class BlockCheckerEngine
 			}
 		}
 		
+		/**
+		 * Method rewardAsLooser.
+		 * @param isRed boolean
+		 */
 		private void rewardAsLooser(boolean isRed)
 		{
 			Map<Player, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
@@ -610,6 +803,9 @@ public final class BlockCheckerEngine
 			}
 		}
 		
+		/**
+		 * Method setPlayersBack.
+		 */
 		private void setPlayersBack()
 		{
 			final ExCubeGameEnd end = new ExCubeGameEnd(_isRedWinner);
@@ -632,6 +828,9 @@ public final class BlockCheckerEngine
 			}
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -646,17 +845,38 @@ public final class BlockCheckerEngine
 		}
 	}
 	
+	/**
+	 * Field _listener.
+	 */
 	final OnExitPlayerListener _listener = new OnExitPlayerListener();
 	
+	/**
+	 * @author Mobius
+	 */
 	private class OnExitPlayerListener implements OnTeleportListener, OnPlayerExitListener
 	{
+		/**
+		 * Field _isExit.
+		 */
 		private boolean _isExit = false;
 		
+		/**
+		 * Constructor for OnExitPlayerListener.
+		 */
 		public OnExitPlayerListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onTeleport.
+		 * @param player Player
+		 * @param x int
+		 * @param y int
+		 * @param z int
+		 * @param reflection Reflection
+		 * @see lineage2.gameserver.listener.actor.player.OnTeleportListener#onTeleport(Player, int, int, int, Reflection)
+		 */
 		@Override
 		public void onTeleport(Player player, int x, int y, int z, Reflection reflection)
 		{
@@ -667,6 +887,11 @@ public final class BlockCheckerEngine
 			onPlayerExit(player);
 		}
 		
+		/**
+		 * Method onPlayerExit.
+		 * @param player Player
+		 * @see lineage2.gameserver.listener.actor.player.OnPlayerExitListener#onPlayerExit(Player)
+		 */
 		@Override
 		public void onPlayerExit(final Player player)
 		{

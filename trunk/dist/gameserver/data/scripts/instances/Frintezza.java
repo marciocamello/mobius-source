@@ -42,15 +42,43 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Frintezza extends Reflection
 {
+	/**
+	 * Field HallAlarmDevice. (value is 18328)
+	 */
 	private static final int HallAlarmDevice = 18328;
+	/**
+	 * Field DarkChoirPlayer. (value is 18339)
+	 */
 	private static final int DarkChoirPlayer = 18339;
+	/**
+	 * Field _weakScarletId. (value is 29046)
+	 */
 	private static final int _weakScarletId = 29046;
+	/**
+	 * Field _strongScarletId. (value is 29047)
+	 */
 	private static final int _strongScarletId = 29047;
+	/**
+	 * Field TeleportCube. (value is 29061)
+	 */
 	private static final int TeleportCube = 29061;
+	/**
+	 * Field _frintezzasSwordId. (value is 7903)
+	 */
 	private static final int _frintezzasSwordId = 7903;
+	/**
+	 * Field DewdropItem. (value is 8556)
+	 */
 	private static final int DewdropItem = 8556;
+	/**
+	 * Field hallADoors.
+	 */
 	static final int[] hallADoors =
 	{
 		17130051,
@@ -62,11 +90,17 @@ public class Frintezza extends Reflection
 		17130057,
 		17130058
 	};
+	/**
+	 * Field corridorADoors.
+	 */
 	static final int[] corridorADoors =
 	{
 		17130042,
 		17130043
 	};
+	/**
+	 * Field hallBDoors.
+	 */
 	static final int[] hallBDoors =
 	{
 		17130061,
@@ -80,11 +114,17 @@ public class Frintezza extends Reflection
 		17130069,
 		17130070
 	};
+	/**
+	 * Field corridorBDoors.
+	 */
 	static final int[] corridorBDoors =
 	{
 		17130045,
 		17130046
 	};
+	/**
+	 * Field blockANpcs.
+	 */
 	static final int[] blockANpcs =
 	{
 		18329,
@@ -92,6 +132,9 @@ public class Frintezza extends Reflection
 		18331,
 		18333
 	};
+	/**
+	 * Field blockBNpcs.
+	 */
 	static final int[] blockBNpcs =
 	{
 		18334,
@@ -100,20 +143,40 @@ public class Frintezza extends Reflection
 		18337,
 		18338
 	};
+	/**
+	 * Field _intervalOfFrintezzaSongs.
+	 */
 	static int _intervalOfFrintezzaSongs = 30000;
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class NpcLocation extends Location
 	{
 		/**
 	 * 
 	 */
 		private static final long serialVersionUID = 1L;
+		/**
+		 * Field npcId.
+		 */
 		public int npcId;
 		
+		/**
+		 * Constructor for NpcLocation.
+		 */
 		public NpcLocation()
 		{
 		}
 		
+		/**
+		 * Constructor for NpcLocation.
+		 * @param x int
+		 * @param y int
+		 * @param z int
+		 * @param heading int
+		 * @param npcId int
+		 */
 		public NpcLocation(int x, int y, int z, int heading, int npcId)
 		{
 			super(x, y, z, heading);
@@ -121,8 +184,17 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * Field frintezzaSpawn.
+	 */
 	static NpcLocation frintezzaSpawn = new NpcLocation(-87784, -155090, -9080, 16048, 29045);
+	/**
+	 * Field scarletSpawnWeak.
+	 */
 	static NpcLocation scarletSpawnWeak = new NpcLocation(-87784, -153288, -9176, 16384, 29046);
+	/**
+	 * Field portraitSpawns.
+	 */
 	static NpcLocation[] portraitSpawns =
 	{
 		new NpcLocation(-86136, -153960, -9168, 35048, 29048),
@@ -130,6 +202,9 @@ public class Frintezza extends Reflection
 		new NpcLocation(-89368, -152456, -9168, 64817, 29048),
 		new NpcLocation(-89416, -153976, -9168, 57730, 29049)
 	};
+	/**
+	 * Field demonSpawns.
+	 */
 	static NpcLocation[] demonSpawns =
 	{
 		new NpcLocation(-86136, -153960, -9168, 35048, 29050),
@@ -137,19 +212,58 @@ public class Frintezza extends Reflection
 		new NpcLocation(-89368, -152456, -9168, 64817, 29051),
 		new NpcLocation(-89416, -153976, -9168, 57730, 29050)
 	};
+	/**
+	 * Field _frintezzaDummy.
+	 */
 	NpcInstance _frintezzaDummy;
+	/**
+	 * Field frintezza.
+	 */
 	NpcInstance frintezza;
+	/**
+	 * Field weakScarlet.
+	 */
 	NpcInstance weakScarlet;
+	/**
+	 * Field strongScarlet.
+	 */
 	NpcInstance strongScarlet;
+	/**
+	 * Field portraits.
+	 */
 	final NpcInstance[] portraits = new NpcInstance[4];
+	/**
+	 * Field demons.
+	 */
 	final NpcInstance[] demons = new NpcInstance[4];
+	/**
+	 * Field _scarletMorph.
+	 */
 	int _scarletMorph = 0;
+	/**
+	 * Field battleStartDelay.
+	 */
 	private static final long battleStartDelay = 5 * 60000L;
+	/**
+	 * Field _deathListener.
+	 */
 	final DeathListener _deathListener = new DeathListener();
+	/**
+	 * Field _currentHpListener.
+	 */
 	final CurrentHpListener _currentHpListener = new CurrentHpListener();
+	/**
+	 * Field _zoneListener.
+	 */
 	private final ZoneListener _zoneListener = new ZoneListener();
+	/**
+	 * Field musicTask.
+	 */
 	ScheduledFuture<?> musicTask;
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{
@@ -162,13 +276,22 @@ public class Frintezza extends Reflection
 		blockUnblockNpcs(true, blockANpcs);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class FrintezzaStart extends RunnableImpl
 	{
+		/**
+		 * Constructor for FrintezzaStart.
+		 */
 		public FrintezzaStart()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -176,15 +299,28 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Spawn extends RunnableImpl
 	{
+		/**
+		 * Field _taskId.
+		 */
 		private int _taskId = 0;
 		
+		/**
+		 * Constructor for Spawn.
+		 * @param taskId int
+		 */
 		public Spawn(int taskId)
 		{
 			_taskId = taskId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -320,13 +456,22 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Music extends RunnableImpl
 	{
+		/**
+		 * Constructor for Music.
+		 */
 		public Music()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -362,6 +507,11 @@ public class Frintezza extends Reflection
 			musicTask = ThreadPoolManager.getInstance().schedule(new Music(), _intervalOfFrintezzaSongs + Rnd.get(10000));
 		}
 		
+		/**
+		 * Method getSongTargets.
+		 * @param songId int
+		 * @return List<Creature>
+		 */
 		private List<Creature> getSongTargets(int songId)
 		{
 			List<Creature> targets = new ArrayList<>();
@@ -400,6 +550,10 @@ public class Frintezza extends Reflection
 			return targets;
 		}
 		
+		/**
+		 * Method getSong.
+		 * @return int
+		 */
 		private int getSong()
 		{
 			if (minionsNeedHeal())
@@ -409,6 +563,10 @@ public class Frintezza extends Reflection
 			return Rnd.get(2, 4);
 		}
 		
+		/**
+		 * Method minionsNeedHeal.
+		 * @return boolean
+		 */
 		private boolean minionsNeedHeal()
 		{
 			if (!Rnd.chance(40))
@@ -438,11 +596,29 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SongEffectLaunched extends RunnableImpl
 	{
+		/**
+		 * Field _targets.
+		 */
 		private final List<Creature> _targets;
+		/**
+		 * Field _currentTime.
+		 */
+		/**
+		 * Field _song.
+		 */
 		private final int _song, _currentTime;
 		
+		/**
+		 * Constructor for SongEffectLaunched.
+		 * @param targets List<Creature>
+		 * @param song int
+		 * @param currentTimeOfSong int
+		 */
 		public SongEffectLaunched(List<Creature> targets, int song, int currentTimeOfSong)
 		{
 			_targets = targets;
@@ -450,6 +626,9 @@ public class Frintezza extends Reflection
 			_currentTime = currentTimeOfSong;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -467,11 +646,26 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * Method spawn.
+	 * @param loc NpcLocation
+	 * @return NpcInstance
+	 */
 	NpcInstance spawn(NpcLocation loc)
 	{
 		return addSpawnWithoutRespawn(loc.npcId, loc, 0);
 	}
 	
+	/**
+	 * Method showSocialActionMovie.
+	 * @param target NpcInstance
+	 * @param dist int
+	 * @param yaw int
+	 * @param pitch int
+	 * @param time int
+	 * @param duration int
+	 * @param socialAction int
+	 */
 	void showSocialActionMovie(NpcInstance target, int dist, int yaw, int pitch, int time, int duration, int socialAction)
 	{
 		if (target == null)
@@ -496,6 +690,10 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * Method blockAll.
+	 * @param flag boolean
+	 */
 	void blockAll(boolean flag)
 	{
 		block(frintezza, flag);
@@ -508,6 +706,11 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * Method block.
+	 * @param npc NpcInstance
+	 * @param flag boolean
+	 */
 	void block(NpcInstance npc, boolean flag)
 	{
 		if ((npc == null) || npc.isDead())
@@ -532,15 +735,28 @@ public class Frintezza extends Reflection
 		npc.setIsInvul(flag);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SecondMorph extends RunnableImpl
 	{
+		/**
+		 * Field _taskId.
+		 */
 		private int _taskId = 0;
 		
+		/**
+		 * Constructor for SecondMorph.
+		 * @param taskId int
+		 */
 		public SecondMorph(int taskId)
 		{
 			_taskId = taskId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -584,16 +800,32 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ThirdMorph extends RunnableImpl
 	{
+		/**
+		 * Field _taskId.
+		 */
 		private int _taskId = 0;
+		/**
+		 * Field _angle.
+		 */
 		private int _angle = 0;
 		
+		/**
+		 * Constructor for ThirdMorph.
+		 * @param taskId int
+		 */
 		public ThirdMorph(int taskId)
 		{
 			_taskId = taskId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -666,15 +898,28 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Die extends RunnableImpl
 	{
+		/**
+		 * Field _taskId.
+		 */
 		private int _taskId = 0;
 		
+		/**
+		 * Constructor for Die.
+		 * @param taskId int
+		 */
 		public Die(int taskId)
 		{
 			_taskId = taskId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -716,6 +961,9 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * Method cleanUp.
+	 */
 	void cleanUp()
 	{
 		startCollapseTimer(15 * 60 * 1000L);
@@ -729,6 +977,11 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * Method blockUnblockNpcs.
+	 * @param block boolean
+	 * @param npcArray int[]
+	 */
 	void blockUnblockNpcs(boolean block, int[] npcArray)
 	{
 		for (NpcInstance n : getNpcs())
@@ -749,8 +1002,19 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class CurrentHpListener implements OnCurrentHpDamageListener
 	{
+		/**
+		 * Method onCurrentHpDamage.
+		 * @param actor Creature
+		 * @param damage double
+		 * @param attacker Creature
+		 * @param skill Skill
+		 * @see lineage2.gameserver.listener.actor.OnCurrentHpDamageListener#onCurrentHpDamage(Creature, double, Creature, Skill)
+		 */
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
 		{
@@ -780,13 +1044,25 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DeathListener implements OnDeathListener
 	{
+		/**
+		 * Constructor for DeathListener.
+		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param self Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -870,13 +1146,28 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
@@ -890,6 +1181,9 @@ public class Frintezza extends Reflection
 		}
 	}
 	
+	/**
+	 * Method onCollapse.
+	 */
 	@Override
 	protected void onCollapse()
 	{

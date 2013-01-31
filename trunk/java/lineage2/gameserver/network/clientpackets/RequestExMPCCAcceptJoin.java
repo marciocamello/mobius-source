@@ -20,11 +20,21 @@ import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 {
+	/**
+	 * Field _unk. Field _response.
+	 */
 	@SuppressWarnings("unused")
 	private int _response, _unk;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -32,6 +42,9 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 		_unk = _buf.hasRemaining() ? readD() : 0;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -103,7 +116,7 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 				if (!haveSkill)
 				{
 					haveItem = requestor.getInventory().destroyItemByItemId(CommandChannel.STRATEGY_GUIDE_ID, 1);
-					if (haveItem == true)
+					if (haveItem)
 					{
 						requestor.sendPacket(SystemMessage2.removeItems(CommandChannel.STRATEGY_GUIDE_ID, 1));
 					}

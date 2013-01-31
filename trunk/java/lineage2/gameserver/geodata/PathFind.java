@@ -28,15 +28,48 @@ import lineage2.gameserver.geodata.PathFindBuffers.PathFindBuffer;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PathFind
 {
+	/**
+	 * Field geoIndex.
+	 */
 	private int geoIndex = 0;
+	/**
+	 * Field buff.
+	 */
 	private PathFindBuffer buff;
+	/**
+	 * Field path.
+	 */
 	private List<Location> path;
+	/**
+	 * Field hNSWE.
+	 */
 	private final short[] hNSWE = new short[2];
+	/**
+	 * Field endPoint. Field startPoint.
+	 */
 	private final Location startPoint, endPoint;
+	/**
+	 * Field currentNode. Field endNode. Field startNode.
+	 */
 	private GeoNode startNode, endNode, currentNode;
 	
+	/**
+	 * Constructor for PathFind.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param destX int
+	 * @param destY int
+	 * @param destZ int
+	 * @param obj GameObject
+	 * @param geoIndex int
+	 */
 	public PathFind(int x, int y, int z, int destX, int destY, int destZ, GameObject obj, int geoIndex)
 	{
 		this.geoIndex = geoIndex;
@@ -73,6 +106,10 @@ public class PathFind
 		}
 	}
 	
+	/**
+	 * Method findPath.
+	 * @return List<Location>
+	 */
 	private List<Location> findPath()
 	{
 		startNode = buff.nodes[startPoint.x - buff.offsetX][startPoint.y - buff.offsetY].set(startPoint.x, startPoint.y, (short) startPoint.z);
@@ -113,6 +150,11 @@ public class PathFind
 		return path;
 	}
 	
+	/**
+	 * Method tracePath.
+	 * @param f GeoNode
+	 * @return List<Location>
+	 */
 	private List<Location> tracePath(GeoNode f)
 	{
 		List<Location> locations = new ArrayList<>();
@@ -125,6 +167,10 @@ public class PathFind
 		return locations;
 	}
 	
+	/**
+	 * Method handleNode.
+	 * @param node GeoNode
+	 */
 	private void handleNode(GeoNode node)
 	{
 		int clX = node.x;
@@ -201,6 +247,11 @@ public class PathFind
 		}
 	}
 	
+	/**
+	 * Method pathCostEstimate.
+	 * @param n GeoNode
+	 * @return float
+	 */
 	private float pathCostEstimate(GeoNode n)
 	{
 		int diffx = endNode.x - n.x;
@@ -209,6 +260,13 @@ public class PathFind
 		return (float) Math.sqrt((diffx * diffx) + (diffy * diffy) + ((diffz * diffz) / 256));
 	}
 	
+	/**
+	 * Method traverseCost.
+	 * @param from GeoNode
+	 * @param n GeoNode
+	 * @param d boolean
+	 * @return float
+	 */
 	private float traverseCost(GeoNode from, GeoNode n, boolean d)
 	{
 		if ((n.nswe != NSWE_ALL) || (Math.abs(n.z - from.z) > 16))
@@ -238,6 +296,13 @@ public class PathFind
 		return d ? 1.414f : 1f;
 	}
 	
+	/**
+	 * Method handleNeighbour.
+	 * @param x int
+	 * @param y int
+	 * @param from GeoNode
+	 * @param d boolean
+	 */
 	private void handleNeighbour(int x, int y, GeoNode from, boolean d)
 	{
 		int nX = x - buff.offsetX, nY = y - buff.offsetY;
@@ -282,6 +347,12 @@ public class PathFind
 		buff.open.add(n);
 	}
 	
+	/**
+	 * Method getHeightAndNSWE.
+	 * @param x int
+	 * @param y int
+	 * @param z short
+	 */
 	private void getHeightAndNSWE(int x, int y, short z)
 	{
 		int nX = x - buff.offsetX, nY = y - buff.offsetY;
@@ -305,6 +376,10 @@ public class PathFind
 		}
 	}
 	
+	/**
+	 * Method getPath.
+	 * @return List<Location>
+	 */
 	public List<Location> getPath()
 	{
 		return path;

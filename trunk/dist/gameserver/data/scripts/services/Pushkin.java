@@ -26,8 +26,17 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Pushkin extends Functions
 {
+	/**
+	 * Method DialogAppend_30300.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30300(Integer val)
 	{
 		if ((val != 0) || (!Config.ALT_SIMPLE_SIGNS && !Config.ALT_BS_CRYSTALLIZE))
@@ -62,11 +71,21 @@ public class Pushkin extends Functions
 		return append.toString();
 	}
 	
+	/**
+	 * Method DialogAppend_30086.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30086(Integer val)
 	{
 		return DialogAppend_30300(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30098.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30098(Integer val)
 	{
 		if ((val != 0) || !Config.ALT_ALLOW_TATTOO)
@@ -76,6 +95,9 @@ public class Pushkin extends Functions
 		return "<br>[npc_%objectId%_Multisell 6500|Buy tattoo]";
 	}
 	
+	/**
+	 * Method doCrystallize.
+	 */
 	public void doCrystallize()
 	{
 		Player player = getSelf();

@@ -45,8 +45,18 @@ import lineage2.gameserver.utils.Util;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OnActionShift extends Functions
 {
+	/**
+	 * Method OnActionShift_NpcInstance.
+	 * @param player Player
+	 * @param object GameObject
+	 * @return boolean
+	 */
 	public boolean OnActionShift_NpcInstance(Player player, GameObject object)
 	{
 		if ((player == null) || (object == null))
@@ -98,7 +108,7 @@ public class OnActionShift extends Functions
 				StringBuilder b = new StringBuilder("");
 				for (GlobalEvent e : npc.getEvents())
 				{
-					b.append(e.toString()).append(";");
+					b.append(e.toString()).append(';');
 				}
 				dialog = dialog.replaceFirst("%event%", b.toString());
 			}
@@ -134,6 +144,11 @@ public class OnActionShift extends Functions
 		return true;
 	}
 	
+	/**
+	 * Method getNpcRaceById.
+	 * @param raceId int
+	 * @return String
+	 */
 	public String getNpcRaceById(int raceId)
 	{
 		switch (raceId)
@@ -193,6 +208,9 @@ public class OnActionShift extends Functions
 		}
 	}
 	
+	/**
+	 * Method droplist.
+	 */
 	public void droplist()
 	{
 		Player player = getSelf();
@@ -204,6 +222,11 @@ public class OnActionShift extends Functions
 		droplist(player, npc);
 	}
 	
+	/**
+	 * Method droplist.
+	 * @param player Player
+	 * @param npc NpcInstance
+	 */
 	public void droplist(Player player, NpcInstance npc)
 	{
 		if ((player == null) || (npc == null))
@@ -216,6 +239,9 @@ public class OnActionShift extends Functions
 		}
 	}
 	
+	/**
+	 * Method quests.
+	 */
 	public void quests()
 	{
 		Player player = getSelf();
@@ -231,13 +257,16 @@ public class OnActionShift extends Functions
 		{
 			for (Quest q : entry.getValue())
 			{
-				dialog.append(entry.getKey()).append(" ").append(q.getClass().getSimpleName()).append("<br1>");
+				dialog.append(entry.getKey()).append(' ').append(q.getClass().getSimpleName()).append("<br1>");
 			}
 		}
 		dialog.append("</body></html>");
 		show(dialog.toString(), player, npc);
 	}
 	
+	/**
+	 * Method skills.
+	 */
 	public void skills()
 	{
 		Player player = getSelf();
@@ -272,6 +301,9 @@ public class OnActionShift extends Functions
 		show(dialog.toString(), player, npc);
 	}
 	
+	/**
+	 * Method effects.
+	 */
 	public void effects()
 	{
 		Player player = getSelf();
@@ -296,6 +328,9 @@ public class OnActionShift extends Functions
 		show(dialog.toString(), player, npc);
 	}
 	
+	/**
+	 * Method stats.
+	 */
 	public void stats()
 	{
 		Player player = getSelf();
@@ -326,6 +361,9 @@ public class OnActionShift extends Functions
 		show(dialog, player, npc);
 	}
 	
+	/**
+	 * Method resists.
+	 */
 	public void resists()
 	{
 		Player player = getSelf();
@@ -371,6 +409,13 @@ public class OnActionShift extends Functions
 		show(dialog.toString(), player, npc);
 	}
 	
+	/**
+	 * Method addResist.
+	 * @param dialog StringBuilder
+	 * @param name String
+	 * @param val double
+	 * @return boolean
+	 */
 	private boolean addResist(StringBuilder dialog, String name, double val)
 	{
 		if (val == 0)
@@ -396,6 +441,9 @@ public class OnActionShift extends Functions
 		return true;
 	}
 	
+	/**
+	 * Method aggro.
+	 */
 	public void aggro()
 	{
 		Player player = getSelf();
@@ -417,6 +465,12 @@ public class OnActionShift extends Functions
 		show(dialog.toString(), player, npc);
 	}
 	
+	/**
+	 * Method OnActionShift_DoorInstance.
+	 * @param player Player
+	 * @param object GameObject
+	 * @return boolean
+	 */
 	public boolean OnActionShift_DoorInstance(Player player, GameObject object)
 	{
 		if ((player == null) || (object == null) || !player.getPlayerAccess().Door || !object.isDoor())
@@ -437,7 +491,7 @@ public class OnActionShift extends Functions
 		StringBuilder b = new StringBuilder("");
 		for (GlobalEvent e : door.getEvents())
 		{
-			b.append(e.toString()).append(";");
+			b.append(e.toString()).append(';');
 		}
 		dialog = dialog.replaceFirst("%event%", b.toString());
 		show(dialog, player);
@@ -445,6 +499,12 @@ public class OnActionShift extends Functions
 		return true;
 	}
 	
+	/**
+	 * Method OnActionShift_Player.
+	 * @param player Player
+	 * @param object GameObject
+	 * @return boolean
+	 */
 	public boolean OnActionShift_Player(Player player, GameObject object)
 	{
 		if ((player == null) || (object == null) || !player.getPlayerAccess().CanViewChar)
@@ -458,6 +518,12 @@ public class OnActionShift extends Functions
 		return true;
 	}
 	
+	/**
+	 * Method OnActionShift_PetInstance.
+	 * @param player Player
+	 * @param object GameObject
+	 * @return boolean
+	 */
 	public boolean OnActionShift_PetInstance(Player player, GameObject object)
 	{
 		if ((player == null) || (object == null) || !player.getPlayerAccess().CanViewChar)
@@ -508,6 +574,12 @@ public class OnActionShift extends Functions
 		return true;
 	}
 	
+	/**
+	 * Method OnActionShift_ItemInstance.
+	 * @param player Player
+	 * @param object GameObject
+	 * @return boolean
+	 */
 	public boolean OnActionShift_ItemInstance(Player player, GameObject object)
 	{
 		if ((player == null) || (object == null) || !player.getPlayerAccess().CanViewChar)
@@ -542,6 +614,11 @@ public class OnActionShift extends Functions
 		return true;
 	}
 	
+	/**
+	 * Method nameNpc.
+	 * @param npc NpcInstance
+	 * @return String
+	 */
 	private String nameNpc(NpcInstance npc)
 	{
 		if (npc.getNameNpcString() == NpcString.NONE)

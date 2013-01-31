@@ -20,20 +20,39 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ZoneObject implements InitableObject
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _zone.
+	 */
 	private Zone _zone;
 	
+	/**
+	 * Constructor for ZoneObject.
+	 * @param name String
+	 */
 	public ZoneObject(String name)
 	{
 		_name = name;
 	}
 	
+	/**
+	 * Method initObject.
+	 * @param e GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.InitableObject#initObject(GlobalEvent)
+	 */
 	@Override
 	public void initObject(GlobalEvent e)
 	{
@@ -41,26 +60,48 @@ public class ZoneObject implements InitableObject
 		_zone = r.getZone(_name);
 	}
 	
+	/**
+	 * Method setActive.
+	 * @param a boolean
+	 */
 	public void setActive(boolean a)
 	{
 		_zone.setActive(a);
 	}
 	
+	/**
+	 * Method setActive.
+	 * @param a boolean
+	 * @param event GlobalEvent
+	 */
 	public void setActive(boolean a, GlobalEvent event)
 	{
 		setActive(a);
 	}
 	
+	/**
+	 * Method getZone.
+	 * @return Zone
+	 */
 	public Zone getZone()
 	{
 		return _zone;
 	}
 	
+	/**
+	 * Method getInsidePlayers.
+	 * @return List<Player>
+	 */
 	public List<Player> getInsidePlayers()
 	{
 		return _zone.getInsidePlayers();
 	}
 	
+	/**
+	 * Method checkIfInZone.
+	 * @param c Creature
+	 * @return boolean
+	 */
 	public boolean checkIfInZone(Creature c)
 	{
 		return _zone.checkIfInZone(c);

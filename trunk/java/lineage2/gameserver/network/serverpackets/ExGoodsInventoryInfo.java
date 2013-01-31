@@ -14,12 +14,23 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExGoodsInventoryInfo extends L2GameServerPacket
 {
+	/**
+	 * Constructor for ExGoodsInventoryInfo.
+	 * @param player Player
+	 */
 	public ExGoodsInventoryInfo(Player player)
 	{
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

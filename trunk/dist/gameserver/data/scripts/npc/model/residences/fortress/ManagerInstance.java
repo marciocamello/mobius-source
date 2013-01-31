@@ -28,19 +28,34 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import npc.model.residences.ResidenceManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ManagerInstance extends ResidenceManager
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field REWARD_CYCLE.
+	 */
 	private static final long REWARD_CYCLE = 6 * 60 * 60;
 	
+	/**
+	 * Constructor for ManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method setDialogs.
+	 */
 	@Override
 	protected void setDialogs()
 	{
@@ -49,6 +64,11 @@ public class ManagerInstance extends ResidenceManager
 		_siegeDialog = "residence2/fortress/fortress_steward018.htm";
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -84,6 +104,11 @@ public class ManagerInstance extends ResidenceManager
 		}
 	}
 	
+	/**
+	 * Method getCond.
+	 * @param player Player
+	 * @return int
+	 */
 	@Override
 	protected int getCond(Player player)
 	{
@@ -101,36 +126,60 @@ public class ManagerInstance extends ResidenceManager
 		return COND_FAIL;
 	}
 	
+	/**
+	 * Method getResidence.
+	 * @return Residence
+	 */
 	@Override
 	protected Residence getResidence()
 	{
 		return getFortress();
 	}
 	
+	/**
+	 * Method decoPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket decoPacket()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getPrivUseFunctions.
+	 * @return int
+	 */
 	@Override
 	protected int getPrivUseFunctions()
 	{
 		return Clan.CP_CS_USE_FUNCTIONS;
 	}
 	
+	/**
+	 * Method getPrivSetFunctions.
+	 * @return int
+	 */
 	@Override
 	protected int getPrivSetFunctions()
 	{
 		return Clan.CP_CS_SET_FUNCTIONS;
 	}
 	
+	/**
+	 * Method getPrivDismiss.
+	 * @return int
+	 */
 	@Override
 	protected int getPrivDismiss()
 	{
 		return Clan.CP_CS_DISMISS;
 	}
 	
+	/**
+	 * Method getPrivDoors.
+	 * @return int
+	 */
 	@Override
 	protected int getPrivDoors()
 	{

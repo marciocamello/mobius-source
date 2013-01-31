@@ -20,8 +20,15 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Taurin extends DefaultAI
 {
+	/**
+	 * Field points.
+	 */
 	static final Location[] points =
 	{
 		new Location(80752, 146400, -3533),
@@ -66,22 +73,43 @@ public class Taurin extends DefaultAI
 		new Location(81067, 146925, -3559),
 		new Location(80752, 146400, -3533)
 	};
+	/**
+	 * Field current_point.
+	 */
 	private int current_point = -1;
+	/**
+	 * Field wait_timeout.
+	 */
 	private long wait_timeout = 0;
+	/**
+	 * Field wait.
+	 */
 	private boolean wait = false;
 	
+	/**
+	 * Constructor for Taurin.
+	 * @param actor NpcInstance
+	 */
 	public Taurin(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ATTACK_DELAY = 250;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -127,17 +155,17 @@ public class Taurin extends DefaultAI
 						return true;
 					case 30:
 						wait_timeout = System.currentTimeMillis() + 10000;
-						Functions.npcSay(actor, "Всем лежать, у меня бомба!");
+						Functions.npcSay(actor, "В�?ем лежат�?, у мен�? бомба!");
 						wait = true;
 						return true;
 					case 31:
 						wait_timeout = System.currentTimeMillis() + 15000;
-						Functions.npcSay(actor, "Я больной, за себя не ручаюсь!!!!");
+						Functions.npcSay(actor, "Я бол�?ной, за �?еб�? не руча�?�?�?!!!!");
 						wait = true;
 						return true;
 					case 32:
 						wait_timeout = System.currentTimeMillis() + 15000;
-						Functions.npcSay(actor, "Вы все еще тут? Я вас предупреждал!!!!!");
+						Functions.npcSay(actor, "Вы в�?е еще тут? Я ва�? предупреждал!!!!!");
 						wait = true;
 						return true;
 					case 33:
@@ -166,6 +194,11 @@ public class Taurin extends DefaultAI
 			doTask();
 			return true;
 		}
+		/**
+		 * Method onEvtAttacked.
+		 * @param attacker Creature
+		 * @param damage int
+		 */
 		if (randomAnimation())
 		{
 			return true;
@@ -174,6 +207,11 @@ public class Taurin extends DefaultAI
 	}
 	
 	@Override
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}

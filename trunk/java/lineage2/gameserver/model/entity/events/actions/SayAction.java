@@ -24,21 +24,55 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.network.serverpackets.components.SysString;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SayAction implements EventAction
 {
+	/**
+	 * Field _range.
+	 */
 	private final int _range;
+	/**
+	 * Field _chatType.
+	 */
 	private final ChatType _chatType;
+	/**
+	 * Field _how.
+	 */
 	private String _how;
+	/**
+	 * Field _text.
+	 */
 	private NpcString _text;
+	/**
+	 * Field _sysString.
+	 */
 	private SysString _sysString;
+	/**
+	 * Field _systemMsg.
+	 */
 	private SystemMsg _systemMsg;
 	
+	/**
+	 * Constructor for SayAction.
+	 * @param range int
+	 * @param type ChatType
+	 */
 	protected SayAction(int range, ChatType type)
 	{
 		_range = range;
 		_chatType = type;
 	}
 	
+	/**
+	 * Constructor for SayAction.
+	 * @param range int
+	 * @param type ChatType
+	 * @param sysString SysString
+	 * @param systemMsg SystemMsg
+	 */
 	public SayAction(int range, ChatType type, SysString sysString, SystemMsg systemMsg)
 	{
 		this(range, type);
@@ -46,6 +80,13 @@ public class SayAction implements EventAction
 		_systemMsg = systemMsg;
 	}
 	
+	/**
+	 * Constructor for SayAction.
+	 * @param range int
+	 * @param type ChatType
+	 * @param how String
+	 * @param string NpcString
+	 */
 	public SayAction(int range, ChatType type, String how, NpcString string)
 	{
 		this(range, type);
@@ -53,6 +94,11 @@ public class SayAction implements EventAction
 		_how = how;
 	}
 	
+	/**
+	 * Method call.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.EventAction#call(GlobalEvent)
+	 */
 	@Override
 	public void call(GlobalEvent event)
 	{
@@ -63,6 +109,10 @@ public class SayAction implements EventAction
 		}
 	}
 	
+	/**
+	 * Method packet.
+	 * @param player Player
+	 */
 	private void packet(Player player)
 	{
 		if (player == null)

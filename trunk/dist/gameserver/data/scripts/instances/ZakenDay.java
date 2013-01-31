@@ -19,17 +19,33 @@ import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ZakenDay extends Reflection
 {
+	/**
+	 * Field Anchor. (value is 32468)
+	 */
 	private static final int Anchor = 32468;
+	/**
+	 * Field zakenTp.
+	 */
 	private static Location[] zakenTp =
 	{
 		new Location(55272, 219080, -2952),
 		new Location(55272, 219080, -3224),
 		new Location(55272, 219080, -3496),
 	};
+	/**
+	 * Field _savedTime.
+	 */
 	private long _savedTime;
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{
@@ -38,6 +54,10 @@ public class ZakenDay extends Reflection
 		_savedTime = System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -45,6 +65,10 @@ public class ZakenDay extends Reflection
 		player.sendPacket(new ExSendUIEvent(player, false, true, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.ELAPSED_TIME));
 	}
 	
+	/**
+	 * Method onPlayerExit.
+	 * @param player Player
+	 */
 	@Override
 	public void onPlayerExit(Player player)
 	{

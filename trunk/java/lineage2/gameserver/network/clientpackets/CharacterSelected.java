@@ -20,16 +20,29 @@ import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.CharSelected;
 import lineage2.gameserver.utils.AutoBan;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharacterSelected extends L2GameClientPacket
 {
+	/**
+	 * Field _charSlot.
+	 */
 	private int _charSlot;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_charSlot = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

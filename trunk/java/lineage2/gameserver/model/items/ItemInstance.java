@@ -57,76 +57,236 @@ import org.napile.primitive.Containers;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ItemInstance extends GameObject implements JdbcEntity
 {
+	/**
+	 * Field EMPTY_ENCHANT_OPTIONS.
+	 */
 	public static final int[] EMPTY_ENCHANT_OPTIONS = new int[3];
 	
+	/**
+	 * Field serialVersionUID. (value is 3162753878915133228)
+	 */
 	private static final long serialVersionUID = 3162753878915133228L;
 	
+	/**
+	 * Field _itemsDAO.
+	 */
 	private static final ItemsDAO _itemsDAO = ItemsDAO.getInstance();
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum ItemLocation
 	{
+		/**
+		 * Field VOID.
+		 */
 		VOID,
+		/**
+		 * Field INVENTORY.
+		 */
 		INVENTORY,
+		/**
+		 * Field PAPERDOLL.
+		 */
 		PAPERDOLL,
+		/**
+		 * Field PET_INVENTORY.
+		 */
 		PET_INVENTORY,
+		/**
+		 * Field PET_PAPERDOLL.
+		 */
 		PET_PAPERDOLL,
+		/**
+		 * Field WAREHOUSE.
+		 */
 		WAREHOUSE,
+		/**
+		 * Field CLANWH.
+		 */
 		CLANWH,
+		/**
+		 * Field FREIGHT.
+		 */
 		FREIGHT,
+		/**
+		 * Field LEASE.
+		 */
 		@Deprecated
 		LEASE,
+		/**
+		 * Field MAIL.
+		 */
 		MAIL,
+		/**
+		 * Field COMMISSION.
+		 */
 		COMMISSION
 	}
 	
+	/**
+	 * Field CHARGED_NONE. (value is 0)
+	 */
 	public static final int CHARGED_NONE = 0;
+	/**
+	 * Field CHARGED_SOULSHOT. (value is 1)
+	 */
 	public static final int CHARGED_SOULSHOT = 1;
+	/**
+	 * Field CHARGED_SPIRITSHOT. (value is 1)
+	 */
 	public static final int CHARGED_SPIRITSHOT = 1;
+	/**
+	 * Field CHARGED_BLESSED_SPIRITSHOT. (value is 2)
+	 */
 	public static final int CHARGED_BLESSED_SPIRITSHOT = 2;
 	
+	/**
+	 * Field FLAG_NO_DROP.
+	 */
 	public static final int FLAG_NO_DROP = 1 << 0;
+	/**
+	 * Field FLAG_NO_TRADE.
+	 */
 	public static final int FLAG_NO_TRADE = 1 << 1;
+	/**
+	 * Field FLAG_NO_TRANSFER.
+	 */
 	public static final int FLAG_NO_TRANSFER = 1 << 2;
+	/**
+	 * Field FLAG_NO_CRYSTALLIZE.
+	 */
 	public static final int FLAG_NO_CRYSTALLIZE = 1 << 3;
+	/**
+	 * Field FLAG_NO_ENCHANT.
+	 */
 	public static final int FLAG_NO_ENCHANT = 1 << 4;
+	/**
+	 * Field FLAG_NO_DESTROY.
+	 */
 	public static final int FLAG_NO_DESTROY = 1 << 5;
 	
+	/**
+	 * Field ownerId.
+	 */
 	private int ownerId;
+	/**
+	 * Field itemId.
+	 */
 	private int itemId;
+	/**
+	 * Field count.
+	 */
 	private long count;
+	/**
+	 * Field enchantLevel.
+	 */
 	private int enchantLevel = -1;
+	/**
+	 * Field loc.
+	 */
 	private ItemLocation loc;
+	/**
+	 * Field locData.
+	 */
 	private int locData;
+	/**
+	 * Field customType1.
+	 */
 	private int customType1;
+	/**
+	 * Field customType2.
+	 */
 	private int customType2;
+	/**
+	 * Field lifeTime.
+	 */
 	private int lifeTime;
+	/**
+	 * Field customFlags.
+	 */
 	private int customFlags;
+	/**
+	 * Field attrs.
+	 */
 	private ItemAttributes attrs = new ItemAttributes();
+	/**
+	 * Field _enchantOptions.
+	 */
 	private int[] _enchantOptions = EMPTY_ENCHANT_OPTIONS;
+	/**
+	 * Field template.
+	 */
 	private ItemTemplate template;
+	/**
+	 * Field isEquipped.
+	 */
 	private boolean isEquipped;
+	/**
+	 * Field _dropTime.
+	 */
 	private long _dropTime;
 	
+	/**
+	 * Field _dropPlayers.
+	 */
 	private IntSet _dropPlayers = Containers.EMPTY_INT_SET;
+	/**
+	 * Field _dropTimeOwner.
+	 */
 	private long _dropTimeOwner;
 	
+	/**
+	 * Field _chargedSoulshot.
+	 */
 	private int _chargedSoulshot = CHARGED_NONE;
+	/**
+	 * Field _chargedSpiritshot.
+	 */
 	private int _chargedSpiritshot = CHARGED_NONE;
 	
+	/**
+	 * Field _chargedFishtshot.
+	 */
 	private boolean _chargedFishtshot = false;
+	/**
+	 * Field _augmentationId.
+	 */
 	private int _augmentationId;
+	/**
+	 * Field _agathionEnergy.
+	 */
 	private int _agathionEnergy;
 	
+	/**
+	 * Field _attachment.
+	 */
 	private ItemAttachment _attachment;
+	/**
+	 * Field _state.
+	 */
 	private JdbcEntityState _state = JdbcEntityState.CREATED;
 	
+	/**
+	 * Constructor for ItemInstance.
+	 * @param objectId int
+	 */
 	public ItemInstance(int objectId)
 	{
 		super(objectId);
 	}
 	
+	/**
+	 * Constructor for ItemInstance.
+	 * @param objectId int
+	 * @param itemId int
+	 */
 	public ItemInstance(int objectId, int itemId)
 	{
 		super(objectId);
@@ -137,21 +297,37 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		setEnchantLevel(0);
 	}
 	
+	/**
+	 * Method getOwnerId.
+	 * @return int
+	 */
 	public int getOwnerId()
 	{
 		return ownerId;
 	}
 	
+	/**
+	 * Method setOwnerId.
+	 * @param ownerId int
+	 */
 	public void setOwnerId(int ownerId)
 	{
 		this.ownerId = ownerId;
 	}
 	
+	/**
+	 * Method getItemId.
+	 * @return int
+	 */
 	public int getItemId()
 	{
 		return itemId;
 	}
 	
+	/**
+	 * Method setItemId.
+	 * @param id int
+	 */
 	public void setItemId(int id)
 	{
 		itemId = id;
@@ -159,11 +335,19 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		setCustomFlags(getCustomFlags());
 	}
 	
+	/**
+	 * Method getCount.
+	 * @return long
+	 */
 	public long getCount()
 	{
 		return count;
 	}
 	
+	/**
+	 * Method setCount.
+	 * @param count long
+	 */
 	public void setCount(long count)
 	{
 		if (count < 0)
@@ -180,11 +364,19 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		this.count = count;
 	}
 	
+	/**
+	 * Method getEnchantLevel.
+	 * @return int
+	 */
 	public int getEnchantLevel()
 	{
 		return enchantLevel;
 	}
 	
+	/**
+	 * Method setEnchantLevel.
+	 * @param enchantLevel int
+	 */
 	public void setEnchantLevel(int enchantLevel)
 	{
 		final int old = this.enchantLevel;
@@ -211,86 +403,154 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method setLocName.
+	 * @param loc String
+	 */
 	public void setLocName(String loc)
 	{
 		this.loc = ItemLocation.valueOf(loc);
 	}
 	
+	/**
+	 * Method getLocName.
+	 * @return String
+	 */
 	public String getLocName()
 	{
 		return loc.name();
 	}
 	
+	/**
+	 * Method setLocation.
+	 * @param loc ItemLocation
+	 */
 	public void setLocation(ItemLocation loc)
 	{
 		this.loc = loc;
 	}
 	
+	/**
+	 * Method getLocation.
+	 * @return ItemLocation
+	 */
 	public ItemLocation getLocation()
 	{
 		return loc;
 	}
 	
+	/**
+	 * Method setLocData.
+	 * @param locData int
+	 */
 	public void setLocData(int locData)
 	{
 		this.locData = locData;
 	}
 	
+	/**
+	 * Method getLocData.
+	 * @return int
+	 */
 	public int getLocData()
 	{
 		return locData;
 	}
 	
+	/**
+	 * Method getCustomType1.
+	 * @return int
+	 */
 	public int getCustomType1()
 	{
 		return customType1;
 	}
 	
+	/**
+	 * Method setCustomType1.
+	 * @param newtype int
+	 */
 	public void setCustomType1(int newtype)
 	{
 		customType1 = newtype;
 	}
 	
+	/**
+	 * Method getCustomType2.
+	 * @return int
+	 */
 	public int getCustomType2()
 	{
 		return customType2;
 	}
 	
+	/**
+	 * Method setCustomType2.
+	 * @param newtype int
+	 */
 	public void setCustomType2(int newtype)
 	{
 		customType2 = newtype;
 	}
 	
+	/**
+	 * Method getLifeTime.
+	 * @return int
+	 */
 	public int getLifeTime()
 	{
 		return lifeTime;
 	}
 	
+	/**
+	 * Method setLifeTime.
+	 * @param lifeTime int
+	 */
 	public void setLifeTime(int lifeTime)
 	{
 		this.lifeTime = Math.max(0, lifeTime);
 	}
 	
+	/**
+	 * Method getCustomFlags.
+	 * @return int
+	 */
 	public int getCustomFlags()
 	{
 		return customFlags;
 	}
 	
+	/**
+	 * Method setCustomFlags.
+	 * @param flags int
+	 */
 	public void setCustomFlags(int flags)
 	{
 		customFlags = flags;
 	}
 	
+	/**
+	 * Method getAttributes.
+	 * @return ItemAttributes
+	 */
 	public ItemAttributes getAttributes()
 	{
 		return attrs;
 	}
 	
+	/**
+	 * Method setAttributes.
+	 * @param attrs ItemAttributes
+	 */
 	public void setAttributes(ItemAttributes attrs)
 	{
 		this.attrs = attrs;
 	}
 	
+	/**
+	 * Method getShadowLifeTime.
+	 * @return int
+	 */
 	public int getShadowLifeTime()
 	{
 		if (!isShadowItem())
@@ -300,6 +560,10 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return getLifeTime();
 	}
 	
+	/**
+	 * Method getTemporalLifeTime.
+	 * @return int
+	 */
 	public int getTemporalLifeTime()
 	{
 		if (!isTemporalItem())
@@ -309,13 +573,23 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return getLifeTime() - (int) (System.currentTimeMillis() / 1000L);
 	}
 	
+	/**
+	 * Field _timerTask.
+	 */
 	private ScheduledFuture<?> _timerTask;
 	
+	/**
+	 * Method startTimer.
+	 * @param r Runnable
+	 */
 	public void startTimer(Runnable r)
 	{
 		_timerTask = LazyPrecisionTaskManager.getInstance().scheduleAtFixedRate(r, 0, 60000L);
 	}
 	
+	/**
+	 * Method stopTimer.
+	 */
 	public void stopTimer()
 	{
 		if (_timerTask != null)
@@ -325,81 +599,146 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method isEquipable.
+	 * @return boolean
+	 */
 	public boolean isEquipable()
 	{
 		return template.isEquipable();
 	}
 	
+	/**
+	 * Method isEquipped.
+	 * @return boolean
+	 */
 	public boolean isEquipped()
 	{
 		return isEquipped;
 	}
 	
+	/**
+	 * Method setEquipped.
+	 * @param isEquipped boolean
+	 */
 	public void setEquipped(boolean isEquipped)
 	{
 		this.isEquipped = isEquipped;
 	}
 	
+	/**
+	 * Method getBodyPart.
+	 * @return int
+	 */
 	public int getBodyPart()
 	{
 		return template.getBodyPart();
 	}
 	
+	/**
+	 * Method getEquipSlot.
+	 * @return int
+	 */
 	public int getEquipSlot()
 	{
 		return getLocData();
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @return ItemTemplate
+	 */
 	public ItemTemplate getTemplate()
 	{
 		return template;
 	}
 	
+	/**
+	 * Method setDropTime.
+	 * @param time long
+	 */
 	public void setDropTime(long time)
 	{
 		_dropTime = time;
 	}
 	
+	/**
+	 * Method getLastDropTime.
+	 * @return long
+	 */
 	public long getLastDropTime()
 	{
 		return _dropTime;
 	}
 	
+	/**
+	 * Method getDropTimeOwner.
+	 * @return long
+	 */
 	public long getDropTimeOwner()
 	{
 		return _dropTimeOwner;
 	}
 	
+	/**
+	 * Method getItemType.
+	 * @return ItemType
+	 */
 	public ItemType getItemType()
 	{
 		return template.getItemType();
 	}
 	
+	/**
+	 * Method isArmor.
+	 * @return boolean
+	 */
 	public boolean isArmor()
 	{
 		return template.isArmor();
 	}
 	
+	/**
+	 * Method isAccessory.
+	 * @return boolean
+	 */
 	public boolean isAccessory()
 	{
 		return template.isAccessory();
 	}
 	
+	/**
+	 * Method isWeapon.
+	 * @return boolean
+	 */
 	public boolean isWeapon()
 	{
 		return template.isWeapon();
 	}
 	
+	/**
+	 * Method getReferencePrice.
+	 * @return int
+	 */
 	public int getReferencePrice()
 	{
 		return template.getReferencePrice();
 	}
 	
+	/**
+	 * Method isStackable.
+	 * @return boolean
+	 */
 	public boolean isStackable()
 	{
 		return template.isStackable();
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{
@@ -416,16 +755,28 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, this, null);
 	}
 	
+	/**
+	 * Method isAugmented.
+	 * @return boolean
+	 */
 	public boolean isAugmented()
 	{
 		return getAugmentationId() != 0;
 	}
 	
+	/**
+	 * Method getAugmentationId.
+	 * @return int
+	 */
 	public int getAugmentationId()
 	{
 		return _augmentationId;
 	}
 	
+	/**
+	 * Method setAugmentationId.
+	 * @param val int
+	 */
 	public void setAugmentationId(int val)
 	{
 		_augmentationId = val;
@@ -440,41 +791,77 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return _chargedSoulshot;
 	}
 	
+	/**
+	 * Method getChargedSpiritshot.
+	 * @return int
+	 */
 	public int getChargedSpiritshot()
 	{
 		return _chargedSpiritshot;
 	}
 	
+	/**
+	 * Method getChargedFishshot.
+	 * @return boolean
+	 */
 	public boolean getChargedFishshot()
 	{
 		return _chargedFishtshot;
 	}
 	
+	/**
+	 * Method setChargedSoulshot.
+	 * @param type int
+	 */
 	public void setChargedSoulshot(int type)
 	{
 		_chargedSoulshot = type;
 	}
 	
+	/**
+	 * Method setChargedSpiritshot.
+	 * @param type int
+	 */
 	public void setChargedSpiritshot(int type)
 	{
 		_chargedSpiritshot = type;
 	}
 	
+	/**
+	 * Method setChargedFishshot.
+	 * @param type boolean
+	 */
 	public void setChargedFishshot(boolean type)
 	{
 		_chargedFishtshot = type;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class FuncAttack extends Func
 	{
+		/**
+		 * Field element.
+		 */
 		private final Element element;
 		
+		/**
+		 * Constructor for FuncAttack.
+		 * @param element Element
+		 * @param order int
+		 * @param owner Object
+		 */
 		public FuncAttack(Element element, int order, Object owner)
 		{
 			super(element.getAttack(), order, owner);
 			this.element = element;
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -482,16 +869,32 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class FuncDefence extends Func
 	{
+		/**
+		 * Field element.
+		 */
 		private final Element element;
 		
+		/**
+		 * Constructor for FuncDefence.
+		 * @param element Element
+		 * @param order int
+		 * @param owner Object
+		 */
 		public FuncDefence(Element element, int order, Object owner)
 		{
 			super(element.getDefence(), order, owner);
 			this.element = element;
 		}
 		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
 		@Override
 		public void calc(Env env)
 		{
@@ -499,6 +902,10 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method getStatFuncs.
+	 * @return Func[]
+	 */
 	public Func[] getStatFuncs()
 	{
 		Func[] result = Func.EMPTY_FUNC_ARRAY;
@@ -539,11 +946,20 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return result;
 	}
 	
+	/**
+	 * Method isHeroWeapon.
+	 * @return boolean
+	 */
 	public boolean isHeroWeapon()
 	{
 		return template.isHeroWeapon();
 	}
 	
+	/**
+	 * Method canBeDestroyed.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean canBeDestroyed(Player player)
 	{
 		if ((customFlags & FLAG_NO_DESTROY) == FLAG_NO_DESTROY)
@@ -579,6 +995,12 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return template.isDestroyable();
 	}
 	
+	/**
+	 * Method canBeDropped.
+	 * @param player Player
+	 * @param pk boolean
+	 * @return boolean
+	 */
 	public boolean canBeDropped(Player player, boolean pk)
 	{
 		if (player.isGM())
@@ -614,6 +1036,11 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return template.isDropable();
 	}
 	
+	/**
+	 * Method canBeTraded.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean canBeTraded(Player player)
 	{
 		if (isEquipped())
@@ -654,6 +1081,11 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return template.isTradeable();
 	}
 	
+	/**
+	 * Method canBeSold.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean canBeSold(Player player)
 	{
 		if ((customFlags & FLAG_NO_DESTROY) == FLAG_NO_DESTROY)
@@ -699,6 +1131,12 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return template.isSellable();
 	}
 	
+	/**
+	 * Method canBeStored.
+	 * @param player Player
+	 * @param privatewh boolean
+	 * @return boolean
+	 */
 	public boolean canBeStored(Player player, boolean privatewh)
 	{
 		if ((customFlags & FLAG_NO_TRANSFER) == FLAG_NO_TRANSFER)
@@ -734,6 +1172,11 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return privatewh || template.isTradeable();
 	}
 	
+	/**
+	 * Method canBeCrystallized.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean canBeCrystallized(Player player)
 	{
 		if ((customFlags & FLAG_NO_CRYSTALLIZE) == FLAG_NO_CRYSTALLIZE)
@@ -759,6 +1202,10 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return template.isCrystallizable();
 	}
 	
+	/**
+	 * Method canBeEnchanted.
+	 * @return boolean
+	 */
 	public boolean canBeEnchanted()
 	{
 		if ((customFlags & FLAG_NO_ENCHANT) == FLAG_NO_ENCHANT)
@@ -769,6 +1216,12 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return template.canBeEnchanted();
 	}
 	
+	/**
+	 * Method canBeAugmented.
+	 * @param player Player
+	 * @param lsg LifeStoneGrade
+	 * @return boolean
+	 */
 	public boolean canBeAugmented(Player player, LifeStoneGrade lsg)
 	{
 		if (!canBeEnchanted())
@@ -819,6 +1272,11 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return true;
 	}
 	
+	/**
+	 * Method canBeExchanged.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean canBeExchanged(Player player)
 	{
 		if ((customFlags & FLAG_NO_DESTROY) == FLAG_NO_DESTROY)
@@ -844,36 +1302,65 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return template.isDestroyable();
 	}
 	
+	/**
+	 * Method isTerritoryAccessory.
+	 * @return boolean
+	 */
 	public boolean isTerritoryAccessory()
 	{
 		return template.isTerritoryAccessory();
 	}
 	
+	/**
+	 * Method isShadowItem.
+	 * @return boolean
+	 */
 	public boolean isShadowItem()
 	{
 		return template.isShadowItem();
 	}
 	
+	/**
+	 * Method isTemporalItem.
+	 * @return boolean
+	 */
 	public boolean isTemporalItem()
 	{
 		return template.isTemporal();
 	}
 	
+	/**
+	 * Method isCommonItem.
+	 * @return boolean
+	 */
 	public boolean isCommonItem()
 	{
 		return template.isCommonItem();
 	}
 	
+	/**
+	 * Method isAltSeed.
+	 * @return boolean
+	 */
 	public boolean isAltSeed()
 	{
 		return template.isAltSeed();
 	}
 	
+	/**
+	 * Method isCursed.
+	 * @return boolean
+	 */
 	public boolean isCursed()
 	{
 		return template.isCursed();
 	}
 	
+	/**
+	 * Method dropToTheGround.
+	 * @param lastAttacker Player
+	 * @param fromNpc NpcInstance
+	 */
 	public void dropToTheGround(Player lastAttacker, NpcInstance fromNpc)
 	{
 		Creature dropper = fromNpc;
@@ -907,6 +1394,11 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method dropToTheGround.
+	 * @param dropper Creature
+	 * @param dropPos Location
+	 */
 	public void dropToTheGround(Creature dropper, Location dropPos)
 	{
 		if (GeoEngine.canMoveToCoord(dropper.getX(), dropper.getY(), dropper.getZ(), dropPos.x, dropPos.y, dropPos.z, dropper.getGeoIndex()))
@@ -919,6 +1411,11 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method dropToTheGround.
+	 * @param dropper Playable
+	 * @param dropPos Location
+	 */
 	public void dropToTheGround(Playable dropper, Location dropPos)
 	{
 		setLocation(ItemLocation.VOID);
@@ -938,6 +1435,11 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method dropMe.
+	 * @param dropper Creature
+	 * @param loc Location
+	 */
 	public void dropMe(Creature dropper, Location loc)
 	{
 		if (dropper != null)
@@ -948,67 +1450,121 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		spawnMe0(loc, dropper);
 	}
 	
+	/**
+	 * Method pickupMe.
+	 */
 	public final void pickupMe()
 	{
 		decayMe();
 		setReflection(ReflectionManager.DEFAULT);
 	}
 	
+	/**
+	 * Method getItemClass.
+	 * @return ItemClass
+	 */
 	public ItemClass getItemClass()
 	{
 		return template.getItemClass();
 	}
 	
+	/**
+	 * Method getDefence.
+	 * @param element Element
+	 * @return int
+	 */
 	private int getDefence(Element element)
 	{
 		return isArmor() ? getAttributeElementValue(element, true) : 0;
 	}
 	
+	/**
+	 * Method getDefenceFire.
+	 * @return int
+	 */
 	public int getDefenceFire()
 	{
 		return getDefence(Element.FIRE);
 	}
 	
+	/**
+	 * Method getDefenceWater.
+	 * @return int
+	 */
 	public int getDefenceWater()
 	{
 		return getDefence(Element.WATER);
 	}
 	
+	/**
+	 * Method getDefenceWind.
+	 * @return int
+	 */
 	public int getDefenceWind()
 	{
 		return getDefence(Element.WIND);
 	}
 	
+	/**
+	 * Method getDefenceEarth.
+	 * @return int
+	 */
 	public int getDefenceEarth()
 	{
 		return getDefence(Element.EARTH);
 	}
 	
+	/**
+	 * Method getDefenceHoly.
+	 * @return int
+	 */
 	public int getDefenceHoly()
 	{
 		return getDefence(Element.HOLY);
 	}
 	
+	/**
+	 * Method getDefenceUnholy.
+	 * @return int
+	 */
 	public int getDefenceUnholy()
 	{
 		return getDefence(Element.UNHOLY);
 	}
 	
+	/**
+	 * Method getAttributeElementValue.
+	 * @param element Element
+	 * @param withBase boolean
+	 * @return int
+	 */
 	public int getAttributeElementValue(Element element, boolean withBase)
 	{
 		return attrs.getValue(element) + (withBase ? template.getBaseAttributeValue(element) : 0);
 	}
 	
+	/**
+	 * Method getAttributeElement.
+	 * @return Element
+	 */
 	public Element getAttributeElement()
 	{
 		return attrs.getElement();
 	}
 	
+	/**
+	 * Method getAttributeElementValue.
+	 * @return int
+	 */
 	public int getAttributeElementValue()
 	{
 		return attrs.getValue();
 	}
 	
+	/**
+	 * Method getAttackElement.
+	 * @return Element
+	 */
 	public Element getAttackElement()
 	{
 		Element element = isWeapon() ? getAttributeElement() : Element.NONE;
@@ -1025,50 +1581,89 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return element;
 	}
 	
+	/**
+	 * Method getAttackElementValue.
+	 * @return int
+	 */
 	public int getAttackElementValue()
 	{
 		return isWeapon() ? getAttributeElementValue(getAttackElement(), true) : 0;
 	}
 	
+	/**
+	 * Method setAttributeElement.
+	 * @param element Element
+	 * @param value int
+	 */
 	public void setAttributeElement(Element element, int value)
 	{
 		attrs.setValue(element, value);
 	}
 	
+	/**
+	 * Method isHerb.
+	 * @return boolean
+	 */
 	public boolean isHerb()
 	{
 		return getTemplate().isHerb();
 	}
 	
+	/**
+	 * Method getCrystalType.
+	 * @return Grade
+	 */
 	public Grade getCrystalType()
 	{
 		return template.getCrystalType();
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	@Override
 	public String getName()
 	{
 		return getTemplate().getName();
 	}
 	
+	/**
+	 * Method save.
+	 * @see lineage2.commons.dao.JdbcEntity#save()
+	 */
 	@Override
 	public void save()
 	{
 		_itemsDAO.save(this);
 	}
 	
+	/**
+	 * Method update.
+	 * @see lineage2.commons.dao.JdbcEntity#update()
+	 */
 	@Override
 	public void update()
 	{
 		_itemsDAO.update(this);
 	}
 	
+	/**
+	 * Method delete.
+	 * @see lineage2.commons.dao.JdbcEntity#delete()
+	 */
 	@Override
 	public void delete()
 	{
 		_itemsDAO.delete(this);
 	}
 	
+	/**
+	 * Method addPacketList.
+	 * @param forPlayer Player
+	 * @param dropper Creature
+	 * @return List<L2GameServerPacket>
+	 */
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{
@@ -1085,60 +1680,85 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return Collections.singletonList(packet);
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append(getTemplate().getItemId());
-		sb.append(" ");
+		sb.append(' ');
 		if (getEnchantLevel() > 0)
 		{
-			sb.append("+");
+			sb.append('+');
 			sb.append(getEnchantLevel());
-			sb.append(" ");
+			sb.append(' ');
 		}
 		sb.append(getTemplate().getName());
 		if (!getTemplate().getAdditionalName().isEmpty())
 		{
-			sb.append(" ");
-			sb.append("\\").append(getTemplate().getAdditionalName()).append("\\");
+			sb.append(' ');
+			sb.append('\\').append(getTemplate().getAdditionalName()).append('\\');
 		}
-		sb.append(" ");
-		sb.append("(");
+		sb.append(' ');
+		sb.append('(');
 		sb.append(getCount());
-		sb.append(")");
-		sb.append("[");
+		sb.append(')');
+		sb.append('[');
 		sb.append(getObjectId());
-		sb.append("]");
+		sb.append(']');
 		
 		return sb.toString();
 		
 	}
 	
+	/**
+	 * Method setJdbcState.
+	 * @param state JdbcEntityState
+	 * @see lineage2.commons.dao.JdbcEntity#setJdbcState(JdbcEntityState)
+	 */
 	@Override
 	public void setJdbcState(JdbcEntityState state)
 	{
 		_state = state;
 	}
 	
+	/**
+	 * Method getJdbcState.
+	 * @return JdbcEntityState * @see lineage2.commons.dao.JdbcEntity#getJdbcState()
+	 */
 	@Override
 	public JdbcEntityState getJdbcState()
 	{
 		return _state;
 	}
 	
+	/**
+	 * Method isItem.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isItem()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method getAttachment.
+	 * @return ItemAttachment
+	 */
 	public ItemAttachment getAttachment()
 	{
 		return _attachment;
 	}
 	
+	/**
+	 * Method setAttachment.
+	 * @param attachment ItemAttachment
+	 */
 	public void setAttachment(ItemAttachment attachment)
 	{
 		ItemAttachment old = _attachment;
@@ -1153,21 +1773,37 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		}
 	}
 	
+	/**
+	 * Method getAgathionEnergy.
+	 * @return int
+	 */
 	public int getAgathionEnergy()
 	{
 		return _agathionEnergy;
 	}
 	
+	/**
+	 * Method setAgathionEnergy.
+	 * @param agathionEnergy int
+	 */
 	public void setAgathionEnergy(int agathionEnergy)
 	{
 		_agathionEnergy = agathionEnergy;
 	}
 	
+	/**
+	 * Method getEnchantOptions.
+	 * @return int[]
+	 */
 	public int[] getEnchantOptions()
 	{
 		return _enchantOptions;
 	}
 	
+	/**
+	 * Method getDropPlayers.
+	 * @return IntSet
+	 */
 	public IntSet getDropPlayers()
 	{
 		return _dropPlayers;

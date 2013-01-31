@@ -12,17 +12,37 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExEnchantSkillResult extends L2GameServerPacket
 {
+	/**
+	 * Field SUCCESS.
+	 */
 	public static final L2GameServerPacket SUCCESS = new ExEnchantSkillResult(1);
+	/**
+	 * Field FAIL.
+	 */
 	public static final L2GameServerPacket FAIL = new ExEnchantSkillResult(0);
+	/**
+	 * Field _result.
+	 */
 	private final int _result;
 	
+	/**
+	 * Constructor for ExEnchantSkillResult.
+	 * @param result int
+	 */
 	public ExEnchantSkillResult(int result)
 	{
 		_result = result;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

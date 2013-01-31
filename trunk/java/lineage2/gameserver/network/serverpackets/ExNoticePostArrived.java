@@ -12,17 +12,37 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExNoticePostArrived extends L2GameServerPacket
 {
+	/**
+	 * Field STATIC_TRUE.
+	 */
 	public static final L2GameServerPacket STATIC_TRUE = new ExNoticePostArrived(1);
+	/**
+	 * Field STATIC_FALSE.
+	 */
 	public static final L2GameServerPacket STATIC_FALSE = new ExNoticePostArrived(0);
+	/**
+	 * Field _anim.
+	 */
 	private final int _anim;
 	
+	/**
+	 * Constructor for ExNoticePostArrived.
+	 * @param useAnim int
+	 */
 	public ExNoticePostArrived(int useAnim)
 	{
 		_anim = useAnim;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

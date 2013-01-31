@@ -14,12 +14,30 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExOlympiadUserInfo extends L2GameServerPacket
 {
+	/**
+	 * Field maxCp. Field curCp. Field maxHp. Field curHp. Field class_id. Field _side.
+	 */
 	private final int _side, class_id, curHp, maxHp, curCp, maxCp;
+	/**
+	 * Field obj_id.
+	 */
 	private int obj_id = 0;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
 	
+	/**
+	 * Constructor for ExOlympiadUserInfo.
+	 * @param player Player
+	 * @param side int
+	 */
 	public ExOlympiadUserInfo(Player player, int side)
 	{
 		_side = side;
@@ -32,6 +50,9 @@ public class ExOlympiadUserInfo extends L2GameServerPacket
 		maxCp = player.getMaxCp();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

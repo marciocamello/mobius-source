@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExTacticalSign extends L2GameServerPacket
 {
+	/**
+	 * Field _targetId.
+	 */
 	private final int _targetId;
+	/**
+	 * Field _signId.
+	 */
 	private final int _signId;
 	
+	/**
+	 * Constructor for ExTacticalSign.
+	 * @param target int
+	 * @param sign int
+	 */
 	public ExTacticalSign(int target, int sign)
 	{
 		_targetId = target;
 		_signId = sign;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

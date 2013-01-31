@@ -37,12 +37,24 @@ import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ItemFunctions
 {
+	/**
+	 * Constructor for ItemFunctions.
+	 */
 	private ItemFunctions()
 	{
 	}
 	
+	/**
+	 * Method createItem.
+	 * @param itemId int
+	 * @return ItemInstance
+	 */
 	public static ItemInstance createItem(int itemId)
 	{
 		ItemInstance item = new ItemInstance(IdFactory.getInstance().getNextId(), itemId);
@@ -51,6 +63,13 @@ public final class ItemFunctions
 		return item;
 	}
 	
+	/**
+	 * Method addItem.
+	 * @param playable Playable
+	 * @param itemId int
+	 * @param count long
+	 * @param notify boolean
+	 */
 	public static void addItem(Playable playable, int itemId, long count, boolean notify)
 	{
 		if ((playable == null) || (count < 1))
@@ -84,6 +103,12 @@ public final class ItemFunctions
 		}
 	}
 	
+	/**
+	 * Method getItemCount.
+	 * @param playable Playable
+	 * @param itemId int
+	 * @return long
+	 */
 	public static long getItemCount(Playable playable, int itemId)
 	{
 		if (playable == null)
@@ -94,6 +119,14 @@ public final class ItemFunctions
 		return player.getInventory().getCountOf(itemId);
 	}
 	
+	/**
+	 * Method removeItem.
+	 * @param playable Playable
+	 * @param itemId int
+	 * @param count long
+	 * @param notify boolean
+	 * @return long
+	 */
 	public static long removeItem(Playable playable, int itemId, long count, boolean notify)
 	{
 		long removed = 0;
@@ -127,11 +160,22 @@ public final class ItemFunctions
 		return removed;
 	}
 	
+	/**
+	 * Method isClanApellaItem.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public final static boolean isClanApellaItem(int itemId)
 	{
 		return ((itemId >= 7860) && (itemId <= 7879)) || ((itemId >= 9830) && (itemId <= 9839));
 	}
 	
+	/**
+	 * Method checkIfCanEquip.
+	 * @param pet PetInstance
+	 * @param item ItemInstance
+	 * @return SystemMessage
+	 */
 	public final static SystemMessage checkIfCanEquip(PetInstance pet, ItemInstance item)
 	{
 		if (!item.isEquipable())
@@ -146,6 +190,12 @@ public final class ItemFunctions
 		return Msg.ITEM_NOT_AVAILABLE_FOR_PETS;
 	}
 	
+	/**
+	 * Method checkIfCanEquip.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @return L2GameServerPacket
+	 */
 	public final static L2GameServerPacket checkIfCanEquip(Player player, ItemInstance item)
 	{
 		int itemId = item.getItemId();
@@ -239,12 +289,24 @@ public final class ItemFunctions
 		return null;
 	}
 	
+	/**
+	 * Method checkIfCanPickup.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	public static boolean checkIfCanPickup(Playable playable, ItemInstance item)
 	{
 		Player player = playable.getPlayer();
 		return (item.getDropTimeOwner() <= System.currentTimeMillis()) || item.getDropPlayers().contains(player.getObjectId());
 	}
 	
+	/**
+	 * Method canAddItem.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	public static boolean canAddItem(Player player, ItemInstance item)
 	{
 		if (!player.getInventory().validateWeight(item))
@@ -269,6 +331,12 @@ public final class ItemFunctions
 		return true;
 	}
 	
+	/**
+	 * Method checkIfCanDiscard.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	public final static boolean checkIfCanDiscard(Player player, ItemInstance item)
 	{
 		if (item.isHeroWeapon())
@@ -298,6 +366,11 @@ public final class ItemFunctions
 		return true;
 	}
 	
+	/**
+	 * Method isBlessedEnchantScroll.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public final static boolean isBlessedEnchantScroll(int itemId)
 	{
 		switch (itemId)
@@ -320,6 +393,11 @@ public final class ItemFunctions
 		return false;
 	}
 	
+	/**
+	 * Method isAncientEnchantScroll.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public final static boolean isAncientEnchantScroll(int itemId)
 	{
 		switch (itemId)
@@ -335,6 +413,11 @@ public final class ItemFunctions
 		return false;
 	}
 	
+	/**
+	 * Method isDestructionWpnEnchantScroll.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public final static boolean isDestructionWpnEnchantScroll(int itemId)
 	{
 		switch (itemId)
@@ -349,6 +432,11 @@ public final class ItemFunctions
 		return false;
 	}
 	
+	/**
+	 * Method isDestructionArmEnchantScroll.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public final static boolean isDestructionArmEnchantScroll(int itemId)
 	{
 		switch (itemId)
@@ -363,6 +451,11 @@ public final class ItemFunctions
 		return false;
 	}
 	
+	/**
+	 * Method isItemMallEnchantScroll.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public final static boolean isItemMallEnchantScroll(int itemId)
 	{
 		switch (itemId)
@@ -383,6 +476,11 @@ public final class ItemFunctions
 		}
 	}
 	
+	/**
+	 * Method isDivineEnchantScroll.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public final static boolean isDivineEnchantScroll(int itemId)
 	{
 		switch (itemId)
@@ -398,6 +496,11 @@ public final class ItemFunctions
 		return false;
 	}
 	
+	/**
+	 * Method isCrystallEnchantScroll.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public final static boolean isCrystallEnchantScroll(int itemId)
 	{
 		switch (itemId)
@@ -417,6 +520,11 @@ public final class ItemFunctions
 		return false;
 	}
 	
+	/**
+	 * Method isGemstones.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public final static boolean isGemstones(int itemId)
 	{
 		switch (itemId)
@@ -432,6 +540,13 @@ public final class ItemFunctions
 		return false;
 	}
 	
+	/**
+	 * Method getEnchantCrystalId.
+	 * @param item ItemInstance
+	 * @param scroll ItemInstance
+	 * @param catalyst ItemInstance
+	 * @return int
+	 */
 	public final static int getEnchantCrystalId(ItemInstance item, ItemInstance scroll, ItemInstance catalyst)
 	{
 		boolean scrollValid = false, catalystValid = false;
@@ -481,6 +596,11 @@ public final class ItemFunctions
 		return -1;
 	}
 	
+	/**
+	 * Method getEnchantScrollId.
+	 * @param item ItemInstance
+	 * @return int[]
+	 */
 	public final static int[] getEnchantScrollId(ItemInstance item)
 	{
 		if (item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON)
@@ -623,6 +743,9 @@ public final class ItemFunctions
 		return new int[0];
 	}
 	
+	/**
+	 * Field catalyst.
+	 */
 	public static final int[][] catalyst =
 	{
 		{
@@ -677,6 +800,11 @@ public final class ItemFunctions
 		}
 	};
 	
+	/**
+	 * Method getEnchantCatalystId.
+	 * @param item ItemInstance
+	 * @return int[]
+	 */
 	public final static int[] getEnchantCatalystId(ItemInstance item)
 	{
 		if (item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON)
@@ -719,6 +847,11 @@ public final class ItemFunctions
 		};
 	}
 	
+	/**
+	 * Method getCatalystPower.
+	 * @param itemId int
+	 * @return int
+	 */
 	public final static int getCatalystPower(int itemId)
 	{
 		for (int i = 0; i < catalyst.length; i++)
@@ -756,6 +889,12 @@ public final class ItemFunctions
 		return 0;
 	}
 	
+	/**
+	 * Method checkCatalyst.
+	 * @param item ItemInstance
+	 * @param catalyst ItemInstance
+	 * @return boolean
+	 */
 	public static final boolean checkCatalyst(ItemInstance item, ItemInstance catalyst)
 	{
 		if ((item == null) || (catalyst == null))
@@ -777,16 +916,31 @@ public final class ItemFunctions
 		return false;
 	}
 	
+	/**
+	 * Method isLifeStone.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public final static boolean isLifeStone(int itemId)
 	{
 		return ((itemId >= 8723) && (itemId <= 8762)) || ((itemId >= 9573) && (itemId <= 9576)) || ((itemId >= 10483) && (itemId <= 10486)) || ((itemId >= 14166) && (itemId <= 14169)) || ((itemId >= 16160) && (itemId <= 16167));
 	}
 	
+	/**
+	 * Method isAccessoryLifeStone.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public final static boolean isAccessoryLifeStone(int itemId)
 	{
 		return ((itemId >= 12754) && (itemId <= 12763)) || ((itemId >= 12840) && (itemId <= 12851)) || (itemId == 12821) || (itemId == 12822) || (itemId == 14008) || (itemId == 16177) || (itemId == 16178);
 	}
 	
+	/**
+	 * Method getLifeStoneGrade.
+	 * @param itemId int
+	 * @return int
+	 */
 	public final static int getLifeStoneGrade(int itemId)
 	{
 		switch (itemId)
@@ -860,6 +1014,11 @@ public final class ItemFunctions
 		}
 	}
 	
+	/**
+	 * Method getLifeStoneLevel.
+	 * @param itemId int
+	 * @return int
+	 */
 	public final static int getLifeStoneLevel(int itemId)
 	{
 		switch (itemId)
@@ -971,6 +1130,12 @@ public final class ItemFunctions
 		}
 	}
 	
+	/**
+	 * Method getEnchantAttributeStoneElement.
+	 * @param itemId int
+	 * @param isArmor boolean
+	 * @return Element
+	 */
 	public static Element getEnchantAttributeStoneElement(int itemId, boolean isArmor)
 	{
 		Element element = Element.NONE;

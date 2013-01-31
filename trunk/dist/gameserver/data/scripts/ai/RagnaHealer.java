@@ -19,15 +19,31 @@ import lineage2.gameserver.ai.Priest;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RagnaHealer extends Priest
 {
+	/**
+	 * Field lastFactionNotifyTime.
+	 */
 	private long lastFactionNotifyTime;
 	
+	/**
+	 * Constructor for RagnaHealer.
+	 * @param actor NpcInstance
+	 */
 	public RagnaHealer(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

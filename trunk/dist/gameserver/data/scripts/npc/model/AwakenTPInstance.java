@@ -18,19 +18,37 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AwakenTPInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field val.
+	 */
 	private final int val = 1;
 	
+	/**
+	 * Constructor for AwakenTPInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public AwakenTPInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -69,6 +87,11 @@ public class AwakenTPInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -78,7 +101,7 @@ public class AwakenTPInstance extends NpcInstance
 		}
 		if (!player.isAwaking())
 		{
-			player.sendMessage("Вы не прошли путь перерожденного!");
+			player.sendMessage("Вы не про�?ли пут�? перерожденного!");
 			return;
 		}
 		if (command.equalsIgnoreCase("Town_of_Shuttgart"))
@@ -221,12 +244,16 @@ public class AwakenTPInstance extends NpcInstance
 		}
 		else
 		{
-			super.onBypassFeedback(player, command);
+			super.onBypassFeedback(/**
+			 * Method doNotLvl.
+			 * @param player Player
+			 */
+			player, command);
 		}
 	}
 	
 	public void doNotLvl(Player player)
 	{
-		player.sendMessage("Вы не соответствуете необходимому уровню.");
+		player.sendMessage("Вы не �?оответ�?твуете необходимому уровн�?.");
 	}
 }

@@ -19,15 +19,33 @@ import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class BowListener implements OnEquipListener
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final BowListener _instance = new BowListener();
 	
+	/**
+	 * Method getInstance.
+	 * @return BowListener
+	 */
 	public static BowListener getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method onUnequip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 * @see lineage2.gameserver.listener.inventory.OnEquipListener#onUnequip(int, ItemInstance, Playable)
+	 */
 	@Override
 	public void onUnequip(int slot, ItemInstance item, Playable actor)
 	{
@@ -42,6 +60,13 @@ public final class BowListener implements OnEquipListener
 		}
 	}
 	
+	/**
+	 * Method onEquip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 * @see lineage2.gameserver.listener.inventory.OnEquipListener#onEquip(int, ItemInstance, Playable)
+	 */
 	@Override
 	public void onEquip(int slot, ItemInstance item, Playable actor)
 	{

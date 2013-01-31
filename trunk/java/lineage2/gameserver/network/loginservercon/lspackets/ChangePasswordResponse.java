@@ -19,11 +19,24 @@ import lineage2.gameserver.network.loginservercon.ReceivablePacket;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChangePasswordResponse extends ReceivablePacket
 {
+	/**
+	 * Field account.
+	 */
 	String account;
+	/**
+	 * Field changed.
+	 */
 	boolean changed;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	public void readImpl()
 	{
@@ -31,6 +44,9 @@ public class ChangePasswordResponse extends ReceivablePacket
 		changed = readD() == 1;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

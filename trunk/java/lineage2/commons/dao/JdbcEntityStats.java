@@ -12,13 +12,33 @@
  */
 package lineage2.commons.dao;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface JdbcEntityStats
 {
+	/**
+	 * Method getLoadCount.
+	 * @return long
+	 */
 	public long getLoadCount();
 	
+	/**
+	 * Method getInsertCount.
+	 * @return long
+	 */
 	public long getInsertCount();
 	
+	/**
+	 * Method getUpdateCount.
+	 * @return long
+	 */
 	public long getUpdateCount();
 	
+	/**
+	 * Method getDeleteCount.
+	 * @return long
+	 */
 	public long getDeleteCount();
 }

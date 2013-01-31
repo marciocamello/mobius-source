@@ -18,33 +18,112 @@ import java.util.Map.Entry;
 
 import lineage2.gameserver.model.reward.RewardData;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("unused")
 public class l2day extends LettersCollection
 {
+	/**
+	 * Field BSOE.
+	 */
 	private static int BSOE = 3958;
+	/**
+	 * Field BSOR.
+	 */
 	private static int BSOR = 3959;
+	/**
+	 * Field GUIDANCE.
+	 */
 	private static int GUIDANCE = 3926;
+	/**
+	 * Field WHISPER.
+	 */
 	private static int WHISPER = 3927;
+	/**
+	 * Field FOCUS.
+	 */
 	private static int FOCUS = 3928;
+	/**
+	 * Field ACUMEN.
+	 */
 	private static int ACUMEN = 3929;
+	/**
+	 * Field HASTE.
+	 */
 	private static int HASTE = 3930;
+	/**
+	 * Field AGILITY.
+	 */
 	private static int AGILITY = 3931;
+	/**
+	 * Field EMPOWER.
+	 */
 	private static int EMPOWER = 3932;
+	/**
+	 * Field MIGHT.
+	 */
 	private static int MIGHT = 3933;
+	/**
+	 * Field WINDWALK.
+	 */
 	private static int WINDWALK = 3934;
+	/**
+	 * Field SHIELD.
+	 */
 	private static int SHIELD = 3935;
+	/**
+	 * Field ENCH_WPN_D.
+	 */
 	private static int ENCH_WPN_D = 955;
+	/**
+	 * Field ENCH_WPN_C.
+	 */
 	private static int ENCH_WPN_C = 951;
+	/**
+	 * Field ENCH_WPN_B.
+	 */
 	private static int ENCH_WPN_B = 947;
+	/**
+	 * Field ENCH_WPN_A.
+	 */
 	private static int ENCH_WPN_A = 729;
+	/**
+	 * Field RABBIT_EARS.
+	 */
 	private static int RABBIT_EARS = 8947;
+	/**
+	 * Field FEATHERED_HAT.
+	 */
 	private static int FEATHERED_HAT = 8950;
+	/**
+	 * Field FAIRY_ANTENNAE.
+	 */
 	private static int FAIRY_ANTENNAE = 8949;
+	/**
+	 * Field ARTISANS_GOOGLES.
+	 */
 	private static int ARTISANS_GOOGLES = 8951;
+	/**
+	 * Field LITTLE_ANGEL_WING.
+	 */
 	private static int LITTLE_ANGEL_WING = 8948;
+	/**
+	 * Field RING_OF_ANT_QUIEEN.
+	 */
 	private static int RING_OF_ANT_QUIEEN = 6660;
+	/**
+	 * Field EARRING_OF_ORFEN.
+	 */
 	private static int EARRING_OF_ORFEN = 6661;
+	/**
+	 * Field RING_OF_CORE.
+	 */
 	private static int RING_OF_CORE = 6662;
+	/**
+	 * Field FRINTEZZA_NECKLACE.
+	 */
 	private static int FRINTEZZA_NECKLACE = 8191;
 	static
 	{

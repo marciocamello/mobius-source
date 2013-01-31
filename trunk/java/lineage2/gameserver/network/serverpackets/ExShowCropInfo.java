@@ -17,17 +17,35 @@ import java.util.List;
 import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.templates.manor.CropProcure;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowCropInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _crops.
+	 */
 	private final List<CropProcure> _crops;
+	/**
+	 * Field _manorId.
+	 */
 	private final int _manorId;
 	
+	/**
+	 * Constructor for ExShowCropInfo.
+	 * @param manorId int
+	 * @param crops List<CropProcure>
+	 */
 	public ExShowCropInfo(int manorId, List<CropProcure> crops)
 	{
 		_manorId = manorId;
 		_crops = crops;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

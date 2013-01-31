@@ -24,40 +24,128 @@ import lineage2.gameserver.cache.Msg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Request extends MultiValueSet<String>
 {
+	/**
+	 * Field serialVersionUID. (value is 1)
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(Request.class);
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum L2RequestType
 	{
+		/**
+		 * Field CUSTOM.
+		 */
 		CUSTOM,
+		/**
+		 * Field PARTY.
+		 */
 		PARTY,
+		/**
+		 * Field PARTY_ROOM.
+		 */
 		PARTY_ROOM,
+		/**
+		 * Field CLAN.
+		 */
 		CLAN,
+		/**
+		 * Field ALLY.
+		 */
 		ALLY,
+		/**
+		 * Field TRADE.
+		 */
 		TRADE,
+		/**
+		 * Field TRADE_REQUEST.
+		 */
 		TRADE_REQUEST,
+		/**
+		 * Field FRIEND.
+		 */
 		FRIEND,
+		/**
+		 * Field CHANNEL.
+		 */
 		CHANNEL,
+		/**
+		 * Field DUEL.
+		 */
 		DUEL,
+		/**
+		 * Field COUPLE_ACTION.
+		 */
 		COUPLE_ACTION,
+		/**
+		 * Field MENTEE.
+		 */
 		MENTEE
 	}
 	
+	/**
+	 * Field _nextId.
+	 */
 	private final static AtomicInteger _nextId = new AtomicInteger();
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _type.
+	 */
 	private final L2RequestType _type;
+	/**
+	 * Field _requestor.
+	 */
 	private final HardReference<Player> _requestor;
+	/**
+	 * Field _reciever.
+	 */
 	private final HardReference<Player> _reciever;
+	/**
+	 * Field _isRequestorConfirmed.
+	 */
 	private boolean _isRequestorConfirmed;
+	/**
+	 * Field _isRecieverConfirmed.
+	 */
 	private boolean _isRecieverConfirmed;
+	/**
+	 * Field _isCancelled.
+	 */
 	private boolean _isCancelled;
+	/**
+	 * Field _isDone.
+	 */
 	private boolean _isDone;
+	/**
+	 * Field _timeout.
+	 */
 	private long _timeout;
+	/**
+	 * Field _timeoutTask.
+	 */
 	private Future<?> _timeoutTask;
 	
+	/**
+	 * Constructor for Request.
+	 * @param type L2RequestType
+	 * @param requestor Player
+	 * @param reciever Player
+	 */
 	public Request(L2RequestType type, Player requestor, Player reciever)
 	{
 		_id = _nextId.incrementAndGet();
@@ -68,6 +156,11 @@ public class Request extends MultiValueSet<String>
 		reciever.setRequest(this);
 	}
 	
+	/**
+	 * Method setTimeout.
+	 * @param timeout long
+	 * @return Request
+	 */
 	public Request setTimeout(long timeout)
 	{
 		_timeout = timeout > 0 ? System.currentTimeMillis() + timeout : 0;
@@ -82,11 +175,18 @@ public class Request extends MultiValueSet<String>
 		return this;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method cancel.
+	 */
 	public void cancel()
 	{
 		_isCancelled = true;
@@ -107,6 +207,9 @@ public class Request extends MultiValueSet<String>
 		}
 	}
 	
+	/**
+	 * Method done.
+	 */
 	public void done()
 	{
 		_isDone = true;
@@ -127,6 +230,9 @@ public class Request extends MultiValueSet<String>
 		}
 	}
 	
+	/**
+	 * Method timeout.
+	 */
 	public void timeout()
 	{
 		Player player = getReciever();
@@ -140,6 +246,11 @@ public class Request extends MultiValueSet<String>
 		cancel();
 	}
 	
+	/**
+	 * Method getOtherPlayer.
+	 * @param player Player
+	 * @return Player
+	 */
 	public Player getOtherPlayer(Player player)
 	{
 		if (player == getRequestor())
@@ -153,16 +264,28 @@ public class Request extends MultiValueSet<String>
 		return null;
 	}
 	
+	/**
+	 * Method getRequestor.
+	 * @return Player
+	 */
 	public Player getRequestor()
 	{
 		return _requestor.get();
 	}
 	
+	/**
+	 * Method getReciever.
+	 * @return Player
+	 */
 	public Player getReciever()
 	{
 		return _reciever.get();
 	}
 	
+	/**
+	 * Method isInProgress.
+	 * @return boolean
+	 */
 	public boolean isInProgress()
 	{
 		if (_isCancelled)
@@ -184,11 +307,20 @@ public class Request extends MultiValueSet<String>
 		return false;
 	}
 	
+	/**
+	 * Method isTypeOf.
+	 * @param type L2RequestType
+	 * @return boolean
+	 */
 	public boolean isTypeOf(L2RequestType type)
 	{
 		return _type == type;
 	}
 	
+	/**
+	 * Method confirm.
+	 * @param player Player
+	 */
 	public void confirm(Player player)
 	{
 		if (player == getRequestor())
@@ -201,6 +333,11 @@ public class Request extends MultiValueSet<String>
 		}
 	}
 	
+	/**
+	 * Method isConfirmed.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean isConfirmed(Player player)
 	{
 		if (player == getRequestor())

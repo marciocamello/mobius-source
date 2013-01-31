@@ -28,8 +28,15 @@ import lineage2.gameserver.tables.SkillTable;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SeducedInvestigator extends Fighter
 {
+	/**
+	 * Field _allowedTargets.
+	 */
 	private final int[] _allowedTargets =
 	{
 		25659,
@@ -39,8 +46,15 @@ public class SeducedInvestigator extends Fighter
 		25663,
 		25664
 	};
+	/**
+	 * Field _reuse.
+	 */
 	private long _reuse = 0;
 	
+	/**
+	 * Constructor for SeducedInvestigator.
+	 * @param actor NpcInstance
+	 */
 	public SeducedInvestigator(NpcInstance actor)
 	{
 		super(actor);
@@ -49,6 +63,10 @@ public class SeducedInvestigator extends Fighter
 		AI_TASK_ACTIVE_DELAY = 5000;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -107,6 +125,10 @@ public class SeducedInvestigator extends Fighter
 		return true;
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -121,6 +143,11 @@ public class SeducedInvestigator extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -140,6 +167,11 @@ public class SeducedInvestigator extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
@@ -150,6 +182,11 @@ public class SeducedInvestigator extends Fighter
 		super.onEvtAggression(target, aggro);
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{

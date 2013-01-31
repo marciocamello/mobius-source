@@ -23,24 +23,75 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessa
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminAnnouncements implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_list_announcements.
+		 */
 		admin_list_announcements,
+		/**
+		 * Field admin_announce_announcements.
+		 */
 		admin_announce_announcements,
+		/**
+		 * Field admin_add_announcement.
+		 */
 		admin_add_announcement,
+		/**
+		 * Field admin_del_announcement.
+		 */
 		admin_del_announcement,
+		/**
+		 * Field admin_announce.
+		 */
 		admin_announce,
+		/**
+		 * Field admin_a.
+		 */
 		admin_a,
+		/**
+		 * Field admin_announce_menu.
+		 */
 		admin_announce_menu,
+		/**
+		 * Field admin_crit_announce.
+		 */
 		admin_crit_announce,
+		/**
+		 * Field admin_c.
+		 */
 		admin_c,
+		/**
+		 * Field admin_toscreen.
+		 */
 		admin_toscreen,
+		/**
+		 * Field admin_s.
+		 */
 		admin_s,
+		/**
+		 * Field admin_reload_announcements.
+		 */
 		admin_reload_announcements
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -76,7 +127,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 					StringBuilder builder = new StringBuilder();
 					for (int i = 2; i < wordList.length; i++)
 					{
-						builder.append(" ").append(wordList[i]);
+						builder.append(' ').append(wordList[i]);
 					}
 					Announcements.getInstance().addAnnouncement(time, builder.toString(), true);
 					listAnnouncements(activeChar);
@@ -131,6 +182,10 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method listAnnouncements.
+	 * @param activeChar Player
+	 */
 	public void listAnnouncements(Player activeChar)
 	{
 		List<Announcements.Announce> announcements = Announcements.getInstance().getAnnouncements();
@@ -163,6 +218,10 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

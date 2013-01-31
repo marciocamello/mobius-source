@@ -21,8 +21,15 @@ import lineage2.gameserver.tables.SkillTable;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TiatsTrap extends DefaultAI
 {
+	/**
+	 * Field holdTraps.
+	 */
 	private static final int[] holdTraps =
 	{
 		18720,
@@ -35,6 +42,9 @@ public class TiatsTrap extends DefaultAI
 		18727,
 		18728
 	};
+	/**
+	 * Field damageTraps.
+	 */
 	private static final int[] damageTraps =
 	{
 		18737,
@@ -76,6 +86,9 @@ public class TiatsTrap extends DefaultAI
 		18773,
 		18774
 	};
+	/**
+	 * Field stunTraps.
+	 */
 	private static final int[] stunTraps =
 	{
 		18729,
@@ -88,6 +101,10 @@ public class TiatsTrap extends DefaultAI
 		18736
 	};
 	
+	/**
+	 * Constructor for TiatsTrap.
+	 * @param actor NpcInstance
+	 */
 	public TiatsTrap(NpcInstance actor)
 	{
 		super(actor);
@@ -95,6 +112,10 @@ public class TiatsTrap extends DefaultAI
 		actor.startDamageBlocked();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

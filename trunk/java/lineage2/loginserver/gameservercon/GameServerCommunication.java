@@ -32,23 +32,55 @@ import lineage2.loginserver.ThreadPoolManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GameServerCommunication extends Thread
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameServerCommunication.class);
+	/**
+	 * Field instance.
+	 */
 	private static final GameServerCommunication instance = new GameServerCommunication();
+	/**
+	 * Field writeBuffer.
+	 */
 	private final ByteBuffer writeBuffer = ByteBuffer.allocate(64 * 1024).order(ByteOrder.LITTLE_ENDIAN);
+	/**
+	 * Field selector.
+	 */
 	private Selector selector;
+	/**
+	 * Field shutdown.
+	 */
 	private boolean shutdown;
 	
+	/**
+	 * Method getInstance.
+	 * @return GameServerCommunication
+	 */
 	public static GameServerCommunication getInstance()
 	{
 		return instance;
 	}
 	
+	/**
+	 * Constructor for GameServerCommunication.
+	 */
 	private GameServerCommunication()
 	{
 	}
 	
+	/**
+	 * Method openServerSocket.
+	 * @param address InetAddress
+	 * @param tcpPort int
+	 * @throws IOException
+	 */
 	public void openServerSocket(InetAddress address, int tcpPort) throws IOException
 	{
 		selector = Selector.open();
@@ -58,6 +90,10 @@ public class GameServerCommunication extends Thread
 		selectable.register(selector, selectable.validOps());
 	}
 	
+	/**
+	 * Method run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public void run()
 	{
@@ -120,6 +156,11 @@ public class GameServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method accept.
+	 * @param key SelectionKey
+	 * @throws IOException
+	 */
 	public void accept(SelectionKey key) throws IOException
 	{
 		ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
@@ -133,6 +174,11 @@ public class GameServerCommunication extends Thread
 		conn.setGameServer(new GameServer(conn));
 	}
 	
+	/**
+	 * Method read.
+	 * @param key SelectionKey
+	 * @throws IOException
+	 */
 	public void read(SelectionKey key) throws IOException
 	{
 		SocketChannel channel = (SocketChannel) key.channel();
@@ -156,6 +202,13 @@ public class GameServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method tryReadPacket.
+	 * @param key SelectionKey
+	 * @param gs GameServer
+	 * @param buf ByteBuffer
+	 * @return boolean * @throws IOException
+	 */
 	protected boolean tryReadPacket(SelectionKey key, GameServer gs, ByteBuffer buf) throws IOException
 	{
 		int pos = buf.position();
@@ -197,6 +250,11 @@ public class GameServerCommunication extends Thread
 		return false;
 	}
 	
+	/**
+	 * Method write.
+	 * @param key SelectionKey
+	 * @throws IOException
+	 */
 	public void write(SelectionKey key) throws IOException
 	{
 		GameServerConnection conn = (GameServerConnection) key.attachment();
@@ -259,11 +317,19 @@ public class GameServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method getWriteBuffer.
+	 * @return ByteBuffer
+	 */
 	private ByteBuffer getWriteBuffer()
 	{
 		return writeBuffer;
 	}
 	
+	/**
+	 * Method close.
+	 * @param key SelectionKey
+	 */
 	public void close(SelectionKey key)
 	{
 		if (key == null)
@@ -292,11 +358,19 @@ public class GameServerCommunication extends Thread
 		}
 	}
 	
+	/**
+	 * Method isShutdown.
+	 * @return boolean
+	 */
 	public boolean isShutdown()
 	{
 		return shutdown;
 	}
 	
+	/**
+	 * Method setShutdown.
+	 * @param shutdown boolean
+	 */
 	public void setShutdown(boolean shutdown)
 	{
 		this.shutdown = shutdown;

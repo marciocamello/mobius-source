@@ -12,27 +12,55 @@
  */
 package lineage2.gameserver.templates.npc;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MinionData
 {
+	/**
+	 * Field _minionId.
+	 */
 	private final int _minionId;
+	/**
+	 * Field _minionAmount.
+	 */
 	private final int _minionAmount;
 	
+	/**
+	 * Constructor for MinionData.
+	 * @param minionId int
+	 * @param minionAmount int
+	 */
 	public MinionData(int minionId, int minionAmount)
 	{
 		_minionId = minionId;
 		_minionAmount = minionAmount;
 	}
 	
+	/**
+	 * Method getMinionId.
+	 * @return int
+	 */
 	public int getMinionId()
 	{
 		return _minionId;
 	}
 	
+	/**
+	 * Method getAmount.
+	 * @return int
+	 */
 	public int getAmount()
 	{
 		return _minionAmount;
 	}
 	
+	/**
+	 * Method equals.
+	 * @param o Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object o)
 	{

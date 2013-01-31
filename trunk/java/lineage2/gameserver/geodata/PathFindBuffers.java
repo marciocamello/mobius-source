@@ -26,13 +26,35 @@ import lineage2.commons.text.StrTable;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PathFindBuffers
 {
+	/**
+	 * Field MIN_MAP_SIZE.
+	 */
 	public final static int MIN_MAP_SIZE = 1 << 6;
+	/**
+	 * Field STEP_MAP_SIZE.
+	 */
 	public final static int STEP_MAP_SIZE = 1 << 5;
+	/**
+	 * Field MAX_MAP_SIZE.
+	 */
 	public final static int MAX_MAP_SIZE = 1 << 9;
+	/**
+	 * Field buffers.
+	 */
 	private static TIntObjectHashMap<PathFindBuffer[]> buffers = new TIntObjectHashMap<>();
+	/**
+	 * Field sizes.
+	 */
 	private static int[] sizes = new int[0];
+	/**
+	 * Field lock.
+	 */
 	private static Lock lock = new ReentrantLock();
 	static
 	{
@@ -62,6 +84,11 @@ public class PathFindBuffers
 		Arrays.sort(sizes);
 	}
 	
+	/**
+	 * Method create.
+	 * @param mapSize int
+	 * @return PathFindBuffer
+	 */
 	private static PathFindBuffer create(int mapSize)
 	{
 		lock.lock();
@@ -92,6 +119,11 @@ public class PathFindBuffers
 		}
 	}
 	
+	/**
+	 * Method get.
+	 * @param mapSize int
+	 * @return PathFindBuffer
+	 */
 	private static PathFindBuffer get(int mapSize)
 	{
 		lock.lock();
@@ -114,6 +146,11 @@ public class PathFindBuffers
 		}
 	}
 	
+	/**
+	 * Method alloc.
+	 * @param mapSize int
+	 * @return PathFindBuffer
+	 */
 	public static PathFindBuffer alloc(int mapSize)
 	{
 		if (mapSize > MAX_MAP_SIZE)
@@ -150,6 +187,10 @@ public class PathFindBuffers
 		return buffer;
 	}
 	
+	/**
+	 * Method recycle.
+	 * @param buffer PathFindBuffer
+	 */
 	public static void recycle(PathFindBuffer buffer)
 	{
 		lock.lock();
@@ -163,6 +204,10 @@ public class PathFindBuffers
 		}
 	}
 	
+	/**
+	 * Method getStats.
+	 * @return StrTable
+	 */
 	public static StrTable getStats()
 	{
 		StrTable table = new StrTable("PathFind Buffers Stats");
@@ -219,20 +264,63 @@ public class PathFindBuffers
 		return table;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class PathFindBuffer
 	{
+		/**
+		 * Field mapSize.
+		 */
 		final int mapSize;
+		/**
+		 * Field nodes.
+		 */
 		final GeoNode[][] nodes;
+		/**
+		 * Field open.
+		 */
 		final Queue<GeoNode> open;
+		/**
+		 * Field offsetY.
+		 */
+		/**
+		 * Field offsetX.
+		 */
 		int offsetX, offsetY;
+		/**
+		 * Field inUse.
+		 */
 		boolean inUse;
+		/**
+		 * Field totalUses.
+		 */
 		long totalUses;
+		/**
+		 * Field successUses.
+		 */
 		long successUses;
+		/**
+		 * Field overtimeUses.
+		 */
 		long overtimeUses;
+		/**
+		 * Field playableUses.
+		 */
 		long playableUses;
+		/**
+		 * Field totalTime.
+		 */
 		long totalTime;
+		/**
+		 * Field totalItr.
+		 */
 		long totalItr;
 		
+		/**
+		 * Constructor for PathFindBuffer.
+		 * @param mapSize int
+		 */
 		public PathFindBuffer(int mapSize)
 		{
 			open = new PriorityQueue<>(mapSize);
@@ -247,35 +335,87 @@ public class PathFindBuffers
 			}
 		}
 		
+		/**
+		 * Method free.
+		 */
 		public void free()
 		{
 			open.clear();
 			for (GeoNode[] node : nodes)
 			{
-				for (int j = 0; j < node.length; j++)
+				for (GeoNode element : node)
 				{
-					node[j].free();
+					element.free();
 				}
 			}
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class GeoNode implements Comparable<GeoNode>
 	{
+		/**
+		 * Field NONE. (value is 0)
+		 */
 		public final static int NONE = 0;
+		/**
+		 * Field OPENED. (value is 1)
+		 */
 		public final static int OPENED = 1;
+		/**
+		 * Field CLOSED. (value is -1)
+		 */
 		public final static int CLOSED = -1;
+		/**
+		 * Field y.
+		 */
+		/**
+		 * Field x.
+		 */
 		public int x, y;
+		/**
+		 * Field nswe.
+		 */
+		/**
+		 * Field z.
+		 */
 		public short z, nswe;
+		/**
+		 * Field costToEnd.
+		 */
+		/**
+		 * Field costFromStart.
+		 */
+		/**
+		 * Field totalCost.
+		 */
 		public float totalCost, costFromStart, costToEnd;
+		/**
+		 * Field state.
+		 */
 		public int state;
+		/**
+		 * Field parent.
+		 */
 		public GeoNode parent;
 		
+		/**
+		 * Constructor for GeoNode.
+		 */
 		public GeoNode()
 		{
 			nswe = -1;
 		}
 		
+		/**
+		 * Method set.
+		 * @param x int
+		 * @param y int
+		 * @param z short
+		 * @return GeoNode
+		 */
 		public GeoNode set(int x, int y, short z)
 		{
 			this.x = x;
@@ -284,11 +424,18 @@ public class PathFindBuffers
 			return this;
 		}
 		
+		/**
+		 * Method isSet.
+		 * @return boolean
+		 */
 		public boolean isSet()
 		{
 			return nswe != -1;
 		}
 		
+		/**
+		 * Method free.
+		 */
 		public void free()
 		{
 			nswe = -1;
@@ -299,17 +446,30 @@ public class PathFindBuffers
 			state = NONE;
 		}
 		
+		/**
+		 * Method getLoc.
+		 * @return Location
+		 */
 		public Location getLoc()
 		{
 			return new Location(x, y, z);
 		}
 		
+		/**
+		 * Method toString.
+		 * @return String
+		 */
 		@Override
 		public String toString()
 		{
 			return "[" + x + "," + y + "," + z + "] f: " + totalCost;
 		}
 		
+		/**
+		 * Method compareTo.
+		 * @param o GeoNode
+		 * @return int
+		 */
 		@Override
 		public int compareTo(GeoNode o)
 		{

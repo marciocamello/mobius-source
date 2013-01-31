@@ -14,17 +14,37 @@ package lineage2.gameserver.stats.conditions;
 
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ConditionHasSkill extends Condition
 {
+	/**
+	 * Field _id.
+	 */
 	private final Integer _id;
+	/**
+	 * Field _level.
+	 */
 	private final int _level;
 	
+	/**
+	 * Constructor for ConditionHasSkill.
+	 * @param id Integer
+	 * @param level int
+	 */
 	public ConditionHasSkill(Integer id, int level)
 	{
 		_id = id;
 		_level = level;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

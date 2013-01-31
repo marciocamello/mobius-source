@@ -19,8 +19,21 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.PartyRoomInfo;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PartyMatchingRoom extends MatchingRoom
 {
+	/**
+	 * Constructor for PartyMatchingRoom.
+	 * @param leader Player
+	 * @param minLevel int
+	 * @param maxLevel int
+	 * @param maxMemberSize int
+	 * @param lootType int
+	 * @param topic String
+	 */
 	public PartyMatchingRoom(Player leader, int minLevel, int maxLevel, int maxMemberSize, int lootType, String topic)
 	{
 		super(leader, minLevel, maxLevel, maxMemberSize, lootType, topic);
@@ -28,18 +41,32 @@ public class PartyMatchingRoom extends MatchingRoom
 		leader.broadcastCharInfo();
 	}
 	
+	/**
+	 * Method notValidMessage.
+	 * @return SystemMsg
+	 */
 	@Override
 	public SystemMsg notValidMessage()
 	{
 		return SystemMsg.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM;
 	}
 	
+	/**
+	 * Method enterMessage.
+	 * @return SystemMsg
+	 */
 	@Override
 	public SystemMsg enterMessage()
 	{
 		return SystemMsg.C1_HAS_ENTERED_THE_PARTY_ROOM;
 	}
 	
+	/**
+	 * Method exitMessage.
+	 * @param toOthers boolean
+	 * @param kick boolean
+	 * @return SystemMsg
+	 */
 	@Override
 	public SystemMsg exitMessage(boolean toOthers, boolean kick)
 	{
@@ -50,54 +77,98 @@ public class PartyMatchingRoom extends MatchingRoom
 		return kick ? SystemMsg.YOU_HAVE_BEEN_OUSTED_FROM_THE_PARTY_ROOM : SystemMsg.YOU_HAVE_EXITED_THE_PARTY_ROOM;
 	}
 	
+	/**
+	 * Method closeRoomMessage.
+	 * @return SystemMsg
+	 */
 	@Override
 	public SystemMsg closeRoomMessage()
 	{
 		return SystemMsg.THE_PARTY_ROOM_HAS_BEEN_DISBANDED;
 	}
 	
+	/**
+	 * Method closeRoomPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket closeRoomPacket()
 	{
 		return ExClosePartyRoom.STATIC;
 	}
 	
+	/**
+	 * Method infoRoomPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket infoRoomPacket()
 	{
 		return new PartyRoomInfo(this);
 	}
 	
+	/**
+	 * Method addMemberPacket.
+	 * @param $member Player
+	 * @param active Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket addMemberPacket(Player $member, Player active)
 	{
 		return membersPacket($member);
 	}
 	
+	/**
+	 * Method removeMemberPacket.
+	 * @param $member Player
+	 * @param active Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket removeMemberPacket(Player $member, Player active)
 	{
 		return membersPacket($member);
 	}
 	
+	/**
+	 * Method updateMemberPacket.
+	 * @param $member Player
+	 * @param active Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket updateMemberPacket(Player $member, Player active)
 	{
 		return membersPacket($member);
 	}
 	
+	/**
+	 * Method membersPacket.
+	 * @param active Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket membersPacket(Player active)
 	{
 		return new ExPartyRoomMember(this, active);
 	}
 	
+	/**
+	 * Method getType.
+	 * @return int
+	 */
 	@Override
 	public int getType()
 	{
 		return PARTY_MATCHING;
 	}
 	
+	/**
+	 * Method getMemberType.
+	 * @param member Player
+	 * @return int
+	 */
 	@Override
 	public int getMemberType(Player member)
 	{

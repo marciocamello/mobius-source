@@ -12,11 +12,21 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestTeleport extends L2GameClientPacket
 {
+	/**
+	 * Field unk4. Field unk3. Field unk2. Field _type. Field unk.
+	 */
 	@SuppressWarnings("unused")
 	private int unk, _type, unk2, unk3, unk4;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -35,6 +45,9 @@ public class RequestTeleport extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

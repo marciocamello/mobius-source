@@ -18,21 +18,40 @@ import java.util.Map;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PartyMemberPosition extends L2GameServerPacket
 {
+	/**
+	 * Field positions.
+	 */
 	private final Map<Integer, Location> positions = new HashMap<>();
 	
+	/**
+	 * Method add.
+	 * @param actor Player
+	 * @return PartyMemberPosition
+	 */
 	public PartyMemberPosition add(Player actor)
 	{
 		positions.put(actor.getObjectId(), actor.getLoc());
 		return this;
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	public int size()
 	{
 		return positions.size();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

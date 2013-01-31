@@ -15,25 +15,85 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Attack extends L2GameServerPacket
 {
+	/**
+	 * Field FLAG.
+	 */
 	public static final int FLAG = 0x00;
+	/**
+	 * Field FLAG_MISS.
+	 */
 	public static final int FLAG_MISS = 0x01;
+	/**
+	 * Field FLAG_BLOCK.
+	 */
 	public static final int FLAG_BLOCK = 0x02;
+	/**
+	 * Field FLAG_CRIT.
+	 */
 	public static final int FLAG_CRIT = 0x04;
+	/**
+	 * Field FLAG_SOULSHOT.
+	 */
 	public static final int FLAG_SOULSHOT = 0x08;
+	/**
+	 * Field SOULSHOT_NG.
+	 */
 	public static final int SOULSHOT_NG = 0x00;
+	/**
+	 * Field SOULSHOT_D.
+	 */
 	public static final int SOULSHOT_D = 0x01;
+	/**
+	 * Field SOULSHOT_C.
+	 */
 	public static final int SOULSHOT_C = 0x02;
+	/**
+	 * Field SOULSHOT_B.
+	 */
 	public static final int SOULSHOT_B = 0x03;
+	/**
+	 * Field SOULSHOT_A.
+	 */
 	public static final int SOULSHOT_A = 0x04;
+	/**
+	 * Field SOULSHOT_S.
+	 */
 	public static final int SOULSHOT_S = 0x05;
+	/**
+	 * Field SOULSHOT_R.
+	 */
 	public static final int SOULSHOT_R = 0x06;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Hit
 	{
+		/**
+		 * Field _flags.
+		 */
+		/**
+		 * Field _damage.
+		 */
+		/**
+		 * Field _targetId.
+		 */
 		int _targetId, _damage, _flags;
 		
+		/**
+		 * Constructor for Hit.
+		 * @param target GameObject
+		 * @param damage int
+		 * @param miss boolean
+		 * @param crit boolean
+		 * @param shld boolean
+		 */
 		Hit(GameObject target, int damage, boolean miss, boolean crit, boolean shld)
 		{
 			_targetId = target.getObjectId();
@@ -58,12 +118,34 @@ public class Attack extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Field _attackerId.
+	 */
 	public final int _attackerId;
+	/**
+	 * Field _soulshot.
+	 */
 	public final boolean _soulshot;
+	/**
+	 * Field _grade.
+	 */
 	private final int _grade;
+	/**
+	 * Field _tz. Field _ty. Field _tx. Field _z. Field _y. Field _x.
+	 */
 	private final int _x, _y, _z, _tx, _ty, _tz;
+	/**
+	 * Field hits.
+	 */
 	private Hit[] hits;
 	
+	/**
+	 * Constructor for Attack.
+	 * @param attacker Creature
+	 * @param target Creature
+	 * @param ss boolean
+	 * @param grade int
+	 */
 	public Attack(Creature attacker, Creature target, boolean ss, int grade)
 	{
 		_attackerId = attacker.getObjectId();
@@ -78,6 +160,14 @@ public class Attack extends L2GameServerPacket
 		hits = new Hit[0];
 	}
 	
+	/**
+	 * Method addHit.
+	 * @param target GameObject
+	 * @param damage int
+	 * @param miss boolean
+	 * @param crit boolean
+	 * @param shld boolean
+	 */
 	public void addHit(GameObject target, int damage, boolean miss, boolean crit, boolean shld)
 	{
 		int pos = hits.length;
@@ -87,11 +177,18 @@ public class Attack extends L2GameServerPacket
 		hits = tmp;
 	}
 	
+	/**
+	 * Method hasHits.
+	 * @return boolean
+	 */
 	public boolean hasHits()
 	{
 		return hits.length > 0;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

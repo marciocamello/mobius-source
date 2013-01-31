@@ -14,9 +14,19 @@ package lineage2.gameserver.network;
 
 import lineage2.commons.util.Rnd;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BlowFishKeygen
 {
+	/**
+	 * Field CRYPT_KEYS_SIZE. (value is 20)
+	 */
 	private static final int CRYPT_KEYS_SIZE = 20;
+	/**
+	 * Field CRYPT_KEYS.
+	 */
 	private static final byte[][] CRYPT_KEYS = new byte[CRYPT_KEYS_SIZE][16];
 	static
 	{
@@ -37,10 +47,17 @@ public class BlowFishKeygen
 		}
 	}
 	
+	/**
+	 * Constructor for BlowFishKeygen.
+	 */
 	private BlowFishKeygen()
 	{
 	}
 	
+	/**
+	 * Method getRandomKey.
+	 * @return byte[]
+	 */
 	public static byte[] getRandomKey()
 	{
 		return CRYPT_KEYS[Rnd.get(CRYPT_KEYS_SIZE)];

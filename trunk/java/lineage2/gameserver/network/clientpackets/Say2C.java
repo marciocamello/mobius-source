@@ -49,15 +49,40 @@ import com.graphbuilder.math.ExpressionParseException;
 import com.graphbuilder.math.ExpressionTree;
 import com.graphbuilder.math.VarMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Say2C extends L2GameClientPacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Say2C.class);
+	/**
+	 * Field EX_ITEM_LINK_PATTERN.
+	 */
 	private static final Pattern EX_ITEM_LINK_PATTERN = Pattern.compile("[\b]\tType=[0-9]+[\\s]+\tID=([0-9]+)[\\s]+\tColor=[0-9]+[\\s]+\tUnderline=[0-9]+[\\s]+\tTitle=\u001B(.[^\u001B]*)[^\b]");
+	/**
+	 * Field SKIP_ITEM_LINK_PATTERN.
+	 */
 	private static final Pattern SKIP_ITEM_LINK_PATTERN = Pattern.compile("[\b]\tType=[0-9]+(.[^\b]*)[\b]");
+	/**
+	 * Field _text.
+	 */
 	private String _text;
+	/**
+	 * Field _type.
+	 */
 	private ChatType _type;
+	/**
+	 * Field _target.
+	 */
 	private String _target;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -66,6 +91,9 @@ public class Say2C extends L2GameClientPacket
 		_target = _type == ChatType.TELL ? readS(Config.CNAME_MAXLEN) : null;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -103,7 +131,7 @@ public class Say2C extends L2GameClientPacket
 			activeChar.sendActionFailed();
 			return;
 		}
-		if (_text.startsWith("."))
+		if ((_text.length() > 0) && (_text.charAt(0) == '.'))
 		{
 			String fullcmd = _text.substring(1).trim();
 			String command = fullcmd.split("\\s+")[0];
@@ -479,6 +507,11 @@ public class Say2C extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method shout.
+	 * @param activeChar Player
+	 * @param cs Say2
+	 */
 	private static void shout(Player activeChar, Say2 cs)
 	{
 		int rx = MapUtils.regionX(activeChar);
@@ -499,6 +532,11 @@ public class Say2C extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method announce.
+	 * @param activeChar Player
+	 * @param cs Say2
+	 */
 	private static void announce(Player activeChar, Say2 cs)
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())

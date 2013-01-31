@@ -16,19 +16,36 @@ import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Ranger extends DefaultAI
 {
+	/**
+	 * Constructor for Ranger.
+	 * @param actor NpcInstance
+	 */
 	public Ranger(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
 		return super.thinkActive() || defaultThinkBuff(10);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -61,48 +78,80 @@ public class Ranger extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method createNewTask.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean createNewTask()
 	{
 		return defaultFightTask();
 	}
 	
+	/**
+	 * Method getRatePHYS.
+	 * @return int
+	 */
 	@Override
 	public int getRatePHYS()
 	{
 		return 25;
 	}
 	
+	/**
+	 * Method getRateDOT.
+	 * @return int
+	 */
 	@Override
 	public int getRateDOT()
 	{
 		return 40;
 	}
 	
+	/**
+	 * Method getRateDEBUFF.
+	 * @return int
+	 */
 	@Override
 	public int getRateDEBUFF()
 	{
 		return 25;
 	}
 	
+	/**
+	 * Method getRateDAM.
+	 * @return int
+	 */
 	@Override
 	public int getRateDAM()
 	{
 		return 50;
 	}
 	
+	/**
+	 * Method getRateSTUN.
+	 * @return int
+	 */
 	@Override
 	public int getRateSTUN()
 	{
 		return 50;
 	}
 	
+	/**
+	 * Method getRateBUFF.
+	 * @return int
+	 */
 	@Override
 	public int getRateBUFF()
 	{
 		return 5;
 	}
 	
+	/**
+	 * Method getRateHEAL.
+	 * @return int
+	 */
 	@Override
 	public int getRateHEAL()
 	{

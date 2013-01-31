@@ -16,13 +16,35 @@ import lineage2.gameserver.instancemanager.itemauction.ItemAuction;
 import lineage2.gameserver.instancemanager.itemauction.ItemAuctionBid;
 import lineage2.gameserver.instancemanager.itemauction.ItemAuctionState;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExItemAuctionInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _refresh.
+	 */
 	private final boolean _refresh;
+	/**
+	 * Field _timeRemaining.
+	 */
 	private int _timeRemaining;
+	/**
+	 * Field _currentAuction.
+	 */
 	private final ItemAuction _currentAuction;
+	/**
+	 * Field _nextAuction.
+	 */
 	private final ItemAuction _nextAuction;
 	
+	/**
+	 * Constructor for ExItemAuctionInfo.
+	 * @param refresh boolean
+	 * @param currentAuction ItemAuction
+	 * @param nextAuction ItemAuction
+	 */
 	public ExItemAuctionInfo(boolean refresh, ItemAuction currentAuction, ItemAuction nextAuction)
 	{
 		if (currentAuction == null)
@@ -42,6 +64,9 @@ public class ExItemAuctionInfo extends L2GameServerPacket
 		_nextAuction = nextAuction;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

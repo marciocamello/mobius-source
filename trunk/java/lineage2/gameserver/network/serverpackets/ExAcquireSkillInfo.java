@@ -17,15 +17,30 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExAcquireSkillInfo extends L2GameServerPacket
 {
+	/**
+	 * Field skillLearn.
+	 */
 	private final SkillLearn skillLearn;
 	
+	/**
+	 * Constructor for ExAcquireSkillInfo.
+	 * @param player Player
+	 * @param skillLearn SkillLearn
+	 */
 	public ExAcquireSkillInfo(Player player, SkillLearn skillLearn)
 	{
 		this.skillLearn = skillLearn;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

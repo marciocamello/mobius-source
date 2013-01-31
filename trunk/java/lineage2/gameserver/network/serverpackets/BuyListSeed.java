@@ -18,12 +18,31 @@ import java.util.List;
 import lineage2.gameserver.data.xml.holder.BuyListHolder.NpcTradeList;
 import lineage2.gameserver.model.items.TradeItem;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class BuyListSeed extends L2GameServerPacket
 {
+	/**
+	 * Field _manorId.
+	 */
 	private final int _manorId;
+	/**
+	 * Field _list.
+	 */
 	private List<TradeItem> _list = new ArrayList<>();
+	/**
+	 * Field _money.
+	 */
 	private final long _money;
 	
+	/**
+	 * Constructor for BuyListSeed.
+	 * @param list NpcTradeList
+	 * @param manorId int
+	 * @param currentMoney long
+	 */
 	public BuyListSeed(NpcTradeList list, int manorId, long currentMoney)
 	{
 		_money = currentMoney;
@@ -31,6 +50,9 @@ public final class BuyListSeed extends L2GameServerPacket
 		_list = list.getItems();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

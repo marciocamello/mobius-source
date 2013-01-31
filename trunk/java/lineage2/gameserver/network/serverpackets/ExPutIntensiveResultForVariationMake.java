@@ -12,11 +12,28 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExPutIntensiveResultForVariationMake extends L2GameServerPacket
 {
+	/**
+	 * Field _unk. Field _gemstoneItemId. Field _lifestoneItemId. Field _refinerItemObjId.
+	 */
 	private final int _refinerItemObjId, _lifestoneItemId, _gemstoneItemId, _unk;
+	/**
+	 * Field _gemstoneCount.
+	 */
 	private final long _gemstoneCount;
 	
+	/**
+	 * Constructor for ExPutIntensiveResultForVariationMake.
+	 * @param refinerItemObjId int
+	 * @param lifeStoneId int
+	 * @param gemstoneItemId int
+	 * @param gemstoneCount long
+	 */
 	public ExPutIntensiveResultForVariationMake(int refinerItemObjId, int lifeStoneId, int gemstoneItemId, long gemstoneCount)
 	{
 		_refinerItemObjId = refinerItemObjId;
@@ -26,6 +43,9 @@ public class ExPutIntensiveResultForVariationMake extends L2GameServerPacket
 		_unk = 1;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

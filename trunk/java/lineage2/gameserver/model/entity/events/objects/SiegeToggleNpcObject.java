@@ -19,15 +19,33 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.instances.residences.SiegeToggleNpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SiegeToggleNpcObject implements SpawnableObject
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _toggleNpc.
+	 */
 	private final SiegeToggleNpcInstance _toggleNpc;
+	/**
+	 * Field _location.
+	 */
 	private final Location _location;
 	
+	/**
+	 * Constructor for SiegeToggleNpcObject.
+	 * @param id int
+	 * @param fakeNpcId int
+	 * @param loc Location
+	 * @param hp int
+	 * @param set Set<String>
+	 */
 	public SiegeToggleNpcObject(int id, int fakeNpcId, Location loc, int hp, Set<String> set)
 	{
 		_location = loc;
@@ -37,6 +55,11 @@ public class SiegeToggleNpcObject implements SpawnableObject
 		_toggleNpc.setZoneList(set);
 	}
 	
+	/**
+	 * Method spawnObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#spawnObject(GlobalEvent)
+	 */
 	@Override
 	public void spawnObject(GlobalEvent event)
 	{
@@ -53,6 +76,11 @@ public class SiegeToggleNpcObject implements SpawnableObject
 		_toggleNpc.spawnMe(_location);
 	}
 	
+	/**
+	 * Method despawnObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#despawnObject(GlobalEvent)
+	 */
 	@Override
 	public void despawnObject(GlobalEvent event)
 	{
@@ -61,16 +89,29 @@ public class SiegeToggleNpcObject implements SpawnableObject
 		_toggleNpc.decayMe();
 	}
 	
+	/**
+	 * Method refreshObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#refreshObject(GlobalEvent)
+	 */
 	@Override
 	public void refreshObject(GlobalEvent event)
 	{
 	}
 	
+	/**
+	 * Method getToggleNpc.
+	 * @return SiegeToggleNpcInstance
+	 */
 	public SiegeToggleNpcInstance getToggleNpc()
 	{
 		return _toggleNpc;
 	}
 	
+	/**
+	 * Method isAlive.
+	 * @return boolean
+	 */
 	public boolean isAlive()
 	{
 		return _toggleNpc.isVisible();

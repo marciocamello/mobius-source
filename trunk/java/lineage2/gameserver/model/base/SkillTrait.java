@@ -15,9 +15,19 @@ package lineage2.gameserver.model.base;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum SkillTrait
 {
+	/**
+	 * Field NONE.
+	 */
 	NONE,
+	/**
+	 * Field BLEED.
+	 */
 	BLEED
 	{
 		@Override
@@ -32,8 +42,17 @@ public enum SkillTrait
 			return env.character.calcStat(Stats.BLEED_POWER, env.target, env.skill);
 		}
 	},
+	/**
+	 * Field BOSS.
+	 */
 	BOSS,
+	/**
+	 * Field DEATH.
+	 */
 	DEATH,
+	/**
+	 * Field DERANGEMENT.
+	 */
 	DERANGEMENT
 	{
 		@Override
@@ -48,8 +67,17 @@ public enum SkillTrait
 			return Math.min(40., env.character.calcStat(Stats.MENTAL_POWER, env.target, env.skill) + calcEnchantMod(env));
 		}
 	},
+	/**
+	 * Field ETC.
+	 */
 	ETC,
+	/**
+	 * Field GUST.
+	 */
 	GUST,
+	/**
+	 * Field HOLD.
+	 */
 	HOLD
 	{
 		@Override
@@ -64,6 +92,9 @@ public enum SkillTrait
 			return env.character.calcStat(Stats.ROOT_POWER, env.target, env.skill);
 		}
 	},
+	/**
+	 * Field PARALYZE.
+	 */
 	PARALYZE
 	{
 		@Override
@@ -78,7 +109,13 @@ public enum SkillTrait
 			return env.character.calcStat(Stats.PARALYZE_POWER, env.target, env.skill);
 		}
 	},
+	/**
+	 * Field PHYSICAL_BLOCKADE.
+	 */
 	PHYSICAL_BLOCKADE,
+	/**
+	 * Field POISON.
+	 */
 	POISON
 	{
 		@Override
@@ -93,6 +130,9 @@ public enum SkillTrait
 			return env.character.calcStat(Stats.POISON_POWER, env.target, env.skill);
 		}
 	},
+	/**
+	 * Field SHOCK.
+	 */
 	SHOCK
 	{
 		@Override
@@ -107,6 +147,9 @@ public enum SkillTrait
 			return Math.min(40., env.character.calcStat(Stats.STUN_POWER, env.target, env.skill) + calcEnchantMod(env));
 		}
 	},
+	/**
+	 * Field SLEEP.
+	 */
 	SLEEP
 	{
 		@Override
@@ -121,7 +164,13 @@ public enum SkillTrait
 			return env.character.calcStat(Stats.SLEEP_POWER, env.target, env.skill);
 		}
 	},
+	/**
+	 * Field VALAKAS.
+	 */
 	VALAKAS,
+	/**
+	 * Field KNOCKBACK.
+	 */
 	KNOCKBACK
 	{
 		@Override
@@ -136,6 +185,9 @@ public enum SkillTrait
 			return env.character.calcStat(Stats.KNOCKBACK_POWER, env.target, env.skill);
 		}
 	},
+	/**
+	 * Field KNOCKDOWN.
+	 */
 	KNOCKDOWN
 	{
 		@Override
@@ -150,16 +202,31 @@ public enum SkillTrait
 			return env.character.calcStat(Stats.KNOCKDOWN_POWER, env.target, env.skill);
 		}
 	};
+	/**
+	 * Method calcVuln.
+	 * @param env Env
+	 * @return double
+	 */
 	public double calcVuln(Env env)
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method calcProf.
+	 * @param env Env
+	 * @return double
+	 */
 	public double calcProf(Env env)
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method calcEnchantMod.
+	 * @param env Env
+	 * @return double
+	 */
 	public static double calcEnchantMod(Env env)
 	{
 		int enchantLevel = env.skill.getDisplayLevel();

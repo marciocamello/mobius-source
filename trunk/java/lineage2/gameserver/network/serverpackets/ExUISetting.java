@@ -14,15 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExUISetting extends L2GameServerPacket
 {
+	/**
+	 * Field data.
+	 */
 	private final byte data[];
 	
+	/**
+	 * Constructor for ExUISetting.
+	 * @param player Player
+	 */
 	public ExUISetting(Player player)
 	{
 		data = player.getKeyBindings();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

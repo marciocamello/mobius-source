@@ -20,10 +20,21 @@ import java.util.List;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.ShortCut;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShortCutInit extends ShortCutPacket
 {
+	/**
+	 * Field _shortCuts.
+	 */
 	private List<ShortcutInfo> _shortCuts = Collections.emptyList();
 	
+	/**
+	 * Constructor for ShortCutInit.
+	 * @param pl Player
+	 */
 	public ShortCutInit(Player pl)
 	{
 		Collection<ShortCut> shortCuts = pl.getAllShortCuts();
@@ -34,6 +45,9 @@ public class ShortCutInit extends ShortCutPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

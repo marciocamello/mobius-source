@@ -14,13 +14,35 @@ package lineage2.gameserver.skills;
 
 import lineage2.gameserver.model.Skill;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TimeStamp
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _level.
+	 */
 	private final int _level;
+	/**
+	 * Field _reuse.
+	 */
 	private final long _reuse;
+	/**
+	 * Field _endTime.
+	 */
 	private final long _endTime;
 	
+	/**
+	 * Constructor for TimeStamp.
+	 * @param id int
+	 * @param endTime long
+	 * @param reuse long
+	 */
 	public TimeStamp(int id, long endTime, long reuse)
 	{
 		_id = id;
@@ -29,11 +51,22 @@ public class TimeStamp
 		_endTime = endTime;
 	}
 	
+	/**
+	 * Constructor for TimeStamp.
+	 * @param skill Skill
+	 * @param reuse long
+	 */
 	public TimeStamp(Skill skill, long reuse)
 	{
 		this(skill, System.currentTimeMillis() + reuse, reuse);
 	}
 	
+	/**
+	 * Constructor for TimeStamp.
+	 * @param skill Skill
+	 * @param endTime long
+	 * @param reuse long
+	 */
 	public TimeStamp(Skill skill, long endTime, long reuse)
 	{
 		_id = skill.getId();
@@ -42,6 +75,10 @@ public class TimeStamp
 		_endTime = endTime;
 	}
 	
+	/**
+	 * Method getReuseBasic.
+	 * @return long
+	 */
 	public long getReuseBasic()
 	{
 		if (_reuse == 0)
@@ -51,26 +88,46 @@ public class TimeStamp
 		return _reuse;
 	}
 	
+	/**
+	 * Method getReuseCurrent.
+	 * @return long
+	 */
 	public long getReuseCurrent()
 	{
 		return Math.max(_endTime - System.currentTimeMillis(), 0);
 	}
 	
+	/**
+	 * Method getEndTime.
+	 * @return long
+	 */
 	public long getEndTime()
 	{
 		return _endTime;
 	}
 	
+	/**
+	 * Method hasNotPassed.
+	 * @return boolean
+	 */
 	public boolean hasNotPassed()
 	{
 		return System.currentTimeMillis() < _endTime;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		return _level;

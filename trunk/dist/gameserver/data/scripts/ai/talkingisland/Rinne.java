@@ -15,8 +15,16 @@ package ai.talkingisland;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Rinne extends RinneSubAI
 {
+	/**
+	 * Constructor for Rinne.
+	 * @param actor NpcInstance
+	 */
 	public Rinne(NpcInstance actor)
 	{
 		super(actor);

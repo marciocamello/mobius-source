@@ -25,17 +25,50 @@ import lineage2.gameserver.model.pledge.Clan;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleSiegeInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _startTime.
+	 */
 	private long _startTime;
+	/**
+	 * Field _ownerObjectId. Field _id.
+	 */
 	private final int _id, _ownerObjectId;
+	/**
+	 * Field _allyId.
+	 */
 	private int _allyId;
+	/**
+	 * Field _isLeader.
+	 */
 	private boolean _isLeader;
+	/**
+	 * Field _ownerName.
+	 */
 	private String _ownerName = "NPC";
+	/**
+	 * Field _leaderName.
+	 */
 	private String _leaderName = StringUtils.EMPTY;
+	/**
+	 * Field _allyName.
+	 */
 	private String _allyName = StringUtils.EMPTY;
+	/**
+	 * Field _nextTimeMillis.
+	 */
 	private int[] _nextTimeMillis = ArrayUtils.EMPTY_INT_ARRAY;
 	
+	/**
+	 * Constructor for CastleSiegeInfo.
+	 * @param castle Castle
+	 * @param player Player
+	 */
 	public CastleSiegeInfo(Castle castle, Player player)
 	{
 		this((Residence) castle, player);
@@ -51,12 +84,22 @@ public class CastleSiegeInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Constructor for CastleSiegeInfo.
+	 * @param ch ClanHall
+	 * @param player Player
+	 */
 	public CastleSiegeInfo(ClanHall ch, Player player)
 	{
 		this((Residence) ch, player);
 		_startTime = (int) (ch.getSiegeDate().getTimeInMillis() / 1000);
 	}
 	
+	/**
+	 * Constructor for CastleSiegeInfo.
+	 * @param residence Residence
+	 * @param player Player
+	 */
 	protected CastleSiegeInfo(Residence residence, Player player)
 	{
 		_id = residence.getId();
@@ -76,6 +119,9 @@ public class CastleSiegeInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

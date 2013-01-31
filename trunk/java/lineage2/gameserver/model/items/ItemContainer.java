@@ -26,25 +26,58 @@ import lineage2.gameserver.utils.ItemFunctions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class ItemContainer
 {
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(ItemContainer.class);
+	/**
+	 * Field _itemsDAO.
+	 */
 	protected static final ItemsDAO _itemsDAO = ItemsDAO.getInstance();
+	/**
+	 * Field _items.
+	 */
 	protected final List<ItemInstance> _items = new ArrayList<>();
+	/**
+	 * Field lock.
+	 */
 	protected final ReadWriteLock lock = new ReentrantReadWriteLock();
+	/**
+	 * Field readLock.
+	 */
 	protected final Lock readLock = lock.readLock();
+	/**
+	 * Field writeLock.
+	 */
 	protected final Lock writeLock = lock.writeLock();
 	
+	/**
+	 * Constructor for ItemContainer.
+	 */
 	protected ItemContainer()
 	{
 	}
 	
+	/**
+	 * Method getSize.
+	 * @return int
+	 */
 	public int getSize()
 	{
 		return _items.size();
 	}
 	
+	/**
+	 * Method getItems.
+	 * @return ItemInstance[]
+	 */
 	public ItemInstance[] getItems()
 	{
 		readLock();
@@ -58,6 +91,9 @@ public abstract class ItemContainer
 		}
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	public void clear()
 	{
 		writeLock();
@@ -71,26 +107,43 @@ public abstract class ItemContainer
 		}
 	}
 	
+	/**
+	 * Method writeLock.
+	 */
 	public final void writeLock()
 	{
 		writeLock.lock();
 	}
 	
+	/**
+	 * Method writeUnlock.
+	 */
 	public final void writeUnlock()
 	{
 		writeLock.unlock();
 	}
 	
+	/**
+	 * Method readLock.
+	 */
 	public final void readLock()
 	{
 		readLock.lock();
 	}
 	
+	/**
+	 * Method readUnlock.
+	 */
 	public final void readUnlock()
 	{
 		readLock.unlock();
 	}
 	
+	/**
+	 * Method getItemByObjectId.
+	 * @param objectId int
+	 * @return ItemInstance
+	 */
 	public ItemInstance getItemByObjectId(int objectId)
 	{
 		readLock();
@@ -113,6 +166,11 @@ public abstract class ItemContainer
 		return null;
 	}
 	
+	/**
+	 * Method getItemByItemId.
+	 * @param itemId int
+	 * @return ItemInstance
+	 */
 	public ItemInstance getItemByItemId(int itemId)
 	{
 		readLock();
@@ -135,6 +193,11 @@ public abstract class ItemContainer
 		return null;
 	}
 	
+	/**
+	 * Method getItemsByItemId.
+	 * @param itemId int
+	 * @return List<ItemInstance>
+	 */
 	public List<ItemInstance> getItemsByItemId(int itemId)
 	{
 		List<ItemInstance> result = new ArrayList<>();
@@ -158,6 +221,11 @@ public abstract class ItemContainer
 		return result;
 	}
 	
+	/**
+	 * Method getCountOf.
+	 * @param itemId int
+	 * @return long
+	 */
 	public long getCountOf(int itemId)
 	{
 		long count = 0L;
@@ -181,6 +249,12 @@ public abstract class ItemContainer
 		return count;
 	}
 	
+	/**
+	 * Method addItem.
+	 * @param itemId int
+	 * @param count long
+	 * @return ItemInstance
+	 */
 	public ItemInstance addItem(int itemId, long count)
 	{
 		if (count < 1)
@@ -215,6 +289,11 @@ public abstract class ItemContainer
 		return item;
 	}
 	
+	/**
+	 * Method addItem.
+	 * @param item ItemInstance
+	 * @return ItemInstance
+	 */
 	public ItemInstance addItem(ItemInstance item)
 	{
 		if (item == null)
@@ -261,6 +340,12 @@ public abstract class ItemContainer
 		return result;
 	}
 	
+	/**
+	 * Method removeItemByObjectId.
+	 * @param objectId int
+	 * @param count long
+	 * @return ItemInstance
+	 */
 	public ItemInstance removeItemByObjectId(int objectId, long count)
 	{
 		if (count < 1)
@@ -288,6 +373,12 @@ public abstract class ItemContainer
 		return result;
 	}
 	
+	/**
+	 * Method removeItemByItemId.
+	 * @param itemId int
+	 * @param count long
+	 * @return ItemInstance
+	 */
 	public ItemInstance removeItemByItemId(int itemId, long count)
 	{
 		if (count < 1)
@@ -315,6 +406,12 @@ public abstract class ItemContainer
 		return result;
 	}
 	
+	/**
+	 * Method removeItem.
+	 * @param item ItemInstance
+	 * @param count long
+	 * @return ItemInstance
+	 */
 	public ItemInstance removeItem(ItemInstance item, long count)
 	{
 		if (item == null)
@@ -352,6 +449,11 @@ public abstract class ItemContainer
 		}
 	}
 	
+	/**
+	 * Method removeItem.
+	 * @param item ItemInstance
+	 * @return ItemInstance
+	 */
 	public ItemInstance removeItem(ItemInstance item)
 	{
 		if (item == null)
@@ -374,6 +476,12 @@ public abstract class ItemContainer
 		}
 	}
 	
+	/**
+	 * Method destroyItemByObjectId.
+	 * @param objectId int
+	 * @param count long
+	 * @return boolean
+	 */
 	public boolean destroyItemByObjectId(int objectId, long count)
 	{
 		writeLock();
@@ -395,6 +503,12 @@ public abstract class ItemContainer
 		}
 	}
 	
+	/**
+	 * Method destroyItemByItemId.
+	 * @param itemId int
+	 * @param count long
+	 * @return boolean
+	 */
 	public boolean destroyItemByItemId(int itemId, long count)
 	{
 		writeLock();
@@ -416,6 +530,12 @@ public abstract class ItemContainer
 		}
 	}
 	
+	/**
+	 * Method destroyItem.
+	 * @param item ItemInstance
+	 * @param count long
+	 * @return boolean
+	 */
 	public boolean destroyItem(ItemInstance item, long count)
 	{
 		if (item == null)
@@ -451,6 +571,11 @@ public abstract class ItemContainer
 		}
 	}
 	
+	/**
+	 * Method destroyItem.
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	public boolean destroyItem(ItemInstance item)
 	{
 		if (item == null)
@@ -474,11 +599,27 @@ public abstract class ItemContainer
 		}
 	}
 	
+	/**
+	 * Method onAddItem.
+	 * @param item ItemInstance
+	 */
 	protected abstract void onAddItem(ItemInstance item);
 	
+	/**
+	 * Method onModifyItem.
+	 * @param item ItemInstance
+	 */
 	protected abstract void onModifyItem(ItemInstance item);
 	
+	/**
+	 * Method onRemoveItem.
+	 * @param item ItemInstance
+	 */
 	protected abstract void onRemoveItem(ItemInstance item);
 	
+	/**
+	 * Method onDestroyItem.
+	 * @param item ItemInstance
+	 */
 	protected abstract void onDestroyItem(ItemInstance item);
 }

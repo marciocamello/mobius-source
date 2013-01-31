@@ -16,17 +16,43 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NpcSay extends NpcStringContainer
 {
+	/**
+	 * Field _objId.
+	 */
 	private final int _objId;
+	/**
+	 * Field _type.
+	 */
 	private final int _type;
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
 	
+	/**
+	 * Constructor for NpcSay.
+	 * @param npc NpcInstance
+	 * @param chatType ChatType
+	 * @param text String
+	 */
 	public NpcSay(NpcInstance npc, ChatType chatType, String text)
 	{
 		this(npc, chatType, NpcString.NONE, text);
 	}
 	
+	/**
+	 * Constructor for NpcSay.
+	 * @param npc NpcInstance
+	 * @param chatType ChatType
+	 * @param npcString NpcString
+	 * @param params String[]
+	 */
 	public NpcSay(NpcInstance npc, ChatType chatType, NpcString npcString, String... params)
 	{
 		super(npcString, params);
@@ -35,6 +61,9 @@ public class NpcSay extends NpcStringContainer
 		_type = chatType.ordinal();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

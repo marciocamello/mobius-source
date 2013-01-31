@@ -12,11 +12,30 @@
  */
 package lineage2.gameserver.model.entity.residence;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum ResidenceType
 {
+	/**
+	 * Field Castle.
+	 */
 	Castle,
+	/**
+	 * Field ClanHall.
+	 */
 	ClanHall,
+	/**
+	 * Field Fortress.
+	 */
 	Fortress,
+	/**
+	 * Field Dominion.
+	 */
 	Dominion;
+	/**
+	 * Field VALUES.
+	 */
 	public static final ResidenceType[] VALUES = values();
 }

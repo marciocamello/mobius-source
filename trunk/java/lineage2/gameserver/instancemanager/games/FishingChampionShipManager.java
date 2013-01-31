@@ -37,26 +37,70 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FishingChampionShipManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(FishingChampionShipManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final FishingChampionShipManager _instance = new FishingChampionShipManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return FishingChampionShipManager
+	 */
 	public static final FishingChampionShipManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _enddate.
+	 */
 	long _enddate = 0;
+	/**
+	 * Field _playersName.
+	 */
 	private final List<String> _playersName = new ArrayList<>();
+	/**
+	 * Field _fishLength.
+	 */
 	private final List<String> _fishLength = new ArrayList<>();
+	/**
+	 * Field _winPlayersName.
+	 */
 	private final List<String> _winPlayersName = new ArrayList<>();
+	/**
+	 * Field _winFishLength.
+	 */
 	private final List<String> _winFishLength = new ArrayList<>();
+	/**
+	 * Field _tmpPlayers.
+	 */
 	final List<Fisher> _tmpPlayers = new ArrayList<>();
+	/**
+	 * Field _winPlayers.
+	 */
 	final List<Fisher> _winPlayers = new ArrayList<>();
+	/**
+	 * Field _minFishLength.
+	 */
 	private double _minFishLength = 0;
+	/**
+	 * Field _needRefresh.
+	 */
 	boolean _needRefresh = true;
 	
+	/**
+	 * Constructor for FishingChampionShipManager.
+	 */
 	private FishingChampionShipManager()
 	{
 		restoreData();
@@ -73,6 +117,9 @@ public class FishingChampionShipManager
 		}
 	}
 	
+	/**
+	 * Method setEndOfChamp.
+	 */
 	void setEndOfChamp()
 	{
 		Calendar finishtime = Calendar.getInstance();
@@ -85,6 +132,9 @@ public class FishingChampionShipManager
 		_enddate = finishtime.getTimeInMillis();
 	}
 	
+	/**
+	 * Method restoreData.
+	 */
 	private void restoreData()
 	{
 		_enddate = ServerVariables.getLong("fishChampionshipEnd", 0);
@@ -119,6 +169,11 @@ public class FishingChampionShipManager
 		}
 	}
 	
+	/**
+	 * Method newFish.
+	 * @param pl Player
+	 * @param lureId int
+	 */
 	public synchronized void newFish(Player pl, int lureId)
 	{
 		if (!Config.ALT_FISH_CHAMPIONSHIP_ENABLED)
@@ -186,6 +241,9 @@ public class FishingChampionShipManager
 		}
 	}
 	
+	/**
+	 * Method recalculateMinLength.
+	 */
 	private void recalculateMinLength()
 	{
 		double minLen = 99999.;
@@ -199,11 +257,20 @@ public class FishingChampionShipManager
 		_minFishLength = minLen;
 	}
 	
+	/**
+	 * Method getTimeRemaining.
+	 * @return long
+	 */
 	public long getTimeRemaining()
 	{
 		return (_enddate - System.currentTimeMillis()) / 60000;
 	}
 	
+	/**
+	 * Method getWinnerName.
+	 * @param par int
+	 * @return String
+	 */
 	public String getWinnerName(int par)
 	{
 		if (_winPlayersName.size() >= par)
@@ -212,6 +279,12 @@ public class FishingChampionShipManager
 		}
 		return "—";
 	}
+	
+	/**
+	 * Method getCurrentName.
+	 * @param par int ng
+	 * @return String
+	 */
 	
 	public String getCurrentName(int par)
 	{
@@ -222,6 +295,11 @@ public class FishingChampionShipManager
 		return "—";
 	}
 	
+	/**
+	 * Method getFishLength.
+	 * @param par inrin * @return Stringg
+	 */
+	
 	public String getFishLength(int par)
 	{
 		if (_winFishLength.size() >= par)
@@ -231,6 +309,11 @@ public class FishingChampionShipManager
 		return "0";
 	}
 	
+	/**
+	 * Method getCurrentFishLength.
+	 * @param par inrin * @return Stringg
+	 */
+	
 	public String getCurrentFishLength(int par)
 	{
 		if (_fishLength.size() >= par)
@@ -239,6 +322,11 @@ public class FishingChampionShipManager
 		}
 		return "0";
 	}
+	
+	/**
+	 * Method getReward.
+	 * @param pl Player
+	 */
 	
 	public void getReward(Player pl)
 	{
@@ -290,6 +378,11 @@ public class FishingChampionShipManager
 		}
 	}
 	
+	/**
+	 * Method showMidResult.
+	 * @param pl Player
+	 */
+	
 	public void showMidResult(Player pl)
 	{
 		if (_needRefresh)
@@ -317,6 +410,12 @@ public class FishingChampionShipManager
 		pl.sendPacket(html);
 	}
 	
+	/**
+	 * Method showChampScreen.
+	 * @param pl Player
+	 * @param npc NpcInstance
+	 */
+	
 	public void showChampScreen(Player pl, NpcInstance npc)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(pl.getObjectId());
@@ -340,6 +439,10 @@ public class FishingChampionShipManager
 		html.replace("%objectId%", String.valueOf(npc.getObjectId()));
 		pl.sendPacket(html);
 	}
+	
+	/**
+	 * Method shutdown.
+	 */
 	
 	public void shutdown()
 	{
@@ -381,6 +484,10 @@ public class FishingChampionShipManager
 		}
 	}
 	
+	/**
+	 * Method refreshResult.
+	 */
+	
 	private synchronized void refreshResult()
 	{
 		_needRefresh = false;
@@ -408,6 +515,10 @@ public class FishingChampionShipManager
 		}
 	}
 	
+	/**
+	 * Method refreshWinResult.
+	 */
+	
 	void refreshWinResult()
 	{
 		_winPlayersName.clear();
@@ -432,14 +543,26 @@ public class FishingChampionShipManager
 			_winPlayersName.add(_winPlayers.get(x)._name);
 			_winFishLength.add(String.valueOf(_winPlayers.get(x).getLength()));
 		}
-	}
+	}/*
+	 *  * @author Mobius
+	 */
 	
 	private class finishChamp extends RunnableImpl
+	/**
+	 * Constructor for finishChamp.
+	 */
+	/**
+	 * Constructor for finishChamp.
+	 */
 	{
 		public finishChamp()
 		{
 			// TODO Auto-generated constructor stub
 		}
+		
+		/**
+		 * Method runImpl.
+		 */
 		
 		@Override
 		public void runImpl()
@@ -457,27 +580,66 @@ public class FishingChampionShipManager
 			_log.info("Fishing Championship Manager : start new event period.");
 			ThreadPoolManager.getInstance().schedule(new finishChamp(), _enddate - System.currentTimeMillis());
 		}
-	}
+	}/*
+	 *  * @author Mobius
+	 */
 	
 	private class needRefresh extends RunnableImpl
+	/**
+	 * Constructor for needRefresh.
+	 */
+	/**
+	 * Constructor for needRefresh.
+	 */
 	{
 		public needRefresh()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
+		
 		@Override
 		public void runImpl()
 		{
 			_needRefresh = true;
 		}
-	}
+	}/*
+	 *  * @author Mobius
+	 */
 	
 	private class Fisher
+	/**
+	 * Field _length.
+	 */
+	/**
+	 * Field _length.
+	 */
 	{
-		private double _length = 0.;
-		String _name;
+		private double _length = 0./**
+		 * Field _name.
+		 */
+		/**
+		 * Field _name.
+		 */
+		;
+		String _name/**
+		 * Field _reward.
+		 */
+		/**
+		 * Field _reward.
+		 */
+		;
 		private int _reward = 0;
+		
+		/**
+		 * Constructor for Fisher.
+		 * @param name String
+		 * @param length double
+		 * @param rewardType int
+		 */
 		
 		public Fisher(String name, double length, int rewardType)
 		{
@@ -486,30 +648,57 @@ public class FishingChampionShipManager
 			setRewardType(rewardType);
 		}
 		
+		/**
+		 * Method setLength.
+		 * @param value double
+		 */
+		
 		public void setLength(double value)
 		{
 			_length = value;
 		}
+		
+		/**
+		 * Method setName.
+		 * @param value String
+		 */
 		
 		public void setName(String value)
 		{
 			_name = value;
 		}
 		
+		/**
+		 * Method setRewardType.
+		 * @param value int
+		 */
+		
 		public void setRewardType(int value)
 		{
 			_reward = value;
 		}
+		
+		/**
+		 * Method getName.ring * @return String
+		 */
 		
 		public String getName()
 		{
 			return _name;
 		}
 		
+		/**
+		 * Method getRewardType. int * @return int
+		 */
+		
 		public int getRewardType()
 		{
 			return _reward;
 		}
+		
+		/**
+		 * Method getLength.uble * @return double
+		 */
 		
 		public double getLength()
 		{

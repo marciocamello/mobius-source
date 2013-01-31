@@ -19,12 +19,28 @@ import lineage2.gameserver.network.serverpackets.CharMoveToLocation;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MoveBackwardToLocation extends L2GameClientPacket
 {
+	/**
+	 * Field _targetLoc.
+	 */
 	private final Location _targetLoc = new Location();
+	/**
+	 * Field _originLoc.
+	 */
 	private final Location _originLoc = new Location();
+	/**
+	 * Field _moveMovement.
+	 */
 	private int _moveMovement;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -40,6 +56,9 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -16,18 +16,46 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class Env
 {
+	/**
+	 * Field character.
+	 */
 	public Creature character;
+	/**
+	 * Field target.
+	 */
 	public Creature target;
+	/**
+	 * Field item.
+	 */
 	public ItemInstance item;
+	/**
+	 * Field skill.
+	 */
 	public Skill skill;
+	/**
+	 * Field value.
+	 */
 	public double value;
 	
+	/**
+	 * Constructor for Env.
+	 */
 	public Env()
 	{
 	}
 	
+	/**
+	 * Constructor for Env.
+	 * @param cha Creature
+	 * @param tar Creature
+	 * @param sk Skill
+	 */
 	public Env(Creature cha, Creature tar, Skill sk)
 	{
 		character = cha;

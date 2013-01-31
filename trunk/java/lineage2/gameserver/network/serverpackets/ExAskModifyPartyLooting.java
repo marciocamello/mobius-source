@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExAskModifyPartyLooting extends L2GameServerPacket
 {
+	/**
+	 * Field _requestor.
+	 */
 	private final String _requestor;
+	/**
+	 * Field _mode.
+	 */
 	private final int _mode;
 	
+	/**
+	 * Constructor for ExAskModifyPartyLooting.
+	 * @param name String
+	 * @param mode int
+	 */
 	public ExAskModifyPartyLooting(String name, int mode)
 	{
 		_requestor = name;
 		_mode = mode;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

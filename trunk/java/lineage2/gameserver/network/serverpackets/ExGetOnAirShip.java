@@ -16,11 +16,27 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.entity.boat.Boat;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExGetOnAirShip extends L2GameServerPacket
 {
+	/**
+	 * Field _boatObjectId. Field _playerObjectId.
+	 */
 	private final int _playerObjectId, _boatObjectId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for ExGetOnAirShip.
+	 * @param cha Playable
+	 * @param boat Boat
+	 * @param loc Location
+	 */
 	public ExGetOnAirShip(Playable cha, Boat boat, Location loc)
 	{
 		_playerObjectId = cha.getObjectId();
@@ -28,6 +44,9 @@ public class ExGetOnAirShip extends L2GameServerPacket
 		_loc = loc;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

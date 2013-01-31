@@ -28,13 +28,24 @@ import lineage2.gameserver.network.serverpackets.ExRotation;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PlayerAI extends PlayableAI
 {
+	/**
+	 * Constructor for PlayerAI.
+	 * @param actor Player
+	 */
 	public PlayerAI(Player actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onIntentionRest.
+	 */
 	@Override
 	protected void onIntentionRest()
 	{
@@ -43,6 +54,9 @@ public class PlayerAI extends PlayableAI
 		clientStopMoving();
 	}
 	
+	/**
+	 * Method onIntentionActive.
+	 */
 	@Override
 	protected void onIntentionActive()
 	{
@@ -50,6 +64,10 @@ public class PlayerAI extends PlayableAI
 		changeIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
 	}
 	
+	/**
+	 * Method onIntentionInteract.
+	 * @param object GameObject
+	 */
 	@Override
 	public void onIntentionInteract(GameObject object)
 	{
@@ -68,6 +86,10 @@ public class PlayerAI extends PlayableAI
 		super.onIntentionInteract(object);
 	}
 	
+	/**
+	 * Method onIntentionPickUp.
+	 * @param object GameObject
+	 */
 	@Override
 	public void onIntentionPickUp(GameObject object)
 	{
@@ -86,6 +108,10 @@ public class PlayerAI extends PlayableAI
 		super.onIntentionPickUp(object);
 	}
 	
+	/**
+	 * Method onEvtForgetObject.
+	 * @param object GameObject
+	 */
 	@Override
 	protected void onEvtForgetObject(GameObject object)
 	{
@@ -100,6 +126,10 @@ public class PlayerAI extends PlayableAI
 		}
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 * @param checkRange boolean
+	 */
 	@Override
 	protected void thinkAttack(boolean checkRange)
 	{
@@ -125,6 +155,10 @@ public class PlayerAI extends PlayableAI
 		super.thinkAttack(checkRange);
 	}
 	
+	/**
+	 * Method thinkCast.
+	 * @param checkRange boolean
+	 */
 	@Override
 	protected void thinkCast(boolean checkRange)
 	{
@@ -145,6 +179,12 @@ public class PlayerAI extends PlayableAI
 		super.thinkCast(checkRange);
 	}
 	
+	/**
+	 * Method thinkCoupleAction.
+	 * @param target Player
+	 * @param socialId Integer
+	 * @param cancel boolean
+	 */
 	@Override
 	protected void thinkCoupleAction(Player target, Integer socialId, boolean cancel)
 	{
@@ -170,6 +210,12 @@ public class PlayerAI extends PlayableAI
 		actor.broadcastPacket(new SocialAction(actor.getObjectId(), socialId));
 	}
 	
+	/**
+	 * Method Attack.
+	 * @param target GameObject
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 */
 	@Override
 	public void Attack(GameObject target, boolean forceUse, boolean dontMove)
 	{
@@ -199,6 +245,13 @@ public class PlayerAI extends PlayableAI
 		super.Attack(target, forceUse, dontMove);
 	}
 	
+	/**
+	 * Method Cast.
+	 * @param skill Skill
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 */
 	@Override
 	public void Cast(Skill skill, Creature target, boolean forceUse, boolean dontMove)
 	{
@@ -234,6 +287,10 @@ public class PlayerAI extends PlayableAI
 		super.Cast(skill, target, forceUse, dontMove);
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return Player
+	 */
 	@Override
 	public Player getActor()
 	{

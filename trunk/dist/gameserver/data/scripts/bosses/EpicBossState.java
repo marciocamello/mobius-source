@@ -24,57 +24,121 @@ import lineage2.gameserver.database.DatabaseFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EpicBossState
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(EpicBossState.class);
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum State
 	{
+		/**
+		 * Field NOTSPAWN.
+		 */
 		NOTSPAWN,
+		/**
+		 * Field ALIVE.
+		 */
 		ALIVE,
+		/**
+		 * Field DEAD.
+		 */
 		DEAD,
+		/**
+		 * Field INTERVAL.
+		 */
 		INTERVAL
 	}
 	
+	/**
+	 * Field _bossId.
+	 */
 	private int _bossId;
+	/**
+	 * Field _respawnDate.
+	 */
 	private long _respawnDate;
+	/**
+	 * Field _state.
+	 */
 	private State _state;
 	
+	/**
+	 * Method getBossId.
+	 * @return int
+	 */
 	public int getBossId()
 	{
 		return _bossId;
 	}
 	
+	/**
+	 * Method setBossId.
+	 * @param newId int
+	 */
 	public void setBossId(int newId)
 	{
 		_bossId = newId;
 	}
 	
+	/**
+	 * Method getState.
+	 * @return State
+	 */
 	public State getState()
 	{
 		return _state;
 	}
 	
+	/**
+	 * Method setState.
+	 * @param newState State
+	 */
 	public void setState(State newState)
 	{
 		_state = newState;
 	}
 	
+	/**
+	 * Method getRespawnDate.
+	 * @return long
+	 */
 	public long getRespawnDate()
 	{
 		return _respawnDate;
 	}
 	
+	/**
+	 * Method setRespawnDate.
+	 * @param interval long
+	 */
 	public void setRespawnDate(long interval)
 	{
 		_respawnDate = interval + System.currentTimeMillis();
 	}
 	
+	/**
+	 * Constructor for EpicBossState.
+	 * @param bossId int
+	 */
 	public EpicBossState(int bossId)
 	{
 		this(bossId, true);
 	}
 	
+	/**
+	 * Constructor for EpicBossState.
+	 * @param bossId int
+	 * @param isDoLoad boolean
+	 */
 	public EpicBossState(int bossId, boolean isDoLoad)
 	{
 		_bossId = bossId;
@@ -84,6 +148,9 @@ public class EpicBossState
 		}
 	}
 	
+	/**
+	 * Method load.
+	 */
 	public void load()
 	{
 		Connection con = null;
@@ -138,6 +205,9 @@ public class EpicBossState
 		}
 	}
 	
+	/**
+	 * Method save.
+	 */
 	public void save()
 	{
 		Connection con = null;
@@ -161,6 +231,9 @@ public class EpicBossState
 		}
 	}
 	
+	/**
+	 * Method update.
+	 */
 	public void update()
 	{
 		Connection con = null;
@@ -183,11 +256,19 @@ public class EpicBossState
 		}
 	}
 	
+	/**
+	 * Method setNextRespawnDate.
+	 * @param newRespawnDate long
+	 */
 	public void setNextRespawnDate(long newRespawnDate)
 	{
 		_respawnDate = newRespawnDate;
 	}
 	
+	/**
+	 * Method getInterval.
+	 * @return long
+	 */
 	public long getInterval()
 	{
 		long interval = _respawnDate - System.currentTimeMillis();

@@ -15,22 +15,48 @@ package lineage2.gameserver.stats.conditions;
 import lineage2.gameserver.GameTimeController;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionGameTime extends Condition
 {
+	/**
+	 * @author Mobius
+	 */
 	public enum CheckGameTime
 	{
+		/**
+		 * Field NIGHT.
+		 */
 		NIGHT
 	}
 	
+	/**
+	 * Field _check.
+	 */
 	private final CheckGameTime _check;
+	/**
+	 * Field _required.
+	 */
 	private final boolean _required;
 	
+	/**
+	 * Constructor for ConditionGameTime.
+	 * @param check CheckGameTime
+	 * @param required boolean
+	 */
 	public ConditionGameTime(CheckGameTime check, boolean required)
 	{
 		_check = check;
 		_required = required;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

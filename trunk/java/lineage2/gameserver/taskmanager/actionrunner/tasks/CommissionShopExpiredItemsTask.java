@@ -14,14 +14,26 @@ package lineage2.gameserver.taskmanager.actionrunner.tasks;
 
 import lineage2.gameserver.instancemanager.commission.CommissionShopManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CommissionShopExpiredItemsTask extends AutomaticTask
 {
+	/**
+	 * Method doTask.
+	 */
 	@Override
 	public void doTask()
 	{
 		CommissionShopManager.getInstance().returnExpiredItems();
 	}
 	
+	/**
+	 * Method reCalcTime.
+	 * @param start boolean
+	 * @return long
+	 */
 	@Override
 	public long reCalcTime(boolean start)
 	{

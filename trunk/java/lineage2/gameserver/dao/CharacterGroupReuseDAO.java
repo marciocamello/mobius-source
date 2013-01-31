@@ -26,19 +26,46 @@ import org.napile.primitive.maps.IntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharacterGroupReuseDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharacterGroupReuseDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static CharacterGroupReuseDAO _instance = new CharacterGroupReuseDAO();
+	/**
+	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM character_group_reuse WHERE object_id=?"")
+	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM character_group_reuse WHERE object_id=?";
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT * FROM character_group_reuse WHERE object_id=?"")
+	 */
 	public static final String SELECT_SQL_QUERY = "SELECT * FROM character_group_reuse WHERE object_id=?";
+	/**
+	 * Field INSERT_SQL_QUERY. (value is ""REPLACE INTO `character_group_reuse` (`object_id`,`reuse_group`,`item_id`,`end_time`,`reuse`) VALUES"")
+	 */
 	public static final String INSERT_SQL_QUERY = "REPLACE INTO `character_group_reuse` (`object_id`,`reuse_group`,`item_id`,`end_time`,`reuse`) VALUES";
 	
+	/**
+	 * Method getInstance.
+	 * @return CharacterGroupReuseDAO
+	 */
 	public static CharacterGroupReuseDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method select.
+	 * @param player Player
+	 */
 	public void select(Player player)
 	{
 		long curTime = System.currentTimeMillis();
@@ -78,6 +105,10 @@ public class CharacterGroupReuseDAO
 		}
 	}
 	
+	/**
+	 * Method insert.
+	 * @param player Player
+	 */
 	public void insert(Player player)
 	{
 		Connection con = null;
@@ -102,11 +133,11 @@ public class CharacterGroupReuseDAO
 					if (timeStamp.hasNotPassed())
 					{
 						StringBuilder sb = new StringBuilder("(");
-						sb.append(player.getObjectId()).append(",");
-						sb.append(group).append(",");
-						sb.append(timeStamp.getId()).append(",");
-						sb.append(timeStamp.getEndTime()).append(",");
-						sb.append(timeStamp.getReuseBasic()).append(")");
+						sb.append(player.getObjectId()).append(',');
+						sb.append(group).append(',');
+						sb.append(timeStamp.getId()).append(',');
+						sb.append(timeStamp.getEndTime()).append(',');
+						sb.append(timeStamp.getReuseBasic()).append(')');
 						b.write(sb.toString());
 					}
 				}

@@ -14,13 +14,26 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @Deprecated
 public class RequestExGetOnAirShip extends L2GameClientPacket
 {
+	/**
+	 * Field _shipId.
+	 */
 	@SuppressWarnings("unused")
 	private int _shipId;
+	/**
+	 * Field loc.
+	 */
 	private final Location loc = new Location();
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -30,6 +43,9 @@ public class RequestExGetOnAirShip extends L2GameClientPacket
 		_shipId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

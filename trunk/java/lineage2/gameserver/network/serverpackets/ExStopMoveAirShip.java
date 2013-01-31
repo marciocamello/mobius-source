@@ -15,17 +15,34 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.entity.boat.Boat;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExStopMoveAirShip extends L2GameServerPacket
 {
+	/**
+	 * Field boat_id.
+	 */
 	private final int boat_id;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for ExStopMoveAirShip.
+	 * @param boat Boat
+	 */
 	public ExStopMoveAirShip(Boat boat)
 	{
 		boat_id = boat.getObjectId();
 		_loc = boat.getLoc();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

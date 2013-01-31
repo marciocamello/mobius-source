@@ -27,11 +27,24 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AttributeStoneManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(AttributeStoneManager.class);
+	/**
+	 * Field _stones.
+	 */
 	private static TIntObjectHashMap<AttributeStoneInfo> _stones = new TIntObjectHashMap<>();
 	
+	/**
+	 * Method load.
+	 */
 	public static void load()
 	{
 		_log.info("AttributeStoneManager: Loading stone data...");
@@ -144,11 +157,20 @@ public class AttributeStoneManager
 		_log.info("AttributeStoneManager: Loaded " + _stones.size() + " stone data...");
 	}
 	
+	/**
+	 * Method getStoneInfo.
+	 * @param itemId int
+	 * @return AttributeStoneInfo
+	 */
 	public static AttributeStoneInfo getStoneInfo(int itemId)
 	{
 		return _stones.get(itemId);
 	}
 	
+	/**
+	 * Method getAttributeStoneIds.
+	 * @return int[]
+	 */
 	public static int[] getAttributeStoneIds()
 	{
 		return _stones.keys();

@@ -19,24 +19,78 @@ import java.util.List;
 import java.util.StringTokenizer;
 import java.util.TimeZone;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SchedulingPattern
 {
+	/**
+	 * Field MINUTE_MIN_VALUE. (value is 0)
+	 */
 	private static final int MINUTE_MIN_VALUE = 0;
+	/**
+	 * Field MINUTE_MAX_VALUE. (value is 59)
+	 */
 	private static final int MINUTE_MAX_VALUE = 59;
+	/**
+	 * Field HOUR_MIN_VALUE. (value is 0)
+	 */
 	private static final int HOUR_MIN_VALUE = 0;
+	/**
+	 * Field HOUR_MAX_VALUE. (value is 23)
+	 */
 	private static final int HOUR_MAX_VALUE = 23;
+	/**
+	 * Field DAY_OF_MONTH_MIN_VALUE. (value is 1)
+	 */
 	private static final int DAY_OF_MONTH_MIN_VALUE = 1;
+	/**
+	 * Field DAY_OF_MONTH_MAX_VALUE. (value is 31)
+	 */
 	private static final int DAY_OF_MONTH_MAX_VALUE = 31;
+	/**
+	 * Field MONTH_MIN_VALUE. (value is 1)
+	 */
 	private static final int MONTH_MIN_VALUE = 1;
+	/**
+	 * Field MONTH_MAX_VALUE. (value is 12)
+	 */
 	private static final int MONTH_MAX_VALUE = 12;
+	/**
+	 * Field DAY_OF_WEEK_MIN_VALUE. (value is 0)
+	 */
 	private static final int DAY_OF_WEEK_MIN_VALUE = 0;
+	/**
+	 * Field DAY_OF_WEEK_MAX_VALUE. (value is 7)
+	 */
 	private static final int DAY_OF_WEEK_MAX_VALUE = 7;
+	/**
+	 * Field MINUTE_VALUE_PARSER.
+	 */
 	private static final ValueParser MINUTE_VALUE_PARSER = new MinuteValueParser();
+	/**
+	 * Field HOUR_VALUE_PARSER.
+	 */
 	private static final ValueParser HOUR_VALUE_PARSER = new HourValueParser();
+	/**
+	 * Field DAY_OF_MONTH_VALUE_PARSER.
+	 */
 	private static final ValueParser DAY_OF_MONTH_VALUE_PARSER = new DayOfMonthValueParser();
+	/**
+	 * Field MONTH_VALUE_PARSER.
+	 */
 	private static final ValueParser MONTH_VALUE_PARSER = new MonthValueParser();
+	/**
+	 * Field DAY_OF_WEEK_VALUE_PARSER.
+	 */
 	private static final ValueParser DAY_OF_WEEK_VALUE_PARSER = new DayOfWeekValueParser();
 	
+	/**
+	 * Method validate.
+	 * @param schedulingPattern String
+	 * @return boolean
+	 */
 	public static boolean validate(String schedulingPattern)
 	{
 		try
@@ -50,14 +104,40 @@ public class SchedulingPattern
 		return true;
 	}
 	
+	/**
+	 * Field asString.
+	 */
 	private final String asString;
+	/**
+	 * Field minuteMatchers.
+	 */
 	protected List<ValueMatcher> minuteMatchers = new ArrayList<>();
+	/**
+	 * Field hourMatchers.
+	 */
 	protected List<ValueMatcher> hourMatchers = new ArrayList<>();
+	/**
+	 * Field dayOfMonthMatchers.
+	 */
 	protected List<ValueMatcher> dayOfMonthMatchers = new ArrayList<>();
+	/**
+	 * Field monthMatchers.
+	 */
 	protected List<ValueMatcher> monthMatchers = new ArrayList<>();
+	/**
+	 * Field dayOfWeekMatchers.
+	 */
 	protected List<ValueMatcher> dayOfWeekMatchers = new ArrayList<>();
+	/**
+	 * Field matcherSize.
+	 */
 	protected int matcherSize = 0;
 	
+	/**
+	 * Constructor for SchedulingPattern.
+	 * @param pattern String
+	 * @throws InvalidPatternException
+	 */
 	public SchedulingPattern(String pattern) throws InvalidPatternException
 	{
 		asString = pattern;
@@ -118,6 +198,12 @@ public class SchedulingPattern
 		}
 	}
 	
+	/**
+	 * Method buildValueMatcher.
+	 * @param str String
+	 * @param parser ValueParser
+	 * @return ValueMatcher * @throws Exception
+	 */
 	private ValueMatcher buildValueMatcher(String str, ValueParser parser) throws Exception
 	{
 		if ((str.length() == 1) && str.equals("*"))
@@ -157,6 +243,12 @@ public class SchedulingPattern
 		return new IntArrayValueMatcher(values);
 	}
 	
+	/**
+	 * Method parseListElement.
+	 * @param str String
+	 * @param parser ValueParser
+	 * @return List<Integer> * @throws Exception
+	 */
 	private List<Integer> parseListElement(String str, ValueParser parser) throws Exception
 	{
 		StringTokenizer st = new StringTokenizer(str, "/");
@@ -200,6 +292,12 @@ public class SchedulingPattern
 		return values;
 	}
 	
+	/**
+	 * Method parseRange.
+	 * @param str String
+	 * @param parser ValueParser
+	 * @return List<Integer> * @throws Exception
+	 */
 	private List<Integer> parseRange(String str, ValueParser parser) throws Exception
 	{
 		if (str.equals("*"))
@@ -273,6 +371,12 @@ public class SchedulingPattern
 		return values;
 	}
 	
+	/**
+	 * Method match.
+	 * @param timezone TimeZone
+	 * @param millis long
+	 * @return boolean
+	 */
 	public boolean match(TimeZone timezone, long millis)
 	{
 		GregorianCalendar gc = new GregorianCalendar(timezone);
@@ -301,11 +405,22 @@ public class SchedulingPattern
 		return false;
 	}
 	
+	/**
+	 * Method match.
+	 * @param millis long
+	 * @return boolean
+	 */
 	public boolean match(long millis)
 	{
 		return match(TimeZone.getDefault(), millis);
 	}
 	
+	/**
+	 * Method next.
+	 * @param timezone TimeZone
+	 * @param millis long
+	 * @return long
+	 */
 	public long next(TimeZone timezone, long millis)
 	{
 		long next = -1L;
@@ -379,17 +494,33 @@ public class SchedulingPattern
 		return next;
 	}
 	
+	/**
+	 * Method next.
+	 * @param millis long
+	 * @return long
+	 */
 	public long next(long millis)
 	{
 		return next(TimeZone.getDefault(), millis);
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		return asString;
 	}
 	
+	/**
+	 * Method parseAlias.
+	 * @param value String
+	 * @param aliases String[]
+	 * @param offset int
+	 * @return int * @throws Exception
+	 */
 	static int parseAlias(String value, String[] aliases, int offset) throws Exception
 	{
 		for (int i = 0; i < aliases.length; i++)
@@ -402,40 +533,88 @@ public class SchedulingPattern
 		throw new Exception("invalid alias \"" + value + "\"");
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class InvalidPatternException extends RuntimeException
 	{
+		/**
+		 * Field serialVersionUID. (value is 1)
+		 */
 		private static final long serialVersionUID = 1L;
 		
+		/**
+		 * Constructor for InvalidPatternException.
+		 */
 		InvalidPatternException()
 		{
 		}
 		
+		/**
+		 * Constructor for InvalidPatternException.
+		 * @param message String
+		 */
 		InvalidPatternException(String message)
 		{
 			super(message);
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private interface ValueParser
 	{
+		/**
+		 * Method parse.
+		 * @param value String
+		 * @return int * @throws Exception
+		 */
 		public int parse(String value) throws Exception;
 		
+		/**
+		 * Method getMinValue.
+		 * @return int
+		 */
 		public int getMinValue();
 		
+		/**
+		 * Method getMaxValue.
+		 * @return int
+		 */
 		public int getMaxValue();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class SimpleValueParser implements ValueParser
 	{
+		/**
+		 * Field minValue.
+		 */
 		protected int minValue;
+		/**
+		 * Field maxValue.
+		 */
 		protected int maxValue;
 		
+		/**
+		 * Constructor for SimpleValueParser.
+		 * @param minValue int
+		 * @param maxValue int
+		 */
 		public SimpleValueParser(int minValue, int maxValue)
 		{
 			this.minValue = minValue;
 			this.maxValue = maxValue;
 		}
 		
+		/**
+		 * Method parse.
+		 * @param value String
+		 * @return int * @throws Exception * @see lineage2.commons.time.cron.SchedulingPattern$ValueParser#parse(String)
+		 */
 		@Override
 		public int parse(String value) throws Exception
 		{
@@ -455,12 +634,20 @@ public class SchedulingPattern
 			return i;
 		}
 		
+		/**
+		 * Method getMinValue.
+		 * @return int * @see lineage2.commons.time.cron.SchedulingPattern$ValueParser#getMinValue()
+		 */
 		@Override
 		public int getMinValue()
 		{
 			return minValue;
 		}
 		
+		/**
+		 * Method getMaxValue.
+		 * @return int * @see lineage2.commons.time.cron.SchedulingPattern$ValueParser#getMaxValue()
+		 */
 		@Override
 		public int getMaxValue()
 		{
@@ -468,29 +655,52 @@ public class SchedulingPattern
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class MinuteValueParser extends SimpleValueParser
 	{
+		/**
+		 * Constructor for MinuteValueParser.
+		 */
 		public MinuteValueParser()
 		{
 			super(MINUTE_MIN_VALUE, MINUTE_MAX_VALUE);
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class HourValueParser extends SimpleValueParser
 	{
+		/**
+		 * Constructor for HourValueParser.
+		 */
 		public HourValueParser()
 		{
 			super(HOUR_MIN_VALUE, HOUR_MAX_VALUE);
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class DayOfMonthValueParser extends SimpleValueParser
 	{
+		/**
+		 * Constructor for DayOfMonthValueParser.
+		 */
 		public DayOfMonthValueParser()
 		{
 			super(DAY_OF_MONTH_MIN_VALUE, DAY_OF_MONTH_MAX_VALUE);
 		}
 		
+		/**
+		 * Method parse.
+		 * @param value String
+		 * @return int * @throws Exception * @see lineage2.commons.time.cron.SchedulingPattern$ValueParser#parse(String)
+		 */
 		@Override
 		public int parse(String value) throws Exception
 		{
@@ -502,8 +712,14 @@ public class SchedulingPattern
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class MonthValueParser extends SimpleValueParser
 	{
+		/**
+		 * Field ALIASES.
+		 */
 		private static String[] ALIASES =
 		{
 			"jan",
@@ -520,11 +736,19 @@ public class SchedulingPattern
 			"dec"
 		};
 		
+		/**
+		 * Constructor for MonthValueParser.
+		 */
 		public MonthValueParser()
 		{
 			super(MONTH_MIN_VALUE, MONTH_MAX_VALUE);
 		}
 		
+		/**
+		 * Method parse.
+		 * @param value String
+		 * @return int * @throws Exception * @see lineage2.commons.time.cron.SchedulingPattern$ValueParser#parse(String)
+		 */
 		@Override
 		public int parse(String value) throws Exception
 		{
@@ -539,8 +763,14 @@ public class SchedulingPattern
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class DayOfWeekValueParser extends SimpleValueParser
 	{
+		/**
+		 * Field ALIASES.
+		 */
 		private static String[] ALIASES =
 		{
 			"sun",
@@ -552,11 +782,19 @@ public class SchedulingPattern
 			"sat"
 		};
 		
+		/**
+		 * Constructor for DayOfWeekValueParser.
+		 */
 		public DayOfWeekValueParser()
 		{
 			super(DAY_OF_WEEK_MIN_VALUE, DAY_OF_WEEK_MAX_VALUE);
 		}
 		
+		/**
+		 * Method parse.
+		 * @param value String
+		 * @return int * @throws Exception * @see lineage2.commons.time.cron.SchedulingPattern$ValueParser#parse(String)
+		 */
 		@Override
 		public int parse(String value) throws Exception
 		{
@@ -571,18 +809,37 @@ public class SchedulingPattern
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private interface ValueMatcher
 	{
+		/**
+		 * Method match.
+		 * @param value int
+		 * @return boolean
+		 */
 		public boolean match(int value);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class AlwaysTrueValueMatcher implements ValueMatcher
 	{
+		/**
+		 * Constructor for AlwaysTrueValueMatcher.
+		 */
 		public AlwaysTrueValueMatcher()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method match.
+		 * @param value int
+		 * @return boolean * @see lineage2.commons.time.cron.SchedulingPattern$ValueMatcher#match(int)
+		 */
 		@Override
 		public boolean match(int value)
 		{
@@ -590,10 +847,20 @@ public class SchedulingPattern
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class IntArrayValueMatcher implements ValueMatcher
 	{
+		/**
+		 * Field values.
+		 */
 		private final int[] values;
 		
+		/**
+		 * Constructor for IntArrayValueMatcher.
+		 * @param integers List<Integer>
+		 */
 		public IntArrayValueMatcher(List<Integer> integers)
 		{
 			int size = integers.size();
@@ -611,6 +878,11 @@ public class SchedulingPattern
 			}
 		}
 		
+		/**
+		 * Method match.
+		 * @param value int
+		 * @return boolean * @see lineage2.commons.time.cron.SchedulingPattern$ValueMatcher#match(int)
+		 */
 		@Override
 		public boolean match(int value)
 		{
@@ -625,8 +897,14 @@ public class SchedulingPattern
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class DayOfMonthValueMatcher extends IntArrayValueMatcher
 	{
+		/**
+		 * Field lastDays.
+		 */
 		private static final int[] lastDays =
 		{
 			31,
@@ -643,16 +921,33 @@ public class SchedulingPattern
 			31
 		};
 		
+		/**
+		 * Constructor for DayOfMonthValueMatcher.
+		 * @param integers List<Integer>
+		 */
 		public DayOfMonthValueMatcher(List<Integer> integers)
 		{
 			super(integers);
 		}
 		
+		/**
+		 * Method match.
+		 * @param value int
+		 * @param month int
+		 * @param isLeapYear boolean
+		 * @return boolean
+		 */
 		public boolean match(int value, int month, boolean isLeapYear)
 		{
 			return (super.match(value) || ((value > 27) && match(32) && isLastDayOfMonth(value, month, isLeapYear)));
 		}
 		
+		/**
+		 * Method getLastDayOfMonth.
+		 * @param month int
+		 * @param isLeapYear boolean
+		 * @return int
+		 */
 		public static int getLastDayOfMonth(int month, boolean isLeapYear)
 		{
 			if (isLeapYear && (month == 2))
@@ -662,6 +957,13 @@ public class SchedulingPattern
 			return lastDays[month - 1];
 		}
 		
+		/**
+		 * Method isLastDayOfMonth.
+		 * @param value int
+		 * @param month int
+		 * @param isLeapYear boolean
+		 * @return boolean
+		 */
 		public static boolean isLastDayOfMonth(int value, int month, boolean isLeapYear)
 		{
 			return value == getLastDayOfMonth(month, isLeapYear);

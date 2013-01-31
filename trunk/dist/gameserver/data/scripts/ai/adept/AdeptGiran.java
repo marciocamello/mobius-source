@@ -15,8 +15,16 @@ package ai.adept;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdeptGiran extends Adept
 {
+	/**
+	 * Constructor for AdeptGiran.
+	 * @param actor NpcInstance
+	 */
 	public AdeptGiran(NpcInstance actor)
 	{
 		super(actor);

@@ -21,12 +21,28 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AnswerCoupleAction extends L2GameClientPacket
 {
+	/**
+	 * Field _charObjId.
+	 */
 	private int _charObjId;
+	/**
+	 * Field _actionId.
+	 */
 	private int _actionId;
+	/**
+	 * Field _answer.
+	 */
 	private int _answer;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -35,6 +51,9 @@ public class AnswerCoupleAction extends L2GameClientPacket
 		_charObjId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -106,6 +125,12 @@ public class AnswerCoupleAction extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Player
+	 * @param requestor Player
+	 * @return boolean
+	 */
 	private static boolean checkCondition(Player activeChar, Player requestor)
 	{
 		if (!activeChar.isInRange(requestor, 300) || activeChar.isInRange(requestor, 25) || !GeoEngine.canSeeTarget(activeChar, requestor, false))

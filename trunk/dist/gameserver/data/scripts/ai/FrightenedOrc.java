@@ -18,15 +18,29 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FrightenedOrc extends Fighter
 {
+	/**
+	 * Field _sayOnAttack.
+	 */
 	private boolean _sayOnAttack;
 	
+	/**
+	 * Constructor for FrightenedOrc.
+	 * @param actor NpcInstance
+	 */
 	public FrightenedOrc(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -34,6 +48,11 @@ public class FrightenedOrc extends Fighter
 		super.onEvtSpawn();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

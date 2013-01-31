@@ -30,20 +30,41 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NewbieGuideInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(NewbieGuideInstance.class);
+	/**
+	 * Field mainHelpers.
+	 */
 	private static final List<?> mainHelpers = Arrays.asList(30598, 30599, 30600, 30601, 30602, 32135);
 	
+	/**
+	 * Constructor for NewbieGuideInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public NewbieGuideInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -159,6 +180,12 @@ public class NewbieGuideInstance extends NpcInstance
 		super.showChatWindow(player, val);
 	}
 	
+	/**
+	 * Method getQuestNpc.
+	 * @param quest int
+	 * @param player Player
+	 * @return String
+	 */
 	public String getQuestNpc(int quest, Player player)
 	{
 		int val = 0;
@@ -279,6 +306,13 @@ public class NewbieGuideInstance extends NpcInstance
 		return npc.getName();
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{

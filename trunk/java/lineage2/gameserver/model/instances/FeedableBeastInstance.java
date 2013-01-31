@@ -34,22 +34,55 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FeedableBeastInstance extends MonsterInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(NpcInstance.class);
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class growthInfo
 	{
+		/**
+		 * Field growth_level.
+		 */
 		public final int growth_level;
+		/**
+		 * Field growth_chance.
+		 */
 		public final int growth_chance;
+		/**
+		 * Field tameinfo.
+		 */
 		public final int[] tameinfo;
+		/**
+		 * Field spice.
+		 */
 		public final int[] spice;
+		/**
+		 * Field adultId.
+		 */
 		public final int[] adultId;
 		
+		/**
+		 * Constructor for growthInfo.
+		 * @param level int
+		 * @param tame int[]
+		 * @param sp int[]
+		 * @param chance int
+		 * @param adult int[]
+		 */
 		public growthInfo(int level, int[] tame, int[] sp, int chance, int[] adult)
 		{
 			growth_level = level;
@@ -60,8 +93,17 @@ public class FeedableBeastInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * Field growthCapableMobs.
+	 */
 	public static final TIntObjectHashMap<growthInfo> growthCapableMobs = new TIntObjectHashMap<>();
+	/**
+	 * Field tamedBeasts.
+	 */
 	public static final TIntArrayList tamedBeasts = new TIntArrayList();
+	/**
+	 * Field feedableBeasts.
+	 */
 	public static final TIntArrayList feedableBeasts = new TIntArrayList();
 	static
 	{
@@ -334,28 +376,56 @@ public class FeedableBeastInstance extends MonsterInstance
 			feedableBeasts.add(i);
 		}
 	}
+	/**
+	 * Field feedInfo.
+	 */
 	public static Map<Integer, Integer> feedInfo = new ConcurrentHashMap<>();
 	
+	/**
+	 * Method isGoldenSpice.
+	 * @param skillId int
+	 * @return boolean
+	 */
 	private boolean isGoldenSpice(int skillId)
 	{
 		return (skillId == 9049) || (skillId == 9051) || (skillId == 9053);
 	}
 	
+	/**
+	 * Method isCrystalSpice.
+	 * @param skillId int
+	 * @return boolean
+	 */
 	private boolean isCrystalSpice(int skillId)
 	{
 		return (skillId == 9050) || (skillId == 9052) || (skillId == 9054);
 	}
 	
+	/**
+	 * Method isBlessed.
+	 * @param skillId int
+	 * @return boolean
+	 */
 	public boolean isBlessed(int skillId)
 	{
 		return (skillId == 9051) || (skillId == 9052);
 	}
 	
+	/**
+	 * Method isSGrade.
+	 * @param skillId int
+	 * @return boolean
+	 */
 	public boolean isSGrade(int skillId)
 	{
 		return (skillId == 9053) || (skillId == 9054);
 	}
 	
+	/**
+	 * Method getFoodSpice.
+	 * @param skillId int
+	 * @return int
+	 */
 	private int getFoodSpice(int skillId)
 	{
 		if (isGoldenSpice(skillId))
@@ -365,6 +435,11 @@ public class FeedableBeastInstance extends MonsterInstance
 		return 9050;
 	}
 	
+	/**
+	 * Method getItemIdBySkillId.
+	 * @param skillId int
+	 * @return int
+	 */
 	public int getItemIdBySkillId(int skillId)
 	{
 		int itemId = 0;
@@ -394,11 +469,23 @@ public class FeedableBeastInstance extends MonsterInstance
 		return itemId;
 	}
 	
+	/**
+	 * Constructor for FeedableBeastInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public FeedableBeastInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method spawnNext.
+	 * @param player Player
+	 * @param growthLevel int
+	 * @param food int
+	 * @param skill_id int
+	 */
 	private void spawnNext(Player player, int growthLevel, int food, int skill_id)
 	{
 		int npcId = getNpcId();
@@ -473,17 +560,34 @@ public class FeedableBeastInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class AggrPlayer extends RunnableImpl
 	{
+		/**
+		 * Field _actor.
+		 */
 		private final NpcInstance _actor;
+		/**
+		 * Field _killer.
+		 */
 		private final Player _killer;
 		
+		/**
+		 * Constructor for AggrPlayer.
+		 * @param actor NpcInstance
+		 * @param killer Player
+		 */
 		public AggrPlayer(NpcInstance actor, Player killer)
 		{
 			_actor = actor;
 			_killer = killer;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -491,6 +595,10 @@ public class FeedableBeastInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -498,6 +606,14 @@ public class FeedableBeastInstance extends MonsterInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method spawn.
+	 * @param npcId int
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return MonsterInstance
+	 */
 	public MonsterInstance spawn(int npcId, int x, int y, int z)
 	{
 		try
@@ -514,6 +630,11 @@ public class FeedableBeastInstance extends MonsterInstance
 		return null;
 	}
 	
+	/**
+	 * Method onSkillUse.
+	 * @param player Player
+	 * @param skillId int
+	 */
 	public void onSkillUse(Player player, int skillId)
 	{
 		int npcId = getNpcId();

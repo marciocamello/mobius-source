@@ -27,21 +27,53 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KrateisCubeRunnerEvent extends GlobalEvent
 {
+	/**
+	 * Field DATE_PATTERN.
+	 */
 	private static final SchedulingPattern DATE_PATTERN = new SchedulingPattern("0,30 * * * *");
+	/**
+	 * Field MANAGER. (value is ""manager"")
+	 */
 	public static final String MANAGER = "manager";
+	/**
+	 * Field REGISTRATION. (value is ""registration"")
+	 */
 	public static final String REGISTRATION = "registration";
+	/**
+	 * Field _isInProgress.
+	 */
 	private boolean _isInProgress;
+	/**
+	 * Field _isRegistrationOver.
+	 */
 	private boolean _isRegistrationOver;
+	/**
+	 * Field _cubes.
+	 */
 	private final List<KrateisCubeEvent> _cubes = new ArrayList<>(3);
+	/**
+	 * Field _calendar.
+	 */
 	private final Calendar _calendar = Calendar.getInstance();
 	
+	/**
+	 * Constructor for KrateisCubeRunnerEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public KrateisCubeRunnerEvent(MultiValueSet<String> set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method initEvent.
+	 */
 	@Override
 	public void initEvent()
 	{
@@ -51,6 +83,9 @@ public class KrateisCubeRunnerEvent extends GlobalEvent
 		_cubes.add(EventHolder.getInstance().<KrateisCubeEvent> getEvent(EventType.PVP_EVENT, 4));
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -58,6 +93,9 @@ public class KrateisCubeRunnerEvent extends GlobalEvent
 		_isInProgress = true;
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	@Override
 	public void stopEvent()
 	{
@@ -66,6 +104,10 @@ public class KrateisCubeRunnerEvent extends GlobalEvent
 		reCalcNextTime(false);
 	}
 	
+	/**
+	 * Method announce.
+	 * @param val int
+	 */
 	@Override
 	public void announce(int val)
 	{
@@ -104,6 +146,10 @@ public class KrateisCubeRunnerEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onInit boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{
@@ -112,34 +158,58 @@ public class KrateisCubeRunnerEvent extends GlobalEvent
 		registerActions();
 	}
 	
+	/**
+	 * Method getNpc.
+	 * @return NpcInstance
+	 */
 	public NpcInstance getNpc()
 	{
 		SpawnExObject obj = getFirstObject(MANAGER);
 		return obj.getFirstSpawned();
 	}
 	
+	/**
+	 * Method isInProgress.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInProgress()
 	{
 		return _isInProgress;
 	}
 	
+	/**
+	 * Method isRegistrationOver.
+	 * @return boolean
+	 */
 	public boolean isRegistrationOver()
 	{
 		return _isRegistrationOver;
 	}
 	
+	/**
+	 * Method startTimeMillis.
+	 * @return long
+	 */
 	@Override
 	protected long startTimeMillis()
 	{
 		return _calendar.getTimeInMillis();
 	}
 	
+	/**
+	 * Method printInfo.
+	 */
 	@Override
 	protected void printInfo()
 	{
 	}
 	
+	/**
+	 * Method action.
+	 * @param name String
+	 * @param start boolean
+	 */
 	@Override
 	public void action(String name, boolean start)
 	{
@@ -153,11 +223,20 @@ public class KrateisCubeRunnerEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method getCubes.
+	 * @return List<KrateisCubeEvent>
+	 */
 	public List<KrateisCubeEvent> getCubes()
 	{
 		return _cubes;
 	}
 	
+	/**
+	 * Method isRegistered.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean isRegistered(Player player)
 	{
 		for (KrateisCubeEvent cubeEvent : _cubes)

@@ -18,10 +18,21 @@ import java.util.List;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExMPCCShowPartyMemberInfo extends L2GameServerPacket
 {
+	/**
+	 * Field members.
+	 */
 	private final List<PartyMemberInfo> members;
 	
+	/**
+	 * Constructor for ExMPCCShowPartyMemberInfo.
+	 * @param party Party
+	 */
 	public ExMPCCShowPartyMemberInfo(Party party)
 	{
 		members = new ArrayList<>();
@@ -31,6 +42,9 @@ public class ExMPCCShowPartyMemberInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -45,11 +59,29 @@ public class ExMPCCShowPartyMemberInfo extends L2GameServerPacket
 		members.clear();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class PartyMemberInfo
 	{
+		/**
+		 * Field name.
+		 */
 		public String name;
+		/**
+		 * Field class_id.
+		 */
+		/**
+		 * Field object_id.
+		 */
 		public int object_id, class_id;
 		
+		/**
+		 * Constructor for PartyMemberInfo.
+		 * @param _name String
+		 * @param _object_id int
+		 * @param _class_id int
+		 */
 		public PartyMemberInfo(String _name, int _object_id, int _class_id)
 		{
 			name = _name;

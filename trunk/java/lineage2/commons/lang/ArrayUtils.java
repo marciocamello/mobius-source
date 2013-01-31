@@ -16,10 +16,23 @@ import java.lang.reflect.Array;
 import java.util.Collection;
 import java.util.Comparator;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ArrayUtils
 {
+	/**
+	 * Field INDEX_NOT_FOUND. (value is -1)
+	 */
 	public static final int INDEX_NOT_FOUND = -1;
 	
+	/**
+	 * Method valid.
+	 * @param array T[]
+	 * @param index int
+	 * @return T
+	 */
 	public static <T> T valid(T[] array, int index)
 	{
 		if (array == null)
@@ -33,6 +46,12 @@ public final class ArrayUtils
 		return array[index];
 	}
 	
+	/**
+	 * Method add.
+	 * @param array T[]
+	 * @param element T
+	 * @return T[]
+	 */
 	@SuppressWarnings(
 	{
 		"unchecked",
@@ -46,6 +65,12 @@ public final class ArrayUtils
 		return newArray;
 	}
 	
+	/**
+	 * Method copyArrayGrow.
+	 * @param array T[]
+	 * @param type Class<? extends T>
+	 * @return T[]
+	 */
 	@SuppressWarnings("unchecked")
 	private static <T> T[] copyArrayGrow(T[] array, Class<? extends T> type)
 	{
@@ -59,6 +84,12 @@ public final class ArrayUtils
 		return (T[]) Array.newInstance(type, 1);
 	}
 	
+	/**
+	 * Method contains.
+	 * @param array T[]
+	 * @param value T
+	 * @return boolean
+	 */
 	public static <T> boolean contains(T[] array, T value)
 	{
 		if (array == null)
@@ -75,6 +106,13 @@ public final class ArrayUtils
 		return false;
 	}
 	
+	/**
+	 * Method indexOf.
+	 * @param array T[]
+	 * @param value T
+	 * @param index int
+	 * @return int
+	 */
 	public static <T> int indexOf(T[] array, T value, int index)
 	{
 		if ((index < 0) || (array.length <= index))
@@ -91,6 +129,12 @@ public final class ArrayUtils
 		return INDEX_NOT_FOUND;
 	}
 	
+	/**
+	 * Method remove.
+	 * @param array T[]
+	 * @param value T
+	 * @return T[]
+	 */
 	@SuppressWarnings("unchecked")
 	public static <T> T[] remove(T[] array, T value)
 	{
@@ -113,6 +157,12 @@ public final class ArrayUtils
 		return newArray;
 	}
 	
+	/**
+	 * Method eqBrute.
+	 * @param a T[]
+	 * @param lo int
+	 * @param hi int
+	 */
 	private static <T extends Comparable<T>> void eqBrute(T[] a, int lo, int hi)
 	{
 		if ((hi - lo) == 1)
@@ -159,6 +209,12 @@ public final class ArrayUtils
 		}
 	}
 	
+	/**
+	 * Method eqSort.
+	 * @param a T[]
+	 * @param lo0 int
+	 * @param hi0 int
+	 */
 	private static <T extends Comparable<T>> void eqSort(T[] a, int lo0, int hi0)
 	{
 		int lo = lo0;
@@ -194,11 +250,22 @@ public final class ArrayUtils
 		eqSort(a, hi + 1, hi0);
 	}
 	
+	/**
+	 * Method eqSort.
+	 * @param a T[]
+	 */
 	public static <T extends Comparable<T>> void eqSort(T[] a)
 	{
 		eqSort(a, 0, a.length - 1);
 	}
 	
+	/**
+	 * Method eqBrute.
+	 * @param a T[]
+	 * @param lo int
+	 * @param hi int
+	 * @param c Comparator<T>
+	 */
 	private static <T> void eqBrute(T[] a, int lo, int hi, Comparator<T> c)
 	{
 		if ((hi - lo) == 1)
@@ -245,6 +312,13 @@ public final class ArrayUtils
 		}
 	}
 	
+	/**
+	 * Method eqSort.
+	 * @param a T[]
+	 * @param lo0 int
+	 * @param hi0 int
+	 * @param c Comparator<T>
+	 */
 	private static <T> void eqSort(T[] a, int lo0, int hi0, Comparator<T> c)
 	{
 		int lo = lo0;
@@ -280,11 +354,21 @@ public final class ArrayUtils
 		eqSort(a, hi + 1, hi0, c);
 	}
 	
+	/**
+	 * Method eqSort.
+	 * @param a T[]
+	 * @param c Comparator<T>
+	 */
 	public static <T> void eqSort(T[] a, Comparator<T> c)
 	{
 		eqSort(a, 0, a.length - 1, c);
 	}
 	
+	/**
+	 * Method toArray.
+	 * @param collection Collection<Integer>
+	 * @return int[]
+	 */
 	public static int[] toArray(Collection<Integer> collection)
 	{
 		int[] ar = new int[collection.size()];
@@ -296,6 +380,12 @@ public final class ArrayUtils
 		return ar;
 	}
 	
+	/**
+	 * Method createAscendingArray.
+	 * @param min int
+	 * @param max int
+	 * @return int[]
+	 */
 	public static int[] createAscendingArray(int min, int max)
 	{
 		int length = max - min;

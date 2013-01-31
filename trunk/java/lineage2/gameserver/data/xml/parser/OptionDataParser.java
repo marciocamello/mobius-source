@@ -23,38 +23,70 @@ import lineage2.gameserver.templates.OptionDataTemplate;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class OptionDataParser extends StatParser<OptionDataHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final OptionDataParser _instance = new OptionDataParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return OptionDataParser
+	 */
 	public static OptionDataParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for OptionDataParser.
+	 */
 	protected OptionDataParser()
 	{
 		super(OptionDataHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/option_data");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "option_data.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{
@@ -97,6 +129,11 @@ public final class OptionDataParser extends StatParser<OptionDataHolder>
 		}
 	}
 	
+	/**
+	 * Method getTableValue.
+	 * @param name String
+	 * @return Object
+	 */
 	@Override
 	protected Object getTableValue(String name)
 	{
