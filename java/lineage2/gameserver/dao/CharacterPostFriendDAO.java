@@ -25,19 +25,47 @@ import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharacterPostFriendDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharacterPostFriendDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final CharacterPostFriendDAO _instance = new CharacterPostFriendDAO();
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT pf.post_friend, c.char_name FROM character_post_friends pf LEFT JOIN characters c ON pf.post_friend = c.obj_Id WHERE pf.object_id = ?"")
+	 */
 	private static final String SELECT_SQL_QUERY = "SELECT pf.post_friend, c.char_name FROM character_post_friends pf LEFT JOIN characters c ON pf.post_friend = c.obj_Id WHERE pf.object_id = ?";
+	/**
+	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO character_post_friends(object_id, post_friend) VALUES (?,?)"")
+	 */
 	private static final String INSERT_SQL_QUERY = "INSERT INTO character_post_friends(object_id, post_friend) VALUES (?,?)";
+	/**
+	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM character_post_friends WHERE object_id=? AND post_friend=?"")
+	 */
 	private static final String DELETE_SQL_QUERY = "DELETE FROM character_post_friends WHERE object_id=? AND post_friend=?";
 	
+	/**
+	 * Method getInstance.
+	 * @return CharacterPostFriendDAO
+	 */
 	public static CharacterPostFriendDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method select.
+	 * @param player Player
+	 * @return IntObjectMap<String>
+	 */
 	public IntObjectMap<String> select(Player player)
 	{
 		IntObjectMap<String> set = new CHashIntObjectMap<>();
@@ -66,6 +94,11 @@ public class CharacterPostFriendDAO
 		return set;
 	}
 	
+	/**
+	 * Method insert.
+	 * @param player Player
+	 * @param val int
+	 */
 	public void insert(Player player, int val)
 	{
 		Connection con = null;
@@ -88,6 +121,11 @@ public class CharacterPostFriendDAO
 		}
 	}
 	
+	/**
+	 * Method delete.
+	 * @param player Player
+	 * @param val int
+	 */
 	public void delete(Player player, int val)
 	{
 		Connection con = null;

@@ -61,10 +61,23 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 import org.apache.log4j.Logger;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
+	/**
+	 * Field _log.
+	 */
 	static Logger _log = Logger.getLogger(DestructionOfFlag.class.getName());
+	/**
+	 * Field REMOVE_BUFFS. (value is false)
+	 */
 	private static final boolean REMOVE_BUFFS = false;
+	/**
+	 * Field BUFFS_TO_REMOVE.
+	 */
 	private static final int[][] BUFFS_TO_REMOVE =
 	{
 		{
@@ -79,11 +92,17 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 			1
 		}
 	};
+	/**
+	 * Field REWARD.
+	 */
 	private static final int[] REWARD =
 	{
 		57,
 		2000000000
 	};
+	/**
+	 * Field startTime.
+	 */
 	private static final String[][] startTime =
 	{
 		{
@@ -123,7 +142,13 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 			"23:46"
 		}
 	};
+	/**
+	 * Field MIN_PLAYERS.
+	 */
 	private static int MIN_PLAYERS = 0;
+	/**
+	 * Field npcs.
+	 */
 	@SuppressWarnings("unused")
 	private static int[][] npcs =
 	{
@@ -149,8 +174,14 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 			0
 		}
 	};
+	/**
+	 * Field _spawnNpcs.
+	 */
 	@SuppressWarnings("unused")
 	private static boolean _spawnNpcs = false;
+	/**
+	 * Field _listAllowSaveBuffs.
+	 */
 	private static int[] _listAllowSaveBuffs =
 	{
 		1388,
@@ -258,6 +289,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		1357,
 		1363
 	};
+	/**
+	 * Field _listBuff.
+	 */
 	static int[][][] _listBuff =
 	{
 		{
@@ -309,7 +343,13 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 			}
 		}
 	};
+	/**
+	 * Field ALLOW_RESTRICT_SKILLS.
+	 */
 	private static boolean ALLOW_RESTRICT_SKILLS = false;
+	/**
+	 * Field RESTRICT_SKILLS.
+	 */
 	private static int[][] RESTRICT_SKILLS =
 	{
 		{
@@ -325,26 +365,59 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 			2
 		}
 	};
+	/**
+	 * Field colors.
+	 */
 	public static String[] colors =
 	{
 		"00ff00",
 		"ffffff",
 		"00ffff"
 	};
+	/**
+	 * Field players_list.
+	 */
 	private static List<Long> players_list = new CopyOnWriteArrayList<>();
+	/**
+	 * Field live_list.
+	 */
 	static List<Long> live_list = new CopyOnWriteArrayList<>();
+	/**
+	 * Field ALLOW_RESTRICT_ITEMS.
+	 */
 	private static boolean ALLOW_RESTRICT_ITEMS = false;
+	/**
+	 * Field RESTRICT_ITEMS.
+	 */
 	private static int[] RESTRICT_ITEMS =
 	{
 		725,
 		727
 	};
+	/**
+	 * Field PROTECT_IP_ACTIVE.
+	 */
 	private static boolean PROTECT_IP_ACTIVE = false;
+	/**
+	 * Field _startTask.
+	 */
 	private static ScheduledFuture<?> _startTask;
+	/**
+	 * Field _saveBuffList.
+	 */
 	static HashMap<Long, LazyArrayList<Effect>> _saveBuffList = new HashMap<>();
+	/**
+	 * Field _spawns.
+	 */
 	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	/**
+	 * Field EVENT_MANAGER_ID.
+	 */
 	private static int EVENT_MANAGER_ID = 31143;
 	
+	/**
+	 * Method spawnNpcs.
+	 */
 	private static void spawnNpcs()
 	{
 		final int EVENT_MANAGERS[][] =
@@ -371,11 +444,19 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		SpawnNPCs(EVENT_MANAGER_ID, EVENT_MANAGERS, _spawns);
 	}
 	
+	/**
+	 * Method despawnNpcs.
+	 */
 	private static void despawnNpcs()
 	{
 		deSpawnNPCs(_spawns);
 	}
 	
+	/**
+	 * Method onPlayerExit.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerExitListener#onPlayerExit(Player)
+	 */
 	@Override
 	public void onPlayerExit(Player player)
 	{
@@ -419,6 +500,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method checkLive.
+	 */
 	public static void checkLive()
 	{
 		List<Long> new_live_list = new CopyOnWriteArrayList<>();
@@ -448,6 +532,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method loosePlayer.
+	 * @param player Player
+	 */
 	private static void loosePlayer(Player player)
 	{
 		if (player != null)
@@ -458,6 +546,12 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param self Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@SuppressWarnings("unused")
 	@Override
 	public void onDeath(Creature self, Creature killer)
@@ -474,6 +568,15 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method onTeleport.
+	 * @param player Player
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param reflection Reflection
+	 * @see lineage2.gameserver.listener.actor.player.OnTeleportListener#onTeleport(Player, int, int, int, Reflection)
+	 */
 	@Override
 	public void onTeleport(Player player, int x, int y, int z, Reflection reflection)
 	{
@@ -488,15 +591,29 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class StartTask implements Runnable
 	{
+		/**
+		 * Field endTime.
+		 */
 		private final String endTime;
 		
+		/**
+		 * Constructor for StartTask.
+		 * @param endTime String
+		 */
 		public StartTask(String endTime)
 		{
 			this.endTime = endTime;
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -528,36 +645,128 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Field startTasks.
+	 */
 	private static List<ScheduledFuture<?>> startTasks = new ArrayList<>();
+	/**
+	 * Field players_list1.
+	 */
 	static LazyArrayList<Long> players_list1 = new LazyArrayList<>();
+	/**
+	 * Field players_list2.
+	 */
 	static LazyArrayList<Long> players_list2 = new LazyArrayList<>();
+	/**
+	 * Field players_list3.
+	 */
 	static LazyArrayList<Long> players_list3 = new LazyArrayList<>();
+	/**
+	 * Field players_list4.
+	 */
 	private static LazyArrayList<Long> players_list4 = new LazyArrayList<>();
+	/**
+	 * Field whiteFlag.
+	 */
 	static MonsterInstance whiteFlag = null;
+	/**
+	 * Field greenFlag.
+	 */
 	static MonsterInstance greenFlag = null;
+	/**
+	 * Field yellowFlag.
+	 */
 	static MonsterInstance yellowFlag = null;
+	/**
+	 * Field blackFlag.
+	 */
 	static MonsterInstance blackFlag = null;
+	/**
+	 * Field _isRegistrationActive.
+	 */
 	private static boolean _isRegistrationActive = false;
+	/**
+	 * Field _status.
+	 */
 	public static int _status = 0;
+	/**
+	 * Field _time_to_start.
+	 */
 	private static int _time_to_start;
+	/**
+	 * Field _category.
+	 */
 	private static int _category;
+	/**
+	 * Field _minLevel.
+	 */
 	private static int _minLevel;
+	/**
+	 * Field _maxLevel.
+	 */
 	private static int _maxLevel;
+	/**
+	 * Field _autoContinue.
+	 */
 	private static int _autoContinue = 0;
+	/**
+	 * Field ALLOW_BUFFS.
+	 */
 	private static boolean ALLOW_BUFFS = true;
+	/**
+	 * Field ALLOW_CLAN_SKILL.
+	 */
 	private static boolean ALLOW_CLAN_SKILL = true;
+	/**
+	 * Field ALLOW_HERO_SKILL.
+	 */
 	private static boolean ALLOW_HERO_SKILL = true;
+	/**
+	 * Field EVENT_DestructionOfFlag_rate.
+	 */
 	private static boolean EVENT_DestructionOfFlag_rate = false;
+	/**
+	 * Field ALLOW_PETS.
+	 */
 	private static boolean ALLOW_PETS = true;
+	/**
+	 * Field TIME_FOR_RES.
+	 */
 	private static int TIME_FOR_RES = 5;
+	/**
+	 * Field _zone.
+	 */
 	private static Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
+	/**
+	 * Field _zoneListener.
+	 */
 	private static ZoneListener _zoneListener = new ZoneListener();
+	/**
+	 * Field team1loc.
+	 */
 	private static Location team1loc = new Location(-82952, -44344, -11496, -11396);
+	/**
+	 * Field team2loc.
+	 */
 	private static Location team2loc = new Location(-82536, -47016, -11504, -11404);
+	/**
+	 * Field team3loc.
+	 */
 	private static Location team3loc = new Location(-80680, -44296, -11496, -11396);
+	/**
+	 * Field team4loc.
+	 */
 	private static Location team4loc = new Location(-78680, -41296, -11496, -11204);
+	/**
+	 * Field _resurrectionList.
+	 */
 	private static HashMap<Long, ScheduledFuture<?>> _resurrectionList = new HashMap<>();
 	
+	/**
+	 * Method canSpawnPet.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public static boolean canSpawnPet(Player player)
 	{
 		if (players_list1.contains(player.getObjectId()) || players_list2.contains(player.getObjectId()))
@@ -570,6 +779,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		return true;
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -593,6 +806,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		_log.info("Loaded Event: DestructionOfFlag");
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -604,19 +821,33 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 		onReload();
 	}
 	
+	/**
+	 * Field _active.
+	 */
 	static boolean _active = false;
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return _active;
 	}
 	
+	/**
+	 * Method activateEvent.
+	 */
 	public void activateEvent()
 	{
 		Player player = getSelf();
@@ -651,6 +882,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method deactivateEvent.
+	 */
 	public void deactivateEvent()
 	{
 		Player player = getSelf();
@@ -673,11 +907,20 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method isRunned.
+	 * @return boolean
+	 */
 	public static boolean isRunned()
 	{
 		return _isRegistrationActive || (_status > 0);
 	}
 	
+	/**
+	 * Method DialogAppend_31225.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31225(Integer val)
 	{
 		if (val == 0)
@@ -688,6 +931,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		return "";
 	}
 	
+	/**
+	 * Method getMinLevelForCategory.
+	 * @param category int
+	 * @return int
+	 */
 	public static int getMinLevelForCategory(int category)
 	{
 		switch (category)
@@ -708,6 +956,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		return 0;
 	}
 	
+	/**
+	 * Method getMaxLevelForCategory.
+	 * @param category int
+	 * @return int
+	 */
 	public static int getMaxLevelForCategory(int category)
 	{
 		switch (category)
@@ -728,6 +981,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		return 0;
 	}
 	
+	/**
+	 * Method getCategory.
+	 * @param level int
+	 * @return int
+	 */
 	public static int getCategory(int level)
 	{
 		if ((level >= 30) && (level <= 39))
@@ -757,6 +1015,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		return 0;
 	}
 	
+	/**
+	 * Method start.
+	 * @param var String[]
+	 */
 	public void start(String[] var)
 	{
 		if (var.length != 3)
@@ -846,11 +1108,19 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}, 60000);
 	}
 	
+	/**
+	 * Method sayToAll.
+	 * @param address String
+	 * @param replacements String[]
+	 */
 	public static void sayToAll(String address, String[] replacements)
 	{
 		Announcements.getInstance().announceByCustomMessage(address, replacements, ChatType.CRITICAL_ANNOUNCE);
 	}
 	
+	/**
+	 * Method question.
+	 */
 	public static void question()
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
@@ -862,6 +1132,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method announce.
+	 * @param s String
+	 */
 	public static void announce(String s)
 	{
 		if (players_list1.isEmpty() || players_list2.isEmpty())
@@ -899,6 +1173,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method addPlayer.
+	 */
 	public void addPlayer()
 	{
 		Player player = getSelf();
@@ -922,6 +1199,12 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		show(new CustomMessage("scripts.events.DestructionOfFlag.Registered", player), player);
 	}
 	
+	/**
+	 * Method checkPlayer.
+	 * @param player Player
+	 * @param first boolean
+	 * @return boolean
+	 */
 	public static boolean checkPlayer(Player player, boolean first)
 	{
 		if (first && (!_isRegistrationActive || player.isDead()))
@@ -966,7 +1249,7 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 		if (first && PROTECT_IP_ACTIVE && sameIp(player))
 		{
-			show("Вы не можете учавствовать на эвенте, с вашим IP уже кто-то зарегестрирован.", player, null);
+			show("Вы не можете учав�?твоват�? на �?венте, �? ва�?им IP уже кто-то зареге�?трирован.", player, null);
 			return false;
 		}
 		if (player.getObserverMode() != 0)
@@ -976,6 +1259,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		return true;
 	}
 	
+	/**
+	 * Method prepare.
+	 * @param s String
+	 */
 	public static void prepare(String s)
 	{
 		ReflectionUtils.getDoor(17160024).openMe();
@@ -1000,11 +1287,15 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		sayToAll("scripts.events.DestructionOfFlag.AnnounceFinalCountdown", null);
 	}
 	
+	/**
+	 * Method go.
+	 * @param s String
+	 */
 	public static void go(String s)
 	{
 		if ((players_list1.size() < MIN_PLAYERS) || (players_list2.size() < MIN_PLAYERS) || (players_list3.size() < MIN_PLAYERS))
 		{
-			Announcements.getInstance().announceToAll("DestructionOfFlag: эвент завершен, не было набрано минимальное кол-во участников.");
+			Announcements.getInstance().announceToAll("DestructionOfFlag: �?вент завер�?ен, не было набрано минимал�?ное кол-во уча�?тников.");
 			executeTask("events.DestructionOfFlag.DestructionOfFlag", "autoContinue", new Object[0], 1000);
 			return;
 		}
@@ -1023,6 +1314,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		ThreadPoolManager.getInstance().schedule(new timer((int) (cal.getTimeInMillis() - System.currentTimeMillis()) / 1000), 0);
 	}
 	
+	/**
+	 * Method endBattle.
+	 * @param win int
+	 */
 	public static void endBattle(int win)
 	{
 		if (_status == 0)
@@ -1060,34 +1355,37 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		{
 			if (win == 1)
 			{
-				Announcements.getInstance().announceToAll("Победила команда Белых!");
+				Announcements.getInstance().announceToAll("�?обедила команда Белых!");
 				giveItemsToWinner(win, 1);
 			}
 			else if (win == 2)
 			{
-				Announcements.getInstance().announceToAll("Победила команда Зеленых!");
+				Announcements.getInstance().announceToAll("�?обедила команда Зеленых!");
 				giveItemsToWinner(win, 1);
 			}
 			else if (win == 3)
 			{
-				Announcements.getInstance().announceToAll("Победила команда Желтых!");
+				Announcements.getInstance().announceToAll("�?обедила команда Желтых!");
 				giveItemsToWinner(win, 1);
 			}
 			else if (win == 4)
 			{
-				Announcements.getInstance().announceToAll("Победила команда Черных!");
+				Announcements.getInstance().announceToAll("�?обедила команда Черных!");
 				giveItemsToWinner(win, 1);
 			}
 		}
 		else
 		{
-			Announcements.getInstance().announceToAll("Победивших нет.");
+			Announcements.getInstance().announceToAll("�?обедив�?их нет.");
 		}
 		sayToAll("scripts.events.DestructionOfFlag.AnnounceEnd", null);
 		end();
 		_isRegistrationActive = false;
 	}
 	
+	/**
+	 * Method end.
+	 */
 	public static void end()
 	{
 		executeTask("events.DestructionOfFlag.DestructionOfFlag", "removeAura", new Object[0], 1000);
@@ -1099,6 +1397,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		despawnNpcs();
 	}
 	
+	/**
+	 * Method autoContinue.
+	 */
 	public void autoContinue()
 	{
 		players_list1.clear();
@@ -1121,6 +1422,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method giveItemsToWinner.
+	 * @param win int
+	 * @param rate double
+	 */
 	public static void giveItemsToWinner(int win, double rate)
 	{
 		if (win == 1)
@@ -1155,6 +1461,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method saveBackCoords.
+	 */
 	public static void saveBackCoords()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -1181,6 +1490,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		clearArena();
 	}
 	
+	/**
+	 * Method teleportPlayersToColiseum.
+	 */
 	public static void teleportPlayersToColiseum()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -1308,6 +1620,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method teleportPlayersToSavedCoords.
+	 * @param command int
+	 */
 	public static void teleportPlayersToSavedCoords(int command)
 	{
 		switch (command)
@@ -1339,6 +1655,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method teleportPlayersToSavedCoordsAll.
+	 */
 	public static void teleportPlayersToSavedCoordsAll()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -1359,6 +1678,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method teleportPlayerToSavedCoords.
+	 * @param player Player
+	 */
 	public static void teleportPlayerToSavedCoords(Player player)
 	{
 		try
@@ -1388,6 +1711,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method paralyzePlayers.
+	 */
 	public static void paralyzePlayers()
 	{
 		Skill revengeSkill = SkillTable.getInstance().getInfo(Skill.SKILL_RAID_CURSE, 1);
@@ -1398,6 +1724,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method upParalyzePlayers.
+	 */
 	public static void upParalyzePlayers()
 	{
 		for (Player player : getPlayers(players_list))
@@ -1407,6 +1736,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method removeBuff.
+	 */
 	public static void removeBuff()
 	{
 		saveBuffList();
@@ -1532,6 +1864,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method backBuff.
+	 */
 	public static void backBuff()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -1645,6 +1980,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		restoreBuffList();
 	}
 	
+	/**
+	 * Method ressurectPlayers.
+	 */
 	public static void ressurectPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -1665,6 +2003,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method ressurectPlayer.
+	 * @param player Player
+	 */
 	public static void ressurectPlayer(Player player)
 	{
 		if (player.isDead())
@@ -1677,6 +2019,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method healPlayers.
+	 */
 	public static void healPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -1701,6 +2046,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method cleanPlayers.
+	 */
 	public static void cleanPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -1749,6 +2097,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method clearArena.
+	 */
 	public static void clearArena()
 	{
 		for (GameObject obj : _zone.getObjects())
@@ -1764,6 +2115,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method doDie.
+	 * @param self Creature
+	 * @param killer Creature
+	 */
 	public static void doDie(Creature self, Creature killer)
 	{
 		if ((_status <= 1) || (self == null))
@@ -1772,7 +2128,7 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 		if (self.isPlayer() && (playerInCommand(self.getStoredId()) > 0))
 		{
-			self.sendMessage("Через " + TIME_FOR_RES + " секунд вы будите восстановлены.");
+			self.sendMessage("Через " + TIME_FOR_RES + " �?екунд вы будите во�?�?тановлены.");
 			_resurrectionList.put(self.getStoredId(), executeTask("events.DestructionOfFlag.DestructionOfFlag", "resurrectAtBase", new Object[]
 			{
 				(Player) self
@@ -1784,6 +2140,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method resurrectAtBase.
+	 * @param player Player
+	 */
 	public static void resurrectAtBase(Player player)
 	{
 		if (playerInCommand(player.getStoredId()) <= 0)
@@ -1813,6 +2173,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method OnEscape.
+	 * @param player Player
+	 * @return Location
+	 */
 	public static Location OnEscape(Player player)
 	{
 		if ((_status > 1) && (player != null) && (playerInCommand(player.getStoredId()) > 0))
@@ -1822,6 +2187,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		return null;
 	}
 	
+	/**
+	 * Method OnPlayerExit.
+	 * @param player Player
+	 */
 	public static void OnPlayerExit(Player player)
 	{
 		if ((player == null) || (playerInCommand(player.getStoredId()) < 1))
@@ -1841,11 +2210,24 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		OnEscape(player);
 	}
 	
+	/**
+	 */
 	public static class TeleportTask implements Runnable
 	{
+		/**
+		 * Field loc.
+		 */
 		Location loc;
+		/**
+		 * Field target.
+		 */
 		Creature target;
 		
+		/**
+		 * Constructor for TeleportTask.
+		 * @param target Creature
+		 * @param loc Location
+		 */
 		public TeleportTask(Creature target, Location loc)
 		{
 			this.target = target;
@@ -1853,6 +2235,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 			target.startStunning();
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -1861,6 +2247,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method removePlayer.
+	 * @param player Player
+	 */
 	private static void removePlayer(Player player)
 	{
 		players_list1.remove(player.getStoredId());
@@ -1870,6 +2260,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		teleportPlayerToSavedCoords(player);
 	}
 	
+	/**
+	 * Method getPlayers.
+	 * @param list List<Long>
+	 * @return LazyArrayList<Player>
+	 */
 	static LazyArrayList<Player> getPlayers(List<Long> list)
 	{
 		LazyArrayList<Player> result = new LazyArrayList<>();
@@ -1884,6 +2279,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		return result;
 	}
 	
+	/**
+	 * Method saveBuffList.
+	 */
 	public static void saveBuffList()
 	{
 		Effect skill[];
@@ -1939,6 +2337,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method restoreBuffList.
+	 */
 	public static void restoreBuffList()
 	{
 		Player player;
@@ -1949,15 +2350,28 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 */
 	public static class restoreBuffListForPlayer implements Runnable
 	{
+		/**
+		 * Field player.
+		 */
 		Player player;
 		
+		/**
+		 * Constructor for restoreBuffListForPlayer.
+		 * @param player Player
+		 */
 		restoreBuffListForPlayer(Player player)
 		{
 			this.player = player;
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -1994,15 +2408,28 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 */
 	public static class buffPlayer implements Runnable
 	{
+		/**
+		 * Field player.
+		 */
 		Player player;
 		
+		/**
+		 * Constructor for buffPlayer.
+		 * @param player Player
+		 */
 		buffPlayer(Player player)
 		{
 			this.player = player;
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -2036,15 +2463,28 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 */
 	public static class timer implements Runnable
 	{
+		/**
+		 * Field time.
+		 */
 		int time;
 		
+		/**
+		 * Constructor for timer.
+		 * @param time int
+		 */
 		timer(int time)
 		{
 			this.time = time;
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -2057,11 +2497,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 				{
 					if (sec < 10)
 					{
-						message = " Осталось минут: " + Integer.toString(time / 60) + ":0" + Integer.toString(sec) + " ";
+						message = " �?�?тало�?�? минут: " + Integer.toString(time / 60) + ":0" + Integer.toString(sec) + " ";
 					}
 					else
 					{
-						message = " Осталось минут: " + Integer.toString(time / 60) + ":" + Integer.toString(sec) + " ";
+						message = " �?�?тало�?�? минут: " + Integer.toString(time / 60) + ":" + Integer.toString(sec) + " ";
 					}
 					if (greenFlag != null)
 					{
@@ -2085,11 +2525,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 				{
 					if (sec < 10)
 					{
-						message = " Осталось минут: " + Integer.toString(time / 60) + ":0" + Integer.toString(sec) + " ";
+						message = " �?�?тало�?�? минут: " + Integer.toString(time / 60) + ":0" + Integer.toString(sec) + " ";
 					}
 					else
 					{
-						message = " Осталось минут: " + Integer.toString(time / 60) + ":" + Integer.toString(sec) + " ";
+						message = " �?�?тало�?�? минут: " + Integer.toString(time / 60) + ":" + Integer.toString(sec) + " ";
 					}
 					if (whiteFlag != null)
 					{
@@ -2113,11 +2553,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 				{
 					if (sec < 10)
 					{
-						message = " Осталось минут: " + Integer.toString(time / 60) + ":0" + Integer.toString(sec) + " ";
+						message = " �?�?тало�?�? минут: " + Integer.toString(time / 60) + ":0" + Integer.toString(sec) + " ";
 					}
 					else
 					{
-						message = " Осталось минут: " + Integer.toString(time / 60) + ":" + Integer.toString(sec) + " ";
+						message = " �?�?тало�?�? минут: " + Integer.toString(time / 60) + ":" + Integer.toString(sec) + " ";
 					}
 					if (blackFlag != null)
 					{
@@ -2151,11 +2591,21 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method playerInCommand.
+	 * @param objectId long
+	 * @return int
+	 */
 	public static int playerInCommand(long objectId)
 	{
 		return players_list1.contains(objectId) ? 1 : players_list2.contains(objectId) ? 2 : players_list3.contains(objectId) ? 3 : 0;
 	}
 	
+	/**
+	 * Method getLocForPlayer.
+	 * @param objectId long
+	 * @return Location
+	 */
 	public static Location getLocForPlayer(long objectId)
 	{
 		switch (playerInCommand(objectId))
@@ -2173,6 +2623,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method setTeam.
+	 * @param player Player
+	 */
 	public static void setTeam(Player player)
 	{
 		int command = playerInCommand(player.getStoredId());
@@ -2184,6 +2638,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		player.setNameColor(Integer.decode("0x" + colors[playerInCommand(player.getStoredId()) - 1]));
 	}
 	
+	/**
+	 * Method lossTeam.
+	 * @param flag MonsterInstance
+	 */
 	public static void lossTeam(MonsterInstance flag)
 	{
 		if (flag == greenFlag)
@@ -2353,6 +2811,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		flag.deleteMe();
 	}
 	
+	/**
+	 * Method lossTeam.
+	 * @param team LazyArrayList<Long>
+	 */
 	public static void lossTeam(LazyArrayList<Long> team)
 	{
 		Player player;
@@ -2362,17 +2824,29 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 			if (player != null)
 			{
 				removePlayer(player);
-				player.sendMessage("Ваш флаг - уничтожен. Вы проиграли.");
+				player.sendMessage("Ва�? фла�� - уничтожен. Вы проиграли.");
 			}
 		}
 		team.clear();
 	}
 	
+	/**
+	 * Method canJoinParty.
+	 * @param player Player
+	 * @param target Player
+	 * @return boolean
+	 */
 	public static boolean canJoinParty(Player player, Player target)
 	{
 		return !((playerInCommand(player.getStoredId()) > 0) || (playerInCommand(target.getStoredId()) > 0)) || (playerInCommand(player.getStoredId()) == playerInCommand(target.getStoredId()));
 	}
 	
+	/**
+	 * Method canUseItem.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	public static boolean canUseItem(Player player, ItemInstance item)
 	{
 		if (ALLOW_RESTRICT_ITEMS && (playerInCommand(player.getStoredId()) > 0))
@@ -2388,16 +2862,36 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		return true;
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param player Creature
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return boolean
+	 */
 	public static boolean useSkill(Creature player, Creature target, Skill skill)
 	{
 		return checkTarget(player, target, skill);
 	}
 	
+	/**
+	 * Method checkTarget.
+	 * @param player Player
+	 * @param target Creature
+	 * @return boolean
+	 */
 	public static boolean checkTarget(Player player, Creature target)
 	{
 		return checkTarget(player, target, null);
 	}
 	
+	/**
+	 * Method checkTarget.
+	 * @param character Creature
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return boolean
+	 */
 	public static boolean checkTarget(Creature character, Creature target, Skill skill)
 	{
 		if (_status < 2)
@@ -2519,6 +3013,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		return true;
 	}
 	
+	/**
+	 * Method getMonsterTeam.
+	 * @param monster Creature
+	 * @return int
+	 */
 	private static int getMonsterTeam(Creature monster)
 	{
 		if (monster.getStoredId().equals(greenFlag.getStoredId()))
@@ -2543,6 +3042,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		}
 	}
 	
+	/**
+	 * Method sameIp.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public static boolean sameIp(Player player)
 	{
 		Player part;
@@ -2597,13 +3101,24 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		return false;
 	}
 	
+	/**
+	 */
 	private static class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Constructor for ZoneListener.
+		 */
 		public ZoneListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -2618,6 +3133,12 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{

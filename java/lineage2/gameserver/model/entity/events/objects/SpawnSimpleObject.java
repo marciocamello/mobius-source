@@ -17,22 +17,45 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SpawnSimpleObject implements SpawnableObject
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _npcId.
+	 */
 	private final int _npcId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
+	/**
+	 * Field _npc.
+	 */
 	private NpcInstance _npc;
 	
+	/**
+	 * Constructor for SpawnSimpleObject.
+	 * @param npcId int
+	 * @param loc Location
+	 */
 	public SpawnSimpleObject(int npcId, Location loc)
 	{
 		_npcId = npcId;
 		_loc = loc;
 	}
 	
+	/**
+	 * Method spawnObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#spawnObject(GlobalEvent)
+	 */
 	@Override
 	public void spawnObject(GlobalEvent event)
 	{
@@ -40,6 +63,11 @@ public class SpawnSimpleObject implements SpawnableObject
 		_npc.addEvent(event);
 	}
 	
+	/**
+	 * Method despawnObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#despawnObject(GlobalEvent)
+	 */
 	@Override
 	public void despawnObject(GlobalEvent event)
 	{
@@ -47,6 +75,11 @@ public class SpawnSimpleObject implements SpawnableObject
 		_npc.deleteMe();
 	}
 	
+	/**
+	 * Method refreshObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#refreshObject(GlobalEvent)
+	 */
 	@Override
 	public void refreshObject(GlobalEvent event)
 	{

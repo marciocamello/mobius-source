@@ -38,20 +38,38 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import npc.model.residences.SiegeGuardInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _canDead.
+	 */
 	private final AtomicBoolean _canDead = new AtomicBoolean();
+	/**
+	 * Field _teleportTask.
+	 */
 	private Future<?> _teleportTask;
 	
+	/**
+	 * Constructor for GustavInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public GustavInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	public void onSpawn()
 	{
@@ -60,6 +78,10 @@ public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 		Functions.npcShout(this, NpcString.PREPARE_TO_DIE_FOREIGN_INVADERS_I_AM_GUSTAV_THE_ETERNAL_RULER_OF_THIS_FORTRESS_AND_I_HAVE_TAKEN_UP_MY_SWORD_TO_REPEL_THEE);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onDeath(Creature killer)
 	{
@@ -114,6 +136,10 @@ public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 		}
 	}
 	
+	/**
+	 * Method getMostDamagedClan.
+	 * @return Clan
+	 */
 	public Clan getMostDamagedClan()
 	{
 		ClanHallSiegeEvent siegeEvent = getEvent(ClanHallSiegeEvent.class);
@@ -160,12 +186,20 @@ public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 		return player == null ? null : player.getClan();
 	}
 	
+	/**
+	 * Method teleChatSay.
+	 * @return NpcString * @see npc.model.residences.clanhall._34SiegeGuard#teleChatSay()
+	 */
 	@Override
 	public NpcString teleChatSay()
 	{
 		return NpcString.THIS_IS_UNBELIEVABLE_HAVE_I_REALLY_BEEN_DEFEATED_I_SHALL_RETURN_AND_TAKE_YOUR_HEAD;
 	}
 	
+	/**
+	 * Method isEffectImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isEffectImmune()
 	{

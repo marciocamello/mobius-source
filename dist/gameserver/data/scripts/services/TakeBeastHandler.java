@@ -16,10 +16,20 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TakeBeastHandler extends Functions
 {
+	/**
+	 * Field BEAST_WHIP.
+	 */
 	private final int BEAST_WHIP = 15473;
 	
+	/**
+	 * Method show.
+	 */
 	public void show()
 	{
 		Player player = getSelf();

@@ -15,15 +15,29 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.entity.events.impl.KrateisCubeEvent;
 import lineage2.gameserver.model.entity.events.objects.KrateisCubePlayerObject;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExPVPMatchCCRecord extends L2GameServerPacket
 {
+	/**
+	 * Field _players.
+	 */
 	private final KrateisCubePlayerObject[] _players;
 	
+	/**
+	 * Constructor for ExPVPMatchCCRecord.
+	 * @param cube KrateisCubeEvent
+	 */
 	public ExPVPMatchCCRecord(KrateisCubeEvent cube)
 	{
 		_players = cube.getSortedPlayers();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	public void writeImpl()
 	{

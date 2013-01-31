@@ -55,6 +55,10 @@ import lineage2.gameserver.templates.npc.Faction;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MonsterInstance extends NpcInstance
 {
 	/**
@@ -62,17 +66,35 @@ public class MonsterInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * @author Mobius
+	 */
 	protected static final class RewardInfo
 	{
+		/**
+		 * Field _attacker.
+		 */
 		protected Creature _attacker;
+		/**
+		 * Field _dmg.
+		 */
 		protected int _dmg = 0;
 		
+		/**
+		 * Constructor for RewardInfo.
+		 * @param attacker Creature
+		 * @param dmg int
+		 */
 		public RewardInfo(final Creature attacker, final int dmg)
 		{
 			_attacker = attacker;
 			_dmg = dmg;
 		}
 		
+		/**
+		 * Method addDamage.
+		 * @param dmg int
+		 */
 		public void addDamage(int dmg)
 		{
 			if (dmg < 0)
@@ -82,6 +104,10 @@ public class MonsterInstance extends NpcInstance
 			_dmg += dmg;
 		}
 		
+		/**
+		 * Method hashCode.
+		 * @return int
+		 */
 		@Override
 		public int hashCode()
 		{
@@ -89,64 +115,145 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Field minionMaintainTask.
+	 */
 	private ScheduledFuture<?> minionMaintainTask;
+	/**
+	 * Field minionList.
+	 */
 	private final MinionList minionList;
+	/**
+	 * Field _isSeeded.
+	 */
 	private boolean _isSeeded;
+	/**
+	 * Field _seederId.
+	 */
 	private int _seederId;
+	/**
+	 * Field _altSeed.
+	 */
 	private boolean _altSeed;
+	/**
+	 * Field _harvestItem.
+	 */
 	private RewardItem _harvestItem;
+	/**
+	 * Field harvestLock.
+	 */
 	private final Lock harvestLock = new ReentrantLock();
+	/**
+	 * Field overhitAttackerId.
+	 */
 	private int overhitAttackerId;
+	/**
+	 * Field _overhitDamage.
+	 */
 	private double _overhitDamage;
+	/**
+	 * Field _absorbersIds.
+	 */
 	private TIntHashSet _absorbersIds;
+	/**
+	 * Field absorbLock.
+	 */
 	private final Lock absorbLock = new ReentrantLock();
+	/**
+	 * Field _isSpoiled.
+	 */
 	private boolean _isSpoiled;
+	/**
+	 * Field spoilerId.
+	 */
 	private int spoilerId;
+	/**
+	 * Field _sweepItems.
+	 */
 	private List<RewardItem> _sweepItems;
+	/**
+	 * Field sweepLock.
+	 */
 	private final Lock sweepLock = new ReentrantLock();
+	/**
+	 * Field _isChampion.
+	 */
 	private int _isChampion;
 	
+	/**
+	 * Constructor for MonsterInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MonsterInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		minionList = new MinionList(this);
 	}
 	
+	/**
+	 * Method isMovementDisabled.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isMovementDisabled()
 	{
 		return (getNpcId() == 18344) || (getNpcId() == 18345) || super.isMovementDisabled();
 	}
 	
+	/**
+	 * Method isLethalImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isLethalImmune()
 	{
 		return (_isChampion > 0) || (getNpcId() == 22215) || (getNpcId() == 22216) || (getNpcId() == 22217) || super.isLethalImmune();
 	}
 	
+	/**
+	 * Method isFearImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isFearImmune()
 	{
 		return (_isChampion > 0) || super.isFearImmune();
 	}
 	
+	/**
+	 * Method isParalyzeImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParalyzeImmune()
 	{
 		return (_isChampion > 0) || super.isParalyzeImmune();
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		return !attacker.isMonster();
 	}
 	
+	/**
+	 * Method getChampion.
+	 * @return int
+	 */
 	public int getChampion()
 	{
 		return _isChampion;
 	}
 	
+	/**
+	 * Method setChampion.
+	 */
 	public void setChampion()
 	{
 		if (getReflection().canChampions() && canChampion())
@@ -171,6 +278,10 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method setChampion.
+	 * @param level int
+	 */
 	public void setChampion(int level)
 	{
 		if (level == 0)
@@ -185,17 +296,28 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method canChampion.
+	 * @return boolean
+	 */
 	public boolean canChampion()
 	{
 		return (getTemplate().rewardExp > 0) && (getTemplate().level <= Config.ALT_CHAMPION_TOP_LEVEL);
 	}
 	
+	/**
+	 * Method getTeam.
+	 * @return TeamType
+	 */
 	@Override
 	public TeamType getTeam()
 	{
 		return getChampion() == 2 ? TeamType.RED : getChampion() == 1 ? TeamType.BLUE : TeamType.NONE;
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -212,6 +334,9 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method onDespawn.
+	 */
 	@Override
 	protected void onDespawn()
 	{
@@ -223,14 +348,24 @@ public class MonsterInstance extends NpcInstance
 		super.onDespawn();
 	}
 	
+	/**
+	 * Method getMinionList.
+	 * @return MinionList
+	 */
 	@Override
 	public MinionList getMinionList()
 	{
 		return minionList;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class MinionMaintainTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -242,15 +377,27 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getMinionPosition.
+	 * @return Location
+	 */
 	public Location getMinionPosition()
 	{
 		return Location.findPointToStay(this, 100, 150);
 	}
 	
+	/**
+	 * Method notifyMinionDied.
+	 * @param minion MinionInstance
+	 */
 	public void notifyMinionDied(MinionInstance minion)
 	{
 	}
 	
+	/**
+	 * Method spawnMinion.
+	 * @param minion MonsterInstance
+	 */
 	public void spawnMinion(MonsterInstance minion)
 	{
 		minion.setReflection(getReflection());
@@ -267,12 +414,20 @@ public class MonsterInstance extends NpcInstance
 		minion.spawnMe(getMinionPosition());
 	}
 	
+	/**
+	 * Method hasMinions.
+	 * @return boolean
+	 */
 	@Override
 	public boolean hasMinions()
 	{
 		return getMinionList().hasMinions();
 	}
 	
+	/**
+	 * Method setReflection.
+	 * @param reflection Reflection
+	 */
 	@Override
 	public void setReflection(Reflection reflection)
 	{
@@ -286,6 +441,9 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
@@ -298,6 +456,10 @@ public class MonsterInstance extends NpcInstance
 		super.onDelete();
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -310,6 +472,15 @@ public class MonsterInstance extends NpcInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method onReduceCurrentHp.
+	 * @param damage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 */
 	@Override
 	protected void onReduceCurrentHp(double damage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp)
 	{
@@ -330,6 +501,10 @@ public class MonsterInstance extends NpcInstance
 		super.onReduceCurrentHp(damage, attacker, skill, awake, standUp, directHp);
 	}
 	
+	/**
+	 * Method calculateRewards.
+	 * @param lastAttacker Creature
+	 */
 	public void calculateRewards(Creature lastAttacker)
 	{
 		Creature topDamager = getAggroList().getTopDamager();
@@ -520,6 +695,9 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method onRandomAnimation.
+	 */
 	@Override
 	public void onRandomAnimation()
 	{
@@ -530,17 +708,28 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method startRandomAnimation.
+	 */
 	@Override
 	public void startRandomAnimation()
 	{
 	}
 	
+	/**
+	 * Method getKarma.
+	 * @return int
+	 */
 	@Override
 	public int getKarma()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method addAbsorber.
+	 * @param attacker Player
+	 */
 	public void addAbsorber(final Player attacker)
 	{
 		if (attacker == null)
@@ -566,6 +755,11 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method isAbsorbed.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean isAbsorbed(Player player)
 	{
 		absorbLock.lock();
@@ -587,6 +781,9 @@ public class MonsterInstance extends NpcInstance
 		return true;
 	}
 	
+	/**
+	 * Method clearAbsorbers.
+	 */
 	public void clearAbsorbers()
 	{
 		absorbLock.lock();
@@ -603,6 +800,10 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method takeHarvest.
+	 * @return RewardItem
+	 */
 	public RewardItem takeHarvest()
 	{
 		harvestLock.lock();
@@ -619,6 +820,9 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method clearHarvest.
+	 */
 	public void clearHarvest()
 	{
 		harvestLock.lock();
@@ -635,6 +839,13 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method setSeeded.
+	 * @param player Player
+	 * @param seedId int
+	 * @param altSeed boolean
+	 * @return boolean
+	 */
 	public boolean setSeeded(Player player, int seedId, boolean altSeed)
 	{
 		harvestLock.lock();
@@ -660,21 +871,39 @@ public class MonsterInstance extends NpcInstance
 		return true;
 	}
 	
+	/**
+	 * Method isSeeded.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean isSeeded(Player player)
 	{
 		return isSeeded() && (_seederId == player.getObjectId()) && (getDeadTime() < 20000L);
 	}
 	
+	/**
+	 * Method isSeeded.
+	 * @return boolean
+	 */
 	public boolean isSeeded()
 	{
 		return _isSeeded;
 	}
 	
+	/**
+	 * Method isSpoiled.
+	 * @return boolean
+	 */
 	public boolean isSpoiled()
 	{
 		return _isSpoiled;
 	}
 	
+	/**
+	 * Method isSpoiled.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean isSpoiled(Player player)
 	{
 		if (!isSpoiled())
@@ -698,6 +927,11 @@ public class MonsterInstance extends NpcInstance
 		return false;
 	}
 	
+	/**
+	 * Method setSpoiled.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean setSpoiled(Player player)
 	{
 		sweepLock.lock();
@@ -717,6 +951,10 @@ public class MonsterInstance extends NpcInstance
 		return true;
 	}
 	
+	/**
+	 * Method isSweepActive.
+	 * @return boolean
+	 */
 	public boolean isSweepActive()
 	{
 		sweepLock.lock();
@@ -730,6 +968,10 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method takeSweep.
+	 * @return List<RewardItem>
+	 */
 	public List<RewardItem> takeSweep()
 	{
 		sweepLock.lock();
@@ -745,6 +987,9 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method clearSweep.
+	 */
 	public void clearSweep()
 	{
 		sweepLock.lock();
@@ -760,6 +1005,12 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method rollRewards.
+	 * @param entry Map.Entry<RewardType,RewardList>
+	 * @param lastAttacker Creature
+	 * @param topDamager Creature
+	 */
 	public void rollRewards(Map.Entry<RewardType, RewardList> entry, final Creature lastAttacker, Creature topDamager)
 	{
 		RewardType type = entry.getKey();
@@ -796,6 +1047,12 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method calculateExpAndSp.
+	 * @param level int
+	 * @param damage long
+	 * @return double[]
+	 */
 	private double[] calculateExpAndSp(int level, long damage)
 	{
 		int diff = level - getLevel();
@@ -830,6 +1087,12 @@ public class MonsterInstance extends NpcInstance
 		};
 	}
 	
+	/**
+	 * Method applyOverhit.
+	 * @param killer Player
+	 * @param xp double
+	 * @return double
+	 */
 	private double applyOverhit(Player killer, double xp)
 	{
 		if ((xp > 0) && (killer.getObjectId() == overhitAttackerId))
@@ -841,23 +1104,40 @@ public class MonsterInstance extends NpcInstance
 		return xp;
 	}
 	
+	/**
+	 * Method setOverhitAttacker.
+	 * @param attacker Creature
+	 */
 	@Override
 	public void setOverhitAttacker(Creature attacker)
 	{
 		overhitAttackerId = attacker == null ? 0 : attacker.getObjectId();
 	}
 	
+	/**
+	 * Method getOverhitDamage.
+	 * @return double
+	 */
 	public double getOverhitDamage()
 	{
 		return _overhitDamage;
 	}
 	
+	/**
+	 * Method setOverhitDamage.
+	 * @param damage double
+	 */
 	@Override
 	public void setOverhitDamage(double damage)
 	{
 		_overhitDamage = damage;
 	}
 	
+	/**
+	 * Method calculateOverhitExp.
+	 * @param normalExp double
+	 * @return int
+	 */
 	public int calculateOverhitExp(final double normalExp)
 	{
 		double overhitPercentage = (getOverhitDamage() * 100) / getMaxHp();
@@ -871,18 +1151,40 @@ public class MonsterInstance extends NpcInstance
 		return (int) Math.round(overhitExp);
 	}
 	
+	/**
+	 * Method isAggressive.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAggressive()
 	{
 		return (Config.ALT_CHAMPION_CAN_BE_AGGRO || (getChampion() == 0)) && super.isAggressive();
 	}
 	
+	/**
+	 * Method getFaction.
+	 * @return Faction
+	 */
 	@Override
 	public Faction getFaction()
 	{
 		return Config.ALT_CHAMPION_CAN_BE_SOCIAL || (getChampion() == 0) ? super.getFaction() : Faction.NONE;
 	}
 	
+	/**
+	 * Method reduceCurrentHp.
+	 * @param i double
+	 * @param reflectableDamage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 * @param canReflect boolean
+	 * @param transferDamage boolean
+	 * @param isDot boolean
+	 * @param sendMessage boolean
+	 */
 	@Override
 	public void reduceCurrentHp(double i, double reflectableDamage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp, boolean canReflect, boolean transferDamage, boolean isDot, boolean sendMessage)
 	{
@@ -890,10 +1192,24 @@ public class MonsterInstance extends NpcInstance
 		super.reduceCurrentHp(i, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 	
+	/**
+	 * Field MIN_DISTANCE_FOR_USE_UD.
+	 */
 	private final double MIN_DISTANCE_FOR_USE_UD = 200.0;
+	/**
+	 * Field MIN_DISTANCE_FOR_CANCEL_UD.
+	 */
 	private final double MIN_DISTANCE_FOR_CANCEL_UD = 50.0;
+	/**
+	 * Field UD_USE_CHANCE.
+	 */
 	private final double UD_USE_CHANCE = 30.0;
 	
+	/**
+	 * Method checkUD.
+	 * @param attacker Creature
+	 * @param damage double
+	 */
 	private void checkUD(Creature attacker, double damage)
 	{
 		if ((getTemplate().getBaseAtkRange() > MIN_DISTANCE_FOR_USE_UD) || (getLevel() < 20) || (getLevel() > 78) || ((attacker.getLevel() - getLevel()) > 9) || ((getLevel() - attacker.getLevel()) > 9))
@@ -939,18 +1255,30 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method isMonster.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isMonster()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method getClan.
+	 * @return Clan
+	 */
 	@Override
 	public Clan getClan()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{

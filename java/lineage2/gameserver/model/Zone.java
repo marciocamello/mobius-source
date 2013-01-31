@@ -39,68 +39,199 @@ import lineage2.gameserver.templates.ZoneTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Zone
 {
+	/**
+	 * Field EMPTY_L2ZONE_ARRAY.
+	 */
 	public static final Zone[] EMPTY_L2ZONE_ARRAY = new Zone[0];
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum ZoneType
 	{
+		/**
+		 * Field AirshipController.
+		 */
 		AirshipController,
+		/**
+		 * Field SIEGE.
+		 */
 		SIEGE,
+		/**
+		 * Field RESIDENCE.
+		 */
 		RESIDENCE,
+		/**
+		 * Field HEADQUARTER.
+		 */
 		HEADQUARTER,
+		/**
+		 * Field FISHING.
+		 */
 		FISHING,
+		/**
+		 * Field CHANGED_ZONE.
+		 */
 		CHANGED_ZONE,
+		/**
+		 * Field water.
+		 */
 		water,
+		/**
+		 * Field battle_zone.
+		 */
 		battle_zone,
+		/**
+		 * Field damage.
+		 */
 		damage,
+		/**
+		 * Field instant_skill.
+		 */
 		instant_skill,
+		/**
+		 * Field mother_tree.
+		 */
 		mother_tree,
+		/**
+		 * Field peace_zone.
+		 */
 		peace_zone,
+		/**
+		 * Field poison.
+		 */
 		poison,
+		/**
+		 * Field ssq_zone.
+		 */
 		ssq_zone,
+		/**
+		 * Field swamp.
+		 */
 		swamp,
+		/**
+		 * Field no_escape.
+		 */
 		no_escape,
+		/**
+		 * Field no_landing.
+		 */
 		no_landing,
+		/**
+		 * Field no_restart.
+		 */
 		no_restart,
+		/**
+		 * Field no_summon.
+		 */
 		no_summon,
+		/**
+		 * Field dummy.
+		 */
 		dummy,
+		/**
+		 * Field offshore.
+		 */
 		offshore,
+		/**
+		 * Field epic.
+		 */
 		epic,
+		/**
+		 * Field JUMPING.
+		 */
 		JUMPING,
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public enum ZoneTarget
 	{
+		/**
+		 * Field pc.
+		 */
 		pc,
+		/**
+		 * Field npc.
+		 */
 		npc,
+		/**
+		 * Field only_pc.
+		 */
 		only_pc
 	}
 	
+	/**
+	 * Field BLOCKED_ACTION_PRIVATE_STORE. (value is ""open_private_store"")
+	 */
 	public static final String BLOCKED_ACTION_PRIVATE_STORE = "open_private_store";
+	/**
+	 * Field BLOCKED_ACTION_PRIVATE_WORKSHOP. (value is ""open_private_workshop"")
+	 */
 	public static final String BLOCKED_ACTION_PRIVATE_WORKSHOP = "open_private_workshop";
+	/**
+	 * Field BLOCKED_ACTION_DROP_MERCHANT_GUARD. (value is ""drop_merchant_guard"")
+	 */
 	public static final String BLOCKED_ACTION_DROP_MERCHANT_GUARD = "drop_merchant_guard";
+	/**
+	 * Field BLOCKED_ACTION_SAVE_BOOKMARK. (value is ""save_bookmark"")
+	 */
 	public static final String BLOCKED_ACTION_SAVE_BOOKMARK = "save_bookmark";
+	/**
+	 * Field BLOCKED_ACTION_USE_BOOKMARK. (value is ""use_bookmark"")
+	 */
 	public static final String BLOCKED_ACTION_USE_BOOKMARK = "use_bookmark";
+	/**
+	 * Field BLOCKED_ACTION_MINIMAP. (value is ""open_minimap"")
+	 */
 	public static final String BLOCKED_ACTION_MINIMAP = "open_minimap";
 	
+	/**
+	 * @author Mobius
+	 */
 	private abstract class ZoneTimer extends RunnableImpl
 	{
+		/**
+		 * Field cha.
+		 */
 		protected Creature cha;
+		/**
+		 * Field future.
+		 */
 		protected Future<?> future;
+		/**
+		 * Field active.
+		 */
 		protected boolean active;
 		
+		/**
+		 * Constructor for ZoneTimer.
+		 * @param cha Creature
+		 */
 		public ZoneTimer(Creature cha)
 		{
 			this.cha = cha;
 		}
 		
+		/**
+		 * Method start.
+		 */
 		public void start()
 		{
 			active = true;
 			future = EffectTaskManager.getInstance().schedule(this, getTemplate().getInitialDelay() * 1000L);
 		}
 		
+		/**
+		 * Method stop.
+		 */
 		public void stop()
 		{
 			active = false;
@@ -111,6 +242,9 @@ public class Zone
 			}
 		}
 		
+		/**
+		 * Method next.
+		 */
 		public void next()
 		{
 			if (!active)
@@ -124,17 +258,31 @@ public class Zone
 			future = EffectTaskManager.getInstance().schedule(this, (getTemplate().getUnitTick() + Rnd.get(0, getTemplate().getRandomTick())) * 1000L);
 		}
 		
+		/**
+		 * Method runImpl.
+		 * @throws Exception
+		 */
 		@Override
 		public abstract void runImpl() throws Exception;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SkillTimer extends ZoneTimer
 	{
+		/**
+		 * Constructor for SkillTimer.
+		 * @param cha Creature
+		 */
 		public SkillTimer(Creature cha)
 		{
 			super(cha);
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -159,13 +307,23 @@ public class Zone
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DamageTimer extends ZoneTimer
 	{
+		/**
+		 * Constructor for DamageTimer.
+		 * @param cha Creature
+		 */
 		public DamageTimer(Creature cha)
 		{
 			super(cha);
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -204,8 +362,15 @@ public class Zone
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListenerList extends ListenerList<Zone>
 	{
+		/**
+		 * Method onEnter.
+		 * @param actor Creature
+		 */
 		public void onEnter(Creature actor)
 		{
 			if (!getListeners().isEmpty())
@@ -217,6 +382,10 @@ public class Zone
 			}
 		}
 		
+		/**
+		 * Method onLeave.
+		 * @param actor Creature
+		 */
 		public void onLeave(Creature actor)
 		{
 			if (!getListeners().isEmpty())
@@ -229,24 +398,69 @@ public class Zone
 		}
 	}
 	
+	/**
+	 * Field _type.
+	 */
 	private ZoneType _type;
+	/**
+	 * Field _active.
+	 */
 	private boolean _active;
+	/**
+	 * Field _params.
+	 */
 	private final MultiValueSet<String> _params;
+	/**
+	 * Field _template.
+	 */
 	private final ZoneTemplate _template;
+	/**
+	 * Field _reflection.
+	 */
 	private Reflection _reflection;
+	/**
+	 * Field listeners.
+	 */
 	private final ZoneListenerList listeners = new ZoneListenerList();
+	/**
+	 * Field lock.
+	 */
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
+	/**
+	 * Field readLock.
+	 */
 	private final Lock readLock = lock.readLock();
+	/**
+	 * Field writeLock.
+	 */
 	private final Lock writeLock = lock.writeLock();
+	/**
+	 * Field _objects.
+	 */
 	private final List<Creature> _objects = new LazyArrayList<>(32);
+	/**
+	 * Field _zoneTimers.
+	 */
 	private final Map<Creature, ZoneTimer> _zoneTimers = new ConcurrentHashMap<>();
+	/**
+	 * Field ZONE_STATS_ORDER.
+	 */
 	public final static int ZONE_STATS_ORDER = 0x40;
 	
+	/**
+	 * Constructor for Zone.
+	 * @param template ZoneTemplate
+	 */
 	public Zone(ZoneTemplate template)
 	{
 		this(template.getType(), template);
 	}
 	
+	/**
+	 * Constructor for Zone.
+	 * @param type ZoneType
+	 * @param template ZoneTemplate
+	 */
 	public Zone(ZoneType type, ZoneTemplate template)
 	{
 		_type = type;
@@ -254,101 +468,181 @@ public class Zone
 		_params = template.getParams();
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @return ZoneTemplate
+	 */
 	public ZoneTemplate getTemplate()
 	{
 		return _template;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public final String getName()
 	{
 		return getTemplate().getName();
 	}
 	
+	/**
+	 * Method getType.
+	 * @return ZoneType
+	 */
 	public ZoneType getType()
 	{
 		return _type;
 	}
 	
+	/**
+	 * Method setType.
+	 * @param type ZoneType
+	 */
 	public void setType(ZoneType type)
 	{
 		_type = type;
 	}
 	
+	/**
+	 * Method getTerritory.
+	 * @return Territory
+	 */
 	public Territory getTerritory()
 	{
 		return getTemplate().getTerritory();
 	}
 	
+	/**
+	 * Method getEnteringMessageId.
+	 * @return int
+	 */
 	public final int getEnteringMessageId()
 	{
 		return getTemplate().getEnteringMessageId();
 	}
 	
+	/**
+	 * Method getLeavingMessageId.
+	 * @return int
+	 */
 	public final int getLeavingMessageId()
 	{
 		return getTemplate().getLeavingMessageId();
 	}
 	
+	/**
+	 * Method getZoneSkill.
+	 * @return Skill
+	 */
 	public Skill getZoneSkill()
 	{
 		return getTemplate().getZoneSkill();
 	}
 	
+	/**
+	 * Method getZoneTarget.
+	 * @return ZoneTarget
+	 */
 	public ZoneTarget getZoneTarget()
 	{
 		return getTemplate().getZoneTarget();
 	}
 	
+	/**
+	 * Method getAffectRace.
+	 * @return Race
+	 */
 	public Race getAffectRace()
 	{
 		return getTemplate().getAffectRace();
 	}
 	
+	/**
+	 * Method getDamageMessageId.
+	 * @return int
+	 */
 	public int getDamageMessageId()
 	{
 		return getTemplate().getDamageMessageId();
 	}
 	
+	/**
+	 * Method getDamageOnHP.
+	 * @return int
+	 */
 	public int getDamageOnHP()
 	{
 		return getTemplate().getDamageOnHP();
 	}
 	
+	/**
+	 * Method getDamageOnMP.
+	 * @return int
+	 */
 	public int getDamageOnMP()
 	{
 		return getTemplate().getDamageOnMP();
 	}
 	
+	/**
+	 * Method getMoveBonus.
+	 * @return double
+	 */
 	public double getMoveBonus()
 	{
 		return getTemplate().getMoveBonus();
 	}
 	
+	/**
+	 * Method getRegenBonusHP.
+	 * @return double
+	 */
 	public double getRegenBonusHP()
 	{
 		return getTemplate().getRegenBonusHP();
 	}
 	
+	/**
+	 * Method getRegenBonusMP.
+	 * @return double
+	 */
 	public double getRegenBonusMP()
 	{
 		return getTemplate().getRegenBonusMP();
 	}
 	
+	/**
+	 * Method getRestartTime.
+	 * @return long
+	 */
 	public long getRestartTime()
 	{
 		return getTemplate().getRestartTime();
 	}
 	
+	/**
+	 * Method getRestartPoints.
+	 * @return List<Location>
+	 */
 	public List<Location> getRestartPoints()
 	{
 		return getTemplate().getRestartPoints();
 	}
 	
+	/**
+	 * Method getPKRestartPoints.
+	 * @return List<Location>
+	 */
 	public List<Location> getPKRestartPoints()
 	{
 		return getTemplate().getPKRestartPoints();
 	}
 	
+	/**
+	 * Method getSpawn.
+	 * @return Location
+	 */
 	public Location getSpawn()
 	{
 		if (getRestartPoints() == null)
@@ -359,6 +653,10 @@ public class Zone
 		return loc.clone();
 	}
 	
+	/**
+	 * Method getPKSpawn.
+	 * @return Location
+	 */
 	public Location getPKSpawn()
 	{
 		if (getPKRestartPoints() == null)
@@ -369,21 +667,47 @@ public class Zone
 		return loc.clone();
 	}
 	
+	/**
+	 * Method checkIfInZone.
+	 * @param x int
+	 * @param y int
+	 * @return boolean
+	 */
 	public boolean checkIfInZone(int x, int y)
 	{
 		return getTerritory().isInside(x, y);
 	}
 	
+	/**
+	 * Method checkIfInZone.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return boolean
+	 */
 	public boolean checkIfInZone(int x, int y, int z)
 	{
 		return checkIfInZone(x, y, z, getReflection());
 	}
 	
+	/**
+	 * Method checkIfInZone.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param reflection Reflection
+	 * @return boolean
+	 */
 	public boolean checkIfInZone(int x, int y, int z, Reflection reflection)
 	{
 		return isActive() && (_reflection == reflection) && getTerritory().isInside(x, y, z);
 	}
 	
+	/**
+	 * Method checkIfInZone.
+	 * @param cha Creature
+	 * @return boolean
+	 */
 	public boolean checkIfInZone(Creature cha)
 	{
 		readLock.lock();
@@ -397,16 +721,34 @@ public class Zone
 		}
 	}
 	
+	/**
+	 * Method findDistanceToZone.
+	 * @param obj GameObject
+	 * @param includeZAxis boolean
+	 * @return double
+	 */
 	public final double findDistanceToZone(GameObject obj, boolean includeZAxis)
 	{
 		return findDistanceToZone(obj.getX(), obj.getY(), obj.getZ(), includeZAxis);
 	}
 	
+	/**
+	 * Method findDistanceToZone.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param includeZAxis boolean
+	 * @return double
+	 */
 	public final double findDistanceToZone(int x, int y, int z, boolean includeZAxis)
 	{
 		return PositionUtils.calculateDistance(x, y, z, (getTerritory().getXmax() + getTerritory().getXmin()) / 2, (getTerritory().getYmax() + getTerritory().getYmin()) / 2, (getTerritory().getZmax() + getTerritory().getZmin()) / 2, includeZAxis);
 	}
 	
+	/**
+	 * Method doEnter.
+	 * @param cha Creature
+	 */
 	public void doEnter(Creature cha)
 	{
 		boolean added = false;
@@ -428,6 +770,10 @@ public class Zone
 		}
 	}
 	
+	/**
+	 * Method onZoneEnter.
+	 * @param actor Creature
+	 */
 	protected void onZoneEnter(Creature actor)
 	{
 		checkEffects(actor, true);
@@ -450,6 +796,10 @@ public class Zone
 		listeners.onEnter(actor);
 	}
 	
+	/**
+	 * Method doLeave.
+	 * @param cha Creature
+	 */
 	public void doLeave(Creature cha)
 	{
 		boolean removed = false;
@@ -468,6 +818,10 @@ public class Zone
 		}
 	}
 	
+	/**
+	 * Method onZoneLeave.
+	 * @param actor Creature
+	 */
 	protected void onZoneLeave(Creature actor)
 	{
 		checkEffects(actor, false);
@@ -490,6 +844,10 @@ public class Zone
 		listeners.onLeave(actor);
 	}
 	
+	/**
+	 * Method addZoneStats.
+	 * @param cha Creature
+	 */
 	private void addZoneStats(Creature cha)
 	{
 		if (!checkTarget(cha))
@@ -514,6 +872,10 @@ public class Zone
 		}
 	}
 	
+	/**
+	 * Method removeZoneStats.
+	 * @param cha Creature
+	 */
 	private void removeZoneStats(Creature cha)
 	{
 		if ((getRegenBonusHP() == 0) && (getRegenBonusMP() == 0) && (getMoveBonus() == 0))
@@ -524,6 +886,11 @@ public class Zone
 		cha.sendChanges();
 	}
 	
+	/**
+	 * Method checkEffects.
+	 * @param cha Creature
+	 * @param enter boolean
+	 */
 	private void checkEffects(Creature cha, boolean enter)
 	{
 		if (checkTarget(cha))
@@ -558,6 +925,11 @@ public class Zone
 		}
 	}
 	
+	/**
+	 * Method checkTarget.
+	 * @param cha Creature
+	 * @return boolean
+	 */
 	boolean checkTarget(Creature cha)
 	{
 		switch (getZoneTarget())
@@ -596,6 +968,10 @@ public class Zone
 		return true;
 	}
 	
+	/**
+	 * Method getObjects.
+	 * @return Creature[]
+	 */
 	public Creature[] getObjects()
 	{
 		readLock.lock();
@@ -609,6 +985,10 @@ public class Zone
 		}
 	}
 	
+	/**
+	 * Method getInsidePlayers.
+	 * @return List<Player>
+	 */
 	public List<Player> getInsidePlayers()
 	{
 		List<Player> result = new LazyArrayList<>();
@@ -631,6 +1011,10 @@ public class Zone
 		return result;
 	}
 	
+	/**
+	 * Method getInsidePlayables.
+	 * @return List<Playable>
+	 */
 	public List<Playable> getInsidePlayables()
 	{
 		List<Playable> result = new LazyArrayList<>();
@@ -653,6 +1037,10 @@ public class Zone
 		return result;
 	}
 	
+	/**
+	 * Method setActive.
+	 * @param value boolean
+	 */
 	public void setActive(boolean value)
 	{
 		writeLock.lock();
@@ -678,52 +1066,97 @@ public class Zone
 		}
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	public boolean isActive()
 	{
 		return _active;
 	}
 	
+	/**
+	 * Method setReflection.
+	 * @param reflection Reflection
+	 */
 	public void setReflection(Reflection reflection)
 	{
 		_reflection = reflection;
 	}
 	
+	/**
+	 * Method getReflection.
+	 * @return Reflection
+	 */
 	public Reflection getReflection()
 	{
 		return _reflection;
 	}
 	
+	/**
+	 * Method setParam.
+	 * @param name String
+	 * @param value String
+	 */
 	public void setParam(String name, String value)
 	{
 		_params.put(name, value);
 	}
 	
+	/**
+	 * Method setParam.
+	 * @param name String
+	 * @param value Object
+	 */
 	public void setParam(String name, Object value)
 	{
 		_params.put(name, value);
 	}
 	
+	/**
+	 * Method getParams.
+	 * @return MultiValueSet<String>
+	 */
 	public MultiValueSet<String> getParams()
 	{
 		return _params;
 	}
 	
+	/**
+	 * Method addListener.
+	 * @param listener T
+	 * @return boolean
+	 */
 	public <T extends Listener<Zone>> boolean addListener(T listener)
 	{
 		return listeners.add(listener);
 	}
 	
+	/**
+	 * Method removeListener.
+	 * @param listener T
+	 * @return boolean
+	 */
 	public <T extends Listener<Zone>> boolean removeListener(T listener)
 	{
 		return listeners.remove(listener);
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public final String toString()
 	{
 		return "[Zone " + getType() + " name: " + getName() + "]";
 	}
 	
+	/**
+	 * Method broadcastPacket.
+	 * @param packet L2GameServerPacket
+	 * @param toAliveOnly boolean
+	 */
 	public void broadcastPacket(L2GameServerPacket packet, boolean toAliveOnly)
 	{
 		List<Player> insideZoners = getInsidePlayers();

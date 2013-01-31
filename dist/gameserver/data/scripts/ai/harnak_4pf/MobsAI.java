@@ -30,24 +30,62 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MobsAI extends Fighter
 {
+	/**
+	 * Field moveLoc1.
+	 */
 	private static final Location moveLoc1 = new Location(-107930, 206328, -10872);
+	/**
+	 * Field moveLoc2.
+	 */
 	private static final Location moveLoc2 = new Location(-107930, 208861, -10872);
+	/**
+	 * Field SKILL_IDS.
+	 */
 	private static final int[] SKILL_IDS =
 	{
 		14612,
 		14613,
 		14614
 	};
+	/**
+	 * Field ULTIMATE_BUFF_ID. (value is 4318)
+	 */
 	private static final int ULTIMATE_BUFF_ID = 4318;
+	/**
+	 * Field selected.
+	 */
 	private boolean selected = false;
+	/**
+	 * Field NEXT_MOB_ID.
+	 */
 	private final int NEXT_MOB_ID;
+	/**
+	 * Field MSG2_ID. Field MSG1_ID.
+	 */
 	private final int MSG1_ID, MSG2_ID;
+	/**
+	 * Field ROOM_ID.
+	 */
 	private final int ROOM_ID;
+	/**
+	 * Field NEXT_GROUP.
+	 */
 	private final String NEXT_GROUP;
+	/**
+	 * Field IS_LAST_GROUP.
+	 */
 	private final boolean IS_LAST_GROUP;
 	
+	/**
+	 * Constructor for MobsAI.
+	 * @param actor NpcInstance
+	 */
 	public MobsAI(NpcInstance actor)
 	{
 		super(actor);
@@ -62,6 +100,9 @@ public class MobsAI extends Fighter
 		getActor().setRunning();
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -88,6 +129,9 @@ public class MobsAI extends Fighter
 		}
 	}
 	
+	/**
+	 * Method selectMe.
+	 */
 	public void selectMe()
 	{
 		selected = true;
@@ -100,6 +144,11 @@ public class MobsAI extends Fighter
 		addTimer(1, 3000);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -135,6 +184,12 @@ public class MobsAI extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtScriptEvent.
+	 * @param event String
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
@@ -159,6 +214,10 @@ public class MobsAI extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -199,6 +258,12 @@ public class MobsAI extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtTimer.
+	 * @param timerId int
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
@@ -216,12 +281,21 @@ public class MobsAI extends Fighter
 		}
 	}
 	
+	/**
+	 * Method returnHome.
+	 * @param clearAggro boolean
+	 * @param teleport boolean
+	 */
 	@Override
 	protected void returnHome(boolean clearAggro, boolean teleport)
 	{
 		changeIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
 	}
 	
+	/**
+	 * Method maybeMoveToHome.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean maybeMoveToHome()
 	{

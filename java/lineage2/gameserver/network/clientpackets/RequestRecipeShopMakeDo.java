@@ -27,12 +27,28 @@ import lineage2.gameserver.templates.item.RecipeTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.TradeHelper;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestRecipeShopMakeDo extends L2GameClientPacket
 {
+	/**
+	 * Field _manufacturerId.
+	 */
 	private int _manufacturerId;
+	/**
+	 * Field _recipeId.
+	 */
 	private int _recipeId;
+	/**
+	 * Field _price.
+	 */
 	private long _price;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -41,6 +57,9 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 		_price = readQ();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

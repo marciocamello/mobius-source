@@ -17,15 +17,31 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionTargetPlayerRace extends Condition
 {
+	/**
+	 * Field _race.
+	 */
 	private final Race _race;
 	
+	/**
+	 * Constructor for ConditionTargetPlayerRace.
+	 * @param race String
+	 */
 	public ConditionTargetPlayerRace(String race)
 	{
 		_race = Race.valueOf(race.toLowerCase());
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

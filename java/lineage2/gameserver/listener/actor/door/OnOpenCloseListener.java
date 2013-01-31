@@ -15,9 +15,21 @@ package lineage2.gameserver.listener.actor.door;
 import lineage2.gameserver.listener.CharListener;
 import lineage2.gameserver.model.instances.DoorInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnOpenCloseListener extends CharListener
 {
+	/**
+	 * Method onOpen.
+	 * @param doorInstance DoorInstance
+	 */
 	void onOpen(DoorInstance doorInstance);
 	
+	/**
+	 * Method onClose.
+	 * @param doorInstance DoorInstance
+	 */
 	void onClose(DoorInstance doorInstance);
 }

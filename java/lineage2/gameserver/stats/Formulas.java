@@ -31,8 +31,17 @@ import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.utils.PositionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Formulas
 {
+	/**
+	 * Method calcHpRegen.
+	 * @param cha Creature
+	 * @return double
+	 */
 	public static double calcHpRegen(Creature cha)
 	{
 		double init;
@@ -55,6 +64,11 @@ public class Formulas
 		return cha.calcStat(Stats.REGENERATE_HP_RATE, init);
 	}
 	
+	/**
+	 * Method calcMpRegen.
+	 * @param cha Creature
+	 * @return double
+	 */
 	public static double calcMpRegen(Creature cha)
 	{
 		double init;
@@ -77,6 +91,11 @@ public class Formulas
 		return cha.calcStat(Stats.REGENERATE_MP_RATE, init);
 	}
 	
+	/**
+	 * Method calcCpRegen.
+	 * @param cha Creature
+	 * @return double
+	 */
 	public static double calcCpRegen(Creature cha)
 	{
 		double init = 0.0;
@@ -87,22 +106,72 @@ public class Formulas
 		return cha.calcStat(Stats.REGENERATE_CP_RATE, init);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class AttackInfo
 	{
+		/**
+		 * Field reflectableDamage.
+		 */
 		public double reflectableDamage = 0;
+		/**
+		 * Field damage.
+		 */
 		public double damage = 0;
+		/**
+		 * Field defence.
+		 */
 		public double defence = 0;
+		/**
+		 * Field crit_static.
+		 */
 		public double crit_static = 0;
+		/**
+		 * Field death_rcpt.
+		 */
 		public double death_rcpt = 0;
+		/**
+		 * Field lethal1.
+		 */
 		public double lethal1 = 0;
+		/**
+		 * Field lethal2.
+		 */
 		public double lethal2 = 0;
+		/**
+		 * Field lethal_dmg.
+		 */
 		public double lethal_dmg = 0;
+		/**
+		 * Field crit.
+		 */
 		public boolean crit = false;
+		/**
+		 * Field shld.
+		 */
 		public boolean shld = false;
+		/**
+		 * Field lethal.
+		 */
 		public boolean lethal = false;
+		/**
+		 * Field miss.
+		 */
 		public boolean miss = false;
 	}
 	
+	/**
+	 * Method calcPhysDam.
+	 * @param attacker Creature
+	 * @param target Creature
+	 * @param skill Skill
+	 * @param dual boolean
+	 * @param blow boolean
+	 * @param ss boolean
+	 * @param onCrit boolean
+	 * @return AttackInfo
+	 */
 	public static AttackInfo calcPhysDam(Creature attacker, Creature target, Skill skill, boolean dual, boolean blow, boolean ss, boolean onCrit)
 	{
 		AttackInfo info = new AttackInfo();
@@ -369,6 +438,14 @@ public class Formulas
 		return info;
 	}
 	
+	/**
+	 * Method calcMagicDam.
+	 * @param attacker Creature
+	 * @param target Creature
+	 * @param skill Skill
+	 * @param sps int
+	 * @return AttackInfo
+	 */
 	public static AttackInfo calcMagicDam(Creature attacker, Creature target, Skill skill, int sps)
 	{
 		AttackInfo info = new AttackInfo();
@@ -522,11 +599,23 @@ public class Formulas
 		return info;
 	}
 	
+	/**
+	 * Method calcStunBreak.
+	 * @param crit boolean
+	 * @return boolean
+	 */
 	public static boolean calcStunBreak(boolean crit)
 	{
 		return Rnd.chance(crit ? 75 : 10);
 	}
 	
+	/**
+	 * Method calcBlow.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return boolean
+	 */
 	public static boolean calcBlow(Creature activeChar, Creature target, Skill skill)
 	{
 		WeaponTemplate weapon = activeChar.getActiveWeaponItem();
@@ -558,6 +647,14 @@ public class Formulas
 		return Rnd.chance(chance);
 	}
 	
+	/**
+	 * Method calcCrit.
+	 * @param attacker Creature
+	 * @param target Creature
+	 * @param skill Skill
+	 * @param blow boolean
+	 * @return double
+	 */
 	public static double calcCrit(Creature attacker, Creature target, Skill skill, boolean blow)
 	{
 		if (attacker.isPlayer() && (attacker.getActiveWeaponItem() == null))
@@ -581,11 +678,22 @@ public class Formulas
 		return rate / 10;
 	}
 	
+	/**
+	 * Method calcMCrit.
+	 * @param mRate double
+	 * @return boolean
+	 */
 	public static boolean calcMCrit(double mRate)
 	{
 		return (Rnd.get() * 100) <= Math.min(Config.LIM_MCRIT, mRate);
 	}
 	
+	/**
+	 * Method calcCastBreak.
+	 * @param target Creature
+	 * @param crit boolean
+	 * @return boolean
+	 */
 	public static boolean calcCastBreak(Creature target, boolean crit)
 	{
 		if ((target == null) || target.isInvul() || target.isRaid() || !target.isCastingNow())
@@ -600,11 +708,23 @@ public class Formulas
 		return Rnd.chance(target.calcStat(Stats.CAST_INTERRUPT, crit ? 75 : 10, null, skill));
 	}
 	
+	/**
+	 * Method calcPAtkSpd.
+	 * @param rate double
+	 * @return int
+	 */
 	public static int calcPAtkSpd(double rate)
 	{
 		return (int) (500000 / rate);
 	}
 	
+	/**
+	 * Method calcMAtkSpd.
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param skillTime double
+	 * @return int
+	 */
 	public static int calcMAtkSpd(Creature attacker, Skill skill, double skillTime)
 	{
 		if (skill.isMagic())
@@ -614,6 +734,12 @@ public class Formulas
 		return (int) ((skillTime * 333) / Math.max(attacker.getPAtkSpd(), 1));
 	}
 	
+	/**
+	 * Method calcSkillReuseDelay.
+	 * @param actor Creature
+	 * @param skill Skill
+	 * @return long
+	 */
 	public static long calcSkillReuseDelay(Creature actor, Skill skill)
 	{
 		long reuseDelay = skill.getReuseDelay();
@@ -641,6 +767,12 @@ public class Formulas
 		return (long) actor.calcStat(Stats.PHYSIC_REUSE_RATE, reuseDelay, null, skill);
 	}
 	
+	/**
+	 * Method calcHitMiss.
+	 * @param attacker Creature
+	 * @param target Creature
+	 * @return boolean
+	 */
 	public static boolean calcHitMiss(Creature attacker, Creature target)
 	{
 		int chanceToHit = 88 + (2 * (attacker.getAccuracy() - target.getEvasionRate(attacker)));
@@ -659,6 +791,12 @@ public class Formulas
 		return !Rnd.chance(chanceToHit);
 	}
 	
+	/**
+	 * Method calcShldUse.
+	 * @param attacker Creature
+	 * @param target Creature
+	 * @return boolean
+	 */
 	public static boolean calcShldUse(Creature attacker, Creature target)
 	{
 		WeaponTemplate template = target.getSecondaryWeaponItem();
@@ -674,6 +812,13 @@ public class Formulas
 		return Rnd.chance((int) target.calcStat(Stats.SHIELD_RATE, attacker, null));
 	}
 	
+	/**
+	 * Method calcSkillSuccess.
+	 * @param env Env
+	 * @param et EffectTemplate
+	 * @param spiritshot int
+	 * @return boolean
+	 */
 	public static boolean calcSkillSuccess(Env env, EffectTemplate et, int spiritshot)
 	{
 		if (env.value == -1)
@@ -862,33 +1007,33 @@ public class Formulas
 			}
 			stat.append(" AR:");
 			stat.append((int) base);
-			stat.append(" ");
+			stat.append(' ');
 			if (skill.getSaveVs() != null)
 			{
 				stat.append(skill.getSaveVs().name());
-				stat.append(":");
+				stat.append(':');
 				stat.append(String.format("%1.1f", statMod));
 			}
 			if (skill.isMagic())
 			{
-				stat.append(" ");
+				stat.append(' ');
 				stat.append(" mAtk:");
 				stat.append(String.format("%1.1f", mAtkMod));
 			}
 			if (skill.getTraitType() != null)
 			{
-				stat.append(" ");
+				stat.append(' ');
 				stat.append(skill.getTraitType().name());
 			}
-			stat.append(" ");
+			stat.append(' ');
 			stat.append(String.format("%1.1f", resMod));
-			stat.append("(");
+			stat.append('(');
 			stat.append(String.format("%1.1f", profMod));
-			stat.append("/");
+			stat.append('/');
 			stat.append(String.format("%1.1f", vulnMod));
 			if (debuffMod != 0)
 			{
-				stat.append("+");
+				stat.append('+');
 				stat.append(String.format("%1.1f", debuffMod));
 			}
 			stat.append(") lvl:");
@@ -913,6 +1058,14 @@ public class Formulas
 		return result;
 	}
 	
+	/**
+	 * Method calcSkillSuccess.
+	 * @param player Creature
+	 * @param target Creature
+	 * @param skill Skill
+	 * @param activateRate int
+	 * @return boolean
+	 */
 	public static boolean calcSkillSuccess(Creature player, Creature target, Skill skill, int activateRate)
 	{
 		Env env = new Env();
@@ -923,6 +1076,11 @@ public class Formulas
 		return calcSkillSuccess(env, null, player.getChargedSpiritShot());
 	}
 	
+	/**
+	 * Method calcSkillMastery.
+	 * @param skill Skill
+	 * @param activeChar Creature
+	 */
 	public static void calcSkillMastery(Skill skill, Creature activeChar)
 	{
 		if (skill.isHandler())
@@ -952,6 +1110,14 @@ public class Formulas
 		}
 	}
 	
+	/**
+	 * Method calcDamageResists.
+	 * @param skill Skill
+	 * @param attacker Creature
+	 * @param defender Creature
+	 * @param value double
+	 * @return double
+	 */
 	public static double calcDamageResists(Skill skill, Creature attacker, Creature defender, double value)
 	{
 		if (attacker == defender)
@@ -1005,6 +1171,12 @@ public class Formulas
 		return value * getElementMod(defender.calcStat(element.getDefence(), 0.), attacker.calcStat(element.getAttack(), power));
 	}
 	
+	/**
+	 * Method getElementMod.
+	 * @param defense double
+	 * @param attack double
+	 * @return double
+	 */
 	private static double getElementMod(double defense, double attack)
 	{
 		double diff = attack - defense;
@@ -1030,6 +1202,12 @@ public class Formulas
 		}
 	}
 	
+	/**
+	 * Method getAttackElement.
+	 * @param attacker Creature
+	 * @param target Creature
+	 * @return Element
+	 */
 	public static Element getAttackElement(Creature attacker, Creature target)
 	{
 		double val, max = Double.MIN_VALUE;

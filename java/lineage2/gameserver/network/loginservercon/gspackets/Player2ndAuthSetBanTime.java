@@ -14,17 +14,35 @@ package lineage2.gameserver.network.loginservercon.gspackets;
 
 import lineage2.gameserver.network.loginservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Player2ndAuthSetBanTime extends SendablePacket
 {
+	/**
+	 * Field _login.
+	 */
 	private final String _login;
+	/**
+	 * Field _banTime.
+	 */
 	private final int _banTime;
 	
+	/**
+	 * Constructor for Player2ndAuthSetBanTime.
+	 * @param login String
+	 * @param banTime int
+	 */
 	public Player2ndAuthSetBanTime(String login, int banTime)
 	{
 		_login = login;
 		_banTime = banTime;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

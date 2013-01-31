@@ -37,32 +37,97 @@ import net.sf.ehcache.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MailDAO implements JdbcDAO<Integer, Mail>
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(MailDAO.class);
+	/**
+	 * Field RESTORE_MAIL. (value is ""SELECT sender_id, sender_name, receiver_id, receiver_name, expire_time, topic, body, price, type, unread, returnable, systemMsg1, systemMsg2 FROM mail WHERE message_id = ?"")
+	 */
 	private final static String RESTORE_MAIL = "SELECT sender_id, sender_name, receiver_id, receiver_name, expire_time, topic, body, price, type, unread, returnable, systemMsg1, systemMsg2 FROM mail WHERE message_id = ?";
+	/**
+	 * Field STORE_MAIL. (value is ""INSERT INTO mail(sender_id, sender_name, receiver_id, receiver_name, expire_time, topic, body, price, type, unread, returnable, systemMsg1, systemMsg2) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)"")
+	 */
 	private final static String STORE_MAIL = "INSERT INTO mail(sender_id, sender_name, receiver_id, receiver_name, expire_time, topic, body, price, type, unread, returnable, systemMsg1, systemMsg2) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	/**
+	 * Field UPDATE_MAIL. (value is ""UPDATE mail SET sender_id = ?, sender_name = ?, receiver_id = ?, receiver_name = ?, expire_time = ?, topic = ?, body = ?, price = ?, type = ?, unread = ?, returnable = ?, systemMsg1 = ?, systemMsg2 = ? WHERE message_id = ?"")
+	 */
 	private final static String UPDATE_MAIL = "UPDATE mail SET sender_id = ?, sender_name = ?, receiver_id = ?, receiver_name = ?, expire_time = ?, topic = ?, body = ?, price = ?, type = ?, unread = ?, returnable = ?, systemMsg1 = ?, systemMsg2 = ? WHERE message_id = ?";
+	/**
+	 * Field REMOVE_MAIL. (value is ""DELETE FROM mail WHERE message_id = ?"")
+	 */
 	private final static String REMOVE_MAIL = "DELETE FROM mail WHERE message_id = ?";
+	/**
+	 * Field RESTORE_EXPIRED_MAIL. (value is ""SELECT message_id FROM mail WHERE expire_time <= ?"")
+	 */
 	private final static String RESTORE_EXPIRED_MAIL = "SELECT message_id FROM mail WHERE expire_time <= ?";
+	/**
+	 * Field RESTORE_OWN_MAIL. (value is ""SELECT message_id FROM character_mail WHERE char_id = ? AND is_sender = ?"")
+	 */
 	private final static String RESTORE_OWN_MAIL = "SELECT message_id FROM character_mail WHERE char_id = ? AND is_sender = ?";
+	/**
+	 * Field STORE_OWN_MAIL. (value is ""INSERT INTO character_mail(char_id, message_id, is_sender) VALUES (?,?,?)"")
+	 */
 	private final static String STORE_OWN_MAIL = "INSERT INTO character_mail(char_id, message_id, is_sender) VALUES (?,?,?)";
+	/**
+	 * Field REMOVE_OWN_MAIL. (value is ""DELETE FROM character_mail WHERE char_id = ? AND message_id = ? AND is_sender = ?"")
+	 */
 	private final static String REMOVE_OWN_MAIL = "DELETE FROM character_mail WHERE char_id = ? AND message_id = ? AND is_sender = ?";
+	/**
+	 * Field RESTORE_MAIL_ATTACHMENTS. (value is ""SELECT item_id FROM mail_attachments WHERE message_id = ?"")
+	 */
 	private final static String RESTORE_MAIL_ATTACHMENTS = "SELECT item_id FROM mail_attachments WHERE message_id = ?";
+	/**
+	 * Field STORE_MAIL_ATTACHMENT. (value is ""INSERT INTO mail_attachments(message_id, item_id) VALUES (?,?)"")
+	 */
 	private final static String STORE_MAIL_ATTACHMENT = "INSERT INTO mail_attachments(message_id, item_id) VALUES (?,?)";
+	/**
+	 * Field REMOVE_MAIL_ATTACHMENTS. (value is ""DELETE FROM mail_attachments WHERE message_id = ?"")
+	 */
 	private final static String REMOVE_MAIL_ATTACHMENTS = "DELETE FROM mail_attachments WHERE message_id = ?";
+	/**
+	 * Field instance.
+	 */
 	private final static MailDAO instance = new MailDAO();
 	
+	/**
+	 * Method getInstance.
+	 * @return MailDAO
+	 */
 	public static MailDAO getInstance()
 	{
 		return instance;
 	}
 	
+	/**
+	 * Field load.
+	 */
 	final AtomicLong load = new AtomicLong();
+	/**
+	 * Field insert.
+	 */
 	final AtomicLong insert = new AtomicLong();
+	/**
+	 * Field update.
+	 */
 	final AtomicLong update = new AtomicLong();
+	/**
+	 * Field delete.
+	 */
 	final AtomicLong delete = new AtomicLong();
+	/**
+	 * Field cache.
+	 */
 	private final Cache cache;
+	/**
+	 * Field stats.
+	 */
 	private final JdbcEntityStats stats = new JdbcEntityStats()
 	{
 		@Override
@@ -90,22 +155,38 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		}
 	};
 	
+	/**
+	 * Constructor for MailDAO.
+	 */
 	private MailDAO()
 	{
 		cache = CacheManager.getInstance().getCache(Mail.class.getName());
 	}
 	
+	/**
+	 * Method getCache.
+	 * @return Cache
+	 */
 	public Cache getCache()
 	{
 		return cache;
 	}
 	
+	/**
+	 * Method getStats.
+	 * @return JdbcEntityStats * @see lineage2.commons.dao.JdbcDAO#getStats()
+	 */
 	@Override
 	public JdbcEntityStats getStats()
 	{
 		return stats;
 	}
 	
+	/**
+	 * Method save0.
+	 * @param mail Mail
+	 * @throws SQLException
+	 */
 	private void save0(Mail mail) throws SQLException
 	{
 		Connection con = null;
@@ -167,6 +248,11 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		insert.incrementAndGet();
 	}
 	
+	/**
+	 * Method load0.
+	 * @param messageId int
+	 * @return Mail
+	 */
 	private Mail load0(int messageId)
 	{
 		Mail mail = null;
@@ -226,6 +312,11 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		return mail;
 	}
 	
+	/**
+	 * Method update0.
+	 * @param mail Mail
+	 * @throws SQLException
+	 */
 	private void update0(Mail mail) throws SQLException
 	{
 		Connection con = null;
@@ -264,6 +355,11 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		update.incrementAndGet();
 	}
 	
+	/**
+	 * Method delete0.
+	 * @param mail Mail
+	 * @throws SQLException
+	 */
 	private void delete0(Mail mail) throws SQLException
 	{
 		Connection con = null;
@@ -282,6 +378,12 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		delete.incrementAndGet();
 	}
 	
+	/**
+	 * Method getMailByOwnerId.
+	 * @param ownerId int
+	 * @param sent boolean
+	 * @return List<Mail>
+	 */
 	private List<Mail> getMailByOwnerId(int ownerId, boolean sent)
 	{
 		List<Integer> messageIds = Collections.emptyList();
@@ -313,6 +415,13 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		return load(messageIds);
 	}
 	
+	/**
+	 * Method deleteMailByOwnerIdAndMailId.
+	 * @param ownerId int
+	 * @param messageId int
+	 * @param sent boolean
+	 * @return boolean
+	 */
 	private boolean deleteMailByOwnerIdAndMailId(int ownerId, int messageId, boolean sent)
 	{
 		Connection con = null;
@@ -337,16 +446,32 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		}
 	}
 	
+	/**
+	 * Method getReceivedMailByOwnerId.
+	 * @param receiverId int
+	 * @return List<Mail>
+	 */
 	public List<Mail> getReceivedMailByOwnerId(int receiverId)
 	{
 		return getMailByOwnerId(receiverId, false);
 	}
 	
+	/**
+	 * Method getSentMailByOwnerId.
+	 * @param senderId int
+	 * @return List<Mail>
+	 */
 	public List<Mail> getSentMailByOwnerId(int senderId)
 	{
 		return getMailByOwnerId(senderId, true);
 	}
 	
+	/**
+	 * Method getReceivedMailByMailId.
+	 * @param receiverId int
+	 * @param messageId int
+	 * @return Mail
+	 */
 	public Mail getReceivedMailByMailId(int receiverId, int messageId)
 	{
 		List<Mail> list = getMailByOwnerId(receiverId, false);
@@ -360,6 +485,12 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		return null;
 	}
 	
+	/**
+	 * Method getSentMailByMailId.
+	 * @param senderId int
+	 * @param messageId int
+	 * @return Mail
+	 */
 	public Mail getSentMailByMailId(int senderId, int messageId)
 	{
 		List<Mail> list = getMailByOwnerId(senderId, true);
@@ -373,16 +504,33 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		return null;
 	}
 	
+	/**
+	 * Method deleteReceivedMailByMailId.
+	 * @param receiverId int
+	 * @param messageId int
+	 * @return boolean
+	 */
 	public boolean deleteReceivedMailByMailId(int receiverId, int messageId)
 	{
 		return deleteMailByOwnerIdAndMailId(receiverId, messageId, false);
 	}
 	
+	/**
+	 * Method deleteSentMailByMailId.
+	 * @param senderId int
+	 * @param messageId int
+	 * @return boolean
+	 */
 	public boolean deleteSentMailByMailId(int senderId, int messageId)
 	{
 		return deleteMailByOwnerIdAndMailId(senderId, messageId, true);
 	}
 	
+	/**
+	 * Method getExpiredMail.
+	 * @param expireTime int
+	 * @return List<Mail>
+	 */
 	public List<Mail> getExpiredMail(int expireTime)
 	{
 		List<Integer> messageIds = Collections.emptyList();
@@ -413,6 +561,11 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		return load(messageIds);
 	}
 	
+	/**
+	 * Method load.
+	 * @param id Integer
+	 * @return Mail
+	 */
 	@Override
 	public Mail load(Integer id)
 	{
@@ -429,6 +582,11 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		return mail;
 	}
 	
+	/**
+	 * Method load.
+	 * @param messageIds Collection<Integer>
+	 * @return List<Mail>
+	 */
 	public List<Mail> load(Collection<Integer> messageIds)
 	{
 		if (messageIds.isEmpty())
@@ -448,6 +606,10 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		return list;
 	}
 	
+	/**
+	 * Method save.
+	 * @param mail Mail
+	 */
 	@Override
 	public void save(Mail mail)
 	{
@@ -468,6 +630,10 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		cache.put(new Element(mail.getMessageId(), mail));
 	}
 	
+	/**
+	 * Method update.
+	 * @param mail Mail
+	 */
 	@Override
 	public void update(Mail mail)
 	{
@@ -488,6 +654,10 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		cache.putIfAbsent(new Element(mail.getMessageId(), mail));
 	}
 	
+	/**
+	 * Method saveOrUpdate.
+	 * @param mail Mail
+	 */
 	@Override
 	public void saveOrUpdate(Mail mail)
 	{
@@ -501,6 +671,10 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		}
 	}
 	
+	/**
+	 * Method delete.
+	 * @param mail Mail
+	 */
 	@Override
 	public void delete(Mail mail)
 	{

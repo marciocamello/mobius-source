@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExOlympiadMode extends L2GameServerPacket
 {
+	/**
+	 * Field _mode.
+	 */
 	private final int _mode;
 	
+	/**
+	 * Constructor for ExOlympiadMode.
+	 * @param mode int
+	 */
 	public ExOlympiadMode(int mode)
 	{
 		_mode = mode;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

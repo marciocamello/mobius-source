@@ -33,26 +33,69 @@ import lineage2.loginserver.gameservercon.lspackets.PingRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GameServerConnection
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameServerConnection.class);
+	/**
+	 * Field readBuffer.
+	 */
 	final ByteBuffer readBuffer = ByteBuffer.allocate(64 * 1024).order(ByteOrder.LITTLE_ENDIAN);
+	/**
+	 * Field sendQueue.
+	 */
 	final Queue<SendablePacket> sendQueue = new ArrayDeque<>();
+	/**
+	 * Field sendLock.
+	 */
 	final Lock sendLock = new ReentrantLock();
+	/**
+	 * Field isPengingWrite.
+	 */
 	final AtomicBoolean isPengingWrite = new AtomicBoolean();
+	/**
+	 * Field selector.
+	 */
 	private final Selector selector;
+	/**
+	 * Field key.
+	 */
 	private final SelectionKey key;
+	/**
+	 * Field gameServer.
+	 */
 	GameServer gameServer;
+	/**
+	 * Field _pingTask.
+	 */
 	private Future<?> _pingTask;
+	/**
+	 * Field _pingRetry.
+	 */
 	int _pingRetry;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class PingTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for PingTask.
+		 */
 		public PingTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -70,12 +113,20 @@ public class GameServerConnection
 		}
 	}
 	
+	/**
+	 * Constructor for GameServerConnection.
+	 * @param key SelectionKey
+	 */
 	public GameServerConnection(SelectionKey key)
 	{
 		this.key = key;
 		selector = key.selector();
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param packet SendablePacket
+	 */
 	public void sendPacket(SendablePacket packet)
 	{
 		boolean wakeUp;
@@ -99,6 +150,10 @@ public class GameServerConnection
 		}
 	}
 	
+	/**
+	 * Method disableWriteInterest.
+	 * @return boolean * @throws CancelledKeyException
+	 */
 	protected boolean disableWriteInterest() throws CancelledKeyException
 	{
 		if (isPengingWrite.compareAndSet(true, false))
@@ -109,9 +164,13 @@ public class GameServerConnection
 		return false;
 	}
 	
+	/**
+	 * Method enableWriteInterest.
+	 * @return boolean * @throws CancelledKeyException
+	 */
 	protected boolean enableWriteInterest() throws CancelledKeyException
 	{
-		if (isPengingWrite.getAndSet(true) == false)
+		if (!(isPengingWrite.getAndSet(true)))
 		{
 			key.interestOps(key.interestOps() | SelectionKey.OP_WRITE);
 			return true;
@@ -119,12 +178,18 @@ public class GameServerConnection
 		return false;
 	}
 	
+	/**
+	 * Method closeNow.
+	 */
 	public void closeNow()
 	{
 		key.interestOps(SelectionKey.OP_CONNECT);
 		selector.wakeup();
 	}
 	
+	/**
+	 * Method onDisconnection.
+	 */
 	public void onDisconnection()
 	{
 		try
@@ -155,31 +220,53 @@ public class GameServerConnection
 		}
 	}
 	
+	/**
+	 * Method getReadBuffer.
+	 * @return ByteBuffer
+	 */
 	ByteBuffer getReadBuffer()
 	{
 		return readBuffer;
 	}
 	
+	/**
+	 * Method getGameServer.
+	 * @return GameServer
+	 */
 	GameServer getGameServer()
 	{
 		return gameServer;
 	}
 	
+	/**
+	 * Method setGameServer.
+	 * @param gameServer GameServer
+	 */
 	void setGameServer(GameServer gameServer)
 	{
 		this.gameServer = gameServer;
 	}
 	
+	/**
+	 * Method getIpAddress.
+	 * @return String
+	 */
 	public String getIpAddress()
 	{
 		return ((SocketChannel) key.channel()).socket().getInetAddress().getHostAddress();
 	}
 	
+	/**
+	 * Method onPingResponse.
+	 */
 	public void onPingResponse()
 	{
 		_pingRetry = 0;
 	}
 	
+	/**
+	 * Method startPingTask.
+	 */
 	public void startPingTask()
 	{
 		if (Config.GAME_SERVER_PING_DELAY == 0)
@@ -189,6 +276,9 @@ public class GameServerConnection
 		_pingTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new PingTask(), Config.GAME_SERVER_PING_DELAY, Config.GAME_SERVER_PING_DELAY);
 	}
 	
+	/**
+	 * Method stopPingTask.
+	 */
 	public void stopPingTask()
 	{
 		if (_pingTask != null)

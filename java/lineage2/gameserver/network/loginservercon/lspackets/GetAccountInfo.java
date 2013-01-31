@@ -29,17 +29,33 @@ import org.napile.primitive.lists.impl.ArrayIntList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GetAccountInfo extends ReceivablePacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(GetAccountInfo.class);
+	/**
+	 * Field _account.
+	 */
 	private String _account;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_account = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

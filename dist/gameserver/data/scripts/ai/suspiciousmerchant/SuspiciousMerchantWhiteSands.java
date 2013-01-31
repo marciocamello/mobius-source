@@ -18,8 +18,15 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SuspiciousMerchantWhiteSands extends DefaultAI
 {
+	/**
+	 * Field points.
+	 */
 	static final Location[] points =
 	{
 		new Location(114436, 202528, -3408),
@@ -50,21 +57,42 @@ public class SuspiciousMerchantWhiteSands extends DefaultAI
 		new Location(113809, 200514, -3720),
 		new Location(114436, 202528, -3408)
 	};
+	/**
+	 * Field current_point.
+	 */
 	private int current_point = -1;
+	/**
+	 * Field wait_timeout.
+	 */
 	private long wait_timeout = 0;
+	/**
+	 * Field wait.
+	 */
 	private boolean wait = false;
 	
+	/**
+	 * Constructor for SuspiciousMerchantWhiteSands.
+	 * @param actor NpcInstance
+	 */
 	public SuspiciousMerchantWhiteSands(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -128,11 +156,21 @@ public class SuspiciousMerchantWhiteSands extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

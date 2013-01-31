@@ -28,8 +28,15 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RateBonus extends Functions
 {
+	/**
+	 * Method list.
+	 */
 	public void list()
 	{
 		Player player = getSelf();
@@ -64,6 +71,10 @@ public class RateBonus extends Functions
 		show(html, player);
 	}
 	
+	/**
+	 * Method get.
+	 * @param param String[]
+	 */
 	public void get(String[] param)
 	{
 		Player player = getSelf();

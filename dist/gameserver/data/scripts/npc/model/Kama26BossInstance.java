@@ -24,27 +24,49 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.MinionData;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Kama26BossInstance extends KamalokaBossInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _spawner.
+	 */
 	ScheduledFuture<?> _spawner;
+	/**
+	 * Field _refCollapseListener.
+	 */
 	private final ReflectionCollapseListener _refCollapseListener = new ReflectionCollapseListener();
 	
+	/**
+	 * Constructor for Kama26BossInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public Kama26BossInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		getMinionList().addMinion(new MinionData(18556, 1));
 	}
 	
+	/**
+	 * Method notifyMinionDied.
+	 * @param minion MinionInstance
+	 */
 	@Override
 	public void notifyMinionDied(MinionInstance minion)
 	{
 		_spawner = ThreadPoolManager.getInstance().scheduleAtFixedRate(new MinionSpawner(), 60000, 60000);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -52,6 +74,10 @@ public class Kama26BossInstance extends KamalokaBossInstance
 		getReflection().addListener(_refCollapseListener);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -63,8 +89,14 @@ public class Kama26BossInstance extends KamalokaBossInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class MinionSpawner extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -76,8 +108,16 @@ public class Kama26BossInstance extends KamalokaBossInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ReflectionCollapseListener implements OnReflectionCollapseListener
 	{
+		/**
+		 * Method onReflectionCollapse.
+		 * @param ref Reflection
+		 * @see lineage2.gameserver.listener.reflection.OnReflectionCollapseListener#onReflectionCollapse(Reflection)
+		 */
 		@Override
 		public void onReflectionCollapse(Reflection ref)
 		{

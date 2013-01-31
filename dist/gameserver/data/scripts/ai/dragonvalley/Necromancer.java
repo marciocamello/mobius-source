@@ -19,13 +19,25 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.NpcUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Necromancer extends Mystic
 {
+	/**
+	 * Constructor for Necromancer.
+	 * @param actor NpcInstance
+	 */
 	public Necromancer(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

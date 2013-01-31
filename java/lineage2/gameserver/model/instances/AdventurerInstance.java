@@ -24,19 +24,36 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdventurerInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(AdventurerInstance.class);
 	
+	/**
+	 * Constructor for AdventurerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public AdventurerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -87,6 +104,13 @@ public class AdventurerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{

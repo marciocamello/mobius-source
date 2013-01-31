@@ -27,6 +27,10 @@ import lineage2.gameserver.model.quest.QuestEventType;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class QuestSiegeGuardInstance extends SiegeGuardInstance
 {
 	/**
@@ -34,11 +38,20 @@ public class QuestSiegeGuardInstance extends SiegeGuardInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for QuestSiegeGuardInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public QuestSiegeGuardInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param lastAttacker Creature
+	 */
 	@Override
 	public void onDeath(Creature lastAttacker)
 	{

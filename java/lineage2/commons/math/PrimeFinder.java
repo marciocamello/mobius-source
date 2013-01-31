@@ -14,9 +14,19 @@ package lineage2.commons.math;
 
 import java.util.Arrays;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class PrimeFinder
 {
+	/**
+	 * Field largestPrime.
+	 */
 	public static final int largestPrime = Integer.MAX_VALUE;
+	/**
+	 * Field primeCapacities.
+	 */
 	private static final int[] primeCapacities =
 	{
 		largestPrime,
@@ -270,6 +280,11 @@ public final class PrimeFinder
 		Arrays.sort(primeCapacities);
 	}
 	
+	/**
+	 * Method nextPrime.
+	 * @param desiredCapacity int
+	 * @return int
+	 */
 	public static final int nextPrime(int desiredCapacity)
 	{
 		int i = Arrays.binarySearch(primeCapacities, desiredCapacity);

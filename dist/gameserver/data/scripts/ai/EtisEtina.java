@@ -18,17 +18,39 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EtisEtina extends Fighter
 {
+	/**
+	 * Field summonsReleased.
+	 */
 	private boolean summonsReleased = false;
+	/**
+	 * Field summon1.
+	 */
 	private NpcInstance summon1;
+	/**
+	 * Field summon2.
+	 */
 	private NpcInstance summon2;
 	
+	/**
+	 * Constructor for EtisEtina.
+	 * @param actor NpcInstance
+	 */
 	public EtisEtina(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -42,6 +64,10 @@ public class EtisEtina extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

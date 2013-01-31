@@ -17,11 +17,24 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.ExMentorList;
 import lineage2.gameserver.utils.Mentoring;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestMentorCancel extends L2GameClientPacket
 {
+	/**
+	 * Field _mtype.
+	 */
 	private int _mtype;
+	/**
+	 * Field _charName.
+	 */
 	private String _charName;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -29,6 +42,9 @@ public class RequestMentorCancel extends L2GameClientPacket
 		_charName = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

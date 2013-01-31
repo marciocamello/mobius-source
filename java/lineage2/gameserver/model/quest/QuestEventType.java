@@ -12,12 +12,34 @@
  */
 package lineage2.gameserver.model.quest;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum QuestEventType
 {
+	/**
+	 * Field MOB_TARGETED_BY_SKILL.
+	 */
 	MOB_TARGETED_BY_SKILL,
+	/**
+	 * Field ATTACKED_WITH_QUEST.
+	 */
 	ATTACKED_WITH_QUEST,
+	/**
+	 * Field MOB_KILLED_WITH_QUEST.
+	 */
 	MOB_KILLED_WITH_QUEST,
+	/**
+	 * Field QUEST_START.
+	 */
 	QUEST_START,
+	/**
+	 * Field QUEST_TALK.
+	 */
 	QUEST_TALK,
+	/**
+	 * Field NPC_FIRST_TALK.
+	 */
 	NPC_FIRST_TALK
 }

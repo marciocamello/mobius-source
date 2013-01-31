@@ -12,18 +12,44 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExResponseCommissionBuyItem extends L2GameServerPacket
 {
+	/**
+	 * Field FAILED.
+	 */
 	public static final ExResponseCommissionBuyItem FAILED = new ExResponseCommissionBuyItem(0);
+	/**
+	 * Field _code.
+	 */
 	private final int _code;
+	/**
+	 * Field _itemId.
+	 */
 	private int _itemId;
+	/**
+	 * Field _count.
+	 */
 	private long _count;
 	
+	/**
+	 * Constructor for ExResponseCommissionBuyItem.
+	 * @param code int
+	 */
 	public ExResponseCommissionBuyItem(int code)
 	{
 		_code = code;
 	}
 	
+	/**
+	 * Constructor for ExResponseCommissionBuyItem.
+	 * @param code int
+	 * @param itemId int
+	 * @param count long
+	 */
 	public ExResponseCommissionBuyItem(int code, int itemId, long count)
 	{
 		_code = code;
@@ -31,6 +57,9 @@ public class ExResponseCommissionBuyItem extends L2GameServerPacket
 		_count = count;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -25,6 +25,10 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PriestOfBlessingInstance extends NpcInstance
 {
 	/**
@@ -32,13 +36,35 @@ public class PriestOfBlessingInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class Hourglass
 	{
+		/**
+		 * Field minLevel.
+		 */
 		public int minLevel;
+		/**
+		 * Field maxLevel.
+		 */
 		public int maxLevel;
+		/**
+		 * Field itemPrice.
+		 */
 		public int itemPrice;
+		/**
+		 * Field itemId.
+		 */
 		public int[] itemId;
 		
+		/**
+		 * Constructor for Hourglass.
+		 * @param min int
+		 * @param max int
+		 * @param price int
+		 * @param id int[]
+		 */
 		public Hourglass(int min, int max, int price, int[] id)
 		{
 			minLevel = min;
@@ -48,6 +74,9 @@ public class PriestOfBlessingInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Field hourglassList.
+	 */
 	private static List<Hourglass> hourglassList = new ArrayList<>();
 	static
 	{
@@ -109,11 +138,21 @@ public class PriestOfBlessingInstance extends NpcInstance
 		}));
 	}
 	
+	/**
+	 * Constructor for PriestOfBlessingInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public PriestOfBlessingInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -138,6 +177,12 @@ public class PriestOfBlessingInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -156,6 +201,11 @@ public class PriestOfBlessingInstance extends NpcInstance
 		super.showChatWindow(player, val);
 	}
 	
+	/**
+	 * Method getHourglass.
+	 * @param player Player
+	 * @return Hourglass
+	 */
 	private static Hourglass getHourglass(Player player)
 	{
 		for (Hourglass hg : hourglassList)
@@ -168,12 +218,25 @@ public class PriestOfBlessingInstance extends NpcInstance
 		return null;
 	}
 	
+	/**
+	 * Method getHourglassId.
+	 * @param hg Hourglass
+	 * @return int
+	 */
 	private static int getHourglassId(Hourglass hg)
 	{
 		int id = hg.itemId[Rnd.get(hg.itemId.length)];
 		return id;
 	}
 	
+	/**
+	 * Method buyLimitedItem.
+	 * @param player Player
+	 * @param var String
+	 * @param itemId int
+	 * @param price int
+	 * @param isGlobalVar boolean
+	 */
 	private void buyLimitedItem(Player player, String var, int itemId, int price, boolean isGlobalVar)
 	{
 		long _remaining_time;

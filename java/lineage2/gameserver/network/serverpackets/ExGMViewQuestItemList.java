@@ -16,13 +16,35 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExGMViewQuestItemList extends L2GameServerPacket
 {
+	/**
+	 * Field _size.
+	 */
 	private final int _size;
+	/**
+	 * Field _items.
+	 */
 	private final ItemInstance[] _items;
+	/**
+	 * Field _limit.
+	 */
 	private final int _limit;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
 	
+	/**
+	 * Constructor for ExGMViewQuestItemList.
+	 * @param player Player
+	 * @param items ItemInstance[]
+	 * @param size int
+	 */
 	public ExGMViewQuestItemList(Player player, ItemInstance[] items, int size)
 	{
 		_items = items;
@@ -31,6 +53,9 @@ public class ExGMViewQuestItemList extends L2GameServerPacket
 		_limit = Config.QUEST_INVENTORY_MAXIMUM;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

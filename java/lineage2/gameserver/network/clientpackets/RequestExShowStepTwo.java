@@ -18,16 +18,29 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.petition.PetitionMainGroup;
 import lineage2.gameserver.network.serverpackets.ExResponseShowStepTwo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExShowStepTwo extends L2GameClientPacket
 {
+	/**
+	 * Field _petitionGroupId.
+	 */
 	private int _petitionGroupId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_petitionGroupId = readC();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -25,10 +25,20 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.RecipeTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Recipes extends ScriptItemHandler
 {
+	/**
+	 * Field _itemIds.
+	 */
 	private static int[] _itemIds = null;
 	
+	/**
+	 * Constructor for Recipes.
+	 */
 	public Recipes()
 	{
 		Collection<RecipeTemplate> rc = RecipeHolder.getInstance().getRecipes();
@@ -40,6 +50,13 @@ public class Recipes extends ScriptItemHandler
 		}
 	}
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -109,6 +126,10 @@ public class Recipes extends ScriptItemHandler
 		return false;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{

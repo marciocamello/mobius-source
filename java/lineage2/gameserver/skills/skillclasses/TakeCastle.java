@@ -23,13 +23,30 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TakeCastle extends Skill
 {
+	/**
+	 * Constructor for TakeCastle.
+	 * @param set StatsSet
+	 */
 	public TakeCastle(StatsSet set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -75,6 +92,11 @@ public class TakeCastle extends Skill
 		return true;
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

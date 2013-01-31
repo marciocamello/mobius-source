@@ -27,14 +27,24 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Dwarvs extends Fighter
 {
+	/**
+	 * Field MESSAGES_1.
+	 */
 	private static final int[] MESSAGES_1 =
 	{
 		1620059,
 		1620060,
 		1620061
 	};
+	/**
+	 * Field MESSAGES_2.
+	 */
 	private static final int[] MESSAGES_2 =
 	{
 		1620068,
@@ -43,11 +53,17 @@ public class Dwarvs extends Fighter
 		1620071,
 		1620072
 	};
+	/**
+	 * Field ATTACK_IDS.
+	 */
 	private static final int[] ATTACK_IDS =
 	{
 		19171,
 		19172
 	};
+	/**
+	 * Field MOVE_LOC.
+	 */
 	private static final Location[] MOVE_LOC =
 	{
 		new Location(115830, -182103, -1400),
@@ -55,25 +71,56 @@ public class Dwarvs extends Fighter
 		new Location(116830, -180257, -1176),
 		new Location(116552, -180008, -1187),
 	};
+	/**
+	 * Field WAY_1.
+	 */
 	private static final Location[] WAY_1 =
 	{
 		new Location(117147, -179248, -1120),
 	};
+	/**
+	 * Field WAY_2.
+	 */
 	private static final Location[] WAY_2 =
 	{
 		new Location(116279, -179360, -112),
 	};
+	/**
+	 * Field WAY_3.
+	 */
 	private static final Location[] WAY_3 =
 	{
 		new Location(115110, -178852, -896),
 	};
+	/**
+	 * Field startBattle.
+	 */
 	private boolean startBattle = false;
+	/**
+	 * Field currentPoint.
+	 */
 	private int currentPoint = 0;
+	/**
+	 * Field currentPoint2.
+	 */
 	private int currentPoint2 = 0;
+	/**
+	 * Field loc.
+	 */
 	private Location loc;
+	/**
+	 * Field diedTentacle.
+	 */
 	private int diedTentacle = 0;
+	/**
+	 * Field way.
+	 */
 	private Location[] way = {};
 	
+	/**
+	 * Constructor for Dwarvs.
+	 * @param actor NpcInstance
+	 */
 	public Dwarvs(NpcInstance actor)
 	{
 		super(actor);
@@ -92,6 +139,12 @@ public class Dwarvs extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtScriptEvent.
+	 * @param event String
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
@@ -113,6 +166,9 @@ public class Dwarvs extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
@@ -131,6 +187,11 @@ public class Dwarvs extends Fighter
 		}
 	}
 	
+	/**
+	 * Method canAttackCharacter.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	protected boolean canAttackCharacter(Creature target)
 	{
@@ -147,6 +208,11 @@ public class Dwarvs extends Fighter
 		return ArrayUtils.contains(ATTACK_IDS, target.getNpcId());
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{
@@ -165,6 +231,10 @@ public class Dwarvs extends Fighter
 		return super.checkAggression(target);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -220,18 +290,31 @@ public class Dwarvs extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method returnHome.
+	 * @param clearAggro boolean
+	 * @param teleport boolean
+	 */
 	@Override
 	protected void returnHome(boolean clearAggro, boolean teleport)
 	{
 		changeIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
 	}
 	
+	/**
+	 * Method maybeMoveToHome.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean maybeMoveToHome()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getMaxAttackTimeout.
+	 * @return int
+	 */
 	@Override
 	public int getMaxAttackTimeout()
 	{

@@ -57,10 +57,23 @@ import lineage2.gameserver.utils.Location;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 {
+	/**
+	 * @author Mobius
+	 */
 	public class DoorDeathListener implements OnDeathListener
 	{
+		/**
+		 * Method onDeath.
+		 * @param actor Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature actor, Creature killer)
 		{
@@ -86,8 +99,17 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class KillListener implements OnKillListener
 	{
+		/**
+		 * Method onKill.
+		 * @param actor Creature
+		 * @param victim Creature
+		 * @see lineage2.gameserver.listener.actor.OnKillListener#onKill(Creature, Creature)
+		 */
 		@Override
 		public void onKill(Creature actor, Creature victim)
 		{
@@ -114,6 +136,10 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 			}
 		}
 		
+		/**
+		 * Method ignorePetOrSummon.
+		 * @return boolean * @see lineage2.gameserver.listener.actor.OnKillListener#ignorePetOrSummon()
+		 */
 		@Override
 		public boolean ignorePetOrSummon()
 		{
@@ -121,20 +147,63 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Field KILL_REWARD. (value is 0)
+	 */
 	public static final int KILL_REWARD = 0;
+	/**
+	 * Field ONLINE_REWARD. (value is 1)
+	 */
 	public static final int ONLINE_REWARD = 1;
+	/**
+	 * Field STATIC_BADGES. (value is 2)
+	 */
 	public static final int STATIC_BADGES = 2;
+	/**
+	 * Field REWARD_MAX. (value is 3)
+	 */
 	public static final int REWARD_MAX = 3;
+	/**
+	 * Field ATTACKER_PLAYERS. (value is ""attacker_players"")
+	 */
 	public static final String ATTACKER_PLAYERS = "attacker_players";
+	/**
+	 * Field DEFENDER_PLAYERS. (value is ""defender_players"")
+	 */
 	public static final String DEFENDER_PLAYERS = "defender_players";
+	/**
+	 * Field DISGUISE_PLAYERS. (value is ""disguise_players"")
+	 */
 	public static final String DISGUISE_PLAYERS = "disguise_players";
+	/**
+	 * Field TERRITORY_NPC. (value is ""territory_npc"")
+	 */
 	public static final String TERRITORY_NPC = "territory_npc";
+	/**
+	 * Field CATAPULT. (value is ""catapult"")
+	 */
 	public static final String CATAPULT = "catapult";
+	/**
+	 * Field CATAPULT_DOORS. (value is ""catapult_doors"")
+	 */
 	public static final String CATAPULT_DOORS = "catapult_doors";
+	/**
+	 * Field _runnerEvent.
+	 */
 	DominionSiegeRunnerEvent _runnerEvent;
+	/**
+	 * Field _forSakeQuest.
+	 */
 	private Quest _forSakeQuest;
+	/**
+	 * Field _playersRewards.
+	 */
 	private final IntObjectMap<int[]> _playersRewards = new CHashIntObjectMap<>();
 	
+	/**
+	 * Constructor for DominionSiegeEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public DominionSiegeEvent(MultiValueSet<String> set)
 	{
 		super(set);
@@ -142,6 +211,9 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		_doorDeathListener = new DoorDeathListener();
 	}
 	
+	/**
+	 * Method initEvent.
+	 */
 	@Override
 	public void initEvent()
 	{
@@ -157,11 +229,18 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onInit boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -209,6 +288,10 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		super.startEvent();
 	}
 	
+	/**
+	 * Method stopEvent.
+	 * @param t boolean
+	 */
 	@Override
 	public void stopEvent(boolean t)
 	{
@@ -231,6 +314,9 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		DominionRewardDAO.getInstance().insert(getResidence());
 	}
 	
+	/**
+	 * Method loadSiegeClans.
+	 */
 	@Override
 	public void loadSiegeClans()
 	{
@@ -239,6 +325,11 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		DominionRewardDAO.getInstance().select(getResidence());
 	}
 	
+	/**
+	 * Method updateParticles.
+	 * @param start boolean
+	 * @param arg String[]
+	 */
 	@Override
 	public void updateParticles(boolean start, String... arg)
 	{
@@ -275,6 +366,11 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method updatePlayer.
+	 * @param player Player
+	 * @param start boolean
+	 */
 	public void updatePlayer(Player player, boolean start)
 	{
 		player.setBattlefieldChatId(_runnerEvent.isBattlefieldChatActive() ? getId() : 0);
@@ -301,6 +397,11 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method questUpdate.
+	 * @param player Player
+	 * @param start boolean
+	 */
 	public void questUpdate(Player player, boolean start)
 	{
 		if (start)
@@ -330,6 +431,11 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method isParticle.
+	 * @param player Player
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParticle(Player player)
 	{
@@ -350,6 +456,13 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		return false;
 	}
 	
+	/**
+	 * Method getRelation.
+	 * @param thisPlayer Player
+	 * @param targetPlayer Player
+	 * @param result int
+	 * @return int
+	 */
 	@Override
 	public int getRelation(Player thisPlayer, Player targetPlayer, int result)
 	{
@@ -362,6 +475,12 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		return result;
 	}
 	
+	/**
+	 * Method getUserRelation.
+	 * @param thisPlayer Player
+	 * @param oldRelation int
+	 * @return int
+	 */
 	@Override
 	public int getUserRelation(Player thisPlayer, int oldRelation)
 	{
@@ -369,6 +488,14 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		return oldRelation;
 	}
 	
+	/**
+	 * Method checkForAttack.
+	 * @param target Creature
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param force boolean
+	 * @return SystemMsg
+	 */
 	@Override
 	public SystemMsg checkForAttack(Creature target, Creature attacker, Skill skill, boolean force)
 	{
@@ -380,6 +507,11 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		return null;
 	}
 	
+	/**
+	 * Method broadcastTo.
+	 * @param packet IStaticPacket
+	 * @param types String[]
+	 */
 	@Override
 	public void broadcastTo(IStaticPacket packet, String... types)
 	{
@@ -399,6 +531,11 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method broadcastTo.
+	 * @param packet L2GameServerPacket
+	 * @param types String[]
+	 */
 	@Override
 	public void broadcastTo(L2GameServerPacket packet, String... types)
 	{
@@ -418,6 +555,12 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method giveItem.
+	 * @param player Player
+	 * @param itemId int
+	 * @param count long
+	 */
 	@Override
 	public void giveItem(Player player, int itemId, long count)
 	{
@@ -442,6 +585,10 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		super.giveItem(player, itemId, count);
 	}
 	
+	/**
+	 * Method itemObtainPlayers.
+	 * @return List<Player>
+	 */
 	@Override
 	public List<Player> itemObtainPlayers()
 	{
@@ -457,6 +604,11 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		return list;
 	}
 	
+	/**
+	 * Method checkRestartLocs.
+	 * @param player Player
+	 * @param r Map<RestartType,Boolean>
+	 */
 	@Override
 	public void checkRestartLocs(Player player, Map<RestartType, Boolean> r)
 	{
@@ -471,6 +623,12 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method getRestartLoc.
+	 * @param player Player
+	 * @param type RestartType
+	 * @return Location
+	 */
 	@Override
 	public Location getRestartLoc(Player player, RestartType type)
 	{
@@ -487,6 +645,11 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		return super.getRestartLoc(player, type);
 	}
 	
+	/**
+	 * Method getEnterLoc.
+	 * @param player Player
+	 * @return Location
+	 */
 	@Override
 	public Location getEnterLoc(Player player)
 	{
@@ -512,6 +675,10 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		return r.getNotOwnerRestartPoint(player);
 	}
 	
+	/**
+	 * Method teleportPlayers.
+	 * @param t String
+	 */
 	@Override
 	public void teleportPlayers(String t)
 	{
@@ -523,6 +690,13 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method canRessurect.
+	 * @param resurrectPlayer Player
+	 * @param target Creature
+	 * @param force boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean canRessurect(Player resurrectPlayer, Creature target, boolean force)
 	{
@@ -565,6 +739,12 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		return false;
 	}
 	
+	/**
+	 * Method setReward.
+	 * @param objectId int
+	 * @param type int
+	 * @param v int
+	 */
 	public void setReward(int objectId, int type, int v)
 	{
 		int val[] = _playersRewards.get(objectId);
@@ -575,6 +755,12 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		val[type] = v;
 	}
 	
+	/**
+	 * Method addReward.
+	 * @param player Player
+	 * @param type int
+	 * @param v int
+	 */
 	public void addReward(Player player, int type, int v)
 	{
 		int val[] = _playersRewards.get(player.getObjectId());
@@ -585,6 +771,12 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		val[type] += v;
 	}
 	
+	/**
+	 * Method getReward.
+	 * @param player Player
+	 * @param type int
+	 * @return int
+	 */
 	public int getReward(Player player, int type)
 	{
 		int val[] = _playersRewards.get(player.getObjectId());
@@ -595,6 +787,10 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		return val[type];
 	}
 	
+	/**
+	 * Method clearReward.
+	 * @param objectId int
+	 */
 	public void clearReward(int objectId)
 	{
 		if (_playersRewards.containsKey(objectId))
@@ -604,11 +800,20 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method getRewards.
+	 * @return Collection<IntObjectMap.Entry<int[]>>
+	 */
 	public Collection<IntObjectMap.Entry<int[]>> getRewards()
 	{
 		return _playersRewards.entrySet();
 	}
 	
+	/**
+	 * Method calculateReward.
+	 * @param player Player
+	 * @return int[]
+	 */
 	public int[] calculateReward(Player player)
 	{
 		int rewards[] = _playersRewards.get(player.getObjectId());
@@ -640,6 +845,10 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		return out;
 	}
 	
+	/**
+	 * Method setForSakeQuest.
+	 * @param forSakeQuest Quest
+	 */
 	public void setForSakeQuest(Quest forSakeQuest)
 	{
 		_forSakeQuest = forSakeQuest;

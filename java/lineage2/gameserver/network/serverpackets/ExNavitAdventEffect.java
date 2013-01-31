@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExNavitAdventEffect extends L2GameServerPacket
 {
+	/**
+	 * Field _time.
+	 */
 	private final int _time;
 	
+	/**
+	 * Constructor for ExNavitAdventEffect.
+	 * @param time int
+	 */
 	public ExNavitAdventEffect(int time)
 	{
 		_time = time;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

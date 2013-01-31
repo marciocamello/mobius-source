@@ -33,14 +33,36 @@ import lineage2.gameserver.templates.manor.CropProcure;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestProcureCropList extends L2GameClientPacket
 {
+	/**
+	 * Field _count.
+	 */
 	private int _count;
+	/**
+	 * Field _items.
+	 */
 	private int[] _items;
+	/**
+	 * Field _crop.
+	 */
 	private int[] _crop;
+	/**
+	 * Field _manor.
+	 */
 	private int[] _manor;
+	/**
+	 * Field _itemQ.
+	 */
 	private long[] _itemQ;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -68,6 +90,9 @@ public class RequestProcureCropList extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

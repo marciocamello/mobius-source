@@ -15,18 +15,53 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExStorageMaxCount extends L2GameServerPacket
 {
+	/**
+	 * Field _inventory.
+	 */
 	private final int _inventory;
+	/**
+	 * Field _warehouse.
+	 */
 	private final int _warehouse;
+	/**
+	 * Field _clan.
+	 */
 	private final int _clan;
+	/**
+	 * Field _privateSell.
+	 */
 	private int _privateSell;
+	/**
+	 * Field _privateBuy.
+	 */
 	private final int _privateBuy;
+	/**
+	 * Field _recipeDwarven.
+	 */
 	private final int _recipeDwarven;
+	/**
+	 * Field _recipeCommon.
+	 */
 	private final int _recipeCommon;
+	/**
+	 * Field _inventoryExtraSlots.
+	 */
 	private final int _inventoryExtraSlots;
+	/**
+	 * Field _questItemsLimit.
+	 */
 	private final int _questItemsLimit;
 	
+	/**
+	 * Constructor for ExStorageMaxCount.
+	 * @param player Player
+	 */
 	public ExStorageMaxCount(Player player)
 	{
 		_inventory = player.getInventoryLimit();
@@ -39,6 +74,9 @@ public class ExStorageMaxCount extends L2GameServerPacket
 		_questItemsLimit = Config.QUEST_INVENTORY_MAXIMUM;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

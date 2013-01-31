@@ -23,12 +23,29 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChainHeal extends Skill
 {
+	/**
+	 * Field _healPercents.
+	 */
 	private final int[] _healPercents;
+	/**
+	 * Field _healRadius.
+	 */
 	private final int _healRadius;
+	/**
+	 * Field _maxTargets.
+	 */
 	private final int _maxTargets;
 	
+	/**
+	 * Constructor for ChainHeal.
+	 * @param set StatsSet
+	 */
 	public ChainHeal(StatsSet set)
 	{
 		super(set);
@@ -42,6 +59,11 @@ public class ChainHeal extends Skill
 		}
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
@@ -78,6 +100,13 @@ public class ChainHeal extends Skill
 		}
 	}
 	
+	/**
+	 * Method getTargets.
+	 * @param activeChar Creature
+	 * @param aimingTarget Creature
+	 * @param forceUse boolean
+	 * @return List<Creature>
+	 */
 	@Override
 	public List<Creature> getTargets(Creature activeChar, Creature aimingTarget, boolean forceUse)
 	{
@@ -137,22 +166,44 @@ public class ChainHeal extends Skill
 		return result;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class HealTarget
 	{
+		/**
+		 * Field hpPercent.
+		 */
 		private final double hpPercent;
+		/**
+		 * Field target.
+		 */
 		private final Creature target;
 		
+		/**
+		 * Constructor for HealTarget.
+		 * @param hpPercent double
+		 * @param target Creature
+		 */
 		public HealTarget(double hpPercent, Creature target)
 		{
 			this.hpPercent = hpPercent;
 			this.target = target;
 		}
 		
+		/**
+		 * Method getHpPercent.
+		 * @return double
+		 */
 		public double getHpPercent()
 		{
 			return hpPercent;
 		}
 		
+		/**
+		 * Method getTarget.
+		 * @return Creature
+		 */
 		public Creature getTarget()
 		{
 			return target;

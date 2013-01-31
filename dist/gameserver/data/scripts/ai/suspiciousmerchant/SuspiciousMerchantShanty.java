@@ -19,8 +19,15 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SuspiciousMerchantShanty extends DefaultAI
 {
+	/**
+	 * Field points.
+	 */
 	static final Location[] points =
 	{
 		new Location(-58672, 154703, -2688),
@@ -44,21 +51,42 @@ public class SuspiciousMerchantShanty extends DefaultAI
 		new Location(-60152, 156167, -2824),
 		new Location(-58652, 154707, -2688)
 	};
+	/**
+	 * Field current_point.
+	 */
 	private int current_point = -1;
+	/**
+	 * Field wait_timeout.
+	 */
 	private long wait_timeout = 0;
+	/**
+	 * Field wait.
+	 */
 	private boolean wait = false;
 	
+	/**
+	 * Constructor for SuspiciousMerchantShanty.
+	 * @param actor NpcInstance
+	 */
 	public SuspiciousMerchantShanty(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -91,23 +119,23 @@ public class SuspiciousMerchantShanty extends DefaultAI
 						switch (Rnd.get(4))
 						{
 							case 0:
-								Functions.npcSay(actor, "Как погода?");
+								Functions.npcSay(actor, "�?ак погода?");
 								break;
 							case 1:
-								Functions.npcSay(actor, "Как жизнь?");
+								Functions.npcSay(actor, "�?ак жизн�??");
 								break;
 							case 2:
-								Functions.npcSay(actor, "Погода сегодня хорошая.");
+								Functions.npcSay(actor, "�?огода �?егодн�? хоро�?а�?.");
 								break;
 							case 3:
-								Functions.npcSay(actor, "А у вас крепкие ворота?");
+								Functions.npcSay(actor, "�? у ва�? крепкие ворота?");
 								break;
 						}
 						wait = true;
 						return true;
 					case 12:
 						wait_timeout = System.currentTimeMillis() + 15000;
-						Functions.npcSay(actor, "А где дорога?");
+						Functions.npcSay(actor, "�? где дорога?");
 						wait = true;
 						return true;
 				}
@@ -117,13 +145,13 @@ public class SuspiciousMerchantShanty extends DefaultAI
 				switch (current_point)
 				{
 					case 0:
-						Functions.npcSay(actor, "Надо разведать обстановку...");
+						Functions.npcSay(actor, "�?адо разведат�? об�?тановку...");
 						break;
 					case 2:
-						Functions.npcSay(actor, "Пойду прогуляюсь...");
+						Functions.npcSay(actor, "�?ойду прогул�?�?�?�?...");
 						break;
 					case 12:
-						Functions.npcSay(actor, "Куда мир катится...");
+						Functions.npcSay(actor, "�?уда мир катит�?�?...");
 						break;
 				}
 			}
@@ -145,11 +173,21 @@ public class SuspiciousMerchantShanty extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

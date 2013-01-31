@@ -17,12 +17,25 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPledgeMemberInfo extends L2GameClientPacket
 {
+	/**
+	 * Field _pledgeType.
+	 */
 	@SuppressWarnings("unused")
 	private int _pledgeType;
+	/**
+	 * Field _target.
+	 */
 	private String _target;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -30,6 +43,9 @@ public class RequestPledgeMemberInfo extends L2GameClientPacket
 		_target = readS(16);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

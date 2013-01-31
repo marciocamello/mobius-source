@@ -34,15 +34,28 @@ import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.templates.CubicTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectCubic extends Effect
 {
+	/**
+	 * @author Mobius
+	 */
 	private class ActionTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for ActionTask.
+		 */
 		public ActionTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -59,15 +72,29 @@ public class EffectCubic extends Effect
 		}
 	}
 	
+	/**
+	 * Field _template.
+	 */
 	private final CubicTemplate _template;
+	/**
+	 * Field _task.
+	 */
 	private Future<?> _task = null;
 	
+	/**
+	 * Constructor for EffectCubic.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectCubic(Env env, EffectTemplate template)
 	{
 		super(env, template);
 		_template = CubicHolder.getInstance().getTemplate(getTemplate().getParam().getInteger("cubicId"), getTemplate().getParam().getInteger("cubicLevel"));
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -81,6 +108,9 @@ public class EffectCubic extends Effect
 		_task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new ActionTask(), 1000L, 1000L);
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -95,6 +125,10 @@ public class EffectCubic extends Effect
 		_task = null;
 	}
 	
+	/**
+	 * Method doAction.
+	 * @param player Player
+	 */
 	public void doAction(Player player)
 	{
 		for (Map.Entry<Integer, List<CubicTemplate.SkillInfo>> entry : _template.getSkills())
@@ -128,29 +162,51 @@ public class EffectCubic extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean onActionTime()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isHidden.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isHidden()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isCancelable.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isCancelable()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _template.getId();
 	}
 	
+	/**
+	 * Method doHeal.
+	 * @param player Player
+	 * @param info CubicTemplate.SkillInfo
+	 * @param delay int
+	 */
 	private static void doHeal(final Player player, CubicTemplate.SkillInfo info, final int delay)
 	{
 		final Skill skill = info.getSkill();
@@ -203,6 +259,12 @@ public class EffectCubic extends Effect
 		}, skill.getHitTime());
 	}
 	
+	/**
+	 * Method doAttack.
+	 * @param player Player
+	 * @param info CubicTemplate.SkillInfo
+	 * @param delay int
+	 */
 	private static void doAttack(final Player player, final CubicTemplate.SkillInfo info, final int delay)
 	{
 		if (!Rnd.chance(info.getChance()))
@@ -251,6 +313,12 @@ public class EffectCubic extends Effect
 		}, skill.getHitTime());
 	}
 	
+	/**
+	 * Method doDebuff.
+	 * @param player Player
+	 * @param info CubicTemplate.SkillInfo
+	 * @param delay int
+	 */
 	private static void doDebuff(final Player player, final CubicTemplate.SkillInfo info, final int delay)
 	{
 		if (!Rnd.chance(info.getChance()))
@@ -303,6 +371,12 @@ public class EffectCubic extends Effect
 		}, skill.getHitTime());
 	}
 	
+	/**
+	 * Method doCancel.
+	 * @param player Player
+	 * @param info CubicTemplate.SkillInfo
+	 * @param delay int
+	 */
 	private static void doCancel(final Player player, final CubicTemplate.SkillInfo info, final int delay)
 	{
 		if (!Rnd.chance(info.getChance()))

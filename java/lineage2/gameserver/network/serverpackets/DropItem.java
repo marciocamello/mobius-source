@@ -16,12 +16,30 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DropItem extends L2GameServerPacket
 {
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
+	/**
+	 * Field _stackable. Field item_id. Field item_obj_id. Field _playerId.
+	 */
 	private final int _playerId, item_obj_id, item_id, _stackable;
+	/**
+	 * Field _count.
+	 */
 	private final long _count;
 	
+	/**
+	 * Constructor for DropItem.
+	 * @param item ItemInstance
+	 * @param playerId int
+	 */
 	public DropItem(ItemInstance item, int playerId)
 	{
 		_playerId = playerId;
@@ -32,6 +50,9 @@ public class DropItem extends L2GameServerPacket
 		_count = item.getCount();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

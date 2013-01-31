@@ -29,22 +29,46 @@ import lineage2.gameserver.network.serverpackets.ShortCutInit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShortCutList
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ShortCutList.class);
+	/**
+	 * Field player.
+	 */
 	private final Player player;
+	/**
+	 * Field _shortCuts.
+	 */
 	private final Map<Integer, ShortCut> _shortCuts = new ConcurrentHashMap<>();
 	
+	/**
+	 * Constructor for ShortCutList.
+	 * @param owner Player
+	 */
 	public ShortCutList(Player owner)
 	{
 		player = owner;
 	}
 	
+	/**
+	 * Method getAllShortCuts.
+	 * @return Collection<ShortCut>
+	 */
 	public Collection<ShortCut> getAllShortCuts()
 	{
 		return _shortCuts.values();
 	}
 	
+	/**
+	 * Method validate.
+	 */
 	public void validate()
 	{
 		for (ShortCut sc : _shortCuts.values())
@@ -59,6 +83,12 @@ public class ShortCutList
 		}
 	}
 	
+	/**
+	 * Method getShortCut.
+	 * @param slot int
+	 * @param page int
+	 * @return ShortCut
+	 */
 	public ShortCut getShortCut(int slot, int page)
 	{
 		ShortCut sc = _shortCuts.get(slot + (page * 12));
@@ -74,12 +104,21 @@ public class ShortCutList
 		return sc;
 	}
 	
+	/**
+	 * Method registerShortCut.
+	 * @param shortcut ShortCut
+	 */
 	public void registerShortCut(ShortCut shortcut)
 	{
 		ShortCut oldShortCut = _shortCuts.put(shortcut.getSlot() + (12 * shortcut.getPage()), shortcut);
 		registerShortCutInDb(shortcut, oldShortCut);
 	}
 	
+	/**
+	 * Method registerShortCutInDb.
+	 * @param shortcut ShortCut
+	 * @param oldShortCut ShortCut
+	 */
 	private synchronized void registerShortCutInDb(ShortCut shortcut, ShortCut oldShortCut)
 	{
 		if (oldShortCut != null)
@@ -112,6 +151,10 @@ public class ShortCutList
 		}
 	}
 	
+	/**
+	 * Method deleteShortCutFromDb.
+	 * @param shortcut ShortCut
+	 */
 	private void deleteShortCutFromDb(ShortCut shortcut)
 	{
 		Connection con = null;
@@ -136,6 +179,11 @@ public class ShortCutList
 		}
 	}
 	
+	/**
+	 * Method deleteShortCut.
+	 * @param slot int
+	 * @param page int
+	 */
 	public void deleteShortCut(int slot, int page)
 	{
 		ShortCut old = _shortCuts.remove(slot + (page * 12));
@@ -154,6 +202,10 @@ public class ShortCutList
 		}
 	}
 	
+	/**
+	 * Method deleteShortCutByObjectId.
+	 * @param objectId int
+	 */
 	public void deleteShortCutByObjectId(int objectId)
 	{
 		for (ShortCut shortcut : _shortCuts.values())
@@ -165,6 +217,10 @@ public class ShortCutList
 		}
 	}
 	
+	/**
+	 * Method deleteShortCutBySkillId.
+	 * @param skillId int
+	 */
 	public void deleteShortCutBySkillId(int skillId)
 	{
 		for (ShortCut shortcut : _shortCuts.values())
@@ -176,6 +232,9 @@ public class ShortCutList
 		}
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	public void restore()
 	{
 		_shortCuts.clear();

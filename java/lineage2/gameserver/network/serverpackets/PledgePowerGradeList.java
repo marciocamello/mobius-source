@@ -14,15 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.pledge.RankPrivs;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgePowerGradeList extends L2GameServerPacket
 {
+	/**
+	 * Field _privs.
+	 */
 	private final RankPrivs[] _privs;
 	
+	/**
+	 * Constructor for PledgePowerGradeList.
+	 * @param privs RankPrivs[]
+	 */
 	public PledgePowerGradeList(RankPrivs[] privs)
 	{
 		_privs = privs;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

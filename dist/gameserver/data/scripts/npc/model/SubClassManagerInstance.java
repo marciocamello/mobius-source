@@ -33,16 +33,36 @@ import lineage2.gameserver.utils.CertificationFunctions;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class SubClassManagerInstance extends NpcInstance
 {
+	/**
+	 * Field serialVersionUID. (value is 1)
+	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field CERTIFICATE_ID. (value is 30433)
+	 */
 	private static final int CERTIFICATE_ID = 30433;
 	
+	/**
+	 * Constructor for SubClassManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SubClassManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -248,6 +268,11 @@ public final class SubClassManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showSertifikationSkillList.
+	 * @param player Player
+	 * @param type AcquireType
+	 */
 	public void showSertifikationSkillList(Player player, AcquireType type)
 	{
 		if (!Config.ALLOW_LEARN_TRANS_SKILLS_WO_QUEST)
@@ -261,6 +286,11 @@ public final class SubClassManagerInstance extends NpcInstance
 		showAcquireList(type, player);
 	}
 	
+	/**
+	 * Method checkSubClassQuest.
+	 * @param player Player
+	 * @return boolean
+	 */
 	private static boolean checkSubClassQuest(Player player)
 	{
 		if (!Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS)

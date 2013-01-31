@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Skill;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExAlterSkillRequest extends L2GameServerPacket
 {
+	/**
+	 * Field _skills.
+	 */
 	private final Skill _skills;
+	/**
+	 * Field _time.
+	 */
 	private final int _time;
 	
+	/**
+	 * Constructor for ExAlterSkillRequest.
+	 * @param id Skill
+	 * @param time int
+	 */
 	public ExAlterSkillRequest(Skill id, int time)
 	{
 		_skills = id;
 		_time = time;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

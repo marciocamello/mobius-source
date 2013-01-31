@@ -25,16 +25,45 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SourceOfPower extends DefaultAI
 {
+	/**
+	 * Field SKILL_ID. (value is 14625)
+	 */
 	private static final int SKILL_ID = 14625;
+	/**
+	 * Field LIGHT_HEAL_ID. (value is 14736)
+	 */
 	private static final int LIGHT_HEAL_ID = 14736;
+	/**
+	 * Field MSG1.
+	 */
 	private static final NpcString MSG1 = NpcString.I_HERMUNKUS_GIVE_MY_POWER_TO_THOSE_WHO_FIGHT_FOR_ME;
+	/**
+	 * Field MSG2.
+	 */
 	private static final NpcString MSG2 = NpcString.THOUGH_SMALL_THIS_POWER_WILL_HELP_YOU_GREATLY;
+	/**
+	 * Field controlNpc.
+	 */
 	private final boolean controlNpc;
+	/**
+	 * Field useLightHeal.
+	 */
 	private final boolean useLightHeal;
+	/**
+	 * Field firstCast.
+	 */
 	private boolean firstCast;
 	
+	/**
+	 * Constructor for SourceOfPower.
+	 * @param actor NpcInstance
+	 */
 	public SourceOfPower(NpcInstance actor)
 	{
 		super(actor);
@@ -43,6 +72,10 @@ public class SourceOfPower extends DefaultAI
 		firstCast = true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -83,6 +116,12 @@ public class SourceOfPower extends DefaultAI
 		return super.thinkActive();
 	}
 	
+	/**
+	 * Method onEvtTimer.
+	 * @param timerId int
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{

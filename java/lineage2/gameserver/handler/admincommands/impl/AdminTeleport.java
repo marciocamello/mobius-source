@@ -31,40 +31,139 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminTeleport implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_show_moves.
+		 */
 		admin_show_moves,
+		/**
+		 * Field admin_show_moves_other.
+		 */
 		admin_show_moves_other,
+		/**
+		 * Field admin_show_teleport.
+		 */
 		admin_show_teleport,
+		/**
+		 * Field admin_teleport_to_character.
+		 */
 		admin_teleport_to_character,
+		/**
+		 * Field admin_teleportto.
+		 */
 		admin_teleportto,
+		/**
+		 * Field admin_teleport_to.
+		 */
 		admin_teleport_to,
+		/**
+		 * Field admin_move_to.
+		 */
 		admin_move_to,
+		/**
+		 * Field admin_moveto.
+		 */
 		admin_moveto,
+		/**
+		 * Field admin_teleport.
+		 */
 		admin_teleport,
+		/**
+		 * Field admin_teleport_character.
+		 */
 		admin_teleport_character,
+		/**
+		 * Field admin_recall.
+		 */
 		admin_recall,
+		/**
+		 * Field admin_walk.
+		 */
 		admin_walk,
+		/**
+		 * Field admin_recall_npc.
+		 */
 		admin_recall_npc,
+		/**
+		 * Field admin_gonorth.
+		 */
 		admin_gonorth,
+		/**
+		 * Field admin_gosouth.
+		 */
 		admin_gosouth,
+		/**
+		 * Field admin_goeast.
+		 */
 		admin_goeast,
+		/**
+		 * Field admin_gowest.
+		 */
 		admin_gowest,
+		/**
+		 * Field admin_goup.
+		 */
 		admin_goup,
+		/**
+		 * Field admin_godown.
+		 */
 		admin_godown,
+		/**
+		 * Field admin_tele.
+		 */
 		admin_tele,
+		/**
+		 * Field admin_teleto.
+		 */
 		admin_teleto,
+		/**
+		 * Field admin_tele_to.
+		 */
 		admin_tele_to,
+		/**
+		 * Field admin_instant_move.
+		 */
 		admin_instant_move,
+		/**
+		 * Field admin_tonpc.
+		 */
 		admin_tonpc,
+		/**
+		 * Field admin_to_npc.
+		 */
 		admin_to_npc,
+		/**
+		 * Field admin_toobject.
+		 */
 		admin_toobject,
+		/**
+		 * Field admin_setref.
+		 */
 		admin_setref,
+		/**
+		 * Field admin_getref.
+		 */
 		admin_getref
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -319,12 +418,20 @@ public class AdminTeleport implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}
 	
+	/**
+	 * Method showTeleportWindow.
+	 * @param activeChar Player
+	 */
 	private void showTeleportWindow(Player activeChar)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -347,6 +454,10 @@ public class AdminTeleport implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method showTeleportCharWindow.
+	 * @param activeChar Player
+	 */
 	private void showTeleportCharWindow(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
@@ -379,6 +490,13 @@ public class AdminTeleport implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method teleportTo.
+	 * @param activeChar Player
+	 * @param target Player
+	 * @param Cords String
+	 * @param ref int
+	 */
 	private void teleportTo(Player activeChar, Player target, String Cords, int ref)
 	{
 		try
@@ -392,6 +510,13 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 	}
 	
+	/**
+	 * Method teleportTo.
+	 * @param activeChar Player
+	 * @param target Player
+	 * @param loc Location
+	 * @param ref int
+	 */
 	private void teleportTo(Player activeChar, Player target, Location loc, int ref)
 	{
 		if (!target.equals(activeChar))
@@ -406,6 +531,11 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 	}
 	
+	/**
+	 * Method teleportCharacter.
+	 * @param activeChar Player
+	 * @param Cords String
+	 */
 	private void teleportCharacter(Player activeChar, String Cords)
 	{
 		GameObject target = activeChar.getTarget();
@@ -422,6 +552,11 @@ public class AdminTeleport implements IAdminCommandHandler
 		teleportTo(activeChar, (Player) target, Cords, activeChar.getReflectionId());
 	}
 	
+	/**
+	 * Method teleportCharacter_offline.
+	 * @param obj_id int
+	 * @param loc Location
+	 */
 	private void teleportCharacter_offline(int obj_id, Location loc)
 	{
 		if (obj_id == 0)
@@ -449,6 +584,11 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 	}
 	
+	/**
+	 * Method teleportToCharacter.
+	 * @param activeChar Player
+	 * @param target GameObject
+	 */
 	private void teleportToCharacter(Player activeChar, GameObject target)
 	{
 		if (target == null)
@@ -460,6 +600,10 @@ public class AdminTeleport implements IAdminCommandHandler
 		activeChar.sendMessage("You have teleported to " + target);
 	}
 	
+	/**
+	 * Method recallNPC.
+	 * @param activeChar Player
+	 */
 	private void recallNPC(Player activeChar)
 	{
 		GameObject obj = activeChar.getTarget();

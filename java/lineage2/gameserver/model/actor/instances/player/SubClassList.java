@@ -23,22 +23,57 @@ import lineage2.gameserver.model.SubClass;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SubClassList
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SubClassList.class);
+	/**
+	 * Field MAX_SUB_COUNT. (value is 4)
+	 */
 	public static final int MAX_SUB_COUNT = 4;
+	/**
+	 * Field _listByIndex.
+	 */
 	private final TreeMap<Integer, SubClass> _listByIndex = new TreeMap<>();
+	/**
+	 * Field _listByClassId.
+	 */
 	private final TreeMap<Integer, SubClass> _listByClassId = new TreeMap<>();
+	/**
+	 * Field _owner.
+	 */
 	private final Player _owner;
+	/**
+	 * Field _baseSubClass.
+	 */
 	private SubClass _baseSubClass = null;
+	/**
+	 * Field _activeSubClass.
+	 */
 	private SubClass _activeSubClass = null;
+	/**
+	 * Field _lastFreeIndex.
+	 */
 	private int _lastFreeIndex = 1;
 	
+	/**
+	 * Constructor for SubClassList.
+	 * @param owner Player
+	 */
 	public SubClassList(Player owner)
 	{
 		_owner = owner;
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	public void restore()
 	{
 		_listByIndex.clear();
@@ -88,21 +123,39 @@ public class SubClassList
 		}
 	}
 	
+	/**
+	 * Method values.
+	 * @return Collection<SubClass>
+	 */
 	public Collection<SubClass> values()
 	{
 		return _listByIndex.values();
 	}
 	
+	/**
+	 * Method getByClassId.
+	 * @param classId int
+	 * @return SubClass
+	 */
 	public SubClass getByClassId(int classId)
 	{
 		return _listByClassId.get(classId);
 	}
 	
+	/**
+	 * Method getByIndex.
+	 * @param index int
+	 * @return SubClass
+	 */
 	public SubClass getByIndex(int index)
 	{
 		return _listByIndex.get(index);
 	}
 	
+	/**
+	 * Method removeByClassId.
+	 * @param classId int
+	 */
 	public void removeByClassId(int classId)
 	{
 		if (!_listByClassId.containsKey(classId))
@@ -114,26 +167,48 @@ public class SubClassList
 		_listByClassId.remove(classId);
 	}
 	
+	/**
+	 * Method getActiveSubClass.
+	 * @return SubClass
+	 */
 	public SubClass getActiveSubClass()
 	{
 		return _activeSubClass;
 	}
 	
+	/**
+	 * Method getBaseSubClass.
+	 * @return SubClass
+	 */
 	public SubClass getBaseSubClass()
 	{
 		return _baseSubClass;
 	}
 	
+	/**
+	 * Method isBaseClassActive.
+	 * @return boolean
+	 */
 	public boolean isBaseClassActive()
 	{
 		return _activeSubClass == _baseSubClass;
 	}
 	
+	/**
+	 * Method haveSubClasses.
+	 * @return boolean
+	 */
 	public boolean haveSubClasses()
 	{
 		return size() > 1;
 	}
 	
+	/**
+	 * Method changeSubClassId.
+	 * @param oldClassId int
+	 * @param newClassId int
+	 * @return boolean
+	 */
 	public boolean changeSubClassId(int oldClassId, int newClassId)
 	{
 		if (!_listByClassId.containsKey(oldClassId))
@@ -151,6 +226,11 @@ public class SubClassList
 		return true;
 	}
 	
+	/**
+	 * Method add.
+	 * @param sub SubClass
+	 * @return boolean
+	 */
 	public boolean add(SubClass sub)
 	{
 		if (sub == null)
@@ -172,6 +252,11 @@ public class SubClassList
 		return true;
 	}
 	
+	/**
+	 * Method changeActiveSubClass.
+	 * @param classId int
+	 * @return SubClass
+	 */
 	public SubClass changeActiveSubClass(int classId)
 	{
 		if (!_listByClassId.containsKey(classId))
@@ -189,16 +274,29 @@ public class SubClassList
 		return sub;
 	}
 	
+	/**
+	 * Method containsClassId.
+	 * @param classId int
+	 * @return boolean
+	 */
 	public boolean containsClassId(int classId)
 	{
 		return _listByClassId.containsKey(classId);
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	public int size()
 	{
 		return _listByIndex.size();
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{

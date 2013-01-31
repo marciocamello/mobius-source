@@ -17,15 +17,33 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.stats.funcs.Func;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class StatsListener implements OnEquipListener
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final StatsListener _instance = new StatsListener();
 	
+	/**
+	 * Method getInstance.
+	 * @return StatsListener
+	 */
 	public static StatsListener getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method onUnequip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 * @see lineage2.gameserver.listener.inventory.OnEquipListener#onUnequip(int, ItemInstance, Playable)
+	 */
 	@Override
 	public void onUnequip(int slot, ItemInstance item, Playable actor)
 	{
@@ -33,6 +51,13 @@ public final class StatsListener implements OnEquipListener
 		actor.updateStats();
 	}
 	
+	/**
+	 * Method onEquip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 * @see lineage2.gameserver.listener.inventory.OnEquipListener#onEquip(int, ItemInstance, Playable)
+	 */
 	@Override
 	public void onEquip(int slot, ItemInstance item, Playable actor)
 	{

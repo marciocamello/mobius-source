@@ -22,16 +22,29 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
 import org.napile.primitive.maps.IntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExAddPostFriendForPostBox extends L2GameClientPacket
 {
+	/**
+	 * Field _name.
+	 */
 	private String _name;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_name = readS(Config.CNAME_MAXLEN);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

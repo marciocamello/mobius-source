@@ -20,11 +20,25 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Aggression extends Skill
 {
+	/**
+	 * Field _unaggring.
+	 */
 	private final boolean _unaggring;
+	/**
+	 * Field _silent.
+	 */
 	private final boolean _silent;
 	
+	/**
+	 * Constructor for Aggression.
+	 * @param set StatsSet
+	 */
 	public Aggression(StatsSet set)
 	{
 		super(set);
@@ -32,6 +46,11 @@ public class Aggression extends Skill
 		_silent = set.getBool("silent", false);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

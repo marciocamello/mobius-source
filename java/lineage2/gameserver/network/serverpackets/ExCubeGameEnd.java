@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCubeGameEnd extends L2GameServerPacket
 {
+	/**
+	 * Field _isRedTeamWin.
+	 */
 	boolean _isRedTeamWin;
 	
+	/**
+	 * Constructor for ExCubeGameEnd.
+	 * @param isRedTeamWin boolean
+	 */
 	public ExCubeGameEnd(boolean isRedTeamWin)
 	{
 		_isRedTeamWin = isRedTeamWin;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

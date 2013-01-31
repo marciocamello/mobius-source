@@ -32,12 +32,29 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ProductHolder
 {
+	/**
+	 * Field _log.
+	 */
 	private static Logger _log = LoggerFactory.getLogger(ProductHolder.class.getName());
+	/**
+	 * Field _itemsList.
+	 */
 	TreeMap<Integer, ProductItem> _itemsList;
+	/**
+	 * Field _instance.
+	 */
 	private static ProductHolder _instance = new ProductHolder();
 	
+	/**
+	 * Method getInstance.
+	 * @return ProductHolder
+	 */
 	public static ProductHolder getInstance()
 	{
 		if (_instance == null)
@@ -47,11 +64,17 @@ public class ProductHolder
 		return _instance;
 	}
 	
+	/**
+	 * Method reload.
+	 */
 	public void reload()
 	{
 		_instance = new ProductHolder();
 	}
 	
+	/**
+	 * Constructor for ProductHolder.
+	 */
 	private ProductHolder()
 	{
 		_itemsList = new TreeMap<>();
@@ -119,6 +142,13 @@ public class ProductHolder
 		}
 	}
 	
+	/**
+	 * Method getProductTabId.
+	 * @param isEvent boolean
+	 * @param isBest boolean
+	 * @param isNew boolean
+	 * @return int
+	 */
 	private static int getProductTabId(boolean isEvent, boolean isBest, boolean isNew)
 	{
 		if (isEvent && isBest)
@@ -136,6 +166,11 @@ public class ProductHolder
 		return 4;
 	}
 	
+	/**
+	 * Method getMillisecondsFromString.
+	 * @param datetime String
+	 * @return long
+	 */
 	private static long getMillisecondsFromString(String datetime)
 	{
 		DateFormat df = new SimpleDateFormat("dd.MM.yyyy HH:mm");
@@ -153,11 +188,20 @@ public class ProductHolder
 		return 0;
 	}
 	
+	/**
+	 * Method getAllItems.
+	 * @return Collection<ProductItem>
+	 */
 	public Collection<ProductItem> getAllItems()
 	{
 		return _itemsList.values();
 	}
 	
+	/**
+	 * Method getProduct.
+	 * @param id int
+	 * @return ProductItem
+	 */
 	public ProductItem getProduct(int id)
 	{
 		return _itemsList.get(id);

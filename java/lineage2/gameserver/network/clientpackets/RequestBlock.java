@@ -20,17 +20,48 @@ import lineage2.gameserver.model.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestBlock extends L2GameClientPacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(RequestBlock.class);
+	/**
+	 * Field BLOCK. (value is 0)
+	 */
 	private final static int BLOCK = 0;
+	/**
+	 * Field UNBLOCK. (value is 1)
+	 */
 	private final static int UNBLOCK = 1;
+	/**
+	 * Field BLOCKLIST. (value is 2)
+	 */
 	private final static int BLOCKLIST = 2;
+	/**
+	 * Field ALLBLOCK. (value is 3)
+	 */
 	private final static int ALLBLOCK = 3;
+	/**
+	 * Field ALLUNBLOCK. (value is 4)
+	 */
 	private final static int ALLUNBLOCK = 4;
+	/**
+	 * Field _type.
+	 */
 	private Integer _type;
+	/**
+	 * Field targetName.
+	 */
 	private String targetName = null;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -41,6 +72,9 @@ public class RequestBlock extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

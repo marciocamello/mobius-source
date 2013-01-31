@@ -36,38 +36,70 @@ import lineage2.gameserver.utils.Location;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class PlayerTemplateParser extends AbstractDirParser<PlayerTemplateHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final PlayerTemplateParser _instance = new PlayerTemplateParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return PlayerTemplateParser
+	 */
 	public static PlayerTemplateParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for PlayerTemplateParser.
+	 */
 	private PlayerTemplateParser()
 	{
 		super(PlayerTemplateHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/pc_parameters/template_data/");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "template_data.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

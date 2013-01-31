@@ -18,12 +18,29 @@ import java.util.List;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.Henna;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HennaUnequipList extends L2GameServerPacket
 {
+	/**
+	 * Field _emptySlots.
+	 */
 	private final int _emptySlots;
+	/**
+	 * Field _adena.
+	 */
 	private final long _adena;
+	/**
+	 * Field availHenna.
+	 */
 	private final List<Henna> availHenna = new ArrayList<>(3);
 	
+	/**
+	 * Constructor for HennaUnequipList.
+	 * @param player Player
+	 */
 	public HennaUnequipList(Player player)
 	{
 		_adena = player.getAdena();
@@ -37,6 +54,9 @@ public class HennaUnequipList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

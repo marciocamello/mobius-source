@@ -25,10 +25,21 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.GameObjectsStorage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FakePlayersTable
 {
+	/**
+	 * @author Mobius
+	 */
 	public class Task implements Runnable
 	{
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -57,11 +68,27 @@ public class FakePlayersTable
 		}
 	}
 	
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = Logger.getLogger(FakePlayersTable.class.getName());
+	/**
+	 * Field _fakePlayers.
+	 */
 	static String[] _fakePlayers;
+	/**
+	 * Field _activeFakePlayers.
+	 */
 	static GCArray<String> _activeFakePlayers = new GCArray<>();
+	/**
+	 * Field _instance.
+	 */
 	private static FakePlayersTable _instance;
 	
+	/**
+	 * Method getInstance.
+	 * @return FakePlayersTable
+	 */
 	public static FakePlayersTable getInstance()
 	{
 		if (_instance == null)
@@ -71,6 +98,9 @@ public class FakePlayersTable
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for FakePlayersTable.
+	 */
 	public FakePlayersTable()
 	{
 		if (Config.ALLOW_FAKE_PLAYERS)
@@ -80,6 +110,9 @@ public class FakePlayersTable
 		}
 	}
 	
+	/**
+	 * Method parseData.
+	 */
 	private void parseData()
 	{
 		LineNumberReader lnr = null;
@@ -91,7 +124,7 @@ public class FakePlayersTable
 			GArray<String> players_list = new GArray<>();
 			while ((line = lnr.readLine()) != null)
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				if ((line.trim().length() == 0) || ((line.length() > 0) && (line.charAt(0) == '#')))
 				{
 					continue;
 				}
@@ -119,11 +152,19 @@ public class FakePlayersTable
 		}
 	}
 	
+	/**
+	 * Method getFakePlayersCount.
+	 * @return int
+	 */
 	public static int getFakePlayersCount()
 	{
 		return _activeFakePlayers.size();
 	}
 	
+	/**
+	 * Method getActiveFakePlayers.
+	 * @return GCArray<String>
+	 */
 	public static GCArray<String> getActiveFakePlayers()
 	{
 		return _activeFakePlayers;

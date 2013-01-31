@@ -18,14 +18,25 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class IceCaptainKnight extends Fighter
 {
+	/**
+	 * Constructor for IceCaptainKnight.
+	 * @param actor NpcInstance
+	 */
 	public IceCaptainKnight(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = 6000;
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -37,6 +48,9 @@ public class IceCaptainKnight extends Fighter
 		}
 	}
 	
+	/**
+	 * Method teleportHome.
+	 */
 	@Override
 	protected void teleportHome()
 	{

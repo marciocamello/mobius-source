@@ -14,17 +14,34 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Summon;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetStatusShow extends L2GameServerPacket
 {
+	/**
+	 * Field summonType.
+	 */
 	private final int summonType;
+	/**
+	 * Field summonObjId.
+	 */
 	private final int summonObjId;
 	
+	/**
+	 * Constructor for PetStatusShow.
+	 * @param summon Summon
+	 */
 	public PetStatusShow(Summon summon)
 	{
 		summonType = summon.getSummonType();
 		summonObjId = summon.getObjectId();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -12,17 +12,30 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SnoopQuit extends L2GameClientPacket
 {
+	/**
+	 * Field _snoopID.
+	 */
 	@SuppressWarnings("unused")
 	private int _snoopID;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_snoopID = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -41,43 +41,152 @@ import lineage2.gameserver.utils.MultiValueIntegerMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Olympiad
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Olympiad.class);
+	/**
+	 * Field _nobles.
+	 */
 	public static Map<Integer, StatsSet> _nobles;
+	/**
+	 * Field _noblesRank.
+	 */
 	public static Map<Integer, Integer> _noblesRank;
+	/**
+	 * Field _heroesToBe.
+	 */
 	public static List<StatsSet> _heroesToBe;
+	/**
+	 * Field _nonClassBasedRegisters.
+	 */
 	public static List<Integer> _nonClassBasedRegisters = new CopyOnWriteArrayList<>();
+	/**
+	 * Field _classBasedRegisters.
+	 */
 	public static MultiValueIntegerMap _classBasedRegisters = new MultiValueIntegerMap();
+	/**
+	 * Field OLYMPIAD_HTML_PATH. (value is ""olympiad/"")
+	 */
 	public static final String OLYMPIAD_HTML_PATH = "olympiad/";
+	/**
+	 * Field CHAR_ID. (value is ""char_id"")
+	 */
 	public static final String CHAR_ID = "char_id";
+	/**
+	 * Field CLASS_ID. (value is ""class_id"")
+	 */
 	public static final String CLASS_ID = "class_id";
+	/**
+	 * Field CHAR_NAME. (value is ""char_name"")
+	 */
 	public static final String CHAR_NAME = "char_name";
+	/**
+	 * Field POINTS. (value is ""olympiad_points"")
+	 */
 	public static final String POINTS = "olympiad_points";
+	/**
+	 * Field POINTS_PAST. (value is ""olympiad_points_past"")
+	 */
 	public static final String POINTS_PAST = "olympiad_points_past";
+	/**
+	 * Field POINTS_PAST_STATIC. (value is ""olympiad_points_past_static"")
+	 */
 	public static final String POINTS_PAST_STATIC = "olympiad_points_past_static";
+	/**
+	 * Field COMP_DONE. (value is ""competitions_done"")
+	 */
 	public static final String COMP_DONE = "competitions_done";
+	/**
+	 * Field COMP_WIN. (value is ""competitions_win"")
+	 */
 	public static final String COMP_WIN = "competitions_win";
+	/**
+	 * Field COMP_LOOSE. (value is ""competitions_loose"")
+	 */
 	public static final String COMP_LOOSE = "competitions_loose";
+	/**
+	 * Field GAME_CLASSES_COUNT. (value is ""game_classes_count"")
+	 */
 	public static final String GAME_CLASSES_COUNT = "game_classes_count";
+	/**
+	 * Field GAME_NOCLASSES_COUNT. (value is ""game_noclasses_count"")
+	 */
 	public static final String GAME_NOCLASSES_COUNT = "game_noclasses_count";
+	/**
+	 * Field _olympiadEnd.
+	 */
 	public static long _olympiadEnd;
+	/**
+	 * Field _validationEnd.
+	 */
 	public static long _validationEnd;
+	/**
+	 * Field _period.
+	 */
 	public static int _period;
+	/**
+	 * Field _nextWeeklyChange.
+	 */
 	public static long _nextWeeklyChange;
+	/**
+	 * Field _currentCycle.
+	 */
 	public static int _currentCycle;
+	/**
+	 * Field _compEnd.
+	 */
 	private static long _compEnd;
+	/**
+	 * Field _compStart.
+	 */
 	private static Calendar _compStart;
+	/**
+	 * Field _inCompPeriod.
+	 */
 	public static boolean _inCompPeriod;
+	/**
+	 * Field _isOlympiadEnd.
+	 */
 	public static boolean _isOlympiadEnd;
+	/**
+	 * Field _scheduledOlympiadEnd.
+	 */
 	private static ScheduledFuture<?> _scheduledOlympiadEnd;
+	/**
+	 * Field _scheduledManagerTask.
+	 */
 	public static ScheduledFuture<?> _scheduledManagerTask;
+	/**
+	 * Field _scheduledWeeklyTask.
+	 */
 	public static ScheduledFuture<?> _scheduledWeeklyTask;
+	/**
+	 * Field _scheduledValdationTask.
+	 */
 	public static ScheduledFuture<?> _scheduledValdationTask;
+	/**
+	 * Field STADIUMS.
+	 */
 	public static final Stadia[] STADIUMS = new Stadia[Config.OLYMPIAD_STADIAS_COUNT];
+	/**
+	 * Field _manager.
+	 */
 	public static OlympiadManager _manager;
+	/**
+	 * Field _npcs.
+	 */
 	private static List<NpcInstance> _npcs = new ArrayList<>();
 	
+	/**
+	 * Method load.
+	 */
 	public static void load()
 	{
 		_nobles = new ConcurrentHashMap<>();
@@ -176,6 +285,9 @@ public class Olympiad
 		}
 	}
 	
+	/**
+	 * Method initStadiums.
+	 */
 	private static void initStadiums()
 	{
 		for (int i = 0; i < STADIUMS.length; i++)
@@ -187,6 +299,9 @@ public class Olympiad
 		}
 	}
 	
+	/**
+	 * Method init.
+	 */
 	public static void init()
 	{
 		if (_period == 1)
@@ -217,6 +332,12 @@ public class Olympiad
 		_scheduledWeeklyTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new WeeklyTask(), getMillisToWeekChange(), Config.ALT_OLY_WPERIOD);
 	}
 	
+	/**
+	 * Method registerNoble.
+	 * @param noble Player
+	 * @param type CompType
+	 * @return boolean
+	 */
 	public static synchronized boolean registerNoble(Player noble, CompType type)
 	{
 		if (!_inCompPeriod || _isOlympiadEnd)
@@ -272,6 +393,13 @@ public class Olympiad
 		return true;
 	}
 	
+	/**
+	 * Method validPlayer.
+	 * @param sendPlayer Player
+	 * @param validPlayer Player
+	 * @param type CompType
+	 * @return boolean
+	 */
 	private static boolean validPlayer(Player sendPlayer, Player validPlayer, CompType type)
 	{
 		if (!validPlayer.isNoble())
@@ -286,7 +414,7 @@ public class Olympiad
 		}
 		if (!validPlayer.isAwaking())
 		{
-			sendPlayer.sendMessage("В Олимпиаде могут участвовть только перерожденные персонажи.");
+			sendPlayer.sendMessage("В �?лимпиаде могут уча�?твовт�? тол�?ко перерожденные пер�?онажи.");
 			return false;
 		}
 		int[] ar = getWeekGameCounts(validPlayer.getObjectId());
@@ -330,6 +458,10 @@ public class Olympiad
 		return true;
 	}
 	
+	/**
+	 * Method logoutPlayer.
+	 * @param player Player
+	 */
 	public static synchronized void logoutPlayer(Player player)
 	{
 		_classBasedRegisters.removeValue(player.getObjectId());
@@ -351,6 +483,11 @@ public class Olympiad
 		}
 	}
 	
+	/**
+	 * Method unRegisterNoble.
+	 * @param noble Player
+	 * @return boolean
+	 */
 	public static synchronized boolean unRegisterNoble(Player noble)
 	{
 		if (!_inCompPeriod || _isOlympiadEnd)
@@ -394,6 +531,9 @@ public class Olympiad
 		return true;
 	}
 	
+	/**
+	 * Method updateCompStatus.
+	 */
 	private static synchronized void updateCompStatus()
 	{
 		long milliToStart = getMillisToCompBegin();
@@ -408,11 +548,19 @@ public class Olympiad
 		ThreadPoolManager.getInstance().schedule(new CompStartTask(), getMillisToCompBegin());
 	}
 	
+	/**
+	 * Method getMillisToOlympiadEnd.
+	 * @return long
+	 */
 	private static long getMillisToOlympiadEnd()
 	{
 		return _olympiadEnd - System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method getMillisToValidationEnd.
+	 * @return long
+	 */
 	static long getMillisToValidationEnd()
 	{
 		if (_validationEnd > System.currentTimeMillis())
@@ -422,16 +570,28 @@ public class Olympiad
 		return 10L;
 	}
 	
+	/**
+	 * Method isOlympiadEnd.
+	 * @return boolean
+	 */
 	public static boolean isOlympiadEnd()
 	{
 		return _isOlympiadEnd;
 	}
 	
+	/**
+	 * Method inCompPeriod.
+	 * @return boolean
+	 */
 	public static boolean inCompPeriod()
 	{
 		return _inCompPeriod;
 	}
 	
+	/**
+	 * Method getMillisToCompBegin.
+	 * @return long
+	 */
 	private static long getMillisToCompBegin()
 	{
 		if ((_compStart.getTimeInMillis() < Calendar.getInstance().getTimeInMillis()) && (_compEnd > Calendar.getInstance().getTimeInMillis()))
@@ -445,6 +605,10 @@ public class Olympiad
 		return setNewCompBegin();
 	}
 	
+	/**
+	 * Method setNewCompBegin.
+	 * @return long
+	 */
 	private static long setNewCompBegin()
 	{
 		_compStart = Calendar.getInstance();
@@ -456,11 +620,19 @@ public class Olympiad
 		return _compStart.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
 	}
 	
+	/**
+	 * Method getMillisToCompEnd.
+	 * @return long
+	 */
 	public static long getMillisToCompEnd()
 	{
 		return _compEnd - Calendar.getInstance().getTimeInMillis();
 	}
 	
+	/**
+	 * Method getMillisToWeekChange.
+	 * @return long
+	 */
 	private static long getMillisToWeekChange()
 	{
 		if (_nextWeeklyChange > Calendar.getInstance().getTimeInMillis())
@@ -470,6 +642,9 @@ public class Olympiad
 		return 10L;
 	}
 	
+	/**
+	 * Method doWeekTasks.
+	 */
 	public static synchronized void doWeekTasks()
 	{
 		if (_period == 1)
@@ -493,11 +668,20 @@ public class Olympiad
 		}
 	}
 	
+	/**
+	 * Method getCurrentCycle.
+	 * @return int
+	 */
 	public static int getCurrentCycle()
 	{
 		return _currentCycle;
 	}
 	
+	/**
+	 * Method addSpectator.
+	 * @param id int
+	 * @param spectator Player
+	 */
 	public static synchronized void addSpectator(int id, Player spectator)
 	{
 		if ((spectator.getOlympiadGame() != null) || isRegistered(spectator) || Olympiad.isRegisteredInComp(spectator))
@@ -528,6 +712,11 @@ public class Olympiad
 		}
 	}
 	
+	/**
+	 * Method removeSpectator.
+	 * @param id int
+	 * @param spectator Player
+	 */
 	public static synchronized void removeSpectator(int id, Player spectator)
 	{
 		if ((_manager == null) || (_manager.getOlympiadInstance(id) == null))
@@ -537,6 +726,11 @@ public class Olympiad
 		_manager.getOlympiadInstance(id).removeSpectator(spectator);
 	}
 	
+	/**
+	 * Method getSpectators.
+	 * @param id int
+	 * @return List<Player>
+	 */
 	public static List<Player> getSpectators(int id)
 	{
 		if ((_manager == null) || (_manager.getOlympiadInstance(id) == null))
@@ -546,6 +740,11 @@ public class Olympiad
 		return _manager.getOlympiadInstance(id).getSpectators();
 	}
 	
+	/**
+	 * Method getOlympiadGame.
+	 * @param gameId int
+	 * @return OlympiadGame
+	 */
 	public static OlympiadGame getOlympiadGame(int gameId)
 	{
 		if ((_manager == null) || (gameId < 0))
@@ -555,6 +754,10 @@ public class Olympiad
 		return _manager.getOlympiadGames().get(gameId);
 	}
 	
+	/**
+	 * Method getWaitingList.
+	 * @return int[]
+	 */
 	public static synchronized int[] getWaitingList()
 	{
 		if (!inCompPeriod())
@@ -567,6 +770,11 @@ public class Olympiad
 		return array;
 	}
 	
+	/**
+	 * Method getNoblessePasses.
+	 * @param player Player
+	 * @return int
+	 */
 	public static synchronized int getNoblessePasses(Player player)
 	{
 		int objId = player.getObjectId();
@@ -607,6 +815,11 @@ public class Olympiad
 		return points * Config.ALT_OLY_GP_PER_POINT;
 	}
 	
+	/**
+	 * Method isRegistered.
+	 * @param noble Player
+	 * @return boolean
+	 */
 	public static synchronized boolean isRegistered(Player noble)
 	{
 		if (_classBasedRegisters.containsValue(noble.getObjectId()))
@@ -620,6 +833,11 @@ public class Olympiad
 		return false;
 	}
 	
+	/**
+	 * Method isRegisteredInComp.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public static synchronized boolean isRegisteredInComp(Player player)
 	{
 		if (isRegistered(player))
@@ -640,6 +858,11 @@ public class Olympiad
 		return false;
 	}
 	
+	/**
+	 * Method getNoblePoints.
+	 * @param objId int
+	 * @return int
+	 */
 	public static synchronized int getNoblePoints(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
@@ -650,6 +873,11 @@ public class Olympiad
 		return noble.getInteger(POINTS);
 	}
 	
+	/**
+	 * Method getNoblePointsPast.
+	 * @param objId int
+	 * @return int
+	 */
 	public static synchronized int getNoblePointsPast(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
@@ -660,6 +888,11 @@ public class Olympiad
 		return noble.getInteger(POINTS_PAST);
 	}
 	
+	/**
+	 * Method getCompetitionDone.
+	 * @param objId int
+	 * @return int
+	 */
 	public static synchronized int getCompetitionDone(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
@@ -670,6 +903,11 @@ public class Olympiad
 		return noble.getInteger(COMP_DONE);
 	}
 	
+	/**
+	 * Method getCompetitionWin.
+	 * @param objId int
+	 * @return int
+	 */
 	public static synchronized int getCompetitionWin(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
@@ -680,6 +918,11 @@ public class Olympiad
 		return noble.getInteger(COMP_WIN);
 	}
 	
+	/**
+	 * Method getCompetitionLoose.
+	 * @param objId int
+	 * @return int
+	 */
 	public static synchronized int getCompetitionLoose(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
@@ -690,6 +933,11 @@ public class Olympiad
 		return noble.getInteger(COMP_LOOSE);
 	}
 	
+	/**
+	 * Method getWeekGameCounts.
+	 * @param objId int
+	 * @return int[]
+	 */
 	public static synchronized int[] getWeekGameCounts(int objId)
 	{
 		int[] ar = new int[3];
@@ -704,21 +952,38 @@ public class Olympiad
 		return ar;
 	}
 	
+	/**
+	 * Method getStadiums.
+	 * @return Stadia[]
+	 */
 	public static Stadia[] getStadiums()
 	{
 		return STADIUMS;
 	}
 	
+	/**
+	 * Method getNpcs.
+	 * @return List<NpcInstance>
+	 */
 	public static List<NpcInstance> getNpcs()
 	{
 		return _npcs;
 	}
 	
+	/**
+	 * Method addOlympiadNpc.
+	 * @param npc NpcInstance
+	 */
 	public static void addOlympiadNpc(NpcInstance npc)
 	{
 		_npcs.add(npc);
 	}
 	
+	/**
+	 * Method changeNobleName.
+	 * @param objId int
+	 * @param newName String
+	 */
 	public static void changeNobleName(int objId, String newName)
 	{
 		StatsSet noble = _nobles.get(objId);
@@ -730,6 +995,11 @@ public class Olympiad
 		OlympiadDatabase.saveNobleData(objId);
 	}
 	
+	/**
+	 * Method getNobleName.
+	 * @param objId int
+	 * @return String
+	 */
 	public static String getNobleName(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
@@ -740,6 +1010,11 @@ public class Olympiad
 		return noble.getString(CHAR_NAME);
 	}
 	
+	/**
+	 * Method getNobleClass.
+	 * @param objId int
+	 * @return int
+	 */
 	public static int getNobleClass(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
@@ -750,6 +1025,11 @@ public class Olympiad
 		return noble.getInteger(CLASS_ID);
 	}
 	
+	/**
+	 * Method manualSetNoblePoints.
+	 * @param objId int
+	 * @param points int
+	 */
 	public static void manualSetNoblePoints(int objId, int points)
 	{
 		StatsSet noble = _nobles.get(objId);
@@ -761,11 +1041,20 @@ public class Olympiad
 		OlympiadDatabase.saveNobleData(objId);
 	}
 	
+	/**
+	 * Method isNoble.
+	 * @param objId int
+	 * @return boolean
+	 */
 	public static synchronized boolean isNoble(int objId)
 	{
 		return _nobles.get(objId) != null;
 	}
 	
+	/**
+	 * Method addNoble.
+	 * @param noble Player
+	 */
 	public static synchronized void addNoble(Player noble)
 	{
 		if (!_nobles.containsKey(noble.getObjectId()))
@@ -791,6 +1080,10 @@ public class Olympiad
 		}
 	}
 	
+	/**
+	 * Method removeNoble.
+	 * @param noble Player
+	 */
 	public static synchronized void removeNoble(Player noble)
 	{
 		_nobles.remove(noble.getObjectId());

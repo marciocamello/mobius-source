@@ -14,9 +14,25 @@ package lineage2.gameserver.handler.admincommands;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IAdminCommandHandler
 {
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar);
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[]
+	 */
 	public Enum[] getAdminCommandEnum();
 }

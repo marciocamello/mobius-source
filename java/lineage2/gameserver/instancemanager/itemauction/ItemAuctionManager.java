@@ -38,11 +38,25 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ItemAuctionManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static Logger _log = LoggerFactory.getLogger(ItemAuctionManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static ItemAuctionManager _instance;
 	
+	/**
+	 * Method getInstance.
+	 * @return ItemAuctionManager
+	 */
 	public static ItemAuctionManager getInstance()
 	{
 		if (_instance == null)
@@ -56,14 +70,26 @@ public class ItemAuctionManager
 		return _instance;
 	}
 	
+	/**
+	 * Field _managerInstances.
+	 */
 	private final TIntObjectHashMap<ItemAuctionInstance> _managerInstances = new TIntObjectHashMap<>();
+	/**
+	 * Field _nextId.
+	 */
 	private final AtomicInteger _nextId = new AtomicInteger();
 	
+	/**
+	 * Constructor for ItemAuctionManager.
+	 */
 	private ItemAuctionManager()
 	{
 		_log.info("Initializing ItemAuctionManager");
 	}
 	
+	/**
+	 * Method load.
+	 */
 	private void load()
 	{
 		Connection con = null;
@@ -175,6 +201,9 @@ public class ItemAuctionManager
 		}
 	}
 	
+	/**
+	 * Method shutdown.
+	 */
 	public void shutdown()
 	{
 		ItemAuctionInstance[] instances = _managerInstances.values(new ItemAuctionInstance[_managerInstances.size()]);
@@ -184,16 +213,29 @@ public class ItemAuctionManager
 		}
 	}
 	
+	/**
+	 * Method getManagerInstance.
+	 * @param instanceId int
+	 * @return ItemAuctionInstance
+	 */
 	public ItemAuctionInstance getManagerInstance(int instanceId)
 	{
 		return _managerInstances.get(instanceId);
 	}
 	
+	/**
+	 * Method getNextId.
+	 * @return int
+	 */
 	public int getNextId()
 	{
 		return _nextId.incrementAndGet();
 	}
 	
+	/**
+	 * Method deleteAuction.
+	 * @param auctionId int
+	 */
 	public void deleteAuction(int auctionId)
 	{
 		Connection con = null;

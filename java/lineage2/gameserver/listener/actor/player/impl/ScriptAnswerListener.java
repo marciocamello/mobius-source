@@ -17,12 +17,31 @@ import lineage2.gameserver.listener.actor.player.OnAnswerListener;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.scripts.Scripts;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ScriptAnswerListener implements OnAnswerListener
 {
+	/**
+	 * Field _playerRef.
+	 */
 	private final HardReference<Player> _playerRef;
+	/**
+	 * Field _scriptName.
+	 */
 	private final String _scriptName;
+	/**
+	 * Field _arg.
+	 */
 	private final Object[] _arg;
 	
+	/**
+	 * Constructor for ScriptAnswerListener.
+	 * @param player Player
+	 * @param scriptName String
+	 * @param arg Object[]
+	 */
 	public ScriptAnswerListener(Player player, String scriptName, Object[] arg)
 	{
 		_scriptName = scriptName;
@@ -30,6 +49,10 @@ public class ScriptAnswerListener implements OnAnswerListener
 		_playerRef = player.getRef();
 	}
 	
+	/**
+	 * Method sayYes.
+	 * @see lineage2.gameserver.listener.actor.player.OnAnswerListener#sayYes()
+	 */
 	@Override
 	public void sayYes()
 	{
@@ -41,6 +64,10 @@ public class ScriptAnswerListener implements OnAnswerListener
 		Scripts.getInstance().callScripts(player, _scriptName.split(":")[0], _scriptName.split(":")[1], _arg);
 	}
 	
+	/**
+	 * Method sayNo.
+	 * @see lineage2.gameserver.listener.actor.player.OnAnswerListener#sayNo()
+	 */
 	@Override
 	public void sayNo()
 	{

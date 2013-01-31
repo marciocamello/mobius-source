@@ -19,15 +19,30 @@ import lineage2.gameserver.network.serverpackets.ValidateLocation;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectKnockBack extends Effect
 {
+	/**
+	 * Field _z. Field _y. Field _x.
+	 */
 	private int _x, _y, _z;
 	
+	/**
+	 * Constructor for EffectKnockBack.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectKnockBack(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -59,6 +74,9 @@ public class EffectKnockBack extends Effect
 		_effected.broadcastPacket(new ValidateLocation(_effected));
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -74,6 +92,10 @@ public class EffectKnockBack extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

@@ -34,36 +34,93 @@ import lineage2.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class GameObject extends EventOwner
 {
+	/**
+	 * Field serialVersionUID. (value is -950375486287118921)
+	 */
 	private static final long serialVersionUID = -950375486287118921L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameObject.class);
+	/**
+	 * Field EMPTY_L2OBJECT_ARRAY.
+	 */
 	public final static GameObject[] EMPTY_L2OBJECT_ARRAY = new GameObject[0];
+	/**
+	 * Field CREATED. (value is 0)
+	 */
 	protected final static int CREATED = 0;
+	/**
+	 * Field VISIBLE. (value is 1)
+	 */
 	protected final static int VISIBLE = 1;
+	/**
+	 * Field DELETED. (value is -1)
+	 */
 	protected final static int DELETED = -1;
+	/**
+	 * Field objectId.
+	 */
 	protected int objectId;
+	/**
+	 * Field _x.
+	 */
 	private int _x;
+	/**
+	 * Field _y.
+	 */
 	private int _y;
+	/**
+	 * Field _z.
+	 */
 	private int _z;
+	/**
+	 * Field _reflection.
+	 */
 	protected Reflection _reflection = ReflectionManager.DEFAULT;
+	/**
+	 * Field _currentRegion.
+	 */
 	private WorldRegion _currentRegion;
+	/**
+	 * Field _state.
+	 */
 	private final AtomicInteger _state = new AtomicInteger(CREATED);
 	
+	/**
+	 * Constructor for GameObject.
+	 */
 	protected GameObject()
 	{
 	}
 	
+	/**
+	 * Constructor for GameObject.
+	 * @param objectId int
+	 */
 	public GameObject(int objectId)
 	{
 		this.objectId = objectId;
 	}
 	
+	/**
+	 * Method getRef.
+	 * @return HardReference<? extends GameObject>
+	 */
 	public HardReference<? extends GameObject> getRef()
 	{
 		return HardReferences.emptyRef();
 	}
 	
+	/**
+	 * Method clearRef.
+	 */
 	private void clearRef()
 	{
 		HardReference<? extends GameObject> reference = getRef();
@@ -73,21 +130,37 @@ public abstract class GameObject extends EventOwner
 		}
 	}
 	
+	/**
+	 * Method getReflection.
+	 * @return Reflection
+	 */
 	public Reflection getReflection()
 	{
 		return _reflection;
 	}
 	
+	/**
+	 * Method getReflectionId.
+	 * @return int
+	 */
 	public int getReflectionId()
 	{
 		return _reflection.getId();
 	}
 	
+	/**
+	 * Method getGeoIndex.
+	 * @return int
+	 */
 	public int getGeoIndex()
 	{
 		return _reflection.getGeoIndex();
 	}
 	
+	/**
+	 * Method setReflection.
+	 * @param reflection Reflection
+	 */
 	public void setReflection(Reflection reflection)
 	{
 		if (_reflection == reflection)
@@ -116,6 +189,10 @@ public abstract class GameObject extends EventOwner
 		}
 	}
 	
+	/**
+	 * Method setReflection.
+	 * @param reflectionId int
+	 */
 	public void setReflection(int reflectionId)
 	{
 		Reflection r = ReflectionManager.getInstance().get(reflectionId);
@@ -127,47 +204,86 @@ public abstract class GameObject extends EventOwner
 		setReflection(r);
 	}
 	
+	/**
+	 * Method hashCode.
+	 * @return int
+	 */
 	@Override
 	public final int hashCode()
 	{
 		return objectId;
 	}
 	
+	/**
+	 * Method getObjectId.
+	 * @return int
+	 */
 	public final int getObjectId()
 	{
 		return objectId;
 	}
 	
+	/**
+	 * Method getX.
+	 * @return int
+	 */
 	public int getX()
 	{
 		return _x;
 	}
 	
+	/**
+	 * Method getY.
+	 * @return int
+	 */
 	public int getY()
 	{
 		return _y;
 	}
 	
+	/**
+	 * Method getZ.
+	 * @return int
+	 */
 	public int getZ()
 	{
 		return _z;
 	}
 	
+	/**
+	 * Method getLoc.
+	 * @return Location
+	 */
 	public Location getLoc()
 	{
 		return new Location(_x, _y, _z, getHeading());
 	}
 	
+	/**
+	 * Method getGeoZ.
+	 * @param loc Location
+	 * @return int
+	 */
 	public int getGeoZ(Location loc)
 	{
 		return GeoEngine.getHeight(loc, getGeoIndex());
 	}
 	
+	/**
+	 * Method setLoc.
+	 * @param loc Location
+	 */
 	public void setLoc(Location loc)
 	{
 		setXYZ(loc.x, loc.y, loc.z);
 	}
 	
+	/**
+	 * Method setXYZ.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 */
 	public void setXYZ(int x, int y, int z)
 	{
 		_x = World.validCoordX(x);
@@ -176,26 +292,47 @@ public abstract class GameObject extends EventOwner
 		World.addVisibleObject(this, null);
 	}
 	
+	/**
+	 * Method isVisible.
+	 * @return boolean
+	 */
 	public final boolean isVisible()
 	{
 		return _state.get() == VISIBLE;
 	}
 	
+	/**
+	 * Method getInvisibleType.
+	 * @return InvisibleType
+	 */
 	public InvisibleType getInvisibleType()
 	{
 		return InvisibleType.NONE;
 	}
 	
+	/**
+	 * Method isInvisible.
+	 * @return boolean
+	 */
 	public final boolean isInvisible()
 	{
 		return getInvisibleType() != InvisibleType.NONE;
 	}
 	
+	/**
+	 * Method spawnMe.
+	 * @param loc Location
+	 */
 	public void spawnMe(Location loc)
 	{
 		spawnMe0(loc, null);
 	}
 	
+	/**
+	 * Method spawnMe0.
+	 * @param loc Location
+	 * @param dropper Creature
+	 */
 	protected void spawnMe0(Location loc, Creature dropper)
 	{
 		_x = loc.x;
@@ -204,11 +341,18 @@ public abstract class GameObject extends EventOwner
 		spawn0(dropper);
 	}
 	
+	/**
+	 * Method spawnMe.
+	 */
 	public final void spawnMe()
 	{
 		spawn0(null);
 	}
 	
+	/**
+	 * Method spawn0.
+	 * @param dropper Creature
+	 */
 	protected void spawn0(Creature dropper)
 	{
 		if (!_state.compareAndSet(CREATED, VISIBLE))
@@ -219,6 +363,9 @@ public abstract class GameObject extends EventOwner
 		onSpawn();
 	}
 	
+	/**
+	 * Method toggleVisible.
+	 */
 	public void toggleVisible()
 	{
 		if (isVisible())
@@ -231,10 +378,16 @@ public abstract class GameObject extends EventOwner
 		}
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	protected void onSpawn()
 	{
 	}
 	
+	/**
+	 * Method decayMe.
+	 */
 	public final void decayMe()
 	{
 		if (!_state.compareAndSet(VISIBLE, CREATED))
@@ -245,10 +398,16 @@ public abstract class GameObject extends EventOwner
 		onDespawn();
 	}
 	
+	/**
+	 * Method onDespawn.
+	 */
 	protected void onDespawn()
 	{
 	}
 	
+	/**
+	 * Method deleteMe.
+	 */
 	public final void deleteMe()
 	{
 		decayMe();
@@ -259,11 +418,18 @@ public abstract class GameObject extends EventOwner
 		onDelete();
 	}
 	
+	/**
+	 * Method isDeleted.
+	 * @return boolean
+	 */
 	public final boolean isDeleted()
 	{
 		return _state.get() == DELETED;
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	protected void onDelete()
 	{
 		Reflection r = getReflection();
@@ -274,6 +440,11 @@ public abstract class GameObject extends EventOwner
 		clearRef();
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	public void onAction(Player player, boolean shift)
 	{
 		if (Events.onAction(player, this, shift))
@@ -283,21 +454,41 @@ public abstract class GameObject extends EventOwner
 		player.sendActionFailed();
 	}
 	
+	/**
+	 * Method onForcedAttack.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	public void onForcedAttack(Player player, boolean shift)
 	{
 		player.sendActionFailed();
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	public boolean isAttackable(Creature attacker)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getL2ClassShortName.
+	 * @return String
+	 */
 	public String getL2ClassShortName()
 	{
 		return getClass().getSimpleName();
 	}
 	
+	/**
+	 * Method getXYDeltaSq.
+	 * @param x int
+	 * @param y int
+	 * @return long
+	 */
 	public final long getXYDeltaSq(int x, int y)
 	{
 		long dx = x - getX();
@@ -305,47 +496,98 @@ public abstract class GameObject extends EventOwner
 		return (dx * dx) + (dy * dy);
 	}
 	
+	/**
+	 * Method getXYDeltaSq.
+	 * @param loc Location
+	 * @return long
+	 */
 	public final long getXYDeltaSq(Location loc)
 	{
 		return getXYDeltaSq(loc.x, loc.y);
 	}
 	
+	/**
+	 * Method getZDeltaSq.
+	 * @param z int
+	 * @return long
+	 */
 	public final long getZDeltaSq(int z)
 	{
 		long dz = z - getZ();
 		return dz * dz;
 	}
 	
+	/**
+	 * Method getZDeltaSq.
+	 * @param loc Location
+	 * @return long
+	 */
 	public final long getZDeltaSq(Location loc)
 	{
 		return getZDeltaSq(loc.z);
 	}
 	
+	/**
+	 * Method getXYZDeltaSq.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return long
+	 */
 	public final long getXYZDeltaSq(int x, int y, int z)
 	{
 		return getXYDeltaSq(x, y) + getZDeltaSq(z);
 	}
 	
+	/**
+	 * Method getXYZDeltaSq.
+	 * @param loc Location
+	 * @return long
+	 */
 	public final long getXYZDeltaSq(Location loc)
 	{
 		return getXYDeltaSq(loc.x, loc.y) + getZDeltaSq(loc.z);
 	}
 	
+	/**
+	 * Method getDistance.
+	 * @param x int
+	 * @param y int
+	 * @return double
+	 */
 	public final double getDistance(int x, int y)
 	{
 		return Math.sqrt(getXYDeltaSq(x, y));
 	}
 	
+	/**
+	 * Method getDistance.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return double
+	 */
 	public final double getDistance(int x, int y, int z)
 	{
 		return Math.sqrt(getXYZDeltaSq(x, y, z));
 	}
 	
+	/**
+	 * Method getDistance.
+	 * @param loc Location
+	 * @return double
+	 */
 	public final double getDistance(Location loc)
 	{
 		return getDistance(loc.x, loc.y, loc.z);
 	}
 	
+	/**
+	 * Method isInRange.
+	 * @param obj GameObject
+	 * @param range long
+	 * @return boolean
+	 */
 	public final boolean isInRange(GameObject obj, long range)
 	{
 		if (obj == null)
@@ -370,6 +612,12 @@ public abstract class GameObject extends EventOwner
 		return (dz <= 1500) && (((dx * dx) + (dy * dy)) <= (range * range));
 	}
 	
+	/**
+	 * Method isInRangeZ.
+	 * @param obj GameObject
+	 * @param range long
+	 * @return boolean
+	 */
 	public final boolean isInRangeZ(GameObject obj, long range)
 	{
 		if (obj == null)
@@ -394,26 +642,55 @@ public abstract class GameObject extends EventOwner
 		return (dz <= range) && (((dx * dx) + (dy * dy) + (dz * dz)) <= (range * range));
 	}
 	
+	/**
+	 * Method isInRange.
+	 * @param loc Location
+	 * @param range long
+	 * @return boolean
+	 */
 	public final boolean isInRange(Location loc, long range)
 	{
 		return isInRangeSq(loc, range * range);
 	}
 	
+	/**
+	 * Method isInRangeSq.
+	 * @param loc Location
+	 * @param range long
+	 * @return boolean
+	 */
 	public final boolean isInRangeSq(Location loc, long range)
 	{
 		return getXYDeltaSq(loc) <= range;
 	}
 	
+	/**
+	 * Method isInRangeZ.
+	 * @param loc Location
+	 * @param range long
+	 * @return boolean
+	 */
 	public final boolean isInRangeZ(Location loc, long range)
 	{
 		return isInRangeZSq(loc, range * range);
 	}
 	
+	/**
+	 * Method isInRangeZSq.
+	 * @param loc Location
+	 * @param range long
+	 * @return boolean
+	 */
 	public final boolean isInRangeZSq(Location loc, long range)
 	{
 		return getXYZDeltaSq(loc) <= range;
 	}
 	
+	/**
+	 * Method getDistance.
+	 * @param obj GameObject
+	 * @return double
+	 */
 	public final double getDistance(GameObject obj)
 	{
 		if (obj == null)
@@ -423,6 +700,11 @@ public abstract class GameObject extends EventOwner
 		return Math.sqrt(getXYDeltaSq(obj.getX(), obj.getY()));
 	}
 	
+	/**
+	 * Method getDistance3D.
+	 * @param obj GameObject
+	 * @return double
+	 */
 	public final double getDistance3D(GameObject obj)
 	{
 		if (obj == null)
@@ -432,16 +714,32 @@ public abstract class GameObject extends EventOwner
 		return Math.sqrt(getXYZDeltaSq(obj.getX(), obj.getY(), obj.getZ()));
 	}
 	
+	/**
+	 * Method getRealDistance.
+	 * @param obj GameObject
+	 * @return double
+	 */
 	public final double getRealDistance(GameObject obj)
 	{
 		return getRealDistance3D(obj, true);
 	}
 	
+	/**
+	 * Method getRealDistance3D.
+	 * @param obj GameObject
+	 * @return double
+	 */
 	public final double getRealDistance3D(GameObject obj)
 	{
 		return getRealDistance3D(obj, false);
 	}
 	
+	/**
+	 * Method getRealDistance3D.
+	 * @param obj GameObject
+	 * @param ignoreZ boolean
+	 * @return double
+	 */
 	public final double getRealDistance3D(GameObject obj, boolean ignoreZ)
 	{
 		double distance = ignoreZ ? getDistance(obj) : getDistance3D(obj);
@@ -456,11 +754,22 @@ public abstract class GameObject extends EventOwner
 		return distance > 0 ? distance : 0;
 	}
 	
+	/**
+	 * Method getSqDistance.
+	 * @param x int
+	 * @param y int
+	 * @return long
+	 */
 	public final long getSqDistance(int x, int y)
 	{
 		return getXYDeltaSq(x, y);
 	}
 	
+	/**
+	 * Method getSqDistance.
+	 * @param obj GameObject
+	 * @return long
+	 */
 	public final long getSqDistance(GameObject obj)
 	{
 		if (obj == null)
@@ -470,56 +779,100 @@ public abstract class GameObject extends EventOwner
 		return getXYDeltaSq(obj.getLoc());
 	}
 	
+	/**
+	 * Method getPlayer.
+	 * @return Player
+	 */
 	public Player getPlayer()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getHeading.
+	 * @return int
+	 */
 	public int getHeading()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getMoveSpeed.
+	 * @return int
+	 */
 	public int getMoveSpeed()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getCurrentRegion.
+	 * @return WorldRegion
+	 */
 	public WorldRegion getCurrentRegion()
 	{
 		return _currentRegion;
 	}
 	
+	/**
+	 * Method setCurrentRegion.
+	 * @param region WorldRegion
+	 */
 	public void setCurrentRegion(WorldRegion region)
 	{
 		_currentRegion = region;
 	}
 	
+	/**
+	 * Method isInObserverMode.
+	 * @return boolean
+	 */
 	public boolean isInObserverMode()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isInOlympiadMode.
+	 * @return boolean
+	 */
 	public boolean isInOlympiadMode()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isInBoat.
+	 * @return boolean
+	 */
 	public boolean isInBoat()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isInShuttle.
+	 * @return boolean
+	 */
 	public boolean isInShuttle()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isFlying.
+	 * @return boolean
+	 */
 	public boolean isFlying()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getColRadius.
+	 * @return double
+	 */
 	public double getColRadius()
 	{
 		_log.warn("getColRadius called directly from L2Object");
@@ -527,6 +880,10 @@ public abstract class GameObject extends EventOwner
 		return 0;
 	}
 	
+	/**
+	 * Method getColHeight.
+	 * @return double
+	 */
 	public double getColHeight()
 	{
 		_log.warn("getColHeight called directly from L2Object");
@@ -534,131 +891,238 @@ public abstract class GameObject extends EventOwner
 		return 0;
 	}
 	
+	/**
+	 * Method isCreature.
+	 * @return boolean
+	 */
 	public boolean isCreature()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isPlayable.
+	 * @return boolean
+	 */
 	public boolean isPlayable()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isPlayer.
+	 * @return boolean
+	 */
 	public boolean isPlayer()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isPet.
+	 * @return boolean
+	 */
 	public boolean isPet()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isServitor.
+	 * @return boolean
+	 */
 	public boolean isServitor()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isNpc.
+	 * @return boolean
+	 */
 	public boolean isNpc()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isMonster.
+	 * @return boolean
+	 */
 	public boolean isMonster()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isItem.
+	 * @return boolean
+	 */
 	public boolean isItem()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isRaid.
+	 * @return boolean
+	 */
 	public boolean isRaid()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isBoss.
+	 * @return boolean
+	 */
 	public boolean isBoss()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isTrap.
+	 * @return boolean
+	 */
 	public boolean isTrap()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isDoor.
+	 * @return boolean
+	 */
 	public boolean isDoor()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isArtefact.
+	 * @return boolean
+	 */
 	public boolean isArtefact()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isSiegeGuard.
+	 * @return boolean
+	 */
 	public boolean isSiegeGuard()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isClanAirShip.
+	 * @return boolean
+	 */
 	public boolean isClanAirShip()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isAirShip.
+	 * @return boolean
+	 */
 	public boolean isAirShip()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isBoat.
+	 * @return boolean
+	 */
 	public boolean isBoat()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isVehicle.
+	 * @return boolean
+	 */
 	public boolean isVehicle()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isShuttle.
+	 * @return boolean
+	 */
 	public boolean isShuttle()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isMinion.
+	 * @return boolean
+	 */
 	public boolean isMinion()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return getClass().getSimpleName() + ":" + objectId;
 	}
 	
+	/**
+	 * Method dump.
+	 * @return String
+	 */
 	public String dump()
 	{
 		return dump(true);
 	}
 	
+	/**
+	 * Method dump.
+	 * @param simpleTypes boolean
+	 * @return String
+	 */
 	public String dump(boolean simpleTypes)
 	{
 		return Util.dumpObject(this, simpleTypes, true, true);
 	}
 	
+	/**
+	 * Method addPacketList.
+	 * @param forPlayer Player
+	 * @param dropper Creature
+	 * @return List<L2GameServerPacket>
+	 */
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{
 		return Collections.emptyList();
 	}
 	
+	/**
+	 * Method deletePacketList.
+	 * @return List<L2GameServerPacket>
+	 */
 	public List<L2GameServerPacket> deletePacketList()
 	{
 		return Collections.<L2GameServerPacket> singletonList(new DeleteObject(this));
 	}
 	
+	/**
+	 * Method addEvent.
+	 * @param event GlobalEvent
+	 */
 	@Override
 	public void addEvent(GlobalEvent event)
 	{
@@ -666,6 +1130,10 @@ public abstract class GameObject extends EventOwner
 		super.addEvent(event);
 	}
 	
+	/**
+	 * Method removeEvent.
+	 * @param event GlobalEvent
+	 */
 	@Override
 	public void removeEvent(GlobalEvent event)
 	{
@@ -673,6 +1141,11 @@ public abstract class GameObject extends EventOwner
 		super.removeEvent(event);
 	}
 	
+	/**
+	 * Method equals.
+	 * @param obj Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object obj)
 	{

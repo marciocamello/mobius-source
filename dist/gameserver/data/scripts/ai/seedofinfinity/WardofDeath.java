@@ -18,8 +18,15 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WardofDeath extends DefaultAI
 {
+	/**
+	 * Field mobs.
+	 */
 	private static final int[] mobs =
 	{
 		22516,
@@ -28,12 +35,21 @@ public class WardofDeath extends DefaultAI
 		22524
 	};
 	
+	/**
+	 * Constructor for WardofDeath.
+	 * @param actor NpcInstance
+	 */
 	public WardofDeath(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	protected boolean checkAggression(Creature target)
 	{

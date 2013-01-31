@@ -19,8 +19,15 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Remy extends DefaultAI
 {
+	/**
+	 * Field points.
+	 */
 	static final Location[] points =
 	{
 		new Location(-81926, 243894, -3712),
@@ -41,21 +48,42 @@ public class Remy extends DefaultAI
 		new Location(-81674, 243391, -3712),
 		new Location(-81926, 243894, -3712)
 	};
+	/**
+	 * Field current_point.
+	 */
 	private int current_point = -1;
+	/**
+	 * Field wait_timeout.
+	 */
 	private long wait_timeout = 0;
+	/**
+	 * Field wait.
+	 */
 	private boolean wait = false;
 	
+	/**
+	 * Constructor for Remy.
+	 * @param actor NpcInstance
+	 */
 	public Remy(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -120,11 +148,21 @@ public class Remy extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

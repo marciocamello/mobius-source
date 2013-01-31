@@ -21,18 +21,44 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.FakePlayer;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FakePlayerAI extends CharacterAI
 {
+	/**
+	 * Field thinking.
+	 */
 	private volatile int thinking = 0;
+	/**
+	 * Field _intention_arg0.
+	 */
 	Object _intention_arg0 = null;
+	/**
+	 * Field _intention_arg1.
+	 */
 	Object _intention_arg1 = null;
+	/**
+	 * Field _followTask.
+	 */
 	ScheduledFuture<?> _followTask;
 	
+	/**
+	 * Constructor for FakePlayerAI.
+	 * @param actor FakePlayer
+	 */
 	public FakePlayerAI(FakePlayer actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method changeIntention.
+	 * @param intention CtrlIntention
+	 * @param arg0 Object
+	 * @param arg1 Object
+	 */
 	@Override
 	public void changeIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
@@ -41,6 +67,12 @@ public class FakePlayerAI extends CharacterAI
 		_intention_arg1 = arg1;
 	}
 	
+	/**
+	 * Method setIntention.
+	 * @param intention CtrlIntention
+	 * @param arg0 Object
+	 * @param arg1 Object
+	 */
 	@Override
 	public void setIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
@@ -49,6 +81,9 @@ public class FakePlayerAI extends CharacterAI
 		super.setIntention(intention, arg0, arg1);
 	}
 	
+	/**
+	 * Method onEvtThink.
+	 */
 	@Override
 	protected final void onEvtThink()
 	{
@@ -84,6 +119,9 @@ public class FakePlayerAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method thinkFollow.
+	 */
 	protected void thinkFollow()
 	{
 		FakePlayer actor = getActor();
@@ -111,6 +149,10 @@ public class FakePlayerAI extends CharacterAI
 		_followTask = ThreadPoolManager.getInstance().schedule(new ThinkFollow(), 250L);
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 * @param checkRange boolean
+	 */
 	protected void thinkAttack(boolean checkRange)
 	{
 		FakePlayer actor = getActor();
@@ -164,18 +206,31 @@ public class FakePlayerAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return FakePlayer
+	 */
 	@Override
 	public FakePlayer getActor()
 	{
 		return (FakePlayer) super.getActor();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class ThinkFollow extends RunnableImpl
 	{
+		/**
+		 * Constructor for ThinkFollow.
+		 */
 		protected ThinkFollow()
 		{
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

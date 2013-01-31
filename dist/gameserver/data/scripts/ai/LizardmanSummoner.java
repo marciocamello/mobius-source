@@ -19,17 +19,37 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.PositionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LizardmanSummoner extends Mystic
 {
+	/**
+	 * Field TANTA_LIZARDMAN_SCOUT.
+	 */
 	private final int TANTA_LIZARDMAN_SCOUT = 22768;
+	/**
+	 * Field SPAWN_COUNT.
+	 */
 	private final int SPAWN_COUNT = 2;
+	/**
+	 * Field spawnedMobs.
+	 */
 	private boolean spawnedMobs = false;
 	
+	/**
+	 * Constructor for LizardmanSummoner.
+	 * @param actor NpcInstance
+	 */
 	public LizardmanSummoner(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -37,6 +57,11 @@ public class LizardmanSummoner extends Mystic
 		super.onEvtSpawn();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

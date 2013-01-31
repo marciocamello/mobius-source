@@ -18,11 +18,24 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.petition.PetitionMainGroup;
 import lineage2.gameserver.model.petition.PetitionSubGroup;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RequestPetition extends L2GameClientPacket
 {
+	/**
+	 * Field _content.
+	 */
 	private String _content;
+	/**
+	 * Field _type.
+	 */
 	private int _type;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -30,6 +43,9 @@ public final class RequestPetition extends L2GameClientPacket
 		_type = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

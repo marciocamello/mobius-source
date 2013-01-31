@@ -12,6 +12,10 @@
  */
 package lineage2.gameserver.listener;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface NpcListener extends CharListener
 {
 }

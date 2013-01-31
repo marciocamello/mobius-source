@@ -17,20 +17,36 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Apprentice extends DefaultAI
 {
+	/**
+	 * Constructor for Apprentice.
+	 * @param actor NpcInstance
+	 */
 	public Apprentice(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ACTIVE_DELAY = 20000;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

@@ -18,6 +18,10 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import quests._250_WatchWhatYouEat;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SallyInstance extends NpcInstance
 {
 	/**
@@ -25,11 +29,21 @@ public class SallyInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for SallyInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SallyInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

@@ -18,9 +18,19 @@ import lineage2.gameserver.network.loginservercon.ReceivablePacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LoginServerFail extends ReceivablePacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(LoginServerFail.class);
+	/**
+	 * Field reasons.
+	 */
 	private static final String[] reasons =
 	{
 		"none",
@@ -32,19 +42,32 @@ public class LoginServerFail extends ReceivablePacket
 		"not authed",
 		"already logged in"
 	};
+	/**
+	 * Field _reason.
+	 */
 	private int _reason;
 	
+	/**
+	 * Method getReason.
+	 * @return String
+	 */
 	public String getReason()
 	{
 		return reasons[_reason];
 	}
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_reason = readC();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

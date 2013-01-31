@@ -17,6 +17,10 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChestInstance extends MonsterInstance
 {
 	/**
@@ -24,16 +28,30 @@ public class ChestInstance extends MonsterInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for ChestInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ChestInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method tryOpen.
+	 * @param opener Player
+	 * @param skill Skill
+	 */
 	public void tryOpen(Player opener, Skill skill)
 	{
 		getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, opener, 100);
 	}
 	
+	/**
+	 * Method canChampion.
+	 * @return boolean
+	 */
 	@Override
 	public boolean canChampion()
 	{

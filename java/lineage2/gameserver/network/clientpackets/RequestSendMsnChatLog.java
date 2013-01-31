@@ -12,17 +12,33 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("unused")
 public class RequestSendMsnChatLog extends L2GameClientPacket
 {
+	/**
+	 * Field unk3.
+	 */
 	private int unk3;
+	/**
+	 * Field unk2. Field unk.
+	 */
 	private String unk, unk2;
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
 	}
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{

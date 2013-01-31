@@ -22,23 +22,47 @@ import lineage2.gameserver.templates.spawn.SpawnNpcInfo;
 import lineage2.gameserver.templates.spawn.SpawnRange;
 import lineage2.gameserver.templates.spawn.SpawnTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HardSpawner extends Spawner
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _template.
+	 */
 	private final SpawnTemplate _template;
+	/**
+	 * Field _pointIndex.
+	 */
 	private int _pointIndex;
+	/**
+	 * Field _npcIndex.
+	 */
 	private int _npcIndex;
+	/**
+	 * Field _reSpawned.
+	 */
 	private final List<NpcInstance> _reSpawned = new CopyOnWriteArrayList<>();
 	
+	/**
+	 * Constructor for HardSpawner.
+	 * @param template SpawnTemplate
+	 */
 	public HardSpawner(SpawnTemplate template)
 	{
 		_template = template;
 		_spawned = new CopyOnWriteArrayList<>();
 	}
 	
+	/**
+	 * Method decreaseCount.
+	 * @param oldNpc NpcInstance
+	 */
 	@Override
 	public void decreaseCount(NpcInstance oldNpc)
 	{
@@ -52,6 +76,11 @@ public class HardSpawner extends Spawner
 		decreaseCount0(npcInfo.getTemplate(), npc, oldNpc.getDeadTime());
 	}
 	
+	/**
+	 * Method doSpawn.
+	 * @param spawn boolean
+	 * @return NpcInstance
+	 */
 	@Override
 	public NpcInstance doSpawn(boolean spawn)
 	{
@@ -59,6 +88,13 @@ public class HardSpawner extends Spawner
 		return doSpawn0(npcInfo.getTemplate(), spawn, npcInfo.getParameters());
 	}
 	
+	/**
+	 * Method initNpc.
+	 * @param mob NpcInstance
+	 * @param spawn boolean
+	 * @param set MultiValueSet<String>
+	 * @return NpcInstance
+	 */
 	@Override
 	protected NpcInstance initNpc(NpcInstance mob, boolean spawn, MultiValueSet<String> set)
 	{
@@ -68,6 +104,10 @@ public class HardSpawner extends Spawner
 		return initNpc0(mob, range.getRandomLoc(getReflection().getGeoIndex()), spawn, set);
 	}
 	
+	/**
+	 * Method getCurrentNpcId.
+	 * @return int
+	 */
 	@Override
 	public int getCurrentNpcId()
 	{
@@ -75,18 +115,29 @@ public class HardSpawner extends Spawner
 		return npcInfo.getTemplate().npcId;
 	}
 	
+	/**
+	 * Method getCurrentSpawnRange.
+	 * @return SpawnRange
+	 */
 	@Override
 	public SpawnRange getCurrentSpawnRange()
 	{
 		return _template.getSpawnRange(_pointIndex);
 	}
 	
+	/**
+	 * Method respawnNpc.
+	 * @param oldNpc NpcInstance
+	 */
 	@Override
 	public void respawnNpc(NpcInstance oldNpc)
 	{
 		initNpc(oldNpc, true, StatsSet.EMPTY);
 	}
 	
+	/**
+	 * Method deleteAll.
+	 */
 	@Override
 	public void deleteAll()
 	{
@@ -99,6 +150,10 @@ public class HardSpawner extends Spawner
 		_reSpawned.clear();
 	}
 	
+	/**
+	 * Method getNextNpcInfo.
+	 * @return SpawnNpcInfo
+	 */
 	private synchronized SpawnNpcInfo getNextNpcInfo()
 	{
 		int old = _npcIndex++;
@@ -125,6 +180,10 @@ public class HardSpawner extends Spawner
 		return npcInfo;
 	}
 	
+	/**
+	 * Method getNextRangeId.
+	 * @return int
+	 */
 	private synchronized int getNextRangeId()
 	{
 		int old = _pointIndex++;
@@ -135,6 +194,10 @@ public class HardSpawner extends Spawner
 		return old;
 	}
 	
+	/**
+	 * Method clone.
+	 * @return HardSpawner
+	 */
 	@Override
 	public HardSpawner clone()
 	{

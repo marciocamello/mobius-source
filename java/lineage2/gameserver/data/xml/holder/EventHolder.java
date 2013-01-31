@@ -20,27 +20,56 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EventHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final EventHolder _instance = new EventHolder();
+	/**
+	 * Field _events.
+	 */
 	private final IntObjectMap<GlobalEvent> _events = new TreeIntObjectMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return EventHolder
+	 */
 	public static EventHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addEvent.
+	 * @param type EventType
+	 * @param event GlobalEvent
+	 */
 	public void addEvent(EventType type, GlobalEvent event)
 	{
 		_events.put(type.step() + event.getId(), event);
 	}
 	
+	/**
+	 * Method getEvent.
+	 * @param type EventType
+	 * @param id int
+	 * @return E
+	 */
 	@SuppressWarnings("unchecked")
 	public <E extends GlobalEvent> E getEvent(EventType type, int id)
 	{
 		return (E) _events.get(type.step() + id);
 	}
 	
+	/**
+	 * Method findEvent.
+	 * @param player Player
+	 */
 	public void findEvent(Player player)
 	{
 		for (GlobalEvent event : _events.values())
@@ -52,6 +81,9 @@ public final class EventHolder extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method callInit.
+	 */
 	public void callInit()
 	{
 		for (GlobalEvent event : _events.values())
@@ -60,12 +92,19 @@ public final class EventHolder extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _events.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

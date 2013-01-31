@@ -21,6 +21,10 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class NativePrisonerInstance extends NpcInstance
 {
 	/**
@@ -28,11 +32,19 @@ public final class NativePrisonerInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for NativePrisonerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public NativePrisonerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -40,6 +52,11 @@ public final class NativePrisonerInstance extends NpcInstance
 		super.onSpawn();
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

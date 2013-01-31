@@ -51,12 +51,25 @@ import org.slf4j.LoggerFactory;
 
 import bosses.EpicBossState.State;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BaiumManager extends Functions implements ScriptFile, OnDeathListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(BaiumManager.class);
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class CallArchAngel extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -67,8 +80,14 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class CheckLastAttack extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -86,8 +105,14 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class CubeSpawn extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -95,8 +120,14 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class IntervalEnd extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -106,17 +137,34 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class KillPc extends RunnableImpl
 	{
+		/**
+		 * Field _boss.
+		 */
 		private final BossInstance _boss;
+		/**
+		 * Field _target.
+		 */
 		private final Player _target;
 		
+		/**
+		 * Constructor for KillPc.
+		 * @param target Player
+		 * @param boss BossInstance
+		 */
 		public KillPc(Player target, BossInstance boss)
 		{
 			_target = target;
 			_boss = boss;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -129,17 +177,34 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class MoveAtRandom extends RunnableImpl
 	{
+		/**
+		 * Field _npc.
+		 */
 		private final NpcInstance _npc;
+		/**
+		 * Field _pos.
+		 */
 		private final Location _pos;
 		
+		/**
+		 * Constructor for MoveAtRandom.
+		 * @param npc NpcInstance
+		 * @param pos Location
+		 */
 		public MoveAtRandom(NpcInstance npc, Location pos)
 		{
 			_npc = npc;
 			_pos = pos;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -150,15 +215,28 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class SetMobilised extends RunnableImpl
 	{
+		/**
+		 * Field _boss.
+		 */
 		private final BossInstance _boss;
 		
+		/**
+		 * Constructor for SetMobilised.
+		 * @param boss BossInstance
+		 */
 		public SetMobilised(BossInstance boss)
 		{
 			_boss = boss;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -166,17 +244,34 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class Social extends RunnableImpl
 	{
+		/**
+		 * Field _action.
+		 */
 		private final int _action;
+		/**
+		 * Field _npc.
+		 */
 		private final NpcInstance _npc;
 		
+		/**
+		 * Constructor for Social.
+		 * @param npc NpcInstance
+		 * @param actionId int
+		 */
 		public Social(NpcInstance npc, int actionId)
 		{
 			_npc = npc;
 			_action = actionId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -185,31 +280,109 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * Field _callAngelTask.
+	 */
 	private static ScheduledFuture<?> _callAngelTask = null;
+	/**
+	 * Field _cubeSpawnTask.
+	 */
 	private static ScheduledFuture<?> _cubeSpawnTask = null;
+	/**
+	 * Field _intervalEndTask.
+	 */
 	private static ScheduledFuture<?> _intervalEndTask = null;
+	/**
+	 * Field _killPcTask.
+	 */
 	private static ScheduledFuture<?> _killPcTask = null;
+	/**
+	 * Field _mobiliseTask.
+	 */
 	private static ScheduledFuture<?> _mobiliseTask = null;
+	/**
+	 * Field _moveAtRandomTask.
+	 */
 	private static ScheduledFuture<?> _moveAtRandomTask = null;
+	/**
+	 * Field _sleepCheckTask.
+	 */
 	static ScheduledFuture<?> _sleepCheckTask = null;
+	/**
+	 * Field _socialTask.
+	 */
 	private static ScheduledFuture<?> _socialTask = null;
+	/**
+	 * Field _socialTask2.
+	 */
 	private static ScheduledFuture<?> _socialTask2 = null;
+	/**
+	 * Field _onAnnihilatedTask.
+	 */
 	private static ScheduledFuture<?> _onAnnihilatedTask = null;
+	/**
+	 * Field _state.
+	 */
 	static EpicBossState _state;
+	/**
+	 * Field _lastAttackTime.
+	 */
 	static long _lastAttackTime = 0;
+	/**
+	 * Field _npcBaium.
+	 */
 	private static NpcInstance _npcBaium;
+	/**
+	 * Field _statueSpawn.
+	 */
 	static SimpleSpawner _statueSpawn = null;
+	/**
+	 * Field _teleportCube.
+	 */
 	static NpcInstance _teleportCube = null;
+	/**
+	 * Field _teleportCubeSpawn.
+	 */
 	static SimpleSpawner _teleportCubeSpawn = null;
+	/**
+	 * Field _monsters.
+	 */
 	private static List<NpcInstance> _monsters = new ArrayList<>();
+	/**
+	 * Field _monsterSpawn.
+	 */
 	private static Map<Integer, SimpleSpawner> _monsterSpawn = new ConcurrentHashMap<>();
+	/**
+	 * Field _angels.
+	 */
 	static List<NpcInstance> _angels = new ArrayList<>();
+	/**
+	 * Field _angelSpawns.
+	 */
 	static List<SimpleSpawner> _angelSpawns = new ArrayList<>();
+	/**
+	 * Field _zone.
+	 */
 	private static Zone _zone;
+	/**
+	 * Field ARCHANGEL. (value is 29021)
+	 */
 	private final static int ARCHANGEL = 29021;
+	/**
+	 * Field BAIUM. (value is 29020)
+	 */
 	private final static int BAIUM = 29020;
+	/**
+	 * Field BAIUM_NPC. (value is 29025)
+	 */
 	private final static int BAIUM_NPC = 29025;
+	/**
+	 * Field Dying.
+	 */
 	private static boolean Dying = false;
+	/**
+	 * Field ANGEL_LOCATION.
+	 */
 	private final static Location[] ANGEL_LOCATION = new Location[]
 	{
 		new Location(113004, 16209, 10076, 60242),
@@ -223,13 +396,34 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		new Location(115391, 17593, 10076, 55346),
 		new Location(115245, 17558, 10076, 35536)
 	};
+	/**
+	 * Field CUBE_LOCATION.
+	 */
 	private final static Location CUBE_LOCATION = new Location(115203, 16620, 10078, 0);
+	/**
+	 * Field STATUE_LOCATION.
+	 */
 	private final static Location STATUE_LOCATION = new Location(115996, 17417, 10106, 41740);
+	/**
+	 * Field TELEPORT_CUBE. (value is 31759)
+	 */
 	private final static int TELEPORT_CUBE = 31759;
+	/**
+	 * Field FWB_LIMITUNTILSLEEP.
+	 */
 	private final static int FWB_LIMITUNTILSLEEP = 30 * 60000;
+	/**
+	 * Field FWB_FIXINTERVALOFBAIUM.
+	 */
 	private final static int FWB_FIXINTERVALOFBAIUM = 5 * 24 * 60 * 60000;
+	/**
+	 * Field FWB_RANDOMINTERVALOFBAIUM.
+	 */
 	private final static int FWB_RANDOMINTERVALOFBAIUM = 8 * 60 * 60000;
 	
+	/**
+	 * Method banishForeigners.
+	 */
 	private static void banishForeigners()
 	{
 		for (Player player : getPlayersInside())
@@ -238,8 +432,14 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class onAnnihilated extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -247,6 +447,9 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * Method checkAnnihilated.
+	 */
 	private synchronized static void checkAnnihilated()
 	{
 		if ((_onAnnihilatedTask == null) && isPlayersAnnihilated())
@@ -255,6 +458,9 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * Method deleteArchangels.
+	 */
 	private static void deleteArchangels()
 	{
 		for (NpcInstance angel : _angels)
@@ -268,16 +474,27 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		_angels.clear();
 	}
 	
+	/**
+	 * Method getPlayersInside.
+	 * @return List<Player>
+	 */
 	private static List<Player> getPlayersInside()
 	{
 		return getZone().getInsidePlayers();
 	}
 	
+	/**
+	 * Method getZone.
+	 * @return Zone
+	 */
 	public static Zone getZone()
 	{
 		return _zone;
 	}
 	
+	/**
+	 * Method init.
+	 */
 	private void init()
 	{
 		_state = new EpicBossState(BAIUM);
@@ -356,6 +573,10 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		_log.info("BaiumManager: Next spawn date: " + TimeUtils.toSimpleFormat(_state.getRespawnDate()));
 	}
 	
+	/**
+	 * Method isPlayersAnnihilated.
+	 * @return boolean
+	 */
 	private static boolean isPlayersAnnihilated()
 	{
 		for (Player pc : getPlayersInside())
@@ -368,6 +589,12 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		return true;
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param self Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature self, Creature killer)
 	{
@@ -381,6 +608,10 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * Method onBaiumDie.
+	 * @param self Creature
+	 */
 	public static void onBaiumDie(Creature self)
 	{
 		if (Dying)
@@ -397,11 +628,18 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		_cubeSpawnTask = ThreadPoolManager.getInstance().schedule(new CubeSpawn(), 10000);
 	}
 	
+	/**
+	 * Method getRespawnInterval.
+	 * @return int
+	 */
 	private static int getRespawnInterval()
 	{
 		return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * (FWB_FIXINTERVALOFBAIUM + Rnd.get(0, FWB_RANDOMINTERVALOFBAIUM)));
 	}
 	
+	/**
+	 * Method setIntervalEndTask.
+	 */
 	private static void setIntervalEndTask()
 	{
 		setUnspawn();
@@ -414,11 +652,17 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		_intervalEndTask = ThreadPoolManager.getInstance().schedule(new IntervalEnd(), _state.getInterval());
 	}
 	
+	/**
+	 * Method setLastAttackTime.
+	 */
 	public static void setLastAttackTime()
 	{
 		_lastAttackTime = System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method setUnspawn.
+	 */
 	public static void setUnspawn()
 	{
 		banishForeigners();
@@ -487,6 +731,9 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * Method sleepBaium.
+	 */
 	static void sleepBaium()
 	{
 		setUnspawn();
@@ -496,15 +743,28 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		_statueSpawn.doSpawn(true);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class EarthquakeTask extends RunnableImpl
 	{
+		/**
+		 * Field baium.
+		 */
 		private final BossInstance baium;
 		
+		/**
+		 * Constructor for EarthquakeTask.
+		 * @param _baium BossInstance
+		 */
 		public EarthquakeTask(BossInstance _baium)
 		{
 			baium = _baium;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -513,6 +773,11 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * Method spawnBaium.
+	 * @param NpcBaium NpcInstance
+	 * @param awake_by Player
+	 */
 	public static void spawnBaium(NpcInstance NpcBaium, Player awake_by)
 	{
 		Dying = false;
@@ -542,18 +807,30 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		_sleepCheckTask = ThreadPoolManager.getInstance().schedule(new CheckLastAttack(), 600000);
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 		init();
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		sleepBaium();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

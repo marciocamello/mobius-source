@@ -31,17 +31,52 @@ import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SubUnit
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SubUnit.class);
+	/**
+	 * Field _skills.
+	 */
 	private final IntObjectMap<Skill> _skills = new CTreeIntObjectMap<>();
+	/**
+	 * Field _members.
+	 */
 	private final IntObjectMap<UnitMember> _members = new CHashIntObjectMap<>();
+	/**
+	 * Field _type.
+	 */
 	private final int _type;
+	/**
+	 * Field _leaderObjectId.
+	 */
 	private int _leaderObjectId;
+	/**
+	 * Field _leader.
+	 */
 	private UnitMember _leader;
+	/**
+	 * Field _name.
+	 */
 	private String _name;
+	/**
+	 * Field _clan.
+	 */
 	private final Clan _clan;
 	
+	/**
+	 * Constructor for SubUnit.
+	 * @param c Clan
+	 * @param type int
+	 * @param leader UnitMember
+	 * @param name String
+	 */
 	public SubUnit(Clan c, int type, UnitMember leader, String name)
 	{
 		_clan = c;
@@ -50,6 +85,13 @@ public class SubUnit
 		setLeader(leader, false);
 	}
 	
+	/**
+	 * Constructor for SubUnit.
+	 * @param c Clan
+	 * @param type int
+	 * @param leader int
+	 * @param name String
+	 */
 	public SubUnit(Clan c, int type, int leader, String name)
 	{
 		_clan = c;
@@ -58,31 +100,57 @@ public class SubUnit
 		_name = name;
 	}
 	
+	/**
+	 * Method getType.
+	 * @return int
+	 */
 	public int getType()
 	{
 		return _type;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method getLeader.
+	 * @return UnitMember
+	 */
 	public UnitMember getLeader()
 	{
 		return _leader;
 	}
 	
+	/**
+	 * Method isUnitMember.
+	 * @param obj int
+	 * @return boolean
+	 */
 	public boolean isUnitMember(int obj)
 	{
 		return _members.containsKey(obj);
 	}
 	
+	/**
+	 * Method addUnitMember.
+	 * @param member UnitMember
+	 */
 	public void addUnitMember(UnitMember member)
 	{
 		_members.put(member.getObjectId(), member);
 	}
 	
+	/**
+	 * Method getUnitMember.
+	 * @param obj int
+	 * @return UnitMember
+	 */
 	public UnitMember getUnitMember(int obj)
 	{
 		if (obj == 0)
@@ -92,6 +160,11 @@ public class SubUnit
 		return _members.get(obj);
 	}
 	
+	/**
+	 * Method getUnitMember.
+	 * @param obj String
+	 * @return UnitMember
+	 */
 	public UnitMember getUnitMember(String obj)
 	{
 		for (UnitMember m : getUnitMembers())
@@ -104,6 +177,10 @@ public class SubUnit
 		return null;
 	}
 	
+	/**
+	 * Method removeUnitMember.
+	 * @param objectId int
+	 */
 	public void removeUnitMember(int objectId)
 	{
 		UnitMember m = _members.remove(objectId);
@@ -123,6 +200,11 @@ public class SubUnit
 		m.setPlayerInstance(null, true);
 	}
 	
+	/**
+	 * Method replace.
+	 * @param objectId int
+	 * @param newUnitId int
+	 */
 	public void replace(int objectId, int newUnitId)
 	{
 		SubUnit newUnit = _clan.getSubUnit(newUnitId);
@@ -143,21 +225,38 @@ public class SubUnit
 		}
 	}
 	
+	/**
+	 * Method getLeaderObjectId.
+	 * @return int
+	 */
 	public int getLeaderObjectId()
 	{
 		return _leader == null ? 0 : _leader.getObjectId();
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	public int size()
 	{
 		return _members.size();
 	}
 	
+	/**
+	 * Method getUnitMembers.
+	 * @return Collection<UnitMember>
+	 */
 	public Collection<UnitMember> getUnitMembers()
 	{
 		return _members.values();
 	}
 	
+	/**
+	 * Method setLeader.
+	 * @param newLeader UnitMember
+	 * @param updateDB boolean
+	 */
 	public void setLeader(UnitMember newLeader, boolean updateDB)
 	{
 		final UnitMember old = _leader;
@@ -195,6 +294,11 @@ public class SubUnit
 		}
 	}
 	
+	/**
+	 * Method setName.
+	 * @param name String
+	 * @param updateDB boolean
+	 */
 	public void setName(String name, boolean updateDB)
 	{
 		_name = name;
@@ -222,11 +326,21 @@ public class SubUnit
 		}
 	}
 	
+	/**
+	 * Method getLeaderName.
+	 * @return String
+	 */
 	public String getLeaderName()
 	{
 		return _leader == null ? StringUtils.EMPTY : _leader.getName();
 	}
 	
+	/**
+	 * Method addSkill.
+	 * @param newSkill Skill
+	 * @param store boolean
+	 * @return Skill
+	 */
 	public Skill addSkill(Skill newSkill, boolean store)
 	{
 		Skill oldSkill = null;
@@ -288,6 +402,10 @@ public class SubUnit
 		return oldSkill;
 	}
 	
+	/**
+	 * Method addSkillsQuietly.
+	 * @param player Player
+	 */
 	public void addSkillsQuietly(Player player)
 	{
 		for (Skill skill : _skills.values())
@@ -296,6 +414,10 @@ public class SubUnit
 		}
 	}
 	
+	/**
+	 * Method enableSkills.
+	 * @param player Player
+	 */
 	public void enableSkills(Player player)
 	{
 		for (Skill skill : _skills.values())
@@ -307,6 +429,10 @@ public class SubUnit
 		}
 	}
 	
+	/**
+	 * Method disableSkills.
+	 * @param player Player
+	 */
 	public void disableSkills(Player player)
 	{
 		for (Skill skill : _skills.values())
@@ -315,6 +441,11 @@ public class SubUnit
 		}
 	}
 	
+	/**
+	 * Method addSkill.
+	 * @param player Player
+	 * @param skill Skill
+	 */
 	private void addSkill(Player player, Skill skill)
 	{
 		if (skill.getMinRank() <= player.getPledgeClass())
@@ -327,11 +458,19 @@ public class SubUnit
 		}
 	}
 	
+	/**
+	 * Method getSkills.
+	 * @return Collection<Skill>
+	 */
 	public Collection<Skill> getSkills()
 	{
 		return _skills.values();
 	}
 	
+	/**
+	 * Method removeMemberInDatabase.
+	 * @param member UnitMember
+	 */
 	private static void removeMemberInDatabase(UnitMember member)
 	{
 		Connection con = null;
@@ -355,6 +494,9 @@ public class SubUnit
 		}
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	public void restore()
 	{
 		Connection con = null;
@@ -396,6 +538,9 @@ public class SubUnit
 		}
 	}
 	
+	/**
+	 * Method restoreSkills.
+	 */
 	public void restoreSkills()
 	{
 		Connection con = null;
@@ -426,12 +571,23 @@ public class SubUnit
 		}
 	}
 	
+	/**
+	 * Method getSkillLevel.
+	 * @param id int
+	 * @param def int
+	 * @return int
+	 */
 	public int getSkillLevel(int id, int def)
 	{
 		Skill skill = _skills.get(id);
 		return skill == null ? def : skill.getLevel();
 	}
 	
+	/**
+	 * Method getSkillLevel.
+	 * @param id int
+	 * @return int
+	 */
 	public int getSkillLevel(int id)
 	{
 		return getSkillLevel(id, -1);

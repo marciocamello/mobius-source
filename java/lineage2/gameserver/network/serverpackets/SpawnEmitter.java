@@ -15,17 +15,35 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SpawnEmitter extends L2GameServerPacket
 {
+	/**
+	 * Field _monsterObjId.
+	 */
 	private final int _monsterObjId;
+	/**
+	 * Field _playerObjId.
+	 */
 	private final int _playerObjId;
 	
+	/**
+	 * Constructor for SpawnEmitter.
+	 * @param monster NpcInstance
+	 * @param player Player
+	 */
 	public SpawnEmitter(NpcInstance monster, Player player)
 	{
 		_playerObjId = player.getObjectId();
 		_monsterObjId = monster.getObjectId();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

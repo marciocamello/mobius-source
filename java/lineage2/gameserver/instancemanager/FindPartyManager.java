@@ -15,47 +15,90 @@ package lineage2.gameserver.instancemanager;
 import javolution.util.FastList;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FindPartyManager
 {
+	/**
+	 * Field lookingForParty.
+	 */
 	FastList<Player> lookingForParty;
+	/**
+	 * Field wannaToChangeThisPlayer.
+	 */
 	FastList<Player> wannaToChangeThisPlayer;
 	
+	/**
+	 * Method load.
+	 */
 	public void load()
 	{
 		lookingForParty = new FastList<>();
 		wannaToChangeThisPlayer = new FastList<>();
 	}
 	
+	/**
+	 * Method addLookingForParty.
+	 * @param player Player
+	 */
 	public void addLookingForParty(Player player)
 	{
 		lookingForParty.add(player);
 	}
 	
+	/**
+	 * Method addChangeThisPlayer.
+	 * @param player Player
+	 */
 	public void addChangeThisPlayer(Player player)
 	{
 		wannaToChangeThisPlayer.add(player);
 	}
 	
+	/**
+	 * Method getLookingForPartyPlayers.
+	 * @return FastList<Player>
+	 */
 	public FastList<Player> getLookingForPartyPlayers()
 	{
 		return lookingForParty;
 	}
 	
+	/**
+	 * Method getWannaToChangeThisPlayers.
+	 * @return FastList<Player>
+	 */
 	public FastList<Player> getWannaToChangeThisPlayers()
 	{
 		return wannaToChangeThisPlayer;
 	}
 	
+	/**
+	 * Method removeLookingForParty.
+	 * @param player Player
+	 */
 	public void removeLookingForParty(Player player)
 	{
 		lookingForParty.remove(player);
 	}
 	
+	/**
+	 * Method removeChangeThisPlayer.
+	 * @param player Player
+	 */
 	public void removeChangeThisPlayer(Player player)
 	{
 		wannaToChangeThisPlayer.remove(player);
 	}
 	
+	/**
+	 * Method getLookingForParty.
+	 * @param level int
+	 * @param classId int
+	 * @return boolean
+	 */
 	public boolean getLookingForParty(int level, int classId)
 	{
 		for (Player player : lookingForParty)
@@ -68,6 +111,12 @@ public class FindPartyManager
 		return false;
 	}
 	
+	/**
+	 * Method getWannaToChangeThisPlayer.
+	 * @param level int
+	 * @param classId int
+	 * @return boolean
+	 */
 	public boolean getWannaToChangeThisPlayer(int level, int classId)
 	{
 		for (Player player : wannaToChangeThisPlayer)
@@ -80,6 +129,11 @@ public class FindPartyManager
 		return false;
 	}
 	
+	/**
+	 * Method getWannaToChangeThisPlayer.
+	 * @param objectID int
+	 * @return boolean
+	 */
 	public boolean getWannaToChangeThisPlayer(int objectID)
 	{
 		for (Player player : wannaToChangeThisPlayer)
@@ -92,6 +146,12 @@ public class FindPartyManager
 		return false;
 	}
 	
+	/**
+	 * Method getPlayerFromChange.
+	 * @param level int
+	 * @param classId int
+	 * @return Player
+	 */
 	public Player getPlayerFromChange(int level, int classId)
 	{
 		for (Player player : wannaToChangeThisPlayer)
@@ -104,8 +164,15 @@ public class FindPartyManager
 		return null;
 	}
 	
+	/**
+	 * Field _instance.
+	 */
 	private static final FindPartyManager _instance = new FindPartyManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return FindPartyManager
+	 */
 	public static final FindPartyManager getInstance()
 	{
 		return _instance;

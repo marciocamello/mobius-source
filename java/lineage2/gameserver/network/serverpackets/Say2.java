@@ -17,14 +17,40 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.network.serverpackets.components.SysString;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Say2 extends NpcStringContainer
 {
+	/**
+	 * Field _type.
+	 */
 	private final ChatType _type;
+	/**
+	 * Field _sysString.
+	 */
 	private SysString _sysString;
+	/**
+	 * Field _systemMsg.
+	 */
 	private SystemMsg _systemMsg;
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _charName.
+	 */
 	private String _charName;
 	
+	/**
+	 * Constructor for Say2.
+	 * @param objectId int
+	 * @param type ChatType
+	 * @param st SysString
+	 * @param sm SystemMsg
+	 */
 	public Say2(int objectId, ChatType type, SysString st, SystemMsg sm)
 	{
 		super(NpcString.NONE);
@@ -34,11 +60,26 @@ public class Say2 extends NpcStringContainer
 		_systemMsg = sm;
 	}
 	
+	/**
+	 * Constructor for Say2.
+	 * @param objectId int
+	 * @param type ChatType
+	 * @param charName String
+	 * @param text String
+	 */
 	public Say2(int objectId, ChatType type, String charName, String text)
 	{
 		this(objectId, type, charName, NpcString.NONE, text);
 	}
 	
+	/**
+	 * Constructor for Say2.
+	 * @param objectId int
+	 * @param type ChatType
+	 * @param charName String
+	 * @param npcString NpcString
+	 * @param params String[]
+	 */
 	public Say2(int objectId, ChatType type, String charName, NpcString npcString, String... params)
 	{
 		super(npcString, params);
@@ -47,6 +88,9 @@ public class Say2 extends NpcStringContainer
 		_charName = charName;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -22,16 +22,29 @@ import lineage2.gameserver.network.serverpackets.ExShowSentPostList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExCancelSentPost extends L2GameClientPacket
 {
+	/**
+	 * Field postId.
+	 */
 	private int postId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		postId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

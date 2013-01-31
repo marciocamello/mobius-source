@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExBR_PremiumState extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _state.
+	 */
 	private final int _state;
 	
+	/**
+	 * Constructor for ExBR_PremiumState.
+	 * @param activeChar Player
+	 * @param state boolean
+	 */
 	public ExBR_PremiumState(Player activeChar, boolean state)
 	{
 		_objectId = activeChar.getObjectId();
 		_state = state ? 1 : 0;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

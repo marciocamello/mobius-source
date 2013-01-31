@@ -20,12 +20,19 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SeedOfAnnihilationInstance extends MonsterInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field BISTAKON_MOBS.
+	 */
 	private static final int[] BISTAKON_MOBS = new int[]
 	{
 		22750,
@@ -33,12 +40,18 @@ public class SeedOfAnnihilationInstance extends MonsterInstance
 		22752,
 		22753
 	};
+	/**
+	 * Field COKRAKON_MOBS.
+	 */
 	private static final int[] COKRAKON_MOBS = new int[]
 	{
 		22763,
 		22764,
 		22765
 	};
+	/**
+	 * Field BISTAKON_MINIONS.
+	 */
 	private static final int[][] BISTAKON_MINIONS = new int[][]
 	{
 		{
@@ -62,6 +75,9 @@ public class SeedOfAnnihilationInstance extends MonsterInstance
 			22749
 		}
 	};
+	/**
+	 * Field COKRAKON_MINIONS.
+	 */
 	private static final int[][] COKRAKON_MINIONS = new int[][]
 	{
 		{
@@ -96,6 +112,11 @@ public class SeedOfAnnihilationInstance extends MonsterInstance
 		}
 	};
 	
+	/**
+	 * Constructor for SeedOfAnnihilationInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SeedOfAnnihilationInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -109,6 +130,11 @@ public class SeedOfAnnihilationInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * Method addMinions.
+	 * @param minions int[]
+	 * @param template NpcTemplate
+	 */
 	private static void addMinions(int[] minions, NpcTemplate template)
 	{
 		if ((minions != null) && (minions.length > 0))
@@ -120,6 +146,10 @@ public class SeedOfAnnihilationInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -127,6 +157,10 @@ public class SeedOfAnnihilationInstance extends MonsterInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method canChampion.
+	 * @return boolean
+	 */
 	@Override
 	public boolean canChampion()
 	{

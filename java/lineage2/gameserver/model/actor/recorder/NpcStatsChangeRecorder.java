@@ -14,13 +14,24 @@ package lineage2.gameserver.model.actor.recorder;
 
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NpcStatsChangeRecorder extends CharStatsChangeRecorder<NpcInstance>
 {
+	/**
+	 * Constructor for NpcStatsChangeRecorder.
+	 * @param actor NpcInstance
+	 */
 	public NpcStatsChangeRecorder(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onSendChanges.
+	 */
 	@Override
 	protected void onSendChanges()
 	{

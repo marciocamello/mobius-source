@@ -38,18 +38,34 @@ import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.InstantZone;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PartyVsPartyDuelEvent extends DuelEvent
 {
+	/**
+	 * Constructor for PartyVsPartyDuelEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public PartyVsPartyDuelEvent(MultiValueSet<String> set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Constructor for PartyVsPartyDuelEvent.
+	 * @param id int
+	 * @param name String
+	 */
 	protected PartyVsPartyDuelEvent(int id, String name)
 	{
 		super(id, name);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	@Override
 	public void stopEvent()
 	{
@@ -99,6 +115,10 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		removeObjects(BLUE_TEAM);
 	}
 	
+	/**
+	 * Method teleportPlayers.
+	 * @param name String
+	 */
 	@Override
 	public void teleportPlayers(String name)
 	{
@@ -130,6 +150,13 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		}
 	}
 	
+	/**
+	 * Method canDuel.
+	 * @param player Player
+	 * @param target Player
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean canDuel(Player player, Player target, boolean first)
 	{
@@ -169,6 +196,11 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		return true;
 	}
 	
+	/**
+	 * Method askDuel.
+	 * @param player Player
+	 * @param target Player
+	 */
 	@Override
 	public void askDuel(Player player, Player target)
 	{
@@ -181,6 +213,11 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		target.sendPacket(new SystemMessage2(SystemMsg.C1S_PARTY_HAS_CHALLENGED_YOUR_PARTY_TO_A_DUEL).addName(player), new ExDuelAskStart(player.getName(), 1));
 	}
 	
+	/**
+	 * Method createDuel.
+	 * @param player Player
+	 * @param target Player
+	 */
 	@Override
 	public void createDuel(Player player, Player target)
 	{
@@ -201,6 +238,10 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		duelEvent.reCalcNextTime(false);
 	}
 	
+	/**
+	 * Method playerExit.
+	 * @param player Player
+	 */
 	@Override
 	public void playerExit(Player player)
 	{
@@ -220,11 +261,19 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		}
 	}
 	
+	/**
+	 * Method packetSurrender.
+	 * @param player Player
+	 */
 	@Override
 	public void packetSurrender(Player player)
 	{
 	}
 	
+	/**
+	 * Method onDie.
+	 * @param player Player
+	 */
 	@Override
 	public void onDie(Player player)
 	{
@@ -273,12 +322,20 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		}
 	}
 	
+	/**
+	 * Method getDuelType.
+	 * @return int
+	 */
 	@Override
 	public int getDuelType()
 	{
 		return 1;
 	}
 	
+	/**
+	 * Method startTimeMillis.
+	 * @return long
+	 */
 	@Override
 	protected long startTimeMillis()
 	{

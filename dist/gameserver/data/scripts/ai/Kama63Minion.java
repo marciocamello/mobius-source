@@ -24,20 +24,49 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Kama63Minion extends Fighter
 {
+	/**
+	 * Field BOSS_ID. (value is 18571)
+	 */
 	private static final int BOSS_ID = 18571;
+	/**
+	 * Field MINION_DIE_TIME. (value is 25000)
+	 */
 	private static final int MINION_DIE_TIME = 25000;
+	/**
+	 * Field _wait_timeout.
+	 */
 	private long _wait_timeout = 0;
+	/**
+	 * Field _boss.
+	 */
 	private NpcInstance _boss;
+	/**
+	 * Field _spawned.
+	 */
 	private boolean _spawned = false;
+	/**
+	 * Field _dieTask.
+	 */
 	ScheduledFuture<?> _dieTask = null;
 	
+	/**
+	 * Constructor for Kama63Minion.
+	 * @param actor NpcInstance
+	 */
 	public Kama63Minion(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -45,6 +74,10 @@ public class Kama63Minion extends Fighter
 		super.onEvtSpawn();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -63,6 +96,11 @@ public class Kama63Minion extends Fighter
 		return super.thinkActive();
 	}
 	
+	/**
+	 * Method findBoss.
+	 * @param npcId int
+	 * @return NpcInstance
+	 */
 	private NpcInstance findBoss(int npcId)
 	{
 		if (System.currentTimeMillis() < _wait_timeout)
@@ -85,6 +123,10 @@ public class Kama63Minion extends Fighter
 		return null;
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -97,17 +139,34 @@ public class Kama63Minion extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class DieScheduleTimerTask extends RunnableImpl
 	{
+		/**
+		 * Field _minion.
+		 */
 		NpcInstance _minion = null;
+		/**
+		 * Field _master.
+		 */
 		NpcInstance _master = null;
 		
+		/**
+		 * Constructor for DieScheduleTimerTask.
+		 * @param minion NpcInstance
+		 * @param master NpcInstance
+		 */
 		public DieScheduleTimerTask(NpcInstance minion, NpcInstance master)
 		{
 			_minion = minion;
 			_master = master;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

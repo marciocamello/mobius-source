@@ -26,19 +26,45 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import npc.model.residences.SiegeGuardInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NurkaInstance extends SiegeGuardInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field SKILL.
+	 */
 	public static final Skill SKILL = SkillTable.getInstance().getInfo(5456, 1);
 	
+	/**
+	 * Constructor for NurkaInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public NurkaInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method reduceCurrentHp.
+	 * @param damage double
+	 * @param reflectableDamage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 * @param canReflect boolean
+	 * @param transferDamage boolean
+	 * @param isDot boolean
+	 * @param sendMessage boolean
+	 */
 	@Override
 	public void reduceCurrentHp(double damage, double reflectableDamage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp, boolean canReflect, boolean transferDamage, boolean isDot, boolean sendMessage)
 	{
@@ -50,6 +76,10 @@ public class NurkaInstance extends SiegeGuardInstance
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onDeath(Creature killer)
 	{
@@ -63,6 +93,10 @@ public class NurkaInstance extends SiegeGuardInstance
 		deleteMe();
 	}
 	
+	/**
+	 * Method getMostDamagedClan.
+	 * @return Clan
+	 */
 	public Clan getMostDamagedClan()
 	{
 		Player temp = null;
@@ -108,6 +142,10 @@ public class NurkaInstance extends SiegeGuardInstance
 		return player == null ? null : player.getClan();
 	}
 	
+	/**
+	 * Method isEffectImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isEffectImmune()
 	{

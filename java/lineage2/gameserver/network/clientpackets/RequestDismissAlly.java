@@ -18,13 +18,23 @@ import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.tables.ClanTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestDismissAlly extends L2GameClientPacket
 {
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

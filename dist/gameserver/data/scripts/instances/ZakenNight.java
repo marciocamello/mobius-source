@@ -18,10 +18,23 @@ import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ZakenNight extends Reflection
 {
+	/**
+	 * Field Zaken. (value is 29022)
+	 */
 	private static final int Zaken = 29022;
+	/**
+	 * Field initdelay.
+	 */
 	private static final long initdelay = 480 * 1000L;
+	/**
+	 * Field zakenspawn.
+	 */
 	final Location[] zakenspawn =
 	{
 		new Location(55272, 219080, -2952),
@@ -29,6 +42,9 @@ public class ZakenNight extends Reflection
 		new Location(55272, 219080, -3496),
 	};
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{
@@ -36,15 +52,28 @@ public class ZakenNight extends Reflection
 		ThreadPoolManager.getInstance().schedule(new ZakenSpawn(this), initdelay + (Rnd.get(120, 240) * 1000L));
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZakenSpawn extends RunnableImpl
 	{
+		/**
+		 * Field _r.
+		 */
 		Reflection _r;
 		
+		/**
+		 * Constructor for ZakenSpawn.
+		 * @param r Reflection
+		 */
 		public ZakenSpawn(Reflection r)
 		{
 			_r = r;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

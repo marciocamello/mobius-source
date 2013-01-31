@@ -37,36 +37,107 @@ import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PlayableAI extends CharacterAI
 {
+	/**
+	 * Field thinking.
+	 */
 	private volatile int thinking = 0;
+	/**
+	 * Field _intention_arg1. Field _intention_arg0.
+	 */
 	protected Object _intention_arg0 = null, _intention_arg1 = null;
+	/**
+	 * Field _skill.
+	 */
 	protected Skill _skill;
+	/**
+	 * Field _nextAction.
+	 */
 	private nextAction _nextAction;
+	/**
+	 * Field _nextAction_arg0.
+	 */
 	private Object _nextAction_arg0;
+	/**
+	 * Field _nextAction_arg1.
+	 */
 	private Object _nextAction_arg1;
+	/**
+	 * Field _nextAction_arg2.
+	 */
 	private boolean _nextAction_arg2;
+	/**
+	 * Field _nextAction_arg3.
+	 */
 	private boolean _nextAction_arg3;
+	/**
+	 * Field _forceUse.
+	 */
 	protected boolean _forceUse;
+	/**
+	 * Field _dontMove.
+	 */
 	private boolean _dontMove;
+	/**
+	 * Field _followTask.
+	 */
 	ScheduledFuture<?> _followTask;
 	
+	/**
+	 * Constructor for PlayableAI.
+	 * @param actor Playable
+	 */
 	public PlayableAI(Playable actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public enum nextAction
 	{
+		/**
+		 * Field ATTACK.
+		 */
 		ATTACK,
+		/**
+		 * Field CAST.
+		 */
 		CAST,
+		/**
+		 * Field MOVE.
+		 */
 		MOVE,
+		/**
+		 * Field REST.
+		 */
 		REST,
+		/**
+		 * Field PICKUP.
+		 */
 		PICKUP,
+		/**
+		 * Field INTERACT.
+		 */
 		INTERACT,
+		/**
+		 * Field COUPLE_ACTION.
+		 */
 		COUPLE_ACTION
 	}
 	
+	/**
+	 * Method changeIntention.
+	 * @param intention CtrlIntention
+	 * @param arg0 Object
+	 * @param arg1 Object
+	 */
 	@Override
 	public void changeIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
@@ -75,6 +146,12 @@ public class PlayableAI extends CharacterAI
 		_intention_arg1 = arg1;
 	}
 	
+	/**
+	 * Method setIntention.
+	 * @param intention CtrlIntention
+	 * @param arg0 Object
+	 * @param arg1 Object
+	 */
 	@Override
 	public void setIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
@@ -83,6 +160,11 @@ public class PlayableAI extends CharacterAI
 		super.setIntention(intention, arg0, arg1);
 	}
 	
+	/**
+	 * Method onIntentionCast.
+	 * @param skill Skill
+	 * @param target Creature
+	 */
 	@Override
 	protected void onIntentionCast(Skill skill, Creature target)
 	{
@@ -90,6 +172,14 @@ public class PlayableAI extends CharacterAI
 		super.onIntentionCast(skill, target);
 	}
 	
+	/**
+	 * Method setNextAction.
+	 * @param action nextAction
+	 * @param arg0 Object
+	 * @param arg1 Object
+	 * @param arg2 boolean
+	 * @param arg3 boolean
+	 */
 	@Override
 	public void setNextAction(nextAction action, Object arg0, Object arg1, boolean arg2, boolean arg3)
 	{
@@ -100,6 +190,10 @@ public class PlayableAI extends CharacterAI
 		_nextAction_arg3 = arg3;
 	}
 	
+	/**
+	 * Method setNextIntention.
+	 * @return boolean
+	 */
 	public boolean setNextIntention()
 	{
 		nextAction nextAction = _nextAction;
@@ -198,6 +292,9 @@ public class PlayableAI extends CharacterAI
 		return true;
 	}
 	
+	/**
+	 * Method clearNextAction.
+	 */
 	@Override
 	public void clearNextAction()
 	{
@@ -208,6 +305,11 @@ public class PlayableAI extends CharacterAI
 		_nextAction_arg3 = false;
 	}
 	
+	/**
+	 * Method onEvtFinishCasting.
+	 * @param skill_id int
+	 * @param success boolean
+	 */
 	@Override
 	protected void onEvtFinishCasting(int skill_id, boolean success)
 	{
@@ -217,6 +319,9 @@ public class PlayableAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method onEvtReadyToAct.
+	 */
 	@Override
 	protected void onEvtReadyToAct()
 	{
@@ -226,6 +331,9 @@ public class PlayableAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
@@ -242,6 +350,9 @@ public class PlayableAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method onEvtArrivedTarget.
+	 */
 	@Override
 	protected void onEvtArrivedTarget()
 	{
@@ -262,6 +373,9 @@ public class PlayableAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method onEvtThink.
+	 */
 	@Override
 	protected final void onEvtThink()
 	{
@@ -311,10 +425,16 @@ public class PlayableAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method thinkActive.
+	 */
 	protected void thinkActive()
 	{
 	}
 	
+	/**
+	 * Method thinkFollow.
+	 */
 	protected void thinkFollow()
 	{
 		Playable actor = getActor();
@@ -342,8 +462,14 @@ public class PlayableAI extends CharacterAI
 		_followTask = ThreadPoolManager.getInstance().schedule(new ThinkFollow(), 250L);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class ThinkFollow extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -377,17 +503,34 @@ public class PlayableAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class ExecuteFollow extends RunnableImpl
 	{
+		/**
+		 * Field _target.
+		 */
 		private final Creature _target;
+		/**
+		 * Field _range.
+		 */
 		private final int _range;
 		
+		/**
+		 * Constructor for ExecuteFollow.
+		 * @param target Creature
+		 * @param range int
+		 */
 		public ExecuteFollow(Creature target, int range)
 		{
 			_target = target;
 			_range = range;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -402,6 +545,10 @@ public class PlayableAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method onIntentionInteract.
+	 * @param object GameObject
+	 */
 	@Override
 	protected void onIntentionInteract(GameObject object)
 	{
@@ -417,6 +564,11 @@ public class PlayableAI extends CharacterAI
 		onEvtThink();
 	}
 	
+	/**
+	 * Method onIntentionCoupleAction.
+	 * @param player Player
+	 * @param socialId Integer
+	 */
 	@Override
 	protected void onIntentionCoupleAction(Player player, Integer socialId)
 	{
@@ -425,6 +577,9 @@ public class PlayableAI extends CharacterAI
 		onEvtThink();
 	}
 	
+	/**
+	 * Method thinkInteract.
+	 */
 	protected void thinkInteract()
 	{
 		Playable actor = getActor();
@@ -450,6 +605,10 @@ public class PlayableAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method onIntentionPickUp.
+	 * @param object GameObject
+	 */
 	@Override
 	protected void onIntentionPickUp(GameObject object)
 	{
@@ -465,6 +624,9 @@ public class PlayableAI extends CharacterAI
 		onEvtThink();
 	}
 	
+	/**
+	 * Method thinkPickUp.
+	 */
 	protected void thinkPickUp()
 	{
 		final Playable actor = getActor();
@@ -496,6 +658,10 @@ public class PlayableAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 * @param checkRange boolean
+	 */
 	protected void thinkAttack(boolean checkRange)
 	{
 		Playable actor = getActor();
@@ -564,6 +730,10 @@ public class PlayableAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method thinkCast.
+	 * @param checkRange boolean
+	 */
 	protected void thinkCast(boolean checkRange)
 	{
 		Playable actor = getActor();
@@ -669,10 +839,20 @@ public class PlayableAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method thinkCoupleAction.
+	 * @param target Player
+	 * @param socialId Integer
+	 * @param cancel boolean
+	 */
 	protected void thinkCoupleAction(Player target, Integer socialId, boolean cancel)
 	{
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -680,6 +860,9 @@ public class PlayableAI extends CharacterAI
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method onEvtFakeDeath.
+	 */
 	@Override
 	protected void onEvtFakeDeath()
 	{
@@ -687,6 +870,10 @@ public class PlayableAI extends CharacterAI
 		super.onEvtFakeDeath();
 	}
 	
+	/**
+	 * Method lockTarget.
+	 * @param target Creature
+	 */
 	public void lockTarget(Creature target)
 	{
 		Playable actor = getActor();
@@ -707,6 +894,12 @@ public class PlayableAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method Attack.
+	 * @param target GameObject
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 */
 	@Override
 	public void Attack(GameObject target, boolean forceUse, boolean dontMove)
 	{
@@ -723,6 +916,13 @@ public class PlayableAI extends CharacterAI
 		setIntention(AI_INTENTION_ATTACK, target);
 	}
 	
+	/**
+	 * Method Cast.
+	 * @param skill Skill
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 */
 	@Override
 	public void Cast(Skill skill, Creature target, boolean forceUse, boolean dontMove)
 	{
@@ -751,6 +951,10 @@ public class PlayableAI extends CharacterAI
 		setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target);
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return Playable
+	 */
 	@Override
 	public Playable getActor()
 	{

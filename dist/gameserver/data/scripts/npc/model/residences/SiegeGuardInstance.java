@@ -27,6 +27,10 @@ import lineage2.gameserver.model.reward.RewardType;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SiegeGuardInstance extends NpcInstance
 {
 	/**
@@ -34,24 +38,42 @@ public class SiegeGuardInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for SiegeGuardInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SiegeGuardInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		setHasChatWindow(false);
 	}
 	
+	/**
+	 * Method isSiegeGuard.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isSiegeGuard()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method getAggroRange.
+	 * @return int
+	 */
 	@Override
 	public int getAggroRange()
 	{
 		return 1200;
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
@@ -74,18 +96,30 @@ public class SiegeGuardInstance extends NpcInstance
 		return true;
 	}
 	
+	/**
+	 * Method hasRandomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	public boolean hasRandomAnimation()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -114,6 +148,12 @@ public class SiegeGuardInstance extends NpcInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method rollRewards.
+	 * @param entry Map.Entry<RewardType,RewardList>
+	 * @param lastAttacker Creature
+	 * @param topDamager Creature
+	 */
 	public void rollRewards(Map.Entry<RewardType, RewardList> entry, final Creature lastAttacker, Creature topDamager)
 	{
 		RewardList list = entry.getValue();
@@ -132,18 +172,30 @@ public class SiegeGuardInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method isFearImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isFearImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isParalyzeImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParalyzeImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method getClan.
+	 * @return Clan
+	 */
 	@Override
 	public Clan getClan()
 	{

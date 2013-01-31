@@ -14,9 +14,19 @@ package lineage2.gameserver.templates;
 
 import lineage2.commons.collections.MultiValueSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StatsSet extends MultiValueSet<String>
 {
+	/**
+	 * Field serialVersionUID. (value is -2209589233655930756)
+	 */
 	private static final long serialVersionUID = -2209589233655930756L;
+	/**
+	 * Field EMPTY.
+	 */
 	@SuppressWarnings("serial")
 	public static final StatsSet EMPTY = new StatsSet()
 	{
@@ -27,16 +37,27 @@ public class StatsSet extends MultiValueSet<String>
 		}
 	};
 	
+	/**
+	 * Constructor for StatsSet.
+	 */
 	public StatsSet()
 	{
 		super();
 	}
 	
+	/**
+	 * Constructor for StatsSet.
+	 * @param set StatsSet
+	 */
 	public StatsSet(StatsSet set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method clone.
+	 * @return StatsSet
+	 */
 	@Override
 	public StatsSet clone()
 	{

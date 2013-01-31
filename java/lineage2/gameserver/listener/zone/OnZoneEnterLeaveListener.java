@@ -16,9 +16,23 @@ import lineage2.commons.listener.Listener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Zone;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnZoneEnterLeaveListener extends Listener<Zone>
 {
+	/**
+	 * Method onZoneEnter.
+	 * @param zone Zone
+	 * @param actor Creature
+	 */
 	public void onZoneEnter(Zone zone, Creature actor);
 	
+	/**
+	 * Method onZoneLeave.
+	 * @param zone Zone
+	 * @param actor Creature
+	 */
 	public void onZoneLeave(Zone zone, Creature actor);
 }

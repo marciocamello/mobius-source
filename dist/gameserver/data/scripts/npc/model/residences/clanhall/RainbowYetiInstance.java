@@ -34,62 +34,157 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RainbowYetiInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field ItemA. (value is 8035)
+	 */
 	private static final int ItemA = 8035;
+	/**
+	 * Field ItemB. (value is 8036)
+	 */
 	private static final int ItemB = 8036;
+	/**
+	 * Field ItemC. (value is 8037)
+	 */
 	private static final int ItemC = 8037;
+	/**
+	 * Field ItemD. (value is 8038)
+	 */
 	private static final int ItemD = 8038;
+	/**
+	 * Field ItemE. (value is 8039)
+	 */
 	private static final int ItemE = 8039;
+	/**
+	 * Field ItemF. (value is 8040)
+	 */
 	private static final int ItemF = 8040;
+	/**
+	 * Field ItemG. (value is 8041)
+	 */
 	private static final int ItemG = 8041;
+	/**
+	 * Field ItemH. (value is 8042)
+	 */
 	private static final int ItemH = 8042;
+	/**
+	 * Field ItemI. (value is 8043)
+	 */
 	private static final int ItemI = 8043;
+	/**
+	 * Field ItemK. (value is 8045)
+	 */
 	private static final int ItemK = 8045;
+	/**
+	 * Field ItemL. (value is 8046)
+	 */
 	private static final int ItemL = 8046;
+	/**
+	 * Field ItemN. (value is 8047)
+	 */
 	private static final int ItemN = 8047;
+	/**
+	 * Field ItemO. (value is 8048)
+	 */
 	private static final int ItemO = 8048;
+	/**
+	 * Field ItemP. (value is 8049)
+	 */
 	private static final int ItemP = 8049;
+	/**
+	 * Field ItemR. (value is 8050)
+	 */
 	private static final int ItemR = 8050;
+	/**
+	 * Field ItemS. (value is 8051)
+	 */
 	private static final int ItemS = 8051;
+	/**
+	 * Field ItemT. (value is 8052)
+	 */
 	private static final int ItemT = 8052;
+	/**
+	 * Field ItemU. (value is 8053)
+	 */
 	private static final int ItemU = 8053;
+	/**
+	 * Field ItemW. (value is 8054)
+	 */
 	private static final int ItemW = 8054;
+	/**
+	 * Field ItemY. (value is 8055)
+	 */
 	private static final int ItemY = 8055;
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class Word
 	{
+		/**
+		 * Field _name.
+		 */
 		private final String _name;
+		/**
+		 * Field _items.
+		 */
 		private final int[][] _items;
 		
+		/**
+		 * Constructor for Word.
+		 * @param name String
+		 * @param items int[][]
+		 */
 		public Word(String name, int[]... items)
 		{
 			_name = name;
 			_items = items;
 		}
 		
+		/**
+		 * Method getName.
+		 * @return String
+		 */
 		public String getName()
 		{
 			return _name;
 		}
 		
+		/**
+		 * Method getItems.
+		 * @return int[][]
+		 */
 		public int[][] getItems()
 		{
 			return _items;
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class GenerateTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for GenerateTask.
+		 */
 		public GenerateTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -104,6 +199,9 @@ public class RainbowYetiInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Field WORLD_LIST.
+	 */
 	static final Word[] WORLD_LIST = new Word[8];
 	static
 	{
@@ -332,16 +430,33 @@ public class RainbowYetiInstance extends NpcInstance
 			1
 		});
 	}
+	/**
+	 * Field _mobs.
+	 */
 	private final List<GameObject> _mobs = new ArrayList<>();
+	/**
+	 * Field _generated.
+	 */
 	int _generated = -1;
+	/**
+	 * Field _task.
+	 */
 	private Future<?> _task = null;
 	
+	/**
+	 * Constructor for RainbowYetiInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public RainbowYetiInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		_hasRandomWalk = false;
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	public void onSpawn()
 	{
@@ -363,6 +478,9 @@ public class RainbowYetiInstance extends NpcInstance
 		_task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new GenerateTask(), 10000L, 300000L);
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	public void onDelete()
 	{
@@ -379,6 +497,9 @@ public class RainbowYetiInstance extends NpcInstance
 		_mobs.clear();
 	}
 	
+	/**
+	 * Method teleportFromArena.
+	 */
 	public void teleportFromArena()
 	{
 		ClanHallMiniGameEvent event = getEvent(ClanHallMiniGameEvent.class);
@@ -393,6 +514,11 @@ public class RainbowYetiInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -498,6 +624,11 @@ public class RainbowYetiInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method addItem.
+	 * @param player Player
+	 * @param itemId int
+	 */
 	private void addItem(Player player, int itemId)
 	{
 		ClanHallMiniGameEvent event = getEvent(ClanHallMiniGameEvent.class);
@@ -511,12 +642,22 @@ public class RainbowYetiInstance extends NpcInstance
 		player.sendPacket(SystemMessage2.obtainItems(item));
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 		showChatWindow(player, "residence2/clanhall/watering_manager001.htm");
 	}
 	
+	/**
+	 * Method addMob.
+	 * @param object GameObject
+	 */
 	public void addMob(GameObject object)
 	{
 		_mobs.add(object);

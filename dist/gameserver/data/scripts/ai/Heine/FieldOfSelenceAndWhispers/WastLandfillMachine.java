@@ -22,15 +22,31 @@ import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WastLandfillMachine extends CharacterAI
 {
+	/**
+	 * Field _firstTimeAttacked.
+	 */
 	private boolean _firstTimeAttacked = true;
 	
+	/**
+	 * Constructor for WastLandfillMachine.
+	 * @param actor Creature
+	 */
 	public WastLandfillMachine(Creature actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -58,6 +74,10 @@ public class WastLandfillMachine extends CharacterAI
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

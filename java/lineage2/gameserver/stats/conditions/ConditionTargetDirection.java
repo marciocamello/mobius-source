@@ -15,15 +15,31 @@ package lineage2.gameserver.stats.conditions;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.PositionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionTargetDirection extends Condition
 {
+	/**
+	 * Field _dir.
+	 */
 	private final PositionUtils.TargetDirection _dir;
 	
+	/**
+	 * Constructor for ConditionTargetDirection.
+	 * @param direction PositionUtils.TargetDirection
+	 */
 	public ConditionTargetDirection(PositionUtils.TargetDirection direction)
 	{
 		_dir = direction;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

@@ -20,10 +20,20 @@ import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.tables.ClanTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowCastleInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _infos.
+	 */
 	private List<CastleInfo> _infos = Collections.emptyList();
 	
+	/**
+	 * Constructor for ExShowCastleInfo.
+	 */
 	public ExShowCastleInfo()
 	{
 		String ownerName;
@@ -40,6 +50,9 @@ public class ExShowCastleInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -55,11 +68,33 @@ public class ExShowCastleInfo extends L2GameServerPacket
 		_infos.clear();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class CastleInfo
 	{
+		/**
+		 * Field _ownerName.
+		 */
 		public String _ownerName;
+		/**
+		 * Field _nextSiege.
+		 */
+		/**
+		 * Field _tax.
+		 */
+		/**
+		 * Field _id.
+		 */
 		public int _id, _tax, _nextSiege;
 		
+		/**
+		 * Constructor for CastleInfo.
+		 * @param ownerName String
+		 * @param id int
+		 * @param tax int
+		 * @param nextSiege int
+		 */
 		public CastleInfo(String ownerName, int id, int tax, int nextSiege)
 		{
 			_ownerName = ownerName;

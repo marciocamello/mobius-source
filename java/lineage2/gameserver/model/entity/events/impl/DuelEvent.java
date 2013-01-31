@@ -33,15 +33,30 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnapshotObject>
 {
+	/**
+	 * @author Mobius
+	 */
 	private class OnPlayerExitListenerImpl implements OnPlayerExitListener
 	{
+		/**
+		 * Constructor for OnPlayerExitListenerImpl.
+		 */
 		public OnPlayerExitListenerImpl()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onPlayerExit.
+		 * @param player Player
+		 * @see lineage2.gameserver.listener.actor.player.OnPlayerExitListener#onPlayerExit(Player)
+		 */
 		@Override
 		public void onPlayerExit(Player player)
 		{
@@ -49,42 +64,105 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		}
 	}
 	
+	/**
+	 * Field RED_TEAM.
+	 */
 	public static final String RED_TEAM = TeamType.RED.name();
+	/**
+	 * Field BLUE_TEAM.
+	 */
 	public static final String BLUE_TEAM = TeamType.BLUE.name();
 	
+	/**
+	 * Field _playerExitListener.
+	 */
 	protected OnPlayerExitListener _playerExitListener = new OnPlayerExitListenerImpl();
+	/**
+	 * Field _winner.
+	 */
 	protected TeamType _winner = TeamType.NONE;
+	/**
+	 * Field _aborted.
+	 */
 	protected boolean _aborted;
 	
+	/**
+	 * Constructor for DuelEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public DuelEvent(MultiValueSet<String> set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Constructor for DuelEvent.
+	 * @param id int
+	 * @param name String
+	 */
 	protected DuelEvent(int id, String name)
 	{
 		super(id, name);
 	}
 	
+	/**
+	 * Method initEvent.
+	 */
 	@Override
 	public void initEvent()
 	{
 	}
 	
+	/**
+	 * Method canDuel.
+	 * @param player Player
+	 * @param target Player
+	 * @param first boolean
+	 * @return boolean
+	 */
 	public abstract boolean canDuel(Player player, Player target, boolean first);
 	
+	/**
+	 * Method askDuel.
+	 * @param player Player
+	 * @param target Player
+	 */
 	public abstract void askDuel(Player player, Player target);
 	
+	/**
+	 * Method createDuel.
+	 * @param player Player
+	 * @param target Player
+	 */
 	public abstract void createDuel(Player player, Player target);
 	
+	/**
+	 * Method playerExit.
+	 * @param player Player
+	 */
 	public abstract void playerExit(Player player);
 	
+	/**
+	 * Method packetSurrender.
+	 * @param player Player
+	 */
 	public abstract void packetSurrender(Player player);
 	
+	/**
+	 * Method onDie.
+	 * @param player Player
+	 */
 	public abstract void onDie(Player player);
 	
+	/**
+	 * Method getDuelType.
+	 * @return int
+	 */
 	public abstract int getDuelType();
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -98,6 +176,11 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		}
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param packet IStaticPacket
+	 * @param ar String[]
+	 */
 	public void sendPacket(IStaticPacket packet, String... ar)
 	{
 		for (String a : ar)
@@ -111,11 +194,19 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		}
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param packet IStaticPacket
+	 */
 	public void sendPacket(IStaticPacket packet)
 	{
 		sendPackets(packet);
 	}
 	
+	/**
+	 * Method sendPackets.
+	 * @param packet IStaticPacket[]
+	 */
 	public void sendPackets(IStaticPacket... packet)
 	{
 		for (DuelSnapshotObject d : this)
@@ -124,6 +215,10 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		}
 	}
 	
+	/**
+	 * Method abortDuel.
+	 * @param player Player
+	 */
 	public void abortDuel(Player player)
 	{
 		_aborted = true;
@@ -132,6 +227,12 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		stopEvent();
 	}
 	
+	/**
+	 * Method canDuel0.
+	 * @param requestor Player
+	 * @param target Player
+	 * @return IStaticPacket
+	 */
 	protected IStaticPacket canDuel0(Player requestor, Player target)
 	{
 		IStaticPacket packet = null;
@@ -190,6 +291,11 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		return packet;
 	}
 	
+	/**
+	 * Method updatePlayers.
+	 * @param start boolean
+	 * @param teleport boolean
+	 */
 	protected void updatePlayers(boolean start, boolean teleport)
 	{
 		for (DuelSnapshotObject $snapshot : this)
@@ -216,6 +322,14 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		}
 	}
 	
+	/**
+	 * Method checkForAttack.
+	 * @param target Creature
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param force boolean
+	 * @return SystemMsg
+	 */
 	@Override
 	public SystemMsg checkForAttack(Creature target, Creature attacker, Skill skill, boolean force)
 	{
@@ -233,6 +347,14 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		return null;
 	}
 	
+	/**
+	 * Method canAttack.
+	 * @param target Creature
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param force boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean canAttack(Creature target, Creature attacker, Skill skill, boolean force)
 	{
@@ -245,6 +367,10 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		return !((duelEvent == null) || (duelEvent != this));
 	}
 	
+	/**
+	 * Method onAddEvent.
+	 * @param o GameObject
+	 */
 	@Override
 	public void onAddEvent(GameObject o)
 	{
@@ -254,6 +380,10 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		}
 	}
 	
+	/**
+	 * Method onRemoveEvent.
+	 * @param o GameObject
+	 */
 	@Override
 	public void onRemoveEvent(GameObject o)
 	{
@@ -263,6 +393,10 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		}
 	}
 	
+	/**
+	 * Method iterator.
+	 * @return Iterator<DuelSnapshotObject> * @see java.lang.Iterable#iterator()
+	 */
 	@Override
 	public Iterator<DuelSnapshotObject> iterator()
 	{
@@ -271,12 +405,20 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		return new JoinedIterator<>(blue.iterator(), red.iterator());
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onInit boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{
 		registerActions();
 	}
 	
+	/**
+	 * Method announce.
+	 * @param i int
+	 */
 	@Override
 	public void announce(int i)
 	{

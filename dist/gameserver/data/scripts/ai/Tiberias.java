@@ -17,13 +17,25 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Tiberias extends Fighter
 {
+	/**
+	 * Constructor for Tiberias.
+	 * @param actor NpcInstance
+	 */
 	public Tiberias(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

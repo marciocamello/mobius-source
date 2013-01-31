@@ -23,20 +23,37 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class WyvernManagerInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(WyvernManagerInstance.class);
 	
+	/**
+	 * Constructor for WyvernManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public WyvernManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -89,6 +106,12 @@ public final class WyvernManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -109,6 +132,11 @@ public final class WyvernManagerInstance extends NpcInstance
 		player.sendActionFailed();
 	}
 	
+	/**
+	 * Method validateCondition.
+	 * @param player Player
+	 * @return boolean
+	 */
 	private boolean validateCondition(Player player)
 	{
 		Residence residence = getCastle();

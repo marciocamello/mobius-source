@@ -28,6 +28,10 @@ import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LotteryManagerInstance extends NpcInstance
 {
 	/**
@@ -35,11 +39,21 @@ public class LotteryManagerInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for LotteryManagerInstance.
+	 * @param objectID int
+	 * @param template NpcTemplate
+	 */
 	public LotteryManagerInstance(int objectID, NpcTemplate template)
 	{
 		super(objectID, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -65,6 +79,13 @@ public class LotteryManagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
@@ -80,6 +101,11 @@ public class LotteryManagerInstance extends NpcInstance
 		return "lottery/" + pom + ".htm";
 	}
 	
+	/**
+	 * Method showLotoWindow.
+	 * @param player Player
+	 * @param val int
+	 */
 	public void showLotoWindow(Player player, int val)
 	{
 		int npcId = getTemplate().npcId;
@@ -157,8 +183,8 @@ public class LotteryManagerInstance extends NpcInstance
 				}
 				else
 				{
-					search = "0\">Назад";
-					replace = "22\">Выигрышные номера выбранные выше.";
+					search = "0\">�?азад";
+					replace = "22\">Выигры�?ные номера выбранные вы�?е.";
 				}
 				html.replace(search, replace);
 			}

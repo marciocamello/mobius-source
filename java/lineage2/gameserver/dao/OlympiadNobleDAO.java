@@ -24,23 +24,64 @@ import lineage2.gameserver.templates.StatsSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OlympiadNobleDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadNobleDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final OlympiadNobleDAO _instance = new OlympiadNobleDAO();
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT char_id, characters.char_name as char_name, class_id, olympiad_points, olympiad_points_past, olympiad_points_past_static, competitions_done, competitions_loose, competitions_win, game_classes_count, game_noclasses_count FROM olympiad_nobles LEFT JOIN
+	 * characters ON characters.obj_Id = olympiad_nobles.char_id"")
+	 */
 	public static final String SELECT_SQL_QUERY = "SELECT char_id, characters.char_name as char_name, class_id, olympiad_points, olympiad_points_past, olympiad_points_past_static, competitions_done, competitions_loose, competitions_win, game_classes_count, game_noclasses_count FROM olympiad_nobles LEFT JOIN characters ON characters.obj_Id = olympiad_nobles.char_id";
+	/**
+	 * Field REPLACE_SQL_QUERY. (value is ""REPLACE INTO `olympiad_nobles` (`char_id`, `class_id`, `olympiad_points`, `olympiad_points_past`, `olympiad_points_past_static`, `competitions_done`, `competitions_win`, `competitions_loose`, game_classes_count, game_noclasses_count) VALUES
+	 * (?,?,?,?,?,?,?,?,?,?)"")
+	 */
 	public static final String REPLACE_SQL_QUERY = "REPLACE INTO `olympiad_nobles` (`char_id`, `class_id`, `olympiad_points`, `olympiad_points_past`, `olympiad_points_past_static`, `competitions_done`, `competitions_win`, `competitions_loose`, game_classes_count, game_noclasses_count) VALUES (?,?,?,?,?,?,?,?,?,?)";
+	/**
+	 * Field OLYMPIAD_GET_HEROS. (value is ""SELECT `char_id`, characters.char_name AS char_name FROM `olympiad_nobles` LEFT JOIN characters ON char_id=characters.obj_Id WHERE `class_id` = ? AND `competitions_done` >= ? AND `competitions_win` > 0 ORDER BY `olympiad_points` DESC, `competitions_win`
+	 * DESC, `competitions_done` DESC"")
+	 */
 	public static final String OLYMPIAD_GET_HEROS = "SELECT `char_id`, characters.char_name AS char_name FROM `olympiad_nobles` LEFT JOIN characters ON char_id=characters.obj_Id WHERE `class_id` = ? AND `competitions_done` >= ? AND `competitions_win` > 0 ORDER BY `olympiad_points` DESC, `competitions_win` DESC, `competitions_done` DESC";
+	/**
+	 * Field GET_EACH_CLASS_LEADER. (value is ""SELECT characters.char_name AS char_name FROM `olympiad_nobles` LEFT JOIN characters ON char_id=characters.obj_Id WHERE `class_id` = ? AND `olympiad_points_past_static` != 0 ORDER BY `olympiad_points_past_static` DESC LIMIT 10"")
+	 */
 	public static final String GET_EACH_CLASS_LEADER = "SELECT characters.char_name AS char_name FROM `olympiad_nobles` LEFT JOIN characters ON char_id=characters.obj_Id WHERE `class_id` = ? AND `olympiad_points_past_static` != 0 ORDER BY `olympiad_points_past_static` DESC LIMIT 10";
+	/**
+	 * Field GET_ALL_CLASSIFIED_NOBLESS. (value is ""SELECT `char_id` FROM `olympiad_nobles` ORDER BY olympiad_points_past_static DESC"")
+	 */
 	public static final String GET_ALL_CLASSIFIED_NOBLESS = "SELECT `char_id` FROM `olympiad_nobles` ORDER BY olympiad_points_past_static DESC";
+	/**
+	 * Field OLYMPIAD_CALCULATE_LAST_PERIOD. (value is ""UPDATE `olympiad_nobles` SET `olympiad_points_past` = `olympiad_points`, `olympiad_points_past_static` = `olympiad_points` WHERE `competitions_done` >= ?"")
+	 */
 	public static final String OLYMPIAD_CALCULATE_LAST_PERIOD = "UPDATE `olympiad_nobles` SET `olympiad_points_past` = `olympiad_points`, `olympiad_points_past_static` = `olympiad_points` WHERE `competitions_done` >= ?";
+	/**
+	 * Field OLYMPIAD_CLEANUP_NOBLES. (value is ""UPDATE `olympiad_nobles` SET `olympiad_points` = ?, `competitions_done` = 0, `competitions_win` = 0, `competitions_loose` = 0, game_classes_count=0, game_noclasses_count=0"")
+	 */
 	public static final String OLYMPIAD_CLEANUP_NOBLES = "UPDATE `olympiad_nobles` SET `olympiad_points` = ?, `competitions_done` = 0, `competitions_win` = 0, `competitions_loose` = 0, game_classes_count=0, game_noclasses_count=0";
 	
+	/**
+	 * Method getInstance.
+	 * @return OlympiadNobleDAO
+	 */
 	public static OlympiadNobleDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method select.
+	 */
 	public void select()
 	{
 		Connection con = null;
@@ -79,6 +120,10 @@ public class OlympiadNobleDAO
 		}
 	}
 	
+	/**
+	 * Method replace.
+	 * @param nobleId int
+	 */
 	public void replace(int nobleId)
 	{
 		Connection con = null;

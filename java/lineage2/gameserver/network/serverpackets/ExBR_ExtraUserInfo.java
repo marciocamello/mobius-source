@@ -14,15 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExBR_ExtraUserInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
 	
+	/**
+	 * Constructor for ExBR_ExtraUserInfo.
+	 * @param cha Player
+	 */
 	public ExBR_ExtraUserInfo(Player cha)
 	{
 		_objectId = cha.getObjectId();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

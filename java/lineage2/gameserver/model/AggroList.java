@@ -29,18 +29,42 @@ import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AggroList
 {
+	/**
+	 * @author Mobius
+	 */
 	private abstract class DamageHate
 	{
+		/**
+		 * Field hate.
+		 */
 		public int hate;
+		/**
+		 * Field damage.
+		 */
 		public int damage;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class HateInfo extends DamageHate
 	{
+		/**
+		 * Field attacker.
+		 */
 		public final Creature attacker;
 		
+		/**
+		 * Constructor for HateInfo.
+		 * @param attacker Creature
+		 * @param ai AggroInfo
+		 */
 		@SuppressWarnings("synthetic-access")
 		HateInfo(Creature attacker, AggroInfo ai)
 		{
@@ -50,10 +74,20 @@ public class AggroList
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class AggroInfo extends DamageHate
 	{
+		/**
+		 * Field attackerId.
+		 */
 		public final int attackerId;
 		
+		/**
+		 * Constructor for AggroInfo.
+		 * @param attacker Creature
+		 */
 		@SuppressWarnings("synthetic-access")
 		AggroInfo(Creature attacker)
 		{
@@ -61,19 +95,38 @@ public class AggroList
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class DamageComparator implements Comparator<DamageHate>
 	{
+		/**
+		 * Field instance.
+		 */
 		private static Comparator<DamageHate> instance = new DamageComparator();
 		
+		/**
+		 * Method getInstance.
+		 * @return Comparator<DamageHate>
+		 */
 		public static Comparator<DamageHate> getInstance()
 		{
 			return instance;
 		}
 		
+		/**
+		 * Constructor for DamageComparator.
+		 */
 		DamageComparator()
 		{
 		}
 		
+		/**
+		 * Method compare.
+		 * @param o1 DamageHate
+		 * @param o2 DamageHate
+		 * @return int
+		 */
 		@Override
 		public int compare(DamageHate o1, DamageHate o2)
 		{
@@ -81,19 +134,38 @@ public class AggroList
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class HateComparator implements Comparator<DamageHate>
 	{
+		/**
+		 * Field instance.
+		 */
 		private static Comparator<DamageHate> instance = new HateComparator();
 		
+		/**
+		 * Method getInstance.
+		 * @return Comparator<DamageHate>
+		 */
 		public static Comparator<DamageHate> getInstance()
 		{
 			return instance;
 		}
 		
+		/**
+		 * Constructor for HateComparator.
+		 */
 		HateComparator()
 		{
 		}
 		
+		/**
+		 * Method compare.
+		 * @param o1 DamageHate
+		 * @param o2 DamageHate
+		 * @return int
+		 */
 		@Override
 		public int compare(DamageHate o1, DamageHate o2)
 		{
@@ -102,17 +174,42 @@ public class AggroList
 		}
 	}
 	
+	/**
+	 * Field npc.
+	 */
 	private final NpcInstance npc;
+	/**
+	 * Field hateList.
+	 */
 	private final TIntObjectHashMap<AggroInfo> hateList = new TIntObjectHashMap<>();
+	/**
+	 * Field lock.
+	 */
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
+	/**
+	 * Field readLock.
+	 */
 	private final Lock readLock = lock.readLock();
+	/**
+	 * Field writeLock.
+	 */
 	private final Lock writeLock = lock.writeLock();
 	
+	/**
+	 * Constructor for AggroList.
+	 * @param npc NpcInstance
+	 */
 	public AggroList(NpcInstance npc)
 	{
 		this.npc = npc;
 	}
 	
+	/**
+	 * Method addDamageHate.
+	 * @param attacker Creature
+	 * @param damage int
+	 * @param aggro int
+	 */
 	public void addDamageHate(Creature attacker, int damage, int aggro)
 	{
 		damage = Math.max(damage, 0);
@@ -139,6 +236,11 @@ public class AggroList
 		}
 	}
 	
+	/**
+	 * Method get.
+	 * @param attacker Creature
+	 * @return AggroInfo
+	 */
 	public AggroInfo get(Creature attacker)
 	{
 		readLock.lock();
@@ -152,6 +254,11 @@ public class AggroList
 		}
 	}
 	
+	/**
+	 * Method remove.
+	 * @param attacker Creature
+	 * @param onlyHate boolean
+	 */
 	public void remove(Creature attacker, boolean onlyHate)
 	{
 		writeLock.lock();
@@ -174,11 +281,18 @@ public class AggroList
 		}
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	public void clear()
 	{
 		clear(false);
 	}
 	
+	/**
+	 * Method clear.
+	 * @param onlyHate boolean
+	 */
 	public void clear(boolean onlyHate)
 	{
 		writeLock.lock();
@@ -211,6 +325,10 @@ public class AggroList
 		}
 	}
 	
+	/**
+	 * Method isEmpty.
+	 * @return boolean
+	 */
 	public boolean isEmpty()
 	{
 		readLock.lock();
@@ -224,6 +342,10 @@ public class AggroList
 		}
 	}
 	
+	/**
+	 * Method getHateList.
+	 * @return List<Creature>
+	 */
 	public List<Creature> getHateList()
 	{
 		AggroInfo[] hated;
@@ -267,6 +389,10 @@ public class AggroList
 		return hateList;
 	}
 	
+	/**
+	 * Method getMostHated.
+	 * @return Creature
+	 */
 	public Creature getMostHated()
 	{
 		AggroInfo[] hated;
@@ -313,6 +439,10 @@ public class AggroList
 		return null;
 	}
 	
+	/**
+	 * Method getRandomHated.
+	 * @return Creature
+	 */
 	public Creature getRandomHated()
 	{
 		AggroInfo[] hated;
@@ -371,6 +501,10 @@ public class AggroList
 		return mostHated;
 	}
 	
+	/**
+	 * Method getTopDamager.
+	 * @return Creature
+	 */
 	public Creature getTopDamager()
 	{
 		AggroInfo[] hated;
@@ -414,6 +548,10 @@ public class AggroList
 		return null;
 	}
 	
+	/**
+	 * Method getCharMap.
+	 * @return Map<Creature,HateInfo>
+	 */
 	public Map<Creature, HateInfo> getCharMap()
 	{
 		if (isEmpty())
@@ -451,6 +589,10 @@ public class AggroList
 		return aggroMap;
 	}
 	
+	/**
+	 * Method getPlayableMap.
+	 * @return Map<Playable,HateInfo>
+	 */
 	public Map<Playable, HateInfo> getPlayableMap()
 	{
 		if (isEmpty())

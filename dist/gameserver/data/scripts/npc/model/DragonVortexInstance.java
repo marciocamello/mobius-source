@@ -20,12 +20,19 @@ import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class DragonVortexInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field bosses.
+	 */
 	private final int[] bosses =
 	{
 		25718,
@@ -36,13 +43,26 @@ public final class DragonVortexInstance extends NpcInstance
 		25723,
 		25724
 	};
+	/**
+	 * Field boss.
+	 */
 	private NpcInstance boss;
 	
+	/**
+	 * Constructor for DragonVortexInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public DragonVortexInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

@@ -14,21 +14,76 @@ package lineage2.gameserver.model;
 
 import lineage2.gameserver.templates.item.RecipeTemplate.RecipeComponent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Recipe
 {
+	/**
+	 * Field _recipes.
+	 */
 	private RecipeComponent[] _recipes;
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _level.
+	 */
 	private final int _level;
+	/**
+	 * Field _recipeId.
+	 */
 	private final int _recipeId;
+	/**
+	 * Field _recipeName.
+	 */
 	private final String _recipeName;
+	/**
+	 * Field _successRate.
+	 */
 	private final int _successRate;
+	/**
+	 * Field _mpCost.
+	 */
 	private final int _mpCost;
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _foundation.
+	 */
 	private final int _foundation;
+	/**
+	 * Field _count.
+	 */
 	private final int _count;
+	/**
+	 * Field _isdwarvencraft.
+	 */
 	private final boolean _isdwarvencraft;
+	/**
+	 * Field _sp. Field _exp.
+	 */
 	private final long _exp, _sp;
 	
+	/**
+	 * Constructor for Recipe.
+	 * @param id int
+	 * @param level int
+	 * @param recipeId int
+	 * @param recipeName String
+	 * @param successRate int
+	 * @param mpCost int
+	 * @param itemId int
+	 * @param foundation int
+	 * @param count int
+	 * @param exp long
+	 * @param sp long
+	 * @param isdwarvencraft boolean
+	 */
 	public Recipe(int id, int level, int recipeId, String recipeName, int successRate, int mpCost, int itemId, int foundation, int count, long exp, long sp, boolean isdwarvencraft)
 	{
 		_id = id;
@@ -46,6 +101,10 @@ public class Recipe
 		_isdwarvencraft = isdwarvencraft;
 	}
 	
+	/**
+	 * Method addRecipe.
+	 * @param recipe RecipeComponent
+	 */
 	public void addRecipe(RecipeComponent recipe)
 	{
 		int len = _recipes.length;
@@ -55,66 +114,118 @@ public class Recipe
 		_recipes = tmp;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		return _level;
 	}
 	
+	/**
+	 * Method getRecipeId.
+	 * @return int
+	 */
 	public int getRecipeId()
 	{
 		return _recipeId;
 	}
 	
+	/**
+	 * Method getRecipeName.
+	 * @return String
+	 */
 	public String getRecipeName()
 	{
 		return _recipeName;
 	}
 	
+	/**
+	 * Method getSuccessRate.
+	 * @return int
+	 */
 	public int getSuccessRate()
 	{
 		return _successRate;
 	}
 	
+	/**
+	 * Method getMpCost.
+	 * @return int
+	 */
 	public int getMpCost()
 	{
 		return _mpCost;
 	}
 	
+	/**
+	 * Method getItemId.
+	 * @return int
+	 */
 	public int getItemId()
 	{
 		return _itemId;
 	}
 	
+	/**
+	 * Method getCount.
+	 * @return int
+	 */
 	public int getCount()
 	{
 		return _count;
 	}
 	
+	/**
+	 * Method getRecipes.
+	 * @return RecipeComponent[]
+	 */
 	public RecipeComponent[] getRecipes()
 	{
 		return _recipes;
 	}
 	
+	/**
+	 * Method isDwarvenRecipe.
+	 * @return boolean
+	 */
 	public boolean isDwarvenRecipe()
 	{
 		return _isdwarvencraft;
 	}
 	
+	/**
+	 * Method getExp.
+	 * @return long
+	 */
 	public long getExp()
 	{
 		return _exp;
 	}
 	
+	/**
+	 * Method getSp.
+	 * @return long
+	 */
 	public long getSp()
 	{
 		return _sp;
 	}
 	
+	/**
+	 * Method getFoundation.
+	 * @return int
+	 */
 	public int getFoundation()
 	{
 		return _foundation;

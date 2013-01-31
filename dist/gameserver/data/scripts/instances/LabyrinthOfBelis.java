@@ -22,26 +22,71 @@ import ai.Generator;
 import ai.InfiltrationOfficer;
 import ai.InfiltrationOfficer.State;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LabyrinthOfBelis extends Reflection
 {
+	/**
+	 * Field OFFICER. (value is 19155)
+	 */
 	private static final int OFFICER = 19155;
+	/**
+	 * Field GENERATOR. (value is 33216)
+	 */
 	private static final int GENERATOR = 33216;
+	/**
+	 * Field OPERATIVE. (value is 22998)
+	 */
 	private static final int OPERATIVE = 22998;
+	/**
+	 * Field HANDYMAN. (value is 22997)
+	 */
 	private static final int HANDYMAN = 22997;
+	/**
+	 * Field _marksRequiered.
+	 */
 	private int _marksRequiered = 3;
+	/**
+	 * Field _operativesKilled.
+	 */
 	private int _operativesKilled = 0;
+	/**
+	 * Field _instanceCondition.
+	 */
 	private int _instanceCondition = 0;
+	/**
+	 * Field officerAI.
+	 */
 	private InfiltrationOfficer officerAI = null;
+	/**
+	 * Field officer.
+	 */
 	private NpcInstance officer = null;
+	/**
+	 * Field generator.
+	 */
 	private NpcInstance generator = null;
+	/**
+	 * Field GeneratorAI.
+	 */
 	@SuppressWarnings("unused")
 	private Generator GeneratorAI = null;
 	
+	/**
+	 * Constructor for LabyrinthOfBelis.
+	 * @param player Player
+	 */
 	public LabyrinthOfBelis(Player player)
 	{
 		setReturnLoc(player.getLoc());
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 */
 	@Override
 	public void onPlayerEnter(final Player player)
 	{
@@ -49,6 +94,10 @@ public class LabyrinthOfBelis extends Reflection
 		super.onPlayerEnter(player);
 	}
 	
+	/**
+	 * Method spawnActiveNPCs.
+	 * @param player Player
+	 */
 	public void spawnActiveNPCs(Player player)
 	{
 		officer = getAllByNpcId(OFFICER, true).get(0);
@@ -62,26 +111,45 @@ public class LabyrinthOfBelis extends Reflection
 		}
 	}
 	
+	/**
+	 * Method reduceMarksRequiered.
+	 */
 	public void reduceMarksRequiered()
 	{
 		--_marksRequiered;
 	}
 	
+	/**
+	 * Method getMarksRequieredCount.
+	 * @return int
+	 */
 	public int getMarksRequieredCount()
 	{
 		return _marksRequiered;
 	}
 	
+	/**
+	 * Method incOperativesKilled.
+	 */
 	public void incOperativesKilled()
 	{
 		++_operativesKilled;
 	}
 	
+	/**
+	 * Method getOperativesKilledCount.
+	 * @return int
+	 */
 	public int getOperativesKilledCount()
 	{
 		return _operativesKilled;
 	}
 	
+	/**
+	 * Method makeOnEvent.
+	 * @param officerState State
+	 * @param openDoorId int
+	 */
 	public void makeOnEvent(State officerState, int openDoorId)
 	{
 		++_instanceCondition;
@@ -92,21 +160,34 @@ public class LabyrinthOfBelis extends Reflection
 		officerAI.setState(officerState);
 	}
 	
+	/**
+	 * Method getInstanceCond.
+	 * @return int
+	 */
 	public int getInstanceCond()
 	{
 		return _instanceCondition;
 	}
 	
+	/**
+	 * Method deleteGenerator.
+	 */
 	public void deleteGenerator()
 	{
 		generator.deleteMe();
 	}
 	
+	/**
+	 * Method activateGenerator.
+	 */
 	public void activateGenerator()
 	{
 		generator.setNpcState(1);
 	}
 	
+	/**
+	 * Method spawnAttackers.
+	 */
 	public void spawnAttackers()
 	{
 		int npcId = ((_instanceCondition % 2) == 0) ? HANDYMAN : OPERATIVE;

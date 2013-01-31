@@ -19,13 +19,25 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MoSMonk extends Fighter
 {
+	/**
+	 * Constructor for MoSMonk.
+	 * @param actor NpcInstance
+	 */
 	public MoSMonk(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onIntentionAttack.
+	 * @param target Creature
+	 */
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
@@ -37,6 +49,11 @@ public class MoSMonk extends Fighter
 		super.onIntentionAttack(target);
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{

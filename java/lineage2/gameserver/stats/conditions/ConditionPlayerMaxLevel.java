@@ -14,15 +14,31 @@ package lineage2.gameserver.stats.conditions;
 
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionPlayerMaxLevel extends Condition
 {
+	/**
+	 * Field _level.
+	 */
 	private final int _level;
 	
+	/**
+	 * Constructor for ConditionPlayerMaxLevel.
+	 * @param level int
+	 */
 	public ConditionPlayerMaxLevel(int level)
 	{
 		_level = level;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

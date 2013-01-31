@@ -20,14 +20,27 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.utils.Strings;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanPenalty implements IUserCommandHandler
 {
+	/**
+	 * Field COMMAND_IDS.
+	 */
 	private static final int[] COMMAND_IDS =
 	{
 		100,
 		114
 	};
 	
+	/**
+	 * Method useUserCommand.
+	 * @param id int
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
+	 */
 	@Override
 	public boolean useUserCommand(int id, Player activeChar)
 	{
@@ -81,6 +94,10 @@ public class ClanPenalty implements IUserCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getUserCommandList.
+	 * @return int[] * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
+	 */
 	@Override
 	public final int[] getUserCommandList()
 	{

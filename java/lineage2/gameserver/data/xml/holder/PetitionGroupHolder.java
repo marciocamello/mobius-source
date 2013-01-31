@@ -20,41 +20,78 @@ import lineage2.gameserver.model.petition.PetitionMainGroup;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetitionGroupHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static PetitionGroupHolder _instance = new PetitionGroupHolder();
+	/**
+	 * Field _petitionGroups.
+	 */
 	private final IntObjectMap<PetitionMainGroup> _petitionGroups = new HashIntObjectMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return PetitionGroupHolder
+	 */
 	public static PetitionGroupHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for PetitionGroupHolder.
+	 */
 	private PetitionGroupHolder()
 	{
 	}
 	
+	/**
+	 * Method addPetitionGroup.
+	 * @param g PetitionMainGroup
+	 */
 	public void addPetitionGroup(PetitionMainGroup g)
 	{
 		_petitionGroups.put(g.getId(), g);
 	}
 	
+	/**
+	 * Method getPetitionGroup.
+	 * @param val int
+	 * @return PetitionMainGroup
+	 */
 	public PetitionMainGroup getPetitionGroup(int val)
 	{
 		return _petitionGroups.get(val);
 	}
 	
+	/**
+	 * Method getPetitionGroups.
+	 * @return Collection<PetitionMainGroup>
+	 */
 	public Collection<PetitionMainGroup> getPetitionGroups()
 	{
 		return _petitionGroups.values();
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _petitionGroups.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

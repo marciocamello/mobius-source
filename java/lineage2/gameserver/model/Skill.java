@@ -132,21 +132,49 @@ import org.apache.commons.lang3.math.NumberUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Skill extends StatTemplate implements Cloneable
 {
+	/**
+	 * @author Mobius
+	 */
 	public static class AddedSkill
 	{
+		/**
+		 * Field EMPTY_ARRAY.
+		 */
 		public static final AddedSkill[] EMPTY_ARRAY = new AddedSkill[0];
+		/**
+		 * Field id.
+		 */
 		public int id;
+		/**
+		 * Field level.
+		 */
 		public int level;
+		/**
+		 * Field _skill.
+		 */
 		private Skill _skill;
 		
+		/**
+		 * Constructor for AddedSkill.
+		 * @param id int
+		 * @param level int
+		 */
 		public AddedSkill(int id, int level)
 		{
 			this.id = id;
 			this.level = level;
 		}
 		
+		/**
+		 * Method getSkill.
+		 * @return Skill
+		 */
 		public Skill getSkill()
 		{
 			if (_skill == null)
@@ -157,191 +185,677 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum NextAction
 	{
+		/**
+		 * Field ATTACK.
+		 */
 		ATTACK,
+		/**
+		 * Field CAST.
+		 */
 		CAST,
+		/**
+		 * Field DEFAULT.
+		 */
 		DEFAULT,
+		/**
+		 * Field MOVE.
+		 */
 		MOVE,
+		/**
+		 * Field NONE.
+		 */
 		NONE
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum SkillOpType
 	{
+		/**
+		 * Field OP_ACTIVE.
+		 */
 		OP_ACTIVE,
+		/**
+		 * Field OP_PASSIVE.
+		 */
 		OP_PASSIVE,
+		/**
+		 * Field OP_TOGGLE.
+		 */
 		OP_TOGGLE,
+		/**
+		 * Field OP_ACTIVE_TOGGLE.
+		 */
 		OP_ACTIVE_TOGGLE
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum Ternary
 	{
+		/**
+		 * Field TRUE.
+		 */
 		TRUE,
+		/**
+		 * Field FALSE.
+		 */
 		FALSE,
+		/**
+		 * Field DEFAULT.
+		 */
 		DEFAULT
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum SkillMagicType
 	{
+		/**
+		 * Field PHYSIC.
+		 */
 		PHYSIC,
+		/**
+		 * Field MAGIC.
+		 */
 		MAGIC,
+		/**
+		 * Field SPECIAL.
+		 */
 		SPECIAL,
+		/**
+		 * Field MUSIC.
+		 */
 		MUSIC
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum SkillTargetType
 	{
+		/**
+		 * Field TARGET_ALLY.
+		 */
 		TARGET_ALLY,
+		/**
+		 * Field TARGET_AREA.
+		 */
 		TARGET_AREA,
+		/**
+		 * Field TARGET_AREA_AIM_CORPSE.
+		 */
 		TARGET_AREA_AIM_CORPSE,
+		/**
+		 * Field TARGET_AURA.
+		 */
 		TARGET_AURA,
+		/**
+		 * Field TARGET_PET_AURA.
+		 */
 		TARGET_PET_AURA,
+		/**
+		 * Field TARGET_CHEST.
+		 */
 		TARGET_CHEST,
+		/**
+		 * Field TARGET_FEEDABLE_BEAST.
+		 */
 		TARGET_FEEDABLE_BEAST,
+		/**
+		 * Field TARGET_CLAN.
+		 */
 		TARGET_CLAN,
+		/**
+		 * Field TARGET_CLAN_ONLY.
+		 */
 		TARGET_CLAN_ONLY,
+		/**
+		 * Field TARGET_CORPSE.
+		 */
 		TARGET_CORPSE,
+		/**
+		 * Field TARGET_CORPSE_PLAYER.
+		 */
 		TARGET_CORPSE_PLAYER,
+		/**
+		 * Field TARGET_ENEMY_PET.
+		 */
 		TARGET_ENEMY_PET,
+		/**
+		 * Field TARGET_ENEMY_SUMMON.
+		 */
 		TARGET_ENEMY_SUMMON,
+		/**
+		 * Field TARGET_ENEMY_SERVITOR.
+		 */
 		TARGET_ENEMY_SERVITOR,
+		/**
+		 * Field TARGET_EVENT.
+		 */
 		TARGET_EVENT,
+		/**
+		 * Field TARGET_FLAGPOLE.
+		 */
 		TARGET_FLAGPOLE,
+		/**
+		 * Field TARGET_COMMCHANNEL.
+		 */
 		TARGET_COMMCHANNEL,
+		/**
+		 * Field TARGET_HOLY.
+		 */
 		TARGET_HOLY,
+		/**
+		 * Field TARGET_ITEM.
+		 */
 		TARGET_ITEM,
+		/**
+		 * Field TARGET_MENTEE.
+		 */
 		TARGET_MENTEE,
+		/**
+		 * Field TARGET_MULTIFACE.
+		 */
 		TARGET_MULTIFACE,
+		/**
+		 * Field TARGET_MULTIFACE_AURA.
+		 */
 		TARGET_MULTIFACE_AURA,
+		/**
+		 * Field TARGET_TUNNEL.
+		 */
 		TARGET_TUNNEL,
+		/**
+		 * Field TARGET_NONE.
+		 */
 		TARGET_NONE,
+		/**
+		 * Field TARGET_ONE.
+		 */
 		TARGET_ONE,
+		/**
+		 * Field TARGET_ONE_PLAYER.
+		 */
 		TARGET_ONE_PLAYER,
+		/**
+		 * Field TARGET_OWNER.
+		 */
 		TARGET_OWNER,
+		/**
+		 * Field TARGET_PARTY.
+		 */
 		TARGET_PARTY,
+		/**
+		 * Field TARGET_PARTY_ONE.
+		 */
 		TARGET_PARTY_ONE,
+		/**
+		 * Field TARGET_PARTY_WITHOUT_ME.
+		 */
 		TARGET_PARTY_WITHOUT_ME,
+		/**
+		 * Field TARGET_PET.
+		 */
 		TARGET_PET,
+		/**
+		 * Field TARGET_SUMMON.
+		 */
 		TARGET_SUMMON,
+		/**
+		 * Field TARGET_SELF.
+		 */
 		TARGET_SELF,
+		/**
+		 * Field TARGET_SIEGE.
+		 */
 		TARGET_SIEGE,
+		/**
+		 * Field TARGET_UNLOCKABLE.
+		 */
 		TARGET_UNLOCKABLE,
+		/**
+		 * Field TARGET_SUMMON_AURA.
+		 */
 		TARGET_SUMMON_AURA
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum SkillType
 	{
+		/**
+		 * Field AGGRESSION.
+		 */
 		AGGRESSION(Aggression.class),
+		/**
+		 * Field AIEFFECTS.
+		 */
 		AIEFFECTS(AIeffects.class),
+		/**
+		 * Field BALANCE.
+		 */
 		BALANCE(Balance.class),
+		/**
+		 * Field BEAST_FEED.
+		 */
 		BEAST_FEED(BeastFeed.class),
+		/**
+		 * Field BLEED.
+		 */
 		BLEED(Continuous.class),
+		/**
+		 * Field BUFF.
+		 */
 		BUFF(Continuous.class),
+		/**
+		 * Field BUFF_CHARGER.
+		 */
 		BUFF_CHARGER(BuffCharger.class),
+		/**
+		 * Field CALL.
+		 */
 		CALL(Call.class),
+		/**
+		 * Field CHAIN_HEAL.
+		 */
 		CHAIN_HEAL(ChainHeal.class),
+		/**
+		 * Field CHARGE.
+		 */
 		CHARGE(Charge.class),
+		/**
+		 * Field CHARGE_SOUL.
+		 */
 		CHARGE_SOUL(ChargeSoul.class),
+		/**
+		 * Field CLAN_GATE.
+		 */
 		CLAN_GATE(ClanGate.class),
+		/**
+		 * Field COMBATPOINTHEAL.
+		 */
 		COMBATPOINTHEAL(CombatPointHeal.class),
+		/**
+		 * Field CONT.
+		 */
 		CONT(Toggle.class),
+		/**
+		 * Field CPDAM.
+		 */
 		CPDAM(CPDam.class),
+		/**
+		 * Field CPHOT.
+		 */
 		CPHOT(Continuous.class),
+		/**
+		 * Field CRAFT.
+		 */
 		CRAFT(Craft.class),
+		/**
+		 * Field DEATH_PENALTY.
+		 */
 		DEATH_PENALTY(DeathPenalty.class),
+		/**
+		 * Field DECOY.
+		 */
 		DECOY(Decoy.class),
+		/**
+		 * Field DEBUFF.
+		 */
 		DEBUFF(Continuous.class),
+		/**
+		 * Field DELETE_HATE.
+		 */
 		DELETE_HATE(DeleteHate.class),
+		/**
+		 * Field DELETE_HATE_OF_ME.
+		 */
 		DELETE_HATE_OF_ME(DeleteHateOfMe.class),
+		/**
+		 * Field DESTROY_SUMMON.
+		 */
 		DESTROY_SUMMON(DestroySummon.class),
+		/**
+		 * Field DEFUSE_TRAP.
+		 */
 		DEFUSE_TRAP(DefuseTrap.class),
+		/**
+		 * Field DETECT_TRAP.
+		 */
 		DETECT_TRAP(DetectTrap.class),
+		/**
+		 * Field DISCORD.
+		 */
 		DISCORD(Continuous.class),
+		/**
+		 * Field DOT.
+		 */
 		DOT(Continuous.class),
+		/**
+		 * Field DRAIN.
+		 */
 		DRAIN(Drain.class),
+		/**
+		 * Field DRAIN_SOUL.
+		 */
 		DRAIN_SOUL(DrainSoul.class),
+		/**
+		 * Field EFFECT.
+		 */
 		EFFECT(lineage2.gameserver.skills.skillclasses.Effect.class),
+		/**
+		 * Field EFFECTS_FROM_SKILLS.
+		 */
 		EFFECTS_FROM_SKILLS(EffectsFromSkills.class),
+		/**
+		 * Field ENERGY_REPLENISH.
+		 */
 		ENERGY_REPLENISH(EnergyReplenish.class),
+		/**
+		 * Field ENCHANT_ARMOR.
+		 */
 		ENCHANT_ARMOR,
+		/**
+		 * Field ENCHANT_WEAPON.
+		 */
 		ENCHANT_WEAPON,
+		/**
+		 * Field EXTRACT_STONE.
+		 */
 		EXTRACT_STONE(ExtractStone.class),
+		/**
+		 * Field FEED_PET.
+		 */
 		FEED_PET,
+		/**
+		 * Field FISHING.
+		 */
 		FISHING(FishingSkill.class),
+		/**
+		 * Field HARDCODED.
+		 */
 		HARDCODED(lineage2.gameserver.skills.skillclasses.Effect.class),
+		/**
+		 * Field HARVESTING.
+		 */
 		HARVESTING(Harvesting.class),
+		/**
+		 * Field HEAL.
+		 */
 		HEAL(Heal.class),
+		/**
+		 * Field HEAL_WITH_CP.
+		 */
 		HEAL_WITH_CP(HealWithCp.class),
+		/**
+		 * Field HEAL_HP_CP.
+		 */
 		HEAL_HP_CP(HealHpCp.class),
+		/**
+		 * Field HEAL_PERCENT.
+		 */
 		HEAL_PERCENT(HealPercent.class),
+		/**
+		 * Field HOT.
+		 */
 		HOT(Continuous.class),
+		/**
+		 * Field KAMAEL_WEAPON_EXCHANGE.
+		 */
 		KAMAEL_WEAPON_EXCHANGE(KamaelWeaponExchange.class),
+		/**
+		 * Field ITEM_R.
+		 */
 		ITEM_R(ItemR.class),
+		/**
+		 * Field LETHAL_SHOT.
+		 */
 		LETHAL_SHOT(LethalShot.class),
+		/**
+		 * Field LUCK.
+		 */
 		LUCK,
+		/**
+		 * Field MANADAM.
+		 */
 		MANADAM(ManaDam.class),
+		/**
+		 * Field MANAHEAL.
+		 */
 		MANAHEAL(ManaHeal.class),
+		/**
+		 * Field MANAHEAL_PERCENT.
+		 */
 		MANAHEAL_PERCENT(ManaHealPercent.class),
+		/**
+		 * Field MDAM.
+		 */
 		MDAM(MDam.class),
+		/**
+		 * Field EMDAM.
+		 */
 		EMDAM(EMDam.class),
+		/**
+		 * Field MDOT.
+		 */
 		MDOT(Continuous.class),
+		/**
+		 * Field MPHOT.
+		 */
 		MPHOT(Continuous.class),
+		/**
+		 * Field MUTE.
+		 */
 		MUTE(Disablers.class),
+		/**
+		 * Field NEGATE_EFFECTS.
+		 */
 		NEGATE_EFFECTS(NegateEffects.class),
+		/**
+		 * Field NEGATE_STATS.
+		 */
 		NEGATE_STATS(NegateStats.class),
+		/**
+		 * Field ADD_PC_BANG.
+		 */
 		ADD_PC_BANG(PcBangPointsAdd.class),
+		/**
+		 * Field NOTDONE.
+		 */
 		NOTDONE,
+		/**
+		 * Field NOTUSED.
+		 */
 		NOTUSED,
+		/**
+		 * Field PARALYZE.
+		 */
 		PARALYZE(Disablers.class),
+		/**
+		 * Field PASSIVE.
+		 */
 		PASSIVE,
+		/**
+		 * Field PDAM.
+		 */
 		PDAM(PDam.class),
+		/**
+		 * Field PET_SUMMON.
+		 */
 		PET_SUMMON(PetSummon.class),
+		/**
+		 * Field POISON.
+		 */
 		POISON(Continuous.class),
+		/**
+		 * Field PUMPING.
+		 */
 		PUMPING(ReelingPumping.class),
+		/**
+		 * Field RECALL.
+		 */
 		RECALL(Recall.class),
+		/**
+		 * Field REELING.
+		 */
 		REELING(ReelingPumping.class),
+		/**
+		 * Field REFILL.
+		 */
 		REFILL(Refill.class),
+		/**
+		 * Field RESURRECT.
+		 */
 		RESURRECT(Resurrect.class),
+		/**
+		 * Field RESTORE_ITEM.
+		 */
 		RESTORE_ITEM(lineage2.gameserver.skills.skillclasses.Effect.class),
+		/**
+		 * Field REPLACE.
+		 */
 		REPLACE(Replace.class),
+		/**
+		 * Field RIDE.
+		 */
 		RIDE(Ride.class),
+		/**
+		 * Field ROOT.
+		 */
 		ROOT(Disablers.class),
+		/**
+		 * Field SHIFT_AGGRESSION.
+		 */
 		SHIFT_AGGRESSION(ShiftAggression.class),
+		/**
+		 * Field SLEEP.
+		 */
 		SLEEP(Disablers.class),
+		/**
+		 * Field SOULSHOT.
+		 */
 		SOULSHOT,
+		/**
+		 * Field SOWING.
+		 */
 		SOWING(Sowing.class),
+		/**
+		 * Field SPHEAL.
+		 */
 		SPHEAL(SPHeal.class),
+		/**
+		 * Field SPIRITSHOT.
+		 */
 		SPIRITSHOT,
+		/**
+		 * Field SPOIL.
+		 */
 		SPOIL(Spoil.class),
+		/**
+		 * Field STEAL_BUFF.
+		 */
 		STEAL_BUFF(StealBuff.class),
+		/**
+		 * Field STUN.
+		 */
 		STUN(Disablers.class),
+		/**
+		 * Field SUB_JOB.
+		 */
 		SUB_JOB(Subjob.class),
+		/**
+		 * Field SUMMON.
+		 */
 		SUMMON(SummonServitor.class),
+		/**
+		 * Field SUMMON_FLAG.
+		 */
 		SUMMON_FLAG(SummonSiegeFlag.class),
+		/**
+		 * Field SUMMON_ITEM.
+		 */
 		SUMMON_ITEM(SummonItem.class),
+		/**
+		 * Field SUMMON_MENTOR.
+		 */
 		SUMMON_MENTOR(SummonMentor.class),
+		/**
+		 * Field SWEEP.
+		 */
 		SWEEP(Sweep.class),
+		/**
+		 * Field TAKECASTLE.
+		 */
 		TAKECASTLE(TakeCastle.class),
+		/**
+		 * Field TAKEFORTRESS.
+		 */
 		TAKEFORTRESS(TakeFortress.class),
+		/**
+		 * Field TAMECONTROL.
+		 */
 		TAMECONTROL(TameControl.class),
+		/**
+		 * Field TAKEFLAG.
+		 */
 		TAKEFLAG(TakeFlag.class),
+		/**
+		 * Field TELEPORT_NPC.
+		 */
 		TELEPORT_NPC(TeleportNpc.class),
+		/**
+		 * Field TRANSFORMATION.
+		 */
 		TRANSFORMATION(Transformation.class),
+		/**
+		 * Field UNLOCK.
+		 */
 		UNLOCK(Unlock.class),
+		/**
+		 * Field WATCHER_GAZE.
+		 */
 		WATCHER_GAZE(Continuous.class),
+		/**
+		 * Field VITALITY_HEAL.
+		 */
 		VITALITY_HEAL(VitalityHeal.class);
+		/**
+		 * Field clazz.
+		 */
 		private final Class<? extends Skill> clazz;
 		
+		/**
+		 * Constructor for SkillType.
+		 */
 		private SkillType()
 		{
 			clazz = Default.class;
 		}
 		
+		/**
+		 * Constructor for SkillType.
+		 * @param clazz Class<? extends Skill>
+		 */
 		private SkillType(Class<? extends Skill> clazz)
 		{
 			this.clazz = clazz;
 		}
 		
+		/**
+		 * Method makeSkill.
+		 * @param set StatsSet
+		 * @return Skill
+		 */
 		public Skill makeSkill(StatsSet set)
 		{
 			try
@@ -356,6 +870,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			}
 		}
 		
+		/**
+		 * Method isPvM.
+		 * @return boolean
+		 */
 		public final boolean isPvM()
 		{
 			switch (this)
@@ -367,6 +885,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			}
 		}
 		
+		/**
+		 * Method isAI.
+		 * @return boolean
+		 */
 		public boolean isAI()
 		{
 			switch (this)
@@ -382,6 +904,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			}
 		}
 		
+		/**
+		 * Method isPvpSkill.
+		 * @return boolean
+		 */
 		public final boolean isPvpSkill()
 		{
 			switch (this)
@@ -409,6 +935,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			}
 		}
 		
+		/**
+		 * Method isOffensive.
+		 * @return boolean
+		 */
 		public boolean isOffensive()
 		{
 			switch (this)
@@ -451,165 +981,643 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 	}
 	
+	/**
+	 * Field _log.
+	 */
 	static final Logger _log = LoggerFactory.getLogger(Skill.class);
+	/**
+	 * Field EMPTY_ARRAY.
+	 */
 	public static final Skill[] EMPTY_ARRAY = new Skill[0];
+	/**
+	 * Field _effectTemplates.
+	 */
 	protected EffectTemplate[] _effectTemplates = EffectTemplate.EMPTY_ARRAY;
+	/**
+	 * Field _teachers.
+	 */
 	protected List<Integer> _teachers;
+	/**
+	 * Field _canLearn.
+	 */
 	protected List<ClassId> _canLearn;
+	/**
+	 * Field _addedSkills.
+	 */
 	protected AddedSkill[] _addedSkills = AddedSkill.EMPTY_ARRAY;
+	/**
+	 * Field _itemConsume.
+	 */
 	protected final int[] _itemConsume;
+	/**
+	 * Field _itemConsumeId.
+	 */
 	protected final int[] _itemConsumeId;
+	/**
+	 * Field _relationSkillsId.
+	 */
 	protected final int[] _relationSkillsId;
+	/**
+	 * Field _referenceItemId.
+	 */
 	protected final int _referenceItemId;
+	/**
+	 * Field _referenceItemMpConsume.
+	 */
 	protected final int _referenceItemMpConsume;
+	/**
+	 * Field SKILL_CRAFTING. (value is 172)
+	 */
 	public static final int SKILL_CRAFTING = 172;
+	/**
+	 * Field SKILL_POLEARM_MASTERY. (value is 216)
+	 */
 	public static final int SKILL_POLEARM_MASTERY = 216;
+	/**
+	 * Field SKILL_CRYSTALLIZE. (value is 248)
+	 */
 	public static final int SKILL_CRYSTALLIZE = 248;
+	/**
+	 * Field SKILL_WEAPON_MAGIC_MASTERY1. (value is 249)
+	 */
 	public static final int SKILL_WEAPON_MAGIC_MASTERY1 = 249;
+	/**
+	 * Field SKILL_WEAPON_MAGIC_MASTERY2. (value is 250)
+	 */
 	public static final int SKILL_WEAPON_MAGIC_MASTERY2 = 250;
+	/**
+	 * Field SKILL_BLINDING_BLOW. (value is 321)
+	 */
 	public static final int SKILL_BLINDING_BLOW = 321;
+	/**
+	 * Field SKILL_STRIDER_ASSAULT. (value is 325)
+	 */
 	public static final int SKILL_STRIDER_ASSAULT = 325;
+	/**
+	 * Field SKILL_WYVERN_AEGIS. (value is 327)
+	 */
 	public static final int SKILL_WYVERN_AEGIS = 327;
+	/**
+	 * Field SKILL_BLUFF. (value is 358)
+	 */
 	public static final int SKILL_BLUFF = 358;
+	/**
+	 * Field SKILL_HEROIC_MIRACLE. (value is 395)
+	 */
 	public static final int SKILL_HEROIC_MIRACLE = 395;
+	/**
+	 * Field SKILL_HEROIC_BERSERKER. (value is 396)
+	 */
 	public static final int SKILL_HEROIC_BERSERKER = 396;
+	/**
+	 * Field SKILL_SOUL_MASTERY. (value is 467)
+	 */
 	public static final int SKILL_SOUL_MASTERY = 467;
+	/**
+	 * Field SKILL_TRANSFORM_DISPEL. (value is 619)
+	 */
 	public static final int SKILL_TRANSFORM_DISPEL = 619;
+	/**
+	 * Field SKILL_FINAL_FLYING_FORM. (value is 840)
+	 */
 	public static final int SKILL_FINAL_FLYING_FORM = 840;
+	/**
+	 * Field SKILL_AURA_BIRD_FALCON. (value is 841)
+	 */
 	public static final int SKILL_AURA_BIRD_FALCON = 841;
+	/**
+	 * Field SKILL_AURA_BIRD_OWL. (value is 842)
+	 */
 	public static final int SKILL_AURA_BIRD_OWL = 842;
+	/**
+	 * Field SKILL_DETECTION. (value is 933)
+	 */
 	public static final int SKILL_DETECTION = 933;
+	/**
+	 * Field SKILL_RECHARGE. (value is 1013)
+	 */
 	public static final int SKILL_RECHARGE = 1013;
+	/**
+	 * Field SKILL_TRANSFER_PAIN. (value is 1262)
+	 */
 	public static final int SKILL_TRANSFER_PAIN = 1262;
+	/**
+	 * Field SKILL_FISHING_MASTERY. (value is 1315)
+	 */
 	public static final int SKILL_FISHING_MASTERY = 1315;
+	/**
+	 * Field SKILL_NOBLESSE_BLESSING. (value is 1323)
+	 */
 	public static final int SKILL_NOBLESSE_BLESSING = 1323;
+	/**
+	 * Field SKILL_SUMMON_CP_POTION. (value is 1324)
+	 */
 	public static final int SKILL_SUMMON_CP_POTION = 1324;
+	/**
+	 * Field SKILL_FORTUNE_OF_NOBLESSE. (value is 1325)
+	 */
 	public static final int SKILL_FORTUNE_OF_NOBLESSE = 1325;
+	/**
+	 * Field SKILL_HARMONY_OF_NOBLESSE. (value is 1326)
+	 */
 	public static final int SKILL_HARMONY_OF_NOBLESSE = 1326;
+	/**
+	 * Field SKILL_SYMPHONY_OF_NOBLESSE. (value is 1327)
+	 */
 	public static final int SKILL_SYMPHONY_OF_NOBLESSE = 1327;
+	/**
+	 * Field SKILL_HEROIC_VALOR. (value is 1374)
+	 */
 	public static final int SKILL_HEROIC_VALOR = 1374;
+	/**
+	 * Field SKILL_HEROIC_GRANDEUR. (value is 1375)
+	 */
 	public static final int SKILL_HEROIC_GRANDEUR = 1375;
+	/**
+	 * Field SKILL_HEROIC_DREAD. (value is 1376)
+	 */
 	public static final int SKILL_HEROIC_DREAD = 1376;
+	/**
+	 * Field SKILL_MYSTIC_IMMUNITY. (value is 1411)
+	 */
 	public static final int SKILL_MYSTIC_IMMUNITY = 1411;
+	/**
+	 * Field SKILL_RAID_BLESSING. (value is 2168)
+	 */
 	public static final int SKILL_RAID_BLESSING = 2168;
+	/**
+	 * Field SKILL_HINDER_STRIDER. (value is 4258)
+	 */
 	public static final int SKILL_HINDER_STRIDER = 4258;
+	/**
+	 * Field SKILL_WYVERN_BREATH. (value is 4289)
+	 */
 	public static final int SKILL_WYVERN_BREATH = 4289;
+	/**
+	 * Field SKILL_RAID_CURSE. (value is 4515)
+	 */
 	public static final int SKILL_RAID_CURSE = 4515;
+	/**
+	 * Field SKILL_CHARM_OF_COURAGE. (value is 5041)
+	 */
 	public static final int SKILL_CHARM_OF_COURAGE = 5041;
+	/**
+	 * Field SKILL_EVENT_TIMER. (value is 5239)
+	 */
 	public static final int SKILL_EVENT_TIMER = 5239;
+	/**
+	 * Field SKILL_BATTLEFIELD_DEATH_SYNDROME. (value is 5660)
+	 */
 	public static final int SKILL_BATTLEFIELD_DEATH_SYNDROME = 5660;
+	/**
+	 * Field SKILL_SERVITOR_SHARE. (value is 1557)
+	 */
 	public static final int SKILL_SERVITOR_SHARE = 1557;
+	/**
+	 * Field SKILL_TRUE_FIRE. (value is 11007)
+	 */
 	public static final int SKILL_TRUE_FIRE = 11007;
+	/**
+	 * Field SKILL_TRUE_WATER. (value is 11008)
+	 */
 	public static final int SKILL_TRUE_WATER = 11008;
+	/**
+	 * Field SKILL_TRUE_WIND. (value is 11009)
+	 */
 	public static final int SKILL_TRUE_WIND = 11009;
+	/**
+	 * Field SKILL_TRUE_EARTH. (value is 11010)
+	 */
 	public static final int SKILL_TRUE_EARTH = 11010;
+	/**
+	 * Field SKILL_DUAL_CAST. (value is 11068)
+	 */
 	public static final int SKILL_DUAL_CAST = 11068;
+	/**
+	 * Field _isAltUse.
+	 */
 	protected boolean _isAltUse;
+	/**
+	 * Field _isBehind.
+	 */
 	protected boolean _isBehind;
+	/**
+	 * Field _isCancelable.
+	 */
 	protected boolean _isCancelable;
+	/**
+	 * Field _isCorpse.
+	 */
 	protected boolean _isCorpse;
+	/**
+	 * Field _isCommon.
+	 */
 	protected boolean _isCommon;
+	/**
+	 * Field _isItemHandler.
+	 */
 	protected boolean _isItemHandler;
+	/**
+	 * Field _isOffensive.
+	 */
 	protected boolean _isOffensive;
+	/**
+	 * Field _isPvpSkill.
+	 */
 	protected boolean _isPvpSkill;
+	/**
+	 * Field _isNotUsedByAI.
+	 */
 	protected boolean _isNotUsedByAI;
+	/**
+	 * Field _isFishingSkill.
+	 */
 	protected boolean _isFishingSkill;
+	/**
+	 * Field _isPvm.
+	 */
 	protected boolean _isPvm;
+	/**
+	 * Field _isForceUse.
+	 */
 	protected boolean _isForceUse;
+	/**
+	 * Field _isNewbie.
+	 */
 	protected boolean _isNewbie;
+	/**
+	 * Field _isPreservedOnDeath.
+	 */
 	protected boolean _isPreservedOnDeath;
+	/**
+	 * Field _isHeroic.
+	 */
 	protected boolean _isHeroic;
+	/**
+	 * Field _isSaveable.
+	 */
 	protected boolean _isSaveable;
+	/**
+	 * Field _isSkillTimePermanent.
+	 */
 	protected boolean _isSkillTimePermanent;
+	/**
+	 * Field _isReuseDelayPermanent.
+	 */
 	protected boolean _isReuseDelayPermanent;
+	/**
+	 * Field _isReflectable.
+	 */
 	protected boolean _isReflectable;
+	/**
+	 * Field _isSuicideAttack.
+	 */
 	protected boolean _isSuicideAttack;
+	/**
+	 * Field _isShieldignore.
+	 */
 	protected boolean _isShieldignore;
+	/**
+	 * Field _isUndeadOnly.
+	 */
 	protected boolean _isUndeadOnly;
+	/**
+	 * Field _isUseSS.
+	 */
 	protected Ternary _isUseSS;
+	/**
+	 * Field _isOverhit.
+	 */
 	protected boolean _isOverhit;
+	/**
+	 * Field _isSoulBoost.
+	 */
 	protected boolean _isSoulBoost;
+	/**
+	 * Field _isChargeBoost.
+	 */
 	protected boolean _isChargeBoost;
+	/**
+	 * Field _isUsingWhileCasting.
+	 */
 	protected boolean _isUsingWhileCasting;
+	/**
+	 * Field _isIgnoreResists.
+	 */
 	protected boolean _isIgnoreResists;
+	/**
+	 * Field _isIgnoreInvul.
+	 */
 	protected boolean _isIgnoreInvul;
+	/**
+	 * Field _isTrigger.
+	 */
 	protected boolean _isTrigger;
+	/**
+	 * Field _isNotAffectedByMute.
+	 */
 	protected boolean _isNotAffectedByMute;
+	/**
+	 * Field _basedOnTargetDebuff.
+	 */
 	protected boolean _basedOnTargetDebuff;
+	/**
+	 * Field _deathlink.
+	 */
 	protected boolean _deathlink;
+	/**
+	 * Field _hideStartMessage.
+	 */
 	protected boolean _hideStartMessage;
+	/**
+	 * Field _hideUseMessage.
+	 */
 	protected boolean _hideUseMessage;
+	/**
+	 * Field _skillInterrupt.
+	 */
 	protected boolean _skillInterrupt;
+	/**
+	 * Field _flyingTransformUsage.
+	 */
 	protected boolean _flyingTransformUsage;
+	/**
+	 * Field _flySpeed.
+	 */
 	protected int _flySpeed;
+	/**
+	 * Field _canUseTeleport.
+	 */
 	protected boolean _canUseTeleport;
+	/**
+	 * Field _isProvoke.
+	 */
 	protected boolean _isProvoke;
+	/**
+	 * Field _isCubicSkill.
+	 */
 	protected boolean _isCubicSkill = false;
+	/**
+	 * Field _isSelfDispellable.
+	 */
 	protected boolean _isSelfDispellable;
+	/**
+	 * Field _isRelation.
+	 */
 	protected boolean _isRelation = false;
+	/**
+	 * Field _skillType.
+	 */
 	protected SkillType _skillType;
+	/**
+	 * Field _operateType.
+	 */
 	protected SkillOpType _operateType;
+	/**
+	 * Field _targetType.
+	 */
 	protected SkillTargetType _targetType;
+	/**
+	 * Field _magicType.
+	 */
 	protected SkillMagicType _magicType;
+	/**
+	 * Field _traitType.
+	 */
 	protected SkillTrait _traitType;
+	/**
+	 * Field _saveVs.
+	 */
 	protected BaseStats _saveVs;
+	/**
+	 * Field _nextAction.
+	 */
 	protected NextAction _nextAction;
+	/**
+	 * Field _element.
+	 */
 	protected Element _element;
+	/**
+	 * Field _flyType.
+	 */
 	protected FlyType _flyType;
+	/**
+	 * Field _flyToBack.
+	 */
 	protected boolean _flyToBack;
+	/**
+	 * Field _preCondition.
+	 */
 	protected Condition[] _preCondition = Condition.EMPTY_ARRAY;
+	/**
+	 * Field _id.
+	 */
 	public int _id;
+	/**
+	 * Field _level.
+	 */
 	protected int _level;
+	/**
+	 * Field _baseLevel.
+	 */
 	protected int _baseLevel;
+	/**
+	 * Field _displayId.
+	 */
 	protected int _displayId;
+	/**
+	 * Field _displayLevel.
+	 */
 	protected int _displayLevel;
+	/**
+	 * Field _activateRate.
+	 */
 	protected int _activateRate;
+	/**
+	 * Field _castRange.
+	 */
 	protected int _castRange;
+	/**
+	 * Field _cancelTarget.
+	 */
 	protected int _cancelTarget;
+	/**
+	 * Field _condCharges.
+	 */
 	protected int _condCharges;
+	/**
+	 * Field _coolTime.
+	 */
 	protected int _coolTime;
+	/**
+	 * Field _delayedEffect.
+	 */
 	protected int _delayedEffect;
+	/**
+	 * Field _effectPoint.
+	 */
 	protected int _effectPoint;
+	/**
+	 * Field _energyConsume.
+	 */
 	protected int _energyConsume;
+	/**
+	 * Field _elementPower.
+	 */
 	protected int _elementPower;
+	/**
+	 * Field _flyRadius.
+	 */
 	protected int _flyRadius;
+	/**
+	 * Field _hitTime.
+	 */
 	protected int _hitTime;
+	/**
+	 * Field _hpConsume.
+	 */
 	protected int _hpConsume;
+	/**
+	 * Field _levelModifier.
+	 */
 	protected int _levelModifier;
+	/**
+	 * Field _magicLevel.
+	 */
 	protected int _magicLevel;
+	/**
+	 * Field _matak.
+	 */
 	protected int _matak;
+	/**
+	 * Field _minPledgeClass.
+	 */
 	protected int _minPledgeClass;
+	/**
+	 * Field _minRank.
+	 */
 	protected int _minRank;
+	/**
+	 * Field _negatePower.
+	 */
 	protected int _negatePower;
+	/**
+	 * Field _negateSkill.
+	 */
 	protected int _negateSkill;
+	/**
+	 * Field _npcId.
+	 */
 	protected int _npcId;
+	/**
+	 * Field _numCharges.
+	 */
 	protected int _numCharges;
+	/**
+	 * Field _maxCharges.
+	 */
 	protected int _maxCharges;
+	/**
+	 * Field _skillInterruptTime.
+	 */
 	protected int _skillInterruptTime;
+	/**
+	 * Field _skillRadius.
+	 */
 	protected int _skillRadius;
+	/**
+	 * Field _soulsConsume.
+	 */
 	protected int _soulsConsume;
+	/**
+	 * Field _symbolId.
+	 */
 	protected int _symbolId;
+	/**
+	 * Field _weaponsAllowed.
+	 */
 	protected int _weaponsAllowed;
+	/**
+	 * Field _castCount.
+	 */
 	protected int _castCount;
+	/**
+	 * Field _enchantLevelCount.
+	 */
 	protected int _enchantLevelCount;
+	/**
+	 * Field _criticalRate.
+	 */
 	protected int _criticalRate;
+	/**
+	 * Field _reuseDelay.
+	 */
 	protected long _reuseDelay;
+	/**
+	 * Field _power.
+	 */
 	protected double _power;
+	/**
+	 * Field _powerPvP.
+	 */
 	protected double _powerPvP;
+	/**
+	 * Field _powerPvE.
+	 */
 	protected double _powerPvE;
+	/**
+	 * Field _mpConsume1.
+	 */
 	protected double _mpConsume1;
+	/**
+	 * Field _mpConsume2.
+	 */
 	protected double _mpConsume2;
+	/**
+	 * Field _lethal1.
+	 */
 	protected double _lethal1;
+	/**
+	 * Field _lethal2.
+	 */
 	protected double _lethal2;
+	/**
+	 * Field _absorbPart.
+	 */
 	protected double _absorbPart;
+	/**
+	 * Field _name.
+	 */
 	protected String _name;
+	/**
+	 * Field _baseValues.
+	 */
 	protected String _baseValues;
+	/**
+	 * Field _icon.
+	 */
 	protected String _icon;
+	/**
+	 * Field _skillToCast.
+	 */
 	protected int _skillToCast;
+	/**
+	 * Field _skillToCastLevel.
+	 */
 	protected int _skillToCastLevel;
+	/**
+	 * Field hashCode.
+	 */
 	private final int hashCode;
+	/**
+	 * Field reuseGroupId.
+	 */
 	private final int reuseGroupId = -1;
 	
+	/**
+	 * Constructor for Skill.
+	 * @param set StatsSet
+	 */
 	protected Skill(StatsSet set)
 	{
 		_id = set.getInteger("skill_id");
@@ -833,6 +1841,11 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		hashCode = (_id * 1023) + _level;
 	}
 	
+	/**
+	 * Method getWeaponDependancy.
+	 * @param activeChar Creature
+	 * @return boolean
+	 */
 	public final boolean getWeaponDependancy(Creature activeChar)
 	{
 		if (_weaponsAllowed == 0)
@@ -857,6 +1870,15 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return false;
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
 		Player player = activeChar.getPlayer();
@@ -1007,6 +2029,15 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return true;
 	}
 	
+	/**
+	 * Method checkTarget.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param aimingTarget Creature
+	 * @param forceUse boolean
+	 * @param first boolean
+	 * @return SystemMsg
+	 */
 	public SystemMsg checkTarget(Creature activeChar, Creature target, Creature aimingTarget, boolean forceUse, boolean first)
 	{
 		if (((target == activeChar) && isNotTargetAoE()) || (activeChar.isPlayer() && (target == activeChar.getPlayer().getSummonList().getFirstServitor()) && (_targetType == SkillTargetType.TARGET_PET_AURA)))
@@ -1219,6 +2250,12 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return null;
 	}
 	
+	/**
+	 * Method getAimingTarget.
+	 * @param activeChar Creature
+	 * @param obj GameObject
+	 * @return Creature
+	 */
 	public final Creature getAimingTarget(Creature activeChar, GameObject obj)
 	{
 		Creature target = (obj == null) || !obj.isCreature() ? null : (Creature) obj;
@@ -1334,6 +2371,13 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 	}
 	
+	/**
+	 * Method getTargets.
+	 * @param activeChar Creature
+	 * @param aimingTarget Creature
+	 * @param forceUse boolean
+	 * @return List<Creature>
+	 */
 	public List<Creature> getTargets(Creature activeChar, Creature aimingTarget, boolean forceUse)
 	{
 		List<Creature> targets;
@@ -1500,6 +2544,12 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return targets;
 	}
 	
+	/**
+	 * Method addTargetAndPetToList.
+	 * @param targets List<Creature>
+	 * @param actor Player
+	 * @param target Player
+	 */
 	private void addTargetAndPetToList(List<Creature> targets, Player actor, Player target)
 	{
 		if (((actor == target) || actor.isInRange(target, _skillRadius)) && (target.isDead() == _isCorpse))
@@ -1515,6 +2565,13 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 	}
 	
+	/**
+	 * Method addTargetsToList.
+	 * @param targets List<Creature>
+	 * @param aimingTarget Creature
+	 * @param activeChar Creature
+	 * @param forceUse boolean
+	 */
 	private void addTargetsToList(List<Creature> targets, Creature aimingTarget, Creature activeChar, boolean forceUse)
 	{
 		int count = 0;
@@ -1562,11 +2619,26 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 	}
 	
+	/**
+	 * Method getEffects.
+	 * @param effector Creature
+	 * @param effected Creature
+	 * @param calcChance boolean
+	 * @param applyOnCaster boolean
+	 */
 	public final void getEffects(Creature effector, Creature effected, boolean calcChance, boolean applyOnCaster)
 	{
 		getEffects(effector, effected, calcChance, applyOnCaster, false);
 	}
 	
+	/**
+	 * Method getEffects.
+	 * @param effector Creature
+	 * @param effected Creature
+	 * @param calcChance boolean
+	 * @param applyOnCaster boolean
+	 * @param skillReflected boolean
+	 */
 	public final void getEffects(Creature effector, Creature effected, boolean calcChance, boolean applyOnCaster, boolean skillReflected)
 	{
 		double timeMult = 1.0;
@@ -1581,6 +2653,16 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		getEffects(effector, effected, calcChance, applyOnCaster, 0, timeMult, skillReflected);
 	}
 	
+	/**
+	 * Method getEffects.
+	 * @param effector Creature
+	 * @param effected Creature
+	 * @param calcChance boolean
+	 * @param applyOnCaster boolean
+	 * @param timeConst long
+	 * @param timeMult double
+	 * @param skillReflected boolean
+	 */
 	public final void getEffects(final Creature effector, final Creature effected, final boolean calcChance, final boolean applyOnCaster, final long timeConst, final double timeMult, final boolean skillReflected)
 	{
 		if (isPassive() || !hasEffects() || (effector == null) || (effected == null))
@@ -1798,26 +2880,47 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		});
 	}
 	
+	/**
+	 * Method attach.
+	 * @param effect EffectTemplate
+	 */
 	public final void attach(EffectTemplate effect)
 	{
 		_effectTemplates = ArrayUtils.add(_effectTemplates, effect);
 	}
 	
+	/**
+	 * Method getEffectTemplates.
+	 * @return EffectTemplate[]
+	 */
 	public EffectTemplate[] getEffectTemplates()
 	{
 		return _effectTemplates;
 	}
 	
+	/**
+	 * Method hasEffects.
+	 * @return boolean
+	 */
 	public boolean hasEffects()
 	{
 		return _effectTemplates.length > 0;
 	}
 	
+	/**
+	 * Method getStatFuncs.
+	 * @return Func[]
+	 */
 	public final Func[] getStatFuncs()
 	{
 		return getStatFuncs(this);
 	}
 	
+	/**
+	 * Method equals.
+	 * @param obj Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object obj)
 	{
@@ -1836,102 +2939,185 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return hashCode() == ((Skill) obj).hashCode();
 	}
 	
+	/**
+	 * Method hashCode.
+	 * @return int
+	 */
 	@Override
 	public int hashCode()
 	{
 		return hashCode;
 	}
 	
+	/**
+	 * Method attach.
+	 * @param c Condition
+	 */
 	public final void attach(Condition c)
 	{
 		_preCondition = ArrayUtils.add(_preCondition, c);
 	}
 	
+	/**
+	 * Method altUse.
+	 * @return boolean
+	 */
 	public final boolean altUse()
 	{
 		return _isAltUse;
 	}
 	
+	/**
+	 * Method canTeachBy.
+	 * @param npcId int
+	 * @return boolean
+	 */
 	public final boolean canTeachBy(int npcId)
 	{
 		return (_teachers == null) || _teachers.contains(npcId);
 	}
 	
+	/**
+	 * Method getActivateRate.
+	 * @return int
+	 */
 	public final int getActivateRate()
 	{
 		return _activateRate;
 	}
 	
+	/**
+	 * Method getAddedSkills.
+	 * @return AddedSkill[]
+	 */
 	public AddedSkill[] getAddedSkills()
 	{
 		return _addedSkills;
 	}
 	
+	/**
+	 * Method getCanLearn.
+	 * @param cls ClassId
+	 * @return boolean
+	 */
 	public final boolean getCanLearn(ClassId cls)
 	{
 		return (_canLearn == null) || _canLearn.contains(cls);
 	}
 	
+	/**
+	 * Method getCastRange.
+	 * @return int
+	 */
 	public final int getCastRange()
 	{
 		return _castRange;
 	}
 	
+	/**
+	 * Method getAOECastRange.
+	 * @return int
+	 */
 	public final int getAOECastRange()
 	{
 		return Math.max(_castRange, _skillRadius);
 	}
 	
+	/**
+	 * Method getCondCharges.
+	 * @return int
+	 */
 	public int getCondCharges()
 	{
 		return _condCharges;
 	}
 	
+	/**
+	 * Method getCoolTime.
+	 * @return int
+	 */
 	public final int getCoolTime()
 	{
 		return _coolTime;
 	}
 	
+	/**
+	 * Method setCoolTime.
+	 * @param _time int
+	 */
 	public final void setCoolTime(int _time)
 	{
 		_coolTime = _time;
 	}
 	
+	/**
+	 * Method getCorpse.
+	 * @return boolean
+	 */
 	public boolean getCorpse()
 	{
 		return _isCorpse;
 	}
 	
+	/**
+	 * Method getDelayedEffect.
+	 * @return int
+	 */
 	public int getDelayedEffect()
 	{
 		return _delayedEffect;
 	}
 	
+	/**
+	 * Method getSkillToCast.
+	 * @return int
+	 */
 	public final int getSkillToCast()
 	{
 		return _skillToCast;
 	}
 	
+	/**
+	 * Method getSkillToCastLevel.
+	 * @return int
+	 */
 	public final int getSkillToCastLevel()
 	{
 		return _skillToCastLevel;
 	}
 	
+	/**
+	 * Method getDisplayId.
+	 * @return int
+	 */
 	public final int getDisplayId()
 	{
 		return _displayId;
 	}
 	
+	/**
+	 * Method getDisplayLevel.
+	 * @return int
+	 */
 	public int getDisplayLevel()
 	{
 		return _displayLevel;
 	}
 	
+	/**
+	 * Method getEffectPoint.
+	 * @return int
+	 */
 	public int getEffectPoint()
 	{
 		return _effectPoint;
 	}
 	
+	/**
+	 * Method getSameByStackType.
+	 * @param list List<Effect>
+	 * @return Effect
+	 */
 	public Effect getSameByStackType(List<Effect> list)
 	{
 		Effect ret;
@@ -1945,26 +3131,48 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return null;
 	}
 	
+	/**
+	 * Method getSameByStackType.
+	 * @param list EffectList
+	 * @return Effect
+	 */
 	public Effect getSameByStackType(EffectList list)
 	{
 		return getSameByStackType(list.getAllEffects());
 	}
 	
+	/**
+	 * Method getSameByStackType.
+	 * @param actor Creature
+	 * @return Effect
+	 */
 	public Effect getSameByStackType(Creature actor)
 	{
 		return getSameByStackType(actor.getEffectList().getAllEffects());
 	}
 	
+	/**
+	 * Method getElement.
+	 * @return Element
+	 */
 	public final Element getElement()
 	{
 		return _element;
 	}
 	
+	/**
+	 * Method getElementPower.
+	 * @return int
+	 */
 	public final int getElementPower()
 	{
 		return _elementPower;
 	}
 	
+	/**
+	 * Method getFirstAddedSkill.
+	 * @return Skill
+	 */
 	public Skill getFirstAddedSkill()
 	{
 		if (_addedSkills.length == 0)
@@ -1974,151 +3182,272 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return _addedSkills[0].getSkill();
 	}
 	
+	/**
+	 * Method getFlyRadius.
+	 * @return int
+	 */
 	public int getFlyRadius()
 	{
 		return _flyRadius;
 	}
 	
+	/**
+	 * Method getFlyType.
+	 * @return FlyType
+	 */
 	public FlyType getFlyType()
 	{
 		return _flyType;
 	}
 	
+	/**
+	 * Method isFlyToBack.
+	 * @return boolean
+	 */
 	public boolean isFlyToBack()
 	{
 		return _flyToBack;
 	}
 	
+	/**
+	 * Method getHitTime.
+	 * @return int
+	 */
 	public final int getHitTime()
 	{
 		return _hitTime;
 	}
 	
+	/**
+	 * Method getHpConsume.
+	 * @return int
+	 */
 	public final int getHpConsume()
 	{
 		return _hpConsume;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method setId.
+	 * @param id int
+	 */
 	public void setId(int id)
 	{
 		_id = id;
 	}
 	
+	/**
+	 * Method getItemConsume.
+	 * @return int[]
+	 */
 	public final int[] getItemConsume()
 	{
 		return _itemConsume;
 	}
 	
+	/**
+	 * Method getItemConsumeId.
+	 * @return int[]
+	 */
 	public final int[] getItemConsumeId()
 	{
 		return _itemConsumeId;
 	}
 	
+	/**
+	 * Method getReferenceItemId.
+	 * @return int
+	 */
 	public final int getReferenceItemId()
 	{
 		return _referenceItemId;
 	}
 	
+	/**
+	 * Method getReferenceItemMpConsume.
+	 * @return int
+	 */
 	public final int getReferenceItemMpConsume()
 	{
 		return _referenceItemMpConsume;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public final int getLevel()
 	{
 		return _level;
 	}
 	
+	/**
+	 * Method getBaseLevel.
+	 * @return int
+	 */
 	public final int getBaseLevel()
 	{
 		return _baseLevel;
 	}
 	
+	/**
+	 * Method setBaseLevel.
+	 * @param baseLevel int
+	 */
 	public final void setBaseLevel(int baseLevel)
 	{
 		_baseLevel = baseLevel;
 	}
 	
+	/**
+	 * Method getLevelModifier.
+	 * @return int
+	 */
 	public final int getLevelModifier()
 	{
 		return _levelModifier;
 	}
 	
+	/**
+	 * Method getMagicLevel.
+	 * @return int
+	 */
 	public final int getMagicLevel()
 	{
 		return _magicLevel;
 	}
 	
+	/**
+	 * Method getMatak.
+	 * @return int
+	 */
 	public int getMatak()
 	{
 		return _matak;
 	}
 	
+	/**
+	 * Method getMinPledgeClass.
+	 * @return int
+	 */
 	public int getMinPledgeClass()
 	{
 		return _minPledgeClass;
 	}
 	
+	/**
+	 * Method getMinRank.
+	 * @return int
+	 */
 	public int getMinRank()
 	{
 		return _minRank;
 	}
 	
+	/**
+	 * Method getMpConsume.
+	 * @return double
+	 */
 	public final double getMpConsume()
 	{
 		return _mpConsume1 + _mpConsume2;
 	}
 	
+	/**
+	 * Method getMpConsume1.
+	 * @return double
+	 */
 	public final double getMpConsume1()
 	{
 		return _mpConsume1;
 	}
 	
+	/**
+	 * Method getMpConsume2.
+	 * @return double
+	 */
 	public final double getMpConsume2()
 	{
 		return _mpConsume2;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public final String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method getNegatePower.
+	 * @return int
+	 */
 	public int getNegatePower()
 	{
 		return _negatePower;
 	}
 	
+	/**
+	 * Method getNegateSkill.
+	 * @return int
+	 */
 	public int getNegateSkill()
 	{
 		return _negateSkill;
 	}
 	
+	/**
+	 * Method getNextAction.
+	 * @return NextAction
+	 */
 	public NextAction getNextAction()
 	{
 		return _nextAction;
 	}
 	
+	/**
+	 * Method getNpcId.
+	 * @return int
+	 */
 	public int getNpcId()
 	{
 		return _npcId;
 	}
 	
+	/**
+	 * Method getNumCharges.
+	 * @return int
+	 */
 	public int getNumCharges()
 	{
 		return _numCharges;
 	}
 	
+	/**
+	 * Method getMaxCharges.
+	 * @return int
+	 */
 	public int getMaxCharges()
 	{
 		return _maxCharges;
 	}
 	
+	/**
+	 * Method getPower.
+	 * @param target Creature
+	 * @return double
+	 */
 	public final double getPower(Creature target)
 	{
 		if (target != null)
@@ -2135,101 +3464,183 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return getPower();
 	}
 	
+	/**
+	 * Method getPower.
+	 * @return double
+	 */
 	public final double getPower()
 	{
 		return _power;
 	}
 	
+	/**
+	 * Method getPowerPvP.
+	 * @return double
+	 */
 	public final double getPowerPvP()
 	{
 		return _powerPvP != 0 ? _powerPvP : _power;
 	}
 	
+	/**
+	 * Method getPowerPvE.
+	 * @return double
+	 */
 	public final double getPowerPvE()
 	{
 		return _powerPvE != 0 ? _powerPvE : _power;
 	}
 	
+	/**
+	 * Method getReuseDelay.
+	 * @return long
+	 */
 	public final long getReuseDelay()
 	{
 		return _reuseDelay;
 	}
 	
+	/**
+	 * Method setReuseDelay.
+	 * @param newReuseDelay long
+	 */
 	public final void setReuseDelay(long newReuseDelay)
 	{
 		_reuseDelay = newReuseDelay;
 	}
 	
+	/**
+	 * Method getShieldIgnore.
+	 * @return boolean
+	 */
 	public final boolean getShieldIgnore()
 	{
 		return _isShieldignore;
 	}
 	
+	/**
+	 * Method isReflectable.
+	 * @return boolean
+	 */
 	public final boolean isReflectable()
 	{
 		return _isReflectable;
 	}
 	
+	/**
+	 * Method getSkillInterruptTime.
+	 * @return int
+	 */
 	public final int getSkillInterruptTime()
 	{
 		return _skillInterruptTime;
 	}
 	
+	/**
+	 * Method getSkillRadius.
+	 * @return int
+	 */
 	public final int getSkillRadius()
 	{
 		return _skillRadius;
 	}
 	
+	/**
+	 * Method getSkillType.
+	 * @return SkillType
+	 */
 	public final SkillType getSkillType()
 	{
 		return _skillType;
 	}
 	
+	/**
+	 * Method getSoulsConsume.
+	 * @return int
+	 */
 	public int getSoulsConsume()
 	{
 		return _soulsConsume;
 	}
 	
+	/**
+	 * Method getSymbolId.
+	 * @return int
+	 */
 	public int getSymbolId()
 	{
 		return _symbolId;
 	}
 	
+	/**
+	 * Method getTargetType.
+	 * @return SkillTargetType
+	 */
 	public final SkillTargetType getTargetType()
 	{
 		return _targetType;
 	}
 	
+	/**
+	 * Method getTraitType.
+	 * @return SkillTrait
+	 */
 	public final SkillTrait getTraitType()
 	{
 		return _traitType;
 	}
 	
+	/**
+	 * Method getSaveVs.
+	 * @return BaseStats
+	 */
 	public final BaseStats getSaveVs()
 	{
 		return _saveVs;
 	}
 	
+	/**
+	 * Method getWeaponsAllowed.
+	 * @return int
+	 */
 	public final int getWeaponsAllowed()
 	{
 		return _weaponsAllowed;
 	}
 	
+	/**
+	 * Method getLethal1.
+	 * @return double
+	 */
 	public double getLethal1()
 	{
 		return _lethal1;
 	}
 	
+	/**
+	 * Method getLethal2.
+	 * @return double
+	 */
 	public double getLethal2()
 	{
 		return _lethal2;
 	}
 	
+	/**
+	 * Method getBaseValues.
+	 * @return String
+	 */
 	public String getBaseValues()
 	{
 		return _baseValues;
 	}
 	
+	/**
+	 * Method isBlockedByChar.
+	 * @param effected Creature
+	 * @param et EffectTemplate
+	 * @return boolean
+	 */
 	public boolean isBlockedByChar(Creature effected, EffectTemplate et)
 	{
 		if (et.getAttachedFuncs() == null)
@@ -2246,76 +3657,136 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return false;
 	}
 	
+	/**
+	 * Method isCancelable.
+	 * @return boolean
+	 */
 	public final boolean isCancelable()
 	{
 		return _isCancelable && (getSkillType() != SkillType.TRANSFORMATION) && !isToggle();
 	}
 	
+	/**
+	 * Method isCommon.
+	 * @return boolean
+	 */
 	public final boolean isCommon()
 	{
 		return _isCommon;
 	}
 	
+	/**
+	 * Method getCriticalRate.
+	 * @return int
+	 */
 	public final int getCriticalRate()
 	{
 		return _criticalRate;
 	}
 	
+	/**
+	 * Method isHandler.
+	 * @return boolean
+	 */
 	public final boolean isHandler()
 	{
 		return _isItemHandler;
 	}
 	
+	/**
+	 * Method isMagic.
+	 * @return boolean
+	 */
 	public final boolean isMagic()
 	{
 		return _magicType == SkillMagicType.MAGIC;
 	}
 	
+	/**
+	 * Method getMagicType.
+	 * @return SkillMagicType
+	 */
 	public final SkillMagicType getMagicType()
 	{
 		return _magicType;
 	}
 	
+	/**
+	 * Method isNewbie.
+	 * @return boolean
+	 */
 	public final boolean isNewbie()
 	{
 		return _isNewbie;
 	}
 	
+	/**
+	 * Method isPreservedOnDeath.
+	 * @return boolean
+	 */
 	public final boolean isPreservedOnDeath()
 	{
 		return _isPreservedOnDeath;
 	}
 	
+	/**
+	 * Method isHeroic.
+	 * @return boolean
+	 */
 	public final boolean isHeroic()
 	{
 		return _isHeroic;
 	}
 	
+	/**
+	 * Method isSelfDispellable.
+	 * @return boolean
+	 */
 	public final boolean isSelfDispellable()
 	{
 		return _isSelfDispellable;
 	}
 	
+	/**
+	 * Method setOperateType.
+	 * @param type SkillOpType
+	 */
 	public void setOperateType(SkillOpType type)
 	{
 		_operateType = type;
 	}
 	
+	/**
+	 * Method isOverhit.
+	 * @return boolean
+	 */
 	public final boolean isOverhit()
 	{
 		return _isOverhit;
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	public final boolean isActive()
 	{
 		return (_operateType == SkillOpType.OP_ACTIVE) || (_operateType == SkillOpType.OP_ACTIVE_TOGGLE);
 	}
 	
+	/**
+	 * Method isPassive.
+	 * @return boolean
+	 */
 	public final boolean isPassive()
 	{
 		return _operateType == SkillOpType.OP_PASSIVE;
 	}
 	
+	/**
+	 * Method isSaveable.
+	 * @return boolean
+	 */
 	public boolean isSaveable()
 	{
 		if (!Config.ALT_SAVE_UNSAVEABLE && (isMusic() || _name.startsWith("Herb of")))
@@ -2325,149 +3796,270 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return _isSaveable;
 	}
 	
+	/**
+	 * Method isSkillTimePermanent.
+	 * @return boolean
+	 */
 	public final boolean isSkillTimePermanent()
 	{
 		return _isSkillTimePermanent || _isItemHandler || _name.contains("Talisman");
 	}
 	
+	/**
+	 * Method isReuseDelayPermanent.
+	 * @return boolean
+	 */
 	public final boolean isReuseDelayPermanent()
 	{
 		return _isReuseDelayPermanent || _isItemHandler;
 	}
 	
+	/**
+	 * Method isDeathlink.
+	 * @return boolean
+	 */
 	public boolean isDeathlink()
 	{
 		return _deathlink;
 	}
 	
+	/**
+	 * Method isBasedOnTargetDebuff.
+	 * @return boolean
+	 */
 	public boolean isBasedOnTargetDebuff()
 	{
 		return _basedOnTargetDebuff;
 	}
 	
+	/**
+	 * Method isSoulBoost.
+	 * @return boolean
+	 */
 	public boolean isSoulBoost()
 	{
 		return _isSoulBoost;
 	}
 	
+	/**
+	 * Method isChargeBoost.
+	 * @return boolean
+	 */
 	public boolean isChargeBoost()
 	{
 		return _isChargeBoost;
 	}
 	
+	/**
+	 * Method isUsingWhileCasting.
+	 * @return boolean
+	 */
 	public boolean isUsingWhileCasting()
 	{
 		return _isUsingWhileCasting;
 	}
 	
+	/**
+	 * Method isBehind.
+	 * @return boolean
+	 */
 	public boolean isBehind()
 	{
 		return _isBehind;
 	}
 	
+	/**
+	 * Method isHideStartMessage.
+	 * @return boolean
+	 */
 	public boolean isHideStartMessage()
 	{
 		return _hideStartMessage;
 	}
 	
+	/**
+	 * Method isHideUseMessage.
+	 * @return boolean
+	 */
 	public boolean isHideUseMessage()
 	{
 		return _hideUseMessage;
 	}
 	
+	/**
+	 * Method isSSPossible.
+	 * @return boolean
+	 */
 	public boolean isSSPossible()
 	{
 		return (_isUseSS == Ternary.TRUE) || ((_isUseSS == Ternary.DEFAULT) && !_isItemHandler && !isMusic() && isActive() && !((getTargetType() == SkillTargetType.TARGET_SELF) && !isMagic()));
 	}
 	
+	/**
+	 * Method isSuicideAttack.
+	 * @return boolean
+	 */
 	public final boolean isSuicideAttack()
 	{
 		return _isSuicideAttack;
 	}
 	
+	/**
+	 * Method isToggle.
+	 * @return boolean
+	 */
 	public final boolean isToggle()
 	{
 		return (_operateType == SkillOpType.OP_TOGGLE) || (_operateType == SkillOpType.OP_ACTIVE_TOGGLE);
 	}
 	
+	/**
+	 * Method isActiveToggle.
+	 * @return boolean
+	 */
 	public final boolean isActiveToggle()
 	{
 		return _operateType == SkillOpType.OP_ACTIVE_TOGGLE;
 	}
 	
+	/**
+	 * Method setCastRange.
+	 * @param castRange int
+	 */
 	public void setCastRange(int castRange)
 	{
 		_castRange = castRange;
 	}
 	
+	/**
+	 * Method setDisplayLevel.
+	 * @param lvl int
+	 */
 	public void setDisplayLevel(int lvl)
 	{
 		_displayLevel = lvl;
 	}
 	
+	/**
+	 * Method setHitTime.
+	 * @param hitTime int
+	 */
 	public void setHitTime(int hitTime)
 	{
 		_hitTime = hitTime;
 	}
 	
+	/**
+	 * Method setHpConsume.
+	 * @param hpConsume int
+	 */
 	public void setHpConsume(int hpConsume)
 	{
 		_hpConsume = hpConsume;
 	}
 	
+	/**
+	 * Method setMagicType.
+	 * @param type SkillMagicType
+	 */
 	public void setMagicType(SkillMagicType type)
 	{
 		_magicType = type;
 	}
 	
+	/**
+	 * Method setMagicLevel.
+	 * @param newlevel int
+	 */
 	public final void setMagicLevel(int newlevel)
 	{
 		_magicLevel = newlevel;
 	}
 	
+	/**
+	 * Method setMpConsume1.
+	 * @param mpConsume1 double
+	 */
 	public void setMpConsume1(double mpConsume1)
 	{
 		_mpConsume1 = mpConsume1;
 	}
 	
+	/**
+	 * Method setMpConsume2.
+	 * @param mpConsume2 double
+	 */
 	public void setMpConsume2(double mpConsume2)
 	{
 		_mpConsume2 = mpConsume2;
 	}
 	
+	/**
+	 * Method setName.
+	 * @param name String
+	 */
 	public void setName(String name)
 	{
 		_name = name;
 	}
 	
+	/**
+	 * Method setOverhit.
+	 * @param isOverhit boolean
+	 */
 	public void setOverhit(final boolean isOverhit)
 	{
 		_isOverhit = isOverhit;
 	}
 	
+	/**
+	 * Method setPower.
+	 * @param power double
+	 */
 	public final void setPower(double power)
 	{
 		_power = power;
 	}
 	
+	/**
+	 * Method setSkillInterruptTime.
+	 * @param skillInterruptTime int
+	 */
 	public void setSkillInterruptTime(int skillInterruptTime)
 	{
 		_skillInterruptTime = skillInterruptTime;
 	}
 	
+	/**
+	 * Method isItemSkill.
+	 * @return boolean
+	 */
 	public boolean isItemSkill()
 	{
 		return _name.contains("Item Skill") || _name.contains("Talisman");
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		return _name + "[id=" + _id + ",lvl=" + _level + "]";
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	public abstract void useSkill(Creature activeChar, List<Creature> targets);
 	
+	/**
+	 * Method isAoE.
+	 * @return boolean
+	 */
 	public boolean isAoE()
 	{
 		switch (_targetType)
@@ -2485,6 +4077,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 	}
 	
+	/**
+	 * Method isNotTargetAoE.
+	 * @return boolean
+	 */
 	public boolean isNotTargetAoE()
 	{
 		switch (_targetType)
@@ -2503,46 +4099,82 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 	}
 	
+	/**
+	 * Method isOffensive.
+	 * @return boolean
+	 */
 	public boolean isOffensive()
 	{
 		return _isOffensive;
 	}
 	
+	/**
+	 * Method isForceUse.
+	 * @return boolean
+	 */
 	public final boolean isForceUse()
 	{
 		return _isForceUse;
 	}
 	
+	/**
+	 * Method isAI.
+	 * @return boolean
+	 */
 	public boolean isAI()
 	{
 		return _skillType.isAI();
 	}
 	
+	/**
+	 * Method isPvM.
+	 * @return boolean
+	 */
 	public boolean isPvM()
 	{
 		return _isPvm;
 	}
 	
+	/**
+	 * Method isPvpSkill.
+	 * @return boolean
+	 */
 	public final boolean isPvpSkill()
 	{
 		return _isPvpSkill;
 	}
 	
+	/**
+	 * Method isFishingSkill.
+	 * @return boolean
+	 */
 	public final boolean isFishingSkill()
 	{
 		return _isFishingSkill;
 	}
 	
+	/**
+	 * Method isMusic.
+	 * @return boolean
+	 */
 	public boolean isMusic()
 	{
 		return _magicType == SkillMagicType.MUSIC;
 	}
 	
+	/**
+	 * Method isTrigger.
+	 * @return boolean
+	 */
 	public boolean isTrigger()
 	{
 		return _isTrigger;
 	}
 	
+	/**
+	 * Method oneTarget.
+	 * @return boolean
+	 */
 	public boolean oneTarget()
 	{
 		switch (_targetType)
@@ -2574,76 +4206,138 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 	}
 	
+	/**
+	 * Method getCancelTarget.
+	 * @return int
+	 */
 	public int getCancelTarget()
 	{
 		return _cancelTarget;
 	}
 	
+	/**
+	 * Method isSkillInterrupt.
+	 * @return boolean
+	 */
 	public boolean isSkillInterrupt()
 	{
 		return _skillInterrupt;
 	}
 	
+	/**
+	 * Method isNotUsedByAI.
+	 * @return boolean
+	 */
 	public boolean isNotUsedByAI()
 	{
 		return _isNotUsedByAI;
 	}
 	
+	/**
+	 * Method isIgnoreResists.
+	 * @return boolean
+	 */
 	public boolean isIgnoreResists()
 	{
 		return _isIgnoreResists;
 	}
 	
+	/**
+	 * Method isIgnoreInvul.
+	 * @return boolean
+	 */
 	public boolean isIgnoreInvul()
 	{
 		return _isIgnoreInvul;
 	}
 	
+	/**
+	 * Method isNotAffectedByMute.
+	 * @return boolean
+	 */
 	public boolean isNotAffectedByMute()
 	{
 		return _isNotAffectedByMute;
 	}
 	
+	/**
+	 * Method flyingTransformUsage.
+	 * @return boolean
+	 */
 	public boolean flyingTransformUsage()
 	{
 		return _flyingTransformUsage;
 	}
 	
+	/**
+	 * Method canUseTeleport.
+	 * @return boolean
+	 */
 	public boolean canUseTeleport()
 	{
 		return _canUseTeleport;
 	}
 	
+	/**
+	 * Method getCastCount.
+	 * @return int
+	 */
 	public int getCastCount()
 	{
 		return _castCount;
 	}
 	
+	/**
+	 * Method getEnchantLevelCount.
+	 * @return int
+	 */
 	public int getEnchantLevelCount()
 	{
 		return _enchantLevelCount;
 	}
 	
+	/**
+	 * Method setEnchantLevelCount.
+	 * @param count int
+	 */
 	public void setEnchantLevelCount(int count)
 	{
 		_enchantLevelCount = count;
 	}
 	
+	/**
+	 * Method isClanSkill.
+	 * @return boolean
+	 */
 	public boolean isClanSkill()
 	{
 		return ((_id >= 370) && (_id <= 391)) || ((_id >= 611) && (_id <= 616));
 	}
 	
+	/**
+	 * Method isBaseTransformation.
+	 * @return boolean
+	 */
 	public boolean isBaseTransformation()
 	{
 		return ((_id >= 810) && (_id <= 813)) || ((_id >= 1520) && (_id <= 1522)) || (_id == 538);
 	}
 	
+	/**
+	 * Method isSummonerTransformation.
+	 * @return boolean
+	 */
 	public boolean isSummonerTransformation()
 	{
 		return (_id >= 929) && (_id <= 931);
 	}
 	
+	/**
+	 * Method getSimpleDamage.
+	 * @param attacker Creature
+	 * @param target Creature
+	 * @return double
+	 */
 	public double getSimpleDamage(Creature attacker, Creature target)
 	{
 		if (isMagic())
@@ -2661,6 +4355,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return (ss * (pAtk + power) * 70.) / pdef;
 	}
 	
+	/**
+	 * Method getReuseForMonsters.
+	 * @return long
+	 */
 	public long getReuseForMonsters()
 	{
 		long min = 1000;
@@ -2683,51 +4381,91 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return Math.max(Math.max(_hitTime + _coolTime, _reuseDelay), min);
 	}
 	
+	/**
+	 * Method getAbsorbPart.
+	 * @return double
+	 */
 	public double getAbsorbPart()
 	{
 		return _absorbPart;
 	}
 	
+	/**
+	 * Method isProvoke.
+	 * @return boolean
+	 */
 	public boolean isProvoke()
 	{
 		return _isProvoke;
 	}
 	
+	/**
+	 * Method getIcon.
+	 * @return String
+	 */
 	public String getIcon()
 	{
 		return _icon;
 	}
 	
+	/**
+	 * Method getEnergyConsume.
+	 * @return int
+	 */
 	public int getEnergyConsume()
 	{
 		return _energyConsume;
 	}
 	
+	/**
+	 * Method setCubicSkill.
+	 * @param value boolean
+	 */
 	public void setCubicSkill(boolean value)
 	{
 		_isCubicSkill = value;
 	}
 	
+	/**
+	 * Method isCubicSkill.
+	 * @return boolean
+	 */
 	public boolean isCubicSkill()
 	{
 		return _isCubicSkill;
 	}
 	
+	/**
+	 * Method getReuseGroupId.
+	 * @return int
+	 */
 	public int getReuseGroupId()
 	{
 		return reuseGroupId;
 	}
 	
+	/**
+	 * Method getRelationSkills.
+	 * @return int[]
+	 */
 	public int[] getRelationSkills()
 	{
 		return _relationSkillsId;
 	}
 	
+	/**
+	 * Method isRelationSkill.
+	 * @return boolean
+	 */
 	public boolean isRelationSkill()
 	{
 		return _isRelation;
 	}
 	
+	/**
+	 * Method getFlySpeed.
+	 * @return int
+	 */
 	public int getFlySpeed()
 	{
 		return _flySpeed;

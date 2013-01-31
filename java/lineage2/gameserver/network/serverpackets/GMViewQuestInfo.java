@@ -16,15 +16,29 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GMViewQuestInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _cha.
+	 */
 	private final Player _cha;
 	
+	/**
+	 * Constructor for GMViewQuestInfo.
+	 * @param cha Player
+	 */
 	public GMViewQuestInfo(Player cha)
 	{
 		_cha = cha;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

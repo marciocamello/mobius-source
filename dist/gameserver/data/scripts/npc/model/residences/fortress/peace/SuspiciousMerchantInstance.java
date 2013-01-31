@@ -32,6 +32,10 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SuspiciousMerchantInstance extends NpcInstance
 {
 	/**
@@ -39,11 +43,21 @@ public class SuspiciousMerchantInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for SuspiciousMerchantInstance.
+	 * @param objectID int
+	 * @param template NpcTemplate
+	 */
 	public SuspiciousMerchantInstance(int objectID, NpcTemplate template)
 	{
 		super(objectID, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -199,6 +213,12 @@ public class SuspiciousMerchantInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{

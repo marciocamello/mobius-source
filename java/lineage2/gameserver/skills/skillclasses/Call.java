@@ -27,16 +27,36 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Call extends Skill
 {
+	/**
+	 * Field _party.
+	 */
 	final boolean _party;
 	
+	/**
+	 * Constructor for Call.
+	 * @param set StatsSet
+	 */
 	public Call(StatsSet set)
 	{
 		super(set);
 		_party = set.getBool("party", false);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -69,6 +89,11 @@ public class Call extends Skill
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
@@ -120,6 +145,11 @@ public class Call extends Skill
 		}
 	}
 	
+	/**
+	 * Method canSummonHere.
+	 * @param activeChar Player
+	 * @return SystemMessage
+	 */
 	public static SystemMessage canSummonHere(Player activeChar)
 	{
 		if (activeChar.isAlikeDead() || activeChar.isInOlympiadMode() || activeChar.isInObserverMode() || activeChar.isFlying())
@@ -137,6 +167,11 @@ public class Call extends Skill
 		return null;
 	}
 	
+	/**
+	 * Method canBeSummoned.
+	 * @param target Creature
+	 * @return SystemMessage
+	 */
 	public static SystemMessage canBeSummoned(Creature target)
 	{
 		if ((target == null) || !target.isPlayer() || target.getPlayer().isTerritoryFlagEquipped() || target.isFlying() || target.isInObserverMode() || !target.getPlayer().getPlayerAccess().UseTeleport)

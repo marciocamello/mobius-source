@@ -25,11 +25,25 @@ import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.instances.NpcInstance;
 import bosses.BaiumManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Baium extends DefaultAI
 {
+	/**
+	 * Field _firstTimeAttacked.
+	 */
 	private boolean _firstTimeAttacked = true;
+	/**
+	 * Field group_hold. Field thunderbolt. Field earth_quake. Field energy_wave. Field baium_normal_attack.
+	 */
 	private final Skill baium_normal_attack, energy_wave, earth_quake, thunderbolt, group_hold;
 	
+	/**
+	 * Constructor for Baium.
+	 * @param actor NpcInstance
+	 */
 	public Baium(NpcInstance actor)
 	{
 		super(actor);
@@ -41,12 +55,21 @@ public class Baium extends DefaultAI
 		group_hold = skills.get(4131);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -75,6 +98,10 @@ public class Baium extends DefaultAI
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method createNewTask.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean createNewTask()
 	{
@@ -137,6 +164,10 @@ public class Baium extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method maybeMoveToHome.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean maybeMoveToHome()
 	{
@@ -148,6 +179,10 @@ public class Baium extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

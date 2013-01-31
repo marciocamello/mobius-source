@@ -14,15 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.GameObject;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Revive extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
 	
+	/**
+	 * Constructor for Revive.
+	 * @param obj GameObject
+	 */
 	public Revive(GameObject obj)
 	{
 		_objectId = obj.getObjectId();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

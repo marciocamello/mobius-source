@@ -15,8 +15,15 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestChangeNicknameColor extends L2GameClientPacket
 {
+	/**
+	 * Field COLORS.
+	 */
 	private static final int COLORS[] =
 	{
 		0x9393FF,
@@ -30,9 +37,18 @@ public class RequestChangeNicknameColor extends L2GameClientPacket
 		0x486295,
 		0x999999
 	};
+	/**
+	 * Field _itemObjectId. Field _colorNum.
+	 */
 	private int _colorNum, _itemObjectId;
+	/**
+	 * Field _title.
+	 */
 	private String _title;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -41,6 +57,9 @@ public class RequestChangeNicknameColor extends L2GameClientPacket
 		_itemObjectId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

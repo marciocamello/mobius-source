@@ -14,19 +14,46 @@ package lineage2.commons.threading;
 
 import java.util.Queue;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class FIFORunnableQueue<T extends Runnable> implements Runnable
 {
+	/**
+	 * Field NONE. (value is 0)
+	 */
 	private static final int NONE = 0;
+	/**
+	 * Field QUEUED. (value is 1)
+	 */
 	private static final int QUEUED = 1;
+	/**
+	 * Field RUNNING. (value is 2)
+	 */
 	private static final int RUNNING = 2;
+	/**
+	 * Field _state.
+	 */
 	private int _state = NONE;
+	/**
+	 * Field _queue.
+	 */
 	private final Queue<T> _queue;
 	
+	/**
+	 * Constructor for FIFORunnableQueue.
+	 * @param queue Queue<T>
+	 */
 	public FIFORunnableQueue(Queue<T> queue)
 	{
 		_queue = queue;
 	}
 	
+	/**
+	 * Method execute.
+	 * @param t T
+	 */
 	public void execute(T t)
 	{
 		_queue.add(t);
@@ -41,13 +68,23 @@ public abstract class FIFORunnableQueue<T extends Runnable> implements Runnable
 		execute();
 	}
 	
+	/**
+	 * Method execute.
+	 */
 	protected abstract void execute();
 	
+	/**
+	 * Method clear.
+	 */
 	public void clear()
 	{
 		_queue.clear();
 	}
 	
+	/**
+	 * Method run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public void run()
 	{

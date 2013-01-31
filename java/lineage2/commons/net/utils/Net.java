@@ -12,37 +12,75 @@
  */
 package lineage2.commons.net.utils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Net
 {
+	/**
+	 * Field address.
+	 */
 	private final int address;
+	/**
+	 * Field netmask.
+	 */
 	private final int netmask;
 	
+	/**
+	 * Constructor for Net.
+	 * @param net int
+	 * @param mask int
+	 */
 	public Net(int net, int mask)
 	{
 		address = net;
 		netmask = mask;
 	}
 	
+	/**
+	 * Method address.
+	 * @return int
+	 */
 	public int address()
 	{
 		return address;
 	}
 	
+	/**
+	 * Method netmask.
+	 * @return int
+	 */
 	public int netmask()
 	{
 		return netmask;
 	}
 	
+	/**
+	 * Method isInRange.
+	 * @param address int
+	 * @return boolean
+	 */
 	public boolean isInRange(int address)
 	{
 		return ((address & netmask) == this.address);
 	}
 	
+	/**
+	 * Method isInRange.
+	 * @param address String
+	 * @return boolean
+	 */
 	public boolean isInRange(String address)
 	{
 		return isInRange(parseAddress(address));
 	}
 	
+	/**
+	 * Method valueOf.
+	 * @param s String
+	 * @return Net
+	 */
 	public static Net valueOf(String s)
 	{
 		int address = 0;
@@ -77,6 +115,11 @@ public class Net
 		return new Net(address, netmask);
 	}
 	
+	/**
+	 * Method parseAddress.
+	 * @param s String
+	 * @return int * @throws IllegalArgumentException
+	 */
 	public static int parseAddress(String s) throws IllegalArgumentException
 	{
 		int ip = 0;
@@ -92,6 +135,11 @@ public class Net
 		return ip;
 	}
 	
+	/**
+	 * Method parseNetmask.
+	 * @param s String
+	 * @return int * @throws IllegalArgumentException
+	 */
 	public static int parseNetmask(String s) throws IllegalArgumentException
 	{
 		int mask = 0;
@@ -115,6 +163,11 @@ public class Net
 		return mask;
 	}
 	
+	/**
+	 * Method equals.
+	 * @param o Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object o)
 	{
@@ -133,18 +186,22 @@ public class Net
 		return false;
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		StringBuilder sb = new StringBuilder();
-		sb.append(address >>> 24).append(".");
-		sb.append((address << 8) >>> 24).append(".");
-		sb.append((address << 16) >>> 24).append(".");
+		sb.append(address >>> 24).append('.');
+		sb.append((address << 8) >>> 24).append('.');
+		sb.append((address << 16) >>> 24).append('.');
 		sb.append((address << 24) >>> 24);
-		sb.append("/");
-		sb.append(netmask >>> 24).append(".");
-		sb.append((netmask << 8) >>> 24).append(".");
-		sb.append((netmask << 16) >>> 24).append(".");
+		sb.append('/');
+		sb.append(netmask >>> 24).append('.');
+		sb.append((netmask << 8) >>> 24).append('.');
+		sb.append((netmask << 16) >>> 24).append('.');
 		sb.append((netmask << 24) >>> 24);
 		return sb.toString();
 	}

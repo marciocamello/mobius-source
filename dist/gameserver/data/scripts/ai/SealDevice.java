@@ -17,16 +17,32 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SealDevice extends Fighter
 {
+	/**
+	 * Field _firstAttack.
+	 */
 	private boolean _firstAttack = false;
 	
+	/**
+	 * Constructor for SealDevice.
+	 * @param actor NpcInstance
+	 */
 	public SealDevice(NpcInstance actor)
 	{
 		super(actor);
 		actor.block();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -38,6 +54,11 @@ public class SealDevice extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

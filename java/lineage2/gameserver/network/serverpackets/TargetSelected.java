@@ -14,12 +14,31 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TargetSelected extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _targetId.
+	 */
 	private final int _targetId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for TargetSelected.
+	 * @param objectId int
+	 * @param targetId int
+	 * @param loc Location
+	 */
 	public TargetSelected(int objectId, int targetId, Location loc)
 	{
 		_objectId = objectId;
@@ -27,6 +46,9 @@ public class TargetSelected extends L2GameServerPacket
 		_loc = loc;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

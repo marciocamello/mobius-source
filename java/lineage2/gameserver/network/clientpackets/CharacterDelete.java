@@ -24,17 +24,33 @@ import lineage2.gameserver.network.serverpackets.ExLoginVitalityEffectInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharacterDelete extends L2GameClientPacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharacterDelete.class);
+	/**
+	 * Field _charSlot.
+	 */
 	private int _charSlot;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_charSlot = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -79,6 +95,10 @@ public class CharacterDelete extends L2GameClientPacket
 		client.setCharSelection(cl.getCharInfo());
 	}
 	
+	/**
+	 * Method clanStatus.
+	 * @return int
+	 */
 	private int clanStatus()
 	{
 		int obj = getClient().getObjectIdForSlot(_charSlot);
@@ -97,6 +117,10 @@ public class CharacterDelete extends L2GameClientPacket
 		return 0;
 	}
 	
+	/**
+	 * Method onlineStatus.
+	 * @return int
+	 */
 	private int onlineStatus()
 	{
 		int obj = getClient().getObjectIdForSlot(_charSlot);

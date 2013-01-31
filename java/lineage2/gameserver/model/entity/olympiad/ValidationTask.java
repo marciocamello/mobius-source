@@ -19,10 +19,20 @@ import lineage2.gameserver.model.entity.Hero;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ValidationTask extends RunnableImpl
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ValidationTask.class);
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{

@@ -21,12 +21,30 @@ import lineage2.gameserver.model.IconEffect;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.utils.EffectsComparator;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PartySpelled extends L2GameServerPacket implements IconEffectPacket
 {
+	/**
+	 * Field _type.
+	 */
 	private final int _type;
+	/**
+	 * Field _objId.
+	 */
 	private final int _objId;
+	/**
+	 * Field _effects.
+	 */
 	private final List<IconEffect> _effects;
 	
+	/**
+	 * Constructor for PartySpelled.
+	 * @param activeChar Playable
+	 * @param full boolean
+	 */
 	public PartySpelled(Playable activeChar, boolean full)
 	{
 		_objId = activeChar.getObjectId();
@@ -46,6 +64,9 @@ public class PartySpelled extends L2GameServerPacket implements IconEffectPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -61,6 +82,14 @@ public class PartySpelled extends L2GameServerPacket implements IconEffectPacket
 		}
 	}
 	
+	/**
+	 * Method addIconEffect.
+	 * @param skillId int
+	 * @param level int
+	 * @param duration int
+	 * @param obj int
+	 * @see lineage2.gameserver.network.serverpackets.IconEffectPacket#addIconEffect(int, int, int, int)
+	 */
 	@Override
 	public void addIconEffect(int skillId, int level, int duration, int obj)
 	{

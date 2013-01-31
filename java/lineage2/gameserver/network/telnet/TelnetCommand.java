@@ -14,36 +14,77 @@ package lineage2.gameserver.network.telnet;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class TelnetCommand implements Comparable<TelnetCommand>
 {
+	/**
+	 * Field command.
+	 */
 	private final String command;
+	/**
+	 * Field acronyms.
+	 */
 	private final String[] acronyms;
 	
+	/**
+	 * Constructor for TelnetCommand.
+	 * @param command String
+	 */
 	public TelnetCommand(String command)
 	{
 		this(command, ArrayUtils.EMPTY_STRING_ARRAY);
 	}
 	
+	/**
+	 * Constructor for TelnetCommand.
+	 * @param command String
+	 * @param acronyms String[]
+	 */
 	public TelnetCommand(String command, String... acronyms)
 	{
 		this.command = command;
 		this.acronyms = acronyms;
 	}
 	
+	/**
+	 * Method getCommand.
+	 * @return String
+	 */
 	public String getCommand()
 	{
 		return command;
 	}
 	
+	/**
+	 * Method getAcronyms.
+	 * @return String[]
+	 */
 	public String[] getAcronyms()
 	{
 		return acronyms;
 	}
 	
+	/**
+	 * Method getUsage.
+	 * @return String
+	 */
 	public abstract String getUsage();
 	
+	/**
+	 * Method handle.
+	 * @param args String[]
+	 * @return String
+	 */
 	public abstract String handle(String[] args);
 	
+	/**
+	 * Method equals.
+	 * @param command String
+	 * @return boolean
+	 */
 	public boolean equals(String command)
 	{
 		for (String acronym : acronyms)
@@ -56,12 +97,21 @@ public abstract class TelnetCommand implements Comparable<TelnetCommand>
 		return this.command.equalsIgnoreCase(command);
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		return command;
 	}
 	
+	/**
+	 * Method equals.
+	 * @param o Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object o)
 	{
@@ -80,6 +130,11 @@ public abstract class TelnetCommand implements Comparable<TelnetCommand>
 		return false;
 	}
 	
+	/**
+	 * Method compareTo.
+	 * @param o TelnetCommand
+	 * @return int
+	 */
 	@Override
 	public int compareTo(TelnetCommand o)
 	{

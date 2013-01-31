@@ -16,14 +16,24 @@ import lineage2.gameserver.instancemanager.SoDManager;
 import lineage2.gameserver.instancemanager.SoIManager;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowSeedMapInfo extends L2GameServerPacket
 {
+	/**
+	 * Field ENTRANCES.
+	 */
 	private static final Location[] ENTRANCES =
 	{
 		new Location(-246857, 251960, 4331, 1),
 		new Location(-213770, 210760, 4400, 2),
 	};
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

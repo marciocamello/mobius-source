@@ -23,10 +23,21 @@ import lineage2.loginserver.database.L2DatabaseFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Log
 {
+	/**
+	 * Field _log.
+	 */
 	private final static Logger _log = LoggerFactory.getLogger(Log.class);
 	
+	/**
+	 * Method LogAccount.
+	 * @param account Account
+	 */
 	public static void LogAccount(Account account)
 	{
 		if (!Config.LOGIN_LOG)

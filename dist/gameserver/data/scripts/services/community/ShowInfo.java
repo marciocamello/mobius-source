@@ -17,8 +17,16 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShowInfo extends Functions implements ScriptFile
 {
+	/**
+	 * Method show.
+	 * @param param String[]
+	 */
 	public void show(String[] param)
 	{
 		Player player = getSelf();
@@ -40,16 +48,28 @@ public class ShowInfo extends Functions implements ScriptFile
 		show(html, player);
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

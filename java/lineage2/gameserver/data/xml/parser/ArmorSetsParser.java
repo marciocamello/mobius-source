@@ -22,32 +22,59 @@ import lineage2.gameserver.model.ArmorSet;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ArmorSetsParser extends AbstractFileParser<ArmorSetsHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final ArmorSetsParser _instance = new ArmorSetsParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return ArmorSetsParser
+	 */
 	public static ArmorSetsParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for ArmorSetsParser.
+	 */
 	private ArmorSetsParser()
 	{
 		super(ArmorSetsHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/other/armor_sets.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "armor_sets.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

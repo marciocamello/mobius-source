@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EventTrigger extends L2GameServerPacket
 {
+	/**
+	 * Field _trapId.
+	 */
 	private final int _trapId;
+	/**
+	 * Field _active.
+	 */
 	private final boolean _active;
 	
+	/**
+	 * Constructor for EventTrigger.
+	 * @param trapId int
+	 * @param active boolean
+	 */
 	public EventTrigger(int trapId, boolean active)
 	{
 		_trapId = trapId;
 		_active = active;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

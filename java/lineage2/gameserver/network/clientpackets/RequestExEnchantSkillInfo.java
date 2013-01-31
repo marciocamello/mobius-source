@@ -19,11 +19,24 @@ import lineage2.gameserver.network.serverpackets.ExEnchantSkillInfo;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.tables.SkillTreeTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExEnchantSkillInfo extends L2GameClientPacket
 {
+	/**
+	 * Field _skillId.
+	 */
 	private int _skillId;
+	/**
+	 * Field _skillLvl.
+	 */
 	private int _skillLvl;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -31,6 +44,9 @@ public class RequestExEnchantSkillInfo extends L2GameClientPacket
 		_skillLvl = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

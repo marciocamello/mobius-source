@@ -12,32 +12,64 @@
  */
 package lineage2.commons.geometry;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Point3D extends Point2D
 {
+	/**
+	 * Field EMPTY_ARRAY.
+	 */
 	public static final Point3D[] EMPTY_ARRAY = new Point3D[0];
+	/**
+	 * Field z.
+	 */
 	public int z;
 	
+	/**
+	 * Constructor for Point3D.
+	 */
 	public Point3D()
 	{
 	}
 	
+	/**
+	 * Constructor for Point3D.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 */
 	public Point3D(int x, int y, int z)
 	{
 		super(x, y);
 		this.z = z;
 	}
 	
+	/**
+	 * Method getZ.
+	 * @return int
+	 */
 	public int getZ()
 	{
 		return z;
 	}
 	
+	/**
+	 * Method clone.
+	 * @return Point3D
+	 */
 	@Override
 	public Point3D clone()
 	{
 		return new Point3D(x, y, z);
 	}
 	
+	/**
+	 * Method equals.
+	 * @param o Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object o)
 	{
@@ -56,16 +88,32 @@ public class Point3D extends Point2D
 		return equals((Point3D) o);
 	}
 	
+	/**
+	 * Method equals.
+	 * @param p Point3D
+	 * @return boolean
+	 */
 	public boolean equals(Point3D p)
 	{
 		return equals(p.x, p.y, p.z);
 	}
 	
+	/**
+	 * Method equals.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return boolean
+	 */
 	public boolean equals(int x, int y, int z)
 	{
 		return (this.x == x) && (this.y == y) && (this.z == z);
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{

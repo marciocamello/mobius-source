@@ -29,23 +29,72 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 import quests._698_BlocktheLordsEscape;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HeartInfinityDefence extends Reflection
 {
+	/**
+	 * Field DeadTumor. (value is 32535)
+	 */
 	private static final int DeadTumor = 32535;
+	/**
+	 * Field AliveTumor. (value is 18708)
+	 */
 	private static final int AliveTumor = 18708;
+	/**
+	 * Field RegenerationCoffin. (value is 18709)
+	 */
 	private static final int RegenerationCoffin = 18709;
+	/**
+	 * Field SoulWagon. (value is 22523)
+	 */
 	private static final int SoulWagon = 22523;
+	/**
+	 * Field EchmusCoffin. (value is 18713)
+	 */
 	private static final int EchmusCoffin = 18713;
+	/**
+	 * Field maxCoffins. (value is 20)
+	 */
 	private static final int maxCoffins = 20;
+	/**
+	 * Field aliveTumorSpawnTask. Field coffinSpawnTask. Field wagonSpawnTask. Field timerTask.
+	 */
 	private ScheduledFuture<?> timerTask = null, wagonSpawnTask = null, coffinSpawnTask = null, aliveTumorSpawnTask = null;
+	/**
+	 * Field conquestEnded.
+	 */
 	boolean conquestEnded = false;
+	/**
+	 * Field deathListener.
+	 */
 	private final DeathListener deathListener = new DeathListener();
+	/**
+	 * Field startTime.
+	 */
 	long startTime = 0;
+	/**
+	 * Field tumorRespawnTime.
+	 */
 	long tumorRespawnTime = 0;
+	/**
+	 * Field wagonRespawnTime.
+	 */
 	long wagonRespawnTime = 0;
+	/**
+	 * Field coffinsCreated.
+	 */
 	private int coffinsCreated = 0;
+	/**
+	 * Field preawakenedEchmus.
+	 */
 	private NpcInstance preawakenedEchmus = null;
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{
@@ -63,6 +112,9 @@ public class HeartInfinityDefence extends Reflection
 		}, 20000L);
 	}
 	
+	/**
+	 * Method conquestBegins.
+	 */
 	void conquestBegins()
 	{
 		for (Player p : getPlayers())
@@ -123,11 +175,19 @@ public class HeartInfinityDefence extends Reflection
 		timerTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new TimerTask(), 298 * 1000L, 5 * 60 * 1000L);
 	}
 	
+	/**
+	 * Method spawnCoffin.
+	 * @param tumor NpcInstance
+	 */
 	void spawnCoffin(NpcInstance tumor)
 	{
 		addSpawnWithoutRespawn(RegenerationCoffin, new Location(tumor.getLoc().x, tumor.getLoc().y, tumor.getLoc().z, Location.getRandomHeading()), 250);
 	}
 	
+	/**
+	 * Method handleTumorHp.
+	 * @param percent double
+	 */
 	void handleTumorHp(double percent)
 	{
 		for (NpcInstance npc : getAllByNpcId(AliveTumor, true))
@@ -136,6 +196,9 @@ public class HeartInfinityDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method invokeDeathListener.
+	 */
 	void invokeDeathListener()
 	{
 		for (NpcInstance npc : getNpcs())
@@ -144,13 +207,25 @@ public class HeartInfinityDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DeathListener implements OnDeathListener
 	{
+		/**
+		 * Constructor for DeathListener.
+		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param self Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -188,13 +263,22 @@ public class HeartInfinityDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class TimerTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for TimerTask.
+		 */
 		public TimerTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -217,6 +301,9 @@ public class HeartInfinityDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method notifyWagonArrived.
+	 */
 	public void notifyWagonArrived()
 	{
 		coffinsCreated++;
@@ -235,6 +322,10 @@ public class HeartInfinityDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method conquestConclusion.
+	 * @param win boolean
+	 */
 	void conquestConclusion(boolean win)
 	{
 		if (conquestEnded)
@@ -262,11 +353,17 @@ public class HeartInfinityDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method notifyCoffinDeath.
+	 */
 	public void notifyCoffinDeath()
 	{
 		tumorRespawnTime -= 5 * 1000L;
 	}
 	
+	/**
+	 * Method cancelTimers.
+	 */
 	private void cancelTimers()
 	{
 		if (timerTask != null)
@@ -287,6 +384,9 @@ public class HeartInfinityDefence extends Reflection
 		}
 	}
 	
+	/**
+	 * Method onCollapse.
+	 */
 	@Override
 	protected void onCollapse()
 	{

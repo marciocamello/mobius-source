@@ -14,11 +14,32 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExFishingHpRegen extends L2GameServerPacket
 {
+	/**
+	 * Field _hpBarColor. Field _Penalty. Field _GoodUse. Field _Anim. Field _HPmode. Field _fishHP. Field _time.
+	 */
 	private final int _time, _fishHP, _HPmode, _Anim, _GoodUse, _Penalty, _hpBarColor;
+	/**
+	 * Field char_obj_id.
+	 */
 	private final int char_obj_id;
 	
+	/**
+	 * Constructor for ExFishingHpRegen.
+	 * @param character Creature
+	 * @param time int
+	 * @param fishHP int
+	 * @param HPmode int
+	 * @param GoodUse int
+	 * @param anim int
+	 * @param penalty int
+	 * @param hpBarColor int
+	 */
 	public ExFishingHpRegen(Creature character, int time, int fishHP, int HPmode, int GoodUse, int anim, int penalty, int hpBarColor)
 	{
 		char_obj_id = character.getObjectId();
@@ -31,6 +52,9 @@ public class ExFishingHpRegen extends L2GameServerPacket
 		_hpBarColor = hpBarColor;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

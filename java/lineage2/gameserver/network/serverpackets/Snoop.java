@@ -12,15 +12,47 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Snoop extends L2GameServerPacket
 {
+	/**
+	 * Field _convoID.
+	 */
 	private final int _convoID;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _type.
+	 */
 	private final int _type;
+	/**
+	 * Field _fStringId.
+	 */
 	private final int _fStringId;
+	/**
+	 * Field _speaker.
+	 */
 	private final String _speaker;
+	/**
+	 * Field _params.
+	 */
 	private final String[] _params;
 	
+	/**
+	 * Constructor for Snoop.
+	 * @param id int
+	 * @param name String
+	 * @param type int
+	 * @param speaker String
+	 * @param msg String
+	 * @param fStringId int
+	 * @param params String[]
+	 */
 	public Snoop(int id, String name, int type, String speaker, String msg, int fStringId, String... params)
 	{
 		_convoID = id;
@@ -31,6 +63,9 @@ public class Snoop extends L2GameServerPacket
 		_params = params;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

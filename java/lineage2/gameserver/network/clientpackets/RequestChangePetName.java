@@ -16,16 +16,29 @@ import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.PetInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestChangePetName extends L2GameClientPacket
 {
+	/**
+	 * Field _name.
+	 */
 	private String _name;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_name = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

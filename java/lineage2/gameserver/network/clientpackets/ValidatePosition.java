@@ -18,13 +18,32 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.boat.Boat;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ValidatePosition extends L2GameClientPacket
 {
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc = new Location();
+	/**
+	 * Field _boatObjectId.
+	 */
 	private int _boatObjectId;
+	/**
+	 * Field _lastClientPosition.
+	 */
 	private Location _lastClientPosition;
+	/**
+	 * Field _lastServerPosition.
+	 */
 	private Location _lastServerPosition;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -35,6 +54,9 @@ public class ValidatePosition extends L2GameClientPacket
 		_boatObjectId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -152,6 +174,10 @@ public class ValidatePosition extends L2GameClientPacket
 		activeChar.setLastServerPosition(activeChar.getLoc());
 	}
 	
+	/**
+	 * Method correctPosition.
+	 * @param activeChar Player
+	 */
 	private void correctPosition(Player activeChar)
 	{
 		if (activeChar.isGM())

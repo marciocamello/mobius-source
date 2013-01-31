@@ -16,12 +16,28 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.ManagePledgePower;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPledgePower extends L2GameClientPacket
 {
+	/**
+	 * Field _rank.
+	 */
 	private int _rank;
+	/**
+	 * Field _action.
+	 */
 	private int _action;
+	/**
+	 * Field _privs.
+	 */
 	private int _privs;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -33,6 +49,9 @@ public class RequestPledgePower extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

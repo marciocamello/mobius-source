@@ -19,14 +19,25 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FreyaQuest extends Fighter
 {
+	/**
+	 * Constructor for FreyaQuest.
+	 * @param actor NpcInstance
+	 */
 	public FreyaQuest(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = Integer.MAX_VALUE;
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -39,12 +50,21 @@ public class FreyaQuest extends Fighter
 		Functions.npcSayCustomMessage(getActor(), "scripts.ai.freya.FreyaQuest.onEvtSpawn");
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method returnHome.
+	 * @param clearAggro boolean
+	 * @param teleport boolean
+	 */
 	@Override
 	protected void returnHome(boolean clearAggro, boolean teleport)
 	{

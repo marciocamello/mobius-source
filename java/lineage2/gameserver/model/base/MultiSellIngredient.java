@@ -15,25 +15,65 @@ package lineage2.gameserver.model.base;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.model.items.ItemAttributes;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MultiSellIngredient implements Cloneable
 {
+	/**
+	 * Field _itemId.
+	 */
 	private int _itemId;
+	/**
+	 * Field _itemCount.
+	 */
 	private long _itemCount;
+	/**
+	 * Field _itemEnchant.
+	 */
 	private int _itemEnchant;
+	/**
+	 * Field _chance.
+	 */
 	int _chance;
+	/**
+	 * Field _itemAttributes.
+	 */
 	private ItemAttributes _itemAttributes;
+	/**
+	 * Field _mantainIngredient.
+	 */
 	private boolean _mantainIngredient;
 	
+	/**
+	 * Constructor for MultiSellIngredient.
+	 * @param itemId int
+	 * @param itemCount long
+	 */
 	public MultiSellIngredient(int itemId, long itemCount)
 	{
 		this(itemId, itemCount, 0, 100);
 	}
 	
+	/**
+	 * Constructor for MultiSellIngredient.
+	 * @param itemId int
+	 * @param itemCount long
+	 * @param chance int
+	 */
 	public MultiSellIngredient(int itemId, long itemCount, int chance)
 	{
 		this(itemId, itemCount, 0, chance);
 	}
 	
+	/**
+	 * Constructor for MultiSellIngredient.
+	 * @param itemId int
+	 * @param itemCount long
+	 * @param enchant int
+	 * @param chance int
+	 */
 	public MultiSellIngredient(int itemId, long itemCount, int enchant, int chance)
 	{
 		_itemId = itemId;
@@ -44,6 +84,10 @@ public class MultiSellIngredient implements Cloneable
 		_itemAttributes = new ItemAttributes();
 	}
 	
+	/**
+	 * Method clone.
+	 * @return MultiSellIngredient
+	 */
 	@Override
 	public MultiSellIngredient clone()
 	{
@@ -53,61 +97,109 @@ public class MultiSellIngredient implements Cloneable
 		return mi;
 	}
 	
+	/**
+	 * Method setChance.
+	 * @param chance int
+	 */
 	public void setChance(int chance)
 	{
 		_chance = chance;
 	}
 	
+	/**
+	 * Method getChance.
+	 * @return int
+	 */
 	public int getChance()
 	{
 		return _chance;
 	}
 	
+	/**
+	 * Method setItemId.
+	 * @param itemId int
+	 */
 	public void setItemId(int itemId)
 	{
 		_itemId = itemId;
 	}
 	
+	/**
+	 * Method getItemId.
+	 * @return int
+	 */
 	public int getItemId()
 	{
 		return _itemId;
 	}
 	
+	/**
+	 * Method setItemCount.
+	 * @param itemCount long
+	 */
 	public void setItemCount(long itemCount)
 	{
 		_itemCount = itemCount;
 	}
 	
+	/**
+	 * Method getItemCount.
+	 * @return long
+	 */
 	public long getItemCount()
 	{
 		return _itemCount;
 	}
 	
+	/**
+	 * Method isStackable.
+	 * @return boolean
+	 */
 	public boolean isStackable()
 	{
 		return (_itemId <= 0) || ItemHolder.getInstance().getTemplate(_itemId).isStackable();
 	}
 	
+	/**
+	 * Method setItemEnchant.
+	 * @param itemEnchant int
+	 */
 	public void setItemEnchant(int itemEnchant)
 	{
 		_itemEnchant = itemEnchant;
 	}
 	
+	/**
+	 * Method getItemEnchant.
+	 * @return int
+	 */
 	public int getItemEnchant()
 	{
 		return _itemEnchant;
 	}
 	
+	/**
+	 * Method getItemAttributes.
+	 * @return ItemAttributes
+	 */
 	public ItemAttributes getItemAttributes()
 	{
 		return _itemAttributes;
 	}
 	
+	/**
+	 * Method setItemAttributes.
+	 * @param attr ItemAttributes
+	 */
 	public void setItemAttributes(ItemAttributes attr)
 	{
 		_itemAttributes = attr;
 	}
 	
+	/**
+	 * Method hashCode.
+	 * @return int
+	 */
 	@Override
 	public int hashCode()
 	{
@@ -123,6 +215,11 @@ public class MultiSellIngredient implements Cloneable
 		return result;
 	}
 	
+	/**
+	 * Method equals.
+	 * @param obj Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object obj)
 	{
@@ -161,11 +258,19 @@ public class MultiSellIngredient implements Cloneable
 		return true;
 	}
 	
+	/**
+	 * Method getMantainIngredient.
+	 * @return boolean
+	 */
 	public boolean getMantainIngredient()
 	{
 		return _mantainIngredient;
 	}
 	
+	/**
+	 * Method setMantainIngredient.
+	 * @param mantainIngredient boolean
+	 */
 	public void setMantainIngredient(boolean mantainIngredient)
 	{
 		_mantainIngredient = mantainIngredient;

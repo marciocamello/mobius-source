@@ -22,6 +22,10 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowDominionRegistry;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MercenaryCaptainInstance extends NpcInstance
 {
 	/**
@@ -29,11 +33,21 @@ public class MercenaryCaptainInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for MercenaryCaptainInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MercenaryCaptainInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -67,6 +81,13 @@ public class MercenaryCaptainInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{

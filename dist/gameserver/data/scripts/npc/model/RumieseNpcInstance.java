@@ -21,17 +21,40 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RumieseNpcInstance extends NpcInstance
 {
+	/**
+	 * Field serialVersionUID. (value is 5984176213940365077)
+	 */
 	private static final long serialVersionUID = 5984176213940365077L;
+	/**
+	 * Field normalIsthinaInstId. (value is 169)
+	 */
 	private static final int normalIsthinaInstId = 169;
+	/**
+	 * Field hardIsthinaInstId. (value is 170)
+	 */
 	private static final int hardIsthinaInstId = 170;
 	
+	/**
+	 * Constructor for RumieseNpcInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public RumieseNpcInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

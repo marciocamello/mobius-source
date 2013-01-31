@@ -12,18 +12,41 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharacterCreateFail extends L2GameServerPacket
 {
+	/**
+	 * Field REASON_TOO_MANY_CHARACTERS.
+	 */
 	public static final L2GameServerPacket REASON_TOO_MANY_CHARACTERS = new CharacterCreateFail(0x01);
+	/**
+	 * Field REASON_NAME_ALREADY_EXISTS.
+	 */
 	public static final L2GameServerPacket REASON_NAME_ALREADY_EXISTS = new CharacterCreateFail(0x02);
+	/**
+	 * Field REASON_16_ENG_CHARS.
+	 */
 	public static final L2GameServerPacket REASON_16_ENG_CHARS = new CharacterCreateFail(0x03);
+	/**
+	 * Field _error.
+	 */
 	private final int _error;
 	
+	/**
+	 * Constructor for CharacterCreateFail.
+	 * @param errorCode int
+	 */
 	private CharacterCreateFail(int errorCode)
 	{
 		_error = errorCode;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

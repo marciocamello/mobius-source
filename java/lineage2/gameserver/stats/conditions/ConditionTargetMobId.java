@@ -14,15 +14,31 @@ package lineage2.gameserver.stats.conditions;
 
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionTargetMobId extends Condition
 {
+	/**
+	 * Field _mobId.
+	 */
 	private final int _mobId;
 	
+	/**
+	 * Constructor for ConditionTargetMobId.
+	 * @param mobId int
+	 */
 	public ConditionTargetMobId(int mobId)
 	{
 		_mobId = mobId;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

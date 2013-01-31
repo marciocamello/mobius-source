@@ -12,17 +12,54 @@
  */
 package lineage2.gameserver.templates.item.support;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum FishGroup
 {
+	/**
+	 * Field EASY_WIDE.
+	 */
 	EASY_WIDE,
+	/**
+	 * Field EASY_SWIFT.
+	 */
 	EASY_SWIFT,
+	/**
+	 * Field EASY_UGLY.
+	 */
 	EASY_UGLY,
+	/**
+	 * Field HARD_WIDE.
+	 */
 	HARD_WIDE,
+	/**
+	 * Field HARD_SWIFT.
+	 */
 	HARD_SWIFT,
+	/**
+	 * Field HARD_UGLY.
+	 */
 	HARD_UGLY,
+	/**
+	 * Field WIDE.
+	 */
 	WIDE,
+	/**
+	 * Field SWIFT.
+	 */
 	SWIFT,
+	/**
+	 * Field UGLY.
+	 */
 	UGLY,
+	/**
+	 * Field BOX.
+	 */
 	BOX,
+	/**
+	 * Field HS.
+	 */
 	HS
 }

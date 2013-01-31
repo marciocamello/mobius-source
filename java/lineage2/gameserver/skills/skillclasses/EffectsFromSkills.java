@@ -18,13 +18,26 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectsFromSkills extends Skill
 {
+	/**
+	 * Constructor for EffectsFromSkills.
+	 * @param set StatsSet
+	 */
 	public EffectsFromSkills(StatsSet set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

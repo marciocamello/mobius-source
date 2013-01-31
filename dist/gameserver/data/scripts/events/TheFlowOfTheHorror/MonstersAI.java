@@ -23,16 +23,34 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MonstersAI extends Fighter
 {
+	/**
+	 * Field _points.
+	 */
 	private List<Location> _points = new ArrayList<>();
+	/**
+	 * Field current_point.
+	 */
 	private int current_point = -1;
 	
+	/**
+	 * Method setPoints.
+	 * @param points List<Location>
+	 */
 	public void setPoints(List<Location> points)
 	{
 		_points = points;
 	}
 	
+	/**
+	 * Constructor for MonstersAI.
+	 * @param actor NpcInstance
+	 */
 	public MonstersAI(NpcInstance actor)
 	{
 		super(actor);
@@ -40,18 +58,30 @@ public class MonstersAI extends Fighter
 		MAX_PURSUE_RANGE = 30000;
 	}
 	
+	/**
+	 * Method getMaxAttackTimeout.
+	 * @return int
+	 */
 	@Override
 	public int getMaxAttackTimeout()
 	{
 		return Integer.MAX_VALUE;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

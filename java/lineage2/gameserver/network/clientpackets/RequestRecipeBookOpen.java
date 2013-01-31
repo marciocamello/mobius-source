@@ -15,10 +15,20 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.RecipeBookItemList;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestRecipeBookOpen extends L2GameClientPacket
 {
+	/**
+	 * Field isDwarvenCraft.
+	 */
 	private boolean isDwarvenCraft;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -28,6 +38,9 @@ public class RequestRecipeBookOpen extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

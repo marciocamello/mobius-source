@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExNavitAdventTimeChange extends L2GameServerPacket
 {
+	/**
+	 * Field _active.
+	 */
 	private final int _active;
+	/**
+	 * Field _time.
+	 */
 	private final int _time;
 	
+	/**
+	 * Constructor for ExNavitAdventTimeChange.
+	 * @param active boolean
+	 * @param time int
+	 */
 	public ExNavitAdventTimeChange(boolean active, int time)
 	{
 		_active = active ? 1 : 0;
 		_time = 14400 - time;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

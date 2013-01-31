@@ -17,16 +17,29 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.network.serverpackets.CastleSiegeDefenderList;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestCastleSiegeDefenderList extends L2GameClientPacket
 {
+	/**
+	 * Field _unitId.
+	 */
 	private int _unitId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_unitId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

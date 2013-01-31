@@ -18,11 +18,24 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestAutoSoulShot extends L2GameClientPacket
 {
+	/**
+	 * Field _itemId.
+	 */
 	private int _itemId;
+	/**
+	 * Field _type.
+	 */
 	private boolean _type;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -30,6 +43,9 @@ public class RequestAutoSoulShot extends L2GameClientPacket
 		_type = readD() == 1;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

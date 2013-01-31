@@ -12,13 +12,23 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExBR_RecentProductList extends L2GameClientPacket
 {
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	public void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{

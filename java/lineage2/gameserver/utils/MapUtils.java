@@ -16,27 +16,54 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.World;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MapUtils
 {
+	/**
+	 * Constructor for MapUtils.
+	 */
 	private MapUtils()
 	{
 	}
 	
+	/**
+	 * Method regionX.
+	 * @param o GameObject
+	 * @return int
+	 */
 	public static int regionX(GameObject o)
 	{
 		return regionX(o.getX());
 	}
 	
+	/**
+	 * Method regionY.
+	 * @param o GameObject
+	 * @return int
+	 */
 	public static int regionY(GameObject o)
 	{
 		return regionY(o.getY());
 	}
 	
+	/**
+	 * Method regionX.
+	 * @param x int
+	 * @return int
+	 */
 	public static int regionX(int x)
 	{
 		return ((x - World.MAP_MIN_X) >> 15) + Config.GEO_X_FIRST;
 	}
 	
+	/**
+	 * Method regionY.
+	 * @param y int
+	 * @return int
+	 */
 	public static int regionY(int y)
 	{
 		return ((y - World.MAP_MIN_Y) >> 15) + Config.GEO_Y_FIRST;

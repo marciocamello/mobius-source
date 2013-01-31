@@ -16,15 +16,31 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionTargetAggro extends Condition
 {
+	/**
+	 * Field _isAggro.
+	 */
 	private final boolean _isAggro;
 	
+	/**
+	 * Constructor for ConditionTargetAggro.
+	 * @param isAggro boolean
+	 */
 	public ConditionTargetAggro(boolean isAggro)
 	{
 		_isAggro = isAggro;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

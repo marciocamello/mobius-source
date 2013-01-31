@@ -18,10 +18,22 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectSummonSkill extends Effect
 {
+	/**
+	 * Field _skillToCastLevel. Field _skillToCast.
+	 */
 	private final int _skillToCast, _skillToCastLevel;
 	
+	/**
+	 * Constructor for EffectSummonSkill.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectSummonSkill(Env env, EffectTemplate template)
 	{
 		super(env, template);
@@ -29,6 +41,10 @@ public class EffectSummonSkill extends Effect
 		_skillToCastLevel = env.skill.getSkillToCastLevel();
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
@@ -45,6 +61,9 @@ public class EffectSummonSkill extends Effect
 		return super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -53,6 +72,9 @@ public class EffectSummonSkill extends Effect
 		player.startSkillCastingTask(_skillToCast, _skillToCastLevel);
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -61,6 +83,10 @@ public class EffectSummonSkill extends Effect
 		player.stopSkillCastingTask();
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

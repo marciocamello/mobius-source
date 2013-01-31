@@ -21,23 +21,43 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.RaceManagerInstance;
 import lineage2.gameserver.network.serverpackets.MonRaceInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RaceManager extends DefaultAI
 {
+	/**
+	 * Field thinking.
+	 */
 	private boolean thinking = false;
+	/**
+	 * Field _knownPlayers.
+	 */
 	private List<Player> _knownPlayers = new ArrayList<>();
 	
+	/**
+	 * Constructor for RaceManager.
+	 * @param actor NpcInstance
+	 */
 	public RaceManager(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ATTACK_DELAY = 5000;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{
 		onEvtThink();
 	}
 	
+	/**
+	 * Method onEvtThink.
+	 */
 	@Override
 	protected void onEvtThink()
 	{
@@ -87,6 +107,10 @@ public class RaceManager extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return RaceManagerInstance
+	 */
 	@Override
 	public RaceManagerInstance getActor()
 	{

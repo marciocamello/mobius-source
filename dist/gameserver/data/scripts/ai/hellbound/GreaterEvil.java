@@ -16,8 +16,15 @@ import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GreaterEvil extends Fighter
 {
+	/**
+	 * Field path.
+	 */
 	static final Location[] path =
 	{
 		new Location(28448, 243816, -3696),
@@ -26,20 +33,35 @@ public class GreaterEvil extends Fighter
 		new Location(28296, 247912, -3248),
 		new Location(25880, 246184, -3176)
 	};
+	/**
+	 * Field current_point.
+	 */
 	private int current_point = 0;
 	
+	/**
+	 * Constructor for GreaterEvil.
+	 * @param actor NpcInstance
+	 */
 	public GreaterEvil(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = 6000;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -65,6 +87,9 @@ public class GreaterEvil extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
@@ -72,6 +97,10 @@ public class GreaterEvil extends Fighter
 		super.onEvtArrived();
 	}
 	
+	/**
+	 * Method maybeMoveToHome.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean maybeMoveToHome()
 	{

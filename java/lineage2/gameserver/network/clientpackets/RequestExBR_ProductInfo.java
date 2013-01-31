@@ -15,16 +15,29 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExBR_ProductInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExBR_ProductInfo extends L2GameClientPacket
 {
+	/**
+	 * Field _productId.
+	 */
 	private int _productId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_productId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

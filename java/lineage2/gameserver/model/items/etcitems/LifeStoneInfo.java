@@ -12,37 +12,74 @@
  */
 package lineage2.gameserver.model.items.etcitems;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LifeStoneInfo
 {
+	/**
+	 * Field itemId.
+	 */
 	private int itemId;
+	/**
+	 * Field level.
+	 */
 	private int level;
+	/**
+	 * Field grade.
+	 */
 	private LifeStoneGrade grade;
 	
+	/**
+	 * Method getItemId.
+	 * @return int
+	 */
 	public int getItemId()
 	{
 		return itemId;
 	}
 	
+	/**
+	 * Method setItemId.
+	 * @param itemId int
+	 */
 	public void setItemId(int itemId)
 	{
 		this.itemId = itemId;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		return level;
 	}
 	
+	/**
+	 * Method setLevel.
+	 * @param level int
+	 */
 	public void setLevel(int level)
 	{
 		this.level = level;
 	}
 	
+	/**
+	 * Method getGrade.
+	 * @return LifeStoneGrade
+	 */
 	public LifeStoneGrade getGrade()
 	{
 		return grade;
 	}
 	
+	/**
+	 * Method setGrade.
+	 * @param grade LifeStoneGrade
+	 */
 	public void setGrade(LifeStoneGrade grade)
 	{
 		this.grade = grade;

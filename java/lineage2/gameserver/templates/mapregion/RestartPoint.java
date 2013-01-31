@@ -16,14 +16,41 @@ import java.util.List;
 
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RestartPoint
 {
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _bbs.
+	 */
 	private final int _bbs;
+	/**
+	 * Field _msgId.
+	 */
 	private final int _msgId;
+	/**
+	 * Field _restartPoints.
+	 */
 	private final List<Location> _restartPoints;
+	/**
+	 * Field _PKrestartPoints.
+	 */
 	private final List<Location> _PKrestartPoints;
 	
+	/**
+	 * Constructor for RestartPoint.
+	 * @param name String
+	 * @param bbs int
+	 * @param msgId int
+	 * @param restartPoints List<Location>
+	 * @param PKrestartPoints List<Location>
+	 */
 	public RestartPoint(String name, int bbs, int msgId, List<Location> restartPoints, List<Location> PKrestartPoints)
 	{
 		_name = name;
@@ -33,26 +60,46 @@ public class RestartPoint
 		_PKrestartPoints = PKrestartPoints;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method getBbs.
+	 * @return int
+	 */
 	public int getBbs()
 	{
 		return _bbs;
 	}
 	
+	/**
+	 * Method getMsgId.
+	 * @return int
+	 */
 	public int getMsgId()
 	{
 		return _msgId;
 	}
 	
+	/**
+	 * Method getRestartPoints.
+	 * @return List<Location>
+	 */
 	public List<Location> getRestartPoints()
 	{
 		return _restartPoints;
 	}
 	
+	/**
+	 * Method getPKrestartPoints.
+	 * @return List<Location>
+	 */
 	public List<Location> getPKrestartPoints()
 	{
 		return _PKrestartPoints;

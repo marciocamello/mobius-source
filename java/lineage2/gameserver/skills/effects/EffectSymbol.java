@@ -34,16 +34,35 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectSymbol extends Effect
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(EffectSymbol.class);
+	/**
+	 * Field _symbol.
+	 */
 	private NpcInstance _symbol = null;
 	
+	/**
+	 * Constructor for EffectSymbol.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectSymbol(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
@@ -61,6 +80,9 @@ public final class EffectSymbol extends Effect
 		return super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -87,6 +109,9 @@ public final class EffectSymbol extends Effect
 		_symbol.spawnMe(loc);
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -98,6 +123,10 @@ public final class EffectSymbol extends Effect
 		_symbol = null;
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

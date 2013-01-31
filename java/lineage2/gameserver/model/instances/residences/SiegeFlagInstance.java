@@ -23,39 +23,71 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SiegeFlagInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _owner.
+	 */
 	private SiegeClanObject _owner;
+	/**
+	 * Field _lastAnnouncedAttackedTime.
+	 */
 	private long _lastAnnouncedAttackedTime = 0;
 	
+	/**
+	 * Constructor for SiegeFlagInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SiegeFlagInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		setHasChatWindow(false);
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	@Override
 	public String getName()
 	{
 		return _owner.getClan().getName();
 	}
 	
+	/**
+	 * Method getClan.
+	 * @return Clan
+	 */
 	@Override
 	public Clan getClan()
 	{
 		return _owner.getClan();
 	}
 	
+	/**
+	 * Method getTitle.
+	 * @return String
+	 */
 	@Override
 	public String getTitle()
 	{
 		return StringUtils.EMPTY;
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
@@ -68,12 +100,21 @@ public class SiegeFlagInstance extends NpcInstance
 		return (clan == null) || (_owner.getClan() != clan);
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature attacker)
 	{
 		return true;
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -81,6 +122,15 @@ public class SiegeFlagInstance extends NpcInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method onReduceCurrentHp.
+	 * @param damage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 */
 	@Override
 	protected void onReduceCurrentHp(final double damage, final Creature attacker, Skill skill, final boolean awake, final boolean standUp, boolean directHp)
 	{
@@ -92,48 +142,80 @@ public class SiegeFlagInstance extends NpcInstance
 		super.onReduceCurrentHp(damage, attacker, skill, awake, standUp, directHp);
 	}
 	
+	/**
+	 * Method hasRandomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	public boolean hasRandomAnimation()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{
 		return _isInvul;
 	}
 	
+	/**
+	 * Method isFearImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isFearImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isParalyzeImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParalyzeImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isLethalImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isLethalImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isHealBlocked.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isHealBlocked()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isEffectImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isEffectImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method setClan.
+	 * @param owner SiegeClanObject
+	 */
 	public void setClan(SiegeClanObject owner)
 	{
 		_owner = owner;

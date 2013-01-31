@@ -14,9 +14,20 @@ package lineage2.gameserver.handler.chat;
 
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IChatHandler
 {
+	/**
+	 * Method say.
+	 */
 	void say();
 	
+	/**
+	 * Method getType.
+	 * @return ChatType
+	 */
 	ChatType getType();
 }

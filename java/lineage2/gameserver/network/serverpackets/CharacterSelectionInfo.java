@@ -32,13 +32,34 @@ import lineage2.gameserver.utils.AutoBan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharacterSelectionInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharacterSelectionInfo.class);
+	/**
+	 * Field _loginName.
+	 */
 	private final String _loginName;
+	/**
+	 * Field _sessionId.
+	 */
 	private final int _sessionId;
+	/**
+	 * Field charSelectionInfo.
+	 */
 	private final CharSelectionInfo charSelectionInfo;
 	
+	/**
+	 * Constructor for CharacterSelectionInfo.
+	 * @param loginName String
+	 * @param sessionId int
+	 */
 	public CharacterSelectionInfo(String loginName, int sessionId)
 	{
 		_sessionId = sessionId;
@@ -46,11 +67,18 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 		charSelectionInfo = loadCharacterSelectInfo(loginName);
 	}
 	
+	/**
+	 * Method getCharInfo.
+	 * @return CharSelectionInfo
+	 */
 	public CharSelectionInfo getCharInfo()
 	{
 		return charSelectionInfo;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -151,6 +179,11 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method loadCharacterSelectInfo.
+	 * @param loginName String
+	 * @return CharSelectionInfo
+	 */
 	public static CharSelectionInfo loadCharacterSelectInfo(String loginName)
 	{
 		CharSelectionInfo charSelectionInfo = new CharSelectionInfo();
@@ -188,6 +221,11 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 		return charSelectionInfo;
 	}
 	
+	/**
+	 * Method restoreBaseClassId.
+	 * @param objId int
+	 * @return int[]
+	 */
 	private static int[] restoreBaseClassId(int objId)
 	{
 		int[] classId = new int[2];
@@ -217,6 +255,11 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 		return classId;
 	}
 	
+	/**
+	 * Method restoreChar.
+	 * @param chardata ResultSet
+	 * @return CharSelectInfoPackage
+	 */
 	private static CharSelectInfoPackage restoreChar(ResultSet chardata)
 	{
 		CharSelectInfoPackage charInfopackage = null;

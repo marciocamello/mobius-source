@@ -39,13 +39,33 @@ import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SummonServitor extends Skill
 {
+	/**
+	 * Field _summonType.
+	 */
 	private final SummonType _summonType;
+	/**
+	 * Field _expPenalty.
+	 */
 	private final double _expPenalty;
+	/**
+	 * Field _lifeTime.
+	 */
 	private final int _lifeTime;
+	/**
+	 * Field _summonPoint.
+	 */
 	private final int _summonPoint;
 	
+	/**
+	 * Constructor for SummonServitor.
+	 * @param set StatsSet
+	 */
 	public SummonServitor(StatsSet set)
 	{
 		super(set);
@@ -55,6 +75,15 @@ public class SummonServitor extends Skill
 		_summonPoint = set.getInteger("summonPoint", 0);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -103,6 +132,11 @@ public class SummonServitor extends Skill
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param caster Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature caster, List<Creature> targets)
 	{
@@ -217,21 +251,37 @@ public class SummonServitor extends Skill
 		}
 	}
 	
+	/**
+	 * Method getLifeTime.
+	 * @return int
+	 */
 	public final int getLifeTime()
 	{
 		return _lifeTime;
 	}
 	
+	/**
+	 * Method getSummonPoint.
+	 * @return int
+	 */
 	public final int getSummonPoint()
 	{
 		return _summonPoint;
 	}
 	
+	/**
+	 * Method getSummonType.
+	 * @return SummonType
+	 */
 	public final SummonType getSummonType()
 	{
 		return _summonType;
 	}
 	
+	/**
+	 * Method isOffensive.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isOffensive()
 	{

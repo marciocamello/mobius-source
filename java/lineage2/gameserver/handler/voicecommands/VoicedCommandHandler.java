@@ -28,17 +28,34 @@ import lineage2.gameserver.handler.voicecommands.impl.ServerInfo;
 import lineage2.gameserver.handler.voicecommands.impl.Wedding;
 import lineage2.gameserver.handler.voicecommands.impl.WhoAmI;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class VoicedCommandHandler extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final VoicedCommandHandler _instance = new VoicedCommandHandler();
 	
+	/**
+	 * Method getInstance.
+	 * @return VoicedCommandHandler
+	 */
 	public static VoicedCommandHandler getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _datatable.
+	 */
 	private final Map<String, IVoicedCommandHandler> _datatable = new HashMap<>();
 	
+	/**
+	 * Constructor for VoicedCommandHandler.
+	 */
 	private VoicedCommandHandler()
 	{
 		registerVoicedCommandHandler(new Help());
@@ -54,6 +71,10 @@ public class VoicedCommandHandler extends AbstractHolder
 		registerVoicedCommandHandler(new Password());
 	}
 	
+	/**
+	 * Method registerVoicedCommandHandler.
+	 * @param handler IVoicedCommandHandler
+	 */
 	public void registerVoicedCommandHandler(IVoicedCommandHandler handler)
 	{
 		String[] ids = handler.getVoicedCommandList();
@@ -63,6 +84,11 @@ public class VoicedCommandHandler extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method getVoicedCommandHandler.
+	 * @param voicedCommand String
+	 * @return IVoicedCommandHandler
+	 */
 	public IVoicedCommandHandler getVoicedCommandHandler(String voicedCommand)
 	{
 		String command = voicedCommand;
@@ -73,12 +99,19 @@ public class VoicedCommandHandler extends AbstractHolder
 		return _datatable.get(command);
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _datatable.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

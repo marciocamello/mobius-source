@@ -55,15 +55,28 @@ import org.napile.primitive.Containers;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.TreeIntSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 {
+	/**
+	 * @author Mobius
+	 */
 	private class NextSiegeDateSet extends RunnableImpl
 	{
+		/**
+		 * Constructor for NextSiegeDateSet.
+		 */
 		public NextSiegeDateSet()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -71,24 +84,67 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Field MAX_SIEGE_CLANS. (value is 20)
+	 */
 	public static final int MAX_SIEGE_CLANS = 20;
+	/**
+	 * Field DAY_IN_MILISECONDS. (value is 86400000)
+	 */
 	public static final long DAY_IN_MILISECONDS = 86400000L;
+	/**
+	 * Field DEFENDERS_WAITING. (value is ""defenders_waiting"")
+	 */
 	public static final String DEFENDERS_WAITING = "defenders_waiting";
+	/**
+	 * Field DEFENDERS_REFUSED. (value is ""defenders_refused"")
+	 */
 	public static final String DEFENDERS_REFUSED = "defenders_refused";
+	/**
+	 * Field CONTROL_TOWERS. (value is ""control_towers"")
+	 */
 	public static final String CONTROL_TOWERS = "control_towers";
+	/**
+	 * Field FLAME_TOWERS. (value is ""flame_towers"")
+	 */
 	public static final String FLAME_TOWERS = "flame_towers";
+	/**
+	 * Field BOUGHT_ZONES. (value is ""bought_zones"")
+	 */
 	public static final String BOUGHT_ZONES = "bought_zones";
+	/**
+	 * Field GUARDS. (value is ""guards"")
+	 */
 	public static final String GUARDS = "guards";
+	/**
+	 * Field HIRED_GUARDS. (value is ""hired_guards"")
+	 */
 	public static final String HIRED_GUARDS = "hired_guards";
+	/**
+	 * Field _nextSiegeTimes.
+	 */
 	private IntSet _nextSiegeTimes = Containers.EMPTY_INT_SET;
+	/**
+	 * Field _nextSiegeDateSetTask.
+	 */
 	private Future<?> _nextSiegeDateSetTask = null;
+	/**
+	 * Field _firstStep.
+	 */
 	private boolean _firstStep = false;
 	
+	/**
+	 * Constructor for CastleSiegeEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public CastleSiegeEvent(MultiValueSet<String> set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method initEvent.
+	 */
 	@Override
 	public void initEvent()
 	{
@@ -102,6 +158,10 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method processStep.
+	 * @param newOwnerClan Clan
+	 */
 	@Override
 	public void processStep(Clan newOwnerClan)
 	{
@@ -182,6 +242,9 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		despawnSiegeSummons();
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -230,6 +293,10 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method stopEvent.
+	 * @param step boolean
+	 */
 	@Override
 	public void stopEvent(boolean step)
 	{
@@ -300,6 +367,10 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		super.stopEvent(step);
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onInit boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{
@@ -345,6 +416,9 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method loadSiegeClans.
+	 */
 	@Override
 	public void loadSiegeClans()
 	{
@@ -353,6 +427,10 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		addObjects(DEFENDERS_REFUSED, SiegeClanDAO.getInstance().load(getResidence(), DEFENDERS_REFUSED));
 	}
 	
+	/**
+	 * Method setRegistrationOver.
+	 * @param b boolean
+	 */
 	@Override
 	public void setRegistrationOver(boolean b)
 	{
@@ -363,6 +441,10 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		super.setRegistrationOver(b);
 	}
 	
+	/**
+	 * Method announce.
+	 * @param val int
+	 */
 	@Override
 	public void announce(int val)
 	{
@@ -384,6 +466,9 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		broadcastTo(msg, ATTACKERS, DEFENDERS);
 	}
 	
+	/**
+	 * Method initControlTowers.
+	 */
 	private void initControlTowers()
 	{
 		List<SpawnExObject> objects = getObjects(GUARDS);
@@ -414,11 +499,18 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method damageZoneAction.
+	 * @param active boolean
+	 */
 	private void damageZoneAction(boolean active)
 	{
 		zoneAction(BOUGHT_ZONES, active);
 	}
 	
+	/**
+	 * Method generateNextSiegeDates.
+	 */
 	public void generateNextSiegeDates()
 	{
 		if (getResidence().getSiegeDate().getTimeInMillis() != 0)
@@ -442,6 +534,10 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		_nextSiegeDateSetTask = ThreadPoolManager.getInstance().schedule(new NextSiegeDateSet(), diff);
 	}
 	
+	/**
+	 * Method setNextSiegeTime.
+	 * @param id int
+	 */
 	public void setNextSiegeTime(int id)
 	{
 		if (!_nextSiegeTimes.contains(id) || (_nextSiegeDateSetTask == null))
@@ -454,6 +550,9 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		setNextSiegeTime(id * 1000L);
 	}
 	
+	/**
+	 * Method setNextSiegeTime.
+	 */
 	void setNextSiegeTime()
 	{
 		final Calendar calendar = (Calendar) Config.CASTLE_VALIDATION_DATE.clone();
@@ -467,6 +566,10 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		setNextSiegeTime(calendar.getTimeInMillis());
 	}
 	
+	/**
+	 * Method setNextSiegeTime.
+	 * @param g long
+	 */
 	private void setNextSiegeTime(long g)
 	{
 		broadcastToWorld(new SystemMessage2(SystemMsg.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME).addResidenceName(getResidence()));
@@ -477,17 +580,32 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		registerActions();
 	}
 	
+	/**
+	 * Method isAttackersInAlly.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackersInAlly()
 	{
 		return !_firstStep;
 	}
 	
+	/**
+	 * Method getNextSiegeTimes.
+	 * @return int[]
+	 */
 	public int[] getNextSiegeTimes()
 	{
 		return _nextSiegeTimes.toArray();
 	}
 	
+	/**
+	 * Method canRessurect.
+	 * @param resurrectPlayer Player
+	 * @param target Creature
+	 * @param force boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean canRessurect(Player resurrectPlayer, Creature target, boolean force)
 	{
@@ -517,7 +635,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		{
 			targetSiegeClan = siegeEvent.getSiegeClan(DEFENDERS, targetPlayer.getClan());
 		}
-		if (targetSiegeClan.getType() == ATTACKERS)
+		if (targetSiegeClan.getType().equals(ATTACKERS))
 		{
 			if (targetSiegeClan.getFlag() == null)
 			{

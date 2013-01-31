@@ -15,12 +15,29 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.entity.boat.Boat;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class VehicleDeparture extends L2GameServerPacket
 {
+	/**
+	 * Field _rotationSpeed. Field _moveSpeed.
+	 */
 	private final int _moveSpeed, _rotationSpeed;
+	/**
+	 * Field _boatObjId.
+	 */
 	private final int _boatObjId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for VehicleDeparture.
+	 * @param boat Boat
+	 */
 	public VehicleDeparture(Boat boat)
 	{
 		_boatObjId = boat.getObjectId();
@@ -29,6 +46,9 @@ public class VehicleDeparture extends L2GameServerPacket
 		_loc = boat.getDestination();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

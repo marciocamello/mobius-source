@@ -15,15 +15,31 @@ package lineage2.gameserver.stats.conditions;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionPlayerMaxPK extends Condition
 {
+	/**
+	 * Field _pk.
+	 */
 	private final int _pk;
 	
+	/**
+	 * Constructor for ConditionPlayerMaxPK.
+	 * @param pk int
+	 */
 	public ConditionPlayerMaxPK(int pk)
 	{
 		_pk = pk;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

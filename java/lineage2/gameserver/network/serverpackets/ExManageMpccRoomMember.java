@@ -16,20 +16,48 @@ import lineage2.gameserver.instancemanager.MatchingRoomManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.matching.MatchingRoom;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExManageMpccRoomMember extends L2GameServerPacket
 {
+	/**
+	 * Field ADD_MEMBER.
+	 */
 	public static int ADD_MEMBER = 0;
+	/**
+	 * Field UPDATE_MEMBER.
+	 */
 	public static int UPDATE_MEMBER = 1;
+	/**
+	 * Field REMOVE_MEMBER.
+	 */
 	public static int REMOVE_MEMBER = 2;
+	/**
+	 * Field _type.
+	 */
 	private final int _type;
+	/**
+	 * Field _memberInfo.
+	 */
 	private final MpccRoomMemberInfo _memberInfo;
 	
+	/**
+	 * Constructor for ExManageMpccRoomMember.
+	 * @param type int
+	 * @param room MatchingRoom
+	 * @param target Player
+	 */
 	public ExManageMpccRoomMember(int type, MatchingRoom room, Player target)
 	{
 		_type = type;
 		_memberInfo = (new MpccRoomMemberInfo(target, room.getMemberType(target)));
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -43,15 +71,41 @@ public class ExManageMpccRoomMember extends L2GameServerPacket
 		writeD(_memberInfo.memberType);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class MpccRoomMemberInfo
 	{
+		/**
+		 * Field objectId.
+		 */
 		public final int objectId;
+		/**
+		 * Field classId.
+		 */
 		public final int classId;
+		/**
+		 * Field level.
+		 */
 		public final int level;
+		/**
+		 * Field location.
+		 */
 		public final int location;
+		/**
+		 * Field memberType.
+		 */
 		public final int memberType;
+		/**
+		 * Field name.
+		 */
 		public final String name;
 		
+		/**
+		 * Constructor for MpccRoomMemberInfo.
+		 * @param member Player
+		 * @param type int
+		 */
 		public MpccRoomMemberInfo(Player member, int type)
 		{
 			objectId = member.getObjectId();

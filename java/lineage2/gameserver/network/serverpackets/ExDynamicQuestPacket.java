@@ -12,19 +12,43 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExDynamicQuestPacket extends L2GameServerPacket
 {
+	/**
+	 * @author Mobius
+	 */
 	public static enum State
 	{
+		/**
+		 * Field NOT_CONFIRMED.
+		 */
 		NOT_CONFIRMED,
+		/**
+		 * Field NONE.
+		 */
 		NONE,
+		/**
+		 * Field CONFIRMED_IN_PROGRESS.
+		 */
 		CONFIRMED_IN_PROGRESS;
 	}
 	
+	/**
+	 * Constructor for ExDynamicQuestPacket.
+	 * @param campaignId int
+	 * @param step int
+	 */
 	public ExDynamicQuestPacket(int campaignId, int step)
 	{
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -100,16 +100,32 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EnterWorld extends L2GameClientPacket
 {
+	/**
+	 * Field _lock.
+	 */
 	private static final Object _lock = new Object();
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(EnterWorld.class);
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -451,6 +467,10 @@ public class EnterWorld extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method notifyClanMembers.
+	 * @param activeChar Player
+	 */
 	private static void notifyClanMembers(Player activeChar)
 	{
 		Clan clan = activeChar.getClan();
@@ -505,6 +525,10 @@ public class EnterWorld extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method loadTutorial.
+	 * @param player Player
+	 */
 	private void loadTutorial(Player player)
 	{
 		Quest q = QuestManager.getQuest(255);
@@ -514,6 +538,10 @@ public class EnterWorld extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method checkNewMail.
+	 * @param activeChar Player
+	 */
 	private void checkNewMail(Player activeChar)
 	{
 		for (Mail mail : MailDAO.getInstance().getReceivedMailByOwnerId(activeChar.getObjectId()))

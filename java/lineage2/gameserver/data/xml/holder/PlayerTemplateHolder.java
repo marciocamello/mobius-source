@@ -21,21 +21,45 @@ import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.base.Sex;
 import lineage2.gameserver.templates.player.PlayerTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class PlayerTemplateHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final PlayerTemplateHolder _instance = new PlayerTemplateHolder();
+	/**
+	 * Field _templates.
+	 */
 	private static final TIntObjectHashMap<TIntObjectHashMap<TIntObjectHashMap<PlayerTemplate>>> _templates;
 	static
 	{
 		_templates = new TIntObjectHashMap<>();
 	}
+	/**
+	 * Field _templates_count.
+	 */
 	private static int _templates_count = 0;
 	
+	/**
+	 * Method getInstance.
+	 * @return PlayerTemplateHolder
+	 */
 	public static PlayerTemplateHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addPlayerTemplate.
+	 * @param race Race
+	 * @param type ClassType
+	 * @param sex Sex
+	 * @param template PlayerTemplate
+	 */
 	public void addPlayerTemplate(Race race, ClassType type, Sex sex, PlayerTemplate template)
 	{
 		if (!_templates.containsKey(race.ordinal()))
@@ -50,6 +74,13 @@ public final class PlayerTemplateHolder extends AbstractHolder
 		_templates_count++;
 	}
 	
+	/**
+	 * Method getPlayerTemplate.
+	 * @param race Race
+	 * @param classId ClassId
+	 * @param sex Sex
+	 * @return PlayerTemplate
+	 */
 	public PlayerTemplate getPlayerTemplate(Race race, ClassId classId, Sex sex)
 	{
 		ClassType type = classId.getType();
@@ -67,12 +98,19 @@ public final class PlayerTemplateHolder extends AbstractHolder
 		return null;
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _templates_count;
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

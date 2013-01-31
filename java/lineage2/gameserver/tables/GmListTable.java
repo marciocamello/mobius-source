@@ -21,8 +21,16 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GmListTable
 {
+	/**
+	 * Method getAllGMs.
+	 * @return List<Player>
+	 */
 	public static List<Player> getAllGMs()
 	{
 		List<Player> gmList = new ArrayList<>();
@@ -36,6 +44,10 @@ public class GmListTable
 		return gmList;
 	}
 	
+	/**
+	 * Method getAllVisibleGMs.
+	 * @return List<Player>
+	 */
 	public static List<Player> getAllVisibleGMs()
 	{
 		List<Player> gmList = new ArrayList<>();
@@ -49,6 +61,10 @@ public class GmListTable
 		return gmList;
 	}
 	
+	/**
+	 * Method sendListToPlayer.
+	 * @param player Player
+	 */
 	public static void sendListToPlayer(Player player)
 	{
 		List<Player> gmList = getAllVisibleGMs();
@@ -64,6 +80,10 @@ public class GmListTable
 		}
 	}
 	
+	/**
+	 * Method broadcastToGMs.
+	 * @param packet L2GameServerPacket
+	 */
 	public static void broadcastToGMs(L2GameServerPacket packet)
 	{
 		for (Player gm : getAllGMs())
@@ -72,6 +92,10 @@ public class GmListTable
 		}
 	}
 	
+	/**
+	 * Method broadcastMessageToGMs.
+	 * @param message String
+	 */
 	public static void broadcastMessageToGMs(String message)
 	{
 		for (Player gm : getAllGMs())

@@ -37,26 +37,84 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncSet;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HeartInfinityAttack extends Reflection
 {
+	/**
+	 * Field AliveTumor. (value is 18708)
+	 */
 	private static final int AliveTumor = 18708;
+	/**
+	 * Field DeadTumor. (value is 32535)
+	 */
 	private static final int DeadTumor = 32535;
+	/**
+	 * Field Ekimus. (value is 29150)
+	 */
 	private static final int Ekimus = 29150;
+	/**
+	 * Field Hound. (value is 29151)
+	 */
 	private static final int Hound = 29151;
+	/**
+	 * Field RegenerationCoffin. (value is 18710)
+	 */
 	private static final int RegenerationCoffin = 18710;
+	/**
+	 * Field tumorRespawnTime.
+	 */
 	long tumorRespawnTime;
+	/**
+	 * Field ekimus.
+	 */
 	private NpcInstance ekimus;
+	/**
+	 * Field hounds.
+	 */
 	private final List<NpcInstance> hounds = new ArrayList<>(2);
+	/**
+	 * Field houndBlocked.
+	 */
 	private boolean houndBlocked = false;
+	/**
+	 * Field conquestBegun.
+	 */
 	private boolean conquestBegun = false;
+	/**
+	 * Field conquestEnded.
+	 */
 	boolean conquestEnded = false;
+	/**
+	 * Field deathListener.
+	 */
 	private final DeathListener deathListener = new DeathListener();
+	/**
+	 * Field invoker.
+	 */
 	private Player invoker;
+	/**
+	 * Field timerTask.
+	 */
 	private ScheduledFuture<?> timerTask;
+	/**
+	 * Field startTime.
+	 */
 	long startTime;
+	/**
+	 * Field ekimusIdleTask.
+	 */
 	private ScheduledFuture<?> ekimusIdleTask;
+	/**
+	 * Field notifiedEkimusIdle.
+	 */
 	private boolean notifiedEkimusIdle = false;
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{
@@ -65,6 +123,10 @@ public class HeartInfinityAttack extends Reflection
 		tumorRespawnTime = 150 * 1000L;
 	}
 	
+	/**
+	 * Method notifyEchmusEntrance.
+	 * @param leader Player
+	 */
 	public void notifyEchmusEntrance(Player leader)
 	{
 		if (conquestBegun)
@@ -98,6 +160,9 @@ public class HeartInfinityAttack extends Reflection
 		}, 20000L);
 	}
 	
+	/**
+	 * Method conquestBegins.
+	 */
 	void conquestBegins()
 	{
 		despawnByGroup("soi_hoi_attack_init");
@@ -144,6 +209,9 @@ public class HeartInfinityAttack extends Reflection
 		timerTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new TimerTask(), 298 * 1000L, 5 * 60 * 1000L);
 	}
 	
+	/**
+	 * Method invokeDeathListener.
+	 */
 	void invokeDeathListener()
 	{
 		for (NpcInstance npc : getNpcs())
@@ -152,13 +220,25 @@ public class HeartInfinityAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DeathListener implements OnDeathListener
 	{
+		/**
+		 * Constructor for DeathListener.
+		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param self Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -183,15 +263,28 @@ public class HeartInfinityAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class TumorRevival extends RunnableImpl
 	{
+		/**
+		 * Field _deadTumor.
+		 */
 		NpcInstance _deadTumor;
 		
+		/**
+		 * Constructor for TumorRevival.
+		 * @param deadTumor NpcInstance
+		 */
 		public TumorRevival(NpcInstance deadTumor)
 		{
 			_deadTumor = deadTumor;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -207,15 +300,28 @@ public class HeartInfinityAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class RegenerationCoffinSpawn extends RunnableImpl
 	{
+		/**
+		 * Field _deadTumor.
+		 */
 		NpcInstance _deadTumor;
 		
+		/**
+		 * Constructor for RegenerationCoffinSpawn.
+		 * @param deadTumor NpcInstance
+		 */
 		public RegenerationCoffinSpawn(NpcInstance deadTumor)
 		{
 			_deadTumor = deadTumor;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -230,13 +336,22 @@ public class HeartInfinityAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class TimerTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for TimerTask.
+		 */
 		public TimerTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -259,6 +374,9 @@ public class HeartInfinityAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * Method notifyTumorDeath.
+	 */
 	void notifyTumorDeath()
 	{
 		if (getAliveTumorCount() < 1)
@@ -283,6 +401,9 @@ public class HeartInfinityAttack extends Reflection
 		handleEkimusStats();
 	}
 	
+	/**
+	 * Method notifyTumorRevival.
+	 */
 	void notifyTumorRevival()
 	{
 		if ((getAliveTumorCount() == 1) && houndBlocked)
@@ -307,16 +428,26 @@ public class HeartInfinityAttack extends Reflection
 		handleEkimusStats();
 	}
 	
+	/**
+	 * Method getAliveTumorCount.
+	 * @return int
+	 */
 	private int getAliveTumorCount()
 	{
 		return getAllByNpcId(AliveTumor, true).size();
 	}
 	
+	/**
+	 * Method notifyCoffinDeath.
+	 */
 	public void notifyCoffinDeath()
 	{
 		tumorRespawnTime += 8 * 1000L;
 	}
 	
+	/**
+	 * Method handleEkimusStats.
+	 */
 	private void handleEkimusStats()
 	{
 		double[] a = getStatMultiplier();
@@ -328,6 +459,10 @@ public class HeartInfinityAttack extends Reflection
 		ekimus.addStatFunc(new FuncSet(Stats.REGENERATE_HP_RATE, 0x30, this, ekimus.getTemplate().getBaseHpReg() * a[2]));
 	}
 	
+	/**
+	 * Method getStatMultiplier.
+	 * @return double[]
+	 */
 	private double[] getStatMultiplier()
 	{
 		double[] a = new double[3];
@@ -372,6 +507,10 @@ public class HeartInfinityAttack extends Reflection
 		return a;
 	}
 	
+	/**
+	 * Method conquestConclusion.
+	 * @param win boolean
+	 */
 	void conquestConclusion(boolean win)
 	{
 		if (timerTask != null)
@@ -415,6 +554,9 @@ public class HeartInfinityAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * Method notifyEkimusAttack.
+	 */
 	public void notifyEkimusAttack()
 	{
 		if (ekimusIdleTask != null)
@@ -425,6 +567,9 @@ public class HeartInfinityAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * Method notifyEkimusIdle.
+	 */
 	public void notifyEkimusIdle()
 	{
 		if (notifiedEkimusIdle)
@@ -446,6 +591,9 @@ public class HeartInfinityAttack extends Reflection
 		}, 180000L);
 	}
 	
+	/**
+	 * Method notifyEkimusRoomEntrance.
+	 */
 	public void notifyEkimusRoomEntrance()
 	{
 		for (Playable playable : getZone("[soi_hoi_attack_echmusroom]").getInsidePlayables())
@@ -465,6 +613,9 @@ public class HeartInfinityAttack extends Reflection
 		}, 10000L);
 	}
 	
+	/**
+	 * Method onCollapse.
+	 */
 	@Override
 	protected void onCollapse()
 	{

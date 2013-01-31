@@ -19,22 +19,48 @@ import lineage2.gameserver.model.entity.events.objects.SpawnExObject;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ControlUnitInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field ITEM_ID. (value is 10014)
+	 */
 	private static final int ITEM_ID = 10014;
+	/**
+	 * Field COND_CAN_OPEN. (value is 0)
+	 */
 	private static final int COND_CAN_OPEN = 0;
+	/**
+	 * Field COND_NO_ITEM. (value is 1)
+	 */
 	private static final int COND_NO_ITEM = 1;
+	/**
+	 * Field COND_POWER. (value is 2)
+	 */
 	private static final int COND_POWER = 2;
 	
+	/**
+	 * Constructor for ControlUnitInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ControlUnitInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -58,6 +84,12 @@ public class ControlUnitInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -76,6 +108,11 @@ public class ControlUnitInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getCond.
+	 * @param player Player
+	 * @return int
+	 */
 	private int getCond(Player player)
 	{
 		FortressSiegeEvent event = getEvent(FortressSiegeEvent.class);

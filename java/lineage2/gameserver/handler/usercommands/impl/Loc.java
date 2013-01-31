@@ -18,13 +18,26 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.mapregion.RestartArea;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Loc implements IUserCommandHandler
 {
+	/**
+	 * Field COMMAND_IDS.
+	 */
 	private static final int[] COMMAND_IDS =
 	{
 		0
 	};
 	
+	/**
+	 * Method useUserCommand.
+	 * @param id int
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
+	 */
 	@Override
 	public boolean useUserCommand(int id, Player activeChar)
 	{
@@ -45,6 +58,10 @@ public class Loc implements IUserCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getUserCommandList.
+	 * @return int[] * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
+	 */
 	@Override
 	public final int[] getUserCommandList()
 	{

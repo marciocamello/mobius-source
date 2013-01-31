@@ -16,6 +16,10 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class GvGBossInstance extends MonsterInstance
 {
 	/**
@@ -23,39 +27,72 @@ public final class GvGBossInstance extends MonsterInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for GvGBossInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public GvGBossInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param filename String
+	 * @param replace Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, String filename, Object... replace)
 	{
 	}
 	
+	/**
+	 * Method canChampion.
+	 * @return boolean
+	 */
 	@Override
 	public boolean canChampion()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isFearImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isFearImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isParalyzeImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParalyzeImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isLethalImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isLethalImmune()
 	{

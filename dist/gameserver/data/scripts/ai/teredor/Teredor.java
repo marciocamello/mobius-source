@@ -29,28 +29,81 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Teredor extends Fighter
 {
+	/**
+	 * Field teredor.
+	 */
 	static int teredor = 19160;
+	/**
+	 * Field eliteMillipede.
+	 */
 	private static int eliteMillipede = 19015;
+	/**
+	 * Field teredorLairEgg.
+	 */
 	static int teredorLairEgg = 19023;
+	/**
+	 * Field coordsToSpawnEggs.
+	 */
 	final Location[] coordsToSpawnEggs =
 	{
 		new Location(176360, -185096, -3826),
 		new Location(175896, -185576, -3826)
 	};
+	/**
+	 * Field timeFromPassiveToActive.
+	 */
 	static int timeFromPassiveToActive = 10;
+	/**
+	 * Field delayEggTask.
+	 */
 	private static int delayEggTask = 90;
+	/**
+	 * Field _teredorActive.
+	 */
 	boolean _teredorActive = true;
+	/**
+	 * Field _eliteSpawned.
+	 */
 	boolean _eliteSpawned = false;
+	/**
+	 * Field _battleActive.
+	 */
 	boolean _battleActive = false;
+	/**
+	 * Field _jumpAttacked.
+	 */
 	boolean _jumpAttacked = false;
+	/**
+	 * Field _canUsePoison.
+	 */
 	boolean _canUsePoison = false;
+	/**
+	 * Field _poisonCasted.
+	 */
 	boolean _poisonCasted = false;
+	/**
+	 * Field teredorEggs.
+	 */
 	List<NpcInstance> teredorEggs;
+	/**
+	 * Field actor.
+	 */
 	private final NpcInstance actor = getActor();
+	/**
+	 * Field _currentHpListener.
+	 */
 	private final CurrentHpListener _currentHpListener = new CurrentHpListener();
 	
+	/**
+	 * Constructor for Teredor.
+	 * @param actor NpcInstance
+	 */
 	public Teredor(NpcInstance actor)
 	{
 		super(actor);
@@ -58,12 +111,20 @@ public class Teredor extends Fighter
 		actor.addListener(_currentHpListener);
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param attacker Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
 		super.onEvtAggression(attacker, aggro);
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
@@ -88,6 +149,10 @@ public class Teredor extends Fighter
 		super.thinkAttack();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -96,14 +161,28 @@ public class Teredor extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method teleportHome.
+	 */
 	@Override
 	protected void teleportHome()
 	{
 		return;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class CurrentHpListener implements OnCurrentHpDamageListener
 	{
+		/**
+		 * Method onCurrentHpDamage.
+		 * @param actor Creature
+		 * @param damage double
+		 * @param attacker Creature
+		 * @param skill Skill
+		 * @see lineage2.gameserver.listener.actor.OnCurrentHpDamageListener#onCurrentHpDamage(Creature, double, Creature, Skill)
+		 */
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
 		{
@@ -126,15 +205,28 @@ public class Teredor extends Fighter
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class TeredorPassiveTask extends RunnableImpl
 	{
+		/**
+		 * Field _npc.
+		 */
 		NpcInstance _npc;
 		
+		/**
+		 * Constructor for TeredorPassiveTask.
+		 * @param npc NpcInstance
+		 */
 		public TeredorPassiveTask(NpcInstance npc)
 		{
 			_npc = npc;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -149,15 +241,28 @@ public class Teredor extends Fighter
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class TeredorActiveTask extends RunnableImpl
 	{
+		/**
+		 * Field _npc.
+		 */
 		NpcInstance _npc;
 		
+		/**
+		 * Constructor for TeredorActiveTask.
+		 * @param npc NpcInstance
+		 */
 		public TeredorActiveTask(NpcInstance npc)
 		{
 			_npc = npc;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -175,15 +280,28 @@ public class Teredor extends Fighter
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class EggSpawnTask extends RunnableImpl
 	{
+		/**
+		 * Field _r.
+		 */
 		Reflection _r;
 		
+		/**
+		 * Constructor for EggSpawnTask.
+		 * @param r Reflection
+		 */
 		public EggSpawnTask(Reflection r)
 		{
 			_r = r;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

@@ -12,15 +12,46 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Dice extends L2GameServerPacket
 {
+	/**
+	 * Field _playerId.
+	 */
 	private final int _playerId;
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _number.
+	 */
 	private final int _number;
+	/**
+	 * Field _x.
+	 */
 	private final int _x;
+	/**
+	 * Field _y.
+	 */
 	private final int _y;
+	/**
+	 * Field _z.
+	 */
 	private final int _z;
 	
+	/**
+	 * Constructor for Dice.
+	 * @param playerId int
+	 * @param itemId int
+	 * @param number int
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 */
 	public Dice(int playerId, int itemId, int number, int x, int y, int z)
 	{
 		_playerId = playerId;
@@ -31,6 +62,9 @@ public class Dice extends L2GameServerPacket
 		_z = z;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -15,13 +15,23 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExMentorList;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestMentorList extends L2GameClientPacket
 {
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
 	}
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{

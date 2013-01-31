@@ -22,16 +22,34 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectCurseOfLifeFlow extends Effect
 {
+	/**
+	 * Field _listener.
+	 */
 	private CurseOfLifeFlowListener _listener;
+	/**
+	 * Field _damageList.
+	 */
 	final TObjectIntHashMap<HardReference<? extends Creature>> _damageList = new TObjectIntHashMap<>();
 	
+	/**
+	 * Constructor for EffectCurseOfLifeFlow.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectCurseOfLifeFlow(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -40,6 +58,9 @@ public final class EffectCurseOfLifeFlow extends Effect
 		_effected.addListener(_listener);
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -48,6 +69,10 @@ public final class EffectCurseOfLifeFlow extends Effect
 		_listener = null;
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{
@@ -78,13 +103,27 @@ public final class EffectCurseOfLifeFlow extends Effect
 		return true;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class CurseOfLifeFlowListener implements OnCurrentHpDamageListener
 	{
+		/**
+		 * Constructor for CurseOfLifeFlowListener.
+		 */
 		public CurseOfLifeFlowListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onCurrentHpDamage.
+		 * @param actor Creature
+		 * @param damage double
+		 * @param attacker Creature
+		 * @param skill Skill
+		 * @see lineage2.gameserver.listener.actor.OnCurrentHpDamageListener#onCurrentHpDamage(Creature, double, Creature, Skill)
+		 */
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
 		{

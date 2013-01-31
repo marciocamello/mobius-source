@@ -15,17 +15,33 @@ package lineage2.commons.logging;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LogUtils
 {
+	/**
+	 * Constructor for LogUtils.
+	 */
 	private LogUtils()
 	{
 	}
 	
+	/**
+	 * Method dumpStack.
+	 * @return String
+	 */
 	public static String dumpStack()
 	{
 		return dumpStack(new Throwable());
 	}
 	
+	/**
+	 * Method dumpStack.
+	 * @param t Throwable
+	 * @return String
+	 */
 	public static String dumpStack(Throwable t)
 	{
 		StringWriter sw = new StringWriter();

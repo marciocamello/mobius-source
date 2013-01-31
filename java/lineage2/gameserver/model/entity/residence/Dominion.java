@@ -30,21 +30,41 @@ import lineage2.gameserver.templates.StatsSet;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.TreeIntSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Dominion extends Residence
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _flags.
+	 */
 	private final IntSet _flags = new TreeIntSet();
+	/**
+	 * Field _castle.
+	 */
 	private Castle _castle;
+	/**
+	 * Field _lordObjectId.
+	 */
 	private int _lordObjectId;
 	
+	/**
+	 * Constructor for Dominion.
+	 * @param set StatsSet
+	 */
 	public Dominion(StatsSet set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method init.
+	 */
 	@Override
 	public void init()
 	{
@@ -60,6 +80,9 @@ public class Dominion extends Residence
 		}
 	}
 	
+	/**
+	 * Method rewardSkills.
+	 */
 	@Override
 	public void rewardSkills()
 	{
@@ -82,6 +105,9 @@ public class Dominion extends Residence
 		}
 	}
 	
+	/**
+	 * Method removeSkills.
+	 */
 	@Override
 	public void removeSkills()
 	{
@@ -99,33 +125,56 @@ public class Dominion extends Residence
 		}
 	}
 	
+	/**
+	 * Method addFlag.
+	 * @param dominionId int
+	 */
 	public void addFlag(int dominionId)
 	{
 		_flags.add(dominionId);
 	}
 	
+	/**
+	 * Method removeFlag.
+	 * @param dominionId int
+	 */
 	public void removeFlag(int dominionId)
 	{
 		_flags.remove(dominionId);
 	}
 	
+	/**
+	 * Method getFlags.
+	 * @return int[]
+	 */
 	public int[] getFlags()
 	{
 		return _flags.toArray();
 	}
 	
+	/**
+	 * Method getType.
+	 * @return ResidenceType
+	 */
 	@Override
 	public ResidenceType getType()
 	{
 		return ResidenceType.Dominion;
 	}
 	
+	/**
+	 * Method loadData.
+	 */
 	@Override
 	protected void loadData()
 	{
 		DominionDAO.getInstance().select(this);
 	}
 	
+	/**
+	 * Method changeOwner.
+	 * @param clan Clan
+	 */
 	@Override
 	public void changeOwner(Clan clan)
 	{
@@ -162,34 +211,58 @@ public class Dominion extends Residence
 		}
 	}
 	
+	/**
+	 * Method getLordObjectId.
+	 * @return int
+	 */
 	public int getLordObjectId()
 	{
 		return _lordObjectId;
 	}
 	
+	/**
+	 * Method getOwner.
+	 * @return Clan
+	 */
 	@Override
 	public Clan getOwner()
 	{
 		return _castle.getOwner();
 	}
 	
+	/**
+	 * Method getOwnerId.
+	 * @return int
+	 */
 	@Override
 	public int getOwnerId()
 	{
 		return _castle.getOwnerId();
 	}
 	
+	/**
+	 * Method getCastle.
+	 * @return Castle
+	 */
 	public Castle getCastle()
 	{
 		return _castle;
 	}
 	
+	/**
+	 * Method update.
+	 * @see lineage2.commons.dao.JdbcEntity#update()
+	 */
 	@Override
 	public void update()
 	{
 		DominionDAO.getInstance().update(this);
 	}
 	
+	/**
+	 * Method setLordObjectId.
+	 * @param lordObjectId int
+	 */
 	public void setLordObjectId(int lordObjectId)
 	{
 		_lordObjectId = lordObjectId;

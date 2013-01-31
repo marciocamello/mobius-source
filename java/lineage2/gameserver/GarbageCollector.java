@@ -15,16 +15,30 @@ package lineage2.gameserver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GarbageCollector
 {
+	/**
+	 * Field _log.
+	 */
 	static final Logger _log = LoggerFactory.getLogger(GarbageCollector.class);
 	static
 	{
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new GarbageCollectorTask(), Config.GARBAGE_COLLECTOR_INTERVAL, Config.GARBAGE_COLLECTOR_INTERVAL);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class GarbageCollectorTask implements Runnable
 	{
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{

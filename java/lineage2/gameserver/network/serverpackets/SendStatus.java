@@ -19,14 +19,36 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.tables.FakePlayersTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class SendStatus extends L2GameServerPacket
 {
+	/**
+	 * Field MIN_UPDATE_PERIOD. (value is 30000)
+	 */
 	private static final long MIN_UPDATE_PERIOD = 30000;
+	/**
+	 * Field online_players.
+	 */
 	private static int online_players = 0;
+	/**
+	 * Field max_online_players.
+	 */
 	private static int max_online_players = 0;
+	/**
+	 * Field online_priv_store.
+	 */
 	private static int online_priv_store = 0;
+	/**
+	 * Field last_update.
+	 */
 	private static long last_update = 0;
 	
+	/**
+	 * Constructor for SendStatus.
+	 */
 	public SendStatus()
 	{
 		if ((System.currentTimeMillis() - last_update) < MIN_UPDATE_PERIOD)
@@ -49,6 +71,9 @@ public final class SendStatus extends L2GameServerPacket
 		max_online_players = Math.max(max_online_players, online_players);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

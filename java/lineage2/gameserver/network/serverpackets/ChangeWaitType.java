@@ -14,16 +14,46 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChangeWaitType extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _moveType.
+	 */
 	private final int _moveType;
+	/**
+	 * Field _z. Field _y. Field _x.
+	 */
 	private final int _x, _y, _z;
+	/**
+	 * Field WT_SITTING. (value is 0)
+	 */
 	public static final int WT_SITTING = 0;
+	/**
+	 * Field WT_STANDING. (value is 1)
+	 */
 	public static final int WT_STANDING = 1;
+	/**
+	 * Field WT_START_FAKEDEATH. (value is 2)
+	 */
 	public static final int WT_START_FAKEDEATH = 2;
+	/**
+	 * Field WT_STOP_FAKEDEATH. (value is 3)
+	 */
 	public static final int WT_STOP_FAKEDEATH = 3;
 	
+	/**
+	 * Constructor for ChangeWaitType.
+	 * @param cha Creature
+	 * @param newMoveType int
+	 */
 	public ChangeWaitType(Creature cha, int newMoveType)
 	{
 		_objectId = cha.getObjectId();
@@ -33,6 +63,9 @@ public class ChangeWaitType extends L2GameServerPacket
 		_z = cha.getZ();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

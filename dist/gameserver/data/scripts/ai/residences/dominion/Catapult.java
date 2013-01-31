@@ -32,8 +32,15 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
 
 import quests._729_ProtectTheTerritoryCatapult;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Catapult extends DefaultAI
 {
+	/**
+	 * Field MESSAGES.
+	 */
 	private static final IntObjectMap<NpcString[]> MESSAGES = new HashIntObjectMap<>(9);
 	
 	static
@@ -85,13 +92,24 @@ public class Catapult extends DefaultAI
 		});
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class OnPlayerEnterListenerImpl implements OnPlayerEnterListener
 	{
+		/**
+		 * Constructor for OnPlayerEnterListenerImpl.
+		 */
 		public OnPlayerEnterListenerImpl()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onPlayerEnter.
+		 * @param player Player
+		 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+		 */
 		@Override
 		public void onPlayerEnter(Player player)
 		{
@@ -115,19 +133,35 @@ public class Catapult extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Field _listener.
+	 */
 	private final OnPlayerEnterListener _listener = new OnPlayerEnterListenerImpl();
 	
+	/**
+	 * Constructor for Catapult.
+	 * @param actor NpcInstance
+	 */
 	public Catapult(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	public boolean thinkActive()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param dam int
+	 */
 	@Override
 	public void onEvtAttacked(Creature attacker, int dam)
 	{
@@ -163,12 +197,21 @@ public class Catapult extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param attacker Creature
+	 * @param d int
+	 */
 	@Override
 	public void onEvtAggression(Creature attacker, int d)
 	{
 		//
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onEvtDead(Creature killer)
 	{
@@ -229,6 +272,9 @@ public class Catapult extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	public void onEvtSpawn()
 	{
@@ -239,6 +285,9 @@ public class Catapult extends DefaultAI
 		CharListenerList.addGlobal(_listener);
 	}
 	
+	/**
+	 * Method onEvtDeSpawn.
+	 */
 	@Override
 	public void onEvtDeSpawn()
 	{

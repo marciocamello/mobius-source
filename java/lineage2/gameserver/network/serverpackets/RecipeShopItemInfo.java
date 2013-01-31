@@ -14,12 +14,33 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RecipeShopItemInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _maxMp. Field _curMp. Field _shopId. Field _recipeId.
+	 */
 	private final int _recipeId, _shopId, _curMp, _maxMp;
+	/**
+	 * Field _success.
+	 */
 	private int _success = 0xFFFFFFFF;
+	/**
+	 * Field _price.
+	 */
 	private final long _price;
 	
+	/**
+	 * Constructor for RecipeShopItemInfo.
+	 * @param activeChar Player
+	 * @param manufacturer Player
+	 * @param recipeId int
+	 * @param price long
+	 * @param success int
+	 */
 	public RecipeShopItemInfo(Player activeChar, Player manufacturer, int recipeId, long price, int success)
 	{
 		_recipeId = recipeId;
@@ -30,6 +51,9 @@ public class RecipeShopItemInfo extends L2GameServerPacket
 		_maxMp = manufacturer.getMaxMp();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

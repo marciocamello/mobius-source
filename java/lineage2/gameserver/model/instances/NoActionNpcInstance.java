@@ -15,6 +15,10 @@ package lineage2.gameserver.model.instances;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @Deprecated
 public class NoActionNpcInstance extends NpcInstance
 {
@@ -23,11 +27,21 @@ public class NoActionNpcInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for NoActionNpcInstance.
+	 * @param objectID int
+	 * @param template NpcTemplate
+	 */
 	public NoActionNpcInstance(final int objectID, final NpcTemplate template)
 	{
 		super(objectID, template);
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param dontMove boolean
+	 */
 	@Override
 	public void onAction(final Player player, final boolean dontMove)
 	{

@@ -18,15 +18,31 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MatchLeader extends MatchFighter
 {
+	/**
+	 * Field ATTACK_SKILL.
+	 */
 	public static final Skill ATTACK_SKILL = SkillTable.getInstance().getInfo(4077, 6);
 	
+	/**
+	 * Constructor for MatchLeader.
+	 * @param actor NpcInstance
+	 */
 	public MatchLeader(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param dam int
+	 */
 	@Override
 	public void onEvtAttacked(Creature attacker, int dam)
 	{

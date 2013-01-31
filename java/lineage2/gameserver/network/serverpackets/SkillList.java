@@ -19,13 +19,33 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.tables.SkillTreeTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SkillList extends L2GameServerPacket
 {
+	/**
+	 * Field _skills.
+	 */
 	private final List<Skill> _skills;
+	/**
+	 * Field canEnchant.
+	 */
 	private final boolean canEnchant;
+	/**
+	 * Field player.
+	 */
 	private final Player player;
+	/**
+	 * Field _learnedSkill.
+	 */
 	private final int _learnedSkill;
 	
+	/**
+	 * Constructor for SkillList.
+	 * @param player Player
+	 */
 	public SkillList(Player player)
 	{
 		_skills = new ArrayList<>(player.getAllSkills());
@@ -34,6 +54,11 @@ public class SkillList extends L2GameServerPacket
 		_learnedSkill = 0;
 	}
 	
+	/**
+	 * Constructor for SkillList.
+	 * @param p Player
+	 * @param learnedSkill int
+	 */
 	public SkillList(Player p, int learnedSkill)
 	{
 		_skills = new ArrayList<>(p.getAllSkills());
@@ -42,6 +67,9 @@ public class SkillList extends L2GameServerPacket
 		_learnedSkill = learnedSkill;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

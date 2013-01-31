@@ -23,6 +23,10 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SiegeClanObject implements Serializable
 {
 	/**
@@ -30,15 +34,31 @@ public class SiegeClanObject implements Serializable
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class SiegeClanComparatorImpl implements Comparator<SiegeClanObject>
 	{
+		/**
+		 * Field _instance.
+		 */
 		private static final SiegeClanComparatorImpl _instance = new SiegeClanComparatorImpl();
 		
+		/**
+		 * Method getInstance.
+		 * @return SiegeClanComparatorImpl
+		 */
 		public static SiegeClanComparatorImpl getInstance()
 		{
 			return _instance;
 		}
 		
+		/**
+		 * Method compare.
+		 * @param o1 SiegeClanObject
+		 * @param o2 SiegeClanObject
+		 * @return int
+		 */
 		@Override
 		public int compare(SiegeClanObject o1, SiegeClanObject o2)
 		{
@@ -46,16 +66,41 @@ public class SiegeClanObject implements Serializable
 		}
 	}
 	
+	/**
+	 * Field _type.
+	 */
 	private String _type;
+	/**
+	 * Field _clan.
+	 */
 	private final Clan _clan;
+	/**
+	 * Field _flag.
+	 */
 	private NpcInstance _flag;
+	/**
+	 * Field _date.
+	 */
 	private final long _date;
 	
+	/**
+	 * Constructor for SiegeClanObject.
+	 * @param type String
+	 * @param clan Clan
+	 * @param param long
+	 */
 	public SiegeClanObject(String type, Clan clan, long param)
 	{
 		this(type, clan, 0, System.currentTimeMillis());
 	}
 	
+	/**
+	 * Constructor for SiegeClanObject.
+	 * @param type String
+	 * @param clan Clan
+	 * @param param long
+	 * @param date long
+	 */
 	public SiegeClanObject(String type, Clan clan, long param, long date)
 	{
 		_type = type;
@@ -63,21 +108,36 @@ public class SiegeClanObject implements Serializable
 		_date = date;
 	}
 	
+	/**
+	 * Method getObjectId.
+	 * @return int
+	 */
 	public int getObjectId()
 	{
 		return _clan.getClanId();
 	}
 	
+	/**
+	 * Method getClan.
+	 * @return Clan
+	 */
 	public Clan getClan()
 	{
 		return _clan;
 	}
 	
+	/**
+	 * Method getFlag.
+	 * @return NpcInstance
+	 */
 	public NpcInstance getFlag()
 	{
 		return _flag;
 	}
 	
+	/**
+	 * Method deleteFlag.
+	 */
 	public void deleteFlag()
 	{
 		if (_flag != null)
@@ -87,31 +147,56 @@ public class SiegeClanObject implements Serializable
 		}
 	}
 	
+	/**
+	 * Method setFlag.
+	 * @param npc NpcInstance
+	 */
 	public void setFlag(NpcInstance npc)
 	{
 		_flag = npc;
 	}
 	
+	/**
+	 * Method setType.
+	 * @param type String
+	 */
 	public void setType(String type)
 	{
 		_type = type;
 	}
 	
+	/**
+	 * Method getType.
+	 * @return String
+	 */
 	public String getType()
 	{
 		return _type;
 	}
 	
+	/**
+	 * Method broadcast.
+	 * @param packet IStaticPacket[]
+	 */
 	public void broadcast(IStaticPacket... packet)
 	{
 		getClan().broadcastToOnlineMembers(packet);
 	}
 	
+	/**
+	 * Method broadcast.
+	 * @param packet L2GameServerPacket[]
+	 */
 	public void broadcast(L2GameServerPacket... packet)
 	{
 		getClan().broadcastToOnlineMembers(packet);
 	}
 	
+	/**
+	 * Method setEvent.
+	 * @param start boolean
+	 * @param event SiegeEvent<?,?>
+	 */
 	public void setEvent(boolean start, SiegeEvent<?, ?> event)
 	{
 		if (start)
@@ -133,16 +218,29 @@ public class SiegeClanObject implements Serializable
 		}
 	}
 	
+	/**
+	 * Method isParticle.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean isParticle(Player player)
 	{
 		return true;
 	}
 	
+	/**
+	 * Method getParam.
+	 * @return long
+	 */
 	public long getParam()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getDate.
+	 * @return long
+	 */
 	public long getDate()
 	{
 		return _date;

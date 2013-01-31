@@ -37,20 +37,50 @@ import lineage2.gameserver.utils.WarehouseFunctions;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class ResidenceManager extends MerchantInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field COND_FAIL. (value is 0)
+	 */
 	protected static final int COND_FAIL = 0;
+	/**
+	 * Field COND_SIEGE. (value is 1)
+	 */
 	protected static final int COND_SIEGE = 1;
+	/**
+	 * Field COND_OWNER. (value is 2)
+	 */
 	protected static final int COND_OWNER = 2;
+	/**
+	 * Field _siegeDialog.
+	 */
 	protected String _siegeDialog;
+	/**
+	 * Field _mainDialog.
+	 */
 	protected String _mainDialog;
+	/**
+	 * Field _failDialog.
+	 */
 	protected String _failDialog;
+	/**
+	 * Field _doors.
+	 */
 	protected int[] _doors;
 	
+	/**
+	 * Constructor for ResidenceManager.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ResidenceManager(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -58,6 +88,9 @@ public abstract class ResidenceManager extends MerchantInstance
 		_doors = template.getAIParams().getIntegerArray("doors", ArrayUtils.EMPTY_INT_ARRAY);
 	}
 	
+	/**
+	 * Method setDialogs.
+	 */
 	protected void setDialogs()
 	{
 		_siegeDialog = getTemplate().getAIParams().getString("siege_dialog", "npcdefault.htm");
@@ -65,18 +98,45 @@ public abstract class ResidenceManager extends MerchantInstance
 		_failDialog = getTemplate().getAIParams().getString("fail_dialog", "npcdefault.htm");
 	}
 	
+	/**
+	 * Method getResidence.
+	 * @return Residence
+	 */
 	protected abstract Residence getResidence();
 	
+	/**
+	 * Method decoPacket.
+	 * @return L2GameServerPacket
+	 */
 	protected abstract L2GameServerPacket decoPacket();
 	
+	/**
+	 * Method getPrivUseFunctions.
+	 * @return int
+	 */
 	protected abstract int getPrivUseFunctions();
 	
+	/**
+	 * Method getPrivSetFunctions.
+	 * @return int
+	 */
 	protected abstract int getPrivSetFunctions();
 	
+	/**
+	 * Method getPrivDismiss.
+	 * @return int
+	 */
 	protected abstract int getPrivDismiss();
 	
+	/**
+	 * Method getPrivDoors.
+	 * @return int
+	 */
 	protected abstract int getPrivDoors();
 	
+	/**
+	 * Method broadcastDecoInfo.
+	 */
 	public void broadcastDecoInfo()
 	{
 		L2GameServerPacket decoPacket = decoPacket();
@@ -90,6 +150,11 @@ public abstract class ResidenceManager extends MerchantInstance
 		}
 	}
 	
+	/**
+	 * Method getCond.
+	 * @param player Player
+	 * @return int
+	 */
 	protected int getCond(Player player)
 	{
 		Residence residence = getResidence();
@@ -105,6 +170,12 @@ public abstract class ResidenceManager extends MerchantInstance
 		return COND_FAIL;
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -125,6 +196,11 @@ public abstract class ResidenceManager extends MerchantInstance
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -263,11 +339,11 @@ public abstract class ResidenceManager extends MerchantInstance
 					price = String.valueOf(loc.getPrice());
 					teleport_list.append("<a action=\"bypass -h scripts_Util:Gatekeeper ");
 					teleport_list.append(loc.getX());
-					teleport_list.append(" ");
+					teleport_list.append(' ');
 					teleport_list.append(loc.getY());
-					teleport_list.append(" ");
+					teleport_list.append(' ');
 					teleport_list.append(loc.getZ());
-					teleport_list.append(" ");
+					teleport_list.append(' ');
 					teleport_list.append(price);
 					teleport_list.append("\" msg=\"811;F;");
 					teleport_list.append(loc.getName());
@@ -275,7 +351,7 @@ public abstract class ResidenceManager extends MerchantInstance
 					teleport_list.append(HtmlUtils.htmlNpcString(loc.getName()));
 					teleport_list.append(" - ");
 					teleport_list.append(price);
-					teleport_list.append(" ");
+					teleport_list.append(' ');
 					teleport_list.append(delimiter);
 					teleport_list.append("</a><br1>");
 				}
@@ -317,7 +393,7 @@ public abstract class ResidenceManager extends MerchantInstance
 					Skill s = (Skill) buff[0];
 					support_list.append("<a action=\"bypass -h npc_%objectId%_support ");
 					support_list.append(String.valueOf(s.getId()));
-					support_list.append(" ");
+					support_list.append(' ');
 					support_list.append(String.valueOf(s.getLevel()));
 					support_list.append("\">");
 					support_list.append(s.getName());
@@ -518,6 +594,13 @@ public abstract class ResidenceManager extends MerchantInstance
 		super.onBypassFeedback(player, command);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param id int
+	 * @param level int
+	 * @param player Player
+	 * @return boolean
+	 */
 	private boolean useSkill(int id, int level, Player player)
 	{
 		Skill skill = SkillTable.getInstance().getInfo(id, level);
@@ -538,12 +621,24 @@ public abstract class ResidenceManager extends MerchantInstance
 		return true;
 	}
 	
+	/**
+	 * Method sendHtmlMessage.
+	 * @param player Player
+	 * @param html NpcHtmlMessage
+	 */
 	private void sendHtmlMessage(Player player, NpcHtmlMessage html)
 	{
 		html.replace("%npcname%", HtmlUtils.htmlNpcName(getNpcId()));
 		player.sendPacket(html);
 	}
 	
+	/**
+	 * Method replace.
+	 * @param html NpcHtmlMessage
+	 * @param type int
+	 * @param replace1 String
+	 * @param replace2 String
+	 */
 	private void replace(NpcHtmlMessage html, int type, String replace1, String replace2)
 	{
 		boolean proc = (type == ResidenceFunction.RESTORE_HP) || (type == ResidenceFunction.RESTORE_MP) || (type == ResidenceFunction.RESTORE_EXP);
@@ -574,6 +669,10 @@ public abstract class ResidenceManager extends MerchantInstance
 		}
 	}
 	
+	/**
+	 * Method showManageRecovery.
+	 * @param player Player
+	 */
 	private void showManageRecovery(Player player)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
@@ -584,6 +683,10 @@ public abstract class ResidenceManager extends MerchantInstance
 		sendHtmlMessage(player, html);
 	}
 	
+	/**
+	 * Method showManageOther.
+	 * @param player Player
+	 */
 	private void showManageOther(Player player)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
@@ -594,6 +697,10 @@ public abstract class ResidenceManager extends MerchantInstance
 		sendHtmlMessage(player, html);
 	}
 	
+	/**
+	 * Method showManageDeco.
+	 * @param player Player
+	 */
 	private void showManageDeco(Player player)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
@@ -603,11 +710,23 @@ public abstract class ResidenceManager extends MerchantInstance
 		sendHtmlMessage(player, html);
 	}
 	
+	/**
+	 * Method isHaveRigths.
+	 * @param player Player
+	 * @param rigthsToCheck int
+	 * @return boolean
+	 */
 	protected boolean isHaveRigths(Player player, int rigthsToCheck)
 	{
 		return (player.getClan() != null) && ((player.getClanPrivileges() & rigthsToCheck) == rigthsToCheck);
 	}
 	
+	/**
+	 * Method addPacketList.
+	 * @param forPlayer Player
+	 * @param dropper Creature
+	 * @return List<L2GameServerPacket>
+	 */
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{

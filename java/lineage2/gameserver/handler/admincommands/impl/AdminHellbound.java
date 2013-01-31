@@ -18,15 +18,39 @@ import lineage2.gameserver.model.Player;
 
 import org.apache.commons.lang3.math.NumberUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminHellbound implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_hbadd.
+		 */
 		admin_hbadd,
+		/**
+		 * Field admin_hbsub.
+		 */
 		admin_hbsub,
+		/**
+		 * Field admin_hbset.
+		 */
 		admin_hbset,
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -55,6 +79,10 @@ public class AdminHellbound implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

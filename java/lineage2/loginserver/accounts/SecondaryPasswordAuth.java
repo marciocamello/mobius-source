@@ -21,14 +21,38 @@ import java.util.logging.Logger;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.loginserver.database.L2DatabaseFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SecondaryPasswordAuth
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = Logger.getLogger(SecondaryPasswordAuth.class.getName());
+	/**
+	 * Field SELECT_PARAMS. (value is ""SELECT account_password, wrongAttempts, banTime FROM account_2ndAuth WHERE account_name=?"")
+	 */
 	private static final String SELECT_PARAMS = "SELECT account_password, wrongAttempts, banTime FROM account_2ndAuth WHERE account_name=?";
+	/**
+	 * Field INSERT_PASSWORD. (value is ""INSERT INTO account_2ndAuth VALUES (?, ?, 0, 0) ON DUPLICATE KEY UPDATE account_password=?"")
+	 */
 	private static final String INSERT_PASSWORD = "INSERT INTO account_2ndAuth VALUES (?, ?, 0, 0) ON DUPLICATE KEY UPDATE account_password=?";
+	/**
+	 * Field UPDATE_WA. (value is ""UPDATE account_2ndAuth SET wrongAttempts=? WHERE account_name=?"")
+	 */
 	private static final String UPDATE_WA = "UPDATE account_2ndAuth SET wrongAttempts=? WHERE account_name=?";
+	/**
+	 * Field UPDATE_BT. (value is ""UPDATE account_2ndAuth SET banTime=? WHERE account_name=?"")
+	 */
 	private static final String UPDATE_BT = "UPDATE account_2ndAuth SET banTime=? WHERE account_name=?";
 	
+	/**
+	 * Method getBanTime.
+	 * @param login String
+	 * @return long
+	 */
 	public static long getBanTime(String login)
 	{
 		long _unBanTime = 0;
@@ -55,6 +79,11 @@ public class SecondaryPasswordAuth
 		return _unBanTime;
 	}
 	
+	/**
+	 * Method setBanTime.
+	 * @param login String
+	 * @param banTime int
+	 */
 	public static void setBanTime(String login, int banTime)
 	{
 		long _unBanTime = System.currentTimeMillis() + (banTime * 60000);
@@ -78,6 +107,11 @@ public class SecondaryPasswordAuth
 		}
 	}
 	
+	/**
+	 * Method getLoginAttempts.
+	 * @param login String
+	 * @return int
+	 */
 	public static int getLoginAttempts(String login)
 	{
 		int _loginAttempts = 0;
@@ -104,6 +138,11 @@ public class SecondaryPasswordAuth
 		return _loginAttempts;
 	}
 	
+	/**
+	 * Method setLoginAttempts.
+	 * @param login String
+	 * @param enterAttempts int
+	 */
 	public static void setLoginAttempts(String login, int enterAttempts)
 	{
 		Connection con = null;
@@ -126,6 +165,11 @@ public class SecondaryPasswordAuth
 		}
 	}
 	
+	/**
+	 * Method getPassword.
+	 * @param login String
+	 * @return String
+	 */
 	public static String getPassword(String login)
 	{
 		String _password = null;
@@ -152,6 +196,11 @@ public class SecondaryPasswordAuth
 		return _password;
 	}
 	
+	/**
+	 * Method setPassword.
+	 * @param login String
+	 * @param password String
+	 */
 	public static void setPassword(String login, String password)
 	{
 		Connection con = null;

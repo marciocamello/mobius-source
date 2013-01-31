@@ -14,13 +14,35 @@ package lineage2.gameserver.model.quest;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Drop
 {
+	/**
+	 * Field condition.
+	 */
 	public final int condition;
+	/**
+	 * Field maxcount.
+	 */
 	public final int maxcount;
+	/**
+	 * Field chance.
+	 */
 	public final int chance;
+	/**
+	 * Field itemList.
+	 */
 	public int[] itemList = ArrayUtils.EMPTY_INT_ARRAY;
 	
+	/**
+	 * Constructor for Drop.
+	 * @param condition int
+	 * @param maxcount int
+	 * @param chance int
+	 */
 	public Drop(int condition, int maxcount, int chance)
 	{
 		this.condition = condition;
@@ -28,6 +50,11 @@ public class Drop
 		this.chance = chance;
 	}
 	
+	/**
+	 * Method addItem.
+	 * @param item int
+	 * @return Drop
+	 */
 	public Drop addItem(int item)
 	{
 		itemList = ArrayUtils.add(itemList, item);

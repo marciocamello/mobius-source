@@ -20,16 +20,29 @@ import lineage2.gameserver.templates.jump.JumpTrack;
 import lineage2.gameserver.templates.jump.JumpWay;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RequestFlyMove extends L2GameClientPacket
 {
+	/**
+	 * Field _nextWayId.
+	 */
 	private int _nextWayId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_nextWayId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

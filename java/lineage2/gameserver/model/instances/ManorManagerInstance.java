@@ -38,6 +38,10 @@ import lineage2.gameserver.templates.manor.CropProcure;
 import lineage2.gameserver.templates.manor.SeedProduction;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ManorManagerInstance extends MerchantInstance
 {
 	/**
@@ -45,11 +49,21 @@ public class ManorManagerInstance extends MerchantInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for ManorManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ManorManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{
@@ -90,6 +104,11 @@ public class ManorManagerInstance extends MerchantInstance
 		}
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -192,17 +211,33 @@ public class ManorManagerInstance extends MerchantInstance
 		}
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @return String
+	 */
 	public String getHtmlPath()
 	{
 		return "manormanager/";
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		return "manormanager/manager.htm";
 	}
 	
+	/**
+	 * Method showMessageWindow.
+	 * @param player Player
+	 * @param filename String
+	 */
 	private void showMessageWindow(Player player, String filename)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);

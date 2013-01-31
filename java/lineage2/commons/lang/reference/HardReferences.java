@@ -17,28 +17,54 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HardReferences
 {
+	/**
+	 * Constructor for HardReferences.
+	 */
 	private HardReferences()
 	{
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class EmptyReferencedHolder extends AbstractHardReference<Object>
 	{
+		/**
+		 * Constructor for EmptyReferencedHolder.
+		 * @param reference Object
+		 */
 		public EmptyReferencedHolder(Object reference)
 		{
 			super(reference);
 		}
 	}
 	
+	/**
+	 * Field EMPTY_REF.
+	 */
 	private static HardReference<?> EMPTY_REF = new EmptyReferencedHolder(null);
 	
+	/**
+	 * Method emptyRef.
+	 * @return HardReference<T>
+	 */
 	@SuppressWarnings("unchecked")
 	public static <T> HardReference<T> emptyRef()
 	{
 		return (HardReference<T>) EMPTY_REF;
 	}
 	
+	/**
+	 * Method unwrap.
+	 * @param refs Collection<HardReference<T>>
+	 * @return Collection<T>
+	 */
 	public static <T> Collection<T> unwrap(Collection<HardReference<T>> refs)
 	{
 		List<T> result = new ArrayList<>(refs.size());
@@ -53,36 +79,68 @@ public class HardReferences
 		return result;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class WrappedIterable<T> implements Iterable<T>
 	{
+		/**
+		 * Field refs.
+		 */
 		final Iterable<HardReference<T>> refs;
 		
+		/**
+		 * Constructor for WrappedIterable.
+		 * @param refs Iterable<HardReference<T>>
+		 */
 		WrappedIterable(Iterable<HardReference<T>> refs)
 		{
 			this.refs = refs;
 		}
 		
+		/**
+		 * @author Mobius
+		 */
 		private static class WrappedIterator<T> implements Iterator<T>
 		{
+			/**
+			 * Field iterator.
+			 */
 			final Iterator<HardReference<T>> iterator;
 			
+			/**
+			 * Constructor for WrappedIterator.
+			 * @param iterator Iterator<HardReference<T>>
+			 */
 			WrappedIterator(Iterator<HardReference<T>> iterator)
 			{
 				this.iterator = iterator;
 			}
 			
+			/**
+			 * Method hasNext.
+			 * @return boolean * @see java.util.Iterator#hasNext()
+			 */
 			@Override
 			public boolean hasNext()
 			{
 				return iterator.hasNext();
 			}
 			
+			/**
+			 * Method next.
+			 * @return T * @see java.util.Iterator#next()
+			 */
 			@Override
 			public T next()
 			{
 				return iterator.next().get();
 			}
 			
+			/**
+			 * Method remove.
+			 * @see java.util.Iterator#remove()
+			 */
 			@Override
 			public void remove()
 			{
@@ -90,6 +148,10 @@ public class HardReferences
 			}
 		}
 		
+		/**
+		 * Method iterator.
+		 * @return Iterator<T> * @see java.lang.Iterable#iterator()
+		 */
 		@Override
 		public Iterator<T> iterator()
 		{
@@ -97,6 +159,11 @@ public class HardReferences
 		}
 	}
 	
+	/**
+	 * Method iterate.
+	 * @param refs Iterable<HardReference<T>>
+	 * @return Iterable<T>
+	 */
 	public static <T> Iterable<T> iterate(Iterable<HardReference<T>> refs)
 	{
 		return new WrappedIterable<>(refs);

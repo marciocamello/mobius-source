@@ -29,12 +29,29 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BuyListHolder
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(BuyListHolder.class);
+	/**
+	 * Field _instance.
+	 */
 	private static BuyListHolder _instance;
+	/**
+	 * Field _lists.
+	 */
 	private final Map<Integer, NpcTradeList> _lists;
 	
+	/**
+	 * Method getInstance.
+	 * @return BuyListHolder
+	 */
 	public static BuyListHolder getInstance()
 	{
 		if (_instance == null)
@@ -44,11 +61,17 @@ public class BuyListHolder
 		return _instance;
 	}
 	
+	/**
+	 * Method reload.
+	 */
 	public static void reload()
 	{
 		_instance = new BuyListHolder();
 	}
 	
+	/**
+	 * Constructor for BuyListHolder.
+	 */
 	private BuyListHolder()
 	{
 		_lists = new HashMap<>();
@@ -164,6 +187,11 @@ public class BuyListHolder
 		}
 	}
 	
+	/**
+	 * Method checkItem.
+	 * @param template ItemTemplate
+	 * @return boolean
+	 */
 	public boolean checkItem(ItemTemplate template)
 	{
 		if (template.isCommonItem() && !Config.ALT_ALLOW_SELL_COMMON)
@@ -197,47 +225,93 @@ public class BuyListHolder
 		return true;
 	}
 	
+	/**
+	 * Method getBuyList.
+	 * @param listId int
+	 * @return NpcTradeList
+	 */
 	public NpcTradeList getBuyList(int listId)
 	{
 		return _lists.get(listId);
 	}
 	
+	/**
+	 * Method addToBuyList.
+	 * @param listId int
+	 * @param list NpcTradeList
+	 */
 	public void addToBuyList(int listId, NpcTradeList list)
 	{
 		_lists.put(listId, list);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class NpcTradeList
 	{
+		/**
+		 * Field tradeList.
+		 */
 		private final List<TradeItem> tradeList = new ArrayList<>();
+		/**
+		 * Field _id.
+		 */
 		private final int _id;
+		/**
+		 * Field _npcId.
+		 */
 		private int _npcId;
 		
+		/**
+		 * Constructor for NpcTradeList.
+		 * @param id int
+		 */
 		public NpcTradeList(int id)
 		{
 			_id = id;
 		}
 		
+		/**
+		 * Method getListId.
+		 * @return int
+		 */
 		public int getListId()
 		{
 			return _id;
 		}
 		
+		/**
+		 * Method setNpcId.
+		 * @param id int
+		 */
 		public void setNpcId(int id)
 		{
 			_npcId = id;
 		}
 		
+		/**
+		 * Method getNpcId.
+		 * @return int
+		 */
 		public int getNpcId()
 		{
 			return _npcId;
 		}
 		
+		/**
+		 * Method addItem.
+		 * @param ti TradeItem
+		 */
 		public void addItem(TradeItem ti)
 		{
 			tradeList.add(ti);
 		}
 		
+		/**
+		 * Method getItems.
+		 * @return List<TradeItem>
+		 */
 		public synchronized List<TradeItem> getItems()
 		{
 			List<TradeItem> result = new ArrayList<>();
@@ -261,6 +335,11 @@ public class BuyListHolder
 			return result;
 		}
 		
+		/**
+		 * Method getItemByItemId.
+		 * @param itemId int
+		 * @return TradeItem
+		 */
 		public TradeItem getItemByItemId(int itemId)
 		{
 			for (TradeItem ti : tradeList)
@@ -273,6 +352,10 @@ public class BuyListHolder
 			return null;
 		}
 		
+		/**
+		 * Method updateItems.
+		 * @param buyList List<TradeItem>
+		 */
 		public synchronized void updateItems(List<TradeItem> buyList)
 		{
 			for (TradeItem ti : buyList)

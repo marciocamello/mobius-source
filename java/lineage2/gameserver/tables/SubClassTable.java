@@ -26,17 +26,37 @@ import lineage2.gameserver.model.base.Race;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class SubClassTable
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SubClassTable.class);
+	/**
+	 * Field _instance.
+	 */
 	private static SubClassTable _instance;
+	/**
+	 * Field _subClasses.
+	 */
 	private TIntObjectHashMap<TIntArrayList> _subClasses;
 	
+	/**
+	 * Constructor for SubClassTable.
+	 */
 	public SubClassTable()
 	{
 		init();
 	}
 	
+	/**
+	 * Method getInstance.
+	 * @return SubClassTable
+	 */
 	public static SubClassTable getInstance()
 	{
 		if (_instance == null)
@@ -46,6 +66,9 @@ public final class SubClassTable
 		return _instance;
 	}
 	
+	/**
+	 * Method init.
+	 */
 	private void init()
 	{
 		_subClasses = new TIntObjectHashMap<>();
@@ -74,6 +97,12 @@ public final class SubClassTable
 		_log.info("SubClassTable: Loaded " + _subClasses.size() + " sub-classes variations.");
 	}
 	
+	/**
+	 * Method getAvailableSubClasses.
+	 * @param player Player
+	 * @param classId int
+	 * @return int[]
+	 */
 	public int[] getAvailableSubClasses(Player player, int classId)
 	{
 		TIntArrayList subClassesList = _subClasses.get(classId);
@@ -112,6 +141,12 @@ public final class SubClassTable
 		return subClassesList.toArray();
 	}
 	
+	/**
+	 * Method areClassesComportable.
+	 * @param baseClassId ClassId
+	 * @param subClassId ClassId
+	 * @return boolean
+	 */
 	public static boolean areClassesComportable(ClassId baseClassId, ClassId subClassId)
 	{
 		if (baseClassId == subClassId)

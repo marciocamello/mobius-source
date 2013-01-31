@@ -20,14 +20,28 @@ import lineage2.gameserver.network.loginservercon.gspackets.ChangePassword;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Password extends Functions implements IVoicedCommandHandler
 {
+	/**
+	 * Field _commandList.
+	 */
 	private final String[] _commandList = new String[]
 	{
 		"password",
 		"check"
 	};
 	
+	/**
+	 * Method useVoicedCommand.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param args String
+	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String args)
 	{
@@ -43,6 +57,13 @@ public class Password extends Functions implements IVoicedCommandHandler
 		return false;
 	}
 	
+	/**
+	 * Method password.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param target String
+	 * @return boolean
+	 */
 	private boolean password(String command, Player activeChar, String target)
 	{
 		if (command.equals("password"))
@@ -54,12 +75,23 @@ public class Password extends Functions implements IVoicedCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getVoicedCommandList.
+	 * @return String[] * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
+	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{
 		return _commandList;
 	}
 	
+	/**
+	 * Method check.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param target String
+	 * @return boolean
+	 */
 	private boolean check(String command, Player activeChar, String target)
 	{
 		String[] parts = target.split(" ");

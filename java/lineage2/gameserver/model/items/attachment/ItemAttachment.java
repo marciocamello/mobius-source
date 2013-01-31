@@ -14,7 +14,15 @@ package lineage2.gameserver.model.items.attachment;
 
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface ItemAttachment
 {
+	/**
+	 * Method setItem.
+	 * @param item ItemInstance
+	 */
 	void setItem(ItemInstance item);
 }

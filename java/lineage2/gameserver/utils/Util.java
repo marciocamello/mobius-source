@@ -28,10 +28,23 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.reward.RewardList;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Util
 {
+	/**
+	 * Field PATTERN. (value is ""0.0000000000E00"")
+	 */
 	static final String PATTERN = "0.0000000000E00";
+	/**
+	 * Field df.
+	 */
 	static final DecimalFormat df;
+	/**
+	 * Field adenaFormatter.
+	 */
 	private static NumberFormat adenaFormatter;
 	static
 	{
@@ -41,6 +54,12 @@ public class Util
 		df.setPositivePrefix("+");
 	}
 	
+	/**
+	 * Method isMatchingRegexp.
+	 * @param text String
+	 * @param template String
+	 * @return boolean
+	 */
 	public static boolean isMatchingRegexp(String text, String template)
 	{
 		Pattern pattern = null;
@@ -60,6 +79,13 @@ public class Util
 		return regexp.matches();
 	}
 	
+	/**
+	 * Method formatDouble.
+	 * @param x double
+	 * @param nanString String
+	 * @param forceExponents boolean
+	 * @return String
+	 */
 	public static String formatDouble(double x, String nanString, boolean forceExponents)
 	{
 		if (Double.isNaN(x))
@@ -77,11 +103,21 @@ public class Util
 		return String.valueOf(x);
 	}
 	
+	/**
+	 * Method formatAdena.
+	 * @param amount long
+	 * @return String
+	 */
 	public static String formatAdena(long amount)
 	{
 		return adenaFormatter.format(amount);
 	}
 	
+	/**
+	 * Method formatTime.
+	 * @param time int
+	 * @return String
+	 */
 	public static String formatTime(int time)
 	{
 		if (time == 0)
@@ -116,6 +152,14 @@ public class Util
 		return ret.trim();
 	}
 	
+	/**
+	 * Method rollDrop.
+	 * @param min long
+	 * @param max long
+	 * @param calcChance double
+	 * @param rate boolean
+	 * @return long
+	 */
 	public static long rollDrop(long min, long max, double calcChance, boolean rate)
 	{
 		if ((calcChance <= 0) || (min <= 0) || (max <= 0))
@@ -142,6 +186,12 @@ public class Util
 		return Rnd.chance(calcChance / 10000.) ? Rnd.get(min * dropmult, max * dropmult) : 0;
 	}
 	
+	/**
+	 * Method packInt.
+	 * @param a int[]
+	 * @param bits int
+	 * @return int * @throws Exception
+	 */
 	public static int packInt(int[] a, int bits) throws Exception
 	{
 		int m = 32 / bits;
@@ -172,6 +222,12 @@ public class Util
 		return result;
 	}
 	
+	/**
+	 * Method packLong.
+	 * @param a int[]
+	 * @param bits int
+	 * @return long * @throws Exception
+	 */
 	public static long packLong(int[] a, int bits) throws Exception
 	{
 		int m = 64 / bits;
@@ -202,6 +258,12 @@ public class Util
 		return result;
 	}
 	
+	/**
+	 * Method unpackInt.
+	 * @param a int
+	 * @param bits int
+	 * @return int[]
+	 */
 	public static int[] unpackInt(int a, int bits)
 	{
 		int m = 32 / bits;
@@ -217,6 +279,12 @@ public class Util
 		return result;
 	}
 	
+	/**
+	 * Method unpackLong.
+	 * @param a long
+	 * @param bits int
+	 * @return int[]
+	 */
 	public static int[] unpackLong(long a, int bits)
 	{
 		int m = 64 / bits;
@@ -232,16 +300,36 @@ public class Util
 		return result;
 	}
 	
+	/**
+	 * Method joinStrings.
+	 * @param glueStr String
+	 * @param strings String[]
+	 * @param startIdx int
+	 * @param maxCount int
+	 * @return String
+	 */
 	public static String joinStrings(String glueStr, String[] strings, int startIdx, int maxCount)
 	{
 		return Strings.joinStrings(glueStr, strings, startIdx, maxCount);
 	}
 	
+	/**
+	 * Method joinStrings.
+	 * @param glueStr String
+	 * @param strings String[]
+	 * @param startIdx int
+	 * @return String
+	 */
 	public static String joinStrings(String glueStr, String[] strings, int startIdx)
 	{
 		return Strings.joinStrings(glueStr, strings, startIdx, -1);
 	}
 	
+	/**
+	 * Method isNumber.
+	 * @param s String
+	 * @return boolean
+	 */
 	public static boolean isNumber(String s)
 	{
 		try
@@ -255,6 +343,14 @@ public class Util
 		return true;
 	}
 	
+	/**
+	 * Method dumpObject.
+	 * @param o Object
+	 * @param simpleTypes boolean
+	 * @param parentFields boolean
+	 * @param ignoreStatics boolean
+	 * @return String
+	 */
 	public static String dumpObject(Object o, boolean simpleTypes, boolean parentFields, boolean ignoreStatics)
 	{
 		Class<?> cls = o.getClass();
@@ -307,8 +403,16 @@ public class Util
 		return result;
 	}
 	
+	/**
+	 * Field _pattern.
+	 */
 	private static Pattern _pattern = Pattern.compile("<!--TEMPLET(\\d+)(.*?)TEMPLET-->", Pattern.DOTALL);
 	
+	/**
+	 * Method parseTemplate.
+	 * @param html String
+	 * @return HashMap<Integer,String>
+	 */
 	public static HashMap<Integer, String> parseTemplate(String html)
 	{
 		Matcher m = _pattern.matcher(html);
@@ -322,6 +426,11 @@ public class Util
 		return tpls;
 	}
 	
+	/**
+	 * Method getThirdClassForId.
+	 * @param classId int
+	 * @return int
+	 */
 	public static int getThirdClassForId(int classId)
 	{
 		int result = -1;

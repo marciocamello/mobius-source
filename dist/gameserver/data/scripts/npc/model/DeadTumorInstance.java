@@ -25,20 +25,37 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class DeadTumorInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field warpTimer.
+	 */
 	private long warpTimer = 0;
 	
+	/**
+	 * Constructor for DeadTumorInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public DeadTumorInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		warpTimer = System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

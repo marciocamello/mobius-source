@@ -16,15 +16,40 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.model.matching.PartyMatchingRoom;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPartyMatchList extends L2GameClientPacket
 {
+	/**
+	 * Field _lootDist.
+	 */
 	private int _lootDist;
+	/**
+	 * Field _maxMembers.
+	 */
 	private int _maxMembers;
+	/**
+	 * Field _minLevel.
+	 */
 	private int _minLevel;
+	/**
+	 * Field _maxLevel.
+	 */
 	private int _maxLevel;
+	/**
+	 * Field _roomId.
+	 */
 	private int _roomId;
+	/**
+	 * Field _roomTitle.
+	 */
 	private String _roomTitle;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -36,6 +61,9 @@ public class RequestPartyMatchList extends L2GameClientPacket
 		_roomTitle = readS(64);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

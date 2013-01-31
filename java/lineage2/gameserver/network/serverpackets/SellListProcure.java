@@ -23,13 +23,34 @@ import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.manor.CropProcure;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SellListProcure extends L2GameServerPacket
 {
+	/**
+	 * Field _money.
+	 */
 	private final long _money;
+	/**
+	 * Field _sellList.
+	 */
 	private final Map<ItemInstance, Long> _sellList = new HashMap<>();
+	/**
+	 * Field _procureList.
+	 */
 	private List<CropProcure> _procureList = new ArrayList<>();
+	/**
+	 * Field _castle.
+	 */
 	private final int _castle;
 	
+	/**
+	 * Constructor for SellListProcure.
+	 * @param player Player
+	 * @param castleId int
+	 */
 	public SellListProcure(Player player, int castleId)
 	{
 		_money = player.getAdena();
@@ -45,6 +66,9 @@ public class SellListProcure extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

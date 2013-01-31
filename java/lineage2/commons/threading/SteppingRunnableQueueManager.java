@@ -27,26 +27,71 @@ import org.apache.commons.lang3.mutable.MutableLong;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class SteppingRunnableQueueManager implements Runnable
 {
+	/**
+	 * Field _log.
+	 */
 	static final Logger _log = LoggerFactory.getLogger(SteppingRunnableQueueManager.class);
+	/**
+	 * Field tickPerStepInMillis.
+	 */
 	protected final long tickPerStepInMillis;
+	/**
+	 * Field queue.
+	 */
 	private final List<SteppingScheduledFuture<?>> queue = new CopyOnWriteArrayList<>();
+	/**
+	 * Field isRunning.
+	 */
 	private final AtomicBoolean isRunning = new AtomicBoolean();
 	
+	/**
+	 * Constructor for SteppingRunnableQueueManager.
+	 * @param tickPerStepInMillis long
+	 */
 	public SteppingRunnableQueueManager(long tickPerStepInMillis)
 	{
 		this.tickPerStepInMillis = tickPerStepInMillis;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class SteppingScheduledFuture<V> implements RunnableScheduledFuture<V>
 	{
+		/**
+		 * Field r.
+		 */
 		final Runnable r;
+		/**
+		 * Field stepping.
+		 */
 		private final long stepping;
+		/**
+		 * Field isPeriodic.
+		 */
 		private final boolean isPeriodic;
+		/**
+		 * Field step.
+		 */
 		private long step;
+		/**
+		 * Field isCancelled.
+		 */
 		private boolean isCancelled;
 		
+		/**
+		 * Constructor for SteppingScheduledFuture.
+		 * @param r Runnable
+		 * @param initial long
+		 * @param stepping long
+		 * @param isPeriodic boolean
+		 */
 		public SteppingScheduledFuture(Runnable r, long initial, long stepping, boolean isPeriodic)
 		{
 			this.r = r;
@@ -55,6 +100,10 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 			this.isPeriodic = isPeriodic;
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.util.concurrent.RunnableFuture#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -78,48 +127,85 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 			}
 		}
 		
+		/**
+		 * Method isDone.
+		 * @return boolean * @see java.util.concurrent.Future#isDone()
+		 */
 		@Override
 		public boolean isDone()
 		{
 			return isCancelled || (!isPeriodic && (step == 0));
 		}
 		
+		/**
+		 * Method isCancelled.
+		 * @return boolean * @see java.util.concurrent.Future#isCancelled()
+		 */
 		@Override
 		public boolean isCancelled()
 		{
 			return isCancelled;
 		}
 		
+		/**
+		 * Method cancel.
+		 * @param mayInterruptIfRunning boolean
+		 * @return boolean * @see java.util.concurrent.Future#cancel(boolean)
+		 */
 		@Override
 		public boolean cancel(boolean mayInterruptIfRunning)
 		{
 			return isCancelled = true;
 		}
 		
+		/**
+		 * Method get.
+		 * @return V * @see java.util.concurrent.Future#get()
+		 */
 		@Override
 		public V get()
 		{
 			return null;
 		}
 		
+		/**
+		 * Method get.
+		 * @param timeout long
+		 * @param unit TimeUnit
+		 * @return V * @see java.util.concurrent.Future#get(long, TimeUnit)
+		 */
 		@Override
 		public V get(long timeout, TimeUnit unit)
 		{
 			return null;
 		}
 		
+		/**
+		 * Method getDelay.
+		 * @param unit TimeUnit
+		 * @return long * @see java.util.concurrent.Delayed#getDelay(TimeUnit)
+		 */
 		@Override
 		public long getDelay(TimeUnit unit)
 		{
 			return unit.convert(step * tickPerStepInMillis, TimeUnit.MILLISECONDS);
 		}
 		
+		/**
+		 * Method compareTo.
+		 * @param o Delayed
+		 * @return int
+		 */
 		@Override
 		public int compareTo(Delayed o)
 		{
 			return 0;
 		}
 		
+		/**
+		 * Method isPeriodic.
+		 * @return boolean * @see java.util.concurrent.RunnableScheduledFuture#isPeriodic()
+		 */
 		@Override
 		public boolean isPeriodic()
 		{
@@ -127,16 +213,37 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		}
 	}
 	
+	/**
+	 * Method schedule.
+	 * @param r Runnable
+	 * @param delay long
+	 * @return SteppingScheduledFuture<?>
+	 */
 	public SteppingScheduledFuture<?> schedule(Runnable r, long delay)
 	{
 		return schedule(r, delay, delay, false);
 	}
 	
+	/**
+	 * Method scheduleAtFixedRate.
+	 * @param r Runnable
+	 * @param initial long
+	 * @param delay long
+	 * @return SteppingScheduledFuture<?>
+	 */
 	public SteppingScheduledFuture<?> scheduleAtFixedRate(Runnable r, long initial, long delay)
 	{
 		return schedule(r, initial, delay, true);
 	}
 	
+	/**
+	 * Method schedule.
+	 * @param r Runnable
+	 * @param initial long
+	 * @param delay long
+	 * @param isPeriodic boolean
+	 * @return SteppingScheduledFuture<?>
+	 */
 	private SteppingScheduledFuture<?> schedule(Runnable r, long initial, long delay, boolean isPeriodic)
 	{
 		SteppingScheduledFuture<?> sr;
@@ -146,12 +253,21 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		return sr;
 	}
 	
+	/**
+	 * Method getStepping.
+	 * @param delay long
+	 * @return long
+	 */
 	private long getStepping(long delay)
 	{
 		delay = Math.max(0, delay);
 		return (delay % tickPerStepInMillis) > (tickPerStepInMillis / 2) ? (delay / tickPerStepInMillis) + 1 : delay < tickPerStepInMillis ? 1 : delay / tickPerStepInMillis;
 	}
 	
+	/**
+	 * Method run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public void run()
 	{
@@ -180,6 +296,9 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		}
 	}
 	
+	/**
+	 * Method purge.
+	 */
 	public void purge()
 	{
 		LazyArrayList<SteppingScheduledFuture<?>> purge = LazyArrayList.newInstance();
@@ -194,6 +313,10 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		LazyArrayList.recycle(purge);
 	}
 	
+	/**
+	 * Method getStats.
+	 * @return CharSequence
+	 */
 	public CharSequence getStats()
 	{
 		StringBuilder list = new StringBuilder();
@@ -220,10 +343,10 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		}
 		for (Map.Entry<String, MutableLong> e : stats.entrySet())
 		{
-			list.append("\t").append(e.getKey()).append(" : ").append(e.getValue().longValue()).append("\n");
+			list.append('\t').append(e.getKey()).append(" : ").append(e.getValue().longValue()).append('\n');
 		}
-		list.append("Scheduled: ....... ").append(total).append("\n");
-		list.append("Done/Cancelled: .. ").append(done).append("\n");
+		list.append("Scheduled: ....... ").append(total).append('\n');
+		list.append("Done/Cancelled: .. ").append(done).append('\n');
 		return list;
 	}
 }

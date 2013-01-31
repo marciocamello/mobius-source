@@ -14,15 +14,29 @@ package lineage2.loginserver.gameservercon.lspackets;
 
 import lineage2.loginserver.gameservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GetAccountInfo extends SendablePacket
 {
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
 	
+	/**
+	 * Constructor for GetAccountInfo.
+	 * @param name String
+	 */
 	public GetAccountInfo(String name)
 	{
 		_name = name;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

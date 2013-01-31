@@ -29,11 +29,33 @@ import org.apache.commons.pool.impl.GenericKeyedObjectPool;
 import org.apache.commons.pool.impl.GenericKeyedObjectPoolFactory;
 import org.apache.commons.pool.impl.GenericObjectPool;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BasicDataSource implements DataSource
 {
+	/**
+	 * Field _source.
+	 */
 	private final PoolingDataSource _source;
+	/**
+	 * Field _connectionPool.
+	 */
 	private final ObjectPool<?> _connectionPool;
 	
+	/**
+	 * Constructor for BasicDataSource.
+	 * @param driver String
+	 * @param connectURI String
+	 * @param uname String
+	 * @param passwd String
+	 * @param maxActive int
+	 * @param maxIdle int
+	 * @param idleTimeOut int
+	 * @param idleTestPeriod int
+	 * @param poolPreparedStatements boolean
+	 */
 	public BasicDataSource(String driver, String connectURI, String uname, String passwd, int maxActive, int maxIdle, int idleTimeOut, int idleTestPeriod, boolean poolPreparedStatements)
 	{
 		GenericObjectPool<?> connectionPool = new GenericObjectPool<>(null);
@@ -63,74 +85,133 @@ public class BasicDataSource implements DataSource
 		_source = dataSource;
 	}
 	
+	/**
+	 * Method getConnection.
+	 * @param con Connection
+	 * @return Connection * @throws SQLException
+	 */
 	public Connection getConnection(Connection con) throws SQLException
 	{
 		return (con == null) || con.isClosed() ? _source.getConnection() : con;
 	}
 	
+	/**
+	 * Method getBusyConnectionCount.
+	 * @return int
+	 */
 	public int getBusyConnectionCount()
 	{
 		return _connectionPool.getNumActive();
 	}
 	
+	/**
+	 * Method getIdleConnectionCount.
+	 * @return int
+	 */
 	public int getIdleConnectionCount()
 	{
 		return _connectionPool.getNumIdle();
 	}
 	
+	/**
+	 * Method shutdown.
+	 * @throws Exception
+	 */
 	public void shutdown() throws Exception
 	{
 		_connectionPool.close();
 	}
 	
+	/**
+	 * Method getLogWriter.
+	 * @return PrintWriter * @see javax.sql.CommonDataSource#getLogWriter()
+	 */
 	@Override
 	public PrintWriter getLogWriter()
 	{
 		return _source.getLogWriter();
 	}
 	
+	/**
+	 * Method setLogWriter.
+	 * @param out PrintWriter
+	 * @see javax.sql.CommonDataSource#setLogWriter(PrintWriter)
+	 */
 	@Override
 	public void setLogWriter(PrintWriter out)
 	{
 		_source.setLogWriter(out);
 	}
 	
+	/**
+	 * Method setLoginTimeout.
+	 * @param seconds int
+	 * @see javax.sql.CommonDataSource#setLoginTimeout(int)
+	 */
 	@Override
 	public void setLoginTimeout(int seconds)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method getLoginTimeout.
+	 * @return int * @see javax.sql.CommonDataSource#getLoginTimeout()
+	 */
 	@Override
 	public int getLoginTimeout()
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method getParentLogger.
+	 * @return Logger * @see javax.sql.CommonDataSource#getParentLogger()
+	 */
 	@Override
 	public Logger getParentLogger()
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method unwrap.
+	 * @param iface Class<T>
+	 * @return T * @see java.sql.Wrapper#unwrap(Class<T>)
+	 */
 	@Override
 	public <T> T unwrap(Class<T> iface)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method isWrapperFor.
+	 * @param iface Class<?>
+	 * @return boolean * @see java.sql.Wrapper#isWrapperFor(Class<?>)
+	 */
 	@Override
 	public boolean isWrapperFor(Class<?> iface)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getConnection.
+	 * @return Connection * @throws SQLException * @see javax.sql.DataSource#getConnection()
+	 */
 	@Override
 	public Connection getConnection() throws SQLException
 	{
 		return _source.getConnection();
 	}
 	
+	/**
+	 * Method getConnection.
+	 * @param username String
+	 * @param password String
+	 * @return Connection * @see javax.sql.DataSource#getConnection(String, String)
+	 */
 	@Override
 	public Connection getConnection(String username, String password)
 	{

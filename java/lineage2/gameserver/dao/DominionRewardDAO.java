@@ -26,20 +26,50 @@ import lineage2.gameserver.utils.SqlBatch;
 import org.apache.log4j.Logger;
 import org.napile.primitive.maps.IntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DominionRewardDAO
 {
+	/**
+	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO dominion_rewards (id, object_id, static_badges, online_reward, kill_reward) VALUES"")
+	 */
 	private static final String INSERT_SQL_QUERY = "INSERT INTO dominion_rewards (id, object_id, static_badges, online_reward, kill_reward) VALUES";
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT * FROM dominion_rewards WHERE id=?"")
+	 */
 	private static final String SELECT_SQL_QUERY = "SELECT * FROM dominion_rewards WHERE id=?";
+	/**
+	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM dominion_rewards WHERE id=? AND object_id=?"")
+	 */
 	private static final String DELETE_SQL_QUERY = "DELETE FROM dominion_rewards WHERE id=? AND object_id=?";
+	/**
+	 * Field DELETE_SQL_QUERY2. (value is ""DELETE FROM dominion_rewards WHERE id=?"")
+	 */
 	private static final String DELETE_SQL_QUERY2 = "DELETE FROM dominion_rewards WHERE id=?";
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = Logger.getLogger(DominionRewardDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final DominionRewardDAO _instance = new DominionRewardDAO();
 	
+	/**
+	 * Method getInstance.
+	 * @return DominionRewardDAO
+	 */
 	public static DominionRewardDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method select.
+	 * @param d Dominion
+	 */
 	public void select(Dominion d)
 	{
 		DominionSiegeEvent siegeEvent = d.getSiegeEvent();
@@ -73,6 +103,10 @@ public class DominionRewardDAO
 		}
 	}
 	
+	/**
+	 * Method insert.
+	 * @param d Dominion
+	 */
 	public void insert(Dominion d)
 	{
 		Connection con = null;
@@ -89,11 +123,11 @@ public class DominionRewardDAO
 			for (IntObjectMap.Entry<int[]> entry : rewards)
 			{
 				StringBuilder sb = new StringBuilder("(");
-				sb.append(d.getId()).append(",");
-				sb.append(entry.getKey()).append(",");
-				sb.append(entry.getValue()[DominionSiegeEvent.STATIC_BADGES]).append(",");
-				sb.append(entry.getValue()[DominionSiegeEvent.ONLINE_REWARD]).append(",");
-				sb.append(entry.getValue()[DominionSiegeEvent.KILL_REWARD]).append(")");
+				sb.append(d.getId()).append(',');
+				sb.append(entry.getKey()).append(',');
+				sb.append(entry.getValue()[DominionSiegeEvent.STATIC_BADGES]).append(',');
+				sb.append(entry.getValue()[DominionSiegeEvent.ONLINE_REWARD]).append(',');
+				sb.append(entry.getValue()[DominionSiegeEvent.KILL_REWARD]).append(')');
 				b.write(sb.toString());
 			}
 			if (!b.isEmpty())
@@ -111,6 +145,11 @@ public class DominionRewardDAO
 		}
 	}
 	
+	/**
+	 * Method delete.
+	 * @param d Dominion
+	 * @param objectId int
+	 */
 	public void delete(Dominion d, int objectId)
 	{
 		Connection con = null;

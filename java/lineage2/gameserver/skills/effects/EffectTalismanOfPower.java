@@ -15,13 +15,25 @@ package lineage2.gameserver.skills.effects;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectTalismanOfPower extends Effect
 {
+	/**
+	 * Constructor for EffectTalismanOfPower.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectTalismanOfPower(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -42,12 +54,19 @@ public class EffectTalismanOfPower extends Effect
 		}
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
 		super.onExit();
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean onActionTime()
 	{

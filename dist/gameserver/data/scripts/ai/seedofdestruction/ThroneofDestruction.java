@@ -20,17 +20,37 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ThroneofDestruction extends DefaultAI
 {
+	/**
+	 * Field DOOR. (value is 12240031)
+	 */
 	private static final int DOOR = 12240031;
+	/**
+	 * Field TIAT_NPC_ID. (value is 29163)
+	 */
 	private static final int TIAT_NPC_ID = 29163;
+	/**
+	 * Field TIAT_LOC.
+	 */
 	private static final Location TIAT_LOC = new Location(-250403, 207273, -11952, 16384);
+	/**
+	 * Field checkNpcs.
+	 */
 	private static final int[] checkNpcs =
 	{
 		18778,
 		18777
 	};
 	
+	/**
+	 * Constructor for ThroneofDestruction.
+	 * @param actor NpcInstance
+	 */
 	public ThroneofDestruction(NpcInstance actor)
 	{
 		super(actor);
@@ -38,6 +58,10 @@ public class ThroneofDestruction extends DefaultAI
 		actor.startDamageBlocked();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -51,6 +75,11 @@ public class ThroneofDestruction extends DefaultAI
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method checkAllDestroyed.
+	 * @param mobId int
+	 * @return boolean
+	 */
 	private boolean checkAllDestroyed(int mobId)
 	{
 		for (NpcInstance npc : getActor().getReflection().getNpcs())

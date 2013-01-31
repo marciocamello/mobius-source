@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExAttributeEnchantResult extends L2GameServerPacket
 {
+	/**
+	 * Field _result.
+	 */
 	private final int _result;
 	
+	/**
+	 * Constructor for ExAttributeEnchantResult.
+	 * @param unknown int
+	 */
 	public ExAttributeEnchantResult(int unknown)
 	{
 		_result = unknown;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

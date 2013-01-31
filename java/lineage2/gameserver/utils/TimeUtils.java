@@ -15,15 +15,32 @@ package lineage2.gameserver.utils;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TimeUtils
 {
+	/**
+	 * Field SIMPLE_FORMAT.
+	 */
 	private static final SimpleDateFormat SIMPLE_FORMAT = new SimpleDateFormat("HH:mm dd.MM.yyyy");
 	
+	/**
+	 * Method toSimpleFormat.
+	 * @param cal Calendar
+	 * @return String
+	 */
 	public static String toSimpleFormat(Calendar cal)
 	{
 		return SIMPLE_FORMAT.format(cal.getTime());
 	}
 	
+	/**
+	 * Method toSimpleFormat.
+	 * @param cal long
+	 * @return String
+	 */
 	public static String toSimpleFormat(long cal)
 	{
 		return SIMPLE_FORMAT.format(cal);

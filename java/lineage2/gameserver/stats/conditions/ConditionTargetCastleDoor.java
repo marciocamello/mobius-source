@@ -15,15 +15,31 @@ package lineage2.gameserver.stats.conditions;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionTargetCastleDoor extends Condition
 {
+	/**
+	 * Field _isCastleDoor.
+	 */
 	private final boolean _isCastleDoor;
 	
+	/**
+	 * Constructor for ConditionTargetCastleDoor.
+	 * @param isCastleDoor boolean
+	 */
 	public ConditionTargetCastleDoor(boolean isCastleDoor)
 	{
 		_isCastleDoor = isCastleDoor;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

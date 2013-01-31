@@ -18,16 +18,36 @@ import jonelo.jacksum.algorithm.AbstractChecksum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PasswordHash
 {
+	/**
+	 * Field _log.
+	 */
 	private final static Logger _log = LoggerFactory.getLogger(PasswordHash.class);
+	/**
+	 * Field name.
+	 */
 	private final String name;
 	
+	/**
+	 * Constructor for PasswordHash.
+	 * @param name String
+	 */
 	public PasswordHash(String name)
 	{
 		this.name = name;
 	}
 	
+	/**
+	 * Method compare.
+	 * @param password String
+	 * @param expected String
+	 * @return boolean
+	 */
 	public boolean compare(String password, String expected)
 	{
 		try
@@ -41,6 +61,11 @@ public class PasswordHash
 		}
 	}
 	
+	/**
+	 * Method encrypt.
+	 * @param password String
+	 * @return String * @throws Exception
+	 */
 	public String encrypt(String password) throws Exception
 	{
 		AbstractChecksum checksum = JacksumAPI.getChecksumInstance(name);

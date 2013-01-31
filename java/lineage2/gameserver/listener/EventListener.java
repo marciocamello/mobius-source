@@ -15,6 +15,10 @@ package lineage2.gameserver.listener;
 import lineage2.commons.listener.Listener;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface EventListener extends Listener<GlobalEvent>
 {
 }

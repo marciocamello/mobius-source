@@ -33,10 +33,21 @@ import lineage2.gameserver.utils.BbsUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CommunityStats.class);
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -47,6 +58,10 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -56,11 +71,20 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method getBypassCommands.
+	 * @return String[]
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#getBypassCommands()
+	 */
 	@Override
 	public String[] getBypassCommands()
 	{
@@ -74,28 +98,90 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		};
 	}
 	
+	/**
+	 */
 	public class CBStatMan
 	{
+		/**
+		 * Field PlayerId.
+		 */
 		public int PlayerId = 0;
+		/**
+		 * Field ChName.
+		 */
 		public String ChName = "";
+		/**
+		 * Field ChGameTime.
+		 */
 		public int ChGameTime = 0;
+		/**
+		 * Field ChPk.
+		 */
 		public int ChPk = 0;
+		/**
+		 * Field ChPvP.
+		 */
 		public int ChPvP = 0;
+		/**
+		 * Field ChOnOff.
+		 */
 		public int ChOnOff = 0;
+		/**
+		 * Field ChSex.
+		 */
 		public int ChSex = 0;
+		/**
+		 * Field NameCastl.
+		 */
 		public String NameCastl;
+		/**
+		 * Field siegeDate.
+		 */
 		public Object siegeDate;
+		/**
+		 * Field Percent.
+		 */
 		public String Percent;
+		/**
+		 * Field id2.
+		 */
 		public Object id2;
+		/**
+		 * Field id.
+		 */
 		public int id;
+		/**
+		 * Field ClanLevel.
+		 */
 		public int ClanLevel;
+		/**
+		 * Field hasCastle.
+		 */
 		public int hasCastle;
+		/**
+		 * Field ReputationClan.
+		 */
 		public int ReputationClan;
+		/**
+		 * Field AllyName.
+		 */
 		public String AllyName;
+		/**
+		 * Field ClanName.
+		 */
 		public String ClanName;
+		/**
+		 * Field Owner.
+		 */
 		public String Owner;
 	}
 	
+	/**
+	 * Method onBypassCommand.
+	 * @param player Player
+	 * @param command String
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onBypassCommand(Player, String)
+	 */
 	@Override
 	public void onBypassCommand(Player player, String command)
 	{
@@ -121,10 +207,14 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		}
 		else
 		{
-			ShowBoard.separateAndSend("<html><body><br><br><center>В bbsstat функция: " + command + " пока не реализована</center><br><br></body></html>", player);
+			ShowBoard.separateAndSend("<html><body><br><br><center>В bbsstat функци�?: " + command + " пока не реализована</center><br><br></body></html>", player);
 		}
 	}
 	
+	/**
+	 * Method showPvp.
+	 * @param player Player
+	 */
 	private void showPvp(Player player)
 	{
 		Connection con = null;
@@ -147,7 +237,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				tp.ChPk = rs.getInt("pkkills");
 				tp.ChPvP = rs.getInt("pvpkills");
 				tp.ChOnOff = rs.getInt("online");
-				String sex = tp.ChSex == 1 ? "Ж" : "М";
+				String sex = tp.ChSex == 1 ? "Ж" : "�?";
 				String color;
 				String OnOff;
 				if (tp.ChOnOff == 1)
@@ -157,7 +247,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				}
 				else
 				{
-					OnOff = "Оффлайн.";
+					OnOff = "�?ффлайн.";
 					color = "D70000";
 				}
 				html.append("<tr>");
@@ -186,6 +276,10 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method showPK.
+	 * @param player Player
+	 */
 	private void showPK(Player player)
 	{
 		Connection con = null;
@@ -208,7 +302,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				tp.ChPk = rs.getInt("pkkills");
 				tp.ChPvP = rs.getInt("pvpkills");
 				tp.ChOnOff = rs.getInt("online");
-				String sex = tp.ChSex == 1 ? "Ж" : "М";
+				String sex = tp.ChSex == 1 ? "Ж" : "�?";
 				String color;
 				String OnOff;
 				if (tp.ChOnOff == 1)
@@ -218,7 +312,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				}
 				else
 				{
-					OnOff = "Оффлайн.";
+					OnOff = "�?ффлайн.";
 					color = "D70000";
 				}
 				html.append("<tr>");
@@ -247,6 +341,10 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method showOnline.
+	 * @param player Player
+	 */
 	private void showOnline(Player player)
 	{
 		Connection con = null;
@@ -269,7 +367,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				tp.ChPk = rs.getInt("pkkills");
 				tp.ChPvP = rs.getInt("pvpkills");
 				tp.ChOnOff = rs.getInt("online");
-				String sex = tp.ChSex == 1 ? "Ж" : "М";
+				String sex = tp.ChSex == 1 ? "Ж" : "�?";
 				String color;
 				String OnOff;
 				if (tp.ChOnOff == 1)
@@ -279,7 +377,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				}
 				else
 				{
-					OnOff = "Оффлайн.";
+					OnOff = "�?ффлайн.";
 					color = "D70000";
 				}
 				html.append("<tr>");
@@ -308,6 +406,10 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method showCastle.
+	 * @param player Player
+	 */
 	private void showCastle(Player player)
 	{
 		SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
@@ -338,7 +440,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				else
 				{
 					color = "FFFFFF";
-					Owner = "Нет владельца";
+					Owner = "�?ет владел�?ца";
 				}
 				html.append("<tr>");
 				html.append("<td width=150>" + tp.NameCastl + "</td>");
@@ -364,6 +466,10 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method showClan.
+	 * @param player Player
+	 */
 	private void showClan(Player player)
 	{
 		Connection con = null;
@@ -425,7 +531,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 						castleColor = "00CC00";
 						break;
 					default:
-						hasCastle = "Нету";
+						hasCastle = "�?ету";
 						castleColor = "D70000";
 						break;
 				}
@@ -437,7 +543,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				}
 				else
 				{
-					html.append("<td width=150>Нет альянса</td>");
+					html.append("<td width=150>�?ет ал�?�?н�?а</td>");
 				}
 				html.append("<td width=100>" + tp.ReputationClan + "</td>");
 				html.append("<td width=50>" + tp.ClanLevel + "</td>");
@@ -461,6 +567,11 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method OnlineTime.
+	 * @param time int
+	 * @return String
+	 */
 	String OnlineTime(int time)
 	{
 		long onlinetimeH;
@@ -477,6 +588,17 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		return "" + onlinetimeH + " ч. " + onlinetimeM + " м.";
 	}
 	
+	/**
+	 * Method onWriteCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @param arg1 String
+	 * @param arg2 String
+	 * @param arg3 String
+	 * @param arg4 String
+	 * @param arg5 String
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)
+	 */
 	@Override
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{

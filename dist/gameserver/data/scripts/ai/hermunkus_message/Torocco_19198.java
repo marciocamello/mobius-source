@@ -21,15 +21,32 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Torocco_19198 extends Dwarvs
 {
+	/**
+	 * Field ROGIN_ID. (value is 19193)
+	 */
 	private static final int ROGIN_ID = 19193;
 	
+	/**
+	 * Constructor for Torocco_19198.
+	 * @param actor NpcInstance
+	 */
 	public Torocco_19198(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtScriptEvent.
+	 * @param event String
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
@@ -40,6 +57,12 @@ public class Torocco_19198 extends Dwarvs
 		}
 	}
 	
+	/**
+	 * Method onEvtTimer.
+	 * @param timerId int
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{

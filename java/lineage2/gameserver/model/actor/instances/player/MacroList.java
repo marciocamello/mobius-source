@@ -31,14 +31,37 @@ import lineage2.gameserver.utils.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MacroList
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(MacroList.class);
+	/**
+	 * Field player.
+	 */
 	private final Player player;
+	/**
+	 * Field _macroses.
+	 */
 	private final Map<Integer, Macro> _macroses = new HashMap<>();
+	/**
+	 * Field _revision.
+	 */
 	private int _revision;
+	/**
+	 * Field _macroId.
+	 */
 	private int _macroId;
 	
+	/**
+	 * Constructor for MacroList.
+	 * @param player Player
+	 */
 	public MacroList(Player player)
 	{
 		this.player = player;
@@ -46,21 +69,38 @@ public class MacroList
 		_macroId = 1000;
 	}
 	
+	/**
+	 * Method getRevision.
+	 * @return int
+	 */
 	public int getRevision()
 	{
 		return _revision;
 	}
 	
+	/**
+	 * Method getAllMacroses.
+	 * @return Macro[]
+	 */
 	public Macro[] getAllMacroses()
 	{
 		return _macroses.values().toArray(new Macro[_macroses.size()]);
 	}
 	
+	/**
+	 * Method getMacro.
+	 * @param id int
+	 * @return Macro
+	 */
 	public Macro getMacro(int id)
 	{
 		return _macroses.get(id - 1);
 	}
 	
+	/**
+	 * Method registerMacro.
+	 * @param macro Macro
+	 */
 	public void registerMacro(Macro macro)
 	{
 		if (macro.id == 0)
@@ -85,6 +125,10 @@ public class MacroList
 		sendUpdate();
 	}
 	
+	/**
+	 * Method deleteMacro.
+	 * @param id int
+	 */
 	public void deleteMacro(int id)
 	{
 		Macro toRemove = _macroses.get(id);
@@ -96,6 +140,9 @@ public class MacroList
 		sendUpdate();
 	}
 	
+	/**
+	 * Method sendUpdate.
+	 */
 	public void sendUpdate()
 	{
 		_revision++;
@@ -113,6 +160,10 @@ public class MacroList
 		}
 	}
 	
+	/**
+	 * Method registerMacroInDb.
+	 * @param macro Macro
+	 */
 	private void registerMacroInDb(Macro macro)
 	{
 		Connection con = null;
@@ -152,6 +203,10 @@ public class MacroList
 		}
 	}
 	
+	/**
+	 * Method deleteMacroFromDb.
+	 * @param macro Macro
+	 */
 	private void deleteMacroFromDb(Macro macro)
 	{
 		Connection con = null;
@@ -174,6 +229,9 @@ public class MacroList
 		}
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	public void restore()
 	{
 		_macroses.clear();

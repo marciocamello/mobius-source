@@ -15,6 +15,10 @@ package lineage2.gameserver.model.instances;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NoTargetNpcInstance extends NpcInstance
 {
 	/**
@@ -22,11 +26,21 @@ public class NoTargetNpcInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for NoTargetNpcInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public NoTargetNpcInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{
@@ -34,6 +48,10 @@ public class NoTargetNpcInstance extends NpcInstance
 		return;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{

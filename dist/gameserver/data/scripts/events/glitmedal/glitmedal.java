@@ -35,21 +35,67 @@ import lineage2.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class glitmedal extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
+	/**
+	 * Field EVENT_MANAGER_ID1.
+	 */
 	private static int EVENT_MANAGER_ID1 = 31228;
+	/**
+	 * Field EVENT_MANAGER_ID2.
+	 */
 	private static int EVENT_MANAGER_ID2 = 31229;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(glitmedal.class);
+	/**
+	 * Field isTalker.
+	 */
 	private int isTalker;
+	/**
+	 * Field EVENT_MEDAL.
+	 */
 	private static int EVENT_MEDAL = 6392;
+	/**
+	 * Field EVENT_GLITTMEDAL.
+	 */
 	private static int EVENT_GLITTMEDAL = 6393;
+	/**
+	 * Field Badge_of_Rabbit.
+	 */
 	private static int Badge_of_Rabbit = 6399;
+	/**
+	 * Field Badge_of_Hyena.
+	 */
 	private static int Badge_of_Hyena = 6400;
+	/**
+	 * Field Badge_of_Fox.
+	 */
 	private static int Badge_of_Fox = 6401;
+	/**
+	 * Field Badge_of_Wolf.
+	 */
 	private static int Badge_of_Wolf = 6402;
+	/**
+	 * Field _spawns.
+	 */
 	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	/**
+	 * Field _active.
+	 */
 	private static boolean _active = false;
+	/**
+	 * Field MultiSellLoaded.
+	 */
 	private static boolean MultiSellLoaded = false;
+	/**
+	 * Field multiSellFiles.
+	 */
 	private static File[] multiSellFiles =
 	{
 		new File(Config.DATAPACK_ROOT, "data/xml/other/event/glitmedal/502.xml"),
@@ -59,6 +105,10 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		new File(Config.DATAPACK_ROOT, "data/xml/other/event/glitmedal/506.xml"),
 	};
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -76,11 +126,18 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return IsActive("glitter");
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -103,6 +160,9 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -124,6 +184,11 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -133,6 +198,9 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	private void spawnEventManagers()
 	{
 		final int EVENT_MANAGERS1[][] =
@@ -325,11 +393,17 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		SpawnNPCs(EVENT_MANAGER_ID2, EVENT_MANAGERS2, _spawns);
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
 	}
 	
+	/**
+	 * Method loadMultiSell.
+	 */
 	private static void loadMultiSell()
 	{
 		if (MultiSellLoaded)
@@ -343,6 +417,10 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		MultiSellLoaded = true;
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -357,11 +435,21 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature cha, Creature killer)
 	{
@@ -379,6 +467,9 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
+	/**
+	 * Method glitchang.
+	 */
 	public void glitchang()
 	{
 		Player player = getSelf();
@@ -395,6 +486,9 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 	}
 	
+	/**
+	 * Method medal.
+	 */
 	public void medal()
 	{
 		Player player = getSelf();
@@ -425,6 +519,9 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		show("scripts/events/glitmedal/event_col_agent1_q0996_01.htm", player);
 	}
 	
+	/**
+	 * Method medalb.
+	 */
 	public void medalb()
 	{
 		Player player = getSelf();
@@ -456,6 +553,9 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		return;
 	}
 	
+	/**
+	 * Method game.
+	 */
 	public void game()
 	{
 		Player player = getSelf();
@@ -501,6 +601,9 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		show("scripts/events/glitmedal/event_col_agent2_q0996_12.htm", player);
 	}
 	
+	/**
+	 * Method gamea.
+	 */
 	public void gamea()
 	{
 		Player player = getSelf();
@@ -594,6 +697,9 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		show("scripts/events/glitmedal/event_col_agent2_q0996_26.htm", player);
 	}
 	
+	/**
+	 * Method gameb.
+	 */
 	public void gameb()
 	{
 		Player player = getSelf();

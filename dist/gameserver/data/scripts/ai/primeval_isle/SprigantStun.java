@@ -17,17 +17,38 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SprigantStun extends DefaultAI
 {
+	/**
+	 * Field SKILL.
+	 */
 	private final Skill SKILL = SkillTable.getInstance().getInfo(5085, 1);
+	/**
+	 * Field _waitTime.
+	 */
 	private long _waitTime;
+	/**
+	 * Field TICK_IN_MILISECONDS. (value is 15000)
+	 */
 	private static final int TICK_IN_MILISECONDS = 15000;
 	
+	/**
+	 * Constructor for SprigantStun.
+	 * @param actor NpcInstance
+	 */
 	public SprigantStun(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

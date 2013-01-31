@@ -23,21 +23,54 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PavelRuins extends Fighter
 {
+	/**
+	 * Field PAVEL_SAFETY_DEVICE. (value is 18917)
+	 */
 	private static final int PAVEL_SAFETY_DEVICE = 18917;
+	/**
+	 * Field CRUEL_PINCER_GOLEM_1. (value is 22801)
+	 */
 	private static final int CRUEL_PINCER_GOLEM_1 = 22801;
+	/**
+	 * Field CRUEL_PINCER_GOLEM_2. (value is 22802)
+	 */
 	private static final int CRUEL_PINCER_GOLEM_2 = 22802;
+	/**
+	 * Field CRUEL_PINCER_GOLEM_3. (value is 22803)
+	 */
 	private static final int CRUEL_PINCER_GOLEM_3 = 22803;
+	/**
+	 * Field DRILL_GOLEM_OF_TERROR_1. (value is 22804)
+	 */
 	private static final int DRILL_GOLEM_OF_TERROR_1 = 22804;
+	/**
+	 * Field DRILL_GOLEM_OF_TERROR_2. (value is 22805)
+	 */
 	private static final int DRILL_GOLEM_OF_TERROR_2 = 22805;
+	/**
+	 * Field DRILL_GOLEM_OF_TERROR_3. (value is 22806)
+	 */
 	private static final int DRILL_GOLEM_OF_TERROR_3 = 22806;
 	
+	/**
+	 * Constructor for PavelRuins.
+	 * @param actor NpcInstance
+	 */
 	public PavelRuins(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -46,17 +79,34 @@ public class PavelRuins extends Fighter
 		ThreadPoolManager.getInstance().schedule(new SpawnNext(actor, killer), 5000);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class SpawnNext extends RunnableImpl
 	{
+		/**
+		 * Field _actor.
+		 */
 		private final NpcInstance _actor;
+		/**
+		 * Field _killer.
+		 */
 		private final Creature _killer;
 		
+		/**
+		 * Constructor for SpawnNext.
+		 * @param actor NpcInstance
+		 * @param killer Creature
+		 */
 		public SpawnNext(NpcInstance actor, Creature killer)
 		{
 			_actor = actor;
 			_killer = killer;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -88,6 +138,12 @@ public class PavelRuins extends Fighter
 		}
 	}
 	
+	/**
+	 * Method spawnNextMob.
+	 * @param npcId int
+	 * @param killer Creature
+	 * @param loc Location
+	 */
 	static void spawnNextMob(int npcId, Creature killer, Location loc)
 	{
 		SimpleSpawner sp = new SimpleSpawner(npcId);

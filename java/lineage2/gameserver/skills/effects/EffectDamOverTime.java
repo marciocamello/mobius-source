@@ -17,8 +17,15 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectDamOverTime extends Effect
 {
+	/**
+	 * Field bleed.
+	 */
 	private static int[] bleed = new int[]
 	{
 		12,
@@ -34,6 +41,9 @@ public class EffectDamOverTime extends Effect
 		82,
 		87
 	};
+	/**
+	 * Field poison.
+	 */
 	private static int[] poison = new int[]
 	{
 		11,
@@ -49,14 +59,26 @@ public class EffectDamOverTime extends Effect
 		77,
 		82
 	};
+	/**
+	 * Field _percent.
+	 */
 	private final boolean _percent;
 	
+	/**
+	 * Constructor for EffectDamOverTime.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectDamOverTime(Env env, EffectTemplate template)
 	{
 		super(env, template);
 		_percent = getTemplate().getParam().getBool("percent", false);
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

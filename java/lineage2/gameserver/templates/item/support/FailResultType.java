@@ -12,9 +12,22 @@
  */
 package lineage2.gameserver.templates.item.support;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum FailResultType
 {
+	/**
+	 * Field NOTHING.
+	 */
 	NOTHING,
+	/**
+	 * Field CRYSTALS.
+	 */
 	CRYSTALS,
+	/**
+	 * Field DROP_ENCHANT.
+	 */
 	DROP_ENCHANT
 }

@@ -27,15 +27,28 @@ import lineage2.gameserver.utils.Strings;
 
 import org.apache.log4j.Logger;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DeleteExpiredVarsTask extends AutomaticTask
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = Logger.getLogger(DeleteExpiredVarsTask.class);
 	
+	/**
+	 * Constructor for DeleteExpiredVarsTask.
+	 */
 	public DeleteExpiredVarsTask()
 	{
 		super();
 	}
 	
+	/**
+	 * Method doTask.
+	 */
 	@Override
 	public void doTask()
 	{
@@ -82,6 +95,11 @@ public class DeleteExpiredVarsTask extends AutomaticTask
 		}
 	}
 	
+	/**
+	 * Method reCalcTime.
+	 * @param start boolean
+	 * @return long
+	 */
 	@Override
 	public long reCalcTime(boolean start)
 	{

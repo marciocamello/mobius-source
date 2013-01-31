@@ -16,13 +16,25 @@ import lineage2.gameserver.ai.PlayerAI;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectAggression extends Effect
 {
+	/**
+	 * Constructor for EffectAggression.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectAggression(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -33,6 +45,9 @@ public class EffectAggression extends Effect
 		}
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -43,6 +58,10 @@ public class EffectAggression extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

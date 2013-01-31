@@ -21,8 +21,15 @@ import lineage2.gameserver.network.serverpackets.RadarControl;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Help extends Functions implements IVoicedCommandHandler
 {
+	/**
+	 * Field _commandList.
+	 */
 	private final String[] _commandList = new String[]
 	{
 		"help",
@@ -30,6 +37,13 @@ public class Help extends Functions implements IVoicedCommandHandler
 		"whereis"
 	};
 	
+	/**
+	 * Method useVoicedCommand.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param args String
+	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String args)
 	{
@@ -49,6 +63,13 @@ public class Help extends Functions implements IVoicedCommandHandler
 		return false;
 	}
 	
+	/**
+	 * Method exp.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param args String
+	 * @return boolean
+	 */
 	private boolean exp(String command, Player activeChar, String args)
 	{
 		if (activeChar.getLevel() >= (activeChar.isBaseClassActive() ? Experience.getMaxSubLevel() : Experience.getMaxLevel()))
@@ -63,6 +84,13 @@ public class Help extends Functions implements IVoicedCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method whereis.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param args String
+	 * @return boolean
+	 */
 	private boolean whereis(String command, Player activeChar, String args)
 	{
 		Player friend = World.getPlayer(args);
@@ -79,6 +107,13 @@ public class Help extends Functions implements IVoicedCommandHandler
 		return false;
 	}
 	
+	/**
+	 * Method help.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param args String
+	 * @return boolean
+	 */
 	private boolean help(String command, Player activeChar, String args)
 	{
 		String dialog = HtmCache.getInstance().getNotNull("command/help.htm", activeChar);
@@ -86,6 +121,10 @@ public class Help extends Functions implements IVoicedCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getVoicedCommandList.
+	 * @return String[] * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
+	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{

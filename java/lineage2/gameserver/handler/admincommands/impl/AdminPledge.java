@@ -27,13 +27,31 @@ import lineage2.gameserver.network.serverpackets.PledgeStatusChanged;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminPledge implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_pledge.
+		 */
 		admin_pledge
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -185,6 +203,10 @@ public class AdminPledge implements IAdminCommandHandler
 		return false;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

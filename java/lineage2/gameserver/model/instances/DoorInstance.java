@@ -44,6 +44,10 @@ import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.templates.DoorTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class DoorInstance extends Creature implements GeoCollision
 {
 	/**
@@ -51,15 +55,28 @@ public final class DoorInstance extends Creature implements GeoCollision
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class AutoOpenClose extends RunnableImpl
 	{
+		/**
+		 * Field _open.
+		 */
 		private final boolean _open;
 		
+		/**
+		 * Constructor for AutoOpenClose.
+		 * @param open boolean
+		 */
 		public AutoOpenClose(boolean open)
 		{
 			_open = open;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -74,45 +91,93 @@ public final class DoorInstance extends Creature implements GeoCollision
 		}
 	}
 	
+	/**
+	 * Field _open.
+	 */
 	private boolean _open = true;
+	/**
+	 * Field _geoOpen.
+	 */
 	private boolean _geoOpen = true;
+	/**
+	 * Field _openLock.
+	 */
 	private final Lock _openLock = new ReentrantLock();
+	/**
+	 * Field _upgradeHp.
+	 */
 	private int _upgradeHp;
+	/**
+	 * Field _geoAround.
+	 */
 	private byte[][] _geoAround;
+	/**
+	 * Field _autoActionTask.
+	 */
 	protected ScheduledFuture<?> _autoActionTask;
 	
+	/**
+	 * Constructor for DoorInstance.
+	 * @param objectId int
+	 * @param template DoorTemplate
+	 */
 	public DoorInstance(int objectId, DoorTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method isUnlockable.
+	 * @return boolean
+	 */
 	public boolean isUnlockable()
 	{
 		return getTemplate().isUnlockable();
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	@Override
 	public String getName()
 	{
 		return getTemplate().getName();
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	@Override
 	public int getLevel()
 	{
 		return 1;
 	}
 	
+	/**
+	 * Method getDoorId.
+	 * @return int
+	 */
 	public int getDoorId()
 	{
 		return getTemplate().getNpcId();
 	}
 	
+	/**
+	 * Method isOpen.
+	 * @return boolean
+	 */
 	public boolean isOpen()
 	{
 		return _open;
 	}
 	
+	/**
+	 * Method setOpen.
+	 * @param open boolean
+	 * @return boolean
+	 */
 	protected boolean setOpen(boolean open)
 	{
 		if (_open == open)
@@ -123,6 +188,11 @@ public final class DoorInstance extends Creature implements GeoCollision
 		return true;
 	}
 	
+	/**
+	 * Method scheduleAutoAction.
+	 * @param open boolean
+	 * @param actionDelay long
+	 */
 	public void scheduleAutoAction(boolean open, long actionDelay)
 	{
 		if (_autoActionTask != null)
@@ -133,18 +203,32 @@ public final class DoorInstance extends Creature implements GeoCollision
 		_autoActionTask = ThreadPoolManager.getInstance().schedule(new AutoOpenClose(open), actionDelay);
 	}
 	
+	/**
+	 * Method getDamage.
+	 * @return int
+	 */
 	public int getDamage()
 	{
 		int dmg = 6 - (int) Math.ceil(getCurrentHpRatio() * 6);
 		return Math.max(0, Math.min(6, dmg));
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		return isAttackable(attacker);
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature attacker)
 	{
@@ -183,35 +267,59 @@ public final class DoorInstance extends Creature implements GeoCollision
 		return !isInvul();
 	}
 	
+	/**
+	 * Method sendChanges.
+	 */
 	@Override
 	public void sendChanges()
 	{
 	}
 	
+	/**
+	 * Method getActiveWeaponInstance.
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance getActiveWeaponInstance()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getActiveWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	@Override
 	public WeaponTemplate getActiveWeaponItem()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getSecondaryWeaponInstance.
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance getSecondaryWeaponInstance()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getSecondaryWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	@Override
 	public WeaponTemplate getSecondaryWeaponItem()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{
@@ -249,6 +357,10 @@ public final class DoorInstance extends Creature implements GeoCollision
 		}
 	}
 	
+	/**
+	 * Method getAI.
+	 * @return DoorAI
+	 */
 	@Override
 	public DoorAI getAI()
 	{
@@ -265,6 +377,9 @@ public final class DoorInstance extends Creature implements GeoCollision
 		return (DoorAI) _ai;
 	}
 	
+	/**
+	 * Method broadcastStatusUpdate.
+	 */
 	@Override
 	public void broadcastStatusUpdate()
 	{
@@ -277,11 +392,21 @@ public final class DoorInstance extends Creature implements GeoCollision
 		}
 	}
 	
+	/**
+	 * Method openMe.
+	 * @return boolean
+	 */
 	public boolean openMe()
 	{
 		return openMe(null, true);
 	}
 	
+	/**
+	 * Method openMe.
+	 * @param opener Player
+	 * @param autoClose boolean
+	 * @return boolean
+	 */
 	public boolean openMe(Player opener, boolean autoClose)
 	{
 		_openLock.lock();
@@ -313,11 +438,21 @@ public final class DoorInstance extends Creature implements GeoCollision
 		return true;
 	}
 	
+	/**
+	 * Method closeMe.
+	 * @return boolean
+	 */
 	public boolean closeMe()
 	{
 		return closeMe(null, true);
 	}
 	
+	/**
+	 * Method closeMe.
+	 * @param closer Player
+	 * @param autoOpen boolean
+	 * @return boolean
+	 */
 	public boolean closeMe(Player closer, boolean autoOpen)
 	{
 		if (isDead())
@@ -358,12 +493,20 @@ public final class DoorInstance extends Creature implements GeoCollision
 		return true;
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		return "[Door " + getDoorId() + "]";
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -379,6 +522,9 @@ public final class DoorInstance extends Creature implements GeoCollision
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method onRevive.
+	 */
 	@Override
 	protected void onRevive()
 	{
@@ -397,6 +543,9 @@ public final class DoorInstance extends Creature implements GeoCollision
 		}
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -405,6 +554,9 @@ public final class DoorInstance extends Creature implements GeoCollision
 		closeMe(null, true);
 	}
 	
+	/**
+	 * Method onDespawn.
+	 */
 	@Override
 	protected void onDespawn()
 	{
@@ -416,39 +568,70 @@ public final class DoorInstance extends Creature implements GeoCollision
 		super.onDespawn();
 	}
 	
+	/**
+	 * Method isHPVisible.
+	 * @return boolean
+	 */
 	public boolean isHPVisible()
 	{
 		return getTemplate().isHPVisible();
 	}
 	
+	/**
+	 * Method getMaxHp.
+	 * @return int
+	 */
 	@Override
 	public int getMaxHp()
 	{
 		return super.getMaxHp() + _upgradeHp;
 	}
 	
+	/**
+	 * Method setUpgradeHp.
+	 * @param hp int
+	 */
 	public void setUpgradeHp(int hp)
 	{
 		_upgradeHp = hp;
 	}
 	
+	/**
+	 * Method getUpgradeHp.
+	 * @return int
+	 */
 	public int getUpgradeHp()
 	{
 		return _upgradeHp;
 	}
 	
+	/**
+	 * Method getPDef.
+	 * @param target Creature
+	 * @return int
+	 */
 	@Override
 	public int getPDef(Creature target)
 	{
 		return super.getPDef(target);
 	}
 	
+	/**
+	 * Method getMDef.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return int
+	 */
 	@Override
 	public int getMDef(Creature target, Skill skill)
 	{
 		return super.getMDef(target, skill);
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{
@@ -464,6 +647,11 @@ public final class DoorInstance extends Creature implements GeoCollision
 		return super.isInvul();
 	}
 	
+	/**
+	 * Method setGeoOpen.
+	 * @param open boolean
+	 * @return boolean
+	 */
 	protected boolean setGeoOpen(boolean open)
 	{
 		if (_geoOpen == open)
@@ -485,95 +673,162 @@ public final class DoorInstance extends Creature implements GeoCollision
 		return true;
 	}
 	
+	/**
+	 * Method isMovementDisabled.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isMovementDisabled()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isActionsDisabled.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isActionsDisabled()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isFearImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isFearImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isParalyzeImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParalyzeImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isLethalImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isLethalImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isConcrete.
+	 * @return boolean * @see lineage2.gameserver.geodata.GeoCollision#isConcrete()
+	 */
 	@Override
 	public boolean isConcrete()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isHealBlocked.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isHealBlocked()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isEffectImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isEffectImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method addPacketList.
+	 * @param forPlayer Player
+	 * @param dropper Creature
+	 * @return List<L2GameServerPacket>
+	 */
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{
 		return Collections.<L2GameServerPacket> singletonList(new StaticObject(this, forPlayer));
 	}
 	
+	/**
+	 * Method isDoor.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isDoor()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method getShape.
+	 * @return Shape * @see lineage2.gameserver.geodata.GeoCollision#getShape()
+	 */
 	@Override
 	public Shape getShape()
 	{
 		return getTemplate().getPolygon();
 	}
 	
+	/**
+	 * Method getGeoAround.
+	 * @return byte[][] * @see lineage2.gameserver.geodata.GeoCollision#getGeoAround()
+	 */
 	@Override
 	public byte[][] getGeoAround()
 	{
 		return _geoAround;
 	}
 	
+	/**
+	 * Method setGeoAround.
+	 * @param geo byte[][]
+	 * @see lineage2.gameserver.geodata.GeoCollision#setGeoAround(byte[][])
+	 */
 	@Override
 	public void setGeoAround(byte[][] geo)
 	{
 		_geoAround = geo;
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @return DoorTemplate
+	 */
 	@Override
 	public DoorTemplate getTemplate()
 	{
 		return (DoorTemplate) super.getTemplate();
 	}
 	
+	/**
+	 * Method getDoorType.
+	 * @return DoorTemplate.DoorType
+	 */
 	public DoorTemplate.DoorType getDoorType()
 	{
 		return getTemplate().getDoorType();
 	}
 	
+	/**
+	 * Method getKey.
+	 * @return int
+	 */
 	public int getKey()
 	{
 		return getTemplate().getKey();

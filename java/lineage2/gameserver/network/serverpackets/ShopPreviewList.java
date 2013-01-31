@@ -21,12 +21,30 @@ import lineage2.gameserver.model.items.ItemInfo;
 import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShopPreviewList extends L2GameServerPacket
 {
+	/**
+	 * Field _listId.
+	 */
 	private final int _listId;
+	/**
+	 * Field _itemList.
+	 */
 	private final List<ItemInfo> _itemList;
+	/**
+	 * Field _money.
+	 */
 	private final long _money;
 	
+	/**
+	 * Constructor for ShopPreviewList.
+	 * @param list NpcTradeList
+	 * @param player Player
+	 */
 	public ShopPreviewList(NpcTradeList list, Player player)
 	{
 		_listId = list.getListId();
@@ -42,6 +60,9 @@ public class ShopPreviewList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -62,6 +83,11 @@ public class ShopPreviewList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method getWearPrice.
+	 * @param item ItemTemplate
+	 * @return int
+	 */
 	public static int getWearPrice(ItemTemplate item)
 	{
 		switch (item.getItemGrade())

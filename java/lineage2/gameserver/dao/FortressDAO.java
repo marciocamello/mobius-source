@@ -24,18 +24,42 @@ import lineage2.gameserver.model.entity.residence.Fortress;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FortressDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(FortressDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final FortressDAO _instance = new FortressDAO();
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT * FROM fortress WHERE id = ?"")
+	 */
 	public static final String SELECT_SQL_QUERY = "SELECT * FROM fortress WHERE id = ?";
+	/**
+	 * Field UPDATE_SQL_QUERY. (value is ""UPDATE fortress SET castle_id=?, state=?, cycle=?, reward_count=?, paid_cycle=?, supply_count=?, siege_date=?, last_siege_date=?, own_date=?, facility_0=?, facility_1=?, facility_2=?, facility_3=?, facility_4=? WHERE id=?"")
+	 */
 	public static final String UPDATE_SQL_QUERY = "UPDATE fortress SET castle_id=?, state=?, cycle=?, reward_count=?, paid_cycle=?, supply_count=?, siege_date=?, last_siege_date=?, own_date=?, facility_0=?, facility_1=?, facility_2=?, facility_3=?, facility_4=? WHERE id=?";
 	
+	/**
+	 * Method getInstance.
+	 * @return FortressDAO
+	 */
 	public static FortressDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method select.
+	 * @param fortress Fortress
+	 */
 	public void select(Fortress fortress)
 	{
 		Connection con = null;
@@ -73,6 +97,10 @@ public class FortressDAO
 		}
 	}
 	
+	/**
+	 * Method update.
+	 * @param fortress Fortress
+	 */
 	public void update(Fortress fortress)
 	{
 		if (!fortress.getJdbcState().isUpdatable())
@@ -83,6 +111,10 @@ public class FortressDAO
 		update0(fortress);
 	}
 	
+	/**
+	 * Method update0.
+	 * @param fortress Fortress
+	 */
 	private void update0(Fortress fortress)
 	{
 		Connection con = null;

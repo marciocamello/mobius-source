@@ -20,18 +20,39 @@ import lineage2.gameserver.templates.StatsSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetDataHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static PetDataHolder _instance = new PetDataHolder();
+	/**
+	 * Field _pets.
+	 */
 	private final TIntObjectHashMap<PetData> _pets = new TIntObjectHashMap<>();
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(PetDataHolder.class);
 	
+	/**
+	 * Method getInstance.
+	 * @return PetDataHolder
+	 */
 	public static PetDataHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addPetData.
+	 * @param set StatsSet
+	 */
 	public void addPetData(StatsSet set)
 	{
 		PetData petData = new PetData();
@@ -60,6 +81,12 @@ public class PetDataHolder extends AbstractHolder
 		_pets.put((petData.getID() * 100) + petData.getLevel(), petData);
 	}
 	
+	/**
+	 * Method getInfo.
+	 * @param petNpcId int
+	 * @param level int
+	 * @return PetData
+	 */
 	public PetData getInfo(int petNpcId, int level)
 	{
 		PetData result = null;
@@ -71,12 +98,19 @@ public class PetDataHolder extends AbstractHolder
 		return result;
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _pets.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

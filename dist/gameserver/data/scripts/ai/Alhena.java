@@ -19,8 +19,15 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Alhena extends DefaultAI
 {
+	/**
+	 * Field points.
+	 */
 	static final Location[] points =
 	{
 		new Location(10968, 14620, -4248),
@@ -38,21 +45,42 @@ public class Alhena extends DefaultAI
 		new Location(10827, 14757, -4248),
 		new Location(10968, 14620, -4248)
 	};
+	/**
+	 * Field current_point.
+	 */
 	private int current_point = -1;
+	/**
+	 * Field wait_timeout.
+	 */
 	private long wait_timeout = 0;
+	/**
+	 * Field wait.
+	 */
 	private boolean wait = false;
 	
+	/**
+	 * Constructor for Alhena.
+	 * @param actor NpcInstance
+	 */
 	public Alhena(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -110,11 +138,21 @@ public class Alhena extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

@@ -20,19 +20,55 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminInstance implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_instance.
+		 */
 		admin_instance,
+		/**
+		 * Field admin_instance_id.
+		 */
 		admin_instance_id,
+		/**
+		 * Field admin_collapse.
+		 */
 		admin_collapse,
+		/**
+		 * Field admin_reset_reuse.
+		 */
 		admin_reset_reuse,
+		/**
+		 * Field admin_reset_reuse_all.
+		 */
 		admin_reset_reuse_all,
+		/**
+		 * Field admin_set_reuse.
+		 */
 		admin_set_reuse,
+		/**
+		 * Field admin_addtiatkill.
+		 */
 		admin_addtiatkill
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -91,12 +127,20 @@ public class AdminInstance implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}
 	
+	/**
+	 * Method listOfInstances.
+	 * @param activeChar Player
+	 */
 	private void listOfInstances(Player activeChar)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -117,7 +161,7 @@ public class AdminInstance implements IAdminCommandHandler
 			{
 				countPlayers = reflection.getPlayers().size();
 			}
-			replyMSG.append("<a action=\"bypass -h admin_instance_id ").append(reflection.getId()).append(" \">").append(reflection.getName()).append("(").append(countPlayers).append(" players). Id: ").append(reflection.getId()).append("</a><br>");
+			replyMSG.append("<a action=\"bypass -h admin_instance_id ").append(reflection.getId()).append(" \">").append(reflection.getName()).append('(').append(countPlayers).append(" players). Id: ").append(reflection.getId()).append("</a><br>");
 		}
 		replyMSG.append("<button value=\"Refresh\" action=\"bypass -h admin_instance\" width=50 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\">");
 		replyMSG.append("</body></html>");
@@ -125,6 +169,11 @@ public class AdminInstance implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method listOfCharsForInstance.
+	 * @param activeChar Player
+	 * @param sid String
+	 */
 	private void listOfCharsForInstance(Player activeChar, String sid)
 	{
 		Reflection reflection = ReflectionManager.getInstance().get(Integer.parseInt(sid));

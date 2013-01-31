@@ -16,10 +16,21 @@ import gnu.trove.set.hash.TIntHashSet;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionTargetForbiddenClassId extends Condition
 {
+	/**
+	 * Field _classIds.
+	 */
 	private final TIntHashSet _classIds = new TIntHashSet();
 	
+	/**
+	 * Constructor for ConditionTargetForbiddenClassId.
+	 * @param ids String[]
+	 */
 	public ConditionTargetForbiddenClassId(String[] ids)
 	{
 		for (String id : ids)
@@ -28,6 +39,11 @@ public class ConditionTargetForbiddenClassId extends Condition
 		}
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

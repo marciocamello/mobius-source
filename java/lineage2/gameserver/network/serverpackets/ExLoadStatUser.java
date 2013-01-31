@@ -18,12 +18,29 @@ import java.util.List;
 import lineage2.gameserver.instancemanager.MuseumManager;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExLoadStatUser extends L2GameServerPacket
 {
+	/**
+	 * Field _S__FE_101_EXLOADSTATUSER. (value is ""[S] FE:101 ExLoadStatUser"")
+	 */
 	private static final String _S__FE_101_EXLOADSTATUSER = "[S] FE:101 ExLoadStatUser";
+	/**
+	 * Field player.
+	 */
 	Player player;
+	/**
+	 * Field stats.
+	 */
 	List<String[]> stats;
 	
+	/**
+	 * Constructor for ExLoadStatUser.
+	 * @param _player Player
+	 */
 	public ExLoadStatUser(Player _player)
 	{
 		stats = new ArrayList<>();
@@ -48,6 +65,9 @@ public class ExLoadStatUser extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -62,6 +82,10 @@ public class ExLoadStatUser extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method getType.
+	 * @return String
+	 */
 	@Override
 	public String getType()
 	{

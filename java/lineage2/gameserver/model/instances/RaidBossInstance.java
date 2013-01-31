@@ -41,36 +41,68 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RaidBossInstance extends MonsterInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field minionMaintainTask.
+	 */
 	private ScheduledFuture<?> minionMaintainTask;
+	/**
+	 * Field MINION_UNSPAWN_INTERVAL. (value is 5000)
+	 */
 	private static final int MINION_UNSPAWN_INTERVAL = 5000;
 	
+	/**
+	 * Constructor for RaidBossInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public RaidBossInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method isRaid.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isRaid()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method getMinionUnspawnInterval.
+	 * @return int
+	 */
 	protected int getMinionUnspawnInterval()
 	{
 		return MINION_UNSPAWN_INTERVAL;
 	}
 	
+	/**
+	 * Method getKilledInterval.
+	 * @param minion MinionInstance
+	 * @return int
+	 */
 	protected int getKilledInterval(MinionInstance minion)
 	{
 		return 120000;
 	}
 	
+	/**
+	 * Method notifyMinionDied.
+	 * @param minion MinionInstance
+	 */
 	@Override
 	public void notifyMinionDied(MinionInstance minion)
 	{
@@ -78,15 +110,28 @@ public class RaidBossInstance extends MonsterInstance
 		super.notifyMinionDied(minion);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class MaintainKilledMinion extends RunnableImpl
 	{
+		/**
+		 * Field minion.
+		 */
 		private final MinionInstance minion;
 		
+		/**
+		 * Constructor for MaintainKilledMinion.
+		 * @param minion MinionInstance
+		 */
 		public MaintainKilledMinion(MinionInstance minion)
 		{
 			this.minion = minion;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -98,6 +143,10 @@ public class RaidBossInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -193,6 +242,10 @@ public class RaidBossInstance extends MonsterInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method calcRaidPointsReward.
+	 * @param totalPoints int
+	 */
 	@SuppressWarnings("unchecked")
 	private void calcRaidPointsReward(int totalPoints)
 	{
@@ -258,6 +311,9 @@ public class RaidBossInstance extends MonsterInstance
 		RaidBossSpawnManager.getInstance().calculateRanking();
 	}
 	
+	/**
+	 * Method onDecay.
+	 */
 	@Override
 	protected void onDecay()
 	{
@@ -265,6 +321,9 @@ public class RaidBossInstance extends MonsterInstance
 		RaidBossSpawnManager.getInstance().onBossDespawned(this);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -273,30 +332,50 @@ public class RaidBossInstance extends MonsterInstance
 		RaidBossSpawnManager.getInstance().onBossSpawned(this);
 	}
 	
+	/**
+	 * Method isFearImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isFearImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isParalyzeImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParalyzeImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isLethalImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isLethalImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method hasRandomWalk.
+	 * @return boolean
+	 */
 	@Override
 	public boolean hasRandomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method canChampion.
+	 * @return boolean
+	 */
 	@Override
 	public boolean canChampion()
 	{

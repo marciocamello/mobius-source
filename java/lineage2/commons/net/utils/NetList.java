@@ -15,10 +15,22 @@ package lineage2.commons.net.utils;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class NetList extends ArrayList<Net>
 {
+	/**
+	 * Field serialVersionUID. (value is 4266033257195615387)
+	 */
 	private static final long serialVersionUID = 4266033257195615387L;
 	
+	/**
+	 * Method isInRange.
+	 * @param address String
+	 * @return boolean
+	 */
 	public boolean isInRange(String address)
 	{
 		for (Net net : this)
@@ -31,6 +43,10 @@ public final class NetList extends ArrayList<Net>
 		return false;
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{

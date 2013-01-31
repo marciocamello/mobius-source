@@ -23,15 +23,30 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DarionFaithfulServant extends Fighter
 {
+	/**
+	 * Field MysteriousAgent. (value is 32372)
+	 */
 	private static final int MysteriousAgent = 32372;
 	
+	/**
+	 * Constructor for DarionFaithfulServant.
+	 * @param actor NpcInstance
+	 */
 	public DarionFaithfulServant(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -53,12 +68,21 @@ public class DarionFaithfulServant extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Unspawn extends RunnableImpl
 	{
+		/**
+		 * Constructor for Unspawn.
+		 */
 		public Unspawn()
 		{
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

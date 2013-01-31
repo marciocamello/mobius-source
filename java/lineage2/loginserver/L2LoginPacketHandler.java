@@ -22,8 +22,18 @@ import lineage2.loginserver.clientpackets.RequestAuthLogin;
 import lineage2.loginserver.clientpackets.RequestServerList;
 import lineage2.loginserver.clientpackets.RequestServerLogin;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 {
+	/**
+	 * Method handlePacket.
+	 * @param buf ByteBuffer
+	 * @param client L2LoginClient
+	 * @return ReceivablePacket<L2LoginClient>
+	 */
 	@Override
 	public ReceivablePacket<L2LoginClient> handlePacket(ByteBuffer buf, L2LoginClient client)
 	{

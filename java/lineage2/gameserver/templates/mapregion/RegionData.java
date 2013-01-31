@@ -14,7 +14,15 @@ package lineage2.gameserver.templates.mapregion;
 
 import lineage2.gameserver.model.Territory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface RegionData
 {
+	/**
+	 * Method getTerritory.
+	 * @return Territory
+	 */
 	public Territory getTerritory();
 }

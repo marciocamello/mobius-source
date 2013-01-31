@@ -22,13 +22,33 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.pledge.Clan;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Die extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _fake.
+	 */
 	private final boolean _fake;
+	/**
+	 * Field _sweepable.
+	 */
 	private boolean _sweepable;
+	/**
+	 * Field _types.
+	 */
 	private final Map<RestartType, Boolean> _types = new HashMap<>(RestartType.VALUES.length);
 	
+	/**
+	 * Constructor for Die.
+	 * @param cha Creature
+	 */
 	public Die(Creature cha)
 	{
 		_objectId = cha.getObjectId();
@@ -61,6 +81,9 @@ public class Die extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -82,11 +105,21 @@ public class Die extends L2GameServerPacket
 		writeD(0x00);
 	}
 	
+	/**
+	 * Method put.
+	 * @param t RestartType
+	 * @param b boolean
+	 */
 	private void put(RestartType t, boolean b)
 	{
 		_types.put(t, b);
 	}
 	
+	/**
+	 * Method get.
+	 * @param t RestartType
+	 * @return boolean
+	 */
 	private boolean get(RestartType t)
 	{
 		Boolean b = _types.get(t);

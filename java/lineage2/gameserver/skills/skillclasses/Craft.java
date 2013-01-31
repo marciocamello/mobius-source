@@ -20,16 +20,36 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.RecipeBookItemList;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Craft extends Skill
 {
+	/**
+	 * Field _dwarven.
+	 */
 	private final boolean _dwarven;
 	
+	/**
+	 * Constructor for Craft.
+	 * @param set StatsSet
+	 */
 	public Craft(StatsSet set)
 	{
 		super(set);
 		_dwarven = set.getBool("isDwarven");
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -41,6 +61,11 @@ public class Craft extends Skill
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

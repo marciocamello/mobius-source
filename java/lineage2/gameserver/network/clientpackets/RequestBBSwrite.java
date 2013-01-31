@@ -19,15 +19,40 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestBBSwrite extends L2GameClientPacket
 {
+	/**
+	 * Field _url.
+	 */
 	private String _url;
+	/**
+	 * Field _arg1.
+	 */
 	private String _arg1;
+	/**
+	 * Field _arg2.
+	 */
 	private String _arg2;
+	/**
+	 * Field _arg3.
+	 */
 	private String _arg3;
+	/**
+	 * Field _arg4.
+	 */
 	private String _arg4;
+	/**
+	 * Field _arg5.
+	 */
 	private String _arg5;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	public void readImpl()
 	{
@@ -39,6 +64,9 @@ public class RequestBBSwrite extends L2GameClientPacket
 		_arg5 = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{

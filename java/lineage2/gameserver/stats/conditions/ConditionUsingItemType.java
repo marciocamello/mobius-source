@@ -15,15 +15,31 @@ package lineage2.gameserver.stats.conditions;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ConditionUsingItemType extends Condition
 {
+	/**
+	 * Field _mask.
+	 */
 	private final long _mask;
 	
+	/**
+	 * Constructor for ConditionUsingItemType.
+	 * @param mask long
+	 */
 	public ConditionUsingItemType(long mask)
 	{
 		_mask = mask;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

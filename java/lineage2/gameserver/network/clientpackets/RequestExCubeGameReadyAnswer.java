@@ -18,12 +18,28 @@ import lineage2.gameserver.model.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RequestExCubeGameReadyAnswer extends L2GameClientPacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(RequestExCubeGameReadyAnswer.class);
+	/**
+	 * Field _arena.
+	 */
 	int _arena;
+	/**
+	 * Field _answer.
+	 */
 	int _answer;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -31,6 +47,9 @@ public final class RequestExCubeGameReadyAnswer extends L2GameClientPacket
 		_answer = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{

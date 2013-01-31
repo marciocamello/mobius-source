@@ -14,7 +14,16 @@ package lineage2.commons.net.nio.impl;
 
 import java.nio.channels.SocketChannel;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IAcceptFilter
 {
+	/**
+	 * Method accept.
+	 * @param sc SocketChannel
+	 * @return boolean
+	 */
 	public boolean accept(SocketChannel sc);
 }

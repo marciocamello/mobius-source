@@ -16,32 +16,62 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.ShuttleTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ShuttleTemplateHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final ShuttleTemplateHolder _instance = new ShuttleTemplateHolder();
+	/**
+	 * Field _templates.
+	 */
 	private final TIntObjectHashMap<ShuttleTemplate> _templates = new TIntObjectHashMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return ShuttleTemplateHolder
+	 */
 	public static ShuttleTemplateHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addTemplate.
+	 * @param template ShuttleTemplate
+	 */
 	public void addTemplate(ShuttleTemplate template)
 	{
 		_templates.put(template.getId(), template);
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @param id int
+	 * @return ShuttleTemplate
+	 */
 	public ShuttleTemplate getTemplate(int id)
 	{
 		return _templates.get(id);
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _templates.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

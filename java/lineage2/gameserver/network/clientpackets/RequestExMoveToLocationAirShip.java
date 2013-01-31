@@ -15,11 +15,24 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.boat.ClanAirShip;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExMoveToLocationAirShip extends L2GameClientPacket
 {
+	/**
+	 * Field _moveType.
+	 */
 	private int _moveType;
+	/**
+	 * Field _param2. Field _param1.
+	 */
 	private int _param1, _param2;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -44,6 +57,9 @@ public class RequestExMoveToLocationAirShip extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -18,6 +18,10 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.WarehouseFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WarehouseInstance extends NpcInstance
 {
 	/**
@@ -25,11 +29,23 @@ public class WarehouseInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for WarehouseInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public WarehouseInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
@@ -49,6 +65,11 @@ public class WarehouseInstance extends NpcInstance
 		return "warehouse/" + pom + ".htm";
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

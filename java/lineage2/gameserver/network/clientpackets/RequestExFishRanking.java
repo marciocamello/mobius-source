@@ -16,13 +16,23 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.instancemanager.games.FishingChampionShipManager;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExFishRanking extends L2GameClientPacket
 {
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

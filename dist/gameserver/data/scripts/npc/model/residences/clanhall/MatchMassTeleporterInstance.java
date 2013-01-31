@@ -23,21 +23,42 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MatchMassTeleporterInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _flagId.
+	 */
 	private final int _flagId;
+	/**
+	 * Field _timeout.
+	 */
 	private long _timeout;
 	
+	/**
+	 * Constructor for MatchMassTeleporterInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MatchMassTeleporterInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		_flagId = template.getAIParams().getInteger("flag");
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{

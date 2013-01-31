@@ -18,17 +18,37 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ConditionTargetHasBuffId extends Condition
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _level.
+	 */
 	private final int _level;
 	
+	/**
+	 * Constructor for ConditionTargetHasBuffId.
+	 * @param id int
+	 * @param level int
+	 */
 	public ConditionTargetHasBuffId(int id, int level)
 	{
 		_id = id;
 		_level = level;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

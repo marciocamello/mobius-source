@@ -19,8 +19,15 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EkimusFood extends DefaultAI
 {
+	/**
+	 * Field _route1.
+	 */
 	private static final Location[] _route1 =
 	{
 		new Location(-179544, 207400, -15496),
@@ -35,6 +42,9 @@ public class EkimusFood extends DefaultAI
 		new Location(-179512, 211864, -15496),
 		new Location(-179528, 211448, -15472)
 	};
+	/**
+	 * Field _route2.
+	 */
 	private static final Location[] _route2 =
 	{
 		new Location(-179576, 207352, -15496),
@@ -47,9 +57,19 @@ public class EkimusFood extends DefaultAI
 		new Location(-179528, 211848, -15496),
 		new Location(-179528, 211400, -15472)
 	};
+	/**
+	 * Field _points.
+	 */
 	private final Location[] _points;
+	/**
+	 * Field _lastPoint.
+	 */
 	private int _lastPoint = 0;
 	
+	/**
+	 * Constructor for EkimusFood.
+	 * @param actor NpcInstance
+	 */
 	public EkimusFood(NpcInstance actor)
 	{
 		super(actor);
@@ -58,12 +78,20 @@ public class EkimusFood extends DefaultAI
 		actor.startDebuffImmunity();
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
@@ -71,6 +99,10 @@ public class EkimusFood extends DefaultAI
 		super.onEvtArrived();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -81,6 +113,9 @@ public class EkimusFood extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method startMoveTask.
+	 */
 	private void startMoveTask()
 	{
 		NpcInstance npc = getActor();
@@ -98,23 +133,39 @@ public class EkimusFood extends DefaultAI
 		doTask();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method maybeMoveToHome.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean maybeMoveToHome()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method teleportHome.
+	 */
 	@Override
 	protected void teleportHome()
 	{

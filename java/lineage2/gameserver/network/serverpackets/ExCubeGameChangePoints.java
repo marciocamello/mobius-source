@@ -12,12 +12,31 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCubeGameChangePoints extends L2GameServerPacket
 {
+	/**
+	 * Field _timeLeft.
+	 */
 	int _timeLeft;
+	/**
+	 * Field _bluePoints.
+	 */
 	int _bluePoints;
+	/**
+	 * Field _redPoints.
+	 */
 	int _redPoints;
 	
+	/**
+	 * Constructor for ExCubeGameChangePoints.
+	 * @param timeLeft int
+	 * @param bluePoints int
+	 * @param redPoints int
+	 */
 	public ExCubeGameChangePoints(int timeLeft, int bluePoints, int redPoints)
 	{
 		_timeLeft = timeLeft;
@@ -25,6 +44,9 @@ public class ExCubeGameChangePoints extends L2GameServerPacket
 		_redPoints = redPoints;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

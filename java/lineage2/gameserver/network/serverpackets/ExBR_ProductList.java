@@ -17,8 +17,15 @@ import java.util.Collection;
 import lineage2.gameserver.data.xml.holder.ProductHolder;
 import lineage2.gameserver.model.ProductItem;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExBR_ProductList extends L2GameServerPacket
 {
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

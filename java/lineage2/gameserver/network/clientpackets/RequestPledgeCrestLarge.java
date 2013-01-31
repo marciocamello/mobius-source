@@ -16,16 +16,29 @@ import lineage2.gameserver.cache.CrestCache;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExPledgeCrestLarge;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPledgeCrestLarge extends L2GameClientPacket
 {
+	/**
+	 * Field _crestId.
+	 */
 	private int _crestId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_crestId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -31,44 +31,120 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Fortress extends Residence
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Fortress.class);
+	/**
+	 * Field REMOVE_CYCLE.
+	 */
 	private static final long REMOVE_CYCLE = 7 * 24;
+	/**
+	 * Field REWARD_CYCLE. (value is 6)
+	 */
 	private static final long REWARD_CYCLE = 6;
+	/**
+	 * Field CASTLE_FEE. (value is 25000)
+	 */
 	public static final long CASTLE_FEE = 25000;
+	/**
+	 * Field DOMAIN. (value is 0)
+	 */
 	public static final int DOMAIN = 0;
+	/**
+	 * Field BOUNDARY. (value is 1)
+	 */
 	public static final int BOUNDARY = 1;
+	/**
+	 * Field NOT_DECIDED. (value is 0)
+	 */
 	public static final int NOT_DECIDED = 0;
+	/**
+	 * Field INDEPENDENT. (value is 1)
+	 */
 	public static final int INDEPENDENT = 1;
+	/**
+	 * Field CONTRACT_WITH_CASTLE. (value is 2)
+	 */
 	public static final int CONTRACT_WITH_CASTLE = 2;
+	/**
+	 * Field REINFORCE. (value is 0)
+	 */
 	public static final int REINFORCE = 0;
+	/**
+	 * Field GUARD_BUFF. (value is 1)
+	 */
 	public static final int GUARD_BUFF = 1;
+	/**
+	 * Field DOOR_UPGRADE. (value is 2)
+	 */
 	public static final int DOOR_UPGRADE = 2;
+	/**
+	 * Field DWARVENS. (value is 3)
+	 */
 	public static final int DWARVENS = 3;
+	/**
+	 * Field SCOUT. (value is 4)
+	 */
 	public static final int SCOUT = 4;
+	/**
+	 * Field FACILITY_MAX. (value is 5)
+	 */
 	public static final int FACILITY_MAX = 5;
+	/**
+	 * Field _facilities.
+	 */
 	private final int[] _facilities = new int[FACILITY_MAX];
+	/**
+	 * Field _state.
+	 */
 	private int _state;
+	/**
+	 * Field _castleId.
+	 */
 	private int _castleId;
+	/**
+	 * Field _supplyCount.
+	 */
 	private int _supplyCount;
+	/**
+	 * Field _relatedCastles.
+	 */
 	private final List<Castle> _relatedCastles = new ArrayList<>(5);
 	
+	/**
+	 * Constructor for Fortress.
+	 * @param set StatsSet
+	 */
 	public Fortress(StatsSet set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method getType.
+	 * @return ResidenceType
+	 */
 	@Override
 	public ResidenceType getType()
 	{
 		return ResidenceType.Fortress;
 	}
 	
+	/**
+	 * Method changeOwner.
+	 * @param clan Clan
+	 */
 	@Override
 	public void changeOwner(Clan clan)
 	{
@@ -113,6 +189,9 @@ public class Fortress extends Residence
 		update();
 	}
 	
+	/**
+	 * Method loadData.
+	 */
 	@Override
 	protected void loadData()
 	{
@@ -120,6 +199,10 @@ public class Fortress extends Residence
 		FortressDAO.getInstance().select(this);
 	}
 	
+	/**
+	 * Method updateOwnerInDB.
+	 * @param clan Clan
+	 */
 	private void updateOwnerInDB(Clan clan)
 	{
 		_owner = clan;
@@ -151,22 +234,38 @@ public class Fortress extends Residence
 		}
 	}
 	
+	/**
+	 * Method setFortState.
+	 * @param state int
+	 * @param castleId int
+	 */
 	public void setFortState(int state, int castleId)
 	{
 		_state = state;
 		_castleId = castleId;
 	}
 	
+	/**
+	 * Method getCastleId.
+	 * @return int
+	 */
 	public int getCastleId()
 	{
 		return _castleId;
 	}
 	
+	/**
+	 * Method getContractState.
+	 * @return int
+	 */
 	public int getContractState()
 	{
 		return _state;
 	}
 	
+	/**
+	 * Method chanceCycle.
+	 */
 	@Override
 	public void chanceCycle()
 	{
@@ -204,32 +303,57 @@ public class Fortress extends Residence
 		}
 	}
 	
+	/**
+	 * Method update.
+	 * @see lineage2.commons.dao.JdbcEntity#update()
+	 */
 	@Override
 	public void update()
 	{
 		FortressDAO.getInstance().update(this);
 	}
 	
+	/**
+	 * Method getSupplyCount.
+	 * @return int
+	 */
 	public int getSupplyCount()
 	{
 		return _supplyCount;
 	}
 	
+	/**
+	 * Method setSupplyCount.
+	 * @param c int
+	 */
 	public void setSupplyCount(int c)
 	{
 		_supplyCount = c;
 	}
 	
+	/**
+	 * Method getFacilityLevel.
+	 * @param type int
+	 * @return int
+	 */
 	public int getFacilityLevel(int type)
 	{
 		return _facilities[type];
 	}
 	
+	/**
+	 * Method setFacilityLevel.
+	 * @param type int
+	 * @param val int
+	 */
 	public void setFacilityLevel(int type, int val)
 	{
 		_facilities[type] = val;
 	}
 	
+	/**
+	 * Method clearFacility.
+	 */
 	public void clearFacility()
 	{
 		for (int i = 0; i < _facilities.length; i++)
@@ -238,16 +362,28 @@ public class Fortress extends Residence
 		}
 	}
 	
+	/**
+	 * Method getFacilities.
+	 * @return int[]
+	 */
 	public int[] getFacilities()
 	{
 		return _facilities;
 	}
 	
+	/**
+	 * Method addRelatedCastle.
+	 * @param castle Castle
+	 */
 	public void addRelatedCastle(Castle castle)
 	{
 		_relatedCastles.add(castle);
 	}
 	
+	/**
+	 * Method getRelatedCastles.
+	 * @return List<Castle>
+	 */
 	public List<Castle> getRelatedCastles()
 	{
 		return _relatedCastles;

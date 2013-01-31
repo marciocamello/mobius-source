@@ -12,11 +12,21 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MoveWithDelta extends L2GameClientPacket
 {
+	/**
+	 * Field _dz. Field _dy. Field _dx.
+	 */
 	@SuppressWarnings("unused")
 	private int _dx, _dy, _dz;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -25,6 +35,9 @@ public class MoveWithDelta extends L2GameClientPacket
 		_dz = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

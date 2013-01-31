@@ -12,32 +12,84 @@
  */
 package lineage2.gameserver.templates.item;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum ItemFlags
 {
+	/**
+	 * Field DESTROYABLE.
+	 */
 	DESTROYABLE(true),
+	/**
+	 * Field DROPABLE.
+	 */
 	DROPABLE(true),
+	/**
+	 * Field FREIGHTABLE.
+	 */
 	FREIGHTABLE(false),
+	/**
+	 * Field AUGMENTABLE.
+	 */
 	AUGMENTABLE(true),
+	/**
+	 * Field ENCHANTABLE.
+	 */
 	ENCHANTABLE(true),
+	/**
+	 * Field ATTRIBUTABLE.
+	 */
 	ATTRIBUTABLE(true),
+	/**
+	 * Field SELLABLE.
+	 */
 	SELLABLE(true),
+	/**
+	 * Field TRADEABLE.
+	 */
 	TRADEABLE(true),
+	/**
+	 * Field STOREABLE.
+	 */
 	STOREABLE(true);
+	/**
+	 * Field VALUES.
+	 */
 	public static final ItemFlags[] VALUES = values();
+	/**
+	 * Field _mask.
+	 */
 	private final int _mask;
+	/**
+	 * Field _defaultValue.
+	 */
 	private final boolean _defaultValue;
 	
+	/**
+	 * Constructor for ItemFlags.
+	 * @param defaultValue boolean
+	 */
 	ItemFlags(boolean defaultValue)
 	{
 		_defaultValue = defaultValue;
 		_mask = 1 << ordinal();
 	}
 	
+	/**
+	 * Method mask.
+	 * @return int
+	 */
 	public int mask()
 	{
 		return _mask;
 	}
 	
+	/**
+	 * Method getDefaultValue.
+	 * @return boolean
+	 */
 	public boolean getDefaultValue()
 	{
 		return _defaultValue;

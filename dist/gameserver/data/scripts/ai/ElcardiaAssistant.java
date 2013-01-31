@@ -37,29 +37,69 @@ import quests._10294_SevenSignsMonasteryofSilence;
 import quests._10295_SevenSignsSolinasTomb;
 import quests._10296_SevenSignsPoweroftheSeal;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ElcardiaAssistant extends DefaultAI
 {
+	/**
+	 * Field _thinking.
+	 */
 	private boolean _thinking = false;
+	/**
+	 * Field _followTask.
+	 */
 	ScheduledFuture<?> _followTask;
+	/**
+	 * Field _chatTimer.
+	 */
 	private long _chatTimer;
+	/**
+	 * Field vampRage.
+	 */
 	private final Skill vampRage = SkillTable.getInstance().getInfo(6727, 1);
+	/**
+	 * Field holyResist.
+	 */
 	private final Skill holyResist = SkillTable.getInstance().getInfo(6729, 1);
+	/**
+	 * Field blessBlood.
+	 */
 	private final Skill blessBlood = SkillTable.getInstance().getInfo(6725, 1);
+	/**
+	 * Field recharge.
+	 */
 	private final Skill recharge = SkillTable.getInstance().getInfo(6728, 1);
+	/**
+	 * Field heal.
+	 */
 	private final Skill heal = SkillTable.getInstance().getInfo(6724, 1);
 	
+	/**
+	 * Constructor for ElcardiaAssistant.
+	 * @param actor NpcInstance
+	 */
 	public ElcardiaAssistant(NpcInstance actor)
 	{
 		super(actor);
 		_chatTimer = System.currentTimeMillis() + 8000L;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getMaster.
+	 * @return Player
+	 */
 	private Player getMaster()
 	{
 		if (!getActor().getReflection().getPlayers().isEmpty())
@@ -69,6 +109,10 @@ public class ElcardiaAssistant extends DefaultAI
 		return null;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -88,6 +132,9 @@ public class ElcardiaAssistant extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method onEvtThink.
+	 */
 	@Override
 	protected void onEvtThink()
 	{
@@ -118,6 +165,9 @@ public class ElcardiaAssistant extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method thinkFollow.
+	 */
 	protected void thinkFollow()
 	{
 		NpcInstance actor = getActor();
@@ -290,8 +340,14 @@ public class ElcardiaAssistant extends DefaultAI
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class ThinkFollow extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -316,6 +372,10 @@ public class ElcardiaAssistant extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method addTaskAttack.
+	 * @param target Creature
+	 */
 	@Override
 	public void addTaskAttack(Creature target)
 	{

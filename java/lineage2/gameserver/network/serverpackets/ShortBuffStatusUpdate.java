@@ -14,12 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Effect;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShortBuffStatusUpdate extends L2GameServerPacket
 {
+	/**
+	 * Field _skillId.
+	 */
 	int _skillId;
+	/**
+	 * Field _skillLevel.
+	 */
 	int _skillLevel;
+	/**
+	 * Field _skillDuration.
+	 */
 	int _skillDuration;
 	
+	/**
+	 * Constructor for ShortBuffStatusUpdate.
+	 * @param effect Effect
+	 */
 	public ShortBuffStatusUpdate(Effect effect)
 	{
 		_skillId = effect.getSkill().getDisplayId();
@@ -27,6 +44,9 @@ public class ShortBuffStatusUpdate extends L2GameServerPacket
 		_skillDuration = effect.getTimeLeft();
 	}
 	
+	/**
+	 * Constructor for ShortBuffStatusUpdate.
+	 */
 	public ShortBuffStatusUpdate()
 	{
 		_skillId = 0;
@@ -34,6 +54,9 @@ public class ShortBuffStatusUpdate extends L2GameServerPacket
 		_skillDuration = 0;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

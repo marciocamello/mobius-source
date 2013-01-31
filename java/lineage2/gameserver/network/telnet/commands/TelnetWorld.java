@@ -24,10 +24,20 @@ import lineage2.gameserver.network.telnet.TelnetCommand;
 import lineage2.gameserver.network.telnet.TelnetCommandHolder;
 import lineage2.gameserver.tables.GmListTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TelnetWorld implements TelnetCommandHolder
 {
+	/**
+	 * Field _commands.
+	 */
 	private final Set<TelnetCommand> _commands = new LinkedHashSet<>();
 	
+	/**
+	 * Constructor for TelnetWorld.
+	 */
 	public TelnetWorld()
 	{
 		_commands.add(new TelnetCommand("find")
@@ -57,17 +67,17 @@ public class TelnetWorld implements TelnetCommandHolder
 					if (pattern.matcher(player.getName()).matches())
 					{
 						count++;
-						sb.append(player).append("\n");
+						sb.append(player).append('\n');
 					}
 				}
 				if (count == 0)
 				{
-					sb.append("Player not found.").append("\n");
+					sb.append("Player not found.").append('\n');
 				}
 				else
 				{
 					sb.append("=================================================\n");
-					sb.append("Found: ").append(count).append(" players.").append("\n");
+					sb.append("Found: ").append(count).append(" players.").append('\n');
 				}
 				return sb.toString();
 			}
@@ -93,22 +103,22 @@ public class TelnetWorld implements TelnetCommandHolder
 					return "Player not found.\n";
 				}
 				StringBuilder sb = new StringBuilder();
-				sb.append("Name: .................... ").append(player.getName()).append("\n");
-				sb.append("ID: ...................... ").append(player.getObjectId()).append("\n");
-				sb.append("Account Name: ............ ").append(player.getAccountName()).append("\n");
-				sb.append("IP: ...................... ").append(player.getIP()).append("\n");
-				sb.append("Level: ................... ").append(player.getLevel()).append("\n");
-				sb.append("Location: ................ ").append(player.getLoc()).append("\n");
+				sb.append("Name: .................... ").append(player.getName()).append('\n');
+				sb.append("ID: ...................... ").append(player.getObjectId()).append('\n');
+				sb.append("Account Name: ............ ").append(player.getAccountName()).append('\n');
+				sb.append("IP: ...................... ").append(player.getIP()).append('\n');
+				sb.append("Level: ................... ").append(player.getLevel()).append('\n');
+				sb.append("Location: ................ ").append(player.getLoc()).append('\n');
 				if (player.getClan() != null)
 				{
-					sb.append("Clan: .................... ").append(player.getClan().getName()).append("\n");
+					sb.append("Clan: .................... ").append(player.getClan().getName()).append('\n');
 					if (player.getAlliance() != null)
 					{
-						sb.append("Ally: .................... ").append(player.getAlliance().getAllyName()).append("\n");
+						sb.append("Ally: .................... ").append(player.getAlliance().getAllyName()).append('\n');
 					}
 				}
-				sb.append("Offline: ................. ").append(player.isInOfflineMode()).append("\n");
-				sb.append(player.toString()).append("\n");
+				sb.append("Offline: ................. ").append(player.isInOfflineMode()).append('\n');
+				sb.append(player.toString()).append('\n');
 				return sb.toString();
 			}
 		});
@@ -132,14 +142,18 @@ public class TelnetWorld implements TelnetCommandHolder
 				StringBuilder sb = new StringBuilder();
 				for (int i = 0; i < count; i++)
 				{
-					sb.append(gms.get(i)).append("\n");
+					sb.append(gms.get(i)).append('\n');
 				}
-				sb.append("Found: ").append(count).append(" GMs.").append("\n");
+				sb.append("Found: ").append(count).append(" GMs.").append('\n');
 				return sb.toString();
 			}
 		});
 	}
 	
+	/**
+	 * Method getCommands.
+	 * @return Set<TelnetCommand> * @see lineage2.gameserver.network.telnet.TelnetCommandHolder#getCommands()
+	 */
 	@Override
 	public Set<TelnetCommand> getCommands()
 	{

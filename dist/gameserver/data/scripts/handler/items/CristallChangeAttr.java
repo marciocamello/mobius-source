@@ -25,8 +25,15 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CristallChangeAttr extends ScriptItemHandler
 {
+	/**
+	 * Field ITEM_IDS.
+	 */
 	private final int[] ITEM_IDS =
 	{
 		33502,
@@ -37,6 +44,13 @@ public class CristallChangeAttr extends ScriptItemHandler
 		33834
 	};
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -74,6 +88,13 @@ public class CristallChangeAttr extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method sendAttributeItemList.
+	 * @param itemId int
+	 * @param player Player
+	 * @param grades ItemTemplate.Grade[]
+	 * @return boolean
+	 */
 	private boolean sendAttributeItemList(int itemId, Player player, ItemTemplate.Grade... grades)
 	{
 		List<ItemInfo> itemsList = new ArrayList<>();
@@ -97,6 +118,10 @@ public class CristallChangeAttr extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{

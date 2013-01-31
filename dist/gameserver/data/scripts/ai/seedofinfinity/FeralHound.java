@@ -15,20 +15,36 @@ package ai.seedofinfinity;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FeralHound extends Fighter
 {
+	/**
+	 * Constructor for FeralHound.
+	 * @param actor NpcInstance
+	 */
 	public FeralHound(NpcInstance actor)
 	{
 		super(actor);
 		actor.setIsInvul(true);
 	}
 	
+	/**
+	 * Method randomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomAnimation()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

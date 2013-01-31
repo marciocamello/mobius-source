@@ -25,20 +25,39 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import bosses.FourSepulchersManager;
 import bosses.FourSepulchersSpawn;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SepulcherRaidInstance extends RaidBossInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field mysteriousBoxId.
+	 */
 	public int mysteriousBoxId = 0;
+	/**
+	 * Field _onDeadEventTask.
+	 */
 	private Future<?> _onDeadEventTask = null;
 	
+	/**
+	 * Constructor for SepulcherRaidInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SepulcherRaidInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -55,6 +74,9 @@ public class SepulcherRaidInstance extends RaidBossInstance
 		_onDeadEventTask = ThreadPoolManager.getInstance().schedule(new OnDeadEvent(this), 8500);
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
@@ -66,6 +88,10 @@ public class SepulcherRaidInstance extends RaidBossInstance
 		super.onDelete();
 	}
 	
+	/**
+	 * Method giveCup.
+	 * @param player Player
+	 */
 	private void giveCup(Player player)
 	{
 		String questId = FourSepulchersManager.QUEST_ID;
@@ -107,15 +133,28 @@ public class SepulcherRaidInstance extends RaidBossInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class OnDeadEvent extends RunnableImpl
 	{
+		/**
+		 * Field _activeChar.
+		 */
 		SepulcherRaidInstance _activeChar;
 		
+		/**
+		 * Constructor for OnDeadEvent.
+		 * @param activeChar SepulcherRaidInstance
+		 */
 		public OnDeadEvent(SepulcherRaidInstance activeChar)
 		{
 			_activeChar = activeChar;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -123,6 +162,10 @@ public class SepulcherRaidInstance extends RaidBossInstance
 		}
 	}
 	
+	/**
+	 * Method canChampion.
+	 * @return boolean
+	 */
 	@Override
 	public boolean canChampion()
 	{

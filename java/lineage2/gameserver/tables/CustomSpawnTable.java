@@ -31,11 +31,25 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CustomSpawnTable
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CustomSpawnTable.class);
+	/**
+	 * Field _instance.
+	 */
 	private static CustomSpawnTable _instance;
 	
+	/**
+	 * Method getInstance.
+	 * @return CustomSpawnTable
+	 */
 	public static CustomSpawnTable getInstance()
 	{
 		if (_instance == null)
@@ -45,6 +59,9 @@ public class CustomSpawnTable
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for CustomSpawnTable.
+	 */
 	private CustomSpawnTable()
 	{
 		_instance = this;
@@ -55,6 +72,9 @@ public class CustomSpawnTable
 		fillSpawnTable();
 	}
 	
+	/**
+	 * Method fillSpawnTable.
+	 */
 	private void fillSpawnTable()
 	{
 		Connection con = null;
@@ -93,6 +113,9 @@ public class CustomSpawnTable
 		}
 	}
 	
+	/**
+	 * Method fillCustomSpawnTable.
+	 */
 	private void fillCustomSpawnTable()
 	{
 		Connection con = null;
@@ -132,6 +155,10 @@ public class CustomSpawnTable
 		}
 	}
 	
+	/**
+	 * Method addNewSpawn.
+	 * @param spawn SimpleSpawner
+	 */
 	public void addNewSpawn(SimpleSpawner spawn)
 	{
 		Connection con = null;
@@ -160,6 +187,10 @@ public class CustomSpawnTable
 		}
 	}
 	
+	/**
+	 * Method deleteSpawn.
+	 * @param spawn NpcInstance
+	 */
 	public void deleteSpawn(NpcInstance spawn)
 	{
 		Connection con = null;

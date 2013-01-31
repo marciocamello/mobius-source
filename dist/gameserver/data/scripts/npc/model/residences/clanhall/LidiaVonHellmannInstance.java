@@ -25,6 +25,10 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import npc.model.residences.SiegeGuardInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LidiaVonHellmannInstance extends SiegeGuardInstance
 {
 	/**
@@ -32,11 +36,20 @@ public class LidiaVonHellmannInstance extends SiegeGuardInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for LidiaVonHellmannInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public LidiaVonHellmannInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onDeath(Creature killer)
 	{
@@ -49,6 +62,10 @@ public class LidiaVonHellmannInstance extends SiegeGuardInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method getMostDamagedClan.
+	 * @return Clan
+	 */
 	public Clan getMostDamagedClan()
 	{
 		ClanHallSiegeEvent siegeEvent = getEvent(ClanHallSiegeEvent.class);
@@ -95,6 +112,10 @@ public class LidiaVonHellmannInstance extends SiegeGuardInstance
 		return player == null ? null : player.getClan();
 	}
 	
+	/**
+	 * Method isEffectImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isEffectImmune()
 	{

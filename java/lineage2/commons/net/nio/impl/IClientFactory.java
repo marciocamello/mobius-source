@@ -12,7 +12,16 @@
  */
 package lineage2.commons.net.nio.impl;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IClientFactory<T extends MMOClient>
 {
+	/**
+	 * Method create.
+	 * @param con MMOConnection<T>
+	 * @return T
+	 */
 	public T create(MMOConnection<T> con);
 }

@@ -30,17 +30,52 @@ import lineage2.gameserver.utils.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NpcHtmlMessage extends L2GameServerPacket
 {
+	/**
+	 * Field _log.
+	 */
 	protected static final Logger _log = LoggerFactory.getLogger(NpcHtmlMessage.class);
+	/**
+	 * Field objectId.
+	 */
 	protected static final Pattern objectId = Pattern.compile("%objectId%");
+	/**
+	 * Field playername.
+	 */
 	protected static final Pattern playername = Pattern.compile("%playername%");
+	/**
+	 * Field _npcObjId.
+	 */
 	protected int _npcObjId;
+	/**
+	 * Field _html.
+	 */
 	protected String _html;
+	/**
+	 * Field _file.
+	 */
 	protected String _file = null;
+	/**
+	 * Field _replaces.
+	 */
 	protected List<String> _replaces = new ArrayList<>();
+	/**
+	 * Field have_appends.
+	 */
 	protected boolean have_appends = false;
 	
+	/**
+	 * Constructor for NpcHtmlMessage.
+	 * @param player Player
+	 * @param npcId int
+	 * @param filename String
+	 * @param val int
+	 */
 	public NpcHtmlMessage(Player player, int npcId, String filename, int val)
 	{
 		List<ScriptClassAndMethod> appends = Scripts.dialogAppends.get(npcId);
@@ -79,6 +114,13 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Constructor for NpcHtmlMessage.
+	 * @param player Player
+	 * @param npc NpcInstance
+	 * @param filename String
+	 * @param val int
+	 */
 	public NpcHtmlMessage(Player player, NpcInstance npc, String filename, int val)
 	{
 		this(player, npc.getNpcId(), filename, val);
@@ -88,6 +130,11 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		replace("%npcname%", npc.getName());
 	}
 	
+	/**
+	 * Constructor for NpcHtmlMessage.
+	 * @param player Player
+	 * @param npc NpcInstance
+	 */
 	public NpcHtmlMessage(Player player, NpcInstance npc)
 	{
 		if (npc == null)
@@ -102,11 +149,20 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Constructor for NpcHtmlMessage.
+	 * @param npcObjId int
+	 */
 	public NpcHtmlMessage(int npcObjId)
 	{
 		_npcObjId = npcObjId;
 	}
 	
+	/**
+	 * Method setHtml.
+	 * @param text String
+	 * @return NpcHtmlMessage
+	 */
 	public final NpcHtmlMessage setHtml(String text)
 	{
 		if (!text.contains("<html>"))
@@ -117,6 +173,11 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		return this;
 	}
 	
+	/**
+	 * Method setFile.
+	 * @param file String
+	 * @return NpcHtmlMessage
+	 */
 	public final NpcHtmlMessage setFile(String file)
 	{
 		_file = file;
@@ -128,6 +189,12 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		return this;
 	}
 	
+	/**
+	 * Method replace.
+	 * @param pattern String
+	 * @param value String
+	 * @return NpcHtmlMessage
+	 */
 	public NpcHtmlMessage replace(String pattern, String value)
 	{
 		if ((pattern == null) || (value == null))
@@ -139,6 +206,13 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		return this;
 	}
 	
+	/**
+	 * Method replaceNpcString.
+	 * @param pattern String
+	 * @param npcString NpcString
+	 * @param arg Object[]
+	 * @return NpcHtmlMessage
+	 */
 	public NpcHtmlMessage replaceNpcString(String pattern, NpcString npcString, Object... arg)
 	{
 		if (pattern == null)
@@ -154,6 +228,9 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		return this;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

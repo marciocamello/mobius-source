@@ -25,10 +25,21 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NewYearTimer implements ScriptFile
 {
+	/**
+	 * Field instance.
+	 */
 	static NewYearTimer instance;
 	
+	/**
+	 * Method getInstance.
+	 * @return NewYearTimer
+	 */
 	public static NewYearTimer getInstance()
 	{
 		if (instance == null)
@@ -38,6 +49,9 @@ public class NewYearTimer implements ScriptFile
 		return instance;
 	}
 	
+	/**
+	 * Constructor for NewYearTimer.
+	 */
 	public NewYearTimer()
 	{
 		if (instance != null)
@@ -74,40 +88,73 @@ public class NewYearTimer implements ScriptFile
 		ThreadPoolManager.getInstance().schedule(new NewYearAnnouncer("5"), getDelay(c));
 	}
 	
+	/**
+	 * Method getDelay.
+	 * @param c Calendar
+	 * @return long
+	 */
 	private long getDelay(Calendar c)
 	{
 		return c.getTime().getTime() - System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return ServerVariables.getString("Christmas", "off").equalsIgnoreCase("on");
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 */
 	private class NewYearAnnouncer extends RunnableImpl
 	{
+		/**
+		 * Field message.
+		 */
 		private final String message;
 		
+		/**
+		 * Constructor for NewYearAnnouncer.
+		 * @param message String
+		 */
 		NewYearAnnouncer(String message)
 		{
 			this.message = message;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

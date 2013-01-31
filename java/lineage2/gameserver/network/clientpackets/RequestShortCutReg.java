@@ -16,10 +16,20 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.ShortCut;
 import lineage2.gameserver.network.serverpackets.ShortCutRegister;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestShortCutReg extends L2GameClientPacket
 {
+	/**
+	 * Field _characterType. Field _lvl. Field _page. Field _slot. Field _id. Field _type.
+	 */
 	private int _type, _id, _slot, _page, _lvl, _characterType;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -32,6 +42,9 @@ public class RequestShortCutReg extends L2GameClientPacket
 		_page = slot / 12;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

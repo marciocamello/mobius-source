@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExResponseCommissionInfo extends L2GameServerPacket
 {
+	/**
+	 * Field response.
+	 */
 	private final int response;
 	
+	/**
+	 * Constructor for ExResponseCommissionInfo.
+	 * @param response int
+	 */
 	public ExResponseCommissionInfo(int response)
 	{
 		this.response = response;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

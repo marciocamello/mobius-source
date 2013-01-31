@@ -16,88 +16,177 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeleToCatacomb extends Functions
 {
+	/**
+	 * Method DialogAppend_31212.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31212(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31213.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31213(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31214.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31214(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31215.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31215(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31216.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31216(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31217.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31217(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31218.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31218(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31219.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31219(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31220.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31220(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31221.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31221(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31222.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31222(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31223.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31223(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31224.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31224(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31767.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31767(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31768.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31768(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_32048.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_32048(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method getHtmlAppends.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String getHtmlAppends(Integer val)
 	{
 		if ((val != 0) || !Config.ALT_TELE_TO_CATACOMBS)

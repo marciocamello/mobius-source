@@ -14,17 +14,34 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Summon;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SetSummonRemainTime extends L2GameServerPacket
 {
+	/**
+	 * Field _maxFed.
+	 */
 	private final int _maxFed;
+	/**
+	 * Field _curFed.
+	 */
 	private final int _curFed;
 	
+	/**
+	 * Constructor for SetSummonRemainTime.
+	 * @param summon Summon
+	 */
 	public SetSummonRemainTime(Summon summon)
 	{
 		_curFed = summon.getCurrentFed();
 		_maxFed = summon.getMaxFed();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

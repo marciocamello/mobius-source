@@ -28,23 +28,61 @@ import lineage2.gameserver.tables.ClanTable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Alliance
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Alliance.class);
+	/**
+	 * Field _allyName.
+	 */
 	private String _allyName;
+	/**
+	 * Field _allyId.
+	 */
 	private int _allyId;
+	/**
+	 * Field _leader.
+	 */
 	private Clan _leader = null;
+	/**
+	 * Field _members.
+	 */
 	private final Map<Integer, Clan> _members = new ConcurrentHashMap<>();
+	/**
+	 * Field _allyCrestId.
+	 */
 	private int _allyCrestId;
+	/**
+	 * Field _expelledMemberTime.
+	 */
 	private long _expelledMemberTime;
+	/**
+	 * Field EXPELLED_MEMBER_PENALTY.
+	 */
 	public static long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
 	
+	/**
+	 * Constructor for Alliance.
+	 * @param allyId int
+	 */
 	public Alliance(int allyId)
 	{
 		_allyId = allyId;
 		restore();
 	}
 	
+	/**
+	 * Constructor for Alliance.
+	 * @param allyId int
+	 * @param allyName String
+	 * @param leader Clan
+	 */
 	public Alliance(int allyId, String allyName, Clan leader)
 	{
 		_allyId = allyId;
@@ -52,27 +90,48 @@ public class Alliance
 		setLeader(leader);
 	}
 	
+	/**
+	 * Method getLeaderId.
+	 * @return int
+	 */
 	public int getLeaderId()
 	{
 		return _leader != null ? _leader.getClanId() : 0;
 	}
 	
+	/**
+	 * Method getLeader.
+	 * @return Clan
+	 */
 	public Clan getLeader()
 	{
 		return _leader;
 	}
 	
+	/**
+	 * Method setLeader.
+	 * @param leader Clan
+	 */
 	public void setLeader(Clan leader)
 	{
 		_leader = leader;
 		_members.put(leader.getClanId(), leader);
 	}
 	
+	/**
+	 * Method getAllyLeaderName.
+	 * @return String
+	 */
 	public String getAllyLeaderName()
 	{
 		return _leader != null ? _leader.getLeaderName() : "";
 	}
 	
+	/**
+	 * Method addAllyMember.
+	 * @param member Clan
+	 * @param storeInDb boolean
+	 */
 	public void addAllyMember(Clan member, boolean storeInDb)
 	{
 		_members.put(member.getClanId(), member);
@@ -82,11 +141,20 @@ public class Alliance
 		}
 	}
 	
+	/**
+	 * Method getAllyMember.
+	 * @param id int
+	 * @return Clan
+	 */
 	public Clan getAllyMember(int id)
 	{
 		return _members.get(id);
 	}
 	
+	/**
+	 * Method removeAllyMember.
+	 * @param id int
+	 */
 	public void removeAllyMember(int id)
 	{
 		if ((_leader != null) && (_leader.getClanId() == id))
@@ -102,72 +170,127 @@ public class Alliance
 		removeMemberInDatabase(exMember);
 	}
 	
+	/**
+	 * Method getMembers.
+	 * @return Clan[]
+	 */
 	public Clan[] getMembers()
 	{
 		return _members.values().toArray(new Clan[_members.size()]);
 	}
 	
+	/**
+	 * Method getMembersCount.
+	 * @return int
+	 */
 	public int getMembersCount()
 	{
 		return _members.size();
 	}
 	
+	/**
+	 * Method getAllyId.
+	 * @return int
+	 */
 	public int getAllyId()
 	{
 		return _allyId;
 	}
 	
+	/**
+	 * Method getAllyName.
+	 * @return String
+	 */
 	public String getAllyName()
 	{
 		return _allyName;
 	}
 	
+	/**
+	 * Method setAllyCrestId.
+	 * @param allyCrestId int
+	 */
 	public void setAllyCrestId(int allyCrestId)
 	{
 		_allyCrestId = allyCrestId;
 	}
 	
+	/**
+	 * Method getAllyCrestId.
+	 * @return int
+	 */
 	public int getAllyCrestId()
 	{
 		return _allyCrestId;
 	}
 	
+	/**
+	 * Method setAllyId.
+	 * @param allyId int
+	 */
 	public void setAllyId(int allyId)
 	{
 		_allyId = allyId;
 	}
 	
+	/**
+	 * Method setAllyName.
+	 * @param allyName String
+	 */
 	public void setAllyName(String allyName)
 	{
 		_allyName = allyName;
 	}
 	
+	/**
+	 * Method isMember.
+	 * @param id int
+	 * @return boolean
+	 */
 	public boolean isMember(int id)
 	{
 		return _members.containsKey(id);
 	}
 	
+	/**
+	 * Method setExpelledMemberTime.
+	 * @param time long
+	 */
 	public void setExpelledMemberTime(long time)
 	{
 		_expelledMemberTime = time;
 	}
 	
+	/**
+	 * Method getExpelledMemberTime.
+	 * @return long
+	 */
 	public long getExpelledMemberTime()
 	{
 		return _expelledMemberTime;
 	}
 	
+	/**
+	 * Method setExpelledMember.
+	 */
 	public void setExpelledMember()
 	{
 		_expelledMemberTime = System.currentTimeMillis();
 		updateAllyInDB();
 	}
 	
+	/**
+	 * Method canInvite.
+	 * @return boolean
+	 */
 	public boolean canInvite()
 	{
 		return (System.currentTimeMillis() - _expelledMemberTime) >= EXPELLED_MEMBER_PENALTY;
 	}
 	
+	/**
+	 * Method updateAllyInDB.
+	 */
 	public void updateAllyInDB()
 	{
 		if (getLeaderId() == 0)
@@ -203,6 +326,9 @@ public class Alliance
 		}
 	}
 	
+	/**
+	 * Method store.
+	 */
 	public void store()
 	{
 		Connection con = null;
@@ -231,6 +357,10 @@ public class Alliance
 		}
 	}
 	
+	/**
+	 * Method storeNewMemberInDatabase.
+	 * @param member Clan
+	 */
 	private void storeNewMemberInDatabase(Clan member)
 	{
 		Connection con = null;
@@ -253,6 +383,10 @@ public class Alliance
 		}
 	}
 	
+	/**
+	 * Method removeMemberInDatabase.
+	 * @param member Clan
+	 */
 	private void removeMemberInDatabase(Clan member)
 	{
 		Connection con = null;
@@ -274,6 +408,9 @@ public class Alliance
 		}
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	private void restore()
 	{
 		if (getAllyId() == 0)
@@ -327,6 +464,10 @@ public class Alliance
 		}
 	}
 	
+	/**
+	 * Method broadcastToOnlineMembers.
+	 * @param packet L2GameServerPacket
+	 */
 	public void broadcastToOnlineMembers(L2GameServerPacket packet)
 	{
 		for (Clan member : _members.values())
@@ -338,6 +479,11 @@ public class Alliance
 		}
 	}
 	
+	/**
+	 * Method broadcastToOtherOnlineMembers.
+	 * @param packet L2GameServerPacket
+	 * @param player Player
+	 */
 	public void broadcastToOtherOnlineMembers(L2GameServerPacket packet, Player player)
 	{
 		for (Clan member : _members.values())
@@ -349,17 +495,28 @@ public class Alliance
 		}
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		return getAllyName();
 	}
 	
+	/**
+	 * Method hasAllyCrest.
+	 * @return boolean
+	 */
 	public boolean hasAllyCrest()
 	{
 		return _allyCrestId > 0;
 	}
 	
+	/**
+	 * Method broadcastAllyStatus.
+	 */
 	public void broadcastAllyStatus()
 	{
 		for (Clan member : getMembers())

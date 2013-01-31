@@ -14,29 +14,71 @@ package lineage2.commons.util.concurrent.locks;
 
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ReentrantReadWriteLock
 {
+	/**
+	 * Field stateUpdater.
+	 */
 	private static final AtomicIntegerFieldUpdater<ReentrantReadWriteLock> stateUpdater = AtomicIntegerFieldUpdater.newUpdater(ReentrantReadWriteLock.class, "state");
+	/**
+	 * Field SHARED_SHIFT. (value is 16)
+	 */
 	static final int SHARED_SHIFT = 16;
+	/**
+	 * Field SHARED_UNIT.
+	 */
 	static final int SHARED_UNIT = (1 << SHARED_SHIFT);
+	/**
+	 * Field MAX_COUNT.
+	 */
 	static final int MAX_COUNT = (1 << SHARED_SHIFT) - 1;
+	/**
+	 * Field EXCLUSIVE_MASK.
+	 */
 	static final int EXCLUSIVE_MASK = (1 << SHARED_SHIFT) - 1;
 	
+	/**
+	 * Method sharedCount.
+	 * @param c int
+	 * @return int
+	 */
 	static int sharedCount(int c)
 	{
 		return c >>> SHARED_SHIFT;
 	}
 	
+	/**
+	 * Method exclusiveCount.
+	 * @param c int
+	 * @return int
+	 */
 	static int exclusiveCount(int c)
 	{
 		return c & EXCLUSIVE_MASK;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static final class HoldCounter
 	{
+		/**
+		 * Field count.
+		 */
 		int count;
+		/**
+		 * Field tid.
+		 */
 		final long tid = Thread.currentThread().getId();
 		
+		/**
+		 * Method tryDecrement.
+		 * @return int
+		 */
 		int tryDecrement()
 		{
 			int c = count;
@@ -48,8 +90,15 @@ public class ReentrantReadWriteLock
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static final class ThreadLocalHoldCounter extends ThreadLocal<HoldCounter>
 	{
+		/**
+		 * Method initialValue.
+		 * @return HoldCounter
+		 */
 		@Override
 		public HoldCounter initialValue()
 		{
@@ -57,42 +106,82 @@ public class ReentrantReadWriteLock
 		}
 	}
 	
+	/**
+	 * Field readHolds.
+	 */
 	transient ThreadLocalHoldCounter readHolds;
+	/**
+	 * Field cachedHoldCounter.
+	 */
 	transient HoldCounter cachedHoldCounter;
+	/**
+	 * Field owner.
+	 */
 	private Thread owner;
+	/**
+	 * Field state.
+	 */
 	private volatile int state;
 	
+	/**
+	 * Constructor for ReentrantReadWriteLock.
+	 */
 	public ReentrantReadWriteLock()
 	{
 		readHolds = new ThreadLocalHoldCounter();
 		setState(0);
 	}
 	
+	/**
+	 * Method getState.
+	 * @return int
+	 */
 	private final int getState()
 	{
 		return state;
 	}
 	
+	/**
+	 * Method setState.
+	 * @param newState int
+	 */
 	private void setState(int newState)
 	{
 		state = newState;
 	}
 	
+	/**
+	 * Method compareAndSetState.
+	 * @param expect int
+	 * @param update int
+	 * @return boolean
+	 */
 	private boolean compareAndSetState(int expect, int update)
 	{
 		return stateUpdater.compareAndSet(this, expect, update);
 	}
 	
+	/**
+	 * Method getExclusiveOwnerThread.
+	 * @return Thread
+	 */
 	private Thread getExclusiveOwnerThread()
 	{
 		return owner;
 	}
 	
+	/**
+	 * Method setExclusiveOwnerThread.
+	 * @param thread Thread
+	 */
 	private void setExclusiveOwnerThread(Thread thread)
 	{
 		owner = thread;
 	}
 	
+	/**
+	 * Method writeLock.
+	 */
 	public void writeLock()
 	{
 		Thread current = Thread.currentThread();
@@ -119,6 +208,10 @@ public class ReentrantReadWriteLock
 		}
 	}
 	
+	/**
+	 * Method tryWriteLock.
+	 * @return boolean
+	 */
 	public boolean tryWriteLock()
 	{
 		Thread current = Thread.currentThread();
@@ -143,6 +236,10 @@ public class ReentrantReadWriteLock
 		return true;
 	}
 	
+	/**
+	 * Method tryReadLock.
+	 * @return boolean
+	 */
 	final boolean tryReadLock()
 	{
 		Thread current = Thread.currentThread();
@@ -169,6 +266,9 @@ public class ReentrantReadWriteLock
 		return false;
 	}
 	
+	/**
+	 * Method readLock.
+	 */
 	public void readLock()
 	{
 		Thread current = Thread.currentThread();
@@ -198,6 +298,9 @@ public class ReentrantReadWriteLock
 		}
 	}
 	
+	/**
+	 * Method writeUnlock.
+	 */
 	public void writeUnlock()
 	{
 		int nextc = getState() - 1;
@@ -215,6 +318,9 @@ public class ReentrantReadWriteLock
 		return;
 	}
 	
+	/**
+	 * Method readUnlock.
+	 */
 	public void readUnlock()
 	{
 		HoldCounter rh = cachedHoldCounter;

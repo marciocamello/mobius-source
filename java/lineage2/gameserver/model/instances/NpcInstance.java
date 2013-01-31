@@ -119,50 +119,170 @@ import lineage2.gameserver.utils.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NpcInstance extends Creature
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field NO_CHAT_WINDOW. (value is ""noChatWindow"")
+	 */
 	public static final String NO_CHAT_WINDOW = "noChatWindow";
+	/**
+	 * Field NO_RANDOM_WALK. (value is ""noRandomWalk"")
+	 */
 	public static final String NO_RANDOM_WALK = "noRandomWalk";
+	/**
+	 * Field NO_RANDOM_ANIMATION. (value is ""noRandomAnimation"")
+	 */
 	public static final String NO_RANDOM_ANIMATION = "noRandomAnimation";
+	/**
+	 * Field TARGETABLE. (value is ""TargetEnabled"")
+	 */
 	public static final String TARGETABLE = "TargetEnabled";
+	/**
+	 * Field ATTACKABLE. (value is ""attackable"")
+	 */
 	public static final String ATTACKABLE = "attackable";
+	/**
+	 * Field SHOW_NAME. (value is ""showName"")
+	 */
 	public static final String SHOW_NAME = "showName";
+	/**
+	 * Field SHOW_TITLE. (value is ""showTitle"")
+	 */
 	public static final String SHOW_TITLE = "showTitle";
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(NpcInstance.class);
+	/**
+	 * Field _personalAggroRange.
+	 */
 	private int _personalAggroRange = -1;
+	/**
+	 * Field _level.
+	 */
 	private int _level = 0;
+	/**
+	 * Field _dieTime.
+	 */
 	private long _dieTime = 0L;
+	/**
+	 * Field _spawnAnimation.
+	 */
 	protected int _spawnAnimation = 2;
+	/**
+	 * Field _currentLHandId.
+	 */
 	private int _currentLHandId;
+	/**
+	 * Field _currentRHandId.
+	 */
 	private int _currentRHandId;
+	/**
+	 * Field _currentCollisionRadius.
+	 */
 	private double _currentCollisionRadius;
+	/**
+	 * Field _currentCollisionHeight.
+	 */
 	private double _currentCollisionHeight;
+	/**
+	 * Field npcState.
+	 */
 	private int npcState = 0;
+	/**
+	 * Field _hasRandomAnimation.
+	 */
 	protected boolean _hasRandomAnimation;
+	/**
+	 * Field _hasRandomWalk.
+	 */
 	protected boolean _hasRandomWalk;
+	/**
+	 * Field _hasChatWindow.
+	 */
 	protected boolean _hasChatWindow;
+	/**
+	 * Field _decayTask.
+	 */
 	private Future<?> _decayTask;
+	/**
+	 * Field _animationTask.
+	 */
 	private Future<?> _animationTask;
+	/**
+	 * Field _aggroList.
+	 */
 	private final AggroList _aggroList;
+	/**
+	 * Field _isTargetable.
+	 */
 	private boolean _isTargetable;
+	/**
+	 * Field _isAttackable.
+	 */
 	private boolean _isAttackable;
+	/**
+	 * Field _showName.
+	 */
 	private boolean _showName;
+	/**
+	 * Field _showTitle.
+	 */
 	private boolean _showTitle;
+	/**
+	 * Field _nearestCastle.
+	 */
 	private Castle _nearestCastle;
+	/**
+	 * Field _nearestFortress.
+	 */
 	private Fortress _nearestFortress;
+	/**
+	 * Field _nearestClanHall.
+	 */
 	private ClanHall _nearestClanHall;
+	/**
+	 * Field _nearestDominion.
+	 */
 	private Dominion _nearestDominion;
+	/**
+	 * Field _nameNpcString.
+	 */
 	private NpcString _nameNpcString = NpcString.NONE;
+	/**
+	 * Field _titleNpcString.
+	 */
 	private NpcString _titleNpcString = NpcString.NONE;
+	/**
+	 * Field _spawn.
+	 */
 	private Spawner _spawn;
+	/**
+	 * Field _spawnedLoc.
+	 */
 	private Location _spawnedLoc = new Location();
+	/**
+	 * Field _spawnRange.
+	 */
 	private SpawnRange _spawnRange;
+	/**
+	 * Field _parameters.
+	 */
 	private MultiValueSet<String> _parameters = StatsSet.EMPTY;
 	
+	/**
+	 * Constructor for NpcInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public NpcInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -196,6 +316,10 @@ public class NpcInstance extends Creature
 		setFlying(getParameter("isFlying", false));
 	}
 	
+	/**
+	 * Method getRef.
+	 * @return HardReference<NpcInstance>
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public HardReference<NpcInstance> getRef()
@@ -203,6 +327,10 @@ public class NpcInstance extends Creature
 		return (HardReference<NpcInstance>) super.getRef();
 	}
 	
+	/**
+	 * Method getAI.
+	 * @return CharacterAI
+	 */
 	@Override
 	public CharacterAI getAI()
 	{
@@ -219,56 +347,105 @@ public class NpcInstance extends Creature
 		return _ai;
 	}
 	
+	/**
+	 * Method getSpawnedLoc.
+	 * @return Location
+	 */
 	public Location getSpawnedLoc()
 	{
 		return _spawnedLoc;
 	}
 	
+	/**
+	 * Method setSpawnedLoc.
+	 * @param loc Location
+	 */
 	public void setSpawnedLoc(Location loc)
 	{
 		_spawnedLoc = loc;
 	}
 	
+	/**
+	 * Method getRightHandItem.
+	 * @return int
+	 */
 	public int getRightHandItem()
 	{
 		return _currentRHandId;
 	}
 	
+	/**
+	 * Method getLeftHandItem.
+	 * @return int
+	 */
 	public int getLeftHandItem()
 	{
 		return _currentLHandId;
 	}
 	
+	/**
+	 * Method setLHandId.
+	 * @param newWeaponId int
+	 */
 	public void setLHandId(int newWeaponId)
 	{
 		_currentLHandId = newWeaponId;
 	}
 	
+	/**
+	 * Method setRHandId.
+	 * @param newWeaponId int
+	 */
 	public void setRHandId(int newWeaponId)
 	{
 		_currentRHandId = newWeaponId;
 	}
 	
+	/**
+	 * Method getCollisionHeight.
+	 * @return double
+	 */
 	public double getCollisionHeight()
 	{
 		return _currentCollisionHeight;
 	}
 	
+	/**
+	 * Method setCollisionHeight.
+	 * @param offset double
+	 */
 	public void setCollisionHeight(double offset)
 	{
 		_currentCollisionHeight = offset;
 	}
 	
+	/**
+	 * Method getCollisionRadius.
+	 * @return double
+	 */
 	public double getCollisionRadius()
 	{
 		return _currentCollisionRadius;
 	}
 	
+	/**
+	 * Method setCollisionRadius.
+	 * @param collisionRadius double
+	 */
 	public void setCollisionRadius(double collisionRadius)
 	{
 		_currentCollisionRadius = collisionRadius;
 	}
 	
+	/**
+	 * Method onReduceCurrentHp.
+	 * @param damage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 */
 	@Override
 	protected void onReduceCurrentHp(double damage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp)
 	{
@@ -279,6 +456,10 @@ public class NpcInstance extends Creature
 		super.onReduceCurrentHp(damage, attacker, skill, awake, standUp, directHp);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -308,6 +489,10 @@ public class NpcInstance extends Creature
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method getDeadTime.
+	 * @return long
+	 */
 	public long getDeadTime()
 	{
 		if (_dieTime <= 0L)
@@ -317,21 +502,39 @@ public class NpcInstance extends Creature
 		return System.currentTimeMillis() - _dieTime;
 	}
 	
+	/**
+	 * Method getAggroList.
+	 * @return AggroList
+	 */
 	public AggroList getAggroList()
 	{
 		return _aggroList;
 	}
 	
+	/**
+	 * Method getMinionList.
+	 * @return MinionList
+	 */
 	public MinionList getMinionList()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method hasMinions.
+	 * @return boolean
+	 */
 	public boolean hasMinions()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method dropItem.
+	 * @param lastAttacker Player
+	 * @param itemId int
+	 * @param itemCount long
+	 */
 	public void dropItem(Player lastAttacker, int itemId, long itemCount)
 	{
 		if ((itemCount == 0) || (lastAttacker == null))
@@ -373,6 +576,11 @@ public class NpcInstance extends Creature
 		}
 	}
 	
+	/**
+	 * Method dropItem.
+	 * @param lastAttacker Player
+	 * @param item ItemInstance
+	 */
 	public void dropItem(Player lastAttacker, ItemInstance item)
 	{
 		if (item.getCount() == 0)
@@ -400,18 +608,31 @@ public class NpcInstance extends Creature
 		lastAttacker.doAutoLootOrDrop(item, this);
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature attacker)
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		return _isAttackable;
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -427,6 +648,9 @@ public class NpcInstance extends Creature
 		getListeners().onSpawn();
 	}
 	
+	/**
+	 * Method onDespawn.
+	 */
 	@Override
 	protected void onDespawn()
 	{
@@ -438,30 +662,53 @@ public class NpcInstance extends Creature
 		super.onDespawn();
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @return NpcTemplate
+	 */
 	@Override
 	public NpcTemplate getTemplate()
 	{
 		return (NpcTemplate) _template;
 	}
 	
+	/**
+	 * Method getNpcId.
+	 * @return int
+	 */
 	@Override
 	public int getNpcId()
 	{
 		return getTemplate().npcId;
 	}
 	
+	/**
+	 * Field _unAggred.
+	 */
 	protected boolean _unAggred = false;
 	
+	/**
+	 * Method setUnAggred.
+	 * @param state boolean
+	 */
 	public void setUnAggred(boolean state)
 	{
 		_unAggred = state;
 	}
 	
+	/**
+	 * Method isAggressive.
+	 * @return boolean
+	 */
 	public boolean isAggressive()
 	{
 		return getAggroRange() > 0;
 	}
 	
+	/**
+	 * Method getAggroRange.
+	 * @return int
+	 */
 	public int getAggroRange()
 	{
 		if (_unAggred)
@@ -475,55 +722,98 @@ public class NpcInstance extends Creature
 		return getTemplate().aggroRange;
 	}
 	
+	/**
+	 * Method setAggroRange.
+	 * @param aggroRange int
+	 */
 	public void setAggroRange(int aggroRange)
 	{
 		_personalAggroRange = aggroRange;
 	}
 	
+	/**
+	 * Method getFaction.
+	 * @return Faction
+	 */
 	public Faction getFaction()
 	{
 		return getTemplate().getFaction();
 	}
 	
+	/**
+	 * Method isInFaction.
+	 * @param npc NpcInstance
+	 * @return boolean
+	 */
 	public boolean isInFaction(NpcInstance npc)
 	{
 		return getFaction().equals(npc.getFaction()) && !getFaction().isIgnoreNpcId(npc.getNpcId());
 	}
 	
+	/**
+	 * Method getMAtk.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return int
+	 */
 	@Override
 	public int getMAtk(Creature target, Skill skill)
 	{
 		return (int) (super.getMAtk(target, skill) * Config.ALT_NPC_MATK_MODIFIER);
 	}
 	
+	/**
+	 * Method getPAtk.
+	 * @param target Creature
+	 * @return int
+	 */
 	@Override
 	public int getPAtk(Creature target)
 	{
 		return (int) (super.getPAtk(target) * Config.ALT_NPC_PATK_MODIFIER);
 	}
 	
+	/**
+	 * Method getMaxHp.
+	 * @return int
+	 */
 	@Override
 	public int getMaxHp()
 	{
 		return (int) (super.getMaxHp() * Config.ALT_NPC_MAXHP_MODIFIER);
 	}
 	
+	/**
+	 * Method getMaxMp.
+	 * @return int
+	 */
 	@Override
 	public int getMaxMp()
 	{
 		return (int) (super.getMaxMp() * Config.ALT_NPC_MAXMP_MODIFIER);
 	}
 	
+	/**
+	 * Method getExpReward.
+	 * @return long
+	 */
 	public long getExpReward()
 	{
 		return (long) calcStat(Stats.EXP, getTemplate().rewardExp, null, null);
 	}
 	
+	/**
+	 * Method getSpReward.
+	 * @return long
+	 */
 	public long getSpReward()
 	{
 		return (long) calcStat(Stats.SP, getTemplate().rewardSp, null, null);
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
@@ -536,16 +826,27 @@ public class NpcInstance extends Creature
 		super.onDelete();
 	}
 	
+	/**
+	 * Method getSpawn.
+	 * @return Spawner
+	 */
 	public Spawner getSpawn()
 	{
 		return _spawn;
 	}
 	
+	/**
+	 * Method setSpawn.
+	 * @param spawn Spawner
+	 */
 	public void setSpawn(Spawner spawn)
 	{
 		_spawn = spawn;
 	}
 	
+	/**
+	 * Method onDecay.
+	 */
 	@Override
 	protected void onDecay()
 	{
@@ -561,12 +862,19 @@ public class NpcInstance extends Creature
 		}
 	}
 	
+	/**
+	 * Method startDecay.
+	 * @param delay long
+	 */
 	protected void startDecay(long delay)
 	{
 		stopDecay();
 		_decayTask = DecayTaskManager.getInstance().addDecayTask(this, delay);
 	}
 	
+	/**
+	 * Method stopDecay.
+	 */
 	public void stopDecay()
 	{
 		if (_decayTask != null)
@@ -576,6 +884,9 @@ public class NpcInstance extends Creature
 		}
 	}
 	
+	/**
+	 * Method endDecayTask.
+	 */
 	public void endDecayTask()
 	{
 		if (_decayTask != null)
@@ -586,41 +897,72 @@ public class NpcInstance extends Creature
 		doDecay();
 	}
 	
+	/**
+	 * Method isUndead.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isUndead()
 	{
 		return getTemplate().isUndead();
 	}
 	
+	/**
+	 * Method setLevel.
+	 * @param level int
+	 */
 	public void setLevel(int level)
 	{
 		_level = level;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	@Override
 	public int getLevel()
 	{
 		return _level == 0 ? getTemplate().level : _level;
 	}
 	
+	/**
+	 * Field _displayId.
+	 */
 	private int _displayId = 0;
 	
+	/**
+	 * Method setDisplayId.
+	 * @param displayId int
+	 */
 	public void setDisplayId(int displayId)
 	{
 		_displayId = displayId;
 	}
 	
+	/**
+	 * Method getDisplayId.
+	 * @return int
+	 */
 	public int getDisplayId()
 	{
 		return _displayId > 0 ? _displayId : getTemplate().displayId;
 	}
 	
+	/**
+	 * Method getActiveWeaponInstance.
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance getActiveWeaponInstance()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getActiveWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	@Override
 	public WeaponTemplate getActiveWeaponItem()
 	{
@@ -637,12 +979,20 @@ public class NpcInstance extends Creature
 		return (WeaponTemplate) item;
 	}
 	
+	/**
+	 * Method getSecondaryWeaponInstance.
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance getSecondaryWeaponInstance()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getSecondaryWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	@Override
 	public WeaponTemplate getSecondaryWeaponItem()
 	{
@@ -659,6 +1009,9 @@ public class NpcInstance extends Creature
 		return (WeaponTemplate) item;
 	}
 	
+	/**
+	 * Method sendChanges.
+	 */
 	@Override
 	public void sendChanges()
 	{
@@ -669,8 +1022,17 @@ public class NpcInstance extends Creature
 		super.sendChanges();
 	}
 	
+	/**
+	 * Field _broadcastCharInfoTask.
+	 */
 	ScheduledFuture<?> _broadcastCharInfoTask;
 	
+	/**
+	 * Method onMenuSelect.
+	 * @param player Player
+	 * @param ask int
+	 * @param reply int
+	 */
 	public void onMenuSelect(Player player, int ask, int reply)
 	{
 		if (getAI() != null)
@@ -679,8 +1041,13 @@ public class NpcInstance extends Creature
 		}
 	}
 	
+	/**
+	 */
 	public class BroadcastCharInfoTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -689,6 +1056,9 @@ public class NpcInstance extends Creature
 		}
 	}
 	
+	/**
+	 * Method broadcastCharInfo.
+	 */
 	@Override
 	public void broadcastCharInfo()
 	{
@@ -703,6 +1073,9 @@ public class NpcInstance extends Creature
 		_broadcastCharInfoTask = ThreadPoolManager.getInstance().schedule(new BroadcastCharInfoTask(), Config.BROADCAST_CHAR_INFO_INTERVAL);
 	}
 	
+	/**
+	 * Method broadcastCharInfoImpl.
+	 */
 	public void broadcastCharInfoImpl()
 	{
 		for (Player player : World.getAroundPlayers(this))
@@ -711,6 +1084,9 @@ public class NpcInstance extends Creature
 		}
 	}
 	
+	/**
+	 * Method onRandomAnimation.
+	 */
 	public void onRandomAnimation()
 	{
 		if ((System.currentTimeMillis() - _lastSocialAction) > 10000L)
@@ -720,6 +1096,9 @@ public class NpcInstance extends Creature
 		}
 	}
 	
+	/**
+	 * Method startRandomAnimation.
+	 */
 	public void startRandomAnimation()
 	{
 		if (!hasRandomAnimation())
@@ -729,6 +1108,9 @@ public class NpcInstance extends Creature
 		_animationTask = LazyPrecisionTaskManager.getInstance().addNpcAnimationTask(this);
 	}
 	
+	/**
+	 * Method stopRandomAnimation.
+	 */
 	public void stopRandomAnimation()
 	{
 		if (_animationTask != null)
@@ -738,16 +1120,28 @@ public class NpcInstance extends Creature
 		}
 	}
 	
+	/**
+	 * Method hasRandomAnimation.
+	 * @return boolean
+	 */
 	public boolean hasRandomAnimation()
 	{
 		return _hasRandomAnimation;
 	}
 	
+	/**
+	 * Method hasRandomWalk.
+	 * @return boolean
+	 */
 	public boolean hasRandomWalk()
 	{
 		return _hasRandomWalk;
 	}
 	
+	/**
+	 * Method getCastle.
+	 * @return Castle
+	 */
 	public Castle getCastle()
 	{
 		if ((getReflection() == ReflectionManager.PARNASSUS) && Config.SERVICES_PARNASSUS_NOTAX)
@@ -773,11 +1167,20 @@ public class NpcInstance extends Creature
 		return _nearestCastle;
 	}
 	
+	/**
+	 * Method getCastle.
+	 * @param player Player
+	 * @return Castle
+	 */
 	public Castle getCastle(Player player)
 	{
 		return getCastle();
 	}
 	
+	/**
+	 * Method getFortress.
+	 * @return Fortress
+	 */
 	public Fortress getFortress()
 	{
 		if (_nearestFortress == null)
@@ -787,6 +1190,10 @@ public class NpcInstance extends Creature
 		return _nearestFortress;
 	}
 	
+	/**
+	 * Method getClanHall.
+	 * @return ClanHall
+	 */
 	public ClanHall getClanHall()
 	{
 		if (_nearestClanHall == null)
@@ -796,6 +1203,10 @@ public class NpcInstance extends Creature
 		return _nearestClanHall;
 	}
 	
+	/**
+	 * Method getDominion.
+	 * @return Dominion
+	 */
 	public Dominion getDominion()
 	{
 		if (getReflection() != ReflectionManager.DEFAULT)
@@ -814,8 +1225,16 @@ public class NpcInstance extends Creature
 		return _nearestDominion;
 	}
 	
+	/**
+	 * Field _lastSocialAction.
+	 */
 	protected long _lastSocialAction;
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{
@@ -893,6 +1312,11 @@ public class NpcInstance extends Creature
 		}
 	}
 	
+	/**
+	 * Method showQuestWindow.
+	 * @param player Player
+	 * @param questId String
+	 */
 	public void showQuestWindow(Player player, String questId)
 	{
 		if (!player.isQuestContinuationPossible(true))
@@ -955,6 +1379,12 @@ public class NpcInstance extends Creature
 		player.sendActionFailed();
 	}
 	
+	/**
+	 * Method canBypassCheck.
+	 * @param player Player
+	 * @param npc NpcInstance
+	 * @return boolean
+	 */
 	public static boolean canBypassCheck(Player player, NpcInstance npc)
 	{
 		if ((npc == null) || player.isActionsDisabled() || (!Config.ALLOW_TALK_WHILE_SITTING && player.isSitting()) || !npc.isInRange(player, INTERACTION_DISTANCE))
@@ -965,6 +1395,11 @@ public class NpcInstance extends Creature
 		return true;
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	public void onBypassFeedback(Player player, String command)
 	{
 		if (!canBypassCheck(player, this))
@@ -1249,6 +1684,11 @@ public class NpcInstance extends Creature
 		}
 	}
 	
+	/**
+	 * Method showTeleportList.
+	 * @param player Player
+	 * @param list TeleportLocation[]
+	 */
 	public void showTeleportList(Player player, TeleportLocation[] list)
 	{
 		StringBuilder sb = new StringBuilder();
@@ -1270,21 +1710,21 @@ public class NpcInstance extends Creature
 							pricemod /= 2;
 						}
 					}
-					sb.append("[scripts_Util:Gatekeeper ").append(tl.getX()).append(" ").append(tl.getY()).append(" ").append(tl.getZ());
+					sb.append("[scripts_Util:Gatekeeper ").append(tl.getX()).append(' ').append(tl.getY()).append(' ').append(tl.getZ());
 					if (tl.getCastleId() != 0)
 					{
-						sb.append(" ").append(tl.getCastleId());
+						sb.append(' ').append(tl.getCastleId());
 					}
-					sb.append(" ").append((long) (tl.getPrice() * pricemod)).append(" @811;F;").append(tl.getName()).append("|").append(HtmlUtils.htmlNpcString(tl.getName()));
+					sb.append(' ').append((long) (tl.getPrice() * pricemod)).append(" @811;F;").append(tl.getName()).append('|').append(HtmlUtils.htmlNpcString(tl.getName()));
 					if ((tl.getPrice() * pricemod) > 0)
 					{
-						sb.append(" - ").append((long) (tl.getPrice() * pricemod)).append(" ").append(HtmlUtils.htmlItemName(ItemTemplate.ITEM_ID_ADENA));
+						sb.append(" - ").append((long) (tl.getPrice() * pricemod)).append(' ').append(HtmlUtils.htmlItemName(ItemTemplate.ITEM_ID_ADENA));
 					}
 					sb.append("]<br1>\n");
 				}
 				else
 				{
-					sb.append("[scripts_Util:QuestGatekeeper ").append(tl.getX()).append(" ").append(tl.getY()).append(" ").append(tl.getZ()).append(" ").append(tl.getPrice()).append(" ").append(tl.getItem().getItemId()).append(" @811;F;").append("|").append(HtmlUtils.htmlNpcString(tl.getName())).append(" - ").append(tl.getPrice()).append(" ").append(HtmlUtils.htmlItemName(tl.getItem().getItemId())).append("]<br1>\n");
+					sb.append("[scripts_Util:QuestGatekeeper ").append(tl.getX()).append(' ').append(tl.getY()).append(' ').append(tl.getZ()).append(' ').append(tl.getPrice()).append(' ').append(tl.getItem().getItemId()).append(" @811;F;").append('|').append(HtmlUtils.htmlNpcString(tl.getName())).append(" - ").append(tl.getPrice()).append(' ').append(HtmlUtils.htmlItemName(tl.getItem().getItemId())).append("]<br1>\n");
 				}
 			}
 		}
@@ -1297,12 +1737,29 @@ public class NpcInstance extends Creature
 		player.sendPacket(html);
 	}
 	
+	/**
+	 */
 	private class QuestInfo implements Comparable<QuestInfo>
 	{
+		/**
+		 * Field quest.
+		 */
 		private final Quest quest;
+		/**
+		 * Field player.
+		 */
 		private final Player player;
+		/**
+		 * Field isStart.
+		 */
 		private final boolean isStart;
 		
+		/**
+		 * Constructor for QuestInfo.
+		 * @param quest Quest
+		 * @param player Player
+		 * @param isStart boolean
+		 */
 		public QuestInfo(Quest quest, Player player, boolean isStart)
 		{
 			this.quest = quest;
@@ -1310,16 +1767,29 @@ public class NpcInstance extends Creature
 			this.isStart = isStart;
 		}
 		
+		/**
+		 * Method getQuest.
+		 * @return Quest
+		 */
 		public final Quest getQuest()
 		{
 			return quest;
 		}
 		
+		/**
+		 * Method isStart.
+		 * @return boolean
+		 */
 		public final boolean isStart()
 		{
 			return isStart;
 		}
 		
+		/**
+		 * Method compareTo.
+		 * @param info QuestInfo
+		 * @return int
+		 */
 		@Override
 		public int compareTo(QuestInfo info)
 		{
@@ -1369,6 +1839,10 @@ public class NpcInstance extends Creature
 		}
 	}
 	
+	/**
+	 * Method showQuestWindow.
+	 * @param player Player
+	 */
 	public void showQuestWindow(Player player)
 	{
 		Map<Integer, QuestInfo> options = new HashMap<>();
@@ -1411,6 +1885,11 @@ public class NpcInstance extends Creature
 		}
 	}
 	
+	/**
+	 * Method showQuestChooseWindow.
+	 * @param player Player
+	 * @param quests List<QuestInfo>
+	 */
 	public void showQuestChooseWindow(Player player, List<QuestInfo> quests)
 	{
 		StringBuilder sb = new StringBuilder();
@@ -1430,6 +1909,12 @@ public class NpcInstance extends Creature
 		player.sendPacket(html);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param replace Object[]
+	 */
 	public void showChatWindow(Player player, int val, Object... replace)
 	{
 		if ((getTemplate().getTeleportList().size() > 0) && checkForDominionWard(player))
@@ -1465,6 +1950,12 @@ public class NpcInstance extends Creature
 		player.sendPacket(packet);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param filename String
+	 * @param replace Object[]
+	 */
 	public void showChatWindow(Player player, String filename, Object... replace)
 	{
 		NpcHtmlMessage packet = new NpcHtmlMessage(player, this, filename, 0);
@@ -1478,6 +1969,13 @@ public class NpcInstance extends Creature
 		player.sendPacket(packet);
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
@@ -1506,29 +2004,55 @@ public class NpcInstance extends Creature
 		return "npcdefault.htm";
 	}
 	
+	/**
+	 * Field _isBusy.
+	 */
 	private boolean _isBusy;
+	/**
+	 * Field _busyMessage.
+	 */
 	private String _busyMessage = "";
 	
+	/**
+	 * Method isBusy.
+	 * @return boolean
+	 */
 	public final boolean isBusy()
 	{
 		return _isBusy;
 	}
 	
+	/**
+	 * Method setBusy.
+	 * @param isBusy boolean
+	 */
 	public void setBusy(boolean isBusy)
 	{
 		_isBusy = isBusy;
 	}
 	
+	/**
+	 * Method getBusyMessage.
+	 * @return String
+	 */
 	public final String getBusyMessage()
 	{
 		return _busyMessage;
 	}
 	
+	/**
+	 * Method setBusyMessage.
+	 * @param message String
+	 */
 	public void setBusyMessage(String message)
 	{
 		_busyMessage = message;
 	}
 	
+	/**
+	 * Method showBusyWindow.
+	 * @param player Player
+	 */
 	public void showBusyWindow(Player player)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
@@ -1539,6 +2063,10 @@ public class NpcInstance extends Creature
 		player.sendPacket(html);
 	}
 	
+	/**
+	 * Method showSkillList.
+	 * @param player Player
+	 */
 	public void showSkillList(Player player)
 	{
 		ClassId classId = player.getClassId();
@@ -1558,7 +2086,7 @@ public class NpcInstance extends Creature
 			}
 			else
 			{
-				sb.append("Я не могу обучить тебя. Для твоего класса мой список пуст.<br> Свяжись с админом для фикса этого. <br>NpcId:" + npcId + ", твой classId:" + player.getClassId().getId() + "<br>");
+				sb.append("Я не могу обучит�? теб�?. Дл�? твоего кла�?�?а мой �?пи�?ок пу�?т.<br> Св�?жи�?�? �? админом дл�? фик�?а �?того. <br>NpcId:" + npcId + ", твой classId:" + player.getClassId().getId() + "<br>");
 			}
 			sb.append("</body></html>");
 			html.setHtml(sb.toString());
@@ -1615,6 +2143,11 @@ public class NpcInstance extends Creature
 			}
 			player.sendPacket(AcquireSkillDone.STATIC);
 		}
+		/**
+		 * Method showTransferSkillList.
+		 * @param player Player
+		 */
+		
 		else
 		{
 			player.sendPacket(asl);
@@ -1641,6 +2174,10 @@ public class NpcInstance extends Creature
 			return;
 		}
 		AcquireType type = AcquireType.transferType(player.getActiveClassId());
+		/**
+		 * Method showCollectionSkillList.
+		 * @param player Player
+		 */
 		if (type == null)
 		{
 			return;
@@ -1649,6 +2186,10 @@ public class NpcInstance extends Creature
 	}
 	
 	public static void showCollectionSkillList(Player player)
+	/**
+	 * Method showTransformationMultisell.
+	 * @param player Player
+	 */
 	{
 		showAcquireList(AcquireType.COLLECTION, player);
 	}
@@ -1664,7 +2205,12 @@ public class NpcInstance extends Creature
 			}
 		}
 		Castle castle = getCastle(player);
-		MultiSellHolder.getInstance().SeparateAndSend(32323, player, castle != null ? castle.getTaxRate() : 0);
+		MultiSellHolder.getInstance().SeparateAndSend(32323, player, /**
+		 * Method showTransformationSkillList.
+		 * @param player Player
+		 * @param type AcquireType
+		 */
+		castle != null ? castle.getTaxRate() : 0);
 		player.sendActionFailed();
 	}
 	
@@ -1674,7 +2220,11 @@ public class NpcInstance extends Creature
 		{
 			if (!player.isQuestCompleted("_136_MoreThanMeetsTheEye"))
 			{
-				showChatWindow(player, "trainer/" + getNpcId() + "-noquest.htm");
+				showChatWindow(player, "trainer/" + getNpcId() + /**
+				 * Method showFishingSkillList.
+				 * @param player Player
+				 */
+				"-noquest.htm");
 				return;
 			}
 		}
@@ -1682,6 +2232,10 @@ public class NpcInstance extends Creature
 	}
 	
 	public static void showFishingSkillList(Player player)
+	/**
+	 * Method showClanSkillList.
+	 * @param player Player
+	 */
 	{
 		showAcquireList(AcquireType.FISHING, player);
 	}
@@ -1692,6 +2246,11 @@ public class NpcInstance extends Creature
 		{
 			player.sendPacket(SystemMsg.ONLY_THE_CLAN_LEADER_IS_ENABLED);
 			player.sendActionFailed();
+			/**
+			 * Method showAcquireList.
+			 * @param t AcquireType
+			 * @param player Player
+			 */
 			return;
 		}
 		showAcquireList(AcquireType.CLAN, player);
@@ -1710,6 +2269,11 @@ public class NpcInstance extends Creature
 			player.sendPacket(AcquireSkillDone.STATIC);
 			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 		}
+		/**
+		 * Method showSubUnitSkillList.
+		 * @param player Player
+		 */
+		
 		else
 		{
 			player.sendPacket(asl);
@@ -1744,11 +2308,20 @@ public class NpcInstance extends Creature
 			player.sendPacket(AcquireSkillDone.STATIC);
 			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 		}
+		/**
+		 * Method getSpawnAnimation.
+		 * @return int
+		 */
+		
 		else
 		{
 			player.sendPacket(asl);
 		}
 		player.sendActionFailed();
+		/**
+		 * Method getColRadius.
+		 * @return double
+		 */
 	}
 	
 	public int getSpawnAnimation()
@@ -1757,12 +2330,21 @@ public class NpcInstance extends Creature
 	}
 	
 	@Override
+	/**
+	 * Method getColHeight.
+	 * @return double
+	 */
 	public double getColRadius()
 	{
 		return getCollisionRadius();
 	}
 	
 	@Override
+	/**
+	 * Method calculateLevelDiffForDrop.
+	 * @param charLevel int
+	 * @return int
+	 */
 	public double getColHeight()
 	{
 		return getCollisionHeight();
@@ -1776,10 +2358,17 @@ public class NpcInstance extends Creature
 		}
 		int mobLevel = getLevel();
 		int deepblue_maxdiff = this instanceof RaidBossInstance ? Config.DEEPBLUE_DROP_RAID_MAXDIFF : Config.DEEPBLUE_DROP_MAXDIFF;
+		/**
+		 * Method toString.
+		 * @return String
+		 */
 		return Math.max(charLevel - mobLevel - deepblue_maxdiff, 0);
 	}
 	
 	@Override
+	/**
+	 * Method refreshID.
+	 */
 	public String toString()
 	{
 		return getNpcId() + " " + getName();
@@ -1791,53 +2380,96 @@ public class NpcInstance extends Creature
 		_storedId = GameObjectsStorage.refreshId(this);
 	}
 	
+	/**
+	 * Field _isUnderground.
+	 */
 	private boolean _isUnderground = false;
 	
+	/**
+	 * Method setUnderground.
+	 * @param b boolean
+	 */
 	public void setUnderground(boolean b)
 	{
 		_isUnderground = b;
 	}
 	
+	/**
+	 * Method isUnderground.
+	 * @return boolean
+	 */
 	public boolean isUnderground()
 	{
 		return _isUnderground;
 	}
 	
+	/**
+	 * Method isTargetable.
+	 * @return boolean
+	 */
 	public boolean isTargetable()
 	{
 		return _isTargetable;
 	}
 	
+	/**
+	 * Method setTargetable.
+	 * @param value boolean
+	 */
 	public void setTargetable(boolean value)
 	{
 		_isTargetable = value;
 	}
 	
+	/**
+	 * Method setAttackable.
+	 * @param value boolean
+	 */
 	public void setAttackable(boolean value)
 	{
 		_isAttackable = value;
 	}
 	
+	/**
+	 * Method isShowName.
+	 * @return boolean
+	 */
 	public boolean isShowName()
 	{
 		return _showName;
 	}
 	
+	/**
+	 * Method isShowTitle.
+	 * @return boolean
+	 */
 	public boolean isShowTitle()
 	{
 		return _showTitle;
 	}
 	
+	/**
+	 * Method setShowName.
+	 * @param value boolean
+	 */
 	public void setShowName(boolean value)
 	{
 		_showName = value;
 	}
 	
+	/**
+	 * Method setShowTitle.
+	 * @param value boolean
+	 */
 	public void setShowTitle(boolean value)
 	{
 		_showTitle = value;
 	}
 	
+	/**
+	 * Method getListeners.
+	 * @return NpcListenerList
+	 */
 	@Override
 	public NpcListenerList getListeners()
 	{
@@ -1854,16 +2486,30 @@ public class NpcInstance extends Creature
 		return (NpcListenerList) listeners;
 	}
 	
+	/**
+	 * Method addListener.
+	 * @param listener T
+	 * @return boolean
+	 */
 	public <T extends NpcListener> boolean addListener(T listener)
 	{
 		return getListeners().add(listener);
 	}
 	
+	/**
+	 * Method removeListener.
+	 * @param listener T
+	 * @return boolean
+	 */
 	public <T extends NpcListener> boolean removeListener(T listener)
 	{
 		return getListeners().remove(listener);
 	}
 	
+	/**
+	 * Method getStatsRecorder.
+	 * @return NpcStatsChangeRecorder
+	 */
 	@Override
 	public NpcStatsChangeRecorder getStatsRecorder()
 	{
@@ -1880,17 +2526,31 @@ public class NpcInstance extends Creature
 		return (NpcStatsChangeRecorder) _statsRecorder;
 	}
 	
+	/**
+	 * Method setNpcState.
+	 * @param stateId int
+	 */
 	public void setNpcState(int stateId)
 	{
 		broadcastPacket(new ExChangeNpcState(getObjectId(), stateId));
 		npcState = stateId;
 	}
 	
+	/**
+	 * Method getNpcState.
+	 * @return int
+	 */
 	public int getNpcState()
 	{
 		return npcState;
 	}
 	
+	/**
+	 * Method addPacketList.
+	 * @param forPlayer Player
+	 * @param dropper Creature
+	 * @return List<L2GameServerPacket>
+	 */
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{
@@ -1907,12 +2567,21 @@ public class NpcInstance extends Creature
 		return list;
 	}
 	
+	/**
+	 * Method isNpc.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isNpc()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method getGeoZ.
+	 * @param loc Location
+	 * @return int
+	 */
 	@Override
 	public int getGeoZ(Location loc)
 	{
@@ -1931,6 +2600,10 @@ public class NpcInstance extends Creature
 		return super.getGeoZ(loc);
 	}
 	
+	/**
+	 * Method getClan.
+	 * @return Clan
+	 */
 	@Override
 	public Clan getClan()
 	{
@@ -1943,41 +2616,74 @@ public class NpcInstance extends Creature
 		return lordObjectId == 0 ? null : dominion.getOwner();
 	}
 	
+	/**
+	 * Method getNameNpcString.
+	 * @return NpcString
+	 */
 	public NpcString getNameNpcString()
 	{
 		return _nameNpcString;
 	}
 	
+	/**
+	 * Method getTitleNpcString.
+	 * @return NpcString
+	 */
 	public NpcString getTitleNpcString()
 	{
 		return _titleNpcString;
 	}
 	
+	/**
+	 * Method setNameNpcString.
+	 * @param nameNpcString NpcString
+	 */
 	public void setNameNpcString(NpcString nameNpcString)
 	{
 		_nameNpcString = nameNpcString;
 	}
 	
+	/**
+	 * Method setTitleNpcString.
+	 * @param titleNpcString NpcString
+	 */
 	public void setTitleNpcString(NpcString titleNpcString)
 	{
 		_titleNpcString = titleNpcString;
 	}
 	
+	/**
+	 * Method isMerchantNpc.
+	 * @return boolean
+	 */
 	public boolean isMerchantNpc()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getSpawnRange.
+	 * @return SpawnRange
+	 */
 	public SpawnRange getSpawnRange()
 	{
 		return _spawnRange;
 	}
 	
+	/**
+	 * Method setSpawnRange.
+	 * @param spawnRange SpawnRange
+	 */
 	public void setSpawnRange(SpawnRange spawnRange)
 	{
 		_spawnRange = spawnRange;
 	}
 	
+	/**
+	 * Method checkForDominionWard.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean checkForDominionWard(Player player)
 	{
 		ItemInstance item = getActiveWeaponInstance();
@@ -1989,6 +2695,11 @@ public class NpcInstance extends Creature
 		return false;
 	}
 	
+	/**
+	 * Method setParameter.
+	 * @param str String
+	 * @param val Object
+	 */
 	public void setParameter(String str, Object val)
 	{
 		if (_parameters == StatsSet.EMPTY)
@@ -1998,6 +2709,10 @@ public class NpcInstance extends Creature
 		_parameters.set(str, val);
 	}
 	
+	/**
+	 * Method setParameters.
+	 * @param set MultiValueSet<String>
+	 */
 	public void setParameters(MultiValueSet<String> set)
 	{
 		if (set.isEmpty())
@@ -2011,42 +2726,82 @@ public class NpcInstance extends Creature
 		_parameters.putAll(set);
 	}
 	
+	/**
+	 * Method getParameter.
+	 * @param str String
+	 * @param val int
+	 * @return int
+	 */
 	public int getParameter(String str, int val)
 	{
 		return _parameters.getInteger(str, val);
 	}
 	
+	/**
+	 * Method getParameter.
+	 * @param str String
+	 * @param val long
+	 * @return long
+	 */
 	public long getParameter(String str, long val)
 	{
 		return _parameters.getLong(str, val);
 	}
 	
+	/**
+	 * Method getParameter.
+	 * @param str String
+	 * @param val boolean
+	 * @return boolean
+	 */
 	public boolean getParameter(String str, boolean val)
 	{
 		return _parameters.getBool(str, val);
 	}
 	
+	/**
+	 * Method getParameter.
+	 * @param str String
+	 * @param val String
+	 * @return String
+	 */
 	public String getParameter(String str, String val)
 	{
 		return _parameters.getString(str, val);
 	}
 	
+	/**
+	 * Method getParameters.
+	 * @return MultiValueSet<String>
+	 */
 	public MultiValueSet<String> getParameters()
 	{
 		return _parameters;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isHasChatWindow.
+	 * @return boolean
+	 */
 	public boolean isHasChatWindow()
 	{
 		return _hasChatWindow;
 	}
 	
+	/**
+	 * Method setHasChatWindow.
+	 * @param hasChatWindow boolean
+	 */
 	public void setHasChatWindow(boolean hasChatWindow)
 	{
 		_hasChatWindow = hasChatWindow;

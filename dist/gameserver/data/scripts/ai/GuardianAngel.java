@@ -18,8 +18,15 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GuardianAngel extends DefaultAI
 {
+	/**
+	 * Field flood.
+	 */
 	static final String[] flood =
 	{
 		"Waaaah! Step back from the confounded box! I will take it myself!",
@@ -27,11 +34,19 @@ public class GuardianAngel extends DefaultAI
 		"Grr. I've been hit..."
 	};
 	
+	/**
+	 * Constructor for GuardianAngel.
+	 * @param actor NpcInstance
+	 */
 	public GuardianAngel(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -40,6 +55,10 @@ public class GuardianAngel extends DefaultAI
 		return super.thinkActive();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

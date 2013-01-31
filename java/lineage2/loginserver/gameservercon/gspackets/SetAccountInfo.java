@@ -18,12 +18,28 @@ import lineage2.loginserver.gameservercon.ReceivablePacket;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SetAccountInfo extends ReceivablePacket
 {
+	/**
+	 * Field _account.
+	 */
 	private String _account;
+	/**
+	 * Field _size.
+	 */
 	private int _size;
+	/**
+	 * Field _deleteChars.
+	 */
 	private int[] _deleteChars;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -44,6 +60,9 @@ public class SetAccountInfo extends ReceivablePacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

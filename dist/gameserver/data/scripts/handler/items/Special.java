@@ -37,8 +37,15 @@ import quests._464_Oath;
 import bosses.AntharasManager;
 import bosses.ValakasManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Special extends SimpleItemHandler
 {
+	/**
+	 * Field ITEM_IDS.
+	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
 		8556,
@@ -57,12 +64,23 @@ public class Special extends SimpleItemHandler
 		17268
 	};
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{
 		return ITEM_IDS;
 	}
 	
+	/**
+	 * Method useItemImpl.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
@@ -102,6 +120,12 @@ public class Special extends SimpleItemHandler
 		}
 	}
 	
+	/**
+	 * Method use8556.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use8556(Player player, boolean ctrl)
 	{
 		int[] npcs =
@@ -125,6 +149,12 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method use13853.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use13853(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(ZoneType.mother_tree))
@@ -137,6 +167,12 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method use13808.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use13808(Player player, boolean ctrl)
 	{
 		int[] allowedDoors =
@@ -171,6 +207,12 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method use13809.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use13809(Player player, boolean ctrl)
 	{
 		int[] allowedDoors =
@@ -195,6 +237,12 @@ public class Special extends SimpleItemHandler
 		return false;
 	}
 	
+	/**
+	 * Method use14835.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use14835(Player player, boolean ctrl)
 	{
 		if (player.isActionsDisabled() || player.isInOlympiadMode() || player.isInZone(ZoneType.no_escape))
@@ -207,6 +255,12 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method use15537.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use15537(Player player, boolean ctrl)
 	{
 		QuestState qs = player.getQuestState(_464_Oath.class);
@@ -227,6 +281,12 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method use10632.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use10632(Player player, boolean ctrl)
 	{
 		int chance = Rnd.get(1000000);
@@ -273,6 +333,12 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method use21899.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use21899(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
@@ -284,6 +350,12 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method use21900.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use21900(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
@@ -295,6 +367,12 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method use21901.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use21901(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
@@ -306,6 +384,12 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method use21902.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use21902(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
@@ -317,6 +401,12 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method use21903.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use21903(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
@@ -329,6 +419,12 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method use21904.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use21904(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
@@ -341,6 +437,12 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method use17268.
+	 * @param player Player
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	private boolean use17268(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()))
@@ -353,6 +455,13 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method useItem.
+	 * @param player Player
+	 * @param itemId int
+	 * @param count long
+	 * @return long
+	 */
 	private static long useItem(Player player, int itemId, long count)
 	{
 		player.sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(itemId));

@@ -15,11 +15,25 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StopMoveToLocationInVehicle extends L2GameServerPacket
 {
+	/**
+	 * Field _heading. Field _playerObjectId. Field _boatObjectId.
+	 */
 	private final int _boatObjectId, _playerObjectId, _heading;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for StopMoveToLocationInVehicle.
+	 * @param player Player
+	 */
 	public StopMoveToLocationInVehicle(Player player)
 	{
 		_boatObjectId = player.getBoat().getObjectId();
@@ -28,6 +42,9 @@ public class StopMoveToLocationInVehicle extends L2GameServerPacket
 		_heading = player.getHeading();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

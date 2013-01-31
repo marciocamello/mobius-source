@@ -19,14 +19,39 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class QuestTimer extends RunnableImpl
 {
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _npc.
+	 */
 	private final NpcInstance _npc;
+	/**
+	 * Field _time.
+	 */
 	private long _time;
+	/**
+	 * Field _qs.
+	 */
 	private QuestState _qs;
+	/**
+	 * Field _schedule.
+	 */
 	private ScheduledFuture<?> _schedule;
 	
+	/**
+	 * Constructor for QuestTimer.
+	 * @param name String
+	 * @param time long
+	 * @param npc NpcInstance
+	 */
 	public QuestTimer(String name, long time, NpcInstance npc)
 	{
 		_name = name;
@@ -34,21 +59,35 @@ public class QuestTimer extends RunnableImpl
 		_npc = npc;
 	}
 	
+	/**
+	 * Method setQuestState.
+	 * @param qs QuestState
+	 */
 	void setQuestState(QuestState qs)
 	{
 		_qs = qs;
 	}
 	
+	/**
+	 * Method getQuestState.
+	 * @return QuestState
+	 */
 	QuestState getQuestState()
 	{
 		return _qs;
 	}
 	
+	/**
+	 * Method start.
+	 */
 	void start()
 	{
 		_schedule = ThreadPoolManager.getInstance().schedule(this, _time);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{
@@ -60,6 +99,9 @@ public class QuestTimer extends RunnableImpl
 		}
 	}
 	
+	/**
+	 * Method pause.
+	 */
 	void pause()
 	{
 		if (_schedule != null)
@@ -69,6 +111,9 @@ public class QuestTimer extends RunnableImpl
 		}
 	}
 	
+	/**
+	 * Method stop.
+	 */
 	void stop()
 	{
 		if (_schedule != null)
@@ -77,32 +122,57 @@ public class QuestTimer extends RunnableImpl
 		}
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	public boolean isActive()
 	{
 		return (_schedule != null) && !_schedule.isDone();
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method getTime.
+	 * @return long
+	 */
 	public long getTime()
 	{
 		return _time;
 	}
 	
+	/**
+	 * Method getNpc.
+	 * @return NpcInstance
+	 */
 	public NpcInstance getNpc()
 	{
 		return _npc;
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public final String toString()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method equals.
+	 * @param o Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object o)
 	{

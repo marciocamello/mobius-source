@@ -15,31 +15,63 @@ package lineage2.commons.util;
 import gnu.trove.list.array.TIntArrayList;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TroveUtils
 {
+	/**
+	 * Field EMPTY_INT_OBJECT_MAP.
+	 */
 	@SuppressWarnings("rawtypes")
 	private static final TIntObjectHashMap EMPTY_INT_OBJECT_MAP = new TIntObjectHashMapEmpty();
+	/**
+	 * Field EMPTY_INT_ARRAY_LIST.
+	 */
 	public static final TIntArrayList EMPTY_INT_ARRAY_LIST = new TIntArrayListEmpty();
 	
+	/**
+	 * Method emptyIntObjectMap.
+	 * @return TIntObjectHashMap<V>
+	 */
 	@SuppressWarnings("unchecked")
 	public static <V> TIntObjectHashMap<V> emptyIntObjectMap()
 	{
 		return EMPTY_INT_OBJECT_MAP;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class TIntObjectHashMapEmpty<V> extends TIntObjectHashMap<V>
 	{
+		/**
+		 * Constructor for TIntObjectHashMapEmpty.
+		 */
 		TIntObjectHashMapEmpty()
 		{
 			super(0);
 		}
 		
+		/**
+		 * Method put.
+		 * @param key int
+		 * @param value V
+		 * @return V * @see gnu.trove.map.TIntObjectMap#put(int, V)
+		 */
 		@Override
 		public V put(int key, V value)
 		{
 			throw new UnsupportedOperationException();
 		}
 		
+		/**
+		 * Method putIfAbsent.
+		 * @param key int
+		 * @param value V
+		 * @return V * @see gnu.trove.map.TIntObjectMap#putIfAbsent(int, V)
+		 */
 		@Override
 		public V putIfAbsent(int key, V value)
 		{
@@ -47,13 +79,24 @@ public class TroveUtils
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class TIntArrayListEmpty extends TIntArrayList
 	{
+		/**
+		 * Constructor for TIntArrayListEmpty.
+		 */
 		TIntArrayListEmpty()
 		{
 			super(0);
 		}
 		
+		/**
+		 * Method add.
+		 * @param val int
+		 * @return boolean * @see gnu.trove.list.TIntList#add(int)
+		 */
 		@Override
 		public boolean add(int val)
 		{

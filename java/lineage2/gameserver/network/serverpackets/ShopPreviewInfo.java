@@ -16,15 +16,29 @@ import java.util.Map;
 
 import lineage2.gameserver.model.items.Inventory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShopPreviewInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _itemlist.
+	 */
 	private final Map<Integer, Integer> _itemlist;
 	
+	/**
+	 * Constructor for ShopPreviewInfo.
+	 * @param itemlist Map<Integer,Integer>
+	 */
 	public ShopPreviewInfo(Map<Integer, Integer> itemlist)
 	{
 		_itemlist = itemlist;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -36,6 +50,11 @@ public class ShopPreviewInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method getFromList.
+	 * @param key int
+	 * @return int
+	 */
 	private int getFromList(int key)
 	{
 		return ((_itemlist.get(key) != null) ? _itemlist.get(key) : 0);

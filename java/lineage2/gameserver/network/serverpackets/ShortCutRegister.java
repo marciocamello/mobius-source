@@ -15,15 +15,30 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.ShortCut;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShortCutRegister extends ShortCutPacket
 {
+	/**
+	 * Field _shortcutInfo.
+	 */
 	private final ShortcutInfo _shortcutInfo;
 	
+	/**
+	 * Constructor for ShortCutRegister.
+	 * @param player Player
+	 * @param sc ShortCut
+	 */
 	public ShortCutRegister(Player player, ShortCut sc)
 	{
 		_shortcutInfo = convert(player, sc);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

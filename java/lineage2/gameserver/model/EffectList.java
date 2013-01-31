@@ -32,25 +32,71 @@ import lineage2.gameserver.stats.funcs.FuncTemplate;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectList
 {
+	/**
+	 * Field NONE_SLOT_TYPE. (value is -1)
+	 */
 	public static final int NONE_SLOT_TYPE = -1;
+	/**
+	 * Field BUFF_SLOT_TYPE. (value is 0)
+	 */
 	public static final int BUFF_SLOT_TYPE = 0;
+	/**
+	 * Field MUSIC_SLOT_TYPE. (value is 1)
+	 */
 	public static final int MUSIC_SLOT_TYPE = 1;
+	/**
+	 * Field TRIGGER_SLOT_TYPE. (value is 2)
+	 */
 	public static final int TRIGGER_SLOT_TYPE = 2;
+	/**
+	 * Field DEBUFF_SLOT_TYPE. (value is 3)
+	 */
 	public static final int DEBUFF_SLOT_TYPE = 3;
+	/**
+	 * Field DEBUFF_LIMIT. (value is 8)
+	 */
 	public static final int DEBUFF_LIMIT = 8;
+	/**
+	 * Field MUSIC_LIMIT. (value is 12)
+	 */
 	public static final int MUSIC_LIMIT = 12;
+	/**
+	 * Field TRIGGER_LIMIT. (value is 12)
+	 */
 	public static final int TRIGGER_LIMIT = 12;
+	/**
+	 * Field _actor.
+	 */
 	private final Creature _actor;
+	/**
+	 * Field _effects.
+	 */
 	private List<Effect> _effects;
+	/**
+	 * Field lock.
+	 */
 	private final Lock lock = new ReentrantLock();
 	
+	/**
+	 * Constructor for EffectList.
+	 * @param owner Creature
+	 */
 	public EffectList(Creature owner)
 	{
 		_actor = owner;
 	}
 	
+	/**
+	 * Method getEffectsCountForSkill.
+	 * @param skill_id int
+	 * @return int
+	 */
 	public int getEffectsCountForSkill(int skill_id)
 	{
 		if (isEmpty())
@@ -68,6 +114,11 @@ public class EffectList
 		return count;
 	}
 	
+	/**
+	 * Method getEffectByType.
+	 * @param et EffectType
+	 * @return Effect
+	 */
 	public Effect getEffectByType(EffectType et)
 	{
 		if (isEmpty())
@@ -84,6 +135,11 @@ public class EffectList
 		return null;
 	}
 	
+	/**
+	 * Method getEffectsBySkill.
+	 * @param skill Skill
+	 * @return List<Effect>
+	 */
 	public List<Effect> getEffectsBySkill(Skill skill)
 	{
 		if (skill == null)
@@ -93,6 +149,11 @@ public class EffectList
 		return getEffectsBySkillId(skill.getId());
 	}
 	
+	/**
+	 * Method getEffectsBySkillId.
+	 * @param skillId int
+	 * @return List<Effect>
+	 */
 	public List<Effect> getEffectsBySkillId(int skillId)
 	{
 		if (isEmpty())
@@ -110,6 +171,12 @@ public class EffectList
 		return list.isEmpty() ? null : list;
 	}
 	
+	/**
+	 * Method getEffectByIndexAndType.
+	 * @param skillId int
+	 * @param type EffectType
+	 * @return Effect
+	 */
 	public Effect getEffectByIndexAndType(int skillId, EffectType type)
 	{
 		if (isEmpty())
@@ -126,6 +193,11 @@ public class EffectList
 		return null;
 	}
 	
+	/**
+	 * Method getEffectByStackType.
+	 * @param type String
+	 * @return Effect
+	 */
 	public Effect getEffectByStackType(String type)
 	{
 		if (isEmpty())
@@ -142,6 +214,11 @@ public class EffectList
 		return null;
 	}
 	
+	/**
+	 * Method containEffectFromSkills.
+	 * @param skillIds int[]
+	 * @return boolean
+	 */
 	public boolean containEffectFromSkills(int[] skillIds)
 	{
 		if (isEmpty())
@@ -160,6 +237,10 @@ public class EffectList
 		return false;
 	}
 	
+	/**
+	 * Method getAllEffects.
+	 * @return List<Effect>
+	 */
 	public List<Effect> getAllEffects()
 	{
 		if (isEmpty())
@@ -169,11 +250,19 @@ public class EffectList
 		return new ArrayList<>(_effects);
 	}
 	
+	/**
+	 * Method isEmpty.
+	 * @return boolean
+	 */
 	public boolean isEmpty()
 	{
 		return (_effects == null) || _effects.isEmpty();
 	}
 	
+	/**
+	 * Method getAllFirstEffects.
+	 * @return Effect[]
+	 */
 	public Effect[] getAllFirstEffects()
 	{
 		if (isEmpty())
@@ -188,6 +277,10 @@ public class EffectList
 		return map.values(new Effect[map.size()]);
 	}
 	
+	/**
+	 * Method checkSlotLimit.
+	 * @param newEffect Effect
+	 */
 	private void checkSlotLimit(Effect newEffect)
 	{
 		if (_effects == null)
@@ -258,6 +351,11 @@ public class EffectList
 		}
 	}
 	
+	/**
+	 * Method getSlotType.
+	 * @param e Effect
+	 * @return int
+	 */
 	public static int getSlotType(Effect e)
 	{
 		if (e.getSkill().isPassive() || e.getSkill().isToggle() || (e.getSkill() instanceof Transformation) || e.getStackType().contains(EffectTemplate.HP_RECOVER_CAST) || (e.getEffectType() == EffectType.Cubic))
@@ -282,6 +380,12 @@ public class EffectList
 		}
 	}
 	
+	/**
+	 * Method checkStackType.
+	 * @param ef1 EffectTemplate
+	 * @param ef2 EffectTemplate
+	 * @return boolean
+	 */
 	public static boolean checkStackType(EffectTemplate ef1, EffectTemplate ef2)
 	{
 		if (!ef1._stackTypes.contains(EffectTemplate.NO_STACK))
@@ -297,6 +401,10 @@ public class EffectList
 		return false;
 	}
 	
+	/**
+	 * Method addEffect.
+	 * @param effect Effect
+	 */
 	public void addEffect(Effect effect)
 	{
 		double hp = _actor.getCurrentHp();
@@ -359,7 +467,7 @@ public class EffectList
 			}
 			checkSlotLimit(effect);
 			add = _effects.add(effect);
-			if (add == true)
+			if (add)
 			{
 				effect.setInUse(true);
 			}
@@ -399,6 +507,10 @@ public class EffectList
 		}
 	}
 	
+	/**
+	 * Method removeEffect.
+	 * @param effect Effect
+	 */
 	public void removeEffect(Effect effect)
 	{
 		if (effect == null)
@@ -413,7 +525,7 @@ public class EffectList
 			{
 				return;
 			}
-			if ((remove = _effects.remove(effect)) == false)
+			if (!((remove = _effects.remove(effect))))
 			{
 				return;
 			}
@@ -430,6 +542,9 @@ public class EffectList
 		_actor.updateEffectIcons();
 	}
 	
+	/**
+	 * Method stopAllEffects.
+	 */
 	public void stopAllEffects()
 	{
 		if (isEmpty())
@@ -452,6 +567,10 @@ public class EffectList
 		_actor.updateEffectIcons();
 	}
 	
+	/**
+	 * Method stopEffect.
+	 * @param skillId int
+	 */
 	public void stopEffect(int skillId)
 	{
 		if (isEmpty())
@@ -467,6 +586,10 @@ public class EffectList
 		}
 	}
 	
+	/**
+	 * Method stopEffect.
+	 * @param skill Skill
+	 */
 	public void stopEffect(Skill skill)
 	{
 		if (skill != null)
@@ -475,6 +598,10 @@ public class EffectList
 		}
 	}
 	
+	/**
+	 * Method stopEffectByDisplayId.
+	 * @param skillId int
+	 */
 	public void stopEffectByDisplayId(int skillId)
 	{
 		if (isEmpty())
@@ -490,6 +617,10 @@ public class EffectList
 		}
 	}
 	
+	/**
+	 * Method stopEffects.
+	 * @param type EffectType
+	 */
 	public void stopEffects(EffectType type)
 	{
 		if (isEmpty())
@@ -505,6 +636,10 @@ public class EffectList
 		}
 	}
 	
+	/**
+	 * Method stopAllSkillEffects.
+	 * @param type EffectType
+	 */
 	public void stopAllSkillEffects(EffectType type)
 	{
 		if (isEmpty())

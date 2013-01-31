@@ -34,14 +34,33 @@ import lineage2.gameserver.utils.PositionUtils;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MercTicket extends ScriptItemHandler
 {
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method dropItem.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param count long
+	 * @param loc Location
+	 * @see lineage2.gameserver.handler.items.IItemHandler#dropItem(Player, ItemInstance, long, Location)
+	 */
 	@Override
 	public void dropItem(Player player, ItemInstance item, long count, Location loc)
 	{
@@ -106,6 +125,12 @@ public class MercTicket extends ScriptItemHandler
 		CastleHiredGuardDAO.getInstance().insert(castle, item.getItemId(), item.getLoc());
 	}
 	
+	/**
+	 * Method pickupItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#pickupItem(Playable, ItemInstance)
+	 */
 	@Override
 	public boolean pickupItem(Playable playable, ItemInstance item)
 	{
@@ -138,6 +163,10 @@ public class MercTicket extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public final int[] getItemIds()
 	{

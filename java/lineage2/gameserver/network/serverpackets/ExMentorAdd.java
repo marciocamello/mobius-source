@@ -14,11 +14,25 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExMentorAdd extends L2GameServerPacket
 {
+	/**
+	 * Field _newMentorName.
+	 */
 	private final String _newMentorName;
+	/**
+	 * Field _newMentorLvl. Field _newMentorClassId.
+	 */
 	private final int _newMentorClassId, _newMentorLvl;
 	
+	/**
+	 * Constructor for ExMentorAdd.
+	 * @param newMentor Player
+	 */
 	public ExMentorAdd(Player newMentor)
 	{
 		_newMentorName = newMentor.getName();
@@ -26,6 +40,9 @@ public class ExMentorAdd extends L2GameServerPacket
 		_newMentorLvl = newMentor.getLevel();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

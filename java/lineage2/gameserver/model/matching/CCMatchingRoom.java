@@ -22,8 +22,21 @@ import lineage2.gameserver.network.serverpackets.ExMpccRoomMember;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CCMatchingRoom extends MatchingRoom
 {
+	/**
+	 * Constructor for CCMatchingRoom.
+	 * @param leader Player
+	 * @param minLevel int
+	 * @param maxLevel int
+	 * @param maxMemberSize int
+	 * @param lootType int
+	 * @param topic String
+	 */
 	public CCMatchingRoom(Player leader, int minLevel, int maxLevel, int maxMemberSize, int lootType, String topic)
 	{
 		super(leader, minLevel, maxLevel, maxMemberSize, lootType, topic);
@@ -31,18 +44,32 @@ public class CCMatchingRoom extends MatchingRoom
 		leader.sendPacket(SystemMsg.THE_COMMAND_CHANNEL_MATCHING_ROOM_WAS_CREATED);
 	}
 	
+	/**
+	 * Method notValidMessage.
+	 * @return SystemMsg
+	 */
 	@Override
 	public SystemMsg notValidMessage()
 	{
 		return SystemMsg.YOU_CANNOT_ENTER_THE_COMMAND_CHANNEL_MATCHING_ROOM_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS;
 	}
 	
+	/**
+	 * Method enterMessage.
+	 * @return SystemMsg
+	 */
 	@Override
 	public SystemMsg enterMessage()
 	{
 		return SystemMsg.C1_ENTERED_THE_COMMAND_CHANNEL_MATCHING_ROOM;
 	}
 	
+	/**
+	 * Method exitMessage.
+	 * @param toOthers boolean
+	 * @param kick boolean
+	 * @return SystemMsg
+	 */
 	@Override
 	public SystemMsg exitMessage(boolean toOthers, boolean kick)
 	{
@@ -53,54 +80,96 @@ public class CCMatchingRoom extends MatchingRoom
 		return null;
 	}
 	
+	/**
+	 * Method closeRoomMessage.
+	 * @return SystemMsg
+	 */
 	@Override
 	public SystemMsg closeRoomMessage()
 	{
 		return SystemMsg.THE_COMMAND_CHANNEL_MATCHING_ROOM_WAS_CANCELLED;
 	}
 	
+	/**
+	 * Method closeRoomPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket closeRoomPacket()
 	{
 		return ExDissmissMpccRoom.STATIC;
 	}
 	
+	/**
+	 * Method infoRoomPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket infoRoomPacket()
 	{
 		return new ExMpccRoomInfo(this);
 	}
 	
+	/**
+	 * Method addMemberPacket.
+	 * @param $member Player
+	 * @param active Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket addMemberPacket(Player $member, Player active)
 	{
 		return new ExManageMpccRoomMember(ExManageMpccRoomMember.ADD_MEMBER, this, active);
 	}
 	
+	/**
+	 * Method removeMemberPacket.
+	 * @param $member Player
+	 * @param active Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket removeMemberPacket(Player $member, Player active)
 	{
 		return new ExManageMpccRoomMember(ExManageMpccRoomMember.REMOVE_MEMBER, this, active);
 	}
 	
+	/**
+	 * Method updateMemberPacket.
+	 * @param $member Player
+	 * @param active Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket updateMemberPacket(Player $member, Player active)
 	{
 		return new ExManageMpccRoomMember(ExManageMpccRoomMember.UPDATE_MEMBER, this, active);
 	}
 	
+	/**
+	 * Method membersPacket.
+	 * @param active Player
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket membersPacket(Player active)
 	{
 		return new ExMpccRoomMember(this, active);
 	}
 	
+	/**
+	 * Method getType.
+	 * @return int
+	 */
 	@Override
 	public int getType()
 	{
 		return CC_MATCHING;
 	}
 	
+	/**
+	 * Method disband.
+	 */
 	@Override
 	public void disband()
 	{
@@ -117,6 +186,11 @@ public class CCMatchingRoom extends MatchingRoom
 		super.disband();
 	}
 	
+	/**
+	 * Method getMemberType.
+	 * @param member Player
+	 * @return int
+	 */
 	@Override
 	public int getMemberType(Player member)
 	{

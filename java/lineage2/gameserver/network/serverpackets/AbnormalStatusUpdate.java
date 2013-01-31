@@ -17,16 +17,32 @@ import java.util.List;
 
 import lineage2.gameserver.model.IconEffect;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AbnormalStatusUpdate extends L2GameServerPacket implements IconEffectPacket
 {
+	/**
+	 * Field INFINITIVE_EFFECT. (value is -1)
+	 */
 	public static final int INFINITIVE_EFFECT = -1;
+	/**
+	 * Field _effects.
+	 */
 	private final List<IconEffect> _effects;
 	
+	/**
+	 * Constructor for AbnormalStatusUpdate.
+	 */
 	public AbnormalStatusUpdate()
 	{
 		_effects = new ArrayList<>();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -40,6 +56,14 @@ public class AbnormalStatusUpdate extends L2GameServerPacket implements IconEffe
 		}
 	}
 	
+	/**
+	 * Method addIconEffect.
+	 * @param skillId int
+	 * @param level int
+	 * @param duration int
+	 * @param obj int
+	 * @see lineage2.gameserver.network.serverpackets.IconEffectPacket#addIconEffect(int, int, int, int)
+	 */
 	@Override
 	public void addIconEffect(int skillId, int level, int duration, int obj)
 	{

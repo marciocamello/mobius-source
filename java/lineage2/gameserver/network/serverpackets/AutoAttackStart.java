@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AutoAttackStart extends L2GameServerPacket
 {
+	/**
+	 * Field _targetId.
+	 */
 	private final int _targetId;
 	
+	/**
+	 * Constructor for AutoAttackStart.
+	 * @param targetId int
+	 */
 	public AutoAttackStart(int targetId)
 	{
 		_targetId = targetId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

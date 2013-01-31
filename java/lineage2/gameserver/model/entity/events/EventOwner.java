@@ -16,14 +16,26 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class EventOwner implements Serializable
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _events.
+	 */
 	private final Set<GlobalEvent> _events = new HashSet<>(2);
 	
+	/**
+	 * Method getEvent.
+	 * @param eventClass Class<E>
+	 * @return E
+	 */
 	@SuppressWarnings("unchecked")
 	public <E extends GlobalEvent> E getEvent(Class<E> eventClass)
 	{
@@ -41,16 +53,28 @@ public abstract class EventOwner implements Serializable
 		return null;
 	}
 	
+	/**
+	 * Method addEvent.
+	 * @param event GlobalEvent
+	 */
 	public void addEvent(GlobalEvent event)
 	{
 		_events.add(event);
 	}
 	
+	/**
+	 * Method removeEvent.
+	 * @param event GlobalEvent
+	 */
 	public void removeEvent(GlobalEvent event)
 	{
 		_events.remove(event);
 	}
 	
+	/**
+	 * Method getEvents.
+	 * @return Set<GlobalEvent>
+	 */
 	public Set<GlobalEvent> getEvents()
 	{
 		return _events;

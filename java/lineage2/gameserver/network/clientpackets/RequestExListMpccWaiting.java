@@ -15,12 +15,28 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExListMpccWaiting;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExListMpccWaiting extends L2GameClientPacket
 {
+	/**
+	 * Field _listId.
+	 */
 	private int _listId;
+	/**
+	 * Field _locationId.
+	 */
 	private int _locationId;
+	/**
+	 * Field _allLevels.
+	 */
 	private boolean _allLevels;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -29,6 +45,9 @@ public class RequestExListMpccWaiting extends L2GameClientPacket
 		_allLevels = readD() == 1;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

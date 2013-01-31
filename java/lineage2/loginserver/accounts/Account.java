@@ -28,52 +28,124 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Account
 {
+	/**
+	 * Field _log.
+	 */
 	private final static Logger _log = LoggerFactory.getLogger(Account.class);
+	/**
+	 * Field login.
+	 */
 	private final String login;
+	/**
+	 * Field passwordHash.
+	 */
 	private String passwordHash;
+	/**
+	 * Field allowedIP.
+	 */
 	private String allowedIP;
+	/**
+	 * Field allowedIpList.
+	 */
 	private final NetList allowedIpList = new NetList();
+	/**
+	 * Field accessLevel.
+	 */
 	private int accessLevel;
+	/**
+	 * Field banExpire.
+	 */
 	private int banExpire;
+	/**
+	 * Field bonus.
+	 */
 	private double bonus;
+	/**
+	 * Field bonusExpire.
+	 */
 	private int bonusExpire;
+	/**
+	 * Field lastIP.
+	 */
 	private String lastIP;
+	/**
+	 * Field lastAccess.
+	 */
 	private int lastAccess;
+	/**
+	 * Field lastServer.
+	 */
 	private int lastServer;
+	/**
+	 * Field _serversInfo.
+	 */
 	private final IntObjectMap<Pair<Integer, int[]>> _serversInfo = new HashIntObjectMap<>(2);
 	
+	/**
+	 * Constructor for Account.
+	 * @param login String
+	 */
 	public Account(String login)
 	{
 		this.login = login;
 	}
 	
+	/**
+	 * Method getLogin.
+	 * @return String
+	 */
 	public String getLogin()
 	{
 		return login;
 	}
 	
+	/**
+	 * Method getPasswordHash.
+	 * @return String
+	 */
 	public String getPasswordHash()
 	{
 		return passwordHash;
 	}
 	
+	/**
+	 * Method setPasswordHash.
+	 * @param passwordHash String
+	 */
 	public void setPasswordHash(String passwordHash)
 	{
 		this.passwordHash = passwordHash;
 	}
 	
+	/**
+	 * Method getAllowedIP.
+	 * @return String
+	 */
 	public String getAllowedIP()
 	{
 		return allowedIP;
 	}
 	
+	/**
+	 * Method isAllowedIP.
+	 * @param ip String
+	 * @return boolean
+	 */
 	public boolean isAllowedIP(String ip)
 	{
 		return allowedIpList.isEmpty() || allowedIpList.isInRange(ip);
 	}
 	
+	/**
+	 * Method setAllowedIP.
+	 * @param allowedIP String
+	 */
 	public void setAllowedIP(String allowedIP)
 	{
 		allowedIpList.clear();
@@ -89,92 +161,166 @@ public class Account
 		}
 	}
 	
+	/**
+	 * Method getAccessLevel.
+	 * @return int
+	 */
 	public int getAccessLevel()
 	{
 		return accessLevel;
 	}
 	
+	/**
+	 * Method setAccessLevel.
+	 * @param accessLevel int
+	 */
 	public void setAccessLevel(int accessLevel)
 	{
 		this.accessLevel = accessLevel;
 	}
 	
+	/**
+	 * Method getBonus.
+	 * @return double
+	 */
 	public double getBonus()
 	{
 		return bonus;
 	}
 	
+	/**
+	 * Method setBonus.
+	 * @param bonus double
+	 */
 	public void setBonus(double bonus)
 	{
 		this.bonus = bonus;
 	}
 	
+	/**
+	 * Method getBonusExpire.
+	 * @return int
+	 */
 	public int getBonusExpire()
 	{
 		return bonusExpire;
 	}
 	
+	/**
+	 * Method setBonusExpire.
+	 * @param bonusExpire int
+	 */
 	public void setBonusExpire(int bonusExpire)
 	{
 		this.bonusExpire = bonusExpire;
 	}
 	
+	/**
+	 * Method getBanExpire.
+	 * @return int
+	 */
 	public int getBanExpire()
 	{
 		return banExpire;
 	}
 	
+	/**
+	 * Method setBanExpire.
+	 * @param banExpire int
+	 */
 	public void setBanExpire(int banExpire)
 	{
 		this.banExpire = banExpire;
 	}
 	
+	/**
+	 * Method setLastIP.
+	 * @param lastIP String
+	 */
 	public void setLastIP(String lastIP)
 	{
 		this.lastIP = lastIP;
 	}
 	
+	/**
+	 * Method getLastIP.
+	 * @return String
+	 */
 	public String getLastIP()
 	{
 		return lastIP;
 	}
 	
+	/**
+	 * Method getLastAccess.
+	 * @return int
+	 */
 	public int getLastAccess()
 	{
 		return lastAccess;
 	}
 	
+	/**
+	 * Method setLastAccess.
+	 * @param lastAccess int
+	 */
 	public void setLastAccess(int lastAccess)
 	{
 		this.lastAccess = lastAccess;
 	}
 	
+	/**
+	 * Method getLastServer.
+	 * @return int
+	 */
 	public int getLastServer()
 	{
 		return lastServer;
 	}
 	
+	/**
+	 * Method setLastServer.
+	 * @param lastServer int
+	 */
 	public void setLastServer(int lastServer)
 	{
 		this.lastServer = lastServer;
 	}
 	
+	/**
+	 * Method addAccountInfo.
+	 * @param serverId int
+	 * @param size int
+	 * @param deleteChars int[]
+	 */
 	public void addAccountInfo(int serverId, int size, int[] deleteChars)
 	{
 		_serversInfo.put(serverId, new ImmutablePair<>(size, deleteChars));
 	}
 	
+	/**
+	 * Method getAccountInfo.
+	 * @param serverId int
+	 * @return Pair<Integer,int[]>
+	 */
 	public Pair<Integer, int[]> getAccountInfo(int serverId)
 	{
 		return _serversInfo.get(serverId);
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		return login;
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	public void restore()
 	{
 		Connection con = null;
@@ -209,6 +355,9 @@ public class Account
 		}
 	}
 	
+	/**
+	 * Method save.
+	 */
 	public void save()
 	{
 		Connection con = null;
@@ -231,6 +380,9 @@ public class Account
 		}
 	}
 	
+	/**
+	 * Method update.
+	 */
 	public void update()
 	{
 		Connection con = null;

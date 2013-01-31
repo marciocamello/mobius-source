@@ -12,17 +12,37 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class JoinParty extends L2GameServerPacket
 {
+	/**
+	 * Field SUCCESS.
+	 */
 	public static final L2GameServerPacket SUCCESS = new JoinParty(1);
+	/**
+	 * Field FAIL.
+	 */
 	public static final L2GameServerPacket FAIL = new JoinParty(0);
+	/**
+	 * Field _response.
+	 */
 	private final int _response;
 	
+	/**
+	 * Constructor for JoinParty.
+	 * @param response int
+	 */
 	public JoinParty(int response)
 	{
 		_response = response;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

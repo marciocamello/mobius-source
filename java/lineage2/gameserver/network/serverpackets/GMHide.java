@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GMHide extends L2GameServerPacket
 {
+	/**
+	 * Field obj_id.
+	 */
 	private final int obj_id;
 	
+	/**
+	 * Constructor for GMHide.
+	 * @param id int
+	 */
 	public GMHide(int id)
 	{
 		obj_id = id;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

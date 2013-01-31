@@ -14,8 +14,17 @@ package lineage2.gameserver.utils;
 
 import java.util.regex.Pattern;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Strings
 {
+	/**
+	 * Method stripSlashes.
+	 * @param s String
+	 * @return String
+	 */
 	public static String stripSlashes(String s)
 	{
 		if (s == null)
@@ -27,6 +36,11 @@ public class Strings
 		return s;
 	}
 	
+	/**
+	 * Method parseBoolean.
+	 * @param x Object
+	 * @return Boolean
+	 */
 	public static Boolean parseBoolean(Object x)
 	{
 		if (x == null)
@@ -48,49 +62,38 @@ public class Strings
 		return !String.valueOf(x).isEmpty();
 	}
 	
+	/**
+	 * Field tr.
+	 */
 	private static String[] tr;
+	/**
+	 * Field trb.
+	 */
 	private static String[] trb;
+	/**
+	 * Field trcode.
+	 */
 	private static String[] trcode;
 	
+	/**
+	 * Method reload.
+	 */
 	public static void reload()
 	{
-		//TODO: DROP STRINGS.JAVA!
+		// TODO: DROP STRINGS.JAVA!
 		/*
-		try
-		{
-			String[] pairs = FileUtils.readFileToString(new File(Config.DATAPACK_ROOT, "data/translit.txt")).split("\n");
-			tr = new String[pairs.length * 2];
-			for (int i = 0; i < pairs.length; i++)
-			{
-				String[] ss = pairs[i].split(" +");
-				tr[i * 2] = ss[0];
-				tr[(i * 2) + 1] = ss[1];
-			}
-			pairs = FileUtils.readFileToString(new File(Config.DATAPACK_ROOT, "data/translit_back.txt")).split("\n");
-			trb = new String[pairs.length * 2];
-			for (int i = 0; i < pairs.length; i++)
-			{
-				String[] ss = pairs[i].split(" +");
-				trb[i * 2] = ss[0];
-				trb[(i * 2) + 1] = ss[1];
-			}
-			pairs = FileUtils.readFileToString(new File(Config.DATAPACK_ROOT, "data/transcode.txt")).split("\n");
-			trcode = new String[pairs.length * 2];
-			for (int i = 0; i < pairs.length; i++)
-			{
-				String[] ss = pairs[i].split(" +");
-				trcode[i * 2] = ss[0];
-				trcode[(i * 2) + 1] = ss[1];
-			}
-		}
-		catch (IOException e)
-		{
-			_log.error("", e);
-		}
-		_log.info("Loaded " + (tr.length + tr.length + trcode.length) + " translit entries.");
-		*/
+		 * try { String[] pairs = FileUtils.readFileToString(new File(Config.DATAPACK_ROOT, "data/translit.txt")).split("\n"); tr = new String[pairs.length * 2]; for (int i = 0; i < pairs.length; i++) { String[] ss = pairs[i].split(" +"); tr[i * 2] = ss[0]; tr[(i * 2) + 1] = ss[1]; } pairs =
+		 * FileUtils.readFileToString(new File(Config.DATAPACK_ROOT, "data/translit_back.txt")).split("\n"); trb = new String[pairs.length * 2]; for (int i = 0; i < pairs.length; i++) { String[] ss = pairs[i].split(" +"); trb[i * 2] = ss[0]; trb[(i * 2) + 1] = ss[1]; } pairs =
+		 * FileUtils.readFileToString(new File(Config.DATAPACK_ROOT, "data/transcode.txt")).split("\n"); trcode = new String[pairs.length * 2]; for (int i = 0; i < pairs.length; i++) { String[] ss = pairs[i].split(" +"); trcode[i * 2] = ss[0]; trcode[(i * 2) + 1] = ss[1]; } } catch (IOException e) {
+		 * _log.error("", e); } _log.info("Loaded " + (tr.length + tr.length + trcode.length) + " translit entries.");
+		 */
 	}
 	
+	/**
+	 * Method translit.
+	 * @param s String
+	 * @return String
+	 */
 	public static String translit(String s)
 	{
 		for (int i = 0; i < tr.length; i += 2)
@@ -100,6 +103,12 @@ public class Strings
 		return s;
 	}
 	
+	/**
+	 * Method fromTranslit.
+	 * @param s String
+	 * @param type int
+	 * @return String
+	 */
 	public static String fromTranslit(String s, int type)
 	{
 		if (type == 1)
@@ -119,16 +128,36 @@ public class Strings
 		return s;
 	}
 	
+	/**
+	 * Method replace.
+	 * @param str String
+	 * @param regex String
+	 * @param flags int
+	 * @param replace String
+	 * @return String
+	 */
 	public static String replace(String str, String regex, int flags, String replace)
 	{
 		return Pattern.compile(regex, flags).matcher(str).replaceAll(replace);
 	}
 	
+	/**
+	 * Method matches.
+	 * @param str String
+	 * @param regex String
+	 * @param flags int
+	 * @return boolean
+	 */
 	public static boolean matches(String str, String regex, int flags)
 	{
 		return Pattern.compile(regex, flags).matcher(str).matches();
 	}
 	
+	/**
+	 * Method bbParse.
+	 * @param s String
+	 * @return String
+	 */
 	public static String bbParse(String s)
 	{
 		if (s == null)
@@ -146,6 +175,14 @@ public class Strings
 		return s;
 	}
 	
+	/**
+	 * Method joinStrings.
+	 * @param glueStr String
+	 * @param strings String[]
+	 * @param startIdx int
+	 * @param maxCount int
+	 * @return String
+	 */
 	public static String joinStrings(String glueStr, String[] strings, int startIdx, int maxCount)
 	{
 		String result = "";
@@ -169,16 +206,34 @@ public class Strings
 		return result;
 	}
 	
+	/**
+	 * Method joinStrings.
+	 * @param glueStr String
+	 * @param strings String[]
+	 * @param startIdx int
+	 * @return String
+	 */
 	public static String joinStrings(String glueStr, String[] strings, int startIdx)
 	{
 		return joinStrings(glueStr, strings, startIdx, -1);
 	}
 	
+	/**
+	 * Method joinStrings.
+	 * @param glueStr String
+	 * @param strings String[]
+	 * @return String
+	 */
 	public static String joinStrings(String glueStr, String[] strings)
 	{
 		return joinStrings(glueStr, strings, 0);
 	}
 	
+	/**
+	 * Method stripToSingleLine.
+	 * @param s String
+	 * @return String
+	 */
 	public static String stripToSingleLine(String s)
 	{
 		if (s.isEmpty())

@@ -24,21 +24,42 @@ import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GuardianWaterspirit extends Fighter
 {
+	/**
+	 * Field mob.
+	 */
 	private NpcInstance mob = null;
+	/**
+	 * Field _firstTimeAttacked.
+	 */
 	private boolean _firstTimeAttacked = true;
+	/**
+	 * Field MsgText.
+	 */
 	public static final NpcString[] MsgText =
 	{
 		NpcString.AH_AH_FROM_THE_MAGIC_FORCE_NO_MORE_I_WILL_BE_FREED,
 		NpcString.EVEN_THE_MAGIC_FORCE_BINDS_YOU_YOU_WILL_NEVER_BE_FORGIVEN
 	};
 	
+	/**
+	 * Constructor for GuardianWaterspirit.
+	 * @param actor NpcInstance
+	 */
 	public GuardianWaterspirit(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onIntentionAttack.
+	 * @param target Creature
+	 */
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
@@ -54,6 +75,10 @@ public class GuardianWaterspirit extends Fighter
 		super.onIntentionAttack(target);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -89,6 +114,11 @@ public class GuardianWaterspirit extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -112,6 +142,10 @@ public class GuardianWaterspirit extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

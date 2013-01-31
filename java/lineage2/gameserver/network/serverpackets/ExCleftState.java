@@ -12,15 +12,40 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCleftState extends L2GameServerPacket
 {
+	/**
+	 * Field CleftState_Total. (value is 0)
+	 */
 	public static final int CleftState_Total = 0;
+	/**
+	 * Field CleftState_TowerDestroy. (value is 1)
+	 */
 	public static final int CleftState_TowerDestroy = 1;
+	/**
+	 * Field CleftState_CatUpdate. (value is 2)
+	 */
 	public static final int CleftState_CatUpdate = 2;
+	/**
+	 * Field CleftState_Result. (value is 3)
+	 */
 	public static final int CleftState_Result = 3;
+	/**
+	 * Field CleftState_PvPKill. (value is 4)
+	 */
 	public static final int CleftState_PvPKill = 4;
+	/**
+	 * Field CleftState.
+	 */
 	private final int CleftState = 0;
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

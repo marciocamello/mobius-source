@@ -26,12 +26,19 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ArenaManagerInstance extends WarehouseInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _arenaBuff.
+	 */
 	private final static int[][] _arenaBuff = new int[][]
 	{
 		{
@@ -72,11 +79,21 @@ public class ArenaManagerInstance extends WarehouseInstance
 		},
 	};
 	
+	/**
+	 * Constructor for ArenaManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ArenaManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

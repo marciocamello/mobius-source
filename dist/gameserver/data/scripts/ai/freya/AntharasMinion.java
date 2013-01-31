@@ -20,14 +20,25 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 import bosses.AntharasManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AntharasMinion extends Fighter
 {
+	/**
+	 * Constructor for AntharasMinion.
+	 * @param actor NpcInstance
+	 */
 	public AntharasMinion(NpcInstance actor)
 	{
 		super(actor);
 		actor.startDebuffImmunity();
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -38,6 +49,10 @@ public class AntharasMinion extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -45,6 +60,11 @@ public class AntharasMinion extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method returnHome.
+	 * @param clearAggro boolean
+	 * @param teleport boolean
+	 */
 	@Override
 	protected void returnHome(boolean clearAggro, boolean teleport)
 	{

@@ -15,8 +15,16 @@ package ai.talkingisland;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Eleve extends EleveSubAI
 {
+	/**
+	 * Constructor for Eleve.
+	 * @param actor NpcInstance
+	 */
 	public Eleve(NpcInstance actor)
 	{
 		super(actor);

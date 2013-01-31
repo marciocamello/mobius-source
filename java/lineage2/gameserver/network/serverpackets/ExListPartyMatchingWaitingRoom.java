@@ -21,11 +21,29 @@ import lineage2.gameserver.instancemanager.MatchingRoomManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 {
+	/**
+	 * Field _waitingList.
+	 */
 	private List<PartyMatchingWaitingInfo> _waitingList = Collections.emptyList();
+	/**
+	 * Field _fullSize.
+	 */
 	private final int _fullSize;
 	
+	/**
+	 * Constructor for ExListPartyMatchingWaitingRoom.
+	 * @param searcher Player
+	 * @param minLevel int
+	 * @param maxLevel int
+	 * @param page int
+	 * @param classes int[]
+	 */
 	public ExListPartyMatchingWaitingRoom(Player searcher, int minLevel, int maxLevel, int page, int[] classes)
 	{
 		int first = (page - 1) * 64;
@@ -45,6 +63,9 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -65,12 +86,34 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class PartyMatchingWaitingInfo
 	{
+		/**
+		 * Field currentInstance.
+		 */
+		/**
+		 * Field level.
+		 */
+		/**
+		 * Field classId.
+		 */
 		public final int classId, level, currentInstance;
+		/**
+		 * Field name.
+		 */
 		public final String name;
+		/**
+		 * Field instanceReuses.
+		 */
 		public final int[] instanceReuses;
 		
+		/**
+		 * Constructor for PartyMatchingWaitingInfo.
+		 * @param member Player
+		 */
 		public PartyMatchingWaitingInfo(Player member)
 		{
 			name = member.getName();

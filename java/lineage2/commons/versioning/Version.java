@@ -20,16 +20,45 @@ import java.util.jar.JarFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Version
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Version.class);
+	/**
+	 * Field _revisionNumber.
+	 */
 	private String _revisionNumber = "exported";
+	/**
+	 * Field _versionNumber.
+	 */
 	private String _versionNumber = "-1";
+	/**
+	 * Field _buildNumber.
+	 */
 	private String _buildNumber = "-1";
+	/**
+	 * Field _buildDate.
+	 */
 	private String _buildDate = "";
+	/**
+	 * Field _buildJdk.
+	 */
 	private String _buildJdk = "";
+	/**
+	 * Field _vendor.
+	 */
 	private String _vendor = "";
 	
+	/**
+	 * Constructor for Version.
+	 * @param c Class<?>
+	 */
 	public Version(Class<?> c)
 	{
 		File jarName = null;
@@ -57,6 +86,10 @@ public class Version
 		}
 	}
 	
+	/**
+	 * Method setBuildNumber.
+	 * @param attrs Attributes
+	 */
 	private void setBuildNumber(Attributes attrs)
 	{
 		String buildNumber = attrs.getValue("Implementation-Number");
@@ -70,6 +103,10 @@ public class Version
 		}
 	}
 	
+	/**
+	 * Method setVersionNumber.
+	 * @param attrs Attributes
+	 */
 	private void setVersionNumber(Attributes attrs)
 	{
 		String versionNumber = attrs.getValue("Implementation-Version");
@@ -83,6 +120,10 @@ public class Version
 		}
 	}
 	
+	/**
+	 * Method setRevisionNumber.
+	 * @param attrs Attributes
+	 */
 	private void setRevisionNumber(Attributes attrs)
 	{
 		String revisionNumber = attrs.getValue("Implementation-Build");
@@ -96,6 +137,10 @@ public class Version
 		}
 	}
 	
+	/**
+	 * Method setBuildJdk.
+	 * @param attrs Attributes
+	 */
 	private void setBuildJdk(Attributes attrs)
 	{
 		String buildJdk = attrs.getValue("Build-Jdk");
@@ -117,6 +162,10 @@ public class Version
 		}
 	}
 	
+	/**
+	 * Method setBuildDate.
+	 * @param attrs Attributes
+	 */
 	private void setBuildDate(Attributes attrs)
 	{
 		String buildDate = attrs.getValue("Build-Date");
@@ -130,36 +179,64 @@ public class Version
 		}
 	}
 	
+	/**
+	 * Method getRevisionNumber.
+	 * @return String
+	 */
 	public String getRevisionNumber()
 	{
 		return _revisionNumber;
 	}
 	
+	/**
+	 * Method getVersionNumber.
+	 * @return String
+	 */
 	public String getVersionNumber()
 	{
 		return _versionNumber;
 	}
 	
+	/**
+	 * Method getBuildNumber.
+	 * @return String
+	 */
 	public String getBuildNumber()
 	{
 		return _buildNumber;
 	}
 	
+	/**
+	 * Method getBuildDate.
+	 * @return String
+	 */
 	public String getBuildDate()
 	{
 		return _buildDate;
 	}
 	
+	/**
+	 * Method getBuildJdk.
+	 * @return String
+	 */
 	public String getBuildJdk()
 	{
 		return _buildJdk;
 	}
 	
+	/**
+	 * Method getVendor.
+	 * @return String
+	 */
 	public String getVendor()
 	{
 		return _vendor;
 	}
 	
+	/**
+	 * Method setVendor.
+	 * @param attrs Attributes
+	 */
 	public void setVendor(Attributes attrs)
 	{
 		String vendor = attrs.getValue("Vendor");

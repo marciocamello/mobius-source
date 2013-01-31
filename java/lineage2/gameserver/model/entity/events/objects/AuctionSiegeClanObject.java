@@ -14,31 +14,59 @@ package lineage2.gameserver.model.entity.events.objects;
 
 import lineage2.gameserver.model.pledge.Clan;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AuctionSiegeClanObject extends SiegeClanObject
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _bid.
+	 */
 	private long _bid;
 	
+	/**
+	 * Constructor for AuctionSiegeClanObject.
+	 * @param type String
+	 * @param clan Clan
+	 * @param param long
+	 */
 	public AuctionSiegeClanObject(String type, Clan clan, long param)
 	{
 		this(type, clan, param, System.currentTimeMillis());
 	}
 	
+	/**
+	 * Constructor for AuctionSiegeClanObject.
+	 * @param type String
+	 * @param clan Clan
+	 * @param param long
+	 * @param date long
+	 */
 	public AuctionSiegeClanObject(String type, Clan clan, long param, long date)
 	{
 		super(type, clan, param, date);
 		_bid = param;
 	}
 	
+	/**
+	 * Method getParam.
+	 * @return long
+	 */
 	@Override
 	public long getParam()
 	{
 		return _bid;
 	}
 	
+	/**
+	 * Method setParam.
+	 * @param param long
+	 */
 	public void setParam(long param)
 	{
 		_bid = param;

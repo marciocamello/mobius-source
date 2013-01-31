@@ -26,32 +26,67 @@ import lineage2.gameserver.model.entity.residence.Residence;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("unchecked")
 public final class ResidenceHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static ResidenceHolder _instance = new ResidenceHolder();
+	/**
+	 * Field _residences.
+	 */
 	private final IntObjectMap<Residence> _residences = new TreeIntObjectMap<>();
+	/**
+	 * Field _fastResidencesByType.
+	 */
 	private final Map<Class, List<Residence>> _fastResidencesByType = new HashMap<>(4);
 	
+	/**
+	 * Method getInstance.
+	 * @return ResidenceHolder
+	 */
 	public static ResidenceHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for ResidenceHolder.
+	 */
 	private ResidenceHolder()
 	{
 	}
 	
+	/**
+	 * Method addResidence.
+	 * @param r Residence
+	 */
 	public void addResidence(Residence r)
 	{
 		_residences.put(r.getId(), r);
 	}
 	
+	/**
+	 * Method getResidence.
+	 * @param id int
+	 * @return R
+	 */
 	public <R extends Residence> R getResidence(int id)
 	{
 		return (R) _residences.get(id);
 	}
 	
+	/**
+	 * Method getResidence.
+	 * @param type Class<R>
+	 * @param id int
+	 * @return R
+	 */
 	public <R extends Residence> R getResidence(Class<R> type, int id)
 	{
 		Residence r = getResidence(id);
@@ -62,21 +97,45 @@ public final class ResidenceHolder extends AbstractHolder
 		return (R) r;
 	}
 	
+	/**
+	 * Method getResidenceList.
+	 * @param t Class<R>
+	 * @return List<R>
+	 */
 	public <R extends Residence> List<R> getResidenceList(Class<R> t)
 	{
 		return (List<R>) _fastResidencesByType.get(t);
 	}
 	
+	/**
+	 * Method getResidences.
+	 * @return Collection<Residence>
+	 */
 	public Collection<Residence> getResidences()
 	{
 		return _residences.values();
 	}
 	
+	/**
+	 * Method getResidenceByObject.
+	 * @param type Class<? extends Residence>
+	 * @param object GameObject
+	 * @return R
+	 */
 	public <R extends Residence> R getResidenceByObject(Class<? extends Residence> type, GameObject object)
 	{
 		return (R) getResidenceByCoord(type, object.getX(), object.getY(), object.getZ(), object.getReflection());
 	}
 	
+	/**
+	 * Method getResidenceByCoord.
+	 * @param type Class<R>
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param ref Reflection
+	 * @return R
+	 */
 	public <R extends Residence> R getResidenceByCoord(Class<R> type, int x, int y, int z, Reflection ref)
 	{
 		Collection<Residence> residences = type == null ? getResidences() : (Collection<Residence>) getResidenceList(type);
@@ -90,6 +149,16 @@ public final class ResidenceHolder extends AbstractHolder
 		return null;
 	}
 	
+	/**
+	 * Method findNearestResidence.
+	 * @param clazz Class<R>
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param ref Reflection
+	 * @param offset int
+	 * @return R
+	 */
 	public <R extends Residence> R findNearestResidence(Class<R> clazz, int x, int y, int z, Reflection ref, int offset)
 	{
 		Residence residence = getResidenceByCoord(clazz, x, y, z, ref);
@@ -110,6 +179,9 @@ public final class ResidenceHolder extends AbstractHolder
 		return (R) residence;
 	}
 	
+	/**
+	 * Method callInit.
+	 */
 	public void callInit()
 	{
 		for (Residence r : getResidences())
@@ -118,6 +190,9 @@ public final class ResidenceHolder extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method buildFastLook.
+	 */
 	private void buildFastLook()
 	{
 		for (Residence residence : _residences.values())
@@ -131,6 +206,9 @@ public final class ResidenceHolder extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method log.
+	 */
 	@Override
 	public void log()
 	{
@@ -142,12 +220,19 @@ public final class ResidenceHolder extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

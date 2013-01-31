@@ -14,26 +14,56 @@ package lineage2.gameserver.templates.player;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClassData
 {
+	/**
+	 * Field _classId.
+	 */
 	private final int _classId;
+	/**
+	 * Field _lvlsUpData.
+	 */
 	private final TIntObjectHashMap<LvlUpData> _lvlsUpData = new TIntObjectHashMap<>();
 	
+	/**
+	 * Constructor for ClassData.
+	 * @param classId int
+	 */
 	public ClassData(int classId)
 	{
 		_classId = classId;
 	}
 	
+	/**
+	 * Method addLvlUpData.
+	 * @param lvl int
+	 * @param hp double
+	 * @param mp double
+	 * @param cp double
+	 */
 	public void addLvlUpData(int lvl, double hp, double mp, double cp)
 	{
 		_lvlsUpData.put(lvl, new LvlUpData(hp, mp, cp));
 	}
 	
+	/**
+	 * Method getLvlUpData.
+	 * @param lvl int
+	 * @return LvlUpData
+	 */
 	public LvlUpData getLvlUpData(int lvl)
 	{
 		return _lvlsUpData.get(lvl);
 	}
 	
+	/**
+	 * Method getClassId.
+	 * @return int
+	 */
 	public int getClassId()
 	{
 		return _classId;

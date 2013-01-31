@@ -26,21 +26,46 @@ import lineage2.gameserver.templates.mapregion.DomainArea;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PathfinderInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field INSTANCE_75LVL_ID. (value is 56)
+	 */
 	private static final int INSTANCE_75LVL_ID = 56;
+	/**
+	 * Field _rank.
+	 */
 	private int _rank = -1;
+	/**
+	 * Field _rewarded.
+	 */
 	private boolean _rewarded = false;
 	
+	/**
+	 * Constructor for PathfinderInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public PathfinderInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
@@ -56,6 +81,11 @@ public class PathfinderInstance extends NpcInstance
 		return "instance/soloKamaloka/" + pom + ".htm";
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -216,6 +246,10 @@ public class PathfinderInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getRewardRank.
+	 * @return int
+	 */
 	private int getRewardRank()
 	{
 		if (_rank >= 0)
@@ -234,6 +268,12 @@ public class PathfinderInstance extends NpcInstance
 		return _rank;
 	}
 	
+	/**
+	 * Method getRewardList.
+	 * @param rank int
+	 * @param iz InstantZone
+	 * @return int[][]
+	 */
 	private static int[][] getRewardList(int rank, InstantZone iz)
 	{
 		if (iz == null)

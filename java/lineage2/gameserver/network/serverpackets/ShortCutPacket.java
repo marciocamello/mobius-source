@@ -18,8 +18,18 @@ import lineage2.gameserver.model.actor.instances.player.ShortCut;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.skills.TimeStamp;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class ShortCutPacket extends L2GameServerPacket
 {
+	/**
+	 * Method convert.
+	 * @param player Player
+	 * @param shortCut ShortCut
+	 * @return ShortcutInfo
+	 */
 	public static ShortcutInfo convert(Player player, ShortCut shortCut)
 	{
 		ShortcutInfo shortcutInfo;
@@ -63,13 +73,39 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 		return shortcutInfo;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected static class ItemShortcutInfo extends ShortcutInfo
 	{
+		/**
+		 * Field _reuseGroup.
+		 */
 		private final int _reuseGroup;
+		/**
+		 * Field _currentReuse.
+		 */
 		private final int _currentReuse;
+		/**
+		 * Field _basicReuse.
+		 */
 		private final int _basicReuse;
+		/**
+		 * Field _augmentationId.
+		 */
 		private final int _augmentationId;
 		
+		/**
+		 * Constructor for ItemShortcutInfo.
+		 * @param type int
+		 * @param page int
+		 * @param id int
+		 * @param reuseGroup int
+		 * @param currentReuse int
+		 * @param basicReuse int
+		 * @param augmentationId int
+		 * @param characterType int
+		 */
 		public ItemShortcutInfo(int type, int page, int id, int reuseGroup, int currentReuse, int basicReuse, int augmentationId, int characterType)
 		{
 			super(type, page, id, characterType);
@@ -79,6 +115,10 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 			_augmentationId = augmentationId;
 		}
 		
+		/**
+		 * Method write0.
+		 * @param p ShortCutPacket
+		 */
 		@Override
 		protected void write0(ShortCutPacket p)
 		{
@@ -95,11 +135,29 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected static class SkillShortcutInfo extends ShortcutInfo
 	{
+		/**
+		 * Field _level.
+		 */
 		private final int _level;
+		/**
+		 * Field reuseGroup.
+		 */
 		private final int reuseGroup;
 		
+		/**
+		 * Constructor for SkillShortcutInfo.
+		 * @param type int
+		 * @param page int
+		 * @param id int
+		 * @param level int
+		 * @param reuseGroup int
+		 * @param characterType int
+		 */
 		public SkillShortcutInfo(int type, int page, int id, int level, int reuseGroup, int characterType)
 		{
 			super(type, page, id, characterType);
@@ -107,11 +165,19 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 			this.reuseGroup = reuseGroup;
 		}
 		
+		/**
+		 * Method getLevel.
+		 * @return int
+		 */
 		public int getLevel()
 		{
 			return _level;
 		}
 		
+		/**
+		 * Method write0.
+		 * @param p ShortCutPacket
+		 */
 		@Override
 		protected void write0(ShortCutPacket p)
 		{
@@ -123,13 +189,35 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected static class ShortcutInfo
 	{
+		/**
+		 * Field _type.
+		 */
 		protected final int _type;
+		/**
+		 * Field _page.
+		 */
 		protected final int _page;
+		/**
+		 * Field _id.
+		 */
 		protected final int _id;
+		/**
+		 * Field _characterType.
+		 */
 		protected final int _characterType;
 		
+		/**
+		 * Constructor for ShortcutInfo.
+		 * @param type int
+		 * @param page int
+		 * @param id int
+		 * @param characterType int
+		 */
 		public ShortcutInfo(int type, int page, int id, int characterType)
 		{
 			_type = type;
@@ -138,6 +226,10 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 			_characterType = characterType;
 		}
 		
+		/**
+		 * Method write.
+		 * @param p ShortCutPacket
+		 */
 		protected void write(ShortCutPacket p)
 		{
 			p.writeD(_type);
@@ -145,6 +237,10 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 			write0(p);
 		}
 		
+		/**
+		 * Method write0.
+		 * @param p ShortCutPacket
+		 */
 		protected void write0(ShortCutPacket p)
 		{
 			p.writeD(_id);

@@ -23,11 +23,24 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestJoinParty extends L2GameClientPacket
 {
+	/**
+	 * Field _name.
+	 */
 	private String _name;
+	/**
+	 * Field _itemDistribution.
+	 */
 	private int _itemDistribution;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -35,6 +48,9 @@ public class RequestJoinParty extends L2GameClientPacket
 		_itemDistribution = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

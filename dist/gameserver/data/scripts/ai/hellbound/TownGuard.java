@@ -19,13 +19,25 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TownGuard extends Fighter
 {
+	/**
+	 * Constructor for TownGuard.
+	 * @param actor NpcInstance
+	 */
 	public TownGuard(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onIntentionAttack.
+	 * @param target Creature
+	 */
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{

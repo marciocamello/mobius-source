@@ -41,27 +41,77 @@ import lineage2.gameserver.utils.HtmlUtils;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AuctioneerInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field DATE_FORMAT.
+	 */
 	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yy");
+	/**
+	 * Field NUMBER_FORMAT.
+	 */
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getIntegerInstance(Locale.KOREA);
+	/**
+	 * Field WEEK.
+	 */
 	private final static long WEEK = 7 * 24 * 60 * 60 * 1000L;
 	
+	/**
+	 * Field CH_PAGE_SIZE. (value is 7)
+	 */
 	private final static int CH_PAGE_SIZE = 7;
+	/**
+	 * Field CH_IN_LIST. (value is ""\t
+	 * <tr>
+	 * \n" + "\t\t
+	 * <td width=50>\n" + "\t\t\t<font color=\"aaaaff\">&^%id%;</font>\n" + "\t\t</td>\n" + "\t\t
+	 * <td width=100>\n" + "\t\t\t<a action=\"bypass -h npc_%objectId%_info %id%\"><font color=\"ffffaa\">&%%id%;[%size%]</font></a>\n" + "\t\t</td>\n" + "\t\t
+	 * <td width=50>%date%</td>\n" + "\t\t
+	 * <td width=70 align=right>\n" + "\t\t\t<font color=\"aaffff\">%min_bid%</font>\n" + "\t\t</td>\n" + "\t
+	 * </tr>
+	 * "")
+	 */
 	private final static String CH_IN_LIST = "\t<tr>\n" + "\t\t<td width=50>\n" + "\t\t\t<font color=\"aaaaff\">&^%id%;</font>\n" + "\t\t</td>\n" + "\t\t<td width=100>\n" + "\t\t\t<a action=\"bypass -h npc_%objectId%_info %id%\"><font color=\"ffffaa\">&%%id%;[%size%]</font></a>\n" + "\t\t</td>\n" + "\t\t<td width=50>%date%</td>\n" + "\t\t<td width=70 align=right>\n" + "\t\t\t<font color=\"aaffff\">%min_bid%</font>\n" + "\t\t</td>\n" + "\t</tr>";
 	
+	/**
+	 * Field BIDDER_PAGE_SIZE. (value is 10)
+	 */
 	private final static int BIDDER_PAGE_SIZE = 10;
+	/**
+	 * Field BIDDER_IN_LIST. (value is ""\t
+	 * <tr>
+	 * \n" + "\t\t
+	 * <td width=100><font color=\"aaaaff\">&%%id%;</font></td>\n" + "\t\t
+	 * <td width=100><font color=\"ffffaa\">%clan_name%</font></td>\n" + "\t\t
+	 * <td width=70>%date%</td>\n" + "\t
+	 * </tr>
+	 * "")
+	 */
 	private final static String BIDDER_IN_LIST = "\t<tr>\n" + "\t\t<td width=100><font color=\"aaaaff\">&%%id%;</font></td>\n" + "\t\t<td width=100><font color=\"ffffaa\">%clan_name%</font></td>\n" + "\t\t<td width=70>%date%</td>\n" + "\t</tr>";
 	
+	/**
+	 * Constructor for AuctioneerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public AuctioneerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -750,12 +800,23 @@ public class AuctioneerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 		showChatWindow(player, "residence2/clanhall/auction_dealer001.htm");
 	}
 	
+	/**
+	 * Method firstChecks.
+	 * @param player Player
+	 * @return boolean
+	 */
 	private boolean firstChecks(Player player)
 	{
 		if ((player.getClan() == null) || (player.getClan().getLevel() < 2))
@@ -773,6 +834,13 @@ public class AuctioneerInstance extends NpcInstance
 		return true;
 	}
 	
+	/**
+	 * Method checkBid.
+	 * @param player Player
+	 * @param auctionEvent ClanHallAuctionEvent
+	 * @param bid long
+	 * @return boolean
+	 */
 	private boolean checkBid(Player player, ClanHallAuctionEvent auctionEvent, final long bid)
 	{
 		long consumeBid = bid;
@@ -799,6 +867,10 @@ public class AuctioneerInstance extends NpcInstance
 		return true;
 	}
 	
+	/**
+	 * Method getMapDialog.
+	 * @return String
+	 */
 	private String getMapDialog()
 	{
 		// "gludio", "gludin", "dion", "giran", "adena", "rune", "goddard", "schuttgart"

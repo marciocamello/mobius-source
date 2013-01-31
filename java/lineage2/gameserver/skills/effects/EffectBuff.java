@@ -17,13 +17,25 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectBuff extends Effect
 {
+	/**
+	 * Constructor for EffectBuff.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectBuff(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -38,6 +50,9 @@ public final class EffectBuff extends Effect
 		}
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -52,6 +67,10 @@ public final class EffectBuff extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

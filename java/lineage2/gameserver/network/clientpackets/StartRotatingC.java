@@ -15,11 +15,24 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.StartRotating;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StartRotatingC extends L2GameClientPacket
 {
+	/**
+	 * Field _degree.
+	 */
 	private int _degree;
+	/**
+	 * Field _side.
+	 */
 	private int _side;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -27,6 +40,9 @@ public class StartRotatingC extends L2GameClientPacket
 		_side = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

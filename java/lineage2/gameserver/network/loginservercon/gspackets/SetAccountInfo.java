@@ -14,12 +14,31 @@ package lineage2.gameserver.network.loginservercon.gspackets;
 
 import lineage2.gameserver.network.loginservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SetAccountInfo extends SendablePacket
 {
+	/**
+	 * Field _account.
+	 */
 	private final String _account;
+	/**
+	 * Field _size.
+	 */
 	private final int _size;
+	/**
+	 * Field _deleteChars.
+	 */
 	private final int[] _deleteChars;
 	
+	/**
+	 * Constructor for SetAccountInfo.
+	 * @param account String
+	 * @param size int
+	 * @param deleteChars int[]
+	 */
 	public SetAccountInfo(String account, int size, int[] deleteChars)
 	{
 		_account = account;
@@ -27,6 +46,9 @@ public class SetAccountInfo extends SendablePacket
 		_deleteChars = deleteChars;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

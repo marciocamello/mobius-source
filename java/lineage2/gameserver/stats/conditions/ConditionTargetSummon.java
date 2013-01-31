@@ -15,15 +15,31 @@ package lineage2.gameserver.stats.conditions;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionTargetSummon extends Condition
 {
+	/**
+	 * Field _flag.
+	 */
 	private final boolean _flag;
 	
+	/**
+	 * Constructor for ConditionTargetSummon.
+	 * @param flag boolean
+	 */
 	public ConditionTargetSummon(boolean flag)
 	{
 		_flag = flag;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

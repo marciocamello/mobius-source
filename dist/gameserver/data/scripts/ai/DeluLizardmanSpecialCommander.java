@@ -21,15 +21,29 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DeluLizardmanSpecialCommander extends Fighter
 {
+	/**
+	 * Field _shouted.
+	 */
 	private boolean _shouted = false;
 	
+	/**
+	 * Constructor for DeluLizardmanSpecialCommander.
+	 * @param actor NpcInstance
+	 */
 	public DeluLizardmanSpecialCommander(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -37,6 +51,11 @@ public class DeluLizardmanSpecialCommander extends Fighter
 		super.onEvtSpawn();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

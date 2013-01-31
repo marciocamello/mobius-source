@@ -30,13 +30,33 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.MapUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BoatWayEvent extends GlobalEvent
 {
+	/**
+	 * Field BOAT_POINTS. (value is ""boat_points"")
+	 */
 	public static final String BOAT_POINTS = "boat_points";
+	/**
+	 * Field _ticketId.
+	 */
 	private final int _ticketId;
+	/**
+	 * Field _returnLoc.
+	 */
 	private final Location _returnLoc;
+	/**
+	 * Field _boat.
+	 */
 	private final Boat _boat;
 	
+	/**
+	 * Constructor for BoatWayEvent.
+	 * @param boat ClanAirShip
+	 */
 	public BoatWayEvent(ClanAirShip boat)
 	{
 		super(boat.getObjectId(), "ClanAirShip");
@@ -45,6 +65,10 @@ public class BoatWayEvent extends GlobalEvent
 		_returnLoc = null;
 	}
 	
+	/**
+	 * Constructor for BoatWayEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public BoatWayEvent(MultiValueSet<String> set)
 	{
 		super(set);
@@ -65,11 +89,17 @@ public class BoatWayEvent extends GlobalEvent
 		_boat.setWay(className != null ? 1 : 0, this);
 	}
 	
+	/**
+	 * Method initEvent.
+	 */
 	@Override
 	public void initEvent()
 	{
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -102,6 +132,9 @@ public class BoatWayEvent extends GlobalEvent
 		moveNext();
 	}
 	
+	/**
+	 * Method moveNext.
+	 */
 	public void moveNext()
 	{
 		List<BoatPoint> points = getObjects(BOAT_POINTS);
@@ -134,18 +167,31 @@ public class BoatWayEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onInit boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{
 		registerActions();
 	}
 	
+	/**
+	 * Method startTimeMillis.
+	 * @return long
+	 */
 	@Override
 	protected long startTimeMillis()
 	{
 		return System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method broadcastPlayers.
+	 * @param range int
+	 * @return List<Player>
+	 */
 	@Override
 	public List<Player> broadcastPlayers(int range)
 	{
@@ -173,11 +219,18 @@ public class BoatWayEvent extends GlobalEvent
 		return World.getAroundPlayers(_boat, range, Math.max(range / 2, 200));
 	}
 	
+	/**
+	 * Method printInfo.
+	 */
 	@Override
 	protected void printInfo()
 	{
 	}
 	
+	/**
+	 * Method getReturnLoc.
+	 * @return Location
+	 */
 	public Location getReturnLoc()
 	{
 		return _returnLoc;

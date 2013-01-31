@@ -12,7 +12,15 @@
  */
 package lineage2.gameserver.templates.item;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface ItemType
 {
+	/**
+	 * Method mask.
+	 * @return long
+	 */
 	public long mask();
 }

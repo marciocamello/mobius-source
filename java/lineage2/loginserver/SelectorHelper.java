@@ -21,14 +21,28 @@ import lineage2.commons.net.nio.impl.MMOConnection;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.loginserver.serverpackets.Init;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SelectorHelper implements IMMOExecutor<L2LoginClient>, IClientFactory<L2LoginClient>, IAcceptFilter
 {
+	/**
+	 * Method execute.
+	 * @param r Runnable
+	 * @see lineage2.commons.net.nio.impl.IMMOExecutor#execute(Runnable)
+	 */
 	@Override
 	public void execute(Runnable r)
 	{
 		ThreadPoolManager.getInstance().execute(r);
 	}
 	
+	/**
+	 * Method create.
+	 * @param con MMOConnection<L2LoginClient>
+	 * @return L2LoginClient * @see lineage2.commons.net.nio.impl.IClientFactory#create(MMOConnection<L2LoginClient>)
+	 */
 	@Override
 	public L2LoginClient create(MMOConnection<L2LoginClient> con)
 	{
@@ -45,6 +59,11 @@ public class SelectorHelper implements IMMOExecutor<L2LoginClient>, IClientFacto
 		return client;
 	}
 	
+	/**
+	 * Method accept.
+	 * @param sc SocketChannel
+	 * @return boolean * @see lineage2.commons.net.nio.impl.IAcceptFilter#accept(SocketChannel)
+	 */
 	@Override
 	public boolean accept(SocketChannel sc)
 	{

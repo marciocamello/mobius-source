@@ -28,21 +28,50 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HtmCache
 {
+	/**
+	 * Field DISABLED. (value is 0)
+	 */
 	public static final int DISABLED = 0;
+	/**
+	 * Field LAZY. (value is 1)
+	 */
 	public static final int LAZY = 1;
+	/**
+	 * Field ENABLED. (value is 2)
+	 */
 	public static final int ENABLED = 2;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(HtmCache.class);
+	/**
+	 * Field _instance.
+	 */
 	private final static HtmCache _instance = new HtmCache();
 	
+	/**
+	 * Method getInstance.
+	 * @return HtmCache
+	 */
 	public static HtmCache getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _cache.
+	 */
 	private final Cache[] _cache = new Cache[Language.VALUES.length];
 	
+	/**
+	 * Constructor for HtmCache.
+	 */
 	private HtmCache()
 	{
 		for (int i = 0; i < _cache.length; i++)
@@ -51,6 +80,9 @@ public class HtmCache
 		}
 	}
 	
+	/**
+	 * Method reload.
+	 */
 	public void reload()
 	{
 		clear();
@@ -60,7 +92,7 @@ public class HtmCache
 				for (Language lang : Language.VALUES)
 				{
 					File root;
-					if (lang.getShortName() == "en")
+					if (lang.getShortName().equals("en"))
 					{
 						root = new File(Config.DATAPACK_ROOT, "data/html");
 					}
@@ -91,6 +123,12 @@ public class HtmCache
 		}
 	}
 	
+	/**
+	 * Method load.
+	 * @param lang Language
+	 * @param f File
+	 * @param rootPath String
+	 */
 	private void load(Language lang, File f, final String rootPath)
 	{
 		if (!f.exists())
@@ -122,6 +160,13 @@ public class HtmCache
 		}
 	}
 	
+	/**
+	 * Method putContent.
+	 * @param lang Language
+	 * @param f File
+	 * @param rootPath String
+	 * @throws IOException
+	 */
 	public void putContent(Language lang, File f, final String rootPath) throws IOException
 	{
 		String content = FileUtils.readFileToString(f, "UTF-8");
@@ -129,6 +174,12 @@ public class HtmCache
 		_cache[lang.ordinal()].put(new Element(path.toLowerCase(), Strings.bbParse(content)));
 	}
 	
+	/**
+	 * Method getNotNull.
+	 * @param fileName String
+	 * @param player Player
+	 * @return String
+	 */
 	public String getNotNull(String fileName, Player player)
 	{
 		Language lang = player == null ? Language.ENGLISH : player.getLanguage();
@@ -140,6 +191,12 @@ public class HtmCache
 		return cache;
 	}
 	
+	/**
+	 * Method getNullable.
+	 * @param fileName String
+	 * @param player Player
+	 * @return String
+	 */
 	public String getNullable(String fileName, Player player)
 	{
 		Language lang = player == null ? Language.ENGLISH : player.getLanguage();
@@ -151,6 +208,12 @@ public class HtmCache
 		return cache;
 	}
 	
+	/**
+	 * Method getCache.
+	 * @param file String
+	 * @param lang Language
+	 * @return String
+	 */
 	private String getCache(String file, Language lang)
 	{
 		if (file == null)
@@ -184,11 +247,17 @@ public class HtmCache
 		return cache;
 	}
 	
+	/**
+	 * Method loadDisabled.
+	 * @param lang Language
+	 * @param file String
+	 * @return String
+	 */
 	private String loadDisabled(Language lang, String file)
 	{
 		String cache = null;
 		File f;
-		if (lang.getShortName() == "en")
+		if (lang.getShortName().equals("en"))
 		{
 			f = new File(Config.DATAPACK_ROOT, "data/html/" + file);
 		}
@@ -211,11 +280,17 @@ public class HtmCache
 		return cache;
 	}
 	
+	/**
+	 * Method loadLazy.
+	 * @param lang Language
+	 * @param file String
+	 * @return String
+	 */
 	private String loadLazy(Language lang, String file)
 	{
 		String cache = null;
 		File f;
-		if (lang.getShortName() == "en")
+		if (lang.getShortName().equals("en"))
 		{
 			f = new File(Config.DATAPACK_ROOT, "data/html/" + file);
 		}
@@ -239,6 +314,12 @@ public class HtmCache
 		return cache;
 	}
 	
+	/**
+	 * Method get.
+	 * @param lang Language
+	 * @param f String
+	 * @return String
+	 */
 	private String get(Language lang, String f)
 	{
 		Element element = _cache[lang.ordinal()].get(f);
@@ -249,6 +330,9 @@ public class HtmCache
 		return element == null ? null : (String) element.getObjectValue();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	public void clear()
 	{
 		for (Cache element : _cache)

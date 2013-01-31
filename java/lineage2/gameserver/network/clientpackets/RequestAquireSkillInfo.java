@@ -23,12 +23,28 @@ import lineage2.gameserver.network.serverpackets.AcquireSkillInfo;
 import lineage2.gameserver.network.serverpackets.ExAcquireSkillInfo;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestAquireSkillInfo extends L2GameClientPacket
 {
+	/**
+	 * Field _id.
+	 */
 	private int _id;
+	/**
+	 * Field _level.
+	 */
 	private int _level;
+	/**
+	 * Field _type.
+	 */
 	private AcquireType _type;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -37,6 +53,9 @@ public class RequestAquireSkillInfo extends L2GameClientPacket
 		_type = ArrayUtils.valid(AcquireType.VALUES, readD());
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

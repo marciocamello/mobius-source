@@ -24,21 +24,54 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EnvoyInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field COND_LEADER. (value is 0)
+	 */
 	public static final int COND_LEADER = 0;
+	/**
+	 * Field COND_FAIL. (value is 1)
+	 */
 	public static final int COND_FAIL = 1;
+	/**
+	 * Field _castleId.
+	 */
 	private final int _castleId;
+	/**
+	 * Field _mainDialog.
+	 */
 	private final String _mainDialog;
+	/**
+	 * Field _failDialog.
+	 */
 	private final String _failDialog;
+	/**
+	 * Field _successContractDialog.
+	 */
 	private final String _successContractDialog;
+	/**
+	 * Field _successIndependentDialog.
+	 */
 	private final String _successIndependentDialog;
+	/**
+	 * Field _failContractDialog.
+	 */
 	private final String _failContractDialog;
 	
+	/**
+	 * Constructor for EnvoyInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public EnvoyInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -50,6 +83,11 @@ public class EnvoyInstance extends NpcInstance
 		_failContractDialog = template.getAIParams().getString("fail_contract_dialog");
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -103,6 +141,12 @@ public class EnvoyInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -120,6 +164,11 @@ public class EnvoyInstance extends NpcInstance
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 	
+	/**
+	 * Method getCond.
+	 * @param player Player
+	 * @return int
+	 */
 	protected int getCond(Player player)
 	{
 		Residence residence = getFortress();

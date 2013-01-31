@@ -21,13 +21,23 @@ import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OrfenInstance extends BossInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field nest.
+	 */
 	public static final Location nest = new Location(43728, 17220, -4342);
+	/**
+	 * Field locs.
+	 */
 	public static final Location[] locs = new Location[]
 	{
 		new Location(55024, 17368, -5412),
@@ -35,11 +45,20 @@ public class OrfenInstance extends BossInstance
 		new Location(53248, 24576, -5272)
 	};
 	
+	/**
+	 * Constructor for OrfenInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public OrfenInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method setTeleported.
+	 * @param flag boolean
+	 */
 	@Override
 	public void setTeleported(boolean flag)
 	{
@@ -51,6 +70,9 @@ public class OrfenInstance extends BossInstance
 		teleToLocation(loc);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -59,6 +81,10 @@ public class OrfenInstance extends BossInstance
 		broadcastPacketToOthers(new PlaySound(PlaySound.Type.MUSIC, "BS01_A", 1, 0, getLoc()));
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -66,6 +92,20 @@ public class OrfenInstance extends BossInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method reduceCurrentHp.
+	 * @param damage double
+	 * @param reflectableDamage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 * @param canReflect boolean
+	 * @param transferDamage boolean
+	 * @param isDot boolean
+	 * @param sendMessage boolean
+	 */
 	@Override
 	public void reduceCurrentHp(double damage, double reflectableDamage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp, boolean canReflect, boolean transferDamage, boolean isDot, boolean sendMessage)
 	{

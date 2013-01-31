@@ -14,16 +14,34 @@ package lineage2.commons.geometry;
 
 import lineage2.commons.lang.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Polygon extends AbstractShape
 {
+	/**
+	 * Field points.
+	 */
 	protected Point2D[] points = Point2D.EMPTY_ARRAY;
 	
+	/**
+	 * Method add.
+	 * @param x int
+	 * @param y int
+	 * @return Polygon
+	 */
 	public Polygon add(int x, int y)
 	{
 		add(new Point2D(x, y));
 		return this;
 	}
 	
+	/**
+	 * Method add.
+	 * @param p Point2D
+	 * @return Polygon
+	 */
 	public Polygon add(Point2D p)
 	{
 		if (points.length == 0)
@@ -44,6 +62,11 @@ public class Polygon extends AbstractShape
 		return this;
 	}
 	
+	/**
+	 * Method setZmax.
+	 * @param z int
+	 * @return Polygon
+	 */
 	@Override
 	public Polygon setZmax(int z)
 	{
@@ -51,6 +74,11 @@ public class Polygon extends AbstractShape
 		return this;
 	}
 	
+	/**
+	 * Method setZmin.
+	 * @param z int
+	 * @return Polygon
+	 */
 	@Override
 	public Polygon setZmin(int z)
 	{
@@ -58,6 +86,12 @@ public class Polygon extends AbstractShape
 		return this;
 	}
 	
+	/**
+	 * Method isInside.
+	 * @param x int
+	 * @param y int
+	 * @return boolean * @see lineage2.commons.geometry.Shape#isInside(int, int)
+	 */
 	@Override
 	public boolean isInside(int x, int y)
 	{
@@ -130,6 +164,10 @@ public class Polygon extends AbstractShape
 		return ((hits & 1) != 0);
 	}
 	
+	/**
+	 * Method validate.
+	 * @return boolean
+	 */
 	public boolean validate()
 	{
 		if (points.length < 3)
@@ -157,20 +195,24 @@ public class Polygon extends AbstractShape
 		return true;
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		StringBuilder sb = new StringBuilder();
-		sb.append("[");
+		sb.append('[');
 		for (int i = 0; i < points.length; i++)
 		{
 			sb.append(points[i]);
 			if (i < (points.length - 1))
 			{
-				sb.append(",");
+				sb.append(',');
 			}
 		}
-		sb.append("]");
+		sb.append(']');
 		return sb.toString();
 	}
 }

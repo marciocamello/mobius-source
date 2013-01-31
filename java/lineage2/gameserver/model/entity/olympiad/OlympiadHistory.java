@@ -16,19 +16,66 @@ import lineage2.gameserver.data.StringHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.TimeUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OlympiadHistory
 {
+	/**
+	 * Field _objectId1.
+	 */
 	private final int _objectId1;
+	/**
+	 * Field _objectId2.
+	 */
 	private final int _objectId2;
+	/**
+	 * Field _classId1.
+	 */
 	private final int _classId1;
+	/**
+	 * Field _classId2.
+	 */
 	private final int _classId2;
+	/**
+	 * Field _name1.
+	 */
 	private final String _name1;
+	/**
+	 * Field _name2.
+	 */
 	private final String _name2;
+	/**
+	 * Field _gameStartTime.
+	 */
 	private final long _gameStartTime;
+	/**
+	 * Field _gameTime.
+	 */
 	private final int _gameTime;
+	/**
+	 * Field _gameStatus.
+	 */
 	private final int _gameStatus;
+	/**
+	 * Field _gameType.
+	 */
 	private final int _gameType;
 	
+	/**
+	 * Constructor for OlympiadHistory.
+	 * @param objectId1 int
+	 * @param objectId2 int
+	 * @param classId1 int
+	 * @param classId2 int
+	 * @param name1 String
+	 * @param name2 String
+	 * @param gameStartTime long
+	 * @param gameTime int
+	 * @param gameStatus int
+	 * @param gameType int
+	 */
 	public OlympiadHistory(int objectId1, int objectId2, int classId1, int classId2, String name1, String name2, long gameStartTime, int gameTime, int gameStatus, int gameType)
 	{
 		_objectId1 = objectId1;
@@ -43,26 +90,51 @@ public class OlympiadHistory
 		_gameType = gameType;
 	}
 	
+	/**
+	 * Method getGameTime.
+	 * @return int
+	 */
 	public int getGameTime()
 	{
 		return _gameTime;
 	}
 	
+	/**
+	 * Method getGameStatus.
+	 * @return int
+	 */
 	public int getGameStatus()
 	{
 		return _gameStatus;
 	}
 	
+	/**
+	 * Method getGameType.
+	 * @return int
+	 */
 	public int getGameType()
 	{
 		return _gameType;
 	}
 	
+	/**
+	 * Method getGameStartTime.
+	 * @return long
+	 */
 	public long getGameStartTime()
 	{
 		return _gameStartTime;
 	}
 	
+	/**
+	 * Method toString.
+	 * @param player Player
+	 * @param target int
+	 * @param wins int
+	 * @param loss int
+	 * @param tie int
+	 * @return String
+	 */
 	public String toString(Player player, int target, int wins, int loss, int tie)
 	{
 		int team = _objectId1 == target ? 1 : 2;
@@ -91,31 +163,55 @@ public class OlympiadHistory
 		return main;
 	}
 	
+	/**
+	 * Method getObjectId1.
+	 * @return int
+	 */
 	public int getObjectId1()
 	{
 		return _objectId1;
 	}
 	
+	/**
+	 * Method getObjectId2.
+	 * @return int
+	 */
 	public int getObjectId2()
 	{
 		return _objectId2;
 	}
 	
+	/**
+	 * Method getClassId1.
+	 * @return int
+	 */
 	public int getClassId1()
 	{
 		return _classId1;
 	}
 	
+	/**
+	 * Method getClassId2.
+	 * @return int
+	 */
 	public int getClassId2()
 	{
 		return _classId2;
 	}
 	
+	/**
+	 * Method getName1.
+	 * @return String
+	 */
 	public String getName1()
 	{
 		return _name1;
 	}
 	
+	/**
+	 * Method getName2.
+	 * @return String
+	 */
 	public String getName2()
 	{
 		return _name2;

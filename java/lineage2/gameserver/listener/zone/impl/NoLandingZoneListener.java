@@ -21,10 +21,23 @@ import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.PetDataTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NoLandingZoneListener implements OnZoneEnterLeaveListener
 {
+	/**
+	 * Field STATIC.
+	 */
 	public static final OnZoneEnterLeaveListener STATIC = new NoLandingZoneListener();
 	
+	/**
+	 * Method onZoneEnter.
+	 * @param zone Zone
+	 * @param actor Creature
+	 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+	 */
 	@Override
 	public void onZoneEnter(Zone zone, Creature actor)
 	{
@@ -47,6 +60,12 @@ public class NoLandingZoneListener implements OnZoneEnterLeaveListener
 		}
 	}
 	
+	/**
+	 * Method onZoneLeave.
+	 * @param zone Zone
+	 * @param cha Creature
+	 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+	 */
 	@Override
 	public void onZoneLeave(Zone zone, Creature cha)
 	{

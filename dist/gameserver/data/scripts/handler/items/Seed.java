@@ -27,10 +27,20 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.mapregion.DomainArea;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Seed extends ScriptItemHandler
 {
+	/**
+	 * Field _itemIds.
+	 */
 	private static int[] _itemIds = {};
 	
+	/**
+	 * Constructor for Seed.
+	 */
 	public Seed()
 	{
 		_itemIds = new int[Manor.getInstance().getAllSeeds().size()];
@@ -41,6 +51,13 @@ public class Seed extends ScriptItemHandler
 		}
 	}
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -102,6 +119,10 @@ public class Seed extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public final int[] getItemIds()
 	{

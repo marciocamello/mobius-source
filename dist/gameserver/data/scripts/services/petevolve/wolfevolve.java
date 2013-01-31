@@ -21,12 +21,28 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.PetDataTable.L2Pet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class wolfevolve extends Functions
 {
+	/**
+	 * Field WOLF.
+	 */
 	private static final int WOLF = PetDataTable.PET_WOLF_ID;
+	/**
+	 * Field WOLF_COLLAR.
+	 */
 	private static final int WOLF_COLLAR = L2Pet.WOLF.getControlItemId();
+	/**
+	 * Field GREAT_WOLF_NECKLACE.
+	 */
 	private static final int GREAT_WOLF_NECKLACE = L2Pet.GREAT_WOLF.getControlItemId();
 	
+	/**
+	 * Method evolve.
+	 */
 	public void evolve()
 	{
 		Player player = getSelf();

@@ -12,12 +12,31 @@
  */
 package lineage2.gameserver.model;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PremiumItem
 {
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _count.
+	 */
 	private long _count;
+	/**
+	 * Field _sender.
+	 */
 	private final String _sender;
 	
+	/**
+	 * Constructor for PremiumItem.
+	 * @param itemid int
+	 * @param count long
+	 * @param sender String
+	 */
 	public PremiumItem(int itemid, long count, String sender)
 	{
 		_itemId = itemid;
@@ -25,21 +44,37 @@ public class PremiumItem
 		_sender = sender;
 	}
 	
+	/**
+	 * Method updateCount.
+	 * @param newcount long
+	 */
 	public void updateCount(long newcount)
 	{
 		_count = newcount;
 	}
 	
+	/**
+	 * Method getItemId.
+	 * @return int
+	 */
 	public int getItemId()
 	{
 		return _itemId;
 	}
 	
+	/**
+	 * Method getCount.
+	 * @return long
+	 */
 	public long getCount()
 	{
 		return _count;
 	}
 	
+	/**
+	 * Method getSender.
+	 * @return String
+	 */
 	public String getSender()
 	{
 		return _sender;

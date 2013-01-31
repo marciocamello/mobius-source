@@ -12,12 +12,31 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AskJoinAlliance extends L2GameServerPacket
 {
+	/**
+	 * Field _requestorName.
+	 */
 	private final String _requestorName;
+	/**
+	 * Field _requestorAllyName.
+	 */
 	private final String _requestorAllyName;
+	/**
+	 * Field _requestorId.
+	 */
 	private final int _requestorId;
 	
+	/**
+	 * Constructor for AskJoinAlliance.
+	 * @param requestorId int
+	 * @param requestorName String
+	 * @param requestorAllyName String
+	 */
 	public AskJoinAlliance(int requestorId, String requestorName, String requestorAllyName)
 	{
 		_requestorName = requestorName;
@@ -25,6 +44,9 @@ public class AskJoinAlliance extends L2GameServerPacket
 		_requestorId = requestorId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

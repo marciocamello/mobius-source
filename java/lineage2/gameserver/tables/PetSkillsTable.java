@@ -29,27 +29,53 @@ import lineage2.gameserver.model.Summon;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetSkillsTable
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(PetSkillsTable.class);
+	/**
+	 * Field _skillTrees.
+	 */
 	private final TIntObjectHashMap<List<SkillLearn>> _skillTrees = new TIntObjectHashMap<>();
+	/**
+	 * Field _instance.
+	 */
 	private static PetSkillsTable _instance = new PetSkillsTable();
 	
+	/**
+	 * Method getInstance.
+	 * @return PetSkillsTable
+	 */
 	public static PetSkillsTable getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method reload.
+	 */
 	public void reload()
 	{
 		_instance = new PetSkillsTable();
 	}
 	
+	/**
+	 * Constructor for PetSkillsTable.
+	 */
 	private PetSkillsTable()
 	{
 		load();
 	}
 	
+	/**
+	 * Method load.
+	 */
 	private void load()
 	{
 		int npcId = 0;
@@ -92,6 +118,12 @@ public class PetSkillsTable
 		_log.info("PetSkillsTable: Loaded " + count + " skills.");
 	}
 	
+	/**
+	 * Method getAvailableLevel.
+	 * @param cha Summon
+	 * @param skillId int
+	 * @return int
+	 */
 	public int getAvailableLevel(Summon cha, int skillId)
 	{
 		List<SkillLearn> skills = _skillTrees.get(cha.getNpcId());

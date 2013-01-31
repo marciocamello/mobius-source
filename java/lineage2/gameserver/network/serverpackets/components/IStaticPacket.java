@@ -15,7 +15,16 @@ package lineage2.gameserver.network.serverpackets.components;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IStaticPacket
 {
+	/**
+	 * Method packet.
+	 * @param player Player
+	 * @return L2GameServerPacket
+	 */
 	L2GameServerPacket packet(Player player);
 }

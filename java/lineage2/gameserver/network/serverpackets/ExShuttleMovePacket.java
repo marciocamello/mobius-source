@@ -14,15 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.entity.boat.Shuttle;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShuttleMovePacket extends L2GameServerPacket
 {
+	/**
+	 * Field _shuttle.
+	 */
 	private final Shuttle _shuttle;
 	
+	/**
+	 * Constructor for ExShuttleMovePacket.
+	 * @param shuttle Shuttle
+	 */
 	public ExShuttleMovePacket(Shuttle shuttle)
 	{
 		_shuttle = shuttle;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

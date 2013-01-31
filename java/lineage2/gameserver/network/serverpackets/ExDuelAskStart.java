@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExDuelAskStart extends L2GameServerPacket
 {
+	/**
+	 * Field _requestor.
+	 */
 	String _requestor;
+	/**
+	 * Field _isPartyDuel.
+	 */
 	int _isPartyDuel;
 	
+	/**
+	 * Constructor for ExDuelAskStart.
+	 * @param requestor String
+	 * @param isPartyDuel int
+	 */
 	public ExDuelAskStart(String requestor, int isPartyDuel)
 	{
 		_requestor = requestor;
 		_isPartyDuel = isPartyDuel;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

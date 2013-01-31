@@ -35,23 +35,72 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ErosionHallAttack extends Reflection
 {
+	/**
+	 * Field AliveTumor. (value is 18708)
+	 */
 	private static final int AliveTumor = 18708;
+	/**
+	 * Field DeadTumor. (value is 32535)
+	 */
 	private static final int DeadTumor = 32535;
+	/**
+	 * Field Cohemenes. (value is 25634)
+	 */
 	private static final int Cohemenes = 25634;
+	/**
+	 * Field RegenerationCoffin. (value is 18710)
+	 */
 	private static final int RegenerationCoffin = 18710;
+	/**
+	 * Field viceraZones.
+	 */
 	private final Zone[] viceraZones = new Zone[12];
+	/**
+	 * Field zoneEventTriggers.
+	 */
 	private final int[] zoneEventTriggers = ArrayUtils.createAscendingArray(14240001, 14240012);
+	/**
+	 * Field startZoneListener.
+	 */
 	private final ZoneListener startZoneListener = new ZoneListener();
+	/**
+	 * Field deathListener.
+	 */
 	private final DeathListener deathListener = new DeathListener();
+	/**
+	 * Field conquestBegun.
+	 */
 	boolean conquestBegun = false;
+	/**
+	 * Field conquestEnded.
+	 */
 	boolean conquestEnded = false;
+	/**
+	 * Field tumorRespawnTime.
+	 */
 	long tumorRespawnTime;
+	/**
+	 * Field cohemenes.
+	 */
 	NpcInstance cohemenes = null;
+	/**
+	 * Field startTime.
+	 */
 	long startTime;
+	/**
+	 * Field timerTask.
+	 */
 	private ScheduledFuture<?> timerTask;
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{
@@ -76,6 +125,9 @@ public class ErosionHallAttack extends Reflection
 		tumorRespawnTime = 3 * 60 * 1000L;
 	}
 	
+	/**
+	 * Method conquestBegins.
+	 */
 	void conquestBegins()
 	{
 		for (Player p : getPlayers())
@@ -102,8 +154,17 @@ public class ErosionHallAttack extends Reflection
 		timerTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new TimerTask(), 298 * 1000L, 5 * 60 * 1000L);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -114,19 +175,37 @@ public class ErosionHallAttack extends Reflection
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DeathListener implements OnDeathListener
 	{
+		/**
+		 * Constructor for DeathListener.
+		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param self Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -152,6 +231,10 @@ public class ErosionHallAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -162,15 +245,28 @@ public class ErosionHallAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class TumorRevival extends RunnableImpl
 	{
+		/**
+		 * Field _deadTumor.
+		 */
 		NpcInstance _deadTumor;
 		
+		/**
+		 * Constructor for TumorRevival.
+		 * @param deadTumor NpcInstance
+		 */
 		public TumorRevival(NpcInstance deadTumor)
 		{
 			_deadTumor = deadTumor;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -186,15 +282,28 @@ public class ErosionHallAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class RegenerationCoffinSpawn extends RunnableImpl
 	{
+		/**
+		 * Field _deadTumor.
+		 */
 		NpcInstance _deadTumor;
 		
+		/**
+		 * Constructor for RegenerationCoffinSpawn.
+		 * @param deadTumor NpcInstance
+		 */
 		public RegenerationCoffinSpawn(NpcInstance deadTumor)
 		{
 			_deadTumor = deadTumor;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -209,13 +318,22 @@ public class ErosionHallAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class TimerTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for TimerTask.
+		 */
 		public TimerTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -234,6 +352,9 @@ public class ErosionHallAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * Method invokeDeathListener.
+	 */
 	void invokeDeathListener()
 	{
 		for (NpcInstance npc : getNpcs())
@@ -242,11 +363,18 @@ public class ErosionHallAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * Method notifyCoffinDeath.
+	 */
 	public void notifyCoffinDeath()
 	{
 		tumorRespawnTime += 10 * 1000L;
 	}
 	
+	/**
+	 * Method notifyTumorDeath.
+	 * @param tumor NpcInstance
+	 */
 	void notifyTumorDeath(NpcInstance tumor)
 	{
 		if (getAliveTumorCount() == 0)
@@ -263,6 +391,10 @@ public class ErosionHallAttack extends Reflection
 		manageRegenZone(getRoomId(tumor), true);
 	}
 	
+	/**
+	 * Method notifyTumorRevival.
+	 * @param tumor NpcInstance
+	 */
 	void notifyTumorRevival(NpcInstance tumor)
 	{
 		if ((getAliveTumorCount() > 0) && (cohemenes != null) && !cohemenes.isDead())
@@ -277,6 +409,9 @@ public class ErosionHallAttack extends Reflection
 		manageRegenZone(getRoomId(tumor), false);
 	}
 	
+	/**
+	 * Method cohemenesApperance.
+	 */
 	private void cohemenesApperance()
 	{
 		for (Player p : getPlayers())
@@ -289,6 +424,10 @@ public class ErosionHallAttack extends Reflection
 		Functions.npcShout(cohemenes, NpcString.CMON_CMON_SHOW_YOUR_FACE_YOU_LITTLE_RATS_LET_ME_SEE_WHAT_THE_DOOMED_WEAKLINGS_ARE_SCHEMING);
 	}
 	
+	/**
+	 * Method conquestConclusion.
+	 * @param win boolean
+	 */
 	void conquestConclusion(boolean win)
 	{
 		if (timerTask != null)
@@ -322,11 +461,20 @@ public class ErosionHallAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * Method getAliveTumorCount.
+	 * @return int
+	 */
 	private int getAliveTumorCount()
 	{
 		return getAllByNpcId(AliveTumor, true).size();
 	}
 	
+	/**
+	 * Method getRoomId.
+	 * @param npc NpcInstance
+	 * @return int
+	 */
 	private int getRoomId(NpcInstance npc)
 	{
 		int i = 0;
@@ -365,6 +513,11 @@ public class ErosionHallAttack extends Reflection
 		return i;
 	}
 	
+	/**
+	 * Method manageRegenZone.
+	 * @param roomId int
+	 * @param doActivate boolean
+	 */
 	private void manageRegenZone(int roomId, boolean doActivate)
 	{
 		switch (roomId)
@@ -396,6 +549,10 @@ public class ErosionHallAttack extends Reflection
 		}
 	}
 	
+	/**
+	 * Method getRandomSymbolLocation.
+	 * @return Location
+	 */
 	private Location getRandomSymbolLocation()
 	{
 		List<NpcInstance> npclocations = getAllByNpcId(18780, true);
@@ -406,6 +563,9 @@ public class ErosionHallAttack extends Reflection
 		return new Location(-178418, 211653, -12029);
 	}
 	
+	/**
+	 * Method onCollapse.
+	 */
 	@Override
 	protected void onCollapse()
 	{

@@ -21,8 +21,15 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PackageItem extends SimpleItemHandler
 {
+	/**
+	 * Field rewards.
+	 */
 	private static TIntObjectHashMap<double[][]> rewards = new TIntObjectHashMap<>();
 	static
 	{
@@ -608,6 +615,13 @@ public class PackageItem extends SimpleItemHandler
 		});
 	}
 	
+	/**
+	 * Method useItemImpl.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
@@ -645,6 +659,12 @@ public class PackageItem extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method canBeExtracted.
+	 * @param itemId int
+	 * @param player Player
+	 * @return boolean
+	 */
 	public static boolean canBeExtracted(int itemId, Player player)
 	{
 		if (player == null)
@@ -659,6 +679,10 @@ public class PackageItem extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{

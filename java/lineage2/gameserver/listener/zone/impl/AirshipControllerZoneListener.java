@@ -18,10 +18,23 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.boat.ClanAirShip;
 import lineage2.gameserver.model.instances.ClanAirShipControllerInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AirshipControllerZoneListener implements OnZoneEnterLeaveListener
 {
+	/**
+	 * Field _controllerInstance.
+	 */
 	private ClanAirShipControllerInstance _controllerInstance;
 	
+	/**
+	 * Method onZoneEnter.
+	 * @param zone Zone
+	 * @param actor Creature
+	 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+	 */
 	@Override
 	public void onZoneEnter(Zone zone, Creature actor)
 	{
@@ -35,6 +48,12 @@ public class AirshipControllerZoneListener implements OnZoneEnterLeaveListener
 		}
 	}
 	
+	/**
+	 * Method onZoneLeave.
+	 * @param zone Zone
+	 * @param actor Creature
+	 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+	 */
 	@Override
 	public void onZoneLeave(Zone zone, Creature actor)
 	{

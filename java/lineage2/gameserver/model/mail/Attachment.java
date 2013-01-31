@@ -14,42 +14,84 @@ package lineage2.gameserver.model.mail;
 
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Attachment
 {
+	/**
+	 * Field messageId.
+	 */
 	private int messageId;
+	/**
+	 * Field item.
+	 */
 	private ItemInstance item;
+	/**
+	 * Field mail.
+	 */
 	private Mail mail;
 	
+	/**
+	 * Method getMessageId.
+	 * @return int
+	 */
 	public int getMessageId()
 	{
 		return messageId;
 	}
 	
+	/**
+	 * Method setMessageId.
+	 * @param messageId int
+	 */
 	public void setMessageId(int messageId)
 	{
 		this.messageId = messageId;
 	}
 	
+	/**
+	 * Method getItem.
+	 * @return ItemInstance
+	 */
 	public ItemInstance getItem()
 	{
 		return item;
 	}
 	
+	/**
+	 * Method setItem.
+	 * @param item ItemInstance
+	 */
 	public void setItem(ItemInstance item)
 	{
 		this.item = item;
 	}
 	
+	/**
+	 * Method getMail.
+	 * @return Mail
+	 */
 	public Mail getMail()
 	{
 		return mail;
 	}
 	
+	/**
+	 * Method setMail.
+	 * @param mail Mail
+	 */
 	public void setMail(Mail mail)
 	{
 		this.mail = mail;
 	}
 	
+	/**
+	 * Method equals.
+	 * @param o Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object o)
 	{

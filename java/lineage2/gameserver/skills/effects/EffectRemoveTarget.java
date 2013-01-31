@@ -18,22 +18,41 @@ import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectRemoveTarget extends Effect
 {
+	/**
+	 * Field _doStopTarget.
+	 */
 	private final boolean _doStopTarget;
 	
+	/**
+	 * Constructor for EffectRemoveTarget.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectRemoveTarget(Env env, EffectTemplate template)
 	{
 		super(env, template);
 		_doStopTarget = template.getParam().getBool("doStopTarget", false);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
 		return Rnd.chance(_template.chance(100));
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -51,12 +70,20 @@ public final class EffectRemoveTarget extends Effect
 		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, getEffector());
 	}
 	
+	/**
+	 * Method isHidden.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isHidden()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

@@ -39,12 +39,31 @@ import lineage2.gameserver.utils.ItemFunctions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AwakingManager implements OnPlayerEnterListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(AwakingManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static AwakingManager _instance;
+	/**
+	 * Field ESSENCE_OF_THE_LESSER_GIANTS. (value is 30306)
+	 */
 	private static final int ESSENCE_OF_THE_LESSER_GIANTS = 30306;
+	/**
+	 * Field _CA.
+	 */
 	private static TIntIntHashMap _CA = new TIntIntHashMap(36);
+	/**
+	 * Field count30T.
+	 */
 	private static final int[] count30T =
 	{
 		0,
@@ -79,6 +98,9 @@ public class AwakingManager implements OnPlayerEnterListener
 		70,
 		83
 	};
+	/**
+	 * Field count30.
+	 */
 	private static final int[] count30 =
 	{
 		0,
@@ -113,6 +135,9 @@ public class AwakingManager implements OnPlayerEnterListener
 		21,
 		25
 	};
+	/**
+	 * Field count15T.
+	 */
 	private static final int[] count15T =
 	{
 		0,
@@ -132,6 +157,9 @@ public class AwakingManager implements OnPlayerEnterListener
 		24,
 		35
 	};
+	/**
+	 * Field count15.
+	 */
 	private static final int[] count15 =
 	{
 		0,
@@ -152,6 +180,9 @@ public class AwakingManager implements OnPlayerEnterListener
 		11
 	};
 	
+	/**
+	 * Method load.
+	 */
 	public void load()
 	{
 		if (Config.AWAKING_FREE)
@@ -198,6 +229,10 @@ public class AwakingManager implements OnPlayerEnterListener
 		_log.info("AwakingManager: Loaded 8 Awaking class for " + _CA.size() + " normal class.");
 	}
 	
+	/**
+	 * Method getInstance.
+	 * @return AwakingManager
+	 */
 	public static AwakingManager getInstance()
 	{
 		if (_instance == null)
@@ -209,6 +244,10 @@ public class AwakingManager implements OnPlayerEnterListener
 		return _instance;
 	}
 	
+	/**
+	 * Method SendReqToStartQuest.
+	 * @param player Player
+	 */
 	public void SendReqToStartQuest(Player player)
 	{
 		if (player.getClassId().level() < 3)
@@ -219,12 +258,21 @@ public class AwakingManager implements OnPlayerEnterListener
 		player.sendPacket(new ExCallToChangeClass(newClass, false));
 	}
 	
+	/**
+	 * Method childOf.
+	 * @param oldClass ClassId
+	 * @return int
+	 */
 	public int childOf(ClassId oldClass)
 	{
 		int newClass = _CA.get(oldClass.getId());
 		return newClass;
 	}
 	
+	/**
+	 * Method SendReqToAwaking.
+	 * @param player Player
+	 */
 	public void SendReqToAwaking(Player player)
 	{
 		if (player.getClassId().level() < 3)
@@ -236,6 +284,10 @@ public class AwakingManager implements OnPlayerEnterListener
 		return;
 	}
 	
+	/**
+	 * Method onStartQuestAccept.
+	 * @param player Player
+	 */
 	public void onStartQuestAccept(Player player)
 	{
 		player.teleToLocation(-114708, 243918, -7968);
@@ -243,6 +295,10 @@ public class AwakingManager implements OnPlayerEnterListener
 		return;
 	}
 	
+	/**
+	 * Method SetAwakingId.
+	 * @param player Player
+	 */
 	public void SetAwakingId(Player player)
 	{
 		int _oldId = player.getClassId().getId();
@@ -254,6 +310,10 @@ public class AwakingManager implements OnPlayerEnterListener
 		getRaceSkill(player);
 	}
 	
+	/**
+	 * Method giveItems.
+	 * @param player Player
+	 */
 	public void giveItems(Player player)
 	{
 		switch (player.getClassId().getId())
@@ -292,6 +352,11 @@ public class AwakingManager implements OnPlayerEnterListener
 		}
 	}
 	
+	/**
+	 * Method giveDeletedSkillList.
+	 * @param player Player
+	 * @return String
+	 */
 	public String giveDeletedSkillList(Player player)
 	{
 		int newClassId = _CA.get(player.getClassId().getId());
@@ -315,6 +380,12 @@ public class AwakingManager implements OnPlayerEnterListener
 		return tmp.toString();
 	}
 	
+	/**
+	 * Method giveGiantEssences.
+	 * @param player Player
+	 * @param onlyCalculateCount boolean
+	 * @return int
+	 */
 	public int giveGiantEssences(Player player, boolean onlyCalculateCount)
 	{
 		List<Integer> enchantedSkills = new FastList<>();
@@ -373,6 +444,11 @@ public class AwakingManager implements OnPlayerEnterListener
 		return count;
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -395,6 +471,11 @@ public class AwakingManager implements OnPlayerEnterListener
 		}
 	}
 	
+	/**
+	 * Method getRaceSkill.
+	 * @param player Player
+	 * @return Skill
+	 */
 	public Skill getRaceSkill(Player player)
 	{
 		int race = player.getRace().ordinal();

@@ -26,13 +26,26 @@ import lineage2.gameserver.model.instances.SummonInstance;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectDiscord extends Effect
 {
+	/**
+	 * Constructor for EffectDiscord.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectDiscord(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
@@ -83,6 +96,9 @@ public class EffectDiscord extends Effect
 		return super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -91,6 +107,9 @@ public class EffectDiscord extends Effect
 		onActionTime();
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -106,6 +125,10 @@ public class EffectDiscord extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

@@ -15,10 +15,20 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExUISetting;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestSaveKeyMapping extends L2GameClientPacket
 {
+	/**
+	 * Field _data.
+	 */
 	private byte[] _data;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -32,6 +42,9 @@ public class RequestSaveKeyMapping extends L2GameClientPacket
 		readB(_data);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

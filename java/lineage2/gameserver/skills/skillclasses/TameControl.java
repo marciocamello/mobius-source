@@ -22,16 +22,32 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.TamedBeastInstance;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TameControl extends Skill
 {
+	/**
+	 * Field _type.
+	 */
 	private final int _type;
 	
+	/**
+	 * Constructor for TameControl.
+	 * @param set StatsSet
+	 */
 	public TameControl(StatsSet set)
 	{
 		super(set);
 		_type = set.getInteger("type", 0);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

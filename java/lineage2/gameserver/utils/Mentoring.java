@@ -26,8 +26,15 @@ import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Mentoring
 {
+	/**
+	 * Field SIGN_OF_TUTOR.
+	 */
 	public static final Map<Integer, Integer> SIGN_OF_TUTOR = new HashMap<Integer, Integer>()
 	{
 		/**
@@ -79,6 +86,9 @@ public class Mentoring
 			put(86, 2015);
 		}
 	};
+	/**
+	 * Field effectsForMentee.
+	 */
 	public static int[] effectsForMentee =
 	{
 		9233,
@@ -89,14 +99,26 @@ public class Mentoring
 		9231,
 		9232
 	};
+	/**
+	 * Field skillForMenee.
+	 */
 	public static int skillForMenee = 9379;
+	/**
+	 * Field skillsForMentor.
+	 */
 	public static int[] skillsForMentor =
 	{
 		9376,
 		9377,
 		9378
 	};
+	/**
+	 * Field effectForMentor.
+	 */
 	public static int effectForMentor = 9256;
+	/**
+	 * Field effectsForDebuff.
+	 */
 	public static int[] effectsForDebuff =
 	{
 		9233,
@@ -112,6 +134,11 @@ public class Mentoring
 		9256
 	};
 	
+	/**
+	 * Method applyMentoringCond.
+	 * @param dependPlayer Player
+	 * @param login boolean
+	 */
 	public static void applyMentoringCond(Player dependPlayer, boolean login)
 	{
 		if (login)
@@ -178,6 +205,10 @@ public class Mentoring
 		}
 	}
 	
+	/**
+	 * Method addMentoringSkills.
+	 * @param mentoringPlayer Player
+	 */
 	public static void addMentoringSkills(Player mentoringPlayer)
 	{
 		if (mentoringPlayer.getMenteeList().getMentor() == 0)
@@ -197,6 +228,12 @@ public class Mentoring
 		}
 	}
 	
+	/**
+	 * Method setTimePenalty.
+	 * @param mentorId int
+	 * @param timeTo long
+	 * @param expirationTime long
+	 */
 	public static void setTimePenalty(int mentorId, long timeTo, long expirationTime)
 	{
 		Player mentor = World.getPlayer(mentorId);
@@ -210,6 +247,11 @@ public class Mentoring
 		}
 	}
 	
+	/**
+	 * Method sendMentorMail.
+	 * @param receiver Player
+	 * @param items Map<Integer,Long>
+	 */
 	public static void sendMentorMail(Player receiver, Map<Integer, Long> items)
 	{
 		if (receiver == null)

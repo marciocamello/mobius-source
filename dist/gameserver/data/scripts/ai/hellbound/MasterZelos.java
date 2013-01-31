@@ -19,21 +19,38 @@ import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MasterZelos extends Fighter
 {
+	/**
+	 * Field _zone.
+	 */
 	private static Zone _zone;
+	/**
+	 * Field doors.
+	 */
 	private static final int[] doors =
 	{
 		19260054,
 		19260053
 	};
 	
+	/**
+	 * Constructor for MasterZelos.
+	 * @param actor NpcInstance
+	 */
 	public MasterZelos(NpcInstance actor)
 	{
 		super(actor);
 		_zone = ReflectionUtils.getZone("[tully1]");
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -46,6 +63,10 @@ public class MasterZelos extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -58,11 +79,17 @@ public class MasterZelos extends Fighter
 		setZoneActive();
 	}
 	
+	/**
+	 * Method setZoneActive.
+	 */
 	private void setZoneActive()
 	{
 		_zone.setActive(true);
 	}
 	
+	/**
+	 * Method setZoneInactive.
+	 */
 	private void setZoneInactive()
 	{
 		_zone.setActive(false);

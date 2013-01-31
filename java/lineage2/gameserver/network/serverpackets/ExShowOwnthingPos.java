@@ -20,10 +20,20 @@ import lineage2.gameserver.model.entity.events.objects.TerritoryWardObject;
 import lineage2.gameserver.model.entity.residence.Dominion;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowOwnthingPos extends L2GameServerPacket
 {
+	/**
+	 * Field _wardList.
+	 */
 	private final List<WardInfo> _wardList = new ArrayList<>(9);
 	
+	/**
+	 * Constructor for ExShowOwnthingPos.
+	 */
 	public ExShowOwnthingPos()
 	{
 		for (Dominion dominion : ResidenceHolder.getInstance().getResidenceList(Dominion.class))
@@ -45,6 +55,9 @@ public class ExShowOwnthingPos extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -59,13 +72,35 @@ public class ExShowOwnthingPos extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class WardInfo
 	{
+		/**
+		 * Field dominionId.
+		 */
 		final int dominionId;
+		/**
+		 * Field _x.
+		 */
 		final int _x;
+		/**
+		 * Field _y.
+		 */
 		final int _y;
+		/**
+		 * Field _z.
+		 */
 		final int _z;
 		
+		/**
+		 * Constructor for WardInfo.
+		 * @param territoryId int
+		 * @param x int
+		 * @param y int
+		 * @param z int
+		 */
 		public WardInfo(int territoryId, int x, int y, int z)
 		{
 			dominionId = territoryId;

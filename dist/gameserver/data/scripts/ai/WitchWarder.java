@@ -15,17 +15,38 @@ package ai;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WitchWarder extends Fighter
 {
+	/**
+	 * Field _wait_timeout.
+	 */
 	private long _wait_timeout = 0;
+	/**
+	 * Field _wait.
+	 */
 	private boolean _wait = false;
+	/**
+	 * Field DESPAWN_TIME.
+	 */
 	private static final int DESPAWN_TIME = 3 * 60 * 1000;
 	
+	/**
+	 * Constructor for WitchWarder.
+	 * @param actor NpcInstance
+	 */
 	public WitchWarder(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -52,6 +73,10 @@ public class WitchWarder extends Fighter
 		return super.thinkActive();
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

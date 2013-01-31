@@ -19,10 +19,23 @@ import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DimensionMovingDevice extends DefaultAI
 {
+	/**
+	 * Field MOBS_WAVE_DELAY.
+	 */
 	private static final int MOBS_WAVE_DELAY = 120 * 1000;
+	/**
+	 * Field spawnTime.
+	 */
 	private long spawnTime = 0;
+	/**
+	 * Field MOBS.
+	 */
 	private static final int[] MOBS =
 	{
 		22538,
@@ -31,14 +44,25 @@ public class DimensionMovingDevice extends DefaultAI
 		22542,
 		22548
 	};
+	/**
+	 * Field _npcs.
+	 */
 	private final List<NpcInstance> _npcs = new ArrayList<>();
 	
+	/**
+	 * Constructor for DimensionMovingDevice.
+	 * @param actor NpcInstance
+	 */
 	public DimensionMovingDevice(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -47,6 +71,10 @@ public class DimensionMovingDevice extends DefaultAI
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -67,11 +95,21 @@ public class DimensionMovingDevice extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

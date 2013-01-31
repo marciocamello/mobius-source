@@ -20,11 +20,24 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RequestBidItemAuction extends L2GameClientPacket
 {
+	/**
+	 * Field _instanceId.
+	 */
 	private int _instanceId;
+	/**
+	 * Field _bid.
+	 */
 	private long _bid;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected final void readImpl()
 	{
@@ -32,6 +45,9 @@ public final class RequestBidItemAuction extends L2GameClientPacket
 		_bid = readQ();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected final void runImpl()
 	{

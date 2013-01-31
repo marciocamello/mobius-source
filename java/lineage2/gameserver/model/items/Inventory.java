@@ -30,36 +30,127 @@ import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Inventory extends ItemContainer
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Inventory.class);
+	/**
+	 * Field PAPERDOLL_UNDER. (value is 0)
+	 */
 	public static final int PAPERDOLL_UNDER = 0;
+	/**
+	 * Field PAPERDOLL_REAR. (value is 1)
+	 */
 	public static final int PAPERDOLL_REAR = 1;
+	/**
+	 * Field PAPERDOLL_LEAR. (value is 2)
+	 */
 	public static final int PAPERDOLL_LEAR = 2;
+	/**
+	 * Field PAPERDOLL_NECK. (value is 3)
+	 */
 	public static final int PAPERDOLL_NECK = 3;
+	/**
+	 * Field PAPERDOLL_RFINGER. (value is 4)
+	 */
 	public static final int PAPERDOLL_RFINGER = 4;
+	/**
+	 * Field PAPERDOLL_LFINGER. (value is 5)
+	 */
 	public static final int PAPERDOLL_LFINGER = 5;
+	/**
+	 * Field PAPERDOLL_HEAD. (value is 6)
+	 */
 	public static final int PAPERDOLL_HEAD = 6;
+	/**
+	 * Field PAPERDOLL_RHAND. (value is 7)
+	 */
 	public static final int PAPERDOLL_RHAND = 7;
+	/**
+	 * Field PAPERDOLL_LHAND. (value is 8)
+	 */
 	public static final int PAPERDOLL_LHAND = 8;
+	/**
+	 * Field PAPERDOLL_GLOVES. (value is 9)
+	 */
 	public static final int PAPERDOLL_GLOVES = 9;
+	/**
+	 * Field PAPERDOLL_CHEST. (value is 10)
+	 */
 	public static final int PAPERDOLL_CHEST = 10;
+	/**
+	 * Field PAPERDOLL_LEGS. (value is 11)
+	 */
 	public static final int PAPERDOLL_LEGS = 11;
+	/**
+	 * Field PAPERDOLL_FEET. (value is 12)
+	 */
 	public static final int PAPERDOLL_FEET = 12;
+	/**
+	 * Field PAPERDOLL_BACK. (value is 13)
+	 */
 	public static final int PAPERDOLL_BACK = 13;
+	/**
+	 * Field PAPERDOLL_LRHAND. (value is 14)
+	 */
 	public static final int PAPERDOLL_LRHAND = 14;
+	/**
+	 * Field PAPERDOLL_HAIR. (value is 15)
+	 */
 	public static final int PAPERDOLL_HAIR = 15;
+	/**
+	 * Field PAPERDOLL_DHAIR. (value is 16)
+	 */
 	public static final int PAPERDOLL_DHAIR = 16;
+	/**
+	 * Field PAPERDOLL_RBRACELET. (value is 17)
+	 */
 	public static final int PAPERDOLL_RBRACELET = 17;
+	/**
+	 * Field PAPERDOLL_LBRACELET. (value is 18)
+	 */
 	public static final int PAPERDOLL_LBRACELET = 18;
+	/**
+	 * Field PAPERDOLL_DECO1. (value is 19)
+	 */
 	public static final int PAPERDOLL_DECO1 = 19;
+	/**
+	 * Field PAPERDOLL_DECO2. (value is 20)
+	 */
 	public static final int PAPERDOLL_DECO2 = 20;
+	/**
+	 * Field PAPERDOLL_DECO3. (value is 21)
+	 */
 	public static final int PAPERDOLL_DECO3 = 21;
+	/**
+	 * Field PAPERDOLL_DECO4. (value is 22)
+	 */
 	public static final int PAPERDOLL_DECO4 = 22;
+	/**
+	 * Field PAPERDOLL_DECO5. (value is 23)
+	 */
 	public static final int PAPERDOLL_DECO5 = 23;
+	/**
+	 * Field PAPERDOLL_DECO6. (value is 24)
+	 */
 	public static final int PAPERDOLL_DECO6 = 24;
+	/**
+	 * Field PAPERDOLL_BELT. (value is 25)
+	 */
 	public static final int PAPERDOLL_BELT = 25;
+	/**
+	 * Field PAPERDOLL_MAX. (value is 26)
+	 */
 	public static final int PAPERDOLL_MAX = 26;
+	/**
+	 * Field PAPERDOLL_ORDER.
+	 */
 	public static final int[] PAPERDOLL_ORDER =
 	{
 		Inventory.PAPERDOLL_UNDER,
@@ -90,8 +181,16 @@ public abstract class Inventory extends ItemContainer
 		Inventory.PAPERDOLL_BELT
 	};
 	
+	/**
+	 * @author Mobius
+	 */
 	public class InventoryListenerList extends ListenerList<Playable>
 	{
+		/**
+		 * Method onEquip.
+		 * @param slot int
+		 * @param item ItemInstance
+		 */
 		public void onEquip(int slot, ItemInstance item)
 		{
 			for (Listener<Playable> listener : getListeners())
@@ -100,6 +199,11 @@ public abstract class Inventory extends ItemContainer
 			}
 		}
 		
+		/**
+		 * Method onUnequip.
+		 * @param slot int
+		 * @param item ItemInstance
+		 */
 		public void onUnequip(int slot, ItemInstance item)
 		{
 			for (Listener<Playable> listener : getListeners())
@@ -109,15 +213,31 @@ public abstract class Inventory extends ItemContainer
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class ItemOrderComparator implements Comparator<ItemInstance>
 	{
+		/**
+		 * Field instance.
+		 */
 		private static final Comparator<ItemInstance> instance = new ItemOrderComparator();
 		
+		/**
+		 * Method getInstance.
+		 * @return Comparator<ItemInstance>
+		 */
 		public static final Comparator<ItemInstance> getInstance()
 		{
 			return instance;
 		}
 		
+		/**
+		 * Method compare.
+		 * @param o1 ItemInstance
+		 * @param o2 ItemInstance
+		 * @return int
+		 */
 		@Override
 		public int compare(ItemInstance o1, ItemInstance o2)
 		{
@@ -129,34 +249,77 @@ public abstract class Inventory extends ItemContainer
 		}
 	}
 	
+	/**
+	 * Field _ownerId.
+	 */
 	protected final int _ownerId;
+	/**
+	 * Field _paperdoll.
+	 */
 	protected final ItemInstance[] _paperdoll = new ItemInstance[PAPERDOLL_MAX];
+	/**
+	 * Field _listeners.
+	 */
 	protected final InventoryListenerList _listeners = new InventoryListenerList();
+	/**
+	 * Field _totalWeight.
+	 */
 	protected int _totalWeight;
+	/**
+	 * Field _wearedMask.
+	 */
 	protected long _wearedMask;
 	
+	/**
+	 * Constructor for Inventory.
+	 * @param ownerId int
+	 */
 	protected Inventory(int ownerId)
 	{
 		_ownerId = ownerId;
 		addListener(StatsListener.getInstance());
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return Playable
+	 */
 	public abstract Playable getActor();
 	
+	/**
+	 * Method getBaseLocation.
+	 * @return ItemLocation
+	 */
 	protected abstract ItemLocation getBaseLocation();
 	
+	/**
+	 * Method getEquipLocation.
+	 * @return ItemLocation
+	 */
 	protected abstract ItemLocation getEquipLocation();
 	
+	/**
+	 * Method getOwnerId.
+	 * @return int
+	 */
 	public int getOwnerId()
 	{
 		return _ownerId;
 	}
 	
+	/**
+	 * Method onRestoreItem.
+	 * @param item ItemInstance
+	 */
 	protected void onRestoreItem(ItemInstance item)
 	{
 		_totalWeight += item.getTemplate().getWeight() * item.getCount();
 	}
 	
+	/**
+	 * Method onAddItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onAddItem(ItemInstance item)
 	{
@@ -176,6 +339,10 @@ public abstract class Inventory extends ItemContainer
 		refreshWeight();
 	}
 	
+	/**
+	 * Method onModifyItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onModifyItem(ItemInstance item)
 	{
@@ -185,6 +352,10 @@ public abstract class Inventory extends ItemContainer
 		refreshWeight();
 	}
 	
+	/**
+	 * Method onRemoveItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onRemoveItem(ItemInstance item)
 	{
@@ -197,6 +368,10 @@ public abstract class Inventory extends ItemContainer
 		refreshWeight();
 	}
 	
+	/**
+	 * Method onDestroyItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void onDestroyItem(ItemInstance item)
 	{
@@ -204,6 +379,11 @@ public abstract class Inventory extends ItemContainer
 		item.delete();
 	}
 	
+	/**
+	 * Method onEquip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 */
 	protected void onEquip(int slot, ItemInstance item)
 	{
 		_listeners.onEquip(slot, item);
@@ -215,6 +395,11 @@ public abstract class Inventory extends ItemContainer
 		_wearedMask |= item.getTemplate().getItemMask();
 	}
 	
+	/**
+	 * Method onUnequip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 */
 	protected void onUnequip(int slot, ItemInstance item)
 	{
 		item.setLocation(getBaseLocation());
@@ -228,6 +413,10 @@ public abstract class Inventory extends ItemContainer
 		_listeners.onUnequip(slot, item);
 	}
 	
+	/**
+	 * Method findSlot.
+	 * @return int
+	 */
 	private int findSlot()
 	{
 		ItemInstance item;
@@ -252,16 +441,30 @@ public abstract class Inventory extends ItemContainer
 		return slot;
 	}
 	
+	/**
+	 * Method getPaperdollItem.
+	 * @param slot int
+	 * @return ItemInstance
+	 */
 	public ItemInstance getPaperdollItem(int slot)
 	{
 		return _paperdoll[slot];
 	}
 	
+	/**
+	 * Method getPaperdollItems.
+	 * @return ItemInstance[]
+	 */
 	public ItemInstance[] getPaperdollItems()
 	{
 		return _paperdoll;
 	}
 	
+	/**
+	 * Method getPaperdollItemId.
+	 * @param slot int
+	 * @return int
+	 */
 	public int getPaperdollItemId(int slot)
 	{
 		ItemInstance item = getPaperdollItem(slot);
@@ -280,6 +483,11 @@ public abstract class Inventory extends ItemContainer
 		return 0;
 	}
 	
+	/**
+	 * Method getPaperdollObjectId.
+	 * @param slot int
+	 * @return int
+	 */
 	public int getPaperdollObjectId(int slot)
 	{
 		ItemInstance item = _paperdoll[slot];
@@ -298,16 +506,30 @@ public abstract class Inventory extends ItemContainer
 		return 0;
 	}
 	
+	/**
+	 * Method addListener.
+	 * @param listener OnEquipListener
+	 */
 	public void addListener(OnEquipListener listener)
 	{
 		_listeners.add(listener);
 	}
 	
+	/**
+	 * Method removeListener.
+	 * @param listener OnEquipListener
+	 */
 	public void removeListener(OnEquipListener listener)
 	{
 		_listeners.remove(listener);
 	}
 	
+	/**
+	 * Method setPaperdollItem.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @return ItemInstance
+	 */
 	public ItemInstance setPaperdollItem(int slot, ItemInstance item)
 	{
 		ItemInstance old;
@@ -336,11 +558,19 @@ public abstract class Inventory extends ItemContainer
 		return old;
 	}
 	
+	/**
+	 * Method getWearedMask.
+	 * @return long
+	 */
 	public long getWearedMask()
 	{
 		return _wearedMask;
 	}
 	
+	/**
+	 * Method unEquipItem.
+	 * @param item ItemInstance
+	 */
 	public void unEquipItem(ItemInstance item)
 	{
 		if (item.isEquipped())
@@ -349,11 +579,20 @@ public abstract class Inventory extends ItemContainer
 		}
 	}
 	
+	/**
+	 * Method unEquipItemInBodySlot.
+	 * @param bodySlot int
+	 */
 	public void unEquipItemInBodySlot(int bodySlot)
 	{
 		unEquipItemInBodySlot(bodySlot, null);
 	}
 	
+	/**
+	 * Method unEquipItemInBodySlot.
+	 * @param bodySlot int
+	 * @param item ItemInstance
+	 */
 	private void unEquipItemInBodySlot(int bodySlot, ItemInstance item)
 	{
 		int pdollSlot = -1;
@@ -500,6 +739,10 @@ public abstract class Inventory extends ItemContainer
 		}
 	}
 	
+	/**
+	 * Method equipItem.
+	 * @param item ItemInstance
+	 */
 	public void equipItem(ItemInstance item)
 	{
 		int bodySlot = item.getBodyPart();
@@ -747,12 +990,27 @@ public abstract class Inventory extends ItemContainer
 		}
 	}
 	
+	/**
+	 * Method sendAddItem.
+	 * @param item ItemInstance
+	 */
 	protected abstract void sendAddItem(ItemInstance item);
 	
+	/**
+	 * Method sendModifyItem.
+	 * @param item ItemInstance
+	 */
 	protected abstract void sendModifyItem(ItemInstance item);
 	
+	/**
+	 * Method sendRemoveItem.
+	 * @param item ItemInstance
+	 */
 	protected abstract void sendRemoveItem(ItemInstance item);
 	
+	/**
+	 * Method refreshWeight.
+	 */
 	protected void refreshWeight()
 	{
 		int weight = 0;
@@ -778,13 +1036,25 @@ public abstract class Inventory extends ItemContainer
 		onRefreshWeight();
 	}
 	
+	/**
+	 * Method onRefreshWeight.
+	 */
 	protected abstract void onRefreshWeight();
 	
+	/**
+	 * Method getTotalWeight.
+	 * @return int
+	 */
 	public int getTotalWeight()
 	{
 		return _totalWeight;
 	}
 	
+	/**
+	 * Method validateCapacity.
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	public boolean validateCapacity(ItemInstance item)
 	{
 		long slots = 0;
@@ -795,12 +1065,24 @@ public abstract class Inventory extends ItemContainer
 		return validateCapacity(slots);
 	}
 	
+	/**
+	 * Method validateCapacity.
+	 * @param itemId int
+	 * @param count long
+	 * @return boolean
+	 */
 	public boolean validateCapacity(int itemId, long count)
 	{
 		ItemTemplate item = ItemHolder.getInstance().getTemplate(itemId);
 		return validateCapacity(item, count);
 	}
 	
+	/**
+	 * Method validateCapacity.
+	 * @param item ItemTemplate
+	 * @param count long
+	 * @return boolean
+	 */
 	public boolean validateCapacity(ItemTemplate item, long count)
 	{
 		long slots = 0;
@@ -811,6 +1093,11 @@ public abstract class Inventory extends ItemContainer
 		return validateCapacity(slots);
 	}
 	
+	/**
+	 * Method validateCapacity.
+	 * @param slots long
+	 * @return boolean
+	 */
 	public boolean validateCapacity(long slots)
 	{
 		if (slots == 0)
@@ -828,24 +1115,46 @@ public abstract class Inventory extends ItemContainer
 		return (getSize() + slots) <= getActor().getInventoryLimit();
 	}
 	
+	/**
+	 * Method validateWeight.
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	public boolean validateWeight(ItemInstance item)
 	{
 		long weight = item.getTemplate().getWeight() * item.getCount();
 		return validateWeight(weight);
 	}
 	
+	/**
+	 * Method validateWeight.
+	 * @param itemId int
+	 * @param count long
+	 * @return boolean
+	 */
 	public boolean validateWeight(int itemId, long count)
 	{
 		ItemTemplate item = ItemHolder.getInstance().getTemplate(itemId);
 		return validateWeight(item, count);
 	}
 	
+	/**
+	 * Method validateWeight.
+	 * @param item ItemTemplate
+	 * @param count long
+	 * @return boolean
+	 */
 	public boolean validateWeight(ItemTemplate item, long count)
 	{
 		long weight = item.getWeight() * count;
 		return validateWeight(weight);
 	}
 	
+	/**
+	 * Method validateWeight.
+	 * @param weight long
+	 * @return boolean
+	 */
 	public boolean validateWeight(long weight)
 	{
 		if (weight == 0L)
@@ -863,10 +1172,21 @@ public abstract class Inventory extends ItemContainer
 		return (getTotalWeight() + weight) <= getActor().getMaxLoad();
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	public abstract void restore();
 	
+	/**
+	 * Method store.
+	 */
 	public abstract void store();
 	
+	/**
+	 * Method getPaperdollIndex.
+	 * @param slot int
+	 * @return int
+	 */
 	public static int getPaperdollIndex(int slot)
 	{
 		switch (slot)
@@ -920,17 +1240,29 @@ public abstract class Inventory extends ItemContainer
 		return -1;
 	}
 	
+	/**
+	 * Method getSize.
+	 * @return int
+	 */
 	@Override
 	public int getSize()
 	{
 		return super.getSize() - getQuestSize();
 	}
 	
+	/**
+	 * Method getAllSize.
+	 * @return int
+	 */
 	public int getAllSize()
 	{
 		return super.getSize();
 	}
 	
+	/**
+	 * Method getQuestSize.
+	 * @return int
+	 */
 	public int getQuestSize()
 	{
 		int size = 0;

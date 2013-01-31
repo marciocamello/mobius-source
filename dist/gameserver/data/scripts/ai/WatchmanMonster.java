@@ -21,27 +21,55 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WatchmanMonster extends Fighter
 {
+	/**
+	 * Field _lastSearch.
+	 */
 	private long _lastSearch = 0;
+	/**
+	 * Field isSearching.
+	 */
 	private boolean isSearching = false;
+	/**
+	 * Field _attackerRef.
+	 */
 	private HardReference<? extends Creature> _attackerRef = HardReferences.emptyRef();
+	/**
+	 * Field flood.
+	 */
 	static final String[] flood =
 	{
 		"I'll be back",
 		"You are stronger than expected"
 	};
+	/**
+	 * Field flood2.
+	 */
 	static final String[] flood2 =
 	{
 		"Help me!",
 		"Alarm! We are under attack!"
 	};
 	
+	/**
+	 * Constructor for WatchmanMonster.
+	 * @param actor NpcInstance
+	 */
 	public WatchmanMonster(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(final Creature attacker, int damage)
 	{
@@ -59,6 +87,10 @@ public class WatchmanMonster extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method findHelp.
+	 * @return boolean
+	 */
 	private boolean findHelp()
 	{
 		isSearching = false;
@@ -82,6 +114,10 @@ public class WatchmanMonster extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -91,6 +127,9 @@ public class WatchmanMonster extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
@@ -112,6 +151,11 @@ public class WatchmanMonster extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

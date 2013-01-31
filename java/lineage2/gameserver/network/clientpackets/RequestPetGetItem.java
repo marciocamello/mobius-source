@@ -19,16 +19,29 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPetGetItem extends L2GameClientPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_objectId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

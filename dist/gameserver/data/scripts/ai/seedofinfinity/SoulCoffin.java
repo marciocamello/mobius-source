@@ -22,16 +22,31 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SoulCoffin extends DefaultAI
 {
+	/**
+	 * Field checkTimer.
+	 */
 	private long checkTimer = 0;
 	
+	/**
+	 * Constructor for SoulCoffin.
+	 * @param actor NpcInstance
+	 */
 	public SoulCoffin(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -62,6 +77,10 @@ public class SoulCoffin extends DefaultAI
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -74,11 +93,21 @@ public class SoulCoffin extends DefaultAI
 		return super.thinkActive();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

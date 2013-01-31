@@ -14,11 +14,25 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.pledge.SubUnit;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket
 {
+	/**
+	 * Field type.
+	 */
 	private final int type;
+	/**
+	 * Field leader_name. Field _name.
+	 */
 	private final String _name, leader_name;
 	
+	/**
+	 * Constructor for PledgeReceiveSubPledgeCreated.
+	 * @param subPledge SubUnit
+	 */
 	public PledgeReceiveSubPledgeCreated(SubUnit subPledge)
 	{
 		type = subPledge.getType();
@@ -26,6 +40,9 @@ public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket
 		leader_name = subPledge.getLeaderName();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

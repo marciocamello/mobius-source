@@ -16,15 +16,29 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MatchTrief extends MatchFighter
 {
+	/**
+	 * Field HOLD.
+	 */
 	public static final Skill HOLD = SkillTable.getInstance().getInfo(4047, 6);
 	
+	/**
+	 * Constructor for MatchTrief.
+	 * @param actor NpcInstance
+	 */
 	public MatchTrief(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method hold.
+	 */
 	public void hold()
 	{
 		NpcInstance actor = getActor();

@@ -15,13 +15,36 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExFishingStart extends L2GameServerPacket
 {
+	/**
+	 * Field _charObjId.
+	 */
 	private final int _charObjId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
+	/**
+	 * Field _fishType.
+	 */
 	private final int _fishType;
+	/**
+	 * Field _isNightLure.
+	 */
 	private final boolean _isNightLure;
 	
+	/**
+	 * Constructor for ExFishingStart.
+	 * @param character Creature
+	 * @param fishType int
+	 * @param loc Location
+	 * @param isNightLure boolean
+	 */
 	public ExFishingStart(Creature character, int fishType, Location loc, boolean isNightLure)
 	{
 		_charObjId = character.getObjectId();
@@ -30,6 +53,9 @@ public class ExFishingStart extends L2GameServerPacket
 		_isNightLure = isNightLure;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -14,11 +14,27 @@ package lineage2.gameserver.model.entity.events;
 
 import lineage2.gameserver.taskmanager.actionrunner.ActionWrapper;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EventWrapper extends ActionWrapper
 {
+	/**
+	 * Field _event.
+	 */
 	private final GlobalEvent _event;
+	/**
+	 * Field _time.
+	 */
 	private final int _time;
 	
+	/**
+	 * Constructor for EventWrapper.
+	 * @param name String
+	 * @param event GlobalEvent
+	 * @param time int
+	 */
 	public EventWrapper(String name, GlobalEvent event, int time)
 	{
 		super(name);
@@ -26,6 +42,9 @@ public class EventWrapper extends ActionWrapper
 		_time = time;
 	}
 	
+	/**
+	 * Method runImpl0.
+	 */
 	@Override
 	public void runImpl0()
 	{

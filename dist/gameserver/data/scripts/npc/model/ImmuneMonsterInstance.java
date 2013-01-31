@@ -15,6 +15,10 @@ package npc.model;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ImmuneMonsterInstance extends MonsterInstance
 {
 	/**
@@ -22,23 +26,40 @@ public class ImmuneMonsterInstance extends MonsterInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for ImmuneMonsterInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ImmuneMonsterInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method isFearImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isFearImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isParalyzeImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParalyzeImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isLethalImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isLethalImmune()
 	{

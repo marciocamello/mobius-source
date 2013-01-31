@@ -17,37 +17,67 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BelethClone extends Mystic
 {
+	/**
+	 * Constructor for BelethClone.
+	 * @param actor NpcInstance
+	 */
 	public BelethClone(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method randomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomAnimation()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method canSeeInSilentMove.
+	 * @param target Playable
+	 * @return boolean
+	 */
 	@Override
 	public boolean canSeeInSilentMove(Playable target)
 	{
 		return true;
 	}
 	
+	/**
+	 * Method canSeeInHide.
+	 * @param target Playable
+	 * @return boolean
+	 */
 	@Override
 	public boolean canSeeInHide(Playable target)
 	{
 		return true;
 	}
 	
+	/**
+	 * Method addTaskAttack.
+	 * @param target Creature
+	 */
 	@Override
 	public void addTaskAttack(Creature target)
 	{

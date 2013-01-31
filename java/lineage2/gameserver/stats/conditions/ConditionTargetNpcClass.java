@@ -16,11 +16,22 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("unchecked")
 public class ConditionTargetNpcClass extends Condition
 {
+	/**
+	 * Field _npcClass.
+	 */
 	private final Class<NpcInstance> _npcClass;
 	
+	/**
+	 * Constructor for ConditionTargetNpcClass.
+	 * @param name String
+	 */
 	public ConditionTargetNpcClass(String name)
 	{
 		Class<NpcInstance> classType = null;
@@ -39,6 +50,11 @@ public class ConditionTargetNpcClass extends Condition
 		_npcClass = classType;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

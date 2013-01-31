@@ -20,15 +20,33 @@ import lineage2.gameserver.model.Skill.SkillType;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class AccessoryListener implements OnEquipListener
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final AccessoryListener _instance = new AccessoryListener();
 	
+	/**
+	 * Method getInstance.
+	 * @return AccessoryListener
+	 */
 	public static AccessoryListener getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method onUnequip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 * @see lineage2.gameserver.listener.inventory.OnEquipListener#onUnequip(int, ItemInstance, Playable)
+	 */
 	@Override
 	public void onUnequip(int slot, ItemInstance item, Playable actor)
 	{
@@ -63,6 +81,13 @@ public final class AccessoryListener implements OnEquipListener
 		}
 	}
 	
+	/**
+	 * Method onEquip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 * @see lineage2.gameserver.listener.inventory.OnEquipListener#onEquip(int, ItemInstance, Playable)
+	 */
 	@Override
 	public void onEquip(int slot, ItemInstance item, Playable actor)
 	{

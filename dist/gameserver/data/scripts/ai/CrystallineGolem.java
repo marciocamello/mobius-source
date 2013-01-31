@@ -24,47 +24,92 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CrystallineGolem extends Fighter
 {
+	/**
+	 * Field CORAL_GARDEN_SECRETGATE. (value is 24220026)
+	 */
 	private static final int CORAL_GARDEN_SECRETGATE = 24220026;
+	/**
+	 * Field Crystal_Fragment. (value is 9693)
+	 */
 	private static final int Crystal_Fragment = 9693;
+	/**
+	 * Field itemToConsume.
+	 */
 	private ItemInstance itemToConsume = null;
+	/**
+	 * Field lastPoint.
+	 */
 	private Location lastPoint = null;
+	/**
+	 * Field says.
+	 */
 	private static String[] says = new String[]
 	{
-		"Ням, ням!!!",
+		"�?�?м, н�?м!!!",
 		"Дай!!!",
 		"Хочу!!!",
-		"Моe!!!",
+		"�?оe!!!",
 		"Еще!!!",
 		"Еда!!!"
 	};
+	/**
+	 * Field says2.
+	 */
 	private static String[] says2 = new String[]
 	{
-		"Отдай!!!",
+		"�?тдай!!!",
 		"Верни!!!",
-		"Жадные вы, уйду я от вас...",
-		"Куда оно подевалось?",
-		"Наверное показалось..."
+		"Жадные вы, уйду �? от ва�?...",
+		"�?уда оно подевало�?�??",
+		"�?аверное показало�?�?..."
 	};
+	/**
+	 * Field instanceInfo
+	 */
 	private static TIntObjectHashMap<Info> instanceInfo = new TIntObjectHashMap<>();
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class Info
 	{
+		/**
+		 * Constructor for Info.
+		 */
 		public Info()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Field stage1.
+		 */
 		boolean stage1 = false;
+		/**
+		 * Field stage2.
+		 */
 		boolean stage2 = false;
 	}
 	
+	/**
+	 * Constructor for CrystallineGolem.
+	 * @param actor NpcInstance
+	 */
 	public CrystallineGolem(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -155,16 +200,30 @@ public class CrystallineGolem extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

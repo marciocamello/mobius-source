@@ -32,11 +32,27 @@ import lineage2.gameserver.scripts.ScriptFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Christmas extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
+	/**
+	 * Field EVENT_MANAGER_ID.
+	 */
 	private static int EVENT_MANAGER_ID = 31863;
+	/**
+	 * Field CTREE_ID.
+	 */
 	private static int CTREE_ID = 13006;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Christmas.class);
+	/**
+	 * Field _dropdata.
+	 */
 	private static int[][] _dropdata =
 	{
 		{
@@ -56,9 +72,19 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 			5
 		},
 	};
+	/**
+	 * Field _spawns.
+	 */
 	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	/**
+	 * Field _active.
+	 */
 	private static boolean _active = false;
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -75,11 +101,18 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return IsActive("Christmas");
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -101,6 +134,9 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -122,6 +158,9 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	private void spawnEventManagers()
 	{
 		final int EVENT_MANAGERS[][] =
@@ -278,23 +317,40 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 		SpawnNPCs(CTREE_ID, CTREES, _spawns);
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature cha, Creature killer)
 	{
@@ -316,6 +372,10 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
+	/**
+	 * Method exchange.
+	 * @param var String[]
+	 */
 	public void exchange(String[] var)
 	{
 		Player player = getSelf();
@@ -382,6 +442,11 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{

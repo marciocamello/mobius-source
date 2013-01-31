@@ -26,6 +26,10 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WeddingManagerInstance extends NpcInstance
 {
 	/**
@@ -33,11 +37,22 @@ public class WeddingManagerInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for WeddingManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public WeddingManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -50,6 +65,11 @@ public class WeddingManagerInstance extends NpcInstance
 		player.sendPacket(html);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -164,6 +184,11 @@ public class WeddingManagerInstance extends NpcInstance
 		sendHtmlMessage(player, filename, replace);
 	}
 	
+	/**
+	 * Method isWearingFormalWear.
+	 * @param player Player
+	 * @return boolean
+	 */
 	private static boolean isWearingFormalWear(Player player)
 	{
 		if ((player != null) && (player.getInventory() != null) && (player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_CHEST) == ItemTemplate.ITEM_ID_FORMAL_WEAR))
@@ -173,6 +198,12 @@ public class WeddingManagerInstance extends NpcInstance
 		return false;
 	}
 	
+	/**
+	 * Method sendHtmlMessage.
+	 * @param player Player
+	 * @param filename String
+	 * @param replace String
+	 */
 	private void sendHtmlMessage(Player player, String filename, String replace)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);

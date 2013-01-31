@@ -12,11 +12,21 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestChangeBookMarkSlot extends L2GameClientPacket
 {
+	/**
+	 * Field slot_new. Field slot_old.
+	 */
 	@SuppressWarnings("unused")
 	private int slot_old, slot_new;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -24,6 +34,9 @@ public class RequestChangeBookMarkSlot extends L2GameClientPacket
 		slot_new = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

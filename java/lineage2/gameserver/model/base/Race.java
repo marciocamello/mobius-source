@@ -12,12 +12,34 @@
  */
 package lineage2.gameserver.model.base;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum Race
 {
+	/**
+	 * Field human.
+	 */
 	human,
+	/**
+	 * Field elf.
+	 */
 	elf,
+	/**
+	 * Field darkelf.
+	 */
 	darkelf,
+	/**
+	 * Field orc.
+	 */
 	orc,
+	/**
+	 * Field dwarf.
+	 */
 	dwarf,
+	/**
+	 * Field kamael.
+	 */
 	kamael
 }

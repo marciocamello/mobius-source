@@ -17,11 +17,28 @@ import java.util.ArrayList;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExMenteeSearch extends L2GameServerPacket
 {
+	/**
+	 * Field mentees.
+	 */
 	ArrayList<Player> mentees;
+	/**
+	 * Field playersInPage. Field page.
+	 */
 	int page, playersInPage;
 	
+	/**
+	 * Constructor for ExMenteeSearch.
+	 * @param activeChar Player
+	 * @param _page int
+	 * @param minLevel int
+	 * @param maxLevel int
+	 */
 	public ExMenteeSearch(Player activeChar, int _page, int minLevel, int maxLevel)
 	{
 		mentees = new ArrayList<>();
@@ -36,6 +53,9 @@ public class ExMenteeSearch extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -63,6 +83,10 @@ public class ExMenteeSearch extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method getType.
+	 * @return String
+	 */
 	@Override
 	public String getType()
 	{

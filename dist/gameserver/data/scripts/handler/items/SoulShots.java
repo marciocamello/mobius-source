@@ -26,8 +26,15 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SoulShots extends ScriptItemHandler
 {
+	/**
+	 * Field _itemIds.
+	 */
 	private static final int[] _itemIds =
 	{
 		5789,
@@ -48,6 +55,9 @@ public class SoulShots extends ScriptItemHandler
 		17754,
 		33780
 	};
+	/**
+	 * Field _skillIds.
+	 */
 	private static final int[] _skillIds =
 	{
 		2039,
@@ -59,6 +69,13 @@ public class SoulShots extends ScriptItemHandler
 		9193
 	};
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -128,6 +145,10 @@ public class SoulShots extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public final int[] getItemIds()
 	{

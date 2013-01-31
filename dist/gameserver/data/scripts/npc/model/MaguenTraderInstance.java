@@ -19,6 +19,10 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class MaguenTraderInstance extends NpcInstance
 {
 	/**
@@ -26,11 +30,21 @@ public final class MaguenTraderInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for MaguenTraderInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MaguenTraderInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

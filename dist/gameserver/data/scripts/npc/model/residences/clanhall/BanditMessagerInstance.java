@@ -37,6 +37,10 @@ import org.apache.commons.lang3.StringUtils;
 
 import quests._504_CompetitionForTheBanditStronghold;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BanditMessagerInstance extends NpcInstance
 {
 	/**
@@ -44,11 +48,21 @@ public class BanditMessagerInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for BanditMessagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public BanditMessagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(final Player player, final String command)
 	{
@@ -214,6 +228,12 @@ public class BanditMessagerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method checkCond.
+	 * @param player Player
+	 * @param regMenu boolean
+	 * @return boolean
+	 */
 	private boolean checkCond(Player player, boolean regMenu)
 	{
 		Clan clan = player.getClan();
@@ -258,6 +278,10 @@ public class BanditMessagerInstance extends NpcInstance
 		return true;
 	}
 	
+	/**
+	 * Method register.
+	 * @param player Player
+	 */
 	private void register(Player player)
 	{
 		Clan clan = player.getClan();
@@ -272,6 +296,11 @@ public class BanditMessagerInstance extends NpcInstance
 		showFlagInfo(player, siegeClans.indexOf(siegeClan));
 	}
 	
+	/**
+	 * Method showFlagInfo.
+	 * @param player Player
+	 * @param index int
+	 */
 	private void showFlagInfo(Player player, int index)
 	{
 		String file = null;
@@ -298,6 +327,12 @@ public class BanditMessagerInstance extends NpcInstance
 		showChatWindow(player, file);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{

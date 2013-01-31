@@ -21,9 +21,19 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Rogin_19193 extends Dwarvs
 {
+	/**
+	 * Field BRONK_ID. (value is 19192)
+	 */
 	private static final int BRONK_ID = 19192;
+	/**
+	 * Field MOVE_LOC.
+	 */
 	private static final int[][] MOVE_LOC =
 	{
 		{
@@ -32,14 +42,24 @@ public class Rogin_19193 extends Dwarvs
 			-1600
 		}
 	};
+	/**
+	 * Field currentPoint.
+	 */
 	private int currentPoint;
 	
+	/**
+	 * Constructor for Rogin_19193.
+	 * @param actor NpcInstance
+	 */
 	public Rogin_19193(NpcInstance actor)
 	{
 		super(actor);
 		currentPoint = 0;
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -49,6 +69,9 @@ public class Rogin_19193 extends Dwarvs
 		doTask();
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
@@ -60,6 +83,12 @@ public class Rogin_19193 extends Dwarvs
 		}
 	}
 	
+	/**
+	 * Method onEvtScriptEvent.
+	 * @param event String
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
@@ -77,6 +106,12 @@ public class Rogin_19193 extends Dwarvs
 		}
 	}
 	
+	/**
+	 * Method onEvtTimer.
+	 * @param timerId int
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{

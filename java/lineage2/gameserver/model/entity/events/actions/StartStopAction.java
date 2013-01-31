@@ -15,18 +15,41 @@ package lineage2.gameserver.model.entity.events.actions;
 import lineage2.gameserver.model.entity.events.EventAction;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StartStopAction implements EventAction
 {
+	/**
+	 * Field EVENT. (value is ""event"")
+	 */
 	public static final String EVENT = "event";
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _start.
+	 */
 	private final boolean _start;
 	
+	/**
+	 * Constructor for StartStopAction.
+	 * @param name String
+	 * @param start boolean
+	 */
 	public StartStopAction(String name, boolean start)
 	{
 		_name = name;
 		_start = start;
 	}
 	
+	/**
+	 * Method call.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.EventAction#call(GlobalEvent)
+	 */
 	@Override
 	public void call(GlobalEvent event)
 	{

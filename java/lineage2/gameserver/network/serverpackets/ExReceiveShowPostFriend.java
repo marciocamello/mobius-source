@@ -16,15 +16,29 @@ import lineage2.gameserver.model.Player;
 
 import org.napile.primitive.maps.IntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExReceiveShowPostFriend extends L2GameServerPacket
 {
+	/**
+	 * Field _list.
+	 */
 	private final IntObjectMap<String> _list;
 	
+	/**
+	 * Constructor for ExReceiveShowPostFriend.
+	 * @param player Player
+	 */
 	public ExReceiveShowPostFriend(Player player)
 	{
 		_list = player.getPostFriends();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	public void writeImpl()
 	{

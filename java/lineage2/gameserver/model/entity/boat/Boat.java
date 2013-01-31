@@ -36,24 +36,54 @@ import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Boat extends Creature
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _moveSpeed.
+	 */
 	private int _moveSpeed;
+	/**
+	 * Field _rotationSpeed.
+	 */
 	private int _rotationSpeed;
+	/**
+	 * Field _fromHome.
+	 */
 	protected int _fromHome;
+	/**
+	 * Field _runState.
+	 */
 	protected int _runState;
+	/**
+	 * Field _ways.
+	 */
 	private final BoatWayEvent[] _ways = new BoatWayEvent[2];
+	/**
+	 * Field _players.
+	 */
 	protected final Set<Player> _players = new CopyOnWriteArraySet<>();
 	
+	/**
+	 * Constructor for Boat.
+	 * @param objectId int
+	 * @param template CharTemplate
+	 */
 	public Boat(int objectId, CharTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	public void onSpawn()
 	{
@@ -61,6 +91,13 @@ public abstract class Boat extends Creature
 		getCurrentWay().reCalcNextTime(false);
 	}
 	
+	/**
+	 * Method setXYZ.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param MoveTask boolean
+	 */
 	@Override
 	public void setXYZ(int x, int y, int z, boolean MoveTask)
 	{
@@ -68,11 +105,20 @@ public abstract class Boat extends Creature
 		updatePeopleInTheBoat(x, y, z);
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	public void onEvtArrived()
 	{
 		getCurrentWay().moveNext();
 	}
 	
+	/**
+	 * Method updatePeopleInTheBoat.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 */
 	protected void updatePeopleInTheBoat(int x, int y, int z)
 	{
 		for (Player player : _players)
@@ -91,6 +137,11 @@ public abstract class Boat extends Creature
 		}
 	}
 	
+	/**
+	 * Method addPlayer.
+	 * @param player Player
+	 * @param boatLoc Location
+	 */
 	public void addPlayer(Player player, Location boatLoc)
 	{
 		synchronized (_players)
@@ -112,6 +163,12 @@ public abstract class Boat extends Creature
 		}
 	}
 	
+	/**
+	 * Method moveInBoat.
+	 * @param playable Playable
+	 * @param ori Location
+	 * @param loc Location
+	 */
 	public void moveInBoat(Playable playable, Location ori, Location loc)
 	{
 		if (!playable.isPlayer())
@@ -143,6 +200,10 @@ public abstract class Boat extends Creature
 		player.broadcastPacket(inMovePacket(player, ori, loc));
 	}
 	
+	/**
+	 * Method trajetEnded.
+	 * @param oust boolean
+	 */
 	public void trajetEnded(boolean oust)
 	{
 		_runState = 0;
@@ -159,6 +220,12 @@ public abstract class Boat extends Creature
 		}
 	}
 	
+	/**
+	 * Method teleportShip.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 */
 	public void teleportShip(int x, int y, int z)
 	{
 		if (isMoving)
@@ -174,6 +241,12 @@ public abstract class Boat extends Creature
 		getCurrentWay().moveNext();
 	}
 	
+	/**
+	 * Method oustPlayer.
+	 * @param player Player
+	 * @param loc Location
+	 * @param teleport boolean
+	 */
 	public void oustPlayer(Player player, Location loc, boolean teleport)
 	{
 		synchronized (_players)
@@ -199,6 +272,10 @@ public abstract class Boat extends Creature
 		}
 	}
 	
+	/**
+	 * Method removePlayer.
+	 * @param player Player
+	 */
 	public void removePlayer(Player player)
 	{
 		synchronized (_players)
@@ -207,6 +284,10 @@ public abstract class Boat extends Creature
 		}
 	}
 	
+	/**
+	 * Method broadcastPacketToPassengers.
+	 * @param packet IStaticPacket
+	 */
 	public void broadcastPacketToPassengers(IStaticPacket packet)
 	{
 		for (Player player : _players)
@@ -215,30 +296,86 @@ public abstract class Boat extends Creature
 		}
 	}
 	
+	/**
+	 * Method infoPacket.
+	 * @return L2GameServerPacket
+	 */
 	public abstract L2GameServerPacket infoPacket();
 	
+	/**
+	 * Method movePacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public abstract L2GameServerPacket movePacket();
 	
+	/**
+	 * Method inMovePacket.
+	 * @param player Player
+	 * @param src Location
+	 * @param desc Location
+	 * @return L2GameServerPacket
+	 */
 	public abstract L2GameServerPacket inMovePacket(Player player, Location src, Location desc);
 	
+	/**
+	 * Method stopMovePacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public abstract L2GameServerPacket stopMovePacket();
 	
+	/**
+	 * Method inStopMovePacket.
+	 * @param player Player
+	 * @return L2GameServerPacket
+	 */
 	public abstract L2GameServerPacket inStopMovePacket(Player player);
 	
+	/**
+	 * Method startPacket.
+	 * @return L2GameServerPacket
+	 */
 	public abstract L2GameServerPacket startPacket();
 	
+	/**
+	 * Method validateLocationPacket.
+	 * @param player Player
+	 * @return L2GameServerPacket
+	 */
 	public abstract L2GameServerPacket validateLocationPacket(Player player);
 	
+	/**
+	 * Method checkLocationPacket.
+	 * @return L2GameServerPacket
+	 */
 	public abstract L2GameServerPacket checkLocationPacket();
 	
+	/**
+	 * Method getOnPacket.
+	 * @param playable Playable
+	 * @param location Location
+	 * @return L2GameServerPacket
+	 */
 	public abstract L2GameServerPacket getOnPacket(Playable playable, Location location);
 	
+	/**
+	 * Method getOffPacket.
+	 * @param playable Playable
+	 * @param location Location
+	 * @return L2GameServerPacket
+	 */
 	public abstract L2GameServerPacket getOffPacket(Playable playable, Location location);
 	
+	/**
+	 * Method oustPlayers.
+	 */
 	public abstract void oustPlayers();
 	
+	/**
+	 * Method getAI.
+	 * @return CharacterAI
+	 */
 	@Override
 	public CharacterAI getAI()
 	{
@@ -249,12 +386,19 @@ public abstract class Boat extends Creature
 		return _ai;
 	}
 	
+	/**
+	 * Method broadcastCharInfo.
+	 */
 	@Override
 	public void broadcastCharInfo()
 	{
 		broadcastPacket(infoPacket());
 	}
 	
+	/**
+	 * Method broadcastPacket.
+	 * @param packets L2GameServerPacket[]
+	 */
 	@Override
 	public void broadcastPacket(L2GameServerPacket... packets)
 	{
@@ -270,120 +414,211 @@ public abstract class Boat extends Creature
 		}
 	}
 	
+	/**
+	 * Method validateLocation.
+	 * @param broadcast int
+	 */
 	@Override
 	public void validateLocation(int broadcast)
 	{
 	}
 	
+	/**
+	 * Method sendChanges.
+	 */
 	@Override
 	public void sendChanges()
 	{
 	}
 	
+	/**
+	 * Method getMoveSpeed.
+	 * @return int
+	 */
 	@Override
 	public int getMoveSpeed()
 	{
 		return _moveSpeed;
 	}
 	
+	/**
+	 * Method getRunSpeed.
+	 * @return int
+	 */
 	@Override
 	public int getRunSpeed()
 	{
 		return _moveSpeed;
 	}
 	
+	/**
+	 * Method getActiveWeaponInstance.
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance getActiveWeaponInstance()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getActiveWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	@Override
 	public WeaponTemplate getActiveWeaponItem()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getSecondaryWeaponInstance.
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance getSecondaryWeaponInstance()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getSecondaryWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	@Override
 	public WeaponTemplate getSecondaryWeaponItem()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	@Override
 	public int getLevel()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getRunState.
+	 * @return int
+	 */
 	public int getRunState()
 	{
 		return _runState;
 	}
 	
+	/**
+	 * Method setRunState.
+	 * @param runState int
+	 */
 	public void setRunState(int runState)
 	{
 		_runState = runState;
 	}
 	
+	/**
+	 * Method setMoveSpeed.
+	 * @param moveSpeed int
+	 */
 	public void setMoveSpeed(int moveSpeed)
 	{
 		_moveSpeed = moveSpeed;
 	}
 	
+	/**
+	 * Method setRotationSpeed.
+	 * @param rotationSpeed int
+	 */
 	public void setRotationSpeed(int rotationSpeed)
 	{
 		_rotationSpeed = rotationSpeed;
 	}
 	
+	/**
+	 * Method getRotationSpeed.
+	 * @return int
+	 */
 	public int getRotationSpeed()
 	{
 		return _rotationSpeed;
 	}
 	
+	/**
+	 * Method getCurrentWay.
+	 * @return BoatWayEvent
+	 */
 	public BoatWayEvent getCurrentWay()
 	{
 		return _ways[_fromHome];
 	}
 	
+	/**
+	 * Method setWay.
+	 * @param id int
+	 * @param v BoatWayEvent
+	 */
 	public void setWay(int id, BoatWayEvent v)
 	{
 		_ways[id] = v;
 	}
 	
+	/**
+	 * Method getPlayers.
+	 * @return Set<Player>
+	 */
 	public Set<Player> getPlayers()
 	{
 		return _players;
 	}
 	
+	/**
+	 * Method isDocked.
+	 * @return boolean
+	 */
 	public boolean isDocked()
 	{
 		return _runState == 0;
 	}
 	
+	/**
+	 * Method getReturnLoc.
+	 * @return Location
+	 */
 	public Location getReturnLoc()
 	{
 		return getCurrentWay().getReturnLoc();
 	}
 	
+	/**
+	 * Method isBoat.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isBoat()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method addPacketList.
+	 * @param forPlayer Player
+	 * @param dropper Creature
+	 * @return List<L2GameServerPacket>
+	 */
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{
@@ -397,6 +632,10 @@ public abstract class Boat extends Creature
 		return list;
 	}
 	
+	/**
+	 * Method getBoatId.
+	 * @return int
+	 */
 	public int getBoatId()
 	{
 		return getObjectId();

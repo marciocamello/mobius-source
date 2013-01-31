@@ -32,10 +32,20 @@ import lineage2.gameserver.utils.Util;
 
 import org.apache.commons.lang3.time.DurationFormatUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TelnetStatus implements TelnetCommandHolder
 {
+	/**
+	 * Field _commands.
+	 */
 	private final Set<TelnetCommand> _commands = new LinkedHashSet<>();
 	
+	/**
+	 * Constructor for TelnetStatus.
+	 */
 	public TelnetStatus()
 	{
 		_commands.add(new TelnetCommand("status", "s")
@@ -51,42 +61,50 @@ public class TelnetStatus implements TelnetCommandHolder
 			{
 				StringBuilder sb = new StringBuilder();
 				int[] stats = World.getStats();
-				sb.append("Server Status: ").append("\n");
-				sb.append("Players: ................. ").append(stats[12]).append("/").append(Config.MAXIMUM_ONLINE_USERS).append("\n");
-				sb.append("     Online: ............. ").append(stats[12] - stats[13]).append("\n");
-				sb.append("     Offline: ............ ").append(stats[13]).append("\n");
-				sb.append("     GM: ................. ").append(GmListTable.getAllGMs().size()).append("\n");
-				sb.append("Objects: ................. ").append(stats[10]).append("\n");
-				sb.append("Characters: .............. ").append(stats[11]).append("\n");
-				sb.append("Summons: ................. ").append(stats[18]).append("\n");
-				sb.append("Npcs: .................... ").append(stats[15]).append("/").append(stats[14]).append("\n");
-				sb.append("Monsters: ................ ").append(stats[16]).append("\n");
-				sb.append("Minions: ................. ").append(stats[17]).append("\n");
-				sb.append("Doors: ................... ").append(stats[19]).append("\n");
-				sb.append("Items: ................... ").append(stats[20]).append("\n");
-				sb.append("Reflections: ............. ").append(ReflectionManager.getInstance().getAll().length).append("\n");
-				sb.append("Regions: ................. ").append(stats[0]).append("\n");
-				sb.append("     Active: ............. ").append(stats[1]).append("\n");
-				sb.append("     Inactive: ........... ").append(stats[2]).append("\n");
-				sb.append("     Null: ............... ").append(stats[3]).append("\n");
-				sb.append("Game Time: ............... ").append(getGameTime()).append("\n");
-				sb.append("Real Time: ............... ").append(getCurrentTime()).append("\n");
-				sb.append("Start Time: .............. ").append(getStartTime()).append("\n");
-				sb.append("Uptime: .................. ").append(getUptime()).append("\n");
-				sb.append("Shutdown: ................ ").append(Util.formatTime(Shutdown.getInstance().getSeconds())).append("/").append(Shutdown.getInstance().getMode()).append("\n");
-				sb.append("Threads: ................. ").append(Thread.activeCount()).append("\n");
-				sb.append("RAM Used: ................ ").append(StatsUtils.getMemUsedMb()).append("\n");
+				sb.append("Server Status: ").append('\n');
+				sb.append("Players: ................. ").append(stats[12]).append('/').append(Config.MAXIMUM_ONLINE_USERS).append('\n');
+				sb.append("     Online: ............. ").append(stats[12] - stats[13]).append('\n');
+				sb.append("     Offline: ............ ").append(stats[13]).append('\n');
+				sb.append("     GM: ................. ").append(GmListTable.getAllGMs().size()).append('\n');
+				sb.append("Objects: ................. ").append(stats[10]).append('\n');
+				sb.append("Characters: .............. ").append(stats[11]).append('\n');
+				sb.append("Summons: ................. ").append(stats[18]).append('\n');
+				sb.append("Npcs: .................... ").append(stats[15]).append('/').append(stats[14]).append('\n');
+				sb.append("Monsters: ................ ").append(stats[16]).append('\n');
+				sb.append("Minions: ................. ").append(stats[17]).append('\n');
+				sb.append("Doors: ................... ").append(stats[19]).append('\n');
+				sb.append("Items: ................... ").append(stats[20]).append('\n');
+				sb.append("Reflections: ............. ").append(ReflectionManager.getInstance().getAll().length).append('\n');
+				sb.append("Regions: ................. ").append(stats[0]).append('\n');
+				sb.append("     Active: ............. ").append(stats[1]).append('\n');
+				sb.append("     Inactive: ........... ").append(stats[2]).append('\n');
+				sb.append("     Null: ............... ").append(stats[3]).append('\n');
+				sb.append("Game Time: ............... ").append(getGameTime()).append('\n');
+				sb.append("Real Time: ............... ").append(getCurrentTime()).append('\n');
+				sb.append("Start Time: .............. ").append(getStartTime()).append('\n');
+				sb.append("Uptime: .................. ").append(getUptime()).append('\n');
+				sb.append("Shutdown: ................ ").append(Util.formatTime(Shutdown.getInstance().getSeconds())).append('/').append(Shutdown.getInstance().getMode()).append('\n');
+				sb.append("Threads: ................. ").append(Thread.activeCount()).append('\n');
+				sb.append("RAM Used: ................ ").append(StatsUtils.getMemUsedMb()).append('\n');
 				return sb.toString();
 			}
 		});
 	}
 	
+	/**
+	 * Method getCommands.
+	 * @return Set<TelnetCommand> * @see lineage2.gameserver.network.telnet.TelnetCommandHolder#getCommands()
+	 */
 	@Override
 	public Set<TelnetCommand> getCommands()
 	{
 		return _commands;
 	}
 	
+	/**
+	 * Method getGameTime.
+	 * @return String
+	 */
 	public static String getGameTime()
 	{
 		int t = GameTimeController.getInstance().getGameTime();
@@ -99,16 +117,28 @@ public class TelnetStatus implements TelnetCommandHolder
 		return format.format(cal.getTime());
 	}
 	
+	/**
+	 * Method getUptime.
+	 * @return String
+	 */
 	public static String getUptime()
 	{
 		return DurationFormatUtils.formatDurationHMS(ManagementFactory.getRuntimeMXBean().getUptime());
 	}
 	
+	/**
+	 * Method getStartTime.
+	 * @return String
+	 */
 	public static String getStartTime()
 	{
 		return new Date(ManagementFactory.getRuntimeMXBean().getStartTime()).toString();
 	}
 	
+	/**
+	 * Method getCurrentTime.
+	 * @return String
+	 */
 	public static String getCurrentTime()
 	{
 		return new Date().toString();

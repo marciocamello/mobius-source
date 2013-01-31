@@ -21,16 +21,42 @@ import lineage2.commons.time.cron.SchedulingPattern;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class UndergroundColiseumEvent extends GlobalEvent
 {
+	/**
+	 * Field DATE_PATTERN.
+	 */
 	private static final SchedulingPattern DATE_PATTERN = new SchedulingPattern("0 21 * * mon,sat,sun");
+	/**
+	 * Field _startCalendar.
+	 */
 	private final Calendar _startCalendar = Calendar.getInstance();
+	/**
+	 * Field _registeredPlayers.
+	 */
 	private final List<Player> _registeredPlayers = new CopyOnWriteArrayList<>();
+	/**
+	 * Field _minLevel.
+	 */
 	private final int _minLevel;
+	/**
+	 * Field _maxLevel.
+	 */
 	private final int _maxLevel;
+	/**
+	 * Field _battleEvent.
+	 */
 	@SuppressWarnings("unused")
 	private UndergroundColiseumBattleEvent _battleEvent;
 	
+	/**
+	 * Constructor for UndergroundColiseumEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public UndergroundColiseumEvent(MultiValueSet<String> set)
 	{
 		super(set);
@@ -38,18 +64,28 @@ public class UndergroundColiseumEvent extends GlobalEvent
 		_maxLevel = set.getInteger("max_level");
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
 		super.startEvent();
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	@Override
 	public void stopEvent()
 	{
 		super.stopEvent();
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onInit boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{
@@ -58,22 +94,38 @@ public class UndergroundColiseumEvent extends GlobalEvent
 		registerActions();
 	}
 	
+	/**
+	 * Method startTimeMillis.
+	 * @return long
+	 */
 	@Override
 	protected long startTimeMillis()
 	{
 		return _startCalendar.getTimeInMillis();
 	}
 	
+	/**
+	 * Method getRegisteredPlayers.
+	 * @return List<Player>
+	 */
 	public List<Player> getRegisteredPlayers()
 	{
 		return _registeredPlayers;
 	}
 	
+	/**
+	 * Method getMinLevel.
+	 * @return int
+	 */
 	public int getMinLevel()
 	{
 		return _minLevel;
 	}
 	
+	/**
+	 * Method getMaxLevel.
+	 * @return int
+	 */
 	public int getMaxLevel()
 	{
 		return _maxLevel;

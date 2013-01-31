@@ -27,24 +27,56 @@ import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMagicUseListener
 {
+	/**
+	 * @author Mobius
+	 */
 	public enum State
 	{
+		/**
+		 * Field AI_IDLE.
+		 */
 		AI_IDLE(0),
+		/**
+		 * Field AI_FOLLOW.
+		 */
 		AI_FOLLOW(1),
+		/**
+		 * Field AI_ATTACK_GENERATOR.
+		 */
 		AI_ATTACK_GENERATOR(2),
+		/**
+		 * Field AI_NEXT_STEP.
+		 */
 		AI_NEXT_STEP(3);
+		/**
+		 * Field _id.
+		 */
 		@SuppressWarnings("unused")
 		private final int _id;
 		
+		/**
+		 * Constructor for State.
+		 * @param id int
+		 */
 		State(int id)
 		{
 			_id = id;
 		}
 	}
 	
+	/**
+	 * Field GENERATOR. (value is 33216)
+	 */
 	private final static int GENERATOR = 33216;
+	/**
+	 * Field POINTS.
+	 */
 	private final static int[][] POINTS =
 	{
 		{
@@ -63,20 +95,48 @@ public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMa
 			-8617
 		},
 	};
+	/**
+	 * Field configured.
+	 */
 	private boolean configured = false;
+	/**
+	 * Field _step.
+	 */
 	private short _step = 0;
+	/**
+	 * Field _state.
+	 */
 	private State _state = State.AI_IDLE;
+	/**
+	 * Field lastFollowPlayer.
+	 */
 	private long lastFollowPlayer = 0;
+	/**
+	 * Field attacksGenerator.
+	 */
 	private boolean attacksGenerator = false;
+	/**
+	 * Field lastOfficerSay.
+	 */
 	private long lastOfficerSay = 0;
+	/**
+	 * Field player.
+	 */
 	private Player player = null;
 	
+	/**
+	 * Constructor for InfiltrationOfficer.
+	 * @param actor NpcInstance
+	 */
 	public InfiltrationOfficer(NpcInstance actor)
 	{
 		super(actor);
 		actor.setRunning();
 	}
 	
+	/**
+	 * Method config.
+	 */
 	private void config()
 	{
 		if (!configured)
@@ -86,6 +146,12 @@ public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMa
 		}
 	}
 	
+	/**
+	 * Method onAttack.
+	 * @param actor Creature
+	 * @param target Creature
+	 * @see lineage2.gameserver.listener.actor.OnAttackListener#onAttack(Creature, Creature)
+	 */
 	@Override
 	public void onAttack(Creature actor, Creature target)
 	{
@@ -96,6 +162,14 @@ public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMa
 		}
 	}
 	
+	/**
+	 * Method onMagicUse.
+	 * @param actor Creature
+	 * @param skill Skill
+	 * @param target Creature
+	 * @param alt boolean
+	 * @see lineage2.gameserver.listener.actor.OnMagicUseListener#onMagicUse(Creature, Skill, Creature, boolean)
+	 */
 	@Override
 	public void onMagicUse(Creature actor, Skill skill, Creature target, boolean alt)
 	{
@@ -106,23 +180,38 @@ public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMa
 		}
 	}
 	
+	/**
+	 * Method setState.
+	 * @param state State
+	 */
 	public void setState(State state)
 	{
 		config();
 		_state = state;
 	}
 	
+	/**
+	 * Method isUnderState.
+	 * @param state State
+	 * @return boolean
+	 */
 	public boolean isUnderState(State state)
 	{
 		return _state == state;
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
 	}
 	
+	/**
+	 * Method onEvtDeSpawn.
+	 */
 	@Override
 	public void onEvtDeSpawn()
 	{
@@ -132,12 +221,19 @@ public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMa
 		}
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
 		super.thinkAttack();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -189,6 +285,11 @@ public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMa
 		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

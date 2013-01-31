@@ -16,13 +16,25 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectGrow extends Effect
 {
+	/**
+	 * Constructor for EffectGrow.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectGrow(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -35,6 +47,9 @@ public final class EffectGrow extends Effect
 		}
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -47,6 +62,10 @@ public final class EffectGrow extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

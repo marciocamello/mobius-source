@@ -15,25 +15,53 @@ package lineage2.gameserver.stats.conditions;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Condition
 {
+	/**
+	 * Field EMPTY_ARRAY.
+	 */
 	public static final Condition[] EMPTY_ARRAY = new Condition[0];
+	/**
+	 * Field _message.
+	 */
 	private SystemMsg _message;
 	
+	/**
+	 * Method setSystemMsg.
+	 * @param msgId int
+	 */
 	public final void setSystemMsg(int msgId)
 	{
 		_message = SystemMsg.valueOf(msgId);
 	}
 	
+	/**
+	 * Method getSystemMsg.
+	 * @return SystemMsg
+	 */
 	public final SystemMsg getSystemMsg()
 	{
 		return _message;
 	}
 	
+	/**
+	 * Method test.
+	 * @param env Env
+	 * @return boolean
+	 */
 	public final boolean test(Env env)
 	{
 		return testImpl(env);
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	protected abstract boolean testImpl(Env env);
 }

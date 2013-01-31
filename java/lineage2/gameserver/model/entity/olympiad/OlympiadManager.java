@@ -24,11 +24,25 @@ import lineage2.gameserver.Config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OlympiadManager extends RunnableImpl
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadManager.class);
+	/**
+	 * Field _olympiadInstances.
+	 */
 	private final Map<Integer, OlympiadGame> _olympiadInstances = new ConcurrentHashMap<>();
 	
+	/**
+	 * Method sleep.
+	 * @param time long
+	 */
 	public void sleep(long time)
 	{
 		try
@@ -40,6 +54,9 @@ public class OlympiadManager extends RunnableImpl
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{
@@ -93,6 +110,11 @@ public class OlympiadManager extends RunnableImpl
 		_olympiadInstances.clear();
 	}
 	
+	/**
+	 * Method prepareBattles.
+	 * @param type CompType
+	 * @param list List<Integer>
+	 */
 	private void prepareBattles(CompType type, List<Integer> list)
 	{
 		for (int i = 0; i < Olympiad.STADIUMS.length; i++)
@@ -119,22 +141,41 @@ public class OlympiadManager extends RunnableImpl
 		}
 	}
 	
+	/**
+	 * Method freeOlympiadInstance.
+	 * @param index int
+	 */
 	public void freeOlympiadInstance(int index)
 	{
 		_olympiadInstances.remove(index);
 		Olympiad.STADIUMS[index].setStadiaFree();
 	}
 	
+	/**
+	 * Method getOlympiadInstance.
+	 * @param index int
+	 * @return OlympiadGame
+	 */
 	public OlympiadGame getOlympiadInstance(int index)
 	{
 		return _olympiadInstances.get(index);
 	}
 	
+	/**
+	 * Method getOlympiadGames.
+	 * @return Map<Integer,OlympiadGame>
+	 */
 	public Map<Integer, OlympiadGame> getOlympiadGames()
 	{
 		return _olympiadInstances;
 	}
 	
+	/**
+	 * Method nextOpponents.
+	 * @param list List<Integer>
+	 * @param type CompType
+	 * @return List<Integer>
+	 */
 	private List<Integer> nextOpponents(List<Integer> list, CompType type)
 	{
 		List<Integer> opponents = new CopyOnWriteArrayList<>();
@@ -148,6 +189,10 @@ public class OlympiadManager extends RunnableImpl
 		return opponents;
 	}
 	
+	/**
+	 * Method removeOpponent.
+	 * @param noble Integer
+	 */
 	private void removeOpponent(Integer noble)
 	{
 		Olympiad._classBasedRegisters.removeValue(noble);

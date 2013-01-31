@@ -29,35 +29,98 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2GameServerPacket
 {
+	/**
+	 * @author Mobius
+	 */
 	public static enum Types
 	{
+		/**
+		 * Field TEXT.
+		 */
 		TEXT,
+		/**
+		 * Field NUMBER.
+		 */
 		NUMBER,
+		/**
+		 * Field NPC_NAME.
+		 */
 		NPC_NAME,
+		/**
+		 * Field ITEM_NAME.
+		 */
 		ITEM_NAME,
+		/**
+		 * Field SKILL_NAME.
+		 */
 		SKILL_NAME,
+		/**
+		 * Field RESIDENCE_NAME.
+		 */
 		RESIDENCE_NAME,
+		/**
+		 * Field LONG.
+		 */
 		LONG,
+		/**
+		 * Field ZONE_NAME.
+		 */
 		ZONE_NAME,
+		/**
+		 * Field ITEM_NAME_WITH_AUGMENTATION.
+		 */
 		ITEM_NAME_WITH_AUGMENTATION,
+		/**
+		 * Field ELEMENT_NAME.
+		 */
 		ELEMENT_NAME,
+		/**
+		 * Field INSTANCE_NAME.
+		 */
 		INSTANCE_NAME,
+		/**
+		 * Field STATIC_OBJECT_NAME.
+		 */
 		STATIC_OBJECT_NAME,
+		/**
+		 * Field PLAYER_NAME.
+		 */
 		PLAYER_NAME,
+		/**
+		 * Field SYSTEM_STRING.
+		 */
 		SYSTEM_STRING
 	}
 	
+	/**
+	 * Field _message.
+	 */
 	protected SystemMsg _message;
+	/**
+	 * Field _arguments.
+	 */
 	protected List<IArgument> _arguments;
 	
+	/**
+	 * Constructor for SysMsgContainer.
+	 * @param messageId int
+	 */
 	@Deprecated
 	protected SysMsgContainer(int messageId)
 	{
 		this(SystemMsg.valueOf(messageId));
 	}
 	
+	/**
+	 * Constructor for SysMsgContainer.
+	 * @param message SystemMsg
+	 */
 	protected SysMsgContainer(SystemMsg message)
 	{
 		if (message == null)
@@ -68,6 +131,9 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		_arguments = new ArrayList<>(_message.size());
 	}
 	
+	/**
+	 * Method writeElements.
+	 */
 	protected void writeElements()
 	{
 		if (_message.size() != _arguments.size())
@@ -82,6 +148,11 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * Method addName.
+	 * @param object GameObject
+	 * @return T
+	 */
 	public T addName(GameObject object)
 	{
 		if (object == null)
@@ -115,86 +186,174 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		return add(new StringArgument(object.getName()));
 	}
 	
+	/**
+	 * Method addInstanceName.
+	 * @param id int
+	 * @return T
+	 */
 	public T addInstanceName(int id)
 	{
 		return add(new InstanceNameArgument(id));
 	}
 	
+	/**
+	 * Method addSysString.
+	 * @param id int
+	 * @return T
+	 */
 	public T addSysString(int id)
 	{
 		return add(new SysStringArgument(id));
 	}
 	
+	/**
+	 * Method addSkillName.
+	 * @param skill Skill
+	 * @return T
+	 */
 	public T addSkillName(Skill skill)
 	{
 		return addSkillName(skill.getDisplayId(), skill.getDisplayLevel());
 	}
 	
+	/**
+	 * Method addSkillName.
+	 * @param id int
+	 * @param level int
+	 * @return T
+	 */
 	public T addSkillName(int id, int level)
 	{
 		return add(new SkillArgument(id, level));
 	}
 	
+	/**
+	 * Method addItemName.
+	 * @param item_id int
+	 * @return T
+	 */
 	public T addItemName(int item_id)
 	{
 		return add(new ItemNameArgument(item_id));
 	}
 	
+	/**
+	 * Method addItemNameWithAugmentation.
+	 * @param item ItemInstance
+	 * @return T
+	 */
 	public T addItemNameWithAugmentation(ItemInstance item)
 	{
 		return add(new ItemNameWithAugmentationArgument(item.getItemId(), item.getAugmentationId()));
 	}
 	
+	/**
+	 * Method addZoneName.
+	 * @param c Creature
+	 * @return T
+	 */
 	public T addZoneName(Creature c)
 	{
 		return addZoneName(c.getX(), c.getY(), c.getZ());
 	}
 	
+	/**
+	 * Method addZoneName.
+	 * @param loc Location
+	 * @return T
+	 */
 	public T addZoneName(Location loc)
 	{
 		return add(new ZoneArgument(loc.x, loc.y, loc.z));
 	}
 	
+	/**
+	 * Method addZoneName.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return T
+	 */
 	public T addZoneName(int x, int y, int z)
 	{
 		return add(new ZoneArgument(x, y, z));
 	}
 	
+	/**
+	 * Method addResidenceName.
+	 * @param r Residence
+	 * @return T
+	 */
 	public T addResidenceName(Residence r)
 	{
 		return add(new ResidenceArgument(r.getId()));
 	}
 	
+	/**
+	 * Method addResidenceName.
+	 * @param i int
+	 * @return T
+	 */
 	public T addResidenceName(int i)
 	{
 		return add(new ResidenceArgument(i));
 	}
 	
+	/**
+	 * Method addElementName.
+	 * @param i int
+	 * @return T
+	 */
 	public T addElementName(int i)
 	{
 		return add(new ElementNameArgument(i));
 	}
 	
+	/**
+	 * Method addElementName.
+	 * @param i Element
+	 * @return T
+	 */
 	public T addElementName(Element i)
 	{
 		return add(new ElementNameArgument(i.getId()));
 	}
 	
+	/**
+	 * Method addInteger.
+	 * @param i double
+	 * @return T
+	 */
 	public T addInteger(double i)
 	{
 		return add(new IntegerArgument((int) i));
 	}
 	
+	/**
+	 * Method addLong.
+	 * @param i long
+	 * @return T
+	 */
 	public T addLong(long i)
 	{
 		return add(new LongArgument(i));
 	}
 	
+	/**
+	 * Method addString.
+	 * @param t String
+	 * @return T
+	 */
 	public T addString(String t)
 	{
 		return add(new StringArgument(t));
 	}
 	
+	/**
+	 * Method add.
+	 * @param arg IArgument
+	 * @return T
+	 */
 	@SuppressWarnings("unchecked")
 	protected T add(IArgument arg)
 	{
@@ -202,34 +361,67 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		return (T) this;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static abstract class IArgument
 	{
+		/**
+		 * Method write.
+		 * @param m SysMsgContainer<?>
+		 */
 		void write(SysMsgContainer<?> m)
 		{
 			m.writeD(getType().ordinal());
 			writeData(m);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		abstract Types getType();
 		
+		/**
+		 * Method writeData.
+		 * @param message SysMsgContainer<?>
+		 */
 		abstract void writeData(SysMsgContainer<?> message);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class IntegerArgument extends IArgument
 	{
+		/**
+		 * Field _data.
+		 */
 		private final int _data;
 		
+		/**
+		 * Constructor for IntegerArgument.
+		 * @param da int
+		 */
 		public IntegerArgument(int da)
 		{
 			_data = da;
 		}
 		
+		/**
+		 * Method writeData.
+		 * @param message SysMsgContainer<?>
+		 */
 		@Override
 		public void writeData(SysMsgContainer<?> message)
 		{
 			message.writeD(_data);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
@@ -237,13 +429,24 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class NpcNameArgument extends IntegerArgument
 	{
+		/**
+		 * Constructor for NpcNameArgument.
+		 * @param da int
+		 */
 		public NpcNameArgument(int da)
 		{
 			super(da);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
@@ -251,13 +454,24 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class ItemNameArgument extends IntegerArgument
 	{
+		/**
+		 * Constructor for ItemNameArgument.
+		 * @param da int
+		 */
 		public ItemNameArgument(int da)
 		{
 			super(da);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
@@ -265,23 +479,45 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class ItemNameWithAugmentationArgument extends IArgument
 	{
+		/**
+		 * Field _itemId.
+		 */
 		private final int _itemId;
+		/**
+		 * Field _augmentationId.
+		 */
 		private final int _augmentationId;
 		
+		/**
+		 * Constructor for ItemNameWithAugmentationArgument.
+		 * @param itemId int
+		 * @param augmentationId int
+		 */
 		public ItemNameWithAugmentationArgument(int itemId, int augmentationId)
 		{
 			_itemId = itemId;
 			_augmentationId = augmentationId;
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
 			return Types.ITEM_NAME_WITH_AUGMENTATION;
 		}
 		
+		/**
+		 * Method writeData.
+		 * @param message SysMsgContainer<?>
+		 */
 		@Override
 		void writeData(SysMsgContainer<?> message)
 		{
@@ -290,13 +526,24 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class InstanceNameArgument extends IntegerArgument
 	{
+		/**
+		 * Constructor for InstanceNameArgument.
+		 * @param da int
+		 */
 		public InstanceNameArgument(int da)
 		{
 			super(da);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
@@ -304,13 +551,24 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class SysStringArgument extends IntegerArgument
 	{
+		/**
+		 * Constructor for SysStringArgument.
+		 * @param da int
+		 */
 		public SysStringArgument(int da)
 		{
 			super(da);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
@@ -318,13 +576,24 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class ResidenceArgument extends IntegerArgument
 	{
+		/**
+		 * Constructor for ResidenceArgument.
+		 * @param da int
+		 */
 		public ResidenceArgument(int da)
 		{
 			super(da);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
@@ -332,13 +601,24 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class StaticObjectNameArgument extends IntegerArgument
 	{
+		/**
+		 * Constructor for StaticObjectNameArgument.
+		 * @param da int
+		 */
 		public StaticObjectNameArgument(int da)
 		{
 			super(da);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
@@ -346,21 +626,39 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class LongArgument extends IArgument
 	{
+		/**
+		 * Field _data.
+		 */
 		private final long _data;
 		
+		/**
+		 * Constructor for LongArgument.
+		 * @param da long
+		 */
 		public LongArgument(long da)
 		{
 			_data = da;
 		}
 		
+		/**
+		 * Method writeData.
+		 * @param message SysMsgContainer<?>
+		 */
 		@Override
 		void writeData(SysMsgContainer<?> message)
 		{
 			message.writeQ(_data);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
@@ -368,21 +666,39 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class StringArgument extends IArgument
 	{
+		/**
+		 * Field _data.
+		 */
 		private final String _data;
 		
+		/**
+		 * Constructor for StringArgument.
+		 * @param da String
+		 */
 		public StringArgument(String da)
 		{
 			_data = da == null ? "null" : da;
 		}
 		
+		/**
+		 * Method writeData.
+		 * @param message SysMsgContainer<?>
+		 */
 		@Override
 		void writeData(SysMsgContainer<?> message)
 		{
 			message.writeS(_data);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
@@ -390,17 +706,35 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class SkillArgument extends IArgument
 	{
+		/**
+		 * Field _skillId.
+		 */
 		private final int _skillId;
+		/**
+		 * Field _skillLevel.
+		 */
 		private final int _skillLevel;
 		
+		/**
+		 * Constructor for SkillArgument.
+		 * @param t1 int
+		 * @param t2 int
+		 */
 		public SkillArgument(int t1, int t2)
 		{
 			_skillId = t1;
 			_skillLevel = t2;
 		}
 		
+		/**
+		 * Method writeData.
+		 * @param message SysMsgContainer<?>
+		 */
 		@Override
 		void writeData(SysMsgContainer<?> message)
 		{
@@ -408,6 +742,10 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 			message.writeD(_skillLevel);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
@@ -415,12 +753,30 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class ZoneArgument extends IArgument
 	{
+		/**
+		 * Field _x.
+		 */
 		private final int _x;
+		/**
+		 * Field _y.
+		 */
 		private final int _y;
+		/**
+		 * Field _z.
+		 */
 		private final int _z;
 		
+		/**
+		 * Constructor for ZoneArgument.
+		 * @param t1 int
+		 * @param t2 int
+		 * @param t3 int
+		 */
 		public ZoneArgument(int t1, int t2, int t3)
 		{
 			_x = t1;
@@ -428,6 +784,10 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 			_z = t3;
 		}
 		
+		/**
+		 * Method writeData.
+		 * @param message SysMsgContainer<?>
+		 */
 		@Override
 		void writeData(SysMsgContainer<?> message)
 		{
@@ -436,6 +796,10 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 			message.writeD(_z);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
@@ -443,13 +807,24 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class ElementNameArgument extends IntegerArgument
 	{
+		/**
+		 * Constructor for ElementNameArgument.
+		 * @param type int
+		 */
 		public ElementNameArgument(int type)
 		{
 			super(type);
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{
@@ -457,13 +832,24 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class PlayerNameArgument extends StringArgument
 	{
+		/**
+		 * Constructor for PlayerNameArgument.
+		 * @param creature Creature
+		 */
 		public PlayerNameArgument(Creature creature)
 		{
 			super(creature.getName());
 		}
 		
+		/**
+		 * Method getType.
+		 * @return Types
+		 */
 		@Override
 		Types getType()
 		{

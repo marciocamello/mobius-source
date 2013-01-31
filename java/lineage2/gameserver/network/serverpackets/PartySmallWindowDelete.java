@@ -14,17 +14,34 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PartySmallWindowDelete extends L2GameServerPacket
 {
+	/**
+	 * Field _objId.
+	 */
 	private final int _objId;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
 	
+	/**
+	 * Constructor for PartySmallWindowDelete.
+	 * @param member Player
+	 */
 	public PartySmallWindowDelete(Player member)
 	{
 		_objId = member.getObjectId();
 		_name = member.getName();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -12,22 +12,63 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EnchantResult extends L2GameServerPacket
 {
+	/**
+	 * Field _crystalId. Field _resultId.
+	 */
 	private final int _resultId, _crystalId;
+	/**
+	 * Field _count.
+	 */
 	private final long _count;
+	/**
+	 * Field _enchantValue.
+	 */
 	private final int _enchantValue;
+	/**
+	 * Field SUCESS.
+	 */
 	public static final EnchantResult SUCESS = new EnchantResult(0, 0, 0);
+	/**
+	 * Field CANCEL.
+	 */
 	public static final EnchantResult CANCEL = new EnchantResult(2, 0, 0);
+	/**
+	 * Field BLESSED_FAILED.
+	 */
 	public static final EnchantResult BLESSED_FAILED = new EnchantResult(3, 0, 0);
+	/**
+	 * Field FAILED_NO_CRYSTALS.
+	 */
 	public static final EnchantResult FAILED_NO_CRYSTALS = new EnchantResult(4, 0, 0);
+	/**
+	 * Field ANCIENT_FAILED.
+	 */
 	public static final EnchantResult ANCIENT_FAILED = new EnchantResult(5, 0, 0);
 	
+	/**
+	 * Constructor for EnchantResult.
+	 * @param resultId int
+	 * @param crystalId int
+	 * @param count long
+	 */
 	public EnchantResult(int resultId, int crystalId, long count)
 	{
 		this(resultId, crystalId, count, 0);
 	}
 	
+	/**
+	 * Constructor for EnchantResult.
+	 * @param resultId int
+	 * @param crystalId int
+	 * @param count long
+	 * @param enchantValue int
+	 */
 	public EnchantResult(int resultId, int crystalId, long count, int enchantValue)
 	{
 		_resultId = resultId;
@@ -36,6 +77,9 @@ public class EnchantResult extends L2GameServerPacket
 		_enchantValue = enchantValue;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

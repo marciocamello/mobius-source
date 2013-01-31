@@ -23,21 +23,44 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class MoonlightTombstoneInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field KEY_ID. (value is 9714)
+	 */
 	private static final int KEY_ID = 9714;
+	/**
+	 * Field COLLAPSE_TIME. (value is 5)
+	 */
 	private final static long COLLAPSE_TIME = 5;
+	/**
+	 * Field _activated.
+	 */
 	private boolean _activated = false;
 	
+	/**
+	 * Constructor for MoonlightTombstoneInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MoonlightTombstoneInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

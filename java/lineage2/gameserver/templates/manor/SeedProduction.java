@@ -12,13 +12,33 @@
  */
 package lineage2.gameserver.templates.manor;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SeedProduction
 {
+	/**
+	 * Field _seedId.
+	 */
 	int _seedId;
+	/**
+	 * Field _residual.
+	 */
 	long _residual;
+	/**
+	 * Field _price.
+	 */
 	long _price;
+	/**
+	 * Field _sales.
+	 */
 	long _sales;
 	
+	/**
+	 * Constructor for SeedProduction.
+	 * @param id int
+	 */
 	public SeedProduction(int id)
 	{
 		_seedId = id;
@@ -27,6 +47,13 @@ public class SeedProduction
 		_sales = 0;
 	}
 	
+	/**
+	 * Constructor for SeedProduction.
+	 * @param id int
+	 * @param amount long
+	 * @param price long
+	 * @param sales long
+	 */
 	public SeedProduction(int id, long amount, long price, long sales)
 	{
 		_seedId = id;
@@ -35,26 +62,46 @@ public class SeedProduction
 		_sales = sales;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _seedId;
 	}
 	
+	/**
+	 * Method getCanProduce.
+	 * @return long
+	 */
 	public long getCanProduce()
 	{
 		return _residual;
 	}
 	
+	/**
+	 * Method getPrice.
+	 * @return long
+	 */
 	public long getPrice()
 	{
 		return _price;
 	}
 	
+	/**
+	 * Method getStartProduce.
+	 * @return long
+	 */
 	public long getStartProduce()
 	{
 		return _sales;
 	}
 	
+	/**
+	 * Method setCanProduce.
+	 * @param amount long
+	 */
 	public void setCanProduce(long amount)
 	{
 		_residual = amount;

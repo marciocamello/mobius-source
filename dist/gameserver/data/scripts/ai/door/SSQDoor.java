@@ -21,13 +21,35 @@ import lineage2.gameserver.model.instances.NpcInstance;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SSQDoor extends DoorAI
 {
+	/**
+	 * Field room1.
+	 */
 	private static final Territory room1 = new Territory().add(new Rectangle(-89696, 217741, -88858, 218085).setZmin(-7520).setZmax(-7320));
+	/**
+	 * Field room2.
+	 */
 	private static final Territory room2 = new Territory().add(new Rectangle(-88773, 220765, -88429, 219596).setZmin(-7520).setZmax(-7320));
+	/**
+	 * Field room3.
+	 */
 	private static final Territory room3 = new Territory().add(new Rectangle(-87485, 220463, -86501, 220804).setZmin(-7520).setZmax(-7320));
+	/**
+	 * Field room4.
+	 */
 	private static final Territory room4 = new Territory().add(new Rectangle(-85646, 219054, -84787, 219408).setZmin(-7520).setZmax(-7320));
+	/**
+	 * Field room5.
+	 */
 	private static final Territory room5 = new Territory().add(new Rectangle(-87739, 216646, -87159, 217842).setZmin(-7520).setZmax(-7320));
+	/**
+	 * Field ssqDoors.
+	 */
 	private static final int[] ssqDoors =
 	{
 		17240102,
@@ -37,11 +59,19 @@ public class SSQDoor extends DoorAI
 		17240110
 	};
 	
+	/**
+	 * Constructor for SSQDoor.
+	 * @param actor DoorInstance
+	 */
 	public SSQDoor(DoorInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtTwiceClick.
+	 * @param player Player
+	 */
 	@Override
 	public void onEvtTwiceClick(final Player player)
 	{

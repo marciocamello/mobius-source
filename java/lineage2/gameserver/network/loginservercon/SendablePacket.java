@@ -17,22 +17,41 @@ import java.nio.ByteBuffer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class SendablePacket extends lineage2.commons.net.nio.SendablePacket<LoginServerCommunication>
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SendablePacket.class);
 	
+	/**
+	 * Method getClient.
+	 * @return LoginServerCommunication
+	 */
 	@Override
 	public LoginServerCommunication getClient()
 	{
 		return LoginServerCommunication.getInstance();
 	}
 	
+	/**
+	 * Method getByteBuffer.
+	 * @return ByteBuffer
+	 */
 	@Override
 	protected ByteBuffer getByteBuffer()
 	{
 		return getClient().getWriteBuffer();
 	}
 	
+	/**
+	 * Method write.
+	 * @return boolean
+	 */
 	@Override
 	public boolean write()
 	{
@@ -47,5 +66,8 @@ public abstract class SendablePacket extends lineage2.commons.net.nio.SendablePa
 		return true;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	protected abstract void writeImpl();
 }

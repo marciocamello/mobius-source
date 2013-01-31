@@ -22,16 +22,29 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestFriendInvite extends L2GameClientPacket
 {
+	/**
+	 * Field _name.
+	 */
 	private String _name;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_name = readS(16);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

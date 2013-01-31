@@ -24,26 +24,55 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Language;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class StringHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final StringHolder _instance = new StringHolder();
+	/**
+	 * Field _strings.
+	 */
 	private final Map<Language, Map<String, String>> _strings = new HashMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return StringHolder
+	 */
 	public static StringHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for StringHolder.
+	 */
 	private StringHolder()
 	{
 	}
 	
+	/**
+	 * Method getNullable.
+	 * @param player Player
+	 * @param name String
+	 * @return String
+	 */
 	public String getNullable(Player player, String name)
 	{
 		Language lang = player == null ? Language.ENGLISH : player.getLanguage();
 		return get(lang, name);
 	}
 	
+	/**
+	 * Method getNotNull.
+	 * @param player Player
+	 * @param name String
+	 * @return String
+	 */
 	public String getNotNull(Player player, String name)
 	{
 		Language lang = player == null ? Language.ENGLISH : player.getLanguage();
@@ -56,12 +85,21 @@ public final class StringHolder extends AbstractHolder
 		return text;
 	}
 	
+	/**
+	 * Method get.
+	 * @param lang Language
+	 * @param address String
+	 * @return String
+	 */
 	private String get(Language lang, String address)
 	{
 		Map<String, String> strings = _strings.get(lang);
 		return strings.get(address);
 	}
 	
+	/**
+	 * Method load.
+	 */
 	public void load()
 	{
 		for (Language lang : Language.VALUES)
@@ -80,7 +118,7 @@ public final class StringHolder extends AbstractHolder
 				String line = null;
 				while ((line = reader.readLine()) != null)
 				{
-					if (line.startsWith("#"))
+					if ((line.length() > 0) && (line.charAt(0) == '#'))
 					{
 						continue;
 					}
@@ -118,12 +156,18 @@ public final class StringHolder extends AbstractHolder
 		log();
 	}
 	
+	/**
+	 * Method reload.
+	 */
 	public void reload()
 	{
 		clear();
 		load();
 	}
 	
+	/**
+	 * Method log.
+	 */
 	@Override
 	public void log()
 	{
@@ -133,12 +177,19 @@ public final class StringHolder extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

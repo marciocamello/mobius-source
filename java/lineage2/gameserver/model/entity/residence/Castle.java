@@ -49,6 +49,10 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("unchecked")
 public class Castle extends Residence
 {
@@ -56,35 +60,108 @@ public class Castle extends Residence
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Castle.class);
+	/**
+	 * Field CASTLE_MANOR_DELETE_PRODUCTION. (value is ""DELETE FROM castle_manor_production WHERE castle_id=?;"")
+	 */
 	private static final String CASTLE_MANOR_DELETE_PRODUCTION = "DELETE FROM castle_manor_production WHERE castle_id=?;";
+	/**
+	 * Field CASTLE_MANOR_DELETE_PRODUCTION_PERIOD. (value is ""DELETE FROM castle_manor_production WHERE castle_id=? AND period=?;"")
+	 */
 	private static final String CASTLE_MANOR_DELETE_PRODUCTION_PERIOD = "DELETE FROM castle_manor_production WHERE castle_id=? AND period=?;";
+	/**
+	 * Field CASTLE_MANOR_DELETE_PROCURE. (value is ""DELETE FROM castle_manor_procure WHERE castle_id=?;"")
+	 */
 	private static final String CASTLE_MANOR_DELETE_PROCURE = "DELETE FROM castle_manor_procure WHERE castle_id=?;";
+	/**
+	 * Field CASTLE_MANOR_DELETE_PROCURE_PERIOD. (value is ""DELETE FROM castle_manor_procure WHERE castle_id=? AND period=?;"")
+	 */
 	private static final String CASTLE_MANOR_DELETE_PROCURE_PERIOD = "DELETE FROM castle_manor_procure WHERE castle_id=? AND period=?;";
+	/**
+	 * Field CASTLE_UPDATE_CROP. (value is ""UPDATE castle_manor_procure SET can_buy=? WHERE crop_id=? AND castle_id=? AND period=?"")
+	 */
 	private static final String CASTLE_UPDATE_CROP = "UPDATE castle_manor_procure SET can_buy=? WHERE crop_id=? AND castle_id=? AND period=?";
+	/**
+	 * Field CASTLE_UPDATE_SEED. (value is ""UPDATE castle_manor_production SET can_produce=? WHERE seed_id=? AND castle_id=? AND period=?"")
+	 */
 	private static final String CASTLE_UPDATE_SEED = "UPDATE castle_manor_production SET can_produce=? WHERE seed_id=? AND castle_id=? AND period=?";
+	/**
+	 * Field _merchantGuards.
+	 */
 	private final IntObjectMap<MerchantGuard> _merchantGuards = new HashIntObjectMap<>();
+	/**
+	 * Field _relatedFortresses.
+	 */
 	private final IntObjectMap<List> _relatedFortresses = new CTreeIntObjectMap<>();
+	/**
+	 * Field _dominion.
+	 */
 	private Dominion _dominion;
+	/**
+	 * Field _procure.
+	 */
 	private List<CropProcure> _procure;
+	/**
+	 * Field _production.
+	 */
 	private List<SeedProduction> _production;
+	/**
+	 * Field _procureNext.
+	 */
 	private List<CropProcure> _procureNext;
+	/**
+	 * Field _productionNext.
+	 */
 	private List<SeedProduction> _productionNext;
+	/**
+	 * Field _isNextPeriodApproved.
+	 */
 	private boolean _isNextPeriodApproved;
+	/**
+	 * Field _TaxPercent.
+	 */
 	private int _TaxPercent;
+	/**
+	 * Field _TaxRate.
+	 */
 	private double _TaxRate;
+	/**
+	 * Field _treasury.
+	 */
 	private long _treasury;
+	/**
+	 * Field _collectedShops.
+	 */
 	private long _collectedShops;
+	/**
+	 * Field _collectedSeed.
+	 */
 	private long _collectedSeed;
+	/**
+	 * Field _npcStringName.
+	 */
 	private final NpcString _npcStringName;
+	/**
+	 * Field _spawnMerchantTickets.
+	 */
 	private final Set<ItemInstance> _spawnMerchantTickets = new CopyOnWriteArraySet<>();
 	
+	/**
+	 * Constructor for Castle.
+	 * @param set StatsSet
+	 */
 	public Castle(StatsSet set)
 	{
 		super(set);
 		_npcStringName = NpcString.valueOf(1001000 + _id);
 	}
 	
+	/**
+	 * Method init.
+	 */
 	@Override
 	public void init()
 	{
@@ -108,12 +185,20 @@ public class Castle extends Residence
 		}
 	}
 	
+	/**
+	 * Method getType.
+	 * @return ResidenceType
+	 */
 	@Override
 	public ResidenceType getType()
 	{
 		return ResidenceType.Castle;
 	}
 	
+	/**
+	 * Method changeOwner.
+	 * @param newOwner Clan
+	 */
 	@Override
 	public void changeOwner(Clan newOwner)
 	{
@@ -177,6 +262,9 @@ public class Castle extends Residence
 		update();
 	}
 	
+	/**
+	 * Method loadData.
+	 */
 	@Override
 	protected void loadData()
 	{
@@ -193,17 +281,29 @@ public class Castle extends Residence
 		CastleHiredGuardDAO.getInstance().load(this);
 	}
 	
+	/**
+	 * Method setTaxPercent.
+	 * @param p int
+	 */
 	public void setTaxPercent(int p)
 	{
 		_TaxPercent = Math.min(Math.max(0, p), 100);
 		_TaxRate = _TaxPercent / 100.0;
 	}
 	
+	/**
+	 * Method setTreasury.
+	 * @param t long
+	 */
 	public void setTreasury(long t)
 	{
 		_treasury = t;
 	}
 	
+	/**
+	 * Method updateOwnerInDB.
+	 * @param clan Clan
+	 */
 	private void updateOwnerInDB(Clan clan)
 	{
 		_owner = clan;
@@ -235,6 +335,10 @@ public class Castle extends Residence
 		}
 	}
 	
+	/**
+	 * Method getTaxPercent.
+	 * @return int
+	 */
 	public int getTaxPercent()
 	{
 		if (_TaxPercent > 15)
@@ -244,31 +348,57 @@ public class Castle extends Residence
 		return _TaxPercent;
 	}
 	
+	/**
+	 * Method getTaxPercent0.
+	 * @return int
+	 */
 	public int getTaxPercent0()
 	{
 		return _TaxPercent;
 	}
 	
+	/**
+	 * Method getCollectedShops.
+	 * @return long
+	 */
 	public long getCollectedShops()
 	{
 		return _collectedShops;
 	}
 	
+	/**
+	 * Method getCollectedSeed.
+	 * @return long
+	 */
 	public long getCollectedSeed()
 	{
 		return _collectedSeed;
 	}
 	
+	/**
+	 * Method setCollectedShops.
+	 * @param value long
+	 */
 	public void setCollectedShops(long value)
 	{
 		_collectedShops = value;
 	}
 	
+	/**
+	 * Method setCollectedSeed.
+	 * @param value long
+	 */
 	public void setCollectedSeed(long value)
 	{
 		_collectedSeed = value;
 	}
 	
+	/**
+	 * Method addToTreasury.
+	 * @param amount long
+	 * @param shop boolean
+	 * @param seed boolean
+	 */
 	public void addToTreasury(long amount, boolean shop, boolean seed)
 	{
 		if (getOwnerId() <= 0)
@@ -303,6 +433,12 @@ public class Castle extends Residence
 		addToTreasuryNoTax(amount, shop, seed);
 	}
 	
+	/**
+	 * Method addToTreasuryNoTax.
+	 * @param amount long
+	 * @param shop boolean
+	 * @param seed boolean
+	 */
 	public void addToTreasuryNoTax(long amount, boolean shop, boolean seed)
 	{
 		if (getOwnerId() <= 0)
@@ -327,6 +463,11 @@ public class Castle extends Residence
 		update();
 	}
 	
+	/**
+	 * Method getCropRewardType.
+	 * @param crop int
+	 * @return int
+	 */
 	public int getCropRewardType(int crop)
 	{
 		int rw = 0;
@@ -340,6 +481,11 @@ public class Castle extends Residence
 		return rw;
 	}
 	
+	/**
+	 * Method setTaxPercent.
+	 * @param activeChar Player
+	 * @param taxPercent int
+	 */
 	public void setTaxPercent(Player activeChar, int taxPercent)
 	{
 		setTaxPercent(taxPercent);
@@ -351,6 +497,10 @@ public class Castle extends Residence
 		}
 	}
 	
+	/**
+	 * Method getTaxRate.
+	 * @return double
+	 */
 	public double getTaxRate()
 	{
 		if (_TaxRate > 0.15)
@@ -360,21 +510,40 @@ public class Castle extends Residence
 		return _TaxRate;
 	}
 	
+	/**
+	 * Method getTreasury.
+	 * @return long
+	 */
 	public long getTreasury()
 	{
 		return _treasury;
 	}
 	
+	/**
+	 * Method getSeedProduction.
+	 * @param period int
+	 * @return List<SeedProduction>
+	 */
 	public List<SeedProduction> getSeedProduction(int period)
 	{
 		return period == CastleManorManager.PERIOD_CURRENT ? _production : _productionNext;
 	}
 	
+	/**
+	 * Method getCropProcure.
+	 * @param period int
+	 * @return List<CropProcure>
+	 */
 	public List<CropProcure> getCropProcure(int period)
 	{
 		return period == CastleManorManager.PERIOD_CURRENT ? _procure : _procureNext;
 	}
 	
+	/**
+	 * Method setSeedProduction.
+	 * @param seed List<SeedProduction>
+	 * @param period int
+	 */
 	public void setSeedProduction(List<SeedProduction> seed, int period)
 	{
 		if (period == CastleManorManager.PERIOD_CURRENT)
@@ -387,6 +556,11 @@ public class Castle extends Residence
 		}
 	}
 	
+	/**
+	 * Method setCropProcure.
+	 * @param crop List<CropProcure>
+	 * @param period int
+	 */
 	public void setCropProcure(List<CropProcure> crop, int period)
 	{
 		if (period == CastleManorManager.PERIOD_CURRENT)
@@ -399,6 +573,12 @@ public class Castle extends Residence
 		}
 	}
 	
+	/**
+	 * Method getSeed.
+	 * @param seedId int
+	 * @param period int
+	 * @return SeedProduction
+	 */
 	public synchronized SeedProduction getSeed(int seedId, int period)
 	{
 		for (SeedProduction seed : getSeedProduction(period))
@@ -411,6 +591,12 @@ public class Castle extends Residence
 		return null;
 	}
 	
+	/**
+	 * Method getCrop.
+	 * @param cropId int
+	 * @param period int
+	 * @return CropProcure
+	 */
 	public synchronized CropProcure getCrop(int cropId, int period)
 	{
 		for (CropProcure crop : getCropProcure(period))
@@ -423,6 +609,11 @@ public class Castle extends Residence
 		return null;
 	}
 	
+	/**
+	 * Method getManorCost.
+	 * @param period int
+	 * @return long
+	 */
 	public long getManorCost(int period)
 	{
 		List<CropProcure> procure;
@@ -455,6 +646,9 @@ public class Castle extends Residence
 		return total;
 	}
 	
+	/**
+	 * Method saveSeedData.
+	 */
 	public void saveSeedData()
 	{
 		Connection con = null;
@@ -521,6 +715,10 @@ public class Castle extends Residence
 		}
 	}
 	
+	/**
+	 * Method saveSeedData.
+	 * @param period int
+	 */
 	public void saveSeedData(int period)
 	{
 		Connection con = null;
@@ -568,6 +766,9 @@ public class Castle extends Residence
 		}
 	}
 	
+	/**
+	 * Method saveCropData.
+	 */
 	public void saveCropData()
 	{
 		Connection con = null;
@@ -634,6 +835,10 @@ public class Castle extends Residence
 		}
 	}
 	
+	/**
+	 * Method saveCropData.
+	 * @param period int
+	 */
 	public void saveCropData(int period)
 	{
 		Connection con = null;
@@ -681,6 +886,12 @@ public class Castle extends Residence
 		}
 	}
 	
+	/**
+	 * Method updateCrop.
+	 * @param cropId int
+	 * @param amount long
+	 * @param period int
+	 */
 	public void updateCrop(int cropId, long amount, int period)
 	{
 		Connection con = null;
@@ -705,6 +916,12 @@ public class Castle extends Residence
 		}
 	}
 	
+	/**
+	 * Method updateSeed.
+	 * @param seedId int
+	 * @param amount long
+	 * @param period int
+	 */
 	public void updateSeed(int seedId, long amount, int period)
 	{
 		Connection con = null;
@@ -729,26 +946,47 @@ public class Castle extends Residence
 		}
 	}
 	
+	/**
+	 * Method isNextPeriodApproved.
+	 * @return boolean
+	 */
 	public boolean isNextPeriodApproved()
 	{
 		return _isNextPeriodApproved;
 	}
 	
+	/**
+	 * Method setNextPeriodApproved.
+	 * @param val boolean
+	 */
 	public void setNextPeriodApproved(boolean val)
 	{
 		_isNextPeriodApproved = val;
 	}
 	
+	/**
+	 * Method getDominion.
+	 * @return Dominion
+	 */
 	public Dominion getDominion()
 	{
 		return _dominion;
 	}
 	
+	/**
+	 * Method setDominion.
+	 * @param dominion Dominion
+	 */
 	public void setDominion(Dominion dominion)
 	{
 		_dominion = dominion;
 	}
 	
+	/**
+	 * Method addRelatedFortress.
+	 * @param type int
+	 * @param fortress int
+	 */
 	public void addRelatedFortress(int type, int fortress)
 	{
 		List<Integer> fortresses = _relatedFortresses.get(type);
@@ -759,6 +997,10 @@ public class Castle extends Residence
 		fortresses.add(fortress);
 	}
 	
+	/**
+	 * Method getDomainFortressContract.
+	 * @return int
+	 */
 	public int getDomainFortressContract()
 	{
 		List<Fortress> list = _relatedFortresses.get(Fortress.DOMAIN);
@@ -776,42 +1018,74 @@ public class Castle extends Residence
 		return 0;
 	}
 	
+	/**
+	 * Method update.
+	 * @see lineage2.commons.dao.JdbcEntity#update()
+	 */
 	@Override
 	public void update()
 	{
 		CastleDAO.getInstance().update(this);
 	}
 	
+	/**
+	 * Method getNpcStringName.
+	 * @return NpcString
+	 */
 	public NpcString getNpcStringName()
 	{
 		return _npcStringName;
 	}
 	
+	/**
+	 * Method getRelatedFortresses.
+	 * @return IntObjectMap<List>
+	 */
 	public IntObjectMap<List> getRelatedFortresses()
 	{
 		return _relatedFortresses;
 	}
 	
+	/**
+	 * Method addMerchantGuard.
+	 * @param merchantGuard MerchantGuard
+	 */
 	public void addMerchantGuard(MerchantGuard merchantGuard)
 	{
 		_merchantGuards.put(merchantGuard.getItemId(), merchantGuard);
 	}
 	
+	/**
+	 * Method getMerchantGuard.
+	 * @param itemId int
+	 * @return MerchantGuard
+	 */
 	public MerchantGuard getMerchantGuard(int itemId)
 	{
 		return _merchantGuards.get(itemId);
 	}
 	
+	/**
+	 * Method getMerchantGuards.
+	 * @return IntObjectMap<MerchantGuard>
+	 */
 	public IntObjectMap<MerchantGuard> getMerchantGuards()
 	{
 		return _merchantGuards;
 	}
 	
+	/**
+	 * Method getSpawnMerchantTickets.
+	 * @return Set<ItemInstance>
+	 */
 	public Set<ItemInstance> getSpawnMerchantTickets()
 	{
 		return _spawnMerchantTickets;
 	}
 	
+	/**
+	 * Method startCycleTask.
+	 */
 	@Override
 	public void startCycleTask()
 	{

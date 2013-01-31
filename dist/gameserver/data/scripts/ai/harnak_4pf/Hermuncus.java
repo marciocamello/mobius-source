@@ -18,16 +18,30 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Hermuncus extends DefaultAI
 {
+	/**
+	 * Field LAST_SPAWN.
+	 */
 	private final boolean LAST_SPAWN;
 	
+	/**
+	 * Constructor for Hermuncus.
+	 * @param actor NpcInstance
+	 */
 	public Hermuncus(NpcInstance actor)
 	{
 		super(actor);
 		LAST_SPAWN = actor.getParameter("lastSpawn", false);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -38,6 +52,12 @@ public class Hermuncus extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtMenuSelected.
+	 * @param player Player
+	 * @param ask int
+	 * @param reply int
+	 */
 	@Override
 	protected void onEvtMenuSelected(Player player, int ask, int reply)
 	{

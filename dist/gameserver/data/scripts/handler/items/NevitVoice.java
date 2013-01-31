@@ -16,19 +16,37 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NevitVoice extends SimpleItemHandler
 {
+	/**
+	 * Field ITEM_IDS.
+	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
 		17094
 	};
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{
 		return ITEM_IDS;
 	}
 	
+	/**
+	 * Method useItemImpl.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{

@@ -21,22 +21,68 @@ import lineage2.loginserver.gameservercon.lspackets.LoginServerFail;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AuthRequest extends ReceivablePacket
 {
+	/**
+	 * Field _log.
+	 */
 	private final static Logger _log = LoggerFactory.getLogger(AuthRequest.class);
+	/**
+	 * Field _protocolVersion.
+	 */
 	private int _protocolVersion;
+	/**
+	 * Field requestId.
+	 */
 	private int requestId;
+	/**
+	 * Field acceptAlternateID.
+	 */
 	private boolean acceptAlternateID;
+	/**
+	 * Field externalIp.
+	 */
 	private String externalIp;
+	/**
+	 * Field internalIp.
+	 */
 	private String internalIp;
+	/**
+	 * Field maxOnline.
+	 */
 	private int maxOnline;
+	/**
+	 * Field _serverType.
+	 */
 	private int _serverType;
+	/**
+	 * Field _ageLimit.
+	 */
 	private int _ageLimit;
+	/**
+	 * Field _gmOnly.
+	 */
 	private boolean _gmOnly;
+	/**
+	 * Field _brackets.
+	 */
 	private boolean _brackets;
+	/**
+	 * Field _pvp.
+	 */
 	private boolean _pvp;
+	/**
+	 * Field ports.
+	 */
 	private int[] ports;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -58,6 +104,9 @@ public class AuthRequest extends ReceivablePacket
 		maxOnline = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

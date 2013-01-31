@@ -16,11 +16,24 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.PledgeReceiveWarList;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPledgeWarList extends L2GameClientPacket
 {
+	/**
+	 * Field _type.
+	 */
 	static int _type;
+	/**
+	 * Field _page.
+	 */
 	private int _page;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -28,6 +41,9 @@ public class RequestPledgeWarList extends L2GameClientPacket
 		_type = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

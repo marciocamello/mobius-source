@@ -17,39 +17,76 @@ import java.nio.ByteBuffer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class ReceivablePacket extends lineage2.commons.net.nio.ReceivablePacket<GameServer>
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ReceivablePacket.class);
+	/**
+	 * Field _gs.
+	 */
 	protected GameServer _gs;
+	/**
+	 * Field _buf.
+	 */
 	protected ByteBuffer _buf;
 	
+	/**
+	 * Method setByteBuffer.
+	 * @param buf ByteBuffer
+	 */
 	protected void setByteBuffer(ByteBuffer buf)
 	{
 		_buf = buf;
 	}
 	
+	/**
+	 * Method getByteBuffer.
+	 * @return ByteBuffer
+	 */
 	@Override
 	protected ByteBuffer getByteBuffer()
 	{
 		return _buf;
 	}
 	
+	/**
+	 * Method setClient.
+	 * @param gs GameServer
+	 */
 	protected void setClient(GameServer gs)
 	{
 		_gs = gs;
 	}
 	
+	/**
+	 * Method getClient.
+	 * @return GameServer
+	 */
 	@Override
 	public GameServer getClient()
 	{
 		return _gs;
 	}
 	
+	/**
+	 * Method getGameServer.
+	 * @return GameServer
+	 */
 	public GameServer getGameServer()
 	{
 		return getClient();
 	}
 	
+	/**
+	 * Method read.
+	 * @return boolean
+	 */
 	@Override
 	public final boolean read()
 	{
@@ -64,6 +101,10 @@ public abstract class ReceivablePacket extends lineage2.commons.net.nio.Receivab
 		return true;
 	}
 	
+	/**
+	 * Method run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public final void run()
 	{
@@ -77,10 +118,20 @@ public abstract class ReceivablePacket extends lineage2.commons.net.nio.Receivab
 		}
 	}
 	
+	/**
+	 * Method readImpl.
+	 */
 	protected abstract void readImpl();
 	
+	/**
+	 * Method runImpl.
+	 */
 	protected abstract void runImpl();
 	
+	/**
+	 * Method sendPacket.
+	 * @param packet SendablePacket
+	 */
 	public void sendPacket(SendablePacket packet)
 	{
 		getGameServer().sendPacket(packet);

@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConfirmDlg extends SysMsgContainer<ConfirmDlg>
 {
+	/**
+	 * Field _time.
+	 */
 	private final int _time;
+	/**
+	 * Field _requestId.
+	 */
 	private int _requestId;
 	
+	/**
+	 * Constructor for ConfirmDlg.
+	 * @param msg SystemMsg
+	 * @param time int
+	 */
 	public ConfirmDlg(SystemMsg msg, int time)
 	{
 		super(msg);
 		_time = time;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -34,6 +52,10 @@ public class ConfirmDlg extends SysMsgContainer<ConfirmDlg>
 		writeD(_requestId);
 	}
 	
+	/**
+	 * Method setRequestId.
+	 * @param requestId int
+	 */
 	public void setRequestId(int requestId)
 	{
 		_requestId = requestId;

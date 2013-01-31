@@ -12,12 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExPutItemResultForVariationMake extends L2GameServerPacket
 {
+	/**
+	 * Field _itemObjId.
+	 */
 	private final int _itemObjId;
+	/**
+	 * Field _unk1.
+	 */
 	private final int _unk1;
+	/**
+	 * Field _unk2.
+	 */
 	private final int _unk2;
 	
+	/**
+	 * Constructor for ExPutItemResultForVariationMake.
+	 * @param itemObjId int
+	 */
 	public ExPutItemResultForVariationMake(int itemObjId)
 	{
 		_itemObjId = itemObjId;
@@ -25,6 +42,9 @@ public class ExPutItemResultForVariationMake extends L2GameServerPacket
 		_unk2 = 1;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

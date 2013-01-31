@@ -24,32 +24,59 @@ import lineage2.gameserver.templates.mapregion.DomainArea;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DomainParser extends AbstractFileParser<MapRegionManager>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final DomainParser _instance = new DomainParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return DomainParser
+	 */
 	public static DomainParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for DomainParser.
+	 */
 	protected DomainParser()
 	{
 		super(MapRegionManager.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/mapregion/domains.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "domains.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

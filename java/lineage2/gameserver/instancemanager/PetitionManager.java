@@ -34,59 +34,178 @@ import lineage2.gameserver.tables.GmListTable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class PetitionManager implements IPetitionHandler
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(PetitionManager.class.getName());
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum PetitionState
 	{
+		/**
+		 * Field Pending.
+		 */
 		Pending,
+		/**
+		 * Field Responder_Cancel.
+		 */
 		Responder_Cancel,
+		/**
+		 * Field Responder_Missing.
+		 */
 		Responder_Missing,
+		/**
+		 * Field Responder_Reject.
+		 */
 		Responder_Reject,
+		/**
+		 * Field Responder_Complete.
+		 */
 		Responder_Complete,
+		/**
+		 * Field Petitioner_Cancel.
+		 */
 		Petitioner_Cancel,
+		/**
+		 * Field Petitioner_Missing.
+		 */
 		Petitioner_Missing,
+		/**
+		 * Field In_Process.
+		 */
 		In_Process,
+		/**
+		 * Field Completed.
+		 */
 		Completed
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum PetitionType
 	{
+		/**
+		 * Field Immobility.
+		 */
 		Immobility,
+		/**
+		 * Field Recovery_Related.
+		 */
 		Recovery_Related,
+		/**
+		 * Field Bug_Report.
+		 */
 		Bug_Report,
+		/**
+		 * Field Quest_Related.
+		 */
 		Quest_Related,
+		/**
+		 * Field Bad_User.
+		 */
 		Bad_User,
+		/**
+		 * Field Suggestions.
+		 */
 		Suggestions,
+		/**
+		 * Field Game_Tip.
+		 */
 		Game_Tip,
+		/**
+		 * Field Operation_Related.
+		 */
 		Operation_Related,
+		/**
+		 * Field Other.
+		 */
 		Other
 	}
 	
+	/**
+	 * Field _instance.
+	 */
 	private static final PetitionManager _instance = new PetitionManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return PetitionManager
+	 */
 	public static final PetitionManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _nextId.
+	 */
 	private final AtomicInteger _nextId = new AtomicInteger();
+	/**
+	 * Field _pendingPetitions.
+	 */
 	private final Map<Integer, Petition> _pendingPetitions = new ConcurrentHashMap<>();
+	/**
+	 * Field _completedPetitions.
+	 */
 	private final Map<Integer, Petition> _completedPetitions = new ConcurrentHashMap<>();
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Petition
 	{
+		/**
+		 * Field _submitTime.
+		 */
 		private final long _submitTime = System.currentTimeMillis();
+		/**
+		 * Field _endTime.
+		 */
 		private long _endTime = -1;
+		/**
+		 * Field _id.
+		 */
 		private final int _id;
+		/**
+		 * Field _type.
+		 */
 		private final PetitionType _type;
+		/**
+		 * Field _state.
+		 */
 		private PetitionState _state = PetitionState.Pending;
+		/**
+		 * Field _content.
+		 */
 		private final String _content;
+		/**
+		 * Field _messageLog.
+		 */
 		private final List<Say2> _messageLog = new ArrayList<>();
+		/**
+		 * Field _petitioner.
+		 */
 		private final int _petitioner;
+		/**
+		 * Field _responder.
+		 */
 		private int _responder;
 		
+		/**
+		 * Constructor for Petition.
+		 * @param petitioner Player
+		 * @param petitionText String
+		 * @param petitionType int
+		 */
 		public Petition(Player petitioner, String petitionText, int petitionType)
 		{
 			_id = getNextId();
@@ -95,16 +214,30 @@ public final class PetitionManager implements IPetitionHandler
 			_petitioner = petitioner.getObjectId();
 		}
 		
+		/**
+		 * Method addLogMessage.
+		 * @param cs Say2
+		 * @return boolean
+		 */
 		protected boolean addLogMessage(Say2 cs)
 		{
 			return _messageLog.add(cs);
 		}
 		
+		/**
+		 * Method getLogMessages.
+		 * @return List<Say2>
+		 */
 		protected List<Say2> getLogMessages()
 		{
 			return _messageLog;
 		}
 		
+		/**
+		 * Method endPetitionConsultation.
+		 * @param endState PetitionState
+		 * @return boolean
+		 */
 		public boolean endPetitionConsultation(PetitionState endState)
 		{
 			setState(endState);
@@ -132,47 +265,83 @@ public final class PetitionManager implements IPetitionHandler
 			return getPendingPetitions().remove(getId()) != null;
 		}
 		
+		/**
+		 * Method getContent.
+		 * @return String
+		 */
 		public String getContent()
 		{
 			return _content;
 		}
 		
+		/**
+		 * Method getId.
+		 * @return int
+		 */
 		public int getId()
 		{
 			return _id;
 		}
 		
+		/**
+		 * Method getPetitioner.
+		 * @return Player
+		 */
 		public Player getPetitioner()
 		{
 			return World.getPlayer(_petitioner);
 		}
 		
+		/**
+		 * Method getResponder.
+		 * @return Player
+		 */
 		public Player getResponder()
 		{
 			return World.getPlayer(_responder);
 		}
 		
+		/**
+		 * Method getEndTime.
+		 * @return long
+		 */
 		@SuppressWarnings("unused")
 		public long getEndTime()
 		{
 			return _endTime;
 		}
 		
+		/**
+		 * Method getSubmitTime.
+		 * @return long
+		 */
 		public long getSubmitTime()
 		{
 			return _submitTime;
 		}
 		
+		/**
+		 * Method getState.
+		 * @return PetitionState
+		 */
 		public PetitionState getState()
 		{
 			return _state;
 		}
 		
+		/**
+		 * Method getTypeAsString.
+		 * @return String
+		 */
 		public String getTypeAsString()
 		{
 			return _type.toString().replace("_", " ");
 		}
 		
+		/**
+		 * Method sendPetitionerPacket.
+		 * @param responsePacket L2GameServerPacket
+		 */
 		public void sendPetitionerPacket(L2GameServerPacket responsePacket)
 		{
 			if ((getPetitioner() == null) || !getPetitioner().isOnline())
@@ -182,6 +351,10 @@ public final class PetitionManager implements IPetitionHandler
 			getPetitioner().sendPacket(responsePacket);
 		}
 		
+		/**
+		 * Method sendResponderPacket.
+		 * @param responsePacket L2GameServerPacket
+		 */
 		public void sendResponderPacket(L2GameServerPacket responsePacket)
 		{
 			if ((getResponder() == null) || !getResponder().isOnline())
@@ -192,11 +365,19 @@ public final class PetitionManager implements IPetitionHandler
 			getResponder().sendPacket(responsePacket);
 		}
 		
+		/**
+		 * Method setState.
+		 * @param state PetitionState
+		 */
 		public void setState(PetitionState state)
 		{
 			_state = state;
 		}
 		
+		/**
+		 * Method setResponder.
+		 * @param responder Player
+		 */
 		public void setResponder(Player responder)
 		{
 			if (getResponder() != null)
@@ -207,16 +388,26 @@ public final class PetitionManager implements IPetitionHandler
 		}
 	}
 	
+	/**
+	 * Constructor for PetitionManager.
+	 */
 	private PetitionManager()
 	{
 		_log.info("Initializing PetitionManager");
 	}
 	
+	/**
+	 * Method getNextId.
+	 * @return int
+	 */
 	public int getNextId()
 	{
 		return _nextId.incrementAndGet();
 	}
 	
+	/**
+	 * Method clearCompletedPetitions.
+	 */
 	public void clearCompletedPetitions()
 	{
 		int numPetitions = getPendingPetitionCount();
@@ -224,6 +415,9 @@ public final class PetitionManager implements IPetitionHandler
 		_log.info("PetitionManager: Completed petition data cleared. " + numPetitions + " petition(s) removed.");
 	}
 	
+	/**
+	 * Method clearPendingPetitions.
+	 */
 	public void clearPendingPetitions()
 	{
 		int numPetitions = getPendingPetitionCount();
@@ -231,6 +425,12 @@ public final class PetitionManager implements IPetitionHandler
 		_log.info("PetitionManager: Pending petition queue cleared. " + numPetitions + " petition(s) removed.");
 	}
 	
+	/**
+	 * Method acceptPetition.
+	 * @param respondingAdmin Player
+	 * @param petitionId int
+	 * @return boolean
+	 */
 	public boolean acceptPetition(Player respondingAdmin, int petitionId)
 	{
 		if (!isValidPetition(petitionId))
@@ -250,6 +450,11 @@ public final class PetitionManager implements IPetitionHandler
 		return true;
 	}
 	
+	/**
+	 * Method cancelActivePetition.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean cancelActivePetition(Player player)
 	{
 		for (Petition currPetition : getPendingPetitions().values())
@@ -266,6 +471,10 @@ public final class PetitionManager implements IPetitionHandler
 		return false;
 	}
 	
+	/**
+	 * Method checkPetitionMessages.
+	 * @param petitioner Player
+	 */
 	public void checkPetitionMessages(Player petitioner)
 	{
 		if (petitioner != null)
@@ -288,6 +497,11 @@ public final class PetitionManager implements IPetitionHandler
 		}
 	}
 	
+	/**
+	 * Method endActivePetition.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean endActivePetition(Player player)
 	{
 		if (!player.isGM())
@@ -308,21 +522,38 @@ public final class PetitionManager implements IPetitionHandler
 		return false;
 	}
 	
+	/**
+	 * Method getCompletedPetitions.
+	 * @return Map<Integer,Petition>
+	 */
 	protected Map<Integer, Petition> getCompletedPetitions()
 	{
 		return _completedPetitions;
 	}
 	
+	/**
+	 * Method getPendingPetitions.
+	 * @return Map<Integer,Petition>
+	 */
 	protected Map<Integer, Petition> getPendingPetitions()
 	{
 		return _pendingPetitions;
 	}
 	
+	/**
+	 * Method getPendingPetitionCount.
+	 * @return int
+	 */
 	public int getPendingPetitionCount()
 	{
 		return getPendingPetitions().size();
 	}
 	
+	/**
+	 * Method getPlayerTotalPetitionCount.
+	 * @param player Player
+	 * @return int
+	 */
 	public int getPlayerTotalPetitionCount(Player player)
 	{
 		if (player == null)
@@ -355,6 +586,10 @@ public final class PetitionManager implements IPetitionHandler
 		return petitionCount;
 	}
 	
+	/**
+	 * Method isPetitionInProcess.
+	 * @return boolean
+	 */
 	public boolean isPetitionInProcess()
 	{
 		for (Petition currPetition : getPendingPetitions().values())
@@ -371,6 +606,11 @@ public final class PetitionManager implements IPetitionHandler
 		return false;
 	}
 	
+	/**
+	 * Method isPetitionInProcess.
+	 * @param petitionId int
+	 * @return boolean
+	 */
 	public boolean isPetitionInProcess(int petitionId)
 	{
 		if (!isValidPetition(petitionId))
@@ -381,6 +621,11 @@ public final class PetitionManager implements IPetitionHandler
 		return currPetition.getState() == PetitionState.In_Process;
 	}
 	
+	/**
+	 * Method isPlayerInConsultation.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean isPlayerInConsultation(Player player)
 	{
 		if (player != null)
@@ -404,11 +649,20 @@ public final class PetitionManager implements IPetitionHandler
 		return false;
 	}
 	
+	/**
+	 * Method isPetitioningAllowed.
+	 * @return boolean
+	 */
 	public boolean isPetitioningAllowed()
 	{
 		return Config.PETITIONING_ALLOWED;
 	}
 	
+	/**
+	 * Method isPlayerPetitionPending.
+	 * @param petitioner Player
+	 * @return boolean
+	 */
 	public boolean isPlayerPetitionPending(Player petitioner)
 	{
 		if (petitioner != null)
@@ -428,11 +682,22 @@ public final class PetitionManager implements IPetitionHandler
 		return false;
 	}
 	
+	/**
+	 * Method isValidPetition.
+	 * @param petitionId int
+	 * @return boolean
+	 */
 	private boolean isValidPetition(int petitionId)
 	{
 		return getPendingPetitions().containsKey(petitionId);
 	}
 	
+	/**
+	 * Method rejectPetition.
+	 * @param respondingAdmin Player
+	 * @param petitionId int
+	 * @return boolean
+	 */
 	public boolean rejectPetition(Player respondingAdmin, int petitionId)
 	{
 		if (!isValidPetition(petitionId))
@@ -448,6 +713,12 @@ public final class PetitionManager implements IPetitionHandler
 		return currPetition.endPetitionConsultation(PetitionState.Responder_Reject);
 	}
 	
+	/**
+	 * Method sendActivePetitionMessage.
+	 * @param player Player
+	 * @param messageText String
+	 * @return boolean
+	 */
 	public boolean sendActivePetitionMessage(Player player, String messageText)
 	{
 		Say2 cs;
@@ -477,6 +748,10 @@ public final class PetitionManager implements IPetitionHandler
 		return false;
 	}
 	
+	/**
+	 * Method sendPendingPetitionList.
+	 * @param activeChar Player
+	 */
 	public void sendPendingPetitionList(Player activeChar)
 	{
 		final StringBuilder htmlContent = new StringBuilder(600 + (getPendingPetitionCount() * 300));
@@ -524,6 +799,13 @@ public final class PetitionManager implements IPetitionHandler
 		activeChar.sendPacket(htmlMsg);
 	}
 	
+	/**
+	 * Method submitPetition.
+	 * @param petitioner Player
+	 * @param petitionText String
+	 * @param petitionType int
+	 * @return int
+	 */
 	public int submitPetition(Player petitioner, String petitionText, int petitionType)
 	{
 		Petition newPetition = new Petition(petitioner, petitionText, petitionType);
@@ -534,6 +816,11 @@ public final class PetitionManager implements IPetitionHandler
 		return newPetitionId;
 	}
 	
+	/**
+	 * Method viewPetition.
+	 * @param activeChar Player
+	 * @param petitionId int
+	 */
 	public void viewPetition(Player activeChar, int petitionId)
 	{
 		if (!activeChar.isGM())
@@ -557,6 +844,13 @@ public final class PetitionManager implements IPetitionHandler
 		activeChar.sendPacket(html);
 	}
 	
+	/**
+	 * Method handle.
+	 * @param player Player
+	 * @param id int
+	 * @param txt String
+	 * @see lineage2.gameserver.handler.petition.IPetitionHandler#handle(Player, int, String)
+	 */
 	@Override
 	public void handle(Player player, int id, String txt)
 	{

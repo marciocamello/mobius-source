@@ -23,13 +23,32 @@ import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.NpcUtils;
 import lineage2.gameserver.utils.PositionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Birthday extends Functions
 {
+	/**
+	 * Field EXPLORERHAT. (value is 10250)
+	 */
 	private static final int EXPLORERHAT = 10250;
+	/**
+	 * Field HAT. (value is 13488)
+	 */
 	private static final int HAT = 13488;
+	/**
+	 * Field NPC_ALEGRIA. (value is 32600)
+	 */
 	private static final int NPC_ALEGRIA = 32600;
+	/**
+	 * Field msgSpawned. (value is ""scripts/services/Birthday-spawned.htm"")
+	 */
 	private static final String msgSpawned = "scripts/services/Birthday-spawned.htm";
 	
+	/**
+	 * Method summonAlegria.
+	 */
 	public void summonAlegria()
 	{
 		Player player = getSelf();
@@ -60,6 +79,9 @@ public class Birthday extends Functions
 		}
 	}
 	
+	/**
+	 * Method exchangeHat.
+	 */
 	public void exchangeHat()
 	{
 		Player player = getSelf();

@@ -25,10 +25,20 @@ import lineage2.gameserver.tables.ClanTable;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowAgitInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _clanHalls.
+	 */
 	private List<AgitInfo> _clanHalls = Collections.emptyList();
 	
+	/**
+	 * Constructor for ExShowAgitInfo.
+	 */
 	public ExShowAgitInfo()
 	{
 		List<ClanHall> chs = ResidenceHolder.getInstance().getResidenceList(ClanHall.class);
@@ -56,6 +66,9 @@ public class ExShowAgitInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -70,11 +83,33 @@ public class ExShowAgitInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class AgitInfo
 	{
+		/**
+		 * Field leader_name.
+		 */
+		/**
+		 * Field clan_name.
+		 */
 		public String clan_name, leader_name;
+		/**
+		 * Field getType.
+		 */
+		/**
+		 * Field ch_id.
+		 */
 		public int ch_id, getType;
 		
+		/**
+		 * Constructor for AgitInfo.
+		 * @param clan_name String
+		 * @param leader_name String
+		 * @param ch_id int
+		 * @param lease int
+		 */
 		public AgitInfo(String clan_name, String leader_name, int ch_id, int lease)
 		{
 			this.clan_name = clan_name;

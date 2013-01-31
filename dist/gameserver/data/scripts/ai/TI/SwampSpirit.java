@@ -24,17 +24,35 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SwampSpirit extends DefaultAI
 {
+	/**
+	 * Field healSkill.
+	 */
 	private static final Skill healSkill = SkillTable.getInstance().getInfo(14064, 1);
+	/**
+	 * Field healSkillBig.
+	 */
 	private static final Skill healSkillBig = SkillTable.getInstance().getInfo(14065, 1);
 	
+	/**
+	 * Constructor for SwampSpirit.
+	 * @param actor NpcInstance
+	 */
 	public SwampSpirit(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ACTIVE_DELAY = 2000;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -73,6 +91,10 @@ public class SwampSpirit extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{

@@ -55,30 +55,81 @@ import lineage2.gameserver.utils.NpcUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DefaultAI extends CharacterAI
 {
+	/**
+	 * Field _log.
+	 */
 	protected static final Logger _log = LoggerFactory.getLogger(DefaultAI.class);
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum TaskType
 	{
+		/**
+		 * Field MOVE.
+		 */
 		MOVE,
+		/**
+		 * Field ATTACK.
+		 */
 		ATTACK,
+		/**
+		 * Field CAST.
+		 */
 		CAST,
+		/**
+		 * Field BUFF.
+		 */
 		BUFF
 	}
 	
+	/**
+	 * Field TaskDefaultWeight. (value is 10000)
+	 */
 	public static final int TaskDefaultWeight = 10000;
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class Task
 	{
+		/**
+		 * Field type.
+		 */
 		public TaskType type;
+		/**
+		 * Field skill.
+		 */
 		public Skill skill;
+		/**
+		 * Field target.
+		 */
 		public HardReference<? extends Creature> target;
+		/**
+		 * Field loc.
+		 */
 		public Location loc;
+		/**
+		 * Field pathfind.
+		 */
 		public boolean pathfind;
+		/**
+		 * Field weight.
+		 */
 		public int weight = TaskDefaultWeight;
 	}
 	
+	/**
+	 * Method addTaskCast.
+	 * @param target Creature
+	 * @param skill Skill
+	 */
 	protected void addTaskCast(Creature target, Skill skill)
 	{
 		Task task = new Task();
@@ -89,6 +140,11 @@ public class DefaultAI extends CharacterAI
 		_def_think = true;
 	}
 	
+	/**
+	 * Method addTaskBuff.
+	 * @param target Creature
+	 * @param skill Skill
+	 */
 	protected void addTaskBuff(Creature target, Skill skill)
 	{
 		Task task = new Task();
@@ -99,6 +155,10 @@ public class DefaultAI extends CharacterAI
 		_def_think = true;
 	}
 	
+	/**
+	 * Method addTaskAttack.
+	 * @param target Creature
+	 */
 	public void addTaskAttack(Creature target)
 	{
 		Task task = new Task();
@@ -108,6 +168,12 @@ public class DefaultAI extends CharacterAI
 		_def_think = true;
 	}
 	
+	/**
+	 * Method addTaskAttack.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @param weight int
+	 */
 	protected void addTaskAttack(Creature target, Skill skill, int weight)
 	{
 		Task task = new Task();
@@ -119,6 +185,11 @@ public class DefaultAI extends CharacterAI
 		_def_think = true;
 	}
 	
+	/**
+	 * Method addTaskMove.
+	 * @param loc Location
+	 * @param pathfind boolean
+	 */
 	public void addTaskMove(Location loc, boolean pathfind)
 	{
 		Task task = new Task();
@@ -129,20 +200,43 @@ public class DefaultAI extends CharacterAI
 		_def_think = true;
 	}
 	
+	/**
+	 * Method addTaskMove.
+	 * @param locX int
+	 * @param locY int
+	 * @param locZ int
+	 * @param pathfind boolean
+	 */
 	protected void addTaskMove(int locX, int locY, int locZ, boolean pathfind)
 	{
 		addTaskMove(new Location(locX, locY, locZ), pathfind);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class TaskComparator implements Comparator<Task>
 	{
+		/**
+		 * Field instance.
+		 */
 		private static final Comparator<Task> instance = new TaskComparator();
 		
+		/**
+		 * Method getInstance.
+		 * @return Comparator<Task>
+		 */
 		public static Comparator<Task> getInstance()
 		{
 			return instance;
 		}
 		
+		/**
+		 * Method compare.
+		 * @param o1 Task
+		 * @param o2 Task
+		 * @return int
+		 */
 		@Override
 		public int compare(Task o1, Task o2)
 		{
@@ -154,15 +248,28 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class Teleport extends RunnableImpl
 	{
+		/**
+		 * Field _destination.
+		 */
 		Location _destination;
 		
+		/**
+		 * Constructor for Teleport.
+		 * @param destination Location
+		 */
 		public Teleport(Location destination)
 		{
 			_destination = destination;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -174,8 +281,14 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class RunningTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -188,8 +301,14 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class MadnessTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -202,15 +321,31 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class NearestTargetComparator implements Comparator<Creature>
 	{
+		/**
+		 * Field actor.
+		 */
 		private final Creature actor;
 		
+		/**
+		 * Constructor for NearestTargetComparator.
+		 * @param actor Creature
+		 */
 		public NearestTargetComparator(Creature actor)
 		{
 			this.actor = actor;
 		}
 		
+		/**
+		 * Method compare.
+		 * @param o1 Creature
+		 * @param o2 Creature
+		 * @return int
+		 */
 		@Override
 		public int compare(Creature o1, Creature o2)
 		{
@@ -223,27 +358,91 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Field AI_TASK_ATTACK_DELAY.
+	 */
 	protected long AI_TASK_ATTACK_DELAY = Config.AI_TASK_ATTACK_DELAY;
+	/**
+	 * Field AI_TASK_ACTIVE_DELAY.
+	 */
 	protected long AI_TASK_ACTIVE_DELAY = Config.AI_TASK_ACTIVE_DELAY;
+	/**
+	 * Field AI_TASK_DELAY_CURRENT.
+	 */
 	protected long AI_TASK_DELAY_CURRENT = AI_TASK_ACTIVE_DELAY;
+	/**
+	 * Field MAX_PURSUE_RANGE.
+	 */
 	protected int MAX_PURSUE_RANGE;
+	/**
+	 * Field _aiTask.
+	 */
 	protected ScheduledFuture<?> _aiTask;
+	/**
+	 * Field _runningTask.
+	 */
 	protected ScheduledFuture<?> _runningTask;
+	/**
+	 * Field _madnessTask.
+	 */
 	public ScheduledFuture<?> _madnessTask;
+	/**
+	 * Field _thinking.
+	 */
 	private boolean _thinking = false;
+	/**
+	 * Field _def_think.
+	 */
 	protected boolean _def_think = false;
+	/**
+	 * Field _globalAggro.
+	 */
 	protected long _globalAggro;
+	/**
+	 * Field _randomAnimationEnd.
+	 */
 	protected long _randomAnimationEnd;
+	/**
+	 * Field _pathfindFails.
+	 */
 	protected int _pathfindFails;
+	/**
+	 * Field _tasks.
+	 */
 	protected final NavigableSet<Task> _tasks = new ConcurrentSkipListSet<>(TaskComparator.getInstance());
+	/**
+	 * Field _stunSkills. Field _buffSkills. Field _healSkills. Field _debuffSkills. Field _dotSkills. Field _damSkills.
+	 */
 	protected final Skill[] _damSkills, _dotSkills, _debuffSkills, _healSkills, _buffSkills, _stunSkills;
+	/**
+	 * Field _lastActiveCheck.
+	 */
 	protected long _lastActiveCheck;
+	/**
+	 * Field _checkAggroTimestamp.
+	 */
 	protected long _checkAggroTimestamp = 0;
+	/**
+	 * Field _attackTimeout.
+	 */
 	protected long _attackTimeout;
+	/**
+	 * Field _lastFactionNotifyTime.
+	 */
 	protected long _lastFactionNotifyTime = 0;
+	/**
+	 * Field _minFactionNotifyInterval.
+	 */
 	protected long _minFactionNotifyInterval = 10000;
+	/**
+	 * Field _nearestTargetComparator.
+	 */
 	protected final Comparator<Creature> _nearestTargetComparator;
 	
+	/**
+	 * Constructor for DefaultAI.
+	 * @param actor NpcInstance
+	 */
 	public DefaultAI(NpcInstance actor)
 	{
 		super(actor);
@@ -260,6 +459,9 @@ public class DefaultAI extends CharacterAI
 		_minFactionNotifyInterval = actor.getParameter("FactionNotifyInterval", 10000);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	public void runImpl()
 	{
@@ -281,6 +483,9 @@ public class DefaultAI extends CharacterAI
 		onEvtThink();
 	}
 	
+	/**
+	 * Method startAITask.
+	 */
 	@Override
 	public synchronized void startAITask()
 	{
@@ -291,6 +496,10 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method switchAITask.
+	 * @param NEW_DELAY long
+	 */
 	protected synchronized void switchAITask(long NEW_DELAY)
 	{
 		if (_aiTask == null)
@@ -305,6 +514,9 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method stopAITask.
+	 */
 	@Override
 	public final synchronized void stopAITask()
 	{
@@ -315,6 +527,11 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method canSeeInSilentMove.
+	 * @param target Playable
+	 * @return boolean
+	 */
 	protected boolean canSeeInSilentMove(Playable target)
 	{
 		if (getActor().getParameter("canSeeInSilentMove", false))
@@ -324,6 +541,11 @@ public class DefaultAI extends CharacterAI
 		return !target.isSilentMoving();
 	}
 	
+	/**
+	 * Method canSeeInHide.
+	 * @param target Playable
+	 * @return boolean
+	 */
 	protected boolean canSeeInHide(Playable target)
 	{
 		if (getActor().getParameter("canSeeInHide", false))
@@ -333,6 +555,11 @@ public class DefaultAI extends CharacterAI
 		return !target.isInvisible();
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	protected boolean checkAggression(Creature target)
 	{
 		NpcInstance actor = getActor();
@@ -413,11 +640,19 @@ public class DefaultAI extends CharacterAI
 		return true;
 	}
 	
+	/**
+	 * Method setIsInRandomAnimation.
+	 * @param time long
+	 */
 	protected void setIsInRandomAnimation(long time)
 	{
 		_randomAnimationEnd = System.currentTimeMillis() + time;
 	}
 	
+	/**
+	 * Method randomAnimation.
+	 * @return boolean
+	 */
 	protected boolean randomAnimation()
 	{
 		NpcInstance actor = getActor();
@@ -434,6 +669,10 @@ public class DefaultAI extends CharacterAI
 		return false;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	protected boolean randomWalk()
 	{
 		NpcInstance actor = getActor();
@@ -444,6 +683,10 @@ public class DefaultAI extends CharacterAI
 		return !actor.isMoving && maybeMoveToHome();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	protected boolean thinkActive()
 	{
 		NpcInstance actor = getActor();
@@ -512,6 +755,9 @@ public class DefaultAI extends CharacterAI
 		return false;
 	}
 	
+	/**
+	 * Method onIntentionIdle.
+	 */
 	@Override
 	protected void onIntentionIdle()
 	{
@@ -524,6 +770,9 @@ public class DefaultAI extends CharacterAI
 		changeIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 	}
 	
+	/**
+	 * Method onIntentionActive.
+	 */
 	@Override
 	protected void onIntentionActive()
 	{
@@ -538,6 +787,10 @@ public class DefaultAI extends CharacterAI
 		onEvtThink();
 	}
 	
+	/**
+	 * Method onIntentionAttack.
+	 * @param target Creature
+	 */
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
@@ -555,11 +808,22 @@ public class DefaultAI extends CharacterAI
 		onEvtThink();
 	}
 	
+	/**
+	 * Method canAttackCharacter.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	protected boolean canAttackCharacter(Creature target)
 	{
 		return target.isPlayable();
 	}
 	
+	/**
+	 * Method checkTarget.
+	 * @param target Creature
+	 * @param range int
+	 * @return boolean
+	 */
 	protected boolean checkTarget(Creature target, int range)
 	{
 		NpcInstance actor = getActor();
@@ -589,16 +853,28 @@ public class DefaultAI extends CharacterAI
 		return canAttackCharacter(target);
 	}
 	
+	/**
+	 * Method setAttackTimeout.
+	 * @param time long
+	 */
 	public void setAttackTimeout(long time)
 	{
 		_attackTimeout = time;
 	}
 	
+	/**
+	 * Method getAttackTimeout.
+	 * @return long
+	 */
 	protected long getAttackTimeout()
 	{
 		return _attackTimeout;
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 * @param returnHome boolean
+	 */
 	protected void thinkAttack(boolean returnHome)
 	{
 		NpcInstance actor = getActor();
@@ -618,6 +894,9 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	protected void thinkAttack()
 	{
 		NpcInstance actor = getActor();
@@ -643,6 +922,9 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -650,29 +932,49 @@ public class DefaultAI extends CharacterAI
 		setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 	}
 	
+	/**
+	 * Method onEvtReadyToAct.
+	 */
 	@Override
 	protected void onEvtReadyToAct()
 	{
 		onEvtThink();
 	}
 	
+	/**
+	 * Method onEvtArrivedTarget.
+	 */
 	@Override
 	protected void onEvtArrivedTarget()
 	{
 		onEvtThink();
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
 		onEvtThink();
 	}
 	
+	/**
+	 * Method tryMoveToTarget.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	protected boolean tryMoveToTarget(Creature target)
 	{
 		return tryMoveToTarget(target, 0);
 	}
 	
+	/**
+	 * Method tryMoveToTarget.
+	 * @param target Creature
+	 * @param range int
+	 * @return boolean
+	 */
 	protected boolean tryMoveToTarget(Creature target, int range)
 	{
 		NpcInstance actor = getActor();
@@ -702,6 +1004,11 @@ public class DefaultAI extends CharacterAI
 		return true;
 	}
 	
+	/**
+	 * Method maybeNextTask.
+	 * @param currentTask Task
+	 * @return boolean
+	 */
 	protected boolean maybeNextTask(Task currentTask)
 	{
 		_tasks.remove(currentTask);
@@ -712,6 +1019,10 @@ public class DefaultAI extends CharacterAI
 		return false;
 	}
 	
+	/**
+	 * Method doTask.
+	 * @return boolean
+	 */
 	protected boolean doTask()
 	{
 		NpcInstance actor = getActor();
@@ -849,11 +1160,19 @@ public class DefaultAI extends CharacterAI
 		return false;
 	}
 	
+	/**
+	 * Method createNewTask.
+	 * @return boolean
+	 */
 	protected boolean createNewTask()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method defaultNewTask.
+	 * @return boolean
+	 */
 	protected boolean defaultNewTask()
 	{
 		clearTasks();
@@ -867,6 +1186,9 @@ public class DefaultAI extends CharacterAI
 		return chooseTaskAndTargets(null, target, distance);
 	}
 	
+	/**
+	 * Method onEvtThink.
+	 */
 	@Override
 	protected void onEvtThink()
 	{
@@ -902,6 +1224,10 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -921,6 +1247,12 @@ public class DefaultAI extends CharacterAI
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method onEvtClanAttacked.
+	 * @param attacked Creature
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtClanAttacked(Creature attacked, Creature attacker, int damage)
 	{
@@ -931,6 +1263,11 @@ public class DefaultAI extends CharacterAI
 		notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 2);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -987,6 +1324,11 @@ public class DefaultAI extends CharacterAI
 		notifyFriends(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param attacker Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
@@ -1010,6 +1352,10 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method maybeMoveToHome.
+	 * @return boolean
+	 */
 	protected boolean maybeMoveToHome()
 	{
 		NpcInstance actor = getActor();
@@ -1037,16 +1383,27 @@ public class DefaultAI extends CharacterAI
 		return true;
 	}
 	
+	/**
+	 * Method returnHome.
+	 */
 	protected void returnHome()
 	{
 		returnHome(true, Config.ALWAYS_TELEPORT_HOME);
 	}
 	
+	/**
+	 * Method teleportHome.
+	 */
 	protected void teleportHome()
 	{
 		returnHome(true, true);
 	}
 	
+	/**
+	 * Method returnHome.
+	 * @param clearAggro boolean
+	 * @param teleport boolean
+	 */
 	protected void returnHome(boolean clearAggro, boolean teleport)
 	{
 		NpcInstance actor = getActor();
@@ -1079,6 +1436,10 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method prepareTarget.
+	 * @return Creature
+	 */
 	protected Creature prepareTarget()
 	{
 		NpcInstance actor = getActor();
@@ -1120,6 +1481,13 @@ public class DefaultAI extends CharacterAI
 		return null;
 	}
 	
+	/**
+	 * Method canUseSkill.
+	 * @param skill Skill
+	 * @param target Creature
+	 * @param distance double
+	 * @return boolean
+	 */
 	protected boolean canUseSkill(Skill skill, Creature target, double distance)
 	{
 		NpcInstance actor = getActor();
@@ -1160,11 +1528,24 @@ public class DefaultAI extends CharacterAI
 		return true;
 	}
 	
+	/**
+	 * Method canUseSkill.
+	 * @param sk Skill
+	 * @param target Creature
+	 * @return boolean
+	 */
 	protected boolean canUseSkill(Skill sk, Creature target)
 	{
 		return canUseSkill(sk, target, 0);
 	}
 	
+	/**
+	 * Method selectUsableSkills.
+	 * @param target Creature
+	 * @param distance double
+	 * @param skills Skill[]
+	 * @return Skill[]
+	 */
 	protected Skill[] selectUsableSkills(Creature target, double distance, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0) || (target == null))
@@ -1196,6 +1577,14 @@ public class DefaultAI extends CharacterAI
 		return ret;
 	}
 	
+	/**
+	 * Method selectTopSkillByDamage.
+	 * @param actor Creature
+	 * @param target Creature
+	 * @param distance double
+	 * @param skills Skill[]
+	 * @return Skill
+	 */
 	protected static Skill selectTopSkillByDamage(Creature actor, Creature target, double distance, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0))
@@ -1220,6 +1609,14 @@ public class DefaultAI extends CharacterAI
 		return rnd.select();
 	}
 	
+	/**
+	 * Method selectTopSkillByDebuff.
+	 * @param actor Creature
+	 * @param target Creature
+	 * @param distance double
+	 * @param skills Skill[]
+	 * @return Skill
+	 */
 	protected static Skill selectTopSkillByDebuff(Creature actor, Creature target, double distance, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0))
@@ -1247,6 +1644,12 @@ public class DefaultAI extends CharacterAI
 		return rnd.select();
 	}
 	
+	/**
+	 * Method selectTopSkillByBuff.
+	 * @param target Creature
+	 * @param skills Skill[]
+	 * @return Skill
+	 */
 	protected static Skill selectTopSkillByBuff(Creature target, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0))
@@ -1274,6 +1677,12 @@ public class DefaultAI extends CharacterAI
 		return rnd.select();
 	}
 	
+	/**
+	 * Method selectTopSkillByHeal.
+	 * @param target Creature
+	 * @param skills Skill[]
+	 * @return Skill
+	 */
 	protected static Skill selectTopSkillByHeal(Creature target, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0))
@@ -1302,6 +1711,13 @@ public class DefaultAI extends CharacterAI
 		return rnd.select();
 	}
 	
+	/**
+	 * Method addDesiredSkill.
+	 * @param skillMap Map<Skill,Integer>
+	 * @param target Creature
+	 * @param distance double
+	 * @param skills Skill[]
+	 */
 	protected void addDesiredSkill(Map<Skill, Integer> skillMap, Creature target, double distance, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0) || (target == null))
@@ -1314,6 +1730,13 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method addDesiredSkill.
+	 * @param skillMap Map<Skill,Integer>
+	 * @param target Creature
+	 * @param distance double
+	 * @param skill Skill
+	 */
 	protected void addDesiredSkill(Map<Skill, Integer> skillMap, Creature target, double distance, Skill skill)
 	{
 		if ((skill == null) || (target == null) || !canUseSkill(skill, target))
@@ -1332,6 +1755,11 @@ public class DefaultAI extends CharacterAI
 		skillMap.put(skill, weight);
 	}
 	
+	/**
+	 * Method addDesiredHeal.
+	 * @param skillMap Map<Skill,Integer>
+	 * @param skills Skill[]
+	 */
 	protected void addDesiredHeal(Map<Skill, Integer> skillMap, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0))
@@ -1360,6 +1788,11 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method addDesiredBuff.
+	 * @param skillMap Map<Skill,Integer>
+	 * @param skills Skill[]
+	 */
 	protected void addDesiredBuff(Map<Skill, Integer> skillMap, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0))
@@ -1376,6 +1809,11 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method selectTopSkill.
+	 * @param skillMap Map<Skill,Integer>
+	 * @return Skill
+	 */
 	protected Skill selectTopSkill(Map<Skill, Integer> skillMap)
 	{
 		if ((skillMap == null) || skillMap.isEmpty())
@@ -1407,6 +1845,13 @@ public class DefaultAI extends CharacterAI
 		return skills[Rnd.get(nWeight)];
 	}
 	
+	/**
+	 * Method chooseTaskAndTargets.
+	 * @param skill Skill
+	 * @param target Creature
+	 * @param distance double
+	 * @return boolean
+	 */
 	protected boolean chooseTaskAndTargets(Skill skill, Creature target, double distance)
 	{
 		NpcInstance actor = getActor();
@@ -1473,18 +1918,29 @@ public class DefaultAI extends CharacterAI
 		return true;
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isActive()
 	{
 		return _aiTask != null;
 	}
 	
+	/**
+	 * Method clearTasks.
+	 */
 	protected void clearTasks()
 	{
 		_def_think = false;
 		_tasks.clear();
 	}
 	
+	/**
+	 * Method startRunningTask.
+	 * @param interval long
+	 */
 	protected void startRunningTask(long interval)
 	{
 		NpcInstance actor = getActor();
@@ -1494,6 +1950,10 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method isGlobalAggro.
+	 * @return boolean
+	 */
 	protected boolean isGlobalAggro()
 	{
 		if (_globalAggro == 0)
@@ -1508,22 +1968,40 @@ public class DefaultAI extends CharacterAI
 		return false;
 	}
 	
+	/**
+	 * Method setGlobalAggro.
+	 * @param value long
+	 */
 	public void setGlobalAggro(long value)
 	{
 		_globalAggro = value;
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return NpcInstance
+	 */
 	@Override
 	public NpcInstance getActor()
 	{
 		return (NpcInstance) super.getActor();
 	}
 	
+	/**
+	 * Method defaultThinkBuff.
+	 * @param rateSelf int
+	 * @return boolean
+	 */
 	protected boolean defaultThinkBuff(int rateSelf)
 	{
 		return defaultThinkBuff(rateSelf, 0);
 	}
 	
+	/**
+	 * Method notifyFriends.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	protected void notifyFriends(Creature attacker, int damage)
 	{
 		NpcInstance actor = getActor();
@@ -1567,6 +2045,10 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method activeFactionTargets.
+	 * @return List<NpcInstance>
+	 */
 	protected List<NpcInstance> activeFactionTargets()
 	{
 		NpcInstance actor = getActor();
@@ -1594,6 +2076,12 @@ public class DefaultAI extends CharacterAI
 		return npcFriends;
 	}
 	
+	/**
+	 * Method defaultThinkBuff.
+	 * @param rateSelf int
+	 * @param rateFriends int
+	 * @return boolean
+	 */
 	protected boolean defaultThinkBuff(int rateSelf, int rateFriends)
 	{
 		NpcInstance actor = getActor();
@@ -1631,6 +2119,10 @@ public class DefaultAI extends CharacterAI
 		return false;
 	}
 	
+	/**
+	 * Method defaultFightTask.
+	 * @return boolean
+	 */
 	protected boolean defaultFightTask()
 	{
 		clearTasks();
@@ -1687,56 +2179,100 @@ public class DefaultAI extends CharacterAI
 		return chooseTaskAndTargets(null, target, distance);
 	}
 	
+	/**
+	 * Method getRatePHYS.
+	 * @return int
+	 */
 	public int getRatePHYS()
 	{
 		return 100;
 	}
 	
+	/**
+	 * Method getRateDOT.
+	 * @return int
+	 */
 	public int getRateDOT()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getRateDEBUFF.
+	 * @return int
+	 */
 	public int getRateDEBUFF()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getRateDAM.
+	 * @return int
+	 */
 	public int getRateDAM()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getRateSTUN.
+	 * @return int
+	 */
 	public int getRateSTUN()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getRateBUFF.
+	 * @return int
+	 */
 	public int getRateBUFF()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getRateHEAL.
+	 * @return int
+	 */
 	public int getRateHEAL()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getIsMobile.
+	 * @return boolean
+	 */
 	public boolean getIsMobile()
 	{
 		return !getActor().getParameter("isImmobilized", false);
 	}
 	
+	/**
+	 * Method getMaxPathfindFails.
+	 * @return int
+	 */
 	public int getMaxPathfindFails()
 	{
 		return 3;
 	}
 	
+	/**
+	 * Method getMaxAttackTimeout.
+	 * @return int
+	 */
 	public int getMaxAttackTimeout()
 	{
 		return 15000;
 	}
 	
+	/**
+	 * Method getTeleportTimeout.
+	 * @return int
+	 */
 	public int getTeleportTimeout()
 	{
 		return 10000;

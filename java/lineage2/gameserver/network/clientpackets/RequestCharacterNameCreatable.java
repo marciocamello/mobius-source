@@ -17,17 +17,33 @@ import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.network.serverpackets.ExIsCharNameCreatable;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestCharacterNameCreatable extends L2GameClientPacket
 {
+	/**
+	 * Field _C__D0_B0_REQUESTCHARACTERNAMECREATABLE. (value is ""[C] D0:B0 RequestCharacterNameCreatable"")
+	 */
 	private static final String _C__D0_B0_REQUESTCHARACTERNAMECREATABLE = "[C] D0:B0 RequestCharacterNameCreatable";
+	/**
+	 * Field _nickname.
+	 */
 	private String _nickname;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_nickname = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -49,6 +65,10 @@ public class RequestCharacterNameCreatable extends L2GameClientPacket
 		sendPacket(new ExIsCharNameCreatable(ExIsCharNameCreatable.REASON_CREATION_OK));
 	}
 	
+	/**
+	 * Method getType.
+	 * @return String
+	 */
 	@Override
 	public String getType()
 	{

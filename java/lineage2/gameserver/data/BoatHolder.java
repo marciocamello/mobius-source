@@ -25,17 +25,37 @@ import lineage2.gameserver.model.entity.boat.Shuttle;
 import lineage2.gameserver.templates.CharTemplate;
 import lineage2.gameserver.templates.ShuttleTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class BoatHolder extends AbstractHolder
 {
+	/**
+	 * Field TEMPLATE.
+	 */
 	public static final CharTemplate TEMPLATE = new CharTemplate(CharTemplate.getEmptyStatsSet());
+	/**
+	 * Field _instance.
+	 */
 	private static BoatHolder _instance = new BoatHolder();
+	/**
+	 * Field _boats.
+	 */
 	private final TIntObjectHashMap<Boat> _boats = new TIntObjectHashMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return BoatHolder
+	 */
 	public static BoatHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method spawnAll.
+	 */
 	public void spawnAll()
 	{
 		log();
@@ -47,6 +67,12 @@ public final class BoatHolder extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method initBoat.
+	 * @param name String
+	 * @param clazz String
+	 * @return Boat
+	 */
 	public Boat initBoat(String name, String clazz)
 	{
 		try
@@ -65,6 +91,12 @@ public final class BoatHolder extends AbstractHolder
 		return null;
 	}
 	
+	/**
+	 * Method initShuttle.
+	 * @param name String
+	 * @param shuttleId int
+	 * @return Shuttle
+	 */
 	public Shuttle initShuttle(String name, int shuttleId)
 	{
 		try
@@ -82,6 +114,11 @@ public final class BoatHolder extends AbstractHolder
 		return null;
 	}
 	
+	/**
+	 * Method getBoat.
+	 * @param name String
+	 * @return Boat
+	 */
 	public Boat getBoat(String name)
 	{
 		for (TIntObjectIterator<Boat> iterator = _boats.iterator(); iterator.hasNext();)
@@ -95,27 +132,47 @@ public final class BoatHolder extends AbstractHolder
 		return null;
 	}
 	
+	/**
+	 * Method getBoat.
+	 * @param objectId int
+	 * @return Boat
+	 */
 	public Boat getBoat(int objectId)
 	{
 		return _boats.get(objectId);
 	}
 	
+	/**
+	 * Method addBoat.
+	 * @param boat Boat
+	 */
 	public void addBoat(Boat boat)
 	{
 		_boats.put(boat.getObjectId(), boat);
 	}
 	
+	/**
+	 * Method removeBoat.
+	 * @param boat Boat
+	 */
 	public void removeBoat(Boat boat)
 	{
 		_boats.remove(boat.getObjectId());
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _boats.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

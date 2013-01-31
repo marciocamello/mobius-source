@@ -19,14 +19,25 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Glacier extends Fighter
 {
+	/**
+	 * Constructor for Glacier.
+	 * @param actor NpcInstance
+	 */
 	public Glacier(NpcInstance actor)
 	{
 		super(actor);
 		actor.block();
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -36,6 +47,10 @@ public class Glacier extends Fighter
 		ThreadPoolManager.getInstance().schedule(new Despawn(), 30000L);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -49,13 +64,22 @@ public class Glacier extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Freeze extends RunnableImpl
 	{
+		/**
+		 * Constructor for Freeze.
+		 */
 		public Freeze()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -63,13 +87,22 @@ public class Glacier extends Fighter
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Despawn extends RunnableImpl
 	{
+		/**
+		 * Constructor for Despawn.
+		 */
 		public Despawn()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

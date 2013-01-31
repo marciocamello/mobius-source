@@ -22,8 +22,16 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Util extends Functions
 {
+	/**
+	 * Method Gatekeeper.
+	 * @param param String[]
+	 */
 	public void Gatekeeper(String[] param)
 	{
 		if (param.length < 4)
@@ -47,7 +55,7 @@ public class Util extends Functions
 		}
 		if (player.getMountType() == 2)
 		{
-			player.sendMessage("Телепортация верхом на виверне невозможна.");
+			player.sendMessage("Телепортаци�? верхом на виверне невозможна.");
 			return;
 		}
 		if (player.getLastNpc() != null)
@@ -98,6 +106,10 @@ public class Util extends Functions
 		player.teleToLocation(pos);
 	}
 	
+	/**
+	 * Method QuestGatekeeper.
+	 * @param param String[]
+	 */
 	public void QuestGatekeeper(String[] param)
 	{
 		if (param.length < 5)
@@ -131,6 +143,10 @@ public class Util extends Functions
 		player.teleToLocation(pos);
 	}
 	
+	/**
+	 * Method ReflectionGatekeeper.
+	 * @param param String[]
+	 */
 	public void ReflectionGatekeeper(String[] param)
 	{
 		if (param.length < 5)
@@ -146,6 +162,10 @@ public class Util extends Functions
 		Gatekeeper(param);
 	}
 	
+	/**
+	 * Method TokenJump.
+	 * @param param String[]
+	 */
 	public void TokenJump(String[] param)
 	{
 		Player player = getSelf();
@@ -163,6 +183,9 @@ public class Util extends Functions
 		}
 	}
 	
+	/**
+	 * Method NoblessTeleport.
+	 */
 	public void NoblessTeleport()
 	{
 		Player player = getSelf();
@@ -180,6 +203,10 @@ public class Util extends Functions
 		}
 	}
 	
+	/**
+	 * Method PayPage.
+	 * @param param String[]
+	 */
 	public void PayPage(String[] param)
 	{
 		if (param.length < 2)
@@ -203,6 +230,9 @@ public class Util extends Functions
 		show(page, player);
 	}
 	
+	/**
+	 * Method TakeNewbieWeaponCoupon.
+	 */
 	public void TakeNewbieWeaponCoupon()
 	{
 		Player player = getSelf();
@@ -234,6 +264,9 @@ public class Util extends Functions
 		player.setVar("newbieweapon", "true", -1);
 	}
 	
+	/**
+	 * Method TakeAdventurersArmorCoupon.
+	 */
 	public void TakeAdventurersArmorCoupon()
 	{
 		Player player = getSelf();
@@ -265,6 +298,9 @@ public class Util extends Functions
 		player.setVar("newbiearmor", "true", -1);
 	}
 	
+	/**
+	 * Method enter_dc.
+	 */
 	public void enter_dc()
 	{
 		Player player = getSelf();
@@ -281,6 +317,9 @@ public class Util extends Functions
 		player.teleToLocation(-114582, -152635, -6742);
 	}
 	
+	/**
+	 * Method exit_dc.
+	 */
 	public void exit_dc()
 	{
 		Player player = getSelf();

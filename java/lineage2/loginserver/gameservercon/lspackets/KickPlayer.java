@@ -14,15 +14,29 @@ package lineage2.loginserver.gameservercon.lspackets;
 
 import lineage2.loginserver.gameservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KickPlayer extends SendablePacket
 {
+	/**
+	 * Field account.
+	 */
 	private final String account;
 	
+	/**
+	 * Constructor for KickPlayer.
+	 * @param login String
+	 */
 	public KickPlayer(String login)
 	{
 		account = login;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

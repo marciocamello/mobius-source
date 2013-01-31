@@ -28,22 +28,42 @@ import lineage2.gameserver.scripts.ScriptFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(AprilFoolsDay.class);
+	/**
+	 * Field HERBS.
+	 */
 	private static final int[] HERBS = new int[]
 	{
 		20923,
 		20924,
 		20925
 	};
+	/**
+	 * Field _active.
+	 */
 	private static boolean _active = false;
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return IsActive("AprilFoolsDay");
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -68,6 +88,9 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -87,6 +110,10 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -102,16 +129,29 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -121,6 +161,12 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature cha, Creature killer)
 	{

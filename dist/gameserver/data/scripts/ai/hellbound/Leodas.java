@@ -19,13 +19,25 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Leodas extends Fighter
 {
+	/**
+	 * Constructor for Leodas.
+	 * @param actor NpcInstance
+	 */
 	public Leodas(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -35,13 +47,22 @@ public class Leodas extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class CloseDoor extends RunnableImpl
 	{
+		/**
+		 * Constructor for CloseDoor.
+		 */
 		public CloseDoor()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

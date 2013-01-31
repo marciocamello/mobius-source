@@ -31,15 +31,37 @@ import lineage2.gameserver.network.serverpackets.ExBuySellList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestBuyItem extends L2GameClientPacket
 {
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(RequestBuyItem.class);
+	/**
+	 * Field _listId.
+	 */
 	private int _listId;
+	/**
+	 * Field _count.
+	 */
 	private int _count;
+	/**
+	 * Field _items.
+	 */
 	private int[] _items;
+	/**
+	 * Field _itemQ.
+	 */
 	private long[] _itemQ;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -64,6 +86,9 @@ public class RequestBuyItem extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -16,14 +16,36 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExManageMpccRoom extends L2GameClientPacket
 {
+	/**
+	 * Field _id.
+	 */
 	private int _id;
+	/**
+	 * Field _memberSize.
+	 */
 	private int _memberSize;
+	/**
+	 * Field _minLevel.
+	 */
 	private int _minLevel;
+	/**
+	 * Field _maxLevel.
+	 */
 	private int _maxLevel;
+	/**
+	 * Field _topic.
+	 */
 	private String _topic;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -35,6 +57,9 @@ public class RequestExManageMpccRoom extends L2GameClientPacket
 		_topic = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

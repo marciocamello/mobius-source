@@ -20,16 +20,29 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExItemAuctionInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RequestInfoItemAuction extends L2GameClientPacket
 {
+	/**
+	 * Field _instanceId.
+	 */
 	private int _instanceId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected final void readImpl()
 	{
 		_instanceId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected final void runImpl()
 	{

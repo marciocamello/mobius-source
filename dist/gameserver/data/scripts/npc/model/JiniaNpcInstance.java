@@ -22,20 +22,40 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class JiniaNpcInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field normalFreyaIzId. (value is 139)
+	 */
 	private static final int normalFreyaIzId = 139;
+	/**
+	 * Field extremeFreyaIzId. (value is 144)
+	 */
 	private static final int extremeFreyaIzId = 144;
 	
+	/**
+	 * Constructor for JiniaNpcInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public JiniaNpcInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

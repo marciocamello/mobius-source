@@ -15,16 +15,29 @@ package lineage2.loginserver.gameservercon.gspackets;
 import lineage2.loginserver.gameservercon.GameServer;
 import lineage2.loginserver.gameservercon.ReceivablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PlayerLogout extends ReceivablePacket
 {
+	/**
+	 * Field account.
+	 */
 	private String account;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		account = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

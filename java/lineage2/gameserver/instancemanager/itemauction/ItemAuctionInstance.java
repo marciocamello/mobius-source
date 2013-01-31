@@ -45,20 +45,63 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ItemAuctionInstance
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ItemAuctionInstance.class);
+	/**
+	 * Field DATE_FORMAT.
+	 */
 	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+	/**
+	 * Field START_TIME_SPACE.
+	 */
 	private static final long START_TIME_SPACE = TimeUnit.MILLISECONDS.convert(1, TimeUnit.MINUTES);
+	/**
+	 * Field FINISH_TIME_SPACE.
+	 */
 	private static final long FINISH_TIME_SPACE = TimeUnit.MILLISECONDS.convert(10, TimeUnit.MINUTES);
+	/**
+	 * Field _instanceId.
+	 */
 	private final int _instanceId;
+	/**
+	 * Field _auctions.
+	 */
 	private final TIntObjectHashMap<ItemAuction> _auctions;
+	/**
+	 * Field _items.
+	 */
 	private final List<AuctionItem> _items;
+	/**
+	 * Field _dateTime.
+	 */
 	private final SchedulingPattern _dateTime;
+	/**
+	 * Field _currentAuction.
+	 */
 	private ItemAuction _currentAuction;
+	/**
+	 * Field _nextAuction.
+	 */
 	private ItemAuction _nextAuction;
+	/**
+	 * Field _stateTask.
+	 */
 	private ScheduledFuture<?> _stateTask;
 	
+	/**
+	 * Constructor for ItemAuctionInstance.
+	 * @param instanceId int
+	 * @param dateTime SchedulingPattern
+	 * @param items List<AuctionItem>
+	 */
 	ItemAuctionInstance(int instanceId, SchedulingPattern dateTime, List<AuctionItem> items)
 	{
 		_instanceId = instanceId;
@@ -70,6 +113,9 @@ public class ItemAuctionInstance
 		checkAndSetCurrentAndNextAuction();
 	}
 	
+	/**
+	 * Method load.
+	 */
 	private void load()
 	{
 		Connection con = null;
@@ -113,16 +159,27 @@ public class ItemAuctionInstance
 		}
 	}
 	
+	/**
+	 * Method getCurrentAuction.
+	 * @return ItemAuction
+	 */
 	public ItemAuction getCurrentAuction()
 	{
 		return _currentAuction;
 	}
 	
+	/**
+	 * Method getNextAuction.
+	 * @return ItemAuction
+	 */
 	public ItemAuction getNextAuction()
 	{
 		return _nextAuction;
 	}
 	
+	/**
+	 * Method shutdown.
+	 */
 	public void shutdown()
 	{
 		ScheduledFuture<?> stateTask = _stateTask;
@@ -132,6 +189,11 @@ public class ItemAuctionInstance
 		}
 	}
 	
+	/**
+	 * Method getAuctionItem.
+	 * @param auctionItemId int
+	 * @return AuctionItem
+	 */
 	private AuctionItem getAuctionItem(int auctionItemId)
 	{
 		for (int i = _items.size(); i-- > 0;)
@@ -151,6 +213,9 @@ public class ItemAuctionInstance
 		return null;
 	}
 	
+	/**
+	 * Method checkAndSetCurrentAndNextAuction.
+	 */
 	void checkAndSetCurrentAndNextAuction()
 	{
 		ItemAuction[] auctions = _auctions.values(new ItemAuction[_auctions.size()]);
@@ -259,11 +324,21 @@ public class ItemAuctionInstance
 		}
 	}
 	
+	/**
+	 * Method getAuction.
+	 * @param auctionId int
+	 * @return ItemAuction
+	 */
 	public ItemAuction getAuction(int auctionId)
 	{
 		return _auctions.get(auctionId);
 	}
 	
+	/**
+	 * Method getAuctionsByBidder.
+	 * @param bidderObjId int
+	 * @return ItemAuction[]
+	 */
 	public ItemAuction[] getAuctionsByBidder(int bidderObjId)
 	{
 		ItemAuction[] auctions = getAuctions();
@@ -282,6 +357,10 @@ public class ItemAuctionInstance
 		return stack.toArray(new ItemAuction[stack.size()]);
 	}
 	
+	/**
+	 * Method getAuctions.
+	 * @return ItemAuction[]
+	 */
 	public ItemAuction[] getAuctions()
 	{
 		synchronized (_auctions)
@@ -290,15 +369,29 @@ public class ItemAuctionInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ScheduleAuctionTask extends RunnableImpl
 	{
+		/**
+		 * Field _auction.
+		 */
 		private final ItemAuction _auction;
 		
+		/**
+		 * Constructor for ScheduleAuctionTask.
+		 * @param auction ItemAuction
+		 */
 		public ScheduleAuctionTask(ItemAuction auction)
 		{
 			_auction = auction;
 		}
 		
+		/**
+		 * Method runImpl.
+		 * @throws Exception
+		 */
 		@Override
 		public void runImpl() throws Exception
 		{
@@ -359,6 +452,10 @@ public class ItemAuctionInstance
 		}
 	}
 	
+	/**
+	 * Method onAuctionFinished.
+	 * @param auction ItemAuction
+	 */
 	void onAuctionFinished(ItemAuction auction)
 	{
 		auction.broadcastToAllBidders(new SystemMessage(SystemMessage.S1_S_AUCTION_HAS_ENDED).addNumber(auction.getAuctionId()));
@@ -388,6 +485,10 @@ public class ItemAuctionInstance
 		}
 	}
 	
+	/**
+	 * Method setStateTask.
+	 * @param future ScheduledFuture<?>
+	 */
 	void setStateTask(ScheduledFuture<?> future)
 	{
 		ScheduledFuture<?> stateTask = _stateTask;
@@ -398,6 +499,11 @@ public class ItemAuctionInstance
 		_stateTask = future;
 	}
 	
+	/**
+	 * Method createAuction.
+	 * @param after long
+	 * @return ItemAuction
+	 */
 	private ItemAuction createAuction(long after)
 	{
 		AuctionItem auctionItem = _items.get(Rnd.get(_items.size()));
@@ -409,6 +515,11 @@ public class ItemAuctionInstance
 		return auction;
 	}
 	
+	/**
+	 * Method loadAuction.
+	 * @param auctionId int
+	 * @return ItemAuction * @throws SQLException
+	 */
 	private ItemAuction loadAuction(int auctionId) throws SQLException
 	{
 		Connection con = null;

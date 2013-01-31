@@ -19,10 +19,20 @@ import java.util.List;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.model.entity.residence.Dominion;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExReplyDominionInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _dominionList.
+	 */
 	private List<TerritoryInfo> _dominionList = Collections.emptyList();
 	
+	/**
+	 * Constructor for ExReplyDominionInfo.
+	 */
 	public ExReplyDominionInfo()
 	{
 		List<Dominion> dominions = ResidenceHolder.getInstance().getResidenceList(Dominion.class);
@@ -37,6 +47,9 @@ public class ExReplyDominionInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -56,14 +69,40 @@ public class ExReplyDominionInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class TerritoryInfo
 	{
+		/**
+		 * Field id.
+		 */
 		public int id;
+		/**
+		 * Field terr.
+		 */
 		public String terr;
+		/**
+		 * Field clan.
+		 */
 		public String clan;
+		/**
+		 * Field flags.
+		 */
 		public int[] flags;
+		/**
+		 * Field startTime.
+		 */
 		public int startTime;
 		
+		/**
+		 * Constructor for TerritoryInfo.
+		 * @param id int
+		 * @param terr String
+		 * @param clan String
+		 * @param flags int[]
+		 * @param startTime int
+		 */
 		public TerritoryInfo(int id, String terr, String clan, int[] flags, int startTime)
 		{
 			this.id = id;

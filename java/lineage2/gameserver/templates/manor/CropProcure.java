@@ -12,14 +12,37 @@
  */
 package lineage2.gameserver.templates.manor;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CropProcure
 {
+	/**
+	 * Field _rewardType.
+	 */
 	int _rewardType;
+	/**
+	 * Field _cropId.
+	 */
 	int _cropId;
+	/**
+	 * Field _buyResidual.
+	 */
 	long _buyResidual;
+	/**
+	 * Field _buy.
+	 */
 	long _buy;
+	/**
+	 * Field _price.
+	 */
 	long _price;
 	
+	/**
+	 * Constructor for CropProcure.
+	 * @param id int
+	 */
 	public CropProcure(int id)
 	{
 		_cropId = id;
@@ -29,6 +52,14 @@ public class CropProcure
 		_price = 0;
 	}
 	
+	/**
+	 * Constructor for CropProcure.
+	 * @param id int
+	 * @param amount long
+	 * @param type int
+	 * @param buy long
+	 * @param price long
+	 */
 	public CropProcure(int id, long amount, int type, long buy, long price)
 	{
 		_cropId = id;
@@ -42,31 +73,55 @@ public class CropProcure
 		}
 	}
 	
+	/**
+	 * Method getReward.
+	 * @return int
+	 */
 	public int getReward()
 	{
 		return _rewardType;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _cropId;
 	}
 	
+	/**
+	 * Method getAmount.
+	 * @return long
+	 */
 	public long getAmount()
 	{
 		return _buyResidual;
 	}
 	
+	/**
+	 * Method getStartAmount.
+	 * @return long
+	 */
 	public long getStartAmount()
 	{
 		return _buy;
 	}
 	
+	/**
+	 * Method getPrice.
+	 * @return long
+	 */
 	public long getPrice()
 	{
 		return _price;
 	}
 	
+	/**
+	 * Method setAmount.
+	 * @param amount long
+	 */
 	public void setAmount(long amount)
 	{
 		_buyResidual = amount;

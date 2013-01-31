@@ -35,31 +35,93 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SMSWayToPay
 {
+	/**
+	 * Field SELECT_PLAYER_OBJID. (value is ""SELECT obj_Id FROM characters WHERE char_name=?"")
+	 */
 	private static final String SELECT_PLAYER_OBJID = "SELECT obj_Id FROM characters WHERE char_name=?";
+	/**
+	 * Field SELECT_CHARACTER_SMS_DATA. (value is ""SELECT * FROM character_sms_donate WHERE id=? AND wText=?"")
+	 */
 	private static final String SELECT_CHARACTER_SMS_DATA = "SELECT * FROM character_sms_donate WHERE id=? AND wText=?";
+	/**
+	 * Field INSERT_SMS_DATA. (value is ""INSERT INTO character_sms_donate (id, service_id, status, time, curr_id, sum, profit, email, client_id, wNumber, wPhone, wText, wCost, wProfit, wCountry) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"")
+	 */
 	private static final String INSERT_SMS_DATA = "INSERT INTO character_sms_donate (id, service_id, status, time, curr_id, sum, profit, email, client_id, wNumber, wPhone, wText, wCost, wProfit, wCountry) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	/**
+	 * Field DELETE_SMS_DATA. (value is ""DELETE FROM character_sms_donate WHERE time<?"")
+	 */
 	private static final String DELETE_SMS_DATA = "DELETE FROM character_sms_donate WHERE time<?";
+	/**
+	 * Field UPDATE_SMS_DATA. (value is ""UPDATE character_sms_donate SET has_reward=1 WHERE wText=?"")
+	 */
 	private static final String UPDATE_SMS_DATA = "UPDATE character_sms_donate SET has_reward=1 WHERE wText=?";
+	/**
+	 * Field SELECT_RPOFIT_SMS_DATA. (value is ""SELECT wCost, wProfit FROM character_sms_donate WHERE wText=? AND has_reward=0"")
+	 */
 	private static final String SELECT_RPOFIT_SMS_DATA = "SELECT wCost, wProfit FROM character_sms_donate WHERE wText=? AND has_reward=0";
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class DataContainer
 	{
+		/**
+		 * Field id.
+		 */
 		public int id;
+		/**
+		 * Field service_id.
+		 */
 		public int service_id;
+		/**
+		 * Field status.
+		 */
 		public int status;
+		/**
+		 * Field time.
+		 */
 		public long time;
+		/**
+		 * Field curr_id.
+		 */
 		public int curr_id;
+		/**
+		 * Field sum.
+		 */
 		public float sum;
+		/**
+		 * Field profit.
+		 */
 		public float profit;
+		/**
+		 * Field email.
+		 */
 		public String email;
+		/**
+		 * Field client_id.
+		 */
 		public int client_id;
+		/**
+		 * Field client_params.
+		 */
 		public String client_params;
 	}
 	
+	/**
+	 * Field _instance.
+	 */
 	private static SMSWayToPay _instance;
 	
+	/**
+	 * Method getInstance.
+	 * @return SMSWayToPay
+	 */
 	public static SMSWayToPay getInstance()
 	{
 		if ((_instance == null) && Config.SMS_PAYMENT_MANAGER_ENABLED)
@@ -69,6 +131,9 @@ public class SMSWayToPay
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for SMSWayToPay.
+	 */
 	public SMSWayToPay()
 	{
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new ConnectAndUpdate(), Config.SMS_PAYMENT_MANAGER_INTERVAL, Config.SMS_PAYMENT_MANAGER_INTERVAL);
@@ -76,6 +141,11 @@ public class SMSWayToPay
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new GiveReward(), Config.SMS_PAYMENT_MANAGER_INTERVAL, Config.SMS_PAYMENT_MANAGER_INTERVAL);
 	}
 	
+	/**
+	 * Method pageToString.
+	 * @param address String
+	 * @return String
+	 */
 	private static String pageToString(String address)
 	{
 		String str = null;
@@ -108,6 +178,9 @@ public class SMSWayToPay
 		return str;
 	}
 	
+	/**
+	 * Method parse.
+	 */
 	public void parse()
 	{
 		ArrayList<DataContainer> Containers = new ArrayList<>();
@@ -138,7 +211,7 @@ public class SMSWayToPay
 				while (inputST.hasMoreTokens())
 				{
 					String s1 = inputST.nextToken();
-					if (s1.startsWith("{"))
+					if ((s1.length() > 0) && (s1.charAt(0) == '{'))
 					{
 						s1 = s1.substring(1);
 					}
@@ -151,11 +224,11 @@ public class SMSWayToPay
 					{
 						String key = subST.nextToken();
 						String value = subST.nextToken();
-						if (key.startsWith("\"") && key.endsWith("\""))
+						if (((key.length() > 0) && (key.charAt(0) == '"')) && key.endsWith("\""))
 						{
 							key = key.substring(1, key.length() - 1);
 						}
-						if (value.startsWith("\"") && value.endsWith("\""))
+						if (((value.length() > 0) && (value.charAt(0) == '"')) && value.endsWith("\""))
 						{
 							value = value.substring(1, value.length() - 1);
 						}
@@ -170,6 +243,24 @@ public class SMSWayToPay
 		}
 	}
 	
+	/**
+	 * Method checkAndSave.
+	 * @param id int
+	 * @param service_id int
+	 * @param status int
+	 * @param time long
+	 * @param curr_id int
+	 * @param sum float
+	 * @param profit float
+	 * @param email String
+	 * @param client_id int
+	 * @param wNumber int
+	 * @param wPhone String
+	 * @param wText String
+	 * @param wCost float
+	 * @param wProfit float
+	 * @param wCountry String
+	 */
 	public void checkAndSave(int id, int service_id, int status, long time, int curr_id, float sum, float profit, String email, int client_id, int wNumber, String wPhone, String wText, float wCost, float wProfit, String wCountry)
 	{
 		int objId = 0;
@@ -227,6 +318,9 @@ public class SMSWayToPay
 		}
 	}
 	
+	/**
+	 * Method clean.
+	 */
 	synchronized void clean()
 	{
 		Calendar calendar = Calendar.getInstance();
@@ -250,6 +344,9 @@ public class SMSWayToPay
 		}
 	}
 	
+	/**
+	 * Method giveReward.
+	 */
 	synchronized void giveReward()
 	{
 		Connection con = null;
@@ -330,13 +427,23 @@ public class SMSWayToPay
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ConnectAndUpdate implements Runnable
 	{
+		/**
+		 * Constructor for ConnectAndUpdate.
+		 */
 		public ConnectAndUpdate()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -344,13 +451,23 @@ public class SMSWayToPay
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Clean implements Runnable
 	{
+		/**
+		 * Constructor for Clean.
+		 */
 		public Clean()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -358,13 +475,23 @@ public class SMSWayToPay
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class GiveReward implements Runnable
 	{
+		/**
+		 * Constructor for GiveReward.
+		 */
 		public GiveReward()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{

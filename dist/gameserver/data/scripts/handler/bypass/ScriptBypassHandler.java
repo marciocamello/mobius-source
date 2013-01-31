@@ -16,19 +16,35 @@ import lineage2.gameserver.handler.bypass.BypassHandler;
 import lineage2.gameserver.handler.bypass.IBypassHandler;
 import lineage2.gameserver.scripts.ScriptFile;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class ScriptBypassHandler implements ScriptFile, IBypassHandler
 {
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 		BypassHandler.getInstance().registerBypass(this);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

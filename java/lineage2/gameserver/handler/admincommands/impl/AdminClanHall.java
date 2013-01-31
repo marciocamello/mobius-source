@@ -23,16 +23,43 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.ClanTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminClanHall implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_clanhall.
+		 */
 		admin_clanhall,
+		/**
+		 * Field admin_clanhallset.
+		 */
 		admin_clanhallset,
+		/**
+		 * Field admin_clanhalldel.
+		 */
 		admin_clanhalldel,
+		/**
+		 * Field admin_clanhallteleportself.
+		 */
 		admin_clanhallteleportself
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -87,6 +114,10 @@ public class AdminClanHall implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method showClanHallSelectPage.
+	 * @param activeChar Player
+	 */
 	public void showClanHallSelectPage(Player activeChar)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -104,6 +135,11 @@ public class AdminClanHall implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method showClanHallPage.
+	 * @param activeChar Player
+	 * @param clanhall ClanHall
+	 */
 	public void showClanHallPage(Player activeChar, ClanHall clanhall)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -146,6 +182,10 @@ public class AdminClanHall implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

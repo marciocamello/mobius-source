@@ -46,21 +46,50 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CursedWeaponsManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CursedWeaponsManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final CursedWeaponsManager _instance = new CursedWeaponsManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return CursedWeaponsManager
+	 */
 	public static CursedWeaponsManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _cursedWeapons.
+	 */
 	CursedWeapon[] _cursedWeapons;
+	/**
+	 * Field _cursedWeaponsMap.
+	 */
 	private TIntObjectHashMap<CursedWeapon> _cursedWeaponsMap;
+	/**
+	 * Field _removeTask.
+	 */
 	private ScheduledFuture<?> _removeTask;
+	/**
+	 * Field CURSEDWEAPONS_MAINTENANCE_INTERVAL.
+	 */
 	private static final int CURSEDWEAPONS_MAINTENANCE_INTERVAL = 5 * 60 * 1000;
 	
+	/**
+	 * Constructor for CursedWeaponsManager.
+	 */
 	public CursedWeaponsManager()
 	{
 		_cursedWeaponsMap = new TIntObjectHashMap<>();
@@ -77,6 +106,9 @@ public class CursedWeaponsManager
 		_log.info("CursedWeaponsManager: Loaded " + _cursedWeapons.length + " cursed weapon(s).");
 	}
 	
+	/**
+	 * Method load.
+	 */
 	private void load()
 	{
 		try
@@ -165,6 +197,9 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	private void restore()
 	{
 		Connection con = null;
@@ -210,6 +245,9 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method checkConditions.
+	 */
 	private void checkConditions()
 	{
 		Connection con = null;
@@ -268,6 +306,12 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method emptyPlayerCursedWeapon.
+	 * @param playerId int
+	 * @param itemId int
+	 * @param cw CursedWeapon
+	 */
 	private void emptyPlayerCursedWeapon(int playerId, int itemId, CursedWeapon cw)
 	{
 		Connection con = null;
@@ -300,6 +344,10 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method removeFromDb.
+	 * @param itemId int
+	 */
 	public void removeFromDb(int itemId)
 	{
 		Connection con = null;
@@ -325,6 +373,9 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method cancelTask.
+	 */
 	private void cancelTask()
 	{
 		if (_removeTask != null)
@@ -334,13 +385,22 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class RemoveTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for RemoveTask.
+		 */
 		public RemoveTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -354,6 +414,10 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method endOfLife.
+	 * @param cw CursedWeapon
+	 */
 	public void endOfLife(CursedWeapon cw)
 	{
 		if (cw.isActivated())
@@ -427,6 +491,10 @@ public class CursedWeaponsManager
 		announce(new SystemMessage(SystemMessage.S1_HAS_DISAPPEARED_CW).addString(cw.getName()));
 	}
 	
+	/**
+	 * Method saveData.
+	 * @param cw CursedWeapon
+	 */
 	public void saveData(CursedWeapon cw)
 	{
 		Connection con = null;
@@ -463,6 +531,9 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method saveData.
+	 */
 	public void saveData()
 	{
 		for (CursedWeapon cw : _cursedWeapons)
@@ -471,6 +542,11 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method checkPlayer.
+	 * @param player Player
+	 * @param item ItemInstance
+	 */
 	public void checkPlayer(Player player, ItemInstance item)
 	{
 		if ((player == null) || (item == null) || player.isInOlympiadMode())
@@ -494,6 +570,11 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method activate.
+	 * @param player Player
+	 * @param item ItemInstance
+	 */
 	public void activate(Player player, ItemInstance item)
 	{
 		if ((player == null) || player.isInOlympiadMode())
@@ -529,6 +610,10 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method doLogout.
+	 * @param player Player
+	 */
 	public void doLogout(Player player)
 	{
 		for (CursedWeapon cw : _cursedWeapons)
@@ -541,6 +626,11 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method dropAttackable.
+	 * @param attackable NpcInstance
+	 * @param killer Player
+	 */
 	public void dropAttackable(NpcInstance attackable, Player killer)
 	{
 		if (killer.isInOlympiadMode() || killer.isCursedWeaponEquipped() || (_cursedWeapons.length == 0) || (killer.getReflection() != ReflectionManager.DEFAULT))
@@ -569,6 +659,10 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method dropPlayer.
+	 * @param player Player
+	 */
 	public void dropPlayer(Player player)
 	{
 		CursedWeapon cw = _cursedWeaponsMap.get(player.getCursedWeaponEquippedId());
@@ -587,6 +681,10 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method increaseKills.
+	 * @param itemId int
+	 */
 	public void increaseKills(int itemId)
 	{
 		CursedWeapon cw = _cursedWeaponsMap.get(itemId);
@@ -597,12 +695,21 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @param itemId int
+	 * @return int
+	 */
 	public int getLevel(int itemId)
 	{
 		CursedWeapon cw = _cursedWeaponsMap.get(itemId);
 		return cw != null ? cw.getLevel() : 0;
 	}
 	
+	/**
+	 * Method announce.
+	 * @param sm SystemMessage
+	 */
 	public void announce(SystemMessage sm)
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
@@ -611,6 +718,11 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method showUsageTime.
+	 * @param player Player
+	 * @param itemId int
+	 */
 	public void showUsageTime(Player player, int itemId)
 	{
 		CursedWeapon cw = _cursedWeaponsMap.get(itemId);
@@ -620,6 +732,11 @@ public class CursedWeaponsManager
 		}
 	}
 	
+	/**
+	 * Method showUsageTime.
+	 * @param player Player
+	 * @param cw CursedWeapon
+	 */
 	public void showUsageTime(Player player, CursedWeapon cw)
 	{
 		SystemMessage sm = new SystemMessage(SystemMessage.S2_MINUTE_OF_USAGE_TIME_ARE_LEFT_FOR_S1);
@@ -628,21 +745,39 @@ public class CursedWeaponsManager
 		player.sendPacket(sm);
 	}
 	
+	/**
+	 * Method isCursed.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public boolean isCursed(int itemId)
 	{
 		return _cursedWeaponsMap.containsKey(itemId);
 	}
 	
+	/**
+	 * Method getCursedWeapons.
+	 * @return CursedWeapon[]
+	 */
 	public CursedWeapon[] getCursedWeapons()
 	{
 		return _cursedWeapons;
 	}
 	
+	/**
+	 * Method getCursedWeaponsIds.
+	 * @return int[]
+	 */
 	public int[] getCursedWeaponsIds()
 	{
 		return _cursedWeaponsMap.keys();
 	}
 	
+	/**
+	 * Method getCursedWeapon.
+	 * @param itemId int
+	 * @return CursedWeapon
+	 */
 	public CursedWeapon getCursedWeapon(int itemId)
 	{
 		return _cursedWeaponsMap.get(itemId);

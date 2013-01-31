@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class L2FriendStatus extends L2GameServerPacket
 {
+	/**
+	 * Field _charName.
+	 */
 	private final String _charName;
+	/**
+	 * Field _login.
+	 */
 	private final boolean _login;
 	
+	/**
+	 * Constructor for L2FriendStatus.
+	 * @param player Player
+	 * @param login boolean
+	 */
 	public L2FriendStatus(Player player, boolean login)
 	{
 		_login = login;
 		_charName = player.getName();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -60,21 +60,55 @@ import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Summon extends Playable
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field SUMMON_DISAPPEAR_RANGE. (value is 2500)
+	 */
 	private static final int SUMMON_DISAPPEAR_RANGE = 2500;
+	/**
+	 * Field _owner.
+	 */
 	private final Player _owner;
+	/**
+	 * Field _spawnAnimation.
+	 */
 	private int _spawnAnimation = 2;
+	/**
+	 * Field _exp.
+	 */
 	protected long _exp = 0;
+	/**
+	 * Field _sp.
+	 */
 	protected int _sp = 0;
+	/**
+	 * Field _spsCharged. Field _maxLoad.
+	 */
 	private int _maxLoad, _spsCharged;
+	/**
+	 * Field _ssCharged. Field _depressed. Field _follow.
+	 */
 	private boolean _follow = true, _depressed = false, _ssCharged = false;
+	/**
+	 * Field _decayTask.
+	 */
 	private Future<?> _decayTask;
 	
+	/**
+	 * Constructor for Summon.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param owner Player
+	 */
 	public Summon(int objectId, NpcTemplate template, Player owner)
 	{
 		super(objectId, template);
@@ -90,6 +124,9 @@ public abstract class Summon extends Playable
 		setXYZ(owner.getX() + Rnd.get(-100, 100), owner.getY() + Rnd.get(-100, 100), owner.getZ());
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -104,6 +141,10 @@ public abstract class Summon extends Playable
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 	}
 	
+	/**
+	 * Method getAI.
+	 * @return SummonAI
+	 */
 	@Override
 	public SummonAI getAI()
 	{
@@ -120,29 +161,58 @@ public abstract class Summon extends Playable
 		return (SummonAI) _ai;
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @return NpcTemplate
+	 */
 	@Override
 	public NpcTemplate getTemplate()
 	{
 		return (NpcTemplate) _template;
 	}
 	
+	/**
+	 * Method isUndead.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isUndead()
 	{
 		return getTemplate().isUndead();
 	}
 	
+	/**
+	 * Method getSummonType.
+	 * @return int
+	 */
 	public abstract int getSummonType();
 	
+	/**
+	 * Method getSummonSkillId.
+	 * @return int
+	 */
 	public abstract int getSummonSkillId();
 	
+	/**
+	 * Method getSummonSkillLvl.
+	 * @return int
+	 */
 	public abstract int getSummonSkillLvl();
 	
+	/**
+	 * Method isMountable.
+	 * @return boolean
+	 */
 	public boolean isMountable()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(final Player player, boolean shift)
 	{
@@ -202,53 +272,93 @@ public abstract class Summon extends Playable
 		}
 	}
 	
+	/**
+	 * Method getExpForThisLevel.
+	 * @return long
+	 */
 	public long getExpForThisLevel()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getExpForNextLevel.
+	 * @return long
+	 */
 	public long getExpForNextLevel()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getNpcId.
+	 * @return int
+	 */
 	@Override
 	public int getNpcId()
 	{
 		return getTemplate().npcId;
 	}
 	
+	/**
+	 * Method getExp.
+	 * @return long
+	 */
 	public final long getExp()
 	{
 		return _exp;
 	}
 	
+	/**
+	 * Method setExp.
+	 * @param exp long
+	 */
 	public final void setExp(final long exp)
 	{
 		_exp = exp;
 	}
 	
+	/**
+	 * Method getSp.
+	 * @return int
+	 */
 	public final int getSp()
 	{
 		return _sp;
 	}
 	
+	/**
+	 * Method setSp.
+	 * @param sp int
+	 */
 	public void setSp(final int sp)
 	{
 		_sp = sp;
 	}
 	
+	/**
+	 * Method getMaxLoad.
+	 * @return int
+	 */
 	@Override
 	public int getMaxLoad()
 	{
 		return _maxLoad;
 	}
 	
+	/**
+	 * Method setMaxLoad.
+	 * @param maxLoad int
+	 */
 	public void setMaxLoad(final int maxLoad)
 	{
 		_maxLoad = maxLoad;
 	}
 	
+	/**
+	 * Method getBuffLimit.
+	 * @return int
+	 */
 	@Override
 	public int getBuffLimit()
 	{
@@ -256,10 +366,22 @@ public abstract class Summon extends Playable
 		return (int) calcStat(Stats.BUFF_LIMIT, owner.getBuffLimit(), null, null);
 	}
 	
+	/**
+	 * Method getCurrentFed.
+	 * @return int
+	 */
 	public abstract int getCurrentFed();
 	
+	/**
+	 * Method getMaxFed.
+	 * @return int
+	 */
 	public abstract int getMaxFed();
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -299,12 +421,19 @@ public abstract class Summon extends Playable
 		}
 	}
 	
+	/**
+	 * Method startDecay.
+	 * @param delay long
+	 */
 	protected void startDecay(long delay)
 	{
 		stopDecay();
 		_decayTask = DecayTaskManager.getInstance().addDecayTask(this, delay);
 	}
 	
+	/**
+	 * Method stopDecay.
+	 */
 	protected void stopDecay()
 	{
 		if (_decayTask != null)
@@ -314,18 +443,27 @@ public abstract class Summon extends Playable
 		}
 	}
 	
+	/**
+	 * Method onDecay.
+	 */
 	@Override
 	protected void onDecay()
 	{
 		deleteMe();
 	}
 	
+	/**
+	 * Method endDecayTask.
+	 */
 	public void endDecayTask()
 	{
 		stopDecay();
 		doDecay();
 	}
 	
+	/**
+	 * Method broadcastStatusUpdate.
+	 */
 	@Override
 	public void broadcastStatusUpdate()
 	{
@@ -344,12 +482,18 @@ public abstract class Summon extends Playable
 		}
 	}
 	
+	/**
+	 * Method sendStatusUpdate.
+	 */
 	public void sendStatusUpdate()
 	{
 		Player owner = getPlayer();
 		owner.sendPacket(new PetStatusUpdate(this));
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
@@ -364,11 +508,17 @@ public abstract class Summon extends Playable
 		super.onDelete();
 	}
 	
+	/**
+	 * Method unSummon.
+	 */
 	public void unSummon()
 	{
 		deleteMe();
 	}
 	
+	/**
+	 * Method saveEffects.
+	 */
 	public void saveEffects()
 	{
 		Player owner = getPlayer();
@@ -383,6 +533,10 @@ public abstract class Summon extends Playable
 		EffectsDAO.getInstance().insert(this);
 	}
 	
+	/**
+	 * Method setFollowMode.
+	 * @param state boolean
+	 */
 	public void setFollowMode(boolean state)
 	{
 		Player owner = getPlayer();
@@ -400,22 +554,42 @@ public abstract class Summon extends Playable
 		}
 	}
 	
+	/**
+	 * Method isFollowMode.
+	 * @return boolean
+	 */
 	public boolean isFollowMode()
 	{
 		return _follow;
 	}
 	
+	/**
+	 * Field _updateEffectIconsTask.
+	 */
 	Future<?> _updateEffectIconsTask;
 	
+	/**
+	 * Method getSummonPoint.
+	 * @return int
+	 */
 	public abstract int getSummonPoint();
 	
+	/**
+	 * @author Mobius
+	 */
 	private class UpdateEffectIcons extends RunnableImpl
 	{
+		/**
+		 * Constructor for UpdateEffectIcons.
+		 */
 		public UpdateEffectIcons()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -424,6 +598,9 @@ public abstract class Summon extends Playable
 		}
 	}
 	
+	/**
+	 * Method updateEffectIcons.
+	 */
 	@Override
 	public void updateEffectIcons()
 	{
@@ -445,6 +622,9 @@ public abstract class Summon extends Playable
 		_updateEffectIconsTask = ThreadPoolManager.getInstance().schedule(new UpdateEffectIcons(), Config.USER_INFO_INTERVAL);
 	}
 	
+	/**
+	 * Method updateEffectIconsImpl.
+	 */
 	public void updateEffectIconsImpl()
 	{
 		Player owner = getPlayer();
@@ -460,22 +640,37 @@ public abstract class Summon extends Playable
 		}
 	}
 	
+	/**
+	 * Method getControlItemObjId.
+	 * @return int
+	 */
 	public int getControlItemObjId()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getInventory.
+	 * @return PetInventory
+	 */
 	@Override
 	public PetInventory getInventory()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method doPickupItem.
+	 * @param object GameObject
+	 */
 	@Override
 	public void doPickupItem(final GameObject object)
 	{
 	}
 	
+	/**
+	 * Method doRevive.
+	 */
 	@Override
 	public void doRevive()
 	{
@@ -485,36 +680,71 @@ public abstract class Summon extends Playable
 		setFollowMode(true);
 	}
 	
+	/**
+	 * Method getActiveWeaponInstance.
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance getActiveWeaponInstance()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getActiveWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	@Override
 	public WeaponTemplate getActiveWeaponItem()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getSecondaryWeaponInstance.
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance getSecondaryWeaponInstance()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getSecondaryWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	@Override
 	public WeaponTemplate getSecondaryWeaponItem()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method displayGiveDamageMessage.
+	 * @param target Creature
+	 * @param damage int
+	 * @param crit boolean
+	 * @param miss boolean
+	 * @param shld boolean
+	 * @param magic boolean
+	 */
 	@Override
 	public abstract void displayGiveDamageMessage(Creature target, int damage, boolean crit, boolean miss, boolean shld, boolean magic);
 	
+	/**
+	 * Method displayReceiveDamageMessage.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	public abstract void displayReceiveDamageMessage(Creature attacker, int damage);
 	
+	/**
+	 * Method unChargeShots.
+	 * @param spirit boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean unChargeShots(final boolean spirit)
 	{
@@ -537,54 +767,92 @@ public abstract class Summon extends Playable
 		return false;
 	}
 	
+	/**
+	 * Method getChargedSoulShot.
+	 * @return boolean
+	 */
 	@Override
 	public boolean getChargedSoulShot()
 	{
 		return _ssCharged;
 	}
 	
+	/**
+	 * Method getChargedSpiritShot.
+	 * @return int
+	 */
 	@Override
 	public int getChargedSpiritShot()
 	{
 		return _spsCharged;
 	}
 	
+	/**
+	 * Method chargeSoulShot.
+	 */
 	public void chargeSoulShot()
 	{
 		_ssCharged = true;
 	}
 	
+	/**
+	 * Method chargeSpiritShot.
+	 * @param state int
+	 */
 	public void chargeSpiritShot(final int state)
 	{
 		_spsCharged = state;
 	}
 	
+	/**
+	 * Method getSoulshotConsumeCount.
+	 * @return int
+	 */
 	public int getSoulshotConsumeCount()
 	{
 		return (getLevel() / 27) + 1;
 	}
 	
+	/**
+	 * Method getSpiritshotConsumeCount.
+	 * @return int
+	 */
 	public int getSpiritshotConsumeCount()
 	{
 		return (getLevel() / 58) + 1;
 	}
 	
+	/**
+	 * Method isDepressed.
+	 * @return boolean
+	 */
 	public boolean isDepressed()
 	{
 		return _depressed;
 	}
 	
+	/**
+	 * Method setDepressed.
+	 * @param depressed boolean
+	 */
 	public void setDepressed(final boolean depressed)
 	{
 		_depressed = depressed;
 	}
 	
+	/**
+	 * Method isInRange.
+	 * @return boolean
+	 */
 	public boolean isInRange()
 	{
 		Player owner = getPlayer();
 		return getDistance(owner) < SUMMON_DISAPPEAR_RANGE;
 	}
 	
+	/**
+	 * Method teleportToOwner.
+	 */
 	public void teleportToOwner()
 	{
 		Player owner = getPlayer();
@@ -603,10 +871,19 @@ public abstract class Summon extends Playable
 		}
 	}
 	
+	/**
+	 * Field _broadcastCharInfoTask.
+	 */
 	ScheduledFuture<?> _broadcastCharInfoTask;
 	
+	/**
+	 * @author Mobius
+	 */
 	public class BroadcastCharInfoTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -615,6 +892,9 @@ public abstract class Summon extends Playable
 		}
 	}
 	
+	/**
+	 * Method broadcastCharInfo.
+	 */
 	@Override
 	public void broadcastCharInfo()
 	{
@@ -625,6 +905,9 @@ public abstract class Summon extends Playable
 		_broadcastCharInfoTask = ThreadPoolManager.getInstance().schedule(new BroadcastCharInfoTask(), Config.BROADCAST_CHAR_INFO_INTERVAL);
 	}
 	
+	/**
+	 * Method broadcastCharInfoImpl.
+	 */
 	public void broadcastCharInfoImpl()
 	{
 		Player owner = getPlayer();
@@ -641,15 +924,27 @@ public abstract class Summon extends Playable
 		}
 	}
 	
+	/**
+	 * Field _petInfoTask.
+	 */
 	Future<?> _petInfoTask;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class PetInfoTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for PetInfoTask.
+		 */
 		public PetInfoTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -658,12 +953,18 @@ public abstract class Summon extends Playable
 		}
 	}
 	
+	/**
+	 * Method sendPetInfoImpl.
+	 */
 	void sendPetInfoImpl()
 	{
 		Player owner = getPlayer();
 		owner.sendPacket(new PetInfo(this).update());
 	}
 	
+	/**
+	 * Method sendPetInfo.
+	 */
 	public void sendPetInfo()
 	{
 		if (Config.USER_INFO_INTERVAL == 0)
@@ -683,11 +984,19 @@ public abstract class Summon extends Playable
 		_petInfoTask = ThreadPoolManager.getInstance().schedule(new PetInfoTask(), Config.USER_INFO_INTERVAL);
 	}
 	
+	/**
+	 * Method getSpawnAnimation.
+	 * @return int
+	 */
 	public int getSpawnAnimation()
 	{
 		return _spawnAnimation;
 	}
 	
+	/**
+	 * Method startPvPFlag.
+	 * @param target Creature
+	 */
 	@Override
 	public void startPvPFlag(Creature target)
 	{
@@ -695,6 +1004,10 @@ public abstract class Summon extends Playable
 		owner.startPvPFlag(target);
 	}
 	
+	/**
+	 * Method getPvpFlag.
+	 * @return int
+	 */
 	@Override
 	public int getPvpFlag()
 	{
@@ -702,6 +1015,10 @@ public abstract class Summon extends Playable
 		return owner.getPvpFlag();
 	}
 	
+	/**
+	 * Method getKarma.
+	 * @return int
+	 */
 	@Override
 	public int getKarma()
 	{
@@ -709,6 +1026,10 @@ public abstract class Summon extends Playable
 		return owner.getKarma();
 	}
 	
+	/**
+	 * Method getTeam.
+	 * @return TeamType
+	 */
 	@Override
 	public TeamType getTeam()
 	{
@@ -716,14 +1037,26 @@ public abstract class Summon extends Playable
 		return owner.getTeam();
 	}
 	
+	/**
+	 * Method getPlayer.
+	 * @return Player
+	 */
 	@Override
 	public Player getPlayer()
 	{
 		return _owner;
 	}
 	
+	/**
+	 * Method getExpPenalty.
+	 * @return double
+	 */
 	public abstract double getExpPenalty();
 	
+	/**
+	 * Method getStatsRecorder.
+	 * @return SummonStatsChangeRecorder
+	 */
 	@Override
 	public SummonStatsChangeRecorder getStatsRecorder()
 	{
@@ -740,6 +1073,12 @@ public abstract class Summon extends Playable
 		return (SummonStatsChangeRecorder) _statsRecorder;
 	}
 	
+	/**
+	 * Method addPacketList.
+	 * @param forPlayer Player
+	 * @param dropper Creature
+	 * @return List<L2GameServerPacket>
+	 */
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{
@@ -779,6 +1118,9 @@ public abstract class Summon extends Playable
 		return list;
 	}
 	
+	/**
+	 * Method startAttackStanceTask.
+	 */
 	@Override
 	public void startAttackStanceTask()
 	{
@@ -790,6 +1132,11 @@ public abstract class Summon extends Playable
 		}
 	}
 	
+	/**
+	 * Method getEvent.
+	 * @param eventClass Class<E>
+	 * @return E
+	 */
 	@Override
 	public <E extends GlobalEvent> E getEvent(Class<E> eventClass)
 	{
@@ -801,6 +1148,10 @@ public abstract class Summon extends Playable
 		return super.getEvent(eventClass);
 	}
 	
+	/**
+	 * Method getEvents.
+	 * @return Set<GlobalEvent>
+	 */
 	@Override
 	public Set<GlobalEvent> getEvents()
 	{
@@ -812,6 +1163,10 @@ public abstract class Summon extends Playable
 		return super.getEvents();
 	}
 	
+	/**
+	 * Method sendReuseMessage.
+	 * @param skill Skill
+	 */
 	@Override
 	public void sendReuseMessage(Skill skill)
 	{

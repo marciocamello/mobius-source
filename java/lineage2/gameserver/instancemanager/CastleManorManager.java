@@ -39,23 +39,73 @@ import lineage2.gameserver.utils.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleManorManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CastleManorManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static CastleManorManager _instance;
+	/**
+	 * Field PERIOD_CURRENT. (value is 0)
+	 */
 	public static final int PERIOD_CURRENT = 0;
+	/**
+	 * Field PERIOD_NEXT. (value is 1)
+	 */
 	public static final int PERIOD_NEXT = 1;
+	/**
+	 * Field var_name. (value is ""ManorApproved"")
+	 */
 	protected static final String var_name = "ManorApproved";
+	/**
+	 * Field CASTLE_MANOR_LOAD_PROCURE. (value is ""SELECT * FROM castle_manor_procure WHERE castle_id=?"")
+	 */
 	private static final String CASTLE_MANOR_LOAD_PROCURE = "SELECT * FROM castle_manor_procure WHERE castle_id=?";
+	/**
+	 * Field CASTLE_MANOR_LOAD_PRODUCTION. (value is ""SELECT * FROM castle_manor_production WHERE castle_id=?"")
+	 */
 	private static final String CASTLE_MANOR_LOAD_PRODUCTION = "SELECT * FROM castle_manor_production WHERE castle_id=?";
+	/**
+	 * Field NEXT_PERIOD_APPROVE.
+	 */
 	static final int NEXT_PERIOD_APPROVE = Config.MANOR_APPROVE_TIME;
+	/**
+	 * Field NEXT_PERIOD_APPROVE_MIN.
+	 */
 	static final int NEXT_PERIOD_APPROVE_MIN = Config.MANOR_APPROVE_MIN;
+	/**
+	 * Field MANOR_REFRESH.
+	 */
 	static final int MANOR_REFRESH = Config.MANOR_REFRESH_TIME;
+	/**
+	 * Field MANOR_REFRESH_MIN.
+	 */
 	static final int MANOR_REFRESH_MIN = Config.MANOR_REFRESH_MIN;
+	/**
+	 * Field MAINTENANCE_PERIOD.
+	 */
 	protected static final long MAINTENANCE_PERIOD = Config.MANOR_MAINTENANCE_PERIOD / 60000;
+	/**
+	 * Field _underMaintenance.
+	 */
 	private boolean _underMaintenance;
+	/**
+	 * Field _disabled.
+	 */
 	private boolean _disabled;
 	
+	/**
+	 * Method getInstance.
+	 * @return CastleManorManager
+	 */
 	public static CastleManorManager getInstance()
 	{
 		if (_instance == null)
@@ -66,6 +116,9 @@ public class CastleManorManager
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for CastleManorManager.
+	 */
 	private CastleManorManager()
 	{
 		load();
@@ -79,6 +132,9 @@ public class CastleManorManager
 		}
 	}
 	
+	/**
+	 * Method load.
+	 */
 	private void load()
 	{
 		Connection con = null;
@@ -155,6 +211,9 @@ public class CastleManorManager
 		}
 	}
 	
+	/**
+	 * Method init.
+	 */
 	protected void init()
 	{
 		if (ServerVariables.getString(var_name, "").isEmpty())
@@ -179,6 +238,9 @@ public class CastleManorManager
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new ManorTask(), FirstDelay.getTimeInMillis() - Calendar.getInstance().getTimeInMillis(), 60000);
 	}
 	
+	/**
+	 * Method setNextPeriod.
+	 */
 	public void setNextPeriod()
 	{
 		List<Castle> castleList = ResidenceHolder.getInstance().getResidenceList(Castle.class);
@@ -256,6 +318,9 @@ public class CastleManorManager
 		}
 	}
 	
+	/**
+	 * Method approveNextPeriod.
+	 */
 	public void approveNextPeriod()
 	{
 		List<Castle> castleList = ResidenceHolder.getInstance().getResidenceList(Castle.class);
@@ -287,6 +352,11 @@ public class CastleManorManager
 		}
 	}
 	
+	/**
+	 * Method getNewSeedsList.
+	 * @param castleId int
+	 * @return List<SeedProduction>
+	 */
 	private List<SeedProduction> getNewSeedsList(int castleId)
 	{
 		List<SeedProduction> seeds = new ArrayList<>();
@@ -298,6 +368,11 @@ public class CastleManorManager
 		return seeds;
 	}
 	
+	/**
+	 * Method getNewCropsList.
+	 * @param castleId int
+	 * @return List<CropProcure>
+	 */
 	private List<CropProcure> getNewCropsList(int castleId)
 	{
 		List<CropProcure> crops = new ArrayList<>();
@@ -309,36 +384,72 @@ public class CastleManorManager
 		return crops;
 	}
 	
+	/**
+	 * Method isUnderMaintenance.
+	 * @return boolean
+	 */
 	public boolean isUnderMaintenance()
 	{
 		return _underMaintenance;
 	}
 	
+	/**
+	 * Method setUnderMaintenance.
+	 * @param mode boolean
+	 */
 	public void setUnderMaintenance(boolean mode)
 	{
 		_underMaintenance = mode;
 	}
 	
+	/**
+	 * Method isDisabled.
+	 * @return boolean
+	 */
 	public boolean isDisabled()
 	{
 		return _disabled;
 	}
 	
+	/**
+	 * Method setDisabled.
+	 * @param mode boolean
+	 */
 	public void setDisabled(boolean mode)
 	{
 		_disabled = mode;
 	}
 	
+	/**
+	 * Method getNewSeedProduction.
+	 * @param id int
+	 * @param amount long
+	 * @param price long
+	 * @param sales long
+	 * @return SeedProduction
+	 */
 	public SeedProduction getNewSeedProduction(int id, long amount, long price, long sales)
 	{
 		return new SeedProduction(id, amount, price, sales);
 	}
 	
+	/**
+	 * Method getNewCropProcure.
+	 * @param id int
+	 * @param amount long
+	 * @param type int
+	 * @param price long
+	 * @param buy long
+	 * @return CropProcure
+	 */
 	public CropProcure getNewCropProcure(int id, long amount, int type, long price, long buy)
 	{
 		return new CropProcure(id, amount, type, buy, price);
 	}
 	
+	/**
+	 * Method save.
+	 */
 	public void save()
 	{
 		List<Castle> castleList = ResidenceHolder.getInstance().getResidenceList(Castle.class);
@@ -349,13 +460,22 @@ public class CastleManorManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ManorTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for ManorTask.
+		 */
 		public ManorTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -404,6 +524,11 @@ public class CastleManorManager
 		}
 	}
 	
+	/**
+	 * Method getOwner.
+	 * @param castleId int
+	 * @return String
+	 */
 	public String getOwner(int castleId)
 	{
 		Connection con = null;

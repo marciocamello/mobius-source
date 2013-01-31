@@ -14,15 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.instancemanager.commission.CommissionItemInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExResponseCommissionBuyInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _itemInfo.
+	 */
 	private final CommissionItemInfo _itemInfo;
 	
+	/**
+	 * Constructor for ExResponseCommissionBuyInfo.
+	 * @param itemInfo CommissionItemInfo
+	 */
 	public ExResponseCommissionBuyInfo(CommissionItemInfo itemInfo)
 	{
 		_itemInfo = itemInfo;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

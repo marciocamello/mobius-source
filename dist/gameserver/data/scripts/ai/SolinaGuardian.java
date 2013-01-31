@@ -16,13 +16,24 @@ import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SolinaGuardian extends Fighter
 {
+	/**
+	 * Constructor for SolinaGuardian.
+	 * @param actor NpcInstance
+	 */
 	public SolinaGuardian(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{

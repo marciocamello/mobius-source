@@ -23,15 +23,32 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Bronk_19192 extends Dwarvs
 {
+	/**
+	 * Field TOROCCO_ID. (value is 19198)
+	 */
 	private static final int TOROCCO_ID = 19198;
 	
+	/**
+	 * Constructor for Bronk_19192.
+	 * @param actor NpcInstance
+	 */
 	public Bronk_19192(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtScriptEvent.
+	 * @param event String
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
@@ -45,6 +62,12 @@ public class Bronk_19192 extends Dwarvs
 		}
 	}
 	
+	/**
+	 * Method onEvtTimer.
+	 * @param timerId int
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
@@ -112,12 +135,22 @@ public class Bronk_19192 extends Dwarvs
 		}
 	}
 	
+	/**
+	 * Method canAttackCharacter.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	protected boolean canAttackCharacter(Creature target)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{

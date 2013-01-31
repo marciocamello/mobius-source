@@ -35,47 +35,122 @@ import lineage2.gameserver.templates.FishTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Fishing
 {
+	/**
+	 * Field _fisher.
+	 */
 	final Player _fisher;
+	/**
+	 * Field FISHING_NONE. (value is 0)
+	 */
 	public final static int FISHING_NONE = 0;
+	/**
+	 * Field FISHING_STARTED. (value is 1)
+	 */
 	public final static int FISHING_STARTED = 1;
+	/**
+	 * Field FISHING_WAITING. (value is 2)
+	 */
 	public final static int FISHING_WAITING = 2;
+	/**
+	 * Field FISHING_COMBAT. (value is 3)
+	 */
 	public final static int FISHING_COMBAT = 3;
+	/**
+	 * Field _state.
+	 */
 	private final AtomicInteger _state;
+	/**
+	 * Field _time.
+	 */
 	int _time;
+	/**
+	 * Field _stop.
+	 */
 	int _stop;
+	/**
+	 * Field _gooduse.
+	 */
 	private int _gooduse;
+	/**
+	 * Field _anim.
+	 */
 	int _anim;
+	/**
+	 * Field _combatMode.
+	 */
 	int _combatMode = -1;
+	/**
+	 * Field _deceptiveMode.
+	 */
 	int _deceptiveMode;
+	/**
+	 * Field _fishCurHP.
+	 */
 	int _fishCurHP;
+	/**
+	 * Field _fish.
+	 */
 	FishTemplate _fish;
+	/**
+	 * Field _lureId.
+	 */
 	int _lureId;
+	/**
+	 * Field _fishingTask.
+	 */
 	private Future<?> _fishingTask;
+	/**
+	 * Field _fishLoc.
+	 */
 	private final Location _fishLoc = new Location();
 	
+	/**
+	 * Constructor for Fishing.
+	 * @param fisher Player
+	 */
 	public Fishing(Player fisher)
 	{
 		_fisher = fisher;
 		_state = new AtomicInteger(FISHING_NONE);
 	}
 	
+	/**
+	 * Method setFish.
+	 * @param fish FishTemplate
+	 */
 	public void setFish(FishTemplate fish)
 	{
 		_fish = fish;
 	}
 	
+	/**
+	 * Method setLureId.
+	 * @param lureId int
+	 */
 	public void setLureId(int lureId)
 	{
 		_lureId = lureId;
 	}
 	
+	/**
+	 * Method getLureId.
+	 * @return int
+	 */
 	public int getLureId()
 	{
 		return _lureId;
 	}
 	
+	/**
+	 * Method setFishLoc.
+	 * @param loc Location
+	 */
 	public void setFishLoc(Location loc)
 	{
 		_fishLoc.x = loc.x;
@@ -83,11 +158,18 @@ public class Fishing
 		_fishLoc.z = loc.z;
 	}
 	
+	/**
+	 * Method getFishLoc.
+	 * @return Location
+	 */
 	public Location getFishLoc()
 	{
 		return _fishLoc;
 	}
 	
+	/**
+	 * Method startFishing.
+	 */
 	public void startFishing()
 	{
 		if (!_state.compareAndSet(FISHING_NONE, FISHING_STARTED))
@@ -101,6 +183,9 @@ public class Fishing
 		startLookingForFishTask();
 	}
 	
+	/**
+	 * Method stopFishing.
+	 */
 	public void stopFishing()
 	{
 		if (_state.getAndSet(FISHING_NONE) == FISHING_NONE)
@@ -114,6 +199,10 @@ public class Fishing
 		_fisher.sendPacket(Msg.CANCELS_FISHING);
 	}
 	
+	/**
+	 * Method endFishing.
+	 * @param win boolean
+	 */
 	public void endFishing(boolean win)
 	{
 		if (!_state.compareAndSet(FISHING_COMBAT, FISHING_NONE))
@@ -127,6 +216,9 @@ public class Fishing
 		_fisher.sendPacket(Msg.ENDS_FISHING);
 	}
 	
+	/**
+	 * Method stopFishingTask.
+	 */
 	void stopFishingTask()
 	{
 		if (_fishingTask != null)
@@ -136,15 +228,27 @@ public class Fishing
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class LookingForFishTask extends RunnableImpl
 	{
+		/**
+		 * Field _endTaskTime.
+		 */
 		private final long _endTaskTime;
 		
+		/**
+		 * Constructor for LookingForFishTask.
+		 */
 		protected LookingForFishTask()
 		{
 			_endTaskTime = System.currentTimeMillis() + _fish.getWaitTime() + 10000L;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -171,6 +275,9 @@ public class Fishing
 		}
 	}
 	
+	/**
+	 * Method startLookingForFishTask.
+	 */
 	private void startLookingForFishTask()
 	{
 		if (!_state.compareAndSet(FISHING_STARTED, FISHING_WAITING))
@@ -193,13 +300,22 @@ public class Fishing
 		_fishingTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new LookingForFishTask(), 10000L, checkDelay);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class FishCombatTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for FishCombatTask.
+		 */
 		public FishCombatTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -252,11 +368,18 @@ public class Fishing
 		}
 	}
 	
+	/**
+	 * Method isInCombat.
+	 * @return boolean
+	 */
 	public boolean isInCombat()
 	{
 		return _state.get() == FISHING_COMBAT;
 	}
 	
+	/**
+	 * Method startFishCombat.
+	 */
 	void startFishCombat()
 	{
 		if (!_state.compareAndSet(FISHING_WAITING, FISHING_COMBAT))
@@ -285,6 +408,11 @@ public class Fishing
 		_fishingTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new FishCombatTask(), 1000L, 1000L);
 	}
 	
+	/**
+	 * Method changeHp.
+	 * @param hp int
+	 * @param pen int
+	 */
 	private void changeHp(int hp, int pen)
 	{
 		_fishCurHP -= hp;
@@ -306,6 +434,10 @@ public class Fishing
 		}
 	}
 	
+	/**
+	 * Method doDie.
+	 * @param win boolean
+	 */
 	void doDie(boolean win)
 	{
 		stopFishingTask();
@@ -327,6 +459,12 @@ public class Fishing
 		endFishing(win);
 	}
 	
+	/**
+	 * Method useFishingSkill.
+	 * @param dmg int
+	 * @param pen int
+	 * @param skillType SkillType
+	 */
 	public void useFishingSkill(int dmg, int pen, SkillType skillType)
 	{
 		if (!isInCombat())
@@ -383,6 +521,14 @@ public class Fishing
 		}
 	}
 	
+	/**
+	 * Method showMessage.
+	 * @param fisher Player
+	 * @param dmg int
+	 * @param pen int
+	 * @param skillType SkillType
+	 * @param messageId int
+	 */
 	private static void showMessage(Player fisher, int dmg, int pen, SkillType skillType, int messageId)
 	{
 		switch (messageId)
@@ -438,6 +584,10 @@ public class Fishing
 		}
 	}
 	
+	/**
+	 * Method spawnPenaltyMonster.
+	 * @param fisher Player
+	 */
 	public static void spawnPenaltyMonster(Player fisher)
 	{
 		int npcId = 18319 + Math.min(fisher.getLevel() / 11, 7);
@@ -449,6 +599,11 @@ public class Fishing
 		npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, fisher, Rnd.get(1, 100));
 	}
 	
+	/**
+	 * Method getRandomFishType.
+	 * @param lureId int
+	 * @return int
+	 */
 	public static int getRandomFishType(int lureId)
 	{
 		int check = Rnd.get(100);
@@ -670,6 +825,11 @@ public class Fishing
 		return type;
 	}
 	
+	/**
+	 * Method getRandomFishLvl.
+	 * @param player Player
+	 * @return int
+	 */
 	public static int getRandomFishLvl(Player player)
 	{
 		int skilllvl = 0;
@@ -708,6 +868,11 @@ public class Fishing
 		return randomlvl;
 	}
 	
+	/**
+	 * Method getFishGroup.
+	 * @param lureId int
+	 * @return int
+	 */
 	public static int getFishGroup(int lureId)
 	{
 		switch (lureId)
@@ -727,6 +892,11 @@ public class Fishing
 		}
 	}
 	
+	/**
+	 * Method getLureGrade.
+	 * @param lureId int
+	 * @return int
+	 */
 	public static int getLureGrade(int lureId)
 	{
 		switch (lureId)
@@ -777,6 +947,11 @@ public class Fishing
 		}
 	}
 	
+	/**
+	 * Method isNightLure.
+	 * @param lureId int
+	 * @return boolean
+	 */
 	public static boolean isNightLure(int lureId)
 	{
 		switch (lureId)

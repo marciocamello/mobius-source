@@ -18,17 +18,34 @@ import java.util.List;
 import lineage2.gameserver.model.entity.boat.ClanAirShip;
 import lineage2.gameserver.model.entity.events.objects.BoatPoint;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExAirShipTeleportList extends L2GameServerPacket
 {
+	/**
+	 * Field _fuel.
+	 */
 	private final int _fuel;
+	/**
+	 * Field _airports.
+	 */
 	private List<BoatPoint> _airports = Collections.emptyList();
 	
+	/**
+	 * Constructor for ExAirShipTeleportList.
+	 * @param ship ClanAirShip
+	 */
 	public ExAirShipTeleportList(ClanAirShip ship)
 	{
 		_fuel = ship.getCurrentFuel();
 		_airports = ship.getDock().getTeleportList();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

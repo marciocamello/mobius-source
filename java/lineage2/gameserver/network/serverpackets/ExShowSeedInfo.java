@@ -17,17 +17,35 @@ import java.util.List;
 import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.templates.manor.SeedProduction;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowSeedInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _seeds.
+	 */
 	private final List<SeedProduction> _seeds;
+	/**
+	 * Field _manorId.
+	 */
 	private final int _manorId;
 	
+	/**
+	 * Constructor for ExShowSeedInfo.
+	 * @param manorId int
+	 * @param seeds List<SeedProduction>
+	 */
 	public ExShowSeedInfo(int manorId, List<SeedProduction> seeds)
 	{
 		_manorId = manorId;
 		_seeds = seeds;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

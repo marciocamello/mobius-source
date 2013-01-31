@@ -24,8 +24,15 @@ import lineage2.gameserver.scripts.Functions;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Extractable extends SimpleItemHandler
 {
+	/**
+	 * Field ITEM_IDS.
+	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
 		20069,
@@ -193,12 +200,24 @@ public class Extractable extends SimpleItemHandler
 		6007
 	};
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[]
+	 * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{
 		return ITEM_IDS;
 	}
 	
+	/**
+	 * Method useItemImpl.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
@@ -1083,7 +1102,6 @@ public class Extractable extends SimpleItemHandler
 			default:
 				return false;
 		}
-		
 		return true;
 	}
 	
@@ -4571,6 +4589,12 @@ public class Extractable extends SimpleItemHandler
 		Functions.addItem(player, talismans.get(Rnd.get(talismans.size())), 1);
 	}
 	
+	/**
+	 * Method extract_item.
+	 * @param list int[]
+	 * @param counts int[]
+	 * @param player Player
+	 */
 	private static void extract_item(int[] list, int[] counts, Player player)
 	{
 		int index = Rnd.get(list.length);
@@ -4579,6 +4603,14 @@ public class Extractable extends SimpleItemHandler
 		Functions.addItem(player, id, count);
 	}
 	
+	/**
+	 * Method mass_extract_item.
+	 * @param source_count long
+	 * @param list int[]
+	 * @param counts int[]
+	 * @param player Player
+	 * @return List<int[]>
+	 */
 	private static List<int[]> mass_extract_item(long source_count, int[] list, int[] counts, Player player)
 	{
 		List<int[]> result = new ArrayList<>((int) Math.min(list.length, source_count));
@@ -4611,6 +4643,14 @@ public class Extractable extends SimpleItemHandler
 		return result;
 	}
 	
+	/**
+	 * Method extract_item_r.
+	 * @param list int[]
+	 * @param count_min int[]
+	 * @param count_max int[]
+	 * @param chances int[]
+	 * @param player Player
+	 */
 	private static void extract_item_r(int[] list, int[] count_min, int[] count_max, int[] chances, Player player)
 	{
 		int[] counts = count_min;
@@ -4621,6 +4661,13 @@ public class Extractable extends SimpleItemHandler
 		extract_item_r(list, counts, chances, player);
 	}
 	
+	/**
+	 * Method extract_item_r.
+	 * @param list int[]
+	 * @param counts int[]
+	 * @param chances int[]
+	 * @param player Player
+	 */
 	private static void extract_item_r(int[] list, int[] counts, int[] chances, Player player)
 	{
 		int sum = 0;
@@ -4649,6 +4696,16 @@ public class Extractable extends SimpleItemHandler
 		Functions.addItem(player, item, count);
 	}
 	
+	/**
+	 * Method mass_extract_item_r.
+	 * @param source_count long
+	 * @param list int[]
+	 * @param count_min int[]
+	 * @param count_max int[]
+	 * @param chances int[]
+	 * @param player Player
+	 * @return List<int[]>
+	 */
 	private static List<int[]> mass_extract_item_r(long source_count, int[] list, int[] count_min, int[] count_max, int[] chances, Player player)
 	{
 		int[] counts = count_min;
@@ -4659,6 +4716,15 @@ public class Extractable extends SimpleItemHandler
 		return mass_extract_item_r(source_count, list, counts, chances, player);
 	}
 	
+	/**
+	 * Method mass_extract_item_r.
+	 * @param source_count long
+	 * @param list int[]
+	 * @param counts int[]
+	 * @param chances int[]
+	 * @param player Player
+	 * @return List<int[]>
+	 */
 	private static List<int[]> mass_extract_item_r(long source_count, int[] list, int[] counts, int[] chances, Player player)
 	{
 		List<int[]> result = new ArrayList<>((int) Math.min(list.length, source_count));
@@ -4709,6 +4775,12 @@ public class Extractable extends SimpleItemHandler
 		return result;
 	}
 	
+	/**
+	 * Method canBeExtracted.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	private static boolean canBeExtracted(Player player, ItemInstance item)
 	{
 		if ((player.getWeightPenalty() >= 3) || (player.getInventory().getSize() > (player.getInventoryLimit() - 10)))
@@ -4719,6 +4791,13 @@ public class Extractable extends SimpleItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method extractRandomOneItem.
+	 * @param player Player
+	 * @param items int[][]
+	 * @param chances double[]
+	 * @return boolean
+	 */
 	private static boolean extractRandomOneItem(Player player, int[][] items, double[] chances)
 	{
 		if (items.length != chances.length)

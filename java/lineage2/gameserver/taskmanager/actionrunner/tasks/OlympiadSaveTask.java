@@ -16,17 +16,33 @@ import lineage2.gameserver.model.entity.olympiad.OlympiadDatabase;
 
 import org.apache.log4j.Logger;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OlympiadSaveTask extends AutomaticTask
 {
+	/**
+	 * Field INTERVAL. (value is 7200000)
+	 */
 	private static final long INTERVAL = 7200000L;
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = Logger.getLogger(OlympiadSaveTask.class);
 	
+	/**
+	 * Constructor for OlympiadSaveTask.
+	 */
 	public OlympiadSaveTask()
 	{
 		super();
 	}
 	
+	/**
+	 * Method doTask.
+	 */
 	@Override
 	public void doTask()
 	{
@@ -34,6 +50,11 @@ public class OlympiadSaveTask extends AutomaticTask
 		OlympiadDatabase.save();
 	}
 	
+	/**
+	 * Method reCalcTime.
+	 * @param start boolean
+	 * @return long
+	 */
 	@Override
 	public long reCalcTime(boolean start)
 	{

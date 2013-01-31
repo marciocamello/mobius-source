@@ -12,14 +12,37 @@
  */
 package lineage2.gameserver.model.base;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum ClassType
 {
+	/**
+	 * Field FIGHTER.
+	 */
 	FIGHTER,
+	/**
+	 * Field MYSTIC.
+	 */
 	MYSTIC,
+	/**
+	 * Field PRIEST.
+	 */
 	PRIEST;
+	/**
+	 * Field VALUES.
+	 */
 	public static final ClassType[] VALUES = values();
+	/**
+	 * Field MAIN_TYPES.
+	 */
 	public static final ClassType[] MAIN_TYPES = getMainTypes();
 	
+	/**
+	 * Method getMainTypes.
+	 * @return ClassType[]
+	 */
 	public static ClassType[] getMainTypes()
 	{
 		return new ClassType[]
@@ -29,6 +52,10 @@ public enum ClassType
 		};
 	}
 	
+	/**
+	 * Method getMainType.
+	 * @return ClassType
+	 */
 	public ClassType getMainType()
 	{
 		if (this == PRIEST)
@@ -38,6 +65,10 @@ public enum ClassType
 		return this;
 	}
 	
+	/**
+	 * Method isMagician.
+	 * @return boolean
+	 */
 	public boolean isMagician()
 	{
 		return this != FIGHTER;

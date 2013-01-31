@@ -70,17 +70,34 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminCommandHandler extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final AdminCommandHandler _instance = new AdminCommandHandler();
 	
+	/**
+	 * Method getInstance.
+	 * @return AdminCommandHandler
+	 */
 	public static AdminCommandHandler getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field _datatable.
+	 */
 	private final Map<String, IAdminCommandHandler> _datatable = new HashMap<>();
 	
+	/**
+	 * Constructor for AdminCommandHandler.
+	 */
 	private AdminCommandHandler()
 	{
 		registerAdminCommandHandler(new AdminAdmin());
@@ -134,6 +151,10 @@ public class AdminCommandHandler extends AbstractHolder
 		registerAdminCommandHandler(new AdminKill());
 	}
 	
+	/**
+	 * Method registerAdminCommandHandler.
+	 * @param handler IAdminCommandHandler
+	 */
 	public void registerAdminCommandHandler(IAdminCommandHandler handler)
 	{
 		for (Enum<?> e : handler.getAdminCommandEnum())
@@ -142,6 +163,11 @@ public class AdminCommandHandler extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method getAdminCommandHandler.
+	 * @param adminCommand String
+	 * @return IAdminCommandHandler
+	 */
 	public IAdminCommandHandler getAdminCommandHandler(String adminCommand)
 	{
 		String command = adminCommand;
@@ -152,6 +178,11 @@ public class AdminCommandHandler extends AbstractHolder
 		return _datatable.get(command);
 	}
 	
+	/**
+	 * Method useAdminCommandHandler.
+	 * @param activeChar Player
+	 * @param adminCommand String
+	 */
 	public void useAdminCommandHandler(Player activeChar, String adminCommand)
 	{
 		if (!(activeChar.isGM() || activeChar.getPlayerAccess().CanUseGMCommand))
@@ -183,18 +214,29 @@ public class AdminCommandHandler extends AbstractHolder
 		}
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _datatable.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{
 		_datatable.clear();
 	}
 	
+	/**
+	 * Method getAllCommands.
+	 * @return Set<String>
+	 */
 	public Set<String> getAllCommands()
 	{
 		return _datatable.keySet();

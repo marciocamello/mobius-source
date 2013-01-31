@@ -12,17 +12,37 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExPutEnchantTargetItemResult extends L2GameServerPacket
 {
+	/**
+	 * Field FAIL.
+	 */
 	public static final L2GameServerPacket FAIL = new ExPutEnchantTargetItemResult(0);
+	/**
+	 * Field SUCCESS.
+	 */
 	public static final L2GameServerPacket SUCCESS = new ExPutEnchantTargetItemResult(1);
+	/**
+	 * Field _result.
+	 */
 	private final int _result;
 	
+	/**
+	 * Constructor for ExPutEnchantTargetItemResult.
+	 * @param result int
+	 */
 	public ExPutEnchantTargetItemResult(int result)
 	{
 		_result = result;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

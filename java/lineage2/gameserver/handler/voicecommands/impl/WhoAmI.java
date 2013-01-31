@@ -29,20 +29,38 @@ import lineage2.gameserver.utils.Strings;
 
 import org.apache.commons.lang3.text.StrBuilder;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WhoAmI implements IVoicedCommandHandler
 {
+	/**
+	 * Field _commandList.
+	 */
 	private final String[] _commandList = new String[]
 	{
 		"whoami",
 		"whoiam"
 	};
 	
+	/**
+	 * Method getVoicedCommandList.
+	 * @return String[] * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
+	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{
 		return _commandList;
 	}
 	
+	/**
+	 * Method useVoicedCommand.
+	 * @param command String
+	 * @param player Player
+	 * @param args String
+	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player player, String args)
 	{

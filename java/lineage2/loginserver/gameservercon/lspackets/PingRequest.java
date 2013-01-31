@@ -14,8 +14,15 @@ package lineage2.loginserver.gameservercon.lspackets;
 
 import lineage2.loginserver.gameservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PingRequest extends SendablePacket
 {
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

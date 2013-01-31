@@ -19,12 +19,30 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.TradeItem;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PrivateStoreListBuy extends L2GameServerPacket
 {
+	/**
+	 * Field _buyerId.
+	 */
 	private final int _buyerId;
+	/**
+	 * Field _adena.
+	 */
 	private final long _adena;
+	/**
+	 * Field _sellList.
+	 */
 	private final List<TradeItem> _sellList;
 	
+	/**
+	 * Constructor for PrivateStoreListBuy.
+	 * @param seller Player
+	 * @param buyer Player
+	 */
 	public PrivateStoreListBuy(Player seller, Player buyer)
 	{
 		_adena = seller.getAdena();
@@ -58,6 +76,9 @@ public class PrivateStoreListBuy extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

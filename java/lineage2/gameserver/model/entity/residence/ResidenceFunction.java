@@ -27,28 +27,94 @@ import lineage2.gameserver.tables.SkillTable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ResidenceFunction
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ResidenceFunction.class);
+	/**
+	 * Field TELEPORT. (value is 1)
+	 */
 	public static final int TELEPORT = 1;
+	/**
+	 * Field ITEM_CREATE. (value is 2)
+	 */
 	public static final int ITEM_CREATE = 2;
+	/**
+	 * Field RESTORE_HP. (value is 3)
+	 */
 	public static final int RESTORE_HP = 3;
+	/**
+	 * Field RESTORE_MP. (value is 4)
+	 */
 	public static final int RESTORE_MP = 4;
+	/**
+	 * Field RESTORE_EXP. (value is 5)
+	 */
 	public static final int RESTORE_EXP = 5;
+	/**
+	 * Field SUPPORT. (value is 6)
+	 */
 	public static final int SUPPORT = 6;
+	/**
+	 * Field CURTAIN. (value is 7)
+	 */
 	public static final int CURTAIN = 7;
+	/**
+	 * Field PLATFORM. (value is 8)
+	 */
 	public static final int PLATFORM = 8;
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _type.
+	 */
 	private final int _type;
+	/**
+	 * Field _level.
+	 */
 	private int _level;
+	/**
+	 * Field _endDate.
+	 */
 	private final Calendar _endDate;
+	/**
+	 * Field _inDebt.
+	 */
 	private boolean _inDebt;
+	/**
+	 * Field _active.
+	 */
 	private boolean _active;
+	/**
+	 * Field _leases.
+	 */
 	private final Map<Integer, Integer> _leases = new ConcurrentSkipListMap<>();
+	/**
+	 * Field _teleports.
+	 */
 	private final Map<Integer, TeleportLocation[]> _teleports = new ConcurrentSkipListMap<>();
+	/**
+	 * Field _buylists.
+	 */
 	private final Map<Integer, int[]> _buylists = new ConcurrentSkipListMap<>();
+	/**
+	 * Field _buffs.
+	 */
 	private final Map<Integer, Object[][]> _buffs = new ConcurrentSkipListMap<>();
 	
+	/**
+	 * Constructor for ResidenceFunction.
+	 * @param id int
+	 * @param type int
+	 */
 	public ResidenceFunction(int id, int type)
 	{
 		_id = id;
@@ -56,56 +122,100 @@ public class ResidenceFunction
 		_endDate = Calendar.getInstance();
 	}
 	
+	/**
+	 * Method getResidenceId.
+	 * @return int
+	 */
 	public int getResidenceId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getType.
+	 * @return int
+	 */
 	public int getType()
 	{
 		return _type;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		return _level;
 	}
 	
+	/**
+	 * Method setLvl.
+	 * @param lvl int
+	 */
 	public void setLvl(int lvl)
 	{
 		_level = lvl;
 	}
 	
+	/**
+	 * Method getEndTimeInMillis.
+	 * @return long
+	 */
 	public long getEndTimeInMillis()
 	{
 		return _endDate.getTimeInMillis();
 	}
 	
+	/**
+	 * Method setEndTimeInMillis.
+	 * @param time long
+	 */
 	public void setEndTimeInMillis(long time)
 	{
 		_endDate.setTimeInMillis(time);
 	}
 	
+	/**
+	 * Method setInDebt.
+	 * @param inDebt boolean
+	 */
 	public void setInDebt(boolean inDebt)
 	{
 		_inDebt = inDebt;
 	}
 	
+	/**
+	 * Method isInDebt.
+	 * @return boolean
+	 */
 	public boolean isInDebt()
 	{
 		return _inDebt;
 	}
 	
+	/**
+	 * Method setActive.
+	 * @param active boolean
+	 */
 	public void setActive(boolean active)
 	{
 		_active = active;
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	public boolean isActive()
 	{
 		return _active;
 	}
 	
+	/**
+	 * Method updateRentTime.
+	 * @param inDebt boolean
+	 */
 	public void updateRentTime(boolean inDebt)
 	{
 		setEndTimeInMillis(System.currentTimeMillis() + 86400000);
@@ -131,21 +241,39 @@ public class ResidenceFunction
 		}
 	}
 	
+	/**
+	 * Method getTeleports.
+	 * @return TeleportLocation[]
+	 */
 	public TeleportLocation[] getTeleports()
 	{
 		return getTeleports(_level);
 	}
 	
+	/**
+	 * Method getTeleports.
+	 * @param level int
+	 * @return TeleportLocation[]
+	 */
 	public TeleportLocation[] getTeleports(int level)
 	{
 		return _teleports.get(level);
 	}
 	
+	/**
+	 * Method addTeleports.
+	 * @param level int
+	 * @param teleports TeleportLocation[]
+	 */
 	public void addTeleports(int level, TeleportLocation[] teleports)
 	{
 		_teleports.put(level, teleports);
 	}
 	
+	/**
+	 * Method getLease.
+	 * @return int
+	 */
 	public int getLease()
 	{
 		if (_level == 0)
@@ -155,54 +283,107 @@ public class ResidenceFunction
 		return getLease(_level);
 	}
 	
+	/**
+	 * Method getLease.
+	 * @param level int
+	 * @return int
+	 */
 	public int getLease(int level)
 	{
 		return _leases.get(level);
 	}
 	
+	/**
+	 * Method addLease.
+	 * @param level int
+	 * @param lease int
+	 */
 	public void addLease(int level, int lease)
 	{
 		_leases.put(level, lease);
 	}
 	
+	/**
+	 * Method getBuylist.
+	 * @return int[]
+	 */
 	public int[] getBuylist()
 	{
 		return getBuylist(_level);
 	}
 	
+	/**
+	 * Method getBuylist.
+	 * @param level int
+	 * @return int[]
+	 */
 	public int[] getBuylist(int level)
 	{
 		return _buylists.get(level);
 	}
 	
+	/**
+	 * Method addBuylist.
+	 * @param level int
+	 * @param buylist int[]
+	 */
 	public void addBuylist(int level, int[] buylist)
 	{
 		_buylists.put(level, buylist);
 	}
 	
+	/**
+	 * Method getBuffs.
+	 * @return Object[][]
+	 */
 	public Object[][] getBuffs()
 	{
 		return getBuffs(_level);
 	}
 	
+	/**
+	 * Method getBuffs.
+	 * @param level int
+	 * @return Object[][]
+	 */
 	public Object[][] getBuffs(int level)
 	{
 		return _buffs.get(level);
 	}
 	
+	/**
+	 * Method addBuffs.
+	 * @param level int
+	 */
 	public void addBuffs(int level)
 	{
 		_buffs.put(level, buffs_template[level]);
 	}
 	
+	/**
+	 * Method getLevels.
+	 * @return Set<Integer>
+	 */
 	public Set<Integer> getLevels()
 	{
 		return _leases.keySet();
 	}
 	
+	/**
+	 * Field A. (value is """")
+	 */
 	public static final String A = "";
+	/**
+	 * Field W. (value is ""W"")
+	 */
 	public static final String W = "W";
+	/**
+	 * Field M. (value is ""M"")
+	 */
 	public static final String M = "M";
+	/**
+	 * Field buffs_template.
+	 */
 	private static final Object[][][] buffs_template =
 	{
 		{},

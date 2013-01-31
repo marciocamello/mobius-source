@@ -15,11 +15,25 @@ package lineage2.gameserver.network.loginservercon.gspackets;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.loginservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PlayerAuthRequest extends SendablePacket
 {
+	/**
+	 * Field account.
+	 */
 	private final String account;
+	/**
+	 * Field loginOkID2. Field loginOkID1. Field playOkID2. Field playOkID1.
+	 */
 	private final int playOkID1, playOkID2, loginOkID1, loginOkID2;
 	
+	/**
+	 * Constructor for PlayerAuthRequest.
+	 * @param client GameClient
+	 */
 	public PlayerAuthRequest(GameClient client)
 	{
 		account = client.getLogin();
@@ -29,6 +43,9 @@ public class PlayerAuthRequest extends SendablePacket
 		loginOkID2 = client.getSessionKey().loginOkID2;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -12,12 +12,22 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExStopScenePlayerPacket extends L2GameServerPacket
 {
+	/**
+	 * Constructor for ExStopScenePlayerPacket.
+	 */
 	public ExStopScenePlayerPacket()
 	{
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

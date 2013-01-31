@@ -24,13 +24,36 @@ import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.MapUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NpcSayAction implements EventAction
 {
+	/**
+	 * Field _npcId.
+	 */
 	private final int _npcId;
+	/**
+	 * Field _range.
+	 */
 	private final int _range;
+	/**
+	 * Field _chatType.
+	 */
 	private final ChatType _chatType;
+	/**
+	 * Field _text.
+	 */
 	private final NpcString _text;
 	
+	/**
+	 * Constructor for NpcSayAction.
+	 * @param npcId int
+	 * @param range int
+	 * @param type ChatType
+	 * @param string NpcString
+	 */
 	public NpcSayAction(int npcId, int range, ChatType type, NpcString string)
 	{
 		_npcId = npcId;
@@ -39,6 +62,11 @@ public class NpcSayAction implements EventAction
 		_text = string;
 	}
 	
+	/**
+	 * Method call.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.EventAction#call(GlobalEvent)
+	 */
 	@Override
 	public void call(GlobalEvent event)
 	{
@@ -78,6 +106,11 @@ public class NpcSayAction implements EventAction
 		}
 	}
 	
+	/**
+	 * Method packet.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 */
 	private void packet(NpcInstance npc, Player player)
 	{
 		player.sendPacket(new NpcSay(npc, _chatType, _text));

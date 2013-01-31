@@ -29,38 +29,108 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharInfo.class);
+	/**
+	 * Field _inv.
+	 */
 	private int[][] _inv;
+	/**
+	 * Field mCritRate. Field maccuracy. Field mevasion. Field _pAtkSpd. Field _mAtkSpd.
+	 */
 	private int _mAtkSpd, _pAtkSpd, mevasion, maccuracy, mCritRate;
+	/**
+	 * Field _flyWalkSpd. Field _flyRunSpd. Field _flWalkSpd. Field _flRunSpd. Field _swimSpd. Field _walkSpd. Field _runSpd. Field _swimRunSpd. Field _swimWalkSpd.
+	 */
 	private int _swimWalkSpd, _swimRunSpd, _runSpd, _walkSpd, _swimSpd, _flRunSpd, _flWalkSpd, _flyRunSpd, _flyWalkSpd;
+	/**
+	 * Field _fishLoc. Field _loc.
+	 */
 	private Location _loc, _fishLoc;
+	/**
+	 * Field _title. Field _name.
+	 */
 	private String _name, _title;
+	/**
+	 * Field rec_have. Field karma. Field pvp_flag. Field base_class. Field _sex. Field _race. Field _objId.
+	 */
 	private int _objId, _race, _sex, base_class, pvp_flag, karma, rec_have;
+	/**
+	 * Field col_height. Field col_radius. Field speed_atack. Field speed_move.
+	 */
 	private double speed_move, speed_atack, col_radius, col_height;
+	/**
+	 * Field _abnormalEffect2. Field _abnormalEffect. Field face. Field hair_color. Field hair_style.
+	 */
 	private int hair_style, hair_color, face, _abnormalEffect, _abnormalEffect2;
+	/**
+	 * Field class_id. Field ally_crest_id. Field ally_id. Field large_clan_crest_id. Field clan_crest_id. Field clan_id.
+	 */
 	private int clan_id, clan_crest_id, large_clan_crest_id, ally_id, ally_crest_id, class_id;
+	/**
+	 * Field _enchant. Field private_store. Field _dead. Field _combat. Field _run. Field _sit.
+	 */
 	private int _sit, _run, _combat, _dead, private_store, _enchant;
+	/**
+	 * Field mount_type. Field _fishing. Field _hero. Field _noble.
+	 */
 	private int _noble, _hero, _fishing, mount_type;
+	/**
+	 * Field mount_id. Field cw_level. Field clan_rep_score. Field pledge_type. Field plg_class.
+	 */
 	private int plg_class, pledge_type, clan_rep_score, cw_level, mount_id;
+	/**
+	 * Field _clanBoatObjectId. Field _agathion. Field _transform. Field _title_color. Field _nameColor.
+	 */
 	private int _nameColor, _title_color, _transform, _agathion, _clanBoatObjectId;
+	/**
+	 * Field cubics.
+	 */
 	private EffectCubic[] cubics;
+	/**
+	 * Field _isFlying. Field _isPartyRoomLeader.
+	 */
 	private boolean _isPartyRoomLeader, _isFlying;
+	/**
+	 * Field _team.
+	 */
 	private TeamType _team;
+	/**
+	 * Field maxMP. Field curMP. Field maxHP. Field curHP. Field curCP.
+	 */
 	@SuppressWarnings("unused")
 	private int curCP, curHP, maxHP, curMP, maxMP;
 	
+	/**
+	 * Constructor for CharInfo.
+	 * @param cha Player
+	 */
 	public CharInfo(Player cha)
 	{
 		this((Creature) cha);
 	}
 	
+	/**
+	 * Constructor for CharInfo.
+	 * @param cha DecoyInstance
+	 */
 	public CharInfo(DecoyInstance cha)
 	{
 		this((Creature) cha);
 	}
 	
+	/**
+	 * Constructor for CharInfo.
+	 * @param cha Creature
+	 */
 	public CharInfo(Creature cha)
 	{
 		if (cha == null)
@@ -224,6 +294,9 @@ public class CharInfo extends L2GameServerPacket
 		maxMP = player.getMaxMp();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -451,6 +524,9 @@ public class CharInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Field PAPERDOLL_ORDER.
+	 */
 	public static final int[] PAPERDOLL_ORDER =
 	{
 		Inventory.PAPERDOLL_UNDER,

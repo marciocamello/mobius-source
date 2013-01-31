@@ -22,16 +22,29 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.ExAskJoinMPCC;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExMPCCAskJoin extends L2GameClientPacket
 {
+	/**
+	 * Field _name.
+	 */
 	private String _name;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_name = readS(16);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -101,6 +114,11 @@ public class RequestExMPCCAskJoin extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method sendInvite.
+	 * @param requestor Player
+	 * @param target Player
+	 */
 	private void sendInvite(Player requestor, Player target)
 	{
 		new Request(L2RequestType.CHANNEL, requestor, target).setTimeout(10000L);

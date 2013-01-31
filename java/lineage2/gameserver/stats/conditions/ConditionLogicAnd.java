@@ -14,16 +14,33 @@ package lineage2.gameserver.stats.conditions;
 
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionLogicAnd extends Condition
 {
+	/**
+	 * Field emptyConditions.
+	 */
 	private final static Condition[] emptyConditions = new Condition[0];
+	/**
+	 * Field _conditions.
+	 */
 	public Condition[] _conditions = emptyConditions;
 	
+	/**
+	 * Constructor for ConditionLogicAnd.
+	 */
 	public ConditionLogicAnd()
 	{
 		super();
 	}
 	
+	/**
+	 * Method add.
+	 * @param condition Condition
+	 */
 	public void add(Condition condition)
 	{
 		if (condition == null)
@@ -37,6 +54,11 @@ public class ConditionLogicAnd extends Condition
 		_conditions = tmp;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

@@ -18,14 +18,25 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class IceCastleBreath extends Fighter
 {
+	/**
+	 * Constructor for IceCastleBreath.
+	 * @param actor NpcInstance
+	 */
 	public IceCastleBreath(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = 6000;
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -40,6 +51,9 @@ public class IceCastleBreath extends Fighter
 		}
 	}
 	
+	/**
+	 * Method teleportHome.
+	 */
 	@Override
 	protected void teleportHome()
 	{

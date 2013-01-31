@@ -29,17 +29,49 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MMOTopManager
 {
+	/**
+	 * Field SELECT_PLAYER_OBJID. (value is ""SELECT obj_Id FROM characters WHERE char_name=?"")
+	 */
 	private static final String SELECT_PLAYER_OBJID = "SELECT obj_Id FROM characters WHERE char_name=?";
+	/**
+	 * Field SELECT_CHARACTER_MMOTOP_DATA. (value is ""SELECT * FROM character_mmotop_votes WHERE id=? AND date=? AND multipler=?"")
+	 */
 	private static final String SELECT_CHARACTER_MMOTOP_DATA = "SELECT * FROM character_mmotop_votes WHERE id=? AND date=? AND multipler=?";
+	/**
+	 * Field INSERT_MMOTOP_DATA. (value is ""INSERT INTO character_mmotop_votes (date, id, nick, multipler) values (?,?,?,?)"")
+	 */
 	private static final String INSERT_MMOTOP_DATA = "INSERT INTO character_mmotop_votes (date, id, nick, multipler) values (?,?,?,?)";
+	/**
+	 * Field DELETE_MMOTOP_DATA. (value is ""DELETE FROM character_mmotop_votes WHERE date<?"")
+	 */
 	private static final String DELETE_MMOTOP_DATA = "DELETE FROM character_mmotop_votes WHERE date<?";
+	/**
+	 * Field SELECT_MULTIPLER_MMOTOP_DATA. (value is ""SELECT multipler FROM character_mmotop_votes WHERE id=? AND has_reward=0"")
+	 */
 	private static final String SELECT_MULTIPLER_MMOTOP_DATA = "SELECT multipler FROM character_mmotop_votes WHERE id=? AND has_reward=0";
+	/**
+	 * Field UPDATE_MMOTOP_DATA. (value is ""UPDATE character_mmotop_votes SET has_reward=1 WHERE id=?"")
+	 */
 	private static final String UPDATE_MMOTOP_DATA = "UPDATE character_mmotop_votes SET has_reward=1 WHERE id=?";
+	/**
+	 * Field reader.
+	 */
 	BufferedReader reader;
+	/**
+	 * Field _instance.
+	 */
 	private static MMOTopManager _instance;
 	
+	/**
+	 * Method getInstance.
+	 * @return MMOTopManager
+	 */
 	public static MMOTopManager getInstance()
 	{
 		if ((_instance == null) && Config.MMO_TOP_MANAGER_ENABLED)
@@ -49,6 +81,9 @@ public class MMOTopManager
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for MMOTopManager.
+	 */
 	public MMOTopManager()
 	{
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new ConnectAndUpdate(), Config.MMO_TOP_MANAGER_INTERVAL, Config.MMO_TOP_MANAGER_INTERVAL);
@@ -56,6 +91,10 @@ public class MMOTopManager
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new GiveReward(), Config.MMO_TOP_MANAGER_INTERVAL, Config.MMO_TOP_MANAGER_INTERVAL);
 	}
 	
+	/**
+	 * Method getPage.
+	 * @param address String
+	 */
 	public void getPage(String address)
 	{
 		try
@@ -69,6 +108,9 @@ public class MMOTopManager
 		}
 	}
 	
+	/**
+	 * Method parse.
+	 */
 	public void parse()
 	{
 		try
@@ -120,6 +162,12 @@ public class MMOTopManager
 		}
 	}
 	
+	/**
+	 * Method checkAndSave.
+	 * @param voteTime long
+	 * @param charName String
+	 * @param voteType int
+	 */
 	public void checkAndSave(long voteTime, String charName, int voteType)
 	{
 		Connection con = null;
@@ -167,6 +215,9 @@ public class MMOTopManager
 		}
 	}
 	
+	/**
+	 * Method clean.
+	 */
 	synchronized void clean()
 	{
 		Calendar calendar = Calendar.getInstance();
@@ -190,6 +241,9 @@ public class MMOTopManager
 		}
 	}
 	
+	/**
+	 * Method giveReward.
+	 */
 	synchronized void giveReward()
 	{
 		Connection con = null;
@@ -260,13 +314,23 @@ public class MMOTopManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ConnectAndUpdate implements Runnable
 	{
+		/**
+		 * Constructor for ConnectAndUpdate.
+		 */
 		public ConnectAndUpdate()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -275,13 +339,23 @@ public class MMOTopManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Clean implements Runnable
 	{
+		/**
+		 * Constructor for Clean.
+		 */
 		public Clean()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -289,13 +363,23 @@ public class MMOTopManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class GiveReward implements Runnable
 	{
+		/**
+		 * Constructor for GiveReward.
+		 */
 		public GiveReward()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{

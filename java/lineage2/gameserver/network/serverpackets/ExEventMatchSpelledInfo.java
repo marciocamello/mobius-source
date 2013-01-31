@@ -17,17 +17,45 @@ import java.util.List;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExEventMatchSpelledInfo extends L2GameServerPacket
 {
+	/**
+	 * Field char_obj_id.
+	 */
 	private int char_obj_id = 0;
+	/**
+	 * Field _effects.
+	 */
 	private final List<Effect> _effects;
 	
+	/**
+	 * @author Mobius
+	 */
 	class Effect
 	{
+		/**
+		 * Field skillId.
+		 */
 		int skillId;
+		/**
+		 * Field dat.
+		 */
 		int dat;
+		/**
+		 * Field duration.
+		 */
 		int duration;
 		
+		/**
+		 * Constructor for Effect.
+		 * @param skillId int
+		 * @param dat int
+		 * @param duration int
+		 */
 		public Effect(int skillId, int dat, int duration)
 		{
 			this.skillId = skillId;
@@ -36,16 +64,29 @@ public class ExEventMatchSpelledInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Constructor for ExEventMatchSpelledInfo.
+	 */
 	public ExEventMatchSpelledInfo()
 	{
 		_effects = new ArrayList<>();
 	}
 	
+	/**
+	 * Method addEffect.
+	 * @param skillId int
+	 * @param dat int
+	 * @param duration int
+	 */
 	public void addEffect(int skillId, int dat, int duration)
 	{
 		_effects.add(new Effect(skillId, dat, duration));
 	}
 	
+	/**
+	 * Method addSpellRecivedPlayer.
+	 * @param cha Player
+	 */
 	public void addSpellRecivedPlayer(Player cha)
 	{
 		if (cha != null)
@@ -54,6 +95,9 @@ public class ExEventMatchSpelledInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

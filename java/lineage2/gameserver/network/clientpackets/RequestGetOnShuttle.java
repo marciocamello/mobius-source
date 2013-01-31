@@ -17,11 +17,24 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.boat.Boat;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestGetOnShuttle extends L2GameClientPacket
 {
+	/**
+	 * Field _shuttleId.
+	 */
 	private int _shuttleId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc = new Location();
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -31,6 +44,9 @@ public class RequestGetOnShuttle extends L2GameClientPacket
 		_loc.z = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

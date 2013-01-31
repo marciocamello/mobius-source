@@ -31,34 +31,84 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class PetBabyInstance extends PetInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(PetBabyInstance.class);
+	/**
+	 * Field _actionTask.
+	 */
 	Future<?> _actionTask;
+	/**
+	 * Field _buffEnabled.
+	 */
 	private boolean _buffEnabled = true;
 	
+	/**
+	 * Constructor for PetBabyInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param owner Player
+	 * @param control ItemInstance
+	 * @param _currentLevel int
+	 * @param exp long
+	 */
 	public PetBabyInstance(int objectId, NpcTemplate template, Player owner, ItemInstance control, int _currentLevel, long exp)
 	{
 		super(objectId, template, owner, control, _currentLevel, exp);
 	}
 	
+	/**
+	 * Constructor for PetBabyInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param owner Player
+	 * @param control ItemInstance
+	 */
 	public PetBabyInstance(int objectId, NpcTemplate template, Player owner, ItemInstance control)
 	{
 		super(objectId, template, owner, control);
 	}
 	
+	/**
+	 * Field HealTrick. (value is 4717)
+	 */
 	private static final int HealTrick = 4717;
+	/**
+	 * Field GreaterHealTrick. (value is 4718)
+	 */
 	private static final int GreaterHealTrick = 4718;
+	/**
+	 * Field GreaterHeal. (value is 5195)
+	 */
 	private static final int GreaterHeal = 5195;
+	/**
+	 * Field BattleHeal. (value is 5590)
+	 */
 	private static final int BattleHeal = 5590;
+	/**
+	 * Field Recharge. (value is 5200)
+	 */
 	private static final int Recharge = 5200;
 	
+	/**
+	 * @author Mobius
+	 */
 	class ActionTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -67,6 +117,10 @@ public final class PetBabyInstance extends PetInstance
 		}
 	}
 	
+	/**
+	 * Method getBuffs.
+	 * @return Skill[]
+	 */
 	public Skill[] getBuffs()
 	{
 		switch (getNpcId())
@@ -84,6 +138,10 @@ public final class PetBabyInstance extends PetInstance
 		}
 	}
 	
+	/**
+	 * Method onActionTask.
+	 * @return Skill
+	 */
 	public Skill onActionTask()
 	{
 		try
@@ -166,6 +224,12 @@ public final class PetBabyInstance extends PetInstance
 		return null;
 	}
 	
+	/**
+	 * Method checkEffect.
+	 * @param ef Effect
+	 * @param skill Skill
+	 * @return boolean
+	 */
 	private boolean checkEffect(Effect ef, Skill skill)
 	{
 		if ((ef == null) || !ef.isInUse() || !EffectList.checkStackType(ef.getTemplate(), skill.getEffectTemplates()[0]))
@@ -187,6 +251,9 @@ public final class PetBabyInstance extends PetInstance
 		return false;
 	}
 	
+	/**
+	 * Method stopBuffTask.
+	 */
 	public synchronized void stopBuffTask()
 	{
 		if (_actionTask != null)
@@ -196,6 +263,9 @@ public final class PetBabyInstance extends PetInstance
 		}
 	}
 	
+	/**
+	 * Method startBuffTask.
+	 */
 	public synchronized void startBuffTask()
 	{
 		if (_actionTask != null)
@@ -208,16 +278,27 @@ public final class PetBabyInstance extends PetInstance
 		}
 	}
 	
+	/**
+	 * Method isBuffEnabled.
+	 * @return boolean
+	 */
 	public boolean isBuffEnabled()
 	{
 		return _buffEnabled;
 	}
 	
+	/**
+	 * Method triggerBuff.
+	 */
 	public void triggerBuff()
 	{
 		_buffEnabled = !_buffEnabled;
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -225,6 +306,9 @@ public final class PetBabyInstance extends PetInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method doRevive.
+	 */
 	@Override
 	public void doRevive()
 	{
@@ -232,6 +316,9 @@ public final class PetBabyInstance extends PetInstance
 		startBuffTask();
 	}
 	
+	/**
+	 * Method unSummon.
+	 */
 	@Override
 	public void unSummon()
 	{
@@ -239,16 +326,28 @@ public final class PetBabyInstance extends PetInstance
 		super.unSummon();
 	}
 	
+	/**
+	 * Method getHealLevel.
+	 * @return int
+	 */
 	public int getHealLevel()
 	{
 		return Math.min(Math.max((getLevel() - getMinLevel()) / ((80 - getMinLevel()) / 12), 1), 12);
 	}
 	
+	/**
+	 * Method getRechargeLevel.
+	 * @return int
+	 */
 	public int getRechargeLevel()
 	{
 		return Math.min(Math.max((getLevel() - getMinLevel()) / ((80 - getMinLevel()) / 8), 1), 8);
 	}
 	
+	/**
+	 * Method getBuffLevel.
+	 * @return int
+	 */
 	public int getBuffLevel()
 	{
 		if (getNpcId() == PetDataTable.FAIRY_PRINCESS_ID)
@@ -258,36 +357,92 @@ public final class PetBabyInstance extends PetInstance
 		return Math.min(Math.max((getLevel() - 55) / 5, 0), 3);
 	}
 	
+	/**
+	 * Method getSoulshotConsumeCount.
+	 * @return int
+	 */
 	@Override
 	public int getSoulshotConsumeCount()
 	{
 		return 1;
 	}
 	
+	/**
+	 * Method getSpiritshotConsumeCount.
+	 * @return int
+	 */
 	@Override
 	public int getSpiritshotConsumeCount()
 	{
 		return 1;
 	}
 	
+	/**
+	 * Field Pet_Haste. (value is 5186)
+	 */
 	private static final int Pet_Haste = 5186;
+	/**
+	 * Field Pet_Vampiric_Rage. (value is 5187)
+	 */
 	private static final int Pet_Vampiric_Rage = 5187;
+	/**
+	 * Field Pet_Regeneration. (value is 5188)
+	 */
 	@SuppressWarnings("unused")
 	private static final int Pet_Regeneration = 5188;
+	/**
+	 * Field Pet_Blessed_Body. (value is 5189)
+	 */
 	private static final int Pet_Blessed_Body = 5189;
+	/**
+	 * Field Pet_Blessed_Soul. (value is 5190)
+	 */
 	private static final int Pet_Blessed_Soul = 5190;
+	/**
+	 * Field Pet_Guidance. (value is 5191)
+	 */
 	private static final int Pet_Guidance = 5191;
+	/**
+	 * Field Pet_Wind_Walk. (value is 5192)
+	 */
 	@SuppressWarnings("unused")
 	private static final int Pet_Wind_Walk = 5192;
+	/**
+	 * Field Pet_Acumen. (value is 5193)
+	 */
 	private static final int Pet_Acumen = 5193;
+	/**
+	 * Field Pet_Empower. (value is 5194)
+	 */
 	private static final int Pet_Empower = 5194;
+	/**
+	 * Field Pet_Concentration. (value is 5201)
+	 */
 	private static final int Pet_Concentration = 5201;
+	/**
+	 * Field Pet_Might. (value is 5586)
+	 */
 	private static final int Pet_Might = 5586;
+	/**
+	 * Field Pet_Shield. (value is 5587)
+	 */
 	private static final int Pet_Shield = 5587;
+	/**
+	 * Field Pet_Focus. (value is 5588)
+	 */
 	private static final int Pet_Focus = 5588;
+	/**
+	 * Field Pet_Death_Wisper. (value is 5589)
+	 */
 	private static final int Pet_Death_Wisper = 5589;
+	/**
+	 * Field CurseGloom. (value is 5199) Field Slow. (value is 5198) Field Hex. (value is 5197) Field WindShackle. (value is 5196)
+	 */
 	@SuppressWarnings("unused")
 	private static final int WindShackle = 5196, Hex = 5197, Slow = 5198, CurseGloom = 5199;
+	/**
+	 * Field COUGAR_BUFFS.
+	 */
 	private static final Skill[][] COUGAR_BUFFS =
 	{
 		{
@@ -319,6 +474,9 @@ public final class PetBabyInstance extends PetInstance
 			SkillTable.getInstance().getInfo(Pet_Focus, 3)
 		}
 	};
+	/**
+	 * Field BUFFALO_BUFFS.
+	 */
 	private static final Skill[][] BUFFALO_BUFFS =
 	{
 		{
@@ -350,6 +508,9 @@ public final class PetBabyInstance extends PetInstance
 			SkillTable.getInstance().getInfo(Pet_Death_Wisper, 3)
 		}
 	};
+	/**
+	 * Field KOOKABURRA_BUFFS.
+	 */
 	private static final Skill[][] KOOKABURRA_BUFFS =
 	{
 		{
@@ -379,6 +540,9 @@ public final class PetBabyInstance extends PetInstance
 			SkillTable.getInstance().getInfo(Pet_Concentration, 6)
 		}
 	};
+	/**
+	 * Field FAIRY_PRINCESS_BUFFS.
+	 */
 	private static final Skill[][] FAIRY_PRINCESS_BUFFS =
 	{
 		{

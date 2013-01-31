@@ -32,24 +32,77 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TheFlowOfTheHorror extends Functions implements ScriptFile
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(TheFlowOfTheHorror.class);
+	/**
+	 * Field Gilmore.
+	 */
 	private static int Gilmore = 30754;
+	/**
+	 * Field Shackle.
+	 */
 	private static int Shackle = 20235;
+	/**
+	 * Field _oldGilmoreRef.
+	 */
 	private static HardReference<NpcInstance> _oldGilmoreRef = HardReferences.emptyRef();
+	/**
+	 * Field _stage.
+	 */
 	private static int _stage = 1;
+	/**
+	 * Field _spawns.
+	 */
 	private static List<MonsterInstance> _spawns = new ArrayList<>();
+	/**
+	 * Field points11.
+	 */
 	private static List<Location> points11 = new ArrayList<>();
+	/**
+	 * Field points12.
+	 */
 	private static List<Location> points12 = new ArrayList<>();
+	/**
+	 * Field points13.
+	 */
 	private static List<Location> points13 = new ArrayList<>();
+	/**
+	 * Field points21.
+	 */
 	private static List<Location> points21 = new ArrayList<>();
+	/**
+	 * Field points22.
+	 */
 	private static List<Location> points22 = new ArrayList<>();
+	/**
+	 * Field points23.
+	 */
 	private static List<Location> points23 = new ArrayList<>();
+	/**
+	 * Field points31.
+	 */
 	private static List<Location> points31 = new ArrayList<>();
+	/**
+	 * Field points32.
+	 */
 	private static List<Location> points32 = new ArrayList<>();
+	/**
+	 * Field points33.
+	 */
 	private static List<Location> points33 = new ArrayList<>();
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -127,6 +180,9 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method spawnNewWave.
+	 */
 	public static void spawnNewWave()
 	{
 		spawn(Shackle, points11);
@@ -141,6 +197,11 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 		_stage = 2;
 	}
 	
+	/**
+	 * Method spawn.
+	 * @param id int
+	 * @param points List<Location>
+	 */
 	private static void spawn(int id, List<Location> points)
 	{
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(id);
@@ -154,6 +215,9 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 		_spawns.add(monster);
 	}
 	
+	/**
+	 * Method activateAI.
+	 */
 	private void activateAI()
 	{
 		NpcInstance target = GameObjectsStorage.getByNpcId(Gilmore);
@@ -172,6 +236,9 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method deactivateAI.
+	 */
 	private void deactivateAI()
 	{
 		for (MonsterInstance monster : _spawns)
@@ -188,11 +255,18 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return ServerVariables.getString("TheFlowOfTheHorror", "off").equalsIgnoreCase("on");
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -213,6 +287,9 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -233,23 +310,39 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		deactivateAI();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 		deactivateAI();
 	}
 	
+	/**
+	 * Method getStage.
+	 * @return int
+	 */
 	public static int getStage()
 	{
 		return _stage;
 	}
 	
+	/**
+	 * Method setStage.
+	 * @param stage int
+	 */
 	public static void setStage(int stage)
 	{
 		_stage = stage;

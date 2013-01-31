@@ -15,13 +15,26 @@ package lineage2.gameserver.handler.usercommands.impl;
 import lineage2.gameserver.handler.usercommands.IUserCommandHandler;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ResetName implements IUserCommandHandler
 {
+	/**
+	 * Field COMMAND_IDS.
+	 */
 	private static final int[] COMMAND_IDS =
 	{
 		117
 	};
 	
+	/**
+	 * Method useUserCommand.
+	 * @param id int
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
+	 */
 	@Override
 	public boolean useUserCommand(int id, Player activeChar)
 	{
@@ -39,6 +52,10 @@ public class ResetName implements IUserCommandHandler
 		return false;
 	}
 	
+	/**
+	 * Method getUserCommandList.
+	 * @return int[] * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
+	 */
 	@Override
 	public final int[] getUserCommandList()
 	{

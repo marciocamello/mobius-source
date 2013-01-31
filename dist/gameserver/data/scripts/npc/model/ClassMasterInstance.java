@@ -28,6 +28,10 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ClassMasterInstance extends MerchantInstance
 {
 	/**
@@ -35,13 +39,26 @@ public final class ClassMasterInstance extends MerchantInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for ClassMasterInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ClassMasterInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Field jobLevel.
+	 */
 	int jobLevel = 0;
 	
+	/**
+	 * Method makeMessage.
+	 * @param player Player
+	 * @return String
+	 */
 	private String makeMessage(Player player)
 	{
 		ClassId classId = player.getClassId();
@@ -57,7 +74,7 @@ public final class ClassMasterInstance extends MerchantInstance
 			ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.CLASS_MASTERS_PRICE_ITEM_LIST[jobLevel]);
 			if (Config.CLASS_MASTERS_PRICE_LIST[jobLevel] > 0)
 			{
-				html.append("Price: ").append(Util.formatAdena(Config.CLASS_MASTERS_PRICE_LIST[jobLevel])).append(" ").append(item.getName()).append("<br1>");
+				html.append("Price: ").append(Util.formatAdena(Config.CLASS_MASTERS_PRICE_LIST[jobLevel])).append(' ').append(item.getName()).append("<br1>");
 			}
 			for (ClassId cid : ClassId.VALUES)
 			{
@@ -67,7 +84,7 @@ public final class ClassMasterInstance extends MerchantInstance
 				}
 				if (cid.childOf(classId) && (cid.getClassLevel().ordinal() == (classId.getClassLevel().ordinal() + 1)))
 				{
-					html.append("<a action=\"bypass -h npc_").append(getObjectId()).append("_change_class ").append(cid.getId()).append(" ").append(Config.CLASS_MASTERS_PRICE_LIST[jobLevel]).append("\">").append(HtmlUtils.htmlClassName(cid.getId())).append("</a><br>");
+					html.append("<a action=\"bypass -h npc_").append(getObjectId()).append("_change_class ").append(cid.getId()).append(' ').append(Config.CLASS_MASTERS_PRICE_LIST[jobLevel]).append("\">").append(HtmlUtils.htmlClassName(cid.getId())).append("</a><br>");
 				}
 			}
 			player.sendPacket(new NpcHtmlMessage(player, this).setHtml(html.toString()));
@@ -96,6 +113,12 @@ public final class ClassMasterInstance extends MerchantInstance
 		return html.toString();
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -105,6 +128,11 @@ public final class ClassMasterInstance extends MerchantInstance
 		player.sendPacket(msg);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -136,6 +164,11 @@ public final class ClassMasterInstance extends MerchantInstance
 		}
 	}
 	
+	/**
+	 * Method changeClass.
+	 * @param player Player
+	 * @param val int
+	 */
 	private void changeClass(Player player, int val)
 	{
 		if (player.getClassId().isOfLevel(ClassLevel.Second))

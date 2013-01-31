@@ -21,11 +21,25 @@ import lineage2.gameserver.instancemanager.CastleManorManager;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.templates.manor.CropProcure;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowProcureCropDetail extends L2GameServerPacket
 {
+	/**
+	 * Field _cropId.
+	 */
 	private final int _cropId;
+	/**
+	 * Field _castleCrops.
+	 */
 	private final Map<Integer, CropProcure> _castleCrops;
 	
+	/**
+	 * Constructor for ExShowProcureCropDetail.
+	 * @param cropId int
+	 */
 	public ExShowProcureCropDetail(int cropId)
 	{
 		_cropId = cropId;
@@ -41,6 +55,9 @@ public class ExShowProcureCropDetail extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	public void writeImpl()
 	{

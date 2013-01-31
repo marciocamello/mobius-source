@@ -31,17 +31,34 @@ import lineage2.gameserver.utils.NpcUtils;
 import npc.model.residences.clanhall.RainbowGourdInstance;
 import npc.model.residences.clanhall.RainbowYetiInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RainbowYeti extends CharacterAI
 {
+	/**
+	 * @author Mobius
+	 */
 	private static class ZoneDeactive extends RunnableImpl
 	{
+		/**
+		 * Field _zone.
+		 */
 		private final ZoneObject _zone;
 		
+		/**
+		 * Constructor for ZoneDeactive.
+		 * @param zone ZoneObject
+		 */
 		public ZoneDeactive(ZoneObject zone)
 		{
 			_zone = zone;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -49,11 +66,20 @@ public class RainbowYeti extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Constructor for RainbowYeti.
+	 * @param actor NpcInstance
+	 */
 	public RainbowYeti(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSeeSpell.
+	 * @param skill Skill
+	 * @param character Creature
+	 */
 	@Override
 	public void onEvtSeeSpell(Skill skill, Creature character)
 	{
@@ -156,6 +182,11 @@ public class RainbowYeti extends CharacterAI
 		}
 	}
 	
+	/**
+	 * Method getGourd.
+	 * @param index int
+	 * @return RainbowGourdInstance
+	 */
 	private RainbowGourdInstance getGourd(int index)
 	{
 		ClanHallMiniGameEvent miniGameEvent = getActor().getEvent(ClanHallMiniGameEvent.class);
@@ -165,6 +196,12 @@ public class RainbowYeti extends CharacterAI
 		return (RainbowGourdInstance) spawnEx.getSpawns().get(1).getFirstSpawned();
 	}
 	
+	/**
+	 * Method rndEx.
+	 * @param size int
+	 * @param ex int
+	 * @return int
+	 */
 	private int rndEx(int size, int ex)
 	{
 		int rnd = Integer.MIN_VALUE;

@@ -18,12 +18,29 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GMViewSkillInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _charName.
+	 */
 	private final String _charName;
+	/**
+	 * Field _skills.
+	 */
 	private final Collection<Skill> _skills;
+	/**
+	 * Field _targetChar.
+	 */
 	private final Player _targetChar;
 	
+	/**
+	 * Constructor for GMViewSkillInfo.
+	 * @param cha Player
+	 */
 	public GMViewSkillInfo(Player cha)
 	{
 		_charName = cha.getName();
@@ -31,6 +48,9 @@ public class GMViewSkillInfo extends L2GameServerPacket
 		_targetChar = cha;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

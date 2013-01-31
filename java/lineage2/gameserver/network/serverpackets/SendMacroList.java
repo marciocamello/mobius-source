@@ -14,12 +14,31 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.actor.instances.player.Macro;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SendMacroList extends L2GameServerPacket
 {
+	/**
+	 * Field _rev.
+	 */
 	private final int _rev;
+	/**
+	 * Field _count.
+	 */
 	private final int _count;
+	/**
+	 * Field _macro.
+	 */
 	private final Macro _macro;
 	
+	/**
+	 * Constructor for SendMacroList.
+	 * @param rev int
+	 * @param count int
+	 * @param macro Macro
+	 */
 	public SendMacroList(int rev, int count, Macro macro)
 	{
 		_rev = rev;
@@ -27,6 +46,9 @@ public class SendMacroList extends L2GameServerPacket
 		_macro = macro;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -17,15 +17,31 @@ import lineage2.gameserver.model.quest.startcondition.ICheckStartCondition;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClassLevelCondition implements ICheckStartCondition
 {
+	/**
+	 * Field classLevels.
+	 */
 	private final int[] classLevels;
 	
+	/**
+	 * Constructor for ClassLevelCondition.
+	 * @param classLevels int[]
+	 */
 	public ClassLevelCondition(int... classLevels)
 	{
 		this.classLevels = classLevels;
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param player Player
+	 * @return boolean * @see lineage2.gameserver.model.quest.startcondition.ICheckStartCondition#checkCondition(Player)
+	 */
 	@Override
 	public boolean checkCondition(Player player)
 	{

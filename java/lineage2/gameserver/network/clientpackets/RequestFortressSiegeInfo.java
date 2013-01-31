@@ -19,13 +19,23 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.network.serverpackets.ExShowFortressSiegeInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestFortressSiegeInfo extends L2GameClientPacket
 {
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

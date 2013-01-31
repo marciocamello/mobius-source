@@ -12,15 +12,42 @@
  */
 package lineage2.gameserver.utils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SqlBatch
 {
+	/**
+	 * Field _header.
+	 */
 	private final String _header;
+	/**
+	 * Field _tail.
+	 */
 	private final String _tail;
+	/**
+	 * Field _sb.
+	 */
 	private StringBuilder _sb;
+	/**
+	 * Field _result.
+	 */
 	private final StringBuilder _result;
+	/**
+	 * Field _limit.
+	 */
 	private long _limit = Long.MAX_VALUE;
+	/**
+	 * Field isEmpty.
+	 */
 	private boolean isEmpty = true;
 	
+	/**
+	 * Constructor for SqlBatch.
+	 * @param header String
+	 * @param tail String
+	 */
 	public SqlBatch(String header, String tail)
 	{
 		_header = header + "\n";
@@ -29,16 +56,28 @@ public class SqlBatch
 		_result = new StringBuilder();
 	}
 	
+	/**
+	 * Constructor for SqlBatch.
+	 * @param header String
+	 */
 	public SqlBatch(String header)
 	{
 		this(header, null);
 	}
 	
+	/**
+	 * Method writeStructure.
+	 * @param str String
+	 */
 	public void writeStructure(String str)
 	{
 		_result.append(str);
 	}
 	
+	/**
+	 * Method write.
+	 * @param str String
+	 */
 	public void write(String str)
 	{
 		isEmpty = false;
@@ -54,6 +93,9 @@ public class SqlBatch
 		}
 	}
 	
+	/**
+	 * Method writeBuffer.
+	 */
 	public void writeBuffer()
 	{
 		String last = _sb.toString();
@@ -64,6 +106,10 @@ public class SqlBatch
 		_sb = new StringBuilder(_header);
 	}
 	
+	/**
+	 * Method close.
+	 * @return String
+	 */
 	public String close()
 	{
 		if (_sb.length() > _header.length())
@@ -73,11 +119,19 @@ public class SqlBatch
 		return _result.toString();
 	}
 	
+	/**
+	 * Method setLimit.
+	 * @param l long
+	 */
 	public void setLimit(long l)
 	{
 		_limit = l;
 	}
 	
+	/**
+	 * Method isEmpty.
+	 * @return boolean
+	 */
 	public boolean isEmpty()
 	{
 		return isEmpty;

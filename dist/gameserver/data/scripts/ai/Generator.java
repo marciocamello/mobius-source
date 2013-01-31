@@ -15,20 +15,35 @@ package ai;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Generator extends DefaultAI
 {
+	/**
+	 * Constructor for Generator.
+	 * @param actor NpcInstance
+	 */
 	public Generator(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{

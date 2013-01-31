@@ -12,13 +12,33 @@
  */
 package lineage2.gameserver.model;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface PlayersInWorld
 {
+	/**
+	 * Method storePlayer.
+	 * @param player GameObject
+	 */
 	public void storePlayer(GameObject player);
 	
+	/**
+	 * Method removePlayer.
+	 * @param player GameObject
+	 */
 	public void removePlayer(GameObject player);
 	
+	/**
+	 * Method get.
+	 * @param objId int
+	 * @return Player
+	 */
 	public Player get(int objId);
 	
+	/**
+	 * Method run.
+	 */
 	public void run();
 }

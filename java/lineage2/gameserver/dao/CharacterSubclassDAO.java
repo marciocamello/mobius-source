@@ -29,18 +29,58 @@ import lineage2.gameserver.model.base.SubClassType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharacterSubclassDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharacterSubclassDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static CharacterSubclassDAO _instance = new CharacterSubclassDAO();
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT class_id, default_class_id, exp, sp, curHp, curCp, curMp, active, type, death_penalty, certification FROM character_subclasses WHERE char_obj_id=?"")
+	 */
 	public static final String SELECT_SQL_QUERY = "SELECT class_id, default_class_id, exp, sp, curHp, curCp, curMp, active, type, death_penalty, certification FROM character_subclasses WHERE char_obj_id=?";
+	/**
+	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO character_subclasses (char_obj_id, class_id, default_class_id, exp, sp, curHp, curMp, curCp, maxHp, maxMp, maxCp, level, active, type, death_penalty, certification) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"")
+	 */
 	public static final String INSERT_SQL_QUERY = "INSERT INTO character_subclasses (char_obj_id, class_id, default_class_id, exp, sp, curHp, curMp, curCp, maxHp, maxMp, maxCp, level, active, type, death_penalty, certification) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	
+	/**
+	 * Method getInstance.
+	 * @return CharacterSubclassDAO
+	 */
 	public static CharacterSubclassDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method insert.
+	 * @param objId int
+	 * @param classId int
+	 * @param dafaultClassId int
+	 * @param exp long
+	 * @param sp int
+	 * @param curHp double
+	 * @param curMp double
+	 * @param curCp double
+	 * @param maxHp double
+	 * @param maxMp double
+	 * @param maxCp double
+	 * @param level int
+	 * @param active boolean
+	 * @param type SubClassType
+	 * @param deathPenalty DeathPenalty
+	 * @param certification int
+	 * @return boolean
+	 */
 	public boolean insert(int objId, int classId, int dafaultClassId, long exp, int sp, double curHp, double curMp, double curCp, double maxHp, double maxMp, double maxCp, int level, boolean active, SubClassType type, DeathPenalty deathPenalty, int certification)
 	{
 		Connection con = null;
@@ -79,6 +119,11 @@ public class CharacterSubclassDAO
 		return true;
 	}
 	
+	/**
+	 * Method restore.
+	 * @param player Player
+	 * @return List<SubClass>
+	 */
 	public List<SubClass> restore(Player player)
 	{
 		List<SubClass> result = new ArrayList<>();
@@ -119,6 +164,11 @@ public class CharacterSubclassDAO
 		return result;
 	}
 	
+	/**
+	 * Method store.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean store(Player player)
 	{
 		Connection con = null;
@@ -131,22 +181,22 @@ public class CharacterSubclassDAO
 			for (SubClass subClass : player.getSubClassList().values())
 			{
 				sb = new StringBuilder("UPDATE character_subclasses SET ");
-				sb.append("exp=").append(subClass.getExp()).append(",");
-				sb.append("sp=").append(subClass.getSp()).append(",");
-				sb.append("curHp=").append(subClass.getHp()).append(",");
-				sb.append("curMp=").append(subClass.getMp()).append(",");
-				sb.append("curCp=").append(subClass.getCp()).append(",");
-				sb.append("level=").append(subClass.getLevel()).append(",");
-				sb.append("active=").append(subClass.isActive() ? 1 : 0).append(",");
-				sb.append("type=").append(subClass.getType().ordinal()).append(",");
-				sb.append("death_penalty=").append(subClass.getDeathPenalty(player).getLevelOnSaveDB(player)).append(",");
-				sb.append("certification='").append(subClass.getCertification()).append("'");
+				sb.append("exp=").append(subClass.getExp()).append(',');
+				sb.append("sp=").append(subClass.getSp()).append(',');
+				sb.append("curHp=").append(subClass.getHp()).append(',');
+				sb.append("curMp=").append(subClass.getMp()).append(',');
+				sb.append("curCp=").append(subClass.getCp()).append(',');
+				sb.append("level=").append(subClass.getLevel()).append(',');
+				sb.append("active=").append(subClass.isActive() ? 1 : 0).append(',');
+				sb.append("type=").append(subClass.getType().ordinal()).append(',');
+				sb.append("death_penalty=").append(subClass.getDeathPenalty(player).getLevelOnSaveDB(player)).append(',');
+				sb.append("certification='").append(subClass.getCertification()).append('\'');
 				sb.append(" WHERE char_obj_id=").append(player.getObjectId()).append(" AND class_id=").append(subClass.getClassId()).append(" LIMIT 1");
 				statement.executeUpdate(sb.toString());
 			}
 			sb = new StringBuilder("UPDATE character_subclasses SET ");
-			sb.append("maxHp=").append(player.getMaxHp()).append(",");
-			sb.append("maxMp=").append(player.getMaxMp()).append(",");
+			sb.append("maxHp=").append(player.getMaxHp()).append(',');
+			sb.append("maxMp=").append(player.getMaxMp()).append(',');
 			sb.append("maxCp=").append(player.getMaxCp());
 			sb.append(" WHERE char_obj_id=").append(player.getObjectId()).append(" AND active=1 LIMIT 1");
 			statement.executeUpdate(sb.toString());

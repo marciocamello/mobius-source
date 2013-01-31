@@ -12,10 +12,23 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class L2FriendSay extends L2GameServerPacket
 {
+	/**
+	 * Field _message. Field _receiver. Field _sender.
+	 */
 	private final String _sender, _receiver, _message;
 	
+	/**
+	 * Constructor for L2FriendSay.
+	 * @param sender String
+	 * @param reciever String
+	 * @param message String
+	 */
 	public L2FriendSay(String sender, String reciever, String message)
 	{
 		_sender = sender;
@@ -23,6 +36,9 @@ public class L2FriendSay extends L2GameServerPacket
 		_message = message;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

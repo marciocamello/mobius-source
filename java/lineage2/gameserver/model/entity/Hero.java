@@ -48,25 +48,81 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Hero
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Hero.class);
+	/**
+	 * Field _instance.
+	 */
 	private static Hero _instance;
+	/**
+	 * Field GET_HEROES. (value is ""SELECT * FROM heroes WHERE played = 1"")
+	 */
 	private static final String GET_HEROES = "SELECT * FROM heroes WHERE played = 1";
+	/**
+	 * Field GET_ALL_HEROES. (value is ""SELECT * FROM heroes"")
+	 */
 	private static final String GET_ALL_HEROES = "SELECT * FROM heroes";
+	/**
+	 * Field _heroes.
+	 */
 	private static Map<Integer, StatsSet> _heroes;
+	/**
+	 * Field _completeHeroes.
+	 */
 	private static Map<Integer, StatsSet> _completeHeroes;
+	/**
+	 * Field _herodiary.
+	 */
 	private static Map<Integer, List<HeroDiary>> _herodiary;
+	/**
+	 * Field _heroMessage.
+	 */
 	private static Map<Integer, String> _heroMessage;
+	/**
+	 * Field COUNT. (value is ""count"")
+	 */
 	public static final String COUNT = "count";
+	/**
+	 * Field PLAYED. (value is ""played"")
+	 */
 	public static final String PLAYED = "played";
+	/**
+	 * Field CLAN_NAME. (value is ""clan_name"")
+	 */
 	public static final String CLAN_NAME = "clan_name";
+	/**
+	 * Field CLAN_CREST. (value is ""clan_crest"")
+	 */
 	public static final String CLAN_CREST = "clan_crest";
+	/**
+	 * Field ALLY_NAME. (value is ""ally_name"")
+	 */
 	public static final String ALLY_NAME = "ally_name";
+	/**
+	 * Field ALLY_CREST. (value is ""ally_crest"")
+	 */
 	public static final String ALLY_CREST = "ally_crest";
+	/**
+	 * Field ACTIVE. (value is ""active"")
+	 */
 	public static final String ACTIVE = "active";
+	/**
+	 * Field MESSAGE. (value is ""message"")
+	 */
 	public static final String MESSAGE = "message";
 	
+	/**
+	 * Method getInstance.
+	 * @return Hero
+	 */
 	public static Hero getInstance()
 	{
 		if (_instance == null)
@@ -76,11 +132,19 @@ public class Hero
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for Hero.
+	 */
 	public Hero()
 	{
 		init();
 	}
 	
+	/**
+	 * Method HeroSetClanAndAlly.
+	 * @param charId int
+	 * @param hero StatsSet
+	 */
 	private static void HeroSetClanAndAlly(int charId, StatsSet hero)
 	{
 		Entry<Clan, Alliance> e = ClanTable.getInstance().getClanAndAllianceByCharId(charId);
@@ -91,6 +155,9 @@ public class Hero
 		e = null;
 	}
 	
+	/**
+	 * Method init.
+	 */
 	private void init()
 	{
 		_heroes = new ConcurrentHashMap<>();
@@ -147,11 +214,18 @@ public class Hero
 		_log.info("Hero System: Loaded " + _completeHeroes.size() + " all time Heroes.");
 	}
 	
+	/**
+	 * Method getHeroes.
+	 * @return Map<Integer,StatsSet>
+	 */
 	public Map<Integer, StatsSet> getHeroes()
 	{
 		return _heroes;
 	}
 	
+	/**
+	 * Method clearHeroes.
+	 */
 	public synchronized void clearHeroes()
 	{
 		mysql.set("UPDATE heroes SET played = 0, active = 0");
@@ -193,6 +267,11 @@ public class Hero
 		_herodiary.clear();
 	}
 	
+	/**
+	 * Method computeNewHeroes.
+	 * @param newHeroes List<StatsSet>
+	 * @return boolean
+	 */
 	public synchronized boolean computeNewHeroes(List<StatsSet> newHeroes)
 	{
 		if (newHeroes.size() == 0)
@@ -232,6 +311,10 @@ public class Hero
 		return error;
 	}
 	
+	/**
+	 * Method updateHeroes.
+	 * @param id int
+	 */
 	public void updateHeroes(int id)
 	{
 		Connection con = null;
@@ -270,6 +353,11 @@ public class Hero
 		}
 	}
 	
+	/**
+	 * Method isHero.
+	 * @param id int
+	 * @return boolean
+	 */
 	public boolean isHero(int id)
 	{
 		if ((_heroes == null) || _heroes.isEmpty())
@@ -283,6 +371,11 @@ public class Hero
 		return false;
 	}
 	
+	/**
+	 * Method isInactiveHero.
+	 * @param id int
+	 * @return boolean
+	 */
 	public boolean isInactiveHero(int id)
 	{
 		if ((_heroes == null) || _heroes.isEmpty())
@@ -296,6 +389,10 @@ public class Hero
 		return false;
 	}
 	
+	/**
+	 * Method activateHero.
+	 * @param player Player
+	 */
 	public void activateHero(Player player)
 	{
 		StatsSet hero = _heroes.get(player.getObjectId());
@@ -318,6 +415,10 @@ public class Hero
 		updateHeroes(player.getObjectId());
 	}
 	
+	/**
+	 * Method addSkills.
+	 * @param player Player
+	 */
 	public static void addSkills(Player player)
 	{
 		player.addSkill(SkillTable.getInstance().getInfo(Skill.SKILL_HEROIC_MIRACLE, 1));
@@ -327,6 +428,10 @@ public class Hero
 		player.addSkill(SkillTable.getInstance().getInfo(Skill.SKILL_HEROIC_DREAD, 1));
 	}
 	
+	/**
+	 * Method removeSkills.
+	 * @param player Player
+	 */
 	public static void removeSkills(Player player)
 	{
 		player.removeSkillById(Skill.SKILL_HEROIC_MIRACLE);
@@ -336,6 +441,10 @@ public class Hero
 		player.removeSkillById(Skill.SKILL_HEROIC_DREAD);
 	}
 	
+	/**
+	 * Method loadDiary.
+	 * @param charId int
+	 */
 	public void loadDiary(int charId)
 	{
 		List<HeroDiary> diary = new ArrayList<>();
@@ -372,6 +481,13 @@ public class Hero
 		}
 	}
 	
+	/**
+	 * Method showHeroDiary.
+	 * @param activeChar Player
+	 * @param heroclass int
+	 * @param charid int
+	 * @param page int
+	 */
 	public void showHeroDiary(Player activeChar, int heroclass, int charid, int page)
 	{
 		final int perpage = 10;
@@ -437,6 +553,12 @@ public class Hero
 		}
 	}
 	
+	/**
+	 * Method addHeroDiary.
+	 * @param playerId int
+	 * @param id int
+	 * @param param int
+	 */
 	public void addHeroDiary(int playerId, int id, int param)
 	{
 		insertHeroDiary(playerId, id, param);
@@ -447,6 +569,12 @@ public class Hero
 		}
 	}
 	
+	/**
+	 * Method insertHeroDiary.
+	 * @param charId int
+	 * @param action int
+	 * @param param int
+	 */
 	private void insertHeroDiary(int charId, int action, int param)
 	{
 		Connection con = null;
@@ -472,6 +600,10 @@ public class Hero
 		}
 	}
 	
+	/**
+	 * Method loadMessage.
+	 * @param charId int
+	 */
 	public void loadMessage(int charId)
 	{
 		Connection con = null;
@@ -498,11 +630,20 @@ public class Hero
 		}
 	}
 	
+	/**
+	 * Method setHeroMessage.
+	 * @param charId int
+	 * @param message String
+	 */
 	public void setHeroMessage(int charId, String message)
 	{
 		_heroMessage.put(charId, message);
 	}
 	
+	/**
+	 * Method saveHeroMessage.
+	 * @param charId int
+	 */
 	public void saveHeroMessage(int charId)
 	{
 		if (_heroMessage.get(charId) == null)
@@ -530,6 +671,9 @@ public class Hero
 		}
 	}
 	
+	/**
+	 * Method shutdown.
+	 */
 	public void shutdown()
 	{
 		for (int charId : _heroMessage.keySet())
@@ -538,6 +682,11 @@ public class Hero
 		}
 	}
 	
+	/**
+	 * Method getHeroByClass.
+	 * @param classid int
+	 * @return int
+	 */
 	public int getHeroByClass(int classid)
 	{
 		if (!_heroes.isEmpty())
@@ -554,6 +703,11 @@ public class Hero
 		return 0;
 	}
 	
+	/**
+	 * Method getHeroStats.
+	 * @param classId int
+	 * @return Map.Entry<Integer,StatsSet>
+	 */
 	public Map.Entry<Integer, StatsSet> getHeroStats(int classId)
 	{
 		if (!_heroes.isEmpty())
@@ -569,6 +723,10 @@ public class Hero
 		return null;
 	}
 	
+	/**
+	 * Method deleteHero.
+	 * @param player Player
+	 */
 	public static void deleteHero(Player player)
 	{
 		Connection con = null;

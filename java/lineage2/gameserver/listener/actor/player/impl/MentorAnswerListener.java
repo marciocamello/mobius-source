@@ -18,17 +18,36 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.base.TeamType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MentorAnswerListener implements OnAnswerListener
 {
+	/**
+	 * Field _playerRef.
+	 */
 	private final HardReference<Player> _playerRef;
+	/**
+	 * Field _mentee.
+	 */
 	private final String _mentee;
 	
+	/**
+	 * Constructor for MentorAnswerListener.
+	 * @param mentor Player
+	 * @param mentee String
+	 */
 	public MentorAnswerListener(Player mentor, String mentee)
 	{
 		_playerRef = mentor.getRef();
 		_mentee = mentee;
 	}
 	
+	/**
+	 * Method sayYes.
+	 * @see lineage2.gameserver.listener.actor.player.OnAnswerListener#sayYes()
+	 */
 	@Override
 	public void sayYes()
 	{
@@ -44,6 +63,10 @@ public class MentorAnswerListener implements OnAnswerListener
 		player.teleToLocation(World.getPlayer(_mentee).getLoc());
 	}
 	
+	/**
+	 * Method sayNo.
+	 * @see lineage2.gameserver.listener.actor.player.OnAnswerListener#sayNo()
+	 */
 	@Override
 	public void sayNo()
 	{

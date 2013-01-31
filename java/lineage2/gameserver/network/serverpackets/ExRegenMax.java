@@ -12,12 +12,31 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExRegenMax extends L2GameServerPacket
 {
+	/**
+	 * Field _max.
+	 */
 	private final double _max;
+	/**
+	 * Field _count.
+	 */
 	private final int _count;
+	/**
+	 * Field _time.
+	 */
 	private final int _time;
 	
+	/**
+	 * Constructor for ExRegenMax.
+	 * @param max double
+	 * @param count int
+	 * @param time int
+	 */
 	public ExRegenMax(double max, int count, int time)
 	{
 		_max = max * .66;
@@ -25,10 +44,22 @@ public class ExRegenMax extends L2GameServerPacket
 		_time = time;
 	}
 	
+	/**
+	 * Field POTION_HEALING_GREATER. (value is 16457)
+	 */
 	public static final int POTION_HEALING_GREATER = 16457;
+	/**
+	 * Field POTION_HEALING_MEDIUM. (value is 16440)
+	 */
 	public static final int POTION_HEALING_MEDIUM = 16440;
+	/**
+	 * Field POTION_HEALING_LESSER. (value is 16416)
+	 */
 	public static final int POTION_HEALING_LESSER = 16416;
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

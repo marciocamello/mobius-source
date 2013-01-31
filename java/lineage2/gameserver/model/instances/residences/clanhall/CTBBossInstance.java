@@ -24,21 +24,50 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class CTBBossInstance extends MonsterInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field SKILL.
+	 */
 	public static final Skill SKILL = SkillTable.getInstance().getInfo(5456, 1);
+	/**
+	 * Field _matchTeamObject.
+	 */
 	private CTBTeamObject _matchTeamObject;
 	
+	/**
+	 * Constructor for CTBBossInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public CTBBossInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		setHasChatWindow(false);
 	}
 	
+	/**
+	 * Method reduceCurrentHp.
+	 * @param damage double
+	 * @param reflectableDamage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 * @param canReflect boolean
+	 * @param transferDamage boolean
+	 * @param isDot boolean
+	 * @param sendMessage boolean
+	 */
 	@Override
 	public void reduceCurrentHp(double damage, double reflectableDamage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp, boolean canReflect, boolean transferDamage, boolean isDot, boolean sendMessage)
 	{
@@ -50,6 +79,11 @@ public abstract class CTBBossInstance extends MonsterInstance
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature attacker)
 	{
@@ -65,12 +99,21 @@ public abstract class CTBBossInstance extends MonsterInstance
 		return true;
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		return isAttackable(attacker);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onDeath(Creature killer)
 	{
@@ -79,6 +122,10 @@ public abstract class CTBBossInstance extends MonsterInstance
 		super.onDeath(killer);
 	}
 	
+	/**
+	 * Method getTitle.
+	 * @return String
+	 */
 	@Override
 	public String getTitle()
 	{
@@ -86,6 +133,10 @@ public abstract class CTBBossInstance extends MonsterInstance
 		return clan == null ? StringUtils.EMPTY : clan.getClan().getName();
 	}
 	
+	/**
+	 * Method setMatchTeamObject.
+	 * @param matchTeamObject CTBTeamObject
+	 */
 	public void setMatchTeamObject(CTBTeamObject matchTeamObject)
 	{
 		_matchTeamObject = matchTeamObject;

@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShowCalc extends L2GameServerPacket
 {
+	/**
+	 * Field _calculatorId.
+	 */
 	private final int _calculatorId;
 	
+	/**
+	 * Constructor for ShowCalc.
+	 * @param calculatorId int
+	 */
 	public ShowCalc(int calculatorId)
 	{
 		_calculatorId = calculatorId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

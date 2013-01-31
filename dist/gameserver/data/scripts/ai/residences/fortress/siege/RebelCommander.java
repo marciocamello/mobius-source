@@ -18,13 +18,25 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import ai.residences.SiegeGuardFighter;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RebelCommander extends SiegeGuardFighter
 {
+	/**
+	 * Constructor for RebelCommander.
+	 * @param actor NpcInstance
+	 */
 	public RebelCommander(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onEvtDead(Creature killer)
 	{

@@ -16,19 +16,57 @@ import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.model.instances.StaticObjectInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StaticObjectTemplate
 {
+	/**
+	 * Field _uid.
+	 */
 	private final int _uid;
+	/**
+	 * Field _type.
+	 */
 	private final int _type;
+	/**
+	 * Field _filePath.
+	 */
 	private final String _filePath;
+	/**
+	 * Field _mapX.
+	 */
 	private final int _mapX;
+	/**
+	 * Field _mapY.
+	 */
 	private final int _mapY;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _x.
+	 */
 	private final int _x;
+	/**
+	 * Field _y.
+	 */
 	private final int _y;
+	/**
+	 * Field _z.
+	 */
 	private final int _z;
+	/**
+	 * Field _spawn.
+	 */
 	private final boolean _spawn;
 	
+	/**
+	 * Constructor for StaticObjectTemplate.
+	 * @param set StatsSet
+	 */
 	public StaticObjectTemplate(StatsSet set)
 	{
 		_uid = set.getInteger("uid");
@@ -43,56 +81,100 @@ public class StaticObjectTemplate
 		_spawn = set.getBool("spawn");
 	}
 	
+	/**
+	 * Method getUId.
+	 * @return int
+	 */
 	public int getUId()
 	{
 		return _uid;
 	}
 	
+	/**
+	 * Method getType.
+	 * @return int
+	 */
 	public int getType()
 	{
 		return _type;
 	}
 	
+	/**
+	 * Method getFilePath.
+	 * @return String
+	 */
 	public String getFilePath()
 	{
 		return _filePath;
 	}
 	
+	/**
+	 * Method getMapX.
+	 * @return int
+	 */
 	public int getMapX()
 	{
 		return _mapX;
 	}
 	
+	/**
+	 * Method getMapY.
+	 * @return int
+	 */
 	public int getMapY()
 	{
 		return _mapY;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method getX.
+	 * @return int
+	 */
 	public int getX()
 	{
 		return _x;
 	}
 	
+	/**
+	 * Method getY.
+	 * @return int
+	 */
 	public int getY()
 	{
 		return _y;
 	}
 	
+	/**
+	 * Method getZ.
+	 * @return int
+	 */
 	public int getZ()
 	{
 		return _z;
 	}
 	
+	/**
+	 * Method isSpawn.
+	 * @return boolean
+	 */
 	public boolean isSpawn()
 	{
 		return _spawn;
 	}
 	
+	/**
+	 * Method newInstance.
+	 * @return StaticObjectInstance
+	 */
 	public StaticObjectInstance newInstance()
 	{
 		StaticObjectInstance instance = new StaticObjectInstance(IdFactory.getInstance().getNextId(), this);

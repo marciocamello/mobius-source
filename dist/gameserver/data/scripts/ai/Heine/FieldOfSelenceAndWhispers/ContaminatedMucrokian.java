@@ -23,13 +23,25 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ContaminatedMucrokian extends Fighter
 {
+	/**
+	 * Constructor for ContaminatedMucrokian.
+	 * @param actor NpcInstance
+	 */
 	public ContaminatedMucrokian(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onIntentionAttack.
+	 * @param target Creature
+	 */
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
@@ -45,6 +57,11 @@ public class ContaminatedMucrokian extends Fighter
 		super.onIntentionAttack(target);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

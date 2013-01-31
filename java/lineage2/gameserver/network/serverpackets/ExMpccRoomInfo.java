@@ -14,16 +14,45 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.matching.MatchingRoom;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExMpccRoomInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _index.
+	 */
 	private final int _index;
+	/**
+	 * Field _memberSize.
+	 */
 	private final int _memberSize;
+	/**
+	 * Field _minLevel.
+	 */
 	private final int _minLevel;
+	/**
+	 * Field _maxLevel.
+	 */
 	private final int _maxLevel;
+	/**
+	 * Field _lootType.
+	 */
 	private final int _lootType;
+	/**
+	 * Field _locationId.
+	 */
 	private final int _locationId;
+	/**
+	 * Field _topic.
+	 */
 	private final String _topic;
 	
+	/**
+	 * Constructor for ExMpccRoomInfo.
+	 * @param matching MatchingRoom
+	 */
 	public ExMpccRoomInfo(MatchingRoom matching)
 	{
 		_index = matching.getId();
@@ -35,6 +64,9 @@ public class ExMpccRoomInfo extends L2GameServerPacket
 		_lootType = matching.getLootType();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	public void writeImpl()
 	{

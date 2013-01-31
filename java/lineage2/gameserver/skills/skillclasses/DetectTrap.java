@@ -22,13 +22,26 @@ import lineage2.gameserver.model.instances.TrapInstance;
 import lineage2.gameserver.network.serverpackets.NpcInfo;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DetectTrap extends Skill
 {
+	/**
+	 * Constructor for DetectTrap.
+	 * @param set StatsSet
+	 */
 	public DetectTrap(StatsSet set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

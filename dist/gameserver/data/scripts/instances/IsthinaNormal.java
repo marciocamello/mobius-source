@@ -28,18 +28,52 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class IsthinaNormal extends Reflection
 {
+	/**
+	 * Field Isthina.
+	 */
 	private final int Isthina = 29195;
+	/**
+	 * Field Ballista.
+	 */
 	private final int Ballista = 19021;
+	/**
+	 * Field _epicZoneListener.
+	 */
 	private final ZoneListener _epicZoneListener = new ZoneListener();
+	/**
+	 * Field _deathListener.
+	 */
 	final DeathListener _deathListener = new DeathListener();
+	/**
+	 * Field _currentHpListener.
+	 */
 	final CurrentHpListener _currentHpListener = new CurrentHpListener();
+	/**
+	 * Field _entryLocked.
+	 */
 	boolean _entryLocked = false;
+	/**
+	 * Field _startLaunched.
+	 */
 	boolean _startLaunched = false;
+	/**
+	 * Field _lockedTurn.
+	 */
 	boolean _lockedTurn = false;
+	/**
+	 * Field raidplayers.
+	 */
 	final AtomicInteger raidplayers = new AtomicInteger();
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{
@@ -47,14 +81,26 @@ public class IsthinaNormal extends Reflection
 		getZone("[Isthina_epic]").addListener(_epicZoneListener);
 	}
 	
+	/**
+	 * Method onCollapse.
+	 */
 	@Override
 	protected void onCollapse()
 	{
 		super.onCollapse();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -76,24 +122,44 @@ public class IsthinaNormal extends Reflection
 			isthinaNormal.addListener(_deathListener);
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 		}
 	}
 	
+	/**
+	 * Method checkstartCond.
+	 * @param raidplayers int
+	 * @return boolean
+	 */
 	boolean checkstartCond(int raidplayers)
 	{
 		return !((raidplayers < getInstancedZone().getMinParty()) || _startLaunched);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class StartNormalIsthina extends RunnableImpl
 	{
+		/**
+		 * Constructor for StartNormalIsthina.
+		 */
 		public StartNormalIsthina()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -107,13 +173,25 @@ public class IsthinaNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DeathListener implements OnDeathListener
 	{
+		/**
+		 * Constructor for DeathListener.
+		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param self Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -124,8 +202,19 @@ public class IsthinaNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class CurrentHpListener implements OnCurrentHpDamageListener
 	{
+		/**
+		 * Method onCurrentHpDamage.
+		 * @param actor Creature
+		 * @param damage double
+		 * @param attacker Creature
+		 * @param skill Skill
+		 * @see lineage2.gameserver.listener.actor.OnCurrentHpDamageListener#onCurrentHpDamage(Creature, double, Creature, Skill)
+		 */
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
 		{
@@ -150,13 +239,22 @@ public class IsthinaNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class IsthinaDeath extends RunnableImpl
 	{
+		/**
+		 * Constructor for IsthinaDeath.
+		 */
 		public IsthinaDeath()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -172,13 +270,22 @@ public class IsthinaNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class IsthinaDeathFinalA extends RunnableImpl
 	{
+		/**
+		 * Constructor for IsthinaDeathFinalA.
+		 */
 		public IsthinaDeathFinalA()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -195,13 +302,22 @@ public class IsthinaNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class IsthinaDeathFinalB extends RunnableImpl
 	{
+		/**
+		 * Constructor for IsthinaDeathFinalB.
+		 */
 		public IsthinaDeathFinalB()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -218,13 +334,22 @@ public class IsthinaNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class FinalAndCollapse extends RunnableImpl
 	{
+		/**
+		 * Constructor for FinalAndCollapse.
+		 */
 		public FinalAndCollapse()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -232,13 +357,22 @@ public class IsthinaNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SpawnBallista extends RunnableImpl
 	{
+		/**
+		 * Constructor for SpawnBallista.
+		 */
 		public SpawnBallista()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

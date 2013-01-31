@@ -18,8 +18,19 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.etcitems.EnchantScrollManager;
 import lineage2.gameserver.network.serverpackets.ChooseInventoryItem;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EnchantScrolls extends ScriptItemHandler
 {
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -37,6 +48,10 @@ public class EnchantScrolls extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public final int[] getItemIds()
 	{

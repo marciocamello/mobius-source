@@ -16,8 +16,18 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BbsUtil
 {
+	/**
+	 * Method htmlAll.
+	 * @param htm String
+	 * @param player Player
+	 * @return String
+	 */
 	public static String htmlAll(String htm, Player player)
 	{
 		String html_all = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "block/allpages.htm", player);
@@ -30,6 +40,12 @@ public class BbsUtil
 		return html_all;
 	}
 	
+	/**
+	 * Method htmlBuff.
+	 * @param htm String
+	 * @param player Player g
+	 * @return String
+	 */
 	public static String htmlBuff(String htm, Player player)
 	{
 		String html_option = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/buffer/block/option.htm", player);

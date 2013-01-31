@@ -15,12 +15,30 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExFlyMoveBroadcast extends L2GameServerPacket
 {
+	/**
+	 * Field _objId.
+	 */
 	private final int _objId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
+	/**
+	 * Field _destLoc.
+	 */
 	private final Location _destLoc;
 	
+	/**
+	 * Constructor for ExFlyMoveBroadcast.
+	 * @param player Player
+	 * @param destLoc Location
+	 */
 	public ExFlyMoveBroadcast(Player player, Location destLoc)
 	{
 		_objId = player.getObjectId();
@@ -28,6 +46,9 @@ public class ExFlyMoveBroadcast extends L2GameServerPacket
 		_destLoc = destLoc;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

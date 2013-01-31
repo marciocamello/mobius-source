@@ -21,16 +21,34 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import bosses.BelethManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Beleth extends Mystic
 {
+	/**
+	 * Field _lastFactionNotifyTime.
+	 */
 	private long _lastFactionNotifyTime = 0;
+	/**
+	 * Field CLONE. (value is 29119)
+	 */
 	private static final int CLONE = 29119;
 	
+	/**
+	 * Constructor for Beleth.
+	 * @param actor NpcInstance
+	 */
 	public Beleth(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -38,6 +56,11 @@ public class Beleth extends Mystic
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -56,30 +79,52 @@ public class Beleth extends Mystic
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method randomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomAnimation()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method canSeeInSilentMove.
+	 * @param target Playable
+	 * @return boolean
+	 */
 	@Override
 	public boolean canSeeInSilentMove(Playable target)
 	{
 		return true;
 	}
 	
+	/**
+	 * Method canSeeInHide.
+	 * @param target Playable
+	 * @return boolean
+	 */
 	@Override
 	public boolean canSeeInHide(Playable target)
 	{
 		return true;
 	}
 	
+	/**
+	 * Method addTaskAttack.
+	 * @param target Creature
+	 */
 	@Override
 	public void addTaskAttack(Creature target)
 	{

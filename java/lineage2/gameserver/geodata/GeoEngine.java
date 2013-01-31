@@ -40,93 +40,279 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GeoEngine
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(GeoEngine.class);
+	/**
+	 * Field NSWE_NONE. (value is 0) Field NSWE_ALL. (value is 15) Field NORTH. (value is 8) Field SOUTH. (value is 4) Field WEST. (value is 2) Field EAST. (value is 1)
+	 */
 	public static final byte EAST = 1, WEST = 2, SOUTH = 4, NORTH = 8, NSWE_ALL = 15, NSWE_NONE = 0;
+	/**
+	 * Field BLOCKTYPE_FLAT. (value is 0)
+	 */
 	public static final byte BLOCKTYPE_FLAT = 0;
+	/**
+	 * Field BLOCKTYPE_COMPLEX. (value is 1)
+	 */
 	public static final byte BLOCKTYPE_COMPLEX = 1;
+	/**
+	 * Field BLOCKTYPE_MULTILEVEL. (value is 2)
+	 */
 	public static final byte BLOCKTYPE_MULTILEVEL = 2;
+	/**
+	 * Field BLOCKS_IN_MAP.
+	 */
 	public static final int BLOCKS_IN_MAP = 256 * 256;
+	/**
+	 * Field MAX_LAYERS.
+	 */
 	public static int MAX_LAYERS = 1;
+	/**
+	 * Field rawgeo.
+	 */
 	private static final MappedByteBuffer[][] rawgeo = new MappedByteBuffer[World.WORLD_SIZE_X][World.WORLD_SIZE_Y];
+	/**
+	 * Field geodata.
+	 */
 	private static final byte[][][][][] geodata = new byte[World.WORLD_SIZE_X][World.WORLD_SIZE_Y][1][][];
 	
+	/**
+	 * Method getType.
+	 * @param x int
+	 * @param y int
+	 * @param geoIndex int
+	 * @return short
+	 */
 	public static short getType(int x, int y, int geoIndex)
 	{
 		return NgetType((x - World.MAP_MIN_X) >> 4, (y - World.MAP_MIN_Y) >> 4, geoIndex);
 	}
 	
+	/**
+	 * Method getHeight.
+	 * @param loc Location
+	 * @param geoIndex int
+	 * @return int
+	 */
 	public static int getHeight(Location loc, int geoIndex)
 	{
 		return getHeight(loc.x, loc.y, loc.z, geoIndex);
 	}
 	
+	/**
+	 * Method getHeight.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param geoIndex int
+	 * @return int
+	 */
 	public static int getHeight(int x, int y, int z, int geoIndex)
 	{
 		return NgetHeight((x - World.MAP_MIN_X) >> 4, (y - World.MAP_MIN_Y) >> 4, z, geoIndex);
 	}
 	
+	/**
+	 * Method canMoveToCoord.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param tz int
+	 * @param geoIndex int
+	 * @return boolean
+	 */
 	public static boolean canMoveToCoord(int x, int y, int z, int tx, int ty, int tz, int geoIndex)
 	{
 		return canMove(x, y, z, tx, ty, tz, false, geoIndex) == 0;
 	}
 	
+	/**
+	 * Method getNSWE.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param geoIndex int
+	 * @return byte
+	 */
 	public static byte getNSWE(int x, int y, int z, int geoIndex)
 	{
 		return NgetNSWE((x - World.MAP_MIN_X) >> 4, (y - World.MAP_MIN_Y) >> 4, z, geoIndex);
 	}
 	
+	/**
+	 * Method moveCheck.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location moveCheck(int x, int y, int z, int tx, int ty, int geoIndex)
 	{
 		return MoveCheck(x, y, z, tx, ty, false, false, false, geoIndex);
 	}
 	
+	/**
+	 * Method moveCheck.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param returnPrev boolean
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location moveCheck(int x, int y, int z, int tx, int ty, boolean returnPrev, int geoIndex)
 	{
 		return MoveCheck(x, y, z, tx, ty, false, false, returnPrev, geoIndex);
 	}
 	
+	/**
+	 * Method moveCheckWithCollision.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location moveCheckWithCollision(int x, int y, int z, int tx, int ty, int geoIndex)
 	{
 		return MoveCheck(x, y, z, tx, ty, true, false, false, geoIndex);
 	}
 	
+	/**
+	 * Method moveCheckWithCollision.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param returnPrev boolean
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location moveCheckWithCollision(int x, int y, int z, int tx, int ty, boolean returnPrev, int geoIndex)
 	{
 		return MoveCheck(x, y, z, tx, ty, true, false, returnPrev, geoIndex);
 	}
 	
+	/**
+	 * Method moveCheckBackward.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location moveCheckBackward(int x, int y, int z, int tx, int ty, int geoIndex)
 	{
 		return MoveCheck(x, y, z, tx, ty, false, true, false, geoIndex);
 	}
 	
+	/**
+	 * Method moveCheckBackward.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param returnPrev boolean
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location moveCheckBackward(int x, int y, int z, int tx, int ty, boolean returnPrev, int geoIndex)
 	{
 		return MoveCheck(x, y, z, tx, ty, false, true, returnPrev, geoIndex);
 	}
 	
+	/**
+	 * Method moveCheckBackwardWithCollision.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location moveCheckBackwardWithCollision(int x, int y, int z, int tx, int ty, int geoIndex)
 	{
 		return MoveCheck(x, y, z, tx, ty, true, true, false, geoIndex);
 	}
 	
+	/**
+	 * Method moveCheckBackwardWithCollision.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param returnPrev boolean
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location moveCheckBackwardWithCollision(int x, int y, int z, int tx, int ty, boolean returnPrev, int geoIndex)
 	{
 		return MoveCheck(x, y, z, tx, ty, true, true, returnPrev, geoIndex);
 	}
 	
+	/**
+	 * Method moveInWaterCheck.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param tz int
+	 * @param waterZ int
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location moveInWaterCheck(int x, int y, int z, int tx, int ty, int tz, int waterZ, int geoIndex)
 	{
 		return MoveInWaterCheck((x - World.MAP_MIN_X) >> 4, (y - World.MAP_MIN_Y) >> 4, z, (tx - World.MAP_MIN_X) >> 4, (ty - World.MAP_MIN_Y) >> 4, tz, waterZ, geoIndex);
 	}
 	
+	/**
+	 * Method moveCheckForAI.
+	 * @param loc1 Location
+	 * @param loc2 Location
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location moveCheckForAI(Location loc1, Location loc2, int geoIndex)
 	{
 		return MoveCheckForAI((loc1.x - World.MAP_MIN_X) >> 4, (loc1.y - World.MAP_MIN_Y) >> 4, loc1.z, (loc2.x - World.MAP_MIN_X) >> 4, (loc2.y - World.MAP_MIN_Y) >> 4, geoIndex);
 	}
 	
+	/**
+	 * Method moveCheckInAir.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param tz int
+	 * @param collision double
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location moveCheckInAir(int x, int y, int z, int tx, int ty, int tz, double collision, int geoIndex)
 	{
 		int gx = (x - World.MAP_MIN_X) >> 4;
@@ -146,6 +332,13 @@ public class GeoEngine
 		return result.geo2world();
 	}
 	
+	/**
+	 * Method canSeeTarget.
+	 * @param actor GameObject
+	 * @param target GameObject
+	 * @param air boolean
+	 * @return boolean
+	 */
 	public static boolean canSeeTarget(GameObject actor, GameObject target, boolean air)
 	{
 		if (target == null)
@@ -159,11 +352,32 @@ public class GeoEngine
 		return canSeeCoord(actor, target.getX(), target.getY(), target.getZ() + (int) target.getColHeight() + 32, air);
 	}
 	
+	/**
+	 * Method canSeeCoord.
+	 * @param actor GameObject
+	 * @param tx int
+	 * @param ty int
+	 * @param tz int
+	 * @param air boolean
+	 * @return boolean
+	 */
 	public static boolean canSeeCoord(GameObject actor, int tx, int ty, int tz, boolean air)
 	{
 		return (actor != null) && canSeeCoord(actor.getX(), actor.getY(), actor.getZ() + (int) actor.getColHeight() + 32, tx, ty, tz, air, actor.getGeoIndex());
 	}
 	
+	/**
+	 * Method canSeeCoord.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param tz int
+	 * @param air boolean
+	 * @param geoIndex int
+	 * @return boolean
+	 */
 	public static boolean canSeeCoord(int x, int y, int z, int tx, int ty, int tz, boolean air, int geoIndex)
 	{
 		int mx = (x - World.MAP_MIN_X) >> 4;
@@ -173,11 +387,31 @@ public class GeoEngine
 		return canSee(mx, my, z, tmx, tmy, tz, air, geoIndex).equals(tmx, tmy, tz) && canSee(tmx, tmy, tz, mx, my, z, air, geoIndex).equals(mx, my, z);
 	}
 	
+	/**
+	 * Method canMoveWithCollision.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param tz int
+	 * @param geoIndex int
+	 * @return boolean
+	 */
 	public static boolean canMoveWithCollision(int x, int y, int z, int tx, int ty, int tz, int geoIndex)
 	{
 		return canMove(x, y, z, tx, ty, tz, true, geoIndex) == 0;
 	}
 	
+	/**
+	 * Method checkNSWE.
+	 * @param NSWE byte
+	 * @param x int
+	 * @param y int
+	 * @param tx int
+	 * @param ty int
+	 * @return boolean
+	 */
 	public static boolean checkNSWE(byte NSWE, int x, int y, int tx, int ty)
 	{
 		if (NSWE == NSWE_ALL)
@@ -219,11 +453,23 @@ public class GeoEngine
 		return true;
 	}
 	
+	/**
+	 * Method geoXYZ2Str.
+	 * @param _x int
+	 * @param _y int
+	 * @param _z int
+	 * @return String
+	 */
 	public static String geoXYZ2Str(int _x, int _y, int _z)
 	{
 		return "(" + String.valueOf((_x << 4) + World.MAP_MIN_X + 8) + " " + String.valueOf((_y << 4) + World.MAP_MIN_Y + 8) + " " + _z + ")";
 	}
 	
+	/**
+	 * Method NSWE2Str.
+	 * @param nswe byte
+	 * @return String
+	 */
 	public static String NSWE2Str(byte nswe)
 	{
 		String result = "";
@@ -246,6 +492,17 @@ public class GeoEngine
 		return result.isEmpty() ? "X" : result;
 	}
 	
+	/**
+	 * Method NLOS_WATER.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param next_x int
+	 * @param next_y int
+	 * @param next_z int
+	 * @param geoIndex int
+	 * @return boolean
+	 */
 	private static boolean NLOS_WATER(int x, int y, int z, int next_x, int next_y, int next_z, int geoIndex)
 	{
 		short[] layers1 = new short[MAX_LAYERS + 1];
@@ -297,6 +554,12 @@ public class GeoEngine
 		return checkNSWE(NSWE1, x, y, next_x, next_y);
 	}
 	
+	/**
+	 * Method FindNearestLowerLayer.
+	 * @param layers short[]
+	 * @param z int
+	 * @return int
+	 */
 	private static int FindNearestLowerLayer(short[] layers, int z)
 	{
 		short h, nearest_layer_h = Short.MIN_VALUE;
@@ -313,6 +576,13 @@ public class GeoEngine
 		return nearest_layer;
 	}
 	
+	/**
+	 * Method CheckNoOneLayerInRangeAndFindNearestLowerLayer.
+	 * @param layers short[]
+	 * @param z0 int
+	 * @param z1 int
+	 * @return short
+	 */
 	private static short CheckNoOneLayerInRangeAndFindNearestLowerLayer(short[] layers, int z0, int z1)
 	{
 		int z_min, z_max;
@@ -343,6 +613,15 @@ public class GeoEngine
 		return nearest_layer;
 	}
 	
+	/**
+	 * Method canSeeWallCheck.
+	 * @param layer short
+	 * @param nearest_lower_neighbor short
+	 * @param directionNSWE byte
+	 * @param curr_z int
+	 * @param air boolean
+	 * @return boolean
+	 */
 	public static boolean canSeeWallCheck(short layer, short nearest_lower_neighbor, byte directionNSWE, int curr_z, boolean air)
 	{
 		short nearest_lower_neighborh = (short) ((short) (nearest_lower_neighbor & 0x0fff0) >> 1);
@@ -355,6 +634,18 @@ public class GeoEngine
 		return ((layer & 0x0F & directionNSWE) != 0) || ((zdiff > -Config.MAX_Z_DIFF) && (zdiff != 0));
 	}
 	
+	/**
+	 * Method canSee.
+	 * @param _x int
+	 * @param _y int
+	 * @param _z int
+	 * @param _tx int
+	 * @param _ty int
+	 * @param _tz int
+	 * @param air boolean
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	public static Location canSee(int _x, int _y, int _z, int _tx, int _ty, int _tz, boolean air, int geoIndex)
 	{
 		int diff_x = _tx - _x, diff_y = _ty - _y, diff_z = _tz - _z;
@@ -463,6 +754,18 @@ public class GeoEngine
 		return result;
 	}
 	
+	/**
+	 * Method MoveInWaterCheck.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param tz int
+	 * @param waterZ int
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	private static Location MoveInWaterCheck(int x, int y, int z, int tx, int ty, int tz, int waterZ, int geoIndex)
 	{
 		int dx = tx - x;
@@ -553,6 +856,18 @@ public class GeoEngine
 		return new Location((int) next_x, (int) next_y, (int) next_z).geo2world();
 	}
 	
+	/**
+	 * Method canMove.
+	 * @param __x int
+	 * @param __y int
+	 * @param _z int
+	 * @param __tx int
+	 * @param __ty int
+	 * @param _tz int
+	 * @param withCollision boolean
+	 * @param geoIndex int
+	 * @return int
+	 */
 	private static int canMove(int __x, int __y, int _z, int __tx, int __ty, int _tz, boolean withCollision, int geoIndex)
 	{
 		int _x = (__x - World.MAP_MIN_X) >> 4;
@@ -605,6 +920,19 @@ public class GeoEngine
 		return dz > Config.MAX_Z_DIFF ? dz * 1000 : 0;
 	}
 	
+	/**
+	 * Method MoveCheck.
+	 * @param __x int
+	 * @param __y int
+	 * @param _z int
+	 * @param __tx int
+	 * @param __ty int
+	 * @param withCollision boolean
+	 * @param backwardMove boolean
+	 * @param returnPrev boolean
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	private static Location MoveCheck(int __x, int __y, int _z, int __tx, int __ty, boolean withCollision, boolean backwardMove, boolean returnPrev, int geoIndex)
 	{
 		int _x = (__x - World.MAP_MIN_X) >> 4;
@@ -665,6 +993,17 @@ public class GeoEngine
 		return new Location(curr_x, curr_y, curr_z).geo2world();
 	}
 	
+	/**
+	 * Method MoveList.
+	 * @param __x int
+	 * @param __y int
+	 * @param _z int
+	 * @param __tx int
+	 * @param __ty int
+	 * @param geoIndex int
+	 * @param onlyFullPath boolean
+	 * @return List<Location>
+	 */
 	public static List<Location> MoveList(int __x, int __y, int _z, int __tx, int __ty, int geoIndex, boolean onlyFullPath)
 	{
 		int _x = (__x - World.MAP_MIN_X) >> 4;
@@ -720,6 +1059,16 @@ public class GeoEngine
 		return result;
 	}
 	
+	/**
+	 * Method MoveCheckForAI.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param tx int
+	 * @param ty int
+	 * @param geoIndex int
+	 * @return Location
+	 */
 	private static Location MoveCheckForAI(int x, int y, int z, int tx, int ty, int geoIndex)
 	{
 		int dx = tx - x;
@@ -803,6 +1152,18 @@ public class GeoEngine
 		return new Location(next_x, next_y, next_z).geo2world();
 	}
 	
+	/**
+	 * Method NcanMoveNextExCheck.
+	 * @param x int
+	 * @param y int
+	 * @param h int
+	 * @param nextx int
+	 * @param nexty int
+	 * @param hexth int
+	 * @param temp_layers short[]
+	 * @param geoIndex int
+	 * @return boolean
+	 */
 	private static boolean NcanMoveNextExCheck(int x, int y, int h, int nextx, int nexty, int hexth, short[] temp_layers, int geoIndex)
 	{
 		NGetLayers(x, y, temp_layers, geoIndex);
@@ -823,6 +1184,20 @@ public class GeoEngine
 		return checkNSWE((byte) (temp_layer & 0x0F), x, y, nextx, nexty);
 	}
 	
+	/**
+	 * Method NcanMoveNext.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param layers short[]
+	 * @param next_x int
+	 * @param next_y int
+	 * @param next_layers short[]
+	 * @param temp_layers short[]
+	 * @param withCollision boolean
+	 * @param geoIndex int
+	 * @return int
+	 */
 	public static int NcanMoveNext(int x, int y, int z, short[] layers, int next_x, int next_y, short[] next_layers, short[] temp_layers, boolean withCollision, int geoIndex)
 	{
 		if ((layers[0] == 0) || (next_layers[0] == 0))
@@ -887,6 +1262,16 @@ public class GeoEngine
 		return next_layer_h;
 	}
 	
+	/**
+	 * Method NcanMoveNextForAI.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param next_x int
+	 * @param next_y int
+	 * @param geoIndex int
+	 * @return int
+	 */
 	public static int NcanMoveNextForAI(int x, int y, int z, int next_x, int next_y, int geoIndex)
 	{
 		short[] layers1 = new short[MAX_LAYERS + 1];
@@ -939,6 +1324,13 @@ public class GeoEngine
 		return z2 == 0 ? 1 : z2;
 	}
 	
+	/**
+	 * Method NGetLayers.
+	 * @param geoX int
+	 * @param geoY int
+	 * @param result short[]
+	 * @param geoIndex int
+	 */
 	public static void NGetLayers(int geoX, int geoY, short[] result, int geoIndex)
 	{
 		result[0] = 0;
@@ -997,6 +1389,13 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method NgetType.
+	 * @param geoX int
+	 * @param geoY int
+	 * @param geoIndex int
+	 * @return short
+	 */
 	private static short NgetType(int geoX, int geoY, int geoIndex)
 	{
 		byte[] block = getGeoBlockFromGeoCoords(geoX, geoY, geoIndex);
@@ -1007,6 +1406,14 @@ public class GeoEngine
 		return block[0];
 	}
 	
+	/**
+	 * Method NgetHeight.
+	 * @param geoX int
+	 * @param geoY int
+	 * @param z int
+	 * @param geoIndex int
+	 * @return int
+	 */
 	public static int NgetHeight(int geoX, int geoY, int z, int geoIndex)
 	{
 		byte[] block = getGeoBlockFromGeoCoords(geoX, geoY, geoIndex);
@@ -1069,6 +1476,14 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method NgetNSWE.
+	 * @param geoX int
+	 * @param geoY int
+	 * @param z int
+	 * @param geoIndex int
+	 * @return byte
+	 */
 	public static byte NgetNSWE(int geoX, int geoY, int z, int geoIndex)
 	{
 		byte[] block = getGeoBlockFromGeoCoords(geoX, geoY, geoIndex);
@@ -1145,6 +1560,14 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method NgetHeightAndNSWE.
+	 * @param geoX int
+	 * @param geoY int
+	 * @param z short
+	 * @param result short[]
+	 * @param geoIndex int
+	 */
 	public static void NgetHeightAndNSWE(int geoX, int geoY, short z, short[] result, int geoIndex)
 	{
 		byte[] block = getGeoBlockFromGeoCoords(geoX, geoY, geoIndex);
@@ -1236,26 +1659,53 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method makeShort.
+	 * @param b1 byte
+	 * @param b0 byte
+	 * @return short
+	 */
 	protected static short makeShort(byte b1, byte b0)
 	{
 		return (short) ((b1 << 8) | (b0 & 0xff));
 	}
 	
+	/**
+	 * Method getBlock.
+	 * @param geoPos int
+	 * @return int
+	 */
 	protected static int getBlock(int geoPos)
 	{
 		return (geoPos >> 3) % 256;
 	}
 	
+	/**
+	 * Method getCell.
+	 * @param geoPos int
+	 * @return int
+	 */
 	protected static int getCell(int geoPos)
 	{
 		return geoPos % 8;
 	}
 	
+	/**
+	 * Method getBlockIndex.
+	 * @param blockX int
+	 * @param blockY int
+	 * @return int
+	 */
 	protected static int getBlockIndex(int blockX, int blockY)
 	{
 		return (blockX << 8) + blockY;
 	}
 	
+	/**
+	 * Method sign.
+	 * @param x int
+	 * @return byte
+	 */
 	private static byte sign(int x)
 	{
 		if (x >= 0)
@@ -1265,6 +1715,13 @@ public class GeoEngine
 		return -1;
 	}
 	
+	/**
+	 * Method getGeoBlockFromGeoCoords.
+	 * @param geoX int
+	 * @param geoY int
+	 * @param geoIndex int
+	 * @return byte[]
+	 */
 	private static byte[] getGeoBlockFromGeoCoords(int geoX, int geoY, int geoIndex)
 	{
 		if (!Config.ALLOW_GEODATA)
@@ -1293,6 +1750,9 @@ public class GeoEngine
 		return region[regIndex][getBlockIndex(blockX, blockY)];
 	}
 	
+	/**
+	 * Method load.
+	 */
 	public static void load()
 	{
 		if (!Config.ALLOW_GEODATA)
@@ -1334,6 +1794,10 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method DumpGeodata.
+	 * @param dir String
+	 */
 	public static void DumpGeodata(String dir)
 	{
 		new File(dir).mkdirs();
@@ -1354,17 +1818,36 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method DumpGeodataFile.
+	 * @param cx int
+	 * @param cy int
+	 * @return boolean
+	 */
 	public static boolean DumpGeodataFile(int cx, int cy)
 	{
 		return DumpGeodataFileMap((byte) (Math.floor((float) cx / (float) 32768) + 20), (byte) (Math.floor((float) cy / (float) 32768) + 18));
 	}
 	
+	/**
+	 * Method DumpGeodataFileMap.
+	 * @param rx byte
+	 * @param ry byte
+	 * @return boolean
+	 */
 	public static boolean DumpGeodataFileMap(byte rx, byte ry)
 	{
 		String name = "log/" + rx + "_" + ry + ".l2j";
 		return DumpGeodataFile(name, rx, ry);
 	}
 	
+	/**
+	 * Method DumpGeodataFile.
+	 * @param name String
+	 * @param rx byte
+	 * @param ry byte
+	 * @return boolean
+	 */
 	public static boolean DumpGeodataFile(String name, byte rx, byte ry)
 	{
 		int ix = rx - Config.GEO_X_FIRST;
@@ -1409,6 +1892,12 @@ public class GeoEngine
 		return true;
 	}
 	
+	/**
+	 * Method LoadGeodataFile.
+	 * @param rx byte
+	 * @param ry byte
+	 * @return boolean
+	 */
 	public static boolean LoadGeodataFile(byte rx, byte ry)
 	{
 		String fname = "geodata/" + rx + "_" + ry + ".l2j";
@@ -1440,6 +1929,12 @@ public class GeoEngine
 		return false;
 	}
 	
+	/**
+	 * Method LoadGeodata.
+	 * @param rx int
+	 * @param ry int
+	 * @param regIndex int
+	 */
 	public static void LoadGeodata(int rx, int ry, int regIndex)
 	{
 		int ix = rx - Config.GEO_X_FIRST;
@@ -1502,6 +1997,13 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method NextGeoIndex.
+	 * @param rx int
+	 * @param ry int
+	 * @param refId int
+	 * @return int
+	 */
 	public static int NextGeoIndex(int rx, int ry, int refId)
 	{
 		if (!Config.ALLOW_GEODATA)
@@ -1536,6 +2038,10 @@ public class GeoEngine
 		return 0x0f000000 | (ix << 16) | (iy << 8) | regIndex;
 	}
 	
+	/**
+	 * Method FreeGeoIndex.
+	 * @param geoIndex int
+	 */
 	public static void FreeGeoIndex(int geoIndex)
 	{
 		if (!Config.ALLOW_GEODATA)
@@ -1555,6 +2061,11 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method removeGeoCollision.
+	 * @param collision GeoCollision
+	 * @param geoIndex int
+	 */
 	public static void removeGeoCollision(GeoCollision collision, int geoIndex)
 	{
 		Shape shape = collision.getShape();
@@ -1668,6 +2179,11 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method applyGeoCollision.
+	 * @param collision GeoCollision
+	 * @param geoIndex int
+	 */
 	public static void applyGeoCollision(GeoCollision collision, int geoIndex)
 	{
 		Shape shape = collision.getShape();
@@ -1884,6 +2400,9 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method compact.
+	 */
 	public static void compact()
 	{
 		long total = 0, optimized = 0;
@@ -1918,6 +2437,12 @@ public class GeoEngine
 		_log.info(String.format("GeoEngine: - Compacted %d of %d blocks...", optimized, total));
 	}
 	
+	/**
+	 * Method equalsData.
+	 * @param a1 byte[]
+	 * @param a2 byte[]
+	 * @return boolean
+	 */
 	public static boolean equalsData(byte[] a1, byte[] a2)
 	{
 		if (a1.length != a2.length)
@@ -1934,11 +2459,24 @@ public class GeoEngine
 		return true;
 	}
 	
+	/**
+	 * Method compareGeoBlocks.
+	 * @param mapX1 int
+	 * @param mapY1 int
+	 * @param blockIndex1 int
+	 * @param mapX2 int
+	 * @param mapY2 int
+	 * @param blockIndex2 int
+	 * @return boolean
+	 */
 	public static boolean compareGeoBlocks(int mapX1, int mapY1, int blockIndex1, int mapX2, int mapY2, int blockIndex2)
 	{
 		return equalsData(geodata[mapX1][mapY1][blockIndex1][0], geodata[mapX2][mapY2][blockIndex2][0]);
 	}
 	
+	/**
+	 * Method initChecksums.
+	 */
 	private static void initChecksums()
 	{
 		_log.info("GeoEngine: - Generating Checksums...");
@@ -1965,6 +2503,10 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method initBlockMatches.
+	 * @param maxScanRegions int
+	 */
 	private static void initBlockMatches(int maxScanRegions)
 	{
 		_log.info("GeoEngine: Generating Block Matches...");
@@ -1990,6 +2532,9 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method deleteChecksumFiles.
+	 */
 	public static void deleteChecksumFiles()
 	{
 		for (int mapX = 0; mapX < World.WORLD_SIZE_X; mapX++)
@@ -2005,12 +2550,19 @@ public class GeoEngine
 		}
 	}
 	
+	/**
+	 * Method genBlockMatches.
+	 * @param maxScanRegions int
+	 */
 	public static void genBlockMatches(int maxScanRegions)
 	{
 		initChecksums();
 		initBlockMatches(maxScanRegions);
 	}
 	
+	/**
+	 * Method unload.
+	 */
 	public static void unload()
 	{
 		for (int mapX = 0; mapX < World.WORLD_SIZE_X; mapX++)

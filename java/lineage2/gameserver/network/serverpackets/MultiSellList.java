@@ -22,13 +22,35 @@ import lineage2.gameserver.model.base.MultiSellEntry;
 import lineage2.gameserver.model.base.MultiSellIngredient;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MultiSellList extends L2GameServerPacket
 {
+	/**
+	 * Field _page.
+	 */
 	private final int _page;
+	/**
+	 * Field _finished.
+	 */
 	private final int _finished;
+	/**
+	 * Field _listId.
+	 */
 	private final int _listId;
+	/**
+	 * Field _list.
+	 */
 	private final List<MultiSellEntry> _list;
 	
+	/**
+	 * Constructor for MultiSellList.
+	 * @param list MultiSellListContainer
+	 * @param page int
+	 * @param finished int
+	 */
 	public MultiSellList(MultiSellListContainer list, int page, int finished)
 	{
 		_list = list.getEntries();
@@ -37,6 +59,9 @@ public class MultiSellList extends L2GameServerPacket
 		_finished = finished;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -88,6 +113,11 @@ public class MultiSellList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method fixIngredients.
+	 * @param ingredients List<MultiSellIngredient>
+	 * @return List<MultiSellIngredient>
+	 */
 	private static List<MultiSellIngredient> fixIngredients(List<MultiSellIngredient> ingredients)
 	{
 		int needFix = 0;

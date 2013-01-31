@@ -23,19 +23,47 @@ import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Core extends Fighter
 {
+	/**
+	 * Field _firstTimeAttacked.
+	 */
 	private boolean _firstTimeAttacked = true;
+	/**
+	 * Field TELEPORTATION_CUBIC_ID. (value is 31842)
+	 */
 	private static final int TELEPORTATION_CUBIC_ID = 31842;
+	/**
+	 * Field CUBIC_1_POSITION.
+	 */
 	private static final Location CUBIC_1_POSITION = new Location(16502, 110165, -6394, 0);
+	/**
+	 * Field CUBIC_2_POSITION.
+	 */
 	private static final Location CUBIC_2_POSITION = new Location(18948, 110165, -6394, 0);
+	/**
+	 * Field CUBIC_DESPAWN_TIME.
+	 */
 	private static final int CUBIC_DESPAWN_TIME = 15 * 60 * 1000;
 	
+	/**
+	 * Constructor for Core.
+	 * @param actor NpcInstance
+	 */
 	public Core(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -52,6 +80,10 @@ public class Core extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -80,17 +112,34 @@ public class Core extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
+		/**
+		 * Field cubic1.
+		 */
 		final NpcInstance cubic1;
+		/**
+		 * Field cubic2.
+		 */
 		final NpcInstance cubic2;
 		
+		/**
+		 * Constructor for DeSpawnScheduleTimerTask.
+		 * @param cubic1 NpcInstance
+		 * @param cubic2 NpcInstance
+		 */
 		public DeSpawnScheduleTimerTask(NpcInstance cubic1, NpcInstance cubic2)
 		{
 			this.cubic1 = cubic1;
 			this.cubic2 = cubic2;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

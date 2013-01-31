@@ -41,32 +41,87 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeamMember
 {
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(TeamMember.class);
+	/**
+	 * Field _name.
+	 */
 	private String _name = StringUtils.EMPTY;
+	/**
+	 * Field _clanName.
+	 */
 	private String _clanName = StringUtils.EMPTY;
+	/**
+	 * Field _classId.
+	 */
 	private int _classId;
+	/**
+	 * Field _damage.
+	 */
 	private double _damage;
+	/**
+	 * Field _isDead.
+	 */
 	private boolean _isDead;
+	/**
+	 * Field _objId.
+	 */
 	private final int _objId;
+	/**
+	 * Field _game.
+	 */
 	private final OlympiadGame _game;
+	/**
+	 * Field _type.
+	 */
 	private final CompType _type;
+	/**
+	 * Field _side.
+	 */
 	private final int _side;
+	/**
+	 * Field _player.
+	 */
 	private Player _player;
+	/**
+	 * Field _returnLoc.
+	 */
 	private Location _returnLoc = null;
 	
+	/**
+	 * Method isDead.
+	 * @return boolean
+	 */
 	public boolean isDead()
 	{
 		return _isDead;
 	}
 	
+	/**
+	 * Method doDie.
+	 */
 	public void doDie()
 	{
 		_isDead = true;
 	}
 	
+	/**
+	 * Constructor for TeamMember.
+	 * @param obj_id int
+	 * @param name String
+	 * @param player Player
+	 * @param game OlympiadGame
+	 * @param side int
+	 */
 	public TeamMember(int obj_id, String name, Player player, OlympiadGame game, int side)
 	{
 		_objId = obj_id;
@@ -85,11 +140,18 @@ public class TeamMember
 		player.setOlympiadGame(game);
 	}
 	
+	/**
+	 * Method getStat.
+	 * @return StatsSet
+	 */
 	public StatsSet getStat()
 	{
 		return Olympiad._nobles.get(_objId);
 	}
 	
+	/**
+	 * Method incGameCount.
+	 */
 	public void incGameCount()
 	{
 		StatsSet set = getStat();
@@ -104,6 +166,9 @@ public class TeamMember
 		}
 	}
 	
+	/**
+	 * Method takePointsForCrash.
+	 */
 	public void takePointsForCrash()
 	{
 		if (!checkPlayer())
@@ -140,6 +205,10 @@ public class TeamMember
 		}
 	}
 	
+	/**
+	 * Method checkPlayer.
+	 * @return boolean
+	 */
 	public boolean checkPlayer()
 	{
 		Player player = _player;
@@ -150,6 +219,9 @@ public class TeamMember
 		return true;
 	}
 	
+	/**
+	 * Method portPlayerToArena.
+	 */
 	public void portPlayerToArena()
 	{
 		Player player = _player;
@@ -187,6 +259,9 @@ public class TeamMember
 		player.sendPacket(new ExOlympiadMode(_side));
 	}
 	
+	/**
+	 * Method portPlayerBack.
+	 */
 	public void portPlayerBack()
 	{
 		Player player = _player;
@@ -242,6 +317,9 @@ public class TeamMember
 		player.teleToLocation(_returnLoc, ReflectionManager.DEFAULT);
 	}
 	
+	/**
+	 * Method preparePlayer.
+	 */
 	public void preparePlayer()
 	{
 		Player player = _player;
@@ -335,46 +413,80 @@ public class TeamMember
 		player.broadcastUserInfo(true);
 	}
 	
+	/**
+	 * Method saveNobleData.
+	 */
 	public void saveNobleData()
 	{
 		OlympiadDatabase.saveNobleData(_objId);
 	}
 	
+	/**
+	 * Method logout.
+	 */
 	public void logout()
 	{
 		_player = null;
 	}
 	
+	/**
+	 * Method getPlayer.
+	 * @return Player
+	 */
 	public Player getPlayer()
 	{
 		return _player;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method addDamage.
+	 * @param d double
+	 */
 	public void addDamage(double d)
 	{
 		_damage += d;
 	}
 	
+	/**
+	 * Method getDamage.
+	 * @return double
+	 */
 	public double getDamage()
 	{
 		return _damage;
 	}
 	
+	/**
+	 * Method getClanName.
+	 * @return String
+	 */
 	public String getClanName()
 	{
 		return _clanName;
 	}
 	
+	/**
+	 * Method getClassId.
+	 * @return int
+	 */
 	public int getClassId()
 	{
 		return _classId;
 	}
 	
+	/**
+	 * Method getObjectId.
+	 * @return int
+	 */
 	public int getObjectId()
 	{
 		return _objId;

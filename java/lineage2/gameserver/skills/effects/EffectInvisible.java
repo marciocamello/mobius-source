@@ -19,15 +19,31 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.base.InvisibleType;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectInvisible extends Effect
 {
+	/**
+	 * Field _invisibleType.
+	 */
 	private InvisibleType _invisibleType = InvisibleType.NONE;
 	
+	/**
+	 * Constructor for EffectInvisible.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectInvisible(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
@@ -47,6 +63,9 @@ public final class EffectInvisible extends Effect
 		return super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -57,6 +76,9 @@ public final class EffectInvisible extends Effect
 		World.removeObjectFromPlayers(player);
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -74,6 +96,10 @@ public final class EffectInvisible extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

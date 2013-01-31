@@ -15,8 +15,17 @@ package lineage2.commons.util.fileio;
 import java.io.File;
 import java.io.FileFilter;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class XMLFilter implements FileFilter
 {
+	/**
+	 * Method accept.
+	 * @param pathname File
+	 * @return boolean * @see java.io.FileFilter#accept(File)
+	 */
 	@Override
 	public boolean accept(File pathname)
 	{

@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExBR_AgathionEnergyInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _size.
+	 */
 	private final int _size;
+	/**
+	 * Field _itemList.
+	 */
 	private ItemInstance[] _itemList = null;
 	
+	/**
+	 * Constructor for ExBR_AgathionEnergyInfo.
+	 * @param size int
+	 * @param item ItemInstance[]
+	 */
 	public ExBR_AgathionEnergyInfo(int size, ItemInstance... item)
 	{
 		_itemList = item;
 		_size = size;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -35,21 +35,55 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class TamedBeastInstance extends FeedableBeastInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field MAX_DISTANCE_FROM_OWNER. (value is 2000)
+	 */
 	private static final int MAX_DISTANCE_FROM_OWNER = 2000;
+	/**
+	 * Field MAX_DISTANCE_FOR_BUFF. (value is 200)
+	 */
 	private static final int MAX_DISTANCE_FOR_BUFF = 200;
+	/**
+	 * Field MAX_DURATION. (value is 1200000)
+	 */
 	private static final int MAX_DURATION = 1200000;
+	/**
+	 * Field DURATION_CHECK_INTERVAL. (value is 60000)
+	 */
 	private static final int DURATION_CHECK_INTERVAL = 60000;
+	/**
+	 * Field DURATION_INCREASE_INTERVAL. (value is 20000)
+	 */
 	private static final int DURATION_INCREASE_INTERVAL = 20000;
+	/**
+	 * Field _playerRef.
+	 */
 	private HardReference<Player> _playerRef = HardReferences.emptyRef();
+	/**
+	 * Field _remainingTime. Field _foodSkillId.
+	 */
 	private int _foodSkillId, _remainingTime = MAX_DURATION;
+	/**
+	 * Field _durationCheckTask.
+	 */
 	private Future<?> _durationCheckTask = null;
+	/**
+	 * Field _skills.
+	 */
 	private final List<Skill> _skills = new ArrayList<>();
+	/**
+	 * Field TAMED_DATA.
+	 */
 	@SuppressWarnings("unchecked")
 	private static final Map.Entry<NpcString, int[]>[] TAMED_DATA = new Map.Entry[6];
 	static
@@ -85,24 +119,42 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		});
 	}
 	
+	/**
+	 * Constructor for TamedBeastInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public TamedBeastInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		_hasRandomWalk = false;
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param dontMove boolean
+	 */
 	@Override
 	public void onAction(final Player player, final boolean dontMove)
 	{
 		player.setObjectTarget(this);
 	}
 	
+	/**
+	 * Method onReceiveFood.
+	 */
 	void onReceiveFood()
 	{
 		_remainingTime = _remainingTime + DURATION_INCREASE_INTERVAL;
@@ -112,21 +164,36 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		}
 	}
 	
+	/**
+	 * Method getRemainingTime.
+	 * @return int
+	 */
 	public int getRemainingTime()
 	{
 		return _remainingTime;
 	}
 	
+	/**
+	 * Method setRemainingTime.
+	 * @param duration int
+	 */
 	public void setRemainingTime(int duration)
 	{
 		_remainingTime = duration;
 	}
 	
+	/**
+	 * Method getFoodType.
+	 * @return int
+	 */
 	public int getFoodType()
 	{
 		return _foodSkillId;
 	}
 	
+	/**
+	 * Method setTameType.
+	 */
 	public void setTameType()
 	{
 		Map.Entry<NpcString, int[]> type = TAMED_DATA[Rnd.get(TAMED_DATA.length)];
@@ -142,6 +209,10 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		}
 	}
 	
+	/**
+	 * Method getNameNpcStringByNpcId.
+	 * @return NpcString
+	 */
 	public NpcString getNameNpcStringByNpcId()
 	{
 		switch (getNpcId())
@@ -158,6 +229,9 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		return NpcString.NONE;
 	}
 	
+	/**
+	 * Method buffOwner.
+	 */
 	public void buffOwner()
 	{
 		if (!isInRange(getPlayer(), MAX_DISTANCE_FOR_BUFF))
@@ -174,12 +248,30 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class Buff extends RunnableImpl
 	{
+		/**
+		 * Field _actor.
+		 */
 		private final NpcInstance _actor;
+		/**
+		 * Field _owner.
+		 */
 		private final Player _owner;
+		/**
+		 * Field _skill.
+		 */
 		private final Skill _skill;
 		
+		/**
+		 * Constructor for Buff.
+		 * @param actor NpcInstance
+		 * @param owner Player
+		 * @param skill Skill
+		 */
 		public Buff(NpcInstance actor, Player owner, Skill skill)
 		{
 			_actor = actor;
@@ -187,6 +279,9 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 			_skill = skill;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -197,6 +292,10 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		}
 	}
 	
+	/**
+	 * Method setFoodType.
+	 * @param foodItemId int
+	 */
 	public void setFoodType(int foodItemId)
 	{
 		if (foodItemId > 0)
@@ -210,6 +309,10 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		}
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -228,12 +331,20 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		_remainingTime = 0;
 	}
 	
+	/**
+	 * Method getPlayer.
+	 * @return Player
+	 */
 	@Override
 	public Player getPlayer()
 	{
 		return _playerRef.get();
 	}
 	
+	/**
+	 * Method setOwner.
+	 * @param owner Player
+	 */
 	public void setOwner(Player owner)
 	{
 		_playerRef = owner == null ? HardReferences.<Player> emptyRef() : owner.getRef();
@@ -254,6 +365,10 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		}
 	}
 	
+	/**
+	 * Method despawnWithDelay.
+	 * @param delay int
+	 */
 	public void despawnWithDelay(int delay)
 	{
 		ThreadPoolManager.getInstance().schedule(new RunnableImpl()
@@ -266,6 +381,9 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		}, delay);
 	}
 	
+	/**
+	 * Method doDespawn.
+	 */
 	public void doDespawn()
 	{
 		stopMove();
@@ -285,15 +403,28 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		onDecay();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class CheckDuration extends RunnableImpl
 	{
+		/**
+		 * Field _tamedBeast.
+		 */
 		private final TamedBeastInstance _tamedBeast;
 		
+		/**
+		 * Constructor for CheckDuration.
+		 * @param tamedBeast TamedBeastInstance
+		 */
 		CheckDuration(TamedBeastInstance tamedBeast)
 		{
 			_tamedBeast = tamedBeast;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

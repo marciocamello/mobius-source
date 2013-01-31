@@ -15,17 +15,34 @@ package lineage2.loginserver.gameservercon.lspackets;
 import lineage2.loginserver.gameservercon.GameServer;
 import lineage2.loginserver.gameservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AuthResponse extends SendablePacket
 {
+	/**
+	 * Field serverId.
+	 */
 	private final int serverId;
+	/**
+	 * Field name.
+	 */
 	private final String name;
 	
+	/**
+	 * Constructor for AuthResponse.
+	 * @param gs GameServer
+	 */
 	public AuthResponse(GameServer gs)
 	{
 		serverId = gs.getId();
 		name = gs.getName();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

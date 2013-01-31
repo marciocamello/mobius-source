@@ -18,37 +18,71 @@ import java.util.Map;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.ZoneTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ZoneHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final ZoneHolder _instance = new ZoneHolder();
+	/**
+	 * Field _zones.
+	 */
 	private final Map<String, ZoneTemplate> _zones = new HashMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return ZoneHolder
+	 */
 	public static ZoneHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addTemplate.
+	 * @param zone ZoneTemplate
+	 */
 	public void addTemplate(ZoneTemplate zone)
 	{
 		_zones.put(zone.getName(), zone);
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @param name String
+	 * @return ZoneTemplate
+	 */
 	public ZoneTemplate getTemplate(String name)
 	{
 		return _zones.get(name);
 	}
 	
+	/**
+	 * Method getZones.
+	 * @return Map<String,ZoneTemplate>
+	 */
 	public Map<String, ZoneTemplate> getZones()
 	{
 		return _zones;
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _zones.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

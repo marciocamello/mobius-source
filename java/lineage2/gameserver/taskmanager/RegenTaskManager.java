@@ -16,15 +16,29 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.threading.SteppingRunnableQueueManager;
 import lineage2.gameserver.ThreadPoolManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RegenTaskManager extends SteppingRunnableQueueManager
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final RegenTaskManager _instance = new RegenTaskManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return RegenTaskManager
+	 */
 	public static final RegenTaskManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for RegenTaskManager.
+	 */
 	private RegenTaskManager()
 	{
 		super(1000L);

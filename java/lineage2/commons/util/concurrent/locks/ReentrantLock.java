@@ -14,41 +14,82 @@ package lineage2.commons.util.concurrent.locks;
 
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ReentrantLock
 {
+	/**
+	 * Field stateUpdater.
+	 */
 	private static final AtomicIntegerFieldUpdater<ReentrantLock> stateUpdater = AtomicIntegerFieldUpdater.newUpdater(ReentrantLock.class, "state");
+	/**
+	 * Field owner.
+	 */
 	private Thread owner;
+	/**
+	 * Field state.
+	 */
 	private volatile int state;
 	
+	/**
+	 * Constructor for ReentrantLock.
+	 */
 	public ReentrantLock()
 	{
 	}
 	
+	/**
+	 * Method getState.
+	 * @return int
+	 */
 	private final int getState()
 	{
 		return state;
 	}
 	
+	/**
+	 * Method setState.
+	 * @param newState int
+	 */
 	private void setState(int newState)
 	{
 		state = newState;
 	}
 	
+	/**
+	 * Method compareAndSetState.
+	 * @param expect int
+	 * @param update int
+	 * @return boolean
+	 */
 	private boolean compareAndSetState(int expect, int update)
 	{
 		return stateUpdater.compareAndSet(this, expect, update);
 	}
 	
+	/**
+	 * Method getExclusiveOwnerThread.
+	 * @return Thread
+	 */
 	private Thread getExclusiveOwnerThread()
 	{
 		return owner;
 	}
 	
+	/**
+	 * Method setExclusiveOwnerThread.
+	 * @param thread Thread
+	 */
 	private void setExclusiveOwnerThread(Thread thread)
 	{
 		owner = thread;
 	}
 	
+	/**
+	 * Method lock.
+	 */
 	public void lock()
 	{
 		if (compareAndSetState(0, 1))
@@ -67,6 +108,10 @@ public class ReentrantLock
 		}
 	}
 	
+	/**
+	 * Method tryLock.
+	 * @return boolean
+	 */
 	public boolean tryLock()
 	{
 		final Thread current = Thread.currentThread();
@@ -92,6 +137,10 @@ public class ReentrantLock
 		return false;
 	}
 	
+	/**
+	 * Method unlock.
+	 * @return boolean
+	 */
 	public boolean unlock()
 	{
 		int c = getState() - 1;

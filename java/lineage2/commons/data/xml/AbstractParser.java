@@ -22,13 +22,30 @@ import lineage2.commons.logging.LoggerObject;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObject
 {
+	/**
+	 * Field _holder.
+	 */
 	protected final H _holder;
 	
+	/**
+	 * Field _currentFile.
+	 */
 	protected String _currentFile;
+	/**
+	 * Field _reader.
+	 */
 	protected SAXReader _reader;
 	
+	/**
+	 * Constructor for AbstractParser.
+	 * @param holder H
+	 */
 	protected AbstractParser(H holder)
 	{
 		_holder = holder;
@@ -37,11 +54,21 @@ public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObj
 		_reader.setErrorHandler(new ErrorHandlerImpl(this));
 	}
 	
+	/**
+	 * Method initDTD.
+	 * @param f File
+	 */
 	protected void initDTD(File f)
 	{
 		_reader.setEntityResolver(new SimpleDTDEntityResolver(f));
 	}
 	
+	/**
+	 * Method parseDocument.
+	 * @param f InputStream
+	 * @param name String
+	 * @throws Exception
+	 */
 	protected void parseDocument(InputStream f, String name) throws Exception
 	{
 		_currentFile = name;
@@ -51,20 +78,39 @@ public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObj
 		readData(document.getRootElement());
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	protected abstract void readData(Element rootElement) throws Exception;
 	
+	/**
+	 * Method parse.
+	 */
 	protected abstract void parse();
 	
+	/**
+	 * Method getHolder.
+	 * @return H
+	 */
 	protected H getHolder()
 	{
 		return _holder;
 	}
 	
+	/**
+	 * Method getCurrentFileName.
+	 * @return String
+	 */
 	public String getCurrentFileName()
 	{
 		return _currentFile;
 	}
 	
+	/**
+	 * Method load.
+	 */
 	public void load()
 	{
 		parse();
@@ -72,6 +118,9 @@ public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObj
 		_holder.log();
 	}
 	
+	/**
+	 * Method reload.
+	 */
 	public void reload()
 	{
 		info("reload start...");

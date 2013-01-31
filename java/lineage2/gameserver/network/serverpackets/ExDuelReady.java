@@ -14,15 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.entity.events.impl.DuelEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExDuelReady extends L2GameServerPacket
 {
+	/**
+	 * Field _duelType.
+	 */
 	private final int _duelType;
 	
+	/**
+	 * Constructor for ExDuelReady.
+	 * @param event DuelEvent
+	 */
 	public ExDuelReady(DuelEvent event)
 	{
 		_duelType = event.getDuelType();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

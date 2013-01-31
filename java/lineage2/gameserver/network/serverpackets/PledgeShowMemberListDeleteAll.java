@@ -12,10 +12,20 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeShowMemberListDeleteAll extends L2GameServerPacket
 {
+	/**
+	 * Field STATIC.
+	 */
 	public static final L2GameServerPacket STATIC = new PledgeShowMemberListDeleteAll();
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

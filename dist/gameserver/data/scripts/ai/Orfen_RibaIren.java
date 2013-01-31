@@ -17,21 +17,42 @@ import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Orfen_RibaIren extends Fighter
 {
+	/**
+	 * Field Orfen_id. (value is 29014)
+	 */
 	private static final int Orfen_id = 29014;
 	
+	/**
+	 * Constructor for Orfen_RibaIren.
+	 * @param actor NpcInstance
+	 */
 	public Orfen_RibaIren(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method createNewTask.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean createNewTask()
 	{
 		return defaultNewTask();
 	}
 	
+	/**
+	 * Method onEvtClanAttacked.
+	 * @param attacked_member Creature
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtClanAttacked(Creature attacked_member, Creature attacker, int damage)
 	{

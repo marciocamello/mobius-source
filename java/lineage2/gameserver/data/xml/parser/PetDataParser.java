@@ -22,43 +22,78 @@ import lineage2.gameserver.templates.StatsSet;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetDataParser extends AbstractDirParser<PetDataHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static PetDataParser _instance = new PetDataParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return PetDataParser
+	 */
 	public static PetDataParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for PetDataParser.
+	 * @param holder PetDataHolder
+	 */
 	protected PetDataParser(PetDataHolder holder)
 	{
 		super(holder);
 	}
 	
+	/**
+	 * Constructor for PetDataParser.
+	 */
 	public PetDataParser()
 	{
 		super(PetDataHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	@Override
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/stats/pets/");
 	}
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	@Override
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "pets.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 */
 	@Override
 	protected void readData(Element rootElement)
 	{

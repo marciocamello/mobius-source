@@ -27,10 +27,20 @@ import lineage2.gameserver.network.serverpackets.SetupGauge;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.SoulCrystal;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SoulCrystals extends ScriptItemHandler
 {
+	/**
+	 * Field _itemIds.
+	 */
 	private final int[] _itemIds;
 	
+	/**
+	 * Constructor for SoulCrystals.
+	 */
 	public SoulCrystals()
 	{
 		TIntHashSet set = new TIntHashSet();
@@ -42,6 +52,13 @@ public class SoulCrystals extends ScriptItemHandler
 		_itemIds = set.toArray();
 	}
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -73,17 +90,34 @@ public class SoulCrystals extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class CrystalFinalizer extends RunnableImpl
 	{
+		/**
+		 * Field _activeChar.
+		 */
 		private final Player _activeChar;
+		/**
+		 * Field _target.
+		 */
 		private final MonsterInstance _target;
 		
+		/**
+		 * Constructor for CrystalFinalizer.
+		 * @param activeChar Player
+		 * @param target MonsterInstance
+		 */
 		CrystalFinalizer(Player activeChar, MonsterInstance target)
 		{
 			_activeChar = activeChar;
 			_target = target;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -97,6 +131,10 @@ public class SoulCrystals extends ScriptItemHandler
 		}
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public final int[] getItemIds()
 	{

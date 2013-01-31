@@ -27,17 +27,47 @@ import lineage2.gameserver.model.entity.olympiad.OlympiadDatabase;
 import lineage2.gameserver.model.entity.olympiad.OlympiadManager;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminOlympiad implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_oly_save.
+		 */
 		admin_oly_save,
+		/**
+		 * Field admin_add_oly_points.
+		 */
 		admin_add_oly_points,
+		/**
+		 * Field admin_oly_start.
+		 */
 		admin_oly_start,
+		/**
+		 * Field admin_add_hero.
+		 */
 		admin_add_hero,
+		/**
+		 * Field admin_oly_stop.
+		 */
 		admin_oly_stop
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -140,6 +170,10 @@ public class AdminOlympiad implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

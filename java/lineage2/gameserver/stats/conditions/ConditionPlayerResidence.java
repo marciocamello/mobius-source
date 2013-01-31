@@ -17,17 +17,37 @@ import lineage2.gameserver.model.entity.residence.ResidenceType;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionPlayerResidence extends Condition
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _type.
+	 */
 	private final ResidenceType _type;
 	
+	/**
+	 * Constructor for ConditionPlayerResidence.
+	 * @param id int
+	 * @param type ResidenceType
+	 */
 	public ConditionPlayerResidence(int id, ResidenceType type)
 	{
 		_id = id;
 		_type = type;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

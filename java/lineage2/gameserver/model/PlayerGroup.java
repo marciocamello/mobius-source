@@ -17,8 +17,15 @@ import java.util.Iterator;
 import lineage2.commons.collections.EmptyIterator;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface PlayerGroup extends Iterable<Player>
 {
+	/**
+	 * Field EMPTY.
+	 */
 	public static final PlayerGroup EMPTY = new PlayerGroup()
 	{
 		@Override
@@ -33,5 +40,9 @@ public interface PlayerGroup extends Iterable<Player>
 		}
 	};
 	
+	/**
+	 * Method broadCast.
+	 * @param packet IStaticPacket[]
+	 */
 	void broadCast(IStaticPacket... packet);
 }

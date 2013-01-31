@@ -18,18 +18,42 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Shade extends Fighter
 {
+	/**
+	 * Field _wait_timeout.
+	 */
 	private long _wait_timeout = 0;
+	/**
+	 * Field _wait.
+	 */
 	private boolean _wait = false;
+	/**
+	 * Field DESPAWN_TIME.
+	 */
 	private static final int DESPAWN_TIME = 5 * 60 * 1000;
+	/**
+	 * Field BLUE_CRYSTAL. (value is 9595)
+	 */
 	private static final int BLUE_CRYSTAL = 9595;
 	
+	/**
+	 * Constructor for Shade.
+	 * @param actor NpcInstance
+	 */
 	public Shade(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -57,12 +81,20 @@ public class Shade extends Fighter
 		return super.thinkActive();
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

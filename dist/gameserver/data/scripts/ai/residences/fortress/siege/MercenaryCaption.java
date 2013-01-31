@@ -23,17 +23,34 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 import npc.model.residences.fortress.siege.MercenaryCaptionInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MercenaryCaption extends Fighter
 {
+	/**
+	 * Field _points.
+	 */
 	private List<Location> _points = Collections.emptyList();
+	/**
+	 * Field _tick.
+	 */
 	private int _tick = -1;
 	
+	/**
+	 * Constructor for MercenaryCaption.
+	 * @param actor NpcInstance
+	 */
 	public MercenaryCaption(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = 100;
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	public void onEvtSpawn()
 	{
@@ -44,6 +61,10 @@ public class MercenaryCaption extends Fighter
 		_points = event.getObjects(FortressSiegeEvent.MERCENARY_POINTS);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -67,6 +88,9 @@ public class MercenaryCaption extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	public void onEvtArrived()
 	{
@@ -76,6 +100,11 @@ public class MercenaryCaption extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	public void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -83,6 +112,10 @@ public class MercenaryCaption extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method startMove.
+	 * @param init boolean
+	 */
 	public void startMove(boolean init)
 	{
 		if (init)
@@ -100,6 +133,10 @@ public class MercenaryCaption extends Fighter
 		}
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return MercenaryCaptionInstance
+	 */
 	@Override
 	public MercenaryCaptionInstance getActor()
 	{

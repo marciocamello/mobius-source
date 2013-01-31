@@ -26,17 +26,37 @@ import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
 import ai.residences.SiegeGuardFighter;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AlfredVonHellmann extends SiegeGuardFighter
 {
+	/**
+	 * Field DAMAGE_SKILL.
+	 */
 	public static final Skill DAMAGE_SKILL = SkillTable.getInstance().getInfo(5000, 1);
+	/**
+	 * Field DRAIN_SKILL.
+	 */
 	public static final Skill DRAIN_SKILL = SkillTable.getInstance().getInfo(5001, 1);
+	/**
+	 * Field ZONE_3.
+	 */
 	private static Zone ZONE_3 = ReflectionUtils.getZone("lidia_zone3");
 	
+	/**
+	 * Constructor for AlfredVonHellmann.
+	 * @param actor NpcInstance
+	 */
 	public AlfredVonHellmann(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	public void onEvtSpawn()
 	{
@@ -45,6 +65,10 @@ public class AlfredVonHellmann extends SiegeGuardFighter
 		Functions.npcShout(getActor(), NpcString.HEH_HEH_I_SEE_THAT_THE_FEAST_HAS_BEGAN_BE_WARY_THE_CURSE_OF_THE_HELLMANN_FAMILY_HAS_POISONED_THIS_LAND);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onEvtDead(Creature killer)
 	{
@@ -65,6 +89,11 @@ public class AlfredVonHellmann extends SiegeGuardFighter
 		}
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	public void onEvtAttacked(Creature attacker, int damage)
 	{

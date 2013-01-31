@@ -26,18 +26,43 @@ import lineage2.gameserver.model.actor.instances.player.Mentee;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MentoringDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(MentoringDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final MentoringDAO _instance = new MentoringDAO();
+	/**
+	 * Field menteeList. (value is ""SELECT m.mentor AS charid, c.char_name, s.class_id, s.level FROM character_mentoring m LEFT JOIN characters c ON m.mentor = c.obj_Id LEFT JOIN character_subclasses s ON ( m.mentor = s.char_obj_id AND s.active =1 ) WHERE m.mentee = ?"")
+	 */
 	private static final String menteeList = "SELECT m.mentor AS charid, c.char_name, s.class_id, s.level FROM character_mentoring m LEFT JOIN characters c ON m.mentor = c.obj_Id LEFT JOIN character_subclasses s ON ( m.mentor = s.char_obj_id AND s.active =1 ) WHERE m.mentee = ?";
+	/**
+	 * Field mentorList. (value is ""SELECT m.mentee AS charid, c.char_name, s.class_id, s.level FROM character_mentoring m LEFT JOIN characters c ON m.mentee = c.obj_Id LEFT JOIN character_subclasses s ON ( m.mentee = s.char_obj_id AND s.active =1 ) WHERE m.mentor = ?"")
+	 */
 	private static final String mentorList = "SELECT m.mentee AS charid, c.char_name, s.class_id, s.level FROM character_mentoring m LEFT JOIN characters c ON m.mentee = c.obj_Id LEFT JOIN character_subclasses s ON ( m.mentee = s.char_obj_id AND s.active =1 ) WHERE m.mentor = ?";
 	
+	/**
+	 * Method getInstance.
+	 * @return MentoringDAO
+	 */
 	public static MentoringDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method selectMenteeList.
+	 * @param listOwner Player
+	 * @return Map<Integer,Mentee>
+	 */
 	public Map<Integer, Mentee> selectMenteeList(Player listOwner)
 	{
 		Map<Integer, Mentee> map = new HashMap<>();
@@ -71,6 +96,11 @@ public class MentoringDAO
 		return map;
 	}
 	
+	/**
+	 * Method insert.
+	 * @param mentor Player
+	 * @param mentee Player
+	 */
 	public void insert(Player mentor, Player mentee)
 	{
 		Connection con = null;
@@ -93,6 +123,11 @@ public class MentoringDAO
 		}
 	}
 	
+	/**
+	 * Method delete.
+	 * @param mentor int
+	 * @param mentee int
+	 */
 	public void delete(int mentor, int mentee)
 	{
 		Connection con = null;

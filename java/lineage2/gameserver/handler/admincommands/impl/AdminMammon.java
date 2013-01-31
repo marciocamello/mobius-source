@@ -21,19 +21,49 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("unused")
 public class AdminMammon implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_find_mammon.
+		 */
 		admin_find_mammon,
+		/**
+		 * Field admin_show_mammon.
+		 */
 		admin_show_mammon,
+		/**
+		 * Field admin_hide_mammon.
+		 */
 		admin_hide_mammon,
+		/**
+		 * Field admin_list_spawns.
+		 */
 		admin_list_spawns
 	}
 	
+	/**
+	 * Field npcIds.
+	 */
 	List<Integer> npcIds = new ArrayList<Integer>();
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -94,12 +124,23 @@ public class AdminMammon implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}
 	
+	/**
+	 * Method findAdminNPCs.
+	 * @param activeChar Player
+	 * @param npcIdList List<Integer>
+	 * @param teleportIndex int
+	 * @param makeVisible int
+	 */
 	public void findAdminNPCs(Player activeChar, List<Integer> npcIdList, int teleportIndex, int makeVisible)
 	{
 		int index = 0;

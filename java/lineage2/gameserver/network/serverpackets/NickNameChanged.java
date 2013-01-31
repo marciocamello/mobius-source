@@ -14,17 +14,34 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NickNameChanged extends L2GameServerPacket
 {
+	/**
+	 * Field objectId.
+	 */
 	private final int objectId;
+	/**
+	 * Field title.
+	 */
 	private final String title;
 	
+	/**
+	 * Constructor for NickNameChanged.
+	 * @param cha Creature
+	 */
 	public NickNameChanged(Creature cha)
 	{
 		objectId = cha.getObjectId();
 		title = cha.getTitle();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -23,11 +23,24 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestDestroyItem extends L2GameClientPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
+	/**
+	 * Field _count.
+	 */
 	private long _count;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -35,6 +48,9 @@ public class RequestDestroyItem extends L2GameClientPacket
 		_count = readQ();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -19,10 +19,20 @@ import lineage2.gameserver.network.telnet.TelnetCommand;
 import lineage2.gameserver.network.telnet.TelnetCommandHolder;
 import lineage2.gameserver.utils.AdminFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TelnetBan implements TelnetCommandHolder
 {
+	/**
+	 * Field _commands.
+	 */
 	private final Set<TelnetCommand> _commands = new LinkedHashSet<>();
 	
+	/**
+	 * Constructor for TelnetBan.
+	 */
 	public TelnetBan()
 	{
 		_commands.add(new TelnetCommand("kick")
@@ -49,6 +59,10 @@ public class TelnetBan implements TelnetCommandHolder
 		});
 	}
 	
+	/**
+	 * Method getCommands.
+	 * @return Set<TelnetCommand> * @see lineage2.gameserver.network.telnet.TelnetCommandHolder#getCommands()
+	 */
 	@Override
 	public Set<TelnetCommand> getCommands()
 	{

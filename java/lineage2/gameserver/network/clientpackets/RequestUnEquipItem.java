@@ -17,17 +17,30 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @Deprecated
 public class RequestUnEquipItem extends L2GameClientPacket
 {
+	/**
+	 * Field _slot.
+	 */
 	private int _slot;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_slot = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

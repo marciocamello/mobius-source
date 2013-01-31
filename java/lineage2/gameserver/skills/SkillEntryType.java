@@ -12,9 +12,22 @@
  */
 package lineage2.gameserver.skills;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum SkillEntryType
 {
+	/**
+	 * Field NONE.
+	 */
 	NONE,
+	/**
+	 * Field CERTIFICATION.
+	 */
 	CERTIFICATION,
+	/**
+	 * Field TRANSFER.
+	 */
 	TRANSFER
 }

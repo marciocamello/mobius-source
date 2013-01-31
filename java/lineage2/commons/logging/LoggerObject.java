@@ -15,35 +15,69 @@ package lineage2.commons.logging;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class LoggerObject
 {
+	/**
+	 * Field _log.
+	 */
 	protected final Logger _log = LoggerFactory.getLogger(getClass());
 	
+	/**
+	 * Method error.
+	 * @param st String
+	 * @param e Exception
+	 */
 	public void error(String st, Exception e)
 	{
 		_log.error(getClass().getSimpleName() + ": " + st, e);
 	}
 	
+	/**
+	 * Method error.
+	 * @param st String
+	 */
 	public void error(String st)
 	{
 		_log.error(getClass().getSimpleName() + ": " + st);
 	}
 	
+	/**
+	 * Method warn.
+	 * @param st String
+	 * @param e Exception
+	 */
 	public void warn(String st, Exception e)
 	{
 		_log.warn(getClass().getSimpleName() + ": " + st, e);
 	}
 	
+	/**
+	 * Method warn.
+	 * @param st String
+	 */
 	public void warn(String st)
 	{
 		_log.warn(getClass().getSimpleName() + ": " + st);
 	}
 	
+	/**
+	 * Method info.
+	 * @param st String
+	 * @param e Exception
+	 */
 	public void info(String st, Exception e)
 	{
 		_log.info(getClass().getSimpleName() + ": " + st, e);
 	}
 	
+	/**
+	 * Method info.
+	 * @param st String
+	 */
 	public void info(String st)
 	{
 		_log.info(getClass().getSimpleName() + ": " + st);

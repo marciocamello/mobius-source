@@ -17,19 +17,60 @@ import lineage2.gameserver.model.Creature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MagicSkillUse extends L2GameServerPacket
 {
+	/**
+	 * Field _classChange.
+	 */
 	private int _classChange = -1;
+	/**
+	 * Field _targetId.
+	 */
 	private final int _targetId;
+	/**
+	 * Field _skillId.
+	 */
 	private final int _skillId;
+	/**
+	 * Field _skillLevel.
+	 */
 	private final int _skillLevel;
+	/**
+	 * Field _hitTime.
+	 */
 	private final int _hitTime;
+	/**
+	 * Field _reuseDelay.
+	 */
 	private final int _reuseDelay;
+	/**
+	 * Field _tz. Field _ty. Field _tx. Field _z. Field _y. Field _x. Field _chaId.
+	 */
 	private final int _chaId, _x, _y, _z, _tx, _ty, _tz;
+	/**
+	 * Field _isDoubleCasting.
+	 */
 	private final boolean _isDoubleCasting;
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(MagicSkillUse.class);
 	
+	/**
+	 * Constructor for MagicSkillUse.
+	 * @param cha Creature
+	 * @param target Creature
+	 * @param skillId int
+	 * @param skillLevel int
+	 * @param hitTime int
+	 * @param reuseDelay long
+	 * @param isDoubleCastingNow boolean
+	 */
 	public MagicSkillUse(Creature cha, Creature target, int skillId, int skillLevel, int hitTime, long reuseDelay, boolean isDoubleCastingNow)
 	{
 		_chaId = cha.getObjectId();
@@ -51,6 +92,15 @@ public class MagicSkillUse extends L2GameServerPacket
 		_isDoubleCasting = isDoubleCastingNow;
 	}
 	
+	/**
+	 * Constructor for MagicSkillUse.
+	 * @param cha Creature
+	 * @param target Creature
+	 * @param skillId int
+	 * @param skillLevel int
+	 * @param hitTime int
+	 * @param reuseDelay long
+	 */
 	public MagicSkillUse(Creature cha, Creature target, int skillId, int skillLevel, int hitTime, long reuseDelay)
 	{
 		_chaId = cha.getObjectId();
@@ -72,6 +122,14 @@ public class MagicSkillUse extends L2GameServerPacket
 		_isDoubleCasting = false;
 	}
 	
+	/**
+	 * Constructor for MagicSkillUse.
+	 * @param cha Creature
+	 * @param skillId int
+	 * @param skillLevel int
+	 * @param hitTime int
+	 * @param reuseDelay long
+	 */
 	public MagicSkillUse(Creature cha, int skillId, int skillLevel, int hitTime, long reuseDelay)
 	{
 		_chaId = cha.getObjectId();
@@ -93,6 +151,9 @@ public class MagicSkillUse extends L2GameServerPacket
 		_isDoubleCasting = false;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

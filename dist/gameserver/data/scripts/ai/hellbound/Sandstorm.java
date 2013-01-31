@@ -22,18 +22,42 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Sandstorm extends DefaultAI
 {
+	/**
+	 * Field AGGRO_RANGE. (value is 200)
+	 */
 	private static final int AGGRO_RANGE = 200;
+	/**
+	 * Field SKILL1.
+	 */
 	private static final Skill SKILL1 = SkillTable.getInstance().getInfo(5435, 1);
+	/**
+	 * Field SKILL2.
+	 */
 	private static final Skill SKILL2 = SkillTable.getInstance().getInfo(5494, 1);
+	/**
+	 * Field lastThrow.
+	 */
 	private long lastThrow = 0;
 	
+	/**
+	 * Constructor for Sandstorm.
+	 * @param actor NpcInstance
+	 */
 	public Sandstorm(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -54,31 +78,58 @@ public class Sandstorm extends DefaultAI
 		return super.thinkActive();
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
 	}
 	
+	/**
+	 * Method onIntentionAttack.
+	 * @param target Creature
+	 */
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param attacker Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
 	}
 	
+	/**
+	 * Method onEvtClanAttacked.
+	 * @param attacked_member Creature
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtClanAttacked(Creature attacked_member, Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

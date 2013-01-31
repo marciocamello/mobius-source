@@ -48,9 +48,19 @@ import org.slf4j.LoggerFactory;
 
 import bosses.EpicBossState.State;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ValakasManager extends Functions implements ScriptFile, OnDeathListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ValakasManager.class);
+	/**
+	 * Field _teleportCubeLocation.
+	 */
 	private static final int _teleportCubeLocation[][] =
 	{
 		{
@@ -144,36 +154,111 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 			0
 		}
 	};
+	/**
+	 * Field _teleportCube.
+	 */
 	private static List<NpcInstance> _teleportCube = new ArrayList<>();
+	/**
+	 * Field _spawnedMinions.
+	 */
 	private static List<NpcInstance> _spawnedMinions = new ArrayList<>();
+	/**
+	 * Field _valakas.
+	 */
 	static BossInstance _valakas;
+	/**
+	 * Field _valakasSpawnTask.
+	 */
 	private static ScheduledFuture<?> _valakasSpawnTask = null;
+	/**
+	 * Field _intervalEndTask.
+	 */
 	private static ScheduledFuture<?> _intervalEndTask = null;
+	/**
+	 * Field _socialTask.
+	 */
 	static ScheduledFuture<?> _socialTask = null;
+	/**
+	 * Field _mobiliseTask.
+	 */
 	private static ScheduledFuture<?> _mobiliseTask = null;
+	/**
+	 * Field _moveAtRandomTask.
+	 */
 	private static ScheduledFuture<?> _moveAtRandomTask = null;
+	/**
+	 * Field _respawnValakasTask.
+	 */
 	private static ScheduledFuture<?> _respawnValakasTask = null;
+	/**
+	 * Field _sleepCheckTask.
+	 */
 	static ScheduledFuture<?> _sleepCheckTask = null;
+	/**
+	 * Field _onAnnihilatedTask.
+	 */
 	private static ScheduledFuture<?> _onAnnihilatedTask = null;
+	/**
+	 * Field Valakas. (value is 29028)
+	 */
 	private static final int Valakas = 29028;
+	/**
+	 * Field _teleportCubeId. (value is 31759)
+	 */
 	private static final int _teleportCubeId = 31759;
+	/**
+	 * Field _state.
+	 */
 	static EpicBossState _state;
+	/**
+	 * Field _zone.
+	 */
 	private static Zone _zone;
+	/**
+	 * Field _lastAttackTime.
+	 */
 	static long _lastAttackTime = 0;
+	/**
+	 * Field FWV_LIMITUNTILSLEEP.
+	 */
 	private static final int FWV_LIMITUNTILSLEEP = 20 * 60000;
+	/**
+	 * Field FWV_APPTIMEOFVALAKAS.
+	 */
 	private static final int FWV_APPTIMEOFVALAKAS = 10 * 60000;
+	/**
+	 * Field FWV_FIXINTERVALOFVALAKAS.
+	 */
 	private static final int FWV_FIXINTERVALOFVALAKAS = 11 * 24 * 60 * 60000;
+	/**
+	 * Field Dying.
+	 */
 	private static boolean Dying = false;
+	/**
+	 * Field TELEPORT_POSITION.
+	 */
 	private static final Location TELEPORT_POSITION = new Location(203940, -111840, 66);
+	/**
+	 * Field _entryLocked.
+	 */
 	private static boolean _entryLocked = false;
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class CheckLastAttack extends RunnableImpl
 	{
+		/**
+		 * Constructor for CheckLastAttack.
+		 */
 		public CheckLastAttack()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -191,13 +276,22 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class IntervalEnd extends RunnableImpl
 	{
+		/**
+		 * Constructor for IntervalEnd.
+		 */
 		public IntervalEnd()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -206,13 +300,22 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class onAnnihilated extends RunnableImpl
 	{
+		/**
+		 * Constructor for onAnnihilated.
+		 */
 		public onAnnihilated()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -220,17 +323,36 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class SpawnDespawn extends RunnableImpl
 	{
+		/**
+		 * Field _distance.
+		 */
 		private final int _distance = 2550;
+		/**
+		 * Field _taskId.
+		 */
 		private final int _taskId;
+		/**
+		 * Field _players.
+		 */
 		private final List<Player> _players = getPlayersInside();
 		
+		/**
+		 * Constructor for SpawnDespawn.
+		 * @param taskId int
+		 */
 		SpawnDespawn(int taskId)
 		{
 			_taskId = taskId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -513,6 +635,9 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method banishForeigners.
+	 */
 	private static void banishForeigners()
 	{
 		for (Player player : getPlayersInside())
@@ -521,6 +646,9 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method checkAnnihilated.
+	 */
 	private synchronized static void checkAnnihilated()
 	{
 		if ((_onAnnihilatedTask == null) && isPlayersAnnihilated())
@@ -529,21 +657,37 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method getPlayersInside.
+	 * @return List<Player>
+	 */
 	static List<Player> getPlayersInside()
 	{
 		return getZone().getInsidePlayers();
 	}
 	
+	/**
+	 * Method getRespawnInterval.
+	 * @return int
+	 */
 	private static int getRespawnInterval()
 	{
 		return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * FWV_FIXINTERVALOFVALAKAS);
 	}
 	
+	/**
+	 * Method getZone.
+	 * @return Zone
+	 */
 	public static Zone getZone()
 	{
 		return _zone;
 	}
 	
+	/**
+	 * Method isPlayersAnnihilated.
+	 * @return boolean
+	 */
 	private static boolean isPlayersAnnihilated()
 	{
 		for (Player pc : getPlayersInside())
@@ -556,6 +700,12 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		return true;
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param self Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature self, Creature killer)
 	{
@@ -569,6 +719,9 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method onValakasDie.
+	 */
 	static void onValakasDie()
 	{
 		if (Dying)
@@ -587,6 +740,9 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		Log.add("Valakas died", "bosses");
 	}
 	
+	/**
+	 * Method setIntervalEndTask.
+	 */
 	private static void setIntervalEndTask()
 	{
 		setUnspawn();
@@ -605,6 +761,9 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		_intervalEndTask = ThreadPoolManager.getInstance().schedule(new IntervalEnd(), _state.getInterval());
 	}
 	
+	/**
+	 * Method setUnspawn.
+	 */
 	private static void setUnspawn()
 	{
 		banishForeigners();
@@ -665,6 +824,9 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method sleep.
+	 */
 	static void sleep()
 	{
 		setUnspawn();
@@ -675,11 +837,17 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method setLastAttackTime.
+	 */
 	public static void setLastAttackTime()
 	{
 		_lastAttackTime = System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method setValakasSpawnTask.
+	 */
 	public synchronized static void setValakasSpawnTask()
 	{
 		if (_valakasSpawnTask == null)
@@ -689,11 +857,19 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		_entryLocked = true;
 	}
 	
+	/**
+	 * Method isEnableEnterToLair.
+	 * @return boolean
+	 */
 	public static boolean isEnableEnterToLair()
 	{
 		return _state.getState() == EpicBossState.State.NOTSPAWN;
 	}
 	
+	/**
+	 * Method broadcastScreenMessage.
+	 * @param npcs NpcString
+	 */
 	public static void broadcastScreenMessage(NpcString npcs)
 	{
 		for (Player p : getPlayersInside())
@@ -702,11 +878,18 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
+	/**
+	 * Method addValakasMinion.
+	 * @param npc NpcInstance
+	 */
 	public static void addValakasMinion(NpcInstance npc)
 	{
 		_spawnedMinions.add(npc);
 	}
 	
+	/**
+	 * Method init.
+	 */
 	private void init()
 	{
 		CharListenerList.addGlobal(this);
@@ -720,6 +903,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		_log.info("ValakasManager: Next spawn date of Valakas is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()) + ".");
 	}
 	
+	/**
+	 * Method enterTheLair.
+	 * @param ccleader Player
+	 */
 	public static void enterTheLair(Player ccleader)
 	{
 		if (ccleader == null)
@@ -767,18 +954,30 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		setValakasSpawnTask();
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 		init();
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		sleep();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

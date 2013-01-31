@@ -16,12 +16,28 @@ import lineage2.gameserver.instancemanager.MatchingRoomManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.matching.MatchingRoom;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPartyMatchDetail extends L2GameClientPacket
 {
+	/**
+	 * Field _roomId.
+	 */
 	private int _roomId;
+	/**
+	 * Field _locations.
+	 */
 	private int _locations;
+	/**
+	 * Field _level.
+	 */
 	private int _level;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -30,6 +46,9 @@ public class RequestPartyMatchDetail extends L2GameClientPacket
 		_level = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

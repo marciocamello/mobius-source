@@ -21,8 +21,15 @@ import lineage2.gameserver.network.serverpackets.SocialAction;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DrillSergeant extends Fighter
 {
+	/**
+	 * Field recruits.
+	 */
 	private static final int[] recruits =
 	{
 		22780,
@@ -31,14 +38,25 @@ public class DrillSergeant extends Fighter
 		22784,
 		22785
 	};
+	/**
+	 * Field _wait_timeout.
+	 */
 	private long _wait_timeout = 0;
 	
+	/**
+	 * Constructor for DrillSergeant.
+	 * @param actor NpcInstance
+	 */
 	public DrillSergeant(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ACTIVE_DELAY = 1000;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	public boolean thinkActive()
 	{

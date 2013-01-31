@@ -14,15 +14,31 @@ package lineage2.gameserver.stats.conditions;
 
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionPlayerPercentHp extends Condition
 {
+	/**
+	 * Field _hp.
+	 */
 	private final double _hp;
 	
+	/**
+	 * Constructor for ConditionPlayerPercentHp.
+	 * @param hp int
+	 */
 	public ConditionPlayerPercentHp(int hp)
 	{
 		_hp = hp / 100.;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

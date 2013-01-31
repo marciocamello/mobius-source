@@ -16,12 +16,28 @@ import lineage2.gameserver.instancemanager.commission.CommissionShopManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestCommissionDelete extends L2GameClientPacket
 {
+	/**
+	 * Field _bidId.
+	 */
 	public long _bidId;
+	/**
+	 * Field itemObjId.
+	 */
 	public int itemObjId;
+	/**
+	 * Field exItemType.
+	 */
 	public int exItemType;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -30,6 +46,9 @@ public class RequestCommissionDelete extends L2GameClientPacket
 		exItemType = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

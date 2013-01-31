@@ -22,8 +22,15 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DisguiseScroll extends ScriptItemHandler
 {
+	/**
+	 * Field ITEM_IDS.
+	 */
 	private final int[] ITEM_IDS =
 	{
 		13677,
@@ -36,6 +43,9 @@ public class DisguiseScroll extends ScriptItemHandler
 		13684,
 		13685
 	};
+	/**
+	 * Field DOMINION_IDS.
+	 */
 	private final int[] DOMINION_IDS =
 	{
 		81,
@@ -49,6 +59,13 @@ public class DisguiseScroll extends ScriptItemHandler
 		89
 	};
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -98,6 +115,10 @@ public class DisguiseScroll extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{

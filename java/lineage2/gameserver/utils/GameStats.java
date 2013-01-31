@@ -24,15 +24,43 @@ import lineage2.gameserver.instancemanager.ServerVariables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GameStats
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameStats.class);
+	/**
+	 * Field _updatePlayerBase.
+	 */
 	private static AtomicLong _updatePlayerBase = new AtomicLong(0L);
+	/**
+	 * Field _playerEnterGameCounter.
+	 */
 	private static AtomicLong _playerEnterGameCounter = new AtomicLong(0L);
+	/**
+	 * Field _taxSum.
+	 */
 	private static AtomicLong _taxSum = new AtomicLong(0L);
+	/**
+	 * Field _taxLastUpdate.
+	 */
 	private static long _taxLastUpdate;
+	/**
+	 * Field _rouletteSum.
+	 */
 	private static AtomicLong _rouletteSum = new AtomicLong(0L);
+	/**
+	 * Field _rouletteLastUpdate.
+	 */
 	private static long _rouletteLastUpdate;
+	/**
+	 * Field _adenaSum.
+	 */
 	private static AtomicLong _adenaSum = new AtomicLong(0L);
 	static
 	{
@@ -61,26 +89,44 @@ public class GameStats
 		}
 	}
 	
+	/**
+	 * Method increaseUpdatePlayerBase.
+	 */
 	public static void increaseUpdatePlayerBase()
 	{
 		_updatePlayerBase.incrementAndGet();
 	}
 	
+	/**
+	 * Method getUpdatePlayerBase.
+	 * @return long
+	 */
 	public static long getUpdatePlayerBase()
 	{
 		return _updatePlayerBase.get();
 	}
 	
+	/**
+	 * Method incrementPlayerEnterGame.
+	 */
 	public static void incrementPlayerEnterGame()
 	{
 		_playerEnterGameCounter.incrementAndGet();
 	}
 	
+	/**
+	 * Method getPlayerEnterGame.
+	 * @return long
+	 */
 	public static long getPlayerEnterGame()
 	{
 		return _playerEnterGameCounter.get();
 	}
 	
+	/**
+	 * Method addTax.
+	 * @param sum long
+	 */
 	public static void addTax(long sum)
 	{
 		long taxSum = _taxSum.addAndGet(sum);
@@ -92,6 +138,10 @@ public class GameStats
 		ServerVariables.set("taxsum", taxSum);
 	}
 	
+	/**
+	 * Method addRoulette.
+	 * @param sum long
+	 */
 	public static void addRoulette(long sum)
 	{
 		long rouletteSum = _rouletteSum.addAndGet(sum);
@@ -103,21 +153,37 @@ public class GameStats
 		ServerVariables.set("rouletteSum", rouletteSum);
 	}
 	
+	/**
+	 * Method getTaxSum.
+	 * @return long
+	 */
 	public static long getTaxSum()
 	{
 		return _taxSum.get();
 	}
 	
+	/**
+	 * Method getRouletteSum.
+	 * @return long
+	 */
 	public static long getRouletteSum()
 	{
 		return _rouletteSum.get();
 	}
 	
+	/**
+	 * Method addAdena.
+	 * @param sum long
+	 */
 	public static void addAdena(long sum)
 	{
 		_adenaSum.addAndGet(sum);
 	}
 	
+	/**
+	 * Method getAdena.
+	 * @return long
+	 */
 	public static long getAdena()
 	{
 		return _adenaSum.get();

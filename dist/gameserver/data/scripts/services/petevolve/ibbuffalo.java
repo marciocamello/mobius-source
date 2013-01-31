@@ -22,12 +22,28 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.PetDataTable.L2Pet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ibbuffalo extends Functions
 {
+	/**
+	 * Field BABY_BUFFALO.
+	 */
 	private static final int BABY_BUFFALO = PetDataTable.BABY_BUFFALO_ID;
+	/**
+	 * Field BABY_BUFFALO_PANPIPE.
+	 */
 	private static final int BABY_BUFFALO_PANPIPE = L2Pet.BABY_BUFFALO.getControlItemId();
+	/**
+	 * Field IN_BABY_BUFFALO_NECKLACE.
+	 */
 	private static final int IN_BABY_BUFFALO_NECKLACE = L2Pet.IMPROVED_BABY_BUFFALO.getControlItemId();
 	
+	/**
+	 * Method evolve.
+	 */
 	public void evolve()
 	{
 		Player player = getSelf();

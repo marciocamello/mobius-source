@@ -17,12 +17,34 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class AuctionItem extends ItemInfo
 {
+	/**
+	 * Field _auctionItemId.
+	 */
 	private final int _auctionItemId;
+	/**
+	 * Field _auctionLength.
+	 */
 	private final int _auctionLength;
+	/**
+	 * Field _auctionInitBid.
+	 */
 	private final long _auctionInitBid;
 	
+	/**
+	 * Constructor for AuctionItem.
+	 * @param auctionItemId int
+	 * @param auctionLength int
+	 * @param auctionInitBid long
+	 * @param itemId int
+	 * @param itemCount long
+	 * @param itemExtra StatsSet
+	 */
 	public AuctionItem(final int auctionItemId, final int auctionLength, final long auctionInitBid, final int itemId, final long itemCount, final StatsSet itemExtra)
 	{
 		_auctionItemId = auctionItemId;
@@ -35,21 +57,37 @@ public final class AuctionItem extends ItemInfo
 		setAugmentationId(itemExtra.getInteger("augmentation_id", 0));
 	}
 	
+	/**
+	 * Method getAuctionItemId.
+	 * @return int
+	 */
 	public final int getAuctionItemId()
 	{
 		return _auctionItemId;
 	}
 	
+	/**
+	 * Method getAuctionLength.
+	 * @return int
+	 */
 	public final int getAuctionLength()
 	{
 		return _auctionLength;
 	}
 	
+	/**
+	 * Method getAuctionInitBid.
+	 * @return long
+	 */
 	public final long getAuctionInitBid()
 	{
 		return _auctionInitBid;
 	}
 	
+	/**
+	 * Method createNewItemInstance.
+	 * @return ItemInstance
+	 */
 	public final ItemInstance createNewItemInstance()
 	{
 		final ItemInstance item = ItemFunctions.createItem(getItemId());

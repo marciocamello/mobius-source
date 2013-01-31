@@ -17,8 +17,15 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeleToFantasyIsle extends ScriptBypassHandler
 {
+	/**
+	 * Field POINTS.
+	 */
 	public static final Location[] POINTS =
 	{
 		new Location(-60695, -56896, -2032),
@@ -27,6 +34,10 @@ public class TeleToFantasyIsle extends ScriptBypassHandler
 		new Location(-59716, -57864, -2032)
 	};
 	
+	/**
+	 * Method getBypasses.
+	 * @return String[] * @see lineage2.gameserver.handler.bypass.IBypassHandler#getBypasses()
+	 */
 	@Override
 	public String[] getBypasses()
 	{
@@ -36,6 +47,13 @@ public class TeleToFantasyIsle extends ScriptBypassHandler
 		};
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 * @param command String
+	 * @see lineage2.gameserver.handler.bypass.IBypassHandler#onBypassFeedback(NpcInstance, Player, String)
+	 */
 	@Override
 	public void onBypassFeedback(NpcInstance npc, Player player, String command)
 	{

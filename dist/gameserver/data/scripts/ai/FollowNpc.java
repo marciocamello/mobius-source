@@ -25,16 +25,34 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FollowNpc extends DefaultAI
 {
+	/**
+	 * Field _thinking.
+	 */
 	private boolean _thinking = false;
+	/**
+	 * Field _followTask.
+	 */
 	ScheduledFuture<?> _followTask;
 	
+	/**
+	 * Constructor for FollowNpc.
+	 * @param actor NpcInstance
+	 */
 	public FollowNpc(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
@@ -45,6 +63,9 @@ public class FollowNpc extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method onEvtThink.
+	 */
 	@Override
 	protected void onEvtThink()
 	{
@@ -75,6 +96,9 @@ public class FollowNpc extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method thinkFollow.
+	 */
 	protected void thinkFollow()
 	{
 		NpcInstance actor = getActor();
@@ -84,7 +108,7 @@ public class FollowNpc extends DefaultAI
 			clientActionFailed();
 			return;
 		}
-		if (actor.isFollow && (actor.getFollowTarget() == target))
+		if (actor.isFollow && (actor.getFollowTarget().equals(target)))
 		{
 			clientActionFailed();
 			return;
@@ -101,13 +125,23 @@ public class FollowNpc extends DefaultAI
 		_followTask = ThreadPoolManager.getInstance().schedule(new ThinkFollow(), 250L);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	protected class ThinkFollow extends RunnableImpl
 	{
+		/**
+		 * Method getActor.
+		 * @return NpcInstance
+		 */
 		public NpcInstance getActor()
 		{
 			return FollowNpc.this.getActor();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -122,7 +156,7 @@ public class FollowNpc extends DefaultAI
 				setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				return;
 			}
-			if (!actor.isInRange(target, Config.FOLLOW_RANGE + 20) && (!actor.isFollow || (actor.getFollowTarget() != target)))
+			if (!actor.isInRange(target, Config.FOLLOW_RANGE + 20) && (!actor.isFollow || (!actor.getFollowTarget().equals(target))))
 			{
 				Location loc = new Location(target.getX() + Rnd.get(-60, 60), target.getY() + Rnd.get(-60, 60), target.getZ());
 				actor.followToCharacter(loc, target, Config.FOLLOW_RANGE, false);

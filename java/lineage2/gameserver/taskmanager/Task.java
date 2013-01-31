@@ -16,19 +16,42 @@ import java.util.concurrent.ScheduledFuture;
 
 import lineage2.gameserver.taskmanager.TaskManager.ExecutedTask;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Task
 {
+	/**
+	 * Method initializate.
+	 */
 	public abstract void initializate();
 	
+	/**
+	 * Method launchSpecial.
+	 * @param instance ExecutedTask
+	 * @return ScheduledFuture<?>
+	 */
 	public ScheduledFuture<?> launchSpecial(ExecutedTask instance)
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public abstract String getName();
 	
+	/**
+	 * Method onTimeElapsed.
+	 * @param task ExecutedTask
+	 */
 	public abstract void onTimeElapsed(ExecutedTask task);
 	
+	/**
+	 * Method onDestroy.
+	 */
 	public void onDestroy()
 	{
 	}

@@ -21,15 +21,33 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SkillCoolTime;
 import lineage2.gameserver.templates.OptionDataTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ItemAugmentationListener implements OnEquipListener
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final ItemAugmentationListener _instance = new ItemAugmentationListener();
 	
+	/**
+	 * Method getInstance.
+	 * @return ItemAugmentationListener
+	 */
 	public static ItemAugmentationListener getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method onUnequip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 * @see lineage2.gameserver.listener.inventory.OnEquipListener#onUnequip(int, ItemInstance, Playable)
+	 */
 	@Override
 	public void onUnequip(int slot, ItemInstance item, Playable actor)
 	{
@@ -68,6 +86,13 @@ public final class ItemAugmentationListener implements OnEquipListener
 		player.updateStats();
 	}
 	
+	/**
+	 * Method onEquip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 * @see lineage2.gameserver.listener.inventory.OnEquipListener#onEquip(int, ItemInstance, Playable)
+	 */
 	@Override
 	public void onEquip(int slot, ItemInstance item, Playable actor)
 	{

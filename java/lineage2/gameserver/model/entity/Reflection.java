@@ -66,10 +66,20 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Reflection
 {
+	/**
+	 * @author Mobius
+	 */
 	public class ReflectionListenerList extends ListenerList<Reflection>
 	{
+		/**
+		 * Method onCollapse.
+		 */
 		public void onCollapse()
 		{
 			if (!getListeners().isEmpty())
@@ -82,153 +92,329 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(Reflection.class);
+	/**
+	 * Field _nextId.
+	 */
 	private final static AtomicInteger _nextId = new AtomicInteger();
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _name.
+	 */
 	private String _name = StringUtils.EMPTY;
+	/**
+	 * Field _instance.
+	 */
 	private InstantZone _instance;
+	/**
+	 * Field _geoIndex.
+	 */
 	private int _geoIndex;
+	/**
+	 * Field _resetLoc.
+	 */
 	private Location _resetLoc;
+	/**
+	 * Field _returnLoc.
+	 */
 	private Location _returnLoc;
+	/**
+	 * Field _teleportLoc.
+	 */
 	private Location _teleportLoc;
+	/**
+	 * Field _spawns.
+	 */
 	protected List<Spawner> _spawns = new ArrayList<>();
+	/**
+	 * Field _objects.
+	 */
 	public List<GameObject> _objects = new ArrayList<>();
+	/**
+	 * Field _doors.
+	 */
 	protected IntObjectMap<DoorInstance> _doors = Containers.emptyIntObjectMap();
+	/**
+	 * Field _zones.
+	 */
 	protected Map<String, Zone> _zones = Collections.emptyMap();
+	/**
+	 * Field _spawners.
+	 */
 	protected Map<String, List<Spawner>> _spawners = Collections.emptyMap();
+	/**
+	 * Field _visitors.
+	 */
 	protected TIntHashSet _visitors = new TIntHashSet();
+	/**
+	 * Field lock.
+	 */
 	public final Lock lock = new ReentrantLock();
+	/**
+	 * Field _playerCount.
+	 */
 	protected int _playerCount;
+	/**
+	 * Field _party.
+	 */
 	protected Party _party;
+	/**
+	 * Field _commandChannel.
+	 */
 	protected CommandChannel _commandChannel;
+	/**
+	 * Field _collapseIfEmptyTime.
+	 */
 	private int _collapseIfEmptyTime;
+	/**
+	 * Field _isCollapseStarted.
+	 */
 	private boolean _isCollapseStarted;
+	/**
+	 * Field _collapseTask.
+	 */
 	private Future<?> _collapseTask;
+	/**
+	 * Field _collapse1minTask.
+	 */
 	private Future<?> _collapse1minTask;
+	/**
+	 * Field _hiddencollapseTask.
+	 */
 	private Future<?> _hiddencollapseTask;
+	/**
+	 * Field listeners.
+	 */
 	private final ReflectionListenerList listeners = new ReflectionListenerList();
 	
+	/**
+	 * Constructor for Reflection.
+	 */
 	public Reflection()
 	{
 		this(_nextId.incrementAndGet());
 	}
 	
+	/**
+	 * Constructor for Reflection.
+	 * @param id int
+	 */
 	private Reflection(int id)
 	{
 		_id = id;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getInstancedZoneId.
+	 * @return int
+	 */
 	public int getInstancedZoneId()
 	{
 		return _instance == null ? 0 : _instance.getId();
 	}
 	
+	/**
+	 * Method setParty.
+	 * @param party Party
+	 */
 	public void setParty(Party party)
 	{
 		_party = party;
 	}
 	
+	/**
+	 * Method getParty.
+	 * @return Party
+	 */
 	public Party getParty()
 	{
 		return _party;
 	}
 	
+	/**
+	 * Method setCommandChannel.
+	 * @param commandChannel CommandChannel
+	 */
 	public void setCommandChannel(CommandChannel commandChannel)
 	{
 		_commandChannel = commandChannel;
 	}
 	
+	/**
+	 * Method setCollapseIfEmptyTime.
+	 * @param value int
+	 */
 	public void setCollapseIfEmptyTime(int value)
 	{
 		_collapseIfEmptyTime = value;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method setName.
+	 * @param name String
+	 */
 	protected void setName(String name)
 	{
 		_name = name;
 	}
 	
+	/**
+	 * Method getInstancedZone.
+	 * @return InstantZone
+	 */
 	public InstantZone getInstancedZone()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method setInstancedZone.
+	 * @param iz InstantZone
+	 */
 	protected void setInstancedZone(InstantZone iz)
 	{
 		_instance = iz;
 	}
 	
+	/**
+	 * Method getGeoIndex.
+	 * @return int
+	 */
 	public int getGeoIndex()
 	{
 		return _geoIndex;
 	}
 	
+	/**
+	 * Method setGeoIndex.
+	 * @param geoIndex int
+	 */
 	protected void setGeoIndex(int geoIndex)
 	{
 		_geoIndex = geoIndex;
 	}
 	
+	/**
+	 * Method setCoreLoc.
+	 * @param l Location
+	 */
 	public void setCoreLoc(Location l)
 	{
 		_resetLoc = l;
 	}
 	
+	/**
+	 * Method getCoreLoc.
+	 * @return Location
+	 */
 	public Location getCoreLoc()
 	{
 		return _resetLoc;
 	}
 	
+	/**
+	 * Method setReturnLoc.
+	 * @param l Location
+	 */
 	public void setReturnLoc(Location l)
 	{
 		_returnLoc = l;
 	}
 	
+	/**
+	 * Method getReturnLoc.
+	 * @return Location
+	 */
 	public Location getReturnLoc()
 	{
 		return _returnLoc;
 	}
 	
+	/**
+	 * Method setTeleportLoc.
+	 * @param l Location
+	 */
 	public void setTeleportLoc(Location l)
 	{
 		_teleportLoc = l;
 	}
 	
+	/**
+	 * Method getTeleportLoc.
+	 * @return Location
+	 */
 	public Location getTeleportLoc()
 	{
 		return _teleportLoc;
 	}
 	
+	/**
+	 * Method getSpawns.
+	 * @return List<Spawner>
+	 */
 	public List<Spawner> getSpawns()
 	{
 		return _spawns;
 	}
 	
+	/**
+	 * Method getDoors.
+	 * @return Collection<DoorInstance>
+	 */
 	public Collection<DoorInstance> getDoors()
 	{
 		return _doors.values();
 	}
 	
+	/**
+	 * Method getDoor.
+	 * @param id int
+	 * @return DoorInstance
+	 */
 	public DoorInstance getDoor(int id)
 	{
 		return _doors.get(id);
 	}
 	
+	/**
+	 * Method getZone.
+	 * @param name String
+	 * @return Zone
+	 */
 	public Zone getZone(String name)
 	{
 		return _zones.get(name);
 	}
 	
+	/**
+	 * Method startCollapseTimer.
+	 * @param timeInMillis long
+	 */
 	public void startCollapseTimer(long timeInMillis)
 	{
 		if (isDefault())
@@ -275,6 +461,9 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method stopCollapseTimer.
+	 */
 	public void stopCollapseTimer()
 	{
 		lock.lock();
@@ -297,6 +486,9 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method minuteBeforeCollapse.
+	 */
 	public void minuteBeforeCollapse()
 	{
 		if (_isCollapseStarted)
@@ -320,6 +512,9 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method collapse.
+	 */
 	public void collapse()
 	{
 		if (_id <= 0)
@@ -442,10 +637,17 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method onCollapse.
+	 */
 	protected void onCollapse()
 	{
 	}
 	
+	/**
+	 * Method addObject.
+	 * @param o GameObject
+	 */
 	public void addObject(GameObject o)
 	{
 		if (_isCollapseStarted)
@@ -474,6 +676,10 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method removeObject.
+	 * @param o GameObject
+	 */
 	public void removeObject(GameObject o)
 	{
 		if (_isCollapseStarted)
@@ -517,16 +723,28 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 */
 	public void onPlayerEnter(Player player)
 	{
 		player.getInventory().validateItems();
 	}
 	
+	/**
+	 * Method onPlayerExit.
+	 * @param player Player
+	 */
 	public void onPlayerExit(Player player)
 	{
 		player.getInventory().validateItems();
 	}
 	
+	/**
+	 * Method getPlayers.
+	 * @return List<Player>
+	 */
 	public List<Player> getPlayers()
 	{
 		List<Player> result = new ArrayList<>();
@@ -548,6 +766,10 @@ public class Reflection
 		return result;
 	}
 	
+	/**
+	 * Method getNpcs.
+	 * @return List<NpcInstance>
+	 */
 	public List<NpcInstance> getNpcs()
 	{
 		List<NpcInstance> result = new ArrayList<>();
@@ -569,6 +791,12 @@ public class Reflection
 		return result;
 	}
 	
+	/**
+	 * Method getAllByNpcId.
+	 * @param npcId int
+	 * @param onlyAlive boolean
+	 * @return List<NpcInstance>
+	 */
 	public List<NpcInstance> getAllByNpcId(int npcId, boolean onlyAlive)
 	{
 		List<NpcInstance> result = new ArrayList<>();
@@ -594,21 +822,37 @@ public class Reflection
 		return result;
 	}
 	
+	/**
+	 * Method canChampions.
+	 * @return boolean
+	 */
 	public boolean canChampions()
 	{
 		return _id <= 0;
 	}
 	
+	/**
+	 * Method isAutolootForced.
+	 * @return boolean
+	 */
 	public boolean isAutolootForced()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isCollapseStarted.
+	 * @return boolean
+	 */
 	public boolean isCollapseStarted()
 	{
 		return _isCollapseStarted;
 	}
 	
+	/**
+	 * Method addSpawn.
+	 * @param spawn SimpleSpawner
+	 */
 	public void addSpawn(SimpleSpawner spawn)
 	{
 		if (spawn != null)
@@ -617,6 +861,10 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method fillSpawns.
+	 * @param si List<InstantZone.SpawnInfo>
+	 */
 	public void fillSpawns(List<InstantZone.SpawnInfo> si)
 	{
 		if (si == null)
@@ -688,6 +936,11 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method init.
+	 * @param doors IntObjectMap<DoorTemplate>
+	 * @param zones Map<String,ZoneTemplate>
+	 */
 	public void init(IntObjectMap<DoorTemplate> doors, Map<String, ZoneTemplate> zones)
 	{
 		if (!doors.isEmpty())
@@ -736,6 +989,11 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method init0.
+	 * @param doors IntObjectMap<InstantZone.DoorInfo>
+	 * @param zones Map<String,InstantZone.ZoneInfo>
+	 */
 	private void init0(IntObjectMap<InstantZone.DoorInfo> doors, Map<String, InstantZone.ZoneInfo> zones)
 	{
 		if (!doors.isEmpty())
@@ -784,6 +1042,9 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method initDoors.
+	 */
 	private void initDoors()
 	{
 		for (DoorInstance door : _doors.values())
@@ -796,6 +1057,10 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method openDoor.
+	 * @param doorId int
+	 */
 	public void openDoor(int doorId)
 	{
 		DoorInstance door = _doors.get(doorId);
@@ -805,6 +1070,10 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method closeDoor.
+	 * @param doorId int
+	 */
 	public void closeDoor(int doorId)
 	{
 		DoorInstance door = _doors.get(doorId);
@@ -814,6 +1083,11 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method clearReflection.
+	 * @param timeInMinutes int
+	 * @param message boolean
+	 */
 	public void clearReflection(int timeInMinutes, boolean message)
 	{
 		if (isDefault())
@@ -837,6 +1111,13 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method addSpawnWithoutRespawn.
+	 * @param npcId int
+	 * @param loc Location
+	 * @param randomOffset int
+	 * @return NpcInstance
+	 */
 	public NpcInstance addSpawnWithoutRespawn(int npcId, Location loc, int randomOffset)
 	{
 		Location newLoc;
@@ -851,6 +1132,14 @@ public class Reflection
 		return NpcUtils.spawnSingle(npcId, newLoc, this);
 	}
 	
+	/**
+	 * Method addSpawnWithRespawn.
+	 * @param npcId int
+	 * @param loc Location
+	 * @param randomOffset int
+	 * @param respawnDelay int
+	 * @return NpcInstance
+	 */
 	public NpcInstance addSpawnWithRespawn(int npcId, Location loc, int randomOffset, int respawnDelay)
 	{
 		SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(npcId));
@@ -863,16 +1152,28 @@ public class Reflection
 		return sp.getLastSpawn();
 	}
 	
+	/**
+	 * Method isDefault.
+	 * @return boolean
+	 */
 	public boolean isDefault()
 	{
 		return getId() <= 0;
 	}
 	
+	/**
+	 * Method getVisitors.
+	 * @return int[]
+	 */
 	public int[] getVisitors()
 	{
 		return _visitors.toArray();
 	}
 	
+	/**
+	 * Method setReenterTime.
+	 * @param time long
+	 */
 	public void setReenterTime(long time)
 	{
 		int[] players = null;
@@ -910,11 +1211,19 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method onCreate.
+	 */
 	protected void onCreate()
 	{
 		ReflectionManager.getInstance().add(this);
 	}
 	
+	/**
+	 * Method createReflection.
+	 * @param id int
+	 * @return Reflection
+	 */
 	public static Reflection createReflection(int id)
 	{
 		if (id > 0)
@@ -924,6 +1233,10 @@ public class Reflection
 		return new Reflection(id);
 	}
 	
+	/**
+	 * Method init.
+	 * @param instantZone InstantZone
+	 */
 	public void init(InstantZone instantZone)
 	{
 		setName(instantZone.getName());
@@ -967,6 +1280,10 @@ public class Reflection
 		onCreate();
 	}
 	
+	/**
+	 * Method spawnByGroup.
+	 * @param name String
+	 */
 	public void spawnByGroup(String name)
 	{
 		List<Spawner> list = _spawners.get(name);
@@ -980,6 +1297,10 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method despawnByGroup.
+	 * @param name String
+	 */
 	public void despawnByGroup(String name)
 	{
 		List<Spawner> list = _spawners.get(name);
@@ -993,16 +1314,30 @@ public class Reflection
 		}
 	}
 	
+	/**
+	 * Method getZones.
+	 * @return Collection<Zone>
+	 */
 	public Collection<Zone> getZones()
 	{
 		return _zones.values();
 	}
 	
+	/**
+	 * Method addListener.
+	 * @param listener T
+	 * @return boolean
+	 */
 	public <T extends Listener<Reflection>> boolean addListener(T listener)
 	{
 		return listeners.add(listener);
 	}
 	
+	/**
+	 * Method removeListener.
+	 * @param listener T
+	 * @return boolean
+	 */
 	public <T extends Listener<Reflection>> boolean removeListener(T listener)
 	{
 		return listeners.remove(listener);

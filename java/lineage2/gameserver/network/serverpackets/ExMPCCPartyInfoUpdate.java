@@ -15,12 +15,30 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExMPCCPartyInfoUpdate extends L2GameServerPacket
 {
+	/**
+	 * Field _party.
+	 */
 	private final Party _party;
+	/**
+	 * Field _leader.
+	 */
 	Player _leader;
+	/**
+	 * Field _count. Field _mode.
+	 */
 	private final int _mode, _count;
 	
+	/**
+	 * Constructor for ExMPCCPartyInfoUpdate.
+	 * @param party Party
+	 * @param mode int
+	 */
 	public ExMPCCPartyInfoUpdate(Party party, int mode)
 	{
 		_party = party;
@@ -29,6 +47,9 @@ public class ExMPCCPartyInfoUpdate extends L2GameServerPacket
 		_leader = _party.getPartyLeader();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

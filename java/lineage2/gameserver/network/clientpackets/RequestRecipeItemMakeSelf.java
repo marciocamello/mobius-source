@@ -28,16 +28,29 @@ import lineage2.gameserver.templates.item.RecipeTemplate;
 import lineage2.gameserver.templates.item.RecipeTemplate.RecipeComponent;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 {
+	/**
+	 * Field _recipeId.
+	 */
 	private int _recipeId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_recipeId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

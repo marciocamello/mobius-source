@@ -20,13 +20,25 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AnnihilationFighter extends Fighter
 {
+	/**
+	 * Constructor for AnnihilationFighter.
+	 * @param actor NpcInstance
+	 */
 	public AnnihilationFighter(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -37,12 +49,22 @@ public class AnnihilationFighter extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method canSeeInSilentMove.
+	 * @param target Playable
+	 * @return boolean
+	 */
 	@Override
 	public boolean canSeeInSilentMove(Playable target)
 	{
 		return true;
 	}
 	
+	/**
+	 * Method canSeeInHide.
+	 * @param target Playable
+	 * @return boolean
+	 */
 	@Override
 	public boolean canSeeInHide(Playable target)
 	{

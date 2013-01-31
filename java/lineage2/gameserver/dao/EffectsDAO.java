@@ -33,20 +33,41 @@ import lineage2.gameserver.utils.SqlBatch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectsDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(EffectsDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final EffectsDAO _instance = new EffectsDAO();
 	
+	/**
+	 * Constructor for EffectsDAO.
+	 */
 	EffectsDAO()
 	{
 	}
 	
+	/**
+	 * Method getInstance.
+	 * @return EffectsDAO
+	 */
 	public static EffectsDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method restoreEffects.
+	 * @param playable Playable
+	 */
 	public void restoreEffects(Playable playable)
 	{
 		int objectId, id;
@@ -120,6 +141,10 @@ public class EffectsDAO
 		}
 	}
 	
+	/**
+	 * Method insert.
+	 * @param playable Playable
+	 */
 	public void insert(Playable playable)
 	{
 		int objectId, id;
@@ -158,27 +183,27 @@ public class EffectsDAO
 					if (effect.isSaveable())
 					{
 						sb = new StringBuilder("(");
-						sb.append(objectId).append(",");
-						sb.append(effect.getSkill().getId()).append(",");
-						sb.append(effect.getSkill().getLevel()).append(",");
-						sb.append(effect.getCount()).append(",");
-						sb.append(effect.getTime()).append(",");
-						sb.append(effect.getPeriod()).append(",");
-						sb.append(order).append(",");
-						sb.append(id).append(")");
+						sb.append(objectId).append(',');
+						sb.append(effect.getSkill().getId()).append(',');
+						sb.append(effect.getSkill().getLevel()).append(',');
+						sb.append(effect.getCount()).append(',');
+						sb.append(effect.getTime()).append(',');
+						sb.append(effect.getPeriod()).append(',');
+						sb.append(order).append(',');
+						sb.append(id).append(')');
 						b.write(sb.toString());
 					}
 					while (((effect = effect.getNext()) != null) && effect.isSaveable())
 					{
 						sb = new StringBuilder("(");
-						sb.append(objectId).append(",");
-						sb.append(effect.getSkill().getId()).append(",");
-						sb.append(effect.getSkill().getLevel()).append(",");
-						sb.append(effect.getCount()).append(",");
-						sb.append(effect.getTime()).append(",");
-						sb.append(effect.getPeriod()).append(",");
-						sb.append(order).append(",");
-						sb.append(id).append(")");
+						sb.append(objectId).append(',');
+						sb.append(effect.getSkill().getId()).append(',');
+						sb.append(effect.getSkill().getLevel()).append(',');
+						sb.append(effect.getCount()).append(',');
+						sb.append(effect.getTime()).append(',');
+						sb.append(effect.getPeriod()).append(',');
+						sb.append(order).append(',');
+						sb.append(id).append(')');
 						b.write(sb.toString());
 					}
 					order++;

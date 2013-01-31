@@ -22,18 +22,41 @@ import lineage2.gameserver.model.Spawner;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SpawnTaskManager
 {
+	/**
+	 * Field _spawnTasks.
+	 */
 	SpawnTask[] _spawnTasks = new SpawnTask[500];
+	/**
+	 * Field _spawnTasksSize.
+	 */
 	int _spawnTasksSize = 0;
+	/**
+	 * Field spawnTasks_lock.
+	 */
 	final Object spawnTasks_lock = new Object();
+	/**
+	 * Field _instance.
+	 */
 	private static SpawnTaskManager _instance;
 	
+	/**
+	 * Constructor for SpawnTaskManager.
+	 */
 	public SpawnTaskManager()
 	{
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new SpawnScheduler(), 2000, 2000);
 	}
 	
+	/**
+	 * Method getInstance.
+	 * @return SpawnTaskManager
+	 */
 	public static SpawnTaskManager getInstance()
 	{
 		if (_instance == null)
@@ -43,14 +66,25 @@ public class SpawnTaskManager
 		return _instance;
 	}
 	
+	/**
+	 * Method addSpawnTask.
+	 * @param actor NpcInstance
+	 * @param interval long
+	 */
 	public void addSpawnTask(NpcInstance actor, long interval)
 	{
 		removeObject(actor);
 		addObject(new SpawnTask(actor, System.currentTimeMillis() + interval));
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class SpawnScheduler extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -122,6 +156,10 @@ public class SpawnTaskManager
 		}
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
@@ -137,23 +175,45 @@ public class SpawnTaskManager
 		return sb.toString();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SpawnTask
 	{
+		/**
+		 * Field _npcRef.
+		 */
 		private final HardReference<NpcInstance> _npcRef;
+		/**
+		 * Field endtime.
+		 */
 		public long endtime;
 		
+		/**
+		 * Constructor for SpawnTask.
+		 * @param cha NpcInstance
+		 * @param delay long
+		 */
 		SpawnTask(NpcInstance cha, long delay)
 		{
 			_npcRef = cha.getRef();
 			endtime = delay;
 		}
 		
+		/**
+		 * Method getActor.
+		 * @return NpcInstance
+		 */
 		public NpcInstance getActor()
 		{
 			return _npcRef.get();
 		}
 	}
 	
+	/**
+	 * Method addObject.
+	 * @param decay SpawnTask
+	 */
 	private void addObject(SpawnTask decay)
 	{
 		synchronized (spawnTasks_lock)
@@ -169,6 +229,10 @@ public class SpawnTaskManager
 		}
 	}
 	
+	/**
+	 * Method removeObject.
+	 * @param actor NpcInstance
+	 */
 	public void removeObject(NpcInstance actor)
 	{
 		synchronized (spawnTasks_lock)

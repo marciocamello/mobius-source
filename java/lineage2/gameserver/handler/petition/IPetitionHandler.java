@@ -14,7 +14,17 @@ package lineage2.gameserver.handler.petition;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IPetitionHandler
 {
+	/**
+	 * Method handle.
+	 * @param player Player
+	 * @param id int
+	 * @param txt String
+	 */
 	void handle(Player player, int id, String txt);
 }

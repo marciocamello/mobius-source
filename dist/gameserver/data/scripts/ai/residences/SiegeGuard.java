@@ -29,50 +29,88 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 import npc.model.residences.SiegeGuardInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class SiegeGuard extends DefaultAI
 {
+	/**
+	 * Constructor for SiegeGuard.
+	 * @param actor NpcInstance
+	 */
 	public SiegeGuard(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = 1000;
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return SiegeGuardInstance
+	 */
 	@Override
 	public SiegeGuardInstance getActor()
 	{
 		return (SiegeGuardInstance) super.getActor();
 	}
 	
+	/**
+	 * Method getMaxPathfindFails.
+	 * @return int
+	 */
 	@Override
 	public int getMaxPathfindFails()
 	{
 		return Integer.MAX_VALUE;
 	}
 	
+	/**
+	 * Method getMaxAttackTimeout.
+	 * @return int
+	 */
 	@Override
 	public int getMaxAttackTimeout()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method randomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomAnimation()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method canSeeInSilentMove.
+	 * @param target Playable
+	 * @return boolean
+	 */
 	@Override
 	public boolean canSeeInSilentMove(Playable target)
 	{
 		return !target.isSilentMoving() || Rnd.chance(10);
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	protected boolean checkAggression(Creature target)
 	{
@@ -142,12 +180,21 @@ public abstract class SiegeGuard extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method isGlobalAggro.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean isGlobalAggro()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
@@ -163,6 +210,10 @@ public abstract class SiegeGuard extends DefaultAI
 		super.onEvtAggression(target, aggro);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -202,6 +253,10 @@ public abstract class SiegeGuard extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method prepareTarget.
+	 * @return Creature
+	 */
 	@Override
 	protected Creature prepareTarget()
 	{
@@ -230,6 +285,11 @@ public abstract class SiegeGuard extends DefaultAI
 		return null;
 	}
 	
+	/**
+	 * Method canAttackCharacter.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	protected boolean canAttackCharacter(Creature target)
 	{

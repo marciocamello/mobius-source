@@ -23,6 +23,10 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import npc.model.residences.fortress.FacilityManagerInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GuardCaptionInstance extends FacilityManagerInstance
 {
 	/**
@@ -30,11 +34,21 @@ public class GuardCaptionInstance extends FacilityManagerInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for GuardCaptionInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public GuardCaptionInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -83,6 +97,12 @@ public class GuardCaptionInstance extends FacilityManagerInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{

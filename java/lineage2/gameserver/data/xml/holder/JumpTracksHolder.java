@@ -16,32 +16,62 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.jump.JumpTrack;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class JumpTracksHolder extends AbstractHolder
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final JumpTracksHolder _instance = new JumpTracksHolder();
+	/**
+	 * Field _jumpingTracks.
+	 */
 	private final TIntObjectHashMap<JumpTrack> _jumpingTracks = new TIntObjectHashMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return JumpTracksHolder
+	 */
 	public static JumpTracksHolder getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method addTrack.
+	 * @param track JumpTrack
+	 */
 	public void addTrack(JumpTrack track)
 	{
 		_jumpingTracks.put(track.getId(), track);
 	}
 	
+	/**
+	 * Method getTrack.
+	 * @param id int
+	 * @return JumpTrack
+	 */
 	public JumpTrack getTrack(int id)
 	{
 		return _jumpingTracks.get(id);
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public int size()
 	{
 		return _jumpingTracks.size();
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	@Override
 	public void clear()
 	{

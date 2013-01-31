@@ -19,14 +19,25 @@ import lineage2.gameserver.instancemanager.naia.NaiaCoreManager;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NaiaCube extends DefaultAI
 {
+	/**
+	 * Constructor for NaiaCube.
+	 * @param actor NpcInstance
+	 */
 	public NaiaCube(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -34,15 +45,28 @@ public class NaiaCube extends DefaultAI
 		ThreadPoolManager.getInstance().schedule(new Despawn(getActor()), 120 * 1000L);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Despawn extends RunnableImpl
 	{
+		/**
+		 * Field _npc.
+		 */
 		NpcInstance _npc;
 		
+		/**
+		 * Constructor for Despawn.
+		 * @param npc NpcInstance
+		 */
 		Despawn(NpcInstance npc)
 		{
 			_npc = npc;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

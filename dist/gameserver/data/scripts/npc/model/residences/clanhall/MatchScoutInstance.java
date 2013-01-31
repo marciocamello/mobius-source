@@ -18,19 +18,45 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.residences.clanhall.CTBBossInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MatchScoutInstance extends CTBBossInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _massiveDamage.
+	 */
 	private long _massiveDamage;
 	
+	/**
+	 * Constructor for MatchScoutInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MatchScoutInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method reduceCurrentHp.
+	 * @param damage double
+	 * @param reflectableDamage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 * @param canReflect boolean
+	 * @param transferDamage boolean
+	 * @param isDot boolean
+	 * @param sendMessage boolean
+	 */
 	@Override
 	public void reduceCurrentHp(double damage, double reflectableDamage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp, boolean canReflect, boolean transferDamage, boolean isDot, boolean sendMessage)
 	{

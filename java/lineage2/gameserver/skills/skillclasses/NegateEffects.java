@@ -25,13 +25,33 @@ import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NegateEffects extends Skill
 {
+	/**
+	 * Field _negateEffects.
+	 */
 	private final Map<EffectType, Integer> _negateEffects = new HashMap<>();
+	/**
+	 * Field _negateStackType.
+	 */
 	private final Map<String, Integer> _negateStackType = new HashMap<>();
+	/**
+	 * Field _onlyPhysical.
+	 */
 	private final boolean _onlyPhysical;
+	/**
+	 * Field _negateDebuffs.
+	 */
 	private final boolean _negateDebuffs;
 	
+	/**
+	 * Constructor for NegateEffects.
+	 * @param set StatsSet
+	 */
 	public NegateEffects(StatsSet set)
 	{
 		super(set);
@@ -57,6 +77,11 @@ public class NegateEffects extends Skill
 		_negateDebuffs = set.getBool("negateDebuffs", true);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
@@ -92,6 +117,12 @@ public class NegateEffects extends Skill
 		}
 	}
 	
+	/**
+	 * Method negateEffectAtPower.
+	 * @param target Creature
+	 * @param type EffectType
+	 * @param power int
+	 */
 	private void negateEffectAtPower(Creature target, EffectType type, int power)
 	{
 		for (Effect e : target.getEffectList().getAllEffects())
@@ -112,6 +143,12 @@ public class NegateEffects extends Skill
 		}
 	}
 	
+	/**
+	 * Method negateEffectAtPower.
+	 * @param target Creature
+	 * @param stackType String
+	 * @param power int
+	 */
 	private void negateEffectAtPower(Creature target, String stackType, int power)
 	{
 		for (Effect e : target.getEffectList().getAllEffects())

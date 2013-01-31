@@ -15,29 +15,91 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FlyToLocation extends L2GameServerPacket
 {
+	/**
+	 * Field _chaObjId.
+	 */
 	private final int _chaObjId;
+	/**
+	 * Field _type.
+	 */
 	private final FlyType _type;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
+	/**
+	 * Field _destLoc.
+	 */
 	private final Location _destLoc;
+	/**
+	 * Field _speed.
+	 */
 	private final int _speed;
 	
+	/**
+	 * @author Mobius
+	 */
 	public enum FlyType
 	{
+		/**
+		 * Field THROW_UP.
+		 */
 		THROW_UP,
+		/**
+		 * Field THROW_HORIZONTAL.
+		 */
 		THROW_HORIZONTAL,
+		/**
+		 * Field DUMMY.
+		 */
 		DUMMY,
+		/**
+		 * Field CHARGE.
+		 */
 		CHARGE,
+		/**
+		 * Field PUSH_HORIZONTAL.
+		 */
 		PUSH_HORIZONTAL,
+		/**
+		 * Field JUMP_EFFECTED.
+		 */
 		JUMP_EFFECTED,
+		/**
+		 * Field NOT_USED.
+		 */
 		NOT_USED,
+		/**
+		 * Field PUSH_DOWN_HORIZONTAL.
+		 */
 		PUSH_DOWN_HORIZONTAL,
+		/**
+		 * Field WARP_BACK.
+		 */
 		WARP_BACK,
+		/**
+		 * Field WARP_FORWARD.
+		 */
 		WARP_FORWARD,
+		/**
+		 * Field NONE.
+		 */
 		NONE
 	}
 	
+	/**
+	 * Constructor for FlyToLocation.
+	 * @param cha Creature
+	 * @param destLoc Location
+	 * @param type FlyType
+	 * @param speed int
+	 */
 	public FlyToLocation(Creature cha, Location destLoc, FlyType type, int speed)
 	{
 		_destLoc = destLoc;
@@ -47,6 +109,9 @@ public class FlyToLocation extends L2GameServerPacket
 		_speed = speed;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

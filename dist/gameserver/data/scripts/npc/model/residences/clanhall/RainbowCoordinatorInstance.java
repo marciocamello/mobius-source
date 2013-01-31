@@ -25,6 +25,10 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RainbowCoordinatorInstance extends NpcInstance
 {
 	/**
@@ -32,11 +36,21 @@ public class RainbowCoordinatorInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for RainbowCoordinatorInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public RainbowCoordinatorInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(final Player player, final String command)
 	{
@@ -108,6 +122,12 @@ public class RainbowCoordinatorInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{

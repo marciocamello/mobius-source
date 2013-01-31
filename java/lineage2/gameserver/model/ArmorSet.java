@@ -23,18 +23,60 @@ import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ArmorSet
 {
+	/**
+	 * Field _chests.
+	 */
 	private final TIntHashSet _chests = new TIntHashSet();
+	/**
+	 * Field _legs.
+	 */
 	private final TIntHashSet _legs = new TIntHashSet();
+	/**
+	 * Field _head.
+	 */
 	private final TIntHashSet _head = new TIntHashSet();
+	/**
+	 * Field _gloves.
+	 */
 	private final TIntHashSet _gloves = new TIntHashSet();
+	/**
+	 * Field _feet.
+	 */
 	private final TIntHashSet _feet = new TIntHashSet();
+	/**
+	 * Field _shield.
+	 */
 	private final TIntHashSet _shield = new TIntHashSet();
+	/**
+	 * Field _skills.
+	 */
 	private final TIntObjectHashMap<List<Skill>> _skills = new TIntObjectHashMap<>();
+	/**
+	 * Field _shieldSkills.
+	 */
 	private final List<Skill> _shieldSkills = new ArrayList<>();
+	/**
+	 * Field _enchant6skills.
+	 */
 	private final List<Skill> _enchant6skills = new ArrayList<>();
 	
+	/**
+	 * Constructor for ArmorSet.
+	 * @param chests String[]
+	 * @param legs String[]
+	 * @param head String[]
+	 * @param gloves String[]
+	 * @param feet String[]
+	 * @param shield String[]
+	 * @param shield_skills String[]
+	 * @param enchant6skills String[]
+	 */
 	public ArmorSet(String[] chests, String[] legs, String[] head, String[] gloves, String[] feet, String[] shield, String[] shield_skills, String[] enchant6skills)
 	{
 		_chests.addAll(parseItemIDs(chests));
@@ -71,6 +113,11 @@ public final class ArmorSet
 		}
 	}
 	
+	/**
+	 * Method parseItemIDs.
+	 * @param items String[]
+	 * @return int[]
+	 */
 	private static int[] parseItemIDs(String[] items)
 	{
 		TIntHashSet result = new TIntHashSet();
@@ -88,6 +135,11 @@ public final class ArmorSet
 		return result.toArray();
 	}
 	
+	/**
+	 * Method addSkills.
+	 * @param partsCount int
+	 * @param skills String[]
+	 */
 	public void addSkills(int partsCount, String[] skills)
 	{
 		List<Skill> skillList = new ArrayList<>();
@@ -107,6 +159,11 @@ public final class ArmorSet
 		_skills.put(partsCount, skillList);
 	}
 	
+	/**
+	 * Method containAll.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean containAll(Player player)
 	{
 		Inventory inv = player.getInventory();
@@ -143,6 +200,15 @@ public final class ArmorSet
 		return containAll(chest, legs, head, gloves, feet);
 	}
 	
+	/**
+	 * Method containAll.
+	 * @param chest int
+	 * @param legs int
+	 * @param head int
+	 * @param gloves int
+	 * @param feet int
+	 * @return boolean
+	 */
 	public boolean containAll(int chest, int legs, int head, int gloves, int feet)
 	{
 		if (!_chests.isEmpty() && !_chests.contains(chest))
@@ -168,6 +234,12 @@ public final class ArmorSet
 		return true;
 	}
 	
+	/**
+	 * Method containItem.
+	 * @param slot int
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public boolean containItem(int slot, int itemId)
 	{
 		switch (slot)
@@ -187,6 +259,11 @@ public final class ArmorSet
 		}
 	}
 	
+	/**
+	 * Method getEquipedSetPartsCount.
+	 * @param player Player
+	 * @return int
+	 */
 	public int getEquipedSetPartsCount(Player player)
 	{
 		Inventory inv = player.getInventory();
@@ -244,6 +321,11 @@ public final class ArmorSet
 		return result;
 	}
 	
+	/**
+	 * Method getSkills.
+	 * @param partsCount int
+	 * @return List<Skill>
+	 */
 	public List<Skill> getSkills(int partsCount)
 	{
 		if (_skills.get(partsCount) == null)
@@ -253,6 +335,10 @@ public final class ArmorSet
 		return _skills.get(partsCount);
 	}
 	
+	/**
+	 * Method getSkillsToRemove.
+	 * @return List<Skill>
+	 */
 	public List<Skill> getSkillsToRemove()
 	{
 		List<Skill> result = new ArrayList<>();
@@ -270,16 +356,29 @@ public final class ArmorSet
 		return result;
 	}
 	
+	/**
+	 * Method getShieldSkills.
+	 * @return List<Skill>
+	 */
 	public List<Skill> getShieldSkills()
 	{
 		return _shieldSkills;
 	}
 	
+	/**
+	 * Method getEnchant6skills.
+	 * @return List<Skill>
+	 */
 	public List<Skill> getEnchant6skills()
 	{
 		return _enchant6skills;
 	}
 	
+	/**
+	 * Method containShield.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean containShield(Player player)
 	{
 		Inventory inv = player.getInventory();
@@ -291,6 +390,11 @@ public final class ArmorSet
 		return false;
 	}
 	
+	/**
+	 * Method containShield.
+	 * @param shield_id int
+	 * @return boolean
+	 */
 	public boolean containShield(int shield_id)
 	{
 		if (_shield.isEmpty())
@@ -300,6 +404,11 @@ public final class ArmorSet
 		return _shield.contains(shield_id);
 	}
 	
+	/**
+	 * Method isEnchanted6.
+	 * @param player Player
+	 * @return boolean
+	 */
 	public boolean isEnchanted6(Player player)
 	{
 		if (!containAll(player))
@@ -335,31 +444,55 @@ public final class ArmorSet
 		return true;
 	}
 	
+	/**
+	 * Method getChestIds.
+	 * @return int[]
+	 */
 	public int[] getChestIds()
 	{
 		return _chests.toArray();
 	}
 	
+	/**
+	 * Method getLegIds.
+	 * @return int[]
+	 */
 	public int[] getLegIds()
 	{
 		return _legs.toArray();
 	}
 	
+	/**
+	 * Method getHeadIds.
+	 * @return int[]
+	 */
 	public int[] getHeadIds()
 	{
 		return _head.toArray();
 	}
 	
+	/**
+	 * Method getGlovesIds.
+	 * @return int[]
+	 */
 	public int[] getGlovesIds()
 	{
 		return _gloves.toArray();
 	}
 	
+	/**
+	 * Method getFeetIds.
+	 * @return int[]
+	 */
 	public int[] getFeetIds()
 	{
 		return _feet.toArray();
 	}
 	
+	/**
+	 * Method getShieldIds.
+	 * @return int[]
+	 */
 	public int[] getShieldIds()
 	{
 		return _shield.toArray();

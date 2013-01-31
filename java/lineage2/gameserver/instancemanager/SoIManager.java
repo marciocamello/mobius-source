@@ -25,11 +25,27 @@ import lineage2.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SoIManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SoIManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static SoIManager _instance = null;
+	/**
+	 * Field SOI_OPEN_TIME.
+	 */
 	private static final long SOI_OPEN_TIME = 24 * 60 * 60 * 1000L;
+	/**
+	 * Field openSeedTeleportLocs.
+	 */
 	private static Location[] openSeedTeleportLocs =
 	{
 		new Location(-179537, 209551, -15504),
@@ -51,8 +67,15 @@ public class SoIManager
 		new Location(-177264, 217760, -9536),
 		new Location(-173727, 218169, -9536)
 	};
+	/**
+	 * Field _zone.
+	 */
 	private static Zone _zone = null;
 	
+	/**
+	 * Method getInstance.
+	 * @return SoIManager
+	 */
 	public static SoIManager getInstance()
 	{
 		if (_instance == null)
@@ -62,6 +85,9 @@ public class SoIManager
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for SoIManager.
+	 */
 	public SoIManager()
 	{
 		_log.info("Seed of Infinity Manager: Loaded. Current stage is: " + getCurrentStage());
@@ -73,11 +99,19 @@ public class SoIManager
 		}
 	}
 	
+	/**
+	 * Method getCurrentStage.
+	 * @return int
+	 */
 	public static int getCurrentStage()
 	{
 		return ServerVariables.getInt("SoI_stage", 1);
 	}
 	
+	/**
+	 * Method getOpenedTime.
+	 * @return long
+	 */
 	public static long getOpenedTime()
 	{
 		if (getCurrentStage() != 3)
@@ -87,6 +121,10 @@ public class SoIManager
 		return (ServerVariables.getLong("SoI_opened", 0) * 1000L) - System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method setCurrentStage.
+	 * @param stage int
+	 */
 	public static void setCurrentStage(int stage)
 	{
 		if (getCurrentStage() == stage)
@@ -109,11 +147,19 @@ public class SoIManager
 		_log.info("Seed of Infinity Manager: Set to stage " + stage);
 	}
 	
+	/**
+	 * Method isSeedOpen.
+	 * @return boolean
+	 */
 	public static boolean isSeedOpen()
 	{
 		return getOpenedTime() > 0;
 	}
 	
+	/**
+	 * Method openSeed.
+	 * @param time long
+	 */
 	public static void openSeed(long time)
 	{
 		if (time <= 0)
@@ -135,6 +181,9 @@ public class SoIManager
 		}, time);
 	}
 	
+	/**
+	 * Method closeSeed.
+	 */
 	public static void closeSeed()
 	{
 		_log.info("Seed of Infinity Manager: Closing the seed.");
@@ -150,6 +199,9 @@ public class SoIManager
 		}
 	}
 	
+	/**
+	 * Method checkStageAndSpawn.
+	 */
 	public static void checkStageAndSpawn()
 	{
 		SpawnManager.getInstance().despawn("soi_world_closedmouths");
@@ -174,11 +226,18 @@ public class SoIManager
 		}
 	}
 	
+	/**
+	 * Method getZone.
+	 * @return Zone
+	 */
 	private static Zone getZone()
 	{
 		return _zone;
 	}
 	
+	/**
+	 * Method notifyCohemenesKill.
+	 */
 	public static void notifyCohemenesKill()
 	{
 		if (getCurrentStage() == 1)
@@ -194,6 +253,9 @@ public class SoIManager
 		}
 	}
 	
+	/**
+	 * Method notifyEkimusKill.
+	 */
 	public static void notifyEkimusKill()
 	{
 		if (getCurrentStage() == 2)
@@ -209,6 +271,9 @@ public class SoIManager
 		}
 	}
 	
+	/**
+	 * Method notifyHoEDefSuccess.
+	 */
 	public static void notifyHoEDefSuccess()
 	{
 		if (getCurrentStage() == 4)
@@ -224,36 +289,63 @@ public class SoIManager
 		}
 	}
 	
+	/**
+	 * Method setCohemenesCount.
+	 * @param i int
+	 */
 	public static void setCohemenesCount(int i)
 	{
 		ServerVariables.set("SoI_CohemenesCount", i);
 	}
 	
+	/**
+	 * Method setEkimusCount.
+	 * @param i int
+	 */
 	public static void setEkimusCount(int i)
 	{
 		ServerVariables.set("SoI_EkimusCount", i);
 	}
 	
+	/**
+	 * Method setHoEDefCount.
+	 * @param i int
+	 */
 	public static void setHoEDefCount(int i)
 	{
 		ServerVariables.set("SoI_hoedefkillcount", i);
 	}
 	
+	/**
+	 * Method getCohemenesCount.
+	 * @return int
+	 */
 	public static int getCohemenesCount()
 	{
 		return ServerVariables.getInt("SoI_CohemenesCount", 0);
 	}
 	
+	/**
+	 * Method getEkimusCount.
+	 * @return int
+	 */
 	public static int getEkimusCount()
 	{
 		return ServerVariables.getInt("SoI_EkimusCount", 0);
 	}
 	
+	/**
+	 * Method getHoEDefCount.
+	 * @return int
+	 */
 	public static int getHoEDefCount()
 	{
 		return ServerVariables.getInt("SoI_hoedefkillcount", 0);
 	}
 	
+	/**
+	 * Method spawnOpenedSeed.
+	 */
 	private static void spawnOpenedSeed()
 	{
 		SpawnManager.getInstance().spawn("soi_hos_middle_seeds");
@@ -262,6 +354,10 @@ public class SoIManager
 		SpawnManager.getInstance().spawn("soi_all_middle_stable_tumor");
 	}
 	
+	/**
+	 * Method teleportInSeed.
+	 * @param p Player
+	 */
 	public static void teleportInSeed(Player p)
 	{
 		p.teleToLocation(openSeedTeleportLocs[Rnd.get(openSeedTeleportLocs.length)]);

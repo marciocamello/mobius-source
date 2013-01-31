@@ -14,7 +14,17 @@ package lineage2.commons.net.nio.impl;
 
 import java.nio.ByteBuffer;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IPacketHandler<T extends MMOClient>
 {
+	/**
+	 * Method handlePacket.
+	 * @param buf ByteBuffer
+	 * @param client T
+	 * @return ReceivablePacket<T>
+	 */
 	public ReceivablePacket<T> handlePacket(ByteBuffer buf, T client);
 }

@@ -24,12 +24,30 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectRestorationRandom extends Effect
 {
+	/**
+	 * Field items.
+	 */
 	private final List<List<Item>> items;
+	/**
+	 * Field chances.
+	 */
 	private final double[] chances;
+	/**
+	 * Field groupPattern.
+	 */
 	private static final Pattern groupPattern = Pattern.compile("\\{\\[([\\d:;]+?)\\]([\\d.e-]+)\\}");
 	
+	/**
+	 * Constructor for EffectRestorationRandom.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectRestorationRandom(Env env, EffectTemplate template)
 	{
 		super(env, template);
@@ -62,6 +80,9 @@ public class EffectRestorationRandom extends Effect
 		}
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -90,20 +111,36 @@ public class EffectRestorationRandom extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean onActionTime()
 	{
 		return false;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private final class Item
 	{
+		/**
+		 * Constructor for Item.
+		 */
 		public Item()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Field itemId.
+		 */
 		public int itemId;
+		/**
+		 * Field count.
+		 */
 		public long count;
 	}
 }

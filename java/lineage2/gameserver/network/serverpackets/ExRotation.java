@@ -12,16 +12,31 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExRotation extends L2GameServerPacket
 {
+	/**
+	 * Field _degree. Field _charObjId.
+	 */
 	private final int _charObjId, _degree;
 	
+	/**
+	 * Constructor for ExRotation.
+	 * @param charId int
+	 * @param degree int
+	 */
 	public ExRotation(int charId, int degree)
 	{
 		_charObjId = charId;
 		_degree = degree;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

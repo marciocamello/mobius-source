@@ -19,19 +19,36 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CellphineInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field INSTANCE_ID. (value is 200)
+	 */
 	private static final int INSTANCE_ID = 200;
 	
+	/**
+	 * Constructor for CellphineInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public CellphineInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

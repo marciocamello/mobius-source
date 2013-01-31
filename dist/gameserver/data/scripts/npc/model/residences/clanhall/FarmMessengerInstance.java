@@ -36,6 +36,10 @@ import org.apache.commons.lang3.StringUtils;
 
 import quests._655_AGrandPlanForTamingWildBeasts;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FarmMessengerInstance extends NpcInstance
 {
 	/**
@@ -43,11 +47,21 @@ public class FarmMessengerInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for FarmMessengerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public FarmMessengerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(final Player player, final String command)
 	{
@@ -197,6 +211,10 @@ public class FarmMessengerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method register.
+	 * @param player Player
+	 */
 	private void register(Player player)
 	{
 		Clan clan = player.getClan();
@@ -211,6 +229,11 @@ public class FarmMessengerInstance extends NpcInstance
 		showFlagInfo(player, siegeClans.indexOf(siegeClan));
 	}
 	
+	/**
+	 * Method showFlagInfo.
+	 * @param player Player
+	 * @param index int
+	 */
 	private void showFlagInfo(Player player, int index)
 	{
 		String file = null;
@@ -237,6 +260,11 @@ public class FarmMessengerInstance extends NpcInstance
 		showChatWindow(player, file);
 	}
 	
+	/**
+	 * Method npcDialog.
+	 * @param siegeClanObject SiegeClanObject
+	 * @return String
+	 */
 	private String npcDialog(SiegeClanObject siegeClanObject)
 	{
 		String file = null;
@@ -264,6 +292,12 @@ public class FarmMessengerInstance extends NpcInstance
 		return file;
 	}
 	
+	/**
+	 * Method checkCond.
+	 * @param player Player
+	 * @param regMenu boolean
+	 * @return boolean
+	 */
 	private boolean checkCond(Player player, boolean regMenu)
 	{
 		Clan clan = player.getClan();
@@ -308,6 +342,12 @@ public class FarmMessengerInstance extends NpcInstance
 		return true;
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{

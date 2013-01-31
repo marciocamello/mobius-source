@@ -12,21 +12,53 @@
  */
 package lineage2.gameserver.model.entity.events;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum EventType
 {
+	/**
+	 * Field MAIN_EVENT.
+	 */
 	MAIN_EVENT,
+	/**
+	 * Field SIEGE_EVENT.
+	 */
 	SIEGE_EVENT,
+	/**
+	 * Field PVP_EVENT.
+	 */
 	PVP_EVENT,
+	/**
+	 * Field BOAT_EVENT.
+	 */
 	BOAT_EVENT,
+	/**
+	 * Field FUN_EVENT.
+	 */
 	FUN_EVENT,
+	/**
+	 * Field SHUTTLE_EVENT.
+	 */
 	SHUTTLE_EVENT;
+	/**
+	 * Field _step.
+	 */
 	private int _step;
 	
+	/**
+	 * Constructor for EventType.
+	 */
 	EventType()
 	{
 		_step = ordinal() * 1000;
 	}
 	
+	/**
+	 * Method step.
+	 * @return int
+	 */
 	public int step()
 	{
 		return _step;

@@ -19,10 +19,22 @@ import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Files
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Files.class);
 	
+	/**
+	 * Method writeFile.
+	 * @param path String
+	 * @param string String
+	 */
 	public static void writeFile(String path, String string)
 	{
 		try
@@ -35,6 +47,12 @@ public class Files
 		}
 	}
 	
+	/**
+	 * Method copyFile.
+	 * @param srcFile String
+	 * @param destFile String
+	 * @return boolean
+	 */
 	public static boolean copyFile(String srcFile, String destFile)
 	{
 		try

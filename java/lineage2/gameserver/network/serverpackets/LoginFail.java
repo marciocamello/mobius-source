@@ -12,26 +12,73 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LoginFail extends L2GameServerPacket
 {
+	/**
+	 * Field NO_TEXT.
+	 */
 	public static int NO_TEXT = 0;
+	/**
+	 * Field SYSTEM_ERROR_LOGIN_LATER.
+	 */
 	public static int SYSTEM_ERROR_LOGIN_LATER = 1;
+	/**
+	 * Field PASSWORD_DOES_NOT_MATCH_THIS_ACCOUNT.
+	 */
 	public static int PASSWORD_DOES_NOT_MATCH_THIS_ACCOUNT = 2;
+	/**
+	 * Field PASSWORD_DOES_NOT_MATCH_THIS_ACCOUNT2.
+	 */
 	public static int PASSWORD_DOES_NOT_MATCH_THIS_ACCOUNT2 = 3;
+	/**
+	 * Field ACCESS_FAILED_TRY_LATER.
+	 */
 	public static int ACCESS_FAILED_TRY_LATER = 4;
+	/**
+	 * Field INCORRECT_ACCOUNT_INFO_CONTACT_CUSTOMER_SUPPORT.
+	 */
 	public static int INCORRECT_ACCOUNT_INFO_CONTACT_CUSTOMER_SUPPORT = 5;
+	/**
+	 * Field ACCESS_FAILED_TRY_LATER2.
+	 */
 	public static int ACCESS_FAILED_TRY_LATER2 = 6;
+	/**
+	 * Field ACOUNT_ALREADY_IN_USE.
+	 */
 	public static int ACOUNT_ALREADY_IN_USE = 7;
+	/**
+	 * Field ACCESS_FAILED_TRY_LATER3.
+	 */
 	public static int ACCESS_FAILED_TRY_LATER3 = 8;
+	/**
+	 * Field ACCESS_FAILED_TRY_LATER4.
+	 */
 	public static int ACCESS_FAILED_TRY_LATER4 = 9;
+	/**
+	 * Field ACCESS_FAILED_TRY_LATER5.
+	 */
 	public static int ACCESS_FAILED_TRY_LATER5 = 10;
+	/**
+	 * Field _reason.
+	 */
 	private final int _reason;
 	
+	/**
+	 * Constructor for LoginFail.
+	 * @param reason int
+	 */
 	public LoginFail(int reason)
 	{
 		_reason = reason;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

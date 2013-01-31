@@ -20,12 +20,28 @@ import lineage2.gameserver.network.loginservercon.gspackets.PlayerInGame;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AuthResponse extends ReceivablePacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(AuthResponse.class);
+	/**
+	 * Field _serverId.
+	 */
 	private int _serverId;
+	/**
+	 * Field _serverName.
+	 */
 	private String _serverName;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -33,6 +49,9 @@ public class AuthResponse extends ReceivablePacket
 		_serverName = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

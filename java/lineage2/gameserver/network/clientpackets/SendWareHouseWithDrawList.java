@@ -30,13 +30,32 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SendWareHouseWithDrawList extends L2GameClientPacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SendWareHouseWithDrawList.class);
+	/**
+	 * Field _count.
+	 */
 	private int _count;
+	/**
+	 * Field _items.
+	 */
 	private int[] _items;
+	/**
+	 * Field _itemQ.
+	 */
 	private long[] _itemQ;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -60,6 +79,9 @@ public class SendWareHouseWithDrawList extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

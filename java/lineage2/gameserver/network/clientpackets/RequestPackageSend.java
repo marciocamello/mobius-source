@@ -26,14 +26,36 @@ import lineage2.gameserver.utils.Log;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPackageSend extends L2GameClientPacket
 {
+	/**
+	 * Field _FREIGHT_FEE. (value is 1000)
+	 */
 	private static final long _FREIGHT_FEE = 1000;
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
+	/**
+	 * Field _count.
+	 */
 	private int _count;
+	/**
+	 * Field _items.
+	 */
 	private int[] _items;
+	/**
+	 * Field _itemQ.
+	 */
 	private long[] _itemQ;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -58,6 +80,9 @@ public class RequestPackageSend extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

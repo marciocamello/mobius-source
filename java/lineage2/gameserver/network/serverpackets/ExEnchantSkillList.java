@@ -15,24 +15,63 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExEnchantSkillList extends L2GameServerPacket
 {
+	/**
+	 * @author Mobius
+	 */
 	public enum EnchantSkillType
 	{
+		/**
+		 * Field NORMAL.
+		 */
 		NORMAL,
+		/**
+		 * Field SAFE.
+		 */
 		SAFE,
+		/**
+		 * Field UNTRAIN.
+		 */
 		UNTRAIN,
+		/**
+		 * Field CHANGE_ROUTE.
+		 */
 		CHANGE_ROUTE,
 	}
 	
+	/**
+	 * Field _skills.
+	 */
 	private final List<Skill> _skills;
+	/**
+	 * Field _type.
+	 */
 	private final EnchantSkillType _type;
 	
+	/**
+	 * @author Mobius
+	 */
 	class Skill
 	{
+		/**
+		 * Field id.
+		 */
 		public int id;
+		/**
+		 * Field level.
+		 */
 		public int level;
 		
+		/**
+		 * Constructor for Skill.
+		 * @param id int
+		 * @param nextLevel int
+		 */
 		Skill(int id, int nextLevel)
 		{
 			this.id = id;
@@ -40,17 +79,29 @@ public class ExEnchantSkillList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method addSkill.
+	 * @param id int
+	 * @param level int
+	 */
 	public void addSkill(int id, int level)
 	{
 		_skills.add(new Skill(id, level));
 	}
 	
+	/**
+	 * Constructor for ExEnchantSkillList.
+	 * @param type EnchantSkillType
+	 */
 	public ExEnchantSkillList(EnchantSkillType type)
 	{
 		_type = type;
 		_skills = new ArrayList<>();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -36,36 +36,125 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class LettersCollection extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(LettersCollection.class);
+	/**
+	 * Field _active.
+	 */
 	protected static boolean _active;
+	/**
+	 * Field _name.
+	 */
 	protected static String _name;
+	/**
+	 * Field letters.
+	 */
 	protected static int[][] letters;
+	/**
+	 * Field EVENT_MANAGERS.
+	 */
 	protected static int EVENT_MANAGERS[][] = null;
+	/**
+	 * Field _msgStarted.
+	 */
 	protected static String _msgStarted;
+	/**
+	 * Field _msgEnded.
+	 */
 	protected static String _msgEnded;
+	/**
+	 * Field A.
+	 */
 	protected static int A = 3875;
+	/**
+	 * Field C.
+	 */
 	protected static int C = 3876;
+	/**
+	 * Field E.
+	 */
 	protected static int E = 3877;
+	/**
+	 * Field F.
+	 */
 	protected static int F = 3878;
+	/**
+	 * Field G.
+	 */
 	protected static int G = 3879;
+	/**
+	 * Field H.
+	 */
 	protected static int H = 3880;
+	/**
+	 * Field I.
+	 */
 	protected static int I = 3881;
+	/**
+	 * Field L.
+	 */
 	protected static int L = 3882;
+	/**
+	 * Field N.
+	 */
 	protected static int N = 3883;
+	/**
+	 * Field O.
+	 */
 	protected static int O = 3884;
+	/**
+	 * Field R.
+	 */
 	protected static int R = 3885;
+	/**
+	 * Field S.
+	 */
 	protected static int S = 3886;
+	/**
+	 * Field T.
+	 */
 	protected static int T = 3887;
+	/**
+	 * Field II.
+	 */
 	protected static int II = 3888;
+	/**
+	 * Field Y.
+	 */
 	protected static int Y = 13417;
+	/**
+	 * Field _5.
+	 */
 	protected static int _5 = 13418;
+	/**
+	 * Field EVENT_MANAGER_ID.
+	 */
 	protected static int EVENT_MANAGER_ID = 31230;
+	/**
+	 * Field _words.
+	 */
 	protected static Map<String, Integer[][]> _words = new HashMap<>();
+	/**
+	 * Field _rewards.
+	 */
 	protected static Map<String, RewardData[]> _rewards = new HashMap<>();
+	/**
+	 * Field _spawns.
+	 */
 	protected static List<SimpleSpawner> _spawns = new ArrayList<>();
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -82,33 +171,57 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 		}
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	protected static boolean isActive()
 	{
 		return IsActive(_name);
 	}
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	protected void spawnEventManagers()
 	{
 		SpawnNPCs(EVENT_MANAGER_ID, EVENT_MANAGERS, _spawns);
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	protected void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature cha, Creature killer)
 	{
@@ -122,6 +235,9 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 		}
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -143,6 +259,9 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -164,6 +283,10 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method exchange.
+	 * @param var String[]
+	 */
 	public void exchange(String[] var)
 	{
 		Player player = getSelf();
@@ -207,6 +330,11 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 		}
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -216,6 +344,11 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 		}
 	}
 	
+	/**
+	 * Method DialogAppend_31230.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31230(Integer val)
 	{
 		if (!_active)
@@ -225,7 +358,7 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 		StringBuilder append = new StringBuilder("<br><br>");
 		for (String word : _words.keySet())
 		{
-			append.append("[scripts_").append(getClass().getName()).append(":exchange ").append(word).append("|").append(word).append("]<br1>");
+			append.append("[scripts_").append(getClass().getName()).append(":exchange ").append(word).append('|').append(word).append("]<br1>");
 		}
 		return append.toString();
 	}

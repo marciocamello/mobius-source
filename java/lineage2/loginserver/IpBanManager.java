@@ -22,33 +22,77 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class IpBanManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(IpBanManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final IpBanManager _instance = new IpBanManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return IpBanManager
+	 */
 	public static final IpBanManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class IpSession
 	{
+		/**
+		 * Constructor for IpSession.
+		 */
 		public IpSession()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Field tryCount.
+		 */
 		public int tryCount;
+		/**
+		 * Field lastTry.
+		 */
 		public long lastTry;
+		/**
+		 * Field banExpire.
+		 */
 		public long banExpire;
 	}
 	
+	/**
+	 * Field ips.
+	 */
 	final Map<String, IpSession> ips = new HashMap<>();
+	/**
+	 * Field lock.
+	 */
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
+	/**
+	 * Field readLock.
+	 */
 	private final Lock readLock = lock.readLock();
+	/**
+	 * Field writeLock.
+	 */
 	final Lock writeLock = lock.writeLock();
 	
+	/**
+	 * Constructor for IpBanManager.
+	 */
 	private IpBanManager()
 	{
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
@@ -78,6 +122,11 @@ public class IpBanManager
 		}, 1000L, 1000L);
 	}
 	
+	/**
+	 * Method isIpBanned.
+	 * @param ip String
+	 * @return boolean
+	 */
 	public boolean isIpBanned(String ip)
 	{
 		readLock.lock();
@@ -96,6 +145,12 @@ public class IpBanManager
 		}
 	}
 	
+	/**
+	 * Method tryLogin.
+	 * @param ip String
+	 * @param success boolean
+	 * @return boolean
+	 */
 	public boolean tryLogin(String ip, boolean success)
 	{
 		writeLock.lock();

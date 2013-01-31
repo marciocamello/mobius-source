@@ -14,16 +14,30 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.entity.boat.Boat;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class VehicleStart extends L2GameServerPacket
 {
+	/**
+	 * Field _state. Field _objectId.
+	 */
 	private final int _objectId, _state;
 	
+	/**
+	 * Constructor for VehicleStart.
+	 * @param boat Boat
+	 */
 	public VehicleStart(Boat boat)
 	{
 		_objectId = boat.getObjectId();
 		_state = boat.getRunState();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

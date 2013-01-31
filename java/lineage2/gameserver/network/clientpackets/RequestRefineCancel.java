@@ -24,16 +24,29 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RequestRefineCancel extends L2GameClientPacket
 {
+	/**
+	 * Field _targetItemObjId.
+	 */
 	private int _targetItemObjId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_targetItemObjId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -74,7 +87,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 			return;
 		}
 		boolean equipped = targetItem.isEquipped();
-		if (equipped == true)
+		if (equipped)
 		{
 			activeChar.getInventory().unEquipItem(targetItem);
 		}
@@ -99,6 +112,11 @@ public final class RequestRefineCancel extends L2GameClientPacket
 		activeChar.sendChanges();
 	}
 	
+	/**
+	 * Method getRemovalPrice.
+	 * @param item ItemTemplate
+	 * @return int
+	 */
 	public static int getRemovalPrice(ItemTemplate item)
 	{
 		switch (item.getItemGrade().cry)

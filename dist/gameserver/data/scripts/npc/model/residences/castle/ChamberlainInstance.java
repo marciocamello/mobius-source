@@ -55,6 +55,10 @@ import npc.model.residences.ResidenceManager;
 
 import org.napile.primitive.maps.IntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChamberlainInstance extends ResidenceManager
 {
 	/**
@@ -62,11 +66,19 @@ public class ChamberlainInstance extends ResidenceManager
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for ChamberlainInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public ChamberlainInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method setDialogs.
+	 */
 	@Override
 	protected void setDialogs()
 	{
@@ -75,6 +87,11 @@ public class ChamberlainInstance extends ResidenceManager
 		_siegeDialog = _mainDialog;
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -613,6 +630,11 @@ public class ChamberlainInstance extends ResidenceManager
 		}
 	}
 	
+	/**
+	 * Method getCond.
+	 * @param player Player
+	 * @return int
+	 */
 	@Override
 	protected int getCond(Player player)
 	{
@@ -645,6 +667,12 @@ public class ChamberlainInstance extends ResidenceManager
 		return COND_FAIL;
 	}
 	
+	/**
+	 * Method getDoorCost.
+	 * @param type int
+	 * @param level int
+	 * @return long
+	 */
 	private long getDoorCost(int type, int level)
 	{
 		int price = 0;
@@ -696,42 +724,71 @@ public class ChamberlainInstance extends ResidenceManager
 		return price;
 	}
 	
+	/**
+	 * Method getResidence.
+	 * @return Residence
+	 */
 	@Override
 	protected Residence getResidence()
 	{
 		return getCastle();
 	}
 	
+	/**
+	 * Method decoPacket.
+	 * @return L2GameServerPacket
+	 */
 	@Override
 	public L2GameServerPacket decoPacket()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getPrivUseFunctions.
+	 * @return int
+	 */
 	@Override
 	protected int getPrivUseFunctions()
 	{
 		return Clan.CP_CS_USE_FUNCTIONS;
 	}
 	
+	/**
+	 * Method getPrivSetFunctions.
+	 * @return int
+	 */
 	@Override
 	protected int getPrivSetFunctions()
 	{
 		return Clan.CP_CS_SET_FUNCTIONS;
 	}
 	
+	/**
+	 * Method getPrivDismiss.
+	 * @return int
+	 */
 	@Override
 	protected int getPrivDismiss()
 	{
 		return Clan.CP_CS_DISMISS;
 	}
 	
+	/**
+	 * Method getPrivDoors.
+	 * @return int
+	 */
 	@Override
 	protected int getPrivDoors()
 	{
 		return Clan.CP_CS_ENTRY_EXIT;
 	}
 	
+	/**
+	 * Method checkSiegeFunctions.
+	 * @param player Player
+	 * @return boolean
+	 */
 	private boolean checkSiegeFunctions(Player player)
 	{
 		Castle castle = getCastle();

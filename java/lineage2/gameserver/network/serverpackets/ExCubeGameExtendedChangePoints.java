@@ -14,15 +14,46 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCubeGameExtendedChangePoints extends L2GameServerPacket
 {
+	/**
+	 * Field _timeLeft.
+	 */
 	private final int _timeLeft;
+	/**
+	 * Field _bluePoints.
+	 */
 	private final int _bluePoints;
+	/**
+	 * Field _redPoints.
+	 */
 	private final int _redPoints;
+	/**
+	 * Field _isRedTeam.
+	 */
 	private final boolean _isRedTeam;
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _playerPoints.
+	 */
 	private final int _playerPoints;
 	
+	/**
+	 * Constructor for ExCubeGameExtendedChangePoints.
+	 * @param timeLeft int
+	 * @param bluePoints int
+	 * @param redPoints int
+	 * @param isRedTeam boolean
+	 * @param player Player
+	 * @param playerPoints int
+	 */
 	public ExCubeGameExtendedChangePoints(int timeLeft, int bluePoints, int redPoints, boolean isRedTeam, Player player, int playerPoints)
 	{
 		_timeLeft = timeLeft;
@@ -33,6 +64,9 @@ public class ExCubeGameExtendedChangePoints extends L2GameServerPacket
 		_playerPoints = playerPoints;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

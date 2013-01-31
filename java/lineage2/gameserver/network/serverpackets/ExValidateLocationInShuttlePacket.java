@@ -15,11 +15,25 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExValidateLocationInShuttlePacket extends L2GameServerPacket
 {
+	/**
+	 * Field _shuttleId. Field _playerObjectId.
+	 */
 	private final int _playerObjectId, _shuttleId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for ExValidateLocationInShuttlePacket.
+	 * @param cha Player
+	 */
 	public ExValidateLocationInShuttlePacket(Player cha)
 	{
 		_playerObjectId = cha.getObjectId();
@@ -27,6 +41,9 @@ public class ExValidateLocationInShuttlePacket extends L2GameServerPacket
 		_loc = cha.getInBoatPosition();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

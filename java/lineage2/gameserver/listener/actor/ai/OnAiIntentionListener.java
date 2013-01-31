@@ -16,7 +16,18 @@ import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.listener.AiListener;
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnAiIntentionListener extends AiListener
 {
+	/**
+	 * Method onAiIntention.
+	 * @param actor Creature
+	 * @param intention CtrlIntention
+	 * @param arg0 Object
+	 * @param arg1 Object
+	 */
 	public void onAiIntention(Creature actor, CtrlIntention intention, Object arg0, Object arg1);
 }

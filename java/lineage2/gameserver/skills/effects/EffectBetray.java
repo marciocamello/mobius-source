@@ -17,13 +17,25 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectBetray extends Effect
 {
+	/**
+	 * Constructor for EffectBetray.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectBetray(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -36,6 +48,9 @@ public class EffectBetray extends Effect
 		}
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -48,6 +63,10 @@ public class EffectBetray extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

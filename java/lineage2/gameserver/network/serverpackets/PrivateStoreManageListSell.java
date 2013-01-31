@@ -20,14 +20,38 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PrivateStoreManageListSell extends L2GameServerPacket
 {
+	/**
+	 * Field _sellerId.
+	 */
 	private final int _sellerId;
+	/**
+	 * Field _adena.
+	 */
 	private final long _adena;
+	/**
+	 * Field _package.
+	 */
 	private final boolean _package;
+	/**
+	 * Field _sellList.
+	 */
 	private final List<TradeItem> _sellList;
+	/**
+	 * Field _sellList0.
+	 */
 	private final List<TradeItem> _sellList0;
 	
+	/**
+	 * Constructor for PrivateStoreManageListSell.
+	 * @param seller Player
+	 * @param pkg boolean
+	 */
 	public PrivateStoreManageListSell(Player seller, boolean pkg)
 	{
 		_sellerId = seller.getObjectId();
@@ -79,6 +103,9 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -30,35 +30,105 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Baylor extends DefaultAI
 {
+	/**
+	 * Field Berserk.
+	 */
 	final Skill Berserk;
+	/**
+	 * Field Invincible.
+	 */
 	final Skill Invincible;
+	/**
+	 * Field Imprison.
+	 */
 	final Skill Imprison;
+	/**
+	 * Field GroundStrike.
+	 */
 	final Skill GroundStrike;
+	/**
+	 * Field JumpAttack.
+	 */
 	final Skill JumpAttack;
+	/**
+	 * Field StrongPunch.
+	 */
 	final Skill StrongPunch;
+	/**
+	 * Field Stun1.
+	 */
 	final Skill Stun1;
+	/**
+	 * Field Stun2.
+	 */
 	final Skill Stun2;
+	/**
+	 * Field Stun3.
+	 */
 	final Skill Stun3;
+	/**
+	 * Field PresentationBalor2.
+	 */
 	final int PresentationBalor2 = 5402;
+	/**
+	 * Field PresentationBalor3.
+	 */
 	final int PresentationBalor3 = 5403;
+	/**
+	 * Field PresentationBalor4.
+	 */
 	final int PresentationBalor4 = 5404;
+	/**
+	 * Field PresentationBalor10.
+	 */
 	final int PresentationBalor10 = 5410;
+	/**
+	 * Field PresentationBalor11.
+	 */
 	final int PresentationBalor11 = 5411;
+	/**
+	 * Field PresentationBalor12.
+	 */
 	final int PresentationBalor12 = 5412;
+	/**
+	 * Field Water_Dragon_Claw. (value is 2360)
+	 */
 	private static final int Water_Dragon_Claw = 2360;
+	/**
+	 * Field _isUsedInvincible.
+	 */
 	private boolean _isUsedInvincible = false;
+	/**
+	 * Field _claw_count.
+	 */
 	private int _claw_count = 0;
+	/**
+	 * Field _last_claw_time.
+	 */
 	private long _last_claw_time = 0;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SpawnSocial extends RunnableImpl
 	{
+		/**
+		 * Constructor for SpawnSocial.
+		 */
 		public SpawnSocial()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -70,6 +140,10 @@ public class Baylor extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Constructor for Baylor.
+	 * @param actor NpcInstance
+	 */
 	public Baylor(NpcInstance actor)
 	{
 		super(actor);
@@ -85,6 +159,9 @@ public class Baylor extends DefaultAI
 		Stun3 = skills.get(5232);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -92,6 +169,11 @@ public class Baylor extends DefaultAI
 		super.onEvtSpawn();
 	}
 	
+	/**
+	 * Method onEvtSeeSpell.
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
@@ -124,10 +206,14 @@ public class Baylor extends DefaultAI
 		{
 			_claw_count = 0;
 			actor.getEffectList().stopEffect(Invincible);
-			Functions.npcSay(actor, "Да как вы посмели! Я непобедим!!!");
+			Functions.npcSay(actor, "Да как вы по�?мели! Я непоб��дим!!!");
 		}
 	}
 	
+	/**
+	 * Method createNewTask.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean createNewTask()
 	{
@@ -148,14 +234,14 @@ public class Baylor extends DefaultAI
 		{
 			_isUsedInvincible = true;
 			addTaskBuff(actor, Invincible);
-			Functions.npcSay(actor, "Ахаха! Теперь вы все умрете.");
+			Functions.npcSay(actor, "�?хаха! Тепер�? вы в�?е умрете.");
 			return true;
 		}
 		int rnd_per = Rnd.get(100);
 		if ((rnd_per < 7) && (actor.getEffectList().getEffectsBySkill(Berserk) == null))
 		{
 			addTaskBuff(actor, Berserk);
-			Functions.npcSay(actor, "Beleth, дай мне силу!");
+			Functions.npcSay(actor, "Beleth, дай мне �?илу!");
 			return true;
 		}
 		if ((rnd_per < 15) || ((rnd_per < 33) && (actor.getEffectList().getEffectsBySkill(Berserk) != null)))
@@ -181,12 +267,20 @@ public class Baylor extends DefaultAI
 		return chooseTaskAndTargets(skill, target, distance);
 	}
 	
+	/**
+	 * Method maybeMoveToHome.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean maybeMoveToHome()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

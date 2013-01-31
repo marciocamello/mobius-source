@@ -12,38 +12,70 @@
  */
 package lineage2.commons.net.nio;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class SendablePacket<T> extends AbstractPacket<T>
 {
+	/**
+	 * Method writeC.
+	 * @param data int
+	 */
 	public void writeC(int data)
 	{
 		getByteBuffer().put((byte) data);
 	}
 	
+	/**
+	 * Method writeF.
+	 * @param value double
+	 */
 	protected void writeF(double value)
 	{
 		getByteBuffer().putDouble(value);
 	}
 	
+	/**
+	 * Method writeH.
+	 * @param value int
+	 */
 	protected void writeH(int value)
 	{
 		getByteBuffer().putShort((short) value);
 	}
 	
+	/**
+	 * Method writeD.
+	 * @param value int
+	 */
 	public void writeD(int value)
 	{
 		getByteBuffer().putInt(value);
 	}
 	
+	/**
+	 * Method writeQ.
+	 * @param value long
+	 */
 	public void writeQ(long value)
 	{
 		getByteBuffer().putLong(value);
 	}
 	
+	/**
+	 * Method writeB.
+	 * @param data byte[]
+	 */
 	protected void writeB(byte[] data)
 	{
 		getByteBuffer().put(data);
 	}
 	
+	/**
+	 * Method writeS.
+	 * @param charSequence CharSequence
+	 */
 	public void writeS(CharSequence charSequence)
 	{
 		if (charSequence != null)
@@ -57,5 +89,9 @@ public abstract class SendablePacket<T> extends AbstractPacket<T>
 		getByteBuffer().putChar('\000');
 	}
 	
+	/**
+	 * Method write.
+	 * @return boolean
+	 */
 	protected abstract boolean write();
 }

@@ -16,6 +16,10 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class NativeCorpseInstance extends NpcInstance
 {
 	/**
@@ -23,21 +27,41 @@ public final class NativeCorpseInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for NativeCorpseInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public NativeCorpseInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param filename String
+	 * @param replace Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, String filename, Object... replace)
 	{
 	}
 	
+	/**
+	 * Method onRandomAnimation.
+	 */
 	@Override
 	public void onRandomAnimation()
 	{

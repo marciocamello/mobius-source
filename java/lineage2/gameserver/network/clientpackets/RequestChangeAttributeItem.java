@@ -21,12 +21,28 @@ import lineage2.gameserver.network.serverpackets.ExChangeAttributeOk;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestChangeAttributeItem extends L2GameClientPacket
 {
+	/**
+	 * Field _consumeItemId.
+	 */
 	public int _consumeItemId;
+	/**
+	 * Field _itemObjId.
+	 */
 	public int _itemObjId;
+	/**
+	 * Field _newElementId.
+	 */
 	public int _newElementId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -35,6 +51,9 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 		_newElementId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -47,7 +66,7 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 		ItemInstance _item = inventory.getItemByObjectId(_itemObjId);
 		ItemFunctions.removeItem(activeChar, _consumeItemId, 1, true);
 		boolean equipped = _item.isEquipped();
-		if (equipped == true)
+		if (equipped)
 		{
 			activeChar.getInventory().isRefresh = true;
 			activeChar.getInventory().unEquipItem(_item);

@@ -12,14 +12,27 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExPVPMatchUserDie extends L2GameServerPacket
 {
+	/**
+	 * Field _redKills. Field _blueKills.
+	 */
 	private int _blueKills, _redKills;
 	
+	/**
+	 * Constructor for ExPVPMatchUserDie.
+	 */
 	public ExPVPMatchUserDie()
 	{
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

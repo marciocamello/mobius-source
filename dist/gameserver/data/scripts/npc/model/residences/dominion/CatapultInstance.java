@@ -32,6 +32,10 @@ import lineage2.gameserver.model.quest.QuestEventType;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CatapultInstance extends SiegeToggleNpcInstance
 {
 	/**
@@ -39,11 +43,20 @@ public class CatapultInstance extends SiegeToggleNpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for CatapultInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public CatapultInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onDeathImpl.
+	 * @param lastAttacker Creature
+	 */
 	@Override
 	public void onDeathImpl(Creature lastAttacker)
 	{

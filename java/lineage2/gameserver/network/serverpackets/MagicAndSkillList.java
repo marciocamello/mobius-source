@@ -14,12 +14,31 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MagicAndSkillList extends L2GameServerPacket
 {
+	/**
+	 * Field _chaId.
+	 */
 	private final int _chaId;
+	/**
+	 * Field _unk1.
+	 */
 	private final int _unk1;
+	/**
+	 * Field _unk2.
+	 */
 	private final int _unk2;
 	
+	/**
+	 * Constructor for MagicAndSkillList.
+	 * @param cha Creature
+	 * @param unk1 int
+	 * @param unk2 int
+	 */
 	public MagicAndSkillList(Creature cha, int unk1, int unk2)
 	{
 		_chaId = cha.getObjectId();
@@ -27,6 +46,9 @@ public class MagicAndSkillList extends L2GameServerPacket
 		_unk2 = unk2;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

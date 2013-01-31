@@ -31,17 +31,37 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.ClanTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObject>
 {
+	/**
+	 * Field NEXT_STEP. (value is ""next_step"")
+	 */
 	public static final String NEXT_STEP = "next_step";
+	/**
+	 * Field REFUND. (value is ""refund"")
+	 */
 	public static final String REFUND = "refund";
+	/**
+	 * Field _arenaClosed.
+	 */
 	private boolean _arenaClosed = true;
 	
+	/**
+	 * Constructor for ClanHallMiniGameEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public ClanHallMiniGameEvent(MultiValueSet<String> set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -94,6 +114,10 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		super.startEvent();
 	}
 	
+	/**
+	 * Method stopEvent.
+	 * @param step boolean
+	 */
 	@Override
 	public void stopEvent(boolean step)
 	{
@@ -119,6 +143,9 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		_oldOwner = null;
 	}
 	
+	/**
+	 * Method nextStep.
+	 */
 	public void nextStep()
 	{
 		List<CMGSiegeClanObject> siegeClans = getObjects(ATTACKERS);
@@ -131,6 +158,10 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		broadcastTo(new SystemMessage2(SystemMsg.THE_SIEGE_TO_CONQUER_S1_HAS_BEGUN).addResidenceName(getResidence()), ATTACKERS);
 	}
 	
+	/**
+	 * Method setRegistrationOver.
+	 * @param b boolean
+	 */
 	@Override
 	public void setRegistrationOver(boolean b)
 	{
@@ -141,6 +172,14 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		super.setRegistrationOver(b);
 	}
 	
+	/**
+	 * Method newSiegeClan.
+	 * @param type String
+	 * @param clanId int
+	 * @param param long
+	 * @param date long
+	 * @return CMGSiegeClanObject
+	 */
 	@Override
 	public CMGSiegeClanObject newSiegeClan(String type, int clanId, long param, long date)
 	{
@@ -148,6 +187,10 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		return clan == null ? null : new CMGSiegeClanObject(type, clan, param, date);
 	}
 	
+	/**
+	 * Method announce.
+	 * @param val int
+	 */
 	@Override
 	public void announce(int val)
 	{
@@ -164,6 +207,10 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		}
 	}
 	
+	/**
+	 * Method processStep.
+	 * @param clan Clan
+	 */
 	@Override
 	public void processStep(Clan clan)
 	{
@@ -174,6 +221,9 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		stopEvent(true);
 	}
 	
+	/**
+	 * Method loadSiegeClans.
+	 */
 	@Override
 	public void loadSiegeClans()
 	{
@@ -181,6 +231,11 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		addObjects(REFUND, SiegeClanDAO.getInstance().load(getResidence(), REFUND));
 	}
 	
+	/**
+	 * Method action.
+	 * @param name String
+	 * @param start boolean
+	 */
 	@Override
 	public void action(String name, boolean start)
 	{
@@ -194,23 +249,44 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		}
 	}
 	
+	/**
+	 * Method getUserRelation.
+	 * @param thisPlayer Player
+	 * @param result int
+	 * @return int
+	 */
 	@Override
 	public int getUserRelation(Player thisPlayer, int result)
 	{
 		return result;
 	}
 	
+	/**
+	 * Method getRelation.
+	 * @param thisPlayer Player
+	 * @param targetPlayer Player
+	 * @param result int
+	 * @return int
+	 */
 	@Override
 	public int getRelation(Player thisPlayer, Player targetPlayer, int result)
 	{
 		return result;
 	}
 	
+	/**
+	 * Method isArenaClosed.
+	 * @return boolean
+	 */
 	public boolean isArenaClosed()
 	{
 		return _arenaClosed;
 	}
 	
+	/**
+	 * Method onAddEvent.
+	 * @param object GameObject
+	 */
 	@Override
 	public void onAddEvent(GameObject object)
 	{

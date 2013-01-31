@@ -12,10 +12,20 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExBlockUpSetList extends L2GameServerPacket
 {
+	/**
+	 * Field BlockUpType.
+	 */
 	private final int BlockUpType = 0;
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -12,9 +12,21 @@
  */
 package lineage2.gameserver.stats.funcs;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface FuncOwner
 {
+	/**
+	 * Method isFuncEnabled.
+	 * @return boolean
+	 */
 	public boolean isFuncEnabled();
 	
+	/**
+	 * Method overrideLimits.
+	 * @return boolean
+	 */
 	public boolean overrideLimits();
 }

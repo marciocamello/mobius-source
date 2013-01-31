@@ -14,24 +14,77 @@ package lineage2.gameserver.templates.item.support;
 
 import lineage2.commons.collections.MultiValueSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FishTemplate
 {
+	/**
+	 * Field _group.
+	 */
 	private final FishGroup _group;
+	/**
+	 * Field _grade.
+	 */
 	private final FishGrade _grade;
+	/**
+	 * Field _biteRate.
+	 */
 	private final double _biteRate;
+	/**
+	 * Field _guts.
+	 */
 	private final double _guts;
+	/**
+	 * Field _lengthRate.
+	 */
 	private final double _lengthRate;
+	/**
+	 * Field _hpRegen.
+	 */
 	private final double _hpRegen;
+	/**
+	 * Field _gutsCheckProbability.
+	 */
 	private final double _gutsCheckProbability;
+	/**
+	 * Field _cheatingProb.
+	 */
 	private final double _cheatingProb;
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _hp.
+	 */
 	private final int _hp;
+	/**
+	 * Field _level.
+	 */
 	private final int _level;
+	/**
+	 * Field _maxLength.
+	 */
 	private final int _maxLength;
+	/**
+	 * Field _startCombatTime.
+	 */
 	private final int _startCombatTime;
+	/**
+	 * Field _combatDuration.
+	 */
 	private final int _combatDuration;
+	/**
+	 * Field _gutsCheckTime.
+	 */
 	private final int _gutsCheckTime;
 	
+	/**
+	 * Constructor for FishTemplate.
+	 * @param map MultiValueSet<String>
+	 */
 	public FishTemplate(MultiValueSet<String> map)
 	{
 		_group = map.getEnum("group", FishGroup.class);
@@ -51,76 +104,136 @@ public class FishTemplate
 		_gutsCheckTime = map.getInteger("guts_check_time");
 	}
 	
+	/**
+	 * Method getGroup.
+	 * @return FishGroup
+	 */
 	public FishGroup getGroup()
 	{
 		return _group;
 	}
 	
+	/**
+	 * Method getGrade.
+	 * @return FishGrade
+	 */
 	public FishGrade getGrade()
 	{
 		return _grade;
 	}
 	
+	/**
+	 * Method getBiteRate.
+	 * @return double
+	 */
 	public double getBiteRate()
 	{
 		return _biteRate;
 	}
 	
+	/**
+	 * Method getGuts.
+	 * @return double
+	 */
 	public double getGuts()
 	{
 		return _guts;
 	}
 	
+	/**
+	 * Method getLengthRate.
+	 * @return double
+	 */
 	public double getLengthRate()
 	{
 		return _lengthRate;
 	}
 	
+	/**
+	 * Method getHpRegen.
+	 * @return double
+	 */
 	public double getHpRegen()
 	{
 		return _hpRegen;
 	}
 	
+	/**
+	 * Method getGutsCheckProbability.
+	 * @return double
+	 */
 	public double getGutsCheckProbability()
 	{
 		return _gutsCheckProbability;
 	}
 	
+	/**
+	 * Method getCheatingProb.
+	 * @return double
+	 */
 	public double getCheatingProb()
 	{
 		return _cheatingProb;
 	}
 	
+	/**
+	 * Method getItemId.
+	 * @return int
+	 */
 	public int getItemId()
 	{
 		return _itemId;
 	}
 	
+	/**
+	 * Method getHp.
+	 * @return int
+	 */
 	public int getHp()
 	{
 		return _hp;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		return _level;
 	}
 	
+	/**
+	 * Method getMaxLength.
+	 * @return int
+	 */
 	public int getMaxLength()
 	{
 		return _maxLength;
 	}
 	
+	/**
+	 * Method getStartCombatTime.
+	 * @return int
+	 */
 	public int getStartCombatTime()
 	{
 		return _startCombatTime;
 	}
 	
+	/**
+	 * Method getCombatDuration.
+	 * @return int
+	 */
 	public int getCombatDuration()
 	{
 		return _combatDuration;
 	}
 	
+	/**
+	 * Method getGutsCheckTime.
+	 * @return int
+	 */
 	public int getGutsCheckTime()
 	{
 		return _gutsCheckTime;

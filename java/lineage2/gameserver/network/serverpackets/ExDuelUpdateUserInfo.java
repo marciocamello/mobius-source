@@ -14,11 +14,25 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExDuelUpdateUserInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field maxCp. Field curCp. Field maxMp. Field curMp. Field maxHp. Field curHp. Field level. Field class_id. Field obj_id.
+	 */
 	private final int obj_id, class_id, level, curHp, maxHp, curMp, maxMp, curCp, maxCp;
 	
+	/**
+	 * Constructor for ExDuelUpdateUserInfo.
+	 * @param attacker Player
+	 */
 	public ExDuelUpdateUserInfo(Player attacker)
 	{
 		_name = attacker.getName();
@@ -33,6 +47,9 @@ public class ExDuelUpdateUserInfo extends L2GameServerPacket
 		maxCp = attacker.getMaxCp();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

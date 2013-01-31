@@ -21,15 +21,33 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.stats.triggers.TriggerInfo;
 import lineage2.gameserver.templates.OptionDataTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ItemEnchantOptionsListener implements OnEquipListener
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final ItemEnchantOptionsListener _instance = new ItemEnchantOptionsListener();
 	
+	/**
+	 * Method getInstance.
+	 * @return ItemEnchantOptionsListener
+	 */
 	public static ItemEnchantOptionsListener getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method onEquip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 * @see lineage2.gameserver.listener.inventory.OnEquipListener#onEquip(int, ItemInstance, Playable)
+	 */
 	@Override
 	public void onEquip(int slot, ItemInstance item, Playable actor)
 	{
@@ -64,6 +82,13 @@ public final class ItemEnchantOptionsListener implements OnEquipListener
 		player.sendChanges();
 	}
 	
+	/**
+	 * Method onUnequip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 * @see lineage2.gameserver.listener.inventory.OnEquipListener#onUnequip(int, ItemInstance, Playable)
+	 */
 	@Override
 	public void onUnequip(int slot, ItemInstance item, Playable actor)
 	{

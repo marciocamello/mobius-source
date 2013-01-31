@@ -31,15 +31,28 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Darnel extends DefaultAI
 {
+	/**
+	 * @author Mobius
+	 */
 	private class TrapTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for TrapTask.
+		 */
 		public TrapTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -57,6 +70,9 @@ public class Darnel extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Field trapSkills.
+	 */
 	final Skill[] trapSkills = new Skill[]
 	{
 		SkillTable.getInstance().getInfo(5267, 1),
@@ -64,9 +80,19 @@ public class Darnel extends DefaultAI
 		SkillTable.getInstance().getInfo(5269, 1),
 		SkillTable.getInstance().getInfo(5270, 1)
 	};
+	/**
+	 * Field Poison.
+	 */
 	final Skill Poison;
+	/**
+	 * Field Paralysis.
+	 */
 	final Skill Paralysis;
 	
+	/**
+	 * Constructor for Darnel.
+	 * @param actor NpcInstance
+	 */
 	public Darnel(NpcInstance actor)
 	{
 		super(actor);
@@ -75,6 +101,10 @@ public class Darnel extends DefaultAI
 		Paralysis = skills.get(4189);
 	}
 	
+	/**
+	 * Method createNewTask.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean createNewTask()
 	{
@@ -108,6 +138,10 @@ public class Darnel extends DefaultAI
 		return chooseTaskAndTargets(r_skill, target, distance);
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

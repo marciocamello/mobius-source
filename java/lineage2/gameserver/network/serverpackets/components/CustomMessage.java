@@ -21,17 +21,38 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CustomMessage
 {
+	/**
+	 * Field _text.
+	 */
 	private String _text;
+	/**
+	 * Field mark.
+	 */
 	private int mark = 0;
 	
+	/**
+	 * Constructor for CustomMessage.
+	 * @param address String
+	 * @param player Player
+	 * @param args Object[]
+	 */
 	public CustomMessage(String address, Player player, Object... args)
 	{
 		_text = StringHolder.getInstance().getNotNull(player, address);
 		add(args);
 	}
 	
+	/**
+	 * Method addNumber.
+	 * @param number long
+	 * @return CustomMessage
+	 */
 	public CustomMessage addNumber(long number)
 	{
 		_text = _text.replace("{" + mark + "}", String.valueOf(number));
@@ -39,6 +60,11 @@ public class CustomMessage
 		return this;
 	}
 	
+	/**
+	 * Method add.
+	 * @param args Object[]
+	 * @return CustomMessage
+	 */
 	public CustomMessage add(Object... args)
 	{
 		for (Object arg : args)
@@ -80,6 +106,11 @@ public class CustomMessage
 		return this;
 	}
 	
+	/**
+	 * Method addString.
+	 * @param str String
+	 * @return CustomMessage
+	 */
 	public CustomMessage addString(String str)
 	{
 		_text = _text.replace("{" + mark + "}", str);
@@ -87,6 +118,11 @@ public class CustomMessage
 		return this;
 	}
 	
+	/**
+	 * Method addSkillName.
+	 * @param skill Skill
+	 * @return CustomMessage
+	 */
 	public CustomMessage addSkillName(Skill skill)
 	{
 		_text = _text.replace("{" + mark + "}", skill.getName());
@@ -94,11 +130,22 @@ public class CustomMessage
 		return this;
 	}
 	
+	/**
+	 * Method addSkillName.
+	 * @param skillId int
+	 * @param skillLevel int
+	 * @return CustomMessage
+	 */
 	public CustomMessage addSkillName(int skillId, int skillLevel)
 	{
 		return addSkillName(SkillTable.getInstance().getInfo(skillId, skillLevel));
 	}
 	
+	/**
+	 * Method addItemName.
+	 * @param item ItemTemplate
+	 * @return CustomMessage
+	 */
 	public CustomMessage addItemName(ItemTemplate item)
 	{
 		_text = _text.replace("{" + mark + "}", item.getName());
@@ -106,16 +153,31 @@ public class CustomMessage
 		return this;
 	}
 	
+	/**
+	 * Method addItemName.
+	 * @param itemId int
+	 * @return CustomMessage
+	 */
 	public CustomMessage addItemName(int itemId)
 	{
 		return addItemName(ItemHolder.getInstance().getTemplate(itemId));
 	}
 	
+	/**
+	 * Method addItemName.
+	 * @param item ItemInstance
+	 * @return CustomMessage
+	 */
 	public CustomMessage addItemName(ItemInstance item)
 	{
 		return addItemName(item.getTemplate());
 	}
 	
+	/**
+	 * Method addCharName.
+	 * @param cha Creature
+	 * @return CustomMessage
+	 */
 	public CustomMessage addCharName(Creature cha)
 	{
 		_text = _text.replace("{" + mark + "}", cha.getName());
@@ -123,6 +185,10 @@ public class CustomMessage
 		return this;
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{

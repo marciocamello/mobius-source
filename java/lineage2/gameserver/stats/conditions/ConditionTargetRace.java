@@ -16,10 +16,21 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionTargetRace extends Condition
 {
+	/**
+	 * Field _race.
+	 */
 	private final int _race;
 	
+	/**
+	 * Constructor for ConditionTargetRace.
+	 * @param race String
+	 */
 	public ConditionTargetRace(String race)
 	{
 		if (race.equalsIgnoreCase("Undead"))
@@ -128,6 +139,11 @@ public class ConditionTargetRace extends Condition
 		}
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

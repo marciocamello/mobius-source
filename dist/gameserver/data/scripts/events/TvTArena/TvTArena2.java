@@ -38,17 +38,33 @@ import lineage2.gameserver.utils.ReflectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(TvTArena2.class);
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class TvTArena2Impl extends TvTTemplate
 	{
+		/**
+		 * Constructor for TvTArena2Impl.
+		 */
 		public TvTArena2Impl()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onLoad.
+		 */
 		@Override
 		protected void onLoad()
 		{
@@ -90,6 +106,9 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 			_team2points.add(new Location(-77844, -47747, -11518, -11418));
 		}
 		
+		/**
+		 * Method onReload.
+		 */
 		@Override
 		protected void onReload()
 		{
@@ -101,8 +120,15 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
+	/**
+	 * Field _instance.
+	 */
 	private static TvTTemplate _instance;
 	
+	/**
+	 * Method getInstance.
+	 * @return TvTTemplate
+	 */
 	public static TvTTemplate getInstance()
 	{
 		if (_instance == null)
@@ -112,6 +138,10 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		return _instance;
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -128,6 +158,10 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -136,29 +170,58 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		_instance = null;
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature cha, Creature killer)
 	{
 		getInstance().onDeath(cha, killer);
 	}
 	
+	/**
+	 * Method onPlayerExit.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerExitListener#onPlayerExit(Player)
+	 */
 	@Override
 	public void onPlayerExit(Player player)
 	{
 		getInstance().onPlayerExit(player);
 	}
 	
+	/**
+	 * Method onTeleport.
+	 * @param player Player
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param reflection Reflection
+	 * @see lineage2.gameserver.listener.actor.player.OnTeleportListener#onTeleport(Player, int, int, int, Reflection)
+	 */
 	@Override
 	public void onTeleport(Player player, int x, int y, int z, Reflection reflection)
 	{
 		getInstance().onTeleport(player);
 	}
 	
+	/**
+	 * Method DialogAppend_31391.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31391(Integer val)
 	{
 		if (val == 0)
@@ -173,58 +236,96 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		return "";
 	}
 	
+	/**
+	 * Method create1.
+	 */
 	public void create1()
 	{
 		getInstance().template_create1(getSelf());
 	}
 	
+	/**
+	 * Method register.
+	 */
 	public void register()
 	{
 		getInstance().template_register(getSelf());
 	}
 	
+	/**
+	 * Method check1.
+	 * @param var String[]
+	 */
 	public void check1(String[] var)
 	{
 		getInstance().template_check1(getSelf(), getNpc(), var);
 	}
 	
+	/**
+	 * Method register_check.
+	 */
 	public void register_check()
 	{
 		getInstance().template_register_check(getSelf());
 	}
 	
+	/**
+	 * Method stop.
+	 */
 	public void stop()
 	{
 		getInstance().template_stop();
 	}
 	
+	/**
+	 * Method announce.
+	 */
 	public void announce()
 	{
 		getInstance().template_announce();
 	}
 	
+	/**
+	 * Method prepare.
+	 */
 	public void prepare()
 	{
 		getInstance().template_prepare();
 	}
 	
+	/**
+	 * Method start.
+	 */
 	public void start()
 	{
 		getInstance().template_start();
 	}
 	
+	/**
+	 * Method timeOut.
+	 */
 	public void timeOut()
 	{
 		getInstance().template_timeOut();
 	}
 	
+	/**
+	 * Field _spawns.
+	 */
 	private final List<NpcInstance> _spawns = new ArrayList<>();
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private boolean isActive()
 	{
 		return IsActive("TvT Arena 2");
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -236,7 +337,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		{
 			spawnEventManagers();
 			System.out.println("Event: TvT Arena 2 started.");
-			Announcements.getInstance().announceToAll("Начался TvT Arena 2 эвент.");
+			Announcements.getInstance().announceToAll("�?ачал�?�? TvT Arena 2 �?вент.");
 		}
 		else
 		{
@@ -245,6 +346,9 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -258,7 +362,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 			unSpawnEventManagers();
 			stop();
 			System.out.println("TvT Arena 2 Event stopped.");
-			Announcements.getInstance().announceToAll("TvT Arena 2 эвент окончен.");
+			Announcements.getInstance().announceToAll("TvT Arena 2 �?вент окончен.");
 		}
 		else
 		{
@@ -267,6 +371,9 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	private void spawnEventManagers()
 	{
 		final int EVENT_MANAGERS[][] =
@@ -293,6 +400,9 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	private void unSpawnEventManagers()
 	{
 		for (NpcInstance npc : _spawns)

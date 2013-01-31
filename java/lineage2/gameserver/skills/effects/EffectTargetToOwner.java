@@ -18,13 +18,25 @@ import lineage2.gameserver.network.serverpackets.FlyToLocation;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectTargetToOwner extends Effect
 {
+	/**
+	 * Constructor for EffectTargetToOwner.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectTargetToOwner(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -37,12 +49,19 @@ public class EffectTargetToOwner extends Effect
 		}
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
 		super.onExit();
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

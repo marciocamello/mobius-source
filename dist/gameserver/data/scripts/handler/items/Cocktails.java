@@ -18,8 +18,15 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Cocktails extends SimpleItemHandler
 {
+	/**
+	 * Field ITEM_IDS.
+	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
 		10178,
@@ -33,12 +40,19 @@ public class Cocktails extends SimpleItemHandler
 		33766
 	};
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{
 		return ITEM_IDS;
 	}
 	
+	/**
+	 * Field bless_list.
+	 */
 	private static final int[] bless_list =
 	{
 		11517,
@@ -47,6 +61,9 @@ public class Cocktails extends SimpleItemHandler
 		11522,
 		11521,
 	};
+	/**
+	 * Field sweet_list.
+	 */
 	private static final int[] sweet_list =
 	{
 		2404,
@@ -60,6 +77,9 @@ public class Cocktails extends SimpleItemHandler
 		2412,
 		2413,
 	};
+	/**
+	 * Field fresh_list.
+	 */
 	private static final int[] fresh_list =
 	{
 		2414,
@@ -72,6 +92,9 @@ public class Cocktails extends SimpleItemHandler
 		2418,
 		2419,
 	};
+	/**
+	 * Field milk_list.
+	 */
 	private static final int[] milk_list =
 	{
 		2873,
@@ -89,6 +112,13 @@ public class Cocktails extends SimpleItemHandler
 		2890,
 	};
 	
+	/**
+	 * Method useItemImpl.
+	 * @param player Player
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean
+	 */
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{

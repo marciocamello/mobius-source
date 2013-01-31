@@ -33,6 +33,10 @@ import lineage2.gameserver.taskmanager.EffectTaskManager;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class TrapInstance extends NpcInstance
 {
 	/**
@@ -40,15 +44,28 @@ public final class TrapInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class CastTask extends RunnableImpl
 	{
+		/**
+		 * Field _trapRef.
+		 */
 		private final HardReference<NpcInstance> _trapRef;
 		
+		/**
+		 * Constructor for CastTask.
+		 * @param trap TrapInstance
+		 */
 		public CastTask(TrapInstance trap)
 		{
 			_trapRef = trap.getRef();
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -102,17 +119,47 @@ public final class TrapInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Field _ownerRef.
+	 */
 	private final HardReference<? extends Creature> _ownerRef;
+	/**
+	 * Field _skill.
+	 */
 	final Skill _skill;
+	/**
+	 * Field _targetTask.
+	 */
 	private ScheduledFuture<?> _targetTask;
+	/**
+	 * Field _destroyTask.
+	 */
 	private ScheduledFuture<?> _destroyTask;
+	/**
+	 * Field _detected.
+	 */
 	private boolean _detected;
 	
+	/**
+	 * Constructor for TrapInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param owner Creature
+	 * @param skill Skill
+	 */
 	public TrapInstance(int objectId, NpcTemplate template, Creature owner, Skill skill)
 	{
 		this(objectId, template, owner, skill, owner.getLoc());
 	}
 	
+	/**
+	 * Constructor for TrapInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param owner Creature
+	 * @param skill Skill
+	 * @param loc Location
+	 */
 	public TrapInstance(int objectId, NpcTemplate template, Creature owner, Skill skill, Location loc)
 	{
 		super(objectId, template);
@@ -124,17 +171,28 @@ public final class TrapInstance extends NpcInstance
 		setLoc(loc);
 	}
 	
+	/**
+	 * Method isTrap.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isTrap()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method getOwner.
+	 * @return Creature
+	 */
 	public Creature getOwner()
 	{
 		return _ownerRef.get();
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -143,6 +201,9 @@ public final class TrapInstance extends NpcInstance
 		_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new CastTask(this), 250L, 250L);
 	}
 	
+	/**
+	 * Method broadcastCharInfo.
+	 */
 	@Override
 	public void broadcastCharInfo()
 	{
@@ -153,6 +214,9 @@ public final class TrapInstance extends NpcInstance
 		super.broadcastCharInfo();
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
@@ -174,16 +238,29 @@ public final class TrapInstance extends NpcInstance
 		super.onDelete();
 	}
 	
+	/**
+	 * Method isDetected.
+	 * @return boolean
+	 */
 	public boolean isDetected()
 	{
 		return _detected;
 	}
 	
+	/**
+	 * Method setDetected.
+	 * @param detected boolean
+	 */
 	public void setDetected(boolean detected)
 	{
 		_detected = detected;
 	}
 	
+	/**
+	 * Method getPAtk.
+	 * @param target Creature
+	 * @return int
+	 */
 	@Override
 	public int getPAtk(Creature target)
 	{
@@ -191,6 +268,12 @@ public final class TrapInstance extends NpcInstance
 		return owner == null ? 0 : owner.getPAtk(target);
 	}
 	
+	/**
+	 * Method getMAtk.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return int
+	 */
 	@Override
 	public int getMAtk(Creature target, Skill skill)
 	{
@@ -198,63 +281,115 @@ public final class TrapInstance extends NpcInstance
 		return owner == null ? 0 : owner.getMAtk(target, skill);
 	}
 	
+	/**
+	 * Method hasRandomAnimation.
+	 * @return boolean
+	 */
 	@Override
 	public boolean hasRandomAnimation()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature attacker)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isFearImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isFearImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isParalyzeImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParalyzeImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isLethalImmune.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isLethalImmune()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param filename String
+	 * @param replace Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, String filename, Object... replace)
 	{
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{
@@ -269,6 +404,12 @@ public final class TrapInstance extends NpcInstance
 		player.sendActionFailed();
 	}
 	
+	/**
+	 * Method addPacketList.
+	 * @param forPlayer Player
+	 * @param dropper Creature
+	 * @return List<L2GameServerPacket>
+	 */
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{

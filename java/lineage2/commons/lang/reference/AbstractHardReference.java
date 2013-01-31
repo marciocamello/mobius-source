@@ -12,27 +12,51 @@
  */
 package lineage2.commons.lang.reference;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AbstractHardReference<T> implements HardReference<T>
 {
+	/**
+	 * Field reference.
+	 */
 	private T reference;
 	
+	/**
+	 * Constructor for AbstractHardReference.
+	 * @param reference T
+	 */
 	public AbstractHardReference(T reference)
 	{
 		this.reference = reference;
 	}
 	
+	/**
+	 * Method get.
+	 * @return T * @see lineage2.commons.lang.reference.HardReference#get()
+	 */
 	@Override
 	public T get()
 	{
 		return reference;
 	}
 	
+	/**
+	 * Method clear.
+	 * @see lineage2.commons.lang.reference.HardReference#clear()
+	 */
 	@Override
 	public void clear()
 	{
 		reference = null;
 	}
 	
+	/**
+	 * Method equals.
+	 * @param o Object
+	 * @return boolean
+	 */
 	@SuppressWarnings("rawtypes")
 	@Override
 	public boolean equals(Object o)

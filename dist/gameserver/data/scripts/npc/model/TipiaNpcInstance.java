@@ -19,17 +19,40 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class TipiaNpcInstance extends NpcInstance
 {
+	/**
+	 * Field serialVersionUID. (value is 5984176213940365077)
+	 */
 	private static final long serialVersionUID = 5984176213940365077L;
+	/**
+	 * Field normalOctavisInstId. (value is 180)
+	 */
 	private static final int normalOctavisInstId = 180;
+	/**
+	 * Field hardOctavisInstId. (value is 181)
+	 */
 	private static final int hardOctavisInstId = 181;
 	
+	/**
+	 * Constructor for TipiaNpcInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public TipiaNpcInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

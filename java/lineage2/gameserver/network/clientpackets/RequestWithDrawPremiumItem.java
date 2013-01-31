@@ -19,12 +19,28 @@ import lineage2.gameserver.model.PremiumItem;
 import lineage2.gameserver.network.serverpackets.ExGetPremiumItemList;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 {
+	/**
+	 * Field _itemNum.
+	 */
 	private int _itemNum;
+	/**
+	 * Field _charId.
+	 */
 	private int _charId;
+	/**
+	 * Field _itemcount.
+	 */
 	private long _itemcount;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -33,6 +49,9 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 		_itemcount = readQ();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -104,6 +123,12 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method addItem.
+	 * @param player Player
+	 * @param itemId int
+	 * @param count long
+	 */
 	private void addItem(Player player, int itemId, long count)
 	{
 		player.getInventory().addItem(itemId, count);

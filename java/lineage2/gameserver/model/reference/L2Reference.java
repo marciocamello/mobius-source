@@ -14,8 +14,16 @@ package lineage2.gameserver.model.reference;
 
 import lineage2.commons.lang.reference.AbstractHardReference;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class L2Reference<T> extends AbstractHardReference<T>
 {
+	/**
+	 * Constructor for L2Reference.
+	 * @param reference T
+	 */
 	public L2Reference(T reference)
 	{
 		super(reference);

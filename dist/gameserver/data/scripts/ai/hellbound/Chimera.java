@@ -19,13 +19,26 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Chimera extends Fighter
 {
+	/**
+	 * Constructor for Chimera.
+	 * @param actor NpcInstance
+	 */
 	public Chimera(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSeeSpell.
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
@@ -64,6 +77,11 @@ public class Chimera extends Fighter
 		actor.endDecayTask();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

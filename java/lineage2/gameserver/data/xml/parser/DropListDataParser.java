@@ -26,13 +26,33 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class DropListDataParser extends DocumentParser
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(DropListDataParser.class);
+	/**
+	 * Field _instance.
+	 */
 	private static DropListDataParser _instance = new DropListDataParser();
+	/**
+	 * Field _dropsParsed.
+	 */
 	private int _dropsParsed;
+	/**
+	 * Field _spoilsParsed.
+	 */
 	private int _spoilsParsed;
 	
+	/**
+	 * Method getInstance.
+	 * @return DropListDataParser
+	 */
 	public static final DropListDataParser getInstance()
 	{
 		if (_instance == null)
@@ -42,6 +62,9 @@ public final class DropListDataParser extends DocumentParser
 		return _instance;
 	}
 	
+	/**
+	 * Method load.
+	 */
 	@Override
 	public void load()
 	{
@@ -50,11 +73,17 @@ public final class DropListDataParser extends DocumentParser
 		_log.info("Loaded " + _dropsParsed + " drops & " + _spoilsParsed + " spoils.");
 	}
 	
+	/**
+	 * Method reload.
+	 */
 	public void reload()
 	{
 		load();
 	}
 	
+	/**
+	 * Method parseDocument.
+	 */
 	@Override
 	protected void parseDocument()
 	{
@@ -139,6 +168,11 @@ public final class DropListDataParser extends DocumentParser
 		}
 	}
 	
+	/**
+	 * Method parseReward.
+	 * @param attrs NamedNodeMap
+	 * @return RewardData
+	 */
 	private RewardData parseReward(NamedNodeMap attrs)
 	{
 		int itemId = parseInt(attrs, "id");

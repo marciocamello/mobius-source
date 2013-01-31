@@ -14,10 +14,22 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.skills.TimeStamp;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExUseSharedGroupItem extends L2GameServerPacket
 {
+	/**
+	 * Field _totalTime. Field _remainedTime. Field _grpId. Field _itemId.
+	 */
 	private final int _itemId, _grpId, _remainedTime, _totalTime;
 	
+	/**
+	 * Constructor for ExUseSharedGroupItem.
+	 * @param grpId int
+	 * @param timeStamp TimeStamp
+	 */
 	public ExUseSharedGroupItem(int grpId, TimeStamp timeStamp)
 	{
 		_grpId = grpId;
@@ -26,6 +38,9 @@ public class ExUseSharedGroupItem extends L2GameServerPacket
 		_totalTime = (int) (timeStamp.getReuseBasic() / 1000);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

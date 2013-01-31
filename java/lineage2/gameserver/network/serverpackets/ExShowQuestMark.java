@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowQuestMark extends L2GameServerPacket
 {
+	/**
+	 * Field _questId.
+	 */
 	private final int _questId;
 	
+	/**
+	 * Constructor for ExShowQuestMark.
+	 * @param questId int
+	 */
 	public ExShowQuestMark(int questId)
 	{
 		_questId = questId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -18,14 +18,25 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import bosses.ValakasManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ValakasMinion extends Mystic
 {
+	/**
+	 * Constructor for ValakasMinion.
+	 * @param actor NpcInstance
+	 */
 	public ValakasMinion(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{

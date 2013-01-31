@@ -15,8 +15,16 @@ package ai.talkingisland;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Ruks extends RuksSubAI
 {
+	/**
+	 * Constructor for Ruks.
+	 * @param actor NpcInstance
+	 */
 	public Ruks(NpcInstance actor)
 	{
 		super(actor);

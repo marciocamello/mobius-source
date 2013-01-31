@@ -12,12 +12,31 @@
  */
 package lineage2.gameserver.templates.item;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class StartItem
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _count.
+	 */
 	private final long _count;
+	/**
+	 * Field _equiped.
+	 */
 	private final boolean _equiped;
 	
+	/**
+	 * Constructor for StartItem.
+	 * @param id int
+	 * @param count long
+	 * @param equiped boolean
+	 */
 	public StartItem(int id, long count, boolean equiped)
 	{
 		_id = id;
@@ -25,16 +44,28 @@ public final class StartItem
 		_equiped = equiped;
 	}
 	
+	/**
+	 * Method getItemId.
+	 * @return int
+	 */
 	public int getItemId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getCount.
+	 * @return long
+	 */
 	public long getCount()
 	{
 		return _count;
 	}
 	
+	/**
+	 * Method isEquiped.
+	 * @return boolean
+	 */
 	public boolean isEquiped()
 	{
 		return _equiped;

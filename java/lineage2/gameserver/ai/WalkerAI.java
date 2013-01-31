@@ -20,18 +20,39 @@ import lineage2.gameserver.templates.spawn.WalkerRouteTemplate.Route;
 import lineage2.gameserver.templates.spawn.WalkerRouteTemplate.RouteType;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WalkerAI extends DefaultAI
 {
+	/**
+	 * Field _routeIndex.
+	 */
 	private int _routeIndex = 0;
+	/**
+	 * Field _direction.
+	 */
 	private short _direction = 1;
+	/**
+	 * Field _lastMove.
+	 */
 	private long _lastMove = 0;
 	
+	/**
+	 * Constructor for WalkerAI.
+	 * @param actor NpcInstance
+	 */
 	public WalkerAI(NpcInstance actor)
 	{
 		super(actor);
 		setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -115,6 +136,10 @@ public class WalkerAI extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

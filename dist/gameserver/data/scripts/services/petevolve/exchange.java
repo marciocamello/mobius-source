@@ -28,15 +28,40 @@ import lineage2.gameserver.tables.PetDataTable.L2Pet;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class exchange extends Functions
 {
+	/**
+	 * Field PEticketB. (value is 7583)
+	 */
 	private static final int PEticketB = 7583;
+	/**
+	 * Field PEticketC. (value is 7584)
+	 */
 	private static final int PEticketC = 7584;
+	/**
+	 * Field PEticketK. (value is 7585)
+	 */
 	private static final int PEticketK = 7585;
+	/**
+	 * Field BbuffaloP. (value is 6648)
+	 */
 	private static final int BbuffaloP = 6648;
+	/**
+	 * Field BcougarC. (value is 6649)
+	 */
 	private static final int BcougarC = 6649;
+	/**
+	 * Field BkookaburraO. (value is 6650)
+	 */
 	private static final int BkookaburraO = 6650;
 	
+	/**
+	 * Method exch_1.
+	 */
 	public void exch_1()
 	{
 		Player player = getSelf();
@@ -53,6 +78,9 @@ public class exchange extends Functions
 		show("scripts/services/petevolve/exchange_no.htm", player);
 	}
 	
+	/**
+	 * Method exch_2.
+	 */
 	public void exch_2()
 	{
 		Player player = getSelf();
@@ -69,6 +97,9 @@ public class exchange extends Functions
 		show("scripts/services/petevolve/exchange_no.htm", player);
 	}
 	
+	/**
+	 * Method exch_3.
+	 */
 	public void exch_3()
 	{
 		Player player = getSelf();
@@ -85,6 +116,9 @@ public class exchange extends Functions
 		show("scripts/services/petevolve/exchange_no.htm", player);
 	}
 	
+	/**
+	 * Method showBabyPetExchange.
+	 */
 	public void showBabyPetExchange()
 	{
 		Player player = getSelf();
@@ -94,20 +128,23 @@ public class exchange extends Functions
 		}
 		if (!Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
-			show("Сервис отключен.", player);
+			show("Серви�? откл�?чен.", player);
 			return;
 		}
 		ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.SERVICES_EXCHANGE_BABY_PET_ITEM);
 		String out = "";
-		out += "<html><body>Вы можете в любое время обменять вашего Improved Baby пета на другой вид, без потери опыта. Пет при этом должен быть вызван.";
-		out += "<br>Стоимость обмена: " + Util.formatAdena(Config.SERVICES_EXCHANGE_BABY_PET_PRICE) + " " + item.getName();
-		out += "<br><button width=250 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" action=\"bypass -h scripts_services.petevolve.exchange:exToCougar\" value=\"Обменять на Improved Cougar\">";
-		out += "<br1><button width=250 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" action=\"bypass -h scripts_services.petevolve.exchange:exToBuffalo\" value=\"Обменять на Improved Buffalo\">";
-		out += "<br1><button width=250 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" action=\"bypass -h scripts_services.petevolve.exchange:exToKookaburra\" value=\"Обменять на Improved Kookaburra\">";
+		out += "<html><body>Вы можете в л�?бое врем�? обмен�?т�? ва�?его Improved Baby пета на другой вид, без потери опыта. �?ет при �?том должен быт�? вызван.";
+		out += "<br>Стоимо�?т�? обмена: " + Util.formatAdena(Config.SERVICES_EXCHANGE_BABY_PET_PRICE) + " " + item.getName();
+		out += "<br><button width=250 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" action=\"bypass -h scripts_services.petevolve.exchange:exToCougar\" value=\"�?бмен�?т�? на Improved Cougar\">";
+		out += "<br1><button width=250 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" action=\"bypass -h scripts_services.petevolve.exchange:exToBuffalo\" value=\"�?бмен�?т�? на Improved Buffalo\">";
+		out += "<br1><button width=250 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" action=\"bypass -h scripts_services.petevolve.exchange:exToKookaburra\" value=\"�?бмен�?т�? на Improved Kookaburra\">";
 		out += "</body></html>";
 		show(out, player);
 	}
 	
+	/**
+	 * Method showErasePetName.
+	 */
 	public void showErasePetName()
 	{
 		Player player = getSelf();
@@ -117,18 +154,21 @@ public class exchange extends Functions
 		}
 		if (!Config.SERVICES_CHANGE_PET_NAME_ENABLED)
 		{
-			show("Сервис отключен.", player);
+			show("Серви�? откл�?чен.", player);
 			return;
 		}
 		ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.SERVICES_CHANGE_PET_NAME_ITEM);
 		String out = "";
-		out += "<html><body>Вы можете обнулить имя у пета, для того чтобы назначить новое. Пет при этом должен быть вызван.";
-		out += "<br>Стоимость обнуления: " + Util.formatAdena(Config.SERVICES_CHANGE_PET_NAME_PRICE) + " " + item.getName();
-		out += "<br><button width=100 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" action=\"bypass -h scripts_services.petevolve.exchange:erasePetName\" value=\"Обнулить имя\">";
+		out += "<html><body>Вы можете обнулит�? им�? у пета, дл�? того чтобы назначит�? новое. �?ет при �?том должен быт�? вызван.";
+		out += "<br>Стоимо�?т�? обнулени�?: " + Util.formatAdena(Config.SERVICES_CHANGE_PET_NAME_PRICE) + " " + item.getName();
+		out += "<br><button width=100 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" action=\"bypass -h scripts_services.petevolve.exchange:erasePetName\" value=\"�?бнулит�? им�?\">";
 		out += "</body></html>";
 		show(out, player);
 	}
 	
+	/**
+	 * Method erasePetName.
+	 */
 	public void erasePetName()
 	{
 		Player player = getSelf();
@@ -138,13 +178,13 @@ public class exchange extends Functions
 		}
 		if (!Config.SERVICES_CHANGE_PET_NAME_ENABLED)
 		{
-			show("Сервис отключен.", player);
+			show("Серви�? откл�?чен.", player);
 			return;
 		}
 		Summon pl_pet = player.getSummonList().getPet();
 		if ((pl_pet == null) || !pl_pet.isPet())
 		{
-			show("Питомец должен быть вызван.", player);
+			show("�?итомец должен быт�? вызван.", player);
 			return;
 		}
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_CHANGE_PET_NAME_ITEM, Config.SERVICES_CHANGE_PET_NAME_PRICE))
@@ -160,7 +200,7 @@ public class exchange extends Functions
 				control.update();
 				player.sendPacket(new InventoryUpdate().addModifiedItem(control));
 			}
-			show("Имя стерто.", player);
+			show("�?м�? �?терто.", player);
 		}
 		else if (Config.SERVICES_CHANGE_PET_NAME_ITEM == 57)
 		{
@@ -172,6 +212,9 @@ public class exchange extends Functions
 		}
 	}
 	
+	/**
+	 * Method exToCougar.
+	 */
 	public void exToCougar()
 	{
 		Player player = getSelf();
@@ -181,13 +224,13 @@ public class exchange extends Functions
 		}
 		if (!Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
-			show("Сервис отключен.", player);
+			show("Серви�? откл�?чен.", player);
 			return;
 		}
 		Summon pl_pet = player.getSummonList().getPet();
 		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_BUFFALO_ID) || (pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID)))
 		{
-			show("Пет должен быть вызван.", player);
+			show("�?ет должен быт�? вызван.", player);
 			return;
 		}
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_EXCHANGE_BABY_PET_ITEM, Config.SERVICES_EXCHANGE_BABY_PET_PRICE))
@@ -198,7 +241,7 @@ public class exchange extends Functions
 			control.update();
 			player.sendPacket(new InventoryUpdate().addModifiedItem(control));
 			player.getSummonList().unsummonPet(false);
-			show("Пет изменен.", player);
+			show("�?ет изменен.", player);
 		}
 		else if (Config.SERVICES_EXCHANGE_BABY_PET_ITEM == 57)
 		{
@@ -210,6 +253,9 @@ public class exchange extends Functions
 		}
 	}
 	
+	/**
+	 * Method exToBuffalo.
+	 */
 	public void exToBuffalo()
 	{
 		Player player = getSelf();
@@ -219,29 +265,32 @@ public class exchange extends Functions
 		}
 		if (!Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
-			show("Сервис отключен.", player);
+			show("Серви�? откл�?чен.", player);
 			return;
 		}
 		Summon pl_pet = player.getSummonList().getPet();
 		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_COUGAR_ID) || (pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID)))
 		{
-			show("Пет должен быть вызван.", player);
+			show("�?ет должен быт�? вызван.", player);
 			return;
 		}
 		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && player.isMageClass())
 		{
-			show("Этот пет только для воинов.", player);
+			show("Этот пет тол�?ко дл�? воинов.", player);
 			return;
 		}
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_EXCHANGE_BABY_PET_ITEM, Config.SERVICES_EXCHANGE_BABY_PET_PRICE))
 		{
 			ItemInstance control = player.getInventory().getItemByObjectId(pl_pet.getControlItemObjId());
 			control.setItemId(L2Pet.IMPROVED_BABY_BUFFALO.getControlItemId());
-			control.setJdbcState(JdbcEntityState.UPDATED);
+			control/**
+			 * Method exToKookaburra.
+			 */
+			.setJdbcState(JdbcEntityState.UPDATED);
 			control.update();
 			player.sendPacket(new InventoryUpdate().addModifiedItem(control));
 			player.getSummonList().unsummonPet(false);
-			show("Пет изменен.", player);
+			show("�?ет изменен.", player);
 		}
 		else if (Config.SERVICES_EXCHANGE_BABY_PET_ITEM == 57)
 		{
@@ -262,18 +311,18 @@ public class exchange extends Functions
 		}
 		if (!Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
-			show("Сервис отключен.", player);
+			show("Серви�? откл�?чен.", player);
 			return;
 		}
 		Summon pl_pet = player.getSummonList().getPet();
 		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_BUFFALO_ID) || (pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_COUGAR_ID)))
 		{
-			show("Пет должен быть вызван.", player);
+			show("�?ет должен быт�? вызван.", player);
 			return;
 		}
 		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && !player.isMageClass())
 		{
-			show("Этот пет только для магов.", player);
+			show("Этот пет тол�?ко дл�? магов.", player);
 			return;
 		}
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_EXCHANGE_BABY_PET_ITEM, Config.SERVICES_EXCHANGE_BABY_PET_PRICE))
@@ -284,7 +333,7 @@ public class exchange extends Functions
 			control.update();
 			player.sendPacket(new InventoryUpdate().addModifiedItem(control));
 			player.getSummonList().unsummonPet(false);
-			show("Пет изменен.", player);
+			show("�?ет изменен.", player);
 		}
 		else if (Config.SERVICES_EXCHANGE_BABY_PET_ITEM == 57)
 		{
@@ -296,61 +345,121 @@ public class exchange extends Functions
 		}
 	}
 	
+	/**
+	 * Method DialogAppend_30731.
+	 * @param val Integer
+	 * @return String
+	 */
 	public static String DialogAppend_30731(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30827.
+	 * @param val Integer
+	 * @return String
+	 */
 	public static String DialogAppend_30827(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30828.
+	 * @param val Integer
+	 * @return String
+	 */
 	public static String DialogAppend_30828(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30829.
+	 * @param val Integer
+	 * @return String
+	 */
 	public static String DialogAppend_30829(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30830.
+	 * @param val Integer
+	 * @return String
+	 */
 	public static String DialogAppend_30830(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30831.
+	 * @param val Integer
+	 * @return String
+	 */
 	public static String DialogAppend_30831(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30869.
+	 * @param val Integer
+	 * @return String
+	 */
 	public static String DialogAppend_30869(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31067.
+	 * @param val Integer
+	 * @return String
+	 */
 	public static String DialogAppend_31067(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31265.
+	 * @param val Integer
+	 * @return String
+	 */
 	public static String DialogAppend_31265(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31309.
+	 * @param val Integer
+	 * @return String
+	 */
 	public static String DialogAppend_31309(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31954.
+	 * @param val Integer
+	 * @return String
+	 */
 	public static String DialogAppend_31954(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method getHtmlAppends.
+	 * @param val Integer
+	 * @return String
+	 */
 	private static String getHtmlAppends(Integer val)
 	{
 		String ret = "";
@@ -360,11 +469,11 @@ public class exchange extends Functions
 		}
 		if (Config.SERVICES_CHANGE_PET_NAME_ENABLED)
 		{
-			ret = "<br>[scripts_services.petevolve.exchange:showErasePetName|Обнулить имя у пета]";
+			ret = "<br>[scripts_services.petevolve.exchange:showErasePetName|�?бнулит�? им�? у пета]";
 		}
 		if (Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
-			ret += "<br>[scripts_services.petevolve.exchange:showBabyPetExchange|Обменять Improved Baby пета]";
+			ret += "<br>[scripts_services.petevolve.exchange:showBabyPetExchange|�?бмен�?т�? Improved Baby пета]";
 		}
 		return ret;
 	}

@@ -17,11 +17,27 @@ import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ConditionSlotItemId extends ConditionInventory
 {
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _enchantLevel.
+	 */
 	private final int _enchantLevel;
 	
+	/**
+	 * Constructor for ConditionSlotItemId.
+	 * @param slot int
+	 * @param itemId int
+	 * @param enchantLevel int
+	 */
 	public ConditionSlotItemId(int slot, int itemId, int enchantLevel)
 	{
 		super(slot);
@@ -29,6 +45,11 @@ public final class ConditionSlotItemId extends ConditionInventory
 		_enchantLevel = enchantLevel;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

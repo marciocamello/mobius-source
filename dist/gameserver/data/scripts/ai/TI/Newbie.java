@@ -26,8 +26,15 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Newbie extends DefaultAI
 {
+	/**
+	 * Field _mageBuff.
+	 */
 	private final static int[][] _mageBuff = new int[][]
 	{
 		{
@@ -79,6 +86,9 @@ public class Newbie extends DefaultAI
 			1
 		},
 	};
+	/**
+	 * Field _warrBuff.
+	 */
 	private final static int[][] _warrBuff = new int[][]
 	{
 		{
@@ -137,12 +147,20 @@ public class Newbie extends DefaultAI
 		},
 	};
 	
+	/**
+	 * Constructor for Newbie.
+	 * @param actor NpcInstance
+	 */
 	public Newbie(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ACTIVE_DELAY = 2000;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -182,6 +200,10 @@ public class Newbie extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{

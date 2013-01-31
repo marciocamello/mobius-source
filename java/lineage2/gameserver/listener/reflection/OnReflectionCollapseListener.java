@@ -15,7 +15,15 @@ package lineage2.gameserver.listener.reflection;
 import lineage2.commons.listener.Listener;
 import lineage2.gameserver.model.entity.Reflection;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnReflectionCollapseListener extends Listener<Reflection>
 {
+	/**
+	 * Method onReflectionCollapse.
+	 * @param reflection Reflection
+	 */
 	public void onReflectionCollapse(Reflection reflection);
 }

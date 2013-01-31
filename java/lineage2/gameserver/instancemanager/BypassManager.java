@@ -21,19 +21,49 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.Strings;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BypassManager
 {
+	/**
+	 * Field p.
+	 */
 	private static final Pattern p = Pattern.compile("\"(bypass +-h +)(.+?)\"");
 	
+	/**
+	 * @author Mobius
+	 */
 	public static enum BypassType
 	{
+		/**
+		 * Field ENCODED.
+		 */
 		ENCODED,
+		/**
+		 * Field ENCODED_BBS.
+		 */
 		ENCODED_BBS,
+		/**
+		 * Field SIMPLE.
+		 */
 		SIMPLE,
+		/**
+		 * Field SIMPLE_BBS.
+		 */
 		SIMPLE_BBS,
+		/**
+		 * Field SIMPLE_DIRECT.
+		 */
 		SIMPLE_DIRECT
 	}
 	
+	/**
+	 * Method getBypassType.
+	 * @param bypass String
+	 * @return BypassType
+	 */
 	public static BypassType getBypassType(String bypass)
 	{
 		switch (bypass.charAt(0))
@@ -51,6 +81,13 @@ public class BypassManager
 		}
 	}
 	
+	/**
+	 * Method encode.
+	 * @param html String
+	 * @param bypassStorage List<String>
+	 * @param bbs boolean
+	 * @return String
+	 */
 	public static String encode(String html, List<String> bypassStorage, boolean bbs)
 	{
 		Matcher m = p.matcher(html);
@@ -81,6 +118,14 @@ public class BypassManager
 		return sb.toString();
 	}
 	
+	/**
+	 * Method decode.
+	 * @param bypass String
+	 * @param bypassStorage List<String>
+	 * @param bbs boolean
+	 * @param player Player
+	 * @return DecodedBypass
+	 */
 	public static DecodedBypass decode(String bypass, List<String> bypassStorage, boolean bbs, Player player)
 	{
 		synchronized (bypassStorage)
@@ -112,24 +157,50 @@ public class BypassManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class DecodedBypass
 	{
+		/**
+		 * Field bypass.
+		 */
 		public String bypass;
+		/**
+		 * Field bbs.
+		 */
 		public boolean bbs;
+		/**
+		 * Field handler.
+		 */
 		public ICommunityBoardHandler handler;
 		
+		/**
+		 * Constructor for DecodedBypass.
+		 * @param _bypass String
+		 * @param _bbs boolean
+		 */
 		public DecodedBypass(String _bypass, boolean _bbs)
 		{
 			bypass = _bypass;
 			bbs = _bbs;
 		}
 		
+		/**
+		 * Constructor for DecodedBypass.
+		 * @param _bypass String
+		 * @param _handler ICommunityBoardHandler
+		 */
 		public DecodedBypass(String _bypass, ICommunityBoardHandler _handler)
 		{
 			bypass = _bypass;
 			handler = _handler;
 		}
 		
+		/**
+		 * Method trim.
+		 * @return DecodedBypass
+		 */
 		public DecodedBypass trim()
 		{
 			bypass = bypass.trim();

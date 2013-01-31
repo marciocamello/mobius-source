@@ -44,10 +44,23 @@ import lineage2.gameserver.taskmanager.tasks.TaskVitalitySystem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class TaskManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(TaskManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static TaskManager _instance;
+	/**
+	 * Field SQL_STATEMENTS.
+	 */
 	static final String[] SQL_STATEMENTS =
 	{
 		"SELECT id,task,type,last_activation,param1,param2,param3 FROM global_tasks",
@@ -55,18 +68,52 @@ public final class TaskManager
 		"SELECT id FROM global_tasks WHERE task=?",
 		"INSERT INTO global_tasks (task,type,last_activation,param1,param2,param3) VALUES(?,?,?,?,?,?)"
 	};
+	/**
+	 * Field _tasks.
+	 */
 	private final Map<Integer, Task> _tasks = new ConcurrentHashMap<>();
+	/**
+	 * Field _currentTasks.
+	 */
 	final List<ExecutedTask> _currentTasks = new ArrayList<>();
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ExecutedTask extends RunnableImpl
 	{
+		/**
+		 * Field _id.
+		 */
 		int _id;
+		/**
+		 * Field _lastActivation.
+		 */
 		long _lastActivation;
+		/**
+		 * Field _task.
+		 */
 		Task _task;
+		/**
+		 * Field _type.
+		 */
 		TaskTypes _type;
+		/**
+		 * Field _params.
+		 */
 		String[] _params;
+		/**
+		 * Field _scheduled.
+		 */
 		ScheduledFuture<?> _scheduled;
 		
+		/**
+		 * Constructor for ExecutedTask.
+		 * @param task Task
+		 * @param type TaskTypes
+		 * @param rset ResultSet
+		 * @throws SQLException
+		 */
 		public ExecutedTask(Task task, TaskTypes type, ResultSet rset) throws SQLException
 		{
 			_task = task;
@@ -81,6 +128,9 @@ public final class TaskManager
 			};
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -110,37 +160,65 @@ public final class TaskManager
 			}
 		}
 		
+		/**
+		 * Method equals.
+		 * @param object Object
+		 * @return boolean
+		 */
 		@Override
 		public boolean equals(Object object)
 		{
 			return _id == ((ExecutedTask) object)._id;
 		}
 		
+		/**
+		 * Method getTask.
+		 * @return Task
+		 */
 		public Task getTask()
 		{
 			return _task;
 		}
 		
+		/**
+		 * Method getType.
+		 * @return TaskTypes
+		 */
 		public TaskTypes getType()
 		{
 			return _type;
 		}
 		
+		/**
+		 * Method getId.
+		 * @return int
+		 */
 		public int getId()
 		{
 			return _id;
 		}
 		
+		/**
+		 * Method getParams.
+		 * @return String[]
+		 */
 		public String[] getParams()
 		{
 			return _params;
 		}
 		
+		/**
+		 * Method getLastActivation.
+		 * @return long
+		 */
 		public long getLastActivation()
 		{
 			return _lastActivation;
 		}
 		
+		/**
+		 * Method stopTask.
+		 */
 		public void stopTask()
 		{
 			_task.onDestroy();
@@ -152,6 +230,10 @@ public final class TaskManager
 		}
 	}
 	
+	/**
+	 * Method getInstance.
+	 * @return TaskManager
+	 */
 	public static TaskManager getInstance()
 	{
 		if (_instance == null)
@@ -161,12 +243,18 @@ public final class TaskManager
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for TaskManager.
+	 */
 	public TaskManager()
 	{
 		initializate();
 		startAllTasks();
 	}
 	
+	/**
+	 * Method initializate.
+	 */
 	private void initializate()
 	{
 		registerTask(new TaskRecom());
@@ -174,6 +262,10 @@ public final class TaskManager
 		registerTask(new TaskVitalitySystem());
 	}
 	
+	/**
+	 * Method registerTask.
+	 * @param task Task
+	 */
 	public void registerTask(Task task)
 	{
 		int key = task.getName().hashCode();
@@ -184,6 +276,9 @@ public final class TaskManager
 		}
 	}
 	
+	/**
+	 * Method startAllTasks.
+	 */
 	private void startAllTasks()
 	{
 		Connection con = null;
@@ -223,6 +318,11 @@ public final class TaskManager
 		}
 	}
 	
+	/**
+	 * Method launchTask.
+	 * @param task ExecutedTask
+	 * @return boolean
+	 */
 	private boolean launchTask(ExecutedTask task)
 	{
 		final ThreadPoolManager scheduler = ThreadPoolManager.getInstance();
@@ -305,11 +405,30 @@ public final class TaskManager
 		return false;
 	}
 	
+	/**
+	 * Method addUniqueTask.
+	 * @param task String
+	 * @param type TaskTypes
+	 * @param param1 String
+	 * @param param2 String
+	 * @param param3 String
+	 * @return boolean
+	 */
 	public static boolean addUniqueTask(String task, TaskTypes type, String param1, String param2, String param3)
 	{
 		return addUniqueTask(task, type, param1, param2, param3, 0);
 	}
 	
+	/**
+	 * Method addUniqueTask.
+	 * @param task String
+	 * @param type TaskTypes
+	 * @param param1 String
+	 * @param param2 String
+	 * @param param3 String
+	 * @param lastActivation long
+	 * @return boolean
+	 */
 	public static boolean addUniqueTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
 		Connection con = null;
@@ -347,11 +466,30 @@ public final class TaskManager
 		return false;
 	}
 	
+	/**
+	 * Method addTask.
+	 * @param task String
+	 * @param type TaskTypes
+	 * @param param1 String
+	 * @param param2 String
+	 * @param param3 String
+	 * @return boolean
+	 */
 	public static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3)
 	{
 		return addTask(task, type, param1, param2, param3, 0);
 	}
 	
+	/**
+	 * Method addTask.
+	 * @param task String
+	 * @param type TaskTypes
+	 * @param param1 String
+	 * @param param2 String
+	 * @param param3 String
+	 * @param lastActivation long
+	 * @return boolean
+	 */
 	public static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
 		Connection con = null;

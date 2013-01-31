@@ -16,11 +16,27 @@ import java.io.Serializable;
 
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface SpawnableObject extends Serializable
 {
+	/**
+	 * Method spawnObject.
+	 * @param event GlobalEvent
+	 */
 	void spawnObject(GlobalEvent event);
 	
+	/**
+	 * Method despawnObject.
+	 * @param event GlobalEvent
+	 */
 	void despawnObject(GlobalEvent event);
 	
+	/**
+	 * Method refreshObject.
+	 * @param event GlobalEvent
+	 */
 	void refreshObject(GlobalEvent event);
 }

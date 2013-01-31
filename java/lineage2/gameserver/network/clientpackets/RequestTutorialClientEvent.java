@@ -16,16 +16,29 @@ import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.Quest;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestTutorialClientEvent extends L2GameClientPacket
 {
+	/**
+	 * Field event.
+	 */
 	int event = 0;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		event = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

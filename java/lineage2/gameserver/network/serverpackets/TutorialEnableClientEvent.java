@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TutorialEnableClientEvent extends L2GameServerPacket
 {
+	/**
+	 * Field _event.
+	 */
 	private int _event = 0;
 	
+	/**
+	 * Constructor for TutorialEnableClientEvent.
+	 * @param event int
+	 */
 	public TutorialEnableClientEvent(int event)
 	{
 		_event = event;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

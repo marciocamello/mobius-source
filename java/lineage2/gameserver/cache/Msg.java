@@ -14,6 +14,10 @@ package lineage2.gameserver.cache;
 
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Msg
 {
 	public static final SystemMessage THE_HARVEST_HAS_FAILED = new SystemMessage(SystemMessage.THE_HARVEST_HAS_FAILED);

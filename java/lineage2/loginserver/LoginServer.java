@@ -24,17 +24,38 @@ import lineage2.loginserver.gameservercon.GameServerCommunication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LoginServer
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(LoginServer.class);
+	/**
+	 * Field authServer.
+	 */
 	private static LoginServer authServer;
+	/**
+	 * Field _gameServerListener.
+	 */
 	private final GameServerCommunication _gameServerListener;
 	
+	/**
+	 * Method getInstance.
+	 * @return LoginServer
+	 */
 	public static LoginServer getInstance()
 	{
 		return authServer;
 	}
 	
+	/**
+	 * Constructor for LoginServer.
+	 * @throws Throwable
+	 */
 	public LoginServer() throws Throwable
 	{
 		Config.initCrypt();
@@ -52,11 +73,19 @@ public class LoginServer
 		_log.info("Listening for clients on " + Config.LOGIN_HOST + ":" + Config.PORT_LOGIN);
 	}
 	
+	/**
+	 * Method getGameServerListener.
+	 * @return GameServerCommunication
+	 */
 	public GameServerCommunication getGameServerListener()
 	{
 		return _gameServerListener;
 	}
 	
+	/**
+	 * Method checkFreePorts.
+	 * @throws Throwable
+	 */
 	public static void checkFreePorts() throws Throwable
 	{
 		ServerSocket ss = null;
@@ -86,6 +115,11 @@ public class LoginServer
 		}
 	}
 	
+	/**
+	 * Method main.
+	 * @param args String[]
+	 * @throws Throwable
+	 */
 	public static void main(String[] args) throws Throwable
 	{
 		new File("./log/").mkdir();

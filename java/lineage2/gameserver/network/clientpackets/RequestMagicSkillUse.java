@@ -19,12 +19,28 @@ import lineage2.gameserver.model.Skill.SkillType;
 import lineage2.gameserver.model.items.attachment.FlagItemAttachment;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestMagicSkillUse extends L2GameClientPacket
 {
+	/**
+	 * Field _magicId.
+	 */
 	private Integer _magicId;
+	/**
+	 * Field _ctrlPressed.
+	 */
 	private boolean _ctrlPressed;
+	/**
+	 * Field _shiftPressed.
+	 */
 	private boolean _shiftPressed;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -33,6 +49,9 @@ public class RequestMagicSkillUse extends L2GameClientPacket
 		_shiftPressed = readC() != 0;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

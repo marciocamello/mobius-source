@@ -30,21 +30,58 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SummonInstance extends Summon
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field CYCLE.
+	 */
 	public final int CYCLE = 5000;
+	/**
+	 * Field _summonSkillId.
+	 */
 	private final int _summonSkillId;
+	/**
+	 * Field _summonSkillLvl.
+	 */
 	private final int _summonSkillLvl;
+	/**
+	 * Field _expPenalty.
+	 */
 	private double _expPenalty = 0;
+	/**
+	 * Field _disappearTask.
+	 */
 	Future<?> _disappearTask;
+	/**
+	 * Field _lifetimeCountdown.
+	 */
 	int _lifetimeCountdown;
+	/**
+	 * Field _maxLifetime.
+	 */
 	private int _maxLifetime;
+	/**
+	 * Field _summonPoint.
+	 */
 	private final int _summonPoint;
 	
+	/**
+	 * Constructor for SummonInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param owner Player
+	 * @param lifetime int
+	 * @param summonPoint int
+	 * @param skill Skill
+	 */
 	public SummonInstance(int objectId, NpcTemplate template, Player owner, int lifetime, int summonPoint, Skill skill)
 	{
 		super(objectId, template, owner);
@@ -56,6 +93,10 @@ public class SummonInstance extends Summon
 		_summonPoint = summonPoint;
 	}
 	
+	/**
+	 * Method getRef.
+	 * @return HardReference<SummonInstance>
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public HardReference<SummonInstance> getRef()
@@ -63,43 +104,73 @@ public class SummonInstance extends Summon
 		return (HardReference<SummonInstance>) super.getRef();
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	@Override
 	public final int getLevel()
 	{
 		return getTemplate() != null ? getTemplate().level : 0;
 	}
 	
+	/**
+	 * Method getSummonType.
+	 * @return int
+	 */
 	@Override
 	public int getSummonType()
 	{
 		return 1;
 	}
 	
+	/**
+	 * Method getCurrentFed.
+	 * @return int
+	 */
 	@Override
 	public int getCurrentFed()
 	{
 		return _lifetimeCountdown;
 	}
 	
+	/**
+	 * Method getMaxFed.
+	 * @return int
+	 */
 	@Override
 	public int getMaxFed()
 	{
 		return _maxLifetime;
 	}
 	
+	/**
+	 * Method setExpPenalty.
+	 * @param expPenalty double
+	 */
 	public void setExpPenalty(double expPenalty)
 	{
 		_expPenalty = expPenalty;
 	}
 	
+	/**
+	 * Method getExpPenalty.
+	 * @return double
+	 */
 	@Override
 	public double getExpPenalty()
 	{
 		return _expPenalty;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	class Lifetime extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -124,6 +195,10 @@ public class SummonInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -136,6 +211,9 @@ public class SummonInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Method stopDisappear.
+	 */
 	protected synchronized void stopDisappear()
 	{
 		if (_disappearTask != null)
@@ -145,6 +223,9 @@ public class SummonInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Method unSummon.
+	 */
 	@Override
 	public void unSummon()
 	{
@@ -152,12 +233,25 @@ public class SummonInstance extends Summon
 		super.unSummon();
 	}
 	
+	/**
+	 * Method getSummonPoint.
+	 * @return int
+	 */
 	@Override
 	public int getSummonPoint()
 	{
 		return _summonPoint;
 	}
 	
+	/**
+	 * Method displayGiveDamageMessage.
+	 * @param target Creature
+	 * @param damage int
+	 * @param crit boolean
+	 * @param miss boolean
+	 * @param shld boolean
+	 * @param magic boolean
+	 */
 	@Override
 	public void displayGiveDamageMessage(Creature target, int damage, boolean crit, boolean miss, boolean shld, boolean magic)
 	{
@@ -180,6 +274,11 @@ public class SummonInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Method displayReceiveDamageMessage.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	public void displayReceiveDamageMessage(Creature attacker, int damage)
 	{
@@ -187,24 +286,41 @@ public class SummonInstance extends Summon
 		owner.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addName(this).addName(attacker).addNumber((long) damage));
 	}
 	
+	/**
+	 * Method getSummonSkillId.
+	 * @return int
+	 */
 	@Override
 	public int getSummonSkillId()
 	{
 		return _summonSkillId;
 	}
 	
+	/**
+	 * Method getSummonSkillLvl.
+	 * @return int
+	 */
 	@Override
 	public int getSummonSkillLvl()
 	{
 		return _summonSkillLvl;
 	}
 	
+	/**
+	 * Method isServitor.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isServitor()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{
@@ -254,6 +370,10 @@ public class SummonInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Method getWearedMask.
+	 * @return long
+	 */
 	@Override
 	public long getWearedMask()
 	{

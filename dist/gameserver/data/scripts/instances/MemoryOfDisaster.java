@@ -31,13 +31,35 @@ import lineage2.gameserver.network.serverpackets.TutorialShowHtml;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MemoryOfDisaster extends Reflection
 {
+	/**
+	 * Field ROGIN_ID. (value is 19193)
+	 */
 	private static final int ROGIN_ID = 19193;
+	/**
+	 * Field TENTACLE_ID. (value is 19171)
+	 */
 	private static final int TENTACLE_ID = 19171;
+	/**
+	 * Field TRASNPERENT_TEREDOR_1_ID. (value is 18998)
+	 */
 	private static final int TRASNPERENT_TEREDOR_1_ID = 18998;
+	/**
+	 * Field EARTH_WYRM_ID. (value is 19217)
+	 */
 	private static final int EARTH_WYRM_ID = 19217;
+	/**
+	 * Field TRANSPARENT. (value is 18919)
+	 */
 	private static final int TRANSPARENT = 18919;
+	/**
+	 * Field ELVES.
+	 */
 	private static final int[] ELVES =
 	{
 		33536,
@@ -47,13 +69,24 @@ public class MemoryOfDisaster extends Reflection
 		33544,
 		33546
 	};
+	/**
+	 * Field introShowed.
+	 */
 	private boolean introShowed = false;
 	
+	/**
+	 * Constructor for MemoryOfDisaster.
+	 * @param player Player
+	 */
 	public MemoryOfDisaster(Player player)
 	{
 		setReturnLoc(player.getLoc());
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 */
 	@Override
 	public void onPlayerEnter(final Player player)
 	{
@@ -70,6 +103,10 @@ public class MemoryOfDisaster extends Reflection
 		super.onPlayerEnter(player);
 	}
 	
+	/**
+	 * Method onPlayerExit.
+	 * @param player Player
+	 */
 	@Override
 	public void onPlayerExit(Player player)
 	{
@@ -78,6 +115,9 @@ public class MemoryOfDisaster extends Reflection
 		super.onPlayerExit(player);
 	}
 	
+	/**
+	 * Method spawnTentacles.
+	 */
 	public void spawnTentacles()
 	{
 		addSpawnWithoutRespawn(TENTACLE_ID, new Location(116596, -183176, -1608, 31175), 0).setParameter("notifyDie", true);
@@ -85,17 +125,26 @@ public class MemoryOfDisaster extends Reflection
 		addSpawnWithoutRespawn(TENTACLE_ID, new Location(116542, -183189, -1608, 9413), 0).setParameter("notifyDie", true);
 	}
 	
+	/**
+	 * Method spawnTransparentTeredor.
+	 */
 	public void spawnTransparentTeredor()
 	{
 		addSpawnWithoutRespawn(TRASNPERENT_TEREDOR_1_ID, new Location(116511, -178729, -1176, 43905), 0);
 	}
 	
+	/**
+	 * Method spawnWyrm.
+	 */
 	public void spawnWyrm()
 	{
 		addSpawnWithoutRespawn(TRANSPARENT, new Location(116511, -178729, -1176, 50366), 0);
 		addSpawnWithoutRespawn(EARTH_WYRM_ID, new Location(116511, -178729, -1176, 50366), 0);
 	}
 	
+	/**
+	 * Method startFinalScene.
+	 */
 	public void startFinalScene()
 	{
 		for (Player player : getPlayers())
@@ -105,6 +154,9 @@ public class MemoryOfDisaster extends Reflection
 		ThreadPoolManager.getInstance().schedule(new Scene1(), 32900);
 	}
 	
+	/**
+	 * Method dieNextElf.
+	 */
 	public void dieNextElf()
 	{
 		List<NpcInstance> elves = new ArrayList<>();
@@ -118,13 +170,22 @@ public class MemoryOfDisaster extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class TeleportTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for TeleportTask.
+		 */
 		public TeleportTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -138,15 +199,28 @@ public class MemoryOfDisaster extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ScreenMessageTask extends RunnableImpl
 	{
+		/**
+		 * Field msg.
+		 */
 		private final NpcString msg;
 		
+		/**
+		 * Constructor for ScreenMessageTask.
+		 * @param msg NpcString
+		 */
 		public ScreenMessageTask(NpcString msg)
 		{
 			this.msg = msg;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -157,13 +231,22 @@ public class MemoryOfDisaster extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SpawnRoginTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for SpawnRoginTask.
+		 */
 		public SpawnRoginTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -171,13 +254,22 @@ public class MemoryOfDisaster extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Scene1 extends RunnableImpl
 	{
+		/**
+		 * Constructor for Scene1.
+		 */
 		public Scene1()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -194,13 +286,22 @@ public class MemoryOfDisaster extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Scene2 extends RunnableImpl
 	{
+		/**
+		 * Constructor for Scene2.
+		 */
 		public Scene2()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -212,13 +313,22 @@ public class MemoryOfDisaster extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Scene3 extends RunnableImpl
 	{
+		/**
+		 * Constructor for Scene3.
+		 */
 		public Scene3()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -230,13 +340,22 @@ public class MemoryOfDisaster extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class EndInstanceTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for EndInstanceTask.
+		 */
 		public EndInstanceTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -248,15 +367,28 @@ public class MemoryOfDisaster extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ShowHtmlTask extends RunnableImpl
 	{
+		/**
+		 * Field player.
+		 */
 		private final Player player;
 		
+		/**
+		 * Constructor for ShowHtmlTask.
+		 * @param player Player
+		 */
 		public ShowHtmlTask(Player player)
 		{
 			this.player = player;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

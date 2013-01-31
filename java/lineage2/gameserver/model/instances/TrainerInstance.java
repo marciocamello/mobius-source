@@ -15,6 +15,10 @@ package lineage2.gameserver.model.instances;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class TrainerInstance extends NpcInstance
 {
 	/**
@@ -22,11 +26,23 @@ public final class TrainerInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for TrainerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public TrainerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{

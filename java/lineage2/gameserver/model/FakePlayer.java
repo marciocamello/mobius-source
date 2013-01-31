@@ -26,13 +26,35 @@ import lineage2.gameserver.network.serverpackets.CharInfo;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.player.PlayerTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FakePlayer extends Creature
 {
+	/**
+	 * Field serialVersionUID. (value is -7275714049223105460)
+	 */
 	private static final long serialVersionUID = -7275714049223105460L;
+	/**
+	 * Field _owner.
+	 */
 	private final Player _owner;
+	/**
+	 * Field _listener.
+	 */
 	private final OwnerAttakListener _listener;
+	/**
+	 * Field _broadcastCharInfoTask.
+	 */
 	ScheduledFuture<?> _broadcastCharInfoTask;
 	
+	/**
+	 * Constructor for FakePlayer.
+	 * @param objectId int
+	 * @param template PlayerTemplate
+	 * @param owner Player
+	 */
 	public FakePlayer(int objectId, PlayerTemplate template, Player owner)
 	{
 		super(objectId, template);
@@ -42,12 +64,19 @@ public class FakePlayer extends Creature
 		owner.addListener(_listener);
 	}
 	
+	/**
+	 * Method getPlayer.
+	 * @return Player
+	 */
 	@Override
 	public Player getPlayer()
 	{
 		return _owner;
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -55,48 +84,80 @@ public class FakePlayer extends Creature
 		getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, getPlayer(), Integer.valueOf(Config.FOLLOW_RANGE));
 	}
 	
+	/**
+	 * Method getAI.
+	 * @return FakePlayerAI
+	 */
 	@Override
 	public FakePlayerAI getAI()
 	{
 		return (FakePlayerAI) _ai;
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	@Override
 	public int getLevel()
 	{
 		return _owner.getLevel();
 	}
 	
+	/**
+	 * Method getActiveWeaponInstance.
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance getActiveWeaponInstance()
 	{
 		return _owner.getActiveWeaponInstance();
 	}
 	
+	/**
+	 * Method getActiveWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	@Override
 	public WeaponTemplate getActiveWeaponItem()
 	{
 		return _owner.getActiveWeaponItem();
 	}
 	
+	/**
+	 * Method getSecondaryWeaponInstance.
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance getSecondaryWeaponInstance()
 	{
 		return _owner.getSecondaryWeaponInstance();
 	}
 	
+	/**
+	 * Method getSecondaryWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	@Override
 	public WeaponTemplate getSecondaryWeaponItem()
 	{
 		return _owner.getSecondaryWeaponItem();
 	}
 	
+	/**
+	 * Method broadcastCharInfo.
+	 */
 	@Override
 	public void broadcastCharInfo()
 	{
@@ -107,6 +168,9 @@ public class FakePlayer extends Creature
 		_broadcastCharInfoTask = ThreadPoolManager.getInstance().schedule(new BroadcastCharInfoTask(), Config.BROADCAST_CHAR_INFO_INTERVAL);
 	}
 	
+	/**
+	 * Method broadcastCharInfoImpl.
+	 */
 	public void broadcastCharInfoImpl()
 	{
 		for (Player player : World.getAroundPlayers(this))
@@ -115,24 +179,47 @@ public class FakePlayer extends Creature
 		}
 	}
 	
+	/**
+	 * Method notifyOwerStartAttak.
+	 */
 	public void notifyOwerStartAttak()
 	{
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _owner.getTarget());
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class OwnerAttakListener implements OnAttackListener, OnMagicUseListener
 	{
+		/**
+		 * Constructor for OwnerAttakListener.
+		 */
 		public OwnerAttakListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onMagicUse.
+		 * @param actor Creature
+		 * @param skill Skill
+		 * @param target Creature
+		 * @param alt boolean
+		 * @see lineage2.gameserver.listener.actor.OnMagicUseListener#onMagicUse(Creature, Skill, Creature, boolean)
+		 */
 		@Override
 		public void onMagicUse(Creature actor, Skill skill, Creature target, boolean alt)
 		{
 			notifyOwerStartAttak();
 		}
 		
+		/**
+		 * Method onAttack.
+		 * @param actor Creature
+		 * @param target Creature
+		 * @see lineage2.gameserver.listener.actor.OnAttackListener#onAttack(Creature, Creature)
+		 */
 		@Override
 		public void onAttack(Creature actor, Creature target)
 		{
@@ -140,8 +227,14 @@ public class FakePlayer extends Creature
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class BroadcastCharInfoTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

@@ -17,16 +17,29 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.RecipeItemMakeInfo;
 import lineage2.gameserver.templates.item.RecipeTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestRecipeItemMakeInfo extends L2GameClientPacket
 {
+	/**
+	 * Field _id.
+	 */
 	private int _id;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_id = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

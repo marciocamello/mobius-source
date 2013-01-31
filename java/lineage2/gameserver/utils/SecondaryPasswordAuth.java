@@ -29,15 +29,44 @@ import lineage2.gameserver.network.serverpackets.Ex2ndPasswordVerify;
 
 import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SecondaryPasswordAuth
 {
+	/**
+	 * Field _log.
+	 */
 	private final Logger _log = Logger.getLogger(SecondaryPasswordAuth.class.getName());
+	/**
+	 * Field _activeClient.
+	 */
 	private final GameClient _activeClient;
+	/**
+	 * Field _password.
+	 */
 	private String _password;
+	/**
+	 * Field _wrongAttempts.
+	 */
 	private int _wrongAttempts;
+	/**
+	 * Field _authed.
+	 */
 	private boolean _authed;
+	/**
+	 * Field _unBanTime.
+	 */
 	private long _unBanTime;
 	
+	/**
+	 * Constructor for SecondaryPasswordAuth.
+	 * @param activeClient GameClient
+	 * @param pwd String
+	 * @param wrongAttempts int
+	 * @param unbanTime long
+	 */
 	public SecondaryPasswordAuth(GameClient activeClient, String pwd, int wrongAttempts, long unbanTime)
 	{
 		_activeClient = activeClient;
@@ -47,21 +76,38 @@ public class SecondaryPasswordAuth
 		_unBanTime = unbanTime;
 	}
 	
+	/**
+	 * Method setPassword.
+	 * @param password String
+	 */
 	public void setPassword(String password)
 	{
 		_password = password;
 	}
 	
+	/**
+	 * Method setUnbanTime.
+	 * @param unbanTime long
+	 */
 	public void setUnbanTime(long unbanTime)
 	{
 		_unBanTime = unbanTime;
 	}
 	
+	/**
+	 * Method setWrongAttempts.
+	 * @param wrongAttempts int
+	 */
 	public void setWrongAttempts(int wrongAttempts)
 	{
 		_wrongAttempts = wrongAttempts;
 	}
 	
+	/**
+	 * Method savePassword.
+	 * @param password String
+	 * @return boolean
+	 */
 	public boolean savePassword(String password)
 	{
 		if (passwordExist())
@@ -81,12 +127,23 @@ public class SecondaryPasswordAuth
 		return true;
 	}
 	
+	/**
+	 * Method insertWrongAttempt.
+	 * @param attempts int
+	 * @return boolean
+	 */
 	public boolean insertWrongAttempt(int attempts)
 	{
 		LoginServerCommunication.getInstance().sendPacket(new Player2ndAuthSetAttempts(_activeClient.getLogin(), attempts));
 		return true;
 	}
 	
+	/**
+	 * Method changePassword.
+	 * @param oldPassword String
+	 * @param newPassword String
+	 * @return boolean
+	 */
 	public boolean changePassword(String oldPassword, String newPassword)
 	{
 		if (!passwordExist())
@@ -111,6 +168,12 @@ public class SecondaryPasswordAuth
 		return true;
 	}
 	
+	/**
+	 * Method checkPassword.
+	 * @param password String
+	 * @param skipAuth boolean
+	 * @return boolean
+	 */
 	public boolean checkPassword(String password, boolean skipAuth)
 	{
 		password = cryptPassword(password);
@@ -140,17 +203,28 @@ public class SecondaryPasswordAuth
 		return true;
 	}
 	
+	/**
+	 * Method passwordExist.
+	 * @return boolean
+	 */
 	public boolean passwordExist()
 	{
 		return ((_password != null) && !_password.isEmpty());
 	}
 	
+	/**
+	 * Method insertBanTime.
+	 * @param banTime int
+	 */
 	public void insertBanTime(int banTime)
 	{
 		LoginServerCommunication.getInstance().sendPacket(new Player2ndAuthSetBanTime(_activeClient.getLogin(), banTime));
 		_unBanTime = System.currentTimeMillis() + (banTime * 60000);
 	}
 	
+	/**
+	 * Method openDialog.
+	 */
 	public void openDialog()
 	{
 		if (System.currentTimeMillis() <= _unBanTime)
@@ -167,11 +241,20 @@ public class SecondaryPasswordAuth
 		}
 	}
 	
+	/**
+	 * Method isAuthed.
+	 * @return boolean
+	 */
 	public boolean isAuthed()
 	{
 		return _authed;
 	}
 	
+	/**
+	 * Method cryptPassword.
+	 * @param password String
+	 * @return String
+	 */
 	private String cryptPassword(String password)
 	{
 		try
@@ -192,6 +275,11 @@ public class SecondaryPasswordAuth
 		return null;
 	}
 	
+	/**
+	 * Method validatePassword.
+	 * @param password String
+	 * @return boolean
+	 */
 	private boolean validatePassword(String password)
 	{
 		if (!Util.isNumber(password))

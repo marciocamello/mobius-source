@@ -23,32 +23,59 @@ import lineage2.gameserver.templates.item.RecipeTemplate.RecipeComponent;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RecipeParser extends AbstractFileParser<RecipeHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final RecipeParser _instance = new RecipeParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return RecipeParser
+	 */
 	public static RecipeParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for RecipeParser.
+	 */
 	private RecipeParser()
 	{
 		super(RecipeHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/other/recipes.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "recipes.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

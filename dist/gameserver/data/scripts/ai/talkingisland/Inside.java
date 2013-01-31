@@ -15,8 +15,16 @@ package ai.talkingisland;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Inside extends InsideSubAI
 {
+	/**
+	 * Constructor for Inside.
+	 * @param actor NpcInstance
+	 */
 	public Inside(NpcInstance actor)
 	{
 		super(actor);

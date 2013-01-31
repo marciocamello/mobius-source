@@ -25,13 +25,34 @@ import lineage2.gameserver.stats.Stats;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectDispelEffects extends Effect
 {
+	/**
+	 * Field _dispelType.
+	 */
 	private final String _dispelType;
+	/**
+	 * Field _cancelRate.
+	 */
 	private final int _cancelRate;
+	/**
+	 * Field _stackTypes.
+	 */
 	private final String[] _stackTypes;
+	/**
+	 * Field _negateCount.
+	 */
 	private final int _negateCount;
 	
+	/**
+	 * Constructor for EffectDispelEffects.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectDispelEffects(Env env, EffectTemplate template)
 	{
 		super(env, template);
@@ -41,6 +62,9 @@ public class EffectDispelEffects extends Effect
 		_stackTypes = template.getParam().getString("negateStackTypes", "").split(";");
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -107,6 +131,12 @@ public class EffectDispelEffects extends Effect
 		}
 	}
 	
+	/**
+	 * Method calcSkillChanceLimits.
+	 * @param prelimChance double
+	 * @param isPlayable boolean
+	 * @return double
+	 */
 	private double calcSkillChanceLimits(double prelimChance, boolean isPlayable)
 	{
 		if (_dispelType.equals("bane"))
@@ -138,6 +168,10 @@ public class EffectDispelEffects extends Effect
 		return prelimChance;
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean onActionTime()
 	{

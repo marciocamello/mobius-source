@@ -12,53 +12,103 @@
  */
 package lineage2.gameserver.model.entity.museum;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RankPoints
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _monthlyPoints.
+	 */
 	private long _monthlyPoints;
+	/**
+	 * Field _totalPoints.
+	 */
 	private long _totalPoints;
 	
+	/**
+	 * Constructor for RankPoints.
+	 * @param id int
+	 */
 	public RankPoints(int id)
 	{
 		_id = id;
 	}
 	
+	/**
+	 * Constructor for RankPoints.
+	 * @param id int
+	 * @param totalPoints long
+	 */
 	public RankPoints(int id, long totalPoints)
 	{
 		_id = id;
 		_totalPoints = totalPoints;
 	}
 	
+	/**
+	 * Method getMonthlyPoints.
+	 * @return long
+	 */
 	public long getMonthlyPoints()
 	{
 		return _monthlyPoints;
 	}
 	
+	/**
+	 * Method setMonthlyPoints.
+	 * @param _monthlyPoints long
+	 */
 	public void setMonthlyPoints(long _monthlyPoints)
 	{
 		this._monthlyPoints = _monthlyPoints;
 	}
 	
+	/**
+	 * Method getTotalPoints.
+	 * @return long
+	 */
 	public long getTotalPoints()
 	{
 		return _totalPoints;
 	}
 	
+	/**
+	 * Method setTotalPoints.
+	 * @param _totalPoints long
+	 */
 	public void setTotalPoints(long _totalPoints)
 	{
 		this._totalPoints = _totalPoints;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method addMonthlyPoints.
+	 * @param count long
+	 */
 	public void addMonthlyPoints(long count)
 	{
 		_monthlyPoints += count;
 	}
 	
+	/**
+	 * Method addTotalPoints.
+	 * @param count long
+	 */
 	public void addTotalPoints(long count)
 	{
 		_totalPoints += count;

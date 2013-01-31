@@ -29,10 +29,22 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class AutoBan
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(AutoBan.class);
 	
+	/**
+	 * Method isBanned.
+	 * @param ObjectId int
+	 * @return boolean
+	 */
 	public static boolean isBanned(int ObjectId)
 	{
 		boolean res = false;
@@ -62,6 +74,13 @@ public final class AutoBan
 		return res;
 	}
 	
+	/**
+	 * Method Banned.
+	 * @param actor Player
+	 * @param period int
+	 * @param msg String
+	 * @param GM String
+	 */
 	public static void Banned(Player actor, int period, String msg, String GM)
 	{
 		int endban = 0;
@@ -112,6 +131,15 @@ public final class AutoBan
 		}
 	}
 	
+	/**
+	 * Method Banned.
+	 * @param actor String
+	 * @param acc_level int
+	 * @param period int
+	 * @param msg String
+	 * @param GM String
+	 * @return boolean
+	 */
 	public static boolean Banned(String actor, int acc_level, int period, String msg, String GM)
 	{
 		boolean res;
@@ -187,6 +215,13 @@ public final class AutoBan
 		return res;
 	}
 	
+	/**
+	 * Method Karma.
+	 * @param actor Player
+	 * @param karma int
+	 * @param msg String
+	 * @param GM String
+	 */
 	public static void Karma(Player actor, int karma, String msg, String GM)
 	{
 		Connection con = null;
@@ -214,11 +249,25 @@ public final class AutoBan
 		}
 	}
 	
+	/**
+	 * Method Banned.
+	 * @param actor Player
+	 * @param period int
+	 * @param msg String
+	 */
 	public static void Banned(Player actor, int period, String msg)
 	{
 		Banned(actor, period, msg, "AutoBan");
 	}
 	
+	/**
+	 * Method ChatBan.
+	 * @param actor String
+	 * @param period int
+	 * @param msg String
+	 * @param GM String
+	 * @return boolean
+	 */
 	public static boolean ChatBan(String actor, int period, String msg, String GM)
 	{
 		boolean res = true;
@@ -259,6 +308,12 @@ public final class AutoBan
 		return res;
 	}
 	
+	/**
+	 * Method ChatUnBan.
+	 * @param actor String
+	 * @param GM String
+	 * @return boolean
+	 */
 	public static boolean ChatUnBan(String actor, String GM)
 	{
 		boolean res = true;

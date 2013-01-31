@@ -16,7 +16,19 @@ import lineage2.gameserver.listener.PlayerListener;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnTeleportListener extends PlayerListener
 {
+	/**
+	 * Method onTeleport.
+	 * @param player Player
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param reflection Reflection
+	 */
 	public void onTeleport(Player player, int x, int y, int z, Reflection reflection);
 }

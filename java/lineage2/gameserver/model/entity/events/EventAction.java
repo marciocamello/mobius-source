@@ -12,7 +12,15 @@
  */
 package lineage2.gameserver.model.entity.events;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface EventAction
 {
+	/**
+	 * Method call.
+	 * @param event GlobalEvent
+	 */
 	void call(GlobalEvent event);
 }

@@ -12,20 +12,47 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Ex2ndPasswordVerify extends L2GameServerPacket
 {
+	/**
+	 * Field PASSWORD_OK.
+	 */
 	public static final int PASSWORD_OK = 0x00;
+	/**
+	 * Field PASSWORD_WRONG.
+	 */
 	public static final int PASSWORD_WRONG = 0x01;
+	/**
+	 * Field PASSWORD_BAN.
+	 */
 	public static final int PASSWORD_BAN = 0x02;
+	/**
+	 * Field _wrongTentatives.
+	 */
 	private final int _wrongTentatives;
+	/**
+	 * Field _mode.
+	 */
 	private final int _mode;
 	
+	/**
+	 * Constructor for Ex2ndPasswordVerify.
+	 * @param mode int
+	 * @param wrongTentatives int
+	 */
 	public Ex2ndPasswordVerify(int mode, int wrongTentatives)
 	{
 		_mode = mode;
 		_wrongTentatives = wrongTentatives;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

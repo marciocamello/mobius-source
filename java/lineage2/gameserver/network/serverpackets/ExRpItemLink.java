@@ -14,15 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.items.ItemInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExRpItemLink extends L2GameServerPacket
 {
+	/**
+	 * Field _item.
+	 */
 	private final ItemInfo _item;
 	
+	/**
+	 * Constructor for ExRpItemLink.
+	 * @param item ItemInfo
+	 */
 	public ExRpItemLink(ItemInfo item)
 	{
 		_item = item;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

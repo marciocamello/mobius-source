@@ -23,17 +23,34 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class IceKnightNormal extends Fighter
 {
+	/**
+	 * Field iced.
+	 */
 	boolean iced;
+	/**
+	 * Field task.
+	 */
 	private ScheduledFuture<?> task;
 	
+	/**
+	 * Constructor for IceKnightNormal.
+	 * @param actor NpcInstance
+	 */
 	public IceKnightNormal(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = 6000;
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -53,6 +70,11 @@ public class IceKnightNormal extends Fighter
 		task = ThreadPoolManager.getInstance().schedule(new ReleaseFromIce(), 6000L);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -70,13 +92,22 @@ public class IceKnightNormal extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ReleaseFromIce extends RunnableImpl
 	{
+		/**
+		 * Constructor for ReleaseFromIce.
+		 */
 		public ReleaseFromIce()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -89,6 +120,9 @@ public class IceKnightNormal extends Fighter
 		}
 	}
 	
+	/**
+	 * Method teleportHome.
+	 */
 	@Override
 	protected void teleportHome()
 	{

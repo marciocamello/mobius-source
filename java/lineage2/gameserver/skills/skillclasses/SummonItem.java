@@ -21,14 +21,37 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SummonItem extends Skill
 {
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _minId.
+	 */
 	private final int _minId;
+	/**
+	 * Field _maxId.
+	 */
 	private final int _maxId;
+	/**
+	 * Field _minCount.
+	 */
 	private final long _minCount;
+	/**
+	 * Field _maxCount.
+	 */
 	private final long _maxCount;
 	
+	/**
+	 * Constructor for SummonItem.
+	 * @param set StatsSet
+	 */
 	public SummonItem(final StatsSet set)
 	{
 		super(set);
@@ -39,6 +62,11 @@ public class SummonItem extends Skill
 		_maxCount = set.getLong("SummonMaxCount", _minCount);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(final Creature activeChar, final List<Creature> targets)
 	{

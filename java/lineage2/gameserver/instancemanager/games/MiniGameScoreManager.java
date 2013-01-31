@@ -31,9 +31,19 @@ import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MiniGameScoreManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(MiniGameScoreManager.class);
+	/**
+	 * Field _scores.
+	 */
 	private final IntObjectMap<Set<String>> _scores = new CTreeIntObjectMap<>(new IntComparator()
 	{
 		@Override
@@ -42,13 +52,23 @@ public class MiniGameScoreManager
 			return o2 - o1;
 		}
 	});
+	/**
+	 * Field _instance.
+	 */
 	private static MiniGameScoreManager _instance = new MiniGameScoreManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return MiniGameScoreManager
+	 */
 	public static MiniGameScoreManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for MiniGameScoreManager.
+	 */
 	private MiniGameScoreManager()
 	{
 		if (Config.EX_JAPAN_MINIGAME)
@@ -57,6 +77,9 @@ public class MiniGameScoreManager
 		}
 	}
 	
+	/**
+	 * Method load.
+	 */
 	private void load()
 	{
 		Connection con = null;
@@ -84,6 +107,11 @@ public class MiniGameScoreManager
 		}
 	}
 	
+	/**
+	 * Method insertScore.
+	 * @param player Player
+	 * @param score int
+	 */
 	public void insertScore(Player player, int score)
 	{
 		if (addScore(player.getName(), score))
@@ -109,6 +137,12 @@ public class MiniGameScoreManager
 		}
 	}
 	
+	/**
+	 * Method addScore.
+	 * @param name String
+	 * @param score int
+	 * @return boolean
+	 */
 	public boolean addScore(String name, int score)
 	{
 		Set<String> set = _scores.get(score);
@@ -119,6 +153,10 @@ public class MiniGameScoreManager
 		return set.add(name);
 	}
 	
+	/**
+	 * Method getScores.
+	 * @return IntObjectMap<Set<String>>
+	 */
 	public IntObjectMap<Set<String>> getScores()
 	{
 		return _scores;

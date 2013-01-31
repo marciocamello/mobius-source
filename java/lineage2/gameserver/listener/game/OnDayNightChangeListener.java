@@ -14,9 +14,19 @@ package lineage2.gameserver.listener.game;
 
 import lineage2.gameserver.listener.GameListener;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnDayNightChangeListener extends GameListener
 {
+	/**
+	 * Method onDay.
+	 */
 	public void onDay();
 	
+	/**
+	 * Method onNight.
+	 */
 	public void onNight();
 }

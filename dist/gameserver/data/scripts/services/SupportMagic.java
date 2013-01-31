@@ -25,8 +25,15 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SupportMagic extends Functions
 {
+	/**
+	 * Field _mageBuff.
+	 */
 	private final static int[][] _mageBuff = new int[][]
 	{
 		{
@@ -78,6 +85,9 @@ public class SupportMagic extends Functions
 			1
 		},
 	};
+	/**
+	 * Field _warrBuff.
+	 */
 	private final static int[][] _warrBuff = new int[][]
 	{
 		{
@@ -135,6 +145,9 @@ public class SupportMagic extends Functions
 			1
 		},
 	};
+	/**
+	 * Field _summonBuff.
+	 */
 	private final static int[][] _summonBuff = new int[][]
 	{
 		{
@@ -210,9 +223,18 @@ public class SupportMagic extends Functions
 			1
 		},
 	};
+	/**
+	 * Field minSupLvl. (value is 1)
+	 */
 	private final static int minSupLvl = 1;
+	/**
+	 * Field maxSupLvl. (value is 75)
+	 */
 	private final static int maxSupLvl = 75;
 	
+	/**
+	 * Method getSupportMagic.
+	 */
 	public void getSupportMagic()
 	{
 		Player player = getSelf();
@@ -220,6 +242,9 @@ public class SupportMagic extends Functions
 		doSupportMagic(npc, player, false);
 	}
 	
+	/**
+	 * Method getSupportServitorMagic.
+	 */
 	public void getSupportServitorMagic()
 	{
 		Player player = getSelf();
@@ -227,6 +252,9 @@ public class SupportMagic extends Functions
 		doSupportMagic(npc, player, true);
 	}
 	
+	/**
+	 * Method getProtectionBlessing.
+	 */
 	public void getProtectionBlessing()
 	{
 		Player player = getSelf();
@@ -243,6 +271,12 @@ public class SupportMagic extends Functions
 		npc.doCast(SkillTable.getInstance().getInfo(5182, 1), player, true);
 	}
 	
+	/**
+	 * Method doSupportMagic.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 * @param servitor boolean
+	 */
 	public static void doSupportMagic(NpcInstance npc, Player player, boolean servitor)
 	{
 		if (player.isCursedWeaponEquipped())

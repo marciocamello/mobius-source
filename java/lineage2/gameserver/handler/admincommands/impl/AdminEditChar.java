@@ -44,39 +44,132 @@ import lineage2.gameserver.utils.Util;
 
 import org.apache.commons.lang3.math.NumberUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("unused")
 public class AdminEditChar implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_edit_character.
+		 */
 		admin_edit_character,
+		/**
+		 * Field admin_character_actions.
+		 */
 		admin_character_actions,
+		/**
+		 * Field admin_current_player.
+		 */
 		admin_current_player,
+		/**
+		 * Field admin_nokarma.
+		 */
 		admin_nokarma,
+		/**
+		 * Field admin_setkarma.
+		 */
 		admin_setkarma,
+		/**
+		 * Field admin_character_list.
+		 */
 		admin_character_list,
+		/**
+		 * Field admin_show_characters.
+		 */
 		admin_show_characters,
+		/**
+		 * Field admin_find_character.
+		 */
 		admin_find_character,
+		/**
+		 * Field admin_save_modifications.
+		 */
 		admin_save_modifications,
+		/**
+		 * Field admin_rec.
+		 */
 		admin_rec,
+		/**
+		 * Field admin_settitle.
+		 */
 		admin_settitle,
+		/**
+		 * Field admin_setclass.
+		 */
 		admin_setclass,
+		/**
+		 * Field admin_setname.
+		 */
 		admin_setname,
+		/**
+		 * Field admin_setsex.
+		 */
 		admin_setsex,
+		/**
+		 * Field admin_setcolor.
+		 */
 		admin_setcolor,
+		/**
+		 * Field admin_add_exp_sp_to_character.
+		 */
 		admin_add_exp_sp_to_character,
+		/**
+		 * Field admin_add_exp_sp.
+		 */
 		admin_add_exp_sp,
+		/**
+		 * Field admin_sethero.
+		 */
 		admin_sethero,
+		/**
+		 * Field admin_setnoble.
+		 */
 		admin_setnoble,
+		/**
+		 * Field admin_trans.
+		 */
 		admin_trans,
+		/**
+		 * Field admin_setsubclass.
+		 */
 		admin_setsubclass,
+		/**
+		 * Field admin_setfame.
+		 */
 		admin_setfame,
+		/**
+		 * Field admin_setbday.
+		 */
 		admin_setbday,
+		/**
+		 * Field admin_give_item.
+		 */
 		admin_give_item,
+		/**
+		 * Field admin_add_bang.
+		 */
 		admin_add_bang,
+		/**
+		 * Field admin_set_bang.
+		 */
 		admin_set_bang
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -611,12 +704,21 @@ public class AdminEditChar implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}
 	
+	/**
+	 * Method listCharacters.
+	 * @param activeChar Player
+	 * @param page int
+	 */
 	private void listCharacters(Player activeChar, int page)
 	{
 		List<Player> players = GameObjectsStorage.getAllPlayers();
@@ -671,6 +773,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method showCharacterList.
+	 * @param activeChar Player
+	 * @param player Player
+	 */
 	public static void showCharacterList(Player activeChar, Player player)
 	{
 		if (player == null)
@@ -737,6 +844,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method setTargetKarma.
+	 * @param activeChar Player
+	 * @param newKarma int
+	 */
 	private void setTargetKarma(Player activeChar, int newKarma)
 	{
 		GameObject target = activeChar.getTarget();
@@ -767,6 +879,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 	}
 	
+	/**
+	 * Method setTargetFame.
+	 * @param activeChar Player
+	 * @param newFame int
+	 */
 	private void setTargetFame(Player activeChar, int newFame)
 	{
 		GameObject target = activeChar.getTarget();
@@ -797,6 +914,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 	}
 	
+	/**
+	 * Method adminModifyCharacter.
+	 * @param activeChar Player
+	 * @param modifications String
+	 */
 	private void adminModifyCharacter(Player activeChar, String modifications)
 	{
 		GameObject target = activeChar.getTarget();
@@ -843,6 +965,10 @@ public class AdminEditChar implements IAdminCommandHandler
 		player.spawnMe(activeChar.getLoc());
 	}
 	
+	/**
+	 * Method editCharacter.
+	 * @param activeChar Player
+	 */
 	private void editCharacter(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
@@ -882,6 +1008,10 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method showCharacterActions.
+	 * @param activeChar Player
+	 */
 	private void showCharacterActions(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
@@ -914,6 +1044,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method findCharacter.
+	 * @param activeChar Player
+	 * @param CharacterToFind String
+	 */
 	private void findCharacter(Player activeChar, String CharacterToFind)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -951,7 +1086,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			replyMSG.append("<center><br>Found " + CharactersFound + " character");
 			if (CharactersFound == 1)
 			{
-				replyMSG.append(".");
+				replyMSG.append('.');
 			}
 			else if (CharactersFound > 1)
 			{
@@ -963,6 +1098,10 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method addExpSp.
+	 * @param activeChar Player
+	 */
 	private void addExpSp(final Player activeChar)
 	{
 		final GameObject target = activeChar.getTarget();
@@ -1006,6 +1145,12 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method adminAddExpSp.
+	 * @param activeChar Player
+	 * @param exp long
+	 * @param sp int
+	 */
 	private void adminAddExpSp(Player activeChar, long exp, int sp)
 	{
 		if (!activeChar.getPlayerAccess().CanEditCharAll)
@@ -1029,6 +1174,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendMessage("Added " + exp + " experience and " + sp + " SP to " + playable.getName() + ".");
 	}
 	
+	/**
+	 * Method setSubclass.
+	 * @param activeChar Player
+	 * @param player Player
+	 */
 	private void setSubclass(final Player activeChar, final Player player)
 	{
 		StringBuilder content = new StringBuilder("<html><body>");
@@ -1052,6 +1202,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(html);
 	}
 	
+	/**
+	 * Method formatClassForDisplay.
+	 * @param className ClassId
+	 * @return String
+	 */
 	private String formatClassForDisplay(ClassId className)
 	{
 		String classNameStr = className.toString();

@@ -12,11 +12,21 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestSEKCustom extends L2GameClientPacket
 {
+	/**
+	 * Field Direction. Field SlotNum.
+	 */
 	@SuppressWarnings("unused")
 	private int SlotNum, Direction;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -24,6 +34,9 @@ public class RequestSEKCustom extends L2GameClientPacket
 		Direction = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

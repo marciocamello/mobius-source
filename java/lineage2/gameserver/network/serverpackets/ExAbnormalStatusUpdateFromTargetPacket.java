@@ -21,11 +21,25 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.IconEffect;
 import lineage2.gameserver.utils.EffectsComparator;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExAbnormalStatusUpdateFromTargetPacket extends L2GameServerPacket implements IconEffectPacket
 {
+	/**
+	 * Field objId.
+	 */
 	private final int objId;
+	/**
+	 * Field _effects.
+	 */
 	private final List<IconEffect> _effects;
 	
+	/**
+	 * Constructor for ExAbnormalStatusUpdateFromTargetPacket.
+	 * @param target Creature
+	 */
 	public ExAbnormalStatusUpdateFromTargetPacket(Creature target)
 	{
 		_effects = new ArrayList<>();
@@ -41,6 +55,9 @@ public class ExAbnormalStatusUpdateFromTargetPacket extends L2GameServerPacket i
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -57,6 +74,14 @@ public class ExAbnormalStatusUpdateFromTargetPacket extends L2GameServerPacket i
 		}
 	}
 	
+	/**
+	 * Method addIconEffect.
+	 * @param skillId int
+	 * @param level int
+	 * @param duration int
+	 * @param obj int
+	 * @see lineage2.gameserver.network.serverpackets.IconEffectPacket#addIconEffect(int, int, int, int)
+	 */
 	@Override
 	public void addIconEffect(int skillId, int level, int duration, int obj)
 	{

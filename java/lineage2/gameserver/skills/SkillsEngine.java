@@ -28,20 +28,42 @@ import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SkillsEngine
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SkillsEngine.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final SkillsEngine _instance = new SkillsEngine();
 	
+	/**
+	 * Method getInstance.
+	 * @return SkillsEngine
+	 */
 	public static SkillsEngine getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for SkillsEngine.
+	 */
 	private SkillsEngine()
 	{
 	}
 	
+	/**
+	 * Method loadSkills.
+	 * @param file File
+	 * @return List<Skill>
+	 */
 	public List<Skill> loadSkills(File file)
 	{
 		if (file == null)
@@ -54,6 +76,10 @@ public class SkillsEngine
 		return doc.getSkills();
 	}
 	
+	/**
+	 * Method loadAllSkills.
+	 * @return Map<Integer,Skill>
+	 */
 	public Map<Integer, Skill> loadAllSkills()
 	{
 		File dir = new File(Config.DATAPACK_ROOT, "data/xml/stats/skills");

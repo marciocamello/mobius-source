@@ -27,10 +27,22 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CertificationFunctions
 {
+	/**
+	 * Field PATH. (value is ""villagemaster/certification/"")
+	 */
 	public static final String PATH = "villagemaster/certification/";
 	
+	/**
+	 * Method showCertificationList.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 */
 	public static void showCertificationList(NpcInstance npc, Player player)
 	{
 		if (!checkConditions(65, npc, player, true))
@@ -40,6 +52,11 @@ public class CertificationFunctions
 		Functions.show(PATH + "certificatelist.htm", player, npc);
 	}
 	
+	/**
+	 * Method getCertification65.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 */
 	public static void getCertification65(NpcInstance npc, Player player)
 	{
 		if (!checkConditions(65, npc, player, Config.ALT_GAME_SUB_BOOK))
@@ -57,6 +74,11 @@ public class CertificationFunctions
 		player.store(true);
 	}
 	
+	/**
+	 * Method getCertification70.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 */
 	public static void getCertification70(NpcInstance npc, Player player)
 	{
 		if (!checkConditions(70, npc, player, Config.ALT_GAME_SUB_BOOK))
@@ -79,6 +101,11 @@ public class CertificationFunctions
 		player.store(true);
 	}
 	
+	/**
+	 * Method getCertification75.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 */
 	public static void getCertification75(NpcInstance npc, Player player)
 	{
 		if (!checkConditions(75, npc, player, Config.ALT_GAME_SUB_BOOK))
@@ -101,6 +128,11 @@ public class CertificationFunctions
 		player.store(true);
 	}
 	
+	/**
+	 * Method getCertification80.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 */
 	public static void getCertification80(NpcInstance npc, Player player)
 	{
 		if (!checkConditions(80, npc, player, Config.ALT_GAME_SUB_BOOK))
@@ -123,6 +155,11 @@ public class CertificationFunctions
 		player.store(true);
 	}
 	
+	/**
+	 * Method cancelCertification.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 */
 	public static void cancelCertification(NpcInstance npc, Player player)
 	{
 		if (player.getInventory().getAdena() < 10000000)
@@ -160,6 +197,14 @@ public class CertificationFunctions
 		Functions.show(new CustomMessage("scripts.services.SubclassSkills.SkillsDeleted", player), player);
 	}
 	
+	/**
+	 * Method checkConditions.
+	 * @param level int
+	 * @param npc NpcInstance
+	 * @param player Player
+	 * @param first boolean
+	 * @return boolean
+	 */
 	public static boolean checkConditions(int level, NpcInstance npc, Player player, boolean first)
 	{
 		if (player.getLevel() < level)

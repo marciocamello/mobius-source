@@ -15,13 +15,31 @@ package lineage2.gameserver.templates;
 import java.util.Collection;
 import java.util.TreeMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ShuttleTemplate extends CharTemplate
 {
+	/**
+	 * @author Mobius
+	 */
 	public static class ShuttleDoor
 	{
+		/**
+		 * Field _id.
+		 */
 		private final int _id;
+		/**
+		 * Field unkParam.
+		 */
 		public final int[] unkParam = new int[9];
 		
+		/**
+		 * Constructor for ShuttleDoor.
+		 * @param id int
+		 * @param set StatsSet
+		 */
 		public ShuttleDoor(int id, StatsSet set)
 		{
 			_id = id;
@@ -36,36 +54,67 @@ public final class ShuttleTemplate extends CharTemplate
 			unkParam[8] = set.getInteger("unk_param_8", 0);
 		}
 		
+		/**
+		 * Method getId.
+		 * @return int
+		 */
 		public int getId()
 		{
 			return _id;
 		}
 	}
 	
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
+	/**
+	 * Field _doors.
+	 */
 	private final TreeMap<Integer, ShuttleDoor> _doors = new TreeMap<>();
 	
+	/**
+	 * Constructor for ShuttleTemplate.
+	 * @param id int
+	 */
 	public ShuttleTemplate(int id)
 	{
 		super(CharTemplate.getEmptyStatsSet());
 		_id = id;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
+	/**
+	 * Method getDoors.
+	 * @return Collection<ShuttleDoor>
+	 */
 	public Collection<ShuttleDoor> getDoors()
 	{
 		return _doors.values();
 	}
 	
+	/**
+	 * Method getDoor.
+	 * @param id int
+	 * @return ShuttleDoor
+	 */
 	public ShuttleDoor getDoor(int id)
 	{
 		return _doors.get(id);
 	}
 	
+	/**
+	 * Method addDoor.
+	 * @param door ShuttleDoor
+	 */
 	public void addDoor(ShuttleDoor door)
 	{
 		_doors.put(door.getId(), door);

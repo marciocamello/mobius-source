@@ -20,8 +20,17 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.utils.SiegeUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RideHire extends Functions
 {
+	/**
+	 * Method DialogAppend_30827.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30827(Integer val)
 	{
 		if (val == 0)
@@ -31,6 +40,9 @@ public class RideHire extends Functions
 		return "";
 	}
 	
+	/**
+	 * Method ride_prices.
+	 */
 	public void ride_prices()
 	{
 		Player player = getSelf();
@@ -42,6 +54,10 @@ public class RideHire extends Functions
 		show("scripts/services/ride-prices.htm", player, npc);
 	}
 	
+	/**
+	 * Method ride.
+	 * @param args String[]
+	 */
 	public void ride(String[] args)
 	{
 		Player player = getSelf();
@@ -114,6 +130,12 @@ public class RideHire extends Functions
 		doLimitedRide(player, npc_id, time);
 	}
 	
+	/**
+	 * Method doLimitedRide.
+	 * @param player Player
+	 * @param npc_id Integer
+	 * @param time Integer
+	 */
 	public void doLimitedRide(Player player, Integer npc_id, Integer time)
 	{
 		if (!ride(player, npc_id))
@@ -124,6 +146,9 @@ public class RideHire extends Functions
 		executeTask(player, "services.RideHire", "rideOver", new Object[0], time * 1000);
 	}
 	
+	/**
+	 * Method rideOver.
+	 */
 	public void rideOver()
 	{
 		Player player = getSelf();

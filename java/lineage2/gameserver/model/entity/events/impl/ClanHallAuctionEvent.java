@@ -33,15 +33,30 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanHallAuctionEvent extends SiegeEvent<ClanHall, AuctionSiegeClanObject>
 {
+	/**
+	 * Field _endSiegeDate.
+	 */
 	private final Calendar _endSiegeDate = Calendar.getInstance();
 	
+	/**
+	 * Constructor for ClanHallAuctionEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public ClanHallAuctionEvent(MultiValueSet<String> set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onStart boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onStart)
 	{
@@ -94,6 +109,10 @@ public class ClanHallAuctionEvent extends SiegeEvent<ClanHall, AuctionSiegeClanO
 		}
 	}
 	
+	/**
+	 * Method stopEvent.
+	 * @param step boolean
+	 */
 	@Override
 	public void stopEvent(boolean step)
 	{
@@ -164,12 +183,25 @@ public class ClanHallAuctionEvent extends SiegeEvent<ClanHall, AuctionSiegeClanO
 		super.stopEvent(step);
 	}
 	
+	/**
+	 * Method isParticle.
+	 * @param player Player
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParticle(Player player)
 	{
 		return false;
 	}
 	
+	/**
+	 * Method newSiegeClan.
+	 * @param type String
+	 * @param clanId int
+	 * @param param long
+	 * @param date long
+	 * @return AuctionSiegeClanObject
+	 */
 	@Override
 	public AuctionSiegeClanObject newSiegeClan(String type, int clanId, long param, long date)
 	{
@@ -177,6 +209,10 @@ public class ClanHallAuctionEvent extends SiegeEvent<ClanHall, AuctionSiegeClanO
 		return clan == null ? null : new AuctionSiegeClanObject(type, clan, param, date);
 	}
 	
+	/**
+	 * Method getEndSiegeDate.
+	 * @return Calendar
+	 */
 	public Calendar getEndSiegeDate()
 	{
 		return _endSiegeDate;

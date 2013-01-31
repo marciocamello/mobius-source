@@ -35,27 +35,80 @@ import net.sf.ehcache.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ItemsDAO.class);
+	/**
+	 * Field RESTORE_ITEM. (value is ""SELECT object_id, owner_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, life_time, custom_flags, augmentation_id, attribute_fire, attribute_water, attribute_wind, attribute_earth, attribute_holy, attribute_unholy, agathion_energy
+	 * FROM items WHERE object_id = ?"")
+	 */
 	private final static String RESTORE_ITEM = "SELECT object_id, owner_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, life_time, custom_flags, augmentation_id, attribute_fire, attribute_water, attribute_wind, attribute_earth, attribute_holy, attribute_unholy, agathion_energy FROM items WHERE object_id = ?";
+	/**
+	 * Field RESTORE_OWNER_ITEMS. (value is ""SELECT object_id FROM items WHERE owner_id = ? AND loc = ?"")
+	 */
 	private final static String RESTORE_OWNER_ITEMS = "SELECT object_id FROM items WHERE owner_id = ? AND loc = ?";
+	/**
+	 * Field RESTORE_ITEMS_BY_LOC. (value is ""SELECT object_id FROM items WHERE loc = ?"")
+	 */
 	private final static String RESTORE_ITEMS_BY_LOC = "SELECT object_id FROM items WHERE loc = ?";
+	/**
+	 * Field STORE_ITEM. (value is ""INSERT INTO items (object_id, owner_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, life_time, custom_flags, augmentation_id, attribute_fire, attribute_water, attribute_wind, attribute_earth, attribute_holy, attribute_unholy,
+	 * agathion_energy) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"")
+	 */
 	private final static String STORE_ITEM = "INSERT INTO items (object_id, owner_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, life_time, custom_flags, augmentation_id, attribute_fire, attribute_water, attribute_wind, attribute_earth, attribute_holy, attribute_unholy, agathion_energy) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	/**
+	 * Field UPDATE_ITEM. (value is ""UPDATE items SET owner_id = ?, item_id = ?, count = ?, enchant_level = ?, loc = ?, loc_data = ?, custom_type1 = ?, custom_type2 = ?, life_time = ?, custom_flags = ?, augmentation_id = ?, attribute_fire = ?, attribute_water = ?, attribute_wind = ?,
+	 * attribute_earth = ?, attribute_holy = ?, attribute_unholy = ?, agathion_energy=? WHERE object_id = ?"")
+	 */
 	private final static String UPDATE_ITEM = "UPDATE items SET owner_id = ?, item_id = ?, count = ?, enchant_level = ?, loc = ?, loc_data = ?, custom_type1 = ?, custom_type2 = ?, life_time = ?, custom_flags = ?, augmentation_id = ?, attribute_fire = ?, attribute_water = ?, attribute_wind = ?, attribute_earth = ?, attribute_holy = ?, attribute_unholy = ?, agathion_energy=? WHERE object_id = ?";
+	/**
+	 * Field REMOVE_ITEM. (value is ""DELETE FROM items WHERE object_id = ?"")
+	 */
 	private final static String REMOVE_ITEM = "DELETE FROM items WHERE object_id = ?";
+	/**
+	 * Field instance.
+	 */
 	private final static ItemsDAO instance = new ItemsDAO();
 	
+	/**
+	 * Method getInstance.
+	 * @return ItemsDAO
+	 */
 	public final static ItemsDAO getInstance()
 	{
 		return instance;
 	}
 	
+	/**
+	 * Field load.
+	 */
 	final AtomicLong load = new AtomicLong();
+	/**
+	 * Field insert.
+	 */
 	final AtomicLong insert = new AtomicLong();
+	/**
+	 * Field update.
+	 */
 	final AtomicLong update = new AtomicLong();
+	/**
+	 * Field delete.
+	 */
 	final AtomicLong delete = new AtomicLong();
+	/**
+	 * Field cache.
+	 */
 	private final Cache cache;
+	/**
+	 * Field stats.
+	 */
 	private final JdbcEntityStats stats = new JdbcEntityStats()
 	{
 		@Override
@@ -83,22 +136,38 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		}
 	};
 	
+	/**
+	 * Constructor for ItemsDAO.
+	 */
 	private ItemsDAO()
 	{
 		cache = CacheManager.getInstance().getCache(ItemInstance.class.getName());
 	}
 	
+	/**
+	 * Method getCache.
+	 * @return Cache
+	 */
 	public Cache getCache()
 	{
 		return cache;
 	}
 	
+	/**
+	 * Method getStats.
+	 * @return JdbcEntityStats * @see lineage2.commons.dao.JdbcDAO#getStats()
+	 */
 	@Override
 	public JdbcEntityStats getStats()
 	{
 		return stats;
 	}
 	
+	/**
+	 * Method load0.
+	 * @param objectId int
+	 * @return ItemInstance * @throws SQLException
+	 */
 	private ItemInstance load0(int objectId) throws SQLException
 	{
 		ItemInstance item = null;
@@ -121,6 +190,11 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		return item;
 	}
 	
+	/**
+	 * Method load0.
+	 * @param rset ResultSet
+	 * @return ItemInstance * @throws SQLException
+	 */
 	private ItemInstance load0(ResultSet rset) throws SQLException
 	{
 		ItemInstance item = null;
@@ -150,6 +224,12 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		return item;
 	}
 	
+	/**
+	 * Method save0.
+	 * @param item ItemInstance
+	 * @param statement PreparedStatement
+	 * @throws SQLException
+	 */
 	private void save0(ItemInstance item, PreparedStatement statement) throws SQLException
 	{
 		statement.setInt(1, item.getObjectId());
@@ -173,6 +253,11 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		statement.setInt(19, item.getAgathionEnergy());
 	}
 	
+	/**
+	 * Method save0.
+	 * @param item ItemInstance
+	 * @throws SQLException
+	 */
 	private void save0(ItemInstance item) throws SQLException
 	{
 		Connection con = null;
@@ -191,11 +276,22 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		insert.incrementAndGet();
 	}
 	
+	/**
+	 * Method delete0.
+	 * @param item ItemInstance
+	 * @param statement PreparedStatement
+	 * @throws SQLException
+	 */
 	private void delete0(ItemInstance item, PreparedStatement statement) throws SQLException
 	{
 		statement.setInt(1, item.getObjectId());
 	}
 	
+	/**
+	 * Method delete0.
+	 * @param item ItemInstance
+	 * @throws SQLException
+	 */
 	private void delete0(ItemInstance item) throws SQLException
 	{
 		Connection con = null;
@@ -214,6 +310,12 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		delete.incrementAndGet();
 	}
 	
+	/**
+	 * Method update0.
+	 * @param item ItemInstance
+	 * @param statement PreparedStatement
+	 * @throws SQLException
+	 */
 	private void update0(ItemInstance item, PreparedStatement statement) throws SQLException
 	{
 		statement.setInt(19, item.getObjectId());
@@ -237,6 +339,11 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		statement.setInt(18, item.getAgathionEnergy());
 	}
 	
+	/**
+	 * Method update0.
+	 * @param item ItemInstance
+	 * @throws SQLException
+	 */
 	private void update0(ItemInstance item) throws SQLException
 	{
 		Connection con = null;
@@ -255,6 +362,11 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		update.incrementAndGet();
 	}
 	
+	/**
+	 * Method load.
+	 * @param objectId Integer
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance load(Integer objectId)
 	{
@@ -283,6 +395,11 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		return item;
 	}
 	
+	/**
+	 * Method load.
+	 * @param objectIds Collection<Integer>
+	 * @return Collection<ItemInstance>
+	 */
 	public Collection<ItemInstance> load(Collection<Integer> objectIds)
 	{
 		Collection<ItemInstance> list = Collections.emptyList();
@@ -303,6 +420,10 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		return list;
 	}
 	
+	/**
+	 * Method save.
+	 * @param item ItemInstance
+	 */
 	@Override
 	public void save(ItemInstance item)
 	{
@@ -323,6 +444,10 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		cache.put(new Element(item.getObjectId(), item));
 	}
 	
+	/**
+	 * Method save.
+	 * @param items Collection<ItemInstance>
+	 */
 	public void save(Collection<ItemInstance> items)
 	{
 		if (items.isEmpty())
@@ -335,6 +460,10 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		}
 	}
 	
+	/**
+	 * Method update.
+	 * @param item ItemInstance
+	 */
 	@Override
 	public void update(ItemInstance item)
 	{
@@ -355,6 +484,10 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		cache.putIfAbsent(new Element(item.getObjectId(), item));
 	}
 	
+	/**
+	 * Method update.
+	 * @param items Collection<ItemInstance>
+	 */
 	public void update(Collection<ItemInstance> items)
 	{
 		if (items.isEmpty())
@@ -367,6 +500,10 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		}
 	}
 	
+	/**
+	 * Method saveOrUpdate.
+	 * @param item ItemInstance
+	 */
 	@Override
 	public void saveOrUpdate(ItemInstance item)
 	{
@@ -380,6 +517,10 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		}
 	}
 	
+	/**
+	 * Method saveOrUpdate.
+	 * @param items Collection<ItemInstance>
+	 */
 	public void saveOrUpdate(Collection<ItemInstance> items)
 	{
 		if (items.isEmpty())
@@ -392,6 +533,10 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		}
 	}
 	
+	/**
+	 * Method delete.
+	 * @param item ItemInstance
+	 */
 	@Override
 	public void delete(ItemInstance item)
 	{
@@ -412,6 +557,10 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		cache.remove(item.getObjectId());
 	}
 	
+	/**
+	 * Method delete.
+	 * @param items Collection<ItemInstance>
+	 */
 	public void delete(Collection<ItemInstance> items)
 	{
 		if (items.isEmpty())
@@ -424,6 +573,12 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		}
 	}
 	
+	/**
+	 * Method getItemsByOwnerIdAndLoc.
+	 * @param ownerId int
+	 * @param loc ItemLocation
+	 * @return Collection<ItemInstance>
+	 */
 	public Collection<ItemInstance> getItemsByOwnerIdAndLoc(int ownerId, ItemLocation loc)
 	{
 		Collection<Integer> objectIds = Collections.emptyList();
@@ -455,6 +610,11 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		return load(objectIds);
 	}
 	
+	/**
+	 * Method getItemsByLoc.
+	 * @param loc ItemLocation
+	 * @return Collection<ItemInstance>
+	 */
 	public Collection<ItemInstance> getItemsByLoc(ItemLocation loc)
 	{
 		Collection<Integer> objectIds = Collections.emptyList();

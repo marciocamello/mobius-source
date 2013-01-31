@@ -14,15 +14,29 @@ package lineage2.gameserver.network.loginservercon.gspackets;
 
 import lineage2.gameserver.network.loginservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OnlineStatus extends SendablePacket
 {
+	/**
+	 * Field _online.
+	 */
 	private final boolean _online;
 	
+	/**
+	 * Constructor for OnlineStatus.
+	 * @param online boolean
+	 */
 	public OnlineStatus(boolean online)
 	{
 		_online = online;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

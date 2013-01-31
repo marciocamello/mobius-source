@@ -28,21 +28,56 @@ import lineage2.gameserver.model.entity.residence.Residence;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SiegeClanDAO
 {
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT clan_id, param, date FROM siege_clans WHERE residence_id=? AND type=? ORDER BY date"")
+	 */
 	public static final String SELECT_SQL_QUERY = "SELECT clan_id, param, date FROM siege_clans WHERE residence_id=? AND type=? ORDER BY date";
+	/**
+	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO siege_clans(residence_id, clan_id, param, type, date) VALUES (?, ?, ?, ?, ?)"")
+	 */
 	public static final String INSERT_SQL_QUERY = "INSERT INTO siege_clans(residence_id, clan_id, param, type, date) VALUES (?, ?, ?, ?, ?)";
+	/**
+	 * Field UPDATE_SQL_QUERY. (value is ""UPDATE siege_clans SET type=?, param=? WHERE residence_id=? AND clan_id=?"")
+	 */
 	public static final String UPDATE_SQL_QUERY = "UPDATE siege_clans SET type=?, param=? WHERE residence_id=? AND clan_id=?";
+	/**
+	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM siege_clans WHERE residence_id=? AND clan_id=? AND type=?"")
+	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM siege_clans WHERE residence_id=? AND clan_id=? AND type=?";
+	/**
+	 * Field DELETE_SQL_QUERY2. (value is ""DELETE FROM siege_clans WHERE residence_id=?"")
+	 */
 	public static final String DELETE_SQL_QUERY2 = "DELETE FROM siege_clans WHERE residence_id=?";
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SiegeClanDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final SiegeClanDAO _instance = new SiegeClanDAO();
 	
+	/**
+	 * Method getInstance.
+	 * @return SiegeClanDAO
+	 */
 	public static SiegeClanDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method load.
+	 * @param residence Residence
+	 * @param name String
+	 * @return List<SiegeClanObject>
+	 */
 	public List<SiegeClanObject> load(Residence residence, String name)
 	{
 		List<SiegeClanObject> siegeClans = Collections.emptyList();
@@ -84,6 +119,11 @@ public class SiegeClanDAO
 		return siegeClans;
 	}
 	
+	/**
+	 * Method insert.
+	 * @param residence Residence
+	 * @param siegeClan SiegeClanObject
+	 */
 	public void insert(Residence residence, SiegeClanObject siegeClan)
 	{
 		Connection con = null;
@@ -109,6 +149,11 @@ public class SiegeClanDAO
 		}
 	}
 	
+	/**
+	 * Method delete.
+	 * @param residence Residence
+	 * @param siegeClan SiegeClanObject
+	 */
 	public void delete(Residence residence, SiegeClanObject siegeClan)
 	{
 		Connection con = null;
@@ -132,6 +177,10 @@ public class SiegeClanDAO
 		}
 	}
 	
+	/**
+	 * Method delete.
+	 * @param residence Residence
+	 */
 	public void delete(Residence residence)
 	{
 		Connection con = null;
@@ -153,6 +202,11 @@ public class SiegeClanDAO
 		}
 	}
 	
+	/**
+	 * Method update.
+	 * @param residence Residence
+	 * @param siegeClan SiegeClanObject
+	 */
 	public void update(Residence residence, SiegeClanObject siegeClan)
 	{
 		Connection con = null;

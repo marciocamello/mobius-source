@@ -12,22 +12,48 @@
  */
 package lineage2.gameserver.network;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GameCrypt
 {
+	/**
+	 * Field _outKey. Field _inKey.
+	 */
 	private final byte[] _inKey = new byte[16], _outKey = new byte[16];
+	/**
+	 * Field _isEnabled.
+	 */
 	private boolean _isEnabled = false;
 	
+	/**
+	 * Method setKey.
+	 * @param key byte[]
+	 */
 	public void setKey(byte[] key)
 	{
 		System.arraycopy(key, 0, _inKey, 0, 16);
 		System.arraycopy(key, 0, _outKey, 0, 16);
 	}
 	
+	/**
+	 * Method setKey.
+	 * @param key byte[]
+	 * @param value boolean
+	 */
 	public void setKey(byte[] key, boolean value)
 	{
 		setKey(key);
 	}
 	
+	/**
+	 * Method decrypt.
+	 * @param raw byte[]
+	 * @param offset int
+	 * @param size int
+	 * @return boolean
+	 */
 	public boolean decrypt(byte[] raw, final int offset, final int size)
 	{
 		if (!_isEnabled)
@@ -53,6 +79,12 @@ public class GameCrypt
 		return true;
 	}
 	
+	/**
+	 * Method encrypt.
+	 * @param raw byte[]
+	 * @param offset int
+	 * @param size int
+	 */
 	public void encrypt(byte[] raw, final int offset, final int size)
 	{
 		if (!_isEnabled)

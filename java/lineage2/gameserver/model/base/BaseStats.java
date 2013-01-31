@@ -28,8 +28,15 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum BaseStats
 {
+	/**
+	 * Field STR.
+	 */
 	STR
 	{
 		@Override
@@ -50,6 +57,9 @@ public enum BaseStats
 			return Math.min(2. - Math.sqrt(calcBonus(actor)), 1.);
 		}
 	},
+	/**
+	 * Field INT.
+	 */
 	INT
 	{
 		@Override
@@ -64,6 +74,9 @@ public enum BaseStats
 			return actor == null ? 1. : INTbonus[actor.getINT()];
 		}
 	},
+	/**
+	 * Field DEX.
+	 */
 	DEX
 	{
 		@Override
@@ -78,6 +91,9 @@ public enum BaseStats
 			return actor == null ? 1. : DEXbonus[actor.getDEX()];
 		}
 	},
+	/**
+	 * Field WIT.
+	 */
 	WIT
 	{
 		@Override
@@ -92,6 +108,9 @@ public enum BaseStats
 			return actor == null ? 1. : WITbonus[actor.getWIT()];
 		}
 	},
+	/**
+	 * Field CON.
+	 */
 	CON
 	{
 		@Override
@@ -106,6 +125,9 @@ public enum BaseStats
 			return actor == null ? 1. : CONbonus[actor.getCON()];
 		}
 	},
+	/**
+	 * Field MEN.
+	 */
 	MEN
 	{
 		@Override
@@ -120,32 +142,82 @@ public enum BaseStats
 			return actor == null ? 1. : MENbonus[actor.getMEN()];
 		}
 	},
+	/**
+	 * Field NONE.
+	 */
 	NONE;
+	/**
+	 * Field VALUES.
+	 */
 	public static final BaseStats[] VALUES = values();
+	/**
+	 * Field _log.
+	 */
 	protected static final Logger _log = LoggerFactory.getLogger(BaseStats.class);
+	/**
+	 * Field MAX_STAT_VALUE. (value is 201)
+	 */
 	private static final int MAX_STAT_VALUE = 201;
+	/**
+	 * Field STRbonus.
+	 */
 	static final double[] STRbonus = new double[MAX_STAT_VALUE];
+	/**
+	 * Field INTbonus.
+	 */
 	static final double[] INTbonus = new double[MAX_STAT_VALUE];
+	/**
+	 * Field DEXbonus.
+	 */
 	static final double[] DEXbonus = new double[MAX_STAT_VALUE];
+	/**
+	 * Field WITbonus.
+	 */
 	static final double[] WITbonus = new double[MAX_STAT_VALUE];
+	/**
+	 * Field CONbonus.
+	 */
 	static final double[] CONbonus = new double[MAX_STAT_VALUE];
+	/**
+	 * Field MENbonus.
+	 */
 	static final double[] MENbonus = new double[MAX_STAT_VALUE];
 	
+	/**
+	 * Method getStat.
+	 * @param actor Creature
+	 * @return int
+	 */
 	public int getStat(Creature actor)
 	{
 		return 1;
 	}
 	
+	/**
+	 * Method calcBonus.
+	 * @param actor Creature
+	 * @return double
+	 */
 	public double calcBonus(Creature actor)
 	{
 		return 1.;
 	}
 	
+	/**
+	 * Method calcChanceMod.
+	 * @param actor Creature
+	 * @return double
+	 */
 	public double calcChanceMod(Creature actor)
 	{
 		return 2. - Math.sqrt(calcBonus(actor));
 	}
 	
+	/**
+	 * Method valueOfXml.
+	 * @param name String
+	 * @return BaseStats
+	 */
 	public static final BaseStats valueOfXml(String name)
 	{
 		name = name.intern();

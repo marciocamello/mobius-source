@@ -14,11 +14,29 @@ package lineage2.gameserver.instancemanager.itemauction;
 
 import lineage2.commons.lang.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum ItemAuctionState
 {
+	/**
+	 * Field CREATED.
+	 */
 	CREATED,
+	/**
+	 * Field STARTED.
+	 */
 	STARTED,
+	/**
+	 * Field FINISHED.
+	 */
 	FINISHED;
+	/**
+	 * Method stateForStateId.
+	 * @param stateId int
+	 * @return ItemAuctionState
+	 */
 	public static final ItemAuctionState stateForStateId(int stateId)
 	{
 		return ArrayUtils.valid(values(), stateId);

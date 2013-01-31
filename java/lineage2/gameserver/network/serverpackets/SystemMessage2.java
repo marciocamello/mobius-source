@@ -16,13 +16,28 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SystemMessage2 extends SysMsgContainer<SystemMessage2>
 {
+	/**
+	 * Constructor for SystemMessage2.
+	 * @param message SystemMsg
+	 */
 	public SystemMessage2(SystemMsg message)
 	{
 		super(message);
 	}
 	
+	/**
+	 * Method obtainItems.
+	 * @param itemId int
+	 * @param count long
+	 * @param enchantLevel int
+	 * @return SystemMessage2
+	 */
 	public static SystemMessage2 obtainItems(int itemId, long count, int enchantLevel)
 	{
 		if (itemId == 57)
@@ -40,11 +55,24 @@ public class SystemMessage2 extends SysMsgContainer<SystemMessage2>
 		return new SystemMessage2(SystemMsg.YOU_HAVE_EARNED_S1).addItemName(itemId);
 	}
 	
+	/**
+	 * Method obtainItems.
+	 * @param item ItemInstance
+	 * @return SystemMessage2
+	 */
 	public static SystemMessage2 obtainItems(ItemInstance item)
 	{
 		return obtainItems(item.getItemId(), item.getCount(), item.isEquipable() ? item.getEnchantLevel() : 0);
 	}
 	
+	/**
+	 * Method obtainItemsBy.
+	 * @param itemId int
+	 * @param count long
+	 * @param enchantLevel int
+	 * @param target Creature
+	 * @return SystemMessage2
+	 */
 	public static SystemMessage2 obtainItemsBy(int itemId, long count, int enchantLevel, Creature target)
 	{
 		if (count > 1)
@@ -58,11 +86,23 @@ public class SystemMessage2 extends SysMsgContainer<SystemMessage2>
 		return new SystemMessage2(SystemMsg.C1_HAS_OBTAINED_S2).addName(target).addItemName(itemId);
 	}
 	
+	/**
+	 * Method obtainItemsBy.
+	 * @param item ItemInstance
+	 * @param target Creature
+	 * @return SystemMessage2
+	 */
 	public static SystemMessage2 obtainItemsBy(ItemInstance item, Creature target)
 	{
 		return obtainItemsBy(item.getItemId(), item.getCount(), item.isEquipable() ? item.getEnchantLevel() : 0, target);
 	}
 	
+	/**
+	 * Method removeItems.
+	 * @param itemId int
+	 * @param count long
+	 * @return SystemMessage2
+	 */
 	public static SystemMessage2 removeItems(int itemId, long count)
 	{
 		if (itemId == 57)
@@ -76,11 +116,19 @@ public class SystemMessage2 extends SysMsgContainer<SystemMessage2>
 		return new SystemMessage2(SystemMsg.S1_HAS_DISAPPEARED).addItemName(itemId);
 	}
 	
+	/**
+	 * Method removeItems.
+	 * @param item ItemInstance
+	 * @return SystemMessage2
+	 */
 	public static SystemMessage2 removeItems(ItemInstance item)
 	{
 		return removeItems(item.getItemId(), item.getCount());
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

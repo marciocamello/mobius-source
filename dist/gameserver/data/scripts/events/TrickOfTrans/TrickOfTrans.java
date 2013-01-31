@@ -30,33 +30,113 @@ import lineage2.gameserver.scripts.ScriptFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(TrickOfTrans.class);
+	/**
+	 * Field EVENT_MANAGER_ID.
+	 */
 	private static int EVENT_MANAGER_ID = 32132;
+	/**
+	 * Field CHESTS_ID.
+	 */
 	private static int CHESTS_ID = 13036;
+	/**
+	 * Field RED_PSTC.
+	 */
 	private static int RED_PSTC = 9162;
+	/**
+	 * Field BLUE_PSTC.
+	 */
 	private static int BLUE_PSTC = 9163;
+	/**
+	 * Field ORANGE_PSTC.
+	 */
 	private static int ORANGE_PSTC = 9164;
+	/**
+	 * Field BLACK_PSTC.
+	 */
 	private static int BLACK_PSTC = 9165;
+	/**
+	 * Field WHITE_PSTC.
+	 */
 	private static int WHITE_PSTC = 9166;
+	/**
+	 * Field GREEN_PSTC.
+	 */
 	private static int GREEN_PSTC = 9167;
+	/**
+	 * Field RED_PSTC_R.
+	 */
 	private static int RED_PSTC_R = 9171;
+	/**
+	 * Field BLUE_PSTC_R.
+	 */
 	private static int BLUE_PSTC_R = 9172;
+	/**
+	 * Field ORANGE_PSTC_R.
+	 */
 	private static int ORANGE_PSTC_R = 9173;
+	/**
+	 * Field BLACK_PSTC_R.
+	 */
 	private static int BLACK_PSTC_R = 9174;
+	/**
+	 * Field WHITE_PSTC_R.
+	 */
 	private static int WHITE_PSTC_R = 9175;
+	/**
+	 * Field GREEN_PSTC_R.
+	 */
 	private static int GREEN_PSTC_R = 9176;
+	/**
+	 * Field A_CHEST_KEY.
+	 */
 	private static int A_CHEST_KEY = 9205;
+	/**
+	 * Field _active.
+	 */
 	private static boolean _active = false;
+	/**
+	 * Field _em_spawns.
+	 */
 	private static final ArrayList<SimpleSpawner> _em_spawns = new ArrayList<>();
+	/**
+	 * Field _ch_spawns.
+	 */
 	private static final ArrayList<SimpleSpawner> _ch_spawns = new ArrayList<>();
+	/**
+	 * Field PhilosophersStoneOre.
+	 */
 	private static int PhilosophersStoneOre = 9168;
+	/**
+	 * Field PhilosophersStoneOreMax.
+	 */
 	private static int PhilosophersStoneOreMax = 17;
+	/**
+	 * Field PhilosophersStoneConversionFormula.
+	 */
 	private static int PhilosophersStoneConversionFormula = 9169;
+	/**
+	 * Field MagicReagents.
+	 */
 	private static int MagicReagents = 9170;
+	/**
+	 * Field MagicReagentsMax.
+	 */
 	private static int MagicReagentsMax = 30;
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -73,11 +153,18 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return IsActive("trickoftrans");
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		final Player player = getSelf();
@@ -99,6 +186,9 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		final Player player = getSelf();
@@ -120,6 +210,11 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(final Player player)
 	{
@@ -129,18 +224,29 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	private void spawnEventManagers()
 	{
 		final int EVENT_MANAGERS[][] =
@@ -333,12 +439,21 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 		SpawnNPCs(CHESTS_ID, CHESTS, _ch_spawns);
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_em_spawns);
 		deSpawnNPCs(_ch_spawns);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(final Creature cha, final Creature killer)
 	{
@@ -348,6 +463,9 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 		}
 	}
 	
+	/**
+	 * Method accept.
+	 */
 	public void accept()
 	{
 		final Player player = getSelf();
@@ -382,6 +500,9 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 		show("scripts/events/TrickOfTrans/TrickOfTrans_01.htm", player);
 	}
 	
+	/**
+	 * Method open.
+	 */
 	public void open()
 	{
 		final Player player = getSelf();

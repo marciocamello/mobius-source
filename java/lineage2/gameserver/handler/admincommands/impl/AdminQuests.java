@@ -24,14 +24,35 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminQuests implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_quests.
+		 */
 		admin_quests,
+		/**
+		 * Field admin_quest.
+		 */
 		admin_quest
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -77,6 +98,13 @@ public class AdminQuests implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method cmd_Clear.
+	 * @param _quest Quest
+	 * @param wordList String[]
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	private boolean cmd_Clear(Quest _quest, String[] wordList, Player activeChar)
 	{
 		Player targetChar = getTargetChar(wordList, 3, activeChar);
@@ -90,6 +118,13 @@ public class AdminQuests implements IAdminCommandHandler
 		return ShowQuestList(targetChar, activeChar);
 	}
 	
+	/**
+	 * Method cmd_Show.
+	 * @param _quest Quest
+	 * @param wordList String[]
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	private boolean cmd_Show(Quest _quest, String[] wordList, Player activeChar)
 	{
 		Player targetChar = getTargetChar(wordList, 3, activeChar);
@@ -102,11 +137,29 @@ public class AdminQuests implements IAdminCommandHandler
 		return ShowQuestState(qs, activeChar);
 	}
 	
+	/**
+	 * Field fmtHEAD.
+	 */
 	private static final PrintfFormat fmtHEAD = new PrintfFormat("<center><font color=\"LEVEL\">%s [id=%d]</font><br><edit var=\"new_val\" width=100 height=12></center><br>");
+	/**
+	 * Field fmtRow.
+	 */
 	private static final PrintfFormat fmtRow = new PrintfFormat("<tr><td>%s</td><td>%s</td><td width=30>%s</td></tr>");
+	/**
+	 * Field fmtSetButton.
+	 */
 	private static final PrintfFormat fmtSetButton = new PrintfFormat("<button value=\"Set\" action=\"bypass -h admin_quest %d %s %s %s %s\" width=30 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_ct1.button_df\">");
+	/**
+	 * Field fmtFOOT.
+	 */
 	private static final PrintfFormat fmtFOOT = new PrintfFormat("<br><br><br><center><button value=\"Clear Quest\" action=\"bypass -h admin_quest %d CLEAR %s\" width=100 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_ct1.button_df\"> <button value=\"Quests List\" action=\"bypass -h admin_quests %s\" width=100 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_ct1.button_df\"></center>");
 	
+	/**
+	 * Method ShowQuestState.
+	 * @param qs QuestState
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	private static boolean ShowQuestState(QuestState qs, Player activeChar)
 	{
 		Map<String, String> vars = qs.getVars();
@@ -185,9 +238,21 @@ public class AdminQuests implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Field fmtListRow.
+	 */
 	private static final PrintfFormat fmtListRow = new PrintfFormat("<tr><td><a action=\"bypass -h admin_quest %d %s\">%s</a></td><td>%s</td></tr>");
+	/**
+	 * Field fmtListNew.
+	 */
 	private static final PrintfFormat fmtListNew = new PrintfFormat("<tr><td><edit var=\"new_quest\" width=100 height=12></td><td><button value=\"Add\" action=\"bypass -h admin_quest $new_quest STATE 2 %s\" width=40 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 	
+	/**
+	 * Method ShowQuestList.
+	 * @param targetChar Player
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	private static boolean ShowQuestList(Player targetChar, Player activeChar)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -215,6 +280,13 @@ public class AdminQuests implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method cmd_Var.
+	 * @param _quest Quest
+	 * @param wordList String[]
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	private boolean cmd_Var(Quest _quest, String[] wordList, Player activeChar)
 	{
 		if (wordList.length < 5)
@@ -241,6 +313,13 @@ public class AdminQuests implements IAdminCommandHandler
 		return ShowQuestState(qs, activeChar);
 	}
 	
+	/**
+	 * Method cmd_State.
+	 * @param _quest Quest
+	 * @param wordList String[]
+	 * @param activeChar Player
+	 * @return boolean
+	 */
 	private boolean cmd_State(Quest _quest, String[] wordList, Player activeChar)
 	{
 		if (wordList.length < 4)
@@ -273,6 +352,13 @@ public class AdminQuests implements IAdminCommandHandler
 		return ShowQuestState(qs, activeChar);
 	}
 	
+	/**
+	 * Method getTargetChar.
+	 * @param wordList String[]
+	 * @param wordListIndex int
+	 * @param activeChar Player
+	 * @return Player
+	 */
 	private Player getTargetChar(String[] wordList, int wordListIndex, Player activeChar)
 	{
 		if ((wordListIndex >= 0) && (wordList.length > wordListIndex))
@@ -292,6 +378,10 @@ public class AdminQuests implements IAdminCommandHandler
 		return activeChar;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

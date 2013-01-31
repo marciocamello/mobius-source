@@ -22,19 +22,35 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Mucrokian extends Fighter
 {
+	/**
+	 * Field MsgText.
+	 */
 	public static final NpcString[] MsgText =
 	{
 		NpcString.PEUNGLUI_MUGLANEP_NAIA_WAGANAGEL_PEUTAGUN,
 		NpcString.PEUNGLUI_MUGLANEP
 	};
 	
+	/**
+	 * Constructor for Mucrokian.
+	 * @param actor NpcInstance
+	 */
 	public Mucrokian(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

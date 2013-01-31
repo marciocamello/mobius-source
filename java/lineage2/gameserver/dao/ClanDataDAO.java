@@ -28,34 +28,78 @@ import lineage2.gameserver.tables.ClanTable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanDataDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ClanDataDAO.class);
+	/**
+	 * Field _instance.
+	 */
 	private static final ClanDataDAO _instance = new ClanDataDAO();
+	/**
+	 * Field SELECT_CASTLE_OWNER. (value is ""SELECT clan_id FROM clan_data WHERE hasCastle = ? LIMIT 1"")
+	 */
 	public static final String SELECT_CASTLE_OWNER = "SELECT clan_id FROM clan_data WHERE hasCastle = ? LIMIT 1";
+	/**
+	 * Field SELECT_FORTRESS_OWNER. (value is ""SELECT clan_id FROM clan_data WHERE hasFortress = ? LIMIT 1"")
+	 */
 	public static final String SELECT_FORTRESS_OWNER = "SELECT clan_id FROM clan_data WHERE hasFortress = ? LIMIT 1";
+	/**
+	 * Field SELECT_CLANHALL_OWNER. (value is ""SELECT clan_id FROM clan_data WHERE hasHideout = ? LIMIT 1"")
+	 */
 	public static final String SELECT_CLANHALL_OWNER = "SELECT clan_id FROM clan_data WHERE hasHideout = ? LIMIT 1";
 	
+	/**
+	 * Method getInstance.
+	 * @return ClanDataDAO
+	 */
 	public static ClanDataDAO getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method getOwner.
+	 * @param c Castle
+	 * @return Clan
+	 */
 	public Clan getOwner(Castle c)
 	{
 		return getOwner(c, SELECT_CASTLE_OWNER);
 	}
 	
+	/**
+	 * Method getOwner.
+	 * @param f Fortress
+	 * @return Clan
+	 */
 	public Clan getOwner(Fortress f)
 	{
 		return getOwner(f, SELECT_FORTRESS_OWNER);
 	}
 	
+	/**
+	 * Method getOwner.
+	 * @param c ClanHall
+	 * @return Clan
+	 */
 	public Clan getOwner(ClanHall c)
 	{
 		return getOwner(c, SELECT_CLANHALL_OWNER);
 	}
 	
+	/**
+	 * Method getOwner.
+	 * @param residence Residence
+	 * @param sql String
+	 * @return Clan
+	 */
 	private Clan getOwner(Residence residence, String sql)
 	{
 		Connection con = null;

@@ -28,16 +28,47 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Kechi extends DefaultAI
 {
+	/**
+	 * Field KechiDoubleCutter.
+	 */
 	final Skill KechiDoubleCutter;
+	/**
+	 * Field KechiAirBlade.
+	 */
 	final Skill KechiAirBlade;
+	/**
+	 * Field Invincible.
+	 */
 	final Skill Invincible;
+	/**
+	 * Field NPCparty60ClanHeal.
+	 */
 	final Skill NPCparty60ClanHeal;
+	/**
+	 * Field GUARD1. (value is 22309)
+	 */
 	private static final int GUARD1 = 22309;
+	/**
+	 * Field GUARD2. (value is 22310)
+	 */
 	private static final int GUARD2 = 22310;
+	/**
+	 * Field GUARD3. (value is 22417)
+	 */
 	private static final int GUARD3 = 22417;
+	/**
+	 * Field guard_spawn_loc.
+	 */
 	private static final Location guard_spawn_loc = new Location(153384, 149528, -12136);
+	/**
+	 * Field guard_run.
+	 */
 	private static final int[][] guard_run = new int[][]
 	{
 		{
@@ -89,16 +120,26 @@ public class Kechi extends DefaultAI
 			-12159
 		}
 	};
+	/**
+	 * Field chat.
+	 */
 	private static String[] chat = new String[]
 	{
 		"Стража, убейте их!",
 		"Стража!",
-		"Стража, на помощь!",
+		"Стража, на помощ�?!",
 		"Добейте их.",
-		"Вы все умрете!"
+		"Вы в�?е умрете!"
 	};
+	/**
+	 * Field stage.
+	 */
 	private int stage = 0;
 	
+	/**
+	 * Constructor for Kechi.
+	 * @param actor NpcInstance
+	 */
 	public Kechi(NpcInstance actor)
 	{
 		super(actor);
@@ -109,6 +150,10 @@ public class Kechi extends DefaultAI
 		NPCparty60ClanHeal = skills.get(5439);
 	}
 	
+	/**
+	 * Method createNewTask.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean createNewTask()
 	{
@@ -194,6 +239,9 @@ public class Kechi extends DefaultAI
 		return chooseTaskAndTargets(r_skill, target, distance);
 	}
 	
+	/**
+	 * Method spawnMobs.
+	 */
 	private void spawnMobs()
 	{
 		stage++;
@@ -229,6 +277,10 @@ public class Kechi extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

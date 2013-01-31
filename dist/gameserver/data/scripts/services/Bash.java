@@ -39,21 +39,58 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Bash.class);
 	
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_bashreload.
+		 */
 		admin_bashreload
 	}
 	
+	/**
+	 * Field wrongPage.
+	 */
 	private static String wrongPage = "scripts/services/Bash-wrongPage.htm";
+	/**
+	 * Field notPage.
+	 */
 	private static String notPage = "scripts/services/Bash-notPage.htm";
+	/**
+	 * Field readPage.
+	 */
 	private static String readPage = "scripts/services/Bash-readPage.htm";
+	/**
+	 * Field xmlData.
+	 */
 	private static String xmlData = Config.DATAPACK_ROOT + "/data/bash.xml";
+	/**
+	 * Field quotes.
+	 */
 	private static List<String> quotes = new ArrayList<>();
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -66,6 +103,10 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		return true;
 	}
 	
+	/**
+	 * Method showQuote.
+	 * @param var String[]
+	 */
 	public void showQuote(String[] var)
 	{
 		Player player = getSelf();
@@ -103,6 +144,10 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		show(html, player, lastNpc);
 	}
 	
+	/**
+	 * Method parseRSS.
+	 * @return int
+	 */
 	private int parseRSS()
 	{
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -152,6 +197,12 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		return quotesCounter;
 	}
 	
+	/**
+	 * Method getPage.
+	 * @param url_server String
+	 * @param url_document String
+	 * @return String
+	 */
 	public String getPage(String url_server, String url_document)
 	{
 		StringBuilder buf = new StringBuilder();
@@ -196,6 +247,12 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		return buf.toString();
 	}
 	
+	/**
+	 * Method navBar.
+	 * @param curPage int
+	 * @param totalPages int
+	 * @return String
+	 */
 	private String navBar(int curPage, int totalPages)
 	{
 		String html;
@@ -204,7 +261,7 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		{
 			html += "<a action=\"bypass -h scripts_services.Bash:showQuote " + (curPage - 1) + "\">";
 		}
-		html += "&lt;&lt;&lt; Назад";
+		html += "&lt;&lt;&lt; �?азад";
 		if (curPage > 1)
 		{
 			html += "</a>";
@@ -221,21 +278,29 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		}
 		html += "</td></tr></table></center>";
 		html += "<table border=0 width=240><tr><td width=150>";
-		html += "Перейти на страницу:</td><td><edit var=\"page\" width=40></td><td>";
+		html += "�?ерейти на �?траницу:</td><td><edit var=\"page\" width=40></td><td>";
 		html += "<button value=\"перейти\" action=\"bypass -h scripts_services.Bash:showQuote $page\" width=60 height=20>";
 		html += "</td></tr></table>";
 		return html;
 	}
 	
+	/**
+	 * Method DialogAppend_30086.
+	 * @param val Integer
+	 * @return String
+	 */
 	public static String DialogAppend_30086(Integer val)
 	{
 		if ((val != 0) || !Config.SERVICES_BASH_ENABLED)
 		{
 			return "";
 		}
-		return "<br><center><a action=\"bypass -h scripts_services.Bash:showQuote 1\">Почитать Bash.ORG.RU</a></center>";
+		return "<br><center><a action=\"bypass -h scripts_services.Bash:showQuote 1\">�?оч��тат�? Bash.ORG.RU</a></center>";
 	}
 	
+	/**
+	 * Method loadData.
+	 */
 	public void loadData()
 	{
 		if (Config.SERVICES_BASH_RELOAD_TIME > 0)
@@ -282,6 +347,10 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		_log.info("Service: Bash - RSS data parsed: loaded " + parse + " quotes.");
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -293,16 +362,29 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

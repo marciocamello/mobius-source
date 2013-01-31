@@ -30,12 +30,31 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DragonValley implements ScriptFile
 {
+	/**
+	 * Field _zoneListener.
+	 */
 	private static ZoneListener _zoneListener;
+	/**
+	 * Field zone.
+	 */
 	private static Zone zone;
+	/**
+	 * Field weight.
+	 */
 	private static final Map<ClassId, Double> weight = new HashMap<>();
+	/**
+	 * Field inzone.
+	 */
 	static List<Player> inzone = new ArrayList<>();
+	/**
+	 * Field buffTask.
+	 */
 	private static ScheduledFuture<?> buffTask;
 	static
 	{
@@ -77,8 +96,17 @@ public class DragonValley implements ScriptFile
 		weight.put(ClassId.F_SOUL_HOUND, 0.3);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -88,6 +116,12 @@ public class DragonValley implements ScriptFile
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
@@ -98,13 +132,22 @@ public class DragonValley implements ScriptFile
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class BuffTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for BuffTask.
+		 */
 		public BuffTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -118,6 +161,11 @@ public class DragonValley implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method getBuffLevel.
+	 * @param pc Player
+	 * @return int
+	 */
 	int getBuffLevel(Player pc)
 	{
 		if (pc.getParty() == null)
@@ -145,6 +193,11 @@ public class DragonValley implements ScriptFile
 		return (int) Math.max(0, Math.min(3, Math.round(points * getCoefficient(count))));
 	}
 	
+	/**
+	 * Method getCoefficient.
+	 * @param count int
+	 * @return double
+	 */
 	private double getCoefficient(int count)
 	{
 		double cf;
@@ -174,6 +227,10 @@ public class DragonValley implements ScriptFile
 		return cf;
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -183,6 +240,10 @@ public class DragonValley implements ScriptFile
 		buffTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new BuffTask(), 1000L, 60000L);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -190,6 +251,10 @@ public class DragonValley implements ScriptFile
 		zone.removeListener(_zoneListener);
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

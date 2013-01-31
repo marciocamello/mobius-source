@@ -24,10 +24,20 @@ import lineage2.gameserver.model.items.etcitems.CrystallizationManager;
 import lineage2.gameserver.network.serverpackets.ExGetCrystalizingEstimation;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestCrystallizeEstimate extends L2GameClientPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -35,6 +45,9 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 		readQ();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

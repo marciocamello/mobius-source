@@ -12,17 +12,37 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExReplyWritePost extends L2GameServerPacket
 {
+	/**
+	 * Field STATIC_TRUE.
+	 */
 	public static final L2GameServerPacket STATIC_TRUE = new ExReplyWritePost(1);
+	/**
+	 * Field STATIC_FALSE.
+	 */
 	public static final L2GameServerPacket STATIC_FALSE = new ExReplyWritePost(0);
+	/**
+	 * Field _reply.
+	 */
 	private final int _reply;
 	
+	/**
+	 * Constructor for ExReplyWritePost.
+	 * @param i int
+	 */
 	public ExReplyWritePost(int i)
 	{
 		_reply = i;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

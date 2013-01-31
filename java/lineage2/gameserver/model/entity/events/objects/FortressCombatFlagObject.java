@@ -31,22 +31,47 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttachment
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(FortressCombatFlagObject.class);
+	/**
+	 * Field _item.
+	 */
 	private ItemInstance _item;
+	/**
+	 * Field _location.
+	 */
 	private final Location _location;
+	/**
+	 * Field _event.
+	 */
 	private GlobalEvent _event;
 	
+	/**
+	 * Constructor for FortressCombatFlagObject.
+	 * @param location Location
+	 */
 	public FortressCombatFlagObject(Location location)
 	{
 		_location = location;
 	}
 	
+	/**
+	 * Method spawnObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#spawnObject(GlobalEvent)
+	 */
 	@Override
 	public void spawnObject(GlobalEvent event)
 	{
@@ -62,6 +87,11 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 		_event = event;
 	}
 	
+	/**
+	 * Method despawnObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#despawnObject(GlobalEvent)
+	 */
 	@Override
 	public void despawnObject(GlobalEvent event)
 	{
@@ -83,17 +113,33 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 		_event = null;
 	}
 	
+	/**
+	 * Method refreshObject.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.objects.SpawnableObject#refreshObject(GlobalEvent)
+	 */
 	@Override
 	public void refreshObject(GlobalEvent event)
 	{
 	}
 	
+	/**
+	 * Method onLogout.
+	 * @param player Player
+	 * @see lineage2.gameserver.model.items.attachment.FlagItemAttachment#onLogout(Player)
+	 */
 	@Override
 	public void onLogout(Player player)
 	{
 		onDeath(player, null);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param owner Player
+	 * @param killer Creature
+	 * @see lineage2.gameserver.model.items.attachment.FlagItemAttachment#onDeath(Player, Creature)
+	 */
 	@Override
 	public void onDeath(Player owner, Creature killer)
 	{
@@ -106,6 +152,11 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 		_item.setDropTime(0);
 	}
 	
+	/**
+	 * Method canPickUp.
+	 * @param player Player
+	 * @return boolean * @see lineage2.gameserver.model.items.attachment.PickableAttachment#canPickUp(Player)
+	 */
 	@Override
 	public boolean canPickUp(Player player)
 	{
@@ -126,6 +177,11 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 		return true;
 	}
 	
+	/**
+	 * Method pickUp.
+	 * @param player Player
+	 * @see lineage2.gameserver.model.items.attachment.PickableAttachment#pickUp(Player)
+	 */
 	@Override
 	public void pickUp(Player player)
 	{
@@ -134,6 +190,11 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 		event.broadcastTo(new SystemMessage2(SystemMsg.C1_HAS_ACQUIRED_THE_FLAG).addName(player), SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 	}
 	
+	/**
+	 * Method canAttack.
+	 * @param player Player
+	 * @return boolean * @see lineage2.gameserver.model.items.attachment.FlagItemAttachment#canAttack(Player)
+	 */
 	@Override
 	public boolean canAttack(Player player)
 	{
@@ -141,6 +202,12 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 		return false;
 	}
 	
+	/**
+	 * Method canCast.
+	 * @param player Player
+	 * @param skill Skill
+	 * @return boolean * @see lineage2.gameserver.model.items.attachment.FlagItemAttachment#canCast(Player, Skill)
+	 */
 	@Override
 	public boolean canCast(Player player, Skill skill)
 	{
@@ -153,11 +220,20 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 		return true;
 	}
 	
+	/**
+	 * Method setItem.
+	 * @param item ItemInstance
+	 * @see lineage2.gameserver.model.items.attachment.ItemAttachment#setItem(ItemInstance)
+	 */
 	@Override
 	public void setItem(ItemInstance item)
 	{
 	}
 	
+	/**
+	 * Method getEvent.
+	 * @return GlobalEvent
+	 */
 	public GlobalEvent getEvent()
 	{
 		return _event;

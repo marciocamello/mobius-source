@@ -16,20 +16,41 @@ import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ListenerList<T>
 {
+	/**
+	 * Field listeners.
+	 */
 	protected Set<Listener<T>> listeners = new CopyOnWriteArraySet<>();
 	
+	/**
+	 * Method getListeners.
+	 * @return Collection<Listener<T>>
+	 */
 	public Collection<Listener<T>> getListeners()
 	{
 		return listeners;
 	}
 	
+	/**
+	 * Method add.
+	 * @param listener Listener<T>
+	 * @return boolean
+	 */
 	public boolean add(Listener<T> listener)
 	{
 		return listeners.add(listener);
 	}
 	
+	/**
+	 * Method remove.
+	 * @param listener Listener<T>
+	 * @return boolean
+	 */
 	public boolean remove(Listener<T> listener)
 	{
 		return listeners.remove(listener);

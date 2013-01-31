@@ -32,11 +32,24 @@ import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 {
+	/**
+	 * Field count. Field productId.
+	 */
 	private int productId, count;
+	/**
+	 * Field message. Field topic. Field receiverName.
+	 */
 	private String receiverName, topic, message;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -47,6 +60,9 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 		message = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

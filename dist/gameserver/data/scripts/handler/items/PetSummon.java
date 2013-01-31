@@ -18,11 +18,28 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetSummon extends ScriptItemHandler
 {
+	/**
+	 * Field _itemIds.
+	 */
 	private static final int[] _itemIds = PetDataTable.getPetControlItems();
+	/**
+	 * Field _skillId. (value is 2046)
+	 */
 	private static final int _skillId = 2046;
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -36,6 +53,10 @@ public class PetSummon extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public final int[] getItemIds()
 	{

@@ -16,6 +16,10 @@ import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DoormanInstance extends npc.model.residences.DoormanInstance
 {
 	/**
@@ -23,17 +27,30 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for DoormanInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public DoormanInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method getOpenPriv.
+	 * @return int
+	 */
 	@Override
 	public int getOpenPriv()
 	{
 		return Clan.CP_CH_ENTRY_EXIT;
 	}
 	
+	/**
+	 * Method getResidence.
+	 * @return Residence
+	 */
 	@Override
 	public Residence getResidence()
 	{

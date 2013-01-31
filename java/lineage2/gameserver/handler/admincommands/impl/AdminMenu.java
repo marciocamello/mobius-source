@@ -24,21 +24,60 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.utils.AdminFunctions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("unused")
 public class AdminMenu implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_char_manage.
+		 */
 		admin_char_manage,
+		/**
+		 * Field admin_teleport_character_to_menu.
+		 */
 		admin_teleport_character_to_menu,
+		/**
+		 * Field admin_recall_char_menu.
+		 */
 		admin_recall_char_menu,
+		/**
+		 * Field admin_goto_char_menu.
+		 */
 		admin_goto_char_menu,
+		/**
+		 * Field admin_kick_menu.
+		 */
 		admin_kick_menu,
+		/**
+		 * Field admin_kill_menu.
+		 */
 		admin_kill_menu,
+		/**
+		 * Field admin_ban_menu.
+		 */
 		admin_ban_menu,
+		/**
+		 * Field admin_unban_menu.
+		 */
 		admin_unban_menu
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -126,12 +165,22 @@ public class AdminMenu implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}
 	
+	/**
+	 * Method teleportCharacter.
+	 * @param player Player
+	 * @param loc Location
+	 * @param activeChar Player
+	 */
 	private void teleportCharacter(Player player, Location loc, Player activeChar)
 	{
 		if (player != null)
@@ -141,6 +190,11 @@ public class AdminMenu implements IAdminCommandHandler
 		}
 	}
 	
+	/**
+	 * Method teleportToCharacter.
+	 * @param activeChar Player
+	 * @param target GameObject
+	 */
 	private void teleportToCharacter(Player activeChar, GameObject target)
 	{
 		Player player;

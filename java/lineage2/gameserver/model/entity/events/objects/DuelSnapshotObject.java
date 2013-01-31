@@ -25,22 +25,55 @@ import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DuelSnapshotObject implements Serializable
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _team.
+	 */
 	private final TeamType _team;
+	/**
+	 * Field _player.
+	 */
 	final Player _player;
+	/**
+	 * Field _effects.
+	 */
 	private final List<Effect> _effects;
+	/**
+	 * Field _returnLoc.
+	 */
 	final Location _returnLoc;
+	/**
+	 * Field _currentHp.
+	 */
 	private final double _currentHp;
+	/**
+	 * Field _currentMp.
+	 */
 	private final double _currentMp;
+	/**
+	 * Field _currentCp.
+	 */
 	private final double _currentCp;
 	
+	/**
+	 * Field _isDead.
+	 */
 	private boolean _isDead;
 	
+	/**
+	 * Constructor for DuelSnapshotObject.
+	 * @param player Player
+	 * @param team TeamType
+	 */
 	public DuelSnapshotObject(Player player, TeamType team)
 	{
 		_player = player;
@@ -63,6 +96,10 @@ public class DuelSnapshotObject implements Serializable
 		}
 	}
 	
+	/**
+	 * Method restore.
+	 * @param abnormal boolean
+	 */
 	public void restore(boolean abnormal)
 	{
 		if (!abnormal)
@@ -78,6 +115,9 @@ public class DuelSnapshotObject implements Serializable
 		}
 	}
 	
+	/**
+	 * Method teleport.
+	 */
 	public void teleport()
 	{
 		_player._stablePoint = null;
@@ -96,26 +136,45 @@ public class DuelSnapshotObject implements Serializable
 		}, 5000L);
 	}
 	
+	/**
+	 * Method getPlayer.
+	 * @return Player
+	 */
 	public Player getPlayer()
 	{
 		return _player;
 	}
 	
+	/**
+	 * Method isDead.
+	 * @return boolean
+	 */
 	public boolean isDead()
 	{
 		return _isDead;
 	}
 	
+	/**
+	 * Method setDead.
+	 */
 	public void setDead()
 	{
 		_isDead = true;
 	}
 	
+	/**
+	 * Method getLoc.
+	 * @return Location
+	 */
 	public Location getLoc()
 	{
 		return _returnLoc;
 	}
 	
+	/**
+	 * Method getTeam.
+	 * @return TeamType
+	 */
 	public TeamType getTeam()
 	{
 		return _team;

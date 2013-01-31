@@ -24,37 +24,129 @@ import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ZoneTemplate
 {
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _type.
+	 */
 	private final ZoneType _type;
+	/**
+	 * Field _territory.
+	 */
 	private final Territory _territory;
+	/**
+	 * Field _isEnabled.
+	 */
 	private final boolean _isEnabled;
+	/**
+	 * Field _restartPoints.
+	 */
 	private final List<Location> _restartPoints;
+	/**
+	 * Field _PKrestartPoints.
+	 */
 	private final List<Location> _PKrestartPoints;
+	/**
+	 * Field _restartTime.
+	 */
 	private final long _restartTime;
+	/**
+	 * Field _enteringMessageId.
+	 */
 	private final int _enteringMessageId;
+	/**
+	 * Field _leavingMessageId.
+	 */
 	private final int _leavingMessageId;
+	/**
+	 * Field _affectRace.
+	 */
 	private final Race _affectRace;
+	/**
+	 * Field _target.
+	 */
 	private final ZoneTarget _target;
+	/**
+	 * Field _skill.
+	 */
 	private final Skill _skill;
+	/**
+	 * Field _skillProb.
+	 */
 	private final int _skillProb;
+	/**
+	 * Field _initialDelay.
+	 */
 	private final int _initialDelay;
+	/**
+	 * Field _unitTick.
+	 */
 	private final int _unitTick;
+	/**
+	 * Field _randomTick.
+	 */
 	private final int _randomTick;
+	/**
+	 * Field _damageMessageId.
+	 */
 	private final int _damageMessageId;
+	/**
+	 * Field _damageOnHP.
+	 */
 	private final int _damageOnHP;
+	/**
+	 * Field _damageOnMP.
+	 */
 	private final int _damageOnMP;
+	/**
+	 * Field _moveBonus.
+	 */
 	private final double _moveBonus;
+	/**
+	 * Field _regenBonusHP.
+	 */
 	private final double _regenBonusHP;
+	/**
+	 * Field _regenBonusMP.
+	 */
 	private final double _regenBonusMP;
+	/**
+	 * Field _eventId.
+	 */
 	private final int _eventId;
+	/**
+	 * Field _blockedActions.
+	 */
 	private final String[] _blockedActions;
+	/**
+	 * Field _index.
+	 */
 	private final int _index;
+	/**
+	 * Field _taxById.
+	 */
 	private final int _taxById;
+	/**
+	 * Field _params.
+	 */
 	private final StatsSet _params;
+	/**
+	 * Field _jumpingTrackId.
+	 */
 	private final int _jumpingTrackId;
 	
+	/**
+	 * Constructor for ZoneTemplate.
+	 * @param set StatsSet
+	 */
 	@SuppressWarnings("unchecked")
 	public ZoneTemplate(StatsSet set)
 	{
@@ -103,141 +195,253 @@ public class ZoneTemplate
 		_params = set;
 	}
 	
+	/**
+	 * Method isEnabled.
+	 * @return boolean
+	 */
 	public boolean isEnabled()
 	{
 		return _isEnabled;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method getType.
+	 * @return ZoneType
+	 */
 	public ZoneType getType()
 	{
 		return _type;
 	}
 	
+	/**
+	 * Method getTerritory.
+	 * @return Territory
+	 */
 	public Territory getTerritory()
 	{
 		return _territory;
 	}
 	
+	/**
+	 * Method getEnteringMessageId.
+	 * @return int
+	 */
 	public int getEnteringMessageId()
 	{
 		return _enteringMessageId;
 	}
 	
+	/**
+	 * Method getLeavingMessageId.
+	 * @return int
+	 */
 	public int getLeavingMessageId()
 	{
 		return _leavingMessageId;
 	}
 	
+	/**
+	 * Method getZoneSkill.
+	 * @return Skill
+	 */
 	public Skill getZoneSkill()
 	{
 		return _skill;
 	}
 	
+	/**
+	 * Method getSkillProb.
+	 * @return int
+	 */
 	public int getSkillProb()
 	{
 		return _skillProb;
 	}
 	
+	/**
+	 * Method getInitialDelay.
+	 * @return int
+	 */
 	public int getInitialDelay()
 	{
 		return _initialDelay;
 	}
 	
+	/**
+	 * Method getUnitTick.
+	 * @return int
+	 */
 	public int getUnitTick()
 	{
 		return _unitTick;
 	}
 	
+	/**
+	 * Method getRandomTick.
+	 * @return int
+	 */
 	public int getRandomTick()
 	{
 		return _randomTick;
 	}
 	
+	/**
+	 * Method getZoneTarget.
+	 * @return ZoneTarget
+	 */
 	public ZoneTarget getZoneTarget()
 	{
 		return _target;
 	}
 	
+	/**
+	 * Method getAffectRace.
+	 * @return Race
+	 */
 	public Race getAffectRace()
 	{
 		return _affectRace;
 	}
 	
+	/**
+	 * Method getBlockedActions.
+	 * @return String[]
+	 */
 	public String[] getBlockedActions()
 	{
 		return _blockedActions;
 	}
 	
+	/**
+	 * Method getDamageMessageId.
+	 * @return int
+	 */
 	public int getDamageMessageId()
 	{
 		return _damageMessageId;
 	}
 	
+	/**
+	 * Method getDamageOnHP.
+	 * @return int
+	 */
 	public int getDamageOnHP()
 	{
 		return _damageOnHP;
 	}
 	
+	/**
+	 * Method getDamageOnMP.
+	 * @return int
+	 */
 	public int getDamageOnMP()
 	{
 		return _damageOnMP;
 	}
 	
+	/**
+	 * Method getMoveBonus.
+	 * @return double
+	 */
 	public double getMoveBonus()
 	{
 		return _moveBonus;
 	}
 	
+	/**
+	 * Method getRegenBonusHP.
+	 * @return double
+	 */
 	public double getRegenBonusHP()
 	{
 		return _regenBonusHP;
 	}
 	
+	/**
+	 * Method getRegenBonusMP.
+	 * @return double
+	 */
 	public double getRegenBonusMP()
 	{
 		return _regenBonusMP;
 	}
 	
+	/**
+	 * Method getRestartTime.
+	 * @return long
+	 */
 	public long getRestartTime()
 	{
 		return _restartTime;
 	}
 	
+	/**
+	 * Method getRestartPoints.
+	 * @return List<Location>
+	 */
 	public List<Location> getRestartPoints()
 	{
 		return _restartPoints;
 	}
 	
+	/**
+	 * Method getPKRestartPoints.
+	 * @return List<Location>
+	 */
 	public List<Location> getPKRestartPoints()
 	{
 		return _PKrestartPoints;
 	}
 	
+	/**
+	 * Method getIndex.
+	 * @return int
+	 */
 	public int getIndex()
 	{
 		return _index;
 	}
 	
+	/**
+	 * Method getTaxById.
+	 * @return int
+	 */
 	public int getTaxById()
 	{
 		return _taxById;
 	}
 	
+	/**
+	 * Method getEventId.
+	 * @return int
+	 */
 	public int getEventId()
 	{
 		return _eventId;
 	}
 	
+	/**
+	 * Method getJumpTrackId.
+	 * @return int
+	 */
 	public int getJumpTrackId()
 	{
 		return _jumpingTrackId;
 	}
 	
+	/**
+	 * Method getParams.
+	 * @return MultiValueSet<String>
+	 */
 	public MultiValueSet<String> getParams()
 	{
 		return _params.clone();

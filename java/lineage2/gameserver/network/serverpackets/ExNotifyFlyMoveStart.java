@@ -12,14 +12,27 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ExNotifyFlyMoveStart extends L2GameServerPacket
 {
+	/**
+	 * Field STATIC.
+	 */
 	public static final L2GameServerPacket STATIC = new ExNotifyFlyMoveStart();
 	
+	/**
+	 * Constructor for ExNotifyFlyMoveStart.
+	 */
 	public ExNotifyFlyMoveStart()
 	{
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

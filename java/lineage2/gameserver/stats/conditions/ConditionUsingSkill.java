@@ -14,15 +14,31 @@ package lineage2.gameserver.stats.conditions;
 
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionUsingSkill extends Condition
 {
+	/**
+	 * Field _id.
+	 */
 	private final int _id;
 	
+	/**
+	 * Constructor for ConditionUsingSkill.
+	 * @param id int
+	 */
 	public ConditionUsingSkill(int id)
 	{
 		_id = id;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

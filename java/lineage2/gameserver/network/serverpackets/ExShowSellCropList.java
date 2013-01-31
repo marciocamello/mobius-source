@@ -21,12 +21,31 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.manor.CropProcure;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowSellCropList extends L2GameServerPacket
 {
+	/**
+	 * Field _manorId.
+	 */
 	private int _manorId = 1;
+	/**
+	 * Field _cropsItems.
+	 */
 	private final Map<Integer, ItemInstance> _cropsItems;
+	/**
+	 * Field _castleCrops.
+	 */
 	private final Map<Integer, CropProcure> _castleCrops;
 	
+	/**
+	 * Constructor for ExShowSellCropList.
+	 * @param player Player
+	 * @param manorId int
+	 * @param crops List<CropProcure>
+	 */
 	public ExShowSellCropList(Player player, int manorId, List<CropProcure> crops)
 	{
 		_manorId = manorId;
@@ -50,6 +69,9 @@ public class ExShowSellCropList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	public void writeImpl()
 	{

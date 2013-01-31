@@ -15,17 +15,37 @@ package lineage2.gameserver.model.entity.events.actions;
 import lineage2.gameserver.model.entity.events.EventAction;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ActiveDeactiveAction implements EventAction
 {
+	/**
+	 * Field _active.
+	 */
 	private final boolean _active;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
 	
+	/**
+	 * Constructor for ActiveDeactiveAction.
+	 * @param active boolean
+	 * @param name String
+	 */
 	public ActiveDeactiveAction(boolean active, String name)
 	{
 		_active = active;
 		_name = name;
 	}
 	
+	/**
+	 * Method call.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.EventAction#call(GlobalEvent)
+	 */
 	@Override
 	public void call(GlobalEvent event)
 	{

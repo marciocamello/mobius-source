@@ -14,10 +14,25 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExPCCafePointInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _remainTime. Field _pcBangPoints. Field _pointType. Field _mPeriodType. Field _mAddPoint.
+	 */
 	private final int _mAddPoint, _mPeriodType, _pointType, _pcBangPoints, _remainTime;
 	
+	/**
+	 * Constructor for ExPCCafePointInfo.
+	 * @param player Player
+	 * @param mAddPoint int
+	 * @param mPeriodType int
+	 * @param pointType int
+	 * @param remainTime int
+	 */
 	public ExPCCafePointInfo(Player player, int mAddPoint, int mPeriodType, int pointType, int remainTime)
 	{
 		_pcBangPoints = player.getPcBangPoints();
@@ -27,6 +42,9 @@ public class ExPCCafePointInfo extends L2GameServerPacket
 		_remainTime = remainTime;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

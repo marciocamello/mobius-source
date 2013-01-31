@@ -25,21 +25,42 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FriendList
 {
+	/**
+	 * Field _friendList.
+	 */
 	private Map<Integer, Friend> _friendList = Collections.emptyMap();
+	/**
+	 * Field _owner.
+	 */
 	private final Player _owner;
 	
+	/**
+	 * Constructor for FriendList.
+	 * @param owner Player
+	 */
 	public FriendList(Player owner)
 	{
 		_owner = owner;
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	public void restore()
 	{
 		_friendList = CharacterFriendDAO.getInstance().select(_owner);
 	}
 	
+	/**
+	 * Method removeFriend.
+	 * @param name String
+	 */
 	public void removeFriend(String name)
 	{
 		if (StringUtils.isEmpty(name))
@@ -62,6 +83,10 @@ public class FriendList
 		}
 	}
 	
+	/**
+	 * Method notifyFriends.
+	 * @param login boolean
+	 */
 	public void notifyFriends(boolean login)
 	{
 		for (Friend friend : _friendList.values())
@@ -85,12 +110,21 @@ public class FriendList
 		}
 	}
 	
+	/**
+	 * Method addFriend.
+	 * @param friendPlayer Player
+	 */
 	public void addFriend(Player friendPlayer)
 	{
 		_friendList.put(friendPlayer.getObjectId(), new Friend(friendPlayer));
 		CharacterFriendDAO.getInstance().insert(_owner, friendPlayer);
 	}
 	
+	/**
+	 * Method removeFriend0.
+	 * @param name String
+	 * @return int
+	 */
 	private int removeFriend0(String name)
 	{
 		if (name == null)
@@ -115,11 +149,19 @@ public class FriendList
 		return 0;
 	}
 	
+	/**
+	 * Method getList.
+	 * @return Map<Integer,Friend>
+	 */
 	public Map<Integer, Friend> getList()
 	{
 		return _friendList;
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{

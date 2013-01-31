@@ -14,22 +14,45 @@ package lineage2.gameserver.templates.jump;
 
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class JumpPoint
 {
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
+	/**
+	 * Field _nextWayId.
+	 */
 	private final int _nextWayId;
 	
+	/**
+	 * Constructor for JumpPoint.
+	 * @param loc Location
+	 * @param nextWayId int
+	 */
 	public JumpPoint(Location loc, int nextWayId)
 	{
 		_loc = loc;
 		_nextWayId = nextWayId;
 	}
 	
+	/**
+	 * Method getLocation.
+	 * @return Location
+	 */
 	public Location getLocation()
 	{
 		return _loc;
 	}
 	
+	/**
+	 * Method getNextWayId.
+	 * @return int
+	 */
 	public int getNextWayId()
 	{
 		return _nextWayId;

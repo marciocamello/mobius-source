@@ -40,15 +40,40 @@ import lineage2.gameserver.utils.Util;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExSendPost extends L2GameClientPacket
 {
+	/**
+	 * Field _messageType.
+	 */
 	private int _messageType;
+	/**
+	 * Field _body. Field _topic. Field _recieverName.
+	 */
 	private String _recieverName, _topic, _body;
+	/**
+	 * Field _count.
+	 */
 	private int _count;
+	/**
+	 * Field _items.
+	 */
 	private int[] _items;
+	/**
+	 * Field _itemQ.
+	 */
 	private long[] _itemQ;
+	/**
+	 * Field _price.
+	 */
 	private long _price;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -82,6 +107,9 @@ public class RequestExSendPost extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -141,7 +169,7 @@ public class RequestExSendPost extends L2GameClientPacket
 		}
 		if (_body.length() == 0)
 		{
-			activeChar.sendMessage("Введите текст сообщения");
+			activeChar.sendMessage("Введите тек�?т �?ообщени�?");
 			return;
 		}
 		activeChar.sendMessage("_body=" + _body);

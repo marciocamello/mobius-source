@@ -12,7 +12,15 @@
  */
 package lineage2.commons.net.nio.impl;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface IMMOExecutor<T extends MMOClient>
 {
+	/**
+	 * Method execute.
+	 * @param r Runnable
+	 */
 	public void execute(Runnable r);
 }

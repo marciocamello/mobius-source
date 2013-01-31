@@ -27,18 +27,37 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.templates.InstantZone;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ReflectionUtils
 {
+	/**
+	 * Method getDoor.
+	 * @param id int
+	 * @return DoorInstance
+	 */
 	public static DoorInstance getDoor(int id)
 	{
 		return ReflectionManager.DEFAULT.getDoor(id);
 	}
 	
+	/**
+	 * Method getZone.
+	 * @param name String
+	 * @return Zone
+	 */
 	public static Zone getZone(String name)
 	{
 		return ReflectionManager.DEFAULT.getZone(name);
 	}
 	
+	/**
+	 * Method getZonesByType.
+	 * @param zoneType Zone.ZoneType
+	 * @return List<Zone>
+	 */
 	public static List<Zone> getZonesByType(Zone.ZoneType zoneType)
 	{
 		Collection<Zone> zones = ReflectionManager.DEFAULT.getZones();
@@ -57,18 +76,38 @@ public class ReflectionUtils
 		return zones2;
 	}
 	
+	/**
+	 * Method enterReflection.
+	 * @param invoker Player
+	 * @param instancedZoneId int
+	 * @return Reflection
+	 */
 	public static Reflection enterReflection(Player invoker, int instancedZoneId)
 	{
 		InstantZone iz = InstantZoneHolder.getInstance().getInstantZone(instancedZoneId);
 		return enterReflection(invoker, new Reflection(), iz);
 	}
 	
+	/**
+	 * Method enterReflection.
+	 * @param invoker Player
+	 * @param r Reflection
+	 * @param instancedZoneId int
+	 * @return Reflection
+	 */
 	public static Reflection enterReflection(Player invoker, Reflection r, int instancedZoneId)
 	{
 		InstantZone iz = InstantZoneHolder.getInstance().getInstantZone(instancedZoneId);
 		return enterReflection(invoker, r, iz);
 	}
 	
+	/**
+	 * Method enterReflection.
+	 * @param invoker Player
+	 * @param r Reflection
+	 * @param iz InstantZone
+	 * @return Reflection
+	 */
 	public static Reflection enterReflection(Player invoker, Reflection r, InstantZone iz)
 	{
 		r.init(iz);

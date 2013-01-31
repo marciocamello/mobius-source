@@ -19,14 +19,37 @@ import lineage2.gameserver.model.entity.boat.Shuttle;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShuttleWayEvent extends GlobalEvent
 {
+	/**
+	 * Field _shuttle.
+	 */
 	private final Shuttle _shuttle;
+	/**
+	 * Field _nextFloorLoc.
+	 */
 	private final Location _nextFloorLoc;
+	/**
+	 * Field _floorDoorsId.
+	 */
 	private final TIntArrayList _floorDoorsId = new TIntArrayList();
+	/**
+	 * Field _speed.
+	 */
 	private final int _speed;
+	/**
+	 * Field _returnLoc.
+	 */
 	private final Location _returnLoc;
 	
+	/**
+	 * Constructor for ShuttleWayEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public ShuttleWayEvent(MultiValueSet<String> set)
 	{
 		super(set);
@@ -49,6 +72,9 @@ public class ShuttleWayEvent extends GlobalEvent
 		_shuttle.addFloor(this);
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -59,6 +85,9 @@ public class ShuttleWayEvent extends GlobalEvent
 		_shuttle.moveToLocation(_nextFloorLoc.getX(), _nextFloorLoc.getY(), _nextFloorLoc.getZ(), 0, false);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	@Override
 	public void stopEvent()
 	{
@@ -67,6 +96,10 @@ public class ShuttleWayEvent extends GlobalEvent
 		_shuttle.broadcastCharInfo();
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onInit boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{
@@ -78,22 +111,38 @@ public class ShuttleWayEvent extends GlobalEvent
 		registerActions();
 	}
 	
+	/**
+	 * Method startTimeMillis.
+	 * @return long
+	 */
 	@Override
 	protected long startTimeMillis()
 	{
 		return System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method printInfo.
+	 */
 	@Override
 	protected void printInfo()
 	{
 	}
 	
+	/**
+	 * Method isThisFloorDoor.
+	 * @param doorId int
+	 * @return boolean
+	 */
 	public boolean isThisFloorDoor(int doorId)
 	{
 		return _floorDoorsId.contains(doorId);
 	}
 	
+	/**
+	 * Method getReturnLoc.
+	 * @return Location
+	 */
 	public Location getReturnLoc()
 	{
 		return _returnLoc;

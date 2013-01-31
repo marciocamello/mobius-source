@@ -24,11 +24,24 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.tables.SkillTreeTable;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 {
+	/**
+	 * Field _skillId.
+	 */
 	private int _skillId;
+	/**
+	 * Field _skillLvl.
+	 */
 	private int _skillLvl;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -36,6 +49,9 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 		_skillLvl = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

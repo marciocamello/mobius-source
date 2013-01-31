@@ -33,15 +33,41 @@ import lineage2.gameserver.scripts.ScriptFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SummerMeleons extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SummerMeleons.class);
+	/**
+	 * Field EVENT_MANAGER_ID.
+	 */
 	private static int EVENT_MANAGER_ID = 32636;
+	/**
+	 * Field _spawns.
+	 */
 	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	/**
+	 * Field _active.
+	 */
 	private static boolean _active = false;
+	/**
+	 * Field MultiSellLoaded.
+	 */
 	private static boolean MultiSellLoaded = false;
+	/**
+	 * Field multiSellFile.
+	 */
 	private static File multiSellFile = new File(Config.DATAPACK_ROOT, "data/xml/other/event/SummerMeleons/3790004.xml");
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -59,11 +85,18 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return IsActive("SummerMeleons");
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -86,6 +119,9 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -107,6 +143,9 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	private void spawnEventManagers()
 	{
 		final int EVENT_MANAGERS[][] =
@@ -187,11 +226,17 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 		SpawnNPCs(EVENT_MANAGER_ID, EVENT_MANAGERS, _spawns);
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
 	}
 	
+	/**
+	 * Method loadMultiSell.
+	 */
 	private static void loadMultiSell()
 	{
 		if (MultiSellLoaded)
@@ -202,6 +247,10 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 		MultiSellLoaded = true;
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -213,11 +262,21 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature cha, Creature killer)
 	{
@@ -227,6 +286,11 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 		}
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{

@@ -22,11 +22,24 @@ import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.templates.manor.SeedProduction;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestSetSeed extends L2GameClientPacket
 {
+	/**
+	 * Field _manorId. Field _count.
+	 */
 	private int _count, _manorId;
+	/**
+	 * Field _items.
+	 */
 	private long[] _items;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -51,6 +64,9 @@ public class RequestSetSeed extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

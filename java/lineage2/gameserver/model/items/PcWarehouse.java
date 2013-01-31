@@ -15,18 +15,34 @@ package lineage2.gameserver.model.items;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PcWarehouse extends Warehouse
 {
+	/**
+	 * Constructor for PcWarehouse.
+	 * @param owner Player
+	 */
 	public PcWarehouse(Player owner)
 	{
 		super(owner.getObjectId());
 	}
 	
+	/**
+	 * Constructor for PcWarehouse.
+	 * @param ownerId int
+	 */
 	public PcWarehouse(int ownerId)
 	{
 		super(ownerId);
 	}
 	
+	/**
+	 * Method getItemLocation.
+	 * @return ItemLocation
+	 */
 	@Override
 	public ItemLocation getItemLocation()
 	{

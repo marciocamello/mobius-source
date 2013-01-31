@@ -30,13 +30,33 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CoupleManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CoupleManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static CoupleManager _instance;
+	/**
+	 * Field _couples.
+	 */
 	private List<Couple> _couples;
+	/**
+	 * Field _deletedCouples.
+	 */
 	private List<Couple> _deletedCouples;
 	
+	/**
+	 * Method getInstance.
+	 * @return CoupleManager
+	 */
 	public static CoupleManager getInstance()
 	{
 		if (_instance == null)
@@ -46,6 +66,9 @@ public class CoupleManager
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for CoupleManager.
+	 */
 	public CoupleManager()
 	{
 		_instance = this;
@@ -54,6 +77,9 @@ public class CoupleManager
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new StoreTask(), 10 * 60 * 1000, 10 * 60 * 1000);
 	}
 	
+	/**
+	 * Method load.
+	 */
 	private void load()
 	{
 		Connection con = null;
@@ -86,6 +112,11 @@ public class CoupleManager
 		}
 	}
 	
+	/**
+	 * Method getCouple.
+	 * @param coupleId int
+	 * @return Couple
+	 */
 	public final Couple getCouple(int coupleId)
 	{
 		for (Couple c : getCouples())
@@ -98,6 +129,10 @@ public class CoupleManager
 		return null;
 	}
 	
+	/**
+	 * Method engage.
+	 * @param cha Player
+	 */
 	public void engage(Player cha)
 	{
 		int chaId = cha.getObjectId();
@@ -125,6 +160,10 @@ public class CoupleManager
 		}
 	}
 	
+	/**
+	 * Method notifyPartner.
+	 * @param cha Player
+	 */
 	public void notifyPartner(Player cha)
 	{
 		if (cha.getPartnerId() != 0)
@@ -137,6 +176,11 @@ public class CoupleManager
 		}
 	}
 	
+	/**
+	 * Method createCouple.
+	 * @param player1 Player
+	 * @param player2 Player
+	 */
 	public void createCouple(Player player1, Player player2)
 	{
 		if ((player1 != null) && (player2 != null))
@@ -148,6 +192,10 @@ public class CoupleManager
 		}
 	}
 	
+	/**
+	 * Method getCouples.
+	 * @return List<Couple>
+	 */
 	public final List<Couple> getCouples()
 	{
 		if (_couples == null)
@@ -157,6 +205,10 @@ public class CoupleManager
 		return _couples;
 	}
 	
+	/**
+	 * Method getDeletedCouples.
+	 * @return List<Couple>
+	 */
 	public List<Couple> getDeletedCouples()
 	{
 		if (_deletedCouples == null)
@@ -166,6 +218,9 @@ public class CoupleManager
 		return _deletedCouples;
 	}
 	
+	/**
+	 * Method store.
+	 */
 	public void store()
 	{
 		Connection con = null;
@@ -205,13 +260,22 @@ public class CoupleManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class StoreTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for StoreTask.
+		 */
 		public StoreTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

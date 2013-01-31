@@ -16,17 +16,40 @@ import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeleportLocation extends Location
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _price.
+	 */
 	private final long _price;
+	/**
+	 * Field _item.
+	 */
 	private final ItemTemplate _item;
+	/**
+	 * Field _name.
+	 */
 	private final int _name;
+	/**
+	 * Field _castleId.
+	 */
 	private final int _castleId;
 	
+	/**
+	 * Constructor for TeleportLocation.
+	 * @param item int
+	 * @param price long
+	 * @param name int
+	 * @param castleId int
+	 */
 	public TeleportLocation(int item, long price, int name, int castleId)
 	{
 		_price = price;
@@ -35,21 +58,37 @@ public class TeleportLocation extends Location
 		_castleId = castleId;
 	}
 	
+	/**
+	 * Method getPrice.
+	 * @return long
+	 */
 	public long getPrice()
 	{
 		return _price;
 	}
 	
+	/**
+	 * Method getItem.
+	 * @return ItemTemplate
+	 */
 	public ItemTemplate getItem()
 	{
 		return _item;
 	}
 	
+	/**
+	 * Method getName.
+	 * @return int
+	 */
 	public int getName()
 	{
 		return _name;
 	}
 	
+	/**
+	 * Method getCastleId.
+	 * @return int
+	 */
 	public int getCastleId()
 	{
 		return _castleId;

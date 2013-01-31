@@ -22,12 +22,28 @@ import lineage2.gameserver.model.items.ManufactureItem;
 import lineage2.gameserver.network.serverpackets.RecipeShopMsg;
 import lineage2.gameserver.utils.TradeHelper;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestRecipeShopListSet extends L2GameClientPacket
 {
+	/**
+	 * Field _recipes.
+	 */
 	private int[] _recipes;
+	/**
+	 * Field _prices.
+	 */
 	private long[] _prices;
+	/**
+	 * Field _count.
+	 */
 	private int _count;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -51,6 +67,9 @@ public class RequestRecipeShopListSet extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

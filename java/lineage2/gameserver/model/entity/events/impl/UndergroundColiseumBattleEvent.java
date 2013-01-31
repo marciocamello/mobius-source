@@ -15,13 +15,26 @@ package lineage2.gameserver.model.entity.events.impl;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class UndergroundColiseumBattleEvent extends GlobalEvent
 {
+	/**
+	 * Constructor for UndergroundColiseumBattleEvent.
+	 * @param player1 Player
+	 * @param player2 Player
+	 */
 	protected UndergroundColiseumBattleEvent(Player player1, Player player2)
 	{
 		super(0, player1.getObjectId() + "_" + player2.getObjectId());
 	}
 	
+	/**
+	 * Method announce.
+	 * @param val int
+	 */
 	@Override
 	public void announce(int val)
 	{
@@ -34,12 +47,20 @@ public class UndergroundColiseumBattleEvent extends GlobalEvent
 		}
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onInit boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{
 		registerActions();
 	}
 	
+	/**
+	 * Method startTimeMillis.
+	 * @return long
+	 */
 	@Override
 	protected long startTimeMillis()
 	{

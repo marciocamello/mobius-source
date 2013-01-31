@@ -23,22 +23,48 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EkimusMouthInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field hosattackIzId. (value is 115)
+	 */
 	private static final int hosattackIzId = 115;
+	/**
+	 * Field hoeattackIzId. (value is 119)
+	 */
 	private static final int hoeattackIzId = 119;
+	/**
+	 * Field hosdefenceIzId. (value is 116)
+	 */
 	private static final int hosdefenceIzId = 116;
+	/**
+	 * Field hoedefenceIzId. (value is 120)
+	 */
 	private static final int hoedefenceIzId = 120;
 	
+	/**
+	 * Constructor for EkimusMouthInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public EkimusMouthInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

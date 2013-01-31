@@ -18,9 +18,19 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectTaskManager extends SteppingRunnableQueueManager
 {
+	/**
+	 * Field TICK. (value is 250)
+	 */
 	private final static long TICK = 250L;
+	/**
+	 * Field _instances.
+	 */
 	private final static EffectTaskManager[] _instances = new EffectTaskManager[Config.EFFECT_TASK_MANAGER_COUNT];
 	static
 	{
@@ -29,13 +39,23 @@ public class EffectTaskManager extends SteppingRunnableQueueManager
 			_instances[i] = new EffectTaskManager();
 		}
 	}
+	/**
+	 * Field randomizer.
+	 */
 	private static int randomizer = 0;
 	
+	/**
+	 * Method getInstance.
+	 * @return EffectTaskManager
+	 */
 	public final static EffectTaskManager getInstance()
 	{
 		return _instances[randomizer++ & (_instances.length - 1)];
 	}
 	
+	/**
+	 * Constructor for EffectTaskManager.
+	 */
 	private EffectTaskManager()
 	{
 		super(TICK);
@@ -50,6 +70,11 @@ public class EffectTaskManager extends SteppingRunnableQueueManager
 		}, 30000L, 30000L);
 	}
 	
+	/**
+	 * Method getStats.
+	 * @param num int
+	 * @return CharSequence
+	 */
 	public CharSequence getStats(int num)
 	{
 		return _instances[num].getStats();

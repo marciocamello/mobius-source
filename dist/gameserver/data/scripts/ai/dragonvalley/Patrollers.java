@@ -22,30 +22,59 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Patrollers extends Fighter
 {
+	/**
+	 * Field _points.
+	 */
 	protected Location[] _points;
+	/**
+	 * Field _teleporters.
+	 */
 	private final int[] _teleporters =
 	{
 		22857,
 		22833,
 		22834
 	};
+	/**
+	 * Field _lastPoint.
+	 */
 	private int _lastPoint = 0;
+	/**
+	 * Field _firstThought.
+	 */
 	private boolean _firstThought = true;
 	
+	/**
+	 * Constructor for Patrollers.
+	 * @param actor NpcInstance
+	 */
 	public Patrollers(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = Integer.MAX_VALUE - 10;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{
@@ -58,6 +87,10 @@ public class Patrollers extends Fighter
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -72,6 +105,9 @@ public class Patrollers extends Fighter
 		return true;
 	}
 	
+	/**
+	 * Method onEvtArrived.
+	 */
 	@Override
 	protected void onEvtArrived()
 	{
@@ -79,6 +115,9 @@ public class Patrollers extends Fighter
 		super.onEvtArrived();
 	}
 	
+	/**
+	 * Method startMoveTask.
+	 */
 	private void startMoveTask()
 	{
 		NpcInstance npc = getActor();
@@ -114,11 +153,16 @@ public class Patrollers extends Fighter
 		doTask();
 	}
 	
+	/**
+	 * Method getIndex.
+	 * @param loc Location
+	 * @return int
+	 */
 	private int getIndex(Location loc)
 	{
 		for (int i = 0; i < _points.length; i++)
 		{
-			if (_points[i] == loc)
+			if (_points[i].equals(loc))
 			{
 				return i;
 			}
@@ -126,23 +170,39 @@ public class Patrollers extends Fighter
 		return 0;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method maybeMoveToHome.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean maybeMoveToHome()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method teleportHome.
+	 */
 	@Override
 	protected void teleportHome()
 	{
 	}
 	
+	/**
+	 * Method returnHome.
+	 * @param clearAggro boolean
+	 * @param teleport boolean
+	 */
 	@Override
 	protected void returnHome(boolean clearAggro, boolean teleport)
 	{

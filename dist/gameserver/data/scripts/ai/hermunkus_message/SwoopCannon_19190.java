@@ -18,15 +18,29 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SwoopCannon_19190 extends DefaultAI
 {
+	/**
+	 * Field SKILL_ID. (value is 16023)
+	 */
 	private static final int SKILL_ID = 16023;
 	
+	/**
+	 * Constructor for SwoopCannon_19190.
+	 * @param actor NpcInstance
+	 */
 	public SwoopCannon_19190(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -34,6 +48,12 @@ public class SwoopCannon_19190 extends DefaultAI
 		addTimer(1, 1000 + Rnd.get(500));
 	}
 	
+	/**
+	 * Method onEvtTimer.
+	 * @param timer_id int
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtTimer(int timer_id, Object arg1, Object arg2)
 	{

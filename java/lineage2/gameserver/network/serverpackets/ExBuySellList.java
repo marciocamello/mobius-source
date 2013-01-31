@@ -21,15 +21,40 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.TradeItem;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class ExBuySellList extends L2GameServerPacket
 {
+	/**
+	 * @author Mobius
+	 */
 	public static class BuyList extends ExBuySellList
 	{
+		/**
+		 * Field _listId.
+		 */
 		private final int _listId;
+		/**
+		 * Field _buyList.
+		 */
 		private final List<TradeItem> _buyList;
+		/**
+		 * Field _adena.
+		 */
 		private final long _adena;
+		/**
+		 * Field _taxRate.
+		 */
 		private final double _taxRate;
 		
+		/**
+		 * Constructor for BuyList.
+		 * @param tradeList NpcTradeList
+		 * @param activeChar Player
+		 * @param taxRate double
+		 */
 		public BuyList(NpcTradeList tradeList, Player activeChar, double taxRate)
 		{
 			super(0);
@@ -49,6 +74,9 @@ public abstract class ExBuySellList extends L2GameServerPacket
 			}
 		}
 		
+		/**
+		 * Method writeImpl.
+		 */
 		@Override
 		protected void writeImpl()
 		{
@@ -65,12 +93,29 @@ public abstract class ExBuySellList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class SellRefundList extends ExBuySellList
 	{
+		/**
+		 * Field _sellList.
+		 */
 		private final List<TradeItem> _sellList;
+		/**
+		 * Field _refundList.
+		 */
 		private final List<TradeItem> _refundList;
+		/**
+		 * Field _done.
+		 */
 		private final int _done;
 		
+		/**
+		 * Constructor for SellRefundList.
+		 * @param activeChar Player
+		 * @param done boolean
+		 */
 		public SellRefundList(Player activeChar, boolean done)
 		{
 			super(1);
@@ -100,6 +145,9 @@ public abstract class ExBuySellList extends L2GameServerPacket
 			}
 		}
 		
+		/**
+		 * Method writeImpl.
+		 */
 		@Override
 		protected void writeImpl()
 		{
@@ -122,13 +170,23 @@ public abstract class ExBuySellList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Field _type.
+	 */
 	private final int _type;
 	
+	/**
+	 * Constructor for ExBuySellList.
+	 * @param type int
+	 */
 	public ExBuySellList(int type)
 	{
 		_type = type;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

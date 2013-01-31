@@ -20,16 +20,29 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.tables.ClanTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestOustAlly extends L2GameClientPacket
 {
+	/**
+	 * Field _clanName.
+	 */
 	private String _clanName;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_clanName = readS(32);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -18,21 +18,51 @@ import java.util.Iterator;
 import java.util.Queue;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MMOExecutableQueue<T extends MMOClient> implements Queue<ReceivablePacket<T>>, Runnable
 {
+	/**
+	 * Field NONE. (value is 0)
+	 */
 	private static final int NONE = 0;
+	/**
+	 * Field QUEUED. (value is 1)
+	 */
 	private static final int QUEUED = 1;
+	/**
+	 * Field RUNNING. (value is 2)
+	 */
 	private static final int RUNNING = 2;
+	/**
+	 * Field _executor.
+	 */
 	private final IMMOExecutor<T> _executor;
+	/**
+	 * Field _queue.
+	 */
 	private final Queue<ReceivablePacket<T>> _queue;
+	/**
+	 * Field _state.
+	 */
 	private final AtomicInteger _state = new AtomicInteger(NONE);
 	
+	/**
+	 * Constructor for MMOExecutableQueue.
+	 * @param executor IMMOExecutor<T>
+	 */
 	public MMOExecutableQueue(IMMOExecutor<T> executor)
 	{
 		_executor = executor;
 		_queue = new ArrayDeque<>();
 	}
 	
+	/**
+	 * Method run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public void run()
 	{
@@ -57,72 +87,127 @@ public class MMOExecutableQueue<T extends MMOClient> implements Queue<Receivable
 		}
 	}
 	
+	/**
+	 * Method size.
+	 * @return int * @see java.util.Collection#size()
+	 */
 	@Override
 	public int size()
 	{
 		return _queue.size();
 	}
 	
+	/**
+	 * Method isEmpty.
+	 * @return boolean * @see java.util.Collection#isEmpty()
+	 */
 	@Override
 	public boolean isEmpty()
 	{
 		return _queue.isEmpty();
 	}
 	
+	/**
+	 * Method contains.
+	 * @param o Object
+	 * @return boolean * @see java.util.Collection#contains(Object)
+	 */
 	@Override
 	public boolean contains(Object o)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method iterator.
+	 * @return Iterator<ReceivablePacket<T>> * @see java.util.Collection#iterator()
+	 */
 	@Override
 	public Iterator<ReceivablePacket<T>> iterator()
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method toArray.
+	 * @return Object[] * @see java.util.Collection#toArray()
+	 */
 	@Override
 	public Object[] toArray()
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method toArray.
+	 * @param a E[]
+	 * @return E[]
+	 */
 	@Override
 	public <E> E[] toArray(E[] a)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method remove.
+	 * @param o Object
+	 * @return boolean * @see java.util.Collection#remove(Object)
+	 */
 	@Override
 	public boolean remove(Object o)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method containsAll.
+	 * @param c Collection<?>
+	 * @return boolean * @see java.util.Collection#containsAll(Collection<?>)
+	 */
 	@Override
 	public boolean containsAll(Collection<?> c)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method addAll.
+	 * @param c Collection<? extends ReceivablePacket<T>>
+	 * @return boolean * @see java.util.Collection#addAll(Collection<? extends ReceivablePacket<T>>)
+	 */
 	@Override
 	public boolean addAll(Collection<? extends ReceivablePacket<T>> c)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method removeAll.
+	 * @param c Collection<?>
+	 * @return boolean * @see java.util.Collection#removeAll(Collection<?>)
+	 */
 	@Override
 	public boolean removeAll(Collection<?> c)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method retainAll.
+	 * @param c Collection<?>
+	 * @return boolean * @see java.util.Collection#retainAll(Collection<?>)
+	 */
 	@Override
 	public boolean retainAll(Collection<?> c)
 	{
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * Method clear.
+	 * @see java.util.Collection#clear()
+	 */
 	@Override
 	public void clear()
 	{
@@ -132,6 +217,11 @@ public class MMOExecutableQueue<T extends MMOClient> implements Queue<Receivable
 		}
 	}
 	
+	/**
+	 * Method add.
+	 * @param e ReceivablePacket<T>
+	 * @return boolean
+	 */
 	@Override
 	public boolean add(ReceivablePacket<T> e)
 	{
@@ -149,6 +239,11 @@ public class MMOExecutableQueue<T extends MMOClient> implements Queue<Receivable
 		return true;
 	}
 	
+	/**
+	 * Method offer.
+	 * @param e ReceivablePacket<T>
+	 * @return boolean
+	 */
 	@Override
 	public boolean offer(ReceivablePacket<T> e)
 	{
@@ -158,6 +253,10 @@ public class MMOExecutableQueue<T extends MMOClient> implements Queue<Receivable
 		}
 	}
 	
+	/**
+	 * Method remove.
+	 * @return ReceivablePacket<T> * @see java.util.Queue#remove()
+	 */
 	@Override
 	public ReceivablePacket<T> remove()
 	{
@@ -167,6 +266,10 @@ public class MMOExecutableQueue<T extends MMOClient> implements Queue<Receivable
 		}
 	}
 	
+	/**
+	 * Method poll.
+	 * @return ReceivablePacket<T> * @see java.util.Queue#poll()
+	 */
 	@Override
 	public ReceivablePacket<T> poll()
 	{
@@ -176,6 +279,10 @@ public class MMOExecutableQueue<T extends MMOClient> implements Queue<Receivable
 		}
 	}
 	
+	/**
+	 * Method element.
+	 * @return ReceivablePacket<T> * @see java.util.Queue#element()
+	 */
 	@Override
 	public ReceivablePacket<T> element()
 	{
@@ -185,6 +292,10 @@ public class MMOExecutableQueue<T extends MMOClient> implements Queue<Receivable
 		}
 	}
 	
+	/**
+	 * Method peek.
+	 * @return ReceivablePacket<T> * @see java.util.Queue#peek()
+	 */
 	@Override
 	public ReceivablePacket<T> peek()
 	{

@@ -15,12 +15,28 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExMenteeSearch;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestMenteeSearch extends L2GameClientPacket
 {
+	/**
+	 * Field _page.
+	 */
 	private int _page;
+	/**
+	 * Field _minLevel.
+	 */
 	private int _minLevel;
+	/**
+	 * Field _maxLevel.
+	 */
 	private int _maxLevel;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -29,6 +45,9 @@ public class RequestMenteeSearch extends L2GameClientPacket
 		_maxLevel = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

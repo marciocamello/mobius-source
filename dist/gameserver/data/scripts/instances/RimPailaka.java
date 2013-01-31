@@ -24,32 +24,96 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessa
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RimPailaka extends Reflection
 {
+	/**
+	 * Field SeducedKnight. (value is 36562)
+	 */
 	private static final int SeducedKnight = 36562;
+	/**
+	 * Field SeducedRanger. (value is 36563)
+	 */
 	private static final int SeducedRanger = 36563;
+	/**
+	 * Field SeducedMage. (value is 36564)
+	 */
 	private static final int SeducedMage = 36564;
+	/**
+	 * Field SeducedWarrior. (value is 36565)
+	 */
 	private static final int SeducedWarrior = 36565;
+	/**
+	 * Field KanadisGuide1. (value is 25659)
+	 */
 	private static final int KanadisGuide1 = 25659;
+	/**
+	 * Field KanadisGuide2. (value is 25660)
+	 */
 	private static final int KanadisGuide2 = 25660;
+	/**
+	 * Field KanadisGuide3. (value is 25661)
+	 */
 	private static final int KanadisGuide3 = 25661;
+	/**
+	 * Field KanadisFollower1. (value is 25662)
+	 */
 	private static final int KanadisFollower1 = 25662;
+	/**
+	 * Field KanadisFollower2. (value is 25663)
+	 */
 	private static final int KanadisFollower2 = 25663;
+	/**
+	 * Field KanadisFollower3. (value is 25664)
+	 */
 	private static final int KanadisFollower3 = 25664;
+	/**
+	 * Field initdelay.
+	 */
 	private static final long initdelay = 30 * 1000L;
+	/**
+	 * Field firstwavedelay.
+	 */
 	private static final long firstwavedelay = 120 * 1000L;
+	/**
+	 * Field secondwavedelay.
+	 */
 	private static final long secondwavedelay = 480 * 1000L;
+	/**
+	 * Field thirdwavedelay.
+	 */
 	private static final long thirdwavedelay = 480 * 1000L;
+	/**
+	 * Field initTask.
+	 */
 	private ScheduledFuture<?> initTask;
+	/**
+	 * Field firstwaveTask.
+	 */
 	private ScheduledFuture<?> firstwaveTask;
+	/**
+	 * Field secondWaveTask.
+	 */
 	ScheduledFuture<?> secondWaveTask;
+	/**
+	 * Field thirdWaveTask.
+	 */
 	ScheduledFuture<?> thirdWaveTask;
 	
+	/**
+	 * Constructor for RimPailaka.
+	 */
 	public RimPailaka()
 	{
 		super();
 	}
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	public void onCreate()
 	{
@@ -59,8 +123,14 @@ public class RimPailaka extends Reflection
 		firstwaveTask = ThreadPoolManager.getInstance().schedule(new FirstWave(), firstwavedelay);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class InvestigatorsSpawn extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -75,8 +145,14 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class FirstWave extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -98,8 +174,14 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class SecondWave extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -121,8 +203,14 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ThirdWave extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -144,15 +232,28 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class CollapseTimer extends RunnableImpl
 	{
+		/**
+		 * Field _minutes.
+		 */
 		private int _minutes = 0;
 		
+		/**
+		 * Constructor for CollapseTimer.
+		 * @param minutes int
+		 */
 		public CollapseTimer(int minutes)
 		{
 			_minutes = minutes;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -167,6 +268,9 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
+	/**
+	 * Method onCollapse.
+	 */
 	@Override
 	public void onCollapse()
 	{

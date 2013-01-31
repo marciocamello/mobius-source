@@ -24,20 +24,34 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.taskmanager.AiTaskManager;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MercenaryCaptain extends DefaultAI
 {
+	/**
+	 * Field MESSAGES.
+	 */
 	private static final NpcString[] MESSAGES = new NpcString[]
 	{
 		NpcString.COURAGE_AMBITION_PASSION_MERCENARIES_WHO_WANT_TO_REALIZE_THEIR_DREAM_OF_FIGHTING_IN_THE_TERRITORY_WAR_COME_TO_ME_FORTUNE_AND_GLORY_ARE_WAITING_FOR_YOU,
 		NpcString.DO_YOU_WISH_TO_FIGHT_ARE_YOU_AFRAID_NO_MATTER_HOW_HARD_YOU_TRY_YOU_HAVE_NOWHERE_TO_RUN
 	};
 	
+	/**
+	 * Constructor for MercenaryCaptain.
+	 * @param actor NpcInstance
+	 */
 	public MercenaryCaptain(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ACTIVE_DELAY = AI_TASK_ATTACK_DELAY = 1000L;
 	}
 	
+	/**
+	 * Method startAITask.
+	 */
 	@Override
 	public synchronized void startAITask()
 	{
@@ -47,11 +61,19 @@ public class MercenaryCaptain extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method switchAITask.
+	 * @param NEW_DELAY long
+	 */
 	@Override
 	protected synchronized void switchAITask(long NEW_DELAY)
 	{
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -74,12 +96,20 @@ public class MercenaryCaptain extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method calcDelay.
+	 * @return long
+	 */
 	private static long calcDelay()
 	{
 		Calendar cal = Calendar.getInstance();

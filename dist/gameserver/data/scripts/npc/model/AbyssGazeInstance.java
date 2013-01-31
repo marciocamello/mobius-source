@@ -21,20 +21,40 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class AbyssGazeInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field ekimusIzId. (value is 121)
+	 */
 	private static final int ekimusIzId = 121;
+	/**
+	 * Field hoidefIzId. (value is 122)
+	 */
 	private static final int hoidefIzId = 122;
 	
+	/**
+	 * Constructor for AbyssGazeInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public AbyssGazeInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

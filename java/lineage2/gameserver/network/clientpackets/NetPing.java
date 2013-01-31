@@ -14,12 +14,25 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NetPing extends L2GameClientPacket
 {
+	/**
+	 * Field _clientID.
+	 */
 	@SuppressWarnings("unused")
 	private int _clientID;
+	/**
+	 * Field _ping.
+	 */
 	private int _ping;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -27,6 +40,9 @@ public class NetPing extends L2GameClientPacket
 		_ping = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

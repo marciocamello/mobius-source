@@ -38,16 +38,45 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HellboundManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(HellboundManager.class);
+	/**
+	 * Field _list.
+	 */
 	private static ArrayList<HellboundSpawn> _list;
+	/**
+	 * Field _spawnList.
+	 */
 	private static List<SimpleSpawner> _spawnList;
+	/**
+	 * Field _instance.
+	 */
 	private static HellboundManager _instance;
+	/**
+	 * Field _initialStage.
+	 */
 	static int _initialStage;
+	/**
+	 * Field _taskDelay.
+	 */
 	private static final long _taskDelay = 2 * 60 * 1000L;
+	/**
+	 * Field _deathListener.
+	 */
 	DeathListener _deathListener = new DeathListener();
 	
+	/**
+	 * Method getInstance.
+	 * @return HellboundManager
+	 */
 	public static HellboundManager getInstance()
 	{
 		if (_instance == null)
@@ -57,6 +86,9 @@ public class HellboundManager
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for HellboundManager.
+	 */
 	public HellboundManager()
 	{
 		getHellboundSpawn();
@@ -67,6 +99,9 @@ public class HellboundManager
 		_log.info("Hellbound Manager: Loaded");
 	}
 	
+	/**
+	 * Method openHellbound.
+	 */
 	public void openHellbound()
 	{
 		if (getHellboundLevel() == 0)
@@ -78,16 +113,28 @@ public class HellboundManager
 		}
 	}
 	
+	/**
+	 * Method getConfidence.
+	 * @return long
+	 */
 	public static long getConfidence()
 	{
 		return ServerVariables.getLong("HellboundConfidence", 0);
 	}
 	
+	/**
+	 * Method addConfidence.
+	 * @param value long
+	 */
 	public static void addConfidence(long value)
 	{
 		ServerVariables.set("HellboundConfidence", Math.round(getConfidence() + (value * Config.RATE_HELLBOUND_CONFIDENCE)));
 	}
 	
+	/**
+	 * Method reduceConfidence.
+	 * @param value long
+	 */
 	public static void reduceConfidence(long value)
 	{
 		long i = getConfidence() - value;
@@ -98,11 +145,19 @@ public class HellboundManager
 		ServerVariables.set("HellboundConfidence", i);
 	}
 	
+	/**
+	 * Method setConfidence.
+	 * @param value long
+	 */
 	public static void setConfidence(long value)
 	{
 		ServerVariables.set("HellboundConfidence", value);
 	}
 	
+	/**
+	 * Method getHellboundLevel.
+	 * @return int
+	 */
 	public static int getHellboundLevel()
 	{
 		long confidence = ServerVariables.getLong("HellboundConfidence", 0);
@@ -168,13 +223,25 @@ public class HellboundManager
 		return 0;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DeathListener implements OnDeathListener
 	{
+		/**
+		 * Constructor for DeathListener.
+		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param cha Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature cha, Creature killer)
 		{
@@ -300,6 +367,9 @@ public class HellboundManager
 		}
 	}
 	
+	/**
+	 * Method spawnHellbound.
+	 */
 	void spawnHellbound()
 	{
 		SimpleSpawner spawnDat;
@@ -341,6 +411,9 @@ public class HellboundManager
 		_log.info("HellboundManager: Spawned " + _spawnList.size() + " mobs and NPCs according to the current Hellbound stage");
 	}
 	
+	/**
+	 * Method getHellboundSpawn.
+	 */
 	private void getHellboundSpawn()
 	{
 		_list = new ArrayList<>();
@@ -437,6 +510,9 @@ public class HellboundManager
 		}
 	}
 	
+	/**
+	 * Method despawnHellbound.
+	 */
 	void despawnHellbound()
 	{
 		for (SimpleSpawner spawnToDelete : _spawnList)
@@ -446,13 +522,22 @@ public class HellboundManager
 		_spawnList.clear();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class StageCheckTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for StageCheckTask.
+		 */
 		public StageCheckTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -466,16 +551,50 @@ public class HellboundManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class HellboundSpawn
 	{
+		/**
+		 * Field _npcId.
+		 */
 		private final int _npcId;
+		/**
+		 * Field _loc.
+		 */
 		private final Location _loc;
+		/**
+		 * Field _amount.
+		 */
 		private final int _amount;
+		/**
+		 * Field _spawnTerritory.
+		 */
 		private final Territory _spawnTerritory;
+		/**
+		 * Field _respawn.
+		 */
 		private final int _respawn;
+		/**
+		 * Field _respawnRnd.
+		 */
 		private final int _respawnRnd;
+		/**
+		 * Field _stages.
+		 */
 		private final int[] _stages;
 		
+		/**
+		 * Constructor for HellboundSpawn.
+		 * @param npcId int
+		 * @param loc Location
+		 * @param amount int
+		 * @param spawnTerritory Territory
+		 * @param respawn int
+		 * @param respawnRnd int
+		 * @param stages int[]
+		 */
 		public HellboundSpawn(int npcId, Location loc, int amount, Territory spawnTerritory, int respawn, int respawnRnd, int[] stages)
 		{
 			_npcId = npcId;
@@ -487,42 +606,73 @@ public class HellboundManager
 			_stages = stages;
 		}
 		
+		/**
+		 * Method getNpcId.
+		 * @return int
+		 */
 		public int getNpcId()
 		{
 			return _npcId;
 		}
 		
+		/**
+		 * Method getLoc.
+		 * @return Location
+		 */
 		public Location getLoc()
 		{
 			return _loc;
 		}
 		
+		/**
+		 * Method getAmount.
+		 * @return int
+		 */
 		public int getAmount()
 		{
 			return _amount;
 		}
 		
+		/**
+		 * Method getSpawnTerritory.
+		 * @return Territory
+		 */
 		public Territory getSpawnTerritory()
 		{
 			return _spawnTerritory;
 		}
 		
+		/**
+		 * Method getRespawn.
+		 * @return int
+		 */
 		public int getRespawn()
 		{
 			return _respawn;
 		}
 		
+		/**
+		 * Method getRespawnRnd.
+		 * @return int
+		 */
 		public int getRespawnRnd()
 		{
 			return _respawnRnd;
 		}
 		
+		/**
+		 * Method getStages.
+		 * @return int[]
+		 */
 		public int[] getStages()
 		{
 			return _stages;
 		}
 	}
 	
+	/**
+	 * Method doorHandler.
+	 */
 	static void doorHandler()
 	{
 		final int NativeHell_native0131 = 19250001;

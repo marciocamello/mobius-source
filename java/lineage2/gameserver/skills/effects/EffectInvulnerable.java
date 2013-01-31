@@ -17,13 +17,26 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Skill.SkillType;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectInvulnerable extends Effect
 {
+	/**
+	 * Constructor for EffectInvulnerable.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectInvulnerable(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
@@ -39,6 +52,9 @@ public final class EffectInvulnerable extends Effect
 		return super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -47,6 +63,9 @@ public final class EffectInvulnerable extends Effect
 		_effected.setIsInvul(true);
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -55,6 +74,10 @@ public final class EffectInvulnerable extends Effect
 		_effected.setIsInvul(false);
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

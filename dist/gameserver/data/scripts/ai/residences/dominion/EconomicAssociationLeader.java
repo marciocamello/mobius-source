@@ -32,8 +32,15 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
 import quests._733_ProtectTheEconomicAssociationLeader;
 import ai.residences.SiegeGuardFighter;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EconomicAssociationLeader extends SiegeGuardFighter
 {
+	/**
+	 * Field MESSAGES.
+	 */
 	private static final IntObjectMap<NpcString[]> MESSAGES = new HashIntObjectMap<>(9);
 	
 	static
@@ -85,13 +92,24 @@ public class EconomicAssociationLeader extends SiegeGuardFighter
 		});
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class OnPlayerEnterListenerImpl implements OnPlayerEnterListener
 	{
+		/**
+		 * Constructor for OnPlayerEnterListenerImpl.
+		 */
 		public OnPlayerEnterListenerImpl()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onPlayerEnter.
+		 * @param player Player
+		 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+		 */
 		@Override
 		public void onPlayerEnter(Player player)
 		{
@@ -115,13 +133,25 @@ public class EconomicAssociationLeader extends SiegeGuardFighter
 		}
 	}
 	
+	/**
+	 * Field _listener.
+	 */
 	private final OnPlayerEnterListener _listener = new OnPlayerEnterListenerImpl();
 	
+	/**
+	 * Constructor for EconomicAssociationLeader.
+	 * @param actor NpcInstance
+	 */
 	public EconomicAssociationLeader(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param dam int
+	 */
 	@Override
 	public void onEvtAttacked(Creature attacker, int dam)
 	{
@@ -156,6 +186,10 @@ public class EconomicAssociationLeader extends SiegeGuardFighter
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onEvtDead(Creature killer)
 	{
@@ -216,6 +250,9 @@ public class EconomicAssociationLeader extends SiegeGuardFighter
 		}
 	}
 	
+	/**
+	 * Method onEvtDeSpawn.
+	 */
 	@Override
 	public void onEvtDeSpawn()
 	{

@@ -18,22 +18,43 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EvasGiftBox extends Fighter
 {
+	/**
+	 * Field KISS_OF_EVA.
+	 */
 	private static final int[] KISS_OF_EVA = new int[]
 	{
 		1073,
 		3141,
 		3252
 	};
+	/**
+	 * Field Red_Coral. (value is 9692)
+	 */
 	private static final int Red_Coral = 9692;
+	/**
+	 * Field Crystal_Fragment. (value is 9693)
+	 */
 	private static final int Crystal_Fragment = 9693;
 	
+	/**
+	 * Constructor for EvasGiftBox.
+	 * @param actor NpcInstance
+	 */
 	public EvasGiftBox(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -49,6 +70,10 @@ public class EvasGiftBox extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

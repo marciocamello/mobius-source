@@ -16,24 +16,44 @@ import java.util.AbstractMap;
 
 import lineage2.gameserver.model.Skill;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SkillEntry extends AbstractMap.SimpleImmutableEntry<SkillEntryType, Skill>
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _disabled.
+	 */
 	private boolean _disabled;
 	
+	/**
+	 * Constructor for SkillEntry.
+	 * @param key SkillEntryType
+	 * @param value Skill
+	 */
 	public SkillEntry(SkillEntryType key, Skill value)
 	{
 		super(key, value);
 	}
 	
+	/**
+	 * Method isDisabled.
+	 * @return boolean
+	 */
 	public boolean isDisabled()
 	{
 		return _disabled;
 	}
 	
+	/**
+	 * Method setDisabled.
+	 * @param disabled boolean
+	 */
 	public void setDisabled(boolean disabled)
 	{
 		_disabled = disabled;

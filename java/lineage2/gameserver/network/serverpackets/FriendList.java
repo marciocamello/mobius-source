@@ -20,10 +20,21 @@ import java.util.Map;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.Friend;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FriendList extends L2GameServerPacket
 {
+	/**
+	 * Field _friends.
+	 */
 	private List<FriendInfo> _friends = Collections.emptyList();
 	
+	/**
+	 * Constructor for FriendList.
+	 * @param player Player
+	 */
 	public FriendList(Player player)
 	{
 		Map<Integer, Friend> friends = player.getFriendList().getList();
@@ -41,6 +52,9 @@ public class FriendList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
@@ -57,17 +71,38 @@ public class FriendList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class FriendInfo
 	{
+		/**
+		 * Constructor for FriendInfo.
+		 */
 		public FriendInfo()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Field name.
+		 */
 		String name;
+		/**
+		 * Field objectId.
+		 */
 		int objectId;
+		/**
+		 * Field online.
+		 */
 		boolean online;
+		/**
+		 * Field level.
+		 */
 		int level;
+		/**
+		 * Field classId.
+		 */
 		int classId;
 	}
 }

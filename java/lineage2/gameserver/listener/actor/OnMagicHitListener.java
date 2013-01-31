@@ -16,7 +16,17 @@ import lineage2.gameserver.listener.CharListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnMagicHitListener extends CharListener
 {
+	/**
+	 * Method onMagicHit.
+	 * @param actor Creature
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	public void onMagicHit(Creature actor, Skill skill, Creature caster);
 }

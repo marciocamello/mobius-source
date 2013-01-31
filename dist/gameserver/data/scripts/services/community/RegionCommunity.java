@@ -42,9 +42,19 @@ import lineage2.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(RegionCommunity.class);
+	/**
+	 * Field _towns.
+	 */
 	private static final int[][] _towns = new int[][]
 	{
 		{
@@ -93,12 +103,18 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 			13
 		}
 	};
+	/**
+	 * Field _regionTypes.
+	 */
 	private static final String[] _regionTypes =
 	{
 		"&$596;",
 		"&$597;",
 		"&$665;"
 	};
+	/**
+	 * Field _elements.
+	 */
 	private static final String[] _elements =
 	{
 		"&$1622;",
@@ -108,6 +124,9 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		"&$1626;",
 		"&$1627;"
 	};
+	/**
+	 * Field _grade.
+	 */
 	private static final String[] _grade =
 	{
 		"&$1291;",
@@ -118,8 +137,15 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		"S80 Grade",
 		"S84 Grade"
 	};
+	/**
+	 * Field SELLER_PER_PAGE. (value is 12)
+	 */
 	private static final int SELLER_PER_PAGE = 12;
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -130,6 +156,10 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -139,11 +169,19 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method getBypassCommands.
+	 * @return String[] * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#getBypassCommands()
+	 */
 	@Override
 	public String[] getBypassCommands()
 	{
@@ -158,6 +196,12 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		};
 	}
 	
+	/**
+	 * Method onBypassCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onBypassCommand(Player, String)
+	 */
 	@Override
 	public void onBypassCommand(Player player, String bypass)
 	{
@@ -272,7 +316,7 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 				StringBuilder goList = new StringBuilder("");
 				for (int i = page > 10 ? page - 10 : 1; i < page; i++)
 				{
-					goList.append("<td><a action=\"bypass _bbsreglist_").append(townId).append("_").append(type).append("_").append(i).append("_").append(byItem).append("_").append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
+					goList.append("<td><a action=\"bypass _bbsreglist_").append(townId).append('_').append(type).append('_').append(i).append('_').append(byItem).append('_').append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
 				}
 				html = html.replace("%GO_LIST%", goList.toString());
 			}
@@ -288,7 +332,7 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 				StringBuilder goList = new StringBuilder("");
 				for (int i = page + 1; i <= ep; i++)
 				{
-					goList.append("<td><a action=\"bypass _bbsreglist_").append(townId).append("_").append(type).append("_").append(i).append("_").append(byItem).append("_").append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
+					goList.append("<td><a action=\"bypass _bbsreglist_").append(townId).append('_').append(type).append('_').append(i).append('_').append(byItem).append('_').append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
 				}
 				html = html.replace("%GO_LIST2%", goList.toString());
 			}
@@ -529,6 +573,18 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method onWriteCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @param arg1 String
+	 * @param arg2 String
+	 * @param arg3 String
+	 * @param arg4 String
+	 * @param arg5 String g)
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)
+	 */
+	
 	@Override
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
@@ -554,6 +610,15 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 			onBypassCommand(player, "_bbsreglist_" + townId + "_" + type + "_1_" + byItem + "_" + arg3);
 		}
 	}
+	
+	/**
+	 * Method getSellersList.
+	 * @param townId int
+	 * @param type int
+	 * @param search String
+	 * @param byItem boolean r>
+	 * @return List<Player>
+	 */
 	
 	private static List<Player> getSellersList(int townId, int type, String search, boolean byItem)
 	{
@@ -655,13 +720,26 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		return list;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
+	
 	private static class PlayersComparator<T> implements Comparator<T>
 	{
+		/**
+		 * Constructor for PlayersComparator.
+		 */
 		public PlayersComparator()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method compare.
+		 * @param o1 Object
+		 * @param o2 Object nt
+		 * @return int
+		 */
 		@Override
 		public int compare(Object o1, Object o2)
 		{

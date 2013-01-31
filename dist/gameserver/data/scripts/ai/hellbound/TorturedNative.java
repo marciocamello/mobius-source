@@ -17,13 +17,25 @@ import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TorturedNative extends Fighter
 {
+	/**
+	 * Constructor for TorturedNative.
+	 * @param actor NpcInstance
+	 */
 	public TorturedNative(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{

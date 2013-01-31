@@ -17,13 +17,32 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestCommissionRegister extends L2GameClientPacket
 {
+	/**
+	 * Field objectId.
+	 */
 	private int objectId;
+	/**
+	 * Field itemName.
+	 */
 	private String itemName;
+	/**
+	 * Field count. Field price.
+	 */
 	private long price, count;
+	/**
+	 * Field days.
+	 */
 	private int days;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -36,6 +55,9 @@ public class RequestCommissionRegister extends L2GameClientPacket
 		readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

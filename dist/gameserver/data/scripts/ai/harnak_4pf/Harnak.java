@@ -27,25 +27,57 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 import quests._10338_SeizeYourDestiny;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Harnak extends Fighter
 {
+	/**
+	 * Field SKILL_IDS.
+	 */
 	private static final int[] SKILL_IDS =
 	{
 		14612,
 		14613,
 		14614
 	};
+	/**
+	 * Field firstMsg.
+	 */
 	private boolean firstMsg = false;
+	/**
+	 * Field secondMsg.
+	 */
 	private boolean secondMsg = false;
+	/**
+	 * Field thirdMsg.
+	 */
 	private boolean thirdMsg = false;
+	/**
+	 * Field sealLaunched.
+	 */
 	private boolean sealLaunched = false;
+	/**
+	 * Field seal_active.
+	 */
 	private int seal_active = 0;
 	
+	/**
+	 * Constructor for Harnak.
+	 * @param actor NpcInstance
+	 */
 	public Harnak(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtScriptEvent.
+	 * @param event String
+	 * @param arg1 Object
+	 * @param arg2 Object
+	 */
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
@@ -73,6 +105,11 @@ public class Harnak extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -118,6 +155,10 @@ public class Harnak extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

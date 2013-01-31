@@ -32,23 +32,53 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ServitorsDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(MentoringDAO.class);
+	/**
+	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO servitors(objId, ownerId, curHp, curMp, skill_id, skill_lvl) VALUES (?,?,?,?,?,?)"")
+	 */
 	private static final String INSERT_SQL_QUERY = "INSERT INTO servitors(objId, ownerId, curHp, curMp, skill_id, skill_lvl) VALUES (?,?,?,?,?,?)";
+	/**
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT objId, curHp, curMp, skill_id, skill_lvl FROM servitors WHERE ownerId=?"")
+	 */
 	private static final String SELECT_SQL_QUERY = "SELECT objId, curHp, curMp, skill_id, skill_lvl FROM servitors WHERE ownerId=?";
+	/**
+	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM servitors WHERE ownerId=?"")
+	 */
 	private static final String DELETE_SQL_QUERY = "DELETE FROM servitors WHERE ownerId=?";
+	/**
+	 * Field ourInstance.
+	 */
 	private static final ServitorsDAO ourInstance = new ServitorsDAO();
 	
+	/**
+	 * Method getInstance.
+	 * @return ServitorsDAO
+	 */
 	public static ServitorsDAO getInstance()
 	{
 		return ourInstance;
 	}
 	
+	/**
+	 * Constructor for ServitorsDAO.
+	 */
 	private ServitorsDAO()
 	{
 	}
 	
+	/**
+	 * Method store.
+	 * @param summon Summon
+	 */
 	public void store(Summon summon)
 	{
 		Connection con = null;
@@ -75,6 +105,11 @@ public class ServitorsDAO
 		}
 	}
 	
+	/**
+	 * Method restore.
+	 * @param owner Player
+	 * @return List<Summon>
+	 */
 	public List<Summon> restore(Player owner)
 	{
 		List<Summon> summons = new ArrayList<>();

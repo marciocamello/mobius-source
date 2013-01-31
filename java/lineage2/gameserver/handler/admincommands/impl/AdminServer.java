@@ -32,17 +32,47 @@ import lineage2.gameserver.model.instances.RaidBossInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminServer implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_server.
+		 */
 		admin_server,
+		/**
+		 * Field admin_check_actor.
+		 */
 		admin_check_actor,
+		/**
+		 * Field admin_setvar.
+		 */
 		admin_setvar,
+		/**
+		 * Field admin_set_ai_interval.
+		 */
 		admin_set_ai_interval,
+		/**
+		 * Field admin_spawn2.
+		 */
 		admin_spawn2
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -167,12 +197,21 @@ public class AdminServer implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}
 	
+	/**
+	 * Method showHelpPage.
+	 * @param targetChar Player
+	 * @param filename String
+	 */
 	public static void showHelpPage(Player targetChar, String filename)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -180,6 +219,13 @@ public class AdminServer implements IAdminCommandHandler
 		targetChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method spawnMonster.
+	 * @param activeChar Player
+	 * @param monsterId String
+	 * @param respawnTime int
+	 * @param mobCount int
+	 */
 	private void spawnMonster(Player activeChar, String monsterId, int respawnTime, int mobCount)
 	{
 		GameObject target = activeChar.getTarget();

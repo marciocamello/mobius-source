@@ -16,13 +16,25 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectUnAggro extends Effect
 {
+	/**
+	 * Constructor for EffectUnAggro.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectUnAggro(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -33,6 +45,9 @@ public class EffectUnAggro extends Effect
 		}
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -43,6 +58,10 @@ public class EffectUnAggro extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

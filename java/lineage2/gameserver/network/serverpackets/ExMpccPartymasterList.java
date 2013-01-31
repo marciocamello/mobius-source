@@ -15,15 +15,29 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.Collections;
 import java.util.Set;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExMpccPartymasterList extends L2GameServerPacket
 {
+	/**
+	 * Field _members.
+	 */
 	private Set<String> _members = Collections.emptySet();
 	
+	/**
+	 * Constructor for ExMpccPartymasterList.
+	 * @param s Set<String>
+	 */
 	public ExMpccPartymasterList(Set<String> s)
 	{
 		_members = s;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

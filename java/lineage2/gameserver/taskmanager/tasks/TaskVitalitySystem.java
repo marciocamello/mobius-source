@@ -26,17 +26,35 @@ import lineage2.gameserver.taskmanager.TaskTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TaskVitalitySystem extends Task
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(TaskVitalitySystem.class);
+	/**
+	 * Field NAME. (value is ""sp_vitalitysystem"")
+	 */
 	private static final String NAME = "sp_vitalitysystem";
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	@Override
 	public String getName()
 	{
 		return NAME;
 	}
 	
+	/**
+	 * Method onTimeElapsed.
+	 * @param task ExecutedTask
+	 */
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
@@ -52,6 +70,9 @@ public class TaskVitalitySystem extends Task
 		}
 	}
 	
+	/**
+	 * Method initializate.
+	 */
 	@Override
 	public void initializate()
 	{

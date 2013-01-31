@@ -15,9 +15,21 @@ package lineage2.gameserver.listener.event;
 import lineage2.gameserver.listener.EventListener;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnStartStopListener extends EventListener
 {
+	/**
+	 * Method onStart.
+	 * @param event GlobalEvent
+	 */
 	void onStart(GlobalEvent event);
 	
+	/**
+	 * Method onStop.
+	 * @param event GlobalEvent
+	 */
 	void onStop(GlobalEvent event);
 }

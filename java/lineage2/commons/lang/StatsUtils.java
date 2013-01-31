@@ -21,42 +21,80 @@ import java.lang.management.MonitorInfo;
 import java.lang.management.ThreadInfo;
 import java.lang.management.ThreadMXBean;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class StatsUtils
 {
+	/**
+	 * Field memMXbean.
+	 */
 	private static final MemoryMXBean memMXbean = ManagementFactory.getMemoryMXBean();
+	/**
+	 * Field threadMXbean.
+	 */
 	private static final ThreadMXBean threadMXbean = ManagementFactory.getThreadMXBean();
 	
+	/**
+	 * Method getMemUsed.
+	 * @return long
+	 */
 	public static long getMemUsed()
 	{
 		return memMXbean.getHeapMemoryUsage().getUsed();
 	}
 	
+	/**
+	 * Method getMemUsedMb.
+	 * @return String
+	 */
 	public static String getMemUsedMb()
 	{
 		return (getMemUsed() / 0x100000) + " Mb";
 	}
 	
+	/**
+	 * Method getMemMax.
+	 * @return long
+	 */
 	public static long getMemMax()
 	{
 		return memMXbean.getHeapMemoryUsage().getMax();
 	}
 	
+	/**
+	 * Method getMemMaxMb.
+	 * @return String
+	 */
 	public static String getMemMaxMb()
 	{
 		return (getMemMax() / 0x100000) + " Mb";
 	}
 	
+	/**
+	 * Method getMemFree.
+	 * @return long
+	 */
 	public static long getMemFree()
 	{
 		MemoryUsage heapMemoryUsage = memMXbean.getHeapMemoryUsage();
 		return heapMemoryUsage.getMax() - heapMemoryUsage.getUsed();
 	}
 	
+	/**
+	 * Method getMemFreeMb.
+	 * @return String
+	 */
 	public static String getMemFreeMb()
 	{
 		return (getMemFree() / 0x100000) + " Mb";
 	}
 	
+	/**
+	 * Method getMemUsage.
+	 * @return CharSequence
+	 */
 	public static CharSequence getMemUsage()
 	{
 		double maxMem = memMXbean.getHeapMemoryUsage().getMax() / 1024.;
@@ -66,16 +104,20 @@ public final class StatsUtils
 		double cachedMem = allocatedMem - usedMem;
 		double useableMem = maxMem - usedMem;
 		StringBuilder list = new StringBuilder();
-		list.append("AllowedMemory: ........... ").append((int) maxMem).append(" KB").append("\n");
-		list.append("     Allocated: .......... ").append((int) allocatedMem).append(" KB (").append(((double) Math.round((allocatedMem / maxMem) * 1000000) / 10000)).append("%)").append("\n");
-		list.append("     Non-Allocated: ...... ").append((int) nonAllocatedMem).append(" KB (").append((double) Math.round((nonAllocatedMem / maxMem) * 1000000) / 10000).append("%)").append("\n");
-		list.append("AllocatedMemory: ......... ").append((int) allocatedMem).append(" KB").append("\n");
-		list.append("     Used: ............... ").append((int) usedMem).append(" KB (").append((double) Math.round((usedMem / maxMem) * 1000000) / 10000).append("%)").append("\n");
-		list.append("     Unused (cached): .... ").append((int) cachedMem).append(" KB (").append((double) Math.round((cachedMem / maxMem) * 1000000) / 10000).append("%)").append("\n");
-		list.append("UseableMemory: ........... ").append((int) useableMem).append(" KB (").append((double) Math.round((useableMem / maxMem) * 1000000) / 10000).append("%)").append("\n");
+		list.append("AllowedMemory: ........... ").append((int) maxMem).append(" KB").append('\n');
+		list.append("     Allocated: .......... ").append((int) allocatedMem).append(" KB (").append(((double) Math.round((allocatedMem / maxMem) * 1000000) / 10000)).append("%)").append('\n');
+		list.append("     Non-Allocated: ...... ").append((int) nonAllocatedMem).append(" KB (").append((double) Math.round((nonAllocatedMem / maxMem) * 1000000) / 10000).append("%)").append('\n');
+		list.append("AllocatedMemory: ......... ").append((int) allocatedMem).append(" KB").append('\n');
+		list.append("     Used: ............... ").append((int) usedMem).append(" KB (").append((double) Math.round((usedMem / maxMem) * 1000000) / 10000).append("%)").append('\n');
+		list.append("     Unused (cached): .... ").append((int) cachedMem).append(" KB (").append((double) Math.round((cachedMem / maxMem) * 1000000) / 10000).append("%)").append('\n');
+		list.append("UseableMemory: ........... ").append((int) useableMem).append(" KB (").append((double) Math.round((useableMem / maxMem) * 1000000) / 10000).append("%)").append('\n');
 		return list;
 	}
 	
+	/**
+	 * Method getThreadStats.
+	 * @return CharSequence
+	 */
 	public static CharSequence getThreadStats()
 	{
 		StringBuilder list = new StringBuilder();
@@ -84,38 +126,45 @@ public final class StatsUtils
 		int nonDaemonCount = threadCount - daemonCount;
 		int peakCount = threadMXbean.getPeakThreadCount();
 		long totalCount = threadMXbean.getTotalStartedThreadCount();
-		list.append("Live: .................... ").append(threadCount).append(" threads").append("\n");
-		list.append("     Non-Daemon: ......... ").append(nonDaemonCount).append(" threads").append("\n");
-		list.append("     Daemon: ............. ").append(daemonCount).append(" threads").append("\n");
-		list.append("Peak: .................... ").append(peakCount).append(" threads").append("\n");
-		list.append("Total started: ........... ").append(totalCount).append(" threads").append("\n");
-		list.append("=================================================").append("\n");
+		list.append("Live: .................... ").append(threadCount).append(" threads").append('\n');
+		list.append("     Non-Daemon: ......... ").append(nonDaemonCount).append(" threads").append('\n');
+		list.append("     Daemon: ............. ").append(daemonCount).append(" threads").append('\n');
+		list.append("Peak: .................... ").append(peakCount).append(" threads").append('\n');
+		list.append("Total started: ........... ").append(totalCount).append(" threads").append('\n');
+		list.append("=================================================").append('\n');
 		return list;
 	}
 	
+	/**
+	 * Method getThreadStats.
+	 * @param lockedMonitors boolean
+	 * @param lockedSynchronizers boolean
+	 * @param stackTrace boolean
+	 * @return CharSequence
+	 */
 	public static CharSequence getThreadStats(boolean lockedMonitors, boolean lockedSynchronizers, boolean stackTrace)
 	{
 		StringBuilder list = new StringBuilder();
 		for (ThreadInfo info : threadMXbean.dumpAllThreads(lockedMonitors, lockedSynchronizers))
 		{
-			list.append("Thread #").append(info.getThreadId()).append(" (").append(info.getThreadName()).append(")").append("\n");
+			list.append("Thread #").append(info.getThreadId()).append(" (").append(info.getThreadName()).append(')').append('\n');
 			list.append("=================================================\n");
-			list.append("\tgetThreadState: ...... ").append(info.getThreadState()).append("\n");
+			list.append("\tgetThreadState: ...... ").append(info.getThreadState()).append('\n');
 			for (MonitorInfo monitorInfo : info.getLockedMonitors())
 			{
-				list.append("\tLocked monitor: ....... ").append(monitorInfo).append("\n");
-				list.append("\t\t[").append(monitorInfo.getLockedStackDepth()).append(".]: at ").append(monitorInfo.getLockedStackFrame()).append("\n");
+				list.append("\tLocked monitor: ....... ").append(monitorInfo).append('\n');
+				list.append("\t\t[").append(monitorInfo.getLockedStackDepth()).append(".]: at ").append(monitorInfo.getLockedStackFrame()).append('\n');
 			}
 			for (LockInfo lockInfo : info.getLockedSynchronizers())
 			{
-				list.append("\tLocked synchronizer: ...").append(lockInfo).append("\n");
+				list.append("\tLocked synchronizer: ...").append(lockInfo).append('\n');
 			}
 			if (stackTrace)
 			{
 				list.append("\tgetStackTace: ..........\n");
 				for (StackTraceElement trace : info.getStackTrace())
 				{
-					list.append("\t\tat ").append(trace).append("\n");
+					list.append("\t\tat ").append(trace).append('\n');
 				}
 			}
 			list.append("=================================================\n");
@@ -123,6 +172,10 @@ public final class StatsUtils
 		return list;
 	}
 	
+	/**
+	 * Method getGCStats.
+	 * @return CharSequence
+	 */
 	public static CharSequence getGCStats()
 	{
 		StringBuilder list = new StringBuilder();
@@ -130,8 +183,8 @@ public final class StatsUtils
 		{
 			list.append("GarbageCollector (").append(gcBean.getName()).append(")\n");
 			list.append("=================================================\n");
-			list.append("getCollectionCount: ..... ").append(gcBean.getCollectionCount()).append("\n");
-			list.append("getCollectionTime: ...... ").append(gcBean.getCollectionTime()).append(" ms").append("\n");
+			list.append("getCollectionCount: ..... ").append(gcBean.getCollectionCount()).append('\n');
+			list.append("getCollectionTime: ...... ").append(gcBean.getCollectionTime()).append(" ms").append('\n');
 			list.append("=================================================\n");
 		}
 		return list;

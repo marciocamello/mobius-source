@@ -16,6 +16,10 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class PassagewayMobWithHerbInstance extends MonsterInstance
 {
 	/**
@@ -23,13 +27,25 @@ public final class PassagewayMobWithHerbInstance extends MonsterInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for PassagewayMobWithHerbInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public PassagewayMobWithHerbInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Field FieryDemonBloodHerb. (value is 9849)
+	 */
 	public static final int FieryDemonBloodHerb = 9849;
 	
+	/**
+	 * Method calculateRewards.
+	 * @param lastAttacker Creature
+	 */
 	@Override
 	public void calculateRewards(Creature lastAttacker)
 	{

@@ -22,17 +22,39 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FrostBuffalo extends Fighter
 {
+	/**
+	 * Field _mobsNotSpawned.
+	 */
 	private boolean _mobsNotSpawned = true;
+	/**
+	 * Field MOBS. (value is 22093)
+	 */
 	private static final int MOBS = 22093;
+	/**
+	 * Field MOBS_COUNT. (value is 4)
+	 */
 	private static final int MOBS_COUNT = 4;
 	
+	/**
+	 * Constructor for FrostBuffalo.
+	 * @param actor NpcInstance
+	 */
 	public FrostBuffalo(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSeeSpell.
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
@@ -65,6 +87,10 @@ public class FrostBuffalo extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -72,6 +98,10 @@ public class FrostBuffalo extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

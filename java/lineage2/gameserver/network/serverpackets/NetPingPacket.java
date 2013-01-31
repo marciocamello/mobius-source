@@ -14,15 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NetPingPacket extends L2GameServerPacket
 {
+	/**
+	 * Field _clientId.
+	 */
 	private final int _clientId;
 	
+	/**
+	 * Constructor for NetPingPacket.
+	 * @param cha Player
+	 */
 	public NetPingPacket(Player cha)
 	{
 		_clientId = cha.getObjectId();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

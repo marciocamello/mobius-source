@@ -19,11 +19,26 @@ import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PartySmallWindowAll extends L2GameServerPacket
 {
+	/**
+	 * Field loot. Field leaderId.
+	 */
 	private final int leaderId, loot;
+	/**
+	 * Field members.
+	 */
 	private final List<PartySmallWindowMemberInfo> members = new ArrayList<>();
 	
+	/**
+	 * Constructor for PartySmallWindowAll.
+	 * @param party Party
+	 * @param exclude Player
+	 */
 	public PartySmallWindowAll(Party party, Player exclude)
 	{
 		leaderId = party.getPartyLeader().getObjectId();
@@ -37,6 +52,9 @@ public class PartySmallWindowAll extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -78,12 +96,58 @@ public class PartySmallWindowAll extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class PartySmallWindowMemberInfo
 	{
+		/**
+		 * Field _name.
+		 */
 		public String _name;
+		/**
+		 * Field vitality.
+		 */
+		/**
+		 * Field race_id.
+		 */
+		/**
+		 * Field class_id.
+		 */
+		/**
+		 * Field level.
+		 */
+		/**
+		 * Field maxMp.
+		 */
+		/**
+		 * Field curMp.
+		 */
+		/**
+		 * Field maxHp.
+		 */
+		/**
+		 * Field curHp.
+		 */
+		/**
+		 * Field maxCp.
+		 */
+		/**
+		 * Field curCp.
+		 */
+		/**
+		 * Field _id.
+		 */
 		public int _id, curCp, maxCp, curHp, maxHp, curMp, maxMp, level, class_id, race_id, vitality;
+		/**
+		 * Field summonInfos.
+		 */
 		public List<PartySmallWindowSummonInfo> summonInfos;
 		
+		/**
+		 * Constructor for PartySmallWindowMemberInfo.
+		 * @param member Player
+		 */
 		public PartySmallWindowMemberInfo(Player member)
 		{
 			_name = member.getName();
@@ -105,12 +169,46 @@ public class PartySmallWindowAll extends L2GameServerPacket
 			}
 		}
 		
+		/**
+		 * @author Mobius
+		 */
 		public static class PartySmallWindowSummonInfo
 		{
+			/**
+			 * Field summon_level.
+			 */
+			/**
+			 * Field summon_NpcId.
+			 */
+			/**
+			 * Field summon_id.
+			 */
+			/**
+			 * Field summon_type.
+			 */
 			public int summon_type, summon_id, summon_NpcId, summon_level;
+			/**
+			 * Field summon_maxMp.
+			 */
+			/**
+			 * Field summon_curMp.
+			 */
+			/**
+			 * Field summon_maxHp.
+			 */
+			/**
+			 * Field summon_curHp.
+			 */
 			public int summon_curHp, summon_maxHp, summon_curMp, summon_maxMp;
+			/**
+			 * Field summon_Name.
+			 */
 			public String summon_Name;
 			
+			/**
+			 * Constructor for PartySmallWindowSummonInfo.
+			 * @param summon Summon
+			 */
 			public PartySmallWindowSummonInfo(Summon summon)
 			{
 				summon_type = summon.getSummonType();

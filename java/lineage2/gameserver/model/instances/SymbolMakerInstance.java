@@ -17,6 +17,10 @@ import lineage2.gameserver.network.serverpackets.HennaEquipList;
 import lineage2.gameserver.network.serverpackets.HennaUnequipList;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SymbolMakerInstance extends NpcInstance
 {
 	/**
@@ -24,11 +28,21 @@ public class SymbolMakerInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for SymbolMakerInstance.
+	 * @param objectID int
+	 * @param template NpcTemplate
+	 */
 	public SymbolMakerInstance(int objectID, NpcTemplate template)
 	{
 		super(objectID, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -50,6 +64,13 @@ public class SymbolMakerInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{

@@ -19,16 +19,36 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class TeredorGatekeeperInstance extends NpcInstance
 {
+	/**
+	 * Field serialVersionUID. (value is -7905905093708290805)
+	 */
 	private static final long serialVersionUID = -7905905093708290805L;
+	/**
+	 * Field teredorInstanceId. (value is 160)
+	 */
 	private static final int teredorInstanceId = 160;
 	
+	/**
+	 * Constructor for TeredorGatekeeperInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public TeredorGatekeeperInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

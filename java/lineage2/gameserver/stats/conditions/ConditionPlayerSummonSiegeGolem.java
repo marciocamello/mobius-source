@@ -18,12 +18,24 @@ import lineage2.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionPlayerSummonSiegeGolem extends Condition
 {
+	/**
+	 * Constructor for ConditionPlayerSummonSiegeGolem.
+	 */
 	public ConditionPlayerSummonSiegeGolem()
 	{
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

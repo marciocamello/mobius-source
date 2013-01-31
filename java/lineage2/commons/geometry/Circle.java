@@ -12,11 +12,26 @@
  */
 package lineage2.commons.geometry;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Circle extends AbstractShape
 {
+	/**
+	 * Field c.
+	 */
 	protected final Point2D c;
+	/**
+	 * Field r.
+	 */
 	protected final int r;
 	
+	/**
+	 * Constructor for Circle.
+	 * @param center Point2D
+	 * @param radius int
+	 */
 	public Circle(Point2D center, int radius)
 	{
 		c = center;
@@ -27,11 +42,22 @@ public class Circle extends AbstractShape
 		max.y = (c.y + r);
 	}
 	
+	/**
+	 * Constructor for Circle.
+	 * @param x int
+	 * @param y int
+	 * @param radius int
+	 */
 	public Circle(int x, int y, int radius)
 	{
 		this(new Point2D(x, y), radius);
 	}
 	
+	/**
+	 * Method setZmax.
+	 * @param z int
+	 * @return Circle
+	 */
 	@Override
 	public Circle setZmax(int z)
 	{
@@ -39,6 +65,11 @@ public class Circle extends AbstractShape
 		return this;
 	}
 	
+	/**
+	 * Method setZmin.
+	 * @param z int
+	 * @return Circle
+	 */
 	@Override
 	public Circle setZmin(int z)
 	{
@@ -46,19 +77,29 @@ public class Circle extends AbstractShape
 		return this;
 	}
 	
+	/**
+	 * Method isInside.
+	 * @param x int
+	 * @param y int
+	 * @return boolean * @see lineage2.commons.geometry.Shape#isInside(int, int)
+	 */
 	@Override
 	public boolean isInside(int x, int y)
 	{
 		return (((x - c.x) * (c.x - x)) + ((y - c.y) * (c.y - y))) <= (r * r);
 	}
 	
+	/**
+	 * Method toString.
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		StringBuilder sb = new StringBuilder();
-		sb.append("[");
-		sb.append(c).append("{ radius: ").append(r).append("}");
-		sb.append("]");
+		sb.append('[');
+		sb.append(c).append("{ radius: ").append(r).append('}');
+		sb.append(']');
 		return sb.toString();
 	}
 }

@@ -25,32 +25,59 @@ import lineage2.gameserver.utils.Location;
 
 import org.dom4j.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class JumpTracksParser extends AbstractFileParser<JumpTracksHolder>
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final JumpTracksParser _instance = new JumpTracksParser();
 	
+	/**
+	 * Method getInstance.
+	 * @return JumpTracksParser
+	 */
 	public static JumpTracksParser getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for JumpTracksParser.
+	 */
 	protected JumpTracksParser()
 	{
 		super(JumpTracksHolder.getInstance());
 	}
 	
+	/**
+	 * Method getXMLFile.
+	 * @return File
+	 */
 	@Override
 	public File getXMLFile()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/jumps/jumping_tracks.xml");
 	}
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	@Override
 	public String getDTDFileName()
 	{
 		return "jumping_tracks.dtd";
 	}
 	
+	/**
+	 * Method readData.
+	 * @param rootElement Element
+	 * @throws Exception
+	 */
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{

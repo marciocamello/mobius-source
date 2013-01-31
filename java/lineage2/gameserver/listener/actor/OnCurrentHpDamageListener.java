@@ -16,7 +16,18 @@ import lineage2.gameserver.listener.CharListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnCurrentHpDamageListener extends CharListener
 {
+	/**
+	 * Method onCurrentHpDamage.
+	 * @param actor Creature
+	 * @param damage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 */
 	public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill);
 }

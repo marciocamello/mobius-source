@@ -16,16 +16,29 @@ import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.CharacterSelectionInfo;
 import lineage2.gameserver.network.serverpackets.ExLoginVitalityEffectInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharacterRestore extends L2GameClientPacket
 {
+	/**
+	 * Field _charSlot.
+	 */
 	private int _charSlot;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_charSlot = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

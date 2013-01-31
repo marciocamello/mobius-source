@@ -15,7 +15,15 @@ package lineage2.gameserver.listener.actor.npc;
 import lineage2.gameserver.listener.NpcListener;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface OnDecayListener extends NpcListener
 {
+	/**
+	 * Method onDecay.
+	 * @param actor NpcInstance
+	 */
 	public void onDecay(NpcInstance actor);
 }

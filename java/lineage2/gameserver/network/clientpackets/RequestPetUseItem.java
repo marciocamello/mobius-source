@@ -24,16 +24,29 @@ import lineage2.gameserver.utils.ItemFunctions;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPetUseItem extends L2GameClientPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_objectId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

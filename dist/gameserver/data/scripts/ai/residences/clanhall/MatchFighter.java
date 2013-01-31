@@ -25,13 +25,25 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.residences.clanhall.CTBBossInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class MatchFighter extends Fighter
 {
+	/**
+	 * Constructor for MatchFighter.
+	 * @param actor NpcInstance
+	 */
 	public MatchFighter(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -69,6 +81,11 @@ public abstract class MatchFighter extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	protected boolean checkAggression(Creature target)
 	{
@@ -99,6 +116,11 @@ public abstract class MatchFighter extends Fighter
 		return true;
 	}
 	
+	/**
+	 * Method canAttackCharacter.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	protected boolean canAttackCharacter(Creature target)
 	{
@@ -106,6 +128,9 @@ public abstract class MatchFighter extends Fighter
 		return actor.isAttackable(target);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	public void onEvtSpawn()
 	{
@@ -118,12 +143,20 @@ public abstract class MatchFighter extends Fighter
 		doTask();
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return CTBBossInstance
+	 */
 	@Override
 	public CTBBossInstance getActor()
 	{

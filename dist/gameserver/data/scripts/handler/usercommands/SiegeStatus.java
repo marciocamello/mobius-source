@@ -17,13 +17,26 @@ import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SiegeStatus extends ScriptUserCommand
 {
+	/**
+	 * Field COMMANDS.
+	 */
 	public static final int[] COMMANDS =
 	{
 		99
 	};
 	
+	/**
+	 * Method useUserCommand.
+	 * @param id int
+	 * @param player Player
+	 * @return boolean * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
+	 */
 	@Override
 	public boolean useUserCommand(int id, Player player)
 	{
@@ -55,6 +68,10 @@ public class SiegeStatus extends ScriptUserCommand
 		return true;
 	}
 	
+	/**
+	 * Method getUserCommandList.
+	 * @return int[] * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
+	 */
 	@Override
 	public int[] getUserCommandList()
 	{

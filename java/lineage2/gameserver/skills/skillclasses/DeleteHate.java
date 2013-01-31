@@ -23,13 +23,26 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DeleteHate extends Skill
 {
+	/**
+	 * Constructor for DeleteHate.
+	 * @param set StatsSet
+	 */
 	public DeleteHate(StatsSet set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

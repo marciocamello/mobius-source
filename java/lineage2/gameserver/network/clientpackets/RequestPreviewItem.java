@@ -36,16 +36,38 @@ import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPreviewItem extends L2GameClientPacket
 {
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(RequestPreviewItem.class);
+	/**
+	 * Field _unknow.
+	 */
 	@SuppressWarnings("unused")
 	private int _unknow;
+	/**
+	 * Field _listId.
+	 */
 	private int _listId;
+	/**
+	 * Field _count.
+	 */
 	private int _count;
+	/**
+	 * Field _items.
+	 */
 	private int[] _items;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -64,6 +86,9 @@ public class RequestPreviewItem extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -171,15 +196,28 @@ public class RequestPreviewItem extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class RemoveWearItemsTask extends RunnableImpl
 	{
+		/**
+		 * Field _activeChar.
+		 */
 		private final Player _activeChar;
 		
+		/**
+		 * Constructor for RemoveWearItemsTask.
+		 * @param activeChar Player
+		 */
 		public RemoveWearItemsTask(Player activeChar)
 		{
 			_activeChar = activeChar;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

@@ -24,13 +24,33 @@ import lineage2.gameserver.model.Player;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExBR_MiniGameLoadScores extends L2GameServerPacket
 {
+	/**
+	 * Field _place.
+	 */
 	private int _place;
+	/**
+	 * Field _score.
+	 */
 	private int _score;
+	/**
+	 * Field _lastScore.
+	 */
 	private int _lastScore;
+	/**
+	 * Field _entries.
+	 */
 	private final IntObjectMap<List<Map.Entry<String, Integer>>> _entries = new TreeIntObjectMap<>();
 	
+	/**
+	 * Constructor for ExBR_MiniGameLoadScores.
+	 * @param player Player
+	 */
 	public ExBR_MiniGameLoadScores(Player player)
 	{
 		int lastBig = 0;
@@ -63,6 +83,9 @@ public class ExBR_MiniGameLoadScores extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

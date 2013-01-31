@@ -20,19 +20,45 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Ranku extends Fighter
 {
+	/**
+	 * Field TELEPORTATION_CUBIC_ID. (value is 32375)
+	 */
 	private static final int TELEPORTATION_CUBIC_ID = 32375;
+	/**
+	 * Field CUBIC_POSITION.
+	 */
 	private static final Location CUBIC_POSITION = new Location(-19056, 278732, -15000, 0);
+	/**
+	 * Field SCAPEGOAT_ID. (value is 32305)
+	 */
 	private static final int SCAPEGOAT_ID = 32305;
+	/**
+	 * Field _massacreTimer.
+	 */
 	private long _massacreTimer = 0;
+	/**
+	 * Field _massacreDelay.
+	 */
 	private final long _massacreDelay = 30000L;
 	
+	/**
+	 * Constructor for Ranku.
+	 * @param actor NpcInstance
+	 */
 	public Ranku(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -47,6 +73,9 @@ public class Ranku extends Fighter
 		}
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
@@ -67,6 +96,10 @@ public class Ranku extends Fighter
 		super.thinkAttack();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -79,6 +112,10 @@ public class Ranku extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method getScapegoat.
+	 * @return NpcInstance
+	 */
 	private NpcInstance getScapegoat()
 	{
 		for (NpcInstance n : getActor().getReflection().getNpcs())
@@ -91,6 +128,10 @@ public class Ranku extends Fighter
 		return null;
 	}
 	
+	/**
+	 * Method getMaximumHate.
+	 * @return int
+	 */
 	private int getMaximumHate()
 	{
 		NpcInstance actor = getActor();

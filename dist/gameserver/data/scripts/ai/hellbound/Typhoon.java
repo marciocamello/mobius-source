@@ -19,8 +19,15 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Typhoon extends Fighter
 {
+	/**
+	 * Field points.
+	 */
 	static final Location[] points =
 	{
 		new Location(-16696, 250232, -2956),
@@ -46,21 +53,43 @@ public class Typhoon extends Fighter
 		new Location(-16712, 250520, -3029),
 		new Location(-15864, 250872, -3013)
 	};
+	/**
+	 * Field current_point.
+	 */
 	private int current_point = -1;
+	/**
+	 * Field wait_timeout.
+	 */
 	private long wait_timeout = 0;
+	/**
+	 * Field wait.
+	 */
 	private boolean wait = false;
 	
+	/**
+	 * Constructor for Typhoon.
+	 * @param actor NpcInstance
+	 */
 	public Typhoon(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{
@@ -78,6 +107,10 @@ public class Typhoon extends Fighter
 		return true;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	public boolean thinkActive()
 	{
@@ -125,6 +158,10 @@ public class Typhoon extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

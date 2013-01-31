@@ -19,26 +19,45 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.reference.L2Reference;
 import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ControlKeyInstance extends GameObject
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field reference.
+	 */
 	protected HardReference<ControlKeyInstance> reference;
 	
+	/**
+	 * Constructor for ControlKeyInstance.
+	 */
 	public ControlKeyInstance()
 	{
 		super(IdFactory.getInstance().getNextId());
 		reference = new L2Reference<>(this);
 	}
 	
+	/**
+	 * Method getRef.
+	 * @return HardReference<ControlKeyInstance>
+	 */
 	@Override
 	public HardReference<ControlKeyInstance> getRef()
 	{
 		return reference;
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{

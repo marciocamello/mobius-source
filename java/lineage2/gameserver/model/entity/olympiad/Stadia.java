@@ -12,20 +12,37 @@
  */
 package lineage2.gameserver.model.entity.olympiad;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Stadia
 {
+	/**
+	 * Field _freeToUse.
+	 */
 	private boolean _freeToUse = true;
 	
+	/**
+	 * Method isFreeToUse.
+	 * @return boolean
+	 */
 	public boolean isFreeToUse()
 	{
 		return _freeToUse;
 	}
 	
+	/**
+	 * Method setStadiaBusy.
+	 */
 	public void setStadiaBusy()
 	{
 		_freeToUse = false;
 	}
 	
+	/**
+	 * Method setStadiaFree.
+	 */
 	public void setStadiaFree()
 	{
 		_freeToUse = true;

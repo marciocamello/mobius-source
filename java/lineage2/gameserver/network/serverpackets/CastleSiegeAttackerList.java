@@ -23,11 +23,25 @@ import lineage2.gameserver.model.pledge.Clan;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleSiegeAttackerList extends L2GameServerPacket
 {
+	/**
+	 * Field _registrationValid. Field _id.
+	 */
 	private final int _id, _registrationValid;
+	/**
+	 * Field _clans.
+	 */
 	private List<SiegeClanObject> _clans = Collections.emptyList();
 	
+	/**
+	 * Constructor for CastleSiegeAttackerList.
+	 * @param residence Residence
+	 */
 	public CastleSiegeAttackerList(Residence residence)
 	{
 		_id = residence.getId();
@@ -35,6 +49,9 @@ public class CastleSiegeAttackerList extends L2GameServerPacket
 		_clans = residence.getSiegeEvent().getObjects(SiegeEvent.ATTACKERS);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

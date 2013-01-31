@@ -27,10 +27,23 @@ import lineage2.gameserver.network.clientpackets.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class GamePacketHandler implements IPacketHandler<GameClient>, IClientFactory<GameClient>, IMMOExecutor<GameClient>
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(GamePacketHandler.class);
 	
+	/**
+	 * Method handlePacket.
+	 * @param buf ByteBuffer
+	 * @param client GameClient
+	 * @return ReceivablePacket<GameClient>
+	 */
 	@Override
 	public ReceivablePacket<GameClient> handlePacket(ByteBuffer buf, GameClient client)
 	{
@@ -1100,10 +1113,9 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									msg = new CannotMoveAnymoreInVehicle();
 									break;
 								case 0x83:
-									int id5 = buf.getInt();
-									switch (id5)
-									{
-									}
+									/*
+									 * int id5 = buf.getInt(); switch (id5) { }
+									 */
 									break;
 								case 0x84:
 									msg = new RequestExAddPostFriendForPostBox();
@@ -1292,12 +1304,22 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 		return msg;
 	}
 	
+	/**
+	 * Method create.
+	 * @param con MMOConnection<GameClient>
+	 * @return GameClient * @see lineage2.commons.net.nio.impl.IClientFactory#create(MMOConnection<GameClient>)
+	 */
 	@Override
 	public GameClient create(MMOConnection<GameClient> con)
 	{
 		return new GameClient(con);
 	}
 	
+	/**
+	 * Method execute.
+	 * @param r Runnable
+	 * @see lineage2.commons.net.nio.impl.IMMOExecutor#execute(Runnable)
+	 */
 	@Override
 	public void execute(Runnable r)
 	{

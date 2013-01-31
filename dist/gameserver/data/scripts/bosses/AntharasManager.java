@@ -46,44 +46,139 @@ import org.slf4j.LoggerFactory;
 
 import bosses.EpicBossState.State;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AntharasManager extends Functions implements ScriptFile, OnDeathListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(AntharasManager.class);
+	/**
+	 * Field _teleportCubeId. (value is 31859)
+	 */
 	private static final int _teleportCubeId = 31859;
+	/**
+	 * Field ANTHARAS_STRONG. (value is 29068)
+	 */
 	private static final int ANTHARAS_STRONG = 29068;
+	/**
+	 * Field PORTAL_STONE. (value is 3865)
+	 */
 	private static final int PORTAL_STONE = 3865;
+	/**
+	 * Field TELEPORT_POSITION.
+	 */
 	private static final Location TELEPORT_POSITION = new Location(179892, 114915, -7704);
+	/**
+	 * Field _teleportCubeLocation.
+	 */
 	private static final Location _teleportCubeLocation = new Location(177615, 114941, -7709, 0);
+	/**
+	 * Field _antharasLocation.
+	 */
 	static final Location _antharasLocation = new Location(181911, 114835, -7678, 32542);
+	/**
+	 * Field _antharas.
+	 */
 	static BossInstance _antharas;
+	/**
+	 * Field _teleCube.
+	 */
 	private static NpcInstance _teleCube;
+	/**
+	 * Field _spawnedMinions.
+	 */
 	private static List<NpcInstance> _spawnedMinions = new ArrayList<>();
+	/**
+	 * Field _monsterSpawnTask.
+	 */
 	private static ScheduledFuture<?> _monsterSpawnTask;
+	/**
+	 * Field _intervalEndTask.
+	 */
 	private static ScheduledFuture<?> _intervalEndTask;
+	/**
+	 * Field _socialTask.
+	 */
 	static ScheduledFuture<?> _socialTask;
+	/**
+	 * Field _moveAtRandomTask.
+	 */
 	private static ScheduledFuture<?> _moveAtRandomTask;
+	/**
+	 * Field _sleepCheckTask.
+	 */
 	static ScheduledFuture<?> _sleepCheckTask;
+	/**
+	 * Field _onAnnihilatedTask.
+	 */
 	private static ScheduledFuture<?> _onAnnihilatedTask;
+	/**
+	 * Field _state.
+	 */
 	static EpicBossState _state;
+	/**
+	 * Field _zone.
+	 */
 	private static Zone _zone;
+	/**
+	 * Field _lastAttackTime.
+	 */
 	static long _lastAttackTime = 0;
+	/**
+	 * Field FWA_LIMITUNTILSLEEP.
+	 */
 	private static final int FWA_LIMITUNTILSLEEP = 15 * 60000;
+	/**
+	 * Field FWA_FIXINTERVALOFANTHARAS.
+	 */
 	private static final int FWA_FIXINTERVALOFANTHARAS = 11 * 24 * 60 * 60000;
+	/**
+	 * Field FWA_APPTIMEOFANTHARAS.
+	 */
 	private static final int FWA_APPTIMEOFANTHARAS = 5 * 60000;
+	/**
+	 * Field Dying.
+	 */
 	private static boolean Dying = false;
+	/**
+	 * Field _entryLocked.
+	 */
 	private static boolean _entryLocked = false;
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class AntharasSpawn extends RunnableImpl
 	{
+		/**
+		 * Field _distance.
+		 */
 		private final int _distance = 2550;
+		/**
+		 * Field _taskId.
+		 */
 		private int _taskId = 0;
+		/**
+		 * Field _players.
+		 */
 		private final List<Player> _players = getPlayersInside();
 		
+		/**
+		 * Constructor for AntharasSpawn.
+		 * @param taskId int
+		 */
 		AntharasSpawn(int taskId)
 		{
 			_taskId = taskId;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -214,13 +309,22 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class CheckLastAttack extends RunnableImpl
 	{
+		/**
+		 * Constructor for CheckLastAttack.
+		 */
 		public CheckLastAttack()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -238,13 +342,22 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class IntervalEnd extends RunnableImpl
 	{
+		/**
+		 * Constructor for IntervalEnd.
+		 */
 		public IntervalEnd()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -253,13 +366,22 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private static class onAnnihilated extends RunnableImpl
 	{
+		/**
+		 * Constructor for onAnnihilated.
+		 */
 		public onAnnihilated()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -267,6 +389,9 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		}
 	}
 	
+	/**
+	 * Method banishForeigners.
+	 */
 	private static void banishForeigners()
 	{
 		for (Player player : getPlayersInside())
@@ -275,6 +400,9 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		}
 	}
 	
+	/**
+	 * Method checkAnnihilated.
+	 */
 	private synchronized static void checkAnnihilated()
 	{
 		if ((_onAnnihilatedTask == null) && isPlayersAnnihilated())
@@ -283,21 +411,37 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		}
 	}
 	
+	/**
+	 * Method getPlayersInside.
+	 * @return List<Player>
+	 */
 	static List<Player> getPlayersInside()
 	{
 		return getZone().getInsidePlayers();
 	}
 	
+	/**
+	 * Method getRespawnInterval.
+	 * @return int
+	 */
 	private static int getRespawnInterval()
 	{
 		return (int) (Config.ALT_RAID_RESPAWN_MULTIPLIER * FWA_FIXINTERVALOFANTHARAS);
 	}
 	
+	/**
+	 * Method getZone.
+	 * @return Zone
+	 */
 	public static Zone getZone()
 	{
 		return _zone;
 	}
 	
+	/**
+	 * Method isPlayersAnnihilated.
+	 * @return boolean
+	 */
 	private static boolean isPlayersAnnihilated()
 	{
 		for (Player pc : getPlayersInside())
@@ -310,6 +454,9 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		return true;
 	}
 	
+	/**
+	 * Method onAntharasDie.
+	 */
 	static void onAntharasDie()
 	{
 		if (Dying)
@@ -325,6 +472,12 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		Log.add("Antharas died", "bosses");
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param self Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature self, Creature killer)
 	{
@@ -338,6 +491,9 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		}
 	}
 	
+	/**
+	 * Method setIntervalEndTask.
+	 */
 	private static void setIntervalEndTask()
 	{
 		setUnspawn();
@@ -356,6 +512,9 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		_intervalEndTask = ThreadPoolManager.getInstance().schedule(new IntervalEnd(), _state.getInterval());
 	}
 	
+	/**
+	 * Method setUnspawn.
+	 */
 	private static void setUnspawn()
 	{
 		banishForeigners();
@@ -404,6 +563,9 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		}
 	}
 	
+	/**
+	 * Method init.
+	 */
 	private void init()
 	{
 		_state = new EpicBossState(ANTHARAS_STRONG);
@@ -417,6 +579,9 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		_log.info("AntharasManager: Next spawn date of Antharas is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()) + ".");
 	}
 	
+	/**
+	 * Method sleep.
+	 */
 	static void sleep()
 	{
 		setUnspawn();
@@ -427,11 +592,17 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		}
 	}
 	
+	/**
+	 * Method setLastAttackTime.
+	 */
 	public static void setLastAttackTime()
 	{
 		_lastAttackTime = System.currentTimeMillis();
 	}
 	
+	/**
+	 * Method setAntharasSpawnTask.
+	 */
 	public synchronized static void setAntharasSpawnTask()
 	{
 		if (_monsterSpawnTask == null)
@@ -441,6 +612,10 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		_entryLocked = true;
 	}
 	
+	/**
+	 * Method broadcastScreenMessage.
+	 * @param npcs NpcString
+	 */
 	public static void broadcastScreenMessage(NpcString npcs)
 	{
 		for (Player p : getPlayersInside())
@@ -449,11 +624,19 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		}
 	}
 	
+	/**
+	 * Method addSpawnedMinion.
+	 * @param npc NpcInstance
+	 */
 	public static void addSpawnedMinion(NpcInstance npc)
 	{
 		_spawnedMinions.add(npc);
 	}
 	
+	/**
+	 * Method enterTheLair.
+	 * @param ccleader Player
+	 */
 	public static void enterTheLair(Player ccleader)
 	{
 		if (ccleader == null)
@@ -501,18 +684,30 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		setAntharasSpawnTask();
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
 		init();
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		sleep();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{

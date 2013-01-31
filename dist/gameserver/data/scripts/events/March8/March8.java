@@ -34,22 +34,53 @@ import lineage2.gameserver.utils.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class March8 extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(March8.class);
+	/**
+	 * Field EVENT_NAME. (value is ""March8"")
+	 */
 	private static final String EVENT_NAME = "March8";
+	/**
+	 * Field RECIPE_PRICE. (value is 50000)
+	 */
 	private static final int RECIPE_PRICE = 50000;
+	/**
+	 * Field RECIPE_ID. (value is 20191)
+	 */
 	private static final int RECIPE_ID = 20191;
+	/**
+	 * Field EVENT_MANAGER_ID. (value is 4301)
+	 */
 	private static final int EVENT_MANAGER_ID = 4301;
+	/**
+	 * Field _spawns.
+	 */
 	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	/**
+	 * Field DROP.
+	 */
 	private static final int[] DROP =
 	{
 		20192,
 		20193,
 		20194
 	};
+	/**
+	 * Field _active.
+	 */
 	private static boolean _active = false;
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	private void spawnEventManagers()
 	{
 		final int EVENT_MANAGERS[][] =
@@ -124,16 +155,26 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 		SpawnNPCs(EVENT_MANAGER_ID, EVENT_MANAGERS, _spawns);
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return IsActive(EVENT_NAME);
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -155,6 +196,9 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -176,6 +220,9 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method buyrecipe.
+	 */
 	public void buyrecipe()
 	{
 		Player player = getSelf();
@@ -197,6 +244,11 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 		Functions.addItem(player, RECIPE_ID, 1);
 	}
 	
+	/**
+	 * Method DialogAppend_4301.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_4301(Integer val)
 	{
 		if (val != 0)
@@ -212,6 +264,10 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 		return append;
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -228,18 +284,31 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -249,6 +318,12 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 		}
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
 	@Override
 	public void onDeath(Creature cha, Creature killer)
 	{

@@ -14,15 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.pledge.UnitMember;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeShowMemberListAdd extends L2GameServerPacket
 {
+	/**
+	 * Field _member.
+	 */
 	private final PledgePacketMember _member;
 	
+	/**
+	 * Constructor for PledgeShowMemberListAdd.
+	 * @param member UnitMember
+	 */
 	public PledgeShowMemberListAdd(UnitMember member)
 	{
 		_member = new PledgePacketMember(member);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -36,16 +50,44 @@ public class PledgeShowMemberListAdd extends L2GameServerPacket
 		writeD(_member._pledgeType);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class PledgePacketMember
 	{
+		/**
+		 * Field _name.
+		 */
 		final String _name;
+		/**
+		 * Field _level.
+		 */
 		final int _level;
+		/**
+		 * Field _classId.
+		 */
 		final int _classId;
+		/**
+		 * Field _sex.
+		 */
 		final int _sex;
+		/**
+		 * Field _race.
+		 */
 		final int _race;
+		/**
+		 * Field _online.
+		 */
 		final int _online;
+		/**
+		 * Field _pledgeType.
+		 */
 		final int _pledgeType;
 		
+		/**
+		 * Constructor for PledgePacketMember.
+		 * @param m UnitMember
+		 */
 		public PledgePacketMember(UnitMember m)
 		{
 			_name = m.getName();

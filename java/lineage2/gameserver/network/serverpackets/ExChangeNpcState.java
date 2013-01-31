@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExChangeNpcState extends L2GameServerPacket
 {
+	/**
+	 * Field _objId.
+	 */
 	private final int _objId;
+	/**
+	 * Field _state.
+	 */
 	private final int _state;
 	
+	/**
+	 * Constructor for ExChangeNpcState.
+	 * @param objId int
+	 * @param state int
+	 */
 	public ExChangeNpcState(int objId, int state)
 	{
 		_objId = objId;
 		_state = state;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

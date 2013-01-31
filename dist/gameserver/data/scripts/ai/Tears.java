@@ -34,15 +34,28 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Tears extends DefaultAI
 {
+	/**
+	 * @author Mobius
+	 */
 	private class DeSpawnTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for DeSpawnTask.
+		 */
 		public DeSpawnTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -58,13 +71,21 @@ public class Tears extends DefaultAI
 		}
 	}
 	
+	/**
+	 */
 	private class SpawnMobsTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for SpawnMobsTask.
+		 */
 		public SpawnMobsTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -73,17 +94,51 @@ public class Tears extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Field Invincible.
+	 */
 	final Skill Invincible;
+	/**
+	 * Field Freezing.
+	 */
 	final Skill Freezing;
+	/**
+	 * Field Water_Dragon_Scale. (value is 2369)
+	 */
 	private static final int Water_Dragon_Scale = 2369;
+	/**
+	 * Field Tears_Copy. (value is 25535)
+	 */
 	private static final int Tears_Copy = 25535;
+	/**
+	 * Field spawnTask.
+	 */
 	ScheduledFuture<?> spawnTask;
+	/**
+	 * Field despawnTask.
+	 */
 	ScheduledFuture<?> despawnTask;
+	/**
+	 * Field spawns.
+	 */
 	List<NpcInstance> spawns = new ArrayList<>();
+	/**
+	 * Field _isUsedInvincible.
+	 */
 	private boolean _isUsedInvincible = false;
+	/**
+	 * Field _scale_count.
+	 */
 	private int _scale_count = 0;
+	/**
+	 * Field _last_scale_time.
+	 */
 	private long _last_scale_time = 0;
 	
+	/**
+	 * Constructor for Tears.
+	 * @param actor NpcInstance
+	 */
 	public Tears(NpcInstance actor)
 	{
 		super(actor);
@@ -92,6 +147,11 @@ public class Tears extends DefaultAI
 		Freezing = skills.get(5238);
 	}
 	
+	/**
+	 * Method onEvtSeeSpell.
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
@@ -127,6 +187,10 @@ public class Tears extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method createNewTask.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean createNewTask()
 	{
@@ -148,7 +212,7 @@ public class Tears extends DefaultAI
 		{
 			_isUsedInvincible = true;
 			addTaskBuff(actor, Invincible);
-			Functions.npcSay(actor, "Готовьтесь к смерти!!!");
+			Functions.npcSay(actor, "Готов�?те�?�? к �?мерти!!!");
 			return true;
 		}
 		if ((rnd_per < 5) && (spawnTask == null) && (despawnTask == null))
@@ -161,7 +225,10 @@ public class Tears extends DefaultAI
 		{
 			return chooseTaskAndTargets(null, target, distance);
 		}
-		return chooseTaskAndTargets(Freezing, target, distance);
+		return chooseTaskAndTargets(Freezing, target, /**
+		 * Method spawnMobs.
+		 */
+		distance);
 	}
 	
 	void spawnMobs()
@@ -201,7 +268,11 @@ public class Tears extends DefaultAI
 		{
 			despawnTask.cancel(false);
 		}
-		despawnTask = ThreadPoolManager.getInstance().schedule(new DeSpawnTask(), 30000);
+		despawnTask = ThreadPoolManager.getInstance().schedule(new DeSpawnTask(/**
+		 * Method randomWalk.
+		 * @return boolean
+		 */
+		), 30000);
 	}
 	
 	@Override

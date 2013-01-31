@@ -21,10 +21,21 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EpicZone implements ScriptFile
 {
+	/**
+	 * Field _zoneListener.
+	 */
 	private static ZoneListener _zoneListener;
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -33,18 +44,35 @@ public class EpicZone implements ScriptFile
 		zone.addListener(_zoneListener);
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -62,6 +90,12 @@ public class EpicZone implements ScriptFile
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{

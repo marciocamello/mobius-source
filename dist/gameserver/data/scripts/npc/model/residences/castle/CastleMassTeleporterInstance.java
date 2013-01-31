@@ -28,6 +28,10 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleMassTeleporterInstance extends NpcInstance
 {
 	/**
@@ -35,13 +39,22 @@ public class CastleMassTeleporterInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class TeleportTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for TeleportTask.
+		 */
 		public TeleportTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -54,15 +67,31 @@ public class CastleMassTeleporterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Field _teleportTask.
+	 */
 	Future<?> _teleportTask = null;
+	/**
+	 * Field _teleportLoc.
+	 */
 	final Location _teleportLoc;
 	
+	/**
+	 * Constructor for CastleMassTeleporterInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public CastleMassTeleporterInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		_teleportLoc = Location.parseLoc(template.getAIParams().getString("teleport_loc"));
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -79,6 +108,12 @@ public class CastleMassTeleporterInstance extends NpcInstance
 		showChatWindow(player, "residence2/castle/CastleTeleportDelayed.htm");
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -99,6 +134,10 @@ public class CastleMassTeleporterInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method isAllTowersDead.
+	 * @return boolean
+	 */
 	private boolean isAllTowersDead()
 	{
 		SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);

@@ -18,14 +18,26 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeleportArkan extends DefaultAI
 {
+	/**
+	 * Constructor for TeleportArkan.
+	 * @param actor NpcInstance
+	 */
 	public TeleportArkan(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ACTIVE_DELAY = 1000;
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -44,6 +56,10 @@ public class TeleportArkan extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method isGlobalAI.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isGlobalAI()
 	{

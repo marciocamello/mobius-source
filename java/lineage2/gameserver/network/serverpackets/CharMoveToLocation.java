@@ -17,13 +17,33 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharMoveToLocation extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _client_z_shift.
+	 */
 	private int _client_z_shift;
+	/**
+	 * Field _current.
+	 */
 	private final Location _current;
+	/**
+	 * Field _destination.
+	 */
 	private Location _destination;
 	
+	/**
+	 * Constructor for CharMoveToLocation.
+	 * @param cha Creature
+	 */
 	public CharMoveToLocation(Creature cha)
 	{
 		_objectId = cha.getObjectId();
@@ -44,6 +64,12 @@ public class CharMoveToLocation extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Constructor for CharMoveToLocation.
+	 * @param objectId int
+	 * @param from Location
+	 * @param to Location
+	 */
 	public CharMoveToLocation(int objectId, Location from, Location to)
 	{
 		_objectId = objectId;
@@ -51,6 +77,9 @@ public class CharMoveToLocation extends L2GameServerPacket
 		_destination = to;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

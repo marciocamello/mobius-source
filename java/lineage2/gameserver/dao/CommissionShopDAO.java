@@ -32,22 +32,65 @@ import lineage2.gameserver.templates.item.ExItemType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CommissionShopDAO
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CommissionShopDAO.class);
+	/**
+	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO commission_shop(obj_id, seller_id, item_name, price, item_type, sale_days, sale_end_time, seller_name) VALUES (?,?,?,?,?,?,?,?)"")
+	 */
 	private static final String INSERT_SQL_QUERY = "INSERT INTO commission_shop(obj_id, seller_id, item_name, price, item_type, sale_days, sale_end_time, seller_name) VALUES (?,?,?,?,?,?,?,?)";
+	/**
+	 * Field SELECT_PLAYER_REGISTERED_ITEMS_SQL_QUERY. (value is ""SELECT auction_id, price, item_type, sale_days, sale_end_time, seller_name, obj_id FROM commission_shop WHERE seller_id=?"")
+	 */
 	private static final String SELECT_PLAYER_REGISTERED_ITEMS_SQL_QUERY = "SELECT auction_id, price, item_type, sale_days, sale_end_time, seller_name, obj_id  FROM commission_shop WHERE seller_id=?";
+	/**
+	 * Field SELECT_REGISTERED_ITEMS. (value is ""SELECT auction_id, price, item_name, item_type, sale_days, sale_end_time, seller_name, obj_id FROM commission_shop WHERE item_type IN(?) ORDER BY auction_id"")
+	 */
 	private static final String SELECT_REGISTERED_ITEMS = "SELECT auction_id, price, item_name, item_type, sale_days, sale_end_time, seller_name, obj_id  FROM commission_shop WHERE item_type IN(?) ORDER BY auction_id";
+	/**
+	 * Field SELECT_COMMISSION_ITEM_INFO. (value is ""SELECT price, sale_days, sale_end_time, seller_name, obj_id FROM commission_shop WHERE auction_id=? AND item_type=?"")
+	 */
 	private static final String SELECT_COMMISSION_ITEM_INFO = "SELECT price, sale_days, sale_end_time, seller_name, obj_id  FROM commission_shop WHERE auction_id=? AND item_type=?";
+	/**
+	 * Field DELETE_COMMISSION_ITEM. (value is ""DELETE FROM commission_shop WHERE auction_id=?"")
+	 */
 	private static final String DELETE_COMMISSION_ITEM = "DELETE FROM commission_shop WHERE auction_id=?";
+	/**
+	 * Field SELECT_EXPIRED_ITEMS. (value is ""SELECT auction_id, price, sale_days, seller_name, item_type, obj_id, sale_end_time FROM commission_shop WHERE sale_end_time <= ?"")
+	 */
 	private static final String SELECT_EXPIRED_ITEMS = "SELECT auction_id, price, sale_days, seller_name, item_type, obj_id, sale_end_time  FROM commission_shop WHERE sale_end_time <= ?";
+	/**
+	 * Field ourInstance.
+	 */
 	private static final CommissionShopDAO ourInstance = new CommissionShopDAO();
 	
+	/**
+	 * Method getInstance.
+	 * @return CommissionShopDAO
+	 */
 	public static CommissionShopDAO getInstance()
 	{
 		return ourInstance;
 	}
 	
+	/**
+	 * Method saveNewItem.
+	 * @param objectId int
+	 * @param seller_id int
+	 * @param item_name String
+	 * @param price long
+	 * @param exItemType String
+	 * @param sale_days int
+	 * @param sale_end_time long
+	 * @param player_name String
+	 */
 	public void saveNewItem(int objectId, int seller_id, String item_name, long price, String exItemType, int sale_days, long sale_end_time, String player_name)
 	{
 		Connection con = null;
@@ -76,6 +119,11 @@ public class CommissionShopDAO
 		}
 	}
 	
+	/**
+	 * Method getRegisteredItemsFor.
+	 * @param player Player
+	 * @return List<CommissionItemInfo>
+	 */
 	public List<CommissionItemInfo> getRegisteredItemsFor(Player player)
 	{
 		List<CommissionItemInfo> items = new ArrayList<>(10);
@@ -120,6 +168,14 @@ public class CommissionShopDAO
 		return items;
 	}
 	
+	/**
+	 * Method getRegisteredItems.
+	 * @param types ExItemType[]
+	 * @param rareType int
+	 * @param grade int
+	 * @param searchName String
+	 * @return Queue<List<CommissionItemInfo>>
+	 */
 	public Queue<List<CommissionItemInfo>> getRegisteredItems(ExItemType[] types, int rareType, int grade, String searchName)
 	{
 		Queue<List<CommissionItemInfo>> items = new ArrayDeque<>();
@@ -194,6 +250,12 @@ public class CommissionShopDAO
 		return items;
 	}
 	
+	/**
+	 * Method getCommissionItemInfo.
+	 * @param auctionId long
+	 * @param exItemType ExItemType
+	 * @return CommissionItemInfo
+	 */
 	public CommissionItemInfo getCommissionItemInfo(long auctionId, ExItemType exItemType)
 	{
 		CommissionItemInfo itemInfo = null;
@@ -238,6 +300,11 @@ public class CommissionShopDAO
 		return itemInfo;
 	}
 	
+	/**
+	 * Method removeItem.
+	 * @param auctionId long
+	 * @return boolean
+	 */
 	public boolean removeItem(long auctionId)
 	{
 		Connection con = null;
@@ -261,6 +328,11 @@ public class CommissionShopDAO
 		return true;
 	}
 	
+	/**
+	 * Method removeExpiredItems.
+	 * @param expireTime long
+	 * @return List<CommissionItemInfo>
+	 */
 	public List<CommissionItemInfo> removeExpiredItems(long expireTime)
 	{
 		List<CommissionItemInfo> list = new ArrayList<>();

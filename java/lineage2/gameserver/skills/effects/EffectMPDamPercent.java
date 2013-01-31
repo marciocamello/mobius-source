@@ -15,13 +15,25 @@ package lineage2.gameserver.skills.effects;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectMPDamPercent extends Effect
 {
+	/**
+	 * Constructor for EffectMPDamPercent.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectMPDamPercent(final Env env, final EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -35,6 +47,10 @@ public class EffectMPDamPercent extends Effect
 		_effected.setCurrentMp(newMp);
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

@@ -12,17 +12,30 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 class SuperCmdSummonCmd extends L2GameClientPacket
 {
+	/**
+	 * Field _summonName.
+	 */
 	@SuppressWarnings("unused")
 	private String _summonName;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_summonName = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

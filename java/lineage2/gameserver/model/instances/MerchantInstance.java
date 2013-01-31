@@ -38,19 +38,38 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MerchantInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(MerchantInstance.class);
 	
+	/**
+	 * Constructor for MerchantInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MerchantInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
@@ -85,6 +104,11 @@ public class MerchantInstance extends NpcInstance
 		return "default/" + pom + ".htm";
 	}
 	
+	/**
+	 * Method showWearWindow.
+	 * @param player Player
+	 * @param val int
+	 */
 	private void showWearWindow(Player player, int val)
 	{
 		if (!player.getPlayerAccess().UseShop)
@@ -104,6 +128,12 @@ public class MerchantInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showShopWindow.
+	 * @param player Player
+	 * @param listId int
+	 * @param tax boolean
+	 */
 	protected void showShopWindow(Player player, int listId, boolean tax)
 	{
 		if (!player.getPlayerAccess().UseShop)
@@ -131,11 +161,20 @@ public class MerchantInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method showShopWindow.
+	 * @param player Player
+	 */
 	protected void showShopWindow(Player player)
 	{
 		showShopWindow(player, 0, false);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -212,6 +251,11 @@ public class MerchantInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getCastle.
+	 * @param player Player
+	 * @return Castle
+	 */
 	@Override
 	public Castle getCastle(Player player)
 	{
@@ -236,6 +280,10 @@ public class MerchantInstance extends NpcInstance
 		return super.getCastle(player);
 	}
 	
+	/**
+	 * Method isMerchantNpc.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isMerchantNpc()
 	{

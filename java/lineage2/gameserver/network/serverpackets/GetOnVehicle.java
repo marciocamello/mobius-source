@@ -16,11 +16,27 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.entity.boat.Boat;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GetOnVehicle extends L2GameServerPacket
 {
+	/**
+	 * Field _boatObjectId. Field _playerObjectId.
+	 */
 	private final int _playerObjectId, _boatObjectId;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for GetOnVehicle.
+	 * @param activeChar Playable
+	 * @param boat Boat
+	 * @param loc Location
+	 */
 	public GetOnVehicle(Playable activeChar, Boat boat, Location loc)
 	{
 		_loc = loc;
@@ -28,6 +44,9 @@ public class GetOnVehicle extends L2GameServerPacket
 		_boatObjectId = boat.getObjectId();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

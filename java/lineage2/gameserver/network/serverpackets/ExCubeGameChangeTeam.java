@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCubeGameChangeTeam extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _fromRedTeam.
+	 */
 	private final boolean _fromRedTeam;
 	
+	/**
+	 * Constructor for ExCubeGameChangeTeam.
+	 * @param player Player
+	 * @param fromRedTeam boolean
+	 */
 	public ExCubeGameChangeTeam(Player player, boolean fromRedTeam)
 	{
 		_objectId = player.getObjectId();
 		_fromRedTeam = fromRedTeam;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

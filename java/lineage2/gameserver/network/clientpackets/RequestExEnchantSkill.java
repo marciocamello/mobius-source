@@ -28,11 +28,24 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.tables.SkillTreeTable;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExEnchantSkill extends L2GameClientPacket
 {
+	/**
+	 * Field _skillId.
+	 */
 	private int _skillId;
+	/**
+	 * Field _skillLvl.
+	 */
 	private int _skillLvl;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -40,6 +53,9 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 		_skillLvl = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -134,6 +150,12 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 		activeChar.sendPacket(new ExEnchantSkillInfo(_skillId, activeChar.getSkillDisplayLevel(_skillId)));
 	}
 	
+	/**
+	 * Method updateSkillShortcuts.
+	 * @param player Player
+	 * @param skillId int
+	 * @param skillLevel int
+	 */
 	protected static void updateSkillShortcuts(Player player, int skillId, int skillLevel)
 	{
 		for (ShortCut sc : player.getAllShortCuts())

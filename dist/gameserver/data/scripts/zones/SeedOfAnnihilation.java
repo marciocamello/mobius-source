@@ -33,9 +33,19 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SeedOfAnnihilation implements ScriptFile
 {
+	/**
+	 * Field ANNIHILATION_FURNACE. (value is 18928)
+	 */
 	private static final int ANNIHILATION_FURNACE = 18928;
+	/**
+	 * Field ZONE_BUFFS_LIST.
+	 */
 	static final int[][] ZONE_BUFFS_LIST =
 	{
 		{
@@ -69,6 +79,9 @@ public class SeedOfAnnihilation implements ScriptFile
 			2
 		}
 	};
+	/**
+	 * Field _teleportZones.
+	 */
 	static final Map<String, Location> _teleportZones = new HashMap<>();
 	static
 	{
@@ -77,18 +90,51 @@ public class SeedOfAnnihilation implements ScriptFile
 		_teleportZones.put("[13_23_telzone_from_cocracon]", new Location(-181217, 186711, -10528));
 		_teleportZones.put("[14_23_telzone_from_raptilicon]", new Location(-179275, 186802, -10720));
 	}
+	/**
+	 * Field _zoneListener.
+	 */
 	private static ZoneListener _zoneListener;
+	/**
+	 * Field _regionsData.
+	 */
 	final SeedRegion[] _regionsData = new SeedRegion[3];
+	/**
+	 * Field _seedsNextStatusChange.
+	 */
 	Long _seedsNextStatusChange;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SeedRegion
 	{
+		/**
+		 * Field buff_zone_pc.
+		 */
 		public String[] buff_zone_pc;
+		/**
+		 * Field buff_zone_npc.
+		 */
 		public String[] buff_zone_npc;
+		/**
+		 * Field af_spawns.
+		 */
 		public int[][] af_spawns;
+		/**
+		 * Field af_npcs.
+		 */
 		public NpcInstance[] af_npcs = new NpcInstance[2];
+		/**
+		 * Field activeBuff.
+		 */
 		public int activeBuff = 0;
 		
+		/**
+		 * Constructor for SeedRegion.
+		 * @param bz_pc String[]
+		 * @param bz_npc String[]
+		 * @param as int[][]
+		 */
 		public SeedRegion(String[] bz_pc, String[] bz_npc, int[][] as)
 		{
 			buff_zone_pc = bz_pc;
@@ -97,6 +143,9 @@ public class SeedOfAnnihilation implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method loadSeedRegionData.
+	 */
 	public void loadSeedRegionData()
 	{
 		_zoneListener = new ZoneListener();
@@ -203,6 +252,10 @@ public class SeedOfAnnihilation implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method getNextSeedsStatusChangeTime.
+	 * @return Long
+	 */
 	Long getNextSeedsStatusChangeTime()
 	{
 		Calendar reenter = Calendar.getInstance();
@@ -217,6 +270,10 @@ public class SeedOfAnnihilation implements ScriptFile
 		return reenter.getTimeInMillis();
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -224,16 +281,27 @@ public class SeedOfAnnihilation implements ScriptFile
 		startEffectZonesControl();
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method startEffectZonesControl.
+	 */
 	private void startEffectZonesControl()
 	{
 		for (SeedRegion sr : _regionsData)
@@ -253,12 +321,21 @@ public class SeedOfAnnihilation implements ScriptFile
 		ThreadPoolManager.getInstance().schedule(new ChangeSeedsStatus(), _seedsNextStatusChange - System.currentTimeMillis());
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ChangeSeedsStatus extends RunnableImpl
 	{
+		/**
+		 * Constructor for ChangeSeedsStatus.
+		 */
 		public ChangeSeedsStatus()
 		{
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -283,14 +360,28 @@ public class SeedOfAnnihilation implements ScriptFile
 		}
 	}
 	
+	/**
+	 * Method chanceZoneActive.
+	 * @param zoneName String
+	 * @param val boolean
+	 */
 	void chanceZoneActive(String zoneName, boolean val)
 	{
 		Zone zone = ReflectionUtils.getZone(zoneName);
 		zone.setActive(val);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -315,6 +406,12 @@ public class SeedOfAnnihilation implements ScriptFile
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{

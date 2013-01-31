@@ -18,19 +18,34 @@ import lineage2.gameserver.listener.actor.npc.OnSpawnListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NpcListenerList extends CharListenerList
 {
+	/**
+	 * Constructor for NpcListenerList.
+	 * @param actor NpcInstance
+	 */
 	public NpcListenerList(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return NpcInstance
+	 */
 	@Override
 	public NpcInstance getActor()
 	{
 		return (NpcInstance) actor;
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	public void onSpawn()
 	{
 		if (!global.getListeners().isEmpty())
@@ -55,6 +70,9 @@ public class NpcListenerList extends CharListenerList
 		}
 	}
 	
+	/**
+	 * Method onDecay.
+	 */
 	public void onDecay()
 	{
 		if (!global.getListeners().isEmpty())

@@ -23,23 +23,44 @@ import lineage2.gameserver.taskmanager.TaskTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SoIStageUpdater extends Task
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(SoIStageUpdater.class);
+	/**
+	 * Field NAME. (value is ""soi_update"")
+	 */
 	private static final String NAME = "soi_update";
 	
+	/**
+	 * Method initializate.
+	 */
 	@Override
 	public void initializate()
 	{
 		TaskManager.addUniqueTask(getName(), TaskTypes.TYPE_GLOBAL_TASK, "1", "12:00:00", "");
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	@Override
 	public String getName()
 	{
 		return NAME;
 	}
 	
+	/**
+	 * Method onTimeElapsed.
+	 * @param task ExecutedTask
+	 */
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{

@@ -19,19 +19,43 @@ import java.util.Collection;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class AbstractDirParser<H extends AbstractHolder> extends AbstractParser<H>
 {
+	/**
+	 * Constructor for AbstractDirParser.
+	 * @param holder H
+	 */
 	protected AbstractDirParser(H holder)
 	{
 		super(holder);
 	}
 	
+	/**
+	 * Method getXMLDir.
+	 * @return File
+	 */
 	public abstract File getXMLDir();
 	
+	/**
+	 * Method isIgnored.
+	 * @param f File
+	 * @return boolean
+	 */
 	public abstract boolean isIgnored(File f);
 	
+	/**
+	 * Method getDTDFileName.
+	 * @return String
+	 */
 	public abstract String getDTDFileName();
 	
+	/**
+	 * Method parse.
+	 */
 	@Override
 	protected final void parse()
 	{

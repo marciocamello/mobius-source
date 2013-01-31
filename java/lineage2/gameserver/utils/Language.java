@@ -12,17 +12,38 @@
  */
 package lineage2.gameserver.utils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum Language
 {
+	/**
+	 * Field ENGLISH.
+	 */
 	ENGLISH("en");
+	/**
+	 * Field VALUES.
+	 */
 	public static final Language[] VALUES = Language.values();
+	/**
+	 * Field _shortName.
+	 */
 	private String _shortName;
 	
+	/**
+	 * Constructor for Language.
+	 * @param shortName String
+	 */
 	Language(String shortName)
 	{
 		_shortName = shortName;
 	}
 	
+	/**
+	 * Method getShortName.
+	 * @return String
+	 */
 	public String getShortName()
 	{
 		return _shortName;

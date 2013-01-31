@@ -16,15 +16,29 @@ import java.util.List;
 
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCursedWeaponLocation extends L2GameServerPacket
 {
+	/**
+	 * Field _cursedWeaponInfo.
+	 */
 	private final List<CursedWeaponInfo> _cursedWeaponInfo;
 	
+	/**
+	 * Constructor for ExCursedWeaponLocation.
+	 * @param cursedWeaponInfo List<CursedWeaponInfo>
+	 */
 	public ExCursedWeaponLocation(List<CursedWeaponInfo> cursedWeaponInfo)
 	{
 		_cursedWeaponInfo = cursedWeaponInfo;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -47,12 +61,30 @@ public class ExCursedWeaponLocation extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class CursedWeaponInfo
 	{
+		/**
+		 * Field _pos.
+		 */
 		public Location _pos;
+		/**
+		 * Field _id.
+		 */
 		public int _id;
+		/**
+		 * Field _status.
+		 */
 		public int _status;
 		
+		/**
+		 * Constructor for CursedWeaponInfo.
+		 * @param p Location
+		 * @param ID int
+		 * @param status int
+		 */
 		public CursedWeaponInfo(Location p, int ID, int status)
 		{
 			_pos = p;

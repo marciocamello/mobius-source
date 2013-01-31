@@ -14,10 +14,20 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.GameTimeController;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClientSetTime extends L2GameServerPacket
 {
+	/**
+	 * Field STATIC.
+	 */
 	public static final L2GameServerPacket STATIC = new ClientSetTime();
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

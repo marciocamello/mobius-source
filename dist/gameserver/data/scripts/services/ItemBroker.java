@@ -44,11 +44,27 @@ import lineage2.gameserver.templates.item.RecipeTemplate.RecipeComponent;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ItemBroker extends Functions
 {
+	/**
+	 * Field MAX_ITEMS_PER_PAGE. (value is 10)
+	 */
 	private static final int MAX_ITEMS_PER_PAGE = 10;
+	/**
+	 * Field MAX_PAGES_PER_LIST. (value is 9)
+	 */
 	private static final int MAX_PAGES_PER_LIST = 9;
+	/**
+	 * Field _npcInfos.
+	 */
 	private static Map<Integer, NpcInfo> _npcInfos = new ConcurrentHashMap<>();
+	/**
+	 * Field RARE_ITEMS.
+	 */
 	public int[] RARE_ITEMS =
 	{
 		16255,
@@ -1268,29 +1284,97 @@ public class ItemBroker extends Functions
 		16355
 	};
 	
+	/**
+	 * @author Mobius
+	 */
 	public class NpcInfo
 	{
+		/**
+		 * Field lastUpdate.
+		 */
 		public long lastUpdate;
+		/**
+		 * Field bestSellItems.
+		 */
 		public TreeMap<String, TreeMap<Long, Item>> bestSellItems;
+		/**
+		 * Field bestBuyItems.
+		 */
 		public TreeMap<String, TreeMap<Long, Item>> bestBuyItems;
+		/**
+		 * Field bestCraftItems.
+		 */
 		public TreeMap<String, TreeMap<Long, Item>> bestCraftItems;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class Item
 	{
+		/**
+		 * Field itemId.
+		 */
 		public final int itemId;
+		/**
+		 * Field itemObjId.
+		 */
 		public final int itemObjId;
+		/**
+		 * Field type.
+		 */
 		public final int type;
+		/**
+		 * Field price.
+		 */
 		public final long price;
+		/**
+		 * Field count.
+		 */
 		public final long count;
+		/**
+		 * Field enchant.
+		 */
 		public final int enchant;
+		/**
+		 * Field rare.
+		 */
 		public final boolean rare;
+		/**
+		 * Field merchantStoredId.
+		 */
 		public final long merchantStoredId;
+		/**
+		 * Field name.
+		 */
 		public final String name;
+		/**
+		 * Field merchantName.
+		 */
 		public final String merchantName;
+		/**
+		 * Field player.
+		 */
 		public final Location player;
+		/**
+		 * Field item.
+		 */
 		public final TradeItem item;
 		
+		/**
+		 * Constructor for Item.
+		 * @param itemId int
+		 * @param type int
+		 * @param price long
+		 * @param count long
+		 * @param enchant int
+		 * @param itemName String
+		 * @param storedId long
+		 * @param merchantName String
+		 * @param player Location
+		 * @param itemObjId int
+		 * @param item TradeItem
+		 */
 		public Item(int itemId, int type, long price, long count, int enchant, String itemName, long storedId, String merchantName, Location player, int itemObjId, TradeItem item)
 		{
 			this.itemId = itemId;
@@ -1311,7 +1395,7 @@ public class ItemBroker extends Functions
 					out.append("<font color=\"7CFC00\">+");
 				}
 				out.append(enchant);
-				out.append(" ");
+				out.append(' ');
 			}
 			else if (rare)
 			{
@@ -1365,37 +1449,37 @@ public class ItemBroker extends Functions
 						out.append("&nbsp;<font color=\"7CFC00\">");
 						if (fire > 0)
 						{
-							out.append("+");
+							out.append('+');
 							out.append(fire);
 							out.append(" Fire ");
 						}
 						if (water > 0)
 						{
-							out.append("+");
+							out.append('+');
 							out.append(water);
 							out.append(" Water ");
 						}
 						if (wind > 0)
 						{
-							out.append("+");
+							out.append('+');
 							out.append(wind);
 							out.append(" Wind ");
 						}
 						if (earth > 0)
 						{
-							out.append("+");
+							out.append('+');
 							out.append(earth);
 							out.append(" Earth ");
 						}
 						if (holy > 0)
 						{
-							out.append("+");
+							out.append('+');
 							out.append(holy);
 							out.append(" Holy ");
 						}
 						if (unholy > 0)
 						{
-							out.append("+");
+							out.append('+');
 							out.append(unholy);
 							out.append(" Unholy ");
 						}
@@ -1412,6 +1496,11 @@ public class ItemBroker extends Functions
 		}
 	}
 	
+	/**
+	 * Method getItems.
+	 * @param type int
+	 * @return TreeMap<String,TreeMap<Long,Item>>
+	 */
 	private TreeMap<String, TreeMap<Long, Item>> getItems(int type)
 	{
 		Player player = getSelf();
@@ -1438,21 +1527,41 @@ public class ItemBroker extends Functions
 		return null;
 	}
 	
+	/**
+	 * Method DialogAppend_32320.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_32320(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_32321.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_32321(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_32322.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_32322(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method getHtmlAppends.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String getHtmlAppends(Integer val)
 	{
 		StringBuilder append = new StringBuilder();
@@ -1532,6 +1641,10 @@ public class ItemBroker extends Functions
 		return append.toString();
 	}
 	
+	/**
+	 * Method list.
+	 * @param var String[]
+	 */
 	public void list(String[] var)
 	{
 		Player player = getSelf();
@@ -1542,7 +1655,7 @@ public class ItemBroker extends Functions
 		}
 		if (var.length != 5)
 		{
-			show("Некорректная длина данных", player, npc);
+			show("�?екорректна�? длина данных", player, npc);
 			return;
 		}
 		int type;
@@ -1560,14 +1673,14 @@ public class ItemBroker extends Functions
 		}
 		catch (Exception e)
 		{
-			show("Некорректные данные", player, npc);
+			show("�?екорректные данные", player, npc);
 			return;
 		}
 		ItemClass itemClass = itemType >= ItemClass.values().length ? null : ItemClass.values()[itemType];
 		TreeMap<String, TreeMap<Long, Item>> allItems = getItems(type);
 		if (allItems == null)
 		{
-			show("Ошибка - предметов такого типа не найдено", player, npc);
+			show("�?�?ибка - предметов такого типа не найдено", player, npc);
 			return;
 		}
 		List<Item> items = new ArrayList<>(allItems.size() * 10);
@@ -1674,17 +1787,17 @@ public class ItemBroker extends Functions
 				out.append(temp.getIcon32());
 				out.append("</td><td><table width=100%><tr><td>[scripts_services.ItemBroker:listForItem ");
 				out.append(type);
-				out.append(" ");
+				out.append(' ');
 				out.append(item.itemId);
-				out.append(" ");
+				out.append(' ');
 				out.append(minEnchant);
-				out.append(" ");
+				out.append(' ');
 				out.append(rare);
-				out.append(" ");
+				out.append(' ');
 				out.append(itemType);
 				out.append(" 1 ");
 				out.append(currentPage);
-				out.append("|");
+				out.append('|');
 				out.append(item.name);
 				out.append("</td></tr><tr><td>price: ");
 				out.append(Util.formatAdena(item.price));
@@ -1704,23 +1817,37 @@ public class ItemBroker extends Functions
 		show(out.toString(), player, npc);
 	}
 	
+	/**
+	 * Method listPageNum.
+	 * @param out StringBuilder
+	 * @param type int
+	 * @param itemType int
+	 * @param page int
+	 * @param minEnchant int
+	 * @param rare int
+	 * @param letter String
+	 */
 	private void listPageNum(StringBuilder out, int type, int itemType, int page, int minEnchant, int rare, String letter)
 	{
 		out.append("[scripts_services.ItemBroker:list ");
 		out.append(type);
-		out.append(" ");
+		out.append(' ');
 		out.append(itemType);
-		out.append(" ");
+		out.append(' ');
 		out.append(page);
-		out.append(" ");
+		out.append(' ');
 		out.append(minEnchant);
-		out.append(" ");
+		out.append(' ');
 		out.append(rare);
-		out.append("|");
+		out.append('|');
 		out.append(letter);
 		out.append("]&nbsp;");
 	}
 	
+	/**
+	 * Method listForItem.
+	 * @param var String[]
+	 */
 	public void listForItem(String[] var)
 	{
 		Player player = getSelf();
@@ -1731,7 +1858,7 @@ public class ItemBroker extends Functions
 		}
 		if ((var.length < 7) || (var.length > 12))
 		{
-			show("Некорректная длина данных", player, npc);
+			show("�?екорректна�? длина данных", player, npc);
 			return;
 		}
 		int type;
@@ -1759,25 +1886,25 @@ public class ItemBroker extends Functions
 		}
 		catch (Exception e)
 		{
-			show("Некорректные данные", player, npc);
+			show("�?екорректные данные", player, npc);
 			return;
 		}
 		ItemTemplate template = ItemHolder.getInstance().getTemplate(itemId);
 		if (template == null)
 		{
-			show("Ошибка - itemId не определен.", player, npc);
+			show("�?�?ибка - itemId не определен.", player, npc);
 			return;
 		}
 		TreeMap<String, TreeMap<Long, Item>> tmpItems = getItems(type);
 		if (tmpItems == null)
 		{
-			show("Ошибка - такой тип предмета отсутствует.", player, npc);
+			show("�?�?ибка - такой тип предмета от�?ут�?твует.", player, npc);
 			return;
 		}
 		TreeMap<Long, Item> allItems = tmpItems.get(template.getName());
 		if (allItems == null)
 		{
-			show("Ошибка - предметов с таким названием не найдено.", player, npc);
+			show("�?�?ибка - предметов �? таким названием не найдено.", player, npc);
 			return;
 		}
 		StringBuilder out = new StringBuilder(200);
@@ -1793,7 +1920,7 @@ public class ItemBroker extends Functions
 		NavigableMap<Long, Item> sortedItems = type == Player.STORE_PRIVATE_BUY ? allItems.descendingMap() : allItems;
 		if (sortedItems == null)
 		{
-			show("Ошибка - ничего не найдено.", player, npc);
+			show("�?�?ибка - ничего не найдено.", player, npc);
 			return;
 		}
 		List<Item> items = new ArrayList<>(sortedItems.size());
@@ -1865,11 +1992,11 @@ public class ItemBroker extends Functions
 				out.append(temp.getIcon32());
 				out.append("</td><td><table width=100%><tr><td>[scripts_services.ItemBroker:path ");
 				out.append(type);
-				out.append(" ");
+				out.append(' ');
 				out.append(item.itemId);
-				out.append(" ");
+				out.append(' ');
 				out.append(item.itemObjId);
-				out.append("|");
+				out.append('|');
 				out.append(item.name);
 				out.append("</td></tr><tr><td>price: ");
 				out.append(Util.formatAdena(item.price));
@@ -1890,35 +2017,52 @@ public class ItemBroker extends Functions
 		show(out.toString(), player, npc);
 	}
 	
+	/**
+	 * Method listForItemPageNum.
+	 * @param out StringBuilder
+	 * @param type int
+	 * @param itemId int
+	 * @param minEnchant int
+	 * @param rare int
+	 * @param itemType int
+	 * @param page int
+	 * @param returnPage int
+	 * @param search String[]
+	 * @param letter String
+	 */
 	private void listForItemPageNum(StringBuilder out, int type, int itemId, int minEnchant, int rare, int itemType, int page, int returnPage, String[] search, String letter)
 	{
 		out.append("[scripts_services.ItemBroker:listForItem ");
 		out.append(type);
-		out.append(" ");
+		out.append(' ');
 		out.append(itemId);
-		out.append(" ");
+		out.append(' ');
 		out.append(minEnchant);
-		out.append(" ");
+		out.append(' ');
 		out.append(rare);
-		out.append(" ");
+		out.append(' ');
 		out.append(itemType);
-		out.append(" ");
+		out.append(' ');
 		out.append(page);
-		out.append(" ");
+		out.append(' ');
 		out.append(returnPage);
 		if (search != null)
 		{
 			for (String element : search)
 			{
-				out.append(" ");
+				out.append(' ');
 				out.append(element);
 			}
 		}
-		out.append("|");
+		out.append('|');
 		out.append(letter);
 		out.append("]&nbsp;");
 	}
 	
+	/**
+	 * Method path.
+	 * @param var String[]
+	 */
 	public void path(String[] var)
 	{
 		Player player = getSelf();
@@ -1929,7 +2073,7 @@ public class ItemBroker extends Functions
 		}
 		if (var.length != 3)
 		{
-			show("Некорректная длина данных", player, npc);
+			show("�?екорректна�? длина данных", player, npc);
 			return;
 		}
 		int type;
@@ -1943,25 +2087,25 @@ public class ItemBroker extends Functions
 		}
 		catch (Exception e)
 		{
-			show("Некорректные данные", player, npc);
+			show("�?екорректные данные", player, npc);
 			return;
 		}
 		ItemTemplate temp = ItemHolder.getInstance().getTemplate(itemId);
 		if (temp == null)
 		{
-			show("Ошибка - itemId не определен.", player, npc);
+			show("�?�?ибка - itemId не определен.", player, npc);
 			return;
 		}
 		TreeMap<String, TreeMap<Long, Item>> allItems = getItems(type);
 		if (allItems == null)
 		{
-			show("Ошибка - предметов такого типа не найдено.", player, npc);
+			show("�?�?ибка - предметов такого типа не найдено.", player, npc);
 			return;
 		}
 		TreeMap<Long, Item> items = allItems.get(temp.getName());
 		if (items == null)
 		{
-			show("Ошибка - предметов с таким именем не найдено.", player, npc);
+			show("�?�?ибка - предметов �? таким именем не найдено.", player, npc);
 			return;
 		}
 		Item item = null;
@@ -1975,14 +2119,14 @@ public class ItemBroker extends Functions
 		}
 		if (item == null)
 		{
-			show("Ошибка - предмет не найден.", player, npc);
+			show("�?�?ибка - предмет не найден.", player, npc);
 			return;
 		}
 		boolean found = false;
 		Player trader = GameObjectsStorage.getAsPlayer(item.merchantStoredId);
 		if (trader == null)
 		{
-			show("Торговец не найден, возможно он вышел из игры.", player, npc);
+			show("Торговец не найден, возможно он вы�?ел из игры.", player, npc);
 			return;
 		}
 		switch (type)
@@ -2045,6 +2189,11 @@ public class ItemBroker extends Functions
 		player.setTarget(trader);
 	}
 	
+	/**
+	 * Method updateInfo.
+	 * @param player Player
+	 * @param npc NpcInstance
+	 */
 	public void updateInfo(Player player, NpcInstance npc)
 	{
 		NpcInfo info = _npcInfos.get(npc.getObjectId());
@@ -2160,6 +2309,10 @@ public class ItemBroker extends Functions
 		}
 	}
 	
+	/**
+	 * Method find.
+	 * @param var String[]
+	 */
 	public void find(String[] var)
 	{
 		Player player = getSelf();
@@ -2187,7 +2340,7 @@ public class ItemBroker extends Functions
 			{
 				line = var[i + 2].trim().toLowerCase();
 				search[i] = line;
-				if ((line.length() > 1) && line.startsWith("+"))
+				if ((line.length() > 1) && ((line.length() > 0) && (line.charAt(0) == '+')))
 				{
 					minEnchant = Integer.valueOf(line.substring(1));
 				}
@@ -2195,13 +2348,13 @@ public class ItemBroker extends Functions
 		}
 		catch (Exception e)
 		{
-			show("Некорректные данные", player, npc);
+			show("�?екорректные данные", player, npc);
 			return;
 		}
 		TreeMap<String, TreeMap<Long, Item>> allItems = getItems(type);
 		if (allItems == null)
 		{
-			show("Ошибка - предметов с таким типом не найдено.", player, npc);
+			show("�?�?ибка - предметов �? таким типом не найдено.", player, npc);
 			return;
 		}
 		List<Item> items = new ArrayList<>();
@@ -2214,7 +2367,7 @@ public class ItemBroker extends Functions
 			for (String aSearch : search)
 			{
 				line = aSearch;
-				if (line.startsWith("+"))
+				if ((line.length() > 0) && (line.charAt(0) == '+'))
 				{
 					continue;
 				}
@@ -2302,9 +2455,9 @@ public class ItemBroker extends Functions
 				out.append(temp.getIcon32());
 				out.append("</td><td><table width=100%><tr><td>[scripts_services.ItemBroker:listForItem ");
 				out.append(type);
-				out.append(" ");
+				out.append(' ');
 				out.append(item.itemId);
-				out.append(" ");
+				out.append(' ');
 				out.append(minEnchant);
 				out.append(" 0 0 1 ");
 				out.append(currentPage);
@@ -2312,11 +2465,11 @@ public class ItemBroker extends Functions
 				{
 					for (String element : search)
 					{
-						out.append(" ");
+						out.append(' ');
 						out.append(element);
 					}
 				}
-				out.append("|");
+				out.append('|');
 				out.append("<font color=\"LEVEL\">");
 				out.append(temp.getName());
 				out.append("</font>]");
@@ -2333,21 +2486,29 @@ public class ItemBroker extends Functions
 		show(out.toString(), player, npc);
 	}
 	
+	/**
+	 * Method findPageNum.
+	 * @param out StringBuilder
+	 * @param type int
+	 * @param page int
+	 * @param search String[]
+	 * @param letter String
+	 */
 	private void findPageNum(StringBuilder out, int type, int page, String[] search, String letter)
 	{
 		out.append("[scripts_services.ItemBroker:find ");
 		out.append(type);
-		out.append(" ");
+		out.append(' ');
 		out.append(page);
 		if (search != null)
 		{
 			for (String element : search)
 			{
-				out.append(" ");
+				out.append(' ');
 				out.append(element);
 			}
 		}
-		out.append("|");
+		out.append('|');
 		out.append(letter);
 		out.append("]&nbsp;");
 	}

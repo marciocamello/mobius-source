@@ -16,20 +16,55 @@ import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.conditions.Condition;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class Func implements Comparable<Func>
 {
+	/**
+	 * Field EMPTY_FUNC_ARRAY.
+	 */
 	public static final Func[] EMPTY_FUNC_ARRAY = new Func[0];
+	/**
+	 * Field stat.
+	 */
 	public final Stats stat;
+	/**
+	 * Field order.
+	 */
 	public final int order;
+	/**
+	 * Field owner.
+	 */
 	public final Object owner;
+	/**
+	 * Field value.
+	 */
 	public final double value;
+	/**
+	 * Field cond.
+	 */
 	protected Condition cond;
 	
+	/**
+	 * Constructor for Func.
+	 * @param stat Stats
+	 * @param order int
+	 * @param owner Object
+	 */
 	public Func(Stats stat, int order, Object owner)
 	{
 		this(stat, order, owner, 0.);
 	}
 	
+	/**
+	 * Constructor for Func.
+	 * @param stat Stats
+	 * @param order int
+	 * @param owner Object
+	 * @param value double
+	 */
 	public Func(Stats stat, int order, Object owner, double value)
 	{
 		this.stat = stat;
@@ -38,18 +73,35 @@ public abstract class Func implements Comparable<Func>
 		this.value = value;
 	}
 	
+	/**
+	 * Method setCondition.
+	 * @param cond Condition
+	 */
 	public void setCondition(Condition cond)
 	{
 		this.cond = cond;
 	}
 	
+	/**
+	 * Method getCondition.
+	 * @return Condition
+	 */
 	public Condition getCondition()
 	{
 		return cond;
 	}
 	
+	/**
+	 * Method calc.
+	 * @param env Env
+	 */
 	public abstract void calc(Env env);
 	
+	/**
+	 * Method compareTo.
+	 * @param f Func
+	 * @return int * @throws NullPointerException
+	 */
 	@Override
 	public int compareTo(Func f) throws NullPointerException
 	{

@@ -12,17 +12,30 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 class SuperCmdCharacterInfo extends L2GameClientPacket
 {
+	/**
+	 * Field _characterName.
+	 */
 	@SuppressWarnings("unused")
 	private String _characterName;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_characterName = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

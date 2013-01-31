@@ -19,13 +19,26 @@ import lineage2.gameserver.network.serverpackets.FinishRotating;
 import lineage2.gameserver.network.serverpackets.StartRotating;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectBluff extends Effect
 {
+	/**
+	 * Constructor for EffectBluff.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectBluff(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
@@ -36,6 +49,9 @@ public final class EffectBluff extends Effect
 		return super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -44,12 +60,20 @@ public final class EffectBluff extends Effect
 		getEffected().setHeading(getEffector().getHeading());
 	}
 	
+	/**
+	 * Method isHidden.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isHidden()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

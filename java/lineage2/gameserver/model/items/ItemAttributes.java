@@ -16,21 +16,58 @@ import java.io.Serializable;
 
 import lineage2.gameserver.model.base.Element;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ItemAttributes implements Serializable
 {
+	/**
+	 * Field serialVersionUID. (value is 401594188363005415)
+	 */
 	private static final long serialVersionUID = 401594188363005415L;
+	/**
+	 * Field fire.
+	 */
 	private int fire;
+	/**
+	 * Field water.
+	 */
 	private int water;
+	/**
+	 * Field wind.
+	 */
 	private int wind;
+	/**
+	 * Field earth.
+	 */
 	private int earth;
+	/**
+	 * Field holy.
+	 */
 	private int holy;
+	/**
+	 * Field unholy.
+	 */
 	private int unholy;
 	
+	/**
+	 * Constructor for ItemAttributes.
+	 */
 	public ItemAttributes()
 	{
 		this(0, 0, 0, 0, 0, 0);
 	}
 	
+	/**
+	 * Constructor for ItemAttributes.
+	 * @param fire int
+	 * @param water int
+	 * @param wind int
+	 * @param earth int
+	 * @param holy int
+	 * @param unholy int
+	 */
 	public ItemAttributes(int fire, int water, int wind, int earth, int holy, int unholy)
 	{
 		this.fire = fire;
@@ -41,66 +78,118 @@ public class ItemAttributes implements Serializable
 		this.unholy = unholy;
 	}
 	
+	/**
+	 * Method getFire.
+	 * @return int
+	 */
 	public int getFire()
 	{
 		return fire;
 	}
 	
+	/**
+	 * Method setFire.
+	 * @param fire int
+	 */
 	public void setFire(int fire)
 	{
 		this.fire = fire;
 	}
 	
+	/**
+	 * Method getWater.
+	 * @return int
+	 */
 	public int getWater()
 	{
 		return water;
 	}
 	
+	/**
+	 * Method setWater.
+	 * @param water int
+	 */
 	public void setWater(int water)
 	{
 		this.water = water;
 	}
 	
+	/**
+	 * Method getWind.
+	 * @return int
+	 */
 	public int getWind()
 	{
 		return wind;
 	}
 	
+	/**
+	 * Method setWind.
+	 * @param wind int
+	 */
 	public void setWind(int wind)
 	{
 		this.wind = wind;
 	}
 	
+	/**
+	 * Method getEarth.
+	 * @return int
+	 */
 	public int getEarth()
 	{
 		return earth;
 	}
 	
+	/**
+	 * Method setEarth.
+	 * @param earth int
+	 */
 	public void setEarth(int earth)
 	{
 		this.earth = earth;
 	}
 	
+	/**
+	 * Method getHoly.
+	 * @return int
+	 */
 	public int getHoly()
 	{
 		return holy;
 	}
 	
+	/**
+	 * Method setHoly.
+	 * @param holy int
+	 */
 	public void setHoly(int holy)
 	{
 		this.holy = holy;
 	}
 	
+	/**
+	 * Method getUnholy.
+	 * @return int
+	 */
 	public int getUnholy()
 	{
 		return unholy;
 	}
 	
+	/**
+	 * Method setUnholy.
+	 * @param unholy int
+	 */
 	public void setUnholy(int unholy)
 	{
 		this.unholy = unholy;
 	}
 	
+	/**
+	 * Method getElement.
+	 * @return Element
+	 */
 	public Element getElement()
 	{
 		if (fire > 0)
@@ -130,6 +219,10 @@ public class ItemAttributes implements Serializable
 		return Element.NONE;
 	}
 	
+	/**
+	 * Method getValue.
+	 * @return int
+	 */
 	public int getValue()
 	{
 		if (fire > 0)
@@ -159,6 +252,11 @@ public class ItemAttributes implements Serializable
 		return 0;
 	}
 	
+	/**
+	 * Method setValue.
+	 * @param element Element
+	 * @param value int
+	 */
 	public void setValue(Element element, int value)
 	{
 		switch (element)
@@ -184,6 +282,11 @@ public class ItemAttributes implements Serializable
 		}
 	}
 	
+	/**
+	 * Method getValue.
+	 * @param element Element
+	 * @return int
+	 */
 	public int getValue(Element element)
 	{
 		switch (element)
@@ -205,6 +308,10 @@ public class ItemAttributes implements Serializable
 		}
 	}
 	
+	/**
+	 * Method clone.
+	 * @return ItemAttributes
+	 */
 	@Override
 	public ItemAttributes clone()
 	{

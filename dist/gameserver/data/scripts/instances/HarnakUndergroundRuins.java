@@ -34,46 +34,139 @@ import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HarnakUndergroundRuins extends Reflection
 {
+	/**
+	 * Field DOOR1_ID. (value is 16240100)
+	 */
 	private static final int DOOR1_ID = 16240100;
+	/**
+	 * Field DOOR2_ID. (value is 16240102)
+	 */
 	private static final int DOOR2_ID = 16240102;
+	/**
+	 * Field ZONE_1. (value is ""[harnak_underground_4pf_1]"")
+	 */
 	private static final String ZONE_1 = "[harnak_underground_4pf_1]";
+	/**
+	 * Field ZONE_2. (value is ""[harnak_underground_4pf_2]"")
+	 */
 	private static final String ZONE_2 = "[harnak_underground_4pf_2]";
+	/**
+	 * Field RAKZAN_ID. (value is 27440)
+	 */
 	private static final int RAKZAN_ID = 27440;
+	/**
+	 * Field DEFENSE_SKILL_ID. (value is 14700)
+	 */
 	private static final int DEFENSE_SKILL_ID = 14700;
+	/**
+	 * Field FIRST_ROOM_SECOND_GROUP. (value is ""2_group"")
+	 */
 	private static final String FIRST_ROOM_SECOND_GROUP = "2_group";
+	/**
+	 * Field SECOND_ROOM_FIRST_GROUP. (value is ""3_group_1"")
+	 */
 	private static final String SECOND_ROOM_FIRST_GROUP = "3_group_1";
+	/**
+	 * Field SECOND_ROOM_SOURCE_POWER. (value is ""3_group_source_power"")
+	 */
 	private static final String SECOND_ROOM_SOURCE_POWER = "3_group_source_power";
+	/**
+	 * Field THIRD_ROOM_GROUP. (value is ""4_group"")
+	 */
 	private static final String THIRD_ROOM_GROUP = "4_group";
+	/**
+	 * Field THIRD_ROOM_SEALS. (value is ""4_group_seal"")
+	 */
 	private static final String THIRD_ROOM_SEALS = "4_group_seal";
+	/**
+	 * Field THIRD_ROOM_MINIONS. (value is ""4_group_minion"")
+	 */
 	private static final String THIRD_ROOM_MINIONS = "4_group_minion";
+	/**
+	 * Field HERMUNKUS_GROUP. (value is ""hermunkus"")
+	 */
 	private static final String HERMUNKUS_GROUP = "hermunkus";
+	/**
+	 * Field introShowed.
+	 */
 	private boolean introShowed = false;
+	/**
+	 * Field first_room_mobs_count.
+	 */
 	private volatile int first_room_mobs_count = 8;
+	/**
+	 * Field secondRoomGroup.
+	 */
 	private int secondRoomGroup = 0;
+	/**
+	 * Field classId_139.
+	 */
 	int classId_139 = 139;
+	/**
+	 * Field classId_140.
+	 */
 	int classId_140 = 140;
+	/**
+	 * Field classId_141.
+	 */
 	int classId_141 = 141;
+	/**
+	 * Field classId_142.
+	 */
 	int classId_142 = 142;
+	/**
+	 * Field classId_143.
+	 */
 	int classId_143 = 143;
+	/**
+	 * Field classId_144.
+	 */
 	int classId_144 = 144;
+	/**
+	 * Field classId_145.
+	 */
 	int classId_145 = 145;
+	/**
+	 * Field classId_146.
+	 */
 	int classId_146 = 146;
+	/**
+	 * Field failTask.
+	 */
 	private ScheduledFuture<?> failTask;
+	/**
+	 * Field state.
+	 */
 	private final int state;
 	
+	/**
+	 * Constructor for HarnakUndergroundRuins.
+	 * @param state int
+	 */
 	public HarnakUndergroundRuins(int state)
 	{
 		this.state = state;
 	}
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{
 		super.onCreate();
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -113,6 +206,9 @@ public class HarnakUndergroundRuins extends Reflection
 		}
 	}
 	
+	/**
+	 * Method decreaseFirstRoomMobsCount.
+	 */
 	public void decreaseFirstRoomMobsCount()
 	{
 		if (--first_room_mobs_count == 0)
@@ -128,6 +224,9 @@ public class HarnakUndergroundRuins extends Reflection
 		}
 	}
 	
+	/**
+	 * Method increaseSecondRoomGroup.
+	 */
 	public void increaseSecondRoomGroup()
 	{
 		secondRoomGroup++;
@@ -153,6 +252,9 @@ public class HarnakUndergroundRuins extends Reflection
 		}
 	}
 	
+	/**
+	 * Method startLastStage.
+	 */
 	public void startLastStage()
 	{
 		for (Player player : getPlayers())
@@ -166,6 +268,9 @@ public class HarnakUndergroundRuins extends Reflection
 		spawnByGroup(THIRD_ROOM_SEALS);
 	}
 	
+	/**
+	 * Method successEndInstance.
+	 */
 	public void successEndInstance()
 	{
 		if (failTask != null)
@@ -189,15 +294,28 @@ public class HarnakUndergroundRuins extends Reflection
 		spawnByGroup(HERMUNKUS_GROUP);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ScreenMessageTask extends RunnableImpl
 	{
+		/**
+		 * Field msg.
+		 */
 		private final NpcString msg;
 		
+		/**
+		 * Constructor for ScreenMessageTask.
+		 * @param msg NpcString
+		 */
 		public ScreenMessageTask(NpcString msg)
 		{
 			this.msg = msg;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -208,13 +326,22 @@ public class HarnakUndergroundRuins extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SpawnNpcTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for SpawnNpcTask.
+		 */
 		public SpawnNpcTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -227,17 +354,34 @@ public class HarnakUndergroundRuins extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SpawnNpcByPlayerClass extends RunnableImpl
 	{
+		/**
+		 * Field classId.
+		 */
 		private final ClassId classId;
+		/**
+		 * Field group.
+		 */
 		private final String group;
 		
+		/**
+		 * Constructor for SpawnNpcByPlayerClass.
+		 * @param classId ClassId
+		 * @param group String
+		 */
 		public SpawnNpcByPlayerClass(ClassId classId, String group)
 		{
 			this.classId = classId;
 			this.group = group;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -276,15 +420,31 @@ public class HarnakUndergroundRuins extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Field state.
+		 */
 		private final int state;
 		
+		/**
+		 * Constructor for ZoneListener.
+		 * @param state int
+		 */
 		public ZoneListener(int state)
 		{
 			this.state = state;
 		}
 		
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param actor Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature actor)
 		{
@@ -310,19 +470,34 @@ public class HarnakUndergroundRuins extends Reflection
 			zone.removeListener(this);
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param actor Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature actor)
 		{
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SpawnThirdRoom extends RunnableImpl
 	{
+		/**
+		 * Constructor for SpawnThirdRoom.
+		 */
 		public SpawnThirdRoom()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -330,13 +505,22 @@ public class HarnakUndergroundRuins extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class FailTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for FailTask.
+		 */
 		public FailTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -352,13 +536,22 @@ public class HarnakUndergroundRuins extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class EndTask extends RunnableImpl
 	{
+		/**
+		 * Constructor for EndTask.
+		 */
 		public EndTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

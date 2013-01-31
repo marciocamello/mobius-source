@@ -17,13 +17,31 @@ import java.util.List;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 @SuppressWarnings("serial")
 public class RewardList extends ArrayList<RewardGroup>
 {
+	/**
+	 * Field MAX_CHANCE. (value is 1000000)
+	 */
 	public static final int MAX_CHANCE = 1000000;
+	/**
+	 * Field _type.
+	 */
 	private final RewardType _type;
+	/**
+	 * Field _autoLoot.
+	 */
 	private final boolean _autoLoot;
 	
+	/**
+	 * Constructor for RewardList.
+	 * @param rewardType RewardType
+	 * @param a boolean
+	 */
 	public RewardList(RewardType rewardType, boolean a)
 	{
 		super(5);
@@ -31,21 +49,47 @@ public class RewardList extends ArrayList<RewardGroup>
 		_autoLoot = a;
 	}
 	
+	/**
+	 * Method roll.
+	 * @param player Player
+	 * @return List<RewardItem>
+	 */
 	public List<RewardItem> roll(Player player)
 	{
 		return roll(player, 1.0, false, false);
 	}
 	
+	/**
+	 * Method roll.
+	 * @param player Player
+	 * @param mod double
+	 * @return List<RewardItem>
+	 */
 	public List<RewardItem> roll(Player player, double mod)
 	{
 		return roll(player, mod, false, false);
 	}
 	
+	/**
+	 * Method roll.
+	 * @param player Player
+	 * @param mod double
+	 * @param isRaid boolean
+	 * @return List<RewardItem>
+	 */
 	public List<RewardItem> roll(Player player, double mod, boolean isRaid)
 	{
 		return roll(player, mod, isRaid, false);
 	}
 	
+	/**
+	 * Method roll.
+	 * @param player Player
+	 * @param mod double
+	 * @param isRaid boolean
+	 * @param isSiegeGuard boolean
+	 * @return List<RewardItem>
+	 */
 	public List<RewardItem> roll(Player player, double mod, boolean isRaid, boolean isSiegeGuard)
 	{
 		List<RewardItem> temp = new ArrayList<>(size());
@@ -63,6 +107,10 @@ public class RewardList extends ArrayList<RewardGroup>
 		return temp;
 	}
 	
+	/**
+	 * Method validate.
+	 * @return boolean
+	 */
 	public boolean validate()
 	{
 		for (RewardGroup g : this)
@@ -87,11 +135,19 @@ public class RewardList extends ArrayList<RewardGroup>
 		return false;
 	}
 	
+	/**
+	 * Method isAutoLoot.
+	 * @return boolean
+	 */
 	public boolean isAutoLoot()
 	{
 		return _autoLoot;
 	}
 	
+	/**
+	 * Method getType.
+	 * @return RewardType
+	 */
 	public RewardType getType()
 	{
 		return _type;

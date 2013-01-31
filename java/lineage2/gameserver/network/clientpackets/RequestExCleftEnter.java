@@ -12,17 +12,30 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExCleftEnter extends L2GameClientPacket
 {
+	/**
+	 * Field unk.
+	 */
 	@SuppressWarnings("unused")
 	private int unk;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		unk = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

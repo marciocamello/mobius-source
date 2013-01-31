@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PledgeReceiveUpdatePower extends L2GameServerPacket
 {
+	/**
+	 * Field _privs.
+	 */
 	private final int _privs;
 	
+	/**
+	 * Constructor for PledgeReceiveUpdatePower.
+	 * @param privs int
+	 */
 	public PledgeReceiveUpdatePower(int privs)
 	{
 		_privs = privs;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

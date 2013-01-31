@@ -16,12 +16,31 @@ import java.util.List;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExCubeGameTeamList extends L2GameServerPacket
 {
+	/**
+	 * Field _bluePlayers.
+	 */
 	List<Player> _bluePlayers;
+	/**
+	 * Field _redPlayers.
+	 */
 	List<Player> _redPlayers;
+	/**
+	 * Field _roomNumber.
+	 */
 	int _roomNumber;
 	
+	/**
+	 * Constructor for ExCubeGameTeamList.
+	 * @param redPlayers List<Player>
+	 * @param bluePlayers List<Player>
+	 * @param roomNumber int
+	 */
 	public ExCubeGameTeamList(List<Player> redPlayers, List<Player> bluePlayers, int roomNumber)
 	{
 		_redPlayers = redPlayers;
@@ -29,6 +48,9 @@ public class ExCubeGameTeamList extends L2GameServerPacket
 		_roomNumber = roomNumber - 1;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

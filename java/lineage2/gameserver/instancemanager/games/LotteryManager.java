@@ -32,24 +32,76 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LotteryManager
 {
+	/**
+	 * Field SECOND. (value is 1000)
+	 */
 	public static final long SECOND = 1000;
+	/**
+	 * Field MINUTE. (value is 60000)
+	 */
 	public static final long MINUTE = 60000;
+	/**
+	 * Field _instance.
+	 */
 	private static LotteryManager _instance;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(LotteryManager.class);
+	/**
+	 * Field INSERT_LOTTERY. (value is ""INSERT INTO games(id, idnr, enddate, prize, newprize) VALUES (?, ?, ?, ?, ?)"")
+	 */
 	private static final String INSERT_LOTTERY = "INSERT INTO games(id, idnr, enddate, prize, newprize) VALUES (?, ?, ?, ?, ?)";
+	/**
+	 * Field UPDATE_PRICE. (value is ""UPDATE games SET prize=?, newprize=? WHERE id = 1 AND idnr = ?"")
+	 */
 	private static final String UPDATE_PRICE = "UPDATE games SET prize=?, newprize=? WHERE id = 1 AND idnr = ?";
+	/**
+	 * Field UPDATE_LOTTERY. (value is ""UPDATE games SET finished=1, prize=?, newprize=?, number1=?, number2=?, prize1=?, prize2=?, prize3=? WHERE id=1 AND idnr=?"")
+	 */
 	private static final String UPDATE_LOTTERY = "UPDATE games SET finished=1, prize=?, newprize=?, number1=?, number2=?, prize1=?, prize2=?, prize3=? WHERE id=1 AND idnr=?";
+	/**
+	 * Field SELECT_LAST_LOTTERY. (value is ""SELECT idnr, prize, newprize, enddate, finished FROM games WHERE id = 1 ORDER BY idnr DESC LIMIT 1"")
+	 */
 	private static final String SELECT_LAST_LOTTERY = "SELECT idnr, prize, newprize, enddate, finished FROM games WHERE id = 1 ORDER BY idnr DESC LIMIT 1";
+	/**
+	 * Field SELECT_LOTTERY_ITEM. (value is ""SELECT enchant_level, custom_type2 FROM items WHERE item_id = 4442 AND custom_type1 = ?"")
+	 */
 	private static final String SELECT_LOTTERY_ITEM = "SELECT enchant_level, custom_type2 FROM items WHERE item_id = 4442 AND custom_type1 = ?";
+	/**
+	 * Field SELECT_LOTTERY_TICKET. (value is ""SELECT number1, number2, prize1, prize2, prize3 FROM games WHERE id = 1 AND idnr = ?"")
+	 */
 	private static final String SELECT_LOTTERY_TICKET = "SELECT number1, number2, prize1, prize2, prize3 FROM games WHERE id = 1 AND idnr = ?";
+	/**
+	 * Field _number.
+	 */
 	protected int _number;
+	/**
+	 * Field _prize.
+	 */
 	protected int _prize;
+	/**
+	 * Field _isSellingTickets.
+	 */
 	protected boolean _isSellingTickets;
+	/**
+	 * Field _isStarted.
+	 */
 	protected boolean _isStarted;
+	/**
+	 * Field _enddate.
+	 */
 	protected long _enddate;
 	
+	/**
+	 * Constructor for LotteryManager.
+	 */
 	public LotteryManager()
 	{
 		_number = 1;
@@ -63,12 +115,21 @@ public class LotteryManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class startLottery extends RunnableImpl
 	{
+		/**
+		 * Constructor for startLottery.
+		 */
 		protected startLottery()
 		{
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -81,6 +142,10 @@ public class LotteryManager
 		}
 	}
 	
+	/**
+	 * Method increasePrize.
+	 * @param count int
+	 */
 	public void increasePrize(int count)
 	{
 		_prize += count;
@@ -105,6 +170,10 @@ public class LotteryManager
 		}
 	}
 	
+	/**
+	 * Method restoreLotteryData.
+	 * @return boolean
+	 */
 	boolean restoreLotteryData()
 	{
 		Connection con = null;
@@ -157,6 +226,9 @@ public class LotteryManager
 		return true;
 	}
 	
+	/**
+	 * Method announceLottery.
+	 */
 	void announceLottery()
 	{
 		if (Config.SERVICES_ALLOW_LOTTERY)
@@ -168,6 +240,9 @@ public class LotteryManager
 		Announcements.getInstance().announceToAll("Lottery tickets are now available for Lucky Lottery #" + getId() + ".");
 	}
 	
+	/**
+	 * Method scheduleEndOfLottery.
+	 */
 	void scheduleEndOfLottery()
 	{
 		Calendar finishtime = Calendar.getInstance();
@@ -190,6 +265,9 @@ public class LotteryManager
 		ThreadPoolManager.getInstance().schedule(new finishLottery(), _enddate - System.currentTimeMillis());
 	}
 	
+	/**
+	 * Method createNewLottery.
+	 */
 	void createNewLottery()
 	{
 		Connection con = null;
@@ -215,12 +293,21 @@ public class LotteryManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class stopSellingTickets extends RunnableImpl
 	{
+		/**
+		 * Constructor for stopSellingTickets.
+		 */
 		protected stopSellingTickets()
 		{
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -233,12 +320,21 @@ public class LotteryManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class finishLottery extends RunnableImpl
 	{
+		/**
+		 * Constructor for finishLottery.
+		 */
 		protected finishLottery()
 		{
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -422,6 +518,12 @@ public class LotteryManager
 		}
 	}
 	
+	/**
+	 * Method decodeNumbers.
+	 * @param enchant int
+	 * @param type2 int
+	 * @return int[]
+	 */
 	public int[] decodeNumbers(int enchant, int type2)
 	{
 		int res[] = new int[5];
@@ -451,6 +553,13 @@ public class LotteryManager
 		return res;
 	}
 	
+	/**
+	 * Method checkTicket.
+	 * @param id int
+	 * @param enchant int
+	 * @param type2 int
+	 * @return int[]
+	 */
 	public int[] checkTicket(int id, int enchant, int type2)
 	{
 		int res[] =
@@ -524,21 +633,38 @@ public class LotteryManager
 		return res;
 	}
 	
+	/**
+	 * Method checkTicket.
+	 * @param item ItemInstance
+	 * @return int[]
+	 */
 	public int[] checkTicket(ItemInstance item)
 	{
 		return checkTicket(item.getCustomType1(), item.getEnchantLevel(), item.getCustomType2());
 	}
 	
+	/**
+	 * Method isSellableTickets.
+	 * @return boolean
+	 */
 	public boolean isSellableTickets()
 	{
 		return _isSellingTickets;
 	}
 	
+	/**
+	 * Method isStarted.
+	 * @return boolean
+	 */
 	public boolean isStarted()
 	{
 		return _isStarted;
 	}
 	
+	/**
+	 * Method getInstance.
+	 * @return LotteryManager
+	 */
 	public static LotteryManager getInstance()
 	{
 		if (_instance == null)
@@ -548,16 +674,28 @@ public class LotteryManager
 		return _instance;
 	}
 	
+	/**
+	 * Method getId.
+	 * @return int
+	 */
 	public int getId()
 	{
 		return _number;
 	}
 	
+	/**
+	 * Method getPrize.
+	 * @return int
+	 */
 	public int getPrize()
 	{
 		return _prize;
 	}
 	
+	/**
+	 * Method getEndDate.
+	 * @return long
+	 */
 	public long getEndDate()
 	{
 		return _enddate;

@@ -15,17 +15,37 @@ package lineage2.gameserver.model.quest.startcondition.impl;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.startcondition.ICheckStartCondition;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class PlayerLevelCondition implements ICheckStartCondition
 {
+	/**
+	 * Field min.
+	 */
 	private final int min;
+	/**
+	 * Field max.
+	 */
 	private final int max;
 	
+	/**
+	 * Constructor for PlayerLevelCondition.
+	 * @param min int
+	 * @param max int
+	 */
 	public PlayerLevelCondition(int min, int max)
 	{
 		this.min = min;
 		this.max = max;
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param player Player
+	 * @return boolean * @see lineage2.gameserver.model.quest.startcondition.ICheckStartCondition#checkCondition(Player)
+	 */
 	@Override
 	public final boolean checkCondition(Player player)
 	{

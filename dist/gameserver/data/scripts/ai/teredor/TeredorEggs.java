@@ -25,26 +25,58 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeredorEggs extends Fighter
 {
+	/**
+	 * Field eggMonsters.
+	 */
 	static int[] eggMonsters =
 	{
 		18993,
 		18994
 	};
+	/**
+	 * Field monsterSpawnDelay.
+	 */
 	private static int monsterSpawnDelay = 3;
+	/**
+	 * Field poisonId.
+	 */
 	private static int poisonId = 14561;
+	/**
+	 * Field poisonLevel.
+	 */
 	private static int poisonLevel = 1;
+	/**
+	 * Field distanceToDebuff.
+	 */
 	private static int distanceToDebuff = 400;
+	/**
+	 * Field _activated.
+	 */
 	boolean _activated = false;
+	/**
+	 * Field actor.
+	 */
 	final NpcInstance actor = getActor();
 	
+	/**
+	 * Constructor for TeredorEggs.
+	 * @param actor NpcInstance
+	 */
 	public TeredorEggs(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
@@ -68,12 +100,30 @@ public class TeredorEggs extends Fighter
 		super.thinkAttack();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SpawnMonster extends RunnableImpl
 	{
+		/**
+		 * Field _npc.
+		 */
 		NpcInstance _npc;
+		/**
+		 * Field _player.
+		 */
 		Player _player;
+		/**
+		 * Field _ref.
+		 */
 		Reflection _ref;
 		
+		/**
+		 * Constructor for SpawnMonster.
+		 * @param npc NpcInstance
+		 * @param player Player
+		 * @param ref Reflection
+		 */
 		public SpawnMonster(NpcInstance npc, Player player, Reflection ref)
 		{
 			_npc = npc;
@@ -81,6 +131,9 @@ public class TeredorEggs extends Fighter
 			_ref = ref;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

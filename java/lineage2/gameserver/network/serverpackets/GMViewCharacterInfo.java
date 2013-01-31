@@ -20,29 +20,97 @@ import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GMViewCharacterInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
+	/**
+	 * Field _inv.
+	 */
 	private final int[][] _inv;
+	/**
+	 * Field mount_type. Field level. Field karma. Field pvp_flag. Field class_id. Field _sex. Field _race. Field obj_id.
+	 */
 	private final int obj_id, _race, _sex, class_id, pvp_flag, karma, level, mount_type;
+	/**
+	 * Field _sp. Field _men. Field _wit. Field _int. Field _dex. Field _con. Field _str.
+	 */
 	private final int _str, _con, _dex, _int, _wit, _men, _sp;
+	/**
+	 * Field rec_have. Field rec_left. Field maxLoad. Field curLoad. Field maxCp. Field curCp. Field maxMp. Field curMp. Field maxHp. Field curHp.
+	 */
 	private final int curHp, maxHp, curMp, maxMp, curCp, maxCp, curLoad, maxLoad, rec_left, rec_have;
+	/**
+	 * Field _matkspd. Field _matk. Field crit. Field accuracy. Field evasion. Field _pdef. Field _patkspd. Field _patk.
+	 */
 	private final int _patk, _patkspd, _pdef, evasion, accuracy, crit, _matk, _matkspd;
+	/**
+	 * Field gm_commands. Field face. Field hair_color. Field hair_style. Field _mdef.
+	 */
 	private final int _mdef, hair_style, hair_color, face, gm_commands;
+	/**
+	 * Field title_color. Field ally_id. Field clan_crest_id. Field clan_id.
+	 */
 	private final int clan_id, clan_crest_id, ally_id, title_color;
+	/**
+	 * Field pvp_kills. Field pk_kills. Field name_color. Field private_store. Field hero. Field noble.
+	 */
 	private final int noble, hero, private_store, name_color, pk_kills, pvp_kills;
+	/**
+	 * Field pledge_class. Field running. Field DwarvenCraftLevel. Field _swimSpd. Field _walkSpd. Field _runSpd.
+	 */
 	private final int _runSpd, _walkSpd, _swimSpd, DwarvenCraftLevel, running, pledge_class;
+	/**
+	 * Field title. Field _name.
+	 */
 	private final String _name, title;
+	/**
+	 * Field _exp.
+	 */
 	private final long _exp;
+	/**
+	 * Field col_height. Field col_radius. Field attack_speed. Field move_speed.
+	 */
 	private final double move_speed, attack_speed, col_radius, col_height;
+	/**
+	 * Field attackElement.
+	 */
 	private final Element attackElement;
+	/**
+	 * Field attackElementValue.
+	 */
 	private final int attackElementValue;
+	/**
+	 * Field defenceUnholy. Field defenceHoly. Field defenceEarth. Field defenceWind. Field defenceWater. Field defenceFire.
+	 */
 	private final int defenceFire, defenceWater, defenceWind, defenceEarth, defenceHoly, defenceUnholy;
+	/**
+	 * Field vitality. Field fame.
+	 */
 	private final int fame, vitality;
+	/**
+	 * Field talismans.
+	 */
 	private final int talismans;
+	/**
+	 * Field openCloak.
+	 */
 	private final boolean openCloak;
+	/**
+	 * Field _expPercent.
+	 */
 	private final double _expPercent;
 	
+	/**
+	 * Constructor for GMViewCharacterInfo.
+	 * @param cha Player
+	 */
 	public GMViewCharacterInfo(final Player cha)
 	{
 		_loc = cha.getLoc();
@@ -131,6 +199,9 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

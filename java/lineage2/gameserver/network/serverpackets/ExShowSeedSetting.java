@@ -20,12 +20,29 @@ import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.templates.manor.SeedProduction;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowSeedSetting extends L2GameServerPacket
 {
+	/**
+	 * Field _manorId.
+	 */
 	private final int _manorId;
+	/**
+	 * Field _count.
+	 */
 	private final int _count;
+	/**
+	 * Field _seedData.
+	 */
 	private final long[] _seedData;
 	
+	/**
+	 * Constructor for ExShowSeedSetting.
+	 * @param manorId int
+	 */
 	public ExShowSeedSetting(int manorId)
 	{
 		_manorId = manorId;
@@ -70,6 +87,9 @@ public class ExShowSeedSetting extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	public void writeImpl()
 	{

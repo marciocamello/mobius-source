@@ -20,19 +20,35 @@ import lineage2.gameserver.model.Spawner;
 import lineage2.gameserver.model.instances.residences.SiegeToggleNpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleControlTowerInstance extends SiegeToggleNpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _spawnList.
+	 */
 	private final Set<Spawner> _spawnList = new HashSet<>();
 	
+	/**
+	 * Constructor for CastleControlTowerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public CastleControlTowerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onDeathImpl.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onDeathImpl(Creature killer)
 	{
@@ -43,6 +59,10 @@ public class CastleControlTowerInstance extends SiegeToggleNpcInstance
 		_spawnList.clear();
 	}
 	
+	/**
+	 * Method register.
+	 * @param spawn Spawner
+	 */
 	@Override
 	public void register(Spawner spawn)
 	{

@@ -36,35 +36,119 @@ import lineage2.gameserver.stats.Stats;
 
 import org.apache.commons.lang3.math.NumberUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminAdmin implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_admin.
+		 */
 		admin_admin,
+		/**
+		 * Field admin_play_sounds.
+		 */
 		admin_play_sounds,
+		/**
+		 * Field admin_play_sound.
+		 */
 		admin_play_sound,
+		/**
+		 * Field admin_silence.
+		 */
 		admin_silence,
+		/**
+		 * Field admin_tradeoff.
+		 */
 		admin_tradeoff,
+		/**
+		 * Field admin_cfg.
+		 */
 		admin_cfg,
+		/**
+		 * Field admin_config.
+		 */
 		admin_config,
+		/**
+		 * Field admin_show_html.
+		 */
 		admin_show_html,
+		/**
+		 * Field admin_setnpcstate.
+		 */
 		admin_setnpcstate,
+		/**
+		 * Field admin_setareanpcstate.
+		 */
 		admin_setareanpcstate,
+		/**
+		 * Field admin_showmovie.
+		 */
 		admin_showmovie,
+		/**
+		 * Field admin_setzoneinfo.
+		 */
 		admin_setzoneinfo,
+		/**
+		 * Field admin_eventtrigger.
+		 */
 		admin_eventtrigger,
+		/**
+		 * Field admin_debug.
+		 */
 		admin_debug,
+		/**
+		 * Field admin_uievent.
+		 */
 		admin_uievent,
+		/**
+		 * Field admin_opensod.
+		 */
 		admin_opensod,
+		/**
+		 * Field admin_closesod.
+		 */
 		admin_closesod,
+		/**
+		 * Field admin_setsoistage.
+		 */
 		admin_setsoistage,
+		/**
+		 * Field admin_soinotify.
+		 */
 		admin_soinotify,
+		/**
+		 * Field admin_forcenpcinfo.
+		 */
 		admin_forcenpcinfo,
+		/**
+		 * Field admin_loc.
+		 */
 		admin_loc,
+		/**
+		 * Field admin_locdump.
+		 */
 		admin_locdump,
+		/**
+		 * Field admin_undying.
+		 */
 		admin_undying
 	}
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -471,12 +555,21 @@ public class AdminAdmin implements IAdminCommandHandler
 		return false;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}
 	
+	/**
+	 * Method playAdminSound.
+	 * @param activeChar Player
+	 * @param sound String
+	 */
 	public void playAdminSound(Player activeChar, String sound)
 	{
 		activeChar.broadcastPacket(new PlaySound(sound));

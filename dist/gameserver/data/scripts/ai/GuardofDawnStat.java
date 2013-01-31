@@ -25,13 +25,34 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GuardofDawnStat extends DefaultAI
 {
+	/**
+	 * Field _aggrorange. (value is 120)
+	 */
 	private static final int _aggrorange = 120;
+	/**
+	 * Field _skill.
+	 */
 	private static final Skill _skill = SkillTable.getInstance().getInfo(5978, 1);
+	/**
+	 * Field _locTele.
+	 */
 	private Location _locTele = null;
+	/**
+	 * Field noCheckPlayers.
+	 */
 	boolean noCheckPlayers = false;
 	
+	/**
+	 * Constructor for GuardofDawnStat.
+	 * @param actor NpcInstance
+	 * @param telePoint Location
+	 */
 	public GuardofDawnStat(NpcInstance actor, Location telePoint)
 	{
 		super(actor);
@@ -39,17 +60,34 @@ public class GuardofDawnStat extends DefaultAI
 		setTelePoint(telePoint);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class Teleportation extends RunnableImpl
 	{
+		/**
+		 * Field _telePoint.
+		 */
 		Location _telePoint = null;
+		/**
+		 * Field _target.
+		 */
 		Playable _target = null;
 		
+		/**
+		 * Constructor for Teleportation.
+		 * @param telePoint Location
+		 * @param target Playable
+		 */
 		public Teleportation(Location telePoint, Playable target)
 		{
 			_telePoint = telePoint;
 			_target = target;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -58,6 +96,10 @@ public class GuardofDawnStat extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -69,6 +111,11 @@ public class GuardofDawnStat extends DefaultAI
 		return true;
 	}
 	
+	/**
+	 * Method checkAroundPlayers.
+	 * @param actor NpcInstance
+	 * @return boolean
+	 */
 	private boolean checkAroundPlayers(NpcInstance actor)
 	{
 		for (Playable target : World.getAroundPlayables(actor, _aggrorange, _aggrorange))
@@ -85,42 +132,77 @@ public class GuardofDawnStat extends DefaultAI
 		return false;
 	}
 	
+	/**
+	 * Method setTelePoint.
+	 * @param loc Location
+	 */
 	private void setTelePoint(Location loc)
 	{
 		_locTele = loc;
 	}
 	
+	/**
+	 * Method getTelePoint.
+	 * @return Location
+	 */
 	private Location getTelePoint()
 	{
 		return _locTele;
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onIntentionAttack.
+	 * @param target Creature
+	 */
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param attacker Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
 	}
 	
+	/**
+	 * Method onEvtClanAttacked.
+	 * @param attacked_member Creature
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtClanAttacked(Creature attacked_member, Creature attacker, int damage)
 	{

@@ -14,8 +14,15 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExBasicActionList extends L2GameServerPacket
 {
+	/**
+	 * Field BasicActions.
+	 */
 	private static final int[] BasicActions =
 	{
 		0,
@@ -244,6 +251,9 @@ public class ExBasicActionList extends L2GameServerPacket
 		5014,
 		5015,
 	};
+	/**
+	 * Field TransformationActions.
+	 */
 	private static final int[] TransformationActions =
 	{
 		1,
@@ -418,13 +428,23 @@ public class ExBasicActionList extends L2GameServerPacket
 		5014,
 		5015,
 	};
+	/**
+	 * Field actions.
+	 */
 	private final int[] actions;
 	
+	/**
+	 * Constructor for ExBasicActionList.
+	 * @param activeChar Player
+	 */
 	public ExBasicActionList(Player activeChar)
 	{
 		actions = activeChar.getTransformation() == 0 ? BasicActions : TransformationActions;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

@@ -20,13 +20,25 @@ import lineage2.gameserver.model.instances.ReflectionBossInstance;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LabyrinthLostWatcher extends Fighter
 {
+	/**
+	 * Constructor for LabyrinthLostWatcher.
+	 * @param actor NpcInstance
+	 */
 	public LabyrinthLostWatcher(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -45,6 +57,11 @@ public class LabyrinthLostWatcher extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method checkMates.
+	 * @param id int
+	 * @return boolean
+	 */
 	private boolean checkMates(int id)
 	{
 		for (NpcInstance n : getActor().getReflection().getNpcs())
@@ -57,6 +74,10 @@ public class LabyrinthLostWatcher extends Fighter
 		return true;
 	}
 	
+	/**
+	 * Method findLostCaptain.
+	 * @return NpcInstance
+	 */
 	private NpcInstance findLostCaptain()
 	{
 		for (NpcInstance n : getActor().getReflection().getNpcs())

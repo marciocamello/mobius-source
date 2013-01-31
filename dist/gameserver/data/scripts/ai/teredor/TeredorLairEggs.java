@@ -28,26 +28,70 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeredorLairEggs extends Fighter
 {
+	/**
+	 * Field awakenedMillipede.
+	 */
 	static int awakenedMillipede = 18995;
+	/**
+	 * Field teredorLarva.
+	 */
 	private static int teredorLarva = 19016;
+	/**
+	 * Field timeToBlue.
+	 */
 	private static int timeToBlue = 60;
+	/**
+	 * Field maxRandomTimeBlue.
+	 */
 	private static int maxRandomTimeBlue = 80;
+	/**
+	 * Field monsterSpawnDelay.
+	 */
 	static int monsterSpawnDelay = 15;
+	/**
+	 * Field poisonId.
+	 */
 	private static int poisonId = 14561;
+	/**
+	 * Field poisonLevel.
+	 */
 	private static int poisonLevel = 1;
+	/**
+	 * Field distanceToDebuff.
+	 */
 	private static int distanceToDebuff = 400;
+	/**
+	 * Field _poisoned.
+	 */
 	boolean _poisoned = false;
+	/**
+	 * Field _activated.
+	 */
 	boolean _activated = false;
+	/**
+	 * Field actor.
+	 */
 	final NpcInstance actor = getActor();
 	
+	/**
+	 * Constructor for TeredorLairEggs.
+	 * @param actor NpcInstance
+	 */
 	public TeredorLairEggs(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method thinkAttack.
+	 */
 	@Override
 	protected void thinkAttack()
 	{
@@ -76,6 +120,10 @@ public class TeredorLairEggs extends Fighter
 		super.thinkAttack();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -85,12 +133,30 @@ public class TeredorLairEggs extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class TaskSetBlue implements Runnable
 	{
+		/**
+		 * Field _npc.
+		 */
 		NpcInstance _npc;
+		/**
+		 * Field _player.
+		 */
 		Player _player;
+		/**
+		 * Field _ref.
+		 */
 		Reflection _ref;
 		
+		/**
+		 * Constructor for TaskSetBlue.
+		 * @param npc NpcInstance
+		 * @param player Player
+		 * @param ref Reflection
+		 */
 		public TaskSetBlue(NpcInstance npc, Player player, Reflection ref)
 		{
 			_npc = npc;
@@ -98,6 +164,10 @@ public class TeredorLairEggs extends Fighter
 			_ref = ref;
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -108,12 +178,30 @@ public class TeredorLairEggs extends Fighter
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class SpawnMonster extends RunnableImpl
 	{
+		/**
+		 * Field _npc.
+		 */
 		NpcInstance _npc;
+		/**
+		 * Field _player.
+		 */
 		Player _player;
+		/**
+		 * Field _ref.
+		 */
 		Reflection _ref;
 		
+		/**
+		 * Constructor for SpawnMonster.
+		 * @param npc NpcInstance
+		 * @param player Player
+		 * @param ref Reflection
+		 */
 		public SpawnMonster(NpcInstance npc, Player player, Reflection ref)
 		{
 			_npc = npc;
@@ -121,6 +209,9 @@ public class TeredorLairEggs extends Fighter
 			_ref = ref;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

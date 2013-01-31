@@ -33,28 +33,92 @@ import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OctavisNormal extends Reflection
 {
+	/**
+	 * Field Octavis1.
+	 */
 	private final int Octavis1 = 29191;
+	/**
+	 * Field Octavis2.
+	 */
 	private final int Octavis2 = 29193;
+	/**
+	 * Field Octavis3.
+	 */
 	private final int Octavis3 = 29194;
+	/**
+	 * Field OctavisRider.
+	 */
 	private final int OctavisRider = 29210;
+	/**
+	 * Field guardOctavisGladiator.
+	 */
 	private final int guardOctavisGladiator = 22928;
+	/**
+	 * Field guardOctavisHighAcademic.
+	 */
 	private final int guardOctavisHighAcademic = 22930;
+	/**
+	 * Field _epicZoneListener.
+	 */
 	private final ZoneListener _epicZoneListener = new ZoneListener();
+	/**
+	 * Field _deathListener.
+	 */
 	final DeathListener _deathListener = new DeathListener();
+	/**
+	 * Field _currentHpListenerFistsStage.
+	 */
 	final CurrentHpListener _currentHpListenerFistsStage = new CurrentHpListener();
+	/**
+	 * Field _currentHpListenerTwoStage.
+	 */
 	final CurrentHpListener _currentHpListenerTwoStage = new CurrentHpListener();
+	/**
+	 * Field twoStageGuardSpawn.
+	 */
 	ScheduledFuture<?> twoStageGuardSpawn;
+	/**
+	 * Field threeStageGuardSpawn.
+	 */
 	ScheduledFuture<?> threeStageGuardSpawn;
+	/**
+	 * Field _entryLocked.
+	 */
 	boolean _entryLocked = false;
+	/**
+	 * Field _startLaunched.
+	 */
 	boolean _startLaunched = false;
+	/**
+	 * Field _lockedTurn.
+	 */
 	boolean _lockedTurn = false;
+	/**
+	 * Field Door.
+	 */
 	private final int Door = 26210001;
+	/**
+	 * Field Door2.
+	 */
 	private final int Door2 = 26210002;
+	/**
+	 * Field centralRoomPoint.
+	 */
 	static Territory centralRoomPoint = new Territory().add(new Polygon().add(206232, 120184).add(206792, 119624).add(207592, 119624).add(208152, 120184).add(208152, 120968).add(207592, 121528).add(206792, 121528).add(206232, 120968).setZmax(-10040).setZmin(-9020));
+	/**
+	 * Field raidplayers.
+	 */
 	final AtomicInteger raidplayers = new AtomicInteger();
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{
@@ -62,14 +126,26 @@ public class OctavisNormal extends Reflection
 		getZone("[Octavis_epic]").addListener(_epicZoneListener);
 	}
 	
+	/**
+	 * Method onCollapse.
+	 */
 	@Override
 	protected void onCollapse()
 	{
 		super.onCollapse();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -89,6 +165,12 @@ public class OctavisNormal extends Reflection
 			}
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param cha Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
@@ -101,13 +183,29 @@ public class OctavisNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * Method checkstartCond.
+	 * @param raidplayers int
+	 * @return boolean
+	 */
 	boolean checkstartCond(int raidplayers)
 	{
 		return !((raidplayers < getInstancedZone().getMinParty()) || _startLaunched);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class CurrentHpListener implements OnCurrentHpDamageListener
 	{
+		/**
+		 * Method onCurrentHpDamage.
+		 * @param actor Creature
+		 * @param damage double
+		 * @param attacker Creature
+		 * @param skill Skill
+		 * @see lineage2.gameserver.listener.actor.OnCurrentHpDamageListener#onCurrentHpDamage(Creature, double, Creature, Skill)
+		 */
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
 		{
@@ -149,13 +247,22 @@ public class OctavisNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class FirstStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for FirstStage.
+		 */
 		public FirstStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -179,13 +286,22 @@ public class OctavisNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class TwoStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for TwoStage.
+		 */
 		public TwoStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -207,13 +323,22 @@ public class OctavisNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ThreeStage extends RunnableImpl
 	{
+		/**
+		 * Constructor for ThreeStage.
+		 */
 		public ThreeStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -235,10 +360,32 @@ public class OctavisNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class SpawnGuardForStage extends RunnableImpl
 	{
+		/**
+		 * Field _guard2MaxCount.
+		 */
+		/**
+		 * Field _guard2MinCount.
+		 */
+		/**
+		 * Field _guard1MaxCount.
+		 */
+		/**
+		 * Field _guard1MinCount.
+		 */
+		/**
+		 * Field _stage.
+		 */
 		int _stage, _guard1MinCount, _guard1MaxCount, _guard2MinCount, _guard2MaxCount;
 		
+		/**
+		 * Constructor for SpawnGuardForStage.
+		 * @param stage int
+		 */
 		public SpawnGuardForStage(int stage)
 		{
 			_stage = stage;
@@ -248,6 +395,9 @@ public class OctavisNormal extends Reflection
 			}
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -284,13 +434,25 @@ public class OctavisNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class DeathListener implements OnDeathListener
 	{
+		/**
+		 * Constructor for DeathListener.
+		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onDeath.
+		 * @param self Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -304,13 +466,22 @@ public class OctavisNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class EndingMovie extends RunnableImpl
 	{
+		/**
+		 * Constructor for EndingMovie.
+		 */
 		public EndingMovie()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -326,13 +497,22 @@ public class OctavisNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class CollapseInstance extends RunnableImpl
 	{
+		/**
+		 * Constructor for CollapseInstance.
+		 */
 		public CollapseInstance()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -345,6 +525,9 @@ public class OctavisNormal extends Reflection
 		}
 	}
 	
+	/**
+	 * Method doCleanup.
+	 */
 	void doCleanup()
 	{
 		if (twoStageGuardSpawn != null)

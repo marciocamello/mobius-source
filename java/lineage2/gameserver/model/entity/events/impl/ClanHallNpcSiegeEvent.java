@@ -20,13 +20,24 @@ import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanHallNpcSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 {
+	/**
+	 * Constructor for ClanHallNpcSiegeEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public ClanHallNpcSiegeEvent(MultiValueSet<String> set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -35,6 +46,10 @@ public class ClanHallNpcSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 		super.startEvent();
 	}
 	
+	/**
+	 * Method stopEvent.
+	 * @param step boolean
+	 */
 	@Override
 	public void stopEvent(boolean step)
 	{
@@ -61,6 +76,10 @@ public class ClanHallNpcSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 		_oldOwner = null;
 	}
 	
+	/**
+	 * Method processStep.
+	 * @param clan Clan
+	 */
 	@Override
 	public void processStep(Clan clan)
 	{
@@ -71,6 +90,9 @@ public class ClanHallNpcSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 		stopEvent(true);
 	}
 	
+	/**
+	 * Method loadSiegeClans.
+	 */
 	@Override
 	public void loadSiegeClans()
 	{

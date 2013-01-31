@@ -22,10 +22,20 @@ import lineage2.gameserver.model.pledge.Clan;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExShowFortressInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _infos.
+	 */
 	private List<FortressInfo> _infos = Collections.emptyList();
 	
+	/**
+	 * Constructor for ExShowFortressInfo.
+	 */
 	public ExShowFortressInfo()
 	{
 		List<Fortress> forts = ResidenceHolder.getInstance().getResidenceList(Fortress.class);
@@ -37,6 +47,9 @@ public class ExShowFortressInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -51,12 +64,34 @@ public class ExShowFortressInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	static class FortressInfo
 	{
+		/**
+		 * Field _siege.
+		 */
+		/**
+		 * Field _id.
+		 */
 		public int _id, _siege;
+		/**
+		 * Field _owner.
+		 */
 		public String _owner;
+		/**
+		 * Field _status.
+		 */
 		public boolean _status;
 		
+		/**
+		 * Constructor for FortressInfo.
+		 * @param owner String
+		 * @param id int
+		 * @param status boolean
+		 * @param siege int
+		 */
 		public FortressInfo(String owner, int id, boolean status, int siege)
 		{
 			_owner = owner;

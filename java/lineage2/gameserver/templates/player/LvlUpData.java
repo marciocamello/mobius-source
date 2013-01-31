@@ -12,12 +12,31 @@
  */
 package lineage2.gameserver.templates.player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class LvlUpData
 {
+	/**
+	 * Field _hp.
+	 */
 	private final double _hp;
+	/**
+	 * Field _mp.
+	 */
 	private final double _mp;
+	/**
+	 * Field _cp.
+	 */
 	private final double _cp;
 	
+	/**
+	 * Constructor for LvlUpData.
+	 * @param hp double
+	 * @param mp double
+	 * @param cp double
+	 */
 	public LvlUpData(double hp, double mp, double cp)
 	{
 		_hp = hp;
@@ -25,16 +44,28 @@ public final class LvlUpData
 		_cp = cp;
 	}
 	
+	/**
+	 * Method getHP.
+	 * @return double
+	 */
 	public double getHP()
 	{
 		return _hp;
 	}
 	
+	/**
+	 * Method getMP.
+	 * @return double
+	 */
 	public double getMP()
 	{
 		return _mp;
 	}
 	
+	/**
+	 * Method getCP.
+	 * @return double
+	 */
 	public double getCP()
 	{
 		return _cp;

@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChooseInventoryItem extends L2GameServerPacket
 {
+	/**
+	 * Field ItemID.
+	 */
 	private final int ItemID;
 	
+	/**
+	 * Constructor for ChooseInventoryItem.
+	 * @param id int
+	 */
 	public ChooseInventoryItem(int id)
 	{
 		ItemID = id;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -21,8 +21,15 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ObtainTalisman extends Functions
 {
+	/**
+	 * Method Obtain.
+	 */
 	public void Obtain()
 	{
 		Player player = getSelf();

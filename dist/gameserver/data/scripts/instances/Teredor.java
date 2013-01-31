@@ -15,11 +15,24 @@ package instances;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Teredor extends Reflection
 {
+	/**
+	 * Field teredor.
+	 */
 	private static int teredor = 25785;
+	/**
+	 * Field teredorCoords.
+	 */
 	private final Location teredorCoords = new Location(176160, -185200, -3800);
 	
+	/**
+	 * Method onCreate.
+	 */
 	@Override
 	protected void onCreate()
 	{

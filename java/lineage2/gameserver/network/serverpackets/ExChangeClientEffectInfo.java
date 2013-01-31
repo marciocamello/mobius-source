@@ -12,15 +12,29 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExChangeClientEffectInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _state.
+	 */
 	private final int _state;
 	
+	/**
+	 * Constructor for ExChangeClientEffectInfo.
+	 * @param state int
+	 */
 	public ExChangeClientEffectInfo(int state)
 	{
 		_state = state;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

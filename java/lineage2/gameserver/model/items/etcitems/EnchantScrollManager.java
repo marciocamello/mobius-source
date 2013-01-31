@@ -27,11 +27,24 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EnchantScrollManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(EnchantScrollManager.class);
+	/**
+	 * Field _scrolls.
+	 */
 	private static TIntObjectHashMap<EnchantScrollInfo> _scrolls = new TIntObjectHashMap<>();
 	
+	/**
+	 * Method load.
+	 */
 	public static void load()
 	{
 		_log.info("EnchantScrollManager: Loading stone data...");
@@ -127,11 +140,20 @@ public class EnchantScrollManager
 		_log.info("EnchantScrollManager: Loaded " + _scrolls.size() + " scrolls data...");
 	}
 	
+	/**
+	 * Method getScrollInfo.
+	 * @param itemId int
+	 * @return EnchantScrollInfo
+	 */
 	public static EnchantScrollInfo getScrollInfo(int itemId)
 	{
 		return _scrolls.get(itemId);
 	}
 	
+	/**
+	 * Method getEnchantScrollIds.
+	 * @return int[]
+	 */
 	public static int[] getEnchantScrollIds()
 	{
 		return _scrolls.keys();

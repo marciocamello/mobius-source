@@ -20,16 +20,29 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExDeletePostFriendForPostBox extends L2GameClientPacket
 {
+	/**
+	 * Field _name.
+	 */
 	private String _name;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_name = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

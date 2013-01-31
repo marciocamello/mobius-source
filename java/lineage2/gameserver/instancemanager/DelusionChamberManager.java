@@ -40,12 +40,29 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DelusionChamberManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(DelusionChamberManager.class);
+	/**
+	 * Field _instance.
+	 */
 	private static DelusionChamberManager _instance;
+	/**
+	 * Field _rooms.
+	 */
 	private final Map<Integer, Map<Integer, DelusionChamberRoom>> _rooms = new ConcurrentHashMap<>();
 	
+	/**
+	 * Method getInstance.
+	 * @return DelusionChamberManager
+	 */
 	public static DelusionChamberManager getInstance()
 	{
 		if (_instance == null)
@@ -55,21 +72,38 @@ public class DelusionChamberManager
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for DelusionChamberManager.
+	 */
 	public DelusionChamberManager()
 	{
 		load();
 	}
 	
+	/**
+	 * Method getRoom.
+	 * @param type int
+	 * @param room int
+	 * @return DelusionChamberRoom
+	 */
 	public DelusionChamberRoom getRoom(int type, int room)
 	{
 		return _rooms.get(type).get(room);
 	}
 	
+	/**
+	 * Method getRooms.
+	 * @param type int
+	 * @return Map<Integer,DelusionChamberRoom>
+	 */
 	public Map<Integer, DelusionChamberRoom> getRooms(int type)
 	{
 		return _rooms.get(type);
 	}
 	
+	/**
+	 * Method load.
+	 */
 	public void load()
 	{
 		int countGood = 0, countBad = 0;
@@ -198,6 +232,9 @@ public class DelusionChamberManager
 		_log.info("DelusionChamberManager: Loaded " + countGood + " delusion chamber spawns, " + countBad + " errors.");
 	}
 	
+	/**
+	 * Method reload.
+	 */
 	public void reload()
 	{
 		for (int b : _rooms.keySet())
@@ -208,18 +245,43 @@ public class DelusionChamberManager
 		load();
 	}
 	
+	/**
+	 * Method teleportToWaitingRoom.
+	 * @param player Player
+	 */
 	public void teleportToWaitingRoom(Player player)
 	{
 		teleToLocation(player, Location.findPointToStay(getRoom(0, 0).getTeleportCoords(), 0, 250, ReflectionManager.DEFAULT.getGeoIndex()), null);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class DelusionChamberRoom
 	{
+		/**
+		 * Field _territory.
+		 */
 		private final Territory _territory;
+		/**
+		 * Field _teleportCoords.
+		 */
 		private final Location _teleportCoords;
+		/**
+		 * Field _isBossRoom.
+		 */
 		private final boolean _isBossRoom;
+		/**
+		 * Field _roomSpawns.
+		 */
 		private final List<SimpleSpawner> _roomSpawns;
 		
+		/**
+		 * Constructor for DelusionChamberRoom.
+		 * @param territory Territory
+		 * @param tele Location
+		 * @param isBossRoom boolean
+		 */
 		public DelusionChamberRoom(Territory territory, Location tele, boolean isBossRoom)
 		{
 			_territory = territory;
@@ -228,32 +290,62 @@ public class DelusionChamberManager
 			_roomSpawns = new ArrayList<>();
 		}
 		
+		/**
+		 * Method getTeleportCoords.
+		 * @return Location
+		 */
 		public Location getTeleportCoords()
 		{
 			return _teleportCoords;
 		}
 		
+		/**
+		 * Method checkIfInZone.
+		 * @param loc Location
+		 * @return boolean
+		 */
 		public boolean checkIfInZone(Location loc)
 		{
 			return checkIfInZone(loc.x, loc.y, loc.z);
 		}
 		
+		/**
+		 * Method checkIfInZone.
+		 * @param x int
+		 * @param y int
+		 * @param z int
+		 * @return boolean
+		 */
 		public boolean checkIfInZone(int x, int y, int z)
 		{
 			return _territory.isInside(x, y, z);
 		}
 		
+		/**
+		 * Method isBossRoom.
+		 * @return boolean
+		 */
 		public boolean isBossRoom()
 		{
 			return _isBossRoom;
 		}
 		
+		/**
+		 * Method getSpawns.
+		 * @return List<SimpleSpawner>
+		 */
 		public List<SimpleSpawner> getSpawns()
 		{
 			return _roomSpawns;
 		}
 	}
 	
+	/**
+	 * Method showHtmlFile.
+	 * @param player Player
+	 * @param file String
+	 * @param npc NpcInstance
+	 */
 	public void showHtmlFile(Player player, String file, NpcInstance npc)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(player, npc);
@@ -262,6 +354,12 @@ public class DelusionChamberManager
 		player.sendPacket(html);
 	}
 	
+	/**
+	 * Method teleToLocation.
+	 * @param player Player
+	 * @param loc Location
+	 * @param ref Reflection
+	 */
 	public static void teleToLocation(Player player, Location loc, Reflection ref)
 	{
 		if (player.isTeleporting() || player.isDeleted())

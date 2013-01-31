@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PartySmallWindowAdd extends L2GameServerPacket
 {
+	/**
+	 * Field objectId.
+	 */
 	private final int objectId;
+	/**
+	 * Field member.
+	 */
 	private final PartySmallWindowAll.PartySmallWindowMemberInfo member;
 	
+	/**
+	 * Constructor for PartySmallWindowAdd.
+	 * @param player Player
+	 * @param member Player
+	 */
 	public PartySmallWindowAdd(Player player, Player member)
 	{
 		objectId = player.getObjectId();
 		this.member = new PartySmallWindowAll.PartySmallWindowMemberInfo(member);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

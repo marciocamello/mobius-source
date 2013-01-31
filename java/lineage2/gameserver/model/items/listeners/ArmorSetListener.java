@@ -26,15 +26,33 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SkillList;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class ArmorSetListener implements OnEquipListener
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final ArmorSetListener _instance = new ArmorSetListener();
 	
+	/**
+	 * Method getInstance.
+	 * @return ArmorSetListener
+	 */
 	public static ArmorSetListener getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Method onEquip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 * @see lineage2.gameserver.listener.inventory.OnEquipListener#onEquip(int, ItemInstance, Playable)
+	 */
 	@Override
 	public void onEquip(int slot, ItemInstance item, Playable actor)
 	{
@@ -95,6 +113,13 @@ public final class ArmorSetListener implements OnEquipListener
 		}
 	}
 	
+	/**
+	 * Method onUnequip.
+	 * @param slot int
+	 * @param item ItemInstance
+	 * @param actor Playable
+	 * @see lineage2.gameserver.listener.inventory.OnEquipListener#onUnequip(int, ItemInstance, Playable)
+	 */
 	@Override
 	public void onUnequip(int slot, ItemInstance item, Playable actor)
 	{

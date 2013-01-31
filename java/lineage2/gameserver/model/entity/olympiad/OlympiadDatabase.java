@@ -35,10 +35,20 @@ import lineage2.gameserver.templates.StatsSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OlympiadDatabase
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadDatabase.class);
 	
+	/**
+	 * Method loadNoblesRank.
+	 */
 	public static synchronized void loadNoblesRank()
 	{
 		Olympiad._noblesRank = new ConcurrentHashMap<>();
@@ -101,6 +111,9 @@ public class OlympiadDatabase
 		}
 	}
 	
+	/**
+	 * Method cleanupNobles.
+	 */
 	public static synchronized void cleanupNobles()
 	{
 		_log.info("Olympiad: Calculating last period...");
@@ -149,6 +162,11 @@ public class OlympiadDatabase
 		}
 	}
 	
+	/**
+	 * Method getClassLeaderBoard.
+	 * @param classId int
+	 * @return List<String>
+	 */
 	public static List<String> getClassLeaderBoard(int classId)
 	{
 		List<String> names = new ArrayList<>();
@@ -177,6 +195,9 @@ public class OlympiadDatabase
 		return names;
 	}
 	
+	/**
+	 * Method sortHerosToBe.
+	 */
 	public static synchronized void sortHerosToBe()
 	{
 		if (Olympiad._period != 1)
@@ -221,11 +242,18 @@ public class OlympiadDatabase
 		}
 	}
 	
+	/**
+	 * Method saveNobleData.
+	 * @param nobleId int
+	 */
 	public static synchronized void saveNobleData(int nobleId)
 	{
 		OlympiadNobleDAO.getInstance().replace(nobleId);
 	}
 	
+	/**
+	 * Method saveNobleData.
+	 */
 	public static synchronized void saveNobleData()
 	{
 		if (Olympiad._nobles == null)
@@ -238,6 +266,9 @@ public class OlympiadDatabase
 		}
 	}
 	
+	/**
+	 * Method setNewOlympiadEnd.
+	 */
 	public static synchronized void setNewOlympiadEnd()
 	{
 		Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.OLYMPIAD_PERIOD_S1_HAS_STARTED).addNumber(Olympiad._currentCycle));
@@ -252,6 +283,9 @@ public class OlympiadDatabase
 		Olympiad._isOlympiadEnd = false;
 	}
 	
+	/**
+	 * Method save.
+	 */
 	public static void save()
 	{
 		saveNobleData();

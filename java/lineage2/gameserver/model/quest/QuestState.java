@@ -52,10 +52,23 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class QuestState
 {
+	/**
+	 * @author Mobius
+	 */
 	public class OnDeathListenerImpl implements OnDeathListener
 	{
+		/**
+		 * Method onDeath.
+		 * @param actor Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature actor, Creature killer)
 		{
@@ -69,8 +82,17 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class PlayerOnKillListenerImpl implements OnKillListener
 	{
+		/**
+		 * Method onKill.
+		 * @param actor Creature
+		 * @param victim Creature
+		 * @see lineage2.gameserver.listener.actor.OnKillListener#onKill(Creature, Creature)
+		 */
 		@Override
 		public void onKill(Creature actor, Creature victim)
 		{
@@ -116,6 +138,10 @@ public final class QuestState
 			}
 		}
 		
+		/**
+		 * Method ignorePetOrSummon.
+		 * @return boolean * @see lineage2.gameserver.listener.actor.OnKillListener#ignorePetOrSummon()
+		 */
 		@Override
 		public boolean ignorePetOrSummon()
 		{
@@ -123,19 +149,61 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(QuestState.class);
+	/**
+	 * Field RESTART_HOUR. (value is 6)
+	 */
 	public static final int RESTART_HOUR = 6;
+	/**
+	 * Field RESTART_MINUTES. (value is 30)
+	 */
 	public static final int RESTART_MINUTES = 30;
+	/**
+	 * Field VAR_COND. (value is ""cond"")
+	 */
 	public static final String VAR_COND = "cond";
+	/**
+	 * Field EMPTY_ARRAY.
+	 */
 	public final static QuestState[] EMPTY_ARRAY = new QuestState[0];
+	/**
+	 * Field _player.
+	 */
 	private final Player _player;
+	/**
+	 * Field _quest.
+	 */
 	final Quest _quest;
+	/**
+	 * Field _state.
+	 */
 	private int _state;
+	/**
+	 * Field _cond.
+	 */
 	private Integer _cond = null;
+	/**
+	 * Field _vars.
+	 */
 	private final Map<String, String> _vars = new ConcurrentHashMap<>();
+	/**
+	 * Field _timers.
+	 */
 	private final Map<String, QuestTimer> _timers = new ConcurrentHashMap<>();
+	/**
+	 * Field _onKillListener.
+	 */
 	private OnKillListener _onKillListener = null;
 	
+	/**
+	 * Constructor for QuestState.
+	 * @param quest Quest
+	 * @param player Player
+	 * @param state int
+	 */
 	public QuestState(Quest quest, Player player, int state)
 	{
 		_quest = quest;
@@ -145,6 +213,11 @@ public final class QuestState
 		quest.notifyCreate(this);
 	}
 	
+	/**
+	 * Method addExpAndSp.
+	 * @param exp long
+	 * @param sp long
+	 */
 	public void addExpAndSp(long exp, long sp)
 	{
 		Player player = getPlayer();
@@ -162,6 +235,11 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Method addNotifyOfDeath.
+	 * @param player Player
+	 * @param withPet boolean
+	 */
 	public void addNotifyOfDeath(Player player, boolean withPet)
 	{
 		OnDeathListenerImpl listener = new OnDeathListenerImpl();
@@ -175,6 +253,9 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Method addPlayerOnKillListener.
+	 */
 	public void addPlayerOnKillListener()
 	{
 		if (_onKillListener != null)
@@ -185,6 +266,9 @@ public final class QuestState
 		_player.addListener(_onKillListener);
 	}
 	
+	/**
+	 * Method removePlayerOnKillListener.
+	 */
 	public void removePlayerOnKillListener()
 	{
 		if (_onKillListener != null)
@@ -193,6 +277,12 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Method addRadar.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 */
 	public void addRadar(int x, int y, int z)
 	{
 		Player player = getPlayer();
@@ -202,6 +292,12 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Method addRadarWithMap.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 */
 	public void addRadarWithMap(int x, int y, int z)
 	{
 		Player player = getPlayer();
@@ -211,6 +307,10 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Method exitCurrentQuest.
+	 * @param quest Quest
+	 */
 	public void exitCurrentQuest(Quest quest)
 	{
 		Player player = getPlayer();
@@ -220,6 +320,11 @@ public final class QuestState
 		qs.setRestartTime();
 	}
 	
+	/**
+	 * Method exitCurrentQuest.
+	 * @param repeatable boolean
+	 * @return QuestState
+	 */
 	public QuestState exitCurrentQuest(boolean repeatable)
 	{
 		Player player = getPlayer();
@@ -261,22 +366,39 @@ public final class QuestState
 		return this;
 	}
 	
+	/**
+	 * Method abortQuest.
+	 */
 	public void abortQuest()
 	{
 		_quest.onAbort(this);
 		exitCurrentQuest(true);
 	}
 	
+	/**
+	 * Method get.
+	 * @param var String
+	 * @return String
+	 */
 	public String get(String var)
 	{
 		return _vars.get(var);
 	}
 	
+	/**
+	 * Method getVars.
+	 * @return Map<String,String>
+	 */
 	public Map<String, String> getVars()
 	{
 		return _vars;
 	}
 	
+	/**
+	 * Method getInt.
+	 * @param var String
+	 * @return int
+	 */
 	public int getInt(String var)
 	{
 		int varint = 0;
@@ -296,21 +418,39 @@ public final class QuestState
 		return varint;
 	}
 	
+	/**
+	 * Method getItemEquipped.
+	 * @param loc int
+	 * @return int
+	 */
 	public int getItemEquipped(int loc)
 	{
 		return getPlayer().getInventory().getPaperdollItemId(loc);
 	}
 	
+	/**
+	 * Method getPlayer.
+	 * @return Player
+	 */
 	public Player getPlayer()
 	{
 		return _player;
 	}
 	
+	/**
+	 * Method getQuest.
+	 * @return Quest
+	 */
 	public Quest getQuest()
 	{
 		return _quest;
 	}
 	
+	/**
+	 * Method checkQuestItemsCount.
+	 * @param itemIds int[]
+	 * @return boolean
+	 */
 	public boolean checkQuestItemsCount(int... itemIds)
 	{
 		Player player = getPlayer();
@@ -328,6 +468,11 @@ public final class QuestState
 		return true;
 	}
 	
+	/**
+	 * Method getSumQuestItemsCount.
+	 * @param itemIds int[]
+	 * @return long
+	 */
 	public long getSumQuestItemsCount(int... itemIds)
 	{
 		Player player = getPlayer();
@@ -343,12 +488,22 @@ public final class QuestState
 		return count;
 	}
 	
+	/**
+	 * Method getQuestItemsCount.
+	 * @param itemId int
+	 * @return long
+	 */
 	public long getQuestItemsCount(int itemId)
 	{
 		Player player = getPlayer();
 		return player == null ? 0 : player.getInventory().getCountOf(itemId);
 	}
 	
+	/**
+	 * Method getQuestItemsCount.
+	 * @param itemsIds int[]
+	 * @return long
+	 */
 	public long getQuestItemsCount(int... itemsIds)
 	{
 		long result = 0;
@@ -359,6 +514,12 @@ public final class QuestState
 		return result;
 	}
 	
+	/**
+	 * Method haveQuestItem.
+	 * @param itemId int
+	 * @param count int
+	 * @return boolean
+	 */
 	public boolean haveQuestItem(int itemId, int count)
 	{
 		if (getQuestItemsCount(itemId) >= count)
@@ -368,21 +529,39 @@ public final class QuestState
 		return false;
 	}
 	
+	/**
+	 * Method haveQuestItem.
+	 * @param itemId int
+	 * @return boolean
+	 */
 	public boolean haveQuestItem(int itemId)
 	{
 		return haveQuestItem(itemId, 1);
 	}
 	
+	/**
+	 * Method getState.
+	 * @return int
+	 */
 	public int getState()
 	{
 		return _state == Quest.DELAYED ? Quest.CREATED : _state;
 	}
 	
+	/**
+	 * Method getStateName.
+	 * @return String
+	 */
 	public String getStateName()
 	{
 		return Quest.getStateName(_state);
 	}
 	
+	/**
+	 * Method giveItems.
+	 * @param itemId int
+	 * @param count long
+	 */
 	public void giveItems(int itemId, long count)
 	{
 		if (itemId == ItemTemplate.ITEM_ID_ADENA)
@@ -395,6 +574,12 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Method giveItems.
+	 * @param itemId int
+	 * @param count long
+	 * @param rate boolean
+	 */
 	public void giveItems(int itemId, long count, boolean rate)
 	{
 		Player player = getPlayer();
@@ -414,6 +599,13 @@ public final class QuestState
 		player.sendChanges();
 	}
 	
+	/**
+	 * Method giveItems.
+	 * @param itemId int
+	 * @param count long
+	 * @param element Element
+	 * @param power int
+	 */
 	public void giveItems(int itemId, long count, Element element, int power)
 	{
 		Player player = getPlayer();
@@ -443,6 +635,12 @@ public final class QuestState
 		player.sendChanges();
 	}
 	
+	/**
+	 * Method dropItem.
+	 * @param npc NpcInstance
+	 * @param itemId int
+	 * @param count long
+	 */
 	public void dropItem(NpcInstance npc, int itemId, long count)
 	{
 		Player player = getPlayer();
@@ -455,6 +653,12 @@ public final class QuestState
 		item.dropToTheGround(player, npc);
 	}
 	
+	/**
+	 * Method rollDrop.
+	 * @param count int
+	 * @param calcChance double
+	 * @return int
+	 */
 	public int rollDrop(int count, double calcChance)
 	{
 		if ((calcChance <= 0) || (count <= 0))
@@ -464,6 +668,13 @@ public final class QuestState
 		return rollDrop(count, count, calcChance);
 	}
 	
+	/**
+	 * Method rollDrop.
+	 * @param min int
+	 * @param max int
+	 * @param calcChance double
+	 * @return int
+	 */
 	public int rollDrop(int min, int max, double calcChance)
 	{
 		if ((calcChance <= 0) || (min <= 0) || (max <= 0))
@@ -492,6 +703,10 @@ public final class QuestState
 		return Rnd.chance(calcChance) ? Rnd.get(min * dropmult, max * dropmult) : 0;
 	}
 	
+	/**
+	 * Method getRateQuestsDrop.
+	 * @return double
+	 */
 	public double getRateQuestsDrop()
 	{
 		Player player = getPlayer();
@@ -499,6 +714,10 @@ public final class QuestState
 		return Config.RATE_QUESTS_DROP * Bonus;
 	}
 	
+	/**
+	 * Method getRateQuestsReward.
+	 * @return double
+	 */
 	public double getRateQuestsReward()
 	{
 		Player player = getPlayer();
@@ -506,6 +725,15 @@ public final class QuestState
 		return Config.RATE_QUESTS_REWARD * Bonus;
 	}
 	
+	/**
+	 * Method rollAndGive.
+	 * @param itemId int
+	 * @param min int
+	 * @param max int
+	 * @param limit int
+	 * @param calcChance double
+	 * @return boolean
+	 */
 	public boolean rollAndGive(int itemId, int min, int max, int limit, double calcChance)
 	{
 		if ((calcChance <= 0) || (min <= 0) || (max <= 0) || (limit <= 0) || (itemId <= 0))
@@ -537,6 +765,13 @@ public final class QuestState
 		return false;
 	}
 	
+	/**
+	 * Method rollAndGive.
+	 * @param itemId int
+	 * @param min int
+	 * @param max int
+	 * @param calcChance double
+	 */
 	public void rollAndGive(int itemId, int min, int max, double calcChance)
 	{
 		if ((calcChance <= 0) || (min <= 0) || (max <= 0) || (itemId <= 0))
@@ -551,6 +786,13 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Method rollAndGive.
+	 * @param itemId int
+	 * @param count int
+	 * @param calcChance double
+	 * @return boolean
+	 */
 	public boolean rollAndGive(int itemId, int count, double calcChance)
 	{
 		if ((calcChance <= 0) || (count <= 0) || (itemId <= 0))
@@ -567,21 +809,37 @@ public final class QuestState
 		return false;
 	}
 	
+	/**
+	 * Method isCompleted.
+	 * @return boolean
+	 */
 	public boolean isCompleted()
 	{
 		return getState() == Quest.COMPLETED;
 	}
 	
+	/**
+	 * Method isStarted.
+	 * @return boolean
+	 */
 	public boolean isStarted()
 	{
 		return getState() == Quest.STARTED;
 	}
 	
+	/**
+	 * Method isCreated.
+	 * @return boolean
+	 */
 	public boolean isCreated()
 	{
 		return getState() == Quest.CREATED;
 	}
 	
+	/**
+	 * Method killNpcByObjectId.
+	 * @param _objId int
+	 */
 	public void killNpcByObjectId(int _objId)
 	{
 		NpcInstance npc = GameObjectsStorage.getNpc(_objId);
@@ -595,16 +853,35 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Method set.
+	 * @param var String
+	 * @param val String
+	 * @return String
+	 */
 	public String set(String var, String val)
 	{
 		return set(var, val, true);
 	}
 	
+	/**
+	 * Method set.
+	 * @param var String
+	 * @param intval int
+	 * @return String
+	 */
 	public String set(String var, int intval)
 	{
 		return set(var, String.valueOf(intval), true);
 	}
 	
+	/**
+	 * Method set.
+	 * @param var String
+	 * @param val String
+	 * @param store boolean
+	 * @return String
+	 */
 	public String set(String var, String val, boolean store)
 	{
 		if (val == null)
@@ -619,6 +896,11 @@ public final class QuestState
 		return val;
 	}
 	
+	/**
+	 * Method setState.
+	 * @param state int
+	 * @return Object
+	 */
 	public Object setState(int state)
 	{
 		Player player = getPlayer();
@@ -636,6 +918,11 @@ public final class QuestState
 		return state;
 	}
 	
+	/**
+	 * Method setStateAndNotSave.
+	 * @param state int
+	 * @return Object
+	 */
 	public Object setStateAndNotSave(int state)
 	{
 		Player player = getPlayer();
@@ -652,6 +939,10 @@ public final class QuestState
 		return state;
 	}
 	
+	/**
+	 * Method playSound.
+	 * @param sound String
+	 */
 	public void playSound(String sound)
 	{
 		Player player = getPlayer();
@@ -661,6 +952,10 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Method playTutorialVoice.
+	 * @param voice String
+	 */
 	public void playTutorialVoice(String voice)
 	{
 		Player player = getPlayer();
@@ -670,6 +965,10 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Method onTutorialClientEvent.
+	 * @param number int
+	 */
 	public void onTutorialClientEvent(int number)
 	{
 		Player player = getPlayer();
@@ -679,6 +978,10 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Method showQuestionMark.
+	 * @param number int
+	 */
 	public void showQuestionMark(int number)
 	{
 		Player player = getPlayer();
@@ -688,6 +991,11 @@ public final class QuestState
 		}
 	}
 	
+	/**
+	 * Method showTutorialHTML.
+	 * @param html String
+	 * @param type int
+	 */
 	public void showTutorialHTML(String html, int type)
 	{
 		Player player = getPlayer();
@@ -703,11 +1011,22 @@ public final class QuestState
 		player.sendPacket(new TutorialShowHtml(text, type));
 	}
 	
+	/**
+	 * Method startQuestTimer.
+	 * @param name String
+	 * @param time long
+	 */
 	public void startQuestTimer(String name, long time)
 	{
 		startQuestTimer(name, time, null);
 	}
 	
+	/**
+	 * Method startQuestTimer.
+	 * @param name String
+	 * @param time long
+	 * @param npc NpcInstance
+	 */
 	public void startQuestTimer(String name, long time, NpcInstance npc)
 	{
 		QuestTimer timer = new QuestTimer(name, time, npc);
@@ -720,11 +1039,21 @@ public final class QuestState
 		timer.start();
 	}
 	
+	/**
+	 * Method isRunningQuestTimer.
+	 * @param name String
+	 * @return boolean
+	 */
 	public boolean isRunningQuestTimer(String name)
 	{
 		return getTimers().get(name) != null;
 	}
 	
+	/**
+	 * Method cancelQuestTimer.
+	 * @param name String
+	 * @return boolean
+	 */
 	public boolean cancelQuestTimer(String name)
 	{
 		QuestTimer timer = removeQuestTimer(name);
@@ -735,6 +1064,11 @@ public final class QuestState
 		return timer != null;
 	}
 	
+	/**
+	 * Method removeQuestTimer.
+	 * @param name String
+	 * @return QuestTimer
+	 */
 	QuestTimer removeQuestTimer(String name)
 	{
 		QuestTimer timer = getTimers().remove(name);
@@ -745,11 +1079,17 @@ public final class QuestState
 		return timer;
 	}
 	
+	/**
+	 * Method pauseQuestTimers.
+	 */
 	public void pauseQuestTimers()
 	{
 		getQuest().pauseQuestTimers(this);
 	}
 	
+	/**
+	 * Method stopQuestTimers.
+	 */
 	public void stopQuestTimers()
 	{
 		for (QuestTimer timer : getTimers().values())
@@ -760,16 +1100,29 @@ public final class QuestState
 		_timers.clear();
 	}
 	
+	/**
+	 * Method resumeQuestTimers.
+	 */
 	public void resumeQuestTimers()
 	{
 		getQuest().resumeQuestTimers(this);
 	}
 	
+	/**
+	 * Method getTimers.
+	 * @return Map<String,QuestTimer>
+	 */
 	Map<String, QuestTimer> getTimers()
 	{
 		return _timers;
 	}
 	
+	/**
+	 * Method takeItems.
+	 * @param itemId int
+	 * @param count long
+	 * @return long
+	 */
 	public long takeItems(int itemId, long count)
 	{
 		Player player = getPlayer();
@@ -791,11 +1144,21 @@ public final class QuestState
 		return count;
 	}
 	
+	/**
+	 * Method takeAllItems.
+	 * @param itemId int
+	 * @return long
+	 */
 	public long takeAllItems(int itemId)
 	{
 		return takeItems(itemId, -1);
 	}
 	
+	/**
+	 * Method takeAllItems.
+	 * @param itemsIds int[]
+	 * @return long
+	 */
 	public long takeAllItems(int... itemsIds)
 	{
 		long result = 0;
@@ -806,6 +1169,11 @@ public final class QuestState
 		return result;
 	}
 	
+	/**
+	 * Method takeAllItems.
+	 * @param itemsIds Collection<Integer>
+	 * @return long
+	 */
 	public long takeAllItems(Collection<Integer> itemsIds)
 	{
 		long result = 0;
@@ -816,6 +1184,11 @@ public final class QuestState
 		return result;
 	}
 	
+	/**
+	 * Method unset.
+	 * @param var String
+	 * @return String
+	 */
 	public String unset(String var)
 	{
 		if (var == null)
@@ -830,6 +1203,14 @@ public final class QuestState
 		return old;
 	}
 	
+	/**
+	 * Method checkPartyMember.
+	 * @param member Player
+	 * @param state int
+	 * @param maxrange int
+	 * @param rangefrom GameObject
+	 * @return boolean
+	 */
 	private boolean checkPartyMember(Player member, int state, int maxrange, GameObject rangefrom)
 	{
 		if (member == null)
@@ -848,6 +1229,13 @@ public final class QuestState
 		return true;
 	}
 	
+	/**
+	 * Method getPartyMembers.
+	 * @param state int
+	 * @param maxrange int
+	 * @param rangefrom GameObject
+	 * @return List<Player>
+	 */
 	public List<Player> getPartyMembers(int state, int maxrange, GameObject rangefrom)
 	{
 		List<Player> result = new ArrayList<>();
@@ -870,11 +1258,24 @@ public final class QuestState
 		return result;
 	}
 	
+	/**
+	 * Method getRandomPartyMember.
+	 * @param state int
+	 * @param maxrangefromplayer int
+	 * @return Player
+	 */
 	public Player getRandomPartyMember(int state, int maxrangefromplayer)
 	{
 		return getRandomPartyMember(state, maxrangefromplayer, getPlayer());
 	}
 	
+	/**
+	 * Method getRandomPartyMember.
+	 * @param state int
+	 * @param maxrange int
+	 * @param rangefrom GameObject
+	 * @return Player
+	 */
 	public Player getRandomPartyMember(int state, int maxrange, GameObject rangefrom)
 	{
 		List<Player> list = getPartyMembers(state, maxrange, rangefrom);
@@ -885,31 +1286,75 @@ public final class QuestState
 		return list.get(Rnd.get(list.size()));
 	}
 	
+	/**
+	 * Method addSpawn.
+	 * @param npcId int
+	 * @return NpcInstance
+	 */
 	public NpcInstance addSpawn(int npcId)
 	{
 		return addSpawn(npcId, getPlayer().getX(), getPlayer().getY(), getPlayer().getZ(), 0, 0, 0);
 	}
 	
+	/**
+	 * Method addSpawn.
+	 * @param npcId int
+	 * @param despawnDelay int
+	 * @return NpcInstance
+	 */
 	public NpcInstance addSpawn(int npcId, int despawnDelay)
 	{
 		return addSpawn(npcId, getPlayer().getX(), getPlayer().getY(), getPlayer().getZ(), 0, 0, despawnDelay);
 	}
 	
+	/**
+	 * Method addSpawn.
+	 * @param npcId int
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @return NpcInstance
+	 */
 	public NpcInstance addSpawn(int npcId, int x, int y, int z)
 	{
 		return addSpawn(npcId, x, y, z, 0, 0, 0);
 	}
 	
+	/**
+	 * Method addSpawn.
+	 * @param npcId int
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param despawnDelay int
+	 * @return NpcInstance
+	 */
 	public NpcInstance addSpawn(int npcId, int x, int y, int z, int despawnDelay)
 	{
 		return addSpawn(npcId, x, y, z, 0, 0, despawnDelay);
 	}
 	
+	/**
+	 * Method addSpawn.
+	 * @param npcId int
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param heading int
+	 * @param randomOffset int
+	 * @param despawnDelay int
+	 * @return NpcInstance
+	 */
 	public NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, int randomOffset, int despawnDelay)
 	{
 		return getQuest().addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay);
 	}
 	
+	/**
+	 * Method findTemplate.
+	 * @param npcId int
+	 * @return NpcInstance
+	 */
 	public NpcInstance findTemplate(int npcId)
 	{
 		for (Spawner spawn : SpawnManager.getInstance().getSpawners(PeriodOfDay.NONE.name()))
@@ -922,6 +1367,12 @@ public final class QuestState
 		return null;
 	}
 	
+	/**
+	 * Method calculateLevelDiffForDrop.
+	 * @param mobLevel int
+	 * @param player int
+	 * @return int
+	 */
 	public int calculateLevelDiffForDrop(int mobLevel, int player)
 	{
 		if (!Config.DEEPBLUE_DROP_RULES)
@@ -931,6 +1382,10 @@ public final class QuestState
 		return Math.max(player - mobLevel - Config.DEEPBLUE_DROP_MAXDIFF, 0);
 	}
 	
+	/**
+	 * Method getCond.
+	 * @return int
+	 */
 	public int getCond()
 	{
 		if (_cond == null)
@@ -954,11 +1409,22 @@ public final class QuestState
 		return _cond;
 	}
 	
+	/**
+	 * Method setCond.
+	 * @param newCond int
+	 * @return String
+	 */
 	public String setCond(int newCond)
 	{
 		return setCond(newCond, true);
 	}
 	
+	/**
+	 * Method setCond.
+	 * @param newCond int
+	 * @param store boolean
+	 * @return String
+	 */
 	public String setCond(int newCond, boolean store)
 	{
 		if (newCond == getCond())
@@ -1000,6 +1466,9 @@ public final class QuestState
 		return result;
 	}
 	
+	/**
+	 * Method setRestartTime.
+	 */
 	public void setRestartTime()
 	{
 		Calendar reDo = Calendar.getInstance();
@@ -1012,6 +1481,10 @@ public final class QuestState
 		set("restartTime", String.valueOf(reDo.getTimeInMillis()));
 	}
 	
+	/**
+	 * Method isNowAvailableByTime.
+	 * @return boolean
+	 */
 	public boolean isNowAvailableByTime()
 	{
 		String val = get("restartTime");

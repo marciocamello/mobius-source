@@ -28,15 +28,29 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LazyPrecisionTaskManager extends SteppingRunnableQueueManager
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final LazyPrecisionTaskManager _instance = new LazyPrecisionTaskManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return LazyPrecisionTaskManager
+	 */
 	public static final LazyPrecisionTaskManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for LazyPrecisionTaskManager.
+	 */
 	private LazyPrecisionTaskManager()
 	{
 		super(1000L);
@@ -51,6 +65,11 @@ public class LazyPrecisionTaskManager extends SteppingRunnableQueueManager
 		}, 60000L, 60000L);
 	}
 	
+	/**
+	 * Method addPCCafePointsTask.
+	 * @param player Player
+	 * @return Future<?>
+	 */
 	public Future<?> addPCCafePointsTask(final Player player)
 	{
 		long delay = Config.ALT_PCBANG_POINTS_DELAY * 60000L;
@@ -68,6 +87,11 @@ public class LazyPrecisionTaskManager extends SteppingRunnableQueueManager
 		}, delay, delay);
 	}
 	
+	/**
+	 * Method startBonusExpirationTask.
+	 * @param player Player
+	 * @return Future<?>
+	 */
 	public Future<?> startBonusExpirationTask(final Player player)
 	{
 		long delay = (player.getBonus().getBonusExpire() * 1000L) - System.currentTimeMillis();
@@ -96,6 +120,11 @@ public class LazyPrecisionTaskManager extends SteppingRunnableQueueManager
 		}, delay);
 	}
 	
+	/**
+	 * Method addNpcAnimationTask.
+	 * @param npc NpcInstance
+	 * @return Future<?>
+	 */
 	public Future<?> addNpcAnimationTask(final NpcInstance npc)
 	{
 		return scheduleAtFixedRate(new RunnableImpl()

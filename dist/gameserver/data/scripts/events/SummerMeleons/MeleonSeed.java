@@ -26,17 +26,34 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import npc.model.MeleonInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MeleonSeed extends ScriptItemHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	public class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
+		/**
+		 * Field spawnedPlant.
+		 */
 		SimpleSpawner spawnedPlant = null;
 		
+		/**
+		 * Constructor for DeSpawnScheduleTimerTask.
+		 * @param spawn SimpleSpawner
+		 */
 		public DeSpawnScheduleTimerTask(SimpleSpawner spawn)
 		{
 			spawnedPlant = spawn;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -44,17 +61,31 @@ public class MeleonSeed extends ScriptItemHandler
 		}
 	}
 	
+	/**
+	 * Field _itemIds.
+	 */
 	private static int[] _itemIds =
 	{
 		15366,
 		15367
 	};
+	/**
+	 * Field _npcIds.
+	 */
 	private static int[] _npcIds =
 	{
 		13271,
 		13275
 	};
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -65,12 +96,12 @@ public class MeleonSeed extends ScriptItemHandler
 		}
 		if (activeChar.isInOlympiadMode())
 		{
-			activeChar.sendMessage("Нельзя взращивать арбуз на стадионе.");
+			activeChar.sendMessage("�?ел�?з�? взращиват�? арбуз на �?тадионе.");
 			return false;
 		}
 		if (!activeChar.getReflection().isDefault())
 		{
-			activeChar.sendMessage("Нельзя взращивать арбуз в инстансе.");
+			activeChar.sendMessage("�?ел�?з�? взращиват�? арбуз в ин�?тан�?е.");
 			return false;
 		}
 		NpcTemplate template = null;
@@ -100,6 +131,11 @@ public class MeleonSeed extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[]
+	 * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{

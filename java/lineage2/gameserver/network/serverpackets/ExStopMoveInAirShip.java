@@ -15,11 +15,25 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExStopMoveInAirShip extends L2GameServerPacket
 {
+	/**
+	 * Field char_heading. Field boat_id. Field char_id.
+	 */
 	private final int char_id, boat_id, char_heading;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
 	
+	/**
+	 * Constructor for ExStopMoveInAirShip.
+	 * @param cha Player
+	 */
 	public ExStopMoveInAirShip(Player cha)
 	{
 		char_id = cha.getObjectId();
@@ -28,6 +42,9 @@ public class ExStopMoveInAirShip extends L2GameServerPacket
 		char_heading = cha.getHeading();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -17,14 +17,26 @@ import lineage2.gameserver.instancemanager.naia.NaiaCoreManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MutatedElpy extends Fighter
 {
+	/**
+	 * Constructor for MutatedElpy.
+	 * @param actor NpcInstance
+	 */
 	public MutatedElpy(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
@@ -32,6 +44,11 @@ public class MutatedElpy extends Fighter
 		super.onEvtDead(killer);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

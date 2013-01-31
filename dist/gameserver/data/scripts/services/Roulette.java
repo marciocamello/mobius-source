@@ -22,18 +22,55 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.GameStats;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Roulette extends Functions
 {
+	/**
+	 * Field R. (value is ""red"")
+	 */
 	private static final String R = "red";
+	/**
+	 * Field B. (value is ""black"")
+	 */
 	private static final String B = "black";
+	/**
+	 * Field fst. (value is ""first"")
+	 */
 	private static final String fst = "first";
+	/**
+	 * Field snd. (value is ""second"")
+	 */
 	private static final String snd = "second";
+	/**
+	 * Field trd. (value is ""third"")
+	 */
 	private static final String trd = "third";
+	/**
+	 * Field E. (value is ""even"")
+	 */
 	private static final String E = "even";
+	/**
+	 * Field O. (value is ""odd"")
+	 */
 	private static final String O = "odd";
+	/**
+	 * Field L. (value is ""low"")
+	 */
 	private static final String L = "low";
+	/**
+	 * Field H. (value is ""high"")
+	 */
 	private static final String H = "high";
+	/**
+	 * Field Z. (value is ""zero"")
+	 */
 	private static final String Z = "zero";
+	/**
+	 * Field Numbers.
+	 */
 	private static final String[][] Numbers =
 	{
 		{
@@ -334,22 +371,50 @@ public class Roulette extends Functions
 		},
 	};
 	
+	/**
+	 * @author Mobius
+	 */
 	private static enum GameType
 	{
+		/**
+		 * Field StraightUp.
+		 */
 		StraightUp,
+		/**
+		 * Field ColumnBet.
+		 */
 		ColumnBet,
+		/**
+		 * Field DozenBet.
+		 */
 		DozenBet,
+		/**
+		 * Field RedOrBlack.
+		 */
 		RedOrBlack,
+		/**
+		 * Field EvenOrOdd.
+		 */
 		EvenOrOdd,
+		/**
+		 * Field LowOrHigh.
+		 */
 		LowOrHigh;
 	}
 	
+	/**
+	 * Method dialog.
+	 */
 	public void dialog()
 	{
 		Player player = getSelf();
 		show(HtmCache.getInstance().getNotNull("scripts/services/roulette.htm", player).replaceFirst("%min%", Util.formatAdena(Config.SERVICES_ROULETTE_MIN_BET)).replaceFirst("%max%", Util.formatAdena(Config.SERVICES_ROULETTE_MAX_BET)), player);
 	}
 	
+	/**
+	 * Method play.
+	 * @param param String[]
+	 */
 	public void play(String[] param)
 	{
 		Player player = getSelf();
@@ -422,6 +487,13 @@ public class Roulette extends Functions
 		show(ret, player);
 	}
 	
+	/**
+	 * Method check.
+	 * @param betID String
+	 * @param roll String[]
+	 * @param type GameType
+	 * @return int
+	 */
 	private static final int check(String betID, String[] roll, GameType type)
 	{
 		switch (type)
@@ -467,31 +539,61 @@ public class Roulette extends Functions
 		}
 	}
 	
+	/**
+	 * Method DialogAppend_30990.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30990(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30991.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30991(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30992.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30992(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30993.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30993(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30994.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30994(Integer val)
 	{
 		return getHtmlAppends(val);
 	}
 	
+	/**
+	 * Method getHtmlAppends.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String getHtmlAppends(Integer val)
 	{
 		Player player = getSelf();

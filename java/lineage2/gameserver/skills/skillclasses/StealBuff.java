@@ -28,16 +28,36 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.EffectsComparator;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StealBuff extends Skill
 {
+	/**
+	 * Field _stealCount.
+	 */
 	private final int _stealCount;
 	
+	/**
+	 * Constructor for StealBuff.
+	 * @param set StatsSet
+	 */
 	public StealBuff(StatsSet set)
 	{
 		super(set);
 		_stealCount = set.getInteger("stealCount", 1);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -49,6 +69,11 @@ public class StealBuff extends Skill
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
@@ -102,11 +127,22 @@ public class StealBuff extends Skill
 		}
 	}
 	
+	/**
+	 * Method canSteal.
+	 * @param e Effect
+	 * @return boolean
+	 */
 	private boolean canSteal(Effect e)
 	{
 		return (e != null) && e.isInUse() && e.isCancelable() && !e.getSkill().isToggle() && !e.getSkill().isPassive() && !e.getSkill().isOffensive() && (e.getEffectType() != EffectType.Vitality) && !e.getTemplate()._applyOnCaster;
 	}
 	
+	/**
+	 * Method calcStealChance.
+	 * @param effected Creature
+	 * @param effector Creature
+	 * @return boolean
+	 */
 	private boolean calcStealChance(Creature effected, Creature effector)
 	{
 		double cancel_res_multiplier = effected.calcStat(Stats.CANCEL_RESIST, 1, null, null);
@@ -115,6 +151,12 @@ public class StealBuff extends Skill
 		return Rnd.chance(prelimChance);
 	}
 	
+	/**
+	 * Method cloneEffect.
+	 * @param cha Creature
+	 * @param eff Effect
+	 * @return Effect
+	 */
 	private Effect cloneEffect(Creature cha, Effect eff)
 	{
 		Skill skill = eff.getSkill();

@@ -28,31 +28,65 @@ import lineage2.gameserver.listener.actor.ai.OnAiIntentionListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharListenerList extends ListenerList<Creature>
 {
+	/**
+	 * Field global.
+	 */
 	final static ListenerList<Creature> global = new ListenerList<>();
+	/**
+	 * Field actor.
+	 */
 	protected final Creature actor;
 	
+	/**
+	 * Constructor for CharListenerList.
+	 * @param actor Creature
+	 */
 	public CharListenerList(Creature actor)
 	{
 		this.actor = actor;
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return Creature
+	 */
 	public Creature getActor()
 	{
 		return actor;
 	}
 	
+	/**
+	 * Method addGlobal.
+	 * @param listener Listener<Creature>
+	 * @return boolean
+	 */
 	public static boolean addGlobal(Listener<Creature> listener)
 	{
 		return global.add(listener);
 	}
 	
+	/**
+	 * Method removeGlobal.
+	 * @param listener Listener<Creature>
+	 * @return boolean
+	 */
 	public static boolean removeGlobal(Listener<Creature> listener)
 	{
 		return global.remove(listener);
 	}
 	
+	/**
+	 * Method onAiIntention.
+	 * @param intention CtrlIntention
+	 * @param arg0 Object
+	 * @param arg1 Object
+	 */
 	public void onAiIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
 		if (!getListeners().isEmpty())
@@ -67,6 +101,11 @@ public class CharListenerList extends ListenerList<Creature>
 		}
 	}
 	
+	/**
+	 * Method onAiEvent.
+	 * @param evt CtrlEvent
+	 * @param args Object[]
+	 */
 	public void onAiEvent(CtrlEvent evt, Object[] args)
 	{
 		if (!getListeners().isEmpty())
@@ -81,6 +120,10 @@ public class CharListenerList extends ListenerList<Creature>
 		}
 	}
 	
+	/**
+	 * Method onAttack.
+	 * @param target Creature
+	 */
 	public void onAttack(Creature target)
 	{
 		if (!global.getListeners().isEmpty())
@@ -105,6 +148,10 @@ public class CharListenerList extends ListenerList<Creature>
 		}
 	}
 	
+	/**
+	 * Method onAttackHit.
+	 * @param attacker Creature
+	 */
 	public void onAttackHit(Creature attacker)
 	{
 		if (!global.getListeners().isEmpty())
@@ -129,6 +176,12 @@ public class CharListenerList extends ListenerList<Creature>
 		}
 	}
 	
+	/**
+	 * Method onMagicUse.
+	 * @param skill Skill
+	 * @param target Creature
+	 * @param alt boolean
+	 */
 	public void onMagicUse(Skill skill, Creature target, boolean alt)
 	{
 		if (!global.getListeners().isEmpty())
@@ -153,6 +206,11 @@ public class CharListenerList extends ListenerList<Creature>
 		}
 	}
 	
+	/**
+	 * Method onMagicHit.
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	public void onMagicHit(Skill skill, Creature caster)
 	{
 		if (!global.getListeners().isEmpty())
@@ -177,6 +235,10 @@ public class CharListenerList extends ListenerList<Creature>
 		}
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	public void onDeath(Creature killer)
 	{
 		if (!global.getListeners().isEmpty())
@@ -201,6 +263,10 @@ public class CharListenerList extends ListenerList<Creature>
 		}
 	}
 	
+	/**
+	 * Method onKill.
+	 * @param victim Creature
+	 */
 	public void onKill(Creature victim)
 	{
 		if (!global.getListeners().isEmpty())
@@ -225,6 +291,10 @@ public class CharListenerList extends ListenerList<Creature>
 		}
 	}
 	
+	/**
+	 * Method onKillIgnorePetOrSummon.
+	 * @param victim Creature
+	 */
 	public void onKillIgnorePetOrSummon(Creature victim)
 	{
 		if (!global.getListeners().isEmpty())
@@ -249,6 +319,12 @@ public class CharListenerList extends ListenerList<Creature>
 		}
 	}
 	
+	/**
+	 * Method onCurrentHpDamage.
+	 * @param damage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 */
 	public void onCurrentHpDamage(double damage, Creature attacker, Skill skill)
 	{
 		if (!global.getListeners().isEmpty())

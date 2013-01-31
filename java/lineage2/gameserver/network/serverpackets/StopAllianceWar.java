@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StopAllianceWar extends L2GameServerPacket
 {
+	/**
+	 * Field _allianceName.
+	 */
 	private final String _allianceName;
+	/**
+	 * Field _char.
+	 */
 	private final String _char;
 	
+	/**
+	 * Constructor for StopAllianceWar.
+	 * @param alliance String
+	 * @param charName String
+	 */
 	public StopAllianceWar(String alliance, String charName)
 	{
 		_allianceName = alliance;
 		_char = charName;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

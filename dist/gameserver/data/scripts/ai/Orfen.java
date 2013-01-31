@@ -22,8 +22,15 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 import npc.model.OrfenInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Orfen extends Fighter
 {
+	/**
+	 * Field MsgOnRecall.
+	 */
 	public static final PrintfFormat[] MsgOnRecall =
 	{
 		new PrintfFormat("%s. Stop kidding yourself about your own powerlessness!"),
@@ -31,14 +38,25 @@ public class Orfen extends Fighter
 		new PrintfFormat("You're really stupid to have challenged me. %s! Get ready!"),
 		new PrintfFormat("%s. Do you think that's going to work?!")
 	};
+	/**
+	 * Field _paralyze.
+	 */
 	public final Skill[] _paralyze;
 	
+	/**
+	 * Constructor for Orfen.
+	 * @param actor NpcInstance
+	 */
 	public Orfen(NpcInstance actor)
 	{
 		super(actor);
 		_paralyze = getActor().getTemplate().getDebuffSkills();
 	}
 	
+	/**
+	 * Method thinkActive.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -55,12 +73,21 @@ public class Orfen extends Fighter
 		return false;
 	}
 	
+	/**
+	 * Method createNewTask.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean createNewTask()
 	{
 		return defaultNewTask();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -91,6 +118,11 @@ public class Orfen extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtSeeSpell.
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
@@ -113,12 +145,21 @@ public class Orfen extends Fighter
 		}
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return OrfenInstance
+	 */
 	@Override
 	public OrfenInstance getActor()
 	{
 		return (OrfenInstance) super.getActor();
 	}
 	
+	/**
+	 * Method teleToLocation.
+	 * @param attacker Creature
+	 * @param loc Location
+	 */
 	private void teleToLocation(Creature attacker, Location loc)
 	{
 		attacker.teleToLocation(loc);

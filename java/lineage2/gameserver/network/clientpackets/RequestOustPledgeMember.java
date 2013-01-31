@@ -22,16 +22,29 @@ import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestOustPledgeMember extends L2GameClientPacket
 {
+	/**
+	 * Field _target.
+	 */
 	private String _target;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_target = readS(16);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

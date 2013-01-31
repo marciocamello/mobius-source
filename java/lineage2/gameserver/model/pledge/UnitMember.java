@@ -23,22 +23,79 @@ import lineage2.gameserver.network.serverpackets.NickNameChanged;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class UnitMember
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(UnitMember.class);
+	/**
+	 * Field _player.
+	 */
 	private Player _player;
+	/**
+	 * Field _clan.
+	 */
 	private Clan _clan;
+	/**
+	 * Field _name.
+	 */
 	private String _name;
+	/**
+	 * Field _title.
+	 */
 	private String _title;
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _level.
+	 */
 	private int _level;
+	/**
+	 * Field _classId.
+	 */
 	private int _classId;
+	/**
+	 * Field _sex.
+	 */
 	private int _sex;
+	/**
+	 * Field _pledgeType.
+	 */
 	private int _pledgeType;
+	/**
+	 * Field _powerGrade.
+	 */
 	private int _powerGrade;
+	/**
+	 * Field _apprentice.
+	 */
 	private int _apprentice;
+	/**
+	 * Field _leaderOf.
+	 */
 	private int _leaderOf = Clan.SUBUNIT_NONE;
 	
+	/**
+	 * Constructor for UnitMember.
+	 * @param clan Clan
+	 * @param name String
+	 * @param title String
+	 * @param level int
+	 * @param classId int
+	 * @param objectId int
+	 * @param pledgeType int
+	 * @param powerGrade int
+	 * @param apprentice int
+	 * @param sex int
+	 * @param leaderOf int
+	 */
 	public UnitMember(Clan clan, String name, String title, int level, int classId, int objectId, int pledgeType, int powerGrade, int apprentice, int sex, int leaderOf)
 	{
 		_clan = clan;
@@ -59,12 +116,21 @@ public class UnitMember
 		}
 	}
 	
+	/**
+	 * Constructor for UnitMember.
+	 * @param player Player
+	 */
 	public UnitMember(Player player)
 	{
 		_objectId = player.getObjectId();
 		_player = player;
 	}
 	
+	/**
+	 * Method setPlayerInstance.
+	 * @param player Player
+	 * @param exit boolean
+	 */
 	public void setPlayerInstance(Player player, boolean exit)
 	{
 		_player = exit ? null : player;
@@ -83,58 +149,98 @@ public class UnitMember
 		_sex = player.getSex();
 	}
 	
+	/**
+	 * Method getPlayer.
+	 * @return Player
+	 */
 	public Player getPlayer()
 	{
 		return _player;
 	}
 	
+	/**
+	 * Method isOnline.
+	 * @return boolean
+	 */
 	public boolean isOnline()
 	{
 		Player player = getPlayer();
 		return (player != null) && !player.isInOfflineMode();
 	}
 	
+	/**
+	 * Method getClan.
+	 * @return Clan
+	 */
 	public Clan getClan()
 	{
 		Player player = getPlayer();
 		return player == null ? _clan : player.getClan();
 	}
 	
+	/**
+	 * Method getClassId.
+	 * @return int
+	 */
 	public int getClassId()
 	{
 		Player player = getPlayer();
 		return player == null ? _classId : player.getClassId().getId();
 	}
 	
+	/**
+	 * Method getSex.
+	 * @return int
+	 */
 	public int getSex()
 	{
 		Player player = getPlayer();
 		return player == null ? _sex : player.getSex();
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	public int getLevel()
 	{
 		Player player = getPlayer();
 		return player == null ? _level : player.getLevel();
 	}
 	
+	/**
+	 * Method getName.
+	 * @return String
+	 */
 	public String getName()
 	{
 		Player player = getPlayer();
 		return player == null ? _name : player.getName();
 	}
 	
+	/**
+	 * Method getObjectId.
+	 * @return int
+	 */
 	public int getObjectId()
 	{
 		return _objectId;
 	}
 	
+	/**
+	 * Method getTitle.
+	 * @return String
+	 */
 	public String getTitle()
 	{
 		Player player = getPlayer();
 		return player == null ? _title : player.getTitle();
 	}
 	
+	/**
+	 * Method setTitle.
+	 * @param title String
+	 */
 	public void setTitle(String title)
 	{
 		Player player = getPlayer();
@@ -167,17 +273,29 @@ public class UnitMember
 		}
 	}
 	
+	/**
+	 * Method getSubUnit.
+	 * @return SubUnit
+	 */
 	public SubUnit getSubUnit()
 	{
 		return _clan.getSubUnit(_pledgeType);
 	}
 	
+	/**
+	 * Method getPledgeType.
+	 * @return int
+	 */
 	public int getPledgeType()
 	{
 		Player player = getPlayer();
 		return player == null ? _pledgeType : player.getPledgeType();
 	}
 	
+	/**
+	 * Method setPledgeType.
+	 * @param pledgeType int
+	 */
 	public void setPledgeType(int pledgeType)
 	{
 		Player player = getPlayer();
@@ -192,6 +310,9 @@ public class UnitMember
 		}
 	}
 	
+	/**
+	 * Method updatePledgeType.
+	 */
 	private void updatePledgeType()
 	{
 		Connection con = null;
@@ -214,12 +335,20 @@ public class UnitMember
 		}
 	}
 	
+	/**
+	 * Method getPowerGrade.
+	 * @return int
+	 */
 	public int getPowerGrade()
 	{
 		Player player = getPlayer();
 		return player == null ? _powerGrade : player.getPowerGrade();
 	}
 	
+	/**
+	 * Method setPowerGrade.
+	 * @param newPowerGrade int
+	 */
 	public void setPowerGrade(int newPowerGrade)
 	{
 		Player player = getPlayer();
@@ -236,6 +365,11 @@ public class UnitMember
 		updatePowerGradeParty(oldPowerGrade, newPowerGrade);
 	}
 	
+	/**
+	 * Method updatePowerGradeParty.
+	 * @param oldGrade int
+	 * @param newGrade int
+	 */
 	private void updatePowerGradeParty(int oldGrade, int newGrade)
 	{
 		if (oldGrade != 0)
@@ -250,6 +384,9 @@ public class UnitMember
 		}
 	}
 	
+	/**
+	 * Method updatePowerGrade.
+	 */
 	private void updatePowerGrade()
 	{
 		Connection con = null;
@@ -272,12 +409,20 @@ public class UnitMember
 		}
 	}
 	
+	/**
+	 * Method getApprentice.
+	 * @return int
+	 */
 	private int getApprentice()
 	{
 		Player player = getPlayer();
 		return player == null ? _apprentice : player.getApprentice();
 	}
 	
+	/**
+	 * Method setApprentice.
+	 * @param apprentice int
+	 */
 	public void setApprentice(int apprentice)
 	{
 		Player player = getPlayer();
@@ -292,6 +437,9 @@ public class UnitMember
 		}
 	}
 	
+	/**
+	 * Method updateApprentice.
+	 */
 	private void updateApprentice()
 	{
 		Connection con = null;
@@ -314,6 +462,10 @@ public class UnitMember
 		}
 	}
 	
+	/**
+	 * Method getApprenticeName.
+	 * @return String
+	 */
 	public String getApprenticeName()
 	{
 		if (getApprentice() != 0)
@@ -326,11 +478,19 @@ public class UnitMember
 		return "";
 	}
 	
+	/**
+	 * Method hasApprentice.
+	 * @return boolean
+	 */
 	public boolean hasApprentice()
 	{
 		return getApprentice() != 0;
 	}
 	
+	/**
+	 * Method getSponsor.
+	 * @return int
+	 */
 	public int getSponsor()
 	{
 		if (getPledgeType() != Clan.SUBUNIT_ACADEMY)
@@ -348,6 +508,10 @@ public class UnitMember
 		return 0;
 	}
 	
+	/**
+	 * Method getSponsorName.
+	 * @return String
+	 */
 	private String getSponsorName()
 	{
 		int sponsorId = getSponsor();
@@ -362,11 +526,19 @@ public class UnitMember
 		return "";
 	}
 	
+	/**
+	 * Method hasSponsor.
+	 * @return boolean
+	 */
 	public boolean hasSponsor()
 	{
 		return getSponsor() != 0;
 	}
 	
+	/**
+	 * Method getRelatedName.
+	 * @return String
+	 */
 	public String getRelatedName()
 	{
 		if (getPledgeType() == Clan.SUBUNIT_ACADEMY)
@@ -376,12 +548,20 @@ public class UnitMember
 		return getApprenticeName();
 	}
 	
+	/**
+	 * Method isClanLeader.
+	 * @return boolean
+	 */
 	public boolean isClanLeader()
 	{
 		Player player = getPlayer();
 		return player == null ? (_leaderOf == Clan.SUBUNIT_MAIN_CLAN) : player.isClanLeader();
 	}
 	
+	/**
+	 * Method isSubLeader.
+	 * @return int
+	 */
 	public int isSubLeader()
 	{
 		for (SubUnit pledge : getClan().getAllSubUnits())
@@ -394,11 +574,19 @@ public class UnitMember
 		return 0;
 	}
 	
+	/**
+	 * Method setLeaderOf.
+	 * @param leaderOf int
+	 */
 	public void setLeaderOf(int leaderOf)
 	{
 		_leaderOf = leaderOf;
 	}
 	
+	/**
+	 * Method getLeaderOf.
+	 * @return int
+	 */
 	public int getLeaderOf()
 	{
 		return _leaderOf;

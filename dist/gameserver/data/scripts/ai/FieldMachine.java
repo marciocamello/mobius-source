@@ -20,15 +20,31 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FieldMachine extends DefaultAI
 {
+	/**
+	 * Field _lastAction.
+	 */
 	private long _lastAction;
 	
+	/**
+	 * Constructor for FieldMachine.
+	 * @param actor NpcInstance
+	 */
 	public FieldMachine(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{

@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.items.ItemInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TradeOtherAdd extends L2GameServerPacket
 {
+	/**
+	 * Field _temp.
+	 */
 	private final ItemInfo _temp;
+	/**
+	 * Field _amount.
+	 */
 	private final long _amount;
 	
+	/**
+	 * Constructor for TradeOtherAdd.
+	 * @param item ItemInfo
+	 * @param amount long
+	 */
 	public TradeOtherAdd(ItemInfo item, long amount)
 	{
 		_temp = item;
 		_amount = amount;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

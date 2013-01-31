@@ -14,8 +14,16 @@ package ai.residences.clanhall;
 
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MatchScout extends MatchFighter
 {
+	/**
+	 * Constructor for MatchScout.
+	 * @param actor NpcInstance
+	 */
 	public MatchScout(NpcInstance actor)
 	{
 		super(actor);

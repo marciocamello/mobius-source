@@ -16,13 +16,37 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface FlagItemAttachment extends PickableAttachment
 {
+	/**
+	 * Method onLogout.
+	 * @param player Player
+	 */
 	void onLogout(Player player);
 	
+	/**
+	 * Method onDeath.
+	 * @param owner Player
+	 * @param killer Creature
+	 */
 	void onDeath(Player owner, Creature killer);
 	
+	/**
+	 * Method canAttack.
+	 * @param player Player
+	 * @return boolean
+	 */
 	boolean canAttack(Player player);
 	
+	/**
+	 * Method canCast.
+	 * @param player Player
+	 * @param skill Skill
+	 * @return boolean
+	 */
 	boolean canCast(Player player, Skill skill);
 }

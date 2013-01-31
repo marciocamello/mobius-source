@@ -21,11 +21,24 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.skills.TimeStamp;
 import lineage2.gameserver.tables.PetDataTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class UseItem extends L2GameClientPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
+	/**
+	 * Field _ctrlPressed.
+	 */
 	private boolean _ctrlPressed;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -33,6 +46,9 @@ public class UseItem extends L2GameClientPacket
 		_ctrlPressed = readD() == 1;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

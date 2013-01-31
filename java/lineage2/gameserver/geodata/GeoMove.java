@@ -22,8 +22,23 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExShowTrace;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GeoMove
 {
+	/**
+	 * Method findPath.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param target Location
+	 * @param obj GameObject
+	 * @param showTrace boolean
+	 * @param geoIndex int
+	 * @return List<Location>
+	 */
 	private static List<Location> findPath(int x, int y, int z, Location target, GameObject obj, boolean showTrace, int geoIndex)
 	{
 		if (Math.abs(z - target.z) > 256)
@@ -67,11 +82,28 @@ public class GeoMove
 		return targetRecorder;
 	}
 	
+	/**
+	 * Method findMovePath.
+	 * @param x int
+	 * @param y int
+	 * @param z int
+	 * @param target Location
+	 * @param obj GameObject
+	 * @param showTrace boolean
+	 * @param geoIndex int
+	 * @return List<List<Location>>
+	 */
 	public static List<List<Location>> findMovePath(int x, int y, int z, Location target, GameObject obj, boolean showTrace, int geoIndex)
 	{
 		return getNodePath(findPath(x, y, z, target, obj, showTrace, geoIndex), geoIndex);
 	}
 	
+	/**
+	 * Method getNodePath.
+	 * @param path List<Location>
+	 * @param geoIndex int
+	 * @return List<List<Location>>
+	 */
 	private static List<List<Location>> getNodePath(List<Location> path, int geoIndex)
 	{
 		int size = path.size();
@@ -97,6 +129,12 @@ public class GeoMove
 		return result;
 	}
 	
+	/**
+	 * Method constructMoveList.
+	 * @param begin Location
+	 * @param end Location
+	 * @return List<Location>
+	 */
 	public static List<Location> constructMoveList(Location begin, Location end)
 	{
 		begin.world2geo();
@@ -122,6 +160,11 @@ public class GeoMove
 		return result;
 	}
 	
+	/**
+	 * Method pathClean.
+	 * @param path List<Location>
+	 * @param geoIndex int
+	 */
 	private static void pathClean(List<Location> path, int geoIndex)
 	{
 		int size = path.size();
@@ -163,6 +206,13 @@ public class GeoMove
 		}
 	}
 	
+	/**
+	 * Method IsPointInLine.
+	 * @param p1 Location
+	 * @param p2 Location
+	 * @param p3 Location
+	 * @return boolean
+	 */
 	private static boolean IsPointInLine(Location p1, Location p2, Location p3)
 	{
 		if (((p1.x == p3.x) && (p3.x == p2.x)) || ((p1.y == p3.y) && (p3.y == p2.y)))

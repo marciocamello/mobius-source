@@ -14,13 +14,24 @@ package lineage2.gameserver.model.actor.recorder;
 
 import lineage2.gameserver.model.Summon;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SummonStatsChangeRecorder extends CharStatsChangeRecorder<Summon>
 {
+	/**
+	 * Constructor for SummonStatsChangeRecorder.
+	 * @param actor Summon
+	 */
 	public SummonStatsChangeRecorder(Summon actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onSendChanges.
+	 */
 	@Override
 	protected void onSendChanges()
 	{

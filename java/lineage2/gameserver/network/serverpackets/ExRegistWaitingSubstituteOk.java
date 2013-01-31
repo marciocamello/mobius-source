@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExRegistWaitingSubstituteOk extends L2GameServerPacket
 {
+	/**
+	 * Field classId.
+	 */
 	int classId;
+	/**
+	 * Field player.
+	 */
 	Player player;
 	
+	/**
+	 * Constructor for ExRegistWaitingSubstituteOk.
+	 * @param cId int
+	 * @param _player Player
+	 */
 	public ExRegistWaitingSubstituteOk(int cId, Player _player)
 	{
 		classId = cId;
 		player = _player.getParty().getPartyLeader();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

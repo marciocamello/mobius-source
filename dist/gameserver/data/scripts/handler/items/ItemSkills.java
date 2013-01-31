@@ -23,10 +23,20 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ItemSkills extends ScriptItemHandler
 {
+	/**
+	 * Field _itemIds.
+	 */
 	private final int[] _itemIds;
 	
+	/**
+	 * Constructor for ItemSkills.
+	 */
 	public ItemSkills()
 	{
 		TIntHashSet set = new TIntHashSet();
@@ -47,6 +57,13 @@ public class ItemSkills extends ScriptItemHandler
 		_itemIds = set.toArray();
 	}
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -89,6 +106,10 @@ public class ItemSkills extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{

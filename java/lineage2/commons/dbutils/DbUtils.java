@@ -17,8 +17,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DbUtils
 {
+	/**
+	 * Method close.
+	 * @param conn Connection
+	 * @throws SQLException
+	 */
 	public static void close(Connection conn) throws SQLException
 	{
 		if (conn != null)
@@ -27,6 +36,11 @@ public class DbUtils
 		}
 	}
 	
+	/**
+	 * Method close.
+	 * @param rs ResultSet
+	 * @throws SQLException
+	 */
 	public static void close(ResultSet rs) throws SQLException
 	{
 		if (rs != null)
@@ -35,6 +49,11 @@ public class DbUtils
 		}
 	}
 	
+	/**
+	 * Method close.
+	 * @param stmt Statement
+	 * @throws SQLException
+	 */
 	public static void close(Statement stmt) throws SQLException
 	{
 		if (stmt != null)
@@ -43,12 +62,22 @@ public class DbUtils
 		}
 	}
 	
+	/**
+	 * Method close.
+	 * @param stmt Statement
+	 * @param rs ResultSet
+	 * @throws SQLException
+	 */
 	public static void close(Statement stmt, ResultSet rs) throws SQLException
 	{
 		close(stmt);
 		close(rs);
 	}
 	
+	/**
+	 * Method closeQuietly.
+	 * @param conn Connection
+	 */
 	public static void closeQuietly(Connection conn)
 	{
 		try
@@ -60,6 +89,11 @@ public class DbUtils
 		}
 	}
 	
+	/**
+	 * Method closeQuietly.
+	 * @param conn Connection
+	 * @param stmt Statement
+	 */
 	public static void closeQuietly(Connection conn, Statement stmt)
 	{
 		try
@@ -72,6 +106,11 @@ public class DbUtils
 		}
 	}
 	
+	/**
+	 * Method closeQuietly.
+	 * @param stmt Statement
+	 * @param rs ResultSet
+	 */
 	public static void closeQuietly(Statement stmt, ResultSet rs)
 	{
 		try
@@ -84,6 +123,12 @@ public class DbUtils
 		}
 	}
 	
+	/**
+	 * Method closeQuietly.
+	 * @param conn Connection
+	 * @param stmt Statement
+	 * @param rs ResultSet
+	 */
 	public static void closeQuietly(Connection conn, Statement stmt, ResultSet rs)
 	{
 		try
@@ -103,6 +148,10 @@ public class DbUtils
 		}
 	}
 	
+	/**
+	 * Method closeQuietly.
+	 * @param rs ResultSet
+	 */
 	public static void closeQuietly(ResultSet rs)
 	{
 		try
@@ -114,6 +163,10 @@ public class DbUtils
 		}
 	}
 	
+	/**
+	 * Method closeQuietly.
+	 * @param stmt Statement
+	 */
 	public static void closeQuietly(Statement stmt)
 	{
 		try

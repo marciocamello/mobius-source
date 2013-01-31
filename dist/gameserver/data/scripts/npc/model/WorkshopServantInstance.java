@@ -26,12 +26,19 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class WorkshopServantInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field medals.
+	 */
 	private static final int[] medals =
 	{
 		10427,
@@ -40,6 +47,9 @@ public class WorkshopServantInstance extends NpcInstance
 		10430,
 		10431,
 	};
+	/**
+	 * Field phrases.
+	 */
 	private static final String[] phrases =
 	{
 		"We won't let you go with this knowledge! Die!",
@@ -47,11 +57,21 @@ public class WorkshopServantInstance extends NpcInstance
 		"Mates! Attack those fools!",
 	};
 	
+	/**
+	 * Constructor for WorkshopServantInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public WorkshopServantInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -150,6 +170,13 @@ public class WorkshopServantInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getHtmlPath.
+	 * @param npcId int
+	 * @param val int
+	 * @param player Player
+	 * @return String
+	 */
 	@Override
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
@@ -172,6 +199,12 @@ public class WorkshopServantInstance extends NpcInstance
 		return "default/" + pom + ".htm";
 	}
 	
+	/**
+	 * Method hasItem.
+	 * @param party Party
+	 * @param itemId int
+	 * @return boolean
+	 */
 	private boolean hasItem(Party party, int itemId)
 	{
 		for (Player p : party.getPartyMembers())

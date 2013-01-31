@@ -21,13 +21,32 @@ import lineage2.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestPledgeReorganizeMember extends L2GameClientPacket
 {
+	/**
+	 * Field _replace.
+	 */
 	int _replace;
+	/**
+	 * Field _subjectName.
+	 */
 	String _subjectName;
+	/**
+	 * Field _targetUnit.
+	 */
 	int _targetUnit;
+	/**
+	 * Field _replaceName.
+	 */
 	String _replaceName;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -40,6 +59,9 @@ public class RequestPledgeReorganizeMember extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

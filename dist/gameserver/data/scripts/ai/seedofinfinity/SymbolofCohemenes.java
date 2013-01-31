@@ -16,19 +16,37 @@ import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SymbolofCohemenes extends DefaultAI
 {
+	/**
+	 * Constructor for SymbolofCohemenes.
+	 * @param actor NpcInstance
+	 */
 	public SymbolofCohemenes(NpcInstance actor)
 	{
 		super(actor);
 		actor.startImmobilized();
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

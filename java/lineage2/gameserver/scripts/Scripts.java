@@ -44,29 +44,64 @@ import org.apache.commons.lang3.reflect.MethodUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Scripts
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Scripts.class);
 	
+	/**
+	 * Field _instance.
+	 */
 	private static final Scripts _instance = new Scripts();
 	
+	/**
+	 * Method getInstance.
+	 * @return Scripts
+	 */
 	public static final Scripts getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field dialogAppends.
+	 */
 	public static final Map<Integer, List<ScriptClassAndMethod>> dialogAppends = new HashMap<>();
+	/**
+	 * Field onAction.
+	 */
 	public static final Map<String, ScriptClassAndMethod> onAction = new HashMap<>();
+	/**
+	 * Field onActionShift.
+	 */
 	public static final Map<String, ScriptClassAndMethod> onActionShift = new HashMap<>();
 	
+	/**
+	 * Field compiler.
+	 */
 	private final Compiler compiler = new Compiler();
+	/**
+	 * Field _classes.
+	 */
 	private final Map<String, Class<?>> _classes = new TreeMap<>();
 	
+	/**
+	 * Constructor for Scripts.
+	 */
 	private Scripts()
 	{
 		load();
 	}
 	
+	/**
+	 * Method load.
+	 */
 	private void load()
 	{
 		_log.info("Scripts: Loading...");
@@ -134,6 +169,9 @@ public class Scripts
 		}
 	}
 	
+	/**
+	 * Method init.
+	 */
 	public void init()
 	{
 		for (Class<?> clazz : _classes.values())
@@ -162,6 +200,10 @@ public class Scripts
 		}
 	}
 	
+	/**
+	 * Method reload.
+	 * @return boolean
+	 */
 	public boolean reload()
 	{
 		_log.info("Scripts: Reloading...");
@@ -169,6 +211,11 @@ public class Scripts
 		return reload("");
 	}
 	
+	/**
+	 * Method reload.
+	 * @param target String
+	 * @return boolean
+	 */
 	public boolean reload(String target)
 	{
 		List<Class<?>> classes = new ArrayList<>();
@@ -232,6 +279,9 @@ public class Scripts
 		return true;
 	}
 	
+	/**
+	 * Method shutdown.
+	 */
 	public void shutdown()
 	{
 		for (Class<?> clazz : _classes.values())
@@ -255,6 +305,12 @@ public class Scripts
 		}
 	}
 	
+	/**
+	 * Method load.
+	 * @param classes List<Class<?>>
+	 * @param target String
+	 * @return boolean
+	 */
 	private boolean load(List<Class<?>> classes, String target)
 	{
 		Collection<File> scriptFiles = Collections.emptyList();
@@ -281,7 +337,7 @@ public class Scripts
 		
 		Class<?> clazz;
 		boolean success = compiler.compile(scriptFiles);
-		if (success == true)
+		if (success)
 		{
 			MemoryClassLoader classLoader = compiler.getClassLoader();
 			for (String name : classLoader.getLoadedClasses())
@@ -312,6 +368,10 @@ public class Scripts
 		return success;
 	}
 	
+	/**
+	 * Method addHandlers.
+	 * @param clazz Class<?>
+	 */
 	private void addHandlers(Class<?> clazz)
 	{
 		try
@@ -347,6 +407,10 @@ public class Scripts
 		}
 	}
 	
+	/**
+	 * Method removeHandlers.
+	 * @param script Class<?>
+	 */
 	private void removeHandlers(Class<?> script)
 	{
 		try
@@ -399,41 +463,101 @@ public class Scripts
 		}
 	}
 	
+	/**
+	 * Method callScripts.
+	 * @param className String
+	 * @param methodName String
+	 * @return Object
+	 */
 	public Object callScripts(String className, String methodName)
 	{
 		return callScripts(null, className, methodName, null, null);
 	}
 	
+	/**
+	 * Method callScripts.
+	 * @param className String
+	 * @param methodName String
+	 * @param args Object[]
+	 * @return Object
+	 */
 	public Object callScripts(String className, String methodName, Object[] args)
 	{
 		return callScripts(null, className, methodName, args, null);
 	}
 	
+	/**
+	 * Method callScripts.
+	 * @param className String
+	 * @param methodName String
+	 * @param variables Map<String,Object>
+	 * @return Object
+	 */
 	public Object callScripts(String className, String methodName, Map<String, Object> variables)
 	{
 		return callScripts(null, className, methodName, ArrayUtils.EMPTY_OBJECT_ARRAY, variables);
 	}
 	
+	/**
+	 * Method callScripts.
+	 * @param className String
+	 * @param methodName String
+	 * @param args Object[]
+	 * @param variables Map<String,Object>
+	 * @return Object
+	 */
 	public Object callScripts(String className, String methodName, Object[] args, Map<String, Object> variables)
 	{
 		return callScripts(null, className, methodName, args, variables);
 	}
 	
+	/**
+	 * Method callScripts.
+	 * @param caller Player
+	 * @param className String
+	 * @param methodName String
+	 * @return Object
+	 */
 	public Object callScripts(Player caller, String className, String methodName)
 	{
 		return callScripts(caller, className, methodName, ArrayUtils.EMPTY_OBJECT_ARRAY, null);
 	}
 	
+	/**
+	 * Method callScripts.
+	 * @param caller Player
+	 * @param className String
+	 * @param methodName String
+	 * @param args Object[]
+	 * @return Object
+	 */
 	public Object callScripts(Player caller, String className, String methodName, Object[] args)
 	{
 		return callScripts(caller, className, methodName, args, null);
 	}
 	
+	/**
+	 * Method callScripts.
+	 * @param caller Player
+	 * @param className String
+	 * @param methodName String
+	 * @param variables Map<String,Object>
+	 * @return Object
+	 */
 	public Object callScripts(Player caller, String className, String methodName, Map<String, Object> variables)
 	{
 		return callScripts(caller, className, methodName, ArrayUtils.EMPTY_OBJECT_ARRAY, variables);
 	}
 	
+	/**
+	 * Method callScripts.
+	 * @param caller Player
+	 * @param className String
+	 * @param methodName String
+	 * @param args Object[]
+	 * @param variables Map<String,Object>
+	 * @return Object
+	 */
 	public Object callScripts(Player caller, String className, String methodName, Object[] args, Map<String, Object> variables)
 	{
 		Object o;
@@ -514,16 +638,34 @@ public class Scripts
 		return ret;
 	}
 	
+	/**
+	 * Method getClasses.
+	 * @return Map<String,Class<?>>
+	 */
 	public Map<String, Class<?>> getClasses()
 	{
 		return _classes;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class ScriptClassAndMethod
 	{
+		/**
+		 * Field className.
+		 */
 		public final String className;
+		/**
+		 * Field methodName.
+		 */
 		public final String methodName;
 		
+		/**
+		 * Constructor for ScriptClassAndMethod.
+		 * @param className String
+		 * @param methodName String
+		 */
 		public ScriptClassAndMethod(String className, String methodName)
 		{
 			this.className = className;

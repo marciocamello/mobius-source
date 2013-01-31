@@ -15,12 +15,25 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.FinishRotating;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FinishRotatingC extends L2GameClientPacket
 {
+	/**
+	 * Field _degree.
+	 */
 	private int _degree;
+	/**
+	 * Field _unknown.
+	 */
 	@SuppressWarnings("unused")
 	private int _unknown;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -28,6 +41,9 @@ public class FinishRotatingC extends L2GameClientPacket
 		_unknown = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

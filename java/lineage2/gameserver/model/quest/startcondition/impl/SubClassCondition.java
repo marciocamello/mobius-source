@@ -15,12 +15,24 @@ package lineage2.gameserver.model.quest.startcondition.impl;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.startcondition.ICheckStartCondition;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SubClassCondition implements ICheckStartCondition
 {
+	/**
+	 * Constructor for SubClassCondition.
+	 */
 	public SubClassCondition()
 	{
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param player Player
+	 * @return boolean * @see lineage2.gameserver.model.quest.startcondition.ICheckStartCondition#checkCondition(Player)
+	 */
 	@Override
 	public boolean checkCondition(Player player)
 	{

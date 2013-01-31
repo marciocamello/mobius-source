@@ -14,7 +14,15 @@ package lineage2.gameserver.network.telnet;
 
 import java.util.Set;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface TelnetCommandHolder
 {
+	/**
+	 * Method getCommands.
+	 * @return Set<TelnetCommand>
+	 */
 	public Set<TelnetCommand> getCommands();
 }

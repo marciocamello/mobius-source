@@ -24,15 +24,29 @@ import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ClanHallSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 {
+	/**
+	 * Field BOSS. (value is ""boss"")
+	 */
 	public static final String BOSS = "boss";
 	
+	/**
+	 * Constructor for ClanHallSiegeEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public ClanHallSiegeEvent(MultiValueSet<String> set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -54,6 +68,10 @@ public class ClanHallSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 		super.startEvent();
 	}
 	
+	/**
+	 * Method stopEvent.
+	 * @param step boolean
+	 */
 	@Override
 	public void stopEvent(boolean step)
 	{
@@ -75,6 +93,10 @@ public class ClanHallSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 		_oldOwner = null;
 	}
 	
+	/**
+	 * Method setRegistrationOver.
+	 * @param b boolean
+	 */
 	@Override
 	public void setRegistrationOver(boolean b)
 	{
@@ -85,6 +107,10 @@ public class ClanHallSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 		super.setRegistrationOver(b);
 	}
 	
+	/**
+	 * Method processStep.
+	 * @param clan Clan
+	 */
 	@Override
 	public void processStep(Clan clan)
 	{
@@ -95,24 +121,47 @@ public class ClanHallSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 		stopEvent(true);
 	}
 	
+	/**
+	 * Method loadSiegeClans.
+	 */
 	@Override
 	public void loadSiegeClans()
 	{
 		addObjects(ATTACKERS, SiegeClanDAO.getInstance().load(getResidence(), ATTACKERS));
 	}
 	
+	/**
+	 * Method getUserRelation.
+	 * @param thisPlayer Player
+	 * @param result int
+	 * @return int
+	 */
 	@Override
 	public int getUserRelation(Player thisPlayer, int result)
 	{
 		return result;
 	}
 	
+	/**
+	 * Method getRelation.
+	 * @param thisPlayer Player
+	 * @param targetPlayer Player
+	 * @param result int
+	 * @return int
+	 */
 	@Override
 	public int getRelation(Player thisPlayer, Player targetPlayer, int result)
 	{
 		return result;
 	}
 	
+	/**
+	 * Method canRessurect.
+	 * @param resurrectPlayer Player
+	 * @param target Creature
+	 * @param force boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean canRessurect(Player resurrectPlayer, Creature target, boolean force)
 	{

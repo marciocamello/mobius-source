@@ -20,11 +20,27 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SeerFlouros extends Mystic
 {
+	/**
+	 * Field _hpCount.
+	 */
 	private int _hpCount = 0;
+	/**
+	 * Field MOB. (value is 18560)
+	 */
 	private static final int MOB = 18560;
+	/**
+	 * Field MOBS_COUNT. (value is 2)
+	 */
 	private static final int MOBS_COUNT = 2;
+	/**
+	 * Field _hps.
+	 */
 	private static final int[] _hps =
 	{
 		80,
@@ -37,11 +53,20 @@ public class SeerFlouros extends Mystic
 		-5
 	};
 	
+	/**
+	 * Constructor for SeerFlouros.
+	 * @param actor NpcInstance
+	 */
 	public SeerFlouros(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -57,6 +82,10 @@ public class SeerFlouros extends Mystic
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method spawnMobs.
+	 * @param attacker Creature
+	 */
 	private void spawnMobs(Creature attacker)
 	{
 		NpcInstance actor = getActor();
@@ -77,6 +106,10 @@ public class SeerFlouros extends Mystic
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

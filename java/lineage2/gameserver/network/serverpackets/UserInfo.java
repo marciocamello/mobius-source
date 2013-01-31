@@ -32,47 +32,166 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class UserInfo extends L2GameServerPacket
 {
+	/**
+	 * Field can_writeImpl.
+	 */
 	private boolean can_writeImpl = false;
+	/**
+	 * Field partyRoom.
+	 */
 	private final boolean partyRoom;
+	/**
+	 * Field _swimWalkSpd. Field _swimRunSpd. Field _walkSpd. Field _runSpd.
+	 */
 	private final int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd;
+	/**
+	 * Field _flRunSpd.
+	 */
 	private int _flRunSpd;
+	/**
+	 * Field _flWalkSpd.
+	 */
 	private int _flWalkSpd;
+	/**
+	 * Field _flyRunSpd.
+	 */
 	private int _flyRunSpd;
+	/**
+	 * Field _flyWalkSpd.
+	 */
 	private int _flyWalkSpd;
+	/**
+	 * Field _relation.
+	 */
 	private int _relation;
+	/**
+	 * Field col_height. Field col_radius. Field attack_speed. Field move_speed.
+	 */
 	private final double move_speed, attack_speed, col_radius, col_height;
+	/**
+	 * Field _inv.
+	 */
 	private final int[][] _inv;
+	/**
+	 * Field _fishLoc. Field _loc.
+	 */
 	private final Location _loc, _fishLoc;
+	/**
+	 * Field maxCp. Field curCp. Field level. Field base_class. Field sex. Field _race. Field vehicle_obj_id. Field obj_id.
+	 */
 	private final int obj_id, vehicle_obj_id, _race, sex, base_class, level, curCp, maxCp;
+	/**
+	 * Field _enchant.
+	 */
 	private int _enchant;
+	/**
+	 * Field _weaponFlag.
+	 */
 	private final int _weaponFlag;
+	/**
+	 * Field _exp.
+	 */
 	private final long _exp;
+	/**
+	 * Field rec_have. Field rec_left. Field maxLoad. Field curLoad. Field maxMp. Field curMp. Field maxHp. Field curHp.
+	 */
 	private final int curHp, maxHp, curMp, maxMp, curLoad, maxLoad, rec_left, rec_have;
+	/**
+	 * Field InventoryLimit. Field ClanPrivs. Field _sp. Field _men. Field _wit. Field _int. Field _dex. Field _con. Field _str.
+	 */
 	private final int _str, _con, _dex, _int, _wit, _men, _sp, ClanPrivs, InventoryLimit;
+	/**
+	 * Field mCritRate. Field maccuracy. Field mevasion. Field _matkspd. Field _matk. Field crit. Field accuracy. Field evasion. Field _pdef. Field _patkspd. Field _patk.
+	 */
 	private final int _patk, _patkspd, _pdef, evasion, accuracy, crit, _matk, _matkspd, mevasion, maccuracy, mCritRate;
+	/**
+	 * Field vitality. Field fame. Field gm_commands. Field face. Field hair_color. Field hair_style. Field karma. Field pvp_flag. Field _mdef.
+	 */
 	private final int _mdef, pvp_flag, karma, hair_style, hair_color, face, gm_commands, fame, vitality;
+	/**
+	 * Field large_clan_crest_id. Field ally_crest_id. Field ally_id. Field clan_crest_id. Field clan_id.
+	 */
 	private int clan_id, clan_crest_id, ally_id, ally_crest_id, large_clan_crest_id;
+	/**
+	 * Field agathion. Field class_id. Field pvp_kills. Field pk_kills. Field can_crystalize. Field private_store.
+	 */
 	private final int private_store, can_crystalize, pk_kills, pvp_kills, class_id, agathion;
+	/**
+	 * Field hero. Field noble. Field _abnormalEffect2. Field _abnormalEffect.
+	 */
 	private final int _abnormalEffect, _abnormalEffect2, noble, hero;
+	/**
+	 * Field mount_id.
+	 */
 	private int mount_id;
+	/**
+	 * Field cw_level.
+	 */
 	private int cw_level;
+	/**
+	 * Field fishing. Field transformation. Field title_color. Field pledge_type. Field pledge_class. Field running. Field name_color.
+	 */
 	private final int name_color, running, pledge_class, pledge_type, title_color, transformation, fishing;
+	/**
+	 * Field defenceUnholy. Field defenceHoly. Field defenceEarth. Field defenceWind. Field defenceWater. Field defenceFire.
+	 */
 	private final int defenceFire, defenceWater, defenceWind, defenceEarth, defenceHoly, defenceUnholy;
+	/**
+	 * Field mount_type.
+	 */
 	private int mount_type;
+	/**
+	 * Field title. Field _name.
+	 */
 	private String _name, title;
+	/**
+	 * Field cubics.
+	 */
 	private final EffectCubic[] cubics;
+	/**
+	 * Field attackElement.
+	 */
 	private final Element attackElement;
+	/**
+	 * Field attackElementValue.
+	 */
 	private final int attackElementValue;
+	/**
+	 * Field _allowMap. Field isFlying.
+	 */
 	private final boolean isFlying, _allowMap;
+	/**
+	 * Field talismans.
+	 */
 	private final int talismans;
+	/**
+	 * Field openCloak.
+	 */
 	private final boolean openCloak;
+	/**
+	 * Field _expPercent.
+	 */
 	private final double _expPercent;
+	/**
+	 * Field _team.
+	 */
 	private final TeamType _team;
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(UserInfo.class);
 	
+	/**
+	 * Constructor for UserInfo.
+	 * @param player Player
+	 */
 	public UserInfo(Player player)
 	{
 		if (player.getTransformationName() != null)
@@ -241,6 +360,9 @@ public class UserInfo extends L2GameServerPacket
 		can_writeImpl = true;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

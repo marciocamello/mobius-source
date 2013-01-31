@@ -18,10 +18,22 @@ import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.skills.skillclasses.Transformation;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class EffectTransformation extends Effect
 {
+	/**
+	 * Field isFlyingTransform.
+	 */
 	private final boolean isFlyingTransform;
 	
+	/**
+	 * Constructor for EffectTransformation.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectTransformation(Env env, EffectTemplate template)
 	{
 		super(env, template);
@@ -29,6 +41,10 @@ public final class EffectTransformation extends Effect
 		isFlyingTransform = template.getParam().getBool("isFlyingTransform", (id == 8) || (id == 9) || (id == 260));
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
@@ -43,6 +59,9 @@ public final class EffectTransformation extends Effect
 		return super.checkCondition();
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -76,6 +95,9 @@ public final class EffectTransformation extends Effect
 		}
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{
@@ -106,6 +128,10 @@ public final class EffectTransformation extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{

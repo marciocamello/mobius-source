@@ -12,9 +12,22 @@
  */
 package lineage2.gameserver.templates.spawn;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum PeriodOfDay
 {
+	/**
+	 * Field NONE.
+	 */
 	NONE,
+	/**
+	 * Field DAY.
+	 */
 	DAY,
+	/**
+	 * Field NIGHT.
+	 */
 	NIGHT
 }

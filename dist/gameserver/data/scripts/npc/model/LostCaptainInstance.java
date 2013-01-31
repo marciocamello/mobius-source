@@ -21,19 +21,35 @@ import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class LostCaptainInstance extends ReflectionBossInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field TELE_DEVICE_ID. (value is 4314)
+	 */
 	private static final int TELE_DEVICE_ID = 4314;
 	
+	/**
+	 * Constructor for LostCaptainInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public LostCaptainInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{

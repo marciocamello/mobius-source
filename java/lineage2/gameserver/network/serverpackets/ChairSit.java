@@ -15,17 +15,35 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.StaticObjectInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChairSit extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _staticObjectId.
+	 */
 	private final int _staticObjectId;
 	
+	/**
+	 * Constructor for ChairSit.
+	 * @param player Player
+	 * @param throne StaticObjectInstance
+	 */
 	public ChairSit(Player player, StaticObjectInstance throne)
 	{
 		_objectId = player.getObjectId();
 		_staticObjectId = throne.getUId();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

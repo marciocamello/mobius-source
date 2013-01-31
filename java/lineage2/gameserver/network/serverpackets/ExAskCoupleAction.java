@@ -12,16 +12,31 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExAskCoupleAction extends L2GameServerPacket
 {
+	/**
+	 * Field _socialId. Field _objectId.
+	 */
 	private final int _objectId, _socialId;
 	
+	/**
+	 * Constructor for ExAskCoupleAction.
+	 * @param objectId int
+	 * @param socialId int
+	 */
 	public ExAskCoupleAction(int objectId, int socialId)
 	{
 		_objectId = objectId;
 		_socialId = socialId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

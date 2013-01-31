@@ -14,12 +14,31 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExJumpToLocation extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _current.
+	 */
 	private final Location _current;
+	/**
+	 * Field _destination.
+	 */
 	private final Location _destination;
 	
+	/**
+	 * Constructor for ExJumpToLocation.
+	 * @param objectId int
+	 * @param from Location
+	 * @param to Location
+	 */
 	public ExJumpToLocation(int objectId, Location from, Location to)
 	{
 		_objectId = objectId;
@@ -27,6 +46,9 @@ public class ExJumpToLocation extends L2GameServerPacket
 		_destination = to;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

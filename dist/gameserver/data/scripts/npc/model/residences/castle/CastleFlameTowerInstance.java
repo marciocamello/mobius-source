@@ -21,19 +21,35 @@ import lineage2.gameserver.model.entity.events.objects.CastleDamageZoneObject;
 import lineage2.gameserver.model.instances.residences.SiegeToggleNpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CastleFlameTowerInstance extends SiegeToggleNpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _zoneList.
+	 */
 	private Set<String> _zoneList;
 	
+	/**
+	 * Constructor for CastleFlameTowerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public CastleFlameTowerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onDeathImpl.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onDeathImpl(Creature killer)
 	{
@@ -52,6 +68,10 @@ public class CastleFlameTowerInstance extends SiegeToggleNpcInstance
 		}
 	}
 	
+	/**
+	 * Method setZoneList.
+	 * @param set Set<String>
+	 */
 	@Override
 	public void setZoneList(Set<String> set)
 	{

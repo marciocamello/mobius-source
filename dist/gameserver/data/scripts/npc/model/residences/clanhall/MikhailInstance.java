@@ -15,6 +15,10 @@ package npc.model.residences.clanhall;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MikhailInstance extends _34BossMinionInstance
 {
 	/**
@@ -22,17 +26,30 @@ public class MikhailInstance extends _34BossMinionInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for MikhailInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MikhailInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method spawnChatSay.
+	 * @return NpcString
+	 */
 	@Override
 	public NpcString spawnChatSay()
 	{
 		return NpcString.GLORY_TO_ADEN_THE_KINGDOM_OF_THE_LION_GLORY_TO_SIR_GUSTAV_OUR_IMMORTAL_LORD;
 	}
 	
+	/**
+	 * Method teleChatSay.
+	 * @return NpcString * @see npc.model.residences.clanhall._34SiegeGuard#teleChatSay()
+	 */
 	@Override
 	public NpcString teleChatSay()
 	{

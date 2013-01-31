@@ -16,13 +16,25 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectMute extends Effect
 {
+	/**
+	 * Constructor for EffectMute.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectMute(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -37,12 +49,19 @@ public class EffectMute extends Effect
 		}
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	public boolean onActionTime()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onExit.
+	 */
 	@Override
 	public void onExit()
 	{

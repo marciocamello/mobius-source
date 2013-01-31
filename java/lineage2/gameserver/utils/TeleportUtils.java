@@ -26,20 +26,46 @@ import lineage2.gameserver.templates.mapregion.RestartPoint;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TeleportUtils
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(TeleportUtils.class);
+	/**
+	 * Field DEFAULT_RESTART.
+	 */
 	public final static Location DEFAULT_RESTART = new Location(17817, 170079, -3530);
 	
+	/**
+	 * Constructor for TeleportUtils.
+	 */
 	private TeleportUtils()
 	{
 	}
 	
+	/**
+	 * Method getRestartLocation.
+	 * @param player Player
+	 * @param restartType RestartType
+	 * @return Location
+	 */
 	public static Location getRestartLocation(Player player, RestartType restartType)
 	{
 		return getRestartLocation(player, player.getLoc(), restartType);
 	}
 	
+	/**
+	 * Method getRestartLocation.
+	 * @param player Player
+	 * @param from Location
+	 * @param restartType RestartType
+	 * @return Location
+	 */
 	public static Location getRestartLocation(Player player, Location from, RestartType restartType)
 	{
 		Reflection r = player.getReflection();

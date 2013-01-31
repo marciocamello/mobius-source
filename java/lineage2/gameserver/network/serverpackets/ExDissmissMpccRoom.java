@@ -12,10 +12,20 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExDissmissMpccRoom extends L2GameServerPacket
 {
+	/**
+	 * Field STATIC.
+	 */
 	public static final L2GameServerPacket STATIC = new ExDissmissMpccRoom();
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

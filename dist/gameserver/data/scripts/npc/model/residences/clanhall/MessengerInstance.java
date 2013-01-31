@@ -19,15 +19,30 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.CastleSiegeInfo;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MessengerInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _siegeDialog.
+	 */
 	private final String _siegeDialog;
+	/**
+	 * Field _ownerDialog.
+	 */
 	private final String _ownerDialog;
 	
+	/**
+	 * Constructor for MessengerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MessengerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
@@ -35,6 +50,12 @@ public class MessengerInstance extends NpcInstance
 		_ownerDialog = template.getAIParams().getString("owner_dialog");
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{

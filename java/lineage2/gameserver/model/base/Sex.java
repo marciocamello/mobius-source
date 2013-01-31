@@ -12,12 +12,29 @@
  */
 package lineage2.gameserver.model.base;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum Sex
 {
+	/**
+	 * Field MALE.
+	 */
 	MALE,
+	/**
+	 * Field FEMALE.
+	 */
 	FEMALE;
+	/**
+	 * Field VALUES.
+	 */
 	public static final Sex[] VALUES = values();
 	
+	/**
+	 * Method revert.
+	 * @return Sex
+	 */
 	public Sex revert()
 	{
 		switch (MALE)

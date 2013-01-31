@@ -17,17 +17,37 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ConditionPlayerHasBuff extends Condition
 {
+	/**
+	 * Field _effectType.
+	 */
 	private final EffectType _effectType;
+	/**
+	 * Field _level.
+	 */
 	private final int _level;
 	
+	/**
+	 * Constructor for ConditionPlayerHasBuff.
+	 * @param effectType EffectType
+	 * @param level int
+	 */
 	public ConditionPlayerHasBuff(EffectType effectType, int level)
 	{
 		_effectType = effectType;
 		_level = level;
 	}
 	
+	/**
+	 * Method testImpl.
+	 * @param env Env
+	 * @return boolean
+	 */
 	@Override
 	protected boolean testImpl(Env env)
 	{

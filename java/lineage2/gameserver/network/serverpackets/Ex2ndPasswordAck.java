@@ -12,17 +12,37 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Ex2ndPasswordAck extends L2GameServerPacket
 {
+	/**
+	 * Field SUCCESS. (value is 0)
+	 */
 	public static final int SUCCESS = 0;
+	/**
+	 * Field WRONG_PATTERN. (value is 1)
+	 */
 	public static final int WRONG_PATTERN = 1;
+	/**
+	 * Field _response.
+	 */
 	int _response;
 	
+	/**
+	 * Constructor for Ex2ndPasswordAck.
+	 * @param response int
+	 */
 	public Ex2ndPasswordAck(int response)
 	{
 		_response = response;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

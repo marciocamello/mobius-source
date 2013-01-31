@@ -12,9 +12,22 @@
  */
 package lineage2.gameserver.model.base;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum InvisibleType
 {
+	/**
+	 * Field NONE.
+	 */
 	NONE,
+	/**
+	 * Field NORMAL.
+	 */
 	NORMAL,
+	/**
+	 * Field EFFECT.
+	 */
 	EFFECT
 }

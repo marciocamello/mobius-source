@@ -15,15 +15,31 @@ package lineage2.gameserver.model.quest.startcondition.impl;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.startcondition.ICheckStartCondition;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class QuestCompletedCondition implements ICheckStartCondition
 {
+	/**
+	 * Field questName.
+	 */
 	private final String questName;
 	
+	/**
+	 * Constructor for QuestCompletedCondition.
+	 * @param questName String
+	 */
 	public QuestCompletedCondition(String questName)
 	{
 		this.questName = questName;
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param player Player
+	 * @return boolean * @see lineage2.gameserver.model.quest.startcondition.ICheckStartCondition#checkCondition(Player)
+	 */
 	@Override
 	public final boolean checkCondition(Player player)
 	{

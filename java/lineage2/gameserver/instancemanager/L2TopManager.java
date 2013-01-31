@@ -35,18 +35,53 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class L2TopManager
 {
+	/**
+	 * Field SELECT_PLAYER_OBJID. (value is ""SELECT obj_Id FROM characters WHERE char_name=?"")
+	 */
 	private static final String SELECT_PLAYER_OBJID = "SELECT obj_Id FROM characters WHERE char_name=?";
+	/**
+	 * Field SELECT_CHARACTER_MMOTOP_DATA. (value is ""SELECT * FROM character_l2top_votes WHERE id=? AND date=? AND multipler=?"")
+	 */
 	private static final String SELECT_CHARACTER_MMOTOP_DATA = "SELECT * FROM character_l2top_votes WHERE id=? AND date=? AND multipler=?";
+	/**
+	 * Field INSERT_L2TOP_DATA. (value is ""INSERT INTO character_l2top_votes (date, id, nick, multipler) values (?,?,?,?)"")
+	 */
 	private static final String INSERT_L2TOP_DATA = "INSERT INTO character_l2top_votes (date, id, nick, multipler) values (?,?,?,?)";
+	/**
+	 * Field DELETE_L2TOP_DATA. (value is ""DELETE FROM character_l2top_votes WHERE date<?"")
+	 */
 	private static final String DELETE_L2TOP_DATA = "DELETE FROM character_l2top_votes WHERE date<?";
+	/**
+	 * Field SELECT_MULTIPLER_L2TOP_DATA. (value is ""SELECT multipler FROM character_l2top_votes WHERE id=? AND has_reward=0"")
+	 */
 	private static final String SELECT_MULTIPLER_L2TOP_DATA = "SELECT multipler FROM character_l2top_votes WHERE id=? AND has_reward=0";
+	/**
+	 * Field UPDATE_L2TOP_DATA. (value is ""UPDATE character_l2top_votes SET has_reward=1 WHERE id=?"")
+	 */
 	private static final String UPDATE_L2TOP_DATA = "UPDATE character_l2top_votes SET has_reward=1 WHERE id=?";
+	/**
+	 * Field voteWeb. (value is "Config.DATAPACK_ROOT + "/data/l2top_vote-web.txt"")
+	 */
 	private final static String voteWeb = Config.DATAPACK_ROOT + "/data/l2top_vote-web.txt";
+	/**
+	 * Field voteSms. (value is "Config.DATAPACK_ROOT + "/data/l2top_vote-sms.txt"")
+	 */
 	private final static String voteSms = Config.DATAPACK_ROOT + "/data/l2top_vote-sms.txt";
+	/**
+	 * Field _instance.
+	 */
 	private static L2TopManager _instance;
 	
+	/**
+	 * Method getInstance.
+	 * @return L2TopManager
+	 */
 	public static L2TopManager getInstance()
 	{
 		if ((_instance == null) && Config.L2_TOP_MANAGER_ENABLED)
@@ -56,6 +91,9 @@ public class L2TopManager
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for L2TopManager.
+	 */
 	public L2TopManager()
 	{
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new ConnectAndUpdate(), Config.L2_TOP_MANAGER_INTERVAL, Config.L2_TOP_MANAGER_INTERVAL);
@@ -63,6 +101,9 @@ public class L2TopManager
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new GiveReward(), Config.L2_TOP_MANAGER_INTERVAL, Config.L2_TOP_MANAGER_INTERVAL);
 	}
 	
+	/**
+	 * Method update.
+	 */
 	void update()
 	{
 		String out_sms = getPage(Config.L2_TOP_SMS_ADDRESS);
@@ -102,6 +143,11 @@ public class L2TopManager
 		}
 	}
 	
+	/**
+	 * Method getPage.
+	 * @param address String
+	 * @return String
+	 */
 	private static String getPage(String address)
 	{
 		StringBuffer buf = new StringBuffer();
@@ -127,6 +173,10 @@ public class L2TopManager
 		return buf.toString();
 	}
 	
+	/**
+	 * Method parse.
+	 * @param sms boolean
+	 */
 	void parse(boolean sms)
 	{
 		String nick = "";
@@ -191,6 +241,9 @@ public class L2TopManager
 		}
 	}
 	
+	/**
+	 * Method clean.
+	 */
 	synchronized void clean()
 	{
 		Calendar cal = Calendar.getInstance();
@@ -214,6 +267,12 @@ public class L2TopManager
 		}
 	}
 	
+	/**
+	 * Method checkAndSaveFromDb.
+	 * @param date long
+	 * @param nick String
+	 * @param mult int
+	 */
 	private synchronized void checkAndSaveFromDb(long date, String nick, int mult)
 	{
 		Connection con = null;
@@ -261,6 +320,9 @@ public class L2TopManager
 		}
 	}
 	
+	/**
+	 * Method giveReward.
+	 */
 	synchronized void giveReward()
 	{
 		Connection con = null;
@@ -331,13 +393,23 @@ public class L2TopManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ConnectAndUpdate implements Runnable
 	{
+		/**
+		 * Constructor for ConnectAndUpdate.
+		 */
 		public ConnectAndUpdate()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -347,13 +419,23 @@ public class L2TopManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Clean implements Runnable
 	{
+		/**
+		 * Constructor for Clean.
+		 */
 		public Clean()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{
@@ -361,13 +443,23 @@ public class L2TopManager
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class GiveReward implements Runnable
 	{
+		/**
+		 * Constructor for GiveReward.
+		 */
 		public GiveReward()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run()
 		{

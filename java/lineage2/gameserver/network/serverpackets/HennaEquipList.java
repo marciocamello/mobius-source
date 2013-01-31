@@ -19,12 +19,29 @@ import lineage2.gameserver.data.xml.holder.HennaHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.Henna;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class HennaEquipList extends L2GameServerPacket
 {
+	/**
+	 * Field _emptySlots.
+	 */
 	private final int _emptySlots;
+	/**
+	 * Field _adena.
+	 */
 	private final long _adena;
+	/**
+	 * Field _hennas.
+	 */
 	private final List<Henna> _hennas = new ArrayList<>();
 	
+	/**
+	 * Constructor for HennaEquipList.
+	 * @param player Player
+	 */
 	public HennaEquipList(Player player)
 	{
 		_adena = player.getAdena();
@@ -39,6 +56,9 @@ public class HennaEquipList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

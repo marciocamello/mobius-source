@@ -21,16 +21,29 @@ import lineage2.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExTryToPutEnchantTargetItem extends AbstractEnchantPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_objectId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -16,11 +16,24 @@ import lineage2.gameserver.cache.CrestCache;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Alliance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestSetAllyCrest extends L2GameClientPacket
 {
+	/**
+	 * Field _length.
+	 */
 	private int _length;
+	/**
+	 * Field _data.
+	 */
 	private byte[] _data;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -32,6 +45,9 @@ public class RequestSetAllyCrest extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

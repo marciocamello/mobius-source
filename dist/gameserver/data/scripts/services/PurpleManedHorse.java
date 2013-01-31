@@ -20,13 +20,33 @@ import lineage2.gameserver.model.base.MultiSellEntry;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PurpleManedHorse extends Functions implements ScriptFile
 {
+	/**
+	 * Field Enabled.
+	 */
 	private static boolean Enabled = false;
+	/**
+	 * Field MultiSellID. (value is -1001)
+	 */
 	private static final int MultiSellID = -1001;
+	/**
+	 * Field dlg.
+	 */
 	private static final PrintfFormat dlg = new PrintfFormat("<br>[npc_%%objectId%%_Multisell %d|%s]");
+	/**
+	 * Field list.
+	 */
 	private static MultiSellListContainer list;
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -62,21 +82,37 @@ public class PurpleManedHorse extends Functions implements ScriptFile
 		loadMultiSell();
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method loadMultiSell.
+	 */
 	private static void loadMultiSell()
 	{
 		MultiSellHolder.getInstance().addMultiSellListContainer(MultiSellID, list);
 	}
 	
+	/**
+	 * Method PetManagersDialogAppend.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String PetManagersDialogAppend(Integer val)
 	{
 		if ((val == 0) && Enabled)
@@ -90,56 +126,111 @@ public class PurpleManedHorse extends Functions implements ScriptFile
 		return "";
 	}
 	
+	/**
+	 * Method DialogAppend_30731.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30731(Integer val)
 	{
 		return PetManagersDialogAppend(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30827.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30827(Integer val)
 	{
 		return PetManagersDialogAppend(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30828.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30828(Integer val)
 	{
 		return PetManagersDialogAppend(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30829.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30829(Integer val)
 	{
 		return PetManagersDialogAppend(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30830.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30830(Integer val)
 	{
 		return PetManagersDialogAppend(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30831.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30831(Integer val)
 	{
 		return PetManagersDialogAppend(val);
 	}
 	
+	/**
+	 * Method DialogAppend_30869.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_30869(Integer val)
 	{
 		return PetManagersDialogAppend(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31067.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31067(Integer val)
 	{
 		return PetManagersDialogAppend(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31265.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31265(Integer val)
 	{
 		return PetManagersDialogAppend(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31309.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31309(Integer val)
 	{
 		return PetManagersDialogAppend(val);
 	}
 	
+	/**
+	 * Method DialogAppend_31954.
+	 * @param val Integer
+	 * @return String
+	 */
 	public String DialogAppend_31954(Integer val)
 	{
 		return PetManagersDialogAppend(val);

@@ -21,13 +21,33 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ItemR extends Skill
 {
+	/**
+	 * Field _item_r1.
+	 */
 	private final int _item_r1;
+	/**
+	 * Field _item_r2.
+	 */
 	private final int _item_r2;
+	/**
+	 * Field _item_r3.
+	 */
 	private final int _item_r3;
+	/**
+	 * Field _item_del.
+	 */
 	private final int _item_del;
 	
+	/**
+	 * Constructor for ItemR.
+	 * @param set StatsSet
+	 */
 	public ItemR(StatsSet set)
 	{
 		super(set);
@@ -37,6 +57,11 @@ public class ItemR extends Skill
 		_item_del = set.getInteger("item_del", 0);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

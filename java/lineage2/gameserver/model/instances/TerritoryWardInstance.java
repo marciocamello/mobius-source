@@ -19,14 +19,27 @@ import lineage2.gameserver.model.entity.events.objects.TerritoryWardObject;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TerritoryWardInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _territoryWard.
+	 */
 	private final TerritoryWardObject _territoryWard;
 	
+	/**
+	 * Constructor for TerritoryWardInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param territoryWardObject TerritoryWardObject
+	 */
 	public TerritoryWardInstance(int objectId, NpcTemplate template, TerritoryWardObject territoryWardObject)
 	{
 		super(objectId, template);
@@ -34,6 +47,10 @@ public class TerritoryWardInstance extends NpcInstance
 		_territoryWard = territoryWardObject;
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onDeath(Creature killer)
 	{
@@ -50,6 +67,9 @@ public class TerritoryWardInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method onDecay.
+	 */
 	@Override
 	protected void onDecay()
 	{
@@ -57,12 +77,22 @@ public class TerritoryWardInstance extends NpcInstance
 		_spawnAnimation = 2;
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature attacker)
 	{
 		return isAutoAttackable(attacker);
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
@@ -87,12 +117,20 @@ public class TerritoryWardInstance extends NpcInstance
 		return true;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method getClan.
+	 * @return Clan
+	 */
 	@Override
 	public Clan getClan()
 	{

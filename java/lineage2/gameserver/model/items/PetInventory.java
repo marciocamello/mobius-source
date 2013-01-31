@@ -20,63 +20,108 @@ import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 import lineage2.gameserver.network.serverpackets.PetInventoryUpdate;
 import lineage2.gameserver.utils.ItemFunctions;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetInventory extends Inventory
 {
+	/**
+	 * Field _actor.
+	 */
 	private final PetInstance _actor;
 	
+	/**
+	 * Constructor for PetInventory.
+	 * @param actor PetInstance
+	 */
 	public PetInventory(PetInstance actor)
 	{
 		super(actor.getPlayer().getObjectId());
 		_actor = actor;
 	}
 	
+	/**
+	 * Method getActor.
+	 * @return PetInstance
+	 */
 	@Override
 	public PetInstance getActor()
 	{
 		return _actor;
 	}
 	
+	/**
+	 * Method getOwner.
+	 * @return Player
+	 */
 	public Player getOwner()
 	{
 		return _actor.getPlayer();
 	}
 	
+	/**
+	 * Method getBaseLocation.
+	 * @return ItemLocation
+	 */
 	@Override
 	protected ItemLocation getBaseLocation()
 	{
 		return ItemLocation.PET_INVENTORY;
 	}
 	
+	/**
+	 * Method getEquipLocation.
+	 * @return ItemLocation
+	 */
 	@Override
 	protected ItemLocation getEquipLocation()
 	{
 		return ItemLocation.PET_PAPERDOLL;
 	}
 	
+	/**
+	 * Method onRefreshWeight.
+	 */
 	@Override
 	protected void onRefreshWeight()
 	{
 		getActor().sendPetInfo();
 	}
 	
+	/**
+	 * Method sendAddItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void sendAddItem(ItemInstance item)
 	{
 		getOwner().sendPacket(new PetInventoryUpdate().addNewItem(item));
 	}
 	
+	/**
+	 * Method sendModifyItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void sendModifyItem(ItemInstance item)
 	{
 		getOwner().sendPacket(new PetInventoryUpdate().addModifiedItem(item));
 	}
 	
+	/**
+	 * Method sendRemoveItem.
+	 * @param item ItemInstance
+	 */
 	@Override
 	protected void sendRemoveItem(ItemInstance item)
 	{
 		getOwner().sendPacket(new PetInventoryUpdate().addRemovedItem(item));
 	}
 	
+	/**
+	 * Method restore.
+	 */
 	@Override
 	public void restore()
 	{
@@ -108,6 +153,9 @@ public class PetInventory extends Inventory
 		refreshWeight();
 	}
 	
+	/**
+	 * Method store.
+	 */
 	@Override
 	public void store()
 	{
@@ -122,6 +170,9 @@ public class PetInventory extends Inventory
 		}
 	}
 	
+	/**
+	 * Method validateItems.
+	 */
 	public void validateItems()
 	{
 		for (ItemInstance item : _paperdoll)

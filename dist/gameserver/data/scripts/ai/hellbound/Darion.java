@@ -23,8 +23,15 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Darion extends Fighter
 {
+	/**
+	 * Field doors.
+	 */
 	private static final int[] doors =
 	{
 		20250009,
@@ -34,11 +41,18 @@ public class Darion extends Fighter
 		20250007
 	};
 	
+	/**
+	 * Constructor for Darion.
+	 * @param actor NpcInstance
+	 */
 	public Darion(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -65,6 +79,10 @@ public class Darion extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

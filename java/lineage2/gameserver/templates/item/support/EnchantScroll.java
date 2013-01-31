@@ -12,11 +12,29 @@
  */
 package lineage2.gameserver.templates.item.support;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EnchantScroll extends EnchantItem
 {
+	/**
+	 * Field _resultType.
+	 */
 	private final FailResultType _resultType;
+	/**
+	 * Field _visualEffect.
+	 */
 	private final boolean _visualEffect;
 	
+	/**
+	 * Constructor for EnchantScroll.
+	 * @param itemId int
+	 * @param chance int
+	 * @param maxEnchant int
+	 * @param resultType FailResultType
+	 * @param visualEffect boolean
+	 */
 	public EnchantScroll(int itemId, int chance, int maxEnchant, FailResultType resultType, boolean visualEffect)
 	{
 		super(itemId, chance, maxEnchant);
@@ -24,11 +42,19 @@ public class EnchantScroll extends EnchantItem
 		_visualEffect = visualEffect;
 	}
 	
+	/**
+	 * Method getResultType.
+	 * @return FailResultType
+	 */
 	public FailResultType getResultType()
 	{
 		return _resultType;
 	}
 	
+	/**
+	 * Method isHasVisualEffect.
+	 * @return boolean
+	 */
 	public boolean isHasVisualEffect()
 	{
 		return _visualEffect;

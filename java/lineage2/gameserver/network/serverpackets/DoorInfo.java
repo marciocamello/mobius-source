@@ -14,10 +14,21 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.instances.DoorInstance;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DoorInfo extends L2GameServerPacket
 {
+	/**
+	 * Field view_hp. Field door_id. Field obj_id.
+	 */
 	private final int obj_id, door_id, view_hp;
 	
+	/**
+	 * Constructor for DoorInfo.
+	 * @param door DoorInstance
+	 */
 	@Deprecated
 	public DoorInfo(DoorInstance door)
 	{
@@ -26,6 +37,9 @@ public class DoorInfo extends L2GameServerPacket
 		view_hp = door.isHPVisible() ? 1 : 0;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -39,10 +39,21 @@ import lineage2.gameserver.utils.BbsUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoardHandler
 {
+	/**
+	 * Field _log.
+	 */
 	static final Logger _log = LoggerFactory.getLogger(ManageBuffer.class);
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -54,6 +65,10 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -64,11 +79,19 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 		}
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method getBypassCommands.
+	 * @return String[] * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#getBypassCommands()
+	 */
 	@Override
 	public String[] getBypassCommands()
 	{
@@ -86,6 +109,12 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 		};
 	}
 	
+	/**
+	 * Method onBypassCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onBypassCommand(Player, String)
+	 */
 	@Override
 	public void onBypassCommand(Player player, String bypass)
 	{
@@ -320,11 +349,27 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 		}
 	}
 	
+	/**
+	 * Method onWriteCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @param arg1 String
+	 * @param arg2 String
+	 * @param arg3 String
+	 * @param arg4 String
+	 * @param arg5 String
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)
+	 */
 	@Override
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
 	}
 	
+	/**
+	 * Method ShowHtml.
+	 * @param name String
+	 * @param player Player
+	 */
 	private void ShowHtml(String name, Player player)
 	{
 		String html = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/buffer/" + name + ".htm", player);
@@ -350,6 +395,11 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 		ShowBoard.separateAndSend(html, player);
 	}
 	
+	/**
+	 * Method GroupBuff.
+	 * @param player Player
+	 * @param list List<Integer>
+	 */
 	private void GroupBuff(Player player, List<Integer> list)
 	{
 		int time = Config.COMMUNITYBOARD_BUFF_TIME;
@@ -390,6 +440,11 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 		}
 	}
 	
+	/**
+	 * Method CheckCondition.
+	 * @param player Player
+	 * @return boolean
+	 */
 	private static boolean CheckCondition(Player player)
 	{
 		if (player == null)

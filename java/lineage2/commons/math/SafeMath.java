@@ -12,18 +12,42 @@
  */
 package lineage2.commons.math;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SafeMath
 {
+	/**
+	 * Method addAndCheck.
+	 * @param a int
+	 * @param b int
+	 * @return int * @throws ArithmeticException
+	 */
 	public static int addAndCheck(int a, int b) throws ArithmeticException
 	{
 		return addAndCheck(a, b, "overflow: add", false);
 	}
 	
+	/**
+	 * Method addAndLimit.
+	 * @param a int
+	 * @param b int
+	 * @return int
+	 */
 	public static int addAndLimit(int a, int b)
 	{
 		return addAndCheck(a, b, null, true);
 	}
 	
+	/**
+	 * Method addAndCheck.
+	 * @param a int
+	 * @param b int
+	 * @param msg String
+	 * @param limit boolean
+	 * @return int
+	 */
 	private static int addAndCheck(int a, int b, String msg, boolean limit)
 	{
 		int ret;
@@ -68,16 +92,36 @@ public class SafeMath
 		return ret;
 	}
 	
+	/**
+	 * Method addAndLimit.
+	 * @param a long
+	 * @param b long
+	 * @return long
+	 */
 	public static long addAndLimit(long a, long b)
 	{
 		return addAndCheck(a, b, "overflow: add", true);
 	}
 	
+	/**
+	 * Method addAndCheck.
+	 * @param a long
+	 * @param b long
+	 * @return long * @throws ArithmeticException
+	 */
 	public static long addAndCheck(long a, long b) throws ArithmeticException
 	{
 		return addAndCheck(a, b, "overflow: add", false);
 	}
 	
+	/**
+	 * Method addAndCheck.
+	 * @param a long
+	 * @param b long
+	 * @param msg String
+	 * @param limit boolean
+	 * @return long
+	 */
 	private static long addAndCheck(long a, long b, String msg, boolean limit)
 	{
 		long ret;
@@ -122,16 +166,36 @@ public class SafeMath
 		return ret;
 	}
 	
+	/**
+	 * Method mulAndCheck.
+	 * @param a int
+	 * @param b int
+	 * @return int * @throws ArithmeticException
+	 */
 	public static int mulAndCheck(int a, int b) throws ArithmeticException
 	{
 		return mulAndCheck(a, b, "overflow: mul", false);
 	}
 	
+	/**
+	 * Method mulAndLimit.
+	 * @param a int
+	 * @param b int
+	 * @return int
+	 */
 	public static int mulAndLimit(int a, int b)
 	{
 		return mulAndCheck(a, b, "overflow: mul", true);
 	}
 	
+	/**
+	 * Method mulAndCheck.
+	 * @param a int
+	 * @param b int
+	 * @param msg String
+	 * @param limit boolean
+	 * @return int
+	 */
 	private static int mulAndCheck(int a, int b, String msg, boolean limit)
 	{
 		int ret;
@@ -198,16 +262,36 @@ public class SafeMath
 		return ret;
 	}
 	
+	/**
+	 * Method mulAndCheck.
+	 * @param a long
+	 * @param b long
+	 * @return long * @throws ArithmeticException
+	 */
 	public static long mulAndCheck(long a, long b) throws ArithmeticException
 	{
 		return mulAndCheck(a, b, "overflow: mul", false);
 	}
 	
+	/**
+	 * Method mulAndLimit.
+	 * @param a long
+	 * @param b long
+	 * @return long
+	 */
 	public static long mulAndLimit(long a, long b)
 	{
 		return mulAndCheck(a, b, "overflow: mul", true);
 	}
 	
+	/**
+	 * Method mulAndCheck.
+	 * @param a long
+	 * @param b long
+	 * @param msg String
+	 * @param limit boolean
+	 * @return long
+	 */
 	private static long mulAndCheck(long a, long b, String msg, boolean limit)
 	{
 		long ret;

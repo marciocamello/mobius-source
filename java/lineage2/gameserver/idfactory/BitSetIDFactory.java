@@ -22,15 +22,37 @@ import lineage2.gameserver.ThreadPoolManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BitSetIDFactory extends IdFactory
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(BitSetIDFactory.class);
+	/**
+	 * Field freeIds.
+	 */
 	private BitSet freeIds;
+	/**
+	 * Field freeIdCount.
+	 */
 	private AtomicInteger freeIdCount;
+	/**
+	 * Field nextFreeId.
+	 */
 	private AtomicInteger nextFreeId;
 	
+	/**
+	 * @author Mobius
+	 */
 	public class BitSetCapacityCheck extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -41,6 +63,9 @@ public class BitSetIDFactory extends IdFactory
 		}
 	}
 	
+	/**
+	 * Constructor for BitSetIDFactory.
+	 */
 	protected BitSetIDFactory()
 	{
 		super();
@@ -48,6 +73,9 @@ public class BitSetIDFactory extends IdFactory
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
 	}
 	
+	/**
+	 * Method initialize.
+	 */
 	private void initialize()
 	{
 		try
@@ -77,6 +105,10 @@ public class BitSetIDFactory extends IdFactory
 		}
 	}
 	
+	/**
+	 * Method releaseId.
+	 * @param objectID int
+	 */
 	@Override
 	public synchronized void releaseId(int objectID)
 	{
@@ -92,6 +124,10 @@ public class BitSetIDFactory extends IdFactory
 		}
 	}
 	
+	/**
+	 * Method getNextId.
+	 * @return int
+	 */
 	@Override
 	public synchronized int getNextId()
 	{
@@ -118,22 +154,37 @@ public class BitSetIDFactory extends IdFactory
 		return newID + FIRST_OID;
 	}
 	
+	/**
+	 * Method size.
+	 * @return int
+	 */
 	@Override
 	public synchronized int size()
 	{
 		return freeIdCount.get();
 	}
 	
+	/**
+	 * Method usedIdCount.
+	 * @return int
+	 */
 	protected synchronized int usedIdCount()
 	{
 		return size() - FIRST_OID;
 	}
 	
+	/**
+	 * Method reachingBitSetCapacity.
+	 * @return boolean
+	 */
 	protected synchronized boolean reachingBitSetCapacity()
 	{
 		return PrimeFinder.nextPrime((usedIdCount() * 11) / 10) > freeIds.size();
 	}
 	
+	/**
+	 * Method increaseBitSetCapacity.
+	 */
 	protected synchronized void increaseBitSetCapacity()
 	{
 		BitSet newBitSet = new BitSet(PrimeFinder.nextPrime((usedIdCount() * 11) / 10));

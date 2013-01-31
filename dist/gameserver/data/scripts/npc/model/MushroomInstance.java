@@ -26,33 +26,87 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MushroomInstance extends MonsterInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field FANTASY_MUSHROOM. (value is 18864)
+	 */
 	private static final int FANTASY_MUSHROOM = 18864;
+	/**
+	 * Field FANTASY_MUSHROOM_SKILL. (value is 6427)
+	 */
 	private static final int FANTASY_MUSHROOM_SKILL = 6427;
+	/**
+	 * Field RAINBOW_FROG. (value is 18866)
+	 */
 	private static final int RAINBOW_FROG = 18866;
+	/**
+	 * Field RAINBOW_FROG_SKILL. (value is 6429)
+	 */
 	private static final int RAINBOW_FROG_SKILL = 6429;
+	/**
+	 * Field STICKY_MUSHROOM. (value is 18865)
+	 */
 	private static final int STICKY_MUSHROOM = 18865;
+	/**
+	 * Field STICKY_MUSHROOM_SKILL. (value is 6428)
+	 */
 	private static final int STICKY_MUSHROOM_SKILL = 6428;
+	/**
+	 * Field ENERGY_PLANT. (value is 18868)
+	 */
 	private static final int ENERGY_PLANT = 18868;
+	/**
+	 * Field ENERGY_PLANT_SKILL. (value is 6430)
+	 */
 	private static final int ENERGY_PLANT_SKILL = 6430;
+	/**
+	 * Field ABYSS_WEED. (value is 18867)
+	 */
 	private static final int ABYSS_WEED = 18867;
 	
+	/**
+	 * Constructor for MushroomInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MushroomInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method canChampion.
+	 * @return boolean
+	 */
 	@Override
 	public boolean canChampion()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method reduceCurrentHp.
+	 * @param i double
+	 * @param reflectableDamage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 * @param canReflect boolean
+	 * @param transferDamage boolean
+	 * @param isDot boolean
+	 * @param sendMessage boolean
+	 */
 	@Override
 	public void reduceCurrentHp(double i, double reflectableDamage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp, boolean canReflect, boolean transferDamage, boolean isDot, boolean sendMessage)
 	{
@@ -102,12 +156,30 @@ public class MushroomInstance extends MonsterInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public static class TaskAfterDead extends RunnableImpl
 	{
+		/**
+		 * Field _actor.
+		 */
 		private final NpcInstance _actor;
+		/**
+		 * Field _killer.
+		 */
 		private final Creature _killer;
+		/**
+		 * Field _skill.
+		 */
 		private final Skill _skill;
 		
+		/**
+		 * Constructor for TaskAfterDead.
+		 * @param actor NpcInstance
+		 * @param killer Creature
+		 * @param skillId int
+		 */
 		public TaskAfterDead(NpcInstance actor, Creature killer, int skillId)
 		{
 			_actor = actor;
@@ -115,6 +187,9 @@ public class MushroomInstance extends MonsterInstance
 			_skill = SkillTable.getInstance().getInfo(skillId, 1);
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

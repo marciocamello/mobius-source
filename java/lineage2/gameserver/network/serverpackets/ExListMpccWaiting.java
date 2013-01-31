@@ -22,12 +22,32 @@ import lineage2.gameserver.model.matching.MatchingRoom;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExListMpccWaiting extends L2GameServerPacket
 {
+	/**
+	 * Field PAGE_SIZE. (value is 10)
+	 */
 	private static final int PAGE_SIZE = 10;
+	/**
+	 * Field _fullSize.
+	 */
 	private final int _fullSize;
+	/**
+	 * Field _list.
+	 */
 	private final List<MatchingRoom> _list;
 	
+	/**
+	 * Constructor for ExListMpccWaiting.
+	 * @param player Player
+	 * @param page int
+	 * @param location int
+	 * @param allLevels boolean
+	 */
 	public ExListMpccWaiting(Player player, int page, int location, boolean allLevels)
 	{
 		int first = (page - 1) * PAGE_SIZE;
@@ -47,6 +67,9 @@ public class ExListMpccWaiting extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	public void writeImpl()
 	{

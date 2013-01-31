@@ -16,34 +16,109 @@ import gnu.trove.list.array.TIntArrayList;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.base.TeamType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CharStatsChangeRecorder<T extends Creature>
 {
+	/**
+	 * Field BROADCAST_CHAR_INFO.
+	 */
 	public static final int BROADCAST_CHAR_INFO = 1 << 0;
+	/**
+	 * Field SEND_CHAR_INFO.
+	 */
 	public static final int SEND_CHAR_INFO = 1 << 1;
+	/**
+	 * Field SEND_STATUS_INFO.
+	 */
 	public static final int SEND_STATUS_INFO = 1 << 2;
+	/**
+	 * Field _activeChar.
+	 */
 	protected final T _activeChar;
+	/**
+	 * Field _level.
+	 */
 	protected int _level;
+	/**
+	 * Field _accuracy.
+	 */
 	protected int _accuracy;
+	/**
+	 * Field _attackSpeed.
+	 */
 	protected int _attackSpeed;
+	/**
+	 * Field _castSpeed.
+	 */
 	protected int _castSpeed;
+	/**
+	 * Field _criticalHit.
+	 */
 	protected int _criticalHit;
+	/**
+	 * Field _evasion.
+	 */
 	protected int _evasion;
+	/**
+	 * Field _magicAttack.
+	 */
 	protected int _magicAttack;
+	/**
+	 * Field _magicDefence.
+	 */
 	protected int _magicDefence;
+	/**
+	 * Field _maxHp.
+	 */
 	protected int _maxHp;
+	/**
+	 * Field _maxMp.
+	 */
 	protected int _maxMp;
+	/**
+	 * Field _physicAttack.
+	 */
 	protected int _physicAttack;
+	/**
+	 * Field _physicDefence.
+	 */
 	protected int _physicDefence;
+	/**
+	 * Field _runSpeed.
+	 */
 	protected int _runSpeed;
+	/**
+	 * Field _team.
+	 */
 	protected TeamType _team;
+	/**
+	 * Field _changes.
+	 */
 	protected int _changes;
+	/**
+	 * Field _abnormalEffects.
+	 */
 	protected TIntArrayList _abnormalEffects = new TIntArrayList();
 	
+	/**
+	 * Constructor for CharStatsChangeRecorder.
+	 * @param actor T
+	 */
 	public CharStatsChangeRecorder(T actor)
 	{
 		this._activeChar = actor;
 	}
 	
+	/**
+	 * Method set.
+	 * @param flag int
+	 * @param oldValue int
+	 * @param newValue int
+	 * @return int
+	 */
 	protected int set(int flag, int oldValue, int newValue)
 	{
 		if (oldValue != newValue)
@@ -53,6 +128,13 @@ public class CharStatsChangeRecorder<T extends Creature>
 		return newValue;
 	}
 	
+	/**
+	 * Method set.
+	 * @param flag int
+	 * @param oldValue long
+	 * @param newValue long
+	 * @return long
+	 */
 	protected long set(int flag, long oldValue, long newValue)
 	{
 		if (oldValue != newValue)
@@ -62,6 +144,13 @@ public class CharStatsChangeRecorder<T extends Creature>
 		return newValue;
 	}
 	
+	/**
+	 * Method set.
+	 * @param flag int
+	 * @param oldValue String
+	 * @param newValue String
+	 * @return String
+	 */
 	protected String set(int flag, String oldValue, String newValue)
 	{
 		if (!oldValue.equals(newValue))
@@ -71,6 +160,13 @@ public class CharStatsChangeRecorder<T extends Creature>
 		return newValue;
 	}
 	
+	/**
+	 * Method set.
+	 * @param flag int
+	 * @param oldValue E
+	 * @param newValue E
+	 * @return E
+	 */
 	protected <E extends Enum<E>> E set(int flag, E oldValue, E newValue)
 	{
 		if (oldValue != newValue)
@@ -80,6 +176,13 @@ public class CharStatsChangeRecorder<T extends Creature>
 		return newValue;
 	}
 	
+	/**
+	 * Method set.
+	 * @param flag int
+	 * @param oldValue TIntArrayList
+	 * @param newValue TIntArrayList
+	 * @return TIntArrayList
+	 */
 	protected TIntArrayList set(int flag, TIntArrayList oldValue, TIntArrayList newValue)
 	{
 		if ((oldValue.size() != newValue.size()) || !newValue.containsAll(oldValue))
@@ -91,6 +194,9 @@ public class CharStatsChangeRecorder<T extends Creature>
 		return oldValue;
 	}
 	
+	/**
+	 * Method refreshStats.
+	 */
 	protected void refreshStats()
 	{
 		_accuracy = set(SEND_CHAR_INFO, _accuracy, _activeChar.getAccuracy());
@@ -109,6 +215,9 @@ public class CharStatsChangeRecorder<T extends Creature>
 		_team = set(BROADCAST_CHAR_INFO, _team, _activeChar.getTeam());
 	}
 	
+	/**
+	 * Method sendChanges.
+	 */
 	public final void sendChanges()
 	{
 		refreshStats();
@@ -116,6 +225,9 @@ public class CharStatsChangeRecorder<T extends Creature>
 		_changes = 0;
 	}
 	
+	/**
+	 * Method onSendChanges.
+	 */
 	protected void onSendChanges()
 	{
 		if ((_changes & SEND_STATUS_INFO) == SEND_STATUS_INFO)

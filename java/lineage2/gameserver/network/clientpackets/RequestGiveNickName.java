@@ -21,11 +21,24 @@ import lineage2.gameserver.network.serverpackets.NickNameChanged;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.Util;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestGiveNickName extends L2GameClientPacket
 {
+	/**
+	 * Field _target.
+	 */
 	private String _target;
+	/**
+	 * Field _title.
+	 */
 	private String _title;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -33,6 +46,9 @@ public class RequestGiveNickName extends L2GameClientPacket
 		_title = readS();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

@@ -15,6 +15,10 @@ package npc.model.residences.castle;
 import lineage2.gameserver.model.instances.MerchantInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MercenaryManagerInstance extends MerchantInstance
 {
 	/**
@@ -22,6 +26,11 @@ public class MercenaryManagerInstance extends MerchantInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for MercenaryManagerInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public MercenaryManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);

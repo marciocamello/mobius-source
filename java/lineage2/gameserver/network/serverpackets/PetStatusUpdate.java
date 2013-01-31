@@ -15,14 +15,37 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetStatusUpdate extends L2GameServerPacket
 {
+	/**
+	 * Field level. Field obj_id. Field type.
+	 */
 	private final int type, obj_id, level;
+	/**
+	 * Field curMp. Field maxMp. Field curHp. Field maxHp. Field curFed. Field maxFed.
+	 */
 	private final int maxFed, curFed, maxHp, curHp, maxMp, curMp;
+	/**
+	 * Field exp_next_lvl. Field exp_this_lvl. Field exp.
+	 */
 	private final long exp, exp_this_lvl, exp_next_lvl;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
+	/**
+	 * Field title.
+	 */
 	private final String title;
 	
+	/**
+	 * Constructor for PetStatusUpdate.
+	 * @param summon Summon
+	 */
 	public PetStatusUpdate(final Summon summon)
 	{
 		type = summon.getSummonType();
@@ -41,6 +64,9 @@ public class PetStatusUpdate extends L2GameServerPacket
 		exp_next_lvl = summon.getExpForNextLevel();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

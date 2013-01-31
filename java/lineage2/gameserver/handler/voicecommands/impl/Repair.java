@@ -33,20 +33,41 @@ import lineage2.gameserver.scripts.Functions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Repair extends Functions implements IVoicedCommandHandler
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(Repair.class);
+	/**
+	 * Field _commandList.
+	 */
 	private final String[] _commandList = new String[]
 	{
 		"repair"
 	};
 	
+	/**
+	 * Method getVoicedCommandList.
+	 * @return String[] * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
+	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{
 		return _commandList;
 	}
 	
+	/**
+	 * Method useVoicedCommand.
+	 * @param command String
+	 * @param activeChar Player
+	 * @param target String
+	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String target)
 	{

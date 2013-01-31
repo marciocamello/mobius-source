@@ -20,15 +20,29 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AutoSaveManager extends SteppingRunnableQueueManager
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final AutoSaveManager _instance = new AutoSaveManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return AutoSaveManager
+	 */
 	public static final AutoSaveManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for AutoSaveManager.
+	 */
 	private AutoSaveManager()
 	{
 		super(10000L);
@@ -43,6 +57,11 @@ public class AutoSaveManager extends SteppingRunnableQueueManager
 		}, 60000L, 60000L);
 	}
 	
+	/**
+	 * Method addAutoSaveTask.
+	 * @param player Player
+	 * @return Future<?>
+	 */
 	public Future<?> addAutoSaveTask(final Player player)
 	{
 		long delay = Rnd.get(180, 360) * 1000L;

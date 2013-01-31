@@ -16,11 +16,24 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.BookMark;
 import lineage2.gameserver.network.serverpackets.ExGetBookMarkInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestModifyBookMarkSlot extends L2GameClientPacket
 {
+	/**
+	 * Field acronym. Field name.
+	 */
 	private String name, acronym;
+	/**
+	 * Field slot. Field icon.
+	 */
 	private int icon, slot;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -30,6 +43,9 @@ public class RequestModifyBookMarkSlot extends L2GameClientPacket
 		acronym = readS(4);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

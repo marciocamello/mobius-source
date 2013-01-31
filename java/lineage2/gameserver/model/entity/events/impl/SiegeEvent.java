@@ -48,10 +48,23 @@ import lineage2.gameserver.templates.DoorTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.TimeUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject> extends GlobalEvent
 {
+	/**
+	 * @author Mobius
+	 */
 	public class DoorDeathListener implements OnDeathListener
 	{
+		/**
+		 * Method onDeath.
+		 * @param actor Creature
+		 * @param killer Creature
+		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+		 */
 		@Override
 		public void onDeath(Creature actor, Creature killer)
 		{
@@ -68,8 +81,17 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	public class KillListener implements OnKillListener
 	{
+		/**
+		 * Method onKill.
+		 * @param actor Creature
+		 * @param victim Creature
+		 * @see lineage2.gameserver.listener.actor.OnKillListener#onKill(Creature, Creature)
+		 */
 		@Override
 		public void onKill(Creature actor, Creature victim)
 		{
@@ -81,6 +103,10 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 			winner.setFame(winner.getFame() + Rnd.get(10, 20), SiegeEvent.this.toString());
 		}
 		
+		/**
+		 * Method ignorePetOrSummon.
+		 * @return boolean * @see lineage2.gameserver.listener.actor.OnKillListener#ignorePetOrSummon()
+		 */
 		@Override
 		public boolean ignorePetOrSummon()
 		{
@@ -88,27 +114,91 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Field OWNER. (value is ""owner"")
+	 */
 	public static final String OWNER = "owner";
+	/**
+	 * Field OLD_OWNER. (value is ""old_owner"")
+	 */
 	public static final String OLD_OWNER = "old_owner";
+	/**
+	 * Field ATTACKERS. (value is ""attackers"")
+	 */
 	public static final String ATTACKERS = "attackers";
+	/**
+	 * Field DEFENDERS. (value is ""defenders"")
+	 */
 	public static final String DEFENDERS = "defenders";
+	/**
+	 * Field SPECTATORS. (value is ""spectators"")
+	 */
 	public static final String SPECTATORS = "spectators";
+	/**
+	 * Field SIEGE_ZONES. (value is ""siege_zones"")
+	 */
 	public static final String SIEGE_ZONES = "siege_zones";
+	/**
+	 * Field FLAG_ZONES. (value is ""flag_zones"")
+	 */
 	public static final String FLAG_ZONES = "flag_zones";
+	/**
+	 * Field DAY_OF_WEEK. (value is ""day_of_week"")
+	 */
 	public static final String DAY_OF_WEEK = "day_of_week";
+	/**
+	 * Field HOUR_OF_DAY. (value is ""hour_of_day"")
+	 */
 	public static final String HOUR_OF_DAY = "hour_of_day";
+	/**
+	 * Field REGISTRATION. (value is ""registration"")
+	 */
 	public static final String REGISTRATION = "registration";
+	/**
+	 * Field DOORS. (value is ""doors"")
+	 */
 	public static final String DOORS = "doors";
+	/**
+	 * Field _residence.
+	 */
 	protected R _residence;
+	/**
+	 * Field _isInProgress.
+	 */
 	private boolean _isInProgress;
+	/**
+	 * Field _isRegistrationOver.
+	 */
 	private boolean _isRegistrationOver;
+	/**
+	 * Field _dayOfWeek.
+	 */
 	protected int _dayOfWeek;
+	/**
+	 * Field _hourOfDay.
+	 */
 	protected int _hourOfDay;
+	/**
+	 * Field _oldOwner.
+	 */
 	protected Clan _oldOwner;
+	/**
+	 * Field _killListener.
+	 */
 	protected OnKillListener _killListener = new KillListener();
+	/**
+	 * Field _doorDeathListener.
+	 */
 	protected OnDeathListener _doorDeathListener = new DoorDeathListener();
+	/**
+	 * Field _siegeSummons.
+	 */
 	protected List<HardReference<SummonInstance>> _siegeSummons = new ArrayList<>();
 	
+	/**
+	 * Constructor for SiegeEvent.
+	 * @param set MultiValueSet<String>
+	 */
 	public SiegeEvent(MultiValueSet<String> set)
 	{
 		super(set);
@@ -116,6 +206,9 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		_hourOfDay = set.getInteger(HOUR_OF_DAY, 0);
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	@Override
 	public void startEvent()
 	{
@@ -123,12 +216,19 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		super.startEvent();
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	@Override
 	public final void stopEvent()
 	{
 		stopEvent(false);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 * @param step boolean
+	 */
 	public void stopEvent(boolean step)
 	{
 		despawnSiegeSummons();
@@ -137,10 +237,18 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		super.stopEvent();
 	}
 	
+	/**
+	 * Method processStep.
+	 * @param clan Clan
+	 */
 	public void processStep(Clan clan)
 	{
 	}
 	
+	/**
+	 * Method reCalcNextTime.
+	 * @param onInit boolean
+	 */
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{
@@ -165,6 +273,11 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		getResidence().update();
 	}
 	
+	/**
+	 * Method validateSiegeDate.
+	 * @param calendar Calendar
+	 * @param add int
+	 */
 	protected void validateSiegeDate(Calendar calendar, int add)
 	{
 		calendar.set(Calendar.MINUTE, 0);
@@ -176,12 +289,20 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method startTimeMillis.
+	 * @return long
+	 */
 	@Override
 	protected long startTimeMillis()
 	{
 		return getResidence().getSiegeDate().getTimeInMillis();
 	}
 	
+	/**
+	 * Method teleportPlayers.
+	 * @param t String
+	 */
 	@Override
 	public void teleportPlayers(String t)
 	{
@@ -259,6 +380,10 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method getPlayersInZone.
+	 * @return List<Player>
+	 */
 	public List<Player> getPlayersInZone()
 	{
 		List<ZoneObject> zones = getObjects(SIEGE_ZONES);
@@ -270,6 +395,10 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return result;
 	}
 	
+	/**
+	 * Method broadcastInZone.
+	 * @param packet L2GameServerPacket[]
+	 */
 	public void broadcastInZone(L2GameServerPacket... packet)
 	{
 		for (Player player : getPlayersInZone())
@@ -278,6 +407,10 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method broadcastInZone.
+	 * @param packet IStaticPacket[]
+	 */
 	public void broadcastInZone(IStaticPacket... packet)
 	{
 		for (Player player : getPlayersInZone())
@@ -286,6 +419,11 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method checkIfInZone.
+	 * @param character Creature
+	 * @return boolean
+	 */
 	public boolean checkIfInZone(Creature character)
 	{
 		List<ZoneObject> zones = getObjects(SIEGE_ZONES);
@@ -299,6 +437,10 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return false;
 	}
 	
+	/**
+	 * Method broadcastInZone2.
+	 * @param packet IStaticPacket[]
+	 */
 	public void broadcastInZone2(IStaticPacket... packet)
 	{
 		for (Player player : getResidence().getZone().getInsidePlayers())
@@ -307,6 +449,10 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method broadcastInZone2.
+	 * @param packet L2GameServerPacket[]
+	 */
 	public void broadcastInZone2(L2GameServerPacket... packet)
 	{
 		for (Player player : getResidence().getZone().getInsidePlayers())
@@ -315,12 +461,23 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method loadSiegeClans.
+	 */
 	public void loadSiegeClans()
 	{
 		addObjects(ATTACKERS, SiegeClanDAO.getInstance().load(getResidence(), ATTACKERS));
 		addObjects(DEFENDERS, SiegeClanDAO.getInstance().load(getResidence(), DEFENDERS));
 	}
 	
+	/**
+	 * Method newSiegeClan.
+	 * @param type String
+	 * @param clanId int
+	 * @param param long
+	 * @param date long
+	 * @return S
+	 */
 	@SuppressWarnings("unchecked")
 	public S newSiegeClan(String type, int clanId, long param, long date)
 	{
@@ -328,6 +485,11 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return clan == null ? null : (S) new SiegeClanObject(type, clan, param, date);
 	}
 	
+	/**
+	 * Method updateParticles.
+	 * @param start boolean
+	 * @param arg String[]
+	 */
 	public void updateParticles(boolean start, String... arg)
 	{
 		for (String a : arg)
@@ -340,6 +502,12 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method getSiegeClan.
+	 * @param name String
+	 * @param clan Clan
+	 * @return S
+	 */
 	public S getSiegeClan(String name, Clan clan)
 	{
 		if (clan == null)
@@ -349,6 +517,12 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return getSiegeClan(name, clan.getClanId());
 	}
 	
+	/**
+	 * Method getSiegeClan.
+	 * @param name String
+	 * @param objectId int
+	 * @return S
+	 */
 	@SuppressWarnings("unchecked")
 	public S getSiegeClan(String name, int objectId)
 	{
@@ -368,6 +542,11 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return null;
 	}
 	
+	/**
+	 * Method broadcastTo.
+	 * @param packet IStaticPacket
+	 * @param types String[]
+	 */
 	public void broadcastTo(IStaticPacket packet, String... types)
 	{
 		for (String type : types)
@@ -380,6 +559,11 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method broadcastTo.
+	 * @param packet L2GameServerPacket
+	 * @param types String[]
+	 */
 	public void broadcastTo(L2GameServerPacket packet, String... types)
 	{
 		for (String type : types)
@@ -392,6 +576,9 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method initEvent.
+	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public void initEvent()
@@ -402,6 +589,9 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		super.initEvent();
 	}
 	
+	/**
+	 * Method printInfo.
+	 */
 	@Override
 	protected void printInfo()
 	{
@@ -416,6 +606,11 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method ifVar.
+	 * @param name String
+	 * @return boolean
+	 */
 	@Override
 	public boolean ifVar(String name)
 	{
@@ -430,6 +625,11 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return false;
 	}
 	
+	/**
+	 * Method isParticle.
+	 * @param player Player
+	 * @return boolean
+	 */
 	@Override
 	public boolean isParticle(Player player)
 	{
@@ -440,6 +640,11 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return (getSiegeClan(ATTACKERS, player.getClan()) != null) || (getSiegeClan(DEFENDERS, player.getClan()) != null);
 	}
 	
+	/**
+	 * Method checkRestartLocs.
+	 * @param player Player
+	 * @param r Map<RestartType,Boolean>
+	 */
 	@Override
 	public void checkRestartLocs(Player player, Map<RestartType, Boolean> r)
 	{
@@ -457,6 +662,12 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method getRestartLoc.
+	 * @param player Player
+	 * @param type RestartType
+	 * @return Location
+	 */
 	@Override
 	public Location getRestartLoc(Player player, RestartType type)
 	{
@@ -478,6 +689,13 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return loc;
 	}
 	
+	/**
+	 * Method getRelation.
+	 * @param thisPlayer Player
+	 * @param targetPlayer Player
+	 * @param result int
+	 * @return int
+	 */
 	@Override
 	public int getRelation(Player thisPlayer, Player targetPlayer, int result)
 	{
@@ -509,6 +727,12 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return result;
 	}
 	
+	/**
+	 * Method getUserRelation.
+	 * @param thisPlayer Player
+	 * @param oldRelation int
+	 * @return int
+	 */
 	@Override
 	public int getUserRelation(Player thisPlayer, int oldRelation)
 	{
@@ -524,6 +748,14 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return oldRelation;
 	}
 	
+	/**
+	 * Method checkForAttack.
+	 * @param target Creature
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param force boolean
+	 * @return SystemMsg
+	 */
 	@Override
 	public SystemMsg checkForAttack(Creature target, Creature attacker, Skill skill, boolean force)
 	{
@@ -563,12 +795,21 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return null;
 	}
 	
+	/**
+	 * Method isInProgress.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInProgress()
 	{
 		return _isInProgress;
 	}
 	
+	/**
+	 * Method action.
+	 * @param name String
+	 * @param start boolean
+	 */
 	@Override
 	public void action(String name, boolean start)
 	{
@@ -582,11 +823,19 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method isAttackersInAlly.
+	 * @return boolean
+	 */
 	public boolean isAttackersInAlly()
 	{
 		return false;
 	}
 	
+	/**
+	 * Method onAddEvent.
+	 * @param object GameObject
+	 */
 	@Override
 	public void onAddEvent(GameObject object)
 	{
@@ -600,6 +849,10 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method onRemoveEvent.
+	 * @param object GameObject
+	 */
 	@Override
 	public void onRemoveEvent(GameObject object)
 	{
@@ -613,12 +866,21 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
+	/**
+	 * Method broadcastPlayers.
+	 * @param range int
+	 * @return List<Player>
+	 */
 	@Override
 	public List<Player> broadcastPlayers(int range)
 	{
 		return itemObtainPlayers();
 	}
 	
+	/**
+	 * Method itemObtainPlayers.
+	 * @return List<Player>
+	 */
 	@Override
 	public List<Player> itemObtainPlayers()
 	{
@@ -634,6 +896,11 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return list;
 	}
 	
+	/**
+	 * Method getEnterLoc.
+	 * @param player Player
+	 * @return Location
+	 */
 	public Location getEnterLoc(Player player)
 	{
 		S siegeClan = getSiegeClan(ATTACKERS, player.getClan());
@@ -648,36 +915,64 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		return getResidence().getOwnerRestartPoint();
 	}
 	
+	/**
+	 * Method getResidence.
+	 * @return R
+	 */
 	public R getResidence()
 	{
 		return _residence;
 	}
 	
+	/**
+	 * Method setInProgress.
+	 * @param b boolean
+	 */
 	public void setInProgress(boolean b)
 	{
 		_isInProgress = b;
 	}
 	
+	/**
+	 * Method isRegistrationOver.
+	 * @return boolean
+	 */
 	public boolean isRegistrationOver()
 	{
 		return _isRegistrationOver;
 	}
 	
+	/**
+	 * Method setRegistrationOver.
+	 * @param b boolean
+	 */
 	public void setRegistrationOver(boolean b)
 	{
 		_isRegistrationOver = b;
 	}
 	
+	/**
+	 * Method addSiegeSummon.
+	 * @param summon SummonInstance
+	 */
 	public void addSiegeSummon(SummonInstance summon)
 	{
 		_siegeSummons.add(summon.getRef());
 	}
 	
+	/**
+	 * Method containsSiegeSummon.
+	 * @param cha SummonInstance
+	 * @return boolean
+	 */
 	public boolean containsSiegeSummon(SummonInstance cha)
 	{
 		return _siegeSummons.contains(cha.getRef());
 	}
 	
+	/**
+	 * Method despawnSiegeSummons.
+	 */
 	public void despawnSiegeSummons()
 	{
 		for (HardReference<SummonInstance> ref : _siegeSummons)

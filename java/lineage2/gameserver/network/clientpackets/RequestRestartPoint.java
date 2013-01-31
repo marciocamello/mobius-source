@@ -34,16 +34,29 @@ import lineage2.gameserver.utils.TeleportUtils;
 
 import org.apache.commons.lang3.tuple.Pair;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestRestartPoint extends L2GameClientPacket
 {
+	/**
+	 * Field _restartType.
+	 */
 	private RestartType _restartType;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_restartType = ArrayUtils.valid(RestartType.VALUES, readD());
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -126,6 +139,12 @@ public class RequestRestartPoint extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method defaultLoc.
+	 * @param restartType RestartType
+	 * @param activeChar Player
+	 * @return Location
+	 */
 	public static Location defaultLoc(RestartType restartType, Player activeChar)
 	{
 		Location loc = null;

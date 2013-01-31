@@ -20,19 +20,36 @@ import lineage2.gameserver.model.instances.ChestInstance;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class TreasureChestInstance extends ChestInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field TREASURE_BOMB_ID. (value is 4143)
+	 */
 	private static final int TREASURE_BOMB_ID = 4143;
 	
+	/**
+	 * Constructor for TreasureChestInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public TreasureChestInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method tryOpen.
+	 * @param opener Player
+	 * @param skill Skill
+	 */
 	@Override
 	public void tryOpen(Player opener, Skill skill)
 	{
@@ -48,6 +65,12 @@ public class TreasureChestInstance extends ChestInstance
 		}
 	}
 	
+	/**
+	 * Method calcChance.
+	 * @param opener Player
+	 * @param skill Skill
+	 * @return double
+	 */
 	public double calcChance(Player opener, Skill skill)
 	{
 		double chance = skill.getActivateRate();
@@ -73,6 +96,10 @@ public class TreasureChestInstance extends ChestInstance
 		return chance;
 	}
 	
+	/**
+	 * Method fakeOpen.
+	 * @param opener Creature
+	 */
 	private void fakeOpen(Creature opener)
 	{
 		Skill bomb = SkillTable.getInstance().getInfo(TREASURE_BOMB_ID, getBombLvl());
@@ -83,6 +110,10 @@ public class TreasureChestInstance extends ChestInstance
 		onDecay();
 	}
 	
+	/**
+	 * Method getBombLvl.
+	 * @return int
+	 */
 	private int getBombLvl()
 	{
 		int npcLvl = getLevel();
@@ -126,6 +157,10 @@ public class TreasureChestInstance extends ChestInstance
 		return lvl;
 	}
 	
+	/**
+	 * Method isCommonTreasureChest.
+	 * @return boolean
+	 */
 	private boolean isCommonTreasureChest()
 	{
 		int npcId = getNpcId();
@@ -136,6 +171,15 @@ public class TreasureChestInstance extends ChestInstance
 		return false;
 	}
 	
+	/**
+	 * Method onReduceCurrentHp.
+	 * @param damage double
+	 * @param attacker Creature
+	 * @param skill Skill
+	 * @param awake boolean
+	 * @param standUp boolean
+	 * @param directHp boolean
+	 */
 	@Override
 	public void onReduceCurrentHp(final double damage, final Creature attacker, Skill skill, final boolean awake, final boolean standUp, boolean directHp)
 	{

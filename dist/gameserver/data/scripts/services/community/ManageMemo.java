@@ -34,11 +34,25 @@ import lineage2.gameserver.scripts.ScriptFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(ManageMemo.class);
+	/**
+	 * Field MEMO_PER_PAGE. (value is 12)
+	 */
 	private static final int MEMO_PER_PAGE = 12;
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -49,6 +63,10 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
@@ -58,11 +76,19 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		}
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 	}
 	
+	/**
+	 * Method getBypassCommands.
+	 * @return String[] * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#getBypassCommands()
+	 */
 	@Override
 	public String[] getBypassCommands()
 	{
@@ -78,6 +104,12 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		};
 	}
 	
+	/**
+	 * Method onBypassCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onBypassCommand(Player, String)
+	 */
 	@Override
 	public void onBypassCommand(Player player, String bypass)
 	{
@@ -157,7 +189,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_memo_edit.htm", player);
 			html = html.replace("%page%", page);
 			html = html.replace("%memo_id%", "0");
-			html = html.replace("%TREE%", "&nbsp;>&nbsp;Создание записки");
+			html = html.replace("%TREE%", "&nbsp;>&nbsp;Создание запи�?ки");
 			player.sendPacket(new ShowBoard(html, "1001", player));
 			List<String> args = new ArrayList<>();
 			args.add("0");
@@ -260,7 +292,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 					html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_memo_edit.htm", player);
 					html = html.replace("%page%", page);
 					html = html.replace("%memo_id%", String.valueOf(memoId));
-					html = html.replace("%TREE%", "&nbsp;>&nbsp;<a action=\"bypass _mmread_" + memoId + "_" + page + "\">Записка: " + rset.getString("title") + "</a>&nbsp;>&nbsp;Редактирование");
+					html = html.replace("%TREE%", "&nbsp;>&nbsp;<a action=\"bypass _mmread_" + memoId + "_" + page + "\">Запи�?ка: " + rset.getString("title") + "</a>&nbsp;>&nbsp;Редактирование");
 					player.sendPacket(new ShowBoard(html, "1001", player));
 					List<String> args = new ArrayList<>();
 					args.add("0");
@@ -298,6 +330,15 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		ShowBoard.separateAndSend(html, player);
 	}
 	
+	/**
+	 * Method onWriteCommand.
+	 * @param player Player
+	 * @param bypass String
+	 * @param arg1 String
+	 * @param arg2 String
+	 * @param arg3 String
+	 * @paratr * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)ing, String, String, String, String)
+	 */
 	@Override
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
@@ -375,6 +416,11 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		onBypassCommand(player, "_bbsmemo");
 	}
 	
+	/**
+	 * Method getMemoList.
+	 * @param player Player * * @return String @param count int
+	 * @return String
+	 */
 	private static String getMemoList(Player player, int page, int count)
 	{
 		StringBuilder memoList = new StringBuilder("");
@@ -414,6 +460,10 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		return memoList.toString();
 	}
 	
+	/**
+	 * Method ge* * @return int@param player Player
+	 * @return int
+	 */
 	private static int getMemoCount(Player player)
 	{
 		Connection con = null;

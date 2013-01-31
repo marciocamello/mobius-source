@@ -21,26 +21,65 @@ import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public final class RunnableStatsManager
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final RunnableStatsManager _instance = new RunnableStatsManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return RunnableStatsManager
+	 */
 	public static final RunnableStatsManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Field classStats.
+	 */
 	final Map<Class<?>, ClassStat> classStats = new HashMap<>();
+	/**
+	 * Field lock.
+	 */
 	private final Lock lock = new ReentrantLock();
 	
+	/**
+	 * @author Mobius
+	 */
 	private class ClassStat
 	{
+		/**
+		 * Field clazz.
+		 */
 		final Class<?> clazz;
+		/**
+		 * Field runCount.
+		 */
 		long runCount = 0;
+		/**
+		 * Field runTime.
+		 */
 		long runTime = 0;
+		/**
+		 * Field minTime.
+		 */
 		long minTime = Long.MAX_VALUE;
+		/**
+		 * Field maxTime.
+		 */
 		long maxTime = Long.MIN_VALUE;
 		
+		/**
+		 * Constructor for ClassStat.
+		 * @param cl Class<?>
+		 */
 		ClassStat(Class<?> cl)
 		{
 			clazz = cl;
@@ -48,6 +87,11 @@ public final class RunnableStatsManager
 		}
 	}
 	
+	/**
+	 * Method handleStats.
+	 * @param cl Class<?>
+	 * @param runTime long
+	 */
 	public void handleStats(Class<?> cl, long runTime)
 	{
 		try
@@ -75,6 +119,10 @@ public final class RunnableStatsManager
 		}
 	}
 	
+	/**
+	 * Method getSortedClassStats.
+	 * @return List<ClassStat>
+	 */
 	private List<ClassStat> getSortedClassStats()
 	{
 		List<ClassStat> result = Collections.emptyList();
@@ -106,6 +154,10 @@ public final class RunnableStatsManager
 		return result;
 	}
 	
+	/**
+	 * Method getStats.
+	 * @return CharSequence
+	 */
 	public CharSequence getStats()
 	{
 		StringBuilder list = new StringBuilder();
@@ -113,11 +165,11 @@ public final class RunnableStatsManager
 		for (ClassStat stat : stats)
 		{
 			list.append(stat.clazz.getName()).append(":\n");
-			list.append("\tRun: ............ ").append(stat.runCount).append("\n");
-			list.append("\tTime: ........... ").append(stat.runTime).append("\n");
-			list.append("\tMin: ............ ").append(stat.minTime).append("\n");
-			list.append("\tMax: ............ ").append(stat.maxTime).append("\n");
-			list.append("\tAverage: ........ ").append(stat.runTime / stat.runCount).append("\n");
+			list.append("\tRun: ............ ").append(stat.runCount).append('\n');
+			list.append("\tTime: ........... ").append(stat.runTime).append('\n');
+			list.append("\tMin: ............ ").append(stat.minTime).append('\n');
+			list.append("\tMax: ............ ").append(stat.maxTime).append('\n');
+			list.append("\tAverage: ........ ").append(stat.runTime / stat.runCount).append('\n');
 		}
 		return list;
 	}

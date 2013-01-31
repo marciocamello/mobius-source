@@ -17,16 +17,29 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestOustPartyMember extends L2GameClientPacket
 {
+	/**
+	 * Field _name.
+	 */
 	private String _name;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_name = readS(16);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -43,7 +56,7 @@ public class RequestOustPartyMember extends L2GameClientPacket
 		}
 		if (activeChar.isInOlympiadMode())
 		{
-			activeChar.sendMessage("Вы не можете сейчас выйти из группы.");
+			activeChar.sendMessage("Вы не можете �?ейча�? выйти из группы.");
 			return;
 		}
 		Player member = party.getPlayerByName(_name);

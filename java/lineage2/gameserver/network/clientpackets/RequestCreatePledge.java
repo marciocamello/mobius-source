@@ -12,17 +12,30 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestCreatePledge extends L2GameClientPacket
 {
+	/**
+	 * Field _pledgename.
+	 */
 	@SuppressWarnings("unused")
 	private String _pledgename;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_pledgename = readS(64);
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

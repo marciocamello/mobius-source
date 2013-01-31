@@ -14,15 +14,30 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ShowMiniMap extends L2GameServerPacket
 {
+	/**
+	 * Field _mapId.
+	 */
 	private final int _mapId;
 	
+	/**
+	 * Constructor for ShowMiniMap.
+	 * @param player Player
+	 * @param mapId int
+	 */
 	public ShowMiniMap(Player player, int mapId)
 	{
 		_mapId = mapId;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

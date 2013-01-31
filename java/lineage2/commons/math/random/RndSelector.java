@@ -18,19 +18,42 @@ import java.util.List;
 
 import lineage2.commons.util.Rnd;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RndSelector<E>
 {
+	/**
+	 * @author Mobius
+	 */
 	private class RndNode<T> implements Comparable<RndNode<T>>
 	{
+		/**
+		 * Field value.
+		 */
 		final T value;
+		/**
+		 * Field weight.
+		 */
 		final int weight;
 		
+		/**
+		 * Constructor for RndNode.
+		 * @param value T
+		 * @param weight int
+		 */
 		public RndNode(T value, int weight)
 		{
 			this.value = value;
 			this.weight = weight;
 		}
 		
+		/**
+		 * Method compareTo.
+		 * @param o RndNode<T>
+		 * @return int
+		 */
 		@Override
 		public int compareTo(RndNode<T> o)
 		{
@@ -38,19 +61,37 @@ public class RndSelector<E>
 		}
 	}
 	
+	/**
+	 * Field totalWeight.
+	 */
 	private int totalWeight = 0;
+	/**
+	 * Field nodes.
+	 */
 	private final List<RndNode<E>> nodes;
 	
+	/**
+	 * Constructor for RndSelector.
+	 */
 	public RndSelector()
 	{
 		nodes = new ArrayList<>();
 	}
 	
+	/**
+	 * Constructor for RndSelector.
+	 * @param initialCapacity int
+	 */
 	public RndSelector(int initialCapacity)
 	{
 		nodes = new ArrayList<>(initialCapacity);
 	}
 	
+	/**
+	 * Method add.
+	 * @param value E
+	 * @param weight int
+	 */
 	public void add(E value, int weight)
 	{
 		if ((value == null) || (weight <= 0))
@@ -61,6 +102,11 @@ public class RndSelector<E>
 		nodes.add(new RndNode<>(value, weight));
 	}
 	
+	/**
+	 * Method chance.
+	 * @param maxWeight int
+	 * @return E
+	 */
 	public E chance(int maxWeight)
 	{
 		if (maxWeight <= 0)
@@ -80,16 +126,27 @@ public class RndSelector<E>
 		return null;
 	}
 	
+	/**
+	 * Method chance.
+	 * @return E
+	 */
 	public E chance()
 	{
 		return chance(100);
 	}
 	
+	/**
+	 * Method select.
+	 * @return E
+	 */
 	public E select()
 	{
 		return chance(totalWeight);
 	}
 	
+	/**
+	 * Method clear.
+	 */
 	public void clear()
 	{
 		totalWeight = 0;

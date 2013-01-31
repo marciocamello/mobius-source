@@ -16,17 +16,34 @@ import lineage2.gameserver.model.Player;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PrivateStoreMsgBuy extends L2GameServerPacket
 {
+	/**
+	 * Field _objId.
+	 */
 	private final int _objId;
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
 	
+	/**
+	 * Constructor for PrivateStoreMsgBuy.
+	 * @param player Player
+	 */
 	public PrivateStoreMsgBuy(Player player)
 	{
 		_objId = player.getObjectId();
 		_name = StringUtils.defaultString(player.getBuyStoreName());
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

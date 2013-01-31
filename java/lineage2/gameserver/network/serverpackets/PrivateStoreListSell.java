@@ -17,13 +17,34 @@ import java.util.List;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.TradeItem;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PrivateStoreListSell extends L2GameServerPacket
 {
+	/**
+	 * Field _sellerId.
+	 */
 	private final int _sellerId;
+	/**
+	 * Field _adena.
+	 */
 	private final long _adena;
+	/**
+	 * Field _package.
+	 */
 	private final boolean _package;
+	/**
+	 * Field _sellList.
+	 */
 	private final List<TradeItem> _sellList;
 	
+	/**
+	 * Constructor for PrivateStoreListSell.
+	 * @param buyer Player
+	 * @param seller Player
+	 */
 	public PrivateStoreListSell(Player buyer, Player seller)
 	{
 		_sellerId = seller.getObjectId();
@@ -32,6 +53,9 @@ public class PrivateStoreListSell extends L2GameServerPacket
 		_sellList = seller.getSellList();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

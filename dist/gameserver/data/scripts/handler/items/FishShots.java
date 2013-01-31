@@ -22,8 +22,15 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class FishShots extends ScriptItemHandler
 {
+	/**
+	 * Field _itemIds.
+	 */
 	private static int[] _itemIds =
 	{
 		6535,
@@ -33,6 +40,9 @@ public class FishShots extends ScriptItemHandler
 		6539,
 		6540
 	};
+	/**
+	 * Field _skillIds.
+	 */
 	private static int[] _skillIds =
 	{
 		2181,
@@ -43,6 +53,13 @@ public class FishShots extends ScriptItemHandler
 		2186
 	};
 	
+	/**
+	 * Method useItem.
+	 * @param playable Playable
+	 * @param item ItemInstance
+	 * @param ctrl boolean
+	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
@@ -101,6 +118,10 @@ public class FishShots extends ScriptItemHandler
 		return true;
 	}
 	
+	/**
+	 * Method getItemIds.
+	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 */
 	@Override
 	public int[] getItemIds()
 	{

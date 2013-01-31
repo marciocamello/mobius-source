@@ -12,12 +12,31 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExResponseCommissionDelete extends L2GameServerPacket
 {
+	/**
+	 * Field _code.
+	 */
 	private final int _code;
+	/**
+	 * Field _itemId.
+	 */
 	private final int _itemId;
+	/**
+	 * Field _count.
+	 */
 	private final long _count;
 	
+	/**
+	 * Constructor for ExResponseCommissionDelete.
+	 * @param code int
+	 * @param itemId int
+	 * @param count long
+	 */
 	public ExResponseCommissionDelete(int code, int itemId, long count)
 	{
 		_code = code;
@@ -25,6 +44,9 @@ public class ExResponseCommissionDelete extends L2GameServerPacket
 		_count = count;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

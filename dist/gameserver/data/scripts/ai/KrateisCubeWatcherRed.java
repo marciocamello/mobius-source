@@ -26,8 +26,15 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KrateisCubeWatcherRed extends DefaultAI
 {
+	/**
+	 * Field SKILLS.
+	 */
 	private static final int[][] SKILLS =
 	{
 		{
@@ -51,19 +58,34 @@ public class KrateisCubeWatcherRed extends DefaultAI
 			7
 		}
 	};
+	/**
+	 * Field SKILL_CHANCE. (value is 25)
+	 */
 	private static final int SKILL_CHANCE = 25;
 	
+	/**
+	 * Constructor for KrateisCubeWatcherRed.
+	 * @param actor NpcInstance
+	 */
 	public KrateisCubeWatcherRed(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ACTIVE_DELAY = 3000;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 	}
 	
+	/**
+	 * Method onEvtThink.
+	 */
 	@Override
 	protected void onEvtThink()
 	{
@@ -87,6 +109,10 @@ public class KrateisCubeWatcherRed extends DefaultAI
 		}
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	public void onEvtDead(Creature killer)
 	{

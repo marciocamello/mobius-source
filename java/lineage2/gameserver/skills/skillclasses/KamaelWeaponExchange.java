@@ -26,13 +26,30 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class KamaelWeaponExchange extends Skill
 {
+	/**
+	 * Constructor for KamaelWeaponExchange.
+	 * @param set StatsSet
+	 */
 	public KamaelWeaponExchange(StatsSet set)
 	{
 		super(set);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @param activeChar Creature
+	 * @param target Creature
+	 * @param forceUse boolean
+	 * @param dontMove boolean
+	 * @param first boolean
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
@@ -50,6 +67,11 @@ public class KamaelWeaponExchange extends Skill
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

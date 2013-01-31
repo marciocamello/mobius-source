@@ -14,12 +14,29 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PartySmallWindowUpdate extends L2GameServerPacket
 {
+	/**
+	 * Field level. Field class_id. Field obj_id.
+	 */
 	private final int obj_id, class_id, level;
+	/**
+	 * Field vitality. Field maxMp. Field curMp. Field maxHp. Field curHp. Field maxCp. Field curCp.
+	 */
 	private final int curCp, maxCp, curHp, maxHp, curMp, maxMp, vitality;
+	/**
+	 * Field obj_name.
+	 */
 	private final String obj_name;
 	
+	/**
+	 * Constructor for PartySmallWindowUpdate.
+	 * @param member Player
+	 */
 	public PartySmallWindowUpdate(Player member)
 	{
 		obj_id = member.getObjectId();
@@ -35,6 +52,9 @@ public class PartySmallWindowUpdate extends L2GameServerPacket
 		vitality = member.getVitality();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

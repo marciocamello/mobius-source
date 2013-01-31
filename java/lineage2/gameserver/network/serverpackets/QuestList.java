@@ -18,11 +18,25 @@ import java.util.List;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.QuestState;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class QuestList extends L2GameServerPacket
 {
+	/**
+	 * Field questlist.
+	 */
 	private final List<int[]> questlist;
+	/**
+	 * Field unk.
+	 */
 	private static byte[] unk = new byte[128];
 	
+	/**
+	 * Constructor for QuestList.
+	 * @param player Player
+	 */
 	public QuestList(Player player)
 	{
 		QuestState[] allQuestStates = player.getAllQuestsStates();
@@ -40,6 +54,9 @@ public class QuestList extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

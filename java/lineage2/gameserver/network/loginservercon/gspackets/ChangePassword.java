@@ -14,13 +14,36 @@ package lineage2.gameserver.network.loginservercon.gspackets;
 
 import lineage2.gameserver.network.loginservercon.SendablePacket;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ChangePassword extends SendablePacket
 {
+	/**
+	 * Field account.
+	 */
 	private final String account;
+	/**
+	 * Field oldPass.
+	 */
 	private final String oldPass;
+	/**
+	 * Field newPass.
+	 */
 	private final String newPass;
+	/**
+	 * Field hwid.
+	 */
 	private final String hwid;
 	
+	/**
+	 * Constructor for ChangePassword.
+	 * @param account String
+	 * @param oldPass String
+	 * @param newPass String
+	 * @param hwid String
+	 */
 	public ChangePassword(String account, String oldPass, String newPass, String hwid)
 	{
 		this.account = account;
@@ -29,6 +52,9 @@ public class ChangePassword extends SendablePacket
 		this.hwid = hwid;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

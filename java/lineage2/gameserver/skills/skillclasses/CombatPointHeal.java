@@ -20,16 +20,32 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CombatPointHeal extends Skill
 {
+	/**
+	 * Field _ignoreCpEff.
+	 */
 	private final boolean _ignoreCpEff;
 	
+	/**
+	 * Constructor for CombatPointHeal.
+	 * @param set StatsSet
+	 */
 	public CombatPointHeal(StatsSet set)
 	{
 		super(set);
 		_ignoreCpEff = set.getBool("ignoreCpEff", false);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{

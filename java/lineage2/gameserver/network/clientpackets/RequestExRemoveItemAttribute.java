@@ -24,11 +24,24 @@ import lineage2.gameserver.network.serverpackets.ExShowBaseAttributeCancelWindow
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestExRemoveItemAttribute extends L2GameClientPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
+	/**
+	 * Field _attributeId.
+	 */
 	private int _attributeId;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -36,6 +49,9 @@ public class RequestExRemoveItemAttribute extends L2GameClientPacket
 		_attributeId = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -69,7 +85,7 @@ public class RequestExRemoveItemAttribute extends L2GameClientPacket
 			return;
 		}
 		boolean equipped = itemToUnnchant.isEquipped();
-		if (equipped == true)
+		if (equipped)
 		{
 			activeChar.getInventory().unEquipItem(itemToUnnchant);
 		}

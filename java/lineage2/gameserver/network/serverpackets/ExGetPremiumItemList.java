@@ -17,17 +17,34 @@ import java.util.Map;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.PremiumItem;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExGetPremiumItemList extends L2GameServerPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private final int _objectId;
+	/**
+	 * Field _list.
+	 */
 	private final Map<Integer, PremiumItem> _list;
 	
+	/**
+	 * Constructor for ExGetPremiumItemList.
+	 * @param activeChar Player
+	 */
 	public ExGetPremiumItemList(Player activeChar)
 	{
 		_objectId = activeChar.getObjectId();
 		_list = activeChar.getPremiumItemList();
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

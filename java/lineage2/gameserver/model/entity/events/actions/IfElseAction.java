@@ -18,19 +18,45 @@ import java.util.List;
 import lineage2.gameserver.model.entity.events.EventAction;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class IfElseAction implements EventAction
 {
+	/**
+	 * Field _name.
+	 */
 	private final String _name;
+	/**
+	 * Field _reverse.
+	 */
 	private final boolean _reverse;
+	/**
+	 * Field _ifList.
+	 */
 	private List<EventAction> _ifList = Collections.emptyList();
+	/**
+	 * Field _elseList.
+	 */
 	private List<EventAction> _elseList = Collections.emptyList();
 	
+	/**
+	 * Constructor for IfElseAction.
+	 * @param name String
+	 * @param reverse boolean
+	 */
 	public IfElseAction(String name, boolean reverse)
 	{
 		_name = name;
 		_reverse = reverse;
 	}
 	
+	/**
+	 * Method call.
+	 * @param event GlobalEvent
+	 * @see lineage2.gameserver.model.entity.events.EventAction#call(GlobalEvent)
+	 */
 	@Override
 	public void call(GlobalEvent event)
 	{
@@ -41,11 +67,19 @@ public class IfElseAction implements EventAction
 		}
 	}
 	
+	/**
+	 * Method setIfList.
+	 * @param ifList List<EventAction>
+	 */
 	public void setIfList(List<EventAction> ifList)
 	{
 		_ifList = ifList;
 	}
 	
+	/**
+	 * Method setElseList.
+	 * @param elseList List<EventAction>
+	 */
 	public void setElseList(List<EventAction> elseList)
 	{
 		_elseList = elseList;

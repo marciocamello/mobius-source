@@ -12,27 +12,55 @@
  */
 package lineage2.gameserver.model.items;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ManufactureItem
 {
+	/**
+	 * Field _recipeId.
+	 */
 	private final int _recipeId;
+	/**
+	 * Field _cost.
+	 */
 	private final long _cost;
 	
+	/**
+	 * Constructor for ManufactureItem.
+	 * @param recipeId int
+	 * @param cost long
+	 */
 	public ManufactureItem(int recipeId, long cost)
 	{
 		_recipeId = recipeId;
 		_cost = cost;
 	}
 	
+	/**
+	 * Method getRecipeId.
+	 * @return int
+	 */
 	public int getRecipeId()
 	{
 		return _recipeId;
 	}
 	
+	/**
+	 * Method getCost.
+	 * @return long
+	 */
 	public long getCost()
 	{
 		return _cost;
 	}
 	
+	/**
+	 * Method equals.
+	 * @param o Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object o)
 	{

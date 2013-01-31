@@ -16,7 +16,15 @@ import java.io.Serializable;
 
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public interface InitableObject extends Serializable
 {
+	/**
+	 * Method initObject.
+	 * @param e GlobalEvent
+	 */
 	void initObject(GlobalEvent e);
 }

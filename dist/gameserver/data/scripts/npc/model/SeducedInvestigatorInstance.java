@@ -18,6 +18,10 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class SeducedInvestigatorInstance extends MonsterInstance
 {
 	/**
@@ -25,18 +29,34 @@ public class SeducedInvestigatorInstance extends MonsterInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for SeducedInvestigatorInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public SeducedInvestigatorInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 		setHasChatWindow(true);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 		player.sendPacket(new NpcHtmlMessage(player, this, "common/seducedinvestigator.htm", val));
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
@@ -52,12 +72,20 @@ public class SeducedInvestigatorInstance extends MonsterInstance
 		return true;
 	}
 	
+	/**
+	 * Method isMovementDisabled.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isMovementDisabled()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method canChampion.
+	 * @return boolean
+	 */
 	@Override
 	public boolean canChampion()
 	{

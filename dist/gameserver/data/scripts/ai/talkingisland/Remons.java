@@ -15,8 +15,16 @@ package ai.talkingisland;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Remons extends RemonsSubAI
 {
+	/**
+	 * Constructor for Remons.
+	 * @param actor NpcInstance
+	 */
 	public Remons(NpcInstance actor)
 	{
 		super(actor);

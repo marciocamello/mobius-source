@@ -34,27 +34,84 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.Log;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AdminSkill implements IAdminCommandHandler
 {
+	/**
+	 * @author Mobius
+	 */
 	private static enum Commands
 	{
+		/**
+		 * Field admin_show_skills.
+		 */
 		admin_show_skills,
+		/**
+		 * Field admin_remove_skills.
+		 */
 		admin_remove_skills,
+		/**
+		 * Field admin_skill_list.
+		 */
 		admin_skill_list,
+		/**
+		 * Field admin_skill_index.
+		 */
 		admin_skill_index,
+		/**
+		 * Field admin_add_skill.
+		 */
 		admin_add_skill,
+		/**
+		 * Field admin_remove_skill.
+		 */
 		admin_remove_skill,
+		/**
+		 * Field admin_get_skills.
+		 */
 		admin_get_skills,
+		/**
+		 * Field admin_reset_skills.
+		 */
 		admin_reset_skills,
+		/**
+		 * Field admin_give_all_skills.
+		 */
 		admin_give_all_skills,
+		/**
+		 * Field admin_show_effects.
+		 */
 		admin_show_effects,
+		/**
+		 * Field admin_debug_stats.
+		 */
 		admin_debug_stats,
+		/**
+		 * Field admin_remove_cooldown.
+		 */
 		admin_remove_cooldown,
+		/**
+		 * Field admin_buff.
+		 */
 		admin_buff
 	}
 	
+	/**
+	 * Field adminSkills.
+	 */
 	private static Skill[] adminSkills;
 	
+	/**
+	 * Method useAdminCommand.
+	 * @param comm Enum<?>
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
@@ -104,7 +161,7 @@ public class AdminSkill implements IAdminCommandHandler
 			case admin_remove_cooldown:
 				activeChar.resetReuse();
 				activeChar.sendPacket(new SkillCoolTime(activeChar));
-				activeChar.sendMessage("Oткат всех скилов обнулен.");
+				activeChar.sendMessage("Oткат в�?ех �?килов обнулен.");
 				break;
 			case admin_buff:
 				for (int i = 7041; i <= 7064; i++)
@@ -117,6 +174,10 @@ public class AdminSkill implements IAdminCommandHandler
 		return true;
 	}
 	
+	/**
+	 * Method debug_stats.
+	 * @param activeChar Player
+	 */
 	private void debug_stats(Player activeChar)
 	{
 		GameObject target_obj = activeChar.getTarget();
@@ -156,6 +217,10 @@ public class AdminSkill implements IAdminCommandHandler
 		Log.add(log_str, "debug_stats");
 	}
 	
+	/**
+	 * Method adminGiveAllSkills.
+	 * @param activeChar Player
+	 */
 	private void adminGiveAllSkills(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
@@ -196,12 +261,19 @@ public class AdminSkill implements IAdminCommandHandler
 		activeChar.sendMessage("You gave " + skillCounter + " skills to " + player.getName());
 	}
 	
+	/**
+	 * Methodnur# * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()getAdminCommandEnum()
+	 */
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}
 	
+	/**
+	 * Method removeSkillsPage.
+	 * @param activeChar Player
+	 */
 	private void removeSkillsPage(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
@@ -246,6 +318,10 @@ public class AdminSkill implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method showSkillsPage.
+	 * @param activeChar Player
+	 */
 	private void showSkillsPage(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
@@ -281,6 +357,10 @@ public class AdminSkill implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method showEffects.
+	 * @param activeChar Player
+	 */
 	private void showEffects(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
@@ -312,7 +392,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			for (Effect e : list)
 			{
-				replyMSG.append(e.getSkill().getName()).append(" ").append(e.getSkill().getLevel()).append(" - ").append(e.getSkill().isToggle() ? "Infinity" : (e.getTimeLeft() + " seconds")).append("<br1>");
+				replyMSG.append(e.getSkill().getName()).append(' ').append(e.getSkill().getLevel()).append(" - ").append(e.getSkill().isToggle() ? "Infinity" : (e.getTimeLeft() + " seconds")).append("<br1>");
 			}
 		}
 		replyMSG.append("<br></body></html>");
@@ -320,6 +400,10 @@ public class AdminSkill implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * Method adminGetSkills.
+	 * @param activeChar Player
+	 */
 	private void adminGetSkills(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
@@ -354,6 +438,10 @@ public class AdminSkill implements IAdminCommandHandler
 		showSkillsPage(activeChar);
 	}
 	
+	/**
+	 * Method adminResetSkills.
+	 * @param activeChar Player
+	 */
 	private void adminResetSkills(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
@@ -376,6 +464,11 @@ public class AdminSkill implements IAdminCommandHandler
 		showSkillsPage(activeChar);
 	}
 	
+	/**
+	 * Method adminAddSkill.
+	 * @param activeChar Player
+	 * @param wordList String[]
+	 */
 	private void adminAddSkill(Player activeChar, String[] wordList)
 	{
 		GameObject target = activeChar.getTarget();
@@ -409,6 +502,11 @@ public class AdminSkill implements IAdminCommandHandler
 		showSkillsPage(activeChar);
 	}
 	
+	/**
+	 * Method adminRemoveSkill.
+	 * @param activeChar Player
+	 * @param wordList String[]
+	 */
 	private void adminRemoveSkill(Player activeChar, String[] wordList)
 	{
 		GameObject target = activeChar.getTarget();

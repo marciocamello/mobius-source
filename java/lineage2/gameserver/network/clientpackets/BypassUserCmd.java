@@ -17,16 +17,29 @@ import lineage2.gameserver.handler.usercommands.UserCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class BypassUserCmd extends L2GameClientPacket
 {
+	/**
+	 * Field _command.
+	 */
 	private int _command;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_command = readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

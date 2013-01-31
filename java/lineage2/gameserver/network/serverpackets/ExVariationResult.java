@@ -12,12 +12,31 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExVariationResult extends L2GameServerPacket
 {
+	/**
+	 * Field _stat12.
+	 */
 	private final int _stat12;
+	/**
+	 * Field _stat34.
+	 */
 	private final int _stat34;
+	/**
+	 * Field _unk3.
+	 */
 	private final int _unk3;
 	
+	/**
+	 * Constructor for ExVariationResult.
+	 * @param unk1 int
+	 * @param unk2 int
+	 * @param unk3 int
+	 */
 	public ExVariationResult(int unk1, int unk2, int unk3)
 	{
 		_stat12 = unk1;
@@ -25,6 +44,9 @@ public class ExVariationResult extends L2GameServerPacket
 		_unk3 = unk3;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

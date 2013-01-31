@@ -12,22 +12,57 @@
  */
 package lineage2.gameserver.network.loginservercon;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public enum ServerType
 {
+	/**
+	 * Field NORMAL.
+	 */
 	NORMAL,
+	/**
+	 * Field RELAX.
+	 */
 	RELAX,
+	/**
+	 * Field TEST.
+	 */
 	TEST,
+	/**
+	 * Field NO_LABEL.
+	 */
 	NO_LABEL,
+	/**
+	 * Field RESTRICTED.
+	 */
 	RESTRICTED,
+	/**
+	 * Field EVENT.
+	 */
 	EVENT,
+	/**
+	 * Field FREE.
+	 */
 	FREE;
+	/**
+	 * Field _mask.
+	 */
 	private int _mask;
 	
+	/**
+	 * Constructor for ServerType.
+	 */
 	ServerType()
 	{
 		_mask = 1 << ordinal();
 	}
 	
+	/**
+	 * Method getMask.
+	 * @return int
+	 */
 	public int getMask()
 	{
 		return _mask;

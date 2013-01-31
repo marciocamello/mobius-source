@@ -21,19 +21,35 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.stats.Env;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class EffectRandomHate extends Effect
 {
+	/**
+	 * Constructor for EffectRandomHate.
+	 * @param env Env
+	 * @param template EffectTemplate
+	 */
 	public EffectRandomHate(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
+	/**
+	 * Method checkCondition.
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkCondition()
 	{
 		return getEffected().isMonster() && Rnd.chance(_template.chance(100));
 	}
 	
+	/**
+	 * Method onStart.
+	 */
 	@Override
 	public void onStart()
 	{
@@ -55,12 +71,20 @@ public class EffectRandomHate extends Effect
 		}
 	}
 	
+	/**
+	 * Method isHidden.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isHidden()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method onActionTime.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean onActionTime()
 	{

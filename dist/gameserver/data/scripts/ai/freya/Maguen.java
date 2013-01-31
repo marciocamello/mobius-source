@@ -27,14 +27,24 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessa
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class Maguen extends Fighter
 {
+	/**
+	 * Field maguenStatsSkills.
+	 */
 	private static final int[] maguenStatsSkills =
 	{
 		6343,
 		6365,
 		6366
 	};
+	/**
+	 * Field maguenRaceSkills.
+	 */
 	private static final int[] maguenRaceSkills =
 	{
 		6367,
@@ -42,11 +52,18 @@ public class Maguen extends Fighter
 		6369
 	};
 	
+	/**
+	 * Constructor for Maguen.
+	 * @param actor NpcInstance
+	 */
 	public Maguen(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method onEvtSpawn.
+	 */
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -67,6 +84,11 @@ public class Maguen extends Fighter
 		}
 	}
 	
+	/**
+	 * Method onEvtSeeSpell.
+	 * @param skill Skill
+	 * @param caster Creature
+	 */
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
@@ -133,6 +155,11 @@ public class Maguen extends Fighter
 		getActor().setNpcState(4);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -147,6 +174,11 @@ public class Maguen extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{
@@ -157,13 +189,22 @@ public class Maguen extends Fighter
 		return super.checkAggression(target);
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Plasma extends RunnableImpl
 	{
+		/**
+		 * Constructor for Plasma.
+		 */
 		public Plasma()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -171,13 +212,22 @@ public class Maguen extends Fighter
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Despawn extends RunnableImpl
 	{
+		/**
+		 * Constructor for Despawn.
+		 */
 		public Despawn()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{

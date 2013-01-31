@@ -20,15 +20,31 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PrisonGuard extends Fighter
 {
+	/**
+	 * Field RACE_STAMP. (value is 10013)
+	 */
 	private static final int RACE_STAMP = 10013;
 	
+	/**
+	 * Constructor for PrisonGuard.
+	 * @param actor NpcInstance
+	 */
 	public PrisonGuard(NpcInstance actor)
 	{
 		super(actor);
 	}
 	
+	/**
+	 * Method checkAggression.
+	 * @param target Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean checkAggression(Creature target)
 	{
@@ -44,6 +60,11 @@ public class PrisonGuard extends Fighter
 		return super.checkAggression(target);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
@@ -82,6 +103,10 @@ public class PrisonGuard extends Fighter
 		super.onEvtAttacked(attacker, damage);
 	}
 	
+	/**
+	 * Method onEvtDead.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onEvtDead(Creature killer)
 	{

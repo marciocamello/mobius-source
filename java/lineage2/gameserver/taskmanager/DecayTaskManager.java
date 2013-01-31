@@ -19,15 +19,29 @@ import lineage2.commons.threading.SteppingRunnableQueueManager;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DecayTaskManager extends SteppingRunnableQueueManager
 {
+	/**
+	 * Field _instance.
+	 */
 	private static final DecayTaskManager _instance = new DecayTaskManager();
 	
+	/**
+	 * Method getInstance.
+	 * @return DecayTaskManager
+	 */
 	public static final DecayTaskManager getInstance()
 	{
 		return _instance;
 	}
 	
+	/**
+	 * Constructor for DecayTaskManager.
+	 */
 	private DecayTaskManager()
 	{
 		super(500L);
@@ -42,6 +56,12 @@ public class DecayTaskManager extends SteppingRunnableQueueManager
 		}, 60000L, 60000L);
 	}
 	
+	/**
+	 * Method addDecayTask.
+	 * @param actor Creature
+	 * @param delay long
+	 * @return Future<?>
+	 */
 	public Future<?> addDecayTask(final Creature actor, long delay)
 	{
 		return schedule(new RunnableImpl()

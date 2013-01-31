@@ -21,16 +21,34 @@ import lineage2.gameserver.stats.funcs.Func;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
 import lineage2.gameserver.stats.triggers.TriggerInfo;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class StatTemplate
 {
+	/**
+	 * Field _funcTemplates.
+	 */
 	protected FuncTemplate[] _funcTemplates = FuncTemplate.EMPTY_ARRAY;
+	/**
+	 * Field _triggerList.
+	 */
 	protected List<TriggerInfo> _triggerList = Collections.emptyList();
 	
+	/**
+	 * Method getTriggerList.
+	 * @return List<TriggerInfo>
+	 */
 	public List<TriggerInfo> getTriggerList()
 	{
 		return _triggerList;
 	}
 	
+	/**
+	 * Method addTrigger.
+	 * @param f TriggerInfo
+	 */
 	public void addTrigger(TriggerInfo f)
 	{
 		if (_triggerList.isEmpty())
@@ -40,16 +58,29 @@ public class StatTemplate
 		_triggerList.add(f);
 	}
 	
+	/**
+	 * Method attachFunc.
+	 * @param f FuncTemplate
+	 */
 	public void attachFunc(FuncTemplate f)
 	{
 		_funcTemplates = ArrayUtils.add(_funcTemplates, f);
 	}
 	
+	/**
+	 * Method getAttachedFuncs.
+	 * @return FuncTemplate[]
+	 */
 	public FuncTemplate[] getAttachedFuncs()
 	{
 		return _funcTemplates;
 	}
 	
+	/**
+	 * Method getStatFuncs.
+	 * @param owner Object
+	 * @return Func[]
+	 */
 	public Func[] getStatFuncs(Object owner)
 	{
 		if (_funcTemplates.length == 0)

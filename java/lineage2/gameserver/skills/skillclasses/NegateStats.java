@@ -25,12 +25,29 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
 import lineage2.gameserver.templates.StatsSet;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class NegateStats extends Skill
 {
+	/**
+	 * Field _negateStats.
+	 */
 	private final List<Stats> _negateStats;
+	/**
+	 * Field _negateOffensive.
+	 */
 	private final boolean _negateOffensive;
+	/**
+	 * Field _negateCount.
+	 */
 	private final int _negateCount;
 	
+	/**
+	 * Constructor for NegateStats.
+	 * @param set StatsSet
+	 */
 	public NegateStats(StatsSet set)
 	{
 		super(set);
@@ -47,6 +64,11 @@ public class NegateStats extends Skill
 		_negateCount = set.getInteger("negateCount", 0);
 	}
 	
+	/**
+	 * Method useSkill.
+	 * @param activeChar Creature
+	 * @param targets List<Creature>
+	 */
 	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
@@ -92,6 +114,12 @@ public class NegateStats extends Skill
 		}
 	}
 	
+	/**
+	 * Method containsStat.
+	 * @param e Effect
+	 * @param stat Stats
+	 * @return boolean
+	 */
 	private boolean containsStat(Effect e, Stats stat)
 	{
 		for (FuncTemplate ft : e.getTemplate().getAttachedFuncs())
@@ -104,12 +132,20 @@ public class NegateStats extends Skill
 		return false;
 	}
 	
+	/**
+	 * Method isOffensive.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isOffensive()
 	{
 		return !_negateOffensive;
 	}
 	
+	/**
+	 * Method getNegateStats.
+	 * @return List<Stats>
+	 */
 	public List<Stats> getNegateStats()
 	{
 		return _negateStats;

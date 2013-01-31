@@ -29,6 +29,10 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class OutpostInstance extends SiegeFlagInstance
 {
 	/**
@@ -36,13 +40,25 @@ public class OutpostInstance extends SiegeFlagInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * @author Mobius
+	 */
 	private class OnZoneEnterLeaveListenerImpl implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * Constructor for OnZoneEnterLeaveListenerImpl.
+		 */
 		public OnZoneEnterLeaveListenerImpl()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method onZoneEnter.
+		 * @param zone Zone
+		 * @param actor Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
+		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature actor)
 		{
@@ -60,6 +76,12 @@ public class OutpostInstance extends SiegeFlagInstance
 			actor.addStatFunc(new FuncMul(Stats.REGENERATE_CP_RATE, 0x40, OutpostInstance.this, 2.));
 		}
 		
+		/**
+		 * Method onZoneLeave.
+		 * @param zone Zone
+		 * @param actor Creature
+		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
+		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature actor)
 		{
@@ -67,13 +89,24 @@ public class OutpostInstance extends SiegeFlagInstance
 		}
 	}
 	
+	/**
+	 * Field _zone.
+	 */
 	private Zone _zone = null;
 	
+	/**
+	 * Constructor for OutpostInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public OutpostInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	public void onSpawn()
 	{
@@ -91,6 +124,9 @@ public class OutpostInstance extends SiegeFlagInstance
 		_zone.setActive(true);
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	public void onDelete()
 	{
@@ -99,6 +135,10 @@ public class OutpostInstance extends SiegeFlagInstance
 		_zone = null;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{

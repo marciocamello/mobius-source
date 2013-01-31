@@ -19,6 +19,10 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import quests._10288_SecretMission;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PriestAquilaniInstance extends NpcInstance
 {
 	/**
@@ -26,11 +30,22 @@ public class PriestAquilaniInstance extends NpcInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * Constructor for PriestAquilaniInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 */
 	public PriestAquilaniInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
 	
+	/**
+	 * Method showChatWindow.
+	 * @param player Player
+	 * @param val int
+	 * @param arg Object[]
+	 */
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
@@ -43,6 +58,11 @@ public class PriestAquilaniInstance extends NpcInstance
 		return;
 	}
 	
+	/**
+	 * Method onBypassFeedback.
+	 * @param player Player
+	 * @param command String
+	 */
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{

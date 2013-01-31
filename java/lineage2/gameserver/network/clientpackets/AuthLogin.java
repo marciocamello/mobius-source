@@ -20,14 +20,36 @@ import lineage2.gameserver.network.loginservercon.gspackets.PlayerAuthRequest;
 import lineage2.gameserver.network.serverpackets.LoginFail;
 import lineage2.gameserver.network.serverpackets.ServerClose;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AuthLogin extends L2GameClientPacket
 {
+	/**
+	 * Field _loginName.
+	 */
 	private String _loginName;
+	/**
+	 * Field _playKey1.
+	 */
 	private int _playKey1;
+	/**
+	 * Field _playKey2.
+	 */
 	private int _playKey2;
+	/**
+	 * Field _loginKey1.
+	 */
 	private int _loginKey1;
+	/**
+	 * Field _loginKey2.
+	 */
 	private int _loginKey2;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -41,6 +63,9 @@ public class AuthLogin extends L2GameClientPacket
 		readD();
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

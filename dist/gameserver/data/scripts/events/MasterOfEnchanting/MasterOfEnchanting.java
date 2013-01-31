@@ -26,14 +26,36 @@ import lineage2.gameserver.scripts.ScriptFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlayerEnterListener
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(MasterOfEnchanting.class);
+	/**
+	 * Field EVENT_NAME. (value is ""MasterOfEnchanting"")
+	 */
 	private static final String EVENT_NAME = "MasterOfEnchanting";
+	/**
+	 * Field EVENT_MANAGER_ID.
+	 */
 	private static int EVENT_MANAGER_ID = 32599;
+	/**
+	 * Field _spawns.
+	 */
 	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	/**
+	 * Field _active.
+	 */
 	private static boolean _active = false;
 	
+	/**
+	 * Method spawnEventManagers.
+	 */
 	private void spawnEventManagers()
 	{
 		final int EVENT_MANAGERS[][] =
@@ -252,16 +274,26 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 		SpawnNPCs(EVENT_MANAGER_ID, EVENT_MANAGERS, _spawns);
 	}
 	
+	/**
+	 * Method unSpawnEventManagers.
+	 */
 	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
 	}
 	
+	/**
+	 * Method isActive.
+	 * @return boolean
+	 */
 	private static boolean isActive()
 	{
 		return IsActive(EVENT_NAME);
 	}
 	
+	/**
+	 * Method startEvent.
+	 */
 	public void startEvent()
 	{
 		Player player = getSelf();
@@ -283,6 +315,9 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 		show("admin/events.htm", player);
 	}
 	
+	/**
+	 * Method stopEvent.
+	 */
 	public void stopEvent()
 	{
 		Player player = getSelf();
@@ -304,6 +339,10 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 		show("html/admin/events.htm", player);
 	}
 	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
 	@Override
 	public void onLoad()
 	{
@@ -320,18 +359,31 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 		}
 	}
 	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
 	@Override
 	public void onReload()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
 	@Override
 	public void onShutdown()
 	{
 		unSpawnEventManagers();
 	}
 	
+	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{

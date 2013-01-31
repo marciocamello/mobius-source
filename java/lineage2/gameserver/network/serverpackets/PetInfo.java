@@ -18,25 +18,81 @@ import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetInfo extends L2GameServerPacket
 {
+	/**
+	 * Field karma. Field pvp_flag. Field PAtkSpd. Field MAtkSpd. Field _walkSpd. Field _runSpd.
+	 */
 	private final int _runSpd, _walkSpd, MAtkSpd, PAtkSpd, pvp_flag, karma;
+	/**
+	 * Field rideable.
+	 */
 	private int rideable;
+	/**
+	 * Field _abnormalEffect2. Field _abnormalEffect. Field level. Field _sp. Field dead. Field incombat. Field runing. Field npc_id. Field obj_id. Field _type.
+	 */
 	private final int _type, obj_id, npc_id, runing, incombat, dead, _sp, level, _abnormalEffect, _abnormalEffect2;
+	/**
+	 * Field maxLoad. Field curLoad. Field maxMp. Field curMp. Field maxHp. Field curHp. Field maxFed. Field curFed.
+	 */
 	private final int curFed, maxFed, curHp, maxHp, curMp, maxMp, curLoad, maxLoad;
+	/**
+	 * Field type. Field ss. Field sps. Field Crit. Field Evasion. Field Accuracy. Field MDef. Field MAtk. Field PDef. Field PAtk.
+	 */
 	private final int PAtk, PDef, MAtk, MDef, Accuracy, Evasion, Crit, sps, ss, type;
+	/**
+	 * Field _showSpawnAnimation.
+	 */
 	private int _showSpawnAnimation;
+	/**
+	 * Field _mAccuracy.
+	 */
 	private final int _mAccuracy;
+	/**
+	 * Field _mEvasion.
+	 */
 	private final int _mEvasion;
+	/**
+	 * Field _mCrit.
+	 */
 	private final int _mCrit;
+	/**
+	 * Field _loc.
+	 */
 	private final Location _loc;
+	/**
+	 * Field col_height. Field col_radius.
+	 */
 	private final double col_radius, col_height;
+	/**
+	 * Field exp_next_lvl. Field exp_this_lvl. Field exp.
+	 */
 	private final long exp, exp_this_lvl, exp_next_lvl;
+	/**
+	 * Field title. Field _name.
+	 */
 	private final String _name, title;
+	/**
+	 * Field _team.
+	 */
 	private final TeamType _team;
+	/**
+	 * Field _ownerId.
+	 */
 	private final int _ownerId;
+	/**
+	 * Field summonPointsMax. Field summonPoint.
+	 */
 	private final int summonPoint, summonPointsMax;
 	
+	/**
+	 * Constructor for PetInfo.
+	 * @param summon Summon
+	 */
 	public PetInfo(Summon summon)
 	{
 		_type = summon.getSummonType();
@@ -99,12 +155,19 @@ public class PetInfo extends L2GameServerPacket
 		summonPointsMax = summon.getPlayer().getSummonPointMax();
 	}
 	
+	/**
+	 * Method update.
+	 * @return PetInfo
+	 */
 	public PetInfo update()
 	{
 		_showSpawnAnimation = 1;
 		return this;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

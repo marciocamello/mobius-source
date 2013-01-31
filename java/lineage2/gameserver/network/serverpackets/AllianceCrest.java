@@ -12,17 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class AllianceCrest extends L2GameServerPacket
 {
+	/**
+	 * Field _crestId.
+	 */
 	private final int _crestId;
+	/**
+	 * Field _data.
+	 */
 	private final byte[] _data;
 	
+	/**
+	 * Constructor for AllianceCrest.
+	 * @param crestId int
+	 * @param data byte[]
+	 */
 	public AllianceCrest(int crestId, byte[] data)
 	{
 		_crestId = crestId;
 		_data = data;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

@@ -17,11 +17,25 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class GCArray<E> implements Collection<E>
 {
+	/**
+	 * Field elementData.
+	 */
 	private transient E[] elementData;
+	/**
+	 * Field size.
+	 */
 	private int size;
 	
+	/**
+	 * Constructor for GCArray.
+	 * @param initialCapacity int
+	 */
 	@SuppressWarnings("unchecked")
 	public GCArray(int initialCapacity)
 	{
@@ -33,11 +47,18 @@ public class GCArray<E> implements Collection<E>
 		this.elementData = (E[]) new Object[initialCapacity];
 	}
 	
+	/**
+	 * Constructor for GCArray.
+	 */
 	public GCArray()
 	{
 		this(10);
 	}
 	
+	/**
+	 * Method ensureCapacity.
+	 * @param minCapacity int
+	 */
 	public void ensureCapacity(int minCapacity)
 	{
 		int oldCapacity = elementData.length;
@@ -52,29 +73,50 @@ public class GCArray<E> implements Collection<E>
 		}
 	}
 	
+	/**
+	 * Method size.
+	 * @return int * @see java.util.Collection#size()
+	 */
 	@Override
 	public int size()
 	{
 		return size;
 	}
 	
+	/**
+	 * Method isEmpty.
+	 * @return boolean * @see java.util.Collection#isEmpty()
+	 */
 	@Override
 	public boolean isEmpty()
 	{
 		return size == 0;
 	}
 	
+	/**
+	 * Method toNativeArray.
+	 * @return E[]
+	 */
 	public E[] toNativeArray()
 	{
 		return Arrays.copyOf(elementData, size);
 	}
 	
+	/**
+	 * Method toArray.
+	 * @return Object[] * @see java.util.Collection#toArray()
+	 */
 	@Override
 	public Object[] toArray()
 	{
 		return Arrays.copyOf(elementData, size);
 	}
 	
+	/**
+	 * Method toArray.
+	 * @param a T[]
+	 * @return T[] * @see java.util.Collection#toArray(T[])
+	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public <T> T[] toArray(T[] a)
@@ -91,12 +133,22 @@ public class GCArray<E> implements Collection<E>
 		return a;
 	}
 	
+	/**
+	 * Method get.
+	 * @param index int
+	 * @return E
+	 */
 	public E get(int index)
 	{
 		RangeCheck(index);
 		return elementData[index];
 	}
 	
+	/**
+	 * Method add.
+	 * @param e E
+	 * @return boolean * @see java.util.Collection#add(E)
+	 */
 	@Override
 	public boolean add(E e)
 	{
@@ -105,6 +157,11 @@ public class GCArray<E> implements Collection<E>
 		return true;
 	}
 	
+	/**
+	 * Method remove.
+	 * @param o Object
+	 * @return boolean * @see java.util.Collection#remove(Object)
+	 */
 	@Override
 	public boolean remove(Object o)
 	{
@@ -133,6 +190,11 @@ public class GCArray<E> implements Collection<E>
 		return false;
 	}
 	
+	/**
+	 * Method remove.
+	 * @param index int
+	 * @return E
+	 */
 	public E remove(int index)
 	{
 		RangeCheck(index);
@@ -142,6 +204,12 @@ public class GCArray<E> implements Collection<E>
 		return old;
 	}
 	
+	/**
+	 * Method set.
+	 * @param index int
+	 * @param element E
+	 * @return E
+	 */
 	public E set(int index, E element)
 	{
 		RangeCheck(index);
@@ -150,6 +218,11 @@ public class GCArray<E> implements Collection<E>
 		return oldValue;
 	}
 	
+	/**
+	 * Method indexOf.
+	 * @param o Object
+	 * @return int
+	 */
 	public int indexOf(Object o)
 	{
 		if (o == null)
@@ -175,6 +248,11 @@ public class GCArray<E> implements Collection<E>
 		return -1;
 	}
 	
+	/**
+	 * Method contains.
+	 * @param o Object
+	 * @return boolean * @see java.util.Collection#contains(Object)
+	 */
 	@Override
 	public boolean contains(Object o)
 	{
@@ -201,6 +279,11 @@ public class GCArray<E> implements Collection<E>
 		return false;
 	}
 	
+	/**
+	 * Method addAll.
+	 * @param c Collection<? extends E>
+	 * @return boolean * @see java.util.Collection#addAll(Collection<? extends E>)
+	 */
 	@Override
 	public boolean addAll(Collection<? extends E> c)
 	{
@@ -216,6 +299,11 @@ public class GCArray<E> implements Collection<E>
 		return modified;
 	}
 	
+	/**
+	 * Method removeAll.
+	 * @param c Collection<?>
+	 * @return boolean * @see java.util.Collection#removeAll(Collection<?>)
+	 */
 	@Override
 	public boolean removeAll(Collection<?> c)
 	{
@@ -232,6 +320,11 @@ public class GCArray<E> implements Collection<E>
 		return modified;
 	}
 	
+	/**
+	 * Method retainAll.
+	 * @param c Collection<?>
+	 * @return boolean * @see java.util.Collection#retainAll(Collection<?>)
+	 */
 	@Override
 	public boolean retainAll(Collection<?> c)
 	{
@@ -248,6 +341,11 @@ public class GCArray<E> implements Collection<E>
 		return modified;
 	}
 	
+	/**
+	 * Method containsAll.
+	 * @param c Collection<?>
+	 * @return boolean * @see java.util.Collection#containsAll(Collection<?>)
+	 */
 	@Override
 	public boolean containsAll(Collection<?> c)
 	{
@@ -261,6 +359,10 @@ public class GCArray<E> implements Collection<E>
 		return true;
 	}
 	
+	/**
+	 * Method RangeCheck.
+	 * @param index int
+	 */
 	private void RangeCheck(int index)
 	{
 		if (index >= size)
@@ -269,6 +371,10 @@ public class GCArray<E> implements Collection<E>
 		}
 	}
 	
+	/**
+	 * Method clear.
+	 * @see java.util.Collection#clear()
+	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public void clear()
@@ -289,34 +395,64 @@ public class GCArray<E> implements Collection<E>
 		size = 0;
 	}
 	
+	/**
+	 * Method clearSize.
+	 */
 	public void clearSize()
 	{
 		size = 0;
 	}
 	
+	/**
+	 * Method iterator.
+	 * @return Iterator<E> * @see java.util.Collection#iterator()
+	 */
 	@Override
 	public Iterator<E> iterator()
 	{
 		return new Itr();
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Itr implements Iterator<E>
 	{
+		/**
+		 * Field data.
+		 */
 		E[] data = toNativeArray();
+		/**
+		 * Field size.
+		 */
 		int size = data.length;
+		/**
+		 * Field cursor.
+		 */
 		int cursor = 0;
 		
+		/**
+		 * Constructor for Itr.
+		 */
 		public Itr()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * Method hasNext.
+		 * @return boolean * @see java.util.Iterator#hasNext()
+		 */
 		@Override
 		public boolean hasNext()
 		{
 			return cursor != size;
 		}
 		
+		/**
+		 * Method next.
+		 * @return E * @see java.util.Iterator#next()
+		 */
 		@Override
 		public E next()
 		{
@@ -330,6 +466,10 @@ public class GCArray<E> implements Collection<E>
 			}
 		}
 		
+		/**
+		 * Method remove.
+		 * @see java.util.Iterator#remove()
+		 */
 		@Override
 		public void remove()
 		{

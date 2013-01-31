@@ -34,18 +34,41 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class DecoyInstance extends NpcInstance
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(DecoyInstance.class);
+	/**
+	 * Field _playerRef.
+	 */
 	private final HardReference<Player> _playerRef;
+	/**
+	 * Field _timeRemaining. Field _lifeTime.
+	 */
 	private int _lifeTime, _timeRemaining;
+	/**
+	 * Field _hateSpam. Field _decoyLifeTask.
+	 */
 	private ScheduledFuture<?> _decoyLifeTask, _hateSpam;
 	
+	/**
+	 * Constructor for DecoyInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param owner Player
+	 * @param lifeTime int
+	 */
 	public DecoyInstance(int objectId, NpcTemplate template, Player owner, int lifeTime)
 	{
 		super(objectId, template);
@@ -57,6 +80,10 @@ public class DecoyInstance extends NpcInstance
 		_hateSpam = ThreadPoolManager.getInstance().scheduleAtFixedRate(new HateSpam(SkillTable.getInstance().getInfo(5272, skilllevel)), 1000, 3000);
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -69,8 +96,14 @@ public class DecoyInstance extends NpcInstance
 		_lifeTime = 0;
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	class DecoyLifetime extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -91,15 +124,28 @@ public class DecoyInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * @author Mobius
+	 */
 	class HateSpam extends RunnableImpl
 	{
+		/**
+		 * Field _skill.
+		 */
 		private final Skill _skill;
 		
+		/**
+		 * Constructor for HateSpam.
+		 * @param skill Skill
+		 */
 		HateSpam(Skill skill)
 		{
 			_skill = skill;
 		}
 		
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -115,6 +161,9 @@ public class DecoyInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method unSummon.
+	 */
 	public void unSummon()
 	{
 		if (_decoyLifeTask != null)
@@ -130,27 +179,48 @@ public class DecoyInstance extends NpcInstance
 		deleteMe();
 	}
 	
+	/**
+	 * Method decTimeRemaining.
+	 * @param value int
+	 */
 	public void decTimeRemaining(int value)
 	{
 		_timeRemaining -= value;
 	}
 	
+	/**
+	 * Method getTimeRemaining.
+	 * @return int
+	 */
 	public int getTimeRemaining()
 	{
 		return _timeRemaining;
 	}
 	
+	/**
+	 * Method getLifeTime.
+	 * @return int
+	 */
 	public int getLifeTime()
 	{
 		return _lifeTime;
 	}
 	
+	/**
+	 * Method getPlayer.
+	 * @return Player
+	 */
 	@Override
 	public Player getPlayer()
 	{
 		return _playerRef.get();
 	}
 	
+	/**
+	 * Method isAutoAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
@@ -158,6 +228,11 @@ public class DecoyInstance extends NpcInstance
 		return (owner != null) && owner.isAutoAttackable(attacker);
 	}
 	
+	/**
+	 * Method isAttackable.
+	 * @param attacker Creature
+	 * @return boolean
+	 */
 	@Override
 	public boolean isAttackable(Creature attacker)
 	{
@@ -165,6 +240,9 @@ public class DecoyInstance extends NpcInstance
 		return (owner != null) && owner.isAttackable(attacker);
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
@@ -176,6 +254,11 @@ public class DecoyInstance extends NpcInstance
 		super.onDelete();
 	}
 	
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
 	@Override
 	public void onAction(Player player, boolean shift)
 	{
@@ -190,6 +273,10 @@ public class DecoyInstance extends NpcInstance
 		}
 	}
 	
+	/**
+	 * Method getColRadius.
+	 * @return double
+	 */
 	@Override
 	public double getColRadius()
 	{
@@ -205,6 +292,10 @@ public class DecoyInstance extends NpcInstance
 		return player.getTemplate().getCollisionRadius();
 	}
 	
+	/**
+	 * Method getColHeight.
+	 * @return double
+	 */
 	@Override
 	public double getColHeight()
 	{
@@ -220,6 +311,12 @@ public class DecoyInstance extends NpcInstance
 		return player.getTemplate().getCollisionHeight();
 	}
 	
+	/**
+	 * Method addPacketList.
+	 * @param forPlayer Player
+	 * @param dropper Creature
+	 * @return List<L2GameServerPacket>
+	 */
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{
@@ -233,6 +330,10 @@ public class DecoyInstance extends NpcInstance
 		return list;
 	}
 	
+	/**
+	 * Method isInvul.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isInvul()
 	{

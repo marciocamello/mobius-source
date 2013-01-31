@@ -23,10 +23,21 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public abstract class L2GameClientPacket extends ReceivablePacket<GameClient>
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(L2GameClientPacket.class);
 	
+	/**
+	 * Method read.
+	 * @return boolean
+	 */
 	@Override
 	public final boolean read()
 	{
@@ -47,8 +58,16 @@ public abstract class L2GameClientPacket extends ReceivablePacket<GameClient>
 		return false;
 	}
 	
+	/**
+	 * Method readImpl.
+	 * @throws Exception
+	 */
 	protected abstract void readImpl() throws Exception;
 	
+	/**
+	 * Method run.
+	 * @see java.lang.Runnable#run()
+	 */
 	@Override
 	public final void run()
 	{
@@ -63,29 +82,54 @@ public abstract class L2GameClientPacket extends ReceivablePacket<GameClient>
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 * @throws Exception
+	 */
 	protected abstract void runImpl() throws Exception;
 	
+	/**
+	 * Method readS.
+	 * @param len int
+	 * @return String
+	 */
 	protected String readS(int len)
 	{
 		String ret = readS();
 		return ret.length() > len ? ret.substring(0, len) : ret;
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param packet L2GameServerPacket
+	 */
 	protected void sendPacket(L2GameServerPacket packet)
 	{
 		getClient().sendPacket(packet);
 	}
 	
+	/**
+	 * Method sendPacket.
+	 * @param packets L2GameServerPacket[]
+	 */
 	protected void sendPacket(L2GameServerPacket... packets)
 	{
 		getClient().sendPacket(packets);
 	}
 	
+	/**
+	 * Method sendPackets.
+	 * @param packets List<L2GameServerPacket>
+	 */
 	protected void sendPackets(List<L2GameServerPacket> packets)
 	{
 		getClient().sendPackets(packets);
 	}
 	
+	/**
+	 * Method getType.
+	 * @return String
+	 */
 	public String getType()
 	{
 		return "[C] " + getClass().getSimpleName();

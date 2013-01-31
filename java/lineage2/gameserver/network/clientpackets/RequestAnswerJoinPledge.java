@@ -27,16 +27,29 @@ import lineage2.gameserver.network.serverpackets.PledgeSkillList;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestAnswerJoinPledge extends L2GameClientPacket
 {
+	/**
+	 * Field _response.
+	 */
 	private int _response;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
 		_response = _buf.hasRemaining() ? readD() : 0;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

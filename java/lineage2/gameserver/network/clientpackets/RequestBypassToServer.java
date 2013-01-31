@@ -38,11 +38,24 @@ import lineage2.gameserver.scripts.Scripts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestBypassToServer extends L2GameClientPacket
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(RequestBypassToServer.class);
+	/**
+	 * Field bp.
+	 */
 	private DecodedBypass bp = null;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -53,6 +66,9 @@ public class RequestBypassToServer extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{
@@ -241,6 +257,10 @@ public class RequestBypassToServer extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method comeHere.
+	 * @param client GameClient
+	 */
 	private static void comeHere(GameClient client)
 	{
 		GameObject obj = client.getActiveChar().getTarget();
@@ -253,6 +273,11 @@ public class RequestBypassToServer extends L2GameClientPacket
 		}
 	}
 	
+	/**
+	 * Method playerHelp.
+	 * @param activeChar Player
+	 * @param path String
+	 */
 	private static void playerHelp(Player activeChar, String path)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(5);

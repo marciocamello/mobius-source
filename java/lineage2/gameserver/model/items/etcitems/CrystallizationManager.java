@@ -30,11 +30,24 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class CrystallizationManager
 {
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(CrystallizationManager.class);
+	/**
+	 * Field data.
+	 */
 	private static final Map<Grade, Map<Integer, FastList<CrystallizationItem>>> data = new HashMap<>();
 	
+	/**
+	 * Method load.
+	 */
 	public static void load()
 	{
 		_log.info("CrystallizationManager: Loading stone data...");
@@ -118,6 +131,11 @@ public class CrystallizationManager
 		_log.info("CrystallizationManager: Loaded " + data.size() + " variable...");
 	}
 	
+	/**
+	 * Method getProductsForItem.
+	 * @param item ItemInstance
+	 * @return FastList<CrystallizationItem>
+	 */
 	public static FastList<CrystallizationItem> getProductsForItem(ItemInstance item)
 	{
 		Map<Integer, FastList<CrystallizationItem>> temp = data.get(item.getTemplate().getCrystalType());
@@ -128,6 +146,11 @@ public class CrystallizationManager
 		return null;
 	}
 	
+	/**
+	 * Method isItemExistInTable.
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	public static boolean isItemExistInTable(ItemInstance item)
 	{
 		return data.get(item.getTemplate().getCrystalType()).containsKey(Integer.valueOf(item.getTemplate().getCrystalCount()));

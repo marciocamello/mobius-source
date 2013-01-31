@@ -19,12 +19,28 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class RequestDropItem extends L2GameClientPacket
 {
+	/**
+	 * Field _objectId.
+	 */
 	private int _objectId;
+	/**
+	 * Field _count.
+	 */
 	private long _count;
+	/**
+	 * Field _loc.
+	 */
 	private Location _loc;
 	
+	/**
+	 * Method readImpl.
+	 */
 	@Override
 	protected void readImpl()
 	{
@@ -33,6 +49,9 @@ public class RequestDropItem extends L2GameClientPacket
 		_loc = new Location(readD(), readD(), readD());
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
 	protected void runImpl()
 	{

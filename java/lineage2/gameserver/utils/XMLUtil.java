@@ -17,11 +17,24 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class XMLUtil
 {
+	/**
+	 * Field _log.
+	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(XMLUtil.class);
 	
+	/**
+	 * Method getAttributeValue.
+	 * @param n Node
+	 * @param item String
+	 * @return String
+	 */
 	public static String getAttributeValue(Node n, String item)
 	{
 		final Node d = n.getAttributes().getNamedItem(item);
@@ -37,6 +50,13 @@ public class XMLUtil
 		return val;
 	}
 	
+	/**
+	 * Method getAttributeBooleanValue.
+	 * @param n Node
+	 * @param item String
+	 * @param dflt boolean
+	 * @return boolean
+	 */
 	public static boolean getAttributeBooleanValue(Node n, String item, boolean dflt)
 	{
 		final Node d = n.getAttributes().getNamedItem(item);
@@ -52,6 +72,13 @@ public class XMLUtil
 		return Boolean.parseBoolean(val);
 	}
 	
+	/**
+	 * Method getAttributeIntValue.
+	 * @param n Node
+	 * @param item String
+	 * @param dflt int
+	 * @return int
+	 */
 	public static int getAttributeIntValue(Node n, String item, int dflt)
 	{
 		final Node d = n.getAttributes().getNamedItem(item);
@@ -67,6 +94,13 @@ public class XMLUtil
 		return Integer.parseInt(val);
 	}
 	
+	/**
+	 * Method getAttributeLongValue.
+	 * @param n Node
+	 * @param item String
+	 * @param dflt long
+	 * @return long
+	 */
 	public static long getAttributeLongValue(Node n, String item, long dflt)
 	{
 		final Node d = n.getAttributes().getNamedItem(item);

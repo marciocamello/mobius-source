@@ -14,17 +14,35 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExFishingEnd extends L2GameServerPacket
 {
+	/**
+	 * Field _charId.
+	 */
 	private final int _charId;
+	/**
+	 * Field _win.
+	 */
 	private final boolean _win;
 	
+	/**
+	 * Constructor for ExFishingEnd.
+	 * @param character Player
+	 * @param win boolean
+	 */
 	public ExFishingEnd(Player character, boolean win)
 	{
 		_charId = character.getObjectId();
 		_win = win;
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected final void writeImpl()
 	{

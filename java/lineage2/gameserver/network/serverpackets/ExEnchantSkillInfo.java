@@ -18,13 +18,34 @@ import java.util.List;
 import lineage2.gameserver.model.base.EnchantSkillLearn;
 import lineage2.gameserver.tables.SkillTreeTable;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExEnchantSkillInfo extends L2GameServerPacket
 {
+	/**
+	 * Field _routes.
+	 */
 	private final List<Integer> _routes;
+	/**
+	 * Field _level. Field _id.
+	 */
 	private final int _id, _level;
+	/**
+	 * Field _canAdd.
+	 */
 	private int _canAdd;
+	/**
+	 * Field canDecrease.
+	 */
 	private int canDecrease;
 	
+	/**
+	 * Constructor for ExEnchantSkillInfo.
+	 * @param id int
+	 * @param level int
+	 */
 	public ExEnchantSkillInfo(int id, int level)
 	{
 		_routes = new ArrayList<>();
@@ -54,11 +75,18 @@ public class ExEnchantSkillInfo extends L2GameServerPacket
 		}
 	}
 	
+	/**
+	 * Method addEnchantSkillDetail.
+	 * @param level int
+	 */
 	public void addEnchantSkillDetail(int level)
 	{
 		_routes.add(level);
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{

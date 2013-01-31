@@ -51,17 +51,33 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class PetInstance extends Summon
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Field _log.
+	 */
 	private static final Logger _log = LoggerFactory.getLogger(PetInstance.class);
+	/**
+	 * Field DELUXE_FOOD_FOR_STRIDER. (value is 5169)
+	 */
 	private static final int DELUXE_FOOD_FOR_STRIDER = 5169;
 	
+	/**
+	 * @author Mobius
+	 */
 	class FeedTask extends RunnableImpl
 	{
+		/**
+		 * Method runImpl.
+		 */
 		@Override
 		public void runImpl()
 		{
@@ -85,15 +101,46 @@ public class PetInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Field _controlItemObjId.
+	 */
 	private final int _controlItemObjId;
+	/**
+	 * Field _curFed.
+	 */
 	private int _curFed;
+	/**
+	 * Field _data.
+	 */
 	protected PetData _data;
+	/**
+	 * Field _feedTask.
+	 */
 	private Future<?> _feedTask;
+	/**
+	 * Field _inventory.
+	 */
 	protected PetInventory _inventory;
+	/**
+	 * Field _level.
+	 */
 	private int _level;
+	/**
+	 * Field _respawned.
+	 */
 	private boolean _respawned;
+	/**
+	 * Field lostExp.
+	 */
 	private int lostExp;
 	
+	/**
+	 * Method restore.
+	 * @param control ItemInstance
+	 * @param template NpcTemplate
+	 * @param owner Player
+	 * @return PetInstance
+	 */
 	public static final PetInstance restore(ItemInstance control, NpcTemplate template, Player owner)
 	{
 		PetInstance pet = null;
@@ -146,11 +193,27 @@ public class PetInstance extends Summon
 		return pet;
 	}
 	
+	/**
+	 * Constructor for PetInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param owner Player
+	 * @param control ItemInstance
+	 */
 	public PetInstance(int objectId, NpcTemplate template, Player owner, ItemInstance control)
 	{
 		this(objectId, template, owner, control, 0, 0);
 	}
 	
+	/**
+	 * Constructor for PetInstance.
+	 * @param objectId int
+	 * @param template NpcTemplate
+	 * @param owner Player
+	 * @param control ItemInstance
+	 * @param currentLevel int
+	 * @param exp long
+	 */
 	public PetInstance(int objectId, NpcTemplate template, Player owner, ItemInstance control, int currentLevel, long exp)
 	{
 		super(objectId, template, owner);
@@ -195,6 +258,9 @@ public class PetInstance extends Summon
 		_inventory = new PetInventory(this);
 	}
 	
+	/**
+	 * Method onSpawn.
+	 */
 	@Override
 	protected void onSpawn()
 	{
@@ -202,6 +268,9 @@ public class PetInstance extends Summon
 		startFeed(false);
 	}
 	
+	/**
+	 * Method onDespawn.
+	 */
 	@Override
 	protected void onDespawn()
 	{
@@ -209,6 +278,11 @@ public class PetInstance extends Summon
 		stopFeed();
 	}
 	
+	/**
+	 * Method tryFeedItem.
+	 * @param item ItemInstance
+	 * @return boolean
+	 */
 	public boolean tryFeedItem(ItemInstance item)
 	{
 		if (item == null)
@@ -233,6 +307,10 @@ public class PetInstance extends Summon
 		return true;
 	}
 	
+	/**
+	 * Method tryFeed.
+	 * @return boolean
+	 */
 	public boolean tryFeed()
 	{
 		ItemInstance food = getInventory().getItemByItemId(getFoodId());
@@ -243,6 +321,11 @@ public class PetInstance extends Summon
 		return tryFeedItem(food);
 	}
 	
+	/**
+	 * Method addExpAndSp.
+	 * @param addToExp long
+	 * @param addToSp long
+	 */
 	@Override
 	public void addExpAndSp(long addToExp, long addToSp)
 	{
@@ -287,12 +370,21 @@ public class PetInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Method consumeItem.
+	 * @param itemConsumeId int
+	 * @param itemCount long
+	 * @return boolean
+	 */
 	@Override
 	public boolean consumeItem(int itemConsumeId, long itemCount)
 	{
 		return getInventory().destroyItemByItemId(itemConsumeId, itemCount);
 	}
 	
+	/**
+	 * Method deathPenalty.
+	 */
 	private void deathPenalty()
 	{
 		if (isInZoneBattle())
@@ -305,6 +397,9 @@ public class PetInstance extends Summon
 		addExpAndSp(-lostExp, 0);
 	}
 	
+	/**
+	 * Method destroyControlItem.
+	 */
 	private void destroyControlItem()
 	{
 		Player owner = getPlayer();
@@ -335,6 +430,10 @@ public class PetInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
 	@Override
 	protected void onDeath(Creature killer)
 	{
@@ -350,6 +449,10 @@ public class PetInstance extends Summon
 		deathPenalty();
 	}
 	
+	/**
+	 * Method doPickupItem.
+	 * @param object GameObject
+	 */
 	@Override
 	public void doPickupItem(GameObject object)
 	{
@@ -417,12 +520,19 @@ public class PetInstance extends Summon
 		broadcastPickUpMsg(item);
 	}
 	
+	/**
+	 * Method doRevive.
+	 * @param percent double
+	 */
 	public void doRevive(double percent)
 	{
 		restoreExp(percent);
 		doRevive();
 	}
 	
+	/**
+	 * Method doRevive.
+	 */
 	@Override
 	public void doRevive()
 	{
@@ -432,24 +542,40 @@ public class PetInstance extends Summon
 		setRunning();
 	}
 	
+	/**
+	 * Method getAccuracy.
+	 * @return int
+	 */
 	@Override
 	public int getAccuracy()
 	{
 		return (int) calcStat(Stats.ACCURACY_COMBAT, _data.getAccuracy(), null, null);
 	}
 	
+	/**
+	 * Method getActiveWeaponInstance.
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance getActiveWeaponInstance()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getActiveWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	@Override
 	public WeaponTemplate getActiveWeaponItem()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getControlItem.
+	 * @return ItemInstance
+	 */
 	public ItemInstance getControlItem()
 	{
 		Player owner = getPlayer();
@@ -465,121 +591,209 @@ public class PetInstance extends Summon
 		return owner.getInventory().getItemByObjectId(item_obj_id);
 	}
 	
+	/**
+	 * Method getControlItemObjId.
+	 * @return int
+	 */
 	@Override
 	public int getControlItemObjId()
 	{
 		return _controlItemObjId;
 	}
 	
+	/**
+	 * Method getCriticalHit.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return int
+	 */
 	@Override
 	public int getCriticalHit(Creature target, Skill skill)
 	{
 		return (int) calcStat(Stats.CRITICAL_BASE, _data.getCritical(), target, skill);
 	}
 	
+	/**
+	 * Method getCurrentFed.
+	 * @return int
+	 */
 	@Override
 	public int getCurrentFed()
 	{
 		return _curFed;
 	}
 	
+	/**
+	 * Method getEvasionRate.
+	 * @param target Creature
+	 * @return int
+	 */
 	@Override
 	public int getEvasionRate(Creature target)
 	{
 		return (int) calcStat(Stats.EVASION_RATE, _data.getEvasion(), target, null);
 	}
 	
+	/**
+	 * Method getExpForNextLevel.
+	 * @return long
+	 */
 	@Override
 	public long getExpForNextLevel()
 	{
 		return PetDataTable.getInstance().getInfo(getNpcId(), _level + 1).getExp();
 	}
 	
+	/**
+	 * Method getExpForThisLevel.
+	 * @return long
+	 */
 	@Override
 	public long getExpForThisLevel()
 	{
 		return PetDataTable.getInstance().getInfo(getNpcId(), _level).getExp();
 	}
 	
+	/**
+	 * Method getFoodId.
+	 * @return int
+	 */
 	public int getFoodId()
 	{
 		return _data.getFoodId();
 	}
 	
+	/**
+	 * Method getAddFed.
+	 * @return int
+	 */
 	public int getAddFed()
 	{
 		return _data.getAddFed();
 	}
 	
+	/**
+	 * Method getInventory.
+	 * @return PetInventory
+	 */
 	@Override
 	public PetInventory getInventory()
 	{
 		return _inventory;
 	}
 	
+	/**
+	 * Method getWearedMask.
+	 * @return long
+	 */
 	@Override
 	public long getWearedMask()
 	{
 		return _inventory.getWearedMask();
 	}
 	
+	/**
+	 * Method getLevel.
+	 * @return int
+	 */
 	@Override
 	public final int getLevel()
 	{
 		return _level;
 	}
 	
+	/**
+	 * Method setLevel.
+	 * @param level int
+	 */
 	public void setLevel(int level)
 	{
 		_level = level;
 	}
 	
+	/**
+	 * Method getLevelMod.
+	 * @return double
+	 */
 	@Override
 	public double getLevelMod()
 	{
 		return (89. + getLevel()) / 100.0;
 	}
 	
+	/**
+	 * Method getMinLevel.
+	 * @return int
+	 */
 	public int getMinLevel()
 	{
 		return _data.getMinLevel();
 	}
 	
+	/**
+	 * Method getMaxExp.
+	 * @return long
+	 */
 	public long getMaxExp()
 	{
 		return PetDataTable.getInstance().getInfo(getNpcId(), Experience.getMaxLevel()).getExp();
 	}
 	
+	/**
+	 * Method getMaxFed.
+	 * @return int
+	 */
 	@Override
 	public int getMaxFed()
 	{
 		return _data.getFeedMax();
 	}
 	
+	/**
+	 * Method getMaxLoad.
+	 * @return int
+	 */
 	@Override
 	public int getMaxLoad()
 	{
 		return (int) calcStat(Stats.MAX_LOAD, _data.getMaxLoad(), null, null);
 	}
 	
+	/**
+	 * Method getInventoryLimit.
+	 * @return int
+	 */
 	@Override
 	public int getInventoryLimit()
 	{
 		return Config.ALT_PET_INVENTORY_LIMIT;
 	}
 	
+	/**
+	 * Method getMaxHp.
+	 * @return int
+	 */
 	@Override
 	public int getMaxHp()
 	{
 		return (int) calcStat(Stats.MAX_HP, _data.getHP(), null, null);
 	}
 	
+	/**
+	 * Method getMaxMp.
+	 * @return int
+	 */
 	@Override
 	public int getMaxMp()
 	{
 		return (int) calcStat(Stats.MAX_MP, _data.getMP(), null, null);
 	}
 	
+	/**
+	 * Method getPAtk.
+	 * @param target Creature
+	 * @return int
+	 */
 	@Override
 	public int getPAtk(Creature target)
 	{
@@ -587,6 +801,11 @@ public class PetInstance extends Summon
 		return (int) calcStat(Stats.POWER_ATTACK, _data.getPAtk() / mod, target, null);
 	}
 	
+	/**
+	 * Method getPDef.
+	 * @param target Creature
+	 * @return int
+	 */
 	@Override
 	public int getPDef(Creature target)
 	{
@@ -594,6 +813,12 @@ public class PetInstance extends Summon
 		return (int) calcStat(Stats.POWER_DEFENCE, _data.getPDef() / mod, target, null);
 	}
 	
+	/**
+	 * Method getMAtk.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return int
+	 */
 	@Override
 	public int getMAtk(Creature target, Skill skill)
 	{
@@ -603,6 +828,12 @@ public class PetInstance extends Summon
 		return (int) calcStat(Stats.MAGIC_ATTACK, _data.getMAtk() / mod, target, skill);
 	}
 	
+	/**
+	 * Method getMDef.
+	 * @param target Creature
+	 * @param skill Skill
+	 * @return int
+	 */
 	@Override
 	public int getMDef(Creature target, Skill skill)
 	{
@@ -610,48 +841,81 @@ public class PetInstance extends Summon
 		return (int) calcStat(Stats.MAGIC_DEFENCE, _data.getMDef() / mod, target, skill);
 	}
 	
+	/**
+	 * Method getPAtkSpd.
+	 * @return int
+	 */
 	@Override
 	public int getPAtkSpd()
 	{
 		return (int) calcStat(Stats.POWER_ATTACK_SPEED, calcStat(Stats.ATK_BASE, _data.getAtkSpeed(), null, null), null, null);
 	}
 	
+	/**
+	 * Method getMAtkSpd.
+	 * @return int
+	 */
 	@Override
 	public int getMAtkSpd()
 	{
 		return (int) calcStat(Stats.MAGIC_ATTACK_SPEED, _data.getCastSpeed(), null, null);
 	}
 	
+	/**
+	 * Method getRunSpeed.
+	 * @return int
+	 */
 	@Override
 	public int getRunSpeed()
 	{
 		return getSpeed(_data.getSpeed());
 	}
 	
+	/**
+	 * Method getSoulshotConsumeCount.
+	 * @return int
+	 */
 	@Override
 	public int getSoulshotConsumeCount()
 	{
 		return PetDataTable.getSoulshots(getNpcId());
 	}
 	
+	/**
+	 * Method getSpiritshotConsumeCount.
+	 * @return int
+	 */
 	@Override
 	public int getSpiritshotConsumeCount()
 	{
 		return PetDataTable.getSpiritshots(getNpcId());
 	}
 	
+	/**
+	 * Method getSecondaryWeaponInstance.
+	 * @return ItemInstance
+	 */
 	@Override
 	public ItemInstance getSecondaryWeaponInstance()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getSecondaryWeaponItem.
+	 * @return WeaponTemplate
+	 */
 	@Override
 	public WeaponTemplate getSecondaryWeaponItem()
 	{
 		return null;
 	}
 	
+	/**
+	 * Method getSkillLevel.
+	 * @param skillId int
+	 * @return int
+	 */
 	public int getSkillLevel(int skillId)
 	{
 		if ((_skills == null) || (_skills.get(skillId) == null))
@@ -662,29 +926,49 @@ public class PetInstance extends Summon
 		return lvl > 70 ? 7 + ((lvl - 70) / 5) : lvl / 10;
 	}
 	
+	/**
+	 * Method getSummonType.
+	 * @return int
+	 */
 	@Override
 	public int getSummonType()
 	{
 		return 2;
 	}
 	
+	/**
+	 * Method getTemplate.
+	 * @return NpcTemplate
+	 */
 	@Override
 	public NpcTemplate getTemplate()
 	{
 		return (NpcTemplate) _template;
 	}
 	
+	/**
+	 * Method isMountable.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isMountable()
 	{
 		return _data.isMountable();
 	}
 	
+	/**
+	 * Method isRespawned.
+	 * @return boolean
+	 */
 	public boolean isRespawned()
 	{
 		return _respawned;
 	}
 	
+	/**
+	 * Method restoreExp.
+	 * @param percent double
+	 */
 	public void restoreExp(double percent)
 	{
 		if (lostExp != 0)
@@ -694,22 +978,38 @@ public class PetInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Method setCurrentFed.
+	 * @param num int
+	 */
 	public void setCurrentFed(int num)
 	{
 		_curFed = Math.min(getMaxFed(), Math.max(0, num));
 	}
 	
+	/**
+	 * Method setRespawned.
+	 * @param respawned boolean
+	 */
 	public void setRespawned(boolean respawned)
 	{
 		_respawned = respawned;
 	}
 	
+	/**
+	 * Method setSp.
+	 * @param sp int
+	 */
 	@Override
 	public void setSp(int sp)
 	{
 		_sp = sp;
 	}
 	
+	/**
+	 * Method startFeed.
+	 * @param battleFeed boolean
+	 */
 	public void startFeed(boolean battleFeed)
 	{
 		boolean first = _feedTask == null;
@@ -729,6 +1029,9 @@ public class PetInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Method stopFeed.
+	 */
 	private void stopFeed()
 	{
 		if (_feedTask != null)
@@ -738,6 +1041,9 @@ public class PetInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Method store.
+	 */
 	public void store()
 	{
 		if ((getControlItemObjId() == 0) || (_exp == 0))
@@ -781,12 +1087,18 @@ public class PetInstance extends Summon
 		_respawned = true;
 	}
 	
+	/**
+	 * Method onDelete.
+	 */
 	@Override
 	protected void onDelete()
 	{
 		super.onDelete();
 	}
 	
+	/**
+	 * Method onDecay.
+	 */
 	@Override
 	protected void onDecay()
 	{
@@ -795,6 +1107,9 @@ public class PetInstance extends Summon
 		super.onDecay();
 	}
 	
+	/**
+	 * Method unSummon.
+	 */
 	@Override
 	public void unSummon()
 	{
@@ -804,12 +1119,19 @@ public class PetInstance extends Summon
 		super.unSummon();
 	}
 	
+	/**
+	 * Method getSummonPoint.
+	 * @return int
+	 */
 	@Override
 	public int getSummonPoint()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method updateControlItem.
+	 */
 	public void updateControlItem()
 	{
 		ItemInstance controlItem = getControlItem();
@@ -825,17 +1147,33 @@ public class PetInstance extends Summon
 		owner.sendPacket(new InventoryUpdate().addModifiedItem(controlItem));
 	}
 	
+	/**
+	 * Method updateData.
+	 */
 	private void updateData()
 	{
 		_data = PetDataTable.getInstance().getInfo(getTemplate().npcId, _level);
 	}
 	
+	/**
+	 * Method getExpPenalty.
+	 * @return double
+	 */
 	@Override
 	public double getExpPenalty()
 	{
 		return PetDataTable.getExpPenalty(getTemplate().npcId);
 	}
 	
+	/**
+	 * Method displayGiveDamageMessage.
+	 * @param target Creature
+	 * @param damage int
+	 * @param crit boolean
+	 * @param miss boolean
+	 * @param shld boolean
+	 * @param magic boolean
+	 */
 	@Override
 	public void displayGiveDamageMessage(Creature target, int damage, boolean crit, boolean miss, boolean shld, boolean magic)
 	{
@@ -854,6 +1192,11 @@ public class PetInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Method displayReceiveDamageMessage.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	public void displayReceiveDamageMessage(Creature attacker, int damage)
 	{
@@ -874,6 +1217,10 @@ public class PetInstance extends Summon
 		}
 	}
 	
+	/**
+	 * Method getFormId.
+	 * @return int
+	 */
 	@Override
 	public int getFormId()
 	{
@@ -900,23 +1247,39 @@ public class PetInstance extends Summon
 		return 0;
 	}
 	
+	/**
+	 * Method isPet.
+	 * @return boolean
+	 */
 	@Override
 	public boolean isPet()
 	{
 		return true;
 	}
 	
+	/**
+	 * Method isDefaultName.
+	 * @return boolean
+	 */
 	public boolean isDefaultName()
 	{
 		return StringUtils.isEmpty(_name) || getName().equalsIgnoreCase(getTemplate().name);
 	}
 	
+	/**
+	 * Method getSummonSkillId.
+	 * @return int
+	 */
 	@Override
 	public int getSummonSkillId()
 	{
 		return 0;
 	}
 	
+	/**
+	 * Method getSummonSkillLvl.
+	 * @return int
+	 */
 	@Override
 	public int getSummonSkillLvl()
 	{

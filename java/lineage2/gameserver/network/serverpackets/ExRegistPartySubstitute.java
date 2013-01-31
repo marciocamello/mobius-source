@@ -12,12 +12,22 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
 public class ExRegistPartySubstitute extends L2GameServerPacket
 {
+	/**
+	 * Constructor for ExRegistPartySubstitute.
+	 */
 	public ExRegistPartySubstitute()
 	{
 	}
 	
+	/**
+	 * Method writeImpl.
+	 */
 	@Override
 	protected void writeImpl()
 	{
