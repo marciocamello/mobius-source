@@ -25,6 +25,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.base.SummonType;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
+import lineage2.gameserver.model.instances.AgathionInstance;
 import lineage2.gameserver.model.instances.MerchantInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.SummonInstance;
@@ -145,6 +146,19 @@ public class SummonServitor extends Skill
 		{
 			case AGATHION:
 				activeChar.setAgathion(getNpcId());
+				//If have lifeTime this is a servitor agathion...
+				if (_lifeTime > 0)
+				{
+					Skill agatSkill = getFirstAddedSkill();
+					NpcTemplate agatTemplate = NpcHolder.getInstance().getTemplate(getNpcId());
+					AgathionInstance agat = new AgathionInstance(IdFactory.getInstance().getNextId(), agatTemplate, activeChar, _lifeTime, agatSkill, activeChar.getLoc());
+					agat.setReflection(activeChar.getReflection());
+					agat.spawnMe(activeChar.getLoc());
+					agat.setFollowTarget(activeChar);
+					agat.setIsInvul(true);
+					agat.setRunning();
+					ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(agat), _lifeTime);
+				}
 				break;
 			case TRAP:
 				Skill trapSkill = getFirstAddedSkill();

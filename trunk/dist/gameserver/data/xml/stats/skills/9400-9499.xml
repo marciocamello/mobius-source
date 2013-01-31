@@ -16,11 +16,11 @@
         <for>
             <effect count="1" name="Buff" stackOrder="9" stackType="pAtk" time="300" val="0">
                 <mul order="0x30" stat="pAtk" val="2"/>
-				 </effect>
-			</for>
-	  </skill>
+            </effect>
+        </for>
+    </skill>
 	<skill id="9405" levels="1" name="Herb with Mysterious Magic Power">
-	 <!-- M. Atk. is increased by 400% for 1 minute 30 seconds. -->
+    <!-- M. Atk. is increased by 400% for 1 minute 30 seconds. -->
 		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="100"/>
 		<set name="icon" val="icon.etc_magic_set_i00"/>
@@ -31,13 +31,13 @@
 		<set name="isHandler" val="true"/>
 		<set name="isHideUseMessage" val="true"/>
 		<for>
-				<effect count="1" name="Buff" time="90" val="0">
+            <effect count="1" name="Buff" time="90" val="0">
 				<mul order="0x30" stat="mAtk" val="5.0"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="9406" levels="1" name="Ingredient and Hardener Pouch - R">
-	 <!-- none -->
+    <!-- none -->
 		<set name="reuseDelay" val="2000"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -45,7 +45,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9407" levels="1" name="Release Seal on Agathion - Hye-jin Jang">
-	 <!-- Removes the seal of Agathion. -->
+    <!-- Removes the seal of Agathion. -->
 		<set name="hitTime" val="3000"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -53,7 +53,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9408" levels="1" name="Release Seal on Agathion - Hyuk Jang">
-	 <!-- Removes the seal of Agathion. -->
+    <!-- Removes the seal of Agathion. -->
 		<set name="hitTime" val="3000"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -61,7 +61,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9409" levels="1" name="Release Seal on Agathion - Sooro Kim">
-	 <!-- Removes the seal of Agathion. -->
+    <!-- Removes the seal of Agathion. -->
 		<set name="hitTime" val="3000"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -69,7 +69,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9410" levels="1" name="Release Seal on Agathion - Jaebum Park">
-	 <!-- Removes the seal of Agathion. -->
+    <!-- Removes the seal of Agathion. -->
 		<set name="hitTime" val="3000"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -77,7 +77,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9411" levels="1" name="Release Seal on Agathion - Shinyoung Kim">
-	 <!-- Removes the seal of Agathion. -->
+    <!-- Removes the seal of Agathion. -->
 		<set name="hitTime" val="3000"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -85,7 +85,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9412" levels="1" name="Agathion's Cute Trick - Hye-jin Jang">
-	 <!-- Watch the Agathion's cute trick. -->
+    <!-- Watch the Agathion's cute trick. -->
 		<set name="hitTime" val="3000"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -93,7 +93,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9413" levels="1" name="Agathion's Cute Trick - Hyuk Jang">
-	 <!-- Watch the Agathion's cute trick. -->
+    <!-- Watch the Agathion's cute trick. -->
 		<set name="hitTime" val="3799"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -101,7 +101,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9414" levels="1" name="Agathion's Cute Trick - Sooro Kim">
-	 <!-- Watch the Agathion's cute trick. -->
+    <!-- Watch the Agathion's cute trick. -->
 		<set name="hitTime" val="3400"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -109,7 +109,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9415" levels="1" name="Agathion's Cute Trick - Jaebum Park">
-	 <!-- Watch the Agathion's cute trick. -->
+    <!-- Watch the Agathion's cute trick. -->
 		<set name="hitTime" val="6199"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -117,7 +117,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9416" levels="1" name="Agathion's Cute Trick - Shinyoung Kim">
-	 <!-- Watch the Agathion's cute trick. -->
+    <!-- Watch the Agathion's cute trick. -->
 		<set name="hitTime" val="3700"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -125,154 +125,154 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9417" levels="1" name="Dimension Keeper's Blue Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9418" levels="1" name="Dimension Keeper's Red Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9419" levels="1" name="Dimension Keeper's Golden Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9420" levels="1" name="Dimension Traveler's Blue Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9421" levels="1" name="Dimension Traveler's Red Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9422" levels="1" name="Dimension Traveler's Golden Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9423" levels="1" name="Campaign Reward Pouch">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9424" levels="1" name="Campaign Reward Pouch">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9425" levels="1" name="Lv2 Giant Dye Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9426" levels="1" name="Lv2 Legendary Dye Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9427" levels="1" name="Lv2 Ancient Dye Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9428" levels="1" name="Lv3 Giant Dye Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9429" levels="1" name="Lv3 Legendary Dye Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9430" levels="1" name="Lv3 Ancient Dye Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9431" levels="1" name="Lv4 Giant Dye Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9432" levels="1" name="Lv4 Legendary Dye Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9433" levels="1" name="Lv4 Ancient Dye Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9434" levels="1" name="Lv5 Giant Dye Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9435" levels="1" name="Lv5 Legendary Dye Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9436" levels="1" name="Lv5 Ancient Dye Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9437" levels="1" name="Scroll of Escape: Village Box">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9438" levels="1" name="Letter Collector's Gift (8th Anniversary">
-	 <!-- For 2 hours, increases Atk. Spd. by 10%, Casting Spd. by 10%, Speed by 10, and Max HP and Max MP by 10%. -->
+    <!-- For 2 hours, increases Atk. Spd. by 10%, Casting Spd. by 10%, Speed by 10, and Max HP and Max MP by 10%. -->
 		<set name="reuseDelay" val="1800000"/>
 		<set name="icon" val="icon.shield_bread_i02"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -280,7 +280,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9439" levels="1" name="10,000 Individual Fame Scroll">
-	 <!-- 10,000 Individual Fame Replenish Scroll -->
+    <!-- 10,000 Individual Fame Replenish Scroll -->
 		<set name="reuseDelay" val="3000"/>
 		<set name="hitTime" val="200"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -289,7 +289,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9440" levels="1" name="50,000 Individual Fame Scroll">
-	 <!-- 50,000 Individual Fame Replenish Scroll -->
+    <!-- 50,000 Individual Fame Replenish Scroll -->
 		<set name="reuseDelay" val="3000"/>
 		<set name="hitTime" val="200"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -298,7 +298,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9441" levels="1" name="100,000 Individual Fame Scroll">
-	 <!-- 100,000 Individual Fame Replenish Scroll -->
+    <!-- 100,000 Individual Fame Replenish Scroll -->
 		<set name="reuseDelay" val="3000"/>
 		<set name="hitTime" val="200"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -307,7 +307,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9442" levels="1" name="Trowel">
-	 <!-- Collect flowers of fire. -->
+    <!-- Collect flowers of fire. -->
 		<set name="reuseDelay" val="6000"/>
 		<set name="hitTime" val="3000"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -316,7 +316,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9443" levels="1" name="Empty Bottle for Hot Spring Water">
-	 <!-- Collect hot spring water. -->
+    <!-- Collect hot spring water. -->
 		<set name="reuseDelay" val="6000"/>
 		<set name="hitTime" val="3000"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -325,21 +325,21 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9444" levels="1" name="Helping Seed">
-	 <!-- Summon the Helping Tree. -->
+    <!-- Summon the Helping Tree. -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9445" levels="1" name="Summon Stone">
-	 <!-- Summons Lanya. -->
+    <!-- Summons Lanya. -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9446" levels="1" name="Scroll of Escape - Hot Springs">
-	 <!-- none -->
+    <!-- none -->
 		<set name="hitTime" val="20000"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -347,7 +347,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9447" levels="1" name="Scroll of Escape - Forge of the Gods">
-	 <!-- none -->
+    <!-- none -->
 		<set name="hitTime" val="20000"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -355,7 +355,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9448" levels="1" name="Scroll of Escape - Isle of Prayer">
-	 <!-- none -->
+    <!-- none -->
 		<set name="hitTime" val="20000"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -363,7 +363,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9449" levels="1" name="Escape - Siege of Aden Area">
-	 <!-- none -->
+    <!-- none -->
 		<set name="hitTime" val="20000"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -371,7 +371,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9450" levels="1" name="Escape - Siege of Rune Area">
-	 <!-- none -->
+    <!-- none -->
 		<set name="hitTime" val="20000"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -379,49 +379,49 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9479" levels="1" name="Extra Pass">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9480" levels="1" name="Extra Pass">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9481" levels="1" name="Extra Pass">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9482" levels="1" name="Extra Pass">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9483" levels="1" name="Extra Pass">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9484" levels="1" name="Extra Pass">
-	 <!-- none -->
+    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9487" levels="1" name="Angel Cat's Blessing">
-	 <!-- Increases M. Atk. By 20%, P. Atk., P. Def., M. Def., Atk. Spd., Casting Spd., and Max HP/MP by 5%, and XP/SP gained through hunt by 30% for 60 minutes. -->
+    <!-- Increases M. Atk. By 20%, P. Atk., P. Def., M. Def., Atk. Spd., Casting Spd., and Max HP/MP by 5%, and XP/SP gained through hunt by 30% for 60 minutes. -->
 		<set name="reuseDelay" val="1800000"/>
 		<set name="icon" val="icon.skilltransform4"/>
 		<set name="target" val="TARGET_NONE"/>

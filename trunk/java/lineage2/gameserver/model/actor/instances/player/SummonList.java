@@ -141,6 +141,18 @@ public class SummonList implements Iterable<Summon>
 		_owner.autoShot();
 	}
 	
+	public void removeSummon(Summon summon)
+	{
+		if (summon.isServitor())
+		{
+			synchronized (_summonList)
+			{
+				_summonList.remove(summon.getObjectId());
+			}
+			_usedPoints -= summon.getSummonPoint();
+		}
+	}
+
 	/**
 	 * Method unsummonAll.
 	 * @param logout boolean
@@ -192,6 +204,11 @@ public class SummonList implements Iterable<Summon>
 	public int getUsedPoints()
 	{
 		return _usedPoints;
+	}
+	
+	public void updateUsedPoints(int value)
+	{
+		_usedPoints = value;
 	}
 	
 	/**
