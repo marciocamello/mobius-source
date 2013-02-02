@@ -18411,6 +18411,7 @@
 			<skill id="11762" level="1" cost="10000000" name="Balance Heal" min_level="85" />
 			<skill id="11763" level="1" cost="10000000" name="Radiant Purge" min_level="85" />
 			<skill id="11764" level="1" cost="50000000" name="Brilliant Purge" min_level="94" />
+			<skill id="11765" level="1" cost="10000000" name="Crystal Regeneration" min_level="85" />
 			<skill id="11765" level="2" cost="50000000" name="Crystal Regeneration" min_level="90" />
 			<skill id="11765" level="3" cost="50000000" name="Crystal Regeneration" min_level="95" />
 			<skill id="11765" level="4" cost="50000000" name="Crystal Regeneration" min_level="99" />
