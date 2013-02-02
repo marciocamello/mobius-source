@@ -18193,7 +18193,7 @@
 			<skill id="239" level="8" cost="0" name="Expertise R" min_level="85" />
 			<skill id="239" level="9" cost="0" name="Expertise R95" min_level="95" />
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
-			<skill id="8605" level="1" cost="10000000" name="Summon White Wing" min_level="85" />
+			<skill id="8606" level="1" cost="10000000" name="Summon Swift Melody" min_level="85" />
 		</class>
 		<class id="145">
 			<skill id="1937" level="1" cost="0" name="Wynn Aura" min_level="85" />
@@ -18352,7 +18352,7 @@
 			<skill id="239" level="8" cost="0" name="Expertise R" min_level="85" />
 			<skill id="239" level="9" cost="0" name="Expertise R95" min_level="95" />
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
-			<skill id="8606" level="1" cost="10000000" name="Summon Swift Melody" min_level="85" />
+			<skill id="8605" level="1" cost="10000000" name="Summon White Wing" min_level="85" />
 		</class>
 		<class id="146">
 			<skill id="11751" level="1" cost="10000000" name="Superior Weapon Mastery" min_level="85" />
