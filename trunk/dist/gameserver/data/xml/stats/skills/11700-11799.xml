@@ -263,10 +263,9 @@
 			<table name="#regMp">84 85 86 87 88 89 90 91 92 93 94 96</table>
 		</enchant1>
 		<for>
-			<effect count="1" name="Invulnerable" stackOrder="-1" stackType="Invulnerable" time="10" val="0" cancelOnAction="true" />			
-			<effect count="1" name="Transformation" time="10" val="10"/>
 			<effect count="10" name="HealOverTime" time="1" val="#regHp" />
 			<effect count="10" name="ManaHealOverTime" time="1" val="#regMp" />
+			<effect abnormal="dancestun" count="1" name="Petrification" stackOrder="-1" stackType="paralyze" time="10" val="0" />
 		</for>
 	</skill>
 	<skill id="11766" levels="8" name="Dark Veil">
