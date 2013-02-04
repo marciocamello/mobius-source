@@ -1649,7 +1649,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20017" name="Vuku Orc Fighter" title="">
+	<npc id="20017" name="Vuku Orc Warrior" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1927,7 +1927,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20020" name="Marsh Zombie Lord" title="">
+	<npc id="20020" name="Marsh Zombie Scout" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3111,7 +3111,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20031" name="Omen Beast" title="">
+	<npc id="20031" name="Onyx Beast" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3480,7 +3480,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20035" name="Tracker Skeleton" title="">
+	<npc id="20035" name="Skeleton Tracker" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3763,7 +3763,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20038" name="Venomous Spider" title="">
+	<npc id="20038" name="Giant Venomous Spider" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3875,7 +3875,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20039" name="Scavenger Wererat" title="">
+	<npc id="20039" name="Ratman Scavenger" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3991,7 +3991,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20040" name="Sukar Wererat" title="">
+	<npc id="20040" name="Sukar Ratman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4071,7 +4071,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20041" name="Tainted Zombie" title="">
+	<npc id="20041" name="Contortion of Insanity" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4149,7 +4149,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20042" name="Tracker Skeleton Leader" title="">
+	<npc id="20042" name="Skeleton Tracker Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4685,7 +4685,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20047" name="Sukar Wererat Leader" title="">
+	<npc id="20047" name="Sukar Ratman Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5483,7 +5483,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20055" name="Wandering Eye" title="">
+	<npc id="20055" name="Monster Eye Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5864,7 +5864,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20059" name="Hungry Eye" title="">
+	<npc id="20059" name="Monster Eye Patrol" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6597,7 +6597,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20066" name="Ol Mahum Captain" title="">
+	<npc id="20066" name="Ol Mahum Officer" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -9153,7 +9153,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20090" name="Noble Ant Leader" title="">
+	<npc id="20090" name="Noble Ant Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -9404,7 +9404,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20093" name="Orc Fighter" title="">
+	<npc id="20093" name="Orc Warrior" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -9515,7 +9515,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20094" name="Orc Marksman" title="">
+	<npc id="20094" name="Orc Sniper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -9838,7 +9838,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20098" name="Orc Fighter Leader" title="">
+	<npc id="20098" name="Orc Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

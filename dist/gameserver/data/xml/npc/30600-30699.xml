@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="30600" name="Newbie Guide" title="">
+	<npc id="30600" name="Newbie Helper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -48,7 +48,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30601" name="Newbie Guide" title="">
+	<npc id="30601" name="Newbie Helper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -94,7 +94,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30602" name="Newbie Guide" title="">
+	<npc id="30602" name="Newbie Helper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1243,7 +1243,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30631" name="Roderik" title="Warden">
+	<npc id="30631" name="Roderik" title="Guillotine Fortress Watchman">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1294,7 +1294,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30632" name="Endrigo" title="Warden">
+	<npc id="30632" name="Endrigo" title="Guillotine Fortress Watchman">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1392,7 +1392,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30634" name="Galatea" title="High Summoner">
+	<npc id="30634" name="Galatea" title="Head Summoner">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2475,7 +2475,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30657" name="Seresin" title="Cardinal ">
+	<npc id="30657" name="Seresin" title="Cardinal">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3372,7 +3372,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30676" name="Croop" title="Warehouse Chief ">
+	<npc id="30676" name="Croop" title="Warehouse Chief">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3629,7 +3629,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30681" name="Karia" title="High Prefect ">
+	<npc id="30681" name="Karia" title="High Prefect">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3676,7 +3676,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30682" name="Pekiron" title="Seer">
+	<npc id="30682" name="Pekiron" title="Priest">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3783,7 +3783,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30684" name="Viktor" title="Trader">
+	<npc id="30684" name="Viktor" title="Weapon Merchant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3830,7 +3830,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30685" name="Baxt" title="Warehouse Chief ">
+	<npc id="30685" name="Baxt" title="Warehouse Chief">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

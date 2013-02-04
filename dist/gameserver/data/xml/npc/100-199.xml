@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="100" name="Thomas D. Turkey" title="Misguided Holiday Scrooge">
+	<npc id="100" name="Thomas D. Turkey" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -90,7 +90,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="102" name="Santa's Helper" title="">
+	<npc id="102" name="Santa Trainee" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -136,7 +136,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="103" name="Holiday Santa" title="Happy Holidays!">
+	<npc id="103" name="Christmas Santa" title="Happy Holidays~">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -182,7 +182,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="104" name="Holiday Santa" title="Happy Holidays!">
+	<npc id="104" name="Christmas Santa" title="Happy Holidays~">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -228,7 +228,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="105" name="Holiday Sled" title="Happy Holidays!">
+	<npc id="105" name="Christmas Sled" title="Happy Holidays~">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -357,7 +357,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="108" name="Explosive Spirit of Fire" title="">
+	<npc id="108" name="Reckless Spirit of Fire" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -400,7 +400,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="109" name="Jack Sage" title="Eva's High Priest">
+	<npc id="109" name="Steve Shyagel" title="Eva's High Priest">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -529,7 +529,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="112" name="Warm Hearted Sno" title="Beginner Supporter">
+	<npc id="112" name="Friendly Sno" title="Beginner Supporter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -572,7 +572,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="113" name="Warm Hearted Sno" title="Beginner Supporter">
+	<npc id="113" name="Friendly Sno" title="Beginner Supporter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -615,7 +615,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="114" name="Warm Hearted Sno" title="Beginner Supporter">
+	<npc id="114" name="Friendly Sno" title="Beginner Supporter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -658,7 +658,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="115" name="Warm Hearted Sno" title="Beginner Supporter">
+	<npc id="115" name="Friendly Sno" title="Beginner Supporter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -701,7 +701,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="116" name="Warm Hearted Sno" title="Beginner Supporter">
+	<npc id="116" name="Friendly Sno" title="Beginner Supporter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -744,7 +744,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="117" name="Warm Hearted Sno" title="Beginner Supporter">
+	<npc id="117" name="Friendly Sno" title="Beginner Supporter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -787,7 +787,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="118" name="Wooldy" title="Halloween Children">
+	<npc id="118" name="Uldie" title="Halloween's Three Siblings">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -830,7 +830,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="119" name="Verdandi" title="Halloween Children">
+	<npc id="119" name="Belldandy" title="Halloween's Three Siblings">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -873,7 +873,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="120" name="Skooldy" title="Jack Game Trainer">
+	<npc id="120" name="Skooldie" title="Jack Game Trainer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -916,7 +916,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="121" name="Lucky Sky Lantern" title="">
+	<npc id="121" name="Lucky Lamp" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -959,7 +959,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="122" name="Ambience Sky Lantern" title="">
+	<npc id="122" name="Environment Lamp" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1002,7 +1002,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="123" name="Sway Sky Lantern" title="">
+	<npc id="123" name="Rolling Lamp" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1045,7 +1045,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="124" name="Comfort Sky Lantern" title="">
+	<npc id="124" name="Peace Lamp" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1260,7 +1260,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="129" name="White-Bearded Santa" title="Merry Christmas~">
+	<npc id="129" name="White-Bearded Santa" title="Happy Holidays~">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1778,7 +1778,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="141" name="Dimensional Door" title="Customer Joining">
+	<npc id="141" name="Dimensional Door" title="Customer Support">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1821,7 +1821,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="142" name="Dimensional Door" title="Customer Joining">
+	<npc id="142" name="Dimensional Door" title="Customer Support">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2095,7 +2095,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="148" name="Campfire" title="">
+	<npc id="148" name="Fire" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2138,7 +2138,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="149" name="Baby Rabbit" title="">
+	<npc id="149" name="Bad Bunny" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2181,7 +2181,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="150" name="Baby Rabbit Boss" title="">
+	<npc id="150" name="Bad Bunny Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2224,7 +2224,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="151" name="Gloomy Baby Rabbit" title="">
+	<npc id="151" name="Liverless Bunny" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2267,7 +2267,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="152" name="Gloomy Baby Rabbit Boss" title="">
+	<npc id="152" name="Liverless Bunny Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2439,7 +2439,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="156" name="Rabbit" title="">
+	<npc id="156" name="Big Liver Bunny" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2482,7 +2482,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="157" name="Rabbit Boss" title="">
+	<npc id="157" name="Big Liver Bunny Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

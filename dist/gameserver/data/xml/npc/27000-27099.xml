@@ -58,7 +58,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27002" name="Orc Fighter" title="">
+	<npc id="27002" name="Orc Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -608,7 +608,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="27018" name="Orc Warrior" title="">
+	<npc id="27018" name="Orc Lieutenant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -662,7 +662,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27019" name="Orc Warrior Leader" title="">
+	<npc id="27019" name="Orc Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1171,7 +1171,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27033" name="Lizardman Scout" title="Quest Monster">
+	<npc id="27033" name="Lizardman Lieutenant" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1228,7 +1228,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27034" name="Lizardman" title="Quest Monster">
+	<npc id="27034" name="Lizardman Soldier" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1402,7 +1402,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27037" name="Calpico's Goons" title="Quest Monster">
+	<npc id="27037" name="Calpico's Pawn" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1516,7 +1516,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27041" name="Baranka's Messenger" title="Quest Monster">
+	<npc id="27041" name="Varangka's Messenger" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1746,7 +1746,7 @@
 			<defence attribute="unholy" value="110" />
 		</attributes>
 	</npc>
-	<npc id="27045" name="Kuruka Ratman Leader" title="Quest Monster">
+	<npc id="27045" name="Kuruka Ratman Captain" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3335,7 +3335,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27080" name="Pashika Son Of Voltar" title="Quest Monster">
+	<npc id="27080" name="Pashika the Son Of Voltar" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3393,7 +3393,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27081" name="Vultus Son Of Voltar" title="Quest Monster">
+	<npc id="27081" name="Vultus the Son Of Voltar" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3451,7 +3451,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27082" name="Enku Orc Overlord" title="Quest Monster">
+	<npc id="27082" name="Enku Orc Prefect" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3567,7 +3567,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27086" name="Revenant of Tantos Chief" title="Quest Monster">
+	<npc id="27086" name="Revenant of Tantos Chieftain" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3738,7 +3738,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27090" name="Serpent Demon Kadesh" title="Quest Monster">
+	<npc id="27090" name="Evil Spirit Kadesh" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3795,7 +3795,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27092" name="Neer Bodyguard" title="Quest Monster">
+	<npc id="27092" name="Neer's Escort" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3968,7 +3968,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27095" name="Singing Flower Phantasm" title="Quest Monster">
+	<npc id="27095" name="Singing Flower of Phantasm" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4021,7 +4021,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27096" name="Singing Flower Nightmare" title="Quest Monster">
+	<npc id="27096" name="Singing Flower of Nightmare" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4074,7 +4074,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27097" name="Singing Flower Darkling" title="Quest Monster">
+	<npc id="27097" name="Singing Flower of Darkness" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

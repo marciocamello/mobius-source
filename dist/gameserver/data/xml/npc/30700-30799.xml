@@ -112,7 +112,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30702" name="Bernard" title="Guild President">
+	<npc id="30702" name="Bernard" title="Hunter Guild President">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -159,7 +159,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30703" name="Colin" title="Guild President">
+	<npc id="30703" name="Colin" title="Hunter Guild Member">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -206,7 +206,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30704" name="Garvarentz" title="High Prefect ">
+	<npc id="30704" name="Garvarentz" title="High Prefect">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -307,7 +307,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30706" name="Lazenby" title="Seer">
+	<npc id="30706" name="Lazenby" title="Priest">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1562,7 +1562,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30730" name="Jax" title="Bodyguard">
+	<npc id="30730" name="Jax" title="Escort">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1991,7 +1991,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30739" name="Keltir" title="Royal Servant ">
+	<npc id="30739" name="Keltir" title="Royal Servant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2037,7 +2037,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30740" name="Toad" title="Royal Servant ">
+	<npc id="30740" name="Toad" title="Royal Servant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2083,7 +2083,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30741" name="Rabbit" title="Royal Servant ">
+	<npc id="30741" name="Rabbit" title="Royal Servant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2221,7 +2221,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30744" name="Grey" title="Guild Member">
+	<npc id="30744" name="Grey" title="Hunter Guild Member">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2268,7 +2268,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30745" name="Tor" title="Guild Member">
+	<npc id="30745" name="Tor" title="Hunter Guild Member">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3545,7 +3545,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30772" name="Wilson" title="Clan Hall Gatekeeper">
+	<npc id="30772" name="Wilson" title="Clan Hall Manager">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

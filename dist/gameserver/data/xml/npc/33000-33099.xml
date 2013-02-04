@@ -148,7 +148,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="33003" name="Training camp Guide" title="">
+	<npc id="33003" name="Training Camp Guide" title="">
 		<!--  Need TODO -->
 		<set name="baseHpMax" value="2444.468" />
 		<set name="baseMAtkSpd" value="500" />
@@ -338,7 +338,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="33007" name="Drill Sergeant" title="Training Grounds">
+	<npc id="33007" name="Drill Sergeant" title="Basic Training Camp">
 		<set name="baseHpMax" value="7324" />
 		<set name="baseMAtkSpd" value="398" />
 		<set name="basePAtkSpd" value="299" />
@@ -1201,7 +1201,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="33025" name="Lumi" title="">
+	<npc id="33025" name="Rumi" title="">
 		<set name="baseHpMax" value="7324" />
 		<set name="baseMAtkSpd" value="398" />
 		<set name="basePAtkSpd" value="299" />
@@ -1590,7 +1590,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="33035" name="Moonbasa" title="">
+	<npc id="33035" name="Moombasa" title="">
 		<!--  Need TODO -->
 		<set name="baseHpMax" value="2444.468" />
 		<set name="baseMAtkSpd" value="500" />
@@ -1637,7 +1637,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="33036" name="Twilight Searcher" title="">
+	<npc id="33036" name="Dusk Searcher" title="">
 		<!--  Need TODO -->
 		<set name="baseHpMax" value="2444.468" />
 		<set name="baseMAtkSpd" value="500" />
@@ -1684,7 +1684,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="33037" name="Twilight Searcher" title="">
+	<npc id="33037" name="Dusk Searcher" title="">
 		<!--  Need TODO -->
 		<set name="baseHpMax" value="2444.468" />
 		<set name="baseMAtkSpd" value="500" />
@@ -1731,7 +1731,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="33038" name="Twilight Searcher" title="">
+	<npc id="33038" name="Dusk Searcher" title="">
 		<!--  Need TODO -->
 		<set name="baseHpMax" value="2444.468" />
 		<set name="baseMAtkSpd" value="500" />
@@ -1778,7 +1778,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="33039" name="Twilight Searcher" title="">
+	<npc id="33039" name="Dusk Searcher" title="">
 		<!--  Need TODO -->
 		<set name="baseHpMax" value="2444.468" />
 		<set name="baseMAtkSpd" value="500" />
@@ -1825,7 +1825,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="33040" name="Twilight Searcher" title="">
+	<npc id="33040" name="Dusk Searcher" title="">
 		<!--  Need TODO -->
 		<set name="baseHpMax" value="2444.468" />
 		<set name="baseMAtkSpd" value="500" />
@@ -4457,7 +4457,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="33096" name="" title="">
+	<npc id="33096" name="Encounter Generator" title="Encounter Generator">
 		<!--  Need TODO -->
 		<set name="baseHpMax" value="2444.468" />
 		<set name="baseMAtkSpd" value="500" />

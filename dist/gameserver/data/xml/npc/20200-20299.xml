@@ -235,7 +235,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20202" name="Dead Seeker" title="">
+	<npc id="20202" name="Corpse Seeker" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1008,7 +1008,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20209" name="Ol Mahum Marksman" title="">
+	<npc id="20209" name="Ol Mahum Sniper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1119,7 +1119,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20210" name="Ol Mahum Sergeant" title="">
+	<npc id="20210" name="Ol Mahum Lieutenant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3122,7 +3122,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20227" name="Horror Mist Ripper" title="">
+	<npc id="20227" name="Mist Horror Ripper" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3346,7 +3346,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20229" name="Stinger Wasp" title="">
+	<npc id="20229" name="Weird Wasp" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4904,7 +4904,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20244" name="Malruk Succubus" title="">
+	<npc id="20244" name="Maluk Succubus" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4994,7 +4994,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="20245" name="Malruk Succubus Turen" title="">
+	<npc id="20245" name="Maluk Succubus Turen" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6226,7 +6226,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20259" name="Batur Orc Overlord" title="">
+	<npc id="20259" name="Batur Orc Prefect" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6285,7 +6285,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20260" name="Orc Champion" title="">
+	<npc id="20260" name="Orc Hero" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6972,7 +6972,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20270" name="Breka Orc Overlord" title="">
+	<npc id="20270" name="Breka Orc Prefect" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7829,7 +7829,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20283" name="Malruk Succubus" title="">
+	<npc id="20283" name="Maluk Succubus" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -7887,7 +7887,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="20284" name="Malruk Succubus Turen" title="">
+	<npc id="20284" name="Maluk Succubus Turen" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -8114,7 +8114,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20291" name="Enku Orc Champion" title="">
+	<npc id="20291" name="Enku Orc Hero" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8579,7 +8579,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20297" name="Virud Lizardman Shaman " title="">
+	<npc id="20297" name="Virud Lizardman Shaman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -8637,7 +8637,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20298" name="Virud Lizardman Shaman " title="">
+	<npc id="20298" name="Virud Lizardman Shaman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />

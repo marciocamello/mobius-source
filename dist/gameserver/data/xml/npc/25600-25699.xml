@@ -1894,7 +1894,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="25627" name="Mutant Bird" title="Subordinate of King">
+	<npc id="25627" name="Mutant Bird" title="King's Subordinate">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1954,7 +1954,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="25628" name="Dra Hawk" title="Subordinate of King">
+	<npc id="25628" name="Dra Hawk" title="King's Subordinate">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2254,7 +2254,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="25633" name="Elite Rider" title="Valdstone's Elites">
+	<npc id="25633" name="Elite Rider" title="Valdstone's Escort">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2965,7 +2965,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="25642" name="Yehan Jaxsibhan" title="Dark Guardian">
+	<npc id="25642" name="Yehan Jaxsibhan" title="Black Guardian">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -4871,7 +4871,7 @@
 			<defence attribute="unholy" value="180" />
 		</attributes>
 	</npc>
-	<npc id="25667" name="Cannibalistic Stakato Chief" title="Shadow of Violence">
+	<npc id="25667" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4944,7 +4944,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="25668" name="Cannibalistic Stakato Chief" title="Shadow of Violence">
+	<npc id="25668" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5015,7 +5015,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="25669" name="Cannibalistic Stakato Chief" title="Shadow of Violence">
+	<npc id="25669" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5086,7 +5086,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="25670" name="Cannibalistic Stakato Chief" title="Shadow of Violence">
+	<npc id="25670" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5443,7 +5443,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="25675" name="Guard of Gwindorr" title="Raid Fighter">
+	<npc id="25675" name="Gwindorr's Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5502,7 +5502,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="25676" name="Follower of Gwindorr" title="Raid Fighter">
+	<npc id="25676" name="Gwindorr's Follower" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5649,7 +5649,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="25678" name="Sprite of Gildor" title="Raid Fighter">
+	<npc id="25678" name="Gildor's Spirit" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5708,7 +5708,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="25679" name="Guardian of Gildor" title="Raid Fighter">
+	<npc id="25679" name="Gildor's Guardian" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6165,7 +6165,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="25685" name="Utenus's Wizard" title="Raid Fighter">
+	<npc id="25685" name="Utenus' Wizard" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6230,7 +6230,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="25686" name="Utenus's Guard" title="Raid Fighter">
+	<npc id="25686" name="Utenus' Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

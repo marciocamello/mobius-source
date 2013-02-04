@@ -1130,7 +1130,7 @@
 			<defence attribute="unholy" value="370" />
 		</attributes>
 	</npc>
-	<npc id="29120" name="Beleth Camera 1" title="">
+	<npc id="29120" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1173,7 +1173,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29121" name="Beleth Camera 2" title="">
+	<npc id="29121" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1216,7 +1216,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29122" name="Beleth Camera 3" title="">
+	<npc id="29122" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1259,7 +1259,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29123" name="Beleth Camera 4" title="">
+	<npc id="29123" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1302,7 +1302,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29124" name="Beleth Camera 5" title="">
+	<npc id="29124" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1345,7 +1345,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29125" name="Beleth Camera 6" title="">
+	<npc id="29125" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1392,7 +1392,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29126" name="Beleth Presentation Incarnation 1" title="">
+	<npc id="29126" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="80" />
@@ -1435,7 +1435,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29127" name="Beleth Presentation Incarnation 2" title="">
+	<npc id="29127" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="80" />
@@ -1478,7 +1478,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29128" name="Beleth Presentation Elf" title="">
+	<npc id="29128" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1525,7 +1525,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29129" name="Lost Captain" title="">
+	<npc id="29129" name="Lost Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1726,7 +1726,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29132" name="Lost Captain" title="">
+	<npc id="29132" name="Lost Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1931,7 +1931,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29135" name="Lost Captain" title="">
+	<npc id="29135" name="Lost Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2131,7 +2131,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29138" name="Lost Captain" title="">
+	<npc id="29138" name="Lost Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2338,7 +2338,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29141" name="Lost Captain" title="">
+	<npc id="29141" name="Lost Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2535,7 +2535,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29144" name="Lost Captain" title="">
+	<npc id="29144" name="Lost Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -2746,7 +2746,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="29147" name="Lost Captain" title="">
+	<npc id="29147" name="Lost Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2954,7 +2954,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="29150" name="Ekimus" title="Lord of Immortality">
+	<npc id="29150" name="Ekimus" title="Immortal Lord">
 		<set name="aggroRange" value="900" />
 		<set name="ai_type" value="seedofinfinity.Ekimus" />
 		<set name="baseAtkRange" value="40" />
@@ -3578,7 +3578,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29162" name="Soldiers of Bravery" title="Tiat's Bodyguards">
+	<npc id="29162" name="Soldiers of Bravery" title="Tiat's Escort">
 		<set name="aggroRange" value="800" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="80" />
@@ -4148,7 +4148,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29173" name="Tiat Priest" title="">
+	<npc id="29173" name="Priest Tiat" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4191,7 +4191,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29174" name="Tiat Priest" title="">
+	<npc id="29174" name="Priest Tiat" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -5185,7 +5185,7 @@
 			<defence attribute="unholy" value="250" />
 		</attributes>
 	</npc>
-	<npc id="29186" name="Balor" title="Chief Guard">
+	<npc id="29186" name="Baylor" title="Warden">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -5295,7 +5295,7 @@
 			<defence attribute="unholy" value="220" />
 		</attributes>
 	</npc>
-	<npc id="29188" name="Crystal Golem" title="">
+	<npc id="29188" name="Crystalline Golem" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -5340,7 +5340,7 @@
 			<defence attribute="unholy" value="220" />
 		</attributes>
 	</npc>
-	<npc id="29189" name="Crystal Golem" title="">
+	<npc id="29189" name="Crystalline Golem" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -5447,7 +5447,7 @@
 			<defence attribute="unholy" value="220" />
 		</attributes>
 	</npc>
-	<npc id="29191" name="Октавис" title="">
+	<npc id="29191" name="Octavis" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="Fighter"/>
         <set name="baseAtkRange" value="40"/>
@@ -5571,7 +5571,7 @@
 			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
-    <npc id="29193" name="Октавис" title="">
+    <npc id="29193" name="Octavis" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -5763,7 +5763,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29194" name="Октавис" title="">
+    <npc id="29194" name="Octavis" title="">
         <set name="aggroRange" value="500"/>
         <set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="81.0"/>
@@ -5888,7 +5888,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29195" name="Истхина" title="Истребитель">
+    <npc id="29195" name="Istina" title="Queen of Annihilation">
         <set name="aggroRange" value="500"/>
         <set name="collision_radius" value="100.0"/>
 		<set name="collision_height" value="111.3"/>
@@ -6011,7 +6011,7 @@
             <!--Защита Воды-->
         </skills>
     </npc>
-    <npc id="29196" name="Истхина" title="Истребитель">
+    <npc id="29196" name="Istina" title="Queen of Annihilation">
         <set name="aggroRange" value="500"/>
         <set name="collision_radius" value="100.0"/>
 		<set name="collision_height" value="135.0"/>
@@ -6092,7 +6092,7 @@
 		</group>
 	</rewardlist>
     </npc>
-    <npc id="29197" name="Земляной Червь Траскен" title="Врата Ада">
+    <npc id="29197" name="Earth Wyrm Trasken" title="Hell's Gate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="Fighter"/>
         <set name="baseAtkRange" value="40"/>
@@ -6144,7 +6144,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29198" name="Щупальца" title="">
+    <npc id="29198" name="Tentacle" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -6202,7 +6202,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29199" name="Огромная Щупальца" title="">
+    <npc id="29199" name="Giant Tentacle" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>

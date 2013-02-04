@@ -392,7 +392,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="16020" name="Tame Tiny Baby Buffalo" title="">
+	<npc id="16020" name="Trained Tiny Baby Buffalo" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -484,7 +484,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="16022" name="Tame Tiny Baby Cougar" title="">
+	<npc id="16022" name="Trained Tiny Baby Cougar" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -576,7 +576,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="16024" name="Tame Tiny Baby Kookaburra" title="">
+	<npc id="16024" name="Trained Tiny Baby Kookaburra" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -622,7 +622,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="16025" name="Great Wolf" title="">
+	<npc id="16025" name="Great Black Wolf" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -843,7 +843,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="16030" name="Great Wolf" title="">
+	<npc id="16030" name="Great Black Wolf" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2230,7 +2230,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="16063" name="Saerom" title="">
+	<npc id="16063" name="Neolithica" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2574,7 +2574,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="16071" name="Maguen" title="">
+	<npc id="16071" name="Wild Maguen" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2965,7 +2965,7 @@
 		</attributes>
 	</npc>
 	
-		<npc id="16080" name="Фея Магмельд" title="">
+		<npc id="16080" name="Magmeld Fairy" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3012,7 +3012,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="16081" name="Фея Жизни" title="">
+	<npc id="16081" name="Fairy of Life" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3059,7 +3059,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="16082" name="Дух Терси" title="">
+	<npc id="16082" name="Tersi's Spirit" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>

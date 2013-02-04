@@ -2548,7 +2548,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18545" name="Ancient Experiment" title="Event Monster">
+	<npc id="18545" name="Ancient Giants' Experiment" title="Event Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2627,7 +2627,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18546" name="Ancient Experiment" title="Event Monster">
+	<npc id="18546" name="Ancient Giants' Experiment" title="Event Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2707,7 +2707,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18547" name="Ancient Experiment" title="Event Monster">
+	<npc id="18547" name="Ancient Giants' Experiment" title="Event Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2784,7 +2784,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18548" name="Ancient Experiment" title="">
+	<npc id="18548" name="Ancient Giants' Experiment" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2863,7 +2863,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18549" name="Ancient Experiment" title="">
+	<npc id="18549" name="Ancient Giants' Experiment" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3455,7 +3455,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18556" name="Follower of Ariosh" title="">
+	<npc id="18556" name="Ariosh's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3747,7 +3747,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18560" name="Follower of Flouros" title="">
+	<npc id="18560" name="Flouros's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3964,7 +3964,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18563" name="Follower of Otis" title="">
+	<npc id="18563" name="Otis' Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4257,7 +4257,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18567" name="Follower of Abigore" title="">
+	<npc id="18567" name="Abigore's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4403,7 +4403,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18569" name="Follower of Montagnar" title="">
+	<npc id="18569" name="Montagnar's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Kama56Minion" />
 		<set name="baseAtkRange" value="40" />
@@ -4625,7 +4625,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18572" name="Follower of Storace" title="">
+	<npc id="18572" name="Storace's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Kama63Minion" />
 		<set name="baseAtkRange" value="40" />
@@ -4772,7 +4772,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18574" name="Follower of Bilette" title="">
+	<npc id="18574" name="Bilette's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4922,7 +4922,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18576" name="Follower of Tamuze" title="">
+	<npc id="18576" name="Tamuze's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -5061,7 +5061,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18578" name="Follower of Allosce" title="">
+	<npc id="18578" name="Allosce's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />

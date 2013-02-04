@@ -85,7 +85,7 @@
 			<defence attribute="unholy" value="140" />
 		</attributes>
 	</npc>
-	<npc id="18601" name="Kratei's Watcher" title="">
+	<npc id="18601" name="Kratei's Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="KrateisCubeWatcherRed" />
 		<set name="baseAtkRange" value="40" />
@@ -139,7 +139,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18602" name="Kratei's Watcher" title="">
+	<npc id="18602" name="Kratei's Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="KrateisCubeWatcherBlue" />
 		<set name="baseAtkRange" value="40" />
@@ -2201,7 +2201,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18634" name="Lematan's Follower" title="">
+	<npc id="18634" name="Lematan's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3078,7 +3078,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18646" name="Varka Silenos Officer" title="">
+	<npc id="18646" name="Varka Silenos Sergeant" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3222,7 +3222,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18648" name="Varka Silenos Seer" title="">
+	<npc id="18648" name="Varka Silenos Priest" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -3374,7 +3374,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18650" name="Varka Silenos General" title="">
+	<npc id="18650" name="Varka Silenos Officer" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3519,7 +3519,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18652" name="Varka Silenos Great Seer" title="">
+	<npc id="18652" name="Varka Silenos Grand Priest" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -3594,7 +3594,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18653" name="Varka's Elite Guard" title="">
+	<npc id="18653" name="Varka's Elite Escort" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3745,7 +3745,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18655" name="Varka's Head Guard" title="">
+	<npc id="18655" name="Varka's Chief Escort" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3821,7 +3821,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18656" name="Varka's Head Magus" title="">
+	<npc id="18656" name="Varka's Chief Magus" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3897,7 +3897,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18657" name="Prophet Guard" title="">
+	<npc id="18657" name="Prophet's Royal Guard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -3973,7 +3973,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18658" name="Disciple of Prophet" title="">
+	<npc id="18658" name="Prophet's Disciple" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -4322,7 +4322,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18664" name="Lucky Pig" title="">
+	<npc id="18664" name="Lucky Pig" title="The Spirit of Fortune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="FortuneBug" />
 		<set name="baseAtkRange" value="40" />
@@ -4368,7 +4368,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18665" name="Lucky Pig" title="">
+	<npc id="18665" name="Lucky Pig" title="The Spirit of Fortune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="FortuneBug" />
 		<set name="baseAtkRange" value="40" />
@@ -4414,7 +4414,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18666" name="Lucky Pig" title="">
+	<npc id="18666" name="Lucky Pig" title="The Spirit of Fortune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="FortuneBug" />
 		<set name="baseAtkRange" value="40" />
@@ -4855,7 +4855,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18676" name="Block-Carrying GIrl" title="">
+	<npc id="18676" name="Block-Carrying Girl" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -5133,7 +5133,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18682" name="Energy Seed - Divinity" title="">
+	<npc id="18682" name="Energy Seed - Holy" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -5181,7 +5181,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18683" name="Energy Seed - Darkness" title="">
+	<npc id="18683" name="Energy Seed - Dark" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -5688,7 +5688,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18693" name="Treasure Box of the Ancient Giants" title="">
+	<npc id="18693" name="Treasure Chest of Ancient Times" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -5734,7 +5734,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18694" name="Treasure Box Guard" title="">
+	<npc id="18694" name="Treasure Chest Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -5784,7 +5784,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="18695" name="Treasure Box Guard" title="">
+	<npc id="18695" name="Treasure Chest Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

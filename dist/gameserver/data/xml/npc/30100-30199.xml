@@ -1313,7 +1313,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30129" name="Mitraell" title="Hierarch ">
+	<npc id="30129" name="Mitraell" title="Brown Elf Chief">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1548,7 +1548,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30134" name="Teleport Device" title="Gatekeeper">
+	<npc id="30134" name="Teleport Device" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1905,7 +1905,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30141" name="Talloth" title="Tetrarch ">
+	<npc id="30141" name="Talloth" title="Heirarch">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2118,7 +2118,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30146" name="Teleport Device" title="Gatekeeper">
+	<npc id="30146" name="Teleport Device" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2518,7 +2518,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30154" name="Asterios" title="Hierarch ">
+	<npc id="30154" name="Asterios" title="Hierarch">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2565,7 +2565,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30155" name="Ellenia" title="Master">
+	<npc id="30155" name="Ellenia" title="Grand Master">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2621,7 +2621,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30156" name="Cobendell" title="Master">
+	<npc id="30156" name="Esrandell" title="Master">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2730,7 +2730,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30158" name="Esrandell" title="Magister">
+	<npc id="30158" name="Esrandell" title="Grand Magister">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2837,7 +2837,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30163" name="Rex" title="Trader">
+	<npc id="30163" name="Rex" title="Weapon Merchant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2884,7 +2884,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30164" name="Ian" title="Trader">
+	<npc id="30164" name="Ian" title="Armor Merchant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2931,7 +2931,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30165" name="Ralford" title="Trader">
+	<npc id="30165" name="Ralford" title="Accessory Merchant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

@@ -247,7 +247,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29004" name="Guard Ant" title="">
+	<npc id="29004" name="Escort Ant" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1019,7 +1019,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29015" name="Raikel" title="">
+	<npc id="29015" name="Richard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1080,7 +1080,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29016" name="Raikel Leos" title="">
+	<npc id="29016" name="Richard Leos" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1895,7 +1895,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="29024" name="Vale master" title="">
+	<npc id="29024" name="Veil Master" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2133,7 +2133,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="29028" name="Valakas" title="">
+	<npc id="29028" name="Valakas" title="Fire Dragon">
 		<set name="aggroRange" value="10000" />
 		<set name="ai_type" value="Valakas" />
 		<set name="baseAtkRange" value="40" />
@@ -2292,7 +2292,7 @@
 			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
-	<npc id="29029" name="Elderly Lavasaurus" title="Family of Valakas">
+	<npc id="29029" name="Lavasaurus Alpha" title="">
 		<set name="aggroRange" value="1200" />
 		<set name="ai_type" value="freya.ValakasMinion" />
 		<set name="baseAtkRange" value="1100" />
@@ -2977,7 +2977,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29040" name="Wings of Flame Ixion" title="Gatekeeper of Valakas">
+	<npc id="29040" name="Wings of Flame, Ixion" title="Gatekeeper of Valakas">
 		<set name="aggroRange" value="1500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3799,7 +3799,7 @@
 			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
-	<npc id="29052" name=" " title="">
+	<npc id="29052" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3855,7 +3855,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29053" name=" " title="">
+	<npc id="29053" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3912,7 +3912,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29054" name="Venom" title="Triol's Leader">
+	<npc id="29054" name="Benom" title="Triol's Leader">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.castle.Venom" />
 		<set name="baseAtkRange" value="40" />
@@ -4140,7 +4140,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29057" name="Sirra's Page" title="Raid Fighter">
+	<npc id="29057" name="Sirra's Servant" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4323,7 +4323,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29060" name="Captain of the Ice Queen's Royal Guard" title="Raid Boss">
+	<npc id="29060" name="Ice Queen's Escort Captain" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5266,7 +5266,7 @@
 			<defence attribute="unholy" value="50" />
 		</attributes>
 	</npc>
-	<npc id="29068" name="Antharas" title="">
+	<npc id="29068" name="Antharas" title="Earth Dragon">
 		<set name="aggroRange" value="10000" />
 		<set name="ai_type" value="Antharas" />
 		<set name="baseAtkRange" value="40" />
@@ -6976,7 +6976,7 @@
 			<defence attribute="holy" value="71" />
 		</attributes>
 	</npc>
-	<npc id="29097" name="Splendor Disciple" title="Raid Fighter">
+	<npc id="29097" name="Disciple of Splendor " title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7040,7 +7040,7 @@
 			<defence attribute="holy" value="71" />
 		</attributes>
 	</npc>
-	<npc id="29098" name="Splendor Worshiper" title="Raid Fighter">
+	<npc id="29098" name="Worshiper of Splendor" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

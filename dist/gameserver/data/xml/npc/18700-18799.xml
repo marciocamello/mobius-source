@@ -3927,7 +3927,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18782" name="Zealot of Shilen" title="">
+	<npc id="18782" name="Shilen's Zealot" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4091,7 +4091,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="18785" name="Defeated Troops White Dragon Leader" title="">
+	<npc id="18785" name="Defeated Troops White Dragon Captain" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4213,7 +4213,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="18787" name="Defeated Troops Magic Leader" title="">
+	<npc id="18787" name="Defeated Troops Wizard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4270,7 +4270,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="18788" name="Defeated Troops Magician" title="">
+	<npc id="18788" name="Defeated Troops Wizard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4327,7 +4327,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="18789" name="Defeated Troops Magic Soldier" title="">
+	<npc id="18789" name="Defeated Troops Wizard Soldier" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />

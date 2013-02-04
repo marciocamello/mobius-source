@@ -608,7 +608,7 @@
 		</skills>
 	</npc>
 	<!--ru name: Смотритель Лабиринта-->
-	<npc id="25706" name="Lost Watcher" title="">
+	<npc id="25706" name="Lost Watchman" title="">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -688,7 +688,7 @@
 		<faction name="abyss_clan" range="1000"/>
 	</npc>
 	<!--ru name: Смотритель Лабиринта-->
-	<npc id="25707" name="Lost Watcher" title="">
+	<npc id="25707" name="Lost Watchman" title="">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -935,7 +935,7 @@
 		</skills>
 	</npc>
 	<!--ru name: Начальник Стражи Лабиринта-->
-	<npc id="25710" name="Lost Captain" title="">
+	<npc id="25710" name="Lost Guard Captain" title="">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -1216,7 +1216,7 @@
 	</npc>
 	<!--ru title: Королева Площади-->
 	<!--ru name: Дарнель-->
-	<npc id="25713" name="Darnel" title="Square">
+	<npc id="25713" name="Darnel" title="Torture Maiden">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -6258,7 +6258,7 @@
 	</npc>
 	<!--ru title: Сад Афроса-->
 	<!--ru name: Гвардеец-->
-	<npc id="25776" name="Court Guard" title="Apherus Garden">
+	<npc id="25776" name="Royal Guard" title="Apherus Garden">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -6408,7 +6408,7 @@
 	</npc>
 	<!--ru title: Сад Афроса-->
 	<!--ru name: Охранник-->
-	<npc id="25778" name="Sentry" title="Apherus Garden">
+	<npc id="25778" name="Escort" title="Apherus Garden">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -7310,7 +7310,7 @@
 	</npc>
 	<!--ru title: Миньон Рачихиоса-->
 	<!--ru name: Преториаский Гвардеец-->
-	<npc id="25790" name="Royal Guard Member" title="Lachikios Subordinate">
+	<npc id="25790" name="Escort" title="Lachikios Subordinate">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -7398,7 +7398,7 @@
 	</npc>
 	<!--ru title: Миньон Рачихиоса-->
 	<!--ru name: Преториаский Гвардеец-->
-	<npc id="25791" name="Royal Guard Member" title="Lachikios Subordinate">
+	<npc id="25791" name="Escort" title="Lachikios Subordinate">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -8010,7 +8010,7 @@
 	</npc>
 	<!--ru title: Верховный Судья-->
 	<!--ru name: Михаэль-->
-	<npc id="25799" name="Michaela" title="Grand Arbitrator">
+	<npc id="25799" name="Michaela" title="Grand Judge">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>

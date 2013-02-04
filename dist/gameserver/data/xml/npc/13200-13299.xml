@@ -44,7 +44,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13201" name="Guards of the Dawn" title="">
+	<npc id="13201" name="Guard of the Dawn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3054,7 +3054,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13271" name="Young Wintermelon" title="">
+	<npc id="13271" name="Young Watermelon" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3098,7 +3098,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13272" name="Spoiled Wintermelon" title="">
+	<npc id="13272" name="Defective Watermelon" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3142,7 +3142,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13273" name="Rain Wintermelon" title="">
+	<npc id="13273" name="Rain Watermelon" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3186,7 +3186,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13274" name="Large Rain Wintermelon" title="">
+	<npc id="13274" name="Large Rain Watermelon" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3230,7 +3230,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13275" name="Young Honey Wintermelon" title="">
+	<npc id="13275" name="Young Honey Watermelon" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3274,7 +3274,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13276" name="Spoiled Honey Wintermelon" title="">
+	<npc id="13276" name="Defective Honey Watermelon" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3318,7 +3318,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13277" name="Rain Honey Wintermelon" title="">
+	<npc id="13277" name="Rain Honey Watermelon" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3362,7 +3362,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13278" name="Large Rain Honey Wintermelon" title="">
+	<npc id="13278" name="Large Rain Honey Watermelon" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3757,7 +3757,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13287" name="Baby White Tiger Matriarch" title="">
+	<npc id="13287" name="Baby White Tiger Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3845,7 +3845,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13289" name="Gloomy Baby White Tiger Matriarch" title="">
+	<npc id="13289" name="Gloomy Baby White Tiger Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3933,7 +3933,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13291" name="White Tiger Matriarch" title="">
+	<npc id="13291" name="White Tiger Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4238,7 +4238,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="13298" name="Game Manager" title="Customer Joining">
+	<npc id="13298" name="Game Master" title="Customer Support">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

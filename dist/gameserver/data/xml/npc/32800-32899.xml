@@ -44,7 +44,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32801" name="Solina Bodyguard" title="Solina's Guard">
+	<npc id="32801" name="Solina Escort" title="Solina's Guard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -87,7 +87,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32802" name="Solina Bodyguard" title="Solina's Guard">
+	<npc id="32802" name="Solina Escort" title="Solina's Guard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -173,7 +173,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32804" name="Relic Watcher" title="">
+	<npc id="32804" name="Relic Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -216,7 +216,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32805" name="Relic Watcher" title="">
+	<npc id="32805" name="Relic Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -259,7 +259,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32806" name="Relic Watcher" title="">
+	<npc id="32806" name="Relic Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -302,7 +302,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32807" name="Relic Watcher" title="">
+	<npc id="32807" name="Relic Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2624,7 +2624,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32861" name="Sophia" title="Library Director of Saints">
+	<npc id="32861" name="Sophia" title="Library of Sages Director">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2710,7 +2710,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32863" name="Sophia" title="Library Director of Saints">
+	<npc id="32863" name="Sophia" title="Library of Sages Director">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3821,7 +3821,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32888" name="Judith van Etina's Evil Thoughts" title="Solina's Disciple">
+	<npc id="32888" name="Jude van Etina's Evil Thoughts" title="Solina's Disciple">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3864,7 +3864,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32889" name="Judith van Etina's Evil Thoughts" title="Solina's Disciple">
+	<npc id="32889" name="Jude van Etina's Evil Thoughts" title="Solina's Disciple">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3993,7 +3993,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32892" name="Типиа" title="Посланник Бога">
+	<npc id="32892" name="Lydia" title="God's Messenger">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4040,7 +4040,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="32893" name="Слаки" title="Тетрарх">
+	<npc id="32893" name="Slaski" title="Hierarch">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4087,7 +4087,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="32894" name="Izael" title="">
+	<npc id="32894" name="Izael" title="Tree Friend of Josephina">
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -4133,7 +4133,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="32895" name="Ноэти Мимирид" title="Тетрарх Фей-Беженцев">
+	<npc id="32895" name="Noeti Mimilead" title="Fairy Heirarch">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4180,7 +4180,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="32896" name="Ноэтиэ Кхишару" title="Элитный Страж">
+	<npc id="32896" name="Naomi Kasheron" title="Elite Bodyguard">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4227,7 +4227,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="32897" name="Алко" title="Бакалейщик">
+	<npc id="32897" name="Alco" title="Grocer">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4274,7 +4274,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="32898" name="Кантарубис" title="Представитель Серой Колонны">
+	<npc id="32898" name="Kantarubis" title="Gray Pillar">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4321,7 +4321,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="32899" name="Хамрун" title="Рабочий Склада">
+	<npc id="32899" name="Hamrun" title="Warehouse Keeper">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="2501" name="Luckpy Luckpy" title="The Spirit of Pigs">
+	<npc id="2501" name="Lucky Pig" title="The Spirit of Fortune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -44,7 +44,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="2502" name="Wingless Luckpy Luckpy" title="">
+	<npc id="2502" name="Wingless Lucky Pig" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -87,7 +87,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="2503" name="Wingless Luckpy Luckpy" title="">
+	<npc id="2503" name="Wingless Lucky Pig" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

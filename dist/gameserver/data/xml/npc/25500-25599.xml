@@ -56,7 +56,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25501" name="Boss Akata" title="Raid Boss">
+	<npc id="25501" name="Grave Robber Leader Akata" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -141,7 +141,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25502" name="Akata's Thug" title="Raid Fighter">
+	<npc id="25502" name="Akata's Warrior" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="1100" />
@@ -200,7 +200,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25503" name="Akata's Lackey" title="Raid Fighter">
+	<npc id="25503" name="Akata's Subordinate" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -500,7 +500,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25507" name="Rayito's Henchman" title="Raid Fighter">
+	<npc id="25507" name="Rayito's Guard Captain" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -777,7 +777,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25511" name="Varangka's Page" title="Raid Fighter">
+	<npc id="25511" name="Varangka's Servant" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1806,7 +1806,7 @@
 			<defence attribute="unholy" value="135" />
 		</attributes>
 	</npc>
-	<npc id="25532" name="Kechi" title="Fire">
+	<npc id="25532" name="Kechi" title="Flaming">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="hellbound.Kechi" />
 		<set name="baseAtkRange" value="40" />
@@ -1915,7 +1915,7 @@
 			<defence attribute="unholy" value="65" />
 		</attributes>
 	</npc>
-	<npc id="25533" name="Kechi's Henchman" title="">
+	<npc id="25533" name="Kechi's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2849,7 +2849,7 @@
 			<defence attribute="unholy" value="100" />
 		</attributes>
 	</npc>
-	<npc id="25546" name="Rhianna the Traitor" title="Forsaken Prisoner">
+	<npc id="25546" name="Betrayed Rhianna" title="Forsaken Prisoner">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3852,7 +3852,7 @@
 			<defence attribute="unholy" value="100" />
 		</attributes>
 	</npc>
-	<npc id="25561" name="Sargon Attendant" title="">
+	<npc id="25561" name="Sargon's Attendant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -4109,7 +4109,7 @@
 			<defence attribute="unholy" value="180" />
 		</attributes>
 	</npc>
-	<npc id="25565" name="Atrielle's Minion" title="">
+	<npc id="25565" name="Atrielle's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4641,7 +4641,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25573" name="Hager's Henchman" title="">
+	<npc id="25573" name="Hager's Follower" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -4701,7 +4701,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25574" name="Hager's Bodyguard" title="">
+	<npc id="25574" name="Hager's Escort" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5783,7 +5783,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25590" name="Brand's Chamberlain" title="">
+	<npc id="25590" name="Brand's Servant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5842,7 +5842,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25591" name="Brand's Servant" title="">
+	<npc id="25591" name="Brand's Maid" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -6110,7 +6110,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25595" name="Gerg's Henchman" title="">
+	<npc id="25595" name="Gerg's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

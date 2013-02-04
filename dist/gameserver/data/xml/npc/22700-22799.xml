@@ -564,7 +564,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22706" name="Turka Follower's Ghost" title="">
+	<npc id="22706" name="Turka Subordinate's Ghost" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -658,7 +658,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22707" name="Turka Commander's Ghost" title="Grave Guardian Spirit">
+	<npc id="22707" name="Turka Chieftain's Ghost" title="Graveyard Guardian Spirit">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3227,7 +3227,7 @@
 			<defence attribute="unholy" value="250" />
 		</attributes>
 	</npc>
-	<npc id="22736" name="Mutant Overlord" title="">
+	<npc id="22736" name="Mutant Sniper" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="800" />
@@ -6742,7 +6742,7 @@
 			<defence attribute="unholy" value="140" />
 		</attributes>
 	</npc>
-	<npc id="22773" name="Tanta Lizardman Magician" title="">
+	<npc id="22773" name="Tanta Lizardman Wizard" title="">
 		<set name="aggroRange" value="800" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="600" />
@@ -7492,7 +7492,7 @@
 			<defence attribute="unholy" value="140" />
 		</attributes>
 	</npc>
-	<npc id="22779" name="Sel Mahum Escort Guard" title="">
+	<npc id="22779" name="Sel Mahum Warrior" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -8687,7 +8687,7 @@
 			<defence attribute="unholy" value="140" />
 		</attributes>
 	</npc>
-	<npc id="22789" name="Guide Solina" title="">
+	<npc id="22789" name="Solina Guide" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="MoSMonk" />
 		<set name="baseAtkRange" value="40" />
@@ -8819,7 +8819,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="22790" name="Seeker Solina" title="">
+	<npc id="22790" name="Solina Seeker" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="MoSMonk" />
 		<set name="baseAtkRange" value="40" />
@@ -8954,7 +8954,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="22791" name="Savior Solina" title="">
+	<npc id="22791" name="Solina Savior" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="MoSMonk" />
 		<set name="baseAtkRange" value="40" />
@@ -9077,7 +9077,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="22792" name="Disciple Solina" title="">
+	<npc id="22792" name="Solina Disciple" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="MoSMonk" />
 		<set name="baseAtkRange" value="40" />
@@ -9185,7 +9185,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="22793" name="Ascetic Solina" title="">
+	<npc id="22793" name="Solina Ascetic" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="MoSMonk" />
 		<set name="baseAtkRange" value="40" />

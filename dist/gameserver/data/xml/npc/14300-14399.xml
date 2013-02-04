@@ -2025,7 +2025,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14344" name="Mirage the Unicorn " title="">
+	<npc id="14344" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2117,7 +2117,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14346" name="Mirage the Unicorn " title="">
+	<npc id="14346" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2209,7 +2209,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14348" name="Mirage the Unicorn " title="">
+	<npc id="14348" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2807,7 +2807,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14361" name="Mirage the Unicorn " title="">
+	<npc id="14361" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2853,7 +2853,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="14362" name="Mirage the Unicorn " title="">
+	<npc id="14362" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2899,7 +2899,7 @@
 			<defence attribute="unholy" value="50" />
 		</attributes>
 	</npc>
-	<npc id="14363" name="Mirage the Unicorn " title="">
+	<npc id="14363" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2945,7 +2945,7 @@
 			<defence attribute="unholy" value="60" />
 		</attributes>
 	</npc>
-	<npc id="14364" name="Mirage the Unicorn " title="">
+	<npc id="14364" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2991,7 +2991,7 @@
 			<defence attribute="unholy" value="70" />
 		</attributes>
 	</npc>
-	<npc id="14365" name="Mirage the Unicorn " title="">
+	<npc id="14365" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3037,7 +3037,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="14366" name="Mirage the Unicorn " title="">
+	<npc id="14366" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3083,7 +3083,7 @@
 			<defence attribute="unholy" value="85" />
 		</attributes>
 	</npc>
-	<npc id="14367" name="Mirage the Unicorn " title="">
+	<npc id="14367" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3129,7 +3129,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="14368" name="Mirage the Unicorn " title="">
+	<npc id="14368" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3175,7 +3175,7 @@
 			<defence attribute="unholy" value="95" />
 		</attributes>
 	</npc>
-	<npc id="14369" name="Mirage the Unicorn " title="">
+	<npc id="14369" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3221,7 +3221,7 @@
 			<defence attribute="unholy" value="100" />
 		</attributes>
 	</npc>
-	<npc id="14370" name="Mirage the Unicorn " title="">
+	<npc id="14370" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3267,7 +3267,7 @@
 			<defence attribute="unholy" value="102" />
 		</attributes>
 	</npc>
-	<npc id="14371" name="Mirage the Unicorn " title="">
+	<npc id="14371" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3313,7 +3313,7 @@
 			<defence attribute="unholy" value="104" />
 		</attributes>
 	</npc>
-	<npc id="14372" name="Mirage the Unicorn " title="">
+	<npc id="14372" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3359,7 +3359,7 @@
 			<defence attribute="unholy" value="106" />
 		</attributes>
 	</npc>
-	<npc id="14373" name="Mirage the Unicorn " title="">
+	<npc id="14373" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3405,7 +3405,7 @@
 			<defence attribute="unholy" value="109" />
 		</attributes>
 	</npc>
-	<npc id="14374" name="Mirage the Unicorn " title="">
+	<npc id="14374" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3451,7 +3451,7 @@
 			<defence attribute="unholy" value="111" />
 		</attributes>
 	</npc>
-	<npc id="14375" name="Mirage the Unicorn " title="">
+	<npc id="14375" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3497,7 +3497,7 @@
 			<defence attribute="unholy" value="113" />
 		</attributes>
 	</npc>
-	<npc id="14376" name="Mirage the Unicorn " title="">
+	<npc id="14376" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3543,7 +3543,7 @@
 			<defence attribute="unholy" value="115" />
 		</attributes>
 	</npc>
-	<npc id="14377" name="Mirage the Unicorn " title="">
+	<npc id="14377" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3589,7 +3589,7 @@
 			<defence attribute="unholy" value="118" />
 		</attributes>
 	</npc>
-	<npc id="14378" name="Mirage the Unicorn " title="">
+	<npc id="14378" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3635,7 +3635,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="14379" name="Mirage the Unicorn " title="">
+	<npc id="14379" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3681,7 +3681,7 @@
 			<defence attribute="unholy" value="122" />
 		</attributes>
 	</npc>
-	<npc id="14380" name="Mirage the Unicorn " title="">
+	<npc id="14380" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3727,7 +3727,7 @@
 			<defence attribute="unholy" value="124" />
 		</attributes>
 	</npc>
-	<npc id="14381" name="Mirage the Unicorn " title="">
+	<npc id="14381" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3773,7 +3773,7 @@
 			<defence attribute="unholy" value="127" />
 		</attributes>
 	</npc>
-	<npc id="14382" name="Mirage the Unicorn " title="">
+	<npc id="14382" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3819,7 +3819,7 @@
 			<defence attribute="unholy" value="129" />
 		</attributes>
 	</npc>
-	<npc id="14383" name="Mirage the Unicorn " title="">
+	<npc id="14383" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3865,7 +3865,7 @@
 			<defence attribute="unholy" value="131" />
 		</attributes>
 	</npc>
-	<npc id="14384" name="Mirage the Unicorn " title="">
+	<npc id="14384" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3911,7 +3911,7 @@
 			<defence attribute="unholy" value="133" />
 		</attributes>
 	</npc>
-	<npc id="14385" name="Mirage the Unicorn " title="">
+	<npc id="14385" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3957,7 +3957,7 @@
 			<defence attribute="unholy" value="136" />
 		</attributes>
 	</npc>
-	<npc id="14386" name="Mirage the Unicorn " title="">
+	<npc id="14386" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4003,7 +4003,7 @@
 			<defence attribute="unholy" value="138" />
 		</attributes>
 	</npc>
-	<npc id="14387" name="Mirage the Unicorn " title="">
+	<npc id="14387" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4049,7 +4049,7 @@
 			<defence attribute="unholy" value="140" />
 		</attributes>
 	</npc>
-	<npc id="14388" name="Mirage the Unicorn " title="">
+	<npc id="14388" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4095,7 +4095,7 @@
 			<defence attribute="unholy" value="143" />
 		</attributes>
 	</npc>
-	<npc id="14389" name="Mirage the Unicorn " title="">
+	<npc id="14389" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4141,7 +4141,7 @@
 			<defence attribute="unholy" value="145" />
 		</attributes>
 	</npc>
-	<npc id="14390" name="Mirage the Unicorn " title="">
+	<npc id="14390" name="Mirage the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

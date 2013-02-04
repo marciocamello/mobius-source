@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="2081" name="Канабион Чумы" title="">
+	<npc id="2081" name="Canabion of Plague" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -48,7 +48,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="2082" name="Канабион Чумы" title="Допплер">
+	<npc id="2082" name="Canabion of Plague" title="Doppler">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -95,7 +95,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="2083" name="Канабион Чумы" title="Пустотник">
+	<npc id="2083" name="Canabion of Plague" title="Void">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>

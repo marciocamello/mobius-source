@@ -374,7 +374,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21003" name="Grave Lich" title="">
+	<npc id="21003" name="Graveuard Lich" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -626,7 +626,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21005" name="Grave Predator" title="">
+	<npc id="21005" name="Graveyard Predator" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1133,7 +1133,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21009" name="Doom Trooper " title="">
+	<npc id="21009" name="Doom Trooper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1390,7 +1390,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21011" name="Ol Mahum Van Grunt" title="">
+	<npc id="21011" name="Ol Mahum Van Soldier" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1848,7 +1848,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21015" name="Ol Mahum Van Leader" title="">
+	<npc id="21015" name="Ol Mahum Van Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3880,7 +3880,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21039" name="Snipe Cohort" title="">
+	<npc id="21039" name="Snipe's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4639,7 +4639,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21064" name="Platinum Guardian Archer" title="">
+	<npc id="21064" name="Platinum Tribe Guardian Archer" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -4731,7 +4731,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21065" name="Platinum Guardian Warrior" title="">
+	<npc id="21065" name="Platinum Tribe Guardian Warrior" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4825,7 +4825,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21066" name="Platinum Guardian Shaman" title="">
+	<npc id="21066" name="Platinum Tribe Guardian Shaman" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -5079,7 +5079,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21069" name="Platinum Guardian Prefect" title="">
+	<npc id="21069" name="Platinum Tribe Guardian Prefect" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5337,7 +5337,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21072" name="Platinum Guardian Chief" title="">
+	<npc id="21072" name="Platinum Tribe Guardian Chief" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5434,7 +5434,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21073" name="Guardian Warrior of Elmoreden" title="">
+	<npc id="21073" name="Elmoreden's Warrior" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5522,7 +5522,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21074" name="Bound Shaman" title="">
+	<npc id="21074" name="Bound Wizard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -6282,7 +6282,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21082" name="Amon's Captain of the Guards" title="">
+	<npc id="21082" name="Amon's Escort" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7296,7 +7296,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21093" name="Ratman Sub Chieftain" title="">
+	<npc id="21093" name="Ratman Chieftain" title="">
 		<set name="aggroRange" value="400" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7409,7 +7409,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21094" name="Ratman Chieftain" title="">
+	<npc id="21094" name="Ratman Chief" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7627,7 +7627,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21096" name="Cloudy Beast " title="">
+	<npc id="21096" name="Cloudy Beast" title="">
 		<set name="aggroRange" value="400" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="36609" name="" title="">
+	<npc id="36609" name="Proclaimer" title="Proclaimer">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -48,7 +48,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="36610" name="" title="">
+	<npc id="36610" name="Proclaimer" title="Proclaimer">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -95,7 +95,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="36611" name="" title="">
+	<npc id="36611" name="Proclaimer" title="Proclaimer">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -142,7 +142,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="36612" name="" title="">
+	<npc id="36612" name="Proclaimer" title="Proclaimer">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -189,7 +189,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="36613" name="" title="">
+	<npc id="36613" name="Proclaimer" title="Proclaimer">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -236,7 +236,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="36614" name="" title="">
+	<npc id="36614" name="Proclaimer" title="Proclaimer">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -283,7 +283,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="36615" name="" title="">
+	<npc id="36615" name="Proclaimer" title="Proclaimer">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -330,7 +330,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="36616" name="" title="">
+	<npc id="36616" name="Proclaimer" title="Proclaimer">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -377,7 +377,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="36617" name="" title="">
+	<npc id="36617" name="Proclaimer" title="Proclaimer">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>

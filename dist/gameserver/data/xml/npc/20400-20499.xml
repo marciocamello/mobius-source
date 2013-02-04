@@ -224,7 +224,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20402" name="Veelan Bugbear Warrior" title="">
+	<npc id="20402" name="Veelan Bugbear Warrior" title="Enraged">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -793,7 +793,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20411" name="Scavenger Bat" title="">
+	<npc id="20411" name="Scavenger Bat" title="Enraged">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1450,7 +1450,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="20422" name="Akaste Bone Warlord" title="">
+	<npc id="20422" name="Akaste Bone Prefect" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1695,7 +1695,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20425" name="Akaste Bone Soldier" title="">
+	<npc id="20425" name="Akaste Bone Warrior" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1887,7 +1887,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20427" name="Evil Eye Watcher" title="">
+	<npc id="20427" name="Evil Eye Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1962,7 +1962,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20428" name="Evil Eye Patroller" title="">
+	<npc id="20428" name="Evil Eye Patrol" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -2840,7 +2840,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20439" name="Ol Mahum Officer" title="">
+	<npc id="20439" name="Ol Mahum Sergeant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3555,7 +3555,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20448" name="Utuku Orc Grunt" title="">
+	<npc id="20448" name="Utuku Orc Soldier" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3935,7 +3935,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20454" name="Oblivion Watcher" title="">
+	<npc id="20454" name="Forgotten Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4289,7 +4289,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20458" name="Zombie Warrior" title="">
+	<npc id="20458" name="Zombie Warrior" title="Enraged">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4737,7 +4737,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20464" name="Dungeon Skeleton" title="">
+	<npc id="20464" name="Dungeon Skeleton Soldier" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5201,7 +5201,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20470" name="Kaboo Orc Grunt" title="">
+	<npc id="20470" name="Kaboo Orc Soldier" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5312,7 +5312,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20471" name="Kaboo Orc Fighter" title="">
+	<npc id="20471" name="Kaboo Orc Warrior" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5422,7 +5422,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20472" name="Kaboo Orc Fighter Leader" title="">
+	<npc id="20472" name="Kaboo Orc Warrior Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5533,7 +5533,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20473" name="Kaboo Orc Fighter Lieutenant" title="">
+	<npc id="20473" name="Kaboo Orc Warrior Lieutenant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6948,7 +6948,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20492" name="Kirunak's Guards" title="">
+	<npc id="20492" name="Kirunak's Escort" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7140,7 +7140,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20495" name="Turek Orc Warlord" title="">
+	<npc id="20495" name="Turek Orc Prefect" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

@@ -434,7 +434,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22804" name="Drill Golem of Terror" title="">
+	<npc id="22804" name="Horrifying Jackhammer Golem" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="groups.PavelRuins" />
 		<set name="baseAtkRange" value="40" />
@@ -539,7 +539,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22805" name="Drill Golem of Terror" title="">
+	<npc id="22805" name="Horrifying Jackhammer Golem" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="groups.PavelRuins" />
 		<set name="baseAtkRange" value="40" />
@@ -644,7 +644,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22806" name="Drill Golem of Terror" title="">
+	<npc id="22806" name="Horrifying Jackhammer Golem" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="groups.PavelRuins" />
 		<set name="baseAtkRange" value="40" />
@@ -2307,7 +2307,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22825" name="Giant Scorpion Bones" title="">
+	<npc id="22825" name="Giant Noxious Scorpion" title="">
 		<set name="aggroRange" value="400" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2394,7 +2394,7 @@
 			<defence attribute="unholy" value="200" />
 		</attributes>
 	</npc>
-	<npc id="22826" name="Scorpion Bones" title="">
+	<npc id="22826" name="Noxious Scorpion" title="">
 		<set name="aggroRange" value="400" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3825,7 +3825,7 @@
 			<defence attribute="unholy" value="250" />
 		</attributes>
 	</npc>
-	<npc id="22843" name="Maluk Sniper " title="">
+	<npc id="22843" name="Maluk Sniper" title="">
 		<set name="aggroRange" value="600" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="400" />
@@ -4218,7 +4218,7 @@
 			<defence attribute="unholy" value="250" />
 		</attributes>
 	</npc>
-	<npc id="22847" name="Dragon Knight Warrior " title="">
+	<npc id="22847" name="Dragon Knight Warrior" title="">
 		<set name="aggroRange" value="400" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5170,7 +5170,7 @@
 			<defence attribute="unholy" value="250" />
 		</attributes>
 	</npc>
-	<npc id="22857" name="Knoriks" title="Land Dragon's Patroller">
+	<npc id="22857" name="Knoriks" title="Land Dragon's Patrol">
 		<set name="aggroRange" value="600" />
 		<set name="ai_type" value="dragonvalley.Knoriks" />
 		<set name="baseAtkRange" value="40" />
@@ -5542,7 +5542,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="22861" name="Hard Scorpion Bones" title="">
+	<npc id="22861" name="Hard Noxious Scorpion" title="">
 		<set name="aggroRange" value="400" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5725,59 +5725,61 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22863" name="Воин Фей" title="">
-		<set name="aggroRange" value="400" />
+	<npc id="22863" name="Fairy Warrior" title="">
+		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
-		<set name="baseCON" value="43" />
+		<set name="baseCON" value="75" />
 		<set name="baseCritRate" value="40" />
-		<set name="baseDEX" value="30" />
-		<set name="baseHpMax" value="13886" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="24589" />
 		<set name="baseHpRate" value="1" />
-		<set name="baseHpReg" value="518" />
-		<set name="baseINT" value="21" />
-		<set name="baseMAtk" value="15256" />
-		<set name="baseMAtkSpd" value="333" />
-		<set name="baseMDef" value="742" />
-		<set name="baseMEN" value="20" />
-		<set name="baseMpMax" value="2168" />
-		<set name="baseMpReg" value="0.9" />
-		<set name="basePAtk" value="32059" />
-		<set name="basePAtkSpd" value="278" />
-		<set name="basePDef" value="1421" />
-		<set name="baseRunSpd" value="190" />
-		<set name="baseSTR" value="40" />
+		<set name="baseHpReg" value="7.500" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="2542" />
+		<set name="baseMAtkSpd" value="398" />
+		<set name="baseMDef" value="1542" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="3175" />
+		<set name="baseMpReg" value="2.700" />
+		<set name="basePAtk" value="4512" />
+		<set name="basePAtkSpd" value="2874" />
+		<set name="basePDef" value="1875" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
 		<set name="baseShldDef" value="0" />
 		<set name="baseShldRate" value="0" />
-		<set name="baseWIT" value="20" />
+		<set name="baseWIT" value="64" />
 		<set name="baseWalkSpd" value="30" />
-		<set name="collision_height" value="27" />
-		<set name="collision_radius" value="12" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
 		<set name="level" value="90" />
-		<set name="rewardExp" value="258086" />
+		<set name="rewardExp" value="270427" />
 		<set name="rewardRp" value="0" />
-		<set name="rewardSp" value="5254" />
+		<set name="rewardSp" value="5628" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
-			<skill id="4416" level="13" />	<!--Race-->
-			<skill id="4313" level="1" />	<!--Light Armor-->
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="1158" max="2705" chance="100.0000" />	<!--Adena-->
+			<group chance="70">
+				<reward item_id="57" min="1158" max="2705" chance="100" /> <!-- Adena -->
 			</group>
-			<group chance="100.0">
-				<reward item_id="19220" min="1" max="1" chance="5.4600" />	<!--Материал Неопознанных Рукавиц Ада-->
-				<reward item_id="19221" min="1" max="1" chance="5.1700" />	<!--Материал Неопознанных Сапог Ада-->
-				<reward item_id="19361" min="1" max="1" chance="1.3500" />	<!--Рецепт - Неопознанные Рукавицы Ада (60%)-->
-				<reward item_id="19362" min="1" max="1" chance="1.9100" />	<!--Рецепт - Неопознанные Сапоги Ада (60%)-->
-				<reward item_id="17527" min="1" max="1" chance="0.800" />	<!--Свиток: Модифицировать Доспех (R)-->
+			<group chance="2.3122">
+				<reward item_id="19220" min="1" max="1" chance="47.7123" /> <!-- Unidentified Twilight Gauntlet Ingredient -->
+				<reward item_id="19221" min="1" max="1" chance="46.8387" /> <!-- Unidentified Twilight Boots Ingredient -->
+				<reward item_id="19361" min="1" max="1" chance="2.5949" /> <!-- Recipe - Unidentified Twilight Gauntlet 60% -->
+				<reward item_id="19362" min="1" max="1" chance="2.5949" /> <!-- Recipe - Unidentified Twilight Boots 60% -->
+				<reward item_id="17527" min="1" max="1" chance="0.2595" /> <!-- Scroll: Enchant Armor R-Grade -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19220" min="1" max="1" chance="1.6600" />	<!--Материал Неопознанных Рукавиц Ада-->
-			<reward item_id="19221" min="1" max="1" chance="1.0700" />	<!--Материал Неопознанных Сапог Ада-->
+				<reward item_id="19220" min="1" max="1" chance="0.0750" /> <!-- Unidentified Twilight Gauntlet Ingredient -->
+				<reward item_id="19221" min="1" max="1" chance="0.0750" /> <!-- Unidentified Twilight Boots Ingredient -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -5788,388 +5790,61 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22864" name="Воин Фей" title="Сдерживающий Тьму">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
-		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
-		</attributes>
-	</npc>
-	<npc id="22865" name="Воин Фей" title="Завершивший Мутацию">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
-		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
-		</attributes>
-	</npc>
-	<npc id="22866" name="Воин Фей" title="Прекративший Мутацию">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
-		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
-		</attributes>
-	</npc>
-	<npc id="22867" name="Воин Фей" title="Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
-		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
-		</attributes>
-	</npc>
-	<npc id="22868" name="Воин Фей" title="Сдерживающий Тьму Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
-		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
-		</attributes>
-	</npc>
-	<npc id="22869" name="Воин Фей" title="Завершивший Мутацию Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
-		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
-		</attributes>
-	</npc>
-	<npc id="22870" name="Воин Фей" title="Прекративший Мутацию Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
-		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
-		</attributes>
-	</npc>
-	<npc id="22871" name="Терзатель Фей" title="">
-		<set name="aggroRange" value="400" />
+	<npc id="22864" name="Fairy Warrior" title="Wicked">
+		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
-		<set name="baseCON" value="43" />
+		<set name="baseCON" value="75" />
 		<set name="baseCritRate" value="40" />
-		<set name="baseDEX" value="30" />
-		<set name="baseHpMax" value="13886" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="24589" />
 		<set name="baseHpRate" value="1" />
-		<set name="baseHpReg" value="518" />
-		<set name="baseINT" value="21" />
-		<set name="baseMAtk" value="15256" />
-		<set name="baseMAtkSpd" value="333" />
-		<set name="baseMDef" value="742" />
-		<set name="baseMEN" value="20" />
-		<set name="baseMpMax" value="2168" />
-		<set name="baseMpReg" value="0.9" />
-		<set name="basePAtk" value="32059" />
-		<set name="basePAtkSpd" value="278" />
-		<set name="basePDef" value="1421" />
-		<set name="baseRunSpd" value="190" />
-		<set name="baseSTR" value="40" />
+		<set name="baseHpReg" value="7.500" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="2542" />
+		<set name="baseMAtkSpd" value="398" />
+		<set name="baseMDef" value="1542" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="3175" />
+		<set name="baseMpReg" value="2.700" />
+		<set name="basePAtk" value="4512" />
+		<set name="basePAtkSpd" value="2874" />
+		<set name="basePDef" value="1875" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
 		<set name="baseShldDef" value="0" />
 		<set name="baseShldRate" value="0" />
-		<set name="baseWIT" value="20" />
+		<set name="baseWIT" value="64" />
 		<set name="baseWalkSpd" value="30" />
-		<set name="collision_height" value="27" />
-		<set name="collision_radius" value="12" />
-		<set name="level" value="90" />
-		<set name="rewardExp" value="258086" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="92" />
+		<set name="rewardExp" value="270427" />
 		<set name="rewardRp" value="0" />
-		<set name="rewardSp" value="5254" />
+		<set name="rewardSp" value="5628" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
-			<skill id="4416" level="13" />	<!--Race-->
-			<skill id="4313" level="1" />	<!--Light Armor-->
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="1158" max="2705" chance="100.0000" />	<!--Adena-->
+			<group chance="70">
+				<reward item_id="57" min="1213" max="2830" chance="100" /> <!-- Adena -->
 			</group>
-			<group chance="100.0">
-				<reward item_id="19220" min="1" max="1" chance="5.4600" />	<!--Материал Неопознанных Рукавиц Ада-->
-				<reward item_id="19221" min="1" max="1" chance="5.1700" />	<!--Материал Неопознанных Сапог Ада-->
-				<reward item_id="19361" min="1" max="1" chance="1.3500" />	<!--Рецепт - Неопознанные Рукавицы Ада (60%)-->
-				<reward item_id="19362" min="1" max="1" chance="1.9100" />	<!--Рецепт - Неопознанные Сапоги Ада (60%)-->
-				<reward item_id="17527" min="1" max="1" chance="0.800" />	<!--Свиток: Модифицировать Доспех (R)-->
+			<group chance="2.3928">
+				<reward item_id="19221" min="1" max="1" chance="47.8853" /> <!-- Unidentified Twilight Boots Ingredient -->
+				<reward item_id="19220" min="1" max="1" chance="47.0745" /> <!-- Unidentified Twilight Gauntlet Ingredient -->
+				<reward item_id="19361" min="1" max="1" chance="2.5075" /> <!-- Recipe - Unidentified Twilight Gauntlet 60% -->
+				<reward item_id="19362" min="1" max="1" chance="2.5075" /> <!-- Recipe - Unidentified Twilight Boots 60% -->
+				<reward item_id="17526" min="1" max="1" chance="0.0251" /> <!-- Scroll: Enchant Weapon R-Grade -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19220" min="1" max="1" chance="1.6600" />	<!--Материал Неопознанных Рукавиц Ада-->
-			<reward item_id="19221" min="1" max="1" chance="1.0700" />	<!--Материал Неопознанных Сапог Ада-->
+				<reward item_id="19361" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Twilight Gauntlet 60% -->
+				<reward item_id="19362" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Twilight Boots 60% -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -6180,1320 +5855,2271 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22872" name="Терзатель Фей" title="Сдерживающий Тьму">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22865" name="Fairy Warrior" title="Mature">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="24589" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="7.500" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="2542" />
+		<set name="baseMAtkSpd" value="398" />
+		<set name="baseMDef" value="1542" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="3175" />
+		<set name="baseMpReg" value="2.700" />
+		<set name="basePAtk" value="4512" />
+		<set name="basePAtkSpd" value="2874" />
+		<set name="basePDef" value="1875" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="91" />
+		<set name="rewardExp" value="270427" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5628" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1185" max="2770" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18154" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Gauntlet -->
+				<reward item_id="18155" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Boots -->
+			</group>
+			<group chance="0.0055">
+				<reward item_id="17526" min="1" max="1" chance="100.0000" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19217" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Helmet Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22873" name="Терзатель Фей" title="Завершивший Мутацию">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22866" name="Fairy Warrior" title="Imperfect">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="24589" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="7.500" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="2542" />
+		<set name="baseMAtkSpd" value="398" />
+		<set name="baseMDef" value="1542" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="3175" />
+		<set name="baseMpReg" value="2.700" />
+		<set name="basePAtk" value="4512" />
+		<set name="basePAtkSpd" value="2874" />
+		<set name="basePDef" value="1875" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="91" />
+		<set name="rewardExp" value="270427" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5628" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1185" max="2770" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18154" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Gauntlet -->
+				<reward item_id="18155" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Boots -->
+			</group>
+			<group chance="0.0055">
+				<reward item_id="17526" min="1" max="1" chance="100.0000" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon R-Grade -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22874" name="Терзатель Фей" title="Прекративший Мутацию">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22867" name="Fairy Warrior" title="Violent">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="24589" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="7.500" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="2542" />
+		<set name="baseMAtkSpd" value="398" />
+		<set name="baseMDef" value="1542" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="3175" />
+		<set name="baseMpReg" value="2.700" />
+		<set name="basePAtk" value="4512" />
+		<set name="basePAtkSpd" value="2874" />
+		<set name="basePDef" value="1875" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="270427" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5628" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4410" level="12" />	<!--Усиленная Физ. Атк.-->
+			<skill id="4412" level="12" />	<!--Усиленная Физ. Защ.-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1685" max="3934" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18154" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Gauntlet -->
+				<reward item_id="18155" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Boots -->
+			</group>
+			<group chance="0.2100">
+				<reward item_id="19361" min="1" max="1" chance="47.6191" /> <!-- Recipe - Unidentified Twilight Gauntlet 60% -->
+				<reward item_id="19362" min="1" max="1" chance="47.6191" /> <!-- Recipe - Unidentified Twilight Boots 60% -->
+				<reward item_id="17527" min="1" max="1" chance="4.7619" /> <!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19220" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Gauntlet Ingredient -->
+				<reward item_id="19221" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Boots Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22875" name="Терзатель Фей" title="Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22868" name="Fairy Warrior" title="Brutal">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="24589" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="7.500" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="2542" />
+		<set name="baseMAtkSpd" value="398" />
+		<set name="baseMDef" value="1542" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="3175" />
+		<set name="baseMpReg" value="2.700" />
+		<set name="basePAtk" value="4512" />
+		<set name="basePAtkSpd" value="2874" />
+		<set name="basePDef" value="1875" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="94" />
+		<set name="rewardExp" value="270427" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5628" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4410" level="12" />	<!--Усиленная Физ. Атк.-->
+			<skill id="4412" level="12" />	<!--Усиленная Физ. Защ.-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1722" max="4021" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18154" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Gauntlet -->
+				<reward item_id="18155" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Boots -->
+			</group>
+			<group chance="0.0403">
+				<reward item_id="30425" min="1" max="1" chance="93.1677" /> <!-- Recipe: Blessed Spiritshot R 100% -->
+				<reward item_id="17526" min="1" max="1" chance="6.8323" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon R-Grade -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22876" name="Терзатель Фей" title="Сдерживающий Тьму Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22869" name="Fairy Warrior" title="Fully Enraged">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="24589" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="7.500" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="2542" />
+		<set name="baseMAtkSpd" value="398" />
+		<set name="baseMDef" value="1542" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="3175" />
+		<set name="baseMpReg" value="2.700" />
+		<set name="basePAtk" value="4512" />
+		<set name="basePAtkSpd" value="2874" />
+		<set name="basePDef" value="1875" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="270427" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5628" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4410" level="12" />	<!--Усиленная Физ. Атк.-->
+			<skill id="4412" level="12" />	<!--Усиленная Физ. Защ.-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1685" max="3934" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18154" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Gauntlet -->
+				<reward item_id="18155" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Boots -->
+			</group>
+			<group chance="0.6485">
+				<reward item_id="19309" min="1" max="1" chance="94.2174" /> <!-- Durandil Temper -->
+				<reward item_id="17527" min="1" max="1" chance="5.7826" /> <!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19361" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Twilight Gauntlet 60% -->
+				<reward item_id="19362" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Twilight Boots 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22877" name="Терзатель Фей" title="Завершивший Мутацию Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22870" name="Fairy Warrior" title="Slightly Enraged">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="355923" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="270427" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5628" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4410" level="12" />	<!--Усиленная Физ. Атк.-->
+			<skill id="4412" level="12" />	<!--Усиленная Физ. Защ.-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1685" max="3934" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18154" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Gauntlet -->
+				<reward item_id="18155" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Boots -->
+			</group>
+			<group chance="0.0390">
+				<reward item_id="17527" min="1" max="1" chance="96.1538" /><!-- Scroll: Enchant Armor R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="3.8462" /><!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19220" min="1" max="1" chance="0.3000" /><!-- Unidentified Twilight Gauntlet Ingredient -->
+				<reward item_id="19221" min="1" max="1" chance="0.3000" /><!-- Unidentified Twilight Boots Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22878" name="Терзатель Фей" title="Прекративший Мутацию Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22871" name="Fairy Rogue" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="13886" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="90" />
+		<set name="rewardExp" value="258086" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5254" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1158" max="2705" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="1.9530">
+				<reward item_id="19227" min="1" max="1" chance="55.9245" /> <!-- Unidentified Twilight Leather Boots Ingredient -->
+				<reward item_id="19223" min="1" max="1" chance="37.9008" /> <!-- Unidentified Twilight Leather Helmet Ingredient -->
+				<reward item_id="19364" min="1" max="1" chance="3.0722" /> <!-- Recipe - Unidentified Twilight Leather Helmet 60% -->
+				<reward item_id="19368" min="1" max="1" chance="3.0722" /> <!-- Recipe - Unidentified Twilight Leather Boots 60% -->
+				<reward item_id="17526" min="1" max="1" chance="0.0307" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19223" min="1" max="1" chance="0.0750" /> <!-- Unidentified Twilight Leather Helmet Ingredient -->
+				<reward item_id="19227" min="1" max="1" chance="0.0750" /> <!-- Unidentified Twilight Leather Boots Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22879" name="Мститель Фей" title="">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22872" name="Fairy Rogue" title="Wicked">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14213" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="92" />
+		<set name="rewardExp" value="270427" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5628" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1213" max="2830" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="2.0202">
+				<reward item_id="19227" min="1" max="1" chance="56.5488" /> <!-- Unidentified Twilight Leather Boots Ingredient -->
+				<reward item_id="19223" min="1" max="1" chance="37.4814" /> <!-- Unidentified Twilight Leather Helmet Ingredient -->
+				<reward item_id="19364" min="1" max="1" chance="2.9700" /> <!-- Recipe - Unidentified Twilight Leather Helmet 60% -->
+				<reward item_id="19368" min="1" max="1" chance="2.9700" /> <!-- Recipe - Unidentified Twilight Leather Boots 60% -->
+				<reward item_id="17526" min="1" max="1" chance="0.0297" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19364" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Twilight Leather Helmet 60% -->
+				<reward item_id="19368" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Twilight Leather Boots 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22880" name="Мститель Фей" title="Сдерживающий тьму">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22873" name="Fairy Rogue" title="Mature">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14136" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="91" />
+		<set name="rewardExp" value="264443" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5438" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1185" max="2770" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18157" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Leather Helmet -->
+				<reward item_id="18161" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Leather Boots -->
+			</group>
+			<group chance="0.3000">
+				<reward item_id="9547" min="1" max="1" chance="100.0000" /> <!-- Water Stone -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19226" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Leather Gloves Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22881" name="Мститель Фей" title="Завершивший мутацию">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22874" name="Fairy Rogue" title="Imperfect">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14136" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="91" />
+		<set name="rewardExp" value="264443" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5438" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1185" max="2770" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18157" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Leather Helmet -->
+				<reward item_id="18161" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Leather Boots -->
+			</group>
+			<group chance="0.3000">
+				<reward item_id="9547" min="1" max="1" chance="100.0000" /> <!-- Water Stone -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19226" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Leather Gloves Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22882" name="Мститель Фей" title="Прекративший мутацию">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22875" name="Fairy Rogue" title="Violent">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="508847" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10690" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4410" level="13" />	<!--Усиленная Физ. Атк.-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1678" max="3919" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18157" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Leather Helmet -->
+				<reward item_id="18161" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Leather Boots -->
+			</group>
+			<group chance="0.2010">
+				<reward item_id="19364" min="1" max="1" chance="49.7513" /> <!-- Recipe - Unidentified Twilight Leather Helmet 60% -->
+				<reward item_id="19368" min="1" max="1" chance="49.7513" /> <!-- Recipe - Unidentified Twilight Leather Boots 60% -->
+				<reward item_id="17526" min="1" max="1" chance="0.4975" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19227" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Leather Boots Ingredient -->
+				<reward item_id="19223" min="1" max="1" chance="0.0750" /> <!-- Unidentified Twilight Leather Helmet Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22883" name="Мститель Фей" title="Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22876" name="Fairy Rogue" title="Brutal">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14547" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="94" />
+		<set name="rewardExp" value="520590" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="11032" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4410" level="13" />	<!--Усиленная Физ. Атк.-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1716" max="4005" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18157" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Leather Helmet -->
+				<reward item_id="18161" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Leather Boots -->
+			</group>
+			<group chance="0.1528">
+				<reward item_id="9548" min="1" max="1" chance="98.1997" /><!-- Earth Stone -->
+				<reward item_id="17526" min="1" max="1" chance="1.8003" /><!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="17526" min="1" max="1" chance="0.0009" /><!-- Scroll: Enchant Weapon R-Grade -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22884" name="Мститель Фей" title="Сдерживающий Тьму Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22877" name="Fairy Rogue" title="Fully Enraged">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="508847" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10690" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4410" level="13" />	<!--Усиленная Физ. Атк.-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1678" max="3919" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18157" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Leather Helmet -->
+				<reward item_id="18161" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Leather Boots -->
+			</group>
+			<group chance="1.1445">
+				<reward item_id="19310" min="1" max="1" chance="98.6894" /><!-- High-Grade Synthetic Cokes -->
+				<reward item_id="17527" min="1" max="1" chance="1.3106" /><!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19364" min="1" max="1" chance="0.0300" /><!--Recipe - Unidentified Twilight Leather Helmet 60%-->
+				<reward item_id="19368" min="1" max="1" chance="0.0300" /><!--Recipe - Unidentified Twilight Leather Boots 60%-->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22885" name="Мститель Фей" title="Завершивший Мутацию Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22878" name="Fairy Rogue" title="Slightly Enraged">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="508847" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10690" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4410" level="13" />	<!--Усиленная Физ. Атк.-->
+			<skill id="4414" level="3" />	<!--Легкая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1678" max="3919" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18157" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Leather Helmet -->
+				<reward item_id="18161" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Leather Boots -->
+			</group>
+			<group chance="0.0750">
+				<reward item_id="17527" min="1" max="1" chance="100.0000" /><!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19227" min="1" max="1" chance="0.3000" /><!-- Unidentified Twilight Leather Boots Ingredient -->
+				<reward item_id="19223" min="1" max="1" chance="0.0750" /><!-- Unidentified Twilight Leather Helmet Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22886" name="Мститель Фей" title="Прекративший Мутацию Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22879" name="Fairy Knight" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="13886" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="90" />
+		<set name="rewardExp" value="258086" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5254" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4414" level="1" />	<!--Тяжелая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1158" max="2705" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="1.9564">
+				<reward item_id="19231" min="1" max="1" chance="56.3895" /> <!-- Unidentified Twilight Gloves Ingredient -->
+				<reward item_id="19228" min="1" max="1" chance="37.1705" /> <!-- Unidentified Twilight Circlet Ingredient -->
+				<reward item_id="19369" min="1" max="1" chance="3.0669" /> <!-- Recipe - Unidentified Twilight Circlet 60% -->
+				<reward item_id="19372" min="1" max="1" chance="3.0669" /> <!-- Recipe - Unidentified Twilight Gloves 60% -->
+				<reward item_id="17527" min="1" max="1" chance="0.3067" /> <!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19228" min="1" max="1" chance="0.0750" /> <!-- Unidentified Twilight Circlet Ingredient -->
+				<reward item_id="19231" min="1" max="1" chance="0.0750" /> <!-- Unidentified Twilight Gloves Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22887" name="Сатир Чародей" title="">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22880" name="Fairy Knight" title="Wicked">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14213" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="92" />
+		<set name="rewardExp" value="270427" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5628" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4414" level="1" />	<!--Тяжелая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1213" max="2830" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0000">
+			</group>
+			<group chance="2.0040">
+				<reward item_id="19231" min="1" max="1" chance="56.3171" /> <!-- Unidentified Twilight Gloves Ingredient -->
+				<reward item_id="19228" min="1" max="1" chance="37.3951" /> <!-- Unidentified Twilight Circlet Ingredient -->
+				<reward item_id="19369" min="1" max="1" chance="2.9940" /> <!-- Recipe - Unidentified Twilight Circlet 60% -->
+				<reward item_id="19372" min="1" max="1" chance="2.9940" /> <!-- Recipe - Unidentified Twilight Gloves 60% -->
+				<reward item_id="17527" min="1" max="1" chance="0.2994" /> <!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19369" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Twilight Circlet 60% -->
+				<reward item_id="19372" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Twilight Gloves 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22888" name="Сатир Чародей" title="Сдерживающий Тьму">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22881" name="Fairy Knight" title="Mature">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14136" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="91" />
+		<set name="rewardExp" value="264443" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5438" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4414" level="1" />	<!--Тяжелая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1185" max="2770" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18162" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Circlet -->
+				<reward item_id="18165" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Gloves -->
+			</group>
+			<group chance="0.0055">
+				<reward item_id="17526" min="1" max="1" chance="100.0000" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19232" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Shoes Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22889" name="Сатир Чародей" title="Завершивший Мутацию">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22882" name="Fairy Knight" title="Imperfect">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14136" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="91" />
+		<set name="rewardExp" value="264443" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5438" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4414" level="1" />	<!--Тяжелая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1185" max="2770" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18162" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Circlet -->
+				<reward item_id="18165" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Gloves -->
+			</group>
+			<group chance="0.0055">
+				<reward item_id="17526" min="1" max="1" chance="100.0000" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon R-Grade -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22890" name="Сатир Чародей" title="Прекративший Мутацию">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22883" name="Fairy Knight" title="Violent">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="523433" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10997" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4412" level="13" />	<!--Усиленная Физ. Защ.-->
+			<skill id="4414" level="1" />	<!--Тяжелая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1691" max="3949" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18162" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Circlet -->
+				<reward item_id="18165" min="1" max="1" chance="50.0000" /> <!-- Unidentified Twilight Gloves -->
+			</group>
+			<group chance="0.3000">
+				<reward item_id="19369" min="1" max="1" chance="50.0000" /> <!-- Recipe - Unidentified Twilight Circlet 60% -->
+				<reward item_id="19372" min="1" max="1" chance="50.0000" /> <!-- Recipe - Unidentified Twilight Gloves 60% -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19231" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Gloves Ingredient -->
+				<reward item_id="19228" min="1" max="1" chance="0.0750" /> <!-- Unidentified Twilight Circlet Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22891" name="Сатир Чародей" title="Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22884" name="Fairy Knight" title="Brutal">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14547" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="94" />
+		<set name="rewardExp" value="535513" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="11349" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4412" level="13" />	<!--Усиленная Физ. Защ.-->
+			<skill id="4414" level="1" />	<!--Тяжелая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1729" max="4036" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18162" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Circlet -->
+				<reward item_id="18165" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Gloves -->
+			</group>
+			<group chance="0.1528">
+				<reward item_id="9549" min="1" max="1" chance="98.1997" /><!-- Wind Stone -->
+				<reward item_id="17526" min="1" max="1" chance="1.8003" /><!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="17526" min="1" max="1" chance="0.0009" /><!-- Scroll: Enchant Weapon R-Grade -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22892" name="Сатир Чародей" title="Сдерживающий Тьму Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22885" name="Fairy Knight" title="Fully Enraged">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="523433" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10997" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4412" level="13" />	<!--Усиленная Физ. Защ.-->
+			<skill id="4414" level="1" />	<!--Тяжелая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1691" max="3949" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18162" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Circlet -->
+				<reward item_id="18165" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Gloves -->
+			</group>
+			<group chance="0.1110">
+				<reward item_id="19311" min="1" max="1" chance="90.0901" /><!-- Laktorarium -->
+				<reward item_id="17527" min="1" max="1" chance="9.0090" /><!-- Scroll: Enchant Armor R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="0.9009" /><!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19369" min="1" max="1" chance="0.0300" /><!-- Recipe - Unidentified Twilight Circlet 60% -->
+				<reward item_id="19372" min="1" max="1" chance="0.0300" /><!-- Recipe - Unidentified Twilight Gloves 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22893" name="Сатир Чародей" title="Завершивший Мутацию Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22886" name="Fairy Knight" title="Slightly Enraged">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="27.0" />
+		<set name="collision_radius" value="12.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="523433" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10997" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="13" />	<!--Феи-->
+			<skill id="5465" level="1" />	<!--Защита Земли-->
+			<skill id="4412" level="13" />	<!--Усиленная Физ. Защ.-->
+			<skill id="4414" level="1" />	<!--Тяжелая Броня-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1691" max="3949" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="0.0300">
+				<reward item_id="18162" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Circlet -->
+				<reward item_id="18165" min="1" max="1" chance="50.0000" /><!-- Unidentified Twilight Gloves -->
+			</group>
+			<group chance="0.0750">
+				<reward item_id="17527" min="1" max="1" chance="100.0000" /><!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19231" min="1" max="1" chance="0.3000" /><!-- Unidentified Twilight Gloves Ingredient -->
+				<reward item_id="19228" min="1" max="1" chance="0.0750" /><!-- Unidentified Twilight Circlet Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22894" name="Сатир Чародей" title="Прекративший Мутацию Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22887" name="Satyr Wizard" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="13886" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="90" />
+		<set name="rewardExp" value="258086" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5254" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1158" max="2705" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="3.7980">
+				<reward item_id="19217" min="1" max="1" chance="96.0504" /> <!-- Unidentified Twilight Helmet Ingredient -->
+				<reward item_id="19358" min="1" max="1" chance="3.9494" /> <!-- Recipe - Unidentified Twilight Helmet 60% -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19217" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Helmet Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22895" name="Сатир Призыватель" title="">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22888" name="Satyr Wizard" title="Wicked">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14213" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="92" />
+		<set name="rewardExp" value="270427" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5628" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1213" max="2830" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0000">
+			</group>
+			<group chance="2.6350">
+				<reward item_id="19217" min="1" max="1" chance="95.8253" /> <!-- Unidentified Twilight Helmet Ingredient -->
+				<reward item_id="19358" min="1" max="1" chance="3.7951" /> <!-- Recipe - Unidentified Twilight Helmet 60% -->
+				<reward item_id="17527" min="1" max="1" chance="0.3795" /> <!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19358" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Twilight Helmet 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22896" name="Сатир Призыватель" title="Сдерживающий Тьму">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22889" name="Satyr Wizard" title="Mature">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14136" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="91" />
+		<set name="rewardExp" value="264443" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5438" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1185" max="2770" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0750">
+				<reward item_id="18151" min="1" max="1" chance="100.0000" /> <!-- Unidentified Twilight Helmet -->
+			</group>
+			<group chance="0.3000">
+				<reward item_id="9548" min="1" max="1" chance="100.0000" /> <!-- Earth Stone -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19217" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Helmet Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22897" name="Сатир Призыватель" title="Завершивший Мутацию">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22890" name="Satyr Wizard" title="Imperfect">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14136" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="91" />
+		<set name="rewardExp" value="264443" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5438" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1185" max="2770" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0750">
+				<reward item_id="18151" min="1" max="1" chance="100.0000" /> <!-- Unidentified Twilight Helmet -->
+			</group>
+			<group chance="0.3000">
+				<reward item_id="9546" min="1" max="1" chance="100.0000" /> <!-- Fire Stone -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="17527" min="1" max="1" chance="0.0030" /> <!-- Scroll: Enchant Armor R-Grade -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22898" name="Сатир Призыватель" title="Прекративший Мутацию">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22891" name="Satyr Wizard" title="Violent">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="516140" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10843" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+			<skill id="4411" level="12" />	<!--Усиленная Маг. Атк.-->
+			<skill id="4413" level="12" />	<!--Усиленная Маг. Защ.-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1685" max="3934" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0750">
+				<reward item_id="18151" min="1" max="1" chance="100.0000" /> <!-- Unidentified Twilight Helmet -->
+			</group>
+			<group chance="0.1875">
+				<reward item_id="19358" min="1" max="1" chance="80.0000" /> <!-- Recipe - Unidentified Twilight Helmet 60% -->
+				<reward item_id="17527" min="1" max="1" chance="20.0000" /> <!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19217" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Helmet Ingredient -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22899" name="Сатир Призыватель" title="Буйный">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+	<npc id="22892" name="Satyr Wizard" title="Brutal">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14547" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="94" />
+		<set name="rewardExp" value="528052" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="11191" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4411" level="12" />	<!--Усиленная Маг. Атк.-->
+			<skill id="4413" level="12" />	<!--Усиленная Маг. Защ.-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1722" max="4021" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="0.0750">
+				<reward item_id="18151" min="1" max="1" chance="100.0000" /><!-- Unidentified Twilight Helmet -->
+			</group>
+			<group chance="0.7500">
+				<reward item_id="9550" min="1" max="1" chance="100.0000" /><!-- Dark Stone -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="17526" min="1" max="1" chance="0.0009" /><!-- Scroll: Enchant Weapon R-Grade -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22893" name="Satyr Wizard" title="Fully Enraged">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="516140" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10843" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+			<skill id="4411" level="12" />	<!--Усиленная Маг. Атк.-->
+			<skill id="4413" level="12" />	<!--Усиленная Маг. Защ.-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1685" max="3934" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="0.0750">
+				<reward item_id="18151" min="1" max="1" chance="100.0000" /><!-- Unidentified Twilight Helmet -->
+			</group>
+			<group chance="0.4313">
+				<reward item_id="19312" min="1" max="1" chance="97.4498" /><!-- Itenium Temper -->
+				<reward item_id="17527" min="1" max="1" chance="2.3184" /><!-- Scroll: Enchant Armor R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="0.2318" /><!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19358" min="1" max="1" chance="0.0300" /><!-- Recipe - Unidentified Twilight Helmet 60% -->
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22894" name="Satyr Wizard" title="Slightly Enraged">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="484689" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10183" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+			<skill id="4411" level="12" />	<!--Усиленная Маг. Атк.-->
+			<skill id="4413" level="12" />	<!--Усиленная Маг. Защ.-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1626" max="3796" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="0.0750">
+				<reward item_id="18160" min="1" max="1" chance="100.0000" /><!-- Unidentified Twilight Leather Gloves -->
+			</group>
+			<group chance="0.0390">
+				<reward item_id="17527" min="1" max="1" chance="96.1538" /><!-- Scroll: Enchant Armor R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="3.8462" /><!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19226" min="1" max="1" chance="0.3000" /><!-- Unidentified Twilight Leather Gloves Ingredient -->
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22895" name="Satyr Summoner" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="13886" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="90" />
+		<set name="rewardExp" value="258086" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5254" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1158" max="2705" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="3.8000">
+				<reward item_id="19226" min="1" max="1" chance="97.1049" /> <!-- Unidentified Twilight Leather Gloves Ingredient -->
+				<reward item_id="19367" min="1" max="1" chance="2.6316" /> <!-- Recipe - Unidentified Twilight Leather Gloves 60% -->
+				<reward item_id="17527" min="1" max="1" chance="0.2632" /> <!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19226" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Leather Gloves Ingredient -->
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22896" name="Satyr Summoner" title="Wicked">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14213" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="92" />
+		<set name="rewardExp" value="270427" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5628" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1213" max="2830" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="5.8250">
+				<reward item_id="19226" min="1" max="1" chance="93.5623" /><!-- Unidentified Twilight Leather Gloves Ingredient -->
+				<reward item_id="19367" min="1" max="1" chance="6.4378" /><!--Recipe - Unidentified Twilight Leather Gloves 60%-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19367" min="1" max="1" chance="0.0300" /><!--Recipe - Unidentified Twilight Leather Gloves 60%-->
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22897" name="Satyr Summoner" title="Mature">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14136" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="91" />
+		<set name="rewardExp" value="264443" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5438" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1185" max="2770" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="0.0750">
+				<reward item_id="18160" min="1" max="1" chance="100.0000" /><!-- Unidentified Twilight Leather Gloves -->
+			</group>
+			<group chance="0.0055">
+				<reward item_id="17526" min="1" max="1" chance="100.0000" /><!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19226" min="1" max="1" chance="0.3000" /><!-- Unidentified Twilight Leather Gloves Ingredient -->
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22898" name="Satyr Summoner" title="Imperfect">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14136" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="91" />
+		<set name="rewardExp" value="264443" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5438" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1185" max="2770" chance="100" /><!-- Adena -->
+			</group>
+			<group chance="0.0750">
+				<reward item_id="18160" min="1" max="1" chance="100.0000" /><!-- Unidentified Twilight Leather Gloves -->
+			</group>
+			<group chance="0.3000">
+				<reward item_id="9550" min="1" max="1" chance="100.0000" /><!-- Dark Stone -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="17526" min="1" max="1" chance="0.0009" /><!-- Scroll: Enchant Weapon R-Grade -->
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22899" name="Satyr Summoner" title="Violent">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="484689" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10183" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="1626" max="3796" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0750">
+				<reward item_id="18160" min="1" max="1" chance="100.0000" /> <!-- Unidentified Twilight Leather Gloves -->
+			</group>
+			<group chance="0.1875">
+				<reward item_id="19367" min="1" max="1" chance="80.0000" /> <!-- Recipe - Unidentified Twilight Leather Gloves 60% -->
+				<reward item_id="17527" min="1" max="1" chance="20.0000" /> <!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19226" min="1" max="1" chance="0.3000" /> <!-- Unidentified Twilight Leather Gloves Ingredient -->
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
 </list>

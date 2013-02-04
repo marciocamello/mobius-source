@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="33701" name="" title="">
+	<npc id="33701" name="Dimensional Treasure Chest" title="Dimensional Treasure Chest">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -48,7 +48,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="33715" name="" title="">
+	<npc id="33715" name="Seed Talisman Supervisor" title="Seed Talisman Supervisor">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -95,7 +95,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33716" name="Представитель Картии" title="">
+    <npc id="33716" name="Kartia Information Service" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -143,7 +143,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-	<npc id="33717" name="" title="">
+	<npc id="33717" name="Tombstone of the Guillotine of Death" title="Tombstone of the Guillotine of Death">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -190,7 +190,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="33718" name="" title="">
+	<npc id="33718" name="Tombstone of Houpan the Warden Overseer" title="Tombstone of Houpan the Warden Overseer">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -237,7 +237,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="33719" name="" title="">
+	<npc id="33719" name="Tombstone of Crook the Mad" title="Tombstone of Crook the Mad">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>

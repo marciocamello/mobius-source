@@ -62,7 +62,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18101" name="Offering of Forbidden Path Archer" title="">
+	<npc id="18101" name="Offering of Forbidden Path, Archer" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -121,7 +121,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18102" name="Offering of Forbidden Path Warrior" title="">
+	<npc id="18102" name="Offering of Forbidden Path, Warrior" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -189,7 +189,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18103" name="Offering of Forbidden Path Follower" title="">
+	<npc id="18103" name="Offering of Forbidden Path, Follower" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -257,7 +257,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18104" name="Offering of Forbidden Path Berserker" title="">
+	<npc id="18104" name="Offering of Forbidden Path, Berserker" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -325,7 +325,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18105" name="Offering of Forbidden Path Zealot" title="">
+	<npc id="18105" name="Offering of Forbidden Path, Zealot" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -392,7 +392,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18106" name="Offering of Forbidden Path Marksman" title="">
+	<npc id="18106" name="Offering of Forbidden Path, Sniper" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -451,7 +451,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18107" name="Offering of Forbidden Path Disciple" title="">
+	<npc id="18107" name="Offering of Forbidden Path, Disciple" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -516,7 +516,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18108" name="Offering of Forbidden Path Saint" title="">
+	<npc id="18108" name="Offering of Forbidden Path, Saint" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2619,7 +2619,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18141" name="Beetle of Grave" title="">
+	<npc id="18141" name="Graveyard Beetle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2679,7 +2679,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18142" name="Beetle of Grave" title="">
+	<npc id="18142" name="Graveyard Beetle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2739,7 +2739,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18143" name="Beetle of Grave" title="">
+	<npc id="18143" name="Graveyard Beetle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2799,7 +2799,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18144" name="Beetle of Grave" title="">
+	<npc id="18144" name="Graveyard Beetle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2859,7 +2859,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18145" name="Beetle of Grave" title="">
+	<npc id="18145" name="Graveyard Beetle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2918,7 +2918,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18146" name="Beetle of Grave" title="">
+	<npc id="18146" name="Graveyard Beetle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2976,7 +2976,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18147" name="Beetle of Grave" title="">
+	<npc id="18147" name="Graveyard Beetle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3034,7 +3034,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18148" name="Beetle of Grave" title="">
+	<npc id="18148" name="Graveyard Beetle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3092,7 +3092,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18149" name="Beetle of Grave" title="">
+	<npc id="18149" name="Graveyard Beetle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

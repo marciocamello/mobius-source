@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="23200" name="Death Claw" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23200" name="Turan the Severed Ghost" title="">
 		<set name="collision_radius" value="17.5"/>
 		<set name="collision_height" value="52.5"/>
 		<set name="level" value="97"/>
@@ -46,8 +45,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23201" name="Rakul" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23201" name="Nagdu the deformed Merman" title="">
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="95"/>
@@ -91,8 +89,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23202" name="Traikan" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23202" name="Hakal the Butchered" title="">
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="96"/>
@@ -136,8 +133,7 @@
 			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23203" name="Undead Warbeast" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23203" name="Centa the Standing Beast" title="">
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="95"/>
@@ -181,8 +177,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23204" name="Rough Bionic Bear" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23204" name="Adidaiu of the Killer Fangs" title="">
 		<set name="collision_radius" value="34.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="95"/>
@@ -226,8 +221,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23205" name="Anthias" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23205" name="Haskal the Floating Ghost" title="">
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="level" value="97"/>
@@ -271,8 +265,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23206" name="Elder Troll" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23206" name="Samita the Ex-Torture Expert" title="">
 		<set name="collision_radius" value="46.0"/>
 		<set name="collision_height" value="71.5"/>
 		<set name="level" value="97"/>
@@ -316,8 +309,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23207" name="Skeleton Boneshooter" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23207" name="Gazem" title="Fortress Scout">
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="27.5"/>
 		<set name="level" value="96"/>
@@ -361,8 +353,7 @@
 			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23208" name="Doll Claw" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23208" name="Rosenia's Divine Spirit" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="38.0"/>
 		<set name="level" value="96"/>
@@ -406,8 +397,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23209" name="Leader Anakazel" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23209" name="Kelbara the Dual-Sword Slaughterer" title="">
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="28.0"/>
 		<set name="level" value="97"/>
@@ -451,8 +441,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23210" name="Manadragora" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23210" name="Mandragora of Joy and Sorrow" title="">
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="17.8"/>
 		<set name="level" value="95"/>
@@ -497,8 +486,7 @@
 			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23211" name="Mandragora" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23211" name="Mandragora of Prayer" title="">
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="95"/>
@@ -543,8 +531,7 @@
 			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23212" name="Skeleton Guard" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23212" name="Scaldisect of Hellfire" title="">
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="97"/>
@@ -588,12 +575,12 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23213" name="spa_proletariat_m" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23213" name="Beggar Couch" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -634,13 +621,35 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="16549" max="38671" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34990" min="2" max="6" chance="19.80" />
+				<reward item_id="34992" min="9" max="27" chance="12.97" />
+				<reward item_id="34991" min="28" max="84" chance="4.352" />
+				<reward item_id="19285" min="1" max="1" chance="0.5" />
+				<reward item_id="35338" min="1" max="1" chance="0.5" />
+				<reward item_id="19271" min="1" max="1" chance="0.1" />
+				<reward item_id="35327" min="1" max="1" chance="0.1" />
+				<reward item_id="19420" min="1" max="1" chance="0.005" />
+				<reward item_id="19409" min="1" max="1" chance="0.005" />
+				<reward item_id="35451" min="1" max="1" chance="0.005" />
+				<reward item_id="35462" min="1" max="1" chance="0.005" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19271" min="1" max="1" chance="0.5" />
+			<reward item_id="19285" min="1" max="1" chance="0.5" />
+		</rewardlist>
 	</npc>
-	<npc id="23214" name="spa_proletariat_f" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23214" name="Beggar Couch" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -681,13 +690,35 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="16549" max="38671" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34990" min="2" max="6" chance="19.80" />
+				<reward item_id="34992" min="9" max="27" chance="12.97" />
+				<reward item_id="34991" min="28" max="84" chance="4.352" />
+				<reward item_id="19285" min="1" max="1" chance="0.5" />
+				<reward item_id="35338" min="1" max="1" chance="0.5" />
+				<reward item_id="19271" min="1" max="1" chance="0.1" />
+				<reward item_id="35327" min="1" max="1" chance="0.1" />
+				<reward item_id="19420" min="1" max="1" chance="0.005" />
+				<reward item_id="19409" min="1" max="1" chance="0.005" />
+				<reward item_id="35451" min="1" max="1" chance="0.005" />
+				<reward item_id="35462" min="1" max="1" chance="0.005" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19271" min="1" max="1" chance="0.5" />
+			<reward item_id="19285" min="1" max="1" chance="0.5" />
+		</rewardlist>
 	</npc>
-	<npc id="23215" name="spa_normal_m" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23215" name="Couch" title="">
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -729,13 +760,40 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34992" min="9" max="27" chance="20.73" />
+				<reward item_id="34991" min="28" max="84" chance="6.772" />
+				<reward item_id="34990" min="20" max="60" chance="3.768" />
+				<reward item_id="19299" min="1" max="1" chance="0.5" />
+				<reward item_id="35352" min="1" max="1" chance="0.5" />
+				<reward item_id="35348" min="1" max="1" chance="0.5" />
+				<reward item_id="35329" min="1" max="1" chance="0.5" />
+				<reward item_id="19273" min="1" max="1" chance="0.5" />
+				<reward item_id="19295" min="1" max="1" chance="0.5" />
+				<reward item_id="19434" min="1" max="1" chance="0.01" />
+				<reward item_id="19430" min="1" max="1" chance="0.01" />
+				<reward item_id="19411" min="1" max="1" chance="0.005" />
+				<reward item_id="35453" min="1" max="1" chance="0.005" />
+				<reward item_id="35472" min="1" max="1" chance="0.01" />
+				<reward item_id="35476" min="1" max="1" chance="0.01" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19295" min="1" max="1" chance="1" />
+			<reward item_id="19299" min="1" max="1" chance="1" />
+			<reward item_id="19273" min="1" max="1" chance="0.5" />
+		</rewardlist>
 	</npc>
-	<npc id="23216" name="spa_normal_f" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23216" name="Couch" title="">
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="37.0"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -776,13 +834,40 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34992" min="9" max="27" chance="20.73" />
+				<reward item_id="34991" min="28" max="84" chance="6.772" />
+				<reward item_id="34990" min="20" max="60" chance="3.768" />
+				<reward item_id="19299" min="1" max="1" chance="0.5" />
+				<reward item_id="35352" min="1" max="1" chance="0.5" />
+				<reward item_id="35348" min="1" max="1" chance="0.5" />
+				<reward item_id="35329" min="1" max="1" chance="0.5" />
+				<reward item_id="19273" min="1" max="1" chance="0.5" />
+				<reward item_id="19295" min="1" max="1" chance="0.5" />
+				<reward item_id="19434" min="1" max="1" chance="0.01" />
+				<reward item_id="19430" min="1" max="1" chance="0.01" />
+				<reward item_id="19411" min="1" max="1" chance="0.005" />
+				<reward item_id="35453" min="1" max="1" chance="0.005" />
+				<reward item_id="35472" min="1" max="1" chance="0.01" />
+				<reward item_id="35476" min="1" max="1" chance="0.01" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19295" min="1" max="1" chance="1" />
+			<reward item_id="19299" min="1" max="1" chance="1" />
+			<reward item_id="19273" min="1" max="1" chance="0.5" />
+		</rewardlist>
 	</npc>
-	<npc id="23217" name="spa_proletariat_m" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23217" name="Children's Couch" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -823,13 +908,35 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="20801" max="48606" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34992" min="9" max="27" chance="20.73" />
+				<reward item_id="34991" min="28" max="84" chance="6.772" />
+				<reward item_id="34990" min="20" max="60" chance="3.768" />
+				<reward item_id="19296" min="1" max="1" chance="0.5" />
+				<reward item_id="19276" min="1" max="1" chance="0.5" />
+				<reward item_id="35332" min="1" max="1" chance="0.5" />
+				<reward item_id="35349" min="1" max="1" chance="0.5" />
+				<reward item_id="19431" min="1" max="1" chance="0.005" />
+				<reward item_id="19414" min="1" max="1" chance="0.005" />
+				<reward item_id="35456" min="1" max="1" chance="0.005" />
+				<reward item_id="35473" min="1" max="1" chance="0.005" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19296" min="1" max="1" chance="1" />
+			<reward item_id="19276" min="1" max="1" chance="0.5" />
+		</rewardlist>
 	</npc>
-	<npc id="23218" name="spa_proletariat_f" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23218" name="Children's Couch" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -870,13 +977,35 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="20801" max="48606" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34992" min="9" max="27" chance="20.73" />
+				<reward item_id="34991" min="28" max="84" chance="6.772" />
+				<reward item_id="34990" min="20" max="60" chance="3.768" />
+				<reward item_id="19296" min="1" max="1" chance="0.5" />
+				<reward item_id="19276" min="1" max="1" chance="0.5" />
+				<reward item_id="35332" min="1" max="1" chance="0.5" />
+				<reward item_id="35349" min="1" max="1" chance="0.5" />
+				<reward item_id="19431" min="1" max="1" chance="0.005" />
+				<reward item_id="19414" min="1" max="1" chance="0.005" />
+				<reward item_id="35456" min="1" max="1" chance="0.005" />
+				<reward item_id="35473" min="1" max="1" chance="0.005" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19296" min="1" max="1" chance="1" />
+			<reward item_id="19276" min="1" max="1" chance="0.5" />
+		</rewardlist>
 	</npc>
-	<npc id="23219" name="spa_engineer" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23219" name="Engineer Couch" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443641"/>
@@ -919,13 +1048,35 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="35913" max="83796" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34992" min="9" max="27" chance="20.73" />
+				<reward item_id="34991" min="28" max="84" chance="6.772" />
+				<reward item_id="34990" min="20" max="60" chance="3.768" />
+				<reward item_id="19278" min="1" max="1" chance="0.5" />
+				<reward item_id="19275" min="1" max="1" chance="0.5" />
+				<reward item_id="35331" min="1" max="1" chance="0.5" />
+				<reward item_id="35334" min="1" max="1" chance="0.5" />
+				<reward item_id="19413" min="1" max="1" chance="0.005" />
+				<reward item_id="19416" min="1" max="1" chance="0.005" />
+				<reward item_id="35455" min="1" max="1" chance="0.005" />
+				<reward item_id="35458" min="1" max="1" chance="0.005" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19275" min="1" max="1" chance="1" />
+			<reward item_id="19278" min="1" max="1" chance="1" />
+		</rewardlist>
 	</npc>
-	<npc id="23220" name="kunda_a" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23220" name="Kunda Watchman" title="">
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443936"/>
@@ -968,13 +1119,49 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="54424" max="127060" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34992" min="9" max="27" chance="20.73" />
+				<reward item_id="34991" min="28" max="84" chance="6.772" />
+				<reward item_id="34990" min="20" max="60" chance="3.768" />
+				<reward item_id="19290" min="1" max="1" chance="1" />
+				<reward item_id="19301" min="1" max="1" chance="1" />
+				<reward item_id="19285" min="1" max="1" chance="0.5" />
+				<reward item_id="19291" min="1" max="1" chance="0.5" />
+				<reward item_id="19296" min="1" max="1" chance="0.5" />
+				<reward item_id="19281" min="1" max="1" chance="0.5" />
+				<reward item_id="19436" min="1" max="1" chance="0.01" />
+				<reward item_id="19431" min="1" max="1" chance="0.01" />
+				<reward item_id="19426" min="1" max="1" chance="0.01" />
+				<reward item_id="19425" min="1" max="1" chance="0.01" />
+				<reward item_id="19419" min="1" max="1" chance="0.005" />
+				<reward item_id="19420" min="1" max="1" chance="0.01" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="35337" min="1" max="1" chance="0.5" />
+			<reward item_id="35338" min="1" max="1" chance="0.5" />
+			<reward item_id="35343" min="1" max="1" chance="0.5" />
+			<reward item_id="35344" min="1" max="1" chance="0.5" />
+			<reward item_id="35349" min="1" max="1" chance="0.5" />
+			<reward item_id="35354" min="1" max="1" chance="0.5" />
+			<reward item_id="35473" min="1" max="1" chance="0.05" />
+			<reward item_id="35468" min="1" max="1" chance="0.05" />
+			<reward item_id="35467" min="1" max="1" chance="0.05" />
+			<reward item_id="35462" min="1" max="1" chance="0.05" />
+			<reward item_id="35461" min="1" max="1" chance="0.05" />
+			<reward item_id="35478" min="1" max="1" chance="0.05" />
+		</rewardlist>
 	</npc>
-	<npc id="23221" name="spa_engineer" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23221" name="Adac the Engineer" title="Chief Engineer">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443641"/>
@@ -1018,12 +1205,12 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23222" name="spa_engineer" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23222" name="Borok the Engineer" title="Chief Engineer">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443641"/>
@@ -1067,12 +1254,12 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23223" name="spa_engineer" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23223" name="Koja the Engineer" title="Chief Engineer">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443641"/>
@@ -1116,12 +1303,12 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23224" name="kunda_a" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23224" name="Kunda's Gaurdian" title="">
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="356248"/>
@@ -1165,12 +1352,12 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23225" name="kunda_b" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23225" name="Kunda's Berserker" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="356248"/>
@@ -1213,13 +1400,52 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="59266" max="138365" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="19310" min="1" max="1" chance="20.92" />
+				<reward item_id="19312" min="1" max="1" chance="11.93" />
+				<reward item_id="34990" min="20" max="60" chance="5.056" />
+				<reward item_id="34991" min="28" max="84" chance="9.118" />
+				<reward item_id="34992" min="81" max="243" chance="3.098" />
+				<reward item_id="19294" min="1" max="1" chance="1" />
+				<reward item_id="19275" min="1" max="1" chance="0.5" />
+				<reward item_id="17527" min="1" max="1" chance="0.5" />
+				<reward item_id="19273" min="1" max="1" chance="0.5" />
+				<reward item_id="19292" min="1" max="1" chance="0.5" />
+				<reward item_id="19303" min="1" max="1" chance="0.5" />
+				<reward item_id="19298" min="1" max="1" chance="0.5" />
+				<reward item_id="19438" min="1" max="1" chance="0.005" />
+				<reward item_id="19433" min="1" max="1" chance="0.005" />
+				<reward item_id="19429" min="1" max="1" chance="0.01" />
+				<reward item_id="19427" min="1" max="1" chance="0.005" />
+				<reward item_id="19411" min="1" max="1" chance="0.005" />
+				<reward item_id="19413" min="1" max="1" chance="0.005" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="35329" min="1" max="1" chance="0.5" />
+			<reward item_id="35331" min="1" max="1" chance="0.5" />
+			<reward item_id="35347" min="1" max="1" chance="0.5" />
+			<reward item_id="35351" min="1" max="1" chance="0.5" />
+			<reward item_id="35356" min="1" max="1" chance="0.5" />
+			<reward item_id="35345" min="1" max="1" chance="0.1" />
+			<reward item_id="35475" min="1" max="1" chance="0.05" />
+			<reward item_id="35471" min="1" max="1" chance="0.05" />
+			<reward item_id="35455" min="1" max="1" chance="0.05" />
+			<reward item_id="35453" min="1" max="1" chance="0.05" />
+			<reward item_id="35480" min="1" max="1" chance="0.05" />
+			<reward item_id="35469" min="1" max="1" chance="0.01" />
+		</rewardlist>
 	</npc>
-	<npc id="23226" name="kunda_c" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23226" name="Kunda's Executor" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="356248"/>
@@ -1262,9 +1488,47 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="59266" max="138365" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="19314" min="1" max="1" chance="14.86" />
+				<reward item_id="34991" min="28" max="48" chance="9.122" />
+				<reward item_id="19313" min="1" max="1" chance="6.400" />
+				<reward item_id="34990" min="20" max="60" chance="5.079" />
+				<reward item_id="34992" min="81" max="243" chance="3.136" />
+				<reward item_id="19295" min="1" max="1" chance="1" />
+				<reward item_id="19300" min="1" max="1" chance="1" />
+				<reward item_id="19271" min="1" max="1" chance="0.5" />
+				<reward item_id="17527" min="1" max="1" chance="0.5" />
+				<reward item_id="19304" min="1" max="1" chance="0.5" />
+				<reward item_id="19293" min="1" max="1" chance="0.5" />
+				<reward item_id="19276" min="1" max="1" chance="0.5" />
+				<reward item_id="19414" min="1" max="1" chance="0.005" />
+				<reward item_id="19428" min="1" max="1" chance="0.005" />
+				<reward item_id="19430" min="1" max="1" chance="0.01" />
+				<reward item_id="19435" min="1" max="1" chance="0.01" />
+				<reward item_id="19439" min="1" max="1" chance="0.01" />
+				<reward item_id="19409" min="1" max="1" chance="0.005" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="35327" min="1" max="1" chance="0.5" />
+			<reward item_id="35332" min="1" max="1" chance="0.5" />
+			<reward item_id="35346" min="1" max="1" chance="0.5" />
+			<reward item_id="35348" min="1" max="1" chance="0.5" />
+			<reward item_id="35353" min="1" max="1" chance="0.5" />
+			<reward item_id="35357" min="1" max="1" chance="0.5" />
+			<reward item_id="35477" min="1" max="1" chance="0.05" />
+			<reward item_id="35472" min="1" max="1" chance="0.05" />
+			<reward item_id="35470" min="1" max="1" chance="0.05" />
+			<reward item_id="35456" min="1" max="1" chance="0.05" />
+			<reward item_id="35451" min="1" max="1" chance="0.05" />
+			<reward item_id="35481" min="1" max="1" chance="0.05" />
+		</rewardlist>
 	</npc>
-	<npc id="23227" name="spa_proletariat_m" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23227" name="Beggar Couch" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="97"/>
@@ -1311,8 +1575,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23228" name="spa_proletariat_f" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23228" name="Beggar Couch" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="level" value="97"/>
@@ -1359,8 +1622,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23229" name="spa_normal_m" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23229" name="Couch" title="">
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
@@ -1407,8 +1669,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23230" name="spa_normal_f" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23230" name="Couch" title="">
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="37.0"/>
 		<set name="level" value="98"/>
@@ -1455,8 +1716,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23231" name="spa_proletariat_m" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23231" name="Children's Couch" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="97"/>
@@ -1503,8 +1763,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23232" name="spa_proletariat_f" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23232" name="Children's Couch" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="level" value="97"/>
@@ -1551,15 +1810,153 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23233" name="spa_engineer" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23233" name="Engineer Couch" title="">
+		<set name="collision_radius" value="24.0"/>
+		<set name="collision_height" value="40.0"/>
+		<set name="level" value="97"/>
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="355923"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="22800"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="98"/>
+		<set name="baseCON" value="87"/>
+		<set name="baseDEX" value="83"/>
+		<set name="baseINT" value="11"/>
+		<set name="baseWIT" value="115"/>
+		<set name="baseMEN" value="5"/>
+		<set name="rewardExp" value="4224008"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="91882"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="186"/>
+		<set name="baseWalkSpd" value="50"/>
+		<attributes>
+			<defence attribute="fire" value="280"/>
+			<defence attribute="water" value="280"/>
+			<defence attribute="wind" value="280"/>
+			<defence attribute="earth" value="280"/>
+			<defence attribute="holy" value="280"/>
+			<defence attribute="unholy" value="280"/>
+		</attributes>
+		<skills>
+			<skill id="4411" level="13"/>
+			<skill id="4413" level="9"/>
+			<skill id="4414" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="5462" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="20801" max="48606" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34992" min="9" max="27" chance="20.73" />
+				<reward item_id="34991" min="28" max="84" chance="6.772" />
+				<reward item_id="34990" min="20" max="60" chance="3.768" />
+				<reward item_id="19296" min="1" max="1" chance="0.5" />
+				<reward item_id="19276" min="1" max="1" chance="0.5" />
+				<reward item_id="35332" min="1" max="1" chance="0.5" />
+				<reward item_id="35349" min="1" max="1" chance="0.5" />
+				<reward item_id="19431" min="1" max="1" chance="0.005" />
+				<reward item_id="19414" min="1" max="1" chance="0.005" />
+				<reward item_id="35456" min="1" max="1" chance="0.005" />
+				<reward item_id="35473" min="1" max="1" chance="0.005" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19296" min="1" max="1" chance="1" />
+			<reward item_id="19276" min="1" max="1" chance="0.5" />
+		</rewardlist>
+	</npc>
+	<npc id="23234" name="Engineer Couch" title="">
+		<set name="collision_radius" value="24.0"/>
+		<set name="collision_height" value="40.0"/>
+		<set name="level" value="97"/>
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="355923"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="22800"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="98"/>
+		<set name="baseCON" value="87"/>
+		<set name="baseDEX" value="83"/>
+		<set name="baseINT" value="11"/>
+		<set name="baseWIT" value="115"/>
+		<set name="baseMEN" value="5"/>
+		<set name="rewardExp" value="4224008"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="91882"/>
+		<set name="basePAtk" value="4900"/>
+		<set name="basePDef" value="3840"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="186"/>
+		<set name="baseWalkSpd" value="50"/>
+		<attributes>
+			<defence attribute="fire" value="280"/>
+			<defence attribute="water" value="280"/>
+			<defence attribute="wind" value="280"/>
+			<defence attribute="earth" value="280"/>
+			<defence attribute="holy" value="280"/>
+			<defence attribute="unholy" value="280"/>
+		</attributes>
+		<skills>
+			<skill id="4411" level="13"/>
+			<skill id="4413" level="9"/>
+			<skill id="4414" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="5462" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="20801" max="48606" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34992" min="9" max="27" chance="20.73" />
+				<reward item_id="34991" min="28" max="84" chance="6.772" />
+				<reward item_id="34990" min="20" max="60" chance="3.768" />
+				<reward item_id="19296" min="1" max="1" chance="0.5" />
+				<reward item_id="19276" min="1" max="1" chance="0.5" />
+				<reward item_id="35332" min="1" max="1" chance="0.5" />
+				<reward item_id="35349" min="1" max="1" chance="0.5" />
+				<reward item_id="19431" min="1" max="1" chance="0.005" />
+				<reward item_id="19414" min="1" max="1" chance="0.005" />
+				<reward item_id="35456" min="1" max="1" chance="0.005" />
+				<reward item_id="35473" min="1" max="1" chance="0.005" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19296" min="1" max="1" chance="1" />
+			<reward item_id="19276" min="1" max="1" chance="0.5" />
+		</rewardlist>
+	</npc>
+	<npc id="23235" name="Kunda" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="443641"/>
+		<set name="baseHpMax" value="443641.0"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="23174"/>
@@ -1599,112 +1996,41 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+		</ai_params>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="35913" max="83796" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34992" min="9" max="27" chance="20.73" />
+				<reward item_id="34991" min="28" max="84" chance="6.772" />
+				<reward item_id="34990" min="20" max="60" chance="3.768" />
+				<reward item_id="19278" min="1" max="1" chance="0.5" />
+				<reward item_id="19275" min="1" max="1" chance="0.5" />
+				<reward item_id="35331" min="1" max="1" chance="0.5" />
+				<reward item_id="35334" min="1" max="1" chance="0.5" />
+				<reward item_id="19413" min="1" max="1" chance="0.005" />
+				<reward item_id="19416" min="1" max="1" chance="0.005" />
+				<reward item_id="35455" min="1" max="1" chance="0.005" />
+				<reward item_id="35458" min="1" max="1" chance="0.005" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19275" min="1" max="1" chance="1" />
+			<reward item_id="19278" min="1" max="1" chance="1" />
+		</rewardlist>
 	</npc>
-	<npc id="23234" name="spa_engineer" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="24.0"/>
-		<set name="collision_height" value="40.0"/>
-		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="443641"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="23174"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="98"/>
-		<set name="baseCON" value="87"/>
-		<set name="baseDEX" value="83"/>
-		<set name="baseINT" value="11"/>
-		<set name="baseWIT" value="115"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="13528103"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="187755"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="186"/>
-		<set name="baseWalkSpd" value="50"/>
-		<attributes>
-			<defence attribute="fire" value="280"/>
-			<defence attribute="water" value="280"/>
-			<defence attribute="wind" value="280"/>
-			<defence attribute="earth" value="280"/>
-			<defence attribute="holy" value="280"/>
-			<defence attribute="unholy" value="280"/>
-		</attributes>
-		<skills>
-			<skill id="4410" level="15"/>
-			<skill id="4411" level="13"/>
-			<skill id="4413" level="13"/>
-			<skill id="4414" level="1"/>
-			<skill id="4416" level="6"/>
-			<skill id="5462" level="1"/>
-		</skills>
-	</npc>
-	<npc id="23235" name="kunda_b" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="24.0"/>
-		<set name="collision_height" value="46.0"/>
-		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="621600000"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="2025740"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="98"/>
-		<set name="baseCON" value="87"/>
-		<set name="baseDEX" value="83"/>
-		<set name="baseINT" value="11"/>
-		<set name="baseWIT" value="115"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="186"/>
-		<set name="baseWalkSpd" value="50"/>
-		<attributes>
-			<defence attribute="fire" value="300"/>
-			<defence attribute="water" value="300"/>
-			<defence attribute="wind" value="300"/>
-			<defence attribute="earth" value="300"/>
-			<defence attribute="holy" value="300"/>
-			<defence attribute="unholy" value="300"/>
-		</attributes>
-		<skills>
-			<skill id="4410" level="13"/>
-			<skill id="4411" level="13"/>
-			<skill id="4412" level="13"/>
-			<skill id="4414" level="1"/>
-			<skill id="4416" level="6"/>
-			<skill id="5462" level="1"/>
-		</skills>
-	</npc>
-	<npc id="23236" name="kunda_a" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23236" name="Kunda" title="">
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="621600000"/>
+		<set name="baseHpMax" value="443641.0"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2025740"/>
@@ -1743,9 +2069,33 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+		</ai_params>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="35913" max="83796" chance="100.0000" />
+			</group>
+			<group chance="100.0">
+				<reward item_id="34992" min="9" max="27" chance="20.73" />
+				<reward item_id="34991" min="28" max="84" chance="6.772" />
+				<reward item_id="34990" min="20" max="60" chance="3.768" />
+				<reward item_id="19278" min="1" max="1" chance="0.5" />
+				<reward item_id="19275" min="1" max="1" chance="0.5" />
+				<reward item_id="35331" min="1" max="1" chance="0.5" />
+				<reward item_id="35334" min="1" max="1" chance="0.5" />
+				<reward item_id="19413" min="1" max="1" chance="0.005" />
+				<reward item_id="19416" min="1" max="1" chance="0.005" />
+				<reward item_id="35455" min="1" max="1" chance="0.005" />
+				<reward item_id="35458" min="1" max="1" chance="0.005" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19275" min="1" max="1" chance="1" />
+			<reward item_id="19278" min="1" max="1" chance="1" />
+		</rewardlist>
 	</npc>
-	<npc id="23237" name="spa_engineer" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23237" name="Engineer Couch" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
@@ -1792,8 +2142,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23238" name="purgatory_zombie" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23238" name="Kurklin the Shredder" title="">
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="65.0"/>
 		<set name="level" value="99"/>
@@ -1837,8 +2186,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23239" name="do_not_die" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23239" name="Heidmann" title="">
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="64.0"/>
 		<set name="level" value="99"/>
@@ -1882,8 +2230,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23240" name="Mandragora" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23240" name="Mandragora" title="">
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="13.0"/>
 		<set name="level" value="99"/>
@@ -1927,8 +2274,7 @@
 			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23241" name="Mandragora" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23241" name="Mandragora" title="">
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="95"/>
@@ -1972,8 +2318,7 @@
 			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23242" name="purgatory_zombie" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23242" name="Pafuron" title="">
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="65.0"/>
 		<set name="level" value="97"/>
@@ -2017,8 +2362,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23243" name="do_not_die" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23243" name="Krutati" title="">
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="64.0"/>
 		<set name="level" value="97"/>
@@ -2062,8 +2406,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23244" name="syron" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23244" name="Alluring Irene" title="">
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="49.0"/>
 		<set name="level" value="97"/>
@@ -2107,8 +2450,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23245" name="Skeleton Boneshooter" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23245" name="Isaad" title="Watchman of the Eye of Inifnity">
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="27.5"/>
 		<set name="level" value="96"/>
@@ -2152,8 +2494,7 @@
 			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23246" name="metucellar_a2_form" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23246" name="" title="">
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
@@ -2193,8 +2534,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23247" name="metucellar_a1_form" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23247" name="" title="">
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
@@ -2234,8 +2574,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23248" name="metucellar_b1_form" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23248" name="" title="">
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="99"/>
@@ -2275,8 +2614,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23249" name="metucellar_b2_form" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23249" name="" title="">
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="99"/>
@@ -2316,8 +2654,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23250" name="metucellar_a2_form" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23250" name="" title="">
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
@@ -2357,8 +2694,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23251" name="metucellar_a1_form" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23251" name="" title="">
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
@@ -2398,8 +2734,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23252" name="metucellar_a2_form" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23252" name="" title="">
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
@@ -2439,8 +2774,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23253" name="metucellar_a1_form" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23253" name="" title="">
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
@@ -2480,8 +2814,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23254" name="metucellar_a1_form" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23254" name="" title="">
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
@@ -2521,8 +2854,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23255" name="Light golem" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23255" name="" title="">
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="47.0"/>
 		<set name="level" value="99"/>
@@ -2562,8 +2894,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23256" name="Golem cannon catapult" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23256" name="" title="">
 		<set name="collision_radius" value="21.0"/>
 		<set name="collision_height" value="23.0"/>
 		<set name="level" value="99"/>
@@ -2603,8 +2934,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23257" name="Golem guardian" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23257" name="" title="">
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="30.0"/>
 		<set name="level" value="99"/>
@@ -2644,8 +2974,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23258" name="Golem carrier" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23258" name="" title="">
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="99"/>
@@ -2685,8 +3014,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23259" name="Great golem" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23259" name="" title="">
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="level" value="99"/>
@@ -2726,8 +3054,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23260" name="Steam copter" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23260" name="" title="">
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="15.0"/>
 		<set name="level" value="99"/>
@@ -2767,8 +3094,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23261" name="Doom golem" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23261" name="" title="">
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
@@ -2808,8 +3134,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23262" name="Mechanic golem" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23262" name="" title="">
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
@@ -2849,8 +3174,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23263" name="Golem repair" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23263" name="" title="">
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="99"/>
@@ -2890,8 +3214,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23264" name="Golem prop" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23264" name="" title="">
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="99"/>
@@ -2931,8 +3254,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23265" name="Golem carrier" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23265" name="" title="">
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="99"/>
@@ -2972,8 +3294,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23266" name="Golem cannon catapult" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23266" name="" title="">
 		<set name="collision_radius" value="21.0"/>
 		<set name="collision_height" value="23.0"/>
 		<set name="level" value="99"/>
@@ -3013,8 +3334,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23267" name="Black screw golem" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23267" name="" title="">
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="31.0"/>
 		<set name="level" value="99"/>
@@ -3054,8 +3374,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23268" name="Golem microscout" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23268" name="" title="">
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="43.5"/>
 		<set name="level" value="99"/>
@@ -3095,8 +3414,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23269" name="Golem guardian" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23269" name="" title="">
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="41.5"/>
 		<set name="level" value="99"/>
@@ -3136,8 +3454,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23270" name="Metucellar" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23270" name="" title="">
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
@@ -3177,8 +3494,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23271" name="Metucellar" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23271" name="" title="">
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="99"/>
@@ -3218,8 +3534,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23272" name="Metucellar" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23272" name="" title="">
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
@@ -3259,8 +3574,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23273" name="Metucellar" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23273" name="" title="">
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="99"/>
@@ -3300,8 +3614,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23274" name="Metucellar" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23274" name="" title="">
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="99"/>
@@ -3341,8 +3654,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23275" name="Nornil soldier boss" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23275" name="" title="">
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
@@ -3382,8 +3694,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="23276" name="Metucellar" title="-_-">
-		<!--fixed by Darvin & HaxHago-->
+	<npc id="23276" name="" title="">
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="99"/>

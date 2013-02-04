@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-    <npc id="29200" name="Хвост Земляного Червя" title="">
+    <npc id="29200" name="Earth Wyrm Tail" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -51,7 +51,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29201" name="Жертва Земляного Червя" title="">
+    <npc id="29201" name="Earth Wyrm Victim" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -101,7 +101,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29202" name="Жертва Земляного Червя" title="">
+    <npc id="29202" name="Earth Wyrm Victim" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -151,7 +151,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29203" name="Жертва Земляного Червя" title="">
+    <npc id="29203" name="Earth Wyrm Victim" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -201,7 +201,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29204" name="Личинка" title="">
+    <npc id="29204" name="Larva" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -251,7 +251,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29205" name="Щупальца" title="">
+    <npc id="29205" name="Tentacle" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -309,7 +309,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29206" name="Пищеварительные Отростки" title="">
+    <npc id="29206" name="Stomach Gland" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -359,7 +359,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29207" name="Личинка" title="">
+    <npc id="29207" name="Larva" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -409,7 +409,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29208" name="Личинка" title="">
+    <npc id="29208" name="Larva" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -459,7 +459,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29209" name="Октавис" title="">
+    <npc id="29209" name="Octavis" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -568,7 +568,7 @@
 			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
-    <npc id="29211" name="Октавис" title="">
+    <npc id="29211" name="Octavis" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="Fighter"/>
         <set name="baseAtkRange" value="40"/>
@@ -630,7 +630,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29212" name="Октавис" title="">
+    <npc id="29212" name="Octavis" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -682,7 +682,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29213" name="Байлор" title="Главный Надзиратель">
+    <npc id="29213" name="Baylor" title="Warden">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -732,7 +732,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29214" name="Страж Кристальной Тюрьмы" title="">
+    <npc id="29214" name="Crystal Prison Guard" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -782,7 +782,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29215" name="Кристальный Голем" title="">
+    <npc id="29215" name="Crystalline Golem" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -832,7 +832,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29216" name="Кристальный Голем" title="">
+    <npc id="29216" name="Crystalline Golem" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -882,7 +882,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29217" name="Страж Кристальной Тюрьмы" title="">
+    <npc id="29217" name="Crystal Prison Guard" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -932,7 +932,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29218" name="Валлок" title="Тюремщик Ада">
+    <npc id="29218" name="Balok" title="Hell's Jailer">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -984,7 +984,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29219" name="Апостол Ада" title="">
+    <npc id="29219" name="Hell's Disciple" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1034,7 +1034,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29220" name="Личинка" title="">
+    <npc id="29220" name="Larva" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1084,7 +1084,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29221" name="Личинка" title="">
+    <npc id="29221" name="Larva" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1134,7 +1134,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29222" name="Хвост Земляного Червя" title="">
+    <npc id="29222" name="Earth Wyrm Tail" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1184,7 +1184,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29223" name="Антарас" title="Дракон Земли">
+    <npc id="29223" name="Antharas" title="Earth Dragon">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1238,7 +1238,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29224" name="Чудовищный Дракон" title="">
+    <npc id="29224" name="Behemoth Dragon" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1294,7 +1294,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29225" name="Дракон Тараска" title="">
+    <npc id="29225" name="Tarask Dragon" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1350,7 +1350,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29226" name="Панцирный Дракон" title="">
+    <npc id="29226" name="Dragon Bomber" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1400,7 +1400,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29227" name="Панцирный Дракон" title="">
+    <npc id="29227" name="Dragon Bomber" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1450,7 +1450,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29228" name="Валакас" title="Дракон Огня">
+    <npc id="29228" name="Valakas" title="Fire Dragon">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1504,7 +1504,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29229" name="Старейший Лавазавр" title="">
+    <npc id="29229" name="Lavasaurus Alpha" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1554,7 +1554,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29230" name="Укротитель Драконов" title="">
+    <npc id="29230" name="Dragon Treater" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1604,7 +1604,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29231" name="Жертва Земляного Червя" title="">
+    <npc id="29231" name="Earth Wyrm Victim" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1666,7 +1666,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="29232" name="Вознаграждение" title="Земляной Червь">
+    <npc id="29232" name="Reward" title="Earth Wyrm">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1710,8 +1710,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-	<npc id="29233" name="tauti" title="-_-">
-        <!--done by Asmodian Team-->
+	<npc id="29233" name="Tauti" title="">
         <set name="collision_radius" value="40.0"/>
         <set name="aggroRange" value="100"/>
         <set name="collision_height" value="90.0"/>
@@ -1808,8 +1807,7 @@
             <skill id="5467" level="1"/>
         </skills>
     </npc>
-    <npc id="29234" name="tauti" title="-_-">
-        <!--done by Asmodian Team-->
+    <npc id="29234" name="Tauti" title="">
         <set name="collision_radius" value="40.0"/>
         <set name="collision_height" value="90.0"/>
         <set name="aggroRange" value="100"/>
@@ -1906,8 +1904,7 @@
             <skill id="5467" level="1"/>
         </skills>
     </npc>
-    <npc id="29235" name="tauti" title="-_-">
-        <!--done by Asmodian Team-->
+    <npc id="29235" name="Tauti" title="">
         <set name="collision_radius" value="40.0"/>
         <set name="collision_height" value="90.0"/>
         <set name="aggroRange" value="100"/>
@@ -2004,8 +2001,7 @@
             <skill id="5467" level="1"/>
         </skills>
     </npc>
-    <npc id="29236" name="tauti_axe" title="-_-">
-        <!--done by Asmodian Team-->
+    <npc id="29236" name="Tauti" title="">
         <set name="collision_radius" value="24.0"/>
         <set name="aggroRange" value="100"/>
         <set name="collision_height" value="77.0"/>
@@ -2102,8 +2098,7 @@
             <skill id="5467" level="1"/>
         </skills>
     </npc>
-    <npc id="29237" name="tauti_axe" title="-_-">
-        <!--done by Asmodian Team-->
+    <npc id="29237" name="Tauti" title="">
         <set name="collision_radius" value="24.0"/>
         <set name="collision_height" value="77.0"/>
         <set name="level" value="99"/>
@@ -2200,8 +2195,7 @@
             <skill id="5467" level="1"/>
         </skills>
     </npc>
-    <npc id="29238" name="tauti_axe" title="-_-">
-        <!--done by Asmodian Team-->
+    <npc id="29238" name="Tauti" title="">
         <set name="collision_radius" value="24.0"/>
         <set name="collision_height" value="77.0"/>
         <set name="level" value="99"/>
@@ -2298,8 +2292,7 @@
             <skill id="5467" level="1"/>
         </skills>
     </npc>
-    <npc id="29239" name="tauti" title="-_-">
-        <!--done by Asmodian Team-->
+    <npc id="29239" name="Tauti" title="">
         <set name="collision_radius" value="40.0"/>
         <set name="collision_height" value="90.0"/>
         <set name="level" value="99"/>

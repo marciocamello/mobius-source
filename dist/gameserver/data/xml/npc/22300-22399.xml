@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="22300" name="Dolph's Minion" title="">
+	<npc id="22300" name="Dolph's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -418,7 +418,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="22305" name="Kechi's Captain" title="">
+	<npc id="22305" name="Kechi's Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -498,7 +498,7 @@
 			<defence attribute="unholy" value="60" />
 		</attributes>
 	</npc>
-	<npc id="22306" name="Kechi's Captain" title="">
+	<npc id="22306" name="Kechi's Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -579,7 +579,7 @@
 			<defence attribute="unholy" value="60" />
 		</attributes>
 	</npc>
-	<npc id="22307" name="Kechi's Captain" title="">
+	<npc id="22307" name="Kechi's Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1281,7 +1281,7 @@
 			<defence attribute="unholy" value="70" />
 		</attributes>
 	</npc>
-	<npc id="22315" name="Garden Guard " title="">
+	<npc id="22315" name="Garden Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3548,7 +3548,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="22346" name="Quarry Foreman" title="">
+	<npc id="22346" name="Quarry Patrol Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3642,7 +3642,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="22347" name="Quarry Patrolman" title="">
+	<npc id="22347" name="Quarry Patrol" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4178,7 +4178,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22355" name="Enceinte Defender" title="">
+	<npc id="22355" name="Enceinte Guard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4270,7 +4270,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22356" name="Enceinte Defender" title="">
+	<npc id="22356" name="Enceinte Guard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4331,7 +4331,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22357" name="Enceinte Defender" title="">
+	<npc id="22357" name="Enceinte Guard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="hellbound.OutpostGuards" />
 		<set name="baseAtkRange" value="40" />
@@ -4392,7 +4392,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22358" name="Enceinte Defender" title="">
+	<npc id="22358" name="Enceinte Guard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="hellbound.OutpostGuards" />
 		<set name="baseAtkRange" value="40" />
@@ -5174,7 +5174,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22367" name="Labyrinth Mystic" title="">
+	<npc id="22367" name="Labyrinth Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5266,7 +5266,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22368" name="Labyrinth Captain" title="">
+	<npc id="22368" name="Labyrinth Guard Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5357,7 +5357,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22369" name="Labyrinth Seer" title="">
+	<npc id="22369" name="Labyrinth Priest" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5453,7 +5453,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22370" name="Passageway Captain" title="">
+	<npc id="22370" name="Passageway Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5643,7 +5643,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22372" name="Passageway Mystic" title="">
+	<npc id="22372" name="Passageway Wizard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6214,7 +6214,7 @@
 			<defence attribute="unholy" value="200" />
 		</attributes>
 	</npc>
-	<npc id="22378" name="Master's Minion" title="">
+	<npc id="22378" name="Master's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6304,7 +6304,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="22379" name="Master's Minion" title="">
+	<npc id="22379" name="Master's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6503,7 +6503,7 @@
 			<defence attribute="unholy" value="200" />
 		</attributes>
 	</npc>
-	<npc id="22381" name="Master's Guard" title="">
+	<npc id="22381" name="Master's Escort" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6587,7 +6587,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="22382" name="Master's Guard" title="">
+	<npc id="22382" name="Master's Escort" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6781,7 +6781,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="22384" name="Mystic's Toy" title="">
+	<npc id="22384" name="Wizard's Toy" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6960,7 +6960,7 @@
 			<defence attribute="unholy" value="170" />
 		</attributes>
 	</npc>
-	<npc id="22386" name="Foundry Mystic" title="">
+	<npc id="22386" name="Foundry Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -7050,7 +7050,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22387" name="Foundry Mystic" title="">
+	<npc id="22387" name="Foundry Wizard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

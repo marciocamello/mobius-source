@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="20800" name="Eva's Seeker" title="">
+	<npc id="20800" name="Eva's Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1181,7 +1181,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20810" name="Seer of Hallate" title="">
+	<npc id="20810" name="Hallate's Watchman" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2946,7 +2946,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20829" name="Platinum Tribe Overlord" title="">
+	<npc id="20829" name="Platinum Tribe Prefect" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3445,7 +3445,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20835" name="Zaken's Seer" title="">
+	<npc id="20835" name="Zaken's Watchman" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3815,7 +3815,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20839" name="Unpleasant Humming" title="">
+	<npc id="20839" name="Dismal Humming" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4360,7 +4360,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="20845" name="Pirate's Zombie Captain" title="">
+	<npc id="20845" name="Pirate Zombie Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4558,7 +4558,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="20847" name="Vale Master" title="">
+	<npc id="20847" name="Veil Master" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

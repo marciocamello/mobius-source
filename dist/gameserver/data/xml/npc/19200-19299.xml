@@ -799,7 +799,7 @@
             <set name="showTitle" value="false"/>
         </ai_params>
     </npc>
-	<npc id="19218" name="Anvil Smith" title="">
+	<npc id="19218" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="7.0"/>
@@ -840,7 +840,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19219" name="white_dove" title="">
+	<npc id="19219" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="27.0"/>
@@ -881,7 +881,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19220" name="guardian_cartia_90p" title="-_-">
+	<npc id="19220" name="Kartia Guard" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="14.0"/>
@@ -924,7 +924,7 @@
 			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19221" name="lich_stf_080p_sm" title="-_-">
+	<npc id="19221" name="Kartia Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="21.12"/>
 		<set name="collision_height" value="40.48"/>
@@ -967,7 +967,7 @@
 			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19222" name="Death_slayer" title="-_-">
+	<npc id="19222" name="Kartia Dimensional Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="34.0"/>
@@ -1010,7 +1010,7 @@
 			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19223" name="bloody_princess" title="-_-">
+	<npc id="19223" name="Kartia Guard" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="33.0"/>
@@ -1054,7 +1054,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19224" name="bloody_queen" title="-_-">
+	<npc id="19224" name="Kartia Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="40.0"/>
@@ -1098,7 +1098,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19225" name="twisted_banshee_130p" title="-_-">
+	<npc id="19225" name="Kartia Dimensional Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="38.0"/>
@@ -1142,7 +1142,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19226" name="Dragon_centurion_120p" title="-_-">
+	<npc id="19226" name="Kartia Guard" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="42.0"/>
@@ -1186,7 +1186,7 @@
 			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19227" name="dragon_mage_065p_a" title="-_-">
+	<npc id="19227" name="Kartia Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="34.5"/>
@@ -1230,7 +1230,7 @@
 			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19228" name="Dragon_centurion_135p" title="-_-">
+	<npc id="19228" name="Kartia Dimensional Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="46.5"/>
@@ -1274,7 +1274,7 @@
 			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19229" name="guardian_cartia_90p" title="-_-">
+	<npc id="19229" name="Kartia Guard" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="14.0"/>
@@ -1319,7 +1319,7 @@
 			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19230" name="lich_stf_080p_sm" title="-_-">
+	<npc id="19230" name="Kartia Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="21.12"/>
 		<set name="collision_height" value="40.48"/>
@@ -1364,7 +1364,7 @@
 			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19231" name="Death_slayer" title="-_-">
+	<npc id="19231" name="Kartia Dimensional Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="34.0"/>
@@ -1411,7 +1411,7 @@
 			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19232" name="bloody_princess" title="-_-">
+	<npc id="19232" name="Kartia Guard" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="33.0"/>
@@ -1457,7 +1457,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19233" name="bloody_queen" title="-_-">
+	<npc id="19233" name="Kartia Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="40.0"/>
@@ -1503,7 +1503,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19234" name="twisted_banshee_130p" title="-_-">
+	<npc id="19234" name="Kartia Dimensional Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="38.0"/>
@@ -1551,7 +1551,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19235" name="Dragon_centurion_120p" title="-_-">
+	<npc id="19235" name="Kartia Guard" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="42.0"/>
@@ -1597,7 +1597,7 @@
 			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19236" name="dragon_mage_065p" title="-_-">
+	<npc id="19236" name="Kartia Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="34.5"/>
@@ -1643,7 +1643,7 @@
 			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19237" name="Dragon_centurion_135p" title="-_-">
+	<npc id="19237" name="Kartia Dimensional Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="46.5"/>
@@ -1691,7 +1691,7 @@
 			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19238" name="campaign_angma" title="-_-">
+	<npc id="19238" name="Daemon Angma" title="Helpful">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -1732,7 +1732,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19239" name="campaign_angma" title="-_-">
+	<npc id="19239" name="Daemon Angma" title="Aggressive">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -1773,7 +1773,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19240" name="campaign_angma" title="-_-">
+	<npc id="19240" name="Daemon Angma" title="Sketchy">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -1814,7 +1814,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19241" name="campaign_angma_sejohn" title="-_-">
+	<npc id="19241" name="Daemon Angma" title="Mastermind">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
@@ -1855,7 +1855,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19242" name="sound_clam_campaign" title="-_-">
+	<npc id="19242" name="Sound Clam" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="6.0"/>
@@ -1896,7 +1896,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19243" name="training_doll_150p" title="-_-">
+	<npc id="19243" name="Campaign Presentation 1" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
@@ -1937,7 +1937,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19244" name="kardia_herb_campaign_red" title="-_-">
+	<npc id="19244" name="Red Tama Plant" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="23.0"/>
@@ -1978,7 +1978,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19245" name="kardia_herb_campaign_blue" title="-_-">
+	<npc id="19245" name="Blue Tama Plant" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="23.0"/>
@@ -2019,7 +2019,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19246" name="campaign_dwarf_worm" title="-_-">
+	<npc id="19246" name="Tanima" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="9.0"/>
@@ -2062,7 +2062,7 @@
 			<skill id="4416" level="12"/>
 		</skills>
 	</npc>
-	<npc id="19247" name="camera_target_dummy" title="-_-">
+	<npc id="19247" name="Kartia's Altar" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.0"/>
 		<set name="collision_height" value="0.0"/>
@@ -2103,7 +2103,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19248" name="camera_target_dummy" title="-_-">
+	<npc id="19248" name="Kartia's Altar" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.0"/>
 		<set name="collision_height" value="0.0"/>
@@ -2144,7 +2144,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19249" name="camera_target_dummy" title="-_-">
+	<npc id="19249" name="Kartia's Altar" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.0"/>
 		<set name="collision_height" value="0.0"/>
@@ -2185,7 +2185,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19250" name="wall_cartia_a" title="-_-">
+	<npc id="19250" name="Kartia's Altar" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="75.0"/>
@@ -2226,7 +2226,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19251" name="wall_cartia_a" title="-_-">
+	<npc id="19251" name="Kartia's Altar" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="75.0"/>
@@ -2267,7 +2267,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19252" name="wall_cartia_a" title="-_-">
+	<npc id="19252" name="Kartia's Altar" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="75.0"/>
@@ -2308,7 +2308,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19253" name="zellaka_cartia_boss" title="-_-">
+	<npc id="19253" name="Zellaka" title="Lord of Kartia">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="54.0"/>
@@ -2351,7 +2351,7 @@
 			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
-	<npc id="19254" name="felene_cartia_boss" title="-_-">
+	<npc id="19254" name="Pelline" title="Lord of Kartia">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="46.0"/>
@@ -2395,7 +2395,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19255" name="kalios_cartia_boss" title="-_-">
+	<npc id="19255" name="Kalios" title="Lord of Kartia">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="65.5"/>
@@ -2439,7 +2439,7 @@
 			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19256" name="tree_of_life" title="-_-">
+	<npc id="19256" name="Tree of Life" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="51.0"/>
 		<set name="collision_height" value="50.5"/>
@@ -2480,7 +2480,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19257" name="ev_small_draco_egg" title="-_-">
+	<npc id="19257" name="Small Draco Egg" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="20.0"/>
@@ -2521,7 +2521,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19258" name="ev_big_draco_egg" title="-_-">
+	<npc id="19258" name="Large Draco Egg" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="5.0"/>
@@ -2562,7 +2562,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19259" name="machine_hellfire" title="-_-">
+	<npc id="19259" name="Smelting Furnace" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="170.0"/>
 		<set name="collision_height" value="90.5"/>
@@ -2603,7 +2603,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19260" name="weapon_hanger" title="-_-">
+	<npc id="19260" name="Weapon Stand" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="80.0"/>
 		<set name="collision_height" value="150.0"/>
@@ -2646,7 +2646,7 @@
 			<skill id="4416" level="2"/>
 		</skills>
 	</npc>
-	<npc id="19261" name="armor_hanger" title="-_-">
+	<npc id="19261" name="Armor Stand" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="80.0"/>
 		<set name="collision_height" value="150.0"/>
@@ -2689,7 +2689,7 @@
 			<skill id="4416" level="2"/>
 		</skills>
 	</npc>
-	<npc id="19262" name="kunda_a" title="-_-">
+	<npc id="19262" name="Kunda" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="46.0"/>
@@ -2737,7 +2737,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19263" name="kunda_b" title="-_-">
+	<npc id="19263" name="Kunda" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
@@ -2785,7 +2785,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19264" name="kunda_c" title="-_-">
+	<npc id="19264" name="Kunda" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
@@ -2833,7 +2833,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19265" name="tauti_pre" title="-_-">
+	<npc id="19265" name="Kunda's Lord" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="60.0"/>
@@ -2877,7 +2877,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19266" name="zahaq" title="-_-">
+	<npc id="19266" name="Zahak" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="63.0"/>
@@ -2921,7 +2921,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19267" name="mimic" title="-_-">
+	<npc id="19267" name="Mysterious Box" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="8.5"/>
@@ -2962,7 +2962,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19268" name="death_knight" title="-_-">
+	<npc id="19268" name="Mysterious Guard" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="30.0"/>
@@ -3003,7 +3003,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19269" name="alliance_flag" title="-_-">
+	<npc id="19269" name="Clan Flag" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="120.0"/>
@@ -3044,7 +3044,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19270" name="zahaq_b" title="-_-">
+	<npc id="19270" name="Lesser Zahak" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="50.0"/>
@@ -3088,7 +3088,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19271" name="tr_lucky_box" title="-_-">
+	<npc id="19271" name="Verdof's Treasure Chest" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.0"/>
 		<set name="collision_height" value="0.0"/>
@@ -3131,7 +3131,7 @@
 			<skill id="4416" level="2"/>
 		</skills>
 	</npc>
-	<npc id="19272" name="hording" title="-_-">
+	<npc id="19272" name="Bratty Angma" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="45.0"/>
@@ -3174,7 +3174,7 @@
 			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
-	<npc id="19273" name="hording" title="-_-">
+	<npc id="19273" name="Bratty Angma" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="45.0"/>
@@ -3217,7 +3217,7 @@
 			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
-	<npc id="19274" name="hording" title="-_-">
+	<npc id="19274" name="Bratty Angma" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="45.0"/>
@@ -3260,7 +3260,7 @@
 			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
-	<npc id="19275" name="hording" title="-_-">
+	<npc id="19275" name="Bratty Angma" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="45.0"/>
@@ -3303,7 +3303,7 @@
 			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
-	<npc id="19276" name="direction_dummy" title="-_-">
+	<npc id="19276" name="Bundle for Presentation Purposes" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="45.0"/>
@@ -3344,7 +3344,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19277" name="tauti_ex" title="-_-">
+	<npc id="19277" name="Tauti's Axe for Presentation Purposes" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="45.0"/>
@@ -3385,7 +3385,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19278" name="tauti" title="-_-">
+	<npc id="19278" name="Tauti for Presentation Purposes" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="90.0"/>
@@ -3426,7 +3426,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19279" name="machine_hellfire" title="-_-">
+	<npc id="19279" name="Cooling Device" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="170.0"/>
 		<set name="collision_height" value="90.5"/>
@@ -3467,7 +3467,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19280" name="machine_hellfire" title="-_-">
+	<npc id="19280" name="Weapon Molding Device" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="170.0"/>
 		<set name="collision_height" value="90.5"/>
@@ -3508,7 +3508,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19281" name="machine_hellfire" title="-_-">
+	<npc id="19281" name="Armor Molding Device" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="170.0"/>
 		<set name="collision_height" value="90.5"/>
@@ -3549,7 +3549,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19282" name="noble" title="-_-">
+	<npc id="19282" name="Exclusive to Noblesse Quests" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="45.0"/>
@@ -3590,7 +3590,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19283" name="collision_dummy_tauti" title="-_-">
+	<npc id="19283" name="Tauti Spotlight" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -3631,7 +3631,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19284" name="oak_bomb" title="-_-">
+	<npc id="19284" name="Explosive Orc Barrel" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="30.0"/>
@@ -3672,7 +3672,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19285" name="tr_lucky_box" title="-_-">
+	<npc id="19285" name="Verdof's Treasure Chest - Decoration Only" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.0"/>
 		<set name="collision_height" value="0.0"/>
@@ -3713,7 +3713,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19286" name="solina_father" title="-_-">
+	<npc id="19286" name="Possessed Pilgrim" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="25.4"/>
@@ -3754,7 +3754,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19287" name="zahaq" title="-_-">
+	<npc id="19287" name="Zahak" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="63.0"/>
@@ -3795,7 +3795,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19288" name="clear_npc" title="-_-">
+	<npc id="19288" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
@@ -3836,7 +3836,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19289" name="clear_npc" title="-_-">
+	<npc id="19289" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
@@ -3877,7 +3877,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19290" name="clear_npc" title="-_-">
+	<npc id="19290" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
@@ -3918,7 +3918,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19291" name="clear_npc" title="-_-">
+	<npc id="19291" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
@@ -3959,7 +3959,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19292" name="mimic" title="-_-">
+	<npc id="19292" name="Herb Chest" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="8.5"/>
@@ -4000,7 +4000,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19293" name="shelter_of_dream_menager" title="-_-">
+	<npc id="19293" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="57.0"/>
 		<set name="collision_height" value="47.5"/>
@@ -4041,7 +4041,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19294" name="double_nightmare_dark_a" title="-_-">
+	<npc id="19294" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="27.0"/>
@@ -4082,7 +4082,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19295" name="wisp_fairy" title="-_-">
+	<npc id="19295" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="30.0"/>
@@ -4123,7 +4123,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19296" name="giga_whirligig" title="-_-">
+	<npc id="19296" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="33.0"/>
 		<set name="collision_height" value="47.5"/>
@@ -4164,7 +4164,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19297" name="trioll_altar" title="-_-">
+	<npc id="19297" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="33.5"/>
@@ -4205,7 +4205,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19298" name="vas" title="-_-">
+	<npc id="19298" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="70.0"/>
@@ -4246,7 +4246,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19299" name="metucellar_c1_form" title="-_-">
+	<npc id="19299" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="25.0"/>

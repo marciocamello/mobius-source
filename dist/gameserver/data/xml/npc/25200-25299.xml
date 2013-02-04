@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="25200" name="Family of Sheshark" title="Raid Fighter">
+	<npc id="25200" name="Sheshark's Family" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -58,7 +58,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25201" name="Guard of Sheshark" title="Raid Fighter">
+	<npc id="25201" name="Sheshark's Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -536,7 +536,7 @@
 			<defence attribute="unholy" value="15" />
 		</attributes>
 	</npc>
-	<npc id="25208" name="Water Couatle Ateka" title="Raid Boss">
+	<npc id="25208" name="Water Couatl Ateka" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -678,7 +678,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25210" name="Ateka's Grunt" title="Raid Fighter">
+	<npc id="25210" name="Ateka's Soldier" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -933,7 +933,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25214" name="Fafurion's Page Sika" title="Raid Boss">
+	<npc id="25214" name="Fafurion's Servant Sika" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1021,7 +1021,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25215" name="Sika's Wizard" title="Raid Fighter">
+	<npc id="25215" name="Sika's Mage" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1078,7 +1078,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25216" name="Sika's Fighter" title="Raid Fighter">
+	<npc id="25216" name="Sika's Warrior" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1854,7 +1854,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25227" name="Kastor's Seer" title="Raid Fighter">
+	<npc id="25227" name="Kastor's Priest" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2057,7 +2057,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25230" name="Timak Seer Ragoth" title="Raid Boss">
+	<npc id="25230" name="Timak Priest Ragoth" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -2146,7 +2146,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25231" name="Ragoth's Guard" title="Raid Fighter">
+	<npc id="25231" name="Ragoth's Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2264,7 +2264,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25233" name="Spirit of Andras the Betrayer" title="Raid Boss">
+	<npc id="25233" name="Spirit of Andras, the Betrayer" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3004,7 +3004,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25243" name="Tamash's Servant" title="Raid Fighter">
+	<npc id="25243" name="Tamash's Confidant" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3350,7 +3350,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25248" name="Doom Blade Tanatos" title="Raid Boss">
+	<npc id="25248" name="Doom Blade Thanatos" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3442,7 +3442,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25249" name="Palatanos of Horrific Power" title="Raid Boss">
+	<npc id="25249" name="Menacing Palatanos" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3793,7 +3793,7 @@
 			<defence attribute="unholy" value="189" />
 		</attributes>
 	</npc>
-	<npc id="25254" name="Themis's Sentinel" title="Raid Fighter">
+	<npc id="25254" name="Themis' Royal Guard" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5087,7 +5087,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25272" name="Partisan Leader Talakin" title="Raid Boss">
+	<npc id="25272" name="Partisan Commander Talakin" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5549,7 +5549,7 @@
 			<defence attribute="unholy" value="189" />
 		</attributes>
 	</npc>
-	<npc id="25278" name="Dead Soul of Stigma" title="Raid Fighter">
+	<npc id="25278" name="Dead Soul of the Branded" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5613,7 +5613,7 @@
 			<defence attribute="unholy" value="110" />
 		</attributes>
 	</npc>
-	<npc id="25279" name="Evil Spirit of Stigma" title="Raid Fighter">
+	<npc id="25279" name="Evil Spirit of the Branded" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5672,7 +5672,7 @@
 			<defence attribute="unholy" value="110" />
 		</attributes>
 	</npc>
-	<npc id="25280" name="Pagan Watcher Cerberon" title="Raid Boss">
+	<npc id="25280" name="Pagan Watchman Cerberon" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5953,7 +5953,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25283" name="Lilith" title="Raid Boss">
+	<npc id="25283" name="Lilith" title="Holy Mother of Abyss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="Fighter"/>
         <set name="baseAtkRange" value="40"/>
@@ -6385,7 +6385,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25293" name="Hestia" title="Guardian Deity of the Hot Springs">
+	<npc id="25293" name="Hesti Guardian Deity of the Hot Springs" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6469,7 +6469,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25294" name="Fighter of Hestia" title="Raid Fighter">
+	<npc id="25294" name="Hestia's Fighter" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6525,7 +6525,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25295" name="Follower of Hestia" title="Raid Fighter">
+	<npc id="25295" name="Hestia's Follower" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

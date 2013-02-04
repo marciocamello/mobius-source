@@ -90,7 +90,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4303" name="Skooldy" title="Halloween Children">
+	<npc id="4303" name="Skooldie" title="Halloween's Three Siblings">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -133,7 +133,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="4304" name="White-Bearded Santa" title="Merry Christmas~">
+	<npc id="4304" name="White-Bearded Santa" title="Happy Holidays~">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -348,7 +348,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4309" name="Prophet" title="Sinister">
+	<npc id="4309" name="Follower" title="Sinister">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="adept.AdeptGludio" />
 		<set name="baseAtkRange" value="40" />
@@ -391,7 +391,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4310" name="Prophet" title="Sinister">
+	<npc id="4310" name="Follower" title="Sinister">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="adept.AdeptGiran" />
 		<set name="baseAtkRange" value="40" />
@@ -434,7 +434,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4311" name="Prophet" title="Sinister">
+	<npc id="4311" name="Follower" title="Sinister">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="adept.AdeptAden" />
 		<set name="baseAtkRange" value="40" />
@@ -477,7 +477,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4312" name="Prophet" title="Sinister">
+	<npc id="4312" name="Follower" title="Sinister">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="adept.AdeptRune" />
 		<set name="baseAtkRange" value="40" />
@@ -520,7 +520,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4313" name="Angel Cat" title="Character Collector">
+	<npc id="4313" name="Angel Cat" title="Letter Collector">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -650,7 +650,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4316" name="Kind Sno" title="Photo NPC">
+	<npc id="4316" name="Photo Snow" title="Photographer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -694,7 +694,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4317" name="Kind Sno" title="Photo NPC">
+	<npc id="4317" name="Photo Snow" title="Photographer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -738,7 +738,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4318" name="Kind Sno" title="Photo NPC">
+	<npc id="4318" name="Photo Snow" title="Photographer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -782,7 +782,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4319" name="Kind Sno" title="Photo NPC">
+	<npc id="4319" name="Photo Snow" title="Photographer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -826,7 +826,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4320" name="Kind Sno" title="Photo NPC">
+	<npc id="4320" name="Photo Snow" title="Photographer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -870,7 +870,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4321" name="Kind Sno" title="Photo NPC">
+	<npc id="4321" name="Photo Snow" title="Photographer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -914,7 +914,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4322" name="Kind Sno" title="Photo NPC">
+	<npc id="4322" name="Photo Snow" title="Photographer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -958,7 +958,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="4323" name="Kind Sno" title="Photo NPC">
+	<npc id="4323" name="Photo Snow" title="Photographer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1095,7 +1095,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="4326" name="Nevit's Herald" title="Invoker">
+	<npc id="4326" name="Proclaimer of Tersi" title="Invoker">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

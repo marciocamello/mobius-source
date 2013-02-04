@@ -781,7 +781,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22008" name="Grave Robber Fighter" title="">
+	<npc id="22008" name="Grave Robber Warrior" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2533,7 +2533,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22025" name="Frozen Wasteland Werewolf" title="">
+	<npc id="22025" name="Snow Werewolf" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4200,7 +4200,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22041" name="Ragna Orc Sorcerer" title="">
+	<npc id="22041" name="Ragna Orc Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4334,7 +4334,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22042" name="Ragna Orc Sorcerer" title="">
+	<npc id="22042" name="Ragna Orc Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4468,7 +4468,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22043" name="Ragna Orc Sorcerer" title="">
+	<npc id="22043" name="Ragna Orc Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4603,7 +4603,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22044" name="Ragna Orc Sorcerer" title="">
+	<npc id="22044" name="Ragna Orc Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4983,7 +4983,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="22047" name="Guardian of the Ghost Town" title="">
+	<npc id="22047" name="Watchman of the Ghost Town" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -7988,7 +7988,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22075" name="Epic Cannon Golem Adjunct" title="">
+	<npc id="22075" name="Epic Cannon Golem's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8436,7 +8436,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22080" name="Massive Maze Bandersnatch" title="">
+	<npc id="22080" name="Massive Lost Bandersnatch" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8526,7 +8526,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22081" name="Lost Watcher" title="">
+	<npc id="22081" name="Lost Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -8657,7 +8657,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22082" name="Elder Lost Watcher" title="">
+	<npc id="22082" name="Lost Elder Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />

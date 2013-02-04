@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="33500" name="Фруна" title="Торговец Волшебными Красками">
+	<npc id="33500" name="Pruna" title="Mysterious Dye Merchant">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -48,7 +48,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33501" name="Источник Силы" title="">
+	<npc id="33501" name="Source of Power" title="">
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -104,7 +104,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33502" name="Аллехандро" title="Глава Экспедиции Бронзового Ключа">
+	<npc id="33502" name="Alejandro" title="Bronze Key Expedition Leader">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -151,7 +151,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33503" name="Воитель Гномов" title="">
+	<npc id="33503" name="Dwarf Soldier" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -198,7 +198,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33504" name="Воитель Гномов" title="">
+	<npc id="33504" name="Dwarf Soldier" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -245,7 +245,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33505" name="Гомеопат" title="Лекарь Черной Наковальни">
+	<npc id="33505" name="Wooden Medic" title="Black Anvil Medic">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -292,7 +292,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33506" name="Белленора" title="Главарь Мерцания Хаоса">
+	<npc id="33506" name="Belenora" title="Shade of Chaos Troop Lieutenant">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -339,7 +339,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33507" name="Воитель Темных Эльфов" title="">
+	<npc id="33507" name="Dark Elf Soldier" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -386,7 +386,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33508" name="Шнаин" title="Стражник">
+	<npc id="33508" name="Schunain" title="Guard">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -433,7 +433,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33509" name="Джена" title="Стражник">
+	<npc id="33509" name="Zenath" title="Guard">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -480,7 +480,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33510" name="Леф" title="Стражник">
+	<npc id="33510" name="Lef" title="Guard">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -527,7 +527,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33511" name="Жрец Маммона" title="">
+	<npc id="33511" name="Priest of Mammon" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -574,7 +574,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33512" name="Жрец Маммона" title="">
+	<npc id="33512" name="Priest of Mammon" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -621,7 +621,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33513" name="Устройство Телепортации" title="">
+	<npc id="33513" name="Teleport Device" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -668,7 +668,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33514" name="Энсони" title="Мастер Обмена Доказательств">
+	<npc id="33514" name="Anthony" title="Proof Trading Master">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -715,7 +715,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33515" name="Агент Джорджио" title="Революционер Заката">
+	<npc id="33515" name="Agent Georgio" title="Dusk">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -762,7 +762,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33516" name="Джоель" title="Стражник">
+	<npc id="33516" name="Joel" title="Guard">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -809,7 +809,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33517" name="Сюзан" title="Стражник">
+	<npc id="33517" name="Schuazen" title="Guard">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -856,7 +856,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33518" name="Шеллон" title="Стражник">
+	<npc id="33518" name="Selon" title="Guard">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -903,7 +903,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33519" name="Амадэо Кадмус" title="Король Адена">
+	<npc id="33519" name="Amadeo Cadmus" title="Aden King">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -950,7 +950,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33520" name="Астаин Ван Холтер" title="Король Эльмора">
+	<npc id="33520" name="Astair van Halter" title="Elmore King">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -997,7 +997,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33521" name="Лайкос" title="Мастер Усиления">
+	<npc id="33521" name="Lykus" title="Enchanter">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1044,7 +1044,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33522" name="Портал в Хрустальный Лабиринт" title="">
+	<npc id="33522" name="Entrance Portal to Habitat of Jewels" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1091,7 +1091,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33523" name="Портал в Кристальную Тюрьму" title="">
+	<npc id="33523" name="Crystal Prison Entrance Portal" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1138,7 +1138,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33524" name="Ренпард" title="Стражник">
+	<npc id="33524" name="Renfad" title="Guard">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1185,7 +1185,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33525" name="Земляной Червь Траскен" title="">
+	<npc id="33525" name="Earth Wyrm Trasken" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1232,7 +1232,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33526" name="Центральное Устройство" title="">
+	<npc id="33526" name="Central Device" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1279,7 +1279,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33527" name="Вентиляция" title="">
+	<npc id="33527" name="Exhaust" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1326,7 +1326,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33528" name="Шурна" title="Управляющий Торговлей">
+	<npc id="33528" name="Shurna" title="Auction House Manager">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1373,7 +1373,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33529" name="Ланин" title="Управляющий Торговлей">
+	<npc id="33529" name="Lanin" title="Auction House Manager">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1420,7 +1420,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33530" name="Ширен" title="Управляющий Торговлей">
+	<npc id="33530" name="Syranne" title="Auction House Manager">
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1466,7 +1466,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33531" name="Джешюэн" title="Управляющий Торговлей">
+	<npc id="33531" name="Zeshen" title="Auction House Manager">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1513,7 +1513,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33532" name="Элленин" title="Управляющий Торговлей">
+	<npc id="33532" name="Elenyn" title="Auction House Manager">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1560,7 +1560,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33533" name="Ромина" title="Управляющий Торговлей">
+	<npc id="33533" name="Romina" title="Auction House Manager">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1607,7 +1607,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33534" name="Джаснин" title="Управляющий Торговлей">
+	<npc id="33534" name="Jasnin" title="Auction House Manager">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1654,7 +1654,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33535" name="Управляющий Рамун" title="">
+	<npc id="33535" name="Sayune Manager" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2138,7 +2138,7 @@
             <set name="showTitle" value="false"/>
         </ai_params>
     </npc>
-	<npc id="33547" name="Принесенный в жертву Темный Эльф" title="">
+	<npc id="33547" name="Sacrificed Dark Elf" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2185,7 +2185,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33548" name="Устройство Управления Печатью" title="">
+	<npc id="33548" name="Seal Control Device" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2326,7 +2326,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33551" name="Бони" title="Управляющий Торговлей">
+	<npc id="33551" name="Bunny" title="Auction House Manager">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2373,7 +2373,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33552" name="Сарни" title="Управляющий Торговлей">
+	<npc id="33552" name="Sarni" title="Auction House Manager">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2470,7 +2470,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33554" name="Рак" title="Награждающий силой судьбы">
+	<npc id="33554" name="Rake" title="One endowed with the power of fate">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2564,7 +2564,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33556" name="Источник Силы" title="">
+	<npc id="33556" name="Source of Power" title="">
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2602,12 +2602,12 @@
 		<set name="type" value="Npc"/>
 		<ai_params>
 			<set name="noRandomWalk" value="true" />
-			<set name="TargetEnabled" value="false"/>
-			<set name="showTitle" value="false"/>
+            <set name="TargetEnabled" value="false"/>
+            <set name="showTitle" value="false"/>
 			<set name="showName" value="false" />
 		</ai_params>
 		<skills>
-			<skill id="4416" level="2" />
+			<skill id="4416" level="2" />	<!--Магические Создания-->
 			<skill id="14625" level="1" />
 		</skills>
 		<attributes>
@@ -2619,7 +2619,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="33557" name="Источник Силы" title="">
+	<npc id="33557" name="Source of Power" title="">
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2721,7 +2721,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33559" name="Гемболлик" title="Работник Обмена Сундука с Сокровищами">
+	<npc id="33559" name="Gambolic" title="Treasure Chest Exchanger">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2768,7 +2768,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33560" name="Слуга Гермункуса" title="Хранитель Пространства">
+	<npc id="33560" name="Hermuncus' Minion" title="Dimension Keeper">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2815,7 +2815,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33561" name="Слуга Гермункуса" title="Хранитель Пространства">
+	<npc id="33561" name="Hermuncus' Minion" title="Dimension Keeper">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2862,7 +2862,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33562" name="Слуга Гермункуса" title="Хранитель Пространства">
+	<npc id="33562" name="Hermuncus' Minion" title="Dimension Keeper">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2909,7 +2909,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33563" name="Слуга Гермункуса" title="Хранитель Пространства">
+	<npc id="33563" name="Hermuncus' Minion" title="Dimension Keeper">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2956,7 +2956,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33564" name="Слуга Гермункуса" title="Хранитель Пространства">
+	<npc id="33564" name="Hermuncus' Minion" title="Dimension Keeper">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3003,7 +3003,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33565" name="Слуга Гермункуса" title="Хранитель Пространства">
+	<npc id="33565" name="Hermuncus' Minion" title="Dimension Keeper">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3050,7 +3050,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33566" name="Слуга Гермункуса" title="Хранитель Пространства">
+	<npc id="33566" name="Hermuncus' Minion" title="Dimension Keeper">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3097,7 +3097,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33567" name="Слуга Гермункуса" title="Хранитель Пространства">
+	<npc id="33567" name="Hermuncus' Minion" title="Dimension Keeper">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3144,7 +3144,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33568" name="Слуга Гермункуса" title="Хранитель Пространства">
+	<npc id="33568" name="Hermuncus' Minion" title="Dimension Keeper">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3191,7 +3191,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33569" name="Слуга Гермункуса" title="Хранитель Пространства">
+	<npc id="33569" name="Hermuncus' Minion" title="Dimension Keeper">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3238,7 +3238,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33570" name="Ремонс" title="">
+	<npc id="33570" name="Remons" title="">
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -3288,7 +3288,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33571" name="Тома Младший" title="">
+	<npc id="33571" name="Toma Junior" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3335,7 +3335,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33572" name="Галлад" title="">
+	<npc id="33572" name="Galad" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3382,7 +3382,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33573" name="Рук" title="">
+	<npc id="33573" name="Rouke" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3429,7 +3429,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33574" name="Люсикон" title="">
+	<npc id="33574" name="Lucicon" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3476,7 +3476,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33575" name="Рудрик" title="">
+	<npc id="33575" name="Luderic" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3523,7 +3523,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33576" name="Эльпасиа" title="">
+	<npc id="33576" name="Elphasia" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="talkingisland.Elphasia" />
 		<set name="baseAtkRange" value="40" />
@@ -3576,7 +3576,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33577" name="Мефисто" title="">
+	<npc id="33577" name="Mephisto" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="talkingisland.Mephisto" />
 		<set name="baseAtkRange" value="40" />
@@ -3675,7 +3675,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33579" name="Граман" title="Специалист по Питомцам">
+	<npc id="33579" name="Graman" title="Pet Manager">
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -3721,7 +3721,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33580" name="Дракон" title="">
+	<npc id="33580" name="Strider" title="">
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -3767,7 +3767,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33581" name="Даки" title="Член союза восстановления Адена">
+	<npc id="33581" name="Eeny" title="Aden Reconstruction Society Member">
 		<set name="baseHpMax" value="68"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -3813,7 +3813,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33582" name="Раку" title="Член союза восстановления Адена">
+	<npc id="33582" name="Meeny" title="Aden Reconstruction Society Leader">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3860,7 +3860,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33583" name="Раг" title="Член союза восстановления Адена">
+	<npc id="33583" name="Miny" title="Aden Reconstruction Society Member">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3907,7 +3907,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33584" name="Даку" title="Член союза восстановления Адена">
+	<npc id="33584" name="Moe" title="Aden Reconstruction Society Leader">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3954,7 +3954,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33585" name="Конрад" title="Работник обмена Знаков Королевства">
+	<npc id="33585" name="Conrad" title="Kingdom Mark Manager">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4048,7 +4048,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33587" name="Помощник Наставника" title="">
+	<npc id="33587" name="Mentor Guide" title="">
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4094,7 +4094,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33588" name="Сельфина" title="">
+	<npc id="33588" name="Cellphine" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4141,7 +4141,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33589" name="Сельфина" title="">
+	<npc id="33589" name="Cellphine" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4188,7 +4188,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33590" name="Жрец Судьбы" title="Возвращающий к Выбору">
+	<npc id="33590" name="Priest of Fate" title="Choice Returner">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4235,7 +4235,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33591" name="Рабочий Склада" title="Комната">
+	<npc id="33591" name="Warehouse Keeper" title="Consultation Service">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>

@@ -114,7 +114,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20501" name="Turek Orc Shaman" title="">
+	<npc id="20501" name="Turek Orc Priest" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -534,7 +534,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20506" name="Ruin Imp" title="">
+	<npc id="20506" name="Ruin Imp" title="Enraged">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -647,7 +647,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20507" name="Ruin Imp Elder" title="">
+	<npc id="20507" name="Ruin Imp Elder" title="Enraged">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4269,7 +4269,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20547" name="Ol Mahum Reserve" title="">
+	<npc id="20547" name="Ol Mahum Support Troop" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7211,7 +7211,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20572" name="Tarlk Bugbear High Warrior" title="">
+	<npc id="20572" name="Tarlk Bugbear Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7451,7 +7451,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20574" name="Elder Tarlk Basilisk " title="">
+	<npc id="20574" name="Elder Tarlk Basilisk" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -9157,7 +9157,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20588" name="Timak Orc Overlord" title="">
+	<npc id="20588" name="Timak Orc Prefect" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -10364,7 +10364,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20599" name="Unicorn Elder" title="">
+	<npc id="20599" name="Elder the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />

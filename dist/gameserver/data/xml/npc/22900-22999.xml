@@ -1,1881 +1,1874 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="22900" name="satyr_shaman" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="15.0"/>
-		<set name="collision_height" value="28.0"/>
-		<set name="level" value="94"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="14547"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="3253"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="495874"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="10509"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseWalkSpd" value="40"/>
+	<npc id="22900" name="Satyr Summoner" title="Brutal">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.00" />
+		<set name="collision_radius" value="15.00" />
+		<set name="level" value="94" />
+		<set name="rewardExp" value="495874" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10509" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="240"/>
-			<defence attribute="water" value="240"/>
-			<defence attribute="wind" value="240"/>
-			<defence attribute="earth" value="240"/>
-			<defence attribute="holy" value="240"/>
-			<defence attribute="unholy" value="240"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="1662" max="3880" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="0.075">
-			<reward item_id="18160" min="1" max="1" chance="100.00000" />		<!-- Неопознанные Кожаные Перчатки Ада -->
-		</group>
-		<group chance="0.303">
-			<reward item_id="9551" min="1" max="1" chance="99.00990" />		<!-- Руда Святости -->
-			<reward item_id="17526" min="1" max="1" chance="0.99010" />		<!-- Свиток: Модифицировать Оружие (R) -->
-		</group>
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-			<skill id="14045" level="4"/>
-			<skill id="14047" level="4"/>
-		</skills>
+			<group chance="70.0">
+				<reward item_id="57" min="1722" max="4021" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="10.0">
+				<reward item_id="18151" min="1" max="1" chance="0.075" />	<!--Неопознанный Шлем Ада-->
+			</group>
+			<group chance="20.0">
+				<reward item_id="9550" min="1" max="1" chance="0.75" />	<!--Руда Тьмы-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="17526" min="1" max="1" chance="0.0009" />	<!--Свиток: Модифицировать Оружие (R)-->
+		</rewardlist>
 	</npc>
-	<npc id="22901" name="satyr_shaman" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="15.0"/>
-		<set name="collision_height" value="28.0"/>
-		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="14467"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="3198"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="484689"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="10183"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseWalkSpd" value="40"/>
+	<npc id="22901" name="Satyr Summoner" title="Fully Enraged">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="484689" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10183" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="240"/>
-			<defence attribute="water" value="240"/>
-			<defence attribute="wind" value="240"/>
-			<defence attribute="earth" value="240"/>
-			<defence attribute="holy" value="240"/>
-			<defence attribute="unholy" value="240"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="1626" max="3796" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="0.075">
-			<reward item_id="18160" min="1" max="1" chance="100.00000" />		<!-- Неопознанные Кожаные Перчатки Ада -->
-		</group>
-		<group chance="1.050">
-			<reward item_id="19313" min="1" max="1" chance="71.42857" />		<!-- Эртел -->
-			<reward item_id="9547" min="1" max="1" chance="28.57143" />		<!-- Руда Воды -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19367" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанные Кожаные Перчатки Ада (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-			<skill id="14045" level="4"/>
-			<skill id="14047" level="4"/>
-		</skills>
+			<group chance="70.0">
+				<reward item_id="57" min="1626" max="3796" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="10.0">
+				<reward item_id="18160" min="1" max="1" chance="0.075" />	<!--Неопознанные Кожаные Перчатки Ада-->
+			</group>
+			<group chance="20.0">
+				<reward item_id="19313" min="1" max="1" chance="0.75" />	<!--Эртел-->
+				<reward item_id="9547" min="1" max="1" chance="0.3" />	<!--Руда Воды-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19367" min="1" max="1" chance="0.03" />	<!--Рецепт - Неопознанные Кожаные Перчатки Ада (60%)-->
+		</rewardlist>
 	</npc>
-	<npc id="22902" name="satyr_shaman" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="15.0"/>
-		<set name="collision_height" value="28.0"/>
-		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="14467"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="3198"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="484689"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="10183"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseWalkSpd" value="40"/>
+	<npc id="22902" name="Satyr Summoner" title="Slightly Enraged">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="484689" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10183" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="240"/>
-			<defence attribute="water" value="240"/>
-			<defence attribute="wind" value="240"/>
-			<defence attribute="earth" value="240"/>
-			<defence attribute="holy" value="240"/>
-			<defence attribute="unholy" value="240"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="1626" max="3796" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="0.075">
-			<reward item_id="18160" min="1" max="1" chance="100.00000" />		<!-- Неопознанные Кожаные Перчатки Ада -->
-		</group>
-		<group chance="0.078">
-			<reward item_id="17527" min="1" max="1" chance="96.15385" />		<!-- Свиток: Модифицировать Доспех (R) -->
-			<reward item_id="17526" min="1" max="1" chance="3.84615" />		<!-- Свиток: Модифицировать Оружие (R) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19226" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанных Кожаных Перчаток Ада -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-			<skill id="14045" level="4"/>
-			<skill id="14047" level="4"/>
-		</skills>
+			<group chance="70.0">
+				<reward item_id="57" min="1626" max="3796" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="10.0">
+				<reward item_id="18160" min="1" max="1" chance="0.075" />	<!--Неопознанные Кожаные Перчатки Ада-->
+			</group>
+			<group chance="20.0">
+				<reward item_id="17527" min="1" max="1" chance="0.075" />	<!--Свиток: Модифицировать Доспех (R)-->
+				<reward item_id="17526" min="1" max="1" chance="0.003" />	<!--Свиток: Модифицировать Оружие (R)-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19226" min="1" max="1" chance="0.3" />	<!--Материал Неопознанных Кожаных Перчаток Ада-->
+		</rewardlist>
 	</npc>
-	<npc id="22903" name="satyr_shaman" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="15.0"/>
-		<set name="collision_height" value="28.0"/>
-		<set name="level" value="90"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="13886"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="3035"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="258086"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="5254"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseWalkSpd" value="40"/>
+	<npc id="22903" name="Satyr Witch" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="13886" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="90" />
+		<set name="rewardExp" value="258086" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5254" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="200"/>
-			<defence attribute="water" value="200"/>
-			<defence attribute="wind" value="200"/>
-			<defence attribute="earth" value="200"/>
-			<defence attribute="holy" value="200"/>
-			<defence attribute="unholy" value="200"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="1158" max="2705" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="10.460">
-			<reward item_id="19232" min="1" max="1" chance="100.00000" />		<!-- Материал Неопознанных Ботинок Ада -->
-		</group>
-		<group chance="0.750">
-			<reward item_id="19373" min="1" max="1" chance="100.00000" />		<!-- Рецепт - Неопознанные Ботинки Ада (60%) -->
-		</group>
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-			<skill id="14045" level="3"/>
-			<skill id="14046" level="3"/>
-			<skill id="14049" level="1"/>
-		</skills>
+			<group chance="70.0">
+				<reward item_id="57" min="1158" max="2705" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="20.0">
+				<reward item_id="19232" min="1" max="1" chance="10.46" />	<!--Материал Неопознанных Ботинок Ада-->
+				<reward item_id="19373" min="1" max="1" chance="0.75" />	<!--Рецепт - Неопознанные Ботинки Ада (60%)-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19232" min="1" max="1" chance="0.3" />	<!--Материал Неопознанных Ботинок Ада-->
+		</rewardlist>
 	</npc>
-	<npc id="22904" name="satyr_shaman" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="15.0"/>
-		<set name="collision_height" value="28.0"/>
-		<set name="level" value="92"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="14213"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="3144"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="270427"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="5628"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseWalkSpd" value="40"/>
+	<npc id="22904" name="Satyr Witch" title="Wicked">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="92" />
+		<set name="rewardExp" value="270427" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5628" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="220"/>
-			<defence attribute="water" value="220"/>
-			<defence attribute="wind" value="220"/>
-			<defence attribute="earth" value="220"/>
-			<defence attribute="holy" value="220"/>
-			<defence attribute="unholy" value="220"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="1213" max="2830" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="11.180">
-			<reward item_id="19232" min="1" max="1" chance="100.00000" />		<!-- Материал Неопознанных Ботинок Ада -->
-		</group>
-		<group chance="0.303">
-			<reward item_id="19373" min="1" max="1" chance="99.00990" />		<!-- Рецепт - Неопознанные Ботинки Ада (60%) -->
-			<reward item_id="17526" min="1" max="1" chance="0.99010" />		<!-- Свиток: Модифицировать Оружие (R) -->
-		</group>
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-			<skill id="14045" level="3"/>
-			<skill id="14046" level="3"/>
-			<skill id="14049" level="1"/>
-		</skills>
+			<group chance="70.0">
+				<reward item_id="57" min="1213" max="2830" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="20.0">
+				<reward item_id="19232" min="1" max="1" chance="11.18" />	<!--Материал Неопознанных Ботинок Ада-->
+				<reward item_id="19373" min="1" max="1" chance="0.3" />	<!--Рецепт - Неопознанные Ботинки Ада (60%)-->
+				<reward item_id="17526" min="1" max="1" chance="0.003" />	<!--Свиток: Модифицировать Оружие (R)-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19373" min="1" max="1" chance="0.03" />	<!--Рецепт - Неопознанные Ботинки Ада (60%)-->
+		</rewardlist>
 	</npc>
-	<npc id="22905" name="satyr_shaman" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="15.0"/>
-		<set name="collision_height" value="28.0"/>
-		<set name="level" value="91"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="14136"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="3089"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="264443"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="5438"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseWalkSpd" value="40"/>
+	<npc id="22905" name="Satyr Witch" title="Mature">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="91" />
+		<set name="rewardExp" value="264443" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5438" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="220"/>
-			<defence attribute="water" value="220"/>
-			<defence attribute="wind" value="220"/>
-			<defence attribute="earth" value="220"/>
-			<defence attribute="holy" value="220"/>
-			<defence attribute="unholy" value="220"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="1185" max="2770" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="0.075">
-			<reward item_id="18166" min="1" max="1" chance="100.00000" />		<!-- Неопознанные Ботинки Ада -->
-		</group>
-		<group chance="0.075">
-			<reward item_id="17527" min="1" max="1" chance="100.00000" />		<!-- Свиток: Модифицировать Доспех (R) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19232" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанных Ботинок Ада -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-			<skill id="14045" level="3"/>
-			<skill id="14046" level="3"/>
-			<skill id="14049" level="1"/>
-		</skills>
+			<group chance="70.0">
+				<reward item_id="57" min="1185" max="2770" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="10.0">
+				<reward item_id="18166" min="1" max="1" chance="0.075" />	<!--Неопознанные Ботинки Ада-->
+			</group>
+			<group chance="20.0">
+				<reward item_id="17527" min="1" max="1" chance="0.075" />	<!--Свиток: Модифицировать Доспех (R)-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19232" min="1" max="1" chance="0.3" />	<!--Материал Неопознанных Ботинок Ада-->
+		</rewardlist>
 	</npc>
-	<npc id="22906" name="satyr_shaman" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="15.0"/>
-		<set name="collision_height" value="28.0"/>
-		<set name="level" value="91"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="14136"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="3089"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="264443"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="5438"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseWalkSpd" value="40"/>
+	<npc id="22906" name="Satyr Witch" title="Imperfect">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="91" />
+		<set name="rewardExp" value="264443" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="5438" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="220"/>
-			<defence attribute="water" value="220"/>
-			<defence attribute="wind" value="220"/>
-			<defence attribute="earth" value="220"/>
-			<defence attribute="holy" value="220"/>
-			<defence attribute="unholy" value="220"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="1185" max="2770" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="0.075">
-			<reward item_id="18166" min="1" max="1" chance="100.00000" />		<!-- Неопознанные Ботинки Ада -->
-		</group>
-		<group chance="0.300">
-			<reward item_id="9551" min="1" max="1" chance="100.00000" />		<!-- Руда Святости -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="17527" min="1" max="1" chance="0.00300" />		<!-- Свиток: Модифицировать Доспех (R) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-			<skill id="14045" level="3"/>
-			<skill id="14046" level="3"/>
-			<skill id="14049" level="1"/>
-		</skills>
+			<group chance="70.0">
+				<reward item_id="57" min="1185" max="2770" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="10.0">
+				<reward item_id="18166" min="1" max="1" chance="0.075" />	<!--Неопознанные Ботинки Ада-->
+			</group>
+			<group chance="20.0">
+				<reward item_id="9551" min="1" max="1" chance="0.3" />	<!--Руда Святости-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="17527" min="1" max="1" chance="0.003" />	<!--Свиток: Модифицировать Доспех (R)-->
+		</rewardlist>
 	</npc>
-	<npc id="22907" name="satyr_shaman" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="15.0"/>
-		<set name="collision_height" value="28.0"/>
-		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="14467"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="3198"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="484689"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="10183"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseWalkSpd" value="40"/>
+	<npc id="22907" name="Satyr Witch" title="Violent">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="484689" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10183" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="240"/>
-			<defence attribute="water" value="240"/>
-			<defence attribute="wind" value="240"/>
-			<defence attribute="earth" value="240"/>
-			<defence attribute="holy" value="240"/>
-			<defence attribute="unholy" value="240"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="1626" max="3796" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="0.075">
-			<reward item_id="18166" min="1" max="1" chance="100.00000" />		<!-- Неопознанные Ботинки Ада -->
-		</group>
-		<group chance="0.303">
-			<reward item_id="19373" min="1" max="1" chance="99.00990" />		<!-- Рецепт - Неопознанные Ботинки Ада (60%) -->
-			<reward item_id="17526" min="1" max="1" chance="0.99010" />		<!-- Свиток: Модифицировать Оружие (R) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19232" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанных Ботинок Ада -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-			<skill id="14045" level="4"/>
-			<skill id="14046" level="4"/>
-			<skill id="14049" level="1"/>
-		</skills>
+			<group chance="70.0">
+				<reward item_id="57" min="1626" max="3796" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="10.0">
+				<reward item_id="18166" min="1" max="1" chance="0.075" />	<!--Неопознанные Ботинки Ада-->
+			</group>
+			<group chance="20.0">
+				<reward item_id="19373" min="1" max="1" chance="0.3" />	<!--Рецепт - Неопознанные Ботинки Ада (60%)-->
+				<reward item_id="17526" min="1" max="1" chance="0.003" />	<!--Свиток: Модифицировать Оружие (R)-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19232" min="1" max="1" chance="0.3" />	<!--Материал Неопознанных Ботинок Ада-->
+		</rewardlist>
 	</npc>
-	<npc id="22908" name="satyr_shaman" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="15.0"/>
-		<set name="collision_height" value="28.0"/>
-		<set name="level" value="94"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="14547"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="3253"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="495874"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="10509"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseWalkSpd" value="40"/>
+	<npc id="22908" name="Satyr Witch" title="Brutal">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="94" />
+		<set name="rewardExp" value="495874" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10509" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="240"/>
-			<defence attribute="water" value="240"/>
-			<defence attribute="wind" value="240"/>
-			<defence attribute="earth" value="240"/>
-			<defence attribute="holy" value="240"/>
-			<defence attribute="unholy" value="240"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="1662" max="3880" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="0.075">
-			<reward item_id="18166" min="1" max="1" chance="100.00000" />		<!-- Неопознанные Ботинки Ада -->
-		</group>
-		<group chance="0.078">
-			<reward item_id="30425" min="1" max="1" chance="96.15385" />		<!-- Рецепт - Благословенный Заряд Духа: Ранг R -->
-			<reward item_id="17526" min="1" max="1" chance="3.84615" />		<!-- Свиток: Модифицировать Оружие (R) -->
-		</group>
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-			<skill id="14045" level="4"/>
-			<skill id="14046" level="4"/>
-			<skill id="14049" level="1"/>
-		</skills>
+			<group chance="70.0">
+				<reward item_id="57" min="1662" max="3880" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="10.0">
+				<reward item_id="18166" min="1" max="1" chance="0.075" />	<!--Неопознанные Ботинки Ада-->
+			</group>
+			<group chance="20.0">
+				<reward item_id="30425" min="1" max="1" chance="0.075" />	<!--Рецепт - Благословенный Заряд Духа: Ранг R-->
+				<reward item_id="17526" min="1" max="1" chance="0.003" />	<!--Свиток: Модифицировать Оружие (R)-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="17526" min="1" max="1" chance="0.0009" />	<!--Свиток: Модифицировать Оружие (R)-->
+		</rewardlist>
 	</npc>
-	<npc id="22909" name="satyr_shaman" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="15.0"/>
-		<set name="collision_height" value="28.0"/>
-		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="14467"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="3198"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="484689"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="10183"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseWalkSpd" value="40"/>
+	<npc id="22909" name="Satyr Witch" title="Fully Enraged">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="484689" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10183" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="240"/>
-			<defence attribute="water" value="240"/>
-			<defence attribute="wind" value="240"/>
-			<defence attribute="earth" value="240"/>
-			<defence attribute="holy" value="240"/>
-			<defence attribute="unholy" value="240"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="1626" max="3796" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="0.075">
-			<reward item_id="18166" min="1" max="1" chance="100.00000" />		<!-- Неопознанные Ботинки Ада -->
-		</group>
-		<group chance="1.518">
-			<reward item_id="19314" min="1" max="1" chance="98.02372" />		<!-- Темная Сталь -->
-			<reward item_id="17527" min="1" max="1" chance="1.97628" />		<!-- Свиток: Модифицировать Доспех (R) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19373" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанные Ботинки Ада (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-			<skill id="14045" level="4"/>
-			<skill id="14046" level="4"/>
-			<skill id="14049" level="1"/>
-		</skills>
+			<group chance="70.0">
+				<reward item_id="57" min="1626" max="3796" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="10.0">
+				<reward item_id="18166" min="1" max="1" chance="0.075" />	<!--Неопознанные Ботинки Ада-->
+			</group>
+			<group chance="20.0">
+				<reward item_id="19314" min="1" max="1" chance="1.488" />	<!--Темная Сталь-->
+				<reward item_id="17527" min="1" max="1" chance="0.03" />	<!--Свиток: Модифицировать Доспех (R)-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19373" min="1" max="1" chance="0.03" />	<!--Рецепт - Неопознанные Ботинки Ада (60%)-->
+		</rewardlist>
 	</npc>
-	<npc id="22910" name="satyr_shaman" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="15.0"/>
-		<set name="collision_height" value="28.0"/>
-		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="14467"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="3198"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="484689"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="10183"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseWalkSpd" value="40"/>
+	<npc id="22910" name="Satyr Witch" title="Slightly Enraged">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Mystic" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="14467" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="28.0" />
+		<set name="collision_radius" value="15.0" />
+		<set name="level" value="93" />
+		<set name="rewardExp" value="523433" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="10997" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="240"/>
-			<defence attribute="water" value="240"/>
-			<defence attribute="wind" value="240"/>
-			<defence attribute="earth" value="240"/>
-			<defence attribute="holy" value="240"/>
-			<defence attribute="unholy" value="240"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="1626" max="3796" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="0.075">
-			<reward item_id="18166" min="1" max="1" chance="100.00000" />		<!-- Неопознанные Ботинки Ада -->
-		</group>
-		<group chance="0.075">
-			<reward item_id="17527" min="1" max="1" chance="100.00000" />		<!-- Свиток: Модифицировать Доспех (R) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19232" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанных Ботинок Ада -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-			<skill id="14045" level="4"/>
-			<skill id="14046" level="4"/>
-			<skill id="14049" level="1"/>
-		</skills>
+			<group chance="70.0">
+				<reward item_id="57" min="1626" max="3796" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="10.0">
+				<reward item_id="18166" min="1" max="1" chance="0.075" />	<!--Неопознанные Ботинки Ада-->
+			</group>
+			<group chance="20.0">
+				<reward item_id="17527" min="1" max="1" chance="0.075" />	<!--Свиток: Модифицировать Доспех (R)-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19232" min="1" max="1" chance="0.3" />	<!--Материал Неопознанных Ботинок Ада-->
+		</rewardlist>
 	</npc>
-	<npc id="22911" name="orbis_spectator" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="18.0"/>
-		<set name="collision_height" value="51.0"/>
-		<set name="level" value="95"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="321920"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22058"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="3240513"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="69370"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="393"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="80"/>
-		<attributes>
-			<defence attribute="fire" value="260"/>
-			<defence attribute="water" value="260"/>
-			<defence attribute="wind" value="260"/>
-			<defence attribute="earth" value="260"/>
-			<defence attribute="holy" value="260"/>
-			<defence attribute="unholy" value="260"/>
-		</attributes>
-		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="16585" max="38709" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="13.450">
-			<reward item_id="18201" min="1" max="1" chance="2.23048" />		<!-- Неопознанный Символ Кадейры -->
-			<reward item_id="18192" min="1" max="1" chance="0.22305" />		<!-- Неопознанный Кожаный Доспех Кадейры -->
-			<reward item_id="19267" min="1" max="3" chance="63.47955" />		<!-- Материал Неопознанного Символа Кадейры -->
-			<reward item_id="19258" min="1" max="1" chance="34.06691" />		<!-- Материал Неопознанной Кожаной Кирасы Кадейры -->
-		</group>
-		<group chance="0.600">
-			<reward item_id="19378" min="1" max="1" chance="50.00000" />		<!-- Рецепт - Неопознанное Острие Фантазмы (60%) -->
-			<reward item_id="19381" min="1" max="1" chance="50.00000" />		<!-- Рецепт - Неопознанный Мститель Фантазмы (60%) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19287" min="1" max="1" chance="0.07500" />		<!-- Материал Неопознанных Набедренников Айдиоса -->
-			<reward item_id="19422" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанные Набедренники Айдиоса (60%) -->
-			<reward item_id="19432" min="1" max="1" chance="0.00550" />		<!-- Рецепт - Неопознанная Туника Айдиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-		</skills>
-	</npc>
-	<npc id="22912" name="orbis_spectator" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="18.0"/>
-		<set name="collision_height" value="51.0"/>
-		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="322511"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22428"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="3736016"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="80619"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+	<npc id="22911" name="Orbis' Victim" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="321920" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="51.0" />
+		<set name="collision_radius" value="30.0" />
+		<set name="level" value="95" />
+		<set name="rewardExp" value="3240513" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="69370" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
 		<ai_params>
 			<set name="noRandomWalk" value="true" />
 		</ai_params>
-		<attributes>
-			<defence attribute="fire" value="260"/>
-			<defence attribute="water" value="260"/>
-			<defence attribute="wind" value="260"/>
-			<defence attribute="earth" value="260"/>
-			<defence attribute="holy" value="260"/>
-			<defence attribute="unholy" value="260"/>
-		</attributes>
-		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="21552" max="50333" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="14.476">
-			<reward item_id="18194" min="1" max="1" chance="2.07240" />		<!-- Неопознанные Кожаные Перчатки Кадейры -->
-			<reward item_id="18180" min="1" max="1" chance="0.20724" />		<!-- Неопознанный Заклинатель Фантазмы -->
-			<reward item_id="19260" min="1" max="3" chance="83.79387" />		<!-- Материал Неопознанных Кожаных Перчаток Кадейры -->
-			<reward item_id="19246" min="1" max="1" chance="13.92650" />		<!-- Часть Неопознанного Заклинателя Фантазмы -->
-		</group>
-		<group chance="4.608">
-			<reward item_id="19408" min="1" max="1" chance="98.37240" />		<!-- Рецепт - Неопознанное Кольцо Кадейры (60%) -->
-			<reward item_id="17526" min="1" max="1" chance="1.62760" />		<!-- Свиток: Модифицировать Оружие (R) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19294" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанных Кожаных Перчаток Айдиоса -->
-			<reward item_id="19277" min="1" max="1" chance="0.03000" />		<!-- Часть Неопознанного Броска Хелиоса -->
-			<reward item_id="19415" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Неопознанный Бросок Хелиоса (60%) -->
-	</rewardlist>
 		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
 		</skills>
-	</npc>
-	<npc id="22913" name="orbis_spectator" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="30.0"/>
-		<set name="collision_height" value="51.0"/>
-		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="355923"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22800"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="8697466"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="189191"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="212"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="45"/>
-		<attributes>
-			<defence attribute="fire" value="280"/>
-			<defence attribute="water" value="280"/>
-			<defence attribute="wind" value="280"/>
-			<defence attribute="earth" value="280"/>
-			<defence attribute="holy" value="280"/>
-			<defence attribute="unholy" value="280"/>
-		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="31359" max="73276" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="15.167">
-			<reward item_id="18191" min="1" max="1" chance="1.97798" />		<!-- Неопознанный Кожаный Шлем Кадейры -->
-			<reward item_id="18175" min="1" max="1" chance="0.19780" />		<!-- Неопознанный Воитель Фантазмы -->
-			<reward item_id="19257" min="1" max="3" chance="78.45981" />		<!-- Материал Неопознанного Кожаного Шлема Кадейры -->
-			<reward item_id="19241" min="1" max="1" chance="19.36441" />		<!-- Часть Неопознанного Воителя Фантазмы -->
-		</group>
-		<group chance="4.514">
-			<reward item_id="19407" min="1" max="1" chance="98.33850" />		<!-- Рецепт - Неопознанная Серьга Кадейры (60%) -->
-			<reward item_id="17526" min="1" max="1" chance="1.66150" />		<!-- Свиток: Модифицировать Оружие (R) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19291" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанного Кожаного Шлема Айдиоса -->
-			<reward item_id="19271" min="1" max="1" chance="0.03000" />		<!-- Часть Неопознанного Острия Хелиоса -->
-			<reward item_id="19409" min="1" max="1" chance="0.00550" />		<!-- Рецепт - Неопознанное Острие Хелиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-		</skills>
-	</npc>
-	<npc id="22914" name="orbis_deacon_fork" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="17.0"/>
-		<set name="collision_height" value="54.0"/>
-		<set name="level" value="95"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="321920"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22058"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="3240513"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="69370"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="373"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+			<group chance="70">
+				<reward item_id="57" min="16585" max="38709" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.1650">
+				<reward item_id="18201" min="1" max="1" chance="90.9091" /> <!-- Unidentified Seraph Sigil -->
+				<reward item_id="18192" min="1" max="1" chance="9.0909" /> <!-- Unidentified Seraph Leather Armor -->
+			</group>
+			<group chance="3.4300">
+				<reward item_id="19267" min="1" max="3" chance="62.2301" /> <!-- Unidentified Seraph Sigil Ingredient -->
+				<reward item_id="19258" min="1" max="1" chance="33.3964" /> <!-- Unidentified Seraph Leather Armor Ingredient -->
+				<reward item_id="19378" min="1" max="1" chance="2.1866" /> <!-- Recipe - Unidentified Specter Shaper 60% -->
+				<reward item_id="19381" min="1" max="1" chance="2.1866" /> <!-- Recipe - Unidentified Specter Avenger 60% -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19287" min="1" max="1" chance="0.0750" /> <!-- Unidentified Eternal Gaiters Ingredient -->
+				<reward item_id="19422" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Eternal Gaiters 60% -->
+				<reward item_id="19432" min="1" max="1" chance="0.0055" /> <!-- Recipe - Unidentified Eternal Tunic 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="260"/>
-			<defence attribute="water" value="260"/>
-			<defence attribute="wind" value="260"/>
-			<defence attribute="earth" value="260"/>
-			<defence attribute="holy" value="260"/>
-			<defence attribute="unholy" value="260"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
-		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="16585" max="38709" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="19.435">
-			<reward item_id="18202" min="1" max="1" chance="1.54361" />		<!-- Неопознанное Ожерелье Кадейры -->
-			<reward item_id="18193" min="1" max="1" chance="0.15436" />		<!-- Неопознанные Кожаные Брюки Кадейры -->
-			<reward item_id="19268" min="1" max="3" chance="61.02393" />		<!-- Камень Неопознанного Ожерелья Кадейры -->
-			<reward item_id="19259" min="1" max="1" chance="37.27811" />		<!-- Материал Неопознанных Кожаных Брюк Кадейры -->
-		</group>
-		<group chance="1.711">
-			<reward item_id="19406" min="1" max="1" chance="98.24664" />		<!-- Рецепт - Неопознанное Ожерелье Кадейры (60%) -->
-			<reward item_id="17526" min="1" max="1" chance="1.75336" />		<!-- Свиток: Модифицировать Оружие (R) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19288" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанных Рукавиц Айдиоса -->
-			<reward item_id="19298" min="1" max="1" chance="0.07500" />		<!-- Материал Неопознанных Штанов Айдиоса -->
-			<reward item_id="19423" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанные Рукавицы Айдиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-		</skills>
 	</npc>
-	<npc id="22915" name="orbis_deacon_fork" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="17.0"/>
-		<set name="collision_height" value="54.0"/>
-		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="322511"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22428"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="3736016"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="80619"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="373"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+	<npc id="22912" name="Orbis' Victim" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="322511" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="51.0" />
+		<set name="collision_radius" value="30.0" />
+		<set name="level" value="96" />
+		<set name="rewardExp" value="3736016" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="80619" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
 		<ai_params>
 			<set name="noRandomWalk" value="true" />
 		</ai_params>
-		<attributes>
-			<defence attribute="fire" value="260"/>
-			<defence attribute="water" value="260"/>
-			<defence attribute="wind" value="260"/>
-			<defence attribute="earth" value="260"/>
-			<defence attribute="holy" value="260"/>
-			<defence attribute="unholy" value="260"/>
-		</attributes>
-		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="21552" max="50333" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="14.592">
-			<reward item_id="18195" min="1" max="1" chance="2.05592" />		<!-- Неопознанные Кожаные Сапоги Кадейры -->
-			<reward item_id="18181" min="1" max="1" chance="0.20559" />		<!-- Неопознанное Возмездие Фантазмы -->
-			<reward item_id="19261" min="1" max="3" chance="83.60746" />		<!-- Материал Неопознанных Кожаных Сапог Кадейры -->
-			<reward item_id="19247" min="1" max="1" chance="14.13103" />		<!-- Часть Неопознанного Возмездия Фантазмы -->
-		</group>
-		<group chance="3.034">
-			<reward item_id="19405" min="1" max="1" chance="75.28016" />		<!-- Рецепт - Неопознанный Символ Кадейры (60%) -->
-			<reward item_id="17527" min="1" max="1" chance="24.71984" />		<!-- Свиток: Модифицировать Доспех (R) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19278" min="1" max="1" chance="0.03000" />		<!-- Часть Неопознанного Стража Хелиоса -->
-			<reward item_id="19429" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанные Кожаные Перчатки Айдиоса (60%) -->
-			<reward item_id="19416" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Неопознанный Страж Хелиоса (60%) -->
-	</rewardlist>
 		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
 		</skills>
-	</npc>
-	<npc id="22916" name="orbis_deacon_fork" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="30.0"/>
-		<set name="collision_height" value="54.0"/>
-		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="355923"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22800"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="8697466"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="189191"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="212"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="45"/>
-		<attributes>
-			<defence attribute="fire" value="280"/>
-			<defence attribute="water" value="280"/>
-			<defence attribute="wind" value="280"/>
-			<defence attribute="earth" value="280"/>
-			<defence attribute="holy" value="280"/>
-			<defence attribute="unholy" value="280"/>
-		</attributes>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="31359" max="73276" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="14.452">
-			<reward item_id="18196" min="1" max="1" chance="2.07584" />		<!-- Неопознанная Диадема Кадейры -->
-			<reward item_id="18176" min="1" max="1" chance="0.20758" />		<!-- Неопознанный Буревестник Фантазмы -->
-			<reward item_id="19262" min="1" max="3" chance="77.29034" />		<!-- Материал Неопознанной Диадемы Кадейры -->
-			<reward item_id="19242" min="1" max="1" chance="20.42624" />		<!-- Часть Неопознанного Буревестника Фантазмы -->
-		</group>
-		<group chance="0.300">
-			<reward item_id="17526" min="1" max="1" chance="100.00000" />		<!-- Свиток: Модифицировать Оружие (R) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19272" min="1" max="1" chance="0.03000" />		<!-- Часть Неопознанного Резака Хелиоса -->
-			<reward item_id="19426" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанный Кожаный Шлем Айдиоса (60%) -->
-			<reward item_id="19410" min="1" max="1" chance="0.00550" />		<!-- Рецепт - Неопознанный Резак Хелиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-		</skills>
-	</npc>
-	<npc id="22917" name="orbis_deacon_spear" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="17.0"/>
-		<set name="collision_height" value="54.0"/>
-		<set name="level" value="95"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="321920"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22058"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="3240513"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="69370"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="373"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+			<group chance="70">
+				<reward item_id="57" min="21552" max="50333" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.1650">
+				<reward item_id="18194" min="1" max="1" chance="90.9091" /> <!-- Unidentified Seraph Leather Gloves -->
+				<reward item_id="18180" min="1" max="1" chance="9.0909" /> <!-- Unidentified Specter Caster -->
+			</group>
+			<group chance="4.6885">
+				<reward item_id="19260" min="1" max="3" chance="64.6796" /> <!-- Unidentified Seraph Leather Gloves Ingredient -->
+				<reward item_id="19408" min="1" max="1" chance="24.1709" /> <!-- Recipe - Unidentified Seraph Ring 60% -->
+				<reward item_id="19246" min="1" max="1" chance="10.7497" /> <!-- Unidentified Specter Caster Fragment -->
+				<reward item_id="17526" min="1" max="1" chance="0.3999" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19294" min="1" max="1" chance="0.3000" /> <!-- Unidentified Eternal Leather Gloves Ingredient -->
+				<reward item_id="19277" min="1" max="1" chance="0.0300" /> <!-- Unidentified Amaranthine Thrower Fragment -->
+				<reward item_id="19415" min="1" max="1" chance="0.0030" /> <!-- Recipe - Unidentified Amaranthine Thrower 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="260"/>
-			<defence attribute="water" value="260"/>
-			<defence attribute="wind" value="260"/>
-			<defence attribute="earth" value="260"/>
-			<defence attribute="holy" value="260"/>
-			<defence attribute="unholy" value="260"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
-		<rewardlist type="RATED_GROUPED">
-		<group chance="5.558">
-			<reward item_id="18190" min="1" max="1" chance="0.53976" />		<!-- Неопознанный Щит Кадейры -->
-			<reward item_id="18201" min="1" max="1" chance="0.53976" />		<!-- Неопознанный Символ Кадейры -->
-			<reward item_id="19269" min="1" max="1" chance="98.92047" />		<!-- Камень Неопознанной Серьги Кадейры -->
-		</group>
-		<group chance="0.030">
-			<reward item_id="17526" min="1" max="1" chance="100.00000" />		<!-- Свиток: Модифицировать Оружие (R) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="18191" min="1" max="1" chance="0.00090" />		<!-- Неопознанный Кожаный Шлем Кадейры -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-		</skills>
 	</npc>
-	<npc id="22918" name="orbis_deacon_spear" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="17.0"/>
-		<set name="collision_height" value="54.0"/>
-		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="322511"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22428"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="3736016"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="80619"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="373"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+	<npc id="22913" name="Orbis' Victim" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="355923" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="51.0" />
+		<set name="collision_radius" value="30.0" />
+		<set name="level" value="97" />
+		<set name="rewardExp" value="8697466" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="189191" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
 		<ai_params>
 			<set name="noRandomWalk" value="true" />
 		</ai_params>
-		<attributes>
-			<defence attribute="fire" value="260"/>
-			<defence attribute="water" value="260"/>
-			<defence attribute="wind" value="260"/>
-			<defence attribute="earth" value="260"/>
-			<defence attribute="holy" value="260"/>
-			<defence attribute="unholy" value="260"/>
-		</attributes>
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="21552" max="50333" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="18.032">
-			<reward item_id="18199" min="1" max="1" chance="1.66371" />		<!-- Неопознанные Перчатки Кадейры -->
-			<reward item_id="18186" min="1" max="1" chance="0.16637" />		<!-- Неопознанная Кираса Кадейры -->
-			<reward item_id="19265" min="1" max="3" chance="65.49468" />		<!-- Материал Неопознанных Перчаток Кадейры -->
-			<reward item_id="19252" min="1" max="1" chance="32.67524" />		<!-- Материал Неопознанной Кирасы Кадейры -->
-		</group>
-		<group chance="0.750">
-			<reward item_id="19387" min="1" max="1" chance="100.00000" />		<!-- Рецепт - Неопознанный Заклинатель Фантазмы (60%) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанных Кожаных Сапог Айдиоса -->
-			<reward item_id="19279" min="1" max="1" chance="0.03000" />		<!-- Часть Неопознанного Расчленителя Хелиоса -->
-			<reward item_id="19417" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Неопознанный Расчленитель Хелиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4410" level="1"/>
-			<skill id="4416" level="6"/>
-			<skill id="5467" level="6"/>
-		</skills>
-	</npc>
-	<npc id="22919" name="orbis_deacon_spear" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="35.0"/>
-		<set name="collision_height" value="54.0"/>
-		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="355923"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22800"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="8697466"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="189191"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="209"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="45"/>
+			<group chance="70">
+				<reward item_id="57" min="31359" max="73276" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.1650">
+				<reward item_id="18191" min="1" max="1" chance="90.9091" /> <!-- Unidentified Seraph Leather Helmet -->
+				<reward item_id="18175" min="1" max="1" chance="9.0909" /> <!-- Unidentified Specter Fighter -->
+			</group>
+			<group chance="4.8378">
+				<reward item_id="19257" min="1" max="3" chance="61.4956" /> <!-- Unidentified Seraph Leather Helmet Ingredient -->
+				<reward item_id="19407" min="1" max="1" chance="22.9394" /> <!-- Recipe - Unidentified Seraph Earring 60% -->
+				<reward item_id="19241" min="1" max="1" chance="15.1775" /> <!-- Unidentified Specter Fighter Fragment -->
+				<reward item_id="17526" min="1" max="1" chance="0.3876" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19291" min="1" max="1" chance="0.3000" /> <!-- Unidentified Eternal Leather Helmet Ingredient -->
+				<reward item_id="19271" min="1" max="1" chance="0.0300" /> <!-- Unidentified Amaranthine Shaper Fragment -->
+				<reward item_id="19409" min="1" max="1" chance="0.0055" /> <!-- Recipe - Unidentified Amaranthine Shaper 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="280"/>
-			<defence attribute="water" value="280"/>
-			<defence attribute="wind" value="280"/>
-			<defence attribute="earth" value="280"/>
-			<defence attribute="holy" value="280"/>
-			<defence attribute="unholy" value="280"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
+	</npc>
+	<npc id="22914" name="Orbis' Guard" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="321920" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="54.0" />
+		<set name="collision_radius" value="30.0" />
+		<set name="level" value="95" />
+		<set name="rewardExp" value="3240513" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="69370" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+		</ai_params>
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="31359" max="73276" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="9.054">
-			<reward item_id="18188" min="1" max="1" chance="3.31345" />		<!-- Неопознанные Рукавицы Кадейры -->
-			<reward item_id="18177" min="1" max="1" chance="0.33135" />		<!-- Неопознанный Бросок Фантазмы -->
-			<reward item_id="19254" min="3" max="9" chance="63.14336" />		<!-- Материал Неопознанных Рукавиц Кадейры -->
-			<reward item_id="19243" min="1" max="1" chance="33.21184" />		<!-- Часть Неопознанного Броска Фантазмы -->
-		</group>
-		<group chance="2.385">
-			<reward item_id="17527" min="1" max="1" chance="100.00000" />		<!-- Свиток: Модифицировать Доспех (R) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19292" min="1" max="1" chance="0.07500" />		<!-- Материал Неопознанной Кожаной Кирасы Айдиоса -->
-			<reward item_id="19273" min="1" max="1" chance="0.03000" />		<!-- Часть Неопознанного Эспадона Хелиоса -->
-			<reward item_id="19411" min="1" max="1" chance="0.00550" />		<!-- Рецепт - Неопознанный Эспадон Хелиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-		</skills>
-	</npc>
-	<npc id="22920" name="orbis_deacon_spear" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="17.0"/>
-		<set name="collision_height" value="54.0"/>
-		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="322511"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22428"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="8494188"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="183295"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="373"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+			<group chance="70">
+				<reward item_id="57" min="16585" max="38709" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.1650">
+				<reward item_id="18202" min="1" max="1" chance="90.9091" /> <!-- Unidentified Seraph Necklace -->
+				<reward item_id="18193" min="1" max="1" chance="9.0909" /> <!-- Unidentified Seraph Leather Leggings -->
+			</group>
+			<group chance="5.2040">
+				<reward item_id="19268" min="1" max="3" chance="56.9754" /> <!-- Unidentified Seraph Necklace Gem -->
+				<reward item_id="19259" min="1" max="1" chance="34.8050" /> <!-- Unidentified Seraph Leather Leggings Ingredient -->
+				<reward item_id="19406" min="1" max="1" chance="8.0755" /> <!-- Recipe - Unidentified Seraph Necklace 60% -->
+				<reward item_id="17526" min="1" max="1" chance="0.1441" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19288" min="1" max="1" chance="0.3000" /> <!-- Unidentified Eternal Gauntlet Ingredient -->
+				<reward item_id="19298" min="1" max="1" chance="0.0750" /> <!-- Unidentified Eternal Stockings Ingredient -->
+				<reward item_id="19423" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Eternal Gauntlet 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="260"/>
-			<defence attribute="water" value="260"/>
-			<defence attribute="wind" value="260"/>
-			<defence attribute="earth" value="260"/>
-			<defence attribute="holy" value="260"/>
-			<defence attribute="unholy" value="260"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
+	</npc>
+	<npc id="22915" name="Orbis' Guard" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="322511" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="54.0" />
+		<set name="collision_radius" value="30.0" />
+		<set name="level" value="96" />
+		<set name="rewardExp" value="3736016" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="80619" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+		</ai_params>
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="30267" max="70685" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="19.373">
-			<reward item_id="18190" min="1" max="1" chance="1.54855" />		<!-- Неопознанный Щит Кадейры -->
-			<reward item_id="18179" min="1" max="1" chance="0.15485" />		<!-- Неопознанный Расчленитель Фантазмы -->
-			<reward item_id="19256" min="1" max="3" chance="83.41506" />		<!-- Материал Неопознанного Щита Кадейры -->
-			<reward item_id="19245" min="1" max="1" chance="14.88154" />		<!-- Часть Неопознанного Расчленителя Фантазмы -->
-		</group>
-		<group chance="0.750">
-			<reward item_id="19382" min="1" max="1" chance="100.00000" />		<!-- Рецепт - Неопознанный Воитель Фантазмы (60%) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19430" min="1" max="1" chance="0.07500" />		<!-- Рецепт - Неопознанные Кожаные Сапоги Айдиоса (60%) -->
-			<reward item_id="19280" min="1" max="1" chance="0.03000" />		<!-- Часть Неопознанного Заклинателя Хелиоса -->
-			<reward item_id="19418" min="1" max="1" chance="0.00550" />		<!-- Рецепт - Неопознанный Заклинатель Хелиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4410" level="1"/>
-			<skill id="4416" level="6"/>
-			<skill id="5467" level="6"/>
-		</skills>
-	</npc>
-	<npc id="22921" name="orbis_curator" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="11.0"/>
-		<set name="collision_height" value="56.0"/>
-		<set name="level" value="95"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="321920"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="33087"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="3240513"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="69370"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="373"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+			<group chance="70">
+				<reward item_id="57" min="21552" max="50333" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.1650">
+				<reward item_id="18195" min="1" max="1" chance="90.9091" /> <!-- Unidentified Seraph Leather Boots -->
+				<reward item_id="18181" min="1" max="1" chance="9.0909" /> <!-- Unidentified Specter Retributer -->
+			</group>
+			<group chance="4.3240">
+				<reward item_id="19261" min="1" max="3" chance="70.5367" /> <!-- Unidentified Seraph Leather Boots Ingredient -->
+				<reward item_id="19405" min="1" max="1" chance="13.2054" /> <!-- Recipe - Unidentified Seraph Sigil 60% -->
+				<reward item_id="19247" min="1" max="1" chance="11.9219" /> <!-- Unidentified Specter Retributer Fragment -->
+				<reward item_id="17527" min="1" max="1" chance="4.3363" /> <!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19278" min="1" max="1" chance="0.0300" /> <!-- Unidentified Amaranthine Shooter Fragment -->
+				<reward item_id="19429" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Eternal Leather Gloves 60% -->
+				<reward item_id="19416" min="1" max="1" chance="0.0030" /> <!-- Recipe - Unidentified Amaranthine Shooter 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="260"/>
-			<defence attribute="water" value="260"/>
-			<defence attribute="wind" value="260"/>
-			<defence attribute="earth" value="260"/>
-			<defence attribute="holy" value="260"/>
-			<defence attribute="unholy" value="260"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
+	</npc>
+	<npc id="22916" name="Orbis' Guard" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="355923" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="54.0" />
+		<set name="collision_radius" value="30.0" />
+		<set name="level" value="97" />
+		<set name="rewardExp" value="8697466" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="189191" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+		</ai_params>
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="16585" max="38709" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="15.270">
-			<reward item_id="18204" min="1" max="1" chance="1.96464" />		<!-- Неопознанное Кольцо Кадейры -->
-			<reward item_id="18198" min="1" max="1" chance="0.19646" />		<!-- Неопознанные Штаны Кадейры -->
-			<reward item_id="19270" min="3" max="9" chance="50.14407" />		<!-- Камень Неопознанного Кольца Кадейры -->
-			<reward item_id="19264" min="1" max="1" chance="47.69483" />		<!-- Материал Неопознанных Штанов Кадейры -->
-		</group>
-		<group chance="0.300">
-			<reward item_id="19388" min="1" max="1" chance="100.00000" />		<!-- Рецепт - Неопознанное Возмездие Фантазмы (60%) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19290" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанного Щита Айдиоса -->
-			<reward item_id="19299" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанных Перчаток Айдиоса -->
-			<reward item_id="19425" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанный Щит Айдиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-		</skills>
-	</npc>
-	<npc id="22922" name="orbis_curator" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="11.0"/>
-		<set name="collision_height" value="56.0"/>
-		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="322511"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="33642"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="3736016"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="80619"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="373"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+			<group chance="70">
+				<reward item_id="57" min="31359" max="73276" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.1650">
+				<reward item_id="18196" min="1" max="1" chance="90.9091" /> <!-- Unidentified Seraph Circlet -->
+				<reward item_id="18176" min="1" max="1" chance="9.0909" /> <!-- Unidentified Specter Stormer -->
+			</group>
+			<group chance="4.8073">
+				<reward item_id="19262" min="1" max="3" chance="77.4517" /> <!-- Unidentified Seraph Circlet Ingredient -->
+				<reward item_id="19242" min="1" max="1" chance="20.4689" /> <!-- Unidentified Specter Stormer Fragment -->
+				<reward item_id="17526" min="1" max="1" chance="2.0802" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19272" min="1" max="1" chance="0.0300" /> <!-- Unidentified Amaranthine Cutter Fragment -->
+				<reward item_id="19426" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Eternal Leather Helmet 60% -->
+				<reward item_id="19410" min="1" max="1" chance="0.0055" /> <!-- Recipe - Unidentified Amaranthine Cutter 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="260"/>
-			<defence attribute="water" value="260"/>
-			<defence attribute="wind" value="260"/>
-			<defence attribute="earth" value="260"/>
-			<defence attribute="holy" value="260"/>
-			<defence attribute="unholy" value="260"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
+	</npc>
+	<npc id="22917" name="Orbis' Thrower" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="321920" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="54.0" />
+		<set name="collision_radius" value="35.0" />
+		<set name="level" value="95" />
+		<set name="rewardExp" value="3240513" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="69370" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+		</ai_params>
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="21552" max="50333" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="13.687">
-			<reward item_id="18200" min="1" max="1" chance="2.19186" />		<!-- Неопознанные Ботинки Кадейры -->
-			<reward item_id="18187" min="1" max="1" chance="0.54797" />		<!-- Неопознанные Набедренники Кадейры -->
-			<reward item_id="19253" min="1" max="1" chance="68.70023" />		<!-- Материал Неопознанных Набедренников Кадейры -->
-			<reward item_id="19266" min="3" max="9" chance="28.55995" />		<!-- Материал Неопознанных Ботинок Кадейры -->
-		</group>
-		<group chance="0.750">
-			<reward item_id="19383" min="1" max="1" chance="100.00000" />		<!-- Рецепт - Неопознанный Буревестник Фантазмы (60%) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19296" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанной Диадемы Айдиоса -->
-			<reward item_id="19281" min="1" max="1" chance="0.03000" />		<!-- Часть Неопознанного Возмездия Хелиоса -->
-			<reward item_id="19419" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Неопознанное Возмездие Хелиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-		</skills>
-	</npc>
-	<npc id="22923" name="orbis_curator" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="11.0"/>
-		<set name="collision_height" value="56.0"/>
-		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="355923"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="34200"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="8697466"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="189191"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="373"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+			<group chance="0.0300">
+				<reward item_id="18190" min="1" max="1" chance="50.0000" /> <!-- Unidentified Seraph Shield -->
+				<reward item_id="18201" min="1" max="1" chance="50.0000" /> <!-- Unidentified Seraph Sigil -->
+			</group>
+			<group chance="2.7640">
+				<reward item_id="19269" min="1" max="1" chance="99.4572" /> <!-- Unidentified Seraph Earring Gem -->
+				<reward item_id="17526" min="1" max="1" chance="0.5427" /> <!-- Scroll: Enchant Weapon R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="18191" min="1" max="1" chance="0.0009" /> <!-- Unidentified Seraph Leather Helmet -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="280"/>
-			<defence attribute="water" value="280"/>
-			<defence attribute="wind" value="280"/>
-			<defence attribute="earth" value="280"/>
-			<defence attribute="holy" value="280"/>
-			<defence attribute="unholy" value="280"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
+	</npc>
+	<npc id="22918" name="Orbis' Thrower" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="322511" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="54.0" />
+		<set name="collision_radius" value="35.0" />
+		<set name="level" value="96" />
+		<set name="rewardExp" value="3736016" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="80619" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+		</ai_params>
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4410" level="9" />	<!--Ослабленная Физ. Атк.-->
+		</skills>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="31359" max="73276" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="9.109">
-			<reward item_id="18189" min="1" max="1" chance="3.29345" />		<!-- Неопознанные Сапоги Кадейры -->
-			<reward item_id="18178" min="1" max="1" chance="0.32934" />		<!-- Неопознанный Страж Фантазмы -->
-			<reward item_id="19255" min="3" max="9" chance="63.16830" />		<!-- Материал Неопознанных Сапог Кадейры -->
-			<reward item_id="19244" min="1" max="1" chance="33.20891" />		<!-- Часть Неопознанного Стража Фантазмы -->
-		</group>
-		<group chance="0.750">
-			<reward item_id="19385" min="1" max="1" chance="100.00000" />		<!-- Рецепт - Неопознанный Страж Фантазмы (60%) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19274" min="1" max="1" chance="0.03000" />		<!-- Часть Неопознанного Мстителя Хелиоса -->
-			<reward item_id="19427" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанная Кожаная Кираса Айдиоса (60%) -->
-			<reward item_id="19412" min="1" max="1" chance="0.00550" />		<!-- Рецепт - Неопознанный Мститель Хелиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-		</skills>
-	</npc>
-	<npc id="22924" name="orbis_ancient_hero_a" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="22.0"/>
-		<set name="collision_height" value="60.0"/>
-		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="322511"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22428"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="14117131"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="304632"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="373"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+			<group chance="70">
+				<reward item_id="57" min="21552" max="50333" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.1650">
+				<reward item_id="18199" min="1" max="1" chance="90.9091" /> <!-- Unidentified Seraph Gloves -->
+				<reward item_id="18186" min="1" max="1" chance="9.0909" /> <!-- Unidentified Seraph Breastplate -->
+			</group>
+			<group chance="6.1507">
+				<reward item_id="19265" min="1" max="3" chance="64.0043" /> <!-- Unidentified Seraph Gloves Ingredient -->
+				<reward item_id="19252" min="1" max="1" chance="31.9317" /> <!-- Unidentified Seraph Breastplate Ingredient -->
+				<reward item_id="19387" min="1" max="1" chance="4.0646" /> <!-- Recipe - Unidentified Specter Caster 60% -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19295" min="1" max="1" chance="0.3000" /> <!-- Unidentified Eternal Leather Boots Ingredient -->
+				<reward item_id="19279" min="1" max="1" chance="0.0300" /> <!-- Unidentified Amaranthine Buster Fragment -->
+				<reward item_id="19417" min="1" max="1" chance="0.0030" /> <!-- Recipe - Unidentified Amaranthine Buster 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="260"/>
-			<defence attribute="water" value="260"/>
-			<defence attribute="wind" value="260"/>
-			<defence attribute="earth" value="260"/>
-			<defence attribute="holy" value="260"/>
-			<defence attribute="unholy" value="260"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
+	</npc>
+	<npc id="22919" name="Orbis' Thrower" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="355923" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="54.0" />
+		<set name="collision_radius" value="35.0" />
+		<set name="level" value="97" />
+		<set name="rewardExp" value="8697466" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="189191" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+		</ai_params>
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="35213" max="82237" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="6.754">
-			<reward item_id="18173" min="1" max="1" chance="1.11045" />		<!-- Неопознанный Эспадон Фантазмы -->
-			<reward item_id="19239" min="1" max="1" chance="98.88955" />		<!-- Часть Неопознанного Эспадона Фантазмы -->
-		</group>
-		<group chance="2.020">
-			<reward item_id="17527" min="1" max="1" chance="62.87129" />		<!-- Свиток: Модифицировать Доспех (R) -->
-			<reward item_id="19380" min="1" max="1" chance="37.12871" />		<!-- Рецепт - Неопознанный Эспадон Фантазмы (60%) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19285" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанного Шлема Айдиоса -->
-			<reward item_id="19420" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанный Шлем Айдиоса (60%) -->
-			<reward item_id="19431" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанная Диадема Айдиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-		</skills>
-	</npc>
-	<npc id="22925" name="orbis_ancient_hero_b" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="40.0"/>
-		<set name="collision_height" value="58.0"/>
-		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="355923"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22800"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="22724833"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="494322"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="212"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseWalkSpd" value="45"/>
+			<group chance="70">
+				<reward item_id="57" min="31359" max="73276" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.1650">
+				<reward item_id="18188" min="1" max="1" chance="90.9091" /> <!-- Unidentified Seraph Gauntlet -->
+				<reward item_id="18177" min="1" max="1" chance="9.0909" /> <!-- Unidentified Specter Thrower -->
+			</group>
+			<group chance="3.7030">
+				<reward item_id="19254" min="3" max="9" chance="51.4627" /> <!-- Unidentified Seraph Gauntlet Ingredient -->
+				<reward item_id="19243" min="1" max="1" chance="27.0681" /> <!-- Unidentified Specter Thrower Fragment -->
+				<reward item_id="17527" min="1" max="1" chance="21.4691" /> <!-- Scroll: Enchant Armor R-Grade -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19292" min="1" max="1" chance="0.0750" /> <!-- Unidentified Eternal Leather Armor Ingredient -->
+				<reward item_id="19273" min="1" max="1" chance="0.0300" /> <!-- Unidentified Amaranthine Slasher Fragment -->
+				<reward item_id="19411" min="1" max="1" chance="0.0055" /> <!-- Recipe - Unidentified Amaranthine Slasher 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="280"/>
-			<defence attribute="water" value="280"/>
-			<defence attribute="wind" value="280"/>
-			<defence attribute="earth" value="280"/>
-			<defence attribute="holy" value="280"/>
-			<defence attribute="unholy" value="280"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
+	</npc>
+	<npc id="22920" name="Orbis' Thrower" title="Scout">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="322511" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="54.0" />
+		<set name="collision_radius" value="35.0" />
+		<set name="level" value="96" />
+		<set name="rewardExp" value="8494188" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="183295" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+		</ai_params>
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4410" level="12" />	<!--Усиленная Физ. Атк.-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22921" name="Orbis' Curator" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="54.0" />
+		<set name="collision_radius" value="35.0" />
+		<set name="level" value="95" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22922" name="Orbis' Curator" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="54.0" />
+		<set name="collision_radius" value="35.0" />
+		<set name="level" value="96" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22923" name="Orbis' Curator" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="54.0" />
+		<set name="collision_radius" value="35.0" />
+		<set name="level" value="97" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22924" name="Orbis' Ancient Hero" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="54.0" />
+		<set name="collision_radius" value="35.0" />
+		<set name="level" value="96" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22925" name="Orbis' Ancient Hero" title="">
+		<set name="aggroRange" value="600" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="355923" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="58.0" />
+		<set name="collision_radius" value="40.0" />
+		<set name="level" value="97" />
+		<set name="rewardExp" value="22724833" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="494322" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+		</ai_params>
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
 		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="51673" max="120743" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="9.816">
-			<reward item_id="18171" min="1" max="1" chance="0.76406" />		<!-- Неопознанное Острие Фантазмы -->
-			<reward item_id="19237" min="1" max="1" chance="99.23594" />		<!-- Часть Неопознанного Острия Фантазмы -->
-		</group>
-		<group chance="12.082">
-			<reward item_id="9551" min="1" max="1" chance="79.60603" />		<!-- Руда Святости -->
-			<reward item_id="9557" min="1" max="1" chance="20.39397" />		<!-- Кристалл Святости -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19293" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанных Кожаных Брюк Айдиоса -->
-			<reward item_id="19275" min="1" max="1" chance="0.03000" />		<!-- Часть Неопознанного Воителя Хелиоса -->
-			<reward item_id="19413" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанный Воитель Хелиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-		</skills>
-	</npc>
-	<npc id="22926" name="orbis_elder_curator" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="16.0"/>
-		<set name="collision_height" value="36.5"/>
-		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="322511"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="33642"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="14117131"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="304632"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="373"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+			<group chance="70">
+				<reward item_id="57" min="51673" max="120743" chance="100" /> <!-- Adena -->
+			</group>
+			<group chance="0.0750">
+				<reward item_id="18171" min="1" max="1" chance="100.0000" /> <!-- Unidentified Specter Shaper -->
+			</group>
+			<group chance="7.2743">
+				<reward item_id="19237" min="1" max="1" chance="44.6362" /> <!-- Unidentified Specter Shaper Fragment -->
+				<reward item_id="9551" min="1" max="1" chance="44.0726" /> <!-- Holy Stone -->
+				<reward item_id="9557" min="1" max="1" chance="11.2908" /> <!-- Holy Crystal -->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+				<reward item_id="19293" min="1" max="1" chance="0.3000" /> <!-- Unidentified Eternal Leather Leggings Ingredient -->
+				<reward item_id="19275" min="1" max="1" chance="0.0300" /> <!-- Unidentified Amaranthine Fighter Fragment -->
+				<reward item_id="19413" min="1" max="1" chance="0.0300" /> <!-- Recipe - Unidentified Amaranthine Fighter 60% -->
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="260"/>
-			<defence attribute="water" value="260"/>
-			<defence attribute="wind" value="260"/>
-			<defence attribute="earth" value="260"/>
-			<defence attribute="holy" value="260"/>
-			<defence attribute="unholy" value="260"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
-		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="35213" max="82237" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="17.052">
-			<reward item_id="18185" min="1" max="1" chance="1.75932" />		<!-- Неопознанный Шлем Кадейры -->
-			<reward item_id="18174" min="1" max="1" chance="0.17593" />		<!-- Неопознанный Мститель Фантазмы -->
-			<reward item_id="19251" min="1" max="3" chance="78.75909" />		<!-- Материал Неопознанного Шлема Кадейры -->
-			<reward item_id="19240" min="1" max="1" chance="19.30565" />		<!-- Часть Неопознанного Мстителя Фантазмы -->
-		</group>
-		<group chance="1.500">
-			<reward item_id="19379" min="1" max="1" chance="50.00000" />		<!-- Рецепт - Неопознанный Резак Фантазмы (60%) -->
-			<reward item_id="19384" min="1" max="1" chance="50.00000" />		<!-- Рецепт - Неопознанный Бросок Фантазмы (60%) -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19286" min="1" max="1" chance="0.07500" />		<!-- Материал Неопознанной Кирасы Айдиоса -->
-			<reward item_id="19297" min="1" max="1" chance="0.07500" />		<!-- Материал Неопознанной Туники Айдиоса -->
-			<reward item_id="19421" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанная Кираса Айдиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-		</skills>
 	</npc>
-	<npc id="22927" name="orbis_elder_curator" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="30.0"/>
-		<set name="collision_height" value="36.5"/>
-		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="355923"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="34200"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="22724833"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="494322"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
+	<npc id="22926" name="Orbis' Chief Curator" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="58.0" />
+		<set name="collision_radius" value="40.0" />
+		<set name="level" value="96" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="280"/>
-			<defence attribute="water" value="280"/>
-			<defence attribute="wind" value="280"/>
-			<defence attribute="earth" value="280"/>
-			<defence attribute="holy" value="280"/>
-			<defence attribute="unholy" value="280"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
-		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="51673" max="120743" chance="100.00000" />		<!-- Адена -->
-		</group>
-		<group chance="9.922">
-			<reward item_id="18172" min="1" max="1" chance="0.75590" />		<!-- Неопознанный Резак Фантазмы -->
-			<reward item_id="19238" min="1" max="1" chance="99.24410" />		<!-- Часть Неопознанного Резака Фантазмы -->
-		</group>
-		<group chance="12.165">
-			<reward item_id="9550" min="1" max="1" chance="79.94246" />		<!-- Руда Тьмы -->
-			<reward item_id="9556" min="1" max="1" chance="20.05754" />		<!-- Кристалл Тьмы -->
-		</group>
-	</rewardlist>
-	<rewardlist type="SWEEP">
-			<reward item_id="19276" min="1" max="1" chance="0.03000" />		<!-- Часть Неопознанного Буревестника Хелиоса -->
-			<reward item_id="19414" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанный Буревестник Хелиоса (60%) -->
-			<reward item_id="19428" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанные Кожаные Брюки Айдиоса (60%) -->
-	</rewardlist>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
-		</skills>
 	</npc>
-	<npc id="22928" name="orbis_arena_gladiator" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="25.0"/>
-		<set name="collision_height" value="67.0"/>
-		<set name="level" value="95"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3290"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1675"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="373"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+	<npc id="22927" name="Orbis' Chief Curator" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="58.0" />
+		<set name="collision_radius" value="40.0" />
+		<set name="level" value="97" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5463" level="1" />	<!--Защита Воды-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="260"/>
-			<defence attribute="water" value="260"/>
-			<defence attribute="wind" value="260"/>
-			<defence attribute="earth" value="260"/>
-			<defence attribute="holy" value="260"/>
-			<defence attribute="unholy" value="260"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-		</skills>
 	</npc>
-	<npc id="22929" name="orbis_arena_beast" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="40.0"/>
-		<set name="collision_height" value="26.0"/>
-		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3290"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1675"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+	<npc id="22928" name="Octavis' Gladiator" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="58.0" />
+		<set name="collision_radius" value="40.0" />
+		<set name="level" value="97" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="160"/>
-			<defence attribute="water" value="160"/>
-			<defence attribute="wind" value="160"/>
-			<defence attribute="earth" value="160"/>
-			<defence attribute="holy" value="160"/>
-			<defence attribute="unholy" value="160"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="3"/>
-		</skills>
 	</npc>
-	<npc id="22930" name="orbis_elder_curator" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="16.0"/>
-		<set name="collision_height" value="36.5"/>
-		<set name="level" value="86"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3290"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1675"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="290"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="373"/>
-		<set name="baseRunSpd" value="190"/>
-		<set name="baseWalkSpd" value="90"/>
+	<npc id="22929" name="Beast of the Arena" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="58.0" />
+		<set name="collision_radius" value="40.0" />
+		<set name="level" value="97" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="3" />	<!--Звери-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="160"/>
-			<defence attribute="water" value="160"/>
-			<defence attribute="wind" value="160"/>
-			<defence attribute="earth" value="160"/>
-			<defence attribute="holy" value="160"/>
-			<defence attribute="unholy" value="160"/>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
 		</attributes>
-		<skills>
-			<skill id="4416" level="4"/>
-			<skill id="5467" level="6"/>
-		</skills>
 	</npc>
-	<npc id="22931" name="crakia_batuse" title="">
+	<npc id="22930" name="Octavis' Chief Curator" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="58.0" />
+		<set name="collision_radius" value="40.0" />
+		<set name="level" value="97" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
+		<skills>
+			<skill id="4416" level="6" />	<!--Гуманоиды-->
+			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="22931" name="Krakia Bathus" title="Tomb Commander">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="46.15"/>
@@ -1939,7 +1932,7 @@
 			<skill id="5463" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22932" name="crakia_karcus" title="">
+	<npc id="22932" name="Krakia Carcass" title="Tomb Sniper">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="46.15"/>
@@ -2000,7 +1993,7 @@
 			<skill id="5463" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22933" name="crakia_rotus" title="">
+	<npc id="22933" name="Krakia Lotus" title="Tomb Summoner">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="46.15"/>
@@ -2065,7 +2058,7 @@
 			<skill id="5463" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22934" name="rakzan" title="">
+	<npc id="22934" name="Rakzan" title="Tomb Royal Guardian">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="48.0"/>
 		<set name="collision_height" value="93.0"/>
@@ -2128,7 +2121,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22935" name="vaise_kan" title="">
+	<npc id="22935" name="Weiss Khan" title="Tomb Wizard">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="39.0"/>
@@ -2194,7 +2187,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22936" name="vaise_el" title="">
+	<npc id="22936" name="Weiss Ele" title="Tomb Oracle">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="39.0"/>
@@ -2262,7 +2255,7 @@
 			<skill id="14609" level="1"/>
 		</skills>
 	</npc>
-	<npc id="22937" name="vamonty" title="">
+	<npc id="22937" name="Bamonti" title="Tomb Soldier">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="43.0"/>
@@ -2328,7 +2321,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22938" name="seknus" title="">
+	<npc id="22938" name="Seknus" title="Tomb Illusionist">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="21.0"/>
 		<set name="collision_height" value="69.0"/>
@@ -2395,7 +2388,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22939" name="crakia_batuse_black" title="">
+	<npc id="22939" name="Demonic Bathus" title="Tomb Commander">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="55.0"/>
@@ -2459,7 +2452,7 @@
 			<skill id="5463" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22940" name="crakia_karcus_black" title="">
+	<npc id="22940" name="Demonic Carcass" title="Tomb Sniper">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="55.0"/>
@@ -2519,7 +2512,7 @@
 			<skill id="5463" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22941" name="crakia_rotus_black" title="">
+	<npc id="22941" name="Demonic Lotus" title="Tomb Summoner">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="55.0"/>
@@ -2584,7 +2577,7 @@
 			<skill id="5463" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22942" name="rakzan_black" title="">
+	<npc id="22942" name="Demonic Rakzan" title="Tomb Royal Guardian">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="48.0"/>
 		<set name="collision_height" value="93.0"/>
@@ -2649,7 +2642,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22943" name="vaise_kan_black" title="">
+	<npc id="22943" name="Demonic Weiss Khan" title="Tomb Wizard">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="46.0"/>
@@ -2715,7 +2708,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22944" name="vaise_el_black" title="">
+	<npc id="22944" name="Demonic Weiss Ele" title="Tomb Oracle">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="42.0"/>
@@ -2782,7 +2775,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22945" name="vamonty_black" title="">
+	<npc id="22945" name="Demonic Bamonti" title="Tomb Soldier">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="50.0"/>
@@ -2847,7 +2840,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22946" name="seknus_black" title="">
+	<npc id="22946" name="Demonic Seknus" title="Tomb Illusionist">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="21.0"/>
 		<set name="collision_height" value="76.0"/>
@@ -2914,7 +2907,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22947" name="Genesis Guardian" title="">
+	<npc id="22947" name="Garden Sentry" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="35.0"/>
@@ -2978,7 +2971,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="22948" name="Genesis Butterfly" title="">
+	<npc id="22948" name="Garden Scout" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="42.5"/>
@@ -3042,7 +3035,7 @@
 			<skill id="5464" level="12"/>
 		</skills>
 	</npc>
-	<npc id="22949" name="Genesis Striker" title="">
+	<npc id="22949" name="Garden Commander" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="44.0"/>
 		<set name="collision_height" value="35.0"/>
@@ -3104,7 +3097,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="22950" name="Genesis Shock Rabbit" title="">
+	<npc id="22950" name="Outdoor Gardener" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="39.0"/>
@@ -3165,7 +3158,7 @@
 			<skill id="5465" level="4"/>
 		</skills>
 	</npc>
-	<npc id="22951" name="Gardener Run" title="">
+	<npc id="22951" name="Garden Destroyer" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="26.8"/>
@@ -3230,7 +3223,7 @@
 			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
-	<npc id="22952" name="Genesis Big Watch" title="">
+	<npc id="22952" name="Garden Watchman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="28.0"/>
@@ -3292,7 +3285,7 @@
 			<skill id="5464" level="13"/>
 		</skills>
 	</npc>
-	<npc id="22953" name="Genesis Butterfly" title="">
+	<npc id="22953" name="Garden Scout" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="42.5"/>
@@ -3356,7 +3349,7 @@
 			<skill id="5464" level="12"/>
 		</skills>
 	</npc>
-	<npc id="22954" name="Genesis Gardener" title="">
+	<npc id="22954" name="Sun Garden Manager" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="30.0"/>
@@ -3418,7 +3411,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22955" name="Genesis Rabbit" title="">
+	<npc id="22955" name="Sun Gardener" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="39.0"/>
@@ -3479,7 +3472,7 @@
 			<skill id="5464" level="4"/>
 		</skills>
 	</npc>
-	<npc id="22956" name="Genesis Striker" title="">
+	<npc id="22956" name="Garden Commander" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="44.0"/>
 		<set name="collision_height" value="35.0"/>
@@ -3541,7 +3534,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="22957" name="Genesis Warrior" title="">
+	<npc id="22957" name="Garden Warrior" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="46.5"/>
@@ -3603,7 +3596,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22958" name="Genesis Gardener Moon" title="">
+	<npc id="22958" name="Moon Garden Manager" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="30.0"/>
@@ -3665,7 +3658,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22959" name="Genesis Small Rabbit" title="">
+	<npc id="22959" name="Garden Protector" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="31.0"/>
@@ -3729,7 +3722,7 @@
 			<skill id="5465" level="4"/>
 		</skills>
 	</npc>
-	<npc id="22960" name="Genesis Rabbit" title="">
+	<npc id="22960" name="Moon Gardener" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="39.0"/>
@@ -3791,7 +3784,7 @@
 			<skill id="5465" level="4"/>
 		</skills>
 	</npc>
-	<npc id="22961" name="Genesis Guardian" title="">
+	<npc id="22961" name="Garden Sentry" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="35.0"/>
@@ -3856,7 +3849,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="22962" name="Genesis Striker" title="">
+	<npc id="22962" name="Garden Commander" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="44.0"/>
 		<set name="collision_height" value="35.0"/>
@@ -3917,7 +3910,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="22963" name="Genesis Warrior" title="">
+	<npc id="22963" name="Garden Warrior" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="46.5"/>
@@ -3979,7 +3972,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22964" name="Genesis Gardener" title="">
+	<npc id="22964" name="Apherus Lookout" title="Bewildered">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="30.0"/>
@@ -4041,7 +4034,7 @@
 			<skill id="5464" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22965" name="exile_sword" title="">
+	<npc id="22965" name="Novice Phantom" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="41.5"/>
@@ -4098,7 +4091,7 @@
 			<skill id="5467" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22966" name="exile_wizard" title="">
+	<npc id="22966" name="Novice Phantom Wizard" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="39.0"/>
@@ -4154,7 +4147,7 @@
 			<skill id="5467" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22967" name="exile_sword_b" title="">
+	<npc id="22967" name="Median Phantom" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="44.5"/>
@@ -4213,7 +4206,7 @@
 			<skill id="5467" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22968" name="orbis_old_sword" title="">
+	<npc id="22968" name="Median Escort Swordsman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="32.5"/>
@@ -4272,7 +4265,7 @@
 			<skill id="5467" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22969" name="portrait_spirit_150p" title="">
+	<npc id="22969" name="Wraith Guardian" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="23.0"/>
 		<set name="collision_height" value="52.0"/>
@@ -4328,7 +4321,7 @@
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
-	<npc id="22970" name="Vampire_Troop_Leader_120p" title="">
+	<npc id="22970" name="Wraith Warrior" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="43.0"/>
@@ -4387,7 +4380,7 @@
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
-	<npc id="22971" name="tantaar_lizardman_sorcerer" title="">
+	<npc id="22971" name="Lizard Charmer" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="29.0"/>
 		<set name="collision_height" value="44.0"/>
@@ -4431,7 +4424,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22972" name="tantaar_lizardman_rogue" title="">
+	<npc id="22972" name="Lizard Spearman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="40.25"/>
@@ -4475,7 +4468,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22973" name="tantaar_lizardman_warrior" title="">
+	<npc id="22973" name="Lizard Spearman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="37.5"/>
@@ -4519,7 +4512,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22974" name="serpent_slave" title="">
+	<npc id="22974" name="Beast" title="Escort">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="46.0"/>
@@ -4563,7 +4556,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="22975" name="guard_naia_a" title="">
+	<npc id="22975" name="Arcan Spirit" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
@@ -4608,7 +4601,7 @@
 			<skill id="5463" level="7"/>
 		</skills>
 	</npc>
-	<npc id="22976" name="guard_naia_b3t" title="">
+	<npc id="22976" name="Arcan Spirit" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="35.0"/>
@@ -4653,7 +4646,7 @@
 			<skill id="5463" level="7"/>
 		</skills>
 	</npc>
-	<npc id="22977" name="guard_naia_b1t" title="">
+	<npc id="22977" name="Arcan Spirit" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="9.0"/>
@@ -4697,7 +4690,7 @@
 			<skill id="5463" level="7"/>
 		</skills>
 	</npc>
-	<npc id="22978" name="guard_naia_b4t" title="">
+	<npc id="22978" name="Arcan Spirit" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="31.0"/>
@@ -4742,7 +4735,7 @@
 			<skill id="5463" level="7"/>
 		</skills>
 	</npc>
-	<npc id="22979" name="fairy_old_sword" title="">
+	<npc id="22979" name="Novice Escort Swordsman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="27.0"/>
@@ -4803,7 +4796,7 @@
 			<skill id="5467" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22980" name="fairy_old_wizard" title="">
+	<npc id="22980" name="Novice Escort Wizard" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
@@ -4860,7 +4853,7 @@
 			<skill id="5467" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22981" name="orbis_old_sword" title="">
+	<npc id="22981" name="Median Escort Swordsman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="32.5"/>
@@ -4920,7 +4913,7 @@
 			<skill id="5467" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22982" name="lilim_knight_150p" title="">
+	<npc id="22982" name="Escort Paladin" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="76.0"/>
@@ -4964,7 +4957,7 @@
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
-	<npc id="22983" name="lilim_knight_10_bi_e" title="">
+	<npc id="22983" name="Escort Warrior" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="55.0"/>
@@ -5008,7 +5001,7 @@
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
-	<npc id="22984" name="ancient_phantom" title="">
+	<npc id="22984" name="Nemertess" title="Escort">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.0"/>
@@ -5052,7 +5045,7 @@
 			<skill id="5465" level="9"/>
 		</skills>
 	</npc>
-	<npc id="22985" name="fairy_old_sword" title="">
+	<npc id="22985" name="Spezion's Pawn" title="Prison Raider">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="27.0"/>
@@ -5096,7 +5089,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22986" name="fairy_old_wizard" title="">
+	<npc id="22986" name="Spezion's Pawn" title="Prison Raider">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
@@ -5140,7 +5133,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22987" name="orbis_old_sword" title="">
+	<npc id="22987" name="Spezion's Pawn" title="Prison Raider">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="32.5"/>
@@ -5184,7 +5177,7 @@
 			<skill id="5465" level="6"/>
 		</skills>
 	</npc>
-	<npc id="22988" name="vale_master_tr" title="">
+	<npc id="22988" name="Spezion's Pawn" title="Prison Raider">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="40.0"/>
@@ -5228,7 +5221,7 @@
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
-	<npc id="22989" name="lilim_wizard_10_bi_e" title="">
+	<npc id="22989" name="Spezion's Pawn" title="Prison Raider">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="37.5"/>
@@ -5272,7 +5265,7 @@
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
-	<npc id="22990" name="lilim_knight_10_bi_e" title="">
+	<npc id="22990" name="Spezion's Pawn" title="Prison Raider">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="55.0"/>
@@ -5316,7 +5309,7 @@
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
-	<npc id="22991" name="Husk Crawler" title="">
+	<npc id="22991" name="Crawler" title="Husk">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="6.5"/>
 		<set name="collision_height" value="18.5"/>
@@ -5362,7 +5355,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="22992" name="Husk Stalker" title="">
+	<npc id="22992" name="Stalker" title="Husk">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="9.4"/>
 		<set name="collision_height" value="20.0"/>
@@ -5408,7 +5401,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="22993" name="Husk Critter" title="">
+	<npc id="22993" name="Critter" title="Husk">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.5"/>
 		<set name="collision_height" value="18.0"/>
@@ -5454,7 +5447,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="22994" name="Husk Avian" title="">
+	<npc id="22994" name="Avian" title="Husk">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="16.5"/>
@@ -5500,7 +5493,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="22995" name="Husk Rider" title="">
+	<npc id="22995" name="Rider" title="Husk">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="36.5"/>
@@ -5546,7 +5539,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="22996" name="Husk Warper" title="">
+	<npc id="22996" name="Warper" title="Husk">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -5592,7 +5585,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="22997" name="embryo_handyman" title="">
+	<npc id="22997" name="Handyman" title="Embryo">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="6.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -5644,7 +5637,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="22998" name="embryo_operative" title="">
+	<npc id="22998" name="Operative" title="Embryo">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="6.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -5691,47 +5684,51 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="22999" name="gludio_kanilof" title="">
-		<!--fixed by Darvin & HaxHago-->
-		<set name="collision_radius" value="30.0"/>
-		<set name="collision_height" value="24.0"/>
-		<set name="level" value="29"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="515"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="3.5"/>
-		<set name="baseMpMax" value="286"/>
-		<set name="baseMpReg" value="1"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="1349"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="70"/>
-		<set name="basePAtk" value="74"/>
-		<set name="basePDef" value="108"/>
-		<set name="baseMAtk" value="51"/>
-		<set name="baseMDef" value="72"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="1"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="131"/>
-		<set name="baseWalkSpd" value="35"/>
-		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
-		</attributes>
+	<npc id="22999" name="Kanilov" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="Fighter" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="32.0" />
+		<set name="collision_radius" value="14.0" />
+		<set name="level" value="29" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Monster" />
 		<skills>
-			<skill id="4416" level="2"/>
+			<skill id="4416" level="4" />	<!--Животные-->
 		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
 	</npc>
 </list>

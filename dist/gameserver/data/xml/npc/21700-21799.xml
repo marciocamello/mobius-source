@@ -2486,7 +2486,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21728" name="Forbidden Path Invader Elite Soldier" title="">
+	<npc id="21728" name="Forbidden Path Invader Soldier" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2580,7 +2580,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21729" name="Forbidden Path Invader Elite Soldier" title="">
+	<npc id="21729" name="Forbidden Path Invader Soldier" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3126,7 +3126,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21735" name="Forbidden Path Invader Martyrs" title="">
+	<npc id="21735" name="Forbidden Path Invader Martyr" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -8568,7 +8568,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21797" name="Spirit of Timiniel" title="">
+	<npc id="21797" name="Timiniel's Spirit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8654,7 +8654,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21798" name="Ghost of a Gatekeeper" title="">
+	<npc id="21798" name="Gatekeeper's Ghost" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8746,7 +8746,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21799" name="Ghost of a Gatekeeper" title="">
+	<npc id="21799" name="Gatekeeper's Ghost" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

@@ -1328,7 +1328,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18921" name="Square Base " title="">
+	<npc id="18921" name="Square Base" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2930,7 +2930,7 @@
 			<defence attribute="unholy" value="70" />
 		</attributes>
 	</npc>
-	<npc id="18956" name="Guardian of the Tomb" title="">
+	<npc id="18956" name="Tomb Guardian" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2982,7 +2982,7 @@
 			<defence attribute="unholy" value="70" />
 		</attributes>
 	</npc>
-	<npc id="18957" name="Guardian of the Tomb" title="">
+	<npc id="18957" name="Tomb Guardian" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3034,7 +3034,7 @@
 			<defence attribute="unholy" value="70" />
 		</attributes>
 	</npc>
-	<npc id="18958" name="Guardian of the Tomb" title="">
+	<npc id="18958" name="Tomb Guardian" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3086,7 +3086,7 @@
 			<defence attribute="unholy" value="70" />
 		</attributes>
 	</npc>
-	<npc id="18959" name="Guardian of the Tomb" title="">
+	<npc id="18959" name="Tomb Guardian" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3310,7 +3310,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18964" name="Antharas's Symbol" title="">
+	<npc id="18964" name="Antharas' Symbol" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3353,7 +3353,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18965" name="Antharas's Symbol" title="">
+	<npc id="18965" name="Antharas' Symbol" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3396,7 +3396,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18966" name="Antharas's Symbol" title="">
+	<npc id="18966" name="Antharas' Symbol" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3654,7 +3654,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18972" name="Защитник Трикина" title="Разведчик">
+	<npc id="18972" name="Treekin Defender" title="Scout">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3701,7 +3701,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18973" name="Защитник Трикина" title="Буйный Разведчик">
+	<npc id="18973" name="Treekin  Defender" title="Experienced Scout">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3748,7 +3748,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18974" name="Кентавр Лучник" title="Разведчик">
+	<npc id="18974" name="Centaur Archer" title="Scout">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3795,7 +3795,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18975" name="Кентавр Лучник" title="Буйный Разведчик">
+	<npc id="18975" name="Centaur Archer" title="Experienced Scout">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3842,7 +3842,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18976" name="Берсерк Беорнина" title="Разведчик">
+	<npc id="18976" name="Beorning Berserker" title="Scout">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3889,7 +3889,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18977" name="Берсерк Беорнина" title="Буйный Разведчик">
+	<npc id="18977" name="Beorning Berserker" title="Experienced Scout">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3936,7 +3936,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18978" name="Жертва Орбиса" title="Проклятый">
+	<npc id="18978" name="Orbis' Victim" title="Cursed">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3983,7 +3983,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18979" name="Страж Орбиса" title="Проклятый">
+	<npc id="18979" name="Orbis' Guard" title="Cursed">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4030,7 +4030,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18980" name="Метатель Орбиса" title="Проклятый">
+	<npc id="18980" name="Orbis' Thrower" title="Cursed">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4077,7 +4077,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18981" name="Ученый Орбиса" title="Проклятый">
+	<npc id="18981" name="Orbis' Curator" title="Cursed">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4124,7 +4124,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18982" name="Древний Герой Орбиса" title="Проклятый">
+	<npc id="18982" name="Orbis' Ancient Hero" title="Cursed">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4171,7 +4171,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18983" name="Старший Ученый Орбиса" title="Проклятый">
+	<npc id="18983" name="Orbis' Chief Curator" title="Cursed">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4218,7 +4218,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18984" name="Сила Октависа" title="">
+	<npc id="18984" name="Octavis' Influence" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4265,7 +4265,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18985" name="Ловушка Бытия 1" title="">
+	<npc id="18985" name="Genesis Trap 1" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4312,7 +4312,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18986" name="Ловушка Бытия 2" title="">
+	<npc id="18986" name="Genesis Trap 2" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4359,7 +4359,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18987" name="Плеть из Растений" title="">
+	<npc id="18987" name="Rose Vine" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4406,7 +4406,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18988" name="Плеть из Роз" title="">
+	<npc id="18988" name="Rose Vine" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4453,7 +4453,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18989" name="Дверь Сада Афроса" title="">
+	<npc id="18989" name="Apherus Garden Gate" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4500,7 +4500,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18990" name="Дверь Сада Афроса" title="">
+	<npc id="18990" name="Apherus Garden Gate" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4547,7 +4547,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18991" name="Дверь Сада Афроса" title="">
+	<npc id="18991" name="Apherus Garden Gate" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4594,7 +4594,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18992" name="Дверь Сада Афроса" title="">
+	<npc id="18992" name="Apherus Garden Gate" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4641,7 +4641,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18993" name="Вылупившиеся Подземный Жук " title="">
+	<npc id="18993" name="Hatched Millipede" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4688,7 +4688,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18994" name="Вылупившиеся Подземный Червь" title="">
+	<npc id="18994" name="Hatched Underbug" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4735,7 +4735,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18995" name="Проснувшийся Подземный Жук" title="">
+	<npc id="18995" name="Awakened Millipede" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4782,7 +4782,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18996" name="Яйцо" title="">
+	<npc id="18996" name="Egg" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4829,7 +4829,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18997" name="Яйцо" title="">
+	<npc id="18997" name="Egg" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4876,7 +4876,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18998" name="Прозрачность Траджана 1" title="">
+	<npc id="18998" name="Teredor Transparent 1" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -4923,7 +4923,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="18999" name="Прозрачность Траджана 2" title="">
+	<npc id="18999" name="Teredor Transparent 2" title="">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>

@@ -787,7 +787,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32517" name="Airship Controller" title="">
+	<npc id="32517" name="Flight Control" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -837,7 +837,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32518" name="Vortex Gate" title="Aerial Cleft">
+	<npc id="32518" name="Vortex Gate " title="Aerial Cleft">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -883,7 +883,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32519" name="Vortex Gate" title="Aerial Cleft">
+	<npc id="32519" name="Vortex Gate " title="Aerial Cleft">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3090,7 +3090,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32566" name="Ginby" title="Soldier ">
+	<npc id="32566" name="Ginby" title="Soldier">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3140,7 +3140,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32567" name="Lelrikia" title="Priest of Shilen">
+	<npc id="32567" name="Lelrikia" title="Shilen's Priest">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3281,7 +3281,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32570" name="Eric" title="Herb Collector ">
+	<npc id="32570" name="Eric" title="Herb Collector">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4015,7 +4015,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32586" name="Shunaiman" title="Emperor of Elmoreden">
+	<npc id="32586" name="Shunaiman" title="Elmoreden's Emperor">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4567,7 +4567,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="32598" name="Court Magician" title="Elmore-Aden's">
+	<npc id="32598" name="Court Wizard" title="Elmore-Aden's">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

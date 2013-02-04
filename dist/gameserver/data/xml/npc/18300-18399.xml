@@ -119,7 +119,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18302" name="Offering of Apostates, Evoked Spirit" title="">
+	<npc id="18302" name="Apostate's Offering, Evoked Spirit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -237,7 +237,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18304" name="Offering of the Witch, Evoked Spirit" title="">
+	<npc id="18304" name="Witch's Offering, Evoked Spirit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -473,7 +473,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18308" name="Offering of /Forbidden Path, Evoked Spirit" title="">
+	<npc id="18308" name="Offering of Forbidden Path, Evoked Spirit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -709,7 +709,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18312" name="Offering of Apostates, Evoked Spirit" title="">
+	<npc id="18312" name="Apostate's Offering, Evoked Spirit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -827,7 +827,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18314" name="Offering of the Witch, Evoked Spirit" title="">
+	<npc id="18314" name="Witch's Offering, Evoked Spirit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4419,7 +4419,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="18371" name="Beleth Sample" title="">
+	<npc id="18371" name="Beleth's Sample" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4480,7 +4480,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="18372" name="Beleth Sample" title="">
+	<npc id="18372" name="Beleth's Sample" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4541,7 +4541,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="18373" name="Beleth Sample" title="">
+	<npc id="18373" name="Beleth's Sample" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4599,7 +4599,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="18374" name="Beleth Sample" title="">
+	<npc id="18374" name="Beleth's Sample" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4660,7 +4660,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="18375" name="Beleth Sample" title="">
+	<npc id="18375" name="Beleth's Sample" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4722,7 +4722,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="18376" name="Beleth Sample" title="">
+	<npc id="18376" name="Beleth's Sample" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4783,7 +4783,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="18377" name="Beleth Sample" title="">
+	<npc id="18377" name="Beleth's Sample" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

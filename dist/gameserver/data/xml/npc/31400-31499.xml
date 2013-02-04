@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="31400" name="Dummy - Sword Guard" title="Ch4 Test">
+	<npc id="31400" name="Dummy - Sword Guard" title="For Test">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -50,7 +50,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31401" name="Dummy - Bow Guard" title="Ch4 Test">
+	<npc id="31401" name="Dummy - Bow Guard" title="For Test">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -513,7 +513,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31413" name="Antonio" title="Spellbook Seller ">
+	<npc id="31413" name="Antonio" title="Spellbook Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -560,7 +560,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31414" name="Lynn" title="Spellbook Seller ">
+	<npc id="31414" name="Lynn" title="Spellbook Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -607,7 +607,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31415" name="Triya" title="Spellbook Seller ">
+	<npc id="31415" name="Triya" title="Spellbook Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -657,7 +657,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31416" name="Aren" title="Spellbook Seller ">
+	<npc id="31416" name="Aren" title="Spellbook Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -704,7 +704,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31417" name="Berynel" title="Spellbook Seller ">
+	<npc id="31417" name="Berynel" title="Spellbook Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -751,7 +751,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31418" name="Rouke" title="Spellbook Seller ">
+	<npc id="31418" name="Rouke" title="Spellbook Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -798,7 +798,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31419" name="Lorel" title="Spellbook Seller ">
+	<npc id="31419" name="Lorel" title="Spellbook Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -845,7 +845,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31420" name="Tomanel" title="Spellbook Seller ">
+	<npc id="31420" name="Tomanel" title="Spellbook Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -892,7 +892,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31421" name="Ratriya" title="Spellbook Seller ">
+	<npc id="31421" name="Ratriya" title="Spellbook Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -939,7 +939,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31422" name="Migel" title="Spellbook Seller ">
+	<npc id="31422" name="Migel" title="Spellbook Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -986,7 +986,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31423" name="Romas" title="Spellbook Seller ">
+	<npc id="31423" name="Romas" title="Spellbook Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1033,7 +1033,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31424" name="Shantra" title="Amulet Seller ">
+	<npc id="31424" name="Shantra" title="Amulet Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1083,7 +1083,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31425" name="Koram" title="Amulet Seller ">
+	<npc id="31425" name="Koram" title="Amulet Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1130,7 +1130,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31426" name="Jaka" title="Amulet Seller ">
+	<npc id="31426" name="Jaka" title="Amulet Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1177,7 +1177,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31427" name="Urgal" title="Amulet Seller ">
+	<npc id="31427" name="Urgal" title="Amulet Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1224,7 +1224,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31428" name="Shafa" title="Amulet Seller ">
+	<npc id="31428" name="Shafa" title="Amulet Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1271,7 +1271,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31429" name="Shitara" title="Amulet Seller ">
+	<npc id="31429" name="Shitara" title="Amulet Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1318,7 +1318,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31430" name="Donai" title="Amulet Seller ">
+	<npc id="31430" name="Donai" title="Amulet Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1365,7 +1365,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31431" name="Karai" title="Amulet Seller ">
+	<npc id="31431" name="Karai" title="Amulet Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3824,7 +3824,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31490" name="Rift Post Officer" title="">
+	<npc id="31490" name="Rift Post Sergeant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3874,7 +3874,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31491" name="Rift Post Captain" title="">
+	<npc id="31491" name="Rift Post Officer" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4023,7 +4023,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31494" name="Dimensional Gate Keeper" title="">
+	<npc id="31494" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4069,7 +4069,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31495" name="Dimensional Gate Keeper" title="">
+	<npc id="31495" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4115,7 +4115,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31496" name="Dimensional Gate Keeper" title="">
+	<npc id="31496" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4161,7 +4161,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31497" name="Dimensional Gate Keeper" title="">
+	<npc id="31497" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4207,7 +4207,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31498" name="Dimensional Gate Keeper" title="">
+	<npc id="31498" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4253,7 +4253,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31499" name="Dimensional Gate Keeper" title="">
+	<npc id="31499" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

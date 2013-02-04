@@ -4565,7 +4565,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31290" name="Skahi" title="Seer">
+	<npc id="31290" name="Skahi" title="Priest">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

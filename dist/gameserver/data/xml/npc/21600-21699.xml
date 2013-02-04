@@ -903,7 +903,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21610" name="Zaken's High Grade Watchman" title="">
+	<npc id="21610" name="Zaken's Senior Watchman" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -990,7 +990,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21611" name="Unpleasant Humming" title="">
+	<npc id="21611" name="Dismal Humming" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1080,7 +1080,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21612" name="Unpleasant Humming" title="">
+	<npc id="21612" name="Dismal Humming" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1170,7 +1170,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21613" name="Unpleasant Shout" title="">
+	<npc id="21613" name="Dismal shout" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2061,7 +2061,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21623" name="Zaken's Guard" title="">
+	<npc id="21623" name="Zaken's Royal Guard" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2154,7 +2154,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21624" name="Zaken's Guard" title="">
+	<npc id="21624" name="Zaken's Royal Guard" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2247,7 +2247,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21625" name="Zaken's Elite Guard" title="">
+	<npc id="21625" name="Zaken's Elite Royal Guard" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3181,7 +3181,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21635" name="Vale Master" title="">
+	<npc id="21635" name="Veil Master" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3282,7 +3282,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21636" name="Vale Master" title="">
+	<npc id="21636" name="Veil Master" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3383,7 +3383,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21637" name="Crimson Vale Master" title="">
+	<npc id="21637" name="Crimson Veil Master" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3705,7 +3705,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21640" name="Tasaba Lizardman Shaman " title="">
+	<npc id="21640" name="Tasaba Lizardman Shaman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -4998,7 +4998,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21651" name="Shrine Guard" title="">
+	<npc id="21651" name="Shrine Royal Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8592,7 +8592,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21693" name="Dimension Invader Berserker " title="">
+	<npc id="21693" name="Dimension Invader Berserker" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

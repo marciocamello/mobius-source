@@ -259,7 +259,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25304" name="Tayr's Guard" title="Raid Fighter">
+	<npc id="25304" name="Tayr's Royal Guard" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -700,7 +700,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25310" name="Shadith's Royal Guard Captain" title="Raid Fighter">
+	<npc id="25310" name="Shadith's Escort Captain" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -967,7 +967,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25314" name="Mos' Guard" title="Raid Fighter">
+	<npc id="25314" name="Mos' Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3960,7 +3960,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25356" name="Sirocco's Guards" title="Raid Fighter">
+	<npc id="25356" name="Sirocco's Escorts" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4019,7 +4019,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25357" name="Sukar Wererat Chief" title="Raid Boss">
+	<npc id="25357" name="Sukar Ratman Chief" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4098,7 +4098,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25358" name="Sukar Wererat Guard" title="Raid Fighter">
+	<npc id="25358" name="Sukar Ratman Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4157,7 +4157,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25359" name="Sukar Wererat Priest" title="Raid Fighter">
+	<npc id="25359" name="Sukar Ratman Priest" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -4353,7 +4353,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25362" name="Tracker Leader Sharuk" title="Raid Boss">
+	<npc id="25362" name="Tracker Captain Sharuk" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5131,7 +5131,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25373" name="Malex Herald of Dagoniel " title="Raid Boss">
+	<npc id="25373" name="Dagoniel's Herald Malex" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5264,7 +5264,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25375" name="Zombie Lord Farakelsus" title="Raid Boss">
+	<npc id="25375" name="Zombie Lord Ferkel" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5346,7 +5346,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25376" name="Warrior Zombie of Farakelsus" title="Raid Fighter">
+	<npc id="25376" name="Ferkel's Warrior" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5406,7 +5406,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25377" name="Priest Zombie of Farakelsus" title="Raid Fighter">
+	<npc id="25377" name="Ferkel's Priest" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -5598,7 +5598,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25380" name="Kaysha Herald of Icarus" title="Raid Boss">
+	<npc id="25380" name="Icarus' Herald Kaysha" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6432,7 +6432,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25392" name="Captain of Queen's Royal Guards" title="Raid Boss">
+	<npc id="25392" name="Queen's Royal Guard Captain" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6661,7 +6661,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25395" name="Archon Suscepter" title="Raid Boss">
+	<npc id="25395" name="Archon Susceptor" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6763,7 +6763,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25396" name="Kusion Suscepter" title="Raid Fighter">
+	<npc id="25396" name="Kusion Susceptor" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6820,7 +6820,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25397" name="Gustos Suscepter" title="Raid Fighter">
+	<npc id="25397" name="Gustos Susceptor" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6876,7 +6876,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25398" name="Eye of Beleth" title="Raid Boss">
+	<npc id="25398" name="Beleth's Eye" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6957,7 +6957,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25399" name="Apprentice of Watchman" title="Raid Fighter">
+	<npc id="25399" name="Watchman's Apprentice" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />

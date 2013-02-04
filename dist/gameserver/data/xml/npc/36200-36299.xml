@@ -1002,7 +1002,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="36220" name="Doorman" title="">
+	<npc id="36220" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1056,7 +1056,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="36221" name="Doorman" title="">
+	<npc id="36221" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1110,7 +1110,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="36222" name="Doorman" title="">
+	<npc id="36222" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1226,7 +1226,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="36224" name="Decorated Rebel Soldier" title="Western Fortress">
+	<npc id="36224" name="Rebel Elite Soldier" title="Western Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1340,7 +1340,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="36226" name="Court Guard" title="Western Fortress">
+	<npc id="36226" name="Royal Guard" title="Western Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1398,7 +1398,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="36227" name="Guard" title="Western Fortress">
+	<npc id="36227" name="Escort" title="Western Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -2963,7 +2963,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="36258" name="Doorman" title="">
+	<npc id="36258" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3017,7 +3017,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="36259" name="Doorman" title="">
+	<npc id="36259" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3071,7 +3071,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="36260" name="Doorman" title="">
+	<npc id="36260" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3187,7 +3187,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="36262" name="Decorated Rebel Soldier" title="Hunter's Fortress">
+	<npc id="36262" name="Rebel Elite Soldier" title="Hunter's Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3301,7 +3301,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="36264" name="Court Guard" title="Hunter's Fortress">
+	<npc id="36264" name="Royal Guard" title="Hunter's Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3359,7 +3359,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="36265" name="Guard" title="Hunter's Fortress">
+	<npc id="36265" name="Escort" title="Hunter's Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -4869,7 +4869,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="36295" name="Doorman" title="">
+	<npc id="36295" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4923,7 +4923,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="36296" name="Doorman" title="">
+	<npc id="36296" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4977,7 +4977,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="36297" name="Doorman" title="">
+	<npc id="36297" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -5093,7 +5093,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="36299" name="Decorated Rebel Soldier" title="Aaru Fortress">
+	<npc id="36299" name="Rebel Elite Soldier" title="Aaru Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />

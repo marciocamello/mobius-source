@@ -1008,7 +1008,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22111" name="Spiked Stakato Sorcerer" title="">
+	<npc id="22111" name="Spiked Stakato Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1102,7 +1102,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22112" name="Cannibalistic Stakato Follower " title="">
+	<npc id="22112" name="Cannibalistic Stakato Subordinate" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1288,7 +1288,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22114" name="Cannibalistic Stakato Leader " title="">
+	<npc id="22114" name="Cannibalistic Stakato Leader" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1558,7 +1558,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22117" name="Spiked Stakato Captain" title="">
+	<npc id="22117" name="Kechi's Guard Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="groups.StakatoNest" />
 		<set name="baseAtkRange" value="40" />
@@ -2563,7 +2563,7 @@
 			<defence attribute="holy" value="103" />
 		</attributes>
 	</npc>
-	<npc id="22128" name="Monastery Guardian" title="">
+	<npc id="22128" name="Monastic Guardian" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="RndTeleportFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2648,7 +2648,7 @@
 			<defence attribute="holy" value="103" />
 		</attributes>
 	</npc>
-	<npc id="22129" name="Warrior Monk" title="">
+	<npc id="22129" name="Priest Warrior" title="">
 		<set name="aggroRange" value="200" />
 		<set name="ai_type" value="MoSMonk" />
 		<set name="baseAtkRange" value="40" />
@@ -3092,7 +3092,7 @@
 			<defence attribute="holy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="22134" name="Guardian of the Holy Land" title="">
+	<npc id="22134" name="Martyrium Guardian" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3611,7 +3611,7 @@
 			<defence attribute="unholy" value="103" />
 		</attributes>
 	</npc>
-	<npc id="22140" name="Zombie Worker" title="">
+	<npc id="22140" name="Resurrected Worker" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6796,7 +6796,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="22175" name="Andreas' Captain of the Royal Guard" title="">
+	<npc id="22175" name="Andreas' Escort Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -6885,7 +6885,7 @@
 			<defence attribute="unholy" value="103" />
 		</attributes>
 	</npc>
-	<npc id="22176" name="Andreas' Royal Guards" title="">
+	<npc id="22176" name="Andreas' Escort" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -6973,7 +6973,7 @@
 			<defence attribute="unholy" value="103" />
 		</attributes>
 	</npc>
-	<npc id="22188" name="Andreas' Captain of the Royal Guard" title="">
+	<npc id="22188" name="Andreas' Escort Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7067,7 +7067,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="22189" name="Andreas' Royal Guards" title="">
+	<npc id="22189" name="Andreas' Escort" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="80" />
@@ -7246,7 +7246,7 @@
 			<defence attribute="unholy" value="103" />
 		</attributes>
 	</npc>
-	<npc id="22191" name="Andreas' Captain of the Royal Guard" title="">
+	<npc id="22191" name="Andreas' Escort Captain" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7337,7 +7337,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="22192" name="Andreas' Royal Guards" title="">
+	<npc id="22192" name="Andreas' Escort" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -7425,7 +7425,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="22193" name="Andreas' Royal Guards" title="">
+	<npc id="22193" name="Andreas' Escort" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />

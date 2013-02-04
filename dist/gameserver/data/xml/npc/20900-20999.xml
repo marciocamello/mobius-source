@@ -1023,7 +1023,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20928" name="Hatu Weird Bee" title="">
+	<npc id="20928" name="Hatu Weird Wasp" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1815,7 +1815,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20935" name="Wasp Leader" title="">
+	<npc id="20935" name="Wasp Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2021,7 +2021,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20937" name="Tanor Silenos Grunt" title="">
+	<npc id="20937" name="Tanor Silenos Solider" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2556,7 +2556,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20943" name="Nightmare Keeper" title="">
+	<npc id="20943" name="Nightmare Watchman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3353,7 +3353,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20952" name="Pobby Escort" title="">
+	<npc id="20952" name="Pobby's Escort" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3533,7 +3533,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20954" name="Hungered Corpse" title="">
+	<npc id="20954" name="Starving Corpse" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3718,7 +3718,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20956" name="Past Knight" title="">
+	<npc id="20956" name="Knight of the Past" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4766,7 +4766,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20967" name="Past Creature" title="">
+	<npc id="20967" name="Creature of the Past" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4887,7 +4887,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20968" name="Nonexistent Man" title="">
+	<npc id="20968" name="Forgotten Face" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5880,7 +5880,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20976" name="Spiteful Soul Fighter" title="">
+	<npc id="20976" name="Spiteful Soul Warrior" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6002,7 +6002,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20977" name="Elmoradan's Lady" title="">
+	<npc id="20977" name="Elmoreden's Lady" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6101,7 +6101,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="20978" name="Elmoradan's Archer Escort" title="">
+	<npc id="20978" name="Elmoreden's Archer" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -6195,7 +6195,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20979" name="Elmoradan's Maid" title="">
+	<npc id="20979" name="Elmoreden's Maid" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6289,7 +6289,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="20980" name="Hallate's Follower Mul" title="">
+	<npc id="20980" name="Hallate's Subordinate Mul" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7688,7 +7688,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20994" name="Garden Guard Leader" title="">
+	<npc id="20994" name="Garden Guard Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

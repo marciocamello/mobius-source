@@ -346,7 +346,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18006" name="Maruk Lord" title="">
+	<npc id="18006" name="Maluk Lord" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -529,7 +529,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="18009" name="Offering of Branded Elder" title="">
+	<npc id="18009" name="Offering of the Branded, Elder" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -654,7 +654,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18011" name="Offering of Branded Archer" title="">
+	<npc id="18011" name="Offering of the Branded, Archer" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -713,7 +713,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18012" name="Offering of Branded Warrior" title="">
+	<npc id="18012" name="Offering of the Branded, Warrior" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -781,7 +781,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18013" name="Offering of Branded Follower" title="">
+	<npc id="18013" name="Offering of the Branded, Follower" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -849,7 +849,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18014" name="Offering of Branded Berserker" title="">
+	<npc id="18014" name="Offering of the Branded, Berserker" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -917,7 +917,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18015" name="Offering of Branded Zealot" title="">
+	<npc id="18015" name="Offering of the Branded, Zealot" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -984,7 +984,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18016" name="Offering of Branded Marksman" title="">
+	<npc id="18016" name="Offering of the Branded, Sniper" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1043,7 +1043,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18017" name="Offering of Branded Disciple" title="">
+	<npc id="18017" name="Offering of the Branded, Disciple" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1108,7 +1108,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18018" name="Offering of Branded Saint" title="">
+	<npc id="18018" name="Offering of the Branded, Saint" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1175,7 +1175,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18019" name="Apostate's Offering Elder" title="">
+	<npc id="18019" name="Apostate's Offering, Elder" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1238,7 +1238,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18020" name="Apostate's Offering " title="">
+	<npc id="18020" name="Apostate's Offering" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1299,7 +1299,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18021" name="Apostate's Offering Archer" title="">
+	<npc id="18021" name="Apostate's Offering, Archer" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1358,7 +1358,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18022" name="Apostate's Offering Warrior" title="">
+	<npc id="18022" name="Apostate's Offering, Warrior" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1426,7 +1426,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18023" name="Apostate's Offering Follower" title="">
+	<npc id="18023" name="Apostate's Offering, Follower" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1494,7 +1494,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18024" name="Apostate's Offering Berserker" title="">
+	<npc id="18024" name="Apostate's Offering, Berserker" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1562,7 +1562,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18025" name="Apostate's Offering Zealot" title="">
+	<npc id="18025" name="Apostate's Offering, Zealot" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1629,7 +1629,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18026" name="Apostate's Offering Marksman" title="">
+	<npc id="18026" name="Apostate's Offering, Sniper" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1688,7 +1688,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18027" name="Apostate's Offering Disciple" title="">
+	<npc id="18027" name="Apostate's Offering, Disciple" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1753,7 +1753,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18028" name="Apostate's Offering Saint" title="">
+	<npc id="18028" name="Apostate's Offering, Saint" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1820,7 +1820,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18029" name="Witch's Offering Elder" title="">
+	<npc id="18029" name="Witch's Offering, Elder" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1944,7 +1944,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18031" name="Witch's Offering Archer" title="">
+	<npc id="18031" name="Witch's Offering, Archer" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -2003,7 +2003,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18032" name="Witch's Offering Warrior" title="">
+	<npc id="18032" name="Witch's Offering, Warrior" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -2071,7 +2071,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18033" name="Witch's Offering Follower" title="">
+	<npc id="18033" name="Witch's Offering, Follower" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -2139,7 +2139,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18034" name="Witch's Offering Berserker" title="">
+	<npc id="18034" name="Witch's Offering, Berserker" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -2207,7 +2207,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18035" name="Witch's Offering Zealot" title="">
+	<npc id="18035" name="Witch's Offering, Zealot" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -2274,7 +2274,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18036" name="Witch's Offering Marksman" title="">
+	<npc id="18036" name="Witch's Offering, Sniper" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -2333,7 +2333,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18037" name="Witch's Offering Disciple" title="">
+	<npc id="18037" name="Witch's Offering, Disciple" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -2398,7 +2398,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18038" name="Witch's Offering Saint" title="">
+	<npc id="18038" name="Witch's Offering, Saint" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -2919,7 +2919,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18046" name="Dark Omen Offering Marksman" title="">
+	<npc id="18046" name="Dark Omen Offering Sniper" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3110,7 +3110,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18049" name="Offering of Forbidden Path Elder" title="">
+	<npc id="18049" name="Offering of Forbidden Path, Elder" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3234,7 +3234,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18051" name="Offering of Forbidden Path Archer" title="">
+	<npc id="18051" name="Offering of Forbidden Path, Archer" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3293,7 +3293,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18052" name="Offering of Forbidden Path Warrior" title="">
+	<npc id="18052" name="Offering of Forbidden Path, Warrior" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3361,7 +3361,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18053" name="Offering of Forbidden Path Follower" title="">
+	<npc id="18053" name="Offering of Forbidden Path, Follower" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3429,7 +3429,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18054" name="Offering of Forbidden Path Berserker" title="">
+	<npc id="18054" name="Offering of Forbidden Path, Berserker" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3497,7 +3497,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18055" name="Offering of Forbidden Path Zealot" title="">
+	<npc id="18055" name="Offering of Forbidden Path, Zealot" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3564,7 +3564,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18056" name="Offering of Forbidden Path Marksman" title="">
+	<npc id="18056" name="Offering of Forbidden Path, Sniper" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3623,7 +3623,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18057" name="Offering of Forbidden Path Disciple" title="">
+	<npc id="18057" name="Offering of Forbidden Path, Disciple" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3688,7 +3688,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18058" name="Offering of Forbidden Path Saint" title="">
+	<npc id="18058" name="Offering of Forbidden Path, Saint" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3755,7 +3755,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18059" name="Offering of Branded Elder" title="">
+	<npc id="18059" name="Offering of the Branded, Elder" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3879,7 +3879,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18061" name="Offering of Branded Archer" title="">
+	<npc id="18061" name="Offering of the Branded, Archer" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3938,7 +3938,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18062" name="Offering of Branded Warrior" title="">
+	<npc id="18062" name="Offering of the Branded, Warrior" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4006,7 +4006,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18063" name="Offering of Branded Follower" title="">
+	<npc id="18063" name="Offering of the Branded, Follower" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4074,7 +4074,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18064" name="Offering of Branded Berserker" title="">
+	<npc id="18064" name="Offering of the Branded, Berserker" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4142,7 +4142,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18065" name="Offering of Branded Zealot" title="">
+	<npc id="18065" name="Offering of the Branded, Zealot" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4209,7 +4209,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18066" name="Offering of Branded Marksman" title="">
+	<npc id="18066" name="Offering of the Branded, Sniper" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -4268,7 +4268,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18067" name="Offering of Branded Disciple" title="">
+	<npc id="18067" name="Offering of the Branded, Disciple" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4333,7 +4333,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18068" name="Offering of Branded Saint" title="">
+	<npc id="18068" name="Offering of the Branded, Saint" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4400,7 +4400,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18069" name="Apostate's Offering Elder" title="">
+	<npc id="18069" name="Apostate's Offering, Elder" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4463,7 +4463,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18070" name="Apostate's Offering " title="">
+	<npc id="18070" name="Apostate's Offering" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4524,7 +4524,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18071" name="Apostate's Offering Archer" title="">
+	<npc id="18071" name="Apostate's Offering, Archer" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -4583,7 +4583,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18072" name="Apostate's Offering Warrior" title="">
+	<npc id="18072" name="Apostate's Offering, Warrior" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4651,7 +4651,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18073" name="Apostate's Offering Follower" title="">
+	<npc id="18073" name="Apostate's Offering, Follower" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4719,7 +4719,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18074" name="Apostate's Offering Berserker" title="">
+	<npc id="18074" name="Apostate's Offering, Berserker" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4787,7 +4787,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18075" name="Apostate's Offering Zealot" title="">
+	<npc id="18075" name="Apostate's Offering, Zealot" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4854,7 +4854,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18076" name="Apostate's Offering Marksman" title="">
+	<npc id="18076" name="Apostate's Offering, Sniper" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -4913,7 +4913,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18077" name="Apostate's Offering Disciple" title="">
+	<npc id="18077" name="Apostate's Offering, Disciple" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4978,7 +4978,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18078" name="Apostate's Offering Saint" title="">
+	<npc id="18078" name="Apostate's Offering, Saint" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5045,7 +5045,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18079" name="Witch's Offering Elder" title="">
+	<npc id="18079" name="Witch's Offering, Elder" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5108,7 +5108,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18080" name="Witch's Offering" title="">
+	<npc id="18080" name="Witch's Offering," title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5169,7 +5169,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18081" name="Witch's Offering Archer" title="">
+	<npc id="18081" name="Witch's Offering, Archer" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -5228,7 +5228,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18082" name="Witch's Offering Warrior" title="">
+	<npc id="18082" name="Witch's Offering, Warrior" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5296,7 +5296,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18083" name="Witch's Offering Follower" title="">
+	<npc id="18083" name="Witch's Offering, Follower" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5364,7 +5364,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18084" name="Witch's Offering Berserker" title="">
+	<npc id="18084" name="Witch's Offering, Berserker" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5432,7 +5432,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18085" name="Witch's Offering Zealot" title="">
+	<npc id="18085" name="Witch's Offering, Zealot" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5499,7 +5499,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18086" name="Witch's Offering Marksman" title="">
+	<npc id="18086" name="Witch's Offering, Sniper" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -5558,7 +5558,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18087" name="Witch's Offering Disciple" title="">
+	<npc id="18087" name="Witch's Offering, Disciple" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5623,7 +5623,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18088" name="Witch's Offering Saint" title="">
+	<npc id="18088" name="Witch's Offering, Saint" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6144,7 +6144,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18096" name="Dark Omen Offering Marksman" title="">
+	<npc id="18096" name="Dark Omen Offering Sniper" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -6335,7 +6335,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18099" name="Offering of Forbidden Path Elder" title="">
+	<npc id="18099" name="Offering of Forbidden Path, Elder" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

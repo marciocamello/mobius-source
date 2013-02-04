@@ -60,7 +60,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="27101" name="Drevanul Prince Zeruel" title="Quest Monster">
+	<npc id="27101" name="Dre Vanul Prince Zeruel" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -116,7 +116,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="27102" name="Pako The Cat" title="Quest Monster">
+	<npc id="27102" name="Pako the Cat" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -170,7 +170,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27103" name="Unicorn Racer" title="Quest Monster">
+	<npc id="27103" name="Racer the Unicorn" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -277,7 +277,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="27105" name="Mimi The Cat" title="Quest Monster">
+	<npc id="27105" name="Mimi the Cat" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -331,7 +331,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27106" name="Unicorn Phantasm" title="Quest Monster">
+	<npc id="27106" name="Phantasm the Unicorn" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -498,7 +498,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27109" name="Handmaiden Of Stenoa" title="Quest Monster">
+	<npc id="27109" name="Handmaiden of Stenoa" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1113,7 +1113,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="27120" name="Luell Of Zephyr Winds" title="Quest Monster">
+	<npc id="27120" name="Luelle of the Zephyr Winds" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1169,7 +1169,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27121" name="Actea Of Verdant Wilds" title="Quest Monster">
+	<npc id="27121" name="Actea of the Verdant Wilds" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1282,7 +1282,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27123" name="Leto Lizardman Leader" title="Quest Monster">
+	<npc id="27123" name="Leto Lizardman Captain" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2019,7 +2019,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27136" name="Succubus Of Seduction" title="Quest Monster">
+	<npc id="27136" name="Succubus of Seduction" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -2246,7 +2246,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27140" name="Breka Overlord Haka" title="Quest Monster">
+	<npc id="27140" name="Breka Prefect Haka" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2304,7 +2304,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27141" name="Breka Overlord Jaka" title="Quest Monster">
+	<npc id="27141" name="Breka Prefect Jaka" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2362,7 +2362,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27142" name="Breka Overlord Marka" title="Quest Monster">
+	<npc id="27142" name="Breka Prefect Marka" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3278,7 +3278,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27158" name="Timak Raider Kaikee" title="Quest Monster">
+	<npc id="27158" name="Timak Raider Captain Kaikee" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3335,7 +3335,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27159" name="Timak Overlord Okun" title="Quest Monster">
+	<npc id="27159" name="Timak Prefect Okun" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3446,7 +3446,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27161" name="Taik Overlord Kakran" title="Quest Monster">
+	<npc id="27161" name="Taik Prefect Kakran" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4002,7 +4002,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27171" name="Sacrifice Of The Sacrificed" title="Quest Monster">
+	<npc id="27171" name="Ghost of Offering" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5369,7 +5369,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="27195" name="Male Ant" title="Quest Monster">
+	<npc id="27195" name="Noble Ant" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5480,7 +5480,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27197" name="Bejewelled Alligator" title="Quest Monster">
+	<npc id="27197" name="Bejeweled Alligator" title="Quest Monster">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

@@ -1611,7 +1611,7 @@
 			<defence attribute="unholy" value="147" />
 		</attributes>
 	</npc>
-	<npc id="14435" name="Unicorn Seraphim" title="">
+	<npc id="14435" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1657,7 +1657,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14436" name="Unicorn Seraphim" title="">
+	<npc id="14436" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1703,7 +1703,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14437" name="Unicorn Seraphim" title="">
+	<npc id="14437" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1749,7 +1749,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14438" name="Unicorn Seraphim" title="">
+	<npc id="14438" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1795,7 +1795,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14439" name="Unicorn Seraphim" title="">
+	<npc id="14439" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1841,7 +1841,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14440" name="Unicorn Seraphim" title="">
+	<npc id="14440" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1887,7 +1887,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14441" name="Unicorn Seraphim" title="">
+	<npc id="14441" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1933,7 +1933,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14442" name="Unicorn Seraphim" title="">
+	<npc id="14442" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1979,7 +1979,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14443" name="Unicorn Seraphim" title="">
+	<npc id="14443" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2025,7 +2025,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14444" name="Unicorn Seraphim" title="">
+	<npc id="14444" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2071,7 +2071,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14449" name="Unicorn Seraphim" title="">
+	<npc id="14449" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2117,7 +2117,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="14450" name="Unicorn Seraphim" title="">
+	<npc id="14450" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2163,7 +2163,7 @@
 			<defence attribute="unholy" value="50" />
 		</attributes>
 	</npc>
-	<npc id="14451" name="Unicorn Seraphim" title="">
+	<npc id="14451" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2209,7 +2209,7 @@
 			<defence attribute="unholy" value="60" />
 		</attributes>
 	</npc>
-	<npc id="14452" name="Unicorn Seraphim" title="">
+	<npc id="14452" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2255,7 +2255,7 @@
 			<defence attribute="unholy" value="70" />
 		</attributes>
 	</npc>
-	<npc id="14453" name="Unicorn Seraphim" title="">
+	<npc id="14453" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2301,7 +2301,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="14454" name="Unicorn Seraphim" title="">
+	<npc id="14454" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2347,7 +2347,7 @@
 			<defence attribute="unholy" value="85" />
 		</attributes>
 	</npc>
-	<npc id="14455" name="Unicorn Seraphim" title="">
+	<npc id="14455" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2393,7 +2393,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="14456" name="Unicorn Seraphim" title="">
+	<npc id="14456" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2439,7 +2439,7 @@
 			<defence attribute="unholy" value="95" />
 		</attributes>
 	</npc>
-	<npc id="14457" name="Unicorn Seraphim" title="">
+	<npc id="14457" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2485,7 +2485,7 @@
 			<defence attribute="unholy" value="100" />
 		</attributes>
 	</npc>
-	<npc id="14458" name="Unicorn Seraphim" title="">
+	<npc id="14458" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2531,7 +2531,7 @@
 			<defence attribute="unholy" value="102" />
 		</attributes>
 	</npc>
-	<npc id="14459" name="Unicorn Seraphim" title="">
+	<npc id="14459" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2577,7 +2577,7 @@
 			<defence attribute="unholy" value="104" />
 		</attributes>
 	</npc>
-	<npc id="14460" name="Unicorn Seraphim" title="">
+	<npc id="14460" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2623,7 +2623,7 @@
 			<defence attribute="unholy" value="106" />
 		</attributes>
 	</npc>
-	<npc id="14461" name="Unicorn Seraphim" title="">
+	<npc id="14461" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2669,7 +2669,7 @@
 			<defence attribute="unholy" value="109" />
 		</attributes>
 	</npc>
-	<npc id="14462" name="Unicorn Seraphim" title="">
+	<npc id="14462" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2715,7 +2715,7 @@
 			<defence attribute="unholy" value="111" />
 		</attributes>
 	</npc>
-	<npc id="14463" name="Unicorn Seraphim" title="">
+	<npc id="14463" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2761,7 +2761,7 @@
 			<defence attribute="unholy" value="113" />
 		</attributes>
 	</npc>
-	<npc id="14464" name="Unicorn Seraphim" title="">
+	<npc id="14464" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2807,7 +2807,7 @@
 			<defence attribute="unholy" value="115" />
 		</attributes>
 	</npc>
-	<npc id="14465" name="Unicorn Seraphim" title="">
+	<npc id="14465" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2853,7 +2853,7 @@
 			<defence attribute="unholy" value="118" />
 		</attributes>
 	</npc>
-	<npc id="14466" name="Unicorn Seraphim" title="">
+	<npc id="14466" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2899,7 +2899,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="14467" name="Unicorn Seraphim" title="">
+	<npc id="14467" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2945,7 +2945,7 @@
 			<defence attribute="unholy" value="122" />
 		</attributes>
 	</npc>
-	<npc id="14468" name="Unicorn Seraphim" title="">
+	<npc id="14468" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2991,7 +2991,7 @@
 			<defence attribute="unholy" value="124" />
 		</attributes>
 	</npc>
-	<npc id="14469" name="Unicorn Seraphim" title="">
+	<npc id="14469" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3037,7 +3037,7 @@
 			<defence attribute="unholy" value="127" />
 		</attributes>
 	</npc>
-	<npc id="14470" name="Unicorn Seraphim" title="">
+	<npc id="14470" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3083,7 +3083,7 @@
 			<defence attribute="unholy" value="129" />
 		</attributes>
 	</npc>
-	<npc id="14471" name="Unicorn Seraphim" title="">
+	<npc id="14471" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3129,7 +3129,7 @@
 			<defence attribute="unholy" value="131" />
 		</attributes>
 	</npc>
-	<npc id="14472" name="Unicorn Seraphim" title="">
+	<npc id="14472" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3175,7 +3175,7 @@
 			<defence attribute="unholy" value="133" />
 		</attributes>
 	</npc>
-	<npc id="14473" name="Unicorn Seraphim" title="">
+	<npc id="14473" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3221,7 +3221,7 @@
 			<defence attribute="unholy" value="136" />
 		</attributes>
 	</npc>
-	<npc id="14474" name="Unicorn Seraphim" title="">
+	<npc id="14474" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3267,7 +3267,7 @@
 			<defence attribute="unholy" value="138" />
 		</attributes>
 	</npc>
-	<npc id="14475" name="Unicorn Seraphim" title="">
+	<npc id="14475" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3313,7 +3313,7 @@
 			<defence attribute="unholy" value="140" />
 		</attributes>
 	</npc>
-	<npc id="14476" name="Unicorn Seraphim" title="">
+	<npc id="14476" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3359,7 +3359,7 @@
 			<defence attribute="unholy" value="143" />
 		</attributes>
 	</npc>
-	<npc id="14477" name="Unicorn Seraphim" title="">
+	<npc id="14477" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3405,7 +3405,7 @@
 			<defence attribute="unholy" value="145" />
 		</attributes>
 	</npc>
-	<npc id="14478" name="Unicorn Seraphim" title="">
+	<npc id="14478" name="Seraphim the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
