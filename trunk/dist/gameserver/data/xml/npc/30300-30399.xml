@@ -56,7 +56,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30301" name="Hally" title="Trader">
+	<npc id="30301" name="Hally" title="Grocer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -103,7 +103,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30305" name="Vellior" title="Tetrarch">
+	<npc id="30305" name="Vellior" title="Heirarch">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2208,7 +2208,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30358" name="Thifiell" title="Tetrarch">
+	<npc id="30358" name="Thifiell" title="Great Hierarch">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2255,7 +2255,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30359" name="Kaitar" title="Tetrarch">
+	<npc id="30359" name="Kaitar" title="Heirarch">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3418,7 +3418,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30387" name="Clancy" title="Wharf Manager ">
+	<npc id="30387" name="Clancy" title="Wharf Manager">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

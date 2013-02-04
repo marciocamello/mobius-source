@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="13300" name="Trap_device_bottom_staff" title="">
+	<npc id="13300" name="Wise Retainer of Lights" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="13.0"/>
@@ -42,7 +42,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13301" name="Trap_device_bottom_staff" title="">
+	<npc id="13301" name="Symbol of Lakisis" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="13.0"/>
@@ -83,7 +83,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13302" name="Decoy_Medium" title="">
+	<npc id="13302" name="Incarnation" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
@@ -124,7 +124,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13303" name="Decoy_Medium" title="">
+	<npc id="13303" name="Incarnation" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
@@ -165,7 +165,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13304" name="Decoy_Medium" title="">
+	<npc id="13304" name="Incarnation" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
@@ -206,7 +206,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13305" name="Decoy_Medium" title="">
+	<npc id="13305" name="Incarnation" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
@@ -247,7 +247,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13306" name="collision_skill_dummy" title="">
+	<npc id="13306" name="Damaged Area" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -288,7 +288,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13307" name="collision_skill_dummy" title="">
+	<npc id="13307" name="Ant Hell" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -329,7 +329,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13308" name="collision_skill_dummy" title="">
+	<npc id="13308" name="Ring of Yoke" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -370,7 +370,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13309" name="collision_skill_dummy" title="">
+	<npc id="13309" name="Stealth Detector" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -411,7 +411,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13310" name="Collision Dummy" title="">
+	<npc id="13310" name="Solo Dance" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -452,7 +452,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13311" name="knight_horse" title="">
+	<npc id="13311" name="Awakened Knight's Mount" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
@@ -493,7 +493,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13312" name="warrior_horse" title="">
+	<npc id="13312" name="Awakened Warrior's Mount" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
@@ -534,7 +534,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13313" name="rusty_steel_horse" title="">
+	<npc id="13313" name="Awakened Rogue's Mount" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.25"/>
@@ -575,7 +575,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13314" name="archer_horse" title="">
+	<npc id="13314" name="Awakened Archer's Mount" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
@@ -616,7 +616,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13315" name="phantom_horse" title="">
+	<npc id="13315" name="Awakened Wizard's Mount" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.25"/>
@@ -657,7 +657,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13316" name="cobalt_horse" title="">
+	<npc id="13316" name="Awakened Summoner's Mount" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.25"/>
@@ -698,7 +698,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13317" name="enchanter_horse" title="">
+	<npc id="13317" name="Awakened Enchanter's Mount" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
@@ -739,7 +739,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13318" name="healer_horse" title="">
+	<npc id="13318" name="Awakened Healer's Mount" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
@@ -780,7 +780,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13319" name="collision_skill_dummy" title="">
+	<npc id="13319" name="Shadow of Hell" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -821,7 +821,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13320" name="collision_skill_dummy" title="">
+	<npc id="13320" name="Shadow of Hell" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -862,7 +862,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13321" name="collision_skill_dummy" title="">
+	<npc id="13321" name="Shadow of Hell" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -903,7 +903,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13322" name="collision_skill_dummy" title="">
+	<npc id="13322" name="Shadow of Hell" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -944,7 +944,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13323" name="collision_skill_dummy" title="">
+	<npc id="13323" name="Whisper of Fear" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -985,7 +985,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13324" name="collision_skill_dummy" title="">
+	<npc id="13324" name="Whisper of Fear" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -1026,7 +1026,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13325" name="collision_skill_dummy" title="">
+	<npc id="13325" name="Whisper of Fear" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -1067,7 +1067,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13326" name="Dummy" title="">
+	<npc id="13326" name="Severe Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -1108,7 +1108,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13327" name="trap_mark" title="">
+	<npc id="13327" name="Yoke Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -1149,7 +1149,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13328" name="Decoy_Medium" title="">
+	<npc id="13328" name="Decoy" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
@@ -1190,7 +1190,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13329" name="Decoy_Medium" title="">
+	<npc id="13329" name="Illusion" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
@@ -1231,7 +1231,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13330" name="clock_work_cucuru" title="">
+	<npc id="13330" name="Kookaru" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="40.0"/>
@@ -1272,7 +1272,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13331" name="fairy_of_poem_guitar" title="">
+	<npc id="13331" name="Guitar Fairy" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
@@ -1313,7 +1313,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13332" name="fairy_of_poem_maracas" title="">
+	<npc id="13332" name="Maracas Fairy" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
@@ -1354,7 +1354,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13333" name="fairy_of_poem_cymbals" title="">
+	<npc id="13333" name="Cymbal Fairy" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
@@ -1395,7 +1395,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13334" name="fairy_of_poem_drum" title="">
+	<npc id="13334" name="Drums Fairy" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
@@ -1436,7 +1436,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13335" name="fairy_of_poem_organ" title="">
+	<npc id="13335" name="Organ Fairy" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
@@ -1477,7 +1477,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13336" name="fairy_of_poem_bugle" title="">
+	<npc id="13336" name="Bugle Fairy" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
@@ -1518,7 +1518,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13337" name="fairy_of_vampoem" title="">
+	<npc id="13337" name="Vampiric Fairy" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="7.5"/>
@@ -1559,7 +1559,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13338" name="enchanter_stone_tr" title="">
+	<npc id="13338" name="Enchanting Stone" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="20.5"/>
@@ -1600,7 +1600,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13339" name="Decoy_Medium" title="">
+	<npc id="13339" name="Illusion" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
@@ -1641,7 +1641,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13340" name="illusion_vehicle" title="">
+	<npc id="13340" name="Kukurin" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="35.5"/>
@@ -1682,7 +1682,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13341" name="br_birthday_cake" title="">
+	<npc id="13341" name="Return Party Cake" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.01"/>
 		<set name="collision_height" value="5.5"/>
@@ -1723,7 +1723,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13342" name="tersi_specter_seed" title="">
+	<npc id="13342" name="Specter of Light" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
@@ -1764,7 +1764,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13343" name="tersi_specter_mystery_a" title="">
+	<npc id="13343" name="Specter of Mysterious Light" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
@@ -1805,7 +1805,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13344" name="tersi_specter_mystery_b" title="">
+	<npc id="13344" name="Specter of Mysterious Light" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
@@ -1846,7 +1846,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13345" name="tersi_specter_mystery_last" title="">
+	<npc id="13345" name="Specter of Mysterious Light" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
@@ -1887,7 +1887,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13346" name="tersi_specter_normal_a" title="">
+	<npc id="13346" name="Specter of Light" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
@@ -1928,7 +1928,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13347" name="tersi_specter_normal_b" title="">
+	<npc id="13347" name="Specter of Light" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
@@ -1969,7 +1969,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13348" name="tersi_specter_normal_last" title="">
+	<npc id="13348" name="Specter of Light" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
@@ -2010,7 +2010,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13349" name="tersi_specter_scrap" title="">
+	<npc id="13349" name="Shard of Light" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
@@ -2051,7 +2051,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13350" name="br_g_black_bear" title="-_-">
+	<npc id="13350" name="Black Bear Mount" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="18.0"/>
@@ -2092,7 +2092,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13351" name="br_pet_rose_lover_f_b" title="-_-">
+	<npc id="13351" name="Rosy Rose" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="22.7"/>
 		<set name="collision_height" value="14.3"/>
@@ -2133,7 +2133,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13352" name="br_pet_rose_lover_m_b" title="-_-">
+	<npc id="13352" name="Deadly Rose" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.3"/>
 		<set name="collision_height" value="13.6"/>
@@ -2174,7 +2174,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13353" name="tr_dark_knight" title="-_-">
+	<npc id="13353" name="Knight of Chaos" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="30.5"/>
@@ -2215,7 +2215,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13354" name="teleport_portal" title="-_-">
+	<npc id="13354" name="T-shirt Portal" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="115.0"/>
@@ -2258,7 +2258,7 @@
 			<skill id="4416" level="2"/>
 		</skills>
 	</npc>
-	<npc id="13355" name="im_bruce_lee" title="-_-">
+	<npc id="13355" name="HM Pona" title="Customer Support">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="38.0"/>
@@ -2301,7 +2301,7 @@
 			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
-	<npc id="13356" name="hm_bard" title="-_-">
+	<npc id="13356" name="HM Bard" title="Customer Support">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="18.5"/>
@@ -2344,7 +2344,7 @@
 			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
-	<npc id="13357" name="trap_mark" title="-_-">
+	<npc id="13357" name="Severe Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2385,7 +2385,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13358" name="trap_mark" title="-_-">
+	<npc id="13358" name="Severe Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2426,7 +2426,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13359" name="trap_mark" title="-_-">
+	<npc id="13359" name="Severe Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2467,7 +2467,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13360" name="trap_mark" title="-_-">
+	<npc id="13360" name="Severe Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2508,7 +2508,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13361" name="trap_mark" title="-_-">
+	<npc id="13361" name="Severe Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2549,7 +2549,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13362" name="trap_mark" title="-_-">
+	<npc id="13362" name="Severe Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2590,7 +2590,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13363" name="trap_mark" title="-_-">
+	<npc id="13363" name="Severe Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2631,7 +2631,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13364" name="trap_mark" title="-_-">
+	<npc id="13364" name="Severe Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2672,7 +2672,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13365" name="trap_mark" title="-_-">
+	<npc id="13365" name="Severe Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2713,7 +2713,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13366" name="trap_mark" title="-_-">
+	<npc id="13366" name="Severe Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2754,7 +2754,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13367" name="trap_mark" title="-_-">
+	<npc id="13367" name="Yoke Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2795,7 +2795,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13368" name="trap_mark" title="-_-">
+	<npc id="13368" name="Yoke Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2836,7 +2836,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13369" name="trap_mark" title="-_-">
+	<npc id="13369" name="Yoke Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2877,7 +2877,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13370" name="trap_mark" title="-_-">
+	<npc id="13370" name="Yoke Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2918,7 +2918,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13371" name="trap_mark" title="-_-">
+	<npc id="13371" name="Yoke Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -2959,7 +2959,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13372" name="trap_mark" title="-_-">
+	<npc id="13372" name="Yoke Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -3000,7 +3000,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13373" name="trap_mark" title="-_-">
+	<npc id="13373" name="Yoke Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -3041,7 +3041,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13374" name="trap_mark" title="-_-">
+	<npc id="13374" name="Yoke Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -3082,7 +3082,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13375" name="trap_mark" title="-_-">
+	<npc id="13375" name="Yoke Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -3123,7 +3123,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13376" name="trap_mark" title="-_-">
+	<npc id="13376" name="Yoke Trap" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
@@ -3164,7 +3164,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13377" name="collision_skill_dummy" title="-_-">
+	<npc id="13377" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -3205,7 +3205,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13378" name="collision_skill_dummy" title="-_-">
+	<npc id="13378" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -3246,7 +3246,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13379" name="collision_skill_dummy" title="-_-">
+	<npc id="13379" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -3287,7 +3287,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13380" name="collision_skill_dummy" title="-_-">
+	<npc id="13380" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
@@ -3328,7 +3328,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="13381" name="collision_skill_dummy" title="-_-">
+	<npc id="13381" name="" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>

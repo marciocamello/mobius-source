@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="25800" name="Mammon Collector Talos" title="Lord of Destruction">
+	<npc id="25800" name="Michaela" title="Grand Judge">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -84,7 +84,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25801" name="Talos' Cohort" title="Follower of Destruction">
+	<npc id="25801" name="Teredor" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -142,7 +142,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25802" name="Фан Дирем" title="Поборник Кимериана">
+	<npc id="25802" name="Pan Direm" title="Faithful Servant">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="Fighter"/>
         <set name="baseAtkRange" value="40"/>
@@ -192,7 +192,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25803" name="Префект" title="Миньон Наследника">
+    <npc id="25803" name="Escort Captain" title="Successor Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -242,7 +242,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25804" name="Префект" title="Миньон Наследника">
+    <npc id="25804" name="Escort Captain" title="Successor Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -292,7 +292,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25805" name="Преторианец" title="Миньон Королевы">
+    <npc id="25805" name="Escort" title="Queen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -342,7 +342,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25806" name="Преторианец" title="Миньон Королевы">
+    <npc id="25806" name="Escort" title="Queen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -392,7 +392,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25807" name="Префект" title="Миньон Королевы">
+    <npc id="25807" name="Escort Captain" title="Queen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -442,7 +442,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25808" name="Префект" title="Миньон Королевы">
+    <npc id="25808" name="Escort Captain" title="Queen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -492,7 +492,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25809" name="Владимир" title="Разоритель">
+    <npc id="25809" name="Vladimir" title="Executioner">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -542,7 +542,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25810" name="Адепт Владимира" title="">
+    <npc id="25810" name="Vladimir's Follower" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -590,57 +590,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25811" name="Раджуос" title="Разрушитель">
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="2880.376"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="8.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1145"/>
-        <set name="baseMAtkSpd" value="253"/>
-        <set name="baseMDef" value="469"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1674.8"/>
-        <set name="baseMpReg" value="3"/>
-        <set name="basePAtk" value="1799"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="577"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills>
-            <skill id="14759" level="1"/>
-            <!--Рейдовый Босс 62 ур.-->
-            <skill id="4416" level="1"/>
-            <!--Нежить-->
-        </skills>
-        <attributes>
-            <defence attribute="fire" value="20"/>
-            <defence attribute="water" value="20"/>
-            <defence attribute="wind" value="20"/>
-            <defence attribute="earth" value="20"/>
-            <defence attribute="holy" value="20"/>
-            <defence attribute="unholy" value="20"/>
-        </attributes>
-    </npc>
-    <npc id="25812" name="Раджуос" title="Разрушитель">
+    <npc id="25811" name="Lazearth" title="Destroyer">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -690,7 +640,57 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25813" name="Барон" title="Королева Крови">
+    <npc id="25812" name="Lazearth" title="Destroyer">
+        <set name="aggroRange" value="0"/>
+        <set name="ai_type" value="CharacterAI"/>
+        <set name="baseAtkRange" value="40"/>
+        <set name="baseCON" value="43"/>
+        <set name="baseCritRate" value="40"/>
+        <set name="baseDEX" value="30"/>
+        <set name="baseHpMax" value="2880.376"/>
+        <set name="baseHpRate" value="1"/>
+        <set name="baseHpReg" value="8.5"/>
+        <set name="baseINT" value="21"/>
+        <set name="baseMAtk" value="1145"/>
+        <set name="baseMAtkSpd" value="253"/>
+        <set name="baseMDef" value="469"/>
+        <set name="baseMEN" value="20"/>
+        <set name="baseMpMax" value="1674.8"/>
+        <set name="baseMpReg" value="3"/>
+        <set name="basePAtk" value="1799"/>
+        <set name="basePAtkSpd" value="253"/>
+        <set name="basePDef" value="577"/>
+        <set name="baseRunSpd" value="120"/>
+        <set name="baseSTR" value="40"/>
+        <set name="baseShldDef" value="0"/>
+        <set name="baseShldRate" value="0"/>
+        <set name="baseWIT" value="20"/>
+        <set name="baseWalkSpd" value="30"/>
+        <set name="collision_height" value="0.1"/>
+        <set name="collision_radius" value="0.1"/>
+        <set name="level" value="80"/>
+        <set name="rewardExp" value="0"/>
+        <set name="rewardRp" value="0"/>
+        <set name="rewardSp" value="0"/>
+        <set name="shots" value="NONE"/>
+        <set name="texture" value=""/>
+        <set name="type" value="Npc"/>
+        <skills>
+            <skill id="14759" level="1"/>
+            <!--Рейдовый Босс 62 ур.-->
+            <skill id="4416" level="1"/>
+            <!--Нежить-->
+        </skills>
+        <attributes>
+            <defence attribute="fire" value="20"/>
+            <defence attribute="water" value="20"/>
+            <defence attribute="wind" value="20"/>
+            <defence attribute="earth" value="20"/>
+            <defence attribute="holy" value="20"/>
+            <defence attribute="unholy" value="20"/>
+        </attributes>
+    </npc>
+    <npc id="25813" name="Byron" title="Queen of Blood">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -742,7 +742,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25814" name="Служанка Барона" title="">
+    <npc id="25814" name="Byron's Maid" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -790,7 +790,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25815" name="Кен" title="Буйный">
+    <npc id="25815" name="Ken" title="Savage">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -840,7 +840,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25816" name="Главный Снайпер Радуги" title="">
+    <npc id="25816" name="Heaven's Palace Sniper Captain" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -890,7 +890,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25817" name="Главный Снайпер Радуги" title="">
+    <npc id="25817" name="Heaven's Palace Sniper Captain" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -940,7 +940,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25818" name="Император Радуги" title="">
+    <npc id="25818" name="Emperor of Heaven's Palace" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -990,7 +990,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25819" name="Лекарь Радуги" title="">
+    <npc id="25819" name="Heaven's Palace Healer" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1038,7 +1038,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25820" name="Богиня Радуги" title="">
+    <npc id="25820" name="Heaven's Palace Goddess" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1088,7 +1088,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25821" name="Воин Богини Радуги" title="">
+    <npc id="25821" name="Heaven's Palace Goddess Warrior" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1136,7 +1136,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25822" name="Ракиэлло" title="Проклятый Герой">
+    <npc id="25822" name="Lakielo" title="Cursed Hero">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1186,7 +1186,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25823" name="Бракиэра" title="Проклятый Герой">
+    <npc id="25823" name="Brakiera" title="Cursed Hero">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1236,7 +1236,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25824" name="Трон" title="Рейдовый Босс">
+    <npc id="25824" name="Ron" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1290,7 +1290,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25825" name="Трон" title="Рейдовый Босс">
+    <npc id="25825" name="Ron" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1344,7 +1344,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25826" name="Безымянный Миньон" title="Рейдовый Боец">
+    <npc id="25826" name="Nameless Subject" title="Raid Fighter">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1394,7 +1394,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25827" name="Эксенсио" title="Ивентовый Монстр">
+    <npc id="25827" name="Accencio" title="Event Monster">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1442,7 +1442,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25828" name="Мелласио" title="Ивентовый Монстр">
+    <npc id="25828" name="Malicio" title="Event Monster">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1490,7 +1490,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25829" name="Мартес" title="">
+    <npc id="25829" name="Mertes" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1538,7 +1538,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25830" name="Ремонтный Голем" title="">
+    <npc id="25830" name="Golem of Repairs" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1586,7 +1586,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25831" name="Айсарок" title="Хаск">
+    <npc id="25831" name="Eyesaroch" title="Husk">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1634,7 +1634,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25832" name="Контролер" title="Эмбрио">
+    <npc id="25832" name="Overseer" title="Embryo">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1682,7 +1682,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25833" name="Жертва Орбиса" title="">
+    <npc id="25833" name="Orbis' Victim" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1732,7 +1732,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25834" name="Страж Орбиса" title="">
+    <npc id="25834" name="Orbis' Guard" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1782,7 +1782,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25835" name="Метатель Орбиса" title="">
+    <npc id="25835" name="Orbis' Thrower" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1832,7 +1832,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25836" name="Ученый Орбиса" title="">
+    <npc id="25836" name="Orbis' Curator" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1882,7 +1882,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25837" name="Рыдающая Юи" title="Рейдовый Босс">
+    <npc id="25837" name="Weeping Yui" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1946,7 +1946,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25838" name="Трусливый Мукшу" title="Рейдовый Босс">
+    <npc id="25838" name="Mukshu the Coward " title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2010,7 +2010,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25839" name="Слепой Хорнапи" title="Рейдовый Босс">
+    <npc id="25839" name="Blind Hornafi" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2064,7 +2064,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25840" name="Разъяренный Мастер Киннен" title="Рейдовый Босс">
+    <npc id="25840" name="Enraged Master Kinen" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2130,7 +2130,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25841" name="Сэр Тьмы Ресинда" title="Рейдовый Босс">
+    <npc id="25841" name="Sir Lesyinda of the Black Shadow" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2196,7 +2196,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25842" name="Черный Зверь" title="Рейдовый Боец">
+    <npc id="25842" name="Black Beast" title="Raid Fighter">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2246,7 +2246,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25843" name="Магический Воин Коняр" title="Рейдовый Босс">
+    <npc id="25843" name="Magical Warrior Konyar" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2310,7 +2310,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25844" name="Магический Воин Коняр" title="Рейдовый Босс">
+    <npc id="25844" name="Magical Warrior Konyar" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2374,7 +2374,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25845" name="Магический Воин Коняр" title="Рейдовый Босс">
+    <npc id="25845" name="Magical  Warrior Konyar" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2428,7 +2428,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25846" name="Йоентумак Ожидания" title="Рейдовый Босс">
+    <npc id="25846" name="Yoentumak the Waiter" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2492,7 +2492,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25847" name="Рыцарь-Хранитель" title="Душа Гиганта">
+    <npc id="25847" name="Calamity Guardian" title="Giant's Apostle">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2542,7 +2542,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25848" name="Рыцарь-Командир" title="Душа Гиганта">
+    <npc id="25848" name="Calamity Warrior" title="Giant's Apostle">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2592,7 +2592,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25849" name="Рыцарь-Налетчик" title="Душа Гиганта">
+    <npc id="25849" name="Calamity Attacker" title="Giant's Apostle">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2642,7 +2642,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25850" name="Рыцарь-Снайпер" title="Душа Гиганта">
+    <npc id="25850" name="Calamity Sniper" title="Giant's Apostle">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2692,7 +2692,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25851" name="Рыцарь-Маг" title="Душа Гиганта">
+    <npc id="25851" name="Calamity Magician" title="Giant's Apostle">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2742,7 +2742,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25852" name="Рыцарь-Чернокнижник" title="Душа Гиганта">
+    <npc id="25852" name="Calamity Enchanter" title="Giant's Apostle">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2792,7 +2792,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25853" name="Рыцарь-Призыватель" title="Душа Гиганта">
+    <npc id="25853" name="Calamity Summoner" title="Giant's Apostle">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2842,7 +2842,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25854" name="Воскрешающий Рыцарь" title="Душа Гиганта">
+    <npc id="25854" name="Calamity Healer" title="Giant's Apostle">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2892,7 +2892,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25855" name="Меллиса" title="Верховный Жрец Крови">
+    <npc id="25855" name="Maliss" title="Grand Priest of Blood">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2956,7 +2956,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25856" name="Исадора" title="Великий Волшебник">
+    <npc id="25856" name="Isadora" title="Great Magus of Greed">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3020,7 +3020,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25857" name="Падший Главный Рыцарь" title="">
+    <npc id="25857" name="Corrupted Captain" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3070,7 +3070,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25858" name="Падший Верховный Жрец" title="">
+    <npc id="25858" name="Corrupted High Priest" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3182,7 +3182,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25860" name="Апостол Фоллинта" title="Рейдовый Боец">
+    <npc id="25860" name="Weeping Yui" title="Raid Fighter">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3440,7 +3440,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25864" name="Harp's Aide" title="Raid Fighter">
+    <npc id="25864" name="Harp's Subordinate" title="Raid Fighter">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="Fighter"/>
         <set name="baseAtkRange" value="40"/>
@@ -3506,7 +3506,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25865" name="Миньон Афроса" title="">
+    <npc id="25865" name="Apherus Subordinate" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3556,7 +3556,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25866" name="Афрос" title="">
+    <npc id="25866" name="Apherus" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3610,7 +3610,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25867" name="Спасия" title="Рейдовый Босс">
+    <npc id="25867" name="Spezion" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3676,7 +3676,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25868" name="Спасия" title="Рейдовый Босс">
+    <npc id="25868" name="Spezion" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3742,7 +3742,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25869" name="Всепоглощающая Спасия" title="Рейдовый Босс">
+    <npc id="25869" name="Berserk Spezion" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3808,7 +3808,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25870" name="Ирис" title="Рейдовый Босс">
+    <npc id="25870" name="Rose" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3862,7 +3862,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25871" name="Гойа" title="Рейдовый Босс">
+    <npc id="25871" name="Thorn" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3914,7 +3914,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25872" name="Миньон Спасии" title="">
+    <npc id="25872" name="Spezion's Subordinate" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -3964,7 +3964,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25873" name="Миньон Спасии" title="">
+    <npc id="25873" name="Spezion's Subordinate" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -4014,7 +4014,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25874" name="Миньон Спасии" title="">
+    <npc id="25874" name="Spezion's Subordinate" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -4064,7 +4064,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25875" name="Темная Королева" title="Рейдовый Босс">
+    <npc id="25875" name="Queen of Darkness" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -4118,7 +4118,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25876" name="Меллиса" title="Верховный Жрец Крови">
+    <npc id="25876" name="Maliss" title="Grand Priest of Blood">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -4182,7 +4182,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25877" name="Исадора" title="Великий Волшебник">
+    <npc id="25877" name="Isadora" title="Great Magus of Greed">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -4246,7 +4246,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25878" name="Палач Тьмы" title="Рейдовый Боец">
+    <npc id="25878" name="Arbitor of Darkness" title="Raid Fighter">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -4296,7 +4296,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25879" name="Темная Королева" title="Рейдовый Босс">
+    <npc id="25879" name="Queen of Darkness" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -4346,7 +4346,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25880" name="Георгиус" title="Рейдовый Босс">
+    <npc id="25880" name="Georgios" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -4398,7 +4398,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25881" name="Эмамбифи" title="Тюремщик Ада">
+    <npc id="25881" name="Veridan" title="Hell's Jailer">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -4466,7 +4466,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25882" name="Зелака" title="Правитель Картии">
+    <npc id="25882" name="Zellaka" title="Lord of Kartia">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -4516,7 +4516,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25883" name="Фелина" title="Правитель Картии">
+    <npc id="25883" name="Pelline" title="Lord of Kartia">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -4566,7 +4566,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25884" name="Халлиос" title="Правитель Картии">
+    <npc id="25884" name="Kalios" title="Lord of Kartia">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>

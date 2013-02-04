@@ -1998,7 +1998,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21823" name="Executor of Sacrificial Offerings" title="">
+	<npc id="21823" name="Executor of Offerings" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2089,7 +2089,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21824" name="Alpen Kookaburra" title="">
+	<npc id="21824" name="Alpine Kookaburra" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2177,7 +2177,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21825" name="Alpen Kookaburra" title="">
+	<npc id="21825" name="Alpine Kookaburra" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2265,7 +2265,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21826" name="Alpen Buffalo" title="">
+	<npc id="21826" name="Alpine Buffalo" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2350,7 +2350,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21827" name="Alpen Buffalo" title="">
+	<npc id="21827" name="Alpine Buffalo" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2438,7 +2438,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21828" name="Alpen Cougar" title="">
+	<npc id="21828" name="Alpine Cougar" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2525,7 +2525,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21829" name="Alpen Cougar" title="">
+	<npc id="21829" name="Alpine Cougar" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

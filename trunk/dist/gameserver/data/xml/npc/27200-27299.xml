@@ -984,7 +984,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="27217" name="Soul of Well" title="Quest Monster">
+	<npc id="27217" name="Soul of the Well" title="Quest Monster">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3839,7 +3839,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="27268" name="Guard of Haures" title="Quest Monster">
+	<npc id="27268" name="Haures' Escort" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4411,7 +4411,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="27278" name="Shadow of Beleth" title="Quest Monster">
+	<npc id="27278" name="Beleth's Shadow" title="Quest Monster">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5457,7 +5457,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27296" name="Monument Watcher Ezekiel" title="Quest Monster">
+	<npc id="27296" name="Monument Watchman Ezekiel" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5521,7 +5521,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="27297" name="Monument Watcher Ezekiel" title="Quest Monster">
+	<npc id="27297" name="Monument Watchman Ezekiel" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5585,7 +5585,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="27298" name="Monument Watcher Ezekiel" title="Quest Monster">
+	<npc id="27298" name="Monument Watchman Ezekiel" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5649,7 +5649,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="27299" name="Monument Watcher Ezekiel" title="Quest Monster">
+	<npc id="27299" name="Monument Watchman Ezekiel" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

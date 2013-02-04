@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="21500" name="Alpen Cougar" title="">
+	<npc id="21500" name="Alpine Cougar" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -70,7 +70,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21501" name="Alpen Cougar" title="">
+	<npc id="21501" name="Alpine Cougar" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -140,7 +140,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21502" name="Alpen Cougar" title="">
+	<npc id="21502" name="Alpine Cougar" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -219,7 +219,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21503" name="Alpen Cougar" title="">
+	<npc id="21503" name="Alpine Cougar" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -302,7 +302,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21504" name="Alpen Cougar" title="">
+	<npc id="21504" name="Alpine Cougar" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -386,7 +386,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21505" name="Alpen Cougar" title="">
+	<npc id="21505" name="Alpine Cougar" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -470,7 +470,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21506" name="Alpen Cougar" title="">
+	<npc id="21506" name="Alpine Cougar" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -538,7 +538,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21507" name="Alpen Cougar" title="">
+	<npc id="21507" name="Alpine Cougar" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1853,7 +1853,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21518" name="Frenzy Stakato Soldier" title="">
+	<npc id="21518" name="Frenzied Stakato Soldier" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1972,7 +1972,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21519" name="Frenzy Stakato Drone" title="">
+	<npc id="21519" name="Frenzied Stakato Drone" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2977,7 +2977,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21527" name="Anger of Splendor" title="">
+	<npc id="21527" name="Fury of Splendor" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3106,7 +3106,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21528" name="Anger of Splendor" title="">
+	<npc id="21528" name="Fury of Splendor" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4817,7 +4817,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21542" name="Disciple of Pilgrim" title="">
+	<npc id="21542" name="Pilgrim's Disciple" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4904,7 +4904,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21543" name="Page of Pilgrim" title="">
+	<npc id="21543" name="Pilgrim's Servant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5533,7 +5533,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21549" name="Corrupted Guard" title="">
+	<npc id="21549" name="Corrupted Royal Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5660,7 +5660,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21550" name="Corrupted Guard" title="">
+	<npc id="21550" name="Corrupted Royal Guard" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="RndTeleportFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5789,7 +5789,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21551" name="Resurrected Guard" title="">
+	<npc id="21551" name="Resurrected Royal Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5918,7 +5918,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21552" name="Resurrected Guard" title="">
+	<npc id="21552" name="Resurrected Royal Guard" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="RndTeleportFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8271,7 +8271,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21571" name="Ghost of Rebellion Soldier" title="">
+	<npc id="21571" name="Ghost of Rebel Soldier" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8877,7 +8877,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21576" name="Ghost of Guillotine " title="">
+	<npc id="21576" name="Ghost of Guillotine" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8997,7 +8997,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21577" name="Ghost of Guillotine " title="">
+	<npc id="21577" name="Ghost of Guillotine" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -9237,7 +9237,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21579" name="Ghost of Rebellion Leader" title="">
+	<npc id="21579" name="Ghost of Rebel Leader" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

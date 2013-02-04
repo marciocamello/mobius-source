@@ -58,7 +58,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25101" name="Fighter of Sea of Spores" title="Raid Fighter">
+	<npc id="25101" name="Warrior of Sea of Spores" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -201,7 +201,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25103" name="Sorcerer Isirr" title="Raid Boss">
+	<npc id="25103" name="Wizard Isirr" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -294,7 +294,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25104" name="Isirr's Guard" title="Raid Fighter">
+	<npc id="25104" name="Isirr's Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -353,7 +353,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25105" name="Isirr's Guards" title="Raid Fighter">
+	<npc id="25105" name="Isirr's Escorts" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -565,7 +565,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25108" name="Lidia's Fighter" title="Raid Fighter">
+	<npc id="25108" name="Lidia's Warrior" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -830,7 +830,7 @@
 			<defence attribute="unholy" value="189" />
 		</attributes>
 	</npc>
-	<npc id="25112" name="Agent of Beres Meana" title="Raid Boss">
+	<npc id="25112" name="Beleth's Agent, Meana" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1241,7 +1241,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25118" name="Guilotine" title="Warden of the Execution Grounds">
+	<npc id="25118" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1428,7 +1428,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25120" name="Berun's Officer" title="Raid Fighter">
+	<npc id="25120" name="Berun's Servant" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1544,7 +1544,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25122" name="Refugee Hopeful Leo" title="Raid Boss">
+	<npc id="25122" name="Refugee Applicant Leo" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2013,7 +2013,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25128" name="Vuku Grand Seer Gharmash" title="Raid Boss">
+	<npc id="25128" name="Vuku Grand Priest Gharmash" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -2221,7 +2221,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25131" name="Carnage Lord Gato" title="Raid Boss">
+	<npc id="25131" name="Slaughter Lord Gato" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2312,7 +2312,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25132" name="Gato's Marksman" title="Raid Fighter">
+	<npc id="25132" name="Gato's Sniper" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -2371,7 +2371,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25133" name="Gato's Troop Leader" title="Raid Fighter">
+	<npc id="25133" name="Gato's Troop Captain" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2518,7 +2518,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25135" name="Talkin's Seer" title="Raid Fighter">
+	<npc id="25135" name="Talkin's Priest" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -2578,7 +2578,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25136" name="Talkin's Bodyguard" title="Raid Fighter">
+	<npc id="25136" name="Talkin's Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2636,7 +2636,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25137" name="Beleth's Seer Sephia" title="Raid Boss">
+	<npc id="25137" name="Beleth's Seer, Sephia" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3243,7 +3243,7 @@
 			<defence attribute="unholy" value="15" />
 		</attributes>
 	</npc>
-	<npc id="25146" name="Serpent Demon Bifrons" title="Raid Boss">
+	<npc id="25146" name="Evil Spirit Bifrons" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3928,7 +3928,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25156" name="Fanatic Shaman" title="Raid Fighter">
+	<npc id="25156" name="Fanatic Wizard" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -4659,7 +4659,7 @@
 			<defence attribute="unholy" value="189" />
 		</attributes>
 	</npc>
-	<npc id="25168" name="Pawn of Ikuntai" title="Raid Fighter">
+	<npc id="25168" name="Ikuntai's Pawn" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4813,7 +4813,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25170" name="Lizardmen Leader Hellion" title="Raid Boss">
+	<npc id="25170" name="Lizardmen Captain Hellion" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4956,7 +4956,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25172" name="Hellion's Guards" title="Raid Fighter">
+	<npc id="25172" name="Hellion's Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5158,7 +5158,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25175" name="Karuta's Inferiors" title="Raid Fighter">
+	<npc id="25175" name="Karuta's Subordinate" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5626,7 +5626,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25182" name="Demon Kurikups" title="Raid Boss">
+	<npc id="25182" name="Demon Kuri" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5712,7 +5712,7 @@
 			<defence attribute="unholy" value="189" />
 		</attributes>
 	</npc>
-	<npc id="25183" name="Kurikups' Wife" title="Raid Fighter">
+	<npc id="25183" name="Kuri's Wife" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5916,7 +5916,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25186" name="Hellena's Marksman" title="Raid Fighter">
+	<npc id="25186" name="Hellena's Sniper" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -5975,7 +5975,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25187" name="Helena's Soldier" title="Raid Fighter">
+	<npc id="25187" name="Hellena's Soldier" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6122,7 +6122,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25189" name="Cronos's Servitor Mumu" title="Raid Boss">
+	<npc id="25189" name="Cronos' Servitor Mumu" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6598,7 +6598,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25199" name="Water Dragon Seer Sheshark" title="Raid Boss">
+	<npc id="25199" name="Water Dragon Priest Sheshark" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

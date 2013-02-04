@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="30827" name="Lundy" title="Pet Manager ">
+	<npc id="30827" name="Lundy" title="Pet Manager">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -48,7 +48,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30828" name="Waters" title="Pet Manager ">
+	<npc id="30828" name="Waters" title="Pet Manager">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -95,7 +95,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30829" name="Cooper" title="Pet Manager ">
+	<npc id="30829" name="Cooper" title="Pet Manager">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -142,7 +142,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30830" name="Joey" title="Pet Manager ">
+	<npc id="30830" name="Joey" title="Pet Manager">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -189,7 +189,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30831" name="Nelson" title="Pet Manager ">
+	<npc id="30831" name="Nelson" title="Pet Manager">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -884,7 +884,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30845" name="Klump" title="Warehouse Chief ">
+	<npc id="30845" name="Klump" title="Warehouse Chief">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1529,7 +1529,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30856" name="Winonin" title="Magister">
+	<npc id="30856" name="Winonin" title="Grand Magister">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1997,7 +1997,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30865" name="Ladanza" title="High Prefect ">
+	<npc id="30865" name="Ladanza" title="High Prefect">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2098,7 +2098,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30867" name="Reva" title="Seer">
+	<npc id="30867" name="Reva" title="Priest">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2814,7 +2814,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30881" name="Sanders" title="Border Outpost Aide">
+	<npc id="30881" name="Sanders" title="Border Patrol Secretary">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2861,7 +2861,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30882" name="Frontier Guard" title="">
+	<npc id="30882" name="Border Patrol" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="40" />
@@ -2911,7 +2911,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30883" name="Frontier Guard" title="">
+	<npc id="30883" name="Border Patrol" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="1100" />
@@ -2961,7 +2961,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30884" name="Frontier Guard" title="">
+	<npc id="30884" name="Border Patrol" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="40" />
@@ -3011,7 +3011,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30885" name="Frontier Guard" title="">
+	<npc id="30885" name="Border Patrol" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="1100" />
@@ -3061,7 +3061,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30886" name="Frontier Guard" title="">
+	<npc id="30886" name="Border Patrol" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="40" />
@@ -3111,7 +3111,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30887" name="Frontier Guard" title="">
+	<npc id="30887" name="Border Patrol" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="1100" />
@@ -3161,7 +3161,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30888" name="Frontier Guard" title="">
+	<npc id="30888" name="Border Patrol" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="40" />
@@ -3211,7 +3211,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30889" name="Frontier Guard" title="">
+	<npc id="30889" name="Border Patrol" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="1100" />
@@ -3449,7 +3449,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30894" name="Natools" title="Warehouse Chief ">
+	<npc id="30894" name="Natools" title="Warehouse Chief">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

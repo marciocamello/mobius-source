@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="23000" name="gludio_poslof" title="">
+	<npc id="23000" name="Porslov" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="24.0"/>
@@ -44,7 +44,7 @@
 			<skill id="4416" level="2"/>
 		</skills>
 	</npc>
-	<npc id="23001" name="gludio_sakum" title="">
+	<npc id="23001" name="Sakum" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="22.0"/>
@@ -87,7 +87,7 @@
 			<skill id="4416" level="2"/>
 		</skills>
 	</npc>
-	<npc id="23002" name="rachikion" title="">
+	<npc id="23002" name="Male Larchikion" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
@@ -131,7 +131,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23003" name="rachikion" title="">
+	<npc id="23003" name="Male Larchikion" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
@@ -175,7 +175,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23004" name="rachikion" title="">
+	<npc id="23004" name="Male Larchikion " title="Successor's Escort">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
@@ -204,8 +204,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -219,7 +219,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23005" name="rachikion" title="">
+	<npc id="23005" name="Male Larchikion " title="Successor's Escort">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
@@ -248,8 +248,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -263,7 +263,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23006" name="rachikion_a" title="">
+	<npc id="23006" name="Female Larchikion" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
@@ -292,8 +292,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -307,7 +307,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23007" name="rachikion_a" title="">
+	<npc id="23007" name="Female Larchikion" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
@@ -336,8 +336,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -351,7 +351,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23008" name="rachikion_a" title="">
+	<npc id="23008" name="Female Larchikion" title="Queen's Escort">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
@@ -380,8 +380,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -395,7 +395,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23009" name="rachikion_a" title="">
+	<npc id="23009" name="Female Larchikion" title="Queen's Escort">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
@@ -424,8 +424,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -439,7 +439,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23010" name="zombie_guadian" title="">
+	<npc id="23010" name="Square Intruder" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.5"/>
@@ -468,8 +468,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -483,7 +483,7 @@
 			<skill id="5463" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23011" name="vicious_mind_of_silen" title="">
+	<npc id="23011" name="Square Attacker" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="27.5"/>
@@ -512,8 +512,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -527,7 +527,7 @@
 			<skill id="5463" level="9"/>
 		</skills>
 	</npc>
-	<npc id="23012" name="leader_mind_of_silen" title="">
+	<npc id="23012" name="Stronghold Protector" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="40.0"/>
@@ -556,8 +556,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -571,7 +571,7 @@
 			<skill id="5463" level="9"/>
 		</skills>
 	</npc>
-	<npc id="23013" name="self_blaster" title="">
+	<npc id="23013" name="Spirit Protector" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="25.8"/>
@@ -600,8 +600,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -615,7 +615,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23014" name="skeleton_royal_guard" title="">
+	<npc id="23014" name="Vicious Dueler" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="28.5"/>
@@ -644,8 +644,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -659,7 +659,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23015" name="skeleton_royal_guard" title="">
+	<npc id="23015" name="Vicious Swordsman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="28.5"/>
@@ -688,8 +688,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -703,7 +703,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23016" name="skeleton_hunter" title="">
+	<npc id="23016" name="Vicious Warrior" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
@@ -732,8 +732,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -747,7 +747,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23017" name="skeleton_hunter" title="">
+	<npc id="23017" name="Punisher of Sins" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
@@ -776,8 +776,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -791,7 +791,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23018" name="scapegoat" title="">
+	<npc id="23018" name="Judge of Sins" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="32.5"/>
@@ -820,8 +820,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -835,7 +835,7 @@
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
-	<npc id="23019" name="lilim_assassin_10_bi_e" title="">
+	<npc id="23019" name="Arbitrator of Sins" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="44.0"/>
@@ -864,8 +864,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -879,7 +879,7 @@
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
-	<npc id="23020" name="warthog" title="">
+	<npc id="23020" name="Giant Wild Boar" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="21.5"/>
@@ -908,8 +908,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -947,7 +947,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23021" name="poison_huge_spider" title="">
+	<npc id="23021" name="Giant Venomous Spider" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="25.5"/>
@@ -1015,7 +1015,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23022" name="skeleton_mwarrior" title="">
+	<npc id="23022" name="Bone Warrior" title="Enraged">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="25.0"/>
@@ -1085,7 +1085,7 @@
 			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23023" name="ruin_darkbat" title="">
+	<npc id="23023" name="Ruin Bat" title="Enraged">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="42.0"/>
@@ -1154,7 +1154,7 @@
 			<skill id="4416" level="14"/>
 		</skills>
 	</npc>
-	<npc id="23024" name="lynx_scout_150p" title="">
+	<npc id="23024" name="Weary Jaguar" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="9.0"/>
@@ -1218,7 +1218,7 @@
 			<skill id="4416" level="2"/>
 		</skills>
 	</npc>
-	<npc id="23025" name="lynx_scout_200p" title="">
+	<npc id="23025" name="Weary Jaguar Scout" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="9.0"/>
@@ -1287,7 +1287,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23026" name="sand_golem" title="">
+	<npc id="23026" name="Sahara" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="41.0"/>
 		<set name="collision_height" value="30.5"/>
@@ -1352,7 +1352,7 @@
 			<skill id="4416" level="2"/>
 		</skills>
 	</npc>
-	<npc id="23027" name="istina_tarcrakahn_e" title="">
+	<npc id="23027" name="Taklacan" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="57.0"/>
@@ -1381,8 +1381,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="240"/>
 			<defence attribute="water" value="240"/>
@@ -1398,7 +1398,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23028" name="istina_torum_ba_e" title="">
+	<npc id="23028" name="Torumba" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="64.0"/>
@@ -1427,8 +1427,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="200"/>
 			<defence attribute="water" value="200"/>
@@ -1445,7 +1445,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23029" name="istina_dorpagen_e" title="">
+	<npc id="23029" name="Dopagen" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="45.0"/>
 		<set name="collision_height" value="75.0"/>
@@ -1474,8 +1474,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1492,7 +1492,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23030" name="istina_tarcrakahn_e" title="">
+	<npc id="23030" name="Taklacan" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="57.0"/>
@@ -1521,8 +1521,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1538,7 +1538,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23031" name="istina_torum_ba_e" title="">
+	<npc id="23031" name="Torumba" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="64.0"/>
@@ -1567,8 +1567,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1585,7 +1585,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23032" name="istina_dorpagen_e" title="">
+	<npc id="23032" name="Dopagen" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="45.0"/>
 		<set name="collision_height" value="75.0"/>
@@ -1614,8 +1614,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="240"/>
 			<defence attribute="water" value="240"/>
@@ -1632,7 +1632,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23033" name="creature_of_istina_a" title="">
+	<npc id="23033" name="Failed Creation" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="33.0"/>
 		<set name="collision_height" value="50.0"/>
@@ -1694,7 +1694,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23034" name="creature_of_istina_b" title="">
+	<npc id="23034" name="Failed Creation" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="24.0"/>
@@ -1755,7 +1755,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23035" name="creature_of_istina_c" title="">
+	<npc id="23035" name="Failed Creation" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="19.5"/>
@@ -1816,7 +1816,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23036" name="creature_of_istina_d" title="">
+	<npc id="23036" name="Failed Creation" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="19.5"/>
@@ -1878,7 +1878,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23037" name="creature_of_istina_e" title="">
+	<npc id="23037" name="Failed Creation" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="19.5"/>
@@ -1940,7 +1940,7 @@
 			<skill id="5465" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23038" name="genesis_garden_a_boss" title="">
+	<npc id="23038" name="Angel Statue Keeper" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="43.5"/>
@@ -1998,7 +1998,7 @@
 			<skill id="5465" level="5"/>
 		</skills>
 	</npc>
-	<npc id="23039" name="genesis_garden_a_boss" title="">
+	<npc id="23039" name="Fountain Keeper" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="43.5"/>
@@ -2027,8 +2027,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="187"/>
 			<defence attribute="water" value="240"/>
@@ -2059,7 +2059,7 @@
 			<skill id="5465" level="5"/>
 		</skills>
 	</npc>
-	<npc id="23040" name="genesis_garden_b_boss" title="">
+	<npc id="23040" name="Goddess Statue Keeper" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="43.5"/>
@@ -2120,7 +2120,7 @@
 			<skill id="5465" level="5"/>
 		</skills>
 	</npc>
-	<npc id="23041" name="pan_100_bi" title="">
+	<npc id="23041" name="Pan Direm" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="42.0"/>
 		<set name="collision_height" value="73.0"/>
@@ -2175,7 +2175,7 @@
 			<skill id="5463" level="13"/>
 		</skills>
 	</npc>
-	<npc id="23042" name="rachikion_a" title="">
+	<npc id="23042" name="Female Larchikion" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
@@ -2204,8 +2204,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -2219,7 +2219,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23043" name="rachikion_a" title="">
+	<npc id="23043" name="Female Larchikion" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
@@ -2248,8 +2248,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -2263,7 +2263,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23044" name="spartoi" title="">
+	<npc id="23044" name="Exhausted Vengeful Spirit" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="34.0"/>
@@ -2332,7 +2332,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23045" name="fiend_archer" title="">
+	<npc id="23045" name="Wings of Viciousness" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="55.0"/>
@@ -2400,7 +2400,7 @@
 			<skill id="4416" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23046" name="death_blader" title="">
+	<npc id="23046" name="Byron's Knight" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="52.0"/>
@@ -2471,7 +2471,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23047" name="skeleton_royal_guard" title="">
+	<npc id="23047" name="Terestian" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="28.5"/>
@@ -2536,7 +2536,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="23048" name="ashuras" title="">
+	<npc id="23048" name="Drill Demon" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="37.5"/>
@@ -2598,7 +2598,7 @@
 			<skill id="4416" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23049" name="skeleton_knight" title="">
+	<npc id="23049" name="Knight's Vengeful Spirit" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="25.0"/>
@@ -2666,7 +2666,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="23050" name="skeleton_royal_guard" title="">
+	<npc id="23050" name="Escort Knight's Vengeful Spirit" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="28.5"/>
@@ -2731,7 +2731,7 @@
 			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
-	<npc id="23051" name="vale_master" title="">
+	<npc id="23051" name="Byron's Confidant" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="40.0"/>
@@ -2791,7 +2791,7 @@
 			<skill id="4416" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23052" name="knight_of_shadow" title="">
+	<npc id="23052" name="Evil Shadow" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="35.5"/>
@@ -2857,7 +2857,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="23053" name="lilim_assassin" title="">
+	<npc id="23053" name="Brutal Warrior" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="40.0"/>
@@ -2917,7 +2917,7 @@
 			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
-	<npc id="23054" name="lilim_knight_10_sm" title="">
+	<npc id="23054" name="Demon Knight" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="45.0"/>
@@ -2980,7 +2980,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="23055" name="lilim_wizard_10_bi" title="">
+	<npc id="23055" name="Demon Priest" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="37.5"/>
@@ -3045,7 +3045,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="23056" name="bloody_queen" title="">
+	<npc id="23056" name="Vampire Queen" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="40.0"/>
@@ -3106,7 +3106,7 @@
 			<skill id="4416" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23057" name="banshee_30_bi" title="">
+	<npc id="23057" name="Bonehead Slave" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="30.0"/>
@@ -3168,7 +3168,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="23058" name="kel_mahum" title="">
+	<npc id="23058" name="Platinum Tribe Soldier" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
@@ -3230,7 +3230,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23059" name="kel_mahum_archer" title="">
+	<npc id="23059" name="Platinum Tribe Archer" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="27.0"/>
@@ -3293,7 +3293,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23060" name="kel_mahum_warrior" title="">
+	<npc id="23060" name="Platinum Tribe Warrior" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="34.0"/>
@@ -3353,7 +3353,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="23061" name="kel_mahum_witch_doctor" title="">
+	<npc id="23061" name="Platinum Tribe Shaman" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="25.0"/>
@@ -3416,7 +3416,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23062" name="kel_mahum_champion" title="">
+	<npc id="23062" name="Platinum Tribe Prefect" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="39.0"/>
@@ -3480,7 +3480,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23063" name="angel" title="">
+	<npc id="23063" name="Heaven's Palace Knight" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="42.5"/>
@@ -3546,7 +3546,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23064" name="archangel_050p" title="">
+	<npc id="23064" name="Heaven's Palace Fighter" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="37.5"/>
@@ -3607,7 +3607,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="23065" name="apostle_warrior" title="">
+	<npc id="23065" name="Heaven's Palace Terminator" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="36.5"/>
@@ -3671,7 +3671,7 @@
 			<skill id="4416" level="12"/>
 		</skills>
 	</npc>
-	<npc id="23066" name="apostle_mage" title="">
+	<npc id="23066" name="Heaven's Palace Priest" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="46.5"/>
@@ -3734,7 +3734,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23067" name="apostle_grail" title="">
+	<npc id="23067" name="Heaven's Palace Judge" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="47.0"/>
@@ -3800,7 +3800,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23068" name="apostle_grail_a" title="">
+	<npc id="23068" name="Heaven's Palace Sniper" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="47.0"/>
@@ -3862,7 +3862,7 @@
 			<skill id="4416" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23069" name="behamah" title="">
+	<npc id="23069" name="Vladimir's Warrior" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="46.8"/>
@@ -3930,7 +3930,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23070" name="behamah" title="">
+	<npc id="23070" name="Lazearth's Warrior" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="46.8"/>
@@ -3993,7 +3993,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23071" name="kel_mahum_warrior" title="">
+	<npc id="23071" name="Beastian" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="34.0"/>
@@ -4055,7 +4055,7 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="23072" name="kel_mahum_witch_doctor" title="">
+	<npc id="23072" name="Birestian" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="25.0"/>
@@ -4116,7 +4116,7 @@
 			<skill id="4416" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23073" name="kel_mahum_champion" title="">
+	<npc id="23073" name="Kenneth Bastian" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="39.0"/>
@@ -4178,7 +4178,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23074" name="pailaka_invader" title="">
+	<npc id="23074" name="Heaven's Palace Noble Warrior" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="33.0"/>
@@ -4240,7 +4240,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23075" name="pailaka_invader" title="">
+	<npc id="23075" name="Heaven's Palace Noble Knight" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="33.0"/>
@@ -4305,12 +4305,12 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="23076" name="exile_sword" title="">
+	<npc id="23076" name="Restrained Soldier" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="41.5"/>
 		<set name="level" value="92"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="1500" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="304477"/>
@@ -4334,8 +4334,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="220"/>
 			<defence attribute="water" value="220"/>
@@ -4349,12 +4349,13 @@
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23077" name="fairy_old_sword" title="">
+	<npc id="23077" name="Nameless Lunacy" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="92"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="1500" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13907"/>
@@ -4378,8 +4379,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="220"/>
 			<defence attribute="water" value="220"/>
@@ -4393,12 +4394,12 @@
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23078" name="exile_wizard" title="">
+	<npc id="23078" name="Restrained Wizard" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="1500" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="312844"/>
@@ -4422,8 +4423,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="240"/>
 			<defence attribute="water" value="240"/>
@@ -4437,7 +4438,7 @@
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23079" name="fairy_old_wizard" title="">
+	<npc id="23079" name="Nameless Lunacy" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
@@ -4466,8 +4467,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="240"/>
 			<defence attribute="water" value="240"/>
@@ -4481,12 +4482,12 @@
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23080" name="giant_zombie_big" title="">
+	<npc id="23080" name="Corrupted Poison Cloud" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="94"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="1500" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="10"/>
@@ -4510,8 +4511,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="240"/>
 			<defence attribute="water" value="240"/>
@@ -4525,12 +4526,13 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23081" name="exile_wizard_bonus" title="">
+	<npc id="23081" name="Restrained Vampire" title="Absorber of Light">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="95"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/>
+		<set name="aggroRange" value="1500" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15122"/>
@@ -4569,12 +4571,12 @@
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23082" name="exile_sword" title="">
+	<npc id="23082" name="Restrained Elite Soldier" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="41.5"/>
 		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="1500" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="322511"/>
@@ -4598,8 +4600,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="260"/>
 			<defence attribute="water" value="260"/>
@@ -4614,7 +4616,7 @@
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23083" name="fairy_old_sword_dark" title="">
+	<npc id="23083" name="Nameless Berserker" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="27.0"/>
@@ -4643,8 +4645,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="260"/>
 			<defence attribute="water" value="260"/>
@@ -4659,12 +4661,12 @@
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23084" name="exile_wizard" title="">
+	<npc id="23084" name="Restrained Elite Wizard" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="1500" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="322511"/>
@@ -4688,8 +4690,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="260"/>
 			<defence attribute="water" value="260"/>
@@ -4704,12 +4706,12 @@
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23085" name="fairy_old_wizard_dark" title="">
+	<npc id="23085" name="Nameless Berserker" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="1500" />
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="30948"/>
@@ -4733,8 +4735,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="260"/>
 			<defence attribute="water" value="260"/>
@@ -4749,7 +4751,7 @@
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23086" name="orbis_arena_gladiator" title="">
+	<npc id="23086" name="Octavis' Gladiator" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="67.0"/>
@@ -4793,7 +4795,7 @@
 			<skill id="5464" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23087" name="orbis_arena_beast" title="">
+	<npc id="23087" name="Beast of the Arena" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="26.0"/>
@@ -4822,8 +4824,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -4837,7 +4839,7 @@
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
-	<npc id="23088" name="orbis_elder_curator" title="">
+	<npc id="23088" name="Octavis' Chief Curator" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="36.5"/>
@@ -4866,8 +4868,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -4881,7 +4883,7 @@
 			<skill id="5464" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23089" name="orbis_curse" title="">
+	<npc id="23089" name="Hero of the Arena" title="Cursed">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="60.0"/>
@@ -4910,8 +4912,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -4925,7 +4927,7 @@
 			<skill id="5464" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23090" name="Caravan" title="">
+	<npc id="23090" name="Hall Manager" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="33.0"/>
 		<set name="collision_height" value="58.5"/>
@@ -4954,8 +4956,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -4989,7 +4991,7 @@
 			<skill id="5463" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23091" name="Caravan" title="">
+	<npc id="23091" name="Hall Warrior" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="33.0"/>
 		<set name="collision_height" value="58.5"/>
@@ -5018,8 +5020,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -5052,7 +5054,7 @@
 			<skill id="5463" level="6"/>
 		</skills>
 	</npc>
-	<npc id="23092" name="erinyes_cmd" title="">
+	<npc id="23092" name="Hall Guard Warrior" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="21.0"/>
 		<set name="collision_height" value="50.0"/>
@@ -5081,8 +5083,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -5114,7 +5116,7 @@
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
-	<npc id="23093" name="lidia_von_helmann_120p" title="">
+	<npc id="23093" name="Hall Guard Healer" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="31.0"/>
@@ -5143,8 +5145,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -5177,7 +5179,7 @@
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
-	<npc id="23094" name="poison_spider" title="">
+	<npc id="23094" name="Poisonous Spider" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="25.5"/>
@@ -5206,8 +5208,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="-5"/>
 			<defence attribute="water" value="20"/>
@@ -5244,7 +5246,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23095" name="kailiharim_spider" title="">
+	<npc id="23095" name="Arachnid Predator" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="39.0"/>
@@ -5273,8 +5275,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="60"/>
 		<attributes>
 			<defence attribute="fire" value="-5"/>
 			<defence attribute="water" value="20"/>
@@ -5311,7 +5313,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23096" name="bugbear" title="">
+	<npc id="23096" name="Tumran Bugbear" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="35.0"/>
@@ -5358,7 +5360,7 @@
 			<skill id="4416" level="10"/>
 		</skills>
 	</npc>
-	<npc id="23097" name="skeleton_farcher" title="">
+	<npc id="23097" name="Skeletal Marauder" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="7.0"/>
 		<set name="collision_height" value="22.0"/>
@@ -5427,7 +5429,7 @@
 			<skill id="4416" level="12"/>
 		</skills>
 	</npc>
-	<npc id="23098" name="stone_golem" title="">
+	<npc id="23098" name="Granite Golem" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="31.0"/>
@@ -5495,7 +5497,7 @@
 			<skill id="4416" level="12"/>
 		</skills>
 	</npc>
-	<npc id="23099" name="ant_soldier" title="">
+	<npc id="23099" name="Ant Soldier" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="17.0"/>

@@ -1922,7 +1922,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31336" name="Rahorakti" title="Grand Seer">
+	<npc id="31336" name="Rahorakti" title="Grand Priest">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1972,7 +1972,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31337" name="Mekara" title="Seer">
+	<npc id="31337" name="Mekara" title="Priest">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2908,7 +2908,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31360" name="Alhena" title="Tetrarch Agent">
+	<npc id="31360" name="Alhena" title="Heirarch Agent">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Alhena" />
 		<set name="baseAtkRange" value="40" />
@@ -2958,7 +2958,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31361" name="Kreed" title="Tetrarch Executioner">
+	<npc id="31361" name="Kreed" title="Heirarch Executioner">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Kreed" />
 		<set name="baseAtkRange" value="40" />
@@ -3244,7 +3244,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31367" name="Voice of Glory" title="">
+	<npc id="31367" name="Voice of Splendor" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4354,7 +4354,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31390" name="Dummy - Boy A" title="Ch4 Test">
+	<npc id="31390" name="Dummy - Boy A" title="For Test">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4400,7 +4400,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31391" name="Dummy  - Boy B" title="Ch4 Test">
+	<npc id="31391" name="Dummy - Boy B" title="For Test">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4446,7 +4446,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31392" name="Dummy  - Boy C" title="Ch4 Test">
+	<npc id="31392" name="Dummy - Boy C" title="For Test">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4492,7 +4492,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31393" name="Dummy - Boy D" title="Ch4 Test">
+	<npc id="31393" name="Dummy - Boy D" title="For Test">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4538,7 +4538,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31394" name="Dummy - Boy E" title="Ch4 Test">
+	<npc id="31394" name="Dummy - Boy E" title="For Test">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4584,7 +4584,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31395" name="Dummy - Lady F" title="Ch4 Test">
+	<npc id="31395" name="Dummy - Lady F" title="For Test">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4630,7 +4630,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31396" name="Dummy - Lady G" title="Ch4 Test">
+	<npc id="31396" name="Dummy - Lady G" title="For Test">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4676,7 +4676,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31397" name="Dummy - Lady H" title="Ch4 Test">
+	<npc id="31397" name="Dummy - Lady H" title="For Test">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4722,7 +4722,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31398" name="Dummy - Lady I" title="Ch4 Test">
+	<npc id="31398" name="Dummy - Lady I" title="For Test">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4768,7 +4768,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31399" name="Dummy - Lady J" title="Ch4 Test">
+	<npc id="31399" name="Dummy - Lady J" title="For Test">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

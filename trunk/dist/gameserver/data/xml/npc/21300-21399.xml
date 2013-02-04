@@ -4240,7 +4240,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21338" name="Ketra Orc Seer" title="">
+	<npc id="21338" name="Ketra Orc Priest" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -4367,7 +4367,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21339" name="Ketra Orc General" title="">
+	<npc id="21339" name="Ketra Orc Officer" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4737,7 +4737,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21342" name="Ketra Orc Grand Seer" title="">
+	<npc id="21342" name="Ketra Orc Grand Priest" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -4956,7 +4956,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21344" name="Ketra Elite Guard" title="">
+	<npc id="21344" name="Ketra Elite Royal Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5130,7 +5130,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21346" name="Ketra's Head Guard" title="">
+	<npc id="21346" name="Ketra's Head Royal Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5311,7 +5311,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21348" name="Prophet's Guard" title="">
+	<npc id="21348" name="Prophet's Escort" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6939,7 +6939,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21362" name="Varka Silenos Officer" title="">
+	<npc id="21362" name="Varka Silenos Sergeant" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7187,7 +7187,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21364" name="Varka Silenos Seer" title="">
+	<npc id="21364" name="Varka Silenos Priest" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -7441,7 +7441,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21366" name="Varka Silenos General" title="">
+	<npc id="21366" name="Varka Silenos Officer" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7682,7 +7682,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21368" name="Varka Silenos Great Seer" title="">
+	<npc id="21368" name="Varka Silenos Grand Priest" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -7900,7 +7900,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21370" name="Varka's Elite Guard" title="">
+	<npc id="21370" name="Varka's Elite Escort" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8078,7 +8078,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21372" name="Varka's Head Guard" title="">
+	<npc id="21372" name="Varka's Chief Escort" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8262,7 +8262,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21374" name="Prophet Guard" title="">
+	<npc id="21374" name="Prophet's Royal Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8349,7 +8349,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21375" name="Disciple of Prophet" title="">
+	<npc id="21375" name="Prophet's Disciple" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -9613,7 +9613,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21389" name="Balrog of Destruction" title="">
+	<npc id="21389" name="Balor of Destruction" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

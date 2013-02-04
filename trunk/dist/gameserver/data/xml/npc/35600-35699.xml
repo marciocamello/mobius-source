@@ -50,7 +50,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35601" name="Doorman" title="">
+	<npc id="35601" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -102,7 +102,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35602" name="Doorman" title="">
+	<npc id="35602" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -154,7 +154,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35603" name="Coordinator" title="">
+	<npc id="35603" name="Entrance Manager" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -200,7 +200,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35604" name="Messenger" title="">
+	<npc id="35604" name="Herald" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -576,7 +576,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35612" name="Group Gatekeeper" title="">
+	<npc id="35612" name="Mass Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -622,7 +622,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35613" name="Group Gatekeeper" title="">
+	<npc id="35613" name="Mass Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -670,7 +670,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35614" name="Group Gatekeeper" title="">
+	<npc id="35614" name="Mass Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -718,7 +718,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35615" name="Group Gatekeeper" title="">
+	<npc id="35615" name="Mass Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -766,7 +766,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35616" name="Group Gatekeeper" title="">
+	<npc id="35616" name="Mass Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -814,7 +814,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35617" name="Group Gatekeeper" title="">
+	<npc id="35617" name="Mass Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1092,7 +1092,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35623" name="Inner Doorman" title="">
+	<npc id="35623" name="Inner Castle Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1143,7 +1143,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35624" name="Inner Doorman" title="">
+	<npc id="35624" name="Inner Castle Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1194,7 +1194,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35625" name="Outer Doorman" title="">
+	<npc id="35625" name="Outer Castle Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1245,7 +1245,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35626" name="Outer Doorman" title="">
+	<npc id="35626" name="Outer Castle Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1296,7 +1296,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35627" name="Messenger" title="">
+	<npc id="35627" name="Herald" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1939,7 +1939,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35639" name="Jacquard" title="Messenger">
+	<npc id="35639" name="Jacquard" title="Herald">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2042,7 +2042,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35641" name="Fortress Guard" title="">
+	<npc id="35641" name="Fortress Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2093,7 +2093,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35642" name="Fortress Guard" title="">
+	<npc id="35642" name="Fortress Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2144,7 +2144,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35643" name="Gate  " title="">
+	<npc id="35643" name="Gate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2379,7 +2379,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35648" name="Court Magician" title="Gludio">
+	<npc id="35648" name="Court Wizard" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2429,7 +2429,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35649" name="Court Magician" title="Dion">
+	<npc id="35649" name="Court Wizard" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2479,7 +2479,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35650" name="Court Magician" title="Giran">
+	<npc id="35650" name="Court Wizard" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2529,7 +2529,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35651" name="Court Magician" title="Oren">
+	<npc id="35651" name="Court Wizard" title="Oren">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2579,7 +2579,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35652" name="Court Magician" title="Aden">
+	<npc id="35652" name="Court Wizard" title="Aden">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2629,7 +2629,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35653" name="Court Magician" title="Innadril">
+	<npc id="35653" name="Court Wizard" title="Innadril">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2679,7 +2679,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35654" name="Court Magician" title="Goddard">
+	<npc id="35654" name="Court Wizard" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2729,7 +2729,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35655" name="Court Magician" title="Rune">
+	<npc id="35655" name="Court Wizard" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2779,7 +2779,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35656" name="Court Magician" title="Schuttgart">
+	<npc id="35656" name="Court Wizard" title="Schuttgart">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3302,7 +3302,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35667" name="Doorman" title="">
+	<npc id="35667" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3357,7 +3357,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35668" name="Doorman" title="">
+	<npc id="35668" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3412,7 +3412,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35669" name="Doorman" title="">
+	<npc id="35669" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3529,7 +3529,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="35671" name="Decorated Rebel Soldier" title="Shanty Fortress">
+	<npc id="35671" name="Rebel Elite Soldier" title="Shanty Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3643,7 +3643,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35673" name="Court Guard" title="Shanty Fortress">
+	<npc id="35673" name="Royal Guard" title="Shanty Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3701,7 +3701,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35674" name="Guard" title="Shanty Fortress">
+	<npc id="35674" name="Escort" title="Shanty Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -4504,7 +4504,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35689" name="Foreman" title="Southern Fortress">
+	<npc id="35689" name="Foreman" title="Gludio Southern Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4550,7 +4550,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35690" name="Suspicious Merchant" title="Southern Fortress">
+	<npc id="35690" name="Suspicious Merchant" title="Gludio Southern Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantSGludio" />
 		<set name="baseAtkRange" value="40" />
@@ -4596,7 +4596,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35691" name="Guard Captain" title="Southern Fortress">
+	<npc id="35691" name="Guard Captain" title="Gludio Southern Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4646,7 +4646,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35692" name="Archer Captain" title="Southern Fortress">
+	<npc id="35692" name="Archer Captain" title="Gludio Southern Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="1100" />
@@ -4692,7 +4692,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35693" name="General" title="Southern Fortress">
+	<npc id="35693" name="General" title="Gludio Southern Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4742,7 +4742,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35694" name="Support Unit Captain" title="Southern Fortress">
+	<npc id="35694" name="Support Unit Captain" title="Gludio Southern Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4788,7 +4788,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35695" name="Engineering Manager" title="Southern Fortress">
+	<npc id="35695" name="Engineering Manager" title="Gludio Southern Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4834,7 +4834,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35696" name="Logistics Officer" title="Southern Fortress">
+	<npc id="35696" name="Logistics Officer" title="Gludio Southern Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4932,7 +4932,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="35698" name="Detention Camp Warden" title="Southern Fortress">
+	<npc id="35698" name="Detention Camp Warden" title="Gludio Southern Fortress">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4978,7 +4978,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35699" name="Doorman" title="">
+	<npc id="35699" name="Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

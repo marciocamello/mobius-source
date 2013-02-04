@@ -1,7 +1,1464 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-    <npc id="33300" name="Фрикиос" title="Хранитель Книги Открытия">
+	<npc id="33300" name="Frikios" title="Guardian of Revelation">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="0.1" />
+		<set name="collision_radius" value="0.1" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="16" />	<!--Темные Эльфы-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33301" name="Event Generator" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="0.1" />
+		<set name="collision_radius" value="0.1" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33302" name="Ridenbag" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="17.5" />
+		<set name="collision_radius" value="8.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="18" />	<!--Гномы-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33303" name="First Warp Device of Harnak" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="50.0" />
+		<set name="collision_radius" value="18.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Merchant" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33304" name="Second Warp Device of Harnak" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="50.0" />
+		<set name="collision_radius" value="18.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Merchant" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+    <npc id="33304" name="Second Warp Device of Harnak" title="">
+        <!--Need TODO-->
+        <set name="baseHpMax" value="2444.468"/>
+        <set name="baseMAtkSpd" value="500"/>
+        <set name="basePAtkSpd" value="253"/>
+        <set name="baseRunSpd" value="120"/>
+        <set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="50.0" />
+		<set name="collision_radius" value="18.0" />
+        <set name="aggroRange" value="0"/>
+        <set name="ai_type" value="CharacterAI"/>
+        <set name="baseAtkRange" value="40"/>
+        <set name="baseCON" value="43"/>
+        <set name="baseCritRate" value="40"/>
+        <set name="baseDEX" value="30"/>
+        <set name="baseHpRate" value="1"/>
+        <set name="baseHpReg" value="7.5"/>
+        <set name="baseINT" value="21"/>
+        <set name="baseMAtk" value="780"/>
+        <set name="baseMDef" value="382"/>
+        <set name="baseMEN" value="20"/>
+        <set name="baseMpMax" value="1345.8"/>
+        <set name="baseMpReg" value="2.7"/>
+        <set name="basePAtk" value="1303"/>
+        <set name="basePDef" value="471"/>
+        <set name="baseSTR" value="40"/>
+        <set name="baseShldDef" value="0"/>
+        <set name="baseShldRate" value="0"/>
+        <set name="baseWIT" value="20"/>
+        <set name="castle_id" value="1"/>
+        <set name="level" value="70"/>
+        <set name="rewardExp" value="0"/>
+        <set name="rewardRp" value="0"/>
+        <set name="rewardSp" value="0"/>
+        <set name="shots" value="NONE"/>
+        <set name="texture" value=""/>
+        <set name="type" value="Npc"/>
+        <skills/>
+        <attributes>
+            <defence attribute="fire" value="150"/>
+            <defence attribute="water" value="150"/>
+            <defence attribute="wind" value="150"/>
+            <defence attribute="earth" value="150"/>
+            <defence attribute="holy" value="150"/>
+            <defence attribute="unholy" value="150"/>
+        </attributes>
+    </npc>
+	<npc id="33305" name="Harnak's Soul Circle" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="50.0" />
+		<set name="collision_radius" value="18.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33306" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33307" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33308" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33309" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33310" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33311" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33312" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33313" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33314" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33315" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33316" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33317" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33318" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33319" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33320" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33321" name="Altar of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33322" name="Prison of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33323" name="Prison of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33324" name="Prison of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33325" name="Prison of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33326" name="Prison of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33327" name="Prison of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33328" name="Prison of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+	<npc id="33329" name="Prison of Souls" title="">
+		<set name="aggroRange" value="0" />
+		<set name="ai_type" value="CharacterAI" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="75" />
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41" />
+		<set name="baseHpMax" value="2880.376" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="8.5" />
+		<set name="baseINT" value="74" />
+		<set name="baseMAtk" value="1145" />
+		<set name="baseMAtkSpd" value="253" />
+		<set name="baseMDef" value="469" />
+		<set name="baseMEN" value="72" />
+		<set name="baseMpMax" value="1674.8" />
+		<set name="baseMpReg" value="3" />
+		<set name="basePAtk" value="1799" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="577" />
+		<set name="baseRunSpd" value="120" />
+		<set name="baseSTR" value="109" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="64" />
+		<set name="baseWalkSpd" value="30" />
+		<set name="collision_height" value="40.0" />
+		<set name="collision_radius" value="20.0" />
+		<set name="level" value="80" />
+		<set name="rewardExp" value="0" />
+		<set name="rewardRp" value="0" />
+		<set name="rewardSp" value="0" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Npc" />
+		<skills>
+			<skill id="4416" level="2" />	<!--Магические Создания-->
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="20" />
+			<defence attribute="water" value="20" />
+			<defence attribute="wind" value="20" />
+			<defence attribute="earth" value="20" />
+			<defence attribute="holy" value="20" />
+			<defence attribute="unholy" value="20" />
+		</attributes>
+	</npc>
+    <npc id="33330" name="Khyber" title="Priest">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -48,7 +1505,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33301" name="Устройство Создания Ивентов" title="">
+    <npc id="33331" name="Janson" title="Guard">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -95,7 +1552,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33302" name="Ридонбек" title="">
+    <npc id="33332" name="Narkrun" title="Jewelry Merchant">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -142,7 +1599,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33303" name="Первой Устройство Гномов Харнака" title="">
+    <npc id="33333" name="Erkinah" title="Guardian of Dark Elf Village">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -189,7 +1646,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33304" name="Второе Устройство Гномов Харнака" title="">
+    <npc id="33334" name="Tisrante" title="Plague Researcher">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -236,7 +1693,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33305" name="Духовный Круг Харнака" title="">
+    <npc id="33335" name="Lilios" title="Guardian of Dark Elf Village">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -283,7 +1740,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33306" name="Алтарь Духов" title="">
+    <npc id="33336" name="Kaitael" title="Guardian of Dark Elf Village">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -330,7 +1787,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33307" name="Алтарь Духов" title="">
+    <npc id="33337" name="Crystal of the Ethereal Dragon" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -377,7 +1834,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33308" name="Алтарь Духов" title="">
+    <npc id="33338" name="Crystal of Concentration" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -424,1417 +1881,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33309" name="Алтарь Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33310" name="Алтарь Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33311" name="Алтарь Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33312" name="Алтарь Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33313" name="Алтарь Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33314" name="Печать Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33315" name="Печать Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33316" name="Печать Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33317" name="Печать Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33318" name="Печать Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33319" name="Печать Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33320" name="Печать Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33321" name="Печать Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33322" name="Тюрьма Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33323" name="Тюрьма Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33324" name="Тюрьма Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33325" name="Тюрьма Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33326" name="Тюрьма Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33327" name="Тюрьма Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33328" name="Тюрьма Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33329" name="Тюрьма Духов" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33330" name="Кайво" title="Провидец">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33331" name="Зеран" title="Страж">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33332" name="Наркрун" title="Торговец Драгоценными Камнями">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33333" name="Эркина" title="Хранитель Деревни Темных Эльфов">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33334" name="Тисарант" title="Исследователь Чумы">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33335" name="Лириос" title="Хранитель Деревни Темных Эльфов">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33336" name="Кайтаэль" title="Хранитель Деревни Темных Эльфов">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33337" name="Кристалл Дракона" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33338" name="Кристалл Концентрации" title="">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-    <npc id="33339" name="Кристалл Восстановления" title="">
+    <npc id="33339" name="Crystal of Recovery" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -1921,7 +1968,7 @@
             <set name="noRandomWalk" value="true"/>
         </ai_params>
     </npc>
-    <npc id="33341" name="Кайт" title="">
+    <npc id="33341" name="Kite" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -1968,7 +2015,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33342" name="Пикси" title="">
+    <npc id="33342" name="Pixy" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2015,7 +2062,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33343" name="Таинственный Жрец" title="">
+    <npc id="33343" name="Mysterious Priest" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2062,7 +2109,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33344" name="Хадел" title="Слуга Гиганта">
+    <npc id="33344" name="Hadel" title="Giant's Minion">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2109,7 +2156,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33345" name="Ноети Рюкаэлти" title="Слепая Фея-Предсказатель">
+    <npc id="33345" name="Noeti Ryukaelti" title="Blind Fairy Prophet">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2156,7 +2203,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33346" name="Меняющий Судьбу" title="">
+    <npc id="33346" name="Fate Changer" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2203,7 +2250,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33347" name="Герой Древности" title="Монстр-Чучело">
+    <npc id="33347" name="Ancient Hero" title="Dummy Monster">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2250,7 +2297,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33348" name="Монстр Башни Крумы" title="Монстр-Чучело">
+    <npc id="33348" name="Cruma Tower Monster" title="Dummy Monster">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2297,7 +2344,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33349" name="Монстр Башни Дерзости" title="Монстр-Чучело">
+    <npc id="33349" name="Tower of Insolence Monster" title="Dummy Monster">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2344,7 +2391,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33350" name="Внутренний Контроллер" title="">
+    <npc id="33350" name="Inzone Controller" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2391,7 +2438,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33351" name="Внутренний Контроллер" title="">
+    <npc id="33351" name="Inzone Controller" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2438,7 +2485,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33352" name="Адольф" title="Начальник Авангарда Адена">
+    <npc id="33352" name="Adolph" title="Aden Vanguard Captain">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2485,7 +2532,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33353" name="Жрица Элис" title="Авангард Адена">
+    <npc id="33353" name="Priest Alice" title="Aden Vanguard">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2532,7 +2579,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33354" name="Жрец Бартон" title="Авангард Адена">
+    <npc id="33354" name="Officer Barton" title="Aden Vanguard">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2579,7 +2626,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33355" name="Снайпер Хаюк" title="Авангард Адена">
+    <npc id="33355" name="Sniper Hayuk" title="Aden Vanguard">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2626,7 +2673,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33356" name="Волшебник Эллия" title="Авангард Адена">
+    <npc id="33356" name="Magus Eliyah" title="Aden Vanguard">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2673,7 +2720,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33357" name="Энде" title="">
+    <npc id="33357" name="Ende" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2720,7 +2767,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33358" name="Куори" title="">
+    <npc id="33358" name="Kyuori" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2767,7 +2814,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33359" name="Кери" title="Привратник Снабженческого Холла">
+    <npc id="33359" name="Kerry" title="Provisional Clan Hall Gatekeeper">
         <set name="baseHpMax" value="7324"/>
         <set name="baseMAtkSpd" value="398"/>
         <set name="basePAtkSpd" value="299"/>
@@ -2813,7 +2860,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33360" name="Мейд" title="Управляющий Снабженческим Холлом">
+    <npc id="33360" name="Maid" title="Provisional Clan Hall Manager">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2860,7 +2907,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33361" name="Таинственный Жрец" title="">
+    <npc id="33361" name="Mysterious Priest" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2907,7 +2954,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33362" name="Таинственный Мужчина" title="">
+    <npc id="33362" name="Mysterious Man" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -2954,7 +3001,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33363" name="Таинственный Мужчина" title="">
+    <npc id="33363" name="Mysterious Man" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -3709,7 +3756,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33379" name="Исследователь" title="">
+    <npc id="33379" name="Investigator" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -3756,7 +3803,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33380" name="Исследователь" title="">
+    <npc id="33380" name="Investigator" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -3803,7 +3850,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33381" name="Исследователь" title="">
+    <npc id="33381" name="Investigator" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -3850,7 +3897,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33382" name="Жрец" title="">
+    <npc id="33382" name="Priest" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -3897,7 +3944,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33383" name="Страж" title="">
+    <npc id="33383" name="Guard" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -3944,7 +3991,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33384" name="Безумец" title="">
+    <npc id="33384" name="Madman" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -3991,7 +4038,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33385" name="Член Гильдии Путешественников" title="">
+    <npc id="33385" name="Adventure Guildsman" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -4038,7 +4085,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33386" name="Член Гильдии Путешественников" title="">
+    <npc id="33386" name="Adventure Guildsman" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -4085,7 +4132,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33387" name="Член Гильдии Путешественников" title="">
+    <npc id="33387" name="Adventure Guildsman" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -4132,7 +4179,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33388" name="Член Гильдии Путешественников" title="">
+    <npc id="33388" name="Adventure Guildsman" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -4179,7 +4226,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33389" name="Член Гильдии Путешественников" title="">
+    <npc id="33389" name="Adventure Guildsman" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -4226,7 +4273,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33390" name="Член Гильдии Путешественников" title="">
+    <npc id="33390" name="Adventure Guildsman" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -4273,7 +4320,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33391" name="Член Гильдии Путешественников" title="">
+    <npc id="33391" name="Adventure Guildsman" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -4320,7 +4367,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33392" name="Член Гильдии Путешественников" title="">
+    <npc id="33392" name="Adventure Guildsman" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -4367,7 +4414,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33393" name="Кристалл Фаруна" title="">
+    <npc id="33393" name="Wave Dragon Crystal" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -4414,7 +4461,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33394" name="Кристалл Фаруна" title="">
+    <npc id="33394" name="Wave Dragon Crystal" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -4461,7 +4508,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33395" name="Кристалл Фаруна" title="">
+    <npc id="33395" name="Wave Dragon Crystal" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -4508,7 +4555,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-    <npc id="33396" name="Кимериан" title="">
+    <npc id="33396" name="Kimerian" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>

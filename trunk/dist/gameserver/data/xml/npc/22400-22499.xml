@@ -1011,7 +1011,7 @@
 			<defence attribute="unholy" value="200" />
 		</attributes>
 	</npc>
-	<npc id="22411" name="Beleth's Retainer" title="">
+	<npc id="22411" name="Beleth's Confidant" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1203,7 +1203,7 @@
 			<defence attribute="unholy" value="200" />
 		</attributes>
 	</npc>
-	<npc id="22413" name="Beleth's Low Servant" title="">
+	<npc id="22413" name="Beleth's Minion" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1473,7 +1473,7 @@
 			<defence attribute="unholy" value="200" />
 		</attributes>
 	</npc>
-	<npc id="22416" name="Kechi's Captain" title="">
+	<npc id="22416" name="Kechi's Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1652,7 +1652,7 @@
 			<defence attribute="unholy" value="60" />
 		</attributes>
 	</npc>
-	<npc id="22418" name="Burning Iris" title="">
+	<npc id="22418" name="Burning Illith" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1740,7 +1740,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="22419" name="Flame Iris" title="">
+	<npc id="22419" name="Flame Illith" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1830,7 +1830,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="22420" name="Brimstone Iris" title="">
+	<npc id="22420" name="Brimstone Illith" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3649,7 +3649,7 @@
 			<defence attribute="unholy" value="200" />
 		</attributes>
 	</npc>
-	<npc id="22441" name="Beleth's Minion" title="">
+	<npc id="22441" name="Beleth's Subordinate" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3744,7 +3744,7 @@
 			<defence attribute="unholy" value="200" />
 		</attributes>
 	</npc>
-	<npc id="22442" name="Beleth's Minion" title="">
+	<npc id="22442" name="Beleth's Subordinate" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7785,7 +7785,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22485" name="Lost Watcher" title="">
+	<npc id="22485" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="custom.LabyrinthLostWatcher" />
 		<set name="baseAtkRange" value="40" />
@@ -7848,7 +7848,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22486" name="Lost Watcher" title="">
+	<npc id="22486" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7975,7 +7975,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22488" name="Lost Watcher" title="">
+	<npc id="22488" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="custom.LabyrinthLostWatcher" />
 		<set name="baseAtkRange" value="40" />
@@ -8038,7 +8038,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22489" name="Lost Watcher" title="">
+	<npc id="22489" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8165,7 +8165,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22491" name="Lost Watcher" title="">
+	<npc id="22491" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="custom.LabyrinthLostWatcher" />
 		<set name="baseAtkRange" value="40" />
@@ -8225,7 +8225,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22492" name="Lost Watcher" title="">
+	<npc id="22492" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8346,7 +8346,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22494" name="Lost Watcher" title="">
+	<npc id="22494" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="custom.LabyrinthLostWatcher" />
 		<set name="baseAtkRange" value="40" />
@@ -8410,7 +8410,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22495" name="Lost Watcher" title="">
+	<npc id="22495" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8535,7 +8535,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22497" name="Lost Watcher" title="">
+	<npc id="22497" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="custom.LabyrinthLostWatcher" />
 		<set name="baseAtkRange" value="40" />
@@ -8595,7 +8595,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22498" name="Lost Watcher" title="">
+	<npc id="22498" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

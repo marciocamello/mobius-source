@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="27300" name="Monument Watcher Ezekiel" title="Quest Monster">
+	<npc id="27300" name="Monument Watchman Ezekiel" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -63,7 +63,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="27301" name="Monument Watcher Ezekiel" title="Quest Monster">
+	<npc id="27301" name="Monument Watchman Ezekiel" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -964,7 +964,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27317" name="Restrainer of Glory" title="Quest Monster">
+	<npc id="27317" name="Restrainer of Splendor" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1296,7 +1296,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27323" name="Divine Emissary" title="Quest Monster">
+	<npc id="27323" name="God's Emissary" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1353,7 +1353,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27324" name="Vision Guard Eranus" title="Quest Monster">
+	<npc id="27324" name="Vision Guardian Eranus" title="Quest Monster">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2537,7 +2537,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="27347" name="Guards of the Dawn Oracle" title="">
+	<npc id="27347" name="Guard of the Dawn Oracle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2593,7 +2593,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="27348" name="Guards of the Dawn Oracle" title="">
+	<npc id="27348" name="Guard of the Dawn Oracle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2649,7 +2649,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="27349" name="Guards of the Dawn Oracle" title="">
+	<npc id="27349" name="Guard of the Dawn Oracle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2705,7 +2705,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="27350" name="Guards of the Dawn Oracle" title="">
+	<npc id="27350" name="Guard of the Dawn Oracle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2761,7 +2761,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="27351" name="Guards of the Dawn" title="">
+	<npc id="27351" name="Guard of the Dawn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2817,7 +2817,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="27352" name="Guards of the Dawn Oracle" title="">
+	<npc id="27352" name="Guard of the Dawn Oracle" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2981,7 +2981,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27355" name="Lilim Slave Knight" title="">
+	<npc id="27355" name="Lilim Knight-Errant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3035,7 +3035,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27356" name="Lilim Stabber" title="">
+	<npc id="27356" name="Lilim Marauder" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3089,7 +3089,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27357" name="Lilim Seer" title="">
+	<npc id="27357" name="Lilim Priest" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3197,7 +3197,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27359" name="Lilim Assassin" title="">
+	<npc id="27359" name="Lilim Slayer" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3305,7 +3305,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27361" name="Lilim Guard Knight" title="">
+	<npc id="27361" name="Lilim Royal Knight" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3467,7 +3467,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27364" name="Lilim Slave Knight" title="">
+	<npc id="27364" name="Lilim Knight-Errant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3521,7 +3521,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27365" name="Lilim Stabber" title="">
+	<npc id="27365" name="Lilim Marauder" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3575,7 +3575,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27366" name="Lilim Seer" title="">
+	<npc id="27366" name="Lilim Priest" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3683,7 +3683,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27368" name="Lilim Assassin" title="">
+	<npc id="27368" name="Lilim Slayer" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3791,7 +3791,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="27370" name="Lilim Guard Knight" title="">
+	<npc id="27370" name="Lilim Royal Knight" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3956,7 +3956,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="27373" name="Lilim Slave Knight" title="">
+	<npc id="27373" name="Lilim Knight-Errant" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4185,7 +4185,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="27377" name="Lilim Assassin" title="">
+	<npc id="27377" name="Lilim Slayer" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4300,7 +4300,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="27379" name="Lilim Guard Knight" title="">
+	<npc id="27379" name="Lilim Royal Knight" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4688,7 +4688,7 @@
 			<defence attribute="unholy" value="200" />
 		</attributes>
 	</npc>
-	<npc id="27386" name="Lilith's Steward" title="">
+	<npc id="27386" name="Lilith's Agent" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4745,7 +4745,7 @@
 			<defence attribute="unholy" value="200" />
 		</attributes>
 	</npc>
-	<npc id="27387" name="Lilith's Elite" title="">
+	<npc id="27387" name="Lilith's Escort" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4807,7 +4807,7 @@
 			<defence attribute="unholy" value="200" />
 		</attributes>
 	</npc>
-	<npc id="27388" name="Anakim" title="Flames of Sacred Fire">
+	<npc id="27388" name="Anakim" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5032,7 +5032,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="27392" name="Bloody Axe Aide" title="">
+	<npc id="27392" name="Bloody Axe Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

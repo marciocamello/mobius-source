@@ -646,7 +646,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="18809" name="Varangka's Retainer" title="">
+	<npc id="18809" name="Varangka's Confidant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -704,7 +704,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="18810" name="Varangka's Page" title="">
+	<npc id="18810" name="Varangka's Servant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -935,7 +935,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18815" name="Guard of the Grave" title="Death-calling">
+	<npc id="18815" name="Graveyard Guard" title="Death-calling">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="GuardoftheGrave" />
 		<set name="baseAtkRange" value="40" />
@@ -1558,7 +1558,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18829" name="Shilen's Evil Thoughts Leader For Presentation" title="">
+	<npc id="18829" name="Shilen's Evil Thoughts Captain For Presentation" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1773,7 +1773,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18834" name="Guards of the Dawn" title="">
+	<npc id="18834" name="Guard of the Dawn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1820,7 +1820,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="18835" name="Guards of the Dawn" title="">
+	<npc id="18835" name="Guard of the Dawn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3083,7 +3083,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="18862" name="Tanta Lizardman Guard" title="Escort of Ugoros">
+	<npc id="18862" name="Tanta Lizardman Guard" title="Ugoros' Escort">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3131,7 +3131,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="18863" name="Seer Ugoros" title="Tanta Lizardmen ">
+	<npc id="18863" name="Priest Ugoros" title="Tanta Lizardmen">
 		<set name="aggroRange" value="2000" />
 		<set name="ai_type" value="freya.SeerUgoros" />
 		<set name="baseAtkRange" value="40" />
@@ -3408,7 +3408,7 @@
 			<defence attribute="unholy" value="50" />
 		</attributes>
 	</npc>
-	<npc id="18868" name="Energy Plant" title="">
+	<npc id="18868" name="Vitality Plant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

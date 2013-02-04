@@ -693,7 +693,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21106" name="Cursed Seer" title="">
+	<npc id="21106" name="Cursed Watchman" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1166,7 +1166,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21110" name="Marsh Predator" title="">
+	<npc id="21110" name="Swamp Predator" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1407,7 +1407,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21112" name="Hames Orc Footman" title="">
+	<npc id="21112" name="Hames Orc Footsoldier" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1903,7 +1903,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21116" name="Hames Orc Overlord" title="">
+	<npc id="21116" name="Hames Orc Prefect" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3461,7 +3461,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21130" name="Northern Goblin Leader" title="">
+	<npc id="21130" name="Northern Goblin Captain" title="">
 		<set name="aggroRange" value="400" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4473,7 +4473,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21142" name="Grave Keeper Spartoi" title="">
+	<npc id="21142" name="Graveyard Keeper Spartoi" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4799,7 +4799,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21146" name="Grave Keeper Dark Horror" title="">
+	<npc id="21146" name="Graveyard Keeper Dark Horror" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6135,7 +6135,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21161" name="Lesser Ancient Soldier" title="">
+	<npc id="21161" name="Ancient Holy Ground's Hermit" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6222,7 +6222,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21162" name="Lesser Ancient Scout" title="">
+	<npc id="21162" name="Ancient Holy Ground's Totem" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6314,7 +6314,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21163" name="Lesser Ancient Shaman" title="">
+	<npc id="21163" name="Ancient Holy Ground's Wing" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -6403,7 +6403,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21164" name="Guardian Spirit of Ancient Holy Ground" title="">
+	<npc id="21164" name="Ancient Holy Ground's Guardian Spirit" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6495,7 +6495,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21165" name="Lesser Ancient Warrior" title="">
+	<npc id="21165" name="Ancient Holy Ground's Vision" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7071,7 +7071,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21171" name="Lith Overlord" title="">
+	<npc id="21171" name="Lith Prefect" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7685,7 +7685,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21177" name="Lilim Knight Errant" title="">
+	<npc id="21177" name="Lilim Knight-Errant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8551,7 +8551,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21185" name="Lilim Great Mystic" title="">
+	<npc id="21185" name="Lilim Great Magus" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -8656,7 +8656,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21186" name="Lilim Court Knight" title="">
+	<npc id="21186" name="Lilim Royal Knight" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -9550,7 +9550,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21195" name="Gigant Commander" title="">
+	<npc id="21195" name="Gigant Officer" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

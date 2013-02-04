@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="31700" name="Saint's Follower" title="">
+	<npc id="31700" name="Saintess' Follower" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -51,7 +51,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31701" name="Saint's Follower" title="">
+	<npc id="31701" name="Saintess' Follower" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -98,7 +98,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31702" name="Saint's Follower" title="">
+	<npc id="31702" name="Saintess' Follower" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -145,7 +145,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31703" name="Saint's Follower" title="">
+	<npc id="31703" name="Saintess' Follower" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -192,7 +192,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31704" name="Saint's Follower" title="">
+	<npc id="31704" name="Saintess' Follower" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -331,7 +331,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31707" name="Ketra Van Grunt" title="">
+	<npc id="31707" name="Ketra Van Soldier" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -429,7 +429,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31709" name="Ketra Van Captain " title="">
+	<npc id="31709" name="Ketra Van Officer" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -478,7 +478,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31710" name="Ketra Van Commander" title="">
+	<npc id="31710" name="Varka Van Commander" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -527,7 +527,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31711" name="Ketra Van Shaman" title="">
+	<npc id="31711" name="Varka Van Shaman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -1367,7 +1367,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31729" name="Adventurer Guildsman" title="">
+	<npc id="31729" name="Adventure Guildsman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1417,7 +1417,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31730" name="Adventurer Guildsman" title="">
+	<npc id="31730" name="Adventure Guildsman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1466,7 +1466,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31731" name="Adventurer Guildsman" title="">
+	<npc id="31731" name="Adventure Guildsman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1515,7 +1515,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31732" name="Adventurer Guildsman" title="">
+	<npc id="31732" name="Adventure Guildsman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1561,7 +1561,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31733" name="Adventurer Guildsman" title="">
+	<npc id="31733" name="Adventure Guildsman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1607,7 +1607,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31734" name="Adventurer Guildsman" title="">
+	<npc id="31734" name="Adventure Guildsman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1657,7 +1657,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31735" name="Adventurer Guildsman" title="">
+	<npc id="31735" name="Adventure Guildsman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1706,7 +1706,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31736" name="Adventurer Guildsman" title="">
+	<npc id="31736" name="Adventure Guildsman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1755,7 +1755,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31737" name="Adventurer Guildsman" title="">
+	<npc id="31737" name="Adventure Guildsman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1804,7 +1804,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31738" name="Adventurer Guildsman" title="">
+	<npc id="31738" name="Adventure Guildsman" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2565,7 +2565,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31757" name="Miss Queen" title="Test Server Helper">
+	<npc id="31757" name="Queen of Hearts" title="Test Server Helper">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2703,7 +2703,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31760" name="Miss Queen" title="Adventurers' Guide">
+	<npc id="31760" name="Queen of Hearts" title="Adventurers' Guide">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2749,7 +2749,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31761" name="Miss Queen" title="Adventurers' Guide">
+	<npc id="31761" name="Queen of Hearts" title="Adventurers' Guide">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2795,7 +2795,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31762" name="Miss Queen" title="Adventurers' Guide">
+	<npc id="31762" name="Queen of Hearts" title="Adventurers' Guide">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2841,7 +2841,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31763" name="Miss Queen" title="Adventurers' Guide">
+	<npc id="31763" name="Queen of Hearts" title="Adventurers' Guide">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2887,7 +2887,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31764" name="Miss Queen" title="Adventurers' Guide">
+	<npc id="31764" name="Queen of Hearts" title="Adventurers' Guide">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2933,7 +2933,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31765" name="Miss Queen" title="Adventurers' Guide">
+	<npc id="31765" name="Queen of Hearts" title="Adventurers' Guide">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2979,7 +2979,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31766" name="Miss Queen" title="Adventurers' Guide">
+	<npc id="31766" name="Queen of Hearts" title="Adventurers' Guide">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

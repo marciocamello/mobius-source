@@ -875,7 +875,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31919" name="Ghost Chamberlain of Elmoreden" title="">
+	<npc id="31919" name="Elmoreden Chamberlain's Ghost" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -921,7 +921,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31920" name="Ghost Chamberlain of Elmoreden" title="">
+	<npc id="31920" name="Elmoreden Servant's Ghost" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2693,7 +2693,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31958" name="Yasheni" title="Warehouse Chief ">
+	<npc id="31958" name="Yasheni" title="Warehouse Chief">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3764,7 +3764,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31977" name="Shaka" title="High Prefect ">
+	<npc id="31977" name="Shaka" title="High Prefect">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3870,7 +3870,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31979" name="Moira" title="Seer">
+	<npc id="31979" name="Moira" title="Priest">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

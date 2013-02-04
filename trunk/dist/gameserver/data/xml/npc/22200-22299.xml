@@ -3148,7 +3148,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22231" name="Dominant Grey Keltir" title="">
+	<npc id="22231" name="Elder Grey Keltir" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3360,7 +3360,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22233" name="Dominant Black Wolf" title="">
+	<npc id="22233" name="Elder Black Wolf" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3902,7 +3902,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22238" name="Mountain Werewolf Chief" title="">
+	<npc id="22238" name="Mountain Werewolf Chieftain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4454,7 +4454,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22243" name="Muertos Captain" title="">
+	<npc id="22243" name="Muertos Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4779,7 +4779,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22246" name="Muertos Commander" title="">
+	<npc id="22246" name="Muertos Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5327,7 +5327,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22251" name="Shady Muertos Captain" title="">
+	<npc id="22251" name="Shady Muertos Guard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5764,7 +5764,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="22255" name="Shady Muertos Commander" title="">
+	<npc id="22255" name="Shady Muertos Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7640,7 +7640,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="22272" name="Beleth's Minion" title="">
+	<npc id="22272" name="Beleth's Subordinate" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7727,7 +7727,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="22273" name="Beleth's Minion" title="">
+	<npc id="22273" name="Beleth's Subordinate" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7813,7 +7813,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="22274" name="Beleth's Minion" title="">
+	<npc id="22274" name="Beleth's Subordinate" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -9181,7 +9181,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="22290" name="Terod's Minion" title="">
+	<npc id="22290" name="Terod's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -9266,7 +9266,7 @@
 			<defence attribute="unholy" value="30" />
 		</attributes>
 	</npc>
-	<npc id="22291" name="Weylin's Minion" title="">
+	<npc id="22291" name="Weylin's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

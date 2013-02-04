@@ -89,7 +89,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22602" name="Mutant - Bird" title="">
+	<npc id="22602" name="Mutant Bird" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -151,7 +151,7 @@
 			<defence attribute="unholy" value="60" />
 		</attributes>
 	</npc>
-	<npc id="22603" name="Mutant - Bird" title="">
+	<npc id="22603" name="Mutant Bird" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1585,7 +1585,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22623" name="Spiked Stakato Sorcerer" title="">
+	<npc id="22623" name="Spiked Stakato Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1678,7 +1678,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22624" name="Cannibalistic Stakato Follower" title="">
+	<npc id="22624" name="Cannibalistic Stakato's Subordinate" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="groups.StakatoNest" />
 		<set name="baseAtkRange" value="40" />
@@ -2160,7 +2160,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22629" name="Spiked Stakato Captain" title="">
+	<npc id="22629" name="Spiked Stakato Guard Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2249,7 +2249,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22630" name="Spike Stakato Nurse" title="">
+	<npc id="22630" name="Spiked Stakato Nurse" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2350,7 +2350,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22631" name="Spike Stakato Nurse" title="">
+	<npc id="22631" name="Spiked Stakato Nurse" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3599,7 +3599,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="22645" name="Balrog of Destruction" title="">
+	<npc id="22645" name="Balor of Destruction" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="groups.ForgeoftheGods" />
 		<set name="baseAtkRange" value="40" />
@@ -4869,7 +4869,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22657" name="Exterminator" title="">
+	<npc id="22657" name="Executioner" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.Exterminator" />
 		<set name="baseAtkRange" value="40" />
@@ -4992,7 +4992,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22658" name="Evil Spirits in Magic Force" title="">
+	<npc id="22658" name="Sentinel Waterspirit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.EvilSpiritsMagicForce" />
 		<set name="baseAtkRange" value="40" />
@@ -5601,7 +5601,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22664" name="Lesser Giant Mage" title="">
+	<npc id="22664" name="Lesser Giant Wizard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6927,7 +6927,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22679" name="Grave Robber Magician" title="Lunatic">
+	<npc id="22679" name="Grave Robber Wizard " title="Lunatic">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="GraveRobberSummoner" />
 		<set name="baseAtkRange" value="40" />
@@ -7258,7 +7258,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22682" name="Grave Robber Warrior of Light" title="Lunatic">
+	<npc id="22682" name="Grave Robber Berserker" title="Lunatic">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8041,7 +8041,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22689" name="Mine Bug" title="">
+	<npc id="22689" name="Spelunking Bug" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8150,7 +8150,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22690" name="Earthworm's Descendant" title="">
+	<npc id="22690" name="Earth Wyrm's Descendant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -9029,7 +9029,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22697" name="Ragna Orc Seer" title="Spirit Infested">
+	<npc id="22697" name="Ragna Orc Priest" title="Spirit Infested">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

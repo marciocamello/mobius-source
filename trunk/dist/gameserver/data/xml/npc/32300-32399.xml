@@ -1247,7 +1247,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32331" name="Arcane Nucleus" title="">
+	<npc id="32331" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2109,7 +2109,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32350" name="Sandstorm" title="">
+	<npc id="32350" name="Sandblast" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="hellbound.Sandstorm" />
 		<set name="baseAtkRange" value="40" />
@@ -2208,7 +2208,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32352" name="Desert Heatmaster" title="">
+	<npc id="32352" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2623,7 +2623,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32362" name="Hellbound Native " title="">
+	<npc id="32362" name="Hellbound Native" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="RndWalkAndAnim" />
 		<set name="baseAtkRange" value="40" />
@@ -2722,7 +2722,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32364" name="Hellbound Traitor" title="">
+	<npc id="32364" name="Native Traitor" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3329,7 +3329,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32377" name="Kuram" title="Coordinator">
+	<npc id="32377" name="Kuram" title="Entrance Manager">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

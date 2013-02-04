@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="35100" name="Sayres" title="Chamberlain">
+	<npc id="35100" name="Chamberlain of Light" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -189,7 +189,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35104" name="Tyron" title="Sir">
+	<npc id="35104" name="Tyron" title="Herald">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -335,7 +335,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="35107" name="Ivano" title="Sir">
+	<npc id="35107" name="Ivano" title="Royal Guard Captain">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -436,7 +436,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35109" name="Court Sorcerer" title="Dion">
+	<npc id="35109" name="Royal Wizard" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -489,7 +489,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35110" name="Court Sorcerer" title="Dion">
+	<npc id="35110" name="Royal Wizard" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -542,7 +542,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35111" name="Court Guard" title="Dion">
+	<npc id="35111" name="Royal Guard" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -592,7 +592,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35112" name="Guard" title="Dion">
+	<npc id="35112" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -642,7 +642,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35113" name="Guard" title="Dion">
+	<npc id="35113" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -692,7 +692,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35114" name="Guard" title="Dion">
+	<npc id="35114" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -742,7 +742,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35115" name="Guard" title="Dion">
+	<npc id="35115" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -792,7 +792,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35116" name="Guard" title="Dion">
+	<npc id="35116" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -842,7 +842,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35117" name="Guard" title="Dion">
+	<npc id="35117" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -892,7 +892,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35118" name="Guard" title="Dion">
+	<npc id="35118" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -942,7 +942,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35119" name="Guard" title="Dion">
+	<npc id="35119" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -992,7 +992,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35120" name="Guard" title="Dion">
+	<npc id="35120" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1093,7 +1093,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35122" name="Court Sorcerer" title="Dion">
+	<npc id="35122" name="Royal Wizard" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1147,7 +1147,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35123" name="Court Sorcerer" title="Dion">
+	<npc id="35123" name="Royal Wizard" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -1201,7 +1201,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35124" name="Court Guard" title="Dion">
+	<npc id="35124" name="Royal Guard" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1251,7 +1251,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35125" name="Court Guard" title="Dion">
+	<npc id="35125" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1301,7 +1301,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35126" name="Court Guard" title="Dion">
+	<npc id="35126" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1351,7 +1351,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35127" name="Court Guard" title="Dion">
+	<npc id="35127" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1402,7 +1402,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35128" name="Court Guard" title="Dion">
+	<npc id="35128" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1452,7 +1452,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35129" name="Court Guard" title="Dion">
+	<npc id="35129" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1502,7 +1502,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35130" name="Court Guard" title="Dion">
+	<npc id="35130" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1552,7 +1552,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35131" name="Court Guard" title="Dion">
+	<npc id="35131" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1602,7 +1602,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35132" name="Court Guard" title="Dion">
+	<npc id="35132" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1652,7 +1652,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35133" name="Court Guard" title="Dion">
+	<npc id="35133" name="Escort" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1905,7 +1905,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35138" name="Outer Doorman" title="Dion">
+	<npc id="35138" name="Outer Castle Gatekeeper" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1961,7 +1961,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35139" name="Inner Doorman" title="Dion">
+	<npc id="35139" name="Inner Castle Gatekeeper" title="Dion">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2114,7 +2114,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35142" name="Crosby" title="Chamberlain">
+	<npc id="35142" name="Chamberlain of Light" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2448,7 +2448,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="35149" name="Ulric" title="Sir">
+	<npc id="35149" name="Ulric" title="Royal Guard Captain">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2549,7 +2549,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35151" name="Court Sorcerer" title="Giran">
+	<npc id="35151" name="Royal Wizard" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -2602,7 +2602,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35152" name="Court Sorcerer" title="Giran">
+	<npc id="35152" name="Royal Wizard" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -2655,7 +2655,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35153" name="Court Guard" title="Giran">
+	<npc id="35153" name="Royal Guard" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -2705,7 +2705,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35154" name="Guard" title="Giran">
+	<npc id="35154" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -2755,7 +2755,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35155" name="Guard" title="Giran">
+	<npc id="35155" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2805,7 +2805,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35156" name="Guard" title="Giran">
+	<npc id="35156" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -2855,7 +2855,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35157" name="Guard" title="Giran">
+	<npc id="35157" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -2905,7 +2905,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35158" name="Guard" title="Giran">
+	<npc id="35158" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2955,7 +2955,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35159" name="Guard" title="Giran">
+	<npc id="35159" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3005,7 +3005,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35160" name="Guard" title="Giran">
+	<npc id="35160" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3055,7 +3055,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35161" name="Guard" title="Giran">
+	<npc id="35161" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3105,7 +3105,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35162" name="Guard" title="Giran">
+	<npc id="35162" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3206,7 +3206,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35164" name="Court Sorcerer" title="Giran">
+	<npc id="35164" name="Royal Wizard" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3260,7 +3260,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35165" name="Court Sorcerer" title="Giran">
+	<npc id="35165" name="Royal Wizard" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -3314,7 +3314,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35166" name="Court Guard" title="Giran">
+	<npc id="35166" name="Royal Guard" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3364,7 +3364,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35167" name="Guard" title="Giran">
+	<npc id="35167" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3414,7 +3414,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35168" name="Guard" title="Giran">
+	<npc id="35168" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3464,7 +3464,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35169" name="Guard" title="Giran">
+	<npc id="35169" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3515,7 +3515,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35170" name="Guard" title="Giran">
+	<npc id="35170" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3565,7 +3565,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35171" name="Guard" title="Giran">
+	<npc id="35171" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3615,7 +3615,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35172" name="Guard" title="Giran">
+	<npc id="35172" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3665,7 +3665,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35173" name="Guard" title="Giran">
+	<npc id="35173" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3715,7 +3715,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35174" name="Guard" title="Giran">
+	<npc id="35174" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3765,7 +3765,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35175" name="Guard" title="Giran">
+	<npc id="35175" name="Escort" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -4018,7 +4018,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35180" name="Outer Doorman" title="Giran">
+	<npc id="35180" name="Outer Castle Gatekeeper" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4074,7 +4074,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35181" name="Inner Doorman" title="Giran">
+	<npc id="35181" name="Inner Castle Gatekeeper" title="Giran">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4229,7 +4229,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35184" name="Saul" title="Chamberlain">
+	<npc id="35184" name="Chamberlain of Light" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4421,7 +4421,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35188" name="Holmes" title="Sir">
+	<npc id="35188" name="Holmes" title="Herald">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4567,7 +4567,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="35191" name="Quant" title="Sir">
+	<npc id="35191" name="Quant" title="Royal Guard Captain">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4669,7 +4669,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35193" name="Court Sorcerer" title="Oren">
+	<npc id="35193" name="Royal Wizard" title="Oren">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4722,7 +4722,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35194" name="Court Sorcerer" title="Oren">
+	<npc id="35194" name="Royal Wizard" title="Oren">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -4775,7 +4775,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35195" name="Court Guard" title="Oren">
+	<npc id="35195" name="Royal Guard" title="Oren">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -4825,7 +4825,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35196" name="Guard" title="Oren">
+	<npc id="35196" name="Escort" title="Oren">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -4875,7 +4875,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35197" name="Guard" title="Oren">
+	<npc id="35197" name="Escort" title="Oren">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4925,7 +4925,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35198" name="Guard" title="Oren">
+	<npc id="35198" name="Escort" title="Oren">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -4975,7 +4975,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35199" name="Guard" title="Oren">
+	<npc id="35199" name="Escort" title="Oren">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />

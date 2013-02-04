@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="31500" name="Dimensional Gate Keeper" title="">
+	<npc id="31500" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -47,7 +47,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31501" name="Dimensional Gate Keeper" title="">
+	<npc id="31501" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -93,7 +93,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31502" name="Dimensional Gate Keeper" title="">
+	<npc id="31502" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -139,7 +139,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31503" name="Dimensional Gate Keeper" title="">
+	<npc id="31503" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -185,7 +185,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31504" name="Dimensional Gate Keeper" title="">
+	<npc id="31504" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -231,7 +231,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31505" name="Dimensional Gate Keeper" title="">
+	<npc id="31505" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -277,7 +277,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31506" name="Dimensional Gate Keeper" title="">
+	<npc id="31506" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -323,7 +323,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31507" name="Dimensional Gate Keeper" title="">
+	<npc id="31507" name="Dimensional Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1152,7 +1152,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31525" name="Ghost of von Hellmann's Page" title="">
+	<npc id="31525" name="Ghost of von Hellmann's Servant" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="GhostOfVonHellmannsPage" />
 		<set name="baseAtkRange" value="40" />
@@ -1474,7 +1474,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31532" name="Maid of Lidia" title="">
+	<npc id="31532" name="Lidia's Maid" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1845,7 +1845,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31540" name="Klein" title="Watcher of Valakas">
+	<npc id="31540" name="Klein" title="Valakas Watchman">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4256,7 +4256,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31589" name="Duda-Mara Totem Spirit " title="">
+	<npc id="31589" name="Duda-Mara Totem Spirit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

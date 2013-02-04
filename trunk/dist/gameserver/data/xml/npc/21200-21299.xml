@@ -818,7 +818,7 @@
 			<defence attribute="holy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21208" name="Hallowed Watchman" title="">
+	<npc id="21208" name="Martyrium Lookout" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -901,7 +901,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21209" name="Hallowed Seer" title="">
+	<npc id="21209" name="Martyrium Watchman" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -978,7 +978,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21210" name="Vault Guardian" title="">
+	<npc id="21210" name="Crypt Lookout" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1059,7 +1059,7 @@
 			<defence attribute="unholy" value="110" />
 		</attributes>
 	</npc>
-	<npc id="21211" name="Vault Seer" title="">
+	<npc id="21211" name="Crypt Watchman" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1139,7 +1139,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21212" name="Hallowed Sentinel" title="">
+	<npc id="21212" name="Martyrium Sentinel" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1202,7 +1202,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21213" name="Hallowed Monk" title="">
+	<npc id="21213" name="Martyrium Monk" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1282,7 +1282,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21214" name="Vault Sentinel" title="">
+	<npc id="21214" name="Crypt Sentinel" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1365,7 +1365,7 @@
 			<defence attribute="unholy" value="110" />
 		</attributes>
 	</npc>
-	<npc id="21215" name="Vault Monk" title="">
+	<npc id="21215" name="Crypt Monk" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1445,7 +1445,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21216" name="Overlord of the Holy Lands" title="">
+	<npc id="21216" name="Martyrium Prefect" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1508,7 +1508,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21217" name="Hallowed Priest" title="">
+	<npc id="21217" name="Martyrium Priest" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -1588,7 +1588,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21218" name="Vault Overlord" title="">
+	<npc id="21218" name="Crypt Prefect" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1677,7 +1677,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21219" name="Vault Priest" title="">
+	<npc id="21219" name="Crypt Priest" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -1757,7 +1757,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21220" name="Sepulcher Archon" title="">
+	<npc id="21220" name="Mausoleum Archon" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1820,7 +1820,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21221" name="Sepulcher Inquisitor" title="">
+	<npc id="21221" name="Mausoleum Inquisitor" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -2090,7 +2090,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21224" name="Sepulcher Guardian" title="">
+	<npc id="21224" name="Mausoleum Royal Guardian" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2182,7 +2182,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21225" name="Sepulcher Sage" title="">
+	<npc id="21225" name="Mausoleum Sage" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2267,7 +2267,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21226" name="Sepulcher Guardian" title="">
+	<npc id="21226" name="Sepulcher Royal Guardian" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2445,7 +2445,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21228" name="Sepulcher Guard " title="">
+	<npc id="21228" name="Mausoleum Royal Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2539,7 +2539,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21229" name="Sepulcher Preacher" title="">
+	<npc id="21229" name="Mausoleum Prophet" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2629,7 +2629,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21230" name="Sepulcher Guard" title="">
+	<npc id="21230" name="Sepulcher Royal Guard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2807,7 +2807,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21232" name="Barrow Guardian" title="">
+	<npc id="21232" name="Barrow Lookout" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2869,7 +2869,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21233" name="Barrow Seer" title="">
+	<npc id="21233" name="Barrow Watchman" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2927,7 +2927,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21234" name="Grave Guardian" title="">
+	<npc id="21234" name="Tomb Lookout" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2986,7 +2986,7 @@
 			<defence attribute="unholy" value="110" />
 		</attributes>
 	</npc>
-	<npc id="21235" name="Grave Seer" title="">
+	<npc id="21235" name="Tomb Watchman" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3217,7 +3217,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21238" name="Grave Sentinel" title="">
+	<npc id="21238" name="Tomb Sentinel" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3298,7 +3298,7 @@
 			<defence attribute="unholy" value="110" />
 		</attributes>
 	</npc>
-	<npc id="21239" name="Grave Monk" title="">
+	<npc id="21239" name="Tomb Monk" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3378,7 +3378,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21240" name="Barrow Overlord" title="">
+	<npc id="21240" name="Barrow Prefect" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3543,7 +3543,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21242" name="Grave Overlord" title="">
+	<npc id="21242" name="Tomb Prefect" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3634,7 +3634,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21243" name="Grave Priest" title="">
+	<npc id="21243" name="Tomb Priest" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -3724,7 +3724,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21244" name="Crypt Archon" title="">
+	<npc id="21244" name="Graveyard Archon" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3813,7 +3813,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21245" name="Crypt Inquisitor" title="">
+	<npc id="21245" name="Graveyard Inquisitor" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3899,7 +3899,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21246" name="Tomb Archon" title="">
+	<npc id="21246" name="Netherworld Archon" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3992,7 +3992,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21247" name="Tomb Inquisitor" title="">
+	<npc id="21247" name="Netherworld Inquisitor" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4083,7 +4083,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21248" name="Crypt Guardian" title="">
+	<npc id="21248" name="Graveyard Guardian" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4180,7 +4180,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21249" name="Crypt Sage" title="">
+	<npc id="21249" name="Graveyard Sage" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4271,7 +4271,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21250" name="Tomb Guardian" title="">
+	<npc id="21250" name="Netherworld Guardian" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4363,7 +4363,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21251" name="Tomb Sage" title="">
+	<npc id="21251" name="Netherworld Sage" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4455,7 +4455,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21252" name="Crypt Guard " title="">
+	<npc id="21252" name="Graveyard Royal Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4543,7 +4543,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21253" name="Crypt Preacher" title="">
+	<npc id="21253" name="Graveyard Prophet" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4628,7 +4628,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="21254" name="Tomb Guard" title="">
+	<npc id="21254" name="Netherworld Royal Guard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4710,7 +4710,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="21255" name="Tomb Preacher" title="">
+	<npc id="21255" name="Netherworld Prophet" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8734,7 +8734,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21296" name="Canyon Bandersnatch " title="">
+	<npc id="21296" name="Canyon Bandersnatch" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -8891,7 +8891,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="21298" name="Eye of Restrainer " title="">
+	<npc id="21298" name="Eye of Restrainer" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />

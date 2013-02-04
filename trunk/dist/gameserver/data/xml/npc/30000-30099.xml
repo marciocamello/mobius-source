@@ -1706,7 +1706,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30047" name="Firon" title="Wharf Manager ">
+	<npc id="30047" name="Firon" title="Wharf Manager">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2365,7 +2365,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30063" name="Lara" title="Grocer">
+	<npc id="30063" name="Lars" title="Grocer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3399,7 +3399,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30084" name="Graham" title="Warrior-use Weapon Merchant">
+	<npc id="30084" name="Graham" title="Warrior Weapon Merchant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3446,7 +3446,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30085" name="Stanford" title="Wizard-use Weapon Merchant">
+	<npc id="30085" name="Stanford" title="Wizard Weapon Merchant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3540,7 +3540,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30087" name="Peta" title="Wizard-use Armor Merchant">
+	<npc id="30087" name="Peta" title="Wizard Armor Merchant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3587,7 +3587,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30088" name="Radia" title="Warrior-use Armor Merchant">
+	<npc id="30088" name="Radia" title="Warrior Armor Merchant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3822,7 +3822,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30094" name="Gentler" title="Wizard-use Equipment Merchant">
+	<npc id="30094" name="Gentler" title="Wizard Equipment Merchant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

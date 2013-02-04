@@ -684,7 +684,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35414" name="Doom Trooper " title="">
+	<npc id="35414" name="Doom Trooper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -837,7 +837,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35417" name="Doorman of Hell" title="">
+	<npc id="35417" name="Gatekeeper of Hell" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -889,7 +889,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35418" name="Doorman of Hell" title="">
+	<npc id="35418" name="Gatekeeper of Hell" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -987,7 +987,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35420" name="Loken" title="Messenger">
+	<npc id="35420" name="Loken" title="Herald">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1092,7 +1092,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="35422" name="Flag of Winner" title="">
+	<npc id="35422" name="Victor's Flag" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1466,7 +1466,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35430" name="Oel Mahum Leader" title="">
+	<npc id="35430" name="Oel Mahum Prefect" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.clanhall.MatchLeader" />
 		<set name="baseAtkRange" value="40" />
@@ -1604,7 +1604,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35433" name="Inner Doorman" title="">
+	<npc id="35433" name="Inner Castle Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1656,7 +1656,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35434" name="Inner Doorman" title="">
+	<npc id="35434" name="Inner Castle Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1708,7 +1708,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35435" name="Outer Doorman" title="">
+	<npc id="35435" name="Outer Castle Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1760,7 +1760,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35436" name="Outer Doorman" title="">
+	<npc id="35436" name="Outer Castle Gatekeeper" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1812,7 +1812,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35437" name="Messenger" title="">
+	<npc id="35437" name="Herald" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3524,7 +3524,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="35472" name="Court Sorcerer" title="Rune">
+	<npc id="35472" name="Royal Wizard" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3576,7 +3576,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35473" name="Court Sorcerer" title="Rune">
+	<npc id="35473" name="Royal Wizard" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3628,7 +3628,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35474" name="Court Guard" title="Rune">
+	<npc id="35474" name="Royal Guard" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3678,7 +3678,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35475" name="Guard" title="Rune">
+	<npc id="35475" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3728,7 +3728,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35476" name="Guard" title="Rune">
+	<npc id="35476" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3778,7 +3778,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35477" name="Guard" title="Rune">
+	<npc id="35477" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="1100" />
@@ -3828,7 +3828,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35478" name="Guard" title="Rune">
+	<npc id="35478" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3878,7 +3878,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35479" name="Guard" title="Rune">
+	<npc id="35479" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3928,7 +3928,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35480" name="Guard" title="Rune">
+	<npc id="35480" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="1100" />
@@ -3978,7 +3978,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35481" name="Guard" title="Rune">
+	<npc id="35481" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -4028,7 +4028,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35482" name="Guard" title="Rune">
+	<npc id="35482" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4078,7 +4078,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35483" name="Guard" title="Rune">
+	<npc id="35483" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="1100" />
@@ -4179,7 +4179,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="35485" name="Court Sorcerer" title="Rune">
+	<npc id="35485" name="Royal Wizard" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4231,7 +4231,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35486" name="Court Sorcerer" title="Rune">
+	<npc id="35486" name="Royal Wizard" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4283,7 +4283,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35487" name="Court Guard" title="Rune">
+	<npc id="35487" name="Royal Guard" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -4333,7 +4333,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35488" name="Guard" title="Rune">
+	<npc id="35488" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -4383,7 +4383,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35489" name="Guard" title="Rune">
+	<npc id="35489" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4433,7 +4433,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35490" name="Guard" title="Rune">
+	<npc id="35490" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="1100" />
@@ -4483,7 +4483,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35491" name="Guard" title="Rune">
+	<npc id="35491" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -4533,7 +4533,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35492" name="Guard" title="Rune">
+	<npc id="35492" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4583,7 +4583,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35493" name="Guard" title="Rune">
+	<npc id="35493" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="1100" />
@@ -4633,7 +4633,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35494" name="Guard" title="Rune">
+	<npc id="35494" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -4683,7 +4683,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35495" name="Guard" title="Rune">
+	<npc id="35495" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4733,7 +4733,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35496" name="Guard" title="Rune">
+	<npc id="35496" name="Escort" title="Rune">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="1100" />

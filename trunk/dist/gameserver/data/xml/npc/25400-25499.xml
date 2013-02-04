@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="25400" name="Page of Watchman" title="Raid Fighter">
+	<npc id="25400" name="Watchman's Servant" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -140,7 +140,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25402" name="Retainer of Skyla" title="Raid Fighter">
+	<npc id="25402" name="Skyla's Confidant" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -199,7 +199,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25403" name="Follower of Skyla" title="Raid Fighter">
+	<npc id="25403" name="Skyla's Follower" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -1520,7 +1520,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25421" name="Trisalim Escort" title="Raid Fighter">
+	<npc id="25421" name="Trisalim's Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1577,7 +1577,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25422" name="Page of Rotting Tree" title="Raid Fighter">
+	<npc id="25422" name="Rotting Tree's Servant" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1729,7 +1729,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25424" name="Timiniel's Royal Guards" title="Raid Fighter">
+	<npc id="25424" name="Timiniel's Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1784,7 +1784,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25425" name="Timiniel's Royal Guard Captain" title="Raid Fighter">
+	<npc id="25425" name="Timiniel's Escort Captain" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2110,7 +2110,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25430" name="Talos' Cohort" title="Raid Fighter">
+	<npc id="25430" name="Talos' Pawn" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2465,7 +2465,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25435" name="Barda's Bandit" title="Raid Fighter">
+	<npc id="25435" name="Barda's Pawn" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2756,7 +2756,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25439" name="Kelbar's Inferior" title="Raid Fighter">
+	<npc id="25439" name="Kelbar's Subordinate" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3168,7 +3168,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25445" name="Enmity Ghosts" title="Raid Fighter">
+	<npc id="25445" name="Enmity Ghost" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3227,7 +3227,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25446" name="Shooter of Enmity" title="Raid Fighter">
+	<npc id="25446" name="Begrudged Shooter" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3599,7 +3599,7 @@
 			<defence attribute="unholy" value="15" />
 		</attributes>
 	</npc>
-	<npc id="25451" name="Galaxia's Guards" title="Raid Fighter">
+	<npc id="25451" name="Galaxia's Escorts" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3808,7 +3808,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25454" name="Wyvern of Marsh" title="Raid Fighter">
+	<npc id="25454" name="Swamp Wyvern" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3865,7 +3865,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25455" name="Succubus of Marsh" title="Raid Fighter">
+	<npc id="25455" name="Swamp Succubus" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4494,7 +4494,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25464" name="Garangky Guard Captain" title="Raid Fighter">
+	<npc id="25464" name="Garangky Escort Captain" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4553,7 +4553,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25465" name="Garangky Guard Shaman" title="Raid Fighter">
+	<npc id="25465" name="Garangky Escort Wizard" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -4613,7 +4613,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25466" name="Garangky Guard " title="Raid Fighter">
+	<npc id="25466" name="Garangky Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4966,7 +4966,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25471" name="Utenus's Wizard" title="Raid Fighter">
+	<npc id="25471" name="Utenus' Wizard" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5026,7 +5026,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25472" name="Utenus's Guard" title="Raid Fighter">
+	<npc id="25472" name="Utenus' Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5608,7 +5608,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25480" name="Hisilrome's Page" title="Raid Fighter">
+	<npc id="25480" name="Hisilrome's Servant" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5972,7 +5972,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25485" name="Tillion's Inferior" title="Raid Fighter">
+	<npc id="25485" name="Tillion's Subordinate" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6201,7 +6201,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25488" name="Spirit of Gildor" title="Raid Fighter">
+	<npc id="25488" name="Gildor's Spirit" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6259,7 +6259,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25489" name="Guardian of Gildor" title="Raid Fighter">
+	<npc id="25489" name="Gildor's Guardian" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6402,7 +6402,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25491" name="Guard of Gwindorr" title="Raid Fighter">
+	<npc id="25491" name="Gwindorr's Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -6460,7 +6460,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25492" name="Follower of Gwindorr" title="Raid Fighter">
+	<npc id="25492" name="Gwindorr's Follower" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6610,7 +6610,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25494" name="Spirit of Niniel" title="Raid Fighter">
+	<npc id="25494" name="Niniel's Spirit" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6666,7 +6666,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25495" name="Spirit of Niniel" title="Raid Fighter">
+	<npc id="25495" name="Niniel's Spirit" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

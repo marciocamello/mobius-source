@@ -100,7 +100,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31602" name="Sharona Artemia" title="Bodyguard">
+	<npc id="31602" name="Sharona Artemia" title="Escort">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -437,7 +437,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31609" name="Aurora the Unicorn" title="Belinda Servitor">
+	<npc id="31609" name="Aurora the Unicorn" title="Belinda's Servitor">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1020,7 +1020,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31621" name="Abyss Saint Elcardia" title="">
+	<npc id="31621" name="Abyssal Saintess Elcadia" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1207,7 +1207,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31625" name="Yeti" title="Donath Kitchen Help">
+	<npc id="31625" name="Yeticue" title="Donath Kitchen Assistant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2123,7 +2123,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31644" name="Dawn Witness Franz" title="Witness of Dawn">
+	<npc id="31644" name="Witness of Dawn Franz" title="Witness of Dawn">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3095,7 +3095,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31665" name="Corpse of Dwarf" title="">
+	<npc id="31665" name="Dwarf's Corpse" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3191,7 +3191,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31667" name="Raik" title="Amulet Seller ">
+	<npc id="31667" name="Raik" title="Amulet Seller">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3575,7 +3575,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31675" name="Viktor Van Deik" title="Border Outpost Captain">
+	<npc id="31675" name="Viktor Van Dake" title="Border Outpost Captain">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="40" />
@@ -3776,7 +3776,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31679" name="Eustace Van Essen" title="Frontier Guard Captain">
+	<npc id="31679" name="Eustace Van Essen" title="Border Outpost Captain">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="40" />
@@ -3826,7 +3826,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31680" name="Fleming Van Issen" title="Frontier Guard Captain">
+	<npc id="31680" name="Fleming Van Issen" title="Border Outpost Captain">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="40" />
@@ -3877,7 +3877,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31681" name="Frontier Guard" title="">
+	<npc id="31681" name="Border Outpost Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="40" />
@@ -3927,7 +3927,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31682" name="Frontier Guard" title="">
+	<npc id="31682" name="Border Outpost Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="40" />
@@ -4311,7 +4311,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="31690" name="Monument of Heroes " title="">
+	<npc id="31690" name="Monument of Heroes" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

@@ -4387,7 +4387,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32296" name="Seruzia" title="Spirit of the Old Seer">
+	<npc id="32296" name="Seruzia" title="Spirit of the Late Priest">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="3401" name="Кутус Серый Коготь" title="Босс Разрушения">
+	<npc id="3401" name="Greyclaw Kutus" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -48,7 +48,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3402" name="Охранник Кутуса" title="Боец Разрушения">
+	<npc id="3402" name="Kutus's Escort" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -95,7 +95,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3403" name="Прихвостень Кутуса" title="Боец Разрушения">
+	<npc id="3403" name="Kutus's Pawn" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -142,7 +142,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3404" name="Начальник Следопытов Шарук" title="Босс Разрушения">
+	<npc id="3404" name="Tracker Leader Sharuk" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -189,7 +189,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3405" name="Следопыт Шарука" title="Боец Разрушения">
+	<npc id="3405" name="Sharuk's Tracker" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -236,7 +236,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3406" name="Снайпер Шарука" title="Боец Разрушения">
+	<npc id="3406" name="Sharuk's Marksman" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -283,7 +283,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3407" name="Вождь Трусливых Крысолюдов" title="Босс Разрушения">
+	<npc id="3407" name="Sukar Ratman Chief" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -330,7 +330,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3408" name="Охранник Трусливых Крысолюдов" title="Боец Разрушения">
+	<npc id="3408" name="Sukar Ratman Escort" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -377,7 +377,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3409" name="Жрец Трусливых Крысолюдов" title="Боец Разрушения">
+	<npc id="3409" name="Sukar Ratman Priest" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -424,7 +424,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3410" name="Икунтай" title="Босс Разрушения">
+	<npc id="3410" name="Ikuntai" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -471,7 +471,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3411" name="Служитель Икунтая" title="Боец Разрушения">
+	<npc id="3411" name="Ikuntai's Servitor" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -518,7 +518,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3412" name="Прихвостень Икунтая" title="Боец Разрушения">
+	<npc id="3412" name="Ikuntai's Pawn" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -565,7 +565,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3413" name="Лорд Зомби Кроул" title="Босс Разрушения">
+	<npc id="3413" name="Zombie Lord Crowl" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -612,7 +612,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3414" name="Злой Дух Стрелок" title="Боец Разрушения">
+	<npc id="3414" name="Evil Spirit Archer" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -659,7 +659,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3415" name="Злой Дух Воин" title="Боец Разрушения">
+	<npc id="3415" name="Evil Spirit Warrior" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -706,7 +706,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3416" name="Лорд Зомби Фаракелсус" title="Босс Разрушения">
+	<npc id="3416" name="Zombie Lord Ferkel" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -753,7 +753,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3417" name="Зомби Воин Фаракелсуса" title="Боец Разрушения">
+	<npc id="3417" name="Ferkel's Warrior" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -800,7 +800,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3418" name="Зомби Жрец Фаракелсуса" title="Боец Разрушения">
+	<npc id="3418" name="Ferkel's Priest" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -847,7 +847,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3419" name="Смотритель Земли Казненных Гильотин" title="Босс Разрушения">
+	<npc id="3419" name="Execution Grounds Watchman Guillotine" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -894,7 +894,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3420" name="Повелитель Пламени Шадар" title="Босс Разрушения">
+	<npc id="3420" name="Flame Lord Shadar" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -941,7 +941,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3421" name="Бес Шадара" title="Боец Разрушения">
+	<npc id="3421" name="Claws of Shadar" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -988,7 +988,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3422" name="Суккуб Шадара" title="Боец Разрушения">
+	<npc id="3422" name="Whip of Shadar" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1035,7 +1035,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3423" name="Собиратель Душ Ашерон" title="Босс Разрушения">
+	<npc id="3423" name="Soul Collector Acheron" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1082,7 +1082,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3424" name="Терзатель Душ" title="Боец Разрушения">
+	<npc id="3424" name="Soul Slasher" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1129,7 +1129,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3425" name="Разрыватель Душ" title="Боец Разрушения">
+	<npc id="3425" name="Soul Strainer" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1176,7 +1176,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3426" name="Лорд Ишка" title="Босс Разрушения">
+	<npc id="3426" name="Lord Ishka" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1223,7 +1223,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3427" name="Элитный Офицер Ишки" title="Боец Разрушения">
+	<npc id="3427" name="Ishka's Elite Officer" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1270,7 +1270,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3428" name="Элитный Воитель Ишки" title="Боец Разрушения">
+	<npc id="3428" name="Ishka's Elite Soldier" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1317,7 +1317,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3429" name="Демон Курикупс" title="Босс Разрушения">
+	<npc id="3429" name="Demon Kuri" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1364,7 +1364,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3430" name="Жена Курикупса" title="Боец Разрушения">
+	<npc id="3430" name="Kuri's Wife" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1411,7 +1411,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3431" name="Дьявольский Клинок Хаоса" title="Боец Разрушения">
+	<npc id="3431" name="Devil Blader of Chaos" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1458,7 +1458,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3432" name="Древний Астральный Дрейк" title="Босс Разрушения">
+	<npc id="3432" name="Ancient Weird Drake" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1505,7 +1505,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3433" name="Кровавый Монарх Гато" title="Босс Разрушения">
+	<npc id="3433" name="Slaughter Lord Gato" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1552,7 +1552,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3434" name="Снайпер Гато" title="Боец Разрушения">
+	<npc id="3434" name="Gato's Sniper" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1599,7 +1599,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3435" name="Главарь Банды Гато" title="Боец Разрушения">
+	<npc id="3435" name="Gato's Troop Leader" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1646,7 +1646,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3436" name="Кату Главарь Авангарда Атуи" title="Босс Разрушения">
+	<npc id="3436" name="Ketra Commander Atis" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1693,7 +1693,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3437" name="Снайпер Авангарда Кату" title="Боец Разрушения">
+	<npc id="3437" name="Ketra Marksman" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1740,7 +1740,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3438" name="Бандит Авангарда Кату " title="Боец Разрушения">
+	<npc id="3438" name="Ketra Raider" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1787,7 +1787,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3439" name="Птицезмей" title="Босс Разрушения">
+	<npc id="3439" name="Beacon of Blue Sky" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1834,7 +1834,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3440" name="Стрелец Птицезмея" title="Боец Разрушения">
+	<npc id="3440" name="Beacon's Shooter" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1881,7 +1881,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3441" name="Воин Птицезмея" title="Боец Разрушения">
+	<npc id="3441" name="Beacon's Warrior" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1928,7 +1928,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3442" name="Панатен Хранитель Земли" title="Босс Разрушения">
+	<npc id="3442" name="Earth Protector Panathen" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -1975,7 +1975,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3443" name="Рыцарь Панатена" title="Боец Разрушения">
+	<npc id="3443" name="Panathen's Knight" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2022,7 +2022,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3444" name="Хранитель Панатена" title="Боец Разрушения">
+	<npc id="3444" name="Panathen's Protectors" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2069,7 +2069,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3445" name="Предатель Уруту Фреки" title="Босс Разрушения">
+	<npc id="3445" name="Betrayer of Urutu Freki" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2116,7 +2116,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3446" name="Кровопийца Фреки" title="Боец Разрушения">
+	<npc id="3446" name="Freki's Vampire Bat" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2163,7 +2163,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3447" name="Дикий Медведь Фреки" title="Боец Разрушения">
+	<npc id="3447" name="Freki's Wild Bear" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2210,7 +2210,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3448" name="Мстительный Дух Нелли" title="Босс Разрушения">
+	<npc id="3448" name="Nellis' Vengeful Spirit" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2257,7 +2257,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3449" name="Адепт Нелли" title="Боец Разрушения">
+	<npc id="3449" name="Nellis' Follower" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2304,7 +2304,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3450" name="Налетчик Раито" title="Босс Разрушения">
+	<npc id="3450" name="Rayito the Looter" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2351,7 +2351,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3451" name="Начальник Стражи Раито" title="Боец Разрушения">
+	<npc id="3451" name="Rayito's Guard Captain" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2398,7 +2398,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3452" name="Оруженосец Раито" title="Боец Разрушения">
+	<npc id="3452" name="Rayito's Henchman" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2445,7 +2445,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3453" name="Герой Кетра Хекатон" title="Босс Разрушения">
+	<npc id="3453" name="Ketra's Hero Hekaton" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2492,7 +2492,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3454" name="Разведчик Хекатона" title="Боец Разрушения">
+	<npc id="3454" name="Hekaton's Scout" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2539,7 +2539,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3455" name="Последователь Хекатона" title="Боец Разрушения">
+	<npc id="3455" name="Hekaton's Servant" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2586,7 +2586,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3456" name="Герой Варка Шадит" title="Босс Разрушения">
+	<npc id="3456" name="Varka's Hero Shadith" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2633,7 +2633,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3457" name="Префект Шадита" title="Боец Разрушения">
+	<npc id="3457" name="Shadith's Escort Captain" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2680,7 +2680,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3458" name="Сторож Шадита" title="Боец Разрушения">
+	<npc id="3458" name="Shadith's Sentinel" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2727,7 +2727,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3459" name="Клинок Судьбы Танатос" title="Босс Разрушения">
+	<npc id="3459" name="Doom Blade Tanatos" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2774,7 +2774,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3460" name="Кернон " title="Босс Разрушения">
+	<npc id="3460" name="Kernon" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2821,7 +2821,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3461" name="Талиадон" title="Боец Разрушения">
+	<npc id="3461" name="Taliadon" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2868,7 +2868,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3462" name="Вемск" title="Боец Разрушения">
+	<npc id="3462" name="Vemsk" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2915,7 +2915,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3463" name="Минас Анор" title="Босс Разрушения">
+	<npc id="3463" name="Meanas Anor" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -2962,7 +2962,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3464" name="Болотная Виверна" title="Боец Разрушения">
+	<npc id="3464" name="Swamp Wyvern" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3009,7 +3009,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3465" name="Болотный Суккуб" title="Боец Разрушения">
+	<npc id="3465" name="Swamp Succubus" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3056,7 +3056,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3466" name="Коллекционер Маммона Талос" title="Босс Разрушения">
+	<npc id="3466" name="Mammon Collector Talos" title="Lord of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
@@ -3103,7 +3103,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3467" name="Прихвостень Талоса" title="Боец Разрушения">
+	<npc id="3467" name="Talos' Pawn" title="Follower of Destruction">
 		<!--Need TODO-->
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>

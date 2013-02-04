@@ -1258,7 +1258,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32027" name="Holy Brazier" title="">
+	<npc id="32027" name="Divine Furnace" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1534,7 +1534,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32033" name="Doctor Chaos" title="">
+	<npc id="32033" name="Dr. Chaos" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2086,7 +2086,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32045" name="Doctor Chaos' Secret Bookshelf" title="">
+	<npc id="32045" name="Dr. Chaos' Secret Bookshelf" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2604,7 +2604,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32056" name="Aren" title="Khavatari ">
+	<npc id="32056" name="Aren" title="Khavatari">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3436,7 +3436,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="32074" name="Gludio Territory Manager" title="Guild President">
+	<npc id="32074" name="Gludio Territory Manager" title="Adventure Guildsman">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

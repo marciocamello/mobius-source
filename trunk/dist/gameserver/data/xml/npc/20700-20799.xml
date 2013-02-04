@@ -595,7 +595,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="20748" name="Roxide Cohort" title="">
+	<npc id="20748" name="Roxide's Follower" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -976,7 +976,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20752" name="Snipe Cohort" title="">
+	<npc id="20752" name="Snipe's Subordinate" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1347,7 +1347,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="20755" name="Talakin" title="">
+	<npc id="20755" name="Talakin Commander" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1593,7 +1593,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20758" name="Dragon Bearer Chief" title="">
+	<npc id="20758" name="Dragon Bearer Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2157,7 +2157,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20764" name="Shaman of the Plains" title="">
+	<npc id="20764" name="Wizard of the Plains" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -2412,7 +2412,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20767" name="Timak Orc Troop Leader" title="">
+	<npc id="20767" name="Timak Orc Troop Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="TimakOrcTroopLeader" />
 		<set name="baseAtkRange" value="40" />
@@ -3033,7 +3033,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20774" name="Conjurer Bat " title="">
+	<npc id="20774" name="Conjurer Bat" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3450,7 +3450,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20778" name="Ragna Orc Overlord" title="">
+	<npc id="20778" name="Ragna Orc Prefect" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3534,7 +3534,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20779" name="Ragna Orc Seer" title="">
+	<npc id="20779" name="Ragna Orc Priest" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -3613,7 +3613,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="20780" name="Bloody Axe Elite" title="">
+	<npc id="20780" name="Bloody Axe's Escort" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

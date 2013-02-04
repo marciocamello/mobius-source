@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="35300" name="Guard" title="Innadril">
+	<npc id="35300" name="Escort" title="Innadril">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -51,7 +51,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35301" name="Guard" title="Innadril">
+	<npc id="35301" name="Escort" title="Innadril">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -102,7 +102,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35302" name="Guard" title="Innadril">
+	<npc id="35302" name="Escort" title="Innadril">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -152,7 +152,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35303" name="Guard" title="Innadril">
+	<npc id="35303" name="Escort" title="Innadril">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -202,7 +202,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35304" name="Guard" title="Innadril">
+	<npc id="35304" name="Escort" title="Innadril">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -252,7 +252,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35305" name="Guard" title="Innadril">
+	<npc id="35305" name="Escort" title="Innadril">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -302,7 +302,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35306" name="Guard" title="Innadril">
+	<npc id="35306" name="Escort" title="Innadril">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -352,7 +352,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35307" name="Guard" title="Innadril">
+	<npc id="35307" name="Escort" title="Innadril">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -605,7 +605,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35312" name="Outer Doorman" title="Innadril">
+	<npc id="35312" name="Outer Castle Gatekeeper" title="Innadril">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -661,7 +661,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35313" name="Inner Doorman" title="Innadril">
+	<npc id="35313" name="Inner Castle Gatekeeper" title="Innadril">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -816,7 +816,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35316" name="Neurath" title="Chamberlain ">
+	<npc id="35316" name="Chamberlain of Light" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1005,7 +1005,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35320" name="Raybell" title="Sir">
+	<npc id="35320" name="Raybell" title="Herald">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1298,7 +1298,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35327" name="Court Sorcerer" title="Goddard">
+	<npc id="35327" name="Royal Wizard" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1351,7 +1351,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35328" name="Court Sorcerer" title="Goddard">
+	<npc id="35328" name="Royal Wizard" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -1404,7 +1404,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35329" name="Guard" title="Goddard">
+	<npc id="35329" name="Royal Guard" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1454,7 +1454,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35330" name="Bodyguard" title="Goddard">
+	<npc id="35330" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1504,7 +1504,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35331" name="Bodyguard" title="Goddard">
+	<npc id="35331" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1554,7 +1554,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35332" name="Bodyguard" title="Goddard">
+	<npc id="35332" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1604,7 +1604,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35333" name="Bodyguard" title="Goddard">
+	<npc id="35333" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1654,7 +1654,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35334" name="Bodyguard" title="Goddard">
+	<npc id="35334" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1704,7 +1704,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35335" name="Bodyguard" title="Goddard">
+	<npc id="35335" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1754,7 +1754,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35336" name="Bodyguard" title="Goddard">
+	<npc id="35336" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1804,7 +1804,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35337" name="Bodyguard" title="Goddard">
+	<npc id="35337" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1854,7 +1854,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35338" name="Bodyguard" title="Goddard">
+	<npc id="35338" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1955,7 +1955,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35340" name="Court Sorcerer" title="Goddard">
+	<npc id="35340" name="Royal Wizard" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -2009,7 +2009,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35341" name="Court Sorcerer" title="Goddard">
+	<npc id="35341" name="Royal Wizard" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -2062,7 +2062,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35342" name="Guard" title="Goddard">
+	<npc id="35342" name="Royal Guard" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -2112,7 +2112,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35343" name="Bodyguard" title="Goddard">
+	<npc id="35343" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -2162,7 +2162,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35344" name="Bodyguard" title="Goddard">
+	<npc id="35344" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2212,7 +2212,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35345" name="Bodyguard" title="Goddard">
+	<npc id="35345" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -2262,7 +2262,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35346" name="Bodyguard" title="Goddard">
+	<npc id="35346" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -2312,7 +2312,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35347" name="Bodyguard" title="Goddard">
+	<npc id="35347" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2362,7 +2362,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35348" name="Bodyguard" title="Goddard">
+	<npc id="35348" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -2412,7 +2412,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35349" name="Bodyguard" title="Goddard">
+	<npc id="35349" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -2462,7 +2462,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35350" name="Bodyguard" title="Goddard">
+	<npc id="35350" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2512,7 +2512,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35351" name="Bodyguard" title="Goddard">
+	<npc id="35351" name="Escort" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -2766,7 +2766,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35356" name="Outer Doorman" title="Goddard">
+	<npc id="35356" name="Outer Castle Gatekeeper" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2823,7 +2823,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35357" name="Inner Doorman" title="Goddard">
+	<npc id="35357" name="Inner Castle Gatekeeper" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2880,7 +2880,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35358" name="Inner Doorman" title="Goddard">
+	<npc id="35358" name="Inner Castle Gatekeeper" title="Goddard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3150,7 +3150,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35363" name="Alfred" title="Chamberlain">
+	<npc id="35363" name="Chamberlain of Light" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3244,7 +3244,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35365" name="Rowell" title="Manager of Mercenary">
+	<npc id="35365" name="Rowell" title="Mercenary Manager">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3338,7 +3338,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35367" name="Daven" title="Messenger">
+	<npc id="35367" name="Daven" title="Herald">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3489,7 +3489,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35370" name="Partisan Court Guard" title="">
+	<npc id="35370" name="Partisan Royal Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3539,7 +3539,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35371" name="Partisan Court Guard" title="">
+	<npc id="35371" name="Partisan Royal Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3639,7 +3639,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35373" name="Partisan Sorcerer" title="">
+	<npc id="35373" name="Partisan Wizard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3840,7 +3840,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35377" name="Partisan Court Guard" title="">
+	<npc id="35377" name="Partisan Royal Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3890,7 +3890,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35378" name="Partisan Court Guard" title="">
+	<npc id="35378" name="Partisan Royal Guard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3990,7 +3990,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35380" name="Partisan Sorcerer" title="">
+	<npc id="35380" name="Partisan Wizard" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />

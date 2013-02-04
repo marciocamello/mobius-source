@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="22500" name="Lost Watcher" title="">
+	<npc id="22500" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="custom.LabyrinthLostWatcher" />
 		<set name="baseAtkRange" value="40" />
@@ -66,7 +66,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="22501" name="Lost Watcher" title="">
+	<npc id="22501" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -197,7 +197,7 @@
 			<defence attribute="unholy" value="90" />
 		</attributes>
 	</npc>
-	<npc id="22503" name="Lost Watcher" title="">
+	<npc id="22503" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="custom.LabyrinthLostWatcher" />
 		<set name="baseAtkRange" value="40" />
@@ -263,7 +263,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22504" name="Lost Watcher" title="">
+	<npc id="22504" name="Lost Watchman" title="">
 		<set name="aggroRange" value="300" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2935,7 +2935,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22537" name="Dragon Steed Troop Grand Magician" title="">
+	<npc id="22537" name="Dragon Steed Troop Grand Wizard" title="">
 		<set name="aggroRange" value="800" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3127,7 +3127,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22539" name="Dragon Steed Troops No 1 Battalion Commander" title="">
+	<npc id="22539" name="Dragon Steed Troop #1 Battalion Commander" title="">
 		<set name="aggroRange" value="800" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3224,7 +3224,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22540" name="White Dragon Leader" title="">
+	<npc id="22540" name="White Dragon Captain" title="">
 		<set name="aggroRange" value="800" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3414,7 +3414,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22542" name="Dragon Steed Troop Magic Leader" title="">
+	<npc id="22542" name="Dragon Steed Troop Wizard Captain" title="">
 		<set name="aggroRange" value="800" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3504,7 +3504,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22543" name="Dragon Steed Troop Magician" title="">
+	<npc id="22543" name="Dragon Steed Troop Wizard" title="">
 		<set name="aggroRange" value="800" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3595,7 +3595,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22544" name="Dragon Steed Troop Magic Soldier" title="">
+	<npc id="22544" name="Dragon Steed Troop Wizard Soldier" title="">
 		<set name="aggroRange" value="800" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3770,7 +3770,7 @@
 			<defence attribute="unholy" value="180" />
 		</attributes>
 	</npc>
-	<npc id="22546" name="Warrior of Light" title="">
+	<npc id="22546" name="Berserker" title="">
 		<set name="aggroRange" value="800" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4330,7 +4330,7 @@
 			<defence attribute="unholy" value="180" />
 		</attributes>
 	</npc>
-	<npc id="22552" name="Mutation Drake" title="">
+	<npc id="22552" name="Mutated Drake" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4827,7 +4827,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22561" name="Defeated Troops White Dragon Leader" title="">
+	<npc id="22561" name="Defeated Troops White Dragon Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4915,7 +4915,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22563" name="Defeated Troops Magic Leader" title="">
+	<npc id="22563" name="Defeated Troops Wizard Captain" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -4959,7 +4959,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22564" name="Defeated Troops Magician" title="">
+	<npc id="22564" name="Defeated Troops Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5003,7 +5003,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22565" name="Defeated Troops Magic Soldier" title="">
+	<npc id="22565" name="Defeated Troops Wizard Soldier" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5179,7 +5179,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22569" name="Soldiers of Bravery" title="Tiat's Bodyguard">
+	<npc id="22569" name="Soldiers of Bravery" title="Tiat's Escort">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -5353,7 +5353,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22571" name="Dragon Steed Troop Grand Magician" title="">
+	<npc id="22571" name="Dragon Steed Troop Grand Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5531,7 +5531,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22573" name="Dragon Steed Troops No 1 Battalion Commander" title="">
+	<npc id="22573" name="Dragon Steed Troop #1 Battalion Commander" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -5624,7 +5624,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22574" name="White Dragon Leader" title="">
+	<npc id="22574" name="White Dragon Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5799,7 +5799,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22576" name="Dragon Steed Troop Magic Leader" title="">
+	<npc id="22576" name="Dragon Steed Troop Wizard Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5884,7 +5884,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22577" name="Dragon Steed Troop Magician" title="">
+	<npc id="22577" name="Dragon Steed Troop Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -5970,7 +5970,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22578" name="Dragon Steed Troop Magic Soldier" title="">
+	<npc id="22578" name="Dragon Steed Troop Wizard Soldier" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6060,7 +6060,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22579" name="Warrior of Light" title="">
+	<npc id="22579" name="Berserker" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6407,7 +6407,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22583" name="Dragon Steed Troop Magic Leader" title="">
+	<npc id="22583" name="Dragon Steed Troop Wizard Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6491,7 +6491,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22584" name="Dragon Steed Troop Magician" title="">
+	<npc id="22584" name="Dragon Steed Troop Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6578,7 +6578,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22585" name="Dragon Steed Troop Magic Soldier" title="">
+	<npc id="22585" name="Dragon Steed Troop Wizard Soldier" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -6744,7 +6744,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22587" name="Dragon Steed Troop Captain #1" title="">
+	<npc id="22587" name="Dragon Steed Troop #1 Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -6827,7 +6827,7 @@
 			<defence attribute="unholy" value="130" />
 		</attributes>
 	</npc>
-	<npc id="22588" name="White Dragon Leader" title="">
+	<npc id="22588" name="White Dragon Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7081,7 +7081,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22591" name="Dragon Steed Troop Magic Leader" title="">
+	<npc id="22591" name="Dragon Steed Troop Wizard Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -7163,7 +7163,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22592" name="Dragon Steed Troop Magician" title="">
+	<npc id="22592" name="Dragon Steed Troop Wizard" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -7248,7 +7248,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22593" name="Dragon Steed Troop Magic Soldier" title="">
+	<npc id="22593" name="Dragon Steed Troop Wizard Soldier" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -7433,7 +7433,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22595" name="Dragon Steed Troops No 1 Battalion Commander" title="">
+	<npc id="22595" name="Dragon Steed Troop #1 Battalion Commander" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="80" />
@@ -7527,7 +7527,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="22596" name="White Dragon Leader" title="">
+	<npc id="22596" name="White Dragon Captain" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />

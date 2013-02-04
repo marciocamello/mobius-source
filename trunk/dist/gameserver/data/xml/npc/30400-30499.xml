@@ -1034,7 +1034,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30422" name="Kalinta" title="Abyssal Celebrant ">
+	<npc id="30422" name="Kalinta" title="Abyssal Celebrant">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1704,7 +1704,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30436" name="Sarien" title="Trader">
+	<npc id="30436" name="Sarien" title="Grocer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -1750,7 +1750,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30437" name="Rolento" title="Trader">
+	<npc id="30437" name="Rolento" title="Grocer">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2795,7 +2795,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30483" name="Mozella" title="Gatekeeper">
+	<npc id="30483" name="Carsus" title="Ivory Tower Wizard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2842,7 +2842,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30484" name="Ponti" title="Gatekeeper">
+	<npc id="30484" name="Janssen" title="Ivory Tower Wizard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2889,7 +2889,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30485" name="Capella" title="Gatekeeper">
+	<npc id="30485" name="Belkadhi" title="Ivory Tower Wizard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2936,7 +2936,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30486" name="Hanna" title="Gatekeeper">
+	<npc id="30486" name="Ian" title="Ivory Tower Wizard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -2983,7 +2983,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30487" name="Penelope" title="Gatekeeper">
+	<npc id="30487" name="Rombel" title="Ivory Tower Wizard">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3077,7 +3077,7 @@
 			<defence attribute="unholy" value="150" />
 		</attributes>
 	</npc>
-	<npc id="30498" name="Moke" title="Warehouse Chief ">
+	<npc id="30498" name="Moke" title="Warehouse Chief">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

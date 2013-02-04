@@ -4187,7 +4187,7 @@
 			<defence attribute="unholy" value="147" />
 		</attributes>
 	</npc>
-	<npc id="14295" name="Boxer the Unicorn " title="">
+	<npc id="14295" name="Boxer the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4279,7 +4279,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14297" name="Boxer the Unicorn " title="">
+	<npc id="14297" name="Boxer the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4371,7 +4371,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="14299" name="Boxer the Unicorn " title="">
+	<npc id="14299" name="Boxer the Unicorn" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

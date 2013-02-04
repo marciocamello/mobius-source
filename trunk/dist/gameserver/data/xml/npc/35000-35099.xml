@@ -1041,7 +1041,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="35030" name="Elite Mercenary Guild Member" title="">
+	<npc id="35030" name="Elite Mercenary" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1094,7 +1094,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35031" name="Elite Mercenary Guild Member" title="">
+	<npc id="35031" name="Elite Mercenary" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1147,7 +1147,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35032" name="Elite Mercenary Guild Member" title="">
+	<npc id="35032" name="Elite Mercenary" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1200,7 +1200,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35033" name="Elite Mercenary Guild Member" title="">
+	<npc id="35033" name="Elite Mercenary" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -1254,7 +1254,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35034" name="Elite Mercenary Guild Member" title="">
+	<npc id="35034" name="Elite Mercenary" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1308,7 +1308,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35035" name="Elite Mercenary Guild Member" title="">
+	<npc id="35035" name="Elite Mercenary" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1358,7 +1358,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35036" name="Elite Mercenary Guild Member" title="">
+	<npc id="35036" name="Elite Mercenary" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1408,7 +1408,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35037" name="Elite Mercenary Guild Member" title="">
+	<npc id="35037" name="Elite Mercenary" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1458,7 +1458,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35038" name="Elite Mercenary Guild Member" title="">
+	<npc id="35038" name="Elite Mercenary" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -1509,7 +1509,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35039" name="Elite Mercenary Guild Member" title="">
+	<npc id="35039" name="Elite Mercenary" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1560,7 +1560,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35040" name="Greater Recruit" title="">
+	<npc id="35040" name="Elite Recruit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1614,7 +1614,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35041" name="Greater Recruit" title="">
+	<npc id="35041" name="Elite Recruit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1667,7 +1667,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35042" name="Greater Recruit" title="">
+	<npc id="35042" name="Elite Recruit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1720,7 +1720,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35043" name="Greater Recruit" title="">
+	<npc id="35043" name="Elite Recruit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -1774,7 +1774,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35044" name="Greater Recruit" title="">
+	<npc id="35044" name="Elite Recruit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1828,7 +1828,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35045" name="Greater Recruit" title="">
+	<npc id="35045" name="Elite Recruit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1879,7 +1879,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35046" name="Greater Recruit" title="">
+	<npc id="35046" name="Elite Recruit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -1929,7 +1929,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35047" name="Greater Recruit" title="">
+	<npc id="35047" name="Elite Recruit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1979,7 +1979,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35048" name="Greater Recruit" title="">
+	<npc id="35048" name="Elite Recruit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -2030,7 +2030,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="35049" name="Greater Recruit" title="">
+	<npc id="35049" name="Elite Recruit" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -2848,7 +2848,7 @@
 			<defence attribute="unholy" value="120" />
 		</attributes>
 	</npc>
-	<npc id="35065" name="Cronenberg" title="Sir">
+	<npc id="35065" name="Cronenberg" title="Royal Guard Captain">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2949,7 +2949,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35067" name="Court Sorcerer" title="Gludio">
+	<npc id="35067" name="Royal Wizard" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3002,7 +3002,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35068" name="Court Sorcerer" title="Gludio">
+	<npc id="35068" name="Royal Wizard" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -3055,7 +3055,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35069" name="Court Guard" title="Gludio">
+	<npc id="35069" name="Royal Guard" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3105,7 +3105,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35070" name="Guard" title="Gludio">
+	<npc id="35070" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3155,7 +3155,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35071" name="Guard" title="Gludio">
+	<npc id="35071" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3205,7 +3205,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35072" name="Guard" title="Gludio">
+	<npc id="35072" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3255,7 +3255,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35073" name="Guard" title="Gludio">
+	<npc id="35073" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3305,7 +3305,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35074" name="Guard" title="Gludio">
+	<npc id="35074" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3355,7 +3355,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35075" name="Guard" title="Gludio">
+	<npc id="35075" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3405,7 +3405,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35076" name="Guard" title="Gludio">
+	<npc id="35076" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3455,7 +3455,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35077" name="Guard" title="Gludio">
+	<npc id="35077" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3505,7 +3505,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35078" name="Guard" title="Gludio">
+	<npc id="35078" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3606,7 +3606,7 @@
 			<defence attribute="unholy" value="80" />
 		</attributes>
 	</npc>
-	<npc id="35080" name="Court Sorcerer" title="Gludio">
+	<npc id="35080" name="Royal Wizard" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardMystic" />
 		<set name="baseAtkRange" value="40" />
@@ -3660,7 +3660,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35081" name="Court Sorcerer" title="Gludio">
+	<npc id="35081" name="Royal Wizard" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardPriest" />
 		<set name="baseAtkRange" value="40" />
@@ -3714,7 +3714,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35082" name="Court Guard" title="Gludio">
+	<npc id="35082" name="Royal Guard" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3764,7 +3764,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35083" name="Guard" title="Gludio">
+	<npc id="35083" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3814,7 +3814,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35084" name="Guard" title="Gludio">
+	<npc id="35084" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3864,7 +3864,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35085" name="Guard" title="Gludio">
+	<npc id="35085" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -3915,7 +3915,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35086" name="Guard" title="Gludio">
+	<npc id="35086" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -3965,7 +3965,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35087" name="Guard" title="Gludio">
+	<npc id="35087" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4015,7 +4015,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35088" name="Guard" title="Gludio">
+	<npc id="35088" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -4065,7 +4065,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35089" name="Guard" title="Gludio">
+	<npc id="35089" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="80" />
@@ -4115,7 +4115,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35090" name="Guard" title="Gludio">
+	<npc id="35090" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardFighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4165,7 +4165,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35091" name="Guard" title="Gludio">
+	<npc id="35091" name="Escort" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.SiegeGuardRanger" />
 		<set name="baseAtkRange" value="1100" />
@@ -4418,7 +4418,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35096" name="Outer Doorman" title="Gludio">
+	<npc id="35096" name="Outer Castle Gatekeeper" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -4474,7 +4474,7 @@
 			<defence attribute="unholy" value="40" />
 		</attributes>
 	</npc>
-	<npc id="35097" name="Inner Doorman" title="Gludio">
+	<npc id="35097" name="Inner Castle Gatekeeper" title="Gludio">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />

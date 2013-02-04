@@ -87,7 +87,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25002" name="Guard of Kutus" title="Raid Fighter">
+	<npc id="25002" name="Kutus' Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -147,7 +147,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25003" name="Pawn of Kutus" title="Raid Fighter">
+	<npc id="25003" name="Kutus' Pawn" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -494,7 +494,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25008" name="Cletu's Retainer" title="Raid Fighter">
+	<npc id="25008" name="Cletu's Confidant" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -692,7 +692,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25011" name="Guard of Thieles" title="Raid Fighter">
+	<npc id="25011" name="Thieles' Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -751,7 +751,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25012" name="Follower of Thieles" title="Raid Fighter">
+	<npc id="25012" name="Thieles' Follower" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -806,7 +806,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25013" name="Ghost of Peasant Leader" title="Raid Boss">
+	<npc id="25013" name="Ghost of Peasant Captain" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1507,7 +1507,7 @@
 			<defence attribute="unholy" value="189" />
 		</attributes>
 	</npc>
-	<npc id="25023" name="Stakato Queen Zyrnna" title="Raid Boss">
+	<npc id="25023" name="March Stakato Queen Zyrnna" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1590,7 +1590,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25024" name="Jeruna's Guard Captain" title="Raid Fighter">
+	<npc id="25024" name="Jeruna's Escort Captain" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1649,7 +1649,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25025" name="Jeruna's Guard" title="Raid Fighter">
+	<npc id="25025" name="Jeruna's Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1707,7 +1707,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25026" name="Katu Van Leader Atui" title="Raid Boss">
+	<npc id="25026" name="Ketra Van Captain Atis" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1796,7 +1796,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25027" name="Katu Van Marksman" title="Raid Fighter">
+	<npc id="25027" name="Ketra Marksman" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -1855,7 +1855,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25028" name="Katu Van Raider" title="Raid Fighter">
+	<npc id="25028" name="Ketra Raider" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2202,7 +2202,7 @@
 			<defence attribute="unholy" value="189" />
 		</attributes>
 	</npc>
-	<npc id="25033" name="Millenu Guard Shaman" title="Raid Fighter">
+	<npc id="25033" name="Millenu Escort Wizard" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -2262,7 +2262,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25034" name="Mellenu Guard Warrior" title="Raid Fighter">
+	<npc id="25034" name="Millenu Escort Warrior" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2627,7 +2627,7 @@
 			<defence attribute="unholy" value="189" />
 		</attributes>
 	</npc>
-	<npc id="25039" name="Tirak's Guard" title="Raid Fighter">
+	<npc id="25039" name="Tirak's Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2897,7 +2897,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25043" name="Remmel's Guard" title="Raid Fighter">
+	<npc id="25043" name="Remmel's Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3054,7 +3054,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25045" name="Dark Mage's of Barion" title="Raid Fighter">
+	<npc id="25045" name="Barion's Dark Wizard" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Priest" />
 		<set name="baseAtkRange" value="40" />
@@ -3114,7 +3114,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25046" name="Barion's Grunt" title="Raid Fighter">
+	<npc id="25046" name="Barion's Soldier" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3336,7 +3336,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25049" name="Karte's Royal Guard" title="Raid Fighter">
+	<npc id="25049" name="Karte's Royal Guards" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3903,7 +3903,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25057" name="Biconne of Blue Sky" title="Raid Boss">
+	<npc id="25057" name="Beacon of Blue Sky" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3989,7 +3989,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25058" name="Biconne's Shooter" title="Raid Fighter">
+	<npc id="25058" name="Beacon's Shooter" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -4050,7 +4050,7 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="25059" name="Biconne's Warrior" title="Raid Fighter">
+	<npc id="25059" name="Beacon's Warrior" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4606,7 +4606,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25067" name="Captain of Red Flag Shaka" title="Raid Boss">
+	<npc id="25067" name="Red Flag Captain Shaka" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4699,7 +4699,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25068" name="Shaka's Shooter" title="Raid Fighter">
+	<npc id="25068" name="Shaka's Sniper" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Ranger" />
 		<set name="baseAtkRange" value="1100" />
@@ -4817,7 +4817,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25070" name="Enchanted Forest Watcher Ruell" title="Raid Boss">
+	<npc id="25070" name="Enchanted Forest Lookout Ruell" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5306,7 +5306,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25077" name="Captain Dogun" title="Raid Fighter">
+	<npc id="25077" name="Escort Captain Dogun" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5362,7 +5362,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25078" name="Princess' Guard" title="Raid Fighter">
+	<npc id="25078" name="Princess' Escort" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -5809,7 +5809,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25085" name="Timak Orc Chief Ranger" title="Raid Boss">
+	<npc id="25085" name="Timak Orc Ranger Captain" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6389,7 +6389,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25093" name="Korim Chief Guard Kaywon" title="Raid Fighter">
+	<npc id="25093" name="Korim Guard Captain Kaywon" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6776,7 +6776,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="25099" name="Rotten Tree Repiro" title="Raid Boss">
+	<npc id="25099" name="Rotting Tree Repiro" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
