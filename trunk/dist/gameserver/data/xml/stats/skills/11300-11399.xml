@@ -67,7 +67,7 @@
 	</skill>
 	<skill id="11304" levels="1" name="Mass Servitor Haste">
     <!-- Increases Atk. Spd. of all servitors by 34% for 30 minutes. -->
-		<table name="#Tab-pAtkSpd">41.34</table>
+		<table name="#Tab-pAtkSpd">1.34</table>
 		<table name="#effectPoint">495</table>
 		<table name="#abnormal_lv">1</table>
 		<table name="#abnormal_time">1800</table>
