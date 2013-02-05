@@ -62,16 +62,16 @@ public class Kama56Boss extends Fighter
 			_lastMinionsTargetRef = HardReferences.emptyRef();
 			return;
 		}
-		MinionList ml = actor.getMinionList();
+		final MinionList ml = actor.getMinionList();
 		if ((ml == null) || !ml.hasMinions())
 		{
 			_lastMinionsTargetRef = HardReferences.emptyRef();
 			return;
 		}
-		long now = System.currentTimeMillis();
+		final long now = System.currentTimeMillis();
 		if ((_nextOrderTime > now) && (_lastMinionsTargetRef.get() != null))
 		{
-			Player old_target = _lastMinionsTargetRef.get();
+			final Player old_target = _lastMinionsTargetRef.get();
 			if ((old_target != null) && !old_target.isAlikeDead())
 			{
 				for (MinionInstance m : ml.getAliveMinions())
@@ -85,13 +85,13 @@ public class Kama56Boss extends Fighter
 			}
 		}
 		_nextOrderTime = now + 30000;
-		List<Player> pl = World.getAroundPlayers(actor);
+		final List<Player> pl = World.getAroundPlayers(actor);
 		if (pl.isEmpty())
 		{
 			_lastMinionsTargetRef = HardReferences.emptyRef();
 			return;
 		}
-		List<Player> alive = new LazyArrayList<>();
+		final List<Player> alive = new LazyArrayList<>();
 		for (Player p : pl)
 		{
 			if (!p.isAlikeDead())
@@ -104,7 +104,7 @@ public class Kama56Boss extends Fighter
 			_lastMinionsTargetRef = HardReferences.emptyRef();
 			return;
 		}
-		Player target = alive.get(Rnd.get(alive.size()));
+		final Player target = alive.get(Rnd.get(alive.size()));
 		_lastMinionsTargetRef = target.getRef();
 		Functions.npcSayCustomMessage(actor, "Kama56Boss.attack", target.getName());
 		for (MinionInstance m : ml.getAliveMinions())
@@ -120,7 +120,7 @@ public class Kama56Boss extends Fighter
 	@Override
 	protected void thinkAttack()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return;

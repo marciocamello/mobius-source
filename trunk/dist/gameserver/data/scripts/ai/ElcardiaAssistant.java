@@ -116,11 +116,11 @@ public class ElcardiaAssistant extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
-		Creature following = actor.getFollowTarget();
+		final NpcInstance actor = getActor();
+		final Creature following = actor.getFollowTarget();
 		if ((following == null) || !actor.isFollow)
 		{
-			Player master = getMaster();
+			final Player master = getMaster();
 			if (master != null)
 			{
 				actor.setFollowTarget(master);
@@ -138,7 +138,7 @@ public class ElcardiaAssistant extends DefaultAI
 	@Override
 	protected void onEvtThink()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (_thinking || actor.isActionsDisabled() || actor.isAfraid() || actor.isDead() || actor.isMovementDisabled())
 		{
 			return;
@@ -170,14 +170,14 @@ public class ElcardiaAssistant extends DefaultAI
 	 */
 	protected void thinkFollow()
 	{
-		NpcInstance actor = getActor();
-		Creature target = actor.getFollowTarget();
+		final NpcInstance actor = getActor();
+		final Creature target = actor.getFollowTarget();
 		if ((target == null) || target.isAlikeDead() || (actor.getDistance(target) > 4000) || actor.isMovementDisabled())
 		{
 			actor.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			return;
 		}
-		if (actor.isFollow && (actor.getFollowTarget() == target))
+		if (actor.isFollow && (actor.getFollowTarget().equals(target)))
 		{
 			clientActionFailed();
 			return;
@@ -192,17 +192,17 @@ public class ElcardiaAssistant extends DefaultAI
 			_followTask = null;
 		}
 		_followTask = ThreadPoolManager.getInstance().schedule(new ThinkFollow(), 250L);
-		Reflection ref = actor.getReflection();
+		final Reflection ref = actor.getReflection();
 		if ((ref != null) && (_chatTimer < System.currentTimeMillis()))
 		{
 			_chatTimer = System.currentTimeMillis() + 5000;
-			Player masterplayer = target.getPlayer();
-			Map<Skill, Integer> d_skill = new HashMap<>();
-			double distance = actor.getDistance(target);
+			final Player masterplayer = target.getPlayer();
+			final Map<Skill, Integer> d_skill = new HashMap<>();
+			final double distance = actor.getDistance(target);
 			switch (ref.getInstancedZoneId())
 			{
 				case 156:
-					QuestState qs = masterplayer.getQuestState(_10293_SevenSignsForbiddenBook.class);
+					final QuestState qs = masterplayer.getQuestState(_10293_SevenSignsForbiddenBook.class);
 					if ((qs != null) && !qs.isCompleted())
 					{
 						if (Rnd.chance(20))
@@ -231,7 +231,7 @@ public class ElcardiaAssistant extends DefaultAI
 					}
 					break;
 				case 151:
-					QuestState qs2 = masterplayer.getQuestState(_10294_SevenSignsMonasteryofSilence.class);
+					final QuestState qs2 = masterplayer.getQuestState(_10294_SevenSignsMonasteryofSilence.class);
 					if ((qs2 != null) && !qs2.isCompleted())
 					{
 						if (qs2.getCond() == 2)
@@ -261,7 +261,7 @@ public class ElcardiaAssistant extends DefaultAI
 							}
 							addDesiredSkill(d_skill, target, distance, vampRage);
 							addDesiredSkill(d_skill, target, distance, holyResist);
-							Skill r_skill = selectTopSkill(d_skill);
+							final Skill r_skill = selectTopSkill(d_skill);
 							chooseTaskAndTargets(r_skill, target, distance);
 							doTask();
 						}
@@ -270,7 +270,7 @@ public class ElcardiaAssistant extends DefaultAI
 							Functions.npcSay(actor, NpcString.YOUR_WORK_HERE_IS_DONE_SO_RETURN_TO_THE_CENTRAL_GUARDIAN);
 						}
 					}
-					QuestState qs3 = masterplayer.getQuestState(_10295_SevenSignsSolinasTomb.class);
+					final QuestState qs3 = masterplayer.getQuestState(_10295_SevenSignsSolinasTomb.class);
 					if ((qs3 != null) && !qs3.isCompleted())
 					{
 						if (qs3.getCond() == 1)
@@ -304,12 +304,12 @@ public class ElcardiaAssistant extends DefaultAI
 							}
 							addDesiredSkill(d_skill, target, distance, vampRage);
 							addDesiredSkill(d_skill, target, distance, holyResist);
-							Skill r_skill = selectTopSkill(d_skill);
+							final Skill r_skill = selectTopSkill(d_skill);
 							chooseTaskAndTargets(r_skill, target, distance);
 							doTask();
 						}
 					}
-					QuestState qs4 = masterplayer.getQuestState(_10296_SevenSignsPoweroftheSeal.class);
+					final QuestState qs4 = masterplayer.getQuestState(_10296_SevenSignsPoweroftheSeal.class);
 					if ((qs4 != null) && !qs4.isCompleted())
 					{
 						if (qs4.getCond() == 2)
@@ -328,7 +328,7 @@ public class ElcardiaAssistant extends DefaultAI
 							}
 							addDesiredSkill(d_skill, target, distance, vampRage);
 							addDesiredSkill(d_skill, target, distance, holyResist);
-							Skill r_skill = selectTopSkill(d_skill);
+							final Skill r_skill = selectTopSkill(d_skill);
 							chooseTaskAndTargets(r_skill, target, distance);
 							doTask();
 						}
@@ -351,21 +351,21 @@ public class ElcardiaAssistant extends DefaultAI
 		@Override
 		public void runImpl()
 		{
-			NpcInstance actor = getActor();
+			final NpcInstance actor = getActor();
 			if (actor == null)
 			{
 				return;
 			}
-			Creature target = actor.getFollowTarget();
+			final Creature target = actor.getFollowTarget();
 			if ((target == null) || (actor.getDistance(target) > 4000))
 			{
 				setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				actor.teleToLocation(120664, -86968, -3392);
 				return;
 			}
-			if (!actor.isInRange(target, Config.FOLLOW_RANGE + 20) && (!actor.isFollow || (actor.getFollowTarget() != target)))
+			if (!actor.isInRange(target, Config.FOLLOW_RANGE + 20) && (!actor.isFollow || (!actor.getFollowTarget().equals(target))))
 			{
-				Location loc = new Location(target.getX() + Rnd.get(-60, 60), target.getY() + Rnd.get(-60, 60), target.getZ());
+				final Location loc = new Location(target.getX() + Rnd.get(-60, 60), target.getY() + Rnd.get(-60, 60), target.getZ());
 				actor.followToCharacter(loc, target, Config.FOLLOW_RANGE, false);
 			}
 			_followTask = ThreadPoolManager.getInstance().schedule(this, 250L);
@@ -379,5 +379,6 @@ public class ElcardiaAssistant extends DefaultAI
 	@Override
 	public void addTaskAttack(Creature target)
 	{
+		// empty method
 	}
 }

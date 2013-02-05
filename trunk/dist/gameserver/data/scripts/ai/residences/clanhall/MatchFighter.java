@@ -29,13 +29,13 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public abstract class MatchFighter extends Fighter
+public class MatchFighter extends Fighter
 {
 	/**
 	 * Constructor for MatchFighter.
 	 * @param actor NpcInstance
 	 */
-	public MatchFighter(NpcInstance actor)
+	protected MatchFighter(NpcInstance actor)
 	{
 		super(actor);
 	}
@@ -47,7 +47,7 @@ public abstract class MatchFighter extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isActionsDisabled())
 		{
 			return true;
@@ -60,11 +60,11 @@ public abstract class MatchFighter extends Fighter
 			}
 			return true;
 		}
-		long now = System.currentTimeMillis();
+		final long now = System.currentTimeMillis();
 		if ((now - _checkAggroTimestamp) > Config.AGGRO_CHECK_INTERVAL)
 		{
 			_checkAggroTimestamp = now;
-			List<Creature> chars = World.getAroundCharacters(actor);
+			final List<Creature> chars = World.getAroundCharacters(actor);
 			CollectionUtils.eqSort(chars, _nearestTargetComparator);
 			for (Creature cha : chars)
 			{
@@ -89,7 +89,7 @@ public abstract class MatchFighter extends Fighter
 	@Override
 	protected boolean checkAggression(Creature target)
 	{
-		CTBBossInstance actor = getActor();
+		final CTBBossInstance actor = getActor();
 		if (getIntention() != CtrlIntention.AI_INTENTION_ACTIVE)
 		{
 			return false;
@@ -124,7 +124,7 @@ public abstract class MatchFighter extends Fighter
 	@Override
 	protected boolean canAttackCharacter(Creature target)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		return actor.isAttackable(target);
 	}
 	
@@ -135,9 +135,9 @@ public abstract class MatchFighter extends Fighter
 	public void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		CTBBossInstance actor = getActor();
-		int x = (int) (actor.getX() + (800 * Math.cos(actor.headingToRadians(actor.getHeading() - 32768))));
-		int y = (int) (actor.getY() + (800 * Math.sin(actor.headingToRadians(actor.getHeading() - 32768))));
+		final CTBBossInstance actor = getActor();
+		final int x = (int) (actor.getX() + (800 * Math.cos(actor.headingToRadians(actor.getHeading() - 32768))));
+		final int y = (int) (actor.getY() + (800 * Math.sin(actor.headingToRadians(actor.getHeading() - 32768))));
 		actor.setSpawnedLoc(new Location(x, y, actor.getZ()));
 		addTaskMove(actor.getSpawnedLoc(), true);
 		doTask();

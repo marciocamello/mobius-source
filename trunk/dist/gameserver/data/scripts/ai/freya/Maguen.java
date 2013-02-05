@@ -70,10 +70,10 @@ public class Maguen extends Fighter
 		super.onEvtSpawn();
 		ThreadPoolManager.getInstance().schedule(new Plasma(), 2000L);
 		ThreadPoolManager.getInstance().schedule(new Despawn(), 10000L);
-		List<Creature> around = getActor().getAroundCharacters(800, 300);
+		final List<Creature> around = getActor().getAroundCharacters(800, 300);
 		if (!getActor().isInZone(ZoneType.dummy) && (around != null) && !around.isEmpty())
 		{
-			ExShowScreenMessage sm = new ExShowScreenMessage(NpcString.MAGUEN_APPEARANCE, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true);
+			final ExShowScreenMessage sm = new ExShowScreenMessage(NpcString.MAGUEN_APPEARANCE, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true);
 			for (Creature character : around)
 			{
 				if (character.isPlayer())
@@ -96,7 +96,7 @@ public class Maguen extends Fighter
 		{
 			return;
 		}
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isInZone(ZoneType.dummy))
 		{
 			switch (actor.getNpcState())
@@ -197,7 +197,7 @@ public class Maguen extends Fighter
 		/**
 		 * Constructor for Plasma.
 		 */
-		public Plasma()
+		Plasma()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -220,7 +220,7 @@ public class Maguen extends Fighter
 		/**
 		 * Constructor for Despawn.
 		 */
-		public Despawn()
+		Despawn()
 		{
 			// TODO Auto-generated constructor stub
 		}

@@ -52,7 +52,7 @@ public class NaiaLock extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		_entranceactive = true;
 		Functions.npcShout(actor, "The lock has been removed from the Controller device");
 		super.onEvtDead(killer);
@@ -65,7 +65,7 @@ public class NaiaLock extends Fighter
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		_entranceactive = false;
 		Functions.npcShout(actor, "The lock has been put on the Controller device");
 	}
@@ -89,7 +89,7 @@ public class NaiaLock extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (!_attacked)
 		{
 			for (int i = 0; i < 4; i++)

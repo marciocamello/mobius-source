@@ -50,13 +50,13 @@ public class RndTeleportFighter extends Fighter
 	@Override
 	protected boolean maybeMoveToHome()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((System.currentTimeMillis() - _lastTeleport) < 10000)
 		{
 			return false;
 		}
 		boolean randomWalk = actor.hasRandomWalk();
-		Location sloc = actor.getSpawnedLoc();
+		final Location sloc = actor.getSpawnedLoc();
 		if (sloc == null)
 		{
 			return false;
@@ -69,14 +69,14 @@ public class RndTeleportFighter extends Fighter
 		{
 			return false;
 		}
-		int x = sloc.x + Rnd.get(-Config.MAX_DRIFT_RANGE, Config.MAX_DRIFT_RANGE);
-		int y = sloc.y + Rnd.get(-Config.MAX_DRIFT_RANGE, Config.MAX_DRIFT_RANGE);
-		int z = GeoEngine.getHeight(x, y, sloc.z, actor.getGeoIndex());
+		final int x = sloc.x + Rnd.get(-Config.MAX_DRIFT_RANGE, Config.MAX_DRIFT_RANGE);
+		final int y = sloc.y + Rnd.get(-Config.MAX_DRIFT_RANGE, Config.MAX_DRIFT_RANGE);
+		final int z = GeoEngine.getHeight(x, y, sloc.z, actor.getGeoIndex());
 		if ((sloc.z - z) > 64)
 		{
 			return false;
 		}
-		SpawnRange spawnRange = actor.getSpawnRange();
+		final SpawnRange spawnRange = actor.getSpawnRange();
 		boolean isInside = true;
 		if ((spawnRange != null) && (spawnRange instanceof Territory))
 		{

@@ -39,7 +39,7 @@ public class Tiberias extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		Functions.npcShoutCustomMessage(actor, "scripts.ai.Tiberias.kill");
 		super.onEvtDead(killer);
 	}

@@ -49,7 +49,7 @@ public class CrystallineGolem extends Fighter
 	/**
 	 * Field says.
 	 */
-	private static String[] says = new String[]
+	private static final String[] says = new String[]
 	{
 		"�?�?м, н�?м!!!",
 		"Дай!!!",
@@ -61,7 +61,7 @@ public class CrystallineGolem extends Fighter
 	/**
 	 * Field says2.
 	 */
-	private static String[] says2 = new String[]
+	private static final String[] says2 = new String[]
 	{
 		"�?тдай!!!",
 		"Верни!!!",
@@ -72,7 +72,7 @@ public class CrystallineGolem extends Fighter
 	/**
 	 * Field instanceInfo
 	 */
-	private static TIntObjectHashMap<Info> instanceInfo = new TIntObjectHashMap<>();
+	private static final TIntObjectHashMap<Info> instanceInfo = new TIntObjectHashMap<>();
 	
 	/**
 	 * @author Mobius
@@ -82,7 +82,7 @@ public class CrystallineGolem extends Fighter
 		/**
 		 * Constructor for Info.
 		 */
-		public Info()
+		Info()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -113,7 +113,7 @@ public class CrystallineGolem extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return true;
@@ -149,8 +149,8 @@ public class CrystallineGolem extends Fighter
 		boolean opened = info.stage1 && info.stage2;
 		if (!info.stage1)
 		{
-			int dx = actor.getX() - 142999;
-			int dy = actor.getY() - 151671;
+			final int dx = actor.getX() - 142999;
+			final int dy = actor.getY() - 151671;
 			if (((dx * dx) + (dy * dy)) < 10000)
 			{
 				actor.broadcastPacket(new MagicSkillUse(actor, actor, 5441, 1, 1, 0));
@@ -159,8 +159,8 @@ public class CrystallineGolem extends Fighter
 		}
 		if (!info.stage2)
 		{
-			int dx = actor.getX() - 139494;
-			int dy = actor.getY() - 151668;
+			final int dx = actor.getX() - 139494;
+			final int dy = actor.getY() - 151668;
 			if (((dx * dx) + (dy * dy)) < 10000)
 			{
 				actor.broadcastPacket(new MagicSkillUse(actor, actor, 5441, 1, 1, 0));
@@ -208,6 +208,7 @@ public class CrystallineGolem extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -218,6 +219,7 @@ public class CrystallineGolem extends Fighter
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 	
 	/**

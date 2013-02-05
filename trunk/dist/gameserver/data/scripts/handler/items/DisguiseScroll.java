@@ -73,15 +73,15 @@ public class DisguiseScroll extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
-		DominionSiegeRunnerEvent runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 1);
+		final Player player = (Player) playable;
+		final DominionSiegeRunnerEvent runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 1);
 		if (!runnerEvent.isBattlefieldChatActive())
 		{
 			player.sendPacket(SystemMsg.THE_TERRITORY_WAR_EXCLUSIVE_DISGUISE_AND_TRANSFORMATION_CAN_BE_USED_20_MINUTES_BEFORE_THE_START_OF_THE_TERRITORY_WAR_TO_10_MINUTES_AFTER_ITS_END);
 			return false;
 		}
-		int index = org.apache.commons.lang3.ArrayUtils.indexOf(ITEM_IDS, item.getItemId());
-		DominionSiegeEvent siegeEvent = player.getEvent(DominionSiegeEvent.class);
+		final int index = org.apache.commons.lang3.ArrayUtils.indexOf(ITEM_IDS, item.getItemId());
+		final DominionSiegeEvent siegeEvent = player.getEvent(DominionSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addName(item));
@@ -102,7 +102,7 @@ public class DisguiseScroll extends ScriptItemHandler
 			player.sendPacket(SystemMsg.THE_DISGUISE_SCROLL_CANNOT_BE_USED_WHILE_YOU_ARE_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE_WORKSHOP);
 			return false;
 		}
-		if (siegeEvent.getResidence().getOwner() == player.getClan())
+		if (siegeEvent.getResidence().getOwner().equals(player.getClan()))
 		{
 			player.sendPacket(SystemMsg.A_TERRITORY_OWNING_CLAN_MEMBER_CANNOT_USE_A_DISGUISE_SCROLL);
 			return false;

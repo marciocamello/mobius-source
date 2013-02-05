@@ -64,10 +64,10 @@ public class MasterYogi extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (range <= 0)
 		{
-			List<NpcInstance> around = actor.getAroundNpc(6000, 300);
+			final List<NpcInstance> around = actor.getAroundNpc(6000, 300);
 			if ((around != null) && !around.isEmpty())
 			{
 				double distance;
@@ -115,6 +115,7 @@ public class MasterYogi extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -125,5 +126,6 @@ public class MasterYogi extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

@@ -67,7 +67,7 @@ public class Core extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (_firstTimeAttacked)
 		{
 			Functions.npcSay(actor, "A non-permitted target has been discovered.");
@@ -87,18 +87,18 @@ public class Core extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		actor.broadcastPacket(new PlaySound(PlaySound.Type.MUSIC, "BS02_D", 1, 0, actor.getLoc()));
 		Functions.npcSay(actor, "A fatal error has occurred");
 		Functions.npcSay(actor, "System is being shut down...");
 		Functions.npcSay(actor, "......");
 		try
 		{
-			NpcInstance cubic1 = NpcHolder.getInstance().getTemplate(TELEPORTATION_CUBIC_ID).getNewInstance();
+			final NpcInstance cubic1 = NpcHolder.getInstance().getTemplate(TELEPORTATION_CUBIC_ID).getNewInstance();
 			cubic1.setReflection(actor.getReflection());
 			cubic1.setCurrentHpMp(cubic1.getMaxHp(), cubic1.getMaxMp(), true);
 			cubic1.spawnMe(CUBIC_1_POSITION);
-			NpcInstance cubic2 = NpcHolder.getInstance().getTemplate(TELEPORTATION_CUBIC_ID).getNewInstance();
+			final NpcInstance cubic2 = NpcHolder.getInstance().getTemplate(TELEPORTATION_CUBIC_ID).getNewInstance();
 			cubic2.setReflection(actor.getReflection());
 			cubic2.setCurrentHpMp(cubic1.getMaxHp(), cubic1.getMaxMp(), true);
 			cubic2.spawnMe(CUBIC_2_POSITION);
@@ -115,7 +115,7 @@ public class Core extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	class DeSpawnScheduleTimerTask extends RunnableImpl
+	static class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
 		/**
 		 * Field cubic1.
@@ -131,7 +131,7 @@ public class Core extends Fighter
 		 * @param cubic1 NpcInstance
 		 * @param cubic2 NpcInstance
 		 */
-		public DeSpawnScheduleTimerTask(NpcInstance cubic1, NpcInstance cubic2)
+		DeSpawnScheduleTimerTask(NpcInstance cubic1, NpcInstance cubic2)
 		{
 			this.cubic1 = cubic1;
 			this.cubic2 = cubic2;

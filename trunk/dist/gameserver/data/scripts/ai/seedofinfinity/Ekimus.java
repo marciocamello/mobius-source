@@ -66,7 +66,7 @@ public class Ekimus extends Mystic
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		for (NpcInstance npc : actor.getReflection().getAllByNpcId(29151, true))
 		{
 			npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, damage);

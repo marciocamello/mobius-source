@@ -86,7 +86,7 @@ public class Harnak extends Fighter
 			seal_active++;
 			if (seal_active == 2)
 			{
-				Reflection r = getActor().getReflection();
+				final Reflection r = getActor().getReflection();
 				if (!(r instanceof HarnakUndergroundRuins))
 				{
 					return;
@@ -132,7 +132,7 @@ public class Harnak extends Fighter
 		else if (!sealLaunched && (getActor().getCurrentHpPercents() <= 50.0))
 		{
 			sealLaunched = true;
-			Reflection r = getActor().getReflection();
+			final Reflection r = getActor().getReflection();
 			if (!(r instanceof HarnakUndergroundRuins))
 			{
 				return;
@@ -150,7 +150,7 @@ public class Harnak extends Fighter
 			{
 				SKILL_ID = SKILL_IDS[2];
 			}
-			Skill skill = SkillTable.getInstance().getInfo(SKILL_ID, 1);
+			final Skill skill = SkillTable.getInstance().getInfo(SKILL_ID, 1);
 			skill.getEffects(getActor(), getActor(), false, false);
 		}
 	}
@@ -163,7 +163,7 @@ public class Harnak extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		super.onEvtDead(killer);
-		Reflection r = getActor().getReflection();
+		final Reflection r = getActor().getReflection();
 		if (!(r instanceof HarnakUndergroundRuins))
 		{
 			return;

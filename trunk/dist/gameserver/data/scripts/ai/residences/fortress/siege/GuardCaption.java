@@ -47,8 +47,8 @@ public class GuardCaption extends SiegeGuardFighter
 	public void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		SiegeGuardInstance actor = getActor();
-		FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		final SiegeGuardInstance actor = getActor();
+		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;
@@ -67,8 +67,8 @@ public class GuardCaption extends SiegeGuardFighter
 	@Override
 	public void onEvtDead(Creature killer)
 	{
-		SiegeGuardInstance actor = getActor();
-		FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		final SiegeGuardInstance actor = getActor();
+		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;

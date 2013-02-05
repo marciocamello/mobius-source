@@ -41,7 +41,7 @@ public class MatchCleric extends MatchFighter
 	 */
 	public void heal()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		addTaskCast(actor, HEAL);
 		doTask();
 	}

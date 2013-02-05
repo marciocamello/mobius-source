@@ -119,7 +119,7 @@ public class TiatsTrap extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (!actor.getAroundCharacters(200, 150).isEmpty())
 		{
 			Skill skill = null;

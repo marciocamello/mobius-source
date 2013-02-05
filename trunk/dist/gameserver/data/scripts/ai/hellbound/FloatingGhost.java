@@ -39,7 +39,7 @@ public class FloatingGhost extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isMoving)
 		{
 			return false;
@@ -55,9 +55,9 @@ public class FloatingGhost extends Fighter
 	@Override
 	protected boolean randomWalk()
 	{
-		NpcInstance actor = getActor();
-		Location sloc = actor.getSpawnedLoc();
-		Location pos = Location.findPointToStay(actor, sloc, 50, 300);
+		final NpcInstance actor = getActor();
+		final Location sloc = actor.getSpawnedLoc();
+		final Location pos = Location.findPointToStay(actor, sloc, 50, 300);
 		if (GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), pos.x, pos.y, pos.z, actor.getGeoIndex()))
 		{
 			actor.setRunning();

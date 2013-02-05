@@ -51,8 +51,8 @@ public class RollingDice extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
-		int itemId = item.getItemId();
+		final Player player = (Player) playable;
+		final int itemId = item.getItemId();
 		if (player.isInOlympiadMode())
 		{
 			player.sendPacket(Msg.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
@@ -63,7 +63,7 @@ public class RollingDice extends ScriptItemHandler
 			player.sendPacket(Msg.YOU_CANNOT_MOVE_WHILE_SITTING);
 			return false;
 		}
-		int number = Rnd.get(1, 6);
+		final int number = Rnd.get(1, 6);
 		if (number == 0)
 		{
 			player.sendPacket(Msg.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIMETRY_AGAIN_LATER);

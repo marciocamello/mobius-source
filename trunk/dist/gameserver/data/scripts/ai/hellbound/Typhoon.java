@@ -93,7 +93,7 @@ public class Typhoon extends Fighter
 	@Override
 	public boolean checkAggression(Creature target)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return false;
@@ -114,7 +114,7 @@ public class Typhoon extends Fighter
 	@Override
 	public boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return true;

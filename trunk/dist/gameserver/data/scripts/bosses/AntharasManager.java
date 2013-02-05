@@ -91,7 +91,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 	/**
 	 * Field _spawnedMinions.
 	 */
-	private static List<NpcInstance> _spawnedMinions = new ArrayList<>();
+	private static final List<NpcInstance> _spawnedMinions = new ArrayList<>();
 	/**
 	 * Field _monsterSpawnTask.
 	 */
@@ -157,7 +157,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		/**
 		 * Field _distance.
 		 */
-		private final int _distance = 2550;
+		private static final int _distance = 2550;
 		/**
 		 * Field _taskId.
 		 */
@@ -317,7 +317,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		/**
 		 * Constructor for CheckLastAttack.
 		 */
-		public CheckLastAttack()
+		CheckLastAttack()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -350,7 +350,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		/**
 		 * Constructor for IntervalEnd.
 		 */
-		public IntervalEnd()
+		IntervalEnd()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -374,7 +374,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		/**
 		 * Constructor for onAnnihilated.
 		 */
-		public onAnnihilated()
+		onAnnihilated()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -648,8 +648,8 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 			ccleader.sendPacket(Msg.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_IN_A_CURRENT_COMMAND_CHANNEL);
 			return;
 		}
-		CommandChannel cc = ccleader.getParty().getCommandChannel();
-		if (cc.getChannelLeader() != ccleader)
+		final CommandChannel cc = ccleader.getParty().getCommandChannel();
+		if (!cc.getChannelLeader().equals(ccleader))
 		{
 			ccleader.sendPacket(Msg.ONLY_THE_ALLIANCE_CHANNEL_LEADER_CAN_ATTEMPT_ENTRY);
 			return;
@@ -711,5 +711,6 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 }

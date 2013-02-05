@@ -79,11 +79,11 @@ public class SourceOfPower extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		List<Player> players = World.getAroundPlayers(getActor(), 300, 300);
+		final List<Player> players = World.getAroundPlayers(getActor(), 300, 300);
 		if (!players.isEmpty())
 		{
-			Player p = players.get(0);
-			Skill skill;
+			final Player p = players.get(0);
+			final Skill skill;
 			if (!useLightHeal)
 			{
 				skill = SkillTable.getInstance().getInfo(SKILL_ID, 1);
@@ -136,11 +136,11 @@ public class SourceOfPower extends DefaultAI
 		}
 		else if (timerId == 2)
 		{
-			List<Player> players = World.getAroundPlayers(getActor(), 500, 300);
+			final List<Player> players = World.getAroundPlayers(getActor(), 500, 300);
 			if (!players.isEmpty())
 			{
-				Player p = players.get(0);
-				Skill skill = SkillTable.getInstance().getInfo(LIGHT_HEAL_ID, 1);
+				final Player p = players.get(0);
+				final Skill skill = SkillTable.getInstance().getInfo(LIGHT_HEAL_ID, 1);
 				addTaskCast(p, skill);
 				addTimer(2, 3500);
 			}

@@ -41,15 +41,15 @@ public class TeredorLairEggs extends Fighter
 	/**
 	 * Field teredorLarva.
 	 */
-	private static int teredorLarva = 19016;
+	private static final int teredorLarva = 19016;
 	/**
 	 * Field timeToBlue.
 	 */
-	private static int timeToBlue = 60;
+	private static final int timeToBlue = 60;
 	/**
 	 * Field maxRandomTimeBlue.
 	 */
-	private static int maxRandomTimeBlue = 80;
+	private static final int maxRandomTimeBlue = 80;
 	/**
 	 * Field monsterSpawnDelay.
 	 */
@@ -57,15 +57,15 @@ public class TeredorLairEggs extends Fighter
 	/**
 	 * Field poisonId.
 	 */
-	private static int poisonId = 14561;
+	private static final int poisonId = 14561;
 	/**
 	 * Field poisonLevel.
 	 */
-	private static int poisonLevel = 1;
+	private static final int poisonLevel = 1;
 	/**
 	 * Field distanceToDebuff.
 	 */
-	private static int distanceToDebuff = 400;
+	private static final int distanceToDebuff = 400;
 	/**
 	 * Field _poisoned.
 	 */
@@ -97,14 +97,14 @@ public class TeredorLairEggs extends Fighter
 	{
 		if (!_activated)
 		{
-			Player player = (Player) actor.getAggroList().getMostHated();
-			Reflection ref = actor.getReflection();
+			final Player player = (Player) actor.getAggroList().getMostHated();
+			final Reflection ref = actor.getReflection();
 			ThreadPoolManager.getInstance().schedule(new TaskSetBlue(actor, player, ref), (timeToBlue + Rnd.get(maxRandomTimeBlue)) * 1000);
 			_activated = true;
 		}
 		if (!_poisoned)
 		{
-			Player player = (Player) actor.getAggroList().getMostHated();
+			final Player player = (Player) actor.getAggroList().getMostHated();
 			if (player.getParty() != null)
 			{
 				for (Playable playable : player.getParty().getPartyMembersWithPets())
@@ -127,7 +127,7 @@ public class TeredorLairEggs extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(teredorLarva));
+		final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(teredorLarva));
 		sp.setLoc(Location.findPointToStay(actor, 100, 120));
 		sp.doSpawn(true);
 		super.onEvtDead(killer);
@@ -219,8 +219,8 @@ public class TeredorLairEggs extends Fighter
 			{
 				if (_player != null)
 				{
-					Location coords = Location.findPointToStay(actor, 100, 120);
-					NpcInstance npc = _ref.addSpawnWithoutRespawn(awakenedMillipede, coords, 0);
+					final Location coords = Location.findPointToStay(actor, 100, 120);
+					final NpcInstance npc = _ref.addSpawnWithoutRespawn(awakenedMillipede, coords, 0);
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _player, Rnd.get(1, 100));
 				}
 				else

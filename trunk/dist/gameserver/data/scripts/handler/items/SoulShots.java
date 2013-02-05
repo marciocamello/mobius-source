@@ -83,10 +83,10 @@ public class SoulShots extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
-		WeaponTemplate weaponItem = player.getActiveWeaponItem();
-		ItemInstance weaponInst = player.getActiveWeaponInstance();
-		int SoulshotId = item.getItemId();
+		final Player player = (Player) playable;
+		final WeaponTemplate weaponItem = player.getActiveWeaponItem();
+		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final int SoulshotId = item.getItemId();
 		boolean isAutoSoulShot = false;
 		if (player.getAutoSoulShot().contains(SoulshotId))
 		{
@@ -104,7 +104,7 @@ public class SoulShots extends ScriptItemHandler
 		{
 			return false;
 		}
-		int grade = weaponItem.getCrystalType().externalOrdinal;
+		final int grade = weaponItem.getCrystalType().externalOrdinal;
 		int soulShotConsumption = weaponItem.getSoulShotCount();
 		if (soulShotConsumption == 0)
 		{
@@ -128,7 +128,7 @@ public class SoulShots extends ScriptItemHandler
 		}
 		if ((weaponItem.getItemType() == WeaponType.BOW) || (weaponItem.getItemType() == WeaponType.CROSSBOW))
 		{
-			int newSS = (int) player.calcStat(Stats.SS_USE_BOW, soulShotConsumption, null, null);
+			final int newSS = (int) player.calcStat(Stats.SS_USE_BOW, soulShotConsumption, null, null);
 			if ((newSS < soulShotConsumption) && Rnd.chance(player.calcStat(Stats.SS_USE_BOW_CHANCE, soulShotConsumption, null, null)))
 			{
 				soulShotConsumption = newSS;

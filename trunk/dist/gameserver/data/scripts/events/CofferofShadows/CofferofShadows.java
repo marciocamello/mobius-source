@@ -40,19 +40,19 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 	/**
 	 * Field COFFER_PRICE.
 	 */
-	private static int COFFER_PRICE = 50000;
+	private static final int COFFER_PRICE = 50000;
 	/**
 	 * Field COFFER_ID.
 	 */
-	private static int COFFER_ID = 8659;
+	private static final int COFFER_ID = 8659;
 	/**
 	 * Field EVENT_MANAGER_ID.
 	 */
-	private static int EVENT_MANAGER_ID = 32091;
+	private static final int EVENT_MANAGER_ID = 32091;
 	/**
 	 * Field _spawns.
 	 */
-	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	/**
 	 * Field _log.
 	 */
@@ -67,7 +67,7 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 	 */
 	private void spawnEventManagers()
 	{
-		final int EVENT_MANAGERS[][] =
+		final int[][] EVENT_MANAGERS =
 		{
 			{
 				-14823,
@@ -161,7 +161,7 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 	 */
 	public void startEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -185,7 +185,7 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 	 */
 	public void stopEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -210,7 +210,7 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 	 */
 	public void buycoffer(String[] var)
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
@@ -226,8 +226,9 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 		}
 		catch (Exception E)
 		{
+			// empty catch clause
 		}
-		long need_adena = (long) (COFFER_PRICE * Config.EVENT_CofferOfShadowsPriceRate * coffer_count);
+		final long need_adena = (long) (COFFER_PRICE * Config.EVENT_CofferOfShadowsPriceRate * coffer_count);
 		if (player.getAdena() < need_adena)
 		{
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -240,7 +241,7 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 	/**
 	 * Field buycoffer_counts.
 	 */
-	private static int[] buycoffer_counts =
+	private static final int[] buycoffer_counts =
 	{
 		1,
 		5,

@@ -29,7 +29,7 @@ public class DarkElves extends DefaultAI
 	/**
 	 * Field TEXT.
 	 */
-	private static NpcString[] TEXT =
+	private static final NpcString[] TEXT =
 	{
 		NpcString.GAH_SHILEN_WHY_MUST_YOU_MAKE_US_SUFFER,
 		NpcString.SHILEN_ABANDONED_US_IT_IS_OUR_TIME_TO_DIE,
@@ -81,7 +81,7 @@ public class DarkElves extends DefaultAI
 			{
 				Functions.npcSayInRange(getActor(), 1000, TEXT[Rnd.get(TEXT.length)]);
 			}
-			Reflection r = getActor().getReflection();
+			final Reflection r = getActor().getReflection();
 			if (r instanceof MemoryOfDisaster)
 			{
 				((MemoryOfDisaster) r).dieNextElf();

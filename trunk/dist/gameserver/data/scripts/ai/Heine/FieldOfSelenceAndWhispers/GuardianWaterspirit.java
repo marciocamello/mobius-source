@@ -63,7 +63,7 @@ public class GuardianWaterspirit extends Fighter
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return;
@@ -82,14 +82,14 @@ public class GuardianWaterspirit extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
 		}
 		if (mob == null)
 		{
-			List<NpcInstance> around = getActor().getAroundNpc(300, 300);
+			final List<NpcInstance> around = getActor().getAroundNpc(300, 300);
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)
@@ -122,7 +122,7 @@ public class GuardianWaterspirit extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return;

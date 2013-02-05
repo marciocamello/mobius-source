@@ -67,8 +67,8 @@ public class Torocco_19198 extends Dwarvs
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
 		super.onEvtTimer(timerId, arg1, arg2);
-		Reflection r = getActor().getReflection();
-		if (r == ReflectionManager.DEFAULT)
+		final Reflection r = getActor().getReflection();
+		if (r.equals(ReflectionManager.DEFAULT))
 		{
 			return;
 		}
@@ -76,10 +76,10 @@ public class Torocco_19198 extends Dwarvs
 		{
 			case 1:
 				Functions.npcSayInRange(getActor(), 1500, NpcString.ROGIN_IM_HERE);
-				List<NpcInstance> list = r.getAllByNpcId(ROGIN_ID, true);
+				final List<NpcInstance> list = r.getAllByNpcId(ROGIN_ID, true);
 				if (list.size() > 0)
 				{
-					NpcInstance rogin = list.get(0);
+					final NpcInstance rogin = list.get(0);
 					rogin.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "ROGIN_1");
 				}
 				break;

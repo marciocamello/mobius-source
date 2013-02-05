@@ -57,7 +57,7 @@ public class TvTArena1 extends Functions implements ScriptFile, OnDeathListener,
 		/**
 		 * Constructor for TvTArena1Impl.
 		 */
-		public TvTArena1Impl()
+		TvTArena1Impl()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -177,6 +177,7 @@ public class TvTArena1 extends Functions implements ScriptFile, OnDeathListener,
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 	
 	/**
@@ -226,7 +227,7 @@ public class TvTArena1 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		if (val == 0)
 		{
-			Player player = getSelf();
+			final Player player = getSelf();
 			if (player.isGM())
 			{
 				return HtmCache.getInstance().getNotNull("scripts/events/TvTArena/31390.htm", player) + HtmCache.getInstance().getNotNull("scripts/events/TvTArena/31390-4.htm", player);
@@ -328,7 +329,7 @@ public class TvTArena1 extends Functions implements ScriptFile, OnDeathListener,
 	 */
 	public void startEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -351,7 +352,7 @@ public class TvTArena1 extends Functions implements ScriptFile, OnDeathListener,
 	 */
 	public void stopEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -376,7 +377,7 @@ public class TvTArena1 extends Functions implements ScriptFile, OnDeathListener,
 	 */
 	private void spawnEventManagers()
 	{
-		final int EVENT_MANAGERS[][] =
+		final int[][] EVENT_MANAGERS =
 		{
 			{
 				82840,
@@ -385,7 +386,7 @@ public class TvTArena1 extends Functions implements ScriptFile, OnDeathListener,
 				0
 			}
 		};
-		NpcTemplate template = NpcHolder.getInstance().getTemplate(31390);
+		final NpcTemplate template = NpcHolder.getInstance().getTemplate(31390);
 		for (int[] element : EVENT_MANAGERS)
 		{
 			SimpleSpawner sp = new SimpleSpawner(template);

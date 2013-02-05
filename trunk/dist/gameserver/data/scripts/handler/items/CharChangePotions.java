@@ -58,8 +58,8 @@ public class CharChangePotions extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
-		int itemId = item.getItemId();
+		final Player player = (Player) playable;
+		final int itemId = item.getItemId();
 		if (!player.getInventory().destroyItem(item, 1))
 		{
 			player.sendActionFailed();

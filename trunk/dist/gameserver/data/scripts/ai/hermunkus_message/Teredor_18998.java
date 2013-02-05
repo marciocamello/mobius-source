@@ -62,12 +62,12 @@ public class Teredor_18998 extends DefaultAI
 		switch (timer_id)
 		{
 			case 1:
-				Skill sk = SkillTable.getInstance().getInfo(SKILL_ID, 1);
+				final Skill sk = SkillTable.getInstance().getInfo(SKILL_ID, 1);
 				addTaskBuff(getActor(), sk);
 				doTask();
 				break;
 			case 2:
-				Reflection r = getActor().getReflection();
+				final Reflection r = getActor().getReflection();
 				if (r instanceof MemoryOfDisaster)
 				{
 					((MemoryOfDisaster) r).spawnWyrm();

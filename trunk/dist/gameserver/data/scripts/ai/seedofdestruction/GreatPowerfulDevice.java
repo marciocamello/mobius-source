@@ -57,7 +57,7 @@ public class GreatPowerfulDevice extends DefaultAI
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (checkAllDestroyed(actor.getNpcId()))
 		{
 			for (int i = 0; i < 6; i++)

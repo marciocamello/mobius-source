@@ -48,7 +48,7 @@ public class SquashAI extends Fighter
 		@Override
 		public void runImpl()
 		{
-			SquashInstance actor = getActor();
+			final SquashInstance actor = getActor();
 			if (actor == null)
 			{
 				return;
@@ -58,7 +58,7 @@ public class SquashAI extends Fighter
 			{
 				spawn = new SimpleSpawner(NpcHolder.getInstance().getTemplate(_npcId));
 				spawn.setLoc(actor.getLoc());
-				NpcInstance npc = spawn.doSpawn(true);
+				final NpcInstance npc = spawn.doSpawn(true);
 				npc.setAI(new SquashAI(npc));
 				((SquashInstance) npc).setSpawner(actor.getSpawner());
 			}
@@ -353,7 +353,7 @@ public class SquashAI extends Fighter
 	/**
 	 * Field NECTAR_REUSE.
 	 */
-	private static int NECTAR_REUSE = 3000;
+	private static final int NECTAR_REUSE = 3000;
 	
 	/**
 	 * Constructor for SquashAI.
@@ -382,7 +382,7 @@ public class SquashAI extends Fighter
 				_polimorphTask.cancel(false);
 				_polimorphTask = null;
 			}
-			SquashInstance actor = getActor();
+			final SquashInstance actor = getActor();
 			if (actor != null)
 			{
 				actor.deleteMe();
@@ -399,7 +399,7 @@ public class SquashAI extends Fighter
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
-		SquashInstance actor = getActor();
+		final SquashInstance actor = getActor();
 		if ((actor == null) || (skill.getId() != 2005))
 		{
 			return;
@@ -543,7 +543,7 @@ public class SquashAI extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		SquashInstance actor = getActor();
+		final SquashInstance actor = getActor();
 		if ((actor != null) && Rnd.chance(5))
 		{
 			Functions.npcSay(actor, textOnAttack[Rnd.get(textOnAttack.length)]);
@@ -558,7 +558,7 @@ public class SquashAI extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		_tryCount = -1;
-		SquashInstance actor = getActor();
+		final SquashInstance actor = getActor();
 		if (actor == null)
 		{
 			return;

@@ -56,7 +56,7 @@ public class DeluLizardmanSpecialAgent extends Ranger
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (_firstTimeAttacked)
 		{
 			_firstTimeAttacked = false;

@@ -420,7 +420,7 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 	 */
 	private static void spawnNpcs()
 	{
-		final int EVENT_MANAGERS[][] =
+		final int[][] EVENT_MANAGERS =
 		{
 			{
 				10000,

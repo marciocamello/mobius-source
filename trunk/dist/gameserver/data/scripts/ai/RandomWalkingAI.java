@@ -66,12 +66,12 @@ public class RandomWalkingAI extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isMoving)
 		{
 			return false;
 		}
-		int val = Rnd.get(100);
+		final int val = Rnd.get(100);
 		if (val < 80)
 		{
 			randomWalk();
@@ -90,15 +90,15 @@ public class RandomWalkingAI extends DefaultAI
 	@Override
 	protected boolean randomWalk()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return false;
 		}
-		Location sloc = actor.getSpawnedLoc();
-		int x = (sloc.x + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
-		int y = (sloc.y + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
-		int z = GeoEngine.getHeight(x, y, sloc.z, actor.getGeoIndex());
+		final Location sloc = actor.getSpawnedLoc();
+		final int x = (sloc.x + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
+		final int y = (sloc.y + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
+		final int z = GeoEngine.getHeight(x, y, sloc.z, actor.getGeoIndex());
 		switch (actor.getNpcId())
 		{
 			case Boy:

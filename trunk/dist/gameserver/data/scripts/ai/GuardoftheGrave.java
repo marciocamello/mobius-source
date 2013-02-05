@@ -65,7 +65,7 @@ public class GuardoftheGrave extends Fighter
 	@Override
 	protected boolean checkTarget(Creature target, int range)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor != null) && (target != null) && !actor.isInRange(target, actor.getAggroRange()))
 		{
 			actor.getAggroList().remove(target, true);
@@ -82,7 +82,7 @@ public class GuardoftheGrave extends Fighter
 	{
 		try
 		{
-			NpcInstance npc = NpcHolder.getInstance().getTemplate(CHIEFTAINS_TREASURE_CHEST).getNewInstance();
+			final NpcInstance npc = NpcHolder.getInstance().getTemplate(CHIEFTAINS_TREASURE_CHEST).getNewInstance();
 			npc.setSpawnedLoc(actor.getLoc());
 			npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp(), true);
 			npc.spawnMe(npc.getSpawnedLoc());
@@ -101,7 +101,7 @@ public class GuardoftheGrave extends Fighter
 		/**
 		 * Constructor for DeSpawnTask.
 		 */
-		public DeSpawnTask()
+		DeSpawnTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -112,7 +112,7 @@ public class GuardoftheGrave extends Fighter
 		@Override
 		public void runImpl()
 		{
-			NpcInstance actor = getActor();
+			final NpcInstance actor = getActor();
 			spawnChest(actor);
 			actor.deleteMe();
 		}

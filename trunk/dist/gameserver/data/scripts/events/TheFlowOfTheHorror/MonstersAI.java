@@ -85,7 +85,7 @@ public class MonstersAI extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
@@ -99,7 +99,7 @@ public class MonstersAI extends Fighter
 		{
 			if (current_point >= (_points.size() - 1))
 			{
-				Creature target = GameObjectsStorage.getByNpcId(30754);
+				final Creature target = GameObjectsStorage.getByNpcId(30754);
 				if ((target != null) && !target.isDead())
 				{
 					clearTasks();

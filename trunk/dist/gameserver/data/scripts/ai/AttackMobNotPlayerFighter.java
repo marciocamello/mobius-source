@@ -45,15 +45,15 @@ public class AttackMobNotPlayerFighter extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (attacker == null)
 		{
 			return;
 		}
-		Player player = attacker.getPlayer();
+		final Player player = attacker.getPlayer();
 		if (player != null)
 		{
-			List<QuestState> quests = player.getQuestsForEvent(actor, QuestEventType.ATTACKED_WITH_QUEST, false);
+			final List<QuestState> quests = player.getQuestsForEvent(actor, QuestEventType.ATTACKED_WITH_QUEST, false);
 			if (quests != null)
 			{
 				for (QuestState qs : quests)
@@ -73,7 +73,7 @@ public class AttackMobNotPlayerFighter extends Fighter
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (attacker == null)
 		{
 			return;

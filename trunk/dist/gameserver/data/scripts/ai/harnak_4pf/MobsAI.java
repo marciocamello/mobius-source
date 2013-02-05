@@ -116,7 +116,7 @@ public class MobsAI extends Fighter
 		}
 		else if (ROOM_ID == 3)
 		{
-			Reflection r = getActor().getReflection();
+			final Reflection r = getActor().getReflection();
 			if (!(r instanceof HarnakUndergroundRuins))
 			{
 				return;
@@ -139,7 +139,7 @@ public class MobsAI extends Fighter
 		{
 			Functions.npcSayInRange(getActor(), 1500, NpcString.valueOf(MSG1_ID));
 		}
-		addTaskMove(ROOM_ID == 1 ? moveLoc1 : moveLoc2, false);
+		addTaskMove((ROOM_ID == 1) ? moveLoc1 : moveLoc2, false);
 		doTask();
 		addTimer(1, 3000);
 	}
@@ -170,7 +170,7 @@ public class MobsAI extends Fighter
 				{
 					SKILL_ID = SKILL_IDS[2];
 				}
-				Skill skill = SkillTable.getInstance().getInfo(SKILL_ID, 1);
+				final Skill skill = SkillTable.getInstance().getInfo(SKILL_ID, 1);
 				skill.getEffects(getActor(), getActor(), false, false);
 			}
 		}
@@ -178,7 +178,7 @@ public class MobsAI extends Fighter
 		{
 			if (IS_LAST_GROUP && (getActor().getCurrentHpPercents() < 80) && (getActor().getEffectList().getEffectsBySkillId(ULTIMATE_BUFF_ID) == null))
 			{
-				Skill skill = SkillTable.getInstance().getInfo(ULTIMATE_BUFF_ID, 1);
+				final Skill skill = SkillTable.getInstance().getInfo(ULTIMATE_BUFF_ID, 1);
 				skill.getEffects(getActor(), getActor(), false, false);
 			}
 		}
@@ -197,7 +197,7 @@ public class MobsAI extends Fighter
 		if (event.equalsIgnoreCase("ATTACK_HIM"))
 		{
 			selected = false;
-			Creature attacker = (Creature) arg1;
+			final Creature attacker = (Creature) arg1;
 			getActor().getAggroList().addDamageHate(attacker, 1, 10000000);
 			addTaskAttack(attacker);
 		}
@@ -222,7 +222,7 @@ public class MobsAI extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		super.onEvtDead(killer);
-		Reflection r = getActor().getReflection();
+		final Reflection r = getActor().getReflection();
 		if (!(r instanceof HarnakUndergroundRuins))
 		{
 			return;
@@ -235,7 +235,7 @@ public class MobsAI extends Fighter
 				selected = false;
 				if (NEXT_MOB_ID > 0)
 				{
-					List<NpcInstance> npcs = r.getAllByNpcId(NEXT_MOB_ID, true);
+					final List<NpcInstance> npcs = r.getAllByNpcId(NEXT_MOB_ID, true);
 					if (!npcs.isEmpty())
 					{
 						npcs.get(0).getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "SELECT_ME");

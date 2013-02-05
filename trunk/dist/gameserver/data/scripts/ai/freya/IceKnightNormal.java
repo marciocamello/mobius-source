@@ -55,11 +55,11 @@ public class IceKnightNormal extends Fighter
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		iced = true;
 		actor.setNpcState(1);
 		actor.block();
-		Reflection r = actor.getReflection();
+		final Reflection r = actor.getReflection();
 		if ((r != null) && (r.getPlayers() != null))
 		{
 			for (Player p : r.getPlayers())
@@ -78,7 +78,7 @@ public class IceKnightNormal extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (iced)
 		{
 			iced = false;
@@ -100,7 +100,7 @@ public class IceKnightNormal extends Fighter
 		/**
 		 * Constructor for ReleaseFromIce.
 		 */
-		public ReleaseFromIce()
+		ReleaseFromIce()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -126,5 +126,6 @@ public class IceKnightNormal extends Fighter
 	@Override
 	protected void teleportHome()
 	{
+		// empty method
 	}
 }

@@ -84,7 +84,7 @@ public class Special extends SimpleItemHandler
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
-		int itemId = item.getItemId();
+		final int itemId = item.getItemId();
 		switch (itemId)
 		{
 			case 8556:
@@ -128,12 +128,12 @@ public class Special extends SimpleItemHandler
 	 */
 	private boolean use8556(Player player, boolean ctrl)
 	{
-		int[] npcs =
+		final int[] npcs =
 		{
 			29048,
 			29049
 		};
-		GameObject t = player.getTarget();
+		final GameObject t = player.getTarget();
 		if ((t == null) || !t.isNpc() || !ArrayUtils.contains(npcs, ((NpcInstance) t).getNpcId()))
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(8556));
@@ -175,20 +175,20 @@ public class Special extends SimpleItemHandler
 	 */
 	private boolean use13808(Player player, boolean ctrl)
 	{
-		int[] allowedDoors =
+		final int[] allowedDoors =
 		{
 			17240101,
 			17240105,
 			17240109
 		};
-		GameObject target = player.getTarget();
+		final GameObject target = player.getTarget();
 		if (player.getDistance(target) > 150)
 		{
 			return false;
 		}
 		if ((target != null) && target.isDoor())
 		{
-			int _door = ((DoorInstance) target).getDoorId();
+			final int _door = ((DoorInstance) target).getDoorId();
 			if (ArrayUtils.contains(allowedDoors, _door))
 			{
 				player.getReflection().openDoor(_door);
@@ -215,15 +215,15 @@ public class Special extends SimpleItemHandler
 	 */
 	private boolean use13809(Player player, boolean ctrl)
 	{
-		int[] allowedDoors =
+		final int[] allowedDoors =
 		{
 			17240103,
 			17240107
 		};
-		GameObject target = player.getTarget();
+		final GameObject target = player.getTarget();
 		if ((target != null) && target.isDoor())
 		{
-			int _door = ((DoorInstance) target).getDoorId();
+			final int _door = ((DoorInstance) target).getDoorId();
 			if (ArrayUtils.contains(allowedDoors, _door))
 			{
 				useItem(player, 13809, 1);
@@ -263,13 +263,13 @@ public class Special extends SimpleItemHandler
 	 */
 	private boolean use15537(Player player, boolean ctrl)
 	{
-		QuestState qs = player.getQuestState(_464_Oath.class);
+		final QuestState qs = player.getQuestState(_464_Oath.class);
 		if ((player.getLevel() >= 82) && (qs == null))
 		{
 			useItem(player, 15537, 1);
 			Functions.addItem(player, 15538, 1);
-			Quest q = QuestManager.getQuest(464);
-			QuestState st = q.newQuestState(player, Quest.CREATED);
+			final Quest q = QuestManager.getQuest(464);
+			final QuestState st = q.newQuestState(player, Quest.CREATED);
 			st.setState(Quest.STARTED);
 			st.setCond(1);
 		}
@@ -289,7 +289,7 @@ public class Special extends SimpleItemHandler
 	 */
 	private boolean use10632(Player player, boolean ctrl)
 	{
-		int chance = Rnd.get(1000000);
+		final int chance = Rnd.get(1000000);
 		if (chance < 350000)
 		{
 			Functions.addItem(player, 10633, 1);

@@ -116,7 +116,7 @@ public class GilmoreAI extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
@@ -211,7 +211,7 @@ public class GilmoreAI extends Fighter
 	protected boolean createNewTask()
 	{
 		clearTasks();
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return true;

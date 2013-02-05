@@ -58,7 +58,7 @@ public class Valakas extends DefaultAI
 	/**
 	 * Field defenceDownReuse.
 	 */
-	private final long defenceDownReuse = 120000L;
+	private static final long defenceDownReuse = 120000L;
 	/**
 	 * Field _attacksIndex. Field _counterAttackIndex. Field _rangedAttacksIndex.
 	 */
@@ -89,7 +89,7 @@ public class Valakas extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		ValakasManager.setLastAttackTime();
 		for (Playable p : ValakasManager.getZone().getInsidePlayables())
 		{
@@ -118,18 +118,18 @@ public class Valakas extends DefaultAI
 	protected boolean createNewTask()
 	{
 		clearTasks();
-		Creature target;
-		if ((target = prepareTarget()) == null)
+		Creature target = prepareTarget();
+		if (target == null)
 		{
 			return false;
 		}
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return false;
 		}
-		double distance = actor.getDistance(target);
-		double chp = actor.getCurrentHpPercents();
+		final double distance = actor.getDistance(target);
+		final double chp = actor.getCurrentHpPercents();
 		if (_hpStage == 0)
 		{
 			actor.altOnMagicUseTimer(actor, getSkill(4691, 1));
@@ -158,7 +158,7 @@ public class Valakas extends DefaultAI
 		}
 		if ((getAliveMinionsCount() < 100) && Rnd.chance(5))
 		{
-			NpcInstance minion = Functions.spawn(Location.findPointToStay(actor.getLoc(), 400, 700, actor.getGeoIndex()), 29029);
+			final NpcInstance minion = Functions.spawn(Location.findPointToStay(actor.getLoc(), 400, 700, actor.getGeoIndex()), 29029);
 			minions.add(minion);
 			ValakasManager.addValakasMinion(minion);
 		}
@@ -172,7 +172,7 @@ public class Valakas extends DefaultAI
 		{
 			if (Rnd.chance(60))
 			{
-				Creature randomHated = actor.getAggroList().getRandomHated();
+				final Creature randomHated = actor.getAggroList().getRandomHated();
 				if (randomHated != null)
 				{
 					setAttackTarget(randomHated);
@@ -182,7 +182,7 @@ public class Valakas extends DefaultAI
 						@Override
 						public void runImpl()
 						{
-							NpcInstance actor = getActor();
+							final NpcInstance actor = getActor();
 							if (actor != null)
 							{
 								actor.stopConfused();
@@ -217,7 +217,7 @@ public class Valakas extends DefaultAI
 		{
 			return chooseTaskAndTargets(Rnd.chance(50) ? s_tremple_left : s_tremple_right, target, distance);
 		}
-		Map<Skill, Integer> d_skill = new HashMap<>();
+		final Map<Skill, Integer> d_skill = new HashMap<>();
 		switch (_hpStage)
 		{
 			case 1:
@@ -250,7 +250,7 @@ public class Valakas extends DefaultAI
 				addDesiredSkill(d_skill, target, distance, Rnd.chance(60) ? s_destroy_soul2 : s_destroy_body2);
 				break;
 		}
-		Skill r_skill = selectTopSkill(d_skill);
+		final Skill r_skill = selectTopSkill(d_skill);
 		if ((r_skill != null) && !r_skill.isOffensive())
 		{
 			target = actor;
@@ -264,7 +264,7 @@ public class Valakas extends DefaultAI
 	@Override
 	protected void thinkAttack()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isInZone(Zone.ZoneType.poison))
 		{
 			if ((actor.getEffectList() != null) && (actor.getEffectList().getEffectsBySkill(s_lava_skin) == null))

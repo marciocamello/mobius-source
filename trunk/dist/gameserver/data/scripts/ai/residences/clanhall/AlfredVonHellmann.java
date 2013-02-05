@@ -43,7 +43,7 @@ public class AlfredVonHellmann extends SiegeGuardFighter
 	/**
 	 * Field ZONE_3.
 	 */
-	private static Zone ZONE_3 = ReflectionUtils.getZone("lidia_zone3");
+	private static final Zone ZONE_3 = ReflectionUtils.getZone("lidia_zone3");
 	
 	/**
 	 * Constructor for AlfredVonHellmann.
@@ -72,20 +72,20 @@ public class AlfredVonHellmann extends SiegeGuardFighter
 	@Override
 	public void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		super.onEvtDead(killer);
 		ZONE_3.setActive(false);
 		Functions.npcShout(actor, NpcString.AARGH_IF_I_DIE_THEN_THE_MAGIC_FORCE_FIELD_OF_BLOOD_WILL);
-		ClanHallSiegeEvent siegeEvent = actor.getEvent(ClanHallSiegeEvent.class);
+		final ClanHallSiegeEvent siegeEvent = actor.getEvent(ClanHallSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;
 		}
-		SpawnExObject spawnExObject = siegeEvent.getFirstObject(ClanHallSiegeEvent.BOSS);
-		NpcInstance lidiaNpc = spawnExObject.getFirstSpawned();
+		final SpawnExObject spawnExObject = siegeEvent.getFirstObject(ClanHallSiegeEvent.BOSS);
+		final NpcInstance lidiaNpc = spawnExObject.getFirstSpawned();
 		if (lidiaNpc.getCurrentHpRatio() == 1.)
 		{
-			lidiaNpc.setCurrentHp(lidiaNpc.getMaxHp() / 2, true);
+			lidiaNpc.setCurrentHp(lidiaNpc.getMaxHp() >> 1, true);
 		}
 	}
 	
@@ -97,14 +97,14 @@ public class AlfredVonHellmann extends SiegeGuardFighter
 	@Override
 	public void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		super.onEvtAttacked(attacker, damage);
 		if ((PositionUtils.calculateDistance(attacker, actor, false) > 300.) && Rnd.chance(0.13))
 		{
 			addTaskCast(attacker, DRAIN_SKILL);
 		}
-		Creature target = actor.getAggroList().getMostHated();
-		if ((target == attacker) && Rnd.chance(0.3))
+		final Creature target = actor.getAggroList().getMostHated();
+		if ((target.equals(attacker)) && Rnd.chance(0.3))
 		{
 			addTaskCast(attacker, DAMAGE_SKILL);
 		}

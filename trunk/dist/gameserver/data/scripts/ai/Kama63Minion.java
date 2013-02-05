@@ -89,7 +89,7 @@ public class Kama63Minion extends Fighter
 		{
 			_spawned = true;
 			Functions.npcSayCustomMessage(_boss, "Kama63Boss");
-			NpcInstance minion = getActor();
+			final NpcInstance minion = getActor();
 			minion.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _boss.getAggroList().getRandomHated(), Rnd.get(1, 100));
 			_dieTask = ThreadPoolManager.getInstance().schedule(new DieScheduleTimerTask(minion, _boss), MINION_DIE_TIME);
 		}
@@ -108,7 +108,7 @@ public class Kama63Minion extends Fighter
 			return null;
 		}
 		_wait_timeout = System.currentTimeMillis() + 15000;
-		NpcInstance minion = getActor();
+		final NpcInstance minion = getActor();
 		if (minion == null)
 		{
 			return null;
@@ -142,7 +142,7 @@ public class Kama63Minion extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public class DieScheduleTimerTask extends RunnableImpl
+	static public class DieScheduleTimerTask extends RunnableImpl
 	{
 		/**
 		 * Field _minion.

@@ -94,7 +94,7 @@ public class HelpBook extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player activeChar = (Player) playable;
+		final Player activeChar = (Player) playable;
 		Functions.show("help/" + item.getItemId() + ".htm", activeChar, null);
 		if (item.getItemId() == 7063)
 		{

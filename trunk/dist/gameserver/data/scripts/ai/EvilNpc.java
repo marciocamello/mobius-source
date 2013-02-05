@@ -58,14 +58,14 @@ public class EvilNpc extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((attacker == null) || (attacker.getPlayer() == null))
 		{
 			return;
 		}
 		if ((System.currentTimeMillis() - _lastAction) > 3000)
 		{
-			int chance = Rnd.get(0, 100);
+			final int chance = Rnd.get(0, 100);
 			if (chance < 2)
 			{
 				attacker.getPlayer().setKarma(attacker.getPlayer().getKarma() + 5);

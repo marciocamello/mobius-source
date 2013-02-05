@@ -36,7 +36,7 @@ public class IsleOfPrayerFighter extends Fighter
 	/**
 	 * Field PENALTY_MOBS.
 	 */
-	private static final int PENALTY_MOBS[] =
+	private static final int[] PENALTY_MOBS =
 	{
 		18364,
 		18365,
@@ -68,10 +68,10 @@ public class IsleOfPrayerFighter extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (_penaltyMobsNotSpawned && attacker.isPlayable() && (attacker.getPlayer() != null))
 		{
-			Party party = attacker.getPlayer().getParty();
+			final Party party = attacker.getPlayer().getParty();
 			if ((party != null) && (party.getMemberCount() > 2))
 			{
 				_penaltyMobsNotSpawned = false;

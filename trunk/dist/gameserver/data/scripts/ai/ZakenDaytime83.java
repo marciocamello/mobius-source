@@ -57,7 +57,7 @@ public class ZakenDaytime83 extends Fighter
 	/**
 	 * Field _teleportSelfReuse.
 	 */
-	private final long _teleportSelfReuse = 120000L;
+	private static final long _teleportSelfReuse = 120000L;
 	/**
 	 * Field actor.
 	 */
@@ -70,7 +70,7 @@ public class ZakenDaytime83 extends Fighter
 	public ZakenDaytime83(NpcInstance actor)
 	{
 		super(actor);
-		MAX_PURSUE_RANGE = Integer.MAX_VALUE / 2;
+		MAX_PURSUE_RANGE = Integer.MAX_VALUE >> 1;
 	}
 	
 	/**
@@ -106,7 +106,7 @@ public class ZakenDaytime83 extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		Reflection r = actor.getReflection();
+		final Reflection r = actor.getReflection();
 		r.setReenterTime(System.currentTimeMillis());
 		actor.broadcastPacket(new PlaySound(PlaySound.Type.MUSIC, "BS02_D", 1, actor.getObjectId(), actor.getLoc()));
 		super.onEvtDead(killer);

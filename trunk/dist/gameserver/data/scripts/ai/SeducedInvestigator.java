@@ -70,12 +70,12 @@ public class SeducedInvestigator extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return false;
 		}
-		List<NpcInstance> around = actor.getAroundNpc(1000, 300);
+		final List<NpcInstance> around = actor.getAroundNpc(1000, 300);
 		if ((around != null) && !around.isEmpty())
 		{
 			for (NpcInstance npc : around)
@@ -88,16 +88,16 @@ public class SeducedInvestigator extends Fighter
 		}
 		if (Rnd.chance(0.1) && ((_reuse + 30000) < System.currentTimeMillis()))
 		{
-			List<Player> players = World.getAroundPlayers(actor, 500, 200);
+			final List<Player> players = World.getAroundPlayers(actor, 500, 200);
 			if ((players == null) || (players.size() < 1))
 			{
 				return false;
 			}
-			Player player = players.get(Rnd.get(players.size()));
+			final Player player = players.get(Rnd.get(players.size()));
 			if (player.getReflectionId() == actor.getReflectionId())
 			{
 				_reuse = System.currentTimeMillis();
-				int[] buffs =
+				final int[] buffs =
 				{
 					5970,
 					5971,
@@ -132,9 +132,9 @@ public class SeducedInvestigator extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
-		Reflection r = actor.getReflection();
-		List<Player> players = r.getPlayers();
+		final NpcInstance actor = getActor();
+		final Reflection r = actor.getReflection();
+		final List<Player> players = r.getPlayers();
 		for (Player p : players)
 		{
 			p.sendPacket(new ExShowScreenMessage("The Investigator has been killed. The mission is failed.", 3000, ScreenMessageAlign.TOP_CENTER, true));
@@ -151,7 +151,7 @@ public class SeducedInvestigator extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (attacker == null)
 		{
 			return;

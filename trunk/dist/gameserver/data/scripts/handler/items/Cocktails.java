@@ -122,7 +122,7 @@ public class Cocktails extends SimpleItemHandler
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
-		int itemId = item.getItemId();
+		final int itemId = item.getItemId();
 		if (player.isInOlympiadMode())
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
@@ -168,6 +168,7 @@ public class Cocktails extends SimpleItemHandler
 					player.broadcastPacket(new MagicSkillUse(player, player, skill, 1, 0, 0));
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
+				break;
 			default:
 				return false;
 		}

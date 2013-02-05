@@ -46,11 +46,11 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 	/**
 	 * Field EVENT_MANAGER_ID.
 	 */
-	private static int EVENT_MANAGER_ID = 32636;
+	private static final int EVENT_MANAGER_ID = 32636;
 	/**
 	 * Field _spawns.
 	 */
-	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	/**
 	 * Field _active.
 	 */
@@ -62,7 +62,7 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 	/**
 	 * Field multiSellFile.
 	 */
-	private static File multiSellFile = new File(Config.DATAPACK_ROOT, "data/xml/other/event/SummerMeleons/3790004.xml");
+	private static final File multiSellFile = new File(Config.DATAPACK_ROOT, "data/xml/other/event/SummerMeleons/3790004.xml");
 	
 	/**
 	 * Method onLoad.
@@ -99,7 +99,7 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 	 */
 	public void startEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -124,7 +124,7 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 	 */
 	public void stopEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -148,7 +148,7 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 	 */
 	private void spawnEventManagers()
 	{
-		final int EVENT_MANAGERS[][] =
+		final int[][] EVENT_MANAGERS =
 		{
 			{
 				81921,
@@ -269,6 +269,7 @@ public class SummerMeleons extends Functions implements ScriptFile, OnDeathListe
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 	
 	/**

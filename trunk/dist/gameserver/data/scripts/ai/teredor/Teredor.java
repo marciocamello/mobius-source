@@ -42,7 +42,7 @@ public class Teredor extends Fighter
 	/**
 	 * Field eliteMillipede.
 	 */
-	private static int eliteMillipede = 19015;
+	private static final int eliteMillipede = 19015;
 	/**
 	 * Field teredorLairEgg.
 	 */
@@ -62,7 +62,7 @@ public class Teredor extends Fighter
 	/**
 	 * Field delayEggTask.
 	 */
-	private static int delayEggTask = 90;
+	private static final int delayEggTask = 90;
 	/**
 	 * Field _teredorActive.
 	 */
@@ -131,13 +131,13 @@ public class Teredor extends Fighter
 		if (!_battleActive)
 		{
 			_battleActive = true;
-			Reflection r = actor.getReflection();
+			final Reflection r = actor.getReflection();
 			teredorEggs = r.getAllByNpcId(teredorLairEgg, true);
 			ThreadPoolManager.getInstance().scheduleAtFixedDelay(new EggSpawnTask(r), 1000, delayEggTask * 1000);
 		}
 		if (!_eliteSpawned)
 		{
-			SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(eliteMillipede));
+			final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(eliteMillipede));
 			sp.setLoc(Location.findPointToStay(actor, 100, 120));
 			for (int i = 0; i == 2; i++)
 			{
@@ -190,8 +190,8 @@ public class Teredor extends Fighter
 			{
 				return;
 			}
-			double newHp = actor.getCurrentHp() - damage;
-			double maxHp = actor.getMaxHp();
+			final double newHp = actor.getCurrentHp() - damage;
+			final double maxHp = actor.getMaxHp();
 			if (_teredorActive && ((newHp == (0.8 * maxHp)) || (newHp == (0.6 * maxHp)) || (newHp == (0.4 * maxHp)) || (newHp == (0.2 * maxHp))))
 			{
 				_teredorActive = false;
@@ -307,7 +307,7 @@ public class Teredor extends Fighter
 		{
 			if (_battleActive)
 			{
-				Location _coords = Location.findPointToStay(coordsToSpawnEggs[Rnd.get(1)], 50, 100);
+				final Location _coords = Location.findPointToStay(coordsToSpawnEggs[Rnd.get(1)], 50, 100);
 				_r.addSpawnWithoutRespawn(teredorLairEgg, _coords, 0);
 			}
 		}

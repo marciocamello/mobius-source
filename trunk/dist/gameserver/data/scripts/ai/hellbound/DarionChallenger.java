@@ -53,7 +53,7 @@ public class DarionChallenger extends Fighter
 		{
 			try
 			{
-				SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(TeleportCube));
+				final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(TeleportCube));
 				sp.setLoc(new Location(-12527, 279714, -11622, 16384));
 				sp.doSpawn(true);
 				sp.stopRespawn();
@@ -91,13 +91,14 @@ public class DarionChallenger extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	private class Unspawn extends RunnableImpl
+	static private class Unspawn extends RunnableImpl
 	{
 		/**
 		 * Constructor for Unspawn.
 		 */
-		public Unspawn()
+		Unspawn()
 		{
+			// empty method
 		}
 		
 		/**

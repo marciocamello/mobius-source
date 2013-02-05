@@ -61,12 +61,12 @@ public class BaiumNpc extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (_wait_timeout < System.currentTimeMillis())
 		{
 			_wait_timeout = System.currentTimeMillis() + BAIUM_EARTHQUAKE_TIMEOUT;
-			L2GameServerPacket eq = new Earthquake(actor.getLoc(), 40, 10);
-			List<Creature> chars = actor.getAroundCharacters(5000, 10000);
+			final L2GameServerPacket eq = new Earthquake(actor.getLoc(), 40, 10);
+			final List<Creature> chars = actor.getAroundCharacters(5000, 10000);
 			for (Creature character : chars)
 			{
 				if (character.isPlayer())

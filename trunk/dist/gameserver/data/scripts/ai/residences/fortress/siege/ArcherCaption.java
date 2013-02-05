@@ -47,8 +47,8 @@ public class ArcherCaption extends SiegeGuardRanger
 	public void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		SiegeGuardInstance actor = getActor();
-		FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		final SiegeGuardInstance actor = getActor();
+		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;
@@ -67,8 +67,8 @@ public class ArcherCaption extends SiegeGuardRanger
 	@Override
 	public void onEvtDead(Creature killer)
 	{
-		SiegeGuardInstance actor = getActor();
-		FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		final SiegeGuardInstance actor = getActor();
+		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;

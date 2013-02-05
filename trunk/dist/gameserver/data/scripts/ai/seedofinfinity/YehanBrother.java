@@ -61,7 +61,7 @@ public class YehanBrother extends Fighter
 	 */
 	private NpcInstance getBrother()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		int brotherId = 0;
 		if (actor.getNpcId() == 25665)
 		{
@@ -87,8 +87,8 @@ public class YehanBrother extends Fighter
 	@Override
 	protected void thinkAttack()
 	{
-		NpcInstance actor = getActor();
-		NpcInstance brother = getBrother();
+		final NpcInstance actor = getActor();
+		final NpcInstance brother = getBrother();
 		if (!brother.isDead() && !actor.isInRange(brother, 300))
 		{
 			actor.altOnMagicUseTimer(getActor(), SkillTable.getInstance().getInfo(6371, 1));
@@ -100,7 +100,7 @@ public class YehanBrother extends Fighter
 		if ((_spawnTimer + 40000) < System.currentTimeMillis())
 		{
 			_spawnTimer = System.currentTimeMillis();
-			NpcInstance mob = actor.getReflection().addSpawnWithoutRespawn(_minions[Rnd.get(_minions.length)], Location.findAroundPosition(actor, 300), 0);
+			final NpcInstance mob = actor.getReflection().addSpawnWithoutRespawn(_minions[Rnd.get(_minions.length)], Location.findAroundPosition(actor, 300), 0);
 			mob.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, actor.getAggressionTarget(), 1000);
 		}
 		super.thinkAttack();

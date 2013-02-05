@@ -41,7 +41,7 @@ public class TeleportArkan extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return true;

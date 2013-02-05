@@ -44,14 +44,14 @@ public class PcCafePointsExchange extends Functions implements ScriptFile
 	/**
 	 * Field _spawns.
 	 */
-	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	
 	/**
 	 * Method spawnEventManagers.
 	 */
 	private void spawnEventManagers()
 	{
-		final int EVENT_MANAGERS[][] =
+		final int[][] EVENT_MANAGERS =
 		{
 			{
 				15880,
@@ -103,7 +103,7 @@ public class PcCafePointsExchange extends Functions implements ScriptFile
 	 */
 	public void startEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -125,7 +125,7 @@ public class PcCafePointsExchange extends Functions implements ScriptFile
 	 */
 	public void stopEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;

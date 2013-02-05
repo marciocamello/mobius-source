@@ -42,10 +42,10 @@ public class Quest421FairyTree extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((attacker != null) && attacker.isPlayer())
 		{
-			Skill skill = SkillTable.getInstance().getInfo(5423, 12);
+			final Skill skill = SkillTable.getInstance().getInfo(5423, 12);
 			skill.getEffects(actor, attacker, false, false);
 			return;
 		}
@@ -64,10 +64,10 @@ public class Quest421FairyTree extends Fighter
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((attacker != null) && attacker.isPlayer())
 		{
-			Skill skill = SkillTable.getInstance().getInfo(5423, 12);
+			final Skill skill = SkillTable.getInstance().getInfo(5423, 12);
 			skill.getEffects(actor, attacker, false, false);
 			return;
 		}

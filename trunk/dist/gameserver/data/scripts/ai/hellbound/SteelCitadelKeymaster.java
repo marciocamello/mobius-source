@@ -51,7 +51,7 @@ public class SteelCitadelKeymaster extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return;

@@ -508,7 +508,7 @@ public abstract class ArenaTemplate extends Functions
 		if (_timeToStart > 1)
 		{
 			_timeToStart--;
-			say(creator.getName() + " �?оздал бой " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, �?тавка " + (_battleType == 1 ? _price + "а" : "опыт") + ", начало через " + _timeToStart + " мин");
+			say(creator.getName() + " �?оздал бой " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, �?тавка " + ((_battleType == 1) ? _price + "а" : "опыт") + ", начало через " + _timeToStart + " мин");
 			executeTask("events.arena." + _className, "announce", new Object[0], 60000);
 		}
 		else if (_team2list.size() > 0)

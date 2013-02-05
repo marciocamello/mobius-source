@@ -78,7 +78,7 @@ public class DimensionMovingDevice extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((spawnTime + MOBS_WAVE_DELAY) < System.currentTimeMillis())
 		{
 			if (_npcs.size() < 100)
@@ -103,6 +103,7 @@ public class DimensionMovingDevice extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -113,5 +114,6 @@ public class DimensionMovingDevice extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

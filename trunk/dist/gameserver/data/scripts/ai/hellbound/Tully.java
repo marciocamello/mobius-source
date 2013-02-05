@@ -108,7 +108,7 @@ public class Tully extends Fighter
 		}
 		try
 		{
-			SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(32370));
+			final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(32370));
 			sp.setLoc(new Location(-11984, 272928, -9040, 23644));
 			sp.doSpawn(true);
 			removable_ghost = sp.getLastSpawn();
@@ -124,13 +124,14 @@ public class Tully extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	private class UnspawnAndExplode extends RunnableImpl
+	static private class UnspawnAndExplode extends RunnableImpl
 	{
 		/**
 		 * Constructor for UnspawnAndExplode.
 		 */
-		public UnspawnAndExplode()
+		UnspawnAndExplode()
 		{
+			// empty method
 		}
 		
 		/**

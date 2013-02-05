@@ -167,7 +167,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	/**
 	 * Field WEAPONS.
 	 */
-	private static final int WEAPONS[][] =
+	private static final int[][] WEAPONS =
 	{
 		{
 			20109,
@@ -378,7 +378,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	 */
 	private void spawnEventManagers()
 	{
-		final int EVENT_MANAGERS[][] =
+		final int[][] EVENT_MANAGERS =
 		{
 			{
 				81921,
@@ -453,7 +453,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 				8192
 			}
 		};
-		final int CTREES[][] =
+		final int[][] CTREES =
 		{
 			{
 				81961,

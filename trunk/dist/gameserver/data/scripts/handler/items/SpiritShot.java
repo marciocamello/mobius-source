@@ -75,10 +75,10 @@ public class SpiritShot extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
-		ItemInstance weaponInst = player.getActiveWeaponInstance();
-		WeaponTemplate weaponItem = player.getActiveWeaponItem();
-		int SoulshotId = item.getItemId();
+		final Player player = (Player) playable;
+		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final WeaponTemplate weaponItem = player.getActiveWeaponItem();
+		final int SoulshotId = item.getItemId();
 		boolean isAutoSoulShot = false;
 		if (player.getAutoSoulShot().contains(SoulshotId))
 		{
@@ -96,10 +96,10 @@ public class SpiritShot extends ScriptItemHandler
 		{
 			return false;
 		}
-		int SpiritshotId = item.getItemId();
-		int grade = weaponItem.getCrystalType().externalOrdinal;
-		int soulSpiritConsumption = weaponItem.getSpiritShotCount();
-		long count = item.getCount();
+		final int SpiritshotId = item.getItemId();
+		final int grade = weaponItem.getCrystalType().externalOrdinal;
+		final int soulSpiritConsumption = weaponItem.getSpiritShotCount();
+		final long count = item.getCount();
 		if (soulSpiritConsumption == 0)
 		{
 			if (isAutoSoulShot)

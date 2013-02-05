@@ -42,17 +42,17 @@ public class KrateisFighter extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		super.onEvtDead(killer);
-		Player player = killer.getPlayer();
+		final Player player = killer.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
-		KrateisCubeEvent cubeEvent = getActor().getEvent(KrateisCubeEvent.class);
+		final KrateisCubeEvent cubeEvent = getActor().getEvent(KrateisCubeEvent.class);
 		if (cubeEvent == null)
 		{
 			return;
 		}
-		KrateisCubePlayerObject particlePlayer = cubeEvent.getParticlePlayer(player);
+		final KrateisCubePlayerObject particlePlayer = cubeEvent.getParticlePlayer(player);
 		particlePlayer.setPoints(particlePlayer.getPoints() + 3);
 		cubeEvent.updatePoints(particlePlayer);
 	}

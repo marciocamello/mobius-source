@@ -71,7 +71,7 @@ public class SeerUgoros extends Mystic
 	@Override
 	protected void thinkAttack()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (!actor.isMuted(_skill) && (actor.getCurrentHpPercents() < 80))
 		{
 			for (NpcInstance n : actor.getAroundNpc(2000, 300))
@@ -96,7 +96,7 @@ public class SeerUgoros extends Mystic
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		QuestState qs = killer.getPlayer().getQuestState(_288_HandleWithCare.class);
+		final QuestState qs = killer.getPlayer().getQuestState(_288_HandleWithCare.class);
 		if ((qs != null) && (qs.getCond() == 1))
 		{
 			if (_weeds < 5)

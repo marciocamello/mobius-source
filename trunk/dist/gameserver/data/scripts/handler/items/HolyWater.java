@@ -53,13 +53,13 @@ public class HolyWater extends SimpleItemHandler
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
-		GameObject target = player.getTarget();
+		final GameObject target = player.getTarget();
 		if ((target == null) || !(target instanceof HellboundRemnantInstance))
 		{
 			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return false;
 		}
-		HellboundRemnantInstance npc = (HellboundRemnantInstance) target;
+		final HellboundRemnantInstance npc = (HellboundRemnantInstance) target;
 		if (npc.isDead())
 		{
 			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);

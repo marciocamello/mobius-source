@@ -69,7 +69,7 @@ public class Thomas extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return true;
@@ -90,7 +90,7 @@ public class Thomas extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((attacker == null) || (attacker.getPlayer() == null))
 		{
 			return;

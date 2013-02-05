@@ -103,8 +103,8 @@ public class EssagirWarriors extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
-		int[][] coords;
+		final NpcInstance actor = getActor();
+		final int[][] coords;
 		coords = SMP_COORDS;
 		actor.setRunning();
 		if ((actor.getTarget() == null) || (currentState >= coords.length) || (currentState == 0))

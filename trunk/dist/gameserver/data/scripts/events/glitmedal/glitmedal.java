@@ -203,7 +203,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 	 */
 	private void spawnEventManagers()
 	{
-		final int EVENT_MANAGERS1[][] =
+		final int[][] EVENT_MANAGERS1 =
 		{
 			{
 				147893,
@@ -296,7 +296,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 				7400
 			},
 		};
-		final int EVENT_MANAGERS2[][] =
+		final int[][] EVENT_MANAGERS2 =
 		{
 			{
 				147960,
@@ -442,6 +442,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 	
 	/**

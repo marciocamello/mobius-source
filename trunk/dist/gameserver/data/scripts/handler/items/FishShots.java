@@ -31,7 +31,7 @@ public class FishShots extends ScriptItemHandler
 	/**
 	 * Field _itemIds.
 	 */
-	private static int[] _itemIds =
+	private static final int[] _itemIds =
 	{
 		6535,
 		6536,
@@ -43,7 +43,7 @@ public class FishShots extends ScriptItemHandler
 	/**
 	 * Field _skillIds.
 	 */
-	private static int[] _skillIds =
+	private static final int[] _skillIds =
 	{
 		2181,
 		2182,
@@ -67,15 +67,15 @@ public class FishShots extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
-		int FishshotId = item.getItemId();
+		final Player player = (Player) playable;
+		final int FishshotId = item.getItemId();
 		boolean isAutoSoulShot = false;
 		if (player.getAutoSoulShot().contains(FishshotId))
 		{
 			isAutoSoulShot = true;
 		}
-		ItemInstance weaponInst = player.getActiveWeaponInstance();
-		WeaponTemplate weaponItem = player.getActiveWeaponItem();
+		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final WeaponTemplate weaponItem = player.getActiveWeaponItem();
 		if ((weaponInst == null) || (weaponItem.getItemType() != WeaponType.ROD))
 		{
 			if (!isAutoSoulShot)
@@ -99,7 +99,7 @@ public class FishShots extends ScriptItemHandler
 			player.sendPacket(Msg.NOT_ENOUGH_SPIRITSHOTS);
 			return false;
 		}
-		int grade = weaponItem.getCrystalType().externalOrdinal;
+		final int grade = weaponItem.getCrystalType().externalOrdinal;
 		if (((grade == 0) && (FishshotId != 6535)) || ((grade == 1) && (FishshotId != 6536)) || ((grade == 2) && (FishshotId != 6537)) || ((grade == 3) && (FishshotId != 6538)) || ((grade == 4) && (FishshotId != 6539)) || ((grade == 5) && (FishshotId != 6540)))
 		{
 			if (isAutoSoulShot)

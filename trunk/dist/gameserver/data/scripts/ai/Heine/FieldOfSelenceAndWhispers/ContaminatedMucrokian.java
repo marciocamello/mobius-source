@@ -45,7 +45,7 @@ public class ContaminatedMucrokian extends Fighter
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return;
@@ -65,7 +65,7 @@ public class ContaminatedMucrokian extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor != null) && !actor.isDead())
 		{
 			if (attacker != null)
@@ -74,7 +74,7 @@ public class ContaminatedMucrokian extends Fighter
 				{
 					if (Rnd.chance(25))
 					{
-						Location pos = Location.findPointToStay(actor, 200, 300);
+						final Location pos = Location.findPointToStay(actor, 200, 300);
 						if (GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), pos.x, pos.y, pos.z, actor.getGeoIndex()))
 						{
 							actor.setRunning();

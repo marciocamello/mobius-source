@@ -133,6 +133,7 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 		 */
 		public NpcLocation()
 		{
+			// empty method
 		}
 		
 		/**

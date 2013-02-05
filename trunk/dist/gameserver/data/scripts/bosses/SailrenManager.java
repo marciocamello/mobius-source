@@ -59,7 +59,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		/**
 		 * Constructor for ActivityTimeEnd.
 		 */
-		public ActivityTimeEnd()
+		ActivityTimeEnd()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -82,7 +82,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		/**
 		 * Constructor for CubeSpawn.
 		 */
-		public CubeSpawn()
+		CubeSpawn()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -105,7 +105,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		/**
 		 * Constructor for IntervalEnd.
 		 */
-		public IntervalEnd()
+		IntervalEnd()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -140,7 +140,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		 * @param npc NpcInstance
 		 * @param actionId int
 		 */
-		public Social(NpcInstance npc, int actionId)
+		Social(NpcInstance npc, int actionId)
 		{
 			_npc = npc;
 			_action = actionId;
@@ -164,7 +164,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		/**
 		 * Constructor for onAnnihilated.
 		 */
-		public onAnnihilated()
+		onAnnihilated()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -362,7 +362,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 	/**
 	 * Field _enter.
 	 */
-	private static Location _enter = new Location(27734, -6938, -1982);
+	private static final Location _enter = new Location(27734, -6938, -1982);
 	/**
 	 * Field FWS_ENABLESINGLEPLAYER. (value is false)
 	 */
@@ -486,7 +486,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		{
 			checkAnnihilated();
 		}
-		else if (self == _velociraptor)
+		else if (self.equals(_velociraptor))
 		{
 			if (_monsterSpawnTask != null)
 			{
@@ -494,7 +494,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 			}
 			_monsterSpawnTask = ThreadPoolManager.getInstance().schedule(new SailrenSpawn(Pterosaur), FWS_INTERVALOFNEXTMONSTER);
 		}
-		else if (self == _pterosaur)
+		else if (self.equals(_pterosaur))
 		{
 			if (_monsterSpawnTask != null)
 			{
@@ -502,7 +502,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 			}
 			_monsterSpawnTask = ThreadPoolManager.getInstance().schedule(new SailrenSpawn(Tyrannosaurus), FWS_INTERVALOFNEXTMONSTER);
 		}
-		else if (self == _tyranno)
+		else if (self.equals(_tyranno))
 		{
 			if (_monsterSpawnTask != null)
 			{
@@ -510,7 +510,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 			}
 			_monsterSpawnTask = ThreadPoolManager.getInstance().schedule(new SailrenSpawn(Sailren), FWS_INTERVALOFNEXTMONSTER);
 		}
-		else if (self == _sailren)
+		else if (self.equals(_sailren))
 		{
 			onSailrenDie(killer);
 		}
@@ -716,7 +716,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		}
 		else
 		{
-			List<Player> members = new ArrayList<>();
+			final List<Player> members = new ArrayList<>();
 			for (Player mem : pc.getParty().getPartyMembers())
 			{
 				if ((mem != null) && !mem.isDead() && mem.isInRange(pc, 1000))
@@ -759,5 +759,6 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 }

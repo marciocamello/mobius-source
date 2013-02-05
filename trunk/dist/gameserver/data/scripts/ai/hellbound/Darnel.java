@@ -45,7 +45,7 @@ public class Darnel extends DefaultAI
 		/**
 		 * Constructor for TrapTask.
 		 */
-		public TrapTask()
+		TrapTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -56,7 +56,7 @@ public class Darnel extends DefaultAI
 		@Override
 		public void runImpl()
 		{
-			NpcInstance actor = getActor();
+			final NpcInstance actor = getActor();
 			if (actor.isDead())
 			{
 				return;
@@ -96,7 +96,7 @@ public class Darnel extends DefaultAI
 	public Darnel(NpcInstance actor)
 	{
 		super(actor);
-		TIntObjectHashMap<Skill> skills = getActor().getTemplate().getSkills();
+		final TIntObjectHashMap<Skill> skills = getActor().getTemplate().getSkills();
 		Poison = skills.get(4182);
 		Paralysis = skills.get(4189);
 	}
@@ -109,32 +109,32 @@ public class Darnel extends DefaultAI
 	protected boolean createNewTask()
 	{
 		clearTasks();
-		Creature target;
-		if ((target = prepareTarget()) == null)
+		final Creature target = prepareTarget();
+		if (target == null)
 		{
 			return false;
 		}
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return false;
 		}
-		int rnd_per = Rnd.get(100);
+		final int rnd_per = Rnd.get(100);
 		if (rnd_per < 5)
 		{
 			actor.broadcastPacketToOthers(new MagicSkillUse(actor, actor, 5440, 1, 3000, 0));
 			ThreadPoolManager.getInstance().schedule(new TrapTask(), 3000);
 			return true;
 		}
-		double distance = actor.getDistance(target);
+		final double distance = actor.getDistance(target);
 		if (!actor.isAMuted() && (rnd_per < 75))
 		{
 			return chooseTaskAndTargets(null, target, distance);
 		}
-		Map<Skill, Integer> d_skill = new HashMap<>();
+		final Map<Skill, Integer> d_skill = new HashMap<>();
 		addDesiredSkill(d_skill, target, distance, Poison);
 		addDesiredSkill(d_skill, target, distance, Paralysis);
-		Skill r_skill = selectTopSkill(d_skill);
+		final Skill r_skill = selectTopSkill(d_skill);
 		return chooseTaskAndTargets(r_skill, target, distance);
 	}
 	

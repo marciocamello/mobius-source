@@ -78,7 +78,7 @@ public class OriginalSinWarden extends Fighter
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		switch (actor.getNpcId())
 		{
 			case 22423:
@@ -131,13 +131,13 @@ public class OriginalSinWarden extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (Rnd.chance(15))
 		{
 			try
 			{
 				actor.getLoc();
-				SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(DarionsFaithfulServants[Rnd.get(DarionsFaithfulServants.length - 1)]));
+				final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(DarionsFaithfulServants[Rnd.get(DarionsFaithfulServants.length - 1)]));
 				sp.setLoc(Location.findPointToStay(actor, 150, 350));
 				sp.doSpawn(true);
 				sp.stopRespawn();

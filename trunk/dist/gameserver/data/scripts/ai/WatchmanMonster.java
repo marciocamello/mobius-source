@@ -95,7 +95,7 @@ public class WatchmanMonster extends Fighter
 	{
 		isSearching = false;
 		final NpcInstance actor = getActor();
-		Creature attacker = _attackerRef.get();
+		final Creature attacker = _attackerRef.get();
 		if (attacker == null)
 		{
 			return false;
@@ -133,10 +133,10 @@ public class WatchmanMonster extends Fighter
 	@Override
 	protected void onEvtArrived()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (isSearching)
 		{
-			Creature attacker = _attackerRef.get();
+			final Creature attacker = _attackerRef.get();
 			if (attacker != null)
 			{
 				Functions.npcSay(actor, flood2[Rnd.get(flood2.length)]);

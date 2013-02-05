@@ -39,7 +39,7 @@ public class AttributeStones extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
+		final Player player = (Player) playable;
 		if (player.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
 		{
 			player.sendPacket(Msg.YOU_CANNOT_ADD_ELEMENTAL_POWER_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);

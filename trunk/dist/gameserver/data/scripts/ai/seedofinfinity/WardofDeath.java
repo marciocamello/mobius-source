@@ -53,7 +53,7 @@ public class WardofDeath extends DefaultAI
 	@Override
 	protected boolean checkAggression(Creature target)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (target.isInRange(actor, actor.getAggroRange()) && target.isPlayable() && !target.isDead() && !target.isInvisible())
 		{
 			if (actor.getNpcId() == 18667)

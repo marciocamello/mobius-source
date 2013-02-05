@@ -79,7 +79,7 @@ public class Kreed extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return true;
@@ -132,6 +132,7 @@ public class Kreed extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -142,5 +143,6 @@ public class Kreed extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

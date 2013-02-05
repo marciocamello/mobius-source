@@ -39,6 +39,7 @@ public abstract class ScriptAdminCommand implements IAdminCommandHandler, Script
 	@Override
 	public void onReload()
 	{
+		// empty method
 	}
 	
 	/**
@@ -48,5 +49,6 @@ public abstract class ScriptAdminCommand implements IAdminCommandHandler, Script
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 }

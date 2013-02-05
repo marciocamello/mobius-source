@@ -310,7 +310,7 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 	/**
 	 * Field _spawns.
 	 */
-	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	/**
 	 * Field _active.
 	 */
@@ -392,7 +392,7 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 	{
 		if (_active && SimpleCheckDrop(cha, killer))
 		{
-			int itemId = DROP_LIST[Rnd.get(DROP_LIST.length)];
+			final int itemId = DROP_LIST[Rnd.get(DROP_LIST.length)];
 			if (Rnd.chance(DROP_CHANCE))
 			{
 				((NpcInstance) cha).dropItem(killer.getPlayer(), itemId, 1);
@@ -405,7 +405,7 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 	 */
 	public void startEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -429,7 +429,7 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 	 */
 	public void stopEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -467,11 +467,11 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 	 */
 	public void receiveGift()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		long _remaining_time;
-		long _reuse_time = GIFT_RECEIVE_DELAY * 60 * 60 * 1000;
-		long _curr_time = System.currentTimeMillis();
-		String _last_use_time = player.getVar("FreyaCelebration");
+		final long _reuse_time = GIFT_RECEIVE_DELAY * 60 * 60 * 1000;
+		final long _curr_time = System.currentTimeMillis();
+		final String _last_use_time = player.getVar("FreyaCelebration");
 		if (_last_use_time != null)
 		{
 			_remaining_time = _curr_time - Long.parseLong(_last_use_time);
@@ -495,8 +495,8 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		}
 		else
 		{
-			int hours = (int) (_reuse_time - _remaining_time) / 3600000;
-			int minutes = ((int) (_reuse_time - _remaining_time) % 3600000) / 60000;
+			final int hours = (int) (_reuse_time - _remaining_time) / 3600000;
+			final int minutes = ((int) (_reuse_time - _remaining_time) % 3600000) / 60000;
 			if (hours > 0)
 			{
 				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_S1_HOURSS_AND_S2_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED).addNumber(hours).addNumber(minutes));

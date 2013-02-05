@@ -98,9 +98,9 @@ public class Tiat extends Fighter
 		"I will wipe out your entire kind!"
 	};
 	/**
-	 * Field _lastFactionNotifyTime.
+	 * Field lastFactionNotifyTime.
 	 */
-	private long _lastFactionNotifyTime = 0;
+	private long lastFactionNotifyTime = 0;
 	/**
 	 * Field _immobilized.
 	 */
@@ -129,7 +129,7 @@ public class Tiat extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return;
@@ -159,9 +159,9 @@ public class Tiat extends Fighter
 				}
 			}, TIAT_TRANSFORMATION_SKILL.getHitTime());
 		}
-		if ((System.currentTimeMillis() - _lastFactionNotifyTime) > _minFactionNotifyInterval)
+		if ((System.currentTimeMillis() - lastFactionNotifyTime) > _minFactionNotifyInterval)
 		{
-			_lastFactionNotifyTime = System.currentTimeMillis();
+			lastFactionNotifyTime = System.currentTimeMillis();
 			for (NpcInstance npc : World.getAroundNpc(actor))
 			{
 				if (ArrayUtils.contains(TIAT_MINION_IDS, npc.getNpcId()))
@@ -184,7 +184,7 @@ public class Tiat extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return true;
@@ -219,8 +219,8 @@ public class Tiat extends Fighter
 	{
 		_notUsedTransform = true;
 		_lastAttackTime = 0;
-		_lastFactionNotifyTime = 0;
-		NpcInstance actor = getActor();
+		lastFactionNotifyTime = 0;
+		final NpcInstance actor = getActor();
 		SoDManager.addTiatKill();
 		final Reflection r = actor.getReflection();
 		r.setReenterTime(System.currentTimeMillis());
@@ -249,7 +249,7 @@ public class Tiat extends Fighter
 	 */
 	private void spawnTraps()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		actor.broadcastPacket(new ExShowScreenMessage("Come out, warriors. Protect Seed of Destruction.", 5000, ScreenMessageAlign.MIDDLE_CENTER, false));
 		for (int i = 0; i < TRAPS_COUNT; i++)
 		{

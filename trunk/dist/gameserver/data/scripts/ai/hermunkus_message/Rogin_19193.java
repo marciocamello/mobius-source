@@ -116,8 +116,8 @@ public class Rogin_19193 extends Dwarvs
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
 		super.onEvtTimer(timerId, arg1, arg2);
-		Reflection r = getActor().getReflection();
-		if (r == ReflectionManager.DEFAULT)
+		final Reflection r = getActor().getReflection();
+		if (r.equals(ReflectionManager.DEFAULT))
 		{
 			return;
 		}
@@ -133,7 +133,7 @@ public class Rogin_19193 extends Dwarvs
 				list = r.getAllByNpcId(BRONK_ID, true);
 				if (list.size() > 0)
 				{
-					NpcInstance bronk = list.get(0);
+					final NpcInstance bronk = list.get(0);
 					bronk.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "BRONK_1");
 				}
 				break;
@@ -146,7 +146,7 @@ public class Rogin_19193 extends Dwarvs
 				list = r.getAllByNpcId(BRONK_ID, true);
 				if (list.size() > 0)
 				{
-					NpcInstance bronk = list.get(0);
+					final NpcInstance bronk = list.get(0);
 					bronk.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "BRONK_2");
 				}
 				break;

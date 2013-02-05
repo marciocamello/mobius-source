@@ -58,7 +58,7 @@ public class FrostBuffalo extends Fighter
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (skill.isMagic())
 		{
 			return;

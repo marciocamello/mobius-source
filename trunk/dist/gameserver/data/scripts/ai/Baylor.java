@@ -75,31 +75,31 @@ public class Baylor extends DefaultAI
 	/**
 	 * Field PresentationBalor2.
 	 */
-	final int PresentationBalor2 = 5402;
+	static final int PresentationBalor2 = 5402;
 	/**
 	 * Field PresentationBalor3.
 	 */
-	final int PresentationBalor3 = 5403;
+	static final int PresentationBalor3 = 5403;
 	/**
 	 * Field PresentationBalor4.
 	 */
-	final int PresentationBalor4 = 5404;
+	static final int PresentationBalor4 = 5404;
 	/**
 	 * Field PresentationBalor10.
 	 */
-	final int PresentationBalor10 = 5410;
+	static final int PresentationBalor10 = 5410;
 	/**
 	 * Field PresentationBalor11.
 	 */
-	final int PresentationBalor11 = 5411;
+	static final int PresentationBalor11 = 5411;
 	/**
 	 * Field PresentationBalor12.
 	 */
-	final int PresentationBalor12 = 5412;
+	static final int PresentationBalor12 = 5412;
 	/**
 	 * Field Water_Dragon_Claw. (value is 2360)
 	 */
-	private static final int Water_Dragon_Claw = 2360;
+	static private final int Water_Dragon_Claw = 2360;
 	/**
 	 * Field _isUsedInvincible.
 	 */
@@ -121,7 +121,7 @@ public class Baylor extends DefaultAI
 		/**
 		 * Constructor for SpawnSocial.
 		 */
-		public SpawnSocial()
+		SpawnSocial()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -132,7 +132,7 @@ public class Baylor extends DefaultAI
 		@Override
 		public void runImpl()
 		{
-			NpcInstance actor = getActor();
+			final NpcInstance actor = getActor();
 			if (actor != null)
 			{
 				actor.broadcastPacketToOthers(new MagicSkillUse(actor, actor, PresentationBalor2, 1, 4000, 0));
@@ -147,7 +147,7 @@ public class Baylor extends DefaultAI
 	public Baylor(NpcInstance actor)
 	{
 		super(actor);
-		TIntObjectHashMap<Skill> skills = getActor().getTemplate().getSkills();
+		final TIntObjectHashMap<Skill> skills = getActor().getTemplate().getSkills();
 		Berserk = skills.get(5224);
 		Invincible = skills.get(5225);
 		Imprison = skills.get(5226);
@@ -177,7 +177,7 @@ public class Baylor extends DefaultAI
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead() || (skill == null) || (caster == null))
 		{
 			return;
@@ -191,13 +191,13 @@ public class Baylor extends DefaultAI
 			_claw_count++;
 			_last_claw_time = System.currentTimeMillis();
 		}
-		Player player = caster.getPlayer();
+		final Player player = caster.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		int count = 1;
-		Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party != null)
 		{
 			count = party.getMemberCount();
@@ -218,18 +218,18 @@ public class Baylor extends DefaultAI
 	protected boolean createNewTask()
 	{
 		clearTasks();
-		Creature target;
-		if ((target = prepareTarget()) == null)
+		Creature target = prepareTarget();
+		if (target == null)
 		{
 			return false;
 		}
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return false;
 		}
-		double distance = actor.getDistance(target);
-		double actor_hp_precent = actor.getCurrentHpPercents();
+		final double distance = actor.getDistance(target);
+		final double actor_hp_precent = actor.getCurrentHpPercents();
 		if ((actor_hp_precent < 30) && !_isUsedInvincible)
 		{
 			_isUsedInvincible = true;
@@ -237,7 +237,7 @@ public class Baylor extends DefaultAI
 			Functions.npcSay(actor, "�?хаха! Тепер�? вы в�?е умрете.");
 			return true;
 		}
-		int rnd_per = Rnd.get(100);
+		final int rnd_per = Rnd.get(100);
 		if ((rnd_per < 7) && (actor.getEffectList().getEffectsBySkill(Berserk) == null))
 		{
 			addTaskBuff(actor, Berserk);
@@ -252,14 +252,14 @@ public class Baylor extends DefaultAI
 		{
 			return chooseTaskAndTargets(null, target, distance);
 		}
-		Map<Skill, Integer> skills = new HashMap<>();
+		final Map<Skill, Integer> skills = new HashMap<>();
 		addDesiredSkill(skills, target, distance, GroundStrike);
 		addDesiredSkill(skills, target, distance, JumpAttack);
 		addDesiredSkill(skills, target, distance, StrongPunch);
 		addDesiredSkill(skills, target, distance, Stun1);
 		addDesiredSkill(skills, target, distance, Stun2);
 		addDesiredSkill(skills, target, distance, Stun3);
-		Skill skill = selectTopSkill(skills);
+		final Skill skill = selectTopSkill(skills);
 		if ((skill != null) && !skill.isOffensive())
 		{
 			target = actor;

@@ -54,15 +54,15 @@ public class GuardianAltar extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (attacker == null)
 		{
 			return;
 		}
-		Player player = attacker.getPlayer();
+		final Player player = attacker.getPlayer();
 		if (Rnd.chance(40) && player.getInventory().destroyItemByItemId(14848, 1L))
 		{
-			List<NpcInstance> around = actor.getAroundNpc(1500, 300);
+			final List<NpcInstance> around = actor.getAroundNpc(1500, 300);
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)
@@ -76,9 +76,9 @@ public class GuardianAltar extends DefaultAI
 			}
 			try
 			{
-				SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(DarkShamanVarangka));
+				final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(DarkShamanVarangka));
 				sp.setLoc(Location.findPointToStay(actor, 400, 420));
-				NpcInstance npc = sp.doSpawn(true);
+				final NpcInstance npc = sp.doSpawn(true);
 				if (attacker.isPet() || attacker.isServitor())
 				{
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, Rnd.get(2, 100));
@@ -92,7 +92,7 @@ public class GuardianAltar extends DefaultAI
 		}
 		else if (Rnd.chance(5))
 		{
-			List<NpcInstance> around = actor.getAroundNpc(1000, 300);
+			final List<NpcInstance> around = actor.getAroundNpc(1000, 300);
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)

@@ -39,7 +39,7 @@ public class ItemSkills extends ScriptItemHandler
 	 */
 	public ItemSkills()
 	{
-		TIntHashSet set = new TIntHashSet();
+		final TIntHashSet set = new TIntHashSet();
 		for (ItemTemplate template : ItemHolder.getInstance().getAllTemplates())
 		{
 			if (template == null)
@@ -80,7 +80,7 @@ public class ItemSkills extends ScriptItemHandler
 		{
 			return false;
 		}
-		Skill[] skills = item.getTemplate().getAttachedSkills();
+		final Skill[] skills = item.getTemplate().getAttachedSkills();
 		if (item.getTemplate().isCapsuled())
 		{
 			if (!player.getInventory().destroyItem(item, 1))

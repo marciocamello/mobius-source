@@ -89,7 +89,7 @@ public class OnActionShift extends Functions
 				dialog = HtmCache.getInstance().getNotNull("scripts/actions/player.L2NpcInstance.onActionShift.full.htm", player);
 				dialog = dialog.replaceFirst("%class%", String.valueOf(npc.getClass().getSimpleName().replaceFirst("L2", "").replaceFirst("Instance", "")));
 				dialog = dialog.replaceFirst("%id%", String.valueOf(npc.getNpcId()));
-				dialog = dialog.replaceFirst("%respawn%", String.valueOf(npc.getSpawn() != null ? Util.formatTime(npc.getSpawn().getRespawnDelay()) : "0"));
+				dialog = dialog.replaceFirst("%respawn%", String.valueOf((npc.getSpawn() != null) ? Util.formatTime(npc.getSpawn().getRespawnDelay()) : "0"));
 				dialog = dialog.replaceFirst("%walkSpeed%", String.valueOf(npc.getWalkSpeed()));
 				dialog = dialog.replaceFirst("%evs%", String.valueOf(npc.getEvasionRate(null)));
 				dialog = dialog.replaceFirst("%acc%", String.valueOf(npc.getAccuracy()));
@@ -119,7 +119,7 @@ public class OnActionShift extends Functions
 			dialog = dialog.replaceFirst("%name%", nameNpc(npc));
 			dialog = dialog.replaceFirst("%id%", String.valueOf(npc.getNpcId()));
 			dialog = dialog.replaceFirst("%level%", String.valueOf(npc.getLevel()));
-			dialog = dialog.replaceFirst("%respawn%", String.valueOf(npc.getSpawn() != null ? Util.formatTime(npc.getSpawn().getRespawnDelay()) : "0"));
+			dialog = dialog.replaceFirst("%respawn%", String.valueOf((npc.getSpawn() != null) ? Util.formatTime(npc.getSpawn().getRespawnDelay()) : "0"));
 			dialog = dialog.replaceFirst("%factionId%", String.valueOf(npc.getFaction()));
 			dialog = dialog.replaceFirst("%aggro%", String.valueOf(npc.getAggroRange()));
 			dialog = dialog.replaceFirst("%maxHp%", String.valueOf(npc.getMaxHp()));

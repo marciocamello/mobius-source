@@ -46,7 +46,7 @@ public class SiegeGuardPriest extends SiegeGuard
 	@Override
 	public int getRatePHYS()
 	{
-		return _damSkills.length == 0 ? 25 : 0;
+		return (_damSkills.length == 0) ? 25 : 0;
 	}
 	
 	/**

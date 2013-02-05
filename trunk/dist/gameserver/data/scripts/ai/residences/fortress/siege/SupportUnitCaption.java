@@ -50,7 +50,7 @@ public class SupportUnitCaption extends SiegeGuardMystic
 	public void onEvtAttacked(Creature attacker, int dam)
 	{
 		super.onEvtAttacked(attacker, dam);
-		SiegeGuardInstance actor = getActor();
+		final SiegeGuardInstance actor = getActor();
 		if (Rnd.chance(1))
 		{
 			Functions.npcShout(actor, NpcString.SPIRIT_OF_FIRE_UNLEASH_YOUR_POWER_BURN_THE_ENEMY);
@@ -64,8 +64,8 @@ public class SupportUnitCaption extends SiegeGuardMystic
 	public void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		SiegeGuardInstance actor = getActor();
-		FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		final SiegeGuardInstance actor = getActor();
+		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;
@@ -84,8 +84,8 @@ public class SupportUnitCaption extends SiegeGuardMystic
 	@Override
 	public void onEvtDead(Creature killer)
 	{
-		SiegeGuardInstance actor = getActor();
-		FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		final SiegeGuardInstance actor = getActor();
+		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;

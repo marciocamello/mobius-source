@@ -28,11 +28,11 @@ public class LizardmanSummoner extends Mystic
 	/**
 	 * Field TANTA_LIZARDMAN_SCOUT.
 	 */
-	private final int TANTA_LIZARDMAN_SCOUT = 22768;
+	private static final int TANTA_LIZARDMAN_SCOUT = 22768;
 	/**
 	 * Field SPAWN_COUNT.
 	 */
-	private final int SPAWN_COUNT = 2;
+	private static final int SPAWN_COUNT = 2;
 	/**
 	 * Field spawnedMobs.
 	 */
@@ -67,14 +67,14 @@ public class LizardmanSummoner extends Mystic
 	{
 		if (!spawnedMobs && attacker.isPlayable())
 		{
-			NpcInstance actor = getActor();
+			final NpcInstance actor = getActor();
 			for (int i = 0; i < SPAWN_COUNT; i++)
 			{
 				try
 				{
 					SimpleSpawner sp = new SimpleSpawner(TANTA_LIZARDMAN_SCOUT);
-					@SuppressWarnings("unused")
-					int radius = ((i % 2) == 0 ? -1 : 1) * 16000;
+					// @SuppressWarnings("unused")
+					// int radius = (((i % 2) == 0) ? -1 : 1) * 16000;
 					sp.setLoc(actor.getLoc());
 					NpcInstance npc = sp.doSpawn(true);
 					npc.setHeading(PositionUtils.calculateHeadingFrom(npc, attacker));

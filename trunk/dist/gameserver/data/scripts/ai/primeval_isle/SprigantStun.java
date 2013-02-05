@@ -54,7 +54,7 @@ public class SprigantStun extends DefaultAI
 	{
 		if (System.currentTimeMillis() > _waitTime)
 		{
-			NpcInstance actor = getActor();
+			final NpcInstance actor = getActor();
 			actor.doCast(SKILL, actor, false);
 			_waitTime = System.currentTimeMillis() + TICK_IN_MILISECONDS;
 			return true;

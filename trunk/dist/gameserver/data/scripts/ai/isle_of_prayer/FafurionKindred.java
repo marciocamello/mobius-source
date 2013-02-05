@@ -119,7 +119,7 @@ public class FafurionKindred extends Fighter
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead() || (skill == null))
 		{
 			return;
@@ -177,7 +177,7 @@ public class FafurionKindred extends Fighter
 		 * Constructor for SpawnTask.
 		 * @param id int
 		 */
-		public SpawnTask(int id)
+		SpawnTask(int id)
 		{
 			_id = id;
 		}
@@ -188,8 +188,8 @@ public class FafurionKindred extends Fighter
 		@Override
 		public void runImpl()
 		{
-			NpcInstance actor = getActor();
-			SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(_id));
+			final NpcInstance actor = getActor();
+			final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(_id));
 			sp.setLoc(Location.findPointToStay(actor, 100, 120));
 			sp.setRespawnDelay(30, 40);
 			sp.doSpawn(true);
@@ -205,7 +205,7 @@ public class FafurionKindred extends Fighter
 		/**
 		 * Constructor for PoisonTask.
 		 */
-		public PoisonTask()
+		PoisonTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -216,7 +216,7 @@ public class FafurionKindred extends Fighter
 		@Override
 		public void runImpl()
 		{
-			NpcInstance actor = getActor();
+			final NpcInstance actor = getActor();
 			actor.reduceCurrentHp(500, 0, actor, null, true, false, true, false, false, false, false);
 		}
 	}
@@ -229,7 +229,7 @@ public class FafurionKindred extends Fighter
 		/**
 		 * Constructor for DeSpawnTask.
 		 */
-		public DeSpawnTask()
+		DeSpawnTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -240,7 +240,7 @@ public class FafurionKindred extends Fighter
 		@Override
 		public void runImpl()
 		{
-			NpcInstance actor = getActor();
+			final NpcInstance actor = getActor();
 			dropItem(actor, Water_Dragon_Scale, Rnd.get(1, 2));
 			if (Rnd.chance(36))
 			{
@@ -259,7 +259,7 @@ public class FafurionKindred extends Fighter
 	 */
 	void dropItem(NpcInstance actor, int id, int count)
 	{
-		ItemInstance item = ItemFunctions.createItem(id);
+		final ItemInstance item = ItemFunctions.createItem(id);
 		item.setCount(count);
 		item.dropToTheGround(actor, Location.findPointToStay(actor, 100));
 	}

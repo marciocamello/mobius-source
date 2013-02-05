@@ -47,7 +47,7 @@ public class DarkWaterDragon extends Fighter
 	/**
 	 * Field MOBS.
 	 */
-	private static final int MOBS[] =
+	private static final int[] MOBS =
 	{
 		SHADE1,
 		SHADE2
@@ -78,7 +78,7 @@ public class DarkWaterDragon extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (!actor.isDead())
 		{
 			switch (_mobsSpawned)
@@ -88,7 +88,7 @@ public class DarkWaterDragon extends Fighter
 					spawnShades(attacker);
 					break;
 				case 1:
-					if (actor.getCurrentHp() < (actor.getMaxHp() / 2))
+					if (actor.getCurrentHp() < (actor.getMaxHp() >> 1))
 					{
 						_mobsSpawned = 2;
 						spawnShades(attacker);
@@ -105,7 +105,7 @@ public class DarkWaterDragon extends Fighter
 	 */
 	private void spawnShades(Creature attacker)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		for (int i = 0; i < MOBS_COUNT; i++)
 		{
 			try
@@ -130,10 +130,10 @@ public class DarkWaterDragon extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		_mobsSpawned = 0;
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		try
 		{
-			SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(FAFURION));
+			final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(FAFURION));
 			sp.setLoc(Location.findPointToStay(actor, 100, 120));
 			sp.doSpawn(true);
 		}

@@ -94,7 +94,7 @@ public class SiegeGolem_19189 extends DefaultAI
 		super.onEvtThink();
 		if (!getActor().getAggroList().isEmpty())
 		{
-			List<Creature> chars = World.getAroundCharacters(getActor());
+			final List<Creature> chars = World.getAroundCharacters(getActor());
 			CollectionUtils.eqSort(chars, _nearestTargetComparator);
 			for (Creature cha : chars)
 			{
@@ -118,7 +118,7 @@ public class SiegeGolem_19189 extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
@@ -130,7 +130,7 @@ public class SiegeGolem_19189 extends DefaultAI
 		}
 		if ((diedTeredor < 3) || (currentPoint >= (MOVE_LOC.length - 1)))
 		{
-			List<Creature> list = World.getAroundCharacters(getActor(), getActor().getAggroRange(), getActor().getAggroRange());
+			final List<Creature> list = World.getAroundCharacters(getActor(), getActor().getAggroRange(), getActor().getAggroRange());
 			for (Creature target : list)
 			{
 				if ((target != null) && !target.isDead() && ArrayUtils.contains(ATTACK_IDS, target.getNpcId()))
@@ -155,7 +155,7 @@ public class SiegeGolem_19189 extends DefaultAI
 				loc = new Location((MOVE_LOC[currentPoint].getX() + Rnd.get(50)) - Rnd.get(50), (MOVE_LOC[currentPoint].getY() + Rnd.get(50)) - Rnd.get(50), (MOVE_LOC[currentPoint].getZ() + Rnd.get(50)) - Rnd.get(50));
 				if (currentPoint == 0)
 				{
-					Reflection r = getActor().getReflection();
+					final Reflection r = getActor().getReflection();
 					if (r instanceof MemoryOfDisaster)
 					{
 						((MemoryOfDisaster) r).spawnTransparentTeredor();

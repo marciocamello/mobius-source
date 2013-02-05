@@ -42,7 +42,7 @@ public class FreyaQuest extends Fighter
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		Reflection r = getActor().getReflection();
+		final Reflection r = getActor().getReflection();
 		for (Player p : r.getPlayers())
 		{
 			this.notifyEvent(CtrlEvent.EVT_ATTACKED, p, 300);

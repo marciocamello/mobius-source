@@ -112,15 +112,15 @@ public class StakatoNest extends Fighter
 	/**
 	 * Field _zone_mob_buff.
 	 */
-	private static Zone _zone_mob_buff = ReflectionUtils.getZone("[stakato_mob_buff]");
+	private static final Zone _zone_mob_buff = ReflectionUtils.getZone("[stakato_mob_buff]");
 	/**
 	 * Field _zone_mob_buff_pc_display.
 	 */
-	private static Zone _zone_mob_buff_pc_display = ReflectionUtils.getZone("[stakato_mob_buff_display]");
+	private static final Zone _zone_mob_buff_pc_display = ReflectionUtils.getZone("[stakato_mob_buff_display]");
 	/**
 	 * Field _zone_pc_buff.
 	 */
-	private static Zone _zone_pc_buff = ReflectionUtils.getZone("[stakato_pc_buff]");
+	private static final Zone _zone_pc_buff = ReflectionUtils.getZone("[stakato_pc_buff]");
 	/**
 	 * Field _debuffed.
 	 */
@@ -146,7 +146,7 @@ public class StakatoNest extends Fighter
 	@Override
 	protected void onEvtSpawn()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.getNpcId() != QUEEN_SHYEED)
 		{
 			super.onEvtSpawn();
@@ -177,11 +177,11 @@ public class StakatoNest extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
-		MonsterInstance _mob = (MonsterInstance) actor;
+		final NpcInstance actor = getActor();
+		final MonsterInstance _mob = (MonsterInstance) actor;
 		if ((_mob.getNpcId() == CANNIBALISTIC_STAKATO_LEADER) && Rnd.chance(ABSORB_MINION_CHANCE) && (_mob.getCurrentHpPercents() < 30))
 		{
-			MonsterInstance _follower = getAliveMinion(actor);
+			final MonsterInstance _follower = getAliveMinion(actor);
 			if ((_follower != null) && (_follower.getCurrentHpPercents() > 30))
 			{
 				_mob.abortAttack(true, false);
@@ -203,8 +203,8 @@ public class StakatoNest extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
-		MinionInstance _minion = getAliveMinion(actor);
+		final NpcInstance actor = getActor();
+		final MinionInstance _minion = getAliveMinion(actor);
 		MonsterInstance _leader = null;
 		switch (actor.getNpcId())
 		{
@@ -267,7 +267,7 @@ public class StakatoNest extends Fighter
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor == null) || !ArrayUtils.contains(BIZARRE_COCOON, actor.getNpcId()) || (caster == null) || (skill.getId() != SKILL_GROWTH_ACCELERATOR))
 		{
 			super.onEvtSeeSpell(skill, caster);
@@ -282,7 +282,7 @@ public class StakatoNest extends Fighter
 		actor.endDecayTask();
 		try
 		{
-			NpcInstance mob = NpcHolder.getInstance().getTemplate(CANNIBALISTIC_STAKATO_CHIEF).getNewInstance();
+			final NpcInstance mob = NpcHolder.getInstance().getTemplate(CANNIBALISTIC_STAKATO_CHIEF).getNewInstance();
 			mob.setSpawnedLoc(actor.getLoc());
 			mob.setReflection(actor.getReflection());
 			mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp(), true);
@@ -320,7 +320,7 @@ public class StakatoNest extends Fighter
 		 * @param npc NpcInstance
 		 * @param killer Creature
 		 */
-		public ChangeMonster(int mobId, NpcInstance npc, Creature killer)
+		ChangeMonster(int mobId, NpcInstance npc, Creature killer)
 		{
 			_monsterId = mobId;
 			_npc = npc;
@@ -344,7 +344,7 @@ public class StakatoNest extends Fighter
 	 */
 	private MinionInstance getAliveMinion(NpcInstance npc)
 	{
-		MinionList ml = npc.getMinionList();
+		final MinionList ml = npc.getMinionList();
 		if ((ml != null) && ml.hasAliveMinions())
 		{
 			for (MinionInstance minion : ml.getAliveMinions())
@@ -365,7 +365,7 @@ public class StakatoNest extends Fighter
 	{
 		try
 		{
-			NpcInstance npc = NpcHolder.getInstance().getTemplate(mobId).getNewInstance();
+			final NpcInstance npc = NpcHolder.getInstance().getTemplate(mobId).getNewInstance();
 			npc.setSpawnedLoc(actor.getSpawnedLoc());
 			npc.setReflection(actor.getReflection());
 			npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp(), true);
@@ -388,7 +388,7 @@ public class StakatoNest extends Fighter
 	@Override
 	protected boolean randomWalk()
 	{
-		return ArrayUtils.contains(BIZARRE_COCOON, getActor().getNpcId()) || (getActor().getNpcId() == QUEEN_SHYEED) ? false : true;
+		return (ArrayUtils.contains(BIZARRE_COCOON, getActor().getNpcId()) || (getActor().getNpcId() == QUEEN_SHYEED)) ? false : true;
 	}
 	
 	/**

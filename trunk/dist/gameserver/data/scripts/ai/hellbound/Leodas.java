@@ -50,12 +50,12 @@ public class Leodas extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	private class CloseDoor extends RunnableImpl
+	static private class CloseDoor extends RunnableImpl
 	{
 		/**
 		 * Constructor for CloseDoor.
 		 */
-		public CloseDoor()
+		CloseDoor()
 		{
 			// TODO Auto-generated constructor stub
 		}

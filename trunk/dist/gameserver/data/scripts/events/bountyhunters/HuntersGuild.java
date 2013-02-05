@@ -83,6 +83,7 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 	@Override
 	public void onReload()
 	{
+		// empty method
 	}
 	
 	/**
@@ -92,6 +93,7 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 	
 	/**
@@ -163,13 +165,13 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		double mod = 1.;
 		if (id == 0)
 		{
-			List<NpcTemplate> monsters = NpcHolder.getInstance().getAllOfLevel(player.getLevel());
+			final List<NpcTemplate> monsters = NpcHolder.getInstance().getAllOfLevel(player.getLevel());
 			if ((monsters == null) || monsters.isEmpty())
 			{
 				show(new CustomMessage("scripts.events.bountyhunters.NoTargets", player), player);
 				return;
 			}
-			List<NpcTemplate> targets = new ArrayList<>();
+			final List<NpcTemplate> targets = new ArrayList<>();
 			for (NpcTemplate npc : monsters)
 			{
 				if (checkTarget(npc))
@@ -199,14 +201,14 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 			}
 			mod = (0.5 * ((10 + target.level) - player.getLevel())) / 10.;
 		}
-		int mobcount = target.level + Rnd.get(25, 50);
+		final int mobcount = target.level + Rnd.get(25, 50);
 		player.setVar("bhMonstersId", String.valueOf(target.getNpcId()), -1);
 		player.setVar("bhMonstersNeeded", String.valueOf(mobcount), -1);
 		player.setVar("bhMonstersKilled", "0", -1);
-		int fails = player.getVar("bhfails") == null ? 0 : Integer.parseInt(player.getVar("bhfails")) * 5;
-		int success = player.getVar("bhsuccess") == null ? 0 : Integer.parseInt(player.getVar("bhsuccess")) * 5;
-		double reputation = Math.min(Math.max(((100 + success) - fails) / 100., .25), 2.) * mod;
-		long adenarewardvalue = Math.round(((target.level * Math.max(Math.log(target.level), 1) * 10) + Math.max((target.level - 60) * 33, 0) + Math.max((target.level - 65) * 50, 0)) * target.rateHp * mobcount * (Config.RATE_DROP_ADENA + player.getVitalityBonus()) * player.getRateAdena() * reputation * .15);
+		final int fails = (player.getVar("bhfails") == null) ? 0 : Integer.parseInt(player.getVar("bhfails")) * 5;
+		final int success = (player.getVar("bhsuccess") == null) ? 0 : Integer.parseInt(player.getVar("bhsuccess")) * 5;
+		final double reputation = Math.min(Math.max(((100 + success) - fails) / 100., .25), 2.) * mod;
+		final long adenarewardvalue = Math.round(((target.level * Math.max(Math.log(target.level), 1) * 10) + Math.max((target.level - 60) * 33, 0) + Math.max((target.level - 65) * 50, 0)) * target.rateHp * mobcount * (Config.RATE_DROP_ADENA + player.getVitalityBonus()) * player.getRateAdena() * reputation * .15);
 		if (Rnd.chance(30))
 		{
 			player.setVar("bhRewardId", "57", -1);
@@ -256,9 +258,9 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		}
 		if (cha.isMonster() && !cha.isRaid() && (killer != null) && (killer.getPlayer() != null) && (killer.getPlayer().getVar("bhMonstersId") != null) && (Integer.parseInt(killer.getPlayer().getVar("bhMonstersId")) == cha.getNpcId()))
 		{
-			int count = Integer.parseInt(killer.getPlayer().getVar("bhMonstersKilled")) + 1;
+			final int count = Integer.parseInt(killer.getPlayer().getVar("bhMonstersKilled")) + 1;
 			killer.getPlayer().setVar("bhMonstersKilled", String.valueOf(count), -1);
-			int needed = Integer.parseInt(killer.getPlayer().getVar("bhMonstersNeeded"));
+			final int needed = Integer.parseInt(killer.getPlayer().getVar("bhMonstersNeeded"));
 			if (count >= needed)
 			{
 				doReward(killer.getPlayer());
@@ -280,8 +282,8 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		{
 			return;
 		}
-		int rewardid = Integer.parseInt(player.getVar("bhRewardId"));
-		long rewardcount = Long.parseLong(player.getVar("bhRewardCount"));
+		final int rewardid = Integer.parseInt(player.getVar("bhRewardId"));
+		final long rewardcount = Long.parseLong(player.getVar("bhRewardCount"));
 		player.unsetVar("bhMonstersId");
 		player.unsetVar("bhMonstersNeeded");
 		player.unsetVar("bhMonstersKilled");
@@ -332,8 +334,8 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		{
 			if (activeChar.getVar("bhMonstersId") != null)
 			{
-				int mobid = Integer.parseInt(activeChar.getVar("bhMonstersId"));
-				int mobcount = Integer.parseInt(activeChar.getVar("bhMonstersNeeded")) - Integer.parseInt(activeChar.getVar("bhMonstersKilled"));
+				final int mobid = Integer.parseInt(activeChar.getVar("bhMonstersId"));
+				final int mobcount = Integer.parseInt(activeChar.getVar("bhMonstersNeeded")) - Integer.parseInt(activeChar.getVar("bhMonstersKilled"));
 				show(new CustomMessage("scripts.events.bountyhunters.TaskGiven", activeChar).addNumber(mobcount).addString(NpcHolder.getInstance().getTemplate(mobid).name), activeChar);
 				return true;
 			}

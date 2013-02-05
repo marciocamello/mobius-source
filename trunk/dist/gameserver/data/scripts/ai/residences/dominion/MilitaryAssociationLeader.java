@@ -100,7 +100,7 @@ public class MilitaryAssociationLeader extends SiegeGuardFighter
 		/**
 		 * Constructor for OnPlayerEnterListenerImpl.
 		 */
-		public OnPlayerEnterListenerImpl()
+		OnPlayerEnterListenerImpl()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -113,21 +113,21 @@ public class MilitaryAssociationLeader extends SiegeGuardFighter
 		@Override
 		public void onPlayerEnter(Player player)
 		{
-			NpcInstance actor = getActor();
-			DominionSiegeEvent siegeEvent = actor.getEvent(DominionSiegeEvent.class);
+			final NpcInstance actor = getActor();
+			final DominionSiegeEvent siegeEvent = actor.getEvent(DominionSiegeEvent.class);
 			if (siegeEvent == null)
 			{
 				return;
 			}
 			
-			if (player.getEvent(DominionSiegeEvent.class) != siegeEvent)
+			if (!player.getEvent(DominionSiegeEvent.class).equals(siegeEvent))
 			{
 				return;
 			}
 			
-			Quest q = QuestManager.getQuest(_731_ProtectTheMilitaryAssociationLeader.class);
+			final Quest q = QuestManager.getQuest(_731_ProtectTheMilitaryAssociationLeader.class);
 			
-			QuestState questState = q.newQuestStateAndNotSave(player, Quest.CREATED);
+			final QuestState questState = q.newQuestStateAndNotSave(player, Quest.CREATED);
 			questState.setCond(1, false);
 			questState.setStateAndNotSave(Quest.STARTED);
 		}
@@ -157,23 +157,23 @@ public class MilitaryAssociationLeader extends SiegeGuardFighter
 	{
 		super.onEvtAttacked(attacker, dam);
 		
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		
-		DominionSiegeEvent siegeEvent = actor.getEvent(DominionSiegeEvent.class);
+		final DominionSiegeEvent siegeEvent = actor.getEvent(DominionSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;
 		}
 		
-		boolean first = actor.getParameter("dominion_first_attack", true);
+		final boolean first = actor.getParameter("dominion_first_attack", true);
 		if (first)
 		{
 			actor.setParameter("dominion_first_attack", false);
-			NpcString msg = MESSAGES.get(siegeEvent.getId())[0];
-			Quest q = QuestManager.getQuest(_731_ProtectTheMilitaryAssociationLeader.class);
+			final NpcString msg = MESSAGES.get(siegeEvent.getId())[0];
+			final Quest q = QuestManager.getQuest(_731_ProtectTheMilitaryAssociationLeader.class);
 			for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 			{
-				if (player.getEvent(DominionSiegeEvent.class) == siegeEvent)
+				if (player.getEvent(DominionSiegeEvent.class).equals(siegeEvent))
 				{
 					player.sendPacket(new ExShowScreenMessage(msg, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
 					
@@ -195,18 +195,18 @@ public class MilitaryAssociationLeader extends SiegeGuardFighter
 	{
 		super.onEvtDead(killer);
 		
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		
-		DominionSiegeEvent siegeEvent = actor.getEvent(DominionSiegeEvent.class);
+		final DominionSiegeEvent siegeEvent = actor.getEvent(DominionSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;
 		}
 		
-		NpcString msg = MESSAGES.get(siegeEvent.getId())[1];
+		final NpcString msg = MESSAGES.get(siegeEvent.getId())[1];
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
-			if (player.getEvent(DominionSiegeEvent.class) == siegeEvent)
+			if (player.getEvent(DominionSiegeEvent.class).equals(siegeEvent))
 			{
 				player.sendPacket(new ExShowScreenMessage(msg, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
 				
@@ -218,7 +218,7 @@ public class MilitaryAssociationLeader extends SiegeGuardFighter
 			}
 		}
 		
-		Player player = killer.getPlayer();
+		final Player player = killer.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -226,8 +226,8 @@ public class MilitaryAssociationLeader extends SiegeGuardFighter
 		
 		if (player.getParty() == null)
 		{
-			DominionSiegeEvent siegeEvent2 = player.getEvent(DominionSiegeEvent.class);
-			if ((siegeEvent2 == null) || (siegeEvent2 == siegeEvent))
+			final DominionSiegeEvent siegeEvent2 = player.getEvent(DominionSiegeEvent.class);
+			if ((siegeEvent2 == null) || (siegeEvent2.equals(siegeEvent)))
 			{
 				return;
 			}
@@ -240,7 +240,7 @@ public class MilitaryAssociationLeader extends SiegeGuardFighter
 				if ($member.isInRange(player, Config.ALT_PARTY_DISTRIBUTION_RANGE))
 				{
 					DominionSiegeEvent siegeEvent2 = $member.getEvent(DominionSiegeEvent.class);
-					if ((siegeEvent2 == null) || (siegeEvent2 == siegeEvent))
+					if ((siegeEvent2 == null) || (siegeEvent2.equals(siegeEvent)))
 					{
 						continue;
 					}

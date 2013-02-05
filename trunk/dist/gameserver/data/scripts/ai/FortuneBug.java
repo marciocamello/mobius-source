@@ -89,7 +89,9 @@ public class FortuneBug extends DefaultAI
 	{
 		super.onEvtSpawn();
 		addTimer(7778, 1000);
-		i_ai0 = i_ai1 = i_ai2 = 0;
+		i_ai0 = 0;
+		i_ai1 = 0;
+		i_ai2 = 0;
 	}
 	
 	/**
@@ -99,7 +101,7 @@ public class FortuneBug extends DefaultAI
 	protected void onEvtArrived()
 	{
 		super.onEvtArrived();
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return;
@@ -206,7 +208,7 @@ public class FortuneBug extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
@@ -237,7 +239,7 @@ public class FortuneBug extends DefaultAI
 	protected void onEvtDead(Creature killer)
 	{
 		super.onEvtDead(killer);
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return;
@@ -304,7 +306,7 @@ public class FortuneBug extends DefaultAI
 	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return;
@@ -348,6 +350,7 @@ public class FortuneBug extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -358,5 +361,6 @@ public class FortuneBug extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

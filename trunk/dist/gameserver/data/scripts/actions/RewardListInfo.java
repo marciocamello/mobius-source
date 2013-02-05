@@ -36,7 +36,7 @@ import org.apache.commons.lang3.StringUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public abstract class RewardListInfo
+public class RewardListInfo
 {
 	/**
 	 * Field pf.
@@ -62,7 +62,7 @@ public abstract class RewardListInfo
 		final int diff = npc.calculateLevelDiffForDrop(player.isInParty() ? player.getParty().getLevel() : player.getLevel());
 		double mod = npc.calcStat(Stats.REWARD_MULTIPLIER, 1., player, null);
 		mod *= Experience.penaltyModifier(diff, 9);
-		NpcHtmlMessage htmlMessage = new NpcHtmlMessage(5);
+		final NpcHtmlMessage htmlMessage = new NpcHtmlMessage(5);
 		htmlMessage.replace("%npc_name%", HtmlUtils.htmlNpcName(npc.getNpcId()));
 		if (mod <= 0)
 		{
@@ -77,7 +77,7 @@ public abstract class RewardListInfo
 			return;
 		}
 		htmlMessage.setFile("actions/rewardlist_info.htm");
-		StringBuilder builder = new StringBuilder(100);
+		final StringBuilder builder = new StringBuilder(100);
 		for (Map.Entry<RewardType, RewardList> entry : npc.getTemplate().getRewards().entrySet())
 		{
 			RewardList rewardList = entry.getValue();

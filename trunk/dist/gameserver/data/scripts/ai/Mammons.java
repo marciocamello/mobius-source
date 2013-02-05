@@ -136,7 +136,7 @@ public class Mammons extends Functions implements ScriptFile
 	 */
 	public void SpawnMammons()
 	{
-		int firstTown = Rnd.get(MAMMON_PRIEST_POINTS.length);
+		final int firstTown = Rnd.get(MAMMON_PRIEST_POINTS.length);
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(MAMMON_PRIEST_ID);
 		SimpleSpawner sp = new SimpleSpawner(template);
 		sp.setLoc(MAMMON_PRIEST_POINTS[firstTown]);
@@ -170,7 +170,7 @@ public class Mammons extends Functions implements ScriptFile
 		public void run()
 		{
 			Functions.npcShout(BlacksmithNpc, mammonText[Rnd.get(mammonText.length)]);
-			int nextTown = Rnd.get(MAMMON_PRIEST_POINTS.length);
+			final int nextTown = Rnd.get(MAMMON_PRIEST_POINTS.length);
 			PriestNpc.teleToLocation(MAMMON_PRIEST_POINTS[nextTown]);
 			MerchantNpc.teleToLocation(MAMMON_MERCHANT_POINTS[nextTown]);
 			BlacksmithNpc.teleToLocation(MAMMON_BLACKSMITH_POINTS[nextTown]);
@@ -196,6 +196,7 @@ public class Mammons extends Functions implements ScriptFile
 	@Override
 	public void onReload()
 	{
+		// empty method
 	}
 	
 	/**

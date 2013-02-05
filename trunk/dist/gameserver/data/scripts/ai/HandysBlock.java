@@ -51,7 +51,7 @@ public class HandysBlock extends DefaultAI
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
-		BlockInstance actor = (BlockInstance) getActor();
+		final BlockInstance actor = (BlockInstance) getActor();
 		if (caster == null)
 		{
 			return;
@@ -60,8 +60,8 @@ public class HandysBlock extends DefaultAI
 		{
 			return;
 		}
-		Player player = caster.getPlayer();
-		int arena = player.getBlockCheckerArena();
+		final Player player = caster.getPlayer();
+		final int arena = player.getBlockCheckerArena();
 		if ((arena == -1) || (arena > 3))
 		{
 			return;
@@ -70,7 +70,7 @@ public class HandysBlock extends DefaultAI
 		{
 			if ((skill.getId() == 5852) || (skill.getId() == 5853))
 			{
-				ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(arena);
+				final ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(arena);
 				if ((holder.getPlayerTeam(player) == 0) && !actor.isRed())
 				{
 					actor.changeColor();
@@ -85,7 +85,7 @@ public class HandysBlock extends DefaultAI
 				{
 					return;
 				}
-				int random = Rnd.get(100);
+				final int random = Rnd.get(100);
 				if ((random > 69) && (random <= 84))
 				{
 					dropItem(actor, 13787, holder.getEvent(), player);
@@ -105,12 +105,12 @@ public class HandysBlock extends DefaultAI
 	 */
 	private void increaseTeamPointsAndSend(Player player, BlockCheckerEngine eng)
 	{
-		int team = eng.getHolder().getPlayerTeam(player);
+		final int team = eng.getHolder().getPlayerTeam(player);
 		eng.increasePlayerPoints(player, team);
-		int timeLeft = (int) ((eng.getStarterTime() - System.currentTimeMillis()) / 1000);
-		boolean isRed = eng.getHolder().getRedPlayers().contains(player);
-		ExCubeGameChangePoints changePoints = new ExCubeGameChangePoints(timeLeft, eng.getBluePoints(), eng.getRedPoints());
-		ExCubeGameExtendedChangePoints secretPoints = new ExCubeGameExtendedChangePoints(timeLeft, eng.getBluePoints(), eng.getRedPoints(), isRed, player, eng.getPlayerPoints(player, isRed));
+		final int timeLeft = (int) ((eng.getStarterTime() - System.currentTimeMillis()) / 1000);
+		final boolean isRed = eng.getHolder().getRedPlayers().contains(player);
+		final ExCubeGameChangePoints changePoints = new ExCubeGameChangePoints(timeLeft, eng.getBluePoints(), eng.getRedPoints());
+		final ExCubeGameExtendedChangePoints secretPoints = new ExCubeGameExtendedChangePoints(timeLeft, eng.getBluePoints(), eng.getRedPoints(), isRed, player, eng.getPlayerPoints(player, isRed));
 		eng.getHolder().broadCastPacketToTeam(changePoints);
 		eng.getHolder().broadCastPacketToTeam(secretPoints);
 	}
@@ -124,7 +124,7 @@ public class HandysBlock extends DefaultAI
 	 */
 	private void dropItem(NpcInstance block, int id, BlockCheckerEngine eng, Player player)
 	{
-		ItemInstance drop = ItemFunctions.createItem(id);
+		final ItemInstance drop = ItemFunctions.createItem(id);
 		drop.dropToTheGround(block, Location.findPointToStay(block, 50));
 		eng.addNewDrop(drop);
 	}

@@ -358,7 +358,8 @@ public abstract class TvTTemplate extends Functions
 			String t = null;
 			if (tryRegister(2, player) != null)
 			{
-				if ((t = tryRegister(1, player)) != null)
+				t = tryRegister(1, player);
+				if (t != null)
 				{
 					show(t, player);
 				}
@@ -369,7 +370,8 @@ public abstract class TvTTemplate extends Functions
 			String t = null;
 			if (tryRegister(1, player) != null)
 			{
-				if ((t = tryRegister(2, player)) != null)
+				t = tryRegister(2, player);
+				if (t != null)
 				{
 					show(t, player);
 				}
@@ -381,7 +383,8 @@ public abstract class TvTTemplate extends Functions
 			String t = null;
 			if (tryRegister(team, player) != null)
 			{
-				if ((t = tryRegister(team == 1 ? 2 : 1, player)) != null)
+				t = tryRegister(team == 1 ? 2 : 1, player);
+				if (t != null)
 				{
 					show(t, player);
 				}

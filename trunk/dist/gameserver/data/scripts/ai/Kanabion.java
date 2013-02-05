@@ -49,13 +49,13 @@ public class Kanabion extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		boolean isOverhit = false;
 		if (actor instanceof MonsterInstance)
 		{
 			isOverhit = ((MonsterInstance) actor).getOverhitDamage() > 0;
 		}
-		int npcId = actor.getNpcId();
+		final int npcId = actor.getNpcId();
 		int nextId = 0;
 		int type = 0;
 		if ((npcId != getNextDoppler(npcId)) && (npcId != getNextVoid(npcId)))
@@ -115,11 +115,11 @@ public class Kanabion extends Fighter
 				nextId = getNextVoid(npcId);
 			}
 		}
-		Reflection r = actor.getReflection();
+		final Reflection r = actor.getReflection();
 		boolean spawnPossible = true;
 		if (r instanceof KamalokaNightmare)
 		{
-			KamalokaNightmare kama = (KamalokaNightmare) r;
+			final KamalokaNightmare kama = (KamalokaNightmare) r;
 			kama.addKilledKanabion(type);
 			spawnPossible = kama.isSpawnPossible();
 		}
@@ -180,12 +180,12 @@ public class Kanabion extends Fighter
 		@Override
 		public void runImpl()
 		{
-			SimpleSpawner sp = new SimpleSpawner(_nextId);
+			final SimpleSpawner sp = new SimpleSpawner(_nextId);
 			sp.setLocx(_actor.getX());
 			sp.setLocy(_actor.getY());
 			sp.setLocz(_actor.getZ());
 			sp.setReflection(_actor.getReflection());
-			NpcInstance npc = sp.doSpawn(true);
+			final NpcInstance npc = sp.doSpawn(true);
 			npc.setHeading(PositionUtils.calculateHeadingFrom(npc, _player));
 			npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _player, 1000);
 		}

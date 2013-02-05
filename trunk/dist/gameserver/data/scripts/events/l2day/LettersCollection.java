@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public abstract class LettersCollection extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
+public class LettersCollection extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
 	/**
 	 * Field _log.
@@ -61,7 +61,7 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 	/**
 	 * Field EVENT_MANAGERS.
 	 */
-	protected static int EVENT_MANAGERS[][] = null;
+	protected static int[][] EVENT_MANAGERS = null;
 	/**
 	 * Field _msgStarted.
 	 */
@@ -227,7 +227,7 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 	{
 		if (_active && SimpleCheckDrop(cha, killer))
 		{
-			int[] letter = letters[Rnd.get(letters.length)];
+			final int[] letter = letters[Rnd.get(letters.length)];
 			if (Rnd.chance(letter[1] * Config.EVENT_L2DAY_LETTER_CHANCE * ((NpcTemplate) cha.getTemplate()).rateHp))
 			{
 				((NpcInstance) cha).dropItem(killer.getPlayer(), letter[0], 1);
@@ -240,7 +240,7 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 	 */
 	public void startEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -264,7 +264,7 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 	 */
 	public void stopEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -289,7 +289,7 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 	 */
 	public void exchange(String[] var)
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
@@ -298,7 +298,7 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 		{
 			return;
 		}
-		Integer[][] mss = _words.get(var[0]);
+		final Integer[][] mss = _words.get(var[0]);
 		for (Integer[] l : mss)
 		{
 			if (getItemCount(player, l[0]) < l[1])
@@ -311,13 +311,13 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 		{
 			removeItem(player, l[0], l[1]);
 		}
-		RewardData[] rewards = _rewards.get(var[0]);
+		final RewardData[] rewards = _rewards.get(var[0]);
 		int sum = 0;
 		for (RewardData r : rewards)
 		{
 			sum += r.getChance();
 		}
-		int random = Rnd.get(sum);
+		final int random = Rnd.get(sum);
 		sum = 0;
 		for (RewardData r : rewards)
 		{
@@ -355,7 +355,7 @@ public abstract class LettersCollection extends Functions implements ScriptFile,
 		{
 			return "";
 		}
-		StringBuilder append = new StringBuilder("<br><br>");
+		final StringBuilder append = new StringBuilder("<br><br>");
 		for (String word : _words.keySet())
 		{
 			append.append("[scripts_").append(getClass().getName()).append(":exchange ").append(word).append('|').append(word).append("]<br1>");

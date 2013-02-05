@@ -102,7 +102,7 @@ public class SealControlDevice extends DefaultAI
 		{
 			return;
 		}
-		Reflection r = getActor().getReflection();
+		final Reflection r = getActor().getReflection();
 		if (!(r instanceof HarnakUndergroundRuins))
 		{
 			return;

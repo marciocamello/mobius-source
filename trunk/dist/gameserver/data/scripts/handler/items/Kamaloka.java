@@ -58,7 +58,7 @@ public class Kamaloka extends SimpleItemHandler
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
-		int itemId = item.getItemId();
+		final int itemId = item.getItemId();
 		switch (itemId)
 		{
 			case 13010:

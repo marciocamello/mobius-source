@@ -48,7 +48,7 @@ public class Tears extends DefaultAI
 		/**
 		 * Constructor for DeSpawnTask.
 		 */
-		public DeSpawnTask()
+		DeSpawnTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -72,13 +72,14 @@ public class Tears extends DefaultAI
 	}
 	
 	/**
+	 * @author Mobius
 	 */
 	private class SpawnMobsTask extends RunnableImpl
 	{
 		/**
 		 * Constructor for SpawnMobsTask.
 		 */
-		public SpawnMobsTask()
+		SpawnMobsTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -142,7 +143,7 @@ public class Tears extends DefaultAI
 	public Tears(NpcInstance actor)
 	{
 		super(actor);
-		TIntObjectHashMap<Skill> skills = getActor().getTemplate().getSkills();
+		final TIntObjectHashMap<Skill> skills = getActor().getTemplate().getSkills();
 		Invincible = skills.get(5420);
 		Freezing = skills.get(5238);
 	}
@@ -155,7 +156,7 @@ public class Tears extends DefaultAI
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead() || (skill == null) || (caster == null))
 		{
 			return;
@@ -169,13 +170,13 @@ public class Tears extends DefaultAI
 			_scale_count++;
 			_last_scale_time = System.currentTimeMillis();
 		}
-		Player player = caster.getPlayer();
+		final Player player = caster.getPlayer();
 		if (player == null)
 		{
 			return;
 		}
 		int count = 1;
-		Party party = player.getParty();
+		final Party party = player.getParty();
 		if (party != null)
 		{
 			count = party.getMemberCount();
@@ -195,19 +196,19 @@ public class Tears extends DefaultAI
 	protected boolean createNewTask()
 	{
 		clearTasks();
-		Creature target;
-		if ((target = prepareTarget()) == null)
+		final Creature target = prepareTarget();
+		if (target == null)
 		{
 			return false;
 		}
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return false;
 		}
-		double distance = actor.getDistance(target);
-		double actor_hp_precent = actor.getCurrentHpPercents();
-		int rnd_per = Rnd.get(100);
+		final double distance = actor.getDistance(target);
+		final double actor_hp_precent = actor.getCurrentHpPercents();
+		final int rnd_per = Rnd.get(100);
 		if ((actor_hp_precent < 15) && !_isUsedInvincible)
 		{
 			_isUsedInvincible = true;
@@ -225,15 +226,15 @@ public class Tears extends DefaultAI
 		{
 			return chooseTaskAndTargets(null, target, distance);
 		}
-		return chooseTaskAndTargets(Freezing, target, /**
-		 * Method spawnMobs.
-		 */
-		distance);
+		return chooseTaskAndTargets(Freezing, target, distance);
 	}
 	
+	/**
+	 * Method spawnMobs.
+	 */
 	void spawnMobs()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		Location pos;
 		Creature hated;
 		for (int i = 0; i < 9; i++)
@@ -268,13 +269,13 @@ public class Tears extends DefaultAI
 		{
 			despawnTask.cancel(false);
 		}
-		despawnTask = ThreadPoolManager.getInstance().schedule(new DeSpawnTask(/**
-		 * Method randomWalk.
-		 * @return boolean
-		 */
-		), 30000);
+		despawnTask = ThreadPoolManager.getInstance().schedule(new DeSpawnTask(), 30000);
 	}
 	
+	/**
+	 * Method randomWalk.
+	 * @return boolean
+	 */
 	@Override
 	protected boolean randomWalk()
 	{

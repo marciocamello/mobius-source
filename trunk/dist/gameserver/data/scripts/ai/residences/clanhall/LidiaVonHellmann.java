@@ -75,7 +75,7 @@ public class LidiaVonHellmann extends SiegeGuardFighter
 	@Override
 	public void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		super.onEvtAttacked(attacker, damage);
 		if (Rnd.chance(0.22))
 		{

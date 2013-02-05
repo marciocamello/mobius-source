@@ -118,7 +118,7 @@ public class EkimusFood extends DefaultAI
 	 */
 	private void startMoveTask()
 	{
-		NpcInstance npc = getActor();
+		final NpcInstance npc = getActor();
 		_lastPoint++;
 		if (_lastPoint >= _points.length)
 		{
@@ -141,6 +141,7 @@ public class EkimusFood extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -169,5 +170,6 @@ public class EkimusFood extends DefaultAI
 	@Override
 	protected void teleportHome()
 	{
+		// empty method
 	}
 }

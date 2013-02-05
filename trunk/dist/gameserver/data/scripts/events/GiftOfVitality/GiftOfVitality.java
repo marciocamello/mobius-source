@@ -50,7 +50,7 @@ public class GiftOfVitality extends Functions implements ScriptFile
 	/**
 	 * Field _spawns.
 	 */
-	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	/**
 	 * Field _log.
 	 */
@@ -148,7 +148,7 @@ public class GiftOfVitality extends Functions implements ScriptFile
 	 */
 	private void spawnEventManagers()
 	{
-		final int EVENT_MANAGERS[][] =
+		final int[][] EVENT_MANAGERS =
 		{
 			{
 				-119494,
@@ -278,7 +278,7 @@ public class GiftOfVitality extends Functions implements ScriptFile
 	 */
 	public void startEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -301,7 +301,7 @@ public class GiftOfVitality extends Functions implements ScriptFile
 	 */
 	public void stopEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -368,9 +368,9 @@ public class GiftOfVitality extends Functions implements ScriptFile
 			return;
 		}
 		String htmltext = null;
-		Player player = getSelf().getPlayer();
-		NpcInstance npc = getNpc();
-		String var = player.getVar("govEventTime");
+		final Player player = getSelf().getPlayer();
+		final NpcInstance npc = getNpc();
+		final String var = player.getVar("govEventTime");
 		switch (type)
 		{
 			case VITALITY:

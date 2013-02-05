@@ -44,7 +44,7 @@ public class GatekeeperZombie extends Mystic
 	@Override
 	public boolean checkAggression(Creature target)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return false;

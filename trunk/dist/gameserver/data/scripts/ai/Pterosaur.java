@@ -118,7 +118,7 @@ public class Pterosaur extends DefaultAI
 	@Override
 	protected void onEvtSpawn()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		actor.setFlying(true);
 		actor.setHasChatWindow(false);
 		super.onEvtSpawn();
@@ -141,7 +141,7 @@ public class Pterosaur extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return true;
@@ -154,7 +154,7 @@ public class Pterosaur extends DefaultAI
 			}
 			return true;
 		}
-		long now = System.currentTimeMillis();
+		final long now = System.currentTimeMillis();
 		if ((now > wait_timeout) && ((current_point > -1) || Rnd.chance(5)))
 		{
 			if (!wait)
@@ -194,6 +194,7 @@ public class Pterosaur extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -204,5 +205,6 @@ public class Pterosaur extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

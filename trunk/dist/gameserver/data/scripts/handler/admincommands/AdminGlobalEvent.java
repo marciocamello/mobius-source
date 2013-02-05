@@ -45,11 +45,11 @@ public class AdminGlobalEvent extends ScriptAdminCommand
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands c = (Commands) comm;
+		final Commands c = (Commands) comm;
 		switch (c)
 		{
 			case admin_list_events:
-				GameObject object = activeChar.getTarget();
+				final GameObject object = activeChar.getTarget();
 				if (object == null)
 				{
 					activeChar.sendPacket(SystemMsg.INVALID_TARGET);

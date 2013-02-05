@@ -49,15 +49,15 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public class BaylorManager extends Functions implements ScriptFile
 {
 	/**
-	 * Method spawn.
+	 * Method baylor_spawn.
 	 * @param loc Location
 	 * @param npcId int
 	 * @return NpcInstance
 	 */
-	public static NpcInstance spawn(Location loc, int npcId)
+	public static NpcInstance baylor_spawn(Location loc, int npcId)
 	{
-		NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
-		NpcInstance npc = template.getNewInstance();
+		final NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
+		final NpcInstance npc = template.getNewInstance();
 		npc.setSpawnedLoc(loc);
 		npc.setHeading(loc.h);
 		npc.setLoc(loc);
@@ -74,7 +74,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		/**
 		 * Constructor for ActivityTimeEnd.
 		 */
-		public ActivityTimeEnd()
+		ActivityTimeEnd()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -107,7 +107,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		 * Constructor for BaylorSpawn.
 		 * @param npcId int
 		 */
-		public BaylorSpawn(int npcId)
+		BaylorSpawn(int npcId)
 		{
 			_npcId = npcId;
 		}
@@ -121,14 +121,14 @@ public class BaylorManager extends Functions implements ScriptFile
 			switch (_npcId)
 			{
 				case CrystalPrisonGuard:
-					Reflection ref = ReflectionManager.getInstance().get(currentReflection);
+					final Reflection ref = ReflectionManager.getInstance().get(currentReflection);
 					for (int doorId : doors)
 					{
 						ref.openDoor(doorId);
 					}
 					for (int i = 0; i < _crystalineLocation.length; i++)
 					{
-						_crystaline[i] = spawn(_crystalineLocation[i], CrystalPrisonGuard);
+						_crystaline[i] = baylor_spawn(_crystalineLocation[i], CrystalPrisonGuard);
 						_crystaline[i].setRunning();
 						_crystaline[i].moveToLocation(_pos, 300, false);
 						ThreadPoolManager.getInstance().schedule(new Social(_crystaline[i], 2), 15000);
@@ -136,7 +136,7 @@ public class BaylorManager extends Functions implements ScriptFile
 					break;
 				case Baylor:
 					Dying = false;
-					_baylor = spawn(new Location(153569, 142075, -12732, 59864), Baylor);
+					_baylor = baylor_spawn(new Location(153569, 142075, -12732, 59864), Baylor);
 					_baylor.addListener(BaylorDeathListener.getInstance());
 					_state.setRespawnDate(getRespawnInterval() + FWBA_ACTIVITYTIMEOFMOBS);
 					_state.setState(EpicBossState.State.ALIVE);
@@ -172,7 +172,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		/**
 		 * Constructor for IntervalEnd.
 		 */
-		public IntervalEnd()
+		IntervalEnd()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -207,7 +207,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		 * @param npc NpcInstance
 		 * @param actionId int
 		 */
-		public Social(NpcInstance npc, int actionId)
+		Social(NpcInstance npc, int actionId)
 		{
 			_npc = npc;
 			_action = actionId;
@@ -231,7 +231,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		/**
 		 * Constructor for EndScene.
 		 */
-		public EndScene()
+		EndScene()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -285,7 +285,7 @@ public class BaylorManager extends Functions implements ScriptFile
 	/**
 	 * Field _crystalineLocation.
 	 */
-	static final Location _crystalineLocation[] =
+	static final Location[] _crystalineLocation =
 	{
 		new Location(154404, 140596, -12711, 44732),
 		new Location(153574, 140402, -12711, 44732),
@@ -299,7 +299,7 @@ public class BaylorManager extends Functions implements ScriptFile
 	/**
 	 * Field _baylorChestLocation.
 	 */
-	private static final Location _baylorChestLocation[] =
+	private static final Location[] _baylorChestLocation =
 	{
 		new Location(153763, 142075, -12741, 64792),
 		new Location(153701, 141942, -12741, 57739),
@@ -459,7 +459,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		}
 		else
 		{
-			List<Player> members = new ArrayList<>();
+			final List<Player> members = new ArrayList<>();
 			for (Player mem : pc.getParty().getPartyMembers())
 			{
 				if (!mem.isDead() && mem.isInRange(pc, 1500))
@@ -482,7 +482,7 @@ public class BaylorManager extends Functions implements ScriptFile
 	 */
 	static List<Player> getPlayersInside()
 	{
-		List<Player> result = new ArrayList<>();
+		final List<Player> result = new ArrayList<>();
 		for (Player player : getZone().getInsidePlayers())
 		{
 			result.add(player);
@@ -522,7 +522,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		{
 			setIntervalEndTask();
 		}
-		Date dt = new Date(_state.getRespawnDate());
+		final Date dt = new Date(_state.getRespawnDate());
 		Log.add("BaylorManager : Next spawn date of Baylor is " + dt + ".", "bosses");
 		Log.add("BaylorManager : Init BaylorManager.", "bosses");
 	}
@@ -557,9 +557,9 @@ public class BaylorManager extends Functions implements ScriptFile
 		_state.setState(EpicBossState.State.INTERVAL);
 		_state.update();
 		Log.add("Baylor died", "bosses");
-		spawn(_baylorChestLocation[Rnd.get(_baylorChestLocation.length)], 29116);
-		spawn(new Location(153570, 142067, -9727, 55500), Parme);
-		spawn(new Location(153569, 142075, -12732, 55500), Oracle);
+		baylor_spawn(_baylorChestLocation[Rnd.get(_baylorChestLocation.length)], 29116);
+		baylor_spawn(new Location(153570, 142067, -9727, 55500), Parme);
+		baylor_spawn(new Location(153569, 142075, -12732, 55500), Oracle);
 		startCollapse();
 	}
 	
@@ -571,7 +571,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		/**
 		 * Field _instance.
 		 */
-		private static OnZoneEnterLeaveListener _instance = new BaylorZoneListener();
+		private static final OnZoneEnterLeaveListener _instance = new BaylorZoneListener();
 		
 		/**
 		 * Method getInstance.
@@ -621,7 +621,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		/**
 		 * Field _instance.
 		 */
-		private static OnDeathListener _instance = new PlayerDeathListener();
+		private static final OnDeathListener _instance = new PlayerDeathListener();
 		
 		/**
 		 * Method getInstance.
@@ -653,7 +653,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		/**
 		 * Field _instance.
 		 */
-		private static OnDeathListener _instance = new BaylorDeathListener();
+		private static final OnDeathListener _instance = new BaylorDeathListener();
 		
 		/**
 		 * Method getInstance.
@@ -740,7 +740,7 @@ public class BaylorManager extends Functions implements ScriptFile
 	{
 		if (currentReflection > 0)
 		{
-			Reflection reflection = ReflectionManager.getInstance().get(currentReflection);
+			final Reflection reflection = ReflectionManager.getInstance().get(currentReflection);
 			if (reflection != null)
 			{
 				reflection.startCollapseTimer(300000);
@@ -776,5 +776,6 @@ public class BaylorManager extends Functions implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 }

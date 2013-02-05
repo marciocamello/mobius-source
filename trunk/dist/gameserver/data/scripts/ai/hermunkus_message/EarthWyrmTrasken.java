@@ -103,7 +103,7 @@ public class EarthWyrmTrasken extends DefaultAI
 	{
 		if (skill_id == ENRAGED_SKILL_ID)
 		{
-			Reflection r = getActor().getReflection();
+			final Reflection r = getActor().getReflection();
 			if (r instanceof MemoryOfDisaster)
 			{
 				((MemoryOfDisaster) r).startFinalScene();

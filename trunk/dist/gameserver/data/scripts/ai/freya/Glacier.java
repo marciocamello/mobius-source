@@ -72,7 +72,7 @@ public class Glacier extends Fighter
 		/**
 		 * Constructor for Freeze.
 		 */
-		public Freeze()
+		Freeze()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -95,7 +95,7 @@ public class Glacier extends Fighter
 		/**
 		 * Constructor for Despawn.
 		 */
-		public Despawn()
+		Despawn()
 		{
 			// TODO Auto-generated constructor stub
 		}

@@ -62,7 +62,7 @@ public class Rooney extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((System.currentTimeMillis() - _lastTeleport) < TELEPORT_PERIOD)
 		{
 			return false;

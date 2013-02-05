@@ -40,12 +40,12 @@ public class ctreeAI extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return true;
 		}
-		int skillId = 2139;
+		final int skillId = 2139;
 		for (Player player : World.getAroundPlayers(actor, 200, 200))
 		{
 			if ((player != null) && !player.isInZonePeace() && (player.getEffectList().getEffectsBySkillId(skillId) == null))

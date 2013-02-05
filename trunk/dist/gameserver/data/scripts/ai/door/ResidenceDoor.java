@@ -45,10 +45,10 @@ public class ResidenceDoor extends DoorAI
 	public void onEvtTwiceClick(final Player player)
 	{
 		final DoorInstance door = getActor();
-		Residence residence = ResidenceHolder.getInstance().getResidence(door.getTemplate().getAIParams().getInteger("residence_id"));
+		final Residence residence = ResidenceHolder.getInstance().getResidence(door.getTemplate().getAIParams().getInteger("residence_id"));
 		if ((residence.getOwner() != null) && (player.getClan() != null) && (player.getClan().equals(residence.getOwner())) && ((player.getClanPrivileges() & Clan.CP_CS_ENTRY_EXIT) == Clan.CP_CS_ENTRY_EXIT))
 		{
-			SystemMsg msg = door.isOpen() ? SystemMsg.WOULD_YOU_LIKE_TO_CLOSE_THE_GATE : SystemMsg.WOULD_YOU_LIKE_TO_OPEN_THE_GATE;
+			final SystemMsg msg = door.isOpen() ? SystemMsg.WOULD_YOU_LIKE_TO_CLOSE_THE_GATE : SystemMsg.WOULD_YOU_LIKE_TO_OPEN_THE_GATE;
 			player.ask(new ConfirmDlg(msg, 0), new OnAnswerListener()
 			{
 				@Override
@@ -67,6 +67,7 @@ public class ResidenceDoor extends DoorAI
 				@Override
 				public void sayNo()
 				{
+					// empty method
 				}
 			});
 		}

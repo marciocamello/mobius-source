@@ -53,15 +53,15 @@ public class Ballista extends DefaultAI
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((caster == null) || (skill.getId() != BALLISTA_BOMB_SKILL_ID))
 		{
 			return;
 		}
-		Player player = caster.getPlayer();
-		FortressSiegeEvent siege = actor.getEvent(FortressSiegeEvent.class);
-		FortressSiegeEvent siege2 = player.getEvent(FortressSiegeEvent.class);
-		if ((siege == null) || (siege != siege2) || (siege.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan()) == null))
+		final Player player = caster.getPlayer();
+		final FortressSiegeEvent siege = actor.getEvent(FortressSiegeEvent.class);
+		final FortressSiegeEvent siege2 = player.getEvent(FortressSiegeEvent.class);
+		if ((siege == null) || (!siege.equals(siege2)) || (siege.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan()) == null))
 		{
 			return;
 		}

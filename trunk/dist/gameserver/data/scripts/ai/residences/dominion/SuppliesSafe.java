@@ -100,7 +100,7 @@ public class SuppliesSafe extends DefaultAI
 		/**
 		 * Constructor for OnPlayerEnterListenerImpl.
 		 */
-		public OnPlayerEnterListenerImpl()
+		OnPlayerEnterListenerImpl()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -113,21 +113,21 @@ public class SuppliesSafe extends DefaultAI
 		@Override
 		public void onPlayerEnter(Player player)
 		{
-			NpcInstance actor = getActor();
-			DominionSiegeEvent siegeEvent = actor.getEvent(DominionSiegeEvent.class);
+			final NpcInstance actor = getActor();
+			final DominionSiegeEvent siegeEvent = actor.getEvent(DominionSiegeEvent.class);
 			if (siegeEvent == null)
 			{
 				return;
 			}
 			
-			if (player.getEvent(DominionSiegeEvent.class) != siegeEvent)
+			if (!player.getEvent(DominionSiegeEvent.class).equals(siegeEvent))
 			{
 				return;
 			}
 			
-			Quest q = QuestManager.getQuest(_730_ProtectTheSuppliesSafe.class);
+			final Quest q = QuestManager.getQuest(_730_ProtectTheSuppliesSafe.class);
 			
-			QuestState questState = q.newQuestStateAndNotSave(player, Quest.CREATED);
+			final QuestState questState = q.newQuestStateAndNotSave(player, Quest.CREATED);
 			questState.setCond(1, false);
 			questState.setStateAndNotSave(Quest.STARTED);
 		}
@@ -165,23 +165,23 @@ public class SuppliesSafe extends DefaultAI
 	@Override
 	public void onEvtAttacked(Creature attacker, int dam)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		
-		DominionSiegeEvent siegeEvent = actor.getEvent(DominionSiegeEvent.class);
+		final DominionSiegeEvent siegeEvent = actor.getEvent(DominionSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;
 		}
 		
-		boolean first = actor.getParameter("dominion_first_attack", true);
+		final boolean first = actor.getParameter("dominion_first_attack", true);
 		if (first)
 		{
 			actor.setParameter("dominion_first_attack", false);
-			NpcString msg = MESSAGES.get(siegeEvent.getId())[0];
-			Quest q = QuestManager.getQuest(_730_ProtectTheSuppliesSafe.class);
+			final NpcString msg = MESSAGES.get(siegeEvent.getId())[0];
+			final Quest q = QuestManager.getQuest(_730_ProtectTheSuppliesSafe.class);
 			for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 			{
-				if (player.getEvent(DominionSiegeEvent.class) == siegeEvent)
+				if (player.getEvent(DominionSiegeEvent.class).equals(siegeEvent))
 				{
 					player.sendPacket(new ExShowScreenMessage(msg, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
 					
@@ -202,6 +202,7 @@ public class SuppliesSafe extends DefaultAI
 	@Override
 	public void onEvtAggression(Creature attacker, int d)
 	{
+		// empty method
 	}
 	
 	/**
@@ -211,18 +212,18 @@ public class SuppliesSafe extends DefaultAI
 	@Override
 	public void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		super.onEvtDead(killer);
-		DominionSiegeEvent siegeEvent = actor.getEvent(DominionSiegeEvent.class);
+		final DominionSiegeEvent siegeEvent = actor.getEvent(DominionSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;
 		}
 		
-		NpcString msg = MESSAGES.get(siegeEvent.getId())[1];
+		final NpcString msg = MESSAGES.get(siegeEvent.getId())[1];
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
-			if (player.getEvent(DominionSiegeEvent.class) == siegeEvent)
+			if (player.getEvent(DominionSiegeEvent.class).equals(siegeEvent))
 			{
 				player.sendPacket(new ExShowScreenMessage(msg, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
 				
@@ -234,7 +235,7 @@ public class SuppliesSafe extends DefaultAI
 			}
 		}
 		
-		Player player = killer.getPlayer();
+		final Player player = killer.getPlayer();
 		if (player == null)
 		{
 			return;
@@ -242,8 +243,8 @@ public class SuppliesSafe extends DefaultAI
 		
 		if (player.getParty() == null)
 		{
-			DominionSiegeEvent siegeEvent2 = player.getEvent(DominionSiegeEvent.class);
-			if ((siegeEvent2 == null) || (siegeEvent2 == siegeEvent))
+			final DominionSiegeEvent siegeEvent2 = player.getEvent(DominionSiegeEvent.class);
+			if ((siegeEvent2 == null) || (siegeEvent2.equals(siegeEvent)))
 			{
 				return;
 			}
@@ -256,7 +257,7 @@ public class SuppliesSafe extends DefaultAI
 				if ($member.isInRange(player, Config.ALT_PARTY_DISTRIBUTION_RANGE))
 				{
 					DominionSiegeEvent siegeEvent2 = $member.getEvent(DominionSiegeEvent.class);
-					if ((siegeEvent2 == null) || (siegeEvent2 == siegeEvent))
+					if ((siegeEvent2 == null) || (siegeEvent2.equals(siegeEvent)))
 					{
 						continue;
 					}

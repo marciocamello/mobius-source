@@ -41,11 +41,11 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 	/**
 	 * Field EVENT_MANAGER_ID.
 	 */
-	private static int EVENT_MANAGER_ID = 31863;
+	private static final int EVENT_MANAGER_ID = 31863;
 	/**
 	 * Field CTREE_ID.
 	 */
-	private static int CTREE_ID = 13006;
+	private static final int CTREE_ID = 13006;
 	/**
 	 * Field _log.
 	 */
@@ -53,7 +53,7 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 	/**
 	 * Field _dropdata.
 	 */
-	private static int[][] _dropdata =
+	private static final int[][] _dropdata =
 	{
 		{
 			5556,
@@ -75,7 +75,7 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 	/**
 	 * Field _spawns.
 	 */
-	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	/**
 	 * Field _active.
 	 */
@@ -115,7 +115,7 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 	 */
 	public void startEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -139,7 +139,7 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 	 */
 	public void stopEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -163,7 +163,7 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 	 */
 	private void spawnEventManagers()
 	{
-		final int EVENT_MANAGERS[][] =
+		final int[][] EVENT_MANAGERS =
 		{
 			{
 				81921,
@@ -238,7 +238,7 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 				8192
 			}
 		};
-		final int CTREES[][] =
+		final int[][] CTREES =
 		{
 			{
 				81961,
@@ -378,7 +378,7 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 	 */
 	public void exchange(String[] var)
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;

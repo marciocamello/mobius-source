@@ -45,7 +45,7 @@ public class FishItem extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
+		final Player player = (Player) playable;
 		if ((player.getWeightPenalty() >= 3) || (player.getInventory().getSize() > (player.getInventoryLimit() - 10)))
 		{
 			player.sendPacket(Msg.YOUR_INVENTORY_IS_FULL);
@@ -57,7 +57,7 @@ public class FishItem extends ScriptItemHandler
 			return false;
 		}
 		int count = 0;
-		List<RewardData> rewards = FishTable.getInstance().getFishReward(item.getItemId());
+		final List<RewardData> rewards = FishTable.getInstance().getFishReward(item.getItemId());
 		for (RewardData d : rewards)
 		{
 			long roll = Util.rollDrop(d.getMinDrop(), d.getMaxDrop(), d.getChance() * Config.RATE_FISH_DROP_COUNT * Config.RATE_DROP_ITEMS * player.getRateItems(), false);

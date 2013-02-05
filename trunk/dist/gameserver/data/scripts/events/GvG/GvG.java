@@ -86,23 +86,23 @@ public class GvG extends Functions implements ScriptFile
 	/**
 	 * Field _minLevel.
 	 */
-	private static int _minLevel = 80;
+	private static final int _minLevel = 80;
 	/**
 	 * Field _maxLevel.
 	 */
-	private static int _maxLevel = 99;
+	private static final int _maxLevel = 99;
 	/**
 	 * Field _groupsLimit.
 	 */
-	private static int _groupsLimit = 100;
+	private static final int _groupsLimit = 100;
 	/**
 	 * Field _minPartyMembers.
 	 */
-	private static int _minPartyMembers = 6;
+	private static final int _minPartyMembers = 6;
 	/**
 	 * Field regActiveTime.
 	 */
-	private static long regActiveTime = 10 * 60 * 1000L;
+	private static final long regActiveTime = 10 * 60 * 1000L;
 	/**
 	 * Field _globalTask.
 	 */
@@ -126,7 +126,7 @@ public class GvG extends Functions implements ScriptFile
 	/**
 	 * Field leaderList.
 	 */
-	private static List<HardReference<Player>> leaderList = new CopyOnWriteArrayList<>();
+	private static final List<HardReference<Player>> leaderList = new CopyOnWriteArrayList<>();
 	
 	/**
 	 * @author Mobius
@@ -190,6 +190,7 @@ public class GvG extends Functions implements ScriptFile
 	@Override
 	public void onReload()
 	{
+		// empty method
 	}
 	
 	/**
@@ -199,6 +200,7 @@ public class GvG extends Functions implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 	
 	/**
@@ -206,15 +208,15 @@ public class GvG extends Functions implements ScriptFile
 	 */
 	private static void initTimer()
 	{
-		long day = 24 * 60 * 60 * 1000L;
-		Calendar ci = Calendar.getInstance();
+		final long day = 24 * 60 * 60 * 1000L;
+		final Calendar ci = Calendar.getInstance();
 		ci.set(Calendar.HOUR_OF_DAY, everydayStartTime[0]);
 		ci.set(Calendar.MINUTE, everydayStartTime[1]);
 		ci.set(Calendar.SECOND, everydayStartTime[2]);
 		long delay = ci.getTimeInMillis() - System.currentTimeMillis();
 		if (delay < 0)
 		{
-			delay = delay + day;
+			delay += day;
 		}
 		if (_globalTask != null)
 		{
@@ -224,6 +226,7 @@ public class GvG extends Functions implements ScriptFile
 	}
 	
 	/**
+	 * @author Mobius
 	 */
 	public static class Launch extends RunnableImpl
 	{
@@ -310,7 +313,7 @@ public class GvG extends Functions implements ScriptFile
 	 */
 	public void showStats()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -320,9 +323,9 @@ public class GvG extends Functions implements ScriptFile
 			player.sendMessage("GvG event is not launched");
 			return;
 		}
-		StringBuilder string = new StringBuilder();
-		String refresh = "<button value=\"Refresh\" action=\"bypass -h scripts_events.GvG.GvG:showStats\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
-		String start = "<button value=\"Start Now\" action=\"bypass -h scripts_events.GvG.GvG:startNow\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
+		final StringBuilder string = new StringBuilder(32);
+		final String refresh = "<button value=\"Refresh\" action=\"bypass -h scripts_events.GvG.GvG:showStats\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
+		final String start = "<button value=\"Start Now\" action=\"bypass -h scripts_events.GvG.GvG:startNow\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
 		int i = 0;
 		if (!leaderList.isEmpty())
 		{
@@ -348,7 +351,7 @@ public class GvG extends Functions implements ScriptFile
 	 */
 	public void startNow()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -366,7 +369,7 @@ public class GvG extends Functions implements ScriptFile
 	 */
 	public void addGroup()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (player == null)
 		{
 			return;
@@ -401,8 +404,8 @@ public class GvG extends Functions implements ScriptFile
 			player.sendMessage("До�?тигнут лимит количе�?тва групп дл�? уча�?ти�? в турнире. За�?вка отклонена");
 			return;
 		}
-		List<Player> party = player.getParty().getPartyMembers();
-		String[] abuseReason =
+		final List<Player> party = player.getParty().getPartyMembers();
+		final String[] abuseReason =
 		{
 			"не находит�?�? в игре",
 			"не находит�?�? в группе",
@@ -553,8 +556,8 @@ public class GvG extends Functions implements ScriptFile
 	{
 		if ((leaderList.size() % 2) != 0)
 		{
-			int rndindex = Rnd.get(leaderList.size());
-			Player expelled = leaderList.remove(rndindex).get();
+			final int rndindex = Rnd.get(leaderList.size());
+			final Player expelled = leaderList.remove(rndindex).get();
 			if (expelled != null)
 			{
 				expelled.sendMessage("�?ри формировании �?пи�?ка уча�?тников турнира ва�?а группа была от�?е�?на. �?рино�?им извинени�?, ��опробуйте в �?леду�?щий раз.");
@@ -621,8 +624,8 @@ public class GvG extends Functions implements ScriptFile
 	 */
 	private static void start()
 	{
-		int instancedZoneId = 504;
-		InstantZone iz = InstantZoneHolder.getInstance().getInstantZone(instancedZoneId);
+		final int instancedZoneId = 504;
+		final InstantZone iz = InstantZoneHolder.getInstance().getInstantZone(instancedZoneId);
 		if (iz == null)
 		{
 			_log.warn("GvG: InstanceZone : " + instancedZoneId + " not found!");

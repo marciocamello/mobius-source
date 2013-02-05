@@ -41,12 +41,12 @@ public class JiniaKnight extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return false;
 		}
-		List<NpcInstance> around = actor.getAroundNpc(4000, 300);
+		final List<NpcInstance> around = actor.getAroundNpc(4000, 300);
 		if ((around != null) && !around.isEmpty())
 		{
 			for (NpcInstance npc : around)

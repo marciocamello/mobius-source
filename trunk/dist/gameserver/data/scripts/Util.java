@@ -38,12 +38,12 @@ public class Util extends Functions
 		{
 			throw new IllegalArgumentException();
 		}
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (player == null)
 		{
 			return;
 		}
-		long price = Long.parseLong(param[param.length - 1]);
+		final long price = Long.parseLong(param[param.length - 1]);
 		if (!NpcInstance.canBypassCheck(player, player.getLastNpc()))
 		{
 			return;
@@ -60,7 +60,7 @@ public class Util extends Functions
 		}
 		if (player.getLastNpc() != null)
 		{
-			int npcId = player.getLastNpc().getNpcId();
+			final int npcId = player.getLastNpc().getNpcId();
 			switch (npcId)
 			{
 				case 30483:
@@ -85,20 +85,20 @@ public class Util extends Functions
 					break;
 			}
 		}
-		int x = Integer.parseInt(param[0]);
-		int y = Integer.parseInt(param[1]);
-		int z = Integer.parseInt(param[2]);
-		int castleId = param.length > 4 ? Integer.parseInt(param[3]) : 0;
+		final int x = Integer.parseInt(param[0]);
+		final int y = Integer.parseInt(param[1]);
+		final int z = Integer.parseInt(param[2]);
+		final int castleId = (param.length > 4) ? Integer.parseInt(param[3]) : 0;
 		if (player.getReflection().isDefault())
 		{
-			Castle castle = castleId > 0 ? ResidenceHolder.getInstance().getResidence(Castle.class, castleId) : null;
+			final Castle castle = (castleId > 0) ? ResidenceHolder.getInstance().getResidence(Castle.class, castleId) : null;
 			if ((castle != null) && castle.getSiegeEvent().isInProgress())
 			{
 				player.sendPacket(Msg.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
 				return;
 			}
 		}
-		Location pos = Location.findPointToStay(x, y, z, 50, 100, player.getGeoIndex());
+		final Location pos = Location.findPointToStay(x, y, z, 50, 100, player.getGeoIndex());
 		if (price > 0)
 		{
 			player.reduceAdena(price, true);
@@ -116,13 +116,13 @@ public class Util extends Functions
 		{
 			throw new IllegalArgumentException();
 		}
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (player == null)
 		{
 			return;
 		}
-		long count = Long.parseLong(param[3]);
-		int item = Integer.parseInt(param[4]);
+		final long count = Long.parseLong(param[3]);
+		final int item = Integer.parseInt(param[4]);
 		if (!NpcInstance.canBypassCheck(player, player.getLastNpc()))
 		{
 			return;
@@ -136,10 +136,10 @@ public class Util extends Functions
 			}
 			player.sendPacket(SystemMessage2.removeItems(item, count));
 		}
-		int x = Integer.parseInt(param[0]);
-		int y = Integer.parseInt(param[1]);
-		int z = Integer.parseInt(param[2]);
-		Location pos = Location.findPointToStay(x, y, z, 20, 70, player.getGeoIndex());
+		final int x = Integer.parseInt(param[0]);
+		final int y = Integer.parseInt(param[1]);
+		final int z = Integer.parseInt(param[2]);
+		final Location pos = Location.findPointToStay(x, y, z, 20, 70, player.getGeoIndex());
 		player.teleToLocation(pos);
 	}
 	
@@ -153,7 +153,7 @@ public class Util extends Functions
 		{
 			throw new IllegalArgumentException();
 		}
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (player == null)
 		{
 			return;
@@ -168,7 +168,7 @@ public class Util extends Functions
 	 */
 	public void TokenJump(String[] param)
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (player == null)
 		{
 			return;
@@ -188,7 +188,7 @@ public class Util extends Functions
 	 */
 	public void NoblessTeleport()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (player == null)
 		{
 			return;
@@ -213,17 +213,17 @@ public class Util extends Functions
 		{
 			throw new IllegalArgumentException();
 		}
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (player == null)
 		{
 			return;
 		}
-		String page = param[0];
-		int item = Integer.parseInt(param[1]);
-		long price = Long.parseLong(param[2]);
+		final String page = param[0];
+		final int item = Integer.parseInt(param[1]);
+		final long price = Long.parseLong(param[2]);
 		if (getItemCount(player, item) < price)
 		{
-			player.sendPacket(item == 57 ? Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA : SystemMsg.INCORRECT_ITEM_COUNT);
+			player.sendPacket((item == 57) ? Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA : SystemMsg.INCORRECT_ITEM_COUNT);
 			return;
 		}
 		removeItem(player, item, price);
@@ -235,7 +235,7 @@ public class Util extends Functions
 	 */
 	public void TakeNewbieWeaponCoupon()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (player == null)
 		{
 			return;
@@ -269,7 +269,7 @@ public class Util extends Functions
 	 */
 	public void TakeAdventurersArmorCoupon()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (player == null)
 		{
 			return;
@@ -303,8 +303,8 @@ public class Util extends Functions
 	 */
 	public void enter_dc()
 	{
-		Player player = getSelf();
-		NpcInstance npc = getNpc();
+		final Player player = getSelf();
+		final NpcInstance npc = getNpc();
 		if ((player == null) || (npc == null))
 		{
 			return;
@@ -322,8 +322,8 @@ public class Util extends Functions
 	 */
 	public void exit_dc()
 	{
-		Player player = getSelf();
-		NpcInstance npc = getNpc();
+		final Player player = getSelf();
+		final NpcInstance npc = getNpc();
 		if ((player == null) || (npc == null))
 		{
 			return;
@@ -332,7 +332,7 @@ public class Util extends Functions
 		{
 			return;
 		}
-		String var = player.getVar("DCBackCoords");
+		final String var = player.getVar("DCBackCoords");
 		if ((var == null) || var.isEmpty())
 		{
 			player.teleToLocation(new Location(43768, -48232, -800), 0);

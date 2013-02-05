@@ -29,39 +29,39 @@ public class EnchantingReward extends Functions implements ScriptFile
 	/**
 	 * Field MASTER_YOGI_STAFF.
 	 */
-	private static int MASTER_YOGI_STAFF = 13539;
+	private static final int MASTER_YOGI_STAFF = 13539;
 	/**
 	 * Field MASTER_YOGI_SCROLL.
 	 */
-	private static int MASTER_YOGI_SCROLL = 13540;
+	private static final int MASTER_YOGI_SCROLL = 13540;
 	/**
 	 * Field ADENA.
 	 */
-	private static int ADENA = 57;
+	private static final int ADENA = 57;
 	/**
 	 * Field STAFF_PRICE.
 	 */
-	private static int STAFF_PRICE = 1000;
+	private static final int STAFF_PRICE = 1000;
 	/**
 	 * Field TIMED_SCROLL_PRICE.
 	 */
-	private static int TIMED_SCROLL_PRICE = 6000;
+	private static final int TIMED_SCROLL_PRICE = 6000;
 	/**
 	 * Field TIMED_SCROLL_HOURS.
 	 */
-	private static int TIMED_SCROLL_HOURS = 6;
+	private static final int TIMED_SCROLL_HOURS = 6;
 	/**
 	 * Field ONE_SCROLL_PRICE.
 	 */
-	private static int ONE_SCROLL_PRICE = 77777;
+	private static final int ONE_SCROLL_PRICE = 77777;
 	/**
 	 * Field TEN_SCROLLS_PRICE.
 	 */
-	private static int TEN_SCROLLS_PRICE = 777770;
+	private static final int TEN_SCROLLS_PRICE = 777770;
 	/**
 	 * Field HAT_SHADOW.
 	 */
-	private static int[] HAT_SHADOW = new int[]
+	private static final int[] HAT_SHADOW = new int[]
 	{
 		13074,
 		13075,
@@ -70,7 +70,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 	/**
 	 * Field HAT_EVENT.
 	 */
-	private static int[] HAT_EVENT = new int[]
+	private static final int[] HAT_EVENT = new int[]
 	{
 		13518,
 		13519,
@@ -79,7 +79,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 	/**
 	 * Field SOUL_CRYSTALL.
 	 */
-	private static int[] SOUL_CRYSTALL = new int[]
+	private static final int[] SOUL_CRYSTALL = new int[]
 	{
 		9570,
 		9571,
@@ -91,7 +91,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 	 */
 	public void buy_staff()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if ((getItemCount(player, MASTER_YOGI_STAFF) == 0) && (getItemCount(player, ADENA) >= STAFF_PRICE))
 		{
 			removeItem(player, ADENA, STAFF_PRICE);
@@ -109,10 +109,10 @@ public class EnchantingReward extends Functions implements ScriptFile
 	 */
 	public void buy_scroll_lim()
 	{
-		Player player = getSelf();
-		long _reuse_time = TIMED_SCROLL_HOURS * 60 * 60 * 1000;
-		long _curr_time = System.currentTimeMillis();
-		String _last_use_time = player.getVar("MasterOfEnch");
+		final Player player = getSelf();
+		final long _reuse_time = TIMED_SCROLL_HOURS * 60 * 60 * 1000;
+		final long _curr_time = System.currentTimeMillis();
+		final String _last_use_time = player.getVar("MasterOfEnch");
 		long _remaining_time;
 		if (_last_use_time != null)
 		{
@@ -138,11 +138,11 @@ public class EnchantingReward extends Functions implements ScriptFile
 		}
 		else
 		{
-			int hours = (int) (_reuse_time - _remaining_time) / 3600000;
-			int minutes = ((int) (_reuse_time - _remaining_time) % 3600000) / 60000;
+			final int hours = (int) (_reuse_time - _remaining_time) / 3600000;
+			final int minutes = ((int) (_reuse_time - _remaining_time) % 3600000) / 60000;
 			if (hours > 0)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessage.THERE_ARE_S1_HOURSS_AND_S2_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED);
+				final SystemMessage sm = new SystemMessage(SystemMessage.THERE_ARE_S1_HOURSS_AND_S2_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED);
 				sm.addNumber(hours);
 				sm.addNumber(minutes);
 				player.sendPacket(sm);
@@ -150,7 +150,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 			}
 			else if (minutes > 0)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessage.THERE_ARE_S1_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED);
+				final SystemMessage sm = new SystemMessage(SystemMessage.THERE_ARE_S1_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED);
 				sm.addNumber(minutes);
 				player.sendPacket(sm);
 				show("scripts/events/MasterOfEnchanting/32599-scroll24.htm", player);
@@ -174,7 +174,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 	 */
 	public void buy_scroll_1()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (getItemCount(player, ADENA) >= ONE_SCROLL_PRICE)
 		{
 			removeItem(player, ADENA, ONE_SCROLL_PRICE);
@@ -192,7 +192,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 	 */
 	public void buy_scroll_10()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (getItemCount(player, ADENA) >= TEN_SCROLLS_PRICE)
 		{
 			removeItem(player, ADENA, TEN_SCROLLS_PRICE);
@@ -210,15 +210,15 @@ public class EnchantingReward extends Functions implements ScriptFile
 	 */
 	public void receive_reward()
 	{
-		Player player = getSelf();
-		int Equip_Id = player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
+		final Player player = getSelf();
+		final int Equip_Id = player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
 		if (Equip_Id != MASTER_YOGI_STAFF)
 		{
 			show("scripts/events/MasterOfEnchanting/32599-rewardnostaff.htm", player);
 			return;
 		}
-		ItemInstance enchanteditem = player.getInventory().getItemByItemId(Equip_Id);
-		int Ench_Lvl = enchanteditem.getEnchantLevel();
+		final ItemInstance enchanteditem = player.getInventory().getItemByItemId(Equip_Id);
+		final int Ench_Lvl = enchanteditem.getEnchantLevel();
 		if ((Equip_Id == MASTER_YOGI_STAFF) && (Ench_Lvl > 3))
 		{
 			switch (Ench_Lvl)
@@ -312,6 +312,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 	@Override
 	public void onLoad()
 	{
+		// empty method
 	}
 	
 	/**
@@ -321,6 +322,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 	@Override
 	public void onReload()
 	{
+		// empty method
 	}
 	
 	/**
@@ -330,5 +332,6 @@ public class EnchantingReward extends Functions implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 }

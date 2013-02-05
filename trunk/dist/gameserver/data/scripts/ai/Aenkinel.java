@@ -39,10 +39,10 @@ public class Aenkinel extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor.getNpcId() == 25694) || (actor.getNpcId() == 25695))
 		{
-			Reflection ref = actor.getReflection();
+			final Reflection ref = actor.getReflection();
 			ref.setReenterTime(System.currentTimeMillis());
 		}
 		if (actor.getNpcId() == 25694)

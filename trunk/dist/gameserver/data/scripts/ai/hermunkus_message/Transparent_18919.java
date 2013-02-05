@@ -58,7 +58,7 @@ public class Transparent_18919 extends DefaultAI
 	{
 		if (timerId == 1)
 		{
-			Skill skill = SkillTable.getInstance().getInfo(SKILL_ID, 1);
+			final Skill skill = SkillTable.getInstance().getInfo(SKILL_ID, 1);
 			addTaskBuff(getActor(), skill);
 			doTask();
 		}

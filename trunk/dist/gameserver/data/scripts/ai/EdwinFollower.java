@@ -89,8 +89,8 @@ public class EdwinFollower extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
-		Creature edwin = _edwinRef.get();
+		final NpcInstance actor = getActor();
+		final Creature edwin = _edwinRef.get();
 		if (edwin == null)
 		{
 			if (System.currentTimeMillis() > _wait_timeout)
@@ -108,9 +108,9 @@ public class EdwinFollower extends DefaultAI
 		}
 		else if (!actor.isMoving)
 		{
-			int x = (edwin.getX() + Rnd.get(2 * DRIFT_DISTANCE)) - DRIFT_DISTANCE;
-			int y = (edwin.getY() + Rnd.get(2 * DRIFT_DISTANCE)) - DRIFT_DISTANCE;
-			int z = edwin.getZ();
+			final int x = (edwin.getX() + Rnd.get(2 * DRIFT_DISTANCE)) - DRIFT_DISTANCE;
+			final int y = (edwin.getY() + Rnd.get(2 * DRIFT_DISTANCE)) - DRIFT_DISTANCE;
+			final int z = edwin.getZ();
 			actor.setRunning();
 			actor.moveToLocation(x, y, z, 0, true);
 			return true;
@@ -126,6 +126,7 @@ public class EdwinFollower extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -136,5 +137,6 @@ public class EdwinFollower extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

@@ -101,17 +101,17 @@ public class FreyaEventAI extends DefaultAI
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((caster == null) || !caster.isPlayer())
 		{
 			return;
 		}
-		GameObject casterTarget = caster.getTarget();
+		final GameObject casterTarget = caster.getTarget();
 		if ((casterTarget == null) || (casterTarget.getObjectId() != actor.getObjectId()))
 		{
 			return;
 		}
-		Player player = caster.getPlayer();
+		final Player player = caster.getPlayer();
 		if (ArrayUtils.contains(GIFT_SKILLS, skill.getId()))
 		{
 			if (Rnd.chance(GIFT_CHANCE))
@@ -134,6 +134,7 @@ public class FreyaEventAI extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -144,5 +145,6 @@ public class FreyaEventAI extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

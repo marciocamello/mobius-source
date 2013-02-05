@@ -45,7 +45,7 @@ public class Ranku extends Fighter
 	/**
 	 * Field _massacreDelay.
 	 */
-	private final long _massacreDelay = 30000L;
+	private static final long _massacreDelay = 30000L;
 	
 	/**
 	 * Constructor for Ranku.
@@ -63,7 +63,7 @@ public class Ranku extends Fighter
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		Reflection r = getActor().getReflection();
+		final Reflection r = getActor().getReflection();
 		if (r != null)
 		{
 			for (int i = 0; i < 4; i++)
@@ -79,14 +79,14 @@ public class Ranku extends Fighter
 	@Override
 	protected void thinkAttack()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return;
 		}
 		if ((_massacreTimer + _massacreDelay) < System.currentTimeMillis())
 		{
-			NpcInstance victim = getScapegoat();
+			final NpcInstance victim = getScapegoat();
 			_massacreTimer = System.currentTimeMillis();
 			if (victim != null)
 			{
@@ -103,7 +103,7 @@ public class Ranku extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.getReflection() != null)
 		{
 			actor.getReflection().setReenterTime(System.currentTimeMillis());
@@ -134,11 +134,11 @@ public class Ranku extends Fighter
 	 */
 	private int getMaximumHate()
 	{
-		NpcInstance actor = getActor();
-		Creature cha = actor.getAggroList().getMostHated();
+		final NpcInstance actor = getActor();
+		final Creature cha = actor.getAggroList().getMostHated();
 		if (cha != null)
 		{
-			AggroInfo ai = actor.getAggroList().get(cha);
+			final AggroInfo ai = actor.getAggroList().get(cha);
 			if (ai != null)
 			{
 				return ai.hate;

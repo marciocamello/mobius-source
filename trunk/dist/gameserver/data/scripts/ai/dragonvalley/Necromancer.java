@@ -44,7 +44,7 @@ public class Necromancer extends Mystic
 		super.onEvtDead(killer);
 		if (Rnd.chance(30))
 		{
-			NpcInstance n = NpcUtils.spawnSingle(Rnd.chance(50) ? 22818 : 22819, getActor().getLoc());
+			final NpcInstance n = NpcUtils.spawnSingle(Rnd.chance(50) ? 22818 : 22819, getActor().getLoc());
 			n.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 2);
 		}
 	}
