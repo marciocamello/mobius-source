@@ -40,6 +40,7 @@ public class Scarecrow extends Fighter
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
+		// empty method
 	}
 	
 	/**
@@ -50,6 +51,7 @@ public class Scarecrow extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -60,5 +62,6 @@ public class Scarecrow extends Fighter
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
+		// empty method
 	}
 }

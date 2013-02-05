@@ -60,7 +60,7 @@ public class AliveTumor extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((checkTimer + 10000) < System.currentTimeMillis())
 		{
 			checkTimer = System.currentTimeMillis();
@@ -93,6 +93,7 @@ public class AliveTumor extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -103,5 +104,6 @@ public class AliveTumor extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

@@ -50,7 +50,7 @@ public class NevitVoice extends SimpleItemHandler
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
-		int itemId = item.getItemId();
+		final int itemId = item.getItemId();
 		if (!useItem(player, item, 1))
 		{
 			return false;

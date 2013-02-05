@@ -37,7 +37,7 @@ public class Toma extends DefaultAI
 	/**
 	 * Field TELEPORT_PERIOD.
 	 */
-	private static long TELEPORT_PERIOD = 30 * 60 * 1000;
+	private static final long TELEPORT_PERIOD = 30 * 60 * 1000;
 	/**
 	 * Field _lastTeleport.
 	 */
@@ -63,8 +63,8 @@ public class Toma extends DefaultAI
 		{
 			return false;
 		}
-		NpcInstance _thisActor = getActor();
-		Location loc = _points[Rnd.get(_points.length)];
+		final NpcInstance _thisActor = getActor();
+		final Location loc = _points[Rnd.get(_points.length)];
 		if (_thisActor.getLoc().equals(loc))
 		{
 			return false;

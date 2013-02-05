@@ -50,6 +50,7 @@ public class KashasEye extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
+		// empty method
 	}
 	
 	/**
@@ -60,7 +61,7 @@ public class KashasEye extends DefaultAI
 	protected void onEvtDead(Creature killer)
 	{
 		super.onEvtDead(killer);
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor != null) && (killer != null) && (!actor.equals(killer)) && Rnd.chance(35))
 		{
 			actor.setDisplayId(Rnd.get(18812, 18814));

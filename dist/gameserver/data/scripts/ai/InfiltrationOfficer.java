@@ -241,7 +241,7 @@ public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMa
 		{
 			return false;
 		}
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (player == null)
 		{
 			player = actor.getFollowTarget().getPlayer();

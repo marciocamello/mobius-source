@@ -72,20 +72,20 @@ public class Bronk_19192 extends Dwarvs
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
 		super.onEvtTimer(timerId, arg1, arg2);
-		Reflection r = getActor().getReflection();
+		final Reflection r = getActor().getReflection();
 		if (!(r instanceof MemoryOfDisaster))
 		{
 			return;
 		}
-		MemoryOfDisaster ad = (MemoryOfDisaster) r;
+		final MemoryOfDisaster ad = (MemoryOfDisaster) r;
 		switch (timerId)
 		{
 			case 1:
 				Functions.npcSayInRange(getActor(), 1500, NpcString.MM_IM_SEE);
-				List<NpcInstance> list = r.getAllByNpcId(TOROCCO_ID, true);
+				final List<NpcInstance> list = r.getAllByNpcId(TOROCCO_ID, true);
 				if (list.size() > 0)
 				{
-					NpcInstance torocco = list.get(0);
+					final NpcInstance torocco = list.get(0);
 					torocco.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "TOROCCO_1");
 				}
 				break;

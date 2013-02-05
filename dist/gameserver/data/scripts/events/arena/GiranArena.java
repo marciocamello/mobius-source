@@ -43,7 +43,7 @@ public class GiranArena extends Functions implements ScriptFile, OnDeathListener
 		/**
 		 * Constructor for GiranArenaImpl.
 		 */
-		public GiranArenaImpl()
+		GiranArenaImpl()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -141,6 +141,7 @@ public class GiranArena extends Functions implements ScriptFile, OnDeathListener
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 	
 	/**
@@ -190,7 +191,7 @@ public class GiranArena extends Functions implements ScriptFile, OnDeathListener
 	{
 		if (val == 0)
 		{
-			Player player = getSelf();
+			final Player player = getSelf();
 			if (player.isGM())
 			{
 				return HtmCache.getInstance().getNotNull("scripts/events/arena/22220001.htm", player) + HtmCache.getInstance().getNotNull("scripts/events/arena/22220001-4.htm", player);

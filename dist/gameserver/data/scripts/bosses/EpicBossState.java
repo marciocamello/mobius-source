@@ -171,7 +171,7 @@ public class EpicBossState
 				}
 				else
 				{
-					int tempState = rset.getInt("state");
+					final int tempState = rset.getInt("state");
 					if (tempState == State.NOTSPAWN.ordinal())
 					{
 						_state = State.NOTSPAWN;
@@ -271,7 +271,7 @@ public class EpicBossState
 	 */
 	public long getInterval()
 	{
-		long interval = _respawnDate - System.currentTimeMillis();
-		return interval > 0 ? interval : 0;
+		final long interval = _respawnDate - System.currentTimeMillis();
+		return (interval > 0) ? interval : 0;
 	}
 }

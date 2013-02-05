@@ -52,7 +52,7 @@ public class BeastShot extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
+		final Player player = (Player) playable;
 		boolean isAutoSoulShot = false;
 		if (player.getAutoSoulShot().contains(item.getItemId()))
 		{

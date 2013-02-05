@@ -48,7 +48,7 @@ public class NaiaCube extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	private class Despawn extends RunnableImpl
+	static private class Despawn extends RunnableImpl
 	{
 		/**
 		 * Field _npc.

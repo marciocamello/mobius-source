@@ -35,7 +35,7 @@ public class Seed extends ScriptItemHandler
 	/**
 	 * @author Mobius
 	 */
-	public class DeSpawnScheduleTimerTask extends RunnableImpl
+	static public class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
 		/**
 		 * Field spawnedPlant.
@@ -64,7 +64,7 @@ public class Seed extends ScriptItemHandler
 	/**
 	 * Field _itemIds.
 	 */
-	private static int[] _itemIds =
+	private static final int[] _itemIds =
 	{
 		6389,
 		6390
@@ -72,7 +72,7 @@ public class Seed extends ScriptItemHandler
 	/**
 	 * Field _npcIds.
 	 */
-	private static int[] _npcIds =
+	private static final int[] _npcIds =
 	{
 		12774,
 		12777
@@ -89,7 +89,7 @@ public class Seed extends ScriptItemHandler
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
-		Player activeChar = (Player) playable;
+		final Player activeChar = (Player) playable;
 		if (activeChar.isInZone(ZoneType.RESIDENCE))
 		{
 			return false;
@@ -105,7 +105,7 @@ public class Seed extends ScriptItemHandler
 			return false;
 		}
 		NpcTemplate template = null;
-		int itemId = item.getItemId();
+		final int itemId = item.getItemId();
 		for (int i = 0; i < _itemIds.length; i++)
 		{
 			if (_itemIds[i] == itemId)
@@ -122,9 +122,9 @@ public class Seed extends ScriptItemHandler
 		{
 			return false;
 		}
-		SimpleSpawner spawn = new SimpleSpawner(template);
+		final SimpleSpawner spawn = new SimpleSpawner(template);
 		spawn.setLoc(Location.findPointToStay(activeChar, 30, 70));
-		NpcInstance npc = spawn.doSpawn(true);
+		final NpcInstance npc = spawn.doSpawn(true);
 		npc.setAI(new SquashAI(npc));
 		((SquashInstance) npc).setSpawner(activeChar);
 		ThreadPoolManager.getInstance().schedule(new DeSpawnScheduleTimerTask(spawn), 180000);

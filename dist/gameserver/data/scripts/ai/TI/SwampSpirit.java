@@ -58,7 +58,7 @@ public class SwampSpirit extends DefaultAI
 	{
 		if (!_def_think)
 		{
-			NpcInstance npc = getActor();
+			final NpcInstance npc = getActor();
 			if (npc == null)
 			{
 				return true;

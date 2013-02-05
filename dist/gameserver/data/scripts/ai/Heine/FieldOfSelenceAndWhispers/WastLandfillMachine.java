@@ -50,7 +50,7 @@ public class WastLandfillMachine extends CharacterAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = (NpcInstance) getActor();
+		final NpcInstance actor = (NpcInstance) getActor();
 		if ((actor == null) || actor.isDead())
 		{
 			return;
@@ -59,7 +59,7 @@ public class WastLandfillMachine extends CharacterAI
 		{
 			_firstTimeAttacked = false;
 			Functions.npcSay(actor, NpcString.ALERT_ALERT_DAMAGE_DETECTION_RECOGNIZED_COUNTERMEASURES_ENABLED, ChatType.ALL, 5000);
-			List<NpcInstance> around = actor.getAroundNpc(1500, 300);
+			final List<NpcInstance> around = actor.getAroundNpc(1500, 300);
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)

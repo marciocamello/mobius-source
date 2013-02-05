@@ -55,9 +55,9 @@ public class MercenaryCaption extends Fighter
 	public void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		NpcInstance actor = getActor();
-		Fortress f = actor.getFortress();
-		FortressSiegeEvent event = f.getSiegeEvent();
+		final NpcInstance actor = getActor();
+		final Fortress f = actor.getFortress();
+		final FortressSiegeEvent event = f.getSiegeEvent();
 		_points = event.getObjects(FortressSiegeEvent.MERCENARY_POINTS);
 	}
 	
@@ -68,7 +68,7 @@ public class MercenaryCaption extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isActionsDisabled())
 		{
 			return true;

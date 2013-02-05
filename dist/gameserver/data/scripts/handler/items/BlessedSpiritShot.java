@@ -74,10 +74,10 @@ public class BlessedSpiritShot extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
-		ItemInstance weaponInst = player.getActiveWeaponInstance();
-		WeaponTemplate weaponItem = player.getActiveWeaponItem();
-		int SoulshotId = item.getItemId();
+		final Player player = (Player) playable;
+		final ItemInstance weaponInst = player.getActiveWeaponInstance();
+		final WeaponTemplate weaponItem = player.getActiveWeaponItem();
+		final int SoulshotId = item.getItemId();
 		boolean isAutoSoulShot = false;
 		if (player.getAutoSoulShot().contains(SoulshotId))
 		{
@@ -95,9 +95,9 @@ public class BlessedSpiritShot extends ScriptItemHandler
 		{
 			return false;
 		}
-		int spiritshotId = item.getItemId();
-		int grade = weaponItem.getCrystalType().externalOrdinal;
-		int blessedsoulSpiritConsumption = weaponItem.getSpiritShotCount();
+		final int spiritshotId = item.getItemId();
+		final int grade = weaponItem.getCrystalType().externalOrdinal;
+		final int blessedsoulSpiritConsumption = weaponItem.getSpiritShotCount();
 		if (blessedsoulSpiritConsumption == 0)
 		{
 			if (isAutoSoulShot)

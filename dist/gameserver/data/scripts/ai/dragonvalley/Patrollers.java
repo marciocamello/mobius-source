@@ -78,7 +78,7 @@ public class Patrollers extends Fighter
 	@Override
 	public boolean checkAggression(Creature target)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (target.isPlayable() && !target.isDead() && !target.isInvisible())
 		{
 			actor.getAggroList().addDamageHate(target, 0, 1);
@@ -120,7 +120,7 @@ public class Patrollers extends Fighter
 	 */
 	private void startMoveTask()
 	{
-		NpcInstance npc = getActor();
+		final NpcInstance npc = getActor();
 		if (_firstThought)
 		{
 			_lastPoint = getIndex(Location.findNearest(npc, _points));
@@ -149,6 +149,7 @@ public class Patrollers extends Fighter
 		}
 		catch (ArrayIndexOutOfBoundsException e)
 		{
+			// empty catch clause
 		}
 		doTask();
 	}
@@ -196,6 +197,7 @@ public class Patrollers extends Fighter
 	@Override
 	protected void teleportHome()
 	{
+		// empty method
 	}
 	
 	/**

@@ -44,11 +44,11 @@ public class NaiaRoomController extends DefaultAI
 	@Override
 	public boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
-		int npcId = actor.getNpcId();
+		final NpcInstance actor = getActor();
+		final int npcId = actor.getNpcId();
 		if (NaiaTowerManager.isLockedRoom(npcId))
 		{
-			List<NpcInstance> _roomMobs = NaiaTowerManager.getRoomMobs(npcId);
+			final List<NpcInstance> _roomMobs = NaiaTowerManager.getRoomMobs(npcId);
 			if (_roomMobs == null)
 			{
 				return false;
@@ -171,12 +171,12 @@ public class NaiaRoomController extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	private class LastDoorClose extends RunnableImpl
+	static private class LastDoorClose extends RunnableImpl
 	{
 		/**
 		 * Constructor for LastDoorClose.
 		 */
-		public LastDoorClose()
+		LastDoorClose()
 		{
 			// TODO Auto-generated constructor stub
 		}

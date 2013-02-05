@@ -46,7 +46,8 @@ public class MercenaryCaptain extends DefaultAI
 	public MercenaryCaptain(NpcInstance actor)
 	{
 		super(actor);
-		AI_TASK_ACTIVE_DELAY = AI_TASK_ATTACK_DELAY = 1000L;
+		AI_TASK_ACTIVE_DELAY = 1000L;
+		AI_TASK_ATTACK_DELAY = 1000L;
 	}
 	
 	/**
@@ -68,6 +69,7 @@ public class MercenaryCaptain extends DefaultAI
 	@Override
 	protected synchronized void switchAITask(long NEW_DELAY)
 	{
+		// empty method
 	}
 	
 	/**
@@ -77,13 +79,13 @@ public class MercenaryCaptain extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return true;
 		}
 		NpcString shout;
-		DominionSiegeRunnerEvent runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 1);
+		final DominionSiegeRunnerEvent runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 1);
 		if (runnerEvent.isInProgress())
 		{
 			shout = NpcString.CHARGE_CHARGE_CHARGE;
@@ -112,10 +114,10 @@ public class MercenaryCaptain extends DefaultAI
 	 */
 	private static long calcDelay()
 	{
-		Calendar cal = Calendar.getInstance();
+		final Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.MINUTE, 55);
 		cal.set(Calendar.SECOND, 0);
-		long t = System.currentTimeMillis();
+		final long t = System.currentTimeMillis();
 		while (cal.getTimeInMillis() < t)
 		{
 			cal.add(Calendar.HOUR_OF_DAY, 1);

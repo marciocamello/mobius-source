@@ -54,7 +54,7 @@ public class EtisEtina extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor.getCurrentHpPercents() < 70) && !summonsReleased)
 		{
 			summonsReleased = true;

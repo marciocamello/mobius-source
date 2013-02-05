@@ -47,7 +47,7 @@ public class Baium extends DefaultAI
 	public Baium(NpcInstance actor)
 	{
 		super(actor);
-		TIntObjectHashMap<Skill> skills = getActor().getTemplate().getSkills();
+		final TIntObjectHashMap<Skill> skills = getActor().getTemplate().getSkills();
 		baium_normal_attack = skills.get(4127);
 		energy_wave = skills.get(4128);
 		earth_quake = skills.get(4129);
@@ -77,7 +77,7 @@ public class Baium extends DefaultAI
 		if (_firstTimeAttacked)
 		{
 			_firstTimeAttacked = false;
-			NpcInstance actor = getActor();
+			final NpcInstance actor = getActor();
 			if (attacker == null)
 			{
 				return;
@@ -105,7 +105,7 @@ public class Baium extends DefaultAI
 	@Override
 	protected boolean createNewTask()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return true;
@@ -116,8 +116,8 @@ public class Baium extends DefaultAI
 			return false;
 		}
 		clearTasks();
-		Creature target;
-		if ((target = prepareTarget()) == null)
+		Creature target = prepareTarget();
+		if (target == null)
 		{
 			return false;
 		}
@@ -126,10 +126,10 @@ public class Baium extends DefaultAI
 			actor.getAggroList().remove(target, false);
 			return false;
 		}
-		int s_energy_wave = 20;
-		int s_earth_quake = 20;
-		int s_group_hold = actor.getCurrentHpPercents() > 50 ? 0 : 20;
-		int s_thunderbolt = actor.getCurrentHpPercents() > 25 ? 0 : 20;
+		final int s_energy_wave = 20;
+		final int s_earth_quake = 20;
+		final int s_group_hold = (actor.getCurrentHpPercents() > 50) ? 0 : 20;
+		final int s_thunderbolt = (actor.getCurrentHpPercents() > 25) ? 0 : 20;
 		Skill r_skill = null;
 		if (actor.isMovementDisabled())
 		{
@@ -137,8 +137,8 @@ public class Baium extends DefaultAI
 		}
 		else if (!Rnd.chance(100 - s_thunderbolt - s_group_hold - s_energy_wave - s_earth_quake))
 		{
-			Map<Skill, Integer> d_skill = new HashMap<>();
-			double distance = actor.getDistance(target);
+			final Map<Skill, Integer> d_skill = new HashMap<>();
+			final double distance = actor.getDistance(target);
 			addDesiredSkill(d_skill, target, distance, energy_wave);
 			addDesiredSkill(d_skill, target, distance, earth_quake);
 			if (s_group_hold > 0)
@@ -171,7 +171,7 @@ public class Baium extends DefaultAI
 	@Override
 	protected boolean maybeMoveToHome()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor != null) && !BaiumManager.getZone().checkIfInZone(actor))
 		{
 			teleportHome();

@@ -54,7 +54,7 @@ public class ZakenAnchor extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		for (NpcInstance npc : actor.getAroundNpc(1000, 100))
 		{
 			if ((npc.getNpcId() == Candle) && (npc.getRightHandItem() == 15302))

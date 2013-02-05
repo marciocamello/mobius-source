@@ -58,7 +58,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	/**
 	 * Field _zone.
 	 */
-	private static Zone[] _zone = new Zone[4];
+	private static final Zone[] _zone = new Zone[4];
 	/**
 	 * Field ENTRANCE_PASS. (value is 7075)
 	 */
@@ -167,7 +167,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	private static void timeSelector()
 	{
 		timeCalculator();
-		long currentTime = System.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		if ((currentTime >= _coolDownTimeEnd) && (currentTime < _entryTimeEnd))
 		{
 			cleanUp();
@@ -198,7 +198,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	 */
 	private static void timeCalculator()
 	{
-		Calendar tmp = Calendar.getInstance();
+		final Calendar tmp = Calendar.getInstance();
 		if (tmp.get(Calendar.MINUTE) < _newCycleMin)
 		{
 			tmp.set(Calendar.HOUR, Calendar.getInstance().get(Calendar.HOUR) - 1);
@@ -228,7 +228,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		FourSepulchersSpawn._hallInUse.put(31924, false);
 		if (!FourSepulchersSpawn._archonSpawned.isEmpty())
 		{
-			Set<Integer> npcIdSet = FourSepulchersSpawn._archonSpawned.keySet();
+			final Set<Integer> npcIdSet = FourSepulchersSpawn._archonSpawned.keySet();
 			for (int npcId : npcIdSet)
 			{
 				FourSepulchersSpawn._archonSpawned.put(npcId, false);
@@ -261,7 +261,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	 */
 	public static synchronized void tryEntry(NpcInstance npc, Player player)
 	{
-		int npcId = npc.getNpcId();
+		final int npcId = npc.getNpcId();
 		switch (npcId)
 		{
 			case 31921:
@@ -325,7 +325,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	 */
 	private static void entry(int npcId, Player player)
 	{
-		Location loc = FourSepulchersSpawn._startHallSpawns.get(npcId);
+		final Location loc = FourSepulchersSpawn._startHallSpawns.get(npcId);
 		for (Player member : player.getParty().getPartyMembers())
 		{
 			member.teleToLocation(Location.findPointToStay(member, loc, 0, 80));
@@ -438,8 +438,8 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		}
 		else if (_inEntryTime)
 		{
-			String msg1 = "You may now enter the Sepulcher";
-			String msg2 = "If you place your hand on the stone statue in front of each sepulcher," + " you will be able to enter";
+			final String msg1 = "You may now enter the Sepulcher";
+			final String msg2 = "If you place your hand on the stone statue in front of each sepulcher," + " you will be able to enter";
 			for (SepulcherNpcInstance npc : FourSepulchersSpawn._managers)
 			{
 				npc.sayInShout(msg1);
@@ -456,7 +456,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		/**
 		 * Constructor for ManagerSay.
 		 */
-		public ManagerSay()
+		ManagerSay()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -469,7 +469,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		{
 			if (_inAttackTime)
 			{
-				Calendar tmp = Calendar.getInstance();
+				final Calendar tmp = Calendar.getInstance();
 				tmp.setTimeInMillis(System.currentTimeMillis() - _warmUpTimeEnd);
 				if ((tmp.get(Calendar.MINUTE) + 5) < 50)
 				{
@@ -496,7 +496,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		/**
 		 * Constructor for ChangeEntryTime.
 		 */
-		public ChangeEntryTime()
+		ChangeEntryTime()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -536,7 +536,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		/**
 		 * Constructor for ChangeWarmUpTime.
 		 */
-		public ChangeWarmUpTime()
+		ChangeWarmUpTime()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -575,7 +575,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		/**
 		 * Constructor for ChangeAttackTime.
 		 */
-		public ChangeAttackTime()
+		ChangeAttackTime()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -647,7 +647,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		/**
 		 * Constructor for ChangeCoolDownTime.
 		 */
-		public ChangeCoolDownTime()
+		ChangeCoolDownTime()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -661,7 +661,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 			_inEntryTime = false;
 			_inAttackTime = false;
 			cleanUp();
-			Calendar time = Calendar.getInstance();
+			final Calendar time = Calendar.getInstance();
 			if ((Calendar.getInstance().get(Calendar.MINUTE) > _newCycleMin) && !_firstTimeRun)
 			{
 				time.set(Calendar.HOUR, Calendar.getInstance().get(Calendar.HOUR) + 1);
@@ -672,7 +672,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 			{
 				_firstTimeRun = false;
 			}
-			long interval = time.getTimeInMillis() - System.currentTimeMillis();
+			final long interval = time.getTimeInMillis() - System.currentTimeMillis();
 			_changeEntryTimeTask = ThreadPoolManager.getInstance().schedule(new ChangeEntryTime(), interval);
 			if (_changeCoolDownTimeTask != null)
 			{
@@ -708,7 +708,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	 */
 	public static void showHtmlFile(Player player, String file, NpcInstance npc, Player member)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		html.setFile("SepulcherNpc/" + file);
 		if (member != null)
 		{
@@ -739,7 +739,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	 */
 	private static List<Player> getPlayersInside()
 	{
-		List<Player> result = new ArrayList<>();
+		final List<Player> result = new ArrayList<>();
 		for (Zone zone : getZones())
 		{
 			result.addAll(zone.getInsidePlayers());
@@ -790,6 +790,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	@Override
 	public void onReload()
 	{
+		// empty method
 	}
 	
 	/**
@@ -799,5 +800,6 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 }

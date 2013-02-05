@@ -66,7 +66,7 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 	 */
 	public void startEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -74,7 +74,7 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 		if (SetActive("AprilFoolsDay", true))
 		{
 			System.out.println("Event: 'April Fools Day' started.");
-			ExBR_BroadcastEventState es = new ExBR_BroadcastEventState(ExBR_BroadcastEventState.APRIL_FOOLS, 1);
+			final ExBR_BroadcastEventState es = new ExBR_BroadcastEventState(ExBR_BroadcastEventState.APRIL_FOOLS, 1);
 			for (Player p : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				p.sendPacket(es);
@@ -93,7 +93,7 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 	 */
 	public void stopEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -136,6 +136,7 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 	@Override
 	public void onReload()
 	{
+		// empty method
 	}
 	
 	/**
@@ -145,6 +146,7 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 	
 	/**

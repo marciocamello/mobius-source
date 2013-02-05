@@ -28,9 +28,9 @@ import bosses.BelethManager;
 public class Beleth extends Mystic
 {
 	/**
-	 * Field _lastFactionNotifyTime.
+	 * Field lastFactionNotifyTime.
 	 */
-	private long _lastFactionNotifyTime = 0;
+	private long lastFactionNotifyTime = 0;
 	/**
 	 * Field CLONE. (value is 29119)
 	 */
@@ -64,10 +64,10 @@ public class Beleth extends Mystic
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
-		if ((System.currentTimeMillis() - _lastFactionNotifyTime) > _minFactionNotifyInterval)
+		final NpcInstance actor = getActor();
+		if ((System.currentTimeMillis() - lastFactionNotifyTime) > _minFactionNotifyInterval)
 		{
-			_lastFactionNotifyTime = System.currentTimeMillis();
+			lastFactionNotifyTime = System.currentTimeMillis();
 			for (NpcInstance npc : World.getAroundNpc(actor))
 			{
 				if (npc.getNpcId() == CLONE)

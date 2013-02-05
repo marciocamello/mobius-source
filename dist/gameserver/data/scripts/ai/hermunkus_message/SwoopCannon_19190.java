@@ -64,7 +64,7 @@ public class SwoopCannon_19190 extends DefaultAI
 			{
 				return;
 			}
-			Skill skill = SkillTable.getInstance().getInfo(SKILL_ID, 1);
+			final Skill skill = SkillTable.getInstance().getInfo(SKILL_ID, 1);
 			addTaskBuff(getActor(), skill);
 			addTimer(1, skill.getHitTime() + 10000);
 		}

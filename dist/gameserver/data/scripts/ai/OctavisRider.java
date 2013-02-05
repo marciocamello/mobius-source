@@ -90,7 +90,7 @@ public class OctavisRider extends DefaultAI
 	 */
 	private void startMoveTask()
 	{
-		NpcInstance npc = getActor();
+		final NpcInstance npc = getActor();
 		_lastPoint++;
 		if (_lastPoint >= _points.length)
 		{
@@ -109,6 +109,7 @@ public class OctavisRider extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -119,5 +120,6 @@ public class OctavisRider extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

@@ -41,7 +41,7 @@ public class TutorialGuides extends ScriptItemHandler
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
-		int itemId = item.getItemId();
+		final int itemId = item.getItemId();
 		switch (itemId)
 		{
 			case 32777:

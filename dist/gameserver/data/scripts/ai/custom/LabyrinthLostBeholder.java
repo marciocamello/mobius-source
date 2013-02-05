@@ -42,8 +42,8 @@ public class LabyrinthLostBeholder extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
-		Reflection r = actor.getReflection();
+		final NpcInstance actor = getActor();
+		final Reflection r = actor.getReflection();
 		if (!r.isDefault())
 		{
 			if (checkMates(actor.getNpcId()))

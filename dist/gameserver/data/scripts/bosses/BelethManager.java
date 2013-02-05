@@ -56,7 +56,7 @@ public class BelethManager extends Functions implements ScriptFile
 	/**
 	 * Field _zoneListener.
 	 */
-	private static ZoneListener _zoneListener = new ZoneListener();
+	private static final ZoneListener _zoneListener = new ZoneListener();
 	/**
 	 * Field _indexedPlayers.
 	 */
@@ -230,9 +230,9 @@ public class BelethManager extends Functions implements ScriptFile
 	 */
 	static NpcInstance spawn(int npcId, int x, int y, int z, int h)
 	{
-		Location loc = new Location(x, y, z);
-		NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
-		NpcInstance npc = template.getNewInstance();
+		final Location loc = new Location(x, y, z);
+		final NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
+		final NpcInstance npc = template.getNewInstance();
 		npc.setSpawnedLoc(loc);
 		npc.setLoc(loc);
 		npc.setHeading(h);
@@ -298,7 +298,7 @@ public class BelethManager extends Functions implements ScriptFile
 			{
 				return;
 			}
-			Player player = actor.getPlayer();
+			final Player player = actor.getPlayer();
 			if (!_indexedPlayers.contains(player))
 			{
 				if (checkPlayer(player))
@@ -326,7 +326,7 @@ public class BelethManager extends Functions implements ScriptFile
 			{
 				return;
 			}
-			Player player = actor.getPlayer();
+			final Player player = actor.getPlayer();
 			if (_indexedPlayers.contains(player))
 			{
 				_indexedPlayers.remove(player);
@@ -342,7 +342,7 @@ public class BelethManager extends Functions implements ScriptFile
 		/**
 		 * Constructor for CloneRespawnTask.
 		 */
-		public CloneRespawnTask()
+		CloneRespawnTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -378,7 +378,7 @@ public class BelethManager extends Functions implements ScriptFile
 		/**
 		 * Constructor for BelethSpawnTask.
 		 */
-		public BelethSpawnTask()
+		BelethSpawnTask()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -637,7 +637,7 @@ public class BelethManager extends Functions implements ScriptFile
 	 */
 	static void spawnClone(int id)
 	{
-		MonsterInstance clone;
+		final MonsterInstance clone;
 		clone = (MonsterInstance) spawn(CLONE, _cloneLoc[id].x, _cloneLoc[id].y, locZ, 49152);
 		_clones.put(clone, clone.getLoc());
 	}
@@ -779,5 +779,6 @@ public class BelethManager extends Functions implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 }

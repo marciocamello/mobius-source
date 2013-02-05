@@ -54,11 +54,11 @@ public class QuestNotAggroMob extends DefaultAI
 	@Override
 	public void onEvtAttacked(Creature attacker, int dam)
 	{
-		NpcInstance actor = getActor();
-		Player player = attacker.getPlayer();
+		final NpcInstance actor = getActor();
+		final Player player = attacker.getPlayer();
 		if (player != null)
 		{
-			List<QuestState> quests = player.getQuestsForEvent(actor, QuestEventType.ATTACKED_WITH_QUEST, false);
+			final List<QuestState> quests = player.getQuestsForEvent(actor, QuestEventType.ATTACKED_WITH_QUEST, false);
 			if (quests != null)
 			{
 				for (QuestState qs : quests)
@@ -77,5 +77,6 @@ public class QuestNotAggroMob extends DefaultAI
 	@Override
 	public void onEvtAggression(Creature attacker, int d)
 	{
+		// empty method
 	}
 }

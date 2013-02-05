@@ -44,8 +44,8 @@ public class Spellbooks extends ScriptItemHandler
 	 */
 	public Spellbooks()
 	{
-		TIntHashSet list = new TIntHashSet();
-		List<SkillLearn> l = SkillAcquireHolder.getInstance().getAllNormalSkillTreeWithForgottenScrolls();
+		final TIntHashSet list = new TIntHashSet();
+		final List<SkillLearn> l = SkillAcquireHolder.getInstance().getAllNormalSkillTreeWithForgottenScrolls();
 		for (SkillLearn learn : l)
 		{
 			list.add(learn.getItemId());
@@ -67,13 +67,13 @@ public class Spellbooks extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
+		final Player player = (Player) playable;
 		if (item.getCount() < 1)
 		{
 			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 			return false;
 		}
-		List<SkillLearn> list = SkillAcquireHolder.getInstance().getSkillLearnListByItemId(player, item.getItemId());
+		final List<SkillLearn> list = SkillAcquireHolder.getInstance().getSkillLearnListByItemId(player, item.getItemId());
 		if (list.isEmpty())
 		{
 			player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));

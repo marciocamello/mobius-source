@@ -61,7 +61,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 	/**
 	 * Field _teleportCubeLocation.
 	 */
-	private static final int _teleportCubeLocation[][] =
+	private static final int[][] _teleportCubeLocation =
 	{
 		{
 			214880,
@@ -251,7 +251,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		/**
 		 * Constructor for CheckLastAttack.
 		 */
-		public CheckLastAttack()
+		CheckLastAttack()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -284,7 +284,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		/**
 		 * Constructor for IntervalEnd.
 		 */
-		public IntervalEnd()
+		IntervalEnd()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -308,7 +308,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		/**
 		 * Constructor for onAnnihilated.
 		 */
-		public onAnnihilated()
+		onAnnihilated()
 		{
 			// TODO Auto-generated constructor stub
 		}
@@ -331,7 +331,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		/**
 		 * Field _distance.
 		 */
-		private final int _distance = 2550;
+		private static final int _distance = 2550;
 		/**
 		 * Field _taskId.
 		 */

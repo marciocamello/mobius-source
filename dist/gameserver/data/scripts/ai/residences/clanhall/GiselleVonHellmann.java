@@ -73,21 +73,21 @@ public class GiselleVonHellmann extends SiegeGuardMystic
 	@Override
 	public void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		super.onEvtDead(killer);
 		ZONE_1.setActive(false);
 		ZONE_2.setActive(false);
 		Functions.npcShout(actor, NpcString.AARGH_IF_I_DIE_THEN_THE_MAGIC_FORCE_FIELD_OF_BLOOD_WILL);
-		ClanHallSiegeEvent siegeEvent = actor.getEvent(ClanHallSiegeEvent.class);
+		final ClanHallSiegeEvent siegeEvent = actor.getEvent(ClanHallSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;
 		}
-		SpawnExObject spawnExObject = siegeEvent.getFirstObject(ClanHallSiegeEvent.BOSS);
-		NpcInstance lidiaNpc = spawnExObject.getFirstSpawned();
+		final SpawnExObject spawnExObject = siegeEvent.getFirstObject(ClanHallSiegeEvent.BOSS);
+		final NpcInstance lidiaNpc = spawnExObject.getFirstSpawned();
 		if (lidiaNpc.getCurrentHpRatio() == 1.)
 		{
-			lidiaNpc.setCurrentHp(lidiaNpc.getMaxHp() / 2, true);
+			lidiaNpc.setCurrentHp(lidiaNpc.getMaxHp() >> 1, true);
 		}
 	}
 	
@@ -99,7 +99,7 @@ public class GiselleVonHellmann extends SiegeGuardMystic
 	@Override
 	public void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		super.onEvtAttacked(attacker, damage);
 		if ((PositionUtils.calculateDistance(attacker, actor, false) > 300.) && Rnd.chance(0.13))
 		{

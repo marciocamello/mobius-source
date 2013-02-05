@@ -70,8 +70,8 @@ public class MercTicket extends ScriptItemHandler
 			return;
 		}
 		
-		Castle castle = player.getCastle();
-		MerchantGuard guard = castle.getMerchantGuard(item.getItemId());
+		final Castle castle = player.getCastle();
+		final MerchantGuard guard = castle.getMerchantGuard(item.getItemId());
 		if ((guard == null) || !castle.checkIfInZone(loc, ReflectionManager.DEFAULT) || player.isActionBlocked(Zone.BLOCKED_ACTION_DROP_MERCHANT_GUARD))
 		{
 			player.sendPacket(SystemMsg.YOU_CANNOT_POSITION_MERCENARIES_HERE, ActionFail.STATIC);
@@ -139,14 +139,14 @@ public class MercTicket extends ScriptItemHandler
 			return false;
 		}
 		
-		Player player = (Player) playable;
+		final Player player = (Player) playable;
 		if (!player.hasPrivilege(Privilege.CS_FS_MERCENARIES) || (player.getClan().getCastle() == 0))
 		{
 			player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_CANCEL_MERCENARY_POSITIONING);
 			return false;
 		}
 		
-		Castle castle = player.getCastle();
+		final Castle castle = player.getCastle();
 		if (!castle.getSpawnMerchantTickets().contains(item))
 		{
 			player.sendPacket(SystemMsg.THIS_IS_NOT_A_MERCENARY_OF_A_CASTLE_THAT_YOU_OWN_AND_SO_YOU_CANNOT_CANCEL_ITS_POSITIONING);
@@ -170,8 +170,8 @@ public class MercTicket extends ScriptItemHandler
 	@Override
 	public final int[] getItemIds()
 	{
-		IntSet set = new HashIntSet(100);
-		Collection<Castle> castles = ResidenceHolder.getInstance().getResidenceList(Castle.class);
+		final IntSet set = new HashIntSet(100);
+		final Collection<Castle> castles = ResidenceHolder.getInstance().getResidenceList(Castle.class);
 		for (Castle c : castles)
 		{
 			set.addAll(c.getMerchantGuards().keySet());

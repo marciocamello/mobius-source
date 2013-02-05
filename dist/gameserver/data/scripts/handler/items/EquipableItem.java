@@ -39,7 +39,7 @@ public class EquipableItem extends ScriptItemHandler
 	 */
 	public EquipableItem()
 	{
-		TIntHashSet set = new TIntHashSet();
+		final TIntHashSet set = new TIntHashSet();
 		for (ItemTemplate template : ItemHolder.getInstance().getAllTemplates())
 		{
 			if (template == null)
@@ -68,7 +68,7 @@ public class EquipableItem extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = playable.getPlayer();
+		final Player player = playable.getPlayer();
 		if (player.isCastingNow())
 		{
 			player.sendPacket(Msg.YOU_MAY_NOT_EQUIP_ITEMS_WHILE_CASTING_OR_PERFORMING_A_SKILL);
@@ -79,7 +79,7 @@ public class EquipableItem extends ScriptItemHandler
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
 			return false;
 		}
-		int bodyPart = item.getBodyPart();
+		final int bodyPart = item.getBodyPart();
 		if ((bodyPart == ItemTemplate.SLOT_LR_HAND) || (bodyPart == ItemTemplate.SLOT_L_HAND) || (bodyPart == ItemTemplate.SLOT_R_HAND))
 		{
 			if (player.isMounted() || player.isCursedWeaponEquipped() || (player.getActiveWeaponFlagAttachment() != null) || player.isClanAirShipDriver())
@@ -100,8 +100,8 @@ public class EquipableItem extends ScriptItemHandler
 		}
 		if (item.isEquipped())
 		{
-			ItemInstance weapon = player.getActiveWeaponInstance();
-			if (item == weapon)
+			final ItemInstance weapon = player.getActiveWeaponInstance();
+			if (item.equals(weapon))
 			{
 				player.abortAttack(true, true);
 				player.abortCast(true, true);
@@ -110,7 +110,7 @@ public class EquipableItem extends ScriptItemHandler
 			player.getInventory().unEquipItem(item);
 			return false;
 		}
-		L2GameServerPacket p = ItemFunctions.checkIfCanEquip(player, item);
+		final L2GameServerPacket p = ItemFunctions.checkIfCanEquip(player, item);
 		if (p != null)
 		{
 			player.sendPacket(p);

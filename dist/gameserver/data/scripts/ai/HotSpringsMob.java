@@ -31,7 +31,7 @@ public class HotSpringsMob extends Mystic
 	/**
 	 * Field DeBuffs.
 	 */
-	private static final int DeBuffs[] =
+	private static final int[] DeBuffs =
 	{
 		4554,
 		4552
@@ -54,24 +54,24 @@ public class HotSpringsMob extends Mystic
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((attacker != null) && Rnd.chance(5))
 		{
-			int DeBuff = DeBuffs[Rnd.get(DeBuffs.length)];
-			List<Effect> effect = attacker.getEffectList().getEffectsBySkillId(DeBuff);
+			final int DeBuff = DeBuffs[Rnd.get(DeBuffs.length)];
+			final List<Effect> effect = attacker.getEffectList().getEffectsBySkillId(DeBuff);
 			if (effect != null)
 			{
-				int level = effect.get(0).getSkill().getLevel();
+				final int level = effect.get(0).getSkill().getLevel();
 				if (level < 10)
 				{
 					effect.get(0).exit();
-					Skill skill = SkillTable.getInstance().getInfo(DeBuff, level + 1);
+					final Skill skill = SkillTable.getInstance().getInfo(DeBuff, level + 1);
 					skill.getEffects(actor, attacker, false, false);
 				}
 			}
 			else
 			{
-				Skill skill = SkillTable.getInstance().getInfo(DeBuff, 1);
+				final Skill skill = SkillTable.getInstance().getInfo(DeBuff, 1);
 				if (skill != null)
 				{
 					skill.getEffects(actor, attacker, false, false);

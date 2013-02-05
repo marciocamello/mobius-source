@@ -263,19 +263,19 @@ public class SeekerEscort extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
-		Creature target = actor.getFollowTarget();
+		final NpcInstance actor = getActor();
+		final Creature target = actor.getFollowTarget();
 		int[][] coords = {};
 		if ((target == null) || !(target instanceof Player))
 		{
 			actor.deleteMe();
 			return false;
 		}
-		Player player = target.getPlayer();
-		QuestState st = player.getQuestState(_10365_SeekerEscort.class);
-		int zone = st.getInt("zone");
+		final Player player = target.getPlayer();
+		final QuestState st = player.getQuestState(_10365_SeekerEscort.class);
+		final int zone = st.getInt("zone");
 		int saytimes = st.getInt("saytimes");
-		int cond = st.getCond();
+		final int cond = st.getCond();
 		actor.setRunning();
 		if ((saytimes == 9) || (cond == 0))
 		{
@@ -313,7 +313,7 @@ public class SeekerEscort extends DefaultAI
 			}
 			else if (((lastSayTime + SAY_INTERVAL) < System.currentTimeMillis()) && (actor.getDestination() == null))
 			{
-				int heading = actor.calcHeading(target.getX(), target.getY());
+				final int heading = actor.calcHeading(target.getX(), target.getY());
 				actor.setHeading(heading);
 				actor.broadcastPacket(new ExRotation(actor.getObjectId(), heading));
 				lastSayTime = System.currentTimeMillis();
@@ -359,7 +359,7 @@ public class SeekerEscort extends DefaultAI
 			}
 			else if (((lastSayTime + SAY_INTERVAL) < System.currentTimeMillis()) && (actor.getDestination() == null))
 			{
-				int heading = actor.calcHeading(target.getX(), target.getY());
+				final int heading = actor.calcHeading(target.getX(), target.getY());
 				actor.setHeading(heading);
 				actor.broadcastPacket(new ExRotation(actor.getObjectId(), heading));
 				lastSayTime = System.currentTimeMillis();

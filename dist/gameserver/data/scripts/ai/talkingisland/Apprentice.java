@@ -50,10 +50,10 @@ public class Apprentice extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor != null)
 		{
-			NpcString ns = NpcString.RIDING_KOOKARU;
+			final NpcString ns = NpcString.RIDING_KOOKARU;
 			Functions.npcSay(actor, ns);
 		}
 		return false;

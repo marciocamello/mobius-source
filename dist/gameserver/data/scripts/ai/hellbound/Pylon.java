@@ -41,7 +41,7 @@ public class Pylon extends Fighter
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		for (int i = 0; i < 7; i++)
 		{
 			try

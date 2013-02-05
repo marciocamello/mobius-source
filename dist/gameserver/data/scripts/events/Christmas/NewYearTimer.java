@@ -63,7 +63,7 @@ public class NewYearTimer implements ScriptFile
 		{
 			return;
 		}
-		Calendar c = Calendar.getInstance();
+		final Calendar c = Calendar.getInstance();
 		c.set(Calendar.YEAR, Calendar.getInstance().get(Calendar.YEAR));
 		c.set(Calendar.MONTH, Calendar.JANUARY);
 		c.set(Calendar.DAY_OF_MONTH, 1);
@@ -105,6 +105,7 @@ public class NewYearTimer implements ScriptFile
 	@Override
 	public void onLoad()
 	{
+		// empty method
 	}
 	
 	/**
@@ -114,6 +115,7 @@ public class NewYearTimer implements ScriptFile
 	@Override
 	public void onReload()
 	{
+		// empty method
 	}
 	
 	/**
@@ -132,11 +134,13 @@ public class NewYearTimer implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 	
 	/**
+	 * @author Mobius
 	 */
-	private class NewYearAnnouncer extends RunnableImpl
+	static private class NewYearAnnouncer extends RunnableImpl
 	{
 		/**
 		 * Field message.

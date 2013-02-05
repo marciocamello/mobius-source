@@ -41,7 +41,7 @@ public class MatchTrief extends MatchFighter
 	 */
 	public void hold()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		addTaskCast(actor, HOLD);
 		doTask();
 	}

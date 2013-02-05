@@ -38,7 +38,7 @@ public class EnchantScrolls extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
+		final Player player = (Player) playable;
 		if (player.getEnchantScroll() != null)
 		{
 			return false;

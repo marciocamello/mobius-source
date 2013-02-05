@@ -39,6 +39,7 @@ public abstract class ScriptBypassHandler implements ScriptFile, IBypassHandler
 	@Override
 	public void onReload()
 	{
+		// empty method
 	}
 	
 	/**
@@ -48,5 +49,6 @@ public abstract class ScriptBypassHandler implements ScriptFile, IBypassHandler
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 }

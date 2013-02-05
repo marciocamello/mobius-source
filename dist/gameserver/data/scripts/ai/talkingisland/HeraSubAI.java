@@ -101,7 +101,7 @@ public class HeraSubAI extends DefaultAI
 	 */
 	private void sayRndMsg()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return;
@@ -142,6 +142,7 @@ public class HeraSubAI extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -152,5 +153,6 @@ public class HeraSubAI extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

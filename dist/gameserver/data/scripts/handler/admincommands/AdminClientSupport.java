@@ -66,7 +66,7 @@ public class AdminClientSupport extends ScriptAdminCommand
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player player)
 	{
-		Commands c = (Commands) comm;
+		final Commands c = (Commands) comm;
 		GameObject target = player.getTarget();
 		switch (c)
 		{
@@ -85,7 +85,7 @@ public class AdminClientSupport extends ScriptAdminCommand
 				}
 				try
 				{
-					Skill skill = SkillTable.getInstance().getInfo(Integer.parseInt(wordList[1]), Integer.parseInt(wordList[2]));
+					final Skill skill = SkillTable.getInstance().getInfo(Integer.parseInt(wordList[1]), Integer.parseInt(wordList[2]));
 					target.getPlayer().addSkill(skill, true);
 					target.getPlayer().sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_EARNED_S1_SKILL).addSkillName(skill.getId(), skill.getLevel()));
 				}
@@ -106,15 +106,15 @@ public class AdminClientSupport extends ScriptAdminCommand
 				}
 				try
 				{
-					int id = Integer.parseInt(wordList[1]);
-					long count = Long.parseLong(wordList[2]);
+					final int id = Integer.parseInt(wordList[1]);
+					final long count = Long.parseLong(wordList[2]);
 					if (id >= 1000000)
 					{
 						if (target == null)
 						{
 							target = player;
 						}
-						NpcTemplate template = NpcHolder.getInstance().getTemplate(id - 1000000);
+						final NpcTemplate template = NpcHolder.getInstance().getTemplate(id - 1000000);
 						for (int i = 0; i < count; i++)
 						{
 							NpcInstance npc = template.getNewInstance();
@@ -133,14 +133,14 @@ public class AdminClientSupport extends ScriptAdminCommand
 						{
 							return false;
 						}
-						ItemTemplate template = ItemHolder.getInstance().getTemplate(id);
+						final ItemTemplate template = ItemHolder.getInstance().getTemplate(id);
 						if (template == null)
 						{
 							return false;
 						}
 						if (template.isStackable())
 						{
-							ItemInstance item = ItemFunctions.createItem(id);
+							final ItemInstance item = ItemFunctions.createItem(id);
 							item.setCount(count);
 							target.getPlayer().getInventory().addItem(item);
 							target.getPlayer().sendPacket(SystemMessage2.obtainItems(item));

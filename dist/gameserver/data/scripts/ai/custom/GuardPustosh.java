@@ -104,8 +104,8 @@ public class GuardPustosh extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
-		int actorId = actor.getNpcId();
+		final NpcInstance actor = getActor();
+		final int actorId = actor.getNpcId();
 		actor.setRunning();
 		if (actorId != SELON)
 		{
@@ -144,9 +144,9 @@ public class GuardPustosh extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
-		int currentNpcId = actor.getNpcId();
-		int respawnNpcId = (currentNpcId == COMMANDO) ? COMMANDO_CAPTAIN : COMMANDO;
+		final NpcInstance actor = getActor();
+		final int currentNpcId = actor.getNpcId();
+		final int respawnNpcId = (currentNpcId == COMMANDO) ? COMMANDO_CAPTAIN : COMMANDO;
 		boolean needRespawn = true;
 		for (NpcInstance npc : actor.getAroundNpc(1000, 1000))
 		{

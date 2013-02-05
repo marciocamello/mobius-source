@@ -27,7 +27,7 @@ public class NihilInvaderChest extends DefaultAI
 	/**
 	 * Field _firstLevelItems.
 	 */
-	private static int[] _firstLevelItems =
+	private static final int[] _firstLevelItems =
 	{
 		4039,
 		4040,
@@ -39,7 +39,7 @@ public class NihilInvaderChest extends DefaultAI
 	/**
 	 * Field _secondLevelItems.
 	 */
-	private static int[] _secondLevelItems =
+	private static final int[] _secondLevelItems =
 	{
 		9628,
 		9629,
@@ -64,7 +64,7 @@ public class NihilInvaderChest extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.getNpcId() == 18820)
 		{
 			if (Rnd.chance(40))
@@ -101,5 +101,6 @@ public class NihilInvaderChest extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

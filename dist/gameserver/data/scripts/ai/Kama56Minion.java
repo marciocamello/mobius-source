@@ -55,5 +55,6 @@ public class Kama56Minion extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 }

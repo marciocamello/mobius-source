@@ -55,11 +55,11 @@ public class SelSquadLeader extends Fighter
 	/**
 	 * Field NPC_ID_FIRE.
 	 */
-	private static int NPC_ID_FIRE = 18927;
+	private static final int NPC_ID_FIRE = 18927;
 	/**
 	 * Field NPC_ID_FIRE_FEED.
 	 */
-	private static int NPC_ID_FIRE_FEED = 18933;
+	private static final int NPC_ID_FIRE_FEED = 18933;
 	
 	/**
 	 * Constructor for SelSquadLeader.
@@ -78,7 +78,7 @@ public class SelSquadLeader extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return true;
@@ -133,7 +133,7 @@ public class SelSquadLeader extends Fighter
 	 */
 	private void wakeUp()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (isBusy)
 		{
 			isBusy = false;
@@ -156,7 +156,7 @@ public class SelSquadLeader extends Fighter
 	@Override
 	protected void onEvtArrived()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		super.onEvtArrived();
 		if (isBusy)
 		{
@@ -206,5 +206,6 @@ public class SelSquadLeader extends Fighter
 	@Override
 	protected void returnHome(boolean clearAggro, boolean teleport)
 	{
+		// empty method
 	}
 }

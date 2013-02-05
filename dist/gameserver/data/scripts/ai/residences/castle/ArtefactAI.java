@@ -48,16 +48,16 @@ public class ArtefactAI extends CharacterAI
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
-		NpcInstance actor;
-		Player player;
-		if ((attacker == null) || ((player = attacker.getPlayer()) == null) || ((actor = (NpcInstance) getActor()) == null))
+		final NpcInstance actor = (NpcInstance) getActor();
+		final Player player = attacker.getPlayer();
+		if ((attacker == null) || (player == null) || (actor == null))
 		{
 			return;
 		}
-		SiegeEvent<?, ?> siegeEvent1 = actor.getEvent(SiegeEvent.class);
-		SiegeEvent<?, ?> siegeEvent2 = player.getEvent(SiegeEvent.class);
-		SiegeClanObject siegeClan = siegeEvent1.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
-		if ((siegeEvent2 == null) || ((siegeEvent1 == siegeEvent2) && (siegeClan != null)))
+		final SiegeEvent<?, ?> siegeEvent1 = actor.getEvent(SiegeEvent.class);
+		final SiegeEvent<?, ?> siegeEvent2 = player.getEvent(SiegeEvent.class);
+		final SiegeClanObject siegeClan = siegeEvent1.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+		if ((siegeEvent2 == null) || ((siegeEvent1.equals(siegeEvent2)) && (siegeClan != null)))
 		{
 			ThreadPoolManager.getInstance().schedule(new notifyGuard(player), 1000);
 		}
@@ -77,7 +77,7 @@ public class ArtefactAI extends CharacterAI
 		 * Constructor for notifyGuard.
 		 * @param attacker Player
 		 */
-		public notifyGuard(Player attacker)
+		notifyGuard(Player attacker)
 		{
 			_playerRef = attacker.getRef();
 		}
@@ -88,9 +88,9 @@ public class ArtefactAI extends CharacterAI
 		@Override
 		public void runImpl()
 		{
-			NpcInstance actor;
-			Player attacker = _playerRef.get();
-			if ((attacker == null) || ((actor = (NpcInstance) getActor()) == null))
+			final NpcInstance actor = (NpcInstance) getActor();
+			final Player attacker = _playerRef.get();
+			if ((attacker == null) || (actor == null))
 			{
 				return;
 			}

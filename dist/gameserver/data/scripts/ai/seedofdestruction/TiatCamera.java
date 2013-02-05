@@ -50,7 +50,7 @@ public class TiatCamera extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		for (Player p : World.getAroundPlayers(actor, 300, 300))
 		{
 			if (!_players.contains(p))

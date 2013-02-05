@@ -63,7 +63,7 @@ public class DemonPrince extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (_notUsedUltimateDefense && (actor.getCurrentHpPercents() < 10))
 		{
 			_notUsedUltimateDefense = false;
@@ -80,7 +80,7 @@ public class DemonPrince extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		_notUsedUltimateDefense = true;
 		actor.getReflection().setReenterTime(System.currentTimeMillis());
 		actor.getReflection().addSpawnWithoutRespawn(TELEPORTATION_CUBIC_ID, CUBIC_POSITION, 0);

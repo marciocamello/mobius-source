@@ -55,6 +55,7 @@ public class KrateisCubeWatcherBlue extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -63,8 +64,8 @@ public class KrateisCubeWatcherBlue extends DefaultAI
 	@Override
 	protected void onEvtThink()
 	{
-		NpcInstance actor = getActor();
-		List<Creature> around = World.getAroundCharacters(actor, 600, 300);
+		final NpcInstance actor = getActor();
+		final List<Creature> around = World.getAroundCharacters(actor, 600, 300);
 		if (around.isEmpty())
 		{
 			return;
@@ -110,10 +111,10 @@ public class KrateisCubeWatcherBlue extends DefaultAI
 			@Override
 			public void runImpl()
 			{
-				NpcTemplate template = NpcHolder.getInstance().getTemplate(18601);
+				final NpcTemplate template = NpcHolder.getInstance().getTemplate(18601);
 				if (template != null)
 				{
-					NpcInstance a = template.getNewInstance();
+					final NpcInstance a = template.getNewInstance();
 					a.setCurrentHpMp(a.getMaxHp(), a.getMaxMp());
 					a.spawnMe(actor.getLoc());
 				}

@@ -29,7 +29,7 @@ public class NaiaSpore extends Fighter
 	/**
 	 * Field epidosIndex.
 	 */
-	private static Map<Integer, Integer> epidosIndex = new HashMap<>();
+	private static final Map<Integer, Integer> epidosIndex = new HashMap<>();
 	static
 	{
 		epidosIndex.put(1, 0);
@@ -54,8 +54,8 @@ public class NaiaSpore extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
-		int npcId = actor.getNpcId();
+		final NpcInstance actor = getActor();
+		final int npcId = actor.getNpcId();
 		switch (npcId)
 		{
 			case 25605:

@@ -59,12 +59,12 @@ public class DeluLizardmanSpecialCommander extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (Rnd.chance(40) && !_shouted)
 		{
 			_shouted = true;
 			Functions.npcSay(actor, "Come on my fellows, assist me here!");
-			List<NpcInstance> around = actor.getAroundNpc(1000, 300);
+			final List<NpcInstance> around = actor.getAroundNpc(1000, 300);
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)

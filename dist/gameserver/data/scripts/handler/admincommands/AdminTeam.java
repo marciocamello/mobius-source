@@ -57,7 +57,7 @@ public class AdminTeam extends ScriptAdminCommand
 				}
 			}
 		}
-		GameObject object = activeChar.getTarget();
+		final GameObject object = activeChar.getTarget();
 		if ((object == null) || !object.isCreature())
 		{
 			activeChar.sendPacket(SystemMsg.INVALID_TARGET);

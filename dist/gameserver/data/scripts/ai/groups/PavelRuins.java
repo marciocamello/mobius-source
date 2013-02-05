@@ -74,7 +74,7 @@ public class PavelRuins extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		super.onEvtDead(killer);
 		ThreadPoolManager.getInstance().schedule(new SpawnNext(actor, killer), 5000);
 	}
@@ -98,7 +98,7 @@ public class PavelRuins extends Fighter
 		 * @param actor NpcInstance
 		 * @param killer Creature
 		 */
-		public SpawnNext(NpcInstance actor, Creature killer)
+		SpawnNext(NpcInstance actor, Creature killer)
 		{
 			_actor = actor;
 			_killer = killer;
@@ -146,11 +146,11 @@ public class PavelRuins extends Fighter
 	 */
 	static void spawnNextMob(int npcId, Creature killer, Location loc)
 	{
-		SimpleSpawner sp = new SimpleSpawner(npcId);
+		final SimpleSpawner sp = new SimpleSpawner(npcId);
 		sp.setLocx(loc.x);
 		sp.setLocy(loc.y);
 		sp.setLocz(loc.z);
-		NpcInstance npc = sp.doSpawn(true);
+		final NpcInstance npc = sp.doSpawn(true);
 		npc.setHeading(PositionUtils.calculateHeadingFrom(npc, killer));
 		npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 1000);
 	}

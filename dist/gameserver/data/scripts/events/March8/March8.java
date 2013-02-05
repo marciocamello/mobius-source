@@ -63,7 +63,7 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 	/**
 	 * Field _spawns.
 	 */
-	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	/**
 	 * Field DROP.
 	 */
@@ -83,7 +83,7 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 	 */
 	private void spawnEventManagers()
 	{
-		final int EVENT_MANAGERS[][] =
+		final int[][] EVENT_MANAGERS =
 		{
 			{
 				-14823,
@@ -177,7 +177,7 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 	 */
 	public void startEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -201,7 +201,7 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 	 */
 	public void stopEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -225,7 +225,7 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 	 */
 	public void buyrecipe()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
@@ -234,7 +234,7 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 		{
 			return;
 		}
-		long need_adena = (long) (RECIPE_PRICE * Config.EVENT_MARCH8_PRICE_RATE);
+		final long need_adena = (long) (RECIPE_PRICE * Config.EVENT_MARCH8_PRICE_RATE);
 		if (player.getAdena() < need_adena)
 		{
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -255,7 +255,7 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 		{
 			return "";
 		}
-		String price;
+		final String price;
 		String append = "";
 		price = Util.formatAdena((long) (RECIPE_PRICE * Config.EVENT_MARCH8_PRICE_RATE));
 		append += "<br><a action=\"bypass -h scripts_events.March8.March8:buyrecipe\">";

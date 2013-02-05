@@ -41,7 +41,7 @@ public class Recipes extends ScriptItemHandler
 	 */
 	public Recipes()
 	{
-		Collection<RecipeTemplate> rc = RecipeHolder.getInstance().getRecipes();
+		final Collection<RecipeTemplate> rc = RecipeHolder.getInstance().getRecipes();
 		_itemIds = new int[rc.size()];
 		int i = 0;
 		for (RecipeTemplate r : rc)
@@ -64,8 +64,8 @@ public class Recipes extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
-		RecipeTemplate rp = RecipeHolder.getInstance().getRecipeByRecipeItem(item.getItemId());
+		final Player player = (Player) playable;
+		final RecipeTemplate rp = RecipeHolder.getInstance().getRecipeByRecipeItem(item.getItemId());
 		if (rp.isDwarven())
 		{
 			if (player.getDwarvenRecipeLimit() > 0)

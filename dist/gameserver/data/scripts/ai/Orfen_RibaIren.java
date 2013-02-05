@@ -57,7 +57,7 @@ public class Orfen_RibaIren extends Fighter
 	protected void onEvtClanAttacked(Creature attacked_member, Creature attacker, int damage)
 	{
 		super.onEvtClanAttacked(attacked_member, attacker, damage);
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (_healSkills.length == 0)
 		{
 			return;
@@ -69,11 +69,11 @@ public class Orfen_RibaIren extends Fighter
 		int heal_chance = 0;
 		if (attacked_member.getNpcId() == actor.getNpcId())
 		{
-			heal_chance = attacked_member.getObjectId() == actor.getObjectId() ? 100 : 0;
+			heal_chance = (attacked_member.getObjectId() == actor.getObjectId()) ? 100 : 0;
 		}
 		else
 		{
-			heal_chance = attacked_member.getNpcId() == Orfen_id ? 90 : 10;
+			heal_chance = (attacked_member.getNpcId() == Orfen_id) ? 90 : 10;
 		}
 		if (Rnd.chance(heal_chance) && canUseSkill(_healSkills[0], attacked_member, -1))
 		{

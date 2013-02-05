@@ -86,7 +86,7 @@ public class CaughtMystic extends Mystic
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (System.currentTimeMillis() >= TIME_TO_DIE)
 		{
 			actor.deleteMe();

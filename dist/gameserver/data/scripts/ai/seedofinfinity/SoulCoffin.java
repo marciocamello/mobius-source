@@ -50,8 +50,8 @@ public class SoulCoffin extends DefaultAI
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
-		Reflection r = actor.getReflection();
+		final NpcInstance actor = getActor();
+		final Reflection r = actor.getReflection();
 		if (!r.isDefault())
 		{
 			if (actor.getNpcId() == 18711)
@@ -84,7 +84,7 @@ public class SoulCoffin extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor.getNpcId() == 18706) && (actor.getReflection().getInstancedZoneId() == 116) && ((checkTimer + 10000) < System.currentTimeMillis()))
 		{
 			checkTimer = System.currentTimeMillis();
@@ -101,6 +101,7 @@ public class SoulCoffin extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -111,5 +112,6 @@ public class SoulCoffin extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

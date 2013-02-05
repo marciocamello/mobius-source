@@ -168,7 +168,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		@Override
 		public void runImpl()
 		{
-			Skill skill = SkillTable.getInstance().getInfo(4136, 1);
+			final Skill skill = SkillTable.getInstance().getInfo(4136, 1);
 			if ((_target != null) && (skill != null))
 			{
 				_boss.setTarget(_target);
@@ -275,7 +275,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		@Override
 		public void runImpl()
 		{
-			SocialAction sa = new SocialAction(_npc.getObjectId(), _action);
+			final SocialAction sa = new SocialAction(_npc.getObjectId(), _action);
 			_npc.broadcastPacket(sa);
 		}
 	}
@@ -347,11 +347,11 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 	/**
 	 * Field _monsters.
 	 */
-	private static List<NpcInstance> _monsters = new ArrayList<>();
+	private static final List<NpcInstance> _monsters = new ArrayList<>();
 	/**
 	 * Field _monsterSpawn.
 	 */
-	private static Map<Integer, SimpleSpawner> _monsterSpawn = new ConcurrentHashMap<>();
+	private static final Map<Integer, SimpleSpawner> _monsterSpawn = new ConcurrentHashMap<>();
 	/**
 	 * Field _angels.
 	 */
@@ -502,7 +502,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		CharListenerList.addGlobal(this);
 		try
 		{
-			SimpleSpawner tempSpawn;
+			final SimpleSpawner tempSpawn;
 			_statueSpawn = new SimpleSpawner(NpcHolder.getInstance().getTemplate(BAIUM_NPC));
 			_statueSpawn.setAmount(1);
 			_statueSpawn.setLoc(STATUE_LOCATION);
@@ -517,7 +517,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 		try
 		{
-			NpcTemplate Cube = NpcHolder.getInstance().getTemplate(TELEPORT_CUBE);
+			final NpcTemplate Cube = NpcHolder.getInstance().getTemplate(TELEPORT_CUBE);
 			_teleportCubeSpawn = new SimpleSpawner(Cube);
 			_teleportCubeSpawn.setAmount(1);
 			_teleportCubeSpawn.setLoc(CUBE_LOCATION);
@@ -529,10 +529,10 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		}
 		try
 		{
-			NpcTemplate angel = NpcHolder.getInstance().getTemplate(ARCHANGEL);
+			final NpcTemplate angel = NpcHolder.getInstance().getTemplate(ARCHANGEL);
 			SimpleSpawner spawnDat;
 			_angelSpawns.clear();
-			List<Integer> random = new ArrayList<>();
+			final List<Integer> random = new ArrayList<>();
 			for (int i = 0; i < 5; i++)
 			{
 				int r = -1;
@@ -768,7 +768,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		@Override
 		public void runImpl()
 		{
-			Earthquake eq = new Earthquake(baium.getLoc(), 40, 5);
+			final Earthquake eq = new Earthquake(baium.getLoc(), 40, 5);
 			baium.broadcastPacket(eq);
 		}
 	}
@@ -782,7 +782,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 	{
 		Dying = false;
 		_npcBaium = NpcBaium;
-		SimpleSpawner baiumSpawn = _monsterSpawn.get(BAIUM);
+		final SimpleSpawner baiumSpawn = _monsterSpawn.get(BAIUM);
 		baiumSpawn.setLoc(_npcBaium.getLoc());
 		_npcBaium.getSpawn().stopRespawn();
 		_npcBaium.deleteMe();
@@ -802,7 +802,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		_killPcTask = ThreadPoolManager.getInstance().schedule(new KillPc(awake_by, baium), 26000);
 		_callAngelTask = ThreadPoolManager.getInstance().schedule(new CallArchAngel(), 35000);
 		_mobiliseTask = ThreadPoolManager.getInstance().schedule(new SetMobilised(baium), 35500);
-		Location pos = new Location(Rnd.get(112826, 116241), Rnd.get(15575, 16375), 10078, 0);
+		final Location pos = new Location(Rnd.get(112826, 116241), Rnd.get(15575, 16375), 10078, 0);
 		_moveAtRandomTask = ThreadPoolManager.getInstance().schedule(new MoveAtRandom(baium, pos), 36000);
 		_sleepCheckTask = ThreadPoolManager.getInstance().schedule(new CheckLastAttack(), 600000);
 	}
@@ -834,5 +834,6 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 	@Override
 	public void onShutdown()
 	{
+		// empty method
 	}
 }

@@ -57,7 +57,7 @@ public class Darion extends Fighter
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		for (int i = 0; i < 5; i++)
 		{
 			try

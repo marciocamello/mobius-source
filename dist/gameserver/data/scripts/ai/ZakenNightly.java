@@ -73,7 +73,7 @@ public class ZakenNightly extends Fighter
 	/**
 	 * Field _teleportSelfReuse.
 	 */
-	private final long _teleportSelfReuse = 30000L;
+	private static final long _teleportSelfReuse = 30000L;
 	/**
 	 * Field actor.
 	 */
@@ -90,7 +90,7 @@ public class ZakenNightly extends Fighter
 	public ZakenNightly(NpcInstance actor)
 	{
 		super(actor);
-		MAX_PURSUE_RANGE = Integer.MAX_VALUE / 2;
+		MAX_PURSUE_RANGE = Integer.MAX_VALUE >> 1;
 	}
 	
 	/**
@@ -116,8 +116,8 @@ public class ZakenNightly extends Fighter
 				}, 500);
 			}
 		}
-		double actor_hp_precent = actor.getCurrentHpPercents();
-		Reflection r = actor.getReflection();
+		final double actor_hp_precent = actor.getCurrentHpPercents();
+		final Reflection r = actor.getReflection();
 		switch (_stage)
 		{
 			case 0:
@@ -204,7 +204,7 @@ public class ZakenNightly extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		Reflection r = actor.getReflection();
+		final Reflection r = actor.getReflection();
 		r.setReenterTime(System.currentTimeMillis());
 		actor.broadcastPacket(new PlaySound(PlaySound.Type.MUSIC, "BS02_D", 1, actor.getObjectId(), actor.getLoc()));
 		super.onEvtDead(killer);

@@ -41,7 +41,7 @@ public class PaganGuard extends Mystic
 	@Override
 	protected boolean checkTarget(Creature target, int range)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((target != null) && !actor.isInRange(target, actor.getAggroRange()))
 		{
 			actor.getAggroList().remove(target, true);

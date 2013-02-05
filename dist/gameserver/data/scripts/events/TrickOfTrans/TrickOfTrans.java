@@ -43,63 +43,63 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 	/**
 	 * Field EVENT_MANAGER_ID.
 	 */
-	private static int EVENT_MANAGER_ID = 32132;
+	private static final int EVENT_MANAGER_ID = 32132;
 	/**
 	 * Field CHESTS_ID.
 	 */
-	private static int CHESTS_ID = 13036;
+	private static final int CHESTS_ID = 13036;
 	/**
 	 * Field RED_PSTC.
 	 */
-	private static int RED_PSTC = 9162;
+	private static final int RED_PSTC = 9162;
 	/**
 	 * Field BLUE_PSTC.
 	 */
-	private static int BLUE_PSTC = 9163;
+	private static final int BLUE_PSTC = 9163;
 	/**
 	 * Field ORANGE_PSTC.
 	 */
-	private static int ORANGE_PSTC = 9164;
+	private static final int ORANGE_PSTC = 9164;
 	/**
 	 * Field BLACK_PSTC.
 	 */
-	private static int BLACK_PSTC = 9165;
+	private static final int BLACK_PSTC = 9165;
 	/**
 	 * Field WHITE_PSTC.
 	 */
-	private static int WHITE_PSTC = 9166;
+	private static final int WHITE_PSTC = 9166;
 	/**
 	 * Field GREEN_PSTC.
 	 */
-	private static int GREEN_PSTC = 9167;
+	private static final int GREEN_PSTC = 9167;
 	/**
 	 * Field RED_PSTC_R.
 	 */
-	private static int RED_PSTC_R = 9171;
+	private static final int RED_PSTC_R = 9171;
 	/**
 	 * Field BLUE_PSTC_R.
 	 */
-	private static int BLUE_PSTC_R = 9172;
+	private static final int BLUE_PSTC_R = 9172;
 	/**
 	 * Field ORANGE_PSTC_R.
 	 */
-	private static int ORANGE_PSTC_R = 9173;
+	private static final int ORANGE_PSTC_R = 9173;
 	/**
 	 * Field BLACK_PSTC_R.
 	 */
-	private static int BLACK_PSTC_R = 9174;
+	private static final int BLACK_PSTC_R = 9174;
 	/**
 	 * Field WHITE_PSTC_R.
 	 */
-	private static int WHITE_PSTC_R = 9175;
+	private static final int WHITE_PSTC_R = 9175;
 	/**
 	 * Field GREEN_PSTC_R.
 	 */
-	private static int GREEN_PSTC_R = 9176;
+	private static final int GREEN_PSTC_R = 9176;
 	/**
 	 * Field A_CHEST_KEY.
 	 */
-	private static int A_CHEST_KEY = 9205;
+	private static final int A_CHEST_KEY = 9205;
 	/**
 	 * Field _active.
 	 */
@@ -115,23 +115,23 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 	/**
 	 * Field PhilosophersStoneOre.
 	 */
-	private static int PhilosophersStoneOre = 9168;
+	private static final int PhilosophersStoneOre = 9168;
 	/**
 	 * Field PhilosophersStoneOreMax.
 	 */
-	private static int PhilosophersStoneOreMax = 17;
+	private static final int PhilosophersStoneOreMax = 17;
 	/**
 	 * Field PhilosophersStoneConversionFormula.
 	 */
-	private static int PhilosophersStoneConversionFormula = 9169;
+	private static final int PhilosophersStoneConversionFormula = 9169;
 	/**
 	 * Field MagicReagents.
 	 */
-	private static int MagicReagents = 9170;
+	private static final int MagicReagents = 9170;
 	/**
 	 * Field MagicReagentsMax.
 	 */
-	private static int MagicReagentsMax = 30;
+	private static final int MagicReagentsMax = 30;
 	
 	/**
 	 * Method onLoad.
@@ -249,7 +249,7 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 	 */
 	private void spawnEventManagers()
 	{
-		final int EVENT_MANAGERS[][] =
+		final int[][] EVENT_MANAGERS =
 		{
 			{
 				147992,
@@ -282,7 +282,7 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 				15863
 			},
 		};
-		final int CHESTS[][] =
+		final int[][] CHESTS =
 		{
 			{
 				148081,

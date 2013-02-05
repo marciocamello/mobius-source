@@ -103,18 +103,18 @@ public class Antharas extends DefaultAI
 	protected boolean createNewTask()
 	{
 		clearTasks();
-		Creature target;
-		if ((target = prepareTarget()) == null)
+		Creature target = prepareTarget();
+		if (target == null)
 		{
 			return false;
 		}
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return false;
 		}
-		double distance = actor.getDistance(target);
-		double chp = actor.getCurrentHpPercents();
+		final double distance = actor.getDistance(target);
+		final double chp = actor.getCurrentHpPercents();
 		if (_hpStage == 0)
 		{
 			actor.altOnMagicUseTimer(actor, s_regen1);
@@ -137,7 +137,7 @@ public class Antharas extends DefaultAI
 		}
 		if ((_minionsSpawnDelay < System.currentTimeMillis()) && (getAliveMinionsCount() < 30) && Rnd.chance(5))
 		{
-			NpcInstance minion = Functions.spawn(Location.findPointToStay(actor.getLoc(), 400, 700, actor.getGeoIndex()), Rnd.chance(50) ? 29190 : 29069);
+			final NpcInstance minion = Functions.spawn(Location.findPointToStay(actor.getLoc(), 400, 700, actor.getGeoIndex()), Rnd.chance(50) ? 29190 : 29069);
 			minions.add(minion);
 			AntharasManager.addSpawnedMinion(minion);
 		}
@@ -145,7 +145,7 @@ public class Antharas extends DefaultAI
 		{
 			return chooseTaskAndTargets(Rnd.chance(50) ? s_antharas_ordinary_attack : s_antharas_ordinary_attack2, target, distance);
 		}
-		Map<Skill, Integer> d_skill = new HashMap<>();
+		final Map<Skill, Integer> d_skill = new HashMap<>();
 		switch (_hpStage)
 		{
 			case 1:
@@ -180,7 +180,7 @@ public class Antharas extends DefaultAI
 			default:
 				break;
 		}
-		Skill r_skill = selectTopSkill(d_skill);
+		final Skill r_skill = selectTopSkill(d_skill);
 		if ((r_skill != null) && !r_skill.isOffensive())
 		{
 			target = actor;

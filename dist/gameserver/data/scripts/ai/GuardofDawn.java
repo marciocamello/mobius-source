@@ -118,7 +118,7 @@ public class GuardofDawn extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (!noCheckPlayers)
 		{
 			checkAroundPlayers(actor);
@@ -222,6 +222,7 @@ public class GuardofDawn extends DefaultAI
 	@Override
 	protected void thinkAttack()
 	{
+		// empty method
 	}
 	
 	/**
@@ -231,6 +232,7 @@ public class GuardofDawn extends DefaultAI
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
+		// empty method
 	}
 	
 	/**
@@ -241,6 +243,7 @@ public class GuardofDawn extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
+		// empty method
 	}
 	
 	/**
@@ -251,6 +254,7 @@ public class GuardofDawn extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
+		// empty method
 	}
 	
 	/**
@@ -262,5 +266,6 @@ public class GuardofDawn extends DefaultAI
 	@Override
 	protected void onEvtClanAttacked(Creature attacked_member, Creature attacker, int damage)
 	{
+		// empty method
 	}
 }

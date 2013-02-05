@@ -48,7 +48,7 @@ public class MeleonAI extends Fighter
 		@Override
 		public void runImpl()
 		{
-			MeleonInstance actor = getActor();
+			final MeleonInstance actor = getActor();
 			if (actor == null)
 			{
 				return;
@@ -58,7 +58,7 @@ public class MeleonAI extends Fighter
 			{
 				spawn = new SimpleSpawner(NpcHolder.getInstance().getTemplate(_npcId));
 				spawn.setLoc(actor.getLoc());
-				NpcInstance npc = spawn.doSpawn(true);
+				final NpcInstance npc = spawn.doSpawn(true);
 				npc.setAI(new MeleonAI(npc));
 				((MeleonInstance) npc).setSpawner(actor.getSpawner());
 			}
@@ -353,7 +353,7 @@ public class MeleonAI extends Fighter
 	/**
 	 * Field NECTAR_REUSE.
 	 */
-	private static int NECTAR_REUSE = 3000;
+	private static final int NECTAR_REUSE = 3000;
 	
 	/**
 	 * Constructor for MeleonAI.
@@ -382,7 +382,7 @@ public class MeleonAI extends Fighter
 				_polimorphTask.cancel(false);
 				_polimorphTask = null;
 			}
-			MeleonInstance actor = getActor();
+			final MeleonInstance actor = getActor();
 			actor.deleteMe();
 		}
 		return false;
@@ -396,7 +396,7 @@ public class MeleonAI extends Fighter
 	@Override
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
-		MeleonInstance actor = getActor();
+		final MeleonInstance actor = getActor();
 		if ((actor == null) || (skill.getId() != 2005))
 		{
 			return;
@@ -544,7 +544,7 @@ public class MeleonAI extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		MeleonInstance actor = getActor();
+		final MeleonInstance actor = getActor();
 		if ((actor != null) && Rnd.chance(5))
 		{
 			Functions.npcSay(actor, textOnAttack[Rnd.get(textOnAttack.length)]);
@@ -559,7 +559,7 @@ public class MeleonAI extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		_tryCount = -1;
-		MeleonInstance actor = getActor();
+		final MeleonInstance actor = getActor();
 		if (actor == null)
 		{
 			return;

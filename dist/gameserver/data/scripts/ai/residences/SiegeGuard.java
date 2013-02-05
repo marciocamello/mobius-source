@@ -33,13 +33,13 @@ import npc.model.residences.SiegeGuardInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public abstract class SiegeGuard extends DefaultAI
+public class SiegeGuard extends DefaultAI
 {
 	/**
 	 * Constructor for SiegeGuard.
 	 * @param actor NpcInstance
 	 */
-	public SiegeGuard(NpcInstance actor)
+	protected SiegeGuard(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = 1000;
@@ -114,7 +114,7 @@ public abstract class SiegeGuard extends DefaultAI
 	@Override
 	protected boolean checkAggression(Creature target)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((getIntention() != CtrlIntention.AI_INTENTION_ACTIVE) || !isGlobalAggro())
 		{
 			return false;
@@ -150,7 +150,7 @@ public abstract class SiegeGuard extends DefaultAI
 				return false;
 			}
 		}
-		AggroList.AggroInfo ai = actor.getAggroList().get(target);
+		final AggroList.AggroInfo ai = actor.getAggroList().get(target);
 		if ((ai != null) && (ai.hate > 0))
 		{
 			if (!target.isInRangeZ(actor.getSpawnedLoc(), MAX_PURSUE_RANGE))
@@ -198,7 +198,7 @@ public abstract class SiegeGuard extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
-		SiegeGuardInstance actor = getActor();
+		final SiegeGuardInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return;
@@ -217,7 +217,7 @@ public abstract class SiegeGuard extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isActionsDisabled())
 		{
 			return true;
@@ -230,11 +230,11 @@ public abstract class SiegeGuard extends DefaultAI
 			}
 			return true;
 		}
-		long now = System.currentTimeMillis();
+		final long now = System.currentTimeMillis();
 		if ((now - _checkAggroTimestamp) > Config.AGGRO_CHECK_INTERVAL)
 		{
 			_checkAggroTimestamp = now;
-			List<Creature> chars = World.getAroundCharacters(actor);
+			final List<Creature> chars = World.getAroundCharacters(actor);
 			CollectionUtils.eqSort(chars, _nearestTargetComparator);
 			for (Creature cha : chars)
 			{
@@ -244,7 +244,7 @@ public abstract class SiegeGuard extends DefaultAI
 				}
 			}
 		}
-		Location sloc = actor.getSpawnedLoc();
+		final Location sloc = actor.getSpawnedLoc();
 		if (!actor.isInRange(sloc, 250))
 		{
 			teleportHome();
@@ -260,12 +260,12 @@ public abstract class SiegeGuard extends DefaultAI
 	@Override
 	protected Creature prepareTarget()
 	{
-		SiegeGuardInstance actor = getActor();
+		final SiegeGuardInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return null;
 		}
-		List<Creature> hateList = actor.getAggroList().getHateList();
+		final List<Creature> hateList = actor.getAggroList().getHateList();
 		Creature hated = null;
 		for (Creature cha : hateList)
 		{

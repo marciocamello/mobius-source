@@ -83,7 +83,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	};
 	static
 	{
-		PrintfFormat fmt = new PrintfFormat("<br><a action=\"bypass -h scripts_events.heart.heart:play %d\">\"%s!\"</a>");
+		final PrintfFormat fmt = new PrintfFormat("<br><a action=\"bypass -h scripts_events.heart.heart:play %d\">\"%s!\"</a>");
 		for (int i = 0; i < variants.length; i++)
 		{
 			links_en += fmt.sprintf(new Object[]
@@ -149,7 +149,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	 */
 	public void startEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -173,7 +173,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	 */
 	public void stopEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -197,7 +197,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	 */
 	public void letsplay()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
@@ -219,7 +219,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	 */
 	public void play(String[] var)
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.isQuestContinuationPossible(true) || (var.length == 0))
 		{
 			return;
@@ -238,14 +238,14 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		}
 		if (var[0].equalsIgnoreCase("Quit"))
 		{
-			int curr_guesses = getGuesses(player);
+			final int curr_guesses = getGuesses(player);
 			takeHeartsSet(player);
 			reward(player, curr_guesses);
 			show("scripts/events/heart/hearts_reward_" + curr_guesses + ".htm", player);
 			zeroGuesses(player);
 			return;
 		}
-		int var_cat = Rnd.get(variants.length);
+		final int var_cat = Rnd.get(variants.length);
 		int var_player = 0;
 		try
 		{
@@ -264,7 +264,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		if (playerWins(var_player, var_cat))
 		{
 			incGuesses(player);
-			int curr_guesses = getGuesses(player);
+			final int curr_guesses = getGuesses(player);
 			if (curr_guesses == 10)
 			{
 				takeHeartsSet(player);
@@ -330,18 +330,20 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	 * Method fillvars.
 	 * @param s String
 	 * @param var_player int
-	 * @param var_cat int ye * @return Stringr
+	 * @param var_cat int
+	 * @param player Player
 	 * @return String
 	 */
 	private String fillvars(String s, int var_player, int var_cat, Player player)
 	{
-		boolean rus = false;
+		final boolean rus = false;
 		return link(s.replaceFirst("Player", player.getName()).replaceFirst("%var_payer%", variants[var_player][rus ? 1 : 0]).replaceFirst("%var_cat%", variants[var_cat][rus ? 1 : 0]), rus);
 	}
 	
 	/**
 	 * Method link.
-	 * @param s String ea * @return Stringn
+	 * @param s String
+	 * @param rus boolean
 	 * @return String
 	 */
 	private String link(String s, boolean rus)
@@ -351,7 +353,8 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	
 	/**
 	 * Method playerWins.
-	 * @param var_player int nt * @return boolean
+	 * @param var_player int
+	 * @param var_cat int
 	 * @return boolean
 	 */
 	private boolean playerWins(int var_player, int var_cat)
@@ -372,7 +375,8 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	}
 	
 	/**
-	 * Method getGuesses. Pl * @return intayer
+	 * Method getGuesses.
+	 * @param player Player
 	 * @return int
 	 */
 	private int getGuesses(Player player)
@@ -419,7 +423,8 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	}
 	
 	/**
-	 * Method haveAllHearts. er * @return boolean
+	 * Method haveAllHearts.
+	 * @param player Player
 	 * @return boolean
 	 */
 	private boolean haveAllHearts(Player player)
@@ -474,7 +479,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	 */
 	private void spawnEventManagers()
 	{
-		final int EVENT_MANAGERS[][] =
+		final int[][] EVENT_MANAGERS =
 		{
 			{
 				146936,

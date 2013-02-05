@@ -38,11 +38,11 @@ public class Isthina extends Fighter
 	/**
 	 * Field ISTINA_LIGHT.
 	 */
-	final int ISTINA_LIGHT = 29195;
+	static final int ISTINA_LIGHT = 29195;
 	/**
 	 * Field ISTINA_HARD.
 	 */
-	final int ISTINA_HARD = 29196;
+	static final int ISTINA_HARD = 29196;
 	/**
 	 * Field BARRIER_OF_REFLECTION.
 	 */
@@ -82,35 +82,35 @@ public class Isthina extends Fighter
 	/**
 	 * Field ACID_ERUPTION1_DELAY.
 	 */
-	private final long ACID_ERUPTION1_DELAY = 60;
+	private static final long ACID_ERUPTION1_DELAY = 60;
 	/**
 	 * Field ACID_ERUPTION2_DELAY.
 	 */
-	private final long ACID_ERUPTION2_DELAY = 60;
+	private static final long ACID_ERUPTION2_DELAY = 60;
 	/**
 	 * Field ACID_ERUPTION3_DELAY.
 	 */
-	private final long ACID_ERUPTION3_DELAY = 60;
+	private static final long ACID_ERUPTION3_DELAY = 60;
 	/**
 	 * Field DEATH_BLOW.
 	 */
-	final int DEATH_BLOW = 14219;
+	static final int DEATH_BLOW = 14219;
 	/**
 	 * Field ISTINA_MARK.
 	 */
-	final int ISTINA_MARK = 14218;
+	static final int ISTINA_MARK = 14218;
 	/**
 	 * Field RED_RING.
 	 */
-	final int RED_RING = 14220101;
+	static final int RED_RING = 14220101;
 	/**
 	 * Field BLUE_RING.
 	 */
-	final int BLUE_RING = 14220102;
+	static final int BLUE_RING = 14220102;
 	/**
 	 * Field GREEN_RING.
 	 */
-	final int GREEN_RING = 14220103;
+	static final int GREEN_RING = 14220103;
 	/**
 	 * Field RED_RING_LOC.
 	 */
@@ -134,11 +134,11 @@ public class Isthina extends Fighter
 	/**
 	 * Field _hasFlood.
 	 */
-	private final boolean _hasFlood = false;
+	private static final boolean _hasFlood = false;
 	/**
 	 * Field _hasBarrier.
 	 */
-	private final boolean _hasBarrier = false;
+	private static final boolean _hasBarrier = false;
 	/**
 	 * Field _ring.
 	 */
@@ -178,7 +178,7 @@ public class Isthina extends Fighter
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		long generalReuse = System.currentTimeMillis() + 60000L;
+		final long generalReuse = System.currentTimeMillis() + 60000L;
 		ACID_ERUPTION1_TIMER += generalReuse + (Rnd.get(1, 20) * 1000L);
 		ACID_ERUPTION2_TIMER += generalReuse + (Rnd.get(1, 20) * 1000L);
 		ACID_ERUPTION3_TIMER += generalReuse + (Rnd.get(1, 20) * 1000L);
@@ -190,7 +190,7 @@ public class Isthina extends Fighter
 	@Override
 	protected void thinkAttack()
 	{
-		NpcInstance npc = getActor();
+		final NpcInstance npc = getActor();
 		if (_effectCheckTask == null)
 		{
 			_effectCheckTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new EffectCheckTask(npc), 0, 2000);
@@ -199,9 +199,9 @@ public class Isthina extends Fighter
 		{
 			ThreadPoolManager.getInstance().scheduleAtFixedRate(new EffectCheckTask(npc), 0, 2000);
 		}
-		double damage = (npc.getMaxHp() - npc.getCurrentHp());
-		double lastPercentHp = (npc.getCurrentHp() + damage) / npc.getMaxHp();
-		double currentPercentHp = npc.getCurrentHp() / npc.getMaxHp();
+		final double damage = (npc.getMaxHp() - npc.getCurrentHp());
+		final double lastPercentHp = (npc.getCurrentHp() + damage) / npc.getMaxHp();
+		final double currentPercentHp = npc.getCurrentHp() / npc.getMaxHp();
 		if ((lastPercentHp > 0.9D) && (currentPercentHp <= 0.9D))
 		{
 			onPercentHpReached(npc, 90);
@@ -268,7 +268,7 @@ public class Isthina extends Fighter
 		}
 		else
 		{
-			double seed = Rnd.get();
+			final double seed = Rnd.get();
 			if ((seed < 0.005D) && (!_authorityLock))
 			{
 				authorityField(npc);
@@ -331,8 +331,8 @@ public class Isthina extends Fighter
 	private void authorityField(final NpcInstance npc)
 	{
 		_authorityLock = true;
-		double seed = Rnd.get();
-		final int ring = (seed >= 0.33D) && (seed < 0.66D) ? 1 : seed < 0.33D ? 0 : 2;
+		final double seed = Rnd.get();
+		final int ring = ((seed >= 0.33D) && (seed < 0.66D)) ? 1 : (seed < 0.33D) ? 0 : 2;
 		_ring = ring;
 		if (seed < 0.33D)
 		{
@@ -367,7 +367,7 @@ public class Isthina extends Fighter
 		 * Constructor for EffectCheckTask.
 		 * @param npc NpcInstance
 		 */
-		public EffectCheckTask(NpcInstance npc)
+		EffectCheckTask(NpcInstance npc)
 		{
 			_npc = npc;
 		}
@@ -453,7 +453,7 @@ public class Isthina extends Fighter
 		@Override
 		public void runImpl()
 		{
-			NpcInstance npc = _npc;
+			final NpcInstance npc = _npc;
 			Zone zones;
 			if (_ring != 0)
 			{

@@ -43,11 +43,11 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 	/**
 	 * Field EVENT_MANAGER_ID.
 	 */
-	private static int EVENT_MANAGER_ID = 32599;
+	private static final int EVENT_MANAGER_ID = 32599;
 	/**
 	 * Field _spawns.
 	 */
-	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	/**
 	 * Field _active.
 	 */
@@ -58,7 +58,7 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 	 */
 	private void spawnEventManagers()
 	{
-		final int EVENT_MANAGERS[][] =
+		final int[][] EVENT_MANAGERS =
 		{
 			{
 				-119494,
@@ -296,7 +296,7 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 	 */
 	public void startEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -320,7 +320,7 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 	 */
 	public void stopEvent()
 	{
-		Player player = getSelf();
+		final Player player = getSelf();
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;

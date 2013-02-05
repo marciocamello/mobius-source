@@ -46,7 +46,7 @@ public class SealDevice extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (!_firstAttack)
 		{
 			actor.broadcastPacket(new MagicSkillUse(actor, actor, 5980, 1, 0, 0));
@@ -62,5 +62,6 @@ public class SealDevice extends Fighter
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
+		// empty method
 	}
 }

@@ -69,7 +69,7 @@ public class FollowNpc extends DefaultAI
 	@Override
 	protected void onEvtThink()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (_thinking || actor.isActionsDisabled() || actor.isAfraid() || actor.isDead() || actor.isMovementDisabled())
 		{
 			return;
@@ -101,8 +101,8 @@ public class FollowNpc extends DefaultAI
 	 */
 	protected void thinkFollow()
 	{
-		NpcInstance actor = getActor();
-		Creature target = actor.getFollowTarget();
+		final NpcInstance actor = getActor();
+		final Creature target = actor.getFollowTarget();
 		if ((target == null) || target.isAlikeDead() || (actor.getDistance(target) > 4000) || actor.isMovementDisabled())
 		{
 			clientActionFailed();
@@ -145,12 +145,12 @@ public class FollowNpc extends DefaultAI
 		@Override
 		public void runImpl()
 		{
-			NpcInstance actor = getActor();
+			final NpcInstance actor = getActor();
 			if (actor == null)
 			{
 				return;
 			}
-			Creature target = actor.getFollowTarget();
+			final Creature target = actor.getFollowTarget();
 			if ((target == null) || target.isAlikeDead() || (actor.getDistance(target) > 4000))
 			{
 				setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -158,7 +158,7 @@ public class FollowNpc extends DefaultAI
 			}
 			if (!actor.isInRange(target, Config.FOLLOW_RANGE + 20) && (!actor.isFollow || (!actor.getFollowTarget().equals(target))))
 			{
-				Location loc = new Location(target.getX() + Rnd.get(-60, 60), target.getY() + Rnd.get(-60, 60), target.getZ());
+				final Location loc = new Location(target.getX() + Rnd.get(-60, 60), target.getY() + Rnd.get(-60, 60), target.getZ());
 				actor.followToCharacter(loc, target, Config.FOLLOW_RANGE, false);
 			}
 			_followTask = ThreadPoolManager.getInstance().schedule(this, 250L);

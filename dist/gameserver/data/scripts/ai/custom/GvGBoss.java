@@ -54,7 +54,7 @@ public class GvGBoss extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor.getCurrentHpPercents() < 50) && (!phrase1))
 		{
 			phrase1 = true;

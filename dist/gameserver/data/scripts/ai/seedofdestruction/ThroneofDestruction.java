@@ -65,8 +65,8 @@ public class ThroneofDestruction extends DefaultAI
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
-		Reflection ref = actor.getReflection();
+		final NpcInstance actor = getActor();
+		final Reflection ref = actor.getReflection();
 		if (checkAllDestroyed(actor.getNpcId()))
 		{
 			ref.openDoor(DOOR);

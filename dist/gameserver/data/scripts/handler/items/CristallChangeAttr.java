@@ -58,7 +58,7 @@ public class CristallChangeAttr extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
+		final Player player = (Player) playable;
 		if (player.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
 		{
 			player.sendPacket(SystemMsg.YOU_CAN_NOT_CHANGE_THE_ATTRIBUTE_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
@@ -97,8 +97,8 @@ public class CristallChangeAttr extends ScriptItemHandler
 	 */
 	private boolean sendAttributeItemList(int itemId, Player player, ItemTemplate.Grade... grades)
 	{
-		List<ItemInfo> itemsList = new ArrayList<>();
-		ItemInstance[] items = player.getInventory().getItems();
+		final List<ItemInfo> itemsList = new ArrayList<>();
+		final ItemInstance[] items = player.getInventory().getItems();
 		for (ItemInstance item : items)
 		{
 			if (item.isWeapon() && (item.getAttackElementValue() > 0))

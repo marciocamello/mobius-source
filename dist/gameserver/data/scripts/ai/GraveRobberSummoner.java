@@ -54,7 +54,7 @@ public class GraveRobberSummoner extends Mystic
 		 * @param order int
 		 * @param owner Object
 		 */
-		public FuncMulMinionCount(Stats stat, int order, Object owner)
+		FuncMulMinionCount(Stats stat, int order, Object owner)
 		{
 			super(stat, order, owner);
 		}
@@ -88,7 +88,7 @@ public class GraveRobberSummoner extends Mystic
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		actor.getMinionList().addMinion(new MinionData(Servitors[Rnd.get(Servitors.length)], Rnd.get(2)));
 		_lastMinionCount = Math.max(actor.getMinionList().getAliveMinions().size(), 1);
 	}
@@ -101,7 +101,7 @@ public class GraveRobberSummoner extends Mystic
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		MonsterInstance actor = (MonsterInstance) getActor();
+		final MonsterInstance actor = (MonsterInstance) getActor();
 		if (actor.isDead())
 		{
 			return;
@@ -117,7 +117,7 @@ public class GraveRobberSummoner extends Mystic
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		actor.getMinionList().deleteMinions();
 		super.onEvtDead(killer);
 	}

@@ -151,13 +151,13 @@ public class Dwarvs extends Fighter
 		super.onEvtScriptEvent(event, arg1, arg2);
 		if (event.equalsIgnoreCase("SHOUT_ALL_1"))
 		{
-			int msg = MESSAGES_1[Rnd.get(MESSAGES_1.length)];
+			final int msg = MESSAGES_1[Rnd.get(MESSAGES_1.length)];
 			Functions.npcSayInRange(getActor(), 1500, NpcString.valueOf(msg));
 			startBattle = true;
 		}
 		else if (event.equalsIgnoreCase("SHOUT_ALL_2"))
 		{
-			int msg = MESSAGES_2[Rnd.get(MESSAGES_2.length)];
+			final int msg = MESSAGES_2[Rnd.get(MESSAGES_2.length)];
 			Functions.npcSayInRange(getActor(), 1500, NpcString.valueOf(msg));
 		}
 		else if (event.equalsIgnoreCase("TENTACLE_DIE"))
@@ -195,10 +195,10 @@ public class Dwarvs extends Fighter
 	@Override
 	protected boolean canAttackCharacter(Creature target)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
 		{
-			AggroList.AggroInfo ai = actor.getAggroList().get(target);
+			final AggroList.AggroInfo ai = actor.getAggroList().get(target);
 			return (ai != null) && (ai.hate > 0);
 		}
 		if (!startBattle)
@@ -238,7 +238,7 @@ public class Dwarvs extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
@@ -250,7 +250,7 @@ public class Dwarvs extends Fighter
 		}
 		if ((diedTentacle < 3) || (currentPoint > (MOVE_LOC.length - 1)))
 		{
-			List<Creature> list = World.getAroundCharacters(getActor(), getActor().getAggroRange(), getActor().getAggroRange());
+			final List<Creature> list = World.getAroundCharacters(getActor(), getActor().getAggroRange(), getActor().getAggroRange());
 			for (Creature target : list)
 			{
 				if ((target != null) && !target.isDead() && ArrayUtils.contains(ATTACK_IDS, target.getNpcId()))

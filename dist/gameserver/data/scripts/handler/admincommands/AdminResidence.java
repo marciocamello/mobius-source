@@ -113,7 +113,7 @@ public class AdminResidence extends ScriptAdminCommand
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
+		final Commands command = (Commands) comm;
 		if (!activeChar.getPlayerAccess().CanEditNPC)
 		{
 			return false;
@@ -128,7 +128,7 @@ public class AdminResidence extends ScriptAdminCommand
 			case admin_residence_list:
 				msg = new NpcHtmlMessage(5);
 				msg.setFile("admin/residence/residence_list.htm");
-				StringBuilder replyMSG = new StringBuilder(200);
+				final StringBuilder replyMSG = new StringBuilder(200);
 				for (Residence residence : ResidenceHolder.getInstance().getResidences())
 				{
 					if (residence != null)
@@ -168,7 +168,7 @@ public class AdminResidence extends ScriptAdminCommand
 					msg.setFile("admin/residence/dominion_siege_info.htm");
 					msg.replace("%residence%", HtmlUtils.htmlResidenceName(r.getId()));
 					msg.replace("%id%", String.valueOf(r.getId()));
-					msg.replace("%owner%", r.getOwner() == null ? "NPC" : r.getOwner().getName());
+					msg.replace("%owner%", (r.getOwner() == null) ? "NPC" : r.getOwner().getName());
 					StringBuilder builder = new StringBuilder(100);
 					List<SiegeClanObject> clans = event.getObjects(SiegeEvent.ATTACKERS);
 					for (SiegeClanObject clan : clans)
@@ -186,13 +186,13 @@ public class AdminResidence extends ScriptAdminCommand
 					for (int i : players)
 					{
 						Player player = GameObjectsStorage.getPlayer(i);
-						builder.append("<tr>").append("<td>").append(i).append("</td>").append("<td>").append(player == null ? "null" : player.getName()).append("</td>").append("<td>").append(DominionSiegeEvent.ATTACKER_PLAYERS).append("</td>").append("</tr>");
+						builder.append("<tr>").append("<td>").append(i).append("</td>").append("<td>").append((player == null) ? "null" : player.getName()).append("</td>").append("<td>").append(DominionSiegeEvent.ATTACKER_PLAYERS).append("</td>").append("</tr>");
 					}
 					players = event.getObjects(DominionSiegeEvent.DEFENDER_PLAYERS);
 					for (int i : players)
 					{
 						Player player = GameObjectsStorage.getPlayer(i);
-						builder.append("<tr>").append("<td>").append(i).append("</td>").append("<td>").append(player == null ? "null" : player.getName()).append("</td>").append("<td>").append(DominionSiegeEvent.DEFENDER_PLAYERS).append("</td>").append("</tr>");
+						builder.append("<tr>").append("<td>").append(i).append("</td>").append("<td>").append((player == null) ? "null" : player.getName()).append("</td>").append("<td>").append(DominionSiegeEvent.DEFENDER_PLAYERS).append("</td>").append("</tr>");
 					}
 					msg.replace("%players%", builder.toString());
 				}
@@ -201,12 +201,12 @@ public class AdminResidence extends ScriptAdminCommand
 					msg.setFile("admin/residence/siege_info.htm");
 					msg.replace("%residence%", HtmlUtils.htmlResidenceName(r.getId()));
 					msg.replace("%id%", String.valueOf(r.getId()));
-					msg.replace("%owner%", r.getOwner() == null ? "NPC" : r.getOwner().getName());
+					msg.replace("%owner%", (r.getOwner() == null) ? "NPC" : r.getOwner().getName());
 					msg.replace("%cycle%", String.valueOf(r.getCycle()));
 					msg.replace("%paid_cycle%", String.valueOf(r.getPaidCycle()));
 					msg.replace("%reward_count%", String.valueOf(r.getRewardCount()));
 					msg.replace("%left_time%", String.valueOf(r.getCycleDelay()));
-					StringBuilder clans = new StringBuilder(100);
+					final StringBuilder clans = new StringBuilder(100);
 					for (Map.Entry<String, List<Serializable>> entry : event.getObjects().entrySet())
 					{
 						for (Serializable o : entry.getValue())
@@ -238,7 +238,7 @@ public class AdminResidence extends ScriptAdminCommand
 					return false;
 				}
 				Clan clan = null;
-				String clanName = wordList[2];
+				final String clanName = wordList[2];
 				if (!clanName.equalsIgnoreCase("npc"))
 				{
 					clan = ClanTable.getInstance().getClanByName(clanName);
@@ -257,8 +257,8 @@ public class AdminResidence extends ScriptAdminCommand
 				}
 				else
 				{
-					r.getLastSiegeDate().setTimeInMillis(clan == null ? 0 : System.currentTimeMillis());
-					r.getOwnDate().setTimeInMillis(clan == null ? 0 : System.currentTimeMillis());
+					r.getLastSiegeDate().setTimeInMillis((clan == null) ? 0 : System.currentTimeMillis());
+					r.getOwnDate().setTimeInMillis((clan == null) ? 0 : System.currentTimeMillis());
 					r.changeOwner(clan);
 					event.reCalcNextTime(false);
 				}
@@ -393,12 +393,12 @@ public class AdminResidence extends ScriptAdminCommand
 				});
 				break;
 			case admin_backup_unit_info:
-				GameObject target = activeChar.getTarget();
+				final GameObject target = activeChar.getTarget();
 				if (!(target instanceof PowerControlUnitInstance) && !(target instanceof BackupPowerUnitInstance))
 				{
 					return false;
 				}
-				List<String> t = new ArrayList<>(3);
+				final List<String> t = new ArrayList<>(3);
 				if (target instanceof PowerControlUnitInstance)
 				{
 					for (int i : ((PowerControlUnitInstance) target).getGenerated())
@@ -410,7 +410,7 @@ public class AdminResidence extends ScriptAdminCommand
 				{
 					for (int i : ((BackupPowerUnitInstance) target).getGenerated())
 					{
-						t.add(i == 0 ? "A" : i == 1 ? "B" : i == 2 ? "C" : "D");
+						t.add((i == 0) ? "A" : (i == 1) ? "B" : (i == 2) ? "C" : "D");
 					}
 				}
 				activeChar.sendMessage("Password: " + t.toString());
@@ -420,17 +420,17 @@ public class AdminResidence extends ScriptAdminCommand
 				{
 					return false;
 				}
-				Fortress fortress = ResidenceHolder.getInstance().getResidence(Fortress.class, Integer.parseInt(wordList[1]));
+				final Fortress fortress = ResidenceHolder.getInstance().getResidence(Fortress.class, Integer.parseInt(wordList[1]));
 				if (fortress == null)
 				{
 					return false;
 				}
-				FortressSiegeEvent siegeEvent = fortress.getSiegeEvent();
+				final FortressSiegeEvent siegeEvent = fortress.getSiegeEvent();
 				if (!siegeEvent.isInProgress())
 				{
 					return false;
 				}
-				boolean[] f = siegeEvent.getBarrackStatus();
+				final boolean[] f = siegeEvent.getBarrackStatus();
 				for (int i = 0; i < f.length; i++)
 				{
 					siegeEvent.barrackAction(i, true);

@@ -54,7 +54,7 @@ public class DarionFaithfulServant extends Fighter
 		{
 			try
 			{
-				SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(MysteriousAgent));
+				final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(MysteriousAgent));
 				sp.setLoc(new Location(-11984, 278880, -13599, -4472));
 				sp.doSpawn(true);
 				sp.stopRespawn();
@@ -71,13 +71,14 @@ public class DarionFaithfulServant extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	private class Unspawn extends RunnableImpl
+	static private class Unspawn extends RunnableImpl
 	{
 		/**
 		 * Constructor for Unspawn.
 		 */
-		public Unspawn()
+		Unspawn()
 		{
+			// empty method
 		}
 		
 		/**

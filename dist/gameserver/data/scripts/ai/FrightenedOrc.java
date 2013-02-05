@@ -56,7 +56,7 @@ public class FrightenedOrc extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((attacker != null) && Rnd.chance(10) && _sayOnAttack)
 		{
 			Functions.npcSay(actor, "Don't kill me! If you show mercy I will pay you 10000 adena!");

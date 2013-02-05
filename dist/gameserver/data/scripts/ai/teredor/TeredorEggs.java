@@ -42,19 +42,19 @@ public class TeredorEggs extends Fighter
 	/**
 	 * Field monsterSpawnDelay.
 	 */
-	private static int monsterSpawnDelay = 3;
+	private static final int monsterSpawnDelay = 3;
 	/**
 	 * Field poisonId.
 	 */
-	private static int poisonId = 14561;
+	private static final int poisonId = 14561;
 	/**
 	 * Field poisonLevel.
 	 */
-	private static int poisonLevel = 1;
+	private static final int poisonLevel = 1;
 	/**
 	 * Field distanceToDebuff.
 	 */
-	private static int distanceToDebuff = 400;
+	private static final int distanceToDebuff = 400;
 	/**
 	 * Field _activated.
 	 */
@@ -82,8 +82,8 @@ public class TeredorEggs extends Fighter
 	{
 		if (!_activated)
 		{
-			Player player = (Player) actor.getAggroList().getMostHated();
-			Reflection ref = actor.getReflection();
+			final Player player = (Player) actor.getAggroList().getMostHated();
+			final Reflection ref = actor.getReflection();
 			ThreadPoolManager.getInstance().schedule(new SpawnMonster(actor, player, ref), monsterSpawnDelay * 1000);
 			if (player.getParty() != null)
 			{
@@ -124,7 +124,7 @@ public class TeredorEggs extends Fighter
 		 * @param player Player
 		 * @param ref Reflection
 		 */
-		public SpawnMonster(NpcInstance npc, Player player, Reflection ref)
+		SpawnMonster(NpcInstance npc, Player player, Reflection ref)
 		{
 			_npc = npc;
 			_player = player;
@@ -142,9 +142,9 @@ public class TeredorEggs extends Fighter
 				if (_player != null)
 				{
 					_npc.decayMe();
-					int chosenMonster = eggMonsters[Rnd.get(eggMonsters.length)];
-					Location coords = Location.findPointToStay(actor, 100, 120);
-					NpcInstance npc = _ref.addSpawnWithoutRespawn(chosenMonster, coords, 0);
+					final int chosenMonster = eggMonsters[Rnd.get(eggMonsters.length)];
+					final Location coords = Location.findPointToStay(actor, 100, 120);
+					final NpcInstance npc = _ref.addSpawnWithoutRespawn(chosenMonster, coords, 0);
 					if (npc.getNpcId() == 18994)
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _player, Rnd.get(1, 100));

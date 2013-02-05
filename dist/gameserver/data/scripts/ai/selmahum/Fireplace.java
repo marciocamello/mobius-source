@@ -65,7 +65,7 @@ public class Fireplace extends DefaultAI
 		@Override
 		public void runImpl()
 		{
-			NpcInstance actor = getActor();
+			final NpcInstance actor = getActor();
 			if (actor.getNpcState() == 1)
 			{
 				actor.setNpcState(0);
@@ -75,7 +75,7 @@ public class Fireplace extends DefaultAI
 				actor.setNpcState(1);
 				if (Rnd.chance(70))
 				{
-					NpcUtils.spawnSingle(18933, actor.getLoc(), delay / 2);
+					NpcUtils.spawnSingle(18933, actor.getLoc(), delay >> 1);
 				}
 			}
 		}
@@ -84,7 +84,7 @@ public class Fireplace extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	public class DeleteCauldron extends RunnableImpl
+	static public class DeleteCauldron extends RunnableImpl
 	{
 		/**
 		 * Field _npc.

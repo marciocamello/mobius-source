@@ -48,7 +48,7 @@ public class PrisonGuard extends Fighter
 	@Override
 	public boolean checkAggression(Creature target)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead() || (actor.getNpcId() == 18367))
 		{
 			return false;
@@ -68,7 +68,7 @@ public class PrisonGuard extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return;
@@ -87,7 +87,7 @@ public class PrisonGuard extends Fighter
 			{
 				Functions.npcSay(actor, "You're out of mind comming here...");
 			}
-			Skill petrification = SkillTable.getInstance().getInfo(4578, 1);
+			final Skill petrification = SkillTable.getInstance().getInfo(4578, 1);
 			actor.doCast(petrification, attacker, true);
 			for (Summon summon : attacker.getPlayer().getSummonList())
 			{
@@ -110,7 +110,7 @@ public class PrisonGuard extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor == null)
 		{
 			return;

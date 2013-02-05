@@ -50,7 +50,7 @@ public class General extends SiegeGuardFighter
 	public void onEvtAttacked(Creature attacker, int dam)
 	{
 		super.onEvtAttacked(attacker, dam);
-		SiegeGuardInstance actor = getActor();
+		final SiegeGuardInstance actor = getActor();
 		if (Rnd.chance(1))
 		{
 			Functions.npcSay(actor, NpcString.DO_YOU_NEED_MY_POWER_YOU_SEEM_TO_BE_STRUGGLING);
@@ -64,8 +64,8 @@ public class General extends SiegeGuardFighter
 	public void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		SiegeGuardInstance actor = getActor();
-		FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		final SiegeGuardInstance actor = getActor();
+		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;
@@ -84,8 +84,8 @@ public class General extends SiegeGuardFighter
 	@Override
 	public void onEvtDead(Creature killer)
 	{
-		SiegeGuardInstance actor = getActor();
-		FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		final SiegeGuardInstance actor = getActor();
+		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
 		if (siegeEvent == null)
 		{
 			return;

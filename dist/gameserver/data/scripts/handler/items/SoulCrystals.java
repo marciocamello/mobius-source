@@ -43,7 +43,7 @@ public class SoulCrystals extends ScriptItemHandler
 	 */
 	public SoulCrystals()
 	{
-		TIntHashSet set = new TIntHashSet();
+		final TIntHashSet set = new TIntHashSet();
 		for (SoulCrystal crystal : SoulCrystalHolder.getInstance().getCrystals())
 		{
 			set.add(crystal.getItemId());
@@ -66,7 +66,7 @@ public class SoulCrystals extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = playable.getPlayer();
+		final Player player = playable.getPlayer();
 		if ((player.getTarget() == null) || !player.getTarget().isMonster())
 		{
 			player.sendPacket(Msg.INVALID_TARGET, ActionFail.STATIC);
@@ -77,13 +77,13 @@ public class SoulCrystals extends ScriptItemHandler
 			player.sendActionFailed();
 			return false;
 		}
-		MonsterInstance target = (MonsterInstance) player.getTarget();
+		final MonsterInstance target = (MonsterInstance) player.getTarget();
 		if (target.getCurrentHpPercents() >= 50)
 		{
 			player.sendPacket(Msg.THE_SOUL_CRYSTAL_WAS_NOT_ABLE_TO_ABSORB_A_SOUL, ActionFail.STATIC);
 			return false;
 		}
-		int skillHitTime = SkillTable.getInstance().getInfo(2096, 1).getHitTime();
+		final int skillHitTime = SkillTable.getInstance().getInfo(2096, 1).getHitTime();
 		player.broadcastPacket(new MagicSkillUse(player, player, 2096, 1, skillHitTime, 0));
 		player.sendPacket(new SetupGauge(player, SetupGauge.BLUE, skillHitTime));
 		player._skillTask = ThreadPoolManager.getInstance().schedule(new CrystalFinalizer(player, target), skillHitTime);

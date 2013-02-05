@@ -65,7 +65,7 @@ public class Seed extends ScriptItemHandler
 		{
 			return false;
 		}
-		Player player = (Player) playable;
+		final Player player = (Player) playable;
 		if (playable.getTarget() == null)
 		{
 			player.sendActionFailed();
@@ -76,7 +76,7 @@ public class Seed extends ScriptItemHandler
 			player.sendPacket(SystemMsg.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
 			return false;
 		}
-		MonsterInstance target = (MonsterInstance) playable.getTarget();
+		final MonsterInstance target = (MonsterInstance) playable.getTarget();
 		if (target == null)
 		{
 			player.sendPacket(Msg.INVALID_TARGET);
@@ -92,20 +92,20 @@ public class Seed extends ScriptItemHandler
 			player.sendPacket(SystemMsg.THE_SEED_HAS_BEEN_SOWN);
 			return false;
 		}
-		int seedId = item.getItemId();
+		final int seedId = item.getItemId();
 		if ((seedId == 0) || (player.getInventory().getItemByItemId(item.getItemId()) == null))
 		{
 			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 			return false;
 		}
-		DomainArea domain = MapRegionManager.getInstance().getRegionData(DomainArea.class, player);
-		int castleId = domain == null ? 0 : domain.getId();
+		final DomainArea domain = MapRegionManager.getInstance().getRegionData(DomainArea.class, player);
+		final int castleId = domain == null ? 0 : domain.getId();
 		if (Manor.getInstance().getCastleIdForSeed(seedId) != castleId)
 		{
 			player.sendPacket(SystemMsg.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
 			return false;
 		}
-		Skill skill = SkillTable.getInstance().getInfo(2097, 1);
+		final Skill skill = SkillTable.getInstance().getInfo(2097, 1);
 		if (skill == null)
 		{
 			player.sendActionFailed();

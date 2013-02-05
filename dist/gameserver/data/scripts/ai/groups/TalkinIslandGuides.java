@@ -207,14 +207,14 @@ public class TalkinIslandGuides extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
-		Creature target = actor.getFollowTarget();
+		final NpcInstance actor = getActor();
+		final Creature target = actor.getFollowTarget();
 		if ((target == null) || !(target instanceof Player))
 		{
 			actor.deleteMe();
 			return false;
 		}
-		int npcId = actor.getNpcId();
+		final int npcId = actor.getNpcId();
 		int[][] coords;
 		NpcString string;
 		NpcString end_String;
@@ -231,8 +231,8 @@ public class TalkinIslandGuides extends DefaultAI
 				end_String = NpcString.TALK_TO_THAT_APPRENTICE_AND_GET_ON_KOOKARU;
 				break;
 			case GOING_INTO_REAL_WAR_SOLDIER:
-				double distLeft = target.getDistance(GRW_COORDS_LEFT[0][0], GRW_COORDS_LEFT[0][1], GRW_COORDS_LEFT[0][2]);
-				double distRight = target.getDistance(GRW_COORDS_RIGHT[0][0], GRW_COORDS_RIGHT[0][1], GRW_COORDS_RIGHT[0][2]);
+				final double distLeft = target.getDistance(GRW_COORDS_LEFT[0][0], GRW_COORDS_LEFT[0][1], GRW_COORDS_LEFT[0][2]);
+				final double distRight = target.getDistance(GRW_COORDS_RIGHT[0][0], GRW_COORDS_RIGHT[0][1], GRW_COORDS_RIGHT[0][2]);
 				if (distLeft <= distRight)
 				{
 					coords = GRW_COORDS_LEFT;
@@ -266,7 +266,7 @@ public class TalkinIslandGuides extends DefaultAI
 		}
 		else if (((lastSayTime + SAY_INTERVAL) < System.currentTimeMillis()) && (actor.getDestination() == null))
 		{
-			int heading = actor.calcHeading(target.getX(), target.getY());
+			final int heading = actor.calcHeading(target.getX(), target.getY());
 			actor.setHeading(heading);
 			actor.broadcastPacket(new ExRotation(actor.getObjectId(), heading));
 			lastSayTime = System.currentTimeMillis();

@@ -43,7 +43,7 @@ public class Quest024Mystic extends Mystic
 	@Override
 	protected boolean thinkActive()
 	{
-		Quest q = QuestManager.getQuest(_024_InhabitantsOfTheForestOfTheDead.class);
+		final Quest q = QuestManager.getQuest(_024_InhabitantsOfTheForestOfTheDead.class);
 		if (q != null)
 		{
 			for (Player player : World.getAroundPlayers(getActor(), 300, 200))

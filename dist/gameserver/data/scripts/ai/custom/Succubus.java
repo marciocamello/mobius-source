@@ -57,7 +57,7 @@ public class Succubus extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((attacker == null) || (attacker.getPlayer() == null))
 		{
 			return;
@@ -76,7 +76,7 @@ public class Succubus extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		SkillTable.getInstance().getInfo(14975, 1).getEffects(killer, killer, false, false);
 		SkillTable.getInstance().getInfo(14976, 1).getEffects(killer, killer, false, false);
 		SkillTable.getInstance().getInfo(14977, 1).getEffects(killer, killer, false, false);

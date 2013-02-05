@@ -36,7 +36,7 @@ public class Seed extends ScriptItemHandler
 	/**
 	 * @author Mobius
 	 */
-	public class DeSpawnScheduleTimerTask extends RunnableImpl
+	static public class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
 		/**
 		 * Field spawnedTree.
@@ -65,7 +65,7 @@ public class Seed extends ScriptItemHandler
 	/**
 	 * Field _itemIds.
 	 */
-	private static int[] _itemIds =
+	private static final int[] _itemIds =
 	{
 		5560,
 		5561
@@ -73,7 +73,7 @@ public class Seed extends ScriptItemHandler
 	/**
 	 * Field _npcIds.
 	 */
-	private static int[] _npcIds =
+	private static final int[] _npcIds =
 	{
 		13006,
 		13007
@@ -93,9 +93,9 @@ public class Seed extends ScriptItemHandler
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
-		Player activeChar = (Player) playable;
+		final Player activeChar = (Player) playable;
 		NpcTemplate template = null;
-		int itemId = item.getItemId();
+		final int itemId = item.getItemId();
 		for (int i = 0; i < _itemIds.length; i++)
 		{
 			if (_itemIds[i] == itemId)
@@ -125,9 +125,9 @@ public class Seed extends ScriptItemHandler
 		{
 			return false;
 		}
-		SimpleSpawner spawn = new SimpleSpawner(template);
+		final SimpleSpawner spawn = new SimpleSpawner(template);
 		spawn.setLoc(activeChar.getLoc());
-		NpcInstance npc = spawn.doSpawn(false);
+		final NpcInstance npc = spawn.doSpawn(false);
 		npc.setTitle(activeChar.getName());
 		spawn.respawnNpc(npc);
 		if (itemId == 5561)

@@ -42,7 +42,7 @@ public class FreyaThrone extends Fighter
 	/**
 	 * Field _eternalblizzardReuseDelay.
 	 */
-	private final int _eternalblizzardReuseDelay = 60;
+	private static final int _eternalblizzardReuseDelay = 60;
 	/**
 	 * Field Skill_IceBall. (value is 6278)
 	 */
@@ -54,11 +54,11 @@ public class FreyaThrone extends Fighter
 	/**
 	 * Field _iceballReuseDelay.
 	 */
-	private final int _iceballReuseDelay = 20;
+	private static final int _iceballReuseDelay = 20;
 	/**
 	 * Field _iceballChance.
 	 */
-	private final int _iceballChance = 60;
+	private static final int _iceballChance = 60;
 	/**
 	 * Field Skill_SummonElemental. (value is 6277)
 	 */
@@ -70,11 +70,11 @@ public class FreyaThrone extends Fighter
 	/**
 	 * Field _summonReuseDelay.
 	 */
-	private final int _summonReuseDelay = 60;
+	private static final int _summonReuseDelay = 60;
 	/**
 	 * Field _summonChance.
 	 */
-	private final int _summonChance = 70;
+	private static final int _summonChance = 70;
 	/**
 	 * Field Skill_SelfNova. (value is 6279)
 	 */
@@ -86,7 +86,7 @@ public class FreyaThrone extends Fighter
 	/**
 	 * Field _selfnovaReuseDelay.
 	 */
-	private final int _selfnovaReuseDelay = 70;
+	private static final int _selfnovaReuseDelay = 70;
 	/**
 	 * Field Skill_DeathSentence. (value is 6280)
 	 */
@@ -98,11 +98,11 @@ public class FreyaThrone extends Fighter
 	/**
 	 * Field _deathsentenceReuseDelay.
 	 */
-	private final int _deathsentenceReuseDelay = 50;
+	private static final int _deathsentenceReuseDelay = 50;
 	/**
 	 * Field _deathsentenceChance.
 	 */
-	private final int _deathsentenceChance = 60;
+	private static final int _deathsentenceChance = 60;
 	/**
 	 * Field Skill_Anger. (value is 6285)
 	 */
@@ -114,19 +114,19 @@ public class FreyaThrone extends Fighter
 	/**
 	 * Field _angerReuseDelay.
 	 */
-	private final int _angerReuseDelay = 50;
+	private static final int _angerReuseDelay = 50;
 	/**
 	 * Field _angerChance.
 	 */
-	private final int _angerChance = 60;
+	private static final int _angerChance = 60;
 	/**
 	 * Field _idleDelay.
 	 */
 	private long _idleDelay = 0;
 	/**
-	 * Field _lastFactionNotifyTime.
+	 * Field lastFactionNotifyTime.
 	 */
-	private long _lastFactionNotifyTime = 0;
+	private long lastFactionNotifyTime = 0;
 	
 	/**
 	 * Constructor for FreyaThrone.
@@ -144,14 +144,14 @@ public class FreyaThrone extends Fighter
 	@Override
 	protected void thinkAttack()
 	{
-		NpcInstance actor = getActor();
-		Creature topDamager = actor.getAggroList().getTopDamager();
-		Creature randomHated = actor.getAggroList().getRandomHated();
-		Creature mostHated = actor.getAggroList().getMostHated();
+		final NpcInstance actor = getActor();
+		final Creature topDamager = actor.getAggroList().getTopDamager();
+		final Creature randomHated = actor.getAggroList().getRandomHated();
+		final Creature mostHated = actor.getAggroList().getMostHated();
 		if (!actor.isCastingNow() && (_eternalblizzardReuseTimer < System.currentTimeMillis()))
 		{
 			actor.doCast(SkillTable.getInstance().getInfo(Skill_EternalBlizzard, 1), actor, true);
-			Reflection r = getActor().getReflection();
+			final Reflection r = getActor().getReflection();
 			for (Player p : r.getPlayers())
 			{
 				p.sendPacket(new ExShowScreenMessage(NpcString.I_FEEL_STRONG_MAGIC_FLOW, 3000, ScreenMessageAlign.MIDDLE_CENTER, true));
@@ -202,12 +202,12 @@ public class FreyaThrone extends Fighter
 		{
 			_idleDelay = 0;
 		}
-		if ((System.currentTimeMillis() - _lastFactionNotifyTime) > _minFactionNotifyInterval)
+		if ((System.currentTimeMillis() - lastFactionNotifyTime) > _minFactionNotifyInterval)
 		{
-			_lastFactionNotifyTime = System.currentTimeMillis();
+			lastFactionNotifyTime = System.currentTimeMillis();
 			for (NpcInstance npc : actor.getReflection().getNpcs())
 			{
-				if (npc.isMonster() && (npc != actor))
+				if (npc.isMonster() && (!npc.equals(actor)))
 				{
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, actor.getAggroList().getMostHated(), 5);
 				}
@@ -223,14 +223,14 @@ public class FreyaThrone extends Fighter
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		long generalReuse = System.currentTimeMillis() + 40000L;
+		final long generalReuse = System.currentTimeMillis() + 40000L;
 		_eternalblizzardReuseTimer += generalReuse + (Rnd.get(1, 20) * 1000L);
 		_iceballReuseTimer += generalReuse + (Rnd.get(1, 20) * 1000L);
 		_summonReuseTimer += generalReuse + (Rnd.get(1, 20) * 1000L);
 		_selfnovaReuseTimer += generalReuse + (Rnd.get(1, 20) * 1000L);
 		_deathsentenceReuseTimer += generalReuse + (Rnd.get(1, 20) * 1000L);
 		_angerReuseTimer += generalReuse + (Rnd.get(1, 20) * 1000L);
-		Reflection r = getActor().getReflection();
+		final Reflection r = getActor().getReflection();
 		for (Player p : r.getPlayers())
 		{
 			this.notifyEvent(CtrlEvent.EVT_AGGRESSION, p, 2);
@@ -248,7 +248,7 @@ public class FreyaThrone extends Fighter
 		{
 			_idleDelay = System.currentTimeMillis();
 		}
-		Reflection ref = getActor().getReflection();
+		final Reflection ref = getActor().getReflection();
 		if (!getActor().isDead() && (_idleDelay > 0) && ((_idleDelay + 60000) < System.currentTimeMillis()))
 		{
 			if (!ref.isDefault())

@@ -66,7 +66,7 @@ public class OiAriosh extends Fighter
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (!actor.isDead())
 		{
 			if (actor.getCurrentHpPercents() < _hps[_hpCount])
@@ -84,13 +84,13 @@ public class OiAriosh extends Fighter
 	 */
 	private void spawnMob(Creature attacker)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		try
 		{
-			SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(MOB));
+			final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(MOB));
 			sp.setLoc(Location.findPointToStay(actor, 100, 120));
 			sp.setReflection(actor.getReflection());
-			NpcInstance npc = sp.doSpawn(true);
+			final NpcInstance npc = sp.doSpawn(true);
 			npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 100);
 		}
 		catch (Exception e)

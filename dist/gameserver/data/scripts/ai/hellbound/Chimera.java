@@ -46,7 +46,7 @@ public class Chimera extends Fighter
 		{
 			return;
 		}
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (!actor.isDead() && (actor.getCurrentHpPercents() > 10))
 		{
 			return;

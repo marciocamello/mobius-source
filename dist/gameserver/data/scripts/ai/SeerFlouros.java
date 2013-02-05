@@ -70,7 +70,7 @@ public class SeerFlouros extends Mystic
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (!actor.isDead())
 		{
 			if (actor.getCurrentHpPercents() < _hps[_hpCount])
@@ -88,7 +88,7 @@ public class SeerFlouros extends Mystic
 	 */
 	private void spawnMobs(Creature attacker)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		for (int i = 0; i < MOBS_COUNT; i++)
 		{
 			try

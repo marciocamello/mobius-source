@@ -46,7 +46,7 @@ public class QueenAntNurse extends Priest
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return true;
@@ -59,7 +59,7 @@ public class QueenAntNurse extends Priest
 			}
 			return true;
 		}
-		Creature top_desire_target = getTopDesireTarget();
+		final Creature top_desire_target = getTopDesireTarget();
 		if (top_desire_target == null)
 		{
 			return false;
@@ -84,15 +84,15 @@ public class QueenAntNurse extends Priest
 	protected boolean createNewTask()
 	{
 		clearTasks();
-		NpcInstance actor = getActor();
-		Creature top_desire_target = getTopDesireTarget();
+		final NpcInstance actor = getActor();
+		final Creature top_desire_target = getTopDesireTarget();
 		if (actor.isDead() || (top_desire_target == null))
 		{
 			return false;
 		}
 		if (!top_desire_target.isCurrentHpFull())
 		{
-			Skill skill = _healSkills[Rnd.get(_healSkills.length)];
+			final Skill skill = _healSkills[Rnd.get(_healSkills.length)];
 			if (skill.getAOECastRange() < actor.getDistance(top_desire_target))
 			{
 				moveOrTeleportToLocation(Location.findFrontPosition(top_desire_target, actor, skill.getAOECastRange() - 30, skill.getAOECastRange() - 10));
@@ -119,7 +119,7 @@ public class QueenAntNurse extends Priest
 	 */
 	private void moveOrTeleportToLocation(Location loc)
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		actor.setRunning();
 		if (actor.moveToLocation(loc, 0, true))
 		{
@@ -137,13 +137,13 @@ public class QueenAntNurse extends Priest
 	 */
 	private Creature getTopDesireTarget()
 	{
-		NpcInstance actor = getActor();
-		QueenAntInstance queen_ant = (QueenAntInstance) ((MinionInstance) actor).getLeader();
+		final NpcInstance actor = getActor();
+		final QueenAntInstance queen_ant = (QueenAntInstance) ((MinionInstance) actor).getLeader();
 		if (queen_ant == null)
 		{
 			return null;
 		}
-		Creature Larva = queen_ant.getLarva();
+		final Creature Larva = queen_ant.getLarva();
 		if ((Larva != null) && (Larva.getCurrentHpPercents() < 5))
 		{
 			return Larva;
@@ -158,6 +158,7 @@ public class QueenAntNurse extends Priest
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
+		// empty method
 	}
 	
 	/**

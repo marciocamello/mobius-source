@@ -60,11 +60,11 @@ public class DrillSergeant extends Fighter
 	@Override
 	public boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (System.currentTimeMillis() > _wait_timeout)
 		{
 			_wait_timeout = System.currentTimeMillis() + (Rnd.get(10, 30) * 1000L);
-			List<NpcInstance> around = actor.getAroundNpc(700, 100);
+			final List<NpcInstance> around = actor.getAroundNpc(700, 100);
 			if ((around != null) && !around.isEmpty())
 			{
 				switch (Rnd.get(1, 3))

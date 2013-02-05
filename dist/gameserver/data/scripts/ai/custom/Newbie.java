@@ -48,7 +48,7 @@ public class Newbie extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor.getDistance(actor.getTarget()) < 100) && ((System.currentTimeMillis() - lastebuff) > 30000))
 		{
 			lastebuff = System.currentTimeMillis();

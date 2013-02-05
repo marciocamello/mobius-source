@@ -63,7 +63,7 @@ public class SelChef extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return true;
@@ -93,7 +93,7 @@ public class SelChef extends Fighter
 	private Location findFirePlace(NpcInstance actor)
 	{
 		Location loc = new Location();
-		List<NpcInstance> list = new ArrayList<>();
+		final List<NpcInstance> list = new ArrayList<>();
 		for (NpcInstance npc : actor.getAroundNpc(3000, 600))
 		{
 			if ((npc.getNpcId() == 18927) && GeoEngine.canSeeTarget(actor, npc, false))

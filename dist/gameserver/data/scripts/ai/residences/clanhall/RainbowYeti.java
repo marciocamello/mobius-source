@@ -51,7 +51,7 @@ public class RainbowYeti extends CharacterAI
 		 * Constructor for ZoneDeactive.
 		 * @param zone ZoneObject
 		 */
-		public ZoneDeactive(ZoneObject zone)
+		ZoneDeactive(ZoneObject zone)
 		{
 			_zone = zone;
 		}
@@ -83,8 +83,8 @@ public class RainbowYeti extends CharacterAI
 	@Override
 	public void onEvtSeeSpell(Skill skill, Creature character)
 	{
-		RainbowYetiInstance actor = (RainbowYetiInstance) getActor();
-		ClanHallMiniGameEvent miniGameEvent = actor.getEvent(ClanHallMiniGameEvent.class);
+		final RainbowYetiInstance actor = (RainbowYetiInstance) getActor();
+		final ClanHallMiniGameEvent miniGameEvent = actor.getEvent(ClanHallMiniGameEvent.class);
 		if (miniGameEvent == null)
 		{
 			return;
@@ -94,10 +94,10 @@ public class RainbowYeti extends CharacterAI
 			return;
 		}
 		
-		Player player = character.getPlayer();
+		final Player player = character.getPlayer();
 		
 		CMGSiegeClanObject siegeClan = null;
-		List<CMGSiegeClanObject> attackers = miniGameEvent.getObjects(SiegeEvent.ATTACKERS);
+		final List<CMGSiegeClanObject> attackers = miniGameEvent.getObjects(SiegeEvent.ATTACKERS);
 		for (CMGSiegeClanObject $ : attackers)
 		{
 			if ($.isParticle(player))
@@ -111,7 +111,7 @@ public class RainbowYeti extends CharacterAI
 			return;
 		}
 		
-		int index = attackers.indexOf(siegeClan);
+		final int index = attackers.indexOf(siegeClan);
 		int warIndex = Integer.MIN_VALUE;
 		
 		RainbowGourdInstance gourdInstance = null;
@@ -171,7 +171,7 @@ public class RainbowYeti extends CharacterAI
 					return;
 				}
 				
-				ZoneObject zone = miniGameEvent.getFirstObject("zone_" + warIndex);
+				final ZoneObject zone = miniGameEvent.getFirstObject("zone_" + warIndex);
 				if (zone == null)
 				{
 					return;
@@ -189,9 +189,9 @@ public class RainbowYeti extends CharacterAI
 	 */
 	private RainbowGourdInstance getGourd(int index)
 	{
-		ClanHallMiniGameEvent miniGameEvent = getActor().getEvent(ClanHallMiniGameEvent.class);
+		final ClanHallMiniGameEvent miniGameEvent = getActor().getEvent(ClanHallMiniGameEvent.class);
 		
-		SpawnExObject spawnEx = miniGameEvent.getFirstObject("arena_" + index);
+		final SpawnExObject spawnEx = miniGameEvent.getFirstObject("arena_" + index);
 		
 		return (RainbowGourdInstance) spawnEx.getSpawns().get(1).getFirstSpawned();
 	}

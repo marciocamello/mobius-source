@@ -123,7 +123,7 @@ public class Kechi extends DefaultAI
 	/**
 	 * Field chat.
 	 */
-	private static String[] chat = new String[]
+	private static final String[] chat = new String[]
 	{
 		"Стража, убейте их!",
 		"Стража!",
@@ -143,7 +143,7 @@ public class Kechi extends DefaultAI
 	public Kechi(NpcInstance actor)
 	{
 		super(actor);
-		TIntObjectHashMap<Skill> skills = getActor().getTemplate().getSkills();
+		final TIntObjectHashMap<Skill> skills = getActor().getTemplate().getSkills();
 		KechiDoubleCutter = skills.get(733);
 		KechiAirBlade = skills.get(734);
 		Invincible = skills.get(5418);
@@ -158,17 +158,17 @@ public class Kechi extends DefaultAI
 	protected boolean createNewTask()
 	{
 		clearTasks();
-		Creature target;
-		if ((target = prepareTarget()) == null)
+		final Creature target = prepareTarget();
+		if (target == null)
 		{
 			return false;
 		}
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if (actor.isDead())
 		{
 			return false;
 		}
-		double actor_hp_precent = actor.getCurrentHpPercents();
+		final double actor_hp_precent = actor.getCurrentHpPercents();
 		switch (stage)
 		{
 			case 0:
@@ -221,21 +221,21 @@ public class Kechi extends DefaultAI
 				}
 				break;
 		}
-		int rnd_per = Rnd.get(100);
+		final int rnd_per = Rnd.get(100);
 		if (rnd_per < 5)
 		{
 			addTaskBuff(actor, Invincible);
 			return true;
 		}
-		double distance = actor.getDistance(target);
+		final double distance = actor.getDistance(target);
 		if (!actor.isAMuted() && (rnd_per < 75))
 		{
 			return chooseTaskAndTargets(null, target, distance);
 		}
-		Map<Skill, Integer> d_skill = new HashMap<>();
+		final Map<Skill, Integer> d_skill = new HashMap<>();
 		addDesiredSkill(d_skill, target, distance, KechiDoubleCutter);
 		addDesiredSkill(d_skill, target, distance, KechiAirBlade);
-		Skill r_skill = selectTopSkill(d_skill);
+		final Skill r_skill = selectTopSkill(d_skill);
 		return chooseTaskAndTargets(r_skill, target, distance);
 	}
 	
@@ -245,7 +245,7 @@ public class Kechi extends DefaultAI
 	private void spawnMobs()
 	{
 		stage++;
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		Functions.npcSay(actor, chat[Rnd.get(chat.length)]);
 		for (int[] run : guard_run)
 		{

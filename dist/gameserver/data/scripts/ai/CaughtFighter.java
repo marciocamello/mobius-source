@@ -86,7 +86,7 @@ public class CaughtFighter extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
+		final NpcInstance actor = getActor();
 		if ((actor != null) && (System.currentTimeMillis() >= TIME_TO_DIE))
 		{
 			actor.deleteMe();
