@@ -427,8 +427,12 @@
         <set name="powerPvP" val="#powerPvP"/>
         <set name="element" val="#element"/>
         <set name="elementPower" val="#elementPower"/>
-        <set name="target" val="TARGET_MULTIFACE_AURA"/>
-        <set name="skillRadius" val="400"/>
+        <set name="target" val="TARGET_MULTIFACE"/>
+		<set name="reuseDelay" val="70000" />
+		<set name="hitTime" val="1200" />
+		<set name="coolTime" val="370" />
+		<set name="castRange" val="40" />
+        <set name="skillRadius" val="300"/>
         <set name="skillType" val="PDAM"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="overHit" val="true"/>

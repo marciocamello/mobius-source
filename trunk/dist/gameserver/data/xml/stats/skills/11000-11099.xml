@@ -1479,11 +1479,8 @@
         <table name="#HP">384 388 396 404 412 420 428 436</table>
         <table name="#MP">400 412 436 450 474 499 523 647</table>
         <table name="#magicLevel">85 86 87 88 89 90 91 92</table>
-        <table name="#mpConsume2">47 48 49 50 51 52 58 60</table>
-        <set name="reuseDelay" val="20000"/>
+        <set name="reuseDelay" val="15000"/>
         <set name="hitTime" val="4000"/>
-        <set name="relationSkillsId" val="502;1157;337"/>
-        <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="hpConsume" val="#HP"/>
         <set name="power" val="#MP"/>
@@ -1492,7 +1489,7 @@
         <set name="isMagic" val="true"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="aggroPoints" val="#aggroPoints"/>
-        <for/>
+        <set name="relationSkillsId" val="502;1157;337"/>
     </skill>
     <skill id="11065" levels="1" name="Arcane Barrier">
     <!-- For 20 seconds, 20% of the damage received will be applied to MP instead of HP. When attacked, reflects 10% the damage. When MP reaches 0, the skill effect is removed. -->

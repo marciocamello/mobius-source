@@ -314,10 +314,10 @@
         <set name="skillType" val="CONT"/>
         <set name="skillRadius" val="1000"/>
         <set name="reuseDelay" val="5000"/>
-	    <set name="isMusic" val="true"/>
         <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="0" stackType="Siegel" stackOrder="1">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelForce" stackOrder="1">
                 <def name="forceSkillId" val="1928"/>
             </effect>
         </for>
@@ -328,18 +328,13 @@
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
         <set name="skillType" val="BUFF"/>
-        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillRadius" val="1000"/>
-		<set name="reuseDelay" val="5000" />
 		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="0" stackType="Siegel" stackOrder="1">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelForce" stackOrder="1">
                 <def name="auraSkillId" val="1927"/>
-                <mul order="0x30" stat="pAtk" val="1.06">
-                    <not>
-                        <player classId="139"/>
-                    </not>
-                </mul>
+                <mul order="0x30" stat="pAtk" val="1.01"/>
             </effect>
         </for>
     </skill>
@@ -349,12 +344,13 @@
         <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_SELF"/>
-        <set name="skillRadius" val="1000"/>
         <set name="skillType" val="CONT"/>
-        <set name="isMusic" val="true"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="reuseDelay" val="5000"/>
         <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" stackOrder="1" time="5" stackType="tyuranta" val="0">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="TyrrForce" stackOrder="1">
                 <def name="forceSkillId" val="1930"/>
             </effect>
         </for>
@@ -364,18 +360,14 @@
         <table name="#magicLevel">85</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
-        <set name="skillRadius" val="1000"/>
         <set name="skillType" val="BUFF"/>
-        <set name="isMusic" val="true"/>
-        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="skillRadius" val="1000"/>
+		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" stackOrder="1" time="5" stackType="tyuranta" val="0">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="TyrrForce" stackOrder="1">
                 <def name="auraSkillId" val="1929"/>
-				<mul order="0x30" stat="rCrit" val="1.05">
-                    <not>
-                        <player classId="140"/>
-                    </not>
-                </mul>
+				<mul order="0x30" stat="rCrit" val="1.01"/>
             </effect>
         </for>
     </skill>
@@ -385,13 +377,14 @@
         <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_SELF"/>
-        <set name="skillRadius" val="1000"/>
         <set name="skillType" val="CONT"/>
-        <set name="isMusic" val="true"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="reuseDelay" val="5000"/>
         <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" stackOrder="1" time="5" stackType="odala" val="0">
-            <def name="forceSkillId" val="1932"/>
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="OthellForce" stackOrder="1">
+				<def name="forceSkillId" val="1932"/>
             </effect>
         </for>
     </skill>
@@ -400,18 +393,14 @@
         <table name="#magicLevel">85</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
-        <set name="skillRadius" val="1000"/>
         <set name="skillType" val="BUFF"/>
-        <set name="isMusic" val="true"/>
-        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="skillRadius" val="1000"/>
+		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" stackOrder="1" time="5" stackType="odala" val="0">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="OthellForce" stackOrder="1">
                 <def name="auraSkillId" val="1931"/>
-				<mul order="0x30" stat="runSpd" val="1.05">
-                    <not>
-                        <player classId="141"/>
-                    </not>
-                </mul>
+                <mul order="0x30" stat="pAtkSpd" val="1.01"/>
             </effect>
         </for>
     </skill>
@@ -421,39 +410,30 @@
         <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_SELF"/>
-        <set name="skillRadius" val="1000"/>
         <set name="skillType" val="CONT"/>
-        <set name="isMusic" val="true"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="reuseDelay" val="5000"/>
         <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" stackOrder="1" time="5" stackType="eura" val="0">
-            <def name="forceSkillId" val="1934"/>
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="YulForce" stackOrder="1">
+				<def name="forceSkillId" val="1934"/>
             </effect>
         </for>
     </skill>
     <skill id="1934" levels="1" name="Yul Force">
     <!-- MP Recovery Bonus is increased by 50%. -->
         <table name="#magicLevel">85</table>
-        <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
-        <set name="skillRadius" val="1000"/>
         <set name="skillType" val="BUFF"/>
-        <set name="isMusic" val="true"/>
-        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="skillRadius" val="1000"/>
+		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" stackOrder="1" time="5" stackType="eura" val="0">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="YulForce" stackOrder="1">
                 <def name="auraSkillId" val="1933"/>
-				<mul order="0x30" stat="mAtkSpd" val="1.03">
-				    <not>
-                        <player classId="142"/>
-                    </not>
-                </mul>
-                <mul order="0x30" stat="regMp" val="1.5">
-                    <not>
-                        <player classId="142"/>
-                    </not>
-                </mul>
+                <mul order="0x30" stat="regMp" val="1.5"/>
             </effect>
         </for>
     </skill>
@@ -463,37 +443,30 @@
         <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_SELF"/>
-        <set name="skillRadius" val="1000"/>
         <set name="skillType" val="CONT"/>
-        <set name="isMusic" val="true"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="reuseDelay" val="5000"/>
         <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" stackOrder="1" time="5" stackType="feo" val="0">
-            <def name="forceSkillId" val="1936"/>
-            </effect>
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="FeohForce" stackOrder="1">
+				<def name="forceSkillId" val="1936"/>
+			</effect>
         </for>
     </skill>
     <skill id="1936" levels="1" name="Feoh Force">
     <!-- Casting Spd. is increased by 1%. -->
         <table name="#magicLevel">85</table>
-        <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
-        <set name="skillRadius" val="1000"/>
         <set name="skillType" val="BUFF"/>
-        <set name="isMusic" val="true"/>
-        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="skillRadius" val="1000"/>
+		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" stackOrder="1" time="5" stackType="feo" val="0">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="FeohForce" stackOrder="1">
                 <def name="auraSkillId" val="1935"/>
-				<mul order="0x30" stat="atkBaseSpeed" val="1.05">
-				<using kind="Bow,Crossbow" />
-				</mul>
-                <mul order="0x30" stat="mAtkSpd" val="1.03">
-                    <not>
-                        <player classId="143"/>
-                    </not>
-                </mul>
+                <mul order="0x30" stat="mAtkSpd" val="1.01"/>
             </effect>
         </for>
     </skill>
@@ -507,8 +480,9 @@
         <set name="skillRadius" val="1000"/>
         <set name="reuseDelay" val="5000"/>
         <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" stackOrder="1" time="5" stackType="wynn" val="0">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="WynnForce" stackOrder="1">
                 <def name="forceSkillId" val="1938"/>
             </effect>
         </for>
@@ -519,27 +493,13 @@
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
         <set name="skillType" val="BUFF"/>
-        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillRadius" val="1000"/>
 		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" stackOrder="1" time="5" stackType="wynn" val="0">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="WynnForce" stackOrder="1">
                 <def name="auraSkillId" val="1937"/>
-				<mul order="0x30" stat="pReuse" val="1.05">
-			    <not>
-                      <player classId="145"/>
-                </not>
-				</mul>
-                <mul order="0x30" stat="mReuse" val="1.05">
-				<not>
-                      <player classId="145"/>
-                </not>
-				</mul>
-                <mul order="0x30" stat="mpConsum" val="0.97">
-				<not>
-                      <player classId="145"/>
-                </not>
-				</mul>
+                <mul order="0x30" stat="mpConsum" val="0.97"/>
             </effect>
         </for>
     </skill>
@@ -549,12 +509,13 @@
         <set name="effectPoint" val="467"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_SELF"/>
-        <set name="skillRadius" val="1000"/>
         <set name="skillType" val="CONT"/>
-        <set name="isMusic" val="true"/>
+        <set name="skillRadius" val="1000"/>
+        <set name="reuseDelay" val="5000"/>
         <set name="operateType" val="OP_ACTIVE"/>
+		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" stackOrder="1" time="5" stackType="algiza" val="0">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="AeoreAura" stackOrder="1">
                 <def name="forceSkillId" val="1940"/>
             </effect>
         </for>
@@ -564,23 +525,14 @@
         <table name="#magicLevel">85</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
-        <set name="skillRadius" val="1000"/>
         <set name="skillType" val="BUFF"/>
-        <set name="isMusic" val="true"/>
-        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="skillRadius" val="1000"/>
+		<set name="isMusic" val="true"/>
         <for>
-            <effect count="0x7fffffff" name="GiantForceAura" stackOrder="1" time="5" stackType="algiza" val="0">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="AeoreAura" stackOrder="1">
                 <def name="auraSkillId" val="1939"/>
-				<mul order="0x30" stat="mAtk" val="1.05">
-				    <not>
-                        <player classId="146"/>
-                    </not>
-                </mul>
-                <mul order="0x30" stat="pAtk" val="1.06">
-                    <not>
-                        <player classId="146"/>
-                    </not>
-                </mul>
+				<mul order="0x30" stat="mAtk" val="1.01"/>
             </effect>
         </for>
     </skill>
