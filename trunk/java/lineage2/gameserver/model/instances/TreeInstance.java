@@ -19,12 +19,17 @@ import java.util.concurrent.ScheduledFuture;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
+import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObjectTasks;
+import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
+import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
+import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.taskmanager.EffectTaskManager;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
@@ -33,7 +38,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TreeInstance extends NpcInstance
+public class TreeInstance extends Summon
 {
 	/**
 	 * Field serialVersionUID. (value is -3990686488577795700)
@@ -84,11 +89,10 @@ public class TreeInstance extends NpcInstance
 	 */
 	public TreeInstance(int objectId, NpcTemplate template, Player owner, int lifetime, Skill skill, Location loc)
 	{
-		super(objectId, template);
+		super(objectId, template, owner);
 		_owner = owner;
 		_skill = skill;
 		_lifetimeCountdown = lifetime;
-		setLevel(owner.getLevel());
 		setTitle(owner.getName());
 		setLoc(loc);
 		setHeading(owner.getHeading());
@@ -111,7 +115,7 @@ public class TreeInstance extends NpcInstance
 		/**
 		 * Field _trapRef.
 		 */
-		private final HardReference<NpcInstance> _trapRef;
+		private final HardReference<? extends Playable> _trapRef;
 		
 		/**
 		 * Constructor for CastTask.
@@ -196,16 +200,6 @@ public class TreeInstance extends NpcInstance
 	}
 	
 	/**
-	 * Method hasRandomAnimation.
-	 * @return boolean
-	 */
-	@Override
-	public boolean hasRandomAnimation()
-	{
-		return false;
-	}
-	
-	/**
 	 * Method isFearImmune.
 	 * @return boolean
 	 */
@@ -235,35 +229,139 @@ public class TreeInstance extends NpcInstance
 		return true;
 	}
 	
-	/**
-	 * Method showChatWindow.
-	 * @param player Player
-	 * @param val int
-	 * @param arg Object[]
-	 */
 	@Override
-	public void showChatWindow(Player player, int val, Object... arg)
+	public int getSummonType()
 	{
+		// TODO Auto-generated method stub
+		return 0;
 	}
-	
-	/**
-	 * Method showChatWindow.
-	 * @param player Player
-	 * @param filename String
-	 * @param replace Object[]
-	 */
+
 	@Override
-	public void showChatWindow(Player player, String filename, Object... replace)
+	public int getSummonSkillId()
 	{
+		// TODO Auto-generated method stub
+		return 0;
 	}
-	
+
+	@Override
+	public int getSummonSkillLvl()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getCurrentFed()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getMaxFed()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getSummonPoint()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void displayGiveDamageMessage(Creature target, int damage, boolean crit, boolean miss, boolean shld, boolean magic)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
 	/**
-	 * Method onBypassFeedback.
-	 * @param player Player
-	 * @param command String
+	 * Method displayReceiveDamageMessage.
+	 * @param attacker Creature
+	 * @param damage int
 	 */
 	@Override
-	public void onBypassFeedback(Player player, String command)
+	public void displayReceiveDamageMessage(Creature attacker, int damage)
 	{
+		Player owner = getPlayer();
+		owner.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addName(this).addName(attacker).addNumber((long) damage));
+	}
+
+	@Override
+	public double getExpPenalty()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public long getWearedMask()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getLevel()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/**
+	 * Method onAction.
+	 * @param player Player
+	 * @param shift boolean
+	 */
+	@Override
+	public void onAction(Player player, boolean shift)
+	{
+		super.onAction(player, shift);
+		if (shift)
+		{
+			if (!player.getPlayerAccess().CanViewChar)
+			{
+				return;
+			}
+			String dialog;
+			dialog = HtmCache.getInstance().getNotNull("scripts/actions/admin.L2SummonInstance.onActionShift.htm", player);
+			dialog = dialog.replaceFirst("%name%", String.valueOf(getName()));
+			dialog = dialog.replaceFirst("%level%", String.valueOf(getLevel()));
+			dialog = dialog.replaceFirst("%class%", String.valueOf(getClass().getSimpleName().replaceFirst("L2", "").replaceFirst("Instance", "")));
+			dialog = dialog.replaceFirst("%xyz%", getLoc().x + " " + getLoc().y + " " + getLoc().z);
+			dialog = dialog.replaceFirst("%heading%", String.valueOf(getLoc().h));
+			dialog = dialog.replaceFirst("%owner%", String.valueOf(getPlayer().getName()));
+			dialog = dialog.replaceFirst("%ownerId%", String.valueOf(getPlayer().getObjectId()));
+			dialog = dialog.replaceFirst("%npcId%", String.valueOf(getNpcId()));
+			dialog = dialog.replaceFirst("%expPenalty%", String.valueOf(getExpPenalty()));
+			dialog = dialog.replaceFirst("%maxHp%", String.valueOf(getMaxHp()));
+			dialog = dialog.replaceFirst("%maxMp%", String.valueOf(getMaxMp()));
+			dialog = dialog.replaceFirst("%currHp%", String.valueOf((int) getCurrentHp()));
+			dialog = dialog.replaceFirst("%currMp%", String.valueOf((int) getCurrentMp()));
+			dialog = dialog.replaceFirst("%pDef%", String.valueOf(getPDef(null)));
+			dialog = dialog.replaceFirst("%mDef%", String.valueOf(getMDef(null, null)));
+			dialog = dialog.replaceFirst("%pAtk%", String.valueOf(getPAtk(null)));
+			dialog = dialog.replaceFirst("%mAtk%", String.valueOf(getMAtk(null, null)));
+			dialog = dialog.replaceFirst("%accuracy%", String.valueOf(getAccuracy()));
+			dialog = dialog.replaceFirst("%evasionRate%", String.valueOf(getEvasionRate(null)));
+			dialog = dialog.replaceFirst("%crt%", String.valueOf(getCriticalHit(null, null)));
+			dialog = dialog.replaceFirst("%runSpeed%", String.valueOf(getRunSpeed()));
+			dialog = dialog.replaceFirst("%walkSpeed%", String.valueOf(getWalkSpeed()));
+			dialog = dialog.replaceFirst("%pAtkSpd%", String.valueOf(getPAtkSpd()));
+			dialog = dialog.replaceFirst("%mAtkSpd%", String.valueOf(getMAtkSpd()));
+			dialog = dialog.replaceFirst("%dist%", String.valueOf((int) getRealDistance(player)));
+			dialog = dialog.replaceFirst("%STR%", String.valueOf(getSTR()));
+			dialog = dialog.replaceFirst("%DEX%", String.valueOf(getDEX()));
+			dialog = dialog.replaceFirst("%CON%", String.valueOf(getCON()));
+			dialog = dialog.replaceFirst("%INT%", String.valueOf(getINT()));
+			dialog = dialog.replaceFirst("%WIT%", String.valueOf(getWIT()));
+			dialog = dialog.replaceFirst("%MEN%", String.valueOf(getMEN()));
+			NpcHtmlMessage msg = new NpcHtmlMessage(5);
+			msg.setHtml(dialog);
+			player.sendPacket(msg);
+		}
 	}
 }
