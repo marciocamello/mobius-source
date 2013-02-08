@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="11751" levels="1" name="Superior Weapon Mastery">
-	<!-- Increases INT by 2, M. Atk. by 103, and P. Atk. by 82. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your INT. -->
+		<!-- Increases INT by 2, M. Atk. by 103, and P. Atk. by 82. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your INT. -->
 		<table name="#pAtk">82</table>
 		<table name="#mAtk">103</table>
 		<set name="magicLevel" val="87" />
@@ -20,7 +20,7 @@
 		</for>
 	</skill>
 	<skill id="11752" levels="8" name="Sustain">
-	<!-- For 15 seconds, Heals the target by 172 per second. Further increases incoming Healing power by 10%. Also increases your Healing power. -->
+		<!-- For 15 seconds, Heals the target by 172 per second. Further increases incoming Healing power by 10%. Also increases your Healing power. -->
 		<table name="#hot">172 173 173 174 174 175 175 176</table>
 		<table name="#hpEff">1.10 1.13 1.16 1.19 1.22 1.25 1.28 1.30</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
@@ -37,7 +37,7 @@
 		</for>
 	</skill>
 	<skill id="11753" levels="3" name="Sustain"> 
-	<!-- For 10 seconds, increases Healing power by 50. If triggered again, the effect will increase. -->
+		<!-- For 10 seconds, increases Healing power by 50. If triggered again, the effect will increase. -->
 		<table name="#hpEff">50 100 200</table>
 		<table name="#magicLevel">85 88 92</table>
 		<table name="#mpConsume2">70</table>
@@ -57,7 +57,7 @@
 		</for>
 	</skill> 
 	<skill id="11754" levels="5" name="Fairy of Life">
-	<!-- Summons a fairy that follows and periodically heals the target for 60 seconds. More heals will be triggered when receiving damage. -->
+		<!-- Summons a fairy that follows and periodically heals the target for 60 seconds. More heals will be triggered when receiving damage. -->
 		<table name="#magicLevel">85 86 89 92 95</table>
 		<table name="#mpConsume2">43 46 48 52 55</table>
 		<table name="#lifeTime">60 60 60 60 60</table>
@@ -82,7 +82,7 @@
 		</for>
 	</skill>
 	<skill id="11755" levels="8" name="Radiant Heal">
-	<!-- Heals the target with 1488 power. If HP is full, CP is restored. -->
+		<!-- Heals the target with 1488 power. If HP is full, CP is restored. -->
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#power">1488 1495 1507 1519 1532 1544 1557 1570</table>
 		<set name="magicType" val="MAGIC" />
@@ -97,7 +97,7 @@
 		</enchant1>
 	</skill>
 	<skill id="11756" levels="8" name="Panic Heal">
-	<!-- Heals the target with 1488 power. If HP is full, CP is restored. -->
+		<!-- Heals the target with 1488 power. If HP is full, CP is restored. -->
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#power">1488 1495 1507 1519 1532 1544 1557 1570</table>
 		<set name="magicType" val="MAGIC" />
@@ -112,7 +112,7 @@
 		</enchant1>
 	</skill>
 	<skill id="11757" levels="8" name="Brilliant Heal">
-	<!-- Heals yourself and nearby party members with 1191 power. If HP is full, CP is restored. -->
+		<!-- Heals yourself and nearby party members with 1191 power. If HP is full, CP is restored. -->
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#power">1191 1200 1210 1220 1230 1240 1250 1261</table>
 		<set name="magicType" val="MAGIC" />
@@ -128,7 +128,7 @@
 		</enchant1>
 	</skill>
 	<skill id="11758" levels="1" name="Celestial Protection">
-	<!-- Renders the selected party member invincible for 10 seconds. -->
+		<!-- Renders the selected party member invincible for 10 seconds. -->
 		<set name="magicLevel" val="85" />
 		<set name="magicType" val="MAGIC" />
 		<set name="target" val="TARGET_PARTY_ONE" />
@@ -141,7 +141,7 @@
 		</for>
 	</skill>
 	<skill id="11759" levels="1" name="Celestial Party Protection">
-	<!-- Renders all party members invincible for 10 seconds. -->
+		<!-- Renders all party members invincible for 10 seconds. -->
 		<set name="magicLevel" val="87" />
 		<set name="magicType" val="MAGIC" />
 		<set name="target" val="TARGET_PARTY" />	
@@ -155,7 +155,7 @@
 		</for>
 	</skill>
 	<skill id="11760" levels="8" name="Radiant Recharge">
-	<!-- Recovers the target's MP with a maximum of 166 power depending on the target's level. Also, for 10 seconds, recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
+		<!-- Recovers the target's MP with a maximum of 166 power depending on the target's level. Also, for 10 seconds, recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<table name="#power">166 167 170 174 177 180 183 187</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<set name="magicLevel" val="#magicLevel" />
@@ -173,7 +173,7 @@
 		</for>
 	</skill>
 	<skill id="11761" levels="5" name="Brilliant Recharge">
-	<!-- Recovers party members' MP with a maximum of 140 power depending on their level. Also, for 10 seconds, recovers 10 MP per second. -->
+		<!-- Recovers party members' MP with a maximum of 140 power depending on their level. Also, for 10 seconds, recovers 10 MP per second. -->
 		<table name="#power">140 143 145 148 150</table>
 		<table name="#magicLevel">85 86 87 88 89</table>
 		<set name="magicLevel" val="#magicLevel" />
@@ -192,7 +192,7 @@
 		</for>
 	</skill>
 	<skill id="11762" levels="1" name="Balance Heal">
-	<!-- Equalizes all party members' HP and restores 333 HP every second for 15 seconds. -->
+		<!-- Equalizes all party members' HP and restores 333 HP every second for 15 seconds. -->
 		<set name="magicLevel" val="85" />
 		<set name="magicType" val="MAGIC" />
 		<set name="target" val="TARGET_PARTY" />
@@ -205,7 +205,7 @@
 		</for>
 	</skill>
 	<skill id="11763" levels="1" name="Radiant Purge">
-	<!-- Cancels all of the target's debuffs. -->
+		<!-- Cancels all of the target's debuffs. -->
 		<set name="magicType" val="MAGIC" />
 		<set name="magicLevel" val="85" />
 		<set name="reuseDelay" val="3000" />
@@ -226,7 +226,7 @@
 		</for>
 	</skill>
 	<skill id="11764" levels="1" name="Brilliant Purge">
-	<!-- Cancels all party members' debuffs and makes them immune to debuffs for 7 seconds. -->
+		<!-- Cancels all party members' debuffs and makes them immune to debuffs for 7 seconds. -->
 		<table name="#mpConsume2">70</table>
 		<set name="reuseDelay" val="60000" />
 		<set name="hitTime" val="1500" />
@@ -248,7 +248,7 @@
 		</for>
 	</skill>
 	<skill id="11765" levels="4" name="Crystal Regeneration" >
-	<!-- Crystallize yourself and become immune to damage and debuffs for 10 seconds. Recover 266 HP and 74 MP every second. -->
+		<!-- Crystallize yourself and become immune to damage and debuffs for 10 seconds. Recover 266 HP and 74 MP every second. -->
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#regMp">74 77 79 84</table>
 		<table name="#regHp">266 273 280 284</table>
@@ -269,7 +269,7 @@
 		</for>
 	</skill>
 	<skill id="11766" levels="8" name="Dark Veil">
-	<!-- Inflicts damage on the target with 128 power and decreases aggression toward yourself. -->
+		<!-- Inflicts damage on the target with 128 power and decreases aggression toward yourself. -->
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#power">128 132 136 140 144 146 150 154</table>
 		<table name="#elementPower">0</table>
@@ -300,7 +300,7 @@
 		<enchant5 levels="10" name="Recycle"/>
 	</skill>
 	<skill id="11767" levels="8" name="Mass Dark Veil">
-	<!-- Inflicts damage on the target and nearby enemies with 117 power and decreases aggression toward yourself. -->
+		<!-- Inflicts damage on the target and nearby enemies with 117 power and decreases aggression toward yourself. -->
 		<table name="#magicLevel">85 86 87 88 89 90 91 92</table>
 		<table name="#power">117 119 123 126 129 133 136 139</table>
 		<table name="#elementPower">0</table>
@@ -332,7 +332,7 @@
 		<enchant5 levels="10" name="Recycle"/>
 	</skill>
 	<skill id="11768" levels="3" name="Rebirth">
-	<!-- Recovers all party members' HP/MP/CP. There is also a chance of canceling any debuffs. -->
+		<!-- Recovers all party members' HP/MP/CP. There is also a chance of canceling any debuffs. -->
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="600000"/>
 		<set name="magicLevel" val="85"/>
@@ -357,7 +357,7 @@
 		</for>
 	</skill>
 	<skill id="11769" levels="6" name="Dark Backfire">
-	<!-- For 30 seconds, when the target uses a skill, increases MP Consumption by 50% and decreases Casting Spd. and Atk. Spd. by 20%. -->
+		<!-- For 30 seconds, when the target uses a skill, increases MP Consumption by 50% and decreases Casting Spd. and Atk. Spd. by 20%. -->
 		<table name="#mpConsum">1.5 2.0 2.5 3.0 3.5 4.0</table>
 		<table name="#magicLevel">85 87 90 93 96 99</table>
 		<table name="#activateRate">50</table>
@@ -385,7 +385,7 @@
 		</for>
 	</skill>
 	<skill id="11770" levels="1" name="Dissolve">
-	<!-- Removes the aggression of nearby enemies toward you and increases speed by 100. -->
+		<!-- Removes the aggression of nearby enemies toward you and increases speed by 100. -->
 		<table name="#mpConsume2">50</table>
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="500" />
@@ -403,13 +403,13 @@
 		</for>
 	</skill>
 	<skill id="11771" levels="1" name="Wise Retainer of Lights">
-	<!-- Finally! Causes Lakcis, the giant of light, to materialize. Protects allies near the giant and attacks the enemies. Continuously decreases HP. -->
+		<!-- Finally! Causes Lakcis, the giant of light, to materialize. Protects allies near the giant and attacks the enemies. Continuously decreases HP. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="11772" levels="4" name="Giant's Favor">
-	<!-- Performs an ancient secret technique of the Giants to increase P. Def., M. Def., and Healing power by 1000 for 15 seconds. -->
+		<!-- Performs an ancient secret technique of the Giants to increase P. Def., M. Def., and Healing power by 1000 for 15 seconds. -->
 		<table name="#heal">1000 1500 2000 2500</table>
 		<table name="#magicLevel">85 87 89 90</table>
 		<table name="#abnormal_time">15</table>
@@ -443,14 +443,14 @@
 		</for>
 	</skill>
 	<skill id="11773" levels="2" name="Lakcis Disc">
-	<!-- Directly manipulates the power of light to Heal nearby allies and damage nearby enemies. Continuously consumes MP. -->
+		<!-- Directly manipulates the power of light to Heal nearby allies and damage nearby enemies. Continuously consumes MP. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for />
 	</skill>
 	<skill id="11774" levels="4" name="Summon Tree of Life">
-	<!-- Summons a Tree of Life. The summoned tree heals nearby party members for 30 seconds. Can also cast a debuff canceling blessing. -->
+		<!-- Summons a Tree of Life. The summoned tree heals nearby party members for 30 seconds. Can also cast a debuff canceling blessing. -->
 		<table name="#skill">1 2 3 4</table>
 		<table name="#magicLevel">85 86 89 92</table>
 		<table name="#mpConsume2">185 205 225 243</table>
@@ -474,14 +474,14 @@
 		<for />
 	</skill>
 	<skill id="11775" levels="1" name="Return">
-	<!-- Moves to the summoned entity. Cannot be used beyond 1000 range. -->
+		<!-- Moves to the summoned entity. Cannot be used beyond 1000 range. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for />
 	</skill>
 	<skill id="11776" levels="4" name="Summon Lumi">
-	<!-- Summons a Spirit of Light. -->
+		<!-- Summons a Spirit of Light. -->
 		<table name="#lifeTime">3600 3600 3600 3600</table>
 		<table name="#magicLevel">85 86 89 92</table>
 		<table name="#mpConsume2">96 106 117 127</table>
@@ -492,11 +492,11 @@
 		<set name="isMagic" val="true" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="npcId" val="14944" />
+		<set name="npcId" val="14925" />
 		<set name="relationSkillsId" val="1359;1358;1361;1360" />
 	</skill>
 	<skill id="11777" levels="5" name="Mark of Lumi">
-	<!-- A mark appears that decreases the target's P. Def. and M. Def. by 10% and consumes 113 HP every second for 60 seconds. -->
+		<!-- A mark appears that decreases the target's P. Def. and M. Def. by 10% and consumes 113 HP every second for 60 seconds. -->
 		<table name="#dmg">113 118 123 128 134</table>
 		<table name="#magicLevel">85 88 91 94 97</table>
 		<table name="#def">0.9 0.85 0.8 0.75 0.75</table>
@@ -522,7 +522,7 @@
 		</for>
 	</skill>
 	<skill id="11778" levels="6" name="Fatal Sleep">
-	<!-- For 20 seconds, inflicts Sleep on the target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. -->
+		<!-- For 20 seconds, inflicts Sleep on the target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. -->
 		<table name="#effectPoint">121 162 204 243 285 331 379 418 457 495 532 549 566 582 597 611 624 635 646 655</table>
 		<table name="#magicLevel">85 86 87 88 89 90</table>
 		<table name="#activateRate">50</table>
@@ -561,7 +561,7 @@
 		</for>
 	</skill>
 	<skill id="11779" levels="1" name="Yoked status">
-	<!-- Speed/Atk. Spd./Casting Spd. are decreased by 50%. -->
+		<!-- Speed/Atk. Spd./Casting Spd. are decreased by 50%. -->
 		<table name="#mpConsume2">26</table>
 		<table name="#magicLevel">85</table>
 		<set name="mpConsume2" val="#mpConsume2" />
@@ -585,7 +585,7 @@
 		</for>
 	</skill>
 	<skill id="11780" levels="6" name="Dark Devour">
-	<!-- Decreases the Healing power received by the target by 50%. -->
+		<!-- Decreases the Healing power received by the target by 50%. -->
 		<table name="#magicLevel">85 86 89 92 95 98</table>
 		<table name="#hpEff">0.50 0.52 0.56 0.6 0.65 0.7</table>
 		<table name="#activateRate">50</table>
@@ -607,13 +607,13 @@
 		</for>
 	</skill>
 	<skill id="11781" levels="1" name="Dark Devour">
-	<!-- none -->
+		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="11782" levels="2" name="Frantic Healing">
-	<!-- Increases Casting Spd. by 30% and skill MP Consumption by 30%. -->
+		<!-- Increases Casting Spd. by 30% and skill MP Consumption by 30%. -->
 		<table name="#magicLevel">85 86</table>
 		<table name="#rate">1.30 1.50</table>
 		<table name="#mp">0.4 0.35</table>
@@ -633,7 +633,7 @@
 		</for>
 	</skill>
 	<skill id="11783" levels="1" name="Reset">
-	<!-- Restarts the target's debuff timers. -->
+		<!-- Restarts the target's debuff timers. -->
 		<table name="#mpConsume2">50</table>
 		<set name="reuseDelay" val="60000" />
 		<set name="hitTime" val="6000" />
@@ -656,7 +656,7 @@
 		</for>
 	</skill>
 	<skill id="11784" levels="4" name="Blessed Resurrection">
-	<!-- Resurrects a dead target and restores 85% of the XP lost. -->
+		<!-- Resurrects a dead target and restores 85% of the XP lost. -->
 		<table name="#power">85.0 90.0 95.0 100.0</table>
 		<table name="#effectPoint">121 196 290 374</table>
 		<table name="#magicLevel">90 92 93 95</table>
@@ -677,7 +677,7 @@
 		<for />
 	</skill>
 	<skill id="11785" levels="3" name="Group Resurrection">
-	<!-- Resurrects all dead party members and restores 80% of the XP lost. -->
+		<!-- Resurrects all dead party members and restores 80% of the XP lost. -->
 		<table name="#power">90.0 95.0 100.0</table>
 		<table name="#effectPoint">196 290 374</table>
 		<table name="#magicLevel">92 93 95</table>
@@ -697,7 +697,7 @@
 		<for />
 	</skill>
 	<skill id="11787" levels="1" name="Superior Armor Mastery">
-	<!-- INT + 2. Max HP + 4299 and M. Def. + 300 when equipped with a Light Armor or Robe. P. Def. + 109 when equipped with a Robe, and P. Def. + 73 when equipped with a Light Armor. Recovery Bonus + 2.8 and MP Recovery Bonus + 3.6. -->
+		<!-- INT + 2. Max HP + 4299 and M. Def. + 300 when equipped with a Light Armor or Robe. P. Def. + 109 when equipped with a Robe, and P. Def. + 73 when equipped with a Light Armor. Recovery Bonus + 2.8 and MP Recovery Bonus + 3.6. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLevel" val="85" />
 		<set name="#pDef" val="109" />
@@ -720,7 +720,7 @@
 		</for>
 	</skill>
 	<skill id="11788" levels="1" name="Superior Casting Mastery">
-	<!-- INT + 2. Increases Max MP by 313 and Casting Spd. by 23%. Decreases MP Consumption of magic skill by 15% and cooldown by 25%. -->
+		<!-- INT + 2. Increases Max MP by 313 and Casting Spd. by 23%. Decreases MP Consumption of magic skill by 15% and cooldown by 25%. -->
 		<table name="#maxMp">313</table>
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_ONE" />
@@ -744,7 +744,7 @@
 		</for>
 	</skill>
 	<skill id="11789" levels="1" name="Superior Anti Magic">
-	<!-- INT + 2. Increases M. Def. + 139. When receiving damage, there is a chance of increasing M. Def. and attributes resistance for 10 seconds. -->
+		<!-- INT + 2. Increases M. Def. + 139. When receiving damage, there is a chance of increasing M. Def. and attributes resistance for 10 seconds. -->
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
@@ -761,7 +761,7 @@
 		</for>
 	</skill>
 	<skill id="11790" levels="1" name="Superior Elemental Protection">
-	<!-- INT + 2. Increases resistance to Fire/Water/Wind/Earth by 20. -->
+		<!-- INT + 2. Increases resistance to Fire/Water/Wind/Earth by 20. -->
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
@@ -781,7 +781,7 @@
 		</for>
 	</skill>
 	<skill id="11791" levels="1" name="Superior Sigil Mastery">
-	<!-- INT + 2. Increases MP Recovery Bonus by 20 and power of recovery skills by 40 when equipped with a Sigil. -->
+		<!-- INT + 2. Increases MP Recovery Bonus by 20 and power of recovery skills by 40 when equipped with a Sigil. -->
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
@@ -793,7 +793,7 @@
 		</for>
 	</skill>
 	<skill id="11792" levels="1" name="Superior Mind Resistance">
-	<!-- INT + 2. Resistance + 20 to Hold, Sleep, Paralysis, Mental attacks, Poison, Bleed, and Stun. In addition, there is a chance of reflecting debuffs back to the attacker. -->
+		<!-- INT + 2. Resistance + 20 to Hold, Sleep, Paralysis, Mental attacks, Poison, Bleed, and Stun. In addition, there is a chance of reflecting debuffs back to the attacker. -->
 		<set name="magicLevel" val="87" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
