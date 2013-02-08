@@ -1267,10 +1267,6 @@
         <npc id="33110"/>
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="-114685" y="252350" z="-1560" h="15879"/>
-        <npc id="33587"/>
-    </spawn>
-    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
         <point x="-111456" y="253479" z="-1744" h="0"/>
         <npc id="27457"/>
     </spawn>

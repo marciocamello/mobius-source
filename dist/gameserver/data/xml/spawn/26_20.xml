@@ -7,10 +7,6 @@
 		<npc id="32905" /><!--Loewmus-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="206628" y="86984" z="-1024" h="9955" />
-		<npc id="33587" /><!--Mentor Guide-->
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="204969" y="88280" z="-1000" h="7592" />
 		<npc id="30154" /><!--Asterios-->
 	</spawn>
