@@ -1255,43 +1255,42 @@
 		<skills/>
 	</npc>
 	<npc id="14925" name="Unison of Lights" title="">
-		<!--fixed by ALF & Mangol-->
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="18.0"/>
-		<set name="level" value="80"/>
+		<set name="level" value="85"/>
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3290"/>
+		<set name="baseHpMax" value="14011"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1675"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
+		<set name="baseHpReg" value="27"/>
+		<set name="baseMpMax" value="1398"/>
+		<set name="baseMpReg" value="17"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="82"/>
+		<set name="baseDEX" value="55"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="78"/>
+		<set name="baseMEN" value="78"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="401"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="522"/>
+		<set name="basePAtk" value="2013"/>
+		<set name="basePDef" value="1268"/>
+		<set name="baseMAtk" value="2375"/>
+		<set name="baseMDef" value="1231"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="baseCritRate" value="47"/>
+		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="50"/>
 		<attributes>
-			<defence attribute="fire" value="120"/>
-			<defence attribute="water" value="120"/>
-			<defence attribute="wind" value="120"/>
-			<defence attribute="earth" value="120"/>
-			<defence attribute="holy" value="120"/>
-			<defence attribute="unholy" value="120"/>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
 		</attributes>
 		<skills/>
 	</npc>
@@ -1590,36 +1589,36 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3290"/>
+		<set name="baseHpMax" value="3460"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1675"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
+		<set name="baseHpReg" value="27"/>
+		<set name="baseMpMax" value="1783"/>
+		<set name="baseMpReg" value="17"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="82"/>
+		<set name="baseDEX" value="55"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="78"/>
+		<set name="baseMEN" value="78"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="650"/>
+		<set name="basePAtk" value="2"/>
+		<set name="basePDef" value="1673"/>
+		<set name="baseMAtk" value="4"/>
+		<set name="baseMDef" value="1497"/>
+		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="976"/>
+		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="1"/>
 		<set name="baseWalkSpd" value="1"/>
 		<attributes>
-			<defence attribute="fire" value="120"/>
-			<defence attribute="water" value="120"/>
-			<defence attribute="wind" value="120"/>
-			<defence attribute="earth" value="120"/>
-			<defence attribute="holy" value="120"/>
-			<defence attribute="unholy" value="120"/>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
 		</attributes>
 		<skills/>
 	</npc>
@@ -1996,15 +1995,15 @@
 		<!--fixed by ALF & Mangol-->
 		<set name="collision_radius" value="51.0"/>
 		<set name="collision_height" value="50.5"/>
-		<set name="level" value="85"/>
+		<set name="level" value="90"/>
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3290"/>
+		<set name="baseHpMax" value="3460"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1675"/>
-		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="27"/>
+		<set name="baseMpMax" value="1783"/>
+		<set name="baseMpReg" value="17"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -2014,7 +2013,7 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="971"/>
+		<set name="basePAtk" value="2"/>
 		<set name="basePDef" value="341"/>
 		<set name="baseMAtk" value="663"/>
 		<set name="baseMDef" value="250"/>
@@ -2808,7 +2807,8 @@
 		<set name="texture" value="" />
 		<set name="type" value="Pet" />
 		<equip>
-			<rhand item_id="30329" />	<!--Diabolic Grinder-->
+			<rhand item_id="30329" />
+			<!--Diabolic Grinder-->
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -2855,7 +2855,8 @@
 		<set name="texture" value="" />
 		<set name="type" value="Pet" />
 		<equip>
-			<rhand item_id="30329" />	<!--Diabolic Grinder-->
+			<rhand item_id="30329" />
+			<!--Diabolic Grinder-->
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -2902,7 +2903,8 @@
 		<set name="texture" value="" />
 		<set name="type" value="Pet" />
 		<equip>
-			<rhand item_id="30329" />	<!--Diabolic Grinder-->
+			<rhand item_id="30329" />
+			<!--Diabolic Grinder-->
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -2949,7 +2951,8 @@
 		<set name="texture" value="" />
 		<set name="type" value="Pet" />
 		<equip>
-			<rhand item_id="30329" />	<!--Diabolic Grinder-->
+			<rhand item_id="30329" />
+			<!--Diabolic Grinder-->
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -2996,7 +2999,8 @@
 		<set name="texture" value="" />
 		<set name="type" value="Pet" />
 		<equip>
-			<rhand item_id="30329" />	<!--Diabolic Grinder-->
+			<rhand item_id="30329" />
+			<!--Diabolic Grinder-->
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -3043,7 +3047,8 @@
 		<set name="texture" value="" />
 		<set name="type" value="Pet" />
 		<equip>
-			<rhand item_id="30329" />	<!--Diabolic Grinder-->
+			<rhand item_id="30329" />
+			<!--Diabolic Grinder-->
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -3090,7 +3095,8 @@
 		<set name="texture" value="" />
 		<set name="type" value="Pet" />
 		<equip>
-			<rhand item_id="30329" />	<!--Diabolic Grinder-->
+			<rhand item_id="30329" />
+			<!--Diabolic Grinder-->
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20" />
