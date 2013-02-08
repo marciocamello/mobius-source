@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Skill.SkillType;
 import lineage2.gameserver.model.base.EnchantSkillLearn;
 import lineage2.gameserver.stats.conditions.Condition;
@@ -260,7 +261,15 @@ public final class DocumentSkill extends DocumentBase
 				String ename = enchant.getAttributes().getNamedItem("name").getNodeValue();
 				for (int r = 1; r <= eLevels; r++)
 				{
-					int level = lastLvl + (eLevels * count) + r;
+					int level;
+					if (Config.ENCHANT_SKILLSID_RETAIL)
+					{
+						level = (100 * (count + 1)) + r;
+					}
+					else
+					{
+						level = lastLvl + (eLevels * count) + r;
+					}
 					EnchantSkillLearn e = new EnchantSkillLearn(skillId, (100 * (count + 1)) + r, skillName, "+" + r + " " + ename, r == 1 ? lastLvl : ((100 * (count + 1)) + r) - 1, lastLvl, eLevels);
 					List<EnchantSkillLearn> t = SkillTreeTable._enchant.get(skillId);
 					if (t == null)
@@ -296,11 +305,24 @@ public final class DocumentSkill extends DocumentBase
 			currentSkill.id = skillId;
 			currentSkill.name = skillName;
 			currentSkill.sets = new StatsSet[lastLvl];
+			int bLevels = Integer.parseInt(levels);
 			for (int i = 0; i < lastLvl; i++)
 			{
+				int skilllevel = i + 1;				
+				if (Config.ENCHANT_SKILLSID_RETAIL)
+				{
+					int current = i + 1;
+					if ((current - bLevels) > 0)	//is enchant
+					{
+						int tmplvl = current - bLevels - 1;
+						int enchantRoute = (tmplvl - (tmplvl % eLevels)) / eLevels;
+						int enchantLevel = tmplvl - (enchantRoute * eLevels);   
+						skilllevel = (100 * (enchantRoute+1)) + enchantLevel + 1;  
+					}
+				}
 				currentSkill.sets[i] = new StatsSet();
 				currentSkill.sets[i].set("skill_id", currentSkill.id);
-				currentSkill.sets[i].set("level", i + 1);
+				currentSkill.sets[i].set("level", skilllevel);
 				currentSkill.sets[i].set("name", currentSkill.name);
 				currentSkill.sets[i].set("base_level", levels);
 			}
@@ -347,7 +369,21 @@ public final class DocumentSkill extends DocumentBase
 			makeSkills();
 			for (int i = 0; i < lastLvl; i++)
 			{
-				currentSkill.currentLevel = i;
+				int skilllevel = i;
+				/*
+				if (Config.ENCHANT_SKILLSID_RETAIL)
+				{
+					int current = i +1; 
+					if ((current - Integer.parseInt(levels)) > 0)	//is enchant
+					{
+						double enchantRoute = Math.ceil(current / eLevels);
+						double enchantLevel = current - Integer.parseInt(levels) - (enchantRoute * eLevels);   
+						skilllevel = (int) (100 * (enchantRoute + 1) + enchantLevel);  
+					}
+				}
+				*/
+				currentSkill.currentLevel = skilllevel;
+	
 				lineage2.gameserver.model.Skill current = currentSkill.currentSkills.get(i);
 				if (displayLevels.get(current.getLevel()) != null)
 				{

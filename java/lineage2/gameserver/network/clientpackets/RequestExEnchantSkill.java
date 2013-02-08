@@ -21,7 +21,6 @@ import lineage2.gameserver.model.base.EnchantSkillLearn;
 import lineage2.gameserver.network.serverpackets.ExEnchantSkillInfo;
 import lineage2.gameserver.network.serverpackets.ExEnchantSkillResult;
 import lineage2.gameserver.network.serverpackets.ShortCutRegister;
-import lineage2.gameserver.network.serverpackets.SkillList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
@@ -136,7 +135,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 		{
 			activeChar.addExpAndSp(0, -1 * requiredSp);
 			Functions.removeItem(activeChar, 57, requiredAdena);
-			activeChar.sendPacket(new SystemMessage(SystemMessage.SP_HAS_DECREASED_BY_S1).addNumber(requiredSp), new SystemMessage(SystemMessage.SUCCEEDED_IN_ENCHANTING_SKILL_S1).addSkillName(_skillId, _skillLvl), new SkillList(activeChar), new ExEnchantSkillResult(1));
+			activeChar.sendPacket(new SystemMessage(SystemMessage.SP_HAS_DECREASED_BY_S1).addNumber(requiredSp), new SystemMessage(SystemMessage.SUCCEEDED_IN_ENCHANTING_SKILL_S1).addSkillName(_skillId, _skillLvl), new ExEnchantSkillResult(1));
 			Log.add(activeChar.getName() + "|Successfully enchanted|" + _skillId + "|to+" + _skillLvl + "|" + rate, "enchant_skills");
 		}
 		else
@@ -146,6 +145,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 			Log.add(activeChar.getName() + "|Failed to enchant|" + _skillId + "|to+" + _skillLvl + "|" + rate, "enchant_skills");
 		}
 		activeChar.addSkill(skill, true);
+		activeChar.sendSkillList();			
 		updateSkillShortcuts(activeChar, _skillId, _skillLvl);
 		activeChar.sendPacket(new ExEnchantSkillInfo(_skillId, activeChar.getSkillDisplayLevel(_skillId)));
 	}

@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -258,6 +259,10 @@ public class SkillTreeTable
 	 */
 	public static int convertEnchantLevel(int baseLevel, int level, int enchantlevels)
 	{
+		if (Config.ENCHANT_SKILLSID_RETAIL)
+		{
+			return level;
+		}
 		if (level < 100)
 		{
 			return level;

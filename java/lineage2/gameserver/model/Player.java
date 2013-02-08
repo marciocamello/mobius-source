@@ -30,6 +30,7 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -7063,6 +7064,7 @@ public final class Player extends Playable implements PlayerGroup
 			statement.setInt(1, getObjectId());
 			statement.setInt(2, getActiveClassId());
 			rset = statement.executeQuery();
+			List<Integer> _relationSkillToRemove = new ArrayList<>();
 			while (rset.next())
 			{
 				final int id = rset.getInt("skill_id");
@@ -7070,6 +7072,7 @@ public final class Player extends Playable implements PlayerGroup
 				final Skill skill = SkillTable.getInstance().getInfo(id, level);
 				if (skill == null)
 				{
+					_log.info("Problem! RestoreSkill Id: " + id + " level: " + level);
 					continue;
 				}
 				if (((!isAwaking() && !SkillAcquireHolder.getInstance().isSkillPossible(this, skill)) || (isAwaking() && Config.ALT_DELETE_SKILL_PROF && !SkillAcquireHolder.getInstance().isSkillPossible(this, skill))))
@@ -7077,6 +7080,14 @@ public final class Player extends Playable implements PlayerGroup
 					removeSkill(skill, true);
 					removeSkillFromShortCut(skill.getId());
 					continue;
+				}
+				if (Config.ALT_DELETE_SKILL_RELATION && skill.isRelationSkill())
+				{
+					int[] _ss = skill.getRelationSkills();
+					for (int _k : _ss)
+					{
+						_relationSkillToRemove.add(_k);
+					}
 				}
 				super.addSkill(skill);
 			}
@@ -7104,6 +7115,22 @@ public final class Player extends Playable implements PlayerGroup
 			if (Config.UNSTUCK_SKILL && (getSkillLevel(1050) < 0))
 			{
 				super.addSkill(SkillTable.getInstance().getInfo(2099, 1));
+			}
+			if (Config.ALT_DELETE_SKILL_RELATION)
+			{
+				HashSet<Integer> _tmp = new HashSet<>();
+				_tmp.addAll(_relationSkillToRemove);
+				_relationSkillToRemove.clear();
+				_relationSkillToRemove.addAll(_tmp);
+				for (Skill s : getAllSkills())
+				{
+					if (_relationSkillToRemove.contains(s.getId()))
+					{
+						removeSkill(s, true);
+						removeSkillFromShortCut(s.getId());
+						_log.info("SkillRelation: Removed skill: " + s.getId() + " - " + s.getName() + " to the player "+ getName());
+					}
+				}
 			}
 		}
 		catch (final Exception e)
