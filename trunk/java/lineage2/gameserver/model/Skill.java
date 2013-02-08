@@ -1202,6 +1202,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	protected boolean _isBehind;
 	/**
+	 * Field _scopeAngle.
+	 */
+	protected int _scopeAngle;
+	/**
 	 * Field _isCancelable.
 	 */
 	protected boolean _isCancelable;
@@ -1763,6 +1767,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		_isPvm = set.getBool("isPvm", _skillType.isPvM());
 		_isForceUse = set.getBool("isForceUse", false);
 		_isBehind = set.getBool("behind", false);
+		_scopeAngle = set.getInteger("scopeAngle", 120);
 		_symbolId = set.getInteger("symbolId", 0);
 		_npcId = set.getInteger("npcId", 0);
 		_flyType = FlyType.valueOf(set.getString("flyType", "NONE").toUpperCase());
@@ -2060,7 +2065,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		{
 			return null;
 		}
-		if (!first && (target != activeChar) && ((_targetType == SkillTargetType.TARGET_MULTIFACE) || (_targetType == SkillTargetType.TARGET_MULTIFACE_AURA) || (_targetType == SkillTargetType.TARGET_TUNNEL)) && (_isBehind ? PositionUtils.isFacing(activeChar, target, 120) : !PositionUtils.isFacing(activeChar, target, 60)))
+		if (!first && (target != activeChar) && ((_targetType == SkillTargetType.TARGET_MULTIFACE) || (_targetType == SkillTargetType.TARGET_MULTIFACE_AURA) || (_targetType == SkillTargetType.TARGET_TUNNEL)) && (_isBehind ? PositionUtils.isFacing(activeChar, target, _scopeAngle) : !PositionUtils.isFacing(activeChar, target, 60)))
 		{
 			return SystemMsg.YOUR_TARGET_IS_OUT_OF_RANGE;
 		}
@@ -2420,7 +2425,14 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				{
 					targets.add(aimingTarget);
 				}
-				addTargetsToList(targets, aimingTarget, activeChar, forceUse);
+				if (_targetType == SkillTargetType.TARGET_MULTIFACE)
+				{
+					addTargetsToList(targets, activeChar, activeChar, forceUse);
+				}
+				else
+				{
+					addTargetsToList(targets, aimingTarget, activeChar, forceUse);
+				}
 				break;
 			}
 			case TARGET_AURA:

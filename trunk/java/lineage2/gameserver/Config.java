@@ -239,6 +239,7 @@ public class Config
 	public static boolean ALT_SOCIAL_ACTION_REUSE;
 	public static boolean ALT_DISABLE_SPELLBOOKS;
 	public static boolean ALT_DELETE_SKILL_PROF;
+	public static boolean ALT_DELETE_SKILL_RELATION;
 	public static boolean ALT_GAME_EXP_LOST;
 	public static boolean ALT_ARENA_EXP;
 	public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
@@ -598,6 +599,7 @@ public class Config
 	public static boolean SAVE_GM_EFFECTS;
 	public static boolean AUTO_LEARN_SKILLS;
 	public static boolean AUTO_LEARN_FORGOTTEN_SKILLS;
+	public static boolean ENCHANT_SKILLSID_RETAIL;
 	public static int MOVE_PACKET_DELAY;
 	public static int ATTACK_PACKET_DELAY;
 	public static boolean DAMAGE_FROM_FALLING;
@@ -1406,9 +1408,11 @@ public class Config
 		MAX_PETITIONS_PENDING = altSettings.getProperty("MaxPetitionsPending", 25);
 		AUTO_LEARN_SKILLS = altSettings.getProperty("AutoLearnSkills", false);
 		AUTO_LEARN_FORGOTTEN_SKILLS = altSettings.getProperty("AutoLearnForgottenSkills", false);
+		ENCHANT_SKILLSID_RETAIL = altSettings.getProperty("EnchantSkillsIdRetail", false);
 		ALT_SOCIAL_ACTION_REUSE = altSettings.getProperty("AltSocialActionReuse", false);
 		ALT_DISABLE_SPELLBOOKS = altSettings.getProperty("AltDisableSpellbooks", false);
 		ALT_DELETE_SKILL_PROF = altSettings.getProperty("AltDeleteSkillProf", false);
+		ALT_DELETE_SKILL_RELATION = altSettings.getProperty("AltDeleteSkillRelation", false);
 		ALT_SIMPLE_SIGNS = altSettings.getProperty("PushkinSignsOptions", false);
 		ALT_TELE_TO_CATACOMBS = altSettings.getProperty("TeleToCatacombs", false);
 		ALT_BS_CRYSTALLIZE = altSettings.getProperty("BSCrystallize", false);
