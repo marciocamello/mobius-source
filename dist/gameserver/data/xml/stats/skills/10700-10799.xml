@@ -826,7 +826,7 @@
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#rEvas">60 70 80 90</table>
         <table name="#time">30</table>
-        <table name="#mrEvas">60 70 80 90</table>
+        <table name="#mEvas">60 70 80 90</table>
         <table name="#mEvas">1.8 1.85 1.9 1.95</table>
         <table name="#mpConsume2">74 76 78 80</table>
         <set name="reuseDelay" val="900000"/>
@@ -853,7 +853,7 @@
         <for>
             <effect name="Buff" time="#time" val="0" stackOrder="1" stackType="avoid_up_special">
                 <add order="0x40" stat="rEvas" val="#rEvas"/>
-                <add order="0x40" stat="mrEvas" val="#mrEvas"/>
+                <add order="0x40" stat="mEvas" val="#mEvas"/>
                 <mul order="0x30" stat="mDef" val="1.2"/>
                 <sub order="0x40" stat="debuffResist" val="95"/>
                 <mul order="0x30" stat="pSkillEvasion" val="#mEvas"/>

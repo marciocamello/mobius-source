@@ -69,6 +69,7 @@ public class EffectKnockBack extends Effect
 		_y = (tagetLoc.y - (int) (offset * sin));
 		_z = tagetLoc.z;
 		_effected.startStunning();
+		_effected.abortCast(true, true);
 		_effected.broadcastPacket(new FlyToLocation(_effected, new Location(_x, _y, _z), FlyType.PUSH_HORIZONTAL, getSkill().getFlySpeed()));
 		_effected.setXYZ(_x, _y, _z);
 		_effected.broadcastPacket(new ValidateLocation(_effected));

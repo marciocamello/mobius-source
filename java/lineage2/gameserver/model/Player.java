@@ -4006,6 +4006,11 @@ public final class Player extends Playable implements PlayerGroup
 			player.sendPacket(ActionFail.STATIC);
 			return;
 		}
+		if (!isTargetable())
+		{
+			player.sendPacket(ActionFail.STATIC);
+			return;
+		}
 		if (player.getTarget() != this)
 		{
 			player.setTarget(this);

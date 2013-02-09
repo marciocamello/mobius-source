@@ -22,6 +22,7 @@ import lineage2.gameserver.skills.effects.EffectAggression;
 import lineage2.gameserver.skills.effects.EffectBetray;
 import lineage2.gameserver.skills.effects.EffectBlessNoblesse;
 import lineage2.gameserver.skills.effects.EffectBlockStat;
+import lineage2.gameserver.skills.effects.EffectBlockTarget;
 import lineage2.gameserver.skills.effects.EffectBluff;
 import lineage2.gameserver.skills.effects.EffectBuff;
 import lineage2.gameserver.skills.effects.EffectCPDamPercent;
@@ -64,6 +65,7 @@ import lineage2.gameserver.skills.effects.EffectKnockBack;
 import lineage2.gameserver.skills.effects.EffectKnockDown;
 import lineage2.gameserver.skills.effects.EffectLDManaDamOverTime;
 import lineage2.gameserver.skills.effects.EffectLockInventory;
+import lineage2.gameserver.skills.effects.EffectMDamOverTime;
 import lineage2.gameserver.skills.effects.EffectMPDamPercent;
 import lineage2.gameserver.skills.effects.EffectManaDamOverTime;
 import lineage2.gameserver.skills.effects.EffectManaHeal;
@@ -131,6 +133,10 @@ public enum EffectType
 	 * Field BlockStat.
 	 */
 	BlockStat(EffectBlockStat.class, null, true),
+	/**
+	 * Field BlockTarget.
+	 */
+	BlockTarget(EffectBlockTarget.class, null, true),
 	/**
 	 * Field Buff.
 	 */
@@ -303,6 +309,10 @@ public enum EffectType
 	 * Field ManaHealPercent.
 	 */
 	ManaHealPercent(EffectManaHealPercent.class, null, false),
+	/**
+	 * Field MDamOverTime.
+	 */
+	MDamOverTime(EffectMDamOverTime.class, null, false),
 	/**
 	 * Field Meditation.
 	 */

@@ -1315,7 +1315,7 @@ public class Config
 		LIM_MATK_SPD = formulasSettings.getProperty("LimitMatkSpd", 1999);
 		LIM_CRIT_DAM = formulasSettings.getProperty("LimitCriticalDamage", 2000);
 		LIM_CRIT = formulasSettings.getProperty("LimitCritical", 500);
-		LIM_MCRIT = formulasSettings.getProperty("LimitMCritical", 20);
+		LIM_MCRIT = formulasSettings.getProperty("LimitMCritical", 200);
 		LIM_ACCURACY = formulasSettings.getProperty("LimitAccuracy", 200);
 		LIM_EVASION = formulasSettings.getProperty("LimitEvasion", 200);
 		LIM_MOVE = formulasSettings.getProperty("LimitMove", 250);

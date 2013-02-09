@@ -426,7 +426,7 @@
 		<set name="skillType" val="MANAHEAL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<cond msgId="113" addName="1">
-			<target hasForbiddenSkill="1013" />
+			<target forbiddenClassIds="29;42;105;112;146" />
 		</cond>
 		<enchant1 levels="30" name="Power">
 			<table name="#power">137 137 138 139 139 140 141 141 142 143 143 144 145 146 146 147 148 148 149 150 150 151 152 152 153 154 154 155 156 156</table>

@@ -564,8 +564,31 @@
 			</effect>
 		</for>
 	</skill>
+
+	<skill id="1571" levels="1" name="Each Class Inventory Increase">
+    <!-- Increases inventory slots by 18. -->
+		<set name="icon" val="icon.skill1571"/>
+		<set name="magicLevel" val="85" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isCommon" val="true" />
+		<for>
+			<add order="0x40" stat="inventoryLimit" val="18" />
+		</for>
+	</skill>
+
 	<skill id="1520" levels="1" name="Inquisitor">
     <!-- Receives the ability to judge those who oppose the gods' authority. Can use holy attacks and magic. -->
+		<set name="icon" val="icon.skill1520"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="addSkills" val="1523;-2;1528;-2;1524;-2;1525;-2;1430;0;1043;0;1418;0;1042;0;1400;0;619;1;5491;1"/>
+		<set name="npcId" val="0"/>
+		<set name="isCommon" val="true"/>
+	</skill>
+	<!--
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1520"/>
 		<set name="reuseDelay" val="30000"/>
@@ -583,8 +606,18 @@
 			<effect count="1" name="Transformation" time="18000" val="312"/>
 		</for>
 	</skill>
+	-->
 	<skill id="1521" levels="1" name="Inquisitor">
     <!-- Receives the ability to judge those who oppose the gods' authority. Can use holy attacks and magic. -->
+		<set name="icon" val="icon.skill1521"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="addSkills" val="1523;-2;1528;-2;1524;-2;1525;-2;1430;0;1043;1;1303;0;1400;0;619;1;5491;1"/>
+		<set name="npcId" val="0"/>
+		<set name="isCommon" val="true"/>
+	</skill>
+	<!--
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1520"/>
 		<set name="reuseDelay" val="30000"/>
@@ -602,8 +635,18 @@
 			<effect count="1" name="Transformation" time="18000" val="313"/>
 		</for>
 	</skill>
+	-->
 	<skill id="1522" levels="1" name="Inquisitor">
     <!-- Receives the ability to judge those who oppose the gods' authority. Can use holy attacks and magic. -->
+		<set name="icon" val="icon.skill1521"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="addSkills" val="1523;-2;1528;-2;1524;-2;1525;-2;1430;0;1043;1;1059;0;1303;0;619;1;5491;1"/>
+		<set name="npcId" val="0"/>
+		<set name="isCommon" val="true"/>
+	</skill>
+	<!--
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1520"/>
 		<set name="reuseDelay" val="30000"/>
@@ -621,6 +664,7 @@
 			<effect count="1" name="Transformation" time="18000" val="314"/>
 		</for>
 	</skill>
+	-->
 	<skill id="1523" levels="42" name="Divine Punishment">
     <!-- Calls down the gods' retribution to inflict damage on the enemy using 52 Power added to M. Atk. -->
 		<table name="#mpConsume2">28 29 30 30 31 32 33 33 34 35 36 36 37 38 39 39 40 41 42 42 43 44 44 45 46 46 47 48 48 49 49 50 50 51 51 52 52 53 53 53 54 54</table>

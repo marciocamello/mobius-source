@@ -2407,6 +2407,7 @@ public class NpcInstance extends Creature
 	 * Method isTargetable.
 	 * @return boolean
 	 */
+	@Override
 	public boolean isTargetable()
 	{
 		return _isTargetable;
@@ -2416,6 +2417,7 @@ public class NpcInstance extends Creature
 	 * Method setTargetable.
 	 * @param value boolean
 	 */
+	@Override
 	public void setTargetable(boolean value)
 	{
 		_isTargetable = value;
