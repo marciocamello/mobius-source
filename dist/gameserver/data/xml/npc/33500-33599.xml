@@ -3525,7 +3525,7 @@
 	</npc>
 	<npc id="33576" name="Elphasia" title="">
 		<set name="aggroRange" value="0" />
-		<set name="ai_type" value="talkingisland.Elphasia" />
+		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
 		<set name="baseCON" value="75" />
 		<set name="baseCritRate" value="40"/>
@@ -3578,7 +3578,7 @@
 	</npc>
 	<npc id="33577" name="Mephisto" title="">
 		<set name="aggroRange" value="0" />
-		<set name="ai_type" value="talkingisland.Mephisto" />
+		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
 		<set name="baseCON" value="75" />
 		<set name="baseCritRate" value="40"/>
