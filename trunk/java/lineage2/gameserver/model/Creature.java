@@ -82,6 +82,7 @@ import lineage2.gameserver.network.serverpackets.ChangeMoveType;
 import lineage2.gameserver.network.serverpackets.CharMoveToLocation;
 import lineage2.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTargetPacket;
 import lineage2.gameserver.network.serverpackets.FlyToLocation;
+import lineage2.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.MagicSkillCanceled;
 import lineage2.gameserver.network.serverpackets.MagicSkillLaunched;
@@ -484,6 +485,10 @@ public abstract class Creature extends GameObject
 	 * Field _lockedTarget.
 	 */
 	private boolean _lockedTarget;
+	/**
+	 * Field _isTargetable.
+	 */
+	private boolean _isTargetable = true;
 	/**
 	 * Field _blocked.
 	 */
@@ -2349,14 +2354,26 @@ public abstract class Creature extends GameObject
 			}
 			return loc;
 		}
-		double radian = PositionUtils.convertHeadingToRadian(getHeading());
-		int x1 = -(int) (Math.sin(radian) * skill.getFlyRadius());
-		int y1 = (int) (Math.cos(radian) * skill.getFlyRadius());
+		int x1 = 0;
+		int y1 = 0;
+		int z1 = 0;
+		if (skill.getFlyType()==FlyType.THROW_UP)
+		{
+			x1 = 0;
+			y1 = 0;
+			z1 = getZ() + skill.getFlyRadius();
+		}
+		else
+		{
+			double radian = PositionUtils.convertHeadingToRadian(getHeading());
+			x1 = -(int) (Math.sin(radian) * skill.getFlyRadius());
+			y1 = (int) (Math.cos(radian) * skill.getFlyRadius());
+		}
 		if (isFlying())
 		{
-			return GeoEngine.moveCheckInAir(getX(), getY(), getZ(), getX() + x1, getY() + y1, getZ(), getColRadius(), getGeoIndex());
+			return GeoEngine.moveCheckInAir(getX(), getY(), getZ(), getX() + x1, getY() + y1, getZ() + z1, getColRadius(), getGeoIndex());
 		}
-		return GeoEngine.moveCheck(getX(), getY(), getZ(), getX() + x1, getY() + y1, getGeoIndex());
+		return GeoEngine.moveCheck(getX(), getY(), getZ(), getX() + x1, getY() + y1, getGeoIndex() + z1);
 	}
 	
 	/**
@@ -5925,6 +5942,15 @@ public abstract class Creature extends GameObject
 	}
 	
 	/**
+	 * Method setTargetable.
+	 * @param value boolean
+	 */
+	public void setTargetable(boolean value)
+	{
+		_isTargetable = value;
+	}
+
+	/**
 	 * Method isConfused.
 	 * @return boolean
 	 */
@@ -6116,6 +6142,15 @@ public abstract class Creature extends GameObject
 	public boolean isLockedTarget()
 	{
 		return _lockedTarget;
+	}
+	
+	/**
+	 * Method isTargetable.
+	 * @return boolean
+	 */
+	public boolean isTargetable()
+	{
+		return _isTargetable;
 	}
 	
 	/**

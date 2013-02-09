@@ -604,7 +604,7 @@
         <table name="#magicLevel">85 88 91 94 97</table>
         <table name="#power">8 9 10 11 12</table>
         <set name="levelModifier" val="1"/>
-        <set name="magicType" val="MAGIC"/>
+        <set name="magicType" val="MAGIC"/>q
         <set name="magicLevel" val="#magicLevel"/>
         <set name="power" val="#power"/>
         <set name="relationSkillsId" val="1183;1237;1455;1168;1452;1233;1458"/>
@@ -627,18 +627,22 @@
         <table name="#dot">25 50 75 100</table>
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">49 50 51 52</table>
+        <set name="magicType" val="MAGIC"/>
         <set name="reuseDelay" val="20000"/>
         <set name="hitTime" val="10000"/>
         <set name="relationSkillsId" val="1421;1419;1423;1151;1420"/>
         <set name="castRange" val="900"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
+        <set name="power" val="#dot"/>
         <set name="target" val="TARGET_ONE"/>
-        <set name="skillType" val="POISON"/>
+        <set name="skillType" val="DEBUFF"/>
         <set name="operateType" val="OP_ACTIVE"/>
 		<set name="absorbPart" val="1" />
+		<set name="isUsingWhileCasting" val="true" />
+		<set name="isSkillTimePermanent" val="true" />
         <for>
-            <effect count="15" name="DamOverTime" time="1" val="#dot"/>
+            <effect count="10" name="MDamOverTime" time="1" val="#dot"/>
         </for>
     </skill>
     <skill id="11032" levels="4" name="Death Howl">
@@ -1133,8 +1137,8 @@
         <set name="relationSkillsId" val="1064;1447;1336;1069"/>
         <set name="isMagic" val="true"/>
         <set name="lvlDepend" val="2"/>
-        <set name="flyRadius" val="-90"/>
-        <set name="flyType" val="THROW_HORIZONTAL"/>
+        <set name="flyRadius" val="30"/>
+        <set name="flyType" val="THROW_UP"/>
         <set name="mpInitialConsume" val="22"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="power" val="500"/>

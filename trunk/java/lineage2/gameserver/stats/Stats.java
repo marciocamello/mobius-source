@@ -119,7 +119,7 @@ public enum Stats
 	/**
 	 * Field MEVASION_RATE.
 	 */
-	MEVASION_RATE("mrEvas"),
+	MEVASION_RATE("mEvas"),
 	/**
 	 * Field ACCURACY_COMBAT.
 	 */

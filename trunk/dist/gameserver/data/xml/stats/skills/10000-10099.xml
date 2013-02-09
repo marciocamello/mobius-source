@@ -428,11 +428,11 @@
         <set name="element" val="#element"/>
         <set name="elementPower" val="#elementPower"/>
         <set name="target" val="TARGET_MULTIFACE"/>
+		<set name="castRange" val="40" />
+        <set name="skillRadius" val="400"/>
 		<set name="reuseDelay" val="70000" />
 		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="370" />
-		<set name="castRange" val="40" />
-        <set name="skillRadius" val="300"/>
         <set name="skillType" val="PDAM"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="overHit" val="true"/>
@@ -531,7 +531,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="470" />
-		<set name="hitTime" val="500" />
+		<set name="hitTime" val="50000" />
 		<table name="#reuseDelay">1000</table>
 		<set name="reuseDelay" val="#reuseDelay" />
         <set name="magicLevel" val="#magicLevel"/>
@@ -540,7 +540,8 @@
         <set name="skillType" val="AGGRESSION"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="relationSkillsId" val="402;403"/>
-		<set name="flySpeed" val="600" />
+		<set name="flyType" val="THROW_HORIZONTAL" />
+		<set name="flySpeed" val="500" />
 		<cond msgId="113" addName="1">
 			<using kind="Shield"/>
         </cond>
@@ -564,7 +565,8 @@
 		<table name="#reuseDelay">45000</table>
 		<set name="reuseDelay" val="#reuseDelay" />
         <set name="target" val="TARGET_AREA"/>
-		<set name="flySpeed" val="600" />
+		<set name="flyType" val="THROW_HORIZONTAL" />
+		<set name="flySpeed" val="500000" />
         <set name="skillType" val="AGGRESSION"/>
 		<set name="castRange" val="#radius" />
 		<set name="skillRadius" val="#radius" />
