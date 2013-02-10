@@ -4525,9 +4525,6 @@
 		<set name="shots" value="NONE" />
 		<set name="type" value="Monster" />
 		<faction name="skeleton_clan" range="300"/>
-		<equip>
-			<rhand item_id="275" />	<!--Long Bow-->
-		</equip>
 		<skills>
 			<skill id="4274" level="1" />	<!--Blunt Weapon Weak Point-->
 			<skill id="4275" level="2" />	<!--Sacred Attack Weak Point-->
@@ -5094,9 +5091,6 @@
 		<set name="shots" value="NONE" />
 		<set name="type" value="Monster" />
 		<faction name="skeleton_clan" range="300"/>
-		<equip>
-			<rhand item_id="275" />	<!--Long Bow-->
-		</equip>
 		<skills>
 			<skill id="4274" level="1" />	<!--Blunt Weapon Weak Point-->
 			<skill id="4275" level="2" />	<!--Sacred Attack Weak Point-->
