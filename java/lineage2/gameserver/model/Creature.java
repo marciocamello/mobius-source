@@ -34,6 +34,8 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+import javolution.util.FastList;
+
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
@@ -400,6 +402,9 @@ public abstract class Creature extends GameObject
 	/**
 	 * Field _isAttackAborted.
 	 */
+	
+	private FastList<Integer> _aveList = new FastList<>();
+	
 	protected boolean _isAttackAborted;
 	/**
 	 * Field _attackEndTime.
@@ -2262,23 +2267,6 @@ public abstract class Creature extends GameObject
 			}
 			reduceCurrentMp(mpConsume1, null);
 		}
-		_flyLoc = null;
-		switch (skill.getFlyType())
-		{
-			case DUMMY:
-			case CHARGE:
-				Location flyLoc = getFlyLocation(target, skill);
-				if (flyLoc != null)
-				{
-					_flyLoc = flyLoc;
-					broadcastPacket(new FlyToLocation(this, flyLoc, skill.getFlyType(), 0));
-				}
-				else
-				{
-					sendPacket(SystemMsg.CANNOT_SEE_TARGET);
-					return;
-				}
-		}
 		_castingSkill = skill;
 		_castInterruptTime = System.currentTimeMillis() + skillInterruptTime;
 		setCastingTarget(target);
@@ -2470,7 +2458,7 @@ public abstract class Creature extends GameObject
 	
 	/**
 	 * Method getAbnormalEffect.
-	 * @return int
+	 * @return integer
 	 */
 	public int getAbnormalEffect()
 	{
@@ -2479,7 +2467,7 @@ public abstract class Creature extends GameObject
 	
 	/**
 	 * Method getAbnormalEffect2.
-	 * @return int
+	 * @return integer
 	 */
 	public int getAbnormalEffect2()
 	{
@@ -2488,13 +2476,34 @@ public abstract class Creature extends GameObject
 	
 	/**
 	 * Method getAbnormalEffect3.
-	 * @return int
+	 * @return integer
 	 */
 	public int getAbnormalEffect3()
 	{
 		return _abnormalEffects3;
 	}
 	
+	/**
+	 * Method getAveList.
+	 * @return FastList<Integer>
+	 */
+	public FastList<Integer> getAveList()
+	{
+		return _aveList;
+	}
+
+	public void addToAveList(int aeId)
+	{
+		if (!_aveList.contains(aeId))
+			_aveList.add(aeId);
+	}
+
+	public void removeFromAveList(int aeId)
+	{
+		if (_aveList.contains(aeId))
+			_aveList.remove(_aveList.indexOf(aeId));
+	}
+
 	/**
 	 * Method getAccuracy.
 	 * @return int
@@ -4486,14 +4495,33 @@ public abstract class Creature extends GameObject
 		}
 		switch (skill.getFlyType())
 		{
+			//TARGETS FLYTYPE
 			case THROW_UP:
 			case THROW_HORIZONTAL:
+			case PUSH_HORIZONTAL:
+			case PUSH_DOWN_HORIZONTAL:
 				Location flyLoc;
 				for (Creature target : targets)
 				{
 					flyLoc = target.getFlyLocation(null, skill);
 					target.setLoc(flyLoc);
 					broadcastPacket(new FlyToLocation(target, flyLoc, skill.getFlyType(), 0));
+				}
+				break;
+			//CASTER FLYTYPE
+			case CHARGE:
+			case DUMMY:
+			case WARP_BACK:
+			case WARP_FORWARD:
+				flyLoc = getFlyLocation(null, skill);
+				if (flyLoc!=null)
+				{
+					setLoc(flyLoc);
+					broadcastPacket(new FlyToLocation(this, flyLoc, skill.getFlyType(), 0));
+				}
+				else
+				{
+					sendPacket(SystemMsg.CANNOT_SEE_TARGET);
 				}
 				break;
 		}
@@ -5307,20 +5335,25 @@ public abstract class Creature extends GameObject
 			_abnormalEffects = AbnormalEffect.NULL.getMask();
 			_abnormalEffects2 = AbnormalEffect.NULL.getMask();
 			_abnormalEffects3 = AbnormalEffect.NULL.getMask();
+			_aveList.clear();
 		}
 		else if (ae.isSpecial())
 		{
 			_abnormalEffects2 |= ae.getMask();
+			addToAveList(ae.getId());
 		}
 		else if (ae.isEvent())
 		{
 			_abnormalEffects3 |= ae.getMask();
+			addToAveList(ae.getId());
 		}
 		else
 		{
 			_abnormalEffects |= ae.getMask();
+			addToAveList(ae.getId());
 		}
 		sendChanges();
+		broadcastCharInfo();
 	}
 	
 	/**
@@ -5545,16 +5578,20 @@ public abstract class Creature extends GameObject
 		if (ae.isSpecial())
 		{
 			_abnormalEffects2 &= ~ae.getMask();
+			removeFromAveList(ae.getId());
 		}
-		if (ae.isEvent())
+		else if (ae.isEvent())
 		{
 			_abnormalEffects3 &= ~ae.getMask();
+			removeFromAveList(ae.getId());
 		}
 		else
 		{
 			_abnormalEffects &= ~ae.getMask();
+			removeFromAveList(ae.getId());
 		}
 		sendChanges();
+		broadcastCharInfo();
 	}
 	
 	/**

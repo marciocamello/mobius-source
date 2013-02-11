@@ -502,6 +502,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	{
 		getEffected().addStatFuncs(getStatFuncs());
 		getEffected().addTriggers(getTemplate());
+		
 		if (getTemplate()._abnormalEffect != AbnormalEffect.NULL)
 		{
 			getEffected().startAbnormalEffect(getTemplate()._abnormalEffect);

@@ -370,18 +370,6 @@ public final class DocumentSkill extends DocumentBase
 			for (int i = 0; i < lastLvl; i++)
 			{
 				int skilllevel = i;
-				/*
-				if (Config.ENCHANT_SKILLSID_RETAIL)
-				{
-					int current = i +1; 
-					if ((current - Integer.parseInt(levels)) > 0)	//is enchant
-					{
-						double enchantRoute = Math.ceil(current / eLevels);
-						double enchantLevel = current - Integer.parseInt(levels) - (enchantRoute * eLevels);   
-						skilllevel = (int) (100 * (enchantRoute + 1) + enchantLevel);  
-					}
-				}
-				*/
 				currentSkill.currentLevel = skilllevel;
 	
 				lineage2.gameserver.model.Skill current = currentSkill.currentSkills.get(i);
