@@ -204,7 +204,7 @@ public enum EffectType
 	/**
 	 * Field Discord.
 	 */
-	Discord(EffectDiscord.class, AbnormalEffect.CONFUSED, Stats.MENTAL_RESIST, Stats.MENTAL_POWER, true),
+	Discord(EffectDiscord.class, AbnormalEffect.WIND, Stats.MENTAL_RESIST, Stats.MENTAL_POWER, true),
 	/**
 	 * Field Enervation.
 	 */
@@ -216,7 +216,7 @@ public enum EffectType
 	/**
 	 * Field Fear.
 	 */
-	Fear(EffectFear.class, AbnormalEffect.AFFRAID, Stats.MENTAL_RESIST, Stats.MENTAL_POWER, true),
+	Fear(EffectFear.class, AbnormalEffect.FEAR, Stats.MENTAL_RESIST, Stats.MENTAL_POWER, true),
 	/**
 	 * Field Grow.
 	 */
@@ -276,11 +276,11 @@ public enum EffectType
 	/**
 	 * Field Invulnerable.
 	 */
-	Invulnerable(EffectInvulnerable.class, null, false),
+	Invulnerable(EffectInvulnerable.class, AbnormalEffect.INVULNERABLE, false),
 	/**
 	 * Field Invisible.
 	 */
-	Invisible(EffectInvisible.class, null, false),
+	Invisible(EffectInvisible.class, AbnormalEffect.STEALTH, false),
 	/**
 	 * Field LockInventory.
 	 */
@@ -452,7 +452,7 @@ public enum EffectType
 	/**
 	 * Field Bleed.
 	 */
-	Bleed(EffectDamOverTime.class, null, Stats.BLEED_RESIST, Stats.BLEED_POWER, false),
+	Bleed(EffectDamOverTime.class, AbnormalEffect.BLEEDING, Stats.BLEED_RESIST, Stats.BLEED_POWER, false),
 	/**
 	 * Field Debuff.
 	 */

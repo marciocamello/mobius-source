@@ -127,7 +127,8 @@ public class AgathionInstance extends NpcInstance
 		super.onSpawn();
 		EffectTaskManager.getInstance().schedule(new RemoveAgathion(_owner), _lifetimeCountdown);
 		_destroyTask = ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(this), _lifetimeCountdown);
-		_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new CastTask(this), 1000L, 5000L);
+		if (_skill != null)
+			_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new CastTask(this), 1000L, 5000L);
 	}
 	
 	@Override

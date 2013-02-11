@@ -81,11 +81,6 @@ public class NpcInfoPoly extends L2GameServerPacket
 	 */
 	private final TeamType _team;
 	/**
-	 * Field _abnormalEffect2. Field _abnormalEffect.
-	 */
-	private final int _abnormalEffect, _abnormalEffect2;
-	
-	/**
 	 * Constructor for NpcInfoPoly.
 	 * @param cha Player
 	 */
@@ -116,8 +111,7 @@ public class NpcInfoPoly extends L2GameServerPacket
 		_isAlikeDead = cha.isAlikeDead();
 		_name = cha.getName();
 		_title = cha.getTitle();
-		_abnormalEffect = cha.getAbnormalEffect();
-		_abnormalEffect2 = cha.getAbnormalEffect2();
+		cha.getAbnormalEffect();
 		_team = cha.getTeam();
 	}
 	
@@ -132,63 +126,6 @@ public class NpcInfoPoly extends L2GameServerPacket
 		{
 			return;
 		}
-		if (!activeChar.isTautiClient())
-		{
-			writeC(0x0c);
-			writeD(_obj.getObjectId());
-			writeD(_npcId + 1000000);
-			writeD(0x00);
-			writeD(_x);
-			writeD(_y);
-			writeD(_z);
-			writeD(_heading);
-			writeD(0x00);
-			writeD(_mAtkSpd);
-			writeD(_pAtkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_swimRunSpd);
-			writeD(_swimWalkSpd);
-			writeD(_flRunSpd);
-			writeD(_flWalkSpd);
-			writeD(_flyRunSpd);
-			writeD(_flyWalkSpd);
-			writeF(1);
-			writeF(1);
-			writeF(colRadius);
-			writeF(colHeight);
-			writeD(_rhand);
-			writeD(0);
-			writeD(_lhand);
-			writeC(1);
-			writeC(_isRunning ? 1 : 0);
-			writeC(_isInCombat ? 1 : 0);
-			writeC(_isAlikeDead ? 1 : 0);
-			writeC(_isSummoned ? 2 : 0);
-			writeS(_name);
-			writeS(_title);
-			writeD(0);
-			writeD(0);
-			writeD(0000);
-			writeD(_abnormalEffect);
-			writeD(0000);
-			writeD(0000);
-			writeD(0000);
-			writeD(0000);
-			writeC(0000);
-			writeC(_team.ordinal());
-			writeF(colRadius);
-			writeF(colHeight);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeC(0x00);
-			writeC(0x00);
-			writeD(_abnormalEffect2);
-		}
-		else
-		{
 			writeC(0x0c);
 			writeD(_obj.getObjectId());
 			writeD(_npcId + 1000000);
@@ -253,6 +190,5 @@ public class NpcInfoPoly extends L2GameServerPacket
 			writeD(0x00);
 			writeD(0x00);
 			writeD(0x00);
-		}
 	}
 }

@@ -547,13 +547,13 @@ public abstract class Playable extends Creature
 			{
 				return false;
 			}
-			if (isInZoneBattle())
-			{
-				return true;
-			}
 			if (!force && (player.getParty() != null) && (player.getParty() == pcAttacker.getParty()))
 			{
 				return false;
+			}
+			if (isInZoneBattle())
+			{
+				return true;
 			}
 			if (!force && (player.getClan() != null) && (player.getClan() == pcAttacker.getClan()))
 			{

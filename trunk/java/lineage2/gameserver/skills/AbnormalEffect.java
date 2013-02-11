@@ -20,360 +20,100 @@ import java.util.NoSuchElementException;
  */
 public enum AbnormalEffect
 {
-	/**
-	 * Field NULL.
-	 */
-	NULL("null", 0x0),
-	/**
-	 * Field BLEEDING.
-	 */
-	BLEEDING("bleeding", 0x00000001),
-	/**
-	 * Field POISON.
-	 */
-	POISON("poison", 0x00000002),
-	/**
-	 * Field REDCIRCLE.
-	 */
-	REDCIRCLE("redcircle", 0x00000004),
-	/**
-	 * Field ICE.
-	 */
-	ICE("ice", 0x00000008),
-	/**
-	 * Field AFFRAID.
-	 */
-	AFFRAID("affraid", 0x00000010),
-	/**
-	 * Field CONFUSED.
-	 */
-	CONFUSED("confused", 0x00000020),
-	/**
-	 * Field STUN.
-	 */
-	STUN("stun", 0x00000040),
-	/**
-	 * Field SLEEP.
-	 */
-	SLEEP("sleep", 0x00000080),
-	/**
-	 * Field MUTED.
-	 */
-	MUTED("muted", 0x00000100),
-	/**
-	 * Field ROOT.
-	 */
-	ROOT("root", 0x00000200),
-	/**
-	 * Field HOLD_1.
-	 */
-	HOLD_1("hold1", 0x00000400),
-	/**
-	 * Field HOLD_2.
-	 */
-	HOLD_2("hold2", 0x00000800),
-	/**
-	 * Field UNKNOWN_13.
-	 */
-	UNKNOWN_13("unk13", 0x00001000),
-	/**
-	 * Field BIG_HEAD.
-	 */
-	BIG_HEAD("bighead", 0x00002000),
-	/**
-	 * Field FLAME.
-	 */
-	FLAME("flame", 0x00004000),
-	/**
-	 * Field UNKNOWN_16.
-	 */
-	UNKNOWN_16("unk16", 0x00008000),
-	/**
-	 * Field GROW.
-	 */
-	GROW("grow", 0x00010000),
-	/**
-	 * Field FLOATING_ROOT.
-	 */
-	FLOATING_ROOT("floatroot", 0x00020000),
-	/**
-	 * Field DANCE_STUNNED.
-	 */
-	DANCE_STUNNED("dancestun", 0x00040000),
-	/**
-	 * Field FIREROOT_STUN.
-	 */
-	FIREROOT_STUN("firerootstun", 0x00080000),
-	/**
-	 * Field STEALTH.
-	 */
-	STEALTH("shadow", 0x00100000),
-	/**
-	 * Field IMPRISIONING_1.
-	 */
-	IMPRISIONING_1("imprison1", 0x00200000),
-	/**
-	 * Field IMPRISIONING_2.
-	 */
-	IMPRISIONING_2("imprison2", 0x00400000),
-	/**
-	 * Field MAGIC_CIRCLE.
-	 */
-	MAGIC_CIRCLE("magiccircle", 0x00800000),
-	/**
-	 * Field ICE2.
-	 */
-	ICE2("ice2", 0x01000000),
-	/**
-	 * Field EARTHQUAKE.
-	 */
-	EARTHQUAKE("earthquake", 0x02000000),
-	/**
-	 * Field UNKNOWN_27.
-	 */
-	UNKNOWN_27("unk27", 0x04000000),
-	/**
-	 * Field INVULNERABLE.
-	 */
-	INVULNERABLE("invul1", 0x08000000),
-	/**
-	 * Field VITALITY.
-	 */
-	VITALITY("vitality", 0x10000000),
-	/**
-	 * Field REAL_TARGET.
-	 */
-	REAL_TARGET("realtarget", 0x20000000),
-	/**
-	 * Field DEATH_MARK.
-	 */
-	DEATH_MARK("deathmark", 0x40000000),
-	/**
-	 * Field SOUL_SHOCK.
-	 */
-	SOUL_SHOCK("soulshock", 0x80000000),
-	/**
-	 * Field S_INVULNERABLE.
-	 */
-	S_INVULNERABLE("invul2", 0x00000001, true),
-	/**
-	 * Field S_AIR_STUN.
-	 */
-	S_AIR_STUN("redglow", 0x00000002, true),
-	/**
-	 * Field S_AIR_ROOT.
-	 */
-	S_AIR_ROOT("redglow2", 0x00000004, true),
-	/**
-	 * Field S_BAGUETTE_SWORD.
-	 */
-	S_BAGUETTE_SWORD("baguettesword", 0x00000008, true),
-	/**
-	 * Field S_YELLOW_AFFRO.
-	 */
-	S_YELLOW_AFFRO("yellowafro", 0x00000010, true),
-	/**
-	 * Field S_PINK_AFFRO.
-	 */
-	S_PINK_AFFRO("pinkafro", 0x00000020, true),
-	/**
-	 * Field S_BLACK_AFFRO.
-	 */
-	S_BLACK_AFFRO("blackafro", 0x00000040, true),
-	/**
-	 * Field S_UNKNOWN8.
-	 */
-	S_UNKNOWN8("sunk8", 0x00000080, true),
-	/**
-	 * Field S_STIGMA.
-	 */
-	S_STIGMA("stigma", 0x00000100, true),
-	/**
-	 * Field S_UNKNOWN10.
-	 */
-	S_UNKNOWN10("sunk10", 0x00000200, true),
-	/**
-	 * Field FROZEN_PILLAR.
-	 */
-	FROZEN_PILLAR("frozenpillar", 0x00000400, true),
-	/**
-	 * Field S_UNKNOWN12.
-	 */
-	S_UNKNOWN12("sunk12", 0x00000800, true),
-	/**
-	 * Field S_DESTINO_SET.
-	 */
-	S_DESTINO_SET("vesper_red", 0x00001000, true),
-	/**
-	 * Field S_VESPER_SET.
-	 */
-	S_VESPER_SET("vesper_noble", 0x00002000, true),
-	/**
-	 * Field S_SOA_RESP.
-	 */
-	S_SOA_RESP("soa_respawn", 0x00004000, true),
-	/**
-	 * Field S_ARCANE_SHIELD.
-	 */
-	S_ARCANE_SHIELD("arcane_invul", 0x00008000, true),
-	/**
-	 * Field S_UNKNOWN17.
-	 */
-	S_UNKNOWN17("sunk17", 0x00010000, true),
-	/**
-	 * Field S_UNKNOWN18.
-	 */
-	S_UNKNOWN18("sunk18", 0x00020000, true),
-	/**
-	 * Field S_UNKNOWN19.
-	 */
-	S_UNKNOWN19("sunk19", 0x00040000, true),
-	/**
-	 * Field S_NAVIT.
-	 */
-	S_NAVIT("nevitSystem", 0x00080000, true),
-	/**
-	 * Field S_UNKNOWN21.
-	 */
-	S_UNKNOWN21("sunk21", 0x00100000, true),
-	/**
-	 * Field S_UNKNOWN22.
-	 */
-	S_UNKNOWN22("sunk22", 0x00200000, true),
-	/**
-	 * Field S_UNKNOWN23.
-	 */
-	S_UNKNOWN23("sunk23", 0x00400000, true),
-	/**
-	 * Field S_UNKNOWN24.
-	 */
-	S_UNKNOWN24("sunk24", 0x00800000, true),
-	/**
-	 * Field S_UNKNOWN25.
-	 */
-	S_UNKNOWN25("sunk25", 0x01000000, true),
-	/**
-	 * Field S_UNKNOWN26.
-	 */
-	S_UNKNOWN26("sunk26", 0x02000000, true),
-	/**
-	 * Field S_UNKNOWN27.
-	 */
-	S_UNKNOWN27("sunk27", 0x04000000, true),
-	/**
-	 * Field S_UNKNOWN28.
-	 */
-	S_UNKNOWN28("sunk28", 0x08000000, true),
-	/**
-	 * Field S_UNKNOWN29.
-	 */
-	S_UNKNOWN29("sunk29", 0x10000000, true),
-	/**
-	 * Field S_UNKNOWN30.
-	 */
-	S_UNKNOWN30("sunk30", 0x20000000, true),
-	/**
-	 * Field S_UNKNOWN31.
-	 */
-	S_UNKNOWN31("sunk31", 0x40000000, true),
-	/**
-	 * Field S_UNKNOWN32.
-	 */
-	S_UNKNOWN32("sunk32", 0x80000000, true),
-	/**
-	 * Field E_AFRO_1.
-	 */
-	E_AFRO_1("afrobaguette1", 0x000001, false, true),
-	/**
-	 * Field E_AFRO_2.
-	 */
-	E_AFRO_2("afrobaguette2", 0x000002, false, true),
-	/**
-	 * Field E_AFRO_3.
-	 */
-	E_AFRO_3("afrobaguette3", 0x000004, false, true),
-	/**
-	 * Field E_EVASWRATH.
-	 */
-	E_EVASWRATH("evaswrath", 0x000008, false, true),
-	/**
-	 * Field E_HEADPHONE.
-	 */
-	E_HEADPHONE("headphone", 0x000010, false, true),
-	/**
-	 * Field E_VESPER_1.
-	 */
-	E_VESPER_1("vesper1", 0x000020, false, true),
-	/**
-	 * Field E_VESPER_2.
-	 */
-	E_VESPER_2("vesper2", 0x000040, false, true),
-	/**
-	 * Field E_VESPER_3.
-	 */
-	E_VESPER_3("vesper3", 0x000080, false, true);
-	/**
-	 * Field _mask.
-	 */
+	NULL("null", 0x0, 0),
+	BLEEDING("bleeding", 0x000001, 1),
+	POISON("poison", 0x000002, 2),
+	REDCIRCLE("redcircle", 0x000004, 3),
+	ICE("ice", 0x000008, 4),
+	WIND("wind", 0x000010, 5),
+	FEAR("fear", 0x000020, 6),
+	STUN("stun", 0x000040, 7),
+	SLEEP("sleep", 0x000080, 8),
+	MUTED("mute", 0x000100, 9),
+	ROOT("root", 0x000200, 10),
+	HOLD_1("hold1", 0x000400, 11),
+	HOLD_2("hold2", 0x000800, 12),
+	UNKNOWN_13("unknown13", 0x001000, 13),
+	BIG_HEAD("bighead", 0x002000, 14),
+	FLAME("flame", 0x004000, 15),
+	ARCANE_SHIELD("arcane_shield", 0x008000, 16),
+	GROW("grow", 0x010000, 17),
+	FLOATING_ROOT("floatroot", 0x020000, 18),
+	DANCE_STUNNED("dancestun", 0x040000, 19),
+	FIREROOT_STUN("firerootstun", 0x080000, 20),
+	STEALTH("shadow", 0x100000, 21),
+	IMPRISIONING_1("imprison1", 0x200000, 22),
+	IMPRISIONING_2("imprison2", 0x400000, 23),
+	MAGIC_CIRCLE("magiccircle", 0x800000, 24),
+	ICE2("ice2", 0x1000000, 25),
+	EARTHQUAKE("earthquake", 0x2000000, 26),
+	UNKNOWN_27("unknown27", 0x4000000, 27),
+	INVULNERABLE("invul1", 0x8000000, 28),
+	VITALITY("vitality", 0x10000000, 29),
+	REAL_TARGET("realtarget", 0x20000000, 30),
+	DEATH_MARK("deathmark", 0x40000000, 31),
+	SKULL_FEAR("soulshock", 0x80000000, 32),
+	
+	// special effects
+	S_INVINCIBLE("invul2", 0x000001, 33),
+	S_AIR_STUN("airstun", 0x000002, 34),
+	S_AIR_ROOT("airroot", 0x000004, 35),
+	S_BAGUETTE_SWORD("baguettesword", 0x000008, 36),
+	S_YELLOW_AFFRO("yellowafro", 0x000010, 37),
+	S_PINK_AFFRO("pinkafro", 0x000020, 38),
+	S_BLACK_AFFRO("blackafro", 0x000040, 39),
+	S_UNKNOWN8("unknown8", 0x000080, 40),
+	S_STIGMA_SHILIEN("stigma", 0x000100, 41),
+	S_STAKATOROOT("stakatoroot", 0x000200, 42),
+	S_FREEZING("frozenpillar", 0x000400, 43),
+	S_VESPER_S("vesper_s", 0x000800, 44),
+	S_VESPER_C("vesper_c", 0x001000, 45),
+	S_VESPER_D("vesper_d", 0x002000, 46),
+	S_47("s_47", 0x004000, 47),
+	S_48("s_48", 0x008000, 48),
+	S_49("s_49", 0x010000, 49),
+	S_50("s_50", 0x020000, 50),
+	S_51("s_51", 0x040000, 51),
+	S_52("s_52", 0x080000, 52),
+	S_53("s_53", 0x100000, 53),
+	S_54("s_54", 0x200000, 57),
+	S_55("s_55", 0x400000, 55),
+	S_56("s_56", 0x800000, 56),
+	S_57("s_57", 0x1000000, 57),
+	S_58("s_58", 0x2000000, 58),
+	S_59("s_59", 0x4000000, 59),
+	S_60("s_60", 0x8000000, 60),
+	S_61("s_61", 0x10000000, 61),
+	S_62("s_62", 0x20000000, 62),
+	S_63("s_63", 0x40000000, 63),
+	S_64("s_64", 0x80000000, 64),
+	
+	// event effects
+	E_AFRO_1("afrobaguette1", 0x000001, 0),
+	E_AFRO_2("afrobaguette2", 0x000002, 0),
+	E_AFRO_3("afrobaguette3", 0x000004, 0),
+	E_EVASWRATH("evaswrath", 0x000008, 0),
+	E_HEADPHONE("headphone", 0x000010, 0),
+	E_VESPER_1("vesper1", 0x000020, 0),
+	E_VESPER_2("vesper2", 0x000040, 0),
+	E_VESPER_3("vesper3", 0x000080, 0),
+	HUNTING_BONUS("hunting_bonus", 0x80000, 0),
+	AVE_ADVENT_BLESSING("ave_advent_blessing", 0x080000, 0); //Add NevitAdvent by pmq
+
 	private final int _mask;
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _special.
-	 */
-	private final boolean _special;
-	/**
-	 * Field _event.
-	 */
-	private final boolean _event;
+	private final int _id;
 	
-	/**
-	 * Constructor for AbnormalEffect.
-	 * @param name String
-	 * @param mask int
-	 */
-	private AbnormalEffect(String name, int mask)
+	private AbnormalEffect(String name, int mask, int id)
 	{
 		_name = name;
 		_mask = mask;
-		_special = false;
-		_event = false;
-	}
-	
-	/**
-	 * Constructor for AbnormalEffect.
-	 * @param name String
-	 * @param mask int
-	 * @param special boolean
-	 */
-	private AbnormalEffect(String name, int mask, boolean special)
-	{
-		_name = name;
-		_mask = mask;
-		_special = special;
-		_event = false;
-	}
-	
-	/**
-	 * Constructor for AbnormalEffect.
-	 * @param name String
-	 * @param mask int
-	 * @param special boolean
-	 * @param event boolean
-	 */
-	private AbnormalEffect(String name, int mask, boolean special, boolean event)
-	{
-		_name = name;
-		_mask = mask;
-		_special = special;
-		_event = event;
+		_id = id;
 	}
 	
 	/**
 	 * Method getMask.
-	 * @return int
+	 * @return integer
 	 */
 	public final int getMask()
 	{
@@ -390,12 +130,21 @@ public enum AbnormalEffect
 	}
 	
 	/**
+	 * Method getName.
+	 * @return integer
+	 */
+	public final int getId()
+	{
+		return _id;
+	}
+	
+	/**
 	 * Method isSpecial.
 	 * @return boolean
 	 */
 	public final boolean isSpecial()
 	{
-		return _special;
+		return getId()>32;
 	}
 	
 	/**
@@ -404,7 +153,7 @@ public enum AbnormalEffect
 	 */
 	public final boolean isEvent()
 	{
-		return _event;
+		return false;
 	}
 	
 	/**

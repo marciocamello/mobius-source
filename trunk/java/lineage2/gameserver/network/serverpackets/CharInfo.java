@@ -12,6 +12,8 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import javolution.util.FastList;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.instancemanager.ReflectionManager;
@@ -44,13 +46,13 @@ public class CharInfo extends L2GameServerPacket
 	 */
 	private int[][] _inv;
 	/**
-	 * Field mCritRate. Field maccuracy. Field mevasion. Field _pAtkSpd. Field _mAtkSpd.
+	 * Field _pAtkSpd. Field _mAtkSpd.
 	 */
-	private int _mAtkSpd, _pAtkSpd, mevasion, maccuracy, mCritRate;
+	private int _mAtkSpd, _pAtkSpd;
 	/**
-	 * Field _flyWalkSpd. Field _flyRunSpd. Field _flWalkSpd. Field _flRunSpd. Field _swimSpd. Field _walkSpd. Field _runSpd. Field _swimRunSpd. Field _swimWalkSpd.
+	 * Field _flyWalkSpd. Field _flyRunSpd. Field _flWalkSpd. Field _flRunSpd. Field _walkSpd. Field _runSpd. Field _swimRunSpd. Field _swimWalkSpd.
 	 */
-	private int _swimWalkSpd, _swimRunSpd, _runSpd, _walkSpd, _swimSpd, _flRunSpd, _flWalkSpd, _flyRunSpd, _flyWalkSpd;
+	private int _swimWalkSpd, _swimRunSpd, _runSpd, _walkSpd, _flRunSpd, _flWalkSpd, _flyRunSpd, _flyWalkSpd;
 	/**
 	 * Field _fishLoc. Field _loc.
 	 */
@@ -68,9 +70,9 @@ public class CharInfo extends L2GameServerPacket
 	 */
 	private double speed_move, speed_atack, col_radius, col_height;
 	/**
-	 * Field _abnormalEffect2. Field _abnormalEffect. Field face. Field hair_color. Field hair_style.
+	 * Field face. Field hair_color. Field hair_style.
 	 */
-	private int hair_style, hair_color, face, _abnormalEffect, _abnormalEffect2;
+	private int hair_style, hair_color, face;
 	/**
 	 * Field class_id. Field ally_crest_id. Field ally_id. Field large_clan_crest_id. Field clan_crest_id. Field clan_id.
 	 */
@@ -106,8 +108,8 @@ public class CharInfo extends L2GameServerPacket
 	/**
 	 * Field maxMP. Field curMP. Field maxHP. Field curHP. Field curCP.
 	 */
-	@SuppressWarnings("unused")
 	private int curCP, curHP, maxHP, curMP, maxMP;
+	private FastList<Integer> _aveList;
 	
 	/**
 	 * Constructor for CharInfo.
@@ -240,7 +242,6 @@ public class CharInfo extends L2GameServerPacket
 			_flyRunSpd = 0;
 			_flyWalkSpd = 0;
 		}
-		_swimSpd = player.getSwimSpeed();
 		_race = player.getRace().ordinal();
 		_swimRunSpd = player.getSwimRunSpeed();
 		_swimWalkSpd = player.getSwimWalkSpeed();
@@ -268,8 +269,7 @@ public class CharInfo extends L2GameServerPacket
 		_dead = player.isAlikeDead() ? 1 : 0;
 		private_store = player.isInObserverMode() ? Player.STORE_OBSERVING_GAMES : player.getPrivateStoreType();
 		cubics = player.getCubics().toArray(new EffectCubic[player.getCubics().size()]);
-		_abnormalEffect = player.getAbnormalEffect();
-		_abnormalEffect2 = player.getAbnormalEffect2();
+		player.getAbnormalEffect();
 		rec_have = player.isGM() ? 0 : player.getRecomHave();
 		class_id = player.getClassId().getId();
 		_team = player.getTeam();
@@ -284,14 +284,13 @@ public class CharInfo extends L2GameServerPacket
 		_agathion = player.getAgathionId();
 		_isPartyRoomLeader = (player.getMatchingRoom() != null) && (player.getMatchingRoom().getType() == MatchingRoom.PARTY_MATCHING) && (player.getMatchingRoom().getLeader() == player);
 		_isFlying = player.isInFlyingTransform();
-		mevasion = player.getMEvasionRate(null);
-		maccuracy = player.getMAccuracy();
-		mCritRate = (int) player.getMagicCriticalRate(null, null);
+		player.getMEvasionRate(null);
 		curCP = (int) player.getCurrentCp();
 		curHP = (int) player.getCurrentHp();
 		maxHP = player.getMaxHp();
 		curMP = (int) player.getCurrentMp();
 		maxMP = player.getMaxMp();
+		_aveList = player.getAveList();
 	}
 	
 	/**
@@ -314,108 +313,6 @@ public class CharInfo extends L2GameServerPacket
 			_log.error("You cant send CharInfo about his character to active user!!!");
 			return;
 		}
-		if (!activeChar.isTautiClient())
-		{
-			writeC(0x31);
-			writeD(_loc.x);
-			writeD(_loc.y);
-			writeD(_loc.z + Config.CLIENT_Z_SHIFT);
-			writeD(_clanBoatObjectId);
-			writeD(_objId);
-			writeS(_name);
-			writeD(_race);
-			writeD(_sex);
-			writeD(base_class);
-			for (int PAPERDOLL_ID : PAPERDOLL_ORDER)
-			{
-				writeD(_inv[PAPERDOLL_ID][0]);
-			}
-			for (int PAPERDOLL_ID : PAPERDOLL_ORDER)
-			{
-				writeD(_inv[PAPERDOLL_ID][1]);
-			}
-			writeD(0x01);
-			writeD(0x00);
-			writeD(pvp_flag);
-			writeD(karma);
-			writeD(mevasion);
-			writeD(maccuracy);
-			writeD(mCritRate);
-			writeD(_mAtkSpd);
-			writeD(_pAtkSpd);
-			writeD(0x00);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_swimSpd);
-			writeD(_swimSpd);
-			writeD(_flRunSpd);
-			writeD(_flWalkSpd);
-			writeD(_flyRunSpd);
-			writeD(_flyWalkSpd);
-			writeF(speed_move);
-			writeF(speed_atack);
-			writeF(col_radius);
-			writeF(col_height);
-			writeD(hair_style);
-			writeD(hair_color);
-			writeD(face);
-			writeS(_title);
-			writeD(clan_id);
-			writeD(clan_crest_id);
-			writeD(ally_id);
-			writeD(ally_crest_id);
-			writeC(_sit);
-			writeC(_run);
-			writeC(_combat);
-			writeC(_dead);
-			writeC(0x00);
-			writeC(mount_type);
-			writeC(private_store);
-			writeH(cubics.length);
-			for (EffectCubic cubic : cubics)
-			{
-				writeH(cubic == null ? 0 : cubic.getId());
-			}
-			writeC(_isPartyRoomLeader ? 0x01 : 0x00);
-			writeD(_abnormalEffect);
-			writeC(_isFlying ? 0x02 : 0x00);
-			writeH(rec_have);
-			writeD(mount_id);
-			writeD(class_id);
-			writeD(0x00);
-			writeC(_enchant);
-			writeC(_team.ordinal());
-			writeD(large_clan_crest_id);
-			writeC(_noble);
-			writeC(_hero);
-			writeC(_fishing);
-			writeD(_fishLoc.x);
-			writeD(_fishLoc.y);
-			writeD(_fishLoc.z);
-			writeD(_nameColor);
-			writeD(_loc.h);
-			writeD(plg_class);
-			writeD(pledge_type);
-			writeD(_title_color);
-			writeD(cw_level);
-			writeD(clan_rep_score);
-			writeD(_transform);
-			writeD(_agathion);
-			writeD(0x01);
-			writeD(_abnormalEffect2);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(curHP);
-			writeD(maxHP);
-			writeD(curMP);
-			writeD(maxMP);
-			writeD(0x00);
-			writeC(0x00);
-		}
-		else
-		{
 			writeC(0x31);
 			writeD(_loc.x);
 			writeD(_loc.y);
@@ -436,18 +333,18 @@ public class CharInfo extends L2GameServerPacket
 				writeH(0x00);
 			}
 			writeD(0x00);
+			writeD(0x01);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
 			writeD(0x00);
 			writeD(pvp_flag);
 			writeD(karma);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
 			writeD(_mAtkSpd);
 			writeD(_pAtkSpd);
 			writeD(0x00);
@@ -511,17 +408,27 @@ public class CharInfo extends L2GameServerPacket
 			writeD(0x00);
 			writeD(0x00);
 			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
+			
+			writeD(curCP);
+			writeD(maxHP);
+			writeD(curHP);
+			writeD(maxMP);
+			writeD(curMP);
+
 			writeD(0x00);
 			writeD(0x00);
 			writeC(0x00);
-			writeD(0x00);
-			writeC(0x00);
-		}
+
+			if (_aveList!=null)
+			{
+				writeD(_aveList.size());
+				for(int i : _aveList)
+				{
+					writeD(i);
+				}
+			}
+			else
+				writeD(0x00);
 	}
 	
 	/**

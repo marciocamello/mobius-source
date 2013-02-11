@@ -12,6 +12,8 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import java.util.List;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.base.TeamType;
@@ -33,9 +35,9 @@ public class PetInfo extends L2GameServerPacket
 	 */
 	private int rideable;
 	/**
-	 * Field _abnormalEffect2. Field _abnormalEffect. Field level. Field _sp. Field dead. Field incombat. Field runing. Field npc_id. Field obj_id. Field _type.
+	 * Field level. Field _sp. Field dead. Field incombat. Field runing. Field npc_id. Field obj_id. Field _type.
 	 */
-	private final int _type, obj_id, npc_id, runing, incombat, dead, _sp, level, _abnormalEffect, _abnormalEffect2;
+	private final int _type, obj_id, npc_id, runing, incombat, dead, _sp, level;
 	/**
 	 * Field maxLoad. Field curLoad. Field maxMp. Field curMp. Field maxHp. Field curHp. Field maxFed. Field curFed.
 	 */
@@ -88,6 +90,7 @@ public class PetInfo extends L2GameServerPacket
 	 * Field summonPointsMax. Field summonPoint.
 	 */
 	private final int summonPoint, summonPointsMax;
+	private List<Integer> _aveList;
 	
 	/**
 	 * Constructor for PetInfo.
@@ -133,8 +136,7 @@ public class PetInfo extends L2GameServerPacket
 		Accuracy = summon.getAccuracy();
 		Evasion = summon.getEvasionRate(null);
 		Crit = summon.getCriticalHit(null, null);
-		_abnormalEffect = summon.getAbnormalEffect();
-		_abnormalEffect2 = summon.getAbnormalEffect2();
+		summon.getAbnormalEffect();
 		if (summon.getPlayer().getTransformation() != 0)
 		{
 			rideable = 0;
@@ -153,6 +155,7 @@ public class PetInfo extends L2GameServerPacket
 		_mCrit = (int) summon.getMagicCriticalRate(null, null);
 		summonPoint = summon.getPlayer().getSummonList().getUsedPoints();
 		summonPointsMax = summon.getPlayer().getSummonPointMax();
+		_aveList = summon.getAveList();
 	}
 	
 	/**
@@ -176,92 +179,12 @@ public class PetInfo extends L2GameServerPacket
 		{
 			return;
 		}
-		if (!activeChar.isTautiClient())
-		{
-			writeC(0xB2);
-			writeD(_type);
-			writeD(obj_id);
-			writeD(npc_id + 1000000);
-			writeD(0);
-			writeD(_loc.x);
-			writeD(_loc.y);
-			writeD(_loc.z);
-			writeD(_loc.h);
-			writeD(0);
-			writeD(MAtkSpd);
-			writeD(PAtkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeF(1);
-			writeF(1);
-			writeF(col_radius);
-			writeF(col_height);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeC(1);
-			writeC(runing);
-			writeC(incombat);
-			writeC(dead);
-			writeC(_showSpawnAnimation);
-			writeD(-1);
-			writeS(_name);
-			writeD(-1);
-			writeS(title);
-			writeD(1);
-			writeD(pvp_flag);
-			writeD(karma);
-			writeD(curFed);
-			writeD(maxFed);
-			writeD(curHp);
-			writeD(maxHp);
-			writeD(curMp);
-			writeD(maxMp);
-			writeD(_sp);
-			writeD(level);
-			writeQ(exp);
-			writeQ(exp_this_lvl);
-			writeQ(exp_next_lvl);
-			writeD(curLoad);
-			writeD(maxLoad);
-			writeD(PAtk);
-			writeD(PDef);
-			writeD(MAtk);
-			writeD(MDef);
-			writeD(_mEvasion);
-			writeD(_mAccuracy);
-			writeD(_mCrit);
-			writeD(Accuracy);
-			writeD(Evasion);
-			writeD(Crit);
-			writeD(_runSpd);
-			writeD(PAtkSpd);
-			writeD(MAtkSpd);
-			writeD(_abnormalEffect);
-			writeD(rideable);
-			writeC(0);
-			writeC(_team.ordinal());
-			writeD(ss);
-			writeD(sps);
-			writeD(type);
-			writeD(_abnormalEffect2);
-			writeD(0x00);
-			writeD(summonPoint);
-			writeD(summonPointsMax);
-		}
-		else
-		{
 			writeC(0xb2);
 			writeD(_type);
 			writeD(obj_id);
 			writeD(npc_id + 1000000);
 			writeD(0);
+			
 			writeD(_loc.x);
 			writeD(_loc.y);
 			writeD(_loc.z);
@@ -277,6 +200,7 @@ public class PetInfo extends L2GameServerPacket
 			writeD(_walkSpd);
 			writeD(_runSpd);
 			writeD(_walkSpd);
+
 			writeF(1);
 			writeF(1);
 			writeF(col_radius);
@@ -322,8 +246,12 @@ public class PetInfo extends L2GameServerPacket
 			writeD(_runSpd);
 			writeD(PAtkSpd);
 			writeD(MAtkSpd);
-			writeD(rideable);
+			
+			writeH(rideable);
+			
 			writeC(0);
+			writeH(0);
+			
 			writeC(_team.ordinal());
 			writeD(ss);
 			writeD(sps);
@@ -331,7 +259,16 @@ public class PetInfo extends L2GameServerPacket
 			writeD(0x00);
 			writeD(summonPoint);
 			writeD(summonPointsMax);
-			writeD(0x00);
-		}
+
+			if (_aveList!=null)
+			{
+				writeD(_aveList.size());
+				for(int i : _aveList)
+				{
+					writeD(i);
+				}
+			}
+			else
+				writeD(0x00);
 	}
 }
