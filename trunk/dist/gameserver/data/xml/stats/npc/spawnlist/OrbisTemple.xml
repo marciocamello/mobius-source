@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<list>
+	<spawns name="OrbisTemple">
+ <spawn npcId="22913" x="211867" y="118011" z="-12736" heading="16040"/>
+ <spawn npcId="22913" x="212236" y="118981" z="-12736" heading="48944"/>
+ <spawn npcId="22913" x="212254" y="118132" z="-12736" heading="16928"/>
+ <spawn npcId="22913" x="212847" y="118106" z="-12736" heading="16296"/>
+ <spawn npcId="22913" x="212859" y="119020" z="-12736" heading="49736"/>
+ <spawn npcId="22913" x="213332" y="113019" z="-12800" heading="48760"/>
+ <spawn npcId="22913" x="213336" y="113272" z="-12800" heading="49416"/>
+ <spawn npcId="22913" x="213441" y="112693" z="-12800" heading="0"/>
+ <spawn npcId="22913" x="213576" y="112104" z="-12800" heading="15592"/>
+ <spawn npcId="22913" x="213787" y="112192" z="-12800" heading="16824"/>
+ <spawn npcId="22913" x="214177" y="112318" z="-12800" heading="16416"/>
+ <spawn npcId="22913" x="214561" y="112197" z="-12800" heading="16656"/>
+ <spawn npcId="22913" x="215010" y="112377" z="-12800" heading="16352"/>
+ <spawn npcId="22913" x="215157" y="112247" z="-12800" heading="16600"/>
+ <spawn npcId="22913" x="215175" y="112707" z="-12800" heading="33000"/>
+ <spawn npcId="22913" x="215302" y="113280" z="-12800" heading="49352"/>
+ <spawn npcId="22913" x="215304" y="113015" z="-12800" heading="49096"/>
+ <spawn npcId="22913" x="215743" y="118109" z="-12736" heading="15672"/>
+ <spawn npcId="22913" x="216062" y="118955" z="-12736" heading="49792"/>
+ <spawn npcId="22913" x="216319" y="118136" z="-12736" heading="16488"/>
+ <spawn npcId="22913" x="216450" y="119103" z="-12736" heading="49416"/>
+ <spawn npcId="22913" x="216701" y="118014" z="-12736" heading="16128"/>
+ <spawn npcId="22913" x="216831" y="118963" z="-12736" heading="49552"/>
+ <spawn npcId="22913" x="216844" y="114829" z="-12736" heading="0"/>
+ <spawn npcId="22913" x="216989" y="114302" z="-12736" heading="16208"/>
+ <spawn npcId="22913" x="217082" y="116738" z="-12736" heading="49736"/>
+ <spawn npcId="22913" x="217089" y="118144" z="-12736" heading="16304"/>
+ <spawn npcId="22913" x="217369" y="114298" z="-12736" heading="16120"/>
+ <spawn npcId="22913" x="217473" y="116741" z="-12736" heading="48976"/>
+ <spawn npcId="22913" x="217474" y="119014" z="-12736" heading="48608"/>
+ <spawn npcId="22913" x="217757" y="114302" z="-12736" heading="16664"/>
+ <spawn npcId="22913" x="217858" y="116742" z="-12736" heading="48264"/>
+ <spawn npcId="22916" x="211134" y="118106" z="-12736" heading="15984"/>
+ <spawn npcId="22916" x="211614" y="119109" z="-12736" heading="48656"/>
+ <spawn npcId="22916" x="211741" y="118140" z="-12736" heading="16528"/>
+ <spawn npcId="22916" x="211996" y="118983" z="-12736" heading="49096"/>
+ <spawn npcId="22916" x="212124" y="118014" z="-12736" heading="16600"/>
+ <spawn npcId="22916" x="212380" y="119105" z="-12736" heading="49176"/>
+ <spawn npcId="22916" x="212507" y="118135" z="-12736" heading="16464"/>
+ <spawn npcId="22916" x="213300" y="112381" z="-12800" heading="15768"/>
+ <spawn npcId="22916" x="213439" y="112889" z="-12800" heading="0"/>
+ <spawn npcId="22916" x="213444" y="112245" z="-12800" heading="16624"/>
+ <spawn npcId="22916" x="213591" y="113017" z="-12800" heading="48680"/>
+ <spawn npcId="22916" x="213596" y="113281" z="-12800" heading="49232"/>
+ <spawn npcId="22916" x="214043" y="112192" z="-12800" heading="15592"/>
+ <spawn npcId="22916" x="214434" y="112319" z="-12800" heading="17168"/>
+ <spawn npcId="22916" x="214690" y="112320" z="-12800" heading="16240"/>
+ <spawn npcId="22916" x="215012" y="112100" z="-12800" heading="16824"/>
+ <spawn npcId="22916" x="215173" y="113150" z="-12800" heading="48288"/>
+ <spawn npcId="22916" x="215177" y="112881" z="-12800" heading="33168"/>
+ <spawn npcId="22916" x="215293" y="112378" z="-12800" heading="15816"/>
+ <spawn npcId="22916" x="216057" y="118146" z="-12736" heading="16400"/>
+ <spawn npcId="22916" x="216192" y="119094" z="-12736" heading="49384"/>
+ <spawn npcId="22916" x="216448" y="118011" z="-12736" heading="16480"/>
+ <spawn npcId="22916" x="216574" y="118958" z="-12736" heading="49096"/>
+ <spawn npcId="22916" x="216830" y="118143" z="-12736" heading="15832"/>
+ <spawn npcId="22916" x="216845" y="116273" z="-12736" heading="0"/>
+ <spawn npcId="22916" x="216852" y="114571" z="-12736" heading="0"/>
+ <spawn npcId="22916" x="216961" y="119100" z="-12736" heading="48600"/>
+ <spawn npcId="22916" x="217115" y="114302" z="-12736" heading="16728"/>
+ <spawn npcId="22916" x="217214" y="116742" z="-12736" heading="49352"/>
+ <spawn npcId="22916" x="217458" y="118108" z="-12736" heading="16440"/>
+ <spawn npcId="22916" x="217495" y="114297" z="-12736" heading="16744"/>
+ <spawn npcId="22916" x="217601" y="116736" z="-12736" heading="49160"/>
+ <spawn npcId="22916" x="217881" y="114303" z="-12736" heading="16288"/>
+ <spawn npcId="22916" x="218030" y="114567" z="-12736" heading="32960"/>
+ <spawn npcId="22919" x="211144" y="119020" z="-12736" heading="49096"/>
+ <spawn npcId="22919" x="211615" y="118013" z="-12736" heading="16272"/>
+ <spawn npcId="22919" x="211735" y="118980" z="-12736" heading="49216"/>
+ <spawn npcId="22919" x="211995" y="118135" z="-12736" heading="16616"/>
+ <spawn npcId="22919" x="212125" y="119109" z="-12736" heading="49296"/>
+ <spawn npcId="22919" x="212376" y="118009" z="-12736" heading="16408"/>
+ <spawn npcId="22919" x="212506" y="118980" z="-12736" heading="49224"/>
+ <spawn npcId="22919" x="213301" y="112105" z="-12800" heading="16712"/>
+ <spawn npcId="22919" x="213443" y="112519" z="-12800" heading="0"/>
+ <spawn npcId="22919" x="213464" y="113146" z="-12800" heading="49144"/>
+ <spawn npcId="22919" x="213585" y="112381" z="-12800" heading="16568"/>
+ <spawn npcId="22919" x="213920" y="112318" z="-12800" heading="15936"/>
+ <spawn npcId="22919" x="214304" y="112195" z="-12800" heading="16400"/>
+ <spawn npcId="22919" x="214817" y="112202" z="-12800" heading="16448"/>
+ <spawn npcId="22919" x="215044" y="113017" z="-12800" heading="49288"/>
+ <spawn npcId="22919" x="215046" y="113277" z="-12800" heading="49160"/>
+ <spawn npcId="22919" x="215171" y="112523" z="-12800" heading="32232"/>
+ <spawn npcId="22919" x="215292" y="112106" z="-12800" heading="15856"/>
+ <spawn npcId="22919" x="215766" y="119016" z="-12736" heading="49528"/>
+ <spawn npcId="22919" x="216188" y="118014" z="-12736" heading="16360"/>
+ <spawn npcId="22919" x="216319" y="118958" z="-12736" heading="48968"/>
+ <spawn npcId="22919" x="216574" y="118144" z="-12736" heading="16680"/>
+ <spawn npcId="22919" x="216702" y="119106" z="-12736" heading="49264"/>
+ <spawn npcId="22919" x="216848" y="116534" z="-12736" heading="0"/>
+ <spawn npcId="22919" x="216958" y="116737" z="-12736" heading="49224"/>
+ <spawn npcId="22919" x="216959" y="118015" z="-12736" heading="16536"/>
+ <spawn npcId="22919" x="216974" y="114694" z="-12736" heading="0"/>
+ <spawn npcId="22919" x="216978" y="116409" z="-12736" heading="0"/>
+ <spawn npcId="22919" x="217085" y="118964" z="-12736" heading="49104"/>
+ <spawn npcId="22919" x="217104" y="114564" z="-12736" heading="0"/>
+ <spawn npcId="22919" x="217242" y="114305" z="-12736" heading="15928"/>
+ <spawn npcId="22919" x="217344" y="116742" z="-12736" heading="48552"/>
+ <spawn npcId="22919" x="217625" y="114304" z="-12736" heading="16032"/>
+ <spawn npcId="22919" x="217729" y="116736" z="-12736" heading="49056"/>
+ <spawn npcId="22919" x="217769" y="114564" z="-12736" heading="32984"/>
+ <spawn npcId="22925" x="208280" y="112065" z="-12544" heading="15520"/>
+ <spawn npcId="22925" x="208288" y="113786" z="-12544" heading="0"/>
+ <spawn npcId="22925" x="208288" y="115646" z="-12480" heading="17304"/>
+ <spawn npcId="22925" x="208527" y="112717" z="-12544" heading="16864"/>
+ <spawn npcId="22925" x="208527" y="113131" z="-12544" heading="16496"/>
+ <spawn npcId="22925" x="208527" y="116735" z="-12480" heading="16752"/>
+ <spawn npcId="22925" x="208535" y="116305" z="-12480" heading="16464"/>
+ <spawn npcId="22925" x="208736" y="117332" z="-12480" heading="17256"/>
+ <spawn npcId="22925" x="208938" y="113127" z="-12544" heading="16784"/>
+ <spawn npcId="22925" x="208942" y="116733" z="-12480" heading="16888"/>
+ <spawn npcId="22925" x="208945" y="116295" z="-12480" heading="17528"/>
+ <spawn npcId="22925" x="208952" y="112703" z="-12544" heading="17032"/>
+ <spawn npcId="22925" x="209193" y="113794" z="-12544" heading="33136"/>
+ <spawn npcId="22925" x="209201" y="115653" z="-12480" heading="15816"/>
+ <spawn npcId="22925" x="209205" y="112070" z="-12544" heading="17472"/>
+ <spawn npcId="22927" x="219886" y="117363" z="-12480" heading="16704"/>
+ <spawn npcId="32892" x="210424" y="50504" z="-8433" heading="0"/>
+ <!--Стражи-->
+<spawn npcId="22911" x="213704" y="54264" z="-8702" heading="14325"/>
+<spawn npcId="22911" x="213960" y="54264" z="-8702" heading="14325"/>
+<spawn npcId="22911" x="214296" y="54264" z="-8701" heading="14325"/>
+<spawn npcId="22911" x="214680" y="54264" z="-8702" heading="14325"/>
+<spawn npcId="22911" x="215080" y="54264" z="-8701" heading="14325"/>
+<spawn npcId="22911" x="215432" y="54264" z="-8702" heading="14325"/>
+<spawn npcId="22911" x="215672" y="54264" z="-8702" heading="14325"/>
+<!--Метатели-->
+<spawn npcId="22917" x="213704" y="55032" z="-8702" heading="48457"/>
+<spawn npcId="22917" x="213960" y="55032" z="-8702" heading="48457"/>
+<spawn npcId="22917" x="214296" y="55032" z="-8701" heading="48457"/>
+<spawn npcId="22917" x="214680" y="55032" z="-8702" heading="48457"/>
+<spawn npcId="22917" x="215080" y="55032" z="-8701" heading="48457"/>
+<spawn npcId="22917" x="215432" y="55032" z="-8702" heading="48457"/>
+<spawn npcId="22917" x="215672" y="55032" z="-8702" heading="48457"/>
+<!--1 Этаж Комната Большая Команата Слева, 1 Секция-->
+<spawn npcId="22914" x="217240" y="53112" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217000" y="53112" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217240" y="52856" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217000" y="52856" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217240" y="52616" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217000" y="52616" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217000" y="52360" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217000" y="52088" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217240" y="51832" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217000" y="51832" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217240" y="51560" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217000" y="51560" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217240" y="51320" z="-8610" heading="64496"/>
+<spawn npcId="22914" x="217000" y="51320" z="-8610" heading="64496"/>
+<spawn npcId="22911" x="217768" y="53112" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="218024" y="53112" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="217768" y="52856" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="218024" y="52856" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="217768" y="52616" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="218024" y="52616" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="218024" y="52360" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="218024" y="52088" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="217768" y="51832" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="218024" y="51832" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="217768" y="51560" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="218024" y="51560" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="217768" y="51320" z="-8610" heading="32767"/>
+<spawn npcId="22911" x="218024" y="51320" z="-8610" heading="32767"/>
+<!--1 Этаж Комната Большая Команата Слева, 2 Секция-->
+<spawn npcId="22914" x="217240" y="50296" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217000" y="50296" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217240" y="50056" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217000" y="50056" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217240" y="49784" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217000" y="49784" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217000" y="49528" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217000" y="49272" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217240" y="49016" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217000" y="49016" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217240" y="48776" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217000" y="48776" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217240" y="48504" z="-8545" heading="64496"/>
+<spawn npcId="22914" x="217000" y="48504" z="-8545" heading="64496"/>
+<spawn npcId="22911" x="217768" y="50296" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="218024" y="50296" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="217768" y="50056" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="218024" y="50056" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="217768" y="49784" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="218024" y="49784" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="218024" y="49528" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="218024" y="49272" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="217768" y="49016" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="218024" y="49016" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="217768" y="48776" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="218024" y="48776" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="217768" y="48504" z="-8545" heading="32767"/>
+<spawn npcId="22911" x="218024" y="48504" z="-8545" heading="32767"/>
+<!--1 Этаж Угловая Команата Справа-->
+<spawn npcId="22917" x="208168" y="54280" z="-8572" heading="16383"/>
+<spawn npcId="22917" x="208584" y="54280" z="-8574" heading="16383"/>
+<spawn npcId="22911" x="208584" y="55032" z="-8574" heading="47021"/>
+<spawn npcId="22911" x="208168" y="55032" z="-8572" heading="47021"/>
+<spawn npcId="22911" x="207768" y="55032" z="-8574" heading="47021"/>
+<spawn npcId="22917" x="207400" y="55032" z="-8572" heading="57343"/>
+<spawn npcId="22911" x="207400" y="54664" z="-8574" heading="0"/>
+<spawn npcId="22911" x="207400" y="54280" z="-8572" heading="0"/>
+<!--1 Этаж Комната Большая Команата Справа, 1 Секция-->
+<spawn npcId="22914" x="207256" y="52408" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207512" y="52408" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207256" y="52152" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207512" y="52152" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207256" y="51896" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207512" y="51896" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207256" y="51384" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207512" y="51384" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207256" y="51128" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207512" y="51128" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207256" y="50872" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207512" y="50872" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207256" y="50616" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207512" y="50616" z="-8674" heading="0"/>
+<spawn npcId="22914" x="207256" y="51640" z="-8674" heading="0"/>
+<spawn npcId="22917" x="208024" y="52408" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="52408" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208024" y="52152" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="52152" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208024" y="51896" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="51896" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208024" y="51384" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="51384" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208024" y="51128" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="51128" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208024" y="50872" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="50872" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208024" y="50616" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="50616" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="51640" z="-8674" heading="32073"/>
+<!--1 Этаж Комната Большая Команата Справа, 2 Секция-->
+<spawn npcId="22914" x="207256" y="49848" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207512" y="49848" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207256" y="49592" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207512" y="49592" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207256" y="49336" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207512" y="49336" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207256" y="49080" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207512" y="49080" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207256" y="48824" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207256" y="48568" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207256" y="48312" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207512" y="48312" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207256" y="48056" z="-8609" heading="0"/>
+<spawn npcId="22914" x="207512" y="48056" z="-8609" heading="0"/>
+<spawn npcId="22917" x="208024" y="49848" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="49848" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208024" y="49592" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="49592" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208024" y="49336" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="49336" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208024" y="49080" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="49080" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="48824" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="48568" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208024" y="48312" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="48312" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208024" y="48056" z="-8674" heading="32073"/>
+<spawn npcId="22917" x="208296" y="48056" z="-8674" heading="32073"/>
+<!--1 Этаж Угловая Команата Со Статуей Стража-->
+<spawn npcId="22917" x="208168" y="46072" z="-8572" heading="49151"/>
+<spawn npcId="22917" x="208168" y="45320" z="-8572" heading="15516"/>
+<spawn npcId="22911" x="208568" y="46072" z="-8574" heading="47770"/>
+<spawn npcId="22911" x="208568" y="45320" z="-8574" heading="16383"/>
+<spawn npcId="22917" x="207768" y="45320" z="-8574" heading="16383"/>
+<spawn npcId="22917" x="207384" y="45304" z="-8571" heading="13312"/>
+<spawn npcId="22911" x="207016" y="45304" z="-8574" heading="16383"/>
+<spawn npcId="22917" x="207400" y="46072" z="-8572" heading="49151"/>
+<spawn npcId="22911" x="207016" y="46072" z="-8574" heading="49151"/>
+<spawn npcId="22914" x="206776" y="45704" z="-8574" heading="0"/>
+<!--1 Этаж Комната Северная Команата, 1 Секция-->
+<spawn npcId="22911" x="210744" y="45944" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="210744" y="46200" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="211000" y="45944" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="211000" y="46200" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="211768" y="45944" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="211768" y="46200" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="212024" y="45944" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="212024" y="46200" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="212280" y="45944" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="212280" y="46200" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="211256" y="46200" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="212536" y="45944" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="212536" y="46200" z="-8417" heading="49151"/>
+<spawn npcId="22911" x="211512" y="46200" z="-8417" heading="49151"/>
+<spawn npcId="22917" x="211000" y="45448" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="211000" y="45176" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="211256" y="45176" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="211512" y="45176" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="211768" y="45448" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="211768" y="45176" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="212024" y="45448" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="212024" y="45176" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="212280" y="45176" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="212536" y="45176" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="212536" y="45448" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="212280" y="45448" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="210744" y="45448" z="-8417" heading="16383"/>
+<spawn npcId="22917" x="210744" y="45176" z="-8417" heading="16383"/>
+<!--1 Этаж Комната Северная Команата, 2 Секция-->
+<spawn npcId="22917" x="213304" y="45448" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="213560" y="45448" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="213816" y="45448" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="214072" y="45448" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="214584" y="45448" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="214840" y="45448" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="215096" y="45448" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="213304" y="45176" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="213560" y="45176" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="213816" y="45176" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="214072" y="45176" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="214584" y="45176" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="214840" y="45176" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="214328" y="45176" z="-8483" heading="16383"/>
+<spawn npcId="22917" x="215096" y="45176" z="-8483" heading="16383"/>
+<spawn npcId="22911" x="213304" y="46200" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="213560" y="46200" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="213816" y="46200" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="214072" y="46200" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="214584" y="46200" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="214840" y="46200" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="215096" y="46200" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="213304" y="45944" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="213560" y="45944" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="213816" y="45944" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="214072" y="45944" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="214584" y="45944" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="214840" y="45944" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="214328" y="46200" z="-8483" heading="49151"/>
+<spawn npcId="22911" x="215096" y="45944" z="-8483" heading="49151"/>
+<spawn npcId="22914" x="217384" y="45304" z="-8573" heading="0"/>
+<spawn npcId="22914" x="217384" y="46088" z="-8573" heading="0"/>
+<spawn npcId="22914" x="218136" y="45304" z="-8573" heading="32767"/>
+<spawn npcId="22914" x="218136" y="46088" z="-8573" heading="31728"/>
+<spawn npcId="22917" x="217528" y="44728" z="-8574" heading="16383"/>
+<spawn npcId="22917" x="217992" y="44728" z="-8574" heading="16383"/>
+<spawn npcId="22914" x="218392" y="45704" z="-8574" heading="32767"/>
+<spawn npcId="22917" x="217992" y="46664" z="-8574" heading="49151"/>
+<spawn npcId="22917" x="217528" y="46664" z="-8574" heading="49151"/>
+<spawn npcId="22911" x="217752" y="45688" z="-8574" heading="32767"/>
+	</spawns>
+</list>
