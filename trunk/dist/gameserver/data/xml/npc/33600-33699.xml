@@ -2235,7 +2235,7 @@
         <set name="rewardSp" value="0"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="KartiaManager"/>
+        <set name="type" value="Npc"/>
         <attributes>
             <defence attribute="fire" value="20"/>
             <defence attribute="water" value="20"/>
@@ -3216,7 +3216,7 @@
         <set name="rewardSp" value="0"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="Sizrak"/>
+        <set name="type" value="Npc"/>
         <skills/>
         <attributes>
             <defence attribute="fire" value="150"/>
@@ -3449,7 +3449,7 @@
         <set name="rewardSp" value="0"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
-        <set name="type" value="TeleportDevice"/>
+        <set name="type" value="Npc"/>
         <skills/>
         <attributes>
             <defence attribute="fire" value="150"/>
@@ -3466,7 +3466,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300" />
-		<set name="ai_type" value="ZofanRevolutionary"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
 		<set name="baseHpRate" value="1"/>
