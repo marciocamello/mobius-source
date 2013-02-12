@@ -8,17 +8,17 @@
 		<set name="baseCON" value="57" />
 		<set name="baseCritRate" value="40" />
 		<set name="baseDEX" value="73" />
-		<set name="baseHpMax" value="43316.309" />
+		<set name="baseHpMax" value="745704.309" />
 		<set name="baseHpRate" value="1" />
 		<set name="baseHpReg" value="18.439" />
 		<set name="baseINT" value="76" />
-		<set name="baseMAtk" value="4" />
-		<set name="baseMAtkSpd" value="3819" />
+		<set name="baseMAtk" value="2350" />
+		<set name="baseMAtkSpd" value="1230" />
 		<set name="baseMDef" value="189" />
 		<set name="baseMEN" value="80" />
 		<set name="baseMpMax" value="259.2" />
 		<set name="baseMpReg" value="1.5" />
-		<set name="basePAtk" value="101" />
+		<set name="basePAtk" value="842" />
 		<set name="basePAtkSpd" value="253" />
 		<set name="basePDef" value="348" />
 		<set name="baseRunSpd" value="190" />
@@ -29,53 +29,47 @@
 		<set name="baseWalkSpd" value="41" />
 		<set name="collision_height" value="37.5" />
 		<set name="collision_radius" value="13.0" />
-		<set name="level" value="25" />
-		<set name="rewardExp" value="2541012" />
+		<set name="level" value="98" />
+		<set name="rewardExp" value="468444704" />
 		<set name="rewardRp" value="320" />
-		<set name="rewardSp" value="79280" />
+		<set name="rewardSp" value="10633168" />
 		<set name="shots" value="NONE" />
 		<set name="type" value="RaidBoss" />
-		<minions>
-			<minion npc_id="25801" count="1" />	<!--Talos' Cohort-->
-		</minions>
 		<skills>
-			<skill id="4045" level="1" />	<!--Resist Full Magic Attack-->
-			<skill id="4197" level="2" />	<!--Hold-->
-			<skill id="4273" level="3" />	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1" />	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1" />	<!--HP Increase (1x)-->
-			<skill id="4409" level="1" />	<!--MP Increase (1x)-->
-			<skill id="4410" level="11" />	<!--Average P. Atk.-->
-			<skill id="4411" level="11" />	<!--Average M. Atk.-->
-			<skill id="4412" level="11" />	<!--Average P. Def.-->
-			<skill id="4413" level="11" />	<!--Average M. Def.-->
-			<skill id="4414" level="2" />	<!--Standard Type-->
-			<skill id="4415" level="1" />	<!--Bare Hands-->
-			<skill id="4416" level="9" />	<!--Demons-->
-			<skill id="4444" level="2" />	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4494" level="1" />	<!--Raid Boss-->
-			<skill id="4983" level="1" />	<!--Raid Boss - Level 25-->
+			<skill id="4045" level="1" />	<!-- Resist Full Magic Attack -->
+			<skill id="4197" level="2" />	<!-- Hold -->
+			<skill id="4273" level="3" />	<!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" />	<!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" />	<!-- HP Increase (1x)-->
+			<skill id="4409" level="1" />	<!-- MP Increase (1x)-->
+			<skill id="4410" level="11" />	<!-- Average P. Atk.-->
+			<skill id="4411" level="11" />	<!-- Average M. Atk.-->
+			<skill id="4412" level="11" />	<!-- Average P. Def.-->
+			<skill id="4413" level="11" />	<!-- Average M. Def.-->
+			<skill id="4414" level="2" />	<!-- Standard Type -->
+			<skill id="4415" level="1" />	<!-- Bare Hands -->
+			<skill id="4416" level="9" />	<!-- Demons -->
+			<skill id="4444" level="2" />	<!-- Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4494" level="1" />	<!-- Raid Boss -->
+			<skill id="14716" level="1" />	<!-- Raid Boss - Level 98 -->
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="73.1441">
-				<reward item_id="393" min="1" max="1" chance="17.1639" />	<!--Mithril Banded Mail-->
-				<reward item_id="394" min="1" max="1" chance="17.1639" />	<!--Reinforced Leather Shirt-->
-				<reward item_id="415" min="1" max="1" chance="27.4341" />	<!--Mithril Banded Gaiters-->
-				<reward item_id="416" min="1" max="1" chance="27.4341" />	<!--Reinforced Leather Gaiters-->
-				<reward item_id="223" min="1" max="1" chance="2.7010" />	<!--Kukuri-->
-				<reward item_id="238" min="1" max="1" chance="2.7010" />	<!--Dagger of Mana-->
-				<reward item_id="239" min="1" max="1" chance="2.7010" />	<!--Mystic Knife-->
-				<reward item_id="241" min="1" max="1" chance="2.7010" />	<!--Shilen Knife-->
+			<rewardlist type="RATED_GROUPED">
+			<group chance="75.1439">
+				<reward item_id="18235" min="1" max="3" chance="2.0860" />	<!-- Unidentified Eternal Sigil -->
+				<reward item_id="18224" min="1" max="3" chance="2.0320" />	<!-- Unidentified Eternal Shield - Heavy Armor -->
+				<reward item_id="18228" min="1" max="2" chance="1.5520" />	<!-- Unidentified Eternal Leather Gloves - Light Armor -->
+				<reward item_id="18219" min="1" max="2" chance="1.5240" />	<!-- Unidentified Eternal Helmet - Heavy Armor -->
+				<reward item_id="18234" min="1" max="2" chance="1.5170" />	<!-- Unidentified Eternal Shoes - Robe -->
+				<reward item_id="18213" min="1" max="1" chance="1.2150" />	<!-- Unidentified Amaranthine Buster -->
+				<reward item_id="18214" min="1" max="1" chance="1.1370" />	<!-- Unidentified Amaranthine Caster -->
+				<reward item_id="18210" min="1" max="1" chance="1.0880" />	<!-- Unidentified Amaranthine Stormer -->
 			</group>
-			<group chance="68.9993">
-				<reward item_id="1938" min="60" max="180" chance="23.8522" />	<!--Mithril Banded Mail Material-->
-				<reward item_id="1939" min="28" max="84" chance="66.7799" />	<!--Mithril Banded Gaiters Material-->
-				<reward item_id="2028" min="27" max="81" chance="9.3679" />	<!--Shilen Knife Edge-->
+				<group chance="70.9979">
+				<reward item_id="18212" min="1" max="1" chance="1.0000" />	<!-- Unidentified Amaranthine Shooter -->
+				<reward item_id="18209" min="1" max="1" chance="1.0000" />	<!-- Unidentified Amaranthine Fighter -->
+				<reward item_id="18207" min="1" max="1" chance="1.0000" />	<!-- Unidentified Amaranthine Slasher -->
 			</group>
-			<group chance="100.0000">
-				<reward item_id="22229" min="1" max="1" chance="1" />	<!--Scroll: Enchant Weapon of Destruction (D-Grade)-->
-			</group>
-		</rewardlist>
+			</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20" />
 			<defence attribute="water" value="20" />
@@ -119,20 +113,20 @@
 		<set name="shots" value="NONE" />
 		<set name="type" value="Minion" />
 		<skills>
-			<skill id="4045" level="1" />	<!--Resist Full Magic Attack-->
-			<skill id="4273" level="3" />	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1" />	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1" />	<!--HP Increase (1x)-->
-			<skill id="4409" level="1" />	<!--MP Increase (1x)-->
-			<skill id="4410" level="11" />	<!--Average P. Atk.-->
-			<skill id="4411" level="11" />	<!--Average M. Atk.-->
-			<skill id="4412" level="11" />	<!--Average P. Def.-->
-			<skill id="4413" level="11" />	<!--Average M. Def.-->
-			<skill id="4414" level="3" />	<!--Light Armor Type-->
-			<skill id="4415" level="1" />	<!--Bare Hands-->
-			<skill id="4416" level="9" />	<!--Demons-->
-			<skill id="4444" level="2" />	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4743" level="2" />	<!--BOSS Strike-->
+			<skill id="4045" level="1" />	<!-- Resist Full Magic Attack -->
+			<skill id="4273" level="3" />	<!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" />	<!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" />	<!-- HP Increase (1x)-->
+			<skill id="4409" level="1" />	<!-- MP Increase (1x)-->
+			<skill id="4410" level="11" />	<!-- Average P. Atk.-->
+			<skill id="4411" level="11" />	<!-- Average M. Atk.-->
+			<skill id="4412" level="11" />	<!-- Average P. Def.-->
+			<skill id="4413" level="11" />	<!-- Average M. Def.-->
+			<skill id="4414" level="3" />	<!-- Light Armor Type -->
+			<skill id="4415" level="1" />	<!-- Bare Hands -->
+			<skill id="4416" level="9" />	<!-- Demons -->
+			<skill id="4444" level="2" />	<!-- Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4743" level="2" />	<!-- BOSS Strike -->
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -149,7 +143,7 @@
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="40"/>
         <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="280000.376"/>
+        <set name="baseHpMax" value="47792.376"/>
         <set name="baseHpRate" value="1"/>
         <set name="baseHpReg" value="8.5"/>
         <set name="baseINT" value="21"/>
@@ -157,7 +151,7 @@
         <set name="baseMAtkSpd" value="253"/>
         <set name="baseMDef" value="469"/>
         <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1674.8"/>
+        <set name="baseMpMax" value="3011.8"/>
         <set name="baseMpReg" value="3"/>
         <set name="basePAtk" value="1799"/>
         <set name="basePAtkSpd" value="253"/>
@@ -170,19 +164,38 @@
         <set name="baseWalkSpd" value="30"/>
         <set name="collision_height" value="55"/>
         <set name="collision_radius" value="10"/>
-        <set name="level" value="99"/>
-        <set name="rewardExp" value="0"/>
+        <set name="level" value="89"/>
+        <set name="rewardExp" value="428837"/>
         <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
+        <set name="rewardSp" value="30215"/>
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
         <set name="type" value="Monster"/>
         <skills>
             <skill id="4416" level="13"/>
-            <!--Феи-->
+            <!-- Fairies -->
             <skill id="5463" level="1"/>
-            <!--Защита Воды-->
+            <!-- Water Attack -->
         </skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="1306" max="3050" chance="100.0000" />	<!-- Adena -->
+			</group>
+			<group chance="74.134">
+				<reward item_id="17375" min="1" max="6" chance="51.9000" /> <!-- Kimerian's Trace -->
+				<reward item_id="17376" min="1" max="3" chance="26.4500" /> <!-- Trace of Kimerian's Cavern -->
+			</group>
+			<group chance="48.4648">
+				<reward item_id="17527" min="1" max="1" chance="0.5000" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<reward item_id="30423" min="1" max="1" chance="0.5000" /> <!-- Recipe: Soulshot (R-Grade) -->
+				<reward item_id="17526" min="1" max="1" chance="0.5000" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</group>
+			</rewardlist>
+			<rewardlist type="SWEEP">
+				<reward item_id="17527" min="1" max="1" chance="0.5000" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<reward item_id="30423" min="1" max="1" chance="0.5000" /> <!-- Recipe: Soulshot (R-Grade) -->
+				<reward item_id="17526" min="1" max="1" chance="0.5000" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</rewardlist>
         <attributes>
             <defence attribute="fire" value="20"/>
             <defence attribute="water" value="20"/>
@@ -218,8 +231,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="20.0"/>
+        <set name="collision_radius" value="30.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -229,9 +242,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="3"/>
-            <!--Звери-->
+            <!-- Beast -->
             <skill id="5464" level="1"/>
-            <!--Защита Ветра-->
+            <!-- Wind Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -268,8 +281,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="20.0"/>
+        <set name="collision_radius" value="30.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -279,9 +292,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="3"/>
-            <!--Звери-->
+            <!-- Beast -->
             <skill id="5464" level="1"/>
-            <!--Защита Ветра-->
+            <!-- Wind Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -318,8 +331,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="20.0"/>
+        <set name="collision_radius" value="30.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -329,9 +342,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="3"/>
-            <!--Звери-->
+            <!-- Beast -->
             <skill id="5464" level="1"/>
-            <!--Защита Ветра-->
+            <!-- Wind Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -368,8 +381,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="20.0"/>
+        <set name="collision_radius" value="30.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -379,9 +392,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="3"/>
-            <!--Звери-->
+            <!-- Beast -->
             <skill id="5464" level="1"/>
-            <!--Защита Ветра-->
+            <!-- Wind Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -418,8 +431,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="20.0"/>
+        <set name="collision_radius" value="30.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -429,9 +442,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="3"/>
-            <!--Звери-->
+            <!-- Beast -->
             <skill id="5464" level="1"/>
-            <!--Защита Ветра-->
+            <!-- Wind Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -468,8 +481,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="20.0"/>
+        <set name="collision_radius" value="30.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -479,9 +492,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="3"/>
-            <!--Звери-->
+            <!-- Beast -->
             <skill id="5464" level="1"/>
-            <!--Защита Ветра-->
+            <!-- Wind Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -518,8 +531,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="61.0"/>
+        <set name="collision_radius" value="32.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -529,9 +542,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="14758" level="1"/>
-            <!--Рейдовый Босс 59 ур.-->
+            <!-- Raid Boss (Lv. 59) -->
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -568,8 +581,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="26.0"/>
+        <set name="collision_radius" value="11.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -579,7 +592,7 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -616,9 +629,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="31.0"/>
+        <set name="collision_radius" value="32.0"/>
+        <set name="level" value="62"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -627,9 +640,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="14759" level="1"/>
-            <!--Рейдовый Босс 62 ур.-->
+            <!-- Raid Boss (Lv. 62) -->
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -666,9 +679,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="61.0"/>
+        <set name="collision_radius" value="32.0"/>
+        <set name="level" value="62"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -677,9 +690,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="14759" level="1"/>
-            <!--Рейдовый Босс 62 ур.-->
+            <!-- Raid Boss (Lv. 62) -->
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -716,9 +729,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="34.0"/>
+        <set name="collision_radius" value="11.0"/>
+        <set name="level" value="66"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -727,11 +740,11 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="14760" level="1"/>
-            <!--Рейдовый Босс 66 ур.-->
+            <!-- Raid Boss (Lv. 66) -->
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="4414" level="3"/>
-            <!--Легкая Броня-->
+            <!-- Light Armor Type -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -768,8 +781,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="42.0"/>
+        <set name="collision_radius" value="14.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -779,7 +792,7 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -816,9 +829,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="48.0"/>
+        <set name="collision_radius" value="19.0"/>
+        <set name="level" value="70"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -827,9 +840,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="14761" level="1"/>
-            <!--Рейдовый Босс 70 ур.-->
+            <!-- Raid Boss (Lv. 70) -->
             <skill id="4416" level="8"/>
-            <!--Ангелы-->
+            <!-- Angels -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -866,9 +879,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="33.0"/>
+        <set name="collision_radius" value="30.0"/>
+        <set name="level" value="72"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -877,9 +890,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="14762" level="1"/>
-            <!--Рейдовый Босс 72 ур.-->
+            <!-- Raid Boss (Lv. 72) -->
             <skill id="4416" level="8"/>
-            <!--Ангелы-->
+            <!-- Angels -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -916,9 +929,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="33.0"/>
+        <set name="collision_radius" value="30.0"/>
+        <set name="level" value="72"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -927,9 +940,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="14762" level="1"/>
-            <!--Рейдовый Босс 72 ур.-->
+            <!-- Raid Boss (Lv. 72) -->
             <skill id="4416" level="8"/>
-            <!--Ангелы-->
+            <!-- Angels -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -966,9 +979,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="44.0"/>
+        <set name="collision_radius" value="18.0"/>
+        <set name="level" value="75"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -977,9 +990,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="14763" level="1"/>
-            <!--Рейдовый Босс 75 ур.-->
+            <!-- Raid Boss (Lv. 75) -->
             <skill id="4416" level="8"/>
-            <!--Ангелы-->
+            <!-- Angels -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1016,8 +1029,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="39.0"/>
+        <set name="collision_radius" value="11.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1027,7 +1040,7 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="8"/>
-            <!--Ангелы-->
+            <!-- Angels -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1064,9 +1077,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="50.0"/>
+        <set name="collision_radius" value="24.0"/>
+        <set name="level" value="75"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -1075,9 +1088,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="14764" level="1"/>
-            <!--Рейдовый Босс 75 ур.-->
+            <!-- Raid Boss (Lv. 75) -->
             <skill id="4416" level="8"/>
-            <!--Ангелы-->
+            <!-- Angels -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1114,8 +1127,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="33.0"/>
+        <set name="collision_radius" value="30.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1125,7 +1138,7 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="8"/>
-            <!--Ангелы-->
+            <!-- Angels -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1162,8 +1175,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="40.0"/>
+        <set name="collision_radius" value="14.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1173,9 +1186,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1212,8 +1225,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="40.0"/>
+        <set name="collision_radius" value="14.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1223,9 +1236,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1262,9 +1275,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="77.0"/>
+        <set name="collision_radius" value="30.0"/>
+        <set name="level" value="97"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -1273,13 +1286,13 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14728" level="1"/>
-            <!--Рейдовый босс. Уровень 97.-->
+            <!-- Raid Boss (Lv. 97) -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5462" level="1"/>
-            <!--Защита Огня-->
+            <!-- Fire Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1316,9 +1329,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="77.0"/>
+        <set name="collision_radius" value="30.0"/>
+        <set name="level" value="97"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -1327,13 +1340,13 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14728" level="1"/>
-            <!--Рейдовый босс. Уровень 97.-->
+            <!-- Raid Boss (Lv. 97) -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5462" level="1"/>
-            <!--Защита Огня-->
+            <!-- Fire Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1370,8 +1383,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="41.0"/>
+        <set name="collision_radius" value="28.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1381,9 +1394,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
             <skill id="5462" level="1"/>
-            <!--Защита Огня-->
+            <!-- Fire Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1420,8 +1433,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="35.0"/>
+        <set name="collision_radius" value="20.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1431,7 +1444,7 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="2"/>
-            <!--Магические Создания-->
+            <!-- Magic Creatures -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1468,8 +1481,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="35.0"/>
+        <set name="collision_radius" value="20.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1479,7 +1492,7 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="2"/>
-            <!--Магические Создания-->
+            <!-- Magic Creatures -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1516,8 +1529,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="170.0"/>
+        <set name="collision_radius" value="90.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1527,7 +1540,7 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="2"/>
-            <!--Магические Создания-->
+            <!-- Magic Creatures -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1564,8 +1577,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="35.0"/>
+        <set name="collision_radius" value="20.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1575,7 +1588,7 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="2"/>
-            <!--Магические Создания-->
+            <!-- Magic Creatures -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1612,8 +1625,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="29.0"/>
+        <set name="collision_radius" value="24.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1623,7 +1636,7 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1660,8 +1673,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="22.0"/>
+        <set name="collision_radius" value="9.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1671,7 +1684,7 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="14"/>
-            <!--Люди-->
+            <!-- Humans -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1708,8 +1721,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="51.0"/>
+        <set name="collision_radius" value="18.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1719,9 +1732,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1758,8 +1771,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="54.0"/>
+        <set name="collision_radius" value="17.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1769,9 +1782,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1808,8 +1821,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="54.0"/>
+        <set name="collision_radius" value="17.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1819,9 +1832,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1858,8 +1871,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="56.0"/>
+        <set name="collision_radius" value="11.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -1869,9 +1882,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5463" level="1"/>
-            <!--Защита Воды-->
+            <!-- Water Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1908,9 +1921,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="49.0"/>
+        <set name="collision_radius" value="10.0"/>
+        <set name="level" value="92"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -1919,23 +1932,23 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14729" level="1"/>
-            <!--Рейдовый босс. Уровень 92.-->
+            <!-- Raid Boss (Lv. 92) -->
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -1946,7 +1959,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25838" name="Mukshu the Coward " title="Raid Boss">
+    <npc id="25838" name="Mukshu the Coward" title="Raid Boss">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1972,9 +1985,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="25.0"/>
+        <set name="collision_radius" value="11.0"/>
+        <set name="level" value="93"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -1983,23 +1996,23 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14733" level="1"/>
-            <!--Рейдовый босс. Уровень 93.-->
+            <!-- Raid Boss (Lv. 93) -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2036,9 +2049,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="78.0"/>
+        <set name="collision_radius" value="24.0"/>
+        <set name="level" value="96"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -2047,13 +2060,13 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14734" level="1"/>
-            <!--Рейдовый босс. Уровень 96.-->
+            <!-- Raid Boss (Lv. 96) -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2090,9 +2103,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="50.0"/>
+        <set name="collision_radius" value="15.0"/>
+        <set name="level" value="94"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -2101,25 +2114,25 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14730" level="1"/>
-            <!--Рейдовый босс. Уровень 94.-->
+            <!-- Raid Boss (Lv. 94) -->
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
             <skill id="4414" level="3"/>
-            <!--Легкая Броня-->
+            <!-- Light Armor Type -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2156,9 +2169,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="61.0"/>
+        <set name="collision_radius" value="21.0"/>
+        <set name="level" value="95"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -2167,25 +2180,25 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14731" level="1"/>
-            <!--Рейдовый босс. Уровень 95.-->
+            <!-- Raid Boss (Lv. 95)-->
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
             <skill id="4414" level="1"/>
-            <!--Тяжелая Броня-->
+            <!-- Heavy Armor Type -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2222,8 +2235,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="35.0"/>
+        <set name="collision_radius" value="20.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2233,9 +2246,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="3"/>
-            <!--Звери-->
+            <!-- Beast -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2272,9 +2285,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="85.0"/>
+        <set name="collision_radius" value="18.0"/>
+        <set name="level" value="96"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -2283,23 +2296,23 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14732" level="1"/>
-            <!--Рейдовый босс. Уровень 96.-->
+            <!-- Raid Boss (Lv. 96) -->
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="5462" level="1"/>
-            <!--Защита Огня-->
+            <!-- Fire Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2336,9 +2349,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="82.0"/>
+        <set name="collision_radius" value="15.0"/>
+        <set name="level" value="96"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -2347,23 +2360,23 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14732" level="1"/>
-            <!--Рейдовый босс. Уровень 96.-->
+            <!-- Raid Boss (Lv. 96) -->
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="5462" level="1"/>
-            <!--Защита Огня-->
+            <!-- Fire Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2400,9 +2413,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="95.0"/>
+        <set name="collision_radius" value="25.0"/>
+        <set name="level" value="96"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -2411,13 +2424,13 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14732" level="1"/>
-            <!--Рейдовый босс. Уровень 96.-->
+            <!-- Raid Boss (Lv. 96) -->
             <skill id="4416" level="10"/>
-            <!--Драконы-->
+            <!-- Драконы -->
             <skill id="5462" level="1"/>
-            <!--Защита Огня-->
+            <!-- Fire Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2454,9 +2467,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="48.0"/>
+        <set name="collision_radius" value="15.0"/>
+        <set name="level" value="96"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -2465,23 +2478,23 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14735" level="1"/>
-            <!--Рейдовый босс. Уровень 96.-->
+            <!-- Raid Boss (Lv. 96) -->
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="5464" level="1"/>
-            <!--Защита Ветра-->
+            <!-- Wind Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2518,8 +2531,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="61.0"/>
+        <set name="collision_radius" value="50.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2529,9 +2542,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2568,8 +2581,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="61.0"/>
+        <set name="collision_radius" value="50.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2579,9 +2592,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2618,8 +2631,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="61.0"/>
+        <set name="collision_radius" value="50.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2629,9 +2642,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2668,8 +2681,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="61.0"/>
+        <set name="collision_radius" value="50.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2679,9 +2692,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2718,8 +2731,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="61.0"/>
+        <set name="collision_radius" value="50.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2729,9 +2742,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2768,8 +2781,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="61.0"/>
+        <set name="collision_radius" value="50.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2779,9 +2792,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2818,8 +2831,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="61.0"/>
+        <set name="collision_radius" value="50.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2829,9 +2842,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2868,8 +2881,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="61.0"/>
+        <set name="collision_radius" value="50.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -2879,9 +2892,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2918,9 +2931,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="60.0"/>
+        <set name="collision_radius" value="24.0"/>
+        <set name="level" value="97"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -2929,23 +2942,23 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14713" level="1"/>
-            <!--Рейдовый босс. Уровень 97.-->
+            <!-- Raid Boss (Lv. 97) -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -2982,9 +2995,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="60.0"/>
+        <set name="collision_radius" value="24.0"/>
+        <set name="level" value="96"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -2993,23 +3006,23 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!--  Raid Boss  -->
             <skill id="14712" level="1"/>
-            <!--Рейдовый босс. Уровень 96.-->
+            <!--  Raidboss Level 96  -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!--  Humanoids  -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!--  Dark Attacks  -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!--  Greater Stun Resistance  -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!--  Greater Sleep Resistance  -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!--  Greater Paralysis Resistance  -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!--  Greater Mental Attack Resistance  -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!--  Greater Hold Resistance  -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3046,8 +3059,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="45.0"/>
+        <set name="collision_radius" value="24.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -3057,9 +3070,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3096,8 +3109,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="40.0"/>
+        <set name="collision_radius" value="18.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -3107,9 +3120,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3155,23 +3168,19 @@
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
         <set name="type" value="RaidBoss"/>
-        <ai_params>
-            <set name="TargetEnabled" value="false"/>
-            <!--Убрать после реализации НПС-->
-        </ai_params>
         <minions>
             <minion npc_id="25861" count="4"/>
-            <!--Flynt's Servant-->
+            <!-- Flynt's Servant -->
         </minions>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14710" level="1"/>
-            <!--Рейдовый босс. Уровень 97.-->
+            <!-- Raid Boss (Lv. 97) -->
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3208,8 +3217,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="41.0"/>
+        <set name="collision_radius" value="22.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -3219,21 +3228,21 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3279,27 +3288,23 @@
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
         <set name="type" value="Minion"/>
-        <ai_params>
-            <set name="TargetEnabled" value="false"/>
-            <!--Убрать после реализации НПС-->
-        </ai_params>
         <skills>
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3336,7 +3341,7 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="78.0"/>
+        <set name="collision_height" value="79.0"/>
         <set name="collision_radius" value="44.0"/>
         <set name="level" value="97"/>
         <set name="rewardExp" value="458933384"/>
@@ -3345,26 +3350,33 @@
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
         <set name="type" value="RaidBoss"/>
-        <ai_params>
-            <set name="TargetEnabled" value="false"/>
-            <!--Убрать после реализации НПС-->
-        </ai_params>
         <minions>
             <minion npc_id="25863" count="1"/>
-            <!--Harp's Guard-->
+            <!-- Harp's Guard -->
             <minion npc_id="25864" count="1"/>
-            <!--Harp's Aide-->
+            <!-- Harp's Aide -->
         </minions>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14711" level="1"/>
-            <!--Рейдовый босс. Уровень 97.-->
+            <!-- Raid Boss (Lv. 97) -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="67.058">
+				<reward item_id="18185" min="1" max="1" chance="7.2410" />	<!-- Unidentified Seraph Helmet -->
+				<reward item_id="18194" min="1" max="1" chance="10.7730" />	<!-- Unidentified Seraph Leather Gloves -->
+				<reward item_id="18200" min="1" max="1" chance="10.7330" />	<!-- Unidentified Seraph Shoes -->
+			</group>
+			<group chance="76.650">
+				<reward item_id="17526" min="1" max="4" chance="9.0160" /> <!-- Scroll: Enchant Weapon(R-Grade) -->
+				<reward item_id="30297" min="1" max="3" chance="33.2100" /> <!-- Superior Giant's Codex -->
+			</group>
+		</rewardlist>
         <attributes>
             <defence attribute="fire" value="20"/>
             <defence attribute="water" value="20"/>
@@ -3409,27 +3421,23 @@
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
         <set name="type" value="Minion"/>
-        <ai_params>
-            <set name="TargetEnabled" value="false"/>
-            <!--Убрать после реализации НПС-->
-        </ai_params>
         <skills>
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3475,27 +3483,23 @@
         <set name="shots" value="NONE"/>
         <set name="texture" value=""/>
         <set name="type" value="Minion"/>
-        <ai_params>
-            <set name="TargetEnabled" value="false"/>
-            <!--Убрать после реализации НПС-->
-        </ai_params>
         <skills>
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3532,8 +3536,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="60.0"/>
+        <set name="collision_radius" value="13.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -3543,9 +3547,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="5"/>
-            <!--Растения-->
+            <!-- Plants -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3582,9 +3586,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="93.0"/>
+        <set name="collision_radius" value="35.0"/>
+        <set name="level" value="94"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -3593,13 +3597,13 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14723" level="1"/>
-            <!--Рейдовый босс. Уровень 94.-->
+            <!-- Raid Boss (Lv. 94) -->
             <skill id="4416" level="5"/>
-            <!--Растения-->
+            <!-- Plants -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3636,9 +3640,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="82.0"/>
+        <set name="collision_radius" value="30.0"/>
+        <set name="level" value="98"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -3647,25 +3651,25 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14722" level="1"/>
-            <!--Рейдовый босс. Уровень 98.-->
+            <!-- Raid Boss (Lv. 98) -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3702,9 +3706,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="82.0"/>
+        <set name="collision_radius" value="30.0"/>
+        <set name="level" value="98"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -3713,25 +3717,25 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14722" level="1"/>
-            <!--Рейдовый босс. Уровень 98.-->
+            <!-- Raid Boss (Lv. 98) -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3768,9 +3772,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="82.0"/>
+        <set name="collision_radius" value="30.0"/>
+        <set name="level" value="98"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -3779,25 +3783,25 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14722" level="1"/>
-            <!--Рейдовый босс. Уровень 98.-->
+            <!-- Raid Boss (Lv. 98) -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5465" level="1"/>
-            <!--Защита Земли-->
+            <!-- Earth Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3834,9 +3838,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="30.0"/>
+        <set name="collision_radius" value="7.0"/>
+        <set name="level" value="43"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -3845,13 +3849,13 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14724" level="1"/>
-            <!--Рейдовый босс. Уровень 43.-->
+            <!-- Raid Boss (Lv. 43) -->
             <skill id="4416" level="7"/>
-            <!--Духи-->
+            <!-- Spirits -->
             <skill id="4414" level="3"/>
-            <!--Легкая Броня-->
+            <!-- Light Armor Type -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3888,9 +3892,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="39.0"/>
+        <set name="collision_radius" value="17.0"/>
+        <set name="level" value="43"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -3899,11 +3903,11 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14725" level="1"/>
-            <!--Рейдовый босс. Уровень 43.-->
+            <!-- Raid Boss (Lv. 43) -->
             <skill id="4416" level="11"/>
-            <!--Гиганты-->
+            <!-- Giants -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3940,8 +3944,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="55.0"/>
+        <set name="collision_radius" value="13.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -3951,9 +3955,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3990,8 +3994,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="60.0"/>
+        <set name="collision_radius" value="25.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -4001,9 +4005,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -4040,8 +4044,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="36.0"/>
+        <set name="collision_radius" value="10.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -4051,9 +4055,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -4090,9 +4094,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="65.0"/>
+        <set name="collision_radius" value="14.0"/>
+        <set name="level" value="88"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -4101,13 +4105,13 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14720" level="1"/>
-            <!--Рейдовый босс. Уровень 88.-->
+            <!-- Raid Boss (Lv. 88) -->
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -4144,9 +4148,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="60.0"/>
+        <set name="collision_radius" value="24.0"/>
+        <set name="level" value="97"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -4155,23 +4159,23 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14713" level="1"/>
-            <!--Рейдовый босс. Уровень 97.-->
+            <!-- Raid Boss (Lv. 97) -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -4208,9 +4212,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="60.0"/>
+        <set name="collision_radius" value="24.0"/>
+        <set name="level" value="96"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -4219,23 +4223,23 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!--  Raid Boss  -->
             <skill id="14712" level="1"/>
-            <!--Рейдовый босс. Уровень 96.-->
+            <!--  Raidboss Level 96  -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!--  Humanoids  -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!--  Dark Attacks  -->
             <skill id="4435" level="5"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!--  Greater Stun Resistance  -->
             <skill id="4438" level="5"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!--  Greater Sleep Resistance  -->
             <skill id="4440" level="5"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!--  Greater Paralysis Resistance  -->
             <skill id="4441" level="5"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!--  Greater Mental Attack Resistance  -->
             <skill id="4439" level="5"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!--  Greater Hold Resistance  -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -4272,8 +4276,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="38.0"/>
+        <set name="collision_radius" value="20.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -4283,9 +4287,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -4322,8 +4326,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="70.0"/>
+        <set name="collision_radius" value="14.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -4333,9 +4337,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="1"/>
-            <!--Нежить-->
+            <!-- Undead -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -4372,9 +4376,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="91.0"/>
+        <set name="collision_radius" value="40.0"/>
+        <set name="level" value="97"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -4383,11 +4387,11 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="14749" level="1"/>
-            <!--Рейдовый Босс 97 ур.-->
+            <!-- Raid Boss (Lv. 97) -->
             <skill id="4416" level="6"/>
-            <!--Гуманоиды-->
+            <!-- Humanoids -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -4424,9 +4428,9 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
-        <set name="level" value="80"/>
+        <set name="collision_height" value="55.0"/>
+        <set name="collision_radius" value="13.0"/>
+        <set name="level" value="98"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
         <set name="rewardSp" value="0"/>
@@ -4435,27 +4439,27 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4494" level="1"/>
-            <!--Рейдовый Босс-->
+            <!-- Raid Boss -->
             <skill id="14714" level="1"/>
-            <!--Рейдовый босс. Уровень 98.-->
+            <!-- Raid Boss (Lv. 98) -->
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="5463" level="1"/>
-            <!--Защита Воды-->
+            <!-- Water Attack -->
             <skill id="4440" level="3"/>
-            <!--Высокая Устойчивость к Парализующим Атакам-->
+            <!-- Greater Paralysis Resistance -->
             <skill id="4441" level="3"/>
-            <!--Высокая Устойчивость к Ментальным Атакам-->
+            <!-- Greater Mental Attack Resistance -->
             <skill id="4438" level="3"/>
-            <!--Высокая Устойчивость к Усыпляющим Атакам-->
+            <!-- Greater Sleep Resistance -->
             <skill id="4437" level="3"/>
-            <!--Высокая Устойчивость к Кровопускающим Атакам-->
+            <!-- Высокая Устойчивость к Кровопускающим Атакам -->
             <skill id="4436" level="3"/>
-            <!--Высокая Устойчивость к Отравляющим Атакам-->
+            <!-- Высокая Устойчивость к Отравляющим Атакам -->
             <skill id="4435" level="3"/>
-            <!--Высокая Устойчивость к Оглушающим Атакам-->
+            <!-- Greater Stun Resistance -->
             <skill id="4439" level="3"/>
-            <!--Высокая Устойчивость к Удерживающим Атакам-->
+            <!-- Greater Hold Resistance -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -4492,8 +4496,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="55.0"/>
+        <set name="collision_radius" value="30.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -4503,9 +4507,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="5467" level="1"/>
-            <!--Защита Тьмы-->
+            <!-- Dark Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -4542,8 +4546,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="46.0"/>
+        <set name="collision_radius" value="18.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -4553,9 +4557,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="5462" level="1"/>
-            <!--Защита Огня-->
+            <!-- Fire Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -4592,8 +4596,8 @@
         <set name="baseShldRate" value="0"/>
         <set name="baseWIT" value="20"/>
         <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="0.1"/>
-        <set name="collision_radius" value="0.1"/>
+        <set name="collision_height" value="66.0"/>
+        <set name="collision_radius" value="25.0"/>
         <set name="level" value="80"/>
         <set name="rewardExp" value="0"/>
         <set name="rewardRp" value="0"/>
@@ -4603,9 +4607,9 @@
         <set name="type" value="Npc"/>
         <skills>
             <skill id="4416" level="9"/>
-            <!--Демоны-->
+            <!-- Demons -->
             <skill id="5464" level="1"/>
-            <!--Защита Ветра-->
+            <!-- Wind Attack -->
         </skills>
         <attributes>
             <defence attribute="fire" value="20"/>
