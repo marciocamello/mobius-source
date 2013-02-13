@@ -308,16 +308,16 @@ public final class DocumentSkill extends DocumentBase
 			int bLevels = Integer.parseInt(levels);
 			for (int i = 0; i < lastLvl; i++)
 			{
-				int skilllevel = i + 1;				
+				int skilllevel = i + 1;
 				if (Config.ENCHANT_SKILLSID_RETAIL)
 				{
 					int current = i + 1;
-					if ((current - bLevels) > 0)	//is enchant
+					if ((current - bLevels) > 0) // is enchant
 					{
 						int tmplvl = current - bLevels - 1;
 						int enchantRoute = (tmplvl - (tmplvl % eLevels)) / eLevels;
-						int enchantLevel = tmplvl - (enchantRoute * eLevels);   
-						skilllevel = (100 * (enchantRoute+1)) + enchantLevel + 1;  
+						int enchantLevel = tmplvl - (enchantRoute * eLevels);
+						skilllevel = (100 * (enchantRoute + 1)) + enchantLevel + 1;
 					}
 				}
 				currentSkill.sets[i] = new StatsSet();
@@ -371,7 +371,7 @@ public final class DocumentSkill extends DocumentBase
 			{
 				int skilllevel = i;
 				currentSkill.currentLevel = skilllevel;
-	
+				
 				lineage2.gameserver.model.Skill current = currentSkill.currentSkills.get(i);
 				if (displayLevels.get(current.getLevel()) != null)
 				{

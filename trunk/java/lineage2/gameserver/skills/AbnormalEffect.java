@@ -98,8 +98,8 @@ public enum AbnormalEffect
 	E_VESPER_2("vesper2", 0x000040, 0),
 	E_VESPER_3("vesper3", 0x000080, 0),
 	HUNTING_BONUS("hunting_bonus", 0x80000, 0),
-	AVE_ADVENT_BLESSING("ave_advent_blessing", 0x080000, 0); //Add NevitAdvent by pmq
-
+	AVE_ADVENT_BLESSING("ave_advent_blessing", 0x080000, 0); // Add NevitAdvent by pmq
+	
 	private final int _mask;
 	private final String _name;
 	private final int _id;
@@ -144,7 +144,7 @@ public enum AbnormalEffect
 	 */
 	public final boolean isSpecial()
 	{
-		return getId()>32;
+		return getId() > 32;
 	}
 	
 	/**

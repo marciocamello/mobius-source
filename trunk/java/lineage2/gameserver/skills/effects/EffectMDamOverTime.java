@@ -44,12 +44,14 @@ public class EffectMDamOverTime extends Effect
 		if (_effected.isDead())
 		{
 			if (getSkill().isUsingWhileCasting())
+			{
 				_effector.abortCast(true, true);
+			}
 			return false;
 		}
 		int sps = getSkill().isSSPossible() ? (getSkill().isMagic() ? _effector.getChargedSpiritShot() : _effector.getChargedSoulShot() ? 2 : 0) : 0;
 		Formulas.AttackInfo info = Formulas.calcMagicDam(_effector, _effected, getSkill(), sps);
-
+		
 		if ((info.damage > (_effected.getCurrentHp() - 1)) && !_effected.isNpc())
 		{
 			if (!getSkill().isOffensive())
@@ -57,7 +59,9 @@ public class EffectMDamOverTime extends Effect
 				_effected.sendPacket(Msg.NOT_ENOUGH_HP);
 			}
 			if (getSkill().isUsingWhileCasting())
+			{
 				_effector.abortCast(true, true);
+			}
 			return false;
 		}
 		if (getSkill().getAbsorbPart() > 0)

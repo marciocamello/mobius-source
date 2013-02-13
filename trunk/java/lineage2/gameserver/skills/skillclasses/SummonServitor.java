@@ -141,7 +141,7 @@ public class SummonServitor extends Skill
 		{
 			case AGATHION:
 				activeChar.setAgathion(getNpcId());
-				//If have lifeTime this is a servitor agathion...
+				// If have lifeTime this is a servitor agathion...
 				if (_lifeTime > 0)
 				{
 					Skill agatSkill = getFirstAddedSkill();

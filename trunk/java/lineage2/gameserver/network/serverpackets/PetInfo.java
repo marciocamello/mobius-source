@@ -90,7 +90,7 @@ public class PetInfo extends L2GameServerPacket
 	 * Field summonPointsMax. Field summonPoint.
 	 */
 	private final int summonPoint, summonPointsMax;
-	private List<Integer> _aveList;
+	private final List<Integer> _aveList;
 	
 	/**
 	 * Constructor for PetInfo.
@@ -179,96 +179,98 @@ public class PetInfo extends L2GameServerPacket
 		{
 			return;
 		}
-			writeC(0xb2);
-			writeD(_type);
-			writeD(obj_id);
-			writeD(npc_id + 1000000);
-			writeD(0);
-			
-			writeD(_loc.x);
-			writeD(_loc.y);
-			writeD(_loc.z);
-			writeD(_loc.h);
-			writeD(0);
-			writeD(MAtkSpd);
-			writeD(PAtkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-
-			writeF(1);
-			writeF(1);
-			writeF(col_radius);
-			writeF(col_height);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeC(_ownerId);
-			writeC(runing);
-			writeC(incombat);
-			writeC(dead);
-			writeC(_showSpawnAnimation);
-			writeD(-1);
-			writeS(_name);
-			writeD(-1);
-			writeS(title);
-			writeD(1);
-			writeD(pvp_flag);
-			writeD(karma);
-			writeD(curFed);
-			writeD(maxFed);
-			writeD(curHp);
-			writeD(maxHp);
-			writeD(curMp);
-			writeD(maxMp);
-			writeD(_sp);
-			writeD(level);
-			writeQ(exp);
-			writeQ(exp_this_lvl);
-			writeQ(exp_next_lvl);
-			writeD(curLoad);
-			writeD(maxLoad);
-			writeD(PAtk);
-			writeD(PDef);
-			writeD(Accuracy);
-			writeD(Evasion);
-			writeD(Crit);
-			writeD(MAtk);
-			writeD(MDef);
-			writeD(_mEvasion);
-			writeD(_mAccuracy);
-			writeD(_mCrit);
-			writeD(_runSpd);
-			writeD(PAtkSpd);
-			writeD(MAtkSpd);
-			
-			writeH(rideable);
-			
-			writeC(0);
-			writeH(0);
-			
-			writeC(_team.ordinal());
-			writeD(ss);
-			writeD(sps);
-			writeD(type);
-			writeD(0x00);
-			writeD(summonPoint);
-			writeD(summonPointsMax);
-
-			if (_aveList!=null)
+		writeC(0xb2);
+		writeD(_type);
+		writeD(obj_id);
+		writeD(npc_id + 1000000);
+		writeD(0);
+		
+		writeD(_loc.x);
+		writeD(_loc.y);
+		writeD(_loc.z);
+		writeD(_loc.h);
+		writeD(0);
+		writeD(MAtkSpd);
+		writeD(PAtkSpd);
+		writeD(_runSpd);
+		writeD(_walkSpd);
+		writeD(_runSpd);
+		writeD(_walkSpd);
+		writeD(_runSpd);
+		writeD(_walkSpd);
+		writeD(_runSpd);
+		writeD(_walkSpd);
+		
+		writeF(1);
+		writeF(1);
+		writeF(col_radius);
+		writeF(col_height);
+		writeD(0);
+		writeD(0);
+		writeD(0);
+		writeC(_ownerId);
+		writeC(runing);
+		writeC(incombat);
+		writeC(dead);
+		writeC(_showSpawnAnimation);
+		writeD(-1);
+		writeS(_name);
+		writeD(-1);
+		writeS(title);
+		writeD(1);
+		writeD(pvp_flag);
+		writeD(karma);
+		writeD(curFed);
+		writeD(maxFed);
+		writeD(curHp);
+		writeD(maxHp);
+		writeD(curMp);
+		writeD(maxMp);
+		writeD(_sp);
+		writeD(level);
+		writeQ(exp);
+		writeQ(exp_this_lvl);
+		writeQ(exp_next_lvl);
+		writeD(curLoad);
+		writeD(maxLoad);
+		writeD(PAtk);
+		writeD(PDef);
+		writeD(Accuracy);
+		writeD(Evasion);
+		writeD(Crit);
+		writeD(MAtk);
+		writeD(MDef);
+		writeD(_mEvasion);
+		writeD(_mAccuracy);
+		writeD(_mCrit);
+		writeD(_runSpd);
+		writeD(PAtkSpd);
+		writeD(MAtkSpd);
+		
+		writeH(rideable);
+		
+		writeC(0);
+		writeH(0);
+		
+		writeC(_team.ordinal());
+		writeD(ss);
+		writeD(sps);
+		writeD(type);
+		writeD(0x00);
+		writeD(summonPoint);
+		writeD(summonPointsMax);
+		
+		if (_aveList != null)
+		{
+			writeD(_aveList.size());
+			for (int i : _aveList)
 			{
-				writeD(_aveList.size());
-				for(int i : _aveList)
-				{
-					writeD(i);
-				}
+				writeD(i);
 			}
-			else
-				writeD(0x00);
+		}
+		else
+		{
+			writeD(0x00);
+		}
 	}
 }

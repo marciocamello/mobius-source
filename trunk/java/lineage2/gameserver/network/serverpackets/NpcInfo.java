@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.serverpackets;
 
 import javolution.util.FastList;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -101,6 +100,7 @@ public class NpcInfo extends L2GameServerPacket
 	 * Field _transformId.
 	 */
 	private FastList<Integer> _aveList;
+	
 	/**
 	 * Constructor for NpcInfo.
 	 * @param cha NpcInstance
@@ -235,85 +235,87 @@ public class NpcInfo extends L2GameServerPacket
 		{
 			return;
 		}
-			writeC(0x0c);
-			writeD(_npcObjId);
-			writeD(_npcId + 1000000);
-			writeD(_isAttackable ? 1 : 0);
-			writeD(_loc.x);
-			writeD(_loc.y);
-			writeD(_loc.z + Config.CLIENT_Z_SHIFT);
-			writeD(_loc.h);
-			writeD(0x00);
-			writeD(_mAtkSpd);
-			writeD(_pAtkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeF(1.100000023841858);
-			writeF(_pAtkSpd / 277.478340719);
-			writeF(colRadius);
-			writeF(colHeight);
-			writeD(_rhand);
-			writeD(_chest);
-			writeD(_lhand);
-			writeC(_isNameAbove ? 1 : 0);
-			writeC(running);
-			writeC(incombat);
-			writeC(dead);
-			writeC(_showSpawnAnimation);
-			writeD(_nameNpcString.getId());
-			writeS(_name);
-			writeD(_titleNpcString.getId());
-			writeS(_title);
-			writeD(_titleColor);
-			writeD(pvp_flag);
-			writeD(karma);
-
-			writeD(0x00);
-			
-			writeD(clan_id);
-			writeD(clan_crest_id);
-			writeD(ally_id);
-			writeD(ally_crest_id);
-			writeC(isFlying ? 2 : 0);
-
-			writeC(_team.ordinal());
-
-			writeF(currentColRadius);
-			writeF(currentColHeight);
-			writeD(_enchantEffect);
-			writeD(isFlying ? 1 : 0);
-			writeD(0x00);
-			writeD(_formId);
-			writeC(_canTarget ? 0x01 : 0x00);
-			writeC(_showName ? 0x01 : 0x00);
-			writeD(0x00);
-			writeD(_state);
-
-			writeD(_HP);
-			writeD(_maxHP);
-			writeD(_MP);
-			writeD(_maxMP);
-			writeD(_CP);
-			writeD(_maxCP);
-			writeD(0x00);
-			writeC(0x00);
-			writeF(0x01);
-
-			if (_aveList!=null)
+		writeC(0x0c);
+		writeD(_npcObjId);
+		writeD(_npcId + 1000000);
+		writeD(_isAttackable ? 1 : 0);
+		writeD(_loc.x);
+		writeD(_loc.y);
+		writeD(_loc.z + Config.CLIENT_Z_SHIFT);
+		writeD(_loc.h);
+		writeD(0x00);
+		writeD(_mAtkSpd);
+		writeD(_pAtkSpd);
+		writeD(_runSpd);
+		writeD(_walkSpd);
+		writeD(_runSpd);
+		writeD(_walkSpd);
+		writeD(_runSpd);
+		writeD(_walkSpd);
+		writeD(_runSpd);
+		writeD(_walkSpd);
+		writeF(1.100000023841858);
+		writeF(_pAtkSpd / 277.478340719);
+		writeF(colRadius);
+		writeF(colHeight);
+		writeD(_rhand);
+		writeD(_chest);
+		writeD(_lhand);
+		writeC(_isNameAbove ? 1 : 0);
+		writeC(running);
+		writeC(incombat);
+		writeC(dead);
+		writeC(_showSpawnAnimation);
+		writeD(_nameNpcString.getId());
+		writeS(_name);
+		writeD(_titleNpcString.getId());
+		writeS(_title);
+		writeD(_titleColor);
+		writeD(pvp_flag);
+		writeD(karma);
+		
+		writeD(0x00);
+		
+		writeD(clan_id);
+		writeD(clan_crest_id);
+		writeD(ally_id);
+		writeD(ally_crest_id);
+		writeC(isFlying ? 2 : 0);
+		
+		writeC(_team.ordinal());
+		
+		writeF(currentColRadius);
+		writeF(currentColHeight);
+		writeD(_enchantEffect);
+		writeD(isFlying ? 1 : 0);
+		writeD(0x00);
+		writeD(_formId);
+		writeC(_canTarget ? 0x01 : 0x00);
+		writeC(_showName ? 0x01 : 0x00);
+		writeD(0x00);
+		writeD(_state);
+		
+		writeD(_HP);
+		writeD(_maxHP);
+		writeD(_MP);
+		writeD(_maxMP);
+		writeD(_CP);
+		writeD(_maxCP);
+		writeD(0x00);
+		writeC(0x00);
+		writeF(0x01);
+		
+		if (_aveList != null)
+		{
+			writeD(_aveList.size());
+			for (int i : _aveList)
 			{
-				writeD(_aveList.size());
-				for(int i : _aveList)
-				{
-					writeD(i);
-				}
+				writeD(i);
 			}
-			else
-				writeD(0x00);
+		}
+		else
+		{
+			writeD(0x00);
+		}
 	}
 }

@@ -12,8 +12,8 @@
  */
 package lineage2.gameserver.model.actor.recorder;
 
-import javolution.util.FastList;
 import gnu.trove.list.array.TIntArrayList;
+import javolution.util.FastList;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.base.TeamType;
 
@@ -103,8 +103,9 @@ public class CharStatsChangeRecorder<T extends Creature>
 	 * Field _abnormalEffects.
 	 */
 	protected TIntArrayList _abnormalEffects = new TIntArrayList();
-
+	
 	protected FastList<Integer> _aveList = new FastList<>();
+	
 	/**
 	 * Constructor for CharStatsChangeRecorder.
 	 * @param actor T
