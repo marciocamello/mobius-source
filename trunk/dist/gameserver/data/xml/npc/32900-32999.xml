@@ -1910,7 +1910,6 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	</npc>
 	<npc id="32939" name="" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
