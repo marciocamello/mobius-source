@@ -145,7 +145,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 			Log.add(activeChar.getName() + "|Failed to enchant|" + _skillId + "|to+" + _skillLvl + "|" + rate, "enchant_skills");
 		}
 		activeChar.addSkill(skill, true);
-		activeChar.sendSkillList();			
+		activeChar.sendSkillList();
 		updateSkillShortcuts(activeChar, _skillId, _skillLvl);
 		activeChar.sendPacket(new ExEnchantSkillInfo(_skillId, activeChar.getSkillDisplayLevel(_skillId)));
 	}

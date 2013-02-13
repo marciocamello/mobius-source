@@ -95,7 +95,7 @@ public class SummonList implements Iterable<Summon>
 		}
 		synchronized (_summonList)
 		{
-			if ((summonType == SummonType.SERVITOR || summonType == SummonType.TREE) && (_summonList.size() > 0))
+			if (((summonType == SummonType.SERVITOR) || (summonType == SummonType.TREE)) && (_summonList.size() > 0))
 			{
 				return false;
 			}
@@ -152,7 +152,7 @@ public class SummonList implements Iterable<Summon>
 			_usedPoints -= summon.getSummonPoint();
 		}
 	}
-
+	
 	/**
 	 * Method unsummonAll.
 	 * @param logout boolean

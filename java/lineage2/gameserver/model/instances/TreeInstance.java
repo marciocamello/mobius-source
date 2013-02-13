@@ -237,7 +237,7 @@ public class TreeInstance extends Summon
 		}
 		getPlayer().getSummonList().removeSummon(this);
 	}
-
+	
 	/**
 	 * Method unSummon.
 	 */
@@ -247,7 +247,7 @@ public class TreeInstance extends Summon
 		stopDisappear();
 		super.unSummon();
 	}
-
+	
 	/**
 	 * Method isFearImmune.
 	 * @return boolean
@@ -283,43 +283,43 @@ public class TreeInstance extends Summon
 	{
 		return 0;
 	}
-
+	
 	@Override
 	public int getSummonSkillId()
 	{
 		return 0;
 	}
-
+	
 	@Override
 	public int getSummonSkillLvl()
 	{
 		return 0;
 	}
-
+	
 	@Override
 	public int getCurrentFed()
 	{
 		return 0;
 	}
-
+	
 	@Override
 	public int getMaxFed()
 	{
 		return 0;
 	}
-
+	
 	@Override
 	public int getSummonPoint()
 	{
 		return 1;
 	}
-
+	
 	@Override
 	public void displayGiveDamageMessage(Creature target, int damage, boolean crit, boolean miss, boolean shld, boolean magic)
 	{
 		
 	}
-
+	
 	/**
 	 * Method displayReceiveDamageMessage.
 	 * @param attacker Creature
@@ -331,25 +331,25 @@ public class TreeInstance extends Summon
 		Player owner = getPlayer();
 		owner.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addName(this).addName(attacker).addNumber((long) damage));
 	}
-
+	
 	@Override
 	public double getExpPenalty()
 	{
 		return 0;
 	}
-
+	
 	@Override
 	public long getWearedMask()
 	{
 		return 0;
 	}
-
+	
 	@Override
 	public int getLevel()
 	{
-		return this.getTemplate().level;
+		return getTemplate().level;
 	}
-
+	
 	/**
 	 * Method isServitor.
 	 * @return boolean
@@ -359,7 +359,7 @@ public class TreeInstance extends Summon
 	{
 		return true;
 	}
-
+	
 	/**
 	 * Method onAction.
 	 * @param player Player

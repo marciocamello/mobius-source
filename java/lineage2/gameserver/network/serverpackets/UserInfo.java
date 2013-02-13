@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.serverpackets;
 
 import javolution.util.FastList;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
@@ -184,7 +183,7 @@ public class UserInfo extends L2GameServerPacket
 	 * Field _team.
 	 */
 	private final TeamType _team;
-	private FastList<Integer> _aveList;
+	private final FastList<Integer> _aveList;
 	/**
 	 * Field _log.
 	 */
@@ -378,161 +377,163 @@ public class UserInfo extends L2GameServerPacket
 		{
 			return;
 		}
-			writeC(0x32);
-			writeD(_loc.x);
-			writeD(_loc.y);
-			writeD(_loc.z + Config.CLIENT_Z_SHIFT);
-			writeD(vehicle_obj_id);
-			writeD(obj_id);
-			writeS(_name);
-			writeD(_race);
-			writeD(sex);
-			writeD(base_class);
-			writeD(level);
-			writeQ(_exp);
-			writeF(_expPercent);
-			writeD(_str);
-			writeD(_dex);
-			writeD(_con);
-			writeD(_int);
-			writeD(_wit);
-			writeD(_men);
-			writeD(maxHp);
-			writeD(curHp);
-			writeD(maxMp);
-			writeD(curMp);
-			writeD(_sp);
-			writeD(curLoad);
-			writeD(maxLoad);
-			writeD(_weaponFlag);
-			for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
+		writeC(0x32);
+		writeD(_loc.x);
+		writeD(_loc.y);
+		writeD(_loc.z + Config.CLIENT_Z_SHIFT);
+		writeD(vehicle_obj_id);
+		writeD(obj_id);
+		writeS(_name);
+		writeD(_race);
+		writeD(sex);
+		writeD(base_class);
+		writeD(level);
+		writeQ(_exp);
+		writeF(_expPercent);
+		writeD(_str);
+		writeD(_dex);
+		writeD(_con);
+		writeD(_int);
+		writeD(_wit);
+		writeD(_men);
+		writeD(maxHp);
+		writeD(curHp);
+		writeD(maxMp);
+		writeD(curMp);
+		writeD(_sp);
+		writeD(curLoad);
+		writeD(maxLoad);
+		writeD(_weaponFlag);
+		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
+		{
+			writeD(_inv[PAPERDOLL_ID][0]);
+		}
+		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
+		{
+			writeD(_inv[PAPERDOLL_ID][1]);
+		}
+		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
+		{
+			writeD(_inv[PAPERDOLL_ID][2]);
+		}
+		writeD(talismans);
+		writeD(openCloak ? 0x01 : 0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		if (getClient().getRevision() == 448)
+		{
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+		}
+		writeD(_patk);
+		writeD(_patkspd);
+		writeD(_pdef);
+		writeD(evasion);
+		writeD(accuracy);
+		writeD(crit);
+		writeD(_matk);
+		writeD(_matkspd);
+		writeD(_patkspd);
+		writeD(_mdef);
+		writeD(mevasion);
+		writeD(maccuracy);
+		writeD(mCritRate);
+		writeD(pvp_flag);
+		writeD(karma);
+		writeD(_runSpd);
+		writeD(_walkSpd);
+		writeD(_swimRunSpd);
+		writeD(_swimWalkSpd);
+		writeD(_flRunSpd);
+		writeD(_flWalkSpd);
+		writeD(_flyRunSpd);
+		writeD(_flyWalkSpd);
+		writeF(move_speed);
+		writeF(attack_speed);
+		writeF(col_radius);
+		writeF(col_height);
+		writeD(hair_style);
+		writeD(hair_color);
+		writeD(face);
+		writeD(gm_commands);
+		writeS(title);
+		writeD(clan_id);
+		writeD(clan_crest_id);
+		writeD(ally_id);
+		writeD(ally_crest_id);
+		writeD(_relation);
+		writeC(mount_type);
+		writeC(private_store);
+		writeC(can_crystalize);
+		writeD(pk_kills);
+		writeD(pvp_kills);
+		writeH(cubics.length);
+		for (EffectCubic cubic : cubics)
+		{
+			writeH(cubic == null ? 0 : cubic.getId());
+		}
+		writeC(partyRoom ? 0x01 : 0x00);
+		writeC(isFlying ? 0x02 : 0x00);
+		writeD(ClanPrivs);
+		writeH(rec_left);
+		writeH(rec_have);
+		writeD(mount_id);
+		writeH(InventoryLimit);
+		writeD(class_id);
+		writeD(0x00);
+		writeD(maxCp);
+		writeD(curCp);
+		writeC(_enchant);
+		writeC(_team.ordinal());
+		writeD(large_clan_crest_id);
+		writeC(noble);
+		writeC(hero);
+		writeC(fishing);
+		writeD(_fishLoc.x);
+		writeD(_fishLoc.y);
+		writeD(_fishLoc.z);
+		writeD(name_color);
+		writeC(running);
+		writeD(pledge_class);
+		writeD(pledge_type);
+		writeD(title_color);
+		writeD(cw_level);
+		writeD(transformation);
+		writeH(attackElement.getId());
+		writeH(attackElementValue);
+		writeH(defenceFire);
+		writeH(defenceWater);
+		writeH(defenceWind);
+		writeH(defenceEarth);
+		writeH(defenceHoly);
+		writeH(defenceUnholy);
+		writeD(agathion);
+		writeD(fame);
+		writeD(_allowMap ? 1 : 0);
+		writeD(vitality);
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeC(0x00);
+		
+		if (_aveList != null)
+		{
+			writeD(_aveList.size());
+			for (int i : _aveList)
 			{
-				writeD(_inv[PAPERDOLL_ID][0]);
+				writeD(i);
 			}
-			for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-			{
-				writeD(_inv[PAPERDOLL_ID][1]);
-			}
-			for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-			{
-				writeD(_inv[PAPERDOLL_ID][2]);
-			}
-			writeD(talismans);
-			writeD(openCloak ? 0x01 : 0x00);
+		}
+		else
+		{
 			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			if (getClient().getRevision() == 448)
-			{
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-			}
-			writeD(_patk);
-			writeD(_patkspd);
-			writeD(_pdef);
-			writeD(evasion);
-			writeD(accuracy);
-			writeD(crit);
-			writeD(_matk);
-			writeD(_matkspd);
-			writeD(_patkspd);
-			writeD(_mdef);
-			writeD(mevasion);
-			writeD(maccuracy);
-			writeD(mCritRate);
-			writeD(pvp_flag);
-			writeD(karma);
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_swimRunSpd);
-			writeD(_swimWalkSpd);
-			writeD(_flRunSpd);
-			writeD(_flWalkSpd);
-			writeD(_flyRunSpd);
-			writeD(_flyWalkSpd);
-			writeF(move_speed);
-			writeF(attack_speed);
-			writeF(col_radius);
-			writeF(col_height);
-			writeD(hair_style);
-			writeD(hair_color);
-			writeD(face);
-			writeD(gm_commands);
-			writeS(title);
-			writeD(clan_id);
-			writeD(clan_crest_id);
-			writeD(ally_id);
-			writeD(ally_crest_id);
-			writeD(_relation);
-			writeC(mount_type);
-			writeC(private_store);
-			writeC(can_crystalize);
-			writeD(pk_kills);
-			writeD(pvp_kills);
-			writeH(cubics.length);
-			for (EffectCubic cubic : cubics)
-			{
-				writeH(cubic == null ? 0 : cubic.getId());
-			}
-			writeC(partyRoom ? 0x01 : 0x00);
-			writeC(isFlying ? 0x02 : 0x00);
-			writeD(ClanPrivs);
-			writeH(rec_left);
-			writeH(rec_have);
-			writeD(mount_id);
-			writeH(InventoryLimit);
-			writeD(class_id);
-			writeD(0x00);
-			writeD(maxCp);
-			writeD(curCp);
-			writeC(_enchant);
-			writeC(_team.ordinal());
-			writeD(large_clan_crest_id);
-			writeC(noble);
-			writeC(hero);
-			writeC(fishing);
-			writeD(_fishLoc.x);
-			writeD(_fishLoc.y);
-			writeD(_fishLoc.z);
-			writeD(name_color);
-			writeC(running);
-			writeD(pledge_class);
-			writeD(pledge_type);
-			writeD(title_color);
-			writeD(cw_level);
-			writeD(transformation);
-			writeH(attackElement.getId());
-			writeH(attackElementValue);
-			writeH(defenceFire);
-			writeH(defenceWater);
-			writeH(defenceWind);
-			writeH(defenceEarth);
-			writeH(defenceHoly);
-			writeH(defenceUnholy);
-			writeD(agathion);
-			writeD(fame);
-			writeD(_allowMap ? 1 : 0);
-			writeD(vitality);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeC(0x00);
-			
-			if (_aveList!=null)
-			{
-				writeD(_aveList.size());
-				for(int i : _aveList)
-				{
-					writeD(i);
-				}
-			}
-			else
-				writeD(0x00);
-			
-			writeC(0x00);
+		}
+		
+		writeC(0x00);
 	}
 }

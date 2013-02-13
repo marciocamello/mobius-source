@@ -544,7 +544,7 @@ public class FishingChampionShipManager
 			_winFishLength.add(String.valueOf(_winPlayers.get(x).getLength()));
 		}
 	}/*
-	 *  * @author Mobius
+	 * * @author Mobius
 	 */
 	
 	private class finishChamp extends RunnableImpl
@@ -581,7 +581,7 @@ public class FishingChampionShipManager
 			ThreadPoolManager.getInstance().schedule(new finishChamp(), _enddate - System.currentTimeMillis());
 		}
 	}/*
-	 *  * @author Mobius
+	 * * @author Mobius
 	 */
 	
 	private class needRefresh extends RunnableImpl
@@ -607,7 +607,7 @@ public class FishingChampionShipManager
 			_needRefresh = true;
 		}
 	}/*
-	 *  * @author Mobius
+	 * * @author Mobius
 	 */
 	
 	private class Fisher

@@ -35,7 +35,6 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import javolution.util.FastList;
-
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
@@ -403,7 +402,7 @@ public abstract class Creature extends GameObject
 	 * Field _isAttackAborted.
 	 */
 	
-	private FastList<Integer> _aveList = new FastList<>();
+	private final FastList<Integer> _aveList = new FastList<>();
 	
 	protected boolean _isAttackAborted;
 	/**
@@ -2345,7 +2344,7 @@ public abstract class Creature extends GameObject
 		int x1 = 0;
 		int y1 = 0;
 		int z1 = 0;
-		if (skill.getFlyType()==FlyType.THROW_UP)
+		if (skill.getFlyType() == FlyType.THROW_UP)
 		{
 			x1 = 0;
 			y1 = 0;
@@ -2491,19 +2490,23 @@ public abstract class Creature extends GameObject
 	{
 		return _aveList;
 	}
-
+	
 	public void addToAveList(int aeId)
 	{
 		if (!_aveList.contains(aeId))
+		{
 			_aveList.add(aeId);
+		}
 	}
-
+	
 	public void removeFromAveList(int aeId)
 	{
 		if (_aveList.contains(aeId))
+		{
 			_aveList.remove(_aveList.indexOf(aeId));
+		}
 	}
-
+	
 	/**
 	 * Method getAccuracy.
 	 * @return int
@@ -4495,7 +4498,7 @@ public abstract class Creature extends GameObject
 		}
 		switch (skill.getFlyType())
 		{
-			//TARGETS FLYTYPE
+		// TARGETS FLYTYPE
 			case THROW_UP:
 			case THROW_HORIZONTAL:
 			case PUSH_HORIZONTAL:
@@ -4508,13 +4511,13 @@ public abstract class Creature extends GameObject
 					broadcastPacket(new FlyToLocation(target, flyLoc, skill.getFlyType(), 0));
 				}
 				break;
-			//CASTER FLYTYPE
+			// CASTER FLYTYPE
 			case CHARGE:
 			case DUMMY:
 			case WARP_BACK:
 			case WARP_FORWARD:
 				flyLoc = getFlyLocation(null, skill);
-				if (flyLoc!=null)
+				if (flyLoc != null)
 				{
 					setLoc(flyLoc);
 					broadcastPacket(new FlyToLocation(this, flyLoc, skill.getFlyType(), 0));
@@ -5986,7 +5989,7 @@ public abstract class Creature extends GameObject
 	{
 		_isTargetable = value;
 	}
-
+	
 	/**
 	 * Method isConfused.
 	 * @return boolean

@@ -7133,7 +7133,7 @@ public final class Player extends Playable implements PlayerGroup
 					{
 						removeSkill(s, true);
 						removeSkillFromShortCut(s.getId());
-						_log.info("SkillRelation: Removed skill: " + s.getId() + " - " + s.getName() + " to the player "+ getName());
+						_log.info("SkillRelation: Removed skill: " + s.getId() + " - " + s.getName() + " to the player " + getName());
 					}
 				}
 			}
