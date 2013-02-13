@@ -1585,14 +1585,19 @@
 	</skill>
 	<skill id="11570" levels="1" name="Healing Melody">
     <!-- Heals the target and the 10 most injured allies around the target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person. -->
+		<table name="#mpConsume2">194</table>
+		<table name="#mpConsume2">70</table>
+		<set name="reuseDelay" val="5000" />
+		<set name="hitTime" val="2000" />		
+		<set name="castRange" val="900" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="magicLvl" val="85"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="effectPoint" val="398"/>
 		<set name="castRange" val="900" />
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="healPercents" val="35;32;30;27;25;23;21;20;10;10;10"/>
-		<set name="reuseDelay" val="5000"/>
-		<set name="skillRadius" val="600"/>
+		<set name="healRadius" val="600"/>
 		<set name="skillType" val="CHAIN_HEAL"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="relationSkillsId" val="1229;1488;58;1553" />

@@ -34,5 +34,5 @@ public interface IAdminCommandHandler
 	 * Method getAdminCommandEnum.
 	 * @return Enum[]
 	 */
-	public Enum[] getAdminCommandEnum();
+	public Enum<?>[] getAdminCommandEnum();
 }

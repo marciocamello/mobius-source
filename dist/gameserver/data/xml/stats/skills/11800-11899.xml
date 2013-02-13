@@ -290,13 +290,12 @@
 		<set name="hitTime" val="3000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="castRange" val="900"/>
-		<set name="healRadius" val="350"/>
+		<set name="healRadius" val="600"/>
 		<set name="mpConsume2" val="156"/>
 		<set name="mpConsume1" val="38"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="healPercents" val="40;37;34;31;28;25;22;20;20;20;20"/>
 		<set name="reuseDelay" val="5000"/>
-		<set name="skillRadius" val="600"/>
 		<set name="skillType" val="CHAIN_HEAL"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="relationSkillsId" val="1553" /> 

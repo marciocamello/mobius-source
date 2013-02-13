@@ -196,9 +196,58 @@ public class TreeInstance extends Summon
 			_targetTask.cancel(false);
 		}
 		_targetTask = null;
+		getPlayer().getSummonList().removeSummon(this);
 		super.onDelete();
 	}
 	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
+	@Override
+	protected void onDeath(Creature killer)
+	{
+		super.onDeath(killer);
+		saveEffects();
+		if (_destroyTask != null)
+		{
+			_destroyTask.cancel(false);
+			_destroyTask = null;
+		}
+		if (_targetTask != null)
+		{
+			_targetTask.cancel(false);
+		}
+		getPlayer().getSummonList().removeSummon(this);
+	}
+	
+	/**
+	 * Method stopDisappear.
+	 */
+	protected synchronized void stopDisappear()
+	{
+		if (_destroyTask != null)
+		{
+			_destroyTask.cancel(false);
+			_destroyTask = null;
+		}
+		if (_targetTask != null)
+		{
+			_targetTask.cancel(false);
+		}
+		getPlayer().getSummonList().removeSummon(this);
+	}
+
+	/**
+	 * Method unSummon.
+	 */
+	@Override
+	public void unSummon()
+	{
+		stopDisappear();
+		super.unSummon();
+	}
+
 	/**
 	 * Method isFearImmune.
 	 * @return boolean
@@ -232,49 +281,42 @@ public class TreeInstance extends Summon
 	@Override
 	public int getSummonType()
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int getSummonSkillId()
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int getSummonSkillLvl()
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int getCurrentFed()
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int getMaxFed()
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int getSummonPoint()
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		return 1;
 	}
 
 	@Override
 	public void displayGiveDamageMessage(Creature target, int damage, boolean crit, boolean miss, boolean shld, boolean magic)
 	{
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -293,22 +335,29 @@ public class TreeInstance extends Summon
 	@Override
 	public double getExpPenalty()
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public long getWearedMask()
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int getLevel()
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		return this.getTemplate().level;
+	}
+
+	/**
+	 * Method isServitor.
+	 * @return boolean
+	 */
+	@Override
+	public boolean isServitor()
+	{
+		return true;
 	}
 
 	/**

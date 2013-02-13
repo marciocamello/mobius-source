@@ -72,7 +72,7 @@ public class AdminTeam extends ScriptAdminCommand
 	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
-	public Enum[] getAdminCommandEnum()
+	public Enum<?>[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}

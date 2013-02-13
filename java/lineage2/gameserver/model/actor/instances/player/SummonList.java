@@ -95,7 +95,7 @@ public class SummonList implements Iterable<Summon>
 		}
 		synchronized (_summonList)
 		{
-			if ((summonType == SummonType.SERVITOR) && (_summonList.size() > 0))
+			if ((summonType == SummonType.SERVITOR || summonType == SummonType.TREE) && (_summonList.size() > 0))
 			{
 				return false;
 			}

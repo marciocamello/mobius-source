@@ -150,6 +150,14 @@
             <coords loc="-21384 -44168"/>
         </polygon>
     </zone>
+    <zone name="[fortuna_start]" type="epic">
+        <polygon>
+            <coords loc="42008 -174248 -8976 -5976"/>
+            <coords loc="42200 -174248 -8976 -5976"/>
+            <coords loc="42200 -174376 -8976 -5976"/>
+            <coords loc="42008 -174344 -8976 -5976"/>
+        </polygon>
+    </zone>
     <zone name="[beleth_epic]" type="epic">
         <polygon>
             <coords loc="11214 205578 -10412 -5112"/>
@@ -182,6 +190,48 @@
             <coords loc="113592 -112632 -11249 -10749"/>
         </polygon>
     </zone>
+    <zone name="[kartia_zone1]" type="epic">
+        <polygon>
+            <coords loc="-108968 -10376 -11949 -11249"/>
+            <coords loc="-109096 -10376 -11949 -11249"/>
+            <coords loc="-109080 -10504 -11949 -11249"/>
+            <coords loc="-108968 -10504 -11949 -11249"/>
+        </polygon>
+    </zone>
+    <zone name="[kartia_zone2]" type="epic">
+        <polygon>
+            <coords loc="-111448 -11928 -11596 -10949"/>
+            <coords loc="-111448 -12120 -11596 -10949"/>
+            <coords loc="-111160 -12152 -11596 -10949"/>
+            <coords loc="-111160 -11928 -11596 -10949"/>
+        </polygon>
+    </zone>
+    <zone name="[kartia_cycle_2]" type="epic">
+        <polygon>
+            <coords loc="-111432 -12280 -11596 -11296"/>
+            <coords loc="-111432 -12080 -11596 -11296"/>
+            <coords loc="-111032 -12080 -11596 -11296"/>
+            <coords loc="-111032 -12280 -11596 -11296"/>
+        </polygon>
+    </zone>
+	<zone name="[tauti_zone_entrace]" type="epic">
+		<polygon>
+			<coords loc="-147176 211096 -10065 -10065"/>
+			<coords loc="-147224 211096 -10065 -10065"/>
+			<coords loc="-147240 211096 -10065 -10065"/>
+			<coords loc="-147256 211096 -10065 -10065"/>
+			<coords loc="-147272 211096 -10065 -10065"/>
+			<coords loc="-147288 211096 -10065 -10065"/>
+			<coords loc="-147304 211096 -10065 -10065"/>
+			<coords loc="-147320 211096 -10065 -10065"/>
+			<coords loc="-147336 211096 -10065 -10065"/>
+			<coords loc="-147304 211128 -10065 -10065"/>
+			<coords loc="-147288 211128 -10065 -10065"/>
+			<coords loc="-147272 211128 -10065 -10065"/>
+			<coords loc="-147256 211128 -10065 -10065"/>
+			<coords loc="-147224 211128 -10065 -10065"/>
+		</polygon>
+	</zone>
 	<zone name="[Isthina_epic]" type="epic" >
 		<polygon>
 		<coords loc="-177123 145919 -11800 -11000"/>

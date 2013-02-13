@@ -246,6 +246,13 @@ public enum SceneMovie implements IStaticPacket
 	 * Field sc_awakening_opening_f.
 	 */
 	sc_awakening_opening_f(59, 38100),
+	
+	sc_tauti_opening_b(69, 15000),
+	sc_tauti_opening(70, 15000),
+	sc_tauti_phase(71, 15000),
+	sc_tauti_ending(72, 15000),
+	sc_noble_opening(99, 10000),
+	sc_noble_ending(100, 10000),
 	/**
 	 * Field si_illusion_01_que.
 	 */

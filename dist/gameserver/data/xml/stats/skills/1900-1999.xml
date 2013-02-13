@@ -334,7 +334,7 @@
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
         <set name="skillType" val="BUFF"/>
-        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
         <set name="skillRadius" val="1000"/>
 		<set name="isMusic" val="true"/>
         <for>
@@ -367,7 +367,7 @@
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
         <set name="skillType" val="BUFF"/>
-        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
         <set name="skillRadius" val="1000"/>
 		<set name="isMusic" val="true"/>
         <for>
@@ -400,7 +400,7 @@
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
         <set name="skillType" val="BUFF"/>
-        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
         <set name="skillRadius" val="1000"/>
 		<set name="isMusic" val="true"/>
         <for>
@@ -433,7 +433,7 @@
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
         <set name="skillType" val="BUFF"/>
-        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
         <set name="skillRadius" val="1000"/>
 		<set name="isMusic" val="true"/>
         <for>
@@ -466,7 +466,7 @@
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
         <set name="skillType" val="BUFF"/>
-        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
         <set name="skillRadius" val="1000"/>
 		<set name="isMusic" val="true"/>
         <for>
@@ -499,7 +499,7 @@
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
         <set name="skillType" val="BUFF"/>
-        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
         <set name="skillRadius" val="1000"/>
 		<set name="isMusic" val="true"/>
         <for>
@@ -532,7 +532,7 @@
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
         <set name="skillType" val="BUFF"/>
-        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
         <set name="skillRadius" val="1000"/>
 		<set name="isMusic" val="true"/>
         <for>

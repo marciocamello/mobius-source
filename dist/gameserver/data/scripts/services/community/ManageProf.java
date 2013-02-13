@@ -147,25 +147,25 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 		{
 			if (player.getLevel() < 80)
 			{
-				player.sendMessage("Вы еще �?ли�?ком �?лабы! �?риходите как получите 80 уровен�?!");
+				player.sendMessage("You must be at least level 80.");
 				return;
 			}
 			if (player.getActiveSubClass().isBase())
 			{
-				player.sendMessage("Вы должны быт�? на �?аб-кла�?�?е");
+				player.sendMessage("You must be on your SubClass.");
 				return;
 			}
 			for (SubClass s : player.getSubClassList().values())
 			{
 				if (s.isDouble())
 				{
-					player.sendMessage("Вы уже имеете дуал-кла�?�?!");
+					player.sendMessage("You already have it double.");
 					return;
 				}
 			}
 			player.getActiveSubClass().setType(SubClassType.DOUBLE_SUBCLASS);
 			AwakingManager.getInstance().onPlayerEnter(player);
-			player.sendMessage("�?оздравл�?ем! Вы получили Дуал-�?ла�?�?");
+			player.sendMessage("You received your Double SubClass.");
 			player.sendPacket(new ExSubjobInfo(player, true));
 		}
 	}
@@ -207,8 +207,8 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 		if (((level >= 20) && (jobLevel == 1)) || ((level >= 40) && (jobLevel == 2)) || ((level >= 76) && (jobLevel == 3)) || ((level >= 85) && (jobLevel == 4) && Config.ALLOW_CLASS_MASTERS_LIST.contains(jobLevel)))
 		{
 			ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.CLASS_MASTERS_PRICE_ITEM_LIST[jobLevel]);
-			html.append("Вы должны заплатит�?: <font color=\"LEVEL\">");
-			html.append(Config.CLASS_MASTERS_PRICE_LIST[jobLevel] + "</font> <font color=\"LEVEL\">" + item.getName() + "</font> дл�? �?мены профе�?�?ии<br>");
+			html.append("You have to pay: <font color=\"LEVEL\">");
+			html.append(Config.CLASS_MASTERS_PRICE_LIST[jobLevel] + "</font> <font color=\"LEVEL\">" + item.getName() + "</font> for the Class Upgrade.<br>");
 			html.append("<center><table width=600><tr>");
 			for (ClassId cid : ClassId.values())
 			{
@@ -222,7 +222,7 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 				}
 			}
 			html.append("</tr>");
-			html.append("<tr><td><center><button value=\"Дуал-�?ла�?�?\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center></td></tr>");
+			html.append("<tr><td><center><button value=\"Class Upgrade\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center></td></tr>");
 			html.append("</table></center>");
 			html.append("</td>");
 			html.append("</tr>");
@@ -233,7 +233,7 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 			switch (jobLevel)
 			{
 				case 1:
-					html.append("<center><button value=\"Дуал-�?ла�?�?\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
+					html.append("<center><button value=\"Class Upgrade\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
 					html.append("�?ривет�?тву�?, <font color=F2C202>" + player.getName() + "</font> . Ва�?а текуща�? профе�?�?и�? <font color=F2C202>" + player.getClassId().name() + "</font><br>");
 					html.append("Дл�? того, что бы �?менит�? ва�?у профе�?�?и�?, вы должны до�?тич�?: <font color=F2C202>20-го уровн�?.</font><br>");
 					html.append("Дл�? активации �?абкла�?�?ов вы должны до�?тич�? <font color=F2C202>76-го уровн�?.</font><br>");
