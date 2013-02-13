@@ -265,7 +265,7 @@ public class AdminSkill implements IAdminCommandHandler
 	 * Methodnur# * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()getAdminCommandEnum()
 	 */
 	@Override
-	public Enum[] getAdminCommandEnum()
+	public Enum<?>[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}

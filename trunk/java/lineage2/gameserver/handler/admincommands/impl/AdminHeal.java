@@ -73,7 +73,7 @@ public class AdminHeal implements IAdminCommandHandler
 	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
-	public Enum[] getAdminCommandEnum()
+	public Commands[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}

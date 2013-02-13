@@ -168,7 +168,7 @@ public class GvG extends Functions implements ScriptFile
 		@Override
 		public void runImpl()
 		{
-			Announcements.getInstance().announceToAll("GvG: До конца приема за�?вок на турнир о�?тало�?�? " + Integer.toString(_timer) + " мин.");
+			Announcements.getInstance().announceToAll("GvG: Until the end of the registration on the tournament remains " + Integer.toString (_timer) + " minutes.");
 		}
 	}
 	
@@ -284,8 +284,8 @@ public class GvG extends Functions implements ScriptFile
 			}
 			ServerVariables.set("GvG", "on");
 			_log.info("Event 'GvG' activated.");
-			Announcements.getInstance().announceToAll("Реги�?траци�? на GvG турнир начала�?�?! Community Board(Alt+B) -> Эвенты -> GvG (реги�?траци�? группы, опи�?ание)");
-			Announcements.getInstance().announceToAll("За�?вки принима�?т�?�? в течение " + (regActiveTime / 60000) + " минут");
+			Announcements.getInstance().announceToAll("Registration on GvG tournament start, Community Board (Alt + B) -> Event -> GvG (Registration Group)");
+			Announcements.getInstance().announceToAll("Registration will be active for " + (regActiveTime / 60000) + " minutes");
 			_active = true;
 			_isRegistrationActive = true;
 		}
@@ -301,7 +301,7 @@ public class GvG extends Functions implements ScriptFile
 			stopTimers();
 			ServerVariables.unset("GvG");
 			_log.info("Event 'GvG' canceled.");
-			Announcements.getInstance().announceToAll("GvG: Турнир отменен");
+			Announcements.getInstance().announceToAll("GvG: Tournament canceled");
 			_active = false;
 			_isRegistrationActive = false;
 			leaderList.clear();
@@ -376,39 +376,39 @@ public class GvG extends Functions implements ScriptFile
 		}
 		if (!_isRegistrationActive)
 		{
-			player.sendMessage("GvG турнир неактивен.");
+			player.sendMessage("GvG tournament inactive.");
 			return;
 		}
 		if (leaderList.contains(player.getRef()))
 		{
-			player.sendMessage("Вы уже зареги�?трировали�?�? на GvG турнир");
+			player.sendMessage("You are already registered on GvG Tournament.");
 			return;
 		}
 		if (!player.isInParty())
 		{
-			player.sendMessage("Вы не �?о�?тоите в группе и не можете подат�? за�?вку");
+			player.sendMessage("You are not in party.");
 			return;
 		}
 		if (!player.getParty().isLeader(player))
 		{
-			player.sendMessage("Тол�?ко лидер группы может подат�? за�?вку");
+			player.sendMessage("You are not the party Leader.");
 			return;
 		}
 		if (player.getParty().isInCommandChannel())
 		{
-			player.sendMessage("Чтобы уча�?твоват�? в турнире вы должны покинут�? �?омандный �?анал");
+			player.sendMessage("To register in the tournament you have to leave the command channel.");
 			return;
 		}
 		if (leaderList.size() >= _groupsLimit)
 		{
-			player.sendMessage("До�?тигнут лимит количе�?тва групп дл�? уча�?ти�? в турнире. За�?вка отклонена");
+			player.sendMessage("The tournament reached the limit number.");
 			return;
 		}
 		final List<Player> party = player.getParty().getPartyMembers();
 		final String[] abuseReason =
 		{
-			"не находит�?�? в игре",
-			"не находит�?�? в группе",
+			"cannot find the game",
+			"cannot find the party",
 			"�?о�?тоит в неполной группе. �?инимал�?ное кол-во членов группы - 6.",
 			"не �?вл�?ет�?�? лидером группы, подавав�?ей за�?вку",
 			"не �?оответ�?твует требовани�?м уровней дл�? турнира",
@@ -427,7 +427,7 @@ public class GvG extends Functions implements ScriptFile
 			int abuseId = checkPlayer(eachmember, false);
 			if (abuseId != 0)
 			{
-				player.sendMessage("�?грок " + eachmember.getName() + " " + abuseReason[abuseId - 1]);
+				player.sendMessage("Player " + eachmember.getName() + " " + abuseReason[abuseId - 1]);
 				return;
 			}
 		}
@@ -479,7 +479,7 @@ public class GvG extends Functions implements ScriptFile
 		if (leaderList.size() < 2)
 		{
 			leaderList.clear();
-			Announcements.getInstance().announceToAll("GvG: Турнир отменен из-за недо�?татка уча�?тников");
+			Announcements.getInstance().announceToAll("GvG: Tournament canceled due lack of partecipant.");
 			return;
 		}
 		Announcements.getInstance().announceToAll("GvG: �?рием за�?вок завер�?ен. Запу�?к турнира.");

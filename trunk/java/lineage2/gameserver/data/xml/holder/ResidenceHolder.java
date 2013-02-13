@@ -44,7 +44,7 @@ public final class ResidenceHolder extends AbstractHolder
 	/**
 	 * Field _fastResidencesByType.
 	 */
-	private final Map<Class, List<Residence>> _fastResidencesByType = new HashMap<>(4);
+	private final Map<Class<?>, List<Residence>> _fastResidencesByType = new HashMap<>(4);
 	
 	/**
 	 * Method getInstance.
@@ -214,7 +214,7 @@ public final class ResidenceHolder extends AbstractHolder
 	{
 		buildFastLook();
 		info("total size: " + _residences.size());
-		for (Map.Entry<Class, List<Residence>> entry : _fastResidencesByType.entrySet())
+		for (Map.Entry<Class<?>, List<Residence>> entry : _fastResidencesByType.entrySet())
 		{
 			info(" - load " + entry.getValue().size() + " " + entry.getKey().getSimpleName().toLowerCase() + "(s).");
 		}

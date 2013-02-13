@@ -110,6 +110,7 @@ public class SummonServitor extends Skill
 			case SERVITOR:
 			case MULTI_SERVITOR:
 			case SIEGE_SUMMON:
+			case TREE:
 				if (player.isMounted() || !player.getSummonList().canSummon(_summonType, _summonPoint))
 				{
 					player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
@@ -123,12 +124,6 @@ public class SummonServitor extends Skill
 					return false;
 				}
 				break;
-			case TREE:
-				if (player.isMounted())
-				{
-					player.sendPacket(SystemMsg.AN_AGATHION_HAS_ALREADY_BEEN_SUMMONED);
-					return false;
-				}
 		}
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
@@ -245,12 +240,13 @@ public class SummonServitor extends Skill
 				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(merchant), _lifeTime);
 				break;
 			case TREE:
-				if (activeChar.isMounted())
+				if (activeChar.isMounted() || !activeChar.getSummonList().canSummon(_summonType, _summonPoint))
 				{
 					return;
 				}
 				NpcTemplate treeTemplate = NpcHolder.getInstance().getTemplate(getNpcId());
 				TreeInstance tree = new TreeInstance(IdFactory.getInstance().getNextId(), treeTemplate, activeChar, _lifeTime, SkillTable.getInstance().getInfo(11806, getLevel()), activeChar.getLoc());
+				activeChar.getSummonList().addSummon(tree);
 				tree.setCurrentHp(tree.getMaxHp(), false);
 				tree.setCurrentMp(tree.getMaxMp());
 				tree.setHeading(activeChar.getHeading());

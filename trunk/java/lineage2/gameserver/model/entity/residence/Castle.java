@@ -95,7 +95,7 @@ public class Castle extends Residence
 	/**
 	 * Field _relatedFortresses.
 	 */
-	private final IntObjectMap<List> _relatedFortresses = new CTreeIntObjectMap<>();
+	private final IntObjectMap<List<?>> _relatedFortresses = new CTreeIntObjectMap<>();
 	/**
 	 * Field _dominion.
 	 */
@@ -166,10 +166,10 @@ public class Castle extends Residence
 	public void init()
 	{
 		super.init();
-		for (IntObjectMap.Entry<List> entry : _relatedFortresses.entrySet())
+		for (IntObjectMap.Entry<List<?>> entry : _relatedFortresses.entrySet())
 		{
 			_relatedFortresses.remove(entry.getKey());
-			List<Integer> list = entry.getValue();
+			List<Integer> list = (List<Integer>) entry.getValue();
 			List<Fortress> list2 = new ArrayList<>(list.size());
 			for (int i : list)
 			{
@@ -989,7 +989,7 @@ public class Castle extends Residence
 	 */
 	public void addRelatedFortress(int type, int fortress)
 	{
-		List<Integer> fortresses = _relatedFortresses.get(type);
+		List<Integer> fortresses = (List<Integer>) _relatedFortresses.get(type);
 		if (fortresses == null)
 		{
 			_relatedFortresses.put(type, fortresses = new ArrayList<>());
@@ -1003,7 +1003,7 @@ public class Castle extends Residence
 	 */
 	public int getDomainFortressContract()
 	{
-		List<Fortress> list = _relatedFortresses.get(Fortress.DOMAIN);
+		List<Fortress> list = (List<Fortress>) _relatedFortresses.get(Fortress.DOMAIN);
 		if (list == null)
 		{
 			return 0;
@@ -1041,7 +1041,7 @@ public class Castle extends Residence
 	 * Method getRelatedFortresses.
 	 * @return IntObjectMap<List>
 	 */
-	public IntObjectMap<List> getRelatedFortresses()
+	public IntObjectMap<List<?>> getRelatedFortresses()
 	{
 		return _relatedFortresses;
 	}

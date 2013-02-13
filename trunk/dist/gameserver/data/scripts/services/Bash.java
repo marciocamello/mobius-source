@@ -386,7 +386,7 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
-	public Enum[] getAdminCommandEnum()
+	public Enum<?>[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}

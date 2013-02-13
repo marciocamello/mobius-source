@@ -21,6 +21,7 @@ import lineage2.gameserver.dao.CastleDoorUpgradeDAO;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.instancemanager.CastleManorManager;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.CastleDamageZoneObject;
@@ -53,7 +54,7 @@ import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.ReflectionUtils;
 import npc.model.residences.ResidenceManager;
 
-import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.IntObjectMap.Entry;
 
 /**
  * @author Mobius
@@ -519,7 +520,7 @@ public class ChamberlainInstance extends ResidenceManager
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/chamberlain-fortress-status.htm");
 			StringBuilder b = new StringBuilder(100);
-			for (IntObjectMap.Entry<List> entry : castle.getRelatedFortresses().entrySet())
+			for (Entry<List<?>> entry : castle.getRelatedFortresses().entrySet())
 			{
 				NpcString type;
 				switch (entry.getKey())
@@ -533,12 +534,12 @@ public class ChamberlainInstance extends ResidenceManager
 					default:
 						continue;
 				}
-				List<Fortress> fortresses = entry.getValue();
-				for (Fortress fort : fortresses)
+				List<?> fortresses = entry.getValue();
+				for (Object fort : fortresses)
 				{
-					b.append(HtmlUtils.htmlResidenceName(fort.getId())).append(" (").append(HtmlUtils.htmlNpcString(type)).append(") : <font color=\"00FFFF\">");
+					b.append(HtmlUtils.htmlResidenceName(((GlobalEvent) fort).getId())).append(" (").append(HtmlUtils.htmlNpcString(type)).append(") : <font color=\"00FFFF\">");
 					NpcString contractType;
-					switch (fort.getContractState())
+					switch (((Fortress) fort).getContractState())
 					{
 						case Fortress.NOT_DECIDED:
 							contractType = NpcString.NONPARTISAN;

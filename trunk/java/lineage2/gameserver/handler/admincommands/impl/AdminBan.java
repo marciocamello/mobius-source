@@ -477,7 +477,7 @@ public class AdminBan implements IAdminCommandHandler
 	}
 	
 	@Override
-	public Enum[] getAdminCommandEnum()
+	public Enum<?>[] getAdminCommandEnum()
 	{
 		return Commands.values();
 	}

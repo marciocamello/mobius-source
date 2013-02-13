@@ -101,7 +101,7 @@ public class EffectGiantForceAura extends Effect
 		{
 			return;
 		}
-		List<Creature> targets = forceSkill.getTargets(effector, getEffected(), false);
+		List<Creature> targets = forceSkill.getTargets(effector, effector, false);
 		for (Creature target : targets)
 		{
 			if (target.getEffectList().getEffectsBySkillId(forceSkillId) == null)

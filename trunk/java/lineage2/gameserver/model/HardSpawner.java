@@ -112,6 +112,11 @@ public class HardSpawner extends Spawner
 	public int getCurrentNpcId()
 	{
 		SpawnNpcInfo npcInfo = _template.getNpcId(_npcIndex);
+		if (npcInfo.getTemplate() == null)
+		{
+			_log.warn("NpcIndex not found: " + _npcIndex);
+			return 0;
+		}
 		return npcInfo.getTemplate().npcId;
 	}
 	

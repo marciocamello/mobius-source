@@ -207,7 +207,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		}
 		else
 		{
-			ShowBoard.separateAndSend("<html><body><br><br><center>В bbsstat функци�?: " + command + " пока не реализована</center><br><br></body></html>", player);
+			ShowBoard.separateAndSend("<html><body><br><br><center>_bbsstat function: " + command + " not implemented yet</center><br><br></body></html>", player);
 		}
 	}
 	
@@ -237,17 +237,17 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				tp.ChPk = rs.getInt("pkkills");
 				tp.ChPvP = rs.getInt("pvpkills");
 				tp.ChOnOff = rs.getInt("online");
-				String sex = tp.ChSex == 1 ? "Ж" : "�?";
+				String sex = tp.ChSex == 1 ? "F" : "M";
 				String color;
 				String OnOff;
 				if (tp.ChOnOff == 1)
 				{
-					OnOff = "В игре.";
+					OnOff = "Online.";
 					color = "00CC00";
 				}
 				else
 				{
-					OnOff = "�?ффлайн.";
+					OnOff = "Offline.";
 					color = "D70000";
 				}
 				html.append("<tr>");
@@ -302,17 +302,17 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				tp.ChPk = rs.getInt("pkkills");
 				tp.ChPvP = rs.getInt("pvpkills");
 				tp.ChOnOff = rs.getInt("online");
-				String sex = tp.ChSex == 1 ? "Ж" : "�?";
+				String sex = tp.ChSex == 1 ? "F" : "M";
 				String color;
 				String OnOff;
 				if (tp.ChOnOff == 1)
 				{
-					OnOff = "В игре.";
+					OnOff = "Online.";
 					color = "00CC00";
 				}
 				else
 				{
-					OnOff = "�?ффлайн.";
+					OnOff = "Offline.";
 					color = "D70000";
 				}
 				html.append("<tr>");
@@ -367,17 +367,17 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				tp.ChPk = rs.getInt("pkkills");
 				tp.ChPvP = rs.getInt("pvpkills");
 				tp.ChOnOff = rs.getInt("online");
-				String sex = tp.ChSex == 1 ? "Ж" : "�?";
+				String sex = tp.ChSex == 1 ? "F" : "M";
 				String color;
 				String OnOff;
 				if (tp.ChOnOff == 1)
 				{
-					OnOff = "В игре.";
+					OnOff = "Online.";
 					color = "00CC00";
 				}
 				else
 				{
-					OnOff = "�?ффлайн.";
+					OnOff = "Offline.";
 					color = "D70000";
 				}
 				html.append("<tr>");
@@ -440,7 +440,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				else
 				{
 					color = "FFFFFF";
-					Owner = "�?ет владел�?ца";
+					Owner = "Not Owned";
 				}
 				html.append("<tr>");
 				html.append("<td width=150>" + tp.NameCastl + "</td>");
@@ -531,7 +531,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 						castleColor = "00CC00";
 						break;
 					default:
-						hasCastle = "�?ету";
+						hasCastle = "None";
 						castleColor = "D70000";
 						break;
 				}
@@ -543,7 +543,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				}
 				else
 				{
-					html.append("<td width=150>�?ет ал�?�?н�?а</td>");
+					html.append("<td width=150>No Ally</td>");
 				}
 				html.append("<td width=100>" + tp.ReputationClan + "</td>");
 				html.append("<td width=50>" + tp.ClanLevel + "</td>");
@@ -585,7 +585,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 			onlinetimeH = Math.round((time / 60 / 60) - 0.5);
 		}
 		onlinetimeM = Math.round(((time / 60 / 60) - onlinetimeH) * 60);
-		return "" + onlinetimeH + " ч. " + onlinetimeM + " м.";
+		return "" + onlinetimeH + "h. " + onlinetimeM + "m.";
 	}
 	
 	/**
