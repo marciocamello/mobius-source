@@ -208,8 +208,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
+		<set name="collision_height" value="30.0"/>
+		<set name="collision_radius" value="30.0"/>
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -302,8 +302,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
+		<set name="collision_height" value="23.0"/>
+		<set name="collision_radius" value="9.5"/>
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -349,7 +349,7 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
+		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -396,7 +396,7 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
+		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
