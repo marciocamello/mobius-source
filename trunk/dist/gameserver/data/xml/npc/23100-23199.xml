@@ -3642,8 +3642,8 @@
 		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
-			<skill id="4416" level="1" />	<!--Нежить-->
-			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4416" level="1" />	<!-- Undead -->
+			<skill id="5467" level="1" />	<!-- Dark Attacks -->
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -3741,7 +3741,7 @@
 		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
-			<skill id="4416" level="1" />	<!--Нежить-->
+			<skill id="4416" level="1" />	<!-- Undead -->
 			<skill id="5465" level="1" />	<!--Защита Земли-->
 			<skill id="4410" level="12" />	<!--Усиленная Физ. Атк.-->
 			<skill id="4412" level="12" />	<!--Усиленная Физ. Защ.-->
@@ -4242,8 +4242,8 @@
 		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
-			<skill id="4416" level="1" />	<!--Нежить-->
-			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4416" level="1" />	<!-- Undead -->
+			<skill id="5467" level="1" />	<!-- Dark Attacks -->
 			<skill id="4410" level="12" />	<!--Усиленная Физ. Атк.-->
 		</skills>
 		<attributes>
@@ -4341,8 +4341,8 @@
 		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
-			<skill id="4416" level="1" />	<!--Нежить-->
-			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4416" level="1" />	<!-- Undead -->
+			<skill id="5467" level="1" />	<!-- Dark Attacks -->
 			<skill id="4410" level="12" />	<!--Усиленная Физ. Атк.-->
 			<skill id="4438" level="5" />	<!--Высокая Устойчивость к Усыпляющим Атакам-->
 			<skill id="4440" level="5" />	<!--Высокая Устойчивость к Парализующим Атакам-->
@@ -4444,8 +4444,8 @@
 		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
-			<skill id="4416" level="1" />	<!--Нежить-->
-			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4416" level="1" />	<!-- Undead -->
+			<skill id="5467" level="1" />	<!-- Dark Attacks -->
 			<skill id="4410" level="12" />	<!--Усиленная Физ. Атк.-->
 			<skill id="4413" level="12" />	<!--Усиленная Маг. Защ.-->
 		</skills>
@@ -4546,8 +4546,8 @@
 		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
-			<skill id="4416" level="1" />	<!--Нежить-->
-			<skill id="5467" level="1" />	<!--Защита Тьмы-->
+			<skill id="4416" level="1" />	<!-- Undead -->
+			<skill id="5467" level="1" />	<!-- Dark Attacks -->
 			<skill id="4410" level="13" />	<!--Усиленная Физ. Атк.-->
 			<skill id="4412" level="12" />	<!--Усиленная Физ. Защ.-->
 		</skills>
@@ -4747,10 +4747,13 @@
 		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
-			<skill id="4416" level="1" />	<!--Нежить-->
-			<skill id="5467" level="1" />	<!--Защита Тьмы-->
-			<skill id="4410" level="10" />	<!--Ослабленная Физ. Атк.-->
-			<skill id="4411" level="12" />	<!--Усиленная Маг. Атк.-->
+		<!-- Active -->
+			<skill id="14638" level="1"/> <!-- Blade Claw -->
+		<!-- Passive -->
+			<skill id="4416" level="1" />	<!-- Undead -->
+			<skill id="5467" level="1" />	<!-- Dark Attacks -->
+			<skill id="4410" level="10" />	<!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="12" />	<!-- Slightly Strong M. Atk. -->
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -4811,7 +4814,7 @@
 			</group>
 		</rewardlist>
 	</npc>
-	<npc id="23175" name="Altar Ghost Box" title="">
+	<npc id="23175" name="Altar of Evil Spirit Offering Box" title="">
 		<set name="aggroRange" value="1000" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4847,6 +4850,9 @@
 		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
+		<!-- Active -->
+			<skill id="14639" level="1" /> <!-- Compound Poison -->
+		<!-- Passive -->
 			<skill id="4416" level="2" />	<!--Магические Создания-->
 			<skill id="5464" level="1" />	<!--Защита Ветра-->
 			<skill id="4411" level="12" />	<!--Усиленная Маг. Атк.-->
@@ -4953,6 +4959,9 @@
 		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
+		<!-- Active -->
+			<skill id="14640" level="1" /> <!-- High-Speed Movement -->
+		<!-- Passive -->
 			<skill id="4416" level="4" />	<!--Животные-->
 			<skill id="5464" level="1" />	<!--Защита Ветра-->
 		</skills>
@@ -5050,6 +5059,9 @@
 		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
+		<!-- Active -->
+			<skill id="14641" level="1" /> <!-- Earthquake -->
+		<!-- Passive -->
 			<skill id="4416" level="2" />	<!--Магические Создания-->
 			<skill id="5464" level="1" />	<!--Защита Ветра-->
 			<skill id="4410" level="13" />	<!--Усиленная Физ. Атк.-->
@@ -5153,6 +5165,9 @@
 		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
+		<!-- Active -->
+			<skill id="14642" level="1" /> <!-- Sever -->
+		<!-- Passive -->
 			<skill id="4416" level="4" />	<!--Животные-->
 			<skill id="5465" level="1" />	<!--Защита Земли-->
 		</skills>
@@ -5267,6 +5282,9 @@
 		</group>
 	</rewardlist>
 		<skills>
+		<!-- Active -->
+			<skill id="14643" level="1"/> <!-- Summon -->
+		<!-- Passive -->
 			<skill id="4410" level="1"/>
 			<skill id="4411" level="14"/>
 			<skill id="4416" level="8"/>
@@ -5324,6 +5342,9 @@
 		</group>
 	</rewardlist>
 		<skills>
+		<!-- Active -->
+			<skill id="14644" level="1"/>
+		<!-- Passive -->
 			<skill id="4410" level="1"/>
 			<skill id="4412" level="12"/>
 			<skill id="4413" level="13"/>
