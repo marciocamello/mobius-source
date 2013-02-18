@@ -147,12 +147,12 @@ echo ""
 echo "Choose full (f) if you don't have and 'accounts' table or would"
 echo "prefer to erase the existing accounts information."
 echo "Choose skip (s) to skip loginserver DB installation and go to"
-echo "communityserver DB installation/upgrade."
+echo "gameserver DB installation/upgrade."
 echo -ne "LOGINSERVER DB install type: (f) full, (s) skip or (q) quit? "
 read LOGINPROMPT
 case "$LOGINPROMPT" in
-	"f"|"F") logininstall; loginupgrade; cbbackup; askcbtype;;
-	"s"|"S") cbbackup; askcbtype;;
+	"f"|"F") logininstall; loginupgrade;;
+	"s"|"S") gsbackup;;
 	"q"|"Q") finish;;
 	*) asklogin;;
 esac
@@ -221,52 +221,14 @@ asktype(){
 echo ""
 echo ""
 echo "WARNING: A full install (f) will destroy all existing character data."
-echo -ne "GAMESERVER DB install type: (f) full install, (u) upgrade, (s) skip or (q) quit? "
+echo -ne "GAMESERVER DB install type: (f) full install, (u) upgrade or (q) quit? "
 read INSTALLTYPE
 case "$INSTALLTYPE" in
-	"f"|"F") fullinstall; upgradeinstall I; custom;;
-	"u"|"U") upgradeinstall U; custom;;
-	"s"|"S") custom;;
+	"f"|"F") fullinstall; upgradeinstall I;;
+	"u"|"U") upgradeinstall U;;
 	"q"|"Q") finish;;
 	*) asktype;;
 esac
-}
-
-askcbtype(){
-clear
-echo ""
-echo ""
-echo "WARNING: A full install (f) will destroy all existing community data."
-echo -ne "COMMUNITYSERVER DB install type: (f) full install, (u) upgrade, (s) skip or (q) quit? "
-read INSTALLTYPE
-case "$INSTALLTYPE" in
-	"f"|"F") fullcbinstall; upgradecbinstall I; gsbackup; asktype;;
-	"u"|"U") upgradecbinstall U; gsbackup; asktype;;
-	"s"|"S") gsbackup; asktype;;
-	"q"|"Q") finish;;
-	*) asktype;;
-esac
-}
-
-fullcbinstall(){
-echo "Deleting all communityserver tables for new content."
-$MYC < cs_cleanup.sql
-}
-
-upgradecbinstall(){
-clear
-if [ "$1" == "I" ]; then 
-echo "Installling new communityserver content."
-else
-echo "Upgrading communityserver content"
-fi
-if [ "$1" == "I" ]; then
-	for cb in $(ls ../cb_sql/*.sql);do
-		echo "Installing Community Board table : $cb"
-		$MYC < $cb
-	done
-fi
-newbie_helper_cb
 }
 
 fullinstall(){
@@ -288,62 +250,6 @@ for gs in $(ls ../sql/server/*.sql);do
 	$MYG < $gs
 done
 
-newbie_helper
-}
-
-custom(){
-echo ""
-echo ""
-echo -ne "Install custom gameserver DB tables: (y) yes or (n) no or (q) quit?"
-read ASKCS
-case "$ASKCS" in
-	"y"|"Y") cstinstall;;
-	"n"|"N") finish;;
-	"q"|"Q") finish;;
-	*) custom;;
-esac
-finish
-}
-
-cstinstall(){
-while :
-  do
-   clear
-   echo ""
-   echo -ne "Do you want to make another backup of GSDB before applying custom contents? (y/N): "
-   read LSB
-   if [ "$LSB" == "Y" -o "$LSB" == "y" ]; then
-     echo "Making a backup of the default gameserver tables."
-     $MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $GSDB > custom_backup.sql 2> /dev/null
-     if [ $? -ne 0 ];then
-     echo ""
-     echo "There was a problem accesing your GS database, server down?."
-     exit 1
-     fi
-     break
-   elif [ "$LSB" == "n" -o "$LSB" == "N" -o "$LSB" == "" ]; then 
-     break
-   fi
-  done 
-clear
-echo "Installing custom content."
-for custom in $(ls ../sql/server/custom/*.sql);do 
-	echo "Installing custom table: $custom"
-	$MYG < $custom
-done
-# L2J mods that needed extra tables to work properly, should be 
-# listed here. To do so copy & paste the following 6 lines and
-# change them properly:
-# MOD: Wedding.
-	echo -ne "Install "Wedding Mod" tables? (y/N): "
-	read modprompt
-	if [ "$modprompt" == "y" -o "$modprompt" == "Y" ]; then
-		for mod in $(ls ../sql/server/mods/*.sql);do
-			echo "Installing custom mod table : $mod"
-			$MYG < $mod
-		done
-	fi
-
 finish
 }
 
@@ -351,76 +257,12 @@ finish(){
 clear
 echo "Script execution finished."
 echo ""
-echo "(C) 2011-2012 Lineage GoD"
-echo "database_installer comes with ABSOLUTELY NO WARRANTY;"
-echo "This is free software, and you are welcome to redistribute it"
-echo "under certain conditions; See the file gpl.txt for further"
-echo "details."
-echo ""
-echo "Thanks for using our software."
-echo "visit http://www.Lineage2GoD.com for more info about"
-echo "the Lineage GoD project."
 exit 0
-}
-
-newbie_helper(){
-while :
-  do
-   echo ""
-   echo -ne "If you're not that skilled applying changes within 'updates' folder, i can try to do it for you (y). If you wish to do it on your own, choose (n). Should i parse updates files? (Y/n)"
-   read NOB
-   if [ "$NOB" == "Y" -o "$NOB" == "y" -o "$NOB" == "" ]; then
-     clear
-	 echo ""
-     echo "There we go, it may take some time..."
-	 echo "Installing Gameserver Updates"
-     for file in $(ls ../sql/server/updates/*.sql);do
-        $MYG < $file 2>> gserror.log
-	 done
-	 echo "Installing Loginserver Updates"
-	 for file in $(ls ../sql/login/updates/*.sql);do
-		$MYL < $file 2>> lserror.log
-	 done
-     break
-   elif [ "$NOB" == "n" -o "$NOB" == "N" ]; then 
-     break
-   fi
-  done 
-}
-
-newbie_helper_cb(){
-while :
-  do
-   echo ""
-   echo -ne "If you're not that skilled applying changes within 'updates' folder, i can try to do it for you (y). If you wish to do it on your own, choose (n). Should i parse updates files? (Y/n)"
-   read NOB
-   if [ "$NOB" == "Y" -o "$NOB" == "y" -o "$NOB" == "" ]; then
-     clear
-	 echo ""
-     echo "There we go, it may take some time..."
-     echo "updates parser results. Last run: "`date` >cb_database_installer.log
-     for file in $(ls ../cb_sql/updates/*sql);do
-        echo $file|cut -d/ -f4 >> cb_database_installer.log
-        $MYC < $file 2>> cb_database_installer.log
-        if [ $? -eq 0 ];then
-            echo "no errors">> cb_database_installer.log
-        fi
-     done
-	 clear
-     echo ""
-     echo "Log available at $(pwd)/cb_database_installer.log"
-     echo ""
-     break
-   elif [ "$NOB" == "n" -o "$NOB" == "N" ]; then
-     break
-   fi
-  done 
 }
 
 clear
 load_config $1
 MYL="$MYSQLPATH -h $LSDBHOST -u $LSUSER --password=$LSPASS -D $LSDB"
 MYG="$MYSQLPATH -h $GSDBHOST -u $GSUSER --password=$GSPASS -D $GSDB"
-MYC="$MYSQLPATH -h $CBDBHOST -u $CBUSER --password=$CBPASS -D $CBDB"
 lsbackup
 asklogin
