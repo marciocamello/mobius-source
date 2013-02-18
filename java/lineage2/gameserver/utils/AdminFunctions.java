@@ -76,11 +76,31 @@ public final class AdminFunctions
 	}
 	
 	/**
+	 * Method give.
+	 * @param charName String
+	 * @param itemid integer
+	 * @param amount integer
+	 * @param reason String
+	 */
+	public static boolean give(String charName, int itemid, int amount, String reason)
+	{
+		Player player = World.getPlayer(charName);
+		if (player != null)
+		{
+			if (player.getInventory().addItem(itemid, amount) != null)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
 	 * Method banChat.
 	 * @param adminChar Player
 	 * @param adminName String
 	 * @param charName String
-	 * @param val int
+	 * @param val integer
 	 * @param reason String
 	 * @return String
 	 */
