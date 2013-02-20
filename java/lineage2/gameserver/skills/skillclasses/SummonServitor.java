@@ -245,13 +245,24 @@ public class SummonServitor extends Skill
 					return;
 				}
 				NpcTemplate treeTemplate = NpcHolder.getInstance().getTemplate(getNpcId());
-				TreeInstance tree = new TreeInstance(IdFactory.getInstance().getNextId(), treeTemplate, activeChar, _lifeTime, SkillTable.getInstance().getInfo(11806, getLevel()), activeChar.getLoc());
+				Location SummonLoc;
+				if (activeChar.getGroundSkillLoc() != null)
+				{
+					SummonLoc = activeChar.getGroundSkillLoc();
+				}
+				else
+				{
+					SummonLoc = activeChar.getLoc();
+				}
+				Skill summonSkill = getFirstAddedSkill();
+				TreeInstance tree = new TreeInstance(IdFactory.getInstance().getNextId(), treeTemplate, activeChar, _lifeTime, summonSkill, SummonLoc);
 				activeChar.getSummonList().addSummon(tree);
 				tree.setCurrentHp(tree.getMaxHp(), false);
 				tree.setCurrentMp(tree.getMaxMp());
 				tree.setHeading(activeChar.getHeading());
 				tree.setReflection(activeChar.getReflection());
-				tree.spawnMe(activeChar.getLoc());
+				tree.setFollowMode(false);
+				tree.spawnMe(SummonLoc);
 				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(tree), _lifeTime);
 				break;
 		}

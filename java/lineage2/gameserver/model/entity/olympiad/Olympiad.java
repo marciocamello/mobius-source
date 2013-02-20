@@ -414,7 +414,7 @@ public class Olympiad
 		}
 		if (!validPlayer.isAwaking())
 		{
-			sendPlayer.sendMessage("В �?лимпиаде могут уча�?твовт�? тол�?ко перерожденные пер�?онажи.");
+			sendPlayer.sendMessage("You don't meet the requirement to play in the Olympiad.");
 			return false;
 		}
 		int[] ar = getWeekGameCounts(validPlayer.getObjectId());

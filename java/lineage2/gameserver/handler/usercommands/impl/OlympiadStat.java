@@ -65,7 +65,7 @@ public class OlympiadStat implements IUserCommandHandler
 		sm.addInteger(ar[0]);
 		sm.addInteger(ar[1]);
 		sm.addInteger(ar[2]);
-		sm.addInteger(ar[3]);
+		sm.addInteger(ar[2]);
 		activeChar.sendPacket(sm);
 		return true;
 	}

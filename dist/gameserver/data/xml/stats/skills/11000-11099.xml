@@ -31,10 +31,10 @@
         <table name="#pAtk">83</table>
         <table name="#mAtk">104</table>
         <set name="magicLevel" val="85"/>
-        <set name="relationSkillsId" val="249;474;331;1527;1474"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_PASSIVE"/>
+        <set name="relationSkillsId" val="141;474;330;1527;1474"/>
         <enchant1 levels="10" name="Power">
             <table name="#mAtk">111 117 124 131 138 144 151 158 164 171</table>
             <table name="#pAtk">88 94 99 105 110 115 121 126 132 137</table>
@@ -50,10 +50,10 @@
         <table name="#pDef">72</table>
         <set name="armorAllowed" val="Robe"/>
         <set name="target" val="TARGET_SELF"/>
-        <set name="relationSkillsId" val="227;234"/>
         <set name="magicLevel" val="85"/>
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_PASSIVE"/>
+        <set name="relationSkillsId" val="227;234"/>
         <enchant1 levels="10" name="Power">
             <table name="#pDef">77 81 86 90 95 100 104 109 113 118</table>
         </enchant1>
@@ -1342,29 +1342,24 @@
 		<table name="#magicLevel">85 87 90 93 96 99</table>
 		<table name="#reuseDelay">15000</table>
 		<table name="#powerPvP">0</table>
-		<set name="flyType" val="DUMMY"/>
-		<set name="flyRadius" val="600" />
-        <set name="flyToBack" val="true" />
-        <set name="isOffensive" val="true" />
-        <set name="nextAction" val="none" />
-		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="#reuseDelay" />
+		<set name="hitTime" val="800" />
 		<set name="coolTime" val="200" />
-		<set name="lvlDepend" val="1" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="true" />
-		<set name="magicLvl" val="#magicLevel" />
 		<set name="mpConsume1" val="#mpConsume1" />
 		<set name="mpConsume2" val="#mpConsume2" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="skillType" val="MDAM" />
+		<set name="skillRadius" val="250" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="flyType" val="DUMMY"/>
+		<set name="flyRadius" val="-250" />
+		<set name="lvlDepend" val="1" />
+		<set name="isMagic" val="true" />
 		<set name="powerPvP" val="#powerPvP" />
 		<set name="power" val="#pwr" />
-		<set name="reuseDelay" val="#reuseDelay" />
 		<set name="saveVs" val="CON" />
-		<set name="skillRadius" val="100" />
-		<set name="skillType" val="MDAM" />
-		<set name="target" val="TARGET_AREA" />
-		<set name="simultaneousCast" val="true" />
-        <set name="castRange" val="600" />
+        <set name="relationSkillsId" val="1164;1417;1448"/>
 		<enchant1 levels="10" name="Cost">
 			<table name="#pwr">147 148 150 152 154 155 157 159 161 162</table>
 			<table name="#mpConsume1">17 16 15 15 14 13 12 12 11 10</table>
@@ -1508,6 +1503,7 @@
 		<set name="reuseDelay" val="200000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
+        <set name="relationSkillsId" val="1262;1556"/>
 		<for>
 			<effect count="1" name="AbsorbDamageToMp" stackOrder="1" stackType="Invulnerable" time="20" val="0">
 				<add order="0x20" stat="reflectDam" val="10" />

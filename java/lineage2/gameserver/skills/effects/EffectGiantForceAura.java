@@ -20,7 +20,6 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.tables.SkillTable;
@@ -94,7 +93,7 @@ public class EffectGiantForceAura extends Effect
 	 */
 	void updateAura()
 	{
-		Player effector = (Player) getEffector();
+		Creature effector = getEffector();
 		Skill forceSkill = SkillTable.getInstance().getInfo(forceSkillId, 1);
 		Skill auraSkill = getSkill();
 		if ((effector == null) || (forceSkill == null) || (auraSkill == null))
@@ -128,7 +127,7 @@ public class EffectGiantForceAura extends Effect
 		}
 		else if (auraSkillId > 0)
 		{
-			Player effector = (Player) getEffector();
+			Creature effector = getEffector();
 			if ((effector == null) || (effector.getEffectList().getEffectsBySkillId(auraSkillId) == null))
 			{
 				return false;

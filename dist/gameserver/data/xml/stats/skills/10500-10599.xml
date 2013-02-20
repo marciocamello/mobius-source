@@ -649,36 +649,34 @@
     <skill id="10522" levels="6" name="Poison Zone">
     <!-- Sprays poison onto nearby targets for 15 seconds. Decreases P. Atk., Speed, Shield Def., P. Def., and M. Def. Inflicts Poison. -->
         <table name="#magicLevel">85 87 90 93 96 99</table>
+        <table name="#PLevel">1 2 3 4 5 6</table>
         <set name="magicLevel" val="#magicLevel"/>
-        <set name="target" val="TARGET_AREA"/>
-        <set name="skillRadius" val="200"/>
+		<set name="lifeTime" val="30" /> <!-- Need Retail LifeTime -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="SUMMON" />
+		<set name="summonType" val="TREE" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="addSkills" val="10523;#PLevel" />
+		<set name="npcId" val="19115" /> <!-- Need Retail NpcId -->
         <set name="relationSkillsId" val="102;115"/>
-        <set name="isDebuff" val="true"/>
-        <set name="skillType" val="DEBUFF"/>
-        <set name="power" val="80"/>
-        <set name="operateType" val="OP_ACTIVE"/>
-        <for>
-            <effect name="Debuff" time="15" val="0" stackOrder="1" stackType="ultimate_debuff" effectPower="40">
-                <mul order="0x30" stat="pAtk" val="0.75"/>
-                <mul order="0x30" stat="runSpd" val="0.75"/>
-                <mul order="0x30" stat="sDef" val="0.75"/>
-            </effect>
-        </for>
     </skill>
     <skill id="10523" levels="6" name="Poisoned">
     <!-- Poisoned by a toxin cloud. Decreases Speed, P. Atk., Shield Def., P. Def., and M. Def. Decreases HP by 687 per second. -->
         <table name="#magicLevel">85 86 87 88 89 90</table>
         <table name="#abnormal_lv">3 4 5 6 7 8</table>
+        <table name="#dmg">687 700 721 742 762 783</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_AREA"/>
         <set name="skillRadius" val="200"/>
         <set name="isDebuff" val="true"/>
+		<set name="reuseDelay" val="2000" />
         <set name="skillType" val="DEBUFF"/>
         <set name="power" val="80"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for>
-            <effect abnormal="poison" count="10" name="Poison" stackOrder="#abnormal_lv" time="3" val="0"/>
-            <effect name="Debuff" time="15" val="0" stackOrder="1" stackType="ultimate_debuff" effectPower="40">
+			<effect count="2" name="DamOverTime" time="1" val="#dmg" abnormal="poison" stackOrder="#abnormal_lv" />
+            <effect name="Debuff" time="15" val="0" stackOrder="1" stackType="ultimate_debuff">
                 <mul order="0x30" stat="pAtk" val="0.75"/>
                 <mul order="0x30" stat="runSpd" val="0.75"/>
                 <mul order="0x30" stat="sDef" val="0.75"/>
