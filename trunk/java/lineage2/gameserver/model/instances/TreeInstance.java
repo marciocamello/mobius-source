@@ -143,21 +143,41 @@ public class TreeInstance extends Summon
 				return;
 			}
 			List<Creature> targets = new ArrayList<>(10);
-			for (Player target : World.getAroundPlayers(tree, 600, 200))
+			
+			if (tree._skill.isOffensive())
 			{
-				if (targets.size() > 10)
+				for (Creature target : World.getAroundCharacters(tree, 600, 200))
 				{
-					break;
+					if (targets.size() > 10)
+					{
+						break;
+					}
+					if (target.isAutoAttackable(tree))
+					{
+						targets.add(target);
+						tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), 0, 0));
+					}
 				}
-				if (target == owner)
+				tree.callSkill(tree._skill, targets, true);
+			}
+			else
+			{
+				for (Creature target : World.getAroundCharacters(tree, 600, 200))
 				{
-					targets.add(target);
-					tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), 0, 0));
-				}
-				if ((target.getParty() != null) && (owner.getParty() == target.getParty()))
-				{
-					targets.add(target);
-					tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), 0, 0));
+					if (targets.size() > 10)
+					{
+						break;
+					}
+					if (target == owner)
+					{
+						targets.add(target);
+						tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), 0, 0));
+					}
+					if ((target instanceof Player) && (((Player) target).getParty() != null) && (owner.getParty() == ((Player) target).getParty()))
+					{
+						targets.add(target);
+						tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), 0, 0));
+					}
 				}
 			}
 			tree.callSkill(tree._skill, targets, true);
@@ -172,7 +192,7 @@ public class TreeInstance extends Summon
 	{
 		super.onSpawn();
 		_destroyTask = ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(this), _lifetimeCountdown);
-		_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new CastTask(this), 1000L, 5000L);
+		_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new CastTask(this), 1000L, _skill.getReuseDelay());
 	}
 	
 	/**
@@ -236,6 +256,12 @@ public class TreeInstance extends Summon
 			_targetTask.cancel(false);
 		}
 		getPlayer().getSummonList().removeSummon(this);
+	}
+	
+	@Override
+	public Player getPlayer()
+	{
+		return _owner;
 	}
 	
 	/**

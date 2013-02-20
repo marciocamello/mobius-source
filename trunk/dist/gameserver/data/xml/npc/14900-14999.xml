@@ -1340,8 +1340,8 @@
 		<set name="collision_radius" value="57.0"/>
 		<set name="collision_height" value="67.5"/>
 		<set name="level" value="95"/>
-		<set name="type" value="Monster"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
 		<set name="baseHpRate" value="1"/>

@@ -3374,335 +3374,579 @@
         <set name="type" value="Npc"/>
     </npc>
 	<npc id="27473" name="Kernon" title="Kernon">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
+		<!--10 JAN 2013-->
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
+		<set name="baseHpMax" value="569650"/>
+		<set name="baseMpMax" value="1507"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="971"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseWalkSpd" value="37"/>
+		<set name="baseRunSpd" value="170"/>
+		<set name="rndDam" value="30"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
+		<set name="baseMevasionRate" value="0"/>
+		<set name="baseMaccuracyRate" value="0"/>
+		<set name="baseMCritRate" value="50.0"/>
+		<set name="collision_radius" value="29"/>
+		<set name="collision_height" value="48"/>
+		<!--Npc specific-->
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="SubclassRB"/>
+		<set name="level" value="75"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<attributes>
+			<attack attribute="unholy" value="20"/>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="unholy" value="189"/>
+		</attributes>
+		<!-- FIXME: статы от старого нпц-->
+		<skills>
+			<!--Raid Boss - Level 75-->
+			<skill id="4809" level="1"/>
+			<!--Twister-->
+			<skill id="4195" level="8"/>
+			<!--HP Increase (1x)-->
+			<skill id="4408" level="1"/>
+			<!--MP Increase (1x)-->
+			<skill id="4409" level="1"/>
+			<!--Average P. Atk.-->
+			<skill id="4410" level="11"/>
+			<!--Average M. Atk.-->
+			<skill id="4411" level="11"/>
+			<!--Average P. Def.-->
+			<skill id="4412" level="11"/>
+			<!--Average M. Def.-->
+			<skill id="4413" level="11"/>
+			<!--Standard Type-->
+			<skill id="4414" level="2"/>
+			<!--Bare Hands-->
+			<skill id="4415" level="1"/>
+			<!--Poison-->
+			<skill id="4182" level="8"/>
+			<!--Demons-->
+			<skill id="4416" level="9"/>
+			<!--Decrease MP-->
+			<skill id="4190" level="8"/>
+		</skills>
+		<minions>
+			<!--Taliadon-->
+			<minion npc_id="27474" count="1"/>
+			<!--Vemsk-->
+			<minion npc_id="27475" count="4"/>
+		</minions>		
+	</npc>
 	<npc id="27474" name="Taliadon" title="Taliadon">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
+		<!--10 JAN 2013-->
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
+		<set name="baseHpMax" value="3290"/>
+		<set name="baseMpMax" value="1675"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="971"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseWalkSpd" value="100"/>
+		<set name="baseRunSpd" value="170"/>
+		<set name="rndDam" value="30"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
+		<set name="baseMevasionRate" value="0"/>
+		<set name="baseMaccuracyRate" value="0"/>
+		<set name="baseMCritRate" value="50.0"/>
+		<set name="collision_radius" value="25"/>
+		<set name="collision_height" value="52"/>
+		<!--Npc specific-->
+		<set name="type" value="Minion"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="85"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<attributes>
+			<attack attribute="unholy" value="20"/>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="unholy" value="53"/>
+		</attributes>
+		<equip>
+			<!--Dreadbane-->
+			<rhand item_id="1472"/>
+		</equip>
+		<skills>
+			<!--Undead-->
+			<skill id="4416" level="1"/>
+			<!--HP Increase (1x)-->
+			<skill id="4408" level="1"/>
+			<!--MP Increase (1x)-->
+			<skill id="4409" level="1"/>
+			<!--Average P. Atk.-->
+			<skill id="4410" level="11"/>
+			<!--Average M. Atk.-->
+			<skill id="4411" level="11"/>
+			<!--Average P. Def.-->
+			<skill id="4412" level="11"/>
+			<!--Average M. Def.-->
+			<skill id="4413" level="11"/>
+			<!--Power Strike-->
+			<skill id="4168" level="7"/>
+			<!--Standard Type-->
+			<skill id="4414" level="2"/>
+			<!--One-handed Sword-->
+			<skill id="4415" level="3"/>
+		</skills>		
+	</npc>
 	<npc id="27475" name="Vemsk" title="Vemsk">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-	<npc id="27476" name="Longhorn Golkonda" title="Longhorn Golkonda">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-	<npc id="27477" name="Death lord Hallate" title="Death lord Hallate">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-	<npc id="27478" name="Death Mage Krician" title="Death Mage Krician">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-	<npc id="27479" name="Death Fighter Harik" title="Death Fighter Harik">
-        <!--Need TODO-->
-        <set name="baseHpMax" value="2444.468"/>
-        <set name="baseMAtkSpd" value="500"/>
-        <set name="basePAtkSpd" value="253"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="23.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="40"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpRate" value="1"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="780"/>
-        <set name="baseMDef" value="382"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="1345.8"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="1303"/>
-        <set name="basePDef" value="471"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="20"/>
-        <set name="castle_id" value="1"/>
-        <set name="level" value="70"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-        <skills/>
-        <attributes>
-            <defence attribute="fire" value="150"/>
-            <defence attribute="water" value="150"/>
-            <defence attribute="wind" value="150"/>
-            <defence attribute="earth" value="150"/>
-            <defence attribute="holy" value="150"/>
-            <defence attribute="unholy" value="150"/>
-        </attributes>
-    </npc>
-	<npc id="27480" name="Sehkmeti" title="">
+		<!--10 JAN 2013-->
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
+		<set name="baseHpMax" value="3290"/>
+		<set name="baseMpMax" value="1675"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="971"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseWalkSpd" value="27"/>
+		<set name="baseRunSpd" value="170"/>
+		<set name="rndDam" value="30"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
+		<set name="baseMevasionRate" value="0"/>
+		<set name="baseMaccuracyRate" value="0"/>
+		<set name="baseMCritRate" value="50.0"/>
+		<set name="collision_radius" value="14.5"/>
+		<set name="collision_height" value="36"/>
+		<!--Npc specific-->
+		<set name="type" value="Minion"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="85"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<attributes>
+			<attack attribute="unholy" value="20"/>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="unholy" value="53"/>
+		</attributes>
+		<equip>
+			<!--Keshanberk-->
+			<rhand item_id="142"/>
+		</equip>
+		<skills>
+			<!--Undead-->
+			<skill id="4416" level="1"/>
+			<!--HP Increase (1x)-->
+			<skill id="4408" level="1"/>
+			<!--MP Increase (1x)-->
+			<skill id="4409" level="1"/>
+			<!--Average P. Atk.-->
+			<skill id="4410" level="11"/>
+			<!--Average M. Atk.-->
+			<skill id="4411" level="11"/>
+			<!--Average P. Def.-->
+			<skill id="4412" level="11"/>
+			<!--Average M. Def.-->
+			<skill id="4413" level="11"/>
+			<!--Standard Type-->
+			<skill id="4414" level="2"/>
+			<!--One-handed Sword-->
+			<skill id="4415" level="3"/>
+		</skills>		
+	</npc>
+	<npc id="27476" name="Longhorn Golkonda" title="Quest Monster">
+		<!--10 JAN 2013-->
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
+		<set name="baseHpMax" value="594529"/>
+		<set name="baseMpMax" value="1641"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="971"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseWalkSpd" value="40"/>
+		<set name="baseRunSpd" value="170"/>
+		<set name="rndDam" value="30"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
+		<set name="baseMevasionRate" value="0"/>
+		<set name="baseMaccuracyRate" value="0"/>
+		<set name="baseMCritRate" value="50.0"/>
+		<set name="collision_radius" value="42"/>
+		<set name="collision_height" value="94"/>
+		<!--Npc specific-->
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="SubclassRB"/>
+		<set name="level" value="79"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+		<equip>
+			<!--Heavy War Axe-->
+			<rhand item_id="91"/>
+		</equip>
+		<ai_params>
+			<set name="SelfAggressive" value="100"/>
+			<set name="isMadness" value="15"/>
+		</ai_params>
+		<!-- FIXME: скиллы от старого нпц. оффлайк спамит кансел, если есть персонаж в мили рендже -->
+		<skills>
+			<!--Might-->
+			<skill id="4173" level="7"/>
+			<!--HP Increase (1x)-->
+			<skill id="4408" level="1"/>
+			<!--Stun-->
+			<skill id="4172" level="7"/>
+			<!--MP Increase (1x)-->
+			<skill id="4409" level="1"/>
+			<!--Average P. Atk.-->
+			<skill id="4410" level="11"/>
+			<!--Average M. Atk.-->
+			<skill id="4411" level="11"/>
+			<!--Stun-->
+			<skill id="4169" level="7"/>
+			<!--Average P. Def.-->
+			<skill id="4412" level="11"/>
+			<!--Average M. Def.-->
+			<skill id="4413" level="11"/>
+			<!--Standard Type-->
+			<skill id="4414" level="2"/>
+			<!--Raid Boss - Level 79-->
+			<skill id="4837" level="1"/>
+			<!--One-handed Sword-->
+			<skill id="4415" level="3"/>
+			<!--Cancel-->
+			<skill id="4177" level="7"/>
+			<!--Giants-->
+			<skill id="4416" level="11"/>
+		</skills>		
+	</npc>
+	<npc id="27477" name="Death lord Hallate" title="Quest Monster">
+		<!--10 JAN 2013-->
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
+		<set name="baseHpMax" value="556601"/>
+		<set name="baseMpMax" value="1442"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="971"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseWalkSpd" value="40"/>
+		<set name="baseRunSpd" value="170"/>
+		<set name="rndDam" value="30"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
+		<set name="baseMevasionRate" value="0"/>
+		<set name="baseMaccuracyRate" value="0"/>
+		<set name="baseMCritRate" value="50.0"/>
+		<set name="collision_radius" value="25"/>
+		<set name="collision_height" value="48"/>
+		<!--Npc specific-->
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="SubclassRB"/>
+		<set name="level" value="73"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<attributes>
+			<attack attribute="unholy" value="20"/>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="189"/>
+		</attributes>
+		<equip>
+			<!--Great Sword-->
+			<rhand item_id="78"/>
+		</equip>
+		<!-- FIXME: скиллы от старого нпц -->
+		<skills>
+			<!--Hold-->
+			<skill id="4197" level="7"/>
+			<!--HP Increase (1x)-->
+			<skill id="4408" level="1"/>
+			<!--MP Increase (1x)-->
+			<skill id="4409" level="1"/>
+			<!--Average P. Atk.-->
+			<skill id="4410" level="11"/>
+			<!--Average M. Atk.-->
+			<skill id="4411" level="11"/>
+			<!--Average P. Def.-->
+			<skill id="4412" level="11"/>
+			<!--Average M. Def.-->
+			<skill id="4413" level="11"/>
+			<!--Standard Type-->
+			<skill id="4414" level="2"/>
+			<!--One-handed Sword-->
+			<skill id="4415" level="3"/>
+			<!--Raid Boss - Level 73-->
+			<skill id="4868" level="1"/>
+			<!--Undead-->
+			<skill id="4416" level="1"/>
+		</skills>
+		<minions>
+			<!--Death Mage Krician-->
+			<minion npc_id="27478" count="3"/>
+			<!--Death Fighter Harik-->
+			<minion npc_id="27479" count="1"/>
+		</minions>		
+	</npc>
+	<npc id="27478" name="Death Mage Krician" title="Quest Monster">
+		<!--10 JAN 2013-->
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
+		<set name="baseHpMax" value="20321"/>
+		<set name="baseMpMax" value="1410"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="971"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseWalkSpd" value="100"/>
+		<set name="baseRunSpd" value="170"/>
+		<set name="rndDam" value="30"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
+		<set name="baseMevasionRate" value="0"/>
+		<set name="baseMaccuracyRate" value="0"/>
+		<set name="baseMCritRate" value="50.0"/>
+		<set name="collision_radius" value="25"/>
+		<set name="collision_height" value="52"/>
+		<!--Npc specific-->
+		<set name="type" value="Minion"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="72"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<attributes>
+			<attack attribute="unholy" value="20"/>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="unholy" value="53"/>
+		</attributes>
+		<equip>
+			<!--Dreadbane-->
+			<rhand item_id="1472"/>
+		</equip>
+		<skills>
+			<!--Aura Burn-->
+			<skill id="4194" level="7"/>
+			<!--Undead-->
+			<skill id="4416" level="1"/>
+			<!--HP Increase (1x)-->
+			<skill id="4408" level="1"/>
+			<!--MP Increase (1x)-->
+			<skill id="4409" level="1"/>
+			<!--Average P. Atk.-->
+			<skill id="4410" level="11"/>
+			<!--Average M. Atk.-->
+			<skill id="4411" level="11"/>
+			<!--Bleed-->
+			<skill id="4204" level="7"/>
+			<!--Average P. Def.-->
+			<skill id="4412" level="11"/>
+			<!--Average M. Def.-->
+			<skill id="4413" level="11"/>
+			<!--Standard Type-->
+			<skill id="4414" level="2"/>
+			<!--One-handed Sword-->
+			<skill id="4415" level="3"/>
+		</skills>		
+	</npc>
+	<npc id="27479" name="Death Fighter Harik" title="Quest Monster">
+		<!--10 JAN 2013-->
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
+		<set name="baseHpMax" value="20321"/>
+		<set name="baseMpMax" value="1410"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="971"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseWalkSpd" value="27"/>
+		<set name="baseRunSpd" value="170"/>
+		<set name="rndDam" value="30"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
+		<set name="baseMevasionRate" value="0"/>
+		<set name="baseMaccuracyRate" value="0"/>
+		<set name="baseMCritRate" value="50.0"/>
+		<set name="collision_radius" value="14.5"/>
+		<set name="collision_height" value="36"/>
+		<!--Npc specific-->
+		<set name="type" value="Minion"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="72"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<attributes>
+			<attack attribute="unholy" value="20"/>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="unholy" value="53"/>
+		</attributes>
+		<equip>
+			<!--Caliburs-->
+			<rhand item_id="75"/>
+		</equip>
+		<skills>
+			<!--Undead-->
+			<skill id="4416" level="1"/>
+			<!--HP Increase (1x)-->
+			<skill id="4408" level="1"/>
+			<!--MP Increase (1x)-->
+			<skill id="4409" level="1"/>
+			<!--Average P. Atk.-->
+			<skill id="4410" level="11"/>
+			<!--Average M. Atk.-->
+			<skill id="4411" level="11"/>
+			<!--Average P. Def.-->
+			<skill id="4412" level="11"/>
+			<!--Stun-->
+			<skill id="4169" level="7"/>
+			<!--Average M. Def.-->
+			<skill id="4413" level="11"/>
+			<!--Standard Type-->
+			<skill id="4414" level="2"/>
+			<!--Resist Full Magic Attack-->
+			<skill id="4045" level="1"/>
+			<!--One-handed Sword-->
+			<skill id="4415" level="3"/>
+		</skills>		
+	</npc>
+	<npc id="27480" name="doll_blader" title="Quest Monster">
         <!--fixed by ALF & Mangol-->
         <set name="collision_radius" value="6.0"/>
         <set name="collision_height" value="12.0"/>

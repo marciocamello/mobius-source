@@ -577,6 +577,10 @@ public abstract class Playable extends Creature
 			}
 			return force;
 		}
+		if ((pcAttacker != null) && (pcAttacker == player))
+		{
+			return force;
+		}
 		return true;
 	}
 	

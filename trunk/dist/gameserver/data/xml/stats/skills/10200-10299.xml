@@ -122,14 +122,14 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="10251" levels="1" name="Superior Weapon Mastery">
-    <!-- STR + 2, Atk. Spd. + 25%, P. Atk. + 376 and P. Accuracy + 3 when a sword, blunt, or spear weapon is equipped. Increases the number of possible targets during a spear attack. 50% chance of triggering Lightning Force during a critical attack. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your STR. -->
+	<skill id="10251" levels="1" name="Superior Weapon Mastery">
+	<!-- STR + 2, Atk. Spd. + 25%, P. Atk. + 376 and P. Accuracy + 3 when a sword, blunt, or spear weapon is equipped. Increases the number of possible targets during a spear attack. 50% chance of triggering Lightning Force during a critical attack. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your STR. -->
 		<table name="#pAtk">376</table>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="relationSkillsId" val="329;216;472;210;205;330;421;422;168;463;257;331;217;" /> 
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="relationSkillsId" val="216;472;210;257;330;421;422;168" /> 
 		<enchant1 levels="10" name="Power">
 			<table name="#pAtk">400 425 449 474 499 523 548 572 597 622</table>
 		</enchant1>

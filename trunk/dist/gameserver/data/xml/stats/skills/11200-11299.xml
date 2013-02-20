@@ -164,10 +164,10 @@
 		<table name="#pAtk">82</table>
 		<table name="#mAtk">103</table>
 		<set name="magicLevel" val="85" />
-		<set name="relationSkillsId" val="228;141;925;330" /> 
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="relationSkillsId" val="228;141;925;330" /> 
         <enchant1 levels="10" name="Power">
             <table name="#pAtk">88.3 93.7 99.2 104.6 110 115.4 120.8 126.3 131.7 137.1</table>
             <table name="#mAtk">110.5 117.2 124 130.8 137.6 144.3 151.1 157.9 164.6 171.4</table>
@@ -609,33 +609,20 @@
 		<set name="isReuseDelayPermanent" val="true" />
 		<for />
 	</skill>
-    <skill id="11266" levels="1" name="Summon Death Gate">
-    <!-- Summons a Death Gate. The summoned Death Gate continuously inflicts damage and Hold on nearby enemies. -->
-       <table name="#magicLevel">85 87 89 91 93 95 97 99</table>
-		<table name="#activateRate">80</table>
-		<set name="element" val="earth" />
-		<set name="elementPower" val="30" />
-		<set name="flyRadius" val="55" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
-		<set name="relationSkillsId" val="48;452;497;260;477;95" /> 
-		<set name="skillType" val="DEBUFF" />
+	<skill id="11266" levels="1" name="Summon Death Gate">
+	<!-- Summons a Death Gate. The summoned Death Gate continuously inflicts damage and Hold on nearby enemies. -->
+		<set name="lifeTime" val="30" /> <!-- Need Retail LifeTime -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="relationSkillsId" val="48;452;497;260;477;95" />
+		<set name="skillType" val="SUMMON" />
+		<set name="summonType" val="TREE" />
+		<set name="isMagic" val="true" />
+		<set name="magicLevel" val="99" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<enchant1 levels="10" name="ConsumeMP"/>
-		<enchant2 levels="10" name="Chance">
-			<table name="#activateRate">90 91 92 93 94 95 96 97 98 99</table>
-		</enchant2>
-		<enchant9 levels="10" name="Reuse"/>
-		<cond msgId="113" addName="1">
-			<not>
-				<using kind="Bow,Crossbow" />
-			</not>
-		</cond>
-		<for>
-			<effect count="1" name="KnockDown" stackOrder="-1" stackType="KnockDown" time="3" val="0" chance="#activateRate" />	
-		</for>
-   </skill>
-    <skill id="11267" levels="3" name="Spirit of Nabiarov">
+		<set name="addSkills" val="11289;1" />
+		<set name="npcId" val="14927" />
+	</skill>
+	<skill id="11267" levels="3" name="Spirit of Nabiarov">
     <!-- Transform into Nabiarov and use his powerful skills for 5 minutes. -->
 		<set name="magicType" val="SPECIAL" />
 		<table name="#magicLevel">85 86 87</table>
@@ -1133,14 +1120,23 @@
 			</effect>
 		</for>
 	</skill>
-    <skill id="11289" levels="1" name="Gate Root">
-    <!-- Temporarily stops nearby enemies from moving. -->
-       <set name="operateType" val="OP_PASSIVE" />
-       <set name="skillType" val="NOTDONE" />
-       <set name="target" val="TARGET_SELF" />
-       <for>
-       </for>
-   </skill>
+	<skill id="11289" levels="1" name="Gate Root">
+	<!-- Temporarily stops nearby enemies from moving. -->
+		<set name="magicType" val="SPECIAL" />
+		<set name="power" val="200" />	<!-- Need Retail Value -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="MDAM" />
+		<set name="magicLevel" val="99" />
+		<set name="activateRate" val="80" />	<!-- Need Retail Value -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="600" />	<!-- Need Retail Value -->
+		<set name="trait" val="HOLD" />
+		<set name="saveVs" val="MEN" />
+		<for>
+			<effect count="1" name="Root" stackOrder="-1" stackType="Root" time="15" val="0" />	<!-- Need Retail Value -->
+		</for>
+	</skill>
     <skill id="11290" levels="1" name="Summon Hodling">
     <!-- Summons Hodling. -->
        <set name="operateType" val="OP_PASSIVE" />
