@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE list SYSTEM "npc.dtd">
+<!DOCTYPE list SYSTEM "../../../dtd/npc.dtd">
 <list>
 	<npc id="29001" name="Queen Ant" title="">
 		<set name="aggroRange" value="0" />
@@ -34,6 +34,7 @@
 		<set name="rewardRp" value="1680" />
 		<set name="rewardSp" value="140740" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="QueenAnt" />
 		<ai_params>
 			<set name="MaxPursueRange" value="2500" />
@@ -160,6 +161,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="QueenAntLarva" />
 		<ai_params>
 			<set name="ParalizeOnAttack" value="10" />
@@ -219,6 +221,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<ai_params>
 			<set name="ParalizeOnAttack" value="13" />
@@ -247,7 +250,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29004" name="Escort Ant" title="">
+	<npc id="29004" name="Guard Ant" title="">
 		<set name="aggroRange" value="500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -280,6 +283,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="MaxPursueRange" value="3000" />
@@ -340,6 +344,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<ai_params>
 			<set name="MaxPursueRange" value="3000" />
@@ -400,6 +405,7 @@
 		<set name="rewardRp" value="1508" />
 		<set name="rewardSp" value="153786" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Boss" />
 		<ai_params>
 			<set name="noRandomWalk" value="true" />
@@ -518,6 +524,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="curma_core_clan" range="2300"/>
 		<equip>
@@ -579,6 +586,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="curma_core_clan" range="700"/>
 		<equip>
@@ -641,6 +649,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<faction name="curma_core_clan" range="800"/>
 		<skills>
@@ -697,6 +706,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<faction name="curma_core_clan" range="1200"/>
 		<skills>
@@ -753,6 +763,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="curma_core_clan" range="1500"/>
 		<skills>
@@ -810,6 +821,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<faction name="curma_core_clan" range="800"/>
 		<skills>
@@ -870,6 +882,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<faction name="curma_core_clan" range="1200"/>
 		<skills>
@@ -926,6 +939,7 @@
 		<set name="rewardRp" value="1508" />
 		<set name="rewardSp" value="153786" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Orfen" />
 		<ai_params>
 			<set name="FactionNotifyInterval" value="1000" />
@@ -1019,7 +1033,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29015" name="Richard" title="">
+	<npc id="29015" name="Raikel" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Mystic" />
 		<set name="baseAtkRange" value="40" />
@@ -1052,6 +1066,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="FactionNotifyInterval" value="1000" />
@@ -1080,7 +1095,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29016" name="Richard Leos" title="">
+	<npc id="29016" name="Raikel Leos" title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1113,6 +1128,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<ai_params>
 			<set name="FactionNotifyInterval" value="1000" />
@@ -1173,6 +1189,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="FactionNotifyInterval" value="1000" />
@@ -1234,6 +1251,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="FactionNotifyInterval" value="1000" />
@@ -1262,164 +1280,235 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29019" name="Antharas" title="Earth Dragon">
-		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="7.5E8"/>
-		<set name="baseMpMax" value="18000.0"/>
-		<set name="baseHpReg" value="800.0"/>
-		<set name="baseMpReg" value="99.0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMDef" value="825"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="baseRunSpd" value="186"/>
-		<set name="rndDam" value="30"/>
-		<set name="baseEvasionRate" value="0"/>
-		<set name="baseAccuracyRate" value="0"/>
-		<set name="baseMevasionRate" value="0"/>
-		<set name="baseMaccuracyRate" value="0"/>
-		<set name="baseMCritRate" value="50.0"/>
-		<set name="collision_radius" value="300.0"/>
-		<set name="collision_height" value="300.0"/>
-		<!--Npc specific-->
-		<set name="type" value="Boss"/>
-		<set name="ai_type" value="Antharas"/>
-		<set name="level" value="99"/>
-		<set name="baseHpRate" value="1.0"/>
-		<set name="rewardExp" value="344540316"/>
-		<set name="rewardSp" value="0"/>
-		<set name="rewardRp" value="30780"/>
-		<set name="aggroRange" value="2000"/>
-		<set name="shots" value="NONE"/>
-		<attributes>
-			<defence attribute="fire" value="50"/>
-			<defence attribute="water" value="50"/>
-			<defence attribute="earth" value="300"/>
-			<defence attribute="holy" value="50"/>
-			<defence attribute="unholy" value="50"/>
-		</attributes>
+	<npc id="29019" name="Antharas" title="">
+		<set name="aggroRange" value="2000" />
+		<set name="ai_type" value="Antharas" />
+		<set name="baseAtkRange" value="40" />
+		<set name="baseCON" value="57" />
+		<set name="baseCritRate" value="40" />
+		<set name="baseDEX" value="73" />
+		<set name="baseHpMax" value="7500000" />
+		<set name="baseHpRate" value="1" />
+		<set name="baseHpReg" value="800" />
+		<set name="baseINT" value="76" />
+		<set name="baseMAtk" value="4722" />
+		<set name="baseMAtkSpd" value="2362" />
+		<set name="baseMDef" value="1538" />
+		<set name="baseMEN" value="80" />
+		<set name="baseMpMax" value="18000" />
+		<set name="baseMpReg" value="99" />
+		<set name="basePAtk" value="9796" />
+		<set name="basePAtkSpd" value="253" />
+		<set name="basePDef" value="6451" />
+		<set name="baseRunSpd" value="301" />
+		<set name="baseSTR" value="60" />
+		<set name="baseShldDef" value="0" />
+		<set name="baseShldRate" value="0" />
+		<set name="baseWIT" value="70" />
+		<set name="baseWalkSpd" value="81" />
+		<set name="collision_height" value="300.0" />
+		<set name="collision_radius" value="300.0" />
+		<set name="level" value="79" />
+		<set name="rewardExp" value="262720918" />
+		<set name="rewardRp" value="30780" />
+		<set name="rewardSp" value="29116376" />
+		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
+		<set name="type" value="Boss" />
 		<ai_params>
-			<set name="SelfAggressive" value="100"/>
-			<set name="MaxPursueRange" value="30000"/>
-			<set name="isMadness" value="15"/>
+			<set name="MaxPursueRange" value="30000" />
+			<set name="SelfAggressive" value="100" />
+			<set name="isMadness" value="15" />
 		</ai_params>
-		<skills>
-			<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4071" level="2"/>
-			<!--HP Increase (1x)-->
-			<skill id="4408" level="1"/>
-			<!--MP Increase (1x)-->
-			<skill id="4409" level="1"/>
-			<!--Average P. Atk.-->
-			<skill id="4410" level="11"/>
-			<!--Antharas Stun-->
-			<skill id="4107" level="1"/>
-			<!--Average M. Atk.-->
-			<skill id="4411" level="11"/>
-			<!--Antharas Stun-->
-			<skill id="4106" level="1"/>
-			<!--Average P. Def.-->
-			<skill id="4412" level="11"/>
-			<!--Curse of Antharas-->
-			<skill id="4109" level="1"/>
-			<!--Average M. Def.-->
-			<skill id="4413" level="11"/>
-			<!--Antharas Terror-->
-			<skill id="4108" level="1"/>
-			<!--Standard Type-->
-			<skill id="4414" level="2"/>
-			<!--Resist Full Magic Attack-->
-			<skill id="4045" level="1"/>
-			<!--Antharas Fossilization-->
-			<skill id="4111" level="1"/>
-			<!--One-handed Sword-->
-			<skill id="4415" level="3"/>
-			<!--Breath Attack-->
-			<skill id="4110" level="2"/>
-			<!--Antharas Attack-->
-			<skill id="4112" level="1"/>
-			<!--Antharas Attack-->
-			<skill id="4113" level="1"/>
-			<!--Dragons-->
-			<skill id="4416" level="10"/>
-			<!--Antharas-->
-			<skill id="4122" level="1"/>
-			<!--Antharas Terror-->
-			<skill id="5092" level="1"/>
-			<!--Antharas Meteor-->
-			<skill id="5093" level="1"/>
-		</skills>
 		<faction name="antharas_clan" range="2000"/>
+		<skills>
+			<skill id="4045" level="1" />	<!--Resist Full Magic Attack-->
+			<skill id="4071" level="2" />	<!--Resist Bow/Crossbow Weapons-->
+			<skill id="4106" level="1" />	<!--Antharas Stun-->
+			<skill id="4107" level="1" />	<!--Antharas Stun-->
+			<skill id="4108" level="1" />	<!--Antharas Terror-->
+			<skill id="4109" level="1" />	<!--Curse of Antharas-->
+			<skill id="4110" level="11" />	<!--null-->
+			<skill id="4111" level="11" />	<!--null-->
+			<skill id="4112" level="11" />	<!--null-->
+			<skill id="4113" level="11" />	<!--null-->
+			<skill id="4122" level="1" />	<!--Antharas-->
+			<skill id="4408" level="1" />	<!--HP Increase (1x)-->
+			<skill id="4409" level="1" />	<!--MP Increase (1x)-->
+			<skill id="4410" level="11" />	<!--Average P. Atk.-->
+			<skill id="4411" level="11" />	<!--Average M. Atk.-->
+			<skill id="4412" level="11" />	<!--Average P. Def.-->
+			<skill id="4413" level="11" />	<!--Average M. Def.-->
+			<skill id="4414" level="2" />	<!--Standard Type-->
+			<skill id="4415" level="3" />	<!--One-handed Sword-->
+			<skill id="4416" level="10" />	<!--Dragons-->
+			<skill id="5092" level="1" />	<!--Antharas Terror-->
+			<skill id="5093" level="1" />	<!--Antharas Meteor-->
+		</skills>
 		<absorblist>
-			<absorb chance="100" min_level="13" max_level="17" type="PARTY_ALL"/>
-			<absorb chance="50" min_level="18" max_level="18" type="PARTY_RANDOM"/>
+			<absorb chance="100" min_level="13" max_level="17" type="PARTY_ALL" />
+			<absorb chance="50" min_level="18" max_level="18" type="PARTY_RANDOM" />
 		</absorblist>
-	<rewardlist type="RATED_GROUPED">
-			<group chance="47.72">
-				<!--Blessed Antharas Earring-->
-				<reward item_id="19463" min="1" max="1" chance="47.72"/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="80" min="1" max="2" chance="25.0000" />	<!--Tallum Blade-->
+				<reward item_id="98" min="1" max="2" chance="25.0000" />	<!--Halberd-->
+				<reward item_id="269" min="1" max="2" chance="25.0000" />	<!--Blood Tornado-->
+				<reward item_id="2504" min="1" max="2" chance="25.0000" />	<!--Meteor Shower-->
 			</group>
-			<group chance="10.0">
-				<!--Blessed Amaranthine Weapons-->
-				<reward item_id="18079" min="1" max="1" chance="10.069"/>
-				<reward item_id="18073" min="1" max="1" chance="10.054"/>
-				<reward item_id="18069" min="1" max="1" chance="10.042"/>
-				<reward item_id="18075" min="1" max="1" chance="10.008"/>
-				<reward item_id="18070" min="1" max="1" chance="10.000"/>
-				<reward item_id="18071" min="1" max="1" chance="9.9999"/>
-				<reward item_id="18074" min="1" max="1" chance="10.000"/>
-				<reward item_id="18076" min="1" max="1" chance="10.000"/>
-				<reward item_id="18078" min="1" max="1" chance="10.000"/>
-				<reward item_id="18077" min="1" max="1" chance="10.000"/>
-				<reward item_id="18072" min="1" max="1" chance="10.000"/>
+			<group chance="100.0">
+				<reward item_id="235" min="1" max="2" chance="25.0000" />	<!--Bloody Orchid-->
+				<reward item_id="288" min="1" max="2" chance="25.0000" />	<!--Carnage Bow-->
+				<reward item_id="150" min="1" max="2" chance="25.0000" />	<!--Elemental Sword-->
+				<reward item_id="212" min="1" max="2" chance="25.0000" />	<!--Dasparion's Staff-->
 			</group>
-			<group chance="5.000">
-				<!--Blessed Eternal Armor-->
-				<reward item_id="18083" min="1" max="1" chance="5.000"/>
-				<reward item_id="18084" min="1" max="1" chance="5.000"/>
-				<reward item_id="18085" min="1" max="1" chance="5.000"/>
-				<reward item_id="18086" min="1" max="1" chance="5.000"/>
-				<reward item_id="18087" min="1" max="1" chance="5.000"/>
-				<reward item_id="18088" min="1" max="1" chance="5.000"/>
-				<reward item_id="18089" min="1" max="1" chance="5.000"/>
-				<reward item_id="18090" min="1" max="1" chance="5.000"/>
-				<reward item_id="18091" min="1" max="1" chance="5.000"/>
-				<reward item_id="18092" min="1" max="1" chance="5.000"/>
-				<reward item_id="18093" min="1" max="1" chance="5.000"/>
-				<reward item_id="18094" min="1" max="1" chance="5.000"/>
-				<reward item_id="18095" min="1" max="1" chance="5.000"/>
-				<reward item_id="18096" min="1" max="1" chance="5.000"/>
-				<reward item_id="18097" min="1" max="1" chance="5.000"/>
-				<reward item_id="18098" min="1" max="1" chance="5.000"/>
-				<reward item_id="18099" min="1" max="1" chance="5.000"/>
+			<group chance="100.0">
+				<reward item_id="81" min="1" max="2" chance="25.0000" />	<!--Dragon Slayer-->
+				<reward item_id="151" min="1" max="2" chance="25.0000" />	<!--Sword of Miracles-->
+				<reward item_id="2500" min="1" max="2" chance="25.0000" />	<!--Dark Legion's Edge-->
+				<reward item_id="164" min="1" max="2" chance="25.0000" />	<!--Elysian-->
 			</group>
-			<group chance="100.000">
-				<!--Misc-->
-				<reward item_id="19446" min="1" max="1" chance="100.000"/>
-				<reward item_id="19448" min="1" max="1" chance="100.000"/>
-				<reward item_id="19447" min="1" max="1" chance="100.000"/>
-				<reward item_id="19465" min="2" max="2" chance="100.000"/>
-				<reward item_id="35568" min="1" max="1" chance="100.000"/>
+			<group chance="100.0">
+				<reward item_id="236" min="1" max="2" chance="20.0000" />	<!--Soul Separator-->
+				<reward item_id="270" min="1" max="2" chance="20.0000" />	<!--Dragon Grinder-->
+				<reward item_id="289" min="1" max="2" chance="20.0000" />	<!--Soul Bow-->
+				<reward item_id="213" min="1" max="2" chance="20.0000" />	<!--Branch of the Mother Tree-->
+				<reward item_id="305" min="1" max="2" chance="20.0000" />	<!--Tallum Glaive-->
 			</group>
-			<group chance="38.08">
-				<!--Soul Crystal-->
-				<reward item_id="18562" min="1" max="1" chance="31.20"/>
-				<reward item_id="18560" min="1" max="1" chance="31.42"/>
-				<reward item_id="18561" min="1" max="1" chance="29.83"/>
+			<group chance="100.0">
+				<reward item_id="6364" min="1" max="1" chance="17.0000" />	<!--Forgotten Blade-->
+				<reward item_id="6365" min="1" max="1" chance="17.0000" />	<!--Basalt Battlehammer-->
+				<reward item_id="6369" min="1" max="1" chance="17.0000" />	<!--Dragon Hunter Axe-->
+				<reward item_id="6370" min="1" max="1" chance="17.0000" />	<!--Saint Spear-->
+				<reward item_id="6372" min="1" max="1" chance="16.0000" />	<!--Heaven's Divider-->
+				<reward item_id="6580" min="1" max="1" chance="16.0000" />	<!--Tallum Blade*Dark Legion's Edge-->
 			</group>
+			<group chance="100.0">
+				<reward item_id="7575" min="1" max="1" chance="20.0000" />	<!--Draconic Bow-->
+				<reward item_id="6366" min="1" max="1" chance="20.0000" />	<!--Imperial Staff-->
+				<reward item_id="6367" min="1" max="1" chance="20.0000" />	<!--Angel Slayer-->
+				<reward item_id="6371" min="1" max="1" chance="20.0000" />	<!--Demon Splinter-->
+				<reward item_id="6579" min="1" max="1" chance="20.0000" />	<!--Arcana Mace-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="6326" min="1" max="5" chance="30.0000" />	<!--Sealed Majestic Necklace-->
+				<reward item_id="6327" min="1" max="5" chance="35.0000" />	<!--Sealed Majestic Earring-->
+				<reward item_id="6328" min="1" max="5" chance="35.0000" />	<!--Sealed Majestic Ring-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="6323" min="1" max="5" chance="30.0000" />	<!--Sealed Phoenix Necklace-->
+				<reward item_id="6324" min="1" max="5" chance="35.0000" />	<!--Sealed Phoenix Earring-->
+				<reward item_id="6325" min="1" max="5" chance="35.0000" />	<!--Sealed Phoenix Ring-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="6724" min="1" max="1" chance="35.0000" />	<!--Sealed Tateossian Earring-->
+				<reward item_id="6725" min="1" max="1" chance="35.0000" />	<!--Sealed Tateossian Ring-->
+				<reward item_id="6726" min="1" max="1" chance="30.0000" />	<!--Sealed Tateossian Necklace-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="5287" min="1" max="3" chance="50.0000" />	<!--Sealed Dark Crystal breastplate-->
+				<reward item_id="5297" min="1" max="3" chance="25.0000" />	<!--Sealed Dark Crystal Leather Armor-->
+				<reward item_id="5304" min="1" max="3" chance="25.0000" />	<!--Sealed Tallum Tunic-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="5311" min="1" max="3" chance="35.0000" />	<!--Sealed Armor of Nightmare-->
+				<reward item_id="5320" min="1" max="3" chance="35.0000" />	<!--Sealed Leather Armor of Nightmare-->
+				<reward item_id="5326" min="1" max="3" chance="30.0000" />	<!--Sealed Robe of Nightmare-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="5293" min="1" max="3" chance="25.0000" />	<!--Sealed Tallum Plate Armor-->
+				<reward item_id="5301" min="1" max="3" chance="25.0000" />	<!--Sealed Tallum Leather Armor-->
+				<reward item_id="5308" min="1" max="3" chance="25.0000" />	<!--Sealed Dark Crystal Robe-->
+				<reward item_id="5316" min="1" max="3" chance="8.0000" />	<!--Sealed Majestic Plate Armor-->
+				<reward item_id="5323" min="1" max="3" chance="8.0000" />	<!--Sealed Majestic Leather Armor-->
+				<reward item_id="5329" min="1" max="3" chance="9.0000" />	<!--Sealed Majestic Robe-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="5288" min="1" max="3" chance="35.0000" />	<!--Sealed Dark Crystal Gaiters-->
+				<reward item_id="5298" min="1" max="3" chance="35.0000" />	<!--Sealed Dark Crystal Leggings-->
+				<reward item_id="5305" min="1" max="3" chance="30.0000" />	<!--Sealed Tallum Stockings-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="6674" min="1" max="1" chance="15.0000" />	<!--Sealed Imperial Crusader Breastplate-->
+				<reward item_id="6675" min="1" max="1" chance="15.0000" />	<!--Sealed Imperial Crusader Gaiters-->
+				<reward item_id="6680" min="1" max="1" chance="35.0000" />	<!--Sealed Draconic Leather Armor-->
+				<reward item_id="6684" min="1" max="1" chance="35.0000" />	<!--Sealed Major Arcana Robe-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="5289" min="1" max="3" chance="25.0000" />	<!--Sealed Dark Crystal Helmet-->
+				<reward item_id="5294" min="1" max="3" chance="25.0000" />	<!--Sealed Tallum Helmet-->
+				<reward item_id="5312" min="1" max="3" chance="25.0000" />	<!--Sealed Helm of Nightmare-->
+				<reward item_id="5317" min="1" max="3" chance="25.0000" />	<!--Sealed Majestic Circlet-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="5291" min="1" max="3" chance="25.0000" />	<!--Sealed Dark Crystal Boots-->
+				<reward item_id="5296" min="1" max="3" chance="25.0000" />	<!--Sealed Tallum Boots-->
+				<reward item_id="5314" min="1" max="3" chance="25.0000" />	<!--Sealed Boots of Nightmare-->
+				<reward item_id="5319" min="1" max="3" chance="25.0000" />	<!--Sealed Majestic Boots-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="5290" min="1" max="3" chance="25.0000" />	<!--Sealed Dark Crystal Gloves-->
+				<reward item_id="5295" min="1" max="3" chance="25.0000" />	<!--Sealed Tallum Gloves-->
+				<reward item_id="5313" min="1" max="3" chance="25.0000" />	<!--Sealed Gauntlets of Nightmare-->
+				<reward item_id="5318" min="1" max="3" chance="25.0000" />	<!--Sealed Majestic Gauntlets-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="5292" min="1" max="3" chance="40.0000" />	<!--Sealed Dark Crystal Shield-->
+				<reward item_id="5315" min="1" max="3" chance="40.0000" />	<!--Sealed Shield of Nightmare-->
+				<reward item_id="6678" min="1" max="1" chance="20.0000" />	<!--Sealed Imperial Crusader Shield-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="6676" min="1" max="1" chance="34.0000" />	<!--Sealed Imperial Crusader Gauntlet-->
+				<reward item_id="6681" min="1" max="1" chance="33.0000" />	<!--Sealed Draconic Leather Glove-->
+				<reward item_id="6685" min="1" max="1" chance="33.0000" />	<!--Sealed Major Arcana Glove-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="6677" min="1" max="1" chance="34.0000" />	<!--Sealed Imperial Crusader Boots-->
+				<reward item_id="6682" min="1" max="1" chance="33.0000" />	<!--Sealed Draconic Leather Boots-->
+				<reward item_id="6686" min="1" max="1" chance="33.0000" />	<!--Sealed Major Arcana Boots-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="6679" min="1" max="1" chance="34.0000" />	<!--Sealed Imperial Crusader Helmet-->
+				<reward item_id="6683" min="1" max="1" chance="33.0000" />	<!--Sealed Draconic Leather Helmet-->
+				<reward item_id="6687" min="1" max="1" chance="33.0000" />	<!--Sealed Major Arcana Circlet-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="729" min="1" max="19" chance="100.0000" />	<!--Scroll: Enchant Weapon (A-Grade)-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="1538" min="1" max="59" chance="100.0000" />	<!--Blessed Scroll of Escape-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="3936" min="1" max="39" chance="100.0000" />	<!--Blessed Scroll of Resurrection-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="57" min="14000000" max="18000000" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="57" min="14000000" max="18000000" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="57" min="14000000" max="18000000" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="57" min="14000000" max="18000000" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="57" min="14000000" max="18000000" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="57" min="14000000" max="18000000" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="57" min="9000000" max="13000000" chance="100.0000" />	<!--Adena-->
+			</group>
+			<group chance="100.0">
+				<reward item_id="6656" min="1" max="1" chance="100.0000" />	<!--Earring of Antharas-->
+			</group>
+		</rewardlist>
+		<rewardlist type="NOT_RATED_NOT_GROUPED">
+			<reward item_id="8620" min="10" max="30" chance="50.0000" />	<!--Ancient Book: Divine Inspiration (Manuscript)-->
+			<reward item_id="13893" min="1" max="2" chance="50.0000" />	<!--Sealed Holy Spirit's Cloak-->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="50" />
@@ -1462,6 +1551,7 @@
 		<set name="rewardRp" value="13008" />
 		<set name="rewardSp" value="1081544" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Boss" />
 		<ai_params>
 			<set name="MaxPursueRange" value="20000" />
@@ -1573,6 +1663,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="343" />
 		<set name="shots" value="SOUL_BSPIRIT" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<equip>
 			<rhand item_id="93" />	<!--Winged Spear-->
@@ -1632,6 +1723,7 @@
 		<set name="rewardRp" value="10448" />
 		<set name="rewardSp" value="423589" />
 		<set name="shots" value="SOUL_BSPIRIT" />
+		<set name="texture" value="" />
 		<set name="type" value="ReflectionBoss" />
 		<ai_params>
 			<set name="SelfAggressive" value="100" />
@@ -1790,6 +1882,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<equip>
 			<rhand item_id="5129" />	<!--Doll Knife-->
@@ -1825,7 +1918,7 @@
 			<defence attribute="unholy" value="184" />
 		</attributes>
 	</npc>
-	<npc id="29024" name="Veil Master" title="">
+	<npc id="29024" name="Vale master" title="">
 		<set name="aggroRange" value="150" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -1858,6 +1951,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<skills>
 			<skill id="4045" level="1" />	<!--Resist Full Magic Attack-->
@@ -1923,6 +2017,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="BaiumGatekeeper" />
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -1966,6 +2061,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<equip>
 			<rhand item_id="232" />	<!--Dark Elven Dagger-->
@@ -2031,6 +2127,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<equip>
 			<rhand item_id="225" />	<!--Mithril Dagger-->
@@ -2063,14 +2160,14 @@
 			<defence attribute="unholy" value="53" />
 		</attributes>
 	</npc>
-	<npc id="29028" name="Valakas" title="Fire Dragon">
+	<npc id="29028" name="Valakas" title="">
 		<set name="aggroRange" value="10000" />
 		<set name="ai_type" value="Valakas" />
 		<set name="baseAtkRange" value="40" />
 		<set name="baseCON" value="57" />
 		<set name="baseCritRate" value="40" />
 		<set name="baseDEX" value="73" />
-		<set name="baseHpMax" value="59149081" />
+		<set name="baseHpMax" value="1271811150" />
 		<set name="baseHpRate" value="1" />
 		<set name="baseHpReg" value="5383" />
 		<set name="baseINT" value="76" />
@@ -2078,7 +2175,7 @@
 		<set name="baseMAtkSpd" value="3819" />
 		<set name="baseMDef" value="3990" />
 		<set name="baseMEN" value="80" />
-		<set name="baseMpMax" value="4497143" />
+		<set name="baseMpMax" value="4055532" />
 		<set name="baseMpReg" value="3862" />
 		<set name="basePAtk" value="49093" />
 		<set name="basePAtkSpd" value="409" />
@@ -2092,10 +2189,11 @@
 		<set name="collision_height" value="335.0" />
 		<set name="collision_radius" value="190.0" />
 		<set name="level" value="85" />
-		<set name="rewardExp" value="296105299" />
+		<set name="rewardExp" value="1135606418230" />
 		<set name="rewardRp" value="38248" />
-		<set name="rewardSp" value="29014318" />
+		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Boss" />
 		<ai_params>
 			<set name="MaxPursueRange" value="50000" />
@@ -2222,7 +2320,7 @@
 			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
-	<npc id="29029" name="Lavasaurus Alpha" title="">
+	<npc id="29029" name="Elderly Lavasaurus" title="Family of Valakas">
 		<set name="aggroRange" value="1200" />
 		<set name="ai_type" value="freya.ValakasMinion" />
 		<set name="baseAtkRange" value="1100" />
@@ -2255,6 +2353,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMinion" />
 		<faction name="valakas_clan" range="900"/>
 		<skills>
@@ -2315,6 +2414,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1226568" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="RaidBoss" />
 		<faction name="fire_clan" range="300"/>
 		<minions>
@@ -2385,6 +2485,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="fire_clan" range="300"/>
 		<skills>
@@ -2443,6 +2544,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="fire_clan" range="300"/>
 		<skills>
@@ -2499,6 +2601,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1257012" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="RaidBoss" />
 		<faction name="fire_clan" range="300"/>
 		<minions>
@@ -2569,6 +2672,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="fire_clan" range="300"/>
 		<skills>
@@ -2627,6 +2731,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="fire_clan" range="300"/>
 		<skills>
@@ -2683,6 +2788,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1289662" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="RaidBoss" />
 		<faction name="fire_clan" range="300"/>
 		<skills>
@@ -2752,6 +2858,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1322688" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="RaidBoss" />
 		<faction name="fire_clan" range="300"/>
 		<minions>
@@ -2824,6 +2931,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="fire_clan" range="300"/>
 		<skills>
@@ -2882,6 +2990,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="fire_clan" range="300"/>
 		<skills>
@@ -2907,7 +3016,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29040" name="Wings of Flame, Ixion" title="Gatekeeper of Valakas">
+	<npc id="29040" name="Wings of Flame Ixion" title="Gatekeeper of Valakas">
 		<set name="aggroRange" value="1500" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -2940,6 +3049,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="1356048" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="RaidBoss" />
 		<faction name="fire_clan" range="300"/>
 		<minions>
@@ -3015,6 +3125,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="fire_clan" range="300"/>
 		<skills>
@@ -3072,6 +3183,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="fire_clan" range="300"/>
 		<skills>
@@ -3128,6 +3240,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="fire_clan" range="300"/>
 		<skills>
@@ -3186,6 +3299,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<faction name="fire_clan" range="300"/>
 		<skills>
@@ -3244,6 +3358,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Frintezza" />
 		<skills>
 			<skill id="4045" level="1" />	<!--Resist Full Magic Attack-->
@@ -3304,6 +3419,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Boss" />
 		<faction name="frintezza_clan" range="6000"/>
 		<equip>
@@ -3368,6 +3484,7 @@
 		<set name="rewardRp" value="14727" />
 		<set name="rewardSp" value="10028450" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Boss" />
 		<faction name="frintezza_clan" range="6000"/>
 		<equip>
@@ -3512,6 +3629,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="MaxPursueRange" value="30000" />
@@ -3572,6 +3690,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="MaxPursueRange" value="30000" />
@@ -3632,6 +3751,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="MaxPursueRange" value="30000" />
@@ -3697,6 +3817,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="MaxPursueRange" value="30000" />
@@ -3729,7 +3850,7 @@
 			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
-	<npc id="29052" name="" title="">
+	<npc id="29052" name=" " title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="CharacterAI" />
 		<set name="baseAtkRange" value="40" />
@@ -3762,6 +3883,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<faction name="all_elemental_clan" range="300"/>
 		<skills>
@@ -3785,7 +3907,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29053" name="" title="">
+	<npc id="29053" name=" " title="">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -3818,6 +3940,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<faction name="frintessa_clan" range="0"/>
 		<skills>
@@ -3842,7 +3965,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29054" name="Benom" title="Triol's Leader">
+	<npc id="29054" name="Venom" title="Triol's Leader">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="residences.castle.Venom" />
 		<set name="baseAtkRange" value="40" />
@@ -3875,6 +3998,7 @@
 		<set name="rewardRp" value="5288" />
 		<set name="rewardSp" value="1757872" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Monster" />
 		<ai_params>
 			<set name="ParalizeOnAttack" value="8" />
@@ -3957,6 +4081,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="residences.castle.VenomTeleportCubic" />
 		<skills>
 			<skill id="4045" level="1" />	<!--Resist Full Magic Attack-->
@@ -4012,6 +4137,7 @@
 		<set name="rewardRp" value="1264" />
 		<set name="rewardSp" value="371722" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="RaidBoss" />
 		<faction name="ice_clan" range="300"/>
 		<skills>
@@ -4070,7 +4196,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29057" name="Sirra's Servant" title="Raid Fighter">
+	<npc id="29057" name="Sirra's Page" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4103,6 +4229,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<skills>
 			<skill id="4010" level="5" />	<!--Resist Water-->
@@ -4168,6 +4295,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<skills>
 			<skill id="4010" level="5" />	<!--Resist Water-->
@@ -4231,6 +4359,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4045" level="1" />	<!--Resist Full Magic Attack-->
@@ -4253,7 +4382,7 @@
 			<defence attribute="unholy" value="20" />
 		</attributes>
 	</npc>
-	<npc id="29060" name="Ice Queen's Escort Captain" title="Raid Boss">
+	<npc id="29060" name="Captain of the Ice Queen's Royal Guard" title="Raid Boss">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -4286,6 +4415,7 @@
 		<set name="rewardRp" value="1092" />
 		<set name="rewardSp" value="397080" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="RaidBoss" />
 		<faction name="ice_clan" range="300"/>
 		<skills>
@@ -4365,6 +4495,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Merchant" />
 		<skills>
 			<skill id="4045" level="1" />	<!--Resist Full Magic Attack-->
@@ -4420,6 +4551,7 @@
 		<set name="rewardRp" value="5032" />
 		<set name="rewardSp" value="2380617" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="RaidBoss" />
 		<faction name="andreas_clan" range="300"/>
 		<equip>
@@ -4509,6 +4641,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<equip>
 			<rhand item_id="8205" />	<!--Monster Only (Heretic Priest Sigil)-->
@@ -4574,6 +4707,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<equip>
 			<rhand item_id="8207" />	<!--Monster Only (Heretic Private Axe)-->
@@ -4640,6 +4774,7 @@
 		<set name="rewardRp" value="2100" />
 		<set name="rewardSp" value="592766" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Boss" />
 		<ai_params>
 			<set name="MaxPursueRange" value="30000" />
@@ -4726,6 +4861,7 @@
 		<set name="rewardRp" value="30780" />
 		<set name="rewardSp" value="29116376" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Boss" />
 		<ai_params>
 			<set name="MaxPursueRange" value="30000" />
@@ -4976,6 +5112,7 @@
 		<set name="rewardRp" value="34984" />
 		<set name="rewardSp" value="39307416" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Boss" />
 		<ai_params>
 			<set name="MaxPursueRange" value="30000" />
@@ -5196,7 +5333,7 @@
 			<defence attribute="unholy" value="50" />
 		</attributes>
 	</npc>
-	<npc id="29068" name="Antharas" title="Earth Dragon">
+	<npc id="29068" name="Antharas" title="">
 		<set name="aggroRange" value="10000" />
 		<set name="ai_type" value="Antharas" />
 		<set name="baseAtkRange" value="40" />
@@ -5229,6 +5366,7 @@
 		<set name="rewardRp" value="38248" />
 		<set name="rewardSp" value="52769503" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Boss" />
 		<ai_params>
 			<set name="MaxPursueRange" value="30000" />
@@ -5389,6 +5527,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMinion" />
 		<ai_params>
 			<set name="MaxPursueRange" value="10000" />
@@ -5451,6 +5590,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="SOUL_BSPIRIT" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="MaxPursueRange" value="10000" />
@@ -5520,6 +5660,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="SOUL_BSPIRIT" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="MaxPursueRange" value="10000" />
@@ -5588,6 +5729,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="SOUL_BSPIRIT" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="MaxPursueRange" value="10000" />
@@ -5656,6 +5798,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="SOUL_BSPIRIT" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="MaxPursueRange" value="10000" />
@@ -5724,6 +5867,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="SOUL_BSPIRIT" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="MaxPursueRange" value="10000" />
@@ -5792,6 +5936,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="SOUL_BSPIRIT" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="MaxPursueRange" value="10000" />
@@ -5860,6 +6005,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="SOUL_BSPIRIT" />
+		<set name="texture" value="" />
 		<set name="type" value="SpecialMonster" />
 		<ai_params>
 			<set name="MaxPursueRange" value="10000" />
@@ -5928,6 +6074,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -5974,6 +6121,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6020,6 +6168,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6066,6 +6215,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6112,6 +6262,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6158,6 +6309,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6204,6 +6356,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6250,6 +6403,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6296,6 +6450,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6342,6 +6497,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6388,6 +6544,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6434,6 +6591,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6480,6 +6638,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6526,6 +6685,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6572,6 +6732,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6618,6 +6779,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6664,6 +6826,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6710,6 +6873,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Npc" />
 		<skills>
 			<skill id="4416" level="2" />	<!--Magic Creatures-->
@@ -6756,6 +6920,7 @@
 		<set name="rewardRp" value="3888" />
 		<set name="rewardSp" value="1455305" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="RaidBoss" />
 		<ai_params>
 			<set name="MaxPursueRange" value="30000" />
@@ -6850,6 +7015,7 @@
 		<set name="rewardRp" value="3888" />
 		<set name="rewardSp" value="2036475" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="RaidBoss" />
 		<faction name="solina_clan" range="1000"/>
 		<equip>
@@ -6906,7 +7072,7 @@
 			<defence attribute="holy" value="71" />
 		</attributes>
 	</npc>
-	<npc id="29097" name="Disciple of Splendor " title="Raid Fighter">
+	<npc id="29097" name="Splendor Disciple" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -6939,6 +7105,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<equip>
 			<rhand item_id="8221" />	<!--Monster Only (Grail Apostle Spear)-->
@@ -6970,7 +7137,7 @@
 			<defence attribute="holy" value="71" />
 		</attributes>
 	</npc>
-	<npc id="29098" name="Worshiper of Splendor" title="Raid Fighter">
+	<npc id="29098" name="Splendor Worshiper" title="Raid Fighter">
 		<set name="aggroRange" value="0" />
 		<set name="ai_type" value="Fighter" />
 		<set name="baseAtkRange" value="40" />
@@ -7003,6 +7170,7 @@
 		<set name="rewardRp" value="0" />
 		<set name="rewardSp" value="0" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Minion" />
 		<skills>
 			<skill id="4045" level="1" />	<!--Resist Full Magic Attack-->
@@ -7065,6 +7233,7 @@
 		<set name="rewardRp" value="399" />
 		<set name="rewardSp" value="2191683" />
 		<set name="shots" value="NONE" />
+		<set name="texture" value="" />
 		<set name="type" value="Boss" />
 		<ai_params>
 			<set name="SelfAggressive" value="100" />
