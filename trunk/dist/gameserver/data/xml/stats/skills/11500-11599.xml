@@ -203,7 +203,7 @@
         </enchant8>
         <enchant9 levels="10" name="Recycle"/>
 		<for>
-			<effect name="Debuff" time="5" val="0">
+			<effect name="Debuff" time="10" val="0">
 				<mul order="0x30" stat="pDef" val="0.7" />				
 				<mul order="0x30" stat="mDef" val="0.7" />
 				<sub order="0x40" stat="rEvas" val="10" />
@@ -265,7 +265,7 @@
         </enchant8>
         <enchant9 levels="10" name="Recycle"/>
 		<for>
-			<effect name="Debuff" time="5" val="0">
+			<effect name="Debuff" time="10" val="0">
 				<mul order="0x30" stat="mAtk" val="0.7" />
 				<mul order="0x30" stat="pAtk" val="0.7" />
 				<sub order="0x40" stat="debuffResist" val="10">
@@ -383,7 +383,7 @@
         </enchant8>
         <enchant9 levels="10" name="Recycle"/>
 		<for>
-			<effect name="Debuff" time="5" val="0">
+			<effect name="Debuff" time="10" val="0">
 				<mul order="0x30" stat="mDef" val="0.7" />
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<sub order="0x40" stat="rEvas" val="10" />
@@ -448,7 +448,7 @@
         </enchant8>
         <enchant9 levels="10" name="Recycle"/>
 		<for>
-			<effect name="Debuff" time="5" val="0">
+			<effect name="Debuff" time="10" val="0">
 				<mul order="0x30" stat="mDef" val="0.7" />
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<sub order="0x40" stat="debuffResist" val="10">
