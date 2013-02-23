@@ -186,15 +186,18 @@ public class SummonList implements Iterable<Summon>
 	 */
 	public void unsummonAllServitors()
 	{
-		synchronized (_summonList)
+		if (_summonList.size() > 0)
 		{
-			for (Summon summon : _summonList.values())
+			synchronized (_summonList)
 			{
-				summon.unSummon();
+				for (Summon summon : _summonList.values())
+				{
+					summon.unSummon();
+				}
+				_summonList.clear();
 			}
-			_summonList.clear();
+			_usedPoints = 0;
 		}
-		_usedPoints = 0;
 	}
 	
 	/**
