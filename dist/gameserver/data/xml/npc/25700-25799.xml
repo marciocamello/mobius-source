@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
-
 <list>
 	<!--ru title: Главный Рыцарь Ледяного Лабиринта-->
 	<!--ru name: Клакиес-->
@@ -1867,7 +1866,7 @@
 			<defence attribute="unholy" value="250"/>
 		</attributes>
 		<skills>
-			<skill id="4494" level="8"/>
+			<skill id="4494" level="1"/>
 			<skill id="5464" level="10"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
@@ -1953,7 +1952,7 @@
 			<defence attribute="unholy" value="250"/>
 		</attributes>
 		<skills>
-			<skill id="4494" level="8"/>
+			<skill id="4494" level="1"/>
 			<skill id="5464" level="10"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
@@ -2051,7 +2050,7 @@
 			<defence attribute="unholy" value="250"/>
 		</attributes>
 		<skills>
-			<skill id="4494" level="8"/>
+			<skill id="4494" level="1"/>
 			<skill id="5467" level="10"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
@@ -2149,7 +2148,7 @@
 			<defence attribute="unholy" value="250"/>
 		</attributes>
 		<skills>
-			<skill id="4494" level="8"/>
+			<skill id="4494" level="1"/>
 			<skill id="5467" level="10"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
@@ -2247,7 +2246,7 @@
 			<defence attribute="unholy" value="250"/>
 		</attributes>
 		<skills>
-			<skill id="4494" level="8"/>
+			<skill id="4494" level="1"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
 			<skill id="5463" level="10"/>
@@ -2499,7 +2498,7 @@
 			<defence attribute="unholy" value="250"/>
 		</attributes>
 		<skills>
-			<skill id="4494" level="8"/>
+			<skill id="4494" level="1"/>
 			<skill id="5465" level="10"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
@@ -3191,7 +3190,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="13"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 			<!--Power Strike-->
@@ -3493,7 +3492,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="5"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -3575,7 +3574,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="13"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -3634,7 +3633,7 @@
 		</attributes>
 		<skills>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5462" level="3"/>
 		</skills>
 	</npc>
@@ -3691,7 +3690,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5467" level="6"/>
+			<skill id="5467" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 			<!--X Strike-->
@@ -3868,7 +3867,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="13"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -3926,7 +3925,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="4494" level="8"/>
+			<skill id="4494" level="1"/>
 			<skill id="5465" level="13"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
@@ -4019,7 +4018,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="13"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -4077,7 +4076,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="13"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -4135,7 +4134,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="13"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -4222,7 +4221,7 @@
 		</attributes>
 		<skills>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5463" level="6"/>
 		</skills>
 	</npc>
@@ -4280,7 +4279,7 @@
 		</attributes>
 		<skills>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5463" level="6"/>
 		</skills>
 	</npc>
@@ -4338,7 +4337,7 @@
 		</attributes>
 		<skills>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5463" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
@@ -4435,7 +4434,7 @@
 			<defence attribute="unholy" value="189"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="5"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -4521,7 +4520,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="13"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -4580,7 +4579,7 @@
 		</attributes>
 		<skills>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5462" level="3"/>
 		</skills>
 	</npc>
@@ -4637,7 +4636,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5467" level="6"/>
+			<skill id="5467" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -4820,7 +4819,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="13"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -4878,7 +4877,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5467" level="6"/>
+			<skill id="5467" level="1"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
 		</skills>
@@ -4990,7 +4989,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5467" level="6"/>
+			<skill id="5467" level="1"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
 		</skills>
@@ -5064,7 +5063,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5467" level="6"/>
+			<skill id="5467" level="1"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
 		</skills>
@@ -5146,7 +5145,7 @@
 			<defence attribute="unholy" value="189"/>
 		</attributes>
 		<skills>
-			<skill id="5467" level="6"/>
+			<skill id="5467" level="1"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
 		</skills>
@@ -5268,7 +5267,7 @@
 			<defence attribute="unholy" value="189"/>
 		</attributes>
 		<skills>
-			<skill id="5467" level="6"/>
+			<skill id="5467" level="1"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
 		</skills>
@@ -5346,7 +5345,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5467" level="3"/>
+			<skill id="5467" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -5405,7 +5404,7 @@
 		</attributes>
 		<skills>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="6"/>
 			<skill id="5463" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
@@ -5507,7 +5506,7 @@
 		</attributes>
 		<skills>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="6"/>
 			<skill id="5463" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
@@ -5623,7 +5622,7 @@
 		</attributes>
 		<skills>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="6"/>
 			<skill id="5463" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
@@ -5699,7 +5698,7 @@
 		</attributes>
 		<skills>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="6"/>
 			<skill id="5463" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
@@ -5779,7 +5778,7 @@
 		</attributes>
 		<skills>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="6"/>
 			<skill id="5463" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
@@ -5896,7 +5895,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="6"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -5972,7 +5971,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="6"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -6048,7 +6047,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="6"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -6161,7 +6160,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="6"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -6250,7 +6249,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="4494" level="8"/>
+			<skill id="4494" level="1"/>
 			<skill id="5465" level="5"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
@@ -6309,7 +6308,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="5"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -6401,7 +6400,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="5"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -6459,7 +6458,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5465" level="5"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -6633,7 +6632,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5467" level="9"/>
+			<skill id="5467" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -6690,7 +6689,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5467" level="9"/>
+			<skill id="5467" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -6748,7 +6747,7 @@
 			<defence attribute="unholy" value="80"/>
 		</attributes>
 		<skills>
-			<skill id="5467" level="9"/>
+			<skill id="5467" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -6871,7 +6870,7 @@
 		</attributes>
 		<skills>
 			<!--Magic Creatures-->
-			<skill id="4416" level="2"/>
+			<skill id="4416" level="6"/>
 		</skills>
 	</npc>
 	<!--ru title: Эмбрио-->
@@ -6928,7 +6927,7 @@
 		</attributes>
 		<skills>
 			<!--Magic Creatures-->
-			<skill id="4416" level="2"/>
+			<skill id="4416" level="14"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="66.2453">
@@ -7013,7 +7012,7 @@
 		</attributes>
 		<skills>
 			<!--Greater Resist Sleep-->
-			<skill id="4438" level="1"/>
+			<skill id="4438" level="5"/>
 			<!--Teredor Blow-->
 			<skill id="14110" level="1"/>
 			<!--Teredor Range Attack-->
@@ -7103,7 +7102,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -7161,7 +7160,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -7245,7 +7244,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -7303,7 +7302,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -7361,7 +7360,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -7449,7 +7448,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -7507,7 +7506,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -7565,7 +7564,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -7663,7 +7662,7 @@
 			<defence attribute="unholy" value="189"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -7767,7 +7766,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>
@@ -7898,7 +7897,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="4494" level="10"/>
+			<skill id="4494" level="1"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
 			<skill id="5462" level="9"/>
@@ -8002,7 +8001,7 @@
 		</attributes>
 		<skills>
 			<!--Humanoids-->
-			<skill id="4416" level="6"/>
+			<skill id="4416" level="9"/>
 			<skill id="5462" level="9"/>
 			<!--Heavy Armor Type-->
 			<skill id="4414" level="1"/>
@@ -8061,7 +8060,7 @@
 			<defence attribute="unholy" value="189"/>
 		</attributes>
 		<skills>
-			<skill id="4494" level="8"/>
+			<skill id="4494" level="1"/>
 			<!--Dark Attacks-->
 			<skill id="5467" level="1"/>
 			<!--Undead-->

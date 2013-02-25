@@ -6,7 +6,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan0"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -50,30 +50,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50001" template_id="33679" name="" title="">
@@ -81,7 +81,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan1"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -125,30 +125,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50002" template_id="33679" name="" title="">
@@ -156,7 +156,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan2"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -200,30 +200,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50003" template_id="33679" name="" title="">
@@ -231,7 +231,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan3"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -275,30 +275,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50004" template_id="33679" name="" title="">
@@ -306,7 +306,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan4"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -350,30 +350,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50005" template_id="33679" name="" title="">
@@ -381,7 +381,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan5"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -425,30 +425,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50006" template_id="33679" name="" title="">
@@ -456,7 +456,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan6"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -500,30 +500,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50007" template_id="33679" name="" title="">
@@ -531,7 +531,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan7"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -575,30 +575,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50008" template_id="33679" name="" title="">
@@ -606,7 +606,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan8"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -650,30 +650,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50009" template_id="33679" name="" title="">
@@ -681,7 +681,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan9"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -725,30 +725,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50010" template_id="33679" name="" title="">
@@ -756,7 +756,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan10"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -800,30 +800,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50011" template_id="33679" name="" title="">
@@ -831,7 +831,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan11"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -875,30 +875,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50012" template_id="33679" name="" title="">
@@ -906,7 +906,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan12"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -950,30 +950,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50013" template_id="33679" name="" title="">
@@ -981,7 +981,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan13"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1025,30 +1025,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50014" template_id="33679" name="" title="">
@@ -1056,7 +1056,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan14"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1100,30 +1100,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50015" template_id="33679" name="" title="">
@@ -1131,7 +1131,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan15"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1175,30 +1175,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50016" template_id="33679" name="" title="">
@@ -1206,7 +1206,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan16"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1250,30 +1250,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50017" template_id="33679" name="" title="">
@@ -1281,7 +1281,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan17"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1325,30 +1325,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50018" template_id="33679" name="" title="">
@@ -1356,7 +1356,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan18"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1400,30 +1400,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50019" template_id="33679" name="" title="">
@@ -1431,7 +1431,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan19"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1475,30 +1475,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50020" template_id="33679" name="" title="">
@@ -1506,7 +1506,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan20"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1550,30 +1550,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50021" template_id="33679" name="" title="">
@@ -1581,7 +1581,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan21"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1625,30 +1625,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50022" template_id="33679" name="" title="">
@@ -1656,7 +1656,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan22"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1700,30 +1700,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50023" template_id="33679" name="" title="">
@@ -1731,7 +1731,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan23"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1775,30 +1775,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50024" template_id="33679" name="" title="">
@@ -1806,7 +1806,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan24"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1850,30 +1850,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50025" template_id="33679" name="" title="">
@@ -1881,7 +1881,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan25"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -1925,30 +1925,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50026" template_id="33679" name="" title="">
@@ -1956,7 +1956,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan26"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2000,30 +2000,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50027" template_id="33679" name="" title="">
@@ -2031,7 +2031,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan27"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2075,30 +2075,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50028" template_id="33679" name="" title="">
@@ -2106,7 +2106,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan28"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2150,30 +2150,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50029" template_id="33679" name="" title="">
@@ -2181,7 +2181,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan29"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2225,30 +2225,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50030" template_id="33679" name="" title="">
@@ -2256,7 +2256,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan30"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2300,30 +2300,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50031" template_id="33679" name="" title="">
@@ -2331,7 +2331,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan31"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2375,30 +2375,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50032" template_id="33679" name="" title="">
@@ -2406,7 +2406,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan32"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2450,30 +2450,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50033" template_id="33679" name="" title="">
@@ -2481,7 +2481,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan33"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2525,30 +2525,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50034" template_id="33679" name="" title="">
@@ -2556,7 +2556,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan34"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2600,30 +2600,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50035" template_id="33679" name="" title="">
@@ -2631,7 +2631,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan35"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2675,30 +2675,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50036" template_id="33679" name="" title="">
@@ -2706,7 +2706,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan36"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2750,30 +2750,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50037" template_id="33679" name="" title="">
@@ -2781,8 +2781,8 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
-		<set name="ai_type" value="seedofhellfire.Zofan36"/>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="seedofhellfire.Zofan37"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2825,30 +2825,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50038" template_id="33679" name="" title="">
@@ -2856,7 +2856,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan38"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2900,30 +2900,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50039" template_id="33679" name="" title="">
@@ -2931,7 +2931,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan39"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -2975,30 +2975,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50040" template_id="33679" name="" title="">
@@ -3006,7 +3006,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan40"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -3050,30 +3050,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="50041" template_id="33679" name="" title="">
@@ -3081,7 +3081,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="seedofhellfire.Zofan41"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
@@ -3125,30 +3125,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 </list>
