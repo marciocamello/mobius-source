@@ -254,4 +254,12 @@
 			<coords loc="205384 122360 -10100 -9000"/>
 		</polygon>
 	</zone>
+	<zone name="[fortuna_start]" type="epic">
+        <polygon>
+            <coords loc="42008 -174248 -8976 -5976"/>
+            <coords loc="42200 -174248 -8976 -5976"/>
+            <coords loc="42200 -174376 -8976 -5976"/>
+            <coords loc="42008 -174344 -8976 -5976"/>
+        </polygon>
+    </zone>
 </list>
