@@ -1394,6 +1394,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	protected BaseStats _saveVs;
 	/**
+	* Field _dispelOnDamage;
+	*/
+	protected boolean _dispelOnDamage;
+	/**
 	 * Field _nextAction.
 	 */
 	protected NextAction _nextAction;
@@ -1719,6 +1723,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		_magicType = set.getEnum("magicType", SkillMagicType.class, SkillMagicType.PHYSIC);
 		_traitType = set.getEnum("trait", SkillTrait.class, null);
 		_saveVs = set.getEnum("saveVs", BaseStats.class, null);
+		_dispelOnDamage = set.getBool("dispelOnDamage", false);
 		_hideStartMessage = set.getBool("isHideStartMessage", false);
 		_hideUseMessage = set.getBool("isHideUseMessage", false);
 		_isUndeadOnly = set.getBool("undeadOnly", false);
@@ -3609,6 +3614,11 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	public final BaseStats getSaveVs()
 	{
 		return _saveVs;
+	}
+	
+	public final boolean isDispelOnDamage()
+	{
+		return _dispelOnDamage;
 	}
 	
 	/**
