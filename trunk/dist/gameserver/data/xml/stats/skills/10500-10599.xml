@@ -286,6 +286,12 @@
         <enchant9 levels="10" name="Recycle">		
 			<table name="#reuseDelay">4900 4700 4500 4000 3500 3000 2500 2000 1500 1000</table>
 		</enchant9>
+		<for>
+			<effect applyOnCaster="true" count="1" name="Buff" time="10" val="0">
+			    <add order="0x40" stat="runSpd" value="40"/>
+				<add order="0x40" stat="rEvas" value="5"/>
+			</effect>
+		</for>
     </skill>
     <skill id="10510" levels="8" name="Chain Blow">
     <!-- Increases P. Atk. By 20653. Over-hit. Critical. Half-kill. Can be used while equipped with a dagger/dual dagger. -->
@@ -637,9 +643,9 @@
         <enchant3 levels="10" name="Recycle"/>
         <for>
             <effect count="1" name="Buff" time="#time" val="0">
-                <add order="0x40" stat="cancelTarget" val="50"/>
-                <mul order="0x30" stat="pSkillEvasion" val="1.4"/>
-                <mul order="0x30" stat="mSkillEvasion" val="1.4"/>
+                <add order="0x40" stat="cancelTarget" val="40"/>
+                <mul order="0x30" stat="pSkillEvasion" val="1.6"/>
+				<mul order="0x30" stat="mDef" val="1.2"/>
 				<add order="0x40" stat="reflectMagicDebuff" val="60" />
                 <add order="0x40" stat="rEvas" val="#rEvas"/>
                 <add order="0x40" stat="debuffResist" val="40"/>
