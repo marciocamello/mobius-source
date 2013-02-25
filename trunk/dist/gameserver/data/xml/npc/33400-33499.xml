@@ -662,10 +662,10 @@
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="275" />	<!--Long Bow-->
+			<rhand item_id="275"/>	<!--Long Bow-->
 		</equip>
 		<skills>
-			<skill id="4416" level="14" />	<!--Humans-->
+			<skill id="4416" level="14"/>	<!--Humans-->
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -714,11 +714,11 @@
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="128" />	<!--Knight's Sword-->
-			<lhand item_id="632" />	<!--Knight's Shield-->
+			<rhand item_id="128"/>	<!--Knight's Sword-->
+			<lhand item_id="632"/>	<!--Knight's Shield-->
 		</equip>
 		<skills>
-			<skill id="4416" level="14" />	<!--Humans-->
+			<skill id="4416" level="14"/>	<!--Humans-->
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4397,9 +4397,9 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Merchant" />
+		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14" />	<!--Humans-->
+			<skill id="4416" level="14"/>	<!--Humans-->
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>

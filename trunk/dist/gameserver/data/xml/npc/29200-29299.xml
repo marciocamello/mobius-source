@@ -563,7 +563,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="4"/>
 		</skills>

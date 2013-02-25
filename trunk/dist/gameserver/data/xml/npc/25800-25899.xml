@@ -2,138 +2,138 @@
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="25800" name="Michaela" title="Grand Judge">
-		<set name="aggroRange" value="0" />
-		<set name="ai_type" value="Fighter" />
-		<set name="baseAtkRange" value="40" />
-		<set name="baseCON" value="57" />
-		<set name="baseCritRate" value="40" />
-		<set name="baseDEX" value="73" />
-		<set name="baseHpMax" value="745704.309" />
-		<set name="baseHpRate" value="1" />
-		<set name="baseHpReg" value="18.439" />
-		<set name="baseINT" value="76" />
-		<set name="baseMAtk" value="2350" />
-		<set name="baseMAtkSpd" value="1230" />
-		<set name="baseMDef" value="189" />
-		<set name="baseMEN" value="80" />
-		<set name="baseMpMax" value="259.2" />
-		<set name="baseMpReg" value="1.5" />
-		<set name="basePAtk" value="842" />
-		<set name="basePAtkSpd" value="253" />
-		<set name="basePDef" value="348" />
-		<set name="baseRunSpd" value="190" />
-		<set name="baseSTR" value="60" />
-		<set name="baseShldDef" value="0" />
-		<set name="baseShldRate" value="0" />
-		<set name="baseWIT" value="70" />
-		<set name="baseWalkSpd" value="41" />
-		<set name="collision_height" value="37.5" />
-		<set name="collision_radius" value="13.0" />
-		<set name="level" value="98" />
-		<set name="rewardExp" value="468444704" />
-		<set name="rewardRp" value="320" />
-		<set name="rewardSp" value="10633168" />
-		<set name="shots" value="NONE" />
-		<set name="type" value="RaidBoss" />
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseHpMax" value="745704.309"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="18.439"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseMAtk" value="2350"/>
+		<set name="baseMAtkSpd" value="1230"/>
+		<set name="baseMDef" value="189"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseMpMax" value="259.2"/>
+		<set name="baseMpReg" value="1.5"/>
+		<set name="basePAtk" value="842"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="348"/>
+		<set name="baseRunSpd" value="190"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="41"/>
+		<set name="collision_height" value="37.5"/>
+		<set name="collision_radius" value="13.0"/>
+		<set name="level" value="98"/>
+		<set name="rewardExp" value="468444704"/>
+		<set name="rewardRp" value="320"/>
+		<set name="rewardSp" value="10633168"/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="RaidBoss"/>
 		<skills>
-			<skill id="4045" level="1" />	<!-- Resist Full Magic Attack -->
-			<skill id="4197" level="2" />	<!-- Hold -->
-			<skill id="4273" level="3" />	<!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" />	<!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" />	<!-- HP Increase (1x)-->
-			<skill id="4409" level="1" />	<!-- MP Increase (1x)-->
-			<skill id="4410" level="11" />	<!-- Average P. Atk.-->
-			<skill id="4411" level="11" />	<!-- Average M. Atk.-->
-			<skill id="4412" level="11" />	<!-- Average P. Def.-->
-			<skill id="4413" level="11" />	<!-- Average M. Def.-->
-			<skill id="4414" level="2" />	<!-- Standard Type -->
-			<skill id="4415" level="1" />	<!-- Bare Hands -->
-			<skill id="4416" level="9" />	<!-- Demons -->
-			<skill id="4444" level="2" />	<!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4494" level="1" />	<!-- Raid Boss -->
-			<skill id="14716" level="1" />	<!-- Raid Boss - Level 98 -->
+			<skill id="4045" level="1"/>	<!-- Resist Full Magic Attack -->
+			<skill id="4197" level="2"/>	<!-- Hold -->
+			<skill id="4273" level="3"/>	<!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1"/>	<!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="1"/>	<!-- HP Increase (1x)-->
+			<skill id="4409" level="1"/>	<!-- MP Increase (1x)-->
+			<skill id="4410" level="11"/>	<!-- Average P. Atk.-->
+			<skill id="4411" level="11"/>	<!-- Average M. Atk.-->
+			<skill id="4412" level="11"/>	<!-- Average P. Def.-->
+			<skill id="4413" level="11"/>	<!-- Average M. Def.-->
+			<skill id="4414" level="2"/>	<!-- Standard Type -->
+			<skill id="4415" level="1"/>	<!-- Bare Hands -->
+			<skill id="4416" level="9"/>	<!-- Demons -->
+			<skill id="4444" level="2"/>	<!-- Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4494" level="1"/>	<!-- Raid Boss -->
+			<skill id="14716" level="1"/>	<!-- Raid Boss - Level 98 -->
 		</skills>
 			<rewardlist type="RATED_GROUPED">
 			<group chance="75.1439">
-				<reward item_id="18235" min="1" max="3" chance="2.0860" />	<!-- Unidentified Eternal Sigil -->
-				<reward item_id="18224" min="1" max="3" chance="2.0320" />	<!-- Unidentified Eternal Shield - Heavy Armor -->
-				<reward item_id="18228" min="1" max="2" chance="1.5520" />	<!-- Unidentified Eternal Leather Gloves - Light Armor -->
-				<reward item_id="18219" min="1" max="2" chance="1.5240" />	<!-- Unidentified Eternal Helmet - Heavy Armor -->
-				<reward item_id="18234" min="1" max="2" chance="1.5170" />	<!-- Unidentified Eternal Shoes - Robe -->
-				<reward item_id="18213" min="1" max="1" chance="1.2150" />	<!-- Unidentified Amaranthine Buster -->
-				<reward item_id="18214" min="1" max="1" chance="1.1370" />	<!-- Unidentified Amaranthine Caster -->
-				<reward item_id="18210" min="1" max="1" chance="1.0880" />	<!-- Unidentified Amaranthine Stormer -->
+				<reward item_id="18235" min="1" max="3" chance="2.0860"/>	<!-- Unidentified Eternal Sigil -->
+				<reward item_id="18224" min="1" max="3" chance="2.0320"/>	<!-- Unidentified Eternal Shield - Heavy Armor -->
+				<reward item_id="18228" min="1" max="2" chance="1.5520"/>	<!-- Unidentified Eternal Leather Gloves - Light Armor -->
+				<reward item_id="18219" min="1" max="2" chance="1.5240"/>	<!-- Unidentified Eternal Helmet - Heavy Armor -->
+				<reward item_id="18234" min="1" max="2" chance="1.5170"/>	<!-- Unidentified Eternal Shoes - Robe -->
+				<reward item_id="18213" min="1" max="1" chance="1.2150"/>	<!-- Unidentified Amaranthine Buster -->
+				<reward item_id="18214" min="1" max="1" chance="1.1370"/>	<!-- Unidentified Amaranthine Caster -->
+				<reward item_id="18210" min="1" max="1" chance="1.0880"/>	<!-- Unidentified Amaranthine Stormer -->
 			</group>
 				<group chance="70.9979">
-				<reward item_id="18212" min="1" max="1" chance="1.0000" />	<!-- Unidentified Amaranthine Shooter -->
-				<reward item_id="18209" min="1" max="1" chance="1.0000" />	<!-- Unidentified Amaranthine Fighter -->
-				<reward item_id="18207" min="1" max="1" chance="1.0000" />	<!-- Unidentified Amaranthine Slasher -->
+				<reward item_id="18212" min="1" max="1" chance="1.0000"/>	<!-- Unidentified Amaranthine Shooter -->
+				<reward item_id="18209" min="1" max="1" chance="1.0000"/>	<!-- Unidentified Amaranthine Fighter -->
+				<reward item_id="18207" min="1" max="1" chance="1.0000"/>	<!-- Unidentified Amaranthine Slasher -->
 			</group>
 		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="20" />
-			<defence attribute="water" value="20" />
-			<defence attribute="wind" value="20" />
-			<defence attribute="earth" value="20" />
-			<defence attribute="unholy" value="53" />
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="unholy" value="53"/>
 		</attributes>
 	</npc>
 	<npc id="25801" name="Teredor" title="">
-		<set name="aggroRange" value="0" />
-		<set name="ai_type" value="Fighter" />
-		<set name="baseAtkRange" value="40" />
-		<set name="baseCON" value="43" />
-		<set name="baseCritRate" value="40" />
-		<set name="baseDEX" value="30" />
-		<set name="baseHpMax" value="6247.185" />
-		<set name="baseHpRate" value="1" />
-		<set name="baseHpReg" value="17.158" />
-		<set name="baseINT" value="21" />
-		<set name="baseMAtk" value="47" />
-		<set name="baseMAtkSpd" value="500" />
-		<set name="baseMDef" value="167" />
-		<set name="baseMEN" value="20" />
-		<set name="baseMpMax" value="218.52" />
-		<set name="baseMpReg" value="1.5" />
-		<set name="basePAtk" value="305" />
-		<set name="basePAtkSpd" value="253" />
-		<set name="basePDef" value="154" />
-		<set name="baseRunSpd" value="190" />
-		<set name="baseSTR" value="40" />
-		<set name="baseShldDef" value="0" />
-		<set name="baseShldRate" value="0" />
-		<set name="baseWIT" value="20" />
-		<set name="baseWalkSpd" value="80" />
-		<set name="collision_height" value="36.0" />
-		<set name="collision_radius" value="14.0" />
-		<set name="level" value="22" />
-		<set name="rewardExp" value="0" />
-		<set name="rewardRp" value="0" />
-		<set name="rewardSp" value="0" />
-		<set name="shots" value="NONE" />
-		<set name="type" value="Minion" />
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="6247.185"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="17.158"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="47"/>
+		<set name="baseMAtkSpd" value="500"/>
+		<set name="baseMDef" value="167"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="218.52"/>
+		<set name="baseMpReg" value="1.5"/>
+		<set name="basePAtk" value="305"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="154"/>
+		<set name="baseRunSpd" value="190"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseWalkSpd" value="80"/>
+		<set name="collision_height" value="36.0"/>
+		<set name="collision_radius" value="14.0"/>
+		<set name="level" value="22"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Minion"/>
 		<skills>
-			<skill id="4045" level="1" />	<!-- Resist Full Magic Attack -->
-			<skill id="4273" level="3" />	<!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" />	<!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" />	<!-- HP Increase (1x)-->
-			<skill id="4409" level="1" />	<!-- MP Increase (1x)-->
-			<skill id="4410" level="11" />	<!-- Average P. Atk.-->
-			<skill id="4411" level="11" />	<!-- Average M. Atk.-->
-			<skill id="4412" level="11" />	<!-- Average P. Def.-->
-			<skill id="4413" level="11" />	<!-- Average M. Def.-->
-			<skill id="4414" level="3" />	<!-- Light Armor Type -->
-			<skill id="4415" level="1" />	<!-- Bare Hands -->
-			<skill id="4416" level="9" />	<!-- Demons -->
-			<skill id="4444" level="2" />	<!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4743" level="2" />	<!-- BOSS Strike -->
+			<skill id="4045" level="1"/>	<!-- Resist Full Magic Attack -->
+			<skill id="4273" level="3"/>	<!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1"/>	<!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="1"/>	<!-- HP Increase (1x)-->
+			<skill id="4409" level="1"/>	<!-- MP Increase (1x)-->
+			<skill id="4410" level="11"/>	<!-- Average P. Atk.-->
+			<skill id="4411" level="11"/>	<!-- Average M. Atk.-->
+			<skill id="4412" level="11"/>	<!-- Average P. Def.-->
+			<skill id="4413" level="11"/>	<!-- Average M. Def.-->
+			<skill id="4414" level="3"/>	<!-- Light Armor Type -->
+			<skill id="4415" level="1"/>	<!-- Bare Hands -->
+			<skill id="4416" level="9"/>	<!-- Demons -->
+			<skill id="4444" level="2"/>	<!-- Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4743" level="2"/>	<!-- BOSS Strike -->
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20" />
-			<defence attribute="water" value="20" />
-			<defence attribute="wind" value="20" />
-			<defence attribute="earth" value="20" />
-			<defence attribute="unholy" value="53" />
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="unholy" value="53"/>
 		</attributes>
 	</npc>
 	<npc id="25802" name="Pan Direm" title="Faithful Servant">
@@ -179,22 +179,22 @@
         </skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="1306" max="3050" chance="100.0000" />	<!-- Adena -->
+				<reward item_id="57" min="1306" max="3050" chance="100.0000"/>	<!-- Adena -->
 			</group>
 			<group chance="74.134">
-				<reward item_id="17375" min="1" max="6" chance="51.9000" /> <!-- Kimerian's Trace -->
-				<reward item_id="17376" min="1" max="3" chance="26.4500" /> <!-- Trace of Kimerian's Cavern -->
+				<reward item_id="17375" min="1" max="6" chance="51.9000"/> <!-- Kimerian's Trace -->
+				<reward item_id="17376" min="1" max="3" chance="26.4500"/> <!-- Trace of Kimerian's Cavern -->
 			</group>
 			<group chance="48.4648">
-				<reward item_id="17527" min="1" max="1" chance="0.5000" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<reward item_id="30423" min="1" max="1" chance="0.5000" /> <!-- Recipe: Soulshot (R-Grade) -->
-				<reward item_id="17526" min="1" max="1" chance="0.5000" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<reward item_id="17527" min="1" max="1" chance="0.5000"/> <!-- Scroll: Enchant Armor (R-grade) -->
+				<reward item_id="30423" min="1" max="1" chance="0.5000"/> <!-- Recipe: Soulshot (R-Grade) -->
+				<reward item_id="17526" min="1" max="1" chance="0.5000"/> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</group>
 			</rewardlist>
 			<rewardlist type="SWEEP">
-				<reward item_id="17527" min="1" max="1" chance="0.5000" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<reward item_id="30423" min="1" max="1" chance="0.5000" /> <!-- Recipe: Soulshot (R-Grade) -->
-				<reward item_id="17526" min="1" max="1" chance="0.5000" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<reward item_id="17527" min="1" max="1" chance="0.5000"/> <!-- Scroll: Enchant Armor (R-grade) -->
+				<reward item_id="30423" min="1" max="1" chance="0.5000"/> <!-- Recipe: Soulshot (R-Grade) -->
+				<reward item_id="17526" min="1" max="1" chance="0.5000"/> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</rewardlist>
         <attributes>
             <defence attribute="fire" value="20"/>
@@ -3368,13 +3368,13 @@
         </skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="67.058">
-				<reward item_id="18185" min="1" max="1" chance="7.2410" />	<!-- Unidentified Seraph Helmet -->
-				<reward item_id="18194" min="1" max="1" chance="10.7730" />	<!-- Unidentified Seraph Leather Gloves -->
-				<reward item_id="18200" min="1" max="1" chance="10.7330" />	<!-- Unidentified Seraph Shoes -->
+				<reward item_id="18185" min="1" max="1" chance="7.2410"/>	<!-- Unidentified Seraph Helmet -->
+				<reward item_id="18194" min="1" max="1" chance="10.7730"/>	<!-- Unidentified Seraph Leather Gloves -->
+				<reward item_id="18200" min="1" max="1" chance="10.7330"/>	<!-- Unidentified Seraph Shoes -->
 			</group>
 			<group chance="76.650">
-				<reward item_id="17526" min="1" max="4" chance="9.0160" /> <!-- Scroll: Enchant Weapon(R-Grade) -->
-				<reward item_id="30297" min="1" max="3" chance="33.2100" /> <!-- Superior Giant's Codex -->
+				<reward item_id="17526" min="1" max="4" chance="9.0160"/> <!-- Scroll: Enchant Weapon(R-Grade) -->
+				<reward item_id="30297" min="1" max="3" chance="33.2100"/> <!-- Superior Giant's Codex -->
 			</group>
 		</rewardlist>
         <attributes>

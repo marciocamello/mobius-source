@@ -41,7 +41,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="2"/>
+			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
 	<npc id="23001" name="Sakum" title="">
@@ -49,7 +49,7 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="40"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="40330"/>
@@ -84,7 +84,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="2"/>
+			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
 	<npc id="23002" name="Male Larchikion" title="">
@@ -92,7 +92,7 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="40330"/>
@@ -127,7 +127,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
@@ -136,7 +136,7 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="40330"/>
@@ -171,7 +171,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
@@ -180,7 +180,7 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -215,7 +215,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
@@ -224,7 +224,7 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -259,7 +259,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
@@ -268,7 +268,7 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -303,7 +303,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
@@ -312,7 +312,7 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -347,7 +347,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
@@ -356,7 +356,7 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -391,7 +391,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
@@ -400,7 +400,7 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -435,7 +435,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
@@ -444,7 +444,7 @@
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15685"/>
@@ -479,7 +479,7 @@
 			<defence attribute="unholy" value="313"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 			<skill id="5463" level="1"/>
 		</skills>
 	</npc>
@@ -488,7 +488,7 @@
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="27.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15685"/>
@@ -523,7 +523,7 @@
 			<defence attribute="unholy" value="444"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="9"/>
 			<skill id="5463" level="9"/>
 		</skills>
 	</npc>
@@ -532,7 +532,7 @@
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -567,7 +567,7 @@
 			<defence attribute="unholy" value="444"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="9"/>
 			<skill id="5463" level="9"/>
 		</skills>
 	</npc>
@@ -576,7 +576,7 @@
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="25.8"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15685"/>
@@ -611,7 +611,7 @@
 			<defence attribute="unholy" value="313"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
@@ -620,7 +620,7 @@
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="28.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15685"/>
@@ -655,7 +655,7 @@
 			<defence attribute="unholy" value="313"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
@@ -664,7 +664,7 @@
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="28.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15685"/>
@@ -699,7 +699,7 @@
 			<defence attribute="unholy" value="313"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
@@ -708,7 +708,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -743,7 +743,7 @@
 			<defence attribute="unholy" value="313"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
@@ -752,7 +752,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15685"/>
@@ -787,7 +787,7 @@
 			<defence attribute="unholy" value="313"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
@@ -796,7 +796,7 @@
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -831,7 +831,7 @@
 			<defence attribute="unholy" value="444"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="9"/>
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
@@ -840,7 +840,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="44.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -875,7 +875,7 @@
 			<defence attribute="unholy" value="444"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="9"/>
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
@@ -884,7 +884,7 @@
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="21.5"/>
 		<set name="level" value="21"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="364"/>
@@ -920,27 +920,27 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="106" max="248" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="106" max="248" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="0.816">
-			<reward item_id="393" min="1" max="1" chance="3.67647" />		<!-- Усиленная Мифрилом Броня -->
-			<reward item_id="394" min="1" max="1" chance="3.67647" />		<!-- Укрепленная Кожаная Рубаха -->
-			<reward item_id="157" min="1" max="1" chance="0.36765" />		<!-- Шипованная Дубина -->
-			<reward item_id="296" min="1" max="1" chance="0.36765" />		<!-- Гизарма Гномов -->
-			<reward item_id="1949" min="1" max="1" chance="91.91176" />		<!-- Выкройка Мифриловых Перчаток -->
+			<reward item_id="393" min="1" max="1" chance="3.67647"/>		<!-- Усиленная Мифрилом Броня -->
+			<reward item_id="394" min="1" max="1" chance="3.67647"/>		<!-- Укрепленная Кожаная Рубаха -->
+			<reward item_id="157" min="1" max="1" chance="0.36765"/>		<!-- Шипованная Дубина -->
+			<reward item_id="296" min="1" max="1" chance="0.36765"/>		<!-- Гизарма Гномов -->
+			<reward item_id="1949" min="1" max="1" chance="91.91176"/>		<!-- Выкройка Мифриловых Перчаток -->
 		</group>
 		<group chance="6.569">
-			<reward item_id="1061" min="1" max="1" chance="77.16547" />		<!-- Большое Зелье Исцеления -->
-			<reward item_id="34992" min="1" max="1" chance="11.41726" /> <!-- Драгоценные Аксессуары -->
-			<reward item_id="1882" min="1" max="1" chance="11.41726" />		<!-- Кожа -->
+			<reward item_id="1061" min="1" max="1" chance="77.16547"/>		<!-- Большое Зелье Исцеления -->
+			<reward item_id="34992" min="1" max="1" chance="11.41726"/> <!-- Драгоценные Аксессуары -->
+			<reward item_id="1882" min="1" max="1" chance="11.41726"/>		<!-- Кожа -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="1875" min="1" max="1" chance="0.03000" />		<!-- Камень Чистоты -->
-			<reward item_id="2054" min="1" max="1" chance="0.00300" />		<!-- Рукоять Легкого Лука -->
+			<reward item_id="1875" min="1" max="1" chance="0.03000"/>		<!-- Камень Чистоты -->
+			<reward item_id="2054" min="1" max="1" chance="0.00300"/>		<!-- Рукоять Легкого Лука -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="4"/>
+			<skill id="4410" level="10"/>
 			<skill id="4411" level="10"/>
 			<skill id="4412" level="10"/>
 			<skill id="4413" level="12"/>
@@ -952,7 +952,7 @@
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="25.5"/>
 		<set name="level" value="23"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="410"/>
@@ -988,27 +988,27 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="129" max="302" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="129" max="302" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="0.366">
-			<reward item_id="553" min="1" max="1" chance="8.19672" />		<!-- Железные Ботинки -->
-			<reward item_id="628" min="1" max="1" chance="8.19672" />		<!-- Хоплон -->
-			<reward item_id="238" min="1" max="1" chance="0.81967" />		<!-- Кинжал Маны -->
-			<reward item_id="317" min="1" max="1" chance="0.81967" />		<!-- Книга Крови -->
-			<reward item_id="1952" min="1" max="1" chance="81.96721" />		<!-- Материал Рубахи из Кожи Саламандры -->
+			<reward item_id="553" min="1" max="1" chance="8.19672"/>		<!-- Железные Ботинки -->
+			<reward item_id="628" min="1" max="1" chance="8.19672"/>		<!-- Хоплон -->
+			<reward item_id="238" min="1" max="1" chance="0.81967"/>		<!-- Кинжал Маны -->
+			<reward item_id="317" min="1" max="1" chance="0.81967"/>		<!-- Книга Крови -->
+			<reward item_id="1952" min="1" max="1" chance="81.96721"/>		<!-- Материал Рубахи из Кожи Саламандры -->
 		</group>
 		<group chance="6.491">
-			<reward item_id="1061" min="1" max="1" chance="76.89108" />		<!-- Большое Зелье Исцеления -->
-			<reward item_id="1879" min="1" max="1" chance="11.55446" />		<!-- Кокс -->
-			<reward item_id="34992" min="1" max="1" chance="11.55446" /> <!-- Драгоценные Аксессуары -->
+			<reward item_id="1061" min="1" max="1" chance="76.89108"/>		<!-- Большое Зелье Исцеления -->
+			<reward item_id="1879" min="1" max="1" chance="11.55446"/>		<!-- Кокс -->
+			<reward item_id="34992" min="1" max="1" chance="11.55446"/> <!-- Драгоценные Аксессуары -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="956" min="1" max="1" chance="0.03000" />		<!-- Свиток: Модифицировать Доспех (D) -->
-			<reward item_id="1907" min="1" max="1" chance="0.03000" />		<!-- Часть Ожерелья Темного Камня -->
+			<reward item_id="956" min="1" max="1" chance="0.03000"/>		<!-- Свиток: Модифицировать Доспех (D) -->
+			<reward item_id="1907" min="1" max="1" chance="0.03000"/>		<!-- Часть Ожерелья Темного Камня -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="12"/>
+			<skill id="4410" level="10"/>
 			<skill id="4411" level="10"/>
 			<skill id="4412" level="10"/>
 			<skill id="4413" level="12"/>
@@ -1020,7 +1020,7 @@
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="29"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="573"/>
@@ -1056,28 +1056,28 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="159" max="373" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="159" max="373" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="0.186">
-			<reward item_id="553" min="1" max="1" chance="40.32258" />		<!-- Железные Ботинки -->
-			<reward item_id="628" min="1" max="1" chance="16.12903" />		<!-- Хоплон -->
-			<reward item_id="239" min="1" max="1" chance="1.61290" />		<!-- Нож Мистика -->
-			<reward item_id="317" min="1" max="1" chance="1.61290" />		<!-- Книга Крови -->
-			<reward item_id="2052" min="1" max="1" chance="40.32258" />		<!-- Клинок Мифрилового Кинжала -->
+			<reward item_id="553" min="1" max="1" chance="40.32258"/>		<!-- Железные Ботинки -->
+			<reward item_id="628" min="1" max="1" chance="16.12903"/>		<!-- Хоплон -->
+			<reward item_id="239" min="1" max="1" chance="1.61290"/>		<!-- Нож Мистика -->
+			<reward item_id="317" min="1" max="1" chance="1.61290"/>		<!-- Книга Крови -->
+			<reward item_id="2052" min="1" max="1" chance="40.32258"/>		<!-- Клинок Мифрилового Кинжала -->
 		</group>
 		<group chance="6.395">
-			<reward item_id="1061" min="1" max="1" chance="78.88976" />		<!-- Большое Зелье Исцеления -->
-			<reward item_id="1882" min="1" max="1" chance="11.72791" />		<!-- Кожа -->
-			<reward item_id="1875" min="1" max="1" chance="4.69116" />		<!-- Камень Чистоты -->
-			<reward item_id="34991" min="2" max="2" chance="4.69116" /> <!-- Обломок Доспеха -->
+			<reward item_id="1061" min="1" max="1" chance="78.88976"/>		<!-- Большое Зелье Исцеления -->
+			<reward item_id="1882" min="1" max="1" chance="11.72791"/>		<!-- Кожа -->
+			<reward item_id="1875" min="1" max="1" chance="4.69116"/>		<!-- Камень Чистоты -->
+			<reward item_id="34991" min="2" max="2" chance="4.69116"/> <!-- Обломок Доспеха -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-		<reward item_id="34990" min="2" max="2" chance="0.03000" /> <!-- Обломок Оружия -->
-			<reward item_id="2048" min="1" max="1" chance="0.00550" />		<!-- Навершие Костолома -->
+		<reward item_id="34990" min="2" max="2" chance="0.03000"/> <!-- Обломок Оружия -->
+			<reward item_id="2048" min="1" max="1" chance="0.00550"/>		<!-- Навершие Костолома -->
 	</rewardlist>
 		<skills>
-			<skill id="4274" level="10"/>
+			<skill id="4274" level="1"/>
 			<skill id="4410" level="1"/>
 			<skill id="4411" level="12"/>
 			<skill id="4412" level="12"/>
@@ -1090,7 +1090,7 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="42.0"/>
 		<set name="level" value="31"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="635"/>
@@ -1126,26 +1126,26 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="177" max="414" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="177" max="414" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="0.378">
-			<reward item_id="882" min="1" max="1" chance="19.84127" />		<!-- Мифриловое Кольцо -->
-			<reward item_id="187" min="1" max="1" chance="0.79365" />		<!-- Молот Атубы -->
-			<reward item_id="2058" min="1" max="1" chance="79.36508" />		<!-- Навершие Булавы Атубы -->
+			<reward item_id="882" min="1" max="1" chance="19.84127"/>		<!-- Мифриловое Кольцо -->
+			<reward item_id="187" min="1" max="1" chance="0.79365"/>		<!-- Молот Атубы -->
+			<reward item_id="2058" min="1" max="1" chance="79.36508"/>		<!-- Навершие Булавы Атубы -->
 		</group>
 		<group chance="8.433">
-			<reward item_id="1061" min="1" max="1" chance="58.57939" />		<!-- Большое Зелье Исцеления -->
-			<reward item_id="34992" min="2" max="2" chance="41.42061" /> <!-- Драгоценные Аксессуары -->
-			<reward item_id="1881" min="1" max="1" chance="8.89363" />		<!-- Грубый Костный Порошок -->
+			<reward item_id="1061" min="1" max="1" chance="58.57939"/>		<!-- Большое Зелье Исцеления -->
+			<reward item_id="34992" min="2" max="2" chance="41.42061"/> <!-- Драгоценные Аксессуары -->
+			<reward item_id="1881" min="1" max="1" chance="8.89363"/>		<!-- Грубый Костный Порошок -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="4043" min="1" max="1" chance="0.03000" />		<!-- Азоф -->
-			<reward item_id="2052" min="1" max="1" chance="0.00300" />		<!-- Клинок Мифрилового Кинжала -->
-			<reward item_id="2290" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Мифриловый Кинжал -->
+			<reward item_id="4043" min="1" max="1" chance="0.03000"/>		<!-- Азоф -->
+			<reward item_id="2052" min="1" max="1" chance="0.00300"/>		<!-- Клинок Мифрилового Кинжала -->
+			<reward item_id="2290" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Мифриловый Кинжал -->
 	</rewardlist>
 		<skills>
-			<skill id="4276" level="3"/>
+			<skill id="4276" level="1"/>
 			<skill id="4410" level="4"/>
 			<skill id="4411" level="12"/>
 			<skill id="4412" level="12"/>
@@ -1159,7 +1159,7 @@
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="9.0"/>
 		<set name="level" value="36"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="809"/>
@@ -1195,27 +1195,27 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="233" max="545" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="233" max="545" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="1.278">
-			<reward item_id="607" min="1" max="1" chance="5.86854" />		<!-- Рукавицы Огра -->
-			<reward item_id="1953" min="1" max="1" chance="94.13146" />		<!-- Подкладка Накидки Мудреца -->
+			<reward item_id="607" min="1" max="1" chance="5.86854"/>		<!-- Рукавицы Огра -->
+			<reward item_id="1953" min="1" max="1" chance="94.13146"/>		<!-- Подкладка Накидки Мудреца -->
 		</group>
 		<group chance="6.613">
-			<reward item_id="1061" min="1" max="1" chance="75.79011" />		<!-- Большое Зелье Исцеления -->
-			<reward item_id="1882" min="1" max="1" chance="14.68320" />		<!-- Кожа -->
-			<reward item_id="34991" min="2" max="2" chance="4.53652" /> <!-- Обломок Доспеха -->
-			<reward item_id="34990" min="1" max="1" chance="4.53652" /> <!-- Обломок Оружия -->
-			<reward item_id="955" min="1" max="1" chance="0.45365" />		<!-- Свиток: Модифицировать Оружие (D) -->
+			<reward item_id="1061" min="1" max="1" chance="75.79011"/>		<!-- Большое Зелье Исцеления -->
+			<reward item_id="1882" min="1" max="1" chance="14.68320"/>		<!-- Кожа -->
+			<reward item_id="34991" min="2" max="2" chance="4.53652"/> <!-- Обломок Доспеха -->
+			<reward item_id="34990" min="1" max="1" chance="4.53652"/> <!-- Обломок Оружия -->
+			<reward item_id="955" min="1" max="1" chance="0.45365"/>		<!-- Свиток: Модифицировать Оружие (D) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="1949" min="1" max="1" chance="0.07500" />		<!-- Выкройка Мифриловых Перчаток -->
-			<reward item_id="2194" min="1" max="1" chance="0.07500" />		<!-- Рецепт - Мифриловые Перчатки -->
-		<reward item_id="34992" min="3" max="3" chance="0.03000" /> <!-- Драгоценные Аксессуары -->
+			<reward item_id="1949" min="1" max="1" chance="0.07500"/>		<!-- Выкройка Мифриловых Перчаток -->
+			<reward item_id="2194" min="1" max="1" chance="0.07500"/>		<!-- Рецепт - Мифриловые Перчатки -->
+		<reward item_id="34992" min="3" max="3" chance="0.03000"/> <!-- Драгоценные Аксессуары -->
 	</rewardlist>
 		<skills>
-			<skill id="4416" level="2"/>
+			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
 	<npc id="23025" name="Weary Jaguar Scout" title="">
@@ -1223,7 +1223,7 @@
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="9.0"/>
 		<set name="level" value="37"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="847"/>
@@ -1259,28 +1259,28 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="246" max="576" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="246" max="576" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="2.229">
-			<reward item_id="630" min="1" max="1" chance="1.34590" />		<!-- Прямоугольный Щит -->
-			<reward item_id="2412" min="1" max="1" chance="1.34590" />		<!-- Латный Шлем -->
-			<reward item_id="297" min="1" max="1" chance="0.13459" />		<!-- Глефа -->
-			<reward item_id="1963" min="1" max="1" chance="97.17362" />		<!-- Часть Рукавиц Огра -->
+			<reward item_id="630" min="1" max="1" chance="1.34590"/>		<!-- Прямоугольный Щит -->
+			<reward item_id="2412" min="1" max="1" chance="1.34590"/>		<!-- Латный Шлем -->
+			<reward item_id="297" min="1" max="1" chance="0.13459"/>		<!-- Глефа -->
+			<reward item_id="1963" min="1" max="1" chance="97.17362"/>		<!-- Часть Рукавиц Огра -->
 		</group>
 		<group chance="7.542">
-			<reward item_id="1061" min="1" max="1" chance="66.89207" />		<!-- Большое Зелье Исцеления -->
-			<reward item_id="1882" min="1" max="1" chance="19.18589" />		<!-- Кожа -->
-			<reward item_id="34991" min="2" max="2" chance="9.94431" /> <!-- Обломок Доспеха -->
-			<reward item_id="1875" min="1" max="1" chance="3.97772" />		<!-- Камень Чистоты -->
+			<reward item_id="1061" min="1" max="1" chance="66.89207"/>		<!-- Большое Зелье Исцеления -->
+			<reward item_id="1882" min="1" max="1" chance="19.18589"/>		<!-- Кожа -->
+			<reward item_id="34991" min="2" max="2" chance="9.94431"/> <!-- Обломок Доспеха -->
+			<reward item_id="1875" min="1" max="1" chance="3.97772"/>		<!-- Камень Чистоты -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-		<reward item_id="34992" min="1" max="1" chance="0.07500" /> <!-- Драгоценные Аксессуары -->
-			<reward item_id="1952" min="1" max="1" chance="0.03000" />		<!-- Материал Рубахи из Кожи Саламандры -->
-			<reward item_id="2197" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Рубаха из Кожи Саламандры -->
+		<reward item_id="34992" min="1" max="1" chance="0.07500"/> <!-- Драгоценные Аксессуары -->
+			<reward item_id="1952" min="1" max="1" chance="0.03000"/>		<!-- Материал Рубахи из Кожи Саламандры -->
+			<reward item_id="2197" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Рубаха из Кожи Саламандры -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="4"/>
+			<skill id="4410" level="12"/>
 			<skill id="4411" level="12"/>
 			<skill id="4412" level="12"/>
 			<skill id="4413" level="10"/>
@@ -1292,7 +1292,7 @@
 		<set name="collision_radius" value="41.0"/>
 		<set name="collision_height" value="30.5"/>
 		<set name="level" value="38"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="36"/>
 		<set name="baseHpMax" value="886"/>
@@ -1328,25 +1328,25 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="258" max="604" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="258" max="604" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="0.381">
-			<reward item_id="2494" min="1" max="1" chance="19.68504" />		<!-- Латный Щит -->
-			<reward item_id="189" min="1" max="1" chance="0.78740" />		<!-- Посох Жизни -->
-			<reward item_id="225" min="1" max="1" chance="0.78740" />		<!-- Мифриловый Кинжал -->
-			<reward item_id="2050" min="1" max="1" chance="78.74016" />		<!-- Навершие Посоха Призрака -->
+			<reward item_id="2494" min="1" max="1" chance="19.68504"/>		<!-- Латный Щит -->
+			<reward item_id="189" min="1" max="1" chance="0.78740"/>		<!-- Посох Жизни -->
+			<reward item_id="225" min="1" max="1" chance="0.78740"/>		<!-- Мифриловый Кинжал -->
+			<reward item_id="2050" min="1" max="1" chance="78.74016"/>		<!-- Навершие Посоха Призрака -->
 		</group>
 		<group chance="7.130">
-			<reward item_id="1061" min="1" max="1" chance="70.02805" />		<!-- Большое Зелье Исцеления -->
-			<reward item_id="1879" min="1" max="1" chance="15.24544" />		<!-- Кокс -->
-			<reward item_id="34992" min="1" max="1" chance="10.51893" /> <!-- Драгоценные Аксессуары -->
-			<reward item_id="34990" min="2" max="2" chance="4.20757" /> <!-- Обломок Оружия -->
+			<reward item_id="1061" min="1" max="1" chance="70.02805"/>		<!-- Большое Зелье Исцеления -->
+			<reward item_id="1879" min="1" max="1" chance="15.24544"/>		<!-- Кокс -->
+			<reward item_id="34992" min="1" max="1" chance="10.51893"/> <!-- Драгоценные Аксессуары -->
+			<reward item_id="34990" min="2" max="2" chance="4.20757"/> <!-- Обломок Оружия -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="1882" min="1" max="1" chance="0.30000" />		<!-- Кожа -->
-			<reward item_id="1963" min="1" max="1" chance="0.07500" />		<!-- Часть Рукавиц Огра -->
-			<reward item_id="2208" min="1" max="1" chance="0.07500" />		<!-- Рецепт - Рукавицы Огра -->
+			<reward item_id="1882" min="1" max="1" chance="0.30000"/>		<!-- Кожа -->
+			<reward item_id="1963" min="1" max="1" chance="0.07500"/>		<!-- Часть Рукавиц Огра -->
+			<reward item_id="2208" min="1" max="1" chance="0.07500"/>		<!-- Рецепт - Рукавицы Огра -->
 	</rewardlist>
 		<skills>
 			<skill id="4416" level="2"/>
@@ -1357,7 +1357,7 @@
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="57.0"/>
 		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="312844"/>
@@ -1392,7 +1392,7 @@
 			<defence attribute="unholy" value="240"/>
 		</attributes>
 		<skills>
-			<skill id="4412" level="1"/>
+			<skill id="4412" level="15"/>
 			<skill id="4413" level="15"/>
 			<skill id="4416" level="8"/>
 			<skill id="5465" level="3"/>
@@ -1403,7 +1403,7 @@
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="64.0"/>
 		<set name="level" value="89"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="6312935"/>
@@ -1438,7 +1438,7 @@
 			<defence attribute="unholy" value="200"/>
 		</attributes>
 		<skills>
-			<skill id="4071" level="13"/>
+			<skill id="4071" level="5"/>
 			<skill id="4412" level="1"/>
 			<skill id="4413" level="8"/>
 			<skill id="4416" level="10"/>
@@ -1450,7 +1450,7 @@
 		<set name="collision_radius" value="45.0"/>
 		<set name="collision_height" value="75.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="356012"/>
@@ -1485,7 +1485,7 @@
 			<defence attribute="unholy" value="280"/>
 		</attributes>
 		<skills>
-			<skill id="4276" level="13"/>
+			<skill id="4276" level="3"/>
 			<skill id="4412" level="1"/>
 			<skill id="4413" level="13"/>
 			<skill id="4416" level="10"/>
@@ -1497,7 +1497,7 @@
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="57.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="356012"/>
@@ -1532,7 +1532,7 @@
 			<defence attribute="unholy" value="280"/>
 		</attributes>
 		<skills>
-			<skill id="4412" level="1"/>
+			<skill id="4412" level="15"/>
 			<skill id="4413" level="15"/>
 			<skill id="4416" level="8"/>
 			<skill id="5465" level="3"/>
@@ -1543,7 +1543,7 @@
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="64.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="356012"/>
@@ -1578,7 +1578,7 @@
 			<defence attribute="unholy" value="280"/>
 		</attributes>
 		<skills>
-			<skill id="4071" level="13"/>
+			<skill id="4071" level="5"/>
 			<skill id="4412" level="1"/>
 			<skill id="4413" level="8"/>
 			<skill id="4416" level="10"/>
@@ -1590,7 +1590,7 @@
 		<set name="collision_radius" value="45.0"/>
 		<set name="collision_height" value="75.0"/>
 		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="312844"/>
@@ -1625,7 +1625,7 @@
 			<defence attribute="unholy" value="240"/>
 		</attributes>
 		<skills>
-			<skill id="4276" level="13"/>
+			<skill id="4276" level="3"/>
 			<skill id="4412" level="1"/>
 			<skill id="4413" level="13"/>
 			<skill id="4416" level="10"/>
@@ -1637,7 +1637,7 @@
 		<set name="collision_radius" value="33.0"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="level" value="88"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13568"/>
@@ -1673,22 +1673,22 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="549" max="1281" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="549" max="1281" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="1.725">
-			<reward item_id="18127" min="1" max="1" chance="1.73913" />		<!-- Неопознанные Кожаные Сапоги Бессмертия -->
-			<reward item_id="18131" min="1" max="1" chance="1.73913" />		<!-- Неопознанные Перчатки Бессмертия -->
-			<reward item_id="19185" min="1" max="1" chance="96.52174" />		<!-- Материал Неопознанных Набедренников Бессмертия -->
+			<reward item_id="18127" min="1" max="1" chance="1.73913"/>		<!-- Неопознанные Кожаные Сапоги Бессмертия -->
+			<reward item_id="18131" min="1" max="1" chance="1.73913"/>		<!-- Неопознанные Перчатки Бессмертия -->
+			<reward item_id="19185" min="1" max="1" chance="96.52174"/>		<!-- Материал Неопознанных Набедренников Бессмертия -->
 		</group>
 		<group chance="0.003">
-			<reward item_id="17526" min="1" max="1" chance="100.00000" />		<!-- Свиток: Модифицировать Оружие (R) -->
+			<reward item_id="17526" min="1" max="1" chance="100.00000"/>		<!-- Свиток: Модифицировать Оружие (R) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="19310" min="1" max="1" chance="0.30000" />		<!-- Синтетический Кокс Высокого Качества -->
+			<reward item_id="19310" min="1" max="1" chance="0.30000"/>		<!-- Синтетический Кокс Высокого Качества -->
 	</rewardlist>
 		<skills>
-			<skill id="4412" level="1"/>
+			<skill id="4412" level="7"/>
 			<skill id="4413" level="7"/>
 			<skill id="4416" level="8"/>
 			<skill id="5465" level="3"/>
@@ -1699,7 +1699,7 @@
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="88"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13568"/>
@@ -1735,21 +1735,21 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="551" max="1285" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="551" max="1285" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="1.689">
-			<reward item_id="18120" min="1" max="1" chance="1.77620" />		<!-- Неопознанные Рукавицы Бессмертия -->
-			<reward item_id="18128" min="1" max="1" chance="1.77620" />		<!-- Неопознанная Диадема Бессмертия -->
-			<reward item_id="19190" min="1" max="1" chance="96.44760" />		<!-- Материал Неопознанной Кожаной Кирасы Бессмертия -->
+			<reward item_id="18120" min="1" max="1" chance="1.77620"/>		<!-- Неопознанные Рукавицы Бессмертия -->
+			<reward item_id="18128" min="1" max="1" chance="1.77620"/>		<!-- Неопознанная Диадема Бессмертия -->
+			<reward item_id="19190" min="1" max="1" chance="96.44760"/>		<!-- Материал Неопознанной Кожаной Кирасы Бессмертия -->
 		</group>
 		<group chance="0.108">
-			<reward item_id="19311" min="1" max="1" chance="69.44444" />		<!-- Рактолелиум -->
-			<reward item_id="30425" min="1" max="1" chance="27.77778" />		<!-- Рецепт - Благословенный Заряд Духа: Ранг R -->
-			<reward item_id="17526" min="1" max="1" chance="2.77778" />		<!-- Свиток: Модифицировать Оружие (R) -->
+			<reward item_id="19311" min="1" max="1" chance="69.44444"/>		<!-- Рактолелиум -->
+			<reward item_id="30425" min="1" max="1" chance="27.77778"/>		<!-- Рецепт - Благословенный Заряд Духа: Ранг R -->
+			<reward item_id="17526" min="1" max="1" chance="2.77778"/>		<!-- Свиток: Модифицировать Оружие (R) -->
 		</group>
 	</rewardlist>
 		<skills>
-			<skill id="4412" level="1"/>
+			<skill id="4412" level="13"/>
 			<skill id="4413" level="13"/>
 			<skill id="4416" level="8"/>
 			<skill id="5465" level="3"/>
@@ -1760,7 +1760,7 @@
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="19.5"/>
 		<set name="level" value="88"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13568"/>
@@ -1796,22 +1796,22 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="628" max="1466" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="628" max="1466" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="1.691">
-			<reward item_id="18121" min="1" max="1" chance="1.77410" />		<!-- Неопознанные Сапоги Бессмертия -->
-			<reward item_id="18123" min="1" max="1" chance="1.77410" />		<!-- Неопознанный Кожаный Шлем Бессмертия -->
-			<reward item_id="19191" min="1" max="1" chance="96.45180" />		<!-- Материал Неопознанных Кожаных Брюк Бессмертия -->
+			<reward item_id="18121" min="1" max="1" chance="1.77410"/>		<!-- Неопознанные Сапоги Бессмертия -->
+			<reward item_id="18123" min="1" max="1" chance="1.77410"/>		<!-- Неопознанный Кожаный Шлем Бессмертия -->
+			<reward item_id="19191" min="1" max="1" chance="96.45180"/>		<!-- Материал Неопознанных Кожаных Брюк Бессмертия -->
 		</group>
 		<group chance="0.030">
-			<reward item_id="17527" min="1" max="1" chance="100.00000" />		<!-- Свиток: Модифицировать Доспех (R) -->
+			<reward item_id="17527" min="1" max="1" chance="100.00000"/>		<!-- Свиток: Модифицировать Доспех (R) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="19312" min="1" max="1" chance="0.07500" />		<!-- Итерниумовый Сплав -->
+			<reward item_id="19312" min="1" max="1" chance="0.07500"/>		<!-- Итерниумовый Сплав -->
 	</rewardlist>
 		<skills>
-			<skill id="4413" level="1"/>
+			<skill id="4413" level="16"/>
 			<skill id="4416" level="6"/>
 			<skill id="5465" level="3"/>
 		</skills>
@@ -1821,7 +1821,7 @@
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="19.5"/>
 		<set name="level" value="88"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13568"/>
@@ -1857,23 +1857,23 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="605" max="1412" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="605" max="1412" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="1.560">
-			<reward item_id="18126" min="1" max="1" chance="1.92308" />		<!-- Неопознанные Кожаные Перчатки Бессмертия -->
-			<reward item_id="18132" min="1" max="1" chance="1.92308" />		<!-- Неопознанные Ботинки Бессмертия -->
-			<reward item_id="19184" min="1" max="1" chance="48.07692" />		<!-- Материал Неопознанной Кирасы Бессмертия -->
-			<reward item_id="19195" min="1" max="1" chance="48.07692" />		<!-- Материал Неопознанной Туники Бессмертия -->
+			<reward item_id="18126" min="1" max="1" chance="1.92308"/>		<!-- Неопознанные Кожаные Перчатки Бессмертия -->
+			<reward item_id="18132" min="1" max="1" chance="1.92308"/>		<!-- Неопознанные Ботинки Бессмертия -->
+			<reward item_id="19184" min="1" max="1" chance="48.07692"/>		<!-- Материал Неопознанной Кирасы Бессмертия -->
+			<reward item_id="19195" min="1" max="1" chance="48.07692"/>		<!-- Материал Неопознанной Туники Бессмертия -->
 		</group>
 		<group chance="0.030">
-			<reward item_id="17527" min="1" max="1" chance="100.00000" />		<!-- Свиток: Модифицировать Доспех (R) -->
+			<reward item_id="17527" min="1" max="1" chance="100.00000"/>		<!-- Свиток: Модифицировать Доспех (R) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="19309" min="1" max="1" chance="0.07500" />		<!-- Дурандиловый Сплав -->
+			<reward item_id="19309" min="1" max="1" chance="0.07500"/>		<!-- Дурандиловый Сплав -->
 	</rewardlist>
 		<skills>
-			<skill id="4413" level="1"/>
+			<skill id="4413" level="14"/>
 			<skill id="4416" level="6"/>
 			<skill id="5465" level="3"/>
 		</skills>
@@ -1883,7 +1883,7 @@
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="19.5"/>
 		<set name="level" value="88"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13568"/>
@@ -1919,23 +1919,23 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="605" max="1412" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="605" max="1412" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="2.761">
-			<reward item_id="18117" min="1" max="1" chance="1.08656" />		<!-- Неопознанный Шлем Бессмертия -->
-			<reward item_id="19196" min="1" max="1" chance="98.91344" />		<!-- Материал Неопознанных Штанов Бессмертия -->
+			<reward item_id="18117" min="1" max="1" chance="1.08656"/>		<!-- Неопознанный Шлем Бессмертия -->
+			<reward item_id="19196" min="1" max="1" chance="98.91344"/>		<!-- Материал Неопознанных Штанов Бессмертия -->
 		</group>
 		<group chance="0.360">
-			<reward item_id="19309" min="1" max="1" chance="83.33333" />		<!-- Дурандиловый Сплав -->
-			<reward item_id="17527" min="1" max="1" chance="8.33333" />		<!-- Свиток: Модифицировать Доспех (R) -->
-			<reward item_id="30423" min="1" max="1" chance="8.33333" />		<!-- Рецепт - Заряд Души Ранг R -->
+			<reward item_id="19309" min="1" max="1" chance="83.33333"/>		<!-- Дурандиловый Сплав -->
+			<reward item_id="17527" min="1" max="1" chance="8.33333"/>		<!-- Свиток: Модифицировать Доспех (R) -->
+			<reward item_id="30423" min="1" max="1" chance="8.33333"/>		<!-- Рецепт - Заряд Души Ранг R -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="19314" min="1" max="1" chance="0.07500" />		<!-- Темная Сталь -->
+			<reward item_id="19314" min="1" max="1" chance="0.07500"/>		<!-- Темная Сталь -->
 	</rewardlist>
 		<skills>
-			<skill id="4413" level="1"/>
+			<skill id="4413" level="14"/>
 			<skill id="4416" level="6"/>
 			<skill id="5465" level="3"/>
 		</skills>
@@ -1945,7 +1945,7 @@
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="43.5"/>
 		<set name="level" value="94"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="313367"/>
@@ -1981,20 +1981,20 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="28553" max="66665" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="28553" max="66665" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="11.570">
-			<reward item_id="18140" min="1" max="1" chance="2.59291" />		<!-- Неопознанный Мститель Апокалипсиса -->
-			<reward item_id="19206" min="1" max="1" chance="97.40709" />		<!-- Часть Неопознанного Мстителя Апокалипсиса -->
+			<reward item_id="18140" min="1" max="1" chance="2.59291"/>		<!-- Неопознанный Мститель Апокалипсиса -->
+			<reward item_id="19206" min="1" max="1" chance="97.40709"/>		<!-- Часть Неопознанного Мстителя Апокалипсиса -->
 		</group>
 		<group chance="11.595">
-			<reward item_id="19313" min="1" max="1" chance="92.88486" />		<!-- Эртел -->
-			<reward item_id="19350" min="1" max="1" chance="6.46831" />		<!-- Рецепт - Неопознанный Мститель Апокалипсиса (60%) -->
-			<reward item_id="17526" min="1" max="1" chance="0.64683" />		<!-- Свиток: Модифицировать Оружие (R) -->
+			<reward item_id="19313" min="1" max="1" chance="92.88486"/>		<!-- Эртел -->
+			<reward item_id="19350" min="1" max="1" chance="6.46831"/>		<!-- Рецепт - Неопознанный Мститель Апокалипсиса (60%) -->
+			<reward item_id="17526" min="1" max="1" chance="0.64683"/>		<!-- Свиток: Модифицировать Оружие (R) -->
 		</group>
 	</rewardlist>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="5"/>
 			<skill id="5465" level="5"/>
 		</skills>
 	</npc>
@@ -2003,7 +2003,7 @@
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="43.5"/>
 		<set name="level" value="94"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="313367"/>
@@ -2038,24 +2038,24 @@
 			<defence attribute="unholy" value="240"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="28553" max="66665" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="28553" max="66665" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="11.550">
-			<reward item_id="18141" min="1" max="1" chance="2.59740" />		<!-- Неопознанный Воитель Апокалипсиса -->
-			<reward item_id="19207" min="1" max="1" chance="97.40260" />		<!-- Часть Неопознанного Воителя Апокалипсиса -->
+			<reward item_id="18141" min="1" max="1" chance="2.59740"/>		<!-- Неопознанный Воитель Апокалипсиса -->
+			<reward item_id="19207" min="1" max="1" chance="97.40260"/>		<!-- Часть Неопознанного Воителя Апокалипсиса -->
 		</group>
 		<group chance="22.415">
-			<reward item_id="19314" min="1" max="1" chance="83.51550" />		<!-- Темная Сталь -->
-			<reward item_id="9551" min="1" max="1" chance="11.80013" />		<!-- Руда Святости -->
-			<reward item_id="9557" min="1" max="1" chance="3.34597" />		<!-- Кристалл Святости -->
-			<reward item_id="19351" min="1" max="1" chance="1.33839" />		<!-- Рецепт - Неопознанный Воитель Апокалипсиса (60%) -->
+			<reward item_id="19314" min="1" max="1" chance="83.51550"/>		<!-- Темная Сталь -->
+			<reward item_id="9551" min="1" max="1" chance="11.80013"/>		<!-- Руда Святости -->
+			<reward item_id="9557" min="1" max="1" chance="3.34597"/>		<!-- Кристалл Святости -->
+			<reward item_id="19351" min="1" max="1" chance="1.33839"/>		<!-- Рецепт - Неопознанный Воитель Апокалипсиса (60%) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="19368" min="1" max="1" chance="0.75000" />		<!-- Рецепт - Неопознанные Кожаные Сапоги Ада (60%) -->
+			<reward item_id="19368" min="1" max="1" chance="0.75000"/>		<!-- Рецепт - Неопознанные Кожаные Сапоги Ада (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="5"/>
 			<skill id="5465" level="5"/>
 		</skills>
 	</npc>
@@ -2064,7 +2064,7 @@
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="43.5"/>
 		<set name="level" value="94"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="313367"/>
@@ -2099,24 +2099,24 @@
 			<defence attribute="unholy" value="240"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="28553" max="66665" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="28553" max="66665" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="12.080">
-			<reward item_id="18142" min="1" max="1" chance="2.48344" />		<!-- Неопознанный Буревестник Апокалипсиса -->
-			<reward item_id="19208" min="1" max="1" chance="97.51656" />		<!-- Часть Неопознанного Буревестника Апокалипсиса -->
+			<reward item_id="18142" min="1" max="1" chance="2.48344"/>		<!-- Неопознанный Буревестник Апокалипсиса -->
+			<reward item_id="19208" min="1" max="1" chance="97.51656"/>		<!-- Часть Неопознанного Буревестника Апокалипсиса -->
 		</group>
 		<group chance="13.749">
-			<reward item_id="19309" min="1" max="1" chance="72.80529" />		<!-- Дурандиловый Сплав -->
-			<reward item_id="9551" min="1" max="1" chance="19.55779" />		<!-- Руда Святости -->
-			<reward item_id="9557" min="1" max="1" chance="5.45494" />		<!-- Кристалл Святости -->
-			<reward item_id="19352" min="1" max="1" chance="2.18198" />		<!-- Рецепт - Неопознанный Буревестник Апокалипсиса (60%) -->
+			<reward item_id="19309" min="1" max="1" chance="72.80529"/>		<!-- Дурандиловый Сплав -->
+			<reward item_id="9551" min="1" max="1" chance="19.55779"/>		<!-- Руда Святости -->
+			<reward item_id="9557" min="1" max="1" chance="5.45494"/>		<!-- Кристалл Святости -->
+			<reward item_id="19352" min="1" max="1" chance="2.18198"/>		<!-- Рецепт - Неопознанный Буревестник Апокалипсиса (60%) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="17527" min="1" max="1" chance="0.30000" />		<!-- Свиток: Модифицировать Доспех (R) -->
+			<reward item_id="17527" min="1" max="1" chance="0.30000"/>		<!-- Свиток: Модифицировать Доспех (R) -->
 	</rewardlist>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="5"/>
 			<skill id="5465" level="5"/>
 		</skills>
 	</npc>
@@ -2125,7 +2125,7 @@
 		<set name="collision_radius" value="42.0"/>
 		<set name="collision_height" value="73.0"/>
 		<set name="level" value="89"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13812"/>
@@ -2160,18 +2160,18 @@
 			<defence attribute="unholy" value="200"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="1189" max="2776" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="1189" max="2776" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		</rewardlist>
 		<rewardlist type="NOT_RATED_NOT_GROUPED">
-			<reward item_id="17376" min="1" max="1" chance="50.36446" />		<!-- Местонахождение Убежища Кимериана -->
-			<reward item_id="17375" min="1" max="1" chance="49.01497" />		<!-- След Кимериана -->
-			<reward item_id="17527" min="1" max="1" chance="0.29551" />		<!-- Свиток: Модифицировать Доспех (R) -->
-			<reward item_id="30423" min="1" max="1" chance="0.29551" />		<!-- Рецепт - Заряд Души Ранг R -->
-			<reward item_id="17526" min="1" max="1" chance="0.02955" />		<!-- Свиток: Модифицировать Оружие (R) -->
+			<reward item_id="17376" min="1" max="1" chance="50.36446"/>		<!-- Местонахождение Убежища Кимериана -->
+			<reward item_id="17375" min="1" max="1" chance="49.01497"/>		<!-- След Кимериана -->
+			<reward item_id="17527" min="1" max="1" chance="0.29551"/>		<!-- Свиток: Модифицировать Доспех (R) -->
+			<reward item_id="30423" min="1" max="1" chance="0.29551"/>		<!-- Рецепт - Заряд Души Ранг R -->
+			<reward item_id="17526" min="1" max="1" chance="0.02955"/>		<!-- Свиток: Модифицировать Оружие (R) -->
 	</rewardlist>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 			<skill id="5463" level="13"/>
 		</skills>
 	</npc>
@@ -2180,7 +2180,7 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2215,7 +2215,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
@@ -2224,7 +2224,7 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2259,7 +2259,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
@@ -2268,7 +2268,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="56"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1724"/>
@@ -2303,29 +2303,29 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="1806" max="4221" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="1806" max="4221" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="6.576">
-			<reward item_id="601" min="1" max="1" chance="0.45617" />		<!-- Запечатанные Сапоги Рока -->
-			<reward item_id="2416" min="1" max="1" chance="0.45617" />		<!-- Шлем Синего Волка -->
-			<reward item_id="358" min="1" max="1" chance="0.08363" />		<!-- Кираса Синего Волка -->
-			<reward item_id="4052" min="1" max="1" chance="59.86467" />		<!-- Часть Черной Серьги -->
-			<reward item_id="4086" min="1" max="1" chance="39.13936" />		<!-- Выкройка Штанов Синего Волка -->
+			<reward item_id="601" min="1" max="1" chance="0.45617"/>		<!-- Запечатанные Сапоги Рока -->
+			<reward item_id="2416" min="1" max="1" chance="0.45617"/>		<!-- Шлем Синего Волка -->
+			<reward item_id="358" min="1" max="1" chance="0.08363"/>		<!-- Кираса Синего Волка -->
+			<reward item_id="4052" min="1" max="1" chance="59.86467"/>		<!-- Часть Черной Серьги -->
+			<reward item_id="4086" min="1" max="1" chance="39.13936"/>		<!-- Выкройка Штанов Синего Волка -->
 		</group>
 		<group chance="2.580">
-			<reward item_id="34990" min="2" max="2" chance="29.06977" /> <!-- Обломок Оружия -->
-			<reward item_id="34991" min="6" max="6" chance="29.06977" /> <!-- Обломок Доспеха -->
-			<reward item_id="8727" min="1" max="1" chance="29.06977" />		<!-- Камень Жизни - Уровень 58 -->
-			<reward item_id="8737" min="1" max="1" chance="11.62791" />		<!-- Камень Жизни Среднего Качества - Уровень 58 -->
-			<reward item_id="8747" min="1" max="1" chance="1.16279" />		<!-- Камень Жизни Высокого Качества - Уровень 58 -->
+			<reward item_id="34990" min="2" max="2" chance="29.06977"/> <!-- Обломок Оружия -->
+			<reward item_id="34991" min="6" max="6" chance="29.06977"/> <!-- Обломок Доспеха -->
+			<reward item_id="8727" min="1" max="1" chance="29.06977"/>		<!-- Камень Жизни - Уровень 58 -->
+			<reward item_id="8737" min="1" max="1" chance="11.62791"/>		<!-- Камень Жизни Среднего Качества - Уровень 58 -->
+			<reward item_id="8747" min="1" max="1" chance="1.16279"/>		<!-- Камень Жизни Высокого Качества - Уровень 58 -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="4130" min="1" max="1" chance="0.07500" />		<!-- Рецепт - Черное Кольцо (100%) -->
-			<reward item_id="4193" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Пика (100%) -->
+			<reward item_id="4130" min="1" max="1" chance="0.07500"/>		<!-- Рецепт - Черное Кольцо (100%) -->
+			<reward item_id="4193" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Пика (100%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="13"/>
 			<skill id="4412" level="13"/>
 			<skill id="4413" level="13"/>
 			<skill id="4414" level="10"/>
@@ -2337,7 +2337,7 @@
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="55.0"/>
 		<set name="level" value="60"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1933"/>
@@ -2372,30 +2372,30 @@
 			<defence attribute="unholy" value="184"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="1981" max="4626" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="1981" max="4626" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="6.752">
-			<reward item_id="268" min="1" max="1" chance="0.04443" />		<!-- Цестус Беллиона -->
-			<reward item_id="2392" min="1" max="1" chance="0.08146" />		<!-- Кожаный Доспех Рока -->
-			<reward item_id="4099" min="1" max="1" chance="81.18196" />		<!-- Часть Запечатанных Сапог Рока -->
-			<reward item_id="4081" min="1" max="1" chance="18.69214" />		<!-- Заготовка Латного Доспеха Рока -->
+			<reward item_id="268" min="1" max="1" chance="0.04443"/>		<!-- Цестус Беллиона -->
+			<reward item_id="2392" min="1" max="1" chance="0.08146"/>		<!-- Кожаный Доспех Рока -->
+			<reward item_id="4099" min="1" max="1" chance="81.18196"/>		<!-- Часть Запечатанных Сапог Рока -->
+			<reward item_id="4081" min="1" max="1" chance="18.69214"/>		<!-- Заготовка Латного Доспеха Рока -->
 		</group>
 		<group chance="3.789">
-			<reward item_id="34990" min="2" max="2" chance="25.99631" /> <!-- Обломок Оружия -->
-			<reward item_id="4043" min="1" max="1" chance="25.70599" />		<!-- Азоф -->
-			<reward item_id="8336" min="1" max="1" chance="19.79414" />		<!-- Лезвие Слез Чародея -->
-			<reward item_id="8727" min="1" max="1" chance="19.79414" />		<!-- Камень Жизни - Уровень 58 -->
-			<reward item_id="8737" min="1" max="1" chance="7.91766" />		<!-- Камень Жизни Среднего Качества - Уровень 58 -->
-			<reward item_id="8747" min="1" max="1" chance="0.79177" />		<!-- Камень Жизни Высокого Качества - Уровень 58 -->
+			<reward item_id="34990" min="2" max="2" chance="25.99631"/> <!-- Обломок Оружия -->
+			<reward item_id="4043" min="1" max="1" chance="25.70599"/>		<!-- Азоф -->
+			<reward item_id="8336" min="1" max="1" chance="19.79414"/>		<!-- Лезвие Слез Чародея -->
+			<reward item_id="8727" min="1" max="1" chance="19.79414"/>		<!-- Камень Жизни - Уровень 58 -->
+			<reward item_id="8737" min="1" max="1" chance="7.91766"/>		<!-- Камень Жизни Среднего Качества - Уровень 58 -->
+			<reward item_id="8747" min="1" max="1" chance="0.79177"/>		<!-- Камень Жизни Высокого Качества - Уровень 58 -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="4166" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Шлем Рока (100%) -->
-			<reward item_id="4198" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Цестус Беллиона (100%) -->
-			<reward item_id="5230" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Мифриловая Стрела (100%) -->
+			<reward item_id="4166" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Шлем Рока (100%) -->
+			<reward item_id="4198" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Цестус Беллиона (100%) -->
+			<reward item_id="5230" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Мифриловая Стрела (100%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4412" level="9"/>
+			<skill id="4412" level="10"/>
 			<skill id="4413" level="10"/>
 			<skill id="4416" level="6"/>
 		</skills>
@@ -2405,7 +2405,7 @@
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="52.0"/>
 		<set name="level" value="61"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1985"/>
@@ -2440,31 +2440,31 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="2887" max="6745" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="2887" max="6745" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="4.655">
-			<reward item_id="2403" min="1" max="1" chance="0.64447" />		<!-- Штаны Синего Волка -->
-			<reward item_id="7889" min="1" max="1" chance="0.06445" />		<!-- Слезы Чародея -->
-			<reward item_id="4084" min="1" max="1" chance="67.06767" />		<!-- Материя Туники Синего Волка -->
-			<reward item_id="4116" min="1" max="1" chance="16.11171" />		<!-- Камень Топора Мертвеца -->
-			<reward item_id="4121" min="1" max="1" chance="16.11171" />		<!-- Рукоять Лука Угрозы -->
+			<reward item_id="2403" min="1" max="1" chance="0.64447"/>		<!-- Штаны Синего Волка -->
+			<reward item_id="7889" min="1" max="1" chance="0.06445"/>		<!-- Слезы Чародея -->
+			<reward item_id="4084" min="1" max="1" chance="67.06767"/>		<!-- Материя Туники Синего Волка -->
+			<reward item_id="4116" min="1" max="1" chance="16.11171"/>		<!-- Камень Топора Мертвеца -->
+			<reward item_id="4121" min="1" max="1" chance="16.11171"/>		<!-- Рукоять Лука Угрозы -->
 		</group>
 		<group chance="3.360">
-			<reward item_id="34990" min="2" max="2" chance="45.53571" /> <!-- Обломок Оружия -->
-			<reward item_id="4042" min="1" max="1" chance="22.32143" />		<!-- Энрия -->
-			<reward item_id="8728" min="1" max="1" chance="22.32143" />		<!-- Камень Жизни - Уровень 61 -->
-			<reward item_id="8738" min="1" max="1" chance="8.92857" />		<!-- Камень Жизни Среднего Качества - Уровень 61 -->
-			<reward item_id="8748" min="1" max="1" chance="0.89286" />		<!-- Камень Жизни Высокого Качества - Уровень 61 -->
+			<reward item_id="34990" min="2" max="2" chance="45.53571"/> <!-- Обломок Оружия -->
+			<reward item_id="4042" min="1" max="1" chance="22.32143"/>		<!-- Энрия -->
+			<reward item_id="8728" min="1" max="1" chance="22.32143"/>		<!-- Камень Жизни - Уровень 61 -->
+			<reward item_id="8738" min="1" max="1" chance="8.92857"/>		<!-- Камень Жизни Среднего Качества - Уровень 61 -->
+			<reward item_id="8748" min="1" max="1" chance="0.89286"/>		<!-- Камень Жизни Высокого Качества - Уровень 61 -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="948" min="1" max="1" chance="0.03000" />		<!-- Свиток: Модифицировать Доспех (B) -->
-			<reward item_id="4161" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Туника Синего Волка (100%) -->
-			<reward item_id="4163" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Штаны Синего Волка (100%) -->
-			<reward item_id="4195" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Топор Искусства Войны (100%) -->
+			<reward item_id="948" min="1" max="1" chance="0.03000"/>		<!-- Свиток: Модифицировать Доспех (B) -->
+			<reward item_id="4161" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Туника Синего Волка (100%) -->
+			<reward item_id="4163" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Штаны Синего Волка (100%) -->
+			<reward item_id="4195" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Топор Искусства Войны (100%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="12"/>
 			<skill id="4412" level="12"/>
 			<skill id="4413" level="16"/>
 			<skill id="4414" level="12"/>
@@ -2476,7 +2476,7 @@
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="28.5"/>
 		<set name="level" value="59"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1880"/>
@@ -2511,26 +2511,26 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="2515" max="5865" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="2515" max="5865" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="9.372">
-			<reward item_id="210" min="1" max="1" chance="0.03201" />		<!-- Посох Злых Духов -->
-			<reward item_id="2381" min="1" max="1" chance="0.05868" />		<!-- Латный Доспех Рока -->
-			<reward item_id="4091" min="1" max="1" chance="75.61483" />		<!-- Часть Запечатанных Перчаток Рока -->
-			<reward item_id="4078" min="1" max="1" chance="24.29448" />		<!-- Часть Кирасы Синего Волка -->
+			<reward item_id="210" min="1" max="1" chance="0.03201"/>		<!-- Посох Злых Духов -->
+			<reward item_id="2381" min="1" max="1" chance="0.05868"/>		<!-- Латный Доспех Рока -->
+			<reward item_id="4091" min="1" max="1" chance="75.61483"/>		<!-- Часть Запечатанных Перчаток Рока -->
+			<reward item_id="4078" min="1" max="1" chance="24.29448"/>		<!-- Часть Кирасы Синего Волка -->
 		</group>
 		<group chance="5.632">
-			<reward item_id="4043" min="1" max="1" chance="57.90128" />		<!-- Азоф -->
-			<reward item_id="4042" min="1" max="1" chance="28.78196" />		<!-- Энрия -->
-			<reward item_id="8348" min="1" max="1" chance="13.31676" />		<!-- Навершие Звезды Боли -->
+			<reward item_id="4043" min="1" max="1" chance="57.90128"/>		<!-- Азоф -->
+			<reward item_id="4042" min="1" max="1" chance="28.78196"/>		<!-- Энрия -->
+			<reward item_id="8348" min="1" max="1" chance="13.31676"/>		<!-- Навершие Звезды Боли -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="4168" min="1" max="1" chance="0.07500" />		<!-- Рецепт - Запечатанные Перчатки Рока (100%) -->
-			<reward item_id="4157" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Набедренники Синего Волка (100%) -->
+			<reward item_id="4168" min="1" max="1" chance="0.07500"/>		<!-- Рецепт - Запечатанные Перчатки Рока (100%) -->
+			<reward item_id="4157" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Набедренники Синего Волка (100%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="13"/>
 			<skill id="4412" level="13"/>
 			<skill id="4413" level="10"/>
 			<skill id="4416" level="8"/>
@@ -2541,7 +2541,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="37.5"/>
 		<set name="level" value="62"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2037"/>
@@ -2576,24 +2576,24 @@
 			<defence attribute="unholy" value="184"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="2866" max="6698" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="2866" max="6698" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="2.315">
-			<reward item_id="5295" min="1" max="1" chance="12.95896" />		<!-- Запечатанные Перчатки Таллума -->
-			<reward item_id="5487" min="1" max="1" chance="87.04104" />		<!-- Материя Запечатанной Мантии Кошмаров -->
+			<reward item_id="5295" min="1" max="1" chance="12.95896"/>		<!-- Запечатанные Перчатки Таллума -->
+			<reward item_id="5487" min="1" max="1" chance="87.04104"/>		<!-- Материя Запечатанной Мантии Кошмаров -->
 		</group>
 		<group chance="2.777">
-			<reward item_id="1888" min="1" max="1" chance="61.10911" />		<!-- Синтетический Кокс -->
-			<reward item_id="8728" min="1" max="1" chance="27.00756" />		<!-- Камень Жизни - Уровень 61 -->
-			<reward item_id="8738" min="1" max="1" chance="10.80302" />		<!-- Камень Жизни Среднего Качества - Уровень 61 -->
-			<reward item_id="8748" min="1" max="1" chance="1.08030" />		<!-- Камень Жизни Высокого Качества - Уровень 61 -->
+			<reward item_id="1888" min="1" max="1" chance="61.10911"/>		<!-- Синтетический Кокс -->
+			<reward item_id="8728" min="1" max="1" chance="27.00756"/>		<!-- Камень Жизни - Уровень 61 -->
+			<reward item_id="8738" min="1" max="1" chance="10.80302"/>		<!-- Камень Жизни Среднего Качества - Уровень 61 -->
+			<reward item_id="8748" min="1" max="1" chance="1.08030"/>		<!-- Камень Жизни Высокого Качества - Уровень 61 -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5348" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанная Мантия Кристалла Тьмы (60%) -->
+			<reward item_id="5348" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанная Мантия Кристалла Тьмы (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="9"/>
+			<skill id="4410" level="12"/>
 			<skill id="4412" level="12"/>
 			<skill id="4416" level="6"/>
 		</skills>
@@ -2603,7 +2603,7 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="57"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1776"/>
@@ -2638,29 +2638,29 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="2519" max="5875" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="2519" max="5875" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="8.792">
-			<reward item_id="110" min="1" max="1" chance="0.34122" />		<!-- Щит Рока -->
-			<reward item_id="2417" min="1" max="1" chance="0.34122" />		<!-- Шлем Рока -->
-			<reward item_id="2439" min="1" max="1" chance="0.34122" />		<!-- Запечатанные Сапоги Синего Волка -->
-			<reward item_id="97" min="1" max="1" chance="0.03412" />		<!-- Пика -->
-			<reward item_id="4053" min="1" max="1" chance="63.86488" />		<!-- Самоцвет Черного Кольца -->
-			<reward item_id="4087" min="1" max="1" chance="35.07734" />		<!-- Выкройка Штанов Рока -->
+			<reward item_id="110" min="1" max="1" chance="0.34122"/>		<!-- Щит Рока -->
+			<reward item_id="2417" min="1" max="1" chance="0.34122"/>		<!-- Шлем Рока -->
+			<reward item_id="2439" min="1" max="1" chance="0.34122"/>		<!-- Запечатанные Сапоги Синего Волка -->
+			<reward item_id="97" min="1" max="1" chance="0.03412"/>		<!-- Пика -->
+			<reward item_id="4053" min="1" max="1" chance="63.86488"/>		<!-- Самоцвет Черного Кольца -->
+			<reward item_id="4087" min="1" max="1" chance="35.07734"/>		<!-- Выкройка Штанов Рока -->
 		</group>
 		<group chance="8.867">
-			<reward item_id="1419" min="1" max="1" chance="56.56930" />		<!-- Знак Крови -->
-			<reward item_id="34990" min="2" max="2" chance="24.85621" /> <!-- Обломок Оружия -->
-			<reward item_id="4040" min="1" max="1" chance="15.19116" />		<!-- Смазка -->
-			<reward item_id="948" min="1" max="1" chance="3.38333" />		<!-- Свиток: Модифицировать Доспех (B) -->
+			<reward item_id="1419" min="1" max="1" chance="56.56930"/>		<!-- Знак Крови -->
+			<reward item_id="34990" min="2" max="2" chance="24.85621"/> <!-- Обломок Оружия -->
+			<reward item_id="4040" min="1" max="1" chance="15.19116"/>		<!-- Смазка -->
+			<reward item_id="948" min="1" max="1" chance="3.38333"/>		<!-- Свиток: Модифицировать Доспех (B) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="4131" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Черное Ожерелье (100%) -->
-			<reward item_id="4192" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Дамаскус (100%) -->
+			<reward item_id="4131" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Черное Ожерелье (100%) -->
+			<reward item_id="4192" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Дамаскус (100%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="13"/>
 			<skill id="4412" level="13"/>
 			<skill id="4413" level="16"/>
 			<skill id="4416" level="8"/>
@@ -2671,7 +2671,7 @@
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="28.5"/>
 		<set name="level" value="58"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1828"/>
@@ -2706,28 +2706,28 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="1901" max="4434" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="1901" max="4434" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="6.110">
-			<reward item_id="2380" min="1" max="1" chance="0.49100" />		<!-- Набедренники Синего Волка -->
-			<reward item_id="2475" min="1" max="1" chance="0.49100" />		<!-- Запечатанные Перчатки Рока -->
-			<reward item_id="171" min="1" max="1" chance="0.04910" />		<!-- Топор Мертвеца -->
-			<reward item_id="4088" min="1" max="1" chance="61.42390" />		<!-- Модель Шлема Синего Волка -->
-			<reward item_id="4054" min="1" max="1" chance="32.63502" />		<!-- Бусина Черного Ожерелья -->
-			<reward item_id="4119" min="1" max="1" chance="4.90998" />		<!-- Лезвие Кинжала Демона -->
+			<reward item_id="2380" min="1" max="1" chance="0.49100"/>		<!-- Набедренники Синего Волка -->
+			<reward item_id="2475" min="1" max="1" chance="0.49100"/>		<!-- Запечатанные Перчатки Рока -->
+			<reward item_id="171" min="1" max="1" chance="0.04910"/>		<!-- Топор Мертвеца -->
+			<reward item_id="4088" min="1" max="1" chance="61.42390"/>		<!-- Модель Шлема Синего Волка -->
+			<reward item_id="4054" min="1" max="1" chance="32.63502"/>		<!-- Бусина Черного Ожерелья -->
+			<reward item_id="4119" min="1" max="1" chance="4.90998"/>		<!-- Лезвие Кинжала Демона -->
 		</group>
 		<group chance="2.295">
-			<reward item_id="4040" min="1" max="1" chance="67.32026" />		<!-- Смазка -->
-			<reward item_id="34991" min="23" max="23" chance="32.67974" /> <!-- Обломок Доспеха -->
+			<reward item_id="4040" min="1" max="1" chance="67.32026"/>		<!-- Смазка -->
+			<reward item_id="34991" min="23" max="23" chance="32.67974"/> <!-- Обломок Доспеха -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="4154" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Щит Рока (100%) -->
-			<reward item_id="4176" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанные Сапоги Рока (100%) -->
-			<reward item_id="4199" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Лук Угрозы (100%) -->
+			<reward item_id="4154" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Щит Рока (100%) -->
+			<reward item_id="4176" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанные Сапоги Рока (100%) -->
+			<reward item_id="4199" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Лук Угрозы (100%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="13"/>
 			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
@@ -2736,7 +2736,7 @@
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="62"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2037"/>
@@ -2771,22 +2771,22 @@
 			<defence attribute="unholy" value="184"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="2198" max="5136" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="2198" max="5136" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="0.988">
-			<reward item_id="5287" min="1" max="1" chance="3.03644" />		<!-- Запечатанная Кираса Кристалла Тьмы -->
-			<reward item_id="5488" min="1" max="1" chance="96.96356" />		<!-- Материя Запечатанной Мантии Величия -->
+			<reward item_id="5287" min="1" max="1" chance="3.03644"/>		<!-- Запечатанная Кираса Кристалла Тьмы -->
+			<reward item_id="5488" min="1" max="1" chance="96.96356"/>		<!-- Материя Запечатанной Мантии Величия -->
 		</group>
 		<group chance="7.561">
-			<reward item_id="1887" min="1" max="1" chance="55.24402" />		<!-- Очищенный Лак -->
-			<reward item_id="6344" min="1" max="1" chance="44.75598" />		<!-- Бусина Запечатанного Ожерелья Величия -->
+			<reward item_id="1887" min="1" max="1" chance="55.24402"/>		<!-- Очищенный Лак -->
+			<reward item_id="6344" min="1" max="1" chance="44.75598"/>		<!-- Бусина Запечатанного Ожерелья Величия -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="8696" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Трезубец Чудовища (60%) -->
+			<reward item_id="8696" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Трезубец Чудовища (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4411" level="9"/>
+			<skill id="4411" level="13"/>
 			<skill id="4413" level="13"/>
 			<skill id="4416" level="6"/>
 		</skills>
@@ -2796,7 +2796,7 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="35.5"/>
 		<set name="level" value="59"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1880"/>
@@ -2831,27 +2831,27 @@
 			<defence attribute="unholy" value="184"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="1980" max="4617" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="1980" max="4617" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="6.710">
-			<reward item_id="926" min="1" max="1" chance="0.44713" />		<!-- Черное Ожерелье -->
-			<reward item_id="234" min="1" max="1" chance="0.04471" />		<!-- Кинжал Демона -->
-			<reward item_id="2391" min="1" max="1" chance="0.08197" />		<!-- Кожаный Доспех Синего Волка -->
-			<reward item_id="4096" min="1" max="1" chance="68.12728" />		<!-- Материя Запечатанных Перчаток Синего Волка -->
-			<reward item_id="4080" min="1" max="1" chance="31.29890" />		<!-- Материал Набедренников Синего Волка -->
+			<reward item_id="926" min="1" max="1" chance="0.44713"/>		<!-- Черное Ожерелье -->
+			<reward item_id="234" min="1" max="1" chance="0.04471"/>		<!-- Кинжал Демона -->
+			<reward item_id="2391" min="1" max="1" chance="0.08197"/>		<!-- Кожаный Доспех Синего Волка -->
+			<reward item_id="4096" min="1" max="1" chance="68.12728"/>		<!-- Материя Запечатанных Перчаток Синего Волка -->
+			<reward item_id="4080" min="1" max="1" chance="31.29890"/>		<!-- Материал Набедренников Синего Волка -->
 		</group>
 		<group chance="3.640">
-			<reward item_id="34991" min="29" max="29" chance="91.75825" /> <!-- Обломок Доспеха -->
-			<reward item_id="4041" min="1" max="1" chance="20.60440" />		<!-- Отвердитель Формы -->
-			<reward item_id="8340" min="1" max="1" chance="8.24176" />		<!-- Костяное Навершие Каим Ванула -->
+			<reward item_id="34991" min="29" max="29" chance="91.75825"/> <!-- Обломок Доспеха -->
+			<reward item_id="4041" min="1" max="1" chance="20.60440"/>		<!-- Отвердитель Формы -->
+			<reward item_id="8340" min="1" max="1" chance="8.24176"/>		<!-- Костяное Навершие Каим Ванула -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="4167" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанные Сапоги Синего Волка (100%) -->
-			<reward item_id="4158" min="1" max="1" chance="0.00550" />		<!-- Рецепт - Латный Доспех Рока (100%) -->
+			<reward item_id="4167" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанные Сапоги Синего Волка (100%) -->
+			<reward item_id="4158" min="1" max="1" chance="0.00550"/>		<!-- Рецепт - Латный Доспех Рока (100%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4411" level="9"/>
+			<skill id="4411" level="13"/>
 			<skill id="4413" level="13"/>
 			<skill id="4414" level="12"/>
 			<skill id="4416" level="8"/>
@@ -2862,7 +2862,7 @@
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="64"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2141"/>
@@ -2897,23 +2897,23 @@
 			<defence attribute="unholy" value="184"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="3053" max="7130" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="3053" max="7130" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="8.140">
-			<reward item_id="5289" min="1" max="1" chance="0.92138" />		<!-- Запечатанный Шлем Кристалла Тьмы -->
-			<reward item_id="5514" min="1" max="1" chance="99.07862" />		<!-- Выкройка Запечатанных Рукавиц Кошмаров -->
+			<reward item_id="5289" min="1" max="1" chance="0.92138"/>		<!-- Запечатанный Шлем Кристалла Тьмы -->
+			<reward item_id="5514" min="1" max="1" chance="99.07862"/>		<!-- Выкройка Запечатанных Рукавиц Кошмаров -->
 		</group>
 		<group chance="1.805">
-			<reward item_id="34991" min="13" max="13" chance="98.33795" /> <!-- Обломок Доспеха -->
-			<reward item_id="729" min="1" max="1" chance="1.66205" />		<!-- Свиток: Модифицировать Оружие (А) -->
+			<reward item_id="34991" min="13" max="13" chance="98.33795"/> <!-- Обломок Доспеха -->
+			<reward item_id="729" min="1" max="1" chance="1.66205"/>		<!-- Свиток: Модифицировать Оружие (А) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="730" min="1" max="1" chance="0.00550" />		<!-- Свиток: Модифицировать Доспех (А) -->
-			<reward item_id="8702" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Лук Шиид (60%) -->
+			<reward item_id="730" min="1" max="1" chance="0.00550"/>		<!-- Свиток: Модифицировать Доспех (А) -->
+			<reward item_id="8702" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Лук Шиид (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4412" level="9"/>
+			<skill id="4412" level="13"/>
 			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
@@ -2922,7 +2922,7 @@
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="65"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2193"/>
@@ -2957,24 +2957,24 @@
 			<defence attribute="unholy" value="184"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="4132" max="9638" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="4132" max="9638" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="5.138">
-			<reward item_id="5315" min="1" max="1" chance="1.45971" />		<!-- Запечатанный Щит Кошмаров -->
-			<reward item_id="8687" min="1" max="1" chance="0.05839" />		<!-- Рука Кабрио -->
-			<reward item_id="5528" min="1" max="1" chance="98.48190" />		<!-- Модель Запечатанной Диадемы Величия -->
+			<reward item_id="5315" min="1" max="1" chance="1.45971"/>		<!-- Запечатанный Щит Кошмаров -->
+			<reward item_id="8687" min="1" max="1" chance="0.05839"/>		<!-- Рука Кабрио -->
+			<reward item_id="5528" min="1" max="1" chance="98.48190"/>		<!-- Модель Запечатанной Диадемы Величия -->
 		</group>
 		<group chance="4.204">
-			<reward item_id="1887" min="1" max="1" chance="92.86394" />		<!-- Очищенный Лак -->
-			<reward item_id="730" min="1" max="1" chance="7.13606" />		<!-- Свиток: Модифицировать Доспех (А) -->
+			<reward item_id="1887" min="1" max="1" chance="92.86394"/>		<!-- Очищенный Лак -->
+			<reward item_id="730" min="1" max="1" chance="7.13606"/>		<!-- Свиток: Модифицировать Доспех (А) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5338" min="1" max="1" chance="0.00550" />		<!-- Рецепт - Запечатанный Кожаный Доспех Величия (60%) -->
-			<reward item_id="8692" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Меч Ипоса (60%) -->
+			<reward item_id="5338" min="1" max="1" chance="0.00550"/>		<!-- Рецепт - Запечатанный Кожаный Доспех Величия (60%) -->
+			<reward item_id="8692" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Меч Ипоса (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="9"/>
+			<skill id="4410" level="14"/>
 			<skill id="4412" level="14"/>
 			<skill id="4413" level="19"/>
 			<skill id="4416" level="8"/>
@@ -2985,7 +2985,7 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="37.5"/>
 		<set name="level" value="64"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2141"/>
@@ -3020,26 +3020,26 @@
 			<defence attribute="unholy" value="184"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="3082" max="7196" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="3082" max="7196" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="4.017">
-			<reward item_id="5313" min="1" max="1" chance="0.74683" />		<!-- Запечатанные Рукавицы Кошмаров -->
-			<reward item_id="8688" min="1" max="1" chance="0.07468" />		<!-- Кристалл Дэймона -->
-			<reward item_id="5515" min="1" max="1" chance="99.17849" />		<!-- Выкройка Запечатанных Рукавиц Величия -->
+			<reward item_id="5313" min="1" max="1" chance="0.74683"/>		<!-- Запечатанные Рукавицы Кошмаров -->
+			<reward item_id="8688" min="1" max="1" chance="0.07468"/>		<!-- Кристалл Дэймона -->
+			<reward item_id="5515" min="1" max="1" chance="99.17849"/>		<!-- Выкройка Запечатанных Рукавиц Величия -->
 		</group>
 		<group chance="7.200">
-			<reward item_id="6342" min="1" max="1" chance="74.58333" />		<!-- Самоцвет Запечатанной Серьги Величия -->
-			<reward item_id="34991" min="15" max="15" chance="10.41667" /> <!-- Обломок Доспеха -->
-			<reward item_id="8729" min="1" max="1" chance="10.41667" />		<!-- Камень Жизни - Уровень 64 -->
-			<reward item_id="8739" min="1" max="1" chance="4.16667" />		<!-- Камень Жизни Среднего Качества - Уровень 64 -->
-			<reward item_id="8749" min="1" max="1" chance="0.41667" />		<!-- Камень Жизни Высокого Качества - Уровень 64 -->
+			<reward item_id="6342" min="1" max="1" chance="74.58333"/>		<!-- Самоцвет Запечатанной Серьги Величия -->
+			<reward item_id="34991" min="15" max="15" chance="10.41667"/> <!-- Обломок Доспеха -->
+			<reward item_id="8729" min="1" max="1" chance="10.41667"/>		<!-- Камень Жизни - Уровень 64 -->
+			<reward item_id="8739" min="1" max="1" chance="4.16667"/>		<!-- Камень Жизни Среднего Качества - Уровень 64 -->
+			<reward item_id="8749" min="1" max="1" chance="0.41667"/>		<!-- Камень Жизни Высокого Качества - Уровень 64 -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="8706" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Язык Темиса (60%) -->
+			<reward item_id="8706" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Язык Темиса (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4411" level="9"/>
+			<skill id="4411" level="14"/>
 			<skill id="4412" level="14"/>
 			<skill id="4413" level="12"/>
 			<skill id="4416" level="8"/>
@@ -3050,7 +3050,7 @@
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="62"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2037"/>
@@ -3085,23 +3085,23 @@
 			<defence attribute="unholy" value="184"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="2198" max="5136" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="2198" max="5136" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="3.530">
-			<reward item_id="5311" min="1" max="1" chance="0.15583" />		<!-- Запечатанный Доспех Кошмаров -->
-			<reward item_id="5526" min="1" max="1" chance="99.84417" />		<!-- Модель Запечатанного Шлема Таллума -->
+			<reward item_id="5311" min="1" max="1" chance="0.15583"/>		<!-- Запечатанный Доспех Кошмаров -->
+			<reward item_id="5526" min="1" max="1" chance="99.84417"/>		<!-- Модель Запечатанного Шлема Таллума -->
 		</group>
 		<group chance="4.161">
-			<reward item_id="4040" min="1" max="1" chance="81.97549" />		<!-- Смазка -->
-			<reward item_id="8722" min="1" max="1" chance="18.02451" />		<!-- Осколок Кристалла Дэймона -->
+			<reward item_id="4040" min="1" max="1" chance="81.97549"/>		<!-- Смазка -->
+			<reward item_id="8722" min="1" max="1" chance="18.02451"/>		<!-- Осколок Кристалла Дэймона -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5394" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанные Перчатки Таллума (60%) -->
-			<reward item_id="6337" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанная Серьга Величия (70%) -->
+			<reward item_id="5394" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанные Перчатки Таллума (60%) -->
+			<reward item_id="6337" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанная Серьга Величия (70%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4411" level="9"/>
+			<skill id="4411" level="13"/>
 			<skill id="4413" level="13"/>
 			<skill id="4416" level="6"/>
 		</skills>
@@ -3111,7 +3111,7 @@
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="30.0"/>
 		<set name="level" value="63"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2089"/>
@@ -3146,23 +3146,23 @@
 			<defence attribute="unholy" value="184"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="2263" max="5284" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="2263" max="5284" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="5.910">
-			<reward item_id="5312" min="1" max="1" chance="0.50761" />		<!-- Запечатанный Шлем Кошмаров -->
-			<reward item_id="5503" min="1" max="1" chance="99.49239" />		<!-- Подкладка Запечатанных Сапог Величия -->
+			<reward item_id="5312" min="1" max="1" chance="0.50761"/>		<!-- Запечатанный Шлем Кошмаров -->
+			<reward item_id="5503" min="1" max="1" chance="99.49239"/>		<!-- Подкладка Запечатанных Сапог Величия -->
 		</group>
 		<group chance="1.379">
-			<reward item_id="1890" min="1" max="1" chance="94.56128" />		<!-- Мифриловый Сплав -->
-			<reward item_id="730" min="1" max="1" chance="5.43872" />		<!-- Свиток: Модифицировать Доспех (А) -->
+			<reward item_id="1890" min="1" max="1" chance="94.56128"/>		<!-- Мифриловый Сплав -->
+			<reward item_id="730" min="1" max="1" chance="5.43872"/>		<!-- Свиток: Модифицировать Доспех (А) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="6339" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанное Кольцо Величия (70%) -->
-			<reward item_id="8708" min="1" max="1" chance="0.00090" />		<!-- Рецепт - Рука Кабрио (60%) -->
+			<reward item_id="6339" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанное Кольцо Величия (70%) -->
+			<reward item_id="8708" min="1" max="1" chance="0.00090"/>		<!-- Рецепт - Рука Кабрио (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4411" level="9"/>
+			<skill id="4411" level="12"/>
 			<skill id="4413" level="12"/>
 			<skill id="4414" level="12"/>
 			<skill id="4416" level="8"/>
@@ -3173,7 +3173,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="66"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2244"/>
@@ -3208,22 +3208,22 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="3.476">
-			<reward item_id="5316" min="1" max="1" chance="0.15821" />		<!-- Запечатанный Латный Доспех Величия -->
-			<reward item_id="5478" min="1" max="1" chance="99.84179" />		<!-- Выкройка Запечатанного Кожаного Доспеха Кристалла Тьмы -->
+			<reward item_id="5316" min="1" max="1" chance="0.15821"/>		<!-- Запечатанный Латный Доспех Величия -->
+			<reward item_id="5478" min="1" max="1" chance="99.84179"/>		<!-- Выкройка Запечатанного Кожаного Доспеха Кристалла Тьмы -->
 		</group>
 		<group chance="1.830">
-			<reward item_id="4042" min="1" max="1" chance="40.98361" />		<!-- Энрия -->
-			<reward item_id="8730" min="1" max="1" chance="40.98361" />		<!-- Камень Жизни - Уровень 67 -->
-			<reward item_id="8740" min="1" max="1" chance="16.39344" />		<!-- Камень Жизни Среднего Качества - Уровень 67 -->
-			<reward item_id="8750" min="1" max="1" chance="1.63934" />		<!-- Камень Жизни Высокого Качества - Уровень 67 -->
+			<reward item_id="4042" min="1" max="1" chance="40.98361"/>		<!-- Энрия -->
+			<reward item_id="8730" min="1" max="1" chance="40.98361"/>		<!-- Камень Жизни - Уровень 67 -->
+			<reward item_id="8740" min="1" max="1" chance="16.39344"/>		<!-- Камень Жизни Среднего Качества - Уровень 67 -->
+			<reward item_id="8750" min="1" max="1" chance="1.63934"/>		<!-- Камень Жизни Высокого Качества - Уровень 67 -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5346" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанная Туника Таллума (60%) -->
-			<reward item_id="8700" min="1" max="1" chance="0.00090" />		<!-- Рецепт - Копье Тифона (60%) -->
+			<reward item_id="5346" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанная Туника Таллума (60%) -->
+			<reward item_id="8700" min="1" max="1" chance="0.00090"/>		<!-- Рецепт - Копье Тифона (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="15"/>
 			<skill id="4412" level="15"/>
 			<skill id="4413" level="13"/>
 			<skill id="4414" level="12"/>
@@ -3235,7 +3235,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="67"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2295"/>
@@ -3270,23 +3270,23 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="2667" max="6224" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="2667" max="6224" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="1.262">
-			<reward item_id="5293" min="1" max="1" chance="0.43564" />		<!-- Запечатанный Латный Доспех Таллума -->
-			<reward item_id="8684" min="1" max="1" chance="0.23762" />		<!-- Лук Шиид -->
-			<reward item_id="5479" min="1" max="1" chance="99.32673" />		<!-- Выкройка Запечатанного Кожаного Доспеха Таллума -->
+			<reward item_id="5293" min="1" max="1" chance="0.43564"/>		<!-- Запечатанный Латный Доспех Таллума -->
+			<reward item_id="8684" min="1" max="1" chance="0.23762"/>		<!-- Лук Шиид -->
+			<reward item_id="5479" min="1" max="1" chance="99.32673"/>		<!-- Выкройка Запечатанного Кожаного Доспеха Таллума -->
 		</group>
 		<group chance="3.905">
-			<reward item_id="1890" min="1" max="1" chance="80.79385" />		<!-- Мифриловый Сплав -->
-			<reward item_id="8714" min="1" max="1" chance="19.20615" />		<!-- Часть Топора Баракиэля -->
+			<reward item_id="1890" min="1" max="1" chance="80.79385"/>		<!-- Мифриловый Сплав -->
+			<reward item_id="8714" min="1" max="1" chance="19.20615"/>		<!-- Часть Топора Баракиэля -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5336" min="1" max="1" chance="0.00550" />		<!-- Рецепт - Запечатанный Кожаный Доспех Кошмаров (60%) -->
+			<reward item_id="5336" min="1" max="1" chance="0.00550"/>		<!-- Рецепт - Запечатанный Кожаный Доспех Кошмаров (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="15"/>
 			<skill id="4411" level="15"/>
 			<skill id="4412" level="13"/>
 			<skill id="4413" level="10"/>
@@ -3298,7 +3298,7 @@
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="68"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2345"/>
@@ -3333,21 +3333,21 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="3584" max="8363" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="3584" max="8363" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="7.392">
-			<reward item_id="5317" min="1" max="1" chance="1.01461" />		<!-- Запечатанная Диадема Величия -->
-			<reward item_id="5482" min="1" max="1" chance="98.98539" />		<!-- Выкройка Запечатанных Поножей Кристалла Тьмы -->
+			<reward item_id="5317" min="1" max="1" chance="1.01461"/>		<!-- Запечатанная Диадема Величия -->
+			<reward item_id="5482" min="1" max="1" chance="98.98539"/>		<!-- Выкройка Запечатанных Поножей Кристалла Тьмы -->
 		</group>
 		<group chance="4.155">
-			<reward item_id="34991" min="13" max="13" chance="100.00000" /> <!-- Обломок Доспеха -->
+			<reward item_id="34991" min="13" max="13" chance="100.00000"/> <!-- Обломок Доспеха -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5352" min="1" max="1" chance="0.00550" />		<!-- Рецепт - Запечатанная Мантия Величия (60%) -->
+			<reward item_id="5352" min="1" max="1" chance="0.00550"/>		<!-- Рецепт - Запечатанная Мантия Величия (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="15"/>
 			<skill id="4411" level="15"/>
 			<skill id="4413" level="13"/>
 			<skill id="4416" level="8"/>
@@ -3358,7 +3358,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="69"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2395"/>
@@ -3393,23 +3393,23 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="3612" max="8432" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="3612" max="8432" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="4.979">
-			<reward item_id="5295" min="1" max="1" chance="1.50633" />		<!-- Запечатанные Перчатки Таллума -->
-			<reward item_id="5489" min="1" max="1" chance="98.49367" />		<!-- Материя Запечатанных Штанов Таллума -->
+			<reward item_id="5295" min="1" max="1" chance="1.50633"/>		<!-- Запечатанные Перчатки Таллума -->
+			<reward item_id="5489" min="1" max="1" chance="98.49367"/>		<!-- Материя Запечатанных Штанов Таллума -->
 		</group>
 		<group chance="3.029">
-			<reward item_id="1893" min="1" max="1" chance="75.23935" />		<!-- Орихарукон -->
-			<reward item_id="8715" min="1" max="1" chance="24.76065" />		<!-- Часть Трезубца Чудовища -->
+			<reward item_id="1893" min="1" max="1" chance="75.23935"/>		<!-- Орихарукон -->
+			<reward item_id="8715" min="1" max="1" chance="24.76065"/>		<!-- Часть Трезубца Чудовища -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5366" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанный Щит Кошмаров (60%) -->
-			<reward item_id="5426" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанный Шлем Кристалла Тьмы (60%) -->
+			<reward item_id="5366" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанный Щит Кошмаров (60%) -->
+			<reward item_id="5426" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанный Шлем Кристалла Тьмы (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4411" level="8"/>
+			<skill id="4411" level="15"/>
 			<skill id="4412" level="15"/>
 			<skill id="4413" level="10"/>
 			<skill id="4414" level="12"/>
@@ -3421,7 +3421,7 @@
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="70"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2444"/>
@@ -3456,24 +3456,24 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="4985" max="11635" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="4985" max="11635" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="12.283">
-			<reward item_id="5297" min="1" max="1" chance="0.24424" />		<!-- Запечатанный Кожаный Доспех Кристалла Тьмы -->
-			<reward item_id="8682" min="1" max="1" chance="0.02442" />		<!-- Буря Наги -->
-			<reward item_id="5508" min="1" max="1" chance="99.73134" />		<!-- Выкройка Запечатанных Перчаток Кристалла Тьмы -->
+			<reward item_id="5297" min="1" max="1" chance="0.24424"/>		<!-- Запечатанный Кожаный Доспех Кристалла Тьмы -->
+			<reward item_id="8682" min="1" max="1" chance="0.02442"/>		<!-- Буря Наги -->
+			<reward item_id="5508" min="1" max="1" chance="99.73134"/>		<!-- Выкройка Запечатанных Перчаток Кристалла Тьмы -->
 		</group>
 		<group chance="3.255">
-			<reward item_id="4042" min="1" max="1" chance="99.07834" />		<!-- Энрия -->
-			<reward item_id="729" min="1" max="1" chance="0.92166" />		<!-- Свиток: Модифицировать Оружие (А) -->
+			<reward item_id="4042" min="1" max="1" chance="99.07834"/>		<!-- Энрия -->
+			<reward item_id="729" min="1" max="1" chance="0.92166"/>		<!-- Свиток: Модифицировать Оружие (А) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5392" min="1" max="1" chance="0.07500" />		<!-- Рецепт - Запечатанные Перчатки Кристалла Тьмы (60%) -->
-			<reward item_id="5430" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанный Шлем Кошмаров (60%) -->
+			<reward item_id="5392" min="1" max="1" chance="0.07500"/>		<!-- Рецепт - Запечатанные Перчатки Кристалла Тьмы (60%) -->
+			<reward item_id="5430" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанный Шлем Кошмаров (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="16"/>
 			<skill id="4411" level="16"/>
 			<skill id="4412" level="13"/>
 			<skill id="4413" level="19"/>
@@ -3485,7 +3485,7 @@
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="42.5"/>
 		<set name="level" value="71"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2492"/>
@@ -3520,26 +3520,26 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="4088" max="9543" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="4088" max="9543" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="2.877">
-			<reward item_id="5298" min="1" max="1" chance="2.60688" />		<!-- Запечатанные Поножи Кристалла Тьмы -->
-			<reward item_id="8681" min="1" max="1" chance="0.10428" />		<!-- Трезубец Чудовища -->
-			<reward item_id="5520" min="1" max="1" chance="97.28884" />		<!-- Выкройка Запечатанной Кирасы Кристалла Тьмы -->
+			<reward item_id="5298" min="1" max="1" chance="2.60688"/>		<!-- Запечатанные Поножи Кристалла Тьмы -->
+			<reward item_id="8681" min="1" max="1" chance="0.10428"/>		<!-- Трезубец Чудовища -->
+			<reward item_id="5520" min="1" max="1" chance="97.28884"/>		<!-- Выкройка Запечатанной Кирасы Кристалла Тьмы -->
 		</group>
 		<group chance="3.491">
-			<reward item_id="1888" min="1" max="1" chance="69.06331" />		<!-- Синтетический Кокс -->
-			<reward item_id="8731" min="1" max="1" chance="21.48382" />		<!-- Камень Жизни - Уровень 70 -->
-			<reward item_id="8741" min="1" max="1" chance="8.59353" />		<!-- Камень Жизни Среднего Качества - Уровень 70 -->
-			<reward item_id="8751" min="1" max="1" chance="0.85935" />		<!-- Камень Жизни Высокого Качества - Уровень 70 -->
+			<reward item_id="1888" min="1" max="1" chance="69.06331"/>		<!-- Синтетический Кокс -->
+			<reward item_id="8731" min="1" max="1" chance="21.48382"/>		<!-- Камень Жизни - Уровень 70 -->
+			<reward item_id="8741" min="1" max="1" chance="8.59353"/>		<!-- Камень Жизни Среднего Качества - Уровень 70 -->
+			<reward item_id="8751" min="1" max="1" chance="0.85935"/>		<!-- Камень Жизни Высокого Качества - Уровень 70 -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="8698" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Буря Наги (60%) -->
-			<reward item_id="729" min="1" max="1" chance="0.00090" />		<!-- Свиток: Модифицировать Оружие (А) -->
+			<reward item_id="8698" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Буря Наги (60%) -->
+			<reward item_id="729" min="1" max="1" chance="0.00090"/>		<!-- Свиток: Модифицировать Оружие (А) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="15"/>
 			<skill id="4411" level="15"/>
 			<skill id="4412" level="14"/>
 			<skill id="4414" level="14"/>
@@ -3551,7 +3551,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="37.5"/>
 		<set name="level" value="72"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2540"/>
@@ -3586,22 +3586,22 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="5042" max="11775" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="5042" max="11775" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="2.456">
-			<reward item_id="5326" min="1" max="1" chance="1.22150" />		<!-- Запечатанная Мантия Кошмаров -->
-			<reward item_id="5521" min="1" max="1" chance="98.77850" />		<!-- Выкройка Запечатанного Латного Доспеха Таллума -->
+			<reward item_id="5326" min="1" max="1" chance="1.22150"/>		<!-- Запечатанная Мантия Кошмаров -->
+			<reward item_id="5521" min="1" max="1" chance="98.77850"/>		<!-- Выкройка Запечатанного Латного Доспеха Таллума -->
 		</group>
 		<group chance="10.994">
-			<reward item_id="1887" min="1" max="1" chance="88.25723" />		<!-- Очищенный Лак -->
-			<reward item_id="8721" min="1" max="1" chance="11.74277" />		<!-- Навершие Руки Кабрио -->
+			<reward item_id="1887" min="1" max="1" chance="88.25723"/>		<!-- Очищенный Лак -->
+			<reward item_id="8721" min="1" max="1" chance="11.74277"/>		<!-- Навершие Руки Кабрио -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5432" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанная Диадема Величия (60%) -->
+			<reward item_id="5432" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанная Диадема Величия (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="15"/>
 			<skill id="4411" level="15"/>
 			<skill id="4412" level="14"/>
 			<skill id="4416" level="8"/>
@@ -3612,7 +3612,7 @@
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="level" value="73"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2586"/>
@@ -3647,23 +3647,23 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="4170" max="9737" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="4170" max="9737" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="4.368">
-			<reward item_id="5301" min="1" max="1" chance="0.68681" />		<!-- Запечатанный Кожаный Доспех Таллума -->
-			<reward item_id="8680" min="1" max="1" chance="0.06868" />		<!-- Топор Баракиэля -->
-			<reward item_id="5524" min="1" max="1" chance="99.24451" />		<!-- Выкройка Запечатанных Набедренников Кристалла Тьмы -->
+			<reward item_id="5301" min="1" max="1" chance="0.68681"/>		<!-- Запечатанный Кожаный Доспех Таллума -->
+			<reward item_id="8680" min="1" max="1" chance="0.06868"/>		<!-- Топор Баракиэля -->
+			<reward item_id="5524" min="1" max="1" chance="99.24451"/>		<!-- Выкройка Запечатанных Набедренников Кристалла Тьмы -->
 		</group>
 		<group chance="3.600">
-			<reward item_id="4040" min="1" max="1" chance="91.66667" />		<!-- Смазка -->
-			<reward item_id="730" min="1" max="1" chance="8.33333" />		<!-- Свиток: Модифицировать Доспех (А) -->
+			<reward item_id="4040" min="1" max="1" chance="91.66667"/>		<!-- Смазка -->
+			<reward item_id="730" min="1" max="1" chance="8.33333"/>		<!-- Свиток: Модифицировать Доспех (А) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5340" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанные Поножи Кристалла Тьмы (60%) -->
+			<reward item_id="5340" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанные Поножи Кристалла Тьмы (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="14"/>
 			<skill id="4411" level="14"/>
 			<skill id="4412" level="15"/>
 			<skill id="4413" level="10"/>
@@ -3676,7 +3676,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="46.5"/>
 		<set name="level" value="74"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2632"/>
@@ -3711,23 +3711,23 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="4260" max="9950" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="4260" max="9950" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="10.900">
-			<reward item_id="5304" min="1" max="1" chance="0.27523" />		<!-- Запечатанная Туника Таллума -->
-			<reward item_id="5503" min="1" max="1" chance="99.72477" />		<!-- Подкладка Запечатанных Сапог Величия -->
+			<reward item_id="5304" min="1" max="1" chance="0.27523"/>		<!-- Запечатанная Туника Таллума -->
+			<reward item_id="5503" min="1" max="1" chance="99.72477"/>		<!-- Подкладка Запечатанных Сапог Величия -->
 		</group>
 		<group chance="2.612">
-			<reward item_id="1890" min="1" max="1" chance="98.85145" />		<!-- Мифриловый Сплав -->
-			<reward item_id="729" min="1" max="1" chance="1.14855" />		<!-- Свиток: Модифицировать Оружие (А) -->
+			<reward item_id="1890" min="1" max="1" chance="98.85145"/>		<!-- Мифриловый Сплав -->
+			<reward item_id="729" min="1" max="1" chance="1.14855"/>		<!-- Свиток: Модифицировать Оружие (А) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="730" min="1" max="1" chance="0.00550" />		<!-- Свиток: Модифицировать Доспех (А) -->
-			<reward item_id="8690" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Клинок Сирры (60%) -->
+			<reward item_id="730" min="1" max="1" chance="0.00550"/>		<!-- Свиток: Модифицировать Доспех (А) -->
+			<reward item_id="8690" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Клинок Сирры (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="13"/>
 			<skill id="4411" level="13"/>
 			<skill id="4412" level="15"/>
 			<skill id="4413" level="10"/>
@@ -3739,7 +3739,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="47.0"/>
 		<set name="level" value="75"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2676"/>
@@ -3774,26 +3774,26 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="5766" max="13462" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="5766" max="13462" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="9.305">
-			<reward item_id="5305" min="1" max="1" chance="0.80602" />		<!-- Запечатанные Штаны Таллума -->
-			<reward item_id="5525" min="1" max="1" chance="99.19398" />		<!-- Модель Запечатанного Шлема Кристалла Тьмы -->
+			<reward item_id="5305" min="1" max="1" chance="0.80602"/>		<!-- Запечатанные Штаны Таллума -->
+			<reward item_id="5525" min="1" max="1" chance="99.19398"/>		<!-- Модель Запечатанного Шлема Кристалла Тьмы -->
 		</group>
 		<group chance="4.070">
-			<reward item_id="34991" min="15" max="15" chance="37.27273" /> <!-- Обломок Доспеха -->
-			<reward item_id="8720" min="1" max="1" chance="36.19165" />		<!-- Часть Языка Темиса -->
-			<reward item_id="8732" min="1" max="1" chance="18.42752" />		<!-- Камень Жизни - Уровень 76 -->
-			<reward item_id="8742" min="1" max="1" chance="7.37101" />		<!-- Камень Жизни Среднего Качества - Уровень 76 -->
-			<reward item_id="8752" min="1" max="1" chance="0.73710" />		<!-- Камень Жизни Высокого Качества - Уровень 76 -->
+			<reward item_id="34991" min="15" max="15" chance="37.27273"/> <!-- Обломок Доспеха -->
+			<reward item_id="8720" min="1" max="1" chance="36.19165"/>		<!-- Часть Языка Темиса -->
+			<reward item_id="8732" min="1" max="1" chance="18.42752"/>		<!-- Камень Жизни - Уровень 76 -->
+			<reward item_id="8742" min="1" max="1" chance="7.37101"/>		<!-- Камень Жизни Среднего Качества - Уровень 76 -->
+			<reward item_id="8752" min="1" max="1" chance="0.73710"/>		<!-- Камень Жизни Высокого Качества - Уровень 76 -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5354" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанные Штаны Таллума (60%) -->
-			<reward item_id="6335" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанное Ожерелье Величия (70%) -->
+			<reward item_id="5354" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанные Штаны Таллума (60%) -->
+			<reward item_id="6335" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанное Ожерелье Величия (70%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="16"/>
 			<skill id="4411" level="16"/>
 			<skill id="4412" level="15"/>
 			<skill id="4413" level="16"/>
@@ -3805,7 +3805,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="47.0"/>
 		<set name="level" value="75"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2676"/>
@@ -3840,24 +3840,24 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="4439" max="10365" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="4439" max="10365" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="2.140">
-			<reward item_id="11591" min="1" max="1" chance="3.50467" />		<!-- Запечатанное Кольцо Величия -->
-			<reward item_id="8679" min="1" max="1" chance="0.14019" />		<!-- Меч Ипоса -->
-			<reward item_id="5479" min="1" max="1" chance="96.35514" />		<!-- Выкройка Запечатанного Кожаного Доспеха Таллума -->
+			<reward item_id="11591" min="1" max="1" chance="3.50467"/>		<!-- Запечатанное Кольцо Величия -->
+			<reward item_id="8679" min="1" max="1" chance="0.14019"/>		<!-- Меч Ипоса -->
+			<reward item_id="5479" min="1" max="1" chance="96.35514"/>		<!-- Выкройка Запечатанного Кожаного Доспеха Таллума -->
 		</group>
 		<group chance="3.695">
-			<reward item_id="34991" min="23" max="23" chance="79.70230" /> <!-- Обломок Доспеха -->
-			<reward item_id="8714" min="1" max="1" chance="20.29770" />		<!-- Часть Топора Баракиэля -->
+			<reward item_id="34991" min="23" max="23" chance="79.70230"/> <!-- Обломок Доспеха -->
+			<reward item_id="8714" min="1" max="1" chance="20.29770"/>		<!-- Часть Топора Баракиэля -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="729" min="1" max="1" chance="0.00300" />		<!-- Свиток: Модифицировать Оружие (А) -->
-			<reward item_id="8694" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Топор Баракиэля (60%) -->
+			<reward item_id="729" min="1" max="1" chance="0.00300"/>		<!-- Свиток: Модифицировать Оружие (А) -->
+			<reward item_id="8694" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Топор Баракиэля (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="15"/>
 			<skill id="4411" level="15"/>
 			<skill id="4416" level="6"/>
 		</skills>
@@ -3867,7 +3867,7 @@
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="46.8"/>
 		<set name="level" value="58"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1828"/>
@@ -3902,28 +3902,28 @@
 			<defence attribute="unholy" value="184"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="3426" max="7993" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="3426" max="7993" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="16.840">
-			<reward item_id="895" min="1" max="1" chance="0.44537" />		<!-- Черное Кольцо -->
-			<reward item_id="2487" min="1" max="1" chance="0.44537" />		<!-- Запечатанные Перчатки Синего Волка -->
-			<reward item_id="175" min="1" max="1" chance="0.01781" />		<!-- Топор Искусства Войны -->
-			<reward item_id="4090" min="1" max="1" chance="47.35154" />		<!-- Модель Запечатанных Сапог Синего Волка -->
-			<reward item_id="4077" min="1" max="1" chance="47.28622" />		<!-- Часть Щита Рока -->
-			<reward item_id="4118" min="1" max="1" chance="4.45368" />		<!-- Навершие Посоха Злых Духов -->
+			<reward item_id="895" min="1" max="1" chance="0.44537"/>		<!-- Черное Кольцо -->
+			<reward item_id="2487" min="1" max="1" chance="0.44537"/>		<!-- Запечатанные Перчатки Синего Волка -->
+			<reward item_id="175" min="1" max="1" chance="0.01781"/>		<!-- Топор Искусства Войны -->
+			<reward item_id="4090" min="1" max="1" chance="47.35154"/>		<!-- Модель Запечатанных Сапог Синего Волка -->
+			<reward item_id="4077" min="1" max="1" chance="47.28622"/>		<!-- Часть Щита Рока -->
+			<reward item_id="4118" min="1" max="1" chance="4.45368"/>		<!-- Навершие Посоха Злых Духов -->
 		</group>
 		<group chance="3.439">
-			<reward item_id="4042" min="1" max="1" chance="66.21111" />		<!-- Энрия -->
-			<reward item_id="34991" min="23" max="23" chance="33.78889" /> <!-- Обломок Доспеха -->
+			<reward item_id="4042" min="1" max="1" chance="66.21111"/>		<!-- Энрия -->
+			<reward item_id="34991" min="23" max="23" chance="33.78889"/> <!-- Обломок Доспеха -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="4173" min="1" max="1" chance="0.07500" />		<!-- Рецепт - Запечатанные Перчатки Синего Волка (100%) -->
-			<reward item_id="948" min="1" max="1" chance="0.03000" />		<!-- Свиток: Модифицировать Доспех (B) -->
-			<reward item_id="4155" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Кираса Синего Волка (100%) -->
+			<reward item_id="4173" min="1" max="1" chance="0.07500"/>		<!-- Рецепт - Запечатанные Перчатки Синего Волка (100%) -->
+			<reward item_id="948" min="1" max="1" chance="0.03000"/>		<!-- Свиток: Модифицировать Доспех (B) -->
+			<reward item_id="4155" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Кираса Синего Волка (100%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="9"/>
+			<skill id="4410" level="15"/>
 			<skill id="4411" level="15"/>
 			<skill id="4412" level="13"/>
 			<skill id="4414" level="19"/>
@@ -3935,7 +3935,7 @@
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="46.8"/>
 		<set name="level" value="62"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2037"/>
@@ -3970,23 +3970,23 @@
 			<defence attribute="unholy" value="184"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="4022" max="9398" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="4022" max="9398" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="7.132">
-			<reward item_id="5288" min="1" max="1" chance="0.42064" />		<!-- Запечатанные Набедренники Кристалла Тьмы -->
-			<reward item_id="5502" min="1" max="1" chance="99.57936" />		<!-- Подкладка Запечатанных Сапог Кошмаров -->
+			<reward item_id="5288" min="1" max="1" chance="0.42064"/>		<!-- Запечатанные Набедренники Кристалла Тьмы -->
+			<reward item_id="5502" min="1" max="1" chance="99.57936"/>		<!-- Подкладка Запечатанных Сапог Кошмаров -->
 		</group>
 		<group chance="6.263">
-			<reward item_id="4042" min="1" max="1" chance="83.23487" />		<!-- Энрия -->
-			<reward item_id="8717" min="1" max="1" chance="16.76513" />		<!-- Лезвие Копья Тифона -->
+			<reward item_id="4042" min="1" max="1" chance="83.23487"/>		<!-- Энрия -->
+			<reward item_id="8717" min="1" max="1" chance="16.76513"/>		<!-- Лезвие Копья Тифона -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5416" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанная Кираса Кристалла Тьмы (60%) -->
-			<reward item_id="5418" min="1" max="1" chance="0.00550" />		<!-- Рецепт - Запечатанный Латный Доспех Таллума (60%) -->
+			<reward item_id="5416" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанная Кираса Кристалла Тьмы (60%) -->
+			<reward item_id="5418" min="1" max="1" chance="0.00550"/>		<!-- Рецепт - Запечатанный Латный Доспех Таллума (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="9"/>
+			<skill id="4410" level="16"/>
 			<skill id="4411" level="16"/>
 			<skill id="4412" level="14"/>
 			<skill id="4414" level="19"/>
@@ -3998,7 +3998,7 @@
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="69"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2395"/>
@@ -4033,23 +4033,23 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="3802" max="8875" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="3802" max="8875" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="8.387">
-			<reward item_id="5319" min="1" max="1" chance="0.89424" />		<!-- Запечатанные Сапоги Величия -->
-			<reward item_id="8686" min="1" max="1" chance="0.03577" />		<!-- Язык Темиса -->
-			<reward item_id="5494" min="1" max="1" chance="99.06999" />		<!-- Часть Запечатанного Щита Кристалла Тьмы -->
+			<reward item_id="5319" min="1" max="1" chance="0.89424"/>		<!-- Запечатанные Сапоги Величия -->
+			<reward item_id="8686" min="1" max="1" chance="0.03577"/>		<!-- Язык Темиса -->
+			<reward item_id="5494" min="1" max="1" chance="99.06999"/>		<!-- Часть Запечатанного Щита Кристалла Тьмы -->
 		</group>
 		<group chance="4.833">
-			<reward item_id="1888" min="1" max="1" chance="93.79268" />		<!-- Синтетический Кокс -->
-			<reward item_id="730" min="1" max="1" chance="6.20732" />		<!-- Свиток: Модифицировать Доспех (А) -->
+			<reward item_id="1888" min="1" max="1" chance="93.79268"/>		<!-- Синтетический Кокс -->
+			<reward item_id="730" min="1" max="1" chance="6.20732"/>		<!-- Свиток: Модифицировать Доспех (А) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5406" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанные Рукавицы Величия (60%) -->
+			<reward item_id="5406" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанные Рукавицы Величия (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="13"/>
 			<skill id="4411" level="13"/>
 			<skill id="4412" level="14"/>
 			<skill id="4416" level="8"/>
@@ -4060,7 +4060,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="69"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2395"/>
@@ -4095,23 +4095,23 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="3612" max="8432" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="3612" max="8432" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="6.639">
-			<reward item_id="5296" min="1" max="1" chance="1.12969" />		<!-- Запечатанные Сапоги Таллума -->
-			<reward item_id="8683" min="1" max="1" chance="0.04519" />		<!-- Копье Тифона -->
-			<reward item_id="5496" min="1" max="1" chance="98.82512" />		<!-- Подкладка Запечатанных Сапог Кристалла Тьмы -->
+			<reward item_id="5296" min="1" max="1" chance="1.12969"/>		<!-- Запечатанные Сапоги Таллума -->
+			<reward item_id="8683" min="1" max="1" chance="0.04519"/>		<!-- Копье Тифона -->
+			<reward item_id="5496" min="1" max="1" chance="98.82512"/>		<!-- Подкладка Запечатанных Сапог Кристалла Тьмы -->
 		</group>
 		<group chance="7.711">
-			<reward item_id="1887" min="1" max="1" chance="90.27364" />		<!-- Очищенный Лак -->
-			<reward item_id="8719" min="1" max="1" chance="9.72636" />		<!-- Лезвие Урагана Собекка -->
+			<reward item_id="1887" min="1" max="1" chance="90.27364"/>		<!-- Очищенный Лак -->
+			<reward item_id="8719" min="1" max="1" chance="9.72636"/>		<!-- Лезвие Урагана Собекка -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5364" min="1" max="1" chance="0.07500" />		<!-- Рецепт - Запечатанный Щит Кристалла Тьмы (60%) -->
+			<reward item_id="5364" min="1" max="1" chance="0.07500"/>		<!-- Рецепт - Запечатанный Щит Кристалла Тьмы (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4411" level="8"/>
+			<skill id="4411" level="15"/>
 			<skill id="4414" level="15"/>
 			<skill id="4416" level="6"/>
 		</skills>
@@ -4121,7 +4121,7 @@
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="70"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2444"/>
@@ -4156,22 +4156,22 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="5229" max="12205" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="5229" max="12205" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="12.300">
-			<reward item_id="5323" min="1" max="1" chance="0.24390" />		<!-- Запечатанный Кожаный Доспех Величия -->
-			<reward item_id="5509" min="1" max="1" chance="99.75610" />		<!-- Выкройка Запечатанных Перчаток Таллума -->
+			<reward item_id="5323" min="1" max="1" chance="0.24390"/>		<!-- Запечатанный Кожаный Доспех Величия -->
+			<reward item_id="5509" min="1" max="1" chance="99.75610"/>		<!-- Выкройка Запечатанных Перчаток Таллума -->
 		</group>
 		<group chance="7.554">
-			<reward item_id="1890" min="1" max="1" chance="82.96267" />		<!-- Мифриловый Сплав -->
-			<reward item_id="8718" min="1" max="1" chance="17.03733" />		<!-- Рукоять Лука Шиид -->
+			<reward item_id="1890" min="1" max="1" chance="82.96267"/>		<!-- Мифриловый Сплав -->
+			<reward item_id="8718" min="1" max="1" chance="17.03733"/>		<!-- Рукоять Лука Шиид -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5420" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Запечатанный Доспех Кошмаров (60%) -->
+			<reward item_id="5420" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Запечатанный Доспех Кошмаров (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="16"/>
 			<skill id="4411" level="16"/>
 			<skill id="4412" level="12"/>
 			<skill id="4413" level="19"/>
@@ -4183,7 +4183,7 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="33.0"/>
 		<set name="level" value="75"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2676"/>
@@ -4218,22 +4218,22 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="5989" max="13983" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="5989" max="13983" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="10.280">
-			<reward item_id="5308" min="1" max="1" chance="0.29183" />		<!-- Запечатанная Мантия Кристалла Тьмы -->
-			<reward item_id="5502" min="1" max="1" chance="99.70817" />		<!-- Подкладка Запечатанных Сапог Кошмаров -->
+			<reward item_id="5308" min="1" max="1" chance="0.29183"/>		<!-- Запечатанная Мантия Кристалла Тьмы -->
+			<reward item_id="5502" min="1" max="1" chance="99.70817"/>		<!-- Подкладка Запечатанных Сапог Кошмаров -->
 		</group>
 		<group chance="5.189">
-			<reward item_id="1893" min="1" max="1" chance="71.84429" />		<!-- Орихарукон -->
-			<reward item_id="8717" min="1" max="1" chance="28.15571" />		<!-- Лезвие Копья Тифона -->
+			<reward item_id="1893" min="1" max="1" chance="71.84429"/>		<!-- Орихарукон -->
+			<reward item_id="8717" min="1" max="1" chance="28.15571"/>		<!-- Лезвие Копья Тифона -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5368" min="1" max="1" chance="0.07500" />		<!-- Рецепт - Запечатанные Сапоги Кристалла Тьмы (60%) -->
+			<reward item_id="5368" min="1" max="1" chance="0.07500"/>		<!-- Рецепт - Запечатанные Сапоги Кристалла Тьмы (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="15"/>
 			<skill id="4411" level="15"/>
 			<skill id="4412" level="12"/>
 			<skill id="4413" level="19"/>
@@ -4245,7 +4245,7 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="33.0"/>
 		<set name="level" value="75"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2676"/>
@@ -4280,26 +4280,26 @@
 			<defence attribute="unholy" value="-33"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="5829" max="13611" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="5829" max="13611" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="3.876">
-			<reward item_id="11592" min="1" max="1" chance="1.93498" />		<!-- Запечатанная Серьга Величия -->
-			<reward item_id="8678" min="1" max="1" chance="0.07740" />		<!-- Клинок Сирры -->
-			<reward item_id="5485" min="1" max="1" chance="97.98762" />		<!-- Материя Запечатанной Туники Таллума -->
+			<reward item_id="11592" min="1" max="1" chance="1.93498"/>		<!-- Запечатанная Серьга Величия -->
+			<reward item_id="8678" min="1" max="1" chance="0.07740"/>		<!-- Клинок Сирры -->
+			<reward item_id="5485" min="1" max="1" chance="97.98762"/>		<!-- Материя Запечатанной Туники Таллума -->
 		</group>
 		<group chance="3.712">
-			<reward item_id="34991" min="15" max="15" chance="41.86422" /> <!-- Обломок Доспеха -->
-			<reward item_id="8716" min="1" max="1" chance="29.04095" />		<!-- Часть Бури Наги -->
-			<reward item_id="8732" min="1" max="1" chance="20.20474" />		<!-- Камень Жизни - Уровень 76 -->
-			<reward item_id="8742" min="1" max="1" chance="8.08190" />		<!-- Камень Жизни Среднего Качества - Уровень 76 -->
-			<reward item_id="8752" min="1" max="1" chance="0.80819" />		<!-- Камень Жизни Высокого Качества - Уровень 76 -->
+			<reward item_id="34991" min="15" max="15" chance="41.86422"/> <!-- Обломок Доспеха -->
+			<reward item_id="8716" min="1" max="1" chance="29.04095"/>		<!-- Часть Бури Наги -->
+			<reward item_id="8732" min="1" max="1" chance="20.20474"/>		<!-- Камень Жизни - Уровень 76 -->
+			<reward item_id="8742" min="1" max="1" chance="8.08190"/>		<!-- Камень Жизни Среднего Качества - Уровень 76 -->
+			<reward item_id="8752" min="1" max="1" chance="0.80819"/>		<!-- Камень Жизни Высокого Качества - Уровень 76 -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="5370" min="1" max="1" chance="0.07500" />		<!-- Рецепт - Запечатанные Сапоги Таллума (60%) -->
+			<reward item_id="5370" min="1" max="1" chance="0.07500"/>		<!-- Рецепт - Запечатанные Сапоги Таллума (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4410" level="8"/>
+			<skill id="4410" level="14"/>
 			<skill id="4411" level="14"/>
 			<skill id="4412" level="12"/>
 			<skill id="4416" level="8"/>
@@ -4310,7 +4310,7 @@
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="41.5"/>
 		<set name="level" value="92"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="1500" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="304477"/>
@@ -4345,7 +4345,7 @@
 			<defence attribute="unholy" value="220"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
@@ -4355,7 +4355,7 @@
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="92"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="1500" />
+		<set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13907"/>
@@ -4390,7 +4390,7 @@
 			<defence attribute="unholy" value="220"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
@@ -4399,7 +4399,7 @@
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="1500" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="312844"/>
@@ -4434,7 +4434,7 @@
 			<defence attribute="unholy" value="240"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
@@ -4443,7 +4443,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="14298"/>
@@ -4478,7 +4478,7 @@
 			<defence attribute="unholy" value="240"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
@@ -4487,7 +4487,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="94"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="1500" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="10"/>
@@ -4522,7 +4522,7 @@
 			<defence attribute="unholy" value="273"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
@@ -4532,7 +4532,7 @@
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="1500" />
+		<set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15122"/>
@@ -4567,7 +4567,7 @@
 			<defence attribute="unholy" value="260"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5462" level="6"/>
 		</skills>
 	</npc>
@@ -4576,7 +4576,7 @@
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="41.5"/>
 		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="1500" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="322511"/>
@@ -4611,7 +4611,7 @@
 			<defence attribute="unholy" value="260"/>
 		</attributes>
 		<skills>
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="14"/>
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="6"/>
 		</skills>
@@ -4621,7 +4621,7 @@
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="30948"/>
@@ -4656,7 +4656,7 @@
 			<defence attribute="unholy" value="260"/>
 		</attributes>
 		<skills>
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="14"/>
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="6"/>
 		</skills>
@@ -4666,7 +4666,7 @@
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="1500" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="322511"/>
@@ -4701,7 +4701,7 @@
 			<defence attribute="unholy" value="260"/>
 		</attributes>
 		<skills>
-			<skill id="4411" level="1"/>
+			<skill id="4411" level="12"/>
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="6"/>
 		</skills>
@@ -4711,7 +4711,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="1500" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="30948"/>
@@ -4746,7 +4746,7 @@
 			<defence attribute="unholy" value="260"/>
 		</attributes>
 		<skills>
-			<skill id="4411" level="1"/>
+			<skill id="4411" level="12"/>
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="6"/>
 		</skills>
@@ -4756,7 +4756,7 @@
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="67.0"/>
 		<set name="level" value="86"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -4791,7 +4791,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5464" level="6"/>
 		</skills>
 	</npc>
@@ -4800,7 +4800,7 @@
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -4835,7 +4835,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 			<skill id="5464" level="3"/>
 		</skills>
 	</npc>
@@ -4844,7 +4844,7 @@
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -4879,7 +4879,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5464" level="6"/>
 		</skills>
 	</npc>
@@ -4888,7 +4888,7 @@
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="60.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -4923,7 +4923,7 @@
 			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5464" level="6"/>
 		</skills>
 	</npc>
@@ -4932,7 +4932,7 @@
 		<set name="collision_radius" value="33.0"/>
 		<set name="collision_height" value="58.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -4967,27 +4967,27 @@
 			<defence attribute="unholy" value="280"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="31363" max="73286" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="31363" max="73286" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="14.813">
-			<reward item_id="19304" min="3" max="9" chance="30.05468" />		<!-- Камень Неопознанного Кольца Айдиоса -->
-			<reward item_id="19287" min="1" max="1" chance="28.40073" />		<!-- Материал Неопознанных Набедренников Айдиоса -->
-			<reward item_id="19300" min="2" max="6" chance="17.53865" />		<!-- Материал Неопознанных Ботинок Айдиоса -->
-			<reward item_id="19288" min="2" max="6" chance="13.87970" />		<!-- Материал Неопознанных Рукавиц Айдиоса -->
-			<reward item_id="19275" min="1" max="1" chance="5.06312" />		<!-- Часть Неопознанного Воителя Хелиоса -->
-			<reward item_id="19271" min="1" max="1" chance="5.06312" />		<!-- Часть Неопознанного Острия Хелиоса -->
+			<reward item_id="19304" min="3" max="9" chance="30.05468"/>		<!-- Камень Неопознанного Кольца Айдиоса -->
+			<reward item_id="19287" min="1" max="1" chance="28.40073"/>		<!-- Материал Неопознанных Набедренников Айдиоса -->
+			<reward item_id="19300" min="2" max="6" chance="17.53865"/>		<!-- Материал Неопознанных Ботинок Айдиоса -->
+			<reward item_id="19288" min="2" max="6" chance="13.87970"/>		<!-- Материал Неопознанных Рукавиц Айдиоса -->
+			<reward item_id="19275" min="1" max="1" chance="5.06312"/>		<!-- Часть Неопознанного Воителя Хелиоса -->
+			<reward item_id="19271" min="1" max="1" chance="5.06312"/>		<!-- Часть Неопознанного Острия Хелиоса -->
 		</group>
 		<group chance="16.735">
-			<reward item_id="19309" min="1" max="1" chance="91.72393" />		<!-- Дурандиловый Сплав -->
-			<reward item_id="30425" min="1" max="1" chance="6.48342" />		<!-- Рецепт - Благословенный Заряд Духа: Ранг R -->
-			<reward item_id="30297" min="1" max="1" chance="1.79265" />		<!-- Кодекс Перерождения -->
+			<reward item_id="19309" min="1" max="1" chance="91.72393"/>		<!-- Дурандиловый Сплав -->
+			<reward item_id="30425" min="1" max="1" chance="6.48342"/>		<!-- Рецепт - Благословенный Заряд Духа: Ранг R -->
+			<reward item_id="30297" min="1" max="1" chance="1.79265"/>		<!-- Кодекс Перерождения -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="19434" min="1" max="1" chance="0.07500" />		<!-- Рецепт - Неопознанные Перчатки Айдиоса (60%) -->
+			<reward item_id="19434" min="1" max="1" chance="0.07500"/>		<!-- Рецепт - Неопознанные Перчатки Айдиоса (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5463" level="6"/>
 		</skills>
 	</npc>
@@ -4996,7 +4996,7 @@
 		<set name="collision_radius" value="33.0"/>
 		<set name="collision_height" value="58.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -5031,26 +5031,26 @@
 			<defence attribute="unholy" value="280"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="17735" max="41442" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="17735" max="41442" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="17.758">
-			<reward item_id="19299" min="1" max="1" chance="49.51008" />		<!-- Материал Неопознанных Перчаток Айдиоса -->
-			<reward item_id="19303" min="1" max="3" chance="42.04302" />		<!-- Камень Неопознанной Серьги Айдиоса -->
-			<reward item_id="19272" min="1" max="1" chance="4.22345" />		<!-- Часть Неопознанного Резака Хелиоса -->
-			<reward item_id="19276" min="1" max="1" chance="4.22345" />		<!-- Часть Неопознанного Буревестника Хелиоса -->
+			<reward item_id="19299" min="1" max="1" chance="49.51008"/>		<!-- Материал Неопознанных Перчаток Айдиоса -->
+			<reward item_id="19303" min="1" max="3" chance="42.04302"/>		<!-- Камень Неопознанной Серьги Айдиоса -->
+			<reward item_id="19272" min="1" max="1" chance="4.22345"/>		<!-- Часть Неопознанного Резака Хелиоса -->
+			<reward item_id="19276" min="1" max="1" chance="4.22345"/>		<!-- Часть Неопознанного Буревестника Хелиоса -->
 		</group>
 		<group chance="35.135">
-			<reward item_id="19310" min="1" max="1" chance="99.78654" />		<!-- Синтетический Кокс Высокого Качества -->
-			<reward item_id="30300" min="1" max="1" chance="0.21346" />		<!-- Кодекс Перерождения - Забвение -->
+			<reward item_id="19310" min="1" max="1" chance="99.78654"/>		<!-- Синтетический Кокс Высокого Качества -->
+			<reward item_id="30300" min="1" max="1" chance="0.21346"/>		<!-- Кодекс Перерождения - Забвение -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="19301" min="1" max="1" chance="0.30000" />		<!-- Материал Неопознанного Символа Айдиоса -->
-			<reward item_id="19439" min="1" max="1" chance="0.07500" />		<!-- Рецепт - Неопознанное Кольцо Айдиоса (60%) -->
-			<reward item_id="19435" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанные Ботинки Айдиоса (60%) -->
+			<reward item_id="19301" min="1" max="1" chance="0.30000"/>		<!-- Материал Неопознанного Символа Айдиоса -->
+			<reward item_id="19439" min="1" max="1" chance="0.07500"/>		<!-- Рецепт - Неопознанное Кольцо Айдиоса (60%) -->
+			<reward item_id="19435" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Неопознанные Ботинки Айдиоса (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<skill id="5463" level="6"/>
 		</skills>
 	</npc>
@@ -5059,7 +5059,7 @@
 		<set name="collision_radius" value="21.0"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -5094,25 +5094,25 @@
 			<defence attribute="unholy" value="444"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="17735" max="41442" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="17735" max="41442" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="16.768">
-			<reward item_id="19302" min="1" max="1" chance="70.19323" />		<!-- Камень Неопознанного Ожерелья Айдиоса -->
-			<reward item_id="19298" min="1" max="1" chance="20.86116" />		<!-- Материал Неопознанных Штанов Айдиоса -->
-			<reward item_id="19273" min="1" max="1" chance="4.47281" />		<!-- Часть Неопознанного Эспадона Хелиоса -->
-			<reward item_id="19277" min="1" max="1" chance="4.47281" />		<!-- Часть Неопознанного Броска Хелиоса -->
+			<reward item_id="19302" min="1" max="1" chance="70.19323"/>		<!-- Камень Неопознанного Ожерелья Айдиоса -->
+			<reward item_id="19298" min="1" max="1" chance="20.86116"/>		<!-- Материал Неопознанных Штанов Айдиоса -->
+			<reward item_id="19273" min="1" max="1" chance="4.47281"/>		<!-- Часть Неопознанного Эспадона Хелиоса -->
+			<reward item_id="19277" min="1" max="1" chance="4.47281"/>		<!-- Часть Неопознанного Броска Хелиоса -->
 		</group>
 		<group chance="10.555">
-			<reward item_id="19313" min="1" max="1" chance="99.28944" />		<!-- Эртел -->
-			<reward item_id="17526" min="1" max="1" chance="0.71056" />		<!-- Свиток: Модифицировать Оружие (R) -->
+			<reward item_id="19313" min="1" max="1" chance="99.28944"/>		<!-- Эртел -->
+			<reward item_id="17526" min="1" max="1" chance="0.71056"/>		<!-- Свиток: Модифицировать Оружие (R) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="19304" min="1" max="1" chance="0.30000" />		<!-- Камень Неопознанного Кольца Айдиоса -->
-			<reward item_id="19436" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанный Символ Айдиоса (60%) -->
+			<reward item_id="19304" min="1" max="1" chance="0.30000"/>		<!-- Камень Неопознанного Кольца Айдиоса -->
+			<reward item_id="19436" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Неопознанный Символ Айдиоса (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="9"/>
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
@@ -5121,7 +5121,7 @@
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="31.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -5156,26 +5156,26 @@
 			<defence attribute="unholy" value="444"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="17735" max="41442" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="17735" max="41442" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="12.036">
-			<reward item_id="19301" min="1" max="1" chance="69.55799" />		<!-- Материал Неопознанного Символа Айдиоса -->
-			<reward item_id="19297" min="1" max="1" chance="17.97940" />		<!-- Материал Неопознанной Туники Айдиоса -->
-			<reward item_id="19274" min="1" max="1" chance="6.23131" />		<!-- Часть Неопознанного Мстителя Хелиоса -->
-			<reward item_id="19278" min="1" max="1" chance="6.23131" />		<!-- Часть Неопознанного Стража Хелиоса -->
+			<reward item_id="19301" min="1" max="1" chance="69.55799"/>		<!-- Материал Неопознанного Символа Айдиоса -->
+			<reward item_id="19297" min="1" max="1" chance="17.97940"/>		<!-- Материал Неопознанной Туники Айдиоса -->
+			<reward item_id="19274" min="1" max="1" chance="6.23131"/>		<!-- Часть Неопознанного Мстителя Хелиоса -->
+			<reward item_id="19278" min="1" max="1" chance="6.23131"/>		<!-- Часть Неопознанного Стража Хелиоса -->
 		</group>
 		<group chance="23.590">
-			<reward item_id="19314" min="1" max="1" chance="96.82069" />		<!-- Темная Сталь -->
-			<reward item_id="17527" min="1" max="1" chance="3.17931" />		<!-- Свиток: Модифицировать Доспех (R) -->
+			<reward item_id="19314" min="1" max="1" chance="96.82069"/>		<!-- Темная Сталь -->
+			<reward item_id="17527" min="1" max="1" chance="3.17931"/>		<!-- Свиток: Модифицировать Доспех (R) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="19303" min="1" max="1" chance="0.30000" />		<!-- Камень Неопознанной Серьги Айдиоса -->
-			<reward item_id="19437" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанное Ожерелье Айдиоса (60%) -->
-			<reward item_id="19438" min="1" max="1" chance="0.03000" />		<!-- Рецепт - Неопознанная Серьга Айдиоса (60%) -->
+			<reward item_id="19303" min="1" max="1" chance="0.30000"/>		<!-- Камень Неопознанной Серьги Айдиоса -->
+			<reward item_id="19437" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Неопознанное Ожерелье Айдиоса (60%) -->
+			<reward item_id="19438" min="1" max="1" chance="0.03000"/>		<!-- Рецепт - Неопознанная Серьга Айдиоса (60%) -->
 	</rewardlist>
 		<skills>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="9"/>
 			<skill id="5467" level="9"/>
 		</skills>
 	</npc>
@@ -5184,7 +5184,7 @@
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="25.5"/>
 		<set name="level" value="22"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="387"/>
@@ -5219,24 +5219,24 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="104" max="243" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="104" max="243" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="0.366">
-			<reward item_id="436" min="1" max="1" chance="8.19672" />		<!-- Туника Знаний -->
-			<reward item_id="469" min="1" max="1" chance="8.19672" />		<!-- Штаны Знаний -->
-			<reward item_id="223" min="1" max="1" chance="0.81967" />		<!-- Кукри -->
-			<reward item_id="316" min="1" max="1" chance="0.81967" />		<!-- Кровь Святых -->
-			<reward item_id="1951" min="1" max="1" chance="81.96721" />		<!-- Часть Латных Набедренников -->
+			<reward item_id="436" min="1" max="1" chance="8.19672"/>		<!-- Туника Знаний -->
+			<reward item_id="469" min="1" max="1" chance="8.19672"/>		<!-- Штаны Знаний -->
+			<reward item_id="223" min="1" max="1" chance="0.81967"/>		<!-- Кукри -->
+			<reward item_id="316" min="1" max="1" chance="0.81967"/>		<!-- Кровь Святых -->
+			<reward item_id="1951" min="1" max="1" chance="81.96721"/>		<!-- Часть Латных Набедренников -->
 		</group>
 		<group chance="6.880">
-			<reward item_id="1061" min="1" max="1" chance="71.71512" />		<!-- Большое Зелье Исцеления -->
-			<reward item_id="34992" min="1" max="1" chance="23.92442" /> <!-- Драгоценные Аксессуары -->
-			<reward item_id="34991" min="2" max="2" chance="4.36047" /> <!-- Обломок Доспеха -->
+			<reward item_id="1061" min="1" max="1" chance="71.71512"/>		<!-- Большое Зелье Исцеления -->
+			<reward item_id="34992" min="1" max="1" chance="23.92442"/> <!-- Драгоценные Аксессуары -->
+			<reward item_id="34991" min="2" max="2" chance="4.36047"/> <!-- Обломок Доспеха -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="1906" min="1" max="1" chance="0.07500" />		<!-- Часть Мифрилового Кольца -->
-		<reward item_id="34990" min="2" max="2" chance="0.03000" /> <!-- Обломок Оружия -->
+			<reward item_id="1906" min="1" max="1" chance="0.07500"/>		<!-- Часть Мифрилового Кольца -->
+		<reward item_id="34990" min="2" max="2" chance="0.03000"/> <!-- Обломок Оружия -->
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="12"/>
@@ -5251,7 +5251,7 @@
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="24"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="435"/>
@@ -5286,24 +5286,24 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="115" max="269" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="115" max="269" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="1.048">
-			<reward item_id="2446" min="1" max="1" chance="2.86260" />		<!-- Укрепленные Кожаные Перчатки -->
-			<reward item_id="2447" min="1" max="1" chance="2.86260" />		<!-- Перчатки Знаний -->
-			<reward item_id="241" min="1" max="1" chance="0.28626" />		<!-- Нож Шилен -->
-			<reward item_id="1956" min="1" max="1" chance="93.98855" />		<!-- Часть Прямоугольного Щита -->
+			<reward item_id="2446" min="1" max="1" chance="2.86260"/>		<!-- Укрепленные Кожаные Перчатки -->
+			<reward item_id="2447" min="1" max="1" chance="2.86260"/>		<!-- Перчатки Знаний -->
+			<reward item_id="241" min="1" max="1" chance="0.28626"/>		<!-- Нож Шилен -->
+			<reward item_id="1956" min="1" max="1" chance="93.98855"/>		<!-- Часть Прямоугольного Щита -->
 		</group>
 		<group chance="6.505">
-			<reward item_id="1061" min="1" max="1" chance="76.31053" />		<!-- Большое Зелье Исцеления -->
-			<reward item_id="34992" min="2" max="2" chance="23.22829" /> <!-- Драгоценные Аксессуары -->
-			<reward item_id="1881" min="1" max="1" chance="4.61184" />		<!-- Грубый Костный Порошок -->
-			<reward item_id="955" min="1" max="1" chance="0.46118" />		<!-- Свиток: Модифицировать Оружие (D) -->
+			<reward item_id="1061" min="1" max="1" chance="76.31053"/>		<!-- Большое Зелье Исцеления -->
+			<reward item_id="34992" min="2" max="2" chance="23.22829"/> <!-- Драгоценные Аксессуары -->
+			<reward item_id="1881" min="1" max="1" chance="4.61184"/>		<!-- Грубый Костный Порошок -->
+			<reward item_id="955" min="1" max="1" chance="0.46118"/>		<!-- Свиток: Модифицировать Оружие (D) -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="1950" min="1" max="1" chance="0.03000" />		<!-- Заготовка Полулат -->
-		<reward item_id="34990" min="2" max="2" chance="0.03000" /> <!-- Обломок Оружия -->
+			<reward item_id="1950" min="1" max="1" chance="0.03000"/>		<!-- Заготовка Полулат -->
+		<reward item_id="34990" min="2" max="2" chance="0.03000"/> <!-- Обломок Оружия -->
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="12"/>
@@ -5318,7 +5318,7 @@
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="35.0"/>
 		<set name="level" value="29"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="908"/>
@@ -5353,7 +5353,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="4410" level="11"/>
+			<skill id="4410" level="10"/>
 			<skill id="4411" level="10"/>
 			<skill id="4412" level="10"/>
 			<skill id="4413" level="12"/>
@@ -5365,7 +5365,7 @@
 		<set name="collision_radius" value="7.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="36"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="809"/>
@@ -5400,28 +5400,28 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="197" max="460" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="197" max="460" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="1.835">
-			<reward item_id="630" min="1" max="1" chance="1.63488" />		<!-- Прямоугольный Щит -->
-			<reward item_id="882" min="1" max="1" chance="1.63488" />		<!-- Мифриловое Кольцо -->
-			<reward item_id="187" min="1" max="1" chance="0.16349" />		<!-- Молот Атубы -->
-			<reward item_id="1956" min="1" max="1" chance="96.56676" />		<!-- Часть Прямоугольного Щита -->
+			<reward item_id="630" min="1" max="1" chance="1.63488"/>		<!-- Прямоугольный Щит -->
+			<reward item_id="882" min="1" max="1" chance="1.63488"/>		<!-- Мифриловое Кольцо -->
+			<reward item_id="187" min="1" max="1" chance="0.16349"/>		<!-- Молот Атубы -->
+			<reward item_id="1956" min="1" max="1" chance="96.56676"/>		<!-- Часть Прямоугольного Щита -->
 		</group>
 		<group chance="9.107">
-			<reward item_id="1061" min="1" max="1" chance="55.25420" />		<!-- Большое Зелье Исцеления -->
-			<reward item_id="34992" min="2" max="2" chance="44.7458" /> <!-- Драгоценные Аксессуары -->
-			<reward item_id="1881" min="1" max="1" chance="11.43077" />		<!-- Грубый Костный Порошок -->
+			<reward item_id="1061" min="1" max="1" chance="55.25420"/>		<!-- Большое Зелье Исцеления -->
+			<reward item_id="34992" min="2" max="2" chance="44.7458"/> <!-- Драгоценные Аксессуары -->
+			<reward item_id="1881" min="1" max="1" chance="11.43077"/>		<!-- Грубый Костный Порошок -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="956" min="1" max="1" chance="0.03000" />		<!-- Свиток: Модифицировать Доспех (D) -->
-			<reward item_id="1950" min="1" max="1" chance="0.03000" />		<!-- Заготовка Полулат -->
-			<reward item_id="2195" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Полулаты -->
-		<reward item_id="34991" min="15" max="15" chance="0.00550" /> <!-- Обломок Доспеха -->
+			<reward item_id="956" min="1" max="1" chance="0.03000"/>		<!-- Свиток: Модифицировать Доспех (D) -->
+			<reward item_id="1950" min="1" max="1" chance="0.03000"/>		<!-- Заготовка Полулат -->
+			<reward item_id="2195" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Полулаты -->
+		<reward item_id="34991" min="15" max="15" chance="0.00550"/> <!-- Обломок Доспеха -->
 	</rewardlist>
 		<skills>
-			<skill id="4274" level="10"/>
+			<skill id="4274" level="1"/>
 			<skill id="4410" level="1"/>
 			<skill id="4411" level="12"/>
 			<skill id="4412" level="12"/>
@@ -5434,7 +5434,7 @@
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="31.0"/>
 		<set name="level" value="37"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="847"/>
@@ -5469,27 +5469,27 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="268" max="627" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="268" max="627" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="0.453">
-			<reward item_id="1125" min="1" max="1" chance="16.55629" />		<!-- Штурмовые Сапоги -->
-			<reward item_id="2427" min="1" max="1" chance="16.55629" />		<!-- Сапоги из Кожи Саламандры -->
-			<reward item_id="280" min="1" max="1" chance="0.66225" />		<!-- Легкий Лук -->
-			<reward item_id="2047" min="1" max="1" chance="66.22517" />		<!-- Клинок Клеймора -->
+			<reward item_id="1125" min="1" max="1" chance="16.55629"/>		<!-- Штурмовые Сапоги -->
+			<reward item_id="2427" min="1" max="1" chance="16.55629"/>		<!-- Сапоги из Кожи Саламандры -->
+			<reward item_id="280" min="1" max="1" chance="0.66225"/>		<!-- Легкий Лук -->
+			<reward item_id="2047" min="1" max="1" chance="66.22517"/>		<!-- Клинок Клеймора -->
 		</group>
 		<group chance="9.207">
-			<reward item_id="1061" min="1" max="1" chance="53.63311" />		<!-- Большое Зелье Исцеления -->
-			<reward item_id="34992" min="1" max="1" chance="30.44423" /> <!-- Драгоценные Аксессуары -->
-			<reward item_id="1879" min="1" max="1" chance="12.66428" />		<!-- Кокс -->
-			<reward item_id="34991" min="3" max="3" chance="3.25839" /> <!-- Обломок Доспеха -->
+			<reward item_id="1061" min="1" max="1" chance="53.63311"/>		<!-- Большое Зелье Исцеления -->
+			<reward item_id="34992" min="1" max="1" chance="30.44423"/> <!-- Драгоценные Аксессуары -->
+			<reward item_id="1879" min="1" max="1" chance="12.66428"/>		<!-- Кокс -->
+			<reward item_id="34991" min="3" max="3" chance="3.25839"/> <!-- Обломок Доспеха -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="1953" min="1" max="1" chance="0.03000" />		<!-- Подкладка Накидки Мудреца -->
-			<reward item_id="2198" min="1" max="1" chance="0.00550" />		<!-- Рецепт - Накидка Мудреца -->
+			<reward item_id="1953" min="1" max="1" chance="0.03000"/>		<!-- Подкладка Накидки Мудреца -->
+			<reward item_id="2198" min="1" max="1" chance="0.00550"/>		<!-- Рецепт - Накидка Мудреца -->
 	</rewardlist>
 		<skills>
-			<skill id="4284" level="12"/>
+			<skill id="4284" level="5"/>
 			<skill id="4410" level="2"/>
 			<skill id="4411" level="10"/>
 			<skill id="4412" level="10"/>
@@ -5502,7 +5502,7 @@
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="17.0"/>
 		<set name="level" value="38"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300" />
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="886"/>
@@ -5537,27 +5537,27 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes><rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
-			<reward item_id="57" min="415" max="971" chance="100.00000" />		<!-- Адена -->
+			<reward item_id="57" min="415" max="971" chance="100.00000"/>		<!-- Адена -->
 		</group>
 		<group chance="0.678">
-			<reward item_id="882" min="1" max="1" chance="44.24779" />		<!-- Мифриловое Кольцо -->
-			<reward item_id="2494" min="1" max="1" chance="11.06195" />		<!-- Латный Щит -->
-			<reward item_id="188" min="1" max="1" chance="0.44248" />		<!-- Посох Призрака -->
-			<reward item_id="2051" min="1" max="1" chance="44.24779" />		<!-- Навершие Посоха Жизни -->
+			<reward item_id="882" min="1" max="1" chance="44.24779"/>		<!-- Мифриловое Кольцо -->
+			<reward item_id="2494" min="1" max="1" chance="11.06195"/>		<!-- Латный Щит -->
+			<reward item_id="188" min="1" max="1" chance="0.44248"/>		<!-- Посох Призрака -->
+			<reward item_id="2051" min="1" max="1" chance="44.24779"/>		<!-- Навершие Посоха Жизни -->
 		</group>
 		<group chance="13.067">
-			<reward item_id="1061" min="1" max="1" chance="38.63167" />		<!-- Большое Зелье Исцеления -->
-			<reward item_id="34992" min="2" max="2" chance="45.05242" /> <!-- Драгоценные Аксессуары -->
-			<reward item_id="34991" min="1" max="1" chance="16.31591" /> <!-- Обломок Доспеха -->
-			<reward item_id="1881" min="1" max="1" chance="11.49460" />		<!-- Грубый Костный Порошок -->
+			<reward item_id="1061" min="1" max="1" chance="38.63167"/>		<!-- Большое Зелье Исцеления -->
+			<reward item_id="34992" min="2" max="2" chance="45.05242"/> <!-- Драгоценные Аксессуары -->
+			<reward item_id="34991" min="1" max="1" chance="16.31591"/> <!-- Обломок Доспеха -->
+			<reward item_id="1881" min="1" max="1" chance="11.49460"/>		<!-- Грубый Костный Порошок -->
 		</group>
 	</rewardlist>
 	<rewardlist type="SWEEP">
-			<reward item_id="2047" min="1" max="1" chance="0.00550" />		<!-- Клинок Клеймора -->
-			<reward item_id="2285" min="1" max="1" chance="0.00300" />		<!-- Рецепт - Клеймор -->
+			<reward item_id="2047" min="1" max="1" chance="0.00550"/>		<!-- Клинок Клеймора -->
+			<reward item_id="2285" min="1" max="1" chance="0.00300"/>		<!-- Рецепт - Клеймор -->
 	</rewardlist>
 		<skills>
-			<skill id="4416" level="2"/>
+			<skill id="4416" level="12"/>
 		</skills>
 	</npc>
 </list>

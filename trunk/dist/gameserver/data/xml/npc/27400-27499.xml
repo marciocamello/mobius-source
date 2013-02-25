@@ -1424,7 +1424,7 @@
 		<attributes/>
 		<skills>
 			<!--Magic Creatures-->
-			<skill id="4416" level="2"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
     <npc id="27431" name="Slayer" title="Resurrected">
@@ -1472,7 +1472,7 @@
 		<attributes/>
 		<skills>
 			<!--Magic Creatures-->
-			<skill id="4416" level="2"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
     <npc id="27432" name="Pursuer" title="Resurrected">
@@ -1520,7 +1520,7 @@
 		<attributes/>
 		<skills>
 			<!--Magic Creatures-->
-			<skill id="4416" level="2"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
     <npc id="27433" name="Priest of Darkness" title="Resurrected">
@@ -1568,7 +1568,7 @@
 		<attributes/>
 		<skills>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 			<!--Heavy Armor Type-->
 			<skill id="4414" level="1"/>
 		</skills>
@@ -1618,7 +1618,7 @@
 		<attributes/>
 		<skills>
 			<!--Magic Creatures-->
-			<skill id="4416" level="2"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
     <npc id="27435" name="Victim's Spirit" title="">

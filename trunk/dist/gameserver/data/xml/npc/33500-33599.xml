@@ -54,8 +54,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="10.0" />
-		<set name="collision_radius" value="15.0" />
+		<set name="collision_height" value="10.0"/>
+		<set name="collision_radius" value="15.0"/>
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="harnak_4pf.SourceOfPower"/>
 		<set name="baseAtkRange" value="40"/>
@@ -85,15 +85,15 @@
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
 		<ai_params>
-			<set name="noRandomWalk" value="true" />
+			<set name="noRandomWalk" value="true"/>
             <set name="TargetEnabled" value="false"/>
             <set name="showTitle" value="false"/>
-			<set name="showName" value="false" />
+			<set name="showName" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="2" />	<!--Магические Создания-->
-			<skill id="14625" level="1" />
-			<skill id="14736" level="1" />
+			<skill id="4416" level="2"/>	<!--Магические Создания-->
+			<skill id="14625" level="1"/>
+			<skill id="14736" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2570,8 +2570,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="10.0" />
-		<set name="collision_radius" value="15.0" />
+		<set name="collision_height" value="10.0"/>
+		<set name="collision_radius" value="15.0"/>
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="harnak_4pf.SourceOfPower"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2601,22 +2601,22 @@
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
 		<ai_params>
-			<set name="noRandomWalk" value="true" />
+			<set name="noRandomWalk" value="true"/>
             <set name="TargetEnabled" value="false"/>
             <set name="showTitle" value="false"/>
-			<set name="showName" value="false" />
+			<set name="showName" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="2" />	<!--Магические Создания-->
-			<skill id="14625" level="1" />
+			<skill id="4416" level="2"/>	<!--Магические Создания-->
+			<skill id="14625" level="1"/>
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20" />
-			<defence attribute="water" value="20" />
-			<defence attribute="wind" value="20" />
-			<defence attribute="earth" value="20" />
-			<defence attribute="holy" value="20" />
-			<defence attribute="unholy" value="20" />
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
 	<npc id="33557" name="Source of Power" title="">
@@ -2625,8 +2625,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="10.0" />
-		<set name="collision_radius" value="15.0" />
+		<set name="collision_height" value="10.0"/>
+		<set name="collision_radius" value="15.0"/>
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="harnak_4pf.SourceOfPower"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2656,14 +2656,14 @@
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
 		<ai_params>
-			<set name="noRandomWalk" value="true" />
+			<set name="noRandomWalk" value="true"/>
             <set name="TargetEnabled" value="false"/>
             <set name="showTitle" value="false"/>
-			<set name="showName" value="false" />
+			<set name="showName" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="2" />	<!--Магические Создания-->
-			<skill id="14625" level="1" />
+			<skill id="4416" level="2"/>	<!--Магические Создания-->
+			<skill id="14625" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3524,40 +3524,40 @@
 		</attributes>
 	</npc>
 	<npc id="33576" name="Elphasia" title="">
-		<set name="aggroRange" value="0" />
-		<set name="ai_type" value="CharacterAI" />
-		<set name="baseAtkRange" value="40" />
-		<set name="baseCON" value="75" />
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="41" />
-		<set name="baseHpMax" value="2880.376" />
-		<set name="baseHpRate" value="1" />
-		<set name="baseHpReg" value="8.5" />
-		<set name="baseINT" value="74" />
-		<set name="baseMAtk" value="1145" />
-		<set name="baseMAtkSpd" value="253" />
-		<set name="baseMDef" value="469" />
-		<set name="baseMEN" value="72" />
-		<set name="baseMpMax" value="1674.8" />
-		<set name="baseMpReg" value="3" />
-		<set name="basePAtk" value="1799" />
-		<set name="basePAtkSpd" value="253" />
-		<set name="basePDef" value="577" />
-		<set name="baseRunSpd" value="120" />
-		<set name="baseSTR" value="109" />
-		<set name="baseShldDef" value="0" />
-		<set name="baseShldRate" value="0" />
-		<set name="baseWIT" value="64" />
-		<set name="baseWalkSpd" value="30" />
-		<set name="collision_height" value="22.5" />
-		<set name="collision_radius" value="8.0" />
-		<set name="level" value="80" />
-		<set name="rewardExp" value="0" />
-		<set name="rewardRp" value="0" />
-		<set name="rewardSp" value="0" />
-		<set name="shots" value="NONE" />
-		<set name="texture" value="" />
-		<set name="type" value="Npc" />
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseINT" value="74"/>
+		<set name="baseMAtk" value="1145"/>
+		<set name="baseMAtkSpd" value="253"/>
+		<set name="baseMDef" value="469"/>
+		<set name="baseMEN" value="72"/>
+		<set name="baseMpMax" value="1674.8"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="1799"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="577"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="64"/>
+		<set name="baseWalkSpd" value="30"/>
+		<set name="collision_height" value="22.5"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="level" value="80"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Npc"/>
 		<ai_params>
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
@@ -3577,40 +3577,40 @@
 		</attributes>
 	</npc>
 	<npc id="33577" name="Mephisto" title="">
-		<set name="aggroRange" value="0" />
-		<set name="ai_type" value="CharacterAI" />
-		<set name="baseAtkRange" value="40" />
-		<set name="baseCON" value="75" />
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="41" />
-		<set name="baseHpMax" value="2880.376" />
-		<set name="baseHpRate" value="1" />
-		<set name="baseHpReg" value="8.5" />
-		<set name="baseINT" value="74" />
-		<set name="baseMAtk" value="1145" />
-		<set name="baseMAtkSpd" value="253" />
-		<set name="baseMDef" value="469" />
-		<set name="baseMEN" value="72" />
-		<set name="baseMpMax" value="1674.8" />
-		<set name="baseMpReg" value="3" />
-		<set name="basePAtk" value="1799" />
-		<set name="basePAtkSpd" value="253" />
-		<set name="basePDef" value="577" />
-		<set name="baseRunSpd" value="120" />
-		<set name="baseSTR" value="109" />
-		<set name="baseShldDef" value="0" />
-		<set name="baseShldRate" value="0" />
-		<set name="baseWIT" value="64" />
-		<set name="baseWalkSpd" value="30" />
-		<set name="collision_height" value="25.0" />
-		<set name="collision_radius" value="13.0" />
-		<set name="level" value="80" />
-		<set name="rewardExp" value="0" />
-		<set name="rewardRp" value="0" />
-		<set name="rewardSp" value="0" />
-		<set name="shots" value="NONE" />
-		<set name="texture" value="" />
-		<set name="type" value="Npc" />
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseINT" value="74"/>
+		<set name="baseMAtk" value="1145"/>
+		<set name="baseMAtkSpd" value="253"/>
+		<set name="baseMDef" value="469"/>
+		<set name="baseMEN" value="72"/>
+		<set name="baseMpMax" value="1674.8"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="1799"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="577"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="64"/>
+		<set name="baseWalkSpd" value="30"/>
+		<set name="collision_height" value="25.0"/>
+		<set name="collision_radius" value="13.0"/>
+		<set name="level" value="80"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Npc"/>
 		<ai_params>
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
@@ -3638,7 +3638,7 @@
 		<set name="collision_height" value="13.0"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="DefaultAI" />
+		<set name="ai_type" value="DefaultAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>

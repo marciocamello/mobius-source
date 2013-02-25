@@ -3465,7 +3465,7 @@
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -3509,30 +3509,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="33680" name="Couch" title="Revolutionaries'">
@@ -3540,7 +3540,7 @@
 		<set name="collision_height" value="37.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300" />
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -3583,30 +3583,30 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000" />
+				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
 			</group>
 			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73" />
-				<reward item_id="34991" min="28" max="84" chance="6.772" />
-				<reward item_id="34990" min="20" max="60" chance="3.768" />
-				<reward item_id="19299" min="1" max="1" chance="0.5" />
-				<reward item_id="35352" min="1" max="1" chance="0.5" />
-				<reward item_id="35348" min="1" max="1" chance="0.5" />
-				<reward item_id="35329" min="1" max="1" chance="0.5" />
-				<reward item_id="19273" min="1" max="1" chance="0.5" />
-				<reward item_id="19295" min="1" max="1" chance="0.5" />
-				<reward item_id="19434" min="1" max="1" chance="0.01" />
-				<reward item_id="19430" min="1" max="1" chance="0.01" />
-				<reward item_id="19411" min="1" max="1" chance="0.005" />
-				<reward item_id="35453" min="1" max="1" chance="0.005" />
-				<reward item_id="35472" min="1" max="1" chance="0.01" />
-				<reward item_id="35476" min="1" max="1" chance="0.01" />
+				<reward item_id="34992" min="9" max="27" chance="20.73"/>
+				<reward item_id="34991" min="28" max="84" chance="6.772"/>
+				<reward item_id="34990" min="20" max="60" chance="3.768"/>
+				<reward item_id="19299" min="1" max="1" chance="0.5"/>
+				<reward item_id="35352" min="1" max="1" chance="0.5"/>
+				<reward item_id="35348" min="1" max="1" chance="0.5"/>
+				<reward item_id="35329" min="1" max="1" chance="0.5"/>
+				<reward item_id="19273" min="1" max="1" chance="0.5"/>
+				<reward item_id="19295" min="1" max="1" chance="0.5"/>
+				<reward item_id="19434" min="1" max="1" chance="0.01"/>
+				<reward item_id="19430" min="1" max="1" chance="0.01"/>
+				<reward item_id="19411" min="1" max="1" chance="0.005"/>
+				<reward item_id="35453" min="1" max="1" chance="0.005"/>
+				<reward item_id="35472" min="1" max="1" chance="0.01"/>
+				<reward item_id="35476" min="1" max="1" chance="0.01"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1" />
-			<reward item_id="19299" min="1" max="1" chance="1" />
-			<reward item_id="19273" min="1" max="1" chance="0.5" />
+			<reward item_id="19295" min="1" max="1" chance="1"/>
+			<reward item_id="19299" min="1" max="1" chance="1"/>
+			<reward item_id="19273" min="1" max="1" chance="0.5"/>
 		</rewardlist>
 	</npc>
 	<npc id="33681" name="Fergason" title="">
