@@ -1111,7 +1111,7 @@
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant3>
 		<for>
-			<effect name="Buff" time="#Time" val="0" stackOrder="1" stackType="Super_Buff1">
+			<effect count="1" name="Transformation" time="#time" stackOrder="1" stackType="transform" val="104">
 				<mul order="0x30" stat="pAtk" val="0.2" />
 				<mul order="0x30" stat="mAtk" val="0.2" />
 				<add order="0x30" stat="pDef" val="#Def" />
