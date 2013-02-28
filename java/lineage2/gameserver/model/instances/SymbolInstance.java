@@ -17,13 +17,13 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
 import lineage2.commons.threading.RunnableImpl;
-import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObjectTasks;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.pledge.Clan;
+import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.taskmanager.EffectTaskManager;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
@@ -93,30 +93,32 @@ public class SymbolInstance extends NpcInstance
 			@Override
 			public void runImpl()
 			{
-				for (Creature target : getAroundCharacters(200, 200))
+				List<Creature> targets = new ArrayList<>();
+				if (!_skill.isAoE())
 				{
-					if (_skill.checkTarget(_owner, target, null, false, false) == null)
+					for (Creature target : getAroundCharacters(200, 200))
 					{
-						List<Creature> targets = new ArrayList<>();
-						if (!_skill.isAoE())
+						if (_skill.checkTarget(_owner, target, null, false, false) == null)
 						{
 							targets.add(target);
+							_skill.useSkill(SymbolInstance.this, targets);
 						}
-						else
-						{
-							for (Creature t : getAroundCharacters(_skill.getSkillRadius(), 128))
-							{
-								if (_skill.checkTarget(_owner, t, null, false, false) == null)
-								{
-									targets.add(target);
-								}
-							}
-						}
-						_skill.useSkill(SymbolInstance.this, targets);
 					}
 				}
+				else
+				{
+					for (Creature t : getAroundCharacters(_skill.getSkillRadius(), 200))
+					{
+						if (_skill.checkTarget(_owner, t, null, false, false) == null)
+						{
+							targets.add(t);
+						}
+					}
+					broadcastPacket(new MagicSkillUse(SymbolInstance.this, SymbolInstance.this, _skill.getId(), _skill.getLevel(), 0, 0));
+					_skill.useSkill(SymbolInstance.this, targets);
+				}
 			}
-		}, 1000L, Rnd.get(4000L, 7000L));
+		}, 1000L, _skill.getReuseDelay() != 0 ? _skill.getReuseDelay() : 3000L);
 	}
 	
 	/**

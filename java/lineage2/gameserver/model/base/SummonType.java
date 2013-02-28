@@ -49,5 +49,13 @@ public enum SummonType
 	/**
 	 * Field TREE.
 	 */
-	TREE
+	TREE,
+	/**
+	 * Field SYMBOL.
+	 */
+	SYMBOL,
+	/**
+	 * Field CLONE.
+	 */
+	CLONE
 }
