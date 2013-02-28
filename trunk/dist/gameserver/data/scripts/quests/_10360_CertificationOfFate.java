@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.HtmlUtils;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-public class _10360_CertificationofFate extends Quest implements ScriptFile
+public class _10360_CertificationOfFate extends Quest implements ScriptFile
 {
 	private static final int reins = 30288;
 	private static final int raimon = 30289;
@@ -103,7 +103,7 @@ public class _10360_CertificationofFate extends Quest implements ScriptFile
 	{
 	}
 	
-	public _10360_CertificationofFate()
+	public _10360_CertificationOfFate()
 	{
 		super(false);
 		addStartNpc(reins);
@@ -130,7 +130,7 @@ public class _10360_CertificationofFate extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
-		if (player.getClassLevel() > 1)
+		if (player.getClassLevel() > 2)
 		{
 			return htmltext;
 		}
@@ -200,45 +200,43 @@ public class _10360_CertificationofFate extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
+			if (st.getPlayer().getRace() == Race.human)
 			{
-				if (st.getPlayer().getRace() == Race.human)
+				if (st.getPlayer().isMageClass())
 				{
-					if (st.getPlayer().isMageClass())
-					{
-						htmltext = "0-3re.htm";
-					}
-					else
-					{
-						htmltext = "0-3r.htm";
-					}
+					htmltext = "0-3re.htm";
 				}
-				else if (st.getPlayer().getRace() == Race.elf)
+				else
 				{
-					if (st.getPlayer().isMageClass())
-					{
-						htmltext = "0-3e.htm";
-					}
-					else
-					{
-						htmltext = "0-3ew.htm";
-					}
+					htmltext = "0-3r.htm";
 				}
-				else if (st.getPlayer().getRace() == Race.darkelf)
+			}
+			else if (st.getPlayer().getRace() == Race.elf)
+			{
+				if (st.getPlayer().isMageClass())
 				{
-					htmltext = "0-3t.htm";
+					htmltext = "0-3e.htm";
 				}
-				else if (st.getPlayer().getRace() == Race.orc)
+				else
 				{
-					htmltext = "0-3d.htm";
+					htmltext = "0-3ew.htm";
 				}
-				else if (st.getPlayer().getRace() == Race.dwarf)
-				{
-					htmltext = "0-3m.htm";
-				}
-				else if (st.getPlayer().getRace() == Race.kamael)
-				{
-					htmltext = "0-3g.htm";
-				}
+			}
+			else if (st.getPlayer().getRace() == Race.darkelf)
+			{
+				htmltext = "0-3t.htm";
+			}
+			else if (st.getPlayer().getRace() == Race.orc)
+			{
+				htmltext = "0-3d.htm";
+			}
+			else if (st.getPlayer().getRace() == Race.dwarf)
+			{
+				htmltext = "0-3m.htm";
+			}
+			else if (st.getPlayer().getRace() == Race.kamael)
+			{
+				htmltext = "0-3g.htm";
 			}
 		}
 		else if (event.equalsIgnoreCase("3-3.htm"))
@@ -277,39 +275,39 @@ public class _10360_CertificationofFate extends Quest implements ScriptFile
 			{
 				if (st.getPlayer().isMageClass())
 				{
-					htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-6re.htm", st.getPlayer());
+					htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-6re.htm", st.getPlayer());
 				}
 				else
 				{
-					htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-6r.htm", st.getPlayer());
+					htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-6r.htm", st.getPlayer());
 				}
 			}
 			else if (st.getPlayer().getRace() == Race.elf)
 			{
 				if (st.getPlayer().isMageClass())
 				{
-					htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-6e.htm", st.getPlayer());
+					htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-6e.htm", st.getPlayer());
 				}
 				else
 				{
-					htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-6ew.htm", st.getPlayer());
+					htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-6ew.htm", st.getPlayer());
 				}
 			}
 			else if (st.getPlayer().getRace() == Race.darkelf)
 			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-6t.htm", st.getPlayer());
+				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-6t.htm", st.getPlayer());
 			}
 			else if (st.getPlayer().getRace() == Race.orc)
 			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-6d.htm", st.getPlayer());
+				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-6d.htm", st.getPlayer());
 			}
 			else if (st.getPlayer().getRace() == Race.dwarf)
 			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-6m.htm", st.getPlayer());
+				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-6m.htm", st.getPlayer());
 			}
 			else if (st.getPlayer().getRace() == Race.kamael)
 			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-6g.htm", st.getPlayer());
+				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-6g.htm", st.getPlayer());
 			}
 			htmltext = htmltext.replace("%showproof%", HtmlUtils.htmlClassName(newClassId));
 		}
@@ -340,7 +338,7 @@ public class _10360_CertificationofFate extends Quest implements ScriptFile
 			}
 			else if (cond == 9)
 			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-5re.htm", st.getPlayer());
+				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-5re.htm", st.getPlayer());
 				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
 			}
 		}
@@ -360,7 +358,7 @@ public class _10360_CertificationofFate extends Quest implements ScriptFile
 			}
 			else if (cond == 8)
 			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-5r.htm", st.getPlayer());
+				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-5r.htm", st.getPlayer());
 				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
 			}
 		}
@@ -380,7 +378,7 @@ public class _10360_CertificationofFate extends Quest implements ScriptFile
 			}
 			else if (cond == 12)
 			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-5t.htm", st.getPlayer());
+				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-5t.htm", st.getPlayer());
 				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
 			}
 		}
@@ -400,7 +398,7 @@ public class _10360_CertificationofFate extends Quest implements ScriptFile
 			}
 			else if (cond == 13)
 			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-5d.htm", st.getPlayer());
+				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-5d.htm", st.getPlayer());
 				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
 			}
 		}
@@ -420,7 +418,7 @@ public class _10360_CertificationofFate extends Quest implements ScriptFile
 			}
 			else if (cond == 15)
 			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-5g.htm", st.getPlayer());
+				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-5g.htm", st.getPlayer());
 				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
 			}
 		}
@@ -440,7 +438,7 @@ public class _10360_CertificationofFate extends Quest implements ScriptFile
 			}
 			else if (cond == 10)
 			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-5e.htm", st.getPlayer());
+				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-5e.htm", st.getPlayer());
 				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
 			}
 		}
@@ -460,7 +458,7 @@ public class _10360_CertificationofFate extends Quest implements ScriptFile
 			}
 			else if (cond == 11)
 			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-5ew.htm", st.getPlayer());
+				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-5ew.htm", st.getPlayer());
 				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
 			}
 		}
@@ -480,7 +478,7 @@ public class _10360_CertificationofFate extends Quest implements ScriptFile
 			}
 			else if (cond == 14)
 			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationofFate/0-5m.htm", st.getPlayer());
+				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-5m.htm", st.getPlayer());
 				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
 			}
 		}
