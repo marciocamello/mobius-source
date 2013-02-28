@@ -189,13 +189,16 @@ public class PriestOfBlessingInstance extends NpcInstance
 		if (val == 0)
 		{
 			Hourglass hg = getHourglass(player);
-			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
-			html.setFile(getHtmlPath(getNpcId(), val, player));
-			html.replace("%price%", String.valueOf(hg.itemPrice));
-			html.replace("%priceBreak%", Util.formatAdena(hg.itemPrice));
-			html.replace("%minLvl%", String.valueOf(hg.minLevel));
-			html.replace("%maxLvl%", String.valueOf(hg.maxLevel));
-			player.sendPacket(html);
+			if (hg != null)
+			{
+				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+				html.setFile(getHtmlPath(getNpcId(), val, player));
+				html.replace("%price%", String.valueOf(hg.itemPrice));
+				html.replace("%priceBreak%", Util.formatAdena(hg.itemPrice));
+				html.replace("%minLvl%", String.valueOf(hg.minLevel));
+				html.replace("%maxLvl%", String.valueOf(hg.maxLevel));
+				player.sendPacket(html);
+			}
 			return;
 		}
 		super.showChatWindow(player, val);
