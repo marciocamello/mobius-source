@@ -88,6 +88,7 @@ import lineage2.gameserver.skills.effects.EffectRestorationRandom;
 import lineage2.gameserver.skills.effects.EffectRoot;
 import lineage2.gameserver.skills.effects.EffectSalvation;
 import lineage2.gameserver.skills.effects.EffectServitorShare;
+import lineage2.gameserver.skills.effects.EffectShadowStep;
 import lineage2.gameserver.skills.effects.EffectSilentMove;
 import lineage2.gameserver.skills.effects.EffectSleep;
 import lineage2.gameserver.skills.effects.EffectStun;
@@ -469,6 +470,10 @@ public enum EffectType
 	 * Field KnockBack.
 	 */
 	KnockBack(EffectKnockBack.class, null, true),
+	/**
+	 * Field ShadowStep
+	 */
+	ShadowStep(EffectShadowStep.class, null, true),
 	/**
 	 * Field ChargesOverTime.
 	 */

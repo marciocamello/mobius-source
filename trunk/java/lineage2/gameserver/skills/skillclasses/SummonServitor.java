@@ -29,6 +29,7 @@ import lineage2.gameserver.model.instances.AgathionInstance;
 import lineage2.gameserver.model.instances.MerchantInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.SummonInstance;
+import lineage2.gameserver.model.instances.SymbolInstance;
 import lineage2.gameserver.model.instances.TrapInstance;
 import lineage2.gameserver.model.instances.TreeInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
@@ -264,6 +265,28 @@ public class SummonServitor extends Skill
 				tree.setFollowMode(false);
 				tree.spawnMe(SummonLoc);
 				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(tree), _lifeTime);
+				break;
+			case SYMBOL:
+				if (activeChar.isMounted())
+				{
+					return;
+				}
+				NpcTemplate symbolTemplate = NpcHolder.getInstance().getTemplate(getNpcId());
+				Location symbolLoc;
+				if (activeChar.getGroundSkillLoc() != null)
+				{
+					symbolLoc = activeChar.getGroundSkillLoc();
+				}
+				else
+				{
+					symbolLoc = activeChar.getLoc();
+				}
+				Skill symbolSkill = getFirstAddedSkill();
+				SymbolInstance symbol = new SymbolInstance(IdFactory.getInstance().getNextId(), symbolTemplate, activeChar, symbolSkill);
+				symbol.setReflection(activeChar.getReflection());
+				symbol.setShowName(false);
+				symbol.spawnMe(symbolLoc);
+				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(symbol), _lifeTime);
 				break;
 		}
 		if (isSSPossible())
