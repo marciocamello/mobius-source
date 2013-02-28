@@ -521,44 +521,41 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 					{
 						ItemInstance product = ItemFunctions.createItem(in.getItemId());
 						
-						if (keepenchant)
+						if (keepenchant && product.canBeEnchanted())
 						{
-							if (product.canBeEnchanted())
+							product.setEnchantLevel(enchantLevel);
+							if (attributes != null)
 							{
-								product.setEnchantLevel(enchantLevel);
-								if (attributes != null)
-								{
-									product.setAttributes(attributes.clone());
-								}
-								if (augmentationId != 0)
-								{
-									product.setAugmentationId(augmentationId);
-								}
+								product.setAttributes(attributes.clone());
 							}
+							if (augmentationId != 0)
+							{
+								product.setAugmentationId(augmentationId);
+							}
+							inventory.addItem(product);
+							activeChar.sendPacket(SystemMessage2.obtainItems(product));
 						}
 						else
 						{
 							product.setEnchantLevel(in.getItemEnchant());
 							product.setAttributes(in.getItemAttributes().clone());
-						}
-						
-						if (in.getChance() >= 0)
-						{
-							chance = in.getChance();
-							
-							if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
+							if (in.getChance() >= 0)
 							{
-								ItemFunctions.addItem(activeChar, in.getItemId(), in.getItemCount(), true);
-								break;
+								chance = in.getChance();
+								
+								if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
+								{
+									ItemFunctions.addItem(activeChar, in.getItemId(), in.getItemCount(), true);
+									break;
+								}
+								chanceFrom += chance;
 							}
-							chanceFrom += chance;
+							else
+							{
+								inventory.addItem(product);
+								activeChar.sendPacket(SystemMessage2.obtainItems(product));
+							}
 						}
-						else
-						{
-							inventory.addItem(product);
-							activeChar.sendPacket(SystemMessage2.obtainItems(product));
-						}
-						
 					}
 				}
 			}
