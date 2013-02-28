@@ -111,6 +111,10 @@ public final class EffectTemplate extends StatTemplate
 	 */
 	public final boolean _cancelOnAction;
 	/**
+	 * Field _cancelOnAttacked.
+	 */
+	public final boolean _cancelOnAttacked;
+	/**
 	 * Field _isReflectable.
 	 */
 	public final boolean _isReflectable;
@@ -164,6 +168,7 @@ public final class EffectTemplate extends StatTemplate
 		_applyOnCaster = set.getBool("applyOnCaster", false);
 		_applyOnSummon = set.getBool("applyOnSummon", true);
 		_cancelOnAction = set.getBool("cancelOnAction", false);
+		_cancelOnAttacked = set.getBool("cancelOnAttacked", false);
 		_isReflectable = set.getBool("isReflectable", true);
 		_isSaveable = set.isSet("isSaveable") ? set.getBool("isSaveable") : null;
 		_isCancelable = set.isSet("isCancelable") ? set.getBool("isCancelable") : null;

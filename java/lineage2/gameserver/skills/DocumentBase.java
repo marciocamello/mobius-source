@@ -381,6 +381,10 @@ abstract class DocumentBase
 		{
 			set.set("cancelOnAction", Boolean.valueOf(attrs.getNamedItem("cancelOnAction").getNodeValue()));
 		}
+		if (attrs.getNamedItem("cancelOnAttacked") != null)
+		{
+			set.set("cancelOnAttacked", Boolean.valueOf(attrs.getNamedItem("cancelOnAttacked").getNodeValue()));
+		}
 		if (attrs.getNamedItem("isOffensive") != null)
 		{
 			set.set("isOffensive", Boolean.valueOf(attrs.getNamedItem("isOffensive").getNodeValue()));

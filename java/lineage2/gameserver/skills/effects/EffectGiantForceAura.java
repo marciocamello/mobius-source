@@ -20,7 +20,9 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
+import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
+import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.tables.SkillTable;
 
@@ -132,6 +134,47 @@ public class EffectGiantForceAura extends Effect
 			{
 				return false;
 			}
+		}
+		if (getEffected() instanceof Player)
+		{
+			if (!getEffected().getPlayer().isInParty())
+			{
+				return false;
+			}
+			else if (getEffected().getPlayer().getParty() != getEffector().getPlayer().getParty())
+			{
+				return false;
+			}
+		}
+		//Count Active Aura
+		int activeAura = 0;
+		boolean psActive = false;
+		Effect psEffect = null;
+		if (getEffected().getEffectList() != null)
+		{	
+			for (Effect e : getEffected().getEffectList().getAllEffects())
+			{
+				if (e == null)
+					continue;
+				if (e.getEffectType() == EffectType.GiantForceAura)
+				{
+					activeAura++;
+				}
+				if (e.getStackType().equals("[PartySolidarity]"))
+				{
+					psEffect = e;
+					psActive = true;
+				}
+			}
+		}
+		if (activeAura >= 4)
+		{
+			Skill PartySolidarity = SkillTable.getInstance().getInfo(1955, Math.min((activeAura-3), 3));
+			PartySolidarity.getEffects(getEffected(), getEffected(), false, false);
+		}
+		else if (psActive)
+		{
+			psEffect.exit();
 		}
 		return true;
 	}
