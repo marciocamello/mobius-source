@@ -664,6 +664,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="isOffensive" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="addSkills" val="10523;#PLevel" />
 		<set name="npcId" val="19115" />
@@ -678,6 +679,7 @@
         <set name="target" val="TARGET_AURA"/>
         <set name="skillRadius" val="200"/>
         <set name="isDebuff" val="true"/>
+		<set name="isOffensive" val="true" />
 		<set name="reuseDelay" val="2000" />
         <set name="skillType" val="DEBUFF"/>
         <set name="power" val="80"/>
