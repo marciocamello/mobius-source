@@ -620,7 +620,7 @@
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="5"/>
 		<set name="level" value="94"/>
-		<set name="type" value="Pet"/>
+		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13881"/>
