@@ -638,4 +638,10 @@ public class Util
 		}
 		return result;
 	}
+
+	public static final double convertHeadingToDegree(int clientHeading)
+	{
+		double degree = clientHeading / 182.044444444;
+		return degree;
+	}
 }
