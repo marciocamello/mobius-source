@@ -348,7 +348,7 @@
     <skill id="11017" levels="8" name="Elemental Crash">
     <!-- Inflicts a magic attack imbued with elemental properties on the target with 144 power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
         <table name="#powerPvP">0</table>
-        <table name="#pwr">121 122 126 129 133 136 140 143</table>
+        <table name="#pwr">144 146 150 154 159 163 167 171</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#reuseDelay">2400</table>
         <set name="relationSkillsId" val="1342;1343;1160;1236;1234;1555;1437"/>
@@ -381,7 +381,7 @@
     <skill id="11018" levels="8" name="Elemental Crash (fire)">
     <!-- Inflicts a magic attack imbued with elemental properties on the target with 144 power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
         <table name="#powerPvP">0</table>
-        <table name="#pwr">121 122 126 129 133 136 140 143</table>
+        <table name="#pwr">144 146 150 154 159 163 167 171</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <set name="relationSkillsId" val="1342;1343;1160;1236;1234;1555;1437"/>
         <set name="magicType" val="MAGIC"/>
@@ -401,7 +401,7 @@
     <skill id="11019" levels="8" name="Elemental Crash (water)">
     <!-- Inflicts a magic attack imbued with elemental properties on the target with 144 power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
         <table name="#powerPvP">0</table>
-        <table name="#pwr">121 122 126 129 133 136 140 143</table>
+        <table name="#pwr">144 146 150 154 159 163 167 171</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <set name="relationSkillsId" val="1342;1343;1160;1236;1234;1555;1437"/>
         <set name="magicType" val="MAGIC"/>
@@ -421,7 +421,7 @@
     <skill id="11020" levels="8" name="Elemental Crash (wind)">
     <!-- Inflicts a magic attack imbued with elemental properties on the target with 144 power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
         <table name="#powerPvP">0</table>
-        <table name="#pwr">121 122 126 129 133 136 140 143</table>
+        <table name="#pwr">144 146 150 154 159 163 167 171</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <set name="relationSkillsId" val="1342;1343;1160;1236;1234;1555;1437"/>
         <set name="magicType" val="MAGIC"/>
@@ -441,7 +441,7 @@
     <skill id="11021" levels="8" name="Elemental Crash (earth)">
     <!-- Inflicts a magic attack imbued with elemental properties on the target with 144 power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
         <table name="#powerPvP">0</table>
-        <table name="#pwr">121 122 126 129 133 136 140 143</table>
+        <table name="#pwr">144 146 150 154 159 163 167 171</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <set name="relationSkillsId" val="1342;1343;1160;1236;1234;1555;1437"/>
         <set name="magicType" val="MAGIC"/>
@@ -461,7 +461,7 @@
     <skill id="11022" levels="8" name="Elemental Crash (4 attributes)">
     <!-- Inflicts a magic attack imbued with elemental properties on the target with 144 power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
         <table name="#powerPvP">0</table>
-        <table name="#pwr">121 122 126 129 133 136 140 143</table>
+        <table name="#pwr">144 146 150 154 159 163 167 171</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
         <set name="relationSkillsId" val="1342;1343;1160;1236;1234;1555;1437"/>
         <set name="magicType" val="MAGIC"/>
