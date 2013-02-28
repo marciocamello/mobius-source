@@ -17435,6 +17435,10 @@
 			<skill id="10023" level="1" cost="50000000" name="King of Beasts" min_level="95" />
 			<skill id="10023" level="2" cost="50000000" name="King of Beasts" min_level="98" />
 			<skill id="10024" level="1" cost="50000000" name="Party Rescue" min_level="99" />
+			<skill id="10025" level="1" cost="10000000" name="Knight Frenzy" min_level="85" />
+			<skill id="10025" level="2" cost="50000000" name="Knight Frenzy" min_level="90" />
+			<skill id="10025" level="3" cost="50000000" name="Knight Frenzy" min_level="95" />
+			<skill id="10025" level="4" cost="50000000" name="Knight Frenzy" min_level="99" />
 			<skill id="10026" level="1" cost="10000000" name="Superior Aggression" min_level="85" />
 			<skill id="10026" level="2" cost="50000000" name="Superior Aggression" min_level="87" />
 			<skill id="10026" level="3" cost="50000000" name="Superior Aggression" min_level="90" />
