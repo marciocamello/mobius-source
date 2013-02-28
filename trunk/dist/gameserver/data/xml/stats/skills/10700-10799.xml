@@ -690,7 +690,8 @@
         <set name="power" val="#power"/>
         <set name="skillType" val="PDAM"/>
         <set name="target" val="TARGET_MULTIFACE"/>
-        <set name="skillRadius" val="250"/>
+		<set name="scopeAngle" val="60"/>
+        <set name="skillRadius" val="900"/>
         <cond msgId="113" addName="1">
             <using kind="Bow,Crossbow"/>
         </cond>
@@ -745,8 +746,8 @@
         <set name="overHit" val="true"/>
         <set name="power" val="#power"/>
         <set name="skillType" val="PDAM"/>
-        <set name="target" val="TARGET_MULTIFACE"/>
-        <set name="skillRadius" val="150"/>
+        <set name="target" val="TARGET_AREA"/>
+        <set name="skillRadius" val="350"/>
         <cond msgId="113" addName="1">
             <using kind="Bow,Crossbow"/>
         </cond>
@@ -1262,9 +1263,15 @@
     <skill id="10798" levels="1" name="Hawk Sharp Claw">
     <!-- Attacks the enemy with sharp talon to inflict bleed. -->
         <set name="power" val="9850"/>
+		<set name="reuseDelay" val="25000" />
+		<set name="hitTime" val="1080" />
+		<set name="mpConsume2" val="71" />
+		<set name="magicLvl" val="85" />
+		<set name="coolTime" val="769" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="40" />
         <set name="target" val="TARGET_ONE"/>
-        <set name="skillType" val="PDAM"/>
-        <set name="operateType" val="OP_ACTIVE"/>
         <set name="shieldignore" val="true"/>
         <set name="nextAction" val="attack"/>
         <for/>

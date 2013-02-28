@@ -253,6 +253,12 @@
         <cond msgId="113" addName="1">
             <using kind="Dagger,Dual Dagger"/>
         </cond>
+		<for>
+			<effect applyOnCaster="true" count="1" name="Buff" time="15" val="0" isOffensive="false">
+				<add order="0x40" stat="runSpd" val="40" />
+				<add order="0x40" stat="rEvas" val="5" />
+			</effect>
+		</for>
 		<enchant1 levels="10" name="Cost">		
 			<table name="#mpConsume2">69 67 64 62 59 57 54 52 49 47</table>
 		</enchant1>
@@ -531,25 +537,18 @@
     <skill id="10516" levels="6" name="Shadow Chase">
     <!-- Moves behind an enemy, cancels his target, and inflicts Stun. -->
         <table name="#magicLevel">85 87 90 93 96 99</table>
-        <table name="#activateRate">50</table>
 		<table name="#mpConsume2">38 42 44 48 54 58</table>
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="coolTime" val="370" />
 		<set name="hitTime" val="800" />
 		<table name="#reuseDelay">15000</table>
 		<set name="reuseDelay" val="#reuseDelay" />
-        <set name="activateRate" val="#activateRate"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="target" val="TARGET_ONE"/>
-        <set name="skillType" val="DRAIN"/>
+        <set name="skillType" val="DEBUFF"/>
         <set name="relationSkillsId" val="998;821"/>
         <set name="effectRange" val="1100"/>
-        <set name="cancelTarget" val="50"/>
-        <set name="flyType" val="DUMMY"/>
-		<table name="#flyRadius">600</table>
-		<set name="flyRadius" val="#flyRadius" />
-        <set name="flyToBack" val="true"/>
 		<enchant1 levels="10" name="Cost">		
 			<table name="#mpConsume2">39 37 34 22 29 27 14 12 9 7</table>
 		</enchant1>
@@ -563,8 +562,9 @@
 			<table name="#reuseDelay">8900 8700 7500 7000 6500 6000 5500 5000 4500 4000</table>
 		</enchant4>
         <for>
+			<effect count="1" name="ShadowStep" stackOrder="-1" stackType="ShadowStep" effectPower="-1" time="0" val="0" isReflectable="false" />
             <effect name="Stun" time="3" val="0" stackOrder="1" stackType="stun" effectPower="40" effectType="STUN"/>
-            <effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="3" val="0" isReflectable="false">
+            <effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" effectPower="50" time="3" val="0" isReflectable="false">
                 <def name="doStopTarget" val="true"/>
             </effect>
         </for>
@@ -657,14 +657,16 @@
         <table name="#magicLevel">85 87 90 93 96 99</table>
         <table name="#PLevel">1 2 3 4 5 6</table>
         <set name="magicLevel" val="#magicLevel"/>
-		<set name="lifeTime" val="30" /> <!-- Need Retail LifeTime -->
+		<set name="lifeTime" val="15" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SUMMON" />
-		<set name="summonType" val="TREE" />
+		<set name="summonType" val="SYMBOL" />
+		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="true" />
+		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="addSkills" val="10523;#PLevel" />
-		<set name="npcId" val="19115" /> <!-- Need Retail NpcId -->
+		<set name="npcId" val="19115" />
         <set name="relationSkillsId" val="102;115"/>
     </skill>
     <skill id="10523" levels="6" name="Poisoned">
@@ -673,7 +675,7 @@
         <table name="#abnormal_lv">3 4 5 6 7 8</table>
         <table name="#dmg">687 700 721 742 762 783</table>
         <set name="magicLevel" val="#magicLevel"/>
-        <set name="target" val="TARGET_AREA"/>
+        <set name="target" val="TARGET_AURA"/>
         <set name="skillRadius" val="200"/>
         <set name="isDebuff" val="true"/>
 		<set name="reuseDelay" val="2000" />
@@ -1264,8 +1266,6 @@
         <table name="#mpConsume2">60 62 64 66 68</table>
         <set name="reuseDelay" val="60000"/>
         <set name="hitTime" val="800"/>
-        <table name="#activateRate">50</table>
-        <set name="activateRate" val="#activateRate"/>
         <set name="castRange" val="40"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
