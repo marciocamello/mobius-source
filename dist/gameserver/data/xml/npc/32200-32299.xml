@@ -4374,7 +4374,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="CaravanTrader"/>
 		<skills>
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 		</skills>
