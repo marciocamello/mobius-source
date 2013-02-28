@@ -23,58 +23,49 @@ import lineage2.gameserver.scripts.Functions;
 public class VitaminManager extends Functions
 {
 	/**
-	 * Field PetCoupon. (value is 13273)
+	 * Minion Coupons
 	 */
-	private static final int PetCoupon = 13273;
+	private static final int MinionCoupon = 21275; // Minion Coupon
+	private static final int SuperiorMinionCoupon = 21279; // Superior Minion Coupon
+	private static final int EnhancedRoseSpiritCoupon = 20914; // Enhanced Rose Spirit Coupon
+
 	/**
-	 * Field SpecialPetCoupon. (value is 14065)
+	 * Minion Pets
 	 */
-	private static final int SpecialPetCoupon = 14065;
-	/**
-	 * Field WeaselNeck. (value is 13017)
-	 */
-	private static final int WeaselNeck = 13017;
-	/**
-	 * Field PrincNeck. (value is 13018)
-	 */
-	private static final int PrincNeck = 13018;
-	/**
-	 * Field BeastNeck. (value is 13019)
-	 */
-	private static final int BeastNeck = 13019;
-	/**
-	 * Field FoxNeck. (value is 13020)
-	 */
-	private static final int FoxNeck = 13020;
-	/**
-	 * Field KnightNeck. (value is 13548)
-	 */
-	private static final int KnightNeck = 13548;
-	/**
-	 * Field SpiritNeck. (value is 13549)
-	 */
-	private static final int SpiritNeck = 13549;
-	/**
-	 * Field OwlNeck. (value is 13550)
-	 */
-	private static final int OwlNeck = 13550;
-	/**
-	 * Field TurtleNeck. (value is 13551)
-	 */
-	private static final int TurtleNeck = 13551;
+	private static final int WhiteWeasellWhistle = 13017;
+	private static final int FairyPrincessWhistle = 13018;
+	private static final int WildBeastFighterWhistle = 13019;
+	private static final int FoxShamanWhistle = 13020;
 	
+	/**
+	 * Superior Minion Pets
+	 */
+	private static final int ToyKnightWhistle = 14061;
+	private static final int SpiritShamanWhistle = 14062;
+	private static final int TurtleAsceticWhistle = 14064;
+	
+	/**
+	 * Rose Spirit
+	 */
+	private static final int DeshelophNeck = 20915;
+	private static final int HyumNeck = 20916;
+	private static final int LekangNeck = 20917;
+	private static final int LiliasNeck = 20918;
+	private static final int LaphamNeck = 20919;
+	private static final int MafumNeck = 20920;
+
 	/**
 	 * Method giveWeasel.
 	 */
-	public void giveWeasel()
+	public void giveWhiteWeasel()
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
-		if (getItemCount(player, PetCoupon) > 0)
+		if (getItemCount(player, MinionCoupon) > 0)
 		{
-			removeItem(player, PetCoupon, 1);
-			addItem(player, WeaselNeck, 1);
+			removeItem(player, MinionCoupon, 1);
+			addItem(player, WhiteWeasellWhistle, 1);
 			htmltext = npc.getNpcId() + "-ok.htm";
 		}
 		else
@@ -87,15 +78,15 @@ public class VitaminManager extends Functions
 	/**
 	 * Method givePrinc.
 	 */
-	public void givePrinc()
+	public void giveFairyPrincess()
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
-		if (getItemCount(player, PetCoupon) > 0)
+		if (getItemCount(player, MinionCoupon) > 0)
 		{
-			removeItem(player, PetCoupon, 1);
-			addItem(player, PrincNeck, 1);
+			removeItem(player, MinionCoupon, 1);
+			addItem(player, FairyPrincessWhistle, 1);
 			htmltext = npc.getNpcId() + "-ok.htm";
 		}
 		else
@@ -108,15 +99,15 @@ public class VitaminManager extends Functions
 	/**
 	 * Method giveBeast.
 	 */
-	public void giveBeast()
+	public void giveWildBeastFighter()
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
-		if (getItemCount(player, PetCoupon) > 0)
+		if (getItemCount(player, MinionCoupon) > 0)
 		{
-			removeItem(player, PetCoupon, 1);
-			addItem(player, BeastNeck, 1);
+			removeItem(player, MinionCoupon, 1);
+			addItem(player, WildBeastFighterWhistle, 1);
 			htmltext = npc.getNpcId() + "-ok.htm";
 		}
 		else
@@ -129,15 +120,15 @@ public class VitaminManager extends Functions
 	/**
 	 * Method giveFox.
 	 */
-	public void giveFox()
+	public void giveFoxShaman()
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
-		if (getItemCount(player, PetCoupon) > 0)
+		if (getItemCount(player, MinionCoupon) > 0)
 		{
-			removeItem(player, PetCoupon, 1);
-			addItem(player, FoxNeck, 1);
+			removeItem(player, MinionCoupon, 1);
+			addItem(player, FoxShamanWhistle, 1);
 			htmltext = npc.getNpcId() + "-ok.htm";
 		}
 		else
@@ -150,15 +141,15 @@ public class VitaminManager extends Functions
 	/**
 	 * Method giveKnight.
 	 */
-	public void giveKnight()
+	public void giveToyKnight()
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
-		if (getItemCount(player, SpecialPetCoupon) > 0)
+		if (getItemCount(player, SuperiorMinionCoupon) > 0)
 		{
-			removeItem(player, SpecialPetCoupon, 1);
-			addItem(player, KnightNeck, 1);
+			removeItem(player, SuperiorMinionCoupon, 1);
+			addItem(player, ToyKnightWhistle, 1);
 			htmltext = npc.getNpcId() + "-ok.htm";
 		}
 		else
@@ -171,36 +162,15 @@ public class VitaminManager extends Functions
 	/**
 	 * Method giveSpirit.
 	 */
-	public void giveSpirit()
+	public void giveSpiritShaman()
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
-		if (getItemCount(player, SpecialPetCoupon) > 0)
+		if (getItemCount(player, SuperiorMinionCoupon) > 0)
 		{
-			removeItem(player, SpecialPetCoupon, 1);
-			addItem(player, SpiritNeck, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
-		}
-		else
-		{
-			htmltext = npc.getNpcId() + "-no.htm";
-		}
-		npc.showChatWindow(player, "default/" + htmltext);
-	}
-	
-	/**
-	 * Method giveOwl.
-	 */
-	public void giveOwl()
-	{
-		Player player = getSelf();
-		NpcInstance npc = getNpc();
-		String htmltext;
-		if (getItemCount(player, SpecialPetCoupon) > 0)
-		{
-			removeItem(player, SpecialPetCoupon, 1);
-			addItem(player, OwlNeck, 1);
+			removeItem(player, SuperiorMinionCoupon, 1);
+			addItem(player, SpiritShamanWhistle, 1);
 			htmltext = npc.getNpcId() + "-ok.htm";
 		}
 		else
@@ -213,20 +183,146 @@ public class VitaminManager extends Functions
 	/**
 	 * Method giveTurtle.
 	 */
-	public void giveTurtle()
+	public void giveTurtleAscetic()
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
-		if (getItemCount(player, SpecialPetCoupon) > 0)
+		if (getItemCount(player, SuperiorMinionCoupon) > 0)
 		{
-			removeItem(player, SpecialPetCoupon, 1);
-			addItem(player, TurtleNeck, 1);
+			removeItem(player, SuperiorMinionCoupon, 1);
+			addItem(player, TurtleAsceticWhistle, 1);
 			htmltext = npc.getNpcId() + "-ok.htm";
 		}
 		else
 		{
 			htmltext = npc.getNpcId() + "-no.htm";
+		}
+		npc.showChatWindow(player, "default/" + htmltext);
+	}
+	
+	/**
+	 * Method giveDesheloph.
+	 */
+	public void giveDesheloph()
+	{
+		Player player = getSelf();
+		NpcInstance npc = getNpc();
+		String htmltext;
+		if (getItemCount(player, EnhancedRoseSpiritCoupon) > 0)
+		{
+			removeItem(player, EnhancedRoseSpiritCoupon, 1);
+			addItem(player, DeshelophNeck, 1);
+			htmltext = npc.getNpcId() + "-ok.htm";
+		}
+		else
+		{
+			htmltext = npc.getNpcId() + "-no2.htm";
+		}
+		npc.showChatWindow(player, "default/" + htmltext);
+	}
+	
+	/**
+	 * Method giveHyum.
+	 */
+	public void giveHyum()
+	{
+		Player player = getSelf();
+		NpcInstance npc = getNpc();
+		String htmltext;
+		if (getItemCount(player, EnhancedRoseSpiritCoupon) > 0)
+		{
+			removeItem(player, EnhancedRoseSpiritCoupon, 1);
+			addItem(player, HyumNeck, 1);
+			htmltext = npc.getNpcId() + "-ok.htm";
+		}
+		else
+		{
+			htmltext = npc.getNpcId() + "-no2.htm";
+		}
+		npc.showChatWindow(player, "default/" + htmltext);
+	}
+	
+	/**
+	 * Method giveLekang.
+	 */
+	public void giveLekang()
+	{
+		Player player = getSelf();
+		NpcInstance npc = getNpc();
+		String htmltext;
+		if (getItemCount(player, EnhancedRoseSpiritCoupon) > 0)
+		{
+			removeItem(player, EnhancedRoseSpiritCoupon, 1);
+			addItem(player, LekangNeck, 1);
+			htmltext = npc.getNpcId() + "-ok.htm";
+		}
+		else
+		{
+			htmltext = npc.getNpcId() + "-no2.htm";
+		}
+		npc.showChatWindow(player, "default/" + htmltext);
+	}
+	
+	/**
+	 * Method giveLilias.
+	 */
+	public void giveLilias()
+	{
+		Player player = getSelf();
+		NpcInstance npc = getNpc();
+		String htmltext;
+		if (getItemCount(player, EnhancedRoseSpiritCoupon) > 0)
+		{
+			removeItem(player, EnhancedRoseSpiritCoupon, 1);
+			addItem(player, LiliasNeck, 1);
+			htmltext = npc.getNpcId() + "-ok.htm";
+		}
+		else
+		{
+			htmltext = npc.getNpcId() + "-no2.htm";
+		}
+		npc.showChatWindow(player, "default/" + htmltext);
+	}
+	
+	/**
+	 * Method giveLapham.
+	 */
+	public void giveLapham()
+	{
+		Player player = getSelf();
+		NpcInstance npc = getNpc();
+		String htmltext;
+		if (getItemCount(player, EnhancedRoseSpiritCoupon) > 0)
+		{
+			removeItem(player, EnhancedRoseSpiritCoupon, 1);
+			addItem(player, LaphamNeck, 1);
+			htmltext = npc.getNpcId() + "-ok.htm";
+		}
+		else
+		{
+			htmltext = npc.getNpcId() + "-no2.htm";
+		}
+		npc.showChatWindow(player, "default/" + htmltext);
+	}
+	
+	/**
+	 * Method giveMafum.
+	 */
+	public void giveMafum()
+	{
+		Player player = getSelf();
+		NpcInstance npc = getNpc();
+		String htmltext;
+		if (getItemCount(player, EnhancedRoseSpiritCoupon) > 0)
+		{
+			removeItem(player, EnhancedRoseSpiritCoupon, 1);
+			addItem(player, MafumNeck, 1);
+			htmltext = npc.getNpcId() + "-ok.htm";
+		}
+		else
+		{
+			htmltext = npc.getNpcId() + "-no2.htm";
 		}
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
