@@ -962,17 +962,18 @@
 		<set name="magicType" val="SPECIAL" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="isMagic" val="true" />
-		<set name="dispelOnDamage" val="true"/>
+		<set name="skillType" val="TRANSFORMATION" />
+		<set name="isHandler" val="true" />
 		<set name="npcId" val="13093" />
-		<set name="operateType" val="OP_ACTIVE" />		
-	   <set name="relationSkillsId" val="2;1395;15;1092" />
+		<set name="isDebuff" val="true" />
+		<set name="isOffensive" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />	
+		<set name="relationSkillsId" val="2;1395;15;1092" />
 		<for>
-			<effect count="2" name="MuteAll" time="15" val="0" />
-			<effect name="Transformation" time="15" val="104">
+			<effect count="1" noicon="1" name="Transformation" time="15" val="104" cancelOnAttacked="true">
 				<mul order="0x30" stat="runSpd" val="#spd" />
-			</effect>
+			</effect>	
+			<effect count="1" noicon="1" name="MuteAll" time="15" val="0" cancelOnAttacked="true"/>		
 		</for>
 	</skill>
 	<skill id="11538" levels="4" name="Mass Giant Root">
@@ -1110,7 +1111,7 @@
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant3>
 		<for>
-			<effect count="1" name="Transformation" time="#time" stackOrder="1" stackType="transform" val="104">
+			<effect name="Buff" time="#Time" val="0" stackOrder="1" stackType="Super_Buff1">
 				<mul order="0x30" stat="pAtk" val="0.2" />
 				<mul order="0x30" stat="mAtk" val="0.2" />
 				<add order="0x30" stat="pDef" val="#Def" />
