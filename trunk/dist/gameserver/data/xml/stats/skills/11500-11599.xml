@@ -1502,6 +1502,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_PARTY" />
+		<set name="skillRadius" val="900" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
@@ -1533,6 +1534,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_PARTY" />
+		<set name="skillRadius" val="900" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
@@ -1566,6 +1568,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="magicLevel" val="85" />
 		<set name="target" val="TARGET_PARTY" />
+		<set name="skillRadius" val="900" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
