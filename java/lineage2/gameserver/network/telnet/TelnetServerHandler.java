@@ -25,6 +25,7 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.network.telnet.commands.TelnetBan;
 import lineage2.gameserver.network.telnet.commands.TelnetConfig;
 import lineage2.gameserver.network.telnet.commands.TelnetDebug;
+import lineage2.gameserver.network.telnet.commands.TelnetGive;
 import lineage2.gameserver.network.telnet.commands.TelnetPerfomance;
 import lineage2.gameserver.network.telnet.commands.TelnetSay;
 import lineage2.gameserver.network.telnet.commands.TelnetServer;
@@ -97,6 +98,7 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 		addHandler(new TelnetBan());
 		addHandler(new TelnetConfig());
 		addHandler(new TelnetDebug());
+		addHandler(new TelnetGive());
 		addHandler(new TelnetPerfomance());
 		addHandler(new TelnetSay());
 		addHandler(new TelnetServer());
