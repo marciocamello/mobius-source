@@ -19,6 +19,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.listener.actor.OnAttackListener;
+import lineage2.gameserver.listener.actor.OnCurrentHpDamageListener;
 import lineage2.gameserver.listener.actor.OnMagicUseListener;
 import lineage2.gameserver.network.serverpackets.AbnormalStatusUpdate;
 import lineage2.gameserver.network.serverpackets.ExOlympiadSpelledInfo;
@@ -444,7 +445,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	/**
 	 * Field _listener.
 	 */
-	private ActionDispelListener _listener;
+	private ActionDispelListener _actionlistener;
 	
 	/**
 	 * @author Mobius
@@ -487,6 +488,30 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	}
 	
 	/**
+	 * Field _listener.
+	 */
+	private AttackedDispelListener _attackedlistener;
+	/**
+	 * @author Mobius
+	 */
+	private class AttackedDispelListener implements OnCurrentHpDamageListener
+	{
+		/**
+		 * Constructor for ActionDispelListener.
+		 */
+		public AttackedDispelListener()
+		{
+			// TODO Auto-generated constructor stub
+		}
+		
+		@Override
+		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
+		{
+			exit();
+		}
+	}
+	
+	/**
 	 * Method checkCondition.
 	 * @return boolean
 	 */
@@ -521,7 +546,11 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		}
 		if (_template._cancelOnAction)
 		{
-			getEffected().addListener(_listener = new ActionDispelListener());
+			getEffected().addListener(_actionlistener = new ActionDispelListener());
+		}
+		if (_template._cancelOnAttacked)
+		{
+			getEffected().addListener(_attackedlistener = new AttackedDispelListener());
 		}
 		if (getEffected().isPlayer() && !getSkill().canUseTeleport())
 		{
@@ -560,7 +589,11 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		}
 		if (_template._cancelOnAction)
 		{
-			getEffected().removeListener(_listener);
+			getEffected().removeListener(_actionlistener);
+		}
+		if (_template._cancelOnAttacked)
+		{
+			getEffected().removeListener(_attackedlistener);
 		}
 		if (getEffected().isPlayer() && getStackType().contains(EffectTemplate.HP_RECOVER_CAST))
 		{
