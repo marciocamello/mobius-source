@@ -386,17 +386,14 @@
 		<set name="hitCancelTime" val="500" />
 		<set name="mpConsume2" val="50" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="PDAM" />
+        <set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="flyType" val="DUMMY" />
-		<set name="flyRadius" val="600" />
-		<set name="flyToBack" val="true" />
 		<set name="isOffensive" val="true" />
-		<set name="nextAction" val="none" />
 		<for>
 			<effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="0" val="0" isReflectable="false">
 				<def name="doStopTarget" val="true" />
 			</effect>
+			<effect count="1" name="ShadowStep" stackOrder="-1" stackType="ShadowStep" effectPower="-1" time="0" val="0" isReflectable="false" />
 		</for>
 	</skill>
 	<skill id="822" levels="3" name="Repair Golem">

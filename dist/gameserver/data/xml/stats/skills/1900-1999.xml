@@ -549,4 +549,27 @@
         <set name="magicLevel" val="85"/>
         <set name="operateType" val="OP_PASSIVE"/>
     </skill>
+	<skill id="1955" levels="3" name="Party Solidarity">
+	<!-- Increases party members' P. Atk. by 1%, M. Atk. by 1%, P. Critical Rate by 1%, Atk. Spd. by 1%, and Casting Spd. by 1%. Decreases physical and magic skill cooldown by 1%. Always includes Sigel and Aeore Force. When 4 or more forces are applied, the Party Solidarity effect is activated. When the number of forces applied increases, the Party Solidarity effect is raised. -->
+		<set name="icon" val="icon.skill1955"/>
+		<table name="#pAtk">1.01 1.05 1.13</table>
+		<table name="#rCrit">1.01 1.02 1.04</table>
+		<table name="#atkSpd">1.01 1.02 1.04</table>
+		<table name="#reuse">0.99 0.98 0.95</table>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+		<set name="isMusic" val="true"/>
+		<set name="magicLevel" val="85"/>
+		<for>
+            <effect count="0x7fffffff" name="Buff" time="5" val="10" stackType="PartySolidarity" stackOrder="1">
+				<mul order="0x30" stat="pAtk" val="#pAtk"/>
+				<mul order="0x30" stat="rCrit" val="#rCrit"/>
+				<mul order="0x30" stat="pAtkSpd" val="#atkSpd"/>
+				<mul order="0x30" stat="mAtkSpd" val="#atkSpd"/>
+				<mul order="0x30" stat="mReuse" val="#reuse"/>
+				<mul order="0x30" stat="pReuse" val="#reuse"/>
+			</effect>
+		</for>
+	</skill>
 </list>

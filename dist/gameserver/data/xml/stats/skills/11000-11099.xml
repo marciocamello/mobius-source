@@ -578,7 +578,7 @@
         </enchant2>
         <enchant3 levels="10" name="Recycle"/>
     </skill>
-    <skill id="11028" levels="1" name="Elemental Destruction (4 attributes)">
+    <skill id="11028" levels="8" name="Elemental Destruction (4 attributes)">
     <!-- Inflicts a magic attack imbued with elemental properties on the target with 356 power added to attribute damage. Over-hit. -->
         <table name="#powerPvP">0</table>
         <table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -1268,7 +1268,6 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="magicLvl" val="#magicLevel" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="300" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1000" />
 		<set name="isDebuff" val="true" />
@@ -1287,10 +1286,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
 		<for>
-			<effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="3" val="0" />
-		</for>
-		<for>
-			<effect name="Debuff" time="10" val="0" stackOrder="1" stackType="speed_down">
+			<effect count="5" name="Fear" stackOrder="-1" stackType="Fear" time="3" val="0">
 				<mul order="0x30" stat="runSpd" val="#spd" />
 			</effect>
 		</for>
@@ -1329,7 +1325,7 @@
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant3>
         <for>
-            <effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="5" val="0">
+            <effect count="5" name="Fear" stackOrder="-1" stackType="Fear" time="3" val="0">
                 <mul order="0x30" stat="runSpd" val="#spd"/>
             </effect>
         </for>
