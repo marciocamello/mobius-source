@@ -17453,6 +17453,7 @@
 			<skill id="10028" level="1" cost="10000000" name="Rage Aura" min_level="85" />
 			<skill id="10030" level="1" cost="10000000" name="Challenge Aura" min_level="85" />
 			<skill id="10032" level="1" cost="10000000" name="Iron Aura" min_level="85" />
+			<skill id="10034" level="1" cost="10000000" name="Resistance Aura" min_level="85" />
 			<skill id="10036" level="1" cost="10000000" name="Recovery Aura" min_level="85" />
 			<skill id="10038" level="1" cost="10000000" name="Spirit Aura" min_level="85" />
 			<skill id="10040" level="1" cost="10000000" name="Summon Golden Lion" min_level="85" />
