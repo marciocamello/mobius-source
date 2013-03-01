@@ -233,6 +233,7 @@ public class ExStartScenePlayer extends L2GameServerPacket
 	 */
 	public static final int SCENE_ILLUSION_03_QUE = 103;
 	
+	public static final int ARKAN = 104;	
 	/**
 	 * Constructor for ExStartScenePlayer.
 	 * @param sceneId int

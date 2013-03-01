@@ -35,9 +35,9 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="MagmeldPresent"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--????-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
