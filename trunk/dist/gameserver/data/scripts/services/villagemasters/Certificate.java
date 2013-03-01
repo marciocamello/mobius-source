@@ -148,15 +148,15 @@ public class Certificate extends Functions
 		// Grand Master Ellenia
 		if (npc.getNpcId() == 30155)
 		{
-			if ((!pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() < 3))
+			if ((!pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
 				((TrainerInstance) getNpc()).showChatWindow(pl, "trainer/30155-no.htm");
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.elf) && ((pl.getClassId() == ClassId.TEMPLE_KNIGHT) || (pl.getClassId() == ClassId.SWORDSINGER) || (pl.getClassId() == ClassId.PLAIN_WALKER) || (pl.getClassId() == ClassId.SILVER_RANGER)))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.elf) && ((pl.getClassId() == ClassId.TEMPLE_KNIGHT) || (pl.getClassId() == ClassId.SWORDSINGER) || (pl.getClassId() == ClassId.PLAIN_WALKER) || (pl.getClassId() == ClassId.SILVER_RANGER)))
 			{
 				MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() >= 3))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 			{
 				((TrainerInstance) getNpc()).showChatWindow(pl, "trainer/30155-done.htm");
 			}
@@ -165,15 +165,15 @@ public class Certificate extends Functions
 		// Grand Master Rains
 		if (npc.getNpcId() == 30288)
 		{
-			if ((!pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() < 3))
+			if ((!pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
 				((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/30288-no.htm");
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.human) && ((pl.getClassId() == ClassId.GLADIATOR) || (pl.getClassId() == ClassId.WARLORD) || (pl.getClassId() == ClassId.PALADIN) || (pl.getClassId() == ClassId.DARK_AVENGER) || (pl.getClassId() == ClassId.TREASURE_HUNTER) || (pl.getClassId() == ClassId.HAWKEYE)))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.human) && ((pl.getClassId() == ClassId.GLADIATOR) || (pl.getClassId() == ClassId.WARLORD) || (pl.getClassId() == ClassId.PALADIN) || (pl.getClassId() == ClassId.DARK_AVENGER) || (pl.getClassId() == ClassId.TREASURE_HUNTER) || (pl.getClassId() == ClassId.HAWKEYE)))
 			{
 					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() >= 3))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 			{
 				((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/30288-done.htm");
 			}
@@ -182,15 +182,15 @@ public class Certificate extends Functions
 		// High Priest Raymond
 		if (npc.getNpcId() == 30289)
 		{
-			if ((!pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() < 3))
+			if ((!pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
 				((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/30289-no.htm");
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.human) && ((pl.getClassId() == ClassId.SORCERER) || (pl.getClassId() == ClassId.NECROMANCER) || (pl.getClassId() == ClassId.WARLOCK) || (pl.getClassId() == ClassId.BISHOP) || (pl.getClassId() == ClassId.PROPHET)))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.human) && ((pl.getClassId() == ClassId.SORCERER) || (pl.getClassId() == ClassId.NECROMANCER) || (pl.getClassId() == ClassId.WARLOCK) || (pl.getClassId() == ClassId.BISHOP) || (pl.getClassId() == ClassId.PROPHET)))
 			{
 				MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() >= 3))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 			{
 				((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/30289-done.htm");
 			}
@@ -199,15 +199,15 @@ public class Certificate extends Functions
 		// Grand Magister Esrandell
 		if (npc.getNpcId() == 30158)
 		{
-			if ((!pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() < 3))
+			if ((!pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
 				((TrainerInstance) getNpc()).showChatWindow(pl, "trainer/30158-no.htm");
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.elf) && ((pl.getClassId() == ClassId.SPELLSINGER) || (pl.getClassId() == ClassId.ELEMENTAL_SUMMONER) || (pl.getClassId() == ClassId.ELDER)))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.elf) && ((pl.getClassId() == ClassId.SPELLSINGER) || (pl.getClassId() == ClassId.ELEMENTAL_SUMMONER) || (pl.getClassId() == ClassId.ELDER)))
 			{
 				MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() >= 3))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 			{
 				((TrainerInstance) getNpc()).showChatWindow(pl, "trainer/30158-done.htm");
 			}
@@ -216,15 +216,15 @@ public class Certificate extends Functions
 		// Grand Master Tobias
 		if (npc.getNpcId() == 30297)
 		{
-			if ((!pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() < 3))
+			if ((!pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
 				((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/30297-no.htm");
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.darkelf))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.darkelf))
 			{
 				MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() >= 3))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 			{
 				((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/30297-done.htm");
 			}
@@ -233,15 +233,15 @@ public class Certificate extends Functions
 		// High Prefect Drikus
 		if (npc.getNpcId() == 30505)
 		{
-			if ((!pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() < 3))
+			if ((!pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
 				((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/30505-no.htm");
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.orc))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.orc))
 			{
 				MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() >= 3))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 			{
 				((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/30505-done.htm");
 			}
@@ -250,15 +250,15 @@ public class Certificate extends Functions
 		// Grand Master Gershwin
 		if (npc.getNpcId() == 32196)
 		{
-			if ((!pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() < 3))
+			if ((!pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
 				((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/32196-no.htm");
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.kamael))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.kamael))
 			{
 				MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() >= 3))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 			{
 				((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/32196-done.htm");
 			}
@@ -267,15 +267,15 @@ public class Certificate extends Functions
 		// Head Blacksmith Mendio
 		if (npc.getNpcId() == 30504)
 		{
-			if ((!pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() < 3))
+			if ((!pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
 				((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/30504-no.htm");
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.dwarf))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.dwarf))
 			{
 				MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
 			}
-			else if ((pl.isQuestCompleted("_10360_CertificationofFate")) && (pl.getClassLevel() >= 3))
+			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 			{
 				((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/30504-done.htm");
 			}
