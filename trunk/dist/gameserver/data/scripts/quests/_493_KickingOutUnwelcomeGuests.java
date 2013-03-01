@@ -110,7 +110,7 @@ public class _493_KickingOutUnwelcomeGuests extends Quest implements ScriptFile
 			{
 				htmltext = "0-4.htm";
 			}
-			else if ((cond == 2) && !st.getPlayer().isBaseClassActive())
+			else if (cond == 2)
 			{
 				htmltext = "0-5.htm";
 			}
