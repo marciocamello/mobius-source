@@ -1665,7 +1665,7 @@
 	</skill>
 	<skill id="1566" levels="1" name="Class Change">
     <!-- Change the class. -->
-		<set name="magicType" val="SPECIAL" />
+		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1566"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1682,7 +1682,7 @@
 	</skill>
 	<skill id="1567" levels="1" name="Class Change">
     <!-- Change the class. -->
-		<set name="magicType" val="SPECIAL" />
+		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1567"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1699,7 +1699,7 @@
 	</skill>
 	<skill id="1568" levels="1" name="Class Change">
     <!-- Change the class. -->
-		<set name="magicType" val="SPECIAL" />
+		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1568"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1716,7 +1716,7 @@
 	</skill>
 	<skill id="1569" levels="1" name="Class Change">
     <!-- Change the class. -->
-		<set name="magicType" val="SPECIAL" />
+		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1569"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1745,24 +1745,24 @@
 	<skill id="1571" levels="1" name="Each Class Inventory Increase">
     <!-- Increases inventory slots by 18. -->
 		<set name="icon" val="icon.skill1571"/>
-		<set name="magicLevel" val="85" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isCommon" val="true" />
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isCommon" val="true"/>
 		<for>
-			<add order="0x40" stat="inventoryLimit" val="18" />
+			<add order="0x40" stat="inventoryLimit" val="18"/>
 		</for>
 	</skill>
 	<skill id="1572" levels="1" name="Each Class Weight Increase">
     <!-- Increases weight capacity by 10,000. -->
 		<set name="icon" val="icon.skill1572"/>
-		<set name="magicLevel" val="85" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="maxLoad" val="10000" />
+			<add order="0x40" stat="maxLoad" val="10000"/>
 		</for>
 	</skill>
 	<skill id="1573" levels="6" name="Sub - P. Atk./M. Atk. Increase">
@@ -1770,56 +1770,56 @@
 		<table name="#pAtk">10 15 20 25 30 35</table>
 		<table name="#mAtk">20 30 40 50 60 70</table>
 		<table name="#magicLevel">60 75 80 80 80 80</table>
-		<set name="icon" val="icon.skill0141" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="icon" val="icon.skill0141"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
-			<add order="0x40" stat="mAtk" val="#mAtk" />
+			<add order="0x40" stat="pAtk" val="#pAtk"/>
+			<add order="0x40" stat="mAtk" val="#mAtk"/>
 		</for>
 	</skill>
 	<skill id="1574" levels="6" name="Sub - P. Def./M. Def. Increase">
     <!-- Increases P. Def. by 15 and M. Def. by 15. -->
 		<table name="#Def">15 30 45 60 75 90</table>
 		<table name="#magicLevel">60 75 80 80 80 80</table>
-		<set name="icon" val="icon.skill0141" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="icon" val="icon.skill0141"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="pDef" val="#Def" />
-			<add order="0x40" stat="mDef" val="#Def" />
+			<add order="0x40" stat="pDef" val="#Def"/>
+			<add order="0x40" stat="mDef" val="#Def"/>
 		</for>
 	</skill>
 	<skill id="1575" levels="3" name="Sub - Atk. Spd./Casting Spd. Increase">
     <!-- Increases Atk. Spd. and Casting Spd. by 10. -->
 		<table name="#spd">10 20 30</table>
 		<table name="#magicLevel">70 75 80</table>
-		<set name="icon" val="icon.skill0141" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="icon" val="icon.skill0141"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="pAtkSpd" val="#spd" />
-			<add order="0x40" stat="mAtkSpd" val="#spd" />
+			<add order="0x40" stat="pAtkSpd" val="#spd"/>
+			<add order="0x40" stat="mAtkSpd" val="#spd"/>
 		</for>
 	</skill>
 	<skill id="1576" levels="3" name="Sub - Critical Rate Increase">
     <!-- Increases P./M. Critical Rate by 10. -->
 		<table name="#crit">10 20 30</table>
 		<table name="#magicLevel">70 75 80</table>
-		<set name="icon" val="icon.skill0141" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="icon" val="icon.skill0141"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="rCrit" val="#crit" />
-			<add order="0x40" stat="mCritRate" val="#crit" />
+			<add order="0x40" stat="rCrit" val="#crit"/>
+			<add order="0x40" stat="mCritRate" val="#crit"/>
 		</for>
 	</skill>
 	<skill id="1577" levels="3" name="Sub - Critical Damage Increase">
@@ -1827,40 +1827,40 @@
 		<table name="#pcrit">18 36 54</table>
 		<table name="#mcrit">14 28 42</table>
 		<table name="#magicLevel">70 75 80</table>
-		<set name="icon" val="icon.skill0141" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="icon" val="icon.skill0141"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="cAtk" val="#pcrit" />
-			<add order="0x40" stat="mCritDamage" val="#mcrit" />
+			<add order="0x40" stat="cAtk" val="#pcrit"/>
+			<add order="0x40" stat="mCritDamage" val="#mcrit"/>
 		</for>
 	</skill>
 	<skill id="1578" levels="3" name="Sub - Physical Attribute Resistance Increase">
     <!-- Increases resistance to physical attributes by 1. -->
 		<table name="#pDef">10 20 30</table>
 		<table name="#magicLevel">70 75 80</table>
-		<set name="icon" val="icon.skill0141" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="icon" val="icon.skill0141"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef" />
+			<add order="0x40" stat="pDef" val="#pDef"/>
 		</for>
 	</skill>
 	<skill id="1579" levels="3" name="Sub - Mental Attribute Resistance Increase">
     <!-- Increases resistance to mental attacks by 1. -->
 		<table name="#mDef">10 20 30</table>
 		<table name="#magicLevel">70 75 80</table>
-		<set name="icon" val="icon.skill0141" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="icon" val="icon.skill0141"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="mDef" val="#mDef" />
+			<add order="0x40" stat="mDef" val="#mDef"/>
 		</for>
 	</skill>
 	<skill id="1580" levels="3" name="Sub - Physical Ability Increase">
@@ -1869,29 +1869,29 @@
 		<table name="#Mp">36 54 72</table>
 		<table name="#Cp">41 62 82</table>
 		<table name="#magicLevel">70 75 80</table>
-		<set name="icon" val="icon.skill0141" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="icon" val="icon.skill0141"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="maxHp" val="#Hp" />
-			<add order="0x40" stat="maxHp" val="#Mp" />
-			<add order="0x40" stat="maxHp" val="#Cp" />
+			<add order="0x40" stat="maxHp" val="#Hp"/>
+			<add order="0x40" stat="maxHp" val="#Mp"/>
+			<add order="0x40" stat="maxHp" val="#Cp"/>
 		</for>
 	</skill>
 	<skill id="1581" levels="3" name="Sub - MP Consumption/Re-use Time Decrease">
     <!-- Upon skill use, decreases MP Consumption and cooldown by 1%. -->
 		<table name="#mReuse">0.99 0.98 0.97</table>
 		<table name="#magicLevel">70 75 80</table>
-		<set name="icon" val="icon.skill0141" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="icon" val="icon.skill0141"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
 			<mul order="0x30" stat="mReuse" val="#mReuse"/>
-			<mul order="0x30" stat="mpConsum" val="#mReuse" />
+			<mul order="0x30" stat="mpConsum" val="#mReuse"/>
 		</for>
 	</skill>
 	<skill id="1584" levels="1" name="Equipment Craft">

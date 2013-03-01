@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list>
     <skill id="1901" levels="1" name="Aim">
     <!-- Accuracy +3 and -3% chance of receiving a critical attack. -->
@@ -144,9 +144,9 @@
             </effect>
             <effect count="1" name="BlockTarget" time="5" val="0"/>
 			<effect count="1" name="DispelEffects" time="0" val="0">
-				<def name="dispelType" val="cleanse" />
-				<def name="cancelRate" val="100" />
-				<def name="negateCount" val="10" />
+				<def name="dispelType" val="cleanse"/>
+				<def name="cancelRate" val="100"/>
+				<def name="negateCount" val="10"/>
 			</effect>
         </for>
     </skill>

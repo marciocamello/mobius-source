@@ -2,9 +2,9 @@
 <list>	
 	<skill id="12799" levels="1" name="Awakened Hero's Olympiad Reward Box">
     <!-- none -->
-		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 </list>
