@@ -91,14 +91,6 @@
 		<npc id="33534" /><!--Jasnin-->
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="207085" y="88723" z="-1128" h="0" />
-		<npc id="33137" /><!--Ant under Foot-->
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="207088" y="88720" z="-1128" h="0" />
-		<npc id="33137" /><!--Ant under Foot-->
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="208188" y="90084" z="-1024" h="45032" />
 		<npc id="33514" /><!--Anthony-->
 	</spawn>
