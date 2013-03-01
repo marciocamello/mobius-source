@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "item.dtd">
 <list>
-    <armor id="19449" name="Giant's Bracelet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19449" name="Giant's Bracelet">
         <set name="crystal_type" value="R"/>
         <set name="icon" value="icon.r2_bracelet_i00"/>
         <set name="type" value="NONE"/>
@@ -9,6 +9,9 @@
             <slot id="RIGHT_BRACELET"/>
         </equip>
         <set name="ex_type" value="BRACELET"/>
+	<skills>
+        <skill id="3326" level="1"/>
+	</skills>
     </armor>
     <armor id="19451" name="Istina's Ring">        <!--Done By Darvin (c)Java-Team-->
         <set name="crystal_type" value="R"/>
@@ -98,7 +101,7 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19455" name="Istina's Bracelet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19455" name="Istina's Bracelet">
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="0"/>
@@ -218,7 +221,7 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19461" name="Octavis's Bracelet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19461" name="Octavis's Bracelet">
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="0"/>
@@ -312,17 +315,23 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19471" name="Immortal Bracelet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19471" name="Immortal Bracelet">
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="0"/>
         <set name="icon" value="icon.r1_bracelet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_BRACELET"/>
-        </equip>
+    <equip>
+        <slot id="RIGHT_BRACELET"/>
+    </equip>
         <set name="ex_type" value="BRACELET"/>
+	<skills>
+        <skill id="3326" level="1"/>
+	</skills>
+	<for>
+		<add stat="maxMp" order="0x10" value="187"/>
+	</for>
     </armor>
     <armor id="19472" name="Immortal Shirt">        <!--Done By Darvin (c)Java-Team-->
         <set name="crystal_type" value="R"/>
@@ -358,17 +367,23 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19474" name="Twilight Bracelet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19474" name="Twilight Bracelet">
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="0"/>
         <set name="icon" value="icon.r2_bracelet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_BRACELET"/>
-        </equip>
+    <equip>
+        <slot id="RIGHT_BRACELET"/>
+    </equip>
         <set name="ex_type" value="BRACELET"/>
+	<skills>
+        <skill id="3326" level="1"/>
+	</skills>
+	<for>
+		<add stat="maxMp" order="0x10" value="204"/>
+	</for>
     </armor>
     <armor id="19475" name="Twilight Shirt">        <!--Done By Darvin (c)Java-Team-->
         <set name="crystal_type" value="R"/>
@@ -404,17 +419,23 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19477" name="Seraph Bracelet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19477" name="Seraph Bracelet">
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="0"/>
         <set name="icon" value="icon.r95_bracelet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_BRACELET"/>
-        </equip>
+    <equip>
+        <slot id="RIGHT_BRACELET"/>
+    </equip>
         <set name="ex_type" value="BRACELET"/>
+	<skills>
+        <skill id="3326" level="1"/>
+	</skills>
+	<for>
+		<add stat="maxMp" order="0x10" value="216"/>
+	</for>
     </armor>
     <armor id="19478" name="Seraph Shirt">        <!--Done By Darvin (c)Java-Team-->
         <set name="crystal_type" value="R95"/>
@@ -450,17 +471,23 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19480" name="Eternal Bracelet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19480" name="Eternal Bracelet">
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="0"/>
         <set name="icon" value="icon.r991_bracelet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_BRACELET"/>
-        </equip>
+    <equip>
+        <slot id="RIGHT_BRACELET"/>
+    </equip>
         <set name="ex_type" value="BRACELET"/>
+	<skills>
+        <skill id="3326" level="1"/>
+	</skills>
+	<for>
+		<add stat="maxMp" order="0x10" value="225"/>
+	</for>
     </armor>
     <armor id="19481" name="Eternal Shirt">        <!--Done By Darvin (c)Java-Team-->
         <set name="crystal_type" value="R99"/>
