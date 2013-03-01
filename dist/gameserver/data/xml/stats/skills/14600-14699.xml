@@ -679,25 +679,25 @@
 		<table name="#mpInitialConsume">7</table>
 		<table name="#power">143</table>
 		<table name="#mpConsume2">65</table>
-		<set name="reuseDelay" val="6000" />
-		<set name="hitTime" val="1200" />
-		<set name="mpConsume2" val="#mpConsume2" />		
-		<set name="castRange" val="900" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="80" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="power" val="20" /> <!-- Base Land Rate -->
-		<set name="lvlDepend" val="1" />
-		<set name="magicLevel" val="#magicLevel" />		
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="reuseDelay" val="6000"/>
+		<set name="hitTime" val="1200"/>
+		<set name="mpConsume2" val="#mpConsume2"/>		
+		<set name="castRange" val="900"/>
+		<set name="element" val="0"/> <!-- Fire -->
+		<set name="elementPower" val="80"/>
+		<set name="isDebuff" val="true"/>
+		<set name="isMagic" val="true"/>
+		<set name="saveVs" val="MEN"/>
+		<set name="power" val="20"/> <!-- Base Land Rate -->
+		<set name="lvlDepend" val="1"/>
+		<set name="magicLevel" val="#magicLevel"/>		
+		<set name="mpInitialConsume" val="#mpInitialConsume"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="#power"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="target" val="TARGET_ONE"/>
 		<for>
-			<effect count="5" name="Fear" time="2" val="0" stackOrder="1" stackType="fear" />
+			<effect count="5" name="Fear" time="2" val="0" stackOrder="1" stackType="fear"/>
 		</for>
 	</skill>
 	<skill id="14687" levels="1" name="Cry of Fate - Hell Binding">

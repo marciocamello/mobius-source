@@ -1,180 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="6800" levels="1" name="Presentation - Yellow Portal Ray" >
+	<skill id="6800" levels="1" name="Presentation - Yellow Portal Ray">
     <!-- none -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6801" levels="1" name="Presentation - Yellow-Green Portal Ray" >
+	<skill id="6801" levels="1" name="Presentation - Yellow-Green Portal Ray">
     <!-- none -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6802" levels="1" name="Presentation - SSQ2 General Purpose 6" >
+	<skill id="6802" levels="1" name="Presentation - SSQ2 General Purpose 6">
     <!-- none -->
-		<set name="icon" val="icon.skill0922" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0922"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6803" levels="1" name="Arena Haste">
     <!-- Increases Atk. Spd. by 33% for 5 minutes. -->
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1086" />
-		<set name="magicLevel" val="60" />
-		<set name="castRange" val="400" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1086"/>
+		<set name="magicLevel" val="60"/>
+		<set name="castRange" val="400"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Buff" stackOrder="1" stackType="pAtkSpeedUp" time="300" val="0">
-				<mul order="0x30" stat="pAtkSpd" val="1.15" />
+				<mul order="0x30" stat="pAtkSpd" val="1.15"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="6804" levels="1" name="Arena Wind Walk">
     <!-- Increases Speed by 33 for 5 minutes. -->
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1204" />
-		<set name="magicLevel" val="60" />
-		<set name="castRange" val="400" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1204"/>
+		<set name="magicLevel" val="60"/>
+		<set name="castRange" val="400"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Buff" stackOrder="2" stackType="SpeedUp" time="300" val="0">
-				<add order="0x40" stat="runSpd" val="33" />
+				<add order="0x40" stat="runSpd" val="33"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="6805" levels="1" name="Arena Empower">
     <!-- Increases M. Atk. by 75% for 5 minutes. -->
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1059" />
-		<set name="magicLevel" val="60" />
-		<set name="castRange" val="400" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1059"/>
+		<set name="magicLevel" val="60"/>
+		<set name="castRange" val="400"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Buff" stackOrder="2" stackType="mAtk" time="300" val="0">
-				<mul order="0x30" stat="mAtk" val="1.75" />
+				<mul order="0x30" stat="mAtk" val="1.75"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="6806" levels="1" name="Arena Acumen">
     <!-- Increases Casting Spd. by 30% for 5 minutes. -->
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1085" />
-		<set name="magicLevel" val="60" />
-		<set name="castRange" val="400" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1085"/>
+		<set name="magicLevel" val="60"/>
+		<set name="castRange" val="400"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Buff" stackOrder="3" stackType="mAtkSpeedUp" time="300" val="0">
-				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+				<mul order="0x30" stat="mAtkSpd" val="1.3"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="6807" levels="1" name="Arena Concentration">
     <!-- Decreases magic cancel damage by 53 for 5 minutes. -->
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1078" />
-		<set name="magicLevel" val="60" />
-		<set name="castRange" val="400" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1078"/>
+		<set name="magicLevel" val="60"/>
+		<set name="castRange" val="400"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Buff" stackOrder="1" stackType="concentration" time="300" val="0">
-				<mul order="0x30" stat="concentration" val="0.82" />
+				<mul order="0x30" stat="concentration" val="0.82"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="6808" levels="1" name="Arena Might">
     <!-- Increases P. Atk. by 15% for 5 minutes. -->
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1068" />
-		<set name="magicLevel" val="60" />
-		<set name="castRange" val="400" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1068"/>
+		<set name="magicLevel" val="60"/>
+		<set name="castRange" val="400"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Buff" stackOrder="3" stackType="pAtk" time="300" val="0">
-				<mul order="0x30" stat="pAtk" val="1.15" />
+				<mul order="0x30" stat="pAtk" val="1.15"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="6809" levels="1" name="Arena Guidance">
     <!-- Increases accuracy by 4 for 5 minutes. -->
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1240" />
-		<set name="magicLevel" val="60" />
-		<set name="castRange" val="400" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1240"/>
+		<set name="magicLevel" val="60"/>
+		<set name="castRange" val="400"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Buff" stackOrder="3" stackType="accuracyUp" time="300" val="0">
-				<add order="0x40" stat="accCombat" val="4" />
+				<add order="0x40" stat="accCombat" val="4"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="6810" levels="1" name="Arena Focus">
     <!-- Increases critical attack rate by 30% for 5 minutes. -->
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1077" />
-		<set name="magicLevel" val="60" />
-		<set name="castRange" val="400" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1077"/>
+		<set name="magicLevel" val="60"/>
+		<set name="castRange" val="400"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Buff" stackOrder="3" stackType="rCrit" time="300" val="0">
-				<add order="0x40" stat="rCrit" val="30" />
+				<add order="0x40" stat="rCrit" val="30"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="6811" levels="1" name="Arena Death Whisper">
     <!-- Increases critical attack effect by 35% for 5 minutes. -->
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1242" />
-		<set name="magicLevel" val="60" />
-		<set name="castRange" val="400" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1242"/>
+		<set name="magicLevel" val="60"/>
+		<set name="castRange" val="400"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Buff" stackOrder="3" stackType="cAtk" time="300" val="0">
-				<mul order="0x30" stat="cAtk" val="1.35" />
+				<mul order="0x30" stat="cAtk" val="1.35"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="6812" levels="1" name="Arena Berserker Spirit">
     <!-- Decreases P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 5 minutes. -->
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1062" />
-		<set name="magicLevel" val="60" />
-		<set name="castRange" val="400" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1062"/>
+		<set name="magicLevel" val="60"/>
+		<set name="castRange" val="400"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Buff" stackOrder="2" stackType="berserk" time="300" val="0">
-				<mul order="0x30" stat="mAtk" val="1.16" />
-				<mul order="0x30" stat="pAtk" val="1.08" />
-				<mul order="0x30" stat="pDef" val="0.92" />
-				<mul order="0x30" stat="mDef" val="0.84" />
-				<mul order="0x30" stat="mAtkSpd" val="1.08" />
-				<mul order="0x30" stat="pAtkSpd" val="1.08" />
-				<add order="0x40" stat="runSpd" val="8" />
-				<sub order="0x40" stat="rEvas" val="4" />
+				<mul order="0x30" stat="mAtk" val="1.16"/>
+				<mul order="0x30" stat="pAtk" val="1.08"/>
+				<mul order="0x30" stat="pDef" val="0.92"/>
+				<mul order="0x30" stat="mDef" val="0.84"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.08"/>
+				<add order="0x40" stat="runSpd" val="8"/>
+				<sub order="0x40" stat="rEvas" val="4"/>
 			</effect>
 		</for>
 	</skill>
@@ -204,26 +204,26 @@
 		<set name="charges" val="#charges"/>
 		<set name="reuseDelay" val="10000"/>
 	</skill>
-	<skill id="6815" levels="16" name="Deadly Poison" >
+	<skill id="6815" levels="16" name="Deadly Poison">
     <!-- Poison seeps deeper and for 10 seconds, 330 HP is decreased every second. If not treated, the poison will worsen. -->
-		<set name="icon" val="icon.skill6815" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill6815"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6816" levels="16" name="Deadly Bleed" >
+	<skill id="6816" levels="16" name="Deadly Bleed">
     <!-- Bleed becomes deeper and for 10 seconds, 330 HP is decreased every second. If not treated, the bleed will worsen. -->
-		<set name="icon" val="icon.skill6816" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill6816"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6817" levels="1" name="Arena HP Recovery" >
+	<skill id="6817" levels="1" name="Arena HP Recovery">
     <!-- none -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6818" levels="1" name="Powerful Rage">
     <!-- none -->
@@ -244,12 +244,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6819" levels="1" name="Banshee's Curse" >
+	<skill id="6819" levels="1" name="Banshee's Curse">
     <!-- For 15 seconds, Atk. Spd. is decreased by 20%. -->
-		<set name="icon" val="icon.skill4038" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill4038"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6820" levels="1" name="P. Def. Enhance">
     <!-- none -->
@@ -290,19 +290,19 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6822" levels="1" name="P. Def. Decrease" >
+	<skill id="6822" levels="1" name="P. Def. Decrease">
     <!-- For 4 seconds, P. Def. decreases by 40%. -->
-		<set name="icon" val="icon.skill0122" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0122"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6823" levels="1" name="Reflect Attack" >
+	<skill id="6823" levels="1" name="Reflect Attack">
     <!-- none -->
-		<set name="icon" val="icon.skill0086" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6824" levels="1" name="Piercing Storm">
     <!-- none -->
@@ -455,12 +455,12 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6832" levels="1" name="Summon Parasite Leech" >
+	<skill id="6832" levels="1" name="Summon Parasite Leech">
     <!-- none -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6833" levels="1" name="Power Strike">
     <!-- none -->
@@ -544,12 +544,12 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6838" levels="1" name="Self-destruction" >
+	<skill id="6838" levels="1" name="Self-destruction">
     <!-- none -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6839" levels="1" name="Power Attack">
     <!-- none -->
@@ -617,12 +617,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6843" levels="1" name="Enhance" >
+	<skill id="6843" levels="1" name="Enhance">
     <!-- Atk. Spd. is increased by 33%. -->
-		<set name="icon" val="icon.skill1086" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill1086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6844" levels="1" name="Power Strike">
     <!-- none -->
@@ -671,19 +671,19 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="absorbPart" val="0.4"/>
 	</skill>
-	<skill id="6847" levels="1" name="Self Heal" >
+	<skill id="6847" levels="1" name="Self Heal">
     <!-- none -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6848" levels="1" name="Summoner Appearance" >
+	<skill id="6848" levels="1" name="Summoner Appearance">
     <!-- none -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6849" levels="1" name="Summoner Strike">
     <!-- none -->
@@ -804,12 +804,12 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6856" levels="1" name="Heal" >
+	<skill id="6856" levels="1" name="Heal">
     <!-- none -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6857" levels="1" name="Power Strike">
     <!-- none -->
@@ -938,12 +938,12 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6865" levels="1" name="Poison" >
+	<skill id="6865" levels="1" name="Poison">
     <!-- For 8 seconds, inflicts bleed and decreases 100 HP every second. -->
-		<set name="icon" val="icon.skill0129" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0129"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6866" levels="1" name="Vampiric Claw">
     <!-- none -->
@@ -1221,26 +1221,26 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6882" levels="1" name="Petrify" >
+	<skill id="6882" levels="1" name="Petrify">
     <!-- Inflicted with petrification, the body is rigid like stone temporarily. -->
-		<set name="icon" val="icon.skill4111" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill4111"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6883" levels="1" name="Vitality Recovery Effect" >
+	<skill id="6883" levels="1" name="Vitality Recovery Effect">
     <!-- For 5 minutes, energy is recovered. -->
-		<set name="icon" val="icon.skilltransform4" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skilltransform4"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6884" levels="1" name="Morale Boost" >
+	<skill id="6884" levels="1" name="Morale Boost">
     <!-- none -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6885" levels="3" name="Morale Boost">
     <!-- The persistence of the brave who fight together in Dragon Valley receive Resistance to Paralysis/Bleed/Poison/Stun +50, Critical Rate +10%, and Critical Damage +10%. -->
@@ -1272,12 +1272,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6886" levels="1" name="Complete Recovery" >
+	<skill id="6886" levels="1" name="Complete Recovery">
     <!-- none -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6887" levels="1" name="Fatal Strike">
     <!-- none -->
@@ -1308,19 +1308,19 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6889" levels="1" name="Range Attack" >
+	<skill id="6889" levels="1" name="Range Attack">
     <!-- none -->
-		<set name="icon" val="icon.skill0000" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6890" levels="1" name="Bleed" >
+	<skill id="6890" levels="1" name="Bleed">
     <!-- For 10 seconds, inflicts bleed and decreases 100 HP every second. -->
-		<set name="icon" val="icon.skill0096" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0096"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="6891" levels="1" name="Power Attack">
     <!-- none -->
@@ -1409,25 +1409,25 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6897" levels="12" name="Shock" >
+	<skill id="6897" levels="12" name="Shock">
     <!-- Temporarily in shock and unable to move. -->
-		<set name="icon" val="icon.skill0100" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skill0100"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6898" levels="1" name="84 level Raid Boss" >
+	<skill id="6898" levels="1" name="84 level Raid Boss">
     <!-- It was one of the dragons that was born out of the blood that was thrown up by Antharas. After swallowing the Ancient Drake and absorbing its power, it quickly arose as a Commander that rules over the monsters nearby. It has good hearing but its vision is very poor, so it waits in a quiet, dark place, listening to the enemy's heartbeat, before swooping in for an attack. -->
-		<set name="icon" val="icon.skillraid" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6899" levels="1" name="84 level Raid Boss" >
+	<skill id="6899" levels="1" name="84 level Raid Boss">
     <!-- It was one of the dragons that was born out of the blood that was thrown up by Antharas. It swallowed up its brethren and gained a greater power. Antharas, whose heart was filled with innate cruelty and madness of a Dust Rider, appointed him as the Valley's Eradicator and commanded him to build the Tower of Corpses. -->
-		<set name="icon" val="icon.skillraid" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 </list>

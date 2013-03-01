@@ -90,7 +90,7 @@
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_PASSIVE"/>
-        <set name="relationSkillsId" val="473;208;330"/>
+        <set name="relationSkillsId" val="208;330;"/>
         <enchant1 levels="10" name="Power">
             <table name="#pAtk">1402 1488 1574 1660 1746 1832 1918 2004 2090 2176</table>
         </enchant1>
@@ -136,7 +136,7 @@
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
-        <set name="relationSkillsId" val="113;415;303;486"/>
+        <set name="relationSkillsId" val="415;486;113;303;"/>
         <set name="operateType" val="OP_PASSIVE"/>
         <for>
             <add order="0x10" stat="pAtkRange" val="500">
@@ -150,7 +150,7 @@
     <!-- STR + 2, speed + 17, terrain damage - 30% and weight limit + 50%. When inflicting a critical during a normal Bow/Crossbow attack, Survival Movement is triggered. Once Survival Movement is triggered, it will not trigger again for 30 seconds. -->
         <table name="#fall">0.7</table>
         <table name="#maxLoad">1.5</table>
-        <set name="relationSkillsId" val="169;418"/>
+        <set name="relationSkillsId" val="169;418;"/>
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
@@ -191,7 +191,7 @@
         <set name="magicLvl" val="85"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
-        <set name="relationSkillsId" val="312;626;334"/>
+        <set name="relationSkillsId" val="312;626;334;"/>
         <set name="operateType" val="OP_PASSIVE"/>
         <enchant1 levels="10" name="Power">
             <table name="#vul">808 841 875 910 946 983 1022 1062 1104 1147</table>
@@ -211,7 +211,7 @@
         <table name="#mpConsume2">36</table>
         <set name="reuseDelay" val="1000"/>
         <set name="hitTime" val="500"/>
-        <set name="relationSkillsId" val="131;524"/>
+        <set name="relationSkillsId" val="524;131;"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_SELF"/>
@@ -239,7 +239,7 @@
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">36</table>
         <set name="reuseDelay" val="1000"/>
-        <set name="relationSkillsId" val="131;835"/>
+        <set name="relationSkillsId" val="131;835;"/>
         <set name="hitTime" val="500"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
@@ -267,7 +267,7 @@
         <table name="#rCrit">20 25 30 35</table>
         <table name="#mpConsume2">36</table>
         <set name="reuseDelay" val="1000"/>
-        <set name="relationSkillsId" val="131;523"/>
+        <set name="relationSkillsId" val="523;131;"/>
         <set name="hitTime" val="500"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
@@ -301,7 +301,7 @@
         <set name="flyType" val="THROW_HORIZONTAL"/>
         <set name="flyRadius" val="-200"/>
         <set name="magicLevel" val="#magicLevel"/>
-        <set name="relationSkillsId" val="19;507"/>
+        <set name="relationSkillsId" val="19;507;"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="overHit" val="true"/>
         <set name="power" val="#power"/>
@@ -410,7 +410,7 @@
         <set name="castRange" val="1100"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <table name="#elementPower">0</table>
-        <set name="relationSkillsId" val="369;105"/>
+        <set name="relationSkillsId" val="105;369;"/>
         <table name="#element">none</table>
         <set name="elementPower" val="#elementPower"/>
         <set name="element" val="#element"/>
@@ -465,7 +465,7 @@
         <set name="hitTime" val="2200"/>
         <set name="castRange" val="1100"/>
         <set name="mpConsume2" val="#mpConsume2"/>
-        <set name="relationSkillsId" val="343;627"/>
+        <set name="relationSkillsId" val="627;343;"/>
         <set name="elementPower" val="#elementPower"/>
         <set name="element" val="#element"/>
         <set name="activateRate" val="60"/>
@@ -560,7 +560,7 @@
         <table name="#mpConsume2">76 78 80 85 89</table>
         <table name="#activateRate">50</table>
         <set name="reuseDelay" val="60000"/>
-        <set name="relationSkillsId" val="509;101"/>
+        <set name="relationSkillsId" val="509;101;"/>
         <set name="hitTime" val="2200"/>
         <set name="castRange" val="1100"/>
         <set name="mpConsume2" val="#mpConsume2"/>
@@ -628,7 +628,7 @@
         <set name="magicLevel" val="#magicLevel"/>
         <set name="flyType" val="THROW_HORIZONTAL"/>
         <set name="flyRadius" val="-200"/>
-        <set name="relationSkillsId" val="990"/>
+        <set name="relationSkillsId" val="990;"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="overHit" val="true"/>
         <set name="power" val="#power"/>
@@ -684,7 +684,7 @@
         <set name="elementPower" val="#elementPower"/>
         <set name="element" val="#element"/>
         <set name="magicLevel" val="#magicLevel"/>
-        <set name="relationSkillsId" val="987"/>
+        <set name="relationSkillsId" val="987;"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="overHit" val="true"/>
         <set name="power" val="#power"/>
@@ -735,7 +735,7 @@
         <table name="#powerPvP">0</table>
         <set name="powerPvP" val="#powerPvP"/>
         <set name="reuseDelay" val="15000"/>
-        <set name="relationSkillsId" val="24;508;223"/>
+        <set name="relationSkillsId" val="223;508;24;"/>
         <set name="hitTime" val="2200"/>
         <set name="castRange" val="1100"/>
         <set name="mpConsume2" val="#mpConsume2"/>
@@ -814,7 +814,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="npcId" val="#npcId"/>
         <set name="lifeTime" val="20"/>
-        <set name="relationSkillsId" val="525"/>
+        <set name="relationSkillsId" val="525;"/>
         <cond msgId="113" addName="1">
             <using kind="Crossbow, Bow"/>
         </cond>
@@ -830,7 +830,7 @@
         <set name="reuseDelay" val="900000"/>
         <set name="hitTime" val="1000"/>
         <set name="mpConsume2" val="#mpConsume2"/>
-        <set name="relationSkillsId" val="21;622;61;129"/>
+        <set name="relationSkillsId" val="21;61;622;129;"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="aggroPoints" val="523"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -866,7 +866,7 @@
         <set name="castRange" val="900"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="85"/>
-        <set name="relationSkillsId" val="511"/>
+        <set name="relationSkillsId" val="511;"/>
         <set name="target" val="TARGET_ONE"/>
         <set name="activateRate" val="70"/>
         <set name="skillType" val="DELETE_HATE_OF_ME"/>
@@ -880,7 +880,7 @@
         <set name="reuseDelay" val="60000"/>
         <set name="hitTime" val="1500"/>
         <set name="castRange" val="900"/>
-        <set name="relationSkillsId" val="2;15;489"/>
+        <set name="relationSkillsId" val="15;2;489;"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="target" val="TARGET_ONE"/>
         <set name="activateRate" val="70"/>
@@ -898,7 +898,7 @@
         <set name="reuseDelay" val="120000"/>
         <set name="hitTime" val="1500"/>
         <set name="castRange" val="800"/>
-        <set name="relationSkillsId" val="99;490"/>
+        <set name="relationSkillsId" val="354;99;490;"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_SELF"/>
@@ -980,15 +980,15 @@
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="power" val="#power"/>
-		<set name="symbolId" val="13025" />
-		<set name="addSkills" val="10782;1" />
+		<set name="symbolId" val="13025"/>
+		<set name="addSkills" val="10782;1"/>
         <set name="target" val="TARGET_AREA"/>
         <set name="skillRadius" val="200"/>
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="1509">
 			<not>
-				<player olympiad="true" />
+				<player olympiad="true"/>
 			</not>
 		</cond>
         <enchant1 levels="10" name="Cost"/>
@@ -999,9 +999,9 @@
     </skill>
 	<skill id="10782" levels="1" name="Deadly Move 2">
     <!-- Death blow! Please do not use. -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="CONT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
     <skill id="10783" levels="4" name="Mind's Eye">
     <!-- For 1 minute, opens the eye of infinity to increase Accuracy by + 25, Critical Rate by + 200, and Critical Damage by + 70%. -->
@@ -1012,7 +1012,7 @@
         <table name="#mpConsume2">54 60 65 69</table>
         <table name="#time">60</table>
         <set name="reuseDelay" val="600000"/>
-        <set name="relationSkillsId" val="413;414;521;313"/>
+        <set name="relationSkillsId" val="413;414;521;313;"/>
         <set name="hitTime" val="1200"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
@@ -1063,7 +1063,7 @@
         <table name="#mpConsume2">70</table>
         <set name="reuseDelay" val="120000"/>
         <set name="hitTime" val="1200"/>
-        <set name="relationSkillsId" val="933"/>
+        <set name="relationSkillsId" val="933;"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_AURA"/>
@@ -1119,7 +1119,7 @@
         <set name="lifeTime" val="#lifeTime"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="SUMMON"/>
-		<set name="relationSkillsId" val="115"/>
+		<set name="relationSkillsId" val="115;"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <table name="#npcIds">14932 14940 14941 14942 14986 14987 14988 14989</table>
         <set name="npcId" val="#npcIds"/>
@@ -1145,7 +1145,7 @@
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="SUMMON"/>
-		<set name="summonType" val="TRAP" />
+		<set name="summonType" val="TRAP"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="isSkillTimePermanent" val="true"/>
         <set name="addSkills" val="5270;#skill"/>
@@ -1162,7 +1162,7 @@
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="SUMMON"/>
-		<set name="summonType" val="TRAP" />
+		<set name="summonType" val="TRAP"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="isSkillTimePermanent" val="true"/>
         <set name="addSkills" val="5267;#skill"/>
@@ -1179,9 +1179,9 @@
         <set name="magicLevel" val="85"/>
         <set name="staticReuse" val="true"/>
         <set name="target" val="TARGET_SELF"/>
-        <set name="relationSkillsId" val="516"/>
+        <set name="relationSkillsId" val="516;"/>
         <set name="skillType" val="SUMMON"/>
-		<set name="summonType" val="TRAP" />
+		<set name="summonType" val="TRAP"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="isSkillTimePermanent" val="true"/>
         <set name="skillRadius" val="350"/>
@@ -1196,11 +1196,11 @@
         <set name="reuseDelay" val="45000"/>
         <set name="hitTime" val="800"/>
         <set name="mpConsume2" val="#mpConsume2"/>
-        <set name="relationSkillsId" val="518"/>
+        <set name="relationSkillsId" val="518;"/>
         <set name="magicLevel" val="85"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="SUMMON"/>
-		<set name="summonType" val="TRAP" />
+		<set name="summonType" val="TRAP"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="isSkillTimePermanent" val="true"/>
         <set name="addSkills" val="5271;#skill"/>
@@ -1221,7 +1221,7 @@
         <set name="skillRadius" val="200"/>
         <set name="skillType" val="DEBUFF"/>
         <set name="operateType" val="OP_ACTIVE"/>
-		<set name="cancelTarget" val="100" />
+		<set name="cancelTarget" val="100"/>
         <for>
             <effect count="1" name="Buff" stackType="Dash" time="5" val="0" applyOnCaster="true">
                 <add order="0x40" stat="runSpd" val="50"/>
@@ -1259,14 +1259,14 @@
     <skill id="10798" levels="1" name="Hawk Sharp Claw">
     <!-- Attacks the enemy with sharp talon to inflict bleed. -->
         <set name="power" val="9850"/>
-		<set name="reuseDelay" val="25000" />
-		<set name="hitTime" val="1080" />
-		<set name="mpConsume2" val="71" />
-		<set name="magicLvl" val="85" />
-		<set name="coolTime" val="769" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
+		<set name="reuseDelay" val="25000"/>
+		<set name="hitTime" val="1080"/>
+		<set name="mpConsume2" val="71"/>
+		<set name="magicLvl" val="85"/>
+		<set name="coolTime" val="769"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
         <set name="target" val="TARGET_ONE"/>
         <set name="shieldignore" val="true"/>
         <set name="nextAction" val="attack"/>

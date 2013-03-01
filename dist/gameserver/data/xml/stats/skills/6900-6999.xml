@@ -103,7 +103,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isSaveable" val="false"/>
-		<set name="isTrigger" val="true" />
+		<set name="isTrigger" val="true"/>
 		<for>
 			<effect count="1" name="Buff" time="15" val="0">
 				<add order="0x40" stat="pDef" val="360"/>
@@ -127,15 +127,15 @@
 	</skill>
 	<skill id="6916" levels="1" name="Antharas's Cute Tricks">
     <!-- You can see the summoned spirit's cute tricks. -->
-		<set name="magicType" val="SPECIAL" />
+		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
-		<set name="magicLevel" val="85" />
-		<set name="hitTime" val="3000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="3000" />
-		<set name="isReuseDelayPermanent" val="true" />
+		<set name="magicLevel" val="85"/>
+		<set name="hitTime" val="3000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="isReuseDelayPermanent" val="true"/>
 		<cond msgId="2292">
 			<player agathion="16077"/>
 		</cond>
@@ -165,11 +165,11 @@
     <!-- A collector's luck. Increases P. Atk. by 15%, Critical Rate by 10%, Critical Damage by 10%, Atk. Spd. by 3%, and Speed by 5. -->
 		<set name="icon" val="BranchSys2.icon.skill0952"/>
 		<set name="magicLevel" val="66"/>
-		<set name="reuseDelay" val="15000" />
+		<set name="reuseDelay" val="15000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="isTrigger" val="true" />
+		<set name="isTrigger" val="true"/>
 		<for>
 			<effect name="Buff" count="1" time="10" val="0">
 				<mul order="0x40" stat="pAtk" val="1.15"/>

@@ -1069,9 +1069,9 @@
         <set name="operateType" val="OP_PASSIVE"/>
         <for>
             <add order="0x40" stat="pAtk" val="#pdam"/>
-			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="#attack" />
-			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="#attack" />
-			<mul order="0x30" stat="pvpPhysDmgBonus" val="#attack" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="#attack"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="#attack"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="#attack"/>
         </for>
     </skill>
     <skill id="13063" levels="4" name="R Grade Cloak Slot Completion">
@@ -1080,7 +1080,7 @@
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x10" stat="openCloakSlot" val="1" />
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
     </skill>
     <skill id="13064" levels="4" name="Set Effect - Immortal Heavy Armor 2 Piece (defense)">
