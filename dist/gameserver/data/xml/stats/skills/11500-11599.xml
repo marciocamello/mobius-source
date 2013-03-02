@@ -144,7 +144,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="target" val="TARGET_ONE"/>
 		<cond msgId="113" addName="1">
-            <using kind="Sword,Blunt,Dual Sword"/>
+            <using kind="Sword,Blunt,Dual Sword, Dual Blunt"/>
         </cond>
 		<for>
 			<effect name="Stun" time="1" val="0" stackOrder="1" stackType="stun"/>
@@ -171,7 +171,7 @@
 		<set name="relationSkillsId" val="1209;102;1484;1564;939;1245;98;105;1244;122;"/>
 		<set name="alterSkillsId" val="11749;11750;14579"/>
 		<cond msgId="113" addName="1">
-            <using kind="Sword,Blunt,Dual Sword"/>
+            <using kind="Sword,Blunt,Dual Sword, Dual Blunt"/>
         </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 name="Duel">
@@ -233,7 +233,7 @@
 		<set name="overHit" val="true"/>
 		<set name="relationSkillsId" val="504;70;927;1102;1104;115;"/>
 		<cond msgId="113" addName="1">
-            <using kind="Sword,Blunt,Dual Sword"/>
+            <using kind="Sword,Blunt,Dual Sword, Dual Blunt"/>
         </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 name="Duel">
@@ -298,7 +298,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>	
 		<set name="relationSkillsId" val="1096;1099;505;986;"/>
 		<cond msgId="113" addName="1">
-            <using kind="Sword,Blunt,Dual Sword"/>
+            <using kind="Sword,Blunt,Dual Sword, Dual Blunt"/>
         </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 name="Duel">
@@ -351,7 +351,7 @@
 		<set name="overHit" val="true"/>	
 		<set name="relationSkillsId" val="84;1095;1366;492;"/>
 		<cond msgId="113" addName="1">
-            <using kind="Sword,Blunt,Dual Sword"/>
+            <using kind="Sword,Blunt,Dual Sword, Dual Blunt"/>
         </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 name="Duel">
@@ -416,7 +416,7 @@
 		<set name="overHit" val="true"/>	
 		<set name="relationSkillsId" val="408;407;1485;260;"/>
 		<cond msgId="113" addName="1">
-            <using kind="Sword,Blunt,Dual Sword"/>
+            <using kind="Sword,Blunt,Dual Sword, Dual Blunt"/>
         </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 name="Duel">
@@ -486,9 +486,6 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1006;1040;1517;989;1036;988;1007;123;1009;871;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -518,9 +515,6 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1356;1413;1363;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>	
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -558,9 +552,6 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1044;1045;1501;1048;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -590,9 +581,6 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1476;1242;1253;1308;1518;1077;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -624,9 +612,6 @@
 		<set name="skillRadius" val="1000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="relationSkillsId" val="1535;230;1461;1240;1252;1309;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -657,9 +642,6 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1002;1251;1310;971;1519;1086;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -686,9 +668,6 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1283;1590;264;1243;1389;1391;271;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -718,9 +697,6 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1062;1388;274;1562;1586;1390;269;1261;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -754,9 +730,6 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="267;273;349;1588;1078;365;336;1596;337;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -794,9 +767,6 @@
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="363;276;1001;275;1592;304;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
@@ -826,9 +796,6 @@
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1284;310;1594;305;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
@@ -860,9 +827,6 @@
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="268;266;272;364;1073;265;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
@@ -893,9 +857,6 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="absorbPart" val="0.8"/>
 		<set name="relationSkillsId" val="1477;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
 		<for>
 			<effect name="Buff" time="15" val="0" stackOrder="4" stackType="impulse"/>
 		</for>
@@ -1133,9 +1094,6 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1411;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
 		<for>
 			<effect name="Buff" stackOrder="1" stackType="special_buff" time="30" val="0">
 				<mul order="0x30" stat="mAtk" val="2"/>
@@ -1159,9 +1117,6 @@
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1462;"/>
-		<cond msgId="113" addName="1">
-            <using kind="Dual Sword"/>
-        </cond>
 		<for>
 			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="Super_buff2">
 				<mul order="0x30" stat="pReuse" val="0.5"/>
@@ -1184,7 +1139,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>		
 		<set name="relationSkillsId" val="1509;"/>
 		<cond msgId="113" addName="1">
-            <using kind="Dual Sword, Blunt, Sword"/>
+            <using kind="Dual Sword, Blunt, Dagger, Dual Blunt"/>
         </cond>
 		<for>
 			<effect name="Debuff" time="10" val="0">
