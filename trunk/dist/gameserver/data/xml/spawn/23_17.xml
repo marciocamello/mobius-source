@@ -1223,16 +1223,6 @@
         <!--Dimensional Vortex 1-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="110831" y="15973" z="-4368" h="412"/>
-        <npc id="30949"/>
-        <!--Keplon-->
-    </spawn>
-    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="110828" y="15934" z="-4384" h="228"/>
-        <npc id="30952"/>
-        <!--Dimensional Vortex 1-->
-    </spawn>
-    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
         <point x="109695" y="220028" z="-3512" h="7656"/>
         <npc id="30969"/>
         <!--Iason Heine-->
