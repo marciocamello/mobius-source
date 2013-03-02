@@ -3,6 +3,7 @@
 <!-- 31043: Melody Maestro Octavia -->
 
 <list>
+<config showall="true" notax="true" keepenchanted="false" />
 	<item>
 		<!-- Adena -->
 		<ingredient count="700" id="57" />
