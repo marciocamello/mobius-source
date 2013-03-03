@@ -1205,4 +1205,49 @@ can_attack_door - может ли кубик бить дверь
 			</skill>
 		</skills>
 	</cubic>
+	<cubic id="17" level="1" delay="15">
+		<skills chance="50">
+			<skill id="11807" level="1" action_type="HEAL" can_attack_door="false">  <!--Cubic Cure-->
+				<chance min="0" max="29" value="53" />
+				<chance min="30" max="59" value="30" />
+				<chance min="60" max="100" value="13" />
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="17" level="2" delay="15">
+		<skills chance="50">
+			<skill id="11807" level="2" action_type="HEAL" can_attack_door="false">  <!--Cubic Cure-->
+				<chance min="0" max="29" value="53" />
+				<chance min="30" max="59" value="30" />
+				<chance min="60" max="100" value="13" />
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="17" level="3" delay="15">
+		<skills chance="50">
+			<skill id="11807" level="3" action_type="HEAL" can_attack_door="false">  <!--Cubic Cure-->
+				<chance min="0" max="29" value="53" />
+				<chance min="30" max="59" value="30" />
+				<chance min="60" max="100" value="13" />
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="17" level="4" delay="15">
+		<skills chance="50">
+			<skill id="11807" level="4" action_type="HEAL" can_attack_door="false" >  <!--Cubic Cure-->
+				<chance min="0" max="29" value="53" />
+				<chance min="30" max="59" value="30" />
+				<chance min="60" max="100" value="13" />
+			</skill>
+		</skills>
+	</cubic>
+	<cubic id="17" level="5" delay="15">
+		<skills chance="50">
+			<skill id="11807" level="5" action_type="HEAL" can_attack_door="false" >  <!--Cubic Cure-->
+				<chance min="0" max="29" value="53" />
+				<chance min="30" max="59" value="30" />
+				<chance min="60" max="100" value="13" />
+			</skill>
+		</skills>
+	</cubic>
 </list>
