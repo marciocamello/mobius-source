@@ -10,7 +10,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package services.villagemasters;
 
 import lineage2.gameserver.data.xml.holder.MultiSellHolder;
@@ -22,7 +21,7 @@ import lineage2.gameserver.model.instances.TrainerInstance;
 import lineage2.gameserver.model.instances.VillageMasterInstance;
 import lineage2.gameserver.scripts.Functions;
 
-public class Certificate extends Functions 
+public class Certificate extends Functions
 {
 	public void CertificateOfCourage()
 	{
@@ -171,7 +170,7 @@ public class Certificate extends Functions
 			}
 			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.human) && ((pl.getClassId() == ClassId.GLADIATOR) || (pl.getClassId() == ClassId.WARLORD) || (pl.getClassId() == ClassId.PALADIN) || (pl.getClassId() == ClassId.DARK_AVENGER) || (pl.getClassId() == ClassId.TREASURE_HUNTER) || (pl.getClassId() == ClassId.HAWKEYE)))
 			{
-					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
+				MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
 			}
 			else if ((pl.isQuestCompleted("_10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 			{
@@ -212,7 +211,7 @@ public class Certificate extends Functions
 				((TrainerInstance) getNpc()).showChatWindow(pl, "trainer/30158-done.htm");
 			}
 		}
-
+		
 		// Grand Master Tobias
 		if (npc.getNpcId() == 30297)
 		{

@@ -491,6 +491,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	 * Field _listener.
 	 */
 	private AttackedDispelListener _attackedlistener;
+	
 	/**
 	 * @author Mobius
 	 */

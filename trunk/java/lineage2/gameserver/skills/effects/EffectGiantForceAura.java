@@ -146,16 +146,18 @@ public class EffectGiantForceAura extends Effect
 				return false;
 			}
 		}
-		//Count Active Aura
+		// Count Active Aura
 		int activeAura = 0;
 		boolean psActive = false;
 		Effect psEffect = null;
 		if (getEffected().getEffectList() != null)
-		{	
+		{
 			for (Effect e : getEffected().getEffectList().getAllEffects())
 			{
 				if (e == null)
+				{
 					continue;
+				}
 				if (e.getEffectType() == EffectType.GiantForceAura)
 				{
 					activeAura++;
@@ -167,9 +169,9 @@ public class EffectGiantForceAura extends Effect
 				}
 			}
 		}
-		if (activeAura >= 4 && !psActive)
+		if ((activeAura >= 4) && !psActive)
 		{
-			Skill PartySolidarity = SkillTable.getInstance().getInfo(1955, Math.min((activeAura-3), 3));
+			Skill PartySolidarity = SkillTable.getInstance().getInfo(1955, Math.min((activeAura - 3), 3));
 			PartySolidarity.getEffects(getEffected(), getEffected(), false, false);
 		}
 		else if (psActive)

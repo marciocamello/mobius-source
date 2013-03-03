@@ -129,7 +129,9 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 					break;
 				case IN_GAME:
 					if (client.getActiveChar().isGM() && client.getActiveChar().isDebug())
+					{
 						client.getActiveChar().sendMessage("IN_GAME id:" + id);
+					}
 					switch (id)
 					{
 						case 0x00:

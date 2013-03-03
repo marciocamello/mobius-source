@@ -14,6 +14,7 @@ package lineage2.gameserver.network.telnet.commands;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
+
 import lineage2.gameserver.network.telnet.TelnetCommand;
 import lineage2.gameserver.network.telnet.TelnetCommandHolder;
 import lineage2.gameserver.utils.AdminFunctions;
@@ -59,7 +60,8 @@ public class TelnetGive implements TelnetCommandHolder
 	
 	/**
 	 * Method getCommands.
-	 * @return Set<TelnetCommand> * @see lineage2.gameserver.network.telnet.TelnetCommandHolder#getCommands()
+	 * @return Set<TelnetCommand>
+	 * @see lineage2.gameserver.network.telnet.TelnetCommandHolder#getCommands()
 	 */
 	@Override
 	public Set<TelnetCommand> getCommands()
