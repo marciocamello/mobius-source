@@ -923,18 +923,17 @@
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="skillType" val="DEBUFF"/>
 		<set name="isHandler" val="true"/>
 		<set name="npcId" val="13093"/>
-		<set name="isDebuff" val="true"/>
-		<set name="isOffensive" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>	
 		<set name="relationSkillsId" val="1092;2;15;1395;"/>
 		<for>
-			<effect count="1" noicon="1" name="Transformation" time="15" val="104" cancelOnAttacked="true">
+			<effect count="2" noicon="1" name="MuteAll" time="15" val="0" cancelOnAttacked="true"/>		
+			<effect name="Transformation" time="15" val="104" cancelOnAttacked="true">
 				<mul order="0x30" stat="runSpd" val="#spd"/>
 			</effect>	
-			<effect count="1" noicon="1" name="MuteAll" time="15" val="0" cancelOnAttacked="true"/>		
+
 		</for>
 	</skill>
 	<skill id="11538" levels="4" name="Mass Giant Root">
