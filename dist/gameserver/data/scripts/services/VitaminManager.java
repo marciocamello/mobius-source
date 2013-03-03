@@ -28,7 +28,7 @@ public class VitaminManager extends Functions
 	private static final int MinionCoupon = 21275; // Minion Coupon
 	private static final int SuperiorMinionCoupon = 21279; // Superior Minion Coupon
 	private static final int EnhancedRoseSpiritCoupon = 20914; // Enhanced Rose Spirit Coupon
-
+	
 	/**
 	 * Minion Pets
 	 */
@@ -53,7 +53,7 @@ public class VitaminManager extends Functions
 	private static final int LiliasNeck = 20918;
 	private static final int LaphamNeck = 20919;
 	private static final int MafumNeck = 20920;
-
+	
 	/**
 	 * Method giveWeasel.
 	 */

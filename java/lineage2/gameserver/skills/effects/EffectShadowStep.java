@@ -49,7 +49,7 @@ public class EffectShadowStep extends Effect
 	public void onStart()
 	{
 		super.onStart();
-	
+		
 		int px = _effected.getX();
 		int py = _effected.getY();
 		
@@ -64,10 +64,10 @@ public class EffectShadowStep extends Effect
 		_x = (int) (px + (30 * Math.cos(ph)));
 		_y = (int) (py + (30 * Math.sin(ph)));
 		_z = _effected.getZ();
-
+		
 		Location loc = new Location(_x, _y, _z);
 		loc = GeoEngine.moveCheck(_effector.getX(), _effector.getY(), _effector.getZ(), _x, _y, _effector.getGeoIndex());
-
+		
 		_x = loc.getX();
 		_y = loc.getY();
 		_z = loc.getZ();

@@ -1394,8 +1394,8 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	protected BaseStats _saveVs;
 	/**
-	* Field _dispelOnDamage;
-	*/
+	 * Field _dispelOnDamage;
+	 */
 	protected boolean _dispelOnDamage;
 	/**
 	 * Field _nextAction.
@@ -2070,7 +2070,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		{
 			return null;
 		}
-		if (!first && (target != activeChar) && ((_targetType == SkillTargetType.TARGET_MULTIFACE) || (_targetType == SkillTargetType.TARGET_MULTIFACE_AURA) || (_targetType == SkillTargetType.TARGET_TUNNEL)) && (_isBehind ? PositionUtils.isFacing(activeChar, target, (360-_scopeAngle)) : !PositionUtils.isFacing(activeChar, target, _scopeAngle)))
+		if (!first && (target != activeChar) && ((_targetType == SkillTargetType.TARGET_MULTIFACE) || (_targetType == SkillTargetType.TARGET_MULTIFACE_AURA) || (_targetType == SkillTargetType.TARGET_TUNNEL)) && (_isBehind ? PositionUtils.isFacing(activeChar, target, (360 - _scopeAngle)) : !PositionUtils.isFacing(activeChar, target, _scopeAngle)))
 		{
 			return SystemMsg.YOUR_TARGET_IS_OUT_OF_RANGE;
 		}
