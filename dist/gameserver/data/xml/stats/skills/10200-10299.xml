@@ -474,8 +474,7 @@
 		</enchant8>
 		<enchant9 levels="10" name="Recycle"/>
 		<for>
-			<effect count="1" name="KnockBack" stackOrder="-1" stackType="KnockBack" time="3" val="0"/>
-			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="3" val="0"/>
+		<effect count="1" name="KnockDown" stackOrder="-1" stackType="KnockDown" time="2" val="0"/>
 		</for>
 	</skill>
     <skill id="10263" levels="8" name="Hurricane Blaster">
@@ -547,9 +546,10 @@
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="element" val="#element"/>
 		<set name="elementPower" val="#elementPower"/>		
-		<set name="target" val="TARGET_ONE"/>
+		<set name="target" val="TARGET_AURA"/>
 		<set name="overHit" val="true"/>
 		<set name="unaggroing" val="true"/>
+		<set name="skillRadius" val="500"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="113" addName="1">
@@ -625,7 +625,7 @@
 			<using kind="Pole, Blunt, Sword, Dual Sword, Big Sword, Dual Fist, Dual Blunt"/>
 		</cond>
 		<for>
-			<effect name="Stun" time="3" val="0" stackOrder="1" stackType="stun"/>
+			<effect name="KnockDown" time="3" val="0" stackOrder="1" stackType="KnockDown"/>
 		</for>
 	</skill>
     <skill id="10267" levels="6" name="Hurricane Rush">
@@ -637,8 +637,10 @@
 		<set name="nextAction" val="attack"/>
 		<set name="castRange" val="600"/>
 		<set name="coolTime" val="200"/>
-		<set name="effectRange" val="800"/>
+		<set name="effectRange" val="600"/>
 		<set name="flyType" val="CHARGE"/>
+		<set name="flyRadius" val="600"/>
+		<set name="flyToBack" val="true"/>
 		<set name="hitTime" val="600"/>
 		<set name="isDebuff" val="true"/>
 		<set name="lvlDepend" val="1"/>
@@ -650,7 +652,7 @@
 		<set name="saveVs" val="CON"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="SSBoost" val="2.0"/>
-		<set name="target" val="TARGET_ONE"/>
+		<set name="target" val="TARGET_TUNNEL"/>
         <set name="activateRate" val="#activateRate"/>
 		<cond msg="Requires Pole, Sword, Blunt, Dual Sword, Big Blunt, Big Sword, Dual Fist.">
 			<using kind="Pole, Sword, Blunt, Dual Sword, Big Blunt, Big Sword, Dual Fist"/>
@@ -755,8 +757,8 @@
 		<set name="activateRate" val="#activateRate"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="effectPoint" val="#effectPoint"/>
-		<set name="target" val="TARGET_MULTIFACE"/>
-		<set name="skillRadius" val="200"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="1500"/>
 		<set name="relationSkillsId" val="503;286;"/> 
 		<set name="skillType" val="AGGRESSION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -977,7 +979,8 @@
 		<set name="power" val="#pwr"/>
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="skillType" val="PDAM"/>
-		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="600"/>
+		<set name="target" val="TARGET_AURA"/>
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow,Crossbow"/>
