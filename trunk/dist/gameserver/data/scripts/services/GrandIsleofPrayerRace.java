@@ -47,7 +47,7 @@ public class GrandIsleofPrayerRace extends Functions
 		}
 		getNpc().altUseSkill(skill, player);
 		removeItem(player, RACE_STAMP, getItemCount(player, RACE_STAMP));
-		show("defautl/32349-2.htm", player, npc);
+		show("default/32349-2.htm", player, npc);
 	}
 	
 	/**
