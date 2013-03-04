@@ -35,7 +35,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="MagmeldPresent"/>
+		<set name="type" value="MumuPresent"/>
 		<skills>
 			<skill id="4416" level="7"/>
 		</skills>
