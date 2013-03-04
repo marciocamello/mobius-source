@@ -562,7 +562,7 @@
 		<set name="isMusic" val="true"/>
 		<set name="magicLevel" val="85"/>
 		<for>
-            <effect count="0x7fffffff" name="Buff" time="5" val="10" stackType="PartySolidarity" stackOrder="1">
+            <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="PartySolidarity" stackOrder="1">
 				<mul order="0x30" stat="pAtk" val="#pAtk"/>
 				<mul order="0x30" stat="rCrit" val="#rCrit"/>
 				<mul order="0x30" stat="pAtkSpd" val="#atkSpd"/>
