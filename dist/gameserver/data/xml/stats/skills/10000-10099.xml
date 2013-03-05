@@ -838,7 +838,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillType" val="BUFF"/>
 		<set name="skillRadius" val="400"/>
-        <set name="target" val="TARGET_PARTY_AURA"/>
+        <set name="target" val="TARGET_PARTY"/>
         <cond msgId="113" addName="1">
 			<using kind="Shield"/>
         </cond>
