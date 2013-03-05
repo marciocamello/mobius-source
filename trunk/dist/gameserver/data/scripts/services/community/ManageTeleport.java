@@ -323,7 +323,7 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 				content.append("<button value=\"" + rs.getString("name") + "\" action=\"bypass _bbsgotoxyz:index:" + rs.getInt("xPos") + ":" + rs.getInt("yPos") + ":" + rs.getInt("zPos") + ";\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 				content.append("</td>");
 				content.append("<td>");
-				content.append("<button value=\"Удалит�?\" action=\"bypass _bbstdelete:index:" + rs.getInt("TpId") + ";\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+				content.append("<button value=\"Remove?\" action=\"bypass _bbstdelete:index:" + rs.getInt("TpId") + ";\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 				content.append("</td>");
 				content.append("</tr>");
 			}
@@ -369,7 +369,7 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 		}
 		if ((player.getReflection().getId() != 0) && !Config.COMMUNITYBOARD_INSTANCE_ENABLED)
 		{
-			player.sendMessage("Телепорт до�?тупен тол�?ко в обычном мире.");
+			player.sendMessage("Teleport is not available in instance.");
 			return false;
 		}
 		if (!Config.COMMUNITYBOARD_BUFFER_ENABLED)
