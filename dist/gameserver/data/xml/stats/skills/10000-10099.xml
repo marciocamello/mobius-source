@@ -389,7 +389,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="flyType" val="DUMMY"/>
 		<set name="power" val="#Power"/>
-		<set name="target" val="TARGET_ONE"/>
+		<set name="target" val="TARGET_AURA"/>
 		<set name="reuseDelay" val="60000"/>
 		<set name="hitTime" val="1200"/>
 		<set name="coolTime" val="300"/>
@@ -429,7 +429,7 @@
         <set name="powerPvP" val="#powerPvP"/>
         <set name="element" val="#element"/>
         <set name="elementPower" val="#elementPower"/>
-        <set name="target" val="TARGET_MULTIFACE"/>
+        <set name="target" val="TARGET_AURA"/>
 		<set name="castRange" val="40"/>
         <set name="skillRadius" val="400"/>
 		<set name="reuseDelay" val="70000"/>
@@ -832,12 +832,13 @@
 		<set name="castRange" val="900"/>
 		<set name="coolTime" val="470"/>
 		<set name="hitTime" val="700"/>
-		<table name="#reuseDelay">600000</table>
+		<set name="reuseDelay" val="600000"/>
         <set name="magicType" val="MAGIC"/>
         <set name="magicLevel" val="99"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillType" val="BUFF"/>
-        <set name="target" val="TARGET_PARTY_ONE"/>
+		<set name="skillRadius" val="400"/>
+        <set name="target" val="TARGET_PARTY_AURA"/>
         <cond msgId="113" addName="1">
 			<using kind="Shield"/>
         </cond>
