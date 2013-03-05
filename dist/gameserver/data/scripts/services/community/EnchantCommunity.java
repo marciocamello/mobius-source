@@ -137,13 +137,13 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 					continue;
 				}
 				sb.append("<tr><td><img src=icon." + _item.getTemplate().getIcon() + " width=32 height=32></td><td>");
-				sb.append("<font color=\"LEVEL\">" + _item.getTemplate().getName() + " " + (_item.getEnchantLevel() <= 0 ? "" : "</font><br><font color=3293F3>Заточено на: +" + _item.getEnchantLevel()) + "</font><br1>");
-				sb.append("Заточка за: <font color=\"LEVEL\">" + name + "</font>");
+				sb.append("<font color=\"LEVEL\">" + _item.getTemplate().getName() + " " + (_item.getEnchantLevel() <= 0 ? "" : "</font><br><font color=3293F3>Enchanted to: +" + _item.getEnchantLevel()) + "</font><br1>");
+				sb.append("Enchant for: <font color=\"LEVEL\">" + name + "</font>");
 				sb.append("<img src=\"l2ui.squaregray\" width=\"170\" height=\"1\">");
 				sb.append("</td><td>");
-				sb.append("<button value=\"�?бычна�?\" action=\"bypass _bbsechant;enchlistpage;" + _item.getObjectId() + "\" width=75 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+				sb.append("<button value=\"Enchant\" action=\"bypass _bbsechant;enchlistpage;" + _item.getObjectId() + "\" width=75 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 				sb.append("</td><td>");
-				sb.append("<button value=\"�?ттрибут\" action=\"bypass _bbsechant;enchlistpageAtrChus;" + _item.getObjectId() + "\" width=75 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+				sb.append("<button value=\"Attribute\" action=\"bypass _bbsechant;enchlistpageAtrChus;" + _item.getObjectId() + "\" width=75 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 				sb.append("</td></tr>");
 			}
 			sb.append("</table>");
@@ -161,10 +161,10 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			name = ItemHolder.getInstance().getTemplate(Config.ENCHANTER_ITEM_ID).getName();
 			ItemInstance EhchantItem = activeChar.getInventory().getItemByObjectId(ItemForEchantObjID);
 			StringBuilder sb = new StringBuilder();
-			sb.append("Дл�? обычной заточки выбрана вещ�?:<br1><table width=300>");
+			sb.append("Enchant selected ingredient?<br1><table width=300>");
 			sb.append("<tr><td width=32><img src=icon." + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td><td width=236><center>");
-			sb.append("<font color=\"LEVEL\">" + EhchantItem.getTemplate().getName() + " " + (EhchantItem.getEnchantLevel() <= 0 ? "" : "</font><br1><font color=3293F3>Заточено на: +" + EhchantItem.getEnchantLevel()) + "</font><br1>");
-			sb.append("Заточка производит�?�? за: <font color=\"LEVEL\">" + name + "</font>");
+			sb.append("<font color=\"LEVEL\">" + EhchantItem.getTemplate().getName() + " " + (EhchantItem.getEnchantLevel() <= 0 ? "" : "</font><br1><font color=3293F3>Enchanted to: +" + EhchantItem.getEnchantLevel()) + "</font><br1>");
+			sb.append("Enchant for: <font color=\"LEVEL\">" + name + "</font>");
 			sb.append("<img src=\"l2ui.squaregray\" width=\"236\" height=\"1\"><center></td>");
 			sb.append("<td width=32><img src=icon." + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td>");
 			sb.append("</tr>");
@@ -174,10 +174,10 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			sb.append("<table border=0 width=400><tr><td width=200>");
 			for (int i = 0; i < Config.ENCHANT_LEVELS.length; i++)
 			{
-				sb.append("<center><button value=\"�?а +" + Config.ENCHANT_LEVELS[i] + " (Цена:" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_PRICE_WPN[i] : Config.ENCHANT_PRICE_ARM[i]) + " " + name + ")\" action=\"bypass _bbsechant;enchantgo;" + Config.ENCHANT_LEVELS[i] + ";" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_PRICE_WPN[i] : Config.ENCHANT_PRICE_ARM[i]) + ";" + ItemForEchantObjID + "\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">");
+				sb.append("<center><button value=\"Add +" + Config.ENCHANT_LEVELS[i] + " (Price:" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_PRICE_WPN[i] : Config.ENCHANT_PRICE_ARM[i]) + " " + name + ")\" action=\"bypass _bbsechant;enchantgo;" + Config.ENCHANT_LEVELS[i] + ";" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_PRICE_WPN[i] : Config.ENCHANT_PRICE_ARM[i]) + ";" + ItemForEchantObjID + "\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">");
 				sb.append("<br1>");
 			}
-			sb.append("</td></tr></table><br1><button value=\"�?азад\" action=\"bypass _bbsechant;\" width=70 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+			sb.append("</td></tr></table><br1><button value=\"Back\" action=\"bypass _bbsechant;\" width=70 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/enchanter.htm", activeChar);
 			content = content.replace("%enchanter%", sb.toString());
 			ShowBoard.separateAndSend(BbsUtil.htmlAll(content, activeChar), activeChar);
@@ -192,10 +192,10 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			name = ItemHolder.getInstance().getTemplate(Config.ENCHANTER_ITEM_ID).getName();
 			ItemInstance EhchantItem = activeChar.getInventory().getItemByObjectId(ItemForEchantObjID);
 			StringBuilder sb = new StringBuilder();
-			sb.append("Дл�? заточки на атрибут выбрана вещ�?:<br><table width=300>");
+			sb.append("Enchant selected ingredient?<br><table width=300>");
 			sb.append("<tr><td width=32><img src=icon." + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td><td width=236><center>");
-			sb.append("<font color=\"LEVEL\">" + EhchantItem.getTemplate().getName() + " " + (EhchantItem.getEnchantLevel() <= 0 ? "" : "</font><br1><font color=3293F3>Заточено на: +" + EhchantItem.getEnchantLevel()) + "</font><br1>");
-			sb.append("Заточка производит�?�? за: <font color=\"LEVEL\">" + name + "</font>");
+			sb.append("<font color=\"LEVEL\">" + EhchantItem.getTemplate().getName() + " " + (EhchantItem.getEnchantLevel() <= 0 ? "" : "</font><br1><font color=3293F3>Enchanted to: +" + EhchantItem.getEnchantLevel()) + "</font><br1>");
+			sb.append("Enchant for: <font color=\"LEVEL\">" + name + "</font>");
 			sb.append("<img src=\"l2ui.squaregray\" width=\"236\" height=\"1\"><center></td>");
 			sb.append("<td width=32><img src=icon." + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td>");
 			sb.append("</tr>");
@@ -216,7 +216,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			sb.append("<button value=\"Divine \" action=\"bypass _bbsechant;enchlistpageAtr;4;" + ItemForEchantObjID + "\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">");
 			sb.append("<br><center><img src=icon.etc_unholy_stone_i00 width=32 height=32></center><br>");
 			sb.append("<button value=\"Dark \" action=\"bypass _bbsechant;enchlistpageAtr;5;" + ItemForEchantObjID + "\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">");
-			sb.append("</td></tr></table><br1><button value=\"�?азад\" action=\"bypass _bbsechant;\" width=70 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+			sb.append("</td></tr></table><br1><button value=\"Back\" action=\"bypass _bbsechant;\" width=70 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/enchanter.htm", activeChar);
 			content = content.replace("%enchanter%", sb.toString());
 			ShowBoard.separateAndSend(BbsUtil.htmlAll(content, activeChar), activeChar);
@@ -257,10 +257,10 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			name = ItemHolder.getInstance().getTemplate(Config.ENCHANTER_ITEM_ID).getName();
 			ItemInstance EhchantItem = activeChar.getInventory().getItemByObjectId(ItemForEchantObjID);
 			StringBuilder sb = new StringBuilder();
-			sb.append("Выбран �?лемент: <font color=\"LEVEL\">" + ElementName + "</font><br1> Дл�? заточки выбрана вещ�?:<br1><table width=300>");
+			sb.append("Chosen Element: <font color=\"LEVEL\">" + ElementName + "</font><br1> Enchant selected ingredient?<br1><table width=300>");
 			sb.append("<tr><td width=32><img src=icon." + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td><td width=236><center>");
-			sb.append("<font color=\"LEVEL\">" + EhchantItem.getTemplate().getName() + " " + (EhchantItem.getEnchantLevel() <= 0 ? "" : "</font><br1><font color=3293F3>Заточено на: +" + EhchantItem.getEnchantLevel()) + "</font><br1>");
-			sb.append("Заточка производит�?�? за: <font color=\"LEVEL\">" + name + "</font>");
+			sb.append("<font color=\"LEVEL\">" + EhchantItem.getTemplate().getName() + " " + (EhchantItem.getEnchantLevel() <= 0 ? "" : "</font><br1><font color=3293F3>Enchant to: +" + EhchantItem.getEnchantLevel()) + "</font><br1>");
+			sb.append("Enchant for: <font color=\"LEVEL\">" + name + "</font>");
 			sb.append("<img src=\"l2ui.squaregray\" width=\"236\" height=\"1\"><center></td>");
 			sb.append("<td width=32><img src=icon." + EhchantItem.getTemplate().getIcon() + " width=32 height=32> <img src=\"l2ui.squaregray\" width=\"32\" height=\"1\"></td>");
 			sb.append("</tr>");
@@ -272,7 +272,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 				sb.append("<table border=0 width=400><tr><td width=200>");
 				for (int i = 0; i < (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS.length : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM.length); i++)
 				{
-					sb.append("<center><button value=\"�?а +" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS[i] : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM[i]) + " (Цена:" + (EhchantItem.getTemplate().isWeapon() ? Config.ATTRIBUTE_PRICE_WPN[i] : Config.ATTRIBUTE_PRICE_ARM[i]) + " " + name + ")\" action=\"bypass _bbsechant;enchantgoAtr;" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS[i] : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM[i]) + ";" + AtributType + ";" + (EhchantItem.getTemplate().isWeapon() ? Config.ATTRIBUTE_PRICE_WPN[i] : Config.ATTRIBUTE_PRICE_ARM[i]) + ";" + ItemForEchantObjID + "\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">");
+					sb.append("<center><button value=\"Add +" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS[i] : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM[i]) + " (Price:" + (EhchantItem.getTemplate().isWeapon() ? Config.ATTRIBUTE_PRICE_WPN[i] : Config.ATTRIBUTE_PRICE_ARM[i]) + " " + name + ")\" action=\"bypass _bbsechant;enchantgoAtr;" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS[i] : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM[i]) + ";" + AtributType + ";" + (EhchantItem.getTemplate().isWeapon() ? Config.ATTRIBUTE_PRICE_WPN[i] : Config.ATTRIBUTE_PRICE_ARM[i]) + ";" + ItemForEchantObjID + "\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">");
 					sb.append("<br1>");
 				}
 				sb.append("</td></tr></table><br1>");
@@ -282,7 +282,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 				sb.append("<table border=0 width=400><tr><td width=200>");
 				for (int i = 0; i < (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS.length : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM.length); i++)
 				{
-					sb.append("<center><button value=\"�?а +" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS[i] : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM[i]) + " (Цена:" + (EhchantItem.getTemplate().isWeapon() ? Config.ATTRIBUTE_PRICE_WPN[i] : Config.ATTRIBUTE_PRICE_ARM[i]) + " " + name + ")\" action=\"bypass _bbsechant;enchantgoAtr;" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS[i] : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM[i]) + ";" + AtributType + ";" + (EhchantItem.getTemplate().isWeapon() ? Config.ATTRIBUTE_PRICE_WPN[i] : Config.ATTRIBUTE_PRICE_ARM[i]) + ";" + ItemForEchantObjID + "\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">");
+					sb.append("<center><button value=\"Add +" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS[i] : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM[i]) + " (Price:" + (EhchantItem.getTemplate().isWeapon() ? Config.ATTRIBUTE_PRICE_WPN[i] : Config.ATTRIBUTE_PRICE_ARM[i]) + " " + name + ")\" action=\"bypass _bbsechant;enchantgoAtr;" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS[i] : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM[i]) + ";" + AtributType + ";" + (EhchantItem.getTemplate().isWeapon() ? Config.ATTRIBUTE_PRICE_WPN[i] : Config.ATTRIBUTE_PRICE_ARM[i]) + ";" + ItemForEchantObjID + "\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">");
 					sb.append("<br1>");
 				}
 				sb.append("</td></tr></table><br1>");
@@ -294,14 +294,14 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 				sb.append("<br1>");
 				sb.append("<br1>");
 				sb.append("<br1>");
-				sb.append("<center><font color=\"LEVEL\">Заточка данной вещи не возможна!</font></center>");
+				sb.append("<center><font color=\"LEVEL\">Enchant is impossible!</font></center>");
 				sb.append("<br1>");
 				sb.append("<br1>");
 				sb.append("<br1>");
 				sb.append("<br1>");
 				sb.append("</td></tr></table><br>");
 			}
-			sb.append("<button value=\"�?азад\" action=\"bypass _bbsechant;\" width=70 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+			sb.append("<button value=\"Back\" action=\"bypass _bbsechant;\" width=70 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/enchanter.htm", activeChar);
 			content = content.replace("%enchanter%", sb.toString());
 			ShowBoard.separateAndSend(BbsUtil.htmlAll(content, activeChar), activeChar);
@@ -328,7 +328,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 				activeChar.getInventory().equipItem(EhchantItem);
 				activeChar.sendPacket(new InventoryUpdate().addModifiedItem(EhchantItem));
 				activeChar.broadcastUserInfo(true);
-				activeChar.sendMessage("" + EhchantItem.getTemplate().getName() + " было заточено до " + EchantVal + ". Спа�?ибо.");
+				activeChar.sendMessage("" + EhchantItem.getTemplate().getName() + " was enchanted to " + EchantVal + ". Thanks.");
 				onBypassCommand(activeChar, "_bbsechant;");
 			}
 			else
@@ -362,7 +362,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 					activeChar.getInventory().equipItem(EhchantItem);
 					activeChar.sendPacket(new InventoryUpdate().addModifiedItem(EhchantItem));
 					activeChar.broadcastUserInfo(true);
-					activeChar.sendMessage("" + EhchantItem.getTemplate().getName() + " было заточено до " + EchantVal + ". Спа�?ибо.");
+					activeChar.sendMessage("" + EhchantItem.getTemplate().getName() + " was enchanted to " + EchantVal + ". Thanks.");
 					onBypassCommand(activeChar, "_bbsechant;");
 				}
 				else
@@ -374,7 +374,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			{
 				if (!canEnchantArmorAttribute(AtrType, EhchantItem))
 				{
-					activeChar.sendMessage("�?евозможно в�?тавит�? аттрибут в брон�?, не �?обл�?дены у�?лови�?");
+					activeChar.sendMessage("attribute reservation by region?");
 					onBypassCommand(activeChar, "_bbsechant;");
 					return;
 				}
@@ -389,7 +389,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 					activeChar.getInventory().equipItem(EhchantItem);
 					activeChar.sendPacket(new InventoryUpdate().addModifiedItem(EhchantItem));
 					activeChar.broadcastUserInfo(true);
-					activeChar.sendMessage("" + EhchantItem.getTemplate().getName() + " было заточено до " + EchantVal + ". Спа�?ибо.");
+					activeChar.sendMessage("" + EhchantItem.getTemplate().getName() + " was enchanted to " + EchantVal + ". Thanks.");
 					onBypassCommand(activeChar, "_bbsechant;");
 				}
 			}

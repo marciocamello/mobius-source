@@ -189,7 +189,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_memo_edit.htm", player);
 			html = html.replace("%page%", page);
 			html = html.replace("%memo_id%", "0");
-			html = html.replace("%TREE%", "&nbsp;>&nbsp;Создание запи�?ки");
+			html = html.replace("%TREE%", "&nbsp;>&nbsp;Create a record?");
 			player.sendPacket(new ShowBoard(html, "1001", player));
 			List<String> args = new ArrayList<>();
 			args.add("0");
@@ -292,7 +292,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 					html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_memo_edit.htm", player);
 					html = html.replace("%page%", page);
 					html = html.replace("%memo_id%", String.valueOf(memoId));
-					html = html.replace("%TREE%", "&nbsp;>&nbsp;<a action=\"bypass _mmread_" + memoId + "_" + page + "\">Запи�?ка: " + rset.getString("title") + "</a>&nbsp;>&nbsp;Редактирование");
+					html = html.replace("%TREE%", "&nbsp;>&nbsp;<a action=\"bypass _mmread_" + memoId + "_" + page + "\">Note: " + rset.getString("title") + "</a>&nbsp;>&nbsp;Editing");
 					player.sendPacket(new ShowBoard(html, "1001", player));
 					List<String> args = new ArrayList<>();
 					args.add("0");
