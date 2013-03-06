@@ -595,7 +595,7 @@
         <enchant2 levels="10" name="Power">
             <table name="#runSpd">1 2 3 4 5 6 7 8 9 10</table>
         </enchant2>
-        <enchant4 levels="10" name="Recycle">		
+        <enchant4 levels="10" name="Recycle" enchRoute="9">		
 			<table name="#reuseDelay">175000 170000 165000 160000 150000 140000 135000 130000 125000 120000</table>
 		</enchant4>
         <for>
