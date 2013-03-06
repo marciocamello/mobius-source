@@ -1178,7 +1178,7 @@
 				<target loc="146440 46723 -3432" item_id="57" price="1000" name="1010053"/><!-- Колизей -->
 			</sublist>
 			<sublist id="3">
-				<target loc="-87328 142266 -3640" item_id="6651" price="1" name="1010506"/><!-- Арена Глудина -->
+				<target loc="-87328 142266 -3640" item_id="6651"  price="1" name="1010506"/><!-- Арена Глудина -->
 				<target loc="73579 142709 -3768" item_id="6651" price="1" name="1010507"/><!-- Арена Гирана -->
 				<target loc="-6989 109503 -3040" item_id="6651" price="1" name="1010171"/><!-- Охотничьи Угодья Зла (Ур.14) -->
 				<target loc="146440 46723 -3432" item_id="6651" price="1" name="1010053"/><!-- Колизей -->
@@ -1227,7 +1227,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Trainer"/>
 		<equip>
 			<rhand item_id="89"/>	<!--Big Hammer-->
 		</equip>
