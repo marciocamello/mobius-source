@@ -238,6 +238,8 @@ public final class DocumentSkill extends DocumentBase
 			Map<Integer, Integer> displayLevels = new HashMap<>();
 			Node enchant = null;
 			Map<String, Object[]> etables = new HashMap<>();
+			int[] realEnchantRoute = new int[10];
+			
 			int count = 0, eLevels = 0;
 			Node d = n.cloneNode(true);
 			for (int k = 0; k < d.getChildNodes().getLength(); k++)
@@ -259,18 +261,30 @@ public final class DocumentSkill extends DocumentBase
 					}
 				}
 				String ename = enchant.getAttributes().getNamedItem("name").getNodeValue();
+				int enchRoute = 0;
+				if (enchant.getAttributes().getNamedItem("enchRoute") != null)
+				{
+					enchRoute = Integer.parseInt(enchant.getAttributes().getNamedItem("enchRoute").getNodeValue());
+				}
+				else
+				{
+					enchRoute = count +1;
+				}
 				for (int r = 1; r <= eLevels; r++)
 				{
 					int level;
+					int levelskilllearn;
 					if (Config.ENCHANT_SKILLSID_RETAIL)
 					{
-						level = (100 * (count + 1)) + r;
+						level = (enchRoute * 100) + r;
+						levelskilllearn = level;
 					}
 					else
 					{
 						level = lastLvl + (eLevels * count) + r;
+						levelskilllearn = (100 * (count + 1)) + r;
 					}
-					EnchantSkillLearn e = new EnchantSkillLearn(skillId, (100 * (count + 1)) + r, skillName, "+" + r + " " + ename, r == 1 ? lastLvl : ((100 * (count + 1)) + r) - 1, lastLvl, eLevels);
+					EnchantSkillLearn e = new EnchantSkillLearn(skillId, levelskilllearn, skillName, "+" + r + " " + ename, r == 1 ? lastLvl : levelskilllearn - 1, lastLvl, eLevels);
 					List<EnchantSkillLearn> t = SkillTreeTable._enchant.get(skillId);
 					if (t == null)
 					{
@@ -278,9 +292,11 @@ public final class DocumentSkill extends DocumentBase
 					}
 					t.add(e);
 					SkillTreeTable._enchant.put(skillId, t);
-					displayLevels.put(level, ((count + 1) * 100) + r);
+					displayLevels.put(level, levelskilllearn);
 				}
 				count++;
+				realEnchantRoute[count] = enchRoute;
+				
 				Node first = enchant.getFirstChild();
 				Node curr = null;
 				for (curr = first; curr != null; curr = curr.getNextSibling())
@@ -317,7 +333,7 @@ public final class DocumentSkill extends DocumentBase
 						int tmplvl = current - bLevels - 1;
 						int enchantRoute = (tmplvl - (tmplvl % eLevels)) / eLevels;
 						int enchantLevel = tmplvl - (enchantRoute * eLevels);
-						skilllevel = (100 * (enchantRoute + 1)) + enchantLevel + 1;
+						skilllevel = (100 * (realEnchantRoute[enchantRoute + 1])) + enchantLevel + 1;
 					}
 				}
 				currentSkill.sets[i] = new StatsSet();
