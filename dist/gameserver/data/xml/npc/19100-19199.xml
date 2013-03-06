@@ -2162,8 +2162,8 @@
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="80"/>
-		<set name="type" value="Npc"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="GuardRuins"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="258"/>
 		<set name="baseHpRate" value="1"/>
@@ -2197,6 +2197,9 @@
 			<defence attribute="unholy" value="120"/>
 		</attributes>
 		<skills/>
+		<ai_params>
+            <set name="ignoreAggroDelay" value="true"/>
+        </ai_params>
 	</npc>
 	<npc id="19153" name="Combat Soldier" title="">
 		<!--fixed by Darvin & HaxHago-->
