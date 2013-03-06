@@ -756,8 +756,9 @@
 	<skill id="11529" levels="1" name="Prevailing Sonata">
     <!-- Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 35%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes. -->
 		<table name="#time">300</table>
-		<table name="#mpConsume2">170</table>
-		<set name="reuseDelay" val="2000"/>
+		<table name="#mpConsume2">140</table>
+		<table name="#reuseDelay">2000</table>
+		<set name="reuseDelay" val="#reuseDelay"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="target" val="TARGET_PARTY"/>
@@ -767,11 +768,15 @@
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="363;276;1001;275;1592;304;"/>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 levels="10" name="Time">
+        <enchant1 levels="10" name="Cost" >
+			<table name="#mpConsume2">133 128 122 117 111 106 100 95 88 83</table>
+		</enchant1>
+        <enchant2 levels="10" name="Time" >
             <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
         </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
+        <enchant3 levels="10" name="Recycle" enchRoute="9" >
+			<table name="#reuseDelay">2000 1900 1800 1700 1600 1500 1400 1300 1200 1100</table>
+        </enchant3>
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="5" stackType="sov;som;doc;dof">
 				<mul order="0x30" stat="mAtkSpd" val="1.30"/>
