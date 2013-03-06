@@ -171,7 +171,7 @@ public class EffectGiantForceAura extends Effect
 		}
 		if (activeAura >= 4) 
 		{
-			if (!psActive)
+			if (!psActive || psEffect.getSkill().getLevel() < Math.min((activeAura - 3), 3))
 			{
 				Skill PartySolidarity = SkillTable.getInstance().getInfo(1955, Math.min((activeAura - 3), 3));
 				PartySolidarity.getEffects(getEffected(), getEffected(), false, false);
