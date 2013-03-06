@@ -242,11 +242,13 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("3-3.htm"))
 		{
 			st.setCond(6);
+			st.playSound(SOUND_MIDDLE);
 			player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q003));
 		}
-		else if (event.equalsIgnoreCase("2-4.htm"))
+		else if (event.equalsIgnoreCase("2-3.htm"))
 		{
-			htmltext = "2-4.htm";
+			htmltext = "2-3.htm";
+			st.playSound(SOUND_MIDDLE);
 			st.setCond(4);
 		}
 		if (event.startsWith("changeclass"))
