@@ -793,11 +793,11 @@ public class RequestActionUse extends L2GameClientPacket
 		/**
 		 * Field ACTION87.
 		 */
-		ACTION87(87, SOCIAL_ACTION, SocialAction.Tauty1, 2),
+		ACTION87(87, SOCIAL_ACTION, SocialAction.PROPOSE, 2),
 		/**
 		 * Field ACTION88.
 		 */
-		ACTION88(88, SOCIAL_ACTION, SocialAction.Tauty2, 2),
+		ACTION88(88, SOCIAL_ACTION, SocialAction.PROVOKE, 2),
 		/**
 		 * Field ACTION71.
 		 */
