@@ -15,7 +15,6 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Spawner;
 import lineage2.gameserver.model.Zone;
-import lineage2.gameserver.model.base.RestartType;
 import lineage2.gameserver.model.entity.Hero;
 import lineage2.gameserver.model.entity.HeroDiary;
 import lineage2.gameserver.model.entity.events.EventType;
@@ -46,8 +45,13 @@ import java.util.concurrent.Future;
  */
 public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject> {
     private class NextSiegeDateSet extends RunnableImpl {
-        @Override
-        public void runImpl() throws Exception {
+        public NextSiegeDateSet()
+		{
+			// TODO Auto-generated constructor stub
+		}
+
+		@Override
+        public void runImpl() {
             setNextSiegeTime();
         }
     }
@@ -366,7 +370,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject> {
     //========================================================================================================================================================================
     private void initControlTowers() {
         List<SpawnExObject> objects = getObjects(GUARDS);
-        List<Spawner> spawns = new ArrayList<Spawner>();
+        List<Spawner> spawns = new ArrayList<>();
         for (SpawnExObject o : objects)
             spawns.addAll(o.getSpawns());
 
@@ -448,7 +452,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject> {
     /**
      * Автоматически генерит и устанавливает дату осады
      */
-    private void setNextSiegeTime() {
+    void setNextSiegeTime() {
         final Calendar calendar = (Calendar) Config.CASTLE_VALIDATION_DATE.clone();
         calendar.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
         calendar.set(Calendar.HOUR_OF_DAY, getResidence().getLastSiegeDate().get(Calendar.HOUR_OF_DAY));
@@ -535,9 +539,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject> {
 
         if (force)
             return true;
-        else {
-            resurrectPlayer.sendPacket(SystemMsg.INVALID_TARGET);
-            return false;
-        }
+		resurrectPlayer.sendPacket(SystemMsg.INVALID_TARGET);
+		return false;
     }
 }
