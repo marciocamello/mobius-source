@@ -19,6 +19,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
+import lineage2.gameserver.model.entity.residence.ResidenceSide;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
@@ -33,9 +34,11 @@ public class TakeCastle extends Skill
 	 * Constructor for TakeCastle.
 	 * @param set StatsSet
 	 */
+	private final ResidenceSide _side;
 	public TakeCastle(StatsSet set)
 	{
 		super(set);
+		_side = set.getEnum("castle_side", ResidenceSide.class, ResidenceSide.NEUTRAL);
 	}
 	
 	/**
@@ -113,7 +116,7 @@ public class TakeCastle extends Skill
 				if (siegeEvent != null)
 				{
 					siegeEvent.broadcastTo(new SystemMessage2(SystemMsg.CLAN_S1_HAS_SUCCESSFULLY_ENGRAVED_THE_HOLY_ARTIFACT).addString(player.getClan().getName()), SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
-					siegeEvent.processStep(player.getClan());
+					siegeEvent.takeCastle(player.getClan(), _side); //processStep(player.getClan());
 				}
 			}
 		}

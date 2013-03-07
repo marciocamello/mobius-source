@@ -28,6 +28,7 @@ import lineage2.gameserver.network.serverpackets.Say2;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
+import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.utils.MapUtils;
 
 import org.apache.commons.io.FileUtils;
@@ -312,6 +313,11 @@ public class Announcements
 			player.sendPacket(cs);
 		}
 	}
+	public void announceToAll(IStaticPacket sm) 
+        {
+			for(Player player : GameObjectsStorage.getAllPlayersForIterate())
+				player.sendPacket(sm);
+        }
 	
 	/**
 	 * Method announceByCustomMessage.

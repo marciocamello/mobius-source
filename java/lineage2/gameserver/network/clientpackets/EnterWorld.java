@@ -37,6 +37,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.base.InvisibleType;
 import lineage2.gameserver.model.entity.events.impl.ClanHallAuctionEvent;
+import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.mail.Mail;
@@ -54,6 +55,7 @@ import lineage2.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.ExBR_PremiumState;
 import lineage2.gameserver.network.serverpackets.ExBasicActionList;
+import lineage2.gameserver.network.serverpackets.ExCastleState;
 import lineage2.gameserver.network.serverpackets.ExChangeMPCost;
 import lineage2.gameserver.network.serverpackets.ExGoodsInventoryChangedNotify;
 import lineage2.gameserver.network.serverpackets.ExMPCCOpen;
@@ -138,8 +140,13 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		int MyObjectId = activeChar.getObjectId();
 		Long MyStoreId = activeChar.getStoredId();
+		for(Castle castle : ResidenceHolder.getInstance().getResidenceList(Castle.class))
+			{
+				activeChar.sendPacket(new ExCastleState(castle));
+			}
 		synchronized (_lock)
 		{
+
 			for (Player cha : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				if (MyStoreId.equals(cha.getStoredId()))
