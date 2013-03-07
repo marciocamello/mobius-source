@@ -101,11 +101,11 @@ public class SocialAction extends L2GameServerPacket
 	/**
 	 * Field Tauty1. (value is 28)
 	 */
-	public static final int Tauty1 = 28;
+	public static final int PROPOSE = 28;
 	/**
 	 * Field Tauty2. (value is 29)
 	 */
-	public static final int Tauty2 = 29;
+	public static final int PROVOKE = 29;
 	/**
 	 * Field LEVEL_UP. (value is 2122)
 	 */

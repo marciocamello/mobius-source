@@ -111,6 +111,8 @@ public class ExBasicActionList extends L2GameServerPacket
 		84,
 		85,
 		86,
+		87,
+		88,
 		1000,
 		1001,
 		1002,
