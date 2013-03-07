@@ -21,6 +21,7 @@ public class ExCastleState extends L2GameServerPacket
 		_side = castle.getResidenceSide();
 	}
 
+	@Override
 	protected void writeImpl()
 	{
 		writeEx(0x133);

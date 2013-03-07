@@ -131,6 +131,7 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 		/**
 		 * Field _players.
 		 */
+		@SuppressWarnings("unchecked")
 		private final List<PlayerInfo>[] _players = new ArrayList[2];
 		/**
 		 * Field _tie.
