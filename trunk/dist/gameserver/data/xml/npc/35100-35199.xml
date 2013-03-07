@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="35100" name="Chamberlain of Light" title="">
+	<npc id="35100" name="Sayres" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -35,7 +35,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="10"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="residences.castle.Chamberlain"/>
+		<set name="type" value="residences.castle.ChamberlainLight"/>
 		<skills>
 			<skill id="4416" level="15"/>	<!--Humans-->
 		</skills>
@@ -2114,7 +2114,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="35142" name="Chamberlain of Light" title="">
+	<npc id="35142" name="Crosby" title="Chamberlain">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2148,7 +2148,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="10"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="residences.castle.Chamberlain"/>
+		<set name="type" value="residences.castle.ChamberlainLight"/>
 		<skills>
 			<skill id="4416" level="15"/>	<!--Humans-->
 		</skills>
@@ -4229,7 +4229,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="35184" name="Chamberlain of Light" title="">
+	<npc id="35184" name="Saul" title="Chamberlain">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4263,7 +4263,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="10"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="residences.castle.Chamberlain"/>
+		<set name="type" value="residences.castle.ChamberlainLight"/>
 		<skills>
 			<skill id="4416" level="15"/>	<!--Humans-->
 		</skills>

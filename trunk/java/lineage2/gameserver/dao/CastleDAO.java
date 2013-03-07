@@ -1,70 +1,40 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.dao;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.entity.residence.Castle;
-
+import lineage2.gameserver.model.entity.residence.ResidenceSide;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * @author VISTALL
+ * @date 18:10/15.04.2011
  */
 public class CastleDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CastleDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final CastleDAO _instance = new CastleDAO();
-	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT tax_percent, treasury, reward_count, siege_date, last_siege_date, own_date FROM castle WHERE id=? LIMIT 1"")
-	 */
-	public static final String SELECT_SQL_QUERY = "SELECT tax_percent, treasury, reward_count, siege_date, last_siege_date, own_date FROM castle WHERE id=? LIMIT 1";
-	/**
-	 * Field UPDATE_SQL_QUERY. (value is ""UPDATE castle SET tax_percent=?, treasury=?, reward_count=?, siege_date=?, last_siege_date=?, own_date=? WHERE id=?"")
-	 */
-	public static final String UPDATE_SQL_QUERY = "UPDATE castle SET tax_percent=?, treasury=?, reward_count=?, siege_date=?, last_siege_date=?, own_date=? WHERE id=?";
-	
-	/**
-	 * Method getInstance.
-	 * @return CastleDAO
-	 */
+
+	public static final String SELECT_SQL_QUERY = "SELECT tax_percent, treasury, reward_count, siege_date, last_siege_date, own_date, side FROM castle WHERE id=? LIMIT 1";
+	public static final String UPDATE_SQL_QUERY = "UPDATE castle SET tax_percent=?, treasury=?, reward_count=?, siege_date=?, last_siege_date=?, own_date=?, side=? WHERE id=?";
+
 	public static CastleDAO getInstance()
 	{
 		return _instance;
 	}
-	
-	/**
-	 * Method select.
-	 * @param castle Castle
-	 */
+
 	public void select(Castle castle)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -79,6 +49,7 @@ public class CastleDAO
 				castle.getSiegeDate().setTimeInMillis(rset.getLong("siege_date"));
 				castle.getLastSiegeDate().setTimeInMillis(rset.getLong("last_siege_date"));
 				castle.getOwnDate().setTimeInMillis(rset.getLong("own_date"));
+				castle.setResidenceSide(ResidenceSide.VALUES[rset.getInt("side")]);
 			}
 		}
 		catch (Exception e)
@@ -90,25 +61,16 @@ public class CastleDAO
 			DbUtils.closeQuietly(con, statement, rset);
 		}
 	}
-	
-	/**
-	 * Method update.
-	 * @param residence Castle
-	 */
+
 	public void update(Castle residence)
 	{
 		if (!residence.getJdbcState().isUpdatable())
-		{
 			return;
-		}
+
 		residence.setJdbcState(JdbcEntityState.STORED);
 		update0(residence);
 	}
-	
-	/**
-	 * Method update0.
-	 * @param castle Castle
-	 */
+
 	private void update0(Castle castle)
 	{
 		Connection con = null;
@@ -123,7 +85,8 @@ public class CastleDAO
 			statement.setLong(4, castle.getSiegeDate().getTimeInMillis());
 			statement.setLong(5, castle.getLastSiegeDate().getTimeInMillis());
 			statement.setLong(6, castle.getOwnDate().getTimeInMillis());
-			statement.setInt(7, castle.getId());
+			statement.setInt(7, castle.getResidenceSide().ordinal());
+			statement.setInt(8, castle.getId());
 			statement.execute();
 		}
 		catch (Exception e)

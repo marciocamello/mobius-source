@@ -19,7 +19,7 @@ set INSTALL_MODE=login
 :prepare
 set DB_HOST=localhost
 set DB_USER=root
-set DB_PASSWORD=root
+set DB_PASSWORD=
 set DB_NAME=l2god
 :step2
 

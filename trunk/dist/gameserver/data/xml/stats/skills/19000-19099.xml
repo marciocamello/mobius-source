@@ -240,12 +240,46 @@
 	<skill id="19018" levels="1" name="Clan Guardian Recovery">
     <!-- Restores HP/MP/CP. -->
 		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="19034" levels="1" name="Imprint of Light">
+		<set name="reuseDelay" val="5000"/>
+		<set name="hitTime" val="180000"/>
+		<set name="magicLevel" val="30"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0246"/>
+		<set name="castRange" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume1" val="50"/>
+		<set name="target" val="TARGET_HOLY"/>
+		<set name="skillType" val="TAKECASTLE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="castle_side" val="LIGHT"/>
+	</skill>
+	<skill id="19035" levels="1" name="Imprint of Darkness">
+		<set name="reuseDelay" val="5000"/>
+		<set name="hitTime" val="180000"/>
+		<set name="magicLevel" val="30"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0246"/>
+		<set name="castRange" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume1" val="50"/>
+		<set name="target" val="TARGET_HOLY"/>
+		<set name="skillType" val="TAKECASTLE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="castle_side" val="DARK"/>
 	</skill>
 	<skill id="19074" levels="1" name="Academy Precept">
     <!-- For 60 minutes, increases academy members' P. Atk. by 10%, M. Atk. by 10%, Critical Rate by 10%, and M. Critical Rate by 10%. -->
-		<set name="isClanSkill" val="true"/>
+		<set name="isClanSkill" val="true" />
 		<table name="#mpConsume2">100</table>
 		<set name="reuseDelay" val="43200000"/>
 		<set name="hitTime" val="4000"/>
