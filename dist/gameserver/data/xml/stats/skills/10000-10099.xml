@@ -807,7 +807,7 @@
 		</enchant4>
 		<for>
 			<effect name="DeathImmunity" time="#time" val="0">
-				<mul order="0x30" stat="regHp" val="#hprecover">
+				<mul order="0x30" stat="regHp" val="#hprecover"/>
 			</effect>
 		</for>
     </skill>
