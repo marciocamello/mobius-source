@@ -153,11 +153,13 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 				if (st.getPlayer().isMageClass())
 				{
 					htmltext = "4-5re.htm";
+					st.playSound(SOUND_MIDDLE);
 					st.setCond(9);
 				}
 				else
 				{
 					htmltext = "4-5r.htm";
+					st.playSound(SOUND_MIDDLE);
 					st.setCond(8);
 				}
 			}
@@ -166,32 +168,38 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 				if (st.getPlayer().isMageClass())
 				{
 					htmltext = "4-5e.htm";
+					st.playSound(SOUND_MIDDLE);
 					st.setCond(11);
 				}
 				else
 				{
 					htmltext = "4-5ew.htm";
+					st.playSound(SOUND_MIDDLE);
 					st.setCond(10);
 				}
 			}
 			else if (st.getPlayer().getRace() == Race.darkelf)
 			{
 				htmltext = "4-5t.htm";
+				st.playSound(SOUND_MIDDLE);
 				st.setCond(12);
 			}
 			else if (st.getPlayer().getRace() == Race.orc)
 			{
 				htmltext = "4-5d.htm";
+				st.playSound(SOUND_MIDDLE);
 				st.setCond(13);
 			}
 			else if (st.getPlayer().getRace() == Race.dwarf)
 			{
 				htmltext = "4-5m.htm";
+				st.playSound(SOUND_MIDDLE);
 				st.setCond(14);
 			}
 			else if (st.getPlayer().getRace() == Race.kamael)
 			{
 				htmltext = "4-5g.htm";
+				st.playSound(SOUND_MIDDLE);
 				st.setCond(15);
 			}
 		}
@@ -269,6 +277,7 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 			st.getPlayer().addExpAndSp(2700000, 250000);
 			st.giveItems(17822, 40);
 			st.giveItems(32777, 1);
+			st.giveItems(33800, 1);
 			st.giveItems(ADENA_ID, 110000);
 			st.exitCurrentQuest(false);
 			st.takeAllItems(Stone);
@@ -551,9 +560,13 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 			{
 				htmltext = TODO_FIND_HTML;
 			}
-			else if (cond == 7)
+			else if (cond == 6)
 			{
 				htmltext = "4-1.htm";
+			}
+			else if (cond == 7)
+			{
+				htmltext = "4-2.htm";
 			}
 		}
 		return htmltext;
