@@ -688,6 +688,7 @@
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="power" val="#power"/>
 		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillRadius" val="1100"/>
 		<set name="corpse" val="true"/>
 		<set name="skillType" val="RESURRECT"/>
 		<set name="canPet" val="true"/>
