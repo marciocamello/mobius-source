@@ -18,8 +18,8 @@ import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.htm.HtmCache;
+import lineage2.gameserver.model.ClonePlayer;
 import lineage2.gameserver.model.Creature;
-import lineage2.gameserver.model.FakePlayer;
 import lineage2.gameserver.model.GameObjectTasks;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
@@ -27,7 +27,6 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
-import lineage2.gameserver.taskmanager.EffectTaskManager;
 import lineage2.gameserver.templates.player.PlayerTemplate;
 import lineage2.gameserver.utils.Location;
 
@@ -35,7 +34,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CloneInstance extends FakePlayer
+public class CloneInstance extends ClonePlayer
 {
 	/**
 	 * Field serialVersionUID. (value is -3990686488577795700)
@@ -45,10 +44,6 @@ public class CloneInstance extends FakePlayer
 	 * Field _owner.
 	 */
 	private final Player _owner;
-	/**
-	 * Field _skill.
-	 */
-	final Skill _skill;
 	/**
 	 * Field _lifetimeCountdown.
 	 */
@@ -69,38 +64,15 @@ public class CloneInstance extends FakePlayer
 	 * @param owner Player
 	 * @param lifetime int
 	 * @param skill Skill
-	 */
-	public CloneInstance(int objectId, PlayerTemplate template, Player owner, int lifetime, Skill skill)
-	{
-		this(objectId, template, owner, lifetime, skill, owner.getLoc());
-	}
-	
-	/**
-	 * Constructor for TreeInstance.
-	 * @param objectId int
-	 * @param template NpcTemplate
-	 * @param owner Player
-	 * @param lifetime int
-	 * @param skill Skill
 	 * @param loc Location
 	 */
-	public CloneInstance(int objectId, PlayerTemplate template, Player owner, int lifetime, Skill skill, Location loc)
+	public CloneInstance(int objectId, PlayerTemplate template, Player owner, int lifetime, Location loc)
 	{
 		super(objectId, template, owner);
 		_owner = owner;
-		_skill = skill;
 		_lifetimeCountdown = lifetime;
 		setLoc(loc);
 		setHeading(owner.getHeading());
-	}
-	
-	/**
-	 * Method getOwner.
-	 * @return Player
-	 */
-	public Player getOwner()
-	{
-		return _owner;
 	}
 	
 	/**
@@ -111,13 +83,13 @@ public class CloneInstance extends FakePlayer
 	{
 		super.onSpawn();
 		_destroyTask = ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(this), _lifetimeCountdown);
-		_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new AttackTask(this), 2000L, 5000L);
+		//_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new TargetTask(this), 10000L, 10000L);
 	}
 	
 	/**
 	 * @author Mobius
 	 */
-	private static class AttackTask extends RunnableImpl
+	private static class TargetTask extends RunnableImpl
 	{
 		/**
 		 * Field _trapRef.
@@ -128,7 +100,7 @@ public class CloneInstance extends FakePlayer
 		 * Constructor for CastTask.
 		 * @param trap TreeInstance
 		 */
-		public AttackTask(CloneInstance trap)
+		public TargetTask(CloneInstance trap)
 		{
 			_trapRef = trap.getRef();
 		}
@@ -144,22 +116,15 @@ public class CloneInstance extends FakePlayer
 			{
 				return;
 			}
-			Player owner = clone.getOwner();
+			Player owner = clone.getPlayer();
 			if (owner == null)
 			{
 				return;
 			}
-			
-			Creature target; 
-			if (owner.getTarget()!=null && owner.isAttackingNow())
-			{
-				target = (Creature) owner.getTarget();
-				clone.doAttack(target);
-			}
-			else
+			if (!owner.isAttackingNow())
 			{
 				clone.abortAttack(true, false);
-				clone.followToCharacter(owner, 70, true);
+				clone.followToCharacter(owner, 70, false);
 			}
 		}
 	}
@@ -218,12 +183,6 @@ public class CloneInstance extends FakePlayer
 		}
 	}
 	
-	@Override
-	public Player getPlayer()
-	{
-		return _owner;
-	}
-	
 	/**
 	 * Method displayGiveDamageMessage.
 	 * @param target Creature
@@ -247,11 +206,11 @@ public class CloneInstance extends FakePlayer
 		}
 		if (miss)
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(this));
+			owner.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addString("Clone of " + owner.getName()));
 		}
 		else if (!target.isInvul())
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.C1_HAS_GIVEN_C2_DAMAGE_OF_S3).addName(this).addName(target).addNumber(damage));
+			owner.sendPacket(new SystemMessage(SystemMessage.C1_HAS_GIVEN_C2_DAMAGE_OF_S3).addString("Clone of " + owner.getName()).addName(target).addNumber(damage));
 		}
 	}
 	
@@ -264,7 +223,7 @@ public class CloneInstance extends FakePlayer
 	public void displayReceiveDamageMessage(Creature attacker, int damage)
 	{
 		Player owner = getPlayer();
-		owner.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addName(this).addName(attacker).addNumber((long) damage));
+		owner.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addString("Clone of " + owner.getName()).addName(attacker).addNumber((long) damage));
 	}
 	
 	@Override

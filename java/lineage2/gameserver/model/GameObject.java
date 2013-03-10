@@ -937,6 +937,15 @@ public abstract class GameObject extends EventOwner
 	}
 	
 	/**
+	 * Method isClone.
+	 * @return boolean
+	 */
+	public boolean isClone()
+	{
+		return false;
+	}
+
+	/**
 	 * Method isNpc.
 	 * @return boolean
 	 */
