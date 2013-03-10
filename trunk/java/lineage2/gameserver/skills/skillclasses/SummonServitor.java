@@ -26,6 +26,7 @@ import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.base.SummonType;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.instances.AgathionInstance;
+import lineage2.gameserver.model.instances.CloneInstance;
 import lineage2.gameserver.model.instances.MerchantInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.SummonInstance;
@@ -124,6 +125,8 @@ public class SummonServitor extends Skill
 					player.sendPacket(SystemMsg.AN_AGATHION_HAS_ALREADY_BEEN_SUMMONED);
 					return false;
 				}
+				break;
+			case CLONE:
 				break;
 		}
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
@@ -287,6 +290,29 @@ public class SummonServitor extends Skill
 				symbol.setShowName(false);
 				symbol.spawnMe(symbolLoc);
 				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(symbol), _lifeTime);
+				break;
+			case CLONE:
+				if (activeChar.isMounted())
+				{
+					return;
+				}
+				Location cloneLoc;
+				if (activeChar.getGroundSkillLoc() != null)
+				{
+					cloneLoc = activeChar.getGroundSkillLoc();
+				}
+				else
+				{
+					cloneLoc = Location.findAroundPosition(activeChar, 50, 70);
+				}
+				CloneInstance clone = new CloneInstance(IdFactory.getInstance().getNextId(), activeChar.getTemplate(), activeChar, _lifeTime, null);
+				clone.setHeading(activeChar.getHeading());
+				clone.setReflection(activeChar.getReflection());
+				clone.setRunning();
+				clone.setCurrentCp(activeChar.getCurrentCp());
+				clone.setCurrentHpMp(activeChar.getCurrentHp(), activeChar.getCurrentMp());
+				clone.spawnMe(cloneLoc);
+				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(clone), _lifeTime);
 				break;
 		}
 		if (isSSPossible())
