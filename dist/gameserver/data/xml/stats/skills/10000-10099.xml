@@ -1260,6 +1260,7 @@
         <set name="summonTimeLostActive" val="1000"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="SERVITOR"/>
 		<set name="isMagic" val="true"/>
         <set name="magicLevel" val="81"/>
         <set name="operateType" val="OP_ACTIVE"/>
