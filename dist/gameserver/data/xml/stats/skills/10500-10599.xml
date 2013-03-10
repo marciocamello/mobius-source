@@ -903,16 +903,14 @@
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="relationSkillsId" val="453;260;362;"/>
         <set name="npcId" val="#npcId"/>
-        <set name="lifeTime" val="20"/>
+        <set name="lifeTime" val="120"/>
         <set name="target" val="TARGET_SELF"/>
-        <set name="skillType" val="BUFF"/>
+        <set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="CLONE" />
         <set name="operateType" val="OP_ACTIVE"/>
         <cond msgId="113" addName="1">
             <using kind="Dagger,Dual Dagger"/>
         </cond>
-        <for>
-            <effect count="1" abnormal="shadow" name="Invisible" stackOrder="-1" stackType="Invisible" time="30" val="0" cancelOnAction="true"/>
-        </for>
     </skill>
     <skill id="10534" levels="1" name="Toad Poison">
     <!-- During normal attacks, there is a chance of inflicting Poison on the enemy and blocking the use of magic skills. -->
