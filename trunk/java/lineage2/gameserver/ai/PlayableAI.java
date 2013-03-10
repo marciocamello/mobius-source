@@ -476,7 +476,7 @@ public class PlayableAI extends CharacterAI
 			Playable actor = getActor();
 			if (getIntention() != AI_INTENTION_FOLLOW)
 			{
-				if ((actor.isPet() || actor.isServitor()) && (getIntention() == AI_INTENTION_ACTIVE))
+				if ((actor.isPet() || actor.isServitor() || actor.isClone()) && (getIntention() == AI_INTENTION_ACTIVE))
 				{
 					((Summon) actor).setFollowMode(false);
 				}
@@ -490,7 +490,7 @@ public class PlayableAI extends CharacterAI
 				return;
 			}
 			Player player = actor.getPlayer();
-			if ((player == null) || player.isLogoutStarted() || ((actor.isPet() || actor.isServitor()) && !player.getSummonList().contains(actor)))
+			if ((player == null) || player.isLogoutStarted() || ((actor.isPet() || actor.isServitor()) && !player.getSummonList().contains(actor) && !actor.isClone()))
 			{
 				setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				return;

@@ -296,23 +296,36 @@ public class SummonServitor extends Skill
 				{
 					return;
 				}
-				Location cloneLoc;
-				if (activeChar.getGroundSkillLoc() != null)
-				{
-					cloneLoc = activeChar.getGroundSkillLoc();
-				}
-				else
-				{
-					cloneLoc = Location.findAroundPosition(activeChar, 50, 70);
-				}
-				CloneInstance clone = new CloneInstance(IdFactory.getInstance().getNextId(), activeChar.getTemplate(), activeChar, _lifeTime, null);
+				Location cloneLoc = Location.findAroundPosition(activeChar, 50, 70);
+				CloneInstance clone = new CloneInstance(IdFactory.getInstance().getNextId(), activeChar.getTemplate(), activeChar, _lifeTime, cloneLoc);
 				clone.setHeading(activeChar.getHeading());
 				clone.setReflection(activeChar.getReflection());
-				clone.setRunning();
 				clone.setCurrentCp(activeChar.getCurrentCp());
 				clone.setCurrentHpMp(activeChar.getCurrentHp(), activeChar.getCurrentMp());
 				clone.spawnMe(cloneLoc);
-				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(clone), _lifeTime);
+				clone.setRunning();
+				clone.setFollowMode(true);
+
+				cloneLoc = Location.findAroundPosition(activeChar, 50, 70);
+				clone = new CloneInstance(IdFactory.getInstance().getNextId(), activeChar.getTemplate(), activeChar, _lifeTime, cloneLoc);
+				clone.setHeading(activeChar.getHeading());
+				clone.setReflection(activeChar.getReflection());
+				clone.setCurrentCp(activeChar.getCurrentCp());
+				clone.setCurrentHpMp(activeChar.getCurrentHp(), activeChar.getCurrentMp());
+				clone.spawnMe(cloneLoc);
+				clone.setRunning();
+				clone.setFollowMode(true);
+
+				cloneLoc = Location.findAroundPosition(activeChar, 50, 70);
+				clone = new CloneInstance(IdFactory.getInstance().getNextId(), activeChar.getTemplate(), activeChar, _lifeTime, cloneLoc);
+				clone.setHeading(activeChar.getHeading());
+				clone.setReflection(activeChar.getReflection());
+				clone.setCurrentCp(activeChar.getCurrentCp());
+				clone.setCurrentHpMp(activeChar.getCurrentHp(), activeChar.getCurrentMp());
+				clone.spawnMe(cloneLoc);
+				clone.setRunning();
+				clone.setFollowMode(true);
+ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(clone), _lifeTime);
 				break;
 		}
 		if (isSSPossible())
