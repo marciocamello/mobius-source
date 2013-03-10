@@ -573,14 +573,52 @@
         <!--Nadir-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="-73994" y="51956" z="-3707" h="0"/>
+        <point x="-74056" y="53688" z="-3706" h="49151"/>
         <npc id="32189"/>
         <!--Largo-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+        <point x="-74552" y="53320" z="-3706" h="16383"/>
+        <npc id="33535"/>
+        <!--Lamoon-->
+    </spawn>
+    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+        <point x="-74392" y="53320" z="-3706" h="16383"/>
+        <npc id="33780"/>
+        <!--Hesed-->
+    </spawn>
+    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+        <point x="-73944" y="53928" z="-3706" h="49151"/>
+        <npc id="32167"/>
+        <!--Neahjel-->
+    </spawn>
+    <spawn count="19" respawn="60" respawn_random="0" period_of_day="none">
+        <point x="-73560" y="52056" z="-3705" h="16883"/>
+        <point x="-73512" y="52056" z="-3705" h="16883"/>
+        <point x="-73560" y="52120" z="-3706" h="16383"/>
+        <point x="-73512" y="52120" z="-3706" h="16383"/>
+        <point x="-73512" y="52264" z="-3706" h="16383"/>
+        <point x="-73512" y="51992" z="-3706" h="16383"/>
+        <point x="-73560" y="51992" z="-3706" h="16383"/>
+        <point x="-73512" y="51928" z="-3706" h="16383"/>
+        <point x="-73560" y="51928" z="-3706" h="16383"/>
+        <point x="-73576" y="53528" z="-3706" h="33807"/>
+        <point x="-73528" y="53408" z="-3706" h="32767"/>
+        <point x="-73528" y="53480" z="-3705" h="32767"/>
+        <point x="-73528" y="53448" z="-3705" h="32767"/>
+        <point x="-73496" y="53480" z="-3706" h="32767"/>
+        <point x="-73496" y="53448" z="-3706" h="32767"/>
+        <point x="-73496" y="53416" z="-3706" h="32767"/>
+        <point x="-73464" y="53480" z="-3706" h="32767"/>
+        <point x="-73464" y="53448" z="-3706" h="32767"/>
+        <point x="-73464" y="53416" z="-3706" h="32767"/>
+        <npc id="19196"/>
+        <!--Soldier-->
+    </spawn>
+    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
         <point x="-73997" y="52913" z="-3707" h="0"/>
-        <npc id="32190"/>
-        <!--Mao-->
+        <npc id="32170"/>
+        <!--Venice-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
         <point x="-85928" y="36860" z="-2079" h="0"/>
