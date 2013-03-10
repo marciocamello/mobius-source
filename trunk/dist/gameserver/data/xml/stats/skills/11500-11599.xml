@@ -805,7 +805,7 @@
         <enchant2 levels="10" name="Time">
             <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
         </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
+        <enchant3 levels="10" name="Recycle" enchRoute="9"/>
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="DmgShield;SongOfVengeance;DanceOfVampire;DoB">
 				<mul order="0x30" stat="pAtk" val="1.08"/>
@@ -836,7 +836,7 @@
         <enchant2 levels="10" name="Time">
             <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
         </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
+        <enchant3 levels="10" name="Recycle" enchRoute="9"/>
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="3" stackType="SongOfWind;SongOfWater;sol;soc;Breath;DanceOfInspiration">
 				<mul order="0x30" stat="regHp" val="1.20"/>
