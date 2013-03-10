@@ -12,6 +12,8 @@
  */
 package lineage2.gameserver.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
 import lineage2.commons.threading.RunnableImpl;
@@ -19,10 +21,15 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.ai.FakePlayerAI;
+import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.listener.actor.OnAttackListener;
 import lineage2.gameserver.listener.actor.OnMagicUseListener;
+import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
+import lineage2.gameserver.network.serverpackets.AutoAttackStart;
 import lineage2.gameserver.network.serverpackets.CharInfo;
+import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
+import lineage2.gameserver.network.serverpackets.RelationChanged;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.player.PlayerTemplate;
 
@@ -30,7 +37,7 @@ import lineage2.gameserver.templates.player.PlayerTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FakePlayer extends Creature
+public class FakePlayer extends Playable
 {
 	/**
 	 * Field serialVersionUID. (value is -7275714049223105460)
@@ -242,4 +249,63 @@ public class FakePlayer extends Creature
 			_broadcastCharInfoTask = null;
 		}
 	}
+	
+	/**
+	 * Method addPacketList.
+	 * @param forPlayer Player
+	 * @param dropper Creature
+	 * @return List<L2GameServerPacket>
+	 */
+	@Override
+	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
+	{
+		List<L2GameServerPacket> list = new ArrayList<>();
+		Player owner = getPlayer();
+		if (owner == forPlayer)
+		{
+			list.add(new CharInfo(this));
+		}
+		else
+		{
+			Party party = forPlayer.getParty();
+			if ((getReflection() == ReflectionManager.GIRAN_HARBOR) && ((owner == null) || (party == null) || (party != owner.getParty())))
+			{
+				return list;
+			}
+			list.add(new CharInfo(this));
+			list.add(RelationChanged.update(forPlayer, this, forPlayer));
+		}
+		if (isInCombat())
+		{
+			list.add(new AutoAttackStart(getObjectId()));
+		}
+		if (isMoving || isFollow)
+		{
+			list.add(movePacket());
+		}
+		return list;
+	}
+
+	@Override
+	public Inventory getInventory()
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long getWearedMask()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void doPickupItem(GameObject object)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+	
+
 }
