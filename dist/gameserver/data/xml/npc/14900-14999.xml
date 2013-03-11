@@ -1541,43 +1541,43 @@
 		<skills/>
 	</npc>
 	<npc id="14932" name="Thunder Hawk" title="">
-		<!--fixed by ALF & Mangol-->
-		<set name="collision_radius" value="10.2"/>
-		<set name="collision_height" value="36.5"/>
+		<!--tauti retail fixed by andreagighi-->
+		<set name="collision_height" value="50.0"/>
+		<set name="collision_radius" value="12.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3290"/>
+		<set name="baseHpMax" value="7189.88"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1675"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
+		<set name="baseHpReg" value="27"/>
+		<set name="baseMpMax" value="1398"/>
+		<set name="baseMpReg" value="17"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="82"/>
+		<set name="baseDEX" value="55"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="78"/>
+		<set name="baseMEN" value="78"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="520"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="676"/>
+		<set name="basePAtk" value="1387"/>
+		<set name="basePDef" value="1268"/>
+		<set name="baseCritRate" value="47"/>
+		<set name="basePAtkSpd" value="299"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="baseMAtk" value="608"/>
+		<set name="baseMDef" value="1231"/>
+		<set name="baseMAtkSpd" value="398"/>
 		<attributes>
-			<defence attribute="fire" value="160"/>
-			<defence attribute="water" value="160"/>
-			<defence attribute="wind" value="160"/>
-			<defence attribute="earth" value="160"/>
-			<defence attribute="holy" value="160"/>
-			<defence attribute="unholy" value="160"/>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
 		</attributes>
 		<skills/>
 	</npc>
@@ -1869,75 +1869,75 @@
 		<skills/>
 	</npc>
 	<npc id="14940" name="Thunder Hawk" title="">
-		<!--fixed by ALF & Mangol-->
-		<set name="collision_radius" value="10.2"/>
-		<set name="collision_height" value="36.5"/>
+		<!--tauti retail fixed by andreagighi-->
+		<set name="collision_height" value="50.0"/>
+		<set name="collision_radius" value="12.0"/>
 		<set name="level" value="87"/>
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3290"/>
+		<set name="baseHpMax" value="7394.02"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1675"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
+		<set name="baseHpReg" value="27"/>
+		<set name="baseMpMax" value="1451"/>
+		<set name="baseMpReg" value="17"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="82"/>
+		<set name="baseDEX" value="55"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="78"/>
+		<set name="baseMEN" value="78"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
+		<set name="basePAtk" value="1488"/>
+		<set name="basePDef" value="1335"/>
+		<set name="baseMAtk" value="662"/>
+		<set name="baseMDef" value="1309"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="baseCritRate" value="47"/>
+		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="50"/>
 		<attributes>
-			<defence attribute="fire" value="180"/>
-			<defence attribute="water" value="180"/>
-			<defence attribute="wind" value="180"/>
-			<defence attribute="earth" value="180"/>
-			<defence attribute="holy" value="180"/>
-			<defence attribute="unholy" value="180"/>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="14941" name="Thunder Hawk" title="">
-		<!--fixed by ALF & Mangol-->
-		<set name="collision_radius" value="10.2"/>
-		<set name="collision_height" value="36.5"/>
+		<!--tauti retail fixed by andreagighi-->
+		<set name="collision_height" value="50.0"/>
+		<set name="collision_radius" value="12.0"/>
 		<set name="level" value="89"/>
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3290"/>
+		<set name="baseHpMax" value="7605.08"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1675"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
+		<set name="baseHpReg" value="27"/>
+		<set name="baseMpMax" value="1505"/>
+		<set name="baseMpReg" value="17"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="82"/>
+		<set name="baseDEX" value="55"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="78"/>
+		<set name="baseMEN" value="78"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
+		<set name="basePAtk" value="1596"/>
+		<set name="basePDef" value="1406"/>
+		<set name="baseMAtk" value="718"/>
+		<set name="baseMDef" value="1388"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="baseCritRate" value="47"/>
+		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="50"/>
 		<attributes>
@@ -1951,43 +1951,43 @@
 		<skills/>
 	</npc>
 	<npc id="14942" name="Thunder Hawk" title="">
-		<!--fixed by ALF & Mangol-->
-		<set name="collision_radius" value="10.2"/>
-		<set name="collision_height" value="36.5"/>
+		<!--tauti retail fixed by andreagighi-->
+		<set name="collision_height" value="50.0"/>
+		<set name="collision_radius" value="12.0"/>
 		<set name="level" value="91"/>
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3290"/>
+		<set name="baseHpMax" value="7805.76"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1675"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="73"/>
-		<set name="baseDEX" value="40"/>
-		<set name="baseINT" value="31"/>
-		<set name="baseWIT" value="65"/>
-		<set name="baseMEN" value="5"/>
+		<set name="baseHpReg" value="28"/>
+		<set name="baseMpMax" value="1558"/>
+		<set name="baseMpReg" value="17"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="82"/>
+		<set name="baseDEX" value="55"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="78"/>
+		<set name="baseMEN" value="78"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="971"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="250"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
+		<set name="basePAtk" value="1711"/>
+		<set name="basePDef" value="1477"/>
+		<set name="baseMAtk" value="776"/>
+		<set name="baseMDef" value="1478"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="baseCritRate" value="47"/>
+		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="50"/>
 		<attributes>
-			<defence attribute="fire" value="220"/>
-			<defence attribute="water" value="220"/>
-			<defence attribute="wind" value="220"/>
-			<defence attribute="earth" value="220"/>
-			<defence attribute="holy" value="220"/>
-			<defence attribute="unholy" value="220"/>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
 		</attributes>
 		<skills/>
 	</npc>
@@ -3900,179 +3900,171 @@
 		</attributes>
 	</npc>
 	<npc id="14986" name="Thunder Hawk" title="">
+		<!--tauti retail fixed by andreagighi-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="82"/>
-		<set name="baseCritRate" value="40"/>
+		<set name="baseCritRate" value="47"/>
 		<set name="baseDEX" value="55"/>
-		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpMax" value="8042.77"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
+		<set name="baseHpReg" value="28"/>
 		<set name="baseINT" value="79"/>
-		<set name="baseMAtk" value="1145"/>
-		<set name="baseMAtkSpd" value="253"/>
-		<set name="baseMDef" value="469"/>
+		<set name="baseMAtk" value="846"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="1568"/>
 		<set name="baseMEN" value="78"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1799"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
-		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="1614"/>
+		<set name="baseMpReg" value="17"/>
+		<set name="basePAtk" value="1836"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="1556"/>
+		<set name="baseRunSpd" value="180"/>
 		<set name="baseSTR" value="88"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseWalkSpd" value="30"/>
+		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="level" value="93"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Pet"/>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
 	<npc id="14987" name="Thunder Hawk" title="">
+		<!--tauti retail fixed by andreagighi-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="82"/>
-		<set name="baseCritRate" value="40"/>
+		<set name="baseCritRate" value="47"/>
 		<set name="baseDEX" value="55"/>
-		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpMax" value="8269.40"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
+		<set name="baseHpReg" value="28"/>
 		<set name="baseINT" value="79"/>
-		<set name="baseMAtk" value="1145"/>
-		<set name="baseMAtkSpd" value="253"/>
-		<set name="baseMDef" value="469"/>
+		<set name="baseMAtk" value="914"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="1666"/>
 		<set name="baseMEN" value="78"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1799"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
-		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="1669"/>
+		<set name="baseMpReg" value="18"/>
+		<set name="basePAtk" value="1970"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="1635"/>
+		<set name="baseRunSpd" value="180"/>
 		<set name="baseSTR" value="88"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseWalkSpd" value="30"/>
+		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="level" value="95"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Pet"/>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
 	<npc id="14988" name="Thunder Hawk" title="">
+		<!--tauti retail fixed by andreagighi-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="82"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="55"/>
-		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpMax" value="8502.95"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
+		<set name="baseHpReg" value="28"/>
 		<set name="baseINT" value="79"/>
-		<set name="baseMAtk" value="1145"/>
-		<set name="baseMAtkSpd" value="253"/>
-		<set name="baseMDef" value="469"/>
+		<set name="baseMAtk" value="990"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="1769"/>
 		<set name="baseMEN" value="78"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1799"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
-		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="1727"/>
+		<set name="baseMpReg" value="18"/>
+		<set name="basePAtk" value="2112"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="1720"/>
+		<set name="baseRunSpd" value="180"/>
 		<set name="baseSTR" value="88"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseWalkSpd" value="30"/>
+		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="level" value="97"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Pet"/>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
 	<npc id="14989" name="Thunder Hawk" title="">
+		<!--tauti retail fixed by andreagighi-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="82"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="55"/>
-		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpMax" value="8741.69"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
+		<set name="baseHpReg" value="28"/>
 		<set name="baseINT" value="79"/>
-		<set name="baseMAtk" value="1145"/>
-		<set name="baseMAtkSpd" value="253"/>
-		<set name="baseMDef" value="469"/>
+		<set name="baseMAtk" value="1074"/>
+		<set name="baseMAtkSpd" value="399"/>
+		<set name="baseMDef" value="1879"/>
 		<set name="baseMEN" value="78"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1799"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
-		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="1783"/>
+		<set name="baseMpReg" value="18"/>
+		<set name="basePAtk" value="2267"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="1808"/>
+		<set name="baseRunSpd" value="180"/>
 		<set name="baseSTR" value="88"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseWalkSpd" value="30"/>
+		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Pet"/>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
 	<npc id="14990" name="Thunder Hawk" title="">
