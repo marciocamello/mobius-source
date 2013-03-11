@@ -14,10 +14,9 @@ package lineage2.gameserver.model.actor.instances.player;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.EffectsDAO;
@@ -57,7 +56,7 @@ public class SummonList implements Iterable<Summon>
 	/**
 	 * Field _summonList.
 	 */
-	private final Map<Integer, Summon> _summonList;
+	private final ConcurrentHashMap<Integer, Summon> _summonList;
 	/**
 	 * Field _log.
 	 */
@@ -74,7 +73,7 @@ public class SummonList implements Iterable<Summon>
 	public SummonList(Player owner)
 	{
 		_owner = owner;
-		_summonList = new HashMap<>(3);
+		_summonList = new ConcurrentHashMap<>();
 	}
 	
 	/**
@@ -93,26 +92,23 @@ public class SummonList implements Iterable<Summon>
 		{
 			return _pet == null;
 		}
-		synchronized (_summonList)
+		if (((summonType == SummonType.SERVITOR) || (summonType == SummonType.TREE)) && (_summonList.size() > 0))
 		{
-			if (((summonType == SummonType.SERVITOR) || (summonType == SummonType.TREE)) && (_summonList.size() > 0))
+			return false;
+		}
+		if (summonType == SummonType.MULTI_SERVITOR)
+		{
+			if (_summonList.size() >= 4)
 			{
 				return false;
 			}
-			if (summonType == SummonType.MULTI_SERVITOR)
+			Summon summon = getFirstServitor();
+			if (summon != null)
 			{
-				if (_summonList.size() >= 4)
+				Skill skill = SkillTable.getInstance().getInfo(summon.getSummonSkillId(), summon.getSummonSkillLvl());
+				if (skill != null)
 				{
-					return false;
-				}
-				Summon summon = getFirstServitor();
-				if (summon != null)
-				{
-					Skill skill = SkillTable.getInstance().getInfo(summon.getSummonSkillId(), summon.getSummonSkillLvl());
-					if (skill != null)
-					{
-						return (skill instanceof SummonServitor) && (((SummonServitor) skill).getSummonType() == SummonType.MULTI_SERVITOR);
-					}
+					return (skill instanceof SummonServitor) && (((SummonServitor) skill).getSummonType() == SummonType.MULTI_SERVITOR);
 				}
 			}
 		}
@@ -127,10 +123,7 @@ public class SummonList implements Iterable<Summon>
 	{
 		if (summon.isServitor())
 		{
-			synchronized (_summonList)
-			{
-				_summonList.put(summon.getObjectId(), summon);
-			}
+			_summonList.put(summon.getObjectId(), summon);
 			_usedPoints += summon.getSummonPoint();
 		}
 		else if (summon.isPet())
@@ -145,10 +138,7 @@ public class SummonList implements Iterable<Summon>
 	{
 		if (summon.isServitor())
 		{
-			synchronized (_summonList)
-			{
-				_summonList.remove(summon.getObjectId());
-			}
+			_summonList.remove(summon.getObjectId());
 			_usedPoints -= summon.getSummonPoint();
 		}
 	}
@@ -188,14 +178,13 @@ public class SummonList implements Iterable<Summon>
 	{
 		if (_summonList.size() > 0)
 		{
-			synchronized (_summonList)
+			_log.info("_summonList.size():" + _summonList.size());
+			_log.info("_summonList.values():" + _summonList.values());
+			for (Summon summon : _summonList.values())
 			{
-				for (Summon summon : _summonList.values())
-				{
-					summon.unSummon();
-				}
-				_summonList.clear();
+				summon.unSummon();
 			}
+			_summonList.clear();
 			_usedPoints = 0;
 		}
 	}
@@ -223,15 +212,12 @@ public class SummonList implements Iterable<Summon>
 		boolean isCombat = false;
 		if (_summonList.size() > 0)
 		{
-			synchronized (_summonList)
+			for (Summon summon : _summonList.values())
 			{
-				for (Summon summon : _summonList.values())
+				if (summon.isInCombat())
 				{
-					if (summon.isInCombat())
-					{
-						isCombat = true;
-						break;
-					}
+					isCombat = true;
+					break;
 				}
 			}
 		}
@@ -248,13 +234,10 @@ public class SummonList implements Iterable<Summon>
 		{
 			if (_summonList.size() > 0)
 			{
-				synchronized (_summonList)
+				for (Summon summon : _summonList.values())
 				{
-					for (Summon summon : _summonList.values())
-					{
-						ServitorsDAO.getInstance().store(summon);
-						summon.saveEffects();
-					}
+					ServitorsDAO.getInstance().store(summon);
+					summon.saveEffects();
 				}
 			}
 		}
@@ -327,12 +310,9 @@ public class SummonList implements Iterable<Summon>
 		{
 			return;
 		}
-		synchronized (_summonList)
+		for (Summon summon : summons)
 		{
-			for (Summon summon : summons)
-			{
-				addSummon(summon);
-			}
+			addSummon(summon);
 		}
 	}
 	
@@ -343,17 +323,14 @@ public class SummonList implements Iterable<Summon>
 	{
 		if (_summonList.size() > 0)
 		{
-			synchronized (_summonList)
+			for (Summon summon : _summonList.values())
 			{
-				for (Summon summon : _summonList.values())
-				{
-					EffectsDAO.getInstance().restoreEffects(summon);
-					summon.setNonAggroTime(System.currentTimeMillis() + Config.NONAGGRO_TIME_ONTELEPORT);
-					summon.setReflection(_owner.getReflection());
-					summon.spawnMe(Location.findPointToStay(_owner, 50, 70));
-					summon.setRunning();
-					summon.setFollowMode(true);
-				}
+				EffectsDAO.getInstance().restoreEffects(summon);
+				summon.setNonAggroTime(System.currentTimeMillis() + Config.NONAGGRO_TIME_ONTELEPORT);
+				summon.setReflection(_owner.getReflection());
+				summon.spawnMe(Location.findPointToStay(_owner, 50, 70));
+				summon.setRunning();
+				summon.setFollowMode(true);
 			}
 		}
 		if (_pet != null)
@@ -414,7 +391,7 @@ public class SummonList implements Iterable<Summon>
 	 */
 	public Summon getSecondServitor()
 	{
-		if (_summonList.size() == 1)
+		if (_summonList.size() == 2)
 		{
 			Summon summon = _summonList.values().iterator().next();
 			Skill skill = SkillTable.getInstance().getInfo(summon.getSummonSkillId(), summon.getSummonSkillLvl());
@@ -436,12 +413,9 @@ public class SummonList implements Iterable<Summon>
 		if (_summonList.size() > 0)
 		{
 			List<Summon> servitors = new ArrayList<>();
-			synchronized (_summonList)
+			for (Summon summon : _summonList.values())
 			{
-				for (Summon summon : _summonList.values())
-				{
-					servitors.add(summon);
-				}
+				servitors.add(summon);
 			}
 			return servitors;
 		}
@@ -467,14 +441,11 @@ public class SummonList implements Iterable<Summon>
 		{
 			return false;
 		}
-		synchronized (_summonList)
+		for (Summon summon : _summonList.values())
 		{
-			for (Summon summon : _summonList.values())
+			if (summon == creature)
 			{
-				if (summon == creature)
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		return false;
@@ -494,10 +465,7 @@ public class SummonList implements Iterable<Summon>
 		}
 		if (_summonList.size() > 0)
 		{
-			synchronized (_summonList)
-			{
-				summons.addAll(_summonList.values());
-			}
+			summons.addAll(_summonList.values());
 		}
 		return Collections.unmodifiableList(summons).iterator();
 	}
