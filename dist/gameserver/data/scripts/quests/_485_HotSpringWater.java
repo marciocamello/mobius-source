@@ -8,17 +8,17 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
-public class _470_Divinity_Protector extends Quest implements ScriptFile
+public class _485_HotSpringWater extends Quest implements ScriptFile
 {
 	//npc
 	public static final int GUIDE = 33463;
-	public static final int APRIGEL = 31348;
+	public static final int VALDEMOR = 30844;
 	
 	//mobs
-	private final int[] Mobs = {21520, 21521, 21522, 21523, 21524, 21525, 21526, 21542, 21543, 21527, 21528, 21529, 21541, 21530, 21531, 21532, 21533, 21534, 21535, 21536, 21545, 21546, 21537, 21538, 21539, 21540, 21544};
+	private final static int[] Mobs = { 21314, 21315, 21316, 21317, 21318, 21319, 21320, 21321, 21322, 21323 };
 	
 	//q items
-	public static final int COLORLESS_SOUL = 19489;
+	public static final int WATER = 19497;
 
 	@Override
 	public void onLoad()
@@ -32,14 +32,14 @@ public class _470_Divinity_Protector extends Quest implements ScriptFile
 	public void onShutdown()
 	{}
 
-	public _470_Divinity_Protector()
+	public _485_HotSpringWater()
 	{
 		super(true);
 		addStartNpc(GUIDE);
-		addTalkId(APRIGEL);
+		addTalkId(VALDEMOR);
 		addKillId(Mobs);
-		addQuestItem(COLORLESS_SOUL);
-		addLevelCheck(60, 64);
+		addQuestItem(WATER);
+		addLevelCheck(70, 74);
 	}
 
 	@Override
@@ -71,26 +71,28 @@ public class _470_Divinity_Protector extends Quest implements ScriptFile
 					return "33463-comp.htm";
 				return "33463.htm";
 			}
-			if(state == 2)
+			else if(state == 2)
 			{
 				if(cond == 1)
 					return "33463-4.htm";
-					
+				if(cond == 2)
+					return "33463-5.htm";
 			}
+			
 		}
-		if(npcId == APRIGEL && state == 2)
+		if(npcId == VALDEMOR && state == 2)
 		{
 			if(cond == 1)
-				return "31348-1.htm";
-			if(cond == 2)
+				return "30844-1.htm";
+			else if(cond == 2)
 			{
-				st.giveItems(57,194000);
-				st.addExpAndSp(1879400, 1782000);
-				st.takeItems(COLORLESS_SOUL, -1);
+				st.addExpAndSp(9483000, 9470430);
+				st.takeItems(WATER, -1);
+				st.giveItems(57, 371745);
 				st.unset("cond");
 				st.playSound(SOUND_FINISH);
 				st.exitCurrentQuest(this);			
-				return "31348.htm"; //no further html do here
+				return "30844.htm"; //no further html do here
 			}	
 		}		
 		return "noquest";
@@ -103,10 +105,10 @@ public class _470_Divinity_Protector extends Quest implements ScriptFile
 			return null;
 		if(ArrayUtils.contains(Mobs, npc.getNpcId()) && Rnd.chance(50))
 		{
-			st.giveItems(COLORLESS_SOUL, 1);
+			st.giveItems(WATER, 1);
 			st.playSound(SOUND_MIDDLE);
-		}
-		if(st.getQuestItemsCount(COLORLESS_SOUL) >= 20)
+		}	
+		if(st.getQuestItemsCount(WATER) >= 40)
 			st.setCond(2);
 			
 		return null;
