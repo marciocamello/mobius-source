@@ -713,19 +713,19 @@ public class RequestActionUse extends L2GameClientPacket
 		/**
 		 * Field ACTION1117.
 		 */
-		ACTION1117(1117, SERVITOR_GROUP_ACTION, 10794, 0),
+		ACTION1117(1117, SERVITOR_ACTION, 10794, 0),
 		/**
 		 * Field ACTION1118.
 		 */
-		ACTION1118(1118, SERVITOR_GROUP_ACTION, 10795, 0),
+		ACTION1118(1118, SERVITOR_ACTION, 10795, 0),
 		/**
 		 * Field ACTION1120.
 		 */
-		ACTION1120(1120, SERVITOR_GROUP_ACTION, 10797, 0),
+		ACTION1120(1120, SERVITOR_ACTION, 10797, 0),
 		/**
 		 * Field ACTION1121.
 		 */
-		ACTION1121(1121, SERVITOR_GROUP_ACTION, 10798, 0),
+		ACTION1121(1121, SERVITOR_ACTION, 10798, 0),
 		/**
 		 * Field ACTION1122.
 		 */
@@ -936,6 +936,10 @@ public class RequestActionUse extends L2GameClientPacket
 		final Summon pet = activeChar.getSummonList().getPet();
 		final Summon servitor = activeChar.getSummonList().getFirstServitor();
 		final List<Summon> servitors = activeChar.getSummonList().getServitors();
+		if (activeChar.isGM())
+		{
+			activeChar.sendMessage("ActionId:" + action.id + " useServitor:" + useServitor + " useServitorGroup:" + useServitorGroup);
+		}
 		if (!usePet && !useServitor && !useServitorGroup && (activeChar.isOutOfControl() || activeChar.isActionsDisabled()) && !(activeChar.isFakeDeath() && (_actionId == 0)))
 		{
 			activeChar.sendActionFailed();
