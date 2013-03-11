@@ -131,21 +131,23 @@ public class HealHpCp extends Skill
 					target.setCurrentHp(addToHp + target.getCurrentHp(), false);
 				}
 				addToCp = addToHpOld - addToHp;
+				addToCp = Math.max(0, Math.min(addToCp, ((target.calcStat(Stats.CP_LIMIT, null, null) * target.getMaxCp()) / 100.) - target.getCurrentCp()));
 				if (addToCp > 0)
 				{
 					target.setCurrentCp(addToCp + target.getCurrentCp());
-					target.sendPacket(new SystemMessage(SystemMessage.S1_CPS_WILL_BE_RESTORED).addNumber((long) addToCp));
-					getEffects(activeChar, target, getActivateRate() > 0, false);
+					
 				}
 				if (target.isPlayer())
 				{
 					if (activeChar == target)
 					{
 						activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HPS_HAVE_BEEN_RESTORED).addNumber(Math.round(addToHp)));
+						activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CPS_WILL_BE_RESTORED).addNumber(Math.round(addToCp)));
 					}
 					else
 					{
 						target.sendPacket(new SystemMessage(SystemMessage.XS2S_HP_HAS_BEEN_RESTORED_BY_S1).addString(activeChar.getName()).addNumber(Math.round(addToHp)));
+						target.sendPacket(new SystemMessage(SystemMessage.S1_WILL_RESTORE_S2S_CP).addString(activeChar.getName()).addNumber(Math.round(addToCp)));
 					}
 				}
 				getEffects(activeChar, target, getActivateRate() > 0, false);
