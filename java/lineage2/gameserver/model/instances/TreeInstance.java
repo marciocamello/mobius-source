@@ -107,6 +107,12 @@ public class TreeInstance extends Summon
 		return _owner;
 	}
 	
+	@Override
+	public String getName()
+	{
+		return this.getTemplate().getName();
+	}
+	
 	/**
 	 * @author Mobius
 	 */
@@ -155,7 +161,7 @@ public class TreeInstance extends Summon
 					if (target.isAutoAttackable(tree))
 					{
 						targets.add(target);
-						tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), 0, 0));
+						tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), tree._skill.getHitTime(), tree._skill.getReuseDelay()));
 					}
 				}
 				tree.callSkill(tree._skill, targets, true);
@@ -171,12 +177,12 @@ public class TreeInstance extends Summon
 					if (target == owner)
 					{
 						targets.add(target);
-						tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), 0, 0));
+						tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), tree._skill.getHitTime(), tree._skill.getReuseDelay()));
 					}
 					if ((target instanceof Player) && (((Player) target).getParty() != null) && (owner.getParty() == ((Player) target).getParty()))
 					{
 						targets.add(target);
-						tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), 0, 0));
+						tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), tree._skill.getHitTime(), tree._skill.getReuseDelay()));
 					}
 				}
 			}
@@ -192,7 +198,7 @@ public class TreeInstance extends Summon
 	{
 		super.onSpawn();
 		_destroyTask = ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(this), _lifetimeCountdown);
-		_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new CastTask(this), 1000L, _skill.getReuseDelay());
+		_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new CastTask(this), 1000L, 5000L);
 	}
 	
 	/**

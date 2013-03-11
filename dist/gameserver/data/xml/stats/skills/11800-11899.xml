@@ -2,16 +2,18 @@
 <list>
 	<skill id="11806" levels="4" name="Blessing of Tree">
 		<!-- Recovers HP and removes bad abnormal statuses. -->
-		<table name="#power">100 150 200 300</table>
+		<table name="#power">3000 3100 3200 3300</table>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="power" val="#power"/>
 		<set name="hitTime" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="skillType" val="BUFF"/>
+		<set name="skillType" val="HEAL_HP_CP"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<enchant1 levels="10" name="Power">
+			<table name="#power">3400 3500 3600 3700 3800 3900 4000 4100 4200 4300</table>
+		</enchant1>
 		<for>
-			<effect count="3" name="HealOverTime" stackOrder="1" stackType="BlessingOfTree" time="1" val="#power"/>
 			<effect count="1" name="DispelEffects" time="0" val="0">
 				<def name="dispelType" val="cleanse"/>
 				<def name="cancelRate" val="50"/>
@@ -20,16 +22,15 @@
 		</for>
 	</skill>
 	<skill id="11807" levels="5" name="Miracle of Fairy">
-		<table name="#power">400 600 800 1000</table>
+		<table name="#power">400 500 600 700</table>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="power" val="#power"/>
 		<set name="hitTime" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="skillType" val="BUFF"/>
+		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<effect count="3" name="HealOverTime" stackOrder="1" stackType="FairyMiracle" time="1" val="#power"/>
 			<effect count="1" name="DispelEffects" time="0" val="0">
 				<def name="dispelType" val="cleanse"/>
 				<def name="cancelRate" val="50"/>

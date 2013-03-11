@@ -475,6 +475,7 @@
 		<enchant1 levels="10" name="Power">
 			<table name="#npcId">15012 15013 15014 15015 15016 15017 15018 15019 15020 15021</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+			<table name="#skill">101 102 103 104 105 106 107 108 109 110</table>
 		</enchant1>
 		<for/>
 	</skill>

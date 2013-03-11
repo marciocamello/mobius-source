@@ -1119,6 +1119,7 @@
         <set name="lifeTime" val="#lifeTime"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="SERVITOR"/>
 		<set name="relationSkillsId" val="115;"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <table name="#npcIds">14932 14940 14941 14942 14986 14987 14988 14989</table>
