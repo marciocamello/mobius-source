@@ -925,10 +925,6 @@ public class RequestActionUse extends L2GameClientPacket
 			activeChar.sendActionFailed();
 			return;
 		}
-		if (activeChar.isGM())
-		{
-			activeChar.sendMessage("ActionId:" + action.id);
-		}
 		final boolean usePet = action.type == PET_ACTION;
 		final boolean useServitor = action.type == SERVITOR_ACTION;
 		final boolean useServitorGroup = action.type == SERVITOR_GROUP_ACTION;
