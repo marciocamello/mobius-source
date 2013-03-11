@@ -12,137 +12,110 @@
  */
 package quests;
 
+import org.apache.commons.lang3.ArrayUtils;
 import lineage2.commons.util.Rnd;
+import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
-import org.apache.commons.lang3.ArrayUtils;
-
 public class _474_WaitingForTheSummer extends Quest implements ScriptFile
 {
-	private static final int CON1 = 33463;
-	private static final int CON2 = 31981;
-	private static final int CON3 = 19490;
-	private static final int CON4 = 19491;
-	private static final int CON5 = 19492;
-	private static final int[] CON6 =
-	{
-		22093,
-		22094
-	};
-	private static final int[] CON7 =
-	{
-		22095,
-		22096
-	};
-	private static final int[] CON8 =
-	{
-		22097,
-		22098
-	};
+	//npc
+	private static final int GUIDE = 33463;
+	private static final int VISHOTSKY = 31981;
+
+	//q items
+	private static final int BUFFALO_MEAT = 19490;
+	private static final int URSUS_MEAT = 19491;
+	private static final int YETI_MIAT = 19492;
+
+	//mobs
+	private static final int[] BUFFALO = {22093, 22094};
+	private static final int[] URSUS = {22095, 22096};
+	private static final int[] YETI = {22097, 22098};
+
+	@Override
+	public void onLoad()
+	{}
+	
+	@Override
+	public void onReload()
+	{}
+	
+	@Override
+	public void onShutdown()
+	{}
 	
 	public _474_WaitingForTheSummer()
 	{
 		super(false);
-		addStartNpc(CON1);
-		addTalkId(CON1, CON2);
-		addKillId(CON6);
-		addKillId(CON7);
-		addKillId(CON8);
-		addQuestItem(CON3, CON5, CON4);
+		addStartNpc(GUIDE);
+		addTalkId(VISHOTSKY);
+		addKillId(BUFFALO);
+		addKillId(URSUS);
+		addKillId(YETI);
+		addQuestItem(BUFFALO_MEAT, YETI_MIAT, URSUS_MEAT);
 		addLevelCheck(60, 64);
-	}
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
 	}
 	
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
+		Player player = st.getPlayer();
 		String htmltext = event;
-		String str = event;
-		int i = -1;
-		switch (str.hashCode())
+		if(event.equalsIgnoreCase("33463-3.htm"))
 		{
-			case 1786654643:
-				if (!str.equals("33463-04.htm"))
-				{
-					break;
-				}
-				i = 0;
+			st.setCond(1);
+			st.setState(STARTED);
+			st.playSound(SOUND_ACCEPT);
 		}
-		switch (i)
-		{
-			case 0:
-				st.setState(STARTED);
-		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		String htmltext = "noquest";
+		Player player = st.getPlayer();
 		int npcId = npc.getNpcId();
+		int state = st.getState();
 		int cond = st.getCond();
-		if (npcId == CON1)
+		if(npcId == GUIDE)
 		{
-			if (st.getState() == CREATED)
+			if(state == 1)
 			{
-				htmltext = "33463-01.htm";
-			}
-			else if (st.getState() == STARTED)
-			{
-				if (cond == 1)
+				if(!st.isNowAvailableByTime())
 				{
-					htmltext = "33463-05.htm";
+					return "33463-comp.htm";
 				}
-				else
-				{
-					htmltext = "33463-06.htm";
-				}
+				return "33463.htm";
 			}
-			else if (st.getState() == COMPLETED)
+			if(state == 2)
 			{
-				htmltext = "Quest is complited.";
+				if(cond == 1)
+					return "33463-4.htm";
+					
 			}
 		}
-		else if (npc.getNpcId() == CON2)
+		if(npcId == VISHOTSKY && state == 2)
 		{
-			if (st.isStarted())
+			if(cond == 1)
+				return "31981-1.htm";
+			if(cond == 2)
 			{
-				if (cond == 1)
-				{
-					htmltext = "31981-02.htm";
-				}
-				else if (cond == 2)
-				{
-					htmltext = "31981-01.htm";
-					st.addExpAndSp(1879400, 1782000);
-					st.giveItems(57, 194000);
-					st.exitCurrentQuest(false);
-				}
-			}
-			else if (st.isCompleted())
-			{
-				htmltext = "31981-03.htm";
-			}
-		}
-		return htmltext;
+				st.giveItems(57,194000);
+				st.addExpAndSp(1879400, 1782000);
+				st.takeItems(BUFFALO_MEAT, -1);
+				st.takeItems(URSUS_MEAT, -1);
+				st.takeItems(YETI_MIAT, -1);
+				st.unset("cond");
+				st.playSound(SOUND_FINISH);
+				st.exitCurrentQuest(this);		
+				return "31981.htm"; //no further html do here
+			}	
+		}		
+		return "noquest";
 	}
 	
 	@Override
@@ -152,31 +125,31 @@ public class _474_WaitingForTheSummer extends Quest implements ScriptFile
 		int cond = st.getCond();
 		if ((cond == 1) && (Rnd.chance(50)))
 		{
-			if (ArrayUtils.contains(CON8, npcId))
+			if (ArrayUtils.contains(YETI, npcId))
 			{
-				if (st.getQuestItemsCount(CON5) < 30)
+				if (st.getQuestItemsCount(YETI_MIAT) < 30)
 				{
-					st.giveItems(CON5, 1);
+					st.giveItems(YETI_MIAT, 1);
 					st.playSound("ItemSound.quest_itemget");
 				}
 			}
-			else if (ArrayUtils.contains(CON7, npcId))
+			else if (ArrayUtils.contains(URSUS, npcId))
 			{
-				if (st.getQuestItemsCount(CON4) < 30)
+				if (st.getQuestItemsCount(URSUS_MEAT) < 30)
 				{
-					st.giveItems(CON4, 1);
+					st.giveItems(URSUS_MEAT, 1);
 					st.playSound("ItemSound.quest_itemget");
 				}
 			}
-			else if (ArrayUtils.contains(CON6, npcId))
+			else if (ArrayUtils.contains(BUFFALO, npcId))
 			{
-				if (st.getQuestItemsCount(CON3) < 30)
+				if (st.getQuestItemsCount(BUFFALO_MEAT) < 30)
 				{
-					st.giveItems(CON3, 1);
+					st.giveItems(BUFFALO_MEAT, 1);
 					st.playSound("ItemSound.quest_itemget");
 				}
 			}
-			if ((st.getQuestItemsCount(CON5) >= 30) && (st.getQuestItemsCount(CON4) >= 30) && (st.getQuestItemsCount(CON3) >= 30))
+			if ((st.getQuestItemsCount(YETI_MIAT) >= 30) && (st.getQuestItemsCount(URSUS_MEAT) >= 30) && (st.getQuestItemsCount(BUFFALO_MEAT) >= 30))
 			{
 				st.setCond(2);
 				st.playSound("ItemSound.quest_middle");
