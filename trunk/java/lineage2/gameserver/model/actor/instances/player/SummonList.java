@@ -178,8 +178,6 @@ public class SummonList implements Iterable<Summon>
 	{
 		if (_summonList.size() > 0)
 		{
-			_log.info("_summonList.size():" + _summonList.size());
-			_log.info("_summonList.values():" + _summonList.values());
 			for (Summon summon : _summonList.values())
 			{
 				summon.unSummon();
