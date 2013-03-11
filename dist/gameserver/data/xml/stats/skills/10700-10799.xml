@@ -1238,10 +1238,16 @@
     </skill>
     <skill id="10795" levels="1" name="Hawk Cleanse">
     <!-- Purifies the master. -->
-        <set name="target" val="TARGET_NONE"/>
-        <set name="skillType" val="NOTDONE"/>
-        <set name="operateType" val="OP_ACTIVE"/>
-        <for/>
+		<set name="target" val="TARGET_OWNER"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+        <for>
+			<effect count="1" name="DispelEffects" time="0" val="0">
+				<def name="dispelType" val="cleanse"/>
+				<def name="cancelRate" val="80"/>
+				<def name="negateCount" val="10"/>
+			</effect>
+		</for>
     </skill>
     <skill id="10796" levels="1" name="Hawk Gust">
     <!-- Pushes the enemies around the master. -->
@@ -1271,7 +1277,11 @@
         <set name="target" val="TARGET_ONE"/>
         <set name="shieldignore" val="true"/>
         <set name="nextAction" val="attack"/>
-        <for/>
+		<for>
+			<effect abnormal="bleeding" count="15" name="Bleed" stackOrder="3" time="1" val="0">
+				<mul order="0x30" stat="runSpd" val="0.8"/>
+			</effect>
+		</for>
     </skill>
     <skill id="10799" levels="1" name="Superior Magic Resistance">
     <!-- STR + 2 and M. Def. + 199. When receiving damage, there is a chance of M. Def. and resistance to attributes momentarily increasing. -->
