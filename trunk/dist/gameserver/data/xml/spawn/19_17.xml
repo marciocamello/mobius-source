@@ -232,7 +232,7 @@
         <!--Mendio-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="-12823" y="124887" z="-3126" h="59647"/>
+        <point x="-12856" y="124872" z="-3150" h="0"/>
         <npc id="30505"/>
         <!--Drikus-->
     </spawn>
