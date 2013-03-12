@@ -4044,7 +4044,179 @@
 			<skill id="249" level="11" cost="11000" name="Weapon Mastery" min_level="40" />
 			<skill id="249" level="12" cost="11000" name="Weapon Mastery" min_level="40" />
 			<skill id="1016" level="3" cost="33000" name="Resurrection" min_level="40" />
+<!--
 			<skill id="1520" level="1" cost="33000" name="Inquisitor" min_level="40" />
+			<set name="addSkills" val="1523;-2;1528;-2;1524;-2;1525;-2;1430;0;1043;0;1418;0;1042;0;1400;0;619;1;5491;1"/>
+-->
+			<skill id="1524" level="1" min_level="40" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="2" min_level="40" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="3" min_level="40" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="4" min_level="44" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="5" min_level="44" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="6" min_level="44" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="7" min_level="48" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="8" min_level="48" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="9" min_level="48" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="10" min_level="52" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="11" min_level="52" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="12" min_level="52" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="13" min_level="56" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="14" min_level="56" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="15" min_level="56" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="16" min_level="58" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="17" min_level="58" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="18" min_level="58" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="19" min_level="60" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="20" min_level="60" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="21" min_level="60" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="22" min_level="62" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="23" min_level="62" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="24" min_level="62" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="25" min_level="64" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="26" min_level="64" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="27" min_level="64" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="28" min_level="66" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="29" min_level="66" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="30" min_level="66" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="31" min_level="68" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="32" min_level="68" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="33" min_level="68" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="34" min_level="70" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="35" min_level="70" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="36" min_level="70" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="37" min_level="72" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="38" min_level="72" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="39" min_level="72" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="40" min_level="74" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="41" min_level="74" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="42" min_level="74" cost="1" name="Surrender to the Holy"/>
+			<skill id="1525" level="1" min_level="40" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="2" min_level="40" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="3" min_level="40" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="4" min_level="44" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="5" min_level="44" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="6" min_level="44" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="7" min_level="48" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="8" min_level="48" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="9" min_level="48" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="10" min_level="52" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="11" min_level="52" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="12" min_level="52" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="13" min_level="56" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="14" min_level="56" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="15" min_level="56" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="16" min_level="58" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="17" min_level="58" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="18" min_level="58" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="19" min_level="60" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="20" min_level="60" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="21" min_level="60" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="22" min_level="62" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="23" min_level="62" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="24" min_level="62" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="25" min_level="64" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="26" min_level="64" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="27" min_level="64" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="28" min_level="66" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="29" min_level="66" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="30" min_level="66" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="31" min_level="68" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="32" min_level="68" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="33" min_level="68" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="34" min_level="70" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="35" min_level="70" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="36" min_level="70" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="37" min_level="72" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="38" min_level="72" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="39" min_level="72" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="40" min_level="74" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="41" min_level="74" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="42" min_level="74" cost="1" name="Divine Curse"/>
+			<skill id="1528" level="1" min_level="40" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="2" min_level="40" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="3" min_level="40" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="4" min_level="44" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="5" min_level="44" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="6" min_level="44" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="7" min_level="48" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="8" min_level="48" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="9" min_level="48" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="10" min_level="52" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="11" min_level="52" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="12" min_level="52" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="13" min_level="56" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="14" min_level="56" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="15" min_level="56" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="16" min_level="58" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="17" min_level="58" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="18" min_level="58" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="19" min_level="60" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="20" min_level="60" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="21" min_level="60" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="22" min_level="62" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="23" min_level="62" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="24" min_level="62" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="25" min_level="64" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="26" min_level="64" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="27" min_level="64" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="28" min_level="66" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="29" min_level="66" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="30" min_level="66" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="31" min_level="68" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="32" min_level="68" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="33" min_level="68" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="34" min_level="70" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="35" min_level="70" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="36" min_level="70" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="37" min_level="72" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="38" min_level="72" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="39" min_level="72" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="40" min_level="74" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="41" min_level="74" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="42" min_level="74" cost="1" name="Divine Flash"/>
+			<skill id="1523" level="1" min_level="40" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="2" min_level="40" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="3" min_level="40" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="4" min_level="44" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="5" min_level="44" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="6" min_level="44" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="7" min_level="48" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="8" min_level="48" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="9" min_level="48" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="10" min_level="52" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="11" min_level="52" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="12" min_level="52" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="13" min_level="56" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="14" min_level="56" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="15" min_level="56" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="16" min_level="58" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="17" min_level="58" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="18" min_level="58" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="19" min_level="60" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="20" min_level="60" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="21" min_level="60" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="22" min_level="62" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="23" min_level="62" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="24" min_level="62" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="25" min_level="64" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="26" min_level="64" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="27" min_level="64" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="28" min_level="66" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="29" min_level="66" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="30" min_level="66" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="31" min_level="68" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="32" min_level="68" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="33" min_level="68" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="34" min_level="70" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="35" min_level="70" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="36" min_level="70" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="37" min_level="72" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="38" min_level="72" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="39" min_level="72" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="40" min_level="74" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="41" min_level="74" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="42" min_level="74" cost="1" name="Divine Punishment"/>
+
 			<skill id="1254" level="1" cost="33000" name="Mass Resurrection" min_level="40" />
 			<skill id="1075" level="2" cost="33000" name="Peace" min_level="40" />
 			<skill id="1049" level="1" cost="33000" name="Requiem" min_level="40" />
@@ -7554,7 +7726,179 @@
 			<skill id="1016" level="3" cost="30000" name="Resurrection" min_level="40" />
 			<skill id="1013" level="5" cost="15000" name="Recharge" min_level="40" />
 			<skill id="1013" level="6" cost="15000" name="Recharge" min_level="40" />
+<!--
 			<skill id="1521" level="1" cost="30000" name="Inquisitor" min_level="40" />
+			<set name="addSkills" val="1523;-2;1528;-2;1524;-2;1525;-2;1430;0;1043;1;1303;0;1400;0;619;1;5491;1"/>
+-->
+			<skill id="1524" level="1" min_level="40" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="2" min_level="40" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="3" min_level="40" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="4" min_level="44" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="5" min_level="44" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="6" min_level="44" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="7" min_level="48" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="8" min_level="48" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="9" min_level="48" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="10" min_level="52" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="11" min_level="52" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="12" min_level="52" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="13" min_level="56" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="14" min_level="56" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="15" min_level="56" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="16" min_level="58" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="17" min_level="58" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="18" min_level="58" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="19" min_level="60" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="20" min_level="60" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="21" min_level="60" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="22" min_level="62" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="23" min_level="62" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="24" min_level="62" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="25" min_level="64" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="26" min_level="64" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="27" min_level="64" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="28" min_level="66" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="29" min_level="66" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="30" min_level="66" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="31" min_level="68" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="32" min_level="68" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="33" min_level="68" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="34" min_level="70" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="35" min_level="70" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="36" min_level="70" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="37" min_level="72" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="38" min_level="72" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="39" min_level="72" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="40" min_level="74" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="41" min_level="74" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="42" min_level="74" cost="1" name="Surrender to the Holy"/>
+			<skill id="1525" level="1" min_level="40" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="2" min_level="40" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="3" min_level="40" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="4" min_level="44" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="5" min_level="44" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="6" min_level="44" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="7" min_level="48" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="8" min_level="48" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="9" min_level="48" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="10" min_level="52" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="11" min_level="52" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="12" min_level="52" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="13" min_level="56" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="14" min_level="56" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="15" min_level="56" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="16" min_level="58" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="17" min_level="58" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="18" min_level="58" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="19" min_level="60" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="20" min_level="60" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="21" min_level="60" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="22" min_level="62" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="23" min_level="62" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="24" min_level="62" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="25" min_level="64" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="26" min_level="64" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="27" min_level="64" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="28" min_level="66" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="29" min_level="66" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="30" min_level="66" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="31" min_level="68" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="32" min_level="68" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="33" min_level="68" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="34" min_level="70" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="35" min_level="70" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="36" min_level="70" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="37" min_level="72" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="38" min_level="72" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="39" min_level="72" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="40" min_level="74" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="41" min_level="74" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="42" min_level="74" cost="1" name="Divine Curse"/>
+			<skill id="1528" level="1" min_level="40" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="2" min_level="40" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="3" min_level="40" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="4" min_level="44" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="5" min_level="44" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="6" min_level="44" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="7" min_level="48" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="8" min_level="48" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="9" min_level="48" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="10" min_level="52" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="11" min_level="52" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="12" min_level="52" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="13" min_level="56" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="14" min_level="56" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="15" min_level="56" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="16" min_level="58" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="17" min_level="58" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="18" min_level="58" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="19" min_level="60" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="20" min_level="60" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="21" min_level="60" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="22" min_level="62" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="23" min_level="62" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="24" min_level="62" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="25" min_level="64" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="26" min_level="64" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="27" min_level="64" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="28" min_level="66" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="29" min_level="66" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="30" min_level="66" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="31" min_level="68" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="32" min_level="68" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="33" min_level="68" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="34" min_level="70" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="35" min_level="70" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="36" min_level="70" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="37" min_level="72" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="38" min_level="72" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="39" min_level="72" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="40" min_level="74" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="41" min_level="74" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="42" min_level="74" cost="1" name="Divine Flash"/>
+			<skill id="1523" level="1" min_level="40" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="2" min_level="40" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="3" min_level="40" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="4" min_level="44" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="5" min_level="44" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="6" min_level="44" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="7" min_level="48" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="8" min_level="48" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="9" min_level="48" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="10" min_level="52" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="11" min_level="52" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="12" min_level="52" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="13" min_level="56" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="14" min_level="56" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="15" min_level="56" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="16" min_level="58" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="17" min_level="58" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="18" min_level="58" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="19" min_level="60" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="20" min_level="60" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="21" min_level="60" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="22" min_level="62" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="23" min_level="62" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="24" min_level="62" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="25" min_level="64" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="26" min_level="64" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="27" min_level="64" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="28" min_level="66" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="29" min_level="66" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="30" min_level="66" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="31" min_level="68" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="32" min_level="68" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="33" min_level="68" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="34" min_level="70" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="35" min_level="70" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="36" min_level="70" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="37" min_level="72" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="38" min_level="72" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="39" min_level="72" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="40" min_level="74" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="41" min_level="74" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="42" min_level="74" cost="1" name="Divine Punishment"/>
+
 			<skill id="1035" level="2" cost="30000" name="Mental Shield" min_level="40" />
 			<skill id="1068" level="3" cost="30000" name="Might" min_level="40" />
 			<skill id="1206" level="6" cost="30000" name="Wind Shackle" min_level="40" />
@@ -10929,7 +11273,179 @@
 			<skill id="249" level="12" cost="10000" name="Weapon Mastery" min_level="40" />
 			<skill id="1013" level="5" cost="15000" name="Recharge" min_level="40" />
 			<skill id="1013" level="6" cost="15000" name="Recharge" min_level="40" />
+<!--
 			<skill id="1522" level="1" cost="30000" name="Inquisitor" min_level="40" />
+			<set name="addSkills" val="1523;-2;1528;-2;1524;-2;1525;-2;1430;0;1043;1;1059;0;1303;0;619;1;5491;1"/>
+-->		
+			<skill id="1524" level="1" min_level="40" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="2" min_level="40" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="3" min_level="40" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="4" min_level="44" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="5" min_level="44" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="6" min_level="44" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="7" min_level="48" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="8" min_level="48" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="9" min_level="48" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="10" min_level="52" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="11" min_level="52" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="12" min_level="52" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="13" min_level="56" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="14" min_level="56" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="15" min_level="56" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="16" min_level="58" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="17" min_level="58" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="18" min_level="58" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="19" min_level="60" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="20" min_level="60" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="21" min_level="60" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="22" min_level="62" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="23" min_level="62" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="24" min_level="62" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="25" min_level="64" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="26" min_level="64" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="27" min_level="64" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="28" min_level="66" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="29" min_level="66" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="30" min_level="66" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="31" min_level="68" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="32" min_level="68" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="33" min_level="68" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="34" min_level="70" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="35" min_level="70" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="36" min_level="70" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="37" min_level="72" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="38" min_level="72" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="39" min_level="72" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="40" min_level="74" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="41" min_level="74" cost="1" name="Surrender to the Holy"/>
+			<skill id="1524" level="42" min_level="74" cost="1" name="Surrender to the Holy"/>
+			<skill id="1525" level="1" min_level="40" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="2" min_level="40" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="3" min_level="40" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="4" min_level="44" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="5" min_level="44" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="6" min_level="44" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="7" min_level="48" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="8" min_level="48" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="9" min_level="48" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="10" min_level="52" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="11" min_level="52" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="12" min_level="52" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="13" min_level="56" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="14" min_level="56" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="15" min_level="56" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="16" min_level="58" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="17" min_level="58" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="18" min_level="58" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="19" min_level="60" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="20" min_level="60" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="21" min_level="60" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="22" min_level="62" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="23" min_level="62" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="24" min_level="62" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="25" min_level="64" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="26" min_level="64" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="27" min_level="64" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="28" min_level="66" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="29" min_level="66" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="30" min_level="66" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="31" min_level="68" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="32" min_level="68" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="33" min_level="68" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="34" min_level="70" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="35" min_level="70" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="36" min_level="70" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="37" min_level="72" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="38" min_level="72" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="39" min_level="72" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="40" min_level="74" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="41" min_level="74" cost="1" name="Divine Curse"/>
+			<skill id="1525" level="42" min_level="74" cost="1" name="Divine Curse"/>
+			<skill id="1528" level="1" min_level="40" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="2" min_level="40" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="3" min_level="40" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="4" min_level="44" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="5" min_level="44" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="6" min_level="44" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="7" min_level="48" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="8" min_level="48" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="9" min_level="48" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="10" min_level="52" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="11" min_level="52" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="12" min_level="52" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="13" min_level="56" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="14" min_level="56" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="15" min_level="56" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="16" min_level="58" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="17" min_level="58" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="18" min_level="58" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="19" min_level="60" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="20" min_level="60" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="21" min_level="60" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="22" min_level="62" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="23" min_level="62" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="24" min_level="62" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="25" min_level="64" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="26" min_level="64" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="27" min_level="64" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="28" min_level="66" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="29" min_level="66" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="30" min_level="66" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="31" min_level="68" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="32" min_level="68" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="33" min_level="68" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="34" min_level="70" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="35" min_level="70" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="36" min_level="70" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="37" min_level="72" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="38" min_level="72" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="39" min_level="72" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="40" min_level="74" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="41" min_level="74" cost="1" name="Divine Flash"/>
+			<skill id="1528" level="42" min_level="74" cost="1" name="Divine Flash"/>
+			<skill id="1523" level="1" min_level="40" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="2" min_level="40" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="3" min_level="40" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="4" min_level="44" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="5" min_level="44" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="6" min_level="44" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="7" min_level="48" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="8" min_level="48" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="9" min_level="48" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="10" min_level="52" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="11" min_level="52" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="12" min_level="52" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="13" min_level="56" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="14" min_level="56" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="15" min_level="56" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="16" min_level="58" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="17" min_level="58" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="18" min_level="58" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="19" min_level="60" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="20" min_level="60" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="21" min_level="60" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="22" min_level="62" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="23" min_level="62" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="24" min_level="62" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="25" min_level="64" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="26" min_level="64" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="27" min_level="64" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="28" min_level="66" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="29" min_level="66" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="30" min_level="66" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="31" min_level="68" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="32" min_level="68" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="33" min_level="68" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="34" min_level="70" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="35" min_level="70" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="36" min_level="70" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="37" min_level="72" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="38" min_level="72" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="39" min_level="72" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="40" min_level="74" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="41" min_level="74" cost="1" name="Divine Punishment"/>
+			<skill id="1523" level="42" min_level="74" cost="1" name="Divine Punishment"/>
+
 			<skill id="1201" level="10" cost="10000" name="Dryad Root" min_level="40" />
 			<skill id="1201" level="11" cost="10000" name="Dryad Root" min_level="40" />
 			<skill id="1201" level="12" cost="10000" name="Dryad Root" min_level="40" />
