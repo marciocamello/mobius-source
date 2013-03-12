@@ -1589,10 +1589,12 @@
         <set name="useSS" val="false"/>
         <set name="isHideUseMessage" val="true"/>
         <for>
-            <effect count="1" name="DispelEffects" time="#time" val="0">
-                <def name="dispelType" val="cleanse"/>
-                <def name="cancelRate" val="100"/>
-                <def name="negateCount" val="10"/>
+			<effect count="1" name="DispelEffects" time="0" val="0">
+				<def name="dispelType" val="cleanse"/>
+				<def name="cancelRate" val="100"/>
+				<def name="negateCount" val="10"/>
+			</effect>
+            <effect count="1" name="Buff" stackType="CubicProtection" time="#time" val="0">
                 <add order="0x40" stat="cancelResist" val="100"/>
                 <add order="0x40" stat="mDef" val="#mDef"/>
                 <add order="0x40" stat="pDef" val="#pDef"/>
