@@ -1283,6 +1283,9 @@
 			<skill id="28" level="34" cost="85000" name="Aggression" min_level="60" />
 			<skill id="28" level="35" cost="85000" name="Aggression" min_level="60" />
 			<skill id="984" level="8" cost="171000" name="Shield Strike" min_level="60" />
+
+
+
 			<skill id="18" level="22" cost="85000" name="Aura of Hate" min_level="60" />
 			<skill id="18" level="23" cost="85000" name="Aura of Hate" min_level="60" />
 			<skill id="217" level="30" cost="85000" name="Sword/Blunt Weapon Mastery" min_level="60" />
@@ -4044,10 +4047,6 @@
 			<skill id="249" level="11" cost="11000" name="Weapon Mastery" min_level="40" />
 			<skill id="249" level="12" cost="11000" name="Weapon Mastery" min_level="40" />
 			<skill id="1016" level="3" cost="33000" name="Resurrection" min_level="40" />
-<!--
-			<skill id="1520" level="1" cost="33000" name="Inquisitor" min_level="40" />
-			<set name="addSkills" val="1523;-2;1528;-2;1524;-2;1525;-2;1430;0;1043;0;1418;0;1042;0;1400;0;619;1;5491;1"/>
--->
 			<skill id="1524" level="1" min_level="40" cost="1" name="Surrender to the Holy"/>
 			<skill id="1524" level="2" min_level="40" cost="1" name="Surrender to the Holy"/>
 			<skill id="1524" level="3" min_level="40" cost="1" name="Surrender to the Holy"/>
@@ -4216,7 +4215,6 @@
 			<skill id="1523" level="40" min_level="74" cost="1" name="Divine Punishment"/>
 			<skill id="1523" level="41" min_level="74" cost="1" name="Divine Punishment"/>
 			<skill id="1523" level="42" min_level="74" cost="1" name="Divine Punishment"/>
-
 			<skill id="1254" level="1" cost="33000" name="Mass Resurrection" min_level="40" />
 			<skill id="1075" level="2" cost="33000" name="Peace" min_level="40" />
 			<skill id="1049" level="1" cost="33000" name="Requiem" min_level="40" />
@@ -5341,7 +5339,9 @@
 			<skill id="102" level="7" cost="147000" name="Entangle" min_level="55" />
 			<skill id="15" level="31" cost="49000" name="Charm" min_level="55" />
 			<skill id="15" level="32" cost="49000" name="Charm" min_level="55" />
+
 			<skill id="15" level="33" cost="49000" name="Charm" min_level="55" />
+
 			<skill id="291" level="2" cost="147000" name="Final Fortress" min_level="55" />
 			<skill id="67" level="3" cost="147000" name="Summon Life Cubic" min_level="55" />
 			<skill id="58" level="34" cost="49000" name="Elemental Heal" min_level="55" />
@@ -5599,6 +5599,7 @@
 			<skill id="15" level="19" cost="17000" name="Charm" min_level="43" />
 			<skill id="15" level="20" cost="17000" name="Charm" min_level="43" />
 			<skill id="15" level="21" cost="17000" name="Charm" min_level="43" />
+			<skill id="1586" level="1" cost="120000" name="Rhythm of Critical" min_level="43" />
 			<skill id="267" level="1" cost="51000" name="Song of Warding" min_level="43" />
 			<skill id="58" level="22" cost="17000" name="Elemental Heal" min_level="43" />
 			<skill id="58" level="23" cost="17000" name="Elemental Heal" min_level="43" />
@@ -5656,6 +5657,8 @@
 			<skill id="58" level="33" cost="63000" name="Elemental Heal" min_level="52" />
 			<skill id="986" level="5" cost="190000" name="Deadly Strike" min_level="52" />
 			<skill id="230" level="2" cost="190000" name="Sprint" min_level="52" />
+			<skill id="1588" level="1" cost="250000" name="Rhythm of Magic" min_level="52" />
+			<skill id="363" level="1" cost="300000" name="Song of Meditation" min_level="52" />
 			<skill id="988" level="2" cost="190000" name="Battle Whisper" min_level="52" />
 			<skill id="402" level="1" cost="200000" name="Arrest" min_level="55" />
 			<skill id="217" level="24" cost="67000" name="Sword/Blunt Weapon Mastery" min_level="55" />
@@ -5670,12 +5673,14 @@
 			<skill id="15" level="32" cost="67000" name="Charm" min_level="55" />
 			<skill id="15" level="33" cost="67000" name="Charm" min_level="55" />
 			<skill id="264" level="1" cost="200000" name="Song of Earth" min_level="55" />
+			<skill id="304" level="1" cost="200000" name="Song of Vitality" min_level="55" />
 			<skill id="58" level="34" cost="67000" name="Elemental Heal" min_level="55" />
 			<skill id="58" level="35" cost="67000" name="Elemental Heal" min_level="55" />
 			<skill id="58" level="36" cost="67000" name="Elemental Heal" min_level="55" />
 			<skill id="98" level="1" cost="200000" name="Sword Symphony" min_level="55" />
 			<skill id="986" level="6" cost="200000" name="Deadly Strike" min_level="55" />
 			<skill id="191" level="4" cost="200000" name="Focus Mind" min_level="55" />
+			<skill id="1599" level="1" cost="350000" name="Rhythm of Wizard" min_level="55" />			
 			<skill id="402" level="2" cost="200000" name="Arrest" min_level="58" />
 			<skill id="217" level="27" cost="80000" name="Sword/Blunt Weapon Mastery" min_level="58" />
 			<skill id="217" level="28" cost="80000" name="Sword/Blunt Weapon Mastery" min_level="58" />
@@ -5694,6 +5699,7 @@
 			<skill id="58" level="39" cost="80000" name="Elemental Heal" min_level="58" />
 			<skill id="986" level="7" cost="200000" name="Deadly Strike" min_level="58" />
 			<skill id="123" level="3" cost="200000" name="Spirit Barrier" min_level="58" />
+			<skill id="1590" level="1" cost="350000" name="Rhythm of Combat" min_level="58" />
 			<skill id="402" level="3" cost="260000" name="Arrest" min_level="60" />
 			<skill id="217" level="30" cost="130000" name="Sword/Blunt Weapon Mastery" min_level="60" />
 			<skill id="217" level="31" cost="130000" name="Sword/Blunt Weapon Mastery" min_level="60" />
@@ -5709,6 +5715,7 @@
 			<skill id="98" level="2" cost="260000" name="Sword Symphony" min_level="60" />
 			<skill id="986" level="8" cost="260000" name="Deadly Strike" min_level="60" />
 			<skill id="988" level="3" cost="260000" name="Battle Whisper" min_level="60" />
+			<skill id="1592" level="1" cost="450000" name="Rhythm of Fighter" min_level="60" />
 			<skill id="402" level="4" cost="400000" name="Arrest" min_level="62" />
 			<skill id="217" level="32" cost="200000" name="Sword/Blunt Weapon Mastery" min_level="62" />
 			<skill id="217" level="33" cost="200000" name="Sword/Blunt Weapon Mastery" min_level="62" />
@@ -5746,7 +5753,6 @@
 			<skill id="102" level="12" cost="780000" name="Entangle" min_level="66" />
 			<skill id="15" level="43" cost="390000" name="Charm" min_level="66" />
 			<skill id="15" level="44" cost="390000" name="Charm" min_level="66" />
-			<skill id="304" level="1" cost="780000" name="Song of Vitality" min_level="66" />
 			<skill id="58" level="46" cost="390000" name="Elemental Heal" min_level="66" />
 			<skill id="58" level="47" cost="390000" name="Elemental Heal" min_level="66" />
 			<skill id="986" level="11" cost="780000" name="Deadly Strike" min_level="66" />
@@ -7726,10 +7732,6 @@
 			<skill id="1016" level="3" cost="30000" name="Resurrection" min_level="40" />
 			<skill id="1013" level="5" cost="15000" name="Recharge" min_level="40" />
 			<skill id="1013" level="6" cost="15000" name="Recharge" min_level="40" />
-<!--
-			<skill id="1521" level="1" cost="30000" name="Inquisitor" min_level="40" />
-			<set name="addSkills" val="1523;-2;1528;-2;1524;-2;1525;-2;1430;0;1043;1;1303;0;1400;0;619;1;5491;1"/>
--->
 			<skill id="1524" level="1" min_level="40" cost="1" name="Surrender to the Holy"/>
 			<skill id="1524" level="2" min_level="40" cost="1" name="Surrender to the Holy"/>
 			<skill id="1524" level="3" min_level="40" cost="1" name="Surrender to the Holy"/>
@@ -8911,6 +8913,7 @@
 			<skill id="402" level="9" cost="550000" name="Arrest" min_level="72" />
 			<skill id="984" level="14" cost="550000" name="Shield Strike" min_level="72" />
 			<skill id="18" level="34" cost="270000" name="Aura of Hate" min_level="72" />
+
 			<skill id="18" level="35" cost="270000" name="Aura of Hate" min_level="72" />
 			<skill id="217" level="42" cost="270000" name="Sword/Blunt Weapon Mastery" min_level="72" />
 			<skill id="217" level="43" cost="270000" name="Sword/Blunt Weapon Mastery" min_level="72" />
@@ -9004,6 +9007,7 @@
 			<skill id="115" level="4" cost="42000" name="Power Break" min_level="43" />
 			<skill id="277" level="1" cost="42000" name="Dance of Light" min_level="43" />
 			<skill id="191" level="2" cost="42000" name="Focus Mind" min_level="43" />
+			<skill id="1585" level="1" cost="120000" name="Rhythm of Critical Dark" min_level="43" />
 			<skill id="144" level="7" cost="20000" name="Dual Weapon Mastery" min_level="46" />
 			<skill id="144" level="8" cost="20000" name="Dual Weapon Mastery" min_level="46" />
 			<skill id="144" level="9" cost="20000" name="Dual Weapon Mastery" min_level="46" />
@@ -9063,6 +9067,7 @@
 			<skill id="986" level="5" cost="150000" name="Deadly Strike" min_level="52" />
 			<skill id="115" level="7" cost="150000" name="Power Break" min_level="52" />
 			<skill id="276" level="1" cost="150000" name="Dance of Concentration" min_level="52" />
+			<skill id="1587" level="1" cost="250000" name="Rhythm of Magic Dark" min_level="52" />
 			<skill id="402" level="1" cost="160000" name="Arrest" min_level="55" />
 			<skill id="144" level="16" cost="52000" name="Dual Weapon Mastery" min_level="55" />
 			<skill id="144" level="17" cost="52000" name="Dual Weapon Mastery" min_level="55" />
@@ -9086,6 +9091,7 @@
 			<skill id="271" level="1" cost="160000" name="Dance of the Warrior" min_level="55" />
 			<skill id="84" level="1" cost="160000" name="Poison Blade Dance" min_level="55" />
 			<skill id="191" level="4" cost="160000" name="Focus Mind" min_level="55" />
+			<skill id="1598" level="1" cost="350000" name="Rhythm of Wizard Dark" min_level="55" />			
 			<skill id="402" level="2" cost="180000" name="Arrest" min_level="58" />
 			<skill id="144" level="19" cost="62000" name="Dual Weapon Mastery" min_level="58" />
 			<skill id="144" level="20" cost="62000" name="Dual Weapon Mastery" min_level="58" />
@@ -9108,6 +9114,7 @@
 			<skill id="986" level="7" cost="180000" name="Deadly Strike" min_level="58" />
 			<skill id="115" level="9" cost="180000" name="Power Break" min_level="58" />
 			<skill id="275" level="1" cost="180000" name="Dance of Fury" min_level="58" />
+			<skill id="1589" level="1" cost="350000" name="Rhythm of Combat Dark" min_level="58" />
 			<skill id="402" level="3" cost="240000" name="Arrest" min_level="60" />
 			<skill id="144" level="22" cost="120000" name="Dual Weapon Mastery" min_level="60" />
 			<skill id="144" level="23" cost="120000" name="Dual Weapon Mastery" min_level="60" />
@@ -9125,6 +9132,7 @@
 			<skill id="986" level="8" cost="240000" name="Deadly Strike" min_level="60" />
 			<skill id="115" level="10" cost="240000" name="Power Break" min_level="60" />
 			<skill id="84" level="2" cost="240000" name="Poison Blade Dance" min_level="60" />
+			<skill id="1591" level="1" cost="350000" name="Rhythm of Fighter Dark" min_level="60" />
 			<skill id="402" level="4" cost="330000" name="Arrest" min_level="62" />
 			<skill id="144" level="24" cost="170000" name="Dual Weapon Mastery" min_level="62" />
 			<skill id="144" level="25" cost="170000" name="Dual Weapon Mastery" min_level="62" />
@@ -11273,10 +11281,6 @@
 			<skill id="249" level="12" cost="10000" name="Weapon Mastery" min_level="40" />
 			<skill id="1013" level="5" cost="15000" name="Recharge" min_level="40" />
 			<skill id="1013" level="6" cost="15000" name="Recharge" min_level="40" />
-<!--
-			<skill id="1522" level="1" cost="30000" name="Inquisitor" min_level="40" />
-			<set name="addSkills" val="1523;-2;1528;-2;1524;-2;1525;-2;1430;0;1043;1;1059;0;1303;0;619;1;5491;1"/>
--->		
 			<skill id="1524" level="1" min_level="40" cost="1" name="Surrender to the Holy"/>
 			<skill id="1524" level="2" min_level="40" cost="1" name="Surrender to the Holy"/>
 			<skill id="1524" level="3" min_level="40" cost="1" name="Surrender to the Holy"/>
@@ -11445,7 +11449,6 @@
 			<skill id="1523" level="40" min_level="74" cost="1" name="Divine Punishment"/>
 			<skill id="1523" level="41" min_level="74" cost="1" name="Divine Punishment"/>
 			<skill id="1523" level="42" min_level="74" cost="1" name="Divine Punishment"/>
-
 			<skill id="1201" level="10" cost="10000" name="Dryad Root" min_level="40" />
 			<skill id="1201" level="11" cost="10000" name="Dryad Root" min_level="40" />
 			<skill id="1201" level="12" cost="10000" name="Dryad Root" min_level="40" />
@@ -14637,6 +14640,7 @@
 			<skill id="227" level="35" cost="161000" name="Light Armor Mastery" min_level="60" />
 			<skill id="227" level="36" cost="161000" name="Light Armor Mastery" min_level="60" />
 			<skill id="205" level="30" cost="161000" name="Sword/Blunt Weapon Mastery" min_level="60" />
+
 			<skill id="205" level="31" cost="161000" name="Sword/Blunt Weapon Mastery" min_level="60" />
 			<skill id="231" level="35" cost="161000" name="Heavy Armor Mastery" min_level="60" />
 			<skill id="231" level="36" cost="161000" name="Heavy Armor Mastery" min_level="60" />
@@ -15112,8 +15116,8 @@
 			<skill id="328" level="1" cost="8330000" name="Wisdom" min_level="76" />
 			<skill id="986" level="16" cost="8330000" name="Deadly Strike" min_level="76" />
 			<skill id="764" level="1" cost="0" name="Song of Wind Storm" min_level="76" item_id="10557" item_count="1" clicked="true" />
+			<skill id="1594" level="1" cost="9200000" name="Rhythm of Revenge" min_level="76" />
 			<skill id="349" level="1" cost="14670000" name="Song of Renewal" min_level="77" />
-			<skill id="363" level="1" cost="14670000" name="Song of Meditation" min_level="77" />
 			<skill id="986" level="17" cost="14670000" name="Deadly Strike" min_level="77" />
 			<skill id="364" level="1" cost="21000000" name="Song of Champion" min_level="78" />
 			<skill id="986" level="18" cost="21000000" name="Deadly Strike" min_level="78" />
@@ -15123,6 +15127,7 @@
 			<skill id="986" level="19" cost="22000000" name="Deadly Strike" min_level="79" />
 			<skill id="455" level="1" cost="150000000" name="Symbol of Noise" min_level="80" />
 			<skill id="986" level="20" cost="23000000" name="Deadly Strike" min_level="80" />
+			<skill id="1596" level="1" cost="28000000" name="Rhythm of Start" min_level="80" />
 			<skill id="758" level="1" cost="0" name="Fighter's Will" min_level="81" item_id="10552" item_count="1" clicked="true" />
 			<skill id="759" level="1" cost="0" name="Archer's Will" min_level="81" item_id="10553" item_count="1" clicked="true" />
 			<skill id="913" level="1" cost="0" name="Deflect Magic" min_level="81" item_id="14207" item_count="1" clicked="true" />
@@ -15259,6 +15264,7 @@
 			<skill id="1540" level="1" cost="0" name="Turn to Stone" min_level="81" item_id="14221" item_count="1" clicked="true" />
 			<skill id="1533" level="1" cost="0" name="Enlightenment" min_level="81" item_id="14213" item_count="1" clicked="true" />
 			<skill id="757" level="1" cost="0" name="Protection of Alignment" min_level="82" item_id="10551" item_count="1" clicked="true" />
+
 			<skill id="755" level="1" cost="0" name="Protection of Rune" min_level="82" item_id="10549" item_count="1" clicked="true" />
 			<skill id="756" level="1" cost="0" name="Protection of Elemental" min_level="82" item_id="10550" item_count="1" clicked="true" />
 			<skill id="1506" level="1" cost="0" name="Blessing of Eva" min_level="83" item_id="14194" item_count="1" clicked="true" />
@@ -15304,6 +15310,7 @@
 			<skill id="328" level="1" cost="8330000" name="Wisdom" min_level="76" />
 			<skill id="986" level="16" cost="8330000" name="Deadly Strike" min_level="76" />
 			<skill id="765" level="1" cost="0" name="Dance of Blade Storm" min_level="76" item_id="10558" item_count="1" clicked="true" />
+			<skill id="1593" level="1" cost="9200000" name="Rhythm of Revenge Dark" min_level="76" />
 			<skill id="986" level="17" cost="14670000" name="Deadly Strike" min_level="77" />
 			<skill id="367" level="1" cost="14670000" name="Dance of Medusa" min_level="77" />
 			<skill id="366" level="1" cost="14670000" name="Dance of Shadows" min_level="77" />
@@ -15312,6 +15319,7 @@
 			<skill id="428" level="1" cost="21000000" name="Inner Rhythm" min_level="78" />
 			<skill id="986" level="19" cost="22000000" name="Deadly Strike" min_level="79" />
 			<skill id="530" level="1" cost="60000000" name="Dance of Alignment" min_level="79" />
+			<skill id="1595" level="1" cost="28000000" name="Rhythm of Start Dark" min_level="80" />
 			<skill id="455" level="1" cost="150000000" name="Symbol of Noise" min_level="80" />
 			<skill id="986" level="20" cost="23000000" name="Deadly Strike" min_level="80" />
 			<skill id="758" level="1" cost="0" name="Fighter's Will" min_level="81" item_id="10552" item_count="1" clicked="true" />
@@ -16592,6 +16600,7 @@
 			<skill id="466" level="47" cost="160000" name="Magic Immunity" min_level="66" />
 			<skill id="626" level="4" cost="310000" name="Critical Sense" min_level="66" />
 			<skill id="1438" level="5" cost="310000" name="Annihilation Circle" min_level="66" />
+
 			<skill id="1435" level="8" cost="310000" name="Death Mark" min_level="66" />
 			<skill id="1510" level="1" cost="310000" name="Soul Cleanse" min_level="66" />
 			<skill id="1447" level="5" cost="310000" name="Voice Bind" min_level="66" />
@@ -17381,6 +17390,7 @@
 			<skill id="507" level="29" cost="180000" name="Twin Shot" min_level="66" />
 			<skill id="510" level="1" cost="350000" name="Deadly Roulette" min_level="66" />
 			<skill id="627" level="31" cost="180000" name="Soul Shock" min_level="66" />
+
 			<skill id="627" level="32" cost="180000" name="Soul Shock" min_level="66" />
 			<skill id="473" level="38" cost="240000" name="Crossbow Mastery" min_level="68" />
 			<skill id="473" level="39" cost="240000" name="Crossbow Mastery" min_level="68" />

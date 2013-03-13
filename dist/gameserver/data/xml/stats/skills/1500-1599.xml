@@ -1917,7 +1917,7 @@
 		<set name="magicType" val="MUSIC"/>
 		<set name="hitCancelTime" val="500"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_critical;dance_of_fire;song_of_hunter" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_critical;dance_of_fire;song_of_hunter" stackOrder="3">
 				<add stat="rCrit" order="0x40" val="100"/>
 				<mul stat="physDamage" order="0x30" val="1.35"/>
 			</effect>
@@ -1938,7 +1938,7 @@
 		<set name="magicType" val="MUSIC"/>
 		<set name="hitCancelTime" val="500"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_critical;dance_of_fire;song_of_hunter" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_critical;dance_of_fire;song_of_hunter" stackOrder="3">
 				<add stat="rCrit" order="0x40" val="100"/>
 				<mul stat="physDamage" order="0x30" val="1.35"/>
 			</effect>
@@ -1959,7 +1959,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="magicType" val="MUSIC"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_magic;dance_of_mystic;song_of_warding" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_magic;dance_of_mystic;song_of_warding" stackOrder="3">
 				<mul stat="mAtk" order="0x30" val="1.2"/>
 				<mul stat="mDef" order="0x30" val="1.3"/>
 			</effect>
@@ -1979,7 +1979,7 @@
 		<set name="effectPoint" val="467"/>
 		<set name="hitTime" val="2500"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_magic;dance_of_mystic;song_of_warding" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_magic;dance_of_mystic;song_of_warding" stackOrder="3">
 				<mul stat="mAtk" order="0x30" val="1.2"/>
 				<mul stat="mDef" order="0x30" val="1.3"/>
 			</effect>
@@ -2000,7 +2000,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="magicType" val="MUSIC"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_combat;dance_of_warrior;song_of_earth" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_combat;dance_of_warrior;song_of_earth" stackOrder="3">
 				<mul stat="pAtk" order="0x30" val="1.12"/>
 				<mul stat="pDef" order="0x30" val="1.25"/>
 			</effect>
@@ -2020,7 +2020,7 @@
 		<set name="effectPoint" val="523"/>
 		<set name="hitTime" val="2500"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_combat;dance_of_warrior;song_of_earth" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_combat;dance_of_warrior;song_of_earth" stackOrder="3">
 				<mul stat="pAtk" order="0x30" val="1.12"/>
 				<mul stat="pDef" order="0x30" val="1.25"/>
 			</effect>
@@ -2041,7 +2041,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="magicType" val="MUSIC"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_fighter;dance_of_fury;song_of_vitality" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_fighter;dance_of_fury;song_of_vitality" stackOrder="3">
 				<mul stat="pAtkSpd" order="0x30" val="1.15"/>
 				<mul stat="maxHp" order="0x30" val="1.3"/>
 			</effect>
@@ -2061,7 +2061,7 @@
 		<set name="effectPoint" val="549"/>
 		<set name="hitTime" val="2500"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_fighter;dance_of_fury;song_of_vitality" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_fighter;dance_of_fury;song_of_vitality" stackOrder="3">
 				<mul stat="pAtkSpd" order="0x30" val="1.15"/>
 				<mul stat="maxHp" order="0x30" val="1.3"/>
 			</effect>
@@ -2082,7 +2082,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="magicType" val="MUSIC"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_revenge;song_of_vengeance;dance_of_vampire" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_revenge;song_of_vengeance;dance_of_vampire" stackOrder="3">
 				<add stat="absorbDam" order="0x40" val="8"/>
 				<add stat="reflectDam" order="0x40" val="20"/>
 			</effect>
@@ -2102,7 +2102,7 @@
 		<set name="effectPoint" val="655"/>
 		<set name="hitTime" val="2500"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_revenge;song_of_vengeance;dance_of_vampire" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_revenge;song_of_vengeance;dance_of_vampire" stackOrder="3">
 				<add stat="absorbDam" order="0x40" val="8"/>
 				<add stat="reflectDam" order="0x40" val="20"/>
 			</effect>
@@ -2123,7 +2123,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="magicType" val="MUSIC"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_start;dance_of_siren;song_of_renewal" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_start;dance_of_siren;song_of_renewal" stackOrder="3">
 				<add stat="mCritRate" order="0x40" val="2"/>
 				<mul stat="mReuse" order="0x30" val="0.8"/>
 				<mul stat="pReuse" order="0x30" val="0.8"/>
@@ -2147,7 +2147,7 @@
 		<set name="effectPoint" val="666"/>
 		<set name="hitTime" val="2500"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_start;dance_of_siren;song_of_renewal" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_start;dance_of_siren;song_of_renewal" stackOrder="3">
 				<add stat="mCritRate" order="0x40" val="2"/>
 				<mul stat="mReuse" order="0x30" val="0.8"/>
 				<mul stat="pReuse" order="0x30" val="0.8"/>
@@ -2184,7 +2184,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="magicType" val="MUSIC"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_magician;dance_of_concentration;song_of_meditation" stackOrder="3">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_magician;dance_of_concentration;song_of_meditation" stackOrder="3">
 				<mul stat="mAtkSpd" order="0x30" val="1.3"/>
 				<mul stat="concentration" order="0x30" val="0.6"/>
 				<mul stat="regMp" order="0x30" val="1.2"/>
@@ -2206,7 +2206,7 @@
 		<set name="effectPoint" val="495"/>
 		<set name="hitTime" val="2500"/>
 		<for>
-			<effect name="Buff" count="1" time="120" val="0" stackTypes="rhythm_of_magician;dance_of_concentration;song_of_meditation" stackOrder="5">
+			<effect name="Buff" count="1" time="120" val="0" stackType="rhythm_of_magician;dance_of_concentration;song_of_meditation" stackOrder="5">
 				<mul stat="mAtkSpd" order="0x30" val="1.3"/>
 				<mul stat="concentration" order="0x30" val="0.6"/>
 				<mul stat="regMp" order="0x30" val="1.2"/>
