@@ -49,7 +49,7 @@
                 <stat_set name="baseAttackType" value="FIST"/>
                 <stat_set name="baseCritRate" value="40"/>
                 <stat_set name="basePAtkSpd" value="300"/>
-                <stat_set name="baseMAtkSpd" value="166.5"/>
+                <stat_set name="baseMAtkSpd" value="333"/>
                 <stat_set name="baseAtkRange" value="20"/>
                 <stat_set name="baseRandDam" value="10"/>
                 <stat_set name="baseSafeFallHeight" value="500"/>
