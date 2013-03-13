@@ -485,7 +485,7 @@
 		<set name="skillRadius" val="1000"/>
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="relationSkillsId" val="1006;1040;1517;989;1036;988;1007;123;1009;871;"/>
+		<set name="relationSkillsId" val="1006;1040;1517;989;1036;988;1007;123;1009;871;1068;"/>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -641,7 +641,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="relationSkillsId" val="1002;1251;1310;971;1519;1086;"/>
+		<set name="relationSkillsId" val="1002;1251;1310;971;1519;1086;1085;"/>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -667,7 +667,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="relationSkillsId" val="1283;1590;264;1243;1389;1391;271;"/>
+		<set name="relationSkillsId" val="1283;1590;1589;264;1243;1389;1391;271;"/>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -696,7 +696,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="relationSkillsId" val="1062;1388;274;1562;1586;1390;269;1261;"/>
+		<set name="relationSkillsId" val="1062;1388;274;1562;1586;1585;1390;269;1261;"/>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -729,7 +729,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="relationSkillsId" val="267;273;349;1588;1078;365;336;1596;337;"/>
+		<set name="relationSkillsId" val="267;273;349;1588;1587;1078;365;336;1595;1596;337;"/>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
@@ -767,14 +767,14 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="relationSkillsId" val="363;276;1001;275;1592;304;"/>
-        <enchant1 levels="10" name="Cost" >
+		<set name="relationSkillsId" val="363;276;1001;275;1592;1591;304;"/>
+        <enchant1 levels="10" name="Cost">
 			<table name="#mpConsume2">133 128 122 117 111 106 100 95 88 83</table>
 		</enchant1>
-        <enchant2 levels="10" name="Time" >
+        <enchant2 levels="10" name="Time">
             <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
         </enchant2>
-        <enchant3 levels="10" name="Recycle" enchRoute="9" >
+        <enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#reuseDelay">2000 1900 1800 1700 1600 1500 1400 1300 1200 1100</table>
         </enchant3>
 		<for>
@@ -800,7 +800,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="relationSkillsId" val="1284;310;1594;305;"/>
+		<set name="relationSkillsId" val="1284;310;1594;1593;305;"/>
         <enchant1 levels="10" name="Cost"/>
         <enchant2 levels="10" name="Time">
             <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
