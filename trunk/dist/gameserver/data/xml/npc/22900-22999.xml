@@ -723,6 +723,9 @@
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="15280" />
+		</equip>
 		<skills>
 			<skill id="4416" level="6"/>	<!--Гуманоиды-->
 			<skill id="5467" level="1"/>	<!--Защита Тьмы-->
@@ -794,6 +797,9 @@
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="15280" />
+		</equip>
 		<skills>
 			<skill id="4416" level="6"/>	<!--Гуманоиды-->
 			<skill id="5467" level="1"/>	<!--Защита Тьмы-->
@@ -865,6 +871,9 @@
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="15280" />
+		</equip>
 		<skills>
 			<skill id="4416" level="6"/>	<!--Гуманоиды-->
 			<skill id="5467" level="1"/>	<!--Защита Тьмы-->
@@ -936,6 +945,9 @@
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="15280" />
+		</equip>
 		<skills>
 			<skill id="4416" level="6"/>	<!--Гуманоиды-->
 			<skill id="5467" level="1"/>	<!--Защита Тьмы-->
@@ -1007,6 +1019,9 @@
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="15280" />
+		</equip>
 		<skills>
 			<skill id="4416" level="6"/>	<!--Гуманоиды-->
 			<skill id="5467" level="1"/>	<!--Защита Тьмы-->
@@ -1078,6 +1093,9 @@
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="15280" />
+		</equip>
 		<skills>
 			<skill id="4416" level="6"/>	<!--Гуманоиды-->
 			<skill id="5467" level="1"/>	<!--Защита Тьмы-->
@@ -1148,6 +1166,9 @@
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="17372" />
+		</equip>
 		<skills>
 			<skill id="4416" level="6"/>	<!--Гуманоиды-->
 			<skill id="5467" level="1"/>	<!--Защита Тьмы-->
@@ -1212,6 +1233,9 @@
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="17372" />
+		</equip>
 		<skills>
 			<skill id="4416" level="6"/>	<!--Гуманоиды-->
 			<skill id="5467" level="1"/>	<!--Защита Тьмы-->
@@ -1283,6 +1307,9 @@
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="17372" />
+		</equip>
 		<skills>
 			<skill id="4416" level="6"/>	<!--Гуманоиды-->
 			<skill id="5467" level="1"/>	<!--Защита Тьмы-->
@@ -1353,6 +1380,9 @@
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="17372" />
+		</equip>
 		<skills>
 			<skill id="4416" level="6"/>	<!--Гуманоиды-->
 			<skill id="5467" level="1"/>	<!--Защита Тьмы-->
@@ -5310,11 +5340,11 @@
 		</skills>
 	</npc>
 	<npc id="22991" name="Crawler" title="Husk">
+		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="6.5"/>
 		<set name="collision_height" value="18.5"/>
 		<set name="level" value="10"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="0"/>
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="163"/>
@@ -5340,25 +5370,6 @@
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="8"/>
-		<rewardlist type="RATED_GROUPED">
-		<group chance="70.000">
-			<reward item_id="57" min="52" max="122" chance="100.00000"/>		<!-- Adena -->
-			<reward item_id="34990" min="1" max="2" chance="0.50000"/> 			<!-- Weapon Piece -->
-		</group>
-		<group chance="10.990">
-			<reward item_id="463" min="1" max="1" chance="1.00000"/> 		<!-- Feriotic Stockings -->
-			<reward item_id="1103" min="1" max="1" chance="1.00000"/>		<!-- Cotton Stockings -->
-		</group>
-		<group chance="37.810">
-			<reward item_id="709" min="1" max="1" chance="0.50000"/>		<!-- Leather Shirt -->
-			<reward item_id="12" min="1" max="1" chance="0.05000"/>			<!-- Knife -->
-			<reward item_id="1539" min="1" max="3" chance="5.44300"/>		<!-- Major Healing Potion -->
-		</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="34990" min="1" max="3" chance="1.82900"/>		 <!-- Weapon Piece -->
-			<reward item_id="1102" min="1" max="1" chance="0.50000"/> 		<!-- Tunic of Magic -->
-		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -5375,11 +5386,11 @@
 		</skills>
 	</npc>
 	<npc id="22992" name="Stalker" title="Husk">
+		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="9.4"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="8"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="0"/>
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="163"/>
@@ -5421,11 +5432,11 @@
 		</skills>
 	</npc>
 	<npc id="22993" name="Critter" title="Husk">
+		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.5"/>
 		<set name="collision_height" value="18.0"/>
 		<set name="level" value="16"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="163"/>
@@ -5467,11 +5478,11 @@
 		</skills>
 	</npc>
 	<npc id="22994" name="Avian" title="Husk">
+		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="16.5"/>
 		<set name="level" value="14"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="0"/>
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="163"/>
@@ -5513,11 +5524,11 @@
 		</skills>
 	</npc>
 	<npc id="22995" name="Rider" title="Husk">
+		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="level" value="18"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="0"/>
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="163"/>
@@ -5558,12 +5569,12 @@
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
-	<npc id="22996" name="Krapher" title="Husk">
+	<npc id="22996" name="Warper" title="Husk">
+		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="14"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="163"/>
