@@ -175,13 +175,16 @@ public class Mentoring
 					}
 				}
 				int mentorId = dependPlayer.getMenteeList().getMentor();
-				String mentorName = dependPlayer.getMenteeList().getList().get(mentorId).getName();
-				Player mentorPlayer = World.getPlayer(mentorName);
-				if (mentorPlayer != null)
+				if (dependPlayer.getMenteeList().getList().get(mentorId)!=null)
 				{
-					if (!mentorPlayer.getEffectList().containEffectFromSkills(new int[effectForMentor]))
+					String mentorName = dependPlayer.getMenteeList().getList().get(mentorId).getName();
+					Player mentorPlayer = World.getPlayer(mentorName);
+					if (mentorPlayer != null)
 					{
-						SkillTable.getInstance().getInfo(effectForMentor, 1).getEffects(mentorPlayer, mentorPlayer, false, false);
+						if (!mentorPlayer.getEffectList().containEffectFromSkills(new int[effectForMentor]))
+						{
+							SkillTable.getInstance().getInfo(effectForMentor, 1).getEffects(mentorPlayer, mentorPlayer, false, false);
+						}
 					}
 				}
 			}

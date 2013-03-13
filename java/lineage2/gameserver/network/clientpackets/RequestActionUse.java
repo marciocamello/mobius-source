@@ -932,7 +932,7 @@ public class RequestActionUse extends L2GameClientPacket
 		final Summon pet = activeChar.getSummonList().getPet();
 		final Summon servitor = activeChar.getSummonList().getFirstServitor();
 		final List<Summon> servitors = activeChar.getSummonList().getServitors();
-		if (activeChar.isGM())
+		if (activeChar.isGM() && activeChar.isDebug())
 		{
 			activeChar.sendMessage("ActionId:" + action.id + " useServitor:" + useServitor + " useServitorGroup:" + useServitorGroup);
 		}

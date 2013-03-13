@@ -476,6 +476,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 			double rndNum = 100.0D * Rnd.nextDouble();
 			double chance = 0.0D;
 			double chanceFrom = 0.0D;
+			cycle1 :
 			for (MultiSellIngredient in : entry.getProduction())
 			{
 				if (in.getItemId() <= 0)
@@ -523,17 +524,42 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 						
 						if (keepenchant && product.canBeEnchanted())
 						{
-							product.setEnchantLevel(enchantLevel);
-							if (attributes != null)
+							if (in.getChance() >= 0)
 							{
-								product.setAttributes(attributes.clone());
+								chance = in.getChance();							
+								
+								if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
+								{
+									product.setEnchantLevel(enchantLevel);
+									if (attributes != null)
+									{
+										product.setAttributes(attributes.clone());
+									}
+									if (augmentationId != 0)
+									{
+										product.setAugmentationId(augmentationId);
+									}
+									inventory.addItem(product);
+									activeChar.sendPacket(SystemMessage2.obtainItems(product));
+									break cycle1;
+									
+								}
+								chanceFrom += chance;
 							}
-							if (augmentationId != 0)
+							else
 							{
-								product.setAugmentationId(augmentationId);
+								product.setEnchantLevel(enchantLevel);
+								if (attributes != null)
+								{
+									product.setAttributes(attributes.clone());
+								}
+								if (augmentationId != 0)
+								{
+									product.setAugmentationId(augmentationId);
+								}
+								inventory.addItem(product);
+								activeChar.sendPacket(SystemMessage2.obtainItems(product));
 							}
-							inventory.addItem(product);
-							activeChar.sendPacket(SystemMessage2.obtainItems(product));
 						}
 						else
 						{
