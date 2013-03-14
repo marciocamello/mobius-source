@@ -14,14 +14,11 @@ package lineage2.gameserver.model.instances;
 
 import java.util.concurrent.ScheduledFuture;
 
-import lineage2.commons.lang.reference.HardReference;
-import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.model.ClonePlayer;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObjectTasks;
-import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -83,52 +80,9 @@ public class CloneInstance extends ClonePlayer
 	{
 		super.onSpawn();
 		_destroyTask = ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(this), _lifetimeCountdown);
-		//_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new TargetTask(this), 10000L, 10000L);
+		// _targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new TargetTask(this), 10000L, 10000L);
 	}
 	
-	/**
-	 * @author Mobius
-	 */
-	private static class TargetTask extends RunnableImpl
-	{
-		/**
-		 * Field _trapRef.
-		 */
-		private final HardReference<? extends Playable> _trapRef;
-		
-		/**
-		 * Constructor for CastTask.
-		 * @param trap TreeInstance
-		 */
-		public TargetTask(CloneInstance trap)
-		{
-			_trapRef = trap.getRef();
-		}
-		
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			CloneInstance clone = (CloneInstance) _trapRef.get();
-			if (clone == null)
-			{
-				return;
-			}
-			Player owner = clone.getPlayer();
-			if (owner == null)
-			{
-				return;
-			}
-			if (!owner.isAttackingNow())
-			{
-				clone.abortAttack(true, false);
-				clone.followToCharacter(owner, 70, false);
-			}
-		}
-	}
-
 	/**
 	 * Method onDelete.
 	 */
@@ -295,7 +249,7 @@ public class CloneInstance extends ClonePlayer
 			player.sendPacket(msg);
 		}
 	}
-
+	
 	/**
 	 * Method getDEX.
 	 * @return int
@@ -377,7 +331,7 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getWIT();
 	}
-
+	
 	/**
 	 * Method getMAtk.
 	 * @param target Creature
@@ -441,7 +395,7 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getMDef(target, skill);
 	}
-
+	
 	/**
 	 * Method getMovementSpeedMultiplier.
 	 * @return double
@@ -503,7 +457,7 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getSwimWalkSpeed();
 	}
-
+	
 	@Override
 	public int getPAtk(Creature target)
 	{
@@ -530,5 +484,5 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getPDef(target);
 	}
-
+	
 }
