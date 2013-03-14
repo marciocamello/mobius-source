@@ -54,7 +54,7 @@
 		</javac>
 	</target>
 	<target name="commons-jar" depends="compile-commons">
-		<exec dir="${basedir}" executable="svnversion" outputproperty="build.revision" failifexecutionfails="false">
+		<exec dir="${basedir}" executable="subversion/svnversion" outputproperty="build.revision" failifexecutionfails="false">
 			<arg line="-n ${src.commons}" />
 		</exec>
 
@@ -77,7 +77,7 @@
 	</target>
 
 	<target name="gameserver-jar" depends="compile-gameserver">
-		<exec dir="${basedir}" executable="svnversion" outputproperty="build.revision" failifexecutionfails="false">
+		<exec dir="${basedir}" executable="subversion/svnversion" outputproperty="build.revision" failifexecutionfails="false">
 			<arg line="-n ${src.gameserver}" />
 		</exec>
 		<concat destfile="${build}/dist/gameserver/config/lineage2-version.ini">
@@ -132,7 +132,7 @@
 		</javac>
 	</target>
 	<target name="authserver-jar" depends="compile-authserver">
-		<exec dir="${basedir}" executable="svnversion" outputproperty="build.revision" failifexecutionfails="false">
+		<exec dir="${basedir}" executable="subversion/svnversion" outputproperty="build.revision" failifexecutionfails="false">
 			<arg line="-n ${src.authserver}" />
 		</exec>
 		<jar destfile="${build}/lineage2-loginserver.jar">
