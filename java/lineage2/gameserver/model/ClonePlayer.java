@@ -97,7 +97,7 @@ public class ClonePlayer extends Playable
 		getPlayer();
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 	}
-
+	
 	/**
 	 * Method getAI.
 	 * @return ClonePlayerAI
@@ -117,7 +117,7 @@ public class ClonePlayer extends Playable
 		}
 		return (ClonePlayerAI) _ai;
 	}
-
+	
 	/**
 	 * Method onAction.
 	 * @param player Player
@@ -207,7 +207,7 @@ public class ClonePlayer extends Playable
 	{
 		return _follow;
 	}
-
+	
 	/**
 	 * Method isClone.
 	 * @return boolean
@@ -217,7 +217,7 @@ public class ClonePlayer extends Playable
 	{
 		return true;
 	}
-
+	
 	/**
 	 * Field _updateEffectIconsTask.
 	 */
@@ -392,7 +392,7 @@ public class ClonePlayer extends Playable
 	{
 		_spsCharged = state;
 	}
-
+	
 	/**
 	 * Method isInRange.
 	 * @return boolean
@@ -423,12 +423,12 @@ public class ClonePlayer extends Playable
 			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, owner, Config.FOLLOW_RANGE);
 		}
 	}
-
+	
 	/**
 	 * Field _broadcastCharInfoTask.
 	 */
 	ScheduledFuture<?> _broadcastCharInfoTask;
-
+	
 	/**
 	 * @author Mobius
 	 */
@@ -457,7 +457,7 @@ public class ClonePlayer extends Playable
 		}
 		_broadcastCharInfoTask = ThreadPoolManager.getInstance().schedule(new BroadcastCharInfoTask(), Config.BROADCAST_CHAR_INFO_INTERVAL);
 	}
-
+	
 	/**
 	 * Method broadcastCharInfoImpl.
 	 */
@@ -468,7 +468,7 @@ public class ClonePlayer extends Playable
 			player.sendPacket(new CharInfo(this));
 		}
 	}
-
+	
 	/**
 	 * Method startPvPFlag.
 	 * @param target Creature
@@ -558,7 +558,7 @@ public class ClonePlayer extends Playable
 		}
 		return list;
 	}
-
+	
 	/**
 	 * Method startAttackStanceTask.
 	 */
@@ -603,7 +603,7 @@ public class ClonePlayer extends Playable
 		}
 		return super.getEvents();
 	}
-
+	
 	/**
 	 * Method isAutoAttackable.
 	 * @param attacker Creature
@@ -624,7 +624,6 @@ public class ClonePlayer extends Playable
 	{
 		return _owner.getLevel();
 	}
-	
 	
 	/**
 	 * Method notifyOwerStartAttak.
@@ -680,14 +679,14 @@ public class ClonePlayer extends Playable
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
 	@Override
 	public long getWearedMask()
 	{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	
 	@Override
 	public void doPickupItem(GameObject object)
 	{

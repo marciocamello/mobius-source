@@ -140,13 +140,13 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		int MyObjectId = activeChar.getObjectId();
 		Long MyStoreId = activeChar.getStoredId();
-		for(Castle castle : ResidenceHolder.getInstance().getResidenceList(Castle.class))
-			{
-				activeChar.sendPacket(new ExCastleState(castle));
-			}
+		for (Castle castle : ResidenceHolder.getInstance().getResidenceList(Castle.class))
+		{
+			activeChar.sendPacket(new ExCastleState(castle));
+		}
 		synchronized (_lock)
 		{
-
+			
 			for (Player cha : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				if (MyStoreId.equals(cha.getStoredId()))
