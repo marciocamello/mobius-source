@@ -22,6 +22,7 @@ import lineage2.commons.data.xml.AbstractDirParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.model.SkillLearn;
+import lineage2.gameserver.model.base.Race;
 
 import org.dom4j.Element;
 
@@ -154,6 +155,19 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 				getHolder().addAllTransformationLearns(race, learns);
 			}
 		}
+		for (Iterator<Element> iterator = rootElement.elementIterator("awakening_remove_skill_tree"); iterator.hasNext();)
+		{
+			HashMap<Integer, List<Integer>> map = new HashMap<>();
+			Element nxt = iterator.next();
+			for (Iterator<Element> classIterator = nxt.elementIterator("classToAwaken"); classIterator.hasNext();)
+			{
+				Element classElement = classIterator.next();
+				int classId = Integer.parseInt(classElement.attributeValue("id"));
+				List<Integer> remove = parseRemoveSkill(classElement);
+				map.put(classId, remove);
+			}
+			getHolder().addClassToRemove(map);
+		}
 	}
 	
 	/**
@@ -174,8 +188,27 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 			int item_id = element.attributeValue("item_id") == null ? 0 : Integer.parseInt(element.attributeValue("item_id"));
 			long item_count = element.attributeValue("item_count") == null ? 1 : Long.parseLong(element.attributeValue("item_count"));
 			boolean clicked = (element.attributeValue("clicked") != null) && Boolean.parseBoolean(element.attributeValue("clicked"));
-			skillLearns.add(new SkillLearn(id, level, min_level, cost, item_id, item_count, clicked, new HashMap<Integer, Long>(), new ArrayList<Integer>()));
+			Race race = element.attributeValue("race") == null ? null : Race.valueOf(element.attributeValue("race"));
+			
+			skillLearns.add(new SkillLearn(id, level, min_level, cost, item_id, item_count, clicked, race, new HashMap<Integer, Long>(), new ArrayList<Integer>()));
 		}
 		return skillLearns;
+	}
+	
+	/**
+	 * Method parseRemoveSkill
+	 * @param tree Element
+	 * @return List<Integer>
+	 */
+	private List<Integer> parseRemoveSkill(Element tree)
+	{
+		List<Integer> skillRemove = new ArrayList<>();
+		for (Iterator<Element> iterator = tree.elementIterator("skillremove"); iterator.hasNext();)
+		{
+			Element element = iterator.next();
+			int id = Integer.parseInt(element.attributeValue("id"));
+			skillRemove.add(id);
+		}
+		return skillRemove;
 	}
 }

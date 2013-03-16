@@ -8,6 +8,7 @@
 <!ELEMENT transfer_skill_tree (class)*>
 <!ELEMENT normal_skill_tree (class)*>
 <!ELEMENT transformation_skill_tree (race)*>
+<!ELEMENT awakening_remove_skill_tree (classToAwaken)*>
 	<!ELEMENT skill (#PCDATA)>
 		<!ATTLIST skill
 			id CDATA #REQUIRED
@@ -17,8 +18,13 @@
 			min_level CDATA #REQUIRED
 			name CDATA #IMPLIED
 			cost CDATA #IMPLIED
-			clicked CDATA #IMPLIED>
+			clicked CDATA #IMPLIED
+			race CDATA #IMPLIED>
 	<!ELEMENT class (skill)*>
 		<!ATTLIST class id CDATA #REQUIRED>
 	<!ELEMENT race (skill)*>
 		<!ATTLIST race id CDATA #REQUIRED>
+	<!ELEMENT classToAwaken (skillremove)*>
+		<!ATTLIST classToAwaken id CDATA #REQUIRED>
+	<!ELEMENT skillremove (#PCDATA)>
+		<!ATTLIST skillremove id CDATA #REQUIRED>

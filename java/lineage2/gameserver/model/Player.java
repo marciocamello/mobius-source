@@ -86,6 +86,7 @@ import lineage2.gameserver.handler.bbs.CommunityBoardManager;
 import lineage2.gameserver.handler.bbs.ICommunityBoardHandler;
 import lineage2.gameserver.handler.items.IItemHandler;
 import lineage2.gameserver.idfactory.IdFactory;
+import lineage2.gameserver.instancemanager.AwakingManager;
 import lineage2.gameserver.instancemanager.BypassManager;
 import lineage2.gameserver.instancemanager.BypassManager.BypassType;
 import lineage2.gameserver.instancemanager.BypassManager.DecodedBypass;
@@ -3265,7 +3266,7 @@ public final class Player extends Playable implements PlayerGroup
 					{
 						double points = ((noRateExp / (npcLevel * npcLevel)) * 100) / 9;
 						points *= Config.ALT_VITALITY_CONSUME_RATE;
-						if (getEffectList().getEffectByType(EffectType.Vitality) != null)
+						if ((getEffectList().getEffectByType(EffectType.Vitality) != null) || (getEffectList().getEffectByStackType("vitalityRegen") != null))
 						{
 							points *= -1;
 						}
@@ -7084,7 +7085,23 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					removeSkill(skill, true);
 					removeSkillFromShortCut(skill.getId());
+					_log.info("SkillTree: Removed skill: " + skill.getId() + " - " + skill.getName() + " to the player " + getName());
 					continue;
+				}
+				if (isAwaking())
+				{
+					SkillLearn learn = SkillAcquireHolder.getInstance().getSkillLearn(this, skill.getId(), skill.getDisplayLevel() > 100 ? skill.getBaseLevel() : skill.getLevel(), AcquireType.NORMAL);
+					if (learn != null)
+					{
+						// RACE SKILL CHECK
+						if (!learn.isOfRace(getRace()))
+						{
+							// TODO change to removeSkill(skill, true) when sure all is ok.
+							removeSkill(skill);
+							_log.info("RaceSkill: Removed skill: " + skill.getId() + " - " + skill.getName() + " to the player " + getName());
+							continue;
+						}
+					}
 				}
 				if (Config.ALT_DELETE_SKILL_RELATION && skill.isRelationSkill())
 				{
@@ -7135,6 +7152,10 @@ public final class Player extends Playable implements PlayerGroup
 						removeSkillFromShortCut(s.getId());
 						_log.info("SkillRelation: Removed skill: " + s.getId() + " - " + s.getName() + " to the player " + getName());
 					}
+				}
+				if (isAwaking())
+				{
+					AwakingManager.getInstance().AwakingRemoveSkills(this);
 				}
 			}
 		}

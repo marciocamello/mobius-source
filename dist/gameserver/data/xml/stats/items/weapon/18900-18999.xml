@@ -5,6 +5,8 @@
     <weapon id="18900" name="Bound Specter Caster" add_name="Acumen">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_alacer_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -32,6 +34,8 @@
     <weapon id="18901" name="Bound Specter Caster" add_name="Magic Hold">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_alacer_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -56,6 +60,8 @@
     <weapon id="18902" name="Bound Specter Retributer" add_name="MP Regeneration">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_rupe_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -80,6 +86,8 @@
     <weapon id="18903" name="Bound Specter Retributer" add_name="Acumen">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_rupe_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -107,6 +115,8 @@
     <weapon id="18904" name="Bound Specter Retributer" add_name="Empower">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_rupe_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -134,6 +144,8 @@
     <weapon id="18905" name="Bound Specter Dual Sword" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualsword_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -161,6 +173,8 @@
     <weapon id="18906" name="Bound Specter Dual Sword" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualsword_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -188,6 +202,8 @@
     <weapon id="18907" name="Bound Specter Dual Sword" add_name="Health">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualsword_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -215,6 +231,8 @@
     <weapon id="18908" name="Bound Specter Dual Dagger" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualdagger_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2050"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -242,6 +260,8 @@
     <weapon id="18909" name="Bound Specter Dual Dagger" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualdagger_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2050"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -269,6 +289,8 @@
     <weapon id="18910" name="Bound Specter Dual Dagger" add_name="Guidance">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualdagger_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2050"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -296,6 +318,8 @@
     <weapon id="18911" name="Bound Specter Dual Blunt Weapon" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualblunt_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -322,6 +346,8 @@
     <weapon id="18912" name="Bound Specter Dual Blunt Weapon" add_name="Guidance">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualblunt_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -348,6 +374,8 @@
     <weapon id="18913" name="Bound Specter Dual Blunt Weapon" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualblunt_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -2690,6 +2718,8 @@
     <weapon id="18998" name="Bound Amaranthine Shaper" add_name="Guidance">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_stanpid_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -2718,6 +2748,8 @@
     <weapon id="18999" name="Bound Amaranthine Shaper" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_stanpid_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="5"/>
         <equip>

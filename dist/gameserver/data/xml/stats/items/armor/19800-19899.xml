@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "item.dtd">
 <list>
     <armor id="19800" name="Bound Immortal Leather Helmet"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="608"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_leather_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
@@ -19,10 +21,12 @@
         </for>
     </armor>
     <armor id="19801" name="Bound Immortal Leather Armor"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2432"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t502_u_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="4140"/>
@@ -37,10 +41,12 @@
         </for>
     </armor>
     <armor id="19802" name="Bound Immortal Leather Leggings"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2288"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t502_l_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="1320"/>
@@ -55,10 +61,12 @@
         </for>
     </armor>
     <armor id="19803" name="Bound Immortal Leather Gloves"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="405"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t502_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="510"/>
@@ -73,10 +81,12 @@
         </for>
     </armor>
     <armor id="19804" name="Bound Immortal Leather Boots"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="1621"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t502_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>
@@ -90,10 +100,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19805" name="Bound Immortal Circlet" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19805" name="Bound Immortal Circlet" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="608"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_circlet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
@@ -107,10 +119,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19806" name="Bound Immortal Tunic" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19806" name="Bound Immortal Tunic" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="1621"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t503_u_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="1750"/>
@@ -125,10 +139,12 @@
         </for>
     </armor>
     <armor id="19807" name="Bound Immortal Stockings"
-           add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="1520"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t503_l_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="850"/>
@@ -142,10 +158,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19808" name="Bound Immortal Gloves" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19808" name="Bound Immortal Gloves" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="405"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t503_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="510"/>
@@ -159,10 +177,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19809" name="Bound Immortal Shoes" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19809" name="Bound Immortal Shoes" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="1621"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t503_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>
@@ -176,10 +196,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19810" name="Bound Twilight Helmet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19810" name="Bound Twilight Helmet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="672"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
@@ -194,10 +216,12 @@
         </for>
     </armor>
     <armor id="19811" name="Bound Twilight Breastplate"
-           add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="3573"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t601_u_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="7520"/>
@@ -211,10 +235,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19812" name="Bound Twilight Gaiters" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19812" name="Bound Twilight Gaiters" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="3344"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t601_l_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="3170"/>
@@ -228,10 +254,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19813" name="Bound Twilight Gauntlet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19813" name="Bound Twilight Gauntlet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="448"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t601_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="510"/>
@@ -245,10 +273,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19814" name="Bound Twilight Boots" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19814" name="Bound Twilight Boots" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="1792"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t601_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>
@@ -263,10 +293,12 @@
         </for>
     </armor>
     <armor id="19816" name="Bound Twilight Leather Helmet"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="672"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_leather_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
@@ -281,10 +313,12 @@
         </for>
     </armor>
     <armor id="19817" name="Bound Twilight Leather Armor"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2677"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t602_u_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="4140"/>
@@ -299,10 +333,12 @@
         </for>
     </armor>
     <armor id="19818" name="Bound Twilight Leather Legging"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2512"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t602_l_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="1320"/>
@@ -317,10 +353,12 @@
         </for>
     </armor>
     <armor id="19819" name="Bound Twilight Leather Gloves"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="448"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t602_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="510"/>
@@ -335,10 +373,12 @@
         </for>
     </armor>
     <armor id="19820" name="Bound Twilight Leather Boots"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="1792"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t602_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>
@@ -352,10 +392,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19821" name="Bound Twilight Circlet" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19821" name="Bound Twilight Circlet" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="672"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_circlet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
@@ -369,10 +411,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19822" name="Bound Twilight Tunic" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19822" name="Bound Twilight Tunic" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="1792"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t603_u_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="1750"/>
@@ -387,10 +431,12 @@
         </for>
     </armor>
     <armor id="19823" name="Bound Twilight Stockings"
-           add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="1680"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t603_l_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="850"/>
@@ -404,10 +450,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19824" name="Bound Twilight Gloves" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19824" name="Bound Twilight Gloves" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="448"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t603_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="510"/>
@@ -421,10 +469,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19825" name="Bound Twilight Shoes" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19825" name="Bound Twilight Shoes" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="1792"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t603_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>
@@ -438,10 +488,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19826" name="Bound Specter Helmet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19826" name="Bound Seraph Helmet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="834"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
@@ -456,10 +508,12 @@
         </for>
     </armor>
     <armor id="19827" name="Bound Seraph Breastplate"
-           add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="4440"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t401_u_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="7520"/>
@@ -473,10 +527,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19828" name="Bound Seraph Gaiters" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19828" name="Bound Seraph Gaiters" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="4158"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t401_l_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="3170"/>
@@ -490,10 +546,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19829" name="Bound Seraph Gauntlet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19829" name="Bound Seraph Gauntlet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="558"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t401_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="510"/>
@@ -507,10 +565,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19830" name="Bound Seraph Boots" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19830" name="Bound Seraph Boots" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2232"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t401_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>
@@ -525,10 +585,12 @@
         </for>
     </armor>
     <armor id="19832" name="Bound Seraph Leather Helmet"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="834"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_leather_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
@@ -543,10 +605,12 @@
         </for>
     </armor>
     <armor id="19833" name="Bound Seraph Leather Armor"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="3336"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t402_u_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="4140"/>
@@ -561,10 +625,12 @@
         </for>
     </armor>
     <armor id="19834" name="Bound Seraph Leather Leggings"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="3114"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t402_l_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="1320"/>
@@ -579,10 +645,12 @@
         </for>
     </armor>
     <armor id="19835" name="Bound Seraph Leather Gloves"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="558"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t402_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="510"/>
@@ -597,10 +665,12 @@
         </for>
     </armor>
     <armor id="19836" name="Bound Seraph Leather Boots"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2232"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t402_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>
@@ -614,10 +684,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19837" name="Bound Seraph Circlet" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19837" name="Bound Seraph Circlet" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="834"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_circlet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
@@ -631,10 +703,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19838" name="Bound Seraph Tunic" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19838" name="Bound Seraph Tunic" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2220"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t403_u_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="1750"/>
@@ -648,10 +722,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19839" name="Bound Seraph Stockings" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19839" name="Bound Seraph Stockings" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2088"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t403_l_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="850"/>
@@ -665,10 +741,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19840" name="Bound Seraph Gloves" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19840" name="Bound Seraph Gloves" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="558"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t403_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="510"/>
@@ -682,10 +760,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19841" name="Bound Seraph Shoes" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19841" name="Bound Seraph Shoes" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R95"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2232"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t403_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>
@@ -699,10 +779,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19842" name="Bound Eternal Helmet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19842" name="Bound Eternal Helmet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="960"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
@@ -717,10 +799,12 @@
         </for>
     </armor>
     <armor id="19843" name="Bound Eternal Breastplate"
-           add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="5133"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t701_u_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="7520"/>
@@ -734,10 +818,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19844" name="Bound Eternal Gaiters" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19844" name="Bound Eternal Gaiters" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="4820"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t701_l_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="3170"/>
@@ -751,10 +837,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19845" name="Bound Eternal Gauntlet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19845" name="Bound Eternal Gauntlet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="640"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t701_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="510"/>
@@ -768,10 +856,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19846" name="Bound Eternal Boots" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19846" name="Bound Eternal Boots" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2560"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t701_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>
@@ -786,10 +876,12 @@
         </for>
     </armor>
     <armor id="19848" name="Bound Eternal Leather Helmet"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="960"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_leather_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
@@ -804,10 +896,12 @@
         </for>
     </armor>
     <armor id="19849" name="Bound Eternal Leather Armor"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="3853"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t702_u_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="4140"/>
@@ -822,10 +916,12 @@
         </for>
     </armor>
     <armor id="19850" name="Bound Eternal Leather Leggings"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="3620"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t702_l_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="1320"/>
@@ -840,10 +936,12 @@
         </for>
     </armor>
     <armor id="19851" name="Bound Eternal Leather Gloves"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="640"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t702_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="510"/>
@@ -858,10 +956,12 @@
         </for>
     </armor>
     <armor id="19852" name="Bound Eternal Leather Boots"
-           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Enhance Type / Light">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2560"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t702_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>
@@ -875,10 +975,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19853" name="Bound Eternal Circlet" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19853" name="Bound Eternal Circlet" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="960"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_circlet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
@@ -892,10 +994,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19854" name="Bound Eternal Tunic" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19854" name="Bound Eternal Tunic" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2573"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t703_u_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="1750"/>
@@ -909,10 +1013,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19855" name="Bound Eternal Stockings" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19855" name="Bound Eternal Stockings" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2420"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t703_l_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="850"/>
@@ -926,10 +1032,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19856" name="Bound Eternal Gloves" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19856" name="Bound Eternal Gloves" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="640"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t703_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="510"/>
@@ -943,10 +1051,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19857" name="Bound Eternal Shoes" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19857" name="Bound Eternal Shoes" add_name="Recovery Type / Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R99"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="2560"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t703_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>
@@ -1126,6 +1236,7 @@
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="1621"/>
         <set name="icon" value="icon.armor_t502_b_i00"/>
+
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>
         <equip>

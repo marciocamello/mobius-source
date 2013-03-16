@@ -1236,6 +1236,8 @@
     <weapon id="18746" name="Bound Apocalypse Shaper" add_name="Guidance">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_phasian_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -1264,6 +1266,8 @@
     <weapon id="18747" name="Bound Apocalypse Shaper" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_phasian_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -1292,6 +1296,8 @@
     <weapon id="18748" name="Bound Apocalypse Shaper" add_name="Focus ">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_phasian_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -1320,6 +1326,8 @@
     <weapon id="18749" name="Bound Apocalypse Cutter" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_pasis_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1347,6 +1355,8 @@
     <weapon id="18750" name="Bound Apocalypse Cutter" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_pasis_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1374,6 +1384,8 @@
     <weapon id="18751" name="Bound Apocalypse Cutter" add_name="Health">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_pasis_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1401,6 +1413,8 @@
     <weapon id="18752" name="Bound Apocalypse Slasher" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_volver_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1428,6 +1442,8 @@
     <weapon id="18753" name="Bound Apocalypse Slasher" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_volver_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1455,6 +1471,8 @@
     <weapon id="18754" name="Bound Apocalypse Slasher" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_volver_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1482,6 +1500,8 @@
     <weapon id="18755" name="Bound Apocalypse Avenger" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_raksilion_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1509,6 +1529,8 @@
     <weapon id="18756" name="Bound Apocalypse Avenger" add_name="Critical Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_raksilion_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1536,6 +1558,8 @@
     <weapon id="18757" name="Bound Apocalypse Avenger" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_raksilion_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1563,6 +1587,8 @@
     <weapon id="18758" name="Bound Apocalypse Fighter" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_kirche_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1550"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -1590,6 +1616,8 @@
     <weapon id="18759" name="Bound Apocalypse Fighter" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_kirche_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1550"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -1617,6 +1645,8 @@
     <weapon id="18760" name="Bound Apocalypse Fighter" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_kirche_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1550"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -1644,6 +1674,8 @@
     <weapon id="18761" name="Bound Apocalypse Stormer" add_name="HP Drain">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_grave_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2010"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1668,6 +1700,8 @@
     <weapon id="18762" name="Bound Apocalypse Stormer" add_name="Guidance">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_grave_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2010"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1695,6 +1729,8 @@
     <weapon id="18763" name="Bound Apocalypse Stormer" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_grave_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2010"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1722,6 +1758,8 @@
     <weapon id="18764" name="Bound Apocalypse Thrower" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_spina_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -1750,6 +1788,8 @@
     <weapon id="18765" name="Bound Apocalypse Thrower" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_spina_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -1778,6 +1818,8 @@
     <weapon id="18766" name="Bound Apocalypse Thrower" add_name="Long Blow">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_spina_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -1803,6 +1845,8 @@
     <weapon id="18767" name="Bound Apocalypse Shooter" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_medianox_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1580"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1831,6 +1875,8 @@
     <weapon id="18768" name="Bound Apocalypse Shooter" add_name="Critical Slow">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_medianox_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1580"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1859,6 +1905,8 @@
     <weapon id="18769" name="Bound Apocalypse Shooter" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_medianox_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1580"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1887,6 +1935,8 @@
     <weapon id="18770" name="Bound Apocalypse Buster" add_name="Acumen">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_imerose_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1914,6 +1964,8 @@
     <weapon id="18771" name="Bound Apocalypse Buster" add_name="Magic Hold">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_imerose_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1938,6 +1990,8 @@
     <weapon id="18772" name="Bound Apocalypse Buster" add_name="Mana Up">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_imerose_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1965,6 +2019,8 @@
     <weapon id="18773" name="Bound Apocalypse Caster" add_name="Empower">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_yuke_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1992,6 +2048,8 @@
     <weapon id="18774" name="Bound Apocalypse Caster" add_name="Acumen">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_yuke_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -2019,6 +2077,8 @@
     <weapon id="18775" name="Bound Apocalypse Caster" add_name="Magic Hold">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_yuke_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -2043,6 +2103,8 @@
     <weapon id="18776" name="Bound Apocalypse Retributer" add_name="MP Regeneration">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_herencia_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -2067,6 +2129,8 @@
     <weapon id="18777" name="Bound Apocalypse Retributer" add_name="Acumen">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_herencia_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -2094,6 +2158,8 @@
     <weapon id="18778" name="Bound Apocalypse Retributer" add_name="Empower">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_herencia_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -2121,6 +2187,8 @@
     <weapon id="18779" name="Bound Apocalypse Dual sword" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualsword_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -2148,6 +2216,8 @@
     <weapon id="18780" name="Bound Apocalypse Dual sword" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualsword_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -2175,6 +2245,8 @@
     <weapon id="18781" name="Bound Apocalypse Dual sword" add_name="Health">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualsword_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -2202,6 +2274,8 @@
     <weapon id="18782" name="Bound Apocalypse Dual Dagger" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualdagger_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2050"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -2229,6 +2303,8 @@
     <weapon id="18783" name="Bound Apocalypse Dual Dagger" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualdagger_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2050"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -2256,6 +2332,8 @@
     <weapon id="18784" name="Bound Apocalypse Dual Dagger" add_name="Guidance">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualdagger_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2050"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -2283,6 +2361,8 @@
     <weapon id="18785" name="Bound Apocalypse Dual Blunt Weapon" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualblunt_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -2309,6 +2389,8 @@
     <weapon id="18786" name="Bound Apocalypse Dual Blunt Weapon" add_name="Guidance">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualblunt_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -2335,6 +2417,8 @@
     <weapon id="18787" name="Bound Apocalypse Dual Blunt Weapon" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualblunt_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>

@@ -17,6 +17,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+import lineage2.gameserver.model.base.Race;
+
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
@@ -52,6 +54,10 @@ public final class SkillLearn implements Comparable<SkillLearn>
 	 */
 	private final boolean _clicked;
 	/**
+	 * Field _race.
+	 */
+	private final Race _race;
+	/**
 	 * Field required_items.
 	 */
 	private final Map<Integer, Long> required_items;
@@ -72,7 +78,7 @@ public final class SkillLearn implements Comparable<SkillLearn>
 	 * @param required_items Map<Integer,Long>
 	 * @param delete_skills List<Integer>
 	 */
-	public SkillLearn(int id, int lvl, int minLvl, int cost, int itemId, long itemCount, boolean clicked, Map<Integer, Long> required_items, List<Integer> delete_skills)
+	public SkillLearn(int id, int lvl, int minLvl, int cost, int itemId, long itemCount, boolean clicked, Race race, Map<Integer, Long> required_items, List<Integer> delete_skills)
 	{
 		_id = id;
 		_level = lvl;
@@ -81,6 +87,7 @@ public final class SkillLearn implements Comparable<SkillLearn>
 		_itemId = itemId;
 		_itemCount = itemCount;
 		_clicked = clicked;
+		_race = race;
 		this.required_items = required_items;
 		this.delete_skills = delete_skills;
 	}
@@ -146,6 +153,16 @@ public final class SkillLearn implements Comparable<SkillLearn>
 	public boolean isClicked()
 	{
 		return _clicked;
+	}
+	
+	public Race getRace()
+	{
+		return _race;
+	}
+	
+	public boolean isOfRace(Race race)
+	{
+		return (_race == null) || (_race == race);
 	}
 	
 	/**

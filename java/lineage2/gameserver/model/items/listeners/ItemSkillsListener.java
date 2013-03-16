@@ -55,9 +55,11 @@ public final class ItemSkillsListener implements OnEquipListener
 		Player player = (Player) actor;
 		Skill[] itemSkills = null;
 		Skill enchant4Skill = null;
+		Skill unequipeSkill = null;
 		ItemTemplate it = item.getTemplate();
 		itemSkills = it.getAttachedSkills();
 		enchant4Skill = it.getEnchant4Skill();
+		unequipeSkill = it.getUnequipeSkill();
 		player.removeTriggers(it);
 		if ((itemSkills != null) && (itemSkills.length > 0))
 		{
@@ -85,6 +87,10 @@ public final class ItemSkillsListener implements OnEquipListener
 		if (enchant4Skill != null)
 		{
 			player.removeSkill(enchant4Skill, false);
+		}
+		if (unequipeSkill != null)
+		{
+			player.doCast(unequipeSkill, player, true);
 		}
 		if ((itemSkills.length > 0) || (enchant4Skill != null))
 		{

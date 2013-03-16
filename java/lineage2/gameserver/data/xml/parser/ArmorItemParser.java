@@ -199,6 +199,16 @@ public final class ArmorItemParser extends StatParser<ItemHolder>
 						template.setEnchant4Skill(skill);
 					}
 				}
+				else if (subName.equalsIgnoreCase("unequip_skill"))
+				{
+					int id = Integer.parseInt(subElement.attributeValue("id"));
+					int level = Integer.parseInt(subElement.attributeValue("level"));
+					Skill skill = SkillTable.getInstance().getInfo(id, level);
+					if (skill != null)
+					{
+						template.setUnequipeSkill(skill);
+					}
+				}
 				else if (subName.equalsIgnoreCase("cond"))
 				{
 					Condition condition = parseFirstCond(subElement);

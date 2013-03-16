@@ -34,7 +34,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.World;
-import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.base.InvisibleType;
 import lineage2.gameserver.model.entity.events.impl.ClanHallAuctionEvent;
 import lineage2.gameserver.model.entity.residence.Castle;
@@ -468,10 +467,9 @@ public class EnterWorld extends L2GameClientPacket
 		{
 			AwakingManager.getInstance().SendReqToStartQuest(activeChar);
 		}
-		if (activeChar.getClassId().isOfLevel(ClassLevel.Awaking))
-		{
-			AwakingManager.getInstance().getRaceSkill(activeChar);
-		}
+		/*
+		 * if (activeChar.getClassId().isOfLevel(ClassLevel.Awaking)) { AwakingManager.getInstance().getRaceSkill(activeChar); }
+		 */
 	}
 	
 	/**

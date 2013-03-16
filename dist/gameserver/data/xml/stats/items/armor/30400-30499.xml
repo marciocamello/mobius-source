@@ -168,10 +168,12 @@
         </equip>
         <set name="ex_type" value="OTHER_ITEMS"/>
     </armor>
-    <armor id="30434" name="Bound Boots of Strength">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30434" name="Bound Boots of Strength">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="72"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t40_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1250"/>
@@ -185,10 +187,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="30435" name="Bound Black Pearl Ring">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30435" name="Bound Black Pearl Ring">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="13"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_black_pearl_ring_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -204,10 +208,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="30436" name="Bound Black Pearl Ring">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30436" name="Bound Black Pearl Ring">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="13"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_black_pearl_ring_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -223,10 +229,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="30437" name="Bound Black Ore Ring">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30437" name="Bound Black Ore Ring">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="72"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_ring_of_black_ore_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -242,10 +250,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="30438" name="Bound Black Ore Necklace">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30438" name="Bound Black Ore Necklace">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="144"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_necklace_of_black_ore_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -260,10 +270,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="30439" name="Bound Black Ore Earring">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30439" name="Bound Black Ore Earring">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="108"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_earing_of_black_ore_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -279,10 +291,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="30443" name="Bound Stockings of Zubei">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30443" name="Bound Stockings of Zubei">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="294"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t56_l_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="940"/>
@@ -296,13 +310,15 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="30444" name="Bound Stockings of Doom">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30444" name="Bound Stockings of Doom">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="312"/>
         <set name="icon" value="icon.armor_t73_l_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="910"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <equip>
             <slot id="LEGS"/>
         </equip>
@@ -313,10 +329,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="30454" name="Bound Sage's Ring">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30454" name="Bound Sage's Ring">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="72"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_sages_ring_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -332,10 +350,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="30455" name="Bound Sage's Necklace">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30455" name="Bound Sage's Necklace">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="144"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_sages_necklace_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -350,10 +370,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="30456" name="Bound Sage's Rags">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30456" name="Bound Sage's Rags">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="60"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t44_ul_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="2580"/>
@@ -367,10 +389,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="30457" name="Bound Sage's Worn Gloves">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30457" name="Bound Sage's Worn Gloves">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="19"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t44_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="630"/>
@@ -384,10 +408,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="30458" name="Bound Sage's Earring">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30458" name="Bound Sage's Earring">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="108"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_sages_earing_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -403,10 +429,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="30462" name="Bound Helmet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30462" name="Bound Helmet">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="24"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="640"/>
@@ -420,10 +448,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="30492" name="Bound Ring of Devotion">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30492" name="Bound Ring of Devotion">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="10"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_ring_of_devotion_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -439,10 +469,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="30493" name="Bound Necklace of Devotion">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="30493" name="Bound Necklace of Devotion">        <!--Done By Darvin (c)Java-Team/Updated by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="21"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_necklace_of_devotion_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>

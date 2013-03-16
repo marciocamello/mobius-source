@@ -23,6 +23,9 @@ import org.apache.commons.lang3.ArrayUtils;
 public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 {
 	private static final int VOLLODOS = 30137;
+	private static final int EXTRACT = 34059;
+	private static final int BLOOD = 34060;
+	private static final int DROP_CHANCE = 60;
 	private static final int EXTRACT_MOBS[] =
 	{
 		23162,
@@ -75,7 +78,6 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
-		st.getCond();
 		if (event.equalsIgnoreCase("30137-5.htm"))
 		{
 			st.setState(STARTED);
@@ -141,17 +143,17 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if (ArrayUtils.contains(EXTRACT_MOBS, npc.getNpcId()) && (st.getQuestItemsCount(34059) < 20) && (Rnd.get(100) < 60))
+		if (ArrayUtils.contains(EXTRACT_MOBS, npc.getNpcId()) && (st.getQuestItemsCount(EXTRACT) < 20) && (Rnd.get(100) < DROP_CHANCE))
 		{
-			st.giveItems(34059, 1);
+			st.giveItems(EXTRACT, 1);
 			st.playSound(SOUND_ITEMGET);
 		}
-		if (ArrayUtils.contains(BLOOD_MOBS, npc.getNpcId()) && (st.getQuestItemsCount(34060) < 20) && (Rnd.get(100) < 60))
+		if (ArrayUtils.contains(BLOOD_MOBS, npc.getNpcId()) && (st.getQuestItemsCount(BLOOD) < 20) && (Rnd.get(100) < DROP_CHANCE))
 		{
-			st.giveItems(34060, 1);
+			st.giveItems(BLOOD, 1);
 			st.playSound(SOUND_ITEMGET);
 		}
-		if ((st.getQuestItemsCount(34059) == 20) && (st.getQuestItemsCount(34060) == 20))
+		if ((st.getQuestItemsCount(EXTRACT) == 20) && (st.getQuestItemsCount(BLOOD) == 20))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);

@@ -862,7 +862,7 @@
 		<enchant2 name="Duel">
 			<table name="#powerPvP">34730 35435 36167 36900 38424 40008 41655 43367 45147 46998</table> 
 		</enchant2>
-		<enchant3 levels="10" name="Recycle"/>
+		<enchant3 levels="10" name="Recovery" enchRoute="9"/>
 	</skill>
     <skill id="10276" levels="1" name="Force of Nature">
     <!-- Immediately increases Momentum to its maximum level. -->

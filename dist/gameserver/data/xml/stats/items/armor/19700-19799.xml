@@ -1495,10 +1495,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19794" name="Bound Immortal Helmet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19794" name="Bound Immortal Helmet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="608"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
@@ -1513,10 +1515,12 @@
         </for>
     </armor>
     <armor id="19795" name="Bound Immortal Breastplate"
-           add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+           add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="3242"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t501_u_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="7520"/>
@@ -1530,10 +1534,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19796" name="Bound Immortal Gaiters" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19796" name="Bound Immortal Gaiters" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="3040"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t501_l_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="3170"/>
@@ -1547,10 +1553,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19797" name="Bound Immortal Gauntlet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19797" name="Bound Immortal Gauntlet" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="405"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t501_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="510"/>
@@ -1564,10 +1572,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="19798" name="Bound Immortal Boots" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="19798" name="Bound Immortal Boots" add_name="Defense Type / Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="R"/>
         <set name="crystallizable" value="true"/>
         <set name="crystal_count" value="1621"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t501_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1070"/>

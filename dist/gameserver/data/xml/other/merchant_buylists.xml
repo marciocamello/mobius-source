@@ -627,81 +627,100 @@
             npc="30081;30180;30254;30301;30315;30420;30436;30437;30839;30893;31045;31263;31307;31373;31380;31386;31952;31044;32169;30063;30078"
             shop="18;55;70;74;79;83;84;85;113;127;130;144;162;169;170;171;319522;31044001;321691;15;17"
             markup="10;15;20;30;20;50;50;50;20;20;50;20;20;50;50;50;20;50;5;20;50">
-        <item id="1835" name="Soulshot: No Grade"/>
-        <item id="2509" name="Spiritshot: No Grade"/>
-        <item id="1463" name="Soulshot: D-grade"/>
-        <item id="1464" name="Soulshot: C-grade"/>
-        <item id="3947" name="Blessed Spiritshot: No Grade"/>
-        <item id="3948" name="Blessed Spiritshot: D-Grade"/>
-        <item id="3949" name="Blessed Spiritshot: C-Grade"/>
-        <item id="5146" name="Compressed Package of Blessed Spiritshots: No Grade"/>
-        <item id="5140" name="Compressed Package of Spiritshots: No Grade"/>
-        <item id="5134" name="Compressed Package of Soulshots: No Grade"/>
-        <item id="5262" name="Greater Compressed Package of Blessed Spiritshots: No-grade"/>
-        <item id="5256" name="Greater Compressed Package of Spiritshots: No-grade"/>
-        <item id="5250" name="Greater Compressed Package of Soulshots: No-grade"/>
-        <item id="17" name="Wooden Arrow"/>
-        <item id="1341" name="Bone Arrow"/>
-        <item id="1342" name="Iron Arrow"/>
-        <item id="1343" name="Silver Arrow"/>
-        <item id="1344" name="Mithril Arrow"/>
-        <item id="1060" name="Lesser Healing Potion"/>
-        <item id="1061" name="Healing Potion"/>
-        <item id="1831" name="Antidote"/>
-        <item id="1832" name="Greater Antidote"/>
-        <item id="1833" name="Bandage"/>
-        <item id="1834" name="Emergency Dressing"/>
-        <item id="734" name="Haste Potion"/>
-        <item id="735" name="Potion of Alacrity"/>
-        <item id="6035" name="Magic Haste Potion"/>
-        <item id="6037" name="Waking Scroll"/>
-        <item id="736" name="Scroll of Escape"/>
-        <item id="737" name="Scroll of Resurrection"/>
-        <item id="1829" name="Scroll of Escape: Clan Hall"/>
-        <item id="1830" name="Scroll of Escape: Castle"/>
-        <item id="3031" name="Spirit Ore"/>
-        <item id="1785" name="Soul Ore"/>
-        <item id="5589" name="Energy Stone"/>
-        <item id="1661" name="Thief Key"/>
-        <item id="5192" name="Rope of Magic: D-Grade"/>
-        <item id="5193" name="Rope of Magic: C-Grade"/>
-        <item id="5194" name="Rope of Magic: B-Grade"/>
-        <item id="5195" name="Rope of Magic: A-Grade"/>
-        <item id="5196" name="Rope of Magic: S Grade"/>
-        <item id="2130" name="Gemstone D"/>
-        <item id="2131" name="Gemstone C"/>
-        <item id="2132" name="Gemstone B"/>
-        <item id="4679" name="Bless of Eva"/>
-        <item id="9633" name="Bone Bolt"/>
-        <item id="9634" name="Steel Bolt"/>
-        <item id="9635" name="Silver Bolt"/>
-        <item id="9636" name="Mithril Bolt"/>
-        <item id="8594" name="Scroll: Recovery (No Grade)"/>
-        <item id="8595" name="Scroll: Recovery (Grade D)"/>
-        <item id="8596" name="Scroll: Recovery (Grade C)"/>
-        <item id="8597" name="Scroll: Recovery (Grade B)"/>
-        <item id="8598" name="Scroll: Recovery (Grade A)"/>
-        <item id="8599" name="Scroll: Recovery (Grade S)"/>
-        <item id="8622" name="Elixir of Life (No Grade)"/>
-        <item id="8623" name="Elixir of Life (D-Grade)"/>
-        <item id="8624" name="Elixir of Life (C-Grade)"/>
-        <item id="8634" name="Elixir of CP (No Grade)"/>
-        <item id="8635" name="Elixir of CP (D-Grade)"/>
-        <item id="8636" name="Elixir of CP (C-Grade)"/>
-        <item id="8637" name="Elixir of CP (B-Grade)"/>
-        <item id="8638" name="Elixir of CP (A-Grade)"/>
-        <item id="8639" name="Elixir of CP (S-Grade)"/>
-        <item id="8615" name="Summoning Crystal"/>
-        <item id="8658" name="Mysterious Solvent"/>
-        <item id="8871" name="Strategy Guide"/>
-        <item id="10409" name="A Bottle of Souls"/>
-        <item id="4625" name="Dice (Heart)"/>
-        <item id="4626" name="Dice (Spade)"/>
-        <item id="4627" name="Dice (Clover)"/>
-        <item id="4628" name="Dice (Diamond)"/>
-        <item id="8872" name="Flash Gunpowder"/>
-        <item id="8629" name="Elixir of Mental Strength (D-Grade)"/>
-        <item id="21746" name="Maestro's Key"/>
+		<item id="1835" name="Soulshot: No Grade"/>
+		<item id="2509" name="Spiritshot: No Grade"/>
+		<item id="1463" name="Soulshot (D-Grade)"/>
+		<item id="1464" name="Soulshot (C-Grade)"/>
+		<item id="1465" name="Soulshot (B-Grade)"/>
+		<item id="1466" name="Soulshot (A-Grade)"/>
+		<item id="3947" name="Blessed Spiritshot: No Grade"/>
+		<item id="3948" name="Blessed Spiritshot (D-Grade)"/>
+		<item id="3949" name="Blessed Spiritshot (C-Grade)"/>
+		<item id="3950" name="Blessed Spiritshot (B-Grade)"/>
+		<item id="3951" name="Blessed Spiritshot (A-Grade)"/>
+		<item id="5146" name="Compressed Package of Blessed Spiritshots: No Grade"/>
+		<item id="5140" name="Compressed Package of Spiritshots: No Grade"/>
+		<item id="5134" name="Compressed Package of Soulshots: No Grade"/>
+		<item id="5262" name="Greater Compressed Package of Blessed Spiritshots (No-Grade)"/>
+		<item id="5256" name="Greater Compressed Package of Spiritshots (No-Grade)"/>
+		<item id="5250" name="Greater Compressed Package of Soulshots (No-Grade)"/>
+		<item id="17" name="Wooden Arrow"/>
+		<item id="1341" name="Bone Arrow"/>
+		<item id="1342" name="Steel Arrow"/>
+		<item id="1343" name="Silver Arrow"/>
+		<item id="1344" name="Mithril Arrow"/>
+		<item id="1345" name="Shining Arrow"/>
+		<item id="18550" name="Orichalcum Arrow"/>
+		<item id="1060" name="Lesser Healing Potion"/>
+		<item id="1061" name="Greater Healing Potion"/>
+		<item id="1539" name="Greater Healing Potion"/>
+		<item id="1831" name="Antidote"/>
+		<item id="1832" name="Greater Antidote"/>
+		<item id="1833" name="Bandage"/>
+		<item id="1834" name="Emergency Dressing"/>
+		<item id="734" name="Haste Potion"/>
+		<item id="735" name="Alacrity Potion"/>
+		<item id="6035" name="Magic Haste Potion"/>
+		<item id="6037" name="Waking Scroll"/>
+		<item id="736" name="Scroll of Escape"/>
+		<item id="737" name="Scroll of Resurrection"/>
+		<item id="1829" name="Scroll of Escape: Clan Hall"/>
+		<item id="1830" name="Scroll of Escape: Castle"/>
+		<item id="3031" name="Spirit Ore"/>
+		<item id="1785" name="Soul Ore"/>
+		<item id="5589" name="Momentum Stone"/>
+		<item id="1661" name="Thief Key"/>
+		<item id="5192" name="Rope of Magic (D-Grade)"/>
+		<item id="5193" name="Rope of Magic (C-Grade)"/>
+		<item id="5194" name="Rope of Magic (B-Grade)"/>
+		<item id="5195" name="Rope of Magic (A-Grade)"/>
+		<item id="5196" name="Rope of Magic (S-Grade)"/>
+		<item id="34837" name="null"/>
+		<item id="2130" name="Gemstone D"/>
+		<item id="2131" name="Gemstone C"/>
+		<item id="2132" name="Gemstone B"/>
+		<item id="4679" name="Bless of Eva"/>
+		<item id="9633" name="Bone Bolt"/>
+		<item id="9634" name="Steel Bolt"/>
+		<item id="9635" name="Silver Bolt"/>
+		<item id="9636" name="Mithril Bolt"/>
+		<item id="9637" name="Shining Bolt"/>
+		<item id="19443" name="Orichalcum Bolt"/>
+		<item id="8622" name="Elixir of Life (No Grade)"/>
+		<item id="8623" name="Elixir of Life (D-Grade)"/>
+		<item id="8624" name="Elixir of Life (C-Grade)"/>
+		<item id="8634" name="Elixir of CP (No Grade)"/>
+		<item id="8635" name="Elixir of CP (D-Grade)"/>
+		<item id="8636" name="Elixir of CP (C-Grade)"/>
+		<item id="8637" name="Elixir of CP (B-Grade)"/>
+		<item id="8638" name="Elixir of CP (A-Grade)"/>
+		<item id="8639" name="Elixir of CP (S-Grade)"/>
+		<item id="8615" name="Summoning Crystal"/>
+		<item id="8658" name="Mysterious Solvent"/>
+		<item id="8871" name="Strategy Guide"/>
+		<item id="10409" name="A Bottle of Souls"/>
+		<item id="4625" name="Dice (Heart)"/>
+		<item id="4626" name="Dice (Spade)"/>
+		<item id="4627" name="Dice (Clover)"/>
+		<item id="4628" name="Dice (Diamond)"/>
+		<item id="8872" name="Flash Gunpowder"/>
+		<item id="8629" name="Elixir of Mental Strength (D-Grade)"/>
+		<item id="19315" name="Crafting Solvent"/>
+		<item id="32249" name="Infinite Wooden Quiver"/>
+		<item id="32250" name="Infinite Bone Quiver"/>
+		<item id="32251" name="Infinite Steel Quiver"/>
+		<item id="32252" name="Infinite Silver Quiver"/>
+		<item id="32253" name="Infinite Mithril Quiver"/>
+		<item id="32254" name="Infinite Shining Quiver"/>
+		<item id="32255" name="Infinite Orichalcum Quiver"/>
+		<item id="32257" name="Infinite Bone Bolt Container"/>
+		<item id="32258" name="Infinite Steel Bolt Container"/>
+		<item id="32259" name="Infinite Silver Bolt Container"/>
+		<item id="32260" name="Infinite Mithril Bolt Container"/>
+		<item id="32261" name="Infinite Shining Bolt Container"/>
+		<item id="32262" name="Infinite Orichalcum Bolt Container"/>
+		<item id="30408" name="Dual Weapon Crafting Stamp (R-Grade)"/>
+		<item id="21746" name="Maestro's Key"/>
     </tradelist>
     <!-- Helvetia, Giran, Grocery, Dyes -->
     <tradelist npc="30081" shop="19" markup="10">

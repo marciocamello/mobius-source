@@ -1555,17 +1555,33 @@
 	</skill>
 	<skill id="21195" levels="1" name="Blessed Child Transformation Skill - Trejuo">
     <!-- Transforms into the Blessed Child Trejuo. When transformed into Trejuo, recovers Vitality upon acquiring XP. Cooldown is 4 hours. -->
+		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="reuseDelay" val="14400000" />
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="addSkills" val="619;1"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<for>
+			<effect count="1" name="Transformation" stackType="vitalityRegen" time="3600" val="20002"/>
+		</for>
 	</skill>
 	<skill id="21196" levels="1" name="Blessed Child Transformation Skill - Sujin">
     <!-- Transforms into the Blessed Child Sujin. When transformed into Sujin, recovers Vitality upon acquiring XP. Cooldown is 4 hours. -->
+		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="reuseDelay" val="14400000" />
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="addSkills" val="619;1"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<for>
+			<effect count="1" name="Transformation" stackType="vitalityRegen" time="3600" val="20003"/>
+		</for>
 	</skill>
 	<skill id="21197" levels="1" name="Induk's Buff">
     <!-- Restores all HP, MP, and CP using the strength of Induk. Cooldown 30 minutes. Can only be used when HP, MP, and CP are all below 30%. Consumes 1 Proof of a Warrior upon skill use. -->

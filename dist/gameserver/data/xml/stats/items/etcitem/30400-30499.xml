@@ -20,6 +20,7 @@
     </etcitem>
     <etcitem id="30408" name="Dual Weapon Crafting Stamp (R-Grade)">
         <!--Done By Darvin (c)Java - Team 2012-->
+		<set name="price" value="4911500"/>
         <set name="class" value="OTHER"/>
         <set name="ex_type" value="OTHER_ITEMS"/>
         <set name="crystal_type" value="NONE"/>

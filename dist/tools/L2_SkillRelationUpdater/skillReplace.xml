@@ -757,6 +757,7 @@
 		<remove id="191"/>
 		<remove id="231"/>
 		<remove id="429"/>
+		<remove id="232"/>
 	</skill>
 	<skill id="10003">
 		<remove id="153"/>
@@ -910,6 +911,7 @@
 	<skill id="10043">
 		<remove id="97"/>
 		<remove id="779"/>
+		<remove id="780"/>
 	</skill>
 	<skill id="10044">
 		<remove id="197"/>
@@ -922,6 +924,7 @@
 	</skill>
 	<skill id="10001">
 		<remove id="205"/>
+		<remove id="217"/>
 	</skill>
 	<skill id="11553">
 		<remove id="191"/>
@@ -1027,6 +1030,7 @@
 		<remove id="904"/>
 		<remove id="1454"/>
 		<remove id="1469"/>
+		<remove id="1155"/>
 	</skill>
 	<skill id="11761">
 		<remove id="1428"/>
