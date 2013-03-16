@@ -4679,10 +4679,14 @@ public abstract class Creature extends GameObject
 	{
 		if (getTransformation() != 0)
 		{
-		List<Effect> effects = getEffectList().getAllEffects();
+			List<Effect> effects = getEffectList().getAllEffects();
 			for (Effect effect : effects)
+			{
 				if (effect.getSkill().isDispelOnDamage())
+				{
 					getEffectList().stopEffect(effect.getSkill());
+				}
+			}
 		}
 		if (awake && isSleeping())
 		{
@@ -7226,7 +7230,7 @@ public abstract class Creature extends GameObject
 	{
 		return (_transformationId == 8) || (_transformationId == 9) || (_transformationId == 260);
 	}
-
+	
 	/**
 	 * Method isInMountTransform.
 	 * @return boolean

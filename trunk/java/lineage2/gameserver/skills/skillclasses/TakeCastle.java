@@ -35,6 +35,7 @@ public class TakeCastle extends Skill
 	 * @param set StatsSet
 	 */
 	private final ResidenceSide _side;
+	
 	public TakeCastle(StatsSet set)
 	{
 		super(set);
@@ -116,7 +117,7 @@ public class TakeCastle extends Skill
 				if (siegeEvent != null)
 				{
 					siegeEvent.broadcastTo(new SystemMessage2(SystemMsg.CLAN_S1_HAS_SUCCESSFULLY_ENGRAVED_THE_HOLY_ARTIFACT).addString(player.getClan().getName()), SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
-					siegeEvent.takeCastle(player.getClan(), _side); //processStep(player.getClan());
+					siegeEvent.takeCastle(player.getClan(), _side); // processStep(player.getClan());
 				}
 			}
 		}
