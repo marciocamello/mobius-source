@@ -65,6 +65,8 @@
     <weapon id="19591" name="Bound Immortal Shield" add_name="Attack Type / Heavy">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_sacon_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1130"/>
         <equip>
             <slot id="LEFT_HAND"/>

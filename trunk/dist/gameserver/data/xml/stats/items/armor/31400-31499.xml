@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "item.dtd">
 <list>
-    <armor id="31411" name="Bound Draconic Leather Helmet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31411" name="Bound Draconic Leather Helmet">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="S"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="276"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_leather_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="550"/>
@@ -17,10 +19,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31412" name="Bound Draconic Leather Armor">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31412" name="Bound Draconic Leather Armor">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="S"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="830"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t89_ul_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="4950"/>
@@ -34,10 +38,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31413" name="Bound Draconic Leather Boots">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31413" name="Bound Draconic Leather Boots">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="S"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="733"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t89_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1110"/>
@@ -51,10 +57,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31414" name="Bound Draconic Leather Gloves">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31414" name="Bound Draconic Leather Gloves">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="S"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="183"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t89_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="540"/>
@@ -68,10 +76,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31416" name="Bound Doom Helmet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31416" name="Bound Doom Helmet">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="132"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_leather_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="580"/>
@@ -85,10 +95,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31417" name="Bound Doom Plate Armor">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31417" name="Bound Doom Plate Armor">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="540"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t71_ul_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="9980"/>
@@ -102,10 +114,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31427" name="Bound Doom Boots" add_name="Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31427" name="Bound Doom Boots" add_name="Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="352"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t71_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1130"/>
@@ -119,10 +133,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31428" name="Bound Doom Boots" add_name="Tans Armor Use">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31428" name="Bound Doom Boots" add_name="Tans Armor Use">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="352"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t72_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1130"/>
@@ -136,10 +152,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31429" name="Bound Doom Boots" add_name="Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31429" name="Bound Doom Boots" add_name="Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="352"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t73_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1130"/>
@@ -153,10 +171,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31430" name="Bound Doom Gloves" add_name="Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31430" name="Bound Doom Gloves" add_name="Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="88"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t71_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="580"/>
@@ -170,10 +190,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31431" name="Bound Doom Gloves" add_name="Tans Armor Use">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31431" name="Bound Doom Gloves" add_name="Tans Armor Use">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="88"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t72_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="580"/>
@@ -187,10 +209,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31432" name="Bound Doom Gloves" add_name="Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31432" name="Bound Doom Gloves" add_name="Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="88"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t73_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="580"/>
@@ -204,10 +228,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31462" name="Bound Dark Crystal Breastplate">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31462" name="Bound Dark Crystal Breastplate">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="912"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t74_u_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="7700"/>
@@ -221,10 +247,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31463" name="Bound Dark Crystal Helmet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31463" name="Bound Dark Crystal Helmet">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="184"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="570"/>
@@ -238,10 +266,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31465" name="Bound Dark Crystal Boots" add_name="Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31465" name="Bound Dark Crystal Boots" add_name="Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="490"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t15_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1110"/>
@@ -255,10 +285,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31466" name="Bound Dark Crystal Boots" add_name="Tans Armor Use">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31466" name="Bound Dark Crystal Boots" add_name="Tans Armor Use">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="490"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t15_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1110"/>
@@ -272,10 +304,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31467" name="Bound Dark Crystal Boots" add_name="Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31467" name="Bound Dark Crystal Boots" add_name="Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="490"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t15_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1110"/>
@@ -289,10 +323,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31468" name="Bound Dark Crystal Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31468" name="Bound Dark Crystal Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="370"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t76_ul_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="2450"/>
@@ -306,10 +342,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31469" name="Bound Dark Crystal Leather Armor">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31469" name="Bound Dark Crystal Leather Armor">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="682"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t75_u_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="4300"/>
@@ -323,10 +361,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31470" name="Bound Dark Crystal Gloves" add_name="Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31470" name="Bound Dark Crystal Gloves" add_name="Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="122"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t15_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="580"/>
@@ -340,10 +380,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31471" name="Bound Dark Crystal Gloves" add_name="Tans Armor Use">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31471" name="Bound Dark Crystal Gloves" add_name="Tans Armor Use">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="122"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t15_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="580"/>
@@ -357,10 +399,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31472" name="Bound Dark Crystal Gloves" add_name="Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31472" name="Bound Dark Crystal Gloves" add_name="Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="122"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t15_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="580"/>
@@ -374,10 +418,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31473" name="Bound Dark Crystal Gaiters">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31473" name="Bound Dark Crystal Gaiters">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="856"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t74_l_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="3320"/>

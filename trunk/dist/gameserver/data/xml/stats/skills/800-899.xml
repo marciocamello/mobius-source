@@ -768,11 +768,14 @@
 	<skill id="839" levels="1" name="Dismount">
     <!-- Dismounts from a ridable mount. -->
 		<set name="icon" val="icon.skilltransform2"/>
-		<set name="magicLevel" val="56"/>
-		<set name="hitTime" val="2500"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="hitTime" val="500"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="useSS" val="false"/>
+		<for>
+			<effect count="1" name="Transformation" time="0" val="0"/>
+		</for>
 	</skill>
 	<skill id="840" levels="1" name="Final Flying Form">
     <!-- Transforms target into the final flying battle mode. Consumes 20 souls. -->

@@ -5,6 +5,8 @@
     <weapon id="31200" name="Bound Bloody Orchid" add_name="Back Blow">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bloody_orchid_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="960"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -29,6 +31,8 @@
     <weapon id="31201" name="Bound Bloody Orchid" add_name="Critical Bleed">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bloody_orchid_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="960"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -53,6 +57,8 @@
     <weapon id="31202" name="Bound Blood Tornado">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_blood_tornado_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1370"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -76,6 +82,8 @@
     <weapon id="31203" name="Bound Blood Tornado" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_blood_tornado_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1370"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -102,6 +110,8 @@
     <weapon id="31204" name="Bound Blood Tornado" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_blood_tornado_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1370"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -128,6 +138,8 @@
     <weapon id="31205" name="Bound Blood Tornado" add_name="Anger">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_blood_tornado_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1370"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -151,6 +163,8 @@
     <weapon id="31207" name="Bound Brigandine Shield">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.shield_brigandine_shield_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1320"/>
         <equip>
             <slot id="LEFT_HAND"/>
@@ -166,6 +180,8 @@
     <weapon id="31219" name="Bound Bonebreaker">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bonebreaker_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1720"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -189,6 +205,8 @@
     <weapon id="31220" name="Bound Proof of Revenge">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_proof_of_revenge_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="600"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -211,6 +229,8 @@
     <weapon id="31221" name="Bound Bellion Cestus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bellion_cestus_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1390"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -234,6 +254,8 @@
     <weapon id="31222" name="Bound Bellion Cestus" add_name="Critical Drain">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bellion_cestus_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1390"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -257,6 +279,8 @@
     <weapon id="31223" name="Bound Bellion Cestus" add_name="Critical Poison">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bellion_cestus_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1390"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -280,6 +304,8 @@
     <weapon id="31224" name="Bound Bellion Cestus" add_name="Rsk. Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bellion_cestus_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1390"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -303,6 +329,8 @@
     <weapon id="31225" name="Bound Berserker Blade">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_berserker_blade_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1380"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -326,6 +354,8 @@
     <weapon id="31226" name="Bound Berserker Blade" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_berserker_blade_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1380"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -352,6 +382,8 @@
     <weapon id="31227" name="Bound Berserker Blade" add_name="Critical Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_berserker_blade_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1380"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -378,6 +410,8 @@
     <weapon id="31228" name="Bound Berserker Blade" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_berserker_blade_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1380"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -404,6 +438,8 @@
     <weapon id="31229" name="Bound Battle Axe">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_battle_axe_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1720"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -427,6 +463,8 @@
     <weapon id="31230" name="Bound Battle Axe" add_name="Anger">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_battle_axe_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1720"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -450,6 +488,8 @@
     <weapon id="31231" name="Bound Battle Axe" add_name="Rsk. Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_battle_axe_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1720"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -473,6 +513,8 @@
     <weapon id="31232" name="Bound Battle Axe" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_battle_axe_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1720"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -499,6 +541,8 @@
     <weapon id="31233" name="Bound Bec de Corbin">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bech_de_corbin_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2020"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -522,6 +566,8 @@
     <weapon id="31234" name="Bound Bec de Corbin" add_name="Critical Stun">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bech_de_corbin_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2020"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -545,6 +591,8 @@
     <weapon id="31235" name="Bound Bec de Corbin" add_name="Long Blow">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bech_de_corbin_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2020"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -568,6 +616,8 @@
     <weapon id="31236" name="Bound Bec de Corbin" add_name="Light">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bech_de_corbin_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2020"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -591,6 +641,8 @@
     <weapon id="31237" name="Bound Ballista">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_arbalest_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1770"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -615,6 +667,8 @@
     <weapon id="31238" name="Bound Ballista">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_arbalest_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1770"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -639,6 +693,8 @@
     <weapon id="31239" name="Bound Ballista" add_name="Guidance">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_arbalest_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1770"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -666,6 +722,8 @@
     <weapon id="31240" name="Bound Ballista" add_name="Miser">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_arbalest_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1770"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -690,6 +748,8 @@
     <weapon id="31241" name="Bound Ballista" add_name="Quick Recovery">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_arbalest_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1770"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -714,6 +774,8 @@
     <weapon id="31242" name="Bound Ballista" add_name="Evasion">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_arbalest_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1770"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -738,6 +800,8 @@
     <weapon id="31243" name="Bound Ballista" add_name="Miser">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_arbalest_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1770"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -762,6 +826,8 @@
     <weapon id="31244" name="Bound Ballista" add_name="Cheap Shot">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_arbalest_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1770"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -786,6 +852,8 @@
     <weapon id="31245" name="Bound Bastard Sword*Sword of Revolution">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2450"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -809,6 +877,8 @@
     <weapon id="31246" name="Bound Bastard Sword*Crimson Sword">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2470"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -832,6 +902,8 @@
     <weapon id="31247" name="Bound Bastard Sword*Artisan's Sword">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2480"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -855,6 +927,8 @@
     <weapon id="31248" name="Bound Bastard Sword*Elven Sword">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2460"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -878,6 +952,8 @@
     <weapon id="31249" name="Bound Bastard Sword*Elven Long Sword">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2430"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -901,6 +977,8 @@
     <weapon id="31250" name="Bound Bastard Sword*Spinebone Sword">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2470"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -924,6 +1002,8 @@
     <weapon id="31251" name="Bound Bastard Sword*Bastard Sword">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2470"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -947,6 +1027,8 @@
     <weapon id="31252" name="Bound Bastard Sword*Knight's Sword">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2500"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -970,6 +1052,8 @@
     <weapon id="31253" name="Bound Bastard Sword">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bastard_sword_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1510"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -993,6 +1077,8 @@
     <weapon id="31254" name="Bound Basalt Battlehammer">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_basalt_battlehammer_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1570"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1016,6 +1102,8 @@
     <weapon id="31255" name="Bound Basalt Battlehammer" add_name="HP Drain">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_basalt_battlehammer_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1570"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1039,6 +1127,8 @@
     <weapon id="31256" name="Bound Basalt Battlehammer" add_name="Health">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_basalt_battlehammer_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1570"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1065,6 +1155,8 @@
     <weapon id="31257" name="Bound Basalt Battlehammer" add_name="HP Regeneration">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_basalt_battlehammer_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1570"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1088,6 +1180,8 @@
     <weapon id="31258" name="Bound Body Slasher">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_body_slasher_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2030"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1111,6 +1205,8 @@
     <weapon id="31259" name="Bound Body Slasher" add_name="Critical Stun">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_body_slasher_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2030"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1134,6 +1230,8 @@
     <weapon id="31260" name="Bound Body Slasher" add_name="Long Blow">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_body_slasher_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2030"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1157,6 +1255,8 @@
     <weapon id="31261" name="Bound Body Slasher" add_name="Wide Blow">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_body_slasher_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2030"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1180,6 +1280,8 @@
     <weapon id="31262" name="Bound Bagh-Nakh">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_baghnakh_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1540"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -1203,6 +1305,8 @@
     <weapon id="31263" name="Bound Sword of Delusion">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_sword_of_delusion_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1400"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1226,6 +1330,8 @@
     <weapon id="31264" name="Bound Sword of Delusion" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_sword_of_delusion_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1400"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1252,6 +1358,8 @@
     <weapon id="31265" name="Bound Sword of Delusion" add_name="Health">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_sword_of_delusion_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1400"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1278,6 +1386,8 @@
     <weapon id="31266" name="Bound Sword of Delusion" add_name="Rsk. Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_sword_of_delusion_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1400"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1301,6 +1411,8 @@
     <weapon id="31267" name="Bound Meteor Shower">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_meteor_shower_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1600"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1324,6 +1436,8 @@
     <weapon id="31268" name="Bound Meteor Shower" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_meteor_shower_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1600"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1350,6 +1464,8 @@
     <weapon id="31269" name="Bound Meteor Shower" add_name="Critical Bleed">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_meteor_shower_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1600"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1373,6 +1489,8 @@
     <weapon id="31270" name="Bound Meteor Shower" add_name="Rsk. Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_meteor_shower_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1600"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1396,6 +1514,8 @@
     <weapon id="31271" name="Bound Mystic Staff">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_mystic_staff_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1040"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1419,6 +1539,8 @@
     <weapon id="31272" name="Bound Mystic Knife">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_mystic_knife_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="760"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -1443,6 +1565,8 @@
     <weapon id="31273" name="Bound Mysterious Sword">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_mystery_sword_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1430"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1466,6 +1590,8 @@
     <weapon id="31274" name="Bound Mysterious Sword" add_name="Acumen">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_mystery_sword_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1430"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1492,6 +1618,8 @@
     <weapon id="31275" name="Bound Mysterious Sword" add_name="M. Atk.">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_mystery_sword_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1430"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1515,6 +1643,8 @@
     <weapon id="31276" name="Bound Mysterious Sword" add_name="Magic Weakness">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_mystery_sword_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1430"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -1538,6 +1668,8 @@
     <weapon id="31288" name="Bound Mithril Dagger">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_mithril_dagger_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1060"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -1562,6 +1694,8 @@
     <weapon id="31294" name="Bound Morning Star">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_morning_star_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1720"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1585,6 +1719,9 @@
     <weapon id="31295" name="Bound Maingauche">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_maingauche_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="1720"/>
         <set name="rnd_dam" value="5"/>
         <equip>
             <slot id="RIGHT_HAND"/>

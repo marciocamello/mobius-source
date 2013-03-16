@@ -6,6 +6,8 @@
         <set name="crystal_count" value="834"/>
         <set name="icon" value="icon.armor_helmet_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="530"/>
         <equip>
             <slot id="HEAD"/>
@@ -23,6 +25,8 @@
         <set name="crystal_count" value="4440"/>
         <set name="icon" value="icon.armor_t401_u_i00"/>
         <set name="type" value="HEAVY"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="7520"/>
         <equip>
             <slot id="CHEST"/>
@@ -40,6 +44,8 @@
         <set name="crystal_count" value="4158"/>
         <set name="icon" value="icon.armor_t401_l_i00"/>
         <set name="type" value="HEAVY"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="3170"/>
         <equip>
             <slot id="LEGS"/>
@@ -57,6 +63,8 @@
         <set name="crystal_count" value="558"/>
         <set name="icon" value="icon.armor_t401_g_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="510"/>
         <equip>
             <slot id="GLOVES"/>
@@ -74,6 +82,8 @@
         <set name="crystal_count" value="2232"/>
         <set name="icon" value="icon.armor_t401_b_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1070"/>
         <equip>
             <slot id="FEET"/>
@@ -91,6 +101,8 @@
         <set name="crystal_count" value="834"/>
         <set name="icon" value="icon.armor_leather_helmet_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="530"/>
         <equip>
             <slot id="HEAD"/>
@@ -108,6 +120,8 @@
         <set name="crystal_count" value="3336"/>
         <set name="icon" value="icon.armor_t402_u_i00"/>
         <set name="type" value="LIGHT"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="4140"/>
         <equip>
             <slot id="CHEST"/>
@@ -125,6 +139,8 @@
         <set name="crystal_count" value="3114"/>
         <set name="icon" value="icon.armor_t402_l_i00"/>
         <set name="type" value="LIGHT"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1320"/>
         <equip>
             <slot id="LEGS"/>
@@ -142,6 +158,8 @@
         <set name="crystal_count" value="558"/>
         <set name="icon" value="icon.armor_t402_g_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="510"/>
         <equip>
             <slot id="GLOVES"/>
@@ -159,6 +177,8 @@
         <set name="crystal_count" value="2232"/>
         <set name="icon" value="icon.armor_t402_b_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1070"/>
         <equip>
             <slot id="FEET"/>
@@ -176,6 +196,8 @@
         <set name="crystal_count" value="834"/>
         <set name="icon" value="icon.armor_circlet_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="530"/>
         <equip>
             <slot id="HEAD"/>
@@ -193,6 +215,8 @@
         <set name="crystal_count" value="2220"/>
         <set name="icon" value="icon.armor_t403_u_i00"/>
         <set name="type" value="MAGIC"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1750"/>
         <equip>
             <slot id="CHEST"/>
@@ -210,6 +234,8 @@
         <set name="crystal_count" value="2088"/>
         <set name="icon" value="icon.armor_t403_l_i00"/>
         <set name="type" value="MAGIC"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="850"/>
         <equip>
             <slot id="LEGS"/>
@@ -227,6 +253,8 @@
         <set name="crystal_count" value="558"/>
         <set name="icon" value="icon.armor_t403_g_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="510"/>
         <equip>
             <slot id="GLOVES"/>
@@ -244,6 +272,8 @@
         <set name="crystal_count" value="2232"/>
         <set name="icon" value="icon.armor_t403_b_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1070"/>
         <equip>
             <slot id="FEET"/>
@@ -262,6 +292,8 @@
         <set name="icon" value="icon.airtoil_i00"/>
         <set name="type" value="SIGIL"/>
         <set name="ex_type" value="SIGIL"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="920"/>
         <equip>
             <slot id="LEFT_HAND"/>
@@ -278,6 +310,8 @@
         <set name="crystal_count" value="948"/>
         <set name="icon" value="icon.r95_necklace_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="150"/>
         <equip>
             <slot id="NECKLACE"/>
@@ -296,6 +330,8 @@
         <set name="crystal_count" value="708"/>
         <set name="icon" value="icon.r95_earring_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="150"/>
         <equip>
             <slot id="RIGHT_EAR"/>
@@ -315,6 +351,8 @@
         <set name="crystal_count" value="474"/>
         <set name="icon" value="icon.r95_ring_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="150"/>
         <equip>
             <slot id="RIGHT_FINGER"/>
@@ -334,6 +372,8 @@
         <set name="crystal_count" value="960"/>
         <set name="icon" value="icon.armor_helmet_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="530"/>
         <equip>
             <slot id="HEAD"/>
@@ -351,6 +391,8 @@
         <set name="crystal_count" value="5133"/>
         <set name="icon" value="icon.armor_t701_u_i00"/>
         <set name="type" value="HEAVY"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="7520"/>
         <equip>
             <slot id="CHEST"/>
@@ -368,6 +410,8 @@
         <set name="crystal_count" value="4820"/>
         <set name="icon" value="icon.armor_t701_l_i00"/>
         <set name="type" value="HEAVY"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="3170"/>
         <equip>
             <slot id="LEGS"/>
@@ -385,6 +429,8 @@
         <set name="crystal_count" value="640"/>
         <set name="icon" value="icon.armor_t701_g_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="510"/>
         <equip>
             <slot id="GLOVES"/>
@@ -402,6 +448,8 @@
         <set name="crystal_count" value="2560"/>
         <set name="icon" value="icon.armor_t701_b_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1070"/>
         <equip>
             <slot id="FEET"/>
@@ -419,6 +467,8 @@
         <set name="crystal_count" value="960"/>
         <set name="icon" value="icon.armor_leather_helmet_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="530"/>
         <equip>
             <slot id="HEAD"/>
@@ -436,6 +486,8 @@
         <set name="crystal_count" value="3853"/>
         <set name="icon" value="icon.armor_t702_u_i00"/>
         <set name="type" value="LIGHT"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="4140"/>
         <equip>
             <slot id="CHEST"/>
@@ -453,6 +505,8 @@
         <set name="crystal_count" value="3620"/>
         <set name="icon" value="icon.armor_t702_l_i00"/>
         <set name="type" value="LIGHT"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1320"/>
         <equip>
             <slot id="LEGS"/>
@@ -470,6 +524,8 @@
         <set name="crystal_count" value="640"/>
         <set name="icon" value="icon.armor_t702_g_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="510"/>
         <equip>
             <slot id="GLOVES"/>
@@ -487,6 +543,8 @@
         <set name="crystal_count" value="2560"/>
         <set name="icon" value="icon.armor_t702_b_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1070"/>
         <equip>
             <slot id="FEET"/>
@@ -504,6 +562,8 @@
         <set name="crystal_count" value="960"/>
         <set name="icon" value="icon.armor_circlet_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="530"/>
         <equip>
             <slot id="HEAD"/>
@@ -521,6 +581,8 @@
         <set name="crystal_count" value="2573"/>
         <set name="icon" value="icon.armor_t703_u_i00"/>
         <set name="type" value="MAGIC"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1750"/>
         <equip>
             <slot id="CHEST"/>
@@ -538,6 +600,8 @@
         <set name="crystal_count" value="2420"/>
         <set name="icon" value="icon.armor_t703_l_i00"/>
         <set name="type" value="MAGIC"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="850"/>
         <equip>
             <slot id="LEGS"/>
@@ -555,6 +619,8 @@
         <set name="crystal_count" value="640"/>
         <set name="icon" value="icon.armor_t703_g_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="510"/>
         <equip>
             <slot id="GLOVES"/>
@@ -572,6 +638,8 @@
         <set name="crystal_count" value="2560"/>
         <set name="icon" value="icon.armor_t703_b_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1070"/>
         <equip>
             <slot id="FEET"/>
@@ -590,6 +658,8 @@
         <set name="icon" value="icon.elos_i00"/>
         <set name="type" value="SIGIL"/>
         <set name="ex_type" value="SIGIL"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="920"/>
         <equip>
             <slot id="LEFT_HAND"/>
@@ -606,6 +676,8 @@
         <set name="crystal_count" value="1106"/>
         <set name="icon" value="icon.r991_necklace_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="150"/>
         <equip>
             <slot id="NECKLACE"/>
@@ -624,6 +696,8 @@
         <set name="crystal_count" value="826"/>
         <set name="icon" value="icon.r991_earring_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="150"/>
         <equip>
             <slot id="RIGHT_EAR"/>
@@ -643,6 +717,8 @@
         <set name="crystal_count" value="553"/>
         <set name="icon" value="icon.r991_ring_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="150"/>
         <equip>
             <slot id="RIGHT_FINGER"/>

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "item.dtd">
 <list>
-    <armor id="31025" name="Bound Scale Mail">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31025" name="Bound Scale Mail">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="116"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t08_u_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="8720"/>
@@ -17,10 +19,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31026" name="Bound Scale Gaiters">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31026" name="Bound Scale Gaiters">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="108"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t08_l_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="3860"/>
@@ -34,10 +38,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31054" name="Bound Zubei's Breastplate">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31054" name="Bound Zubei's Breastplate">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="628"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t64_u_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="7970"/>
@@ -51,10 +57,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31055" name="Bound Zubei's Helmet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31055" name="Bound Zubei's Helmet">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="124"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="590"/>
@@ -68,10 +76,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31057" name="Bound Zubei's Boots" add_name="Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31057" name="Bound Zubei's Boots" add_name="Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="328"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t64_b_i02"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1180"/>
@@ -85,10 +95,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31058" name="Bound Zubei's Boots" add_name="Tans Armor Use">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31058" name="Bound Zubei's Boots" add_name="Tans Armor Use">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="328"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t64_b_i02"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1180"/>
@@ -102,10 +114,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31059" name="Bound Zubei's Boots" add_name="Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31059" name="Bound Zubei's Boots" add_name="Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="328"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t64_b_i02"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1180"/>
@@ -119,10 +133,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31060" name="Bound Zubei's Gauntlet" add_name="Heavy">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31060" name="Bound Zubei's Gauntlet" add_name="Heavy">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="82"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t64_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="590"/>
@@ -136,10 +152,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31061" name="Bound Zubei's Gauntlet" add_name="Tans Armor Use">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31061" name="Bound Zubei's Gauntlet" add_name="Tans Armor Use">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="82"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t64_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="590"/>
@@ -153,10 +171,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31062" name="Bound Zubei's Gauntlet" add_name="Robe">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31062" name="Bound Zubei's Gauntlet" add_name="Robe">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="82"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t64_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="590"/>
@@ -170,10 +190,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31063" name="Bound Zubei's Gaiters">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31063" name="Bound Zubei's Gaiters">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="588"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t64_l_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="3570"/>
@@ -187,10 +209,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31064" name="Bound Zubei's Leather Shirt">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31064" name="Bound Zubei's Leather Shirt">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="468"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t65_u_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="4330"/>
@@ -204,10 +228,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31065" name="Bound Zubei's Leather Gaiters">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31065" name="Bound Zubei's Leather Gaiters">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="438"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t65_l_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="1480"/>
@@ -221,10 +247,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31066" name="Bound White Tunic">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31066" name="Bound White Tunic">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="57"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t16_u_i00"/>
         <set name="type" value="MAGIC"/>
         <set name="weight" value="2040"/>
@@ -238,10 +266,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31067" name="Bound Ring of Protection">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31067" name="Bound Ring of Protection">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="C"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="37"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_ring_of_protection_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -257,10 +287,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="31068" name="Bound Ring of Protection">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31068" name="Bound Ring of Protection">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="C"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="37"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_ring_of_protection_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -276,10 +308,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="31069" name="Bound Necklace of Protection">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31069" name="Bound Necklace of Protection">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="C"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="74"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_necklace_of_protection_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -294,10 +328,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="31070" name="Bound Necklace of Protection">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31070" name="Bound Necklace of Protection">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="C"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="74"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_necklace_of_protection_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -312,10 +348,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="31071" name="Bound Earring of Protection">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31071" name="Bound Earring of Protection">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="C"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="56"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_earing_of_protection_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -331,10 +369,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="31072" name="Bound Earring of Protection">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31072" name="Bound Earring of Protection">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="C"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="56"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.accessary_earing_of_protection_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="150"/>
@@ -350,10 +390,12 @@
             <enchant stat="mDef" order="0x0C" value="0"/>
         </for>
     </armor>
-    <armor id="31073" name="Bound Chain Hood">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31073" name="Bound Chain Hood">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="C"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="62"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_leather_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="620"/>

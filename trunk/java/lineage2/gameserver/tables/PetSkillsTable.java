@@ -102,7 +102,7 @@ public class PetSkillsTable
 				{
 					_skillTrees.put(npcId, list = new ArrayList<>());
 				}
-				SkillLearn skillLearn = new SkillLearn(id, lvl, minLvl, 0, 0, 0, false, new HashMap<Integer, Long>(), new ArrayList<Integer>());
+				SkillLearn skillLearn = new SkillLearn(id, lvl, minLvl, 0, 0, 0, false, null, new HashMap<Integer, Long>(), new ArrayList<Integer>());
 				list.add(skillLearn);
 				count++;
 			}

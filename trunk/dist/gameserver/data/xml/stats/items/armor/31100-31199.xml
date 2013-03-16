@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "item.dtd">
 <list>
-    <armor id="31142" name="Bound Shining Circlet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31142" name="Bound Shining Circlet">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="C"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="72"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_circlet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="600"/>
@@ -17,10 +19,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31145" name="Bound Salamander Skin Boots">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31145" name="Bound Salamander Skin Boots">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="77"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t45_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1230"/>
@@ -34,8 +38,10 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31146" name="Bound Salamander Skin Boots">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31146" name="Bound Salamander Skin Boots">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="D"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t45_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="0"/>
@@ -49,10 +55,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31147" name="Bound Salamander Skin Mail">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31147" name="Bound Salamander Skin Mail">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="90"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t45_ul_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="6100"/>
@@ -66,8 +74,10 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31148" name="Bound Salamander Skin Mail">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31148" name="Bound Salamander Skin Mail">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="D"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t45_ul_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="0"/>
@@ -81,10 +91,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31156" name="Bound Lion Skin Shirt">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31156" name="Bound Lion Skin Shirt">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="86"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t18_u_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="4580"/>
@@ -98,10 +110,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31157" name="Bound Lion Skin Gaiters">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31157" name="Bound Lion Skin Gaiters">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="82"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t18_l_i00"/>
         <set name="type" value="LIGHT"/>
         <set name="weight" value="1570"/>
@@ -115,10 +129,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31173" name="Bound Bone Helmet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31173" name="Bound Bone Helmet">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="19"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_leather_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="640"/>
@@ -132,10 +148,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31176" name="Bound Silk Shirt">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31176" name="Bound Silk Shirt">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="C"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="22"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.etc_shirts_c_i02"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="130"/>
@@ -149,10 +167,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="31197" name="Bound Blast Plate">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="31197" name="Bound Blast Plate">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013-->
         <set name="crystal_type" value="D"/>
         <set name="crystallizable" value="false"/>
         <set name="crystal_count" value="129"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="icon" value="icon.armor_t40_u_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="8420"/>

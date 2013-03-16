@@ -26,7 +26,6 @@ import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.Zone.ZoneType;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -187,9 +186,10 @@ public class BookMarkList
 		{
 			return false;
 		}
-		if (Functions.removeItem(owner, 13016, 1) != 1)
+		if (Functions.removeItem(owner, 20025, 1) != 1)
 		{
-			owner.sendPacket(SystemMsg.YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG);
+			// owner.sendPacket(SystemMsg.YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG);
+			owner.sendMessage("You cannot teleport because you do not have a My Teleport Spellbook.");
 			return false;
 		}
 		owner.teleToLocation(bookmark.x, bookmark.y, bookmark.z);

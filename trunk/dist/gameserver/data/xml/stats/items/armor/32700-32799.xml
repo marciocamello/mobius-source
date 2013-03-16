@@ -360,6 +360,8 @@
         <set name="icon" value="icon.armor_t64_g_i02"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="590"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <equip>
             <slot id="GLOVES"/>
         </equip>
@@ -377,6 +379,8 @@
         <set name="icon" value="icon.armor_t66_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="590"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <equip>
             <slot id="GLOVES"/>
         </equip>

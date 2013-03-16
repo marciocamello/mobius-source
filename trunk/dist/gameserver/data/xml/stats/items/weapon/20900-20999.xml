@@ -6,13 +6,19 @@
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="icon" value="BranchSys2.icon.br_blessed_taiboy_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="price" value="0"/>
         <set name="type" value="SWORD"/>
         <set name="ex_type" value="SWORD"/>
         <set name="rnd_dam" value="10"/>
+		<unequip_skill id="619" level="1"/>
         <equip>
-            <slot id="LEFT_HAND"/>
+            <slot id="RIGHT_HAND"/>
         </equip>
+        <skills>
+            <skill id="21195" level="1"/>
+        </skills>
         <for>
             <add stat="pAtk" order="0x10" value="1"/>
             <add stat="mAtk" order="0x10" value="1"/>
@@ -26,13 +32,19 @@
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="icon" value="BranchSys2.icon.br_blessed_taigirl_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="price" value="0"/>
         <set name="type" value="SWORD"/>
         <set name="ex_type" value="SWORD"/>
         <set name="rnd_dam" value="10"/>
+		<unequip_skill id="619" level="1"/>
         <equip>
-            <slot id="LEFT_HAND"/>
+            <slot id="RIGHT_HAND"/>
         </equip>
+        <skills>
+            <skill id="21196" level="1"/>
+        </skills>
         <for>
             <add stat="pAtk" order="0x10" value="1"/>
             <add stat="mAtk" order="0x10" value="1"/>

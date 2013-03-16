@@ -5,6 +5,8 @@
     <weapon id="19815" name="Bound Twilight Shield" add_name="Defense Type / Heavy">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.kratere_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1130"/>
         <equip>
             <slot id="LEFT_HAND"/>
@@ -20,6 +22,8 @@
     <weapon id="19831" name="Bound Seraph Shield" add_name="Defense Type / Heavy">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.beranka_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1130"/>
         <equip>
             <slot id="LEFT_HAND"/>
@@ -35,6 +39,8 @@
     <weapon id="19847" name="Bound Eternal Shield" add_name="Defense Type / Heavy">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_akra_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1130"/>
         <equip>
             <slot id="LEFT_HAND"/>

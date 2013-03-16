@@ -5,6 +5,8 @@
     <weapon id="19000" name="Bound Amaranthine Shaper" add_name="Focus ">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_stanpid_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -33,6 +35,8 @@
     <weapon id="19001" name="Bound Amaranthine Cutter" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_plenitas_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -60,6 +64,8 @@
     <weapon id="19002" name="Bound Amaranthine Cutter" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_plenitas_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -87,6 +93,8 @@
     <weapon id="19003" name="Bound Amaranthine Cutter" add_name="Health">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_plenitas_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -114,6 +122,8 @@
     <weapon id="19004" name="Bound Amaranthine Slasher" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bauen_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -141,6 +151,8 @@
     <weapon id="19005" name="Bound Amaranthine Slasher" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bauen_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -168,6 +180,8 @@
     <weapon id="19006" name="Bound Amaranthine Slasher" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_bauen_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -195,6 +209,8 @@
     <weapon id="19007" name="Bound Amaranthine Avenger" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_qutram_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -222,6 +238,8 @@
     <weapon id="19008" name="Bound Amaranthine Avenger" add_name="Critical Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_qutram_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -249,6 +267,8 @@
     <weapon id="19009" name="Bound Amaranthine Avenger" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_qutram_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -276,6 +296,8 @@
     <weapon id="19010" name="Bound Amaranthine Fighter" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_octoclaw_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1550"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -303,6 +325,8 @@
     <weapon id="19011" name="Bound Amaranthine Fighter" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_octoclaw_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1550"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -330,6 +354,8 @@
     <weapon id="19012" name="Bound Amaranthine Fighter" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_octoclaw_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1550"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -357,6 +383,8 @@
     <weapon id="19013" name="Bound Amaranthine Stormer" add_name="HP Drain">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_crabel_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2010"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -381,6 +409,8 @@
     <weapon id="19014" name="Bound Amaranthine Stormer" add_name="Guidance">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_crabel_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2010"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -408,6 +438,8 @@
     <weapon id="19015" name="Bound Amaranthine Stormer" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_crabel_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2010"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -435,6 +467,8 @@
     <weapon id="19016" name="Bound Amaranthine Thrower" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_castron_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -463,6 +497,8 @@
     <weapon id="19017" name="Bound Amaranthine Thrower" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_castron_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -491,6 +527,8 @@
     <weapon id="19018" name="Bound Amaranthine Thrower" add_name="Long Blow">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_castron_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="5"/>
         <equip>
@@ -516,6 +554,8 @@
     <weapon id="19019" name="Bound Amaranthine Shooter" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_stilla_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1580"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -544,6 +584,8 @@
     <weapon id="19020" name="Bound Amaranthine Shooter" add_name="Critical Slow">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_stilla_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1580"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -572,6 +614,8 @@
     <weapon id="19021" name="Bound Amaranthine Shooter" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_stilla_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1580"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -600,6 +644,8 @@
     <weapon id="19022" name="Bound Amaranthine Buster" add_name="Acumen">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weaon_serapear_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -627,6 +673,8 @@
     <weapon id="19023" name="Bound Amaranthine Buster" add_name="Magic Hold">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weaon_serapear_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -651,6 +699,8 @@
     <weapon id="19024" name="Bound Amaranthine Buster" add_name="Mana Up">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weaon_serapear_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -678,6 +728,8 @@
     <weapon id="19025" name="Bound Amaranthine Caster" add_name="Empower">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_pilia_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <set name="is_magic_weapon" value="true"/>
@@ -706,6 +758,8 @@
     <weapon id="19026" name="Bound Amaranthine Caster" add_name="Acumen">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_pilia_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <set name="is_magic_weapon" value="true"/>
@@ -734,6 +788,8 @@
     <weapon id="19027" name="Bound Amaranthine Caster" add_name="Magic Hold">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_pilia_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <set name="is_magic_weapon" value="true"/>
@@ -759,6 +815,8 @@
     <weapon id="19028" name="Bound Amaranthine Retributer" add_name="MP Regeneration">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_shaelon_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -783,6 +841,8 @@
     <weapon id="19029" name="Bound Amaranthine Retributer" add_name="Acumen">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_shaelon_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -810,6 +870,8 @@
     <weapon id="19030" name="Bound Amaranthine Retributer" add_name="Empower">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_shaelon_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1080"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -837,6 +899,8 @@
     <weapon id="19031" name="Bound Amaranthine Dual Sword" add_name="Haste">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualsword_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -864,6 +928,8 @@
     <weapon id="19032" name="Bound Amaranthine Dual Sword" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualsword_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -891,6 +957,8 @@
     <weapon id="19033" name="Bound Amaranthine Dual Sword" add_name="Health">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualsword_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1520"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -918,6 +986,8 @@
     <weapon id="19034" name="Bound Amaranthine Dual Dagger" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualdagger_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2050"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -945,6 +1015,8 @@
     <weapon id="19035" name="Bound Amaranthine Dual Dagger" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualdagger_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2050"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -972,6 +1044,8 @@
     <weapon id="19036" name="Bound Amaranthine Dual Dagger" add_name="Guidance">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualdagger_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="2050"/>
         <set name="rnd_dam" value="10"/>
         <equip>
@@ -999,6 +1073,8 @@
     <weapon id="19037" name="Bound Amaranthine Dual Blunt Weapon" add_name="Focus">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualblunt_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1025,6 +1101,8 @@
     <weapon id="19038" name="Bound Amaranthine Dual Blunt Weapon" add_name="Guidance">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualblunt_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>
@@ -1051,6 +1129,8 @@
     <weapon id="19039" name="Bound Amaranthine Dual Blunt Weapon" add_name="Damage">
         <!--Done By Darvin (c)Java - Team 2012-->
         <set name="icon" value="icon.weapon_r_dualblunt_i01"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1740"/>
         <set name="rnd_dam" value="20"/>
         <equip>

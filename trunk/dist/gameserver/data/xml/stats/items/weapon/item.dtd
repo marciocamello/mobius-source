@@ -1,15 +1,15 @@
 <!ELEMENT list (weapon|etcitem|armor)*>
-<!ELEMENT weapon  (set|equip|for|enchant4_skill|cond|skills|triggers|attributes|enchant_options)*>
+<!ELEMENT weapon  (set|equip|for|enchant4_skill|unequip_skill|cond|skills|triggers|attributes|enchant_options)*>
 <!ATTLIST weapon
 	id CDATA #REQUIRED
 	name CDATA #REQUIRED
 	add_name CDATA #IMPLIED>
-<!ELEMENT etcitem (set|equip|for|enchant4_skill|cond|skills|triggers|enchant_options)*>
+<!ELEMENT etcitem (set|equip|for|enchant4_skill|unequip_skill|cond|skills|triggers|enchant_options)*>
 <!ATTLIST etcitem
 	id CDATA #REQUIRED
 	name CDATA #REQUIRED
 	add_name CDATA #IMPLIED>
-<!ELEMENT armor  (set|equip|for|enchant4_skill|cond|skills|triggers|attributes|enchant_options)*>
+<!ELEMENT armor  (set|equip|for|enchant4_skill|unequip_skill|cond|skills|triggers|attributes|enchant_options)*>
 <!ATTLIST armor
 	id CDATA #REQUIRED
 	name CDATA #REQUIRED
@@ -85,6 +85,11 @@
 
 <!ELEMENT enchant4_skill (#PCDATA)>
 <!ATTLIST enchant4_skill
+	id CDATA #REQUIRED
+	level CDATA #REQUIRED>
+
+<!ELEMENT unequip_skill (#PCDATA)>
+<!ATTLIST unequip_skill
 	id CDATA #REQUIRED
 	level CDATA #REQUIRED>
 

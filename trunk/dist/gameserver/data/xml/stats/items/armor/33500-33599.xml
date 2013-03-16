@@ -305,11 +305,13 @@
         </equip>
         <set name="ex_type" value="OTHER_ITEMS"/>
     </armor>
-    <armor id="33591" name="Returning hero exclusive - Bound Dynasty Breastplate">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="33591" name="Returning hero exclusive - Bound Dynasty Breastplate">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="S"/>
         <set name="icon" value="icon.armor_t91_u_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="7570"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <equip>
             <slot id="CHEST"/>
         </equip>
@@ -320,11 +322,13 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="33592" name="Returning hero exclusive - Bound Dynasty Gaiters">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="33592" name="Returning hero exclusive - Bound Dynasty Gaiters">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="S"/>
         <set name="icon" value="icon.armor_t91_l_i00"/>
         <set name="type" value="HEAVY"/>
         <set name="weight" value="3210"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <equip>
             <slot id="LEGS"/>
         </equip>
@@ -335,11 +339,13 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="33593" name="Returning hero exclusive - Bound Dynasty Helmet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="33593" name="Returning hero exclusive - Bound Dynasty Helmet">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="S"/>
         <set name="icon" value="icon.armor_helmet_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="530"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <equip>
             <slot id="HEAD"/>
         </equip>
@@ -350,11 +356,13 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="33594" name="Returning hero exclusive - Bound Dynasty Gauntlet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="33594" name="Returning hero exclusive - Bound Dynasty Gauntlet">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="S"/>
         <set name="icon" value="icon.armor_t91_g_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="520"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <equip>
             <slot id="GLOVES"/>
         </equip>
@@ -365,11 +373,13 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="33595" name="Returning hero exclusive - Bound Dynasty Boots">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="33595" name="Returning hero exclusive - Bound Dynasty Boots">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="S"/>
         <set name="icon" value="icon.armor_t91_b_i00"/>
         <set name="type" value="NONE"/>
         <set name="weight" value="1090"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <equip>
             <slot id="FEET"/>
         </equip>
@@ -380,10 +390,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="33597" name="Returning hero exclusive - Bound Dynasty Leather Armor">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="33597" name="Returning hero exclusive - Bound Dynasty Leather Armor">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="S"/>
         <set name="icon" value="icon.armor_t92_u_i00"/>
         <set name="type" value="LIGHT"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="4180"/>
         <equip>
             <slot id="CHEST"/>
@@ -396,10 +408,12 @@
         </for>
     </armor>
     <armor id="33598"
-           name="Returning hero exclusive - Bound Dynasty Leather Leggings">        <!--Done By Darvin (c)Java-Team-->
+           name="Returning hero exclusive - Bound Dynasty Leather Leggings">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="S"/>
         <set name="icon" value="icon.armor_t92_l_i00"/>
         <set name="type" value="LIGHT"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="1370"/>
         <equip>
             <slot id="LEGS"/>
@@ -411,10 +425,12 @@
             <enchant stat="maxHp" order="0x80" value="0"/>
         </for>
     </armor>
-    <armor id="33599" name="Returning hero exclusive - Bound Dynasty Leather Helmet">        <!--Done By Darvin (c)Java-Team-->
+    <armor id="33599" name="Returning hero exclusive - Bound Dynasty Leather Helmet">        <!--Done By Darvin (c)Java-Team/Update by Maleiva2013 -->
         <set name="crystal_type" value="S"/>
         <set name="icon" value="icon.armor_leather_helmet_i00"/>
         <set name="type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
         <set name="weight" value="530"/>
         <equip>
             <slot id="HEAD"/>

@@ -2000,12 +2000,12 @@
 		<npc id="19140" />
 	</spawn>
 	<!-- Raid Boss Rose -->
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+	<spawn count="1" respawn="43200" respawn_random="0" period_of_day="none">
 		<point x="-29304" y="168824" z="-3856" h="37908" />
 		<npc id="25870" />
 	</spawn>
 	<!-- Raid Boss Thorn -->
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+	<spawn count="1" respawn="43200" respawn_random="0" period_of_day="none">
 		<point x="-27121" y="182504" z="-3640" h="31089" />
 		<npc id="25871" />
 	</spawn>

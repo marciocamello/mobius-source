@@ -3,7 +3,7 @@
 <!--Remove Special Ability from Weapon-->
 <!--MULTISELL - [weapon_variation_sep_smith]-->
 <list>
-	<!--TODO: [Bonux] Сверить с оффом.-->
+	<!--TODO: [Bonux] Ð¡Ð²ÐµÑ€Ð¸Ñ‚ÑŒ Ñ Ð¾Ñ„Ñ„Ð¾Ð¼.-->
 	<config show_all="false" no_tax="true" keep_enchanted="true"/>
 	<item>
 		<production id="72" count="1"/>

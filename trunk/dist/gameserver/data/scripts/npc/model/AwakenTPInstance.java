@@ -101,7 +101,7 @@ public class AwakenTPInstance extends NpcInstance
 		}
 		if (!player.isAwaking())
 		{
-			player.sendMessage("Вы не про�?ли пут�? перерожденного!");
+			player.sendMessage("You do not mean? Put it? REBIRTH!");
 			return;
 		}
 		if (command.equalsIgnoreCase("Town_of_Shuttgart"))

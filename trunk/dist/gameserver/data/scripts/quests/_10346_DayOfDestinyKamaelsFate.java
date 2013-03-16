@@ -409,7 +409,7 @@ public class _10346_DayOfDestinyKamaelsFate extends Quest implements ScriptFile
 		world.status = 0;
 		world.monsters = new HashMap<>();
 		world.helpers = new HashMap<>();
-		QuestState st = world.player.getQuestState("_10342_DayofDestinyElvenFate");
+		QuestState st = world.player.getQuestState("_10346_DayOfDestinyKamaelsFate");
 		int helper1 = 0;
 		int helper2 = 0;
 		helper1 = st.getInt("1");

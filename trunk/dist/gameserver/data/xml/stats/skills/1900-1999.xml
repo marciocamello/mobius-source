@@ -162,7 +162,7 @@
     <skill id="1914" levels="1" name="Savage">
     <!-- For 60 seconds, increases Atk. Spd. by 17% and decreases P. Def. by 15%. -->
         <set name="magicLevel" val="85"/>
-        <set name="target" val="TARGET_ONE"/>
+        <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <for>

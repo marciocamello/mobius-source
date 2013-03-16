@@ -615,6 +615,10 @@ public abstract class ItemTemplate extends StatTemplate
 	 */
 	private Skill _enchant4Skill = null;
 	/**
+	 * Field _unequippedSkill.
+	 */
+	private Skill _unequipeSkill = null;
+	/**
 	 * Field type.
 	 */
 	public ItemType type;
@@ -1021,6 +1025,15 @@ public abstract class ItemTemplate extends StatTemplate
 	}
 	
 	/**
+	 * Method getEnchant4Skill.
+	 * @return Skill
+	 */
+	public Skill getUnequipeSkill()
+	{
+		return _unequipeSkill;
+	}
+	
+	/**
 	 * Method toString.
 	 * @return String
 	 */
@@ -1301,6 +1314,15 @@ public abstract class ItemTemplate extends StatTemplate
 	public void setEnchant4Skill(Skill enchant4Skill)
 	{
 		_enchant4Skill = enchant4Skill;
+	}
+	
+	/**
+	 * Method setEnchant4Skill.
+	 * @param enchant4Skill Skill
+	 */
+	public void setUnequipeSkill(Skill unequipeSkill)
+	{
+		_unequipeSkill = unequipeSkill;
 	}
 	
 	/**

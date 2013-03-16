@@ -27,6 +27,8 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.model.base.AcquireType;
 import lineage2.gameserver.model.base.ClassId;
+import lineage2.gameserver.model.base.ClassLevel;
+import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.SubUnit;
 
@@ -49,6 +51,11 @@ public final class SkillAcquireHolder extends AbstractHolder
 	{
 		return _instance;
 	}
+	
+	/**
+	 * Field _normalSkillTree.
+	 */
+	private static HashMap<Integer, List<Integer>> _AwakenClassSkillRemove = new HashMap<>();
 	
 	/**
 	 * Field _normalSkillTree.
@@ -168,7 +175,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 					info("skill tree for class " + player.getActiveClassId() + " is not defined !");
 					return Collections.emptyList();
 				}
-				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel());
+				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel(), player.getRace());
 			}
 			case COLLECTION:
 				skills.addAll(_collectionSkillTree);
@@ -177,7 +184,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 					info("skill tree for class " + player.getActiveClassId() + " is not defined !");
 					return Collections.emptyList();
 				}
-				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel());
+				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel(), player.getRace());
 			case TRANSFORMATION:
 				skills.addAll(_transformationSkillTree.get(player.getRace().ordinal()));
 				if (skills.isEmpty())
@@ -185,7 +192,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 					info("skill tree for race " + player.getRace().ordinal() + " is not defined !");
 					return Collections.emptyList();
 				}
-				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel());
+				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel(), player.getRace());
 			case TRANSFER_EVA_SAINTS:
 			case TRANSFER_SHILLIEN_SAINTS:
 			case TRANSFER_CARDINAL:
@@ -219,22 +226,22 @@ public final class SkillAcquireHolder extends AbstractHolder
 					info("skill tree for race " + player.getRace().ordinal() + " is not defined !");
 					return Collections.emptyList();
 				}
-				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel());
+				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel(), player.getRace());
 			case CLAN:
 				skills.addAll(_pledgeSkillTree);
 				Collection<Skill> skls = player.getClan().getSkills();
-				return getAvaliableList(skills, skls.toArray(new Skill[skls.size()]), player.getClan().getLevel());
+				return getAvaliableList(skills, skls.toArray(new Skill[skls.size()]), player.getClan().getLevel(), player.getRace());
 			case SUB_UNIT:
 				skills.addAll(_subUnitSkillTree);
 				Collection<Skill> st = subUnit.getSkills();
-				return getAvaliableList(skills, st.toArray(new Skill[st.size()]), player.getClan().getLevel());
+				return getAvaliableList(skills, st.toArray(new Skill[st.size()]), player.getClan().getLevel(), player.getRace());
 			case CERTIFICATION:
 				skills.addAll(_certificationSkillTree);
 				if (player == null)
 				{
 					return skills;
 				}
-				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel());
+				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel(), player.getRace());
 			default:
 				return Collections.emptyList();
 		}
@@ -255,7 +262,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 			info("skill tree for class " + player.getActiveClassId() + " is not defined !");
 			return Collections.emptyList();
 		}
-		return getAvaliableAllList(skills, player.getAllSkillsArray(), player.getLevel());
+		return getAvaliableAllList(skills, player.getAllSkillsArray(), player.getLevel(), player.getRace());
 	}
 	
 	/**
@@ -274,7 +281,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 			info("skill tree for class " + newClassId + " is not defined !");
 			return Collections.emptyList();
 		}
-		return getAvaliableAllList(skills, player.getAllSkillsArray(), player.getLevel());
+		return getAvaliableAllList(skills, player.getAllSkillsArray(), player.getLevel(), player.getRace());
 	}
 	
 	/**
@@ -282,39 +289,42 @@ public final class SkillAcquireHolder extends AbstractHolder
 	 * @param skillLearns Collection<SkillLearn>
 	 * @param skills Skill[]
 	 * @param level int
+	 * @param race
 	 * @return Collection<SkillLearn>
 	 */
-	private Collection<SkillLearn> getAvaliableAllList(Collection<SkillLearn> skillLearns, Skill[] skills, int level)
+	private Collection<SkillLearn> getAvaliableAllList(Collection<SkillLearn> skillLearns, Skill[] skills, int level, Race race)
 	{
 		Set<SkillLearn> skillLearnMap = new HashSet<>();
 		loop:
 		for (SkillLearn temp : skillLearns)
 		{
-			for (Skill s : skills)
+			if (temp.isOfRace(race))
 			{
-				if (temp.getId() == s.getId())
+				for (Skill s : skills)
 				{
-					if ((temp.getLevel() - 1) == s.getLevel())
+					if (temp.getId() == s.getId())
 					{
-						skillLearnMap.add(temp);
-					}
-					continue loop;
-				}
-				if (s.isRelationSkill())
-				{
-					for (int ds : s.getRelationSkills())
-					{
-						if (temp.getId() == ds)
+						if ((temp.getLevel() - 1) == s.getLevel())
 						{
-							continue loop;
+							skillLearnMap.add(temp);
+						}
+						continue loop;
+					}
+					if (s.isRelationSkill())
+					{
+						for (int ds : s.getRelationSkills())
+						{
+							if (temp.getId() == ds)
+							{
+								continue loop;
+							}
 						}
 					}
 				}
-				
-			}
-			if (temp.getLevel() == 1)
-			{
-				skillLearnMap.add(temp);
+				if (temp.getLevel() == 1)
+				{
+					skillLearnMap.add(temp);
+				}
 			}
 		}
 		
@@ -328,40 +338,43 @@ public final class SkillAcquireHolder extends AbstractHolder
 	 * @param level int
 	 * @return Collection<SkillLearn>
 	 */
-	private Collection<SkillLearn> getAvaliableList(final Collection<SkillLearn> skillLearns, Skill[] skills, int level)
+	private Collection<SkillLearn> getAvaliableList(final Collection<SkillLearn> skillLearns, Skill[] skills, int level, Race race)
 	{
 		Set<SkillLearn> skillLearnMap = new HashSet<>();
 		for (SkillLearn temp : skillLearns)
 		{
-			if (temp.getMinLevel() <= level)
+			if (temp.isOfRace(race))
 			{
-				boolean knownSkill = false;
-				m:
-				for (int j = 0; (j < skills.length) && !knownSkill; j++)
+				if (temp.getMinLevel() <= level)
 				{
-					if (skills[j].isRelationSkill())
+					boolean knownSkill = false;
+					m:
+					for (int j = 0; (j < skills.length) && !knownSkill; j++)
 					{
-						for (int _k : skills[j].getRelationSkills())
+						if (skills[j].isRelationSkill())
 						{
-							if (temp.getId() == _k)
+							for (int _k : skills[j].getRelationSkills())
 							{
-								knownSkill = true;
-								break m;
+								if (temp.getId() == _k)
+								{
+									knownSkill = true;
+									break m;
+								}
+							}
+						}
+						if (skills[j].getId() == temp.getId())
+						{
+							knownSkill = true;
+							if (skills[j].getLevel() == (temp.getLevel() - 1))
+							{
+								skillLearnMap.add(temp);
 							}
 						}
 					}
-					if (skills[j].getId() == temp.getId())
+					if (!knownSkill && (temp.getLevel() == 1))
 					{
-						knownSkill = true;
-						if (skills[j].getLevel() == (temp.getLevel() - 1))
-						{
-							skillLearnMap.add(temp);
-						}
+						skillLearnMap.add(temp);
 					}
-				}
-				if (!knownSkill && (temp.getLevel() == 1))
-				{
-					skillLearnMap.add(temp);
 				}
 			}
 		}
@@ -384,7 +397,6 @@ public final class SkillAcquireHolder extends AbstractHolder
 		{
 			case NORMAL:
 				skills.addAll(_normalSkillTree.get(player.getActiveClassId()));
-				
 				break;
 			case COLLECTION:
 				skills.addAll(_collectionSkillTree);
@@ -420,12 +432,14 @@ public final class SkillAcquireHolder extends AbstractHolder
 		
 		for (SkillLearn temp : skills)
 		{
-			if ((temp.getLevel() == level) && (temp.getId() == id))
+			if (temp.isOfRace(player.getRace()))
 			{
-				return temp;
+				if ((temp.getLevel() == level) && (temp.getId() == id))
+				{
+					return temp;
+				}
 			}
 		}
-		
 		return null;
 	}
 	
@@ -489,7 +503,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 				return false;
 		}
 		
-		return isSkillPossible(skills, skill);
+		return isSkillPossible(skills, skill, player);
 	}
 	
 	/**
@@ -498,13 +512,16 @@ public final class SkillAcquireHolder extends AbstractHolder
 	 * @param skill Skill
 	 * @return boolean
 	 */
-	private boolean isSkillPossible(final Collection<SkillLearn> skills, Skill skill)
+	private boolean isSkillPossible(final Collection<SkillLearn> skills, Skill skill, Player player)
 	{
 		for (SkillLearn learn : skills)
 		{
-			if ((learn.getId() == skill.getId()) && (learn.getLevel() <= skill.getLevel()))
+			if (learn.isOfRace(player.getRace()))
 			{
-				return true;
+				if ((learn.getId() == skill.getId()) && (learn.getLevel() <= skill.getLevel()))
+				{
+					return true;
+				}
 			}
 		}
 		return false;
@@ -631,6 +648,42 @@ public final class SkillAcquireHolder extends AbstractHolder
 	}
 	
 	/**
+	 * Method getSkillRemoveByClass.
+	 * @param List <Integer>
+	 */
+	public List<Integer> getSkillRemoveByClass(int cId)
+	{
+		List<Integer> ListSkills = new ArrayList<>();
+		ListSkills = _AwakenClassSkillRemove.get(cId);
+		return ListSkills;
+	}
+	
+	/**
+	 * Method addClassToRemove.
+	 * @param HashMap<Integer, List<Integer>>
+	 */
+	
+	public void addClassToRemove(HashMap<Integer, List<Integer>> map)
+	{
+		int ClassID;
+		for (ClassId classId : ClassId.VALUES)// Check all classes on the game
+		{
+			if (classId.getClassLevel() != ClassLevel.Fourth)// Only Loads classes on Third Profession Change (The delete not are only on 3rd class)
+			{
+				continue;
+			}
+			ClassID = classId.getId();
+			List<Integer> temp;
+			temp = map.get(ClassID);
+			if (temp == null)
+			{
+				continue;
+			}
+			_AwakenClassSkillRemove.put(ClassID, temp);
+		}
+	}
+	
+	/**
 	 * Method addAllFishingLearns.
 	 * @param race int
 	 * @param s List<SkillLearn>
@@ -706,6 +759,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 		info("load " + sizeHashMap(_transferSkillTree) + " transfer learns for " + _transferSkillTree.size() + " classes.");
 		info("load " + sizeHashMap(_transformationSkillTree) + " transformation learns for " + _transformationSkillTree.size() + " races.");
 		info("load " + sizeHashMap(_fishingSkillTree) + " fishing learns for " + _fishingSkillTree.size() + " races.");
+		info("load " + sizeHashMapInt(_AwakenClassSkillRemove) + " fishing learns for " + _AwakenClassSkillRemove.size() + " races.");
 		info("load " + _certificationSkillTree.size() + " certification learns.");
 		info("load " + _collectionSkillTree.size() + " collection learns.");
 		info("load " + _pledgeSkillTree.size() + " pledge learns.");
@@ -736,6 +790,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 		_collectionSkillTree.clear();
 		_pledgeSkillTree.clear();
 		_subUnitSkillTree.clear();
+		_AwakenClassSkillRemove.clear();
 	}
 	
 	/**
@@ -747,6 +802,22 @@ public final class SkillAcquireHolder extends AbstractHolder
 	{
 		int i = 0;
 		for (List<SkillLearn> iterator : a.values())
+		{
+			i += iterator.size();
+		}
+		
+		return i;
+	}
+	
+	/**
+	 * Method sizeHashMapInt.
+	 * @param a HashMap<Integer,List<SkillLearn>>
+	 * @return int
+	 */
+	private int sizeHashMapInt(HashMap<Integer, List<Integer>> a)
+	{
+		int i = 0;
+		for (List<Integer> iterator : a.values())
 		{
 			i += iterator.size();
 		}
