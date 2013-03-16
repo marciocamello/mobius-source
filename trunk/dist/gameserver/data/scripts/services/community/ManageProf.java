@@ -36,6 +36,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @author Mobius
+ * @Translated by KadeL
  * @version $Revision: 1.0 $
  */
 public class ManageProf implements ScriptFile, ICommunityBoardHandler
@@ -147,25 +148,25 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 		{
 			if (player.getLevel() < 80)
 			{
-				player.sendMessage("You must be at least level 80.");
+				player.sendMessage("You are too weak! Come get a Level 80!");
 				return;
 			}
 			if (player.getActiveSubClass().isBase())
 			{
-				player.sendMessage("You must be on your SubClass.");
+				player.sendMessage("You must be on a Sub-Class!");
 				return;
 			}
 			for (SubClass s : player.getSubClassList().values())
 			{
 				if (s.isDouble())
 				{
-					player.sendMessage("You already have it double.");
+					player.sendMessage("You already have a Dual-Class!");
 					return;
 				}
 			}
 			player.getActiveSubClass().setType(SubClassType.DOUBLE_SUBCLASS);
 			AwakingManager.getInstance().onPlayerEnter(player);
-			player.sendMessage("You received your Double SubClass.");
+			player.sendMessage("Congratulations! You have Dual-Classl.");
 			player.sendPacket(new ExSubjobInfo(player, true));
 		}
 	}
@@ -208,7 +209,7 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 		{
 			ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.CLASS_MASTERS_PRICE_ITEM_LIST[jobLevel]);
 			html.append("You have to pay: <font color=\"LEVEL\">");
-			html.append(Config.CLASS_MASTERS_PRICE_LIST[jobLevel] + "</font> <font color=\"LEVEL\">" + item.getName() + "</font> for the Class Upgrade.<br>");
+			html.append(Config.CLASS_MASTERS_PRICE_LIST[jobLevel] + "</font> <font color=\"LEVEL\">" + item.getName() + "</font> for a Class Change.<br>");
 			html.append("<center><table width=600><tr>");
 			for (ClassId cid : ClassId.values())
 			{
@@ -222,7 +223,7 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 				}
 			}
 			html.append("</tr>");
-			html.append("<tr><td><center><button value=\"Class Upgrade\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center></td></tr>");
+			html.append("<tr><td><center><button value=\"Dual-Class\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center></td></tr>");
 			html.append("</table></center>");
 			html.append("</td>");
 			html.append("</tr>");
@@ -233,60 +234,60 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 			switch (jobLevel)
 			{
 				case 1:
-					html.append("<center><button value=\"Class Upgrade\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
-					html.append("�?ривет�?тву�?, <font color=F2C202>" + player.getName() + "</font> . Ва�?а текуща�? профе�?�?и�? <font color=F2C202>" + player.getClassId().name() + "</font><br>");
-					html.append("Дл�? того, что бы �?менит�? ва�?у профе�?�?и�?, вы должны до�?тич�?: <font color=F2C202>20-го уровн�?.</font><br>");
-					html.append("Дл�? активации �?абкла�?�?ов вы должны до�?тич�? <font color=F2C202>76-го уровн�?.</font><br>");
-					html.append("Что бы �?тат�? двор�?нином, вы должны прокачат�? �?абкла�?�? до <font color=F2C202>76-го уровн�?.</font><br>");
+					html.append("<center><button value=\"Dual-Class\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
+					html.append("Welcome, <font color=F2C202>" + player.getName() + "</font>. Your current Class is <font color=F2C202>" + player.getClassId().name() + "</font><br>");
+					html.append("To change your Class, you have to reach <font color=F2C202>Level 20.</font><br>");
+					html.append("To activate the Sub-Class you must reach <font color=F2C202>Level 76.</font><br>");
+					html.append("In order to become a Nobless, you have to pump the <font color=F2C202>Sub-Class Level 76.</font><br>");
 					break;
 				case 2:
-					html.append("<center><button value=\"Дуал-�?ла�?�?\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
-					html.append("�?ривет�?тву�?, <font color=F2C202>" + player.getName() + "</font> . Ва�?а текуща�? профе�?�?и�? <font color=F2C202>" + player.getClassId().name() + "</font><br>");
-					html.append("Дл�? того, что бы �?менит�? ва�?у профе�?�?и�?, вы должны до�?тич�?: <font color=F2C202>40-го уровн�?.</font><br>");
-					html.append("Дл�? активации �?абкла�?�?ов вы должны до�?тич�? <font color=F2C202>76-го уровн�?.</font><br>");
-					html.append("Что бы �?тат�? двор�?нином, вы должны прокачат�? �?абкла�?�? до <font color=F2C202>76-го уровн�?.</font><br>");
+					html.append("<center><button value=\"Dual-Class\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
+					html.append("Welcome, <font color=F2C202>" + player.getName() + "</font>. Your current Class is <font color=F2C202>" + player.getClassId().name() + "</font><br>");
+					html.append("To change your Class, you have to reach <font color=F2C202>Level 40.</font><br>");
+					html.append("To activate the Sub-Class you must reach <font color=F2C202>Level 76.</font><br>");
+					html.append("In order to become a Nobless, you have to pump the <font color=F2C202>Sub-Class Level 76.</font><br>");
 					break;
 				case 3:
-					html.append("<center><button value=\"Дуал-�?ла�?�?\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
-					html.append("�?ривет�?тву�?, <font color=F2C202>" + player.getName() + "</font> . Ва�?а текуща�? профе�?�?и�? <font color=F2C202>" + player.getClassId().name() + "</font><br>");
-					html.append("Дл�? того, что бы �?менит�? ва�?у профе�?�?и�?, вы должны до�?тич�?: <font color=F2C202>76-го уровн�?.</font><br>");
-					html.append("Дл�? активации �?абкла�?�?ов вы должны до�?тич�? <font color=F2C202>76-го уровн�?.</font><br>");
-					html.append("Что бы �?тат�? двор�?нином, вы должны прокачат�? �?абкла�?�? до <font color=F2C202>76-го уровн�?</font><br>");
+					html.append("<center><button value=\"Dual-Class\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
+					html.append("Welcome, <font color=F2C202>" + player.getName() + "</font>. Your current Class is <font color=F2C202>" + player.getClassId().name() + "</font><br>");
+					html.append("To change your Class, you have to reach <font color=F2C202>Level 76.</font><br>");
+					html.append("To activate the Sub-Class you must reach <font color=F2C202>Level 76.</font><br>");
+					html.append("In order to become a Nobless, you have to pump the <font color=F2C202>Sub-Class Level 76.</font><br>");
 					break;
 				case 4:
-					html.append("<center><button value=\"Дуал-�?ла�?�?\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
-					html.append("�?ривет�?тву�?, <font color=F2C202>" + player.getName() + "</font> . Ва�?а текуща�? профе�?�?и�? <font color=F2C202>" + player.getClassId().name() + "</font><br>");
-					html.append("Дл�? того, что бы �?менит�? ва�?у профе�?�?и�?, вы должны до�?тич�?: <font color=F2C202>85-го уровн�?.</font><br>");
+					html.append("<center><button value=\"Dual-Class\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
+					html.append("Welcome, <font color=F2C202>" + player.getName() + "</font>. Your current Class is <font color=F2C202>" + player.getClassId().name() + "</font><br>");
+					html.append("To change your Class, you have to reach <font color=F2C202>Level 85.</font><br>");
 					if (level < 76)
 					{
 						break;
 					}
-					html.append("Вы до�?тигли <font color=F2C202>76-го уровн�?</font>, активаци�? �?абкла�?�?ов тепер�? до�?тупна.<br>");
+					html.append("You have reached <font color=F2C202>Level 76</font>, the activation of a Sub-Class is now available.<br>");
 					if (!player.isNoble())
 					{
-						html.append("Вы можете получит�? двор�?н�?тво. �?о�?етите раздел '�?агазин'.<br>");
+						html.append("You can get a Noblesse. Visit the 'Shop'.<br>");
 					}
 					else
 					{
-						html.append("Вы уже двор�?нин. �?олучение двор�?н�?тва более не до�?тупно.<br>");
+						html.append("You already Nobless. Getting the nobless no longer available.<br>");
 					}
 					break;
 				case 5:
-					html.append("<center><button value=\"Дуал-�?ла�?�?\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
-					html.append("�?ривет�?тву�?, <font color=F2C202>" + player.getName() + "</font> . Ва�?а текуща�? профе�?�?и�? <font color=F2C202>" + player.getClassId().name() + "</font><br>");
-					html.append("Дл�? ва�? бол�?�?е нет до�?тупных профе�?�?ий, либо �?ла�?�?-ма�?тер в данный момент не до�?тупен.<br>");
+					html.append("<center><button value=\"Dual-Class\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
+					html.append("Welcome, <font color=F2C202>" + player.getName() + "</font>. Your current Class is <font color=F2C202>" + player.getClassId().name() + "</font><br>");
+					html.append("For you there are no more jobs available, or Class-Master is not currently available.<br>");
 					if (level < 76)
 					{
 						break;
 					}
-					html.append("Вы до�?тигли <font color=F2C202>76-го уровн�?</font>, активаци�? �?абкла�?�?ов тепер�? до�?тупна.<br>");
+					html.append("You have reached <font color=F2C202>Level 76</font>, the activation of a Sub-Class is now available.<br>");
 					if (!player.isNoble())
 					{
-						html.append("Вы можете получит�? двор�?н�?тво. �?о�?етите раздел '�?агазин'.<br>");
+						html.append("You can get a Noblesse. Visit the 'Shop'.<br>");
 					}
 					else
 					{
-						html.append("Вы уже двор�?нин. �?олучение двор�?н�?тва более не до�?тупно.<br>");
+						html.append("You already Nobless. Getting the nobless no longer available.<br>");
 					}
 					break;
 			}
