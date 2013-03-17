@@ -5012,7 +5012,6 @@
 			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
-	</npc>
 	<!--ru name: Громовой Ястреб-->
 	<npc id="14988" name="Thunder Hawk" title="">
 		<!--tauti retail fixed by andreagighi-->
