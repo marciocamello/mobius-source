@@ -25,6 +25,7 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;
+import lineage2.gameserver.model.ClonePlayer;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Playable;
@@ -476,9 +477,13 @@ public class PlayableAI extends CharacterAI
 			Playable actor = getActor();
 			if (getIntention() != AI_INTENTION_FOLLOW)
 			{
-				if ((actor.isPet() || actor.isServitor() || actor.isClone()) && (getIntention() == AI_INTENTION_ACTIVE))
+				if ((actor.isPet() || actor.isServitor()) && (getIntention() == AI_INTENTION_ACTIVE))
 				{
 					((Summon) actor).setFollowMode(false);
+				}
+				else if (actor.isClone() && (getIntention() == AI_INTENTION_ACTIVE))
+				{
+					((ClonePlayer) actor).setFollowMode(false);
 				}
 				return;
 			}

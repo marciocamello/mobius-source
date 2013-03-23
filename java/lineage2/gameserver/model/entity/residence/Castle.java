@@ -73,6 +73,7 @@ public class Castle extends Residence
 	private static final String CASTLE_UPDATE_SEED = "UPDATE castle_manor_production SET can_produce=? WHERE seed_id=? AND castle_id=? AND period=?";
 	
 	private final IntObjectMap<MerchantGuard> _merchantGuards = new HashIntObjectMap<>();
+	@SuppressWarnings("rawtypes")
 	private final IntObjectMap<List> _relatedFortresses = new CTreeIntObjectMap<>();
 	private Dominion _dominion;
 	
@@ -97,6 +98,7 @@ public class Castle extends Residence
 		_npcStringName = NpcString.valueOf(1001000 + _id);
 	}
 	
+	@SuppressWarnings("rawtypes")
 	@Override
 	public void init()
 	{
@@ -877,6 +879,7 @@ public class Castle extends Residence
 		return _npcStringName;
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public IntObjectMap<List> getRelatedFortresses()
 	{
 		return _relatedFortresses;

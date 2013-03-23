@@ -4866,7 +4866,7 @@
 			<skill id="4408" level="14"/>	<!--HP Increase (6x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4410" level="10"/>	<!--Slightly Weak P. Atk.-->
+			<skill id="4410" level="8"/>	<!--Slightly Weak P. Atk.-->
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="10"/>	<!--Slightly Weak P. Def.-->
 			<skill id="4413" level="10"/>	<!--Slightly Weak M. Def.-->

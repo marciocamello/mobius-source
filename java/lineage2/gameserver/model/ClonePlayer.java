@@ -27,8 +27,10 @@ import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.listener.actor.OnAttackListener;
 import lineage2.gameserver.listener.actor.OnMagicUseListener;
+import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
+import lineage2.gameserver.model.entity.events.impl.DuelEvent;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ActionFail;
@@ -40,6 +42,7 @@ import lineage2.gameserver.network.serverpackets.PartySpelled;
 import lineage2.gameserver.network.serverpackets.RelationChanged;
 import lineage2.gameserver.network.serverpackets.StatusUpdate;
 import lineage2.gameserver.scripts.Events;
+import lineage2.gameserver.taskmanager.DecayTaskManager;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.player.PlayerTemplate;
 import lineage2.gameserver.utils.Location;
@@ -71,6 +74,10 @@ public class ClonePlayer extends Playable
 	 */
 	private boolean _follow = true, _ssCharged = false;
 	private final OwnerAttakListener _listener;
+	/**
+	 * Field _decayTask.
+	 */
+	private Future<?> _decayTask;
 	
 	/**
 	 * Constructor for FakePlayer.
@@ -85,6 +92,46 @@ public class ClonePlayer extends Playable
 		_listener = new OwnerAttakListener();
 		owner.addListener(_listener);
 		setXYZ(owner.getX() + Rnd.get(-100, 100), owner.getY() + Rnd.get(-100, 100), owner.getZ());
+	}
+	
+	/**
+	 * Method startDecay.
+	 * @param delay long
+	 */
+	protected void startDecay(long delay)
+	{
+		stopDecay();
+		_decayTask = DecayTaskManager.getInstance().addDecayTask(this, delay);
+	}
+	
+	/**
+	 * Method stopDecay.
+	 */
+	protected void stopDecay()
+	{
+		if (_decayTask != null)
+		{
+			_decayTask.cancel(false);
+			_decayTask = null;
+		}
+	}
+	
+	/**
+	 * Method onDecay.
+	 */
+	@Override
+	protected void onDecay()
+	{
+		deleteMe();
+	}
+	
+	/**
+	 * Method endDecayTask.
+	 */
+	public void endDecayTask()
+	{
+		stopDecay();
+		doDecay();
 	}
 	
 	/**
@@ -176,6 +223,50 @@ public class ClonePlayer extends Playable
 				player.sendActionFailed();
 			}
 		}
+	}
+	
+	/**
+	 * Method onDeath.
+	 * @param killer Creature
+	 */
+	@Override
+	protected void onDeath(Creature killer)
+	{
+		super.onDeath(killer);
+		startDecay(8500L);
+		Player owner = getPlayer();
+		if ((killer == null) || (killer == owner) || (killer == this) || isInZoneBattle() || killer.isInZoneBattle())
+		{
+			return;
+		}
+		if (killer instanceof Summon)
+		{
+			killer = killer.getPlayer();
+		}
+		if (killer == null)
+		{
+			return;
+		}
+		if (killer.isPlayer())
+		{
+			Player pk = (Player) killer;
+			if (isInZone(ZoneType.SIEGE))
+			{
+				return;
+			}
+			DuelEvent duelEvent = getEvent(DuelEvent.class);
+			if ((owner.getPvpFlag() > 0) || owner.atMutualWarWith(pk))
+			{
+				pk.setPvpKills(pk.getPvpKills() + 1);
+			}
+			else if (((duelEvent == null) || (duelEvent != pk.getEvent(DuelEvent.class))) && (getKarma() <= 0))
+			{
+				int pkCountMulti = Math.max(pk.getPkKills() / 2, 1);
+				pk.increaseKarma(Config.KARMA_MIN_KARMA * pkCountMulti);
+			}
+			pk.sendChanges();
+		}
+		
 	}
 	
 	/**
@@ -691,6 +782,5 @@ public class ClonePlayer extends Playable
 	public void doPickupItem(GameObject object)
 	{
 		// TODO Auto-generated method stub
-		
 	}
 }

@@ -565,7 +565,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 	</npc>
     <npc id="29211" name="Octavis" title="">

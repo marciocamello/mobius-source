@@ -21,7 +21,7 @@ import org.apache.commons.lang3.ArrayUtils;
 
 public class _488_WondersofCaring extends Quest implements ScriptFile
 {
-	private static final int chance = 39;
+	private static final int chance = 50;
 	private static final int Box = 19500;
 	private static final int[] mobstohunt =
 	{

@@ -434,9 +434,9 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isCommon" val="true"/>
 	</skill>
-	<skill id="1320" levels="9" name="Create Common Item">
+	<skill id="1320" levels="10" name="Create Common Item">
     <!-- Creates level 1 common items. -->
-		<table name="#magicLevel">5 20 28 36 43 49 55 62 70</table>
+		<table name="#magicLevel">5 20 28 36 43 49 55 62 70 85 </table>
 		<set name="icon" val="icon.skill0172"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1533,7 +1533,7 @@
 			<table name="#mpConsume2">54 52 50 48 46 44 42 41 39 37 35 33 31 29 27</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" time="#abnormal_time" val="0" stackOrder="1" stackType="elementalResist">
 				<add order="0x40" stat="defenceEarth" val="20"/>
 				<add order="0x40" stat="defenceFire" val="20"/>
 				<add order="0x40" stat="defenceWater" val="20"/>
@@ -1569,7 +1569,7 @@
 			<table name="#mpConsume2">54 52 50 48 46 44 42 41 39 37 35 33 31 29 27</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" time="#abnormal_time" val="0" stackOrder="1" stackType="divineResist">
 				<add order="0x40" stat="defenceUnholy" val="30"/>
 				<add order="0x40" stat="defenceHoly" val="20"/>
 			</effect>
@@ -2845,6 +2845,7 @@
 		<table name="#mpConsume2">43 49 55</table>
 		<table name="#mpConsume1">11 13 14</table>
 		<table name="#magicLevel">58 66 74</table>
+		<table name="#stackLevel">1 2 3</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1392"/>
 		<set name="reuseDelay" val="2000"/>
@@ -2873,7 +2874,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 		<for>
-			<effect count="1" name="Buff" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" time="#abnormal_time" val="0" stackOrder="#stackLevel" stackType="HolyAtr">
 				<add order="0x40" stat="defenceHoly" val="#Res"/>
 			</effect>
 		</for>
@@ -2914,7 +2915,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#order" stackType="unholyRcpt" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="#order" stackType="DarkAtr" time="#abnormal_time" val="0">
 				<add order="0x40" stat="defenceUnholy" val="#Res"/>
 			</effect>
 		</for>

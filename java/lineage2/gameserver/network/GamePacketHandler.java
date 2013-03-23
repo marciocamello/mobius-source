@@ -1235,6 +1235,7 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									msg = new RequestWorldStatistics();
 									break;
 								case 0xA7:
+									msg = new RequestUserStatistics();
 									break;
 								case 0xA8:
 									msg = new RequestRegistPartySubstitute();

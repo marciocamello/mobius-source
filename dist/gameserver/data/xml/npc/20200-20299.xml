@@ -4645,7 +4645,7 @@
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="2"/>	<!--Magic Creatures-->
 			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">

@@ -4098,6 +4098,7 @@
 			<skill id="1525" level="7" min_level="48" cost="1" name="Divine Curse"/>
 			<skill id="1525" level="8" min_level="48" cost="1" name="Divine Curse"/>
 			<skill id="1525" level="9" min_level="48" cost="1" name="Divine Curse"/>
+
 			<skill id="1525" level="10" min_level="52" cost="1" name="Divine Curse"/>
 			<skill id="1525" level="11" min_level="52" cost="1" name="Divine Curse"/>
 			<skill id="1525" level="12" min_level="52" cost="1" name="Divine Curse"/>
@@ -13774,6 +13775,7 @@
 			<skill id="142" level="4" cost="3300" name="Armor Mastery" min_level="15" />
 			<skill id="142" level="5" cost="3300" name="Armor Mastery" min_level="15" />
 			<skill id="141" level="3" cost="6700" name="Weapon Mastery" min_level="15" />
+
 			<skill id="239" level="1" name="Expertise D" min_level="20" />
 			<skill id="1320" level="2" name="Create Common Item" min_level="20" />
 			<skill id="1320" level="3" name="Create Common Item" min_level="28" />

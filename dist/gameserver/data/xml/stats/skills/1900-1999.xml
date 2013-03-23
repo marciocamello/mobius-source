@@ -40,7 +40,7 @@
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="NEGATE_EFFECTS"/>
         <set name="operateType" val="OP_ACTIVE"/>
-        <set name="negateEffects" val="Sleep;Root;Stun;Paralyze;Mute"/>
+        <set name="negateEffects" val="Poison;Root;Stun;Bleed"/>
         <for>
             <effect abnormal="invul2" count="1" name="Invulnerable" stackOrder="-1" stackType="Invulnerable" time="10" val="0" cancelOnAction="true"/>
         </for>
@@ -100,8 +100,8 @@
         <set name="magicLevel" val="85"/>
         <set name="operateType" val="OP_PASSIVE"/>
         <for>
-            <add order="0x40" stat="rCrit" val="208"/>
-            <add order="0x40" stat="mCritRate" val="208"/>
+            <add order="0x40" stat="cAtkStatic" val="208"/>
+            <add order="0x40" stat="mCritDamage" val="208"/>
         </for>
     </skill>
     <skill id="1910" levels="1" name="Dark Presence">
@@ -156,8 +156,9 @@
         <set name="skillType" val="BUFF"/>
         <set name="magicLevel" val="85"/>
         <set name="operateType" val="OP_PASSIVE"/>
-        <set name="absorbPart" val="0.99"/>
-        <for/>
+        <for>
+				<add order="0x40" stat="absorbDam" val="1"/>
+        </for>
     </skill>
     <skill id="1914" levels="1" name="Savage">
     <!-- For 60 seconds, increases Atk. Spd. by 17% and decreases P. Def. by 15%. -->
@@ -227,8 +228,8 @@
         <set name="magicLevel" val="85"/>
         <set name="operateType" val="OP_PASSIVE"/>
         <for>
-            <mul order="0x30" stat="pAtk" val="1.02"/>
-            <mul order="0x30" stat="mAtk" val="1.02"/>
+			<mul order="0x30" stat="skillPower" val="1.02"/>
+            <mul order="0x30" stat="magicDamage" val="1.02"/>
         </for>
     </skill>
     <skill id="1920" levels="1" name="Endurance">
@@ -273,9 +274,9 @@
         <set name="magicLevel" val="85"/>
         <set name="operateType" val="OP_PASSIVE"/>
         <for>
-            <mul order="0x30" stat="pAtk" val="1.01">
-                <target pvp="true"/>
-            </mul>
+	    	<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.01"/>
+	    	<mul order="0x30" stat="pvpPhysDmgBonus" val="1.01"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.01"/>
             <mul order="0x30" stat="mpConsumePhysical" val="1.05"/>
         </for>
     </skill>
@@ -287,8 +288,7 @@
         <set name="operateType" val="OP_PASSIVE"/>
         <for>
             <add order="0x40" stat="attackUnholy" val="10"/>
-            <sub order="0x40" stat="defenceWater" val="10"/>
-            <sub order="0x40" stat="defenceEarth" val="10"/>
+            <sub order="0x40" stat="defenceUnholy" val="10"/>
             <add order="0x40" stat="mentalResist" val="20"/>
         </for>
     </skill>
@@ -506,6 +506,7 @@
             <effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="WynnForce" stackOrder="1">
                 <def name="auraSkillId" val="1937"/>
                 <mul order="0x30" stat="mpConsum" val="0.97"/>
+                <mul order="0x30" stat="mpConsumePhysical" val="0.97"/>
             </effect>
         </for>
     </skill>

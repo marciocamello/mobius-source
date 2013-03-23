@@ -8,7 +8,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
 		<set name="operateType" val="OP_PASSIVE"/>
-		<set name="relationSkillsId" val="832;257;249;144;474;935;331;626;141;250;463;925;926;934;330;217;205;5604"/>
+		<set name="relationSkillsId" val="832;257;249;144;474;935;331;626;250;463;925;926;934;330;217;205;5604"/>
 		<enchant1 levels="10" name="Power">
 			<table name="#pAtk">250 266 281 297 312 327 343 358 374 389</table>
 			<table name="#mAtk">111 118 124 131 138 145 152 158 165 172</table>
@@ -471,28 +471,30 @@
 			<for/>
 	</skill>
 	<skill id="11517" levels="4" name="Horn Melody">
-    <!-- Increases all party members' P. Atk. by 17%, P. Def. by 15%, M. Atk. by 79%, and M. Def. by 30% for 30 minutes. -->
+   	<!-- Increases all party members' P. Atk. by 17%, P. Def. by 15%, M. Atk. by 79%, and M. Def. by 30% for 30 minutes. -->
 		<table name="#pAtk">1.17 1.19 1.21 1.23</table>
 		<table name="#mAtk">1.79 1.83 1.87 1.91</table>
+		<table name="#stackLevel">11 12 13 14</table>
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">190</table>
+		<table name="#target">TARGET_PARTY TARGET_PARTY TARGET_PARTY TARGET_CLAN</table>
 		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="target" val="TARGET_PARTY"/>
+		<set name="target" val="#target"/>
 		<set name="magicLevel" val="85"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="skillRadius" val="1000"/>
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1006;1040;1517;989;1036;988;1007;123;1009;871;1068;"/>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle"/>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackType="MagicDefUp;pAtk;pDef;mAtk">
+			<effect name="Buff" time="#time" val="0" stackOrder="#stackLevel" stackType="MagicDefUp;pAtk;pDef;mAtk">
 				<mul order="0x30" stat="pDef" val="1.15"/>
 				<mul order="0x30" stat="pAtk" val="#pAtk"/>
 				<mul order="0x30" stat="mAtk" val="#mAtk"/>
@@ -501,25 +503,26 @@
 		</for>
 	</skill>
 	<skill id="11518" levels="4" name="Drum Melody">
-    <!-- Increases party member's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, resistance to debuffs by 10%, P. Def. upon evading a critical attack, and decreases Speed by 15% for 30 minutes. Party members equipped with a melee weapon, a bow or crossbow who receive damage have a chance to increase Critical Damage during a normal attack. -->
+    	<!-- Increases party member's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, resistance to debuffs by 10%, P. Def. upon evading a critical attack, and decreases Speed by 15% for 30 minutes. Party members equipped with a melee weapon, a bow or crossbow who receive damage have a chance to increase Critical Damage during a normal attack. -->
 		<table name="#spd">0.85 0.9 0.95 1.0</table>
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">170</table>
+		<table name="#target">TARGET_PARTY TARGET_PARTY TARGET_PARTY TARGET_CLAN</table>
 		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="target" val="TARGET_PARTY"/>
+		<set name="target" val="#target"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="skillRadius" val="1000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1356;1413;1363;"/>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle"/>
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="3" stackType="ancient">
 				<mul order="0x30" stat="maxMp" val="1.2"/>
@@ -538,25 +541,26 @@
 		</for>
 	</skill>
 	<skill id="11519" levels="4" name="Pipe Organ Melody">
-    <!-- Increases party members' Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP Recovery Bonus by 20% for 30 minutes. -->
+    	<!-- Increases party members' Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP Recovery Bonus by 20% for 30 minutes. -->
 		<table name="#vuln">1.37 1.39 1.41 1.43</table>
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">170</table>
+		<table name="#target">TARGET_PARTY TARGET_PARTY TARGET_PARTY TARGET_CLAN</table>
 		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
-		<set name="mpConsume2" val="#mpConsume2"/>	
-		<set name="target" val="TARGET_PARTY"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="#target"/>
 		<set name="skillRadius" val="1000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1044;1045;1501;1048;"/>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle"/>
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="11" stackType="hp_up;hpregen;mp_up">
 				<mul order="0x30" stat="maxHp" val="#vuln"/>
@@ -567,28 +571,30 @@
 		</for>
 	</skill>
 	<skill id="11520" levels="4" name="Guitar Melody">
-    <!-- Increases party members' P. Critical Rate by 32%, P. Critical Damage by 35%, M. Critical Rate by 20 and decreases MP Consumption for physical skills by 20% and magic skills by 10% for 30 minutes. Also decreases MP Consumption for Iss Enchanter's buff skills by 20%. -->
-		<table name="#vuln">32 34 36 38</table>
+   	 <!-- Increases party members' P. Critical Rate by 32%, P. Critical Damage by 35%, M. Critical Rate by 20 and decreases MP Consumption for physical skills by 20% and magic skills by 10% for 30 minutes. Also decreases MP Consumption for Iss Enchanter's buff skills by 20%. -->
+		<table name="#vuln">1.32 1.34 1.36 1.38</table>
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">170</table>
+		<table name="#stackLevel">11 12 13 14</table>
+		<table name="#target">TARGET_PARTY TARGET_PARTY TARGET_PARTY TARGET_CLAN</table>
 		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="target" val="TARGET_PARTY"/>
+		<set name="target" val="#target"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
 		<set name="skillRadius" val="1000"/>
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1476;1242;1253;1308;1518;1077;"/>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle"/>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="11" stackType="impulse;rCrit;cAtk">
-				<add order="0x40" stat="rCrit" val="#vuln"/>
+			<effect name="Buff" time="#time" val="0" stackOrder="#stackLevel" stackType="impulse;rCrit;cAtk">
+				<mul order="0x30" stat="rCrit" val="#vuln"/>
 				<mul order="0x30" stat="cAtk" val="1.35"/>
 				<add order="0x40" stat="mCritRate" val="20"/>
 				<mul order="0x30" stat="mpConsum" val="0.9"/>
@@ -597,58 +603,63 @@
 		</for>
 	</skill>
 	<skill id="11521" levels="4" name="Harp Melody">
-    <!-- Increases party members' P. Accuracy by 5, P. and M. Evasion by 5, Speed by 34 and decreases received Critical Damage by 30% for 30 minutes. -->
+   	<!-- Increases party members' P. Accuracy by 5, P. and M. Evasion by 5, Speed by 34 and decreases received Critical Damage by 30% for 30 minutes. -->
 		<table name="#time">1800</table>
 		<table name="#vuln">5 6 7 8</table>
 		<table name="#vuln2">34 35 36 37</table>
+		<table name="#stackLevel">11 12 13 14</table>
 		<table name="#mpConsume2">170</table>
+		<table name="#target">TARGET_PARTY TARGET_PARTY TARGET_PARTY TARGET_CLAN</table>
 		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="target" val="TARGET_PARTY"/>
+		<set name="target" val="#target"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="skillRadius" val="1000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="relationSkillsId" val="1535;230;1461;1240;1252;1309;"/>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle"/>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="11" stackType="accuracyUp;SpeedUp;Poem_Arfa;rEvas;CoP">
+			<effect name="Buff" time="#time" val="0" stackOrder="#stackLevel" stackType="accuracyUp;SpeedUp;Poem_Arfa;rEvas;CoP">
 				<add order="0x40" stat="accCombat" val="#vuln"/>
-				<add order="0x40" stat="pSkillEvasion" val="#vuln"/>
+				<add order="0x40" stat="rEvas" val="#vuln"/>
+				<add order="0x40" stat="mEvas" val="#vuln"/>
 				<add order="0x40" stat="runSpd" val="#vuln2"/>
 				<mul order="0x30" stat="critDamRcpt" val="0.7"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="11522" levels="4" name="Lute Melody">
-    <!-- Increases party members' Atk. Spd. by 34% and Casting Spd. by 31% for 30 minutes. Also there is a chance of triggering a 9% Vampiric Rage effect during a normal attack. -->
+    	<!-- Increases party members' Atk. Spd. by 34% and Casting Spd. by 31% for 30 minutes. Also there is a chance of triggering a 9% Vampiric Rage effect during a normal attack. -->
 		<table name="#time">1800</table>
 		<table name="#vuln1">1.34 1.35 1.36 1.37</table>
 		<table name="#vuln2">1.31 1.32 1.33 1.34</table>
+		<table name="#stackLevel">11 12 13 14</table>
 		<table name="#mpConsume2">170</table>
+		<table name="#target">TARGET_PARTY TARGET_PARTY TARGET_PARTY TARGET_CLAN</table>
 		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="target" val="TARGET_PARTY"/>
+		<set name="target" val="#target"/>
 		<set name="skillRadius" val="1000"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1002;1251;1310;971;1519;1086;1085;"/>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle"/>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="11" stackType="vampRage;pAtkSpeedUp;mAtkSpeedUp">
+			<effect name="Buff" time="#time" val="0" stackOrder="#stackLevel" stackType="vampRage;pAtkSpeedUp;mAtkSpeedUp">
 				<add order="0x40" stat="absorbDam" val="9"/>
 				<mul order="0x30" stat="pAtkSpd" val="#vuln1"/>
 				<mul order="0x30" stat="mAtkSpd" val="#vuln2"/>
@@ -668,13 +679,13 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1283;1590;1589;264;1243;1389;1391;271;"/>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle"/>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="shieldProbUp;Harmony_isa;Great;HarmonyGuardian_1;HarmonyGuardian_2">
+			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="shieldProbUp;sDef;Harmony_isa;Great;HarmonyGuardian_1;HarmonyGuardian_2;song_of_hunter;dance_of_fire;dance_of_warrior;song_of_earth;rhythm_of_critical;rhythm_of_combat;">
 				<mul order="0x30" stat="pAtk" val="1.12"/>
 				<mul order="0x30" stat="pDef" val="1.45"/>
 				<add order="0x40" stat="rShld" val="30"/>
@@ -685,7 +696,7 @@
 		</for>
 	</skill>
 	<skill id="11524" levels="1" name="Warrior's Harmony">
-    <!-- Increases the selected party member's P. Atk. by 35%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8%, P. Critical Damage by 35%, P. Critical Rate by 100, Speed and decreases M. Def. by 16%, P. Def. by 8%, and P. Evasion by 4 for 30 minutes. -->
+   	<!-- Increases the selected party member's P. Atk. by 35%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8%, P. Critical Damage by 35%, P. Critical Rate by 100, Speed and decreases M. Def. by 16%, P. Def. by 8%, and P. Evasion by 4 for 30 minutes. -->
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="2000"/>
@@ -697,13 +708,13 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1062;1388;274;1562;1586;1585;1390;269;1261;"/>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle"/>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="Great;Harmony;Harmony_isa;HarmonyBerserk_1;HarmonyBerserk_2">
+			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="Great;Harmony;Harmony_isa;HarmonyBerserk_1;HarmonyBerserk_2;dance_of_warrior;song_of_earth;rhythm_of_combat;dance_of_fire;song_of_hunter;rhythm_of_critical">
 				<mul order="0x30" stat="pAtk" val="1.35"/>
 				<mul order="0x30" stat="mAtk" val="1.16"/>
 				<mul order="0x30" stat="mAtkSpd" val="1.08"/>
@@ -718,7 +729,7 @@
 		</for>
 	</skill>
 	<skill id="11525" levels="1" name="Wizard's Harmony">
-    <!-- Increases the selected party member's P. Atk. by 8%, M. Atk. by 40%, Atk. Spd. and Casting Spd. by 8%, M. Def. by 14%, M. Critical Rate by 100%, MP recovery bonus by 20%, Speed by 8 and decreases P. Def. by 8%, P. Evasion by 4, MP Consumption of magic skill by 15%, MP Consumption of physical skill by 5%, and skill cooldown by 20% for 30 minutes. -->
+  	<!-- Increases the selected party member's P. Atk. by 8%, M. Atk. by 40%, Atk. Spd. and Casting Spd. by 8%, M. Def. by 14%, M. Critical Rate by 100%, MP recovery bonus by 20%, Speed by 8 and decreases P. Def. by 8%, P. Evasion by 4, MP Consumption of magic skill by 15%, MP Consumption of physical skill by 5%, and skill cooldown by 20% for 30 minutes. -->
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="2000"/>
@@ -730,13 +741,13 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="267;273;349;1588;1587;1078;365;336;1595;1596;337;"/>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle"/>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="concentration;Harmony_isa;buff_one;HarmonyMage_1;HarmonyMage_2;HarmonyMage_3">
+			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="concentration;Harmony_isa;buff_one;HarmonyMage_1;HarmonyMage_2;HarmonyMage_3;rhythm_of_magic;dance_of_mystic;song_of_warding;dance_of_siren;song_of_renewal;rhythm_of_start">
 				<mul order="0x30" stat="pAtk" val="1.08"/>
 				<mul order="0x30" stat="mAtk" val="1.40"/>
 				<mul order="0x30" stat="mAtkSpd" val="1.08"/>
@@ -754,7 +765,7 @@
 		</for>
 	</skill>
 	<skill id="11529" levels="1" name="Prevailing Sonata">
-    <!-- Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 35%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes. -->
+    	<!-- Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 35%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes. -->
 		<table name="#time">300</table>
 		<table name="#mpConsume2">140</table>
 		<table name="#reuseDelay">2000</table>
@@ -768,17 +779,17 @@
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="363;276;1001;275;1592;1591;304;"/>
-        <enchant1 levels="10" name="Cost">
-			<table name="#mpConsume2">133 128 122 117 111 106 100 95 88 83</table>
-		</enchant1>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle" enchRoute="9">
-			<table name="#reuseDelay">2000 1900 1800 1700 1600 1500 1400 1300 1200 1100</table>
-        </enchant3>
+		<enchant1 levels="10" name="Cost">
+				<table name="#mpConsume2">133 128 122 117 111 106 100 95 88 83</table>
+			</enchant1>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle" enchRoute="9">
+				<table name="#reuseDelay">2000 1900 1800 1700 1600 1500 1400 1300 1200 1100</table>
+		</enchant3>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="5" stackType="sov;som;doc;dof">
+			<effect name="Buff" time="#time" val="0" stackOrder="5" stackType="song_of_vitality;song_of_meditation;dance_of_concentration;dance_of_fury;rhythm_of_fighter;rhythm_of_magician">
 				<mul order="0x30" stat="mAtkSpd" val="1.30"/>
 				<mul order="0x30" stat="pAtkSpd" val="1.15"/>
 				<mul order="0x30" stat="maxHp" val="1.30"/>
@@ -788,7 +799,7 @@
 		</for>
 	</skill>
 	<skill id="11530" levels="1" name="Daring Sonata">
-    <!-- Increases party members' P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4 for 5 minutes. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
+    	<!-- Increases party members' P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4 for 5 minutes. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
 		<table name="#time">300</table>
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="2000"/>
@@ -801,25 +812,27 @@
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1284;310;1594;1593;305;"/>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle" enchRoute="9"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle" enchRoute="9"/>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="DmgShield;SongOfVengeance;DanceOfVampire;DoB">
+			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="rhythm_of_revenge;DmgShield;song_of_vengeance;dance_of_vampire;dance_of_berserker">
 				<mul order="0x30" stat="pAtk" val="1.08"/>
 				<mul order="0x30" stat="mAtk" val="1.16"/>
 				<mul order="0x30" stat="mAtkSpd" val="1.08"/>
 				<mul order="0x30" stat="pAtkSpd" val="1.08"/>
 				<mul order="0x30" stat="pDef" val="0.97"/>
 				<mul order="0x30" stat="mDef" val="0.89"/>				
-				<sub order="0x40" stat="rEvas" val="4"/>				
+				<sub order="0x40" stat="rEvas" val="4"/>			
+				<add order="0x40" stat="absorbDam" val="8"/>	
+				<add order="0x40" stat="reflectDam" val="10"/>				
 			</effect>
 		</for>
 	</skill>
 	<skill id="11532" levels="1" name="Refreshing Sonata">
-    <!-- Increases party members' HP Recovery Bonus by 20%, P. Accuracy by 4, P. Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill cooldown by 10% for 5 minutes. -->
+    	<!-- Increases party members' HP Recovery Bonus by 20%, P. Accuracy by 4, P. Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill cooldown by 10% for 5 minutes. -->
 		<table name="#time">300</table>
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="2000"/>
@@ -832,22 +845,22 @@
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="268;266;272;364;1073;265;"/>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle" enchRoute="9"/>
-		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="3" stackType="SongOfWind;SongOfWater;sol;soc;Breath;DanceOfInspiration">
-				<mul order="0x30" stat="regHp" val="1.20"/>
-				<mul order="0x30" stat="mpConsum" val="0.80"/>
-				<add order="0x30" stat="accCombat" val="4"/>
-				<add order="0x40" stat="runSpd" val="20"/>
-				<mul order="0x30" stat="pReuse" val="0.90"/>
-				<mul order="0x30" stat="mReuse" val="0.90"/>
-				<add order="0x30" stat="rEvas" val="3"/>
-			</effect>
-		</for>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">330 360 390 420 450 480 510 540 570 600</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle" enchRoute="9"/>
+			<for>
+				<effect name="Buff" time="#time" val="0" stackOrder="3" stackType="song_of_wind;song_of_water;song_of_life;song_of_champion;Breath;dance_of_inspiration;">
+					<mul order="0x30" stat="regHp" val="1.20"/>
+					<mul order="0x30" stat="mpConsum" val="0.80"/>
+					<add order="0x30" stat="accCombat" val="4"/>
+					<add order="0x40" stat="runSpd" val="20"/>
+					<mul order="0x30" stat="pReuse" val="0.90"/>
+					<mul order="0x30" stat="mReuse" val="0.90"/>
+					<add order="0x30" stat="rEvas" val="3"/>
+				</effect>
+			</for>
 	</skill>
 	<skill id="11533" levels="1" name="Blood Requiem">
     <!-- Bestows an 80% Vampiric Rage effect on party members. -->
@@ -1403,7 +1416,7 @@
 		</for>
 	</skill>
 	<skill id="11562" levels="1" name="Devil's Movement">
-    <!-- Prevents aggressive monsters from attacking party members for 2 minutes. The effect is canceled if any party member initiates an attack. -->
+    	<!-- Prevents aggressive monsters from attacking party members for 2 minutes. The effect is canceled if any party member initiates an attack. -->
 		<table name="#mpConsume2">70</table>
 		<set name="reuseDelay" val="3000"/>
 		<set name="hitTime" val="2500"/>	
@@ -1415,7 +1428,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="366;"/>
 		<for>
-			<effect count="1" name="SilentMove" stackOrder="1" stackType="SilentMove" time="120" val="0">
+			<effect count="1" name="SilentMove" stackOrder="2" stackType="SilentMove" time="120" val="0">
 				<mul order="0x30" stat="pAtk" val="0.55"/>
 				<mul order="0x30" stat="pDef" val="0.85"/>
 				<mul order="0x30" stat="mDef" val="0.85"/>
@@ -1467,16 +1480,16 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isMagic" val="true"/>
 		<set name="relationSkillsId" val="1549;307;1182;481;306;1189;308;1548;529;1352;309;1191;"/>
-        <enchant1 levels="10" name="Cost">
-            <table name="#mpConsume2">107 103 98 94 89 85 80 76 71 67</table>
-            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant1>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
-            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant2>
+		<enchant1 levels="10" name="Cost">
+		    <table name="#mpConsume2">107 103 98 94 89 85 80 76 71 67</table>
+		    <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant1>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		    <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant2>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="IsaElement">
+			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="elementalResist;IsaElement;song_of_elemental;song_of_sguard;dance_of_eguard;song_of_fguard;dance_of_aguard;FireAtr;AquaAtr;EarthAtr;WindAtr">
 				<add order="0x40" stat="defenceFire" val="30"/>
 				<add order="0x40" stat="defenceWater" val="30"/>
 				<add order="0x40" stat="defenceWind" val="30"/>
@@ -1499,27 +1512,25 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isMagic" val="true"/>
 		<set name="relationSkillsId" val="270;196;1392;1393;1033;530;277;1032"/>
-        <enchant1 levels="10" name="Cost">
-            <table name="#mpConsume2">107 103 98 94 89 85 80 76 71 67</table>
-            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant1>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
-            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant2>
+		<enchant1 levels="10" name="Cost">
+		    <table name="#mpConsume2">107 103 98 94 89 85 80 76 71 67</table>
+		    <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant1>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		    <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant2>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="unholyRcpt;SacredAtr">
-				<add order="0x40" stat="defenceWater" val="30"/>
-				<add order="0x40" stat="defenceFire" val="30"/>
-				<add order="0x40" stat="defenceWind" val="30"/>
-				<add order="0x40" stat="defenceEarth" val="30"/>
+			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="divineResist;dance_of_alignment;dance_of_light;song_of_invocation;HolyAtr;DarkAtr;poisonResist;bleedResist">
+				<add order="0x40" stat="defenceHoly" val="30"/>
+				<add order="0x40" stat="defenceUnholy" val="30"/>
 				<add order="0x40" stat="poisonResist" val="50"/>
 				<add order="0x40" stat="bleedResist" val="50"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="11567" levels="1" name="Mental Protection">
-    <!-- Increases party members' resistance to Hold/Sleep/Mental Attacks by 50, resistance to buff canceling attacks by 30 and resistance to debuffs by 20 for 30 minutes. -->
+    	<!-- Increases party members' resistance to Hold/Sleep/Mental Attacks by 50, resistance to buff canceling attacks by 30 and resistance to debuffs by 20 for 30 minutes. -->
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">70</table>
 		<set name="reuseDelay" val="2000"/>
@@ -1533,21 +1544,21 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isMagic" val="true"/>
 		<set name="relationSkillsId" val="311;1035;1362;1415;"/>
-        <enchant1 levels="10" name="Cost">
-            <table name="#mpConsume2">107 103 98 94 89 85 80 76 71 67</table>
-            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant1>
-        <enchant2 levels="10" name="Time">
-            <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
-            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant2>
+		<enchant1 levels="10" name="Cost">
+		    <table name="#mpConsume2">107 103 98 94 89 85 80 76 71 67</table>
+		    <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant1>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		    <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant2>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="mental">
-				<add order="0x40" stat="paralyzeResist" val="50"/>
-				<add order="0x40" stat="debuffResist" val="20"/>
+			<effect name="Buff" time="#time" val="0" stackOrder="4" stackType="mental;resist_debuff_dispel;dance_of_protection">
 				<add order="0x40" stat="rootResist" val="50"/>
 				<add order="0x40" stat="sleepResist" val="50"/>
+				<add order="0x40" stat="mentalResist" val="50"/>
 				<add order="0x40" stat="cancelResist" val="30"/>
+				<add order="0x40" stat="debuffResist" val="20"/>
 			</effect>
 		</for>
 	</skill>

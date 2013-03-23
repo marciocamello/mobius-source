@@ -278,7 +278,7 @@ public class UserInfo extends L2GameServerPacket
 		vehicle_obj_id = player.isInBoat() ? player.getBoat().getObjectId() : 0x00;
 		_race = player.getRace().ordinal();
 		sex = player.getSex();
-		base_class = player.getBaseClassId();
+		base_class = player.getBaseDefaultClassId();
 		level = player.getLevel();
 		_exp = player.getExp();
 		_expPercent = Experience.getExpPercent(player.getLevel(), player.getExp());

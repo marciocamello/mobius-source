@@ -408,9 +408,9 @@ public class _10331_StartofFate extends Quest implements ScriptFile
 			case TOOK:
 			case MOKA:
 			case VALFAR:
+				Race race = player.getRace();
 				if (cond == 0)
 				{
-					Race race = player.getRace();
 					if (((race == Race.human) && (npcId != FRANCO)) || ((race == Race.elf) && (npcId != RIVIAN)) || ((race == Race.darkelf) && (npcId != DEVON)) || ((race == Race.orc) && (npcId != TOOK)) || ((race == Race.dwarf) && (npcId != MOKA)) || ((race == Race.kamael) && (npcId != VALFAR)))
 					{
 						break;
@@ -419,10 +419,9 @@ public class _10331_StartofFate extends Quest implements ScriptFile
 				}
 				else if ((cond >= 6) && (cond <= 11))
 				{
-					Race race = player.getRace();
-					if ((cond == 0) && (qs.getPlayer().getLevel() < 18))
+					if ((cond == 0) && (qs.getPlayer().getLevel() < 85))
 					{
-						htmltext = "Only characters under level 18 can accept this quest";
+						htmltext = "Only characters under level 85 can accept this quest";
 					}
 					else if (player.isMageClass())
 					{

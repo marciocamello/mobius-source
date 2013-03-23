@@ -485,9 +485,9 @@
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="11"/>	<!--Average P. Def.-->
 			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
+			<skill id="4414" level="1"/>	<!--Light Armor Type-->
 			<skill id="4415" level="11"/>	<!--Spears-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="2"/>	<!--Demons-->
 			<skill id="5336" level="5"/>	<!--NPC(party) - Physical Range Close Range Attack-->
 			<skill id="5359" level="5"/>	<!--NPC(party) - Physical Single Long Range Attack - Dark-->
 			<skill id="5362" level="5"/>	<!--Stun-->
@@ -2055,7 +2055,7 @@
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="15"/>	<!--Strong P. Def.-->
 			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
+			<skill id="4414" level="3"/>	<!--Heavy Armor Type-->
 			<skill id="4415" level="19"/>	<!--Dual-Sword Weapons-->
 			<skill id="4416" level="9"/>	<!--Demons-->
 			<skill id="4435" level="1"/>	<!--Greater Resist Stun-->

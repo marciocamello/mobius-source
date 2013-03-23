@@ -40,6 +40,7 @@ import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.taskmanager.tasks.SoIStageUpdater;
 import lineage2.gameserver.taskmanager.tasks.TaskRecom;
 import lineage2.gameserver.taskmanager.tasks.TaskVitalitySystem;
+import lineage2.gameserver.taskmanager.tasks.WorldStatisticUpdate;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -260,6 +261,7 @@ public final class TaskManager
 		registerTask(new TaskRecom());
 		registerTask(new SoIStageUpdater());
 		registerTask(new TaskVitalitySystem());
+		registerTask(new WorldStatisticUpdate());
 	}
 	
 	/**

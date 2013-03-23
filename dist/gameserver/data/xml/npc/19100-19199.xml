@@ -658,7 +658,9 @@
 			<defence attribute="holy" value="240"/>
 			<defence attribute="unholy" value="240"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19116" name="Jewel" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -743,7 +745,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="5467" level="6"/>
+			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
 	<npc id="19118" name="Rotting Corpse" title="">
@@ -751,7 +753,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -787,7 +790,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="5467" level="6"/>
+			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
 	<npc id="19119" name="Harnak Transparent 1" title="">
@@ -888,7 +891,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="160.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -922,14 +926,17 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19122" name="Sacrificial Altar" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="160.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -963,14 +970,17 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19123" name="Altar of Shilen" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="160.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -1004,7 +1014,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19124" name="Explosive Energy" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1047,7 +1059,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="2"/>
-			<skill id="5465" level="2"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="19125" name="Isadora" title="Great Magus of Greed">
@@ -1055,7 +1067,8 @@
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="530201"/>
@@ -1089,7 +1102,9 @@
 			<defence attribute="holy" value="260"/>
 			<defence attribute="unholy" value="260"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19126" name="Commando" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1130,7 +1145,9 @@
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19127" name="Commando Captain" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1171,7 +1188,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19128" name="Fellow" title="Balthus Knight">
 		<!--fixed by Darvin & HaxHago-->
@@ -1212,7 +1231,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19129" name="Ateld" title="Balthus Knight">
 		<!--fixed by Darvin & HaxHago-->
@@ -1253,7 +1274,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19130" name="Paulia" title="Balthus Knight">
 		<!--fixed by Darvin & HaxHago-->
@@ -1294,7 +1317,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="15"/>
+		</skills>
 	</npc>
 	<npc id="19131" name="Rash" title="Support Squad Lieutenant">
 		<!--fixed by Darvin & HaxHago-->
@@ -1335,7 +1360,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19132" name="Kale" title="Balthus Envoy">
 		<!--fixed by Darvin & HaxHago-->
@@ -1376,7 +1403,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19133" name="Expedition Member" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1417,7 +1446,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19134" name="Antharas Decoration 1" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1458,7 +1489,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19135" name="Antharas Decoration 2" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1499,7 +1532,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19136" name="Expedition Member" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1540,7 +1575,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="16"/>
+		</skills>
 	</npc>
 	<npc id="19137" name="Expedition Member" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1581,7 +1618,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19138" name="Antharas Decoration 3" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1622,7 +1661,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19139" name="Antharas Decoration 4" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1663,7 +1704,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="15"/>
+		</skills>
 	</npc>
 	<npc id="19140" name="Antharas Decoration 5" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1704,7 +1747,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19141" name="Combat Officer" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1745,7 +1790,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<equip>
 			<rhand item_id="129"/>
 			<lhand item_id="102"/>
@@ -1793,7 +1840,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19143" name="Sacrificial Offering" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1834,7 +1883,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19144" name="Sacrificial Offering" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1875,7 +1926,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19145" name="Sacrificial Offering" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1916,7 +1969,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19146" name="Sacrificial Offering" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1957,7 +2012,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19147" name="Sacrificial Offering" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -1998,7 +2055,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19148" name="Sacrificial Offering" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -2039,7 +2098,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19149" name="Sacrificial Offering" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -2080,7 +2141,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19150" name="Sacrificial Offering" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -2121,7 +2184,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19151" name="Sacrificial Offering" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -2162,7 +2227,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19152" name="Combat Soldier" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -2203,7 +2270,9 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<equip>
 			<rhand item_id="129"/>
 			<lhand item_id="102"/>
@@ -2251,7 +2320,9 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<ai_params>
             <set name="ignoreAggroDelay" value="true"/>
         </ai_params>
@@ -2295,7 +2366,9 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="4"/>
+		</skills>
 	</npc>
 	<npc id="19155" name="Infiltration Officer" title="Combat Assistant">
 		<!--fixed by Darvin & HaxHago-->
@@ -2336,14 +2409,17 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19156" name="Servitor" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2379,8 +2455,8 @@
 		</attributes>
 		<skills>
 			<skill id="4414" level="3"/>
-			<skill id="4416" level="6"/>
-			<skill id="5463" level="7"/>
+			<skill id="4416" level="7"/>
+			<skill id="5463" level="1"/>
 		</skills>
 	</npc>
 	<npc id="19157" name="Resurrected Vengeful Spirit" title="">
@@ -2388,7 +2464,8 @@
 		<set name="collision_radius" value="6.5"/>
 		<set name="collision_height" value="18.5"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2431,7 +2508,8 @@
 		<set name="collision_radius" value="9.4"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2474,7 +2552,8 @@
 		<set name="collision_radius" value="500.0"/>
 		<set name="collision_height" value="1450.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="27406"/>
@@ -2510,7 +2589,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="12"/>
-			<skill id="5465" level="12"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="19160" name="Teredor" title="">
@@ -2554,7 +2633,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="12"/>
-			<skill id="5465" level="12"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="19161" name="Fire Region" title="">
@@ -2562,7 +2641,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2598,7 +2678,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="2"/>
-			<skill id="5462" level="2"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="19162" name="Magical Power Ballista" title="">
@@ -2606,7 +2686,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="160.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2640,7 +2721,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19163" name="Wastelands Decoration 1" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -2681,14 +2764,17 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="19164" name="Tentacle" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="55.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2722,14 +2808,17 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="12"/>
+		</skills>
 	</npc>
 	<npc id="19165" name="Tentacle" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="55.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2763,14 +2852,17 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="12"/>
+		</skills>
 	</npc>
 	<npc id="19166" name="Clan Orc" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="54.5"/>
 		<set name="level" value="95"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2804,14 +2896,17 @@
 			<defence attribute="holy" value="260"/>
 			<defence attribute="unholy" value="260"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="17"/>
+		</skills>
 	</npc>
 	<npc id="19167" name="Clan Orc" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="level" value="95"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2845,14 +2940,17 @@
 			<defence attribute="holy" value="260"/>
 			<defence attribute="unholy" value="260"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="17"/>
+		</skills>
 	</npc>
 	<npc id="19168" name="Clan Orc Subordinate" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="33.5"/>
 		<set name="level" value="95"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2886,14 +2984,17 @@
 			<defence attribute="holy" value="260"/>
 			<defence attribute="unholy" value="260"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="17"/>
+		</skills>
 	</npc>
 	<npc id="19169" name="Clan Orc Subordinate" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="level" value="95"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2927,7 +3028,9 @@
 			<defence attribute="holy" value="260"/>
 			<defence attribute="unholy" value="260"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="17"/>
+		</skills>
 	</npc>
 	<npc id="19170" name="Bloody Swampland Transparent 1" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -2968,7 +3071,9 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19171" name="Tentacle" title="">
         <set name="aggroRange" value="100"/>
@@ -3090,7 +3195,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19174" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -3131,7 +3238,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19175" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -3172,7 +3281,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19176" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -3213,7 +3324,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19177" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -3254,7 +3367,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19178" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -3295,7 +3410,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19179" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -3336,7 +3453,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19180" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -3377,7 +3496,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19181" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -3418,14 +3539,17 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19182" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="93.0"/>
 		<set name="collision_height" value="90.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="20903"/>
@@ -3459,14 +3583,17 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 	</npc>
 	<npc id="19183" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="45.0"/>
 		<set name="collision_height" value="47.5"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="20903"/>
@@ -3500,7 +3627,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="21"/>
+		</skills>
 	</npc>
 	<npc id="19184" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -3541,7 +3670,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19185" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -3582,7 +3713,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19186" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -3623,7 +3756,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19187" name="Corpse" title="">
 		<!--fixed by Darvin & HaxHago-->
@@ -3664,7 +3799,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19188" name="Toma" title="Master">
 		<!--fixed by Darvin & HaxHago-->
@@ -3705,7 +3842,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19189" name="Siege Golem" title="">
         <set name="aggroRange" value="800"/>
@@ -3751,7 +3890,8 @@
         </ai_params>
         <skills>
             <skill id="16024" level="1"/>
-        </skills>
+        <skill id="4416" level="2"/>
+		</skills>
     </npc>
 	<npc id="19190" name="Swoop Cannon" title="">
         <set name="aggroRange" value="0"/>
@@ -3797,7 +3937,8 @@
         </ai_params>
         <skills>
             <skill id="16023" level="1"/>
-        </skills>
+        <skill id="4416" level="21"/>
+		</skills>
     </npc>
 	<npc id="19191" name="Croto" title="Captain">
         <set name="aggroRange" value="300"/>
@@ -3971,7 +4112,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19195" name="Wirphy" title="Gatekeeper">
 		<!--fixed by Darvin & HaxHago-->
@@ -4012,7 +4155,9 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 	</npc>
 	<npc id="19196" name="Soldier" title="">
         <set name="aggroRange" value="150"/>

@@ -300,7 +300,7 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 			charInfopackage.setKarma(chardata.getInt("karma"));
 			charInfopackage.setRace(race.ordinal());
 			charInfopackage.setClassId(classid);
-			charInfopackage.setBaseClassId(baseClassId[0]);
+			charInfopackage.setBaseClassId(baseClassId[1]);
 			long deletetime = chardata.getLong("deletetime");
 			int deletedays = 0;
 			if (Config.DELETE_DAYS > 0)

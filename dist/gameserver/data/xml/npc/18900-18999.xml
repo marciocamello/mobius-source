@@ -481,7 +481,7 @@
 		<set name="type" value="Monster"/>
 		<skills>
 			<skill id="4071" level="3"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4410" level="10"/>	<!--Slightly Weak P. Atk.-->
+			<skill id="4410" level="13"/>	<!--Slightly Weak P. Atk.-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="5463" level="1"/>	<!--Water Attacks-->
 			<skill id="5620" level="2"/>	<!--Short-Range Physical Attack Weakness-->
@@ -3759,9 +3759,9 @@
 			<skill id="14053" level="5"/>
 			<!--Wood Upward Strike-->
 			<skill id="14054" level="2"/>
-			<skill id="5465" level="5"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="5"/>
 			<!--Wood Downward Strike-->
 			<skill id="14101" level="2"/>
 		</skills>
@@ -3826,7 +3826,7 @@
 			<!--Power Shot-->
 			<skill id="14055" level="2"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 			<!--Power Arrow-->
 			<skill id="14056" level="2"/>
 		</skills>
@@ -3891,7 +3891,7 @@
 			<!--Power Shot-->
 			<skill id="14055" level="2"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 			<!--Power Arrow-->
 			<skill id="14056" level="2"/>
 		</skills>
@@ -3955,8 +3955,8 @@
 			<!--Rush-->
 			<skill id="14052" level="2"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
-			<skill id="5462" level="3"/>
+			<skill id="4416" level="3"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="18977" name="Beorning Berserker" title="Experienced Scout">
@@ -4018,8 +4018,8 @@
 			<!--Rush-->
 			<skill id="14052" level="2"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
-			<skill id="5462" level="3"/>
+			<skill id="4416" level="3"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="18978" name="Orbis' Victim" title="Cursed">
@@ -4148,13 +4148,13 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Bugs-->
-			<skill id="4416" level="12"/>
+			<skill id="4416" level="6"/>
 			<!--Extremely Weak P. Atk.-->
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="19"/>
 			<!--Extremely Strong M. Atk.-->
-			<skill id="4411" level="19"/>
+			<skill id="4411" level="18"/>
 			<!--Extremely Strong P. Def.-->
-			<skill id="4412" level="18"/>
+			<skill id="4412" level="3"/>
 			<!--Extremely Weak M. Def.-->
 			<skill id="4413" level="3"/>
 		</skills>
@@ -4234,13 +4234,13 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Bugs-->
-			<skill id="4416" level="12"/>
+			<skill id="4416" level="6"/>
 			<!--Extremely Weak P. Atk.-->
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="19"/>
 			<!--Extremely Strong M. Atk.-->
-			<skill id="4411" level="19"/>
+			<skill id="4411" level="18"/>
 			<!--Extremely Strong P. Def.-->
-			<skill id="4412" level="18"/>
+			<skill id="4412" level="3"/>
 			<!--Extremely Weak M. Def.-->
 			<skill id="4413" level="3"/>
 		</skills>
@@ -4318,13 +4318,13 @@
 		<skills>
 			<!--Bugs-->
 			<skill id="4416" level="6"/>
-			<skill id="5463" level="6"/>
+			<skill id="5463" level="1"/>
 			<!--Extremely Weak P. Atk.-->
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="19"/>
 			<!--Extremely Strong M. Atk.-->
-			<skill id="4411" level="19"/>
+			<skill id="4411" level="18"/>
 			<!--Extremely Strong P. Def.-->
-			<skill id="4412" level="18"/>
+			<skill id="4412" level="3"/>
 			<!--Extremely Weak M. Def.-->
 			<skill id="4413" level="3"/>
 		</skills>
@@ -4404,13 +4404,13 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Bugs-->
-			<skill id="4416" level="12"/>
+			<skill id="4416" level="6"/>
 			<!--Extremely Weak P. Atk.-->
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="19"/>
 			<!--Extremely Strong M. Atk.-->
-			<skill id="4411" level="19"/>
+			<skill id="4411" level="18"/>
 			<!--Extremely Strong P. Def.-->
-			<skill id="4412" level="18"/>
+			<skill id="4412" level="3"/>
 			<!--Extremely Weak M. Def.-->
 			<skill id="4413" level="3"/>
 		</skills>
@@ -4492,13 +4492,13 @@
 		<skills>
 			<!--Bugs-->
 			<skill id="4416" level="6"/>
-			<skill id="5463" level="6"/>
+			<skill id="5463" level="1"/>
 			<!--Extremely Weak P. Atk.-->
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="19"/>
 			<!--Extremely Strong M. Atk.-->
-			<skill id="4411" level="19"/>
+			<skill id="4411" level="18"/>
 			<!--Extremely Strong P. Def.-->
-			<skill id="4412" level="18"/>
+			<skill id="4412" level="3"/>
 			<!--Extremely Weak M. Def.-->
 			<skill id="4413" level="3"/>
 		</skills>
@@ -5035,11 +5035,12 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="12"/>
 			<!--Millipede P. Atk. Enhancement-->
 			<skill id="14117" level="5"/>
 			<!--Millipede Blow-->
 			<skill id="14183" level="1"/>
+		<skill id="4412" level="9"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5123,13 +5124,14 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="12"/>
 			<!--Underbug Self Blasting-->
 			<skill id="14119" level="1"/>
 			<!--Millipede P. Def. Enhancement-->
 			<skill id="14118" level="1"/>
 			<!--Millipede Blow-->
 			<skill id="14183" level="1"/>
+		<skill id="4412" level="9"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5201,9 +5203,10 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="12"/>
 			<!--Millipede Blow-->
 			<skill id="14183" level="1"/>
+		<skill id="4412" level="9"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">

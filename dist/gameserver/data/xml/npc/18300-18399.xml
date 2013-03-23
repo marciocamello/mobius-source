@@ -1844,12 +1844,13 @@
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="13"/>	<!--Slightly Strong P. Def.-->
 			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4414" level="1"/>	<!--Standard Type-->
 			<skill id="4415" level="13"/>	<!--Two-handed Sword-->
 			<skill id="4416" level="1"/>	<!--Undead-->
 			<skill id="4417" level="35"/>	<!--Undead-->
 			<skill id="4438" level="5"/>	<!--Greater Resist Sleep-->
 			<skill id="4439" level="5"/>	<!--Greater Resist Hold-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="150"/>
@@ -1920,6 +1921,7 @@
 			<skill id="4417" level="34"/>	<!--Undead-->
 			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
 			<skill id="4560" level="9"/>	<!--NPC Fire Burn-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="150"/>
@@ -1992,6 +1994,7 @@
 			<skill id="4417" level="36"/>	<!--Undead-->
 			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
 			<skill id="4439" level="5"/>	<!--Greater Resist Hold-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="150"/>
@@ -2064,6 +2067,7 @@
 			<skill id="4417" level="36"/>	<!--Undead-->
 			<skill id="4438" level="5"/>	<!--Greater Resist Sleep-->
 			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="150"/>
@@ -2133,6 +2137,7 @@
 			<skill id="4438" level="5"/>	<!--Greater Resist Sleep-->
 			<skill id="4439" level="5"/>	<!--Greater Resist Hold-->
 			<skill id="4614" level="9"/>	<!--NPC Death Bomb-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="170"/>
@@ -2200,6 +2205,7 @@
 			<skill id="4415" level="6"/>	<!--Blunt Weapons-->
 			<skill id="4416" level="9"/>	<!--Demons-->
 			<skill id="4417" level="14"/>	<!--Demons-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="170"/>
@@ -2262,12 +2268,13 @@
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="13"/>	<!--Slightly Strong P. Def.-->
 			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4414" level="3"/>	<!--Standard Type-->
 			<skill id="4415" level="1"/>	<!--Bare Hands-->
 			<skill id="4416" level="9"/>	<!--Demons-->
 			<skill id="4417" level="14"/>	<!--Demons-->
 			<skill id="4438" level="5"/>	<!--Greater Resist Sleep-->
 			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="170"/>
@@ -2334,12 +2341,13 @@
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="13"/>	<!--Slightly Strong P. Def.-->
 			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4414" level="3"/>	<!--Standard Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="1"/>	<!--Undead-->
 			<skill id="4417" level="14"/>	<!--Demons-->
 			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
 			<skill id="4439" level="5"/>	<!--Greater Resist Hold-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="170"/>
@@ -2405,12 +2413,13 @@
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="13"/>	<!--Slightly Strong P. Def.-->
 			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4414" level="3"/>	<!--Standard Type-->
 			<skill id="4415" level="9"/>	<!--Bows-->
 			<skill id="4416" level="1"/>	<!--Undead-->
 			<skill id="4417" level="36"/>	<!--Undead-->
 			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
 			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="170"/>
@@ -2472,13 +2481,14 @@
 			<skill id="4411" level="16"/>	<!--Very Strong M. Atk.-->
 			<skill id="4412" level="11"/>	<!--Average P. Def.-->
 			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4414" level="3"/>	<!--Standard Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="9"/>	<!--Demons-->
 			<skill id="4417" level="14"/>	<!--Demons-->
 			<skill id="4438" level="5"/>	<!--Greater Resist Sleep-->
 			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
 			<skill id="4560" level="9"/>	<!--NPC Fire Burn-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="170"/>
@@ -2549,6 +2559,7 @@
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="1"/>	<!--Undead-->
 			<skill id="4417" level="36"/>	<!--Undead-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="170"/>
@@ -2618,6 +2629,7 @@
 			<skill id="4438" level="5"/>	<!--Greater Resist Sleep-->
 			<skill id="4439" level="5"/>	<!--Greater Resist Hold-->
 			<skill id="5042" level="9"/>	<!--NPC Dispel Bomb-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="170"/>
@@ -2686,6 +2698,7 @@
 			<skill id="4438" level="5"/>	<!--Greater Resist Sleep-->
 			<skill id="4439" level="5"/>	<!--Greater Resist Hold-->
 			<skill id="5042" level="9"/>	<!--NPC Dispel Bomb-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="170"/>
@@ -3513,7 +3526,7 @@
 		<skills>
 			<skill id="4077" level="9"/>	<!--NPC Aura Burn-->
 			<skill id="4137" level="9"/>	<!--Hydro Screw-->
-			<skill id="4408" level="11"/>	<!--HP Increase (3x)-->
+			<skill id="4408" level="10"/>	<!--HP Increase (3x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
 			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->

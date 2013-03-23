@@ -1089,7 +1089,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect count="1" name="Buff" stackOrder="1" stackType="unholyRcpt" time="300" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="DarkAtr" time="300" val="0">
 				<add order="0x40" stat="defenceUnholy" val="30"/>
 			</effect>
 		</for>

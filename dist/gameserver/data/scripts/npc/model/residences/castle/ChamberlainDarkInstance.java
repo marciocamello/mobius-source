@@ -75,6 +75,7 @@ public class ChamberlainDarkInstance extends ResidenceManager
 		_siegeDialog = _mainDialog;
 	}
 	
+	@SuppressWarnings("rawtypes")
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -552,6 +553,7 @@ public class ChamberlainDarkInstance extends ResidenceManager
 					default:
 						continue;
 				}
+				@SuppressWarnings("unchecked")
 				List<Fortress> fortresses = entry.getValue();
 				for (Fortress fort : fortresses)
 				{
@@ -683,7 +685,7 @@ public class ChamberlainDarkInstance extends ResidenceManager
 					isHaveRigths(player, Clan.CP_CS_SET_FUNCTIONS) // funcs
 					)
 					{
-						return COND_OWNER; // Есть какие либо замковые привилегии
+						return COND_OWNER;
 					}
 				}
 			}

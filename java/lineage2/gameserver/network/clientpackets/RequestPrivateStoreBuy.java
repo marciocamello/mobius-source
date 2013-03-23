@@ -17,10 +17,12 @@ import java.util.List;
 
 import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.cache.Msg;
+import lineage2.gameserver.instancemanager.WorldStatisticsManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.TradeItem;
+import lineage2.gameserver.model.worldstatistics.CategoryType;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.TradeHelper;
@@ -236,6 +238,8 @@ public class RequestPrivateStoreBuy extends L2GameClientPacket
 					buyer.getInventory().addItem(item);
 					TradeHelper.purchaseItem(buyer, seller, bi);
 				}
+				WorldStatisticsManager.getInstance().updateStat(seller, CategoryType.PRIVATE_SELL_COUNT, buyList.size());
+				
 				long tax = TradeHelper.getTax(seller, totalCost);
 				if (tax > 0)
 				{

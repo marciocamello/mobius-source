@@ -165,7 +165,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="871;1040;875;"/>
 		<for>
-			<effect count="1" name="Buff" time="1800" val="0" stackOrder="4" stackType="mAtk;pAtk;pDef">
+			<effect count="1" name="Buff" time="1800" val="0" stackOrder="10" stackType="mAtk;pAtk;pDef">
 				<mul order="0x30" stat="pAtk" val="1.17"/>
 				<mul order="0x30" stat="pDef" val="1.15"/>
 				<mul order="0x30" stat="mAtk" val="1.79"/>
@@ -186,7 +186,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1397;1242;1077;1303;"/>
 		<for>
-			<effect count="1" name="Buff" time="1800" val="0" stackOrder="4" stackType="magicCritUp;rCrit;clarity;cAtk">
+			<effect count="1" name="Buff" time="1800" val="0" stackOrder="11" stackType="magicCritUp;rCrit;clarity;cAtk">
 				<mul order="0x30" stat="rCrit" val="1.32"/>
 				<mul order="0x30" stat="cAtk" val="1.35"/>
 				<add order="0x40" stat="mCritRate" val="20"/>
@@ -208,7 +208,8 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1268;"/> 
 		<for>
-			<effect count="1" name="Buff" time="1800" val="0" stackOrder="4" stackType="pAtkSpeedUp;mAtkSpeedUp">
+			<effect count="1" name="Buff" time="1800" val="0" stackOrder="11" stackType="pAtkSpeedUp;mAtkSpeedUp">
+				<add order="0x40" stat="absorbDam" val="9"/>
 				<mul order="0x30" stat="pAtkSpd" val="1.34"/>
 				<mul order="0x30" stat="mAtkSpd" val="1.31"/>
 			</effect>
@@ -227,7 +228,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1240;1087;"/>
 		<for>
-			<effect count="1" name="Buff" time="1800" val="0" stackOrder="4" stackType="accuracyUp;rEvas;SpeedUp">
+			<effect count="1" name="Buff" time="1800" val="0" stackOrder="11" stackType="accuracyUp;rEvas;SpeedUp;CoP;Poem_Arfa;">
 				<add order="0x40" stat="accCombat" val="5"/>
 				<add order="0x40" stat="rEvas" val="5"/>
 				<add order="0x40" stat="mEvas" val="5"/>
@@ -249,7 +250,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1392;1259;1393;1033;"/>
 		<for>
-			<effect count="1" name="Buff" time="1800" val="0" stackOrder="4" stackType="shockRcpt;unholyRcpt;poisonResist">
+			<effect count="1" name="Buff" time="1800" val="0" stackOrder="4" stackType="shockRcpt;DarkAtr;HolyAtr;poisonResist">
 				<mul order="0x30" stat="stunResist" val="1.4"/>
 				<mul order="0x30" stat="poisonResist" val="1.5"/>
 				<add order="0x40" stat="defenceHoly" val="30"/>
@@ -333,7 +334,7 @@
 		<set name="operateType" val="OP_ACTIVE"/> 
 		<set name="relationSkillsId" val="1355;1357;1311;"/> 
 		<for>  
-			<effect count="1" name="Buff" stackOrder="7" stackType="hp_up;ancient" time="1800" val="0">
+			<effect count="1" name="Buff" stackOrder="7" stackType="ancient" time="1800" val="0">
 				<mul order="0x30" stat="maxMp" val="1.2"/>
 				<mul order="0x30" stat="regHp" val="1.2"/>
 				<add order="0x40" stat="mCritRate" val="20"/>

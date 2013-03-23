@@ -332,14 +332,14 @@
 			<skill id="4077" level="9"/>	<!--NPC Aura Burn-->
 			<skill id="4160" level="9"/>	<!--NPC Aura Burn - Magic-->
 			<skill id="4408" level="12"/>	<!--HP Increase (4x)-->
-			<skill id="4410" level="14"/>	<!--Strong P. Atk.-->
+			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
 			<skill id="4413" level="16"/>	<!--Very Strong M. Def.-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4444" level="5"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4458" level="5"/>	<!--Spear Weapon Weak Point-->
+			<skill id="4444" level="4"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4458" level="4"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5465" level="1"/>	<!--Earth Attacks-->
-			<skill id="5620" level="3"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -418,21 +418,21 @@
 			<skill id="4160" level="9"/>	<!--NPC Aura Burn - Magic-->
 			<skill id="4408" level="13"/>	<!--HP Increase (5x)-->
 			<skill id="4410" level="16"/>	<!--Very Strong P. Atk.-->
-			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="14"/>	<!--Strong P. Def.-->
+			<skill id="4411" level="15"/>	<!--Strong M. Atk.-->
+			<skill id="4412" level="15"/>	<!--Strong P. Def.-->
 			<skill id="4413" level="16"/>	<!--Very Strong M. Def.-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4425" level="5"/>	<!--Resist Blunt Weapons-->
-			<skill id="4426" level="5"/>	<!--Resist Dual-Sword Weapons-->
-			<skill id="4427" level="5"/>	<!--Resist Swords-->
-			<skill id="4442" level="5"/>	<!--Greater Resist Hand-to-hand Weapons-->
-			<skill id="4444" level="5"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4448" level="5"/>	<!--Higher resist Daggers/Rapier Weapon-->
-			<skill id="4449" level="5"/>	<!--Greater Resist Two-handed Weapons-->
-			<skill id="4458" level="5"/>	<!--Spear Weapon Weak Point-->
+			<skill id="4425" level="4"/>	<!--Resist Blunt Weapons-->
+			<skill id="4426" level="4"/>	<!--Resist Dual-Sword Weapons-->
+			<skill id="4427" level="4"/>	<!--Resist Swords-->
+			<skill id="4442" level="4"/>	<!--Greater Resist Hand-to-hand Weapons-->
+			<skill id="4444" level="4"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4448" level="4"/>	<!--Higher resist Daggers/Rapier Weapon-->
+			<skill id="4449" level="4"/>	<!--Greater Resist Two-handed Weapons-->
+			<skill id="4458" level="4"/>	<!--Spear Weapon Weak Point-->
 			<skill id="4597" level="9"/>	<!--Bleed-->
 			<skill id="5465" level="1"/>	<!--Earth Attacks-->
-			<skill id="5620" level="3"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -510,22 +510,22 @@
 		</equip>
 		<skills>
 			<skill id="4408" level="13"/>	<!--HP Increase (5x)-->
-			<skill id="4410" level="16"/>	<!--Very Strong P. Atk.-->
+			<skill id="4410" level="17"/>	<!--Very Strong P. Atk.-->
 			<skill id="4411" level="16"/>	<!--Very Strong M. Atk.-->
-			<skill id="4412" level="14"/>	<!--Strong P. Def.-->
+			<skill id="4412" level="15"/>	<!--Strong P. Def.-->
 			<skill id="4413" level="16"/>	<!--Very Strong M. Def.-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4425" level="5"/>	<!--Resist Blunt Weapons-->
-			<skill id="4426" level="5"/>	<!--Resist Dual-Sword Weapons-->
-			<skill id="4427" level="5"/>	<!--Resist Swords-->
-			<skill id="4442" level="5"/>	<!--Greater Resist Hand-to-hand Weapons-->
-			<skill id="4444" level="5"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4448" level="5"/>	<!--Higher resist Daggers/Rapier Weapon-->
-			<skill id="4449" level="5"/>	<!--Greater Resist Two-handed Weapons-->
-			<skill id="4458" level="5"/>	<!--Spear Weapon Weak Point-->
+			<skill id="4425" level="4"/>	<!--Resist Blunt Weapons-->
+			<skill id="4426" level="4"/>	<!--Resist Dual-Sword Weapons-->
+			<skill id="4427" level="4"/>	<!--Resist Swords-->
+			<skill id="4442" level="4"/>	<!--Greater Resist Hand-to-hand Weapons-->
+			<skill id="4444" level="4"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4448" level="4"/>	<!--Higher resist Daggers/Rapier Weapon-->
+			<skill id="4449" level="4"/>	<!--Greater Resist Two-handed Weapons-->
+			<skill id="4458" level="4"/>	<!--Spear Weapon Weak Point-->
 			<skill id="4561" level="9"/>	<!--NPC Fire Burn - Magic-->
 			<skill id="5465" level="1"/>	<!--Earth Attacks-->
-			<skill id="5620" level="3"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
 			<skill id="6166" level="1"/>	<!--Hold-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
@@ -606,21 +606,22 @@
 			<skill id="4312" level="9"/>	<!--Heavy Armor-->
 			<skill id="4408" level="14"/>	<!--HP Increase (6x)-->
 			<skill id="4410" level="18"/>	<!--Extremely Strong P. Atk.-->
-			<skill id="4411" level="16"/>	<!--Very Strong M. Atk.-->
-			<skill id="4412" level="14"/>	<!--Strong P. Def.-->
+			<skill id="4411" level="17"/>	<!--Very Strong M. Atk.-->
+			<skill id="4412" level="15"/>	<!--Strong P. Def.-->
 			<skill id="4413" level="16"/>	<!--Very Strong M. Def.-->
 			<skill id="4416" level="1"/>	<!--Undead-->
-			<skill id="4425" level="5"/>	<!--Resist Blunt Weapons-->
-			<skill id="4426" level="5"/>	<!--Resist Dual-Sword Weapons-->
-			<skill id="4427" level="5"/>	<!--Resist Swords-->
-			<skill id="4442" level="5"/>	<!--Greater Resist Hand-to-hand Weapons-->
-			<skill id="4444" level="5"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4448" level="5"/>	<!--Higher resist Daggers/Rapier Weapon-->
-			<skill id="4449" level="5"/>	<!--Greater Resist Two-handed Weapons-->
-			<skill id="4458" level="5"/>	<!--Spear Weapon Weak Point-->
+			<skill id="4425" level="4"/>	<!--Resist Blunt Weapons-->
+			<skill id="4426" level="4"/>	<!--Resist Dual-Sword Weapons-->
+			<skill id="4427" level="4"/>	<!--Resist Swords-->
+			<skill id="4442" level="4"/>	<!--Greater Resist Hand-to-hand Weapons-->
+			<skill id="4444" level="4"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4448" level="4"/>	<!--Higher resist Daggers/Rapier Weapon-->
+			<skill id="4449" level="4"/>	<!--Greater Resist Two-handed Weapons-->
+			<skill id="4458" level="4"/>	<!--Spear Weapon Weak Point-->
 			<skill id="4560" level="9"/>	<!--NPC Fire Burn-->
 			<skill id="5467" level="1"/>	<!--Dark Attacks-->
-			<skill id="5620" level="3"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="4414" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -705,19 +706,20 @@
 			<skill id="4312" level="1"/>	<!--Heavy Armor-->
 			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
 			<skill id="4410" level="18"/>	<!--Extremely Strong P. Atk.-->
-			<skill id="4411" level="16"/>	<!--Very Strong M. Atk.-->
-			<skill id="4412" level="14"/>	<!--Strong P. Def.-->
+			<skill id="4411" level="17"/>	<!--Very Strong M. Atk.-->
+			<skill id="4412" level="19"/>	<!--Strong P. Def.-->
 			<skill id="4413" level="16"/>	<!--Very Strong M. Def.-->
 			<skill id="4416" level="1"/>	<!--Undead-->
-			<skill id="4425" level="5"/>	<!--Resist Blunt Weapons-->
-			<skill id="4426" level="5"/>	<!--Resist Dual-Sword Weapons-->
-			<skill id="4427" level="5"/>	<!--Resist Swords-->
-			<skill id="4442" level="5"/>	<!--Greater Resist Hand-to-hand Weapons-->
-			<skill id="4444" level="5"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4448" level="5"/>	<!--Higher resist Daggers/Rapier Weapon-->
-			<skill id="4449" level="5"/>	<!--Greater Resist Two-handed Weapons-->
+			<skill id="4425" level="4"/>	<!--Resist Blunt Weapons-->
+			<skill id="4426" level="4"/>	<!--Resist Dual-Sword Weapons-->
+			<skill id="4427" level="4"/>	<!--Resist Swords-->
+			<skill id="4442" level="4"/>	<!--Greater Resist Hand-to-hand Weapons-->
+			<skill id="4444" level="4"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4448" level="4"/>	<!--Higher resist Daggers/Rapier Weapon-->
+			<skill id="4449" level="4"/>	<!--Greater Resist Two-handed Weapons-->
 			<skill id="5467" level="1"/>	<!--Dark Attacks-->
-			<skill id="5620" level="3"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="4414" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4469,6 +4471,7 @@
 			<skill id="6381" level="1"/>	<!--Bistakon Soul Beam-->
 			<skill id="6386" level="1"/>	<!--Bistakon Earth Rise-->
 			<skill id="6387" level="1"/>	<!--Bistakon Earthquake-->
+			<skill id="4435" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4859,6 +4862,7 @@
 			<skill id="6381" level="1"/>	<!--Bistakon Soul Beam-->
 			<skill id="6386" level="1"/>	<!--Bistakon Earth Rise-->
 			<skill id="6387" level="1"/>	<!--Bistakon Earthquake-->
+			<skill id="4435" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5028,6 +5032,7 @@
 			<skill id="6409" level="1"/>	<!--Reptilikon Earthquake-->
 			<skill id="6411" level="1"/>	<!--Reptilikon Summon-->
 			<skill id="6412" level="1"/>	<!--Reptilikon Critical Blow-->
+			<skill id="4435" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5334,6 +5339,7 @@
 			<skill id="6409" level="1"/>	<!--Reptilikon Earthquake-->
 			<skill id="6411" level="1"/>	<!--Reptilikon Summon-->
 			<skill id="6412" level="1"/>	<!--Reptilikon Critical Blow-->
+			<skill id="4435" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5503,7 +5509,7 @@
 		</minions>
 		<skills>
 			<skill id="4410" level="14"/>	<!--Very Strong P. Atk.-->
-			<skill id="4411" level="17"/>	<!--Very Strong M. Atk.-->
+			<skill id="4411" level="14"/>	<!--Very Strong M. Atk.-->
 			<skill id="4412" level="15"/>	<!--Strong P. Def.-->
 			<skill id="4413" level="5"/>	<!--Very Weak M. Def.-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
@@ -5804,6 +5810,7 @@
 			<skill id="6399" level="1"/>	<!--Cokrakon Dreadful Piercing-->
 			<skill id="6400" level="1"/>	<!--Cokrakon Dwindling Velocity-->
 			<skill id="6401" level="1"/>	<!--Cokrakon Wheeling Clow-->
+			<skill id="4435" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5890,7 +5897,7 @@
 		<faction name="cocracon_elite_clan" range="300"/>
 		<skills>
 			<skill id="4410" level="14"/>	<!--Very Strong P. Atk.-->
-			<skill id="4411" level="17"/>	<!--Very Strong M. Atk.-->
+			<skill id="4411" level="14"/>	<!--Very Strong M. Atk.-->
 			<skill id="4412" level="15"/>	<!--Strong P. Def.-->
 			<skill id="4413" level="5"/>	<!--Very Weak M. Def.-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
@@ -5986,7 +5993,7 @@
 		<faction name="cocracon_elite_clan" range="300"/>
 		<skills>
 			<skill id="4410" level="14"/>	<!--Very Strong P. Atk.-->
-			<skill id="4411" level="16"/>	<!--Very Strong M. Atk.-->
+			<skill id="4411" level="14"/>	<!--Very Strong M. Atk.-->
 			<skill id="4412" level="14"/>	<!--Strong P. Def.-->
 			<skill id="4413" level="5"/>	<!--Very Weak M. Def.-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
@@ -6086,7 +6093,7 @@
 		<faction name="cocracon_elite_clan" range="300"/>
 		<skills>
 			<skill id="4410" level="14"/>	<!--Very Strong P. Atk.-->
-			<skill id="4411" level="17"/>	<!--Very Strong M. Atk.-->
+			<skill id="4411" level="14"/>	<!--Very Strong M. Atk.-->
 			<skill id="4412" level="15"/>	<!--Strong P. Def.-->
 			<skill id="4413" level="5"/>	<!--Very Weak M. Def.-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
@@ -6097,6 +6104,7 @@
 			<skill id="6399" level="1"/>	<!--Cokrakon Dreadful Piercing-->
 			<skill id="6400" level="1"/>	<!--Cokrakon Dwindling Velocity-->
 			<skill id="6401" level="1"/>	<!--Cokrakon Wheeling Clow-->
+			<skill id="4435" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7005,11 +7013,11 @@
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4412" level="7"/>	<!--Average P. Def.-->
+			<skill id="4413" level="17"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -7137,11 +7145,11 @@
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4412" level="7"/>	<!--Average P. Def.-->
+			<skill id="4413" level="17"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -7270,11 +7278,11 @@
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4412" level="7"/>	<!--Average P. Def.-->
+			<skill id="4413" level="17"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -7402,11 +7410,11 @@
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4412" level="7"/>	<!--Average P. Def.-->
+			<skill id="4413" level="17"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -7533,12 +7541,12 @@
 			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4411" level="13"/>	<!--Strong M. Atk.-->
+			<skill id="4412" level="7"/>	<!--Average P. Def.-->
+			<skill id="4413" level="16"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -7683,13 +7691,13 @@
 			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
 			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
+			<skill id="4410" level="7"/>	<!--Weak P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4412" level="6"/>	<!--Average P. Def.-->
+			<skill id="4413" level="17"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -7805,11 +7813,11 @@
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4412" level="7"/>	<!--Average P. Def.-->
+			<skill id="4413" level="16"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -7911,13 +7919,13 @@
 			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
 			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
+			<skill id="4410" level="7"/>	<!--Weak P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4412" level="6"/>	<!--Average P. Def.-->
+			<skill id="4413" level="17"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -8014,13 +8022,13 @@
 			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
 			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4410" level="6"/>	<!--Weak P. Atk.-->
+			<skill id="4411" level="13"/>	<!--Strong M. Atk.-->
+			<skill id="4412" level="7"/>	<!--Average P. Def.-->
+			<skill id="4413" level="16"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -8115,13 +8123,13 @@
 			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
 			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
+			<skill id="4410" level="7"/>	<!--Weak P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4412" level="6"/>	<!--Average P. Def.-->
+			<skill id="4413" level="17"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -8214,13 +8222,13 @@
 			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
 			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
+			<skill id="4410" level="6"/>	<!--Weak P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4412" level="4"/>	<!--Average P. Def.-->
+			<skill id="4413" level="15"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -8309,13 +8317,13 @@
 			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
 			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
+			<skill id="4410" level="7"/>	<!--Weak P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4412" level="5"/>	<!--Average P. Def.-->
+			<skill id="4413" level="15"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -8433,13 +8441,13 @@
 			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
 			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
+			<skill id="4410" level="7"/>	<!--Weak P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4412" level="5"/>	<!--Average P. Def.-->
+			<skill id="4413" level="15"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->
@@ -8583,13 +8591,13 @@
 			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
 			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
+			<skill id="4410" level="7"/>	<!--Weak P. Atk.-->
 			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="20"/>	<!--Extremely Strong M. Def.-->
+			<skill id="4412" level="5"/>	<!--Average P. Def.-->
+			<skill id="4413" level="15"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="6"/>	<!--Demons-->
 			<skill id="4458" level="1"/>	<!--Spear Weapon Weak Point-->
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<skill id="5620" level="9"/>	<!--Short-Range Physical Attack Weakness-->

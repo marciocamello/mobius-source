@@ -59,6 +59,7 @@ public class GameObjectsStorage
 	/**
 	 * Field storages.
 	 */
+	@SuppressWarnings("rawtypes")
 	private static final GameObjectArray[] storages = new GameObjectArray[STORAGE_NONE];
 	static
 	{
@@ -328,7 +329,8 @@ public class GameObjectsStorage
 	 */
 	@SuppressWarnings(
 	{
-		"unchecked"
+		"unchecked",
+		"rawtypes"
 	})
 	public static List<GameObject> getAllObjects()
 	{

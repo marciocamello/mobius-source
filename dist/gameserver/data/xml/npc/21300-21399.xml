@@ -5535,7 +5535,7 @@
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4789" level="5"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5655,7 +5655,7 @@
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4573" level="8"/>	<!--NPC Sonic Blaster-->
 			<skill id="4789" level="5"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5771,7 +5771,7 @@
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="4"/>	<!--Animals-->
 			<skill id="4789" level="5"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5900,7 +5900,7 @@
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4573" level="8"/>	<!--NPC Sonic Blaster-->
 			<skill id="4789" level="5"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -6019,7 +6019,7 @@
 			<skill id="4415" level="9"/>	<!--Bows-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4789" level="5"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -6143,7 +6143,7 @@
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4563" level="8"/>	<!--NPC Solar Flare - Magic-->
 			<skill id="4789" level="6"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -6260,7 +6260,7 @@
 			<skill id="4415" level="6"/>	<!--Blunt Weapons-->
 			<skill id="4416" level="5"/>	<!--Plants-->
 			<skill id="4789" level="6"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -6381,7 +6381,7 @@
 			<skill id="4560" level="9"/>	<!--NPC Fire Burn-->
 			<skill id="4562" level="9"/>	<!--NPC Solar Flare-->
 			<skill id="4789" level="6"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -6506,7 +6506,7 @@
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4572" level="9"/>	<!--NPC Triple Sonic Slash-->
 			<skill id="4789" level="6"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -6622,7 +6622,7 @@
 			<skill id="4415" level="4"/>	<!--One-handed Sword-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
 			<skill id="4789" level="7"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -6747,7 +6747,7 @@
 			<skill id="4575" level="2"/>	<!--NPC Clan Buff - Haste-->
 			<skill id="4576" level="3"/>	<!--NPC Clan Buff - Damage Shield-->
 			<skill id="4789" level="7"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -6868,7 +6868,7 @@
 			<skill id="4571" level="9"/>	<!--NPC Blazing Circle-->
 			<skill id="4573" level="9"/>	<!--NPC Sonic Blaster-->
 			<skill id="4789" level="7"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -6994,7 +6994,7 @@
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4572" level="9"/>	<!--NPC Triple Sonic Slash-->
 			<skill id="4789" level="7"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7113,7 +7113,7 @@
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="5"/>	<!--Plants-->
 			<skill id="4789" level="8"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7241,7 +7241,7 @@
 			<skill id="4562" level="9"/>	<!--NPC Solar Flare-->
 			<skill id="4575" level="2"/>	<!--NPC Clan Buff - Haste-->
 			<skill id="4789" level="8"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7370,7 +7370,7 @@
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4573" level="9"/>	<!--NPC Sonic Blaster-->
 			<skill id="4789" level="8"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7496,7 +7496,7 @@
 			<skill id="4415" level="6"/>	<!--Blunt Weapons-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4789" level="8"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7613,7 +7613,7 @@
 			<skill id="4416" level="4"/>	<!--Animals-->
 			<skill id="4580" level="9"/>	<!--Decrease P. Atk.-->
 			<skill id="4789" level="9"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7737,7 +7737,7 @@
 			<skill id="4575" level="2"/>	<!--NPC Clan Buff - Haste-->
 			<skill id="4576" level="3"/>	<!--NPC Clan Buff - Damage Shield-->
 			<skill id="4789" level="9"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7863,7 +7863,7 @@
 			<skill id="4573" level="9"/>	<!--NPC Sonic Blaster-->
 			<skill id="4575" level="2"/>	<!--NPC Clan Buff - Haste-->
 			<skill id="4789" level="7"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7951,7 +7951,7 @@
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4572" level="9"/>	<!--NPC Triple Sonic Slash-->
 			<skill id="4789" level="6"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -8042,7 +8042,7 @@
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4562" level="9"/>	<!--NPC Solar Flare-->
 			<skill id="4789" level="9"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -8129,7 +8129,7 @@
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4573" level="9"/>	<!--NPC Sonic Blaster-->
 			<skill id="4789" level="8"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -8225,7 +8225,7 @@
 			<skill id="4563" level="9"/>	<!--NPC Solar Flare - Magic-->
 			<skill id="4575" level="2"/>	<!--NPC Clan Buff - Haste-->
 			<skill id="4789" level="10"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -8313,7 +8313,7 @@
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4573" level="9"/>	<!--NPC Sonic Blaster-->
 			<skill id="4789" level="9"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -8400,7 +8400,7 @@
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="4789" level="9"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">

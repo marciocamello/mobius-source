@@ -7200,7 +7200,7 @@
 			<skill id="4413" level="12"/>	<!--Slightly Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="4"/>	<!--Beasts-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">

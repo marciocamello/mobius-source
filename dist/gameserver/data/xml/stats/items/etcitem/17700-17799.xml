@@ -450,7 +450,6 @@
         <set name="dropable" value="false"/>
         <set name="icon" value="br_cashtex.item.br_cash_soulshot_r_i00"/>
         <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
         <set name="type" value="SHOT"/>
         <set name="weight" value="1"/>
     </etcitem>

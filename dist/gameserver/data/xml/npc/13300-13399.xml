@@ -252,7 +252,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -293,7 +294,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -334,7 +336,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -375,7 +378,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -457,7 +461,8 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="86"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -498,7 +503,8 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="86"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -539,7 +545,8 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.25"/>
 		<set name="level" value="86"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -580,7 +587,8 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -621,7 +629,8 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.25"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -662,7 +671,8 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.25"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -703,7 +713,8 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -744,7 +755,8 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -1277,7 +1289,8 @@
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -1318,7 +1331,8 @@
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -1359,7 +1373,8 @@
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -1400,7 +1415,8 @@
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -1441,7 +1457,8 @@
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -1482,7 +1499,8 @@
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -1523,7 +1541,8 @@
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="7.5"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -1564,7 +1583,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="20.5"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -3169,7 +3189,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -3210,7 +3231,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -3251,7 +3273,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -3292,7 +3315,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -3333,7 +3357,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
