@@ -38,7 +38,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -141,7 +143,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -188,7 +192,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -235,7 +241,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -282,7 +290,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -329,7 +339,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="16"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -376,7 +388,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="16"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -423,7 +437,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -470,7 +486,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -517,7 +535,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -564,7 +584,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
         <set name="type" value="Mammons"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -611,7 +633,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="16"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -658,7 +682,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="19"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -705,7 +731,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="7"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -752,7 +780,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -799,7 +829,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -846,7 +878,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -893,7 +927,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -940,7 +976,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -987,7 +1025,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1034,7 +1074,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="17"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1081,7 +1123,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1128,7 +1172,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1175,7 +1221,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1222,7 +1270,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1269,7 +1319,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1316,7 +1368,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="CommissionAuctioneer"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1363,7 +1417,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="CommissionAuctioneer"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1410,7 +1466,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="CommissionAuctioneer"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1456,7 +1514,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="CommissionAuctioneer"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1503,7 +1563,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="CommissionAuctioneer"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1550,7 +1612,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="CommissionAuctioneer"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1597,7 +1661,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="CommissionAuctioneer"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1644,7 +1710,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="CommissionAuctioneer"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1691,7 +1759,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="25"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2175,7 +2245,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="16"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2222,7 +2294,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2269,7 +2343,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2316,7 +2392,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2363,7 +2441,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="CommissionAuctioneer"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2410,7 +2490,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="CommissionAuctioneer"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2460,7 +2542,9 @@
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2507,7 +2591,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2554,7 +2640,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4083,8 +4171,10 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+		<set name="type" value="Mentoring"/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4131,7 +4221,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4178,7 +4270,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4225,7 +4319,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="25"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4272,7 +4368,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>

@@ -245,7 +245,7 @@ public class CharInfo extends L2GameServerPacket
 		_swimRunSpd = player.getSwimRunSpeed();
 		_swimWalkSpd = player.getSwimWalkSpeed();
 		_sex = player.getSex();
-		base_class = player.getBaseClassId();
+		base_class = player.getBaseDefaultClassId();
 		pvp_flag = player.getPvpFlag();
 		karma = player.getKarma();
 		speed_atack = player.getAttackSpeedMultiplier();

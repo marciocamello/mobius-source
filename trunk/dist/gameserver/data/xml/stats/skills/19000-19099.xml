@@ -361,9 +361,13 @@
 		<set name="reuseDelay" val="7200000"/>
 		<set name="hitTime" val="180000"/>
 		<set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="SIEGE_SUMMON"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		  <set name="lifeTime" val="1200000"/>
 		<set name="npcId" val="#npcId"/>
+		<cond msgId="16">
+			<player summon_siege_golem=""/>
+		</cond>
 	 </skill>		
 	<skill id="19089" levels="4" name="Summon Wild Hog Cannon">
     <!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it cannot move, and it can inflict long-range attacks. Switching modes takes 30 seconds. Requires 600 R-grade crystals. Automatically acquired by dwarves at level 85. -->
@@ -375,9 +379,13 @@
 		  <set name="reuseDelay" val="7200000"/>
 		  <set name="hitTime" val="180000"/>
 		  <set name="skillType" val="SUMMON"/>
+		  <set name="summonType" val="SIEGE_SUMMON"/>
 		  <set name="operateType" val="OP_ACTIVE"/>
 		  <set name="lifeTime" val="1200000"/>
 		  <set name="npcId" val="#npcId"/>
+		<cond msgId="16">
+			<player summon_siege_golem=""/>
+		</cond>
 	</skill>		
 	<skill id="19090" levels="4" name="Summon Swoop Cannon">
     <!-- Summons a Swoop Cannon. Requires 500 R-grade crystals. Automatically acquired by dwarves at level 85. -->
@@ -389,9 +397,13 @@
 		  <set name="reuseDelay" val="7200000"/>
 		  <set name="hitTime" val="180000"/>
 		  <set name="skillType" val="SUMMON"/>
+		  <set name="summonType" val="SIEGE_SUMMON"/>
 		  <set name="operateType" val="OP_ACTIVE"/>
 		  <set name="lifeTime" val="1200000"/>
 		  <set name="npcId" val="#npcId"/>
+		  <cond msgId="16">
+			<player summon_siege_golem=""/>
+		</cond>
 	</skill>
 	<skill id="19092" levels="1" name="Mass Return">
     <!-- Teleports party members to a nearby village to safe area. -->

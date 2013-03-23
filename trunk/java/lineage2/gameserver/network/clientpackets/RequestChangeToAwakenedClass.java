@@ -30,6 +30,11 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 	 * Field SCROLL_OF_AFTERLIFE. (value is 17600)
 	 */
 	private static final int SCROLL_OF_AFTERLIFE = 17600;
+	
+	/**
+	 * Field STONE_OF_DESTINY. (value is 17722)
+	 */
+	private static final int STONE_OF_DESTINY = 17722;
 	/**
 	 * Field change.
 	 */
@@ -69,7 +74,17 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 					if (player.getInventory().getCountOf(SCROLL_OF_AFTERLIFE) > 0)
 					{
 						player.getInventory().removeItemByItemId(SCROLL_OF_AFTERLIFE, 1);
-						AwakingManager.getInstance().SetAwakingId(player);
+						if (player.getVarB("awakenByStoneOfDestiny", false))
+						{
+							int classTarget = player.getVarInt("classTarget");
+							int classKeepSkills = player.getVarInt("classKeepSkills");
+							player.getInventory().removeItemByItemId(STONE_OF_DESTINY, 1);
+							AwakingManager.getInstance().SetAwakingId(player, classTarget, classKeepSkills);
+						}
+						else
+						{
+							AwakingManager.getInstance().SetAwakingId(player);
+						}
 						ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 						{
 							@Override
@@ -102,7 +117,17 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 			{
 				return;
 			}
-			AwakingManager.getInstance().SetAwakingId(player);
+			if (player.getVarB("awakenByStoneOfDestiny", false))
+			{
+				int classTarget = player.getVarInt("classTarget");
+				int classKeepSkills = player.getVarInt("classKeepSkills");
+				player.getInventory().removeItemByItemId(STONE_OF_DESTINY, 1);
+				AwakingManager.getInstance().SetAwakingId(player, classTarget, classKeepSkills);
+			}
+			else
+			{
+				AwakingManager.getInstance().SetAwakingId(player);
+			}
 		}
 	}
 }

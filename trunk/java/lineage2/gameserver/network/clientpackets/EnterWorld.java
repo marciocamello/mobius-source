@@ -467,9 +467,13 @@ public class EnterWorld extends L2GameClientPacket
 		{
 			AwakingManager.getInstance().SendReqToStartQuest(activeChar);
 		}
-		/*
-		 * if (activeChar.getClassId().isOfLevel(ClassLevel.Awaking)) { AwakingManager.getInstance().getRaceSkill(activeChar); }
-		 */
+		if (activeChar.isAwaking()) // If the characters returns to Main, or dual Subclass and Delete Skills prof are active, do check of Correct skills
+		{
+			if (Config.ALT_CHECK_SKILLS_AWAKENING)
+			{
+				AwakingManager.getInstance().checkAwakenPlayerSkills(activeChar);
+			}
+		}
 	}
 	
 	/**

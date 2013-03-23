@@ -2,342 +2,326 @@
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="33100" name="Lada" title="Magmeld Emissary Leader">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
+		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_radius" value="7.0"/>
+		<set name="collision_height" value="22.2"/>
+		<set name="level" value="85"/>
+		<set name="type" value="Npc"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="3290"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1675"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseWalkSpd" value="50"/>
 		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+		<set name="castle_id" value="1"/>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="160"/>
+			<defence attribute="water" value="160"/>
+			<defence attribute="wind" value="160"/>
+			<defence attribute="earth" value="160"/>
+			<defence attribute="holy" value="160"/>
+			<defence attribute="unholy" value="160"/>
 		</attributes>
+		<skills>
+			<skill id="4416" level="15"/>
+		</skills>
 	</npc>
 	<npc id="33101" name="Inside" title="">
-		<set name="baseHpMax" value="7324"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="baseRunSpd" value="21"/>
-		<set name="baseWalkSpd" value="6"/>
-		<set name="collision_height" value="17.3"/>
-		<set name="collision_radius" value="9.0"/>
+		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="talkingisland.Inside"/>
+		<set name="collision_radius" value="9.0"/>
+		<set name="collision_height" value="17.3"/>
+		<set name="level" value="80"/>
+		<set name="type" value="Npc"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="3290"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1675"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="21"/>
+		<set name="baseWalkSpd" value="6"/>
 		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="castle_id" value="1"/>
 		<ai_params>
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
 		</attributes>
+		<skills/>
 	</npc>
 	<npc id="33102" name="" title="">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
+		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_radius" value="11.0"/>
+		<set name="collision_height" value="25.0"/>
+		<set name="level" value="85"/>
+		<set name="type" value="Npc"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="3290"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1675"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="1"/>
+		<set name="baseWalkSpd" value="1"/>
 		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+		<set name="castle_id" value="1"/>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="160"/>
+			<defence attribute="water" value="160"/>
+			<defence attribute="wind" value="160"/>
+			<defence attribute="earth" value="160"/>
+			<defence attribute="holy" value="160"/>
+			<defence attribute="unholy" value="160"/>
 		</attributes>
+		<skills/>
 	</npc>
 	<npc id="33103" name="" title="">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
+		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_radius" value="11.0"/>
+		<set name="collision_height" value="25.0"/>
+		<set name="level" value="85"/>
+		<set name="type" value="Npc"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="3290"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1675"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="1"/>
+		<set name="baseWalkSpd" value="1"/>
 		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+		<set name="castle_id" value="1"/>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="160"/>
+			<defence attribute="water" value="160"/>
+			<defence attribute="wind" value="160"/>
+			<defence attribute="earth" value="160"/>
+			<defence attribute="holy" value="160"/>
+			<defence attribute="unholy" value="160"/>
 		</attributes>
+		<skills/>
 	</npc>
 	<npc id="33104" name="" title="">
-		<!--Need TODO-->
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="23.5"/>
-		<set name="collision_radius" value="8.0"/>
+		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_radius" value="11.0"/>
+		<set name="collision_height" value="25.0"/>
+		<set name="level" value="85"/>
+		<set name="type" value="Npc"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="3290"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1675"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="1"/>
+		<set name="baseWalkSpd" value="1"/>
 		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills/>
+		<set name="castle_id" value="1"/>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="160"/>
+			<defence attribute="water" value="160"/>
+			<defence attribute="wind" value="160"/>
+			<defence attribute="earth" value="160"/>
+			<defence attribute="holy" value="160"/>
+			<defence attribute="unholy" value="160"/>
 		</attributes>
+		<skills/>
 	</npc>
 	<npc id="33105" name="Guard" title="">
-		<set name="baseHpMax" value="7324"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="40"/>
-		<set name="collision_height" value="43.5"/>
-		<set name="collision_radius" value="17.0"/>
+		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="DefaultAI"/>
+		<set name="collision_radius" value="20.0"/>
+		<set name="collision_height" value="43.5"/>
+		<set name="level" value="80"/>
+		<set name="type" value="Npc"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="7324"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2797"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="40"/>
 		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="castle_id" value="1"/>
 		<ai_params>
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
 		</attributes>
+		<skills/>
 	</npc>
 	<npc id="33106" name="Guard" title="">
-		<set name="baseHpMax" value="7324"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="35"/>
-		<set name="collision_height" value="25.0"/>
-		<set name="collision_radius" value="12.0"/>
+		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="talkingisland.Guardian"/>
+		<set name="collision_radius" value="12.0"/>
+		<set name="collision_height" value="25.0"/>
+		<set name="level" value="80"/>
+		<set name="ai_type" value="WalkerAI" />
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="7324"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePDef" value="471"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
-		<set name="castle_id" value="1"/>
-		<set name="level" value="70"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2797"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="35"/>
 		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="castle_id" value="1"/>
 		<ai_params>
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
-			<defence attribute="fire" value="150"/>
-			<defence attribute="water" value="150"/>
-			<defence attribute="wind" value="150"/>
-			<defence attribute="earth" value="150"/>
-			<defence attribute="holy" value="150"/>
-			<defence attribute="unholy" value="150"/>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
 		</attributes>
+		<skills/>
 	</npc>
 	<npc id="33107" name="" title="">
 		<set name="baseHpMax" value="7324"/>
@@ -1360,7 +1344,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1407,7 +1393,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="15"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1454,7 +1442,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1501,7 +1491,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="15"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1548,7 +1540,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="13"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1595,7 +1589,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="13"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1642,7 +1638,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1689,7 +1687,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1736,7 +1736,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1783,7 +1785,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1830,7 +1834,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1877,7 +1883,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1924,7 +1932,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1971,7 +1981,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2018,7 +2030,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="13"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2065,7 +2079,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2112,7 +2128,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="4"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2159,7 +2177,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="4"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2206,7 +2226,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="4"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2253,7 +2275,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="13"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2394,7 +2418,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="7"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2441,7 +2467,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="7"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2488,7 +2516,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="RumieseNpc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="15"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2535,7 +2565,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="17"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2582,7 +2614,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="4"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2676,7 +2710,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="16"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2723,7 +2759,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2770,7 +2808,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="19"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2817,7 +2857,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2864,7 +2906,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="12"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2911,7 +2955,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2958,7 +3004,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="6"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3005,7 +3053,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3052,7 +3102,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="16"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3099,7 +3151,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3146,7 +3200,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3193,7 +3249,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3240,7 +3298,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="18"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3287,7 +3347,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="19"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3334,7 +3396,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3345,51 +3409,49 @@
 		</attributes>
 	</npc>
 	<npc id="33170" name="Adolph" title="Aden Vanguard Captain">
+		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
+		<set name="collision_radius" value="12.0"/>
+		<set name="collision_height" value="24.5"/>
+		<set name="level" value="85"/>
+		<set name="type" value="Npc"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpMax" value="3290"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseINT" value="74"/>
-		<set name="baseMAtk" value="1145"/>
-		<set name="baseMAtkSpd" value="253"/>
-		<set name="baseMDef" value="469"/>
-		<set name="baseMEN" value="72"/>
-		<set name="baseMpMax" value="1674.8"/>
+		<set name="baseMpMax" value="1675"/>
 		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1799"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="109"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="64"/>
-		<set name="baseWalkSpd" value="30"/>
-		<set name="collision_height" value="12.00"/>
-		<set name="collision_radius" value="30.00"/>
-		<set name="level" value="80"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="1"/>
+		<set name="baseWalkSpd" value="1"/>
 		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills>
-			<skill id="4416" level="14"/>	<!--Люди-->
-		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="160"/>
+			<defence attribute="water" value="160"/>
+			<defence attribute="wind" value="160"/>
+			<defence attribute="earth" value="160"/>
+			<defence attribute="holy" value="160"/>
+			<defence attribute="unholy" value="160"/>
 		</attributes>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 	</npc>
 	<npc id="33171" name="Priest Alice" title="Aden Vanguard">
 		<set name="aggroRange" value="0"/>
@@ -3475,7 +3537,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="17"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3522,7 +3586,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="15"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3569,7 +3635,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3616,7 +3684,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3663,7 +3733,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3710,7 +3782,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3757,7 +3831,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3804,7 +3880,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3851,7 +3929,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3898,7 +3978,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3945,7 +4027,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -3992,7 +4076,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4039,7 +4125,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4086,7 +4174,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4133,7 +4223,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4180,7 +4272,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4227,7 +4321,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4274,7 +4370,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4321,7 +4419,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4368,7 +4468,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4415,7 +4517,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="2"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4461,7 +4565,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="14"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4555,7 +4661,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<skills>
+			<skill id="4416" level="15"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>

@@ -49,7 +49,8 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="40"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="40330"/>
@@ -92,7 +93,8 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="40330"/>
@@ -128,7 +130,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="3"/>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23003" name="Male Larchikion" title="">
@@ -136,7 +138,8 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="40330"/>
@@ -172,7 +175,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="3"/>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23004" name="Male Larchikion " title="Successor's Escort">
@@ -180,7 +183,8 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -216,7 +220,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="3"/>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23005" name="Male Larchikion " title="Successor's Escort">
@@ -224,7 +228,8 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -260,7 +265,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="3"/>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23006" name="Female Larchikion" title="">
@@ -268,7 +273,8 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -304,7 +310,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="3"/>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23007" name="Female Larchikion" title="">
@@ -312,7 +318,8 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -348,7 +355,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="3"/>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23008" name="Female Larchikion" title="Queen's Escort">
@@ -356,7 +363,8 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -392,7 +400,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="3"/>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23009" name="Female Larchikion" title="Queen's Escort">
@@ -400,7 +408,8 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -436,7 +445,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="3"/>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23010" name="Square Intruder" title="">
@@ -444,7 +453,8 @@
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15685"/>
@@ -488,7 +498,8 @@
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="27.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15685"/>
@@ -524,7 +535,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="9"/>
-			<skill id="5463" level="9"/>
+			<skill id="5463" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23012" name="Stronghold Protector" title="">
@@ -532,7 +543,8 @@
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -568,7 +580,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="9"/>
-			<skill id="5463" level="9"/>
+			<skill id="5463" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23013" name="Spirit Protector" title="">
@@ -576,7 +588,8 @@
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="25.8"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15685"/>
@@ -620,7 +633,8 @@
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="28.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15685"/>
@@ -664,7 +678,8 @@
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="28.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15685"/>
@@ -708,7 +723,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -752,7 +768,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="15685"/>
@@ -796,7 +813,8 @@
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -832,7 +850,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="9"/>
-			<skill id="5467" level="9"/>
+			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23019" name="Arbitrator of Sins" title="">
@@ -840,7 +858,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="44.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -876,7 +895,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="9"/>
-			<skill id="5467" level="9"/>
+			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23020" name="Giant Wild Boar" title="">
@@ -884,7 +903,8 @@
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="21.5"/>
 		<set name="level" value="21"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="364"/>
@@ -942,9 +962,9 @@
 		<skills>
 			<skill id="4410" level="10"/>
 			<skill id="4411" level="10"/>
-			<skill id="4412" level="10"/>
+			<skill id="4412" level="12"/>
 			<skill id="4413" level="12"/>
-			<skill id="4416" level="10"/>
+			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
 	<npc id="23021" name="Giant Venomous Spider" title="">
@@ -952,7 +972,8 @@
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="25.5"/>
 		<set name="level" value="23"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="410"/>
@@ -1010,9 +1031,9 @@
 		<skills>
 			<skill id="4410" level="10"/>
 			<skill id="4411" level="10"/>
-			<skill id="4412" level="10"/>
+			<skill id="4412" level="12"/>
 			<skill id="4413" level="12"/>
-			<skill id="4416" level="10"/>
+			<skill id="4416" level="12"/>
 		</skills>
 	</npc>
 	<npc id="23022" name="Bone Warrior" title="Enraged">
@@ -1020,7 +1041,8 @@
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="29"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="573"/>
@@ -1078,9 +1100,9 @@
 	</rewardlist>
 		<skills>
 			<skill id="4274" level="1"/>
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="12"/>
 			<skill id="4411" level="12"/>
-			<skill id="4412" level="12"/>
+			<skill id="4412" level="10"/>
 			<skill id="4413" level="10"/>
 			<skill id="4416" level="1"/>
 		</skills>
@@ -1090,7 +1112,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="42.0"/>
 		<set name="level" value="31"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="635"/>
@@ -1146,12 +1169,12 @@
 	</rewardlist>
 		<skills>
 			<skill id="4276" level="1"/>
-			<skill id="4410" level="4"/>
+			<skill id="4410" level="12"/>
 			<skill id="4411" level="12"/>
-			<skill id="4412" level="12"/>
+			<skill id="4412" level="10"/>
 			<skill id="4413" level="10"/>
-			<skill id="4414" level="10"/>
-			<skill id="4416" level="14"/>
+			<skill id="4414" level="3"/>
+			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
 	<npc id="23024" name="Weary Jaguar" title="">
@@ -1159,7 +1182,8 @@
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="9.0"/>
 		<set name="level" value="36"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="809"/>
@@ -1223,7 +1247,8 @@
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="9.0"/>
 		<set name="level" value="37"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="847"/>
@@ -1282,9 +1307,9 @@
 		<skills>
 			<skill id="4410" level="12"/>
 			<skill id="4411" level="12"/>
-			<skill id="4412" level="12"/>
+			<skill id="4412" level="10"/>
 			<skill id="4413" level="10"/>
-			<skill id="4416" level="10"/>
+			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
 	<npc id="23026" name="Sahara" title="">
@@ -1292,7 +1317,8 @@
 		<set name="collision_radius" value="41.0"/>
 		<set name="collision_height" value="30.5"/>
 		<set name="level" value="38"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="36"/>
 		<set name="baseHpMax" value="886"/>
@@ -1357,7 +1383,8 @@
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="57.0"/>
 		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="312844"/>
@@ -1393,9 +1420,9 @@
 		</attributes>
 		<skills>
 			<skill id="4412" level="15"/>
-			<skill id="4413" level="15"/>
-			<skill id="4416" level="8"/>
-			<skill id="5465" level="3"/>
+			<skill id="4413" level="4"/>
+			<skill id="4416" level="3"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23028" name="Torumba" title="">
@@ -1403,7 +1430,8 @@
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="64.0"/>
 		<set name="level" value="89"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="6312935"/>
@@ -1439,10 +1467,10 @@
 		</attributes>
 		<skills>
 			<skill id="4071" level="5"/>
-			<skill id="4412" level="1"/>
-			<skill id="4413" level="8"/>
-			<skill id="4416" level="10"/>
-			<skill id="5465" level="3"/>
+			<skill id="4412" level="8"/>
+			<skill id="4413" level="13"/>
+			<skill id="4416" level="3"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23029" name="Dopagen" title="">
@@ -1450,7 +1478,8 @@
 		<set name="collision_radius" value="45.0"/>
 		<set name="collision_height" value="75.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="356012"/>
@@ -1486,10 +1515,10 @@
 		</attributes>
 		<skills>
 			<skill id="4276" level="3"/>
-			<skill id="4412" level="1"/>
+			<skill id="4412" level="13"/>
 			<skill id="4413" level="13"/>
-			<skill id="4416" level="10"/>
-			<skill id="5465" level="3"/>
+			<skill id="4416" level="3"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23030" name="Taklacan" title="">
@@ -1497,7 +1526,8 @@
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="57.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="356012"/>
@@ -1533,9 +1563,9 @@
 		</attributes>
 		<skills>
 			<skill id="4412" level="15"/>
-			<skill id="4413" level="15"/>
-			<skill id="4416" level="8"/>
-			<skill id="5465" level="3"/>
+			<skill id="4413" level="4"/>
+			<skill id="4416" level="3"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23031" name="Torumba" title="">
@@ -1543,7 +1573,8 @@
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="64.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="356012"/>
@@ -1579,10 +1610,10 @@
 		</attributes>
 		<skills>
 			<skill id="4071" level="5"/>
-			<skill id="4412" level="1"/>
-			<skill id="4413" level="8"/>
-			<skill id="4416" level="10"/>
-			<skill id="5465" level="3"/>
+			<skill id="4412" level="8"/>
+			<skill id="4413" level="13"/>
+			<skill id="4416" level="3"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23032" name="Dopagen" title="">
@@ -1590,7 +1621,8 @@
 		<set name="collision_radius" value="45.0"/>
 		<set name="collision_height" value="75.0"/>
 		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="312844"/>
@@ -1626,10 +1658,10 @@
 		</attributes>
 		<skills>
 			<skill id="4276" level="3"/>
-			<skill id="4412" level="1"/>
+			<skill id="4412" level="13"/>
 			<skill id="4413" level="13"/>
-			<skill id="4416" level="10"/>
-			<skill id="5465" level="3"/>
+			<skill id="4416" level="3"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23033" name="Failed Creation" title="">
@@ -1637,7 +1669,8 @@
 		<set name="collision_radius" value="33.0"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="level" value="88"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13568"/>
@@ -1689,9 +1722,9 @@
 	</rewardlist>
 		<skills>
 			<skill id="4412" level="7"/>
-			<skill id="4413" level="7"/>
-			<skill id="4416" level="8"/>
-			<skill id="5465" level="3"/>
+			<skill id="4413" level="14"/>
+			<skill id="4416" level="3"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23034" name="Failed Creation" title="">
@@ -1699,7 +1732,8 @@
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="88"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13568"/>
@@ -1750,9 +1784,9 @@
 	</rewardlist>
 		<skills>
 			<skill id="4412" level="13"/>
-			<skill id="4413" level="13"/>
-			<skill id="4416" level="8"/>
-			<skill id="5465" level="3"/>
+			<skill id="4413" level="8"/>
+			<skill id="4416" level="3"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23035" name="Failed Creation" title="">
@@ -1760,7 +1794,8 @@
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="19.5"/>
 		<set name="level" value="88"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13568"/>
@@ -1812,8 +1847,8 @@
 	</rewardlist>
 		<skills>
 			<skill id="4413" level="16"/>
-			<skill id="4416" level="6"/>
-			<skill id="5465" level="3"/>
+			<skill id="4416" level="3"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23036" name="Failed Creation" title="">
@@ -1821,7 +1856,8 @@
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="19.5"/>
 		<set name="level" value="88"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13568"/>
@@ -1874,8 +1910,8 @@
 	</rewardlist>
 		<skills>
 			<skill id="4413" level="14"/>
-			<skill id="4416" level="6"/>
-			<skill id="5465" level="3"/>
+			<skill id="4416" level="3"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23037" name="Failed Creation" title="">
@@ -1883,7 +1919,8 @@
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="19.5"/>
 		<set name="level" value="88"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13568"/>
@@ -1936,8 +1973,8 @@
 	</rewardlist>
 		<skills>
 			<skill id="4413" level="14"/>
-			<skill id="4416" level="6"/>
-			<skill id="5465" level="3"/>
+			<skill id="4416" level="3"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23038" name="Angel Statue Keeper" title="">
@@ -1945,7 +1982,8 @@
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="43.5"/>
 		<set name="level" value="94"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="313367"/>
@@ -1995,7 +2033,7 @@
 	</rewardlist>
 		<skills>
 			<skill id="4416" level="5"/>
-			<skill id="5465" level="5"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23039" name="Fountain Keeper" title="">
@@ -2003,7 +2041,8 @@
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="43.5"/>
 		<set name="level" value="94"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="313367"/>
@@ -2036,7 +2075,8 @@
 			<defence attribute="earth" value="240"/>
 			<defence attribute="holy" value="240"/>
 			<defence attribute="unholy" value="240"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="28553" max="66665" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2056,7 +2096,7 @@
 	</rewardlist>
 		<skills>
 			<skill id="4416" level="5"/>
-			<skill id="5465" level="5"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23040" name="Goddess Statue Keeper" title="">
@@ -2064,7 +2104,8 @@
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="43.5"/>
 		<set name="level" value="94"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="313367"/>
@@ -2097,7 +2138,8 @@
 			<defence attribute="earth" value="240"/>
 			<defence attribute="holy" value="240"/>
 			<defence attribute="unholy" value="240"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="28553" max="66665" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2117,7 +2159,7 @@
 	</rewardlist>
 		<skills>
 			<skill id="4416" level="5"/>
-			<skill id="5465" level="5"/>
+			<skill id="5465" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23041" name="Pan Direm" title="">
@@ -2125,7 +2167,8 @@
 		<set name="collision_radius" value="42.0"/>
 		<set name="collision_height" value="73.0"/>
 		<set name="level" value="89"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13812"/>
@@ -2158,7 +2201,8 @@
 			<defence attribute="earth" value="200"/>
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="1189" max="2776" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2172,7 +2216,7 @@
 	</rewardlist>
 		<skills>
 			<skill id="4416" level="13"/>
-			<skill id="5463" level="13"/>
+			<skill id="5463" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23042" name="Female Larchikion" title="">
@@ -2180,7 +2224,8 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2216,7 +2261,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="3"/>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23043" name="Female Larchikion" title="">
@@ -2224,7 +2269,8 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -2260,7 +2306,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="3"/>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23044" name="Exhausted Vengeful Spirit" title="">
@@ -2268,7 +2314,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="56"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1724"/>
@@ -2301,7 +2348,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-33"/>
 			<defence attribute="unholy" value="53"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="1806" max="4221" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2327,9 +2375,9 @@
 		<skills>
 			<skill id="4410" level="13"/>
 			<skill id="4412" level="13"/>
-			<skill id="4413" level="13"/>
-			<skill id="4414" level="10"/>
-			<skill id="4416" level="10"/>
+			<skill id="4413" level="10"/>
+			<skill id="4414" level="3"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23045" name="Wings of Viciousness" title="">
@@ -2337,7 +2385,8 @@
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="55.0"/>
 		<set name="level" value="60"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1933"/>
@@ -2370,7 +2419,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-13"/>
 			<defence attribute="unholy" value="184"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="1981" max="4626" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2397,7 +2447,7 @@
 		<skills>
 			<skill id="4412" level="10"/>
 			<skill id="4413" level="10"/>
-			<skill id="4416" level="6"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<npc id="23046" name="Byron's Knight" title="">
@@ -2405,7 +2455,8 @@
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="52.0"/>
 		<set name="level" value="61"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1985"/>
@@ -2438,7 +2489,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-33"/>
 			<defence attribute="unholy" value="53"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="2887" max="6745" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2465,10 +2517,10 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="12"/>
-			<skill id="4412" level="12"/>
-			<skill id="4413" level="16"/>
-			<skill id="4414" level="12"/>
-			<skill id="4416" level="10"/>
+			<skill id="4412" level="16"/>
+			<skill id="4413" level="12"/>
+			<skill id="4414" level="3"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23047" name="Terestian" title="">
@@ -2476,7 +2528,8 @@
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="28.5"/>
 		<set name="level" value="59"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1880"/>
@@ -2509,7 +2562,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-33"/>
 			<defence attribute="unholy" value="53"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="2515" max="5865" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2531,9 +2585,9 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="13"/>
-			<skill id="4412" level="13"/>
+			<skill id="4412" level="10"/>
 			<skill id="4413" level="10"/>
-			<skill id="4416" level="8"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23048" name="Drill Demon" title="">
@@ -2541,7 +2595,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="37.5"/>
 		<set name="level" value="62"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2037"/>
@@ -2574,7 +2629,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-13"/>
 			<defence attribute="unholy" value="184"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="2866" max="6698" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2594,8 +2650,8 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="12"/>
-			<skill id="4412" level="12"/>
-			<skill id="4416" level="6"/>
+			<skill id="4412" level="13"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<npc id="23049" name="Knight's Vengeful Spirit" title="">
@@ -2603,7 +2659,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="57"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1776"/>
@@ -2636,7 +2693,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-33"/>
 			<defence attribute="unholy" value="53"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="2519" max="5875" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2661,9 +2719,9 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="13"/>
-			<skill id="4412" level="13"/>
-			<skill id="4413" level="16"/>
-			<skill id="4416" level="8"/>
+			<skill id="4412" level="16"/>
+			<skill id="4413" level="12"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23050" name="Escort Knight's Vengeful Spirit" title="">
@@ -2671,7 +2729,8 @@
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="28.5"/>
 		<set name="level" value="58"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1828"/>
@@ -2704,7 +2763,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-33"/>
 			<defence attribute="unholy" value="53"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="1901" max="4434" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2728,7 +2788,7 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="13"/>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23051" name="Byron's Confidant" title="">
@@ -2736,7 +2796,8 @@
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="62"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2037"/>
@@ -2769,7 +2830,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-13"/>
 			<defence attribute="unholy" value="184"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="2198" max="5136" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2787,8 +2849,8 @@
 	</rewardlist>
 		<skills>
 			<skill id="4411" level="13"/>
-			<skill id="4413" level="13"/>
-			<skill id="4416" level="6"/>
+			<skill id="4413" level="12"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<npc id="23052" name="Evil Shadow" title="">
@@ -2796,7 +2858,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="35.5"/>
 		<set name="level" value="59"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1880"/>
@@ -2829,7 +2892,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-13"/>
 			<defence attribute="unholy" value="184"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="1980" max="4617" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2852,9 +2916,9 @@
 	</rewardlist>
 		<skills>
 			<skill id="4411" level="13"/>
-			<skill id="4413" level="13"/>
-			<skill id="4414" level="12"/>
-			<skill id="4416" level="8"/>
+			<skill id="4413" level="12"/>
+			<skill id="4414" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<npc id="23053" name="Brutal Warrior" title="">
@@ -2862,7 +2926,8 @@
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="64"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2141"/>
@@ -2895,7 +2960,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-13"/>
 			<defence attribute="unholy" value="184"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="3053" max="7130" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2914,7 +2980,7 @@
 	</rewardlist>
 		<skills>
 			<skill id="4412" level="13"/>
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<npc id="23054" name="Demon Knight" title="">
@@ -2922,7 +2988,8 @@
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="65"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2193"/>
@@ -2955,7 +3022,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-13"/>
 			<defence attribute="unholy" value="184"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="4132" max="9638" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -2975,9 +3043,9 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="14"/>
-			<skill id="4412" level="14"/>
-			<skill id="4413" level="19"/>
-			<skill id="4416" level="8"/>
+			<skill id="4412" level="19"/>
+			<skill id="4413" level="14"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<npc id="23055" name="Demon Priest" title="">
@@ -2985,7 +3053,8 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="37.5"/>
 		<set name="level" value="64"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2141"/>
@@ -3018,7 +3087,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-13"/>
 			<defence attribute="unholy" value="184"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="3082" max="7196" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3040,9 +3110,9 @@
 	</rewardlist>
 		<skills>
 			<skill id="4411" level="14"/>
-			<skill id="4412" level="14"/>
+			<skill id="4412" level="12"/>
 			<skill id="4413" level="12"/>
-			<skill id="4416" level="8"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<npc id="23056" name="Vampire Queen" title="">
@@ -3050,7 +3120,8 @@
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="62"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2037"/>
@@ -3083,7 +3154,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-13"/>
 			<defence attribute="unholy" value="184"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="2198" max="5136" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3102,8 +3174,8 @@
 	</rewardlist>
 		<skills>
 			<skill id="4411" level="13"/>
-			<skill id="4413" level="13"/>
-			<skill id="4416" level="6"/>
+			<skill id="4413" level="12"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<npc id="23057" name="Bonehead Slave" title="">
@@ -3111,7 +3183,8 @@
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="30.0"/>
 		<set name="level" value="63"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2089"/>
@@ -3144,7 +3217,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-13"/>
 			<defence attribute="unholy" value="184"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="2263" max="5284" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3164,8 +3238,8 @@
 		<skills>
 			<skill id="4411" level="12"/>
 			<skill id="4413" level="12"/>
-			<skill id="4414" level="12"/>
-			<skill id="4416" level="8"/>
+			<skill id="4414" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<npc id="23058" name="Platinum Tribe Soldier" title="">
@@ -3173,7 +3247,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="66"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2244"/>
@@ -3206,7 +3281,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="3.476">
 			<reward item_id="5316" min="1" max="1" chance="0.15821"/>		<!-- Запечатанный Латный Доспех Величия -->
 			<reward item_id="5478" min="1" max="1" chance="99.84179"/>		<!-- Выкройка Запечатанного Кожаного Доспеха Кристалла Тьмы -->
@@ -3224,10 +3300,10 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="15"/>
-			<skill id="4412" level="15"/>
-			<skill id="4413" level="13"/>
-			<skill id="4414" level="12"/>
-			<skill id="4416" level="10"/>
+			<skill id="4412" level="13"/>
+			<skill id="4413" level="12"/>
+			<skill id="4414" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
 	<npc id="23059" name="Platinum Tribe Archer" title="">
@@ -3235,7 +3311,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="67"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2295"/>
@@ -3268,7 +3345,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="2667" max="6224" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3287,10 +3365,10 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="15"/>
-			<skill id="4411" level="15"/>
-			<skill id="4412" level="13"/>
+			<skill id="4411" level="13"/>
+			<skill id="4412" level="10"/>
 			<skill id="4413" level="10"/>
-			<skill id="4416" level="10"/>
+			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
 	<npc id="23060" name="Platinum Tribe Warrior" title="">
@@ -3298,7 +3376,8 @@
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="68"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2345"/>
@@ -3331,7 +3410,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="3584" max="8363" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3348,8 +3428,8 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="15"/>
-			<skill id="4411" level="15"/>
-			<skill id="4413" level="13"/>
+			<skill id="4411" level="13"/>
+			<skill id="4413" level="12"/>
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
@@ -3358,7 +3438,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="69"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2395"/>
@@ -3391,7 +3472,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="3612" max="8432" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3410,10 +3492,10 @@
 	</rewardlist>
 		<skills>
 			<skill id="4411" level="15"/>
-			<skill id="4412" level="15"/>
-			<skill id="4413" level="10"/>
-			<skill id="4414" level="12"/>
-			<skill id="4416" level="10"/>
+			<skill id="4412" level="10"/>
+			<skill id="4413" level="12"/>
+			<skill id="4414" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
 	<npc id="23062" name="Platinum Tribe Prefect" title="">
@@ -3421,7 +3503,8 @@
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="70"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2444"/>
@@ -3454,7 +3537,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="4985" max="11635" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3474,10 +3558,10 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="16"/>
-			<skill id="4411" level="16"/>
-			<skill id="4412" level="13"/>
-			<skill id="4413" level="19"/>
-			<skill id="4416" level="10"/>
+			<skill id="4411" level="13"/>
+			<skill id="4412" level="19"/>
+			<skill id="4413" level="13"/>
+			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
 	<npc id="23063" name="Heaven's Palace Knight" title="">
@@ -3485,7 +3569,8 @@
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="42.5"/>
 		<set name="level" value="71"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2492"/>
@@ -3518,7 +3603,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="4088" max="9543" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3540,10 +3626,10 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="15"/>
-			<skill id="4411" level="15"/>
+			<skill id="4411" level="14"/>
 			<skill id="4412" level="14"/>
-			<skill id="4414" level="14"/>
-			<skill id="4416" level="10"/>
+			<skill id="4414" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
 	<npc id="23064" name="Heaven's Palace Fighter" title="">
@@ -3551,7 +3637,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="37.5"/>
 		<set name="level" value="72"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2540"/>
@@ -3584,7 +3671,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="5042" max="11775" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3602,7 +3690,7 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="15"/>
-			<skill id="4411" level="15"/>
+			<skill id="4411" level="14"/>
 			<skill id="4412" level="14"/>
 			<skill id="4416" level="8"/>
 		</skills>
@@ -3612,7 +3700,8 @@
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="level" value="73"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2586"/>
@@ -3645,7 +3734,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="4170" max="9737" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3664,11 +3754,11 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="14"/>
-			<skill id="4411" level="14"/>
-			<skill id="4412" level="15"/>
-			<skill id="4413" level="10"/>
-			<skill id="4414" level="12"/>
-			<skill id="4416" level="12"/>
+			<skill id="4411" level="15"/>
+			<skill id="4412" level="10"/>
+			<skill id="4413" level="12"/>
+			<skill id="4414" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
 	<npc id="23066" name="Heaven's Palace Priest" title="">
@@ -3676,7 +3766,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="46.5"/>
 		<set name="level" value="74"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2632"/>
@@ -3709,7 +3800,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="4260" max="9950" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3728,10 +3820,10 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="13"/>
-			<skill id="4411" level="13"/>
-			<skill id="4412" level="15"/>
-			<skill id="4413" level="10"/>
-			<skill id="4416" level="10"/>
+			<skill id="4411" level="15"/>
+			<skill id="4412" level="10"/>
+			<skill id="4413" level="12"/>
+			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
 	<npc id="23067" name="Heaven's Palace Judge" title="">
@@ -3739,7 +3831,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="47.0"/>
 		<set name="level" value="75"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2676"/>
@@ -3772,7 +3865,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="5766" max="13462" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3794,10 +3888,10 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="16"/>
-			<skill id="4411" level="16"/>
-			<skill id="4412" level="15"/>
-			<skill id="4413" level="16"/>
-			<skill id="4416" level="10"/>
+			<skill id="4411" level="15"/>
+			<skill id="4412" level="16"/>
+			<skill id="4413" level="12"/>
+			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
 	<npc id="23068" name="Heaven's Palace Sniper" title="">
@@ -3805,7 +3899,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="47.0"/>
 		<set name="level" value="75"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2676"/>
@@ -3838,7 +3933,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="4439" max="10365" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3858,8 +3954,8 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="15"/>
-			<skill id="4411" level="15"/>
-			<skill id="4416" level="6"/>
+			<skill id="4411" level="14"/>
+			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
 	<npc id="23069" name="Vladimir's Warrior" title="">
@@ -3867,7 +3963,8 @@
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="46.8"/>
 		<set name="level" value="58"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1828"/>
@@ -3900,7 +3997,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-13"/>
 			<defence attribute="unholy" value="184"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="3426" max="7993" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3924,10 +4022,10 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="15"/>
-			<skill id="4411" level="15"/>
-			<skill id="4412" level="13"/>
-			<skill id="4414" level="19"/>
-			<skill id="4416" level="10"/>
+			<skill id="4411" level="13"/>
+			<skill id="4412" level="19"/>
+			<skill id="4414" level="1"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<npc id="23070" name="Lazearth's Warrior" title="">
@@ -3935,7 +4033,8 @@
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="46.8"/>
 		<set name="level" value="62"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2037"/>
@@ -3968,7 +4067,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-13"/>
 			<defence attribute="unholy" value="184"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="4022" max="9398" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -3987,10 +4087,10 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="16"/>
-			<skill id="4411" level="16"/>
-			<skill id="4412" level="14"/>
-			<skill id="4414" level="19"/>
-			<skill id="4416" level="10"/>
+			<skill id="4411" level="14"/>
+			<skill id="4412" level="19"/>
+			<skill id="4414" level="1"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<npc id="23071" name="Beastian" title="">
@@ -3998,7 +4098,8 @@
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="69"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2395"/>
@@ -4031,7 +4132,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="3802" max="8875" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -4050,8 +4152,8 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="13"/>
-			<skill id="4411" level="13"/>
-			<skill id="4412" level="14"/>
+			<skill id="4411" level="14"/>
+			<skill id="4412" level="15"/>
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
@@ -4060,7 +4162,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="69"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2395"/>
@@ -4093,7 +4196,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="3612" max="8432" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -4112,8 +4216,8 @@
 	</rewardlist>
 		<skills>
 			<skill id="4411" level="15"/>
-			<skill id="4414" level="15"/>
-			<skill id="4416" level="6"/>
+			<skill id="4414" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
 	<npc id="23073" name="Kenneth Bastian" title="">
@@ -4121,7 +4225,8 @@
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="70"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2444"/>
@@ -4154,7 +4259,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="5229" max="12205" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -4172,10 +4278,10 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="16"/>
-			<skill id="4411" level="16"/>
-			<skill id="4412" level="12"/>
-			<skill id="4413" level="19"/>
-			<skill id="4416" level="10"/>
+			<skill id="4411" level="12"/>
+			<skill id="4412" level="19"/>
+			<skill id="4413" level="12"/>
+			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
 	<npc id="23074" name="Heaven's Palace Noble Warrior" title="">
@@ -4183,7 +4289,8 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="33.0"/>
 		<set name="level" value="75"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2676"/>
@@ -4216,7 +4323,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="5989" max="13983" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -4234,10 +4342,10 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="15"/>
-			<skill id="4411" level="15"/>
-			<skill id="4412" level="12"/>
-			<skill id="4413" level="19"/>
-			<skill id="4416" level="10"/>
+			<skill id="4411" level="12"/>
+			<skill id="4412" level="19"/>
+			<skill id="4413" level="12"/>
+			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
 	<npc id="23075" name="Heaven's Palace Noble Knight" title="">
@@ -4245,7 +4353,8 @@
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="33.0"/>
 		<set name="level" value="75"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2676"/>
@@ -4278,7 +4387,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="53"/>
 			<defence attribute="unholy" value="-33"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="5829" max="13611" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -4300,8 +4410,8 @@
 	</rewardlist>
 		<skills>
 			<skill id="4410" level="14"/>
-			<skill id="4411" level="14"/>
-			<skill id="4412" level="12"/>
+			<skill id="4411" level="12"/>
+			<skill id="4412" level="16"/>
 			<skill id="4416" level="8"/>
 		</skills>
 	</npc>
@@ -4310,7 +4420,8 @@
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="41.5"/>
 		<set name="level" value="92"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="1500"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="304477"/>
@@ -4346,7 +4457,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="5462" level="6"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23077" name="Nameless Lunacy" title="">
@@ -4391,7 +4502,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="5462" level="6"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23078" name="Restrained Wizard" title="">
@@ -4399,7 +4510,8 @@
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="1500"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="312844"/>
@@ -4435,7 +4547,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="5462" level="6"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23079" name="Nameless Lunacy" title="">
@@ -4443,7 +4555,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="93"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="14298"/>
@@ -4479,7 +4592,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="5462" level="6"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23080" name="Corrupted Poison Cloud" title="">
@@ -4487,7 +4600,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="94"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="1500"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="10"/>
@@ -4568,7 +4682,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="5462" level="6"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23082" name="Restrained Elite Soldier" title="">
@@ -4576,7 +4690,8 @@
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="41.5"/>
 		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="1500"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="322511"/>
@@ -4613,7 +4728,7 @@
 		<skills>
 			<skill id="4410" level="14"/>
 			<skill id="4416" level="6"/>
-			<skill id="5462" level="6"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23083" name="Nameless Berserker" title="">
@@ -4621,7 +4736,8 @@
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="30948"/>
@@ -4658,7 +4774,7 @@
 		<skills>
 			<skill id="4410" level="14"/>
 			<skill id="4416" level="6"/>
-			<skill id="5462" level="6"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23084" name="Restrained Elite Wizard" title="">
@@ -4666,7 +4782,8 @@
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="1500"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="322511"/>
@@ -4703,7 +4820,7 @@
 		<skills>
 			<skill id="4411" level="12"/>
 			<skill id="4416" level="6"/>
-			<skill id="5462" level="6"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23085" name="Nameless Berserker" title="">
@@ -4711,7 +4828,8 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="96"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="1500"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="30948"/>
@@ -4748,7 +4866,7 @@
 		<skills>
 			<skill id="4411" level="12"/>
 			<skill id="4416" level="6"/>
-			<skill id="5462" level="6"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23086" name="Octavis' Gladiator" title="">
@@ -4756,7 +4874,8 @@
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="67.0"/>
 		<set name="level" value="86"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -4792,7 +4911,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="5464" level="6"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23087" name="Beast of the Arena" title="">
@@ -4800,7 +4919,8 @@
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -4836,7 +4956,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="3"/>
-			<skill id="5464" level="3"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23088" name="Octavis' Chief Curator" title="">
@@ -4844,7 +4964,8 @@
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -4880,7 +5001,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="5464" level="6"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23089" name="Hero of the Arena" title="Cursed">
@@ -4888,7 +5009,8 @@
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="60.0"/>
 		<set name="level" value="85"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3290"/>
@@ -4924,7 +5046,7 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="5464" level="6"/>
+			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23090" name="Hall Manager" title="">
@@ -4932,7 +5054,8 @@
 		<set name="collision_radius" value="33.0"/>
 		<set name="collision_height" value="58.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -4965,7 +5088,8 @@
 			<defence attribute="earth" value="280"/>
 			<defence attribute="holy" value="280"/>
 			<defence attribute="unholy" value="280"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="31363" max="73286" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -4988,7 +5112,7 @@
 	</rewardlist>
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="5463" level="6"/>
+			<skill id="5463" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23091" name="Hall Warrior" title="">
@@ -4996,7 +5120,8 @@
 		<set name="collision_radius" value="33.0"/>
 		<set name="collision_height" value="58.5"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -5029,7 +5154,8 @@
 			<defence attribute="earth" value="280"/>
 			<defence attribute="holy" value="280"/>
 			<defence attribute="unholy" value="280"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="17735" max="41442" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -5051,7 +5177,7 @@
 	</rewardlist>
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="5463" level="6"/>
+			<skill id="5463" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23092" name="Hall Guard Warrior" title="">
@@ -5059,7 +5185,8 @@
 		<set name="collision_radius" value="21.0"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -5092,7 +5219,8 @@
 			<defence attribute="earth" value="280"/>
 			<defence attribute="holy" value="247"/>
 			<defence attribute="unholy" value="444"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="17735" max="41442" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -5113,7 +5241,7 @@
 	</rewardlist>
 		<skills>
 			<skill id="4416" level="9"/>
-			<skill id="5467" level="9"/>
+			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23093" name="Hall Guard Healer" title="">
@@ -5121,7 +5249,8 @@
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="31.0"/>
 		<set name="level" value="97"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
@@ -5154,7 +5283,8 @@
 			<defence attribute="earth" value="280"/>
 			<defence attribute="holy" value="247"/>
 			<defence attribute="unholy" value="444"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="17735" max="41442" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -5176,7 +5306,7 @@
 	</rewardlist>
 		<skills>
 			<skill id="4416" level="9"/>
-			<skill id="5467" level="9"/>
+			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23094" name="Poisonous Spider" title="">
@@ -5184,7 +5314,8 @@
 		<set name="collision_radius" value="27.0"/>
 		<set name="collision_height" value="25.5"/>
 		<set name="level" value="22"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="387"/>
@@ -5217,7 +5348,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="104" max="243" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -5241,9 +5373,9 @@
 		<skills>
 			<skill id="4410" level="12"/>
 			<skill id="4411" level="12"/>
-			<skill id="4412" level="12"/>
+			<skill id="4412" level="10"/>
 			<skill id="4413" level="10"/>
-			<skill id="4416" level="10"/>
+			<skill id="4416" level="12"/>
 		</skills>
 	</npc>
 	<npc id="23095" name="Arachnid Predator" title="">
@@ -5251,7 +5383,8 @@
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="24"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="435"/>
@@ -5284,7 +5417,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="115" max="269" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -5308,9 +5442,9 @@
 		<skills>
 			<skill id="4410" level="12"/>
 			<skill id="4411" level="12"/>
-			<skill id="4412" level="12"/>
+			<skill id="4412" level="10"/>
 			<skill id="4413" level="10"/>
-			<skill id="4416" level="10"/>
+			<skill id="4416" level="12"/>
 		</skills>
 	</npc>
 	<npc id="23096" name="Tumran Bugbear" title="">
@@ -5318,7 +5452,8 @@
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="35.0"/>
 		<set name="level" value="29"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="908"/>
@@ -5355,9 +5490,9 @@
 		<skills>
 			<skill id="4410" level="10"/>
 			<skill id="4411" level="10"/>
-			<skill id="4412" level="10"/>
+			<skill id="4412" level="12"/>
 			<skill id="4413" level="12"/>
-			<skill id="4416" level="10"/>
+			<skill id="4416" level="11"/>
 		</skills>
 	</npc>
 	<npc id="23097" name="Skeletal Marauder" title="">
@@ -5365,7 +5500,8 @@
 		<set name="collision_radius" value="7.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="36"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="809"/>
@@ -5398,7 +5534,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="-33"/>
 			<defence attribute="unholy" value="53"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="197" max="460" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -5422,11 +5559,11 @@
 	</rewardlist>
 		<skills>
 			<skill id="4274" level="1"/>
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="12"/>
 			<skill id="4411" level="12"/>
-			<skill id="4412" level="12"/>
+			<skill id="4412" level="10"/>
 			<skill id="4413" level="10"/>
-			<skill id="4416" level="12"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
 	<npc id="23098" name="Granite Golem" title="">
@@ -5434,7 +5571,8 @@
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="31.0"/>
 		<set name="level" value="37"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="847"/>
@@ -5467,7 +5605,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="268" max="627" chance="100.00000"/>		<!-- Адена -->
 		</group>
@@ -5490,11 +5629,11 @@
 	</rewardlist>
 		<skills>
 			<skill id="4284" level="5"/>
-			<skill id="4410" level="2"/>
+			<skill id="4410" level="10"/>
 			<skill id="4411" level="10"/>
-			<skill id="4412" level="10"/>
-			<skill id="4413" level="19"/>
-			<skill id="4416" level="12"/>
+			<skill id="4412" level="19"/>
+			<skill id="4413" level="12"/>
+			<skill id="4416" level="2"/>
 		</skills>
 	</npc>
 	<npc id="23099" name="Ant Soldier" title="">
@@ -5502,7 +5641,8 @@
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="17.0"/>
 		<set name="level" value="38"/>
-		<set name="type" value="Monster"/><set name="aggroRange" value="300"/>
+		<set name="type" value="Monster"/>
+			<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="886"/>
@@ -5535,7 +5675,8 @@
 			<defence attribute="earth" value="20"/>
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
-		</attributes><rewardlist type="RATED_GROUPED">
+		</attributes>
+			<rewardlist type="RATED_GROUPED">
 		<group chance="70.000">
 			<reward item_id="57" min="415" max="971" chance="100.00000"/>		<!-- Адена -->
 		</group>

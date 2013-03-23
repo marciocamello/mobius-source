@@ -41,7 +41,7 @@
 			<skill id="4408" level="14"/>	<!--HP Increase (6x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4410" level="10"/>	<!--Slightly Weak P. Atk.-->
+			<skill id="4410" level="8"/>	<!--Slightly Weak P. Atk.-->
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="10"/>	<!--Slightly Weak P. Def.-->
 			<skill id="4413" level="10"/>	<!--Slightly Weak M. Def.-->
@@ -120,7 +120,7 @@
 			<skill id="4408" level="14"/>	<!--HP Increase (6x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4410" level="10"/>	<!--Slightly Weak P. Atk.-->
+			<skill id="4410" level="8"/>	<!--Slightly Weak P. Atk.-->
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="10"/>	<!--Slightly Weak P. Def.-->
 			<skill id="4413" level="10"/>	<!--Slightly Weak M. Def.-->
@@ -199,7 +199,7 @@
 			<skill id="4408" level="14"/>	<!--HP Increase (6x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4410" level="10"/>	<!--Slightly Weak P. Atk.-->
+			<skill id="4410" level="8"/>	<!--Slightly Weak P. Atk.-->
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="10"/>	<!--Slightly Weak P. Def.-->
 			<skill id="4413" level="10"/>	<!--Slightly Weak M. Def.-->
@@ -280,7 +280,7 @@
 			<skill id="4408" level="14"/>	<!--HP Increase (6x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4410" level="10"/>	<!--Slightly Weak P. Atk.-->
+			<skill id="4410" level="8"/>	<!--Slightly Weak P. Atk.-->
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="10"/>	<!--Slightly Weak P. Def.-->
 			<skill id="4413" level="10"/>	<!--Slightly Weak M. Def.-->
@@ -2794,6 +2794,8 @@
 			<skill id="4389" level="4"/>	<!--Resist Mental Attacks-->
 			<skill id="4388" level="4"/>	<!--Resist Paralysis Attacks-->
 			<skill id="4225" level="4"/>	<!--Resist Stun Attacks-->
+		<skill id="4416" level="6"/>
+			<skill id="4411" level="16"/>
 		</skills>
 		<attributes>
 			<attack attribute="water" value="250"/>
@@ -2857,6 +2859,7 @@
 			<skill id="4438" level="1"/>	<!--Greater Resist Sleep-->
 			<skill id="4389" level="4"/>	<!--Resist Mental Attacks-->
 			<skill id="4435" level="1"/>	<!--Greater Resist Stun-->
+		<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<attack attribute="water" value="250"/>
@@ -3179,6 +3182,9 @@
 			<skill id="4424" level="4"/>	<!--Resist Hand-to-hand Weapons-->
 			<skill id="4449" level="4"/>	<!--Greater Resist Two-handed Weapons-->
 			<skill id="6426" level="1"/>	<!--Priest's Ire-->
+		<skill id="4416" level="6"/>
+			<skill id="5465" level="1"/>
+			<skill id="5601" level="9"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4774,6 +4780,7 @@
 			<skill id="4416" level="3"/>	<!--Beasts-->
 			<skill id="5463" level="1"/>	<!--Water Attacks-->
 			<skill id="5620" level="7"/>	<!--Short-Range Physical Attack Weakness-->
+		<skill id="4411" level="14"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">

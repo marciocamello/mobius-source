@@ -1578,6 +1578,8 @@
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="5701" level="1"/>	<!--Decrease P. Atk-->
 			<skill id="4037" level="2"/>	<!--Decrease P. Atk.-->
+		<skill id="4494" level="1"/>
+			<skill id="14771" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="59.8529">
@@ -1779,6 +1781,8 @@
 			<skill id="4416" level="6"/>	<!--Humanoids-->
 			<skill id="5701" level="2"/>	<!--Decrease P. Atk-->
 			<skill id="4037" level="2"/>	<!--Decrease P. Atk.-->
+		<skill id="4494" level="1"/>
+			<skill id="14772" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="48.7802">
@@ -1984,6 +1988,8 @@
 			<skill id="4416" level="2"/>	<!--Magic Creatures-->
 			<skill id="5701" level="3"/>	<!--Decrease P. Atk-->
 			<skill id="4037" level="2"/>	<!--Decrease P. Atk.-->
+		<skill id="4494" level="1"/>
+			<skill id="14773" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="58.8978">
@@ -2187,6 +2193,8 @@
 			<skill id="4416" level="1"/>	<!--Undead-->
 			<skill id="5701" level="4"/>	<!--Decrease P. Atk-->
 			<skill id="4037" level="2"/>	<!--Decrease P. Atk.-->
+		<skill id="4494" level="1"/>
+			<skill id="14774" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="62.1828">
@@ -2391,6 +2399,8 @@
 			<skill id="4416" level="4"/>	<!--Animals-->
 			<skill id="5701" level="5"/>	<!--Decrease P. Atk-->
 			<skill id="4037" level="2"/>	<!--Decrease P. Atk.-->
+		<skill id="4494" level="1"/>
+			<skill id="14775" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="66.6906">
@@ -2593,6 +2603,8 @@
 			<skill id="5701" level="6"/>	<!--Decrease P. Atk-->
 			<skill id="4037" level="2"/>	<!--Decrease P. Atk.-->
 			<skill id="4172" level="6"/>	<!--Stun-->
+		<skill id="4494" level="1"/>
+			<skill id="14776" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="56.4673">
@@ -2801,6 +2813,8 @@
 			<skill id="5701" level="7"/>	<!--Decrease P. Atk-->
 			<skill id="4037" level="2"/>	<!--Decrease P. Atk.-->
 			<skill id="4172" level="6"/>	<!--Stun-->
+		<skill id="4494" level="1"/>
+			<skill id="14777" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="73.9419">
@@ -3008,6 +3022,8 @@
 			<skill id="5919" level="1"/>	<!--Obey-->
 			<skill id="5921" level="1"/>	<!--Inhale-->
 			<skill id="5922" level="1"/>	<!--Exhale-->
+		<skill id="4494" level="1"/>
+			<skill id="14769" level="1"/>
 		</skills>
 		<absorblist>
 			<absorb chance="50" min_level="13" max_level="17" type="PARTY_RANDOM"/>
@@ -5568,7 +5584,7 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 	</npc>
     <npc id="29193" name="Octavis" title="">

@@ -27,6 +27,7 @@ import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.base.InvisibleType;
 import lineage2.gameserver.network.serverpackets.Earthquake;
+import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.tables.SkillTable;
@@ -100,6 +101,10 @@ public class AdminEffects implements IAdminCommandHandler
 		 */
 		admin_abnormal,
 		/**
+		 * Field admin_abnormal.
+		 */
+		admin_effect,
+		/**
 		 * Field admin_transform.
 		 */
 		admin_transform,
@@ -127,6 +132,7 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		int val;
 		AbnormalEffect ae = AbnormalEffect.NULL;
+		String Skill = new String();
 		GameObject target = activeChar.getTarget();
 		switch (command)
 		{
@@ -373,6 +379,43 @@ public class AdminEffects implements IAdminCommandHandler
 					}
 				}
 				break;
+			
+			case admin_effect:
+				try
+				{
+					if ((wordList.length > 1) && (wordList[1] != null))
+					{
+						Skill = wordList[1];
+					}
+				}
+				catch (Exception e)
+				{
+					activeChar.sendMessage("USAGE: //effect skillId <optional> skillLevel hittime");
+					return false;
+				}
+				String level = "1",
+				hittime = "1";
+				if (wordList.length > 2)
+				{
+					level = wordList[2];
+				}
+				if (wordList.length > 2)
+				{
+					hittime = wordList[2];
+				}
+				if (target == null)
+				{
+					target = activeChar;
+				}
+				if (!(target instanceof Creature))
+				{
+					activeChar.sendPacket(Msg.INVALID_TARGET);
+				}
+				else
+				{
+					((Creature) target).broadcastPacket(new MagicSkillUse(((Creature) target), activeChar, Integer.valueOf(Skill), Integer.valueOf(level), Integer.valueOf(hittime), 0));
+					activeChar.sendMessage(((Creature) target).getName() + " performs MSU " + Skill + "/" + level + " by your request.");
+				}
 			case admin_transform:
 				try
 				{

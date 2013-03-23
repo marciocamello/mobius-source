@@ -74,7 +74,7 @@
 	<skill id="11778">
 		<remove id="1201"/>
 		<remove id="1394"/>
-		<remove id="981"/>
+		<remove id="1069"/>
 	</skill>
 	<skill id="10254">
 		<remove id="832"/>
@@ -86,6 +86,7 @@
 		<remove id="319"/>
 		<remove id="173"/>
 		<remove id="229"/>
+		<remove id="233"/>
 	</skill>
 	<skill id="10255">
 		<remove id="992"/>
@@ -109,6 +110,9 @@
 		<remove id="501"/>
 		<remove id="190"/>
 		<remove id="281"/>
+	</skill>
+	<skill id="10269">
+		<remove id="995"/>
 	</skill>
 	<skill id="10771">
 		<remove id="987"/>
@@ -189,6 +193,7 @@
 	</skill>
 	<skill id="11298">
 		<remove id="1148"/>
+		<remove id="1530"/>
 	</skill>
 	<skill id="10787">
 		<remove id="115"/>
@@ -464,6 +469,7 @@
 	</skill>
 	<skill id="11820">
 		<remove id="871"/>
+		<remove id="1068"/>
 		<remove id="1040"/>
 		<remove id="875"/>
 	</skill>
@@ -743,6 +749,25 @@
 	<skill id="10511">
 		<remove id="344"/>
 	</skill>
+	<skill id="11501">
+		<remove id="832"/>
+		<remove id="257"/>
+		<remove id="249"/>
+		<remove id="144"/>
+		<remove id="474"/>
+		<remove id="935"/>
+		<remove id="331"/>
+		<remove id="626"/>
+		<remove id="250"/>
+		<remove id="463"/>
+		<remove id="925"/>
+		<remove id="926"/>
+		<remove id="934"/>
+		<remove id="330"/>
+		<remove id="217"/>
+		<remove id="205"/>
+		<remove id="5604"/>
+	</skill>
 	<skill id="10512">
 		<remove id="70"/>
 		<remove id="36"/>
@@ -755,9 +780,8 @@
 		<remove id="229"/>
 		<remove id="291"/>
 		<remove id="191"/>
-		<remove id="231"/>
-		<remove id="429"/>
 		<remove id="232"/>
+		<remove id="429"/>
 	</skill>
 	<skill id="10003">
 		<remove id="153"/>
@@ -821,6 +845,8 @@
 	</skill>
 	<skill id="10019">
 		<remove id="528"/>
+
+
 	</skill>
 	<skill id="10020">
 		<remove id="288"/>
@@ -923,7 +949,6 @@
 		<remove id="425"/>
 	</skill>
 	<skill id="10001">
-		<remove id="205"/>
 		<remove id="217"/>
 	</skill>
 	<skill id="11553">
@@ -1015,6 +1040,12 @@
 	<skill id="11288">
 		<remove id="1557"/>
 	</skill>
+	<skill id="11251">
+		<remove id="228"/>
+		<remove id="925"/>
+		<remove id="330"/>
+		<remove id="331"/>
+	</skill>
 	<skill id="11538">
 		<remove id="1208"/>
 		<remove id="367"/>
@@ -1030,7 +1061,6 @@
 		<remove id="904"/>
 		<remove id="1454"/>
 		<remove id="1469"/>
-		<remove id="1155"/>
 	</skill>
 	<skill id="11761">
 		<remove id="1428"/>
@@ -1123,6 +1153,7 @@
 	</skill>
 	<skill id="11268">
 		<remove id="779"/>
+		<remove id="781"/>
 	</skill>
 	<skill id="11003">
 		<remove id="147"/>

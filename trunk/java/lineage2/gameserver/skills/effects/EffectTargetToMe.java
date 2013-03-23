@@ -29,6 +29,13 @@ public class EffectTargetToMe extends Effect
 	 * @param env Env
 	 * @param template EffectTemplate
 	 */
+	
+	/**
+	 * Field _z. Field _y. Field _x.
+	 */
+	
+	private int _x, _y, _z;
+	
 	public EffectTargetToMe(Env env, EffectTemplate template)
 	{
 		super(env, template);
@@ -42,8 +49,13 @@ public class EffectTargetToMe extends Effect
 	{
 		super.onStart();
 		Location flyLoc = _effected.getFlyLocation(getEffector(), getSkill());
-		_effected.setLoc(flyLoc);
-		_effected.broadcastPacket(new FlyToLocation(_effected, flyLoc, getSkill().getFlyType(), 0));
+		_effected.startStunning();
+		_effected.abortCast(true, true);
+		_effected.broadcastPacket(new FlyToLocation(_effected, flyLoc, getSkill().getFlyType(), getSkill().getFlySpeed()));
+		_x = flyLoc.getX();
+		_y = flyLoc.getY();
+		_z = flyLoc.getZ();
+		_effected.setXYZ(flyLoc.getX(), flyLoc.getY(), flyLoc.getZ());
 		_effected.broadcastPacket(new ValidateLocation(_effected));
 	}
 	
@@ -54,6 +66,15 @@ public class EffectTargetToMe extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		_effected.setXYZ(_x, _y, _z);
+		_effected.broadcastPacket(new ValidateLocation(_effected));
+		try
+		{
+			_effected.stopStunning();
+		}
+		catch (Throwable ex)
+		{
+		}
 	}
 	
 	/**

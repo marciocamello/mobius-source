@@ -12,98 +12,59 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.dao.CharacterDAO;
-import lineage2.gameserver.instancemanager.MuseumManager;
-import lineage2.gameserver.instancemanager.MuseumManager.Museum;
+import java.util.List;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
+import lineage2.gameserver.model.worldstatistics.CharacterStatistic;
+
 public class ExLoadStatWorldRank extends L2GameServerPacket
 {
-	/**
-	 * Field _S__FE_100_EXLOADSTATWORLDRANK. (value is ""[S] FE:100 ExLoadStatWorldRank"")
-	 */
-	private static final String _S__FE_100_EXLOADSTATWORLDRANK = "[S] FE:100 ExLoadStatWorldRank";
-	/**
-	 * Field category2. Field category1.
-	 */
-	int category1, category2;
-	/**
-	 * Field mm.
-	 */
-	MuseumManager mm;
-	/**
-	 * Field loadWorldRank.
-	 */
-	boolean loadWorldRank;
+	private final int _section;
+	private final int _subSection;
+	private final List<CharacterStatistic> _monthlyData;
+	private final List<CharacterStatistic> _generalData;
 	
-	/**
-	 * Constructor for ExLoadStatWorldRank.
-	 * @param _category1 int
-	 * @param _category2 int
-	 */
-	public ExLoadStatWorldRank(int _category1, int _category2)
+	public ExLoadStatWorldRank(int section, int subSection, List<CharacterStatistic> generalData, List<CharacterStatistic> monthlyData)
 	{
-		mm = MuseumManager.getInstance();
-		category1 = _category1;
-		category2 = _category2;
-		loadWorldRank = false;
-		for (String[] categories : mm.getLoadingInfo())
-		{
-			if (categories[2].contains("" + category1))
-			{
-				loadWorldRank = true;
-			}
-		}
+		_section = section;
+		_subSection = subSection;
+		_generalData = generalData;
+		_monthlyData = monthlyData;
 	}
 	
-	/**
-	 * Method writeImpl.
-	 */
 	@Override
 	protected void writeImpl()
 	{
-		writeC(0xFE);
-		writeH(0x100);
-		writeD(category1);
-		writeD(category2);
-		if (loadWorldRank)
+		// writeEx(0x101);
+		writeC(254);
+		writeH(256);
+		
+		writeD(_section);
+		writeD(_subSection);
+		
+		writeD(_monthlyData.size());
+		for (int i = 0, monthlyDataSize = _monthlyData.size(); i < monthlyDataSize; i++)
 		{
-			for (int i = 0; i < 2; i++)
-			{
-				boolean isTotal = i == 1;
-				writeD(!mm.getMuseums(category1, isTotal).isEmpty() ? mm.getMuseums(category1, isTotal).size() : 0x00);
-				if (!mm.getMuseums(category1, isTotal).isEmpty())
-				{
-					for (Museum player : mm.getMuseums(category1, isTotal))
-					{
-						writeH(0x00);
-						writeD(player.getObjectId());
-						writeS(CharacterDAO.getInstance().getNameByObjectId(player.getObjectId()));
-						writeQ(player.getAcquiredItem());
-						writeH(0x00);
-						writeD(0x00);
-						writeD(0x00);
-					}
-				}
-			}
+			CharacterStatistic statistic = _monthlyData.get(i);
+			writeH(i + 1);
+			writeD(statistic.getObjId());
+			writeS(statistic.getName());
+			writeQ(statistic.getValue());
+			writeH(0);
+			writeD(statistic.getClanObjId());
+			writeD(statistic.getClanCrestId());
 		}
-		else
+		
+		writeD(_generalData.size());
+		for (int i = 0, generalDataSize = _generalData.size(); i < generalDataSize; i++)
 		{
-			writeD(0x00);
-			writeD(0x00);
+			CharacterStatistic statistic = _generalData.get(i);
+			writeH(i + 1);
+			writeD(statistic.getObjId());
+			writeS(statistic.getName());
+			writeQ(statistic.getValue());
+			writeH(0);
+			writeD(statistic.getObjId());
+			writeD(statistic.getClanCrestId());
 		}
-	}
-	
-	/**
-	 * Method getType.
-	 * @return String
-	 */
-	@Override
-	public String getType()
-	{
-		return _S__FE_100_EXLOADSTATWORLDRANK;
 	}
 }

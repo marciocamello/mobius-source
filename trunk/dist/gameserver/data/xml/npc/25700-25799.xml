@@ -1016,6 +1016,8 @@
 			<skill id="4178" level="8"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
+		<skill id="4494" level="1"/>
+			<skill id="14778" level="1"/>
 		</skills>
 		<faction name="kamaloka" range="0"/>
 		<rewardlist type="RATED_GROUPED">
@@ -1788,6 +1790,10 @@
 			<skill id="6884" level="1"/>
 			<!--Morale Boost-->
 			<skill id="6885" level="1"/>
+		<skill id="4494" level="1"/>
+			<skill id="6898" level="1"/>
+			<skill id="4416" level="10"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="10.7">
@@ -1867,9 +1873,9 @@
 		</attributes>
 		<skills>
 			<skill id="4494" level="1"/>
-			<skill id="5464" level="10"/>
+			<skill id="5464" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="10"/>
 			<!--84 level Raid Boss-->
 			<skill id="6899" level="1"/>
 		</skills>
@@ -1953,9 +1959,9 @@
 		</attributes>
 		<skills>
 			<skill id="4494" level="1"/>
-			<skill id="5464" level="10"/>
+			<skill id="5464" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="10"/>
 			<!--84 level Raid Boss-->
 			<skill id="6900" level="1"/>
 		</skills>
@@ -2051,9 +2057,9 @@
 		</attributes>
 		<skills>
 			<skill id="4494" level="1"/>
-			<skill id="5467" level="10"/>
+			<skill id="5467" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="10"/>
 			<!--84 level Raid Boss-->
 			<skill id="6901" level="1"/>
 		</skills>
@@ -2149,9 +2155,9 @@
 		</attributes>
 		<skills>
 			<skill id="4494" level="1"/>
-			<skill id="5467" level="10"/>
+			<skill id="5467" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="10"/>
 			<!--84 level Raid Boss-->
 			<skill id="6902" level="1"/>
 		</skills>
@@ -2248,8 +2254,8 @@
 		<skills>
 			<skill id="4494" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
-			<skill id="5463" level="10"/>
+			<skill id="4416" level="10"/>
+			<skill id="5463" level="1"/>
 			<!--84 level Raid Boss-->
 			<skill id="6903" level="1"/>
 		</skills>
@@ -2346,10 +2352,10 @@
 		<skills>
 			<!--84 level Raid Boss-->
 			<skill id="6904" level="1"/>
-			<skill id="4494" level="8"/>
+			<skill id="4494" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
-			<skill id="5462" level="10"/>
+			<skill id="4416" level="10"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="8.7">
@@ -2432,10 +2438,10 @@
 		<skills>
 			<!--85 level Raid Boss-->
 			<skill id="6905" level="1"/>
-			<skill id="4494" level="8"/>
-			<skill id="5467" level="6"/>
+			<skill id="4494" level="1"/>
+			<skill id="5467" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="15.0">
@@ -2499,11 +2505,11 @@
 		</attributes>
 		<skills>
 			<skill id="4494" level="1"/>
-			<skill id="5465" level="10"/>
+			<skill id="5465" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="10"/>
 			<!--Extremely Weak P. Atk.-->
-			<skill id="4410" level="1"/>
+			<skill id="4410" level="15"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="17.0">
@@ -2568,10 +2574,10 @@
 		<skills>
 			<!--85 level Raid Boss-->
 			<skill id="6907" level="1"/>
-			<skill id="4494" level="8"/>
-			<skill id="5465" level="9"/>
+			<skill id="4494" level="1"/>
+			<skill id="5465" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<!--ru name: Рыцарь Смерти-->
@@ -2629,7 +2635,7 @@
 			<!--Dark Attacks-->
 			<skill id="5467" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
 	<!--ru name: Рыцарь Смерти-->
@@ -2687,7 +2693,7 @@
 			<!--Dark Attacks-->
 			<skill id="5467" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
 	<!--ru name: Пир Демона-->
@@ -2745,7 +2751,7 @@
 			<!--Dark Attacks-->
 			<skill id="5467" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
 	<!--ru name: Пир Демона-->
@@ -2803,7 +2809,7 @@
 			<!--Dark Attacks-->
 			<skill id="5467" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
 	<!--ru title: Рейдовый Босс-->
@@ -2861,10 +2867,10 @@
 		<skills>
 			<!--85 level Raid Boss-->
 			<skill id="6907" level="1"/>
-			<skill id="4494" level="8"/>
-			<skill id="5465" level="9"/>
+			<skill id="4494" level="1"/>
+			<skill id="5465" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="6.708">
@@ -3032,9 +3038,9 @@
 		<skills>
 			<!--Haste-->
 			<skill id="6914" level="3"/>
-			<skill id="5465" level="13"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 			<!--Power Strike-->
 			<skill id="14040" level="1"/>
 		</skills>
@@ -3130,9 +3136,9 @@
 		<skills>
 			<!--Haste-->
 			<skill id="6914" level="3"/>
-			<skill id="5465" level="13"/>
+			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 			<!--Double Blow-->
 			<skill id="14043" level="1"/>
 		</skills>
@@ -3192,7 +3198,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 			<!--Power Strike-->
 			<skill id="14040" level="1"/>
 		</skills>
@@ -3253,8 +3259,8 @@
 			<!--Fairy Acumen-->
 			<skill id="14048" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
+			<skill id="4416" level="6"/>
+			<skill id="5463" level="1"/>
 			<!--Fairy Curse Gloom-->
 			<skill id="14046" level="1"/>
 			<!--Fairy Attack-->
@@ -3371,8 +3377,8 @@
 			<!--Fairy Acumen-->
 			<skill id="14048" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
+			<skill id="4416" level="6"/>
+			<skill id="5463" level="1"/>
 			<!--Fairy Curse Poison-->
 			<skill id="14047" level="1"/>
 		</skills>
@@ -3433,8 +3439,8 @@
 			<!--Fairy Heal-->
 			<skill id="14049" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
-			<skill id="5463" level="6"/>
+			<skill id="4416" level="6"/>
+			<skill id="5463" level="1"/>
 			<!--Fairy Curse Gloom-->
 			<skill id="14046" level="1"/>
 		</skills>
@@ -3494,7 +3500,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="39.3387">
@@ -3576,7 +3582,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 		</skills>
 	</npc>
 	<!--ru title: Поборник Кимериана-->
@@ -3634,7 +3640,7 @@
 		<skills>
 			<!--Animals-->
 			<skill id="4416" level="3"/>
-			<skill id="5462" level="3"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<!--ru title: Поборник Кимериана-->
@@ -3692,7 +3698,7 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 			<!--X Strike-->
 			<skill id="14058" level="1"/>
 			<!--Sneer Attack-->
@@ -3789,12 +3795,12 @@
 			<skill id="4438" level="5"/>
 			<!--Greater Resist Hold-->
 			<skill id="4439" level="5"/>
-			<skill id="4494" level="18"/>
+			<skill id="4494" level="1"/>
 			<!--Greater Resist Stun-->
-			<skill id="4435" level="1"/>
-			<skill id="5465" level="13"/>
+			<skill id="4435" level="5"/>
+			<skill id="5465" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="13"/>
 			<!--Disarm-->
 			<skill id="14042" level="3"/>
 			<!--Frontal Brandish-->
@@ -3807,6 +3813,7 @@
 			<skill id="14063" level="1"/>
 			<!--Greater Resist Mental Derangement-->
 			<skill id="4441" level="5"/>
+		<skill id="14718" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="9.837">
@@ -3869,7 +3876,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 		</skills>
 	</npc>
 	<!--ru title: Духовный Наставник Фей-->
@@ -3926,9 +3933,10 @@
 		</attributes>
 		<skills>
 			<skill id="4494" level="1"/>
-			<skill id="5465" level="13"/>
+			<skill id="5465" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="13"/>
+		<skill id="14718" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="56.8719">
@@ -4020,7 +4028,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 		</skills>
 	</npc>
 	<!--ru title: Поборник Кимериана-->
@@ -4078,7 +4086,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 		</skills>
 	</npc>
 	<!--ru title: Поборник Кимериана-->
@@ -4136,7 +4144,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="44.9751">
@@ -4222,7 +4230,7 @@
 		<skills>
 			<!--Animals-->
 			<skill id="4416" level="6"/>
-			<skill id="5463" level="6"/>
+			<skill id="5463" level="1"/>
 		</skills>
 	</npc>
 	<!--ru title: Поборник Кимериана-->
@@ -4280,7 +4288,7 @@
 		<skills>
 			<!--Animals-->
 			<skill id="4416" level="6"/>
-			<skill id="5463" level="6"/>
+			<skill id="5463" level="1"/>
 		</skills>
 	</npc>
 	<!--ru title: Поборник Кимериана-->
@@ -4338,7 +4346,7 @@
 		<skills>
 			<!--Animals-->
 			<skill id="4416" level="6"/>
-			<skill id="5463" level="6"/>
+			<skill id="5463" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="62.272">
@@ -4436,7 +4444,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="75.7935">
@@ -4522,7 +4530,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 		</skills>
 	</npc>
 	<!--ru title: Поборник Кимериана-->
@@ -4580,7 +4588,7 @@
 		<skills>
 			<!--Animals-->
 			<skill id="4416" level="3"/>
-			<skill id="5462" level="3"/>
+			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<!--ru title: Поборник Кимериана-->
@@ -4638,7 +4646,7 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="78.2773">
@@ -4746,16 +4754,17 @@
 			<skill id="4438" level="5"/>
 			<!--Greater Resist Hold-->
 			<skill id="4439" level="5"/>
-			<skill id="4494" level="18"/>
+			<skill id="4494" level="1"/>
 			<!--Greater Resist Stun-->
-			<skill id="4435" level="1"/>
-			<skill id="5465" level="13"/>
+			<skill id="4435" level="5"/>
+			<skill id="5465" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="13"/>
 			<!--Greater Resist Paralysis-->
 			<skill id="4440" level="5"/>
 			<!--Greater Resist Mental Derangement-->
 			<skill id="4441" level="5"/>
+		<skill id="14719" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="10.218">
@@ -4821,7 +4830,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="13"/>
 		</skills>
 	</npc>
 	<!--ru title: Рейдовый Босс-->
@@ -4879,7 +4888,8 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="6"/>
+		<skill id="14748" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="54.65">
@@ -4991,7 +5001,8 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="6"/>
+		<skill id="14749" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="0.9">
@@ -5065,7 +5076,8 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="6"/>
+		<skill id="14750" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="88.0605">
@@ -5147,7 +5159,8 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="6"/>
+		<skill id="14751" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="57.351">
@@ -5269,7 +5282,8 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="6"/>
+		<skill id="14752" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="91.13999">
@@ -5347,7 +5361,7 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 	</npc>
 	<!--ru title: Рейдовый Босс-->
@@ -5405,7 +5419,8 @@
 		<skills>
 			<!--Undead-->
 			<skill id="4416" level="6"/>
-			<skill id="5463" level="6"/>
+			<skill id="5463" level="1"/>
+		<skill id="14753" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="67.611">
@@ -5507,7 +5522,8 @@
 		<skills>
 			<!--Undead-->
 			<skill id="4416" level="6"/>
-			<skill id="5463" level="6"/>
+			<skill id="5463" level="1"/>
+		<skill id="14754" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="60.317">
@@ -5623,7 +5639,8 @@
 		<skills>
 			<!--Undead-->
 			<skill id="4416" level="6"/>
-			<skill id="5463" level="6"/>
+			<skill id="5463" level="1"/>
+		<skill id="14755" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="76.08138">
@@ -5699,7 +5716,8 @@
 		<skills>
 			<!--Undead-->
 			<skill id="4416" level="6"/>
-			<skill id="5463" level="6"/>
+			<skill id="5463" level="1"/>
+		<skill id="14756" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="7.118">
@@ -5779,7 +5797,8 @@
 		<skills>
 			<!--Undead-->
 			<skill id="4416" level="6"/>
-			<skill id="5463" level="6"/>
+			<skill id="5463" level="1"/>
+		<skill id="14757" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="65.292">
@@ -5897,7 +5916,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="13.703">
@@ -5973,7 +5992,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="12.086">
@@ -6049,7 +6068,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="76.567">
@@ -6162,7 +6181,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="22.673">
@@ -6250,9 +6269,10 @@
 		</attributes>
 		<skills>
 			<skill id="4494" level="1"/>
-			<skill id="5465" level="5"/>
+			<skill id="5465" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="5"/>
+		<skill id="14723" level="1"/>
 		</skills>
 	</npc>
 	<!--ru title: Сад Афроса-->
@@ -6310,7 +6330,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="63.0811">
@@ -6402,7 +6422,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="5"/>
 		</skills>
 	</npc>
 	<!--ru title: Сад Афроса-->
@@ -6460,7 +6480,7 @@
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="5"/>
 		</skills>
 	</npc>
 	<!--ru title: Рейдовый Босс-->
@@ -6520,16 +6540,17 @@
 			<skill id="4438" level="5"/>
 			<!--Greater Resist Hold-->
 			<skill id="4439" level="5"/>
-			<skill id="4494" level="20"/>
+			<skill id="4494" level="1"/>
 			<!--Greater Resist Stun-->
 			<skill id="4435" level="5"/>
-			<skill id="5465" level="6"/>
+			<skill id="5465" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="6"/>
 			<!--Greater Resist Paralysis-->
 			<skill id="4440" level="5"/>
 			<!--Greater Resist Mental Derangement-->
 			<skill id="4441" level="5"/>
+		<skill id="14721" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="51.334">
@@ -6634,7 +6655,7 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<!--ru name: Миньон Спасии-->
@@ -6691,7 +6712,7 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
 	<!--ru name: Миньон Спасии-->
@@ -6749,7 +6770,7 @@
 		<skills>
 			<skill id="5467" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="77.6035">
@@ -7017,10 +7038,10 @@
 			<skill id="14110" level="1"/>
 			<!--Teredor Range Attack-->
 			<skill id="14111" level="1"/>
-			<skill id="4494" level="14"/>
-			<skill id="5465" level="12"/>
+			<skill id="4494" level="1"/>
+			<skill id="5465" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
+			<skill id="4416" level="12"/>
 			<!--Jump Attack-->
 			<skill id="6268" level="1"/>
 			<!--Soul Absorb-->
@@ -7031,6 +7052,7 @@
 			<skill id="14112" level="2"/>
 			<!--Greater Resist Mental Derangement-->
 			<skill id="4441" level="5"/>
+		<skill id="14747" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="34.36">
@@ -7104,7 +7126,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 	</npc>
 	<!--ru title: Король-->
@@ -7162,7 +7184,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="22.9658">
@@ -7246,7 +7268,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 	</npc>
 	<!--ru title: Супруг Королевы-->
@@ -7304,7 +7326,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 	</npc>
 	<!--ru title: Миньон Рачихиоса-->
@@ -7362,7 +7384,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="65.5784">
@@ -7450,7 +7472,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 	</npc>
 	<!--ru title: Наследник-->
@@ -7508,7 +7530,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 	</npc>
 	<!--ru title: Наследник-->
@@ -7566,7 +7588,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="50.9708">
@@ -7664,7 +7686,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="69.4399">
@@ -7768,7 +7790,7 @@
 		<skills>
 			<skill id="5464" level="1"/>
 			<!--Animals-->
-			<skill id="4416" level="4"/>
+			<skill id="4416" level="3"/>
 		</skills>
 	</npc>
 	<!--ru title: Тюремщик Ада-->
@@ -7832,16 +7854,17 @@
 			<skill id="4436" level="3"/>
 			<!--Greater Resist Bleeding-->
 			<skill id="4437" level="3"/>
-			<skill id="4494" level="22"/>
+			<skill id="4494" level="1"/>
 			<!--Greater Resist Stun-->
 			<skill id="4435" level="3"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
-			<skill id="5463" level="9"/>
+			<skill id="4416" level="9"/>
+			<skill id="5463" level="1"/>
 			<!--Greater Resist Paralysis-->
-			<skill id="4440" level="1"/>
+			<skill id="4440" level="3"/>
 			<!--Greater Resist Mental Derangement-->
 			<skill id="4441" level="3"/>
+		<skill id="14714" level="1"/>
 		</skills>
 	</npc>
 	<!--ru title: Огненный-->
@@ -7899,10 +7922,11 @@
 		<skills>
 			<skill id="4494" level="1"/>
 			<!--Undead-->
-			<skill id="4416" level="1"/>
-			<skill id="5462" level="9"/>
+			<skill id="4416" level="9"/>
+			<skill id="5462" level="1"/>
 			<!--Heavy Armor Type-->
 			<skill id="4414" level="1"/>
+		<skill id="14715" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="67.746">
@@ -8002,9 +8026,9 @@
 		<skills>
 			<!--Humanoids-->
 			<skill id="4416" level="9"/>
-			<skill id="5462" level="9"/>
+			<skill id="5462" level="1"/>
 			<!--Heavy Armor Type-->
-			<skill id="4414" level="1"/>
+			<skill id="4414" level="3"/>
 		</skills>
 	</npc>
 	<!--ru title: Верховный Судья-->
@@ -8065,6 +8089,7 @@
 			<skill id="5467" level="1"/>
 			<!--Undead-->
 			<skill id="4416" level="1"/>
+		<skill id="14716" level="1"/>
 		</skills>
 	</npc>
 </list>

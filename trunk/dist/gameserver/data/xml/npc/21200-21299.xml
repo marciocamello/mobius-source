@@ -5309,7 +5309,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5434,7 +5434,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5556,7 +5556,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5678,7 +5678,7 @@
 			<skill id="4414" level="3"/>	<!--Light Armor Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="8"/>	<!--Angels-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -6800,7 +6800,7 @@
 			<skill id="4414" level="3"/>	<!--Light Armor Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -6921,7 +6921,7 @@
 			<skill id="4414" level="3"/>	<!--Light Armor Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7042,7 +7042,7 @@
 			<skill id="4414" level="3"/>	<!--Light Armor Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7163,7 +7163,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="4"/>	<!--Animals-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7283,7 +7283,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="4"/>	<!--Animals-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7403,7 +7403,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="4"/>	<!--Animals-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7523,7 +7523,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="4"/>	<!--One-handed Sword-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7643,7 +7643,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="4"/>	<!--One-handed Sword-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7763,7 +7763,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="4"/>	<!--One-handed Sword-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7883,7 +7883,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="6"/>	<!--Blunt Weapons-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -8005,7 +8005,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="6"/>	<!--Blunt Weapons-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -8127,7 +8127,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="6"/>	<!--Blunt Weapons-->
 			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -8250,7 +8250,7 @@
 			<skill id="4415" level="4"/>	<!--One-handed Sword-->
 			<skill id="4416" level="4"/>	<!--Animals-->
 			<skill id="4789" level="2"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -8371,7 +8371,7 @@
 			<skill id="4415" level="4"/>	<!--One-handed Sword-->
 			<skill id="4416" level="4"/>	<!--Animals-->
 			<skill id="4789" level="2"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -8492,7 +8492,7 @@
 			<skill id="4415" level="4"/>	<!--One-handed Sword-->
 			<skill id="4416" level="4"/>	<!--Animals-->
 			<skill id="4789" level="2"/>	<!--NPC High Level-->
-			<skill id="5620" level="6"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="5620" level="10"/>	<!--Short-Range Physical Attack Weakness-->
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">

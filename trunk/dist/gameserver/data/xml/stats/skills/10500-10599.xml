@@ -117,18 +117,18 @@
     <skill id="10505" levels="1" name="Superior Critical Mastery">
     <!-- STR + 2, P. Critical Damage + 539 and P. Critical Rate + 60%. + 1000% chance of triggering skill mastery. -->
         <set name="magicLevel" val="85"/>
-        <table name="#cAtk">539</table>
+        <table name="#cAtkStatic">539</table>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
         <set name="relationSkillsId" val="1559;137;193;334;"/>
         <set name="operateType" val="OP_PASSIVE"/>
         <enchant1 levels="10" name="Power">
-            <table name="#cAtk">574 609 644 679 715 750 785 820 855 891</table>
+            <table name="#cAtkStatic">574 609 644 679 715 750 785 820 855 891</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant1>
         <for>
             <add order="0x40" stat="STR" val="2"/>
-            <add order="0x40" stat="cAtk" val="#cAtk"/>
+			<add order="0x40" stat="cAtkStatic" val="#cAtkStatic"/>
 			<mul order="0x30" stat="rCrit" val="1.6"/>
         </for>
     </skill>
@@ -718,7 +718,9 @@
     <skill id="10525" levels="4" name="Shadow Dash">
     <!-- For 15 seconds, increases Speed by 66, P. Evasion by 4, and HP Recovery Bonus by 10. -->
         <table name="#magicLevel">85 90 95 99</table>
-        <table name="#runSpd">40 45 54 66</table>
+        <table name="#runSpd">66 66 66 66</table>
+		<table name="#rEvas">4 6 8 10</table>
+		<table name="#regHp">10 20 30 40</table>
         <table name="#time">15</table>
         <set name="relationSkillsId" val="4;230;"/>
         <set name="magicLevel" val="#magicLevel"/>
@@ -733,8 +735,8 @@
         <for>
             <effect name="Buff" time="#time" val="0" stackOrder="1">
                 <add order="0x40" stat="runSpd" val="#runSpd"/>
-                <add order="0x40" stat="rEvas" val="10"/>
-                <add order="0x40" stat="regHp" val="10"/>
+                <add order="0x40" stat="rEvas" val="#rEvas"/>
+                <add order="0x40" stat="regHp" val="#regHp"/>
             </effect>
         </for>
     </skill>

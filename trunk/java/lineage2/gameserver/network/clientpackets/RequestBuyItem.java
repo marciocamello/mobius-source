@@ -153,8 +153,7 @@ public class RequestBuyItem extends L2GameClientPacket
 				taxRate = castle.getTaxRate();
 			}
 		}
-		@SuppressWarnings("unused")
-		List<TradeItem> buyList = new ArrayList<TradeItem>(_count);
+		List<TradeItem> buyList = new ArrayList<>(_count);
 		List<TradeItem> tradeList = list.getItems();
 		try
 		{

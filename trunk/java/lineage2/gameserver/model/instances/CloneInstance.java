@@ -80,7 +80,6 @@ public class CloneInstance extends ClonePlayer
 	{
 		super.onSpawn();
 		_destroyTask = ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(this), _lifetimeCountdown);
-		// _targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new TargetTask(this), 10000L, 10000L);
 	}
 	
 	/**

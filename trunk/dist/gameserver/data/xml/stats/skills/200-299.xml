@@ -1426,7 +1426,7 @@
 			<table name="#mpConsume2">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" time="#abnormal_time" stackOrder="1" stackType="sol" val="0">
+			<effect count="1" name="Buff" time="#abnormal_time" stackOrder="1" stackType="song_of_life" val="0">
 				<mul order="0x30" stat="regHp" val="1.2"/>
 			</effect>
 		</for>
@@ -1457,7 +1457,7 @@
 			<table name="#mpConsume2">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="2" stackType="SongOfWater" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="2" stackType="song_of_water" time="#abnormal_time" val="0">
 				<add order="0x40" stat="rEvas" val="3"/>
 			</effect>
 		</for>
@@ -1519,7 +1519,7 @@
 			<table name="#mpConsume2">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="2" stackType="SongOfWind" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="2" stackType="song_of_wind" time="#abnormal_time" val="0">
 				<add order="0x40" stat="runSpd" val="20"/>
 			</effect>
 		</for>
@@ -1581,7 +1581,7 @@
 			<table name="#mpConsume2">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" time="#abnormal_time" val="0" stackOrder="1" stackType="song_of_invocation">
 				<add order="0x40" stat="defenceUnholy" val="20"/>
 			</effect>
 		</for>
@@ -1645,7 +1645,7 @@
 			<table name="#mpConsume2">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="2" stackType="DanceOfInspiration" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="2" stackType="dance_of_inspiration" time="#abnormal_time" val="0">
 				<add order="0x40" stat="accCombat" val="4"/>
 			</effect>
 		</for>
@@ -1806,7 +1806,7 @@
 			<table name="#mpConsume2">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" time="#abnormal_time" val="0" stackOrder="1" stackType="dance_of_light">
 				<add order="0x40" stat="attackHoly" val="20"/>
 			</effect>
 		</for>

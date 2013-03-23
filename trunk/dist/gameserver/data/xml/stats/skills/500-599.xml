@@ -1022,7 +1022,7 @@
 			<table name="#mpConsume2">52 50 48 46 45 43 41 39 38 36 34 32 31 29 27</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" time="#time" val="0">
+			<effect count="1" name="Buff" time="#time" val="0" stackType="song_of_elemental">
 				<add order="0x40" stat="defenceFire" val="30"/>
 				<add order="0x40" stat="defenceWater" val="30"/>
 				<add order="0x40" stat="defenceWind" val="30"/>
@@ -1057,7 +1057,7 @@
 			<table name="#mpConsume2">52 50 48 46 45 43 41 39 38 36 34 32 31 29 27</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" time="#time" val="0">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="1" stackType="dance_of_alignment">
 				<add order="0x40" stat="defenceUnholy" val="30"/>
 				<add order="0x40" stat="defenceHoly" val="30"/>
 			</effect>

@@ -2341,6 +2341,7 @@
 			<skill id="4607" level="1"/>	<!--Magma Attack-->
 			<skill id="6656" level="1"/>	<!--Lavasaurus Firstborn Attack-->
 			<skill id="6657" level="1"/>	<!--Lavasaurus Firstborn Heal-->
+		<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="300"/>
@@ -3330,6 +3331,7 @@
 			<skill id="5017" level="1"/>	<!--Frintezza's Daemon Morph-->
 			<skill id="5018" level="1"/>	<!--Frintezza's Daemon Field-->
 			<skill id="5019" level="1"/>	<!--Frintezza's Daemon Drain-->
+		<skill id="5464" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="wind" value="350"/>
@@ -3394,6 +3396,8 @@
 			<skill id="5078" level="1"/>	<!--Frintezza Critical Damage-->
 			<skill id="5017" level="1"/>	<!--Frintezza's Daemon Morph-->
 			<skill id="5016" level="1"/>	<!--Yoke of Scarlet-->
+		<skill id="4494" level="1"/>
+			<skill id="14768" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="370"/>
@@ -3460,6 +3464,8 @@
 			<skill id="5018" level="2"/>	<!--Frintezza's Daemon Field-->
 			<skill id="5016" level="1"/>	<!--Yoke of Scarlet-->
 			<skill id="5019" level="1"/>	<!--Frintezza's Daemon Drain-->
+		<skill id="4494" level="1"/>
+			<skill id="14768" level="1"/>
 		</skills>
 		<absorblist>
 			<absorb chance="100" min_level="13" max_level="14" type="PARTY_ALL"/>
@@ -3598,6 +3604,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="1"/>	<!--Bare Hands-->
 			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+		<skill id="5464" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="wind" value="300"/>
@@ -3658,6 +3665,7 @@
 			<skill id="4414" level="2"/>	<!--Standard Type-->
 			<skill id="4415" level="1"/>	<!--Bare Hands-->
 			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+		<skill id="5464" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="wind" value="300"/>
@@ -3715,7 +3723,7 @@
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="11"/>	<!--Average P. Def.-->
 			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4414" level="3"/>	<!--Standard Type-->
 			<skill id="4415" level="1"/>	<!--Bare Hands-->
 			<skill id="4416" level="9"/>	<!--Demons-->
 			<skill id="5009" level="1"/>	<!--Frintezza's Ghostly Fighter-->
@@ -3723,6 +3731,7 @@
 			<skill id="5011" level="1"/>	<!--Frintezza's Bomber Ghost-->
 			<skill id="5012" level="1"/>	<!--Breath of Scarlet-->
 			<skill id="5013" level="1"/>	<!--Frintezza Ghost Drain-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="300"/>
@@ -3780,7 +3789,7 @@
 			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
 			<skill id="4412" level="11"/>	<!--Average P. Def.-->
 			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
+			<skill id="4414" level="3"/>	<!--Standard Type-->
 			<skill id="4415" level="1"/>	<!--Bare Hands-->
 			<skill id="4416" level="9"/>	<!--Demons-->
 			<skill id="5009" level="1"/>	<!--Frintezza's Ghostly Fighter-->
@@ -3788,6 +3797,7 @@
 			<skill id="5011" level="1"/>	<!--Frintezza's Bomber Ghost-->
 			<skill id="5012" level="1"/>	<!--Breath of Scarlet-->
 			<skill id="5013" level="1"/>	<!--Frintezza Ghost Drain-->
+		<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="300"/>
@@ -3966,6 +3976,8 @@
 			<skill id="4416" level="9"/>	<!--Demons-->
 			<skill id="4993" level="1"/>	<!--Venom - Strike-->
 			<skill id="4994" level="1"/>	<!--Venom - Sonic Storm-->
+		<skill id="4494" level="1"/>
+			<skill id="14770" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="68.2692">
@@ -5477,6 +5489,7 @@
 			<skill id="4671" level="1"/>	<!--AV - Teleport-->
 			<skill id="5095" level="1"/>	<!--Antharas Subordinate Melee Attack-->
 			<skill id="5096" level="1"/>	<!--Antharas Subordinate Remote Attack-->
+		<skill id="5465" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="earth" value="300"/>
@@ -5538,6 +5551,7 @@
 			<skill id="4416" level="10"/>	<!--Dragons-->
 			<skill id="5094" level="1"/>	<!--Antharas Subordinate Suicide -->
 			<skill id="5097" level="1"/>	<!--Antharas Subordinate Suicide (Narrow Range)-->
+		<skill id="5465" level="1"/>
 		</skills>
 		<rewardlist type="NOT_RATED_GROUPED">
 			<group chance="100.0">
@@ -5946,6 +5960,7 @@
 			<skill id="4415" level="3"/>	<!--One-handed Sword-->
 			<skill id="4416" level="10"/>	<!--Dragons-->
 			<skill id="5094" level="10"/>	<!--null-->
+		<skill id="5465" level="1"/>
 		</skills>
 		<rewardlist type="NOT_RATED_GROUPED">
 			<group chance="100.0">

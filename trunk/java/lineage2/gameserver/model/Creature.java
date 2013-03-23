@@ -52,6 +52,7 @@ import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.geodata.GeoMove;
 import lineage2.gameserver.instancemanager.ReflectionManager;
+import lineage2.gameserver.instancemanager.WorldStatisticsManager;
 import lineage2.gameserver.model.GameObjectTasks.AltMagicUseTask;
 import lineage2.gameserver.model.GameObjectTasks.CastEndTimeTask;
 import lineage2.gameserver.model.GameObjectTasks.HitTask;
@@ -74,6 +75,7 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.quest.QuestEventType;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.model.reference.L2Reference;
+import lineage2.gameserver.model.worldstatistics.CategoryType;
 import lineage2.gameserver.network.serverpackets.AbnormalStatusUpdate;
 import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.Attack;
@@ -2388,6 +2390,7 @@ public abstract class Creature extends GameObject
 			if (killerPlayer != null)
 			{
 				killerPlayer.getListeners().onKillIgnorePetOrSummon(this);
+				WorldStatisticsManager.getInstance().updateStat(killerPlayer, CategoryType.MONSTERS_KILLED, 1L);
 			}
 			killer.getListeners().onKill(this);
 			if (isPlayer() && killer.isPlayable())
@@ -4664,6 +4667,12 @@ public abstract class Creature extends GameObject
 			}
 		}
 		onReduceCurrentHp(damage, attacker, skill, awake, standUp, directHp);
+		
+		if (attacker.isPlayer())
+		{
+			WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.DAMAGE_TO_MONSTERS, attacker.getPlayer().getClassId().getId(), (long) damage);
+			WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.DAMAGE_TO_MONSTERS_MAX, attacker.getPlayer().getClassId().getId(), (long) damage);
+		}
 	}
 	
 	/**

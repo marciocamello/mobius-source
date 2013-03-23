@@ -690,7 +690,7 @@
 		<set name="skillType" val="CONT"/>
 		<set name="operateType" val="OP_TOGGLE"/>
 			<for>
-				<effect count="0x7fffffff" name="LDManaDamOverTime" time="5" val="#mp"/>
+				<effect count="0x7fffffff" abnormal="rollingThunder" name="LDManaDamOverTime" time="5" val="#mp"/>
 				<effect count="0x7fffffff" name="CallSkills" time="5" val="0">
 					<def name="skillIds" val="10287"/>
 					<def name="skillLevels" val="#level"/>

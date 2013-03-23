@@ -25,6 +25,7 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.instancemanager.SpawnManager;
+import lineage2.gameserver.instancemanager.WorldStatisticsManager;
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.listener.actor.OnKillListener;
 import lineage2.gameserver.model.Creature;
@@ -37,6 +38,7 @@ import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
+import lineage2.gameserver.model.worldstatistics.CategoryType;
 import lineage2.gameserver.network.serverpackets.ExShowQuestMark;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.QuestList;
@@ -361,6 +363,10 @@ public final class QuestState
 			}
 			setState(Quest.COMPLETED);
 			Quest.updateQuestInDb(this);
+		}
+		if (isCompleted())
+		{
+			WorldStatisticsManager.getInstance().updateStat(player, CategoryType.QUESTS_COMPLETED, 1);
 		}
 		player.sendPacket(new QuestList(player));
 		return this;

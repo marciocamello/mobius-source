@@ -858,7 +858,8 @@
 		<skills>
 			<skill id="4416" level="14"/>	<!--Humans-->
 		</skills>
-		<teleportlist><!-- Башня Слоновой Кости -->
+		<teleportlist>
+			<!-- Башня Слоновой Кости -->
 			<sublist id="1">
 				<target loc="84856 15912 -4270" item_id="57" price="0" name="1010016"/>
 				<target loc="85336 16137 -3640" item_id="57" price="0" name="1010015"/>
@@ -1019,7 +1020,8 @@
 		<skills>
 			<skill id="4416" level="15"/>	<!--Elves-->
 		</skills>
-		<teleportlist><!-- Башня Слоновой Кости -->
+		<teleportlist>
+			<!-- Башня Слоновой Кости -->
 			<sublist id="1">
 				<target loc="84970 15961 -4270" item_id="57" price="0" name="1010016"/>
 				<target loc="85475 16087 -3640" item_id="57" price="0" name="1010015"/>
@@ -1184,7 +1186,8 @@
 		<skills>
 			<skill id="4416" level="16"/>	<!--Dark Elves-->
 		</skills>
-		<teleportlist><!-- Башня Слоновой Кости -->
+		<teleportlist>
+			<!-- Башня Слоновой Кости -->
 			<sublist id="1">
 				<target loc="84971 15961 -4270" item_id="57" price="0" name="1010016"/>
 				<target loc="85475 16087 -3640" item_id="57" price="0" name="1010015"/>
@@ -1443,17 +1446,26 @@
 		<skills>
 			<skill id="4416" level="14"/>	<!--Humans-->
 		</skills>
-		<teleportlist><!-- Башня Слоновой Кости -->
-			<sublist id="1"><!-- 1й этаж - Вход -->
-				<target loc="82971 53207 -1488" item_id="57" price="3700" name="1010013" castle_id="4"/><!-- Орен -->
-				<target loc="117088 76931 -2688" item_id="57" price="6800" name="1010020"/><!-- Деревня Охотников -->
-				<target loc="146783 25808 -2008" item_id="57" price="6200" name="1010023" castle_id="5"/><!-- Аден -->
+		<teleportlist>
+			<!-- Башня Слоновой Кости -->
+			<sublist id="1">
+			<!-- 1й этаж - Вход -->
+				<target loc="82971 53207 -1488" item_id="57" price="3700" name="1010013" castle_id="4"/>
+			<!-- Орен -->
+				<target loc="117088 76931 -2688" item_id="57" price="6800" name="1010020"/>
+			<!-- Деревня Охотников -->
+				<target loc="146783 25808 -2008" item_id="57" price="6200" name="1010023" castle_id="5"/>
+			<!-- Аден -->
 			</sublist>
 			<sublist id="2">
-				<target loc="84971 15961 -4270" item_id="57" price="0" name="1010016"/><!-- Подвал - Торговая зона -->
-				<target loc="85475 16087 -2780" item_id="57" price="0" name="1010017"/><!-- 2й этаж - Гильдия Магов -->
-				<target loc="85475 16087 -2270" item_id="57" price="0" name="1010018"/><!-- 3й этаж - Гильдия Светлых Магов -->
-				<target loc="85475 16087 -1750" item_id="57" price="0" name="1010019"/><!-- 4й этаж - Гильдия Темных Магов -->
+				<target loc="84971 15961 -4270" item_id="57" price="0" name="1010016"/>
+			<!-- Подвал - Торговая зона -->
+				<target loc="85475 16087 -2780" item_id="57" price="0" name="1010017"/>
+			<!-- 2й этаж - Гильдия Магов -->
+				<target loc="85475 16087 -2270" item_id="57" price="0" name="1010018"/>
+			<!-- 3й этаж - Гильдия Светлых Магов -->
+				<target loc="85475 16087 -1750" item_id="57" price="0" name="1010019"/>
+			<!-- 4й этаж - Гильдия Темных Магов -->
 			</sublist>
 		</teleportlist>
 		<attributes>

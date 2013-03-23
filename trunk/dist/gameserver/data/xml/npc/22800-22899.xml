@@ -2079,6 +2079,10 @@
 			<skill id="4441" level="1"/>	<!--Greater Resist Mental Derangement-->
 			<skill id="4440" level="1"/>	<!--Greater Resist Paralysis-->
 			<skill id="6857" level="1"/>	<!--Power Strike-->
+		<skill id="4416" level="10"/>
+			<skill id="4410" level="15"/>
+			<skill id="4412" level="17"/>
+			<skill id="4413" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -2169,6 +2173,9 @@
 			<skill id="4441" level="1"/>	<!--Greater Resist Mental Derangement-->
 			<skill id="4440" level="1"/>	<!--Greater Resist Paralysis-->
 			<skill id="6859" level="1"/>	<!--Power Strike-->
+		<skill id="4410" level="15"/>
+			<skill id="4412" level="15"/>
+			<skill id="4413" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -2255,11 +2262,16 @@
 			<skill id="5462" level="1"/>	<!--Fire Attacks-->
 			<!--<skill id="4411" level="15" />	Strong M. Atk.-->
 			<!--<skill id="4413" level="6" />	Very Weak M. Def.-->
-			<skill id="4285" level="5"/>	<!--Resist Sleep Attacks-->
-			<skill id="4287" level="5"/>	<!--Resist Hold Attacks-->
+			<skill id="4285" level="4"/>	<!--Resist Sleep Attacks-->
+			<skill id="4287" level="4"/>	<!--Resist Hold Attacks-->
 			<skill id="4441" level="5"/>	<!--Greater Resist Mental Derangement-->
 			<skill id="6860" level="1"/>	<!--Power Strike-->
 			<skill id="6861" level="1"/>	<!--Enhance-->
+		<skill id="4416" level="10"/>
+			<skill id="4410" level="16"/>
+			<skill id="4411" level="15"/>
+			<skill id="4412" level="16"/>
+			<skill id="4413" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -2346,12 +2358,17 @@
 			<skill id="5467" level="1"/>	<!--Dark Attacks-->
 			<!--<skill id="4411" level="15" />	Strong M. Atk.-->
 			<!--<skill id="4413" level="6" />	Very Weak M. Def.-->
-			<skill id="4274" level="5"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4285" level="5"/>	<!--Resist Sleep Attacks-->
-			<skill id="4287" level="5"/>	<!--Resist Hold Attacks-->
+			<skill id="4274" level="4"/>	<!--Blunt Weapon Weak Point-->
+			<skill id="4285" level="4"/>	<!--Resist Sleep Attacks-->
+			<skill id="4287" level="4"/>	<!--Resist Hold Attacks-->
 			<skill id="4441" level="5"/>	<!--Greater Resist Mental Derangement-->
 			<skill id="6862" level="1"/>	<!--Poison-->
 			<skill id="6863" level="1"/>	<!--Poison-->
+		<skill id="4416" level="12"/>
+			<skill id="4410" level="15"/>
+			<skill id="4411" level="14"/>
+			<skill id="4412" level="15"/>
+			<skill id="4413" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -2433,12 +2450,17 @@
 			<skill id="5467" level="1"/>	<!--Dark Attacks-->
 			<!--<skill id="4411" level="15" />	Strong M. Atk.-->
 			<!--<skill id="4413" level="6" />	Very Weak M. Def.-->
-			<skill id="4274" level="5"/>	<!--Blunt Weapon Weak Point-->
+			<skill id="4274" level="4"/>	<!--Blunt Weapon Weak Point-->
 			<skill id="4435" level="2"/>	<!--Greater Resist Stun-->
 			<skill id="4438" level="4"/>	<!--Greater Resist Sleep-->
 			<skill id="4439" level="4"/>	<!--Greater Resist Hold-->
 			<skill id="4441" level="5"/>	<!--Greater Resist Mental Derangement-->
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
+		<skill id="4416" level="12"/>
+			<skill id="4410" level="13"/>
+			<skill id="4411" level="14"/>
+			<skill id="4412" level="14"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -2520,12 +2542,17 @@
 			<skill id="5464" level="1"/>	<!--Wind Attacks-->
 			<!--<skill id="4411" level="15" />	Strong M. Atk.-->
 			<!--<skill id="4413" level="17" />	Very Strong M. Def.-->
-			<skill id="4285" level="5"/>	<!--Resist Sleep Attacks-->
-			<skill id="4287" level="5"/>	<!--Resist Hold Attacks-->
+			<skill id="4285" level="4"/>	<!--Resist Sleep Attacks-->
+			<skill id="4287" level="4"/>	<!--Resist Hold Attacks-->
 			<skill id="4441" level="5"/>	<!--Greater Resist Mental Derangement-->
 			<skill id="6866" level="1"/>	<!--Vampiric Claw-->
 			<skill id="6867" level="1"/>	<!--Magic Strike-->
 			<skill id="6869" level="1"/>	<!--Detonate-->
+		<skill id="4416" level="10"/>
+			<skill id="4410" level="16"/>
+			<skill id="4411" level="14"/>
+			<skill id="4412" level="16"/>
+			<skill id="4413" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -2616,6 +2643,10 @@
 			<skill id="6870" level="1"/>	<!--Vampiric Claw-->
 			<skill id="6871" level="1"/>	<!--Range Magic Attack-->
 			<skill id="6872" level="1"/>	<!--Self-destruction-->
+		<skill id="4410" level="13"/>
+			<skill id="4411" level="15"/>
+			<skill id="4412" level="14"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -2706,6 +2737,10 @@
 			<skill id="6873" level="2"/>	<!--Hex-->
 			<skill id="6874" level="1"/>	<!--Range Magic Attack-->
 			<skill id="6875" level="2"/>	<!--Poison-->
+		<skill id="4410" level="15"/>
+			<skill id="4411" level="15"/>
+			<skill id="4412" level="14"/>
+			<skill id="4413" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -2793,6 +2828,11 @@
 			<skill id="6876" level="1"/>	<!--Power Strike-->
 			<skill id="6877" level="1"/>	<!--Power Strike-->
 			<skill id="6878" level="1"/>	<!--Paralysis-->
+		<skill id="4410" level="13"/>
+			<skill id="4411" level="14"/>
+			<skill id="4412" level="14"/>
+			<skill id="4413" level="4"/>
+			<skill id="4276" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -2884,6 +2924,9 @@
 			<skill id="6876" level="1"/>	<!--Power Strike-->
 			<skill id="6877" level="1"/>	<!--Power Strike-->
 			<skill id="6878" level="1"/>	<!--Paralysis-->
+		<skill id="4410" level="16"/>
+			<skill id="4412" level="16"/>
+			<skill id="4413" level="8"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -2980,6 +3023,9 @@
 			<skill id="6876" level="1"/>	<!--Power Strike-->
 			<skill id="6877" level="1"/>	<!--Power Strike-->
 			<skill id="6878" level="1"/>	<!--Paralysis-->
+		<skill id="4410" level="15"/>
+			<skill id="4412" level="15"/>
+			<skill id="4413" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -3071,6 +3117,9 @@
 			<skill id="4441" level="5"/>	<!--Greater Resist Mental Derangement-->
 			<skill id="6879" level="1"/>	<!--Vampiric Claw-->
 			<skill id="6880" level="1"/>	<!--Silence-->
+		<skill id="4411" level="15"/>
+			<skill id="4412" level="15"/>
+			<skill id="4413" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -3165,6 +3214,10 @@
 			<!--<skill id="4412" level="17" />	Very Strong P. Def.-->
 			<!--<skill id="4413" level="9" />	Slightly Weak M. Def.-->
 			<skill id="6881" level="1"/>	<!--Critical Strike-->
+		<skill id="4410" level="17"/>
+			<skill id="4411" level="15"/>
+			<skill id="4412" level="17"/>
+			<skill id="4413" level="9"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -3389,6 +3442,9 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6748" level="1"/>	<!--Stun Attack-->
 			<skill id="6750" level="1"/>	<!--Power Strike-->
+		<skill id="4411" level="13"/>
+			<skill id="4412" level="16"/>
+			<skill id="4413" level="8"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -3486,6 +3542,10 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6755" level="1"/>	<!--Death Strike-->
 			<skill id="6752" level="1"/>	<!--Revival-->
+		<skill id="4410" level="12"/>
+			<skill id="4411" level="13"/>
+			<skill id="4412" level="14"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -3589,6 +3649,10 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6753" level="1"/>	<!--Death Blow-->
 			<skill id="6754" level="1"/>	<!--Bleed-->
+		<skill id="4410" level="13"/>
+			<skill id="4411" level="14"/>
+			<skill id="4412" level="12"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -3688,6 +3752,9 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6749" level="1"/>	<!--Death Strike-->
 			<skill id="6756" level="1"/>	<!--Death Talon-->
+		<skill id="4410" level="13"/>
+			<skill id="4411" level="16"/>
+			<skill id="4413" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -3781,6 +3848,9 @@
 			<skill id="6757" level="1"/>	<!--Slow-->
 			<skill id="6758" level="1"/>	<!--Rage-->
 			<skill id="4032" level="1"/>	<!--NPC Strike-->
+		<skill id="4410" level="13"/>
+			<skill id="4411" level="16"/>
+			<skill id="4413" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -3876,6 +3946,9 @@
 			<skill id="4441" level="5"/>	<!--Greater Resist Mental Derangement-->
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6759" level="1"/>	<!--Death Shot-->
+		<skill id="4411" level="14"/>
+			<skill id="4412" level="12"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -3976,6 +4049,10 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6761" level="1"/>	<!--Dragon Blow Strike-->
 			<skill id="6763" level="1"/>	<!--Dragon Earth Strike-->
+		<skill id="4410" level="13"/>
+			<skill id="4411" level="16"/>
+			<skill id="4412" level="15"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4074,6 +4151,10 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6761" level="1"/>	<!--Dragon Blow Strike-->
 			<skill id="6763" level="1"/>	<!--Dragon Earth Strike-->
+		<skill id="4410" level="13"/>
+			<skill id="4411" level="16"/>
+			<skill id="4412" level="15"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4170,6 +4251,10 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6761" level="1"/>	<!--Dragon Blow Strike-->
 			<skill id="6763" level="1"/>	<!--Dragon Earth Strike-->
+		<skill id="4410" level="13"/>
+			<skill id="4411" level="16"/>
+			<skill id="4412" level="15"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4268,6 +4353,8 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6760" level="1"/>	<!--Dragon Strike-->
 			<skill id="6762" level="1"/>	<!--Rage-->
+		<skill id="4412" level="9"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4368,6 +4455,9 @@
 			<skill id="6758" level="1"/>	<!--Rage-->
 			<skill id="6818" level="1"/>	<!--Powerful Rage-->
 			<skill id="6820" level="1"/>	<!--P. Def. Enhance-->
+		<skill id="4410" level="13"/>
+			<skill id="4412" level="15"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4465,6 +4555,9 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="5620" level="2"/>	<!--Short-Range Physical Attack Weakness-->
 			<skill id="6760" level="1"/>	<!--Dragon Strike-->
+		<skill id="4410" level="15"/>
+			<skill id="4412" level="16"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4561,6 +4654,9 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6764" level="1"/>	<!--Dragon Earth Shot-->
 			<skill id="6761" level="1"/>	<!--Dragon Blow Strike-->
+		<skill id="4410" level="14"/>
+			<skill id="4412" level="14"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4656,6 +4752,9 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6766" level="1"/>	<!--Earth Tremor-->
 			<skill id="6765" level="1"/>	<!--Complete Recovery-->
+		<skill id="4410" level="12"/>
+			<skill id="4412" level="13"/>
+			<skill id="4413" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4746,6 +4845,10 @@
 			<skill id="4441" level="5"/>	<!--Greater Resist Mental Derangement-->
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6768" level="1"/>	<!--Stun Attack-->
+		<skill id="4410" level="16"/>
+			<skill id="4411" level="15"/>
+			<skill id="4412" level="16"/>
+			<skill id="4413" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4842,6 +4945,9 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6769" level="1"/>	<!--Petrify-->
 			<skill id="6770" level="1"/>	<!--Heal-->
+		<skill id="4410" level="15"/>
+			<skill id="4411" level="13"/>
+			<skill id="4413" level="8"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -4935,6 +5041,10 @@
 			<skill id="6771" level="1"/>	<!--Death Strike-->
 			<skill id="6772" level="1"/>	<!--Power Strike-->
 			<skill id="6773" level="1"/>	<!--Rage-->
+		<skill id="4410" level="19"/>
+			<skill id="4411" level="19"/>
+			<skill id="4412" level="19"/>
+			<skill id="4413" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5025,6 +5135,10 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6774" level="1"/>	<!--Stun Attack-->
 			<skill id="6775" level="1"/>	<!--Soul Breath-->
+		<skill id="4410" level="19"/>
+			<skill id="4411" level="19"/>
+			<skill id="4412" level="19"/>
+			<skill id="4413" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5118,6 +5232,10 @@
 			<skill id="6776" level="1"/>	<!--Paralysis-->
 			<skill id="6777" level="1"/>	<!--Bleeding Gash-->
 			<skill id="6778" level="1"/>	<!--Death Strike-->
+		<skill id="4410" level="19"/>
+			<skill id="4411" level="19"/>
+			<skill id="4412" level="19"/>
+			<skill id="4413" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5221,6 +5339,10 @@
 			<skill id="4441" level="5"/>	<!--Greater Resist Mental Derangement-->
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6743" level="1"/>	<!--Dark Wind-->
+		<skill id="4410" level="17"/>
+			<skill id="4411" level="13"/>
+			<skill id="4412" level="15"/>
+			<skill id="4413" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5434,6 +5556,9 @@
 			<skill id="4440" level="1"/>	<!--Greater Resist Paralysis-->
 			<skill id="6876" level="1"/>	<!--Power Strike-->
 			<skill id="6878" level="1"/>	<!--Paralysis-->
+		<skill id="4410" level="13"/>
+			<skill id="4412" level="13"/>
+			<skill id="4413" level="13"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -5492,6 +5617,10 @@
 			<skill id="4440" level="4"/>	<!--Greater Resist Paralysis-->
 			<skill id="6870" level="1"/>	<!--Vampiric Claw-->
 			<skill id="6871" level="1"/>	<!--Range Magic Attack-->
+		<skill id="4410" level="13"/>
+			<skill id="4412" level="15"/>
+			<skill id="4413" level="4"/>
+			<skill id="4276" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5582,12 +5711,16 @@
 			<!--<skill id="4410" level="13" />	Slightly Strong P. Atk.-->
 			<!--<skill id="4412" level="15" />	Strong P. Def.-->
 			<!--<skill id="4413" level="5" />	Very Weak M. Def.-->
-			<skill id="4274" level="5"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4285" level="5"/>	<!--Resist Sleep Attacks-->
-			<skill id="4287" level="5"/>	<!--Resist Hold Attacks-->
+			<skill id="4274" level="4"/>	<!--Blunt Weapon Weak Point-->
+			<skill id="4285" level="4"/>	<!--Resist Sleep Attacks-->
+			<skill id="4287" level="4"/>	<!--Resist Hold Attacks-->
 			<skill id="4441" level="5"/>	<!--Greater Resist Mental Derangement-->
 			<skill id="6862" level="1"/>	<!--Poison-->
 			<skill id="6863" level="1"/>	<!--Poison-->
+		<skill id="4416" level="12"/>
+			<skill id="4410" level="15"/>
+			<skill id="4412" level="15"/>
+			<skill id="4413" level="5"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -5679,6 +5812,10 @@
 			<skill id="4441" level="1"/>	<!--Greater Resist Mental Derangement-->
 			<skill id="4440" level="1"/>	<!--Greater Resist Paralysis-->
 			<skill id="6857" level="1"/>	<!--Power Strike-->
+		<skill id="4416" level="10"/>
+			<skill id="4410" level="14"/>
+			<skill id="4412" level="15"/>
+			<skill id="4413" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -6231,20 +6368,27 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1685" max="3934" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1685" max="3934" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="0.0300">
-				<reward item_id="18154" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Gauntlet -->
-				<reward item_id="18155" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Boots -->
+				<reward item_id="18154" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Gauntlet -->
+				<reward item_id="18155" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Boots -->
 			</group>
 			<group chance="0.0390">
-				<reward item_id="17527" min="1" max="1" chance="96.1538"/><!-- Scroll: Enchant Armor R-Grade -->
-				<reward item_id="17526" min="1" max="1" chance="3.8462"/><!-- Scroll: Enchant Weapon R-Grade -->
+				<reward item_id="17527" min="1" max="1" chance="96.1538"/>
+			<!-- Scroll: Enchant Armor R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="3.8462"/>
+			<!-- Scroll: Enchant Weapon R-Grade -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="19220" min="1" max="1" chance="0.3000"/><!-- Unidentified Twilight Gauntlet Ingredient -->
-				<reward item_id="19221" min="1" max="1" chance="0.3000"/><!-- Unidentified Twilight Boots Ingredient -->
+				<reward item_id="19220" min="1" max="1" chance="0.3000"/>
+			<!-- Unidentified Twilight Gauntlet Ingredient -->
+				<reward item_id="19221" min="1" max="1" chance="0.3000"/>
+			<!-- Unidentified Twilight Boots Ingredient -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -6624,19 +6768,25 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1716" max="4005" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1716" max="4005" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="0.0300">
-				<reward item_id="18157" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Leather Helmet -->
-				<reward item_id="18161" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Leather Boots -->
+				<reward item_id="18157" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Leather Helmet -->
+				<reward item_id="18161" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Leather Boots -->
 			</group>
 			<group chance="0.1528">
-				<reward item_id="9548" min="1" max="1" chance="98.1997"/><!-- Earth Stone -->
-				<reward item_id="17526" min="1" max="1" chance="1.8003"/><!-- Scroll: Enchant Weapon R-Grade -->
+				<reward item_id="9548" min="1" max="1" chance="98.1997"/>
+			<!-- Earth Stone -->
+				<reward item_id="17526" min="1" max="1" chance="1.8003"/>
+			<!-- Scroll: Enchant Weapon R-Grade -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="17526" min="1" max="1" chance="0.0009"/><!-- Scroll: Enchant Weapon R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="0.0009"/>
+			<!-- Scroll: Enchant Weapon R-Grade -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -6690,20 +6840,27 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1678" max="3919" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1678" max="3919" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="0.0300">
-				<reward item_id="18157" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Leather Helmet -->
-				<reward item_id="18161" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Leather Boots -->
+				<reward item_id="18157" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Leather Helmet -->
+				<reward item_id="18161" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Leather Boots -->
 			</group>
 			<group chance="1.1445">
-				<reward item_id="19310" min="1" max="1" chance="98.6894"/><!-- High-Grade Synthetic Cokes -->
-				<reward item_id="17527" min="1" max="1" chance="1.3106"/><!-- Scroll: Enchant Armor R-Grade -->
+				<reward item_id="19310" min="1" max="1" chance="98.6894"/>
+			<!-- High-Grade Synthetic Cokes -->
+				<reward item_id="17527" min="1" max="1" chance="1.3106"/>
+			<!-- Scroll: Enchant Armor R-Grade -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="19364" min="1" max="1" chance="0.0300"/><!--Recipe - Unidentified Twilight Leather Helmet 60%-->
-				<reward item_id="19368" min="1" max="1" chance="0.0300"/><!--Recipe - Unidentified Twilight Leather Boots 60%-->
+				<reward item_id="19364" min="1" max="1" chance="0.0300"/>
+			<!--Recipe - Unidentified Twilight Leather Helmet 60%-->
+				<reward item_id="19368" min="1" max="1" chance="0.0300"/>
+			<!--Recipe - Unidentified Twilight Leather Boots 60%-->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -6757,19 +6914,25 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1678" max="3919" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1678" max="3919" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="0.0300">
-				<reward item_id="18157" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Leather Helmet -->
-				<reward item_id="18161" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Leather Boots -->
+				<reward item_id="18157" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Leather Helmet -->
+				<reward item_id="18161" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Leather Boots -->
 			</group>
 			<group chance="0.0750">
-				<reward item_id="17527" min="1" max="1" chance="100.0000"/><!-- Scroll: Enchant Armor R-Grade -->
+				<reward item_id="17527" min="1" max="1" chance="100.0000"/>
+			<!-- Scroll: Enchant Armor R-Grade -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="19227" min="1" max="1" chance="0.3000"/><!-- Unidentified Twilight Leather Boots Ingredient -->
-				<reward item_id="19223" min="1" max="1" chance="0.0750"/><!-- Unidentified Twilight Leather Helmet Ingredient -->
+				<reward item_id="19227" min="1" max="1" chance="0.3000"/>
+			<!-- Unidentified Twilight Leather Boots Ingredient -->
+				<reward item_id="19223" min="1" max="1" chance="0.0750"/>
+			<!-- Unidentified Twilight Leather Helmet Ingredient -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -7150,19 +7313,25 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1729" max="4036" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1729" max="4036" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="0.0300">
-				<reward item_id="18162" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Circlet -->
-				<reward item_id="18165" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Gloves -->
+				<reward item_id="18162" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Circlet -->
+				<reward item_id="18165" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Gloves -->
 			</group>
 			<group chance="0.1528">
-				<reward item_id="9549" min="1" max="1" chance="98.1997"/><!-- Wind Stone -->
-				<reward item_id="17526" min="1" max="1" chance="1.8003"/><!-- Scroll: Enchant Weapon R-Grade -->
+				<reward item_id="9549" min="1" max="1" chance="98.1997"/>
+			<!-- Wind Stone -->
+				<reward item_id="17526" min="1" max="1" chance="1.8003"/>
+			<!-- Scroll: Enchant Weapon R-Grade -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="17526" min="1" max="1" chance="0.0009"/><!-- Scroll: Enchant Weapon R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="0.0009"/>
+			<!-- Scroll: Enchant Weapon R-Grade -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -7216,21 +7385,29 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1691" max="3949" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1691" max="3949" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="0.0300">
-				<reward item_id="18162" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Circlet -->
-				<reward item_id="18165" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Gloves -->
+				<reward item_id="18162" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Circlet -->
+				<reward item_id="18165" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Gloves -->
 			</group>
 			<group chance="0.1110">
-				<reward item_id="19311" min="1" max="1" chance="90.0901"/><!-- Laktorarium -->
-				<reward item_id="17527" min="1" max="1" chance="9.0090"/><!-- Scroll: Enchant Armor R-Grade -->
-				<reward item_id="17526" min="1" max="1" chance="0.9009"/><!-- Scroll: Enchant Weapon R-Grade -->
+				<reward item_id="19311" min="1" max="1" chance="90.0901"/>
+			<!-- Laktorarium -->
+				<reward item_id="17527" min="1" max="1" chance="9.0090"/>
+			<!-- Scroll: Enchant Armor R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="0.9009"/>
+			<!-- Scroll: Enchant Weapon R-Grade -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="19369" min="1" max="1" chance="0.0300"/><!-- Recipe - Unidentified Twilight Circlet 60% -->
-				<reward item_id="19372" min="1" max="1" chance="0.0300"/><!-- Recipe - Unidentified Twilight Gloves 60% -->
+				<reward item_id="19369" min="1" max="1" chance="0.0300"/>
+			<!-- Recipe - Unidentified Twilight Circlet 60% -->
+				<reward item_id="19372" min="1" max="1" chance="0.0300"/>
+			<!-- Recipe - Unidentified Twilight Gloves 60% -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -7284,19 +7461,25 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1691" max="3949" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1691" max="3949" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="0.0300">
-				<reward item_id="18162" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Circlet -->
-				<reward item_id="18165" min="1" max="1" chance="50.0000"/><!-- Unidentified Twilight Gloves -->
+				<reward item_id="18162" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Circlet -->
+				<reward item_id="18165" min="1" max="1" chance="50.0000"/>
+			<!-- Unidentified Twilight Gloves -->
 			</group>
 			<group chance="0.0750">
-				<reward item_id="17527" min="1" max="1" chance="100.0000"/><!-- Scroll: Enchant Armor R-Grade -->
+				<reward item_id="17527" min="1" max="1" chance="100.0000"/>
+			<!-- Scroll: Enchant Armor R-Grade -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="19231" min="1" max="1" chance="0.3000"/><!-- Unidentified Twilight Gloves Ingredient -->
-				<reward item_id="19228" min="1" max="1" chance="0.0750"/><!-- Unidentified Twilight Circlet Ingredient -->
+				<reward item_id="19231" min="1" max="1" chance="0.3000"/>
+			<!-- Unidentified Twilight Gloves Ingredient -->
+				<reward item_id="19228" min="1" max="1" chance="0.0750"/>
+			<!-- Unidentified Twilight Circlet Ingredient -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -7662,17 +7845,21 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1722" max="4021" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1722" max="4021" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="0.0750">
-				<reward item_id="18151" min="1" max="1" chance="100.0000"/><!-- Unidentified Twilight Helmet -->
+				<reward item_id="18151" min="1" max="1" chance="100.0000"/>
+			<!-- Unidentified Twilight Helmet -->
 			</group>
 			<group chance="0.7500">
-				<reward item_id="9550" min="1" max="1" chance="100.0000"/><!-- Dark Stone -->
+				<reward item_id="9550" min="1" max="1" chance="100.0000"/>
+			<!-- Dark Stone -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="17526" min="1" max="1" chance="0.0009"/><!-- Scroll: Enchant Weapon R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="0.0009"/>
+			<!-- Scroll: Enchant Weapon R-Grade -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -7726,19 +7913,25 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1685" max="3934" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1685" max="3934" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="0.0750">
-				<reward item_id="18151" min="1" max="1" chance="100.0000"/><!-- Unidentified Twilight Helmet -->
+				<reward item_id="18151" min="1" max="1" chance="100.0000"/>
+			<!-- Unidentified Twilight Helmet -->
 			</group>
 			<group chance="0.4313">
-				<reward item_id="19312" min="1" max="1" chance="97.4498"/><!-- Itenium Temper -->
-				<reward item_id="17527" min="1" max="1" chance="2.3184"/><!-- Scroll: Enchant Armor R-Grade -->
-				<reward item_id="17526" min="1" max="1" chance="0.2318"/><!-- Scroll: Enchant Weapon R-Grade -->
+				<reward item_id="19312" min="1" max="1" chance="97.4498"/>
+			<!-- Itenium Temper -->
+				<reward item_id="17527" min="1" max="1" chance="2.3184"/>
+			<!-- Scroll: Enchant Armor R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="0.2318"/>
+			<!-- Scroll: Enchant Weapon R-Grade -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="19358" min="1" max="1" chance="0.0300"/><!-- Recipe - Unidentified Twilight Helmet 60% -->
+				<reward item_id="19358" min="1" max="1" chance="0.0300"/>
+			<!-- Recipe - Unidentified Twilight Helmet 60% -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -7792,18 +7985,23 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1626" max="3796" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1626" max="3796" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="0.0750">
-				<reward item_id="18160" min="1" max="1" chance="100.0000"/><!-- Unidentified Twilight Leather Gloves -->
+				<reward item_id="18160" min="1" max="1" chance="100.0000"/>
+			<!-- Unidentified Twilight Leather Gloves -->
 			</group>
 			<group chance="0.0390">
-				<reward item_id="17527" min="1" max="1" chance="96.1538"/><!-- Scroll: Enchant Armor R-Grade -->
-				<reward item_id="17526" min="1" max="1" chance="3.8462"/><!-- Scroll: Enchant Weapon R-Grade -->
+				<reward item_id="17527" min="1" max="1" chance="96.1538"/>
+			<!-- Scroll: Enchant Armor R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="3.8462"/>
+			<!-- Scroll: Enchant Weapon R-Grade -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="19226" min="1" max="1" chance="0.3000"/><!-- Unidentified Twilight Leather Gloves Ingredient -->
+				<reward item_id="19226" min="1" max="1" chance="0.3000"/>
+			<!-- Unidentified Twilight Leather Gloves Ingredient -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -7916,15 +8114,19 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1213" max="2830" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1213" max="2830" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="5.8250">
-				<reward item_id="19226" min="1" max="1" chance="93.5623"/><!-- Unidentified Twilight Leather Gloves Ingredient -->
-				<reward item_id="19367" min="1" max="1" chance="6.4378"/><!--Recipe - Unidentified Twilight Leather Gloves 60%-->
+				<reward item_id="19226" min="1" max="1" chance="93.5623"/>
+			<!-- Unidentified Twilight Leather Gloves Ingredient -->
+				<reward item_id="19367" min="1" max="1" chance="6.4378"/>
+			<!--Recipe - Unidentified Twilight Leather Gloves 60%-->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="19367" min="1" max="1" chance="0.0300"/><!--Recipe - Unidentified Twilight Leather Gloves 60%-->
+				<reward item_id="19367" min="1" max="1" chance="0.0300"/>
+			<!--Recipe - Unidentified Twilight Leather Gloves 60%-->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -7976,17 +8178,21 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1185" max="2770" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1185" max="2770" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="0.0750">
-				<reward item_id="18160" min="1" max="1" chance="100.0000"/><!-- Unidentified Twilight Leather Gloves -->
+				<reward item_id="18160" min="1" max="1" chance="100.0000"/>
+			<!-- Unidentified Twilight Leather Gloves -->
 			</group>
 			<group chance="0.0055">
-				<reward item_id="17526" min="1" max="1" chance="100.0000"/><!-- Scroll: Enchant Weapon R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="100.0000"/>
+			<!-- Scroll: Enchant Weapon R-Grade -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="19226" min="1" max="1" chance="0.3000"/><!-- Unidentified Twilight Leather Gloves Ingredient -->
+				<reward item_id="19226" min="1" max="1" chance="0.3000"/>
+			<!-- Unidentified Twilight Leather Gloves Ingredient -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -8038,17 +8244,21 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70">
-				<reward item_id="57" min="1185" max="2770" chance="100"/><!-- Adena -->
+				<reward item_id="57" min="1185" max="2770" chance="100"/>
+			<!-- Adena -->
 			</group>
 			<group chance="0.0750">
-				<reward item_id="18160" min="1" max="1" chance="100.0000"/><!-- Unidentified Twilight Leather Gloves -->
+				<reward item_id="18160" min="1" max="1" chance="100.0000"/>
+			<!-- Unidentified Twilight Leather Gloves -->
 			</group>
 			<group chance="0.3000">
-				<reward item_id="9550" min="1" max="1" chance="100.0000"/><!-- Dark Stone -->
+				<reward item_id="9550" min="1" max="1" chance="100.0000"/>
+			<!-- Dark Stone -->
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-				<reward item_id="17526" min="1" max="1" chance="0.0009"/><!-- Scroll: Enchant Weapon R-Grade -->
+				<reward item_id="17526" min="1" max="1" chance="0.0009"/>
+			<!-- Scroll: Enchant Weapon R-Grade -->
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>

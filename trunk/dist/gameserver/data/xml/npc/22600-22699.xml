@@ -7084,6 +7084,7 @@
 			<skill id="5082" level="1"/>	<!--NPC Spinning, Slashing Trick-->
 			<skill id="5465" level="1"/>	<!--Earth Attacks-->
 			<skill id="6145" level="1"/>	<!--Earthworm's Evil Aura-->
+		<skill id="5601" level="11"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7195,6 +7196,7 @@
 			<skill id="5465" level="1"/>	<!--Earth Attacks-->
 			<skill id="6145" level="1"/>	<!--Earthworm's Evil Aura-->
 			<skill id="6168" level="9"/>	<!--Shock-->
+		<skill id="5601" level="11"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7307,6 +7309,7 @@
 			<skill id="4643" level="9"/>	<!--Decrease Speed-->
 			<skill id="5465" level="1"/>	<!--Earth Attacks-->
 			<skill id="6145" level="1"/>	<!--Earthworm's Evil Aura-->
+		<skill id="5601" level="11"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7414,6 +7417,7 @@
 			<skill id="4416" level="9"/>	<!--Demons-->
 			<skill id="4643" level="9"/>	<!--Decrease Speed-->
 			<skill id="5467" level="1"/>	<!--Dark Attacks-->
+		<skill id="5601" level="11"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7524,6 +7528,7 @@
 			<skill id="4416" level="9"/>	<!--Demons-->
 			<skill id="4573" level="9"/>	<!--NPC Sonic Blaster-->
 			<skill id="5467" level="1"/>	<!--Dark Attacks-->
+		<skill id="5601" level="11"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7640,6 +7645,7 @@
 			<skill id="4416" level="9"/>	<!--Demons-->
 			<skill id="4573" level="9"/>	<!--NPC Sonic Blaster-->
 			<skill id="5467" level="1"/>	<!--Dark Attacks-->
+		<skill id="5601" level="11"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
@@ -7754,6 +7760,7 @@
 			<skill id="4416" level="9"/>	<!--Demons-->
 			<skill id="4573" level="9"/>	<!--NPC Sonic Blaster-->
 			<skill id="5467" level="1"/>	<!--Dark Attacks-->
+		<skill id="5601" level="11"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">

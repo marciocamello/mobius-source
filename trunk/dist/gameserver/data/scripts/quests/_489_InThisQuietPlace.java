@@ -22,7 +22,7 @@ import org.apache.commons.lang3.ArrayUtils;
 
 public class _489_InThisQuietPlace extends Quest implements ScriptFile
 {
-	private static final int chance = 35;
+	private static final int chance = 50;
 	private static final int TraceofEvil = 19501;
 	private static final int[] mobstohunt =
 	{

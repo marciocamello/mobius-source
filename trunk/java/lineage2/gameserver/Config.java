@@ -240,6 +240,8 @@ public class Config
 	public static boolean ALT_DISABLE_SPELLBOOKS;
 	public static boolean ALT_DELETE_SKILL_PROF;
 	public static boolean ALT_DELETE_SKILL_RELATION;
+	public static boolean ALT_DELETE_AWAKEN_SKILL_FROM_DB;
+	public static boolean ALT_CHECK_SKILLS_AWAKENING;
 	public static boolean ALT_GAME_EXP_LOST;
 	public static boolean ALT_ARENA_EXP;
 	public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
@@ -1413,6 +1415,8 @@ public class Config
 		ALT_DISABLE_SPELLBOOKS = altSettings.getProperty("AltDisableSpellbooks", false);
 		ALT_DELETE_SKILL_PROF = altSettings.getProperty("AltDeleteSkillProf", false);
 		ALT_DELETE_SKILL_RELATION = altSettings.getProperty("AltDeleteSkillRelation", false);
+		ALT_DELETE_AWAKEN_SKILL_FROM_DB = altSettings.getProperty("AltDeleteAwakenSkillFromDB", true);
+		ALT_CHECK_SKILLS_AWAKENING = altSettings.getProperty("AltCheckSkillsPostAwakening", false);
 		ALT_SIMPLE_SIGNS = altSettings.getProperty("PushkinSignsOptions", false);
 		ALT_TELE_TO_CATACOMBS = altSettings.getProperty("TeleToCatacombs", false);
 		ALT_BS_CRYSTALLIZE = altSettings.getProperty("BSCrystallize", false);

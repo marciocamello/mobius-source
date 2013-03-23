@@ -1149,7 +1149,7 @@
         <set name="skillType" val="DEBUFF"/>
         <set name="target" val="TARGET_ONE"/>
         <for>
-            <effect name="Paralyze" time="10" val="0" abnormal="floatroot" stackType="paralyze" stackOrder="1"/>
+            <effect name="Paralyze" time="10" val="0" abnormal="hellbinding" stackType="paralyze" stackOrder="1"/>
         </for>
     </skill>
     <skill id="11051" levels="4" name="Hell Binding">
@@ -1169,7 +1169,7 @@
         <set name="skillType" val="DEBUFF"/>
         <set name="target" val="TARGET_ONE"/>
         <for>
-            <effect name="Paralyze" time="10" val="0" abnormal="floatroot" stackType="paralyze" stackOrder="1"/>
+            <effect name="Paralyze" time="10" val="0" abnormal="hellbinding" stackType="paralyze" stackOrder="1"/>
         </for>
     </skill>
     <skill id="11052" levels="4" name="Mass Hell Binding">
@@ -1195,8 +1195,8 @@
         <set name="saveVs" val="CON"/>
         <set name="target" val="TARGET_AURA"/>
         <for>
-            <effect name="Paralyze" time="10" val="0" abnormal="floatroot" stackType="paralyze" stackOrder="1"/>
-            <effect abnormal="bleeding" count="20" name="Bleed" stackType="Bleed" time="10" val="100"/>
+            <effect name="Paralyze" time="10" val="0" abnormal="hellbinding" stackType="paralyze" stackOrder="1"/>
+            <effect abnormal="bleeding" count="5" name="Bleed" stackType="Bleed" time="2" val="200"/>
         </for>
     </skill>
     <skill id="11053" levels="4" name="Mass Hell Binding">
@@ -1221,8 +1221,8 @@
         <set name="saveVs" val="CON"/>
         <set name="target" val="TARGET_AURA"/>
         <for>
-            <effect name="Paralyze" time="10" val="0" abnormal="floatroot" stackType="paralyze" stackOrder="1"/>
-            <effect abnormal="bleeding" count="20" name="Bleed" stackType="Bleed" time="10" val="100"/>
+            <effect name="Paralyze" time="10" val="0" abnormal="hellbinding" stackType="paralyze" stackOrder="1"/>
+            <effect abnormal="bleeding" count="5" name="Bleed" stackType="Bleed" time="2" val="200"/>
         </for>
     </skill>
     <skill id="11054" levels="1" name="Yoke Status">

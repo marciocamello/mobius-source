@@ -4332,7 +4332,7 @@
 			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
 			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
 			<skill id="4410" level="12"/>	<!--Slightly Strong P. Atk.-->
-			<skill id="4411" level="12"/>	<!--Slightly Strong M. Atk.-->
+			<skill id="4411" level="10"/>	<!--Slightly Strong M. Atk.-->
 			<skill id="4412" level="10"/>	<!--Slightly Weak P. Def.-->
 			<skill id="4413" level="18"/>	<!--Extremely Strong M. Def.-->
 			<skill id="4414" level="2"/>	<!--Standard Type-->

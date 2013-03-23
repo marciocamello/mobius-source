@@ -4062,6 +4062,77 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	}
 	
 	/**
+	 * Method isItemSkill.
+	 * @return boolean
+	 */
+	public boolean isSetSkill()
+	{
+		String[] nameIndicator =
+		{
+			"Special Ability",
+			"Necklace",
+			"Ring",
+			"Earring",
+			"Agathion",
+			"Agathion's",
+			"PvP",
+			"Dynasty",
+			"Icarus",
+			"Vesper",
+			"Specter",
+			"Apocalypse",
+			"Amaranthine",
+			"Eternal",
+			"Twilight",
+			"Immortal",
+			"Amaranthine",
+			"Elegia",
+			"Vorpal",
+			"Moirai",
+			"Dynasty",
+			"Imperial Crusader",
+			"Draconic",
+			"Major Arcana",
+			"Majestic",
+			"Dark Crystal",
+			"Nightmare",
+			"Tallum",
+			"Blue Wolf",
+			"Avadon",
+			"Doom",
+			"Clan Oath",
+			"Appela",
+			"Chain Mail",
+			"Full Plate",
+			"Compound Armor",
+			"Drake Leather",
+			"Karmian",
+			"Demon's",
+			"Divine Set",
+			"Belt",
+			"Cloak",
+			"Call",
+			"Shirt"
+		};
+		for (String iterateName : nameIndicator)
+		{
+			if (_name.contains(iterateName))
+			{
+				return true;
+			}
+		}
+		if (_name.contains("Seraph") && !_name.contains("Banish"))
+		{
+			return true;
+		}
+		if (_name.contains("Requiem") && !_name.equals("Requiem"))
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	/**
 	 * Method toString.
 	 * @return String
 	 */

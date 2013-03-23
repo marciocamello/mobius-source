@@ -4741,9 +4741,11 @@
 		<skills>
 			<skill id="4416" level="14"/>	<!--Humans-->
 		</skills>
-		<teleportlist><!-- Руна Верх -->
+		<teleportlist>
+			<!-- Руна Верх -->
 			<sublist id="1">
-				<target loc="38320 -48092 -1153" item_id="57" price="150" name="1010493"/><!-- Гильдия Руны -->
+				<target loc="38320 -48092 -1153" item_id="57" price="150" name="1010493"/>
+			<!-- Гильдия Руны -->
 			</sublist>
 		</teleportlist>
 		<attributes>
@@ -4793,9 +4795,11 @@
 		<skills>
 			<skill id="4416" level="14"/>	<!--Humans-->
 		</skills>
-		<teleportlist><!-- Руна Низ -->
+		<teleportlist>
+			<!-- Руна Низ -->
 			<sublist id="1">
-				<target loc="38308 -48138 870" item_id="57" price="150" name="1010493"/><!-- Храм Руны -->
+				<target loc="38308 -48138 870" item_id="57" price="150" name="1010493"/>
+			<!-- Храм Руны -->
 			</sublist>
 		</teleportlist>
 		<attributes>
