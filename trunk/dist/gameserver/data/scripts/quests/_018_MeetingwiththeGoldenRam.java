@@ -65,8 +65,8 @@ public class _018_MeetingwiththeGoldenRam extends Quest implements ScriptFile
 		else if (event.equals("supplier_abercrombie_q0018_0301.htm"))
 		{
 			st.takeItems(SUPPLY_BOX, -1);
-			st.addExpAndSp(126668, 11731);
-			st.giveItems(ADENA_ID, 40000);
+			st.addExpAndSp(330194, 326328);
+			st.giveItems(ADENA_ID, 68686);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}

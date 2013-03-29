@@ -217,11 +217,11 @@ public class _10346_DayOfDestinyKamaelsFate extends Quest implements ScriptFile
 			st.getPlayer().addExpAndSp(2050000, 0);
 			st.giveItems(33771, 1);
 			st.giveItems(57, 5000000);
+			st.exitCurrentQuest(false);
 			int Class = Util.getThirdClassForId(player.getClassId().getId());
 			player.setClassId(Class, false, false);
 			st.getPlayer().broadcastPacket(new MagicSkillUse(st.getPlayer(), 4339, 1, 6000, 1));
 			st.getPlayer().broadcastPacket(new MagicSkillUse(npc, 4339, 1, 6000, 1));
-			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
 		if (event.equalsIgnoreCase("blue"))
@@ -230,11 +230,11 @@ public class _10346_DayOfDestinyKamaelsFate extends Quest implements ScriptFile
 			st.getPlayer().addExpAndSp(2050000, 0);
 			st.giveItems(33772, 1);
 			st.giveItems(57, 5000000);
+			st.exitCurrentQuest(false);
 			int Class = Util.getThirdClassForId(player.getClassId().getId());
 			player.setClassId(Class, false, false);
 			st.getPlayer().broadcastPacket(new MagicSkillUse(st.getPlayer(), 4339, 1, 6000, 1));
 			st.getPlayer().broadcastPacket(new MagicSkillUse(npc, 4339, 1, 6000, 1));
-			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
 		if (event.equalsIgnoreCase("green"))
@@ -243,11 +243,11 @@ public class _10346_DayOfDestinyKamaelsFate extends Quest implements ScriptFile
 			st.getPlayer().addExpAndSp(2050000, 0);
 			st.giveItems(33773, 1);
 			st.giveItems(57, 5000000);
+			st.exitCurrentQuest(false);
 			int Class = Util.getThirdClassForId(player.getClassId().getId());
 			player.setClassId(Class, false, false);
 			st.getPlayer().broadcastPacket(new MagicSkillUse(st.getPlayer(), 4339, 1, 6000, 1));
 			st.getPlayer().broadcastPacket(new MagicSkillUse(npc, 4339, 1, 6000, 1));
-			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
 		if (event.equalsIgnoreCase("corps"))

@@ -110,22 +110,22 @@ public class EleveSubAI extends DefaultAI
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.DONT_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
+				ns = NpcString.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
 				break;
 			case 2:
-				ns = NpcString.DONT_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
+				ns = NpcString.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
 				break;
 			case 3:
-				ns = NpcString.DONT_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
+				ns = NpcString.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
 				break;
 			case 4:
-				ns = NpcString.DONT_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
+				ns = NpcString.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
 				break;
 			case 5:
-				ns = NpcString.DONT_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
+				ns = NpcString.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
 				break;
 			default:
-				ns = NpcString.DONT_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
+				ns = NpcString.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
 				break;
 		}
 		Functions.npcSay(actor, ns);

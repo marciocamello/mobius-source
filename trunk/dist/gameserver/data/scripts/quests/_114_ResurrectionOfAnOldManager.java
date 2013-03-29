@@ -167,7 +167,7 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("pavel_atlanta_q0114_07.htm"))
 		{
 			st.playSound(SOUND_FINISH);
-			st.addExpAndSp(1846611, 144270);
+			st.addExpAndSp(2939190, 3059910);
 			st.exitCurrentQuest(false);
 		}
 		else if (event.equalsIgnoreCase("chaos_secretary_wendy_q0114_01.htm"))

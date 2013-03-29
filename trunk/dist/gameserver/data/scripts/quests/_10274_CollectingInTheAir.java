@@ -86,7 +86,7 @@ public class _10274_CollectingInTheAir extends Quest implements ScriptFile
 			htmltext = "32557-05.htm";
 			st.takeAllItems(ExtractedCoarseRedStarStone, ExtractedCoarseBlueStarStone, ExtractedCoarseGreenStarStone);
 			st.giveItems(ExpertTextStarStoneExtractionSkillLevel1, 1);
-			st.addExpAndSp(25160, 2525);
+			st.addExpAndSp(6660000, 7375000);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

@@ -71,7 +71,7 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 		{
 			htmltext = "1-3.htm";
 			st.takeAllItems(17585);
-			st.getPlayer().addExpAndSp(450000, 180000);
+			st.getPlayer().addExpAndSp(550000, 150000);
 			st.giveItems(57, 105000);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);

@@ -140,7 +140,7 @@ public class _125_InTheNameOfEvilPart1 extends Quest implements ScriptFile
 			else if (cond == 8)
 			{
 				htmltext = "32114-08.htm";
-				st.addExpAndSp(859195, 86603);
+				st.addExpAndSp(898056, 1008100);
 				st.playSound(SOUND_FINISH);
 				st.setState(COMPLETED);
 				st.exitCurrentQuest(false);

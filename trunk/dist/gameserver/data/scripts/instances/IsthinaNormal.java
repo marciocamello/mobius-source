@@ -16,6 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
+import lineage2.gameserver.instancemanager.WorldStatisticsManager;
 import lineage2.gameserver.listener.actor.OnCurrentHpDamageListener;
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
@@ -25,55 +26,34 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.model.worldstatistics.CategoryType;
+import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
+import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
+import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
+import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * @author KilRoy
  */
 public class IsthinaNormal extends Reflection
 {
-	/**
-	 * Field Isthina.
-	 */
-	private final int Isthina = 29195;
-	/**
-	 * Field Ballista.
-	 */
-	private final int Ballista = 19021;
-	/**
-	 * Field _epicZoneListener.
-	 */
+	public int ballistaSeconds = 30;
+	public long ballistaDamage = 0;
+	private static final int Isthina = 29195;
+	private static final int Ballista = 19021;
+	private static final int Rumiese = 33293;
+	private static final int Camera = 18919;
 	private final ZoneListener _epicZoneListener = new ZoneListener();
-	/**
-	 * Field _deathListener.
-	 */
-	final DeathListener _deathListener = new DeathListener();
-	/**
-	 * Field _currentHpListener.
-	 */
-	final CurrentHpListener _currentHpListener = new CurrentHpListener();
-	/**
-	 * Field _entryLocked.
-	 */
+	DeathListener _deathListener = new DeathListener();
+	CurrentHpListener _currentHpListenerBallista = new CurrentHpListener();
 	boolean _entryLocked = false;
-	/**
-	 * Field _startLaunched.
-	 */
 	boolean _startLaunched = false;
-	/**
-	 * Field _lockedTurn.
-	 */
 	boolean _lockedTurn = false;
-	/**
-	 * Field raidplayers.
-	 */
-	final AtomicInteger raidplayers = new AtomicInteger();
+	AtomicInteger raidplayers = new AtomicInteger();
 	
-	/**
-	 * Method onCreate.
-	 */
 	@Override
 	protected void onCreate()
 	{
@@ -81,26 +61,19 @@ public class IsthinaNormal extends Reflection
 		getZone("[Isthina_epic]").addListener(_epicZoneListener);
 	}
 	
-	/**
-	 * Method onCollapse.
-	 */
 	@Override
 	protected void onCollapse()
 	{
 		super.onCollapse();
 	}
 	
-	/**
-	 * @author Mobius
-	 */
+	boolean checkstartCond(int raidplayers)
+	{
+		return !((raidplayers < getInstancedZone().getMinParty()) || _startLaunched);
+	}
+	
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
-		/**
-		 * Method onZoneEnter.
-		 * @param zone Zone
-		 * @param cha Creature
-		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
-		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -108,64 +81,47 @@ public class IsthinaNormal extends Reflection
 			{
 				return;
 			}
+			
 			Player player = cha.getPlayer();
 			if ((player == null) || !cha.isPlayer())
 			{
 				return;
 			}
+			
 			if (checkstartCond(raidplayers.incrementAndGet()))
 			{
-				ThreadPoolManager.getInstance().schedule(new StartNormalIsthina(), 5000);
+				ThreadPoolManager.getInstance().schedule(new StartNormalIsthina(), 15000L);
 				_startLaunched = true;
 			}
-			NpcInstance isthinaNormal = addSpawnWithoutRespawn(Isthina, new Location(-177125, 147856, -11384, 49140), 0);
-			isthinaNormal.addListener(_deathListener);
 		}
 		
-		/**
-		 * Method onZoneLeave.
-		 * @param zone Zone
-		 * @param cha Creature
-		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
-		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 		}
 	}
 	
-	/**
-	 * Method checkstartCond.
-	 * @param raidplayers int
-	 * @return boolean
-	 */
-	boolean checkstartCond(int raidplayers)
-	{
-		return !((raidplayers < getInstancedZone().getMinParty()) || _startLaunched);
-	}
-	
-	/**
-	 * @author Mobius
-	 */
 	private class StartNormalIsthina extends RunnableImpl
 	{
-		/**
-		 * Constructor for StartNormalIsthina.
-		 */
 		public StartNormalIsthina()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
 			_entryLocked = true;
+			
 			closeDoor(14220100);
 			closeDoor(14220101);
+			
+			NpcInstance isthinaNormal = addSpawnWithoutRespawn(Isthina, new Location(-177125, 147856, -11384, 49140), 0);
+			isthinaNormal.addListener(_deathListener);
+			
+			NpcInstance camera = addSpawnWithoutRespawn(Camera, new Location(-177325, 147856, -11384, 49140), 0);
+			camera.setTargetable(false);
+			
 			for (Player player : getPlayers())
 			{
 				player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_ISTHINA_OPENING);
@@ -173,25 +129,83 @@ public class IsthinaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
+	public class CurrentHpListener implements OnCurrentHpDamageListener
+	{
+		@Override
+		public void onCurrentHpDamage(final Creature actor, final double damage, final Creature attacker, Skill skill)
+		{
+			if (actor.getNpcId() == Ballista)
+			{
+				if (actor.isDead())
+				{
+					return;
+				}
+				
+				ballistaDamage += damage;
+				
+				ThreadPoolManager.getInstance().schedule(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						if (actor.isDead())
+						{
+							return;
+						}
+						
+						if (!_lockedTurn && (ballistaSeconds <= 0))
+						{
+							_lockedTurn = true;
+							
+							if (ballistaDamage < actor.getMaxHp())
+							{
+								double damagePercent = ballistaDamage / 4660000.0;
+								int rewardId = 0;
+								
+								if (damagePercent > 0.5)
+								{
+									rewardId = 30374;
+								}
+								else if (damagePercent > 0.15)
+								{
+									rewardId = 30371;
+								}
+								
+								Functions.addItem(attacker.getPlayer(), rewardId, 1);
+								ThreadPoolManager.getInstance().schedule(new IsthinaDeathFinalA(), 10);
+								actor.removeListener(_currentHpListenerBallista);
+								WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.EPIC_BOSS_KILLS_29195, 1);
+							}
+							else
+							{
+								ThreadPoolManager.getInstance().schedule(new IsthinaDeathFinalB(), 10);
+								actor.removeListener(_currentHpListenerBallista);
+								WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.EPIC_BOSS_KILLS_29195, 1);
+							}
+						}
+						
+						int progress = (int) Math.min(6000, (ballistaDamage / 4660000) * 6000);
+						progress -= progress % 60;
+						
+						for (Player player : getPlayers())
+						{
+							player.sendPacket(new ExSendUIEvent(player, 2, ballistaSeconds, progress, 122520, NpcString.NONE2));
+						}
+						
+						ballistaSeconds -= 1;
+					}
+				}, 1000);
+			}
+		}
+	}
+	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 * Constructor for DeathListener.
-		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method onDeath.
-		 * @param self Creature
-		 * @param killer Creature
-		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
-		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -202,59 +216,13 @@ public class IsthinaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
-	public class CurrentHpListener implements OnCurrentHpDamageListener
-	{
-		/**
-		 * Method onCurrentHpDamage.
-		 * @param actor Creature
-		 * @param damage double
-		 * @param attacker Creature
-		 * @param skill Skill
-		 * @see lineage2.gameserver.listener.actor.OnCurrentHpDamageListener#onCurrentHpDamage(Creature, double, Creature, Skill)
-		 */
-		@Override
-		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
-		{
-			if ((actor == null) || actor.isDead() || (actor.getNpcId() != Ballista))
-			{
-				return;
-			}
-			double newHp = actor.getCurrentHp() - damage;
-			double maxHp = actor.getMaxHp();
-			if (!_lockedTurn && (newHp <= (0.2 * maxHp)))
-			{
-				_lockedTurn = true;
-				ThreadPoolManager.getInstance().schedule(new IsthinaDeathFinalA(), 10);
-				actor.removeListener(_currentHpListener);
-			}
-			else
-			{
-				_lockedTurn = true;
-				ThreadPoolManager.getInstance().schedule(new IsthinaDeathFinalB(), 10);
-				actor.removeListener(_currentHpListener);
-			}
-		}
-	}
-	
-	/**
-	 * @author Mobius
-	 */
 	private class IsthinaDeath extends RunnableImpl
 	{
-		/**
-		 * Constructor for IsthinaDeath.
-		 */
 		public IsthinaDeath()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -262,30 +230,17 @@ public class IsthinaNormal extends Reflection
 			{
 				player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_ISTHINA_BRIDGE);
 			}
-			ThreadPoolManager.getInstance().schedule(new SpawnBallista(), 23300L);
-			for (NpcInstance n : getNpcs())
-			{
-				n.deleteMe();
-			}
+			ThreadPoolManager.getInstance().schedule(new SpawnBallista(), 7200L); // 7.2 secs for movie
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class IsthinaDeathFinalA extends RunnableImpl
 	{
-		/**
-		 * Constructor for IsthinaDeathFinalA.
-		 */
 		public IsthinaDeathFinalA()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -294,30 +249,23 @@ public class IsthinaNormal extends Reflection
 			{
 				player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_ISTHINA_ENDING_A);
 			}
-			ThreadPoolManager.getInstance().schedule(new FinalAndCollapse(), 22200L);
+			ThreadPoolManager.getInstance().schedule(new FinalAndCollapse(), 23300); // 23.3 secs for movie
 			for (NpcInstance n : getNpcs())
 			{
 				n.deleteMe();
 			}
+			openDoor(14220100);
+			openDoor(14220101);
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class IsthinaDeathFinalB extends RunnableImpl
 	{
-		/**
-		 * Constructor for IsthinaDeathFinalB.
-		 */
 		public IsthinaDeathFinalB()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -326,58 +274,53 @@ public class IsthinaNormal extends Reflection
 			{
 				player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_ISTHINA_ENDING_B);
 			}
-			ThreadPoolManager.getInstance().schedule(new FinalAndCollapse(), 22200L);
+			ThreadPoolManager.getInstance().schedule(new FinalAndCollapse(), 22200L); // 22.2 secs for movie
 			for (NpcInstance n : getNpcs())
 			{
 				n.deleteMe();
 			}
+			openDoor(14220100);
+			openDoor(14220101);
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class FinalAndCollapse extends RunnableImpl
 	{
-		/**
-		 * Constructor for FinalAndCollapse.
-		 */
 		public FinalAndCollapse()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
 			clearReflection(5, true);
+			addSpawnWithoutRespawn(Rumiese, new Location(-177125, 147856, -11384, 49140), 0);
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class SpawnBallista extends RunnableImpl
 	{
-		/**
-		 * Constructor for SpawnBallista.
-		 */
 		public SpawnBallista()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
 			NpcInstance ballista = addSpawnWithoutRespawn(Ballista, new Location(-177125, 147856, -11384, 49140), 0);
-			ballista.addListener(_currentHpListener);
+			ballista.block();
+			ballista.addListener(_currentHpListenerBallista);
+			
+			for (Player players : getPlayers())
+			{
+				players.sendPacket(new ExShowScreenMessage(NpcString.AFTER_$s1_SECONDS_THE_CHARGING_MAGIC_BALLISTAS_STARTS, 5000, ScreenMessageAlign.TOP_CENTER, false, String.valueOf(1)));
+			}
+			
+			NpcInstance isthinaFinal = addSpawnWithoutRespawn(Isthina, new Location(-177128, 147224, -11414, 16383), 0);
+			isthinaFinal.setTargetable(false);
+			isthinaFinal.block();
 		}
 	}
 }

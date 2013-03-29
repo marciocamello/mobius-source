@@ -379,7 +379,7 @@
         <set name="dropable" value="false"/>
         <set name="icon" value="br_cashtex.item.br_cash_spiritshot_r_i00"/>
         <set name="stackable" value="true"/>
-        <set name="type" value="SHOT"/>
+        <set name="type" value="OTHER"/>
         <set name="weight" value="1"/>
     </etcitem>
     <etcitem id="19442" name="Blessed Spiritshot R-Grade">
@@ -390,7 +390,7 @@
         <set name="dropable" value="false"/>
         <set name="icon" value="br_cashtex.item.br_cash_blessed_spiritshot_r_i00"/>
         <set name="stackable" value="true"/>
-        <set name="type" value="SHOT"/>
+        <set name="type" value="OTHER"/>
         <set name="weight" value="1"/>
     </etcitem>
     <etcitem id="19443" name="Orichalcum Bolt">

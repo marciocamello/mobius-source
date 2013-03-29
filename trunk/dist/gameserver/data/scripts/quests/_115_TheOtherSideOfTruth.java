@@ -210,8 +210,8 @@ public class _115_TheOtherSideOfTruth extends Quest implements ScriptFile
 			}
 			else if (cond == 12)
 			{
-				st.giveItems(ADENA_ID, 115673);
-				st.addExpAndSp(493595, 40442);
+				st.giveItems(ADENA_ID, 193350);
+				st.addExpAndSp(956590, 789630);
 				st.playSound(SOUND_FINISH);
 				st.exitCurrentQuest(false);
 				return "32020-18.htm";

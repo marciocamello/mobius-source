@@ -66,7 +66,7 @@ public class _727_HopewithintheDarkness extends Quest implements ScriptFile
 		else if (event.equals("reward") && (cond == 1) && player.getVar("q727").equalsIgnoreCase("done"))
 		{
 			player.unsetVar("q727");
-			st.giveItems(KnightsEpaulette, 159);
+			st.giveItems(KnightsEpaulette, 300);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 			return null;

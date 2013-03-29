@@ -110,22 +110,22 @@ public class MarshaSubAI extends DefaultAI
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.ISNT_THERE_AN_EASIER_WAY_TO_GET;
+				ns = NpcString.ISN_T_THERE_AN_EASIER_WAY_TO_GET_THERE;
 				break;
 			case 2:
-				ns = NpcString.ISNT_THERE_AN_EASIER_WAY_TO_GET;
+				ns = NpcString.ISN_T_THERE_AN_EASIER_WAY_TO_GET_THERE;
 				break;
 			case 3:
-				ns = NpcString.ISNT_THERE_AN_EASIER_WAY_TO_GET;
+				ns = NpcString.ISN_T_THERE_AN_EASIER_WAY_TO_GET_THERE;
 				break;
 			case 4:
-				ns = NpcString.ISNT_THERE_AN_EASIER_WAY_TO_GET;
+				ns = NpcString.ISN_T_THERE_AN_EASIER_WAY_TO_GET_THERE;
 				break;
 			case 5:
-				ns = NpcString.ISNT_THERE_AN_EASIER_WAY_TO_GET;
+				ns = NpcString.ISN_T_THERE_AN_EASIER_WAY_TO_GET_THERE;
 				break;
 			default:
-				ns = NpcString.ISNT_THERE_AN_EASIER_WAY_TO_GET;
+				ns = NpcString.ISN_T_THERE_AN_EASIER_WAY_TO_GET_THERE;
 				break;
 		}
 		Functions.npcSay(actor, ns);

@@ -90,7 +90,8 @@ public class _240_ImTheOnlyOneYouCanTrust extends Quest implements ScriptFile
 		}
 		else if (cond == 2)
 		{
-			st.addExpAndSp(589542, 36800);
+			st.giveItems(ADENA_ID, 1351512);
+			st.addExpAndSp(6411717, 7456914);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 			htmltext = "32640-9.htm";

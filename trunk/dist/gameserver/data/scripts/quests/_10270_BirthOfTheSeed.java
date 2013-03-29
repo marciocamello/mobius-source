@@ -105,8 +105,8 @@ public class _10270_BirthOfTheSeed extends Quest implements ScriptFile
 		else if (event.equals("reward") && (cond == 5))
 		{
 			htmltext = "artius_q10270_11.htm";
-			st.giveItems(ADENA_ID, 41677);
-			st.addExpAndSp(251602, 25244);
+			st.giveItems(ADENA_ID, 236510);
+			st.addExpAndSp(1109665, 1229015);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}

@@ -4074,9 +4074,9 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25875" name="Queen of Darkness" title="Raid Boss">
+    <npc id="25875" name="Queen of Darkness" title="Raid Boss"> <!--Need retail stats -->
         <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
+        <set name="ai_type" value="Fighter"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="40"/>
@@ -4087,13 +4087,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="1145"/>
         <set name="baseMAtkSpd" value="253"/>
-        <set name="baseMDef" value="469"/>
+        <set name="baseMDef" value="4690"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="45645"/>
         <set name="baseMpReg" value="3"/>
-        <set name="basePAtk" value="1799"/>
+        <set name="basePAtk" value="26000"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="577"/>
+        <set name="basePDef" value="5770"/>
         <set name="baseRunSpd" value="120"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>
@@ -4263,9 +4263,9 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="25878" name="Arbitor of Darkness" title="Raid Fighter">
+    <npc id="25878" name="Arbitor of Darkness" title="Raid Fighter"> <!--Need retail stats -->
         <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
+        <set name="ai_type" value="Fighter"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="40"/>
@@ -4276,13 +4276,13 @@
         <set name="baseINT" value="21"/>
         <set name="baseMAtk" value="1145"/>
         <set name="baseMAtkSpd" value="253"/>
-        <set name="baseMDef" value="469"/>
+        <set name="baseMDef" value="4690"/>
         <set name="baseMEN" value="20"/>
         <set name="baseMpMax" value="2797"/>
         <set name="baseMpReg" value="3"/>
-        <set name="basePAtk" value="1799"/>
+        <set name="basePAtk" value="17990"/>
         <set name="basePAtkSpd" value="253"/>
-        <set name="basePDef" value="577"/>
+        <set name="basePDef" value="5770"/>
         <set name="baseRunSpd" value="120"/>
         <set name="baseSTR" value="40"/>
         <set name="baseShldDef" value="0"/>

@@ -100,8 +100,8 @@ public class _120_PavelsResearch extends Quest implements ScriptFile
 		{
 			st.takeItems(Necklace, 1);
 			st.giveItems(EarPhoenix, 1);
-			st.giveItems(ADENA_ID, 783720);
-			st.addExpAndSp(3447315, 272615);
+			st.giveItems(ADENA_ID, 1030825);
+			st.addExpAndSp(4898650, 5099850);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

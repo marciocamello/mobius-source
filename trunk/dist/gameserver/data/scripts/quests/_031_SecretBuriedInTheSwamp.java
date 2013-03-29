@@ -94,8 +94,8 @@ public class _031_SecretBuriedInTheSwamp extends Quest implements ScriptFile
 		else if (event.equals("31555-7.htm") && (cond == 7))
 		{
 			st.takeItems(KRORINS_JOURNAL, -1);
-			st.addExpAndSp(490000, 45880);
-			st.giveItems(ADENA_ID, 120000);
+			st.addExpAndSp(1650970, 1631640);
+			st.giveItems(ADENA_ID, 343430);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}

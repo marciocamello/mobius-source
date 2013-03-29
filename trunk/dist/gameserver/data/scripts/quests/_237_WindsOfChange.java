@@ -89,8 +89,8 @@ public class _237_WindsOfChange extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("32641-02.htm"))
 		{
 			st.takeItems(LetterToHelvetica, -1);
-			st.giveItems(ADENA_ID, 213876);
-			st.addExpAndSp(892773, 60012);
+			st.giveItems(ADENA_ID, 499880);
+			st.addExpAndSp(2427030, 2786680);
 			st.giveItems(VicinityOfTheFieldOfSilenceResearchCenter, 1);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
@@ -98,8 +98,8 @@ public class _237_WindsOfChange extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("32643-02.htm"))
 		{
 			st.takeItems(LetterToAthenia, -1);
-			st.giveItems(ADENA_ID, 213876);
-			st.addExpAndSp(892773, 60012);
+			st.giveItems(ADENA_ID, 499880);
+			st.addExpAndSp(2427030, 2786680);
 			st.giveItems(CertificateOfSupport, 1);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);

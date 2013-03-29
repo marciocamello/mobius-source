@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
+	    <skill id="11500" levels="1" name="Wynn Chain Air Blow">
+	    		<!-- Inflicts a powerful blow on the target. -->
+			<set name="reuseDelay" val="10000"/>
+			<set name="hitTime" val="0"/>
+			<set name="mpConsume2" val="40"/>
+			<set name="castRange" val="700"/>
+			<set name="power" val="17803"/>
+			<set name="magicLevel" val="85"/>
+			<set name="coolTime" val="300"/>
+			<set name="skillType" val="PDAM"/>
+			<set name="target" val="TARGET_ONE"/>
+			<set name="overHit" val="true"/>>
+			<set name="isSkillTimePermanent" val="true"/>
+			<set name="operateType" val="OP_ACTIVE"/>
+			<set name="nextAction" val="attack"/>
+			<set name="isSkillTimePermanent" val="true"/>
+			<set name="isAlterSkill" val="true"/>
+	    </skill>
 	<skill id="11501" levels="1" name="Superior Dual Weapon Mastery">
     <!-- When a Dual sword or Dual Blunt Weapon is equipped, increases P. Atk. by 235, M. Atk. by 104, and Atk. Spd. by 10%. There is a chance of increasing physical skill power and Critical Rate when attacking. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your STR. -->
 		<table name="#pAtk">235</table>
@@ -572,7 +590,7 @@
 	</skill>
 	<skill id="11520" levels="4" name="Guitar Melody">
    	 <!-- Increases party members' P. Critical Rate by 32%, P. Critical Damage by 35%, M. Critical Rate by 20 and decreases MP Consumption for physical skills by 20% and magic skills by 10% for 30 minutes. Also decreases MP Consumption for Iss Enchanter's buff skills by 20%. -->
-		<table name="#vuln">1.32 1.34 1.36 1.38</table>
+		<table name="#vuln">32 34 36 38</table>
 		<table name="#time">1800</table>
 		<table name="#mpConsume2">170</table>
 		<table name="#stackLevel">11 12 13 14</table>

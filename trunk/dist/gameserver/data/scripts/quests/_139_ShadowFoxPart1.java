@@ -89,7 +89,6 @@ public class _139_ShadowFoxPart1 extends Quest implements ScriptFile
 		{
 			st.playSound(SOUND_FINISH);
 			st.giveItems(ADENA_ID, 14050);
-			st.addExpAndSp(30000, 2000);
 			st.exitCurrentQuest(false);
 		}
 		return event;

@@ -12,6 +12,7 @@
  */
 package lineage2.gameserver.model;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -1309,5 +1310,60 @@ public class World
 			}
 		}
 		return ret;
+	}
+	
+	public static List<NpcInstance> getAroundNpcCor(Location loc, WorldRegion region, int reflect, int radius, int height)
+	{
+		WorldRegion currentRegion = region;
+		if (currentRegion == null)
+		{
+			return new ArrayList<>(0);
+		}
+		
+		int rid = reflect;
+		int ox = loc.x;
+		int oy = loc.y;
+		int oz = loc.z;
+		int sqrad = radius * radius;
+		
+		List<NpcInstance> result = new ArrayList<>(64);
+		
+		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
+		{
+			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
+			{
+				for (int z = validZ(currentRegion.getZ() - 1); z <= validZ(currentRegion.getZ() + 1); z++)
+				{
+					for (GameObject obj : getRegion(x, y, z))
+					{
+						if (!obj.isNpc() || (obj.getReflectionId() != rid))
+						{
+							continue;
+						}
+						if (Math.abs(obj.getZ() - oz) > height)
+						{
+							continue;
+						}
+						int dx = Math.abs(obj.getX() - ox);
+						if (dx > radius)
+						{
+							continue;
+						}
+						int dy = Math.abs(obj.getY() - oy);
+						if (dy > radius)
+						{
+							continue;
+						}
+						if (((dx * dx) + (dy * dy)) > sqrad)
+						{
+							continue;
+						}
+						
+						result.add((NpcInstance) obj);
+					}
+				}
+			}
+		}
+		return result;
 	}
 }

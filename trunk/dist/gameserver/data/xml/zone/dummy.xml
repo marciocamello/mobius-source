@@ -954,4 +954,34 @@
     <zone name="[Isthina_green_zone]" type="dummy">
 		<circle loc="-177125 147856 -12000 -11000 463"/>
     </zone>
+	<zone name="[Birthing_room_0]" type="dummy">
+		<polygon>
+			<coords loc="-177352 153272 2734 2600"/>
+			<coords loc="-177352 153416 2752 2600"/>
+			<coords loc="-177208 153432 2754 2600"/>
+			<coords loc="-177192 153240 2733 2600"/>
+		</polygon>
+	</zone>
+	<zone name="[Birthing_room_1]" type="dummy">
+		<polygon>
+			<coords loc="-179736 153256 2534 2700"/>
+	 		<coords loc="-179720 153448 2555 2700"/>
+			<coords loc="-179544 153448 2553 2700"/>
+			<coords loc="-179560 153256 2529 2700"/>
+		</polygon>
+	</zone>
+	<zone name="[Arcan_0]" type="dummy">
+		<polygon>
+			<coords loc="203800 81560 -5000 5000"/>
+			<coords loc="213432 85256 -5000 5000"/>
+			<coords loc="211656 92648 -5000 5000"/>
+			<coords loc="203864 92616 -5000 5000"/>
+		</polygon>
+	</zone>
+	<zone name="[telzone_Annihilation_0]" type="dummy">
+			<circle loc="-177279 153330 2664"/>
+	</zone>
+	<zone name="[telzone_Annihilation_1]" type="dummy">
+			<circle loc="-179645 153330 2664"/>
+	</zone>
 </list>

@@ -80,7 +80,6 @@ public class _138_TempleChampionPart2 extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("sylvain_q0138_09.htm"))
 		{
-			st.addExpAndSp(187062, 11307);
 			st.giveItems(ADENA_ID, 84593);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);

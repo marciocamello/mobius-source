@@ -113,19 +113,19 @@ public class DarrygonSubAI extends DefaultAI
 				ns = NpcString.YOU_WILL_FIND_PANTHEON_IN_THE_MUSEUM;
 				break;
 			case 2:
-				ns = NpcString.ITS_DANGEROUS_OUT_THERE_IF_YOU_DONT;
+				ns = NpcString.IT_S_DANGEROUS_OUT_THERE_IF_YOU_DON_T_KNOW_WHAT_YOU_RE_DOING;
 				break;
 			case 3:
 				ns = NpcString.YOU_WILL_FIND_PANTHEON_IN_THE_MUSEUM;
 				break;
 			case 4:
-				ns = NpcString.ITS_DANGEROUS_OUT_THERE_IF_YOU_DONT;
+				ns = NpcString.IT_S_DANGEROUS_OUT_THERE_IF_YOU_DON_T_KNOW_WHAT_YOU_RE_DOING;
 				break;
 			case 5:
 				ns = NpcString.YOU_WILL_FIND_PANTHEON_IN_THE_MUSEUM;
 				break;
 			default:
-				ns = NpcString.ITS_DANGEROUS_OUT_THERE_IF_YOU_DONT;
+				ns = NpcString.IT_S_DANGEROUS_OUT_THERE_IF_YOU_DON_T_KNOW_WHAT_YOU_RE_DOING;
 				break;
 		}
 		Functions.npcSay(actor, ns);

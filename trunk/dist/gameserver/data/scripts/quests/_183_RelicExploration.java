@@ -69,8 +69,7 @@ public class _183_RelicExploration extends Quest implements ScriptFile
 			Quest q1 = QuestManager.getQuest(_184_NikolasCooperationContract.class);
 			if (q1 != null)
 			{
-				st.giveItems(ADENA_ID, 18100);
-				st.addExpAndSp(60000, 3000);
+				st.giveItems(ADENA_ID, 26866);
 				QuestState qs1 = q1.newQuestState(player, STARTED);
 				q1.notifyEvent("30621-01.htm", qs1, npc);
 				st.playSound(SOUND_MIDDLE);

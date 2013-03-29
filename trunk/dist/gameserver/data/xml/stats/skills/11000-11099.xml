@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-    <skill id="11000" levels="1" name="">
+	<skill id="11000" levels="1" name="Yul Chain Skill Knock Blow">
     <!-- Attacks long-range enemies. Hurls arrows like rain near the target to inflict damage with 19158 damage added to P. Atk. Bow/crossbow required. Over-hit. -->
-        <table name="#power">19158</table>
-        <table name="#element">none</table>
-        <table name="#mpConsume2">57</table>
-        <set name="reuseDelay" val="10000"/>
-        <set name="hitTime" val="1000"/>
-        <set name="castRange" val="700"/>
-        <set name="mpConsume2" val="#mpConsume2"/>
-        <set name="magicLevel" val="85"/>
-        <set name="element" val="#element"/>
-        <set name="power" val="#power"/>
-        <set name="target" val="TARGET_TUNNEL"/>
-        <set name="overHit" val="true"/>
-        <set name="skillRadius" val="400"/>
-        <set name="skillType" val="PDAM"/>
-        <set name="flyType" val="CHARGE"/>
-        <set name="flyRadius" val="800"/>
-        <set name="flyToBack" val="true"/>
-        <set name="operateType" val="OP_ACTIVE"/>
-        <set name="nextAction" val="attack"/>
-        <cond msgId="113" addName="1">
-            <using kind="Bow,Crossbow"/>
-        </cond>
-        <for/>
-    </skill>
+		<set name="reuseDelay" val="7000"/>
+		<set name="hitTime" val="2200"/>
+		<set name="castRange" val="1100"/>
+		<set name="mpConsume2" val="10"/>
+		<set name="flyType" val="THROW_HORIZONTAL"/>
+		<set name="flyRadius" val="-200"/>
+		<set name="magicLevel" val="85"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="overHit" val="true"/>
+		<set name="power" val="19158"/>
+		<set name="skillRadius" val="250"/>
+		<set name="skillType" val="PDAM"/>
+        	<set name="target" val="TARGET_MULTIFACE"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isAlterSkill" val="true"/>
+		<cond msgId="113" addName="1">
+			<using kind="Bow,Crossbow"/>
+		</cond>
+	</skill>
     <skill id="11001" levels="1" name="Superior Weapon Mastery">
     <!-- P. Atk. + 83, M. Atk. + 104, and Casting Spd. + 23%. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your INT. -->
         <table name="#pAtk">83</table>
@@ -1149,11 +1144,11 @@
         <set name="skillType" val="DEBUFF"/>
         <set name="target" val="TARGET_ONE"/>
         <for>
-            <effect name="Paralyze" time="10" val="0" abnormal="hellbinding" stackType="paralyze" stackOrder="1"/>
+            <effect name="HellBinding" time="10" stackType="paralyze" stackOrder="1"/>
         </for>
     </skill>
     <skill id="11051" levels="4" name="Hell Binding">
-    <!-- Lifts and holds the target into the air. -->
+    	 <!--Lifts and holds the target into the air. -->
         <table name="#magicLevel">85 86 87 88</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="isDebuff" val="true"/>
@@ -1169,7 +1164,7 @@
         <set name="skillType" val="DEBUFF"/>
         <set name="target" val="TARGET_ONE"/>
         <for>
-            <effect name="Paralyze" time="10" val="0" abnormal="hellbinding" stackType="paralyze" stackOrder="1"/>
+            <effect name="HellBinding" time="10" stackType="paralyze" stackOrder="1"/>
         </for>
     </skill>
     <skill id="11052" levels="4" name="Mass Hell Binding">
@@ -1195,7 +1190,7 @@
         <set name="saveVs" val="CON"/>
         <set name="target" val="TARGET_AURA"/>
         <for>
-            <effect name="Paralyze" time="10" val="0" abnormal="hellbinding" stackType="paralyze" stackOrder="1"/>
+            <effect name="HellBinding" time="10" stackType="paralyze" stackOrder="1"/>
             <effect abnormal="bleeding" count="5" name="Bleed" stackType="Bleed" time="2" val="200"/>
         </for>
     </skill>
@@ -1221,7 +1216,7 @@
         <set name="saveVs" val="CON"/>
         <set name="target" val="TARGET_AURA"/>
         <for>
-            <effect name="Paralyze" time="10" val="0" abnormal="hellbinding" stackType="paralyze" stackOrder="1"/>
+            <effect name="HellBinding" time="10" stackType="paralyze" stackOrder="1"/>
             <effect abnormal="bleeding" count="5" name="Bleed" stackType="Bleed" time="2" val="200"/>
         </for>
     </skill>
@@ -1247,7 +1242,7 @@
         <set name="skillType" val="DEBUFF"/>
         <set name="target" val="TARGET_ONE"/>
         <for>
-            <effect name="Paralyze" time="10" val="0" abnormal="floatroot" stackType="paralyze" stackOrder="1"/>
+            <effect name="HellBinding" time="10" stackType="paralyze" stackOrder="1"/>
         </for>
     </skill>
     <skill id="11055" levels="7" name="Death Fear">

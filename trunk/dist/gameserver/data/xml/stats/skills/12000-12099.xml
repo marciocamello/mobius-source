@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="12000" levels="1" name="">
-    <!-- Inflicts a powerful blow on the target. -->
-		<set name="icon" val="icon.skill10317"/>
-        <set name="castRange" val="900"/>
-        <set name="magicLvl" val="85"/>
-        <set name="mpConsume" val="71"/>
-        <set name="reuseDelay" val="10000"/>
-        <set name="hitTime" val="2000"/>
-        <set name="power" val="22465"/>
-        <set name="magicType" val="MAGIC"/>
+    <skill id="12000" levels="1" name="Aerore Chain Skill Air Blow">
+    		<!-- Inflicts a powerful blow on the target. -->
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="mpConsume2" val="40"/>
+		<set name="castRange" val="700"/>
+		<set name="power" val="230"/>
+		<set name="magicLevel" val="85"/>
+		<set name="coolTime" val="300"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="isMagic" val="true"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="skillType" val="PDAM"/>
+		<set name="overHit" val="true"/>>
 		<set name="operateType" val="OP_ACTIVE"/>
-	</skill>
+		<set name="nextAction" val="attack"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isAlterSkill" val="true"/>
+    </skill>
 	<skill id="12001" levels="1" name="Glimmer Crystal">
     <!-- none -->
         <set name="magicType" val="SPECIAL"/>

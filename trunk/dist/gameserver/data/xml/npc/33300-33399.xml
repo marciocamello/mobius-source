@@ -1952,7 +1952,7 @@
     </npc>
     <npc id="33340" name="Hermuncus" title="The Last Giant">
         <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="harnak_4pf.Hermuncus"/>
+        <set name="ai_type" value="HarnakUndeground.Hermuncus"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="43"/>
         <set name="baseCritRate" value="4"/>

@@ -110,22 +110,22 @@ public class DevnoSubAI extends DefaultAI
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.ONE_DAY_A_STATUS_OF_YOU_COULD_BE_MADE;
+				ns = NpcString.ONE_DAY_A_STATUE_OF_YOU_COULD_BE_MADE;
 				break;
 			case 2:
-				ns = NpcString.ONE_DAY_A_STATUS_OF_YOU_COULD_BE_MADE;
+				ns = NpcString.ONE_DAY_A_STATUE_OF_YOU_COULD_BE_MADE;
 				break;
 			case 3:
-				ns = NpcString.ONE_DAY_A_STATUS_OF_YOU_COULD_BE_MADE;
+				ns = NpcString.ONE_DAY_A_STATUE_OF_YOU_COULD_BE_MADE;
 				break;
 			case 4:
-				ns = NpcString.ONE_DAY_A_STATUS_OF_YOU_COULD_BE_MADE;
+				ns = NpcString.ONE_DAY_A_STATUE_OF_YOU_COULD_BE_MADE;
 				break;
 			case 5:
-				ns = NpcString.ONE_DAY_A_STATUS_OF_YOU_COULD_BE_MADE;
+				ns = NpcString.ONE_DAY_A_STATUE_OF_YOU_COULD_BE_MADE;
 				break;
 			default:
-				ns = NpcString.ONE_DAY_A_STATUS_OF_YOU_COULD_BE_MADE;
+				ns = NpcString.ONE_DAY_A_STATUE_OF_YOU_COULD_BE_MADE;
 				break;
 		}
 		Functions.npcSay(actor, ns);

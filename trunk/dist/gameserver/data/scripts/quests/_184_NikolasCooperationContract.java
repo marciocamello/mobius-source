@@ -91,8 +91,7 @@ public class _184_NikolasCooperationContract extends Quest implements ScriptFile
 			{
 				st.giveItems(Certificate, 1);
 			}
-			st.giveItems(ADENA_ID, 72527);
-			st.addExpAndSp(203717, 14032);
+			st.giveItems(ADENA_ID, 80598);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

@@ -77,8 +77,7 @@ public class _186_ContractExecution extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("blueprint_seller_luka_q0186_06.htm"))
 		{
-			st.giveItems(ADENA_ID, 105083);
-			st.addExpAndSp(285935, 18711);
+			st.giveItems(ADENA_ID, 137920);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

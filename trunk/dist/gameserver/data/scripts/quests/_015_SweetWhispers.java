@@ -58,7 +58,7 @@ public class _015_SweetWhispers extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("dark_presbyter_q0015_0301.htm"))
 		{
-			st.addExpAndSp(350531, 28204);
+			st.addExpAndSp(714215, 650980);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}

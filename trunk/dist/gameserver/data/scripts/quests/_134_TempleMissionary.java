@@ -75,7 +75,6 @@ public class _134_TempleMissionary extends Quest implements ScriptFile
 			st.unset("Report");
 			st.giveItems(ADENA_ID, 15100);
 			st.giveItems(Badge_Temple_Missionary, 1);
-			st.addExpAndSp(30000, 2000);
 			st.exitCurrentQuest(false);
 		}
 		else if (event.equalsIgnoreCase("scroll_seller_rouke_q0134_03.htm") && (_state == STARTED))

@@ -664,6 +664,24 @@ public final class SkillAcquireHolder extends AbstractHolder
 	}
 	
 	/**
+	 * Method getAllClassSkillId.
+	 * @param int classId
+	 */
+	public List<Integer> getAllClassSkillId()
+	{
+		List<Integer> ListSkills = new ArrayList<>();
+		for (Iterator<Entry<Integer, List<SkillLearn>>> allClassSkills = _normalSkillTree.entrySet().iterator(); allClassSkills.hasNext();)
+		{
+			Map.Entry<Integer, List<SkillLearn>> e = allClassSkills.next();
+			for (SkillLearn skill : e.getValue())
+			{
+				ListSkills.add(skill.getId());
+			}
+		}
+		return ListSkills;
+	}
+	
+	/**
 	 * Method getAllAwakenSkillsByClass.
 	 * @param int classId
 	 */
@@ -673,8 +691,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 		List<SkillLearn> awakenSkills = _normalSkillTree.get(classId);
 		for (SkillLearn skill : awakenSkills)
 		{
-			int skillId = skill.getId();
-			ListSkills.add(skillId);
+			ListSkills.add(skill.getId());
 		}
 		return ListSkills;
 	}

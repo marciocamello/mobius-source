@@ -112,7 +112,7 @@ public class ZakenDaytime extends Fighter
 		r.setReenterTime(System.currentTimeMillis());
 		for (Player p : r.getPlayers())
 		{
-			p.sendPacket(new ExSendUIEvent(p, true, true, 0, 0));
+			p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));
 		}
 		actor.broadcastPacket(new PlaySound(PlaySound.Type.MUSIC, "BS02_D", 1, actor.getObjectId(), actor.getLoc()));
 		super.onEvtDead(killer);

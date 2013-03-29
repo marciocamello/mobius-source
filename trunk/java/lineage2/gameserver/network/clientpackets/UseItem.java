@@ -121,7 +121,7 @@ public class UseItem extends L2GameClientPacket
 		};
 		if (activeChar.getEffectList().containEffectFromSkills(IDENTIFY_CRISIS))
 		{
-			activeChar.sendPacket(SystemMsg.YOU_CANNOT_CHANGE_CLASS_BECAUSE_OF_IDENTIFY_CRISIS);
+			activeChar.sendPacket(SystemMsg.YOU_CAN_NOT_CHANGE_CLASS_DUE_TO_DISRUPTION_OF_THE_IDENTIFICATION);
 			activeChar.sendActionFailed();
 			return;
 		}

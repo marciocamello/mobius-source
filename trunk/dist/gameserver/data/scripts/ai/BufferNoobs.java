@@ -80,7 +80,7 @@ public class BufferNoobs extends DefaultAI
 					actor.broadcastPacket(new MagicSkillUse(actor, player, skillId, 0, 0, 0));
 					actor.callSkill(skill, target, true);
 				}
-				player.sendPacket(new ExShowScreenMessage(NpcString.NEWBIE_GUIDE_GIVE_YOU_THE_MAGIC_OF_SATTELITE_S1, 800, ScreenMessageAlign.TOP_CENTER, player.getName()));
+				player.sendPacket(new ExShowScreenMessage(NpcString.NEWBIE_HELPER_HAS_CASTED_BUFFS_ON_$S1, 800, ScreenMessageAlign.TOP_CENTER, player.getName()));
 			}
 		}
 		return true;

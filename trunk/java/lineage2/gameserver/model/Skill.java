@@ -1194,6 +1194,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	public static final int SKILL_DUAL_CAST = 11068;
 	/**
+	 * Field _isAlterSkill.
+	 */
+	protected boolean _isAlterSkill;
+	/**
 	 * Field _isAltUse.
 	 */
 	protected boolean _isAltUse;
@@ -1713,6 +1717,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		_referenceItemMpConsume = set.getInteger("referenceItemMpConsume", 0);
 		_isItemHandler = set.getBool("isHandler", false);
 		_isCommon = set.getBool("isCommon", false);
+		_isAlterSkill = set.getBool("isAlterSkill", false);
 		_isSaveable = set.getBool("isSaveable", true);
 		_coolTime = set.getInteger("coolTime", 0);
 		_skillInterruptTime = set.getInteger("hitCancelTime", 0);
@@ -4062,77 +4067,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	}
 	
 	/**
-	 * Method isItemSkill.
-	 * @return boolean
-	 */
-	public boolean isSetSkill()
-	{
-		String[] nameIndicator =
-		{
-			"Special Ability",
-			"Necklace",
-			"Ring",
-			"Earring",
-			"Agathion",
-			"Agathion's",
-			"PvP",
-			"Dynasty",
-			"Icarus",
-			"Vesper",
-			"Specter",
-			"Apocalypse",
-			"Amaranthine",
-			"Eternal",
-			"Twilight",
-			"Immortal",
-			"Amaranthine",
-			"Elegia",
-			"Vorpal",
-			"Moirai",
-			"Dynasty",
-			"Imperial Crusader",
-			"Draconic",
-			"Major Arcana",
-			"Majestic",
-			"Dark Crystal",
-			"Nightmare",
-			"Tallum",
-			"Blue Wolf",
-			"Avadon",
-			"Doom",
-			"Clan Oath",
-			"Appela",
-			"Chain Mail",
-			"Full Plate",
-			"Compound Armor",
-			"Drake Leather",
-			"Karmian",
-			"Demon's",
-			"Divine Set",
-			"Belt",
-			"Cloak",
-			"Call",
-			"Shirt"
-		};
-		for (String iterateName : nameIndicator)
-		{
-			if (_name.contains(iterateName))
-			{
-				return true;
-			}
-		}
-		if (_name.contains("Seraph") && !_name.contains("Banish"))
-		{
-			return true;
-		}
-		if (_name.contains("Requiem") && !_name.equals("Requiem"))
-		{
-			return true;
-		}
-		return false;
-	}
-	
-	/**
 	 * Method toString.
 	 * @return String
 	 */
@@ -4190,6 +4124,15 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			default:
 				return false;
 		}
+	}
+	
+	/**
+	 * Method isAlterSkill.
+	 * @return boolean
+	 */
+	public boolean isAlterSkill()
+	{
+		return _isAlterSkill;
 	}
 	
 	/**
@@ -4404,7 +4347,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	public boolean isClanSkill()
 	{
-		return ((_id >= 370) && (_id <= 391)) || ((_id >= 611) && (_id <= 616));
+		return ((_id >= 370) && (_id <= 391)) || ((_id >= 611) && (_id <= 616)) || ((_id >= 19003) && (_id <= 19076));
 	}
 	
 	/**

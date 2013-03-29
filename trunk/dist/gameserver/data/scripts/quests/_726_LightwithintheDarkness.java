@@ -66,7 +66,7 @@ public class _726_LightwithintheDarkness extends Quest implements ScriptFile
 		else if (event.equals("reward") && (cond == 1) && player.getVar("q726").equalsIgnoreCase("done"))
 		{
 			player.unsetVar("q726");
-			st.giveItems(KnightsEpaulette, 152);
+			st.giveItems(KnightsEpaulette, 200);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 			return null;

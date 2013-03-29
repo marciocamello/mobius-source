@@ -12,6 +12,7 @@
  */
 package lineage2.gameserver.skills.effects;
 
+import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.network.serverpackets.FlyToLocation;
 import lineage2.gameserver.network.serverpackets.ValidateLocation;
@@ -34,7 +35,9 @@ public class EffectTargetToMe extends Effect
 	 * Field _z. Field _y. Field _x.
 	 */
 	
-	private int _x, _y, _z;
+	int _x;
+	int _y;
+	int _z;
 	
 	public EffectTargetToMe(Env env, EffectTemplate template)
 	{
@@ -48,6 +51,23 @@ public class EffectTargetToMe extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		ThreadPoolManager.getInstance().schedule(new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				Location flyLoc = _effected.getFlyLocation(getEffector(), getSkill());
+				_effected.startStunning();
+				_effected.abortCast(true, true);
+				_effected.broadcastPacket(new FlyToLocation(_effected, flyLoc, getSkill().getFlyType(), getSkill().getFlySpeed()));
+				_x = flyLoc.getX();
+				_y = flyLoc.getY();
+				_z = flyLoc.getZ();
+				_effected.setXYZ(flyLoc.getX(), flyLoc.getY(), flyLoc.getZ());
+				_effected.broadcastPacket(new ValidateLocation(_effected));
+			}
+			
+		}, 500L);
 		Location flyLoc = _effected.getFlyLocation(getEffector(), getSkill());
 		_effected.startStunning();
 		_effected.abortCast(true, true);

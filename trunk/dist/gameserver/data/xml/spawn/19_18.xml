@@ -2,6 +2,10 @@
 <!DOCTYPE list SYSTEM "spawn.dtd">
 
 <list>
+	<spawn count="1" respawn="43200" respawn_random="0" period_of_day="none">
+		<point x="-17800" y="12504" z="-3318" h="10000" />
+		<npc id="25875" /><!--Queen of Darkness (Raid Boss lv 88)-->
+	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-16547" y="28059" z="-3184" h="13913" />
 		<npc id="23176" /><!--Mutated Cerberos-->

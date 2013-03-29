@@ -110,22 +110,22 @@ public class MorganSubAI extends DefaultAI
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.DONT_GO_HUNTING_WITH_SOULSHOT;
+				ns = NpcString.DON_T_GO_HUNTING_WITHOUT_SOULSHOT;
 				break;
 			case 2:
-				ns = NpcString.BELLOW_LEVEL_REVICE_NB;
+				ns = NpcString.BELOW_LEVEL_75_BE_SURE_TO_RECEIVE_NEWBIE_BUFFS;
 				break;
 			case 3:
-				ns = NpcString.DONT_GO_HUNTING_WITH_SOULSHOT;
+				ns = NpcString.DON_T_GO_HUNTING_WITHOUT_SOULSHOT;
 				break;
 			case 4:
-				ns = NpcString.BELLOW_LEVEL_REVICE_NB;
+				ns = NpcString.BELOW_LEVEL_75_BE_SURE_TO_RECEIVE_NEWBIE_BUFFS;
 				break;
 			case 5:
-				ns = NpcString.DONT_GO_HUNTING_WITH_SOULSHOT;
+				ns = NpcString.DON_T_GO_HUNTING_WITHOUT_SOULSHOT;
 				break;
 			default:
-				ns = NpcString.BELLOW_LEVEL_REVICE_NB;
+				ns = NpcString.BELOW_LEVEL_75_BE_SURE_TO_RECEIVE_NEWBIE_BUFFS;
 				break;
 		}
 		Functions.npcSay(actor, ns);

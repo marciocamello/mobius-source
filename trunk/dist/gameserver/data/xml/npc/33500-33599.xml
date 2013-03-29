@@ -59,7 +59,7 @@
 		<set name="collision_height" value="10.0"/>
 		<set name="collision_radius" value="15.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="harnak_4pf.SourceOfPower"/>
+		<set name="ai_type" value="HarnakUndeground.SourceOfPower"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -2267,7 +2267,7 @@
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="harnak_4pf.SealControlDevice"/>
+		<set name="ai_type" value="HarnakUndeground.SealControlDevice"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -2661,7 +2661,7 @@
 		<set name="collision_height" value="10.0"/>
 		<set name="collision_radius" value="15.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="harnak_4pf.SourceOfPower"/>
+		<set name="ai_type" value="HarnakUndeground.SourceOfPower"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -2716,7 +2716,7 @@
 		<set name="collision_height" value="10.0"/>
 		<set name="collision_radius" value="15.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="harnak_4pf.SourceOfPower"/>
+		<set name="ai_type" value="HarnakUndeground.SourceOfPower"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>

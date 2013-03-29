@@ -51,146 +51,71 @@ import lineage2.gameserver.utils.Location;
 import org.apache.commons.lang3.mutable.MutableInt;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * @author pchayka
  */
 public class GvGInstance extends Reflection
 {
-	/**
-	 * Field BOX_ID. (value is 18822)
-	 */
 	private final static int BOX_ID = 18822;
-	/**
-	 * Field BOSS_ID. (value is 25655)
-	 */
 	private final static int BOSS_ID = 25655;
-	/**
-	 * Field SCORE_BOX. (value is 20)
-	 */
+	
 	private final static int SCORE_BOX = 20;
-	/**
-	 * Field SCORE_BOSS. (value is 100)
-	 */
 	private final static int SCORE_BOSS = 100;
-	/**
-	 * Field SCORE_KILL. (value is 5)
-	 */
 	private final static int SCORE_KILL = 5;
-	/**
-	 * Field SCORE_DEATH. (value is 3)
-	 */
 	private final static int SCORE_DEATH = 3;
-	/**
-	 * Field eventTime.
-	 */
+	
 	private final int eventTime = 1200;
-	/**
-	 * Field bossSpawnTime.
-	 */
 	private final long bossSpawnTime = 10 * 60 * 1000L;
-	/**
-	 * Field active.
-	 */
+	
 	private boolean active = false;
-	/**
-	 * Field team1.
-	 */
+	
 	Party team1;
-	/**
-	 * Field team2.
-	 */
 	Party team2;
-	/**
-	 * Field bothTeams.
-	 */
 	private final List<HardReference<Player>> bothTeams = new CopyOnWriteArrayList<>();
-	/**
-	 * Field score.
-	 */
+	
 	private final TIntObjectHashMap<MutableInt> score = new TIntObjectHashMap<>();
-	/**
-	 * Field team1Score.
-	 */
 	private int team1Score = 0;
-	/**
-	 * Field team2Score.
-	 */
 	private int team2Score = 0;
-	/**
-	 * Field startTime.
-	 */
+	
 	private long startTime;
-	/**
-	 * Field _bossSpawnTask.
-	 */
+	
 	private ScheduledFuture<?> _bossSpawnTask;
-	/**
-	 * Field _countDownTask.
-	 */
 	private ScheduledFuture<?> _countDownTask;
-	/**
-	 * Field _battleEndTask.
-	 */
 	private ScheduledFuture<?> _battleEndTask;
-	/**
-	 * Field _deathListener.
-	 */
+	
 	private final DeathListener _deathListener = new DeathListener();
-	/**
-	 * Field _teleportListener.
-	 */
 	private final TeleportListener _teleportListener = new TeleportListener();
-	/**
-	 * Field _playerPartyLeaveListener.
-	 */
 	private final PlayerPartyLeaveListener _playerPartyLeaveListener = new PlayerPartyLeaveListener();
-	/**
-	 * Field zonepvp.
-	 */
+	
 	Zone zonepvp;
-	/**
-	 * Field peace1.
-	 */
+	
 	Zone peace1;
-	/**
-	 * Field peace2.
-	 */
+	
 	Zone peace2;
 	
-	/**
-	 * Method setTeam1.
-	 * @param party1 Party
-	 */
 	public void setTeam1(Party party1)
 	{
 		team1 = party1;
 	}
 	
-	/**
-	 * Method setTeam2.
-	 * @param party2 Party
-	 */
 	public void setTeam2(Party party2)
 	{
 		team2 = party2;
 	}
 	
-	/**
-	 * Constructor for GvGInstance.
-	 */
 	public GvGInstance()
 	{
 		super();
 	}
 	
 	/**
-	 * Method start.
+	 * General instance initialization and assigning global variables
 	 */
 	public void start()
 	{
 		zonepvp = getZone("[gvg_battle_zone]");
 		peace1 = getZone("[gvg_1_peace]");
 		peace2 = getZone("[gvg_2_peace]");
+		// Box spawns
 		Location boxes[] =
 		{
 			new Location(142696, 139704, -15264, 0),
@@ -203,15 +128,20 @@ public class GvGInstance extends Reflection
 			new Location(145720, 143640, -15880, 0),
 			new Location(139592, 142824, -15264, 0)
 		};
+		
 		for (Location boxe : boxes)
 		{
 			addSpawnWithoutRespawn(BOX_ID, boxe, 0);
 		}
-		addSpawnWithoutRespawn(35423, new Location(139640, 139736, -15264), 0);
-		addSpawnWithoutRespawn(35426, new Location(139672, 145896, -15264), 0);
-		_bossSpawnTask = ThreadPoolManager.getInstance().schedule(new BossSpawn(), bossSpawnTime);
+		
+		addSpawnWithoutRespawn(35423, new Location(139640, 139736, -15264), 0); // Red team flag
+		addSpawnWithoutRespawn(35426, new Location(139672, 145896, -15264), 0); // Blue team flag
+		
+		_bossSpawnTask = ThreadPoolManager.getInstance().schedule(new BossSpawn(), bossSpawnTime); //
 		_countDownTask = ThreadPoolManager.getInstance().schedule(new CountingDown(), (eventTime - 1) * 1000L);
-		_battleEndTask = ThreadPoolManager.getInstance().schedule(new BattleEnd(), (eventTime - 6) * 1000L);
+		_battleEndTask = ThreadPoolManager.getInstance().schedule(new BattleEnd(), (eventTime - 6) * 1000L); // -6 is about to prevent built-in BlockChecker countdown task
+		
+		// Assigning players to teams
 		for (Player member : team1.getPartyMembers())
 		{
 			bothTeams.add(member.getRef());
@@ -219,6 +149,7 @@ public class GvGInstance extends Reflection
 			member.addListener(_teleportListener);
 			member.addListener(_playerPartyLeaveListener);
 		}
+		
 		for (Player member : team2.getPartyMembers())
 		{
 			bothTeams.add(member.getRef());
@@ -226,29 +157,34 @@ public class GvGInstance extends Reflection
 			member.addListener(_teleportListener);
 			member.addListener(_playerPartyLeaveListener);
 		}
-		startTime = System.currentTimeMillis() + (eventTime * 1000L);
+		
+		startTime = System.currentTimeMillis() + (eventTime * 1000L); // Used in packet broadcasting
+		
+		// Forming packets to send everybody
 		final ExCubeGameChangePoints initialPoints = new ExCubeGameChangePoints(eventTime, team1Score, team2Score);
 		final ExCubeGameCloseUI cui = new ExCubeGameCloseUI();
 		ExCubeGameExtendedChangePoints clientSetUp;
+		
 		for (Player tm : HardReferences.unwrap(bothTeams))
 		{
 			score.put(tm.getObjectId(), new MutableInt());
+			
 			tm.setCurrentCp(tm.getMaxCp());
 			tm.setCurrentHp(tm.getMaxHp(), false);
 			tm.setCurrentMp(tm.getMaxMp());
 			clientSetUp = new ExCubeGameExtendedChangePoints(eventTime, team1Score, team2Score, isRedTeam(tm), tm, 0);
 			tm.sendPacket(clientSetUp);
-			tm.sendActionFailed();
+			tm.sendActionFailed(); // useless? copy&past from BlockChecker
 			tm.sendPacket(initialPoints);
-			tm.sendPacket(cui);
+			tm.sendPacket(cui); // useless? copy&past from BlockChecker
 			broadCastPacketToBothTeams(new ExCubeGameAddPlayer(tm, isRedTeam(tm)));
 		}
+		
 		active = true;
 	}
 	
 	/**
-	 * Method broadCastPacketToBothTeams.
-	 * @param packet L2GameServerPacket
+	 * @param packet Broadcasting packet to every member of instance
 	 */
 	void broadCastPacketToBothTeams(L2GameServerPacket packet)
 	{
@@ -259,8 +195,7 @@ public class GvGInstance extends Reflection
 	}
 	
 	/**
-	 * Method isActive.
-	 * @return boolean
+	 * @return Whether event is active. active starts with instance dungeon and ends with team victory
 	 */
 	boolean isActive()
 	{
@@ -268,9 +203,8 @@ public class GvGInstance extends Reflection
 	}
 	
 	/**
-	 * Method isRedTeam.
-	 * @param player Player
-	 * @return boolean
+	 * @param player
+	 * @return Whether player belongs to Red Team (team2)
 	 */
 	private boolean isRedTeam(Player player)
 	{
@@ -282,14 +216,17 @@ public class GvGInstance extends Reflection
 	}
 	
 	/**
-	 * Method end.
+	 * Handles the end of event
 	 */
 	void end()
 	{
 		active = false;
+		
 		startCollapseTimer(60 * 1000L);
+		
 		paralyzePlayers();
 		ThreadPoolManager.getInstance().schedule(new Finish(), 55 * 1000L);
+		
 		if (_bossSpawnTask != null)
 		{
 			_bossSpawnTask.cancel(false);
@@ -305,49 +242,39 @@ public class GvGInstance extends Reflection
 			_battleEndTask.cancel(false);
 			_battleEndTask = null;
 		}
+		
 		boolean isRedWinner = false;
+		
 		isRedWinner = getRedScore() >= getBlueScore();
+		
 		final ExCubeGameEnd end = new ExCubeGameEnd(isRedWinner);
 		broadCastPacketToBothTeams(end);
+		
 		reward(isRedWinner ? team2 : team1);
 		GvG.updateWinner(isRedWinner ? team2.getPartyLeader() : team1.getPartyLeader());
+		
 		zonepvp.setActive(false);
 		peace1.setActive(false);
 		peace2.setActive(false);
 	}
 	
-	/**
-	 * Method reward.
-	 * @param party Party
-	 */
 	private void reward(Party party)
 	{
 		for (Player member : party.getPartyMembers())
 		{
-			member.sendMessage("Ва�?а группа выиграла GvG турнир, лидер группы добавлен в рейтинг победителей.");
-			member.setFame(member.getFame() + 500, "GvG");
-			Functions.addItem(member, 13067, 30);
+			member.sendMessage("Ваша группа выиграла GvG турнир, лидер группы добавлен в рейтинг победителей.");
+			member.setFame(member.getFame() + 500, "GvG"); // fame
+			Functions.addItem(member, 13067, 30); // Fantasy Isle Coin
 		}
 	}
 	
-	/**
-	 */
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 * Constructor for DeathListener.
-		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method onDeath.
-		 * @param self Creature
-		 * @param killer Creature
-		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
-		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -355,11 +282,13 @@ public class GvGInstance extends Reflection
 			{
 				return;
 			}
+			
 			if ((self.getReflection() != killer.getReflection()) || (self.getReflection() != GvGInstance.this))
 			{
 				return;
 			}
-			if (self.isPlayer() && killer.isPlayable())
+			
+			if (self.isPlayer() && killer.isPlayable()) // if PvP kill
 			{
 				if (team1.containsMember(self.getPlayer()) && team2.containsMember(killer.getPlayer()))
 				{
@@ -400,7 +329,8 @@ public class GvGInstance extends Reflection
 					{
 						changeScore(2, SCORE_BOSS, 0, false, false, killer.getPlayer());
 					}
-					broadCastPacketToBothTeams(new ExShowScreenMessage("�?хранник Сокровищ Герал�?да погиб от руки " + killer.getName(), 5000, ScreenMessageAlign.MIDDLE_CENTER, true));
+					
+					broadCastPacketToBothTeams(new ExShowScreenMessage("Охранник Сокровищ Геральда погиб от руки " + killer.getName(), 5000, ScreenMessageAlign.MIDDLE_CENTER, true));
 					end();
 				}
 			}
@@ -408,13 +338,12 @@ public class GvGInstance extends Reflection
 	}
 	
 	/**
-	 * Method changeScore.
-	 * @param teamId int
-	 * @param toAdd int
-	 * @param toSub int
-	 * @param subbing boolean
-	 * @param affectAnotherTeam boolean
-	 * @param player Player
+	 * @param teamId
+	 * @param toAdd - how much points to add
+	 * @param toSub - how much points to remove
+	 * @param subbing - whether change is reducing points
+	 * @param affectAnotherTeam - change can affect only teamId or both
+	 * @param player Any score change are handled here.
 	 */
 	synchronized void changeScore(int teamId, int toAdd, int toSub, boolean subbing, boolean affectAnotherTeam, Player player)
 	{
@@ -484,8 +413,7 @@ public class GvGInstance extends Reflection
 	}
 	
 	/**
-	 * Method addPlayerScore.
-	 * @param player Player
+	 * @param player Handles the increase of personal player points
 	 */
 	void addPlayerScore(Player player)
 	{
@@ -494,9 +422,8 @@ public class GvGInstance extends Reflection
 	}
 	
 	/**
-	 * Method getPlayerScore.
-	 * @param player Player
-	 * @return int
+	 * @param player
+	 * @return Returns personal player score
 	 */
 	public int getPlayerScore(Player player)
 	{
@@ -505,7 +432,7 @@ public class GvGInstance extends Reflection
 	}
 	
 	/**
-	 * Method paralyzePlayers.
+	 * Paralyzes everybody in instance to prevent any actions while event is !isActive
 	 */
 	public void paralyzePlayers()
 	{
@@ -520,15 +447,17 @@ public class GvGInstance extends Reflection
 			{
 				tm.setCurrentHp(tm.getMaxHp(), false);
 			}
+			
 			tm.setCurrentMp(tm.getMaxMp());
 			tm.setCurrentCp(tm.getMaxCp());
+			
 			tm.getEffectList().stopEffect(Skill.SKILL_MYSTIC_IMMUNITY);
 			tm.block();
 		}
 	}
 	
 	/**
-	 * Method unParalyzePlayers.
+	 * Romoves paralization
 	 */
 	public void unParalyzePlayers()
 	{
@@ -540,7 +469,7 @@ public class GvGInstance extends Reflection
 	}
 	
 	/**
-	 * Method cleanUp.
+	 * Cleans up every list and task
 	 */
 	void cleanUp()
 	{
@@ -553,17 +482,20 @@ public class GvGInstance extends Reflection
 	}
 	
 	/**
-	 * Method resurrectAtBase.
-	 * @param player Player
+	 * @param player
+	 * @param refId Called by onDeath. Handles the resurrection at the proper base.
 	 */
 	public void resurrectAtBase(Player player)
 	{
 		if (player.isDead())
 		{
+			// player.setCurrentCp(player.getMaxCp());
 			player.setCurrentHp(0.7 * player.getMaxHp(), true);
+			// player.setCurrentMp(player.getMaxMp());
 			player.broadcastPacket(new Revive(player));
 		}
-		player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(5660, 2));
+		player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(5660, 2)); // Battlefield Death Syndrome
+		
 		Location pos;
 		if (team1.containsMember(player))
 		{
@@ -573,17 +505,18 @@ public class GvGInstance extends Reflection
 		{
 			pos = Location.findPointToStay(GvG.TEAM2_LOC, 0, 150, getGeoIndex());
 		}
+		
 		player.teleToLocation(pos, this);
 	}
 	
 	/**
-	 * Method removePlayer.
-	 * @param player Player
-	 * @param legalQuit boolean
+	 * @param player
+	 * @param legalQuit - whether quit was called by event or by player escape Removes player from every list or instance, teleports him and stops the event timer
 	 */
 	void removePlayer(Player player, boolean legalQuit)
 	{
 		bothTeams.remove(player.getRef());
+		
 		broadCastPacketToBothTeams(new ExCubeGameRemovePlayer(player, isRedTeam(player)));
 		player.removeListener(_deathListener);
 		player.removeListener(_teleportListener);
@@ -597,8 +530,7 @@ public class GvGInstance extends Reflection
 	}
 	
 	/**
-	 * Method teamWithdraw.
-	 * @param party Party
+	 * @param isRed Handles the team withdraw from the area of event. Can only be called when !isActive
 	 */
 	void teamWithdraw(Party party)
 	{
@@ -608,8 +540,9 @@ public class GvGInstance extends Reflection
 			{
 				removePlayer(player, false);
 			}
+			
 			Player player = team2.getPartyLeader();
-			changeScore(2, 200, 0, false, false, player);
+			changeScore(2, 200, 0, false, false, player); // adding 200 to the team score for enemy team withdrawal. player - leader of the team who's left in the instance
 		}
 		else
 		{
@@ -617,83 +550,57 @@ public class GvGInstance extends Reflection
 			{
 				removePlayer(player, false);
 			}
+			
 			Player player = team1.getPartyLeader();
-			changeScore(1, 200, 0, false, false, player);
+			changeScore(1, 200, 0, false, false, player); // adding 200 to the team score for enemy team withdrawal. player - leader of the team who's left in the instance
 		}
-		broadCastPacketToBothTeams(new ExShowScreenMessage("�?оманда �?оперника покинула поле бо�? в полном �?о�?таве. �?онец �?ражени�?.", 4000, ScreenMessageAlign.MIDDLE_CENTER, true));
+		
+		broadCastPacketToBothTeams(new ExShowScreenMessage("", 4000, ScreenMessageAlign.MIDDLE_CENTER, true));
 		end();
 	}
 	
-	/**
-	 * Method getBlueScore.
-	 * @return int
-	 */
 	private int getBlueScore()
 	{
 		return team1Score;
 	}
 	
-	/**
-	 * Method getRedScore.
-	 * @return int
-	 */
 	private int getRedScore()
 	{
 		return team2Score;
 	}
 	
-	/**
-	 */
 	public class BossSpawn extends RunnableImpl
 	{
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
-			broadCastPacketToBothTeams(new ExShowScreenMessage("�?о�?вил�?�? �?хранник Сокровищ Герал�?да", 5000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			broadCastPacketToBothTeams(new ExShowScreenMessage("", 5000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			addSpawnWithoutRespawn(BOSS_ID, new Location(147304, 142824, -15864, 32768), 0);
 			openDoor(24220042);
 		}
 	}
 	
-	/**
-	 */
 	public class CountingDown extends RunnableImpl
 	{
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
-			broadCastPacketToBothTeams(new ExShowScreenMessage("До конца �?ражени�? о�?тала�?�? 1 минута", 4000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			broadCastPacketToBothTeams(new ExShowScreenMessage("", 4000, ScreenMessageAlign.MIDDLE_CENTER, true));
 		}
 	}
 	
-	/**
-	 */
 	public class BattleEnd extends RunnableImpl
 	{
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
-			broadCastPacketToBothTeams(new ExShowScreenMessage("Врем�? битвы и�?текл��. Телепортаци�? через 1 минуту.", 4000, ScreenMessageAlign.BOTTOM_RIGHT, true));
+			broadCastPacketToBothTeams(new ExShowScreenMessage("", 4000, ScreenMessageAlign.BOTTOM_RIGHT, true));
 			end();
 		}
 	}
 	
-	/**
-	 */
 	public class Finish extends RunnableImpl
 	{
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -703,11 +610,10 @@ public class GvGInstance extends Reflection
 	}
 	
 	/**
-	 * Method addSpawnWithoutRespawn.
-	 * @param npcId int
-	 * @param loc Location
-	 * @param randomOffset int
-	 * @return NpcInstance
+	 * @param npcId
+	 * @param loc
+	 * @param randomOffset
+	 * @param refId Custom instanced spawn method
 	 */
 	@Override
 	public NpcInstance addSpawnWithoutRespawn(int npcId, Location loc, int randomOffset)
@@ -718,26 +624,15 @@ public class GvGInstance extends Reflection
 	}
 	
 	/**
+	 * Handles any Teleport action of any player inside
 	 */
 	private class TeleportListener implements OnTeleportListener
 	{
-		/**
-		 * Constructor for TeleportListener.
-		 */
 		public TeleportListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method onTeleport.
-		 * @param player Player
-		 * @param x int
-		 * @param y int
-		 * @param z int
-		 * @param reflection Reflection
-		 * @see lineage2.gameserver.listener.actor.player.OnTeleportListener#onTeleport(Player, int, int, int, Reflection)
-		 */
 		@Override
 		public void onTeleport(Player player, int x, int y, int z, Reflection reflection)
 		{
@@ -745,28 +640,22 @@ public class GvGInstance extends Reflection
 			{
 				return;
 			}
+			
 			removePlayer(player, false);
-			player.sendMessage("Вы до�?рочно покинули зону битвы и были ди�?квалифицированы.");
+			player.sendMessage("");
 		}
 	}
 	
 	/**
+	 * Handles quit from the group
 	 */
 	private class PlayerPartyLeaveListener implements OnPlayerPartyLeaveListener
 	{
-		/**
-		 * Constructor for PlayerPartyLeaveListener.
-		 */
 		public PlayerPartyLeaveListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method onPartyLeave.
-		 * @param player Player
-		 * @see lineage2.gameserver.listener.actor.player.OnPlayerPartyLeaveListener#onPartyLeave(Player)
-		 */
 		@Override
 		public void onPartyLeave(Player player)
 		{
@@ -774,12 +663,16 @@ public class GvGInstance extends Reflection
 			{
 				return;
 			}
+			
 			Party party = player.getParty();
-			if (party.getMemberCount() >= 3)
+			
+			if (party.getMemberCount() >= 3) // when getMemberCount() >= 3 the party won't be dissolved.
 			{
 				removePlayer(player, false);
 				return;
 			}
+			
+			// else if getMemberCount() < 3 the party will be dissolved -> launching team withdrawal method
 			teamWithdraw(party);
 		}
 	}

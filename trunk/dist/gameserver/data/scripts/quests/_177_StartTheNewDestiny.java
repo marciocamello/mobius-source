@@ -92,8 +92,8 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("33344_16.htm"))
 		{
-			st.giveItems(10480, 1);
-			st.giveItems(18168, 1);
+			st.giveItems(17371, 5);
+			st.giveItems(19375, 1);
 			st.addExpAndSp(175739575, 2886300);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);

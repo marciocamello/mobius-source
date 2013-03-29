@@ -62,7 +62,8 @@ public class _10277_MutatedKaneusDion extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("30461-02.htm"))
 		{
-			st.giveItems(57, 120000);
+			st.giveItems(57, 40000);
+			st.addExpAndSp(190000, 105000);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

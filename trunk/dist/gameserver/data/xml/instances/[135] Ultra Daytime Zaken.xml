@@ -5,7 +5,7 @@
               timelimit="60" dispelBuffs="true">
         <collapse on-party-dismiss="true" timer="60"/>
         <level min="78" max="85"/>
-        <party min="9" max="9"/>
+        <party min="2" max="9"/>
         <return loc="52212 218998 -3208"/>
         <teleport loc="52680 219992 -3522"/>
         <remove itemId="0" count="0" necessary="false"/>

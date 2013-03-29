@@ -72,6 +72,7 @@ public class _641_AttackSailren extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.takeItems(FRAGMENTS, -1);
 			st.giveItems(GAZKH, 1);
+			st.addExpAndSp(1500000, 1650000);
 			st.exitCurrentQuest(true);
 			st.unset("cond");
 		}

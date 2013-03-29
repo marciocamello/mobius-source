@@ -84,7 +84,6 @@ public class _137_TempleChampionPart1 extends Quest implements ScriptFile
 		{
 			st.giveItems(ADENA_ID, 69146);
 			st.playSound(SOUND_FINISH);
-			st.addExpAndSp(219975, 13047);
 			st.exitCurrentQuest(false);
 		}
 		return htmltext;

@@ -27,30 +27,25 @@
 		</triggers>
 		<for/>
 	</skill>
-	<skill id="10999" levels="1" name="">
+	<skill id="10999" levels="1" name="Yul Chain Skill Air Blow">
     <!-- Attacks long-range enemies. Hurls arrows like rain near the target to inflict damage with 19158 damage added to P. Atk. Bow/crossbow required. Over-hit. -->
-		<table name="#power">19158</table>
-		<table name="#element">none</table> 
-       	<table name="#mpConsume2">60</table>
-		<set name="reuseDelay" val="1000"/>
-		<set name="hitTime" val="2000"/>
-		<set name="castRange" val="700"/>
-		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="reuseDelay" val="7000"/>
+		<set name="hitTime" val="2200"/>
+		<set name="castRange" val="1100"/>
+		<set name="mpConsume2" val="10"/>
+		<set name="flyType" val="THROW_HORIZONTAL"/>
+		<set name="flyRadius" val="-200"/>
 		<set name="magicLevel" val="85"/>
-		<set name="element" val="#element"/>
-		<set name="power" val="#power"/>
-		<set name="target" val="TARGET_TUNNEL"/>
-		<set name="overHit" val="true"/>
-		<set name="skillRadius" val="400"/>
-		<set name="skillType" val="PDAM"/>
-		<set name="flyType" val="CHARGE"/>
-		<set name="flyRadius" val="800"/>
-		<set name="flyToBack" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="nextAction" val="attack"/>
+		<set name="overHit" val="true"/>
+		<set name="power" val="19158"/>
+		<set name="skillRadius" val="250"/>
+		<set name="skillType" val="PDAM"/>
+        	<set name="target" val="TARGET_MULTIFACE"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isAlterSkill" val="true"/>
 		<cond msgId="113" addName="1">
 			<using kind="Bow,Crossbow"/>
 		</cond>
-		<for/>
 	</skill>
 </list>

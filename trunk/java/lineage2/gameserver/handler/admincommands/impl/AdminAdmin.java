@@ -409,15 +409,15 @@ public class AdminAdmin implements IAdminCommandHandler
 						Functions.sendDebugMessage(activeChar, "USAGE: //uievent isHide doIncrease startTime endTime Text");
 						return false;
 					}
-					boolean hide;
-					boolean increase;
+					int hide;
+					int increase;
 					int startTime;
 					int endTime;
 					String text;
 					try
 					{
-						hide = Boolean.parseBoolean(wordList[1]);
-						increase = Boolean.parseBoolean(wordList[2]);
+						hide = Integer.parseInt(wordList[1]);
+						increase = Integer.parseInt(wordList[2]);
 						startTime = Integer.parseInt(wordList[3]);
 						endTime = Integer.parseInt(wordList[4]);
 						text = wordList[5];

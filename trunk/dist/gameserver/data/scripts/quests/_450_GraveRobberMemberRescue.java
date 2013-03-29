@@ -108,7 +108,8 @@ public class _450_GraveRobberMemberRescue extends Quest implements ScriptFile
 			else if ((cond == 2) && (st.getQuestItemsCount(EVIDENCE_OF_MIGRATION) == 10))
 			{
 				htmltext = "32650-08.htm";
-				st.giveItems(ADENA_ID, 65000);
+				st.giveItems(ADENA_ID, 371400);
+				st.addExpAndSp(6886980, 8116410);
 				st.takeItems(EVIDENCE_OF_MIGRATION, -1);
 				st.exitCurrentQuest(true);
 				st.playSound(SOUND_FINISH);

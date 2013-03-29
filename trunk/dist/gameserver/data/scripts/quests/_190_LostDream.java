@@ -105,8 +105,7 @@ public class _190_LostDream extends Quest implements ScriptFile
 				else if (cond == 5)
 				{
 					htmltext = "head_blacksmith_kusto_q0190_08.htm";
-					st.giveItems(ADENA_ID, 109427);
-					st.addExpAndSp(309467, 20614);
+					st.giveItems(ADENA_ID, 127224);
 					st.exitCurrentQuest(false);
 					st.playSound(SOUND_FINISH);
 				}

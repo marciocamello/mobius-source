@@ -42,54 +42,21 @@ import lineage2.gameserver.utils.Location;
 import quests._10286_ReunionWithSirra;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * @author pchayka
  */
 public class FreyaNormal extends Reflection
 {
-	/**
-	 * Field FreyaThrone. (value is 29177)
-	 */
 	private static final int FreyaThrone = 29177;
-	/**
-	 * Field FreyaStandNormal. (value is 29179)
-	 */
 	private static final int FreyaStandNormal = 29179;
-	/**
-	 * Field IceKnightNormal. (value is 18855)
-	 */
-	private static final int IceKnightNormal = 18855;
-	/**
-	 * Field IceKnightLeaderNormal. (value is 25699)
-	 */
+	private static final int IceKnightNormal = 18855; // state 1 - in ice, state 2 - ice shattering, then normal state
 	private static final int IceKnightLeaderNormal = 25699;
-	/**
-	 * Field IceCastleBreath. (value is 18854)
-	 */
 	private static final int IceCastleBreath = 18854;
-	/**
-	 * Field Glacier. (value is 18853)
-	 */
-	private static final int Glacier = 18853;
-	/**
-	 * Field IceCastleController. (value is 18932)
-	 */
-	private static final int IceCastleController = 18932;
-	/**
-	 * Field Sirra. (value is 32762)
-	 */
+	private static final int Glacier = 18853; // state 1 - falling, state 2 - waiting
+	private static final int IceCastleController = 18932; // state 1-7
 	private static final int Sirra = 32762;
-	/**
-	 * Field Jinia. (value is 18850)
-	 */
 	private static final int Jinia = 18850;
-	/**
-	 * Field Kegor. (value is 18851)
-	 */
 	private static final int Kegor = 18851;
-	/**
-	 * Field _eventTriggers.
-	 */
+	
 	private static final int[] _eventTriggers =
 	{
 		23140202,
@@ -100,66 +67,31 @@ public class FreyaNormal extends Reflection
 		23140214,
 		23140216
 	};
-	/**
-	 * Field pcbuff2. Field pcbuff. Field attackUp. Field damagezone.
-	 */
+	
 	private Zone damagezone, attackUp, pcbuff, pcbuff2;
-	/**
-	 * Field firstStageGuardSpawn.
-	 */
+	
 	ScheduledFuture<?> firstStageGuardSpawn;
-	/**
-	 * Field secondStageGuardSpawn.
-	 */
 	ScheduledFuture<?> secondStageGuardSpawn;
-	/**
-	 * Field thirdStageGuardSpawn.
-	 */
 	ScheduledFuture<?> thirdStageGuardSpawn;
-	/**
-	 * Field _epicZoneListener.
-	 */
+	
 	private final ZoneListener _epicZoneListener = new ZoneListener();
-	/**
-	 * Field _landingZoneListener.
-	 */
 	private final ZoneListenerL _landingZoneListener = new ZoneListenerL();
-	/**
-	 * Field _deathListener.
-	 */
-	final DeathListener _deathListener = new DeathListener();
-	/**
-	 * Field _currentHpListener.
-	 */
-	final CurrentHpListener _currentHpListener = new CurrentHpListener();
-	/**
-	 * Field _entryLocked.
-	 */
+	DeathListener _deathListener = new DeathListener();
+	CurrentHpListener _currentHpListener = new CurrentHpListener();
+	
 	boolean _entryLocked = false;
-	/**
-	 * Field _startLaunched.
-	 */
 	boolean _startLaunched = false;
-	/**
-	 * Field _freyaSlayed.
-	 */
 	boolean _freyaSlayed = false;
-	/**
-	 * Field raidplayers.
-	 */
-	final AtomicInteger raidplayers = new AtomicInteger();
-	/**
-	 * Field centralRoom.
-	 */
+	
+	AtomicInteger raidplayers = new AtomicInteger();
+	
 	static Territory centralRoom = new Territory().add(new Polygon().add(114264, -113672).add(113640, -114344).add(113640, -115240).add(114264, -115912).add(115176, -115912).add(115800, -115272).add(115800, -114328).add(115192, -113672).setZmax(-11225).setZmin(-11225));
 	
-	/**
-	 * Method onCreate.
-	 */
 	@Override
 	protected void onCreate()
 	{
 		super.onCreate();
+		
 		attackUp = getZone("[freya_attack_up]");
 		pcbuff = getZone("[freya_pc_buff1]");
 		pcbuff2 = getZone("[freya_pc_buff2]");
@@ -167,11 +99,6 @@ public class FreyaNormal extends Reflection
 		getZone("[freya_landing_room_epic]").addListener(_landingZoneListener);
 	}
 	
-	/**
-	 * Method manageDamageZone.
-	 * @param level int
-	 * @param disable boolean
-	 */
 	void manageDamageZone(int level, boolean disable)
 	{
 		if (disable)
@@ -183,6 +110,7 @@ public class FreyaNormal extends Reflection
 		{
 			damagezone.setActive(false);
 		}
+		
 		switch (level)
 		{
 			case 1:
@@ -215,10 +143,6 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * Method manageAttackUpZone.
-	 * @param disable boolean
-	 */
 	void manageAttackUpZone(boolean disable)
 	{
 		if ((attackUp != null) && disable)
@@ -232,10 +156,6 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * Method managePcBuffZone.
-	 * @param disable boolean
-	 */
 	void managePcBuffZone(boolean disable)
 	{
 		if ((pcbuff != null) && (pcbuff2 != null) && disable)
@@ -254,12 +174,9 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * Method manageCastleController.
-	 * @param state int
-	 */
 	void manageCastleController(int state)
 	{
+		// 1-7 enabled, 8 - disabled
 		for (NpcInstance n : getNpcs())
 		{
 			if (n.getNpcId() == IceCastleController)
@@ -269,10 +186,6 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * Method manageStorm.
-	 * @param active boolean
-	 */
 	void manageStorm(boolean active)
 	{
 		for (Player p : getPlayers())
@@ -284,22 +197,13 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class StartNormalFreya extends RunnableImpl
 	{
-		/**
-		 * Constructor for StartNormalFreya.
-		 */
 		public StartNormalFreya()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -314,34 +218,27 @@ public class FreyaNormal extends Reflection
 				}
 				player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_FREYA_OPENING);
 			}
-			ThreadPoolManager.getInstance().schedule(new PreStage(), 55000L);
+			ThreadPoolManager.getInstance().schedule(new PreStage(), 55000L); // 53.5sec for movie
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class PreStage extends RunnableImpl
 	{
-		/**
-		 * Constructor for PreStage.
-		 */
 		public PreStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
 			manageDamageZone(1, false);
+			// screen message
 			for (Player player : getPlayers())
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.BEGIN_STAGE_1_FREYA, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 			}
+			// spawning few guards
 			for (int i = 0; i < 10; i++)
 			{
 				addSpawnWithoutRespawn(IceKnightNormal, Territory.getRandomLoc(centralRoom, getGeoIndex()), 0);
@@ -350,22 +247,13 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class FirstStage extends RunnableImpl
 	{
-		/**
-		 * Constructor for FirstStage.
-		 */
 		public FirstStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -375,39 +263,18 @@ public class FreyaNormal extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.FREYA_HAS_STARTED_TO_MOVE, 4000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			}
+			// Spawning Freya Throne
 			NpcInstance freyaTrhone = addSpawnWithoutRespawn(FreyaThrone, new Location(114720, -117085, -11088, 15956), 0);
 			freyaTrhone.addListener(_deathListener);
 			firstStageGuardSpawn = ThreadPoolManager.getInstance().scheduleAtFixedRate(new GuardSpawnTask(1), 2000L, 30000L);
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class GuardSpawnTask extends RunnableImpl
 	{
-		/**
-		 * Field _breathMax.
-		 */
-		/**
-		 * Field _breathMin.
-		 */
-		/**
-		 * Field _knightsMax.
-		 */
-		/**
-		 * Field _knightsMin.
-		 */
-		/**
-		 * Field _mode.
-		 */
 		int _mode, _knightsMin, _knightsMax, _breathMin, _breathMax;
 		
-		/**
-		 * Constructor for GuardSpawnTask.
-		 * @param mode int
-		 */
-		public GuardSpawnTask(int mode)
+		public GuardSpawnTask(int mode) // 1 - light, 2 - normal, 3 - hard, 4 - extreme
 		{
 			_mode = mode;
 			if ((_mode < 1) || (_mode > 4))
@@ -416,9 +283,6 @@ public class FreyaNormal extends Reflection
 			}
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -469,22 +333,13 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class PreSecondStage extends RunnableImpl
 	{
-		/**
-		 * Constructor for PreSecondStage.
-		 */
 		public PreSecondStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -496,57 +351,40 @@ public class FreyaNormal extends Reflection
 					n.deleteMe();
 				}
 			}
+			
 			for (Player p : getPlayers())
 			{
 				p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_FREYA_PHASE_A);
 			}
-			ThreadPoolManager.getInstance().schedule(new TimerToSecondStage(), 22000L);
+			ThreadPoolManager.getInstance().schedule(new TimerToSecondStage(), 22000L); // 22.1 secs for movie
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class TimerToSecondStage extends RunnableImpl
 	{
-		/**
-		 * Constructor for TimerToSecondStage.
-		 */
 		public TimerToSecondStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
 			for (Player p : getPlayers())
 			{
-				p.sendPacket(new ExSendUIEvent(p, false, false, 60, 0, NpcString.TIME_REMAINING_UNTIL_NEXT_BATTLE));
+				p.sendPacket(new ExSendUIEvent(p, 0, 0, 60, 0, NpcString.TIME_REMAINING_UNTIL_NEXT_BATTLE));
 			}
 			ThreadPoolManager.getInstance().schedule(new SecondStage(), 60000L);
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class SecondStage extends RunnableImpl
 	{
-		/**
-		 * Constructor for SecondStage.
-		 */
 		public SecondStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -561,22 +399,13 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class KnightCaptainSpawnMovie extends RunnableImpl
 	{
-		/**
-		 * Constructor for KnightCaptainSpawnMovie.
-		 */
 		public KnightCaptainSpawnMovie()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -592,22 +421,13 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class KnightCaptainSpawn extends RunnableImpl
 	{
-		/**
-		 * Constructor for KnightCaptainSpawn.
-		 */
 		public KnightCaptainSpawn()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -621,28 +441,19 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class PreThirdStage extends RunnableImpl
 	{
-		/**
-		 * Constructor for PreThirdStage.
-		 */
 		public PreThirdStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
 			for (Player p : getPlayers())
 			{
-				p.sendPacket(new ExSendUIEvent(p, false, false, 60, 0, NpcString.TIME_REMAINING_UNTIL_NEXT_BATTLE));
+				p.sendPacket(new ExSendUIEvent(p, 0, 0, 60, 0, NpcString.TIME_REMAINING_UNTIL_NEXT_BATTLE));
 			}
 			secondStageGuardSpawn.cancel(true);
 			for (NpcInstance n : getNpcs())
@@ -656,22 +467,13 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class PreThirdStageM extends RunnableImpl
 	{
-		/**
-		 * Constructor for PreThirdStageM.
-		 */
 		public PreThirdStageM()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -679,26 +481,17 @@ public class FreyaNormal extends Reflection
 			{
 				p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_FREYA_PHASE_B);
 			}
-			ThreadPoolManager.getInstance().schedule(new ThirdStage(), 22000L);
+			ThreadPoolManager.getInstance().schedule(new ThirdStage(), 22000L); // 21.5 secs for movie
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class ThirdStage extends RunnableImpl
 	{
-		/**
-		 * Constructor for ThirdStage.
-		 */
 		public ThirdStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -718,22 +511,13 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class PreForthStage extends RunnableImpl
 	{
-		/**
-		 * Constructor for PreForthStage.
-		 */
 		public PreForthStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -746,26 +530,17 @@ public class FreyaNormal extends Reflection
 				p.block();
 				p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_KEGOR_INTRUSION);
 			}
-			ThreadPoolManager.getInstance().schedule(new ForthStage(), 28000L);
+			ThreadPoolManager.getInstance().schedule(new ForthStage(), 28000L); // 27 secs for movie
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class ForthStage extends RunnableImpl
 	{
-		/**
-		 * Constructor for ForthStage.
-		 */
 		public ForthStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -784,34 +559,29 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class FreyaDeathStage extends RunnableImpl
 	{
-		/**
-		 * Constructor for FreyaDeathStage.
-		 */
 		public FreyaDeathStage()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
 			setReenterTime(System.currentTimeMillis());
+			// Guard spawn task cancellation
 			thirdStageGuardSpawn.cancel(true);
+			// switching off zones
 			manageDamageZone(1, true);
 			manageAttackUpZone(true);
 			managePcBuffZone(true);
+			// Deleting all NPCs + Freya corpse
 			for (NpcInstance n : getNpcs())
 			{
 				n.deleteMe();
 			}
+			// Movie + quest update
 			for (Player p : getPlayers())
 			{
 				QuestState qs = p.getQuestState(_10286_ReunionWithSirra.class);
@@ -821,26 +591,17 @@ public class FreyaNormal extends Reflection
 				}
 				p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_FREYA_ENDING_A);
 			}
-			ThreadPoolManager.getInstance().schedule(new ConclusionMovie(), 16200L);
+			ThreadPoolManager.getInstance().schedule(new ConclusionMovie(), 16200L); // 16 secs for movie
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class ConclusionMovie extends RunnableImpl
 	{
-		/**
-		 * Constructor for ConclusionMovie.
-		 */
 		public ConclusionMovie()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -848,26 +609,17 @@ public class FreyaNormal extends Reflection
 			{
 				p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_FREYA_ENDING_B);
 			}
-			ThreadPoolManager.getInstance().schedule(new InstanceConclusion(), 57000L);
+			ThreadPoolManager.getInstance().schedule(new InstanceConclusion(), 57000L); // 56 secs for movie
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class InstanceConclusion extends RunnableImpl
 	{
-		/**
-		 * Constructor for InstanceConclusion.
-		 */
 		public InstanceConclusion()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -880,25 +632,13 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 * Constructor for DeathListener.
-		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method onDeath.
-		 * @param self Creature
-		 * @param killer Creature
-		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
-		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -918,19 +658,8 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	public class CurrentHpListener implements OnCurrentHpDamageListener
 	{
-		/**
-		 * Method onCurrentHpDamage.
-		 * @param actor Creature
-		 * @param damage double
-		 * @param attacker Creature
-		 * @param skill Skill
-		 * @see lineage2.gameserver.listener.actor.OnCurrentHpDamageListener#onCurrentHpDamage(Creature, double, Creature, Skill)
-		 */
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
 		{
@@ -949,17 +678,8 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
-		/**
-		 * Method onZoneEnter.
-		 * @param zone Zone
-		 * @param cha Creature
-		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
-		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -967,11 +687,13 @@ public class FreyaNormal extends Reflection
 			{
 				return;
 			}
+			
 			Player player = cha.getPlayer();
 			if ((player == null) || !cha.isPlayer())
 			{
 				return;
 			}
+			
 			if (checkstartCond(raidplayers.incrementAndGet()))
 			{
 				ThreadPoolManager.getInstance().schedule(new StartNormalFreya(), 30000L);
@@ -979,29 +701,14 @@ public class FreyaNormal extends Reflection
 			}
 		}
 		
-		/**
-		 * Method onZoneLeave.
-		 * @param zone Zone
-		 * @param cha Creature
-		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
-		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	public class ZoneListenerL implements OnZoneEnterLeaveListener
 	{
-		/**
-		 * Method onZoneEnter.
-		 * @param zone Zone
-		 * @param cha Creature
-		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
-		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -1011,31 +718,17 @@ public class FreyaNormal extends Reflection
 			}
 		}
 		
-		/**
-		 * Method onZoneLeave.
-		 * @param zone Zone
-		 * @param cha Creature
-		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
-		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 		}
 	}
 	
-	/**
-	 * Method checkstartCond.
-	 * @param raidplayers int
-	 * @return boolean
-	 */
 	boolean checkstartCond(int raidplayers)
 	{
 		return !((raidplayers < getInstancedZone().getMinParty()) || _startLaunched);
 	}
 	
-	/**
-	 * Method doCleanup.
-	 */
 	void doCleanup()
 	{
 		if (firstStageGuardSpawn != null)
@@ -1052,9 +745,6 @@ public class FreyaNormal extends Reflection
 		}
 	}
 	
-	/**
-	 * Method onCollapse.
-	 */
 	@Override
 	protected void onCollapse()
 	{

@@ -24,39 +24,18 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * @author pchayka
  */
 public class SufferingHallAttack extends Reflection
 {
-	/**
-	 * Field AliveTumor. (value is 18704)
-	 */
 	private static final int AliveTumor = 18704;
-	/**
-	 * Field DeadTumor. (value is 32531)
-	 */
 	private static final int DeadTumor = 32531;
-	/**
-	 * Field Yehan. (value is 25665)
-	 */
 	private static final int Yehan = 25665;
-	/**
-	 * Field timeSpent.
-	 */
 	public int timeSpent;
-	/**
-	 * Field _savedTime.
-	 */
+	
 	long _savedTime = 0;
-	/**
-	 * Field _deathListener.
-	 */
 	private final DeathListener _deathListener = new DeathListener();
 	
-	/**
-	 * Method onCreate.
-	 */
 	@Override
 	protected void onCreate()
 	{
@@ -66,25 +45,13 @@ public class SufferingHallAttack extends Reflection
 		spawnRoom(1);
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 * Constructor for DeathListener.
-		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method onDeath.
-		 * @param self Creature
-		 * @param killer Creature
-		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
-		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -146,7 +113,7 @@ public class SufferingHallAttack extends Reflection
 						setReenterTime(System.currentTimeMillis());
 						for (Player p : getPlayers())
 						{
-							p.sendPacket(new ExSendUIEvent(p, true, true, 0, 0));
+							p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));
 							p.sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
 						}
 						startCollapseTimer(5 * 60 * 1000L);
@@ -157,9 +124,6 @@ public class SufferingHallAttack extends Reflection
 		}
 	}
 	
-	/**
-	 * Method invokeDeathListener.
-	 */
 	private void invokeDeathListener()
 	{
 		for (NpcInstance npc : getNpcs())
@@ -168,10 +132,6 @@ public class SufferingHallAttack extends Reflection
 		}
 	}
 	
-	/**
-	 * Method spawnRoom.
-	 * @param id int
-	 */
 	void spawnRoom(int id)
 	{
 		switch (id)
@@ -215,25 +175,18 @@ public class SufferingHallAttack extends Reflection
 		invokeDeathListener();
 	}
 	
-	/**
-	 * Method onPlayerEnter.
-	 * @param player Player
-	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
 		super.onPlayerEnter(player);
-		player.sendPacket(new ExSendUIEvent(player, false, true, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.NONE));
+		player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.NONE));
 	}
 	
-	/**
-	 * Method onPlayerExit.
-	 * @param player Player
-	 */
 	@Override
 	public void onPlayerExit(Player player)
 	{
 		super.onPlayerExit(player);
-		player.sendPacket(new ExSendUIEvent(player, true, true, 0, 0));
+		player.sendPacket(new ExSendUIEvent(player, 1, 1, 0, 0));
 	}
+	
 }

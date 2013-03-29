@@ -130,7 +130,7 @@ public class _653_WildMaiden extends Quest implements ScriptFile
 		else if ((npcId == GALIBREDO) && (st.getCond() == 1))
 		{
 			htmltext = "galicbredo_q0653_01.htm";
-			st.giveItems(ADENA_ID, 2883);
+			st.giveItems(ADENA_ID, 2553);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}

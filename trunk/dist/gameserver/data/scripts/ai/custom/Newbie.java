@@ -55,7 +55,8 @@ public class Newbie extends DefaultAI
 			for (Player player : World.getAroundPlayers(actor, 300, 200))
 			{
 				SupportMagic.doSupportMagic(actor, player, false);
-				player.sendPacket(new ExShowScreenMessage(NpcString.NEWBIE_GUIDE_GIVE_YOU_THE_MAGIC_OF_SATTELITE_S1, 4000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, player.getName()));
+				player.sendPacket(new ExShowScreenMessage(NpcString.NEWBIE_HELPER_HAS_CASTED_BUFFS_ON_$S1, 4000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, player.getName()));
+				
 			}
 		}
 		return true;

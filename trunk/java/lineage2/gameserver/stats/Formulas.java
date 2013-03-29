@@ -526,7 +526,9 @@ public class Formulas
 		info.crit = calcMCrit(attacker.getMagicCriticalRate(target, skill));
 		if (info.crit)
 		{
-			info.damage *= attacker.calcStat(Stats.MCRITICAL_DAMAGE, attacker.isPlayable() && target.isPlayable() ? 1.5 : 2., target, skill);
+			// TODO CHECK MAGIC CRITICAL DAMAGE
+			info.damage *= 2.0;
+			info.damage += attacker.getMagicCriticalDmg(target, skill);
 		}
 		info.damage = attacker.calcStat(Stats.MAGIC_DAMAGE, info.damage, target, skill);
 		if (info.shld)
