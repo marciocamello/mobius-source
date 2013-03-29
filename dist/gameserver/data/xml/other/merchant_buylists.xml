@@ -625,7 +625,7 @@
     </tradelist>
     <tradelist
             npc="30081;30180;30254;30301;30315;30420;30436;30437;30839;30893;31045;31263;31307;31373;31380;31386;31952;31044;32169;30063;30078"
-            shop="18;55;70;74;79;83;84;85;113;127;130;144;162;169;170;171;319522;31044001;321691;15;17"
+            shop="18;55;70;74;79;83;84;85;1135862;127;130;144;162;169;170;171;319522;31044001;321691;15;17"
             markup="10;15;20;30;20;50;50;50;20;20;50;20;20;50;50;50;20;50;5;20;50">
 		<item id="1835" name="Soulshot: No Grade"/>
 		<item id="2509" name="Spiritshot: No Grade"/>
@@ -719,10 +719,106 @@
 		<item id="32260" name="Infinite Mithril Bolt Container"/>
 		<item id="32261" name="Infinite Shining Bolt Container"/>
 		<item id="32262" name="Infinite Orichalcum Bolt Container"/>
-		<item id="5126" name="Dualsword Crafting Stamp"/>
 		<item id="30408" name="Dual Weapon Crafting Stamp (R-Grade)"/>
 		<item id="21746" name="Maestro's Key"/>
     </tradelist>
+           	<tradelist npc="31262" shop="11358621" markup="50">
+		<item id="1835" name="Soulshot: No Grade"/>
+		<item id="2509" name="Spiritshot: No Grade"/>
+		<item id="1463" name="Soulshot (D-Grade)"/>
+		<item id="1464" name="Soulshot (C-Grade)"/>
+		<item id="1465" name="Soulshot (B-Grade)"/>
+		<item id="1466" name="Soulshot (A-Grade)"/>
+		<item id="3947" name="Blessed Spiritshot: No Grade"/>
+		<item id="3948" name="Blessed Spiritshot (D-Grade)"/>
+		<item id="3949" name="Blessed Spiritshot (C-Grade)"/>
+		<item id="3950" name="Blessed Spiritshot (B-Grade)"/>
+		<item id="3951" name="Blessed Spiritshot (A-Grade)"/>
+		<item id="5146" name="Compressed Package of Blessed Spiritshots: No Grade"/>
+		<item id="5140" name="Compressed Package of Spiritshots: No Grade"/>
+		<item id="5134" name="Compressed Package of Soulshots: No Grade"/>
+		<item id="5262" name="Greater Compressed Package of Blessed Spiritshots (No-Grade)"/>
+		<item id="5256" name="Greater Compressed Package of Spiritshots (No-Grade)"/>
+		<item id="5250" name="Greater Compressed Package of Soulshots (No-Grade)"/>
+		<item id="17" name="Wooden Arrow"/>
+		<item id="1341" name="Bone Arrow"/>
+		<item id="1342" name="Steel Arrow"/>
+		<item id="1343" name="Silver Arrow"/>
+		<item id="1344" name="Mithril Arrow"/>
+		<item id="1345" name="Shining Arrow"/>
+		<item id="18550" name="Orichalcum Arrow"/>
+		<item id="1060" name="Lesser Healing Potion"/>
+		<item id="1061" name="Greater Healing Potion"/>
+		<item id="1539" name="Greater Healing Potion"/>
+		<item id="1831" name="Antidote"/>
+		<item id="1832" name="Greater Antidote"/>
+		<item id="1833" name="Bandage"/>
+		<item id="1834" name="Emergency Dressing"/>
+		<item id="734" name="Haste Potion"/>
+		<item id="735" name="Alacrity Potion"/>
+		<item id="6035" name="Magic Haste Potion"/>
+		<item id="6037" name="Waking Scroll"/>
+		<item id="736" name="Scroll of Escape"/>
+		<item id="737" name="Scroll of Resurrection"/>
+		<item id="1829" name="Scroll of Escape: Clan Hall"/>
+		<item id="1830" name="Scroll of Escape: Castle"/>
+		<item id="3031" name="Spirit Ore"/>
+		<item id="1785" name="Soul Ore"/>
+		<item id="5589" name="Momentum Stone"/>
+		<item id="1661" name="Thief Key"/>
+		<item id="5192" name="Rope of Magic (D-Grade)"/>
+		<item id="5193" name="Rope of Magic (C-Grade)"/>
+		<item id="5194" name="Rope of Magic (B-Grade)"/>
+		<item id="5195" name="Rope of Magic (A-Grade)"/>
+		<item id="5196" name="Rope of Magic (S-Grade)"/>
+		<item id="34837" name="null"/>
+		<item id="2130" name="Gemstone D"/>
+		<item id="2131" name="Gemstone C"/>
+		<item id="2132" name="Gemstone B"/>
+		<item id="4679" name="Bless of Eva"/>
+		<item id="9633" name="Bone Bolt"/>
+		<item id="9634" name="Steel Bolt"/>
+		<item id="9635" name="Silver Bolt"/>
+		<item id="9636" name="Mithril Bolt"/>
+		<item id="9637" name="Shining Bolt"/>
+		<item id="19443" name="Orichalcum Bolt"/>
+		<item id="8622" name="Elixir of Life (No Grade)"/>
+		<item id="8623" name="Elixir of Life (D-Grade)"/>
+		<item id="8624" name="Elixir of Life (C-Grade)"/>
+		<item id="8634" name="Elixir of CP (No Grade)"/>
+		<item id="8635" name="Elixir of CP (D-Grade)"/>
+		<item id="8636" name="Elixir of CP (C-Grade)"/>
+		<item id="8637" name="Elixir of CP (B-Grade)"/>
+		<item id="8638" name="Elixir of CP (A-Grade)"/>
+		<item id="8639" name="Elixir of CP (S-Grade)"/>
+		<item id="8615" name="Summoning Crystal"/>
+		<item id="8658" name="Mysterious Solvent"/>
+		<item id="8871" name="Strategy Guide"/>
+		<item id="10409" name="A Bottle of Souls"/>
+		<item id="4625" name="Dice (Heart)"/>
+		<item id="4626" name="Dice (Spade)"/>
+		<item id="4627" name="Dice (Clover)"/>
+		<item id="4628" name="Dice (Diamond)"/>
+		<item id="8872" name="Flash Gunpowder"/>
+		<item id="8629" name="Elixir of Mental Strength (D-Grade)"/>
+		<item id="19315" name="Crafting Solvent"/>
+		<item id="32249" name="Infinite Wooden Quiver"/>
+		<item id="32250" name="Infinite Bone Quiver"/>
+		<item id="32251" name="Infinite Steel Quiver"/>
+		<item id="32252" name="Infinite Silver Quiver"/>
+		<item id="32253" name="Infinite Mithril Quiver"/>
+		<item id="32254" name="Infinite Shining Quiver"/>
+		<item id="32255" name="Infinite Orichalcum Quiver"/>
+		<item id="32257" name="Infinite Bone Bolt Container"/>
+		<item id="32258" name="Infinite Steel Bolt Container"/>
+		<item id="32259" name="Infinite Silver Bolt Container"/>
+		<item id="32260" name="Infinite Mithril Bolt Container"/>
+		<item id="32261" name="Infinite Shining Bolt Container"/>
+		<item id="32262" name="Infinite Orichalcum Bolt Container"/>
+		<item id="30408" name="Dual Weapon Crafting Stamp (R-Grade)"/>
+		<item id="21746" name="Maestro's Key"/>
+    </tradelist>
+
     <!-- Helvetia, Giran, Grocery, Dyes -->
     <tradelist npc="30081" shop="19" markup="10">
         <item id="4445" name="Dye of STR Str+1 Con-3"/>
@@ -846,7 +942,7 @@
         <item id="4587" name="Greater Dye of WIT Wit+4 Int-5"/>
         <item id="4588" name="Greater Dye of WIT Wit+4 Men-5"/>
     </tradelist>
-    <tradelist npc="30082" shop="20" markup="10">
+    <tradelist npc="30082" shop="205862" markup="10">
         <item id="908" name="Necklace of Wisdom"/>
         <item id="909" name="Blue Diamond Necklace"/>
         <item id="910" name="Necklace of Devotion"/>
@@ -888,7 +984,7 @@
         <item id="12324" name="Common Item - Necklace of Darkness"/>
     </tradelist>
     <!-- Graham, Giran, Weapons, Warrior -->
-    <tradelist npc="30084" shop="22" markup="10">
+    <tradelist npc="30084" shop="225862" markup="10">
         <item id="2" name="Long Sword"/>
         <item id="218" name="Throwing Knife"/>
         <item id="272" name="Forest Bow"/>
@@ -1081,7 +1177,7 @@
         <item id="11840" name="Common Item - Dwarven Hammer"/>
     </tradelist>
     <!-- Stanford, Giran, Weapons, Mystic -->
-    <tradelist npc="30085" shop="23" markup="10">
+    <tradelist npc="30085" shop="235862" markup="10">
         <item id="176" name="Journeyman's Staff"/>
         <item id="310" name="Relic of the Saints"/>
         <item id="177" name="Mage Staff"/>
@@ -1198,7 +1294,7 @@
         <item id="11855" name="Common Item - Demon's Staff"/>
     </tradelist>
     <!-- Peta, Giran, Armor Trader, Magic checked by SYS -->
-    <tradelist npc="30087" shop="24" markup="10">
+    <tradelist npc="30087" shop="245862" markup="10">
         <item id="1104" name="Stockings of Devotion"/>
         <item id="1101" name="Tunic of Devotion"/>
         <item id="1105" name="Stockings of Magic"/>
@@ -1326,7 +1422,7 @@
         <item id="12138" name="Common Item - Divine Tunic"/>
     </tradelist>
     <!-- Radia, Giran, Armor Trader, Warrior checked by SYS -->
-    <tradelist npc="30088" shop="25" markup="10">
+    <tradelist npc="30088" shop="255862" markup="10">
         <item id="412" name="Cotton Pants"/>
         <item id="390" name="Cotton Shirt"/>
         <item id="24" name="Bone Breastplate"/>
@@ -1559,7 +1655,7 @@
         <item id="12113" name="Common Item - Rind Leather Armor"/>
         <item id="12133" name="Common Item - Theca Leather Armor"/>
     </tradelist>
-    <tradelist npc="30090" shop="26" markup="10">
+    <tradelist npc="30090" shop="265862" markup="10">
         <item id="908" name="Necklace of Wisdom"/>
         <item id="909" name="Blue Diamond Necklace"/>
         <item id="910" name="Necklace of Devotion"/>
@@ -1625,7 +1721,7 @@
         <item id="12335" name="Common Item - Nassen's Earring"/>
         <item id="12336" name="Common Item - Necklace of Binding"/>
     </tradelist>
-    <tradelist npc="30091" shop="27" markup="10">
+    <tradelist npc="30091" shop="275862" markup="10">
         <item id="908" name="Necklace of Wisdom"/>
         <item id="909" name="Blue Diamond Necklace"/>
         <item id="910" name="Necklace of Devotion"/>
@@ -1691,7 +1787,7 @@
         <item id="12336" name="Common Item - Necklace of Binding"/>
     </tradelist>
     <!-- Groot, Giran, Magic, Dyes -->
-    <tradelist npc="30093" shop="28" markup="10">
+    <tradelist npc="30093" shop="285862" markup="10">
         <item id="4445" name="Dye of STR Str+1 Con-3"/>
         <item id="4446" name="Dye of STR Str+1 Dex-3"/>
         <item id="4447" name="Dye of CON Con+1 Str-3"/>
@@ -1814,7 +1910,7 @@
         <item id="4588" name="Greater Dye of WIT Wit+4 Men-5"/>
     </tradelist>
     <!-- Gentler, Giran, Magic, Mystic -->
-    <tradelist npc="30094" shop="30" markup="10">
+    <tradelist npc="30094" shop="305862" markup="10">
         <item id="176" name="Journeyman's Staff"/>
         <item id="310" name="Relic of the Saints"/>
         <item id="177" name="Mage Staff"/>
@@ -2332,7 +2428,7 @@
         <item id="882" name="Mithril Ring"/>
         <item id="914" name="Necklace of Darkness"/>
     </tradelist>
-    <tradelist npc="30166" shop="50" markup="15">
+    <tradelist npc="30166" shop="505862" markup="15">
         <item id="4445" name="Dye of STR Str+1 Con-3"/>
         <item id="4446" name="Dye of STR Str+1 Dex-3"/>
         <item id="4447" name="Dye of CON Con+1 Str-3"/>
@@ -2454,7 +2550,7 @@
         <item id="4587" name="Greater Dye of WIT Wit+4 Int-5"/>
         <item id="4588" name="Greater Dye of WIT Wit+4 Men-5"/>
     </tradelist>
-    <tradelist npc="30178" shop="51" markup="15">
+    <tradelist npc="30178" shop="515862" markup="15">
         <item id="412" name="Cotton Pants"/>
         <item id="390" name="Cotton Shirt"/>
         <item id="24" name="Bone Breastplate"/>
@@ -2496,7 +2592,7 @@
         <item id="9583" name="Striped Cotton Shirt"/>
         <item id="9584" name="Striped Linen Shirt"/>
     </tradelist>
-    <tradelist npc="30178" shop="52" markup="15">
+    <tradelist npc="30178" shop="525862" markup="15">
         <item id="1104" name="Stockings of Devotion"/>
         <item id="1101" name="Tunic of Devotion"/>
         <item id="1105" name="Stockings of Magic"/>
@@ -4020,7 +4116,7 @@
         <item id="9584" name="Striped Linen Shirt"/>
     </tradelist>
     <!-- Trader Woodrow -->
-    <tradelist npc="30837" shop="109" markup="20">
+    <tradelist npc="30837" shop="1095862" markup="20">
         <item id="2" name="Long Sword"/>
         <item id="218" name="Throwing Knife"/>
         <item id="272" name="Forest Bow"/>
@@ -4101,7 +4197,7 @@
         <item id="7897" name="Dwarven Hammer"/>
     </tradelist>
     <!-- Trader Woodrow -->
-    <tradelist npc="30837" shop="110" markup="20">
+    <tradelist npc="30837" shop="1105862" markup="20">
         <item id="176" name="Journeyman's Staff"/>
         <item id="310" name="Relic of the Saints"/>
         <item id="177" name="Mage Staff"/>
@@ -4258,7 +4354,7 @@
         <item id="11855" name="Common Item - Demon's Staff"/>
     </tradelist>
     <!-- Trader Woodley -->
-    <tradelist npc="30838" shop="111" markup="20">
+    <tradelist npc="30838" shop="1115862" markup="20">
         <item id="412" name="Cotton Pants"/>
         <item id="390" name="Cotton Shirt"/>
         <item id="24" name="Bone Breastplate"/>
@@ -4388,7 +4484,7 @@
         <item id="9584" name="Striped Linen Shirt"/>
     </tradelist>
     <!-- Trader Woodley -->
-    <tradelist npc="30838" shop="112" markup="20">
+    <tradelist npc="30838" shop="1125862" markup="20">
         <item id="1104" name="Stockings of Devotion"/>
         <item id="1101" name="Tunic of Devotion"/>
         <item id="1105" name="Stockings of Magic"/>
@@ -4578,7 +4674,7 @@
         <item id="12123" name="Common Item - Demon's Tunic"/>
         <item id="12138" name="Common Item - Divine Tunic"/>
     </tradelist>
-    <tradelist npc="30841" shop="115" markup="20">
+    <tradelist npc="30841" shop="1155862" markup="20">
         <item id="908" name="Necklace of Wisdom"/>
         <item id="909" name="Blue Diamond Necklace"/>
         <item id="910" name="Necklace of Devotion"/>
@@ -4601,7 +4697,7 @@
         <item id="855" name="Nassen's Earring"/>
         <item id="119" name="Necklace of Binding"/>
     </tradelist>
-    <tradelist npc="30841" shop="116" markup="20">
+    <tradelist npc="30841" shop="1165862" markup="20">
         <item id="4445" name="Dye of STR Str+1 Con-3"/>
         <item id="4446" name="Dye of STR Str+1 Dex-3"/>
         <item id="4447" name="Dye of CON Con+1 Str-3"/>
@@ -4656,7 +4752,7 @@
         <item id="12335" name="Common Item - Nassen's Earring"/>
         <item id="12336" name="Common Item - Necklace of Binding"/>
     </tradelist>
-    <tradelist npc="30842" shop="117" markup="20">
+    <tradelist npc="30842" shop="1175862" markup="20">
         <item id="908" name="Necklace of Wisdom"/>
         <item id="909" name="Blue Diamond Necklace"/>
         <item id="910" name="Necklace of Devotion"/>
@@ -4973,7 +5069,7 @@
         <item id="2499" name="Elven Long Sword"/>
     </tradelist>
     <!-- Verona, Heine, Weapons, Mystic -->
-    <tradelist npc="30891" shop="124" markup="20">
+    <tradelist npc="30891" shop="1245862" markup="20">
         <item id="176" name="Journeyman's Staff"/>
         <item id="310" name="Relic of the Saints"/>
         <item id="177" name="Mage Staff"/>
@@ -5009,7 +5105,7 @@
         <item id="189" name="Staff of Life"/>
         <item id="190" name="Atuba Mace"/>
     </tradelist>
-    <tradelist npc="30892" shop="125" markup="20">
+    <tradelist npc="30892" shop="1255862" markup="20">
         <item id="908" name="Necklace of Wisdom"/>
         <item id="909" name="Blue Diamond Necklace"/>
         <item id="910" name="Necklace of Devotion"/>
@@ -5033,7 +5129,7 @@
         <item id="914" name="Necklace of Darkness"/>
     </tradelist>
     <!-- Payel, Heine, Grocery, Dyes -->
-    <tradelist npc="30893" shop="128" markup="20">
+    <tradelist npc="30893" shop="1285862" markup="20">
         <item id="4445" name="Dye of STR Str+1 Con-3"/>
         <item id="4446" name="Dye of STR Str+1 Dex-3"/>
         <item id="4447" name="Dye of CON Con+1 Str-3"/>
@@ -5240,7 +5336,7 @@
         <item id="12751" name="Thons Pendant"/>
         <item id="12752" name="Asofe Pendant"/>
     </tradelist>
-    <tradelist npc="31256" shop="132" markup="20">
+    <tradelist npc="31256" shop="1325862" markup="20">
         <item id="2" name="Long Sword"/>
         <item id="218" name="Throwing Knife"/>
         <item id="272" name="Forest Bow"/>
@@ -5305,7 +5401,7 @@
         <item id="297" name="Glaive"/>
         <item id="2499" name="Elven Long Sword"/>
     </tradelist>
-    <tradelist npc="31256" shop="133" markup="20">
+    <tradelist npc="31256" shop="1335862" markup="20">
         <item id="176" name="Journeyman's Staff"/>
         <item id="310" name="Relic of the Saints"/>
         <item id="177" name="Mage Staff"/>
@@ -5341,7 +5437,7 @@
         <item id="189" name="Staff of Life"/>
         <item id="190" name="Atuba Mace"/>
     </tradelist>
-    <tradelist npc="31257" shop="134" markup="20">
+    <tradelist npc="31257" shop="1345862" markup="20">
         <item id="2" name="Long Sword"/>
         <item id="218" name="Throwing Knife"/>
         <item id="272" name="Forest Bow"/>
@@ -5406,7 +5502,7 @@
         <item id="297" name="Glaive"/>
         <item id="2499" name="Elven Long Sword"/>
     </tradelist>
-    <tradelist npc="31257" shop="135" markup="20">
+    <tradelist npc="31257" shop="1355862" markup="20">
         <item id="176" name="Journeyman's Staff"/>
         <item id="310" name="Relic of the Saints"/>
         <item id="177" name="Mage Staff"/>
@@ -5442,7 +5538,7 @@
         <item id="189" name="Staff of Life"/>
         <item id="190" name="Atuba Mace"/>
     </tradelist>
-    <tradelist npc="31258" shop="136" markup="20">
+    <tradelist npc="31258" shop="1365862" markup="20">
         <item id="412" name="Cotton Pants"/>
         <item id="390" name="Cotton Shirt"/>
         <item id="24" name="Bone Breastplate"/>
@@ -5523,7 +5619,7 @@
         <item id="9583" name="Striped Cotton Shirt"/>
         <item id="9584" name="Striped Linen Shirt"/>
     </tradelist>
-    <tradelist npc="31258" shop="137" markup="20">
+    <tradelist npc="31258" shop="1375862" markup="20">
         <item id="1104" name="Stockings of Devotion"/>
         <item id="1101" name="Tunic of Devotion"/>
         <item id="1105" name="Stockings of Magic"/>
@@ -5582,7 +5678,7 @@
         <item id="9583" name="Striped Cotton Shirt"/>
         <item id="9584" name="Striped Linen Shirt"/>
     </tradelist>
-    <tradelist npc="31259" shop="138" markup="20">
+    <tradelist npc="31259" shop="1385862" markup="20">
         <item id="412" name="Cotton Pants"/>
         <item id="390" name="Cotton Shirt"/>
         <item id="24" name="Bone Breastplate"/>
@@ -5663,7 +5759,7 @@
         <item id="9583" name="Striped Cotton Shirt"/>
         <item id="9584" name="Striped Linen Shirt"/>
     </tradelist>
-    <tradelist npc="31259" shop="139" markup="20">
+    <tradelist npc="31259" shop="1395862" markup="20">
         <item id="1104" name="Stockings of Devotion"/>
         <item id="1101" name="Tunic of Devotion"/>
         <item id="1105" name="Stockings of Magic"/>
@@ -5722,7 +5818,7 @@
         <item id="9583" name="Striped Cotton Shirt"/>
         <item id="9584" name="Striped Linen Shirt"/>
     </tradelist>
-    <tradelist npc="31260" shop="140" markup="20">
+    <tradelist npc="31260" shop="1405862" markup="20">
         <item id="908" name="Necklace of Wisdom"/>
         <item id="909" name="Blue Diamond Necklace"/>
         <item id="910" name="Necklace of Devotion"/>
@@ -5745,7 +5841,7 @@
         <item id="882" name="Mithril Ring"/>
         <item id="914" name="Necklace of Darkness"/>
     </tradelist>
-    <tradelist npc="31261" shop="141" markup="20">
+    <tradelist npc="31261" shop="1415862" markup="20">
         <item id="908" name="Necklace of Wisdom"/>
         <item id="909" name="Blue Diamond Necklace"/>
         <item id="910" name="Necklace of Devotion"/>
@@ -5768,7 +5864,7 @@
         <item id="882" name="Mithril Ring"/>
         <item id="914" name="Necklace of Darkness"/>
     </tradelist>
-    <tradelist npc="31263" shop="143" markup="20">
+    <tradelist npc="31263" shop="1435862" markup="20">
         <item id="4445" name="Dye of STR Str+1 Con-3"/>
         <item id="4446" name="Dye of STR Str+1 Dex-3"/>
         <item id="4447" name="Dye of CON Con+1 Str-3"/>
@@ -5975,7 +6071,7 @@
         <item id="12751" name="Thons Pendant"/>
         <item id="12752" name="Asofe Pendant"/>
     </tradelist>
-    <tradelist npc="31274" shop="147" markup="20">
+    <tradelist npc="31274" shop="1475862" markup="20">
         <item id="3031" name="Spirit Ore"/>
         <item id="1785" name="Soul Ore"/>
         <item id="5192" name="Rope of Magic: D Grade"/>
