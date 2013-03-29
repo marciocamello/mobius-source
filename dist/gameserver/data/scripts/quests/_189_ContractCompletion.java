@@ -72,8 +72,7 @@ public class _189_ContractCompletion extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("head_blacksmith_kusto_q0189_02.htm"))
 		{
-			st.giveItems(ADENA_ID, 121527);
-			st.addExpAndSp(309467, 20614);
+			st.giveItems(ADENA_ID, 141360);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

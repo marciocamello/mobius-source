@@ -127,8 +127,8 @@ public class _109_InSearchOfTheNest extends Quest implements ScriptFile
 			else if ((npcId == KAHMAN) && (cond == 3))
 			{
 				htmltext = "merc_kahmun_q0109_0401.htm";
-				st.addExpAndSp(701500, 50000);
-				st.giveItems(ADENA_ID, 161500);
+				st.addExpAndSp(8550000, 9950000);
+				st.giveItems(ADENA_ID, 1800000);
 				st.exitCurrentQuest(false);
 				st.playSound(SOUND_FINISH);
 			}

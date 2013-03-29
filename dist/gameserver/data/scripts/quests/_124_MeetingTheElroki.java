@@ -142,8 +142,8 @@ public class _124_MeetingTheElroki extends Quest implements ScriptFile
 			{
 				htmltext = "asama_q0124_08.htm";
 				st.takeItems(Mushika_egg, 1);
-				st.addExpAndSp(301922, 30294);
-				st.giveItems(ADENA_ID, 100013);
+				st.addExpAndSp(1109665, 1229015);
+				st.giveItems(ADENA_ID, 236510);
 				st.playSound(SOUND_FINISH);
 				st.setState(COMPLETED);
 				st.exitCurrentQuest(false);

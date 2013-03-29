@@ -97,7 +97,8 @@ public class _132_MatrasCuriosity extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("get_reward"))
 		{
 			st.playSound(SOUND_FINISH);
-			st.giveItems(ADENA_ID, 31210);
+			st.addExpAndSp(5388330, 6048600);
+			st.giveItems(ADENA_ID, 575545);
 			st.exitCurrentQuest(false);
 			return null;
 		}

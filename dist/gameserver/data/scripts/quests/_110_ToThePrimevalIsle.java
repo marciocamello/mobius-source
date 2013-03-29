@@ -62,8 +62,8 @@ public class _110_ToThePrimevalIsle extends Quest implements ScriptFile
 		{
 			htmltext = "marquez_q0110_05.htm";
 			st.playSound(SOUND_FINISH);
-			st.giveItems(ADENA_ID, 191678);
-			st.addExpAndSp(251602, 25242);
+			st.giveItems(ADENA_ID, 189208);
+			st.addExpAndSp(887732, 983212);
 			st.takeItems(ANCIENT_BOOK, -1);
 			st.exitCurrentQuest(false);
 		}

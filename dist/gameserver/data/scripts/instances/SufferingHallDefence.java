@@ -29,42 +29,17 @@ import lineage2.gameserver.utils.Location;
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * @author pchayka
  */
 public class SufferingHallDefence extends Reflection
 {
-	/**
-	 * Field AliveTumor. (value is 18704)
-	 */
 	private static final int AliveTumor = 18704;
-	/**
-	 * Field DeadTumor. (value is 18705)
-	 */
 	private static final int DeadTumor = 18705;
-	/**
-	 * Field Yehan. (value is 25665)
-	 */
 	private static final int Yehan = 25665;
-	/**
-	 * Field RegenerationCoffin. (value is 18706)
-	 */
 	private static final int RegenerationCoffin = 18706;
-	/**
-	 * Field timeSpent.
-	 */
 	public int timeSpent;
-	/**
-	 * Field tumorIndex.
-	 */
 	int tumorIndex = 300;
-	/**
-	 * Field doCountCoffinNotifications.
-	 */
 	boolean doCountCoffinNotifications = false;
-	/**
-	 * Field monsters.
-	 */
 	static final int[] monsters =
 	{
 		22509,
@@ -76,34 +51,13 @@ public class SufferingHallDefence extends Reflection
 		22515,
 		AliveTumor
 	};
-	/**
-	 * Field roomCenter.
-	 */
 	static final Location roomCenter = new Location(-173704, 218092, -9562, 27768);
-	/**
-	 * Field _savedTime.
-	 */
 	long _savedTime = 0;
-	/**
-	 * Field _deathListener.
-	 */
 	private final DeathListener _deathListener = new DeathListener();
-	/**
-	 * Field coffinSpawnTask.
-	 */
 	ScheduledFuture<?> coffinSpawnTask;
-	/**
-	 * Field monstersSpawnTask.
-	 */
 	ScheduledFuture<?> monstersSpawnTask;
-	/**
-	 * Field stage.
-	 */
 	private int stage = 1;
 	
-	/**
-	 * Method onCreate.
-	 */
 	@Override
 	protected void onCreate()
 	{
@@ -113,9 +67,6 @@ public class SufferingHallDefence extends Reflection
 		startDefence();
 	}
 	
-	/**
-	 * Method startDefence.
-	 */
 	private void startDefence()
 	{
 		spawnByGroup("soi_hos_defence_tumor");
@@ -138,25 +89,13 @@ public class SufferingHallDefence extends Reflection
 		}, 60000L);
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 * Constructor for DeathListener.
-		 */
 		public DeathListener()
 		{
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Method onDeath.
-		 * @param self Creature
-		 * @param killer Creature
-		 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
-		 */
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
@@ -203,11 +142,13 @@ public class SufferingHallDefence extends Reflection
 						}
 						clearReflection(5, true);
 						spawnByGroup("soi_hos_defence_tepios");
+						
 						setReenterTime(System.currentTimeMillis());
 						for (Player p : getPlayers())
 						{
-							p.sendPacket(new ExSendUIEvent(p, true, true, 0, 0));
+							p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));
 						}
+						
 						timeSpent = (int) (System.currentTimeMillis() - _savedTime) / 1000;
 					}
 				}, 10000L);
@@ -215,9 +156,6 @@ public class SufferingHallDefence extends Reflection
 		}
 	}
 	
-	/**
-	 * Method invokeDeathListener.
-	 */
 	private void invokeDeathListener()
 	{
 		for (NpcInstance npc : getNpcs())
@@ -226,9 +164,6 @@ public class SufferingHallDefence extends Reflection
 		}
 	}
 	
-	/**
-	 * Method notifyCoffinActivity.
-	 */
 	public void notifyCoffinActivity()
 	{
 		if (!doCountCoffinNotifications)
@@ -263,9 +198,6 @@ public class SufferingHallDefence extends Reflection
 		}
 	}
 	
-	/**
-	 * Method spawnMonsters.
-	 */
 	void spawnMonsters()
 	{
 		if (stage > 6)
@@ -333,10 +265,6 @@ public class SufferingHallDefence extends Reflection
 		invokeDeathListener();
 	}
 	
-	/**
-	 * Method checkAliveMonsters.
-	 * @return boolean
-	 */
 	boolean checkAliveMonsters()
 	{
 		for (NpcInstance n : getNpcs())
@@ -349,11 +277,6 @@ public class SufferingHallDefence extends Reflection
 		return false;
 	}
 	
-	/**
-	 * Method getTumor.
-	 * @param id int
-	 * @return NpcInstance
-	 */
 	private NpcInstance getTumor(int id)
 	{
 		for (NpcInstance npc : getNpcs())
@@ -366,31 +289,20 @@ public class SufferingHallDefence extends Reflection
 		return null;
 	}
 	
-	/**
-	 * Method onPlayerEnter.
-	 * @param player Player
-	 */
 	@Override
 	public void onPlayerEnter(Player player)
 	{
 		super.onPlayerEnter(player);
-		player.sendPacket(new ExSendUIEvent(player, false, true, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.NONE));
+		player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.NONE));
 	}
 	
-	/**
-	 * Method onPlayerExit.
-	 * @param player Player
-	 */
 	@Override
 	public void onPlayerExit(Player player)
 	{
 		super.onPlayerExit(player);
-		player.sendPacket(new ExSendUIEvent(player, true, true, 0, 0));
+		player.sendPacket(new ExSendUIEvent(player, 1, 1, 0, 0));
 	}
 	
-	/**
-	 * Method onCollapse.
-	 */
 	@Override
 	protected void onCollapse()
 	{
@@ -404,4 +316,5 @@ public class SufferingHallDefence extends Reflection
 		}
 		super.onCollapse();
 	}
+	
 }

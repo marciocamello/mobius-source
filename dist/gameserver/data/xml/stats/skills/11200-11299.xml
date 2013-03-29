@@ -63,29 +63,23 @@
 		<set name="target" val="TARGET_AURA"/>
 		<for/>
 	</skill>
-    <skill id="11247" levels="1" name="">
-    <!-- Inflicts a powerful blow on the target. -->
-        <table name="#effectPoint">655</table>
-        <table name="#magicLevel">85</table>
-        <table name="#time">9</table>
-        <table name="#mpConsume2">52</table>
-        <set name="reuseDelay" val="3000"/>
-        <set name="hitTime" val="3800"/>
-        <set name="castRange" val="900"/>
-        <set name="mpConsume2" val="#mpConsume2"/>
-        <set name="effectPoint" val="#effectPoint"/>
-        <set name="magicLevel" val="#magicLevel"/>
-        <set name="activateRate" val="80"/>
-        <set name="target" val="TARGET_ONE"/>
-        <set name="coolTime" val="300"/>
-        <set name="skillType" val="DEBUFF"/>
-        <set name="operateType" val="OP_ACTIVE"/>
-        <set name="levelModifier" val="1"/>
-        <set name="nextAction" val="attack"/>
-        <for>
-            <effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="#time" val="0">
-            </effect>
-        </for>
+    <skill id="11247" levels="1" name="Feoh Wizard Chain Air Blow">
+    		<!-- Inflicts a powerful blow on the target. -->
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="mpConsume2" val="40"/>
+		<set name="castRange" val="700"/>
+		<set name="power" val="230"/>
+		<set name="magicLevel" val="85"/>
+		<set name="coolTime" val="300"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="isMagic" val="true"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="nextAction" val="attack"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isAlterSkill" val="true"/>
     </skill>
     <skill id="11248" levels="1" name="">
     <!-- Inflicts a powerful blow on the target. -->
@@ -106,34 +100,30 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="levelModifier" val="1"/>
         <set name="nextAction" val="attack"/>
+	<set name="isSkillTimePermanent" val="true"/>
+	<set name="isAlterSkill" val="true"/>
         <for>
             <effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="#time" val="0">
             </effect>
         </for>
     </skill>
-    <skill id="11249" levels="1" name="">
-    <!-- Inflicts a powerful blow on the target. -->
-        <table name="#effectPoint">655</table>
-        <table name="#magicLevel">85</table>
-        <table name="#time">9</table>
-        <table name="#mpConsume2">52</table>
-        <set name="reuseDelay" val="3000"/>
-        <set name="hitTime" val="3700"/>
-        <set name="castRange" val="900"/>
-        <set name="mpConsume2" val="#mpConsume2"/>
-        <set name="effectPoint" val="#effectPoint"/>
-        <set name="magicLevel" val="#magicLevel"/>
-        <set name="activateRate" val="80"/>
-        <set name="target" val="TARGET_ONE"/>
-        <set name="coolTime" val="300"/>
-        <set name="skillType" val="DEBUFF"/>
-        <set name="operateType" val="OP_ACTIVE"/>
-        <set name="levelModifier" val="1"/>
-        <set name="nextAction" val="attack"/>
-        <for>
-            <effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="#time" val="0">
-            </effect>
-        </for>
+    <skill id="11249" levels="1" name="Feoh Chain Knock Blow">
+    		<!-- Inflicts a powerful blow on the target. -->
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="mpConsume2" val="40"/>
+		<set name="castRange" val="700"/>
+		<set name="power" val="230"/>
+		<set name="magicLevel" val="85"/>
+		<set name="coolTime" val="300"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="isMagic" val="true"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="nextAction" val="attack"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isAlterSkill" val="true"/>
     </skill>
     <skill id="11250" levels="1" name="">
     <!-- Inflicts a powerful blow on the target. -->
@@ -154,6 +144,8 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="levelModifier" val="1"/>
         <set name="nextAction" val="attack"/>
+	<set name="isSkillTimePermanent" val="true"/>
+	<set name="isAlterSkill" val="true"/>
         <for>
             <effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="#time" val="0">
             </effect>
@@ -776,6 +768,7 @@
 		<table name="#power">355 365 375 385 395</table>
 		<table name="#activateRate">50</table>
 		<table name="#mpConsume2">85 88 90 95 99</table>
+		<table name="#dotDamage">706 728 748 770 790 </table>
 		<set name="reuseDelay" val="60000"/>
 		<set name="hitTime" val="1500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>		
@@ -789,24 +782,26 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
-		<set name="delayedEffect" val="5459"/>
-        <enchant1 levels="10" name="Cost">
-            <table name="#power">406 410 413 417 420 424 427 431 434 438</table>
-            <table name="#mpConsume2">85 81 78 74 71 67 64 60 56 53</table>
-            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant1>
-        <enchant2 levels="10" name="Chance">
-            <table name="#power">406 410 413 417 420 424 427 431 434 438</table>
-            <table name="#activateRate">53 56 59 62 65 68 71 74 77 80</table>
-            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle">
-            <table name="#power">406 410 413 417 420 424 427 431 434 438</table>
-            <table name="#reuseDelay">58000 56000 54000 52000 51000 49000 47000 45000 43000 42000</table>
-            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant3>
+		<enchant1 levels="10" name="Cost">
+		    <table name="#power">406 410 413 417 420 424 427 431 434 438</table>
+		    <table name="#mpConsume2">85 81 78 74 71 67 64 60 56 53</table>
+		    <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant1>
+		<enchant2 levels="10" name="Chance">
+		    <table name="#power">406 410 413 417 420 424 427 431 434 438</table>
+		    <table name="#activateRate">53 56 59 62 65 68 71 74 77 80</table>
+		    <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle">
+		    <table name="#power">406 410 413 417 420 424 427 431 434 438</table>
+		    <table name="#reuseDelay">58000 56000 54000 52000 51000 49000 47000 45000 43000 42000</table>
+		    <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant3>
 		<for>
-			<effect count="1" name="Debuff" time="10" val="0"/>
+			<effect name="Paralyze" stackType="Exile" stackOrder="1" time="10" abnormal="s_56"/>
+		</for>
+		<for>
+			<effect name="DamOverTime" count="5" stackType="Bleed" time="2" val="#dotDamage"/>
 		</for>
 	</skill>
     <skill id="11274" levels="4" name="Summon Barrier">
@@ -868,16 +863,16 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
 		<set name="delayedEffect" val="5459"/>
-        <enchant1 levels="10" name="Cost">
-            <table name="#mpConsume2">89 85 81 78 74 70 66 63 59 55</table>
-            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant1>
-        <enchant2 levels="10" name="Recycle">
-            <table name="#reuseDelay">291000 282000 273000 264000 255000 246000 237000 228000 219000 210000</table>
-            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant2>
+		<enchant1 levels="10" name="Cost">
+		    <table name="#mpConsume2">89 85 81 78 74 70 66 63 59 55</table>
+		    <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant1>
+		<enchant2 levels="10" name="Recycle">
+		    <table name="#reuseDelay">291000 282000 273000 264000 255000 246000 237000 228000 219000 210000</table>
+		    <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant2>
 		<for>
-			<effect count="1" name="Debuff" time="10" val="0"/>
+			<effect name="HellBinding" time="10" val="0" stackType="paralyze" stackOrder="1"/>
 		</for>
 	</skill>
     <skill id="11277" levels="1" name="Sense of Royalty">
@@ -1227,10 +1222,11 @@
 		</for>
    </skill>
     <skill id="11296" levels="6" name="Mass Exile">
-    <!-- Banishes the target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 282 per second. -->
+    <!-- Banishes the target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by #dotDamage per second. -->
 		<table name="#magicLevel">85 86 87</table>
 		<table name="#activateRate">60</table>
 		<table name="#mpConsume2">120 125 130 135 138 140</table>
+		<table name="#dotDamage">564 576 592 610 626 644</table>
 		<set name="reuseDelay" val="300000"/>
 		<set name="hitTime" val="3000"/>
 		<set name="mpConsume2" val="#mpConsume2"/>		
@@ -1238,13 +1234,15 @@
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="activateRate" val="#activateRate"/>
 		<set name="save" val="3"/>
-		<set name="target" val="TARGET_PARTY"/>
+		<set name="target" val="TARGET_AREA"/>
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
-		<set name="delayedEffect" val="5459"/>
 		<for>
-			<effect count="1" name="Debuff" time="10" val="0"/>
+			<effect name="Paralyze" stackType="Exile" stackOrder="1" time="10" abnormal="s_56"/>
+		</for>
+		<for>
+			<effect name="DamOverTime" count="5" stackType="Bleed" time="2" val="#dotDamage"/>
 		</for>
 	</skill>
     <skill id="11297" levels="4" name="Blessing of the Giants">

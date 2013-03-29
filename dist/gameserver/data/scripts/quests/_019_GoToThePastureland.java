@@ -61,8 +61,8 @@ public class _019_GoToThePastureland extends Quest implements ScriptFile
 		if (event.equals("beast_herder_tunatun_q0019_0201.htm"))
 		{
 			st.takeItems(BEAST_MEAT, -1);
-			st.addExpAndSp(136766, 12688);
-			st.giveItems(ADENA_ID, 50000);
+			st.addExpAndSp(1456218, 1672008);
+			st.giveItems(ADENA_ID, 299928);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}

@@ -65,8 +65,7 @@ public class _188_SealRemoval extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("dorothy_the_locksmith_q0188_03.htm"))
 		{
-			st.giveItems(ADENA_ID, 98583);
-			st.addExpAndSp(285935, 18711);
+			st.giveItems(ADENA_ID, 110336);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

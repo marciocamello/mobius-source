@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
+	    <skill id="11749" levels="1" name="Iss Chain Air Blow">
+	    		<!-- Inflicts a powerful blow on the target. -->
+			<set name="reuseDelay" val="10000"/>
+			<set name="hitTime" val="2000"/>
+			<set name="mpConsume2" val="40"/>
+			<set name="castRange" val="40"/>
+			<set name="power" val="15803"/>
+			<set name="magicLevel" val="85"/>
+			<set name="coolTime" val="300"/>
+			<set name="skillType" val="PDAM"/>
+			<set name="target" val="TARGET_ONE"/>
+			<set name="overHit" val="true"/>>
+			<set name="operateType" val="OP_ACTIVE"/>
+			<set name="nextAction" val="attack"/>
+			<set name="isSkillTimePermanent" val="true"/>
+			<set name="isAlterSkill" val="true"/>
+	    </skill>
+	    <skill id="11750" levels="1" name="Iss Chain Air Blow">
+	    		<!-- Inflicts a powerful blow on the target. -->
+			<set name="reuseDelay" val="10000"/>
+			<set name="hitTime" val="0"/>
+			<set name="mpConsume1" val="40"/>
+			<set name="castRange" val="30"/>
+			<set name="power" val="15803"/>
+			<set name="magicLevel" val="85"/>
+			<set name="coolTime" val="1500"/>
+			<set name="target" val="TARGET_ONE"/>
+			<set name="skillType" val="PDAM"/>
+			<set name="flyType" val="CHARGE"/>
+			<set name="operateType" val="OP_ACTIVE"/>
+			<set name="nextAction" val="attack"/>
+			<set name="isSkillTimePermanent" val="true"/>
+			<set name="isAlterSkill" val="true"/>
+			<cond msgId="113" addName="1">
+				<not>
+					<using kind="Bow, Crossbow"/>
+				</not>
+			</cond>
+	    </skill>
 	<skill id="11751" levels="1" name="Superior Weapon Mastery">
 		<!-- Increases INT by 2, M. Atk. by 103, and P. Atk. by 82. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your INT. -->
 		<table name="#pAtk">82</table>

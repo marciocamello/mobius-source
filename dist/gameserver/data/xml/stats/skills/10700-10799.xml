@@ -41,48 +41,45 @@
             </trigger>
         </triggers>
     </skill>
-    <skill id="10749" levels="1" name="">
-    <!-- Inflicts a powerful blow on the target. -->
-        <table name="#mpConsume2">62</table>
-        <set name="reuseDelay" val="10000"/>
-        <set name="hitTime" val="2000"/>
-        <set name="castRange" val="40"/>
-        <set name="mpConsume2" val="#mpConsume2"/>
-        <set name="effectPoint" val="655"/>
-        <set name="magicLevel" val="85"/>
-        <set name="activateRate" val="80"/>
-        <set name="save" val="4"/>
-        <set name="target" val="TARGET_ONE"/>
-        <set name="coolTime" val="300"/>
-        <set name="skillType" val="DEBUFF"/>
-        <set name="operateType" val="OP_ACTIVE"/>
-        <set name="levelModifier" val="1"/>
-        <set name="nextAction" val="attack"/>
-        <for>
-            <effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
-        </for>
+    <skill id="10749" levels="1" name="Othell Chain Air Blow">
+    		<!-- Inflicts a powerful blow on the target. -->
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="mpConsume2" val="40"/>
+		<set name="castRange" val="40"/>
+		<set name="power" val="15803"/>
+		<set name="magicLevel" val="85"/>
+		<set name="coolTime" val="300"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="overHit" val="true"/>>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="nextAction" val="attack"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isAlterSkill" val="true"/>
     </skill>
-    <skill id="10750" levels="1" name="">
-    <!-- Inflicts a powerful blow on the target. -->
-        <table name="#mpConsume2">66</table>
-        <set name="reuseDelay" val="10000"/>
-        <set name="hitTime" val="1000"/>
-        <set name="castRange" val="600"/>
-        <set name="mpConsume2" val="#mpConsume2"/>
-        <set name="effectPoint" val="655"/>
-        <set name="magicLevel" val="85"/>
-        <set name="activateRate" val="80"/>
-        <set name="save" val="4"/>
-        <set name="target" val="TARGET_ONE"/>
-        <set name="coolTime" val="300"/>
-        <set name="skillType" val="DEBUFF"/>
-        <set name="operateType" val="OP_ACTIVE"/>
-        <set name="levelModifier" val="1"/>
-        <set name="nextAction" val="attack"/>
-        <for>
-            <effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="3" val="0"/>
-        </for>
-    </skill>
+   	 <skill id="10750" levels="1" name="Othell Chain Knock Blow">
+	    		<!-- Inflicts a powerful blow on the target. -->
+			<set name="reuseDelay" val="10000"/>
+			<set name="hitTime" val="0"/>
+			<set name="mpConsume1" val="40"/>
+			<set name="castRange" val="30"/>
+			<set name="power" val="15803"/>
+			<set name="magicLevel" val="85"/>
+			<set name="coolTime" val="1500"/>
+			<set name="target" val="TARGET_ONE"/>
+			<set name="skillType" val="PDAM"/>
+			<set name="flyType" val="CHARGE"/>
+			<set name="operateType" val="OP_ACTIVE"/>
+			<set name="nextAction" val="attack"/>
+			<set name="isSkillTimePermanent" val="true"/>
+			<set name="isAlterSkill" val="true"/>
+			<cond msgId="113" addName="1">
+				<not>
+					<using kind="Bow, Crossbow"/>
+				</not>
+			</cond>
+  	  </skill>
     <skill id="10751" levels="1" name="Superior Bow/Crossbow Mastery">
     <!-- STR + 2, P. Atk. + 1316 and Atk. Spd. + 12% when using a bow or crossbow. Additionally, there is a chance the cooldown of skills will reset or the duration double depending on your STR. -->
         <table name="#pAtk">1316</table>

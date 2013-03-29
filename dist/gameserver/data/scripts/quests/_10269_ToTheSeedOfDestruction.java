@@ -93,8 +93,8 @@ public class _10269_ToTheSeedOfDestruction extends Quest implements ScriptFile
 		else if ((id == STARTED) && (npcId == Allenos))
 		{
 			htmltext = "32526-01.htm";
-			st.giveItems(ADENA_ID, 29174);
-			st.addExpAndSp(176121, 17671);
+			st.giveItems(ADENA_ID, 710000);
+			st.addExpAndSp(6660000, 7375000);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

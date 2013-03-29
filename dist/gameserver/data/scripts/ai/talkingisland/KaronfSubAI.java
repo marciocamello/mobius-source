@@ -110,22 +110,22 @@ public class KaronfSubAI extends DefaultAI
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM;
+				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
 				break;
 			case 2:
-				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM;
+				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
 				break;
 			case 3:
-				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM;
+				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
 				break;
 			case 4:
-				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM;
+				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
 				break;
 			case 5:
-				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM;
+				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
 				break;
 			default:
-				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM;
+				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
 				break;
 		}
 		Functions.npcSay(actor, ns);

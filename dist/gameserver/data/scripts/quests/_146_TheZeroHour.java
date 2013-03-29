@@ -64,6 +64,7 @@ public class _146_TheZeroHour extends Quest implements ScriptFile
 			htmltext = "merc_kahmun_q0146_0107.htm";
 			st.takeItems(STAKATO_QUEENS_FANG, -1);
 			st.giveItems(KAHMANS_SUPPLY_BOX, 1);
+			st.addExpAndSp(2850000, 3315000);
 			st.exitCurrentQuest(false);
 		}
 		return htmltext;

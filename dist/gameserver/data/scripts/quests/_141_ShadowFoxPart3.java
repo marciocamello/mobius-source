@@ -91,7 +91,6 @@ public class _141_ShadowFoxPart3 extends Quest implements ScriptFile
 			{
 				st.playSound(SOUND_FINISH);
 				st.giveItems(ADENA_ID, 88888);
-				st.addExpAndSp(278005, 17058);
 				st.set("reward", "1");
 				htmltext = "select.htm";
 			}

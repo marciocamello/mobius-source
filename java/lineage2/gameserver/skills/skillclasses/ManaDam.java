@@ -20,7 +20,6 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Formulas;
-import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -84,7 +83,8 @@ public class ManaDam extends Skill
 					if (crit)
 					{
 						activeChar.sendPacket(Msg.MAGIC_CRITICAL_HIT);
-						damage *= activeChar.calcStat(Stats.MCRITICAL_DAMAGE, activeChar.isPlayable() && target.isPlayable() ? 2. : 3., target, this);
+						// damage *= activeChar.calcStat(Stats.MCRITICAL_DAMAGE, activeChar.isPlayable() && target.isPlayable() ? 2. : 3., target, this);
+						damage *= 2.0;
 					}
 					target.reduceCurrentMp(damage, activeChar);
 				}

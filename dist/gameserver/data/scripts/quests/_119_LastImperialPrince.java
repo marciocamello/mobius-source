@@ -37,7 +37,7 @@ public class _119_LastImperialPrince extends Quest implements ScriptFile
 	private static final int SPIRIT = 31453;
 	private static final int DEVORIN = 32009;
 	private static final int BROOCH = 7262;
-	private static final int AMOUNT = 150292;
+	private static final int AMOUNT = 407970;
 	
 	public _119_LastImperialPrince()
 	{
@@ -72,7 +72,7 @@ public class _119_LastImperialPrince extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("31453-7.htm"))
 		{
 			st.giveItems(ADENA_ID, AMOUNT, true);
-			st.addExpAndSp(902439, 90067);
+			st.addExpAndSp(1919448, 2100933);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}

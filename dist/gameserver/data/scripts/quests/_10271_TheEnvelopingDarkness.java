@@ -81,8 +81,8 @@ public class _10271_TheEnvelopingDarkness extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("orbyu_q10271_5.htm"))
 		{
-			st.giveItems(ADENA_ID, 62516);
-			st.addExpAndSp(377403, 37867);
+			st.giveItems(ADENA_ID, 236510);
+			st.addExpAndSp(1109665, 1229015);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);

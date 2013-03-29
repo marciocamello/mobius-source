@@ -87,7 +87,6 @@ public class _140_ShadowFoxPart2 extends Quest implements ScriptFile
 		{
 			st.playSound(SOUND_FINISH);
 			st.giveItems(ADENA_ID, 18775);
-			st.addExpAndSp(30000, 2000);
 			Quest q = QuestManager.getQuest(_141_ShadowFoxPart3.class);
 			if (q != null)
 			{

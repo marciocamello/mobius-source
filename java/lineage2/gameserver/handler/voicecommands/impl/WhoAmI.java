@@ -74,7 +74,7 @@ public class WhoAmI implements IVoicedCommandHandler
 		double mpGain = player.calcStat(Stats.MANAHEAL_EFFECTIVNESS, 100., target, null);
 		double critPerc = 2 * player.calcStat(Stats.CRITICAL_DAMAGE, target, null);
 		double critStatic = player.calcStat(Stats.CRITICAL_DAMAGE_STATIC, target, null);
-		double mCritRate = player.calcStat(Stats.MCRITICAL_RATE, target, null);
+		double mCritDmg = player.calcStat(Stats.MCRITICAL_DAMAGE, target, null);
 		double blowRate = player.calcStat(Stats.FATALBLOW_RATE, target, null);
 		ItemInstance shld = player.getSecondaryWeaponInstance();
 		boolean shield = (shld != null) && (shld.getItemType() == WeaponType.NONE);
@@ -134,7 +134,7 @@ public class WhoAmI implements IVoicedCommandHandler
 		sb.replaceFirst("%mpGain%", df.format(mpGain));
 		sb.replaceFirst("%critPerc%", df.format(critPerc));
 		sb.replaceFirst("%critStatic%", df.format(critStatic));
-		sb.replaceFirst("%mCritRate%", df.format(mCritRate));
+		sb.replaceFirst("%mCritDmg%", df.format(mCritDmg));
 		sb.replaceFirst("%blowRate%", df.format(blowRate));
 		sb.replaceFirst("%shieldDef%", df.format(shieldDef));
 		sb.replaceFirst("%shieldRate%", df.format(shieldRate));

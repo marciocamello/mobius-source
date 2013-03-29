@@ -2,12 +2,13 @@
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="23200" name="Turan the Severed Ghost" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="17.5"/>
 		<set name="collision_height" value="52.5"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1198919"/>
 		<set name="baseHpRate" value="1"/>
@@ -23,15 +24,16 @@
 		<set name="rewardExp" value="8858949"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="122097"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="45"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -39,6 +41,7 @@
 			<defence attribute="earth" value="280"/>
 			<defence attribute="holy" value="227"/>
 			<defence attribute="unholy" value="313"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
 		<skills>
 			<skill id="4414" level="1"/>
@@ -47,12 +50,13 @@
 		</skills>
 	</npc>
 	<npc id="23201" name="Nagdu the deformed Merman" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="39.0"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1084381"/>
 		<set name="baseHpRate" value="1"/>
@@ -68,15 +72,16 @@
 		<set name="rewardExp" value="8232514"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="111661"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="84248"/>
+		<set name="basePDef" value="7073"/>
+		<set name="baseMAtk" value="3134"/>
+		<set name="baseMDef" value="1597"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="150"/>
 		<set name="baseWalkSpd" value="60"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="260"/>
 			<defence attribute="water" value="260"/>
@@ -84,6 +89,7 @@
 			<defence attribute="earth" value="260"/>
 			<defence attribute="holy" value="207"/>
 			<defence attribute="unholy" value="293"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
 		<skills>
 			<skill id="4414" level="3"/>
@@ -92,12 +98,13 @@
 		</skills>
 	</npc>
 	<npc id="23202" name="Hakal the Butchered" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1086370"/>
 		<set name="baseHpRate" value="1"/>
@@ -113,15 +120,16 @@
 		<set name="rewardExp" value="8442040"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="115422"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="84706"/>
+		<set name="basePDef" value="7111"/>
+		<set name="baseMAtk" value="3151"/>
+		<set name="baseMDef" value="1606"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="88"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="260"/>
 			<defence attribute="water" value="260"/>
@@ -137,12 +145,13 @@
 		</skills>
 	</npc>
 	<npc id="23203" name="Centa the Standing Beast" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1084381"/>
 		<set name="baseHpRate" value="1"/>
@@ -158,15 +167,16 @@
 		<set name="rewardExp" value="8232514"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="111661"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="84248"/>
+		<set name="basePDef" value="7073"/>
+		<set name="baseMAtk" value="3134"/>
+		<set name="baseMDef" value="1597"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="170"/>
 		<set name="baseWalkSpd" value="38"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="260"/>
 			<defence attribute="water" value="260"/>
@@ -182,12 +192,13 @@
 		</skills>
 	</npc>
 	<npc id="23204" name="Adidaiu of the Killer Fangs" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="34.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1084381"/>
 		<set name="baseHpRate" value="1"/>
@@ -203,15 +214,16 @@
 		<set name="rewardExp" value="8232514"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="111661"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="84248"/>
+		<set name="basePDef" value="7073"/>
+		<set name="baseMAtk" value="3134"/>
+		<set name="baseMDef" value="1597"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="40"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="260"/>
 			<defence attribute="water" value="260"/>
@@ -227,12 +239,13 @@
 		</skills>
 	</npc>
 	<npc id="23205" name="Haskal the Floating Ghost" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1198919"/>
 		<set name="baseHpRate" value="1"/>
@@ -248,15 +261,16 @@
 		<set name="rewardExp" value="8858949"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="122097"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="150"/>
 		<set name="baseWalkSpd" value="60"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -264,6 +278,7 @@
 			<defence attribute="earth" value="280"/>
 			<defence attribute="holy" value="247"/>
 			<defence attribute="unholy" value="444"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
 		<skills>
 			<skill id="4414" level="1"/>
@@ -272,12 +287,13 @@
 		</skills>
 	</npc>
 	<npc id="23206" name="Samita the Ex-Torture Expert" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="46.0"/>
 		<set name="collision_height" value="71.5"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1198919"/>
 		<set name="baseHpRate" value="1"/>
@@ -293,15 +309,16 @@
 		<set name="rewardExp" value="8858949"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="122097"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="155"/>
 		<set name="baseWalkSpd" value="60"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -317,12 +334,13 @@
 		</skills>
 	</npc>
 	<npc id="23207" name="Gazem" title="Fortress Scout">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Ranger"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="27.5"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="1100"/>
 		<set name="baseHpMax" value="1086370"/>
 		<set name="baseHpRate" value="1"/>
@@ -338,15 +356,16 @@
 		<set name="rewardExp" value="8442040"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="115422"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="84706"/>
+		<set name="basePDef" value="7111"/>
+		<set name="baseMAtk" value="3151"/>
+		<set name="baseMDef" value="1606"/>
 		<set name="basePAtkSpd" value="266"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="170"/>
 		<set name="baseWalkSpd" value="45"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="260"/>
 			<defence attribute="water" value="260"/>
@@ -354,6 +373,7 @@
 			<defence attribute="earth" value="260"/>
 			<defence attribute="holy" value="207"/>
 			<defence attribute="unholy" value="293"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
 		<skills>
 			<skill id="4414" level="1"/>
@@ -362,12 +382,13 @@
 		</skills>
 	</npc>
 	<npc id="23208" name="Rosenia's Divine Spirit" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="38.0"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1086370"/>
 		<set name="baseHpRate" value="1"/>
@@ -383,15 +404,16 @@
 		<set name="rewardExp" value="8442040"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="115422"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="84706"/>
+		<set name="basePDef" value="7111"/>
+		<set name="baseMAtk" value="3151"/>
+		<set name="baseMDef" value="1606"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="165"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="260"/>
 			<defence attribute="water" value="260"/>
@@ -399,6 +421,7 @@
 			<defence attribute="earth" value="260"/>
 			<defence attribute="holy" value="227"/>
 			<defence attribute="unholy" value="424"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
 		<skills>
 			<skill id="4414" level="3"/>
@@ -407,12 +430,13 @@
 		</skills>
 	</npc>
 	<npc id="23209" name="Kelbara the Dual-Sword Slaughterer" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="28.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1198919"/>
 		<set name="baseHpRate" value="1"/>
@@ -428,15 +452,16 @@
 		<set name="rewardExp" value="8858949"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="122097"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="160"/>
 		<set name="baseWalkSpd" value="60"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -444,6 +469,7 @@
 			<defence attribute="earth" value="280"/>
 			<defence attribute="holy" value="247"/>
 			<defence attribute="unholy" value="444"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
 		<skills>
 			<skill id="4414" level="1"/>
@@ -452,12 +478,13 @@
 		</skills>
 	</npc>
 	<npc id="23210" name="Mandragora of Joy and Sorrow" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="17.8"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1"/>
@@ -473,15 +500,16 @@
 		<set name="rewardExp" value="3560230"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="76214"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="84248"/>
+		<set name="basePDef" value="7073"/>
+		<set name="baseMAtk" value="3134"/>
+		<set name="baseMDef" value="1597"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="80"/>
 		<set name="baseWalkSpd" value="80"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="207"/>
 			<defence attribute="water" value="260"/>
@@ -498,12 +526,13 @@
 		</skills>
 	</npc>
 	<npc id="23211" name="Mandragora of Prayer" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1"/>
@@ -519,15 +548,16 @@
 		<set name="rewardExp" value="3560230"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="76214"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="84248"/>
+		<set name="basePDef" value="7073"/>
+		<set name="baseMAtk" value="3134"/>
+		<set name="baseMDef" value="1597"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="80"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="207"/>
 			<defence attribute="water" value="260"/>
@@ -544,12 +574,13 @@
 		</skills>
 	</npc>
 	<npc id="23212" name="Scaldisect of Hellfire" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="693017"/>
 		<set name="baseHpRate" value="1"/>
@@ -565,15 +596,16 @@
 		<set name="rewardExp" value="87627263"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="362312"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -581,6 +613,7 @@
 			<defence attribute="earth" value="280"/>
 			<defence attribute="holy" value="227"/>
 			<defence attribute="unholy" value="313"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
 		<skills>
 			<skill id="4414" level="1"/>
@@ -589,12 +622,13 @@
 		</skills>
 	</npc>
 	<npc id="23213" name="Beggar Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
 		<set name="baseHpRate" value="1"/>
@@ -610,15 +644,16 @@
 		<set name="rewardExp" value="2648320"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="57607"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -634,36 +669,15 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="16549" max="38671" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="34990" min="2" max="6" chance="19.80"/>
-				<reward item_id="34992" min="9" max="27" chance="12.97"/>
-				<reward item_id="34991" min="28" max="84" chance="4.352"/>
-				<reward item_id="19285" min="1" max="1" chance="0.5"/>
-				<reward item_id="35338" min="1" max="1" chance="0.5"/>
-				<reward item_id="19271" min="1" max="1" chance="0.1"/>
-				<reward item_id="35327" min="1" max="1" chance="0.1"/>
-				<reward item_id="19420" min="1" max="1" chance="0.005"/>
-				<reward item_id="19409" min="1" max="1" chance="0.005"/>
-				<reward item_id="35451" min="1" max="1" chance="0.005"/>
-				<reward item_id="35462" min="1" max="1" chance="0.005"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19271" min="1" max="1" chance="0.5"/>
-			<reward item_id="19285" min="1" max="1" chance="0.5"/>
-		</rewardlist>
 	</npc>
 	<npc id="23214" name="Beggar Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
 		<set name="baseHpRate" value="1"/>
@@ -679,15 +693,16 @@
 		<set name="rewardExp" value="2648320"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="57607"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -703,36 +718,15 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="16549" max="38671" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="34990" min="2" max="6" chance="19.80"/>
-				<reward item_id="34992" min="9" max="27" chance="12.97"/>
-				<reward item_id="34991" min="28" max="84" chance="4.352"/>
-				<reward item_id="19285" min="1" max="1" chance="0.5"/>
-				<reward item_id="35338" min="1" max="1" chance="0.5"/>
-				<reward item_id="19271" min="1" max="1" chance="0.1"/>
-				<reward item_id="35327" min="1" max="1" chance="0.1"/>
-				<reward item_id="19420" min="1" max="1" chance="0.005"/>
-				<reward item_id="19409" min="1" max="1" chance="0.005"/>
-				<reward item_id="35451" min="1" max="1" chance="0.005"/>
-				<reward item_id="35462" min="1" max="1" chance="0.005"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19271" min="1" max="1" chance="0.5"/>
-			<reward item_id="19285" min="1" max="1" chance="0.5"/>
-		</rewardlist>
 	</npc>
 	<npc id="23215" name="Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
 		<set name="baseHpRate" value="1"/>
@@ -748,15 +742,16 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="86080"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="3202"/>
+		<set name="baseMDef" value="1632"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -773,41 +768,15 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73"/>
-				<reward item_id="34991" min="28" max="84" chance="6.772"/>
-				<reward item_id="34990" min="20" max="60" chance="3.768"/>
-				<reward item_id="19299" min="1" max="1" chance="0.5"/>
-				<reward item_id="35352" min="1" max="1" chance="0.5"/>
-				<reward item_id="35348" min="1" max="1" chance="0.5"/>
-				<reward item_id="35329" min="1" max="1" chance="0.5"/>
-				<reward item_id="19273" min="1" max="1" chance="0.5"/>
-				<reward item_id="19295" min="1" max="1" chance="0.5"/>
-				<reward item_id="19434" min="1" max="1" chance="0.01"/>
-				<reward item_id="19430" min="1" max="1" chance="0.01"/>
-				<reward item_id="19411" min="1" max="1" chance="0.005"/>
-				<reward item_id="35453" min="1" max="1" chance="0.005"/>
-				<reward item_id="35472" min="1" max="1" chance="0.01"/>
-				<reward item_id="35476" min="1" max="1" chance="0.01"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1"/>
-			<reward item_id="19299" min="1" max="1" chance="1"/>
-			<reward item_id="19273" min="1" max="1" chance="0.5"/>
-		</rewardlist>
 	</npc>
 	<npc id="23216" name="Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="37.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
 		<set name="baseHpRate" value="1"/>
@@ -823,15 +792,16 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="86080"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="3202"/>
+		<set name="baseMDef" value="1632"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -847,41 +817,15 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="33393" max="77916" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73"/>
-				<reward item_id="34991" min="28" max="84" chance="6.772"/>
-				<reward item_id="34990" min="20" max="60" chance="3.768"/>
-				<reward item_id="19299" min="1" max="1" chance="0.5"/>
-				<reward item_id="35352" min="1" max="1" chance="0.5"/>
-				<reward item_id="35348" min="1" max="1" chance="0.5"/>
-				<reward item_id="35329" min="1" max="1" chance="0.5"/>
-				<reward item_id="19273" min="1" max="1" chance="0.5"/>
-				<reward item_id="19295" min="1" max="1" chance="0.5"/>
-				<reward item_id="19434" min="1" max="1" chance="0.01"/>
-				<reward item_id="19430" min="1" max="1" chance="0.01"/>
-				<reward item_id="19411" min="1" max="1" chance="0.005"/>
-				<reward item_id="35453" min="1" max="1" chance="0.005"/>
-				<reward item_id="35472" min="1" max="1" chance="0.01"/>
-				<reward item_id="35476" min="1" max="1" chance="0.01"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19295" min="1" max="1" chance="1"/>
-			<reward item_id="19299" min="1" max="1" chance="1"/>
-			<reward item_id="19273" min="1" max="1" chance="0.5"/>
-		</rewardlist>
 	</npc>
 	<npc id="23217" name="Children's Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
 		<set name="baseHpRate" value="1"/>
@@ -897,15 +841,16 @@
 		<set name="rewardExp" value="4224008"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="91882"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -921,36 +866,15 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="20801" max="48606" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73"/>
-				<reward item_id="34991" min="28" max="84" chance="6.772"/>
-				<reward item_id="34990" min="20" max="60" chance="3.768"/>
-				<reward item_id="19296" min="1" max="1" chance="0.5"/>
-				<reward item_id="19276" min="1" max="1" chance="0.5"/>
-				<reward item_id="35332" min="1" max="1" chance="0.5"/>
-				<reward item_id="35349" min="1" max="1" chance="0.5"/>
-				<reward item_id="19431" min="1" max="1" chance="0.005"/>
-				<reward item_id="19414" min="1" max="1" chance="0.005"/>
-				<reward item_id="35456" min="1" max="1" chance="0.005"/>
-				<reward item_id="35473" min="1" max="1" chance="0.005"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19296" min="1" max="1" chance="1"/>
-			<reward item_id="19276" min="1" max="1" chance="0.5"/>
-		</rewardlist>
 	</npc>
 	<npc id="23218" name="Children's Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
 		<set name="baseHpRate" value="1"/>
@@ -966,15 +890,16 @@
 		<set name="rewardExp" value="4224008"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="91882"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -990,36 +915,15 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="20801" max="48606" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73"/>
-				<reward item_id="34991" min="28" max="84" chance="6.772"/>
-				<reward item_id="34990" min="20" max="60" chance="3.768"/>
-				<reward item_id="19296" min="1" max="1" chance="0.5"/>
-				<reward item_id="19276" min="1" max="1" chance="0.5"/>
-				<reward item_id="35332" min="1" max="1" chance="0.5"/>
-				<reward item_id="35349" min="1" max="1" chance="0.5"/>
-				<reward item_id="19431" min="1" max="1" chance="0.005"/>
-				<reward item_id="19414" min="1" max="1" chance="0.005"/>
-				<reward item_id="35456" min="1" max="1" chance="0.005"/>
-				<reward item_id="35473" min="1" max="1" chance="0.005"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19296" min="1" max="1" chance="1"/>
-			<reward item_id="19276" min="1" max="1" chance="0.5"/>
-		</rewardlist>
 	</npc>
 	<npc id="23219" name="Engineer Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443641"/>
 		<set name="baseHpRate" value="1"/>
@@ -1035,15 +939,16 @@
 		<set name="rewardExp" value="10457307"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="145135"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85622"/>
+		<set name="basePDef" value="7188"/>
+		<set name="baseMAtk" value="3185"/>
+		<set name="baseMDef" value="1623"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1061,36 +966,15 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="35913" max="83796" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73"/>
-				<reward item_id="34991" min="28" max="84" chance="6.772"/>
-				<reward item_id="34990" min="20" max="60" chance="3.768"/>
-				<reward item_id="19278" min="1" max="1" chance="0.5"/>
-				<reward item_id="19275" min="1" max="1" chance="0.5"/>
-				<reward item_id="35331" min="1" max="1" chance="0.5"/>
-				<reward item_id="35334" min="1" max="1" chance="0.5"/>
-				<reward item_id="19413" min="1" max="1" chance="0.005"/>
-				<reward item_id="19416" min="1" max="1" chance="0.005"/>
-				<reward item_id="35455" min="1" max="1" chance="0.005"/>
-				<reward item_id="35458" min="1" max="1" chance="0.005"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19275" min="1" max="1" chance="1"/>
-			<reward item_id="19278" min="1" max="1" chance="1"/>
-		</rewardlist>
 	</npc>
 	<npc id="23220" name="Kunda Watchman" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443936"/>
 		<set name="baseHpRate" value="1"/>
@@ -1106,15 +990,16 @@
 		<set name="rewardExp" value="18331856"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="256045"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="86080"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="3202"/>
+		<set name="baseMDef" value="1632"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -1132,50 +1017,15 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="54424" max="127060" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73"/>
-				<reward item_id="34991" min="28" max="84" chance="6.772"/>
-				<reward item_id="34990" min="20" max="60" chance="3.768"/>
-				<reward item_id="19290" min="1" max="1" chance="1"/>
-				<reward item_id="19301" min="1" max="1" chance="1"/>
-				<reward item_id="19285" min="1" max="1" chance="0.5"/>
-				<reward item_id="19291" min="1" max="1" chance="0.5"/>
-				<reward item_id="19296" min="1" max="1" chance="0.5"/>
-				<reward item_id="19281" min="1" max="1" chance="0.5"/>
-				<reward item_id="19436" min="1" max="1" chance="0.01"/>
-				<reward item_id="19431" min="1" max="1" chance="0.01"/>
-				<reward item_id="19426" min="1" max="1" chance="0.01"/>
-				<reward item_id="19425" min="1" max="1" chance="0.01"/>
-				<reward item_id="19419" min="1" max="1" chance="0.005"/>
-				<reward item_id="19420" min="1" max="1" chance="0.01"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="35337" min="1" max="1" chance="0.5"/>
-			<reward item_id="35338" min="1" max="1" chance="0.5"/>
-			<reward item_id="35343" min="1" max="1" chance="0.5"/>
-			<reward item_id="35344" min="1" max="1" chance="0.5"/>
-			<reward item_id="35349" min="1" max="1" chance="0.5"/>
-			<reward item_id="35354" min="1" max="1" chance="0.5"/>
-			<reward item_id="35473" min="1" max="1" chance="0.05"/>
-			<reward item_id="35468" min="1" max="1" chance="0.05"/>
-			<reward item_id="35467" min="1" max="1" chance="0.05"/>
-			<reward item_id="35462" min="1" max="1" chance="0.05"/>
-			<reward item_id="35461" min="1" max="1" chance="0.05"/>
-			<reward item_id="35478" min="1" max="1" chance="0.05"/>
-		</rewardlist>
 	</npc>
 	<npc id="23221" name="Adac the Engineer" title="Chief Engineer">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443641"/>
 		<set name="baseHpRate" value="1"/>
@@ -1191,15 +1041,16 @@
 		<set name="rewardExp" value="14612219"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="202801"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85622"/>
+		<set name="basePDef" value="7188"/>
+		<set name="baseMAtk" value="3185"/>
+		<set name="baseMDef" value="1623"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1219,12 +1070,13 @@
 		</skills>
 	</npc>
 	<npc id="23222" name="Borok the Engineer" title="Chief Engineer">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443641"/>
 		<set name="baseHpRate" value="1"/>
@@ -1240,15 +1092,16 @@
 		<set name="rewardExp" value="14612219"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="202801"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85622"/>
+		<set name="basePDef" value="7188"/>
+		<set name="baseMAtk" value="3185"/>
+		<set name="baseMDef" value="1623"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1268,12 +1121,13 @@
 		</skills>
 	</npc>
 	<npc id="23223" name="Koja the Engineer" title="Chief Engineer">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443641"/>
 		<set name="baseHpRate" value="1"/>
@@ -1289,15 +1143,16 @@
 		<set name="rewardExp" value="14612219"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="202801"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85622"/>
+		<set name="basePDef" value="7188"/>
+		<set name="baseMAtk" value="3185"/>
+		<set name="baseMDef" value="1623"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1317,12 +1172,13 @@
 		</skills>
 	</npc>
 	<npc id="23224" name="Kunda's Gaurdian" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="356248"/>
 		<set name="baseHpRate" value="1"/>
@@ -1338,15 +1194,16 @@
 		<set name="rewardExp" value="24400629"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="537895"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="86080"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="3202"/>
+		<set name="baseMDef" value="1632"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -1366,12 +1223,13 @@
 		</skills>
 	</npc>
 	<npc id="23225" name="Kunda's Berserker" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="356248"/>
 		<set name="baseHpRate" value="1"/>
@@ -1387,15 +1245,16 @@
 		<set name="rewardExp" value="24400629"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="537895"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="86080"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="3202"/>
+		<set name="baseMDef" value="1632"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -1413,53 +1272,15 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="59266" max="138365" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="19310" min="1" max="1" chance="20.92"/>
-				<reward item_id="19312" min="1" max="1" chance="11.93"/>
-				<reward item_id="34990" min="20" max="60" chance="5.056"/>
-				<reward item_id="34991" min="28" max="84" chance="9.118"/>
-				<reward item_id="34992" min="81" max="243" chance="3.098"/>
-				<reward item_id="19294" min="1" max="1" chance="1"/>
-				<reward item_id="19275" min="1" max="1" chance="0.5"/>
-				<reward item_id="17527" min="1" max="1" chance="0.5"/>
-				<reward item_id="19273" min="1" max="1" chance="0.5"/>
-				<reward item_id="19292" min="1" max="1" chance="0.5"/>
-				<reward item_id="19303" min="1" max="1" chance="0.5"/>
-				<reward item_id="19298" min="1" max="1" chance="0.5"/>
-				<reward item_id="19438" min="1" max="1" chance="0.005"/>
-				<reward item_id="19433" min="1" max="1" chance="0.005"/>
-				<reward item_id="19429" min="1" max="1" chance="0.01"/>
-				<reward item_id="19427" min="1" max="1" chance="0.005"/>
-				<reward item_id="19411" min="1" max="1" chance="0.005"/>
-				<reward item_id="19413" min="1" max="1" chance="0.005"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="35329" min="1" max="1" chance="0.5"/>
-			<reward item_id="35331" min="1" max="1" chance="0.5"/>
-			<reward item_id="35347" min="1" max="1" chance="0.5"/>
-			<reward item_id="35351" min="1" max="1" chance="0.5"/>
-			<reward item_id="35356" min="1" max="1" chance="0.5"/>
-			<reward item_id="35345" min="1" max="1" chance="0.1"/>
-			<reward item_id="35475" min="1" max="1" chance="0.05"/>
-			<reward item_id="35471" min="1" max="1" chance="0.05"/>
-			<reward item_id="35455" min="1" max="1" chance="0.05"/>
-			<reward item_id="35453" min="1" max="1" chance="0.05"/>
-			<reward item_id="35480" min="1" max="1" chance="0.05"/>
-			<reward item_id="35469" min="1" max="1" chance="0.01"/>
-		</rewardlist>
 	</npc>
 	<npc id="23226" name="Kunda's Executor" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="356248"/>
 		<set name="baseHpRate" value="1"/>
@@ -1475,15 +1296,16 @@
 		<set name="rewardExp" value="24400629"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="537895"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="86080"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="3202"/>
+		<set name="baseMDef" value="1632"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -1501,53 +1323,15 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="59266" max="138365" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="19314" min="1" max="1" chance="14.86"/>
-				<reward item_id="34991" min="28" max="48" chance="9.122"/>
-				<reward item_id="19313" min="1" max="1" chance="6.400"/>
-				<reward item_id="34990" min="20" max="60" chance="5.079"/>
-				<reward item_id="34992" min="81" max="243" chance="3.136"/>
-				<reward item_id="19295" min="1" max="1" chance="1"/>
-				<reward item_id="19300" min="1" max="1" chance="1"/>
-				<reward item_id="19271" min="1" max="1" chance="0.5"/>
-				<reward item_id="17527" min="1" max="1" chance="0.5"/>
-				<reward item_id="19304" min="1" max="1" chance="0.5"/>
-				<reward item_id="19293" min="1" max="1" chance="0.5"/>
-				<reward item_id="19276" min="1" max="1" chance="0.5"/>
-				<reward item_id="19414" min="1" max="1" chance="0.005"/>
-				<reward item_id="19428" min="1" max="1" chance="0.005"/>
-				<reward item_id="19430" min="1" max="1" chance="0.01"/>
-				<reward item_id="19435" min="1" max="1" chance="0.01"/>
-				<reward item_id="19439" min="1" max="1" chance="0.01"/>
-				<reward item_id="19409" min="1" max="1" chance="0.005"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="35327" min="1" max="1" chance="0.5"/>
-			<reward item_id="35332" min="1" max="1" chance="0.5"/>
-			<reward item_id="35346" min="1" max="1" chance="0.5"/>
-			<reward item_id="35348" min="1" max="1" chance="0.5"/>
-			<reward item_id="35353" min="1" max="1" chance="0.5"/>
-			<reward item_id="35357" min="1" max="1" chance="0.5"/>
-			<reward item_id="35477" min="1" max="1" chance="0.05"/>
-			<reward item_id="35472" min="1" max="1" chance="0.05"/>
-			<reward item_id="35470" min="1" max="1" chance="0.05"/>
-			<reward item_id="35456" min="1" max="1" chance="0.05"/>
-			<reward item_id="35451" min="1" max="1" chance="0.05"/>
-			<reward item_id="35481" min="1" max="1" chance="0.05"/>
-		</rewardlist>
 	</npc>
 	<npc id="23227" name="Beggar Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
 		<set name="baseHpRate" value="1"/>
@@ -1563,15 +1347,16 @@
 		<set name="rewardExp" value="3887251"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="84557"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1590,12 +1375,13 @@
 		</skills>
 	</npc>
 	<npc id="23228" name="Beggar Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
 		<set name="baseHpRate" value="1"/>
@@ -1611,15 +1397,16 @@
 		<set name="rewardExp" value="3887251"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="84557"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1638,12 +1425,13 @@
 		</skills>
 	</npc>
 	<npc id="23229" name="Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443641"/>
 		<set name="baseHpRate" value="1"/>
@@ -1659,15 +1447,16 @@
 		<set name="rewardExp" value="11645165"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="161622"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85622"/>
+		<set name="basePDef" value="7188"/>
+		<set name="baseMAtk" value="3185"/>
+		<set name="baseMDef" value="1623"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1686,12 +1475,13 @@
 		</skills>
 	</npc>
 	<npc id="23230" name="Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="37.0"/>
 		<set name="level" value="98"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443641"/>
 		<set name="baseHpRate" value="1"/>
@@ -1707,15 +1497,16 @@
 		<set name="rewardExp" value="6655121"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="92365"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85622"/>
+		<set name="basePDef" value="7188"/>
+		<set name="baseMAtk" value="3185"/>
+		<set name="baseMDef" value="1623"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1734,12 +1525,13 @@
 		</skills>
 	</npc>
 	<npc id="23231" name="Children's Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
 		<set name="baseHpRate" value="1"/>
@@ -1755,15 +1547,16 @@
 		<set name="rewardExp" value="6194658"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="134749"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1782,12 +1575,13 @@
 		</skills>
 	</npc>
 	<npc id="23232" name="Children's Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="355923"/>
 		<set name="baseHpRate" value="1"/>
@@ -1803,15 +1597,16 @@
 		<set name="rewardExp" value="6194658"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="134749"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -1830,155 +1625,15 @@
 		</skills>
 	</npc>
 	<npc id="23233" name="Engineer Couch" title="">
-		<set name="collision_radius" value="24.0"/>
-		<set name="collision_height" value="40.0"/>
-		<set name="level" value="97"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="355923"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22800"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="98"/>
-		<set name="baseCON" value="87"/>
-		<set name="baseDEX" value="83"/>
-		<set name="baseINT" value="11"/>
-		<set name="baseWIT" value="115"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="4224008"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="91882"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="186"/>
-		<set name="baseWalkSpd" value="50"/>
-		<attributes>
-			<defence attribute="fire" value="280"/>
-			<defence attribute="water" value="280"/>
-			<defence attribute="wind" value="280"/>
-			<defence attribute="earth" value="280"/>
-			<defence attribute="holy" value="280"/>
-			<defence attribute="unholy" value="280"/>
-		</attributes>
-		<skills>
-			<skill id="4411" level="13"/>
-			<skill id="4413" level="9"/>
-			<skill id="4414" level="1"/>
-			<skill id="4416" level="6"/>
-			<skill id="5462" level="1"/>
-		<skill id="4410" level="13"/>
-			<skill id="4412" level="13"/>
-		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="20801" max="48606" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73"/>
-				<reward item_id="34991" min="28" max="84" chance="6.772"/>
-				<reward item_id="34990" min="20" max="60" chance="3.768"/>
-				<reward item_id="19296" min="1" max="1" chance="0.5"/>
-				<reward item_id="19276" min="1" max="1" chance="0.5"/>
-				<reward item_id="35332" min="1" max="1" chance="0.5"/>
-				<reward item_id="35349" min="1" max="1" chance="0.5"/>
-				<reward item_id="19431" min="1" max="1" chance="0.005"/>
-				<reward item_id="19414" min="1" max="1" chance="0.005"/>
-				<reward item_id="35456" min="1" max="1" chance="0.005"/>
-				<reward item_id="35473" min="1" max="1" chance="0.005"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19296" min="1" max="1" chance="1"/>
-			<reward item_id="19276" min="1" max="1" chance="0.5"/>
-		</rewardlist>
-	</npc>
-	<npc id="23234" name="Engineer Couch" title="">
-		<set name="collision_radius" value="24.0"/>
-		<set name="collision_height" value="40.0"/>
-		<set name="level" value="97"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="355923"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="22800"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="98"/>
-		<set name="baseCON" value="87"/>
-		<set name="baseDEX" value="83"/>
-		<set name="baseINT" value="11"/>
-		<set name="baseWIT" value="115"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="4224008"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="91882"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="186"/>
-		<set name="baseWalkSpd" value="50"/>
-		<attributes>
-			<defence attribute="fire" value="280"/>
-			<defence attribute="water" value="280"/>
-			<defence attribute="wind" value="280"/>
-			<defence attribute="earth" value="280"/>
-			<defence attribute="holy" value="280"/>
-			<defence attribute="unholy" value="280"/>
-		</attributes>
-		<skills>
-			<skill id="4411" level="13"/>
-			<skill id="4413" level="13"/>
-			<skill id="4414" level="1"/>
-			<skill id="4416" level="6"/>
-			<skill id="5462" level="1"/>
-		<skill id="4410" level="15"/>
-		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="20801" max="48606" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73"/>
-				<reward item_id="34991" min="28" max="84" chance="6.772"/>
-				<reward item_id="34990" min="20" max="60" chance="3.768"/>
-				<reward item_id="19296" min="1" max="1" chance="0.5"/>
-				<reward item_id="19276" min="1" max="1" chance="0.5"/>
-				<reward item_id="35332" min="1" max="1" chance="0.5"/>
-				<reward item_id="35349" min="1" max="1" chance="0.5"/>
-				<reward item_id="19431" min="1" max="1" chance="0.005"/>
-				<reward item_id="19414" min="1" max="1" chance="0.005"/>
-				<reward item_id="35456" min="1" max="1" chance="0.005"/>
-				<reward item_id="35473" min="1" max="1" chance="0.005"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19296" min="1" max="1" chance="1"/>
-			<reward item_id="19276" min="1" max="1" chance="0.5"/>
-		</rewardlist>
-	</npc>
-	<npc id="23235" name="Kunda" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="443641.0"/>
+		<set name="baseHpMax" value="443641"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="23174"/>
@@ -1992,15 +1647,16 @@
 		<set name="rewardExp" value="10457307"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="145135"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85622"/>
+		<set name="basePDef" value="7188"/>
+		<set name="baseMAtk" value="3185"/>
+		<set name="baseMDef" value="1623"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -2018,41 +1674,67 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<ai_params>
-			<set name="noRandomWalk" value="true"/>
-		</ai_params>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="35913" max="83796" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73"/>
-				<reward item_id="34991" min="28" max="84" chance="6.772"/>
-				<reward item_id="34990" min="20" max="60" chance="3.768"/>
-				<reward item_id="19278" min="1" max="1" chance="0.5"/>
-				<reward item_id="19275" min="1" max="1" chance="0.5"/>
-				<reward item_id="35331" min="1" max="1" chance="0.5"/>
-				<reward item_id="35334" min="1" max="1" chance="0.5"/>
-				<reward item_id="19413" min="1" max="1" chance="0.005"/>
-				<reward item_id="19416" min="1" max="1" chance="0.005"/>
-				<reward item_id="35455" min="1" max="1" chance="0.005"/>
-				<reward item_id="35458" min="1" max="1" chance="0.005"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19275" min="1" max="1" chance="1"/>
-			<reward item_id="19278" min="1" max="1" chance="1"/>
-		</rewardlist>
 	</npc>
-	<npc id="23236" name="Kunda" title="">
-		<set name="collision_radius" value="22.0"/>
+	<npc id="23234" name="Engineer Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="collision_radius" value="24.0"/>
+		<set name="collision_height" value="40.0"/>
+		<set name="level" value="98"/>
+		<set name="type" value="Monster"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="443641"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="23174"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="98"/>
+		<set name="baseCON" value="87"/>
+		<set name="baseDEX" value="83"/>
+		<set name="baseINT" value="11"/>
+		<set name="baseWIT" value="115"/>
+		<set name="baseMEN" value="5"/>
+		<set name="rewardExp" value="13528103"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="187755"/>
+		<set name="basePAtk" value="85622"/>
+		<set name="basePDef" value="7188"/>
+		<set name="baseMAtk" value="3185"/>
+		<set name="baseMDef" value="1623"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="186"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
+		<attributes>
+			<defence attribute="fire" value="280"/>
+			<defence attribute="water" value="280"/>
+			<defence attribute="wind" value="280"/>
+			<defence attribute="earth" value="280"/>
+			<defence attribute="holy" value="280"/>
+			<defence attribute="unholy" value="280"/>
+		</attributes>
+		<skills>
+			<skill id="4410" level="15"/>
+			<skill id="4411" level="13"/>
+			<skill id="4413" level="13"/>
+			<skill id="4414" level="1"/>
+			<skill id="4416" level="6"/>
+			<skill id="5462" level="1"/>
+		</skills>
+	</npc>
+	<npc id="23235" name="Kunda" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="443641.0"/>
+		<set name="baseHpMax" value="621600000"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2025740"/>
@@ -2066,15 +1748,66 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="86080"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="3202"/>
+		<set name="baseMDef" value="1632"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
+		<attributes>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
+		</attributes>
+		<skills>
+			<skill id="4410" level="13"/>
+			<skill id="4411" level="13"/>
+			<skill id="4412" level="13"/>
+			<skill id="4414" level="1"/>
+			<skill id="4416" level="6"/>
+			<skill id="5462" level="1"/>
+		</skills>
+	</npc>
+	<npc id="23236" name="Kunda" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="collision_radius" value="22.0"/>
+		<set name="collision_height" value="46.0"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="621600000"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2025740"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="98"/>
+		<set name="baseCON" value="87"/>
+		<set name="baseDEX" value="83"/>
+		<set name="baseINT" value="11"/>
+		<set name="baseWIT" value="115"/>
+		<set name="baseMEN" value="5"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="86080"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="3202"/>
+		<set name="baseMDef" value="1632"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="186"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2091,39 +1824,15 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<ai_params>
-			<set name="noRandomWalk" value="true"/>
-		</ai_params>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="35913" max="83796" chance="100.0000"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="34992" min="9" max="27" chance="20.73"/>
-				<reward item_id="34991" min="28" max="84" chance="6.772"/>
-				<reward item_id="34990" min="20" max="60" chance="3.768"/>
-				<reward item_id="19278" min="1" max="1" chance="0.5"/>
-				<reward item_id="19275" min="1" max="1" chance="0.5"/>
-				<reward item_id="35331" min="1" max="1" chance="0.5"/>
-				<reward item_id="35334" min="1" max="1" chance="0.5"/>
-				<reward item_id="19413" min="1" max="1" chance="0.005"/>
-				<reward item_id="19416" min="1" max="1" chance="0.005"/>
-				<reward item_id="35455" min="1" max="1" chance="0.005"/>
-				<reward item_id="35458" min="1" max="1" chance="0.005"/>
-			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19275" min="1" max="1" chance="1"/>
-			<reward item_id="19278" min="1" max="1" chance="1"/>
-		</rewardlist>
 	</npc>
 	<npc id="23237" name="Engineer Couch" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="98"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="443641"/>
 		<set name="baseHpRate" value="1"/>
@@ -2139,15 +1848,16 @@
 		<set name="rewardExp" value="13528103"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="187755"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85622"/>
+		<set name="basePDef" value="7188"/>
+		<set name="baseMAtk" value="3185"/>
+		<set name="baseMDef" value="1623"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -2166,12 +1876,13 @@
 		</skills>
 	</npc>
 	<npc id="23238" name="Kurklin the Shredder" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="65.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
 		<set name="baseHpRate" value="1"/>
@@ -2187,15 +1898,16 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="86080"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="3202"/>
+		<set name="baseMDef" value="1632"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2203,6 +1915,7 @@
 			<defence attribute="earth" value="300"/>
 			<defence attribute="holy" value="247"/>
 			<defence attribute="unholy" value="333"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
 		<skills>
 			<skill id="4414" level="3"/>
@@ -2211,12 +1924,13 @@
 		</skills>
 	</npc>
 	<npc id="23239" name="Heidmann" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="64.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
 		<set name="baseHpRate" value="1"/>
@@ -2232,15 +1946,16 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="86080"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="3202"/>
+		<set name="baseMDef" value="1632"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2248,6 +1963,7 @@
 			<defence attribute="earth" value="300"/>
 			<defence attribute="holy" value="247"/>
 			<defence attribute="unholy" value="333"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
 		<skills>
 			<skill id="4414" level="3"/>
@@ -2256,11 +1972,13 @@
 		</skills>
 	</npc>
 	<npc id="23240" name="Mandragora" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="13.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Npc"/>
-		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1"/>
@@ -2276,15 +1994,16 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="86080"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="3202"/>
+		<set name="baseMDef" value="1632"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="80"/>
 		<set name="baseWalkSpd" value="80"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="247"/>
 			<defence attribute="water" value="300"/>
@@ -2300,11 +2019,13 @@
 		</skills>
 	</npc>
 	<npc id="23241" name="Mandragora" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Npc"/>
-		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1"/>
@@ -2320,15 +2041,16 @@
 		<set name="rewardExp" value="3229676"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="69138"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="84248"/>
+		<set name="basePDef" value="7073"/>
+		<set name="baseMAtk" value="3134"/>
+		<set name="baseMDef" value="1597"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="80"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="207"/>
 			<defence attribute="water" value="260"/>
@@ -2344,12 +2066,13 @@
 		</skills>
 	</npc>
 	<npc id="23242" name="Pafuron" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="65.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="693017"/>
 		<set name="baseHpRate" value="1"/>
@@ -2365,15 +2088,16 @@
 		<set name="rewardExp" value="8858949"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="122097"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -2381,6 +2105,7 @@
 			<defence attribute="earth" value="280"/>
 			<defence attribute="holy" value="227"/>
 			<defence attribute="unholy" value="313"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
 		<skills>
 			<skill id="4414" level="3"/>
@@ -2389,12 +2114,13 @@
 		</skills>
 	</npc>
 	<npc id="23243" name="Krutati" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="64.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="693017"/>
 		<set name="baseHpRate" value="1"/>
@@ -2410,15 +2136,16 @@
 		<set name="rewardExp" value="8858949"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="122097"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -2426,6 +2153,7 @@
 			<defence attribute="earth" value="280"/>
 			<defence attribute="holy" value="227"/>
 			<defence attribute="unholy" value="313"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
 		<skills>
 			<skill id="4414" level="1"/>
@@ -2434,12 +2162,13 @@
 		</skills>
 	</npc>
 	<npc id="23244" name="Alluring Irene" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="49.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="627960"/>
 		<set name="baseHpRate" value="1"/>
@@ -2455,15 +2184,16 @@
 		<set name="rewardExp" value="8618832"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="115422"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="85164"/>
+		<set name="basePDef" value="7150"/>
+		<set name="baseMAtk" value="3168"/>
+		<set name="baseMDef" value="1614"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="280"/>
 			<defence attribute="water" value="280"/>
@@ -2471,6 +2201,7 @@
 			<defence attribute="earth" value="280"/>
 			<defence attribute="holy" value="247"/>
 			<defence attribute="unholy" value="444"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
 		<skills>
 			<skill id="4414" level="3"/>
@@ -2479,12 +2210,13 @@
 		</skills>
 	</npc>
 	<npc id="23245" name="Isaad" title="Watchman of the Eye of Inifnity">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Ranger"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="27.5"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="1100"/>
 		<set name="baseHpMax" value="1086370"/>
 		<set name="baseHpRate" value="1"/>
@@ -2500,15 +2232,16 @@
 		<set name="rewardExp" value="8677232"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="122097"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="84706"/>
+		<set name="basePDef" value="7111"/>
+		<set name="baseMAtk" value="3151"/>
+		<set name="baseMDef" value="1606"/>
 		<set name="basePAtkSpd" value="266"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="170"/>
 		<set name="baseWalkSpd" value="45"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="260"/>
 			<defence attribute="water" value="260"/>
@@ -2524,12 +2257,13 @@
 		</skills>
 	</npc>
 	<npc id="23246" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="122945"/>
 		<set name="baseHpRate" value="1"/>
@@ -2545,32 +2279,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23247" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="122945"/>
 		<set name="baseHpRate" value="1"/>
@@ -2586,32 +2322,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23248" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="128077"/>
 		<set name="baseHpRate" value="1"/>
@@ -2627,32 +2365,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="266"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23249" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="128077"/>
 		<set name="baseHpRate" value="1"/>
@@ -2668,32 +2408,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="266"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="40"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23250" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125837"/>
 		<set name="baseHpRate" value="1"/>
@@ -2709,32 +2451,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23251" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125837"/>
 		<set name="baseHpRate" value="1"/>
@@ -2750,32 +2494,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23252" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="73367"/>
 		<set name="baseHpRate" value="1"/>
@@ -2791,32 +2537,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23253" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="73367"/>
 		<set name="baseHpRate" value="1"/>
@@ -2832,32 +2580,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23254" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="73367"/>
 		<set name="baseHpRate" value="1"/>
@@ -2873,32 +2623,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23255" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="47.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125837"/>
 		<set name="baseHpRate" value="1"/>
@@ -2914,32 +2666,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23256" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="21.0"/>
 		<set name="collision_height" value="23.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125837"/>
 		<set name="baseHpRate" value="1"/>
@@ -2955,32 +2709,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="130"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23257" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="30.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="128077"/>
 		<set name="baseHpRate" value="1"/>
@@ -2996,32 +2752,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="53"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23258" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125837"/>
 		<set name="baseHpRate" value="1"/>
@@ -3037,32 +2795,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="72"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23259" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="128077"/>
 		<set name="baseHpRate" value="1"/>
@@ -3078,32 +2838,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="60"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23260" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="15.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
 		<set name="baseHpRate" value="1"/>
@@ -3119,32 +2881,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23261" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="128077"/>
 		<set name="baseHpRate" value="1"/>
@@ -3160,32 +2924,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="18"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23262" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="122945"/>
 		<set name="baseHpRate" value="1"/>
@@ -3201,32 +2967,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23263" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125144"/>
 		<set name="baseHpRate" value="1"/>
@@ -3242,32 +3010,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="72"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23264" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125144"/>
 		<set name="baseHpRate" value="1"/>
@@ -3283,32 +3053,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="72"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23265" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125144"/>
 		<set name="baseHpRate" value="1"/>
@@ -3324,32 +3096,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="72"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23266" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="21.0"/>
 		<set name="collision_height" value="23.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125837"/>
 		<set name="baseHpRate" value="1"/>
@@ -3365,31 +3139,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="130"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23267" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="31.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Npc"/>
-		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
 		<set name="baseHpRate" value="1"/>
@@ -3405,32 +3182,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23268" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="43.5"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="175201"/>
 		<set name="baseHpRate" value="1"/>
@@ -3446,32 +3225,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23269" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="41.5"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="176172"/>
 		<set name="baseHpRate" value="1"/>
@@ -3487,32 +3268,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="53"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23270" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125144"/>
 		<set name="baseHpRate" value="1"/>
@@ -3528,32 +3311,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23271" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125837"/>
 		<set name="baseHpRate" value="1"/>
@@ -3569,32 +3354,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="266"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="40"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23272" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125837"/>
 		<set name="baseHpRate" value="1"/>
@@ -3610,32 +3397,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23273" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125837"/>
 		<set name="baseHpRate" value="1"/>
@@ -3651,32 +3440,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="266"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="30"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23274" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
 		<set name="baseHpRate" value="1"/>
@@ -3692,32 +3483,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23275" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
 		<set name="baseHpRate" value="1"/>
@@ -3733,32 +3526,34 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>
 	<npc id="23276" name="" title="">
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="26.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="153693"/>
 		<set name="baseHpRate" value="1"/>
@@ -3774,22 +3569,23 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="basePAtk" value="22423"/>
+		<set name="basePDef" value="7227"/>
+		<set name="baseMAtk" value="11597"/>
+		<set name="baseMDef" value="3429"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="40"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<skills/>
 	</npc>

@@ -59,8 +59,8 @@ public class _113_StatusOfTheBeaconTower extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("torant_q0113_0201.htm"))
 		{
-			st.giveItems(ADENA_ID, 154800);
-			st.addExpAndSp(619300, 44200);
+			st.giveItems(ADENA_ID, 247600);
+			st.addExpAndSp(1147830, 1352735);
 			st.takeItems(BOX, 1);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);

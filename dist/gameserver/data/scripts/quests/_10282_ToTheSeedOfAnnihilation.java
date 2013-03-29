@@ -59,6 +59,7 @@ public class _10282_ToTheSeedOfAnnihilation extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("32734-02.htm"))
 		{
 			st.unset("cond");
+			st.giveItems(57, 212182);
 			st.addExpAndSp(1148480, 99110);
 			st.takeItems(SOA_ORDERS, -1);
 			st.exitCurrentQuest(false);

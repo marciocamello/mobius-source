@@ -62,7 +62,8 @@ public class _10278_MutatedKaneusHeine extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("30907-02.htm"))
 		{
-			st.giveItems(57, 180000);
+			st.giveItems(57, 100000);
+			st.addExpAndSp(500000, 330000);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

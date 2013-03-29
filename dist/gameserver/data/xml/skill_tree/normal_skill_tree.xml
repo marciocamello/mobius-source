@@ -17918,6 +17918,8 @@
 			<skill id="1954" level="1" min_level="85" name="Flying Body Reinforcement" race="kamael"/>
 			<!--Default by level skills-->
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
+			<skill id="10249" level="1" name="Sigel Knight Air Chain Skill" min_level="85"/>
+			<skill id="10250" level="1" name="Sigel Knight Knock Chain Skill" min_level="85"/>
 			<skill id="239" level="8" name="Expertise R" min_level="85"/>
 			<skill id="239" level="9" name="Expertise R95" min_level="95"/>
 			<skill id="239" level="10" name="Expertise R99" min_level="99"/>
@@ -18108,6 +18110,8 @@
 			<skill id="1954" level="1" name="Flying Body Reinforcement" race="kamael" min_level="85"/>
 			<!--Default by level skills-->
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
+			<skill id="10499" level="1" name="Tyrr Warrior Air Chain Skill" min_level="85"/>
+			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85"/>
 			<skill id="239" level="10" name="Expertise R99" min_level="99"/>
 			<skill id="239" level="8" name="Expertise R" min_level="85"/>
 			<skill id="239" level="9" name="Expertise R95" min_level="95"/>
@@ -18290,6 +18294,8 @@
 			<skill id="1954" level="1" name="Flying Body Reinforcement" race="kamael" min_level="85"/>
 			<!--Base skills-->
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
+			<skill id="10749" level="1" name="Othell Rogue Air Chain Skill" min_level="85"/>
+			<skill id="10750" level="1" name="Othell Rogue Knock Chain Skill" min_level="85"/>
 			<skill id="239" level="10" name="Expertise R99" min_level="99" />
 			<skill id="239" level="8" name="Expertise R" min_level="85" />
 			<skill id="239" level="9" name="Expertise R95" min_level="95" />
@@ -18493,6 +18499,8 @@
 			<skill id="1954" level="1" name="Flying Body Reinforcement" race="kamael" min_level="85"/>
 			<!--Default by level skills-->
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
+			<skill id="10999" level="1" name="Yul Archer Air Chain Skill" min_level="85"/>
+			<skill id="11000" level="1" name="Yul Archer Knock Chain Skill" min_level="85"/>
 			<skill id="239" level="8" name="Expertise R" min_level="85" />
 			<skill id="239" level="9" name="Expertise R95" min_level="95" />
 			<skill id="239" level="10" name="Expertise R99" min_level="99" />
@@ -18696,6 +18704,8 @@
 			<skill id="1954" level="1" name="Flying Body Reinforcement" race="kamael" min_level="85"/>
 			<!--Default by level skills-->
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
+			<skill id="11247" level="1" name="Feoh Wizard Air Chain Skill" min_level="85"/>
+			<skill id="11249" level="1" name="Feoh Wizard Knock Chain Skill" min_level="85"/>
 			<skill id="239" level="8" name="Expertise R" min_level="85" />
 			<skill id="239" level="9" name="Expertise R95" min_level="95" />
 			<skill id="239" level="10" name="Expertise R99" min_level="99" />
@@ -18903,6 +18913,8 @@
 			<skill id="1954" level="1" name="Flying Body Reinforcement" race="kamael" min_level="85"/>
 			<!--Default by level skills-->
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
+			<skill id="11749" level="1" name="Iss Enchanter Air Chain Skill" min_level="85"/>
+			<skill id="11750" level="1" name="Iss Enchanter Knock Chain Skill" min_level="85"/>
 			<skill id="239" level="8" name="Expertise R" min_level="85" />
 			<skill id="239" level="9" name="Expertise R95" min_level="95" />
 			<skill id="239" level="10" name="Expertise R99" min_level="99" />
@@ -19117,6 +19129,8 @@
 			<skill id="1954" level="1" name="Flying Body Reinforcement" race="kamael" min_level="85"/>
 			<!--Default by level skills-->
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
+			<skill id="11499" level="1" name="Wynn Summoner Air Chain Skill" min_level="85"/>
+			<skill id="11500" level="1" name="Wynn Summoner Knock Chain Skill" min_level="85"/>
 			<skill id="239" level="8" name="Expertise R" min_level="85" />
 			<skill id="239" level="9" name="Expertise R95" min_level="95" />
 			<skill id="239" level="10" name="Expertise R99" min_level="99" />
@@ -19334,6 +19348,8 @@
 			<skill id="1954" level="1" name="Flying Body Reinforcement" race="kamael" min_level="85"/>
 			<!--Default by level skills-->
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
+			<skill id="11999" level="1" name="Aerore Healer Air Chain Skill" min_level="85"/>
+			<skill id="12000" level="1" name="Aerore Healer Knock Chain Skill" min_level="85"/>
 			<skill id="239" level="8" name="Expertise R" min_level="85" />
 			<skill id="239" level="9" name="Expertise R95" min_level="95" />
 			<skill id="239" level="10" name="Expertise R99" min_level="99" />
@@ -19505,6 +19521,7 @@
 			<skill id="11821" level="1" cost="10000000" name="Critical of Saha" min_level="85" />
 			<skill id="11822" level="1" cost="10000000" name="Force of Saha" min_level="85" />
 			<skill id="11823" level="1" cost="10000000" name="Speed of Saha" min_level="85" />
+
 			<skill id="11824" level="1" cost="10000000" name="Resistance of Saha" min_level="85" />
 			<skill id="11825" level="1" cost="10000000" name="Clarity of Saha" min_level="85" />
 			<skill id="11826" level="1" cost="10000000" name="Emblem of Salvation" min_level="85" />

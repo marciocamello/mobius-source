@@ -4,11 +4,12 @@
 <list>
     <etcitem id="17600" name="Scroll of Afterlife">
         <!--Done By Darvin (c)Java - Team 2012-->
+		<set name="icon" value="icon.q10338_book_of_hades"/>
         <set name="class" value="OTHER"/>
         <set name="ex_type" value="OTHER_ITEMS"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
-        <set name="type" value="OTHER"/>
+        <set name="type" value="QUEST"/>
     </etcitem>
     <etcitem id="17601" name="Earth Wyrm Heart Fragment">
         <!--Done By Darvin (c)Java - Team 2012-->

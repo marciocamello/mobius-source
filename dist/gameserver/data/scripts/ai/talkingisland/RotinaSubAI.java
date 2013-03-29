@@ -110,22 +110,22 @@ public class RotinaSubAI extends DefaultAI
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.YOULL_EAERN_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
+				ns = NpcString.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
 				break;
 			case 2:
-				ns = NpcString.YOULL_EAERN_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
+				ns = NpcString.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
 				break;
 			case 3:
-				ns = NpcString.YOULL_EAERN_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
+				ns = NpcString.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
 				break;
 			case 4:
-				ns = NpcString.YOULL_EAERN_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
+				ns = NpcString.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
 				break;
 			case 5:
-				ns = NpcString.YOULL_EAERN_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
+				ns = NpcString.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
 				break;
 			default:
-				ns = NpcString.YOULL_EAERN_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
+				ns = NpcString.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
 				break;
 		}
 		Functions.npcSay(actor, ns);

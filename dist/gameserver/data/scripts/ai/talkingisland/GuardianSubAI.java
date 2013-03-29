@@ -110,10 +110,10 @@ public class GuardianSubAI extends DefaultAI
 		switch (Rnd.get(1))
 		{
 			case 1:
-				ns = NpcString.GUARDIAN_MESSEGE;
+				ns = NpcString.INFORMATION_IS_COLLECTED_IN_THE_MUSEUM_WHERE_CAN_LEARN_ABOUT_THE_HEROES;
 				break;
 			default:
-				ns = NpcString.GUARDIAN_MESSEGE;
+				ns = NpcString.INFORMATION_IS_COLLECTED_IN_THE_MUSEUM_WHERE_CAN_LEARN_ABOUT_THE_HEROES;
 				break;
 		}
 		Functions.npcSay(actor, ns);

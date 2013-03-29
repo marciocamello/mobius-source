@@ -110,22 +110,22 @@ public class RuksSubAI extends DefaultAI
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.THE_SEVEN_SINGS_ENDED;
+				ns = NpcString.THE_SEVEN_SIGNS_ENDED;
 				break;
 			case 2:
-				ns = NpcString.WE_NEED_TO_FIND_WEAKNESS;
+				ns = NpcString.WE_NEED_TO_FIND_HER_WEAKNESS;
 				break;
 			case 3:
-				ns = NpcString.THE_SEVEN_SINGS_ENDED;
+				ns = NpcString.THE_SEVEN_SIGNS_ENDED;
 				break;
 			case 4:
-				ns = NpcString.WE_NEED_TO_FIND_WEAKNESS;
+				ns = NpcString.WE_NEED_TO_FIND_HER_WEAKNESS;
 				break;
 			case 5:
-				ns = NpcString.THE_SEVEN_SINGS_ENDED;
+				ns = NpcString.THE_SEVEN_SIGNS_ENDED;
 				break;
 			default:
-				ns = NpcString.WE_NEED_TO_FIND_WEAKNESS;
+				ns = NpcString.WE_NEED_TO_FIND_HER_WEAKNESS;
 				break;
 		}
 		Functions.npcSay(actor, ns);

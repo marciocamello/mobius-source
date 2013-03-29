@@ -52,7 +52,7 @@ public final class RequestRegistWaitingSubstitute extends L2GameClientPacket
 			player.sendPacket(new ExWaitWaitingSubStituteInfo(player.getPartySearchStatus()));
 			if (player.getPartySearchStatus())
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_REGISTERED_ON_THE_WAITING_LIST);
+				// player.sendPacket(SystemMsg.YOU_ARE_REGISTERED_ON_THE_WAITING_LIST);
 				psm.addLookingForParty(player);
 				for (Player activeChar : psm.getWannaToChangeThisPlayers())
 				{

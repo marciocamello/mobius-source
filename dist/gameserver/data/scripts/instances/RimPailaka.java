@@ -25,112 +25,48 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.Location;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * Rim Pailaka - Rune
+ * @author pchayka
  */
 public class RimPailaka extends Reflection
 {
-	/**
-	 * Field SeducedKnight. (value is 36562)
-	 */
 	private static final int SeducedKnight = 36562;
-	/**
-	 * Field SeducedRanger. (value is 36563)
-	 */
 	private static final int SeducedRanger = 36563;
-	/**
-	 * Field SeducedMage. (value is 36564)
-	 */
 	private static final int SeducedMage = 36564;
-	/**
-	 * Field SeducedWarrior. (value is 36565)
-	 */
 	private static final int SeducedWarrior = 36565;
-	/**
-	 * Field KanadisGuide1. (value is 25659)
-	 */
 	private static final int KanadisGuide1 = 25659;
-	/**
-	 * Field KanadisGuide2. (value is 25660)
-	 */
 	private static final int KanadisGuide2 = 25660;
-	/**
-	 * Field KanadisGuide3. (value is 25661)
-	 */
 	private static final int KanadisGuide3 = 25661;
-	/**
-	 * Field KanadisFollower1. (value is 25662)
-	 */
 	private static final int KanadisFollower1 = 25662;
-	/**
-	 * Field KanadisFollower2. (value is 25663)
-	 */
 	private static final int KanadisFollower2 = 25663;
-	/**
-	 * Field KanadisFollower3. (value is 25664)
-	 */
 	private static final int KanadisFollower3 = 25664;
-	/**
-	 * Field initdelay.
-	 */
 	private static final long initdelay = 30 * 1000L;
-	/**
-	 * Field firstwavedelay.
-	 */
 	private static final long firstwavedelay = 120 * 1000L;
-	/**
-	 * Field secondwavedelay.
-	 */
-	private static final long secondwavedelay = 480 * 1000L;
-	/**
-	 * Field thirdwavedelay.
-	 */
-	private static final long thirdwavedelay = 480 * 1000L;
-	/**
-	 * Field initTask.
-	 */
+	private static final long secondwavedelay = 480 * 1000L; // 8 ����� ����� ������ �����
+	private static final long thirdwavedelay = 480 * 1000L; // 16 ����� ����� ������ �����
+	
 	private ScheduledFuture<?> initTask;
-	/**
-	 * Field firstwaveTask.
-	 */
 	private ScheduledFuture<?> firstwaveTask;
-	/**
-	 * Field secondWaveTask.
-	 */
 	ScheduledFuture<?> secondWaveTask;
-	/**
-	 * Field thirdWaveTask.
-	 */
 	ScheduledFuture<?> thirdWaveTask;
 	
-	/**
-	 * Constructor for RimPailaka.
-	 */
 	public RimPailaka()
 	{
 		super();
 	}
 	
-	/**
-	 * Method onCreate.
-	 */
 	@Override
 	public void onCreate()
 	{
 		super.onCreate();
+		
 		ThreadPoolManager.getInstance().schedule(new CollapseTimer(10), (getInstancedZone().getTimelimit() - 10) * 60 * 1000L);
 		initTask = ThreadPoolManager.getInstance().schedule(new InvestigatorsSpawn(), initdelay);
 		firstwaveTask = ThreadPoolManager.getInstance().schedule(new FirstWave(), firstwavedelay);
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	public class InvestigatorsSpawn extends RunnableImpl
 	{
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -145,14 +81,8 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	public class FirstWave extends RunnableImpl
 	{
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -164,6 +94,7 @@ public class RimPailaka extends Reflection
 					player.sendPacket(new ExShowScreenMessage("First stage begins!", 3000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 				}
 			}
+			
 			Location bossnminions = new Location(50536, -12232, -9384, 32768);
 			addSpawnWithoutRespawn(KanadisGuide1, bossnminions, 0);
 			for (int i = 0; i < 10; i++)
@@ -174,14 +105,8 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	public class SecondWave extends RunnableImpl
 	{
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -193,6 +118,7 @@ public class RimPailaka extends Reflection
 					player.sendPacket(new ExShowScreenMessage("Second stage begins!", 3000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 				}
 			}
+			
 			Location bossnminions = new Location(50536, -12232, -9384, 32768);
 			addSpawnWithoutRespawn(KanadisGuide2, bossnminions, 0);
 			for (int i = 0; i < 10; i++)
@@ -203,14 +129,8 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	public class ThirdWave extends RunnableImpl
 	{
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -222,6 +142,7 @@ public class RimPailaka extends Reflection
 					player.sendPacket(new ExShowScreenMessage("Third stage begins!", 3000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 				}
 			}
+			
 			Location bossnminions = new Location(50536, -12232, -9384, 32768);
 			addSpawnWithoutRespawn(KanadisGuide3, bossnminions, 100);
 			addSpawnWithoutRespawn(KanadisGuide3, bossnminions, 100);
@@ -232,28 +153,15 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	public class CollapseTimer extends RunnableImpl
 	{
-		/**
-		 * Field _minutes.
-		 */
 		private int _minutes = 0;
 		
-		/**
-		 * Constructor for CollapseTimer.
-		 * @param minutes int
-		 */
 		public CollapseTimer(int minutes)
 		{
 			_minutes = minutes;
 		}
 		
-		/**
-		 * Method runImpl.
-		 */
 		@Override
 		public void runImpl()
 		{
@@ -268,9 +176,6 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
-	/**
-	 * Method onCollapse.
-	 */
 	@Override
 	public void onCollapse()
 	{
@@ -290,6 +195,7 @@ public class RimPailaka extends Reflection
 		{
 			thirdWaveTask.cancel(true);
 		}
+		
 		super.onCollapse();
 	}
 }

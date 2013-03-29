@@ -55,6 +55,7 @@ import lineage2.gameserver.skills.effects.EffectHealCPPercent;
 import lineage2.gameserver.skills.effects.EffectHealHPCP;
 import lineage2.gameserver.skills.effects.EffectHealOverTime;
 import lineage2.gameserver.skills.effects.EffectHealPercent;
+import lineage2.gameserver.skills.effects.EffectHellBinding;
 import lineage2.gameserver.skills.effects.EffectHourglass;
 import lineage2.gameserver.skills.effects.EffectImmobilize;
 import lineage2.gameserver.skills.effects.EffectIncreaseChargesOverTime;
@@ -254,6 +255,10 @@ public enum EffectType
 	 * Field HealPercent.
 	 */
 	HealPercent(EffectHealPercent.class, null, false),
+	/**
+	 * Field HellBinding.
+	 */
+	HellBinding(EffectHellBinding.class, null, false),
 	/**
 	 * Field HPDamPercent.
 	 */

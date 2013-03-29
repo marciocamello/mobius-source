@@ -112,8 +112,8 @@ public class _238_SuccessFailureOfBusiness extends Quest implements ScriptFile
 			{
 				st.takeAllItems(VicinityOfTheFieldOfSilenceResearchCenter);
 				st.takeAllItems(GuardianSpiritFragment);
-				st.giveItems(ADENA_ID, 283346);
-				st.addExpAndSp(1319736, 103553);
+				st.giveItems(ADENA_ID, 4498920);
+				st.addExpAndSp(21843270, 25080120);
 				st.setState(COMPLETED);
 				st.exitCurrentQuest(false);
 				htmltext = "32641-08.htm";

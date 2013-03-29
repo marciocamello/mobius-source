@@ -392,4 +392,9 @@ public class CommandChannel implements PlayerGroup
 	{
 		_matchingRoom = matchingRoom;
 	}
+	
+	public boolean isLeaderCommandChannel(Player player)
+	{
+		return getChannelLeader() == player;
+	}
 }

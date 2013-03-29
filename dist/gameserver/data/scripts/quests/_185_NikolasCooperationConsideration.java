@@ -91,8 +91,7 @@ public class _185_NikolasCooperationConsideration extends Quest implements Scrip
 			{
 				st.giveItems(Certificate, 1);
 			}
-			st.giveItems(ADENA_ID, 72527);
-			st.addExpAndSp(203717, 14032);
+			st.giveItems(ADENA_ID, 80598);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

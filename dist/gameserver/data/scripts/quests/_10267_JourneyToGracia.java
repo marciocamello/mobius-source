@@ -65,9 +65,9 @@ public class _10267_JourneyToGracia extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("32548-02.htm"))
 		{
-			st.giveItems(ADENA_ID, 92500);
+			st.giveItems(ADENA_ID, 1135000);
 			st.takeItems(Letter, -1);
-			st.addExpAndSp(75480, 7570);
+			st.addExpAndSp(5326400, 6000000);
 			st.unset("cond");
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);

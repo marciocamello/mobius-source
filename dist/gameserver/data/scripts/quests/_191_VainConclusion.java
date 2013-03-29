@@ -72,8 +72,7 @@ public class _191_VainConclusion extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("30512-02.htm"))
 		{
-			st.giveItems(ADENA_ID, 117327);
-			st.addExpAndSp(309467, 20614);
+			st.giveItems(ADENA_ID, 134292);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

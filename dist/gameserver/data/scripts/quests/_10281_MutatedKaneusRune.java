@@ -60,7 +60,8 @@ public class _10281_MutatedKaneusRune extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("31335-02.htm"))
 		{
-			st.giveItems(57, 360000);
+			st.giveItems(57, 720000);
+			st.addExpAndSp(3500000, 3500000);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

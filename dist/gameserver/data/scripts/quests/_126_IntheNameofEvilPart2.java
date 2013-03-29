@@ -184,8 +184,8 @@ public class _126_IntheNameofEvilPart2 extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("mushika_q126_4.htm"))
 		{
 			st.giveItems(EWA, 1);
-			st.giveItems(ADENA_ID, 460483);
-			st.addExpAndSp(1015973, 102802);
+			st.giveItems(ADENA_ID, 484990);
+			st.addExpAndSp(2264190, 2572950);
 			st.playSound(SOUND_FINISH);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);

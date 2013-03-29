@@ -14,186 +14,140 @@ package instances;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlIntention;
+import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.network.serverpackets.ExChangeNpcState;
+import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 import ai.Generator;
 import ai.InfiltrationOfficer;
 import ai.InfiltrationOfficer.State;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * Created with IntelliJ IDEA. User: Darvin Date: 30.06.12 Time: 7:50
  */
 public class LabyrinthOfBelis extends Reflection
 {
-	/**
-	 * Field OFFICER. (value is 19155)
-	 */
 	private static final int OFFICER = 19155;
-	/**
-	 * Field GENERATOR. (value is 33216)
-	 */
 	private static final int GENERATOR = 33216;
-	/**
-	 * Field OPERATIVE. (value is 22998)
-	 */
+	
 	private static final int OPERATIVE = 22998;
-	/**
-	 * Field HANDYMAN. (value is 22997)
-	 */
 	private static final int HANDYMAN = 22997;
-	/**
-	 * Field _marksRequiered.
-	 */
-	private int _marksRequiered = 3;
-	/**
-	 * Field _operativesKilled.
-	 */
-	private int _operativesKilled = 0;
-	/**
-	 * Field _instanceCondition.
-	 */
-	private int _instanceCondition = 0;
-	/**
-	 * Field officerAI.
-	 */
-	private InfiltrationOfficer officerAI = null;
-	/**
-	 * Field officer.
-	 */
-	private NpcInstance officer = null;
-	/**
-	 * Field generator.
-	 */
-	private NpcInstance generator = null;
-	/**
-	 * Field GeneratorAI.
-	 */
-	@SuppressWarnings("unused")
-	private Generator GeneratorAI = null;
+	private static final int DOOR = 16240001;
 	
 	/**
-	 * Constructor for LabyrinthOfBelis.
-	 * @param player Player
+	 * 3 marks are required to open 4th door.
 	 */
+	private int _marksRequiered = 3;
+	private int _operativesKilled = 0;
+	/**
+	 * This is internal instance zone condition status
+	 */
+	private int _instanceCondition = 0;
+	
+	private InfiltrationOfficer officerAI = null;
+	private NpcInstance officer = null;
+	private NpcInstance generator = null;
+	private Generator GeneratorAI = null;
+	
 	public LabyrinthOfBelis(Player player)
 	{
 		setReturnLoc(player.getLoc());
 	}
 	
-	/**
-	 * Method onPlayerEnter.
-	 * @param player Player
-	 */
 	@Override
 	public void onPlayerEnter(final Player player)
 	{
 		spawnActiveNPCs(player);
+		openDoor(DOOR);
 		super.onPlayerEnter(player);
 	}
 	
-	/**
-	 * Method spawnActiveNPCs.
-	 * @param player Player
-	 */
 	public void spawnActiveNPCs(Player player)
 	{
+		// officer = addSpawnWithoutRespawn(OFFICER, new Location(-118973, 211197, -8592, 8546), 0);
 		officer = getAllByNpcId(OFFICER, true).get(0);
 		generator = getAllByNpcId(GENERATOR, true).get(0);
 		if ((officer != null) && (generator != null))
 		{
 			officer.setFollowTarget(player);
-			officerAI = ((InfiltrationOfficer) officer.getAI());
+			officerAI = (InfiltrationOfficer) officer.getAI();
 			officerAI.setState(State.AI_IDLE);
-			GeneratorAI = ((Generator) generator.getAI());
+			setGeneratorAI((Generator) generator.getAI());
 		}
 	}
 	
-	/**
-	 * Method reduceMarksRequiered.
-	 */
 	public void reduceMarksRequiered()
 	{
 		--_marksRequiered;
 	}
 	
-	/**
-	 * Method getMarksRequieredCount.
-	 * @return int
-	 */
 	public int getMarksRequieredCount()
 	{
 		return _marksRequiered;
 	}
 	
-	/**
-	 * Method incOperativesKilled.
-	 */
 	public void incOperativesKilled()
 	{
 		++_operativesKilled;
 	}
 	
-	/**
-	 * Method getOperativesKilledCount.
-	 * @return int
-	 */
 	public int getOperativesKilledCount()
 	{
 		return _operativesKilled;
 	}
 	
-	/**
-	 * Method makeOnEvent.
-	 * @param officerState State
-	 * @param openDoorId int
-	 */
 	public void makeOnEvent(State officerState, int openDoorId)
 	{
 		++_instanceCondition;
 		if (openDoorId != 0)
 		{
-			openDoor(openDoorId);
+			getDoor(openDoorId).openMe();
 		}
 		officerAI.setState(officerState);
 	}
 	
-	/**
-	 * Method getInstanceCond.
-	 * @return int
-	 */
 	public int getInstanceCond()
 	{
 		return _instanceCondition;
 	}
 	
-	/**
-	 * Method deleteGenerator.
-	 */
 	public void deleteGenerator()
 	{
 		generator.deleteMe();
 	}
 	
-	/**
-	 * Method activateGenerator.
-	 */
-	public void activateGenerator()
+	public void activateGenerator(Player player)
 	{
 		generator.setNpcState(1);
+		if (player.isInRange(generator, Creature.INTERACTION_DISTANCE))
+		{
+			generator.doCast(SkillTable.getInstance().getInfo(14698, 1), player, false);
+		}
+		player.sendPacket(new ExChangeNpcState(generator.getObjectId(), 1));
 	}
 	
-	/**
-	 * Method spawnAttackers.
-	 */
 	public void spawnAttackers()
 	{
-		int npcId = ((_instanceCondition % 2) == 0) ? HANDYMAN : OPERATIVE;
+		// Handymans and Operatives spawned each after another
+		int npcId = (_instanceCondition % 2) == 0 ? HANDYMAN : OPERATIVE;
 		NpcInstance attacker = addSpawnWithoutRespawn(npcId, new Location(-116856, 213320, -8619), Rnd.get(-100, 100));
+		
 		attacker.setRunning();
 		attacker.getAggroList().addDamageHate(officer, 0, 1000);
 		attacker.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, officer);
 	}
+	
+	public Generator getGeneratorAI()
+	{
+		return GeneratorAI;
+	}
+	
+	public void setGeneratorAI(Generator generatorAI)
+	{
+		GeneratorAI = generatorAI;
+	}
+	
 }

@@ -175,17 +175,6 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 			}
 			getHolder().addSkillsToMaintain(map);
 		}
-		for (Iterator<Element> iterator = rootElement.elementIterator("awakening_general_keep_skill_tree"); iterator.hasNext();)
-		{
-			Element nxt = iterator.next();
-			for (Iterator<Element> classIterator = nxt.elementIterator("general_keep_skill"); classIterator.hasNext();)
-			{
-				Element classElement = classIterator.next();
-				List<Integer> keepSkill = parseKeepSkill(classElement);
-				getHolder().addSkillsToMaintain(keepSkill);
-			}
-			
-		}
 	}
 	
 	/**

@@ -50,7 +50,7 @@ public class _121_PavelTheGiants extends Quest implements ScriptFile
 		if (event.equals("collecter_yumi_q0121_0201.htm"))
 		{
 			st.playSound(SOUND_FINISH);
-			st.addExpAndSp(346320, 26069);
+			st.addExpAndSp(1959460, 2039940);
 			st.exitCurrentQuest(false);
 		}
 		return event;

@@ -135,8 +135,8 @@ public class _10272_LightFragment extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("artius_q10272_12.htm"))
 		{
-			st.giveItems(ADENA_ID, 556980);
-			st.addExpAndSp(1009016, 91363);
+			st.giveItems(ADENA_ID, 2219330);
+			st.addExpAndSp(2458030, 600000);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);

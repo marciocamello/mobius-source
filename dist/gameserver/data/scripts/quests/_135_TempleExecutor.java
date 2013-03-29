@@ -74,7 +74,6 @@ public class _135_TempleExecutor extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.unset("Report");
 			st.giveItems(ADENA_ID, 16924);
-			st.addExpAndSp(30000, 2000);
 			st.giveItems(Badge_Temple_Executor, 1);
 			st.exitCurrentQuest(false);
 		}

@@ -15,58 +15,24 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class ExSendUIEvent extends NpcStringContainer
 {
-	/**
-	 * Field _objectId.
-	 */
 	private final int _objectId;
-	/**
-	 * Field _isHide.
-	 */
-	private final boolean _isHide;
-	/**
-	 * Field _isIncrease.
-	 */
-	private final boolean _isIncrease;
-	/**
-	 * Field _startTime.
-	 */
+	private final int _isHide;
+	private final int _isIncrease;
 	private final int _startTime;
-	/**
-	 * Field _endTime.
-	 */
 	private final int _endTime;
 	
-	/**
-	 * Constructor for ExSendUIEvent.
-	 * @param player Player
-	 * @param isHide boolean
-	 * @param isIncrease boolean
-	 * @param startTime int
-	 * @param endTime int
-	 * @param params String[]
-	 */
-	public ExSendUIEvent(Player player, boolean isHide, boolean isIncrease, int startTime, int endTime, String... params)
+	public ExSendUIEvent(Player player, int isHide, int isIncrease, int startTime, int endTime, String... params)
 	{
 		this(player, isHide, isIncrease, startTime, endTime, NpcString.NONE, params);
 	}
 	
-	/**
-	 * Constructor for ExSendUIEvent.
-	 * @param player Player
-	 * @param isHide boolean
-	 * @param isIncrease boolean
-	 * @param startTime int
-	 * @param endTime int
-	 * @param npcString NpcString
-	 * @param params String[]
+	/*
+	 * public ExSendUIEvent(Player player, boolean isHide, boolean isIncrease, int startTime, int endTime, NpcString npcString, String... params) { super(npcString, params); _objectId = player.getObjectId(); _isHide = isHide; _isIncrease = isIncrease; _startTime = startTime; _endTime = endTime; }
 	 */
-	public ExSendUIEvent(Player player, boolean isHide, boolean isIncrease, int startTime, int endTime, NpcString npcString, String... params)
+	
+	public ExSendUIEvent(Player player, int isHide, int isIncrease, int startTime, int endTime, NpcString npcString, String... params)
 	{
 		super(npcString, params);
 		_objectId = player.getObjectId();
@@ -76,23 +42,23 @@ public class ExSendUIEvent extends NpcStringContainer
 		_endTime = endTime;
 	}
 	
-	/**
-	 * Method writeImpl.
-	 */
 	@Override
 	protected void writeImpl()
 	{
-		writeC(0xFE);
-		writeH(0x8E);
+		writeEx(0x8E);
 		writeD(_objectId);
-		writeD(_isHide ? 0x01 : 0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeS(_isIncrease ? "1" : "0");
-		writeS(String.valueOf(_startTime / 60));
-		writeS(String.valueOf(_startTime % 60));
-		writeS(String.valueOf(_endTime / 60));
-		writeS(String.valueOf(_endTime % 60));
+		writeD(_isHide); // ID timer (any style)
+		writeD(0x00); // unknown
+		writeD(0x00); // unknown
+		writeS(String.valueOf(_isIncrease)); // Name indicator
+		writeS(String.valueOf(_startTime / 60)); // timer starting minute(s)
+		writeS(String.valueOf(_startTime % 60)); // timer starting second(s)
+		writeS(String.valueOf(_endTime / 60)); // timer length minute(s) (timer
+												// will disappear 10 seconds
+												// before it ends)
+		writeS(String.valueOf(_endTime % 60)); // timer length second(s) (timer
+												// will disappear 10 seconds
+												// before it ends)
 		writeElements();
 	}
 }

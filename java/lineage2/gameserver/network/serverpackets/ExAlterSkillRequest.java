@@ -12,44 +12,38 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.model.Skill;
-
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
  */
 public class ExAlterSkillRequest extends L2GameServerPacket
 {
-	/**
-	 * Field _skills.
-	 */
-	private final Skill _skills;
-	/**
-	 * Field _time.
-	 */
-	private final int _time;
+	private static final String _S__FE_113_EXALTERSKILLREQUEST = "[S] FE:113 ExAlterSkillRequest";
 	
-	/**
-	 * Constructor for ExAlterSkillRequest.
-	 * @param id Skill
-	 * @param time int
-	 */
-	public ExAlterSkillRequest(Skill id, int time)
+	int nextSkillId;
+	int currentSkillId;
+	int alterTime;
+	
+	public ExAlterSkillRequest(int nextSkillId, int currentSkillId, int alterTime)
 	{
-		_skills = id;
-		_time = time;
+		this.nextSkillId = nextSkillId;
+		this.currentSkillId = currentSkillId;
+		this.alterTime = alterTime;
 	}
 	
-	/**
-	 * Method writeImpl.
-	 */
 	@Override
-	protected final void writeImpl()
+	protected void writeImpl()
 	{
-		writeC(0xfe);
+		writeC(0xFE);
 		writeH(0x113);
-		writeD(_skills.getId());
-		writeD(0);
-		writeD(_time);
+		writeD(nextSkillId);
+		writeD(currentSkillId);
+		writeD(alterTime);
+	}
+	
+	@Override
+	public String getType()
+	{
+		return _S__FE_113_EXALTERSKILLREQUEST;
 	}
 }

@@ -26,37 +26,21 @@
 			</trigger>
 		</triggers>
 	</skill>
-    <skill id="10499" levels="1" name="">
-    <!-- Inflicts a powerful blow on the target. -->
-		<table name="#effectPoint">655</table>
-		<table name="#time">9</table>
-		<table name="#water">0</table>
-		<table name="#fire">0</table>
-		<table name="#wind">0</table>
-		<table name="#earth">0</table>
-		<table name="#magicLevel">85</table>
-		<table name="#mpConsume2">40</table>
-		<set name="reuseDelay" val="10000"/>
-		<set name="hitTime" val="2000"/>
-		<set name="castRange" val="40"/>
-		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="magicLevel" val="#magicLevel"/>
-		<set name="effectPoint" val="#effectPoint"/>
-		<set name="activateRate" val="80"/>
-		<set name="save" val="4"/>
-		<set name="target" val="TARGET_ONE"/>
-		<set name="coolTime" val="300"/>
-		<set name="skillType" val="DEBUFF"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="levelModifier" val="1"/>
-		<set name="nextAction" val="attack"/>
-		<for>
-			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="#time" val="0">
-				<add order="0x40" stat="defenceWater" val="#water"/>
-				<add order="0x40" stat="defenceFire" val="#fire"/>
-				<add order="0x40" stat="defenceWind" val="#wind"/>
-				<add order="0x40" stat="defenceEarth" val="#earth"/>
-			</effect>
-		</for>
-	</skill>
+	    <skill id="10499" levels="1" name="Tyrr Chain Air Blow">
+	    		<!-- Inflicts a powerful blow on the target. -->
+			<set name="reuseDelay" val="10000"/>
+			<set name="hitTime" val="2000"/>
+			<set name="mpConsume2" val="40"/>
+			<set name="castRange" val="40"/>
+			<set name="power" val="15803"/>
+			<set name="magicLevel" val="85"/>
+			<set name="coolTime" val="300"/>
+			<set name="skillType" val="PDAM"/>
+			<set name="target" val="TARGET_ONE"/>
+			<set name="overHit" val="true"/>>
+			<set name="operateType" val="OP_ACTIVE"/>
+			<set name="nextAction" val="attack"/>
+			<set name="isSkillTimePermanent" val="true"/>
+			<set name="isAlterSkill" val="true"/>
+	    </skill>
 </list>

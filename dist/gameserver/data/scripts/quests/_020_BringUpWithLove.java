@@ -69,6 +69,7 @@ public class _020_BringUpWithLove extends Quest implements ScriptFile
 			{
 				st.unset("cond");
 				st.takeItems(JEWEL, -1);
+				st.addExpAndSp(26950000, 30932000);
 				st.giveItems(CRYSTAL, 1);
 				st.playSound(SOUND_FINISH);
 				st.exitCurrentQuest(false);

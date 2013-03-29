@@ -62,7 +62,8 @@ public class _10276_MutatedKaneusGludio extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("30344-02.htm"))
 		{
-			st.giveItems(57, 60000);
+			st.giveItems(57, 17000);
+			st.addExpAndSp(70000, 32000);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

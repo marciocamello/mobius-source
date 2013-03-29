@@ -58,8 +58,8 @@ public class _014_WhereaboutsoftheArchaeologist extends Quest implements ScriptF
 		else if (event.equalsIgnoreCase("explorer_ghost_a_q0014_0201.htm"))
 		{
 			st.takeItems(LETTER_TO_ARCHAEOLOGIST, -1);
-			st.addExpAndSp(325881, 32524);
-			st.giveItems(ADENA_ID, 136928);
+			st.addExpAndSp(853088, 933748);
+			st.giveItems(ADENA_ID, 181320);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 			return "explorer_ghost_a_q0014_0201.htm";

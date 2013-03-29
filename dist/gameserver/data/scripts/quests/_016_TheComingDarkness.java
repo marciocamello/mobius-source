@@ -126,7 +126,7 @@ public class _016_TheComingDarkness extends Quest implements ScriptFile
 			else if ((cond > 5) && (st.getQuestItemsCount(CRYSTAL_OF_SEAL) < 1))
 			{
 				htmltext = "31517-03.htm";
-				st.addExpAndSp(865187, 69172);
+				st.addExpAndSp(1795524, 1679808);
 				st.playSound(SOUND_FINISH);
 				st.exitCurrentQuest(false);
 			}

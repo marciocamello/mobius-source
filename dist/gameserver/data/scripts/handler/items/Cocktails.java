@@ -36,6 +36,7 @@ public class Cocktails extends SimpleItemHandler
 		15357,
 		20394,
 		14739,
+		32316,
 		33862,
 		33766
 	};
@@ -152,6 +153,7 @@ public class Cocktails extends SimpleItemHandler
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
 				break;
+			case 32316:
 			case 33862:
 			case 33766:
 				for (int skill : bless_list)

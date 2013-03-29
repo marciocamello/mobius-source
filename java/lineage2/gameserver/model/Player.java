@@ -1008,7 +1008,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _summons.
 	 */
 	@SuppressWarnings("unused")
-	private ConcurrentHashMap<Integer, Summon> _summons = new ConcurrentHashMap<>(4);
+	private ConcurrentHashMap<Integer, Summon> _summons = new ConcurrentHashMap<Integer, Summon>(4);
 	/**
 	 * Field _tree.
 	 */
@@ -11851,6 +11851,16 @@ public final class Player extends Playable implements PlayerGroup
 		for (int shotId : getAutoSoulShot())
 		{
 			sendPacket(new ExAutoSoulShot(shotId, true));
+		}
+		if (transformationId == 0)
+		{
+			if (isAwaking())
+			{
+				if (Config.ALT_CHECK_SKILLS_AWAKENING)// When you untransform, checks for awakening skills
+				{
+					AwakingManager.getInstance().checkAwakenPlayerSkills(this);
+				}
+			}
 		}
 		broadcastUserInfo(true);
 	}

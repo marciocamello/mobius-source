@@ -87,8 +87,8 @@ public class _10268_ToTheSeedOfInfinity extends Quest implements ScriptFile
 				else if (npcId == Tepios)
 				{
 					htmltext = "32530-01.htm";
-					st.giveItems(ADENA_ID, 16671);
-					st.addExpAndSp(100640, 10098);
+					st.giveItems(ADENA_ID, 425500);
+					st.addExpAndSp(4000000, 4425000);
 					st.exitCurrentQuest(false);
 					st.playSound(SOUND_FINISH);
 				}

@@ -533,8 +533,8 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="550"/>
 		<set name="coolTime" val="470"/>
-		<set name="hitTime" val="500"/>
-		<table name="#reuseDelay">10000</table>
+		<set name="hitTime" val="50000"/>
+		<table name="#reuseDelay">500</table>
 		<set name="reuseDelay" val="#reuseDelay"/>
         <set name="magicLevel" val="#magicLevel"/>
 		<set name="power" val="#power"/>
@@ -544,8 +544,8 @@
         <set name="relationSkillsId" val="403;402;"/>
 		<set name="flyType" val="THROW_HORIZONTAL"/>
 		<set name="flySpeed" val="500"/>
-		<set name="isUsingWhileCasting" val="true"/>
-		<set name="isSkillTimePermanent" val="true"/>
+	<set name="isUsingWhileCasting" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/> 
 		<cond msgId="113" addName="1">
 			<using kind="Shield"/>
         </cond>

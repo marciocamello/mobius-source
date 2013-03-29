@@ -157,7 +157,7 @@ public class _10275_ContainingTheAttributePower extends Quest implements ScriptF
 			if (item > 0)
 			{
 				st.giveItems(item, 2, true);
-				st.addExpAndSp(202160, 20375);
+				st.addExpAndSp(10000000, 11200000);
 				st.exitCurrentQuest(false);
 				st.playSound(SOUND_FINISH);
 				if (npc != null)

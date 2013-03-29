@@ -24,18 +24,19 @@
             </effect>
 		</for>
 	</skill>
-	<skill id="11499" levels="1" name="">
-    <!-- Inflicts a powerful blow on the target. -->
-		<set name="icon" val="icon.skill10317"/>
-        <set name="castRange" val="900"/>
-        <set name="magicLvl" val="85"/>
-        <set name="mpConsume" val="71"/>
-        <set name="reuseDelay" val="10000"/>
-        <set name="hitTime" val="2000"/>
-        <set name="power" val="22465"/>
-        <set name="magicType" val="MAGIC"/>
-		<set name="target" val="TARGET_ONE"/>
-		<set name="skillType" val="PDAM"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-	</skill>
+	    <skill id="11499" levels="1" name="Wynn Chain Air Blow">
+	    		<!-- Inflicts a powerful blow on the target. -->
+			<set name="reuseDelay" val="10000"/>
+			<set name="hitTime" val="2000"/>
+			<set name="mpConsume2" val="40"/>
+			<set name="castRange" val="700"/>
+			<set name="power" val="17803"/>
+			<set name="magicLevel" val="85"/>
+			<set name="coolTime" val="300"/>
+			<set name="skillType" val="PDAM"/>
+			<set name="target" val="TARGET_ONE"/>
+			<set name="overHit" val="true"/>>
+			<set name="operateType" val="OP_ACTIVE"/>
+			<set name="nextAction" val="attack"/>
+	    </skill>
 </list>

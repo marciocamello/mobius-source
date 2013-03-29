@@ -153,7 +153,8 @@ public class _111_ElrokianHuntersProof extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("asamah_q111_8.htm"))
 		{
-			st.giveItems(ADENA_ID, 1071691);
+			st.giveItems(ADENA_ID, 4257180);
+			st.addExpAndSp(19973970, 22122270);
 			st.giveItems(ElrokianTrap, 1);
 			st.giveItems(TrapStone, 100);
 			st.setState(COMPLETED);

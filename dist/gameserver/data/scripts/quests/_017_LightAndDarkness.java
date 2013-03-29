@@ -116,7 +116,7 @@ public class _017_LightAndDarkness extends Quest implements ScriptFile
 			else if ((cond == 5) && (st.getQuestItemsCount(7168) == 0))
 			{
 				htmltext = "dark_presbyter_q0017_07.htm";
-				st.addExpAndSp(697040, 54887);
+				st.addExpAndSp(1469840, 1358340);
 				st.playSound(SOUND_FINISH);
 				st.exitCurrentQuest(false);
 			}

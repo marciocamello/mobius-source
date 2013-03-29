@@ -43,7 +43,7 @@ public final class MumuPresentInstance extends NpcInstance
 		
 		if (command.startsWith("MagmeldPresentation"))
 		{
-			player.showQuestMovie(ExStartScenePlayer.ARKAN);
+			player.showQuestMovie(ExStartScenePlayer.SCENE_SI_ARKAN_ENTER);
 		}
 		else
 		{
