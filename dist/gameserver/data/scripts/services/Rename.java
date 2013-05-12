@@ -258,7 +258,7 @@ public class Rename extends Functions
 		append += "<br>";
 		append += "<font color=\"LEVEL\">" + new CustomMessage("scripts.services.BaseChange.Price", player).addString(Util.formatAdena(Config.SERVICES_CHANGE_BASE_PRICE)).addItemName(Config.SERVICES_CHANGE_BASE_ITEM) + "</font>";
 		append += "<table>";
-		List<SubClass> possible = new ArrayList<SubClass>();
+		List<SubClass> possible = new ArrayList<>();
 		if (player.getActiveSubClass().isBase())
 		{
 			possible.addAll(player.getSubClassList().values());
@@ -267,7 +267,7 @@ public class Rename extends Functions
 			{
 				for (SubClass s2 : player.getSubClassList().values())
 				{
-					if (((s != s2) && !SubClassTable.areClassesComportable(ClassId.VALUES[s.getClassId()], ClassId.VALUES[s2.getClassId()],false)) || (s2.getLevel() < 75))
+					if (((s != s2) && !SubClassTable.areClassesComportable(ClassId.VALUES[s.getClassId()], ClassId.VALUES[s2.getClassId()], false)) || (s2.getLevel() < 75))
 					{
 						possible.remove(s2);
 					}

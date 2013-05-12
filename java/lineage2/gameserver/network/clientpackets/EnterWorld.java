@@ -142,13 +142,13 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		int MyObjectId = activeChar.getObjectId();
 		Long MyStoreId = activeChar.getStoredId();
-		for(Castle castle : ResidenceHolder.getInstance().getResidenceList(Castle.class))
-			{
-				activeChar.sendPacket(new ExCastleState(castle));
-			}
+		for (Castle castle : ResidenceHolder.getInstance().getResidenceList(Castle.class))
+		{
+			activeChar.sendPacket(new ExCastleState(castle));
+		}
 		synchronized (_lock)
 		{
-
+			
 			for (Player cha : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				if (MyStoreId.equals(cha.getStoredId()))
@@ -196,14 +196,14 @@ public class EnterWorld extends L2GameClientPacket
 		activeChar.sendPacket(new ExBR_PremiumState(activeChar, activeChar.hasBonus()));
 		
 		activeChar.getMacroses().sendUpdate(0x01, 0, true);
-        activeChar.sendPacket(new SSQInfo(), new HennaInfo(activeChar));
+		activeChar.sendPacket(new SSQInfo(), new HennaInfo(activeChar));
 		activeChar.sendItemList(false);
 		activeChar.sendPacket(new ShortCutInit(activeChar));
-        activeChar.sendPacket(new ShortCutInit(activeChar), new SkillList(activeChar), new SkillCoolTime(activeChar));
+		activeChar.sendPacket(new ShortCutInit(activeChar), new SkillList(activeChar), new SkillCoolTime(activeChar));
 		activeChar.sendPacket(new SkillCoolTime(activeChar));
-		//activeChar.sendPacket(new ExCastleState(_castle));
-        activeChar.sendPacket(new ExVitalityEffectInfo(activeChar));
-		for(Castle castle : ResidenceHolder.getInstance().getResidenceList(Castle.class))
+		// activeChar.sendPacket(new ExCastleState(_castle));
+		activeChar.sendPacket(new ExVitalityEffectInfo(activeChar));
+		for (Castle castle : ResidenceHolder.getInstance().getResidenceList(Castle.class))
 		{
 			activeChar.sendPacket(new ExCastleState(castle));
 		}
@@ -428,9 +428,9 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.sendUserInfo();
 		}
 		activeChar.updateEffectIcons();
-		activeChar.setCurrentHpMp(activeChar.getActiveSubClass().getlogOnHp(),activeChar.getActiveSubClass().getlogOnMp());
+		activeChar.setCurrentHpMp(activeChar.getActiveSubClass().getlogOnHp(), activeChar.getActiveSubClass().getlogOnMp());
 		activeChar.setCurrentCp(activeChar.getActiveSubClass().getlogOnCp());
-		activeChar.updateStats();		
+		activeChar.updateStats();
 		if (Config.ALT_PCBANG_POINTS_ENABLED)
 		{
 			activeChar.sendPacket(new ExPCCafePointInfo(activeChar, 0, 1, 2, 12));
@@ -459,23 +459,23 @@ public class EnterWorld extends L2GameClientPacket
 				}
 			}
 		}
-		if(Config.ALT_GAME_REMOVE_PREVIOUS_CERTIFICATES)
+		if (Config.ALT_GAME_REMOVE_PREVIOUS_CERTIFICATES)
 		{
-			Skill [] allSkill = activeChar.getAllSkillsArray();
-			int totalCertificates =  0;
-			for(Skill skl : allSkill)
+			Skill[] allSkill = activeChar.getAllSkillsArray();
+			int totalCertificates = 0;
+			for (Skill skl : allSkill)
 			{
-				if(skl.getId() >= 1573 && skl.getId() <= 1581)
+				if ((skl.getId() >= 1573) && (skl.getId() <= 1581))
 				{
 					totalCertificates += skl.getLevel();
-					activeChar.removeSkill(skl,true);
+					activeChar.removeSkill(skl, true);
 				}
 			}
-			if(totalCertificates > 0)
+			if (totalCertificates > 0)
 			{
 				activeChar.getInventory().addItem(10280, totalCertificates);
-				_log.info("EnterWorld: Player - " + activeChar.getName() + " - Has received " + totalCertificates + " by previous skill certificate deletion." );
-				for(SubClass sc : activeChar.getSubClassList().values())
+				_log.info("EnterWorld: Player - " + activeChar.getName() + " - Has received " + totalCertificates + " by previous skill certificate deletion.");
+				for (SubClass sc : activeChar.getSubClassList().values())
 				{
 					sc.setCertification(0);
 					activeChar.store(true);
@@ -501,9 +501,9 @@ public class EnterWorld extends L2GameClientPacket
 		{
 			AwakingManager.getInstance().SendReqToStartQuest(activeChar);
 		}
-		if(activeChar.isAwaking()) //If the characters returns to Main, or dual Subclass and Delete Skills prof are active, do check of Correct skills
+		if (activeChar.isAwaking()) // If the characters returns to Main, or dual Subclass and Delete Skills prof are active, do check of Correct skills
 		{
-			if(Config.ALT_CHECK_SKILLS_AWAKENING)
+			if (Config.ALT_CHECK_SKILLS_AWAKENING)
 			{
 				AwakingManager.getInstance().checkAwakenPlayerSkills(activeChar);
 			}

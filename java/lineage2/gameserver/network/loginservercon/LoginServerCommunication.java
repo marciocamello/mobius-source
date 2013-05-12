@@ -182,7 +182,8 @@ public class LoginServerCommunication extends Thread
 	
 	/**
 	 * Method disableWriteInterest.
-	 * @return boolean * @throws CancelledKeyException
+	 * @return boolean
+	 * @throws CancelledKeyException
 	 */
 	private boolean disableWriteInterest() throws CancelledKeyException
 	{
@@ -196,7 +197,8 @@ public class LoginServerCommunication extends Thread
 	
 	/**
 	 * Method enableWriteInterest.
-	 * @return boolean * @throws CancelledKeyException
+	 * @return boolean
+	 * @throws CancelledKeyException
 	 */
 	private boolean enableWriteInterest() throws CancelledKeyException
 	{
@@ -351,7 +353,8 @@ public class LoginServerCommunication extends Thread
 	 * Method tryReadPacket.
 	 * @param key SelectionKey
 	 * @param buf ByteBuffer
-	 * @return boolean * @throws IOException
+	 * @return boolean
+	 * @throws IOException
 	 */
 	private boolean tryReadPacket(SelectionKey key, ByteBuffer buf) throws IOException
 	{

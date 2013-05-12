@@ -22,6 +22,7 @@ import org.apache.commons.io.filefilter.FileFilterUtils;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <H>
  */
 public abstract class AbstractDirParser<H extends AbstractHolder> extends AbstractParser<H>
 {

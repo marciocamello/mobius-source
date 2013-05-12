@@ -33,6 +33,7 @@ public abstract class EventOwner implements Serializable
 	
 	/**
 	 * Method getEvent.
+	 * @param <E>
 	 * @param eventClass Class<E>
 	 * @return E
 	 */

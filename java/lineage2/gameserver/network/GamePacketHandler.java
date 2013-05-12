@@ -1145,7 +1145,7 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									break;
 								case 0x8A:
 									int id5 = buf.getInt();
-									switch (id5) 
+									switch (id5)
 									{
 										case 0:
 											msg = new RequestExBR_ProductList();

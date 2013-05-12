@@ -379,11 +379,10 @@ public class AdminEffects implements IAdminCommandHandler
 					}
 				}
 				break;
-				
 			case admin_effect:
 				try
 				{
-					if (wordList.length > 1 && wordList[1] != null)
+					if ((wordList.length > 1) && (wordList[1] != null))
 					{
 						Skill = wordList[1];
 					}
@@ -393,20 +392,30 @@ public class AdminEffects implements IAdminCommandHandler
 					activeChar.sendMessage("USAGE: //effect skillId <optional> skillLevel hittime");
 					return false;
 				}
-				String level = "1", hittime = "1";
+				String level = "1",
+				hittime = "1";
 				if (wordList.length > 2)
+				{
 					level = wordList[2];
+				}
 				if (wordList.length > 2)
+				{
 					hittime = wordList[2];
+				}
 				if (target == null)
+				{
 					target = activeChar;
+				}
 				if (!(target instanceof Creature))
+				{
 					activeChar.sendPacket(Msg.INVALID_TARGET);
+				}
 				else
 				{
-					((Creature)target).broadcastPacket(new MagicSkillUse(((Creature)target), activeChar, Integer.valueOf(Skill), Integer.valueOf(level), Integer.valueOf(hittime), 0));
-					activeChar.sendMessage(((Creature)target).getName() + " performs MSU " + Skill + "/" + level + " by your request.");
-				}			
+					((Creature) target).broadcastPacket(new MagicSkillUse(((Creature) target), activeChar, Integer.valueOf(Skill), Integer.valueOf(level), Integer.valueOf(hittime), 0));
+					activeChar.sendMessage(((Creature) target).getName() + " performs MSU " + Skill + "/" + level + " by your request.");
+				}
+				break;
 			case admin_transform:
 				try
 				{

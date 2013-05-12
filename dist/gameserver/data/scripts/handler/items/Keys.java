@@ -12,7 +12,6 @@
  */
 package handler.items;
 
-import gnu.trove.set.hash.TIntHashSet;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.DoorHolder;
 import lineage2.gameserver.model.GameObject;
@@ -24,6 +23,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.DoorTemplate;
+import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius

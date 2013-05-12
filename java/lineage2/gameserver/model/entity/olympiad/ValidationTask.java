@@ -44,7 +44,7 @@ public class ValidationTask extends RunnableImpl
 		{
 			_log.warn("Olympiad: Error while computing new heroes!");
 		}
-
+		
 		Olympiad._period = 0;
 		Olympiad._currentCycle++;
 		

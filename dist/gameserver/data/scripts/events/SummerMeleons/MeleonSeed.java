@@ -12,7 +12,6 @@
  */
 package events.SummerMeleons;
 
-import handler.items.ScriptItemHandler;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -25,6 +24,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import npc.model.MeleonInstance;
+import handler.items.ScriptItemHandler;
 
 /**
  * @author Mobius

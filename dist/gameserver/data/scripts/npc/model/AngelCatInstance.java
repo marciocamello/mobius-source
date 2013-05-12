@@ -1,16 +1,28 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package npc.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
 /**
  * @author cruel
@@ -30,30 +42,37 @@ public final class AngelCatInstance extends NpcInstance
 	{
 		super(objectId, template);
 	}
-
+	
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
-		if(!canBypassCheck(player, this))
-			return;
-
-		if(command.equalsIgnoreCase("give_buff"))
+		if (!canBypassCheck(player, this))
 		{
-			if (loadInfo(player)) 
+			return;
+		}
+		
+		if (command.equalsIgnoreCase("give_buff"))
+		{
+			if (loadInfo(player))
 			{
 				addInfo(player);
 				ItemFunctions.addItem(player, 35669, 1, true);
-			} else
+			}
+			else
+			{
 				player.sendPacket(SystemMsg.THIS_ACCOUNT_HAS_ALREADY_RECEIVED_A_GIFT);
+			}
 		}
 		else
+		{
 			super.onBypassFeedback(player, command);
+		}
 	}
 	
 	private boolean loadInfo(Player player)
 	{
 		String value = null;
-
+		
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rs = null;
@@ -68,9 +87,10 @@ public final class AngelCatInstance extends NpcInstance
 				value = rs.getString("value");
 				long l = (System.currentTimeMillis() - Long.parseLong(value)) / 1000;
 				if (l < 86400)
+				{
 					return false;
-				else
-					deleteInfo(player.getAccountName());
+				}
+				deleteInfo(player.getAccountName());
 			}
 		}
 		catch (Exception e)
@@ -83,7 +103,7 @@ public final class AngelCatInstance extends NpcInstance
 		}
 		return true;
 	}
-
+	
 	private void addInfo(Player player)
 	{
 		Connection con = null;

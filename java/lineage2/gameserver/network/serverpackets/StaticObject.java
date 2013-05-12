@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
@@ -17,7 +29,7 @@ public class StaticObject extends L2GameServerPacket
 	private final int _currentHp;
 	private final int _showHp;
 	private final int _damageGrade;
-
+	
 	public StaticObject(StaticObjectInstance obj)
 	{
 		_staticObjectId = obj.getUId();
@@ -32,7 +44,7 @@ public class StaticObject extends L2GameServerPacket
 		_showHp = 0;
 		_damageGrade = 0;
 	}
-
+	
 	public StaticObject(DoorInstance door, Player player)
 	{
 		_staticObjectId = door.getDoorId();
@@ -45,10 +57,10 @@ public class StaticObject extends L2GameServerPacket
 		_currentHp = (int) door.getCurrentHp();
 		_maxHp = door.getMaxHp();
 		_showHp = door.isHPVisible() ? 1 : 0; // TODO [G1ta0] статус двери для
-		                                      // осаждающих
+												// осаждающих
 		_damageGrade = door.getDamage();
 	}
-
+	
 	@Override
 	protected final void writeImpl()
 	{

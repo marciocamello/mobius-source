@@ -15,6 +15,7 @@ package lineage2.commons.net.nio;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <T>
  */
 public abstract class ReceivablePacket<T> extends AbstractPacket<T> implements Runnable
 {

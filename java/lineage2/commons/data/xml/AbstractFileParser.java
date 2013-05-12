@@ -18,6 +18,7 @@ import java.io.FileInputStream;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <H>
  */
 public abstract class AbstractFileParser<H extends AbstractHolder> extends AbstractParser<H>
 {

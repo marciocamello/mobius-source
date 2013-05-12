@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.idfactory;
 
-import gnu.trove.list.array.TIntArrayList;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,6 +23,8 @@ import lineage2.gameserver.database.DatabaseFactory;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import gnu.trove.list.array.TIntArrayList;
 
 /**
  * @author Mobius
@@ -139,7 +139,8 @@ public abstract class IdFactory
 	
 	/**
 	 * Method extractUsedObjectIDTable.
-	 * @return int[] * @throws SQLException
+	 * @return int[]
+	 * @throws SQLException
 	 */
 	protected int[] extractUsedObjectIDTable() throws SQLException
 	{

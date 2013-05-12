@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
@@ -14,7 +26,7 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 	public static ShortcutInfo convert(Player player, ShortCut shortCut)
 	{
 		ShortcutInfo shortcutInfo = null;
-		int page = shortCut.getSlot() + shortCut.getPage() * 12;
+		int page = shortCut.getSlot() + (shortCut.getPage() * 12);
 		switch (shortCut.getType())
 		{
 			case ShortCut.TYPE_ITEM:
@@ -48,12 +60,13 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 		}
 		return shortcutInfo;
 	}
-
+	
 	protected static class ItemShortcutInfo extends ShortcutInfo
 	{
-		private int _reuseGroup;
-		private int _currentReuse;
-		private int _basicReuse;
+		private final int _reuseGroup;
+		private final int _currentReuse;
+		private final int _basicReuse;
+		
 		public ItemShortcutInfo(int type, int page, int id, int reuseGroup, int currentReuse, int basicReuse, int augmentationId, int characterType)
 		{
 			super(type, page, id, characterType);
@@ -61,7 +74,7 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 			_currentReuse = currentReuse;
 			_basicReuse = basicReuse;
 		}
-
+		
 		@Override
 		protected void write0(ShortCutPacket p)
 		{
@@ -76,22 +89,22 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 			p.writeD(0x00); // Tauti
 		}
 	}
-
+	
 	protected static class SkillShortcutInfo extends ShortcutInfo
 	{
 		private final int _level;
-
+		
 		public SkillShortcutInfo(int type, int page, int id, int level, int characterType)
 		{
 			super(type, page, id, characterType);
 			_level = level;
 		}
-
+		
 		public int getLevel()
 		{
 			return _level;
 		}
-
+		
 		@Override
 		protected void write0(ShortCutPacket p)
 		{
@@ -102,14 +115,14 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 			p.writeD(_characterType);
 		}
 	}
-
+	
 	protected static class ShortcutInfo
 	{
 		protected final int _type;
 		protected final int _page;
 		protected final int _id;
 		protected final int _characterType;
-
+		
 		public ShortcutInfo(int type, int page, int id, int characterType)
 		{
 			_type = type;
@@ -117,14 +130,14 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 			_id = id;
 			_characterType = characterType;
 		}
-
+		
 		protected void write(ShortCutPacket p)
 		{
 			p.writeD(_type);
 			p.writeD(_page);
 			write0(p);
 		}
-
+		
 		protected void write0(ShortCutPacket p)
 		{
 			p.writeD(_id);

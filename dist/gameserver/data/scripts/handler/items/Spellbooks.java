@@ -12,8 +12,6 @@
  */
 package handler.items;
 
-import gnu.trove.set.hash.TIntHashSet;
-
 import java.util.List;
 
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
@@ -27,6 +25,7 @@ import lineage2.gameserver.network.serverpackets.SkillList;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.SkillTable;
+import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius

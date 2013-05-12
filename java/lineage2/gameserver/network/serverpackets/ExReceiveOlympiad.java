@@ -1,14 +1,26 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.entity.olympiad.OlympiadGame;
 import lineage2.gameserver.model.entity.olympiad.OlympiadManager;
 import lineage2.gameserver.model.entity.olympiad.TeamMember;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * @author VISTALL
@@ -19,23 +31,25 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 	public static class MatchList extends ExReceiveOlympiad
 	{
 		private List<ArenaInfo> _arenaList = Collections.emptyList();
-
+		
 		public MatchList()
 		{
 			super(0);
 			OlympiadManager manager = Olympiad._manager;
 			if (manager != null)
 			{
-				_arenaList = new ArrayList<ArenaInfo>();
+				_arenaList = new ArrayList<>();
 				for (int i = 0; i < Olympiad.STADIUMS.length; i++)
 				{
 					OlympiadGame game = manager.getOlympiadInstance(i);
-					if (game != null && game.getState() > 0)
+					if ((game != null) && (game.getState() > 0))
+					{
 						_arenaList.add(new ArenaInfo(i, game.getState(), game.getType().ordinal(), game.getTeamName1(), game.getTeamName2()));
+					}
 				}
 			}
 		}
-
+		
 		@Override
 		protected void writeImpl()
 		{
@@ -51,12 +65,15 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 				writeS(arena._name2);
 			}
 		}
-
+		
 		private static class ArenaInfo
 		{
-			private int _id, _status, _matchType;
-			private String _name1, _name2;
-
+			final int _id;
+			final int _status;
+			final int _matchType;
+			final String _name1;
+			final String _name2;
+			
 			public ArenaInfo(int id, int status, int match_type, String name1, String name2)
 			{
 				_id = id;
@@ -67,32 +84,34 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 			}
 		}
 	}
-
+	
 	public static class MatchResult extends ExReceiveOlympiad
 	{
 		@SuppressWarnings("unchecked")
-		private List<PlayerInfo>[] _players = new ArrayList[2];
-		private boolean _tie;
-		private String _name;
-
+		private final List<PlayerInfo>[] _players = new ArrayList[2];
+		private final boolean _tie;
+		private final String _name;
+		
 		public MatchResult(boolean tie, String name)
 		{
 			super(1);
 			_tie = tie;
 			_name = name;
 		}
-
+		
 		public void addPlayer(int team, TeamMember member, int gameResultPoints)
 		{
 			int points = Config.OLYMPIAD_OLDSTYLE_STAT ? 0 : member.getStat().getInteger(Olympiad.POINTS, 0);
-
+			
 			PlayerInfo playerInfo = new PlayerInfo(member.getName(), member.getClanName(), member.getClassId(), points, gameResultPoints, (int) member.getDamage());
 			if (_players[team] == null)
-				_players[team] = new ArrayList<PlayerInfo>(2);
-
+			{
+				_players[team] = new ArrayList<>(2);
+			}
+			
 			_players[team].add(playerInfo);
 		}
-
+		
 		@Override
 		protected void writeImpl()
 		{
@@ -116,12 +135,16 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 				}
 			}
 		}
-
+		
 		private static class PlayerInfo
 		{
-			private String _name, _clanName;
-			private int _classId, _currentPoints, _gamePoints, _damage;
-
+			final String _name;
+			final String _clanName;
+			final int _classId;
+			final int _currentPoints;
+			final int _gamePoints;
+			final int _damage;
+			
 			public PlayerInfo(String name, String clanName, int classId, int currentPoints, int gamePoints, int damage)
 			{
 				_name = name;
@@ -133,14 +156,14 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 			}
 		}
 	}
-
-	private int _type;
-
+	
+	private final int _type;
+	
 	public ExReceiveOlympiad(int type)
 	{
 		_type = type;
 	}
-
+	
 	@Override
 	protected void writeImpl()
 	{

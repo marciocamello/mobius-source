@@ -310,7 +310,7 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 			player.sendPacket(Msg.CONGRATULATIONS_YOU_HAVE_TRANSFERRED_TO_A_NEW_CLASS);
 		}
 		player.setClassId(val, false, false);
-		//AwakingManager.getInstance().getRaceSkill(player);
+		// AwakingManager.getInstance().getRaceSkill(player);
 		player.broadcastCharInfo();
 	}
 }

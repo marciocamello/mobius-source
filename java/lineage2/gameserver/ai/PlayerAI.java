@@ -299,7 +299,7 @@ public class PlayerAI extends PlayableAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		Player actor = getActor();
-		if (attacker != null && actor.getSummonList().size() > 0)
+		if ((attacker != null) && (actor.getSummonList().size() > 0))
 		{
 			List<Summon> servitors = actor.getSummonList().getServitors();
 			for (Summon summon : servitors)
@@ -312,7 +312,7 @@ public class PlayerAI extends PlayableAI
 		}
 		super.onEvtAttacked(attacker, damage);
 	}
-
+	
 	/**
 	 * Method getActor.
 	 * @return Player

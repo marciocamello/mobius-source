@@ -213,7 +213,8 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 	/**
 	 * Method parseRectangle.
 	 * @param n Element
-	 * @return Rectangle * @throws Exception
+	 * @return Rectangle
+	 * @throws Exception
 	 */
 	public static Rectangle parseRectangle(Element n) throws Exception
 	{
@@ -246,7 +247,8 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 	/**
 	 * Method parsePolygon.
 	 * @param shape Element
-	 * @return Polygon * @throws Exception
+	 * @return Polygon
+	 * @throws Exception
 	 */
 	public static Polygon parsePolygon(Element shape) throws Exception
 	{
@@ -273,7 +275,8 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 	/**
 	 * Method parseCircle.
 	 * @param shape Element
-	 * @return Circle * @throws Exception
+	 * @return Circle
+	 * @throws Exception
 	 */
 	public static Circle parseCircle(Element shape) throws Exception
 	{

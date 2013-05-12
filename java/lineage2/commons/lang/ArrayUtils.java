@@ -29,6 +29,7 @@ public final class ArrayUtils
 	
 	/**
 	 * Method valid.
+	 * @param <T>
 	 * @param array T[]
 	 * @param index int
 	 * @return T
@@ -48,6 +49,7 @@ public final class ArrayUtils
 	
 	/**
 	 * Method add.
+	 * @param <T>
 	 * @param array T[]
 	 * @param element T
 	 * @return T[]
@@ -67,6 +69,7 @@ public final class ArrayUtils
 	
 	/**
 	 * Method copyArrayGrow.
+	 * @param <T>
 	 * @param array T[]
 	 * @param type Class<? extends T>
 	 * @return T[]
@@ -86,6 +89,7 @@ public final class ArrayUtils
 	
 	/**
 	 * Method contains.
+	 * @param <T>
 	 * @param array T[]
 	 * @param value T
 	 * @return boolean
@@ -108,6 +112,7 @@ public final class ArrayUtils
 	
 	/**
 	 * Method indexOf.
+	 * @param <T>
 	 * @param array T[]
 	 * @param value T
 	 * @param index int
@@ -131,6 +136,7 @@ public final class ArrayUtils
 	
 	/**
 	 * Method remove.
+	 * @param <T>
 	 * @param array T[]
 	 * @param value T
 	 * @return T[]
@@ -159,6 +165,7 @@ public final class ArrayUtils
 	
 	/**
 	 * Method eqBrute.
+	 * @param <T>
 	 * @param a T[]
 	 * @param lo int
 	 * @param hi int
@@ -211,6 +218,7 @@ public final class ArrayUtils
 	
 	/**
 	 * Method eqSort.
+	 * @param <T>
 	 * @param a T[]
 	 * @param lo0 int
 	 * @param hi0 int
@@ -252,6 +260,7 @@ public final class ArrayUtils
 	
 	/**
 	 * Method eqSort.
+	 * @param <T>
 	 * @param a T[]
 	 */
 	public static <T extends Comparable<T>> void eqSort(T[] a)
@@ -261,6 +270,7 @@ public final class ArrayUtils
 	
 	/**
 	 * Method eqBrute.
+	 * @param <T>
 	 * @param a T[]
 	 * @param lo int
 	 * @param hi int
@@ -314,6 +324,7 @@ public final class ArrayUtils
 	
 	/**
 	 * Method eqSort.
+	 * @param <T>
 	 * @param a T[]
 	 * @param lo0 int
 	 * @param hi0 int
@@ -356,6 +367,7 @@ public final class ArrayUtils
 	
 	/**
 	 * Method eqSort.
+	 * @param <T>
 	 * @param a T[]
 	 * @param c Comparator<T>
 	 */

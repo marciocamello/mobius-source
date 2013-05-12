@@ -35,13 +35,13 @@ public final class KartiaManagerInstance extends NpcInstance
 	private static final int Hayuk88 = 33613;
 	private static final int Eliyah88 = 33615;
 	private static final int Elise88 = 33617;
-
+	
 	private static final int Adolph93 = 33620;
 	private static final int Barton93 = 33622;
 	private static final int Hayuk93 = 33624;
 	private static final int Eliyah93 = 33626;
 	private static final int Elise93 = 33628;
-
+	
 	private static final int Adolph98 = 33631;
 	private static final int Barton98 = 33633;
 	private static final int Hayuk98 = 33635;
@@ -153,17 +153,17 @@ public final class KartiaManagerInstance extends NpcInstance
 		if (command.startsWith("start"))
 		{
 			String[] splited = command.split("\\s");
-			//w a s h
+			// w a s h
 			String param = splited[1];
 			Reflection r = player.getActiveReflection();
 			if (r != null)
 			{
-				//PARTY INSTANCE
+				// PARTY INSTANCE
 				if (r.getInstancedZoneId() > 207)
 				{
 					player.getParty().Teleport(TELEPORT_POSITION);
 				}
-				//SOLO INSTANCE
+				// SOLO INSTANCE
 				else
 				{
 					player.teleToLocation(TELEPORT_POSITION);
@@ -177,17 +177,17 @@ public final class KartiaManagerInstance extends NpcInstance
 							barton.setFollowTarget(player);
 						}
 						if (!param.equals("a"))
-						{	
+						{
 							NpcInstance hayuk = r.addSpawnWithoutRespawn(Hayuk88, TELEPORT_POSITION, 100);
 							hayuk.setFollowTarget(player);
 						}
 						if (!param.equals("s"))
-						{	
+						{
 							NpcInstance eliyah = r.addSpawnWithoutRespawn(Eliyah88, TELEPORT_POSITION, 100);
 							eliyah.setFollowTarget(player);
 						}
 						if (!param.equals("h"))
-						{	
+						{
 							NpcInstance elise = r.addSpawnWithoutRespawn(Elise88, TELEPORT_POSITION, 100);
 							elise.setFollowTarget(player);
 						}
@@ -197,22 +197,22 @@ public final class KartiaManagerInstance extends NpcInstance
 						NpcInstance adolph = r.addSpawnWithoutRespawn(Adolph93, TELEPORT_POSITION, 100);
 						adolph.setFollowTarget(player);
 						if (!param.equals("w"))
-						{	
+						{
 							NpcInstance barton = r.addSpawnWithoutRespawn(Barton93, TELEPORT_POSITION, 100);
 							barton.setFollowTarget(player);
 						}
 						if (!param.equals("a"))
-						{	
+						{
 							NpcInstance hayuk = r.addSpawnWithoutRespawn(Hayuk93, TELEPORT_POSITION, 100);
 							hayuk.setFollowTarget(player);
 						}
 						if (!param.equals("s"))
-						{	
+						{
 							NpcInstance eliyah = r.addSpawnWithoutRespawn(Eliyah93, TELEPORT_POSITION, 100);
 							eliyah.setFollowTarget(player);
 						}
 						if (!param.equals("h"))
-						{	
+						{
 							NpcInstance elise = r.addSpawnWithoutRespawn(Elise93, TELEPORT_POSITION, 100);
 							elise.setFollowTarget(player);
 						}
@@ -222,17 +222,17 @@ public final class KartiaManagerInstance extends NpcInstance
 						NpcInstance adolph = r.addSpawnWithoutRespawn(Adolph98, TELEPORT_POSITION, 100);
 						adolph.setFollowTarget(player);
 						if (!param.equals("w"))
-						{	
+						{
 							NpcInstance barton = r.addSpawnWithoutRespawn(Barton98, TELEPORT_POSITION, 100);
 							barton.setFollowTarget(player);
 						}
 						if (!param.equals("a"))
-						{	
+						{
 							NpcInstance hayuk = r.addSpawnWithoutRespawn(Hayuk98, TELEPORT_POSITION, 100);
 							hayuk.setFollowTarget(player);
 						}
 						if (!param.equals("s"))
-						{	
+						{
 							NpcInstance eliyah = r.addSpawnWithoutRespawn(Eliyah98, TELEPORT_POSITION, 100);
 							eliyah.setFollowTarget(player);
 						}

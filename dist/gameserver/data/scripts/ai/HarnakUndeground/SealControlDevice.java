@@ -1,60 +1,82 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package ai.HarnakUndeground;
 
+import instances.HarnakUndergroundRuins;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
-import instances.HarnakUndergroundRuins;
 
 public class SealControlDevice extends DefaultAI
 {
 	private final boolean SHOUT;
-
+	
 	public SealControlDevice(NpcInstance actor)
 	{
 		super(actor);
 		SHOUT = getActor().getParameter("shout", false);
 	}
-
+	
 	@Override
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		if(SHOUT)
+		if (SHOUT)
+		{
 			addTimer(1, 1);
+		}
 	}
-
+	
 	@Override
 	protected void onEvtMenuSelected(Player player, int ask, int reply)
 	{
-		if(ask == 10338 && reply == 1)
+		if ((ask == 10338) && (reply == 1))
 		{
-			if(getActor().getNpcState() != 2)
+			if (getActor().getNpcState() != 2)
+			{
 				getActor().setNpcState(2);
+			}
 			broadCastScriptEvent("SEAL_ACTIVATED", 3000);
 		}
 	}
-
+	
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
-		if(event.equalsIgnoreCase("FAIL_INSTANCE"))
+		if (event.equalsIgnoreCase("FAIL_INSTANCE"))
+		{
 			getActor().deleteMe();
+		}
 	}
-
+	
 	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
 		super.onEvtTimer(timerId, arg1, arg2);
-
-		if(!isActive())
+		
+		if (!isActive())
+		{
 			return;
+		}
 		Reflection r = getActor().getReflection();
-		if(!(r instanceof HarnakUndergroundRuins))
+		if (!(r instanceof HarnakUndergroundRuins))
+		{
 			return;
-		switch(timerId)
+		}
+		switch (timerId)
 		{
 			case 1:
 				Functions.npcSayInRange(getActor(), 1500, NpcString.DISABLE_DEVICE_WILL_GO_OUT_OF_CONTROL_IN_1_MINUTE);

@@ -85,7 +85,7 @@ public class Plunder extends Skill
 			activeChar.unChargeShots(false);
 		}
 		boolean success;
-		success = Rnd.chance(getPower()); //TODO NEED CALC THIS SKILL IN A CORRECT WAY
+		success = Rnd.chance(getPower()); // TODO NEED CALC THIS SKILL IN A CORRECT WAY
 		if (success)
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_SUCCEEDED).addSkillName(_id, getDisplayLevel()));
@@ -95,7 +95,7 @@ public class Plunder extends Skill
 			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_FAILED).addSkillName(_id, getDisplayLevel()));
 			return;
 		}
-
+		
 		Player player = (Player) activeChar;
 		for (Creature targ : targets)
 		{

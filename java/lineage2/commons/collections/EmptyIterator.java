@@ -17,6 +17,7 @@ import java.util.Iterator;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <E>
  */
 public class EmptyIterator<E> implements Iterator<E>
 {
@@ -27,6 +28,7 @@ public class EmptyIterator<E> implements Iterator<E>
 	
 	/**
 	 * Method getInstance.
+	 * @param <E>
 	 * @return Iterator<E>
 	 */
 	@SuppressWarnings("unchecked")

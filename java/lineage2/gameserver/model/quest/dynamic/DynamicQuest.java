@@ -1,4 +1,26 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.model.quest.dynamic;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.ReentrantLock;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.time.cron.SchedulingPattern;
@@ -9,22 +31,19 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket;
+import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket.DynamicQuestInfo;
+import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket.ScoreBoardInfo;
+import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket.StartedQuest;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.utils.ItemFunctions;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.*;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.ReentrantLock;
-
-import static lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket.*;
 
 /**
  * @author Дмитрий
  * @modified KilRoy
- * @date 27.10.12  23:48
+ * @date 27.10.12 23:48
  */
 public abstract class DynamicQuest
 {
@@ -47,16 +66,15 @@ public abstract class DynamicQuest
 	private final List<DynamicQuestReward> reward;
 	private final List<DynamicQuestReward> eliteReward;
 	private final Map<DynamicQuestParticipant, List<DynamicQuestReward>> rewardReceiver;
-	private List<ICheckStartCondition> startStartCondition = new ArrayList<ICheckStartCondition>();
+	private final List<ICheckStartCondition> startStartCondition = new ArrayList<>();
 	private int currentStep;
 	private boolean started;
 	private ScheduledFuture<?> endTask;
-	private OnPlayerEnterListener playerEnterListener;
+	private final OnPlayerEnterListener playerEnterListener;
 	private boolean successed;
 	private boolean startCondition;
-
+	
 	/**
-	 *
 	 * @param questId
 	 * @param duration
 	 */
@@ -73,64 +91,71 @@ public abstract class DynamicQuest
 		rewardReceiver = new HashMap<>();
 		DynamicQuestController.getInstance().registerDynamicQuest(this);
 	}
-
+	
 	public final int getQuestId()
 	{
 		return questId;
 	}
-
+	
 	public final int getCurrentStep()
 	{
 		return currentStep;
 	}
-
+	
 	void setCurrentStep(int currentStep)
 	{
 		this.currentStep = currentStep;
 	}
-
+	
 	void start(RunnableImpl finisher)
 	{
 		lock.lock();
 		started = true;
-		for(String group : spawnGroups)
+		for (String group : spawnGroups)
 		{
 			SpawnManager.getInstance().spawn(group);
 		}
 		CharListenerList.addGlobal(playerEnterListener);
-		for(Player player : GameObjectsStorage.getAllPlayersForIterate())
+		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
-			if(isAvailableFor(player))
+			if (isAvailableFor(player))
+			{
 				sendQuestInfo(player);
+			}
 		}
 		lock.unlock();
 		onStart();
 		endTask = ThreadPoolManager.getInstance().schedule(finisher, getDuration() * 1000);
 	}
-
+	
 	void stop(boolean success, RunnableImpl finalizer)
 	{
-		if(endTask != null)
+		if (endTask != null)
+		{
 			endTask.cancel(false);
+		}
 		endTask = ThreadPoolManager.getInstance().schedule(finalizer, QUEST_FINALIZE_TIME);
 		lock.lock();
-		if(started)
+		if (started)
+		{
 			onStop(success);
+		}
 		started = false;
 		successed = success;
-		for(String group : spawnGroups)
+		for (String group : spawnGroups)
 		{
 			SpawnManager.getInstance().despawn(group);
 		}
-		if(success)
+		if (success)
 		{
 			List<DynamicQuestParticipant> ps = new ArrayList<>(participants.values());
 			Collections.sort(ps);
-			for(int i = 0; i < ps.size(); i++)
+			for (int i = 0; i < ps.size(); i++)
 			{
 				List<DynamicQuestReward> rs = new ArrayList<>();
-				for(DynamicQuestReward elite : eliteReward) {
-					if(i < elite.firstPlayersCount)
+				for (DynamicQuestReward elite : eliteReward)
+				{
+					if (i < elite.firstPlayersCount)
 					{
 						rs.add(elite);
 					}
@@ -141,7 +166,7 @@ public abstract class DynamicQuest
 		}
 		lock.unlock();
 	}
-
+	
 	void finish()
 	{
 		lock.lock();
@@ -161,27 +186,27 @@ public abstract class DynamicQuest
 		}
 		lock.unlock();
 	}
-
+	
 	public final int getDuration()
 	{
 		return duration;
 	}
-
+	
 	public final Collection<Integer> getParticipants()
 	{
 		return Collections.unmodifiableCollection(participants.keySet());
 	}
-
+	
 	protected final void addTask(int taskId, int maxCount, int addMode)
 	{
 		tasks.put(taskId, new DynamicQuestTask(taskId, questId, maxCount, addMode));
 	}
-
+	
 	protected final void addSpawns(String... spawns)
 	{
 		Collections.addAll(spawnGroups, spawns);
 	}
-
+	
 	/**
 	 * @param pattern - cron
 	 */
@@ -190,17 +215,17 @@ public abstract class DynamicQuest
 		StartConditionInit();
 		DynamicQuestController.getInstance().initSchedulingPattern(getQuestId(), new SchedulingPattern(pattern));
 	}
-
+	
 	/**
 	 * @param taskId
 	 * @param player
 	 * @param points
 	 */
-	protected final void increaseTaskPoint(int taskId, Player player, int points)
+	public final void increaseTaskPoint(int taskId, Player player, int points)
 	{
-		if(participants.containsKey(player.getObjectId()))
+		if (participants.containsKey(player.getObjectId()))
 		{
-			if(tasks.containsKey(taskId))
+			if (tasks.containsKey(taskId))
 			{
 				tasks.get(taskId).increasePoints(participants.get(player.getObjectId()), points);
 			}
@@ -210,14 +235,14 @@ public abstract class DynamicQuest
 			}
 		}
 	}
-
+	
 	/**
 	 * @param player
 	 */
-	protected final void addParticipant(Player player)
+	public final void addParticipant(Player player)
 	{
 		lock.lock();
-		if(started)
+		if (started)
 		{
 			participants.put(player.getObjectId(), new DynamicQuestParticipant(player.getName()));
 			onAddParticipant(player);
@@ -225,14 +250,14 @@ public abstract class DynamicQuest
 		}
 		lock.unlock();
 	}
-
+	
 	/**
 	 * @param player
 	 */
 	protected final void removeParticipant(Player player)
 	{
 		lock.lock();
-		if(started)
+		if (started)
 		{
 			participants.remove(player.getName());
 			sendQuestInfo(player);
@@ -240,46 +265,48 @@ public abstract class DynamicQuest
 		}
 		lock.unlock();
 	}
-
+	
 	/**
 	 * @param player
 	 */
-	protected final void sendQuestInfoParticipant(Player player)
+	public final void sendQuestInfoParticipant(Player player)
 	{
 		sendQuestInfo(player);
 	}
-
+	
 	/**
-	 * @param itemId
-	 * @param count
+	 * @param minLvl
+	 * @param maxLvl
 	 */
 	protected final void addLevelCheck(int minLvl, int maxLvl)
 	{
 		startStartCondition.add(new PlayerCheckLevel(minLvl, maxLvl));
 	}
-
+	
 	/**
-	 * @param itemId
-	 * @param count
+	 * @param zoneName
 	 */
 	protected final void addZoneCheck(String... zoneName)
 	{
 		startStartCondition.add(new PlayerCheckZone(zoneName));
 	}
-
+	
 	/**
 	 * @param player
+	 * @return
 	 */
 	public final boolean isAvailableFor(Player player)
 	{
-		for(ICheckStartCondition startCondition : startStartCondition)
+		for (ICheckStartCondition startCondition : startStartCondition)
 		{
-			if(!startCondition.checkCondition(player))
+			if (!startCondition.checkCondition(player))
+			{
 				return false;
+			}
 		}
 		return true;
 	}
-
+	
 	/**
 	 * @param itemId
 	 * @param count
@@ -288,7 +315,7 @@ public abstract class DynamicQuest
 	{
 		reward.add(new DynamicQuestReward(itemId, count, 0));
 	}
-
+	
 	/**
 	 * @param itemId
 	 * @param count
@@ -298,20 +325,21 @@ public abstract class DynamicQuest
 	{
 		eliteReward.add(new DynamicQuestReward(itemId, count, firstPlayersCount));
 	}
-
+	
 	/**
 	 * @param player
 	 */
 	protected final void tryReward(Player player)
 	{
 		lock.lock();
-		if(participants.containsKey(player.getObjectId()))
+		if (participants.containsKey(player.getObjectId()))
 		{
 			DynamicQuestParticipant participant = participants.get(player.getObjectId());
-			if(rewardReceiver.containsKey(participant))
+			if (rewardReceiver.containsKey(participant))
 			{
 				List<DynamicQuestReward> rewardList = rewardReceiver.get(participant);
-				for(DynamicQuestReward reward : rewardList) {
+				for (DynamicQuestReward reward : rewardList)
+				{
 					ItemFunctions.addItem(player, reward.itemId, reward.count, true);
 				}
 				rewardReceiver.remove(participant);
@@ -319,7 +347,7 @@ public abstract class DynamicQuest
 		}
 		lock.unlock();
 	}
-
+	
 	/**
 	 * @param player
 	 * @return - true
@@ -328,10 +356,10 @@ public abstract class DynamicQuest
 	{
 		lock.lock();
 		boolean response = true;
-		if(participants.containsKey(player.getObjectId()))
+		if (participants.containsKey(player.getObjectId()))
 		{
 			DynamicQuestParticipant participant = participants.get(player.getObjectId());
-			if(rewardReceiver.containsKey(participant))
+			if (rewardReceiver.containsKey(participant))
 			{
 				response = false;
 			}
@@ -339,14 +367,14 @@ public abstract class DynamicQuest
 		lock.unlock();
 		return response;
 	}
-
+	
 	void requestHtml(int step, Player player)
 	{
 		lock.lock();
-		if(currentStep == step)
+		if (currentStep == step)
 		{
 			String response = onRequestHtml(player, participants.containsKey(player.getObjectId()));
-			if(response != null)
+			if (response != null)
 			{
 				NpcHtmlMessage packet = new NpcHtmlMessage(5);
 				packet.setFile("campaigns/" + getClass().getSimpleName() + "/" + response);
@@ -355,39 +383,43 @@ public abstract class DynamicQuest
 		}
 		lock.unlock();
 	}
-
+	
 	void requestProgressInfo(int step, Player player)
 	{
 		sendQuestInfo(player);
 	}
-
+	
 	void requestScoreBoard(int step, Player player)
 	{
 		sendScoreBoard(player);
 	}
-
+	
 	void playerEnter(Player player)
 	{
 		lock.lock();
-		if(isAvailableFor(player))
+		if (isAvailableFor(player))
 		{
 			boolean enterRequest = onPlayerEnter(player);
-
-			if(enterRequest == true)
+			
+			if (enterRequest == true)
+			{
 				sendQuestInfo(player);
+			}
 		}
 		lock.unlock();
 	}
-
+	
 	void taskCompleted(int taskId)
 	{
 		onTaskCompleted(taskId);
 		lock.lock();
 		int completedTasks = 0;
-		for(DynamicQuestTask task : tasks.values())
+		for (DynamicQuestTask task : tasks.values())
 		{
-			if(task.isCompleted())
+			if (task.isCompleted())
+			{
 				completedTasks++;
+			}
 		}
 		if (completedTasks == tasks.size())
 		{
@@ -395,17 +427,17 @@ public abstract class DynamicQuest
 		}
 		lock.unlock();
 	}
-
+	
 	void processDialogEvent(String event, Player player)
 	{
-		if(event.equals("Score"))
+		if (event.equals("Score"))
 		{
 			sendScoreBoard(player);
 		}
 		else
 		{
 			String response = onDialogEvent(event, player);
-			if(response != null && response.endsWith(".htm"))
+			if ((response != null) && response.endsWith(".htm"))
 			{
 				NpcHtmlMessage packet = new NpcHtmlMessage(5);
 				packet.setFile("campaigns/" + getClass().getSimpleName() + "/" + response);
@@ -413,16 +445,16 @@ public abstract class DynamicQuest
 			}
 		}
 	}
-
+	
 	private void sendQuestInfo(Player player)
 	{
 		lock.lock();
 		DynamicQuestInfo questInfo;
-		if(currentStep > 0)
+		if (currentStep > 0)
 		{
-			if(started)
+			if (started)
 			{
-				if(participants.containsKey(player.getObjectId()))
+				if (participants.containsKey(player.getObjectId()))
 				{
 					questInfo = new StartedQuest(QUEST_STATE_PROGRESS, (int) endTask.getDelay(TimeUnit.SECONDS), participants.size(), tasks.values());
 				}
@@ -433,9 +465,9 @@ public abstract class DynamicQuest
 			}
 			else
 			{
-				if(participants.containsKey(player.getObjectId()))
+				if (participants.containsKey(player.getObjectId()))
 				{
-					if(successed)
+					if (successed)
 					{
 						questInfo = new StartedQuest(QUEST_STATE_RECEIVE_REWARD, (int) endTask.getDelay(TimeUnit.SECONDS), participants.size(), tasks.values());
 					}
@@ -460,16 +492,16 @@ public abstract class DynamicQuest
 		lock.unlock();
 		player.sendPacket(new ExDynamicQuestPacket(questInfo));
 	}
-
+	
 	private void sendScoreBoard(Player player)
 	{
-		if(currentStep > 0)
+		if (currentStep > 0)
 		{
 			lock.lock();
 			List<DynamicQuestParticipant> ps = new ArrayList<>(participants.values());
 			Collections.sort(ps);
 			DynamicQuestInfo questInfo = new ScoreBoardInfo((int) endTask.getDelay(TimeUnit.SECONDS), 0, ps);
-
+			
 			questInfo.questType = isZoneQuest() ? 1 : 0;
 			questInfo.questId = getQuestId();
 			questInfo.step = currentStep;
@@ -477,68 +509,70 @@ public abstract class DynamicQuest
 			player.sendPacket(new ExDynamicQuestPacket(questInfo));
 		}
 	}
-
+	
 	protected void StartConditionInit()
 	{
 		startCondition = onStartCondition();
 	}
-
+	
 	public boolean isStarted()
 	{
 		return started;
 	}
-
+	
 	public boolean isSuccessed()
 	{
 		return successed;
 	}
-
+	
 	public boolean isStartCondition()
 	{
 		return startCondition;
 	}
-
+	
 	protected boolean isZoneQuest()
 	{
 		return true;
 	}
-
+	
 	protected abstract void onStart();
-
+	
 	/**
 	 * @param success
 	 */
 	protected abstract void onStop(boolean success);
-
+	
 	/**
 	 */
 	protected abstract void onFinish();
-
+	
 	// Event controllers
-
+	
 	/**
 	 * @param player
 	 * @param participant
 	 * @return
 	 */
 	protected abstract String onRequestHtml(Player player, boolean participant);
-
+	
 	/**
 	 * @param player
+	 * @return
 	 */
 	protected abstract boolean onPlayerEnter(Player player);
-
+	
 	/**
 	 * @param taskId
 	 */
 	protected abstract void onTaskCompleted(int taskId);
-
+	
 	/**
 	 * @param event
 	 * @param player
+	 * @return
 	 */
 	protected abstract String onDialogEvent(String event, Player player);
-
+	
 	/**
 	 * @param player
 	 */
@@ -548,15 +582,15 @@ public abstract class DynamicQuest
 	 * @param player
 	 */
 	protected abstract void onRemoveParticipant(Player player);
-
+	
 	protected abstract boolean onStartCondition();
-
+	
 	private class DynamicQuestReward
 	{
-		private int itemId;
-		private long count;
-		private long firstPlayersCount;
-
+		final int itemId;
+		final long count;
+		final long firstPlayersCount;
+		
 		public DynamicQuestReward(int itemId, long count, int firstPlayersCount)
 		{
 			this.itemId = itemId;
@@ -564,49 +598,61 @@ public abstract class DynamicQuest
 			this.firstPlayersCount = firstPlayersCount;
 		}
 	}
-
+	
 	private class OnPlayerEnterListenerImpl implements OnPlayerEnterListener
 	{
+		/**
+		 * 
+		 */
+		public OnPlayerEnterListenerImpl()
+		{
+			// TODO Auto-generated constructor stub
+		}
+		
 		@Override
 		public void onPlayerEnter(Player player)
 		{
 			playerEnter(player);
 		}
 	}
-
+	
 	private class PlayerCheckLevel implements ICheckStartCondition
 	{
-		private int min;
-		private int max;
-
+		private final int min;
+		private final int max;
+		
 		public PlayerCheckLevel(int min, int max)
 		{
 			this.min = min;
 			this.max = max;
 		}
-
+		
 		@Override
 		public final boolean checkCondition(Player player)
 		{
-			return player.getLevel() >= min && player.getLevel() <= max;
+			return (player.getLevel() >= min) && (player.getLevel() <= max);
 		}
 	}
-
+	
 	private class PlayerCheckZone implements ICheckStartCondition
 	{
-		private String[] name;
-
+		private final String[] name;
+		
 		public PlayerCheckZone(String[] name)
 		{
 			this.name = name;
 		}
-
+		
 		@Override
 		public final boolean checkCondition(Player player)
 		{
-			for(String zone : name)
-				if(player.isInZone(zone))
+			for (String zone : name)
+			{
+				if (player.isInZone(zone))
+				{
 					return true;
+				}
+			}
 			return false;
 		}
 	}

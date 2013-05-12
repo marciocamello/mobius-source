@@ -56,6 +56,7 @@ public final class EventHolder extends AbstractHolder
 	
 	/**
 	 * Method getEvent.
+	 * @param <E>
 	 * @param type EventType
 	 * @param id int
 	 * @return E

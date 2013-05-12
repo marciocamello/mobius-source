@@ -749,7 +749,6 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _temporal;
 	}
-
 	
 	/**
 	 * Method isTemporal.
@@ -1038,7 +1037,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _enchant4Skill;
 	}
-
+	
 	/**
 	 * Method getEnchant4Skill.
 	 * @return Skill
@@ -1047,7 +1046,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _unequipeSkill;
 	}
-
+	
 	/**
 	 * Method toString.
 	 * @return String
@@ -1333,12 +1332,12 @@ public abstract class ItemTemplate extends StatTemplate
 	
 	/**
 	 * Method setEnchant4Skill.
-	 * @param enchant4Skill Skill
+	 * @param unequipeSkill
 	 */
 	public void setUnequipeSkill(Skill unequipeSkill)
 	{
 		_unequipeSkill = unequipeSkill;
-	}	
+	}
 	
 	/**
 	 * Method testCondition.
@@ -1542,7 +1541,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		if (_enchantOptions.isEmpty())
 		{
-			_enchantOptions = new HashIntObjectMap<int[]>();
+			_enchantOptions = new HashIntObjectMap<>();
 		}
 		_enchantOptions.put(level, options);
 	}

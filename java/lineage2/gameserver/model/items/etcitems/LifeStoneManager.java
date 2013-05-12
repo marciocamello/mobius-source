@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.model.items.etcitems;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.io.File;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -25,6 +23,8 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

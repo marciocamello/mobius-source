@@ -1,6 +1,16 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.model.actor.instances.player;
-
-import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,37 +29,41 @@ import lineage2.gameserver.utils.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 public class MacroList
 {
 	private static final Logger _log = LoggerFactory.getLogger(MacroList.class);
-
+	
 	private final Player player;
-	private final TIntObjectHashMap<Macro> _macroses = new TIntObjectHashMap<Macro>();
+	private final TIntObjectHashMap<Macro> _macroses = new TIntObjectHashMap<>();
 	private int _macroId;
-
+	
 	public MacroList(Player player)
 	{
 		this.player = player;
 		_macroId = 1000;
 	}
-
+	
 	public Macro[] getAllMacroses()
 	{
 		return _macroses.values(new Macro[0]);
 	}
-
+	
 	public Macro getMacro(int id)
 	{
 		return _macroses.get(id - 1);
 	}
-
+	
 	public void registerMacro(Macro macro)
 	{
 		if (macro.id == 0)
 		{
 			macro.id = _macroId++;
 			while (_macroses.get(macro.id) != null)
+			{
 				macro.id = _macroId++;
+			}
 			_macroses.put(macro.id, macro);
 			registerMacroInDb(macro);
 			player.sendPacket(new SendMacroList(macro, getAllMacroses().length, 0x01, _macroId, false));
@@ -58,37 +72,41 @@ public class MacroList
 		{
 			Macro old = _macroses.put(macro.id, macro);
 			if (old != null)
+			{
 				deleteMacroFromDb(old);
+			}
 			registerMacroInDb(macro);
 			sendUpdate(0x02, macro.id, false);
 		}
 	}
-
+	
 	public void deleteMacro(int id)
 	{
 		Macro toRemove = _macroses.get(id);
 		if (toRemove != null)
+		{
 			deleteMacroFromDb(toRemove);
+		}
 		_macroses.remove(id);
 		sendUpdate(0x00, id, false);
 	}
-
+	
 	public void sendUpdate(int type, int _macroId, boolean first)
 	{
 		Macro[] all = getAllMacroses();
-		if(all.length == 0)
+		if (all.length == 0)
 		{
 			player.sendPacket(new SendMacroList(null, all.length, 0x00, 0, false));
 		}
 		else
 		{
-			for(Macro m : all)
+			for (Macro m : all)
 			{
 				player.sendPacket(new SendMacroList(m, all.length, type, _macroId, first));
 			}
 		}
 	}
-
+	
 	private void registerMacroInDb(Macro macro)
 	{
 		Connection con = null;
@@ -109,8 +127,10 @@ public class MacroList
 				sb.append(cmd.type).append(',');
 				sb.append(cmd.d1).append(',');
 				sb.append(cmd.d2);
-				if (cmd.cmd != null && cmd.cmd.length() > 0)
+				if ((cmd.cmd != null) && (cmd.cmd.length() > 0))
+				{
 					sb.append(',').append(cmd.cmd);
+				}
 				sb.append(';');
 			}
 			statement.setString(7, sb.toString());
@@ -125,9 +145,9 @@ public class MacroList
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-
+	
 	/**
-	 * @param shortcut
+	 * @param macro
 	 */
 	private void deleteMacroFromDb(Macro macro)
 	{
@@ -150,7 +170,7 @@ public class MacroList
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-
+	
 	public void restore()
 	{
 		_macroses.clear();
@@ -170,7 +190,7 @@ public class MacroList
 				String name = Strings.stripSlashes(rset.getString("name"));
 				String descr = Strings.stripSlashes(rset.getString("descr"));
 				String acronym = Strings.stripSlashes(rset.getString("acronym"));
-				List<L2MacroCmd> commands = new ArrayList<L2MacroCmd>();
+				List<L2MacroCmd> commands = new ArrayList<>();
 				StringTokenizer st1 = new StringTokenizer(rset.getString("commands"), ";");
 				while (st1.hasMoreTokens())
 				{
@@ -180,11 +200,13 @@ public class MacroList
 					int d2 = Integer.parseInt(st.nextToken());
 					String cmd = "";
 					if (st.hasMoreTokens())
+					{
 						cmd = st.nextToken();
+					}
 					L2MacroCmd mcmd = new L2MacroCmd(commands.size(), type, d1, d2, cmd);
 					commands.add(mcmd);
 				}
-
+				
 				Macro m = new Macro(id, icon, name, descr, acronym, commands.toArray(new L2MacroCmd[commands.size()]));
 				_macroses.put(m.id, m);
 			}

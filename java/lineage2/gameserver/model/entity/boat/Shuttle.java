@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.model.entity.boat;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Playable;
@@ -31,6 +30,7 @@ import lineage2.gameserver.network.serverpackets.VehicleCheckLocation;
 import lineage2.gameserver.network.serverpackets.VehicleStart;
 import lineage2.gameserver.templates.ShuttleTemplate;
 import lineage2.gameserver.utils.Location;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

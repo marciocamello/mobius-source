@@ -15,6 +15,7 @@ package lineage2.commons.net.nio;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <T>
  */
 public abstract class SendablePacket<T> extends AbstractPacket<T>
 {
@@ -40,7 +41,7 @@ public abstract class SendablePacket<T> extends AbstractPacket<T>
 	 * Method writeH.
 	 * @param value int
 	 */
-	protected void writeH(int value)
+	public void writeH(int value)
 	{
 		getByteBuffer().putShort((short) value);
 	}

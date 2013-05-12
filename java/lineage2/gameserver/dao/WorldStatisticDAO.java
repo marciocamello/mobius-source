@@ -1,7 +1,16 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.dao;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,6 +29,9 @@ import lineage2.gameserver.model.worldstatistics.CategoryType;
 import lineage2.gameserver.model.worldstatistics.CharacterStatistic;
 import lineage2.gameserver.model.worldstatistics.CharacterStatisticElement;
 import lineage2.gameserver.templates.StatuesSpawnTemplate;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class WorldStatisticDAO
 {
@@ -52,52 +64,59 @@ public class WorldStatisticDAO
 	private static final String SELECT_GLOBAL_WINNERS = "SELECT ws.objId, c.char_name, ws.value FROM world_statistic_winners ws LEFT JOIN characters c ON c.obj_Id = ws.objId WHERE ws.categoryId=? ORDER BY ws.value DESC, ws.date DESC LIMIT ?";
 	private static final String SELECT_MONTHLY_WINNERS = "SELECT ws.objId, c.char_name, ws.value FROM world_statistic_winners_monthly ws LEFT JOIN characters c ON c.obj_Id = ws.objId WHERE ws.categoryId=? ORDER BY ws.value DESC, ws.date DESC LIMIT ?";
 	private static WorldStatisticDAO ourInstance = new WorldStatisticDAO();
-	private Lock writeLock = new ReentrantReadWriteLock().writeLock();
-
+	private final Lock writeLock = new ReentrantReadWriteLock().writeLock();
+	
 	private WorldStatisticDAO()
 	{
 	}
-
+	
 	public static WorldStatisticDAO getInstance()
 	{
 		return ourInstance;
 	}
-
+	
 	public void updateStatisticFor(Player player, CategoryType categoryType, long value)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
 		writeLock.lock();
-		try {
+		try
+		{
 			con = DatabaseFactory.getInstance().getConnection();
 			long globalValue = value;
-			if (categoryType.getSaveMode() == UPDATE_STATISTIC_MODE_ADD) {
+			if (categoryType.getSaveMode() == UPDATE_STATISTIC_MODE_ADD)
+			{
 				statement = con.prepareStatement(SELECT_GLOBAL_RESULT);
 				statement.setInt(1, player.getObjectId());
 				statement.setInt(2, categoryType.getClientId());
 				statement.setInt(3, categoryType.getSubcat());
 				rset = statement.executeQuery();
-				if (rset.next()) {
+				if (rset.next())
+				{
 					globalValue += rset.getLong(1);
 				}
 				DbUtils.closeQuietly(statement, rset);
-			} else if (categoryType.getSaveMode() == UPDATE_STATISTIC_MODE_INSERT_MAX) {
+			}
+			else if (categoryType.getSaveMode() == UPDATE_STATISTIC_MODE_INSERT_MAX)
+			{
 				statement = con.prepareStatement(SELECT_GLOBAL_RESULT);
 				statement.setInt(1, player.getObjectId());
 				statement.setInt(2, categoryType.getClientId());
 				statement.setInt(3, categoryType.getSubcat());
 				rset = statement.executeQuery();
-				if (rset.next()) {
+				if (rset.next())
+				{
 					long currentValue = rset.getLong(1);
-					if (currentValue >= value) {
+					if (currentValue >= value)
+					{
 						return;
 					}
 				}
 				DbUtils.closeQuietly(statement, rset);
 			}
 			updateMonthlyStatistic(player, categoryType, value);
-
+			
 			// update global statistic
 			statement = con.prepareStatement(UPDATE_GLOBAL_STATISTIC);
 			statement.setInt(1, player.getObjectId());
@@ -106,40 +125,52 @@ public class WorldStatisticDAO
 			statement.setLong(4, globalValue);
 			statement.setLong(5, System.currentTimeMillis());
 			statement.execute();
-
-		} catch (Exception e) {
+			
+		}
+		catch (Exception e)
+		{
 			_log.info("WorldStatisticDAO.updateStatisticFor(Player, CategoryType, long): " + e, e);
-		} finally {
+		}
+		finally
+		{
 			DbUtils.closeQuietly(con, statement, rset);
 			writeLock.unlock();
 		}
 	}
-
-	private void updateMonthlyStatistic(Player player, CategoryType categoryType, long value) {
+	
+	private void updateMonthlyStatistic(Player player, CategoryType categoryType, long value)
+	{
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
-		try {
+		try
+		{
 			con = DatabaseFactory.getInstance().getConnection();
-			if (categoryType.getSaveMode() == UPDATE_STATISTIC_MODE_ADD) {
+			if (categoryType.getSaveMode() == UPDATE_STATISTIC_MODE_ADD)
+			{
 				statement = con.prepareStatement(SELECT_MONTHLY_RESULT);
 				statement.setInt(1, player.getObjectId());
 				statement.setInt(2, categoryType.getClientId());
 				statement.setInt(3, categoryType.getSubcat());
 				rset = statement.executeQuery();
-				if (rset.next()) {
+				if (rset.next())
+				{
 					value += rset.getLong(1);
 				}
 				DbUtils.closeQuietly(statement, rset);
-			} else if (categoryType.getSaveMode() == UPDATE_STATISTIC_MODE_INSERT_MAX) {
+			}
+			else if (categoryType.getSaveMode() == UPDATE_STATISTIC_MODE_INSERT_MAX)
+			{
 				statement = con.prepareStatement(SELECT_MONTHLY_RESULT);
 				statement.setInt(1, player.getObjectId());
 				statement.setInt(2, categoryType.getClientId());
 				statement.setInt(3, categoryType.getSubcat());
 				rset = statement.executeQuery();
-				if (rset.next()) {
+				if (rset.next())
+				{
 					long currentValue = rset.getLong(1);
-					if (currentValue >= value) {
+					if (currentValue >= value)
+					{
 						return;
 					}
 				}
@@ -170,67 +201,85 @@ public class WorldStatisticDAO
 			statement.setInt(21, player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_DHAIR));
 			statement.setLong(22, System.currentTimeMillis());
 			statement.execute();
-
-		} catch (Exception e) {
+			
+		}
+		catch (Exception e)
+		{
 			_log.info("WorldStatisticDAO.updateMonthlyStatistic(Player, CategoryType, long): " + e, e);
-		} finally {
+		}
+		finally
+		{
 			DbUtils.closeQuietly(con, statement, rset);
 		}
 	}
-
-	private void resetWinnersStatistic() {
+	
+	private void resetWinnersStatistic()
+	{
 		Connection con = null;
 		PreparedStatement statement = null;
 		writeLock.lock();
-		try {
+		try
+		{
 			con = DatabaseFactory.getInstance().getConnection();
-
+			
 			statement = con.prepareStatement(RESET_MONTHLY_WINNERS_STATISTIC);
 			statement.execute();
 			DbUtils.closeQuietly(statement);
 			statement = con.prepareStatement(RESET_GLOBAL_WINNERS_STATISTIC);
 			statement.execute();
-
-		} catch (Exception e) {
+			
+		}
+		catch (Exception e)
+		{
 			_log.info("WorldStatisticDAO.resetWinnersStatistic(): " + e, e);
-		} finally {
+		}
+		finally
+		{
 			DbUtils.closeQuietly(con, statement);
 			writeLock.unlock();
 		}
 	}
-
-	public void recalculateWinners() {
+	
+	public void recalculateWinners()
+	{
 		resetWinnersStatistic();
-
+		
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
-		try {
+		try
+		{
 			writeLock.lock();
 			con = DatabaseFactory.getInstance().getConnection();
-			for (CategoryType type : CategoryType.values()) {
+			for (CategoryType type : CategoryType.values())
+			{
 				statement = con.prepareStatement(UPDATE_MONTHLY_WINNERS);
 				statement.setInt(1, type.getClientId());
 				statement.setInt(2, type.getSubcat());
 				statement.setInt(3, STATUES_TOP_PLAYER_LIMIT);
 				statement.executeUpdate();
 				DbUtils.closeQuietly(statement, rset);
-
+				
 				statement = con.prepareStatement(UPDATE_GLOBAL_WINNERS);
 				statement.setInt(1, type.getClientId());
 				statement.setInt(2, type.getSubcat());
 				statement.setInt(3, STATUES_TOP_PLAYER_LIMIT);
 				statement.executeUpdate();
 			}
-		} catch (Exception e) {
+		}
+		catch (Exception e)
+		{
 			_log.info("WorldStatisticDAO.resetWinnersStatistic(): " + e, e);
-		} finally {
+		}
+		finally
+		{
 			DbUtils.closeQuietly(con, statement, rset);
 			writeLock.unlock();
 		}
 	}
-
-	public List<CharacterStatisticElement> getPersonalStatisticFor(int charId) {
+	
+	public List<CharacterStatisticElement> getPersonalStatisticFor(int charId)
+	{
 		List<CharacterStatisticElement> statistics = new ArrayList<>();
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -257,7 +306,7 @@ public class WorldStatisticDAO
 		}
 		return statistics;
 	}
-
+	
 	public List<CharacterStatistic> getStatisticForCategory(CategoryType cat, boolean global, int limit)
 	{
 		List<CharacterStatistic> statistics = new ArrayList<>(limit);
@@ -265,41 +314,50 @@ public class WorldStatisticDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
-		try {
+		try
+		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(query);
 			statement.setInt(1, cat.getClientId());
 			statement.setInt(2, cat.getSubcat());
 			statement.setInt(3, limit);
 			rset = statement.executeQuery();
-
+			
 			while (rset.next())
 			{
 				CharacterStatisticElement statisticElement = new CharacterStatisticElement(cat, rset.getLong(3));
 				statistics.add(new CharacterStatistic(rset.getInt(1), rset.getString(2), statisticElement));
 			}
-		} catch (Exception e) {
+		}
+		catch (Exception e)
+		{
 			_log.info("WorldStatisticDAO.getStatisticForCategory(CategoryType, boolean, int): " + e, e);
-		} finally {
+		}
+		finally
+		{
 			DbUtils.closeQuietly(con, statement, rset);
 		}
-
+		
 		return statistics;
 	}
-
-	public List<StatuesSpawnTemplate> getStatueTemplates(Collection<CategoryType> categoryTypes) {
+	
+	public List<StatuesSpawnTemplate> getStatueTemplates(Collection<CategoryType> categoryTypes)
+	{
 		List<StatuesSpawnTemplate> templates = new ArrayList<>();
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
-		try {
+		try
+		{
 			con = DatabaseFactory.getInstance().getConnection();
-			for (CategoryType categoryType : categoryTypes) {
+			for (CategoryType categoryType : categoryTypes)
+			{
 				statement = con.prepareStatement(SELECT_WINNER_INFOS);
 				statement.setInt(1, categoryType.getClientId());
 				statement.setInt(2, STATUE_SPAWN_SELECT_LIMIT);
 				rset = statement.executeQuery();
-				if (rset.next()) {
+				if (rset.next())
+				{
 					StatuesSpawnTemplate template = new StatuesSpawnTemplate(categoryType);
 					template.setName(rset.getString("char_name"));
 					template.setClassId(rset.getInt("classId"));
@@ -322,39 +380,50 @@ public class WorldStatisticDAO
 					templates.add(template);
 				}
 			}
-
-		} catch (Exception e) {
+			
+		}
+		catch (Exception e)
+		{
 			_log.info("WorldStatisticDAO.getStatueTemplates(Collection<CategoryType>): " + e, e);
-		} finally {
+		}
+		finally
+		{
 			DbUtils.closeQuietly(con, statement, rset);
 		}
-
+		
 		return templates;
 	}
-
-	public List<CharacterStatistic> getWinners(CategoryType cat, boolean global, int limit) {
+	
+	public List<CharacterStatistic> getWinners(CategoryType cat, boolean global, int limit)
+	{
 		List<CharacterStatistic> statistics = new ArrayList<>(limit);
 		String query = global ? SELECT_GLOBAL_WINNERS : SELECT_MONTHLY_WINNERS;
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
-		try {
+		try
+		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(query);
 			statement.setInt(1, cat.getClientId());
 			statement.setInt(2, limit);
 			rset = statement.executeQuery();
-
-			while (rset.next()) {
+			
+			while (rset.next())
+			{
 				CharacterStatisticElement statisticElement = new CharacterStatisticElement(cat, rset.getLong(3));
 				statistics.add(new CharacterStatistic(rset.getInt(1), rset.getString(2), statisticElement));
 			}
-		} catch (Exception e) {
+		}
+		catch (Exception e)
+		{
 			_log.info("WorldStatisticDAO.getWinners(CategoryType, boolean, int): " + e, e);
-		} finally {
+		}
+		finally
+		{
 			DbUtils.closeQuietly(con, statement, rset);
 		}
-
+		
 		return statistics;
 	}
 }

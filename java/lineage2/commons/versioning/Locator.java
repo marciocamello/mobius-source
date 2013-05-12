@@ -203,6 +203,7 @@ public final class Locator
 	 * Method getLocationURLs.
 	 * @param location File
 	 * @return URL[] * @throws MalformedURLException
+	 * @throws MalformedURLException
 	 */
 	public static URL[] getLocationURLs(File location) throws MalformedURLException
 	{
@@ -217,6 +218,7 @@ public final class Locator
 	 * @param location File
 	 * @param extensions String[]
 	 * @return URL[] * @throws MalformedURLException
+	 * @throws MalformedURLException
 	 */
 	public static URL[] getLocationURLs(File location, final String[] extensions) throws MalformedURLException
 	{

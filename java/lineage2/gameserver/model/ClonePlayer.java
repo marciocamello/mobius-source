@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ai.ClonePlayerAI;
@@ -99,7 +100,7 @@ public class ClonePlayer extends Playable
 		stopDecay();
 		_decayTask = DecayTaskManager.getInstance().addDecayTask(this, delay);
 	}
-
+	
 	/**
 	 * Method stopDecay.
 	 */
@@ -111,7 +112,7 @@ public class ClonePlayer extends Playable
 			_decayTask = null;
 		}
 	}
-
+	
 	/**
 	 * Method onDecay.
 	 */
@@ -129,7 +130,7 @@ public class ClonePlayer extends Playable
 		stopDecay();
 		doDecay();
 	}
-
+	
 	/**
 	 * Method onSpawn.
 	 */
@@ -140,7 +141,7 @@ public class ClonePlayer extends Playable
 		getPlayer();
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 	}
-
+	
 	/**
 	 * Method getAI.
 	 * @return ClonePlayerAI
@@ -160,7 +161,7 @@ public class ClonePlayer extends Playable
 		}
 		return (ClonePlayerAI) _ai;
 	}
-
+	
 	/**
 	 * Method onAction.
 	 * @param player Player
@@ -264,7 +265,7 @@ public class ClonePlayer extends Playable
 		}
 		
 	}
-
+	
 	/**
 	 * Method setFollowMode.
 	 * @param state boolean
@@ -294,7 +295,7 @@ public class ClonePlayer extends Playable
 	{
 		return _follow;
 	}
-
+	
 	/**
 	 * Method isClone.
 	 * @return boolean
@@ -304,7 +305,7 @@ public class ClonePlayer extends Playable
 	{
 		return true;
 	}
-
+	
 	/**
 	 * Method updateEffectIcons.
 	 */
@@ -437,7 +438,7 @@ public class ClonePlayer extends Playable
 	{
 		_spsCharged = state;
 	}
-
+	
 	/**
 	 * Method isInRange.
 	 * @return boolean
@@ -468,10 +469,11 @@ public class ClonePlayer extends Playable
 			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, owner, Config.FOLLOW_RANGE);
 		}
 	}
-
+	
 	/**
 	 * Method broadcastCharInfo.
 	 */
+	@Override
 	public void broadcastCharInfo()
 	{
 		for (Player player : World.getAroundPlayers(this))
@@ -479,7 +481,7 @@ public class ClonePlayer extends Playable
 			player.sendPacket(new CharInfo(this));
 		}
 	}
-
+	
 	/**
 	 * Method startPvPFlag.
 	 * @param target Creature
@@ -569,7 +571,7 @@ public class ClonePlayer extends Playable
 		}
 		return list;
 	}
-
+	
 	/**
 	 * Method startAttackStanceTask.
 	 */
@@ -614,7 +616,7 @@ public class ClonePlayer extends Playable
 		}
 		return super.getEvents();
 	}
-
+	
 	/**
 	 * Method isAutoAttackable.
 	 * @param attacker Creature
@@ -635,7 +637,6 @@ public class ClonePlayer extends Playable
 	{
 		return _owner.getLevel();
 	}
-	
 	
 	/**
 	 * Method notifyOwerStartAttak.
@@ -691,14 +692,14 @@ public class ClonePlayer extends Playable
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
 	@Override
 	public long getWearedMask()
 	{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	
 	@Override
 	public void doPickupItem(GameObject object)
 	{

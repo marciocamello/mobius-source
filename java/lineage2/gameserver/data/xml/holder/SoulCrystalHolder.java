@@ -12,9 +12,9 @@
  */
 package lineage2.gameserver.data.xml.holder;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.SoulCrystal;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

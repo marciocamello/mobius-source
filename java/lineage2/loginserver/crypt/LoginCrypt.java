@@ -72,7 +72,8 @@ public class LoginCrypt
 	 * @param raw byte[]
 	 * @param offset int
 	 * @param size int
-	 * @return boolean * @throws IOException
+	 * @return boolean
+	 * @throws IOException
 	 */
 	public boolean decrypt(byte[] raw, final int offset, final int size) throws IOException
 	{
@@ -85,7 +86,8 @@ public class LoginCrypt
 	 * @param raw byte[]
 	 * @param offset int
 	 * @param size int
-	 * @return int * @throws IOException
+	 * @return int
+	 * @throws IOException
 	 */
 	public int encrypt(byte[] raw, final int offset, int size) throws IOException
 	{

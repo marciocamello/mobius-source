@@ -1,8 +1,19 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package instances;
 
 import java.util.concurrent.ScheduledFuture;
 
-import org.apache.commons.lang3.ArrayUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.listener.actor.OnDeathListener;
@@ -15,10 +26,11 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.Location;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 /**
  * @author pchayka
  */
-
 public class SufferingHallDefence extends Reflection
 {
 	private static final int AliveTumor = 18704;
@@ -26,16 +38,26 @@ public class SufferingHallDefence extends Reflection
 	private static final int Yehan = 25665;
 	private static final int RegenerationCoffin = 18706;
 	public int timeSpent;
-	private int tumorIndex = 300;
-	private boolean doCountCoffinNotifications = false;
-	private static final int[] monsters = { 22509, 22510, 22511, 22512, 22513, 22514, 22515, AliveTumor };
-	private static final Location roomCenter = new Location(-173704, 218092, -9562, 27768);
-	private long _savedTime = 0;
-	private DeathListener _deathListener = new DeathListener();
-	private ScheduledFuture<?> coffinSpawnTask;
-	private ScheduledFuture<?> monstersSpawnTask;
+	int tumorIndex = 300;
+	boolean doCountCoffinNotifications = false;
+	static final int[] monsters =
+	{
+		22509,
+		22510,
+		22511,
+		22512,
+		22513,
+		22514,
+		22515,
+		AliveTumor
+	};
+	static final Location roomCenter = new Location(-173704, 218092, -9562, 27768);
+	long _savedTime = 0;
+	private final DeathListener _deathListener = new DeathListener();
+	ScheduledFuture<?> coffinSpawnTask;
+	ScheduledFuture<?> monstersSpawnTask;
 	private int stage = 1;
-
+	
 	@Override
 	protected void onCreate()
 	{
@@ -44,109 +66,149 @@ public class SufferingHallDefence extends Reflection
 		timeSpent = 0;
 		startDefence();
 	}
-
+	
 	private void startDefence()
 	{
 		spawnByGroup("soi_hos_defence_tumor");
 		doCountCoffinNotifications = true;
-		coffinSpawnTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new RunnableImpl(){
+		coffinSpawnTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new RunnableImpl()
+		{
 			@Override
-			public void runImpl() throws Exception
+			public void runImpl()
 			{
 				addSpawnWithoutRespawn(RegenerationCoffin, new Location(-173704, 218092, -9562, Location.getRandomHeading()), 250);
 			}
 		}, 1000L, 10000L);
-		monstersSpawnTask = ThreadPoolManager.getInstance().schedule(new RunnableImpl(){
+		monstersSpawnTask = ThreadPoolManager.getInstance().schedule(new RunnableImpl()
+		{
 			@Override
-			public void runImpl() throws Exception
+			public void runImpl()
 			{
 				spawnMonsters();
 			}
 		}, 60000L);
 	}
-
+	
 	private class DeathListener implements OnDeathListener
 	{
+		/**
+		 * 
+		 */
+		public DeathListener()
+		{
+			// TODO Auto-generated constructor stub
+		}
+		
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if(!self.isNpc())
-				return;
-			if(ArrayUtils.contains(monsters, self.getNpcId()) && !checkAliveMonsters())
+			if (!self.isNpc())
 			{
-				if(monstersSpawnTask != null)
+				return;
+			}
+			if (ArrayUtils.contains(monsters, self.getNpcId()) && !checkAliveMonsters())
+			{
+				if (monstersSpawnTask != null)
+				{
 					monstersSpawnTask.cancel(false);
-				monstersSpawnTask = ThreadPoolManager.getInstance().schedule(new RunnableImpl(){
+				}
+				monstersSpawnTask = ThreadPoolManager.getInstance().schedule(new RunnableImpl()
+				{
 					@Override
-					public void runImpl() throws Exception
+					public void runImpl()
 					{
 						spawnMonsters();
 					}
 				}, 40000L);
 			}
-			if(self.getNpcId() == AliveTumor)
+			if (self.getNpcId() == AliveTumor)
 			{
 				self.deleteMe();
 				addSpawnWithoutRespawn(DeadTumor, roomCenter, 0);
 				tumorIndex = 300;
 				doCountCoffinNotifications = true;
 			}
-			else if(self.getNpcId() == Yehan)
-				ThreadPoolManager.getInstance().schedule(new RunnableImpl(){
+			else if (self.getNpcId() == Yehan)
+			{
+				ThreadPoolManager.getInstance().schedule(new RunnableImpl()
+				{
 					@Override
-					public void runImpl() throws Exception
+					public void runImpl()
 					{
-						if(monstersSpawnTask != null)
+						if (monstersSpawnTask != null)
+						{
 							monstersSpawnTask.cancel(false);
-						if(coffinSpawnTask != null)
+						}
+						if (coffinSpawnTask != null)
+						{
 							coffinSpawnTask.cancel(false);
+						}
 						clearReflection(5, true);
 						spawnByGroup("soi_hos_defence_tepios");
-
+						
 						setReenterTime(System.currentTimeMillis());
-						for(Player p : getPlayers())
+						for (Player p : getPlayers())
+						{
 							p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));
-
+						}
+						
 						timeSpent = (int) (System.currentTimeMillis() - _savedTime) / 1000;
 					}
 				}, 10000L);
+			}
 		}
 	}
-
+	
 	private void invokeDeathListener()
 	{
-		for(NpcInstance npc : getNpcs())
+		for (NpcInstance npc : getNpcs())
+		{
 			npc.addListener(_deathListener);
+		}
 	}
-
+	
 	public void notifyCoffinActivity()
 	{
-		if(!doCountCoffinNotifications)
-			return;
-		tumorIndex -= 5;
-		if(tumorIndex == 100)
-			for(Player p : getPlayers())
-				p.sendPacket(new ExShowScreenMessage(NpcString.THE_AREA_NEAR_THE_TUMOR_IS_FULL_OF_OMINOUS_ENERGY, 8000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, false, 1, -1, false));
-		else if(tumorIndex == 30)
-			for(Player p : getPlayers())
-				p.sendPacket(new ExShowScreenMessage(NpcString.YOU_CAN_FEEL_THE_SURGING_ENERGY_OF_DEATH_FROM_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, false, 1, -1, false));
-		if(tumorIndex <= 0)
+		if (!doCountCoffinNotifications)
 		{
-			if(getTumor(DeadTumor) != null)
+			return;
+		}
+		tumorIndex -= 5;
+		if (tumorIndex == 100)
+		{
+			for (Player p : getPlayers())
+			{
+				p.sendPacket(new ExShowScreenMessage(NpcString.THE_AREA_NEAR_THE_TUMOR_IS_FULL_OF_OMINOUS_ENERGY, 8000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, false, 1, -1, false));
+			}
+		}
+		else if (tumorIndex == 30)
+		{
+			for (Player p : getPlayers())
+			{
+				p.sendPacket(new ExShowScreenMessage(NpcString.YOU_CAN_FEEL_THE_SURGING_ENERGY_OF_DEATH_FROM_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, false, 1, -1, false));
+			}
+		}
+		if (tumorIndex <= 0)
+		{
+			if (getTumor(DeadTumor) != null)
+			{
 				getTumor(DeadTumor).deleteMe();
+			}
 			NpcInstance alivetumor = addSpawnWithoutRespawn(AliveTumor, roomCenter, 0);
 			alivetumor.setCurrentHp(alivetumor.getMaxHp() * .4, false);
 			doCountCoffinNotifications = false;
 			invokeDeathListener();
 		}
 	}
-
-	private void spawnMonsters()
+	
+	void spawnMonsters()
 	{
-		if(stage > 6)
+		if (stage > 6)
+		{
 			return;
+		}
 		String group = null;
-		switch(stage)
+		switch (stage)
 		{
 			case 1:
 				group = "soi_hos_defence_mobs_1";
@@ -191,55 +253,71 @@ public class SufferingHallDefence extends Reflection
 				break;
 		}
 		stage++;
-		if(group != null)
+		if (group != null)
+		{
 			spawnByGroup(group);
-		for(NpcInstance n : getNpcs())
-			if(n.isMonster() && ArrayUtils.contains(monsters, n.getNpcId()))
+		}
+		for (NpcInstance n : getNpcs())
+		{
+			if (n.isMonster() && ArrayUtils.contains(monsters, n.getNpcId()))
 			{
 				n.setRunning();
 				n.moveToLocation(roomCenter, 200, false);
 			}
+		}
 		invokeDeathListener();
 	}
-
-	private boolean checkAliveMonsters()
+	
+	boolean checkAliveMonsters()
 	{
-		for(NpcInstance n : getNpcs())
-			if(ArrayUtils.contains(monsters, n.getNpcId()) && !n.isDead())
+		for (NpcInstance n : getNpcs())
+		{
+			if (ArrayUtils.contains(monsters, n.getNpcId()) && !n.isDead())
+			{
 				return true;
+			}
+		}
 		return false;
 	}
-
+	
 	private NpcInstance getTumor(int id)
 	{
-		for(NpcInstance npc : getNpcs())
-			if(npc.getNpcId() == id && !npc.isDead())
+		for (NpcInstance npc : getNpcs())
+		{
+			if ((npc.getNpcId() == id) && !npc.isDead())
+			{
 				return npc;
+			}
+		}
 		return null;
 	}
-
+	
 	@Override
 	public void onPlayerEnter(Player player)
 	{
 		super.onPlayerEnter(player);
 		player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.NONE));
 	}
-
+	
 	@Override
 	public void onPlayerExit(Player player)
 	{
 		super.onPlayerExit(player);
 		player.sendPacket(new ExSendUIEvent(player, 1, 1, 0, 0));
 	}
-
+	
 	@Override
 	protected void onCollapse()
 	{
-		if(coffinSpawnTask != null)
+		if (coffinSpawnTask != null)
+		{
 			coffinSpawnTask.cancel(false);
-		if(monstersSpawnTask != null)
+		}
+		if (monstersSpawnTask != null)
+		{
 			monstersSpawnTask.cancel(false);
+		}
 		super.onCollapse();
 	}
-
+	
 }

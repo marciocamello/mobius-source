@@ -17,6 +17,7 @@ import java.util.HashMap;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <T>
  */
 public class MultiValueSet<T> extends HashMap<T, Object>
 {
@@ -445,6 +446,7 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	
 	/**
 	 * Method getEnum.
+	 * @param <E>
 	 * @param name T
 	 * @param enumClass Class<E>
 	 * @return E
@@ -466,6 +468,7 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	
 	/**
 	 * Method getEnum.
+	 * @param <E>
 	 * @param name T
 	 * @param enumClass Class<E>
 	 * @param defaultValue E

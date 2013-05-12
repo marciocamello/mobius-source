@@ -35,6 +35,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <T>
  */
 @SuppressWarnings("unchecked")
 public class SelectorThread<T extends MMOClient> extends Thread

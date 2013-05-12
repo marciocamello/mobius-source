@@ -1,6 +1,17 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package handler.items;
 
-import org.apache.commons.lang3.ArrayUtils;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +22,8 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
+
+import org.apache.commons.lang3.ArrayUtils;
 
 public class Extractable extends SimpleItemHandler
 {
@@ -9751,6 +9764,8 @@ public class Extractable extends SimpleItemHandler
 	/**
 	 * Quest 373: Supplier of Reagents, from Hallate's Maid, Reagent Pouch (Gray) 2x Quicksilver (6019) 30% 2x Moonstone
 	 * Shard (6013) 30% 1x Rotten Bone Piece (6014) 20% 1x Infernium Ore (6016) 20%
+	 * @param player 
+	 * @param ctrl 
 	 */
 	private void use6007(Player player, boolean ctrl) {
 		int[] list = new int[] { 6019, 6013, 6014, 6016 };
@@ -9768,6 +9783,8 @@ public class Extractable extends SimpleItemHandler
 	/**
 	 * Quest 373: Supplier of Reagents, from Platinum Tribe Shaman, Reagent Pouch (Yellow) 2x Blood Root (6017) 10% 2x
 	 * Sulfur (6020) 20% 1x Rotten Bone Piece (6014) 35% 1x Infernium Ore (6016) 35%
+	 * @param player 
+	 * @param ctrl 
 	 */
 	private void use6008(Player player, boolean ctrl) {
 		int[] list = new int[] { 6017, 6020, 6014, 6016 };
@@ -9785,6 +9802,8 @@ public class Extractable extends SimpleItemHandler
 	/**
 	 * Quest 373: Supplier of Reagents, from Hames Orc Shaman, Reagent Pouch (Brown) 1x Lava Stone (6012) 20% 2x
 	 * Volcanic Ash (6018) 20% 2x Quicksilver (6019) 20% 1x Moonstone Shard (6013) 40%
+	 * @param player 
+	 * @param ctrl 
 	 */
 	private void use6009(Player player, boolean ctrl) {
 		int[] list = new int[] { 6012, 6018, 6019, 6013 };
@@ -9802,6 +9821,8 @@ public class Extractable extends SimpleItemHandler
 	/**
 	 * Quest 373: Supplier of Reagents, from Platinum Guardian Shaman, Reagent Box 2x Blood Root (6017) 20% 2x Sulfur
 	 * (6020) 20% 1x Infernium Ore (6016) 35% 2x Demon's Blood (6015) 25%
+	 * @param player 
+	 * @param ctrl 
 	 */
 	private void use6010(Player player, boolean ctrl) {
 		int[] list = new int[] { 6017, 6020, 6016, 6015 };
@@ -11770,7 +11791,7 @@ public class Extractable extends SimpleItemHandler
 	// Rune Jewelry Box - Talisman
 	private void use21752(Player player, boolean ctrl)
 	{
-		final List<Integer> talismans = new ArrayList<Integer>();
+		final List<Integer> talismans = new ArrayList<>();
 
 		// 9914-9965
 		for (int i = 9914; i <= 9965; i++)
@@ -13288,7 +13309,7 @@ public class Extractable extends SimpleItemHandler
 	}
 
 	private static List<int[]> mass_extract_item(long source_count, int[] list, int[] counts, Player player) {
-		List<int[]> result = new ArrayList<int[]>((int) Math.min(list.length, source_count));
+		List<int[]> result = new ArrayList<>((int) Math.min(list.length, source_count));
 
 		for (int n = 1; n <= source_count; n++) {
 			int index = Rnd.get(list.length);
@@ -13348,7 +13369,7 @@ public class Extractable extends SimpleItemHandler
 
 	private static List<int[]> mass_extract_item_r(long source_count, int[] list, int[] counts, int[] chances,
 			Player player) {
-		List<int[]> result = new ArrayList<int[]>((int) Math.min(list.length, source_count));
+		List<int[]> result = new ArrayList<>((int) Math.min(list.length, source_count));
 
 		int sum = 0;
 		for (int i = 0; i < list.length; i++)

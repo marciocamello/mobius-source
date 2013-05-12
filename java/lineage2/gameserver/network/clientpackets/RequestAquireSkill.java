@@ -171,6 +171,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 	 * @param player Player
 	 * @param skillLearn SkillLearn
 	 * @param skill Skill
+	 * @param typeLearn
 	 */
 	private static void learnSimpleNextLevel(Player player, SkillLearn skillLearn, Skill skill, int typeLearn)
 	{
@@ -179,7 +180,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 		{
 			return;
 		}
-		switch(typeLearn)
+		switch (typeLearn)
 		{
 			case 1:
 				learnCertification(player, skillLearn, skill, false);
@@ -223,14 +224,13 @@ public class RequestAquireSkill extends L2GameClientPacket
 		player.sendPacket(new ExAcquirableSkillListByClass(player));
 		RequestExEnchantSkill.updateSkillShortcuts(player, skill.getId(), skill.getLevel());
 	}
-
 	
 	/**
 	 * Method learnCertification.
 	 * @param player Player
 	 * @param skillLearn SkillLearn
 	 * @param skill Skill
-	 * @param boolean isDual 
+	 * @param isDual
 	 */
 	private static void learnCertification(Player player, SkillLearn skillLearn, Skill skill, final boolean isDual)
 	{

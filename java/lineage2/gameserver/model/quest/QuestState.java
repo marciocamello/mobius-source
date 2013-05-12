@@ -1016,7 +1016,7 @@ public final class QuestState
 		}
 		player.sendPacket(new TutorialShowHtml(text, type));
 	}
-
+	
 	/**
 	 * Method startQuestTimer.
 	 * @param name String
@@ -1502,28 +1502,28 @@ public final class QuestState
 		long restartTime = Long.parseLong(val);
 		return restartTime <= System.currentTimeMillis();
 	}
-
+	
 	/**
 	 * @return boolean
 	 */
 	public boolean isNowAvailable()
 	{
 		String val = get("restartTime");
-		if(val == null)
+		if (val == null)
 		{
 			return true;
 		}
-
+		
 		long restartTime = Long.parseLong(val);
-
+		
 		return restartTime <= System.currentTimeMillis();
 	}
-
+	
 	/**
 	 */
 	public void startQuest()
 	{
-		setState(2);    // STARTED
+		setState(2); // STARTED
 		setCond(1);
 		playSound("ItemSound.quest_accept");
 	}

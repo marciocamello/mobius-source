@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package dynamic_quests;
 
 import lineage2.gameserver.instancemanager.SoHManager;
@@ -12,6 +24,7 @@ import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket;
 import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket.DynamicQuestInfo;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ReflectionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,7 +44,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 	private static final int DURATION = 3_240;
 	private static final int REWARD = 33709;
 	private static final int ELITE_REWARD = 35548;
-	//private static final String START_TIME = "30 * * * *";
+	// private static final String START_TIME = "30 * * * *";
 	private static final String START_TIME = "1 * * * *";
 	private static final int KILL_SOH_MOBS = 1501;
 	private final KillListenerImpl _killListener = new KillListenerImpl();
@@ -46,7 +59,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 	private static final int KOJA_THE_ENGINEER = 23223; // 4
 	private static final int BOROK_THE_ENGINEER = 23222; // 3
 	private static final int ADAK_THE_ENGINEER = 23221; // 2
-
+	
 	@Override
 	public void onLoad()
 	{
@@ -55,33 +68,35 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 		zoneSouth.addListener(_zoneListener);
 		zoneNorth = ReflectionUtils.getZone(QUEST_ZONE_NORTH);
 		zoneNorth.addListener(_zoneListener);
-		_log.info("Dynamic Quest: Loaded quest ID "+QUEST_ID+". Name: Seed of Hellfire - Zone Quest");
+		_log.info("Dynamic Quest: Loaded quest ID " + QUEST_ID + ". Name: Seed of Hellfire - Zone Quest");
 	}
-
+	
 	@Override
 	public void onReload()
-	{}
-
+	{
+	}
+	
 	@Override
 	public void onShutdown()
-	{}
-
+	{
+	}
+	
 	@Override
 	protected boolean isZoneQuest()
 	{
 		return true;
 	}
-
+	
 	@Override
 	protected boolean onStartCondition()
 	{
-		if(SoHManager.getCurrentStage() == 1)
+		if (SoHManager.getCurrentStage() == 1)
 		{
 			return true;
 		}
 		return false;
 	}
-
+	
 	public SeedOfHellfire()
 	{
 		super(QUEST_ID, DURATION);
@@ -92,172 +107,211 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 		addZoneCheck(QUEST_ZONE_SOUTH, QUEST_ZONE_NORTH);
 		initSchedulingPattern(START_TIME);
 	}
-
+	
 	@Override
 	protected void onStart()
 	{
 	}
-
+	
 	@Override
 	protected void onStop(boolean success)
 	{
-		for(int objectId : getParticipants())
+		for (int objectId : getParticipants())
 		{
 			Player player = GameObjectsStorage.getPlayer(objectId);
-			if(player != null)
+			if (player != null)
+			{
 				removeParticipant(player);
+			}
 		}
 	}
-
+	
 	@Override
 	protected boolean onPlayerEnter(Player player)
 	{
-		if(player.isInZone(zoneSouth) || player.isInZone(zoneNorth))
+		if (player.isInZone(zoneSouth) || player.isInZone(zoneNorth))
+		{
 			return true;
+		}
 		return false;
 	}
-
+	
 	@Override
 	protected void onAddParticipant(Player player)
 	{
 		player.getListeners().add(_killListener);
 	}
-
+	
 	@Override
 	protected void onRemoveParticipant(Player player)
 	{
 		player.getListeners().remove(_killListener);
 	}
-
+	
 	@Override
 	protected String onRequestHtml(Player player, boolean participant)
 	{
-		if(getCurrentStep() == 1)
+		if (getCurrentStep() == 1)
 		{
-			if(isStarted())
+			if (isStarted())
 			{
-				if(!participant)
+				if (!participant)
+				{
 					return "dc0015_01_start001.htm";
-				else
-					return "dc0015_01_context001.htm";
+				}
+				return "dc0015_01_context001.htm";
 			}
-			else if(isSuccessed())
+			else if (isSuccessed())
 			{
 				boolean rewardReceived = rewardReceived(player);
-				if(rewardReceived)
+				if (rewardReceived)
+				{
 					return null;
-				else
-					return "dc0015_01_reward001.htm";
+				}
+				return "dc0015_01_reward001.htm";
 			}
 			else
+			{
 				return "dc0015_01_failed001.htm";
+			}
 		}
 		return null;
 	}
-
+	
 	@Override
 	protected String onDialogEvent(String event, Player player)
 	{
 		String response = null;
-		if(event.equals("Reward"))
+		if (event.equals("Reward"))
 		{
 			tryReward(player);
-			response = null;
 		}
-		else if(event.endsWith(".htm"))
+		else if (event.endsWith(".htm"))
+		{
 			response = event;
+		}
 		return response;
 	}
-
+	
 	@Override
 	protected void onTaskCompleted(int taskId)
 	{
 		SoHManager.setCurrentStage(2);
 	}
-
+	
 	@Override
 	protected void onFinish()
 	{
 	}
-
+	
 	private final class KillListenerImpl implements OnKillListener
 	{
+		/**
+		 * 
+		 */
+		public KillListenerImpl()
+		{
+			// TODO Auto-generated constructor stub
+		}
+		
 		@Override
 		public void onKill(Creature actor, Creature victim)
 		{
-			if(victim.isPlayer())
-				return;
-
-			if(!actor.isPlayer())
-				return;
-
-			if(victim.isNpc() && isStarted())
+			if (victim.isPlayer())
 			{
-					switch(victim.getNpcId())
-					{
-						case SMELTING_FURNACE:
-							increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 1);
-							break;
-						case COOLING_DEVICE:
-							increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 2);
-							break;
-						case WEAPON_STAND:
-							increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 3);
-							break;
-						case ARMOR_STAND:
-							increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 3);
-							break;
-						case KOJA_THE_ENGINEER:
-							increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 4);
-							break;
-						case BOROK_THE_ENGINEER:
-							increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 3);
-							break;
-						case ADAK_THE_ENGINEER:
-							increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 2);
-							break;
-					}
+				return;
+			}
+			
+			if (!actor.isPlayer())
+			{
+				return;
+			}
+			
+			if (victim.isNpc() && isStarted())
+			{
+				switch (victim.getNpcId())
+				{
+					case SMELTING_FURNACE:
+						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 1);
+						break;
+					case COOLING_DEVICE:
+						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 2);
+						break;
+					case WEAPON_STAND:
+						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 3);
+						break;
+					case ARMOR_STAND:
+						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 3);
+						break;
+					case KOJA_THE_ENGINEER:
+						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 4);
+						break;
+					case BOROK_THE_ENGINEER:
+						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 3);
+						break;
+					case ADAK_THE_ENGINEER:
+						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 2);
+						break;
+				}
 			}
 		}
-
+		
 		@Override
 		public boolean ignorePetOrSummon()
 		{
 			return true;
 		}
 	}
-
+	
 	private final class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		/**
+		 * 
+		 */
+		public ZoneListener()
+		{
+			// TODO Auto-generated constructor stub
+		}
+		
 		@Override
 		public void onZoneEnter(Zone zone, Creature character)
 		{
-			if(zone == null)
-				return;
-
-			if(!character.isPlayer())
-				return;
-
-			Player player = character.getPlayer();
-			if(isStarted() && !isSuccessed())
+			if (zone == null)
 			{
-				if(!getParticipants().contains(player.getObjectId()))
+				return;
+			}
+			
+			if (!character.isPlayer())
+			{
+				return;
+			}
+			
+			Player player = character.getPlayer();
+			if (isStarted() && !isSuccessed())
+			{
+				if (!getParticipants().contains(player.getObjectId()))
+				{
 					addParticipant(player);
+				}
 				else
+				{
 					sendQuestInfoParticipant(player);
+				}
 			}
 		}
-
+		
 		@Override
 		public void onZoneLeave(Zone zone, Creature character)
 		{
-			if(!character.isPlayer())
-				return;
-
-			Player player = character.getPlayer();
-			if(isStarted() && !isSuccessed())
+			if (!character.isPlayer())
 			{
-				if(getParticipants().contains(player.getObjectId()))
+				return;
+			}
+			
+			Player player = character.getPlayer();
+			if (isStarted() && !isSuccessed())
+			{
+				if (getParticipants().contains(player.getObjectId()))
 				{
 					DynamicQuestInfo questInfo = new DynamicQuestInfo(1);
 					questInfo.questType = isZoneQuest() ? 1 : 0;

@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package quests;
 
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -9,7 +21,7 @@ public class _495_IncarnationOfJealousyPellineGroup extends Quest implements Scr
 {
 	public static final int KARTIA_RESEARCH = 33647;
 	public static final int FILINE = 25883;
-
+	
 	public _495_IncarnationOfJealousyPellineGroup()
 	{
 		super(true);
@@ -17,22 +29,25 @@ public class _495_IncarnationOfJealousyPellineGroup extends Quest implements Scr
 		addKillId(FILINE);
 		addLevelCheck(90, 94);
 	}
-
+	
+	@Override
 	public void onShutdown()
 	{
 	}
-
+	
+	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-	     if (event.equalsIgnoreCase("33647-2.htm"))
-	     {
+		if (event.equalsIgnoreCase("33647-2.htm"))
+		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
-	     }
-	     return event;
+		}
+		return event;
 	}
-
+	
+	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
@@ -43,13 +58,17 @@ public class _495_IncarnationOfJealousyPellineGroup extends Quest implements Scr
 			if (state == 1)
 			{
 				if (!isAvailableFor(st.getPlayer()) || !st.isNowAvailableByTime())
+				{
 					return "33647-3.htm";
+				}
 				return "33647.htm";
 			}
 			if (state == 2)
 			{
 				if (cond == 1)
+				{
 					return "33647-2.htm";
+				}
 				if (cond == 2)
 				{
 					st.giveItems(34928, 1L);
@@ -62,20 +81,25 @@ public class _495_IncarnationOfJealousyPellineGroup extends Quest implements Scr
 		}
 		return "noquest";
 	}
-
+	
+	@Override
 	public void onLoad()
 	{
 	}
-
+	
+	@Override
 	public void onReload()
 	{
 	}
-
+	
+	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
 		if ((cond != 1) || (npc == null))
+		{
 			return null;
+		}
 		st.setCond(2);
 		return null;
 	}

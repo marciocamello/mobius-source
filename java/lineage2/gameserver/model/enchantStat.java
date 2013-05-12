@@ -30,13 +30,12 @@ public final class enchantStat
 	 * Field _cost.
 	 */
 	private final double _option2;
+	
 	/**
 	 * Constructor for enchantStat.
-	 * param String name
-	 * param int grade
-	 * param Double option1
-	 * param Double option2
-	 * param Double option3
+	 * @param grade
+	 * @param option1
+	 * @param option2
 	 */
 	public enchantStat(int grade, Double option1, Double option2)
 	{

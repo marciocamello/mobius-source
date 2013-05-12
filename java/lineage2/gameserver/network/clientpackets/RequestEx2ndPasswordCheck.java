@@ -40,7 +40,7 @@ public class RequestEx2ndPasswordCheck extends L2GameClientPacket
 			sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_OK));
 			return;
 		}
-
+		
 		getClient().getSecondaryAuth().openDialog();
 		sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_OK));
 	}

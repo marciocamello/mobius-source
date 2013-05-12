@@ -12,9 +12,6 @@
  */
 package lineage2.gameserver.tables;
 
-import gnu.trove.list.array.TIntArrayList;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
 import lineage2.gameserver.model.base.ClassId;
@@ -23,6 +20,9 @@ import lineage2.gameserver.model.base.Race;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import gnu.trove.list.array.TIntArrayList;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius
@@ -69,7 +69,7 @@ public final class SubClassTable
 	 */
 	private void init()
 	{
-		_subClasses = new TIntObjectHashMap<TIntArrayList>();
+		_subClasses = new TIntObjectHashMap<>();
 		for (ClassId baseClassId : ClassId.VALUES)
 		{
 			if (baseClassId.isOfLevel(ClassLevel.First) || baseClassId.isOfLevel(ClassLevel.Second))
@@ -143,6 +143,7 @@ public final class SubClassTable
 	 * Method areClassesComportable.
 	 * @param baseClassId ClassId
 	 * @param subClassId ClassId
+	 * @param isBase
 	 * @return boolean
 	 */
 	public static boolean areClassesComportable(ClassId baseClassId, ClassId subClassId, boolean isBase)
@@ -151,7 +152,7 @@ public final class SubClassTable
 		{
 			return false;
 		}
-		if (baseClassId.getType2() == subClassId.getType2() && isBase)
+		if ((baseClassId.getType2() == subClassId.getType2()) && isBase)
 		{
 			return false;
 		}

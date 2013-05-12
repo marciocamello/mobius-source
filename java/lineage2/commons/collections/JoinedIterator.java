@@ -18,6 +18,7 @@ import java.util.List;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <E>
  */
 public class JoinedIterator<E> implements Iterator<E>
 {

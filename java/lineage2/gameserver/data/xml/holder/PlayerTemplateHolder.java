@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.data.xml.holder;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.base.ClassLevel;
@@ -20,6 +19,7 @@ import lineage2.gameserver.model.base.ClassType;
 import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.base.Sex;
 import lineage2.gameserver.templates.player.PlayerTemplate;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

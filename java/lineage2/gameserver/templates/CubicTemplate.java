@@ -12,14 +12,13 @@
  */
 package lineage2.gameserver.templates;
 
-import gnu.trove.map.hash.TIntIntHashMap;
-
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import lineage2.gameserver.model.Skill;
+import gnu.trove.map.hash.TIntIntHashMap;
 
 /**
  * @author Mobius

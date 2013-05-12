@@ -1148,7 +1148,8 @@ public class BlowfishEngine
 	 * @param inOff int
 	 * @param out byte[]
 	 * @param outOff int
-	 * @return int * @throws IOException
+	 * @return int
+	 * @throws IOException
 	 */
 	public final int processBlock(byte[] in, int inOff, byte[] out, int outOff) throws IOException
 	{

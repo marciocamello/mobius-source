@@ -40,11 +40,11 @@ public class SubClassList
 	/**
 	 * Field _listByIndex.
 	 */
-	private final TreeMap<Integer, SubClass> _listByIndex = new TreeMap<Integer, SubClass>();
+	private final TreeMap<Integer, SubClass> _listByIndex = new TreeMap<>();
 	/**
 	 * Field _listByClassId.
 	 */
-	private final TreeMap<Integer, SubClass> _listByClassId = new TreeMap<Integer, SubClass>();
+	private final TreeMap<Integer, SubClass> _listByClassId = new TreeMap<>();
 	/**
 	 * Field _owner.
 	 */
@@ -193,7 +193,6 @@ public class SubClassList
 	{
 		return _activeSubClass == _baseSubClass;
 	}
-
 	
 	/**
 	 * Method isBaseClassActive.
@@ -203,6 +202,7 @@ public class SubClassList
 	{
 		return _activeSubClass.isDouble();
 	}
+	
 	/**
 	 * Method haveSubClasses.
 	 * @return boolean
@@ -218,12 +218,12 @@ public class SubClassList
 	 */
 	public boolean haveDualClass()
 	{
-		for(SubClass sc : _listByClassId.values())
+		for (SubClass sc : _listByClassId.values())
 		{
-			if(sc.isDouble())
+			if (sc.isDouble())
 			{
 				return true;
-			}			
+			}
 		}
 		return false;
 	}
@@ -280,6 +280,7 @@ public class SubClassList
 	/**
 	 * Method add.
 	 * @param sub SubClass
+	 * @param index
 	 * @return boolean
 	 */
 	public boolean addToIndex(SubClass sub, int index)
@@ -296,7 +297,7 @@ public class SubClassList
 		{
 			return false;
 		}
-		if(index < 1 && index > 4)
+		if ((index < 1) && (index > 4))
 		{
 			return false;
 		}

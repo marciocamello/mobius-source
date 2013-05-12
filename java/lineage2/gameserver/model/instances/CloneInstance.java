@@ -60,7 +60,6 @@ public class CloneInstance extends ClonePlayer
 	 * @param template NpcTemplate
 	 * @param owner Player
 	 * @param lifetime int
-	 * @param skill Skill
 	 * @param loc Location
 	 */
 	public CloneInstance(int objectId, PlayerTemplate template, Player owner, int lifetime, Location loc)
@@ -194,7 +193,7 @@ public class CloneInstance extends ClonePlayer
 	{
 		return true;
 	}
-
+	
 	/**
 	 * Method isServitor.
 	 * @return boolean
@@ -258,7 +257,7 @@ public class CloneInstance extends ClonePlayer
 			player.sendPacket(msg);
 		}
 	}
-
+	
 	/**
 	 * Method getDEX.
 	 * @return int
@@ -340,7 +339,7 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getWIT();
 	}
-
+	
 	/**
 	 * Method getMAtk.
 	 * @param target Creature
@@ -404,7 +403,7 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getMDef(target, skill);
 	}
-
+	
 	/**
 	 * Method getMovementSpeedMultiplier.
 	 * @return double
@@ -466,7 +465,7 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getSwimWalkSpeed();
 	}
-
+	
 	@Override
 	public int getPAtk(Creature target)
 	{
@@ -493,5 +492,5 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getPDef(target);
 	}
-
+	
 }

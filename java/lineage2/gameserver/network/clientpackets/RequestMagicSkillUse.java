@@ -119,7 +119,7 @@ public class RequestMagicSkillUse extends L2GameClientPacket
 			}
 			Creature target = skill.getAimingTarget(activeChar, activeChar.getTarget());
 			activeChar.setGroundSkillLoc(null);
-			if(activeChar.isStunned() && skill.isCastOverStun())
+			if (activeChar.isStunned() && skill.isCastOverStun())
 			{
 				activeChar.doCast(skill, target, _ctrlPressed);
 				return;

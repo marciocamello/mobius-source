@@ -175,7 +175,7 @@ public class Mentoring
 					}
 				}
 				int mentorId = dependPlayer.getMenteeList().getMentor();
-				if (dependPlayer.getMenteeList().getList().get(mentorId)!=null)
+				if (dependPlayer.getMenteeList().getList().get(mentorId) != null)
 				{
 					String mentorName = dependPlayer.getMenteeList().getList().get(mentorId).getName();
 					Player mentorPlayer = World.getPlayer(mentorName);

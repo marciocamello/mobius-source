@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.skills.effects;
 
-import gnu.trove.iterator.TObjectIntIterator;
-import gnu.trove.map.hash.TObjectIntHashMap;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.gameserver.listener.actor.OnCurrentHpDamageListener;
 import lineage2.gameserver.model.Creature;
@@ -21,6 +19,8 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
+import gnu.trove.iterator.TObjectIntIterator;
+import gnu.trove.map.hash.TObjectIntHashMap;
 
 /**
  * @author Mobius

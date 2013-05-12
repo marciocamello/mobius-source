@@ -17,6 +17,7 @@ import java.nio.ByteBuffer;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <T>
  */
 public abstract class SendablePacket<T extends MMOClient> extends lineage2.commons.net.nio.SendablePacket<T>
 {

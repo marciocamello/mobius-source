@@ -64,7 +64,8 @@ public class PasswordHash
 	/**
 	 * Method encrypt.
 	 * @param password String
-	 * @return String * @throws Exception
+	 * @return String
+	 * @throws Exception
 	 */
 	public String encrypt(String password) throws Exception
 	{

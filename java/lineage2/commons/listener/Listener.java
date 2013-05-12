@@ -15,6 +15,7 @@ package lineage2.commons.listener;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <T>
  */
 public interface Listener<T>
 {

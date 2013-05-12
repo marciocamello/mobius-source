@@ -1,24 +1,36 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
+
+import java.util.List;
 
 import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.templates.manor.SeedProduction;
-
-import java.util.List;
 
 /**
  * format cddd[dddddc[d]c[d]] cddd[dQQQdc[d]c[d]] - Gracia Final
  */
 public class ExShowSeedInfo extends L2GameServerPacket
 {
-	private List<SeedProduction> _seeds;
-	private int _manorId;
-
+	private final List<SeedProduction> _seeds;
+	private final int _manorId;
+	
 	public ExShowSeedInfo(int manorId, List<SeedProduction> seeds)
 	{
 		_manorId = manorId;
 		_seeds = seeds;
 	}
-
+	
 	@Override
 	protected void writeImpl()
 	{
@@ -30,26 +42,26 @@ public class ExShowSeedInfo extends L2GameServerPacket
 		for (SeedProduction seed : _seeds)
 		{
 			writeD(seed.getId()); // Seed id
-
+			
 			writeQ(seed.getCanProduce()); // Left to buy
 			writeQ(seed.getStartProduce()); // Started amount
 			writeQ(seed.getPrice()); // Sell Price
 			writeD(Manor.getInstance().getSeedLevel(seed.getId())); // Seed
-			                                                        // Level
-
+																	// Level
+			
 			writeC(1); // reward 1 Type
 			writeD(Manor.getInstance().getRewardItemBySeed(seed.getId(), 1)); // Reward
-			                                                                  // 1
-			                                                                  // Type
-			                                                                  // Item
-			                                                                  // Id
-
+																				// 1
+																				// Type
+																				// Item
+																				// Id
+			
 			writeC(1); // reward 2 Type
 			writeD(Manor.getInstance().getRewardItemBySeed(seed.getId(), 2)); // Reward
-			                                                                  // 2
-			                                                                  // Type
-			                                                                  // Item
-			                                                                  // Id
+																				// 2
+																				// Type
+																				// Item
+																				// Id
 		}
 	}
 }

@@ -239,7 +239,7 @@ public class RequestPrivateStoreBuy extends L2GameClientPacket
 					TradeHelper.purchaseItem(buyer, seller, bi);
 				}
 				WorldStatisticsManager.getInstance().updateStat(seller, CategoryType.PRIVATE_SELL_COUNT, buyList.size());
-
+				
 				long tax = TradeHelper.getTax(seller, totalCost);
 				if (tax > 0)
 				{

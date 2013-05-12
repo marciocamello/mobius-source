@@ -93,7 +93,7 @@ public class AdminCommandHandler extends AbstractHolder
 	/**
 	 * Field _datatable.
 	 */
-	private final Map<String, IAdminCommandHandler> _datatable = new HashMap<String, IAdminCommandHandler>();
+	private final Map<String, IAdminCommandHandler> _datatable = new HashMap<>();
 	
 	/**
 	 * Constructor for AdminCommandHandler.

@@ -12,8 +12,8 @@
  */
 package lineage2.gameserver.templates;
 
-import gnu.trove.list.array.TIntArrayList;
 import lineage2.gameserver.model.Player;
+import gnu.trove.list.array.TIntArrayList;
 
 /**
  * @author Mobius

@@ -12,14 +12,15 @@
  */
 package lineage2.gameserver.model.actor.recorder;
 
-import gnu.trove.list.array.TIntArrayList;
 import javolution.util.FastList;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.base.TeamType;
+import gnu.trove.list.array.TIntArrayList;
 
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <T>
  */
 public class CharStatsChangeRecorder<T extends Creature>
 {
@@ -165,6 +166,7 @@ public class CharStatsChangeRecorder<T extends Creature>
 	
 	/**
 	 * Method set.
+	 * @param <E>
 	 * @param flag int
 	 * @param oldValue E
 	 * @param newValue E

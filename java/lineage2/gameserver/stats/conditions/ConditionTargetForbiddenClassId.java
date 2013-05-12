@@ -12,9 +12,9 @@
  */
 package lineage2.gameserver.stats.conditions;
 
-import gnu.trove.set.hash.TIntHashSet;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.stats.Env;
+import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius

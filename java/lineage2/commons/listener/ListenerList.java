@@ -19,6 +19,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <T>
  */
 public class ListenerList<T>
 {

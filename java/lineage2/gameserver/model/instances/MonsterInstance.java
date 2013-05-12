@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.model.instances;
 
-import gnu.trove.set.hash.TIntHashSet;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -54,6 +52,7 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.Faction;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
+import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius

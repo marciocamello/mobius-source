@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 /**
@@ -22,14 +34,14 @@ public class ExGoodsInventoryResult extends L2GameServerPacket
 	public static L2GameServerPacket ALREADY_RECIVED = new ExGoodsInventoryResult(-106);
 	public static L2GameServerPacket PRODUCT_CANNOT_BE_RECEIVED_AT_CURRENT_SERVER = new ExGoodsInventoryResult(-107);
 	public static L2GameServerPacket PRODUCT_CANNOT_BE_RECEIVED_AT_CURRENT_PLAYER = new ExGoodsInventoryResult(-108);
-
-	private int _result;
-
+	
+	private final int _result;
+	
 	private ExGoodsInventoryResult(int result)
 	{
 		_result = result;
 	}
-
+	
 	@Override
 	protected void writeImpl()
 	{

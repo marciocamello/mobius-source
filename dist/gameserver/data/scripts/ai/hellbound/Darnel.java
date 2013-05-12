@@ -12,8 +12,6 @@
  */
 package ai.hellbound;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,6 +28,7 @@ import lineage2.gameserver.model.instances.TrapInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

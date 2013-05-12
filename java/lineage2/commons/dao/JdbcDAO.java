@@ -17,6 +17,8 @@ import java.io.Serializable;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <K>
+ * @param <E>
  */
 public interface JdbcDAO<K extends Serializable, E extends JdbcEntity>
 {

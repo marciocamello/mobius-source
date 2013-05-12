@@ -1415,7 +1415,7 @@ public class RequestActionUse extends L2GameClientPacket
 				}
 				switch (action.id)
 				{
-					case 1099:	//Attack
+					case 1099: // Attack
 						if ((target == null) || !target.isCreature())
 						{
 							activeChar.sendActionFailed();
@@ -1469,7 +1469,7 @@ public class RequestActionUse extends L2GameClientPacket
 							}
 						}
 						break;
-					case 1100:	//Move
+					case 1100: // Move
 						if ((target != null) && !servitors.contains(target))
 						{
 							for (Summon summon : servitors)
@@ -1482,13 +1482,13 @@ public class RequestActionUse extends L2GameClientPacket
 							}
 						}
 						break;
-					case 1101:	//Pause
+					case 1101: // Pause
 						for (Summon summon : servitors)
 						{
 							summon.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 						}
 						break;
-					case 1102:	//Cancel the Summoning
+					case 1102: // Cancel the Summoning
 						if (activeChar.getSummonList().isInCombat())
 						{
 							activeChar.sendPacket(SystemMsg.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE);
@@ -1499,13 +1499,13 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.getSummonList().unsummonAllServitors();
 						}
 						break;
-					case 1103:	//Passive
+					case 1103: // Passive
 						for (Summon summon : servitors)
 						{
 							summon.setDefendMode(false);
 						}
 						break;
-					case 1104:	//Defend
+					case 1104: // Defend
 						for (Summon summon : servitors)
 						{
 							summon.setDefendMode(true);

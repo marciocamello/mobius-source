@@ -152,7 +152,8 @@ public class GameServerConnection
 	
 	/**
 	 * Method disableWriteInterest.
-	 * @return boolean * @throws CancelledKeyException
+	 * @return boolean
+	 * @throws CancelledKeyException
 	 */
 	protected boolean disableWriteInterest() throws CancelledKeyException
 	{
@@ -166,7 +167,8 @@ public class GameServerConnection
 	
 	/**
 	 * Method enableWriteInterest.
-	 * @return boolean * @throws CancelledKeyException
+	 * @return boolean
+	 * @throws CancelledKeyException
 	 */
 	protected boolean enableWriteInterest() throws CancelledKeyException
 	{

@@ -22,7 +22,8 @@ public class SafeMath
 	 * Method addAndCheck.
 	 * @param a int
 	 * @param b int
-	 * @return int * @throws ArithmeticException
+	 * @return int
+	 * @throws ArithmeticException
 	 */
 	public static int addAndCheck(int a, int b) throws ArithmeticException
 	{
@@ -107,7 +108,8 @@ public class SafeMath
 	 * Method addAndCheck.
 	 * @param a long
 	 * @param b long
-	 * @return long * @throws ArithmeticException
+	 * @return long
+	 * @throws ArithmeticException
 	 */
 	public static long addAndCheck(long a, long b) throws ArithmeticException
 	{
@@ -170,7 +172,8 @@ public class SafeMath
 	 * Method mulAndCheck.
 	 * @param a int
 	 * @param b int
-	 * @return int * @throws ArithmeticException
+	 * @return int
+	 * @throws ArithmeticException
 	 */
 	public static int mulAndCheck(int a, int b) throws ArithmeticException
 	{
@@ -266,7 +269,8 @@ public class SafeMath
 	 * Method mulAndCheck.
 	 * @param a long
 	 * @param b long
-	 * @return long * @throws ArithmeticException
+	 * @return long
+	 * @throws ArithmeticException
 	 */
 	public static long mulAndCheck(long a, long b) throws ArithmeticException
 	{

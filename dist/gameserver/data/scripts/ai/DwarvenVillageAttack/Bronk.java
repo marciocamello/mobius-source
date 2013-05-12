@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package ai.DwarvenVillageAttack;
 
 import instances.MemoryOfDisaster;
@@ -14,37 +26,43 @@ import lineage2.gameserver.scripts.Functions;
 public class Bronk extends Dwarvs
 {
 	private static final int TOROCCO_ID = 19198;
-
+	
 	public Bronk(NpcInstance actor)
 	{
 		super(actor);
 	}
-
+	
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
-		if(event.equalsIgnoreCase("BRONK_1"))
+		if (event.equalsIgnoreCase("BRONK_1"))
+		{
 			addTimer(1, 1600);
-		else if(event.equalsIgnoreCase("BRONK_2"))
+		}
+		else if (event.equalsIgnoreCase("BRONK_2"))
+		{
 			addTimer(2, 1600);
+		}
 	}
-
+	
 	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
 		super.onEvtTimer(timerId, arg1, arg2);
-
+		
 		Reflection r = getActor().getReflection();
-		if(!(r instanceof MemoryOfDisaster))
+		if (!(r instanceof MemoryOfDisaster))
+		{
 			return;
+		}
 		MemoryOfDisaster ad = (MemoryOfDisaster) r;
-
-		switch(timerId)
+		
+		switch (timerId)
 		{
 			case 1:
 				Functions.npcSayInRange(getActor(), 1500, NpcString.MM_IM_SEE);
 				List<NpcInstance> list = r.getAllByNpcId(TOROCCO_ID, true);
-				if(list.size() > 0)
+				if (list.size() > 0)
 				{
 					NpcInstance torocco = list.get(0);
 					torocco.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "TOROCCO_1");
@@ -71,7 +89,7 @@ public class Bronk extends Dwarvs
 				addTimer(7, 1600);
 				addTimer(7, 2400);
 				addTimer(7, 3600);
-
+				
 				addTimer(8, 2000);
 				break;
 			case 7:
@@ -96,13 +114,13 @@ public class Bronk extends Dwarvs
 				break;
 		}
 	}
-
+	
 	@Override
 	protected boolean canAttackCharacter(Creature target)
 	{
 		return false;
 	}
-
+	
 	@Override
 	public boolean checkAggression(Creature target)
 	{

@@ -272,6 +272,7 @@ public class GameTimeController
 	
 	/**
 	 * Method addListener.
+	 * @param <T>
 	 * @param listener T
 	 * @return boolean
 	 */
@@ -282,6 +283,7 @@ public class GameTimeController
 	
 	/**
 	 * Method removeListener.
+	 * @param <T>
 	 * @param listener T
 	 * @return boolean
 	 */

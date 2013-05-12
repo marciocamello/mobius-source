@@ -12,10 +12,6 @@
  */
 package lineage2.gameserver.model;
 
-import gnu.trove.list.array.TIntArrayList;
-import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.hash.TIntHashSet;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -31,6 +27,10 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
 
 import org.apache.commons.lang3.ArrayUtils;
+
+import gnu.trove.list.array.TIntArrayList;
+import gnu.trove.map.hash.TIntObjectHashMap;
+import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius
@@ -236,7 +236,7 @@ public class EffectList
 		}
 		return false;
 	}
-
+	
 	/**
 	 * Method containEffectFromSkill.
 	 * @param skillId integer
@@ -260,7 +260,7 @@ public class EffectList
 		}
 		return contain;
 	}
-
+	
 	/**
 	 * Method getAllEffects.
 	 * @return List<Effect>

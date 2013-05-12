@@ -33,6 +33,7 @@ public class TroveUtils
 	
 	/**
 	 * Method emptyIntObjectMap.
+	 * @param <V>
 	 * @return TIntObjectHashMap<V>
 	 */
 	@SuppressWarnings("unchecked")
@@ -43,6 +44,7 @@ public class TroveUtils
 	
 	/**
 	 * @author Mobius
+	 * @param <V>
 	 */
 	private static class TIntObjectHashMapEmpty<V> extends TIntObjectHashMap<V>
 	{

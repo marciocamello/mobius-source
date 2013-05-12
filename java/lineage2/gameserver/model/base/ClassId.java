@@ -825,15 +825,14 @@ public enum ClassId
 	{
 		return (sex == 0) || (_parent2 == null) ? _parent : _parent2;
 	}
+	
 	static
 	{
 		VALUES = values();
 	}
-
-
+	
 	/**
 	 * Method getParent.
-	 * @param sex int
 	 * @return ClassId
 	 */
 	public final Integer getParentId()

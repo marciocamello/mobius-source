@@ -259,8 +259,7 @@ public class SubClass
 	
 	/**
 	 * Method setlogOnHp.
-	 * @param hpValue double
-	 * This function are in for controls HP on logon of characters
+	 * @param hpValue double This function are in for controls HP on logon of characters
 	 */
 	public void setLogonHp(double hpValue)
 	{
@@ -269,19 +268,16 @@ public class SubClass
 	
 	/**
 	 * Method getHp.
-	 * @return double
-	 * When the character skills effects are loaded, this value is taken without modification of the table, an applied to the character when all effect are loaded
+	 * @return double When the character skills effects are loaded, this value is taken without modification of the table, an applied to the character when all effect are loaded
 	 */
 	public double getlogOnHp()
 	{
 		return _logOnhp;
 	}
-
 	
 	/**
 	 * Method setlogOnMp.
-	 * @param hpValue double
-	 * This function are in for controls HP on logon of characters
+	 * @param mpValue
 	 */
 	public void setLogonMp(double mpValue)
 	{
@@ -290,8 +286,7 @@ public class SubClass
 	
 	/**
 	 * Method getLogonMp.
-	 * @return double
-	 * When the character skills effects are loaded, this value is taken without modification of the table, an applied to the character when all effect are loaded
+	 * @return double When the character skills effects are loaded, this value is taken without modification of the table, an applied to the character when all effect are loaded
 	 */
 	public double getlogOnMp()
 	{
@@ -300,8 +295,7 @@ public class SubClass
 	
 	/**
 	 * Method setlogOnCp.
-	 * @param hpValue double
-	 * This function are in for controls HP on logon of characters
+	 * @param cpValue
 	 */
 	public void setLogonCp(double cpValue)
 	{
@@ -310,13 +304,13 @@ public class SubClass
 	
 	/**
 	 * Method getLogOnCp.
-	 * @return double
-	 * When the character skills effects are loaded, this value is taken without modification of the table, an applied to the character when all effect are loaded
+	 * @return double When the character skills effects are loaded, this value is taken without modification of the table, an applied to the character when all effect are loaded
 	 */
 	public double getlogOnCp()
 	{
 		return _logOnCp;
 	}
+	
 	/**
 	 * Method setHp.
 	 * @param hpValue double
@@ -498,7 +492,7 @@ public class SubClass
 	{
 		return (_certification & v) == v;
 	}
-
+	
 	/**
 	 * Method getCertification.
 	 * @return int
@@ -510,7 +504,7 @@ public class SubClass
 	
 	/**
 	 * Method setDualCertification.
-	 * @param certification int
+	 * @param dualcertification
 	 */
 	public void setDualCertification(int dualcertification)
 	{

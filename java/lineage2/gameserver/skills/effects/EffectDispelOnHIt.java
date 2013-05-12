@@ -24,6 +24,7 @@ public final class EffectDispelOnHIt extends Effect
 	public int _hitCount = 0;
 	
 	public int _maxHitCount = 0;
+	
 	/**
 	 * Constructor for EffectParalyze.
 	 * @param env Env
@@ -33,7 +34,7 @@ public final class EffectDispelOnHIt extends Effect
 	{
 		super(env, template);
 	}
-		
+	
 	/**
 	 * Method onStart.
 	 */
@@ -61,13 +62,15 @@ public final class EffectDispelOnHIt extends Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if(_effected.isDead())
+		if (_effected.isDead())
+		{
 			return false;
+		}
 		_hitCount += 1;
-		if(_hitCount >= _maxHitCount)
+		if (_hitCount >= _maxHitCount)
 		{
 			_effected.getEffectList().stopEffect(getSkill());
 		}
 		return true;
-	}	
+	}
 }

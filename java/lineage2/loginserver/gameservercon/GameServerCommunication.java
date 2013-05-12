@@ -207,7 +207,8 @@ public class GameServerCommunication extends Thread
 	 * @param key SelectionKey
 	 * @param gs GameServer
 	 * @param buf ByteBuffer
-	 * @return boolean * @throws IOException
+	 * @return boolean
+	 * @throws IOException
 	 */
 	protected boolean tryReadPacket(SelectionKey key, GameServer gs, ByteBuffer buf) throws IOException
 	{

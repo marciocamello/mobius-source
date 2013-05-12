@@ -12,7 +12,6 @@
  */
 package ai;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
@@ -23,6 +22,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

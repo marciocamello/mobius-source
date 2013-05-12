@@ -81,6 +81,7 @@ public final class AdminFunctions
 	 * @param itemid integer
 	 * @param amount integer
 	 * @param reason String
+	 * @return
 	 */
 	public static boolean give(String charName, int itemid, int amount, String reason)
 	{

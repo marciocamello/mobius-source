@@ -20,6 +20,7 @@ import java.util.NoSuchElementException;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <E>
  */
 public class GCSArray<E> implements Collection<E>
 {

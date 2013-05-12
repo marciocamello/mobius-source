@@ -105,7 +105,7 @@ public abstract class Parsers
 		PetitionGroupParser.getInstance().load();
 		PlayerTemplateParser.getInstance().load();
 		LevelBonusParser.getInstance().load();
-
+		
 		StatuesSpawnParser.getInstance().load();
 	}
 }

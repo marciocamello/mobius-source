@@ -12,8 +12,6 @@
  */
 package quests;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,6 +33,7 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncMul;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 {

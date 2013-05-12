@@ -15,6 +15,7 @@ package lineage2.commons.lang.reference;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <T>
  */
 public class AbstractHardReference<T> implements HardReference<T>
 {

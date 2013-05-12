@@ -25,6 +25,7 @@ import org.dom4j.io.SAXReader;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <H>
  */
 public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObject
 {

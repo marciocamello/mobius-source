@@ -179,6 +179,7 @@ public class Rnd
 	
 	/**
 	 * Method get.
+	 * @param <E>
 	 * @param list E[]
 	 * @return E
 	 */
@@ -199,6 +200,7 @@ public class Rnd
 	
 	/**
 	 * Method get.
+	 * @param <E>
 	 * @param list List<E>
 	 * @return E
 	 */

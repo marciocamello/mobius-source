@@ -12,7 +12,6 @@
  */
 package handler.items;
 
-import gnu.trove.set.hash.TIntHashSet;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.model.Playable;
@@ -22,6 +21,7 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
+import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius

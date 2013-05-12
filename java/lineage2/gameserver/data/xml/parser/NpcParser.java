@@ -320,9 +320,9 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 					int id = Integer.parseInt(secondElement.attributeValue("id"));
 					WalkerRouteType type = secondElement.attributeValue("type") == null ? WalkerRouteType.LENGTH : WalkerRouteType.valueOf(secondElement.attributeValue("type").toUpperCase());
 					WalkerRoute walkerRoute = new WalkerRoute(id, type);
-					for (Iterator<?> nextIterator = secondElement.elementIterator(); nextIterator.hasNext(); )
+					for (Iterator<?> nextIterator = secondElement.elementIterator(); nextIterator.hasNext();)
 					{
-						org.dom4j.Element nextElement = (org.dom4j.Element)nextIterator.next();
+						org.dom4j.Element nextElement = (org.dom4j.Element) nextIterator.next();
 						Location loc = Location.parse(nextElement);
 						NpcString phrase = nextElement.attributeValue("phrase_id") == null ? null : NpcString.valueOf(Integer.parseInt(nextElement.attributeValue("phrase_id").toUpperCase()));
 						int socialActionId = nextElement.attributeValue("social_action_id") == null ? -1 : Integer.parseInt(nextElement.attributeValue("social_action_id"));
@@ -336,9 +336,9 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 				{
 					boolean random_order = secondElement.attributeValue("random_order") == null ? false : Boolean.parseBoolean(secondElement.attributeValue("random_order"));
 					RandomActions randomActions = new RandomActions(random_order);
-					for (Iterator<?> nextIterator = secondElement.elementIterator(); nextIterator.hasNext(); )
+					for (Iterator<?> nextIterator = secondElement.elementIterator(); nextIterator.hasNext();)
 					{
-						org.dom4j.Element nextElement = (org.dom4j.Element)nextIterator.next();
+						org.dom4j.Element nextElement = (org.dom4j.Element) nextIterator.next();
 						int id = Integer.parseInt(nextElement.attributeValue("id"));
 						NpcString phrase = nextElement.attributeValue("phrase_id") == null ? null : NpcString.valueOf(Integer.parseInt(nextElement.attributeValue("phrase_id")));
 						int socialActionId = nextElement.attributeValue("social_action_id") == null ? -1 : Integer.parseInt(nextElement.attributeValue("social_action_id"));

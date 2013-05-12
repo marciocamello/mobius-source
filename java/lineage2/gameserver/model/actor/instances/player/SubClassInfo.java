@@ -74,7 +74,7 @@ public final class SubClassInfo
 	 * Field SUBCLASS_SET_MAP.
 	 */
 	@SuppressWarnings("rawtypes")
-	private static final EnumMap<ClassId, Set> SUBCLASS_SET_MAP = new EnumMap <ClassId, Set>(ClassId.class);
+	private static final EnumMap<ClassId, Set> SUBCLASS_SET_MAP = new EnumMap<>(ClassId.class);
 	
 	/**
 	 * Method getAvailableSubClasses.
@@ -157,18 +157,18 @@ public final class SubClassInfo
 				{
 					availSubs.remove(availSub);
 				}
-				if(availSub.getType2() == ClassId.VALUES[subClass.getClassId()].getType2() && subClass.isBase())
+				if ((availSub.getType2() == ClassId.VALUES[subClass.getClassId()].getType2()) && subClass.isBase())
 				{
 					availSubs.remove(availSub);
 				}
 			}
 			if (availSub.isOfRace(Race.kamael))
 			{
-				if (player.getSex() == 1 && (availSub == ClassId.M_SOUL_BREAKER))
+				if ((player.getSex() == 1) && (availSub == ClassId.M_SOUL_BREAKER))
 				{
 					availSubs.remove(availSub);
 				}
-				if (player.getSex() == 0 && (availSub == ClassId.F_SOUL_BREAKER))
+				if ((player.getSex() == 0) && (availSub == ClassId.F_SOUL_BREAKER))
 				{
 					availSubs.remove(availSub);
 				}

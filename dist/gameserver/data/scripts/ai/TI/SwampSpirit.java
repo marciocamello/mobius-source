@@ -34,8 +34,6 @@ public class SwampSpirit extends DefaultAI
 	private static final Skill healSkillBig = SkillTable.getInstance().getInfo(14065, 1);
 	private static final Skill blindlightSkill = SkillTable.getInstance().getInfo(14066, 1);
 	
-	
-	
 	/**
 	 * Constructor for SwampSpirit.
 	 * @param actor NpcInstance

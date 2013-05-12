@@ -910,7 +910,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		Func[] result = Func.EMPTY_FUNC_ARRAY;
 		
-		GArray<Func> funcs = new GArray<Func>();
+		GArray<Func> funcs = new GArray<>();
 		
 		if (template.getAttachedFuncs().length > 0)
 		{
@@ -1573,7 +1573,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			for (Element e : Element.VALUES)
 			{
 				if (template.getBaseAttributeValue(e) > 0)
-				{					
+				{
 					return e;
 				}
 			}

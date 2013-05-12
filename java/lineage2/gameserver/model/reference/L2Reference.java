@@ -17,6 +17,7 @@ import lineage2.commons.lang.reference.AbstractHardReference;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <T>
  */
 public class L2Reference<T> extends AbstractHardReference<T>
 {

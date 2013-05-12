@@ -25,6 +25,7 @@ import org.apache.commons.pool.impl.GenericObjectPool;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <E>
  */
 @SuppressWarnings("unchecked")
 public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable
@@ -110,6 +111,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	
 	/**
 	 * Method newInstance.
+	 * @param <E>
 	 * @return LazyArrayList<E>
 	 */
 	public static <E> LazyArrayList<E> newInstance()
@@ -127,6 +129,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	
 	/**
 	 * Method recycle.
+	 * @param <E>
 	 * @param obj LazyArrayList<E>
 	 */
 	public static <E> void recycle(LazyArrayList<E> obj)
@@ -224,7 +227,6 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	 * Method add.
 	 * @param index int
 	 * @param element E
-	 * @see java.util.List#add(int, E)
 	 */
 	@Override
 	public void add(int index, E element)
@@ -798,7 +800,6 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		/**
 		 * Method set.
 		 * @param e E
-		 * @see java.util.ListIterator#set(E)
 		 */
 		@Override
 		public void set(E e)
@@ -813,7 +814,6 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		/**
 		 * Method add.
 		 * @param e E
-		 * @see java.util.ListIterator#add(E)
 		 */
 		@Override
 		public void add(E e)

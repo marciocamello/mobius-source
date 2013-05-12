@@ -238,7 +238,8 @@ public class RequestBypassToServer extends L2GameClientPacket
 			{
 				String p = bp.bypass.substring(9).trim();
 				int idx = p.indexOf(' ');
-				if (idx > 0) {
+				if (idx > 0)
+				{
 					String campaignName = p.substring(0, idx);
 					DynamicQuestController.getInstance().processDialogEvent(campaignName, p.substring(idx).trim(), activeChar);
 				}

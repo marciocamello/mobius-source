@@ -39,7 +39,6 @@ public class EffectHealAndDamage extends Effect
 	{
 		super(env, template);
 	}
-
 	
 	/**
 	 * Method onStart.
@@ -48,17 +47,17 @@ public class EffectHealAndDamage extends Effect
 	public void onStart()
 	{
 		super.onStart();
-		List <Creature> targetsDamage = new ArrayList<Creature>();
-		List <Creature> targetsHeal = new ArrayList<Creature>();
+		List<Creature> targetsDamage = new ArrayList<>();
+		List<Creature> targetsHeal = new ArrayList<>();
 		getSkill().addTargetsToLakcis(targetsDamage, _effected, false);
 		getSkill().addTargetsToLakcis(targetsHeal, _effected, true);
-		for(Creature targetHeal : targetsHeal)
+		for (Creature targetHeal : targetsHeal)
 		{
 			double hp = getSkill().getPower();
-			hp = (hp*(targetHeal.calcStat(Stats.HEAL_EFFECTIVNESS, 100., _effected,getSkill()))) / 100;
+			hp = (hp * (targetHeal.calcStat(Stats.HEAL_EFFECTIVNESS, 100., _effected, getSkill()))) / 100;
 			hp = Math.max(0, Math.min(hp, ((targetHeal.calcStat(Stats.HP_LIMIT, null, null) * targetHeal.getMaxHp()) / 100.) - targetHeal.getCurrentHp()));
 			targetHeal.setCurrentHp(hp + targetHeal.getCurrentHp(), false);
-			if(hp > 0)
+			if (hp > 0)
 			{
 				if (_effected == targetHeal)
 				{
@@ -70,8 +69,8 @@ public class EffectHealAndDamage extends Effect
 					targetHeal.sendPacket(new SystemMessage(SystemMessage.XS2S_HP_HAS_BEEN_RESTORED_BY_S1).addString(_effected.getName()).addNumber(Math.round(hp)));
 				}
 			}
-		}	
-		for(Creature targetDamage : targetsDamage)
+		}
+		for (Creature targetDamage : targetsDamage)
 		{
 			double damage = getSkill().getPower2();
 			damage = targetDamage.calcStat(Stats.MAGIC_DAMAGE, damage, _effected, getSkill());
@@ -79,12 +78,12 @@ public class EffectHealAndDamage extends Effect
 			{
 				return;
 			}
-			if(targetDamage.isNpc())
+			if (targetDamage.isNpc())
 			{
-				NpcInstance npcAggro = (NpcInstance)targetDamage;
-				npcAggro.getAggroList().addDamageHate(_effected, (int)damage, 200);
+				NpcInstance npcAggro = (NpcInstance) targetDamage;
+				npcAggro.getAggroList().addDamageHate(_effected, (int) damage, 200);
 				npcAggro.setRunning();
-				npcAggro.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _effected);				
+				npcAggro.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _effected);
 			}
 			targetDamage.reduceCurrentHp(damage, 0, _effected, getSkill(), false, false, targetDamage.isNpc(), false, false, true, false);
 			getEffected().broadcastPacket(new MagicSkillUse(_effected, targetDamage, getSkill().getId(), getSkill().getLevel(), 0, 0));
@@ -99,6 +98,7 @@ public class EffectHealAndDamage extends Effect
 	{
 		super.onExit();
 	}
+	
 	/**
 	 * Method onActionTime.
 	 * @return boolean
@@ -106,6 +106,6 @@ public class EffectHealAndDamage extends Effect
 	@Override
 	public boolean onActionTime()
 	{
-		return false;	
+		return false;
 	}
 }

@@ -12,9 +12,6 @@
  */
 package lineage2.gameserver.tables;
 
-import gnu.trove.list.array.TIntArrayList;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
 import lineage2.gameserver.model.base.ClassId;
@@ -23,6 +20,9 @@ import lineage2.gameserver.model.base.SubClassType;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import gnu.trove.list.array.TIntArrayList;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius
@@ -69,7 +69,7 @@ public final class DualClassTable
 	 */
 	private void init()
 	{
-		_dualClasses = new TIntObjectHashMap<TIntArrayList>();
+		_dualClasses = new TIntObjectHashMap<>();
 		for (ClassId baseClassId : ClassId.VALUES)
 		{
 			if (!baseClassId.isOfLevel(ClassLevel.Awaking))
@@ -105,14 +105,14 @@ public final class DualClassTable
 	{
 		TIntArrayList dualClassesList = _dualClasses.get(classId);
 		SubClassType haveDouble = null;
-		for(SubClass sc : player.getSubClassList().values())
+		for (SubClass sc : player.getSubClassList().values())
 		{
-			if(sc.isDouble())
+			if (sc.isDouble())
 			{
 				haveDouble = sc.getType();
 			}
 		}
-		if ((dualClassesList == null) || dualClassesList.isEmpty() || haveDouble == null)
+		if ((dualClassesList == null) || dualClassesList.isEmpty() || (haveDouble == null))
 		{
 			return new int[0];
 		}
@@ -120,7 +120,7 @@ public final class DualClassTable
 		for (int clsId : dualClassesList.toArray())
 		{
 			int baseClassId = player.getBaseSubClass().getClassId();
-			if(clsId == baseClassId)
+			if (clsId == baseClassId)
 			{
 				dualClassesList.remove(clsId);
 				continue loop;

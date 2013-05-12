@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.tables;
 
-import gnu.trove.map.hash.TIntIntHashMap;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -29,6 +27,8 @@ import lineage2.gameserver.skills.SkillsEngine;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import gnu.trove.map.hash.TIntIntHashMap;
 
 /**
  * @author Mobius

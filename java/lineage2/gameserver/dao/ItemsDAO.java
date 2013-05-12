@@ -166,7 +166,8 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	/**
 	 * Method load0.
 	 * @param objectId int
-	 * @return ItemInstance * @throws SQLException
+	 * @return ItemInstance
+	 * @throws SQLException
 	 */
 	private ItemInstance load0(int objectId) throws SQLException
 	{
@@ -193,7 +194,8 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	/**
 	 * Method load0.
 	 * @param rset ResultSet
-	 * @return ItemInstance * @throws SQLException
+	 * @return ItemInstance
+	 * @throws SQLException
 	 */
 	private ItemInstance load0(ResultSet rset) throws SQLException
 	{

@@ -12,13 +12,14 @@
  */
 package quests;
 
-import gnu.trove.map.hash.TIntIntHashMap;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
 import org.apache.commons.lang3.ArrayUtils;
+
+import gnu.trove.map.hash.TIntIntHashMap;
 
 public class _10305_TheEndlessFutileEfforts extends Quest implements ScriptFile
 {

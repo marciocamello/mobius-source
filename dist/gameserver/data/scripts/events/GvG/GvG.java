@@ -168,7 +168,7 @@ public class GvG extends Functions implements ScriptFile
 		@Override
 		public void runImpl()
 		{
-			Announcements.getInstance().announceToAll("GvG: Until the end of the registration on the tournament remains " + Integer.toString (_timer) + " minutes.");
+			Announcements.getInstance().announceToAll("GvG: Until the end of the registration on the tournament remains " + Integer.toString(_timer) + " minutes.");
 		}
 	}
 	

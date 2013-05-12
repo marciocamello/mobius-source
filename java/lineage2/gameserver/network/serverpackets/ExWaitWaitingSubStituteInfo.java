@@ -34,40 +34,24 @@ public class ExWaitWaitingSubStituteInfo extends L2GameServerPacket
 	
 	public static final int WAITING_CANCEL = 0;
 	public static final int WAITING_OK = 1;
-
+	
 	private int _code;
-
+	
 	public ExWaitWaitingSubStituteInfo(int code)
 	{
 		_code = code;
 	}
-
-/**
+	
+	/**
 	 * Method writeImpl.
 	 */
 	@Override
 	protected void writeImpl()
 	{
-        writeEx(0x104);
+		writeEx(0x104);
 		writeD(turnOn ? 0x01 : 0x00);
 		writeD(0x00);
 		writeD(_code);
 	}
-
+	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -89,6 +89,7 @@ public class BasicDataSource implements DataSource
 	 * Method getConnection.
 	 * @param con Connection
 	 * @return Connection * @throws SQLException
+	 * @throws SQLException
 	 */
 	public Connection getConnection(Connection con) throws SQLException
 	{

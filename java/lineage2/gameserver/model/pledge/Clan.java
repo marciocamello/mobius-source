@@ -21,6 +21,7 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
+
 import lineage2.commons.collections.JoinedIterator;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
@@ -2314,7 +2315,7 @@ public class Clan implements Iterable<UnitMember>
 					{
 						member.getEffectList().addEffect(effect);
 					}
-				}		
+				}
 			}
 		}
 		else if (getLeader().isOnline())
@@ -2327,10 +2328,10 @@ public class Clan implements Iterable<UnitMember>
 				{
 					activeChar.getEffectList().addEffect(effect);
 				}
-			}		
+			}
 		}
 	}
-
+	
 	/**
 	 * Method startNotifyClanLogOut.
 	 * @param activeChar Player

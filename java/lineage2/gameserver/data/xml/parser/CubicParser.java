@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.data.xml.parser;
 
-import gnu.trove.map.hash.TIntIntHashMap;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -27,6 +25,8 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.CubicTemplate;
 
 import org.dom4j.Element;
+
+import gnu.trove.map.hash.TIntIntHashMap;
 
 /**
  * @author Mobius

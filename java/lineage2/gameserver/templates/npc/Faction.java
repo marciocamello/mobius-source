@@ -12,8 +12,8 @@
  */
 package lineage2.gameserver.templates.npc;
 
-import gnu.trove.list.array.TIntArrayList;
 import lineage2.commons.util.TroveUtils;
+import gnu.trove.list.array.TIntArrayList;
 
 /**
  * @author Mobius

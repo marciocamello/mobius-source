@@ -79,6 +79,7 @@ public class CharacterSubclassDAO
 	 * @param type SubClassType
 	 * @param deathPenalty DeathPenalty
 	 * @param certification int
+	 * @param dual_certification
 	 * @return boolean
 	 */
 	public boolean insert(int objId, int classId, int dafaultClassId, long exp, int sp, double curHp, double curMp, double curCp, double maxHp, double maxMp, double maxCp, int level, boolean active, SubClassType type, DeathPenalty deathPenalty, int certification, int dual_certification)
@@ -127,7 +128,7 @@ public class CharacterSubclassDAO
 	 */
 	public List<SubClass> restore(Player player)
 	{
-		List<SubClass> result = new ArrayList<SubClass>();
+		List<SubClass> result = new ArrayList<>();
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
